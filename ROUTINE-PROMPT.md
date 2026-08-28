@@ -18,13 +18,18 @@ Courses: PHY_102, MTH_102, COS_102, PHY_108, GST_112, GST_122, CSC_106,
 MIVA_COS_111.
 
 WHICH WEEK
-If a routine-fire-payload block is present and names a specific week, generate THAT
-week, even if a pack for it already exists - overwrite it. This is how a bad week
-gets regenerated on demand. Otherwise use the date rule below.
 
-Semester Week 1 began Monday 7 September 2026. Compute the week number from
-today's date. Before 7 Sep, use Week 1. Past Week 12, revision mode. Check which
-packs/week-XX/ folders already exist and do not redo a completed week.
+If a routine-fire-payload block is present and names a week or a range of weeks,
+generate EXACTLY those, in order, even if packs already exist for them - overwrite.
+"Generate week 5" means week 5. "Generate weeks 3 to 6" means 3, 4, 5 and 6, one
+after another, each complete before the next starts. Commit once at the end with
+all of them. This is how the semester gets built ahead of time and how a bad week
+gets redone. Work steadily and do not skip a week to save time - a missing week is
+much worse than a slow run.
+
+Otherwise: semester Week 1 began Monday 7 September 2026. Compute the week number
+from today's date. Before 7 Sep, use Week 1. Past Week 12, revision mode. Check
+which packs/week-XX/ folders already exist and do not redo a completed week.
 
 HIS WEEK - the checks must match these sessions exactly
 Two hours every evening Mon-Sat: a deep hour at 1x, then a fast hour at 1.5-1.75x.
