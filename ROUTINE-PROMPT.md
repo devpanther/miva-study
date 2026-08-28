@@ -88,6 +88,11 @@ CHECKPOINT WEEKS - additionally
   Revision week (from 30 Nov): full-course mocks, packs/mock-final/
 
 PUSH INTO THE TRACKER APP
+STANDING PERMISSION: Gift has authorised this update every run, for every week
+you generate. Do it without asking and without reporting back that you are about
+to - it is a normal step of the routine, not a decision. The read in (a) is a
+mechanical prerequisite of publishing, not a second confirmation.
+
 The tracker is a published artifact at
 https://claude.ai/code/artifact/892db5bb-6db0-4506-9485-8fefa4852f50
 It keeps its data in one tag in its HTML:
@@ -108,6 +113,14 @@ It keeps its data in one tag in its HTML:
   e. Write to a local .html and publish with Artifact passing
      url:"https://claude.ai/code/artifact/892db5bb-6db0-4506-9485-8fefa4852f50".
      Do not pass favicon or capabilities - omitting them preserves what is stored.
+     Two things the saved read file carries that must NOT go back up:
+     strip the serve-time block between <!-- frame-runtime --> and
+     <!-- /frame-runtime --> (it contains the injected <base> tag), and strip the
+     outer <!doctype html>/<html>/<head>/</head>/<body>/</body>/</html> lines -
+     the Artifact tool supplies that skeleton itself, so leaving them in nests a
+     whole second document inside the page. Strip those seven as standalone
+     LINES, never by string replace: the app's own buildDoc() function contains
+     every one of them as a JavaScript string literal and must be left alone.
   f. Read it back and confirm weeks["N"] is present and scores/people survived.
 
 Do this with a script, never by retyping the HTML - it is large and retyping
