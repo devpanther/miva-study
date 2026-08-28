@@ -18,6 +18,10 @@ Courses: PHY_102, MTH_102, COS_102, PHY_108, GST_112, GST_122, CSC_106,
 MIVA_COS_111.
 
 WHICH WEEK
+If a routine-fire-payload block is present and names a specific week, generate THAT
+week, even if a pack for it already exists - overwrite it. This is how a bad week
+gets regenerated on demand. Otherwise use the date rule below.
+
 Semester Week 1 began Monday 7 September 2026. Compute the week number from
 today's date. Before 7 Sep, use Week 1. Past Week 12, revision mode. Check which
 packs/week-XX/ folders already exist and do not redo a completed week.
