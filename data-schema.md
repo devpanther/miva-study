@@ -46,7 +46,7 @@ Study board (reference):    https://claude.ai/code/artifact/8d0bff19-5549-4d2d-9
           "day": "Mon",
           "course": "MTH_102",
           "topic": "Integrating factors for first-order linear ODEs",
-          "maxScore": 6,
+          "maxScore": 12,
           "questions": [
             {
               "type": "mcq",             // "mcq" | "short"
@@ -77,7 +77,7 @@ Study board (reference):    https://claude.ai/code/artifact/8d0bff19-5549-4d2d-9
 
 - `checks[].questions[]` mixes `mcq` and `short`. Short answers cannot be
   auto-scored — self-mark them. Score = correct mcq + self-marked short, out of
-  `maxScore` (6).
+  `maxScore` (12 from week 3 onward; weeks 1-2 were generated at 6).
 - Sunday topic is DERIVED, never stored in this file: take each person's lowest
   `score/maxScore` for the week. If both land on the same course, the lower
   ratio keeps it and the other takes their next-lowest from a different course.

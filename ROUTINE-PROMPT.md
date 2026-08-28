@@ -60,9 +60,12 @@ WHAT TO PRODUCE, all under packs/week-XX/
 
 2. NIGHTLY CHECKS - checks/<Day>-<COURSE>.md, six files:
    Mon-MTH_102, Tue-PHY_102, Wed-COS_102, Thu-MTH_102, Fri-PHY_102, Sat-COS_102
-   Six questions each (4 MCQ, 2 short "explain why") on precisely what that
-   session covers - not the whole week. Sat cold, notes closed, 8 minutes.
-   Design them to DISCRIMINATE, not to reassure: at least two per check must be
+   TWELVE questions each (8 MCQ, 4 short "explain why") on precisely what that
+   session covers - not the whole week. Sat cold, notes closed, about 15 minutes.
+   Twelve rather than six because the score decides which topic gets taught on
+   Sunday: at six questions a single careless slip moves the score by 17% and the
+   choice stops meaning anything.
+   Design them to DISCRIMINATE, not to reassure: at least four per check must be
    answerable only by someone who understood the mechanism, not by someone who
    recognises the vocabulary. No questions solvable by elimination. Every answer
    names the underlying concept, so a wrong answer says what to revisit.
@@ -79,39 +82,13 @@ WHAT TO PRODUCE, all under packs/week-XX/
    other takes their next-lowest elsewhere.
 
 5. week-XX.json - follow data-schema.md in the repo root EXACTLY. All six days
-   Mon-Sat present, all six checks present with six questions each. Validate it
-   parses before committing.
+   Mon-Sat present, all six checks present with TWELVE questions each and
+   "maxScore": 12. Validate it parses before committing.
 
 CHECKPOINT WEEKS - additionally
   Week 5: timed mock per course covering Weeks 1-4, packs/mock-midsemester/
   Week 9: same for Weeks 5-9, packs/mock-endsemester/
   Revision week (from 30 Nov): full-course mocks, packs/mock-final/
-
-PUSH INTO THE TRACKER APP
-The tracker is a published artifact at
-https://claude.ai/code/artifact/892db5bb-6db0-4506-9485-8fefa4852f50
-It keeps its data in one tag in its HTML:
-  <script id="state" type="application/json">{...}</script>
-
-  a. Artifact action:"read" on that url. You MUST read before publishing - a
-     publish without a prior read in the same session is refused.
-     If the read fails with a network/allowlist error, STOP this section. Do not
-     retry and do not publish. Say in your final message that Gift needs to paste
-     week-XX.json into the app's Import tab.
-  b. Parse the JSON inside that tag. It escapes "<" as \u003c - unescape first.
-  c. Set state.weeks["<week number as a string>"] = the week-XX.json object you
-     just built. Change NOTHING else. state.scores and state.people are their
-     logged check results and their sign-ins. Destroying those is the one
-     unacceptable outcome - never reset, prune or tidy those keys.
-  d. Re-serialise, re-escape "<" as \u003c, substitute back into that one tag
-     only. Change nothing else in the HTML.
-  e. Write to a local .html and publish with Artifact passing
-     url:"https://claude.ai/code/artifact/892db5bb-6db0-4506-9485-8fefa4852f50".
-     Do not pass favicon or capabilities - omitting them preserves what is stored.
-  f. Read it back and confirm weeks["N"] is present and scores/people survived.
-
-Do this with a script, never by retyping the HTML - it is large and retyping
-corrupts it.
 
 COMMIT
 Commit everything to a claude/ branch and push. Use a clear message such as
