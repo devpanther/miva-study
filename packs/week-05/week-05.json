@@ -1,0 +1,1055 @@
+{
+  "week": 5,
+  "startsOn": "2026-10-05",
+  "endsOn": "2026-10-11",
+  "generatedOn": "2026-08-28",
+  "days": [
+    {
+      "day": "Mon",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Differentiation concepts: the derivative from first principles, its geometric meaning, the notations dy/dx, f'(x) and D_x y with higher orders, and the constant, power, constant multiple and sum/difference rules",
+        "checkFile": "checks/Mon-MTH_102.md"
+      },
+      "fast": {
+        "course": "GST_112",
+        "topic": "Independence to the Civil War and the military in politics: the coup chronology 1966-1993, who was killed, who took power, and why"
+      }
+    },
+    {
+      "day": "Tue",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Kirchhoff's two rules as concepts: junctions and loops, the conservation principle behind each, the sign conventions, and how a network's equations are set up and counted",
+        "checkFile": "checks/Tue-PHY_102.md"
+      },
+      "fast": {
+        "course": "CSC_106",
+        "topic": "Basic JavaScript: variables and scope, == vs ===, control flow and loops, functions and return, arrays vs objects, DOM events"
+      }
+    },
+    {
+      "day": "Wed",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Flowchart concepts: which symbol means what, how many flowlines each carries, the rules of flow and the course's types and principles, and how a flowchart relates to an algorithm and to pseudocode",
+        "checkFile": "checks/Wed-COS_102.md"
+      },
+      "fast": {
+        "course": "GST_122",
+        "topic": "Pre-writing techniques through to an outline, then the post-writing order of revising, editing and proofreading"
+      }
+    },
+    {
+      "day": "Thu",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Differentiation problems: the product, quotient and chain rules, combinations of them, and multi-step differentiation with a fully factorised answer",
+        "checkFile": "checks/Thu-MTH_102.md"
+      },
+      "fast": {
+        "course": "PHY_108",
+        "topic": "Verification of Kirchhoff's voltage law: loop equations, sign conventions, and comparing computed with measured branch currents"
+      }
+    },
+    {
+      "day": "Fri",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Numerical Kirchhoff problems: single loops with opposing emfs and internal resistance, multi-loop networks by simultaneous equations, terminal p.d., power balance, and negative currents",
+        "checkFile": "checks/Fri-PHY_102.md"
+      },
+      "fast": {
+        "course": "Review",
+        "topic": "Week 5 review: re-work any check question you got wrong, then read the confidence log and pick Sunday's two topics"
+      }
+    },
+    {
+      "day": "Sat",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Applied flowcharts: tracing a chart described in words to its output, finding the fault in a described chart and naming the rule it breaks, and converting between flowchart and pseudocode in both directions",
+        "checkFile": "checks/Sat-COS_102.md"
+      },
+      "fast": {
+        "course": "Catch-up",
+        "topic": "Mid-semester checkpoint: sit the timed papers in packs/mock-midsemester/ (Weeks 1-4, one per course, timed and notes closed), then the Week 4 question sets that are now seven days old and due"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "code": "PHY_102",
+      "name": "General Physics II",
+      "weekTopics": [
+        "Junction (node) and loop: a junction is a point where three or more conductors meet; a loop is any closed conducting path",
+        "Kirchhoff's junction rule (KCL): sum of I in = sum of I out at any junction, expressing conservation of charge in a steady current",
+        "Kirchhoff's loop rule (KVL): sum of V = 0 around any closed loop, i.e. sum of emf = sum of IR, expressing conservation of energy",
+        "Sign conventions: traversing a source from - to + gives +emf and from + to - gives -emf; traversing a resistor with the assumed current gives -IR and against it gives +IR",
+        "Counting equations for a network: with b branches and n junctions there are n-1 independent junction equations and b-n+1 independent loop equations, totalling b",
+        "Problem-solving strategy: reduce true series and parallel groups (Rs = sum of R, 1/Rp = sum of 1/R), assume and mark a current arrow in every branch, write the equations, solve simultaneously",
+        "Interpreting the solution: a negative current means the assumed arrow was backwards, the magnitude being correct; terminal p.d. V = emf - Ir when discharging and V = emf + Ir when charging",
+        "Checking by power balance, sum of (emf x I) from sources = sum of I^2 R over all resistances including internal ones; bridge circuits and the balance condition"
+      ],
+      "summaryFile": "PHY_102-Summary.md",
+      "questionsFile": "PHY_102-Questions.md"
+    },
+    {
+      "code": "MTH_102",
+      "name": "Elementary Mathematics II (Calculus)",
+      "weekTopics": [
+        "The derivative from first principles: f'(x) = lim as h -> 0 of [f(x+h) - f(x)]/h, the difference quotient as the gradient of a chord, and why h = 0 cannot simply be substituted",
+        "Geometric meaning: f'(a) is the gradient of the tangent to y = f(x) at (a, f(a)), and the tangent line y - f(a) = f'(a)(x - a)",
+        "Notation: dy/dx, f'(x), y', D_x y for the first derivative; d2y/dx2, f''(x), D_x^2 y and higher orders",
+        "Basic rules: constant d/dx(c) = 0, power d/dx(x^n) = n x^(n-1) including negative and fractional n after rewriting, constant multiple, and sum/difference",
+        "Product rule d/dx(uv) = u'v + uv' and quotient rule d/dx(u/v) = (u'v - uv')/v^2",
+        "Chain rule dy/dx = (dy/du)(du/dx), the general power form d/dx[u^n] = n u^(n-1) u', and multi-step combinations of product, quotient and chain",
+        "Standard derivatives: sin x -> cos x, cos x -> -sin x, tan x -> sec^2 x, e^x -> e^x, a^x -> a^x ln a, ln x -> 1/x, log_a x -> 1/(x ln a)",
+        "Implicit differentiation (every y-term carries a dy/dx), parametric dy/dx = (dy/dt)/(dx/dt), partial derivatives and higher-order derivatives"
+      ],
+      "summaryFile": "MTH_102-Summary.md",
+      "questionsFile": "MTH_102-Questions.md"
+    },
+    {
+      "code": "COS_102",
+      "name": "Introduction to Problem Solving",
+      "weekTopics": [
+        "Definition: a flowchart is a graphical representation of the sequence of operations in a computer program, or the graphical representation of an algorithm; it uses symbols to describe start/begin, stop/end, decision making and data processing",
+        "Flowchart symbols and what each does: terminator (start/stop), process (action), decision (control), input/output (data), flowline, on-page connector, link (off-page) connector, predefined process (declaration), preparation, document, multiple documents, database, summing junction, merge, comment/note",
+        "Rules of flow: one entry and one exit per symbol, with START having no entry, STOP no exit, the decision exactly two labelled exits, and merge and summing junction taking several lines in and giving one out; every path must terminate; direction is top to bottom and left to right",
+        "The three control structures drawn as charts: sequence (a chain of 1-in-1-out boxes), selection (a decision whose two labelled branches reach STOP or rejoin), iteration (a decision with a back-arrow to a box already visited)",
+        "Reading and building charts: tracing the course's Sum/Count loop (Sum = 0, Count = 0 -> Enter n -> sum = sum + n, count = count + 1 -> Is Count < 5? YES back to Enter n, NO to Print sum), which reads exactly five numbers; and the lamp fault-finding chart with nested decisions",
+        "Flowchart vs pseudocode vs algorithm: one algorithm, two notations; a diamond becomes IF, a back-arrow becomes WHILE or REPEAT, a parallelogram becomes READ or PRINT, a rectangle becomes an assignment; no compiler accepts any of the three",
+        "Uses and the four main types: process flowchart, workflow chart, swimlane flowchart (multiple categories of activities side by side), data flowchart (reduces the communication gap between users and developers); uses include planning and documenting a project, modelling a business process, managing workflow and data, and mapping a computer algorithm",
+        "Advantages (simplifies the logic, lets you ascertain whether the logic works, goes into the program specification documents), disadvantages (may span multiple pages, adjustments may force a redraw, the logic is hardly the most efficient and can make the program unnecessarily longer), and the four principles (a start and a stop point, flow lines should generally not cross, comparisons as simple as possible, neat and clear with good visual impact)"
+      ],
+      "summaryFile": "COS_102-Summary.md",
+      "questionsFile": "COS_102-Questions.md"
+    },
+    {
+      "code": "PHY_108",
+      "name": "General Physics Practical II",
+      "weekTopics": [
+        "Kirchhoff's voltage law: around any closed loop, sum of emfs = sum of IR drops, equivalently the algebraic sum of all voltages is zero",
+        "KVL rests on conservation of energy, in contrast with KCL at a junction which rests on conservation of charge",
+        "Sign convention: p.d. across a resistor positive if traversed in the same direction as the current, negative otherwise; emf positive if the battery is traversed from its positive terminal to its negative terminal, negative otherwise",
+        "Definitions of node, branch and loop (mesh) in a circuit",
+        "Apparatus and circuit: breadboard, two DC power supplies E1 and E2, five variable resistors R1 to R5, three ammeters in series (one per branch); a voltmeter goes in parallel across an element",
+        "Procedure: set both supplies to 50 V range, adjust emfs to 9 V, record the three ammeter readings, increase the emf in 3 V steps and repeat",
+        "Working equations: I1 + I2 = I3; I3*R3 + I3*R4 + I1*R5 = E1; I2*R2 - I1*R5 + I2*R1 = -E2, solved simultaneously for I1, I2, I3",
+        "Data analysis: tabulate R1 to R5, E1, E2, I1, I2, I3, compare computed I3 with measured I3 (agreement within about 5 percent), interpret a negative current, and note precautions such as zero error, parallax, contact resistance and neglected internal resistance"
+      ],
+      "summaryFile": "PHY_108-Summary.md",
+      "questionsFile": "PHY_108-Questions.md"
+    },
+    {
+      "code": "GST_112",
+      "name": "Nigerian Peoples and Culture",
+      "weekTopics": [
+        "Nigeria at independence, 1 October 1960, and the national question",
+        "First Republic instability: the 1959 and 1964 elections, the 1962-3 census crisis, the Western Region crisis and the 1965 Western Region election",
+        "Economic development: the Richards Constitution and regionalism, the regional development corporations, and the First National Development Plan 1962-1968",
+        "The coup of 15 January 1966: the five majors, those killed, and the rise of Aguiyi-Ironsi",
+        "The countercoup of 29 July 1966, Decree No. 34, and the emergence of Gowon",
+        "The pogrom, the Aburi Accord, Ojukwu's declaration of Biafra on 30 May 1967, and the creation of twelve states",
+        "The Nigerian Civil War to the surrender of 12 January 1970, international alignments, and the 3 Rs",
+        "The military in Nigerian politics: the coups of 1975, 1976, 1983, 1985, 1990 and 1993, and the pros and cons of military rule"
+      ],
+      "summaryFile": "GST_112-Summary.md",
+      "questionsFile": "GST_112-Questions.md"
+    },
+    {
+      "code": "GST_122",
+      "name": "Communication in English II",
+      "weekTopics": [
+        "The writing process in three stages: pre-writing, during-writing (drafting), post-writing",
+        "Pre-writing defined: generating and organising ideas, establishing purpose, building a preliminary framework",
+        "Divergent thinking techniques: mind mapping, free-writing, concept clustering; plus brainstorming, research, listing, drafting questions, storyboarding, identifying audience and purpose",
+        "Outlining as the roadmap: key points, supporting evidence, logical order before drafting",
+        "Post-writing defined: revising, editing and refining a completed draft for clarity, coherence and effectiveness",
+        "Revising vs editing vs proofreading: global structure, then sentence-level grammar and style, then surface errors",
+        "Further post-writing steps: peer review and feedback, polishing transitions, citations, formatting, finalising conclusions, publishing or submitting",
+        "Case study: applying pre-writing and post-writing strategies to a business proposal"
+      ],
+      "summaryFile": "GST_122-Summary.md",
+      "questionsFile": "GST_122-Questions.md"
+    },
+    {
+      "code": "CSC_106",
+      "name": "Introduction to Web Technologies",
+      "weekTopics": [
+        "JavaScript as a client-side scripting language: high-level, dynamic, runs in the browser, adds interactivity and DOM manipulation",
+        "Variables and declaration keywords var, let and const, and JavaScript data types (number, string, boolean, array, object)",
+        "Operators: arithmetic, comparison (== vs ===, !=, >, <), logical (&&, ||, !) and the ternary operator",
+        "Control flow: if / else if / else, nested conditionals, switch with break, and the for, while and do-while loops",
+        "Functions: declaration and calling, parameters and return values, function expressions, IIFEs and arrow functions",
+        "Scope and closures: global, local and block scope; closures retaining access to outer variables",
+        "Arrays and objects: zero-based indexing, length, push/pop/splice/forEach/filter, key-value pairs, dot and bracket notation, nesting, object methods and constructors",
+        "DOM manipulation and events: selecting elements, changing content and style, and responding to clicks with event listeners"
+      ],
+      "summaryFile": "CSC_106-Summary.md",
+      "questionsFile": "CSC_106-Questions.md"
+    },
+    {
+      "code": "MIVA_COS_111",
+      "name": "Technical Certification I",
+      "weekTopics": [],
+      "summaryFile": "MIVA_COS_111-Summary.md",
+      "questionsFile": null
+    }
+  ],
+  "checks": [
+    {
+      "id": "mon-mth102",
+      "day": "Mon",
+      "course": "MTH_102",
+      "topic": "Differentiation concepts: the derivative from first principles, its geometric meaning, the notations dy/dx, f'(x) and D_x y with higher orders, and the constant, power, constant multiple and sum/difference rules",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "Which of these is the definition of the derivative of f at x?",
+          "options": [
+            "lim as h -> 0 of [f(x+h) - f(x)]/h",
+            "lim as h -> 0 of [f(x+h) - f(x)]/x",
+            "lim as x -> 0 of [f(x+h) - f(x)]/h",
+            "[f(x+h) - f(x)]/h evaluated at h = 0"
+          ],
+          "answerIndex": 0,
+          "concept": "derivative as the limit of the difference quotient",
+          "why": "The increment is h, so h is what is divided by and h is what tends to 0. Option b divides by x instead of the increment, which would not even have the units of a gradient. Option c lets the wrong variable tend to 0: x is held fixed while the chord shrinks. Option d substitutes h = 0 into the quotient, giving 0/0, which is exactly what the limit exists to avoid."
+        },
+        {
+          "type": "mcq",
+          "q": "Differentiating f(x) = 1/x from first principles gives:",
+          "options": [
+            "-1/x^2, after combining the fractions and cancelling the h",
+            "1/x^2, since subtracting the two fractions gives h in the numerator",
+            "-1/[x(x+h)], which is the value of the quotient",
+            "-2/x^3, by the power rule applied to the reciprocal"
+          ],
+          "answerIndex": 0,
+          "concept": "first principles on a reciprocal function",
+          "why": "[1/(x+h) - 1/x]/h = [x - (x+h)]/[h x(x+h)] = -h/[h x(x+h)] = -1/[x(x+h)] -> -1/x^2. Option b reverses the subtraction (x + h - x instead of x - (x+h)) and loses the minus sign. Option c is the correct quotient but stops before h -> 0, so it is not yet a derivative. Option d differentiates 1/x^2 rather than 1/x."
+        },
+        {
+          "type": "mcq",
+          "q": "d/dx (1/cuberoot(x)) =",
+          "options": [
+            "-(1/3)x^(-4/3)",
+            "(1/3)x^(-4/3)",
+            "-(1/3)x^(2/3)",
+            "-3x^(-4/3)"
+          ],
+          "answerIndex": 0,
+          "concept": "power rule with a negative fractional exponent",
+          "why": "1/cuberoot(x) = x^(-1/3), so the derivative is (-1/3)x^(-1/3 - 1) = -(1/3)x^(-4/3). Option b drops the minus sign the negative exponent supplies. Option c adds 1 to the exponent instead of subtracting (-1/3 + 1 = 2/3). Option d uses the reciprocal of the exponent, 3, as the coefficient instead of the exponent itself."
+        },
+        {
+          "type": "mcq",
+          "q": "If f(x) = 5x^3 - 7x + 2pi, then f'(x) =",
+          "options": [
+            "15x^2 - 7",
+            "15x^2 - 7 + 2pi",
+            "15x^2 - 7 + 2",
+            "15x^2 - 7x"
+          ],
+          "answerIndex": 0,
+          "concept": "constant rule and constant multiple rule",
+          "why": "2pi is a number, so its derivative is 0, and the coefficients 5 and 7 stay put while only the powers of x change. Option b copies the constant down instead of killing it. Option c treats 2pi as though pi were the variable. Option d differentiates 5x^3 correctly but leaves the x on the linear term, confusing d/dx(7x) = 7 with 7x."
+        },
+        {
+          "type": "mcq",
+          "q": "For y = f(x), which statement is FALSE?",
+          "options": [
+            "dy/dx, y', f'(x) and D_x y all denote the same derivative.",
+            "d2y/dx2 means the derivative of dy/dx, i.e. differentiate the function twice.",
+            "dy/dx is the quotient of two small quantities dy and dx, so a dx may be cancelled against a dx elsewhere.",
+            "f'(a) is a number: the gradient of the tangent to y = f(x) at the point where x = a."
+          ],
+          "answerIndex": 2,
+          "concept": "derivative notation is one symbol, not a fraction",
+          "why": "dy/dx is the limit of the genuine ratio (change in y)/(change in x), but dy and dx are not separately defined quantities that can be cancelled; the chain rule only looks like cancellation because of a theorem, not because it is arithmetic on fractions. Options a, b and d are all true: the four notations are interchangeable, the second derivative is the derivative of the derivative, and evaluating f' at a point gives a number, the tangent gradient."
+        },
+        {
+          "type": "mcq",
+          "q": "'f'(2) = 3' means:",
+          "options": [
+            "the value of f at x = 2 is 3",
+            "the tangent to y = f(x) at x = 2 has gradient 3, so near x = 2 a small increase d in x raises y by about 3d",
+            "the graph rises 3 units for every 1 unit of x, at every point of the curve",
+            "the average rate of change of f between x = 0 and x = 2 is 3"
+          ],
+          "answerIndex": 1,
+          "concept": "derivative as a local instantaneous rate of change",
+          "why": "The derivative at a point is the gradient of the tangent there. Option a confuses f'(2) with f(2), the derivative's value with the function's value. Option c turns a local gradient into a global one, which would make f a straight line. Option d is the gradient of a chord, an average rate of change over an interval, which the derivative is the limit of, not equal to."
+        },
+        {
+          "type": "mcq",
+          "q": "For y = (3x^4 - 2x)/x^2, dy/dx =",
+          "options": [
+            "6x + 2/x^2",
+            "6x - 2/x^2",
+            "(12x^3 - 2)/(2x)",
+            "6x + 2/x^3"
+          ],
+          "answerIndex": 0,
+          "concept": "rewrite a quotient as powers before differentiating",
+          "why": "(3x^4 - 2x)/x^2 = 3x^2 - 2x^(-1), so dy/dx = 6x - 2(-1)x^(-2) = 6x + 2/x^2. Option b keeps the leading minus and forgets the second minus the exponent -1 supplies. Option c differentiates numerator and denominator separately, which is not a rule. Option d reduces the exponent from -1 to -3 instead of -2."
+        },
+        {
+          "type": "mcq",
+          "q": "If f(x) = 2x^4 - x^3 + 5x, then f''(x) =",
+          "options": [
+            "8x^3 - 3x^2 + 5",
+            "24x^2 - 6x",
+            "48x - 6",
+            "(8x^3 - 3x^2 + 5)^2"
+          ],
+          "answerIndex": 1,
+          "concept": "second derivative means differentiate twice",
+          "why": "f'(x) = 8x^3 - 3x^2 + 5, and differentiating again gives 24x^2 - 6x. Option a stops after one differentiation. Option c is f'''(x), one differentiation too many. Option d reads the double prime as an exponent and squares the first derivative."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Using the difference quotient, explain why the derivative of any constant function f(x) = c is 0, and say precisely how \"f'(x) = 0\" differs in meaning from \"f(x) = 0\".",
+          "concept": "constant rule from the difference quotient",
+          "why": "For f(x) = c, f(x+h) - f(x) = c - c = 0, so the quotient is 0/h = 0 for every h not equal to 0, and the limit of the constant 0 is 0. Geometrically the graph is a horizontal line whose tangent everywhere is that same horizontal line, of gradient 0. 'f'(x) = 0' says the output never changes as x changes, at whatever fixed height c happens to be; 'f(x) = 0' says the output itself is zero, i.e. the graph is the x-axis. f(x) = 7 has f'(x) = 0 but f(x) is never 0."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) A student writes: 'the power rule gives d/dx(x^2) = 2x, so the same rule gives d/dx(2^x) = x times 2^(x-1)'. Explain exactly what condition the power rule requires, why the second statement fails it, and state the correct derivative of 2^x.",
+          "concept": "power rule needs a variable base and constant exponent",
+          "why": "d/dx(x^n) = n x^(n-1) is proved for a fixed number n in the exponent and x in the base. In 2^x the base 2 is fixed and the exponent is the variable, so the rule does not apply and 'x times 2^(x-1)' is meaningless as a derivative. The correct rule is d/dx(a^x) = a^x ln a, so d/dx(2^x) = 2^x ln 2. Sanity check: x times 2^(x-1) would be 0 at x = 0, whereas the tangent to 2^x at x = 0 clearly has positive slope, ln 2 which is about 0.69."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Explain why f'(x) = lim as h -> 0 of [f(x+h) - f(x)]/h cannot be evaluated by simply putting h = 0, and how the limit work of Weeks 3 and 4 gets round it. Illustrate with f(x) = x^2.",
+          "concept": "0/0 indeterminate form resolved by algebra before the limit",
+          "why": "Setting h = 0 immediately gives [f(x) - f(x)]/0 = 0/0, which is indeterminate and has no value. The method is to do algebra valid for every h not equal to 0 (expand, subtract, factor h out, cancel it), producing an expression that is defined at h = 0, and only then substitute. For f(x) = x^2: [(x+h)^2 - x^2]/h = (2xh + h^2)/h = h(2x + h)/h = 2x + h for h not 0, and letting h -> 0 gives f'(x) = 2x. The cancellation is legal precisely because h never actually equals 0, it only approaches it."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) A student differentiates y = 4x^3 correctly as y' = 12x^2, then differentiates y = (4x)^3 the same way and again writes 12x^2. Explain which rule has been misapplied and give the correct derivative.",
+          "concept": "constant multiple rule versus a constant inside the bracket",
+          "why": "The constant multiple rule applies to a constant multiplying the whole function, not to a constant sitting inside a bracket that is then raised to a power. In 4x^3 the 4 multiplies x^3, so the derivative is 4 times 3x^2 = 12x^2. In (4x)^3 the 4 is inside the cube and gets cubed too: (4x)^3 = 64x^3, so the derivative is 192x^2. Simplify the bracket before differentiating; the chain rule gives the same, 3(4x)^2 times 4 = 192x^2. Scale check: (4x)^3 is 64 times bigger than x^3, so its gradient must be 64 times bigger than 3x^2, not 4 times."
+        }
+      ]
+    },
+    {
+      "id": "tue-phy102",
+      "day": "Tue",
+      "course": "PHY_102",
+      "topic": "Kirchhoff's two rules as concepts: junctions and loops, the conservation principle behind each, the sign conventions, and how a network's equations are set up and counted",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A wire turns a right angle at point c, and nothing else is attached there. Point c is not a junction because:",
+          "options": [
+            "only two conductors meet, so the junction equation there reduces to I = I",
+            "the potential is the same on either side of a bend, so no equation is possible",
+            "a bend has negligible resistance and therefore cannot alter the current",
+            "junctions exist only where a resistor or a source is attached to the wire"
+          ],
+          "answerIndex": 0,
+          "concept": "definition of a junction",
+          "why": "A junction needs three or more conductors. At a bend every charge arriving has one way out, so sum of I in = sum of I out becomes I = I and yields no equation; this is why the lecture figure calls a and b junctions but not c and d. Option b states a true fact about potential and misuses it as a reason about currents. Option c treats the rule as an approximation about ideal wire, but it holds at a resistive junction too. Option d invents a component-based definition; three bare wires meeting is already a junction."
+        },
+        {
+          "type": "mcq",
+          "q": "The junction rule, sum of I in = sum of I out, is a statement that:",
+          "options": [
+            "charge does not pile up at a junction, because charge is conserved and the current steady",
+            "energy is conserved, because charge crossing a junction loses none of its energy",
+            "every point of a junction is at the same potential, so the currents must match",
+            "a junction has negligible resistance, so no current is lost in crossing it"
+          ],
+          "answerIndex": 0,
+          "concept": "junction rule as conservation of charge",
+          "why": "A geometrical point has no capacity to store charge, so in a steady current the inflow per second equals the outflow per second. Option b swaps the two rules, since energy conservation is the loop rule. Option c states a true property of a node and then offers it as the reason for a statement about currents. Option d mistakes the rule for a claim about lossless wires; it would hold even at a dissipative junction."
+        },
+        {
+          "type": "mcq",
+          "q": "The loop rule, sum of V = 0, holds around every closed loop because:",
+          "options": [
+            "the current is the same at every point of a loop, so the potentials must cancel",
+            "potential is single-valued, so returning to a point returns you to its potential",
+            "each loop contains a source whose emf is matched by the drops around it",
+            "the resistances round a loop are in series, and series resistances always add"
+          ],
+          "answerIndex": 1,
+          "concept": "loop rule as conservation of energy",
+          "why": "Potential is a single-valued function of position, so a charge returning to its starting point is back at the same potential and the algebraic sum of the rises and falls is zero; per coulomb, what the sources supply the resistances take back. Option a borrows the constant-current property of a series branch and applies it to potentials. Option c is false, since the rule applies to a loop containing no source at all. Option d confuses a method of adding resistances with the reason the rule is true."
+        },
+        {
+          "type": "mcq",
+          "q": "Walking clockwise round a loop you meet, in order: a battery entered at its - terminal (emf e1); a resistor R1 whose current arrow points clockwise; a battery entered at its + terminal (emf e2); a resistor R2 whose current arrow points anticlockwise. The loop equation is:",
+          "options": [
+            "e1 - I R1 - e2 + I R2 = 0",
+            "e1 - I R1 + e2 - I R2 = 0",
+            "e1 + I R1 - e2 - I R2 = 0",
+            "e1 - I R1 - e2 - I R2 = 0"
+          ],
+          "answerIndex": 0,
+          "concept": "applying both sign rules independently",
+          "why": "Entering at - and leaving at + gives +e1; walking with R1's arrow gives -I R1; entering the second battery at its + terminal gives -e2; walking against R2's arrow gives +I R2. Option b lets the current arrow decide the battery signs, the commonest error, but a battery's terminals are physically fixed. Option c has the resistor rule exactly backwards. Option d applies 'a resistor always gives -IR' to R2 without looking at its arrow."
+        },
+        {
+          "type": "mcq",
+          "q": "On a finished diagram the current arrow in one branch is reversed, nothing else is altered, and the loop equations are rewritten. Compared with the originals:",
+          "options": [
+            "the emf terms keep their signs; only that branch's IR terms change sign",
+            "both the emf terms and the IR terms of that branch change sign",
+            "only the emf term changes sign, the battery now opposing the current",
+            "nothing changes, since an arrow is only a guess until the currents are found"
+          ],
+          "answerIndex": 0,
+          "concept": "emf sign reads terminals, IR sign reads the arrow",
+          "why": "Reversing an arrow only reverses what 'with the current' and 'against the current' mean, so just that branch's IR terms flip; the battery's terminals have not moved. Option b makes the battery's sign follow the current. Option c makes the same error in the opposite direction. Option d mistakes the arbitrariness of the choice for irrelevance of the bookkeeping: once drawn, the arrow governs every IR sign written."
+        },
+        {
+          "type": "mcq",
+          "q": "A network has 6 branches, carrying 6 unknown currents, and 4 junctions. The independent junction and loop equations number:",
+          "options": [
+            "3 and 3",
+            "4 and 2",
+            "3 and 4",
+            "4 and 3"
+          ],
+          "answerIndex": 0,
+          "concept": "counting independent equations",
+          "why": "There are n-1 = 3 independent junction equations and b-n+1 = 6-4+1 = 3 independent loop equations, giving 6 equations for 6 unknowns. Option b uses all four junction equations, but the fourth is the sum of the other three, and then under-counts loops. Options c and d each produce 7 equations for 6 unknowns, an over-determined set that appears to contradict itself as soon as a sign is slipped."
+        },
+        {
+          "type": "mcq",
+          "q": "Having written loop equations for the left and the right mesh of a two-loop network, a student writes a third for the outer perimeter. That equation:",
+          "options": [
+            "is the sum of the first two, so a junction equation is still needed",
+            "is a third independent equation, so the junction rule is not needed at all",
+            "is invalid, because the perimeter omits the branch shared by the two meshes",
+            "contradicts the other two unless every loop is walked in the same sense"
+          ],
+          "answerIndex": 0,
+          "concept": "redundant loops carry no information",
+          "why": "The shared middle branch is traversed once in each mesh equation with opposite signs, so it cancels and the perimeter equation is exactly the sum of the two meshes. A third relation must therefore come from the junction rule. Option b is the trap the question is built on. Option c is false, since the perimeter is a perfectly valid closed path, merely redundant. Option d confuses redundancy with inconsistency; sense of travel only multiplies an equation by -1."
+        },
+        {
+          "type": "mcq",
+          "q": "The junction rule is stated for steady currents. It would fail at a junction where:",
+          "options": [
+            "one branch runs to a capacitor plate while the capacitor is charging",
+            "the branches meeting there have very unequal resistances",
+            "one of the branches meeting there happens to carry no current",
+            "four conductors rather than three happen to meet at the point"
+          ],
+          "answerIndex": 0,
+          "concept": "steady-state condition for the junction rule",
+          "why": "The rule assumes charge cannot accumulate; while a capacitor plate charges, more charge arrives along that branch than leaves it, so sum of I in is not equal to sum of I out. Option b is irrelevant, since unequal resistances change how the current divides but never the total. Option c is a legitimate case, a zero current being simply a zero term. Option d confuses the number of conductors with the validity of the rule, which holds for any number from three upward."
+        },
+        {
+          "type": "short",
+          "q": "Explain how conservation of charge produces the junction equation, and how conservation of energy produces the loop equation. In each case, say what would have to be true of a circuit for that rule to fail.",
+          "concept": "the physical basis of each rule",
+          "why": "Charge to junction rule: charge is neither created nor destroyed, and a junction is a geometrical point with no capacity to store it, so in a steady current the rate at which charge arrives equals the rate at which it leaves, giving sum of I in = sum of I out. Energy to loop rule: in an electrostatic field the potential V is a single-valued function of position, so carrying a charge round any closed path returns it to the same potential and the algebraic sum of the potential changes is zero; per coulomb this says the energy supplied by the emfs equals the energy removed by the resistances, sum of emf = sum of IR. Failure conditions: the junction rule fails when charge really can accumulate, the classic case being a branch running to a capacitor plate during charging, where the current is not steady; the loop rule fails when the electric field is not conservative, that is when a changing magnetic flux links the loop and induces an emf not localised in any component, so that potential is no longer single-valued and Faraday's law is needed instead."
+        },
+        {
+          "type": "short",
+          "q": "Between nodes a and b there are three branches: a battery e1 with internal resistance r1; a battery e2 with internal resistance r2; and a resistor R. Set up, without solving, the full set of equations. State how many junction equations and how many loop equations are independent, and explain why the second junction equation is not one of them.",
+          "concept": "setting up and counting before any algebra",
+          "why": "Draw an arrow in each branch, say I1 and I2 flowing up into a through the battery branches and I3 flowing down from a to b through R. Junction equations: there are n = 2 junctions, so n-1 = 1 is independent, namely I1 + I2 = I3 at a. Loop equations: b-n+1 = 3-2+1 = 2. Loop 1 (up branch 1, down branch 3, starting at b): e1 - I1 r1 - I3 R = 0. Loop 2 (up branch 2, down branch 3): e2 - I2 r2 - I3 R = 0. That is three equations for three unknown currents, and no more may be used. The junction equation at b reads I3 = I1 + I2, which is the equation at a rearranged: every current entering a must leave b, so the two carry identical content. In general the n junction equations of a network sum identically to 0 = 0, so exactly one of them is always redundant."
+        },
+        {
+          "type": "short",
+          "q": "One student walks a loop clockwise, another walks the same loop anticlockwise using the same current arrows. Explain the relationship between the two equations they obtain, whether either direction is the correct one, and what genuinely must be kept consistent between equations.",
+          "concept": "arbitrariness of the travel sense",
+          "why": "Every term of the second equation is the negative of the corresponding term of the first: a source entered at - going clockwise is entered at + going anticlockwise, and a resistor walked with the arrow one way is walked against it the other. The second equation is therefore the first multiplied by -1, the same equation, and it yields identical currents. Neither direction is correct or preferred, and there is in particular no requirement to walk in the direction of the current; walking against it is often easier to keep straight. What must be kept consistent is, first, the current arrows, which are fixed once drawn and govern every IR sign in every equation, and second, walking each individual loop in one unbroken sense from a marked starting point rather than changing direction part-way round."
+        },
+        {
+          "type": "short",
+          "q": "Explain why the series and parallel formulas cannot finish a bridge circuit, identifying the exact topological feature that defeats each formula, and say what has to be true of the arm resistances before series/parallel reduction becomes legitimate again.",
+          "concept": "why a bridge forces Kirchhoff's rules",
+          "why": "Two resistors are in series only if the whole of the current through one passes through the other, which requires the point between them to be a two-conductor point. In a bridge, the point between an upper and a lower arm is where the bridging resistor is attached: three conductors meet, current splits off there, so those arms are not in series. Two resistors are in parallel only if they share both ends, so that the same potential difference stands across each; in a bridge the two upper arms share the supply node but their other ends are different nodes joined only through the bridge, so they are not in parallel. Every pair fails one test or the other, the reduction stalls at the first step, and Kirchhoff's rules with three unknown branch currents and three independent loops are the only route. Reduction becomes legitimate again exactly when the bridge is balanced, R_ab / R_bd = R_ac / R_cd: the two mid-points are then at the same potential, no current flows in the bridging branch, that branch may be removed, and the network collapses into two series pairs in parallel."
+        }
+      ]
+    },
+    {
+      "id": "wed-cos102",
+      "day": "Wed",
+      "course": "COS_102",
+      "topic": "Flowchart concepts: which symbol means what, how many flowlines each carries, the rules of flow and the course's types and principles, and how a flowchart relates to an algorithm and to pseudocode",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A symbol in a flowchart has exactly one flowline arriving at it and two flowlines leaving it, and each of the two departing lines carries a written label. Which symbol is it, and what are the labels for?",
+          "options": [
+            "The merge symbol; the labels name the various paths that are being combined into a single path",
+            "The summing junction; the labels name the inputs from various paths that are being added together",
+            "The decision or control symbol; each label states the answer, yes or no, that selects that path",
+            "The preparation symbol; the labels separate the steps that prepare for work from those that do the work"
+          ],
+          "answerIndex": 2,
+          "concept": "fan-out belongs to the decision symbol alone",
+          "why": "The course defines the decision symbol as the one used when questions such as yes or no and true or false need an answer, and says the answer determines the path the algorithm flow will take, so its two exits are the two answers and the labels record which answer sends the flow which way. Option a and option b come from one shared error, the reversal of fan-in and fan-out: merge combines various paths into a single path and the summing junction shows the addition of inputs from various paths, so both take several lines IN and give one OUT and neither can create a branch. Option d is the shape-confusion answer, since the hexagonal preparation symbol is the other non-rectangular box, but preparation is a plain 1-in 1-out step that distinguishes setup from work."
+        },
+        {
+          "type": "mcq",
+          "q": "In a correctly drawn flowchart, exactly one kind of symbol has no flowline arriving at it and none leaving it. Which one, and why?",
+          "options": [
+            "The on-page connector, because the flow jumps over it and resumes at the twin circle with the same label",
+            "The comment or note symbol, because it only annotates a part of the chart and hangs off it on a dashed line",
+            "The predefined process symbol, because its internal steps are defined on another chart and so are not run here",
+            "The preparation symbol, because preparing for work is not itself one of the steps of the work being charted"
+          ],
+          "answerIndex": 1,
+          "concept": "what is on the flow path versus what only annotates it",
+          "why": "A comment is joined to the symbol it comments on by a DASHED line, which is not a flowline: the flow never enters it and never leaves it, so nothing in it is executed. Option a is the widespread error that a connector is skipped; a connector is very much on the path, since the flow arrives at one circle and departs from its twin, so the pair carries one line in and one line out drawn in two pieces. Option c confuses 'defined elsewhere' with 'not run here' - a predefined process is entered and left like any other step and only its internals are hidden. Option d mistakes the description of the preparation symbol for a claim about execution; preparation steps really are performed."
+        },
+        {
+          "type": "mcq",
+          "q": "A rectangle labelled 'Compute payroll tax' is drawn with a vertical bar down each of its two sides. What does that drawing tell a reader that a plain rectangle would not?",
+          "options": [
+            "That the step is a comment on the payroll calculation rather than a part of the calculation itself",
+            "That the step is setting variables up in readiness, before the payroll calculation proper begins",
+            "That the step is a complex or well-known operation whose internal steps are defined elsewhere, not drawn here",
+            "That the step produces a payroll document as its output rather than leaving a value inside the program"
+          ],
+          "answerIndex": 2,
+          "concept": "predefined process (declaration) symbol",
+          "why": "The course's wording is that the predefined process or declaration symbol is used to show a complex process or a well-known operation; drawing it says the step happens but its steps live on another chart. Option a is the comment symbol, attached on a dashed line and not on the flow path. Option b is the preparation symbol, the hexagon, which shows the difference between steps preparing for work and those that actually work. Option d is the document symbol, drawn with a wavy bottom edge, which shows a document's input or output. All four are real symbols; only one has bars down its sides."
+        },
+        {
+          "type": "mcq",
+          "q": "Why does the course provide connector symbols at all, when a flowline could join the same two points?",
+          "options": [
+            "Because a flowline may only join two symbols that are drawn next to each other, so distant symbols need a connector",
+            "Because a long or awkward line would make flow lines cross, which the principles say to avoid; the on-page connector stands in for it on one page, the link connector across pages",
+            "Because the flow has to be halted at a connector so that the reader has time to turn to the next page before continuing",
+            "Because connectors mark the boundaries between the independent elements of a chart, and a flowline is not permitted to cross such a boundary"
+          ],
+          "answerIndex": 1,
+          "concept": "connectors exist to protect the no-crossing principle",
+          "why": "Two of the course's own statements meet here: the principle that flow lines should generally not cross if possible, and the disadvantage that a complex chart might span multiple pages. The on-page connector connects independent elements across a single page and the link connector across multiple pages. Option a invents a restriction never stated; long flowlines are legal, which is precisely the case where a connector is preferable rather than required. Option c reads the connector as an instruction to the human reader - the flow does not pause, it resumes at the twin. Option d invents fenced regions; 'independent elements' just means parts of the chart not drawn next to each other."
+        },
+        {
+          "type": "mcq",
+          "q": "A student states a method as an algorithm, draws it as a flowchart, and writes it as pseudocode. Which statement is correct?",
+          "options": [
+            "The flowchart and the pseudocode are two representations of the one algorithm, and a compiler accepts none of the three",
+            "The pseudocode is the algorithm, the flowchart is a picture of the pseudocode, and only the pseudocode can be compiled",
+            "The flowchart is the algorithm, since the course defines it as the sequence of operations in a computer program",
+            "The algorithm is obtained by tracing the flowchart, so a flowchart has to exist before any algorithm can be stated"
+          ],
+          "answerIndex": 0,
+          "concept": "algorithm versus flowchart versus pseudocode",
+          "why": "The algorithm is the method itself; the flowchart is the course's graphical representation of it; pseudocode is the text representation of the same thing, using English-like statements and keywords where the chart uses shapes and arrows. Neither notation is a programming language, which is why the chart belongs in the program specification documents. Option b is the 'pseudocode is nearly code' error: it borrows keywords but belongs to no language and has no grammar a compiler could parse. Option c misreads the definition, which says a flowchart is a representation OF the operations, so it cannot be the thing it represents. Option d reverses the dependency: the method exists before any drawing of it, even though tracing a chart can recover it."
+        },
+        {
+          "type": "mcq",
+          "q": "Two separate flowlines both arrive at the top of the same process rectangle, and one flowline leaves it. A classmate says this breaks the 'one entry, one exit' rule and the chart must be redrawn. Who is right?",
+          "options": [
+            "The classmate is right: no symbol may ever have more than one flowline arriving at it, whatever the symbol is",
+            "The classmate is right, and the fix is to draw a second copy of the rectangle so that each arriving path has its own",
+            "The classmate is wrong: paths may rejoin, and the rule bites on exits, since two lines leaving a non-decision box leave it unsaid which is taken",
+            "The classmate is wrong: the only rule about flow lines is that they should generally not cross, and these two do not cross"
+          ],
+          "answerIndex": 2,
+          "concept": "what one entry, one exit actually constrains",
+          "why": "The rule exists to make the flow unambiguous, and ambiguity can only arise where the flow has a choice, that is at exits. Two lines arriving is not a choice, and the course supplies the merge symbol precisely to combine various paths into a single path. Option a is the over-literal reading, which would outlaw the merge symbol the course teaches and make every loop's back-arrow illegal, since it rejoins the flow at an earlier box. Option b accepts that wrong reading and fixes it by duplication, so the two copies must now be kept in step by hand. Option d quotes a real principle at a question it does not answer: crossing is about legibility, entries and exits are about meaning."
+        },
+        {
+          "type": "mcq",
+          "q": "A team must document how a purchase request moves through an organisation, so that new employees can be trained on it and problem areas identified. On the course's stated uses, which type of flowchart is being asked for?",
+          "options": [
+            "A process flowchart, which can be applied to almost anything and describes how a process is completed in an organisation",
+            "A workflow chart, which describes the manner in which businesses function and is used for employee training and for identifying possible problematic areas",
+            "A swimlane flowchart, which is useful where multiple information flows side by side and allows multiple categories of activities",
+            "A data flowchart, which shows the flow of information and reduces the communication gap between users and developers"
+          ],
+          "answerIndex": 1,
+          "concept": "matching a chart type to the course's stated uses",
+          "why": "Employee training and identifying possible problematic areas are listed by the course under the workflow flowchart, along with simplifying the operations of a business and creating stable high-quality output from standard procedures; a workflow chart describes the manner in which businesses function. Option a is the strongest distractor because the process flowchart's description is broad enough to cover almost anything; the discriminator is that the course attaches these particular uses to workflow and gives the process flowchart a different list - roles and responsibilities, the production chain, information communication. Option c would only be right if the request had to be shown moving between departments in parallel lanes. Option d is picked up by the word 'information', but the data flowchart concerns the data processing aspect of a system's design and analysis."
+        },
+        {
+          "type": "mcq",
+          "q": "The course lists as a disadvantage that adjustments to a flowchart 'might be complicated and might even require that a new flowchart is drawn'. What is the mechanism behind that?",
+          "options": [
+            "Because a flowchart is not a program, so every change has to be made twice, once in the chart and once in the code",
+            "Because the layout carries meaning: a symbol's position fixes where its flowlines run, so inserting a step can force lines to cross or run out of room, and the chart must be redrawn to stay neat and clear",
+            "Because the flowchart logic is hardly the most efficient, and can make the program unnecessarily longer than normal",
+            "Because a complex chart may span multiple pages, and a page can no longer be edited once its link connectors have been labelled"
+          ],
+          "answerIndex": 1,
+          "concept": "why the graphical form makes a chart expensive to change",
+          "why": "In pseudocode you insert a line and everything below shifts down by itself; in a flowchart position is meaning, since every symbol occupies a place and every flowline is a drawn route between two places. Insert a step and the routes must be redrawn, and lines that had been kept apart begin to cross, offending the principle that flow lines should generally not cross and the requirement that the chart be easy to follow, neat and clear with good visual impact. Option c is the 'quote the nearest listed disadvantage' trap: it is a genuine course disadvantage but it is about the efficiency of the resulting program. Option d welds two disadvantages together and adds an invented rule about labelled connectors. Option a is true of any design document and so explains nothing specific to flowcharts."
+        },
+        {
+          "type": "short",
+          "q": "The course defines a flowchart as 'the graphical representation of an algorithm'. Explain what work the word 'representation' is doing in that definition. Then use it to explain how two students can draw two visibly different flowcharts of the same algorithm and both be correct, and state exactly what would have to be true of the two charts for that to hold.",
+          "concept": "a flowchart represents an algorithm, so identity of algorithm is the test",
+          "why": "'Representation' says the flowchart is a notation FOR something that exists independently of it. The algorithm - the finite, ordered, unambiguous sequence of steps that solves the problem - is the thing; the chart is one way of writing it down and pseudocode is another. Correctness of a chart is therefore judged against the algorithm, not against another chart. So two students may produce charts that look nothing alike: one running down the page and one across it; one using a matched pair of on-page connectors where the other draws a long flowline; one testing 'Is count < 5?' where the other tests 'Is count >= 5?' and swaps the Yes and No labels. For both to be right the charts must agree on everything the algorithm consists of and differ only in how it is drawn: the same steps in the same order, the same conditions with each branch leading to the same consequence (so an inverted condition must have inverted labels), the same number of repetitions of any loop, the same inputs read and outputs produced in the same order, and every path terminating. Trace both on the same data and they must give identical output; if they do not, they represent two different algorithms and at most one answers the question."
+        },
+        {
+          "type": "short",
+          "q": "Name the six symbols you would need in order to draw any of sequence, selection and iteration, say in one line what each does, and give the number of flowlines entering and leaving each. Then explain why the decision is the only one of the six permitted more than one exit.",
+          "concept": "the minimal symbol set for the three control structures, with arrow counts",
+          "why": "Terminator (oval) - shows the start and end points of the flowchart; START has 0 in and 1 out, STOP has 1 or more in and 0 out. Process or action (rectangle) - shows an action, process or function such as an assignment; 1 in, 1 out. Input/output, the data symbol (parallelogram) - shows data used either at the input or the output; 1 in, 1 out. Decision or control (diamond) - used when a yes/no or true/false question needs an answer, the answer determining the path the flow takes; 1 in, exactly 2 out, both labelled. Flowline (arrow) - carries the flow from one symbol's exit to the next symbol's entry and fixes the direction, normally top to bottom and left to right; an upward flowline is the back-arrow that makes a loop. Merge (or a plain rejoining of lines) - combines various paths into a single path so the branches of a selection continue as one; several in, 1 out. With these, sequence is a chain of 1-in-1-out boxes, selection is a decision whose two labelled branches reach STOP or rejoin, and iteration is a decision one of whose branches is a back-arrow to a box already visited. The decision is the only symbol allowed two exits because it is the only symbol that produces an answer: a chart must be unambiguous, so a symbol may only have two exits if something states which is taken, and the only thing that can state it is the condition together with the Yes and No labels."
+        },
+        {
+          "type": "short",
+          "q": "Explain what a matched pair of connectors does to the flow of a chart. Then explain what a reader who mistakes the first connector for a STOP terminator will wrongly conclude, and name the principle that connectors exist to protect.",
+          "concept": "the connector as a two-piece flowline",
+          "why": "A matched pair of connectors is a single flowline drawn in two pieces: the flow arrives at the first circle, which carries the label, and resumes at the second circle bearing the same label - on the same page for the on-page connector, on a different page for the link (off-page) connector. Between them nothing is executed and nothing is decided; the pair is a jump and the label is the only thing joining its two ends. A reader who takes the first circle for a STOP terminator - an easy slip, since both have a line arriving and none leaving - draws two wrong conclusions. First, the trace stops early: everything downstream of the twin is never reached, so the reader reports the wrong output and, in a loop drawn with connectors, reports no repetition at all. Second, the reader misjudges the structure, believing the path terminates when it may run for ever, and treating the drawing hanging off the twin connector as unreachable dead material. The principle connectors protect is that flow lines should generally not cross if possible, together with the requirement that the chart be easy to follow, neat and clear; the related motive is the stated disadvantage that a complex chart might span multiple pages, which the link connector answers."
+        },
+        {
+          "type": "short",
+          "q": "Take two rules of flow: every path must terminate, and a decision has exactly two outgoing branches, both labelled. Explain how a chart can satisfy the second and still break the first, and how a chart can satisfy both and still be a bad flowchart by the course's principles. Name the principle each failure offends.",
+          "concept": "the rules of flow are independent of each other and of good drawing",
+          "why": "Second satisfied, first broken: every decision may carry two properly labelled branches while a path still never reaches STOP. The plain case is a loop whose condition can never turn - START, then count = 0, then Enter n, then sum = sum + n, then a decision 'Is count < 5?' with a Yes back-arrow to Enter n and a labelled No branch to Print sum and STOP. The decision is perfectly formed, but nothing inside the loop changes count, so the answer is Yes on every pass and the STOP is unreachable. The second case is a branch that runs into nothing: both branches labelled, but one ends at a process box with no outgoing flowline. Both offend the principle that the flowchart should have a start point and a stop point, meaning every path must arrive at one, not merely that a STOP is drawn somewhere. Both satisfied, still a bad chart: flow lines may cross repeatedly where a pair of connectors would have kept them apart; the diamonds may carry compound tangles such as 'Is (mark >= 50 and attendance >= 75) or lecturer override?' when the principle is that instructions for comparisons should be made as simple as possible; the layout may run in every direction rather than top to bottom and left to right. All of these offend the principle that the chart be easy to follow, neat and clear with good visual impact - which matters because the advantages the course claims are advantages for a reader: simplifying the logic, ascertaining whether the logic works, and letting other programmers understand it from the specification documents."
+        }
+      ]
+    },
+    {
+      "id": "thu-mth102",
+      "day": "Thu",
+      "course": "MTH_102",
+      "topic": "Differentiation problems: the product, quotient and chain rules, combinations of them, and multi-step differentiation with a fully factorised answer",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "d/dx [(2x + 1)(x^2 - 3)] =",
+          "options": [
+            "6x^2 + 2x - 6",
+            "4x",
+            "-2x^2 - 2x - 6",
+            "2x^3 - 2x + 2"
+          ],
+          "answerIndex": 0,
+          "concept": "product rule",
+          "why": "(uv)' = u'v + uv' pairs each derivative with the other, undifferentiated, factor: 2(x^2 - 3) + (2x + 1)(2x) = 6x^2 + 2x - 6, which expanding first (2x^3 + x^2 - 6x - 3) confirms. Option b is 'differentiate each factor and multiply', 2 times 2x. Option c is the product rule written with the quotient rule's minus sign. Option d pairs each derivative with its own factor instead of the other one."
+        },
+        {
+          "type": "mcq",
+          "q": "d/dx [(x^2 - 4)/(x + 1)] =",
+          "options": [
+            "(x^2 + 2x + 4)/(x + 1)^2",
+            "(-x^2 - 2x - 4)/(x + 1)^2",
+            "(x^2 + 2x + 4)/(x + 1)",
+            "2x"
+          ],
+          "answerIndex": 0,
+          "concept": "quotient rule, numerator order and squared denominator",
+          "why": "(u'v - uv')/v^2 = [2x(x + 1) - (x^2 - 4)]/(x + 1)^2 = (x^2 + 2x + 4)/(x + 1)^2. Option b has the two numerator terms in the wrong order, which negates the whole answer. Option c forgets that the denominator is squared. Option d differentiates numerator and denominator separately, which is not a rule."
+        },
+        {
+          "type": "mcq",
+          "q": "d/dx [sqrt(3x^2 + 5)] =",
+          "options": [
+            "3x/sqrt(3x^2 + 5)",
+            "1/(2 sqrt(3x^2 + 5))",
+            "6x/sqrt(3x^2 + 5)",
+            "3x sqrt(3x^2 + 5)"
+          ],
+          "answerIndex": 0,
+          "concept": "chain rule on a half power",
+          "why": "Rewrite sqrt(u) as u^(1/2): the derivative is u'/(2 sqrt(u)) = (1/2)(3x^2 + 5)^(-1/2) times 6x = 3x/sqrt(3x^2 + 5). Option b drops the inner derivative 6x. Option c keeps the inner derivative but loses the 1/2 the square root supplies. Option d adds 1 to the exponent instead of subtracting, leaving the root in the numerator."
+        },
+        {
+          "type": "mcq",
+          "q": "d/dx [x^3 (2x - 5)^4] =",
+          "options": [
+            "x^2 (2x - 5)^3 (14x - 15)",
+            "x^2 (2x - 5)^3 (10x - 15)",
+            "24x^2 (2x - 5)^3",
+            "12x^2 (2x - 5)^3"
+          ],
+          "answerIndex": 0,
+          "concept": "product rule with a chain rule inside it",
+          "why": "3x^2 (2x - 5)^4 + x^3 times 4(2x - 5)^3 times 2 = x^2 (2x - 5)^3 [3(2x - 5) + 8x] = x^2 (2x - 5)^3 (14x - 15). Option b applies the product rule correctly but drops the inner derivative 2, giving 3(2x - 5) + 4x = 10x - 15. Option c multiplies the two derivatives together instead of using the product rule. Option d does both wrong things at once: multiplies the derivatives and drops the inner derivative."
+        },
+        {
+          "type": "mcq",
+          "q": "d/dx [(x + 1)^3 / x^2] =",
+          "options": [
+            "(x + 1)^2 (x - 2)/x^3",
+            "(x + 1)^2 (2 - x)/x^3",
+            "(x + 1)^2 (x - 2)/x",
+            "3(x + 1)^2/(2x)"
+          ],
+          "answerIndex": 0,
+          "concept": "quotient rule with a chain rule in the numerator",
+          "why": "[3(x + 1)^2 x^2 - (x + 1)^3 2x]/x^4 = x(x + 1)^2 [3x - 2(x + 1)]/x^4 = (x + 1)^2 (x - 2)/x^3. Option b reverses the numerator order, turning x - 2 into 2 - x. Option c divides by x^2 instead of (x^2)^2 = x^4. Option d differentiates top and bottom separately."
+        },
+        {
+          "type": "mcq",
+          "q": "d/dx [e^(3x^2)] =",
+          "options": [
+            "6x e^(3x^2)",
+            "e^(3x^2)",
+            "6x e^(6x)",
+            "3x^2 e^(3x^2 - 1)"
+          ],
+          "answerIndex": 0,
+          "concept": "chain rule on e^u",
+          "why": "d/dx e^u = e^u u', and the exponent itself is untouched: the inner function 3x^2 has derivative 6x, so the answer is 6x e^(3x^2). Option b drops the inner derivative, which would only be right for e^x. Option c differentiates the exponent inside the exponential as well as outside, double-counting it. Option d applies the power rule to an exponential, whose exponent is not a constant."
+        },
+        {
+          "type": "mcq",
+          "q": "d/dx [sin^3(2x)] =",
+          "options": [
+            "6 sin^2(2x) cos(2x)",
+            "3 sin^2(2x) cos(2x)",
+            "3 sin^2(2x)",
+            "6 sin(2x) cos(2x)"
+          ],
+          "answerIndex": 0,
+          "concept": "double composition, every layer contributes a factor",
+          "why": "y = [sin(2x)]^3, so dy/dx = 3[sin(2x)]^2 times cos(2x) times 2 = 6 sin^2(2x) cos(2x). Option b handles the power and the sine but forgets the innermost derivative 2. Option c stops after the power rule, never differentiating the sine. Option d uses the wrong outer power: it is the derivative of sin^2(2x), not sin^3(2x)."
+        },
+        {
+          "type": "mcq",
+          "q": "d/dx [(x^3 + 4x)/x] =",
+          "options": [
+            "2x",
+            "-2x",
+            "(3x^2 + 4)/x",
+            "3x^2 + 4"
+          ],
+          "answerIndex": 0,
+          "concept": "simplify before differentiating",
+          "why": "A single-term denominator cancels, so the quotient rule is unnecessary: (x^3 + 4x)/x = x^2 + 4, whose derivative is 2x. The quotient rule used correctly agrees: [(3x^2 + 4)x - (x^3 + 4x)]/x^2 = 2x^3/x^2 = 2x. Option b is the quotient rule with the numerator terms swapped. Option c differentiates the numerator and leaves the denominator alone. Option d differentiates numerator and denominator separately."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) A student writes d/dx[(3x + 1)^7] = 7(3x + 1)^6. Using the chain rule as (dy/du)(du/dx), say exactly what has been lost and give the correct answer. Then test the student's method on (3x + 1)^2, which you can expand, and show what it gets wrong.",
+          "concept": "chain rule with the inner derivative omitted",
+          "why": "Writing y = u^7 with u = 3x + 1 gives dy/du = 7u^6 and du/dx = 3, so dy/dx = 7(3x + 1)^6 times 3 = 21(3x + 1)^6. The student computed dy/du and stopped, i.e. differentiated with respect to the bracket rather than with respect to x. Test on (3x + 1)^2: expanding gives 9x^2 + 6x + 1, whose derivative is 18x + 6 = 6(3x + 1); the student's method gives 2(3x + 1) = 6x + 2, three times too small, which is exactly the factor du/dx = 3 that was dropped."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Explain why the quotient rule numerator is u'v - uv' and not uv' - u'v, and demonstrate the difference on y = x^2/x, whose derivative you already know without any rule.",
+          "concept": "quotient rule numerator order",
+          "why": "The rule is (u/v)' = (u'v - uv')/v^2: the derivative of the top times the bottom comes first. Take y = x^2/x, which simplifies to y = x, so dy/dx = 1. With u = x^2, v = x, the correct order gives (2x times x - x^2 times 1)/x^2 = x^2/x^2 = 1. The swapped order gives (x^2 times 1 - 2x times x)/x^2 = -x^2/x^2 = -1: the right size but the wrong sign, every time. The order is forced by how the rule is derived, from the product rule applied to u = (u/v)v, so it cannot be chosen for convenience."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Differentiate y = (2x + 3)(x - 1)^2 twice over: once with the product and chain rules, once by expanding first. Show the two answers agree, and say which method you would use in an exam and why.",
+          "concept": "two valid routes to one derivative",
+          "why": "Route 1: u = 2x + 3, u' = 2; v = (x - 1)^2, v' = 2(x - 1). dy/dx = 2(x - 1)^2 + (2x + 3)2(x - 1) = 2(x - 1)[(x - 1) + (2x + 3)] = 2(x - 1)(3x + 2). Route 2: y = 2x^3 - x^2 - 4x + 3, so dy/dx = 6x^2 - 2x - 4 = 2(3x + 2)(x - 1), the same. They must agree because both differentiate the same function and a function has only one derivative. In an exam the rules are safer: expanding is only available for small integer powers (hopeless for (x - 1)^7 or sin(3x)) and each expansion is another chance for an arithmetic slip, but expanding a small case is an excellent way to check a rule you are unsure of."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) For y = x^2 sin(3x), explain how you decide which rule is the outer structure and which is needed inside it, then carry out the differentiation.",
+          "concept": "identify the outermost operation first",
+          "why": "Read the expression as a whole: y is one thing multiplied by another, x^2 and sin(3x), so the outer structure is a product and the product rule governs the layout. Only when differentiating the second factor does a composition appear, sin of 3x, so the chain rule is used inside the product rule, not instead of it. Then u = x^2, u' = 2x; v = sin(3x), v' = 3cos(3x). Hence dy/dx = 2x sin(3x) + 3x^2 cos(3x). The two commonest wrecks are 2x times 3cos(3x) (product of derivatives) and 2x sin(3x) + x^2 cos(3x) (chain rule's inner derivative 3 dropped)."
+        }
+      ]
+    },
+    {
+      "id": "fri-phy102",
+      "day": "Fri",
+      "course": "PHY_102",
+      "topic": "Numerical Kirchhoff problems: single loops with opposing emfs and internal resistance, multi-loop networks by simultaneous equations, terminal p.d., power balance, and negative currents",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A 9.0 V battery (r = 0.5 ohm) and a 3.0 V battery (r = 0.5 ohm) are joined in a single loop in opposition, in series with a 5.0 ohm resistor. The current in the loop is:",
+          "options": [
+            "1.0 A",
+            "2.0 A",
+            "1.2 A",
+            "1.5 A"
+          ],
+          "answerIndex": 0,
+          "concept": "opposing emfs in a single loop",
+          "why": "Opposing emfs subtract while every resistance, internal ones included, adds: I = (9.0 - 3.0)/(0.5 + 0.5 + 5.0) = 6.0/6.0 = 1.0 A. Option b adds the emfs, 12.0/6.0, as though the batteries assisted each other. Option c drops the two internal resistances, 6.0/5.0. Option d ignores the smaller battery's emf while keeping its internal resistance, 9.0/6.0."
+        },
+        {
+          "type": "mcq",
+          "q": "In that same loop (9.0 V with r = 0.5 ohm opposing 3.0 V with r = 0.5 ohm, in series with 5.0 ohm), the terminal potential difference of the 3.0 V battery is:",
+          "options": [
+            "3.5 V",
+            "2.5 V",
+            "3.0 V",
+            "8.5 V"
+          ],
+          "answerIndex": 0,
+          "concept": "terminal p.d. of a battery being charged",
+          "why": "The current is forced into the + terminal of the 3.0 V cell, so V = emf + I r = 3.0 + (1.0)(0.5) = 3.5 V: the terminals of a charging battery stand above its emf. Option b applies the discharging formula emf - I r. Option c assumes terminal p.d. always equals emf, which is true only at zero current. Option d is the other battery's terminal p.d., 9.0 - (1.0)(0.5), misassigned."
+        },
+        {
+          "type": "mcq",
+          "q": "In that same loop, the rate at which the 3.0 V battery's emf converts electrical energy into chemical energy is:",
+          "options": [
+            "3.0 W",
+            "3.5 W",
+            "0.5 W",
+            "9.0 W"
+          ],
+          "answerIndex": 0,
+          "concept": "emf x I versus V I versus I^2 r",
+          "why": "The emf term converts emf x I = (3.0)(1.0) = 3.0 W back into chemical energy. Option b is V I = (3.5)(1.0), the total power delivered at the terminals, of which 0.5 W is wasted as heat. Option c is that waste alone, I^2 r = (1.0)^2 (0.5). Option d is the output of the 9.0 V battery's emf. The budget: 9.0 W supplied = 3.0 W stored + 6.0 W dissipated in the three resistances."
+        },
+        {
+          "type": "mcq",
+          "q": "Between nodes a and b: branch 1 is a 12.0 V battery in series with 3.0 ohm; branch 2 is an 8.0 V battery in series with 2.0 ohm, both + terminals towards a; branch 3 is a 2.0 ohm resistor. The current in the 2.0 ohm resistor of branch 3 is:",
+          "options": [
+            "3.0 A",
+            "2.4 A",
+            "2.0 A",
+            "4.4 A"
+          ],
+          "answerIndex": 0,
+          "concept": "two-loop network by simultaneous equations",
+          "why": "With I1 and I2 up into a and I3 down through branch 3: I1 + I2 = I3, 12.0 - 3 I1 - 2 I3 = 0 and 8.0 - 2 I2 - 2 I3 = 0, giving I1 = 2.0 A, I2 = 1.0 A and I3 = 3.0 A, with V_ab = 6.0 V confirmed by both branches. Option b is branch 1 alone, 12.0/5.0, ignoring the second source. Option c is branch 2 alone, 8.0/4.0. Option d adds those two independent answers, counting the shared 2.0 ohm twice."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same network (12.0 V with 3.0 ohm, 8.0 V with 2.0 ohm, and 2.0 ohm between the nodes), the total power dissipated in the three resistances is:",
+          "options": [
+            "32 W",
+            "24 W",
+            "14 W",
+            "63 W"
+          ],
+          "answerIndex": 0,
+          "concept": "power balance as a check",
+          "why": "Sum of I^2 R = (2.0)^2 (3.0) + (1.0)^2 (2.0) + (3.0)^2 (2.0) = 12 + 2 + 18 = 32 W, matching sum of emf x I = (12.0)(2.0) + (8.0)(1.0) = 32 W. Option b counts only the 12 V source's output. Option c uses sum of I R instead of sum of I^2 R. Option d puts the full 3.0 A through every resistor, (3.0)^2 (3.0 + 2.0 + 2.0)."
+        },
+        {
+          "type": "mcq",
+          "q": "Had the 8.0 V battery in that network been replaced by a 4.0 V one, the current in its branch would come out negative. That would mean:",
+          "options": [
+            "that branch carries current from a to b, and the 4.0 V battery is being charged",
+            "the arrows must be redrawn and all three equations solved again from scratch",
+            "that branch carries no current, the sign being an artefact of the loops chosen",
+            "an arithmetic slip has been made, since a real current cannot be negative"
+          ],
+          "answerIndex": 0,
+          "concept": "interpreting a negative current",
+          "why": "With V_ab then exceeding 4.0 V, branch 2 carries current from a down to b, into the + terminal of the 4.0 V battery, which is therefore being charged by the 12.0 V one. Option b wastes time, since re-solving with the arrow reversed returns the same magnitude with a plus sign. Option c confuses a negative value with zero, but the branch genuinely carries current. Option d treats the sign as absolute rather than relative to an arrow you were free to draw either way."
+        },
+        {
+          "type": "mcq",
+          "q": "A bridge has a supply across A and C, arms A-B = 12 ohm, B-C = 6 ohm, A-D = 8 ohm, D-C = 4 ohm, and a galvanometer between B and D. The resistance between A and C is:",
+          "options": [
+            "7.2 ohm",
+            "6.7 ohm",
+            "30 ohm",
+            "1.6 ohm"
+          ],
+          "answerIndex": 0,
+          "concept": "balanced bridge reduction",
+          "why": "Since 12/6 = 8/4 = 2 the bridge is balanced, B and D are at the same potential and the galvanometer carries no current, so the network is (12 + 6) in parallel with (8 + 4) = 18 x 12 / 30 = 7.2 ohm. Option b is (12 parallel 6) + (8 parallel 4) = 4.0 + 2.67, pairing the two arms of the same branch as though they were in parallel, though they share only one node. Option c puts all four in series and option d all four in parallel. Shorting B to D instead of cutting the branch also gives 7.2 ohm, since they sit at equal potential."
+        },
+        {
+          "type": "mcq",
+          "q": "Four wires meet at a junction. One carries 4.0 A in, a second 2.0 A in, a third 9.0 A out. The fourth carries:",
+          "options": [
+            "3.0 A into the junction",
+            "3.0 A out of the junction",
+            "15 A into the junction",
+            "5.0 A out of the junction"
+          ],
+          "answerIndex": 0,
+          "concept": "junction rule with an unknown that reverses",
+          "why": "Inflow so far is 4.0 + 2.0 = 6.0 A against 9.0 A leaving, so the fourth wire must supply the missing 3.0 A into the junction. Option b has the sign the wrong way and would leave 12 A in against 9 A out. Option c adds every quoted current while ignoring direction. Option d balances the 9.0 A against only the first inflow, 9.0 - 4.0."
+        },
+        {
+          "type": "short",
+          "q": "A 20.0 V battery of internal resistance 1.0 ohm and an 8.0 V battery of internal resistance 1.0 ohm are connected in a single loop in opposition, in series with a 2.0 ohm resistor. Find the current, the terminal p.d. of each battery, and account for the whole power budget.",
+          "concept": "single loop with opposing emfs, terminal p.d. and power",
+          "why": "One loop and no junction, so one equation. Walking round in the sense the 20 V battery drives: 20.0 - I(1.0) - I(2.0) - 8.0 - I(1.0) = 0, so 20.0 - 8.0 = I(1.0 + 2.0 + 1.0), giving 12.0 = 4.0 I and I = 3.0 A. The 20 V battery discharges, since current leaves its + terminal, so V = emf - I r = 20.0 - (3.0)(1.0) = 17.0 V; the 8 V battery is being charged, since current enters its + terminal, so V = emf + I r = 8.0 + (3.0)(1.0) = 11.0 V. Power budget: the 20 V emf delivers (20.0)(3.0) = 60.0 W; the 8 V emf absorbs (8.0)(3.0) = 24.0 W as chemical energy; the resistances dissipate I^2 x sum of R = (9.0)(1.0 + 2.0 + 1.0) = 36.0 W, that is 9.0 W in each internal resistance and 18.0 W in the 2.0 ohm. Check: 24.0 + 36.0 = 60.0 W. The charging battery receives V I = (11.0)(3.0) = 33.0 W at its terminals, of which 24.0 W is stored and 9.0 W wasted in its own r."
+        },
+        {
+          "type": "short",
+          "q": "Between nodes a and b: branch 1 is a 14.0 V battery in series with 2.0 ohm; branch 2 is a 12.0 V battery in series with 4.0 ohm, both + terminals towards a; branch 3 is a 2.0 ohm resistor. Write the junction and loop equations, solve for all three currents, and verify by power balance.",
+          "concept": "two-loop solve verified by power",
+          "why": "Take I1 and I2 up into a and I3 down through branch 3. Junction at a: I1 + I2 = I3, the equation at b being the same statement rearranged. Loop 1 (up branch 1, down branch 3): 14.0 - 2.0 I1 - 2.0 I3 = 0. Loop 2 (up branch 2, down branch 3): 12.0 - 4.0 I2 - 2.0 I3 = 0. Substituting I3 = I1 + I2 gives 4 I1 + 2 I2 = 14.0 and 2 I1 + 6 I2 = 12.0, that is 2 I1 + I2 = 7.0 and I1 + 3 I2 = 6.0. Eliminating gives 5 I2 = 5.0, so I2 = 1.0 A, I1 = 3.0 A and I3 = 4.0 A. Cross-check on V_ab: I3 R3 = 8.0 V, and 14.0 - (3.0)(2.0) = 8.0 V, 12.0 - (1.0)(4.0) = 8.0 V, one value by every route. Power balance: sources give (14.0)(3.0) + (12.0)(1.0) = 54.0 W; resistances take (9.0)(2.0) + (1.0)(4.0) + (16.0)(2.0) = 18.0 + 4.0 + 32.0 = 54.0 W."
+        },
+        {
+          "type": "short",
+          "q": "Same layout, but now branch 1 is 18.0 V with 3.0 ohm, branch 2 is 6.0 V with 2.0 ohm, and branch 3 is 6.0 ohm. Assume both branch currents flow up into a. Solve, then explain in full what the sign of your answer for branch 2 tells you physically, and confirm it with a power budget.",
+          "concept": "a negative current and what it means",
+          "why": "Equations: I1 + I2 = I3; 18.0 - 3.0 I1 - 6.0 I3 = 0; 6.0 - 2.0 I2 - 6.0 I3 = 0. Substituting I3 = I1 + I2 gives 9 I1 + 6 I2 = 18.0 and 6 I1 + 8 I2 = 6.0, that is 3 I1 + 2 I2 = 6.0 and 3 I1 + 4 I2 = 3.0. Subtracting gives 2 I2 = -3.0, so I2 = -1.5 A, then I1 = 3.0 A and I3 = I1 + I2 = 1.5 A. The magnitude 1.5 A is correct and only the assumed arrow was wrong: branch 2 actually carries 1.5 A from a down to b, into the + terminal of the 6.0 V battery, which is therefore being charged by the 18.0 V battery. Its terminal p.d. is emf + I r = 6.0 + (1.5)(2.0) = 9.0 V, equal to V_ab = I3 R3 = (1.5)(6.0) = 9.0 V. Do not re-solve with the arrow reversed, and carry the minus sign into the junction equation; dropping it would have given I3 = 4.5 A and wrecked everything downstream. Power budget: the 18 V emf delivers (18.0)(3.0) = 54.0 W, the 6 V emf absorbs (6.0)(1.5) = 9.0 W, and the resistances dissipate (9.0)(3.0) + (2.25)(2.0) + (2.25)(6.0) = 27.0 + 4.5 + 13.5 = 45.0 W, with 9.0 + 45.0 = 54.0 W."
+        },
+        {
+          "type": "short",
+          "q": "A student solves the network of question 10 and reports I1 = 3.0 A, I2 = 1.0 A, I3 = 5.0 A; a second student reports I1 = 4.0 A, I2 = 1.0 A, I3 = 5.0 A. Show which check catches each error, and explain why the junction rule alone is not a sufficient test of a solution.",
+          "concept": "independent checks on a solution",
+          "why": "The correct answer is I1 = 3.0 A, I2 = 1.0 A, I3 = 4.0 A. For the first student the junction rule fails at once, since 3.0 + 1.0 is not 5.0, so the slip lies in the substitution or the final arithmetic rather than in the loop set-up, and one line catches it. For the second student the junction rule is satisfied, 4.0 + 1.0 = 5.0, so that check passes an answer that is still wrong; the loop equation exposes it, since 14.0 - 2.0(4.0) - 2.0(5.0) = -4.0 rather than 0, and so does the power balance, since the sources give (14.0)(4.0) + (12.0)(1.0) = 68.0 W while the resistances demand (16.0)(2.0) + (1.0)(4.0) + (25.0)(2.0) = 86.0 W, an impossible 18 W discrepancy. The junction rule is insufficient because it constrains only how the currents divide, and infinitely many sets divide correctly; it says nothing about the magnitudes, which are fixed by the emfs and resistances through the loop equations. The power balance uses every emf and every resistance, so it tests the loop and junction equations together, which is why it is worth doing at the end of every network problem."
+        }
+      ]
+    },
+    {
+      "id": "sat-cos102",
+      "day": "Sat",
+      "course": "COS_102",
+      "topic": "Applied flowcharts: tracing a chart described in words to its output, finding the fault in a described chart and naming the rule it breaks, and converting between flowchart and pseudocode in both directions",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "Trace this chart. START (oval) -> rectangle 'sum = 0, count = 0' -> parallelogram 'Enter n' -> rectangle 'sum = sum + n; count = count + 1' -> diamond 'Is count < 5?'; the YES branch is a flowline running back up to 'Enter n'; the NO branch goes to parallelogram 'Print sum' -> STOP (oval). At the keyboard the user types, in order: 3, 8, 1, 6, 2, 9. What is printed?",
+          "options": [
+            "18",
+            "20",
+            "29",
+            "5"
+          ],
+          "answerIndex": 1,
+          "concept": "tracing a post-test loop; the counter, not the data, ends it",
+          "why": "Pass by pass from sum = 0, count = 0: n = 3 gives sum 3, count 1, and 1 < 5 is Yes; n = 8 gives sum 11, count 2, Yes; n = 1 gives sum 12, count 3, Yes; n = 6 gives sum 18, count 4, Yes; n = 2 gives sum 20, count 5, and 5 < 5 is No, so it prints 20. The 9 is never read. Option a, 18, is the off-by-one from testing the counter BEFORE the increment, that is from putting the diamond above the count = count + 1 box, which ends the loop one pass early. Option c, 29, is 20 + 9 and comes from placing the test before the 'Enter n' box, so the final No pass is imagined to read one more number. Option d, 5, is the value of count, the answer of someone who traced correctly and then read the wrong variable out of the output parallelogram."
+        },
+        {
+          "type": "mcq",
+          "q": "Trace this chart. START (oval), annotated 'Lamp doesn't work' -> diamond 'Lamp plugged in?'; the NO branch -> rectangle 'Plug in lamp' -> STOP; the YES branch -> diamond 'Bulb burned out?'; that diamond's YES branch -> rectangle 'Replace bulb' -> STOP; its NO branch -> rectangle 'Repair lamp' -> STOP. A lamp is plugged in, and its bulb is not burned out. Which rectangle does the flow reach?",
+          "options": [
+            "Plug in lamp, since the first decision is the only one whose answer was No in this case",
+            "Replace bulb, since after a Yes at the first decision the flow carries on down the chart to the next box",
+            "Repair lamp, since the flow takes the Yes branch at the first decision and the No branch at the second",
+            "None of them, since the chart provides no path for a lamp that is plugged in with a working bulb"
+          ],
+          "answerIndex": 2,
+          "concept": "tracing nested selection by branch label, not by position",
+          "why": "Plugged in means the first diamond answers Yes, so 'Plug in lamp' is skipped entirely and the flow reaches 'Bulb burned out?'. The bulb is not burned out, so that diamond answers No, and the No branch runs to 'Repair lamp', the outcome reached only when both questions have been answered and neither easy fix applies. Option a follows the No branch of the first decision, the answer for a lamp that is NOT plugged in. Option b is the commonest tracing error of all: assuming the line continuing straight DOWN the page is the default, so a Yes drops into the next box drawn beneath. Position decides nothing; only the label on the flowline does. Option d counts outcomes wrongly - two decisions in a chain give three endpoints, because the second diamond splits only the Yes side of the first."
+        },
+        {
+          "type": "mcq",
+          "q": "This chart is faulty. START -> rectangle 'sum = 0, count = 0' -> parallelogram 'Enter n' -> rectangle 'sum = sum + n' -> diamond 'Is count < 5?'; the YES branch runs back up to 'Enter n'; the NO branch -> parallelogram 'Print sum' -> STOP. What exactly is wrong with it?",
+          "options": [
+            "Nothing is wrong: count is advanced by the decision symbol each time the condition is tested",
+            "sum should not have been initialised to 0, because doing so discards the first value the user enters",
+            "count is never changed inside the loop, so the answer is always Yes, the back-arrow is taken for ever and STOP is unreachable",
+            "The comparison should have been drawn as a rectangle, since testing the value of a counter is an action the machine performs"
+          ],
+          "answerIndex": 2,
+          "concept": "a loop must alter what its condition tests",
+          "why": "count is set to 0 before the loop and no box inside the loop touches it, since the count = count + 1 of the working version has been dropped from the process rectangle. So the diamond tests 0 < 5 on every pass, answers Yes every time, and the No branch, the Print box and the STOP are drawn but never reached, breaking the rule that every path must terminate. Note that the symbols are all correct and the decision is properly formed - the chart is faultless as a drawing and fatal as an algorithm, which is what the course means by using a chart to ascertain whether the logic works. Option a invents work for the decision symbol, which asks a question and selects a path and changes nothing. Option b mistakes initialisation for destruction: sum = 0 is what makes the first addition meaningful. Option d confuses decision with process and would leave a box with two exits and no condition."
+        },
+        {
+          "type": "mcq",
+          "q": "This chart is faulty. A rectangle labelled 'total = price * qty' has TWO flowlines leaving its bottom edge and no labels on either. One runs to parallelogram 'Print total' -> STOP; the other runs to parallelogram 'Print qty' -> STOP. What is wrong?",
+          "options": [
+            "Nothing is wrong: both values are printed, the left-hand one first and then the right-hand one",
+            "Nothing is wrong: a rectangle may have several exits provided every one of them reaches a STOP",
+            "Only a decision may have two outgoing flowlines, each labelled with the answer that selects it; as drawn, nothing states which line the flow takes",
+            "The two print boxes should have been joined by the merge symbol, which combines various paths into a single path"
+          ],
+          "answerIndex": 2,
+          "concept": "fan-out belongs to the decision; unlabelled exits make a chart ambiguous",
+          "why": "A process rectangle has one exit. Two lines leaving it, neither labelled, means the chart does not say which the flow follows, and the whole point of a labelled branch is that a reader can always answer 'where does the flow go next?'. The minimal repair is a diamond above the split carrying whatever question really decides, with its two branches labelled. Option a is the commonest misreading of parallel arrows, as 'do this, then do that' - but sequence is drawn as a CHAIN, one box with one exit into the next box, never as a fork. Option b treats termination as the only rule of flow; both paths do reach a STOP and the chart is still broken, because the rules are independent. Option d is the fan-in/fan-out reversal: merge takes several lines in and gives one out, so it brings paths back together after a decision and cannot create a split."
+        },
+        {
+          "type": "mcq",
+          "q": "Convert the chart in question 1 to pseudocode. Which of these is equivalent to it?",
+          "options": [
+            "sum <- 0; count <- 0; REPEAT { READ n; sum <- sum + n; count <- count + 1 } UNTIL count < 5; PRINT sum",
+            "sum <- 0; count <- 0; REPEAT { READ n; sum <- sum + n; count <- count + 1 } UNTIL count = 5; PRINT sum",
+            "sum <- 0; count <- 0; WHILE count > 5 DO { READ n; sum <- sum + n; count <- count + 1 }; PRINT sum",
+            "sum <- 0; count <- 0; IF count < 5 THEN { READ n; sum <- sum + n; count <- count + 1 }; PRINT sum"
+          ],
+          "answerIndex": 1,
+          "concept": "UNTIL takes the exit condition, not the diamond's condition",
+          "why": "The chart tests AFTER the body, so the body runs at least once: that is REPEAT ... UNTIL. The diamond's condition count < 5 selects the Yes branch, which is the branch that goes back INTO the loop, whereas UNTIL names the condition on which the loop STOPS, so it must carry the negation, count = 5, equivalently NOT (count < 5). Both give five passes. Option a is the answer of everyone who copies the diamond's condition straight into UNTIL: it says keep going until count is less than 5, and since count is 1 after the first pass the loop exits having read a single number. Option c inverts the condition into a pre-test loop, and count > 5 is false at the start, so the body never runs and PRINT outputs 0, whereas the chart's body always runs at least once. Option d replaces the loop with a selection, the error of reading the back-arrow as an ordinary forward flowline."
+        },
+        {
+          "type": "mcq",
+          "q": "Convert this pseudocode to a flowchart: BEGIN; READ a, b; IF a > b THEN PRINT a ELSE PRINT b ENDIF; END. Which description is the correct chart?",
+          "options": [
+            "START -> parallelogram 'READ a, b' -> diamond 'Is a > b?'; YES -> parallelogram 'PRINT a' -> STOP; NO -> parallelogram 'PRINT b' -> STOP",
+            "START -> rectangle 'READ a, b' -> diamond 'Is a > b?'; YES -> rectangle 'PRINT a' -> STOP; NO -> rectangle 'PRINT b' -> STOP",
+            "START -> parallelogram 'READ a, b' -> diamond 'Is a > b?'; YES -> parallelogram 'PRINT a' -> parallelogram 'PRINT b' -> STOP; NO -> STOP",
+            "START -> parallelogram 'READ a, b' -> diamond 'Is a > b?'; YES -> parallelogram 'PRINT a' -> STOP; 'PRINT b' drawn beside the diamond on a dashed line"
+          ],
+          "answerIndex": 0,
+          "concept": "converting IF-THEN-ELSE and I/O lines into symbols",
+          "why": "READ a, b and both PRINT lines move data across the boundary of the program, so all three are input/output (data) symbols drawn as parallelograms; IF ... THEN ... ELSE is one decision, with the THEN consequence on the Yes branch and the ELSE consequence on the No branch, each running to its own STOP. Option b draws every step as a rectangle, the 'the computer performs it, so it is a process' error; a process acts on data already held, whereas READ and PRINT are the crossings the parallelogram exists to mark. Option c is the fall-through error, putting PRINT b after PRINT a on the same branch so that a > b prints both values, while the No branch carries nothing; ELSE is an alternative, not a continuation. Option d draws the ELSE consequence as an annotation on a dashed line, off the flow path so it can never execute, and leaves the diamond with a single exit."
+        },
+        {
+          "type": "mcq",
+          "q": "You are converting two pseudocode lines into flowchart symbols: 'total <- total + price' and 'DISPLAY total'. Which pair of symbols do you draw?",
+          "options": [
+            "Both rectangles, because both lines are steps that the computer carries out on the value of total",
+            "A rectangle for the assignment, because it acts on data the program already holds, and a parallelogram for DISPLAY, because it sends data out",
+            "A parallelogram for the assignment, because it alters stored data, and a rectangle for DISPLAY, because displaying is an action",
+            "A preparation symbol for the assignment, because it readies the total, and a document symbol for DISPLAY, because the total is shown"
+          ],
+          "answerIndex": 1,
+          "concept": "parallelogram versus rectangle when converting each line",
+          "why": "total <- total + price computes a new value from data the program already holds and stores it - an action, process or function, so a rectangle. DISPLAY total sends a value out of the program, that is data used at the output, so the parallelogram, the input/output or data symbol. The test is always whether the value crosses the boundary between the program and the outside world. Option a is the standard over-generalisation: everything in a chart is something the computer carries out, so that test distinguishes nothing and would leave the chart unable to show input or output at all. Option c has the right two symbols and swaps them, reasoning from two true statements neither of which is the criterion. Option d reaches for two real but wrong symbols: preparation marks setup such as initialising a counter, not ordinary arithmetic inside the work, and the document symbol means an actual document, not a value shown on screen."
+        },
+        {
+          "type": "mcq",
+          "q": "Trace this chart. START -> rectangle 'i = 1, total = 0' -> rectangle 'total = total + i' -> rectangle 'i = i + 2' -> diamond 'Is i <= 7?'; the YES branch runs back up to 'total = total + i'; the NO branch -> parallelogram 'OUTPUT total' -> STOP. What is output?",
+          "options": [
+            "9",
+            "16",
+            "25",
+            "Nothing can be determined, because the chart never reads any value in"
+          ],
+          "answerIndex": 1,
+          "concept": "tracing a counting loop with a step of 2",
+          "why": "From i = 1, total = 0: total becomes 1 and i becomes 3, and 3 <= 7 is Yes; total becomes 4 and i becomes 5, Yes; total becomes 9 and i becomes 7, Yes; total becomes 16 and i becomes 9, and 9 <= 7 is No, so it outputs 16, which is 1 + 3 + 5 + 7. Option a, 9, is the value of total when i has just become 7: the answer of someone who stops as soon as i reaches the limit, forgetting that the test is i <= 7, so 7 itself passes and buys one more pass through the body. Option c, 25, is 16 + 9, the off-by-one the other way, adding i once more after the increment that took it to 9, which is what you get by testing before adding rather than after. Option d confuses initialisation with input: i = 1, total = 0 is a rectangle, not a parallelogram, and a chart with no input box is perfectly traceable because everything it needs is set inside it."
+        },
+        {
+          "type": "short",
+          "q": "Here is a chart. START -> parallelogram 'INPUT mark' -> diamond 'Is mark >= 70?'; YES -> parallelogram 'OUTPUT A' -> STOP; NO -> diamond 'Is mark >= 50?'; YES -> parallelogram 'OUTPUT Pass' -> STOP; NO -> parallelogram 'OUTPUT Fail' -> STOP. State what is output for each of the marks 70, 69, 50 and 49, naming the branch taken at each diamond. Then say what the chart would output for those same four marks if the two diamonds were swapped - 'Is mark >= 50?' first, 'Is mark >= 70?' second, each keeping its own Yes and No consequences - and explain in one sentence what that shows about the order of decisions in a chart.",
+          "concept": "order of decisions in a chain is part of the algorithm",
+          "why": "As drawn: mark 70 - 70 >= 70 is true, Yes branch, output A. Mark 69 - false at the first diamond, No branch to the second; 69 >= 50 is true, Yes branch, output Pass. Mark 50 - No at the first, then 50 >= 50 is true, Yes, output Pass. Mark 49 - No at the first, then 49 >= 50 is false, No branch, output Fail. Both boundary marks go to the higher category because both conditions use >= and not >. With the diamonds swapped the chart reads INPUT mark -> 'Is mark >= 50?'; Yes -> OUTPUT Pass -> STOP; No -> 'Is mark >= 70?'; Yes -> OUTPUT A -> STOP; No -> OUTPUT Fail -> STOP. Mark 70 now gives Pass, and the A is lost; 69 gives Pass; 50 gives Pass; 49 gives Fail. Three outputs are unchanged, one is wrong, and worse, OUTPUT A has become unreachable, because any mark satisfying mark >= 70 has already satisfied mark >= 50 and been sent down the Yes branch. What this shows: in a chain of decisions the second diamond is only ever reached by data that FAILED the first, so each test silently carries the negation of every test above it, and overlapping conditions must therefore be tested from the most restrictive to the least - a chart that gets the order wrong can be perfectly legal as a drawing, with every branch labelled and every path terminating, and still contain a box the flow can never reach."
+        },
+        {
+          "type": "short",
+          "q": "Here is a chart. START -> parallelogram 'INPUT n' -> diamond 'Is n < 0?' which has a single outgoing flowline, labelled YES, running to parallelogram 'OUTPUT negative'; the flowline leaving that parallelogram runs back up to 'INPUT n'. There is no STOP oval anywhere on the page. A rectangle labelled 'answer = n * n' is drawn beside the diamond and joined to it by a dashed line. Name every rule of flow this chart breaks, say for each what a reader can and cannot conclude because of it, and give the minimal fix for each.",
+          "concept": "finding several independent faults and naming the rule each breaks",
+          "why": "Fault 1, the decision has only one outgoing branch. The rule is that a decision has exactly two outgoing flowlines, both labelled with the answer that selects them. Only the Yes branch is drawn, so the chart says nothing about a zero or positive n: the flow arrives at the diamond, the answer is No, and there is no line to follow. A reader can conclude what happens to a negative n and nothing at all about any other n, and must not assume the chart carries on or stops, because neither is drawn. Minimal fix: draw a second flowline from the diamond, labelled No, routed to whatever should happen - here to the squaring step. Fault 2, there is no STOP and the one path that exists never leaves its loop. The rule is that every path must terminate, and the principle is that the flowchart should have a start point and a stop point. The OUTPUT box's flowline runs back to INPUT n, so a negative n prints 'negative', reads again and repeats for ever. A reader can conclude the chart never finishes and can obtain no final result. Minimal fix: add a STOP oval and route the exit to it; if the back-arrow was intended as a retry it needs an exit branch, and if it was not intended, delete it and send OUTPUT 'negative' straight to STOP. Fault 3, the squaring step is drawn as an annotation, so it never executes. A symbol joined by a dashed line is a comment or note, with no flowline in and none out, so answer = n * n is not part of the algorithm however much it looks like the point of the chart. A reader can conclude the author intended a squaring step and must conclude that as drawn it is never performed and answer is never given a value. Minimal fix: redraw it as a process rectangle on the flow path, on the diamond's new No branch, with a solid flowline in from the diamond and a solid flowline out to a parallelogram that outputs answer, and thence to STOP. The three faults are independent, so repairing only one leaves a chart that is still not traceable."
+        },
+        {
+          "type": "short",
+          "q": "Convert this chart to pseudocode. START -> rectangle 'count = 1' -> parallelogram 'READ price' -> rectangle 'vat = price * 0.075' -> parallelogram 'PRINT price, vat' -> rectangle 'count = count + 1' -> diamond 'Is count <= 3?'; the YES branch runs back up to 'READ price'; the NO branch -> STOP. Write the pseudocode out, state for each line which flowchart symbol it came from, and say exactly how many times PRINT is executed and why.",
+          "concept": "converting a back-arrow into a loop keyword, symbol by symbol",
+          "why": "The pseudocode:\nBEGIN\n  count <- 1\n  REPEAT\n     READ price\n     vat <- price * 0.075\n     PRINT price, vat\n     count <- count + 1\n  UNTIL count > 3\nEND\nLine by line: BEGIN and END come from the two terminator ovals, START and STOP. count <- 1 comes from the process rectangle 'count = 1', an action on data the program holds, and it sits before REPEAT because in the chart it is above the box the back-arrow returns to. READ price comes from the parallelogram, the input/output or data symbol. vat <- price * 0.075 comes from the process rectangle. PRINT price, vat comes from the parallelogram, output this time. count <- count + 1 comes from the process rectangle. REPEAT ... UNTIL count > 3 comes from the decision diamond 'Is count <= 3?' together with its back-arrow: the diamond sits at the foot of the body, so the loop is post-test and must be REPEAT rather than WHILE; the back-arrow returns to 'READ price', which fixes the first line of the body and so where REPEAT is written; and the Yes branch is the one that repeats, so UNTIL, which names the condition for stopping, carries the negation of count <= 3, namely count > 3. PRINT runs three times: pass 1 enters with count = 1, prints, and count becomes 2, so 2 <= 3 is Yes; pass 2 prints, count becomes 3, and 3 <= 3 is Yes - the boundary case that catches people, since <= lets 3 through; pass 3 prints, count becomes 4, and 4 <= 3 is No, so the flow leaves for STOP. Three prices are read and three lines printed, and the final value of count is one more than the number of prints."
+        },
+        {
+          "type": "short",
+          "q": "Convert this pseudocode into a flowchart, described fully in words. Name every symbol you would draw, every branch label, and say where the back-arrow attaches and why.\nBEGIN\n  total <- 0\n  READ k\n  WHILE k <> 0 DO\n     total <- total + k\n     READ k\n  ENDWHILE\n  PRINT total\nEND\nThen explain why 'READ k' has to appear twice in the chart, and what goes wrong if it is drawn only once, inside the loop.",
+          "concept": "drawing a pre-test sentinel loop, and the priming read",
+          "why": "The chart: a terminator oval START with one flowline out; into a process rectangle 'total = 0', an assignment, one line in and one out; into a parallelogram 'READ k', the input/output or data symbol - this is the priming read; its flowline runs into a decision diamond 'Is k <> 0?', one line in and two labelled lines out. From the diamond the branch labelled No runs to a parallelogram 'PRINT total', whose flowline runs to a terminator oval STOP. The branch labelled Yes runs into a process rectangle 'total = total + k', whose flowline runs into a second parallelogram 'READ k'. From that second READ box a flowline - the back-arrow - runs up to the diamond 'Is k <> 0?', rejoining the flow immediately above it. The back-arrow attaches to the DIAMOND, not to the first READ box and not to 'total = 0', because WHILE is a pre-test loop: the condition must be evaluated before every pass including the first, and the body must be skippable entirely if the first value read is already 0. Returning to 'total = 0' would reset the running total on every pass and the chart would print the last value rather than the sum; returning to the first READ box would make that box part of the loop and leave the diamond with a second entry from above that is never used. READ k appears twice because the loop's condition tests k, so k must already hold a value the first time the diamond is reached - hence the priming read before the diamond - and each pass must refresh k before the condition is tested again - hence the read at the end of the body, whose flowline is the back-arrow. The pseudocode has the same duplication, READ k once before WHILE and once as the last line of the body. If it is drawn only once inside the loop, the diamond is reached before any value has been read, so k is undefined at the first test and the chart is untraceable; and if k is assumed to start at 0 the condition k <> 0 is false immediately, the body never runs and the chart prints 0 for every input. If it is drawn only once before the loop, k keeps its first value for ever, so a non-zero first value makes the condition stay true, the back-arrow is taken on every pass, the No branch is never reached and the STOP is unreachable - an infinite loop adding the same number to the total for ever."
+        }
+      ]
+    }
+  ],
+  "recapCandidates": [
+    {
+      "course": "MTH_102",
+      "topic": "The chain rule - why the inner derivative is not optional",
+      "whyMisunderstood": "The chain rule is the single most-dropped mark in first-year calculus, because its output looks right without the inner derivative. A student who writes d/dx sin(3x) = cos(3x) has produced something with the correct shape - a cosine, the right argument - and nothing in the expression flags the missing factor of 3, so the error survives self-checking, unlike a botched product rule which usually looks visibly wrong. Underneath sit three deeper confusions. First, students never consciously decompose the function into outer and inner parts, so they cannot apply a rule whose statement is entirely about that split. Second, they treat the power rule as attaching to whatever is inside the brackets: d/dx (x^2 + 1)^5 becomes 5(x^2 + 1)^4, which applies the power rule as if the inner function were x itself - the rule d/dx x^n = n x^(n-1) is a statement about x, and the chain rule is what extends it to any other base. Third, they mix the three rules up structurally: writing (uv)' = u'v' or (f(g))' = f'(g') is the same underlying error, a belief that differentiation distributes across whatever operation is in front of them. Only sums and differences behave that way, which is exactly why sums get a one-line rule and products, quotients and compositions get three separate ones. A quieter failure is not recognising a function as composite at all - sqrt(3x + 1), e^(x^2) and ln(5x) all look atomic until the outer and inner pieces are named.",
+      "whyQuestions": [
+        "Why is d/dx sin(3x) equal to 3cos(3x) and not cos(3x) - where does the 3 physically come from?",
+        "Why does the power rule d/dx x^n = n x^(n-1) NOT directly give the derivative of (x^2 + 1)^5, and what has to be added?",
+        "Why does differentiation distribute across a sum but not across a product, a quotient or a composition?",
+        "Why does dy/dx = (dy/du)(du/dx) look like cancelling du, and why is that a useful mnemonic but not a proof?",
+        "Why does a three-layer problem like sin^2(3x + 1) need the rule applied twice, and how do you know when to stop?"
+      ],
+      "goodAnswerContains": "States the rule in both notations and names the parts: d/dx[f(g(x))] = f'(g(x)) times g'(x), equivalently dy/dx = (dy/du)(du/dx) with u = g(x) - differentiate the outer function leaving the inner one untouched, then multiply by the derivative of the inner. Explains why the factor is there: if the inner function changes k times as fast as x, the composite changes k times as fast too, because the rates multiply; in sin(3x) the inner u = 3x runs three times as fast as x, so the output oscillates three times as fast. Contrasts the three rules by structure so they cannot be swapped: (uv)' = u'v + uv' (two terms added); (u/v)' = (u'v - uv')/v^2 (order matters, denominator squared); chain = outer' times inner' (multiplied); and notes that only sums and constant multiples allow term-by-term differentiation.",
+      "workedExample": "(1) y = (x^2 + 1)^5. Outer (.)^5, inner u = x^2 + 1: dy/du = 5u^4 and du/dx = 2x, so dy/dx = 10x(x^2 + 1)^4. Sanity check on the easy case: (x^2+1)^2 = x^4 + 2x^2 + 1 differentiates to 4x^3 + 4x = 4x(x^2+1), and the rule gives 2(x^2+1)(2x) = the same. (2) y = sqrt(3x + 1) = (3x + 1)^(1/2), so dy/dx = (1/2)(3x + 1)^(-1/2) times 3 = 3/(2 sqrt(3x + 1)); dropping the inner 3 halves the answer. (3) y = e^(x^2): outer e^u is its own derivative, inner u = x^2, so dy/dx = 2x e^(x^2) - note the answer is NOT e^(2x); the exponent is untouched and the inner derivative multiplies out front. (4) Product and chain together: y = x^3 sin(2x). Product rule with u = x^3 and v = sin(2x): u' = 3x^2 and v' needs the chain rule, giving 2cos(2x), so dy/dx = 3x^2 sin(2x) + 2x^3 cos(2x). Identify the outermost operation first - here a product - and let the pieces call whichever rule they need. (5) Chain twice: y = sin^2(3x + 1) = [sin(3x + 1)]^2. The outermost operation is a square, giving 2 sin(3x+1) times d/dx[sin(3x+1)], and that inner derivative is itself a chain, cos(3x+1) times 3. So dy/dx = 6 sin(3x + 1) cos(3x + 1). You stop when the innermost function is plain x, whose derivative is 1 - which is exactly why nobody notices the chain rule on d/dx sin x."
+    },
+    {
+      "course": "PHY_102",
+      "topic": "Kirchhoff's laws - the sign convention is the whole difficulty",
+      "whyMisunderstood": "Both laws are one sentence each and students can recite them within minutes, which produces a dangerous confidence: the laws are trivial, the bookkeeping is not, and every lost mark lives in the bookkeeping. Four things go wrong. First, students believe they must guess the current directions correctly before starting, and freeze or redraw the circuit repeatedly. The directions are assumptions; a negative answer simply means that current runs the other way and the magnitude is still right - the single most reassuring fact in the topic, and almost nobody is told it plainly. Second, the sign rule for traversing an element gets applied by feel rather than by rule: through a resistor WITH the assumed current is a drop (-IR) and against it a rise (+IR); through a battery from - to + is a rise (+emf) and from + to - a fall (-emf); and the direction you walk the loop is your choice but must stay fixed for the whole loop. Students change direction halfway, or attach the sign to the battery's orientation on the page rather than to the order in which they meet its terminals. Third, they do not count equations: a network needs one KCL equation per node minus one, plus enough KVL loops to cover every branch, so they either write too few and cannot solve, or write every possible loop and get a redundant equation that collapses to 0 = 0 and makes them think they have erred. Fourth, the physical content gets lost: KCL is charge conservation and KVL is energy conservation, and a student who knows this cannot write a loop equation with every term the same sign, because that would say energy was created going round the loop.",
+      "whyQuestions": [
+        "Why is KCL a statement about conservation of charge, and what would it mean physically if it failed at a junction?",
+        "Why is it safe to ASSUME a current direction that turns out to be wrong, and what exactly does the negative sign in the answer tell you?",
+        "Why does traversing a resistor in the direction of the assumed current give -IR, while traversing a battery from - to + gives +emf regardless of which way the current flows through it?",
+        "Why does a circuit with n nodes give only n - 1 independent KCL equations, and why does the nth one add nothing?",
+        "Why does going round a loop and adding every term with the same sign guarantee you have made an error, whatever the numbers are?"
+      ],
+      "goodAnswerContains": "States both laws with their conservation principle attached: KCL - the sum of currents entering a junction equals the sum leaving, because charge cannot accumulate at a point; KVL - the algebraic sum of potential differences round any closed loop is zero, because a charge returning to its start returns to the same potential. Gives the procedure as a fixed drill: label every branch current with an assumed direction, write KCL at all but one node, choose loops and a traversal direction and hold it, apply the sign rules (resistor -IR with the current and +IR against it; source +emf from - to + and -emf from + to -), solve the simultaneous equations, and read a negative current as right magnitude, opposite direction. Checks rather than trusts: substitute back into an unused loop, and confirm the power balance, with total power delivered by the sources equal to the total I^2 R dissipated.",
+      "workedExample": "(1) Two opposing emfs. A 12 V battery (r = 0.5 ohm) and a 6 V battery (r = 0.3 ohm) are in series in OPPOSITION, with an external 5.2 ohm resistor. Assume I clockwise, driven by the 12 V cell. Walking clockwise: +12 (through the 12 V cell from - to +), -I(0.5), -I(5.2), -6 (through the 6 V cell from + to -, since it opposes), -I(0.3). KVL: 12 - 6 - I(6.0) = 0, so I = 1.0 A clockwise. The 12 V cell delivers 12 W, the 6 V cell absorbs 6 W (it is being charged), and 1.0^2 times 6.0 = 6 W is dissipated: 12 = 6 + 6, which checks. (2) Two loops, and a negative answer. Two batteries feed a shared branch: emf1 = 10 V through R1 = 2 ohm into node A, emf2 = 4 V through R2 = 1 ohm into the same node A, and a common R3 = 3 ohm from A back to the shared negative rail. Assume I1 and I2 flow into A and I3 out through R3. KCL at A: I1 + I2 = I3. Left loop: 10 - 2 I1 - 3 I3 = 0. Right loop: 4 - I2 - 3 I3 = 0. Substituting I3 = I1 + I2 gives 10 = 5 I1 + 3 I2 and 4 = 3 I1 + 4 I2, so I1 = 28/11 = 2.55 A, I2 = -0.91 A and I3 = 1.64 A. The negative I2 is the point: the 4 V battery is not driving current into A at all, it is being driven backwards by the stronger branch at 0.91 A. Nothing needs redoing - the assumption was wrong and the algebra said so. Power check: sources deliver 10 times 2.55 = 25.5 W with 4 times 0.91 = 3.6 W absorbed by the reversed cell, and the dissipation 2(2.55)^2 + 1(0.91)^2 + 3(1.64)^2 is about 21.9 W, matching 25.5 - 3.6."
+    }
+  ]
+}
