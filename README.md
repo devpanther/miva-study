@@ -9,14 +9,17 @@ source/week-01.md .. week-12.md   extracted text of all 205 course PDFs
 packs/week-XX/                    generated pack for that week
   <COURSE>-Summary.md             one page, exam-oriented
   <COURSE>-Questions.md           12 MCQ + 3 short, sat a week LATER
-  checks/<Day>-<COURSE>.md        6 questions, sat right after that session
+  checks/<Day>-<COURSE>.md        12 questions, sat right after that session
   Sunday-Recap.md                 two fallback teaching topics
   week-XX.json                    machine-readable — see data-schema.md
+packs/mock-midsemester/           Week 5 checkpoint: one timed paper per course
+                                  over Weeks 1–4, plus a sitting/marking guide
 data-schema.md                    the JSON contract
 ROUTINE-PROMPT.md                 paste this into the routine form
 ```
 
-Week 01 is already generated and verified.
+Weeks 01–05 are generated and verified. Checks were 6 questions in Weeks 1–2 and
+are 12 from Week 3 onward, so `maxScore` changes from 6 to 12 at that point.
 
 ## The schedule this serves
 
