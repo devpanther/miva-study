@@ -82,6 +82,32 @@ CHECKPOINT WEEKS - additionally
   Week 9: same for Weeks 5-9, packs/mock-endsemester/
   Revision week (from 30 Nov): full-course mocks, packs/mock-final/
 
+PUSH INTO THE TRACKER APP
+The tracker is a published artifact at
+https://claude.ai/code/artifact/892db5bb-6db0-4506-9485-8fefa4852f50
+It keeps its data in one tag in its HTML:
+  <script id="state" type="application/json">{...}</script>
+
+  a. Artifact action:"read" on that url. You MUST read before publishing - a
+     publish without a prior read in the same session is refused.
+     If the read fails with a network/allowlist error, STOP this section. Do not
+     retry and do not publish. Say in your final message that Gift needs to paste
+     week-XX.json into the app's Import tab.
+  b. Parse the JSON inside that tag. It escapes "<" as \u003c - unescape first.
+  c. Set state.weeks["<week number as a string>"] = the week-XX.json object you
+     just built. Change NOTHING else. state.scores and state.people are their
+     logged check results and their sign-ins. Destroying those is the one
+     unacceptable outcome - never reset, prune or tidy those keys.
+  d. Re-serialise, re-escape "<" as \u003c, substitute back into that one tag
+     only. Change nothing else in the HTML.
+  e. Write to a local .html and publish with Artifact passing
+     url:"https://claude.ai/code/artifact/892db5bb-6db0-4506-9485-8fefa4852f50".
+     Do not pass favicon or capabilities - omitting them preserves what is stored.
+  f. Read it back and confirm weeks["N"] is present and scores/people survived.
+
+Do this with a script, never by retyping the HTML - it is large and retyping
+corrupts it.
+
 COMMIT
 Commit everything to a claude/ branch and push. Use a clear message such as
 "Week 3 pack: 8 summaries, 6 checks, 8 question sets, recap, JSON".
