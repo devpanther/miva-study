@@ -1,0 +1,644 @@
+{
+  "week": 1,
+  "startsOn": "2026-09-07",
+  "endsOn": "2026-09-13",
+  "generatedOn": "2026-08-28",
+  "days": [
+    {
+      "day": "Mon",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Real-valued functions: relation vs function, domain/codomain/range, vertical line test",
+        "checkFile": "checks/Mon-MTH_102.md"
+      },
+      "fast": {
+        "course": "GST_112",
+        "topic": "The three components of culture; society, nation-building and national integration"
+      }
+    },
+    {
+      "day": "Tue",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Charge, its properties, and the three methods of charging",
+        "checkFile": "checks/Tue-PHY_102.md"
+      },
+      "fast": {
+        "course": "CSC_106",
+        "topic": "Internet vs World Wide Web; browsers, servers and the client-server model"
+      }
+    },
+    {
+      "day": "Wed",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Problem types, the four steps, and algorithm/pseudocode/flowchart as planning tools",
+        "checkFile": "checks/Wed-COS_102.md"
+      },
+      "fast": {
+        "course": "GST_122",
+        "topic": "The four language skills and the four writing styles"
+      }
+    },
+    {
+      "day": "Thu",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Computing domains, ranges, inverses and composites",
+        "checkFile": "checks/Thu-MTH_102.md"
+      },
+      "fast": {
+        "course": "PHY_108",
+        "topic": "The linearisation table and the error formulas"
+      }
+    },
+    {
+      "day": "Fri",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Coulomb's law, superposition and charge quantisation calculations",
+        "checkFile": "checks/Fri-PHY_102.md"
+      },
+      "fast": {
+        "course": "Review",
+        "topic": "Week 1 review: read the confidence log, pick Sunday's two topics"
+      }
+    },
+    {
+      "day": "Sat",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Tracing the final-grade algorithm, boundary conditions, error types and refactoring",
+        "checkFile": "checks/Sat-COS_102.md"
+      },
+      "fast": {
+        "course": "Catch-up",
+        "topic": "No prior week's question set exists yet in Week 1 - use the hour for any missed fast hour, or start the Week 1 question sets early"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "code": "PHY_102",
+      "name": "General Physics II",
+      "weekTopics": [
+        "Electric charge and its properties",
+        "Methods of charging: friction, conduction, induction",
+        "Electric fields",
+        "Coulomb's law and static electricity"
+      ],
+      "summaryFile": "PHY_102-Summary.md",
+      "questionsFile": "PHY_102-Questions.md"
+    },
+    {
+      "code": "MTH_102",
+      "name": "Elementary Mathematics II (Calculus)",
+      "weekTopics": [
+        "Real-valued functions",
+        "Domain, codomain and range",
+        "Inverse functions",
+        "Composite functions"
+      ],
+      "summaryFile": "MTH_102-Summary.md",
+      "questionsFile": "MTH_102-Questions.md"
+    },
+    {
+      "code": "COS_102",
+      "name": "Introduction to Problem Solving",
+      "weekTopics": [
+        "Problem solving in computer science",
+        "Computational problem types",
+        "The four steps to problem-solving",
+        "Algorithms, pseudocode and flowcharts",
+        "Carrying out and refactoring the solution"
+      ],
+      "summaryFile": "COS_102-Summary.md",
+      "questionsFile": "COS_102-Questions.md"
+    },
+    {
+      "code": "PHY_108",
+      "name": "General Physics Practical II",
+      "weekTopics": [
+        "Equation of a straight line",
+        "Linearising non-linear equations",
+        "Graphing in physics",
+        "Error analysis"
+      ],
+      "summaryFile": "PHY_108-Summary.md",
+      "questionsFile": "PHY_108-Questions.md"
+    },
+    {
+      "code": "GST_112",
+      "name": "Nigerian Peoples and Culture",
+      "weekTopics": [
+        "Culture and its three components",
+        "Communal and associational society",
+        "Marx's communism and functionalism",
+        "Colonialism, nation-building and national integration"
+      ],
+      "summaryFile": "GST_112-Summary.md",
+      "questionsFile": "GST_112-Questions.md"
+    },
+    {
+      "code": "GST_122",
+      "name": "Communication in English II",
+      "weekTopics": [
+        "The four language skills",
+        "Active vs passive listening",
+        "Effective oral communication",
+        "Writing styles"
+      ],
+      "summaryFile": "GST_122-Summary.md",
+      "questionsFile": "GST_122-Questions.md"
+    },
+    {
+      "code": "CSC_106",
+      "name": "Introduction to Web Technologies",
+      "weekTopics": [
+        "The Internet and the World Wide Web",
+        "Web browsers and servers",
+        "The client-server model",
+        "Web development tools"
+      ],
+      "summaryFile": "CSC_106-Summary.md",
+      "questionsFile": "CSC_106-Questions.md"
+    },
+    {
+      "code": "MIVA_COS_111",
+      "name": "Technical Certification I",
+      "weekTopics": [],
+      "summaryFile": "MIVA_COS_111-Summary.md",
+      "questionsFile": null
+    }
+  ],
+  "checks": [
+    {
+      "id": "mon-mth102",
+      "day": "Mon",
+      "course": "MTH_102",
+      "topic": "Real-valued functions: relation vs function, domain/codomain/range, vertical line test",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "The vertical line test works because:",
+          "options": [
+            "a function's graph must be one unbroken curve",
+            "a vertical line x = a gathers every point of the graph whose input is a, so two intersections mean the single input a has been given two outputs",
+            "it checks that every real number appears as an input",
+            "it checks that no two different inputs produce the same output"
+          ],
+          "answerIndex": 1,
+          "concept": "Mechanism of the vertical line test",
+          "why": "The line x = a is exactly the set of points with first coordinate a, so two hits means the input a has two images, which the definition of a function forbids. Option 1 confuses functions with continuous curves, option 3 confuses the test with a claim about the domain, and option 4 describes the horizontal line test."
+        },
+        {
+          "type": "mcq",
+          "q": "A mapping diagram has domain X = {1, 2, 3, 4}, codomain Y = {5, 6, 7, 8}, with arrows 1 to 5, 2 to 5, 3 to 6, 4 to 7. Which statement is correct?",
+          "options": [
+            "It is not a function, because two elements of X map to the same element of Y",
+            "It is not a function, because 8 is not the image of any element of X",
+            "It is a function with range {5, 6, 7} and codomain {5, 6, 7, 8}",
+            "It is a function with range {5, 6, 7, 8}"
+          ],
+          "answerIndex": 2,
+          "concept": "Range is a subset of the codomain; many-to-one is allowed",
+          "why": "A function only requires each input to have exactly one output, so repeated outputs are legal (option 1 confuses this with injectivity) and unused codomain elements are legal (option 2 states the definition of onto). Option 4 is the standard error of equating range with codomain."
+        },
+        {
+          "type": "mcq",
+          "q": "For f from R to R defined by f(x) = x^2, which statement is correct?",
+          "options": [
+            "f is one-to-one, since each x produces exactly one value x^2",
+            "f is onto, since x^2 is a real number for every real x",
+            "f is neither one-to-one nor onto: f(-2) = f(2) = 4, and no real x gives f(x) = -1",
+            "f is bijective, so f^-1(x) = sqrt(x) is a function on R"
+          ],
+          "answerIndex": 2,
+          "concept": "Function-ness, injectivity and surjectivity are three separate conditions",
+          "why": "Option 1 mistakes the defining property of a function (one output per input) for injectivity, and option 2 mistakes well-definedness for surjectivity, since being onto R would require negative values to be attained. Option 4 assumes bijectivity in order to produce an inverse."
+        },
+        {
+          "type": "mcq",
+          "q": "The rule y^2 = x (with x >= 0 and y real) does not define y as a function of x. The precise reason is:",
+          "options": [
+            "x = 0 produces only the single value y = 0",
+            "for x = 4 the rule assigns both y = 2 and y = -2, so one input carries two outputs",
+            "the graph is not a straight line",
+            "negative values of x are excluded, so the domain is not all of R"
+          ],
+          "answerIndex": 1,
+          "concept": "One-to-many disqualifies a relation from being a function",
+          "why": "The failure is a single input with two images, not the shape of the graph or the size of the domain. A function's domain need not be all of R, so option 4 is a misconception about what a domain must be."
+        },
+        {
+          "type": "short",
+          "q": "A student writes: the range of f from R to R, f(x) = x^2 + 1, is R because the codomain is R. Explain precisely what is wrong, and state the actual range.",
+          "concept": "Range is a subset of the codomain, usually a proper subset",
+          "why": "Model answer: the codomain is the declared target set chosen in advance, while the range is the set of values f actually attains. Since x^2 >= 0 for all real x, f(x) >= 1, so the range is [1, infinity), a proper subset of the codomain R."
+        },
+        {
+          "type": "short",
+          "q": "The vertical line test and the horizontal line test are not two versions of the same check. Say exactly which property each one tests, and what a failure of each one tells you.",
+          "concept": "Vertical test checks function-ness; horizontal test checks injectivity",
+          "why": "Model answer: the vertical line test asks whether the curve is a function at all, and failure means some input has two outputs. The horizontal line test asks whether an existing function is one-to-one, and failure means two different inputs share an output, so f is not invertible on that domain."
+        }
+      ]
+    },
+    {
+      "id": "tue-phy102",
+      "day": "Tue",
+      "course": "PHY_102",
+      "topic": "Charge, its properties, and the three methods of charging",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A negatively charged plastic rod is held near - but never touching - an isolated neutral metal sphere on an insulating stand. A wire is connected from the sphere to earth, then the wire is disconnected, and only then is the rod taken away. The sphere finally carries:",
+          "options": [
+            "a negative charge, since the rod is negative",
+            "a positive charge, spread uniformly over the sphere",
+            "no net charge, since the rod never touched it",
+            "a positive charge on the far side and a negative charge on the near side"
+          ],
+          "answerIndex": 1,
+          "concept": "Charging by induction: the final sign is opposite to the inducing rod",
+          "why": "The negative rod repels the sphere's free electrons to the far side and earthing lets them escape to ground, so the sphere is left electron-deficient and therefore positive. Once the wire and then the rod are removed, that positive charge spreads uniformly over the sphere."
+        },
+        {
+          "type": "mcq",
+          "q": "While that same rod is held near the sphere and BEFORE it is earthed, the face of the sphere nearest the rod becomes positive. The mechanism is:",
+          "options": [
+            "protons in the metal migrate through the lattice to the near face",
+            "free electrons are repelled to the far face, leaving an electron deficit at the near face",
+            "positive charge jumps across the air gap from the rod to the sphere",
+            "the metal's atoms rotate so that their positive ends point at the rod"
+          ],
+          "answerIndex": 1,
+          "concept": "Charge carriers in a metal: only electrons are mobile",
+          "why": "In a solid conductor the nuclei are locked in the lattice, so a positive region is always a region short of electrons. Options 1 and 4 assume protons or whole atoms move, and option 3 invents a transfer across the gap that induction explicitly does not involve."
+        },
+        {
+          "type": "mcq",
+          "q": "A metal sphere carrying a charge of -8 units touches an identical, neutral metal sphere, and the two are then separated. Their charges are:",
+          "options": [
+            "-8 and 0",
+            "-4 and -4",
+            "-8 and -8",
+            "+4 and -4"
+          ],
+          "answerIndex": 1,
+          "concept": "Charging by conduction combined with conservation of charge",
+          "why": "Identical conductors in contact share charge equally, and the total of -8 units must be conserved, giving -4 on each. Option 3 would create charge from nothing and option 4 confuses conduction with induced charge separation."
+        },
+        {
+          "type": "mcq",
+          "q": "A glass rod is rubbed with silk and ends up positively charged. Which statement is correct?",
+          "options": [
+            "The glass gained protons from the silk.",
+            "The glass transferred electrons to the silk, so the silk now carries an equal negative charge.",
+            "Friction created new positive charge on the glass; the silk stays neutral.",
+            "The glass lost electrons to the surrounding air, so the silk's charge is smaller in magnitude than the glass's."
+          ],
+          "answerIndex": 1,
+          "concept": "Charging by friction is electron transfer, and conservation makes the two charges equal and opposite",
+          "why": "Becoming positive means losing electrons, and every electron the glass loses is exactly the electrons the silk gains. Options 1 and 4 assume protons move or charge leaks away, and option 3 violates conservation of charge."
+        },
+        {
+          "type": "short",
+          "q": "A charged rod is brought near a small piece of NEUTRAL paper and the paper is attracted to the rod. Explain why the attraction happens even though the paper has zero net charge.",
+          "concept": "Polarisation of a neutral body plus the inverse-square dependence of the Coulomb force",
+          "why": "Model answer: the rod's field pulls the paper's opposite-sign charge slightly nearer and pushes its like-sign charge slightly farther away. Because the force falls off as 1 over r squared, the attraction on the nearer opposite charge is stronger than the repulsion on the farther like charge, so there is a net attraction despite the paper carrying no net charge."
+        },
+        {
+          "type": "short",
+          "q": "In charging by induction, explain why the earthing wire must be disconnected BEFORE the charging rod is taken away, and what happens if the order is reversed.",
+          "concept": "The role of the ground connection in charging by induction",
+          "why": "Model answer: the earth connection is the escape route that lets electrons leave or enter the conductor, while the rod's field is what holds the remaining charge at the far end. Breaking the ground first traps the net charge on the sphere; removing the rod first lets the displaced electrons flow straight back through the still-connected wire, leaving the sphere neutral."
+        }
+      ]
+    },
+    {
+      "id": "wed-cos102",
+      "day": "Wed",
+      "course": "COS_102",
+      "topic": "Problem types, the four steps, and algorithm/pseudocode/flowchart as planning tools",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A logistics company must deliver to 12 towns and wants the route with the lowest total fuel cost. Which computational problem type is this, and why?",
+          "options": [
+            "Decision problem - the driver must decide which road to take at each junction",
+            "Search problem - the answer is a route, which is a value with a property",
+            "Optimization problem - many valid routes exist and the one accepted as the solution is the best possible one",
+            "Counting problem - the number of towns, 12, must be counted first"
+          ],
+          "answerIndex": 2,
+          "concept": "Optimization vs search problems",
+          "why": "Optimization is defined as the problem where the best possible solution is accepted as the solution; a search problem would be satisfied by any route with the property, but here the cheapest must be selected."
+        },
+        {
+          "type": "mcq",
+          "q": "Compare 'Does any student in COS_102 have a final grade above 44?' with 'List every student in COS_102 with a final grade above 44.' The difference between these two is that:",
+          "options": [
+            "The first is a decision problem (answer is only YES or NO) and the second is a search problem (answer is the values with the property)",
+            "The first is a search problem and the second is a counting problem",
+            "Both are decision problems, because both test the condition 'above 44'",
+            "The first is a counting problem because it examines every student before answering"
+          ],
+          "answerIndex": 0,
+          "concept": "Decision vs search problems",
+          "why": "A decision problem's solution can only be YES or NO; a search problem's solution is the value or values with the particular property. The type is fixed by the form of the answer, not by the internal work done."
+        },
+        {
+          "type": "mcq",
+          "q": "A student writes out an ordered, unambiguous, complete set of steps in English, then draws them as boxes and arrows, then types them in a program-like text form. How many algorithms does the student now have?",
+          "options": [
+            "Three - English steps, flowchart and pseudocode are three different algorithms",
+            "Two - the flowchart and the pseudocode are algorithms; the English steps are only notes",
+            "One - there is a single algorithm, shown in a graphical representation and a textual representation",
+            "None - a set of steps only becomes an algorithm once it is compiled"
+          ],
+          "answerIndex": 2,
+          "concept": "Algorithm vs its representations",
+          "why": "The algorithm is the ordered, unambiguous and complete procedure itself; the flowchart is its graphical representation and the pseudocode its textual one. Pseudocode also cannot be compiled at all, which rules out the last option."
+        },
+        {
+          "type": "mcq",
+          "q": "A programmer inputs the five grades, computes the average, prints PASS or FAIL, and the program runs and gives correct output. Under the four steps, what remains to be done?",
+          "options": [
+            "Nothing - the plan has been carried out, so problem-solving is complete",
+            "Step four: evaluate the working solution and see whether it can be refactored",
+            "Return to step one, because understanding the problem must be repeated after coding",
+            "Convert the pseudocode into a flowchart, since the flowchart is the final deliverable"
+          ],
+          "answerIndex": 1,
+          "concept": "The fourth step: evaluate and refactor",
+          "why": "A working solution is where step four begins, not where problem-solving ends: it is evaluated to see whether it can be made more concise, efficient and better structured without changing its function."
+        },
+        {
+          "type": "short",
+          "q": "A classmate says: 'I skipped straight to writing code because I already knew the formula for the average.' Using the course's account of understanding the problem, explain what specific things the classmate may not yet have settled, and why the course insists a programmer must first understand how a human would solve the problem.",
+          "concept": "Understanding the problem: inputs, processes, output",
+          "why": "Model answer: the classmate has not answered the three required questions - what are the inputs (the five grades, in what form), what are the processes (average, then compare against the pass mark), and what is the output (PASS or FAIL, printed). Knowing the formula settles only the process, while a computational problem requires inputs, limitations and output conditions to be well defined. The programmer must first understand the human solution because the computer cannot be told anything the programmer cannot state as an ordered, unambiguous and complete procedure - the computer contributes speed and volume, not understanding."
+        },
+        {
+          "type": "short",
+          "q": "Explain why a pseudocode and a flowchart of the same solution can never disagree about what the program does - and what it means if a student's pseudocode and flowchart do disagree.",
+          "concept": "Two representations, one algorithm",
+          "why": "Model answer: both are representations of the same single algorithm - the pseudocode states its steps textually, the flowchart draws the same sequence of operations graphically - so neither can carry behaviour the other lacks. If they disagree (say pseudocode tests Grade > 44 while the flowchart tests Grade > 45) then at least one is a faulty transcription, so the underlying algorithm is not yet unambiguous and complete and the conflict must be resolved at the planning stage before any code is written."
+        }
+      ]
+    },
+    {
+      "id": "thu-mth102",
+      "day": "Thu",
+      "course": "MTH_102",
+      "topic": "Computing domains, ranges, inverses and composites",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "The domain of f(x) = sqrt(x+2)/(x-3) is:",
+          "options": [
+            "[-2, infinity)",
+            "[-2, 3) union (3, infinity)",
+            "(-2, 3) union (3, infinity)",
+            "R excluding 3"
+          ],
+          "answerIndex": 1,
+          "concept": "Combining the even-root rule with the nonzero-denominator rule",
+          "why": "sqrt(x+2) needs x + 2 >= 0, so x = -2 is included (option 3 wrongly makes it strict), and the denominator needs x not equal to 3 (option 1 ignores this while option 4 ignores the square root)."
+        },
+        {
+          "type": "mcq",
+          "q": "The range of f(x) = -x^2 + 4x - 1 is:",
+          "options": [
+            "[3, infinity)",
+            "(-infinity, 3]",
+            "(-infinity, -3]",
+            "[-1, infinity)"
+          ],
+          "answerIndex": 1,
+          "concept": "Range of a quadratic by completing the square with a negative leading coefficient",
+          "why": "-x^2 + 4x - 1 = -(x-2)^2 + 3, and -(x-2)^2 <= 0, so f(x) <= 3 with equality at x = 2. Option 1 is what a student gets by reading the vertex as a minimum instead of a maximum."
+        },
+        {
+          "type": "mcq",
+          "q": "If f(x) = (2x-1)/(x+3), then f^-1(x) =",
+          "options": [
+            "(x+3)/(2x-1)",
+            "(3x+1)/(2-x)",
+            "(3x+1)/(x-2)",
+            "(1-2x)/(x+3)"
+          ],
+          "answerIndex": 1,
+          "concept": "Finding an inverse by solving for x",
+          "why": "y(x+3) = 2x - 1 gives x(y-2) = -1 - 3y, so x = (3y+1)/(2-y). Option 1 is 1/f(x), the classic inverse-versus-reciprocal error; option 3 loses the sign; option 4 treats inverse as negation."
+        },
+        {
+          "type": "mcq",
+          "q": "If f(x) = 1/(x-1) and g(x) = x^2, the domain of f composed with g is:",
+          "options": [
+            "R",
+            "R excluding 1",
+            "R excluding -1 and 1",
+            "R excluding 0 and 1"
+          ],
+          "answerIndex": 2,
+          "concept": "Domain of a composite is not the domain of the inner function",
+          "why": "(f o g)(x) = 1/(x^2 - 1), so x^2 - 1 must be nonzero, excluding both x = 1 and x = -1. Option 2 is the common slip of solving only x = 1, and option 1 uses the domain of g while forgetting that g(x) must land in the domain of f."
+        },
+        {
+          "type": "short",
+          "q": "Let f(x) = 3x - 2 and g(x) = sqrt(x+1). Compute (g o f)(5) and state the domain of g o f. Show your work.",
+          "concept": "Composite evaluation and the condition f(x) must lie in the domain of g",
+          "why": "Model answer: (g o f)(5) = g(3*5 - 2) = g(13) = sqrt(14). For the domain, require f(x) + 1 >= 0, that is 3x - 2 + 1 >= 0, so 3x - 1 >= 0 and x >= 1/3, giving domain [1/3, infinity)."
+        },
+        {
+          "type": "short",
+          "q": "Find the range of f(x) = (x+2)/(x-4) by algebraic inversion, and point to the single step that reveals the excluded value.",
+          "concept": "Range of a rational function by algebraic inversion",
+          "why": "Model answer: y(x-4) = x + 2 gives yx - 4y = x + 2, then yx - x = 4y + 2, so x(y-1) = 4y + 2 and x = (4y+2)/(y-1). The revealing step is factoring x to get the coefficient (y-1): division fails when y = 1, so the range is R excluding 1."
+        }
+      ]
+    },
+    {
+      "id": "fri-phy102",
+      "day": "Fri",
+      "course": "PHY_102",
+      "topic": "Coulomb's law, superposition and charge quantisation calculations",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "Two point charges, q1 = +5.0 microcoulombs and q2 = -2.0 microcoulombs, are 0.30 m apart in vacuum. Taking k = 8.99e9 N m^2/C^2, the magnitude of the force between them is closest to:",
+          "options": [
+            "1.0 N",
+            "0.30 N",
+            "3.0 N",
+            "1.0e-6 N"
+          ],
+          "answerIndex": 0,
+          "concept": "Coulomb's law with correct unit conversion and squaring of the separation",
+          "why": "F = (8.99e9)(5.0e-6)(2.0e-6)/(0.30)^2 = 0.0899/0.090, which is about 1.0 N and attractive. 0.30 N comes from dividing by r instead of r squared, 3.0 N from the slip (0.30)^2 = 0.03, and 1.0e-6 N from reading microcoulombs as nanocoulombs."
+        },
+        {
+          "type": "mcq",
+          "q": "A charge of +3.0 microcoulombs sits at x = 0 and a charge of -3.0 microcoulombs at x = 0.40 m. A +2.0 microcoulomb charge is placed at the midpoint, x = 0.20 m. The net force on it is:",
+          "options": [
+            "2.7 N directed toward the negative charge",
+            "zero, because the two source charges are equal and opposite",
+            "1.3 N directed toward the negative charge",
+            "2.7 N directed toward the positive charge"
+          ],
+          "answerIndex": 0,
+          "concept": "Superposition: forces are added as vectors, not by cancelling charge magnitudes",
+          "why": "The positive source repels the test charge toward the negative one and the negative source attracts it the same way, so the two 1.35 N contributions add to 2.7 N. Choosing zero is the classic error of cancelling because the sources are equal and opposite."
+        },
+        {
+          "type": "mcq",
+          "q": "An object carries a net charge of -8.0e-19 C. Taking e = 1.602e-19 C, the number of excess electrons on it is:",
+          "options": [
+            "5",
+            "8",
+            "0.20",
+            "1.3e-37"
+          ],
+          "answerIndex": 0,
+          "concept": "Quantisation of charge, n = q divided by e",
+          "why": "n = 8.0e-19 / 1.602e-19 = 5 electrons. Option 2 reads the coefficient as the count, option 3 inverts the division, and option 4 multiplies by e instead of dividing."
+        },
+        {
+          "type": "mcq",
+          "q": "Two point charges exert a force F on each other. One of the charges is now tripled and the separation is halved. The new force is:",
+          "options": [
+            "12F",
+            "6F",
+            "1.5F",
+            "24F"
+          ],
+          "answerIndex": 0,
+          "concept": "Scaling in Coulomb's law: linear in charge, inverse-square in distance",
+          "why": "F is proportional to q1q2 over r squared, so tripling one charge multiplies by 3 and halving r multiplies by 2 squared = 4, giving 12F. 6F forgets to square the distance factor and 24F wrongly squares the charge factor too."
+        },
+        {
+          "type": "short",
+          "q": "A charge of +q is at x = 0 and a charge of +4q is at x = 0.60 m. Find the point on the line between them where a small test charge feels ZERO net force, and show the reasoning that fixes which side of the midpoint it lies on.",
+          "concept": "Null point between two like charges, and why it sits nearer the weaker charge",
+          "why": "Model answer: set kq/x^2 = k(4q)/(0.60 - x)^2, take square roots to get (0.60 - x)/x = 2, so 0.60 - x = 2x and x = 0.20 m from the +q charge. It must lie nearer the smaller charge because only the extra distance from the larger charge, acting through the inverse-square factor, can offset its four-times-greater magnitude."
+        },
+        {
+          "type": "short",
+          "q": "Charges of +2.0 microcoulombs at x = 0 and +8.0 microcoulombs at x = 0.30 m are fixed on a line. A charge of -1.0 microcoulomb is placed at x = 0.10 m. Work out the net force on it, and explain what the result tells you about how distance and charge magnitude compete.",
+          "concept": "Superposition with attractive forces, and the dominance of the inverse-square distance factor",
+          "why": "Model answer: the +2.0 microcoulomb charge at 0.10 m pulls with F1 = k(2.0e-6)(1.0e-6)/(0.10)^2 = 1.80 N toward negative x, and the +8.0 microcoulomb charge at 0.20 m pulls with F2 = k(8.0e-6)(1.0e-6)/(0.20)^2 = 1.80 N toward positive x, so the net force is zero. Quadrupling the charge is exactly cancelled by doubling the distance, since 2/0.01 = 8/0.04, showing that distance is the more powerful variable and the bigger charge does not automatically win."
+        }
+      ]
+    },
+    {
+      "id": "sat-cos102",
+      "day": "Sat",
+      "course": "COS_102",
+      "topic": "Tracing the final-grade algorithm, boundary conditions, error types and refactoring",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "Trace this fragment with the inputs 40, 50, 45, 40, 50. What does it print? Fragment: INPUT G1, G2, G3, G4, G5 / Grade <- (G1+G2+G3+G4+G5)/5 / IF Grade > 44 THEN PRINT PASS ELSE PRINT FAIL",
+          "options": [
+            "FAIL - the average is 44, and 44 is not greater than 44",
+            "PASS - the average is 45, and 45 > 44",
+            "FAIL - three of the five grades are below the pass mark",
+            "PASS - the average is 44, and the pass mark is 44"
+          ],
+          "answerIndex": 0,
+          "concept": "Tracing a fragment; strict inequality at the boundary",
+          "why": "40+50+45+40+50 = 225 and 225/5 = 44; the test is strictly greater than 44, so 44 fails - correctly, since the pass mark is 45. Option 3 encodes the misconception that individual grades, not the average, are compared with the pass mark."
+        },
+        {
+          "type": "mcq",
+          "q": "A student's flowchart uses the decision 'Is Grade > 45' instead of 'Is Grade > 44'. A candidate scores an average of exactly 45. What happens, and what kind of defect is it?",
+          "options": [
+            "The program refuses to run; a run-time error",
+            "The program prints FAIL for a student who passed; a logical error",
+            "The program prints PASS for a student who failed; a logical error",
+            "The program will not compile, because the greater-than operator cannot be used with the value 45; a syntax error"
+          ],
+          "answerIndex": 1,
+          "concept": "Off-by-one boundary condition is a logical error",
+          "why": "Pass mark 45 means pass if and only if Grade >= 45, that is Grade > 44; testing > 45 excludes exactly 45 and fails a genuine passer. The code is legal and runs to completion, so the defect is logical, not syntax or run-time."
+        },
+        {
+          "type": "mcq",
+          "q": "Classify each failure: (i) PRNT PASS is typed instead of PRINT PASS; (ii) the divisor is typed as 4 instead of 5, so every average comes out too high; (iii) the count of grades is read from the user as N and the average is computed as Sum/N, and the user enters N = 0.",
+          "options": [
+            "(i) logical, (ii) syntax, (iii) run-time",
+            "(i) syntax, (ii) logical, (iii) run-time",
+            "(i) syntax, (ii) run-time, (iii) logical",
+            "(i) run-time, (ii) logical, (iii) syntax"
+          ],
+          "answerIndex": 1,
+          "concept": "Syntax vs logical vs run-time errors",
+          "why": "PRNT breaks the language's rules, so it is caught as a syntax error before execution; dividing by 4 is legal code giving wrong results, a logical error; division by zero is legal code that fails while executing, a run-time error."
+        },
+        {
+          "type": "mcq",
+          "q": "Which rewrite of the pass/fail test is a genuine refactor? Original: IF Grade > 44 THEN PRINT PASS ELSE PRINT FAIL",
+          "options": [
+            "IF Grade >= 45 THEN PRINT PASS ELSE PRINT FAIL",
+            "IF Grade > 44 THEN PRINT PASS, and separately IF Grade > 45 THEN PRINT FAIL",
+            "PASSMARK <- 45 / IF Grade < PASSMARK THEN PRINT FAIL ELSE PRINT PASS",
+            "IF Grade > 44 THEN PRINT PASSED WITH DISTINCTION ELSE PRINT FAIL"
+          ],
+          "answerIndex": 2,
+          "concept": "Refactoring vs behaviour change",
+          "why": "Option 3 gives identical output for every input while naming the pass mark once, improving structure so a future change touches one line. Option 1 is behaviour-identical but improves nothing; option 2 changes behaviour (50 would print both PASS and FAIL); option 4 changes the output."
+        },
+        {
+          "type": "short",
+          "q": "Two fragments compute the same total. Fragment A: Sum <- 0 / Sum <- Sum+G1 / Sum <- Sum+G2 / Sum <- Sum+G3 / Sum <- Sum+G4 / Sum <- Sum+G5 / Grade <- Sum/5. Fragment B: Sum <- 0 / FOR i FROM 1 TO 5 DO Sum <- Sum + G[i] / Grade <- Sum/5. Explain why B counts as a refactor of A, and state the one thing you would have to check about B before calling it a refactor rather than a rewrite.",
+          "concept": "Refactoring for concision and efficiency; loop-bound verification",
+          "why": "Model answer: B yields exactly the same Grade for the same five inputs but replaces five repeated additions with one loop - more concise, better structured and easily extended - which is precisely improving structure and efficiency without changing the function of the solution. Before calling it a refactor I would check the loop bounds: that FOR i FROM 1 TO 5 includes both 1 and 5 and that G[1] to G[5] are the same five grades A adds; an array indexed from 0 would silently change which values are summed, making it a rewrite."
+        },
+        {
+          "type": "short",
+          "q": "A program is supposed to print PASS for a mark of exactly 45 but prints FAIL. The programmer runs it with the marks 45, 46 and 44, sees the wrong output for 45, then inspects the code, finds IF Grade > 45, and changes it to IF Grade > 44. Name which parts of this were testing, which were debugging, and explain why the final change is not a refactor.",
+          "concept": "Debugging vs testing; refactoring vs fixing a bug",
+          "why": "Model answer: running the program with 45, 46 and 44 and comparing output against expectation is testing - the process that verifies the program works as expected. Inspecting the code, locating IF Grade > 45 as the cause and removing it is debugging - the process that finds errors so they can be removed to avoid program failure. The change from > 45 to > 44 is not a refactor because refactoring improves structure, design or efficiency without changing the function of the solution, whereas this deliberately alters the output for a mark of exactly 45 from FAIL to PASS; changing behaviour on purpose is fixing a bug."
+        }
+      ]
+    }
+  ],
+  "recapCandidates": [
+    {
+      "course": "PHY_102",
+      "topic": "Charging by induction and the role of the ground connection",
+      "whyMisunderstood": "Students memorise the phrase 'induction charges an object without touching it' but never track what actually moves, so they default to conduction thinking and predict the object ends up with the same sign as the rod. The ground wire is treated as a decorative step rather than the escape route that makes the charge permanent, and the order of removal (wire first, then rod) is learned as a ritual instead of a consequence. Textbook phrasing that says 'the positive charges move to the near end' compounds the damage, because in a metal only electrons ever move.",
+      "whyQuestions": [
+        "Walk me through what happens when a negatively charged rod is brought near a neutral metal sphere - what physically moves, and in which direction?",
+        "You said the near side becomes positive. Which particles actually travelled to make that happen, and where are the protons during all of this?",
+        "Why does the sphere still end up with a net charge after grounding, when before grounding it was only polarised and would go back to neutral?",
+        "Why must the ground wire be removed before the rod, and not the other way round? Predict what the sphere's final charge is if you reverse the order, and say why.",
+        "If the rod were positive instead of negative, which way do the electrons flow through the ground wire, and what sign does the sphere end up with? Now explain why the sphere's final charge does not depend on how much charge the rod itself carries."
+      ],
+      "goodAnswerContains": "Only free electrons move in the metal; a positive region means an electron deficit, never migrated protons, and the near face's sign is opposite to the rod's | Grounding provides a path for electrons to leave (negative rod) or enter (positive rod) the sphere, converting temporary polarisation into a real net charge that is opposite in sign to the rod | The ground must be broken while the rod is still present, because the rod's field is what holds the imbalance in place; remove the rod first and the electrons flow back and the sphere returns to neutral",
+      "workedExample": "A neutral metal sphere sits on an insulating stand and a negatively charged plastic rod is brought close without touching it; the rod's field repels the sphere's free electrons to the far side, so the far side is negative and the near side is positive by electron deficit, with the sphere's total charge still zero; a wire is now connected from the sphere to earth, and the repelled electrons flow down the wire into the ground because the earth is an effectively infinite reservoir and the rod keeps pushing them away; the wire is disconnected while the rod is still in place, trapping the electron shortage on the sphere; the rod is then withdrawn, and with no field to hold it the remaining positive charge redistributes uniformly over the sphere's surface; the sphere is left permanently positive, opposite in sign to the rod, and the rod has lost no charge of its own; had the rod been removed before the wire, the electrons would simply have flowed back up from earth and the sphere would have ended neutral."
+    },
+    {
+      "course": "MTH_102",
+      "topic": "The domain of a composite function f o g",
+      "whyMisunderstood": "Students compute (f o g)(x), simplify the formula, and then read the domain off the simplified expression as if it were an ordinary function, losing restrictions that came from g. They also assume the domain of f o g is just the domain of g, forgetting the second condition that g(x) must itself be an admissible input for f. Simplification is where the damage happens: cancelling a factor silently deletes a point that was never legal in the first place.",
+      "whyQuestions": [
+        "For f(x) = 1/(x-2) and g(x) = sqrt(x), what is the formula for (f o g)(x) and what is its domain?",
+        "Why is x = 4 excluded, when 4 is a perfectly legal input for g?",
+        "Why do we also still require x >= 0, even though the number sqrt(x) - 2 would make sense for some negative x if we allowed complex values?",
+        "Write the general rule for the domain of f o g in set-builder form, and explain why it must be a subset of the domain of g rather than the domain of f.",
+        "For f(x) = 1/(x-1) and g(x) = x^2 you get 1/(x^2 - 1). If instead f(x) = (x^2 - 1)/(x - 1) and you simplify to x + 1, what has the simplification destroyed, and what does that tell you about when it is safe to read a domain off a simplified formula?"
+      ],
+      "goodAnswerContains": "The domain of f o g is {x : x is in dom(g) AND g(x) is in dom(f)} - two conditions, both compulsory. | It is always a subset of dom(g), never larger, and it can be strictly smaller because some legal inputs of g produce outputs that f cannot accept. | The domain must be fixed from the unsimplified composite: cancelling or simplifying can hide an excluded point, so restrictions are recorded before any algebra is done.",
+      "workedExample": "Take f(x) = 1/(x-2) and g(x) = sqrt(x); Condition 1: x must be in dom(g), so x >= 0; Condition 2: g(x) must be in dom(f), so sqrt(x) is not equal to 2, giving x not equal to 4; Form the composite: (f o g)(x) = f(sqrt(x)) = 1/(sqrt(x) - 2); Domain = [0, 4) union (4, infinity), which is a proper subset of dom(g) = [0, infinity); Check a value: (f o g)(9) = 1/(3 - 2) = 1, legal; Check the excluded value: (f o g)(4) = 1/(2 - 2) is undefined, confirming the exclusion; Contrast the reverse order: (g o f)(x) = sqrt(1/(x-2)) needs 1/(x-2) >= 0 and x not equal to 2, giving domain (2, infinity), a completely different set - so f o g is not equal to g o f"
+    }
+  ]
+}
