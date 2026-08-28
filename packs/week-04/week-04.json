@@ -1,0 +1,1056 @@
+{
+  "week": 4,
+  "startsOn": "2026-09-28",
+  "endsOn": "2026-10-04",
+  "generatedOn": "2026-08-28",
+  "days": [
+    {
+      "day": "Mon",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Reading limits off a graph: one-sided limit notation, open versus shaded dots, when a limit exists, limit versus f(a), and the three conditions for continuity",
+        "checkFile": "checks/Mon-MTH_102.md"
+      },
+      "fast": {
+        "course": "GST_112",
+        "topic": "Constitutions and parties end to end: Nigerian Council 1914, Clifford 1922 and the elective principle, Richards 1947 and regionalism, Macpherson 1951 and Lyttleton 1954 and federalism, then NNDP, NYM, NCNC, AG and NPC with founders, bases and newspapers"
+      }
+    },
+    {
+      "day": "Tue",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Concepts and basic technique: ideal and real sources of emf, zeroed sources, series/parallel identification, the method of superposition, Thevenin/Norton and nodal analysis, and the definition, direction and field behaviour of an electric dipole",
+        "checkFile": "checks/Tue-PHY_102.md"
+      },
+      "fast": {
+        "course": "CSC_106",
+        "topic": "CSS rule syntax, the five selector types, specificity and the box model width calculation"
+      }
+    },
+    {
+      "day": "Wed",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Algorithm concepts: algorithm versus program versus computer, the five characteristics, the five development steps, pseudocode/flowchart representation, the three control structures, design considerations and priori versus posterior analysis",
+        "checkFile": "checks/Wed-COS_102.md"
+      },
+      "fast": {
+        "course": "GST_122",
+        "topic": "Paragraph structure (topic sentence, unity, coherence) and the punctuation marks, applied to correcting sentences"
+      }
+    },
+    {
+      "day": "Thu",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Problems: getting the graph from a formula, piecewise functions and continuity parameters, sign analysis either side of a vertical asymptote, and classifying every discontinuity",
+        "checkFile": "checks/Thu-MTH_102.md"
+      },
+      "fast": {
+        "course": "PHY_108",
+        "topic": "Kirchhoff's Current Law: sum of I in = sum of I out at a node, the sign convention, and verifying I1 + I2 = I3 from the three-ammeter readings"
+      }
+    },
+    {
+      "day": "Fri",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Problems: network reduction and terminal voltage, the potential and current dividers, a two-loop Kirchhoff analysis with its Thevenin check, and dipole calculations of moment, torque, energy, potential and field",
+        "checkFile": "checks/Fri-PHY_102.md"
+      },
+      "fast": {
+        "course": "Review",
+        "topic": "Week 4 review: re-work any check question you got wrong, then read the confidence log and pick Sunday's two topics"
+      }
+    },
+    {
+      "day": "Sat",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Applied pseudocode: writing algorithms, dry-run trace tables, and debugging off-by-one counters, loop conditions, sentinel handling and statement order",
+        "checkFile": "checks/Sat-COS_102.md"
+      },
+      "fast": {
+        "course": "Catch-up",
+        "topic": "Sit the Week 3 question sets - they are now seven days old and due; use any remaining time on a missed fast hour"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "code": "PHY_102",
+      "name": "General Physics II",
+      "weekTopics": [
+        "Sources of emf: ideal voltage source (constant V, r = 0) versus a real source with internal resistance in series, terminal voltage V = emf - I r read off a V-against-I graph as intercept and slope; ideal current source (constant I, r infinite) and a real current source as an ideal source in parallel with a finite internal resistance",
+        "Zeroed and dependent sources: a dead voltage source behaves as a short circuit and a dead current source as an open circuit (the two are complementary, and internal resistances stay); dependent sources (VCVS, VCCS, CCVS, CCCS) are never zeroed",
+        "Identifying series and parallel elements: series share a node with nothing else attached and carry the same current (R_s = sum of R); parallel share both ends and the same voltage (1/R_p = sum of 1/R, and R_p is smaller than the smallest member)",
+        "Potential divider V_i = V x R_i / (sum of R) and current divider I_1 = I x R_2 / (R_1 + R_2), with the other resistance on top for current and the resistor's own value on top for voltage",
+        "Kirchhoff's rules and nodal analysis: KCL (sum of I in = sum of I out, charge conservation), KVL (sum of V round a loop = 0, energy conservation), and the four-step nodal recipe of choosing a zero-voltage reference node, labelling node voltages, applying KCL and solving",
+        "Method of superposition (current in a branch = sum of contributions of each independent source acting alone with the others zeroed, valid only for linear elements and never for power) and equivalent circuits: Thevenin (V_Th = open-circuit voltage, R_Th = terminal resistance with sources zeroed) and Norton (I_N = short-circuit current, R_N = R_Th, V_Th = I_N R_Th)",
+        "Electric dipoles: p = q d, a vector of unit C.m and dimension [M0 L1 T1 I1] directed from -q to +q in physics (opposite in chemistry); potential V = (1/4 pi epsilon-0) p cos(theta) / r^2, which is k p / r^2 on the axis and 0 on the perpendicular bisector; field for r much greater than d is E = 2 k p / r^3 on the axis (parallel to p) and k p / r^3 on the bisector (antiparallel to p), both falling off as 1/r^3",
+        "Dipole in an external field and its significance: zero net force in a uniform field but torque tau = p E sin(theta) = p x E with U = -p E cos(theta), stable at theta = 0 and unstable at 180 degrees, a net force appearing only if E is non-uniform; polar molecules (HCl, NaOH, water) have a permanent p and align with the field while non-polar ones (CO2, O2, methane) have p = 0; the week summary sheet adds emf, voltmeters and dielectrics, which polarise, reduce the field between capacitor plates, raise C = Q/V and prevent breakdown"
+      ],
+      "summaryFile": "PHY_102-Summary.md",
+      "questionsFile": "PHY_102-Questions.md"
+    },
+    {
+      "code": "MTH_102",
+      "name": "Elementary Mathematics II (Calculus)",
+      "weekTopics": [
+        "Reading a limit off a graph: slide along the curve towards x = a and read the height (y) it heads for, not the x-value and not the plotted endpoint",
+        "One-sided limits and notation: lim as x -> a from the left and lim as x -> a from the right; the sign labels the side in x, never the size of f(x)",
+        "Existence criterion: the two-sided limit exists exactly when both one-sided limits exist, are finite and are equal; otherwise DNE",
+        "Limit versus function value: lim as x -> a of f(x) ignores x = a entirely, while f(a) is read from the shaded (closed) dot; an open circle marks a point not on the graph",
+        "Continuity at a point by the three conditions: f(c) is defined, the limit exists, and the limit equals f(c); graphically, drawing the curve without lifting the pen",
+        "The four discontinuity types and their graphical signatures: removable (hole), jump (finite break), infinite (vertical asymptote), essential (oscillation such as sin(1/x))",
+        "Infinite limits: writing lim = +infinity or -infinity describes how the limit fails, and the sign must be checked separately on each side of the asymptote",
+        "Limits at infinity read graphically as horizontal asymptotes, which the graph may cross at finite x, and which may differ at the two ends"
+      ],
+      "summaryFile": "MTH_102-Summary.md",
+      "questionsFile": "MTH_102-Questions.md"
+    },
+    {
+      "code": "COS_102",
+      "name": "Introduction to Problem Solving",
+      "weekTopics": [
+        "What an algorithm is: an ordered set of commands with inputs, a process and outputs, designed by people and converted into a computer program",
+        "Algorithm versus program versus computer: the plan, the instructions, and the tool that carries out the plan",
+        "Characteristics of algorithms: input, unambiguity, finiteness, effectiveness, language independence",
+        "The five development steps: problem description, problem analysis, high-level algorithm development, stepwise refinement, algorithm review",
+        "Representing algorithms as pseudocode or flowcharts, with the required sequence, selection and repetition",
+        "Control structures in practice: sequence, IF/THEN/ELSE selection, WHILE and REPEAT-UNTIL repetition, sentinel and counter loops",
+        "Writing, dry-running and debugging pseudocode: trace tables, off-by-one counters, loop-condition and statement-order faults",
+        "Algorithm analysis and complexity: priori versus posterior analysis, time and space complexity, best/worst/average case, big O growth rates and the loop rules",
+        "Design considerations: modularity, correctness, maintainability, functionality, robustness, simplicity, extensibility, for performance and scalability"
+      ],
+      "summaryFile": "COS_102-Summary.md",
+      "questionsFile": "COS_102-Questions.md"
+    },
+    {
+      "code": "PHY_108",
+      "name": "General Physics Practical II",
+      "weekTopics": [
+        "Aim: experimentally verify Kirchhoff's Current Law (KCL) at a junction in a circuit",
+        "KCL statement: sum of I in = sum of I out at a node; algebraic form sum of I = 0 with currents entering positive and currents leaving negative",
+        "Basis of KCL: conservation of electric charge; Kirchhoff's first law is the current law, the second law (KVL) is the voltage law based on conservation of energy (Kirchhoff, 1845)",
+        "Apparatus: breadboard, two DC power supplies, five variable resistors R1 to R5, three ammeters, connection cables",
+        "Circuit and meters: each ammeter in series in its branch (low resistance so it barely alters the current); a voltmeter would go in parallel across a component (high resistance)",
+        "Procedure: set R1 to R5, press the 50 V range button on both supplies, set both emfs to 9 V, click Record to log the three ammeters, increase the emf in 3 V steps and repeat, save the Excel file",
+        "Node equation and analysis: I1 + I2 = I3, so compute I3-computed = I1 + I2 keeping signs (a negative ammeter reading means that branch flows out of the node) and compare with the measured I3",
+        "Comparison, errors and precautions: percentage difference = |I3 computed - I3 measured| / I3 measured x 100 percent, acceptable within about 5 percent; errors from ammeter zero error and loading, resistor tolerance, contact resistance, heating and supply drift; precautions include zeroing the meters, correct series polarity and fixing the assumed current direction"
+      ],
+      "summaryFile": "PHY_108-Summary.md",
+      "questionsFile": "PHY_108-Questions.md"
+    },
+    {
+      "code": "GST_112",
+      "name": "Nigerian Peoples and Culture",
+      "weekTopics": [
+        "The Nigerian Council of 1914: Lord Lugard, 36 members including six unofficial, advisory functions only, and its place as the foundation of constitutional development",
+        "The Clifford Constitution of 1922: Sir Hugh Clifford, the first written constitution, the three units of Lagos Colony, Southern Provinces and Northern Provinces, the 45-member council of 26 official, 15 nominated and 4 elected Nigerians, and the elective principle",
+        "The interregnum 1926-1943: Sir Graham Thompson, Sir Donald Cameron abolishing the Lieutenant Governor and the provincial court and introducing separation of powers, and Sir Bernard Bourdillon preparing the ground for a new constitution",
+        "The Richards Constitution 1947-1951: Sir Arthur Richards, regionalism, regional Houses of Assembly, bicameral in the North and unicameral elsewhere, and the criticisms of no consultation and a franchise limited to Lagos and Calabar",
+        "The Macpherson Constitution of 1951: wide consultation, the 136-member House of Representatives made supreme, Lagos removed from the Western Region, the Council of Ministers with the Governor as Prime Minister and twelve ministers, and its collapse over Enahoro's motion for independence",
+        "The Lyttleton Constitution of 1954: Sir Oliver Lyttleton as Colonial Secretary, the federal system, the office of Premier, the regionalised judiciary, Lagos as Federal Capital Territory and revenue allocation by derivation",
+        "Formation of the political parties: NNDP 1923 under Herbert Macaulay with the Lagos Daily News, NYM 1935 under Ernest Ikoli and Samuel Akisanya with the Daily Service, NCNC August 1944 under Macaulay and Azikiwe with the West African Pilot, Action Group 1951 at Ibadan out of Egbe Omo Oduduwa, and NPC 1951 under Ahmadu Bello out of Jam'iyyar Mutanen Arewa",
+        "Party aims, achievements and the four criticisms of Nigerian political parties, plus the 1914 amalgamation and the two schools of thought on it from the weekly Summary PDF"
+      ],
+      "summaryFile": "GST_112-Summary.md",
+      "questionsFile": "GST_112-Questions.md"
+    },
+    {
+      "code": "GST_122",
+      "name": "Communication in English II",
+      "weekTopics": [
+        "Paragraphs as units of thought: one idea per paragraph, one topic sentence per paragraph",
+        "Components of a good paragraph: unity, coherence, topic sentence, one idea at a time",
+        "Topic sentences and supporting sentences, and where a topic sentence may be positioned",
+        "Coherence through logical order and cohesive links; transition words by category",
+        "Punctuation and meaning: changing meaning, emphasis, nuance, clarifying ambiguity",
+        "Core marks: period, comma, semicolon, colon, apostrophe, quotation marks, question mark, exclamation point",
+        "Further marks: hyphen, em and en dash, ellipsis, parentheses, brackets, slash, ampersand",
+        "Applying punctuation rules to correct given sentences and paragraphs"
+      ],
+      "summaryFile": "GST_122-Summary.md",
+      "questionsFile": "GST_122-Questions.md"
+    },
+    {
+      "code": "CSC_106",
+      "name": "Introduction to Web Technologies",
+      "weekTopics": [
+        "CSS fundamentals: separating content (HTML) from presentation, rule syntax of selector, declaration block and property: value;",
+        "Attaching CSS three ways: inline style attribute, internal style block, external linked stylesheet, and why external is preferred",
+        "Selector types: type/element, class (.name), ID (#name), universal (*), descendant, plus grouping and pseudo-class",
+        "The cascade, specificity order (inline > id > class > element) and ties broken by source order; inheritance of text properties",
+        "The CSS box model: content, padding, border, margin, and calculating total width and height (200 + 40 + 4 + 20 = 264px)",
+        "Core property families: colour, font and typography, text styling, background, border, spacing, plus display (block, inline, inline-block, flex), float and position",
+        "Responsive typography with relative units (em, rem, vw) and media queries; Flexbox axes, justify-content, align-items, flex-wrap; CSS Grid",
+        "CSS best practices: meaningful class and ID names, grouped properties, external files, cross-browser testing"
+      ],
+      "summaryFile": "CSC_106-Summary.md",
+      "questionsFile": "CSC_106-Questions.md"
+    },
+    {
+      "code": "MIVA_COS_111",
+      "name": "Technical Certification I",
+      "weekTopics": [],
+      "summaryFile": "MIVA_COS_111-Summary.md",
+      "questionsFile": null
+    }
+  ],
+  "checks": [
+    {
+      "id": "mon-mth102",
+      "day": "Mon",
+      "course": "MTH_102",
+      "topic": "Reading limits off a graph: one-sided limit notation, open versus shaded dots, when a limit exists, limit versus f(a), and the three conditions for continuity",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A curve rises from the left and stops at an open circle at (2, 5); to the right of x = 2 it begins again at an open circle at (2, 5) and falls away; a shaded dot sits at (2, 1). Then:",
+          "options": [
+            "lim as x -> 2 of f(x) = 5 and f(2) = 1",
+            "lim as x -> 2 of f(x) = 1 and f(2) = 1",
+            "lim as x -> 2 of f(x) does not exist and f(2) = 1",
+            "lim as x -> 2 of f(x) = 5 and f(2) = 5"
+          ],
+          "answerIndex": 0,
+          "concept": "limit read from the curve, value read from the shaded dot",
+          "why": "Both sides head for height 5, so the limit is 5; the only filled point above x = 2 is at height 1, so f(2) = 1. (b) reads the shaded dot as the limit, assuming the limit must equal the value. (d) reads an open circle as the value, but an open circle marks a point deliberately not on the graph. (c) assumes a mismatch between limit and value destroys the limit, but the limit never looks at x = 2 at all."
+        },
+        {
+          "type": "mcq",
+          "q": "The statement lim as x -> 3 from the left of f(x) = 4 says that:",
+          "options": [
+            "f(x) approaches 4 as x approaches 3 through values less than 3",
+            "f(x) approaches 4 as x approaches 3 through values less than 4",
+            "f(x) stays below the height 4 for every x close to 3",
+            "f(3) equals 4 and the graph lies below y = 4 near there"
+          ],
+          "answerIndex": 0,
+          "concept": "the one-sided sign labels the side in x",
+          "why": "x -> 3 from the left means x creeps up to 3 through 2.9, 2.99, and so on, and the heights settle on 4. (b) attaches the minus sign to the output value instead of the input. (c) reads the minus as 'f(x) approaches 4 from below', a claim about y that the notation does not make. (d) confuses the limit with the function value, which the notation deliberately says nothing about."
+        },
+        {
+          "type": "mcq",
+          "q": "A curve heads for height 2 from both sides of x = a, where there is an open circle at (a, 2); a shaded dot sits at (a, 7). Then:",
+          "options": [
+            "lim as x -> a of f(x) = 2 and f is discontinuous at a",
+            "lim as x -> a of f(x) = 7 and f is continuous at a",
+            "lim as x -> a of f(x) does not exist, as the graph breaks at a",
+            "lim as x -> a of f(x) = 2 and f is continuous at a"
+          ],
+          "answerIndex": 0,
+          "concept": "a limit existing is only one of the three continuity conditions",
+          "why": "The curve settles on 2 from both sides, so the limit is 2; the shaded dot gives f(a) = 7, so condition (iii), limit = f(a), fails and f has a removable discontinuity. (d) is the standard error of treating 'the limit exists' as sufficient for continuity. (b) reads the shaded dot as the limit. (c) assumes a break in the picture kills the limit, but a hole leaves both one-sided approaches intact."
+        },
+        {
+          "type": "mcq",
+          "q": "To evaluate lim as x -> a from the left of f(x) from a graph you:",
+          "options": [
+            "follow the curve towards a from the left and read the height it heads for",
+            "read the height of whatever point is plotted at x = a on the left branch",
+            "follow the curve to the left of a and read the x-value it heads for",
+            "take the lower of the two one-sided heights, as the sign means below"
+          ],
+          "answerIndex": 0,
+          "concept": "reading a one-sided limit as a trend in the heights",
+          "why": "You slide along the curve towards x = a from the left and record the y-value it is heading for, whether the endpoint is open, closed or absent. (b) reads the endpoint, which is f(a) if it is a shaded dot and not the limit. (c) swaps the axes: the x-value always heads to a, so it carries no information. (d) reads the minus sign as 'the lower value', a misreading of the notation."
+        },
+        {
+          "type": "mcq",
+          "q": "f is continuous at c if and only if:",
+          "options": [
+            "lim as x -> c from the left and lim as x -> c from the right both exist and are finite",
+            "f(c) is defined, lim as x -> c of f(x) exists, and the two are equal",
+            "f(c) is defined and f is defined on an interval containing c",
+            "f(c) is defined and lim as x -> c of f(x) exists, in either order"
+          ],
+          "answerIndex": 1,
+          "concept": "the three conditions for continuity at a point",
+          "why": "All three are needed: defined, limit exists, and equal. (a) drops the function value entirely, so it would call a hole continuous. (d) keeps both objects but drops the requirement that they agree, so it would call a shaded dot sitting off the curve continuous. (c) confuses 'f is defined near c' with continuity; a jump function is defined everywhere and still discontinuous."
+        },
+        {
+          "type": "mcq",
+          "q": "Left of x = 1 a graph plunges along that vertical line to the bottom of the page; right of x = 1 it descends from the top of the page along the same line. Then lim as x -> 1 of f(x):",
+          "options": [
+            "does not exist; the sides run to -infinity and to +infinity",
+            "equals +infinity, since the graph is unbounded at x = 1",
+            "equals 0, since -infinity and +infinity cancel each other out",
+            "equals infinity, since both sides grow without any bound"
+          ],
+          "answerIndex": 0,
+          "concept": "infinite one-sided limits of opposite sign",
+          "why": "The values run down without bound on the left and down from above without bound on the right, so no single number is approached: the limit does not exist and x = 1 is a vertical asymptote. (b) picks one side and ignores the other. (d) ignores the signs, which are exactly what distinguishes this from 1/(x-1)^2. (c) treats +infinity and -infinity as numbers that can be averaged."
+        },
+        {
+          "type": "mcq",
+          "q": "On the vertical line x = 1 a graph shows an open circle at (1, 4) and a shaded dot at (1, -2). This tells you that:",
+          "options": [
+            "f(1) = -2, and 4 is the height the curve approaches at 1",
+            "f(1) = 4, and -2 is a stray point unrelated to the graph",
+            "f takes both of the values 4 and -2 at the point x = 1",
+            "f(1) is undefined, because one of the two circles is open"
+          ],
+          "answerIndex": 0,
+          "concept": "one output per input; the shaded dot is the value",
+          "why": "The open circle at (1, 4) says that point is not on the graph and records where the curve was heading, i.e. the limit; the shaded dot says f(1) = -2. (b) reads the open circle as the value. (c) forgets that two points on one vertical line would not be a function. (d) treats the presence of an open circle as proof that f(1) is undefined, which holds only when there is no shaded dot anywhere on that line."
+        },
+        {
+          "type": "mcq",
+          "q": "A graph flattens onto the horizontal line y = 2 as x runs far right, having crossed that line once at x = 5; far to the left it flattens onto y = -1. Then:",
+          "options": [
+            "lim as x -> +infinity of f(x) = 2 and lim as x -> -infinity of f(x) = -1",
+            "lim as x -> +infinity of f(x) = 5 and lim as x -> -infinity of f(x) = -1",
+            "lim as x -> +infinity of f(x) = 2 and lim as x -> -infinity of f(x) = 2",
+            "neither limit exists, since the graph crosses the line y = 2"
+          ],
+          "answerIndex": 0,
+          "concept": "limits at infinity as horizontal asymptotes",
+          "why": "A limit at infinity is the height the graph settles onto, and the two ends are read separately. (d) assumes a horizontal asymptote cannot be crossed; crossings at finite x are irrelevant, and only vertical asymptotes cannot be crossed. (b) reports the x-coordinate of the crossing instead of the height. (c) assumes one horizontal asymptote must serve both ends."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Explain how lim as x -> a of f(x) can exist even though f(a) is undefined, describe what the graph looks like at that point, and say why the limit is entitled to ignore x = a.",
+          "concept": "the limit describes the approach to a, not the state at a",
+          "why": "The definition of lim as x -> a of f(x) = L quantifies over x close to a with x not equal to a, so the point x = a is excluded by construction and whether f is defined there is irrelevant. Graphically the curve runs unbroken up to x = a from both sides and heads for the same height L, but (a, L) is punched out and drawn as an open circle, with no shaded dot anywhere on the line x = a. Example: f(x) = (x^2 - 1)/(x - 1) equals x + 1 for every x not equal to 1, so the graph is the line y = x + 1 with a hole at (1, 2): the limit is 2 while f(1) is undefined (0/0). This is a removable discontinuity, repaired by defining f(1) = 2."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Explain the difference between writing lim as x -> a of f(x) = DNE and writing lim as x -> a of f(x) = +infinity, and why the second is still a statement that the limit does not exist.",
+          "concept": "'= +infinity' describes the manner of the failure, not a value",
+          "why": "DNE is the blanket statement that no number L is approached, typically because the one-sided limits settle on different heights (a jump) or because the values never settle at all (oscillation). Writing = +infinity is the more informative statement that the values grow beyond every bound as x approaches a from both sides; since +infinity is not a real number, no real L is approached, so this is a special case of the limit failing, reported with extra information. Graphically it means a vertical asymptote at x = a with the curve running off the top of the page on both sides, e.g. 1/(x-a)^2. If the two sides run to -infinity and +infinity respectively you may not write either symbol for the two-sided limit; only DNE, with the one-sided behaviour stated separately."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) The graph of g(x) = |x| has a sharp corner at x = 0. Use the three conditions to decide whether g is continuous at 0, and explain what property the corner does cost g.",
+          "concept": "continuity is about no break, not about no corner",
+          "why": "(i) g(0) = |0| = 0, defined. (ii) On the right arm g(x) = x, so the limit from the right is 0; on the left arm g(x) = -x, so the limit from the left is 0; the two agree, so the limit exists and equals 0. (iii) 0 = g(0). All three conditions hold, so g is continuous at 0, and indeed the whole V can be traced without lifting the pen. What the corner costs is differentiability: the left arm has slope -1 and the right arm slope +1, so there is no single tangent line at the origin. Continuity is required for differentiability, not the other way round."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) State the three conditions for continuity at c, and say which one fails at (i) a hole, (ii) a jump, (iii) a vertical asymptote.",
+          "concept": "each discontinuity type as a named failure of one condition",
+          "why": "The conditions are (i) f(c) is defined; (ii) lim as x -> c of f(x) exists; (iii) the limit equals f(c). Hole (removable): the one-sided limits agree so (ii) holds; what fails is (i) if there is no shaded dot, or (iii) if the shaded dot sits off the curve at a different height. Jump: both one-sided limits exist and are finite but are unequal, so (ii) fails, and once (ii) fails, (iii) cannot be tested; f(c) is often perfectly well defined, which is why (i) alone proves nothing. Vertical asymptote (infinite): at least one one-sided limit is +infinity or -infinity, so no real number is approached and (ii) fails; f(c) is normally undefined as well, so (i) fails too."
+        }
+      ]
+    },
+    {
+      "id": "tue-phy102",
+      "day": "Tue",
+      "course": "PHY_102",
+      "topic": "Concepts and basic technique: ideal and real sources of emf, zeroed sources, series/parallel identification, the method of superposition, Thevenin/Norton and nodal analysis, and the definition, direction and field behaviour of an electric dipole",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "An ideal voltage source is best described as one that:",
+          "options": [
+            "delivers a constant voltage across the load whatever current the load draws; its internal resistance is zero",
+            "delivers a constant current to the load whatever voltage appears across it; its internal resistance is zero",
+            "delivers a constant voltage across the load whatever current the load draws; its internal resistance is infinite",
+            "delivers constant power to the load whatever the load is; its internal resistance equals the load resistance"
+          ],
+          "answerIndex": 0,
+          "concept": "definition of an ideal voltage source",
+          "why": "An ideal voltage source holds V constant regardless of the current drawn, which requires zero internal resistance, since any r makes V = emf - I r sag as I rises. Option b is the definition of an ideal current source. Option c attaches the current source's condition (r infinite) to the voltage source, but an infinite series resistance would deliver no current at all. Option d invents a constant-power source and imports the maximum-power-transfer condition r = R_load."
+        },
+        {
+          "type": "mcq",
+          "q": "A real current source is modelled as an ideal current source together with an internal resistance, arranged and valued as:",
+          "options": [
+            "in parallel with it, ideally infinite",
+            "in series with it, ideally zero",
+            "in series with it, ideally infinite",
+            "in parallel with it, ideally zero"
+          ],
+          "answerIndex": 0,
+          "concept": "internal resistance of a real current source",
+          "why": "A current source must divert its shortfall somewhere as the load voltage rises, and only a parallel path can do that; making that path infinite sends all the current to the load. Options b and c apply the voltage source's series arrangement. Option d has the arrangement right but the ideal limit backwards: zero parallel resistance would short the source and deliver nothing to the load. Revise: voltage source has r in series, ideal r = 0; current source has r in parallel, ideal r = infinite."
+        },
+        {
+          "type": "mcq",
+          "q": "To apply the method of superposition to a circuit containing one voltage source and one current source, the source not being considered is handled by:",
+          "options": [
+            "shorting the voltage source, or opening the current source, leaving all resistances in place",
+            "opening the voltage source, or shorting the current source, leaving all resistances in place",
+            "shorting both of them, since a zeroed source can support no potential difference at all",
+            "deleting each source together with the resistance in its own branch from the diagram"
+          ],
+          "answerIndex": 0,
+          "concept": "zeroing independent sources",
+          "why": "A voltage source of zero emf holds both terminals at the same potential, which is what a connecting wire does; a current source delivering zero current is what a break in the wire does. Option b is the swap, the commonest error in the method. Option c applies the voltage-source rule to both and would wrongly force the current source's terminals to equal potential. Option d confuses zeroed with deleted: internal resistances and the branch geometry must stay or the network is no longer the same."
+        },
+        {
+          "type": "mcq",
+          "q": "A resistor in a two-source linear network carries 2.0 A when the first source acts alone and 3.0 A in the same direction when the second acts alone. With both sources active, the current is 5.0 A and the power dissipated is:",
+          "options": [
+            "25R watts, because power is quadratic in current and so cannot itself be superposed",
+            "13R watts, because each source dissipates its own power independently of the other",
+            "5R watts, because power divides between the sources exactly as the current does",
+            "6R watts, because the power follows from the product of the two separate currents"
+          ],
+          "answerIndex": 0,
+          "concept": "power does not superpose",
+          "why": "Currents and voltages superpose, so I = 2.0 + 3.0 = 5.0 A, and only then is the power computed as P = I^2 R = 25R. Option b adds the separately computed powers 4R + 9R, ignoring the cross term 2(2.0)(3.0)R = 12R. Option c treats power as linear in current. Option d manufactures 6R from the cross-product alone. Superpose the currents first, square afterwards."
+        },
+        {
+          "type": "mcq",
+          "q": "Two resistors in a circuit diagram are genuinely in series when:",
+          "options": [
+            "they meet at a node to which nothing else is joined, so the same current passes through both",
+            "they are drawn one after another along the same wire, whatever else is joined between them",
+            "they have the same potential difference across them, so the current divides between them",
+            "they carry currents in the same direction, whether or not other branches join them"
+          ],
+          "answerIndex": 0,
+          "concept": "identifying series elements",
+          "why": "Series is defined by a shared current, which requires an unbranched junction: if a third branch taps in between the two resistors, part of the current leaves and they no longer carry the same current. Option b reads the drawing rather than the topology, the trap the definition exists to close. Option c is the definition of parallel. Option d is true of many non-series arrangements, including the two branches of a parallel pair fed from a common node."
+        },
+        {
+          "type": "mcq",
+          "q": "For a linear two-terminal network, the Thevenin voltage and Thevenin resistance are obtained as:",
+          "options": [
+            "the open-circuit terminal voltage, and the terminal resistance with all independent sources zeroed",
+            "the short-circuit terminal current, and the terminal resistance with the load still connected",
+            "the open-circuit terminal voltage, and the terminal resistance with all independent sources active",
+            "the voltage measured across the load, and the sum of every resistance appearing in the network"
+          ],
+          "answerIndex": 0,
+          "concept": "Thevenin equivalent of a linear network",
+          "why": "Open circuit means no current and so no internal drop, giving the full equivalent emf; zeroing the independent sources (voltage shorted, current opened) leaves only the resistive skeleton seen from the terminals. Option b mixes in the Norton quantity and leaves the load attached, though the load is exactly what the equivalent must be independent of. Option c forgets to zero the sources, so the resistance would include their emfs. Option d is the naive reading of both. Remember V_Th = I_N R_Th."
+        },
+        {
+          "type": "mcq",
+          "q": "In nodal analysis, one node is chosen as the reference node so that:",
+          "options": [
+            "its voltage may be set to zero, leaving the other node voltages as the unknowns in the KCL equations",
+            "the current entering it is zero, which removes one equation from the simultaneous set",
+            "it carries the largest current in the circuit, which makes the remaining equations easier to solve",
+            "the potential difference across every source in the circuit is thereby forced to be zero"
+          ],
+          "answerIndex": 0,
+          "concept": "the reference node in nodal analysis",
+          "why": "Only potential differences are physical, so one node may be assigned 0 V freely (usually the negative terminal of the source); KCL at each remaining node then gives one equation per unknown. Option b confuses node voltage with node current, since KCL holds at every node including the reference. Option c invents a selection rule from current size, but the choice is arbitrary and only convenience decides it. Option d misreads zero reference as forcing every source to zero, which would erase the circuit's drive."
+        },
+        {
+          "type": "mcq",
+          "q": "The electric dipole moment of charges +q and -q separated by d has magnitude q d and, by the physics convention, is directed:",
+          "options": [
+            "from the negative charge toward the positive charge, along the dipole axis",
+            "from the positive charge toward the negative charge, along the dipole axis",
+            "outward from the centre of the pair, in the direction of any applied external field",
+            "perpendicular to the line joining the charges, that is, along the equatorial plane"
+          ],
+          "answerIndex": 0,
+          "concept": "direction of the dipole moment",
+          "why": "p = q d uses one of the charges and points along the dipole axis from -q to +q. Option b is the chemistry convention, correct in a chemistry paper but wrong here. Option c confuses the definition with alignment behaviour: p exists and has its direction before any field is applied. Option d confuses the dipole axis with the equatorial plane, where it is the field, not p, that lies antiparallel to p."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Explain why a dipole placed in a uniform external field experiences zero net force but a non-zero torque. State the two orientations for which the torque vanishes and say which of them is the stable one, and why.",
+          "concept": "net force and torque on a dipole in a uniform field",
+          "why": "The charge +q feels q E and the charge -q feels -q E. Because E has the same magnitude and direction at both charges, these forces are equal and opposite, so F_net = 0 and the dipole does not translate. They do not act at the same point, however: they are separated by the perpendicular distance d sin(theta), so they form a couple of moment tau = q E d sin(theta) = p E sin(theta), that is tau = p x E, and since the net force is zero this torque has the same value about any origin. The torque vanishes when sin(theta) = 0, at theta = 0 (p parallel to E) and theta = 180 degrees (p antiparallel). Only theta = 0 is stable: U = -p E cos(theta) is a minimum (-p E) there, so a small displacement gives a restoring torque, whereas at 180 degrees U is a maximum (+p E) and the least disturbance flips the dipole over. In a non-uniform field the two forces are unequal and the net force is no longer zero."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) A student writes: 'A zeroed voltage source and a zeroed current source are both simply removed from the circuit.' Say precisely what each is replaced by, explain why the two replacements are different, and state what happens to their internal resistances.",
+          "concept": "zeroed sources are complementary, not deleted",
+          "why": "A zeroed voltage source has zero emf, so both terminals sit at the same potential, which is electrically identical to a short circuit, a plain connecting wire. A zeroed current source delivers zero current, which is what a break in the wire does, so it is replaced by an open circuit. The replacements differ because the two sources are defined by different constraints: a voltage source fixes the potential difference (zero difference = a wire) while a current source fixes the current (zero current = a gap); they are complementary in exactly this sense. Any internal resistance stays in the circuit, because r is a property of the real component and not of its emf or current output: in superposition you short the ideal emf but leave its series r, and open the ideal current source but leave its parallel r. Deleting a whole branch would change the network's resistance and give the wrong branch currents."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Explain why the electric potential of a dipole is zero at every point on its perpendicular bisector while the electric field there is not zero, and state the direction of that field relative to p.",
+          "concept": "scalar cancellation of V versus vector addition of E on the bisector",
+          "why": "Every point P on the perpendicular bisector is equidistant from +q and -q. Potential is a scalar sum, V = k q / r_plus + k(-q)/r_minus, and with r_plus = r_minus the two terms are equal in magnitude and opposite in sign, so V = 0 exactly, at every such point and every distance; this also follows from V = k p cos(theta)/r^2 with theta = 90 degrees. The field is a vector sum and cannot cancel the same way: E_plus points away from +q and E_minus points toward -q, and on resolving them the components perpendicular to the dipole axis are equal and opposite and cancel, while the components parallel to the axis are equal and add. The resultant is therefore non-zero, lies along the axis and points antiparallel to p (from the +q side back toward the -q side), with magnitude k p / r^3 for r much greater than d. So V = 0 does not imply E = 0: E measures how fast V changes with position, and although V is zero all along the bisector, it changes as soon as you step off it."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Distinguish a polar from a non-polar molecule in terms of dipole moment, give one example of each, and say what a polar molecule does when an external electric field is applied.",
+          "concept": "polar and non-polar molecules",
+          "why": "A polar molecule has a permanent net dipole moment: the centre of positive charge and the centre of negative charge do not coincide, so p = q d is not zero; an example is HCl (also NaOH, water). A non-polar molecule has individual bond dipole moments that cancel by symmetry, giving a net dipole moment of zero; an example is CO2 (also O2, methane), which has polar bonds but is linear and symmetric so the two moments are equal and opposite. When an external field is applied, a polar molecule experiences a torque tau = p E sin(theta) and rotates to align its dipole moment with the field, its alignment resisted by thermal motion; a non-polar molecule has no permanent p to align, though the field induces a small one by displacing its charge. This alignment and displacement is dielectric polarisation, which is why a dielectric weakens the field inside a capacitor and raises its capacitance."
+        }
+      ]
+    },
+    {
+      "id": "wed-cos102",
+      "day": "Wed",
+      "course": "COS_102",
+      "topic": "Algorithm concepts: algorithm versus program versus computer, the five characteristics, the five development steps, pseudocode/flowchart representation, the three control structures, design considerations and priori versus posterior analysis",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A student writes numbered English steps for computing a class average, types those steps into a Python file, and runs the file on her laptop. Which names all three correctly?",
+          "options": [
+            "The English steps are the algorithm, the Python file is the program, the laptop is the tool",
+            "The English steps are the program, the Python file is the algorithm, the laptop supplies the plan",
+            "The English steps are notes, the Python file is the algorithm, the run is the program",
+            "All three are the algorithm at different stages, since the logic is the same throughout"
+          ],
+          "answerIndex": 0,
+          "concept": "algorithm vs program vs computer",
+          "why": "The course states the three separately: an algorithm is a plan for solving a problem designed by people, a program is the set of instructions describing the steps the computer has to follow, and a computer is a tool used to carry out a problem-solving plan. Option b inverts plan and program and credits the machine with the plan, which the course denies. Option c comes from thinking only code can be an algorithm, but the algorithm is language-independent and exists before any code. Option d is the subtlest error: the logic is indeed the same, but the course distinguishes the three by role, and says the algorithm must be converted into a program, which is a conversion between two different things."
+        },
+        {
+          "type": "mcq",
+          "q": "Two students implement one agreed plan, one in C and one in Java; the outputs are identical. A third student says these are two different algorithms because the code differs. Which characteristic settles it?",
+          "options": [
+            "Finiteness - each program has a limited and countable number of instructions",
+            "Effectiveness - each program produces output, so each is an effective version",
+            "Language independence - the algorithm does not depend on any programming language",
+            "Unambiguity - clear instructions can be written in any language without change"
+          ],
+          "answerIndex": 2,
+          "concept": "language independence",
+          "why": "The course lists language independence as a characteristic: algorithms should not be dependent on any programming language, so one plan implemented twice is one algorithm and two programs. Option a is true of both programs and settles nothing, since finiteness concerns the number of instructions. Option b misreads effectiveness as 'it produced output', when effectiveness is about each step being carryable-out. Option d is the near-miss: unambiguity makes an algorithm implementable by a reader, but language independence is what says its identity survives the change of language."
+        },
+        {
+          "type": "mcq",
+          "q": "A written procedure contains 'Step 3: add a suitable quantity of reagent' and 'Step 4: set p to the largest prime number'. Which characteristic does each step violate?",
+          "options": [
+            "Step 3 violates effectiveness; Step 4 violates unambiguity",
+            "Step 3 violates unambiguity; Step 4 violates effectiveness",
+            "Both violate finiteness, since neither step can be completed",
+            "Step 3 violates input; Step 4 violates language independence"
+          ],
+          "answerIndex": 1,
+          "concept": "unambiguity vs effectiveness",
+          "why": "'A suitable quantity' has more than one reading, so the instruction is not straightforward and clear and fails unambiguity. 'The largest prime number' is perfectly clear but cannot be carried out, so it fails effectiveness. Option a is the same pair swapped, the answer of someone who knows both words but attaches them to the wrong test (clear versus doable). Option c conflates 'cannot be completed' with finiteness, which is about a limited and countable number of instructions and the algorithm ending. Option d attaches characteristics with no bearing on either step."
+        },
+        {
+          "type": "mcq",
+          "q": "A team writes down: 'What data do we have? Where is the data? What formulas are related to the problem?' This belongs to:",
+          "options": [
+            "Step 1, checking the description for incompleteness",
+            "Step 2, deciding the starting point",
+            "Step 2, deciding the ending point",
+            "Step 3, choosing the main parts of the solution"
+          ],
+          "answerIndex": 1,
+          "concept": "problem analysis, starting point",
+          "why": "Step 2 splits into questions that fix the starting point (what data we have, where it is, what formulas relate, what rules manipulate the data, how the values relate) and questions that fix the ending point (what results are expected, what parameters changed, what changes were made, what items are now non-existent). All three quoted questions are starting-point questions. Option c names the right step but the wrong half, which is exactly the split the course draws. Option a confuses analysis with the description step before it, and option d with the high-level step after it."
+        },
+        {
+          "type": "mcq",
+          "q": "Working from the high-level meeting algorithm, a team expands 'find common empty spaces in calendars' into four sub-steps, and also adds a new final step, 'book a projector'. Which is correct?",
+          "options": [
+            "Both are refinement, since both add detail that the high-level version omitted",
+            "Neither is refinement; refinement only fixes variable names once a language is chosen",
+            "Only the projector step is refinement, since it supplies a detail left out earlier",
+            "The calendar expansion is refinement; the projector step alters the plan itself"
+          ],
+          "answerIndex": 3,
+          "concept": "stepwise refinement vs revising the plan",
+          "why": "Step 4 is stepwise refinement: providing more detail about each high-level step, based on who will implement it, their knowledge and the computer specifications. The course's own example refines the calendar step into ask/examine/find/iterate, one step becoming four sub-steps of that step. Booking a projector is a new activity the plan did not contain, so it revises the high-level algorithm. Option a treats 'more detail' as the whole test, ignoring that refinement is refinement of a step. Option b confuses refinement with implementation, which happens after a language is chosen. Option c has the distinction backwards."
+        },
+        {
+          "type": "mcq",
+          "q": "The course requires that an algorithm be represented with sequence, selection and repetition. The stated reason is:",
+          "options": [
+            "So that it is easily translatable into various programming languages",
+            "So that it consists of inputs, a process and outputs",
+            "So that its time and space complexity can be computed",
+            "So that it can be drawn as a flowchart rather than as pseudocode"
+          ],
+          "answerIndex": 0,
+          "concept": "why representations need sequence, selection, repetition",
+          "why": "The course states it directly: it is important to present algorithms in ways that make them easily translatable into various programming languages, and to achieve this the representation should have sequence, selection and repetition. Option b quotes a true statement about an algorithm's makeup that is a different sentence and not a property of the representation. Option c attaches the requirement to complexity analysis, which does not depend on how the algorithm is written down. Option d mistakes a requirement common to both representations for a reason to prefer one of them."
+        },
+        {
+          "type": "mcq",
+          "q": "Team A counts on paper how many times an inner statement runs for n items, before any code exists. Team B compiles the Java version and records its memory use and running time. Which is correct?",
+          "options": [
+            "A is priori and B is posterior, since posterior follows implementation and covers space and time",
+            "A is posterior and B is priori, since measurement precedes design in the course's ordering",
+            "Both are posterior, because both are concerned with the efficiency of the algorithm",
+            "Both are priori, since neither of them directly affects the implementation of the algorithm"
+          ],
+          "answerIndex": 0,
+          "concept": "priori vs posterior analysis",
+          "why": "Priori analysis is carried out before implementing an algorithm in a particular programming language and does not directly affect the implementation; posterior analysis is carried out after implementation and deals with space and running time requirements. Option b simply inverts the two. Option c comes from equating efficiency with posterior analysis, but priori analysis is efficiency reasoning done in advance. Option d misreads 'does not directly affect the implementation' as a test both activities pass; the operative words in the definitions are before versus after implementation."
+        },
+        {
+          "type": "mcq",
+          "q": "Three loops: L1 adds 3 to i each pass until i > n; L2 halves i each pass until i < 1; L3 is a pair of nested loops whose inner statement runs n times for each of n outer passes. Their time complexities are:",
+          "options": [
+            "L1 O(n), L2 O(log n), L3 O(n^2)",
+            "L1 O(3n), L2 O(log n), L3 O(n^2)",
+            "L1 O(log n), L2 O(n), L3 O(n^2)",
+            "L1 O(n), L2 O(log log n), L3 O(2^n)"
+          ],
+          "answerIndex": 0,
+          "concept": "loop rules for time complexity",
+          "why": "The course's rules: a loop is O(n) if the loop variable is incremented or decremented by a constant amount (L1 adds 3); O(log n) if the loop variable is divided or multiplied by a constant amount (L2 halves); and for nested loops the complexity is the number of times the innermost statement is executed, here n times n, so O(n^2). Option b keeps the constant, but big O describes the growth rate, which the multiplier 3 does not change. Option c swaps the increment rule with the division rule, the error of remembering 'the variable changes by a constant' without noticing which operation. Option d misapplies two rules: O(log log n) is for a loop variable reduced or increased exponentially, and O(2^n) is for recursion solving two subproblems of size n-1, not for two nested loops."
+        },
+        {
+          "type": "short",
+          "q": "A student argues that a set of instructions satisfies finiteness 'as long as you can count the instructions, which you always can'. Explain what finiteness actually requires, why counting the written lines is not enough, and how finiteness differs from effectiveness. Give one procedure that has few clear instructions yet fails finiteness, and one that is finite and unambiguous yet fails effectiveness.",
+          "concept": "finiteness in execution vs effectiveness",
+          "why": "Finiteness requires a limited and countable number of instructions AND that the algorithm comes to an end: the instructions are finite in number and the execution is finite in length. Counting written lines settles only the first half. A four-line procedure - set i to 1; while i is less than 10, print i; end while; stop - has four countable instructions and never terminates, because nothing changes i: the text is finite, the execution is not, and it is the execution the characteristic is about. Effectiveness is a different demand: each step must actually be able to be carried out, and the steps together must do the job. Few clear instructions, fails finiteness: the loop just given, or 'keep adding 1 to n and print the result'. Finite and unambiguous, fails effectiveness: 'Step 1: set p to the largest prime number; Step 2: print p' - two instructions, one reading, and Step 1 cannot be performed by anyone, so nothing is ever printed. The practical mark of the difference is where you look: finiteness is judged by watching the algorithm run to its end, effectiveness by asking of each step whether it is a thing a person or machine can do."
+        },
+        {
+          "type": "short",
+          "q": "One algorithm is written three times: as a flowchart, as pseudocode, and as numbered English steps. State what differs between the three versions and what cannot differ. Then explain why the course insists on pseudocode or flowchart rather than leaving the algorithm in the client's own prose, referring to the three issues it names at the problem-description step.",
+          "concept": "representation vs algorithm; why a controlled notation",
+          "why": "What differs is only the notation: the flowchart carries the logic in symbols (oval start/stop, parallelogram input/output, rectangle process, diamond decision, arrows for flow), pseudocode in structured text with IF/WHILE/INPUT/OUTPUT keywords, numbered steps in prose. What cannot differ is the algorithm itself: the order of the steps, the inputs, process and outputs, the decisions taken and repetitions performed, and hence the result on any given input and the complexity. Choosing a representation never makes an algorithm faster or more correct, which is why the course can say algorithms can be represented as EITHER pseudocodes OR flowcharts. The reason for insisting on one of those two rather than the client's prose is the three faults named at the description step. Ordinary prose invites unstated assumptions ('print the report in the usual format' - the format is in the client's head); it invites ambiguity, because a sentence that reads as one instruction to the client reads as two or none to the programmer; and it invites incompleteness, because prose has no slot that visibly stands empty. Pseudocode and flowcharts force the sequence to be explicit, force a condition on every selection, and force a termination condition on every repetition, so an omission shows up as a missing branch or a loop with no exit instead of hiding inside a fluent sentence."
+        },
+        {
+          "type": "short",
+          "q": "The course says that 'writing the same step on different lines is not sustainable', and therefore introduces repetition. Explain what repetition buys beyond shorter text - that is, what an algorithm written with sequence alone can and cannot do - and state what selection adds that neither sequence nor repetition supplies.",
+          "concept": "what repetition and selection add to sequence",
+          "why": "The course's argument is that when the same steps must be executed repeatedly, writing the same step on different lines is not sustainable, so a construct - while condition is true do perform activity - is used instead. But the gain is not brevity. Writing a step out five times fixes the number of repetitions at the moment the algorithm is WRITTEN; a WHILE fixes it at the moment the algorithm RUNS, from the condition and hence from the data. So an algorithm with sequence alone can only do a fixed amount of work: 'read a number, read a number, read a number, add them, print' is correct for exactly three numbers and simply wrong for four, whereas the loop version handles any quantity - which is what makes an algorithm general enough to satisfy the review question 'can it be applied to more general problems?'. Sequence also gives no way for the work done to depend on the value of the data, since every step happens on every run. Selection supplies exactly that: some steps are selectively executed if some conditions are satisfied, in the one-branch form or the two-branch form with an else, and the alternative steps may be one or more. Without selection there is no way to treat invalid input differently from valid input, and no way to end a loop meaningfully either, since a loop's continuation is itself a condition being tested. Sequence fixes the order, repetition makes the amount of work depend on the data, and selection makes the choice of work depend on the data."
+        },
+        {
+          "type": "short",
+          "q": "A payroll algorithm produces the right figures on every test the team ran, but its behaviour is undefined when the employee list is empty, and it is written as one unbroken block of 200 steps with no separable parts. Using the course's design considerations, name which considerations it satisfies and which it fails, and explain why passing every test does not establish the ones it fails.",
+          "concept": "design considerations vs what testing can show",
+          "why": "The design considerations are that algorithms should be modular (breakable into smaller steps), correct, maintainable and easily refactored, logical and practical, extensible (another designer can update and upgrade it), robust (the solution to the problem is clearly defined) and simple (very easy to understand); the summary sheet's list adds functionality. This algorithm satisfies correctness on the inputs tried, and its steps are presumably logical and practical since they produce right figures. It fails robustness: the empty employee list has no defined behaviour, so the solution is not clearly defined over the whole range of inputs the problem admits. It fails modularity, because a single unbroken block of 200 steps cannot be broken into smaller steps, and that failure drags maintainability, extensibility and simplicity down with it, since a block that cannot be separated cannot be refactored, upgraded by another designer, or easily understood. Passing every test cannot establish these because a test exercises one execution on one input. Robustness is a claim about the inputs that were NOT tried, and the empty list is exactly such an input, so a suite that never supplies it reports nothing about it. Modularity, maintainability, extensibility and simplicity are not claims about executions at all: they are properties of the algorithm's structure, which is unchanged by how often it runs correctly. That is why review asks whether the algorithm generalises and whether its complexity can be reduced, rather than merely whether it worked."
+        }
+      ]
+    },
+    {
+      "id": "thu-mth102",
+      "day": "Thu",
+      "course": "MTH_102",
+      "topic": "Problems: getting the graph from a formula, piecewise functions and continuity parameters, sign analysis either side of a vertical asymptote, and classifying every discontinuity",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "For f(x) = (x^2 - 9)/(x + 3), which is correct?",
+          "options": [
+            "lim as x -> -3 of f(x) = -6 and f(-3) is undefined",
+            "lim as x -> -3 of f(x) = -6 and f(-3) = -6",
+            "neither the limit nor f(-3) exists, since 0/0 arises",
+            "lim as x -> -3 of f(x) = infinity and x = -3 is a vertical asymptote"
+          ],
+          "answerIndex": 0,
+          "concept": "cancelling gives the limit but never repairs the domain",
+          "why": "(x-3)(x+3)/(x+3) = x - 3 for every x not equal to -3, so the graph is the line y = x - 3 with a hole at (-3, -6) and the limit is -6. Substituting into the original expression still gives 0/0, so f(-3) is undefined. (b) assumes cancelling changes the function at the missing point. (c) reads 0/0 as proof that nothing exists, forgetting that 0/0 is exactly the indeterminate case a limit settles. (d) applies 'denominator zero implies asymptote' without checking whether the factor cancels."
+        },
+        {
+          "type": "mcq",
+          "q": "Let f(x) = x^2 for x < 2, f(2) = 5, and f(x) = 6 - x for x > 2. At x = 2:",
+          "options": [
+            "the limit is 4, f(2) = 5, so there is a removable discontinuity",
+            "the limit is 5, and f is continuous since f(2) is defined",
+            "the limit does not exist, since three different rules are used",
+            "the limit is 4, and f is continuous since both sides agree"
+          ],
+          "answerIndex": 0,
+          "concept": "a declared value cannot override the limit",
+          "why": "Left: x^2 -> 4. Right: 6 - x -> 4. The one-sided limits agree, so the limit is 4, but f(2) = 5, so condition (iii) fails and the discontinuity is removable (reset f(2) = 4). (d) treats agreement of the one-sided limits as sufficient for continuity, dropping the third condition. (b) reads the declared value as the limit. (c) assumes a change of formula automatically breaks the limit, whereas here the two formulas meet at the same height."
+        },
+        {
+          "type": "mcq",
+          "q": "Let f(x) = (x^2 - 4)/(x - 2) for x not equal to 2 and f(2) = k. f is continuous at 2 when k equals:",
+          "options": [
+            "4",
+            "0",
+            "2",
+            "no value of k works"
+          ],
+          "answerIndex": 0,
+          "concept": "repairing a hole forces the value to be the limit",
+          "why": "(x-2)(x+2)/(x-2) = x + 2 for x not equal to 2, so the limit at 2 is 4, and the three conditions all hold exactly when k = 4. (b) sets k to the value of the numerator at x = 2, which is 0 and not the limit. (c) reports the x-value 2 rather than the height. (d) assumes an indeterminate 0/0 point can never be made continuous, but that is precisely the removable case."
+        },
+        {
+          "type": "mcq",
+          "q": "For f(x) = 1/(x - 4), the behaviour near x = 4 is:",
+          "options": [
+            "f -> -infinity as x -> 4 from the left and f -> +infinity as x -> 4 from the right",
+            "f -> +infinity as x -> 4 from the left and f -> -infinity as x -> 4 from the right",
+            "f -> +infinity on both sides, so the two-sided limit is +infinity",
+            "f -> 0 on both sides, as the denominator shrinks towards zero"
+          ],
+          "answerIndex": 0,
+          "concept": "sign analysis on each side of a simple pole",
+          "why": "Just below 4 the denominator x - 4 is a small negative number, so the quotient is large and negative; just above 4 it is small and positive, so the quotient is large and positive. (b) has the signs the wrong way round. (c) is the behaviour of 1/(x-4)^2, where the square kills the sign change. (d) inverts the reciprocal: a shrinking denominator makes the quotient large, not small."
+        },
+        {
+          "type": "mcq",
+          "q": "A graph rises from y = 0 on the far left, shoots up the vertical line x = -1 off the top of the page, comes up from the bottom of the page just right of x = -1, rises through an open circle at (1, 3) with a shaded dot at (1, 0), then flattens onto y = 4. Its discontinuities are:",
+          "options": [
+            "infinite at x = -1 and removable at x = 1",
+            "infinite at x = -1 only; x = 1 is continuous as f(1) = 0",
+            "removable at x = -1 and jump at x = 1",
+            "jump at x = -1 and removable at x = 1"
+          ],
+          "answerIndex": 0,
+          "concept": "classifying every discontinuity on one graph",
+          "why": "At x = -1 the curve runs to +infinity from the left and up from -infinity on the right, so the limit fails infinitely. At x = 1 both sides head for height 3 while f(1) = 0, so the limit exists and only condition (iii) fails. (b) treats 'f(1) is defined' as proving continuity. (d) calls an infinite break a jump, but a jump needs both one-sided limits to be finite. (c) mislabels an asymptote as a hole and a misplaced point as a jump."
+        },
+        {
+          "type": "mcq",
+          "q": "The graph of f(x) = (3x^2 + 1)/(x^2 - 4) has vertical asymptotes at x = 2 and x = -2. Then lim as x -> +infinity of f(x) is:",
+          "options": [
+            "3, the ratio of the leading coefficients",
+            "0, since the denominator vanishes at x = 2",
+            "+infinity, since the numerator is the larger one",
+            "undefined, because of the two vertical asymptotes"
+          ],
+          "answerIndex": 0,
+          "concept": "limits at infinity are independent of vertical asymptotes",
+          "why": "Dividing through by x^2 gives (3 + 1/x^2)/(1 - 4/x^2) -> 3/1 = 3, so the graph settles onto y = 3 far to the right. (b) misapplies the deg N < deg D rule and confuses a vertical asymptote with far-out behaviour. (c) compares only the constants; the degrees are equal, so neither part runs away. (d) assumes vertical asymptotes at finite x can spoil the behaviour at infinity, but the two questions are entirely separate."
+        },
+        {
+          "type": "mcq",
+          "q": "For f(x) = |x|/x, the point x = 0 is:",
+          "options": [
+            "a jump discontinuity, the two sides giving -1 and 1",
+            "a removable discontinuity, since f(0) is undefined",
+            "an infinite discontinuity, since the denominator is 0",
+            "not a discontinuity: |x| -> 0 and x -> 0, so f -> 0"
+          ],
+          "answerIndex": 0,
+          "concept": "the sign of x, not its size, breaks this function",
+          "why": "For x > 0, |x|/x = 1; for x < 0, |x|/x = -1. Both one-sided limits exist and are finite but differ, so the limit does not exist: a jump of height 2. (b) assumes any undefined point is a hole, but a hole needs the two sides to agree. (c) applies 'denominator zero implies asymptote' without checking that the values stay bounded at plus or minus 1. (d) cancels the 0/0 to 0, ignoring that the quotient is plus or minus 1 everywhere except at 0."
+        },
+        {
+          "type": "mcq",
+          "q": "The graph of f(x) = (x - 2)/(x^2 - 4) has:",
+          "options": [
+            "a hole at x = 2 and a vertical asymptote at x = -2",
+            "vertical asymptotes at both x = 2 and at x = -2",
+            "holes at both x = 2 and x = -2, since (x - 2) cancels",
+            "a hole at x = -2 and a vertical asymptote at x = 2"
+          ],
+          "answerIndex": 0,
+          "concept": "only the cancelling factor gives a hole",
+          "why": "(x - 2)/((x - 2)(x + 2)) = 1/(x + 2) for x not equal to 2, so at x = 2 the limit is 1/4 and there is a hole at (2, 1/4); at x = -2 nothing cancels, and 1/(x+2) runs to -infinity from the left and +infinity from the right. (b) treats both denominator zeros as asymptotes. (c) over-generalises the cancellation to a factor it never touched. (d) swaps the two roles."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Let f(x) = 2x + a for x < 1, f(1) = 5, and f(x) = x^2 + b for x > 1. Find the values of a and b that make f continuous at x = 1, showing which condition each equation comes from.",
+          "concept": "continuity at a junction gives one equation per side",
+          "why": "Condition (i) already holds: f(1) = 5 is declared. Condition (ii) requires the one-sided limits to agree: from the left 2(1) + a = 2 + a, from the right 1^2 + b = 1 + b. Condition (iii) requires that common value to equal f(1) = 5. So 2 + a = 5 gives a = 3, and 1 + b = 5 gives b = 4; then both one-sided limits are 5, the limit exists and equals 5 = f(1). Graphically the left line ends at (1, 5), the right parabola starts at (1, 5) and the shaded dot sits at (1, 5): one unbroken curve. Matching the two sides to each other alone (2 + a = 1 + b) would only remove the jump and could still leave a hole or a misplaced dot unless the common value is 5."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Compare the graphs of 1/(x - 4) and 1/(x - 4)^2 near x = 4. Explain why only one of them may be described by writing the two-sided limit as +infinity, and why neither two-sided limit exists as a number.",
+          "concept": "matching signs on the two sides decide the legitimate description",
+          "why": "For 1/(x - 4) the denominator is negative just left of 4 and positive just right, so the graph plunges to -infinity on the left of the asymptote x = 4 and comes down from +infinity on its right; the two sides disagree in sign, so no single symbol describes them and the only correct two-sided statement is DNE, with the two one-sided limits stated separately. For 1/(x - 4)^2 the square makes the denominator positive on both sides, the graph runs off the top of the page on both sides, and we may write lim as x -> 4 of f(x) = +infinity. In neither case does the limit exist as a number: +infinity is not a real value but a description of unbounded growth, so both are infinite discontinuities with vertical asymptote x = 4."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Explain why f(x) = sin(1/x) has no limit as x -> 0, and why the discontinuity there is neither removable nor a jump.",
+          "concept": "essential (oscillating) discontinuity",
+          "why": "As x -> 0 the input 1/x runs off to plus and minus infinity, so sin(1/x) completes infinitely many full oscillations in any interval around 0, taking every value in [-1, 1] infinitely often however close to 0 you look. There is therefore no single height the values approach from either side: neither one-sided limit exists, so the two-sided limit does not exist. It is not removable, since that needs both sides to agree on one finite value that could be plugged in, and redefining f(0) changes one point while leaving the wobble untouched. It is not a jump, since a jump needs both one-sided limits to exist finitely and merely differ. It is not infinite either: the values stay trapped between -1 and 1. This is the fourth type, an essential discontinuity."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) All you are told about a function f is that lim as x -> a from the left of f(x) = lim as x -> a from the right of f(x) = 6. State what you can and cannot conclude about f(a) and about continuity at a, and sketch in words two graphs consistent with this that differ in continuity at a.",
+          "concept": "one-sided limits fix the limit but say nothing about the value",
+          "why": "Can conclude: the two-sided limit exists and equals 6, since the one-sided limits agree and are finite, so condition (ii) holds and there is neither a jump nor an infinite discontinuity at a. Cannot conclude: anything about f(a), since the data never looks at x = a; f(a) may be 6, may be another number, or may be undefined, so continuity at a is undecidable from this information alone. Two consistent pictures: (1) a smooth unbroken curve through the shaded dot (a, 6), where f(a) = 6, all three conditions hold and f is continuous at a; (2) the same curve with an open circle at (a, 6) and a shaded dot at (a, 1), where the approach is identical but f(a) = 1 is not 6, condition (iii) fails and f has a removable discontinuity. A third picture, the open circle with no shaded dot at all, fails condition (i)."
+        }
+      ]
+    },
+    {
+      "id": "fri-phy102",
+      "day": "Fri",
+      "course": "PHY_102",
+      "topic": "Problems: network reduction and terminal voltage, the potential and current dividers, a two-loop Kirchhoff analysis with its Thevenin check, and dipole calculations of moment, torque, energy, potential and field",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A battery of emf 20 V and internal resistance 1.0 ohm drives a 6.0 ohm resistor in series with a parallel pair, 4.0 ohm and 12 ohm. The current drawn from the battery is:",
+          "options": [
+            "2.0 A",
+            "2.2 A",
+            "2.7 A",
+            "0.87 A"
+          ],
+          "answerIndex": 0,
+          "concept": "series/parallel reduction including internal resistance",
+          "why": "4.0 in parallel with 12 gives (4)(12)/16 = 3.0 ohm; total R = 1.0 + 6.0 + 3.0 = 10.0 ohm; I = 20/10.0 = 2.0 A. Option b (2.2 A) omits the internal resistance, taking 20/9.0. Option c (2.7 A) computes 1/R_p = 1/4 + 1/12 = 1/3 and forgets to invert, using R_p = 0.33 ohm. Option d (0.87 A) adds the parallel pair as if in series, taking 20/23. Check every parallel result against the rule that it must be smaller than the smallest member."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same circuit (emf 20 V, internal resistance 1.0 ohm, 6.0 ohm in series with 4.0 ohm parallel 12 ohm), the terminal voltage of the battery while it supplies that current is:",
+          "options": [
+            "18 V",
+            "20 V",
+            "22 V",
+            "12 V"
+          ],
+          "answerIndex": 0,
+          "concept": "terminal voltage of a real source",
+          "why": "V = emf - I r = 20 - (2.0)(1.0) = 18 V, which is also 2.0 x (6.0 + 3.0) delivered to the external network. Option b assumes the terminal voltage always equals the emf, true only at zero current. Option c adds I r instead of subtracting it. Option d is the potential difference across the 6.0 ohm resistor alone (2.0 x 6.0), not across the terminals."
+        },
+        {
+          "type": "mcq",
+          "q": "In that same circuit the 2.0 A divides between the 4.0 ohm and the 12 ohm resistor. The current in the 12 ohm resistor is:",
+          "options": [
+            "0.50 A",
+            "1.5 A",
+            "1.0 A",
+            "2.0 A"
+          ],
+          "answerIndex": 0,
+          "concept": "current divider",
+          "why": "I_12 = 2.0 x 4.0/(4.0 + 12) = 0.50 A; equivalently the pair carries 2.0 x 3.0 = 6.0 V, so 6.0/12 = 0.50 A. Option b (1.5 A) is the divider written upside down, which is in fact the current in the 4.0 ohm. Option c (1.0 A) splits the current equally, ignoring the resistances. Option d (2.0 A) treats the pair as being in series with the rest and carrying the full current. The larger resistor must take the smaller current."
+        },
+        {
+          "type": "mcq",
+          "q": "A 24 V supply is connected across a 4.0 ohm resistor in series with an 8.0 ohm resistor. The potential difference across the 8.0 ohm resistor is:",
+          "options": [
+            "16 V",
+            "8.0 V",
+            "12 V",
+            "24 V"
+          ],
+          "answerIndex": 0,
+          "concept": "potential divider",
+          "why": "V_8 = 24 x 8.0/(4.0 + 8.0) = 16 V, and V_4 = 8.0 V, the two summing to 24 V. Option b (8.0 V) inverts the divider, applying the current-divider rule by mistake. Option c (12 V) splits the supply equally, ignoring the resistances. Option d (24 V) assumes the full supply appears across each resistor separately. Larger resistance takes the larger share of voltage, because the current through both is the same."
+        },
+        {
+          "type": "mcq",
+          "q": "Two batteries are joined in parallel across a common 2.0 ohm resistor. Branch 1 is 12 V with 3.0 ohm; branch 2 is 8.0 V with 2.0 ohm. The current in the 2.0 ohm resistor is:",
+          "options": [
+            "3.0 A",
+            "2.0 A",
+            "1.5 A",
+            "10 A"
+          ],
+          "answerIndex": 0,
+          "concept": "two-loop Kirchhoff analysis",
+          "why": "With I_1 and I_2 into the top node and I_3 down through the 2.0 ohm: I_1 + I_2 = I_3; 12 = 3.0 I_1 + 2.0 I_3; 8.0 = 2.0 I_2 + 2.0 I_3. Eliminating I_3 gives 12 = 5.0 I_1 + 2.0 I_2 and 4.0 = I_1 + 2.0 I_2, so I_2 = 1.0 A, I_1 = 2.0 A and I_3 = 3.0 A; the node sits at 6.0 V and both branches confirm it. Option b (2.0 A) reports I_1 and forgets that branch 2 also feeds the resistor. Option c (1.5 A) is only the contribution of the 12 V source acting alone, superposition stopped halfway. Option d (10 A) adds the emfs as though the batteries were in series and puts 20 V across 2.0 ohm, ignoring both branch resistances."
+        },
+        {
+          "type": "mcq",
+          "q": "Charges of +4.0 nC and -4.0 nC are held 5.0 mm apart. The magnitude of the dipole moment is:",
+          "options": [
+            "2.0 x 10^-11 C.m",
+            "4.0 x 10^-11 C.m",
+            "2.0 x 10^-8 C.m",
+            "zero"
+          ],
+          "answerIndex": 0,
+          "concept": "computing p = q d",
+          "why": "p = (4.0 x 10^-9)(5.0 x 10^-3) = 2.0 x 10^-11 C.m, directed from -q to +q. Option b uses the total charge 2q = 8.0 nC. Option c leaves d in millimetres instead of converting to metres. Option d confuses the net charge, which really is zero, with the dipole moment, which is not: the whole point of a dipole is that a neutral object can still have a moment."
+        },
+        {
+          "type": "mcq",
+          "q": "A dipole of moment 1.0 x 10^-10 C.m is held at 30 degrees to a uniform field of 2.0 x 10^5 N/C. The torque on it is:",
+          "options": [
+            "1.0 x 10^-5 N.m",
+            "1.7 x 10^-5 N.m",
+            "2.0 x 10^-5 N.m",
+            "zero"
+          ],
+          "answerIndex": 0,
+          "concept": "torque tau = p E sin(theta)",
+          "why": "tau = p E sin(theta) = (1.0 x 10^-10)(2.0 x 10^5)(0.500) = 1.0 x 10^-5 N.m. Option b uses cos 30 = 0.866, swapping sin and cos, since cos belongs to U = -p E cos(theta). Option c ignores the angle altogether and quotes the maximum value p E that applies at 90 degrees. Option d confuses the net force on a dipole in a uniform field, which is indeed zero, with the torque, which vanishes only at theta = 0 and 180 degrees."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same dipole (p = 1.0 x 10^-10 C.m, d = 2.0 cm), the electric field at a point 0.50 m from its centre on the axis is about:",
+          "options": [
+            "14 N/C",
+            "7.2 N/C",
+            "3.6 N/C",
+            "29 N/C"
+          ],
+          "answerIndex": 0,
+          "concept": "axial field of a dipole, E = 2 k p / r^3",
+          "why": "k p = (8.99 x 10^9)(1.0 x 10^-10) = 0.899 and r^3 = 0.125 m^3, so E = 2(0.899)/0.125 = 14 N/C, parallel to p, with d = 2.0 cm much less than 0.50 m justifying the far-field form. Option b (7.2 N/C) uses k p / r^3, the equatorial field, which is half the axial value. Option c (3.6 N/C) uses k p / r^2, which is the potential (3.6 V) and not a field, since a dipole field falls as 1/r^3. Option d (29 N/C) doubles again, applying a factor 2 for two charges on top of the 2 already contained in 2 k p / r^3."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) For the circuit of questions 1 to 3 (emf 20 V, internal resistance 1.0 ohm, 6.0 ohm in series with 4.0 ohm parallel 12 ohm), find the power delivered by the emf, the power wasted inside the battery, and the power dissipated in each of the three external resistors. Show that the external powers account for exactly the power leaving the terminals.",
+          "concept": "power accounting in a real source and its network",
+          "why": "From the earlier parts, I = 2.0 A, the terminal voltage is 18 V, and the parallel pair carries 6.0 V with 1.5 A in the 4.0 ohm and 0.50 A in the 12 ohm. Power delivered by the emf: P = emf x I = 20 x 2.0 = 40 W. Wasted internally: P_r = I^2 r = (2.0)^2 (1.0) = 4.0 W. Delivered to the external network: P = V I = 18 x 2.0 = 36 W, and 40 - 4 = 36. Externally the 6.0 ohm dissipates I^2 R = (2.0)^2 (6.0) = 24 W; the 4.0 ohm dissipates (1.5)^2 (4.0) = 9.0 W, or 6.0^2/4.0; the 12 ohm dissipates (0.50)^2 (12) = 3.0 W, or 6.0^2/12. Total external = 24 + 9.0 + 3.0 = 36 W, exactly the power leaving the terminals. Note the pattern: in series the larger resistor dissipates more, but in parallel the smaller resistor dissipates more, because there the shared quantity is voltage and P = V^2/R."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) For the circuit of question 5 (12 V with 3.0 ohm and 8.0 V with 2.0 ohm, both across a common 2.0 ohm resistor), find the Thevenin equivalent (V_Th and R_Th) that the 2.0 ohm resistor sees, and use it to recover the current through that resistor. State the Norton current as well.",
+          "concept": "Thevenin and Norton equivalent as a check on Kirchhoff",
+          "why": "Remove the 2.0 ohm resistor, leaving the two batteries in a single loop opposing each other: the circulating current is (12 - 8.0)/(3.0 + 2.0) = 0.80 A, driven by the 12 V source. V_Th is the open-circuit voltage at those terminals = 12 - (0.80)(3.0) = 9.6 V, and the check from the other branch gives 8.0 + (0.80)(2.0) = 9.6 V, which must agree since it is one pair of terminals. R_Th is the resistance seen at the terminals with both emfs shorted and the internal resistances left in place = 3.0 in parallel with 2.0 = 6.0/5.0 = 1.2 ohm. Reconnecting the load, I = V_Th/(R_Th + R) = 9.6/(1.2 + 2.0) = 9.6/3.2 = 3.0 A, agreeing exactly with the Kirchhoff answer. The Norton equivalent is I_N = V_Th/R_Th = 9.6/1.2 = 8.0 A in parallel with the same 1.2 ohm, which is the current the terminals would deliver if shorted."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) For the dipole of question 7 (p = 1.0 x 10^-10 C.m in E = 2.0 x 10^5 N/C), find the work an external agent must do to turn it from alignment (0 degrees) to 90 degrees, and from 0 to 180 degrees. Explain why the second is exactly twice the first even though the angle is only doubled.",
+          "concept": "work done rotating a dipole, W = change in U = -p E cos(theta)",
+          "why": "Here p E = (1.0 x 10^-10)(2.0 x 10^5) = 2.0 x 10^-5 J. Using U = -p E cos(theta): U(0) = -2.0 x 10^-5 J, U(90) = 0, U(180) = +2.0 x 10^-5 J. The work done by the external agent is the change in U, so W(0 to 90) = 0 - (-2.0 x 10^-5) = 2.0 x 10^-5 J and W(0 to 180) = 2.0 x 10^-5 - (-2.0 x 10^-5) = 4.0 x 10^-5 J = 2 p E. The second is exactly twice the first because the work depends on cos(theta) and not on theta: cos runs from 1 to 0 over the first 90 degrees and from 0 to -1 over the second 90 degrees, so each quadrant costs the same p E, giving 2 p E in total. The torque is very unequal across the two quadrants, peaking at 90 degrees and dying to zero at 180, but the work integrates the torque over angle and the two halves come out equal. theta = 0 is the stable minimum and theta = 180 the unstable maximum, which is why the full flip is the most expensive rotation available."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) For the dipole of question 8 (p = 1.0 x 10^-10 C.m), find the potential at 0.50 m from the centre on the axis, at 60 degrees to the axis, and on the perpendicular bisector. Explain why the dipole potential falls off as 1/r^2 while a single point charge's falls off as 1/r.",
+          "concept": "dipole potential V = k p cos(theta) / r^2 and why it falls faster",
+          "why": "With k p = 0.899 and r^2 = 0.250 m^2: on the axis (theta = 0), V = k p / r^2 = 0.899/0.250 = 3.6 V; at theta = 60 degrees, V = 3.6 x cos 60 = 1.8 V; on the perpendicular bisector (theta = 90 degrees), cos 90 = 0, so V = 0. The 1/r^2 dependence arises because the two charges are equal and opposite: at distance r the individual potentials +k q / r_plus and -k q / r_minus are each of order k q / r, but they very nearly cancel, and what survives is proportional to the difference in distance, r_minus - r_plus, which is about d cos(theta). Since V = k q (r_minus - r_plus)/(r_plus r_minus), this is about k q d cos(theta)/r^2 = k p cos(theta)/r^2, so one extra power of r appears in the denominator. A single point charge has nothing to cancel against, so its potential keeps the full k q / r. The same argument applied to the field gives the dipole 1/r^3 against a point charge's 1/r^2, and it is why dipole effects fade so much faster with distance."
+        }
+      ]
+    },
+    {
+      "id": "sat-cos102",
+      "day": "Sat",
+      "course": "COS_102",
+      "topic": "Applied pseudocode: writing algorithms, dry-run trace tables, and debugging off-by-one counters, loop conditions, sentinel handling and statement order",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "In the course's sum-of-five flowchart the body (Enter n; sum = sum + n; count = count + 1) runs before the decision 'Is count < 5', which loops back on YES. A student changes the decision to 'Is count <= 5' and alters nothing else. The algorithm now:",
+          "options": [
+            "Reads six numbers, since the loop back is taken once more before the test fails",
+            "Reads five numbers, since the loop already stopped at that boundary before",
+            "Reads four numbers, since the test is now satisfied one pass earlier",
+            "Runs for ever, since the condition can no longer become false"
+          ],
+          "answerIndex": 0,
+          "concept": "post-test loop, moving the exit boundary",
+          "why": "The body runs, then the test decides whether to go back. With count < 5, count is 1, 2, 3, 4 at the first four tests (loop back) and 5 at the fifth (exit): five numbers. With count <= 5 the test still passes when count is 5, so the body runs a sixth time and only count = 6 exits. Option b is the 'the boundary was already 5, so nothing moves' error, which assumes the loop stopped because count reached 5 rather than because the condition became false. Option c inverts the direction: relaxing a test can only add passes. Option d confuses <= with a permanently true condition, but count keeps rising, so the condition does fail, one pass later."
+        },
+        {
+          "type": "mcq",
+          "q": "Consider count <- 1, then WHILE count < 5 DO ... count <- count + 1 ENDWHILE. The body executes:",
+          "options": [
+            "4 times, since count is 1, 2, 3, 4 at the test and the body runs on each",
+            "5 times, since the number of passes is set by the 5 in the test",
+            "3 times, since count runs 1 to 4 but the last pass exits before the body",
+            "6 times, since count runs 0 to 5 and the changed start adds one"
+          ],
+          "answerIndex": 0,
+          "concept": "off-by-one in the initial value",
+          "why": "Count is 1, 2, 3, 4 when the test is evaluated and passes, so the body runs four times; on the fifth test count is 5 and fails count < 5. Starting at 1 rather than 0 costs one pass. Option b is the specific misunderstanding that the constant in the test names the number of iterations, when the number of iterations is set by the start value, the test and the step together. Option c subtracts a pass that never existed, from imagining the pass on which the test finally fails had already run its body. Option d miscounts in the other direction by supposing the loop still begins at 0 as well as at 1."
+        },
+        {
+          "type": "mcq",
+          "q": "This loop never ends: total <- 0; i <- 1; WHILE i <= 10 DO INPUT n ; total <- total + n ENDWHILE; OUTPUT total. The correct single repair is:",
+          "options": [
+            "Insert i <- i + 1 inside the body, after total <- total + n",
+            "Insert i <- i + 1 after ENDWHILE, so i advances once per run",
+            "Change the condition to WHILE i > 10, so the loop exits on entry",
+            "Insert i <- 1 inside the body, so i is refreshed on every pass"
+          ],
+          "answerIndex": 0,
+          "concept": "loop variable never advanced",
+          "why": "The condition i <= 10 is tested against an i that nothing modifies, so it is true for ever; advancing i inside the body is what makes the ten passes finish. Option b puts the increment after ENDWHILE, where it runs only once the loop has exited and therefore never runs at all - the classic indentation slip, which leaves the loop as it was. Option c makes the condition false at entry, so the body never executes and total stays 0: it stops the hang without doing the work, which is a different program, not a repair. Option d resets i on every pass, the mirror of the original bug: i changes, but never towards the exit."
+        },
+        {
+          "type": "mcq",
+          "q": "A max-finder reads INPUT num before the loop and again as the LAST line of the loop body. A student moves the inner INPUT num to the FIRST line of the body, keeping the one before the loop. The effect is:",
+          "options": [
+            "The first number is never compared or counted, and the sentinel is compared and counted",
+            "The last number is never compared or counted, and the sentinel is skipped as before",
+            "Nothing changes, since the same number of inputs is read either way",
+            "The loop never ends, since the sentinel is read but the condition is not retested"
+          ],
+          "answerIndex": 0,
+          "concept": "position of the sentinel read",
+          "why": "With the read before the loop and again at the bottom of the body, each number is read, then tested by the loop condition, then compared and counted if it is not the sentinel, and only then is the next one read. Moving the inner read to the top breaks this at both ends: the number read before the loop is overwritten by the first line of the body before it is ever compared or counted, and the sentinel, once read inside the body, is compared and counted before the condition sees it. Option b names the right kind of fault at the wrong end, the answer of someone who knows one number goes missing but does not trace which. Option c is the 'same number of INPUT statements' error: the number of reads is unchanged, their position relative to the test is what changed. Option d invents a hang, but the condition is still retested at the top of each pass."
+        },
+        {
+          "type": "mcq",
+          "q": "A max-finder sets max <- 0, then updates with IF num > max THEN max <- num ENDIF only. The user enters -8, -3, -25, then the sentinel. The algorithm outputs:",
+          "options": [
+            "0, a value the user never entered",
+            "-3, since the first number always replaces max",
+            "-25, since the last number entered is retained",
+            "Nothing, since no number ever passed the test"
+          ],
+          "answerIndex": 0,
+          "concept": "accumulator initialised to an unreachable value",
+          "why": "Every entered number is negative, so num > max is false on all three, max keeps the 0 it was initialised with, and the algorithm reports 0 as the maximum of a set containing no 0. The repair is to take the first number as the maximum whatever its sign, e.g. IF count = 0 OR num > max THEN. Option b states what a CORRECT algorithm would do and is the answer of anyone who assumes the guard is present; the code shown has no guard. Option c describes a 'keep the last value' bug, which would need max <- num outside any test. Option d is right that no number passed the test but wrong about the consequence: nothing suppresses the output, so the stale initial value is printed."
+        },
+        {
+          "type": "mcq",
+          "q": "Trace: INPUT x (the user types 3); IF x > 0 THEN x <- x - 5 ENDIF; IF x <= 0 THEN OUTPUT \"non-positive\" ENDIF. The algorithm:",
+          "options": [
+            "Prints nothing, because x was positive when the algorithm started",
+            "Prints the message, because the first block changed x before the second test",
+            "Prints the message, because two separate IF blocks are always both entered",
+            "Prints nothing, because only one branch of an IF pair can ever run"
+          ],
+          "answerIndex": 1,
+          "concept": "two separate IFs are not IF/ELSE",
+          "why": "x = 3, so x > 0 is true and x becomes -2; the second test is evaluated AFTER that assignment, and -2 <= 0, so the message prints. The two conditions look mutually exclusive but are tested at different times, and the first block changed the variable between them. Option a is the exact trap: it evaluates both conditions against the ORIGINAL value, which is what an IF/ELSE would do and separate blocks do not. Option c overcorrects into a false rule, since separate IFs are entered only when their own conditions hold. Option d states a true property of IF/ELSE and applies it to code that has no ELSE."
+        },
+        {
+          "type": "mcq",
+          "q": "For total <- 0; i <- 1; WHILE i <= 3 DO INPUT n ; total <- total + n ; i <- i + 1 ENDWHILE; OUTPUT total, the inputs are 4, 9 and 2. A student's dry run gives 13. The mistake that produces exactly 13 is:",
+          "options": [
+            "Exiting when i reached 3, reading i <= 3 as i < 3, so 2 was never added",
+            "Starting i at 0, which shifts the whole table down by one pass",
+            "Adding n to total before reading it, so the first addition used no value",
+            "Incrementing i twice per pass, so the loop ended halfway through"
+          ],
+          "answerIndex": 0,
+          "concept": "misreading the inclusive exit test in a trace",
+          "why": "The correct trace is: i = 1, n = 4, total = 4; i = 2, n = 9, total = 13; i = 3, which still satisfies i <= 3, n = 2, total = 15; then i = 4 fails and 15 is printed. A student who exits as soon as i = 3 stops after two passes with total = 13, exactly the number reported, and the last input is silently dropped. Option b would give the same three passes with the rows relabelled, so the total would still be 15. Option c reaches 13 by a different route (4 + 9 after an unset first addition), but that fault lies in the code's statement order, and the code shown reads before it adds. Option d would make i jump 1, 3, 5, which the student's own table would show."
+        },
+        {
+          "type": "mcq",
+          "q": "A student writes sum <- 0; count <- 0; then REPEAT sum <- sum + n ; INPUT n ; count <- count + 1 UNTIL count >= 3; OUTPUT sum, with n unset (treat as 0) at the start. The user enters 7, 3, 6. The output is:",
+          "options": [
+            "10, because the first addition used an unset n and 6 is never added",
+            "16, because the order of the two lines makes no difference to the total",
+            "7, because only the first number entered is ever added to sum",
+            "0, because sum is added to before any number has been entered"
+          ],
+          "answerIndex": 0,
+          "concept": "statement order: adding before reading",
+          "why": "Pass 1: sum <- sum + n with n unset adds 0, then 7 is read, count = 1. Pass 2: sum becomes 0 + 7 = 7, then 3 is read, count = 2. Pass 3: sum becomes 7 + 3 = 10, then 6 is read, count = 3, exit. Output 10. Two symptoms from one fault: a garbage value is added at the start and the last number read is never added. Option b is the 'the lines are adjacent, so the order is cosmetic' error and gives the correct total 16. Option c supposes only the first number is used, which would need the addition outside the loop. Option d notices the unset first addition but stops there, forgetting that later passes add real values."
+        },
+        {
+          "type": "short",
+          "q": "Debug this, stating each fault, the input that exposes it, and the repair:\n\nSTART\n    total <- 0\n    count <- 0\n    INPUT n\n    WHILE n <> 0 DO\n        INPUT n\n        total <- total + n\n        count <- count + 1\n    ENDWHILE\n    OUTPUT total / count\nSTOP\n\nDry-run it on 4, 6, 0 in a table, say what it prints, and say what it should have printed.",
+          "concept": "sentinel loop faults and the empty-input guard",
+          "why": "Dry run on 4, 6, 0. Before the loop: n = 4, total = 0, count = 0, test 4 <> 0 true, enter. Pass 1: n is read at the top and becomes 6, overwriting the 4; total = 6, count = 1; test 6 <> 0 true, repeat. Pass 2: n is read and becomes 0 (the sentinel); total = 6 + 0 = 6, count = 2; test 0 <> 0 false, exit. Output 6 / 2 = 3. The average of 4 and 6 is 5. Three faults. (i) The read sits at the TOP of the body, so the number read before the loop is destroyed before it is ever added or counted - exposed by any input, and visible as the 4 that vanishes. (ii) The sentinel is processed: once 0 has been read inside the body it is added and counted before the condition sees it. Adding 0 does not disturb the total, which makes it easy to miss, but the increment inflates count and so deflates the average on every run, and it would corrupt the sum outright if the sentinel were -1. (iii) No guard on the division: if the first thing entered is 0, the body never runs, count is 0 and total / count divides by zero - exposed by the input 0 alone. Repairs: move INPUT n to be the LAST line of the body, so each value is tested for the sentinel before being used, and wrap the output as IF count = 0 THEN OUTPUT \"No numbers were entered\" ELSE OUTPUT total / count ENDIF. With those changes the same input gives (4 + 6) / 2 = 5."
+        },
+        {
+          "type": "short",
+          "q": "Write pseudocode that reads numbers from the user until 0 is entered and outputs how many of them were greater than 100. Then dry-run your own algorithm on the inputs 150, 40, 200, 0 in a table with one row per pass, showing the input, the counter and the loop test. State what your algorithm outputs when the very first input is 0, and why.",
+          "concept": "writing and tracing a sentinel-controlled counting loop",
+          "why": "A correct answer:\n\nSTART\n    above <- 0\n    PROMPT \"Enter a number, or 0 to finish\"\n    INPUT n\n    WHILE n <> 0 DO\n        IF n > 100 THEN\n            above <- above + 1\n        ENDIF\n        PROMPT \"Enter a number, or 0 to finish\"\n        INPUT n\n    ENDWHILE\n    OUTPUT above\nSTOP\n\nTwo features make it right: the sentinel is read before the loop and again at the BOTTOM of the body, so 0 is never tested against 100 or counted; and above is initialised before anything is read, so it has a value even if the loop never runs. Dry run on 150, 40, 200, 0. Entry: n = 150, test true, 150 > 100 yes, above = 1. Pass 2: n = 40, test true, 40 > 100 no, above = 1. Pass 3: n = 200, test true, 200 > 100 yes, above = 2. Exit: n = 0, test false, the IF is never evaluated, above = 2. It prints 2. If the very first input is 0 the loop condition is false immediately, the body never runs, and the algorithm prints 0, which is correct: no numbers were entered, so none of them exceeded 100. This is exactly the case a pre-test loop handles and a post-test loop does not, since REPEAT ... UNTIL n = 0 would run the body once on the sentinel itself, testing 0 against 100 before the exit condition was ever evaluated."
+        },
+        {
+          "type": "short",
+          "q": "Rewrite the course's sum flowchart so that the user first supplies N, the quantity of numbers to be added, and the loop runs N times. Give both a post-test (REPEAT ... UNTIL) and a pre-test (WHILE) version. State the one value of N for which the two versions behave differently, say exactly what each does on that value, and state which version is correct and why.",
+          "concept": "post-test vs pre-test loops at the zero boundary",
+          "why": "Post-test version:\n\nSTART\n    INPUT N\n    sum <- 0 ; count <- 0\n    REPEAT\n        INPUT n\n        sum <- sum + n\n        count <- count + 1\n    UNTIL count >= N\n    OUTPUT sum\nSTOP\n\nPre-test version:\n\nSTART\n    INPUT N\n    sum <- 0 ; count <- 0\n    WHILE count < N DO\n        INPUT n\n        sum <- sum + n\n        count <- count + 1\n    ENDWHILE\n    OUTPUT sum\nSTOP\n\nFor every N of 1 or more the two are indistinguishable: both read exactly N numbers and print their total. They part company at N = 0. The pre-test version evaluates 0 < 0, finds it false, never enters the body, and prints 0, the correct total of no numbers. The post-test version enters the body before any test exists to stop it: it prompts for a number the user was never meant to supply, adds it, sets count to 1, and only then evaluates 1 >= 0, which is true, so it exits having read one number and printed it as the sum of none. Worse, had the exit test been written UNTIL count = N it would have missed 0 on the way past and looped for ever. The pre-test version is correct, and the general rule it illustrates is the one the course's own flowchart hides: a post-test loop runs its body at least once, so it is safe only when the body must always execute at least once. Any loop whose correct number of repetitions may be zero - read N items, process a possibly empty list, consume input up to a sentinel that may come first - must test before the body."
+        },
+        {
+          "type": "short",
+          "q": "Compare i <- 1 ; WHILE i <= n with i <- 0 ; WHILE i < n and with i <- 1 ; WHILE i < n, each incrementing i by 1 at the end of the body. State how many times each body runs. Then explain when the choice between the first two genuinely matters even though the counts agree, and give the single value of n that most cheaply exposes the third as an off-by-one.",
+          "concept": "loop bounds and off-by-one",
+          "why": "i <- 1 ; WHILE i <= n runs the body n times, with i taking 1, 2, ..., n. i <- 0 ; WHILE i < n also runs the body n times, with i taking 0, 1, ..., n-1. i <- 1 ; WHILE i < n runs the body n-1 times, with i taking 1, 2, ..., n-1, one pass short. The rule to carry is that the number of passes is the start value, the test and the step taken together, never the constant in the test on its own. The first two agree on the COUNT but not on the VALUES i holds, and that is where the choice genuinely matters: whenever the body uses i rather than merely counting with it. Summing i gives n(n+1)/2 in the first and n(n-1)/2 in the second; multiplying by i makes the second start with a factor of 0; and using i as a position (the i-th number, the i-th item) hits a position 0 that may not exist, or misses the last one, depending on where positions are taken to begin. Pure counters are interchangeable; indices and accumulators are not. The cheapest test for the third loop is n = 1: i <- 1 ; WHILE i < 1 fails at once and the body never runs, so a task that should have been done once is not done at all - a one-line, one-input test that any larger n disguises, because at n = 10 the loop still runs nine times and looks busy and plausible."
+        }
+      ]
+    }
+  ],
+  "recapCandidates": [
+    {
+      "course": "MTH_102",
+      "topic": "The limit and the function value are two separate readings",
+      "whyMisunderstood": "Every earlier year of maths trains one reflex - to find the value at x = a, put a in - and this week's material exists to break it. Reading limits off a graph makes the split visible: the limit is about the height the curve heads towards as you slide in from each side, and f(a) is a single dot sitting on the vertical line x = a. They usually agree, which is why students never notice they are different questions, and then a hole or a jump appears and the reading collapses. Four errors follow. First, students read the x-value rather than the height: asked for the limit as x -> 2 they answer 2. Second, they read the plotted endpoint instead of the trend - at an open circle at (2, 5) the limit is 5, because the circle marks where the curve is heading even though the point itself is missing. Third, they think a discontinuity means the limit fails; at a removable discontinuity the limit exists perfectly well and it is f(a) that is missing or misplaced, and only a jump or an infinite discontinuity actually kills it. Fourth, they treat 'limit = infinity' as an answer of the same kind as 'limit = 3', when it is a description of how the limit fails to exist. Behind all four is a habit of reading a graph as a picture rather than as two independent measurements - one taken by approaching, one taken by landing.",
+      "whyQuestions": [
+        "Why is the limit as x -> 2 a statement about the height the curve approaches and never about the number 2 itself?",
+        "Why does an open circle at (2, 5) with the curve running into it from both sides give a limit of 5, even though f(2) is not 5 and may not exist?",
+        "Why can a function have a perfectly good limit at a point where it is discontinuous, and which of the three continuity conditions is the one that fails there?",
+        "Why does a jump discontinuity destroy the two-sided limit while a removable one does not - what exactly is different about the two pictures?",
+        "Why is writing 'the limit as x -> 3 is plus infinity' not the same kind of answer as 'the limit is 7', and what is it actually telling you about the graph?"
+      ],
+      "goodAnswerContains": "Separates the two readings explicitly: the limit is found by sliding in along the curve from the left and from the right and reading the y-height each side heads for, deliberately ignoring x = a; f(a) is read from the filled dot on the line x = a, and an open circle means no point there. States the existence test - the limit exists exactly when the two one-sided limits exist and are equal - and the three conditions for continuity at c: f(c) defined, the limit exists, and the two are equal. Classifies the failures by picture: removable (limit exists, f(c) missing or displaced, a hole); jump (one-sided limits both exist but differ); infinite (a one-sided limit runs off to plus or minus infinity, a vertical asymptote); and notes that '= infinity' records how the limit failed rather than supplying a value.",
+      "workedExample": "One graph, read four times. Take f so that: for x < 1 the curve rises smoothly to an open circle at (1, 3); a filled dot sits alone at (1, 5); for x > 1 the curve restarts at an open circle at (1, 3) and continues upward. At x = 4 the curve comes in from the left to a filled dot at (4, 2) and restarts on the right at an open circle at (4, 6). Near x = 7 it runs off to plus infinity on both sides. At x = 1: both one-sided limits are 3, so the limit is 3, but f(1) = 5. Conditions (i) and (ii) hold and (iii) fails, so this is a removable discontinuity - redefining f(1) = 3 repairs it, which is what removable means. At x = 4: the left limit is 2 and the right limit is 6, so the limit does not exist - a jump discontinuity. Note f(4) = 2 IS defined; a defined value does not rescue the limit, and here condition (ii) is the one that fails. At x = 7: both sides run to plus infinity, so we write the limit as plus infinity to describe the vertical asymptote, but it does not exist as a number and f(7) is undefined - an infinite discontinuity failing (i) and (ii). The contrast worth saying out loud: at x = 1 the limit exists and the function value is wrong; at x = 4 the function value exists and the limit is wrong. Two different failures, two different repairs, and no way to tell them apart if you only ever substitute."
+    },
+    {
+      "course": "PHY_102",
+      "topic": "The electric dipole in a uniform field - zero net force, non-zero torque",
+      "whyMisunderstood": "Students carry over one rule from mechanics - no net force means nothing happens - and a dipole in a uniform field breaks it visibly: the forces on +q and -q are equal and opposite so they cancel exactly and the centre of mass does not accelerate, yet the dipole turns. The reason is that the two forces do not act at the same point: they form a couple, and a couple has zero resultant but non-zero torque. A student who has only ever computed the sum of forces concludes the dipole is in equilibrium, which is wrong in the one way the exam always tests. The second trap is the direction of p: physics defines it from -q to +q, chemistry the other way, so mixing conventions reverses the sign of U = -p.E and predicts that alignment is the high-energy state. The third is reading the minus sign in U = -pE cos(theta) as decoration rather than physics - it is what makes theta = 0 (aligned, U = -pE) the stable minimum and theta = 180 (anti-aligned, U = +pE) the unstable maximum. The fourth is forgetting the word uniform: the cancellation depends on both charges feeling the same E, so in a non-uniform field there is a net force as well as a torque, which is why a charged rod attracts neutral paper. The fifth is the sin(theta) factor: torque is maximum at 90 degrees, not at 0, which is the opposite of what students guess.",
+      "whyQuestions": [
+        "Why is the net force on a dipole in a uniform field exactly zero, and why does the dipole nevertheless rotate?",
+        "Why is the torque pE sin(theta) largest when the dipole is perpendicular to the field and zero when it is aligned or anti-aligned?",
+        "Why does U = -p.E carry a minus sign, and why does that make the aligned position a minimum of energy rather than a maximum?",
+        "Why are theta = 0 and theta = 180 both positions of zero torque, and yet only one of them a stable equilibrium - what test tells them apart?",
+        "Why does a charged plastic comb attract small neutral scraps of paper, given that the paper has no net charge and a dipole in a uniform field feels no net force?"
+      ],
+      "goodAnswerContains": "Defines the dipole and its moment: charges +q and -q separated by d, with p = qd a vector of unit C.m pointing from -q to +q; and states that in a uniform field the two forces are +qE and -qE, equal and opposite, so the net force is zero. Explains the couple: the forces act at points separated by d, so they exert a torque pE sin(theta) (vector form p cross E), maximal at 90 degrees, zero at 0 and 180, always in the sense that rotates p towards E. Uses the energy to sort the equilibria: U = -pE cos(theta), so U(0) = -pE is the stable minimum (a nudge is pushed back), U(90) = 0, and U(180) = +pE is the unstable maximum; and notes that in a non-uniform field the cancellation fails and there is a net force towards the stronger field.",
+      "workedExample": "A dipole of charges plus and minus 2.0 nC separated by 3.0 mm sits in a uniform field E = 5.0 x 10^4 N/C at 30 degrees to the field. Dipole moment p = qd = (2.0 x 10^-9)(3.0 x 10^-3) = 6.0 x 10^-12 C.m. Net force: each charge feels qE = 1.0 x 10^-4 N, one along +E and one along -E, so the net force is zero and the dipole does not translate. Torque: pE sin(30) = (6.0 x 10^-12)(5.0 x 10^4)(0.50) = 1.5 x 10^-7 N.m, rotating p towards E; at 90 degrees the same dipole would feel 3.0 x 10^-7 N.m, the maximum, and at 0 or 180 degrees zero. Potential energy: U = -pE cos(30) = -2.6 x 10^-7 J. Work to reverse p (30 degrees to 210 degrees): U(210) = +2.6 x 10^-7 J, so W = 5.2 x 10^-7 J must be done against the field; rotating from 0 to 180 instead would cost the full 2pE = 6.0 x 10^-7 J, the largest possible, from the stable minimum to the unstable maximum. The paper scrap: the comb's field is non-uniform, strongest near the comb, and induces a dipole in the paper with the near end oppositely charged; the near end sits in a stronger field than the far end, so the forces no longer cancel and there is a net pull towards the comb. Uniformity, not neutrality, is what made the net force vanish in the first place."
+    }
+  ]
+}
