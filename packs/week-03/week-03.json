@@ -1,0 +1,664 @@
+{
+  "week": 3,
+  "startsOn": "2026-09-21",
+  "endsOn": "2026-09-27",
+  "generatedOn": "2026-08-28",
+  "days": [
+    {
+      "day": "Mon",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "The week's core limits theory: limit notation and one-sided limits, the existence test, the full list of limit laws with the condition attached to each, the Squeeze Theorem, indeterminate forms versus determinate forms such as k/0, and the conditions that make direct substitution, cancellation, rationalisation and L'Hopital's Rule legitimate.",
+        "checkFile": "checks/Mon-MTH_102.md"
+      },
+      "fast": {
+        "course": "GST_112",
+        "topic": "The Monday fast hour covers the Trans-Atlantic Slave Trade's structure and scale (triangular trade, Asiento, 15 million transported, 7 million died in transit) and the chain of named events - Beecroft 1849, the 1851 Kosoko-Akitoye crisis, the 1861 annexation of Lagos, and the company-to-charter progression from the Central African Company to the 1886 Royal Niger Company - that carried Nigeria from slave trade through 'legitimate' trade to company rule."
+      }
+    },
+    {
+      "day": "Tue",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Core theory: what emf is (work per unit charge, volt, dimensions), how terminal potential difference differs from it through the lost volts Ir, how the V-I graph yields emf and internal resistance, the Lorentz-force mechanism behind motional emf emf = Blv, and why the energy of a charged capacitor is properly located in the field as the density 1/2 epsilon-0 E^2.",
+        "checkFile": "checks/Tue-PHY_102.md"
+      },
+      "fast": {
+        "course": "CSC_106",
+        "topic": "The Tuesday fast hour covers the HTML document skeleton and core elements, hyperlinks and navigation, and web forms with their input types and validation attributes."
+      }
+    },
+    {
+      "day": "Wed",
+      "deep": {
+        "course": "COS_102",
+        "topic": "The eleven computational approaches themselves - what each one is, the condition or caveat attached to it, and what distinguishes it from its nearest neighbour.",
+        "checkFile": "checks/Wed-COS_102.md"
+      },
+      "fast": {
+        "course": "GST_122",
+        "topic": "Classify sentences by function and by structure, tell closed-class function words apart from open-class content words, and apply subject-verb concord including the Rule of Proximity Agreement for or/nor-joined subjects."
+      }
+    },
+    {
+      "day": "Thu",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "MTH_102 problems: evaluating limits end to end by direct substitution, factor-and-cancel, conjugate rationalisation, complex-fraction combination, dividing by the highest power for limits at infinity, and the awkward cases - one-sided and piecewise limits, k/0 infinite limits, and sqrt(x^2) = -x as x -> -infinity.",
+        "checkFile": "checks/Thu-MTH_102.md"
+      },
+      "fast": {
+        "course": "PHY_108",
+        "topic": "The Thursday fast hour covers the nonlinear I-V experiment on Tungsten and Iron resistors, from running the 0.1 V - 50 V procedure to reading resistance off the linear P vs I^2 graph via Joule's law P = I^2 x R."
+      }
+    },
+    {
+      "day": "Fri",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Problems hour: numerical and multi-step work using emf = I(R + r) and V = emf - Ir, two-load and V-I-graph determinations of emf and r, motional emf emf = Blv with the resulting circuit current, and capacitor energy computed both as 1/2 CV^2 and as the energy density 1/2 epsilon-0 E^2 times the plate volume A x d, including the effect of a dielectric.",
+        "checkFile": "checks/Fri-PHY_102.md"
+      },
+      "fast": {
+        "course": "Review",
+        "topic": "Week 3 review: re-work every check question you got wrong, then read the scores and settle Sunday's two topics - lower score keeps the course, the other moves to their next-lowest elsewhere"
+      }
+    },
+    {
+      "day": "Sat",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Applying the approaches to stated problems - tracing merge sort and a greedy selection, choosing and justifying an approach, decomposing the delivery-route target into a pipeline, and spotting where an approach is the wrong fit.",
+        "checkFile": "checks/Sat-COS_102.md"
+      },
+      "fast": {
+        "course": "Catch-up",
+        "topic": "Sit the Week 2 question sets - they are now seven days old and due; use any remaining time on a missed fast hour"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "code": "PHY_102",
+      "name": "General Physics II",
+      "weekTopics": [
+        "Electromotive force: definition as work done per unit charge, the volt, and the dimensional formula [M L^2 T^-3 I^-1]",
+        "Terminal potential difference, internal resistance and lost volts: emf = I(R + r), emf = V + Ir",
+        "Laboratory determination of emf and internal resistance from a V-I graph (gradient = -r, intercept = emf)",
+        "Motional and induced emf: Lorentz force on carriers, emf = Blv, magnetic flux Blx, Faraday's law and its applications",
+        "Energy in electric fields: work done charging a capacitor, U = 1/2 CV^2, V = Q/C",
+        "Parallel-plate capacitors: C = epsilon-0 A/d, V = Ed, energy density u = 1/2 epsilon-0 E^2 and U = u x A x d",
+        "Dielectrics: dielectric constant K, C = K epsilon-0 A/d, breakdown potential and dielectric strength"
+      ],
+      "summaryFile": "PHY_102-Summary.md",
+      "questionsFile": "PHY_102-Questions.md"
+    },
+    {
+      "code": "MTH_102",
+      "name": "Elementary Mathematics II (Calculus)",
+      "weekTopics": [
+        "The concept of a limit and its notation, including the epsilon-delta idea that x = a itself is excluded",
+        "One-sided limits, the existence test, and the three ways a limit can fail to exist",
+        "Continuity at a point and the three conditions it requires",
+        "The limit laws: constant, identity, sum, difference, constant multiple, product, quotient, reciprocal, power, root and composite, with the condition attached to each",
+        "The Squeeze (Sandwich) Theorem",
+        "Direct substitution and the Direct Substitution Theorem for polynomials and rational functions",
+        "Indeterminate forms (0/0, infinity/infinity, 0 times infinity, infinity minus infinity) versus determinate forms such as k/0",
+        "Factorisation and cancellation to resolve 0/0",
+        "Rationalisation by the conjugate for surd expressions",
+        "Combining complex fractions over a common denominator before taking the limit",
+        "Limits at infinity by dividing by the highest power, and the degree-comparison rule",
+        "Infinite limits at a point from the form k/0, decided by the sign of the denominator on each side",
+        "L'Hopital's Rule, its hypotheses, and differentiating numerator and denominator separately",
+        "Applications of limits in engineering, control systems, risk assessment and economics"
+      ],
+      "summaryFile": "MTH_102-Summary.md",
+      "questionsFile": "MTH_102-Questions.md"
+    },
+    {
+      "code": "COS_102",
+      "name": "Introduction to Problem Solving",
+      "weekTopics": [
+        "Computational approaches defined: expressing solutions to problems in a form that can be run on a computer, using advances in computing such as algorithms, models and simulations",
+        "The three factors considered before computational methods can be used: the problem must be clearly defined (current situation, end goal, how to reach it, possible obstacles), the problem must be computable (are the calculations possible given processing times and capacity), and the data requirements must be examined (data types and storage capacity)",
+        "Problem recognition: nature and parameters of the problem, criteria for success, grouping it as a type, and reducing it to a more general case - the power-cable layout reduced to a minimum spanning tree - so that the solution addresses the root cause",
+        "Backtracking: examining more than one possible solution, using recursion to move between problem states, accepting or rejecting a final state, then returning to a previous state to try unconsidered options; the maze as a binary search tree",
+        "Data mining: extracting valuable information from large data sets by finding unnoticed patterns and underlying relationships, using machine learning and statistical analysis, to inform decisions and predict trends",
+        "Performance testing: evaluating whether a system or program works as expected before release, against a set of test scenarios and success criteria; erroneous-data testing and stress testing",
+        "Pipelining: dividing a task into a series of subtasks, each executed by a different process, where the result of one feeds the next until the task is complete - the order total plus VAT example",
+        "Visualisation: diagrams, graphs and images that illustrate what a problem entails and how to approach a solution, helping humans rather than computers - Dijkstra's shortest path between cities",
+        "Brute force: going through all possible choices until a solution is found, relying solely on computing power - simple and consistent but very slow; the 4-digit padlock",
+        "Divide and conquer: splitting a complex problem into smaller easier parts, solving each and combining them; its conditions of effectiveness; merge sort and the territory analogy",
+        "Greedy algorithms: applying the best possible solution at each stage, aiming at but not guaranteeing the optimal solution; largest-number and activity-selection examples",
+        "Dynamic programming: breaking a problem into sub-problems and saving their solutions so the result need not be computed again; guarantees an optimal solution provided one exists; used mostly for optimization; the Fibonacci series",
+        "Hypothesis testing: hypotheses as tentative statements of prediction, the null hypothesis, the significance level as the probability of rejecting a true null, the p-value, and the accept/reject rule",
+        "Case study: optimising delivery routes for a food delivery service using greedy or divide and conquer"
+      ],
+      "summaryFile": "COS_102-Summary.md",
+      "questionsFile": "COS_102-Questions.md"
+    },
+    {
+      "code": "PHY_108",
+      "name": "General Physics Practical II",
+      "weekTopics": [
+        "Non-ohmic resistors and Joule's law (P = I^2 x R)",
+        "Nonlinear current-voltage (I-V) relationship in Tungsten and Iron resistors",
+        "Plotting I vs V (curve) and P vs I^2 (straight line, gradient = R)"
+      ],
+      "summaryFile": "PHY_108-Summary.md",
+      "questionsFile": "PHY_108-Questions.md"
+    },
+    {
+      "code": "GST_112",
+      "name": "Nigerian Peoples and Culture",
+      "weekTopics": [
+        "The Trans-Atlantic Slave Trade: origins, the triangular trade, the Asiento, and the numbers",
+        "The end of the slave trade and the 1861 annexation of Lagos (Kosoko-Akitoye crisis)",
+        "The rise of 'legitimate' trade and company rule: from the Central African Company to the Royal Niger Company",
+        "The Oil River Protectorate, RNC's monopoly and decline, and the road to colonial administration"
+      ],
+      "summaryFile": "GST_112-Summary.md",
+      "questionsFile": "GST_112-Questions.md"
+    },
+    {
+      "code": "GST_122",
+      "name": "Communication in English II",
+      "weekTopics": [
+        "Sentences: Function and Structure (declarative/interrogative/imperative/exclamatory; simple/compound/complex/compound-complex)",
+        "Word Classes: Function Words and Content Words (closed class vs open class)",
+        "Concord: subject-verb agreement, the Rule of Proximity Agreement, and or/nor vs and"
+      ],
+      "summaryFile": "GST_122-Summary.md",
+      "questionsFile": "GST_122-Questions.md"
+    },
+    {
+      "code": "CSC_106",
+      "name": "Introduction to Web Technologies",
+      "weekTopics": [
+        "HTML document structure and the DOCTYPE/html/head/body skeleton",
+        "Element vs tag vs attribute, and the core content elements (headings, paragraphs, lists, images, tables, div/span)",
+        "Semantic elements, hyperlinks and navigation (relative/absolute URLs, in-page anchors, new-tab links)",
+        "HTML forms, input types, GET vs POST, HTML5 validation attributes and form accessibility"
+      ],
+      "summaryFile": "CSC_106-Summary.md",
+      "questionsFile": "CSC_106-Questions.md"
+    },
+    {
+      "code": "MIVA_COS_111",
+      "name": "Technical Certification I",
+      "weekTopics": [],
+      "summaryFile": "MIVA_COS_111-Summary.md",
+      "questionsFile": null
+    }
+  ],
+  "checks": [
+    {
+      "id": "mon-mth102",
+      "day": "Mon",
+      "course": "MTH_102",
+      "topic": "The week's core limits theory: limit notation and one-sided limits, the existence test, the full list of limit laws with the condition attached to each, the Squeeze Theorem, indeterminate forms versus determinate forms such as k/0, and the conditions that make direct substitution, cancellation, rationalisation and L'Hopital's Rule legitimate.",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "lim as x -> 2 of f(x) = 6 and lim as x -> 2 of g(x) = 0. What can be concluded about lim as x -> 2 of f(x)/g(x)?",
+          "options": [
+            "It is 0, since the quotient law gives 6/0 and anything over an infinite quantity vanishes",
+            "It does not exist, because the quotient law requires the denominator's limit to be non-zero",
+            "The quotient law does not apply, so nothing follows from it alone; the behaviour must be settled by examining the sign of g near 2, and here it is an infinite limit rather than a 0/0 case",
+            "It is 6, since g contributes nothing once its limit is 0"
+          ],
+          "answerIndex": 2,
+          "concept": "The quotient law is a conditional statement; when its hypothesis (lim g not equal to 0) fails, the law is simply silent - it neither gives a value nor forbids one.",
+          "why": "With lim f = 6 (non-zero) and lim g = 0, the quotient is of the determinate form k/0, so |f/g| grows without bound; whether that is +infinity, -infinity or a two-sided non-existence is decided by the sign of g on each side of 2. It is not 0/0, so no cancelling could help. Option 1 invents a rule and confuses 6/0 with 6/infinity. Option 2 is the commonest error - treating a failed hypothesis as a proof of non-existence, when plenty of zero-denominator cases (every 0/0 that cancels) have perfectly good limits. Option 4 treats 'limit 0' as 'contributes nothing', which is what happens in a sum, not a quotient."
+        },
+        {
+          "type": "mcq",
+          "q": "Substituting x = 4 into (x^2 - 3x - 4)/(x - 4) gives 0/0. This tells you:",
+          "options": [
+            "The limit is 1, since any quantity divided by itself is 1",
+            "The limit does not exist, since the function is undefined at x = 4",
+            "The limit is 0, since the numerator approaches 0",
+            "Nothing about the value yet - only that substitution has failed and that (x - 4) is a common factor waiting to be cancelled"
+          ],
+          "answerIndex": 3,
+          "concept": "An indeterminate form is a report on the method, not on the function.",
+          "why": "0/0 says only that substitution cannot decide the limit. For a rational function it carries one concrete piece of information: since x = 4 is a root of both polynomials, the Factor Theorem guarantees (x - 4) divides both - here (x - 4)(x + 1)/(x - 4) = x + 1 -> 5. Option 1 treats the symbols 0/0 as arithmetic; they are a limiting form, and the two zeros arrive at different rates. Option 2 confuses 'undefined at a point' with 'no limit there' - the limit deliberately ignores x = 4. Option 3 reads only the numerator and ignores that the denominator is racing to zero as well."
+        },
+        {
+          "type": "mcq",
+          "q": "f is defined by f(x) = (x^2 - 9)/(x - 3) for x not equal to 3, and f(3) = 10. Then lim as x -> 3 of f(x) is:",
+          "options": [
+            "6, because the limit depends only on values of x near 3 with x not equal to 3, where f(x) = x + 3",
+            "10, because the limit of a function at a point is its value there",
+            "It does not exist, because the defined value 10 disagrees with the surrounding values",
+            "0/0, an indeterminate form, since the formula still breaks down at x = 3"
+          ],
+          "answerIndex": 0,
+          "concept": "A limit is determined entirely by values of f at points near a with x not equal to a; the value f(a) is irrelevant to it.",
+          "why": "For every x not equal to 3, f(x) = (x - 3)(x + 3)/(x - 3) = x + 3, so the limit is 3 + 3 = 6. The mismatch with f(3) = 10 means f is discontinuous at 3 - a different statement from the limit failing. Option 2 is the substitution reflex applied where continuity has not been checked; substitution is valid only when f is continuous at a, which is exactly what is false here. Option 3 confuses discontinuity with non-existence of a limit - both one-sided limits are 6, so the limit exists. Option 4 reports the form of the original formula while ignoring that it was already simplified for x not equal to 3."
+        },
+        {
+          "type": "mcq",
+          "q": "Which use of L'Hopital's Rule on lim as x -> 1 of (x^2 + 3)/(x - 1) is correct?",
+          "options": [
+            "Apply it: the limit is lim of 2x/1 = 2",
+            "Apply it using the quotient rule on the top and bottom together",
+            "Do not apply it: substitution gives 4/0, which is not an indeterminate form, so the rule's hypothesis fails and the limit must be handled as an infinite limit instead",
+            "Apply it twice, giving lim of 2/0, which shows the limit does not exist"
+          ],
+          "answerIndex": 2,
+          "concept": "L'Hopital's Rule applies only to the forms 0/0 and infinity/infinity; the form must be checked before every application.",
+          "why": "Here x = 1 gives 4/0, a determinate infinite form: as x -> 1 from the right the value -> +infinity, as x -> 1 from the left it -> -infinity, so the two-sided limit does not exist. Option 1 is the trap - the mechanics of the rule 'work' and hand you the confident, wrong answer 2. Option 2 misremembers the rule as differentiating the quotient; it is f'/g', two separate derivatives, not (f/g)'. Option 4 compounds the error by re-applying the rule to a form that was never eligible, then reads a correct-sounding conclusion off invalid working."
+        },
+        {
+          "type": "short",
+          "q": "In evaluating lim as x -> 3 of (x^2 - 9)/(x - 3) you cancel the factor (x - 3), even though at x = 3 that factor is zero and dividing by zero is forbidden. Explain precisely why the cancellation is legitimate, and what property of a limit makes it so.",
+          "concept": "The limit at a depends only on the punctured neighbourhood of a - the values at x not equal to a.",
+          "why": "Model answer: by definition, lim as x -> a of f(x) concerns x satisfying 0 < |x - a| < delta; the strict left-hand inequality excludes x = a itself, so the value (or non-value) of f at a never enters. Consequently (x^2 - 9)/(x - 3) and x + 3 are equal at every point the limit inspects - they differ only at x = 3, where the first is undefined. Two functions that agree on a punctured neighbourhood of 3 must have the same limit there, so the limit equals lim of (x + 3) = 6. At no stage is anything divided by zero: the cancellation is performed under the standing assumption x not equal to 3, not at x = 3."
+        },
+        {
+          "type": "short",
+          "q": "Explain why 0/0 is called an indeterminate form while 5/0 is not. Give two limits that both produce the form 0/0 but have different answers, and say what 5/0 actually tells you to do next.",
+          "concept": "Indeterminate means the form alone does not determine the answer; determinate means it does.",
+          "why": "Model answer: 0/0 is indeterminate because both parts are shrinking and the answer depends on their relative rates, which the form hides: lim as x -> 0 of x^2/x = 0, of x/x = 1, of 3x/x = 3 and of x/x^2 = infinity - every one is 0/0 and every answer differs. Since the form supplies no value, the expression must be transformed (factor and cancel, rationalise, combine fractions, or apply L'Hopital's Rule). 5/0 is not indeterminate: the numerator is settling on a non-zero number while the denominator shrinks, so the quotient's magnitude necessarily grows without bound - the form has already determined that. What remains is not algebra but signs: test the denominator on each side of a; matching infinities give a limit of +infinity or -infinity, opposite ones mean the limit does not exist."
+        }
+      ]
+    },
+    {
+      "id": "tue-phy102",
+      "day": "Tue",
+      "course": "PHY_102",
+      "topic": "Core theory: what emf is (work per unit charge, volt, dimensions), how terminal potential difference differs from it through the lost volts Ir, how the V-I graph yields emf and internal resistance, the Lorentz-force mechanism behind motional emf emf = Blv, and why the energy of a charged capacitor is properly located in the field as the density 1/2 epsilon-0 E^2.",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A cell of emf and internal resistance r drives a current through an external resistance R. The value of R is now increased, nothing else changing. The terminal potential difference:",
+          "options": [
+            "falls, because a larger external resistance takes a larger share of the available voltage and leaves less across the terminals",
+            "rises towards the emf, because the current falls and the lost volts Ir shrink with it; V equals the emf only in the limit I = 0",
+            "is unchanged, since the emf and r are fixed properties of the cell and V = emf - Ir therefore has a fixed value",
+            "rises, and so does the emf, because emf = I(R + r) grows as R grows"
+          ],
+          "answerIndex": 1,
+          "concept": "Terminal p.d. is set by the current, not by the external resistance directly: V = emf - Ir",
+          "why": "Raising R lowers I = emf/(R + r); the lost volts Ir fall in proportion, so V climbs towards the emf and reaches it only at I = 0 (open circuit). With emf = 1.5 V and r = 0.50 ohm, V = 1.25 V at R = 2.5 ohm but 1.43 V at R = 10 ohm. Option 1 is the everyday 'bigger resistance drops more voltage' intuition applied to the wrong resistor - R does drop more volts, but those volts ARE the terminal p.d. Option 3 sees correctly that emf and r are fixed but forgets that I is not, so Ir is not a constant. Option 4 misreads emf = I(R + r) as a formula for a varying emf; the product is constant precisely because I falls as R rises."
+        },
+        {
+          "type": "mcq",
+          "q": "In the laboratory determination of emf and internal resistance, the terminal p.d. V is plotted on the y-axis against the current I on the x-axis for several settings of a variable resistor. The graph is a straight line, and:",
+          "options": [
+            "the gradient is +r and the y-intercept is the terminal p.d. at maximum current",
+            "the gradient is -R, the external resistance, and the y-intercept is the emf",
+            "the gradient is -r and the y-intercept is the emf, the p.d. extrapolated back to zero current",
+            "the gradient is -r, but the intercept is the emf only for a cell of negligible internal resistance; otherwise the intercept reads emf - Ir"
+          ],
+          "answerIndex": 2,
+          "concept": "V = emf - Ir is a straight line y = c + mx with gradient m = -r and intercept c = emf",
+          "why": "Rearranged, V = -rI + emf: the gradient is the negative internal resistance and the intercept is the emf, i.e. the terminal p.d. extrapolated to zero current - exactly the 'no current flows' condition in the definition of emf. Option 1 drops the minus sign and misidentifies the intercept as a value at maximum current, which is where the line ends rather than where it crosses the axis. Option 2 confuses the resistance being varied (R) with the one the gradient measures (r); R changes from point to point and cannot be a single gradient. Option 4 is the trap for a half-remembered rule: the intercept is the emf for every cell, and a large r only makes the line steeper."
+        },
+        {
+          "type": "mcq",
+          "q": "A conducting rod slides along rails at constant speed v, perpendicular to a uniform, time-independent magnetic field B. Which statement correctly accounts for the emf?",
+          "options": [
+            "No emf is induced: Faraday's law requires a magnetic field that changes with time, and B here is constant",
+            "The free charges in the rod feel a Lorentz force qvB directed along the rod, which drives them to one end; the work per unit charge over the length l is Bvl, so emf = Blv even though B is steady",
+            "The emf arises from the resistance of the rod opposing the current through it; a rod of zero resistance would generate no emf",
+            "The emf appears only once the circuit is closed and a current flows, since emf is defined by emf = I(R + r)"
+          ],
+          "answerIndex": 1,
+          "concept": "Motional emf comes from the Lorentz force on carriers in a moving conductor; the flux changes because the area changes",
+          "why": "Each carrier moving with the rod at speed v across B feels F = qvB along the rod; pushing charge along the length l does work W = QBvl, and emf is work per unit charge, so emf = Blv. Equivalently the flux Blx changes because x changes, not because B does. Option 1 is the commonest misconception this week - Faraday's law responds to a changing flux, and area change qualifies. Option 3 inverts cause and effect: resistance limits the resulting current but does not generate the emf, which is present on open circuit with no current at all. Option 4 treats emf = I(R + r) as a definition rather than a circuit consequence, wrongly making the emf conditional on a current."
+        },
+        {
+          "type": "mcq",
+          "q": "For the uniform field between the plates of a parallel-plate capacitor of plate area A and separation d in vacuum, the quantity (1/2) epsilon-0 E^2:",
+          "options": [
+            "is the total energy stored, in joules; multiplying it by the volume A x d converts it into the energy density",
+            "is the energy per unit volume, in J/m^3, and the total stored energy is obtained by multiplying it by the plate area A, since the field exists only at the plates",
+            "applies only when a dielectric fills the gap, because empty space contains no matter and therefore stores no energy",
+            "is the energy per unit volume, in J/m^3; the total stored energy is (1/2) epsilon-0 E^2 (A x d), and doubling E quadruples both"
+          ],
+          "answerIndex": 3,
+          "concept": "u = (1/2) epsilon-0 E^2 is an energy density in J/m^3; energy = density x volume, and the volume is A x d",
+          "why": "Check the units: (C^2/N.m^2)(N/C)^2 = N/m^2 = J/m^3. The field is essentially uniform inside the gap and essentially zero outside it, so the total is u times A x d. Because E is squared, doubling the field quadruples both the density and the total. Option 1 inverts density and total - the error that turns 1.77 x 10^-11 J into 1.77 x 10^-7 J. Option 2 has the right units but the wrong geometry: multiplying a per-volume quantity by an area cannot give joules and ignores the gap thickness. Option 3 mistakes 'no matter' for 'no energy', when the whole point of the result is that the field stores energy in empty space."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) Electromotive force and terminal potential difference are both measured in volts, yet they are not the same quantity. Explain what each one is, say precisely what the difference between them (the quantity Ir) represents physically and where that energy goes, and state the one condition under which the two are numerically equal.",
+          "concept": "emf is energy supplied per coulomb by the source; terminal p.d. is energy delivered per coulomb to the external circuit; the difference is dissipated inside the cell",
+          "why": "Model answer: The emf, emf = W/Q, is the work the source does on each coulomb of charge in driving it round the circuit - the full energy per coulomb the chemical or induced process makes available. The terminal potential difference V is the p.d. actually measured across the cell's terminals once the circuit is switched on, i.e. the energy per coulomb that reaches the external resistance. Because a real cell has internal resistance r, driving a current I through the cell's own material dissipates Ir joules per coulomb as heat inside the cell - the 'lost volts'. Hence V = emf - Ir, always less than the emf when current flows. They are numerically equal in exactly one situation: when no current flows (I = 0, the open-circuit condition, or measurement with an ideal infinite-resistance voltmeter), which is why the intercept of the V-I graph reads the emf."
+        },
+        {
+          "type": "short",
+          "q": "(explain why) The result U = (1/2) epsilon-0 E^2 (A x d) is normally read as 'the energy is stored in the field', not 'on the plates'. Explain what in the expression justifies that reading. Then explain why filling the gap with a dielectric does not let you store unlimited energy, naming the property of the material that sets the limit.",
+          "concept": "The energy is expressed entirely in terms of the field and the volume it occupies; and dielectric strength, not capacitance, caps the storage",
+          "why": "Model answer: Two features justify the reading. First, the expression contains no reference to charge or to the plates - only E, the permittivity and the volume A x d. Second, that volume is precisely the region where the field exists: inside the gap E is uniform, outside it E is about zero, and the energy comes out as (energy per unit volume) x (volume of field), exactly as if the energy were spread through the space itself. This is why u = (1/2) epsilon-0 E^2 is used for fields in empty space where there is no capacitor at all - energy persists in a region devoid of matter. As for the limit: a dielectric of constant K raises the capacitance to C = K epsilon-0 A/d and so raises (1/2) CV^2 at a given V, but every dielectric has a dielectric strength, the maximum electric field it can tolerate. Exceed it and the material breaks down and forms a conducting path between the plates, discharging the capacitor. That fixes a breakdown potential Vmax = (dielectric strength) x d, so the largest energy the device can hold is (1/2) C Vmax^2, not an unlimited amount."
+        }
+      ]
+    },
+    {
+      "id": "wed-cos102",
+      "day": "Wed",
+      "course": "COS_102",
+      "topic": "The eleven computational approaches: what each one is, the condition or caveat attached to it, and what distinguishes it from its neighbour",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "Two programs search for the way out of a maze. Program A lists every possible sequence of turns of length 20 and runs each one from the entrance until one reaches the exit. Program B takes a corridor, recursively takes the next corridor, and when it arrives at a state that is rejected it returns to the junction it came from and takes a turning it has not yet considered. Which names both correctly?",
+          "options": [
+            "Both are brute force; B is simply a brute-force search written recursively",
+            "A is brute force - it goes through all possible choices, relying solely on computing power - and B is backtracking, which decides which option to follow at each step, tests acceptance at a final state, and returns to a previous state to try unconsidered options",
+            "A is backtracking, because it tries one sequence and then another, and B is divide and conquer, because the maze is split into corridors solved one at a time",
+            "A is brute force and B is dynamic programming, because B stores the junctions it has already visited so that it never has to compute them again"
+          ],
+          "answerIndex": 1,
+          "concept": "Brute force explores all choices; backtracking abandons a state and resumes from a previous one",
+          "why": "Brute force solves a problem by going through all possible choices until a solution is found and relies solely on computing power - Program A, with 20 turns enumerated in advance and nothing pruned. Backtracking examines more than one possible solution, uses recursion to move from one problem state to another, decides which option to follow at each step, and on reaching a final state checks whether it is accepted or rejected before backtracking to a previous state to try other unconsidered options - Program B, and the maze is the course's own illustration. Option 1 catches the student who has learned only that both look at many possibilities: recursion is not the difference, the accept/reject test at a final state and the return to an earlier state are. Option 3 swaps the labels and misnames a corridor-by-corridor walk as divide and conquer, which produces smaller versions of the same problem that are solved and then combined - B combines nothing. Option 4 mistakes remembering visited junctions for dynamic programming, which is defined by saving the solutions of sub-problems so the result need not be recomputed; B saves no solution, it only retreats."
+        },
+        {
+          "type": "mcq",
+          "q": "A student writes fib(n) as fib(n-1) + fib(n-2), with fib(0) = 0 and fib(1) = 1. It is correct but slow. He then rewrites it so that each value, once computed, is written into a table and read back from there whenever it is needed again. Which is correct?",
+          "options": [
+            "The first version is divide and conquer and the second is dynamic programming, because the second saves the sub-problems' solutions so there is no need to compute the result again",
+            "Both versions are dynamic programming, because both break the problem into the sub-problems fib(n-1) and fib(n-2)",
+            "The first is dynamic programming because it uses recursion, and the second is divide and conquer because it splits the work into a table of easier parts",
+            "The second is a greedy algorithm, because at each stage it applies the best possible solution - reading the stored value rather than recomputing it"
+          ],
+          "answerIndex": 0,
+          "concept": "Dynamic programming is divide-and-conquer decomposition plus stored sub-solutions",
+          "why": "Both versions decompose fib(n) into fib(n-1) and fib(n-2), so decomposition cannot be what separates them - which is why option 2 is the most-chosen wrong answer. The course defines dynamic programming as breaking problems into sub-problems and saving the solutions of the sub-problems so that there is no need to compute the result again; the table is that saving, and it is the only new thing in version two. Option 3 inverts both labels and mistakes recursion for the criterion - recursion is mentioned in the course under backtracking, not dynamic programming. Option 4 misapplies greedy: greedy is about choosing the best option among competing choices at each stage, and reading a stored value is not a choice between candidate solutions at all."
+        },
+        {
+          "type": "mcq",
+          "q": "A student writes: 'Greedy algorithms select the best optimal path at every stage, so a greedy algorithm always returns the optimal solution; that is why greedy solutions are simple and highly efficient.' Judged against the course, which is correct?",
+          "options": [
+            "The claim is right, and it is dynamic programming that carries no guarantee, since dynamic programming only saves results and never chooses between them",
+            "The claim is wrong: greedy algorithms never produce optimal solutions, which is precisely why they are simple and fast",
+            "The claim is wrong: greedy applies the best possible solution at each stage and aims at the optimal solution, but might not always produce one; the guarantee - that provided a solution exists, an optimal solution can be found - belongs to dynamic programming",
+            "The claim is wrong, because greedy is optimal only when the smaller parts are simpler than the complex part and combining them is the cheaper operation"
+          ],
+          "answerIndex": 2,
+          "concept": "Greedy aims at optimality; only dynamic programming is said to guarantee it",
+          "why": "The course states both halves carefully: greedy might not always produce an optimal solution but produces an optimal solution to many problems, and for problems where greedy is able to provide optimal solutions those solutions are always simple and highly efficient - so the efficiency claim is conditional on greedy having succeeded and cannot be used as evidence that it always succeeds. Dynamic programming is the approach of which the course says that, provided a solution to the problem exists, an optimal solution can be found. Option 1 reverses the two guarantees and is tempting because dynamic programming sounds passive next to greedy's 'best optimal path'. Option 2 overcorrects into a second false absolute - greedy does produce optimal solutions to many problems. Option 4 gives the right verdict with the wrong approach's condition: 'the smaller parts must be simpler than the complex part and combining them must be cheaper' is the effectiveness condition of divide and conquer and says nothing about greedy."
+        },
+        {
+          "type": "mcq",
+          "q": "An engineer is asked to produce an algorithm that optimises the power-cable infrastructure of a building. Before writing anything, she establishes the parameters of the problem, states the criterion for success, notes that it belongs to a known type, and restates the whole task as 'find the minimum spanning tree of this graph'. Which is correct?",
+          "options": [
+            "This is visualisation: the building has been redrawn as a graph so that a diagram can illustrate what the problem entails",
+            "This is divide and conquer: the building has been split into smaller, easier parts - the individual cable runs - each of which is solved separately",
+            "This is problem recognition, and the final step is the course's move of reducing the problem to a more general case, done so that the solution addresses the root cause rather than a symptom",
+            "This is data mining, because underlying relationships within the building's wiring data have been discovered and expressed as a graph"
+          ],
+          "answerIndex": 2,
+          "concept": "Problem recognition, and the reduction of a problem to a more general case",
+          "why": "Problem recognition is defined by exactly the four moves she made: identify the nature and parameters of the problem, specify the requirement or criteria for success, determine whether the problem can be grouped as a specific type, and explore reducing the problem to a more general case - and the course's illustration of that last move is this very example, the cable-optimisation task becoming a minimum spanning tree. Its purpose is to ensure the proposed solution deals with the root cause. Option 1 catches anyone who sees the word 'graph' and thinks pictures: visualisation exists to help humans rather than computers understand a problem through diagrams, whereas here the graph is the formal object the algorithm will run on. Option 2 mislabels a change of representation as a decomposition - nothing has been split and no sub-solutions will be combined. Option 4 borrows data mining's wording, but no large data set has been searched for unnoticed patterns; the structure was recognised, not discovered in data."
+        },
+        {
+          "type": "short",
+          "q": "A program calculates the total cost of an order by first adding up the cost of the products, then computing the VAT on that subtotal, then adding the two. A second program sorts a list by merge sort. Both 'break a task into smaller parts'. Name the approach each one is, state exactly what the parts are in each case and how they relate to one another, and give the condition that divide and conquer must satisfy and pipelining need not.",
+          "concept": "Pipelining versus divide and conquer",
+          "why": "Model answer: The order-total program is pipelining - the task is divided into a series of subtasks in which each subtask leads to the next, each executed by a different process in a series, and the result of one process feeds into the next until the whole task is complete: sum the product costs, feed that subtotal into the VAT calculation, feed both into the addition. The parts are different in kind from one another and strictly ordered - stage two cannot start until stage one has produced its output - and there is no combining step at the end, only a final stage. Merge sort is divide and conquer: the complex problem is split into smaller, easier parts which are smaller instances of the same problem (sorting a list becomes sorting two shorter lists), solved independently of one another and then combined by merging. The condition divide and conquer must satisfy, and pipelining need not, is its effectiveness condition: the smaller parts must actually be simpler than the complex whole, and combining their solutions must be less complicated than solving the original problem directly. If the merge cost as much as sorting from scratch, the split would buy nothing. Pipelining has no such requirement because its stages are not attempts at the whole problem and their outputs are never recombined - each merely hands its result to the next."
+        },
+        {
+          "type": "short",
+          "q": "A researcher tests whether a medicine reduces the chance of heart arrest. She fixes a significance level of 0.05 and obtains a p-value of 0.03. State her null hypothesis, state the decision she must make and why, explain precisely what the significance level 0.05 means, and explain what her result does NOT establish.",
+          "concept": "The null hypothesis, significance level and p-value",
+          "why": "Model answer: Her hypothesis is the tentative, intelligent guess that consumption of the medicine reduces the chance of heart arrest; the null hypothesis is the assumption of no effect - that consumption of the medicine does not reduce the chance of heart arrest, which is the course's own worked example. The rule is that when the p-value is less than or equal to the significance level the null hypothesis is rejected, and 0.03 is less than 0.05, so she rejects the null hypothesis; the p-value describes how likely it is that the null hypothesis is true, and the smaller it is the stronger the evidence for rejecting it. The significance level of 0.05 is the probability of rejecting the null hypothesis when it is in fact true - a 5 percent risk of concluding that something exists when it does not exist - and it is chosen before the data are seen, which is what makes the comparison meaningful rather than a decision taken after the fact. What the result does not establish is proof: the test moves evidence, not certainty. Rejecting the null does not show that the medicine works in every patient or by any particular mechanism, only that under a 5 percent error allowance the no-effect assumption does not survive this data; equally, had p come out above 0.05, accepting the null would not have shown the medicine does nothing - as the course puts it, it just means the evidence is not enough. A 5 percent significance level also means that roughly one such rejection in twenty would occur even if the medicine were inert."
+        }
+      ]
+    },
+    {
+      "id": "thu-mth102",
+      "day": "Thu",
+      "course": "MTH_102",
+      "topic": "MTH_102 problems: evaluating limits end to end by direct substitution, factor-and-cancel, conjugate rationalisation, complex-fraction combination, dividing by the highest power for limits at infinity, and the awkward cases - one-sided and piecewise limits, k/0 infinite limits, and sqrt(x^2) = -x as x -> -infinity.",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "lim as x -> 2 of (x^2 + x - 6)/(x^2 - 4) equals:",
+          "options": [
+            "5/4",
+            "1, obtained by cancelling the x^2 from the top and the bottom to leave (x - 6)/(-4)",
+            "0, since the numerator is zero at x = 2",
+            "It does not exist, since substitution gives 0/0 and the function is undefined at x = 2"
+          ],
+          "answerIndex": 0,
+          "concept": "0/0 in a rational function means (x - a) divides both polynomials; factor fully, then cancel that factor only.",
+          "why": "(x^2 + x - 6)/(x^2 - 4) = (x + 3)(x - 2) / [(x - 2)(x + 2)] = (x + 3)/(x + 2) for x not equal to 2, giving 5/4. Option 2 is illegal cancellation - you may cancel common factors, never matching terms inside sums; the x^2 is not a factor of either polynomial. Option 3 reads only the numerator and ignores that the denominator is going to zero at the same time. Option 4 treats 'undefined at the point' and 'form 0/0' as proof that no limit exists; the limit never evaluates at x = 2, and here it exists perfectly well."
+        },
+        {
+          "type": "mcq",
+          "q": "lim as x -> 9 of (sqrt(x) - 3)/(x - 9) equals:",
+          "options": [
+            "0, since the numerator approaches sqrt(9) - 3 = 0",
+            "It does not exist, because the form 0/0 has no value",
+            "1/6",
+            "1/3, from rationalising and then evaluating 1/sqrt(x) at x = 9"
+          ],
+          "answerIndex": 2,
+          "concept": "A surd difference over a vanishing denominator is cleared by multiplying top and bottom by the conjugate, which turns the difference of roots into a difference of squares.",
+          "why": "(sqrt(x) - 3)/(x - 9) times (sqrt(x) + 3)/(sqrt(x) + 3) = (x - 9)/[(x - 9)(sqrt(x) + 3)] = 1/(sqrt(x) + 3) for x not equal to 9, which -> 1/(3 + 3) = 1/6. Option 1 evaluates the numerator alone and forgets that x - 9 is also collapsing. Option 2 mistakes an indeterminate form for a verdict - 0/0 is the signal to transform, not to stop. Option 4 rationalises correctly and then drops the '+3': the surviving denominator is sqrt(x) + 3, not sqrt(x), and that is exactly the halving that separates 1/6 from 1/3."
+        },
+        {
+          "type": "mcq",
+          "q": "lim as x -> -infinity of sqrt(9x^2 + 1)/(x + 2) equals:",
+          "options": [
+            "3, since sqrt(9x^2 + 1) behaves like sqrt(9x^2) = 3x and the +2 is negligible",
+            "-3",
+            "9, the ratio of the leading coefficient 9 to the leading coefficient 1",
+            "-infinity, since the numerator involves x^2 while the denominator involves only x"
+          ],
+          "answerIndex": 1,
+          "concept": "For x -> -infinity, sqrt(x^2) = |x| = -x, so pulling x out of a square root flips the sign.",
+          "why": "Divide top and bottom by x, but inside the root divide by sqrt(x^2) = -x since x < 0: sqrt(9x^2 + 1)/(x + 2) = [-sqrt(9 + 1/x^2)]/(1 + 2/x) -> -3/1 = -3. Option 1 is the whole point of the question - it uses sqrt(9x^2) = 3x, true only for x >= 0, and is the commonest error in limits at -infinity. Option 3 compares leading coefficients without ever taking the square root, ignoring that sqrt(9x^2) contributes 3, not 9. Option 4 counts the x^2 under the root as a degree-2 term; the root halves the degree, so top and bottom both grow like |x| and the ratio is finite."
+        },
+        {
+          "type": "mcq",
+          "q": "f(x) = x^2 + 1 for x < 1 and f(x) = 3x for x >= 1. Then lim as x -> 1 of f(x) is:",
+          "options": [
+            "3, since x = 1 belongs to the second piece, so f(1) = 3 is the limit",
+            "5/2, the value midway between the two one-sided limits",
+            "2, obtained from the piece x^2 + 1 that governs the approach to 1",
+            "It does not exist: the left-hand limit is 2 and the right-hand limit is 3, and unequal one-sided limits mean no limit"
+          ],
+          "answerIndex": 3,
+          "concept": "A two-sided limit exists only if both one-sided limits exist and are equal; the value f(1) is irrelevant to either.",
+          "why": "Approaching from below uses x^2 + 1 -> 2; from above uses 3x -> 3; 2 is not 3, so the limit does not exist (a jump discontinuity). Option 1 substitutes the function value, which decides continuity, not the limit - and only after the limit is known to exist. Option 3 evaluates one side only and reports it as the answer, the error of forgetting that x -> 1 means from both directions. Option 2 invents an averaging rule; a limit is a value the function actually approaches, and f never comes near 5/2 on either side."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate lim as x -> 0 of [sqrt(1 + x) - sqrt(1 - x)]/x, showing every step. State what substitution gives, why that forbids stopping there, which technique you choose and why, and what the final value is.",
+          "concept": "0/0 with a difference of square roots means multiply by the conjugate.",
+          "why": "Model answer: substituting x = 0 gives (sqrt(1) - sqrt(1))/0 = 0/0 - indeterminate, so the value is undecided and the expression must be transformed. The obstruction is the difference of two surds, so multiply top and bottom by the conjugate sqrt(1 + x) + sqrt(1 - x). The numerator becomes (1 + x) - (1 - x) = 2x, so the expression is 2x / [x(sqrt(1 + x) + sqrt(1 - x))]. Since x is not 0 throughout the approach, the x cancels legitimately, leaving 2/[sqrt(1 + x) + sqrt(1 - x)], which is continuous at 0, so substitute: 2/(1 + 1) = 1. Check by L'Hopital: [1/(2 sqrt(1 + x)) + 1/(2 sqrt(1 - x))]/1 -> 1/2 + 1/2 = 1."
+        },
+        {
+          "type": "short",
+          "q": "Explain fully why lim as x -> 1 of (x + 2)/(x - 1) does not exist, while lim as x -> 1 of (x + 2)/(x - 1)^2 is +infinity - and why neither of them can be attacked by factoring and cancelling.",
+          "concept": "k/0 with k non-zero is a determinate infinite form; the sign of the denominator on each side decides whether it is +infinity, -infinity or a non-existent limit.",
+          "why": "Model answer: in both, substituting x = 1 gives numerator -> 3 (non-zero) and denominator -> 0. Because the numerator does not vanish, x = 1 is not a common root of top and bottom, so (x - 1) is not a common factor and there is nothing to cancel - factoring is unavailable, and this is not a 0/0 case at all, which also disqualifies L'Hopital's Rule. First limit: x - 1 is negative for x < 1 and positive for x > 1, so (x + 2)/(x - 1) -> 3/0- = -infinity from the left and 3/0+ = +infinity from the right; the two sides disagree, so the limit does not exist, not even as an infinity. Second limit: (x - 1)^2 is positive on both sides (squaring destroys the sign difference), so the quotient -> 3/0+ = +infinity from both directions; the behaviour matches, so we write the limit as +infinity - a description of unbounded growth, not a finite value."
+        }
+      ]
+    },
+    {
+      "id": "fri-phy102",
+      "day": "Fri",
+      "course": "PHY_102",
+      "topic": "Problems hour: numerical and multi-step work using emf = I(R + r) and V = emf - Ir, two-load and V-I-graph determinations of emf and r, motional emf emf = Blv with the resulting circuit current, and capacitor energy computed both as 1/2 CV^2 and as the energy density 1/2 epsilon-0 E^2 times the plate volume A x d, including the effect of a dielectric.",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A battery of emf 12.0 V and internal resistance 0.60 ohm is connected across a 5.4 ohm resistor. The current in the circuit and the terminal potential difference are:",
+          "options": [
+            "I = 2.00 A, V = 10.8 V",
+            "I = 2.00 A, V = 12.0 V",
+            "I = 2.22 A, V = 12.0 V",
+            "I = 2.00 A, V = 1.20 V"
+          ],
+          "answerIndex": 0,
+          "concept": "emf = I(R + r) first, then V = emf - Ir; the internal resistance is in series with the load",
+          "why": "I = 12.0/(5.4 + 0.60) = 2.00 A; lost volts Ir = 1.20 V; V = 12.0 - 1.20 = 10.8 V, which equals IR = 2.00 x 5.4 as a check. Option 2 gets the current right but treats the terminal p.d. as the emf - the error of ignoring r after remembering it. Option 3 uses I = emf/R = 2.22 A, leaving r out of the series total, and then compounds it. Option 4 reports the lost volts, 1.20 V, as the terminal p.d.: right arithmetic attached to the wrong quantity."
+        },
+        {
+          "type": "mcq",
+          "q": "In a V-I experiment on a cell, the terminal p.d. is 1.42 V when the current is 0.20 A, and 1.18 V when the current is 0.60 A. The emf and internal resistance are:",
+          "options": [
+            "emf = 1.54 V, r = 0.60 ohm",
+            "emf = 1.42 V, r = 0.60 ohm",
+            "emf = 1.54 V, r = -0.60 ohm",
+            "emf = 1.30 V, r = 0.60 ohm"
+          ],
+          "answerIndex": 0,
+          "concept": "V = -rI + emf, so r is minus the gradient and the emf is the intercept; internal resistance is a positive quantity",
+          "why": "Gradient = (1.18 - 1.42)/(0.60 - 0.20) = -0.60 V/A, so r = 0.60 ohm. Then emf = V + Ir = 1.42 + 0.20 x 0.60 = 1.54 V, confirmed by the other point: 1.18 + 0.60 x 0.60 = 1.54 V. Option 2 takes the largest measured terminal p.d. as the emf, but 1.42 V was measured with 0.20 A flowing and is already 0.12 V short. Option 3 reports the gradient itself as r; the minus sign belongs to the gradient, and a negative resistance is meaningless here. Option 4 averages the two terminal p.d.s, giving a point on the line rather than its intercept - you must extrapolate to I = 0, not interpolate."
+        },
+        {
+          "type": "mcq",
+          "q": "A rod of length 0.40 m slides along frictionless rails at 3.0 m/s, perpendicular to a uniform 0.50 T magnetic field. The total resistance of the circuit is 2.0 ohm. The induced emf and the current are:",
+          "options": [
+            "emf = 0.60 V, I = 1.2 A",
+            "emf = 0 V, I = 0 A, since the magnetic field does not change with time",
+            "emf = 0.60 V, I = 0.30 A",
+            "emf = 6.0 V, I = 3.0 A"
+          ],
+          "answerIndex": 2,
+          "concept": "emf = Blv from the Lorentz force on the carriers, then I = emf/R_total; the flux changes because the area changes, not because B does",
+          "why": "emf = 0.50 x 0.40 x 3.0 = 0.60 V, and I = 0.60/2.0 = 0.30 A. Option 1 multiplies by the resistance instead of dividing - volts times ohms is not amperes. Option 2 is the conceptual trap: Faraday's law responds to a changing flux Blx, and here x grows as the rod slides, so a perfectly steady B still gives an emf. Option 4 is a power-of-ten slip in Blv (0.50 x 0.40 = 0.20, not 2.0) that then propagates into the current."
+        },
+        {
+          "type": "mcq",
+          "q": "A parallel-plate capacitor in vacuum has plate area 0.050 m^2 and separation 4.0 mm. The uniform field between the plates is 1.0 x 10^5 V/m. The total energy stored between the plates is about:",
+          "options": [
+            "8.85 x 10^-6 J",
+            "4.43 x 10^-2 J",
+            "1.77 x 10^-5 J",
+            "8.85 x 10^-5 J"
+          ],
+          "answerIndex": 0,
+          "concept": "(1/2) epsilon-0 E^2 is a density in J/m^3; the energy is that density times the volume A x d, with d in metres",
+          "why": "u = 0.5 x 8.85 x 10^-12 x (1.0 x 10^5)^2 = 4.43 x 10^-2 J/m^3; volume = 0.050 x 4.0 x 10^-3 = 2.0 x 10^-4 m^3; U = 8.85 x 10^-6 J. Option 2 quotes the energy density as the energy - the answer is in J/m^3 and is nine orders of magnitude out. Option 3 drops the factor 1/2, which is present because the field builds from zero while the capacitor charges. Option 4 uses d = 4.0 mm as 0.04 m, a factor-of-ten volume error; always convert mm to m before multiplying."
+        },
+        {
+          "type": "short",
+          "q": "(multi-step problem - show your working) A cell of unknown emf and unknown internal resistance delivers a current of 1.00 A when connected across a 1.5 ohm resistor, and 0.50 A when connected across a 3.5 ohm resistor. Find the emf and r. Then find the terminal potential difference in each case, and the power dissipated inside the cell in the first case. Explain in one sentence why the terminal p.d. is higher with the larger load resistor.",
+          "concept": "The emf is a single fixed property of the cell, so two loads give two equations in the same two unknowns; and the lost volts are set by the current, not by R",
+          "why": "Model answer: emf = I(R + r) holds for both readings with the same emf and r, so 1.00(1.5 + r) = 0.50(3.5 + r), giving 1.5 + r = 1.75 + 0.50r, so 0.50r = 0.25 and r = 0.50 ohm. Then emf = 1.00(1.5 + 0.50) = 2.0 V, checked by 0.50(3.5 + 0.50) = 2.0 V. Terminal p.d.s: V1 = 2.0 - 1.00 x 0.50 = 1.5 V (equal to I1 R1 = 1.5 V) and V2 = 2.0 - 0.50 x 0.50 = 1.75 V (equal to 0.50 x 3.5 V). Power dissipated inside the cell in the first case: P = I1^2 r = 1.00^2 x 0.50 = 0.50 W, a quarter of the total emf x I1 = 2.0 W, which is why the cell warms. The terminal p.d. is higher with the bigger load because the lost volts are Ir: the larger resistor halves the current and therefore halves the internal drop from 0.50 V to 0.25 V, leaving more of the emf at the terminals. The internal drop tracks the current, not the load resistance."
+        },
+        {
+          "type": "short",
+          "q": "(multi-step problem - show your working) A parallel-plate capacitor in vacuum has plate area 0.040 m^2 and plate separation 2.0 mm, connected to a 50 V supply. Find (a) the capacitance, (b) the charge stored, (c) the electric field between the plates, and (d) the stored energy by two independent routes - from (1/2) CV^2 and from the energy density (1/2) epsilon-0 E^2 multiplied by the volume - showing that they agree. Then state what happens to C, Q and U if a dielectric of constant K = 4 is slid between the plates while the capacitor stays connected to the 50 V supply.",
+          "concept": "C = epsilon-0 A/d, V = Ed, and the two energy expressions (1/2) CV^2 and (1/2) epsilon-0 E^2 (A x d) are the same result written in different variables",
+          "why": "Model answer: (a) C = epsilon-0 A/d = 8.85 x 10^-12 x 0.040 / 2.0 x 10^-3 = 1.77 x 10^-10 F (177 pF). (b) Q = CV = 1.77 x 10^-10 x 50 = 8.85 x 10^-9 C. (c) E = V/d = 50 / 2.0 x 10^-3 = 2.5 x 10^4 V/m, uniform between the plates and about zero outside. (d) Route A: U = (1/2) CV^2 = 0.5 x 1.77 x 10^-10 x 2500 = 2.21 x 10^-7 J. Route B: u = (1/2) epsilon-0 E^2 = 0.5 x 8.85 x 10^-12 x 6.25 x 10^8 = 2.77 x 10^-3 J/m^3; volume = 0.040 x 2.0 x 10^-3 = 8.0 x 10^-5 m^3; U = 2.21 x 10^-7 J - the same, as it must be, since substituting C = epsilon-0 A/d and V = Ed into (1/2) CV^2 reproduces (1/2) epsilon-0 E^2 (A x d) identically. With the K = 4 dielectric and the supply still connected, V is held at 50 V so E stays at 2.5 x 10^4 V/m, but C = K epsilon-0 A/d = 7.08 x 10^-10 F, Q = CV = 3.54 x 10^-8 C (four times the charge, drawn from the supply) and U = (1/2) CV^2 = 8.85 x 10^-7 J, four times the original; the energy density becomes (1/2) K epsilon-0 E^2. What K does not do is remove the ceiling: the dielectric strength still fixes a breakdown potential Vmax beyond which the material conducts and the capacitor fails."
+        }
+      ]
+    },
+    {
+      "id": "sat-cos102",
+      "day": "Sat",
+      "course": "COS_102",
+      "topic": "Applying the computational approaches to stated problems: tracing merge sort and a greedy selection, choosing and justifying an approach, decomposing a target into a pipeline, and spotting where an approach is the wrong fit",
+      "maxScore": 6,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "Sort 2, 8, 4, 9, 3 into DESCENDING order with merge sort, splitting each list into a left half of floor(n/2) elements. Which describes the step-by-step process the algorithm actually goes through?",
+          "options": [
+            "Split into [2,8] and [4,9,3], split again to single elements, then merge each pair by taking the larger front element first - [8,2] and [9,4,3] - and merge those two to give [9,8,4,3,2]",
+            "Split all the way down to single elements, merge each pair by taking the smaller front element first to get [2,3,4,8,9] - merge sort orders ascending - then reverse the finished list to read off [9,8,4,3,2]",
+            "Split once into [2,8] and [4,9,3], sort each half by inspection into [8,2] and [9,4,3], then merge the two halves to give [9,8,4,3,2]",
+            "Split into [2,8] and [4,9,3], split again to single elements, merge each half into [8,2] and [9,4,3], then place the sorted halves one after the other to give [8,2,9,4,3]"
+          ],
+          "answerIndex": 0,
+          "concept": "Merge sort as divide and conquer: divide to single elements, then combine by merging",
+          "why": "Divide and conquer splits a complex problem into smaller, easier parts of the same kind, solves them, and combines the solutions. [2,8,4,9,3] splits into [2,8] and [4,9,3]; those split into [2] [8] and [4], [9] [3]; a single element is already sorted, which is the base case. Merging for descending order means repeatedly taking the larger of the two front elements: [2]+[8] gives [8,2]; [9]+[3] gives [9,3]; [4]+[9,3] gives [9,4,3]; finally [8,2]+[9,4,3] gives 9, 8, 4, 3, 2. Three of the four options end at the familiar final list, so the question cannot be answered by recognising it. Option 2 is the widespread belief that merge sort has a fixed direction and descending order is obtained by reversing afterwards - the comparison inside the merge is what sets the order, and reversing is an extra pass merge sort does not perform. Option 3 skips the recursion: sorting a half by inspection is not merge sort, which is defined by dividing until each part holds one element. Option 4 does everything right and then concatenates instead of merging; concatenation makes the split worthless, because the combining step is the only place the two halves are ever compared with each other."
+        },
+        {
+          "type": "mcq",
+          "q": "Six activities have start times 2, 4, 1, 6, 9, 6 and finish times 3, 5, 7, 8, 10, 10 respectively, and you cannot work on two at once. Applying the greedy algorithm, what is the maximum number of activities and how is it obtained?",
+          "options": [
+            "2 - (1,7) and (9,10): at each stage take the activity that starts earliest among those still available",
+            "4 - (2,3), (4,5), (6,8), (9,10): at each stage take the compatible activity that finishes earliest",
+            "3 - (2,3), (4,5), (6,10): after finishing at 5, take the next activity that becomes available, which is the one starting at 6 and running to 10",
+            "3 - (2,3), (4,5), (9,10): after finishing at 5, both remaining candidates start at 6 and clash with each other, so neither can be selected"
+          ],
+          "answerIndex": 1,
+          "concept": "Greedy: the best possible solution applied at each stage, where 'best' is the choice that leaves the most room for later ones",
+          "why": "The activities are (2,3), (4,5), (1,7), (6,8), (9,10), (6,10). Take the compatible activity finishing earliest each time: (2,3) finishes at 3; (4,5) starts at 4 which is at or after 3, take it; (1,7) starts at 1 and clashes, skip; (6,8) starts at 6 which is at or after 5, take it; (9,10) starts at 9 which is at or after 8, take it; (6,10) starts at 6 which is before 8, skip. Four activities. Option 1 is the answer produced by the most natural wrong greedy rule - take whatever starts earliest - which grabs the long (1,7) first and blocks everything until 9, ending with two; it shows that greedy is only as good as the quantity it is greedy about. Option 3 is the same trap one step later: after (4,5) the candidate finishing at 10 is taken instead of the one finishing at 8, and that single choice destroys the (9,10) slot. Option 4 is the mutual-clash error - (6,8) and (6,10) conflict with each other, but the algorithm never has to choose between them as a pair; it takes the earlier finisher and passes over the other."
+        },
+        {
+          "type": "mcq",
+          "q": "A food delivery service wants the shortest route through a driver's 15 drops. A developer proposes generating every possible ordering of the 15 addresses, measuring each, and keeping the shortest. Judge the proposal against the course.",
+          "options": [
+            "The plan is sound: brute force is simple and consistent and, by going through all possible choices, it is the only approach here that guarantees the shortest route",
+            "The plan is dynamic programming rather than brute force, since every partial route is a sub-problem whose distance can be saved and reused, and dynamic programming guarantees an optimal solution, so the plan is sound",
+            "The route problem is undecidable, because no algorithm can return an accurate answer for every possible set of addresses, so no approach will serve",
+            "The plan is brute force, which relies solely on computing power and is simple and consistent but very slow: 15 addresses give over 1.3 trillion orderings, so the problem fails the second factor - whether the required calculations are possible considering processing times and capacity - and the case study's greedy or divide-and-conquer route building is what fits"
+          ],
+          "answerIndex": 3,
+          "concept": "Brute force is simple and consistent but very slow, and the computability factor is where that bites",
+          "why": "The course states that brute force relies solely on computing power and works by trying every possibility instead of improving efficiency with advanced techniques, and that such algorithms are simple and consistent but very slow. Fifteen stops give 15 factorial orderings - 1,307,674,368,000 of them - which is precisely what the second precondition tests: is the problem computable, considering processing times and capacity? It is not, so the solution must come from elsewhere, and the week's case study names greedy and divide and conquer for exactly this delivery-route problem. Option 1 is the strongest distractor because everything in it is true except its conclusion: brute force is consistent and it would find the shortest route - the objection is not correctness but that the calculation cannot be performed, which is why the three factors are weighed before a method is chosen. Option 2 mislabels the approach and then leans on dynamic programming's guarantee: saving partial routes is real technique, but the guarantee is conditional (provided a solution exists, an optimal solution can be found) and says nothing about time taken, and enumerating every ordering is not made into dynamic programming by storing results. Option 3 imports last week's vocabulary: an undecidable problem is one for which no algorithm returns an accurate true/false for every input, whereas here an algorithm plainly exists and is merely too slow."
+        },
+        {
+          "type": "mcq",
+          "q": "The same service instead sends each driver to the nearest undelivered address at every step. On one shift this leaves a single remaining drop right across the city, and the total distance beats no plan at all but is clearly not the shortest possible route. Which is correct?",
+          "options": [
+            "The greedy algorithm was implemented incorrectly: it selects the best optimal path at every stage, so a correct greedy implementation returns the shortest overall route",
+            "This is backtracking with the backtracking step left out; returning to the previous drop and taking an unconsidered option whenever a leg is long would repair it",
+            "This is greedy - the best possible solution applied at each stage - and the outcome is exactly what the course warns of: greedy might not always produce an optimal solution, though it does for many problems, and where it does, the solutions are simple and highly efficient",
+            "This is divide and conquer failing its condition, because the route was split into individual legs that are not genuinely simpler than the whole route"
+          ],
+          "answerIndex": 2,
+          "concept": "Greedy's caveat, stated by the course and then demonstrated",
+          "why": "'Nearest undelivered address' is the greedy rule applied to routing: the best possible solution is applied at each stage, and by always selecting the best optimal path it aims at the optimal solution. The long final leg is not a defect in the implementation but the documented behaviour - greedy might not always produce an optimal solution, although it produces one for many problems, and where it does the solution is simple and highly efficient, which is why it remains the right tool for a dispatcher who must decide in seconds. Option 1 is the error the whole week is built to prevent: it treats 'selects the best optimal path' as a guarantee about the finished route, when it is only a statement about each individual step, and the guarantee belongs to dynamic programming. Option 2 misreads the situation as an incomplete backtracking algorithm - backtracking is defined by reaching a final state, testing whether it is accepted or rejected, and returning to a previous state to try unconsidered options, none of which the dispatcher does or could do while the driver is moving. Option 4 transplants divide and conquer's effectiveness condition onto a problem that was never divided: the legs are not sub-problems whose solutions get combined, they are the successive choices of a single greedy pass."
+        },
+        {
+          "type": "short",
+          "q": "The delivery company wants software that 'optimises delivery routes'. Before any code exists, apply the three factors the course says must be considered, saying concretely what each one asks of this problem. Then decompose the task into a pipeline of at least four subtasks, saying what each stage hands to the next, and name the one stage where a greedy algorithm does its work and the one where divide and conquer does.",
+          "concept": "The three preconditions for a computational approach, and pipelining as the shape of the decomposition",
+          "why": "Model answer: (i) The problem must be clearly defined - state the current situation (drivers choose their own order, average delivery 40 minutes, fuel spend known), the end goal (minimum total delivery time and fuel cost with every order delivered), how the end goal is reached (compute an order of drops before the driver leaves and re-compute when a new order arrives), and the possible obstacles (traffic changing during the run, orders arriving mid-route, a fixed number of drivers, food spoiling past a deadline). (ii) The problem must be computable - can the required calculations be done within the processing times and capacity available? A route must be produced in seconds on a phone or a modest server, which rules out enumerating all orderings and points to an approach that trades guaranteed optimality for speed. (iii) The data requirements must be examined - identify the data types (addresses and coordinates, pairwise travel times, time windows, vehicle capacity, live traffic) and the storage capacity for the distance matrix and order history. A pipeline for the task, each subtask executed by a different process with the result of one feeding the next: (1) ingest and clean the orders, handing out a validated list of drops with coordinates and deadlines; (2) build the distance and time matrix for every pair of drops, handing out the travel cost between any two points; (3) cluster the drops into per-driver zones, handing each driver a small set of drops; (4) order the drops within each zone, handing out a sequence; (5) monitor and re-plan as traffic and new orders arrive, feeding updated drops back into stage 2. Divide and conquer does its work at stage 3: the one large routing problem is split into smaller, easier per-driver problems, each genuinely simpler than the whole and combined at the end simply by dispatching each driver - the cheap combining step the technique's condition demands. Greedy does its work at stage 4: within a zone, take the best available next drop at each stage (nearest, or nearest that still meets its deadline), which is fast, simple and good enough even though it might not return the optimal ordering."
+        },
+        {
+          "type": "short",
+          "q": "A team replaces a plain recursive Fibonacci function with one that writes every value it computes into a table and reads it back when needed; the run time collapses. Encouraged, they add the same table to their merge sort, storing every sorted sub-list, and measure no improvement at all. Explain, from the course's definitions, why saving the sub-problem solutions transforms the first and not the second, and state precisely what dynamic programming guarantees and what divide and conquer requires.",
+          "concept": "Dynamic programming is decomposition plus stored sub-solutions, and it pays only where sub-problems repeat",
+          "why": "Model answer: Both algorithms break a problem into sub-problems, so the difference cannot lie there. Plain recursive Fibonacci breaks fib(n) into fib(n-1) and fib(n-2), but those two sub-problems overlap and the same value is recomputed again and again: computing fib(6) this way makes 25 calls, evaluating fib(3) three times and fib(2) five times, and the waste grows explosively with n. Dynamic programming breaks the problem into sub-problems and saves the solutions of the sub-problems so that there is no need to compute the result again, so the table converts those 25 calls into 7 stored entries, one per value from fib(0) to fib(6) - that is the whole of the speed-up. Merge sort is divide and conquer: it splits the list into disjoint halves, and no sub-list is ever requested twice, because sorting the left half and sorting the right half have nothing in common. A table of stored results is only ever written, never usefully read, so it costs memory and returns nothing. What dynamic programming guarantees: provided that a solution to the problem exists, an optimal solution can be found - which is why it is used mostly for optimization problems, where the task is to find a minimum or a maximum. What divide and conquer requires: that the smaller, easier parts really are simpler than the complex whole, and that combining their solutions is less complicated than solving the original problem directly - merge sort satisfies both, since a one-element list is trivially sorted and merging two sorted lists is a single linear pass. The lesson to carry: saving results is not a general accelerator, it is the specific remedy for repeated sub-problems."
+        }
+      ]
+    }
+  ],
+  "recapCandidates": [
+    {
+      "course": "PHY_102",
+      "topic": "Why the terminal potential difference is less than the emf, and why it RISES when the external resistance is increased (emf, internal resistance and the lost volts Ir)",
+      "whyMisunderstood": "There are four layers stacked on top of one another, and most students only unpick the first. Layer one is the name: 'electromotive force' sounds like a force, so students expect newtons, when the quantity is energy per unit charge in joules per coulomb, i.e. volts, with dimensions [M L^2 T^-3 I^-1]. Layer two is that emf and terminal p.d. share the unit volt, so they get treated as the same number written two ways; the slide's own phrasing, 'emf is equal to the terminal potential difference when no current flows', is a conditional that is usually remembered without its condition. Layer three is the direction of the effect: asked what happens to the terminal p.d. when the load resistance goes up, most reach for the everyday rule 'a bigger resistance drops more voltage' and answer that V falls, whereas V = emf - Ir and the lost volts depend on the CURRENT, which the bigger resistor reduces - so V rises towards the emf. The internal drop tracks I, not R. Layer four is the algebra of emf = I(R + r): students read it as though the emf varied with the current, or drop r from the series total and compute I = emf/R, which quietly corrupts every later number in the question. On top of all that sits the V-I graph, where the gradient is minus the INTERNAL resistance (not the external one being varied) and the intercept at I = 0 is the emf - which is the experimental face of exactly the same conditional they half-remembered in layer two.",
+      "whyQuestions": [
+        "Why is the emf measured in volts and not in newtons, when it is called a force?",
+        "Why is the terminal potential difference of a real cell always less than its emf whenever a current flows?",
+        "Why does the term Ir use the INTERNAL resistance r rather than the external resistance R, and where does that energy actually go?",
+        "Why does increasing the external resistance R make the terminal p.d. RISE, when a bigger resistance is supposed to drop more voltage?",
+        "Why does the intercept of the V-I graph give the emf and its gradient give minus the internal resistance, and how does that connect to the statement that emf equals terminal p.d. only when no current flows?"
+      ],
+      "goodAnswerContains": "Line 1: emf = W/Q is the energy per coulomb the source supplies, unit the volt (J/C), dimensions [M L^2 T^-3 I^-1]; terminal p.d. V is the energy per coulomb actually delivered to the external circuit, and V = emf - Ir with Ir the energy per coulomb wasted as heat against the cell's own internal resistance. Line 2: because the internal drop is I times r, and I = emf/(R + r) falls as R rises, raising the load makes Ir smaller and pushes V up towards the emf, which it reaches only in the limit I = 0 (open circuit or an ideal voltmeter) - the internal drop follows the current, never the load resistance. Line 3: written as V = -rI + emf the relation is a straight line, so the V-I graph has gradient -r (the internal resistance, negative slope) and y-intercept emf (the p.d. extrapolated to zero current), which is the experimental statement of 'emf equals terminal p.d. when no current flows'.",
+      "workedExample": "A cell of unknown emf and internal resistance gives 1.00 A through a 1.5 ohm resistor and 0.50 A through a 3.5 ohm resistor. Since the emf is the same in both cases, emf = I(R + r) gives 1.00(1.5 + r) = 0.50(3.5 + r), so 1.5 + r = 1.75 + 0.50r, 0.50r = 0.25 and r = 0.50 ohm; then emf = 1.00(1.5 + 0.50) = 2.0 V, checked by 0.50(3.5 + 0.50) = 2.0 V. Terminal p.d. with the 1.5 ohm load: V1 = emf - I1 r = 2.0 - 1.00 x 0.50 = 1.5 V, which equals I1 R1 = 1.00 x 1.5 = 1.5 V. Terminal p.d. with the 3.5 ohm load: V2 = 2.0 - 0.50 x 0.50 = 1.75 V, which equals 0.50 x 3.5 = 1.75 V. So the LARGER resistor gives the HIGHER terminal p.d., 1.75 V against 1.5 V, because the current fell from 1.00 A to 0.50 A and the lost volts fell with it from 0.50 V to 0.25 V. Power wasted inside the cell also drops, from I^2 r = 1.00^2 x 0.50 = 0.50 W to 0.50^2 x 0.50 = 0.125 W. Plotting these two points, (1.00 A, 1.5 V) and (0.50 A, 1.75 V), gives a line of gradient (1.5 - 1.75)/(1.00 - 0.50) = -0.50 V/A, i.e. r = 0.50 ohm, and an intercept at I = 0 of 2.0 V, i.e. the emf - the two answers recovered graphically."
+    },
+    {
+      "course": "COS_102",
+      "topic": "Divide and conquer versus dynamic programming versus greedy: what each one does with the sub-problems, and what each does and does not guarantee",
+      "whyMisunderstood": "All three approaches are introduced in the same lesson, in consecutive slides, in language that makes them sound like the same idea told three times - each one 'takes a big problem apart' or 'goes for the best solution'. The first layer of confusion is that divide and conquer and dynamic programming share their entire first sentence: both break a problem into sub-problems. A student who learns them by their opening clause has no way to tell them apart and will label a memoised function 'divide and conquer' or an ordinary recursive split 'dynamic programming'. The single distinguishing feature is that dynamic programming saves the solutions of the sub-problems so that there is no need to compute the result again, and that saving only buys anything when the sub-problems actually repeat - which is why it transforms Fibonacci and does nothing for merge sort, whose halves are disjoint. The second layer is the guarantee, and it is where marks are most often lost: the course attaches the optimality guarantee to dynamic programming ('provided that a solution exists, dynamic programming guarantees that an optimal solution can be found') and explicitly withholds it from greedy ('might not always produce an optimal solution but they produce an optimal solution to many problems'). The phrase 'by always selecting the best optimal path, the greedy algorithm aims at achieving the optimal solution' reads like a guarantee and is not one - the word is 'aims'. A third layer is that greedy's efficiency claim is conditional and gets quoted unconditionally: solutions are 'always simple and highly efficient' only for the problems where greedy is able to provide optimal solutions, so efficiency is not evidence that greedy was right. A fourth layer is that greedy is not really a decomposition at all - it makes one irrevocable choice per stage and never revisits it - so lumping it with the other two hides the fact that its failure mode is a locally best choice that is globally poor, whereas divide and conquer's failure mode is a split whose recombination costs more than the original problem. The last layer is divide and conquer's own condition, which the slide prints in an inverted form and which students therefore reproduce backwards.",
+      "whyQuestions": [
+        "Why is 'it breaks the problem into sub-problems' not enough to identify dynamic programming?",
+        "Why does storing sub-results make recursive Fibonacci dramatically faster but do nothing at all for merge sort?",
+        "Why does the course say greedy 'aims at' the optimal solution rather than reaches it, and why is 'greedy solutions are simple and highly efficient' not evidence that greedy found the optimum?",
+        "Why is divide and conquer worth using only when combining the parts is cheaper than solving the original problem directly, and what happens to the technique when that fails?",
+        "Why can a greedy algorithm and a dynamic programming algorithm applied to the same optimization problem return different answers, and which one is trusted?"
+      ],
+      "goodAnswerContains": "States all three definitions in the course's own terms: divide and conquer splits a complex problem into smaller easier parts, solves them and combines them; dynamic programming breaks the problem into sub-problems and saves their solutions so the result need not be computed again; greedy applies the best possible solution at each stage, always selecting the best optimal path.\nAttaches the right condition or caveat to each: divide and conquer needs the parts to be simpler than the whole and the combining to be cheaper than solving the original directly; dynamic programming guarantees an optimal solution provided one exists and is used mostly for optimization; greedy might not always produce an optimal solution, though it does for many problems, and only then are its solutions simple and highly efficient.\nExplains the mechanism rather than the label: saving sub-solutions pays only when sub-problems overlap, divide and conquer's parts are disjoint smaller instances of the same problem that are recombined, and greedy makes one irrevocable choice per stage and never revisits it - so it can be fast and wrong where dynamic programming is slower and right.",
+      "workedExample": "Take fib(6) from the course's series 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144. Plain recursion: fib(n) = fib(n-1) + fib(n-2), with fib(0) = 0 and fib(1) = 1. Count the calls. Writing T(n) for the number of calls, T(0) = T(1) = 1 and T(n) = 1 + T(n-1) + T(n-2), so T(2) = 3, T(3) = 5, T(4) = 9, T(5) = 15 and T(6) = 25. Those 25 calls are not 25 different questions: the call tree contains fib(6) once, fib(5) once, fib(4) twice, fib(3) three times, fib(2) five times, fib(1) eight times and fib(0) five times (1 + 1 + 2 + 3 + 5 + 8 + 5 = 25). The same sub-problems are being re-solved, which is the overlap that dynamic programming exists for. Now apply dynamic programming: keep a table and fill it upwards - table[0] = 0, table[1] = 1, table[2] = 0 + 1 = 1, table[3] = 1 + 1 = 2, table[4] = 1 + 2 = 3, table[5] = 2 + 3 = 5, table[6] = 3 + 5 = 8. Seven entries, six additions, each sub-problem solved exactly once, and the answer fib(6) = 8 agrees with the series. Twenty-five calls became seven stored results, and the gap widens sharply with n. Now try the same trick on merge sort of [2, 8, 4, 9, 3]: it splits into [2,8] and [4,9,3], then into [2], [8], [4], [9], [3], merges to [8,2] and [9,4,3] (taking the larger front element for descending order) and finally to [9,8,4,3,2]. Every sub-list in that run is distinct - no sorted sub-list is ever asked for a second time - so a table of saved sub-solutions would be written and never read, and the run time would not improve by a single comparison. That is the whole distinction: merge sort is divide and conquer (disjoint parts, cheap merge), Fibonacci by table is dynamic programming (overlapping parts, saved solutions). Finally the greedy contrast on the same theme: to make 30 units of change from coin values 25, 10 and 1, greedy takes the best available coin at each stage - 25, then 1 five times, six coins in all - while considering the sub-problems properly yields 10 + 10 + 10, three coins. Greedy was faster and wrong, exactly as the course's caveat warns."
+    }
+  ]
+}
