@@ -684,29 +684,58 @@ function weekGrid(root){
   GRID.forEach(function(d, i){
     var r = el("div","wr");
     r.appendChild(el("div","dn",d.day));
+
     var chk = null, ft = null;
     if(wd && wd.checks) chk = wd.checks.filter(function(x){ return x.day===d.day; })[0] || null;
     if(wd && wd.days){ var dd = wd.days.filter(function(x){ return x.day===d.day; })[0]; if(dd && dd.fast) ft = dd.fast.topic; }
+    var hasCheck = !!(chk && chk.questions && chk.questions.length);
+    var mine = getScore(ME, w, d.day);
+
+    /* deep hour - opens that night's check */
     var dc = el("div","cell d"+(i===di?" today":""));
-    dc.innerHTML = '<div class="cn">'+esc(NAMES[d.deep])+'</div><div class="ct">'+esc(chk&&chk.topic?chk.topic:d.dn)+'</div>';
-    var mine = getScore(ME,w,d.day);
-    var sr = el("div"); sr.style.cssText = "margin-top:8px;display:flex;gap:5px;flex-wrap:wrap";
-    var any = false;
-    if(mine){ sr.appendChild(el("span","sc "+scoreClass(mine), "you "+mine.score+"/"+mine.max)); any = true; }
+    dc.innerHTML = '<div class="ce">deep · 1×</div>'
+      + '<div class="cn">'+esc(NAMES[d.deep])+'</div>'
+      + '<div class="ct">'+esc(chk&&chk.topic?chk.topic:d.dn)+'</div>';
+    var foot = el("div","cf");
+    if(mine) foot.appendChild(el("span","sc "+scoreClass(mine), "you "+mine.score+"/"+mine.max));
     others().forEach(function(p){
       var o = getScore(p.id,w,d.day);
-      if(o){ sr.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max)); any = true; }
+      if(o) foot.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max));
     });
-    if(any) dc.appendChild(sr);
-    dc.style.cursor = "pointer";
-    dc.onclick = function(){ if(chk && chk.questions && chk.questions.length) startQuiz(d.day); else manualScore(d.day); };
+    foot.appendChild(el("span","go", mine ? "retake →" : (hasCheck ? chk.questions.length+" questions →" : "log a score →")));
+    dc.appendChild(foot);
+    dc.onclick = function(){ if(hasCheck) startQuiz(d.day); else manualScore(d.day); };
     r.appendChild(dc);
+
+    /* fast hour - nothing to score, so tapping just opens the brief */
     var fc = el("div","cell f"+(i===di?" today":""));
-    fc.innerHTML = '<div class="cn">'+esc(NAMES[d.fast])+'</div><div class="ct">'+esc(ft||d.fn)+'</div>';
+    var label = (d.fast === "REVIEW" || d.fast === "CATCHUP") ? "no video · 1×" : "fast · 1.5–1.75×";
+    fc.innerHTML = '<div class="ce">'+label+'</div>'
+      + '<div class="cn">'+esc(NAMES[d.fast])+'</div>'
+      + '<div class="ct">'+esc(ft||d.fn)+'</div>';
+    var full = String(ft||d.fn||"");
+    if(full.length > 90){
+      var hint = el("div","cf");
+      hint.appendChild(el("span","go dim","read the brief"));
+      fc.appendChild(hint);
+      fc.onclick = function(){
+        var body = fc.querySelector(".ct");
+        var open = body.classList.toggle("open");
+        hint.querySelector(".go").textContent = open ? "show less" : "read the brief";
+      };
+    } else {
+      fc.classList.add("static");
+    }
     r.appendChild(fc);
     g.appendChild(r);
   });
   root.appendChild(g);
+
+  var legend = el("p","muted");
+  legend.style.cssText = "margin:2px 2px 0;font-size:13px";
+  legend.innerHTML = "Left is the <b>deep hour</b> — tap it to take that night's check. Right is the <b>fast hour</b>: watch at speed, quiz, forum, done. It isn't scored, so there is nothing to open.";
+  root.appendChild(legend);
+
   if(!wd){
     var n = el("div","card");
     n.appendChild(el("p","muted", LOADING[w] ? "Loading week "+w+"…" : "Week "+w+" didn't load. Check the Data tab."));
