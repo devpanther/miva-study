@@ -1185,8 +1185,11 @@ function viewTonight(root){
   }
 
   var g = GRID[di], w = wk(), wd = weekData(w);
-  var topic = null, chk = null;
-  if(wd && wd.checks){ chk = wd.checks.filter(function(x){ return x.day===g.day; })[0] || null; if(chk) topic = chk.topic; }
+  /* Ask for the deep check by slot. Filtering on the day alone used to work only
+     because deep checks happened to be written first; now that every weekday also
+     carries a fast check, that would hand the deep hour a five-question quiz. */
+  var chk = checkFor(wd, g.day, "deep");
+  var topic = chk ? chk.topic : null;
   var fastTopic = null;
   if(wd && wd.days){ var dd = wd.days.filter(function(x){ return x.day===g.day; })[0]; if(dd && dd.fast) fastTopic = dd.fast.topic; }
 
@@ -1228,6 +1231,16 @@ function viewTonight(root){
   } else if(fchk && fchk.questions && fchk.questions.length){
     row2.appendChild(btn("act","Quick check · "+fchk.questions.length+" questions", function(){ startQuiz(g.day, "fast"); }));
     row2.appendChild(el("span","muted","about three minutes"));
+    c2.appendChild(row2);
+  } else if(g.fast === "REVIEW" || g.fast === "CATCHUP"){
+    /* Friday and Saturday have nothing new to test, so they get no check. Say so —
+       a card that just stops reads like something failed to load. */
+    row2.appendChild(el("span","muted","No check tonight: this hour is "
+      + (g.fast === "REVIEW" ? "review" : "catch-up") + ", not new material."));
+    c2.appendChild(row2);
+  } else {
+    row2.appendChild(btn("act ghost","Log a score manually", function(){ manualScore(g.day, "fast"); }));
+    row2.appendChild(el("span","muted","No quick check generated for this session yet"));
     c2.appendChild(row2);
   }
   root.appendChild(c2);
