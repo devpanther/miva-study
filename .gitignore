@@ -3,3 +3,4 @@ site-bundle.tar.gz
 api-patch.tar.gz
 .vercel
 .env*
+home-patch.tar.gz

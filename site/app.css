@@ -292,3 +292,22 @@ canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:80}
 .prose table{font-size:13px}
 .prose > :first-child{margin-top:0;padding-top:0;border-top:0}
 .prose > :last-child{margin-bottom:0}
+
+/* ---------- home: folded plan ---------- */
+.card.fold{padding:0;overflow:hidden}
+.foldh{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;
+  background:none;border:0;padding:15px 17px;text-align:left;color:var(--ink);
+  font:600 16px Fredoka, ui-rounded, sans-serif;transition:background .12s}
+.foldh:hover{background:var(--surface2)}
+.foldh .ft i{font:400 13px Nunito, sans-serif;color:var(--ink3);font-style:normal;
+  margin-left:7px;white-space:nowrap}
+.foldh .chev{flex:0 0 24px;height:24px;border-radius:8px;background:var(--surface2);
+  color:var(--ink2);display:grid;place-items:center;font-size:15px;font-weight:600;line-height:1}
+.foldb{padding:2px 17px 17px;animation:fadein .18s ease}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+.foldb .tw{box-shadow:none;margin:0 0 10px}
+.foldb .tw:last-child{margin-bottom:0}
+.foldb p{margin:0 0 9px}
+.foldb p:last-child{margin-bottom:0}
+.foldb table{font-size:13.5px}
+.foldb td.k{white-space:nowrap;color:var(--deep)}

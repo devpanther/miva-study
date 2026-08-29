@@ -32,7 +32,44 @@ var RUNWAY = [
 ];
 var LETTERS = ["A","B","C","D","E","F"];
 
-var S, ME=null, TAB="tonight", QUIZ=null, MANUAL=null,
+/* The standing plan. Lifted from the study board so the app is the single place
+   the timetable lives, rather than a link out to something else. */
+var SPEED = [
+  ["1×", "MTH 102 and PHY 102 derivations. COS 102 algorithm walkthroughs. Any code being written on screen.",
+         "If you would need to pause and write it down, it runs at normal speed. Speeding these up feels productive and teaches you nothing."],
+  ["1.25×", "Conceptual explanation in MTH, PHY and COS — the parts between the derivations.",
+            "Fast enough to keep you alert, slow enough to follow an argument."],
+  ["1.75×", "Every introductory video in every course. All of GST 112, GST 122 and CSC 106.",
+            "Orientation and recall material. You are not deriving anything."]
+];
+var MISSED = [
+  "<b>Protect the deep hour, sacrifice the fast hour.</b> Sixty minutes only? Do the first half. The fast courses compress; maths and physics do not.",
+  "<b>Missed a whole day?</b> Saturday's second hour absorbs it. That is what it is there for.",
+  "<b>Missed several?</b> Deep hours only for the rest of the week. Let the GST courses ride — you can clear two of those weeks in one sitting later. You cannot do that with physics.",
+  "<b>Lost the whole week?</b> Rejoin the current week. Never study two weeks at once; that is what actually ends these plans. The missed week gets picked up in revision.",
+  "<b>Keep the Sunday recap regardless.</b> It is the last thing to drop, not the first. It costs no preparation, and after a broken week it is the only hour that tells you what you actually retained."
+];
+var DEEPHOUR = [
+  ["0–5", "Skim the PDF's headings. Five minutes knowing where the lecture goes saves twenty inside it."],
+  ["5–35", "The lecture, normal speed, pausing to write. Copy the derivations by hand — don't transcribe the talking."],
+  ["35–50", "The PDF properly. Mark anything the video skipped; that gap is usually where the exam question lives."],
+  ["50–65", "The check. Twelve questions on exactly what you just covered, notes closed."],
+  ["—", "Log the score. That is your confidence rating — you don't guess at it."]
+];
+var CALENDAR = [
+  ["Now", "28 Aug – 6 Sep", "All 8 pre-semester tests. Clear MIVA-COS 111. Speed-run CSC 106 Weeks 1–3."],
+  ["1 – 4", "7 Sep – 4 Oct", "Normal weeks."],
+  ["5", "5 – 11 Oct", "Mid-Semester Assessment — graded, two attempts, averaged."],
+  ["6 – 7", "12 – 25 Oct", "Mid-course evaluation forms in Week 7."],
+  ["8", "26 Oct – 1 Nov", "Lab Assessment — graded PDF submission. Start it early."],
+  ["9", "2 – 8 Nov", "End of Semester Assessment — graded."],
+  ["10 – 12", "9 – 29 Nov", "Post-semester tests in Week 12. Compare against your pre-semester scores."],
+  ["Revision", "30 Nov – 6 Dec", "Full mocks, two courses a day, timed."],
+  ["Exams", "7 – 13 Dec", "Weakest 20% only."]
+];
+var OPEN = {};
+
+var S, ME=null, TAB="home", QUIZ=null, MANUAL=null,
     TOAST=null, VIEWWEEK=null, BRIEF=false;
 var WEEKS = {};          /* week number -> pack, fetched on demand */
 var LOADING = {};        /* week number -> true while in flight */
@@ -199,7 +236,7 @@ function signIn(id){ ME = id; try{ localStorage.setItem("miva_me", id); }catch(e
 function signOut(){
   ME = null;
   try{ localStorage.removeItem("miva_me"); }catch(e){}
-  TAB="tonight"; render();
+  TAB="home"; render();
 }
 function claimSlot(name){
   var n = String(name||"").trim();
@@ -612,6 +649,164 @@ function statsStrip(root){
   root.appendChild(pc);
 }
 
+/* ---------- home ---------- */
+function fold(root, title, sub, build){
+  var c = el("div","card fold");
+  var h = el("button","foldh");
+  h.innerHTML = '<span class="ft">'+esc(title)+(sub?' <i>'+esc(sub)+'</i>':'')+'</span><span class="chev">'+(OPEN[title]?"−":"+")+'</span>';
+  h.onclick = function(){ OPEN[title] = !OPEN[title]; render(); };
+  c.appendChild(h);
+  if(OPEN[title]){
+    var b = el("div","foldb");
+    build(b);
+    c.appendChild(b);
+  }
+  root.appendChild(c);
+}
+function tbl(parent, head, rows){
+  var w = el("div","tw");
+  var h = head ? '<thead><tr>'+head.map(function(x){ return '<th>'+esc(x)+'</th>'; }).join("")+'</tr></thead>' : '';
+  var b = rows.map(function(r){
+    return '<tr>'+r.map(function(c,i){ return '<td'+(i===0?' class="k"':'')+'>'+c+'</td>'; }).join("")+'</tr>';
+  }).join("");
+  w.innerHTML = '<table>'+h+'<tbody>'+b+'</tbody></table>';
+  parent.appendChild(w);
+}
+function bullets(parent, items){
+  var ul = el("ul");
+  ul.style.cssText = "margin:0;padding-left:19px;color:var(--ink2);font-size:14.5px";
+  items.forEach(function(x){ var li = el("li",null,x); li.style.marginBottom = "7px"; ul.appendChild(li); });
+  parent.appendChild(ul);
+}
+function weekGrid(root){
+  var w = wk(), wd = weekData(w), di = dayIdx();
+  var g = el("div","wg");
+  GRID.forEach(function(d, i){
+    var r = el("div","wr");
+    r.appendChild(el("div","dn",d.day));
+    var chk = null, ft = null;
+    if(wd && wd.checks) chk = wd.checks.filter(function(x){ return x.day===d.day; })[0] || null;
+    if(wd && wd.days){ var dd = wd.days.filter(function(x){ return x.day===d.day; })[0]; if(dd && dd.fast) ft = dd.fast.topic; }
+    var dc = el("div","cell d"+(i===di?" today":""));
+    dc.innerHTML = '<div class="cn">'+esc(NAMES[d.deep])+'</div><div class="ct">'+esc(chk&&chk.topic?chk.topic:d.dn)+'</div>';
+    var mine = getScore(ME,w,d.day);
+    var sr = el("div"); sr.style.cssText = "margin-top:8px;display:flex;gap:5px;flex-wrap:wrap";
+    var any = false;
+    if(mine){ sr.appendChild(el("span","sc "+scoreClass(mine), "you "+mine.score+"/"+mine.max)); any = true; }
+    others().forEach(function(p){
+      var o = getScore(p.id,w,d.day);
+      if(o){ sr.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max)); any = true; }
+    });
+    if(any) dc.appendChild(sr);
+    dc.style.cursor = "pointer";
+    dc.onclick = function(){ if(chk && chk.questions && chk.questions.length) startQuiz(d.day); else manualScore(d.day); };
+    r.appendChild(dc);
+    var fc = el("div","cell f"+(i===di?" today":""));
+    fc.innerHTML = '<div class="cn">'+esc(NAMES[d.fast])+'</div><div class="ct">'+esc(ft||d.fn)+'</div>';
+    r.appendChild(fc);
+    g.appendChild(r);
+  });
+  root.appendChild(g);
+  if(!wd){
+    var n = el("div","card");
+    n.appendChild(el("p","muted", LOADING[w] ? "Loading week "+w+"…" : "Week "+w+" didn't load. Check the Data tab."));
+    root.appendChild(n);
+  }
+}
+
+function viewHome(root){
+  var di = dayIdx(), w = wk(), wd = weekData(w);
+
+  /* the way in */
+  var hero = el("div","card deepc");
+  if(di === -1){
+    hero.appendChild(el("div","lbl","Sunday · 19:00"));
+    hero.appendChild(el("h2",null,"Recap night"));
+    hero.appendChild(el("p","muted","One hour. One topic each, taught with no notes."));
+    var rs = el("div","row");
+    rs.appendChild(btn("act big","Open Sunday", function(){ TAB="sunday"; render(); window.scrollTo(0,0); }));
+    hero.appendChild(rs);
+  } else {
+    var g = GRID[di], chk = null;
+    if(wd && wd.checks) chk = wd.checks.filter(function(x){ return x.day===g.day; })[0] || null;
+    var sc = getScore(ME, w, g.day);
+    hero.appendChild(el("div","lbl","Tonight · "+g.day+" · week "+w));
+    hero.appendChild(el("h2",null, esc(NAMES[g.deep]) + "  then  " + esc(NAMES[g.fast])));
+    hero.appendChild(el("p","muted", chk && chk.topic ? esc(chk.topic).slice(0,150)+"…" : esc(g.dn)));
+    var r = el("div","row");
+    if(sc){
+      r.appendChild(el("span","sc "+scoreClass(sc), "Scored "+sc.score+"/"+sc.max));
+      r.appendChild(btn("act","Open the session", function(){ TAB="tonight"; render(); window.scrollTo(0,0); }));
+    } else {
+      r.appendChild(btn("act big","Start tonight's session", function(){ TAB="tonight"; render(); window.scrollTo(0,0); }));
+    }
+    hero.appendChild(r);
+  }
+  root.appendChild(hero);
+
+  statsStrip(root);
+
+  var wh = el("div","card");
+  wh.appendChild(el("div","lbl","The week · deep hour then fast hour"));
+  wh.appendChild(el("p","muted","Six identical days. No day is heavier than another, and no course is ever more than three days from your attention. Tap any deep-hour cell to take that check."));
+  root.appendChild(wh);
+  weekGrid(root);
+
+  var ph = el("div","card");
+  ph.appendChild(el("div","lbl","The plan"));
+  ph.appendChild(el("p","muted","The standing rules. Open one when you need it."));
+  root.appendChild(ph);
+
+  fold(root, "Every evening is two halves", "21:00–23:00", function(b){
+    b.appendChild(el("p","muted","One hour of hard, one hour of fast, in that order. You never face two demanding courses back to back, and every day ends on something light — so you finish feeling ahead rather than beaten."));
+    tbl(b, null, [
+      ["21:00 – 22:00", "<b>The deep hour · 1×</b><br>Maths, physics or algorithms. Pen in hand, phone in another room. One topic, properly understood."],
+      ["22:00 – 23:00", "<b>The fast hour · 1.5–1.75×</b><br>Watch at speed, read the PDF, take the quiz, post in the forum, close the laptop."]
+    ]);
+    b.appendChild(el("p","muted","Times are the default, not the rule. Shift the pair earlier or later to suit the day — what matters is that they stay adjacent and stay in that order."));
+  });
+
+  fold(root, "What runs at what speed", null, function(b){
+    tbl(b, ["Speed","What","Why"], SPEED.map(function(r){ return [r[0], esc(r[1]), esc(r[2])]; }));
+    b.appendChild(el("p","muted","The test when you're unsure: if you could follow it while walking, it runs at 1.75×. If you'd need to stop and write, it runs at 1×."));
+  });
+
+  fold(root, "A deep hour, start to finish", "65 minutes", function(b){
+    tbl(b, ["Min","What"], DEEPHOUR.map(function(r){ return [r[0], esc(r[1])]; }));
+    b.appendChild(el("p","muted","Never rewatch a lecture. Re-read the PDF instead — roughly four times faster, and it holds better."));
+  });
+
+  fold(root, "When you miss a day", null, function(b){ bullets(b, MISSED); });
+
+  fold(root, "Afternoon bursts", "10–15 min", function(b){
+    b.appendChild(el("p","muted","Not scheduled, and never a separate subject. When a gap opens between calls, spend it on one thing."));
+    bullets(b, [
+      "<b>Watch tonight's intro videos.</b> At 1.75× they take ten to fifteen minutes and turn the deep hour into revision rather than first contact.",
+      "<b>Already did that?</b> Clear a forum post, or take a practice quiz cold. Both are five-minute jobs that are annoying to carry into the evening.",
+      "<b>Don't start new material.</b> Twenty interrupted minutes on a derivation is worse than none — you'll redo it tonight anyway."
+    ]);
+  });
+
+  fold(root, "The Sunday recap", "1 hr, both of you", function(b){
+    b.appendChild(el("p","muted","Teach the topic you understood <b>least</b>, not the one you understood best. Explaining something you only half-know is where it gets built — you find the hole the moment you say it out loud, and someone is there to notice you glossed over it."));
+    bullets(b, [
+      "One hour in total, not one hour each. Two topics — one yours, one theirs.",
+      "Never both take the same course. If your lowest scores land together, whoever scored lower keeps it and the other takes their next-lowest elsewhere. The app does this for you.",
+      "Resist a second topic each. Wanting to come back next Sunday is what keeps this running in November.",
+      "A bad week makes this more valuable, not less. Teach one thing you half-covered.",
+      "Whatever you couldn't explain goes to the top of next week's list."
+    ]);
+    var r = el("div","row");
+    r.appendChild(btn("act ghost","Open Sunday", function(){ TAB="sunday"; render(); window.scrollTo(0,0); }));
+    b.appendChild(r);
+  });
+
+  fold(root, "The calendar", "28 Aug – 13 Dec", function(b){
+    tbl(b, ["Week","Dates","What's different"], CALENDAR.map(function(r){ return [r[0], esc(r[1]), esc(r[2])]; }));
+    b.appendChild(el("p","muted","Assumes Week 1 opens Monday 7 September. The LMS still shows the January cohort's windows — confirm yours when they publish."));
+  });
+}
+
 /* ---------- tonight ---------- */
 function viewTonight(root){
   var wi = weekInfo(), di = dayIdx();
@@ -692,47 +887,11 @@ function viewTonight(root){
 
 /* ---------- week ---------- */
 function viewWeek(root){
-  var w = wk(), wd = weekData(w), di = dayIdx();
-  if(w===0){ root.appendChild(el("div","empty","<b>No week loaded yet</b>Weeks 1 to 12 are built in — the semester starts on 7 September.")); return; }
-
   var head = el("div","card");
   head.appendChild(el("div","lbl","The shape of every week"));
   head.appendChild(el("p","muted","Deep hour first at normal speed, fast hour second at 1.5–1.75×. Six days. Sunday is the recap only."));
   root.appendChild(head);
-
-  var g = el("div","wg");
-  GRID.forEach(function(d, i){
-    var r = el("div","wr");
-    r.appendChild(el("div","dn",d.day));
-    var chk=null, ft=null;
-    if(wd && wd.checks) chk = wd.checks.filter(function(x){ return x.day===d.day; })[0]||null;
-    if(wd && wd.days){ var dd=wd.days.filter(function(x){return x.day===d.day;})[0]; if(dd&&dd.fast) ft=dd.fast.topic; }
-    var dc = el("div","cell d"+(i===di?" today":""));
-    dc.innerHTML = '<div class="cn">'+esc(NAMES[d.deep])+'</div><div class="ct">'+esc(chk&&chk.topic?chk.topic:d.dn)+'</div>';
-    var mine = getScore(ME,w,d.day);
-    var sr = el("div"); sr.style.cssText="margin-top:8px;display:flex;gap:5px;flex-wrap:wrap";
-    var anyS = false;
-    if(mine){ sr.appendChild(el("span","sc "+scoreClass(mine), "you "+mine.score+"/"+mine.max)); anyS=true; }
-    others().forEach(function(p){
-      var o = getScore(p.id,w,d.day);
-      if(o){ sr.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max)); anyS=true; }
-    });
-    if(anyS) dc.appendChild(sr);
-    dc.style.cursor="pointer";
-    dc.onclick=function(){ if(chk&&chk.questions&&chk.questions.length) startQuiz(d.day); else manualScore(d.day); };
-    r.appendChild(dc);
-    var fc = el("div","cell f"+(i===di?" today":""));
-    fc.innerHTML = '<div class="cn">'+esc(NAMES[d.fast])+'</div><div class="ct">'+esc(ft||d.fn)+'</div>';
-    r.appendChild(fc);
-    g.appendChild(r);
-  });
-  root.appendChild(g);
-
-  if(!wd){
-    var n = el("div","card");
-    n.appendChild(el("p","muted", LOADING[w] ? "Loading week "+w+"…" : "Week "+w+" didn't load. Pull down to retry, or check the Data tab."));
-    root.appendChild(n);
-  }
+  weekGrid(root);
 }
 
 /* ---------- sunday ---------- */
@@ -1459,7 +1618,7 @@ function render(){
 
   if(GATE === "open" && ME && findPerson(ME)){
     var tabs = el("div","tabs");
-    [["tonight","Tonight"],["week","Week"],["sunday","Sunday"],["exam","Exam"],["progress","Stats"],["data","Data"]].forEach(function(t){
+    [["home","Home"],["tonight","Tonight"],["sunday","Sunday"],["exam","Exam"],["progress","Stats"],["data","Data"]].forEach(function(t){
       tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
         QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; } TAB=t[0]; render(); window.scrollTo(0,0);
       }));
@@ -1485,7 +1644,8 @@ function render(){
     if(TOAST) root.appendChild(el("div","toast", esc(TOAST)));
     return;
   }
-  if(TAB==="tonight") viewTonight(wrap);
+  if(TAB==="home") viewHome(wrap);
+  else if(TAB==="tonight") viewTonight(wrap);
   else if(TAB==="week") viewWeek(wrap);
   else if(TAB==="sunday") viewSunday(wrap);
   else if(TAB==="progress") viewProgress(wrap);
