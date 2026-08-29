@@ -903,7 +903,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
-   "topic": "The same Week 11 material applied to concrete design judgements rather than recalled. Students read short module listings and pseudocode and decide whether a module is cohesive, what it is coupled to and why, which principle a design violates, and how to redraw the boundaries. Scenarios cover judging cohesion from a function list, spotting coupling through a shared data structure, evaluating what a proposed refactor buys and costs, checking a hierarchy against vertical partitioning, choosing top-down or bottom-up for a given project, and deciding whether a change qualifies as refactoring at all.",
+   "topic": "The same Week 11 material applied to concrete design judgements rather than recalled. You read short module listings and pseudocode and decide whether a module is cohesive, what it is coupled to and why, which principle a design violates, and how to redraw the boundaries. Scenarios cover judging cohesion from a function list, spotting coupling through a shared data structure, evaluating what a proposed refactor buys and costs, checking a hierarchy against vertical partitioning, choosing top-down or bottom-up for a given project, and deciding whether a change qualifies as refactoring at all.",
    "maxScore": 12,
    "questions": [
     {

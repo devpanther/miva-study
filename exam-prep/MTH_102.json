@@ -1,1 +1,1107 @@
-{"course": "MTH_102", "title": "MTH_102 — End of Semester Objective Exam", "guideTitle": "MTH_102 — Elementary Mathematics II (Calculus)", "questions": [{"q": "Her SUMMARY slide defines a function as a relation that assigns", "options": ["exactly one input to each output", "every value of the codomain to some input", "exactly one output to each input", "equal numbers of inputs and outputs"], "answerIndex": 2, "why": "Why C is right: those are her words on slide 25, and both halves carry weight — every input is used, and none of them gets two outputs. Why the others are wrong: A states a stronger, separate property that x² already fails, since f(−3) = f(3) · B describes the codomain being fully used, which slide 5 shows is not required · D counts the two sets, which her x² diagram deliberately does not do."}, {"q": "Slide 13: the domain of f(x) = (3x + 1)/(x² + 5) is", "options": ["D = (−∞, ∞)", "all reals except x = ±√5", "all reals except x = −1/3", "all reals except x = −5"], "answerIndex": 0, "why": "Why A is right: she sets x² + 5 ≠ 0, so x² ≠ −5, and a square is never negative, so nothing has to be thrown out. Why the others are wrong: B solves x² − 5 = 0 instead; the slide's denominator is a sum, not a difference · C excludes the zero of the numerator, which only makes f(x) = 0 and is perfectly legal · D reads x² ≠ −5 as x ≠ −5, dropping the square."}, {"q": "Slide 17: the range of f(x) = 2 − |x − 3| is", "options": ["R = [2, ∞)", "R = (−∞, 2)", "R = [0, ∞)", "R = (−∞, 2]"], "answerIndex": 3, "why": "Why D is right: from |x − 3| ≥ 0 she multiplies by −1, which reverses it to −|x − 3| ≤ 0, then adds 2 to get y ≤ 2. Why the others are wrong: A keeps the inequality pointing the same way after multiplying by −1 — the step she flags · B uses a round bracket at 2, but y = 2 is attained at x = 3 · C quotes the fact |x − 3| ≥ 0 without doing anything to it."}, {"q": "Slide 19: the inverse of f(x) = 3x − 7 is", "options": ["f⁻¹(x) = 1/(3x − 7)", "f⁻¹(x) = (x + 7)/3", "f⁻¹(x) = (x − 7)/3", "f⁻¹(x) = 3(x + 7)"], "answerIndex": 1, "why": "Why B is right: let y = 3x − 7, switch x with y to get x = 3y − 7, then isolate y — her three named steps. Why the others are wrong: A gives the reciprocal; an inverse hands x back, a reciprocal hands back 1 · C adds nothing after switching, losing the sign when 7 crosses the equals sign · D multiplies by 3 instead of dividing, undoing the wrong operation."}, {"q": "With f(x) = 5x − 4 and g(x) = x², slide 20 gives g ∘ f =", "options": ["25x² − 40x + 16", "5x² − 4", "25x² + 16", "25x² − 20x + 16"], "answerIndex": 0, "why": "Why A is right: g ∘ f = g[f(x)] = (5x − 4)(5x − 4), and she shows both middle terms −20x and −20x before collecting them. Why the others are wrong: B is f ∘ g, the other composite on the same slide — order is part of the question · C squares each term separately and loses the middle terms entirely · D keeps only one of the two −20x terms."}, {"q": "Slide 22 asks for f(x) = x + 2 at x = 0, 1, 2. The correct y-values are", "options": ["2, 1, 0", "0, 1, 2", "2, 4, 6", "2, 3, 4"], "answerIndex": 3, "why": "Why D is right: substitute: 0 + 2 = 2, 1 + 2 = 3, 2 + 2 = 4, giving the points (0, 2), (1, 3), (2, 4). Why the others are wrong: A is the table printed on the slide, and it is wrong — those are the values of 2 − x, which agrees with x + 2 only at x = 0 · B lists the inputs again instead of the outputs · C doubles each input rather than adding 2."}, {"q": "TASK (slide 18): the domain and range of h(x) = √(x + 2) − 8 are", "options": ["D = (−2, ∞), R = (−8, ∞)", "D = [−2, ∞), R = [−8, ∞)", "D = [2, ∞), R = [−8, ∞)", "D = [−2, ∞), R = (−∞, −8]"], "answerIndex": 1, "why": "Why B is right: x + 2 ≥ 0 gives x ≥ −2, and √(x + 2) ≥ 0 gives √(x + 2) − 8 ≥ −8; both endpoints are attained at x = −2. Why the others are wrong: A uses round brackets, but h(−2) = −8 is a legal input with a real output · C solves x − 2 ≥ 0 instead of x + 2 ≥ 0 · D reverses the range inequality; nothing here was multiplied by a negative."}, {"q": "For f(x) = x² − 4, slide 11 computes f(3) =", "options": ["1", "9", "5", "6"], "answerIndex": 2, "why": "Why C is right: square first, then subtract: (3)² − 4 = 9 − 4 = 5, which is the order the slide spells out. Why the others are wrong: A subtracts first and squares afterwards, computing (3 − 4)² — a different function · B squares and forgets to subtract the 4 · D doubles the input instead of squaring it."}, {"q": "For f(x) = ax² + bx + c, the constant c is", "options": ["the y-coordinate of the vertex", "the axis of symmetry", "the number of real roots", "the y-intercept, f(0)"], "answerIndex": 3, "why": "Why D is right: putting x = 0 leaves c, so c is where the parabola cuts the y-axis. Why the others are wrong: A is the claim made on the slide, and it is wrong: the vertex sits at x = −b/2a, which is 0 only when b = 0 · B names a vertical line x = −b/2a, not a constant term · C is decided by the discriminant b² − 4ac, not by c alone."}, {"q": "The vertex of f(x) = x² + 6x + 5 is at", "options": ["(3, −4)", "(−3, −4)", "(−3, 5)", "(−6, −4)"], "answerIndex": 1, "why": "Why B is right: x = −b/2a = −6/2 = −3, and f(−3) = 9 − 18 + 5 = −4. Why the others are wrong: A drops the minus in −b/2a · C takes the constant term 5 as the vertex height instead of evaluating f(−3) · D uses −b rather than −b/2a, forgetting to divide by 2a."}, {"q": "The equation x² − 4x + 7 = 0 has", "options": ["two distinct real roots", "one repeated real root", "no real roots", "two real roots of opposite sign"], "answerIndex": 2, "why": "Why C is right: Δ = (−4)² − 4(1)(7) = 16 − 28 = −12 < 0, so the parabola never meets the x-axis. Why the others are wrong: A would need Δ > 0 · B would need Δ = 0 exactly · D would need Δ > 0 and a negative constant term."}, {"q": "log₃ 81 equals", "options": ["4", "27", "3", "9"], "answerIndex": 0, "why": "Why A is right: a logarithm asks for the exponent, and 3⁴ = 81. Why the others are wrong: B is 81/3, dividing instead of taking the exponent · C quotes the base back · D is √81, which answers a different question."}, {"q": "Which function models exponential decay?", "options": ["f(x) = 2ˣ", "f(x) = (0.5)ˣ", "f(x) = x²", "f(x) = log₂ x"], "answerIndex": 1, "why": "Why B is right: the base lies strictly between 0 and 1, so successive powers shrink. Why the others are wrong: A has base greater than 1, so it grows · C is a power function — the variable is in the base, not the exponent · D is the inverse of an exponential, not an exponential."}, {"q": "The solution set of |x − 3| < 5 is", "options": ["x < 8", "x > 8 or x < −2", "−2 < x < 8", "−5 < x < 5"], "answerIndex": 2, "why": "Why C is right: the inequality unfolds to −5 < x − 3 < 5, and adding 3 throughout gives −2 < x < 8. Why the others are wrong: A keeps only the upper half and forgets the lower bound · B solves the inequality with > instead of <, giving the outside of the interval · D never adds the 3 back."}, {"q": "If f(x) = 2x + 1 for x ≤ 0 and f(x) = x² − 3 for x > 0, then f(0) is", "options": ["1", "−3", "both 1 and −3", "undefined"], "answerIndex": 0, "why": "Why A is right: x = 0 satisfies x ≤ 0, so the first branch applies: 2(0) + 1 = 1. Why the others are wrong: B uses the second branch, but x > 0 excludes 0 · C would break the one-output rule; the branches are on disjoint intervals · D assumes a gap at the boundary, but x ≤ 0 covers x = 0."}, {"q": "Slide 5: lim x→2 (x³ − 3)/(x² − 6) equals", "options": ["2.5", "the limit does not exist", "0", "−2.5"], "answerIndex": 3, "why": "Why D is right: substitution gives (8 − 3)/(4 − 6) = 5/(−2), a well-defined expression, so the work is finished. Why the others are wrong: A loses the sign of the denominator 4 − 6 = −2 · B treats a negative denominator as a failure, but only 0/0 stops substitution · C reads the negative denominator as zero."}, {"q": "Slide 7: lim x→2 (1/x − 1/2)/(x − 2) equals", "options": ["−1/4", "1/4", "−1/2", "1/2"], "answerIndex": 0, "why": "Why A is right: multiply top and bottom by 2x to get (2 − x)/[2x(x − 2)], write 2 − x = −1(x − 2), cancel, then substitute. Why the others are wrong: B cancels 2 − x against x − 2 directly, which flips the sign — the error the slide's −1 step exists to prevent · C substitutes x = 2 into −1/x instead of −1/(2x) · D makes both mistakes at once."}, {"q": "TASK (slide 8): lim x→3 (x³ − 27)/(x − 3) equals", "options": ["0", "9", "27", "3"], "answerIndex": 2, "why": "Why C is right: x³ − 27 = (x − 3)(x² + 3x + 9); cancel and substitute to get 9 + 9 + 9 = 27, which L'Hôpital confirms as 3x² at x = 3. Why the others are wrong: A reads the 0/0 from substitution as the answer, but 0/0 decides nothing · B keeps only the x² term of the quadratic factor · D quotes the point being approached instead of the limit."}, {"q": "Slide 9: lim x→0 (√(x + 9) − 3)/x equals", "options": ["0", "1/6", "1/3", "6"], "answerIndex": 1, "why": "Why B is right: multiply by the conjugate of the numerator, √(x + 9) + 3, leaving x/[x(√(x + 9) + 3)]; cancel x and substitute. Why the others are wrong: A reads the 0/0 from substitution as zero · C cancels the 3 in the denominator against only one term · D inverts the final fraction 1/(3 + 3)."}, {"q": "Slide 13: lim x→∞ x²/eˣ equals", "options": ["∞", "1", "2", "0"], "answerIndex": 3, "why": "Why D is right: one application of L'Hôpital gives 2x/eˣ, still ∞/∞, so differentiate again to reach 2/eˣ, and the exponential drives it to 0. Why the others are wrong: A assumes the polynomial wins; the exponential grows faster · B stops after checking that top and bottom both grow · C reads off the numerator of 2/eˣ and forgets the denominator."}, {"q": "Applying L'Hôpital's Rule to lim f(x)/g(x) replaces it with", "options": ["lim [g f′ − f g′]/g²", "lim f′(x)·g′(x)", "lim [f(x)/g(x)]′", "lim f′(x)/g′(x)"], "answerIndex": 3, "why": "Why D is right: top and bottom are differentiated separately, which is why she names f and g and differentiates each on its own line. Why the others are wrong: A is the quotient rule; if a g² appears in your working you used the wrong rule · B multiplies the derivatives instead of dividing them · C differentiates the whole quotient, which is the quotient rule again."}, {"q": "Slide 23 states 5 − x³ ≤ f(x) ≤ 5 − x³ and asks for lim x→0 f(x). The corrected bound and the limit are", "options": ["upper bound 5 + x³; the limit is 5", "upper bound 5 − x³; the limit is 5", "upper bound 5 + x³; the limit is 0", "upper bound 5 + x³; the limit is 10"], "answerIndex": 0, "why": "Why A is right: the theorem line one row above gives the bounds as 5 − x³ and 5 + x³, so the printed upper bound is a misprint; both bounds tend to 5, so f is squeezed to 5. Why the others are wrong: B keeps the misprint, which would make the two bounds identical and the hypothesis vacuous · C reads off x³ at 0 instead of the whole bound · D adds the two bounds instead of noting they agree."}, {"q": "Which two of her ten limit properties carry a non-zero proviso?", "options": ["Quotient and Product", "Sum and Difference", "Quotient and Reciprocal", "Power and Composite"], "answerIndex": 2, "why": "Why C is right: the Quotient property needs lim g(x) ≠ 0 and the Reciprocal property needs lim f(x) ≠ 0 — exactly the condition that fails in a 0/0 problem. Why the others are wrong: A the Product property needs nothing; both limits may be anything · B both hold with no condition at all · D the Power property is unconditional in her statement."}, {"q": "TASK (slide 11): lim x→4 (1/√x − 1/2)/(x − 4) equals", "options": ["1/16", "−1/16", "−1/8", "−1/4"], "answerIndex": 1, "why": "Why B is right: clear the small fractions with 2√x to get (2 − √x)/[2√x(x − 4)], factor x − 4 as (√x − 2)(√x + 2), write 2 − √x = −1(√x − 2), cancel and substitute. Why the others are wrong: A cancels 2 − √x against √x − 2 without the −1 rewrite, the same slip as slide 7 · C forgets one factor of 2 when substituting into 2√x(√x + 2) · D quotes the answer to the slide-7 example instead."}, {"q": "The three conditions for f to be continuous at c are", "options": ["f(c) is defined and f′(c) exists", "f(c) is defined, the limit exists, and they are equal", "the limit exists and is finite", "f is defined on both sides of c"], "answerIndex": 1, "why": "Why B is right: all three in that order; failing any one makes f discontinuous at c. Why the others are wrong: A asks for a derivative, which continuity does not require · C is condition (ii) only, and says nothing about f(c) · D is weaker than any of the three and permits a break at c."}, {"q": "On a graph, the left limit at x = 2 is 3, the right limit is −4, and a solid dot sits at (2, 1). Then lim x→2 f(x) is", "options": ["1", "3", "−4", "DNE"], "answerIndex": 3, "why": "Why D is right: a two-sided limit exists only when the two one-sided limits agree, and 3 ≠ −4. Why the others are wrong: A quotes f(2), the solid dot, which the limit never inspects · B reports the left-hand limit alone · C reports the right-hand limit alone."}, {"q": "For that same graph — left limit 3, right limit −4, solid dot at (2, 1), open circles at (2, 3) and (2, −4) — the value f(2) is", "options": ["1", "3", "−4", "undefined"], "answerIndex": 0, "why": "Why A is right: only a shaded dot may be quoted as a function value; the open circles mark heights the curve approaches but never takes. Why the others are wrong: B reads an open circle as a function value · C reads the other open circle as a function value · D ignores the solid dot; a function can be defined at a point and still be discontinuous there."}, {"q": "For f(x) = (x² − 1)/(x − 1), the limit as x → 1 is", "options": ["0", "DNE", "2", "1"], "answerIndex": 2, "why": "Why C is right: factor and cancel to get x + 1 for every x ≠ 1, so both one-sided limits are 2 — even though f(1) itself is undefined. Why the others are wrong: A reads the 0/0 from substitution as the answer · B concludes from f(1) being undefined, but a limit never uses the value at the point · D substitutes into the denominator's factor instead of x + 1."}, {"q": "At x = 0 the function g(x) = |x| is", "options": ["discontinuous because of the corner", "undefined, so the limit fails", "continuous, despite the sharp corner", "continuous only from the right"], "answerIndex": 2, "why": "Why C is right: the left and right limits are both 0 and g(0) = 0, so all three conditions hold; continuity is about not lifting the pen, not about smoothness. Why the others are wrong: A confuses a corner with a break in the curve · B is false: |0| = 0 · D misreads the superscript + as part of the function."}, {"q": "If lim x→3⁺ f(x) = +∞ and lim x→3⁻ f(x) = −∞, then", "options": ["the limit is ∞", "the two-sided limit does not exist and x = 3 is a vertical asymptote", "the limit is 0, since +∞ and −∞ cancel", "f is continuous at 3"], "answerIndex": 1, "why": "Why B is right: ∞ is not a real number, so writing lim = +∞ describes how the limit fails rather than giving it a value. Why the others are wrong: A treats ∞ as a value the limit takes · C adds two things that are not numbers · D would need f(3) defined and equal to a finite limit."}, {"q": "Which statement about lim x→c f(x) and f(c) is correct?", "options": ["the limit always equals f(c)", "if f(c) is defined then the limit exists", "if the limit exists then f is continuous at c", "the limit is built only from x near c, never from x = c"], "answerIndex": 3, "why": "Why D is right: cover the point x = c with your thumb: anything still readable is the limit, anything hidden is f(c). Why the others are wrong: A holds only when f is continuous at c, which is the thing being tested · B is false at a break, where f(c) is defined and the two sides disagree · C skips conditions (i) and (iii); f(c) may be missing or at the wrong height."}, {"q": "Slide 5: the derivative of f(x) = 3x¹⁰⁰ − 4x is", "options": ["300x⁹⁹ − 4", "300x⁹⁹", "300x⁹⁹ − 4x⁰ left as is", "3x⁹⁹ − 4"], "answerIndex": 0, "why": "Why A is right: (3×100)x⁹⁹ for the first term, and 4x differentiates to 4·1·x⁰ = 4, since x⁰ = 1 — the line she writes out separately. Why the others are wrong: B loses the second term altogether · C stops one step early; x⁰ is 1, so the term is just −4 · D drops the power down without multiplying by the old power 100."}, {"q": "Slide 7: the derivative of f(x) = (4x + 6)(2x³ − 5x) is", "options": ["8x³ + 24x² − 32x − 30", "32x³ + 36x² − 40x − 30", "8x³ + 24x² − 4x − 30", "24x² − 20"], "answerIndex": 1, "why": "Why B is right: u v′ + u′ v = (4x + 6)(6x² − 5) + (2x³ − 5x)(4), and expanding the product first confirms it. Why the others are wrong: A is the answer printed on the slide, and it is wrong — it is not the derivative of anything on that slide · C follows the slide's other misprint, where the square on 6x² was dropped · D multiplies the two derivatives, u′v′, which is not the product rule."}, {"q": "Slide 8: the derivative of f(x) = x/cos(x) is", "options": ["(cos x + x sin x)/cos²x", "(cos x + sin x)/cos²x", "(cos x − x sin x)/cos²x", "(x sin x − cos x)/cos²x"], "answerIndex": 0, "why": "Why A is right: v u′ − u v′ over v² gives [cos x·1 − x(−sin x)]/cos²x, and the double negative turns −x sin x into +x sin x. Why the others are wrong: B is the slide's printed final line, which drops the factor x from the second term · C forgets that cos differentiates to −sin, so only one minus appears · D reverses the numerator's order, which negates the whole answer."}, {"q": "Slide 9: the derivative of f(x) = (6x − 3)/(5x²) is", "options": ["−6(x + 1)/(5x³)", "6(x − 1)/(5x³)", "6(1 − x)/(5x³)", "6/(10x)"], "answerIndex": 2, "why": "Why C is right: [5x²·6 − (6x − 3)·10x]/(5x²)² = (−30x² + 30x)/25x⁴, and dividing top and bottom by 5x gives 6(1 − x)/5x³. Why the others are wrong: A subtracts (6x − 3)(10x) without changing the sign of −30x, so +30x becomes −30x · B reverses the numerator terms, negating the answer · D differentiates numerator and denominator separately."}, {"q": "Slide 10: the derivative of f(x) = cos(x²) is", "options": ["−sin(x²)", "2x sin(x²)", "−2x sin(u)", "−2x sin(x²)"], "answerIndex": 3, "why": "Why D is right: y′(u)·u′(x) with y = cos u and u = x² gives −sin(u)·2x, then u is replaced by x². Why the others are wrong: A forgets the inner derivative 2x · B loses the minus that comes from cos differentiating to −sin · C leaves the answer in u instead of putting the inside function back."}, {"q": "TASK 1 (slide 11): the derivative of f(x) = (2x − 4)² is", "options": ["4x − 8", "2x − 4", "8x − 16", "8x − 8"], "answerIndex": 2, "why": "Why C is right: with u = 2x − 4, y′(u)·u′(x) = 2u·2 = 4(2x − 4); expanding first gives 4x² − 16x + 16, whose derivative is the same. Why the others are wrong: A is 2(2x − 4) — the inner derivative 2 was never paid, which is the whole point of the task · B just drops the square and copies the bracket · D differentiates the expansion but mishandles the middle term."}, {"q": "Slide 12: differentiating x² + y² = 25 implicitly gives dy/dx =", "options": ["x/y", "−2x/y", "−x/(2y)", "−x/y"], "answerIndex": 3, "why": "Why D is right: 2x + 2y(dy/dx) = 0 because d(y²)/dx = 2y·dy/dx, and the constant 25 differentiates to 0. Why the others are wrong: A loses the sign when moving 2x across the equals sign · B cancels only the 2 in the denominator · C cancels only the 2 in the numerator."}, {"q": "Slide 13: differentiating xy + 6x⁴ = y implicitly gives dy/dx =", "options": ["−(24x³ + y)/(x − 1)", "(24x³ + y)/(x − 1)", "−(24x³ − y)/(x − 1)", "−24x³/(x − 1)"], "answerIndex": 0, "why": "Why A is right: the product rule on xy gives y + x(dy/dx); collect the dy/dx terms, factorise to (dy/dx)(x − 1), then divide. Why the others are wrong: B loses the sign when 24x³ and y are moved to the other side · C forgets the y produced by the product rule on xy and changes its sign · D drops the y term completely, treating xy as if only x were differentiated."}, {"q": "Slide 14: for x(t) = 2t + 1 and y(t) = t² − t, dy/dx =", "options": ["2t − 1", "(2t − 1)/2", "2/(2t − 1)", "(2t − 1)/(2t + 1)"], "answerIndex": 1, "why": "Why B is right: her parametric rule is dy/dx = dy/dt ÷ dx/dt, with dy/dt = 2t − 1 and dx/dt = 2; leaving the answer in t is correct. Why the others are wrong: A quotes dy/dt, which is not the gradient of the curve · C divides the wrong way round · D divides by x(t) instead of by dx/dt."}, {"q": "Slides 18–19: differentiating y = √x from first principles gives", "options": ["1/(2√x)", "1/(2x)", "2√x", "1/√x"], "answerIndex": 0, "why": "Why A is right: multiply by the conjugate so the numerator becomes h, cancel h, then let h → 0 inside the surd to get 1/(√x + √x). Why the others are wrong: B cancels the root as well as the h · C inverts the final fraction · D puts h = 0 in only one of the two roots in the denominator."}, {"q": "For f(x, y) = 3x² + 2xy − y³, the partial derivative ∂f/∂y is", "options": ["6x + 2y", "2x − 3y²", "2x + 3y²", "6x + 2y − 3y²"], "answerIndex": 1, "why": "Why B is right: x is held constant, so 3x² dies, 2xy leaves 2x, and −y³ gives −3y². Why the others are wrong: A is ∂f/∂x — and note the slide labels the second answer ∂f/∂x as well, which is a misprint · C loses the minus sign already sitting in front of y³ · D differentiates by both variables at once."}, {"q": "Slide 4: the first derivative of f(x) = x⁴ + 2x³ − 15x + 4 is", "options": ["4x³ + 6x² − 15 + 4", "4x³ + 6x² − 15x", "4x³ + 2x² − 15", "4x³ + 6x² − 15"], "answerIndex": 3, "why": "Why D is right: term by term, and the constant 4 differentiates to 0 — the NOTE she puts in bold on that slide. Why the others are wrong: A keeps the constant, which should vanish · B leaves the x on the −15 term; the power rule with n = 1 gives 15x⁰ = 15 · C forgets to multiply 2x³ by its old power 3."}, {"q": "Slide 6: the second derivative of f(x) = √(x³) is", "options": ["(3/2)x^(1/2)", "(3/4)x^(1/2)", "(3/4)x^(−1/2)", "(3/2)x^(−1/2)"], "answerIndex": 2, "why": "Why C is right: rewrite as x^(3/2), differentiate to (3/2)x^(1/2), then differentiate again: the coefficients multiply to 3/4 and the exponent falls to −1/2. Why the others are wrong: A stops at the first derivative · B multiplies the coefficients but does not lower the exponent · D lowers the exponent but forgets to multiply by the 1/2 that came down."}, {"q": "Slide 8: for f(x) = ln x, the value of f‴(2) is", "options": ["1/8", "−1/4", "2", "1/4"], "answerIndex": 3, "why": "Why D is right: y′ = x⁻¹, y″ = −x⁻², y‴ = 2x⁻³, so f‴(2) = 2/8 = 1/4. Why the others are wrong: A uses 1/x³ and forgets the coefficient 2 that the second differentiation produced · B keeps the minus from the second derivative, but the third flips it back · C quotes the coefficient of x⁻³ instead of evaluating at 2."}, {"q": "Slide 9: the third derivative of sin(5x) + e³ˣ is", "options": ["−5 cos(5x) + 3e³ˣ", "125 cos(5x) + 27e³ˣ", "−125 cos(5x) + 27e³ˣ", "−125 cos(5x) − 27e³ˣ"], "answerIndex": 2, "why": "Why C is right: the chain rule deposits another 5 and another 3 at every step: 5, 25, 125 and 3, 9, 27, while cos → −sin → −cos supplies the minus. Why the others are wrong: A collects the chain factor only once instead of at every differentiation · B loses the sign that the trigonometric cycle produces · D attaches the minus to the exponential too, but eᵘ never changes sign."}, {"q": "TASK 1 (slide 7): the second derivative of y = cos(3x) is", "options": ["9 cos(3x)", "−9 cos(3x)", "−3 cos(3x)", "−9 sin(3x)"], "answerIndex": 1, "why": "Why B is right: y′ = −3 sin(3x), then y″ = −3·3 cos(3x); the sign arrives at the first step and the second adds none. Why the others are wrong: A misses the minus produced when cos differentiates to −sin · C collects the chain factor 3 only once · D stops the trigonometric cycle one step early."}, {"q": "Slide 14: the notation f⁽⁴⁾(x) means", "options": ["the fourth derivative, that is (f‴(x))′", "the fourth power of f(x)", "f evaluated at x = 4", "the fourth power of f′(x)"], "answerIndex": 0, "why": "Why A is right: from the fourth order on, the prime marks are replaced by a bracketed superscript, which counts differentiations. Why the others are wrong: B reads the bracketed superscript as an exponent — exactly what the brackets exist to prevent · C confuses a superscript counter with an argument · D combines both misreadings."}, {"q": "Slides 10–11: the second derivative of ln(1 + x²) is", "options": ["(2 + 2x²)/(1 + 2x² + x⁴)", "2/(1 + x²)²", "(2 − 2x²)/(1 + 2x² + x⁴)", "2x/(1 + x²)²"], "answerIndex": 2, "why": "Why C is right: the chain rule gives f′ = 2x/(1 + x²), which is a quotient, so the quotient rule gives [(1 + x²)2 − 2x(2x)]/(1 + x²)², and she expands the denominator. Why the others are wrong: A adds the two numerator terms instead of subtracting, ignoring v u′ − u v′ · B differentiates only the numerator of f′ and leaves the denominator alone · D squares the denominator without applying the quotient rule at all."}, {"q": "Her Example 1 concludes that ∫2x dx equals", "options": ["x² + c", "x²", "2x² + c", "x²/2 + c"], "answerIndex": 0, "why": "Why A is right: x² is not the only antiderivative of 2x: adding any constant changes nothing when you differentiate, so the whole family must be reported. Why the others are wrong: B is an incomplete answer, and the whole example exists to stop this · C multiplies by the power instead of dividing by the new one · D divides the coefficient by the old power rather than using the power rule."}, {"q": "Slide 7: ∫x⁴dx equals", "options": ["4x³ + c", "x⁵/5 + c", "5x⁵ + c", "x⁵ + c"], "answerIndex": 1, "why": "Why B is right: raise the power by one and divide by the new power, then add c. Why the others are wrong: A differentiates instead of integrating · C multiplies by the new power rather than dividing · D raises the power but forgets to divide."}, {"q": "Slide 8: ∫(2/x⁷)dx equals", "options": ["1/(3x⁶) + c", "−1/(3x⁸) + c", "−2/(6x⁷) + c", "−1/(3x⁶) + c"], "answerIndex": 3, "why": "Why D is right: rewrite as 2x⁻⁷, so the new exponent is −6 and you divide by −6: 2/(−6) = −1/3. Why the others are wrong: A keeps the answer positive, forgetting that dividing by −6 flips the sign · B lowers the exponent instead of raising it · C divides the coefficient but never changes the power."}, {"q": "Slide 9: ∫(11x¹⁰ − 4x⁹ + 1)dx equals", "options": ["x¹¹ − (2/5)x¹⁰ + C", "x¹¹ − (2/5)x¹⁰ + x + C", "x¹¹ − (2/5)x¹⁰ + 1 + C", "110x⁹ − 36x⁸ + C"], "answerIndex": 1, "why": "Why B is right: split term by term; 11/11 = 1, 4/10 = 2/5, and ∫1dx = x by the power rule with n = 0. Why the others are wrong: A drops ∫1dx, treating the constant term as if it integrated to nothing · C leaves the 1 unintegrated · D differentiates the polynomial instead of integrating it."}, {"q": "The power rule for integration excludes n = −1 because", "options": ["x⁻¹ has no antiderivative at all", "the result would be negative", "x⁰ is undefined", "n + 1 = 0, so you would divide by zero"], "answerIndex": 3, "why": "Why D is right: the rule divides by the new power, and at n = −1 that new power is 0. Why the others are wrong: A is false — it simply is not given by this rule · B confuses the sign of the exponent with the validity of the rule · C is false: x⁰ = 1."}, {"q": "Slide 12: ∫₀³ 4x dx equals", "options": ["12", "36", "18", "9"], "answerIndex": 2, "why": "Why C is right: F(x) = 2x², so the value is 2(3²) − 2(0²) = 18; the coefficient 2 is factored outside the evaluation. Why the others are wrong: A substitutes into f rather than F, giving 4(3) − 4(0) · B forgets to divide by the new power, using 4x² as the antiderivative · D integrates to x² and drops the coefficient."}, {"q": "Slide 13: ∫₋₁⁵ (3x² − 6)dx equals", "options": ["90", "88", "102", "126"], "answerIndex": 0, "why": "Why A is right: x³ from −1 to 5 is 125 − (−1) = 126, and 6x from −1 to 5 is 6(5 − (−1)) = 36, so 126 − 36 = 90. Why the others are wrong: B takes (−1)³ as +1, giving 125 − 1 = 124 for the first bracket · C reads 5 − (−1) as 4, so the second bracket becomes 24 · D computes the first bracket and forgets to subtract the second."}, {"q": "Slide 14: ∫₂³ (1/x²)dx equals", "options": ["1/6", "−1/6", "5/6", "1/5"], "answerIndex": 0, "why": "Why A is right: rewrite as x⁻², so F(x) = −1/x, and −(1/3 − 1/2) = −(−1/6) = 1/6. Why the others are wrong: B loses the minus in F(x) = −1/x, so the bracket is never negated · C adds 1/2 and 1/3 instead of subtracting · D integrates x⁻² as x⁻¹ without dividing by the new power."}, {"q": "TASK 2 (slide 15): ∫₋₁² (7x − 5)dx equals", "options": ["4.5", "12.5", "−4.5", "5.5"], "answerIndex": 2, "why": "Why C is right: F(x) = 7x²/2 − 5x, so F(2) = 4 and F(−1) = 7/2 + 5 = 17/2, and 4 − 17/2 = −9/2; a negative value is legitimate for a signed integral. Why the others are wrong: A computes F(−1) − F(2), reversing the order of the limits · B adds the two values instead of subtracting · D reads −5(−1) as −5, losing the sign at the lower limit."}, {"q": "Slide 7 states the substitution formula as", "options": ["∫f′(g(x))·g′(x)dx = f′(g(x)) + C", "∫f′(g(x))·g′(x)dx = f(g′(x)) + C", "∫f′(g(x))·g′(x)dx = f(g(x))·g(x) + C", "∫f′(g(x))·g′(x)dx = f(g(x)) + C"], "answerIndex": 3, "why": "Why D is right: it is the chain rule read backwards: spot an inner function and its derivative multiplying it. Why the others are wrong: A leaves the outer function differentiated, so nothing was integrated · B substitutes the derivative of the inner function into f · C multiplies by the inner function, which no rule licenses."}, {"q": "Example 1 (slide 7): with u = x + 2, ∫₀²(x + 2)³dx equals", "options": ["240", "60", "64", "16"], "answerIndex": 1, "why": "Why B is right: the limits convert to u = 2 and u = 4, giving (1/4)(4⁴ − 2⁴) = (256 − 16)/4 = 60. Why the others are wrong: A computes 4⁴ − 2⁴ and forgets the factor 1/4 · C uses only the upper limit, 4⁴/4 · D evaluates 2⁴ alone, as if the lower limit were the answer."}, {"q": "Slide 8 leaves ∫2x·e^(x²)dx as eᵘ + C. The complete answer is", "options": ["eᵘ + C", "e^(2x) + C", "x²e^(x²) + C", "e^(x²) + C"], "answerIndex": 3, "why": "Why D is right: this is an indefinite integral, so u — which was your own invention — must be eliminated; u = x² puts it back. Why the others are wrong: A is what the slide prints, and it is incomplete: u does not appear in the question · B substitutes the derivative 2x into the exponent instead of u = x² · C multiplies by u as well as substituting it."}, {"q": "Slide 10: ∫x·eˣ dx equals", "options": ["x·eˣ + eˣ + C", "x·eˣ − eˣ + C", "x²eˣ/2 + C", "eˣ − x·eˣ + C"], "answerIndex": 1, "why": "Why B is right: with u = x and dv = eˣdx, uv − ∫v du = x·eˣ − ∫eˣdx; differentiating the answer returns x·eˣ. Why the others are wrong: A adds the leftover integral instead of subtracting it · C is the result of the reverse choice u = eˣ, which raises the power of x instead of lowering it · D subtracts in the wrong order, negating the answer."}, {"q": "Slides 11–12: ∫3x²·sin(x)dx equals", "options": ["−3x²cos x + 6(x sin x + cos x) + C", "3x²cos x − 6(x sin x + cos x) + C", "−3x²cos x − 6(x sin x + cos x) + C", "−3x²cos x + 6x sin x + C"], "answerIndex": 0, "why": "Why A is right: dv = sin x dx gives v = −cos x, which is where the first minus comes from; the leftover −∫−cos x(6x dx) becomes +6∫x cos x dx, and that second pass gives x sin x + cos x. Why the others are wrong: B takes v = +cos x, reversing every sign in the answer · C misses that two minus signs make the leftover integral positive · D stops the second pass before integrating −∫sin x dx to +cos x."}, {"q": "TASK 2 (slide 13): ∫x·ln(x)dx equals", "options": ["(x²/2)ln x − x²/2 + C", "(x²/2)ln x + x²/4 + C", "(x²/2)ln x − x²/4 + C", "x·ln x − x + C"], "answerIndex": 2, "why": "Why C is right: here u must be ln x and dv = x dx, because dv has to be something you can integrate; then ∫(x²/2)(1/x)dx = (1/2)∫x dx. Why the others are wrong: A forgets the 1/2 in front of the leftover ∫x dx · B adds the leftover integral instead of subtracting it · D quotes the standard integral of ln x, ignoring the extra factor of x."}, {"q": "Slides 14–15: ∫√(1 − x²)dx equals", "options": ["sin⁻¹(x)/2 + sin(2u)/4 + C", "sin⁻¹(x)/2 + x√(1 − x²)/2 + C", "cos⁻¹(x)/2 + x√(1 − x²)/2 + C", "sin⁻¹(x) + x√(1 − x²) + C"], "answerIndex": 1, "why": "Why B is right: x = sin u kills the root via 1 − sin²u = cos²u, then cos²u = (1 + cos 2u)/2 gives u/2 + sin(2u)/4, and sin 2u = 2 sin u cos u converts back to x. Why the others are wrong: A leaves half the answer in u; the substitution must be undone · C inverts the wrong function; x = sin u means u = sin⁻¹(x) · D drops both halves' factor of 1/2, which came from the double-angle identity."}, {"q": "Slide 16 rewrites √(4 − 9x²) as 2√(1 − (3x/2)²) and sets 3x/2 = sin u. Then dx equals", "options": ["(3/2)cos(u)du", "cos(u)du", "(2/3)cos(u)du", "(2/3)sin(u)du"], "answerIndex": 2, "why": "Why C is right: differentiating gives (3/2)dx = cos u du, so dx is cos u du multiplied by the reciprocal of 3/2. Why the others are wrong: A uses 3/2 instead of its reciprocal — the standard way to lose this question · B ignores the inner coefficient entirely, as if the substitution were x = sin u · D differentiates sin u to sin u."}, {"q": "Slide 19: ∫[1/(x² + 3x)]dx equals", "options": ["(1/3)ln x + (1/3)ln(x + 3) + C", "ln(x² + 3x) + C", "(1/3)ln(x(x + 3)) + C", "(1/3)ln x − (1/3)ln(x + 3) + C"], "answerIndex": 3, "why": "Why D is right: factor to 1/(x(x + 3)), split as A/x + B/(x + 3), clear to 1 = A(x + 3) + Bx, then x = 0 gives A = 1/3 and x = −3 gives B = −1/3. Why the others are wrong: A misses that B came out negative · B treats the whole denominator as if the numerator were its derivative · C recombines the logs as a product, which corresponds to A = B = 1/3."}, {"q": "Slide 20: in 7x − 6 = A(x + 3) + B(x − 2), the value of B is", "options": ["27/5", "−27/5", "27", "−8/5"], "answerIndex": 0, "why": "Why A is right: set x = −3, the root that kills A: 7(−3) − 6 = −27 and B(−3 − 2) = −5B, so −27 = −5B and two negatives give B = 27/5. Why the others are wrong: B divides −27 by +5, missing that x − 2 is also negative at x = −3 · C forgets to divide by the factor −5 at all · D swaps in the value of A and negates it."}, {"q": "Slide 4: a definite integral ∫ₐᵇ f(x)dx is improper if", "options": ["a limit of integration is infinite, or f has a discontinuity on [a, b]", "the integrand is negative somewhere on [a, b]", "the answer is not a whole number", "the interval [a, b] is very long"], "answerIndex": 0, "why": "Why A is right: those are her two triggers, and you must check for both before starting. Why the others are wrong: B describes a signed integral, which is perfectly ordinary · C confuses the value with the type of integral · D a finite interval of any length is not improper on its own."}, {"q": "The first line of any Type I answer is", "options": ["∫ₐ^∞ f(x)dx = F(∞) − F(a)", "∫ₐ^∞ f(x)dx = lim x→∞ ∫ₐ^∞ f(x)dx", "∫ₐ^∞ f(x)dx = F(a) − F(∞)", "∫ₐ^∞ f(x)dx = lim t→∞ ∫ₐᵗ f(x)dx"], "answerIndex": 3, "why": "Why D is right: the symbol has no meaning until the infinite limit is replaced by a letter; marks are given for writing this line. Why the others are wrong: A substitutes ∞ into an antiderivative, but ∞ is not a number you may substitute · B leaves the upper limit at ∞ and reuses x as the limit variable · C reverses the order of the limits as well."}, {"q": "Slide 6: ∫₀^∞ xe⁻ˣ dx", "options": ["diverges", "converges to 0", "converges to 1", "converges to −1"], "answerIndex": 2, "why": "Why C is right: the antiderivative is −xe⁻ˣ − e⁻ˣ; the lower limit contributes +1, and −te⁻ᵗ is −∞/∞, so L'Hôpital sends it to 0. Why the others are wrong: A assumes −te⁻ᵗ runs to −∞, but the exponential beats the polynomial · B forgets the +1 that subtracting the value at t = 0 contributes · D loses the sign when the lower-limit value −1 is subtracted."}, {"q": "Slide 7: ∫₋∞^∞ (2x² − x + 3)dx", "options": ["is 0 by symmetry", "diverges, because one half already runs to infinity", "converges, since the two halves cancel", "diverges only if both halves diverge"], "answerIndex": 1, "why": "Why B is right: the sum formula applies only if both halves converge, so once the piece from 0 to ∞ is unbounded the question is over. Why the others are wrong: A tries to cancel two infinities, which the definition forbids · C makes the same cancellation error · D reverses the hypothesis: both halves must converge, not just one."}, {"q": "Slide 9: ∫₋₁² (1/x⁴)dx", "options": ["equals −3/8", "equals 3/8", "diverges; the integrand is undefined at x = 0, which lies inside the interval", "converges to 1/24"], "answerIndex": 2, "why": "Why C is right: split at 0 and take one-sided limits; both pieces run to +∞, so the integral diverges. Why the others are wrong: A applies the Fundamental Theorem straight across, giving a negative number for a strictly positive integrand · B takes the magnitude of that same illegal calculation · D keeps only the value at the upper limit."}, {"q": "With 0 ≤ g(x) ≤ f(x) for all x ≥ a, which conclusion is valid?", "options": ["if ∫g converges then ∫f converges", "if ∫f converges then ∫g converges", "if ∫f diverges then ∫g diverges", "if ∫f converges then ∫g diverges"], "answerIndex": 1, "why": "Why B is right: in her lettering g is underneath and f is on top, so the big one convergent drags the small one down with it. Why the others are wrong: A argues upward from the small function, which proves nothing · C argues downward from the big function, which also proves nothing · D contradicts the inequality outright."}, {"q": "Slide 13: ∫₁^∞ 1/√(x³ + 7) dx", "options": ["converges, by comparison with 1/x^(3/2)", "diverges, since x³ + 7 ≥ x³", "converges to a value you can compute", "cannot be decided by comparison"], "answerIndex": 0, "why": "Why A is right: x³ + 7 ≥ x³ gives √(x³ + 7) ≥ √(x³), and taking reciprocals reverses it, so the integrand is at most x^(−3/2), where p = 3/2 > 1. Why the others are wrong: B carries the inequality through the reciprocal without reversing it · C comparison delivers a verdict, never a number · D the comparison lands in a useful direction, so it does decide it."}, {"q": "For x ≥ 3, √(x² − 1) < x. It follows that 1/√(x² − 1) is", "options": ["less than 1/x, so the integral converges", "greater than 1/x, so the integral converges", "less than 1/x, so the integral diverges", "greater than 1/x, so the integral diverges"], "answerIndex": 3, "why": "Why D is right: reciprocals of positive numbers reverse the inequality, and ∫₃^∞ dx/x has p = 1, which Note 1 places on the divergent side. Why the others are wrong: A keeps the inequality pointing the same way through the reciprocal · B gets the inequality right but reads p = 1 as convergent · C gets both halves wrong and reaches the right verdict by accident."}, {"q": "Slide 4: if f(x) ≤ 0 on [a, b], the area between y = f(x) and the x-axis is", "options": ["∫ₐᵇ f(x)dx", "−f(b) + f(a)", "∫ₐᵇ f(x)dx + c", "|∫ₐᵇ f(x)dx|"], "answerIndex": 3, "why": "Why D is right: below the axis every strip contributes a negative amount, so the integral is negative and an area cannot be. Why the others are wrong: A is the first case of the rule, for f ≥ 0, and would report a negative area · B substitutes the limits into f instead of into an antiderivative · C adds a constant of integration to a definite integral, which never carries one."}, {"q": "Example 1 (slide 5): the area between f(x) = 5x − x² and the x-axis is", "options": ["125/6", "125/2", "125/3", "−125/6"], "answerIndex": 0, "why": "Why A is right: set f(x) = 0 to get x = 0 and x = 5, test f(2) = 6 > 0, then [5x²/2 − x³/3]₀⁵ = 125/2 − 125/3 = 125/6 ≈ 20.83. Why the others are wrong: B keeps the first term of the antiderivative and drops the cubic one · C keeps the cubic term and drops the first · D evaluates lower minus upper, reversing the limits."}, {"q": "Example 2 (slide 6): the area bounded by f(x) = x² − 1, the x-axis, x = 0 and x = 2 is", "options": ["2/3", "2", "4/3", "−2/3"], "answerIndex": 1, "why": "Why B is right: the curve cuts the axis at x = 1, inside [0, 2], so split there: |∫₀¹| + ∫₁² = 2/3 + 4/3 = 2. Why the others are wrong: A is the unsplit integral ∫₀²(x² − 1)dx, which lets the two pieces partly cancel · C is the piece above the axis only · D is the first piece with the modulus omitted."}, {"q": "TASK 1 (slide 7): the area between f(x) = 6x − x² and the x-axis is", "options": ["72", "108", "36", "18"], "answerIndex": 2, "why": "Why C is right: 6x − x² = 0 gives x = 0 and x = 6; f(3) = 9 > 0, so no modulus, and [3x² − x³/3]₀⁶ = 108 − 72 = 36. Why the others are wrong: A reports the 216/3 term alone · B reports 3(6)² alone, dropping the cubic term · D integrates only as far as the vertex x = 3 instead of the root x = 6."}, {"q": "The curves y = 3 − x and y = x² − 9 meet at", "options": ["x = −4 and x = 3", "x = −3 and x = 3", "x = 4 and x = −3", "x = 0 and x = 3"], "answerIndex": 0, "why": "Why A is right: 3 − x = x² − 9 rearranges to x² + x − 12 = 0, i.e. (x + 4)(x − 3) = 0. Why the others are wrong: B solves x² − 9 = 0, using one curve only · C reads the signs of the factors backwards · D takes x = 0 as an intersection, which it is not."}, {"q": "Slide 9: the area bounded by y = 3 − x and y = x² − 9 is", "options": ["−73/6", "343/6", "45/2", "104/3"], "answerIndex": 1, "why": "Why B is right: the integrand is (3 − x) − (x² − 9) = 12 − x − x², and 45/2 − (−104/3) = 343/6 ≈ 57.17. Why the others are wrong: A computes 45/2 − 104/3, failing to double the minus when subtracting a negative value · C is the upper-limit value alone · D is the magnitude of the lower-limit value alone."}, {"q": "For f(x) = 2 − x and g(x) = 4 − x², the correct integrand for the enclosed area is", "options": ["(2 − x) − (4 − x²)", "|(2 − x) − (4 − x²)|", "(4 − x²) − (2 − x)", "(4 − x²) + (2 − x)"], "answerIndex": 2, "why": "Why C is right: at the test point x = 1, f(1) = 1 and g(1) = 3, so g is on top and is written first — the order comes from the test, not from which was named first. Why the others are wrong: A subtracts in the order the functions were named, giving −4.5 · B repairs the wrong order with a modulus, which she never uses between two curves · D adds the curves, which measures nothing."}, {"q": "Slides 13–14: the area between y = sin x and y = cos x for 0 ≤ x ≤ π/2 is", "options": ["0", "2/√2 − 1", "2 − 2√2", "2√2 − 2"], "answerIndex": 3, "why": "Why D is right: they cross where tan x = 1, at x = π/4; cos is on top before it and sin after it, so A₁ + A₂ = 4/√2 − 2. Why the others are wrong: A is the single unsplit integral, in which the two congruent lobes cancel exactly · B is A₁ only, half the region · C reverses the sign, giving a negative area."}, {"q": "TASK (slide 8): revolving f(x) = √x about the x-axis for 1 ≤ x ≤ 4 gives a volume of", "options": ["14π/3", "15π/4", "15π/2", "8π"], "answerIndex": 2, "why": "Why C is right: the disc formula squares the radius, so [√x]² = x and V = π[x²/2]₁⁴ = π(8 − 1/2). Why the others are wrong: A integrates √x itself, forgetting that the disc integrand is squared · B divides by 4 instead of 2 when integrating x · D uses the upper limit only."}, {"q": "Slide 10: revolving the region between y = x² and y = x⁵ on [0, 1] about the x-axis gives", "options": ["9π/220", "6π/5", "π/55", "6π/55"], "answerIndex": 3, "why": "Why D is right: the washer subtracts the squares: π∫₀¹(x⁴ − x¹⁰)dx = π(1/5 − 1/11) = 6π/55. Why the others are wrong: A squares the difference of the radii, π∫(R − r)²dx, instead of subtracting the squares · B keeps only the x⁴ term · C drops the factor 6 that 1/5 − 1/11 produces."}, {"q": "Slide 11: revolving the region bounded by x = y², x = 3 and y = 0 about the y-axis gives", "options": ["72√3π/5", "36√3π/5", "36√3π", "9√3π"], "answerIndex": 1, "why": "Why B is right: R(y) = 3 is constant and r(y) = y², so π∫₀^√3 (9 − y⁴)dy = π[9y − y⁵/5]₀^√3. Why the others are wrong: A runs y from −√3 to √3, doubling the region she actually uses · C forgets to divide y⁵ by 5 · D keeps the 9y term and drops the y⁵/5 term."}, {"q": "Slide 14: revolving y = 2x² − x³, y = 0 about the y-axis by shells gives", "options": ["16π/5", "8π/5", "32π/5", "16π/25"], "answerIndex": 0, "why": "Why A is right: V = 2π∫₀²x(2x² − x³)dx = 2π[x⁴/2 − x⁵/5]₀² = 2π(8/5). Why the others are wrong: B drops the factor 2 in 2π, which is the unrolled shell's circumference · C doubles the answer a second time · D divides by 5 twice."}, {"q": "Slide 15: rotating the region under y = √x from 0 to 1 about the x-axis by shells gives", "options": ["π/4", "π/2", "2π/5", "π"], "answerIndex": 1, "why": "Why B is right: the strip is horizontal, so the radius is y and the height is 1 − y²; V = 2π∫₀¹(y − y³)dy = 2π(1/2 − 1/4), which the disc method confirms. Why the others are wrong: A forgets the outer factor 2 · C uses y² as the strip height instead of 1 − y² · D doubles the value by taking the height as 1 + y²."}, {"q": "TASK (slide 12): rotating the region under y = x² on [0, 2] about the line y = −1 gives", "options": ["176π/15", "32π/5", "96π/15", "176π/5"], "answerIndex": 0, "why": "Why A is right: the axis has moved, so R = x² + 1 and r = 1; π∫₀²(x⁴ + 2x²)dx = π(32/5 + 16/3). Why the others are wrong: B uses R = x² and r = 0, as if the axis were still the x-axis · C keeps only the x⁴ term after shifting · D mishandles the common denominator when adding 32/5 and 16/3."}, {"q": "Slide 13 says the shell method integrates along an axis parallel to the axis of revolution. In fact the variable of integration runs", "options": ["parallel to the axis of revolution", "along the axis of revolution", "in either direction, since it makes no difference", "perpendicular to the axis of revolution"], "answerIndex": 3, "why": "Why D is right: both her own examples show it: Example 1 revolves about the y-axis and integrates dx, Example 2 revolves about the x-axis and integrates dy. Why the others are wrong: A is what the slide prints, and her two examples contradict it · B describes the disc and washer methods, not shells · C would give the wrong radius and the wrong height."}, {"q": "Slide 7: revolving the region between x = y² + 1 and x = 3 about the line x = 3 gives", "options": ["32√2π/15", "64√2π/5", "64√2π/15", "8π/15"], "answerIndex": 2, "why": "Why C is right: R(y) = 3 − (y² + 1) = 2 − y², and setting y² + 1 = 3 gives limits ±√2; π∫(4 − 4y² + y⁴)dy = 64√2π/15. Why the others are wrong: A evaluates at y = √2 only, forgetting that subtracting the value at −√2 doubles it · B divides y⁵ by 5 but never divides the other terms correctly · D drops the √2 that (√2)³ and (√2)⁵ produce."}, {"q": "Slide 4: for v(t) = 2t² + 6t + 1 km/h, the distance travelled in the first 5 hours is", "options": ["81 km", "83.3 km", "166 km", "163.3 km"], "answerIndex": 3, "why": "Why D is right: integrate the rate over the interval: [2t³/3 + 3t² + t]₀⁵ = 83.33 + 75 + 5. Why the others are wrong: A is v(5), the speed at the end, not the distance covered · B keeps the 2t³/3 term and drops the rest · C mishandles 250/3 as 86 rather than 83.33."}, {"q": "For v(t) = 6t² − 6t − 12 with x(0) = −4, the net displacement over the first 5 seconds is", "options": ["111 m", "155 m", "115 m", "135 m"], "answerIndex": 2, "why": "Why C is right: a definite integral, so the constant cancels: [2t³ − 3t² − 12t]₀⁵ = 250 − 75 − 60. Why the others are wrong: A carries the −4 into the definite integral and subtracts it only once — this is x(5), the position, not the change in position · B is the total distance travelled, which she neither asks for nor teaches · D counts only the forward stretch after t = 2."}, {"q": "Slide 7: the weight density of water used in the fluid-force integral is", "options": ["9800 N/m³", "9800 N/m²", "1000 N/m³", "9.8 N/m³"], "answerIndex": 0, "why": "Why A is right: ρg = (1000)(9.8) = 9800, and kg/m³ multiplied by m/s² gives newtons per cubic metre. Why the others are wrong: B is the unit printed on the slide, and it is wrong — the number is right, the unit is not · C quotes the density ρ without multiplying by g · D quotes g without multiplying by ρ."}, {"q": "Slide 8: pulling up a 60 m rope of mass 66 g/m takes work equal to", "options": ["2328.48 J", "1164.24 J", "1164240 J", "38.81 J"], "answerIndex": 1, "why": "Why B is right: F(x) = 9.8(0.066)(60 − x) = 0.6468(60 − x), and ∫₀⁶⁰F dx = 0.6468(3600 − 1800). Why the others are wrong: A treats the force as constant at its starting value, but it falls to zero as the rope comes up · C leaves the mass in grams instead of converting to kilograms · D reports the initial force in newtons rather than the work done."}, {"q": "Slide 9: with MR = 100 + 20Q + 3Q² and TR(2) = 260, the constant of integration is", "options": ["260", "248", "12", "−12"], "answerIndex": 2, "why": "Why C is right: TR(Q) = 100Q + 10Q² + Q³ + C, and TR(2) = 200 + 40 + 8 + C = 248 + C, so 248 + C = 260. Why the others are wrong: A copies the given value straight into C instead of solving for it · B reports the value of the polynomial at Q = 2 rather than the constant · D solves 248 + C = 260 with the sign reversed."}, {"q": "Slide 10: the capital growth ∫₄⁹ 6√t dt equals", "options": ["76", "4", "6", "108"], "answerIndex": 0, "why": "Why A is right: 6∫t^(1/2)dt = 4t^(3/2), and 4(27) − 4(8) = 108 − 32. Why the others are wrong: B is the answer printed on the slide, and it is wrong — it is the coefficient of t^(3/2) left stranded where the answer belongs · C is I(9) − I(4) = 18 − 12, substituting into the integrand instead of the antiderivative · D evaluates at the upper limit and forgets to subtract the lower one."}, {"q": "Slides 11–12: with D(Q) = 1000 − 25Q and S(Q) = 100 + Q², the consumer surplus is", "options": ["5333", "10000", "500", "5000"], "answerIndex": 3, "why": "Why D is right: equilibrium first: Q₀ = 20 and P₀ = 500, then CS = ∫₀²⁰(500 − 25Q)dQ = 10000 − 5000. Why the others are wrong: A is the producer surplus, ∫₀²⁰(400 − Q²)dQ — the two are close enough that swapping them looks plausible · B keeps 500Q and forgets to subtract 25Q²/2 · C quotes the equilibrium price rather than an area."}, {"q": "Slide 14: 750 = 1000e^(0.035t) − 1000 gives an exhaustion year of", "options": ["2165", "2021", "2020", "2755"], "answerIndex": 1, "why": "Why B is right: e^(0.035t) = 1.75, so t = ln(1.75)/0.035 = 15.989 ≈ 16 years after 2005. Why the others are wrong: A divides by the slide's misprinted 0.0035, giving 159.89 years · C rounds 15.989 down to 15 · D multiplies by 0.035 instead of dividing."}]}
+{
+ "course": "MTH_102",
+ "title": "MTH_102 — End of Semester Objective Exam",
+ "guideTitle": "MTH_102 — Elementary Mathematics II (Calculus)",
+ "questions": [
+  {
+   "q": "Her SUMMARY slide defines a function as a relation that assigns",
+   "options": [
+    "exactly one input to each output",
+    "every value of the codomain to some input",
+    "exactly one output to each input",
+    "equal numbers of inputs and outputs"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: those are her words on slide 25, and both halves carry weight — every input is used, and none of them gets two outputs. Why the others are wrong: A states a stronger, separate property that x² already fails, since f(−3) = f(3) · B describes the codomain being fully used, which slide 5 shows is not required · D counts the two sets, which her x² diagram deliberately does not do."
+  },
+  {
+   "q": "The domain of f(x) = (3x + 1)/(x² + 5) is",
+   "options": [
+    "D = (−∞, ∞)",
+    "all reals except x = ±√5",
+    "all reals except x = −1/3",
+    "all reals except x = −5"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: she sets x² + 5 ≠ 0, so x² ≠ −5, and a square is never negative, so nothing has to be thrown out. Why the others are wrong: B solves x² − 5 = 0 instead; the slide's denominator is a sum, not a difference · C excludes the zero of the numerator, which only makes f(x) = 0 and is perfectly legal · D reads x² ≠ −5 as x ≠ −5, dropping the square."
+  },
+  {
+   "q": "The range of f(x) = 2 − |x − 3| is",
+   "options": [
+    "R = [2, ∞)",
+    "R = (−∞, 2)",
+    "R = [0, ∞)",
+    "R = (−∞, 2]"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: from |x − 3| ≥ 0 she multiplies by −1, which reverses it to −|x − 3| ≤ 0, then adds 2 to get y ≤ 2. Why the others are wrong: A keeps the inequality pointing the same way after multiplying by −1 — the step she flags · B uses a round bracket at 2, but y = 2 is attained at x = 3 · C quotes the fact |x − 3| ≥ 0 without doing anything to it."
+  },
+  {
+   "q": "The inverse of f(x) = 3x − 7 is",
+   "options": [
+    "f⁻¹(x) = 1/(3x − 7)",
+    "f⁻¹(x) = (x + 7)/3",
+    "f⁻¹(x) = (x − 7)/3",
+    "f⁻¹(x) = 3(x + 7)"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: let y = 3x − 7, switch x with y to get x = 3y − 7, then isolate y — her three named steps. Why the others are wrong: A gives the reciprocal; an inverse hands x back, a reciprocal hands back 1 · C adds nothing after switching, losing the sign when 7 crosses the equals sign · D multiplies by 3 instead of dividing, undoing the wrong operation."
+  },
+  {
+   "q": "With f(x) = 5x − 4 and g(x) = x², g ∘ f =",
+   "options": [
+    "25x² − 40x + 16",
+    "5x² − 4",
+    "25x² + 16",
+    "25x² − 20x + 16"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: g ∘ f = g[f(x)] = (5x − 4)(5x − 4), and she shows both middle terms −20x and −20x before collecting them. Why the others are wrong: B is f ∘ g, the other composite on the same slide — order is part of the question · C squares each term separately and loses the middle terms entirely · D keeps only one of the two −20x terms."
+  },
+  {
+   "q": "Slide 22 asks for f(x) = x + 2 at x = 0, 1, 2. The correct y-values are",
+   "options": [
+    "2, 1, 0",
+    "0, 1, 2",
+    "2, 4, 6",
+    "2, 3, 4"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: substitute: 0 + 2 = 2, 1 + 2 = 3, 2 + 2 = 4, giving the points (0, 2), (1, 3), (2, 4). Why the others are wrong: A is the table printed on the slide, and it is wrong — those are the values of 2 − x, which agrees with x + 2 only at x = 0 · B lists the inputs again instead of the outputs · C doubles each input rather than adding 2."
+  },
+  {
+   "q": "TASK: the domain and range of h(x) = √(x + 2) − 8 are",
+   "options": [
+    "D = (−2, ∞), R = (−8, ∞)",
+    "D = [−2, ∞), R = [−8, ∞)",
+    "D = [2, ∞), R = [−8, ∞)",
+    "D = [−2, ∞), R = (−∞, −8]"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: x + 2 ≥ 0 gives x ≥ −2, and √(x + 2) ≥ 0 gives √(x + 2) − 8 ≥ −8; both endpoints are attained at x = −2. Why the others are wrong: A uses round brackets, but h(−2) = −8 is a legal input with a real output · C solves x − 2 ≥ 0 instead of x + 2 ≥ 0 · D reverses the range inequality; nothing here was multiplied by a negative."
+  },
+  {
+   "q": "For f(x) = x² − 4, f(3) =",
+   "options": [
+    "1",
+    "9",
+    "5",
+    "6"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: square first, then subtract: (3)² − 4 = 9 − 4 = 5, which is the order the slide spells out. Why the others are wrong: A subtracts first and squares afterwards, computing (3 − 4)² — a different function · B squares and forgets to subtract the 4 · D doubles the input instead of squaring it."
+  },
+  {
+   "q": "For f(x) = ax² + bx + c, the constant c is",
+   "options": [
+    "the y-coordinate of the vertex",
+    "the axis of symmetry",
+    "the number of real roots",
+    "the y-intercept, f(0)"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: putting x = 0 leaves c, so c is where the parabola cuts the y-axis. Why the others are wrong: A is the claim made on the slide, and it is wrong: the vertex sits at x = −b/2a, which is 0 only when b = 0 · B names a vertical line x = −b/2a, not a constant term · C is decided by the discriminant b² − 4ac, not by c alone."
+  },
+  {
+   "q": "The vertex of f(x) = x² + 6x + 5 is at",
+   "options": [
+    "(3, −4)",
+    "(−3, −4)",
+    "(−3, 5)",
+    "(−6, −4)"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: x = −b/2a = −6/2 = −3, and f(−3) = 9 − 18 + 5 = −4. Why the others are wrong: A drops the minus in −b/2a · C takes the constant term 5 as the vertex height instead of evaluating f(−3) · D uses −b rather than −b/2a, forgetting to divide by 2a."
+  },
+  {
+   "q": "The equation x² − 4x + 7 = 0 has",
+   "options": [
+    "two distinct real roots",
+    "one repeated real root",
+    "no real roots",
+    "two real roots of opposite sign"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: Δ = (−4)² − 4(1)(7) = 16 − 28 = −12 < 0, so the parabola never meets the x-axis. Why the others are wrong: A would need Δ > 0 · B would need Δ = 0 exactly · D would need Δ > 0 and a negative constant term."
+  },
+  {
+   "q": "Log₃ 81 equals",
+   "options": [
+    "4",
+    "27",
+    "3",
+    "9"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: a logarithm asks for the exponent, and 3⁴ = 81. Why the others are wrong: B is 81/3, dividing instead of taking the exponent · C quotes the base back · D is √81, which answers a different question."
+  },
+  {
+   "q": "Which function models exponential decay?",
+   "options": [
+    "f(x) = 2ˣ",
+    "f(x) = (0.5)ˣ",
+    "f(x) = x²",
+    "f(x) = log₂ x"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: the base lies strictly between 0 and 1, so successive powers shrink. Why the others are wrong: A has base greater than 1, so it grows · C is a power function — the variable is in the base, not the exponent · D is the inverse of an exponential, not an exponential."
+  },
+  {
+   "q": "The solution set of |x − 3| < 5 is",
+   "options": [
+    "x < 8",
+    "x > 8 or x < −2",
+    "−2 < x < 8",
+    "−5 < x < 5"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: the inequality unfolds to −5 < x − 3 < 5, and adding 3 throughout gives −2 < x < 8. Why the others are wrong: A keeps only the upper half and forgets the lower bound · B solves the inequality with > instead of <, giving the outside of the interval · D never adds the 3 back."
+  },
+  {
+   "q": "If f(x) = 2x + 1 for x ≤ 0 and f(x) = x² − 3 for x > 0, then f(0) is",
+   "options": [
+    "1",
+    "−3",
+    "both 1 and −3",
+    "undefined"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: x = 0 satisfies x ≤ 0, so the first branch applies: 2(0) + 1 = 1. Why the others are wrong: B uses the second branch, but x > 0 excludes 0 · C would break the one-output rule; the branches are on disjoint intervals · D assumes a gap at the boundary, but x ≤ 0 covers x = 0."
+  },
+  {
+   "q": "Lim x→2 (x³ − 3)/(x² − 6) equals",
+   "options": [
+    "2.5",
+    "the limit does not exist",
+    "0",
+    "−2.5"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: substitution gives (8 − 3)/(4 − 6) = 5/(−2), a well-defined expression, so the work is finished. Why the others are wrong: A loses the sign of the denominator 4 − 6 = −2 · B treats a negative denominator as a failure, but only 0/0 stops substitution · C reads the negative denominator as zero."
+  },
+  {
+   "q": "Lim x→2 (1/x − 1/2)/(x − 2) equals",
+   "options": [
+    "−1/4",
+    "1/4",
+    "−1/2",
+    "1/2"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: multiply top and bottom by 2x to get (2 − x)/[2x(x − 2)], write 2 − x = −1(x − 2), cancel, then substitute. Why the others are wrong: B cancels 2 − x against x − 2 directly, which flips the sign — the error the slide's −1 step exists to prevent · C substitutes x = 2 into −1/x instead of −1/(2x) · D makes both mistakes at once."
+  },
+  {
+   "q": "TASK: lim x→3 (x³ − 27)/(x − 3) equals",
+   "options": [
+    "0",
+    "9",
+    "27",
+    "3"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: x³ − 27 = (x − 3)(x² + 3x + 9); cancel and substitute to get 9 + 9 + 9 = 27, which L'Hôpital confirms as 3x² at x = 3. Why the others are wrong: A reads the 0/0 from substitution as the answer, but 0/0 decides nothing · B keeps only the x² term of the quadratic factor · D quotes the point being approached instead of the limit."
+  },
+  {
+   "q": "Lim x→0 (√(x + 9) − 3)/x equals",
+   "options": [
+    "0",
+    "1/6",
+    "1/3",
+    "6"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: multiply by the conjugate of the numerator, √(x + 9) + 3, leaving x/[x(√(x + 9) + 3)]; cancel x and substitute. Why the others are wrong: A reads the 0/0 from substitution as zero · C cancels the 3 in the denominator against only one term · D inverts the final fraction 1/(3 + 3)."
+  },
+  {
+   "q": "Lim x→∞ x²/eˣ equals",
+   "options": [
+    "∞",
+    "1",
+    "2",
+    "0"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: one application of L'Hôpital gives 2x/eˣ, still ∞/∞, so differentiate again to reach 2/eˣ, and the exponential drives it to 0. Why the others are wrong: A assumes the polynomial wins; the exponential grows faster · B stops after checking that top and bottom both grow · C reads off the numerator of 2/eˣ and forgets the denominator."
+  },
+  {
+   "q": "Applying L'Hôpital's Rule to lim f(x)/g(x) replaces it with",
+   "options": [
+    "lim [g f′ − f g′]/g²",
+    "lim f′(x)·g′(x)",
+    "lim [f(x)/g(x)]′",
+    "lim f′(x)/g′(x)"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: top and bottom are differentiated separately, which is why she names f and g and differentiates each on its own line. Why the others are wrong: A is the quotient rule; if a g² appears in your working you used the wrong rule · B multiplies the derivatives instead of dividing them · C differentiates the whole quotient, which is the quotient rule again."
+  },
+  {
+   "q": "Slide 23 states 5 − x³ ≤ f(x) ≤ 5 − x³ and asks for lim x→0 f(x). The corrected bound and the limit are",
+   "options": [
+    "upper bound 5 + x³; the limit is 5",
+    "upper bound 5 − x³; the limit is 5",
+    "upper bound 5 + x³; the limit is 0",
+    "upper bound 5 + x³; the limit is 10"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: the theorem line one row above gives the bounds as 5 − x³ and 5 + x³, so the printed upper bound is a misprint; both bounds tend to 5, so f is squeezed to 5. Why the others are wrong: B keeps the misprint, which would make the two bounds identical and the hypothesis vacuous · C reads off x³ at 0 instead of the whole bound · D adds the two bounds instead of noting they agree."
+  },
+  {
+   "q": "Which two of her ten limit properties carry a non-zero proviso?",
+   "options": [
+    "Quotient and Product",
+    "Sum and Difference",
+    "Quotient and Reciprocal",
+    "Power and Composite"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: the Quotient property needs lim g(x) ≠ 0 and the Reciprocal property needs lim f(x) ≠ 0 — exactly the condition that fails in a 0/0 problem. Why the others are wrong: A the Product property needs nothing; both limits may be anything · B both hold with no condition at all · D the Power property is unconditional in her statement."
+  },
+  {
+   "q": "TASK: lim x→4 (1/√x − 1/2)/(x − 4) equals",
+   "options": [
+    "1/16",
+    "−1/16",
+    "−1/8",
+    "−1/4"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: clear the small fractions with 2√x to get (2 − √x)/[2√x(x − 4)], factor x − 4 as (√x − 2)(√x + 2), write 2 − √x = −1(√x − 2), cancel and substitute. Why the others are wrong: A cancels 2 − √x against √x − 2 without the −1 rewrite, the same slip as slide 7 · C forgets one factor of 2 when substituting into 2√x(√x + 2) · D quotes the answer to the slide-7 example instead."
+  },
+  {
+   "q": "The three conditions for f to be continuous at c are",
+   "options": [
+    "f(c) is defined and f′(c) exists",
+    "f(c) is defined, the limit exists, and they are equal",
+    "the limit exists and is finite",
+    "f is defined on both sides of c"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: all three in that order; failing any one makes f discontinuous at c. Why the others are wrong: A asks for a derivative, which continuity does not require · C is condition (ii) only, and says nothing about f(c) · D is weaker than any of the three and permits a break at c."
+  },
+  {
+   "q": "On a graph, the left limit at x = 2 is 3, the right limit is −4, and a solid dot sits at (2, 1). Then lim x→2 f(x) is",
+   "options": [
+    "1",
+    "3",
+    "−4",
+    "DNE"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: a two-sided limit exists only when the two one-sided limits agree, and 3 ≠ −4. Why the others are wrong: A quotes f(2), the solid dot, which the limit never inspects · B reports the left-hand limit alone · C reports the right-hand limit alone."
+  },
+  {
+   "q": "For that same graph — left limit 3, right limit −4, solid dot at (2, 1), open circles at (2, 3) and (2, −4) — the value f(2) is",
+   "options": [
+    "1",
+    "3",
+    "−4",
+    "undefined"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: only a shaded dot may be quoted as a function value; the open circles mark heights the curve approaches but never takes. Why the others are wrong: B reads an open circle as a function value · C reads the other open circle as a function value · D ignores the solid dot; a function can be defined at a point and still be discontinuous there."
+  },
+  {
+   "q": "For f(x) = (x² − 1)/(x − 1), the limit as x → 1 is",
+   "options": [
+    "0",
+    "DNE",
+    "2",
+    "1"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: factor and cancel to get x + 1 for every x ≠ 1, so both one-sided limits are 2 — even though f(1) itself is undefined. Why the others are wrong: A reads the 0/0 from substitution as the answer · B concludes from f(1) being undefined, but a limit never uses the value at the point · D substitutes into the denominator's factor instead of x + 1."
+  },
+  {
+   "q": "At x = 0 the function g(x) = |x| is",
+   "options": [
+    "discontinuous because of the corner",
+    "undefined, so the limit fails",
+    "continuous, despite the sharp corner",
+    "continuous only from the right"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: the left and right limits are both 0 and g(0) = 0, so all three conditions hold; continuity is about not lifting the pen, not about smoothness. Why the others are wrong: A confuses a corner with a break in the curve · B is false: |0| = 0 · D misreads the superscript + as part of the function."
+  },
+  {
+   "q": "If lim x→3⁺ f(x) = +∞ and lim x→3⁻ f(x) = −∞, then",
+   "options": [
+    "the limit is ∞",
+    "the two-sided limit does not exist and x = 3 is a vertical asymptote",
+    "the limit is 0, since +∞ and −∞ cancel",
+    "f is continuous at 3"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: ∞ is not a real number, so writing lim = +∞ describes how the limit fails rather than giving it a value. Why the others are wrong: A treats ∞ as a value the limit takes · C adds two things that are not numbers · D would need f(3) defined and equal to a finite limit."
+  },
+  {
+   "q": "Which statement about lim x→c f(x) and f(c) is correct?",
+   "options": [
+    "the limit always equals f(c)",
+    "if f(c) is defined then the limit exists",
+    "if the limit exists then f is continuous at c",
+    "the limit is built only from x near c, never from x = c"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: cover the point x = c with your thumb: anything still readable is the limit, anything hidden is f(c). Why the others are wrong: A holds only when f is continuous at c, which is the thing being tested · B is false at a break, where f(c) is defined and the two sides disagree · C skips conditions (i) and (iii); f(c) may be missing or at the wrong height."
+  },
+  {
+   "q": "The derivative of f(x) = 3x¹⁰⁰ − 4x is",
+   "options": [
+    "300x⁹⁹ − 4",
+    "300x⁹⁹",
+    "300x⁹⁹ − 4x⁰ left as is",
+    "3x⁹⁹ − 4"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: (3×100)x⁹⁹ for the first term, and 4x differentiates to 4·1·x⁰ = 4, since x⁰ = 1 — the line she writes out separately. Why the others are wrong: B loses the second term altogether · C stops one step early; x⁰ is 1, so the term is just −4 · D drops the power down without multiplying by the old power 100."
+  },
+  {
+   "q": "The derivative of f(x) = (4x + 6)(2x³ − 5x) is",
+   "options": [
+    "8x³ + 24x² − 32x − 30",
+    "32x³ + 36x² − 40x − 30",
+    "8x³ + 24x² − 4x − 30",
+    "24x² − 20"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: u v′ + u′ v = (4x + 6)(6x² − 5) + (2x³ − 5x)(4), and expanding the product first confirms it. Why the others are wrong: A is the answer printed on the slide, and it is wrong — it is not the derivative of anything on that slide · C follows the slide's other misprint, where the square on 6x² was dropped · D multiplies the two derivatives, u′v′, which is not the product rule."
+  },
+  {
+   "q": "The derivative of f(x) = x/cos(x) is",
+   "options": [
+    "(cos x + x sin x)/cos²x",
+    "(cos x + sin x)/cos²x",
+    "(cos x − x sin x)/cos²x",
+    "(x sin x − cos x)/cos²x"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: v u′ − u v′ over v² gives [cos x·1 − x(−sin x)]/cos²x, and the double negative turns −x sin x into +x sin x. Why the others are wrong: B is the slide's printed final line, which drops the factor x from the second term · C forgets that cos differentiates to −sin, so only one minus appears · D reverses the numerator's order, which negates the whole answer."
+  },
+  {
+   "q": "The derivative of f(x) = (6x − 3)/(5x²) is",
+   "options": [
+    "−6(x + 1)/(5x³)",
+    "6(x − 1)/(5x³)",
+    "6(1 − x)/(5x³)",
+    "6/(10x)"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: [5x²·6 − (6x − 3)·10x]/(5x²)² = (−30x² + 30x)/25x⁴, and dividing top and bottom by 5x gives 6(1 − x)/5x³. Why the others are wrong: A subtracts (6x − 3)(10x) without changing the sign of −30x, so +30x becomes −30x · B reverses the numerator terms, negating the answer · D differentiates numerator and denominator separately."
+  },
+  {
+   "q": "The derivative of f(x) = cos(x²) is",
+   "options": [
+    "−sin(x²)",
+    "2x sin(x²)",
+    "−2x sin(u)",
+    "−2x sin(x²)"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: y′(u)·u′(x) with y = cos u and u = x² gives −sin(u)·2x, then u is replaced by x². Why the others are wrong: A forgets the inner derivative 2x · B loses the minus that comes from cos differentiating to −sin · C leaves the answer in u instead of putting the inside function back."
+  },
+  {
+   "q": "TASK 1: the derivative of f(x) = (2x − 4)² is",
+   "options": [
+    "4x − 8",
+    "2x − 4",
+    "8x − 16",
+    "8x − 8"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: with u = 2x − 4, y′(u)·u′(x) = 2u·2 = 4(2x − 4); expanding first gives 4x² − 16x + 16, whose derivative is the same. Why the others are wrong: A is 2(2x − 4) — the inner derivative 2 was never paid, which is the whole point of the task · B just drops the square and copies the bracket · D differentiates the expansion but mishandles the middle term."
+  },
+  {
+   "q": "Differentiating x² + y² = 25 implicitly gives dy/dx =",
+   "options": [
+    "x/y",
+    "−2x/y",
+    "−x/(2y)",
+    "−x/y"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: 2x + 2y(dy/dx) = 0 because d(y²)/dx = 2y·dy/dx, and the constant 25 differentiates to 0. Why the others are wrong: A loses the sign when moving 2x across the equals sign · B cancels only the 2 in the denominator · C cancels only the 2 in the numerator."
+  },
+  {
+   "q": "Differentiating xy + 6x⁴ = y implicitly gives dy/dx =",
+   "options": [
+    "−(24x³ + y)/(x − 1)",
+    "(24x³ + y)/(x − 1)",
+    "−(24x³ − y)/(x − 1)",
+    "−24x³/(x − 1)"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: the product rule on xy gives y + x(dy/dx); collect the dy/dx terms, factorise to (dy/dx)(x − 1), then divide. Why the others are wrong: B loses the sign when 24x³ and y are moved to the other side · C forgets the y produced by the product rule on xy and changes its sign · D drops the y term completely, treating xy as if only x were differentiated."
+  },
+  {
+   "q": "For x(t) = 2t + 1 and y(t) = t² − t, dy/dx =",
+   "options": [
+    "2t − 1",
+    "(2t − 1)/2",
+    "2/(2t − 1)",
+    "(2t − 1)/(2t + 1)"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: her parametric rule is dy/dx = dy/dt ÷ dx/dt, with dy/dt = 2t − 1 and dx/dt = 2; leaving the answer in t is correct. Why the others are wrong: A quotes dy/dt, which is not the gradient of the curve · C divides the wrong way round · D divides by x(t) instead of by dx/dt."
+  },
+  {
+   "q": "Differentiating y = √x from first principles gives",
+   "options": [
+    "1/(2√x)",
+    "1/(2x)",
+    "2√x",
+    "1/√x"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: multiply by the conjugate so the numerator becomes h, cancel h, then let h → 0 inside the surd to get 1/(√x + √x). Why the others are wrong: B cancels the root as well as the h · C inverts the final fraction · D puts h = 0 in only one of the two roots in the denominator."
+  },
+  {
+   "q": "For f(x, y) = 3x² + 2xy − y³, the partial derivative ∂f/∂y is",
+   "options": [
+    "6x + 2y",
+    "2x − 3y²",
+    "2x + 3y²",
+    "6x + 2y − 3y²"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: x is held constant, so 3x² dies, 2xy leaves 2x, and −y³ gives −3y². Why the others are wrong: A is ∂f/∂x — and note the slide labels the second answer ∂f/∂x as well, which is a misprint · C loses the minus sign already sitting in front of y³ · D differentiates by both variables at once."
+  },
+  {
+   "q": "The first derivative of f(x) = x⁴ + 2x³ − 15x + 4 is",
+   "options": [
+    "4x³ + 6x² − 15 + 4",
+    "4x³ + 6x² − 15x",
+    "4x³ + 2x² − 15",
+    "4x³ + 6x² − 15"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: term by term, and the constant 4 differentiates to 0 — the NOTE she puts in bold on that slide. Why the others are wrong: A keeps the constant, which should vanish · B leaves the x on the −15 term; the power rule with n = 1 gives 15x⁰ = 15 · C forgets to multiply 2x³ by its old power 3."
+  },
+  {
+   "q": "The second derivative of f(x) = √(x³) is",
+   "options": [
+    "(3/2)x^(1/2)",
+    "(3/4)x^(1/2)",
+    "(3/4)x^(−1/2)",
+    "(3/2)x^(−1/2)"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: rewrite as x^(3/2), differentiate to (3/2)x^(1/2), then differentiate again: the coefficients multiply to 3/4 and the exponent falls to −1/2. Why the others are wrong: A stops at the first derivative · B multiplies the coefficients but does not lower the exponent · D lowers the exponent but forgets to multiply by the 1/2 that came down."
+  },
+  {
+   "q": "For f(x) = ln x, the value of f‴(2) is",
+   "options": [
+    "1/8",
+    "−1/4",
+    "2",
+    "1/4"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: y′ = x⁻¹, y″ = −x⁻², y‴ = 2x⁻³, so f‴(2) = 2/8 = 1/4. Why the others are wrong: A uses 1/x³ and forgets the coefficient 2 that the second differentiation produced · B keeps the minus from the second derivative, but the third flips it back · C quotes the coefficient of x⁻³ instead of evaluating at 2."
+  },
+  {
+   "q": "The third derivative of sin(5x) + e³ˣ is",
+   "options": [
+    "−5 cos(5x) + 3e³ˣ",
+    "125 cos(5x) + 27e³ˣ",
+    "−125 cos(5x) + 27e³ˣ",
+    "−125 cos(5x) − 27e³ˣ"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: the chain rule deposits another 5 and another 3 at every step: 5, 25, 125 and 3, 9, 27, while cos → −sin → −cos supplies the minus. Why the others are wrong: A collects the chain factor only once instead of at every differentiation · B loses the sign that the trigonometric cycle produces · D attaches the minus to the exponential too, but eᵘ never changes sign."
+  },
+  {
+   "q": "TASK 1: the second derivative of y = cos(3x) is",
+   "options": [
+    "9 cos(3x)",
+    "−9 cos(3x)",
+    "−3 cos(3x)",
+    "−9 sin(3x)"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: y′ = −3 sin(3x), then y″ = −3·3 cos(3x); the sign arrives at the first step and the second adds none. Why the others are wrong: A misses the minus produced when cos differentiates to −sin · C collects the chain factor 3 only once · D stops the trigonometric cycle one step early."
+  },
+  {
+   "q": "The notation f⁽⁴⁾(x) means",
+   "options": [
+    "the fourth derivative, that is (f‴(x))′",
+    "the fourth power of f(x)",
+    "f evaluated at x = 4",
+    "the fourth power of f′(x)"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: from the fourth order on, the prime marks are replaced by a bracketed superscript, which counts differentiations. Why the others are wrong: B reads the bracketed superscript as an exponent — exactly what the brackets exist to prevent · C confuses a superscript counter with an argument · D combines both misreadings."
+  },
+  {
+   "q": "The second derivative of ln(1 + x²) is",
+   "options": [
+    "(2 + 2x²)/(1 + 2x² + x⁴)",
+    "2/(1 + x²)²",
+    "(2 − 2x²)/(1 + 2x² + x⁴)",
+    "2x/(1 + x²)²"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: the chain rule gives f′ = 2x/(1 + x²), which is a quotient, so the quotient rule gives [(1 + x²)2 − 2x(2x)]/(1 + x²)², and she expands the denominator. Why the others are wrong: A adds the two numerator terms instead of subtracting, ignoring v u′ − u v′ · B differentiates only the numerator of f′ and leaves the denominator alone · D squares the denominator without applying the quotient rule at all."
+  },
+  {
+   "q": "Her Example 1 concludes that ∫2x dx equals",
+   "options": [
+    "x² + c",
+    "x²",
+    "2x² + c",
+    "x²/2 + c"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: x² is not the only antiderivative of 2x: adding any constant changes nothing when you differentiate, so the whole family must be reported. Why the others are wrong: B is an incomplete answer, and the whole example exists to stop this · C multiplies by the power instead of dividing by the new one · D divides the coefficient by the old power rather than using the power rule."
+  },
+  {
+   "q": "∫x⁴dx equals",
+   "options": [
+    "4x³ + c",
+    "x⁵/5 + c",
+    "5x⁵ + c",
+    "x⁵ + c"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: raise the power by one and divide by the new power, then add c. Why the others are wrong: A differentiates instead of integrating · C multiplies by the new power rather than dividing · D raises the power but forgets to divide."
+  },
+  {
+   "q": "∫(2/x⁷)dx equals",
+   "options": [
+    "1/(3x⁶) + c",
+    "−1/(3x⁸) + c",
+    "−2/(6x⁷) + c",
+    "−1/(3x⁶) + c"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: rewrite as 2x⁻⁷, so the new exponent is −6 and you divide by −6: 2/(−6) = −1/3. Why the others are wrong: A keeps the answer positive, forgetting that dividing by −6 flips the sign · B lowers the exponent instead of raising it · C divides the coefficient but never changes the power."
+  },
+  {
+   "q": "∫(11x¹⁰ − 4x⁹ + 1)dx equals",
+   "options": [
+    "x¹¹ − (2/5)x¹⁰ + C",
+    "x¹¹ − (2/5)x¹⁰ + x + C",
+    "x¹¹ − (2/5)x¹⁰ + 1 + C",
+    "110x⁹ − 36x⁸ + C"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: split term by term; 11/11 = 1, 4/10 = 2/5, and ∫1dx = x by the power rule with n = 0. Why the others are wrong: A drops ∫1dx, treating the constant term as if it integrated to nothing · C leaves the 1 unintegrated · D differentiates the polynomial instead of integrating it."
+  },
+  {
+   "q": "The power rule for integration excludes n = −1 because",
+   "options": [
+    "x⁻¹ has no antiderivative at all",
+    "the result would be negative",
+    "x⁰ is undefined",
+    "n + 1 = 0, so you would divide by zero"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: the rule divides by the new power, and at n = −1 that new power is 0. Why the others are wrong: A is false — it simply is not given by this rule · B confuses the sign of the exponent with the validity of the rule · C is false: x⁰ = 1."
+  },
+  {
+   "q": "∫₀³ 4x dx equals",
+   "options": [
+    "12",
+    "36",
+    "18",
+    "9"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: F(x) = 2x², so the value is 2(3²) − 2(0²) = 18; the coefficient 2 is factored outside the evaluation. Why the others are wrong: A substitutes into f rather than F, giving 4(3) − 4(0) · B forgets to divide by the new power, using 4x² as the antiderivative · D integrates to x² and drops the coefficient."
+  },
+  {
+   "q": "∫₋₁⁵ (3x² − 6)dx equals",
+   "options": [
+    "90",
+    "88",
+    "102",
+    "126"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: x³ from −1 to 5 is 125 − (−1) = 126, and 6x from −1 to 5 is 6(5 − (−1)) = 36, so 126 − 36 = 90. Why the others are wrong: B takes (−1)³ as +1, giving 125 − 1 = 124 for the first bracket · C reads 5 − (−1) as 4, so the second bracket becomes 24 · D computes the first bracket and forgets to subtract the second."
+  },
+  {
+   "q": "∫₂³ (1/x²)dx equals",
+   "options": [
+    "1/6",
+    "−1/6",
+    "5/6",
+    "1/5"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: rewrite as x⁻², so F(x) = −1/x, and −(1/3 − 1/2) = −(−1/6) = 1/6. Why the others are wrong: B loses the minus in F(x) = −1/x, so the bracket is never negated · C adds 1/2 and 1/3 instead of subtracting · D integrates x⁻² as x⁻¹ without dividing by the new power."
+  },
+  {
+   "q": "TASK 2: ∫₋₁² (7x − 5)dx equals",
+   "options": [
+    "4.5",
+    "12.5",
+    "−4.5",
+    "5.5"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: F(x) = 7x²/2 − 5x, so F(2) = 4 and F(−1) = 7/2 + 5 = 17/2, and 4 − 17/2 = −9/2; a negative value is legitimate for a signed integral. Why the others are wrong: A computes F(−1) − F(2), reversing the order of the limits · B adds the two values instead of subtracting · D reads −5(−1) as −5, losing the sign at the lower limit."
+  },
+  {
+   "q": "Slide 7 states the substitution formula as",
+   "options": [
+    "∫f′(g(x))·g′(x)dx = f′(g(x)) + C",
+    "∫f′(g(x))·g′(x)dx = f(g′(x)) + C",
+    "∫f′(g(x))·g′(x)dx = f(g(x))·g(x) + C",
+    "∫f′(g(x))·g′(x)dx = f(g(x)) + C"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: it is the chain rule read backwards: spot an inner function and its derivative multiplying it. Why the others are wrong: A leaves the outer function differentiated, so nothing was integrated · B substitutes the derivative of the inner function into f · C multiplies by the inner function, which no rule licenses."
+  },
+  {
+   "q": "Example 1: with u = x + 2, ∫₀²(x + 2)³dx equals",
+   "options": [
+    "240",
+    "60",
+    "64",
+    "16"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: the limits convert to u = 2 and u = 4, giving (1/4)(4⁴ − 2⁴) = (256 − 16)/4 = 60. Why the others are wrong: A computes 4⁴ − 2⁴ and forgets the factor 1/4 · C uses only the upper limit, 4⁴/4 · D evaluates 2⁴ alone, as if the lower limit were the answer."
+  },
+  {
+   "q": "Slide 8 leaves ∫2x·e^(x²)dx as eᵘ + C. The complete answer is",
+   "options": [
+    "eᵘ + C",
+    "e^(2x) + C",
+    "x²e^(x²) + C",
+    "e^(x²) + C"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: this is an indefinite integral, so u — which was your own invention — must be eliminated; u = x² puts it back. Why the others are wrong: A is what the slide prints, and it is incomplete: u does not appear in the question · B substitutes the derivative 2x into the exponent instead of u = x² · C multiplies by u as well as substituting it."
+  },
+  {
+   "q": "∫x·eˣ dx equals",
+   "options": [
+    "x·eˣ + eˣ + C",
+    "x·eˣ − eˣ + C",
+    "x²eˣ/2 + C",
+    "eˣ − x·eˣ + C"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: with u = x and dv = eˣdx, uv − ∫v du = x·eˣ − ∫eˣdx; differentiating the answer returns x·eˣ. Why the others are wrong: A adds the leftover integral instead of subtracting it · C is the result of the reverse choice u = eˣ, which raises the power of x instead of lowering it · D subtracts in the wrong order, negating the answer."
+  },
+  {
+   "q": "∫3x²·sin(x)dx equals",
+   "options": [
+    "−3x²cos x + 6(x sin x + cos x) + C",
+    "3x²cos x − 6(x sin x + cos x) + C",
+    "−3x²cos x − 6(x sin x + cos x) + C",
+    "−3x²cos x + 6x sin x + C"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: dv = sin x dx gives v = −cos x, which is where the first minus comes from; the leftover −∫−cos x(6x dx) becomes +6∫x cos x dx, and that second pass gives x sin x + cos x. Why the others are wrong: B takes v = +cos x, reversing every sign in the answer · C misses that two minus signs make the leftover integral positive · D stops the second pass before integrating −∫sin x dx to +cos x."
+  },
+  {
+   "q": "TASK 2: ∫x·ln(x)dx equals",
+   "options": [
+    "(x²/2)ln x − x²/2 + C",
+    "(x²/2)ln x + x²/4 + C",
+    "(x²/2)ln x − x²/4 + C",
+    "x·ln x − x + C"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: here u must be ln x and dv = x dx, because dv has to be something you can integrate; then ∫(x²/2)(1/x)dx = (1/2)∫x dx. Why the others are wrong: A forgets the 1/2 in front of the leftover ∫x dx · B adds the leftover integral instead of subtracting it · D quotes the standard integral of ln x, ignoring the extra factor of x."
+  },
+  {
+   "q": "∫√(1 − x²)dx equals",
+   "options": [
+    "sin⁻¹(x)/2 + sin(2u)/4 + C",
+    "sin⁻¹(x)/2 + x√(1 − x²)/2 + C",
+    "cos⁻¹(x)/2 + x√(1 − x²)/2 + C",
+    "sin⁻¹(x) + x√(1 − x²) + C"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: x = sin u kills the root via 1 − sin²u = cos²u, then cos²u = (1 + cos 2u)/2 gives u/2 + sin(2u)/4, and sin 2u = 2 sin u cos u converts back to x. Why the others are wrong: A leaves half the answer in u; the substitution must be undone · C inverts the wrong function; x = sin u means u = sin⁻¹(x) · D drops both halves' factor of 1/2, which came from the double-angle identity."
+  },
+  {
+   "q": "Slide 16 rewrites √(4 − 9x²) as 2√(1 − (3x/2)²) and sets 3x/2 = sin u. Then dx equals",
+   "options": [
+    "(3/2)cos(u)du",
+    "cos(u)du",
+    "(2/3)cos(u)du",
+    "(2/3)sin(u)du"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: differentiating gives (3/2)dx = cos u du, so dx is cos u du multiplied by the reciprocal of 3/2. Why the others are wrong: A uses 3/2 instead of its reciprocal — the standard way to lose this question · B ignores the inner coefficient entirely, as if the substitution were x = sin u · D differentiates sin u to sin u."
+  },
+  {
+   "q": "∫[1/(x² + 3x)]dx equals",
+   "options": [
+    "(1/3)ln x + (1/3)ln(x + 3) + C",
+    "ln(x² + 3x) + C",
+    "(1/3)ln(x(x + 3)) + C",
+    "(1/3)ln x − (1/3)ln(x + 3) + C"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: factor to 1/(x(x + 3)), split as A/x + B/(x + 3), clear to 1 = A(x + 3) + Bx, then x = 0 gives A = 1/3 and x = −3 gives B = −1/3. Why the others are wrong: A misses that B came out negative · B treats the whole denominator as if the numerator were its derivative · C recombines the logs as a product, which corresponds to A = B = 1/3."
+  },
+  {
+   "q": "In 7x − 6 = A(x + 3) + B(x − 2), the value of B is",
+   "options": [
+    "27/5",
+    "−27/5",
+    "27",
+    "−8/5"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: set x = −3, the root that kills A: 7(−3) − 6 = −27 and B(−3 − 2) = −5B, so −27 = −5B and two negatives give B = 27/5. Why the others are wrong: B divides −27 by +5, missing that x − 2 is also negative at x = −3 · C forgets to divide by the factor −5 at all · D swaps in the value of A and negates it."
+  },
+  {
+   "q": "A definite integral ∫ₐᵇ f(x)dx is improper if",
+   "options": [
+    "a limit of integration is infinite, or f has a discontinuity on [a, b]",
+    "the integrand is negative somewhere on [a, b]",
+    "the answer is not a whole number",
+    "the interval [a, b] is very long"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: those are her two triggers, and you must check for both before starting. Why the others are wrong: B describes a signed integral, which is perfectly ordinary · C confuses the value with the type of integral · D a finite interval of any length is not improper on its own."
+  },
+  {
+   "q": "The first line of any Type I answer is",
+   "options": [
+    "∫ₐ^∞ f(x)dx = F(∞) − F(a)",
+    "∫ₐ^∞ f(x)dx = lim x→∞ ∫ₐ^∞ f(x)dx",
+    "∫ₐ^∞ f(x)dx = F(a) − F(∞)",
+    "∫ₐ^∞ f(x)dx = lim t→∞ ∫ₐᵗ f(x)dx"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: the symbol has no meaning until the infinite limit is replaced by a letter; marks are given for writing this line. Why the others are wrong: A substitutes ∞ into an antiderivative, but ∞ is not a number you may substitute · B leaves the upper limit at ∞ and reuses x as the limit variable · C reverses the order of the limits as well."
+  },
+  {
+   "q": "∫₀^∞ xe⁻ˣ dx",
+   "options": [
+    "diverges",
+    "converges to 0",
+    "converges to 1",
+    "converges to −1"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: the antiderivative is −xe⁻ˣ − e⁻ˣ; the lower limit contributes +1, and −te⁻ᵗ is −∞/∞, so L'Hôpital sends it to 0. Why the others are wrong: A assumes −te⁻ᵗ runs to −∞, but the exponential beats the polynomial · B forgets the +1 that subtracting the value at t = 0 contributes · D loses the sign when the lower-limit value −1 is subtracted."
+  },
+  {
+   "q": "∫₋∞^∞ (2x² − x + 3)dx",
+   "options": [
+    "is 0 by symmetry",
+    "diverges, because one half already runs to infinity",
+    "converges, since the two halves cancel",
+    "diverges only if both halves diverge"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: the sum formula applies only if both halves converge, so once the piece from 0 to ∞ is unbounded the question is over. Why the others are wrong: A tries to cancel two infinities, which the definition forbids · C makes the same cancellation error · D reverses the hypothesis: both halves must converge, not just one."
+  },
+  {
+   "q": "∫₋₁² (1/x⁴)dx",
+   "options": [
+    "equals −3/8",
+    "equals 3/8",
+    "diverges; the integrand is undefined at x = 0, which lies inside the interval",
+    "converges to 1/24"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: split at 0 and take one-sided limits; both pieces run to +∞, so the integral diverges. Why the others are wrong: A applies the Fundamental Theorem straight across, giving a negative number for a strictly positive integrand · B takes the magnitude of that same illegal calculation · D keeps only the value at the upper limit."
+  },
+  {
+   "q": "With 0 ≤ g(x) ≤ f(x) for all x ≥ a, which conclusion is valid?",
+   "options": [
+    "if ∫g converges then ∫f converges",
+    "if ∫f converges then ∫g converges",
+    "if ∫f diverges then ∫g diverges",
+    "if ∫f converges then ∫g diverges"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: in her lettering g is underneath and f is on top, so the big one convergent drags the small one down with it. Why the others are wrong: A argues upward from the small function, which proves nothing · C argues downward from the big function, which also proves nothing · D contradicts the inequality outright."
+  },
+  {
+   "q": "∫₁^∞ 1/√(x³ + 7) dx",
+   "options": [
+    "converges, by comparison with 1/x^(3/2)",
+    "diverges, since x³ + 7 ≥ x³",
+    "converges to a value you can compute",
+    "cannot be decided by comparison"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: x³ + 7 ≥ x³ gives √(x³ + 7) ≥ √(x³), and taking reciprocals reverses it, so the integrand is at most x^(−3/2), where p = 3/2 > 1. Why the others are wrong: B carries the inequality through the reciprocal without reversing it · C comparison delivers a verdict, never a number · D the comparison lands in a useful direction, so it does decide it."
+  },
+  {
+   "q": "For x ≥ 3, √(x² − 1) < x. It follows that 1/√(x² − 1) is",
+   "options": [
+    "less than 1/x, so the integral converges",
+    "greater than 1/x, so the integral converges",
+    "less than 1/x, so the integral diverges",
+    "greater than 1/x, so the integral diverges"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: reciprocals of positive numbers reverse the inequality, and ∫₃^∞ dx/x has p = 1, which Note 1 places on the divergent side. Why the others are wrong: A keeps the inequality pointing the same way through the reciprocal · B gets the inequality right but reads p = 1 as convergent · C gets both halves wrong and reaches the right verdict by accident."
+  },
+  {
+   "q": "If f(x) ≤ 0 on [a, b], the area between y = f(x) and the x-axis is",
+   "options": [
+    "∫ₐᵇ f(x)dx",
+    "−f(b) + f(a)",
+    "∫ₐᵇ f(x)dx + c",
+    "|∫ₐᵇ f(x)dx|"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: below the axis every strip contributes a negative amount, so the integral is negative and an area cannot be. Why the others are wrong: A is the first case of the rule, for f ≥ 0, and would report a negative area · B substitutes the limits into f instead of into an antiderivative · C adds a constant of integration to a definite integral, which never carries one."
+  },
+  {
+   "q": "Example 1: the area between f(x) = 5x − x² and the x-axis is",
+   "options": [
+    "125/6",
+    "125/2",
+    "125/3",
+    "−125/6"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: set f(x) = 0 to get x = 0 and x = 5, test f(2) = 6 > 0, then [5x²/2 − x³/3]₀⁵ = 125/2 − 125/3 = 125/6 ≈ 20.83. Why the others are wrong: B keeps the first term of the antiderivative and drops the cubic one · C keeps the cubic term and drops the first · D evaluates lower minus upper, reversing the limits."
+  },
+  {
+   "q": "Example 2: the area bounded by f(x) = x² − 1, the x-axis, x = 0 and x = 2 is",
+   "options": [
+    "2/3",
+    "2",
+    "4/3",
+    "−2/3"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: the curve cuts the axis at x = 1, inside [0, 2], so split there: |∫₀¹| + ∫₁² = 2/3 + 4/3 = 2. Why the others are wrong: A is the unsplit integral ∫₀²(x² − 1)dx, which lets the two pieces partly cancel · C is the piece above the axis only · D is the first piece with the modulus omitted."
+  },
+  {
+   "q": "TASK 1: the area between f(x) = 6x − x² and the x-axis is",
+   "options": [
+    "72",
+    "108",
+    "36",
+    "18"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: 6x − x² = 0 gives x = 0 and x = 6; f(3) = 9 > 0, so no modulus, and [3x² − x³/3]₀⁶ = 108 − 72 = 36. Why the others are wrong: A reports the 216/3 term alone · B reports 3(6)² alone, dropping the cubic term · D integrates only as far as the vertex x = 3 instead of the root x = 6."
+  },
+  {
+   "q": "The curves y = 3 − x and y = x² − 9 meet at",
+   "options": [
+    "x = −4 and x = 3",
+    "x = −3 and x = 3",
+    "x = 4 and x = −3",
+    "x = 0 and x = 3"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: 3 − x = x² − 9 rearranges to x² + x − 12 = 0, i.e. (x + 4)(x − 3) = 0. Why the others are wrong: B solves x² − 9 = 0, using one curve only · C reads the signs of the factors backwards · D takes x = 0 as an intersection, which it is not."
+  },
+  {
+   "q": "The area bounded by y = 3 − x and y = x² − 9 is",
+   "options": [
+    "−73/6",
+    "343/6",
+    "45/2",
+    "104/3"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: the integrand is (3 − x) − (x² − 9) = 12 − x − x², and 45/2 − (−104/3) = 343/6 ≈ 57.17. Why the others are wrong: A computes 45/2 − 104/3, failing to double the minus when subtracting a negative value · C is the upper-limit value alone · D is the magnitude of the lower-limit value alone."
+  },
+  {
+   "q": "For f(x) = 2 − x and g(x) = 4 − x², the correct integrand for the enclosed area is",
+   "options": [
+    "(2 − x) − (4 − x²)",
+    "|(2 − x) − (4 − x²)|",
+    "(4 − x²) − (2 − x)",
+    "(4 − x²) + (2 − x)"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: at the test point x = 1, f(1) = 1 and g(1) = 3, so g is on top and is written first — the order comes from the test, not from which was named first. Why the others are wrong: A subtracts in the order the functions were named, giving −4.5 · B repairs the wrong order with a modulus, which she never uses between two curves · D adds the curves, which measures nothing."
+  },
+  {
+   "q": "The area between y = sin x and y = cos x for 0 ≤ x ≤ π/2 is",
+   "options": [
+    "0",
+    "2/√2 − 1",
+    "2 − 2√2",
+    "2√2 − 2"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: they cross where tan x = 1, at x = π/4; cos is on top before it and sin after it, so A₁ + A₂ = 4/√2 − 2. Why the others are wrong: A is the single unsplit integral, in which the two congruent lobes cancel exactly · B is A₁ only, half the region · C reverses the sign, giving a negative area."
+  },
+  {
+   "q": "TASK: revolving f(x) = √x about the x-axis for 1 ≤ x ≤ 4 gives a volume of",
+   "options": [
+    "14π/3",
+    "15π/4",
+    "15π/2",
+    "8π"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: the disc formula squares the radius, so [√x]² = x and V = π[x²/2]₁⁴ = π(8 − 1/2). Why the others are wrong: A integrates √x itself, forgetting that the disc integrand is squared · B divides by 4 instead of 2 when integrating x · D uses the upper limit only."
+  },
+  {
+   "q": "Revolving the region between y = x² and y = x⁵ on [0, 1] about the x-axis gives",
+   "options": [
+    "9π/220",
+    "6π/5",
+    "π/55",
+    "6π/55"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: the washer subtracts the squares: π∫₀¹(x⁴ − x¹⁰)dx = π(1/5 − 1/11) = 6π/55. Why the others are wrong: A squares the difference of the radii, π∫(R − r)²dx, instead of subtracting the squares · B keeps only the x⁴ term · C drops the factor 6 that 1/5 − 1/11 produces."
+  },
+  {
+   "q": "Revolving the region bounded by x = y², x = 3 and y = 0 about the y-axis gives",
+   "options": [
+    "72√3π/5",
+    "36√3π/5",
+    "36√3π",
+    "9√3π"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: R(y) = 3 is constant and r(y) = y², so π∫₀^√3 (9 − y⁴)dy = π[9y − y⁵/5]₀^√3. Why the others are wrong: A runs y from −√3 to √3, doubling the region she actually uses · C forgets to divide y⁵ by 5 · D keeps the 9y term and drops the y⁵/5 term."
+  },
+  {
+   "q": "Revolving y = 2x² − x³, y = 0 about the y-axis by shells gives",
+   "options": [
+    "16π/5",
+    "8π/5",
+    "32π/5",
+    "16π/25"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: V = 2π∫₀²x(2x² − x³)dx = 2π[x⁴/2 − x⁵/5]₀² = 2π(8/5). Why the others are wrong: B drops the factor 2 in 2π, which is the unrolled shell's circumference · C doubles the answer a second time · D divides by 5 twice."
+  },
+  {
+   "q": "Rotating the region under y = √x from 0 to 1 about the x-axis by shells gives",
+   "options": [
+    "π/4",
+    "π/2",
+    "2π/5",
+    "π"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: the strip is horizontal, so the radius is y and the height is 1 − y²; V = 2π∫₀¹(y − y³)dy = 2π(1/2 − 1/4), which the disc method confirms. Why the others are wrong: A forgets the outer factor 2 · C uses y² as the strip height instead of 1 − y² · D doubles the value by taking the height as 1 + y²."
+  },
+  {
+   "q": "TASK: rotating the region under y = x² on [0, 2] about the line y = −1 gives",
+   "options": [
+    "176π/15",
+    "32π/5",
+    "96π/15",
+    "176π/5"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: the axis has moved, so R = x² + 1 and r = 1; π∫₀²(x⁴ + 2x²)dx = π(32/5 + 16/3). Why the others are wrong: B uses R = x² and r = 0, as if the axis were still the x-axis · C keeps only the x⁴ term after shifting · D mishandles the common denominator when adding 32/5 and 16/3."
+  },
+  {
+   "q": "Slide 13 says the shell method integrates along an axis parallel to the axis of revolution. In fact the variable of integration runs",
+   "options": [
+    "parallel to the axis of revolution",
+    "along the axis of revolution",
+    "in either direction, since it makes no difference",
+    "perpendicular to the axis of revolution"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: both her own examples show it: Example 1 revolves about the y-axis and integrates dx, Example 2 revolves about the x-axis and integrates dy. Why the others are wrong: A is what the slide prints, and her two examples contradict it · B describes the disc and washer methods, not shells · C would give the wrong radius and the wrong height."
+  },
+  {
+   "q": "Revolving the region between x = y² + 1 and x = 3 about the line x = 3 gives",
+   "options": [
+    "32√2π/15",
+    "64√2π/5",
+    "64√2π/15",
+    "8π/15"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: R(y) = 3 − (y² + 1) = 2 − y², and setting y² + 1 = 3 gives limits ±√2; π∫(4 − 4y² + y⁴)dy = 64√2π/15. Why the others are wrong: A evaluates at y = √2 only, forgetting that subtracting the value at −√2 doubles it · B divides y⁵ by 5 but never divides the other terms correctly · D drops the √2 that (√2)³ and (√2)⁵ produce."
+  },
+  {
+   "q": "For v(t) = 2t² + 6t + 1 km/h, the distance travelled in the first 5 hours is",
+   "options": [
+    "81 km",
+    "83.3 km",
+    "166 km",
+    "163.3 km"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: integrate the rate over the interval: [2t³/3 + 3t² + t]₀⁵ = 83.33 + 75 + 5. Why the others are wrong: A is v(5), the speed at the end, not the distance covered · B keeps the 2t³/3 term and drops the rest · C mishandles 250/3 as 86 rather than 83.33."
+  },
+  {
+   "q": "For v(t) = 6t² − 6t − 12 with x(0) = −4, the net displacement over the first 5 seconds is",
+   "options": [
+    "111 m",
+    "155 m",
+    "115 m",
+    "135 m"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: a definite integral, so the constant cancels: [2t³ − 3t² − 12t]₀⁵ = 250 − 75 − 60. Why the others are wrong: A carries the −4 into the definite integral and subtracts it only once — this is x(5), the position, not the change in position · B is the total distance travelled, which she neither asks for nor teaches · D counts only the forward stretch after t = 2."
+  },
+  {
+   "q": "The weight density of water used in the fluid-force integral is",
+   "options": [
+    "9800 N/m³",
+    "9800 N/m²",
+    "1000 N/m³",
+    "9.8 N/m³"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: ρg = (1000)(9.8) = 9800, and kg/m³ multiplied by m/s² gives newtons per cubic metre. Why the others are wrong: B is the unit printed on the slide, and it is wrong — the number is right, the unit is not · C quotes the density ρ without multiplying by g · D quotes g without multiplying by ρ."
+  },
+  {
+   "q": "Pulling up a 60 m rope of mass 66 g/m takes work equal to",
+   "options": [
+    "2328.48 J",
+    "1164.24 J",
+    "1164240 J",
+    "38.81 J"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: F(x) = 9.8(0.066)(60 − x) = 0.6468(60 − x), and ∫₀⁶⁰F dx = 0.6468(3600 − 1800). Why the others are wrong: A treats the force as constant at its starting value, but it falls to zero as the rope comes up · C leaves the mass in grams instead of converting to kilograms · D reports the initial force in newtons rather than the work done."
+  },
+  {
+   "q": "With MR = 100 + 20Q + 3Q² and TR(2) = 260, the constant of integration is",
+   "options": [
+    "260",
+    "248",
+    "12",
+    "−12"
+   ],
+   "answerIndex": 2,
+   "why": "Why C is right: TR(Q) = 100Q + 10Q² + Q³ + C, and TR(2) = 200 + 40 + 8 + C = 248 + C, so 248 + C = 260. Why the others are wrong: A copies the given value straight into C instead of solving for it · B reports the value of the polynomial at Q = 2 rather than the constant · D solves 248 + C = 260 with the sign reversed."
+  },
+  {
+   "q": "The capital growth ∫₄⁹ 6√t dt equals",
+   "options": [
+    "76",
+    "4",
+    "6",
+    "108"
+   ],
+   "answerIndex": 0,
+   "why": "Why A is right: 6∫t^(1/2)dt = 4t^(3/2), and 4(27) − 4(8) = 108 − 32. Why the others are wrong: B is the answer printed on the slide, and it is wrong — it is the coefficient of t^(3/2) left stranded where the answer belongs · C is I(9) − I(4) = 18 − 12, substituting into the integrand instead of the antiderivative · D evaluates at the upper limit and forgets to subtract the lower one."
+  },
+  {
+   "q": "With D(Q) = 1000 − 25Q and S(Q) = 100 + Q², the consumer surplus is",
+   "options": [
+    "5333",
+    "10000",
+    "500",
+    "5000"
+   ],
+   "answerIndex": 3,
+   "why": "Why D is right: equilibrium first: Q₀ = 20 and P₀ = 500, then CS = ∫₀²⁰(500 − 25Q)dQ = 10000 − 5000. Why the others are wrong: A is the producer surplus, ∫₀²⁰(400 − Q²)dQ — the two are close enough that swapping them looks plausible · B keeps 500Q and forgets to subtract 25Q²/2 · C quotes the equilibrium price rather than an area."
+  },
+  {
+   "q": "750 = 1000e^(0.035t) − 1000 gives an exhaustion year of",
+   "options": [
+    "2165",
+    "2021",
+    "2020",
+    "2755"
+   ],
+   "answerIndex": 1,
+   "why": "Why B is right: e^(0.035t) = 1.75, so t = ln(1.75)/0.035 = 15.989 ≈ 16 years after 2005. Why the others are wrong: A divides by the slide's misprinted 0.0035, giving 159.89 years · C rounds 15.989 down to 15 · D multiplies by 0.035 instead of dividing."
+  }
+ ]
+}

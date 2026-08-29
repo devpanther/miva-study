@@ -854,6 +854,7 @@ function askBuddy(){
     body: JSON.stringify({
       question: BUDDY.text, course: c.course, week: c.w,
       topic: c.chk ? c.chk.topic : "",
+      who: meName(),
       /* Only send what he got wrong when he opened this FROM a missed concept.
          Sending it on a free question made the model answer the miss instead of
          the question, and open by grading working it cannot see. */
@@ -1502,7 +1503,7 @@ function viewData(root){
     return '<span class="sc" style="margin:0 5px 5px 0">W'+n+' · '+meta+'</span>';
   }).join("") : '<span class="muted">Loading…</span>';
   c2.appendChild(p);
-  c2.appendChild(el("p","muted","<br>Packs are read live from the <code>seprintour/miva-study</code> repo, one week at a time. Regenerate a week and push it, and this picks it up within five minutes — the site never needs redeploying for new questions."));
+  c2.appendChild(el("p","muted","<br>Packs are read live from the <code>devpanther/miva-study</code> repo, one week at a time. Regenerate a week and push it, and this picks it up within five minutes — the site never needs redeploying for new questions."));
   root.appendChild(c2);
 
   var c3 = el("div","card");
