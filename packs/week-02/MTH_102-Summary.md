@@ -44,8 +44,8 @@
 | Exponential ↔ log | b^y = x ⇔ y = log_b x | b > 0, b ≠ 1, x > 0 |
 | Log laws | log(MN)=log M+log N; log(M/N)=log M−log N; log(Mᵏ)=k log M | M, N > 0 |
 | Change of base | log_b x = ln x / ln b | any convenient base |
-| Compound interest | A(t) = P(1 + r/n)^{nt} | P principal, r rate, n periods/yr |
-| Continuous growth/decay | P(t) = P₀e^{rt}; N(t) = N₀e^{−λt} | r growth rate, λ decay constant |
+| Compound interest | A(t) = P(1 + r/n)^(nt) | P principal, r rate, n periods/yr |
+| Continuous growth/decay | P(t) = P₀e^(rt); N(t) = N₀e^(−λt) | r growth rate, λ decay constant |
 | Trig ratios | sin θ = opp/hyp, cos θ = adj/hyp, tan θ = opp/adj | csc, sec, cot are their reciprocals |
 | Periods | sin, cos: 2π (range [−1,1]); tan: π | for sin(kx): period 2π/k |
 | End behaviour | sign of aₙxⁿ decides both tails | n even: tails agree; n odd: tails oppose |

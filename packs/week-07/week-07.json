@@ -32,7 +32,7 @@
    "day": "Wed",
    "deep": {
     "course": "COS_102",
-    "topic": "Data types, variables and programme objects as concepts: what a data type fixes about size and interpretation, definition versus declaration and the rules for a legal variable name, why variable names are replaced by memory addresses, the six operator categories with their precedence and associativity, and what a programme object is - state in variables, behaviour in methods, and structure versus union versus class",
+    "topic": "Data types, variables and programme objects as concepts, exactly as the two decks give them: what a programme contains besides its instructions, what a data type is and the three basic types in C, the deck's rule for a variable definition and its sentence that a definition is also a declaration but not every declaration is a definition, why variable names are replaced by memory addresses, the six operator categories by name, and what a programme object is - state in variables, behaviour in methods, who may reach the state, and structure versus union versus class.",
     "checkFile": "checks/Wed-COS_102.md"
    },
    "fast": {
@@ -68,7 +68,7 @@
    "day": "Sat",
    "deep": {
     "course": "COS_102",
-    "topic": "Code on data types, variables and operators: evaluating an expression by precedence and associativity, predicting both the value and the type an operation produces, integer versus floating-point division and where the cast has to go, character versus numeric versus string values, spotting the type or declaration error in a fragment, and reading structure and union code",
+    "topic": "Applied work on this week's material: writing a definition in the deck's required order, reaching a member with the dot syntax, reading struct, union and class code from the week's summary sheet, deciding what a union can hold at one time, separating an object's state from its behaviour on a new example, data encapsulation with public and private, and representing a problem as data.",
     "checkFile": "checks/Sat-COS_102.md"
    },
    "fast": {
@@ -502,136 +502,136 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
-   "topic": "Data types, variables and programme objects as concepts: what a data type fixes about size and interpretation, definition versus declaration and the rules for a legal variable name, why variable names are replaced by memory addresses, the six operator categories with their precedence and associativity, and what a programme object is - state in variables, behaviour in methods, and structure versus union versus class",
+   "topic": "Data types, variables and programme objects as concepts, exactly as the two decks give them: what a programme contains besides its instructions, what a data type is and the three basic types in C, the deck's rule for a variable definition and its sentence that a definition is also a declaration but not every declaration is a definition, why variable names are replaced by memory addresses, the six operator categories by name, and what a programme object is - state in variables, behaviour in methods, who may reach the state, and structure versus union versus class.",
    "maxScore": 12,
    "questions": [
     {
      "type": "mcq",
-     "q": "The slides state: \"A variable definition is also a declaration, but not all variable declarations are definitions.\" What does this actually mean?",
+     "q": "The slides state: \"A variable definition is also a declaration, but not all variable declarations are definitions.\" Taken at face value, what does that sentence assert?",
      "options": [
       "A definition is a declaration that also gives the variable a starting value, so 'int x;' is a declaration and 'int x = 0;' is a definition",
       "A declaration is what you write inside a function body; a definition is what you write outside all functions, at the top of the file",
-      "The programmer writes the declaration and the compiler creates the definition later, when it decides which memory address the variable will occupy",
-      "A declaration introduces a name and its type to the compiler; a definition does that AND reserves the storage, so 'extern int total;' declares total without defining it"
+      "Every declaration is a definition, but not every definition is a declaration",
+      "Every definition is also a declaration, so the definitions sit inside the declarations - and there can be declarations that stop short of defining"
      ],
      "answerIndex": 3,
-     "concept": "Declaration vs definition - storage is the dividing line",
-     "why": "A declaration gives the compiler a name and a type so uses of it can be checked; a definition additionally causes bytes to be set aside. Every definition therefore declares, but 'extern int total;' declares without reserving anything. Option (a) is the common confusion of definition with initialisation: 'int x;' is a complete definition whose bytes simply hold whatever was there before."
+     "concept": "The sentence asserts one implication and denies the other",
+     "why": "The sentence has a direction. Definition implies declaration is asserted ('a variable definition IS ALSO a declaration'); the converse is denied ('NOT ALL variable declarations are definitions'). So writing a definition always counts as declaring the name and its type, and there exist declarations that do less - the week's summary sheet glosses the shortfall as reserving the storage. Option (C) is that same sentence read backwards, which is the commonest error here. Option (A) confuses definition with initialisation: 'int x;' is a complete definition whose bytes simply hold whatever was there before. Option (B) invents a rule about where each is written; both may appear inside a function or outside one. Note what the deck does with the sentence: it poses it as a question - 'What does this mean?' - and the next slide changes the subject without answering, so the relationship is quotable but the explanation of it comes from the summary sheet."
     },
     {
      "type": "mcq",
      "q": "\"Variable names are not stored inside the computer memory; the compiler replaces them with memory location addresses.\" Which conclusion follows from that?",
      "options": [
       "A variable's name should be kept short, because every extra character in a name occupies extra memory while the program runs",
-      "The name exists only while the program is being compiled; at run time the machine works from an address, so renaming a variable consistently throughout the source cannot change what the compiled program does",
+      "The name exists only while the program is being compiled; at run time the machine works from an address, so a consistent rename cannot change what the compiled program does",
       "Because the name is discarded, the value stored in a variable cannot be read back once something else has been assigned to it",
-      "The compiler must build a table of names into the finished program so that the running program can look each variable up by name when it needs it"
+      "The compiler must build a table of names into the finished program, so that the running program can look each of its variables up by name at the moment it needs the value"
      ],
      "answerIndex": 1,
      "concept": "Names are compile-time; addresses are run-time",
-     "why": "Once compilation is finished every use of the name has become 'the bytes at such-and-such an address', so the identifier plays no further part - long names cost nothing at run time and a consistent rename produces the same machine code. Option (d) describes a debug symbol table, which exists for the debugger, not so that a program can find its own variables."
+     "why": "Once compilation is finished every use of the name has become 'the bytes at such-and-such an address', so the identifier plays no further part - long names cost nothing at run time and a consistent rename produces the same machine code. Option (A) is the belief the deck's sentence exists to correct, and the usual excuse for cryptic one-letter names. Option (C) confuses discarding the NAME with discarding the VALUE; the bytes at the address stay where they are and may be read as often as you like. Option (D) describes a debug symbol table, which exists for the debugger, not so that a program can find its own variables - it is exactly the arrangement the quoted sentence says C does not use."
     },
     {
      "type": "mcq",
-     "q": "What does specifying a data type actually accomplish?",
+     "q": "What does specifying a data type actually accomplish, on the deck's own definition?",
      "options": [
-      "It restricts what the variable may be called, since each type permits a different set of names",
-      "It fixes how many bytes are set aside and how the bit pattern in those bytes is to be interpreted, and therefore which operations are legal on the variable",
+      "It fixes the type and the size of the data associated with the variable",
+      "It restricts what the variable may be called, since each of the types permits its own different set of names",
       "It fixes the variable's value for the rest of the program, so that later statements cannot change it",
       "It makes the program convert whatever the user types at the keyboard into the right form automatically"
      ],
-     "answerIndex": 1,
-     "concept": "What a type fixes - size, interpretation and legal operations",
-     "why": "The course's wording is that data types determine the type and size of the data associated with variables: size is the byte count reserved, type is the reading rule for those bytes, and together they decide what may be done with them - which is why % is legal on two ints and illegal on a float. Option (c) confuses a type with the const qualifier."
+     "answerIndex": 0,
+     "concept": "A data type fixes the type and the size of the data",
+     "why": "The deck's wording is that 'data type is used for specifying the type of a variable' and that data types 'determine the type and size of data associated with variables'. That is why the deck also tells you to 'select the data type according your programme logic and need' - the choice is about what kind of value the variable will hold and how much room it needs. Option (B) inverts the two halves of a definition; the naming rules do not change with the type. Option (C) describes a constant, not a type: a type says what kind of value may be stored, never that it may not be stored again. Option (D) confuses declaring a type with input conversion, which is a separate matter entirely."
     },
     {
      "type": "mcq",
-     "q": "Beyond \"one of them has a decimal point\", what is the real difference between int and float?",
+     "q": "Which list gives the three basic types the deck names for the C language?",
      "options": [
-      "An int lives in main memory while a float is held in the processor's floating-point registers",
-      "A float is a signed type and an int is unsigned, which is why float can hold negative values",
-      "An int holds a whole number exactly within a fixed range; a float holds an approximation of a real number to a fixed number of significant digits, so a value such as 0.1 is not stored exactly",
-      "A float can hold every value an int can hold and more besides, so declaring everything float removes a whole class of errors"
+      "Integers, floating-point numbers and Booleans",
+      "Characters, strings and integers",
+      "Characters, integers and floating-point numbers",
+      "Integers, structures and unions"
      ],
      "answerIndex": 2,
-     "concept": "Exactness versus range",
-     "why": "int is exact but bounded; float trades exactness for range by storing a sign, an exponent and a fixed number of significant digits, so most decimal fractions are stored as the nearest representable value. Option (d) is the trap: a float really does reach larger magnitudes, but a 4-byte float cannot hold every 4-byte int exactly, so counting in float accumulates error."
+     "concept": "The three basic types in C",
+     "why": "The deck says it twice: 'There are three basic types in the C language: characters, integer, and floating-point numbers.' Option (D) names two things the deck introduces in the other lesson of the same week, and introduces as USER-DEFINED data types built out of members - which is precisely what separates them from the basic types. Option (B) adds strings, which C builds out of characters rather than providing as a basic type. Option (A) adds Booleans, which belong to a later week and which C represents as integers in any case."
     },
     {
      "type": "mcq",
-     "q": "&& and & are both listed by the course, in different categories. What separates them?",
+     "q": "\"An operator is a symbol that tells the compiler to perform specific mathematical or logical functions.\" The deck lists six types of operator that C provides. Which list is the deck's?",
      "options": [
-      "&& is the logical AND for integers and & the logical AND for floating-point values",
-      "They are the same operator; & is simply the older spelling that C inherited and && the modern one",
-      "&& is logical: it takes whole truth values, yields 1 or 0, and evaluates its right operand only if the left has not already settled the answer. & is bitwise: it combines the two operands bit by bit and always evaluates both",
-      "& is only ever the address-of operator, so the bitwise AND has to be written &&, which is why the two look alike"
-     ],
-     "answerIndex": 2,
-     "concept": "Logical vs bitwise operators, and short-circuit evaluation",
-     "why": "Two differences, both examinable. && treats each operand as one truth value (zero false, anything else true) and yields 1 or 0, while & pairs the operands bit by bit - which is why 1 & 2 is 0 but 1 && 2 is 1. And && stops as soon as the left operand is false, whereas & always evaluates both."
-    },
-    {
-     "type": "mcq",
-     "q": "Which list puts the operator categories in order from HIGHEST precedence to LOWEST?",
-     "options": [
-      "* / % -> + - -> unary (! - ++ cast) -> == != and < <= > >= at the same level -> && -> || -> =",
-      "= -> && and || -> == != -> < <= > >= -> + - -> * / % -> unary (! - ++ cast)",
-      "unary (! - ++ cast) -> * / % -> + - -> < <= > >= -> == != -> && -> || -> =",
-      "* / % and + - at the same level -> unary (! - ++ cast) -> && -> || -> == != and < <= > >= -> ="
-     ],
-     "answerIndex": 2,
-     "concept": "The precedence ladder",
-     "why": "Unary binds tightest, then multiplicative, then additive, then relational, then equality, then &&, then ||, with assignment near the bottom - which is why 'a + 1 < b * 2 && c != 0' needs no brackets. Option (b) is the exact reversal; option (a) puts the unary operators below the binary arithmetic, which would make !a && b mean !(a && b)."
-    },
-    {
-     "type": "mcq",
-     "q": "Precedence and associativity are two different rules. Which statement gets both right?",
-     "options": [
-      "Precedence decides between operators at different levels; associativity decides between operators at the SAME level, which is the only thing that can settle 6 / 2 * 3",
-      "Precedence applies to arithmetic operators and associativity to logical operators, which is why the logical ones come last",
-      "Associativity decides which operator is applied first and precedence decides which operand each one takes",
-      "Associativity only matters for the assignment operator; every other operator in C is evaluated strictly left to right regardless of level"
+      "Arithmetic, relational, logical, bitwise, assignment and misc",
+      "Arithmetic, relational, logical, iterative, assignment and misc",
+      "Arithmetic, comparison, Boolean, bitwise, storage and special",
+      "Arithmetic, relational, logical, bitwise, conditional and recursive"
      ],
      "answerIndex": 0,
-     "concept": "Precedence vs associativity - different levels vs the same level",
-     "why": "Precedence compares operators at different levels (* outranks +). Associativity is the tie-break at one level: / and * are both multiplicative, so only left-to-right associativity settles 6 / 2 * 3 as (6 / 2) * 3 = 9 rather than 6 / (2 * 3) = 1. Assignment and the unary operators associate the other way, which is why a = b = 0 works."
+     "concept": "The six operator categories, by name",
+     "why": "The deck lists exactly these six after its definition of an operator: arithmetic, relational, logical, bitwise, assignment and misc. Option (B) swaps bitwise for 'iterative', which is a control-flow idea belonging to a later week, not a kind of operator. Option (D) swaps assignment and misc for 'conditional' and 'recursive' - recursion is a Week 10 topic and is not an operator at all. Option (C) renames four of the six with plausible synonyms, which is the trap: the deck gives these names, and 'comparison' or 'Boolean' will not do in an answer that asks for the deck's list."
     },
     {
      "type": "mcq",
-     "q": "A 'struct Dog' and a 'union Dog' are written with the same three members - char name[20], char breed[20], char colour[20]. On the course's definitions, what is the difference?",
+     "q": "The deck says a computer program includes more than just instructions. What else does it say a program contains?",
      "options": [
-      "The union may group members of different types; the structure requires every member to be the same type, which is why this union is the more useful of the two here",
-      "In the structure each member has its own storage, so all three can hold values at the same time; in the union all members start at the same location in memory, so the variable can represent the value of only one member at a time",
+      "Header files and the libraries that they import",
+      "Comments and the programme's documentation",
+      "Nothing else at all; a programme is only a series of instructions, and there is nothing besides them in it",
+      "Data, and the various memory addresses in which the instructions work"
+     ],
+     "answerIndex": 3,
+     "concept": "What a program contains besides its instructions",
+     "why": "The deck defines a programme as 'a series of instructions that causes a computer or a microcontroller to perform a particular task' and then immediately adds: 'A computer program includes more than just instructions. It also contains data and various memory addresses in which the instructions work to perform a specific task.' Those two additions are why the rest of the week exists - data is what needs types and variables, and addresses are what the variable names become. Option (C) is the definition with its second half removed. Options (A) and (B) name things that appear in the SOURCE FILE; neither is what the deck says the program contains."
+    },
+    {
+     "type": "mcq",
+     "q": "In a programme object, where does the state live, where does the behaviour live, and who may reach the state?",
+     "options": [
+      "State lives in methods and behaviour in variables, and any part of the programme may reach either",
+      "State and behaviour both live in variables, and the methods only display them",
+      "The state of an object is stored in variables and its behaviour is described by methods, and only that object's own methods may reach its variables",
+      "State lives in variables and behaviour in methods, but every object of a given kind shares one single set of variables with every other object of that same kind"
+     ],
+     "answerIndex": 2,
+     "concept": "State in variables, behaviour in methods, and who may reach the variables",
+     "why": "The deck states all three parts. 'In programming, an object is defined by its state and behaviour. The state of an object is stored in variables and the behaviour of objects is described by methods.' 'This means that every object will have their own variables and methods.' And: 'Methods are central to how programme objects work because only the methods of a particular object have access to the variables or state of that object', with the companion sentence that 'different objects can only interact with each other through their own individual methods'. Option (A) swaps the two and then removes the restriction, which is the whole point. Option (D) gets the mapping right and then denies 'every object will have their own variables and methods'. Option (B) leaves the object with no behaviour at all."
+    },
+    {
+     "type": "mcq",
+     "q": "A 'struct Dog' and a 'union Dog' are written with the same three members - char name[20], char breed[20], char colour[20]. On the deck's definitions, what is the difference?",
+     "options": [
+      "The union may group members of different types while the structure requires every member to be of the same type, which is why this union is the more useful of the two here",
+      "In the structure each member has its own storage, so all three hold values at once; in the union all members start at the same location, so only one member's value is represented at a time",
       "The structure is a user-defined data type while the union is one of C's built-in types, which is why the union needs no struct-style keyword before it",
       "The union is a structure that has been given methods as well as variables, which is what makes it the halfway step between a structure and a class"
      ],
      "answerIndex": 1,
      "concept": "Structure vs union - same syntax, different memory layout",
-     "why": "The course defines both with the same phrase about grouping items of possibly different types, so that wording cannot separate them; the difference is that all of a union's members start at the same location, making the struct 60 bytes with three independent strings and the union 20 bytes in which writing breed overwrites name. Option (d) confuses union with class, which is the one that adds methods."
+     "why": "The deck defines both with the same phrase about grouping items of possibly different types into a single type, so that wording cannot separate them; the difference it gives is that 'all of its members start at the same location in memory' and that 'a union variable can represent the value of only one of its members at a time'. On the summary sheet's three char[20] members that makes the struct 60 bytes with three independent strings and the union 20 bytes in which writing breed overwrites name. Option (A) is false of both - the deck says 'possibly different types' of each. Option (C) is false in both halves: both are user-defined and both need their keyword. Option (D) confuses union with class, which is the one that adds methods."
     },
     {
      "type": "short",
-     "q": "State what a data type is in the course's own words, name the three basic types it gives for C, and then explain the mechanism: what does \"determines the type AND size of data associated with variables\" mean once the program is running? Use it to explain how the same four bytes of memory could be a perfectly good int and a perfectly good float, and what decides which one they are.",
-     "concept": "A data type as a size plus a reading rule",
-     "why": "A data type is used for specifying the type of a variable, and data types determine the type and size of the data associated with variables; the three basic types in C are characters, integers and floating-point numbers (char, int, float, with double as the wider floating type). Size is the number of bytes the definition reserves - typically 1 for char, 4 for int, 4 for float, 8 for double - and type is the rule for reading those bytes, because memory holds nothing but bits. Four bytes are 32 bits: read as a two's-complement integer they are one number; read as an IEEE-754 value, where the leading bit is a sign, the next eight an exponent and the remaining twenty-three a mantissa, they are a different number entirely. Nothing in the bytes says which, so the DECLARED TYPE decides - and it decides at compile time, because the compiler has already chosen the instructions (integer add or floating add, integer divide or floating divide) and built them into the code. Three consequences: the size fixes the range, which is why an int overflows near +/-2.1 billion; the reading rule fixes which operations are legal, which is why % works on two ints and is rejected on a float; and the reading rule fixes what an operation MEANS, which is why 7 / 2 is 3 with two ints and 3.5 with a floating operand."
+     "q": "State what a data type is in the deck's own words, name the three basic types it gives for C, and quote the deck's rule for writing a variable definition. Then explain what \"determine the type and size of data associated with variables\" gives the programmer, and why the deck says to select the data type \"according your programme logic and need\" - use the deck's own three basic types to show the choice being made.",
+     "concept": "A data type as a size and a kind, and the definition rule",
+     "why": "THE DEFINITIONS. 'Data type is used for specifying the type of a variable. They determine the type and size of data associated with variables.' 'There are three basic types in the C language: characters, integer, and floating-point numbers.' THE RULE: 'Variable definition always includes \"data type\" followed by \"variable name\"' - so 'int count;', 'float average;', 'char grade;' - and the deck adds that 'before using a variable, you should always define it by using appropriate data type'. WHAT TYPE AND SIZE GIVE YOU. Two separate things. SIZE is how much room the definition sets aside, which is why the same programme can hold a single letter cheaply and a measurement expensively. TYPE is the kind of value those bytes stand for, which is what makes one of them a letter and the other a measurement, and which is why the deck pairs the words in one sentence rather than naming one of them. Together they settle what the variable can hold and therefore what can sensibly be done with it. WHY THE CHOICE IS MADE FROM THE PROBLEM. The deck's instruction is that you 'can select the data type according your programme logic and need', which is the same lesson as its slide on representing a problem as data: you look at the quantity in the problem and ask what kind of value it is. A letter grade is one character, so 'char grade;'. A count of students is a whole number, so 'int count;'. An average or a measurement is not a whole number, so 'float average;'. The three basic types are three answers to one question - what kind of value is this? - and the definition rule is how the answer is written down: data type first, variable name second."
     },
     {
      "type": "short",
-     "q": "Distinguish declaration, definition and initialisation, with one example of each. Explain why C needs the declaration/definition distinction at all - what would a programmer be unable to do if every mention of a name reserved storage? Then state the rules that make a variable name legal in C, and say which rule each of 2ndScore, 'total score', float and unit-price breaks.",
-     "concept": "Declaration, definition, initialisation, and the naming rules",
-     "why": "A DECLARATION tells the compiler that a name exists and what type it has, so uses of it can be checked: 'extern int total;'. A DEFINITION does that and also reserves the storage: 'int total;' - the course's rule, data type followed by variable name. An INITIALISATION is a definition that also supplies a starting value: 'int total = 0;'. Every definition is a declaration; not every declaration is a definition; and a definition without an initialiser leaves the reserved bytes holding whatever was there, which is not zero and not nothing. WHY THE DISTINCTION IS NEEDED: a real program is built from several source files compiled separately, and each must be checkable on its own. If every mention reserved storage, a variable shared between two files would be created twice - two addresses, two values, one name - and neither file could refer to the other's. The declaration lets file B say 'an int called total exists, defined elsewhere', so the linker can join the reference to the single definition; the same split is what makes function prototypes work. NAMING RULES: letters, digits and underscores only; must not begin with a digit; no spaces or other punctuation; must not be a keyword; case-sensitive, so Total and total are two variables. So 2ndScore begins with a digit; 'total score' contains a space and would be read as two tokens; float is a reserved keyword naming a type; unit-price contains a character that is not permitted and would be read as unit minus price."
+     "q": "The deck says: \"When we programme problems, we represent the problem as data (or variable) and the variable is stored and processed by the computer.\" Explain what that instruction asks a programmer to do, then answer the deck's own example - to find the average of the first five multiples of 9, what are the variables? - naming each variable, giving a definition for it in the deck's required form, and saying what value it would hold. Then do the same for a second problem: print the letter grade of a student from a single score.",
+     "concept": "Representing a problem as data, with the deck's own example",
+     "why": "WHAT THE INSTRUCTION ASKS. Before any code is written, the problem is read for the QUANTITIES it involves - the things whose values the computer will have to hold and work on - and each of those becomes a variable with a name and a data type. The deck's sentence puts it as representing the problem AS DATA, and the reason it matters is in the second half: the variable 'is stored and processed by the computer', so anything the machine has to remember or change must have been given a variable first. THE DECK'S EXAMPLE - the average of the first five multiples of 9. The multiples themselves are 9, 18, 27, 36 and 45. What varies as the programme runs is: the multiple currently being handled, the running total they are added into, how many there are, and the average that comes out. So, using the deck's rule of data type followed by variable name: 'int multiple;' holds 9, then 18, then 27, then 36, then 45 in turn; 'int sum;' ends holding 135; 'int count;' holds 5; 'float average;' holds 27. (The five multiples could equally be held in five variables, but one variable reused plus a running sum is the form the arithmetic actually needs.) Notice that 9 and 5 are not by themselves the variables - they are numbers mentioned in the wording of the problem, and mistaking those for the data is the usual first error. THE SECOND PROBLEM - a letter grade from a score. The quantities are the score that comes in and the grade that goes out: 'int score;' holds, say, 72, and 'char grade;' holds a single character such as 'A'. The types follow from the deck's instruction to select a data type according to the programme logic and need: a score is a whole number, and a grade is one character, which is exactly what the basic type 'characters' is for."
     },
     {
      "type": "short",
-     "q": "Explain how a real-world object's state and behaviour become parts of a programme object, and what the course means by \"only the methods of a particular object have access to the variables of that object\" and \"different objects can only interact with each other through their own individual methods\". Then explain the mechanism by which that single restriction produces the four benefits the course claims - independent creation and maintenance, reuse in various parts of the programme, safe removal and replacement, and information hiding.",
+     "q": "Explain how a real-world object's state and behaviour become parts of a programme object, and what the deck means by \"only the methods of a particular object have access to the variables of that object\" and \"different objects can only interact with each other through their own individual methods\". Then explain the mechanism by which that single restriction produces the four benefits the deck claims - independent creation and maintenance, reuse in various parts of the programme, safe removal and replacement, and information hiding.",
      "concept": "State in variables, behaviour in methods, and encapsulation as the mechanism behind every benefit",
-     "why": "Real-world objects have two main characteristics, state and behaviour: the course's dog has the state name, colour, breed, hungry and the behaviour barking, fetching, wagging its tail. In a programme object the mapping is exact - the state of an object is stored in variables and the behaviour is described by methods - and every object has its OWN variables and methods, so two dog objects have two separate name variables. The restriction is that the variables are not reachable from outside: the only doors into an object's state are the methods it publishes, which the access specifiers private and public control, and which data encapsulation names (hiding the implementation details so the user interacts only through public methods). Each benefit follows from that one fact. INDEPENDENT CREATION AND MAINTENANCE: since no outside code touches the variables, nothing outside can depend on how they are arranged, so the internals can be rewritten and every user still compiles, provided the method signatures hold. REUSE: the object carries its own state, so it does not depend on a surrounding context and needs no shared global set up before it will work. REMOVAL AND REPLACEMENT ('similar to how a car works'): the rest of the code only ever spoke to the object through its methods, so a replacement with the same method signatures drops straight in. INFORMATION HIDING: because state is reachable only through methods, the author chooses which methods exist and therefore controls how much is shared - a get_name() with no matching setter makes the name readable and unchangeable, which no arrangement of loose variables can enforce."
+     "why": "Real-world objects have two main characteristics, state and behaviour: the deck's dog has the state name, colour, breed, hungry and the behaviour barking, fetching, wagging its tail. In a programme object the mapping is exact - the state of an object is stored in variables and the behaviour is described by methods - and every object has its OWN variables and methods, so two dog objects have two separate name variables. The restriction is that the variables are not reachable from outside: the only doors into an object's state are the methods it publishes, which the summary sheet's access specifiers private and public control, and which data encapsulation names (hiding the implementation details so the user interacts only through public methods). Each benefit follows from that one fact. INDEPENDENT CREATION AND MAINTENANCE: since no outside code touches the variables, nothing outside can depend on how they are arranged, so the internals can be rewritten and every user still works, provided the methods keep their signatures. REUSE: the object carries its own state, so it does not depend on a surrounding context and needs no shared global set up before it will work. REMOVAL AND REPLACEMENT ('similar to how a car works'): the rest of the code only ever spoke to the object through its methods, so a replacement offering the same methods drops straight in. INFORMATION HIDING: because state is reachable only through methods, the author chooses which methods exist and therefore controls how much is shared - a get_name() with no matching setter makes the name readable and unchangeable, which no arrangement of loose variables can enforce."
     },
     {
      "type": "short",
-     "q": "Explain the difference between a structure, a union and a class, saying for each what it can hold and how its members are laid out in memory. Given the three members char name[20], char breed[20], char colour[20], state the size of the structure and the size of the union and explain why they differ. Then say what a programmer gains by choosing a union, and what they must be careful about in return.",
+     "q": "Explain the difference between a structure, a union and a class as the deck defines them, saying for each what it can hold and how its members sit in memory. Given the three members char name[20], char breed[20], char colour[20], state the size of the structure and the size of the union as the week's summary sheet gives them, and explain why they differ. Then say what a programmer gains by choosing a union, and what they must be careful about in return.",
      "concept": "Structure, union and class - what each holds and how it is laid out",
-     "why": "A STRUCTURE is a user-defined data type that groups items of possibly different types into a single type, defined with struct and accessed with the dot syntax; it holds variables only, and each member gets its own storage laid out one after another, so all members hold values at once and the size is the sum of the members plus any alignment padding. A UNION is defined the same way and also holds variables only, but all of its members start at the same location in memory, overlapping completely, so a union variable can represent the value of only one member at a time and its size is the size of its LARGEST member. A CLASS is similar to a structure but in addition to variables it also has methods or functions - the dog class has name, breed, colour and get_name() - and it adds access specifiers (public, private) that make encapsulation enforceable rather than conventional. SIZES: each member here is char[20], and char needs no alignment padding, so sizeof(struct Dog) = 20 + 20 + 20 = 60 bytes because the three arrays sit at three different offsets, while sizeof(union Dog) = 20 bytes because all three start at offset 0 and share the same 20 bytes; a union must be big enough for its largest member and no bigger. WHAT THE UNION BUYS: memory. Where a value is known to be one of several alternatives and never more than one at a time - a token that is either an integer, a float or a string - the union stores it in the space of the largest alternative rather than the sum of all of them, which matters in the small-memory settings C is used in. THE PRICE: the type system no longer tracks which alternative is live. Writing one member silently destroys the others, and reading a member that was not the last one written gives the previous member's bytes reinterpreted, which is meaningless rather than merely wrong. The programmer must carry that knowledge separately - conventionally by wrapping the union in a STRUCTURE together with a small tag variable recording which member is currently valid, and checking the tag before every read."
+     "why": "A STRUCTURE is 'a user-defined data type that can be used to group items of possibly different types into a single type', defined with the struct keyword and accessed with the dot syntax; it holds variables only, and each member gets its own storage, so all members hold values at once and the size of the structure is the sum of its members. A UNION is 'defined in the same way' and also holds variables only, but 'all of its members start at the same location in memory', overlapping completely, so 'a union variable can represent the value of only one of its members at a time' and its size is the size of its LARGEST member. A CLASS is 'similar to structures but in addition to having variables, classes also usually have methods or functions' - the dog class has name, breed, colour and get_name() - and the summary sheet adds the access specifiers public and private that make encapsulation enforceable rather than conventional. SIZES: each member here is char[20], so sizeof(struct Dog) = 20 + 20 + 20 = 60 bytes because the three arrays sit at three different offsets, while sizeof(union Dog) = 20 bytes because all three start at the same location and share the same 20 bytes; a union must be big enough for its largest member and no bigger. WHAT THE UNION BUYS: memory. Where a value is known to be one of several alternatives and never more than one at a time, the union stores it in the space of the largest alternative rather than the sum of all of them, which matters in the small-memory settings C is used in. THE PRICE: nothing in the union records which alternative is live. Writing one member destroys the others, and reading a member that was not the last one written gives the previous member's bytes read as the wrong kind of value, which is meaningless rather than merely wrong. The programmer must carry that knowledge separately - conventionally by wrapping the union in a STRUCTURE together with a small tag variable recording which member is currently valid, and checking the tag before every read."
     }
    ]
   },
@@ -914,103 +914,103 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
-   "topic": "Code on data types, variables and operators: evaluating an expression by precedence and associativity, predicting both the value and the type an operation produces, integer versus floating-point division and where the cast has to go, character versus numeric versus string values, spotting the type or declaration error in a fragment, and reading structure and union code",
+   "topic": "Applied work on this week's material: writing a definition in the deck's required order, reaching a member with the dot syntax, reading struct, union and class code from the week's summary sheet, deciding what a union can hold at one time, separating an object's state from its behaviour on a new example, data encapsulation with public and private, and representing a problem as data.",
    "maxScore": 12,
    "questions": [
     {
      "type": "mcq",
-     "q": "What is stored in r?    int r = 20 - 6 / 2 * 3;",
+     "q": "Which of these lines is a variable definition written the way the deck's rule requires - \"data type\" followed by \"variable name\"?",
      "options": [
-      "11",
-      "19",
-      "21",
-      "51"
+      "count int;",
+      "count = int;",
+      "int count;",
+      "define count as int;"
+     ],
+     "answerIndex": 2,
+     "concept": "The order of a definition: data type, then variable name",
+     "why": "'Variable definition always includes \"data type\" followed by \"variable name\".' 'int count;' is that order - type first, name second, semicolon last. Option (A) has the two the wrong way round, which is the order used in some other languages and the reason the deck bothers to state the rule. Option (B) writes an assignment rather than a definition, and puts a type name where a value should be. Option (D) is English, not C: a definition is a piece of syntax, not a description of one."
+    },
+    {
+     "type": "mcq",
+     "q": "A variable has been defined with  struct Dog d;  and its name must be set. The deck gives one way to reach a member in order to assign or modify a value. Which line uses it?",
+     "options": [
+      "strcpy(d.name, \"Rex\");",
+      "strcpy(name.d, \"Rex\");",
+      "strcpy(Dog.name, \"Rex\");",
+      "strcpy(d name, \"Rex\");"
      ],
      "answerIndex": 0,
-     "concept": "* / % share one precedence level, and that level associates left to right",
-     "why": "Precedence alone cannot settle this, because / and * are at the same level; associativity does. Left to right: 6 / 2 = 3, then 3 * 3 = 9, then 20 - 9 = 11. 21 comes from ignoring precedence and working straight along the line; 19 from believing * outranks /, giving 20 - 6 / (2 * 3); 51 from doing the division and then applying the remaining operators left to right, (20 - 3) * 3."
+     "concept": "The dot syntax reaches a member of a structure variable",
+     "why": "The deck's slide is explicit: 'To access members of a structure to either assign or modify values, use the dot syntax (.)' The form is VARIABLE dot MEMBER, so d.name. Option (B) has the two the wrong way round, which reads as 'the d belonging to name'. Option (C) uses the TYPE name where the variable name belongs - struct Dog is the type, d is the variable, and there is nothing to store in a type. Option (D) omits the dot altogether and is not an expression at all."
     },
     {
      "type": "mcq",
-     "q": "What does this print?    int a = 7, b = 2;  float x = a / b;  printf(\"%f\", x);",
+     "q": "A struct Dog and a union Dog are each written with the three members char name[20], char breed[20] and char colour[20]. How many of the three members can hold a value at the same time in each?",
      "options": [
-      "3.500000",
-      "3.000000",
-      "4.000000",
-      "Nothing: the compiler rejects the second line, because the result of an int division cannot be assigned to a float"
-     ],
-     "answerIndex": 1,
-     "concept": "The operand types choose the operation; the assignment target has no vote",
-     "why": "a and b are both int, so a / b is an integer division: 7 divided by 2 is 3 with the fractional part truncated, and the result is the int 3. Only then is that 3 converted to float and stored in x, giving 3.0, printed as 3.000000. Option (a) is the belief that a float destination forces a floating-point division; nothing about x reaches back into the expression."
-    },
-    {
-     "type": "mcq",
-     "q": "Keeping a and b as int, which single change makes that program print 3.500000?",
-     "options": [
-      "float x = (float)(a / b);",
-      "float x = (float) a / b;",
-      "double x = a / b;",
-      "float x = a / b * 1.0;"
-     ],
-     "answerIndex": 1,
-     "concept": "The cast must reach the division before the division happens",
-     "why": "A cast is a unary operator and binds tighter than /, so this parses as ((float) a) / b: one operand is float, the other is promoted to match, and a floating-point division gives 3.5. Option (a) is the near-miss - the brackets make the cast apply to a / b, which is already the truncated int 3. Options (c) and (d) also convert only after the integer division has finished."
-    },
-    {
-     "type": "mcq",
-     "q": "What does this print?    int n = 'A' + 1;  printf(\"%d %c\", n, n);",
-     "options": [
-      "65 A",
-      "66 66",
-      "A1 A1",
-      "66 B"
+      "Three in the structure and three in the union",
+      "One in the structure and three in the union",
+      "One in the structure and one in the union",
+      "Three in the structure and one in the union"
      ],
      "answerIndex": 3,
-     "concept": "char is a small integer type; the conversion specifier decides how the same value is shown",
-     "why": "'A' is a character literal whose value is its code, 65, so 'A' + 1 is the int 66 and n holds 66. %d displays that value as a decimal number, giving 66; %c displays the same value as the character with that code, and code 66 is 'B'. Option (c) treats + on a character as string concatenation, which C has no operator for."
+     "concept": "A union variable can represent the value of only one of its members at a time",
+     "why": "In a structure every member has its own storage, so all three hold values at once - that is what lets one dog have a name AND a breed AND a colour. In a union 'all of its members start at the same location in memory', so the three names refer to the same bytes, and the deck states the consequence directly: 'a union variable can represent the value of only one of its members at a time.' Option (A) treats the union as a structure, which is the whole thing the deck's Structure vs union slide exists to prevent. Options (B) and (C) get the structure wrong, which would leave no way to hold a record of several fields at all."
     },
     {
      "type": "mcq",
-     "q": "A digit has been read as a character. What are v and w?    char c = '7';  int v = c;  int w = c - '0';",
+     "q": "The week's summary sheet gives this class. Which part of it makes it a class rather than a structure?\nclass Dog {\n    char name[20];\n    char breed[20];\n    char colour[20];\n    char[] get_name() { return name; }\n};",
      "options": [
-      "v is 7 and w is 7",
-      "v is 7 and w is 55",
-      "v is 55 and w is 7",
-      "v is 55 and w is 55"
-     ],
-     "answerIndex": 2,
-     "concept": "The character '7' and the number 7 are different values",
-     "why": "c holds the character '7', whose ASCII code is 55, and assigning it to an int simply widens that code, so v is 55. Subtracting the code of '0' (48) gives the digit's numeric value: 55 - 48 = 7, so w is 7. This works because the codes of '0' to '9' are guaranteed to run consecutively."
-    },
-    {
-     "type": "mcq",
-     "q": "Which statement about this fragment is correct?    1 int first_score = 10;   2 int 2nd_score = 20;   3 float average = 0;   4 char grade = 'A';",
-     "options": [
-      "Line 2 is illegal: a C identifier may not begin with a digit",
-      "Line 3 is illegal: a float must be initialised with a literal that contains a decimal point",
-      "Line 4 is illegal: 'A' is a string, and a string must be assigned to an array of char",
-      "All four lines are legal: C works out each variable's type from the value written on the right"
+      "The line char[] get_name() { return name; } - a class has variables and, in addition, methods or functions",
+      "The three char arrays, since only a class may hold several members of the same type",
+      "The absence of a semicolon after the closing brace, which a structure requires",
+      "The fact that all of its members start at the same location in memory"
      ],
      "answerIndex": 0,
-     "concept": "The rules for a legal C identifier",
-     "why": "A name may contain letters, digits and underscores but may not begin with a digit - the compiler reads the literal 2 and then finds nd_score where an operator should be. Line 3 is fine (the int literal 0 is converted to 0.0f by the ordinary implicit conversion) and line 4 is fine because 'A' in SINGLE quotes is a character literal; \"A\" in double quotes would be the string that cannot be assigned to a char. C does no type inference at all."
+     "concept": "A class is a structure that also carries methods",
+     "why": "'Classes are also similar to structures but in addition to having variables, classes also usually have methods or functions. So, using the dog example, a class will usually consist of variables such as \"name\", \"breed\" and \"colour\". Also, it will have methods such as a method that returns the name of a dog.' get_name() is that method, and it is the only thing here a structure could not have. Option (B) is false of all three constructs - a structure groups 'items of possibly different types', so several of one type is no obstacle. Option (D) is the definition of a UNION. Option (C) invents a punctuation rule and does not touch what a class is."
     },
     {
      "type": "mcq",
-     "q": "What is printed, and what does n hold afterwards?    int n = 7;  if (n = 0) puts(\"zero\"); else puts(\"not zero\");",
+     "q": "A library programme designs a LibraryBook object with title, author, copies_out, borrow() and return_book(). Which grouping matches the deck's account of state and behaviour?",
      "options": [
-      "zero is printed, and n holds 0",
-      "not zero is printed, and n holds 7",
-      "not zero is printed, and n holds 0",
-      "Nothing: the compiler rejects the condition, because = is not a relational operator and may not appear in an if"
+      "State: borrow(), return_book(). Behaviour: title, author, copies_out",
+      "State: title, author. Behaviour: copies_out, borrow(), return_book()",
+      "State: title, author, copies_out. Behaviour: borrow(), return_book()",
+      "State and behaviour cannot be separated here, because a book is not a real-world object with behaviour"
      ],
      "answerIndex": 2,
-     "concept": "= assigns and yields the value it stored; == compares",
-     "why": "The condition is n = 0, not n == 0. It assigns 0 to n, so n is 0 from that moment, and the value of the assignment expression is the value stored, 0. A condition is false when it is zero, so the else branch runs and 'not zero' is printed - the exact opposite of the state the variable is now in. Option (b) spots the wrong branch but misses the side effect."
+     "concept": "State is what the object holds; behaviour is what it does",
+     "why": "'Real-world objects have two main characteristics; they have state and behaviour', and in a programme 'the state of an object is stored in variables and the behaviour of objects is described by methods'. For the deck's dog the state is name, colour, breed and hungry, and the behaviour is barking, fetching and wagging its tail. Reading the book the same way: title, author and copies_out are values the object HOLDS, so they are state and become variables; borrowing and returning are things the object DOES, so they are behaviour and become methods. Option (A) is the mapping inverted. Option (B) counts copies_out as behaviour because its value changes - but a state variable is precisely the thing whose value changes; what makes something behaviour is that it is an action. Option (D) refuses the deck's own analogy, which it applies to a dog, to complex objects and to objects inside other objects."
     },
     {
      "type": "mcq",
-     "q": "What does this print?    union Dog { char name[20]; char breed[20]; char colour[20]; };  union Dog d;  strcpy(d.name, \"Rex\");  strcpy(d.breed, \"Poodle\");  printf(\"%s %s\", d.name, d.breed);",
+     "q": "In that library class the variable copies_out is private and the methods borrow() and return_book() are public. On the week's summary sheet, what is that arrangement called, and what does it achieve?",
+     "options": [
+      "It is called modularity, and it makes each object smaller in memory",
+      "It is called code reusability, and it lets one class borrow another class's variables",
+      "It is called information overloading, and it lets two methods share a single name",
+      "It is called data encapsulation - the implementation details are hidden from the user, who can interact with the object only through a set of public methods"
+     ],
+     "answerIndex": 3,
+     "concept": "Data encapsulation and the access specifiers",
+     "why": "The summary sheet defines it: 'Data encapsulation is a programming concept that refers to the practice of hiding the implementation details of an object from the user. This means that the user can only interact with the object through a set of public methods, while the internal workings of the object remain hidden.' It adds that 'access specifiers like public and private control the access to class members'. The lecture supplies the reason it works: 'only the methods of a particular object have access to the variables or state of that object', which is what makes a private variable reachable through borrow() and return_book() and nowhere else. Options (A) and (B) name two of the three BENEFITS the summary sheet lists - modularity, code reusability and the independence of objects - and attach them to the wrong idea, with an invented mechanism in each case. Option (C) invents a term outright."
+    },
+    {
+     "type": "mcq",
+     "q": "The deck asks: to find the average of the first five multiples of 9, what are the variables? Which set of definitions represents that problem as data?",
+     "options": [
+      "int nine; int five;",
+      "int sum; int count; float average;",
+      "float average;",
+      "char name[20]; int age;"
+     ],
+     "answerIndex": 1,
+     "concept": "Representing a problem as data - the quantities, not the numbers in the wording",
+     "why": "'When we programme problems, we represent the problem as data (or variable) and the variable is stored and processed by the computer.' The quantities the computer must hold here are the running total of the multiples (9 + 18 + 27 + 36 + 45 = 135), how many there are (5) and the average that comes out of the two (27). Each gets a definition in the deck's required form, data type followed by variable name. Option (A) mistakes the numbers MENTIONED in the wording for the quantities the programme must hold; 9 and 5 describe which multiples to use, they are not the data being processed. Option (C) keeps the answer and throws away everything needed to compute it, leaving nothing for the computer to process. Option (D) belongs to a different problem altogether."
+    },
+    {
+     "type": "mcq",
+     "q": "What does this print?\nunion Dog { char name[20]; char breed[20]; char colour[20]; };\nunion Dog d;\nstrcpy(d.name, \"Rex\");\nstrcpy(d.breed, \"Poodle\");\nprintf(\"%s %s\", d.name, d.breed);",
      "options": [
       "Rex Poodle, because each member of a union gets its own storage, exactly as in a structure",
       "Poodle Poodle, because all members of a union start at the same location, so writing breed wrote over name",
@@ -1018,32 +1018,32 @@
       "Nothing: the compiler rejects d.breed, because a union variable may only be accessed through whichever member is named first in the definition"
      ],
      "answerIndex": 1,
-     "concept": "All members of a union start at the same location, so they alias each other",
-     "why": "The union's three arrays are one 20-byte block with three names. strcpy(d.name, \"Rex\") writes R e x NUL at offset 0; strcpy(d.breed, \"Poodle\") then writes over the same bytes, so both %s print Poodle. This is the direct consequence of a union variable being able to represent the value of only one of its members at a time. With struct in place of union the program really would print 'Rex Poodle'."
+     "concept": "All members of a union start at the same location, so they overlap",
+     "why": "The union's three arrays are one 20-byte block with three names. strcpy(d.name, \"Rex\") writes R e x and a terminator at the start of that block; strcpy(d.breed, \"Poodle\") then writes over the same bytes, so both %s print Poodle. This is the direct consequence of a union variable being able to represent the value of only one of its members at a time. With struct in place of union the programme really would print 'Rex Poodle'. Option (C) invents a first-write-wins rule; nothing protects the earlier value. Option (D) invents a restriction on which member may be named - all of them may, which is exactly what makes the overwriting possible."
     },
     {
      "type": "short",
-     "q": "Take this fragment: int total = 17, n = 5;  float avg = total / n;  printf(\"%f\", avg);  State exactly what is printed and what the correct average is. Then explain the mechanism step by step - what type each subexpression has, when the conversion to float happens, and why the type of the variable on the left has no say in it. Give TWO different one-line fixes, and explain why 'float avg = (float)(total / n);' is NOT one of them. Finally, state the value of total % n and say why avg % n would not compile.",
-     "concept": "Integer division, the point at which conversion happens, and where a cast must go",
-     "why": "It prints 3.000000; the correct average is 3.4. STEP BY STEP: total and n are both int, so in total / n both operands are int, the usual arithmetic conversions have nothing to do, and the operation selected is integer division, which truncates the quotient towards zero. 17 / 5 is 3 remainder 2, so the expression yields the int 3 - and the 0.4 is not rounded or stored anywhere, it is gone. The conversion to float happens afterwards, at the assignment: the int 3 becomes the float 3.0. The type of avg has no say because C chooses an operator's meaning from the types of its OPERANDS, which are settled before the assignment is considered. TWO FIXES: 'float avg = (float) total / n;' - the cast is a unary operator and binds tighter than /, so it applies to total alone, one operand becomes float, n is promoted, and floating division gives 3.4. Or 'float avg = total / (float) n;' (equivalently total / 5.0), which does the same from the other side. WHY (float)(total / n) FAILS: the brackets put the cast on the RESULT, so the integer division has already truncated inside them; converting 3 to 3.0 recovers nothing, because a cast cannot restore information an operation has thrown away - it must be applied to an operand. total % n is 17 % 5 = 2, the remainder the truncating division discarded, and 3 * 5 + 2 = 17 reconstructs the original. avg % n will not compile because % is defined only for integer operands and avg is a float; it is a constraint violation the compiler must diagnose, and the floating equivalent is the library function fmod."
+     "q": "Write the variable definitions a programme would need in order to find the average of the first five multiples of 9, following the deck's rule for a definition exactly. For each one, say which quantity in the problem it stands for, why you chose that data type, and what value it holds by the end. Then explain, in the deck's own terms, why 9 and 5 are not themselves the variables.",
+     "concept": "Turning a problem into definitions",
+     "why": "THE DEFINITIONS, each written as data type followed by variable name and ended with a semicolon: 'int multiple;' stands for the multiple currently being handled, and is an int because a multiple of 9 is a whole number; it holds 9, then 18, then 27, then 36, then 45 in turn, ending at 45. 'int sum;' stands for the running total of the multiples, and is an int because a total of whole numbers is a whole number; it ends holding 135, since 9 + 18 + 27 + 36 + 45 = 135. 'int count;' stands for how many multiples there are, and is an int because a count is a whole number; it holds 5. 'float average;' stands for the answer, and is a float because an average is a measurement rather than a count and need not come out whole; here it holds 27, because 135 shared among 5 is exactly 27. (Five separate int variables for the five multiples would also represent the problem, but one variable reused together with a running sum is the shape the work actually takes.) WHY 9 AND 5 ARE NOT THE VARIABLES. The deck's sentence is that 'we represent the problem as data (or variable) and the variable is stored and processed by the computer'. What has to be stored and processed is the quantities whose values the machine works on and changes as it goes - the multiple in hand, the total so far, the count and the average. 9 and 5 are part of the DESCRIPTION of the problem: they say which multiples to take and how many, and they never change. Mistaking the numbers in the wording for the data is the usual first error, and it produces a programme with nowhere to put the total it is computing. Note also the deck's instruction about choosing the type: 'you can select the data type according your programme logic and need' - the counts and totals take the basic type integer, and the average takes floating-point, because that is what each quantity is."
     },
     {
      "type": "short",
-     "q": "Every numbered line below is either wrong or does something the programmer did not intend. For each, name the error precisely, write the corrected line, and say whether the compiler will catch it or let it through.    1 int 1st_place = 4;   2 float rate = 0.5   3 char grade = \"B\";   4 int n;   5 n = n + 1;   6 float leftover = rate % 2;",
-     "concept": "Identifier rules, statement syntax, character versus string literals, uninitialised storage, and the operand types % demands",
-     "why": "LINE 1: an identifier may not begin with a digit - the compiler reads the literal 1 and then finds st_place where an operator should be. Fix: 'int first_place = 4;'. CAUGHT (syntax error). LINE 2: the semicolon is missing; every C statement is terminated by one, and without it the compiler runs this line into the next and reports the error confusingly on line 3. Fix: 'float rate = 0.5;'. CAUGHT. LINE 3: \"B\" in double quotes is a string literal - an array of two chars, 'B' and the terminating NUL - and what is assigned is its address, a pointer; a char holds one character, not an address. Fix: 'char grade = 'B';'. CAUGHT (a constraint violation; older compilers may only warn and then store the low byte of an address, which is worse because the program runs and the value is meaningless). LINES 4 and 5: line 4 is legal on its own - it is a definition and it reserves four bytes. The fault is line 5, which READS n before anything has been stored in it, so n + 1 adds one to whatever the previous occupant of that memory left there and the result is unpredictable and different from run to run. Fix: 'int n = 0;' on line 4. USUALLY NOT CAUGHT: the code is syntactically perfect and type-correct, so the compiler must accept it; a good compiler warns if warnings are on, but nothing obliges it to, and this is the classic error that appears to work in testing because the leftover bytes happened to be zero. LINE 6: % requires BOTH operands to be of integer type and rate is a float. Fix: work in integers ('int leftover = (int) rate % 2;') or use the floating remainder ('float leftover = fmodf(rate, 2.0f);' with math.h). CAUGHT. So five faults across six lines, four refused outright, and the one the compiler lets through - the uninitialised read - is the only one capable of surviving into a running program."
+     "q": "The week's summary sheet asks: given the 'Dog' class example, how would you structure a 'LibraryBook' class, considering variables and methods, to efficiently manage books in a library? Answer it. Give the variables and the methods, say which members you would make private and which public and why, and justify the whole design by quoting the deck's two sentences about who may reach an object's state.",
+     "concept": "Designing a class from the dog example, with access specifiers",
+     "why": "THE MODEL. The deck's dog class 'will usually consist of variables such as \"name\", \"breed\" and \"colour\"' and 'will have methods such as a method that returns the name of a dog', because 'the state of an object is stored in variables and the behaviour of objects is described by methods'. So the design proceeds by asking what a book HOLDS and what a book DOES. VARIABLES (the state): title, author, and a count of copies - say copies_owned and copies_out - and an identifier such as a catalogue number. Each is a value the object holds and each takes the data type its quantity calls for: the title and author are characters, the counts are integers. METHODS (the behaviour): borrow(), which lends a copy; return_book(), which takes one back; and readers such as get_title() and get_copies_available(), on the model of the dog's get_name(). PRIVATE AND PUBLIC. The variables are private and the methods are public. That is the arrangement the summary sheet names as data encapsulation - 'hiding the implementation details of an object from the user. This means that the user can only interact with the object through a set of public methods, while the internal workings of the object remain hidden' - with public and private being the access specifiers that 'control the access to class members'. The point of making copies_out private in particular is that every change to it then passes through borrow() and return_book(), which can refuse a loan when no copy is free; leave it public and any line anywhere in the programme can set it to anything, and the object can no longer keep its own promises. WHY THE DESIGN WORKS - the deck's two sentences: 'only the methods of a particular object have access to the variables or state of that object', and 'different objects can only interact with each other through their own individual methods'. Those are what make the private variables genuinely unreachable and the public methods genuinely the only route, so a Reader object or a Loan object must go through borrow() rather than touching the count. The deck's own reasons for building this way follow immediately: each book object can be created and maintained independently, it can be used in various parts of the programme, a faulty one can be removed and replaced without disturbing the rest of the code - 'similar to how a car works' - and the author controls how much is shared about the object with the outside world."
     },
     {
      "type": "short",
-     "q": "Evaluate this by hand: int a = 5, b = 2, c = 3;  int r = a + b * c > a * b + c && !(a - b == c);  Give the value of r, and set out the order in which the operators were applied and why that order and no other. State which subexpression is NEVER evaluated and give the rule that causes it to be skipped. Then write the same expression with brackets showing how a student who believes && binds tighter than > would read it, and give the value that reading produces.",
-     "concept": "Precedence across arithmetic, relational and logical operators, plus short-circuit evaluation",
-     "why": "r is 0. The order is forced by the precedence ladder: unary ! binds tightest, then *, then + and -, then the relational >, then the equality ==, then &&, then the assignment =. So the arithmetic runs first on both sides of the > independently: b * c = 6, so the left side is 5 + 6 = 11; a * b = 10, so the right side is 10 + 3 = 13. Then the comparison: 11 > 13 is false, and a false relational operator yields the int 0. That 0 is the left operand of &&. NEVER EVALUATED: the whole right-hand operand of &&, !(a - b == c), including the subtraction, the equality test and the negation. The rule is SHORT-CIRCUIT EVALUATION - && yields 1 only if both operands are true, so once the left is known to be 0 the answer is 0 whatever the right would have been, and C guarantees the right operand is not evaluated. (Had it run it would have given 5 - 2 = 3, 3 == 3 = 1, !1 = 0 - the same 0, by work the machine never did. The guarantee matters when the skipped side has a side effect or could fault, as in 'p != NULL && p->value > 0'.) Finally = is the lowest-precedence operator on the line, so the whole expression is evaluated before anything is stored, and r receives 0. THE MIS-BRACKETED READING: a student who thinks && binds tighter than > reads it as 'a + b * c > (a * b + c && !(a - b == c))'. Inside the brackets, a * b + c = 13, which is non-zero and therefore true; !(a - b == c) = !(3 == 3) = 0, false; so 13 && 0 is 0. The comparison becomes 11 > 0, which is true, yielding 1. The two readings give opposite answers, 0 and 1, from the same characters - which is why the precedence order must be known rather than guessed."
+     "q": "The library system is to be built from programme objects rather than from separate entities. Set out the deck's four reasons for using programme objects, and for each one say what it would mean concretely for a LibraryBook. Then say exactly what the sentence \"different objects can only interact with each other through their own individual methods\" rules out, and give an example of a line of code it forbids.",
+     "concept": "The four reasons for programme objects, and the interaction rule",
+     "why": "THE FOUR REASONS, in the deck's words, each applied to the book. (1) 'Since objects are not dependent on each other, each object can be independently created and maintained.' A LibraryBook can be written, tested and corrected on its own; how it keeps its count of copies is nobody else's business, so that count can be re-arranged without the reader records or the fines code being touched. (2) 'An object can be used in various parts of our programme.' The same LibraryBook serves the search screen, the loans desk and the stock report, because it carries its own state with it and needs nothing set up around it first. (3) 'If an object is not working well or if it is creating problems for other objects in the programme, it can easily be removed and replaced without creating problems for the rest of the code. This is similar to how a car works!' A LibraryBook that miscounts can be replaced by a corrected one offering the same methods, and the rest of the system, which only ever called borrow() and return_book(), does not change. (4) 'The fact that the state of an object can only be accessed by the object's methods allows for information hiding. This means that we can control the amount of information we share about our objects to the outside world.' The library can publish get_title() and get_copies_available() while keeping the acquisition price or the borrower's identity unreachable. WHAT THE INTERACTION SENTENCE RULES OUT. It rules out one object reaching inside another and touching its variables directly. Every exchange between two objects must go through a method that the object whose state is involved has published. So a Reader object may call book.borrow(), and that is legal because borrow() is one of the book's own methods; what it may not do is 'book.copies_out = book.copies_out + 1;', reaching in and altering the book's state from outside. That forbidden line is exactly what makes the difference: it bypasses every check borrow() performs, and it makes the reader's code depend on how the book happens to store its count - so the book can no longer be maintained or replaced independently, and all four benefits go with it."
     },
     {
      "type": "short",
-     "q": "Write out, in C, a structure LibraryBook with the members char title[40], char author[40] and int copies. Then write the statements that create one such variable, set all three members, and print the title and the number of copies - using the correct syntax for each member's type. Say what sizeof(struct LibraryBook) is and how you worked it out. Then say exactly what would change, in the layout and in the behaviour of your statements, if struct were replaced by union, and what sizeof would become.",
-     "concept": "Declaring a structure, reaching its members with the dot syntax, and what changes when the same members share one block of memory",
-     "why": "THE CODE: 'struct LibraryBook { char title[40]; char author[40]; int copies; };' - note the semicolon after the closing brace. Then 'struct LibraryBook b;' defines a variable and reserves the storage; 'strcpy(b.title, \"Things Fall Apart\"); strcpy(b.author, \"Chinua Achebe\"); b.copies = 3;' set the members; 'printf(\"%s: %d copies\\n\", b.title, b.copies);' prints them. TWO POINTS OF SYNTAX: the dot is how a member is reached for both reading and writing, and the two char arrays cannot be assigned with = because an array name is not something you can store into - their contents must be COPIED in with strcpy, while copies, being a plain int, takes an ordinary assignment. The conversion specifiers follow the member types: %s for the arrays, %d for the int. SIZE: sizeof(struct LibraryBook) is 84 bytes. Each member of a structure has its own storage laid out in order, so the size is 40 + 40 + 4 = 84; no padding is needed because char requires no alignment, copies starts at offset 80 which is already a multiple of the 4 bytes an int requires, and 84 is already a multiple of the structure's own 4-byte alignment. IF struct BECAME union: the layout collapses - all three members would start at the same location, so title, author and copies would be three names for one block rather than three blocks, and sizeof(union LibraryBook) would be 40, the size of the largest member char[40], which is already a multiple of the int's 4-byte alignment. The statements would then be destructive: strcpy(b.title, ...) writes 18 bytes at offset 0; strcpy(b.author, ...) writes 14 bytes over the same place, destroying the title; and b.copies = 3 writes four bytes of integer over the first four bytes of that text. The printf would print rubbish for the title and 3 for the copies, because copies was written last. A union variable can represent the value of only one member at a time, so a LibraryBook - which needs a title AND an author AND a count simultaneously - must be a structure; a union is right only where the members are alternatives that never coexist."
+     "q": "Write out, in C, a structure LibraryBook with the members char title[40], char author[40] and int copies. Then write the statements that create one such variable, set all three members and print the title and the number of copies, using the correct syntax for each member's type. Say what the size of the structure is and how you worked it out. Then say exactly what would change, in the layout and in the behaviour of your statements, if struct were replaced by union, and what the size would become.",
+     "concept": "Declaring a structure, reaching its members with the dot syntax, and what changes when the members share one block",
+     "why": "THE CODE: 'struct LibraryBook { char title[40]; char author[40]; int copies; };' - note the semicolon after the closing brace. Then 'struct LibraryBook b;' defines a variable and reserves the storage; 'strcpy(b.title, \"Things Fall Apart\"); strcpy(b.author, \"Chinua Achebe\"); b.copies = 3;' set the members; 'printf(\"%s: %d copies\\n\", b.title, b.copies);' prints them. TWO POINTS OF SYNTAX: the dot is how a member is reached for both reading and writing, exactly as the deck's slide says - 'to access members of a structure to either assign or modify values, use the dot syntax' - and the two char arrays cannot be set with = because an array name is not something you can store into, so their contents are copied in with strcpy, while copies, being a plain int, takes an ordinary assignment. The conversion specifiers follow the member types: %s for the arrays, %d for the int. SIZE: 40 + 40 + 4 = 84 bytes. Each member of a structure has its own storage laid out in order, so the size of the structure is the sum of its members' sizes - the same arithmetic that makes the summary sheet's struct Dog, with three char[20] members, 60 bytes. IF struct BECAME union: the layout collapses. All three members would start at the same location, so title, author and copies would be three names for one block rather than three blocks, and the size would become 40 - the size of the largest member, char[40] - because a union is big enough for its largest member and no bigger. The statements would then be destructive: strcpy(b.title, ...) writes the title at the start of the block; strcpy(b.author, ...) writes over the same place, destroying it; and b.copies = 3 writes an integer over the first bytes of that text. The printf would print rubbish for the title and 3 for the copies, because copies was written last. A union variable can represent the value of only one member at a time, so a LibraryBook - which needs a title AND an author AND a count simultaneously - must be a structure; a union is right only where the members are alternatives that never coexist."
     }
    ]
   },

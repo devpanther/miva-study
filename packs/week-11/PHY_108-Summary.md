@@ -7,7 +7,7 @@
 ## The 7 things most likely to be examined
 
 1. **Working formula (memorise exactly).** For a **single-turn** circular loop of radius `R` carrying current `I`, the flux density on the axis at distance `z` from the centre is
-   **B(z) = μ₀ I R² / [ 2 (R² + z²)^{3/2} ]**
+   **B(z) = μ₀ I R² / [ 2 (R² + z²)³ᐟ² ]**
    - `B(z)` = magnetic flux density on the axis, **tesla (T)** — the sim logs it in **nT**
    - `μ₀` = permeability of free space = **4π × 10⁻⁷ T·m/A ≡ 4π × 10⁻⁷ H/m** (≈ 1.257 × 10⁻⁶)
    - `R` = loop radius, **metres (m)**; `I` = loop current, **amperes (A)**; `z` = axial distance from centre, **metres (m)**
@@ -16,10 +16,10 @@
 4. **Procedure / readings.** Coil 1, **R = 0.10 m**; set current to **I = 1 A**; probe at the **centre, z = 0**, click *Record*; then increase z in **steps of 2 cm** (2, 4, 6 …) recording B each time, **20 readings in all (z = 0 → 38 cm)**; **repeat for Coil 2, Coil 3 …** (different R). Results download as an Excel sheet.
 5. **Why each repetition exists.** The 20 z-values give the *spread of points needed for a straight-line fit* (one point cannot give a gradient, and the fit averages out probe/reading scatter). Repeating with **different coil radii** (and optionally different currents) checks that μ₀ is a **constant of free space** — independent of R and I — and gives independent values to average.
 6. **The graph — this is the exam question.**
-   - Compute for every reading the **factor** `x = I R² / [ 2 (R² + z²)^{3/2} ]` (units **A/m**).
+   - Compute for every reading the **factor** `x = I R² / [ 2 (R² + z²)³ᐟ² ]` (units **A/m**).
    - **Plot B (y-axis, T) against x (x-axis, A/m).** The deck's `y = m x` slide is exactly this: **B = μ₀ · x**, a straight line **through the origin**.
    - **Gradient m = μ₀.** So **μ₀ = slope = ΔB/Δx**, in **T·m/A = H/m**. No further algebra needed; % error = |m − 4π×10⁻⁷|/(4π×10⁻⁷) × 100.
-   - *If you compute the factor without I* (i.e. `x' = R²/[2(R²+z²)^{3/2}]`, units m⁻¹), then **slope = μ₀I** and **μ₀ = slope / I**. With I = 1 A the numbers are identical — but say which version you used.
+   - *If you compute the factor without I* (i.e. `x' = R²/[2(R²+z²)³ᐟ²]`, units m⁻¹), then **slope = μ₀I** and **μ₀ = slope / I**. With I = 1 A the numbers are identical — but say which version you used.
    - Worked check: at z = 0, x = (1)(0.10²)/(2×0.001) = 5.00 A/m and B = 6285 nT = 6.285×10⁻⁶ T → m = 1.257×10⁻⁶ H/m = 4π×10⁻⁷. ✓
 7. **Unit conversions that decide the mark.** The sheet gives **z in cm** and **B in nT** while **R is in m**. Convert **z → m (÷100)** and **B → T (×10⁻⁹)** *before* plotting, or the gradient is out by a factor of 10⁹.
 
@@ -29,7 +29,7 @@
 - **Zero error / stray field:** zero the tesla meter and subtract the Earth's field (≈ 50 μT is far larger than the 6 μT signal in a real lab — in the simulation it is excluded); keep magnets, motors and steel away.
 - **z-origin error:** a systematic offset in locating z = 0 (centre of the coil) shifts every point; it shows up as a line that misses the origin.
 - **Current drift / meter accuracy:** read I from the ammeter for each set; ammeter and tesla-meter calibration errors are systematic (they tilt the gradient), reading scatter is random (use the line of best fit, not a single point).
-- **Single-turn assumption:** the formula has no N; a multi-turn coil needs B = μ₀NIR²/[2(R²+z²)^{3/2}].
+- **Single-turn assumption:** the formula has no N; a multi-turn coil needs B = μ₀NIR²/[2(R²+z²)³ᐟ²].
 - Take readings at eye level / use the recorded digital values; plot on large graph paper so the slope triangle spans most of the line.
 
 ## Deck faults to know

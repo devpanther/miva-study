@@ -41,7 +41,10 @@ int g(int n) { return f(n) + n; }
 int main(void) { printf("%d\n", g(3)); return 0; }
 ```
 
-a) `7`  b) `10`  c) `13`  d) `14`
+a) `7`
+b) `10`
+c) `13`
+d) `14`
 
 **6.** A function's job is to work out a discount and make it available to the rest of the programme. Which header is right, and why?
 
@@ -60,7 +63,10 @@ void b(void) { int x = 100; x = x + 5; }
 int main(void) { a(); b(); printf("%d\n", x); return 0; }
 ```
 
-a) `10`  b) `15`  c) `20`  d) `115`
+a) `10`
+b) `15`
+c) `20`
+d) `115`
 
 **8.** What does `printf("a\\b\tc\n");` put on the screen?
 

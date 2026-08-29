@@ -1,6 +1,6 @@
 # MTH_102 — Elementary Mathematics II (Calculus)
 
-*A complete revision guide covering weeks 1 to 12 of the MIVA Open University semester.*
+*A complete revision guide covering weeks 1 to 12 of the MIVA Open University semester, rebuilt from the lecture slides themselves.*
 
 ---
 
@@ -10,15 +10,15 @@ MTH_102 is single-variable calculus. It has one subject: how quantities change, 
 
 Four ideas carry the whole course.
 
-**1. A function is a machine.** One number in, exactly one number out. Written f(x). Weeks 1–2 cover what functions are, what inputs they accept (domain), what outputs they produce (range), and the common families.
+**1. A function is a machine.** One number in, exactly one number out. Written f(x). Weeks 1–2 cover what a function is, what inputs it accepts (domain), what outputs it produces (range), how to invert one, how to compose two, and the common families.
 
-**2. A limit is what a function is heading towards.** Not what it equals at a point — what it approaches as you close in. Written lim(x→a) f(x). Weeks 3–4. Limits are the tool that makes the next two ideas possible.
+**2. A limit is what a function is heading towards.** Not what it equals at a point — what it approaches as you close in. Written lim x→c f(x). Weeks 3–4. Limits are the tool that makes the next two ideas possible.
 
-**3. A derivative is an instantaneous rate of change.** Built from a limit: take the gradient of a line joining two points on a curve, then slide the points together until they touch. What survives is the gradient of the tangent at one point. Written dy/dx or f′(x). Weeks 5–6.
+**3. A derivative is an instantaneous rate of change.** Built from a limit: take the gradient of a line joining two points on a curve, then slide the points together until they touch. Written dy/dx or f′(x). Weeks 5–6.
 
-**4. An integral is an accumulated total.** Also built from a limit: chop a region into thin strips, add them up, then let the strips become infinitely thin. Written ∫f(x)dx. Weeks 7–12.
+**4. An integral is an accumulated total.** Differentiation run backwards. Written ∫f(x)dx. Weeks 7–12.
 
-The link between 3 and 4 is the most important fact in the course. **Differentiation and integration undo each other.** Differentiate x³ and you get 3x². Integrate 3x² and you get x³ back, plus a constant. That is the Fundamental Theorem of Calculus, and it is why five weeks of integration can follow only two weeks of differentiation — integration is differentiation run backwards.
+The link between 3 and 4 is the most important fact in the course. **Differentiation and integration undo each other.** Differentiate x³ and you get 3x². Integrate 3x² and you get x³ back, plus a constant. That is the Fundamental Theorem of Calculus, and it is why five weeks of integration can follow only two weeks of differentiation.
 
 | Part | Theme | Weeks |
 |---|---|---|
@@ -31,1072 +31,1232 @@ The link between 3 and 4 is the most important fact in the course. **Differentia
 | 7 | Integration applied to real problems | 12 |
 | 8 | Formula and definition recap | all |
 
-### A warning about the source material
+### A note on the source material
 
-*The lecture PDFs are almost entirely image slides. When the text was extracted, the headings survived and the mathematics did not. The Week 5 deck carries the headings POWER RULE, PRODUCT RULE, QUOTIENT RULE, CHAIN RULE, IMPLICIT FUNCTION, PARAMETRIC DIFFERENTIATION, CONSTANT RULE, THE FIRST PRINCIPLE, CONSTANT MULTIPLE RULE and PARTIAL DIFFERENTIATION — and under every one of them there is nothing at all. The same holds for most of weeks 1, 3, 6, 7, 8, 9, 10, 11 and 12.*
+*Most of this lecturer's slides are pictures of text. Extracting them as text recovered the headings and lost the mathematics, and an earlier version of this guide was written around those headings from general calculus knowledge. It taught a course she does not teach.*
 
-*So the syllabus is known — the headings say what was taught and in what order — but the rules and worked examples are gone. Everything filling such a gap here is a **reconstruction**: the standard correct statement of that topic as the course's own reading list (Stewart, Anton, Larson) gives it. Reconstructions are marked. If your lecturer used particular numbers in a particular example, those numbers are not recoverable.*
+*This version is built from the rendered slide images, week by week. Every rule, every worked example and every number below is hers unless it is explicitly marked as an aside. Where she leaves a genuine gap — a rule she uses without ever stating it — the gap is named rather than quietly filled.*
 
-*Real slide text did survive in parts of weeks 2, 4 and 12, and is quoted and identified as such.*
+**She is the syllabus.** What is not in her decks is not in this guide, and should not be in your revision. That is a saving, not a loss: the list below is material a standard calculus course would cover and she does not.
+
+> **Not taught anywhere in MTH_102**
+>
+> The vertical and horizontal line tests · one-to-one, onto and the vocabulary of injections and surjections · any condition for an inverse to exist · the domain of a composite · operations f ± g, fg, f/g · completing the square as a range method · the ε–δ definition of a limit · limits at infinity by dividing through by the highest power · lim x→0 (sin x)/x = 1 as a standard result in its own right · classifying discontinuities into named types · differentiability versus continuity · tangent and normal line equations · second-derivative tests, concavity, maxima and minima · related rates and optimisation · Riemann sums and the limit definition of the integral · ln|x| with its modulus (she writes ln(x) throughout) · LIATE · the a-parameter table for trigonometric substitution · repeated linear factors or polynomial long division in partial fractions · the Limit Comparison Test · the p-test near zero · horizontal strips and area computed with respect to y · total distance as ∫|v|dt · Hooke's law and springs · population growth models.
+
+### The errors on her slides
+
+Several of her slides carry real mistakes — arithmetic, signs, labels. They are boxed throughout this guide like this:
+
+> **SLIDE ERROR.** What the slide prints, what it should say, and why.
+
+Learn the corrected version, and learn what the slide prints, because a wrong value that appears on a slide has a habit of appearing in an option list.
 
 ---
 
 ## Part 1 — Functions: the object calculus acts on
 
-*Weeks 1 and 2. Week 1: "Real-Valued Functions and their Properties". Week 2: "Introduction to Different Types of Functions".*
+*Weeks 1 and 2. Week 1: "Working with Real-Valued Functions". Week 2: types of functions.*
 
 ### 1.1 What a function is
 
-**In plain words.** A function is a rule that takes an input and returns exactly one output. The Week 1 slide uses an ice cream parlour: choose vanilla, get vanilla; choose chocolate, get chocolate. One choice, one outcome, every time.
+**In plain words.** A function is a rule that takes an input and returns exactly one output. Her Week 1 summary slide states it directly:
 
-Three sets are involved: the **domain** (allowed inputs), the **codomain** (the set outputs are declared to live in) and the **range** (the outputs actually produced). The range sits inside the codomain and is often smaller. The Week 1 slide shows f(x) = x² with domain {1, 2, 3, 4, 5} and a codomain containing {1, 4, 9, 16, 25, 17, 23, 19}. Only 1, 4, 9, 16, 25 get hit; those five are the range.
+> "A function is a mathematical relation that assigns **exactly one output value to each input value**."
 
-A function is **real-valued** when every output is a real number. The slide "IS THIS A REAL-VALUED FUNCTION?" maps D = {A, B, C, D} into Y = {K, 3, 9, 8, 6}. The answer is no, for a precise reason: one possible output is the letter K, which is not a real number. It may still be a function; it is just not real-valued.
+The load-bearing words are *exactly one* and *each*. Her ice-cream-parlour picture makes the same point: choose vanilla, get vanilla; choose chocolate, get chocolate. One choice, one outcome, every time.
 
-**Why it works.** The "exactly one output" condition is what makes calculus possible. Every later idea — the limit as x approaches a, the gradient at a point, the area under the curve — assumes one height above each x. Allow two and none of it is defined.
+**Function versus relation.** Her slide 9 answers this with a picture — a small circle labelled *functions (sets of ordered pairs where each input has only one output)* drawn **inside** a large circle labelled *relations (all sets of ordered pairs)*. Read the nesting: every function is a relation; not every relation is a function. A relation with one input pointing at two outputs is disqualified. Repeated **outputs** never disqualify anything.
 
-**Function versus relation.** A relation is any set of ordered pairs; a function is one in which no input repeats with a different output. Every function is a relation, not conversely. The Week 1 slide draws relations as the outer circle and functions as the inner one.
+**The three sets.** Her most useful diagram, slide 5, shows f(x) = x² with:
 
-**Vertical line test** (quoted from Week 2). Draw any vertical line. If it ever cuts the curve more than once, the curve is not a function; if every vertical line cuts at most once, it is. A vertical line is the set of points with the same x, so two crossings means one input with two outputs.
+- **domain** {1, 2, 3, 4, 5} — what you may put in;
+- **range** {1, 4, 9, 16, 25} — what actually comes out;
+- a **codomain** drawn around the range that also contains 17, 23 and 19 — values no arrow ever reaches.
 
-**Injective, surjective, bijective** (Week 2 slide):
+The range sits inside the codomain and is usually smaller. Ask yourself: is this set *drawn around* the outputs, or *made of* them?
 
-| Case | Meaning |
-|---|---|
-| Not a function | One element of A points to several in B |
-| General function | Several elements of A may share one B |
-| Injective (one-to-one) | No two inputs share an output |
-| Surjective (onto) | Every element of B is hit |
-| Bijective | Both — a perfect pairing |
+**Real-valued.** Slide 8 maps D = {A, B, C, D} into Y = {K, 3, 9, 8, 6} and asks "IS THIS A REAL-VALUED FUNCTION?" The answer is no, for a precise reason: one possible output is the letter **K**, which is not a real number. It may still be a function; it is just not real-valued. This is the only place in the course where the "real-valued" half of the topic title is examined directly.
 
-Only a bijection has a proper inverse.
+**Evaluating.** Substitute and follow the rule *in order*. Her two examples exist to enforce the order:
 
-**Worked example.** Function or not, and one-to-one or not?
+- f(x) = 2x + 3, so f(2) = 2(2) + 3 = 4 + 3 = **7** — multiply first, then add. Computing 2 + 3 first and doubling gives 10, which is wrong.
+- f(x) = x² − 4, so f(3) = (3)² − 4 = 9 − 4 = **5** — square first, then subtract. Subtracting first gives (3 − 4)² = 1, which is a different function.
 
-(a) {(1, 3), (2, 5), (3, 3), (4, 9)} — a function, since no input repeats; not one-to-one, since 1 and 3 both give 3.
-(b) {(1, 3), (2, 5), (1, 7)} — not a function: input 1 gives both 3 and 7.
-(c) f(x) = x² on all reals — a function, not one-to-one, since f(−3) = f(3) = 9.
-(d) f(x) = 2x + 1 on all reals — a function, and one-to-one, since 2a + 1 = 2b + 1 forces a = b.
+**Where people go wrong.** Reading "one output per input" as "one input per output". A function may send many inputs to one output; x² does.
 
-**Where people go wrong.** Confusing "one output per input" with "one input per output". A function may send many inputs to one output; x² does. It may not send one input to two outputs. Students also swap the tests: the vertical line test decides *is it a function*, the horizontal line test *is it one-to-one*.
+**In the exam.** A mapping diagram or a list of pairs with "is this a function? Give a reason." The marks are in the reason — name the offending input.
 
-**In the exam.** A mapping diagram or a list of pairs with "is this a function? Give a reason." The marks are in the reason — name the offending input. A circle x² + y² = 25 is the classic vertical-line-test trap.
+> **SLIDE ERROR (Week 1, slide 21).** "As we increase x, the value of f(x) increases **exponentially**" is wrong for f(x) = x². Exponential growth has the variable in the exponent, as in 2ˣ. Here the variable is in the base, and the growth is **quadratic**. The very next sentence on the same slide correctly says "parabolic curve", so the slide contradicts itself.
 
-### 1.2 Domain and range
+> **SLIDE ERROR (Week 1, slide 25).** Two of the four summary bullets are loose. "Functions take an input (called the domain)" conflates one input with the *set* of inputs — the domain is the whole set, exactly the distinction slide 5 draws. "Functions are typically represented as x" is a typo for **f(x)**, or y = f(x); as printed it names the input, not the function. Bullets one and four of that slide are exact and quotable.
 
-**In plain words.** The domain is every x you may feed in; the range is every y that can come out. Finding a domain means listing what would break and excluding it.
+### 1.2 Finding a domain
 
-Only three things break in this course:
+**Her rule, verbatim (slide 13).** "For f(x) to be a defined function, the denominator can not be zero."
 
-1. **Division by zero** — the denominator must not be zero.
-2. **Even root of a negative** — anything under a square root must be ≥ 0.
-3. **Log of zero or a negative** — the argument of a log must be > 0.
+That is the whole method as she gives it: set the denominator ≠ 0, rearrange, and ask which real values of x that excludes.
 
-Polynomials, sines, cosines and exponentials accept every real number.
+**Her worked example.** What is the domain of f(x) = (3x + 1)/(x² + 5)?
 
-**Why.** Division by zero has no answer. √(−4) is not real. And since a positive base raised to any power stays positive, a logarithm can never receive a negative input.
+x² + 5 ≠ 0
+x² ≠ −5
 
-*Missing-material note: Week 1 has three slides headed "HOW TO FIND THE DOMAIN OF A FUNCTION" and three headed "HOW TO FIND THE RANGE OF A FUNCTION". All six are blank. The method below is a reconstruction.*
+> "NOTE: the square of both positive and negative numbers will always give a positive number."
 
-**Worked example 1.** Domain of f(x) = √(2x − 6)/(x − 5).
+Therefore no real x can break it, and **D = (−∞, ∞)**.
 
-The root needs 2x − 6 ≥ 0, so x ≥ 3. The denominator needs x ≠ 5.
+Read what she actually did. She did not stop because the algebra got hard — she stopped because **x² = −5 has no real solution**, so there is nothing to exclude. Writing x ≠ ±√−5 is not an answer; √−5 is not a real number.
 
-Domain: x ≥ 3 and x ≠ 5, i.e. [3, 5) ∪ (5, ∞).
+**The shape this prepares you for.** Had the denominator been x² − 5, the domain would be every real number except ±√5. That is the version where a value genuinely is excluded, and it is the version most likely to be set.
 
-**Worked example 2.** Range of g(x) = (3x + 1)/(x − 2).
+**Roots.** She uses one square root, in the Week 1 TASK: for h(x) = √(x + 2) − 8 the quantity under the root cannot be negative, so x + 2 ≥ 0 and **D = [−2, ∞)**.
 
-Set y = (3x + 1)/(x − 2) and solve for x:
+**Where people go wrong.** Excluding a value because the *numerator* is zero there — that just means f(x) = 0, which is fine. In (3x + 1)/(x² + 5) the numerator is irrelevant to the domain.
 
-y(x − 2) = 3x + 1 → xy − 2y = 3x + 1 → xy − 3x = 2y + 1 → x(y − 3) = 2y + 1 → x = (2y + 1)/(y − 3).
+**In the exam.** She writes domains as a capital **D** in interval notation: D = (−∞, ∞), D = [−2, ∞). Never set-builder, never words. Match her.
 
-Every y gives a valid x except y = 3. Range: all reals except 3.
+### 1.3 Finding a range
 
-Check: y = 3 would need 3x + 1 = 3x − 6, i.e. 1 = −6. False, so 3 is genuinely never an output.
+She gives two methods and you should be able to tell which one a question wants.
 
-For a quadratic, complete the square instead: h(x) = x² − 4x + 7 = (x − 2)² + 3, and since (x − 2)² ≥ 0 the range is [3, ∞).
+**Method 1 — make x the subject.** Find the range of f(x) = 2x − 9.
 
-**Where people go wrong.** Excluding a value because the *numerator* is zero there — that just means f(x) = 0, which is fine. Only the denominator matters. Also, a root in the denominator needs a strict inequality: for 1/√(x − 3) you need x > 3, not x ≥ 3.
+> "We know that the range is the set of all possible output values (typically represented by y or f(x))."
 
-**In the exam.** "State the domain" is near-free marks if you check the three breakers in order. Range questions attach to quadratics (complete the square) or rational functions (make x the subject).
+y = 2x − 9
+2x = y + 9
+x = (y + 9)/2
 
-### 1.3 Inverse functions
+Every real y gives a perfectly legal x — no division by zero, no root of a negative — so every y is attainable and **R = (−∞, ∞)**.
 
-**In plain words.** f⁻¹ undoes f. If f sends 3 to 7, f⁻¹ sends 7 to 3. Domain and range swap.
+The method is doing real work even when the answer looks obvious. It is the same method that would expose an excluded y in a rational function.
 
-**Why it works, and when it fails.** For an undoing to be well-defined, each output must have come from only one input. If f(−3) and f(3) both equal 9, then f⁻¹(9) has no single answer. **Only one-to-one functions have inverses** — which is why the injective/surjective slide sits so close to this material.
+**Method 2 — build the range from an inequality.** Find the range of f(x) = 2 − |x − 3|. Her four lines:
 
-Method: write y = f(x), swap x and y, make y the subject.
+1. "For an absolute function, if **|x − 3| ≥ 0**" — an absolute value is never negative. This is the only fact about absolute value the course uses.
+2. "Then, **−|x − 3| ≤ 0**" — **multiplying by −1 reverses the inequality**. This is the step students lose.
+3. "Add 2 to both sides": 2 − |x − 3| ≤ 2. Adding does **not** reverse it.
+4. The left-hand side is y, so y ≤ 2, i.e. **R = (−∞, 2]**.
 
-*Missing-material note: the Week 1 slide "HOW TO FIND THE INVERSE OF A FUNCTION" is blank. Method and example are reconstructions.*
+The square bracket at 2 is there because y = 2 is attained, at x = 3.
 
-**Worked example.** Find the inverse of f(x) = (2x + 3)/(x − 4).
+**The TASK (slide 18), which she sets and never answers.** Domain and range of h(x) = √(x + 2) − 8.
 
-y = (2x + 3)/(x − 4)
-y(x − 4) = 2x + 3
-xy − 4y = 2x + 3
-xy − 2x = 4y + 3
-x(y − 2) = 4y + 3
-x = (4y + 3)/(y − 2)
+*Domain:* x + 2 ≥ 0, so **D = [−2, ∞)**.
+*Range:* √(x + 2) ≥ 0, so √(x + 2) − 8 ≥ −8, so **R = [−8, ∞)**.
 
-So f⁻¹(x) = **(4x + 3)/(x − 2)**.
+Note that here, unlike the absolute-value example, **subtracting 8 does not reverse the inequality** — nothing was multiplied by a negative. Both brackets are square: h(−2) = −8 is attained.
 
-Check with x = 5: f⁻¹(5) = 23/3. Feed that into f — numerator 2(23/3) + 3 = 46/3 + 9/3 = 55/3; denominator 23/3 − 12/3 = 11/3; divide: 55/11 = 5. We get 5 back. ✓
+**Where people go wrong.** Getting the reversal backwards, which turns (−∞, 2] into [2, ∞). And mixing up the brackets: [−8, ∞) — the −8 is attained, ∞ never is.
 
-Note the swap: f is undefined at 4 and never outputs 2; f⁻¹ is undefined at 2 and never outputs 4.
+**In the exam.** This is the single most likely Week 1 template, because it is the one exercise she sets without giving an answer.
 
-**Where people go wrong.** Writing f⁻¹(x) = 1/f(x). The −1 means "inverse function", not "reciprocal": for f(x) = 2x + 3 the inverse is (x − 3)/2 and the reciprocal is 1/(2x + 3). Second error: swapping x and y and stopping without making y the subject.
+### 1.4 Inverse functions
 
-**In the exam.** "Find f⁻¹(x) and state its domain." The domain of f⁻¹ is the range of f.
+**Her recipe, in her three words (slide 19).** *Let* y = f(x) — *Switch x with y* — *isolate the y variable*.
 
-### 1.4 Composite functions
+**Her example.** Find the inverse of f(x) = 3x − 7.
 
-**In plain words.** One function fed into another. Do g first, then f. Written (f ∘ g)(x) = f(g(x)) — this formula appears verbatim on the Week 2 slide. Read inside out: the inner function acts first, even though f is written first.
+y = 3x − 7
+x = 3y − 7   (switch)
+3y = x + 7
+y = (x + 7)/3
 
-**Why it works.** Composition is substitution. Wherever f's formula has an x, put the whole of g(x).
+so **f⁻¹(x) = (x + 7)/3**.
 
-**Worked example.** f(x) = 2x + 1, g(x) = x² − 3.
+Check it the way you would check any inverse: f(4) = 3(4) − 7 = 5, and f⁻¹(5) = (5 + 7)/3 = 4.
 
-(f ∘ g)(x) = f(x² − 3) = 2(x² − 3) + 1 = 2x² − 6 + 1 = **2x² − 5**.
-(g ∘ f)(x) = g(2x + 1) = (2x + 1)² − 3 = 4x² + 4x + 1 − 3 = **4x² + 4x − 2**.
+**Where people go wrong.** Confusing the inverse with the reciprocal — f⁻¹(x) is (x + 7)/3, while 1/f(x) is 1/(3x − 7). Compose to test: an inverse hands x back, a reciprocal hands back 1. And after switching, **isolate y, not x**; half the marks sit in that rearrangement and it is easy to solve for the wrong letter out of habit.
 
-At x = 2: (f ∘ g)(2) = 8 − 5 = **3**; (g ∘ f)(2) = 16 + 8 − 2 = **22**.
+*Two asides, not on her slides.* She writes the answer as "f⁻¹ = (x + 7)/3" without the argument; write **f⁻¹(x) = …** in a script, since the argument is what makes it a function. And the deck never says when an inverse exists — every example she sets is a straight line, where it is automatic. She does not teach the condition and is unlikely to examine it.
 
-Step-by-step check: g(2) = 1, then f(1) = 3 ✓. f(2) = 5, then g(5) = 22 ✓.
+### 1.5 Composite functions
 
-The answers differ. **Composition is not commutative.**
+**Her notation (slide 20).** f ∘ g = **f[g(x)]**, with square brackets around the inner function. The function written **nearest the x acts first**.
 
-**Where people go wrong.** Doing the functions in the wrong order — that loses the whole question. And expanding (2x + 1)² as 4x² + 1, losing the 4x cross-term.
+**Her two examples, deliberately on the same slide.** Given f(x) = 5x − 4 and g(x) = x²:
 
-**In the exam.** "Find fg(x) and gf(x)", or "solve fg(x) = 10". For the second, form the composite first, then solve.
+f ∘ g = f[g(x)] = f[x²] = 5(x²) − 4 = **5x² − 4**
 
-### 1.5 The catalogue of function types
+g ∘ f = g[f(x)] = g[5x − 4] = (5x − 4)(5x − 4) = 25x² − 20x − 20x + 16 = **25x² − 40x + 16**
 
-*Week 2 — the one deck whose text largely survived. Most of what follows is quoted from the actual slides.*
+They are on one slide for one reason: 5x² − 4 ≠ 25x² − 40x + 16, so **f ∘ g ≠ g ∘ f**. Order is part of the question.
 
-**In plain words.** Different behaviours need differently shaped functions: straight-line growth, rise-then-fall, runaway growth, repetition. Learning the catalogue means you can name a family from a graph or from data.
+**Copy her expansion.** She writes (5x − 4)² the long way, as (5x − 4)(5x − 4), showing both −20x terms before collecting them into −40x. (5x − 4)² = 25x² + 16 is the single most common error in this topic, and writing the product out prevents it.
 
-**Linear.** f(x) = mx + b. m is the slope; b is the y-intercept, the value at x = 0. Graph: a straight line. Slide example f(x) = 2x + 3; applications given include cost C(q) = 2q + 1000 and distance d(t) = 50t + 100. *(The Week 2 summary writes the same formula as mx + c.)*
+**In the exam.** Expect both composites of one pair of functions, or a numerical version: with f(x) = 2x + 3 and g(x) = x² − 1, (f ∘ g)(2) = f(3) = 9 while (g ∘ f)(2) = g(7) = 48.
 
-**Quadratic.** f(x) = ax² + bx + c. Graph: a parabola, opening upward if a > 0 and downward if a < 0. Slide example g(x) = −2x² + 3x + 1; applications include the arch shape y = 0.005x² − 0.1x + 5.
+### 1.6 The families of function
 
-*Error in the course material. The Week 2 quadratic slide states "c is the y-coordinate of the vertex, which affects its vertical position." That is wrong. **c is the y-intercept**, the height at x = 0; it equals the vertex height only when b = 0. Check the slide's own example: for g(x) = −2x² + 3x + 1 the vertex is at x = −b/(2a) = −3/(−4) = 0.75, and g(0.75) = −1.125 + 2.25 + 1 = 2.125. The vertex height is 2.125, not 1; the slide's c = 1 is simply g(0). Do not repeat the claim in an exam. Its description of b is loose too — changing b moves the vertex both sideways and vertically.*
+*Week 2 surveys the types. Her slides define them; the algebra below is the standard technique for each.*
 
-**Exponential.** f(x) = bˣ, the variable in the exponent. b > 1 grows; 0 < b < 1 decays. Slide example g(x) = 0.5ˣ. Applications: population P(t) = P₀e^(rt), decay N(t) = N₀e^(−λt), compound interest A(t) = P(1 + r/n)^(nt).
+| Family | Form | What to read off |
+|---|---|---|
+| Linear | f(x) = mx + b | slope m, y-intercept b |
+| Quadratic | f(x) = ax² + bx + c, a ≠ 0 | opens up if a > 0, down if a < 0 |
+| Exponential | f(x) = a·bˣ, b > 0, b ≠ 1 | growth if b > 1, decay if 0 < b < 1 |
+| Logarithmic | f(x) = log_b x | the inverse of bˣ; argument must be > 0 |
+| Absolute value | \|x\| = x if x ≥ 0, −x if x < 0 | distance from 0, so never negative |
+| Piecewise | several formulas on disjoint intervals | pick the branch the input falls in |
+| Polynomial | aₙxⁿ + … + a₀ | degree n, leading coefficient aₙ |
+| Periodic | f(x + P) = f(x) | sin, cos have period 2π; tan has π; sin(kx) has 2π/k |
 
-*Note: the compound-interest formula appears on the slide as "A(t) = P · (1 + nr)nt" — the extractor destroyed the fraction r/n and the exponent nt. The same happened to P₀e^(rt), which came out as "Po · ert". The correct forms are given above.*
+**Straight lines.** m = (y₂ − y₁)/(x₂ − x₁), then y − y₁ = m(x − x₁). Through (−2, 5) and (4, −7): m = −12/6 = −2, so y = −2x + 1.
 
-**Logarithmic.** f(x) = log_b(x), the inverse of the exponential. Slide examples: log₁₀(x), the common logarithm, and ln x, the natural logarithm. Domain x > 0 only.
+**Quadratics.** The vertex sits at x = −b/2a, and its height is f(−b/2a). For f(x) = x² + 6x + 5: x = −6/2 = −3 and f(−3) = 9 − 18 + 5 = −4, so the vertex is **(−3, −4)**. The discriminant Δ = b² − 4ac decides the roots: Δ > 0 two, Δ = 0 one repeated, Δ < 0 none. x² − 4x + 7 has Δ = 16 − 28 = −12, so it never meets the x-axis.
 
-**Trigonometric,** as the Week 2 slide gives them:
+> **SLIDE ERROR (Week 2).** The slide says that in f(x) = ax² + bx + c the constant **c is the y-coordinate of the vertex**, and that b "shifts the parabola horizontally". Neither is true. Put x = 0 and you get c, so **c is the y-intercept**; the vertex is at x = −b/2a, which equals 0 only when b = 0. For f(x) = x² + 6x + 5 the y-intercept is 5 and the vertex height is −4 — two different numbers, on the same slide's own example.
 
-| Function | Ratio | Reciprocal | Ratio |
-|---|---|---|---|
-| sin θ | opposite / hypotenuse | csc θ | hypotenuse / opposite |
-| cos θ | adjacent / hypotenuse | sec θ | hypotenuse / adjacent |
-| tan θ | opposite / adjacent | cot θ | adjacent / opposite |
+**Exponentials and logarithms are inverses.** b^y = x is the same statement as y = log_b x. So log₃81 asks "3 to what power is 81?" and the answer is **4**, not 27 and not 9. Solve 3·2ˣ = 96 by isolating first: 2ˣ = 32 = 2⁵, so x = 5. Solve 2^(x+1) = 8^(x−1) by matching bases: 8 = 2³, so x + 1 = 3x − 3 and x = 2.
 
-Sine and cosine are periodic with period 2π and oscillate between −1 and 1; cosine is sine phase-shifted, cos x = sin(x + π/2). Used for waves, sound, light, pendulums.
+Log laws: log(MN) = log M + log N; log(M/N) = log M − log N; log(Mᵏ) = k log M. Only the *product* splits. Always check the domain first — for log₁₀x + log₁₀(x − 3) = 1 you need x > 3, which is what rejects the root x = −2 and leaves **x = 5**.
 
-**Piecewise.** Different formulas on different intervals. The slide's example: f(x) = 2x + 1 if x ≤ 0, and x² − 3 if x > 0. Decide which interval x falls in, then use that formula: f(−2) = −3; f(3) = 6. Used for temperature over a day, tiered pricing, tax bands.
+**Absolute value.** |2x − 5| = 7 splits into two cases, 2x − 5 = 7 and 2x − 5 = −7, giving x = 6 and x = −1. An inequality unfolds instead of splitting: |x − 3| < 5 means −5 < x − 3 < 5, so **−2 < x < 8**. And |x| = k has no solution when k < 0, because a distance cannot be negative.
 
-**Absolute value.** |x| = x if x ≥ 0, and −x if x < 0. It measures distance from zero, so it is never negative. Graph: a V. Slide example f(x) = |x − 3| — the same V with its corner at x = 3.
+**Piecewise.** The only requirement is that each input falls in exactly one branch. For f(x) = 2x + 1 on x ≤ 0 and x² − 3 on x > 0, the value f(0) = 1 comes from the first branch, because x = 0 satisfies x ≤ 0. The branches need not agree at the boundary.
 
-**Polynomial.** f(x) = aₙxⁿ + aₙ₋₁x^(n−1) + … + a₁x + a₀, with n a non-negative integer. **Degree** is the highest power; **leading coefficient** is aₙ. Slide example f(x) = −x³ + 3x² − 2 has degree 3 and leading coefficient −1. Degree caps the turning points at n − 1; the sign of aₙ decides which way the ends point.
+**Polynomials.** For f(x) = 5 − 2x⁴ + x³ the degree is 4 and the leading coefficient is −2 — the highest power present, and *its* coefficient, not the constant term. For large |x| the leading term decides both tails.
 
-**Rational.** A polynomial over a polynomial. Listed but not developed on the surviving slides, and important later — rational functions are where holes and vertical asymptotes come from.
-
-**Where people go wrong.** Confusing xᵇ with bˣ. x² is a power function, variable in the base; 2ˣ is exponential, variable in the exponent, and they behave nothing alike. Also writing |−5| = −5; absolute values are never negative.
-
-**In the exam.** "Identify the type of function and state its parameters." Linear: m and b. Quadratic: a, b, c and the opening direction. Exponential: base, and grow or decay. Polynomial: degree and leading coefficient. Piecewise evaluation is care, not cleverness.
 ---
 
 ## Part 2 — Limits and continuity
 
-*Weeks 3 and 4. Week 3: "Concept of Limits and their Notation", taught as evaluating limits algebraically. Week 4: "Understanding Continuity and Discontinuity of Limit", taught graphically.*
+*Weeks 3 and 4. Week 3: evaluating limits algebraically. Week 4: continuity and reading limits off a graph.*
 
 ### 2.1 What a limit is
 
-**In plain words.** As x closes in on some number a, what value is f(x) closing in on? Not what f(a) equals — what f(x) is heading for.
+lim x→c f(x) is the value f(x) heads towards as x closes in on c. It is not f(c). The limit is built only from x **near** c and never from x = c itself — which is exactly why a function can have a limit at a point where it is not even defined.
 
-The distinction matters because f(a) may not exist while the limit is perfectly clear. Picture a road with one paving stone missing: walking towards the gap from either side, you can see exactly where the surface *would* be. That height is the limit.
+She writes the point being approached as **c**, never a. There is no ε–δ definition anywhere in the course; a picture of one sits on an objectives slide and is never explained.
 
-**Notation.** lim(x→a) f(x) = L. One-sided: lim(x→a⁻) f(x) is the limit **from the left**, through values below a; lim(x→a⁺) f(x) is the limit **from the right**.
+**Her four methods, and how to tell which one a question wants:**
 
-**The governing rule.** The limit exists if and only if the left and right limits both exist and are **equal**. If they differ, the limit does not exist (DNE). The Week 4 slide states it: if lim(x→3⁺) f(x) = lim(x→3⁻) f(x) the limit EXISTS, but if they are unequal it DOES NOT EXIST.
+1. **Substitute first.** If you get a number, you are finished.
+2. **0/0 with polynomials** → factorise and cancel.
+3. **0/0 with a square root** → multiply by the conjugate of the numerator.
+4. **A small fraction inside a big one** → multiply through by the common denominator.
+5. **0/0 or ∞/∞ that resists all of that** → L'Hôpital.
 
-**Why.** A limit names a single destination. If the left road ends at 3 and the right road at −4, there is none.
+### 2.2 Direct substitution
 
-*Note on the surviving Week 4 slides. Two consecutive slides headed "HOW TO FIND THE VALUE OF A LIMIT FROM A GRAPH" disagree about which point they discuss. The first gives "lim(x→2⁻) f(x) = 3 and lim(x→2⁺) f(x) = −4"; the second switches to x → 3 while its annotations show 3, 2, 1, −4 and f(2) = 1. They seem to describe one picture with labels inconsistently applied, and the picture did not extract. The mathematics is not in doubt — left ≠ right means DNE — but as printed the 2 and the 3 contradict each other.*
+**Her statement (slide 4).** "This is the simplest method and applies when substituting the value of c directly into the function results in a **well-defined expression**."
 
-*The same slide says "To find f(x), we check the shaded dot towards the y-axis, i.e. f(2) = 1." The intended meaning: a **filled dot** gives the function value, an **open circle** marks a point where the function is undefined. "Towards the y-axis" is not a meaningful instruction — ignore it and look for the filled dot at that x.*
+lim x→3 (x² + 2x − 3) = 9 + 6 − 3 = 15 − 3 = **12**. She keeps the line 15 − 3; copy that, it is a mark for visible arithmetic.
 
-**Worked example — reading a graph.** *Reconstruction; the Week 4 graphs did not extract.* Suppose the left branch of f rises to height 3 at x = 2 and ends in an open circle, there is a filled dot at (2, 1), and the right branch starts from an open circle at height −4.
+lim x→2 (x³ − 3)/(x² − 6) = (8 − 3)/(4 − 6) = 5/(−2) = **−2.5**.
 
-- lim(x→2⁻) f(x) = 3
-- lim(x→2⁺) f(x) = −4
-- lim(x→2) f(x) **does not exist**, since 3 ≠ −4
-- f(2) = 1, the filled dot
+That second example exists to make one point: **the denominator did not have to be positive, or pretty, for substitution to be legal.** 4 − 6 = −2 is a perfectly good non-zero number. Do not go hunting for a factorisation; there is nothing indeterminate here.
 
-Three different answers, all correct. That is the whole point: left limit, right limit and function value are three separate questions.
+**Where people go wrong.** Treating an ugly answer as a failure. Only 0/0 stops you.
 
-**Where people go wrong.** Answering "f(2) = 1, so the limit is 1." The function value is irrelevant to the limit. And giving two numbers — a limit is one number or it does not exist.
+### 2.3 Factorisation
 
-**In the exam.** A graph with a jump, hole or asymptote and four parts: left limit, right limit, the limit, f(a). Answer on four lines; marks are per part.
+**Her statement (slide 6).** "When direct substitution results in an indeterminate form, factoring and simplification can help."
 
-### 2.2 Evaluating limits algebraically
+Her sequence is fixed: **substitute → get 0/0 → factor → cancel the common factor → substitute again.**
 
-*Week 3. The slides DIRECT SUBSTITUTION (×2), FACTORIZATION METHOD (×2) and RATIONALIZATION (×2) are all blank. The methods below reconstruct what those headings name.*
+**Example.** lim x→2 (x² − 4)/(x − 2). Substitution gives 0/0. Factor: (x − 2)(x + 2)/(x − 2). Cancel, then substitute: **4**.
 
-Three techniques, tried in order.
+The cancellation needs a justification she does not give on the slide, so hold it yourself: **throughout a limit, x is close to 2 but never equal to 2**, so x − 2 is never actually zero and dividing by it is legal. The simplified function x + 2 agrees with the original everywhere except the single point x = 2, and the limit never inspects that point.
 
-**Method 1 — direct substitution.** Put x = a in. If you get a real number, that is the limit. This works whenever f is continuous at a — every polynomial, and every rational, root, exponential, log or trig function whose domain contains a.
+**Complex fractions live here too.** lim x→2 (1/x − 1/2)/(x − 2). She multiplies numerator and denominator by the common denominator **2x**:
 
-lim(x→2) (3x² − 4x + 1) = 12 − 8 + 1 = **5**.
+(1/x − 1/2)·2x = 2 − x, and (x − 2)·2x = 2x(x − 2), giving (2 − x)/[2x(x − 2)].
 
-**Method 2 — factorisation.** Use when substitution gives 0/0. That form means numerator and denominator share a factor of (x − a). Factor, cancel, substitute.
+Then — and this is the whole question — she factors out −1:
 
-**Worked example.** lim(x→2) (x² − 5x + 6)/(x² − 4).
+2 − x = **−1(x − 2)**
 
-Substituting: numerator 4 − 10 + 6 = 0, denominator 4 − 4 = 0. Indeterminate. Factor:
+so the expression becomes −1/(2x), and substituting x = 2 gives **−1/4**.
 
-(x − 2)(x − 3) / [(x − 2)(x + 2)]
+**Her TASK (slide 8), unanswered on the slide.** lim x→3 (x³ − 27)/(x − 3). The difference of cubes is x³ − 27 = (x − 3)(x² + 3x + 9), so the limit is 9 + 9 + 9 = **27**. L'Hôpital confirms it: 3x²/1 at x = 3 is 27.
 
-Cancel (x − 2) — legal, because we approach 2 without reaching it, so x ≠ 2 throughout.
+**Where people go wrong.** Cancelling 2 − x against x − 2 directly. That flips a sign and turns −1/4 into +1/4. Write 2 − x = −1(x − 2) first, every time.
 
-lim(x→2) (x − 3)/(x + 2) = (−1)/4 = **−0.25**.
+### 2.4 Rationalisation
 
-**Method 3 — rationalisation.** Use when substitution gives 0/0 and a root is involved. Multiply top and bottom by the conjugate.
+**Her statement (slide 9).** "Useful when dealing with limits involving square roots or complex fractions."
 
-**Worked example.** lim(x→0) (√(x + 4) − 2)/x.
+Multiply numerator and denominator by the **conjugate of the numerator** — the numerator is where the root is.
 
-Substituting: (2 − 2)/0 = 0/0. Multiply by (√(x + 4) + 2) top and bottom. The numerator becomes (x + 4) − 4 = x, so the expression is x/[x(√(x + 4) + 2)]. Cancel x:
+**Example.** lim x→0 (√(x + 9) − 3)/x. Multiply by (√(x + 9) + 3)/(√(x + 9) + 3):
 
-1/(√(x + 4) + 2) → 1/(2 + 2) = **1/4**.
+[(x + 9) − 9]/[x(√(x + 9) + 3)] = x/[x(√(x + 9) + 3)] = 1/(√(x + 9) + 3)
 
-**Why the conjugate works.** (√A − B)(√A + B) = A − B². The root vanishes, unblocking the cancellation.
+Substituting x = 0 gives 1/(3 + 3) = **1/6**.
 
-**Where people go wrong.** Working before checking the form. 5/0 is not indeterminate — the limit is infinite and factoring will not help. 0/5 is simply 0. Only 0/0 and ∞/∞ need work. Students also multiply out the rationalised denominator, which is wasted effort — leave it factored.
+**Example.** lim x→4 (√x − 2)/(x − 4). The conjugate gives (x − 4)/[(x − 4)(√x + 2)] = 1/(√x + 2) = **1/4**. One line shorter, because (√x − 2)(√x + 2) = x − 4 exactly.
 
-**In the exam.** Three or four limits, each built for one method. No root and 0/0 → factor. A root and 0/0 → rationalise. Anything else → substitute.
+**Her TASK (slide 11), unanswered, and it needs both methods at once.** lim x→4 (1/√x − 1/2)/(x − 4).
 
-### 2.3 Indeterminate forms and L'Hôpital's Rule
+Clear the complex fraction with the common denominator 2√x: 1/√x − 1/2 = (2 − √x)/(2√x), so the whole expression is (2 − √x)/[2√x(x − 4)].
 
-**In plain words.** 0/0 tells you nothing on its own: the answer could be 5, or 0, or infinity, depending on *how* top and bottom approach zero.
+Factor the difference of squares in √x: x − 4 = (√x − 2)(√x + 2).
 
-**The rule.** If lim(x→a) f(x)/g(x) gives 0/0 or ∞/∞, then lim f(x)/g(x) = lim f′(x)/g′(x), provided that second limit exists. Differentiate top and bottom **separately**, and repeat if still indeterminate.
+Write 2 − √x = **−1(√x − 2)** — the same −1 move as before — and cancel:
 
-*Missing-material note: both Week 3 slides headed L'HOPITAL'S RULE are blank; the statement above is standard. Note that the course introduces the rule in week 3, before derivatives are taught in week 5. Read section 3.3 first if the derivatives are unfamiliar.*
+−1/[2√x(√x + 2)], which at x = 4 is −1/[2(2)(4)] = **−1/16**.
 
-**Why it works.** Near a, both functions look like straight lines through zero: f(x) ≈ f′(a)(x − a) and g(x) ≈ g′(a)(x − a). The ratio's (x − a) cancels, leaving f′(a)/g′(a).
+Both of the week's minus signs, in −1/4 and in −1/16, come from that one rewrite.
 
-**Worked example 1.** lim(x→0) (sin 3x)/(5x). Substituting gives 0/0.
+### 2.5 L'Hôpital's Rule
 
-Top derivative 3 cos 3x; bottom derivative 5. So lim (3 cos 3x)/5 = 3(1)/5 = **3/5**.
+**Her statement (slide 12).** "L'Hôpital's Rule essentially allows you to replace the original function with its derivatives in situations where direct substitution results in an indeterminate form."
 
-**Worked example 2 — applying it twice.** lim(x→0) (1 − cos x)/x². Substituting gives 0/0. First application: sin x over 2x, still 0/0. Second: cos x over 2 → **1/2**.
+So lim f(x)/g(x) becomes **lim f′(x)/g′(x)** — top and bottom differentiated **separately**. This is not the quotient rule. If a g² appears in your working, you used the wrong rule.
 
-**Where people go wrong.** Using the quotient rule instead. L'Hôpital involves no squared denominator. And applying it when the form is not indeterminate — lim(x→0) (cos x)/x is 1/0, not 0/0, and forcing the rule gives a wrong answer.
+**Her layout, worth copying exactly.** For lim x→0 (sin x)/x:
 
-**In the exam.** Write "this is of the form 0/0" before applying the rule. It earns a mark and prevents misuse.
+f(x) = sin x, g(x) = x
+f′(x) = cos x, g′(x) = 1
+lim x→0 (cos x)/1 = cos(0)/1 = **1**
 
-### 2.4 Properties of limits
+Naming f and g and differentiating each on its own line makes it visually impossible to slide into the quotient rule.
 
-*Week 3 lists ten properties on one surviving slide and gives each a blank slide of its own. The list is real; the statements are reconstructions.*
+**Repeat while the form survives.** For lim x→∞ x²/eˣ:
 
-With lim(x→a) f(x) = L and lim(x→a) g(x) = M, both existing:
+lim 2x/eˣ — still ∞/∞, "so we differentiate again"
+lim 2/eˣ = 2/∞ = **0**
 
-| Property | Statement |
-|---|---|
-| Sum | lim [f + g] = L + M |
-| Difference | lim [f − g] = L − M |
-| Constant | lim k = k |
-| Constant multiple | lim [k·f] = kL |
-| Product | lim [f·g] = LM |
-| Quotient | lim [f/g] = L/M, provided M ≠ 0 |
-| Power | lim [f]ⁿ = Lⁿ |
-| Composite | lim g(f(x)) = g(L), if g is continuous at L |
-| Reciprocal | lim [1/f] = 1/L, provided L ≠ 0 |
+The rule is applied as many times as the indeterminate form survives, and **not once more**. Re-check the form before each new application, and stop the moment it is no longer indeterminate.
 
-**Squeeze theorem.** If g(x) ≤ f(x) ≤ h(x) near a and both g and h tend to L, then so does f. If the functions above and below are forced to the same value, the one trapped between has nowhere else to go.
+*Asides, not on her slides.* Her "2/∞ = 0" is informal shorthand; properly, eˣ → ∞ so the fraction is driven to 0. And she never states the hypotheses — f and g differentiable near c with g′ ≠ 0. The one hypothesis you must never skip is the indeterminate form itself: applying L'Hôpital to a quotient that is not 0/0 or ∞/∞ gives a wrong answer.
 
-**Worked example.** lim(x→0) x² sin(1/x).
+### 2.6 The ten properties of a limit
 
-Substitution fails: sin(1/x) has no limit at 0, since 1/x runs to infinity and the sine oscillates forever. But sine is always between −1 and 1, so for x ≠ 0:
+She names ten and gives each its own slide with a small worked illustration. Being able to **name all ten** is a realistic exam ask.
 
-−1 ≤ sin(1/x) ≤ 1
+| Property | Statement | Her example |
+|---|---|---|
+| Sum | lim[f + g] = lim f + lim g | lim x→2 (3x + 4x) = 6 + 8 = 14 |
+| Difference | lim[f − g] = lim f − lim g | lim x→−3 (7x − 2x) = −21 + 6 = −15 |
+| Constant | lim k = k | lim x→1 5 = 5 |
+| Constant multiple | lim k f = k lim f | lim 3f = 3(4) = 12 |
+| Product | lim[f·g] = lim f · lim g | 4 × 6 = 24 |
+| Quotient | lim f/g = lim f / lim g, **provided lim g ≠ 0** | lim x→4 6x²/5x = 96/20 = 4.8 |
+| Power | lim[fⁿ] = [lim f]ⁿ | lim x→0 (x + 4)³ = 4³ = 64 |
+| Composite | named on her list | slide content not recoverable |
+| Squeeze | see below | 5 ≤ f(x) ≤ 5 forces lim f = 5 |
+| Reciprocal | lim 1/f = 1/lim f, **provided lim f ≠ 0** | 1/6² = 1/36 |
 
-Multiply by x², which is positive so the inequalities keep direction:
+**The two provisos are the examinable half.** Quotient needs lim g ≠ 0; Reciprocal needs lim f ≠ 0. That is exactly the condition that fails in a 0/0 problem, which is why factorisation and rationalisation exist at all.
 
-−x² ≤ x² sin(1/x) ≤ x²
+**Two details in her examples.** The Difference example turns on a sign: 7(−3) − 2(−3) = −21 **+** 6 = −15, because subtracting a negative adds. The Constant Multiple example is answered **without ever knowing what f is** — you are handed the limits, not the functions, and that is the exam shape.
 
-Both bounds tend to 0, so the trapped function does too. Answer **0**.
+**Squeeze Theorem, in her lettering.** "If f(x) ≤ g(x) ≤ h(x) for all x in some interval containing c except possibly at c itself, and lim f = lim h = L, then lim g = L." The **squeezed** function is **g**; the bounds are f below and h above. The two outer limits must come out **equal**, or the theorem tells you nothing.
 
-**Where people go wrong.** Using the quotient property when M = 0. The condition is not decoration — factor, rationalise or use L'Hôpital instead.
+> **SLIDE ERROR (Week 3, slide 23).** Her example states the bounds as 5 − x³ ≤ f(x) ≤ 5 + x³ and then prints the next two lines with **5 − x³ on both sides**. The upper bound must be 5 + x³. Written correctly, 5 ≤ f(x) ≤ 5 and lim x→0 f(x) = 5. The answer 5 is right either way, which is precisely why the typo is easy to miss. Note also that the example calls the squeezed function f while the theorem two lines above calls it g — the letters swap inside one slide.
 
-**In the exam.** Usually indirect: given lim f = 4 and lim g = −2, find lim(3f − g²) = 3(4) − (−2)² = 12 − 4 = 8. The squeeze theorem always involves a bounded oscillating factor such as sin(1/x).
+> **SLIDE ERROR (Week 3, slide 27).** The summary says "lim x→∞ f(x) represents the limit approaching x from the right while lim x→−∞ f(x) is used when the limit approaches x from the left." That confuses two different things. **lim x→∞ and lim x→−∞ are limits at infinity** — end behaviour, with no finite point involved. A one-sided limit approaches a **finite** point c and is written lim x→c⁺ or lim x→c⁻. If a question quotes this back at you, say so.
 
-### 2.5 Continuity
+### 2.7 Continuity, and reading a limit off a graph
 
-**In plain words.** Continuous at a point means you can draw through it without lifting your pen.
+*Week 4. The definitions here are the deck's; the graphs are reconstructed from it.*
 
-**Formal definition, quoted from Week 4.** f is continuous at c if:
+**Continuity at a point — the three conditions, in order.** f is continuous at c if
 
-1. f(c) is defined.
-2. lim(x→c) f(x) exists.
-3. lim(x→c) f(x) = f(c).
+(i) f(c) is defined; (ii) lim x→c f(x) exists; (iii) lim x→c f(x) = f(c).
 
-**Why three conditions.** Each can fail alone. A hole fails (1); a jump fails (2); a curve approaching height 4 with its filled dot at height 1 satisfies (1) and (2) but fails (3). Each failure has its own name and its own look on a graph.
+All three. Failing any one makes f discontinuous at c. Graphically: you can draw the curve through the point **without lifting your pen**.
 
-**Worked example.** For what k is f continuous at x = 2, where f(x) = (x² − 4)/(x − 2) for x ≠ 2 and f(2) = k?
+**One-sided limits.** lim x→c⁻ f(x) is the height the curve runs into from the left (x < c); lim x→c⁺ f(x) is the height it runs into from the right (x > c).
 
-Condition 1 holds for any k. For condition 2, (x² − 4)/(x − 2) = (x − 2)(x + 2)/(x − 2) = x + 2 for x ≠ 2, so the limit is 4. Condition 3 then forces **k = 4**. Any other k leaves a removable discontinuity.
+**The existence rule.** lim x→c f(x) exists **iff** the two one-sided limits agree and are finite. If they differ, the limit **does not exist (DNE)**.
 
-**In the exam.** Either "show f is continuous at x = a" — state and check all three conditions explicitly — or "find k making f continuous", where you set left limit = right limit = f(a) and solve.
+**Reading the graph.** Three things to pick off, and they are different things:
 
-### 2.6 Types of discontinuity
+- the height the left branch runs into → lim x→c⁻;
+- the height the right branch runs into → lim x→c⁺;
+- the **shaded (solid) dot** at x = c → f(c).
 
-*Week 4 names four types. The illustrations did not extract; descriptions combine surviving slide text with reconstructed pictures.*
+An **open circle** marks a height the curve approaches but does not take. It contributes to a one-sided limit and contributes **nothing** to f(c). Only a filled dot may be quoted as a function value.
 
-**1. Removable (a hole).** The slide: these "occur when a function has a point where it's not defined, but the gap can be 'filled' to make the function continuous at that point. The graph will show an open circle or 'hole'." Left and right limits agree; the function value is missing or misplaced. Fill the hole with the limit value and continuity returns.
+**Worked example — a break.** For x < 2 the curve runs into height 3 and stops at an open circle at (2, 3). For x > 2 it starts at an open circle at (2, −4) and continues down. A solid dot sits at (2, 1).
 
-The slide's Example 1: f(x) = (x² − 1)/(x − 1) at x → 1. Factoring gives x + 1 for x ≠ 1, so the limit is 2, while f(1) is 0/0. A hole at (1, 2).
+lim x→2⁻ f(x) = 3, lim x→2⁺ f(x) = −4. They differ, so **lim x→2 f(x) = DNE**. And f(2) = **1**, the solid dot. Note that f(2) *is* defined here and the function is still discontinuous — being defined is only condition (i) of three.
 
-**2. Jump.** The slide: the graph "will have a break or gap" and the function "approaches different values from the left and right." Both one-sided limits exist but differ, and you cannot fill a jump with one point. Piecewise functions produce these.
+**Worked example — a hole.** f(x) = (x² − 1)/(x − 1). Substitution gives 0/0, which is a signal to factor, not a verdict of DNE. Cancel: f(x) = x + 1 for every x ≠ 1, so both one-sided limits are 2 and **lim x→1 f(x) = 2**. But f(1) = 0/0 is undefined, so condition (i) fails. The graph is the line y = x + 1 with an open circle at (1, 2).
 
-**3. Infinite.** The slide: this happens "when a function approaches positive infinity or negative infinity as x approaches a specific point", and "the graph will show a vertical asymptote". The Week 4 example: lim(x→3⁺) f(x) = +∞ and lim(x→3⁻) f(x) = −∞, so the limit is DNE, and with no filled dot at x = 3, f(3) is undefined too. f(x) = 1/(x − 3) behaves this way.
+**Worked example — an asymptote.** A vertical dashed line at x = 3, the curve plunging on the left and climbing on the right, no dot of any kind. Then lim x→3⁻ = −∞ and lim x→3⁺ = +∞. Neither is a real number, so **lim x→3 f(x) = DNE** and f(3) is undefined. Writing "lim = +∞" is a *description of how the limit fails*, not a value.
 
-**4. Essential.** Named on the slide, never described. *Reconstruction: an essential discontinuity is one where a one-sided limit fails to exist at all — not by running to infinity but by oscillating without settling. f(x) = sin(1/x) at x = 0 is the standard example. Some textbooks use "essential" as an umbrella for every non-removable discontinuity; since jump and infinite are already listed separately here, the oscillating case is almost certainly what was meant.*
+**A corner is not a break.** g(x) = |x| has a sharp corner at 0, yet lim x→0⁻ = lim x→0⁺ = 0 = g(0), so it is **continuous** at 0. Continuity is about lifting the pen, not about smoothness of direction.
 
-**Worked example.** Classify the discontinuities of f(x) = (x² − 9)/(x² − 2x − 3).
+**Where people go wrong.** Answering "DNE" without saying which limit is meant — at a break the two-sided limit is DNE while both one-sided limits exist perfectly well. And quoting an open circle as a function value.
 
-Factor: (x − 3)(x + 3) over (x − 3)(x + 1). The denominator vanishes at x = 3 and x = −1.
-
-At x = 3: the (x − 3) cancels, leaving (x + 3)/(x + 1), which at x = 3 is 6/4 = 1.5. The limit exists but f(3) is undefined. **Removable — a hole at (3, 1.5).**
-
-At x = −1: nothing cancels. The numerator there is (−4)(2) = −8, non-zero, while the denominator goes to 0, so the function blows up. **Infinite — vertical asymptote at x = −1.**
-
-**Where people go wrong.** Assuming every zero of the denominator is an asymptote. It is only an asymptote if the factor does *not* cancel. Factor first, every time.
-
-**In the exam.** "Identify and classify all discontinuities." Factor top and bottom, find the denominator's zeros, decide cancel-or-not for each, name the type and give the location.
-
-### 2.7 Limits at infinity
-
-*Background note: the Week 3 summary mentions behaviour "as they approach particular points or infinity" but no surviving slide develops it. Improper integrals in week 9 need it, so a short treatment follows.*
-
-lim(x→∞) f(x) = L means f settles to L as x grows without bound. The one fact you need: **lim(x→∞) 1/xᵖ = 0 for any p > 0.** For a rational function, divide top and bottom by the highest power in the denominator: lim(x→∞) (3x² + 5x)/(2x² − 1) becomes (3 + 5/x)/(2 − 1/x²) → 3/2.
-
-Shortcut: equal degrees → ratio of leading coefficients; bottom degree higher → 0; top degree higher → infinite.
+**In the exam.** A graph with four things to read off: the two one-sided limits, the two-sided limit, and f(c). Read them in that order and the fourth answer falls out of the first three.
 
 ---
 
 ## Part 3 — Differentiation
 
-*Weeks 5 and 6. Week 5: "Definition of Derivatives and its Geometric Representation". Week 6: "Higher-Order Derivatives".*
+*Weeks 5 and 6. Week 5: nine rules, each introduced by a worked example. Week 6: one idea — differentiate again — worked six times.*
 
-### 3.1 What a derivative is
+### 3.1 The power rule
 
-**In plain words.** The rate at which a function changes at one instant. If s(t) is where a car is at time t, s′(t) is its speed right now, not its average over the journey.
+**Her statement (slide 4).** "when f(x) = xⁿ, **f′(x) = nx^(n−1)**." Multiply by the old power, then drop the power by one.
 
-**Geometric meaning,** quoted from Week 5: the derivative is "the slope of the tangent line to the curve of the function at a specific point." Why it is the same thing: join two points on a curve; that line's gradient is the average rate of change. Slide the second point into the first and the line pivots until it touches at one point — the tangent — whose gradient is the instantaneous rate.
+f(x) = x⁴ gives f′(x) = 4x³.
 
-**Notation.** f′(x), dy/dx, y′, df/dx, d/dx[f(x)] all mean the same. Leibniz notation, dy/dx, is better when you must say *with respect to which variable*, which matters for implicit, parametric and partial differentiation.
+**Her second example, and the line she writes out separately.** f(x) = 3x¹⁰⁰ − 4x.
 
-### 3.2 Differentiation from first principles
+f′(x) = (3×100)x⁹⁹ − (4×1)x⁰ = 300x⁹⁹ − 4x⁰ = **300x⁹⁹ − 4**, "where x⁰ = 1".
 
-*Missing-material note: Week 5's three slides headed THE FIRST PRINCIPLE are blank. Definition and example are reconstructions.*
+Two habits to copy. She writes the coefficient multiplication **explicitly as (3×100)** rather than doing it in her head, so the 3 never gets dropped. And she treats **x as x¹**, so its derivative is 1·x⁰ = 1. The derivative of −4x is −4, not −4x⁰ left standing.
 
-**The definition.**
+**Roots are fractional powers.** ⁵√(x³) = x^(3/5), so its derivative is (3/5)x^(3/5 − 1) = (3/5)x^(−2/5) = 3/(5·⁵√(x²)). The exponent arithmetic is 3/5 − 5/5 = −2/5.
 
-f′(x) = lim(h→0) [f(x + h) − f(x)] / h
+> **SLIDE ERROR (Week 5, slide 20).** The solution line prints "³√(x⁵) can also be written as x^(3/5)". ³√(x⁵) is x^(5/3); the index and the power have been swapped inside the radical. The **question** is ⁵√(x³), and ⁵√(x³) = x^(3/5) is correct, so every line after it is right. Read the radical from the question. The same slide is titled CONSTANT MULTIPLE RULE but contains no constant multiple at all — it is a power-rule example with a fractional index. She never states the constant multiple rule anywhere; she only uses it silently.
 
-The fraction is the gradient between the point at x and one a distance h further along. Letting h → 0 collapses them together. You cannot simply set h = 0 — that gives 0/0. Every h in the numerator must cancel against the h in the denominator first.
+**Note what she never names.** She differentiates 3x¹⁰⁰ − 4x term by term without ever calling it a sum rule. There is no named sum or difference rule in this course — she just does it.
 
-**Worked example.** Differentiate f(x) = 3x² − 2x from first principles.
+### 3.2 First principles
 
-f(x + h) = 3(x + h)² − 2(x + h) = 3x² + 6xh + 3h² − 2x − 2h.
+**Her formula (slide 17).** **f′(x) = lim h→0 [f(x + h) − f(x)]/h.** Her summary slide calls this "the limit definition of the derivative" and calls the power rule "the general rule of differentiation" — that pairing is a likely one-mark question.
 
-Subtract f(x) = 3x² − 2x: the 3x² and −2x cancel, leaving 6xh + 3h² − 2h. (They must cancel; otherwise the limit would be infinite.)
+**Example 1.** Differentiate y = 3x from first principles.
 
-Divide by h: 6x + 3h − 2.
+f′(x) = lim h→0 [3(x + h) − 3x]/h = lim h→0 [3x + 3h − 3x]/h = lim h→0 3h/h = lim h→0 3 = **3**
 
-Let h → 0: f′(x) = **6x − 2**.
+The pattern: **substitute into f(x + h), expand, cancel the terms common to f(x + h) and f(x), divide out the h, then let h → 0.** The h must cancel from the denominator *before* the limit is taken — that is the only reason the answer is finite.
 
-Check against the power rule: 6x − 2 ✓.
+**Example 2, the deck's hardest single calculation.** Differentiate y = √x from first principles.
 
-**Where people go wrong.** Expanding (x + h)² as x² + h². It is x² + 2xh + h², and losing the cross-term destroys the answer. Also dividing by h before the non-h terms have cancelled.
+f′(x) = lim h→0 [√(x + h) − √x]/h
 
-**In the exam.** The steps above are the mark scheme. Do not use the power rule and call it first principles — the examiner wants the limit written and the cancellation shown.
+Multiply above and below by the conjugate √(x + h) + √x:
 
-### 3.3 The rules of differentiation
+= lim h→0 [(x + h) − x]/[h(√(x + h) + √x)]
+= lim h→0 h/[h(√(x + h) + √x)]
+= lim h→0 1/(√(x + h) + √x)
+= 1/(√x + √x) = **1/(2√x)**
 
-*Missing-material note: every rule slide in Week 5 — POWER, PRODUCT, QUOTIENT, CHAIN, CONSTANT, CONSTANT MULTIPLE — is blank. The standard statements follow.*
+The **conjugate multiplier** is the whole trick: it turns the numerator into h, and that h cancels the h below. Without it, h = 0 gives 0/0. Note her last two lines — she puts h = 0 *inside the surd* first, getting √x + √x, and only then writes 2√x.
 
-| Rule | Statement |
-|---|---|
-| Constant | d/dx(k) = 0 |
-| Power | d/dx(xⁿ) = n x^(n−1) |
-| Constant multiple | d/dx[k f] = k f′ |
-| Sum / difference | d/dx[f ± g] = f′ ± g′ |
-| Product | d/dx[uv] = u′v + uv′ |
-| Quotient | d/dx(u/v) = (u′v − uv′)/v² |
-| Chain | d/dx[f(g(x))] = f′(g(x))·g′(x) |
+Cross-check with the power rule: √x = x^(1/2), so f′ = (1/2)x^(−1/2) = 1/(2√x). The two methods agreeing is the deck's implicit argument for why the power rule is "the general rule".
 
-Standard derivatives: xⁿ → nx^(n−1); sin x → cos x; cos x → −sin x; tan x → sec²x; eˣ → eˣ; e^(kx) → k e^(kx); ln x → 1/x; aˣ → aˣ ln a.
+**Where people go wrong.** Substituting h = 0 before cancelling — that gives 0/0. If an h still survives in your answer, you have not finished.
 
-**Why the constant rule is zero.** A constant function does not change; its graph is horizontal; a horizontal line has gradient 0.
+**In the exam.** She never uses first principles on a quadratic; her two examples are y = 3x and y = √x. Expect one of those two shapes, and expect the limit to be written out.
 
-**Why the product rule is not u′v′.** If it were, differentiating x·x = x² would give 1·1 = 1 instead of 2x. The correct rule gives 1·x + x·1 = 2x ✓. Both factors change, so the product changes on two fronts.
+### 3.3 Product and quotient
 
-**Power rule with awkward powers.** Differentiate y = 4x³ − 7/x² + 5√x.
+**Product rule, in her order (slide 6).** "when f(x) = u(x)·v(x) we have **f′(x) = u(x)v′(x) + u′(x)v(x)**." She writes the undifferentiated first factor times the derivative of the second, first. Addition is commutative so either order is right, but matching her layout stops you losing track of which pair you have done.
 
-Rewrite as powers: 4x³ − 7x⁻² + 5x^(1/2).
+Her procedure is always the same: **list u, v, u′, v′ on one line, substitute, simplify.**
 
-- 4x³ → 12x²
-- −7x⁻² → −7(−2)x⁻³ = 14/x³
-- 5x^(1/2) → 5(1/2)x^(−1/2) = 5/(2√x)
+**Example.** f(x) = x²·sin x. u = x², v = sin x, u′ = 2x, v′ = cos x, so f′(x) = **x² cos x + 2x sin x**.
 
-dy/dx = **12x² + 14/x³ + 5/(2√x)**.
+*A genuine gap in the deck.* She uses d/dx(sin x) = cos x here and d/dx(cos x) = −sin x elsewhere **without ever stating either as a rule**. Memorise the pair. The minus sign on cos is where most marks in this week are lost.
 
-**Product rule.** y = (2x + 1)(x² − 3). u = 2x + 1, u′ = 2; v = x² − 3, v′ = 2x.
+**Example.** f(x) = (4x + 6)(2x³ − 5x). u = 4x + 6, v = 2x³ − 5x, u′ = 4, v′ = 6x² − 5.
 
-dy/dx = 2(x² − 3) + (2x + 1)(2x) = 2x² − 6 + 4x² + 2x = **6x² + 2x − 6**.
+f′(x) = (4x + 6)(6x² − 5) + (2x³ − 5x)(4)
+= (24x³ − 20x + 36x² − 30) + (8x³ − 20x)
+= **32x³ + 36x² − 40x − 30**
 
-Check by expanding first: y = 2x³ + x² − 6x − 3, derivative 6x² + 2x − 6 ✓.
+Check by expanding first: f(x) = 8x⁴ + 12x³ − 20x² − 30x, so f′ = 32x³ + 36x² − 40x − 30.
 
-**Quotient rule.** y = (2x + 1)/(x² + 3). u = 2x + 1, u′ = 2; v = x² + 3, v′ = 2x.
+> **SLIDE ERROR (Week 5, slide 7), two of them.** (i) The substitution line prints `(4x + 6)(6x − 5)` — the **square on 6x² has been lost**, even though the line directly above correctly gives v′ = 6x² − 5. (ii) The final line prints **8x³ + 24x² − 32x − 30**, which is not the derivative of anything on the slide; it is not even what the misprinted version would give (that would be 8x³ + 24x² − 4x − 30). The correct answer is **32x³ + 36x² − 40x − 30**, confirmed by expanding before differentiating.
 
-Numerator: 2(x² + 3) − (2x + 1)(2x) = 2x² + 6 − 4x² − 2x = −2x² − 2x + 6.
+**Quotient rule, in her order (slide 8).** "given f(x) = u(x)/v(x), then **f′(x) = [v(x)u′(x) − u(x)v′(x)]/(v(x))²**." The **v u′ term comes first and carries the plus**; the u v′ term carries the minus. Reversing them negates the whole answer.
 
-dy/dx = **(−2x² − 2x + 6)/(x² + 3)²**.
+**Example.** f(x) = x/cos x. u = x, v = cos x, u′ = 1, v′ = −sin x.
 
-**Chain rule.** y = (3x² + 5)⁴. Differentiate the outside keeping the inside intact: 4(3x² + 5)³. Multiply by the inside's derivative, 6x.
+f′(x) = [cos x·1 − x(−sin x)]/cos²x = **(cos x + x sin x)/cos²x**
 
-dy/dx = **24x(3x² + 5)³**.
+Watch what the double negative does: u v′ = x(−sin x) = −x sin x, and the rule subtracts it, so −(−x sin x) = **+x sin x**. Two sign changes in a row.
 
-**Where people go wrong.** Forgetting the inner derivative in the chain rule. Reversing the quotient rule's numerator — it is top-derivative times bottom *minus* top times bottom-derivative, and swapping flips the sign. And using the power rule on 1/x² without rewriting it as x⁻².
+> **SLIDE ERROR (Week 5, slide 8).** The final line prints **(cos x + sin x)/cos²x** — the factor **x has been dropped** from the second term. The line immediately above has it. The correct answer is (cos x + x sin x)/cos²x.
 
-**In the exam.** A five-part question, one rule per part. Identify the structure first: a product needs the product rule, a fraction the quotient rule, a bracket-to-a-power the chain rule. Nested rules are normal.
+**Example.** f(x) = (6x − 3)/(5x²). u = 6x − 3, v = 5x², u′ = 6, v′ = 10x.
 
-### 3.4 Implicit differentiation
+f′(x) = [5x²·6 − (6x − 3)(10x)]/(5x²)²
+= (30x² − 60x² + 30x)/25x⁴
+= (−30x² + 30x)/25x⁴ = **6(1 − x)/(5x³)**
 
-**In plain words.** Sometimes y is tangled up with x in one equation, like x² + y² = 25, rather than given as a formula. Implicit differentiation finds dy/dx without untangling.
+Two moves to watch: **(5x²)² = 25x⁴**, squaring the coefficient as well as the power; and subtracting (6x − 3)(10x) = 60x² − 30x turns −30x into **+30x**. The tidy-up divides top and bottom by 5x.
 
-**Why it works.** You treat y as a function of x without ever writing that function down. So differentiating any term containing y triggers the chain rule and produces a dy/dx factor: y² becomes 2y·dy/dx, not 2y.
+**Where people go wrong.** Believing (uv)′ = u′v′. Test it on the example above: u′v′ = 4(6x² − 5) = 24x² − 20, nothing like the right answer. Differentiation does not distribute over multiplication.
 
-**Worked example.** Find dy/dx given x²y + y³ = 10.
+### 3.4 The chain rule
 
-x²y is a product: d/dx(x²y) = 2xy + x²(dy/dx).
-y³: chain rule gives 3y²(dy/dx).
-10: gives 0.
+**Her statement (slide 10).** "when f(x) = f(g(x)), if y = f(u) where u = g(x), then **f′(x) = y′(u)·u′(x)**."
 
-2xy + x²(dy/dx) + 3y²(dy/dx) = 0
-(dy/dx)(x² + 3y²) = −2xy
-dy/dx = **−2xy/(x² + 3y²)**
+Differentiate the outside in terms of u, differentiate the inside, multiply, then **put u back**.
 
-The answer contains both x and y. That is normal and correct.
+**Example.** f(x) = cos(x²). Let u = x², so y = cos u.
 
-**Where people go wrong.** Differentiating y³ as 3y² and omitting the dy/dx. That single omission is the difference between the method working and not.
+y′(u) = −sin u, u′(x) = 2x
+f′(x) = −sin(u)·2x = **−2x sin(x²)**
 
-**In the exam.** Circles and conics: x² + y² = 25 gives dy/dx = −x/y, usually followed by "find the tangent at (3, 4)" — gradient −3/4, so y − 4 = −(3/4)(x − 3).
+Answering −2x sin(u) leaves the answer in the wrong variable — the substitution was yours, and it must be undone.
 
-### 3.5 Parametric differentiation
+**Her TASK 1 (slide 11), unanswered.** f(x) = (2x − 4)². With u = 2x − 4, y = u²:
 
-**In plain words.** x and y are both given in terms of a third variable t. Think of t as time and (x(t), y(t)) as a moving point.
+f′(x) = 2u·2 = 4(2x − 4) = **8x − 16**
 
-**The formula.** dy/dx = (dy/dt)/(dx/dt). It follows from the chain rule: dy/dt = (dy/dx)(dx/dt), so divide through by dx/dt.
+Check by expanding: f(x) = 4x² − 16x + 16, f′ = 8x − 16. The answer 2(2x − 4) = 4x − 8 is what you get if you forget u′(x) = 2, and that is the entire point of the task.
 
-**Worked example.** x = t² + 1, y = t³ − 3t. Find dy/dx at t = 2.
+**The test.** Is the base anything other than a bare x? Then a factor u′(x) is owed.
 
-dx/dt = 2t; dy/dt = 3t² − 3. So dy/dx = (3t² − 3)/(2t).
+### 3.5 Implicit differentiation
 
-At t = 2: (12 − 3)/4 = **9/4 = 2.25**.
+**The mechanism.** Differentiate both sides with respect to x. Every y that gets differentiated leaves behind a factor **dy/dx** — that factor *is* the chain rule's u′(x), because y is itself a function of x. Then collect all the dy/dx terms on one side, **factorise**, and divide.
 
-**Where people go wrong.** Dividing the wrong way. dy goes on top, matching dy/dx. For the second derivative, d²y/dx² is *not* (d²y/dt²)/(d²x/dt²); the correct route is [d/dt(dy/dx)]/(dx/dt).
+**Example 1.** x² + y² = 25.
 
-**In the exam.** Substitution into the formula, then usually a tangent-line question at a given t.
+2x + 2y(dy/dx) = 0
+dy/dx = −2x/2y = **−x/y**
 
-### 3.6 Partial differentiation
+Her phrase for the second term is "applying the chain rule for y²". The right-hand side, a constant, differentiates to 0.
 
-*The Week 5 deck ends with a blank slide headed PARTIAL DIFFERENTIATION — a preview of a multivariable topic. Brief reconstruction below.*
+**Example 2.** xy + 6x⁴ = y.
 
-**In plain words.** For f(x, y), the partial derivative ∂f/∂x asks how f changes when you nudge x while holding y still. The curly ∂ signals that other variables are frozen. Method: treat every other variable as a constant and differentiate as usual.
+y + x(dy/dx) + 24x³ = dy/dx
+x(dy/dx) − dy/dx = −24x³ − y
+(dy/dx)(x − 1) = −(24x³ + y)
+**dy/dx = −(24x³ + y)/(x − 1)**
 
-**Worked example.** f(x, y) = x³y² + 4x − 7y.
+Three ideas stacked. **xy needs the product rule**, giving y·1 + x(dy/dx). **Every dy/dx goes to one side.** **Then factorise it out** — this is the step students skip, and without it there is nothing to divide by.
 
-For ∂f/∂x, y is a constant: x³y² → 3x²y² (the y² rides along as a coefficient); 4x → 4; −7y → 0.
+**The test for when a dy/dx appears.** Is the letter you are differentiating different from the variable you are differentiating with respect to? If so, a dy/dx factor is owed.
 
-∂f/∂x = **3x²y² + 4**.
+### 3.6 Parametric differentiation
 
-For ∂f/∂y, x is a constant: x³y² → 2x³y; 4x → 0; −7y → −7.
+**Her rule (slide 14).** **dy/dx = dy/dt ÷ dx/dt.** Note she writes it as a division, not as a product of fractions.
 
-∂f/∂y = **2x³y − 7**.
+**Example.** x(t) = 2t + 1, y(t) = t² − t.
 
-**Where people go wrong.** Differentiating both variables at once. In ∂f/∂x the y is a number, not a variable.
+x′(t) = 2, y′(t) = 2t − 1, so **dy/dx = (2t − 1)/2**
 
-**In the exam.** At most one short part: "find ∂z/∂x and ∂z/∂y". Easy marks if you remember to freeze the other variable.
+The answer is legitimately left **in terms of t**. There is no requirement to eliminate the parameter, and she does not.
 
-### 3.7 Higher-order derivatives
+**Her TASK 2 (slide 15), unanswered.** x(t) = t⁴, y(t) = 7t² − 5t gives x′ = 4t³, y′ = 14t − 5, so **dy/dx = (14t − 5)/(4t³)**, valid for t ≠ 0.
 
-*Week 6. The entire deck's mathematics is missing — FIRST-ORDER DERIVATIVE, SECOND-ORDER DERIVATIVE, THIRD-ORDER DERIVATIVE and five separate slides headed FOURTH DERIVATIVE are all blank. The introduction and week summary survive and are quoted; examples are reconstructions.*
+**Where people go wrong.** Quoting dy/dt as the gradient. Re-parametrise t → 2t and the gradient of the curve must not change, but dy/dt does.
 
-**In plain words.** Differentiate, then differentiate the answer, then that. The Week 6 introduction: "we're familiar with the first derivative, which tells us about the rate of change of a function. But what if we desire to understand how this rate of change itself changes, and then how that change is changing, and so forth?"
+### 3.7 Constant and partial derivatives
 
-**Notation.**
+**Constant rule (slide 16).** "Since the function has no variable, it is a constant. Therefore dy/dx = 0." Her NOTE: **the derivative of a constant is zero.**
 
-| Order | Prime | Leibniz |
-|---|---|---|
-| First | f′(x) | dy/dx |
-| Second | f″(x) | d²y/dx² |
-| Third | f‴(x) | d³y/dx³ |
-| nth | f⁽ⁿ⁾(x) | dⁿy/dxⁿ |
+Her test is a test on the whole expression: has it no variable in it? Then it is a constant. This is what kills the 25 in x² + y² = 25. The −5 inside 7t² − 5t is not such a case — that term still carries a t.
 
-From the fourth onwards use the bracketed superscript: f⁽⁴⁾, not f″″.
+**Partial differentiation (slide 21).** "For ∂f/∂x we treat **y** as a constant. For ∂f/∂y we treat **x** as a constant." Nothing more — no chain rule for partials, no mixed second partials.
 
-**Physical meaning,** from the Week 6 summary: "the first derivative gives the rate of change, the second derivative gives the acceleration, and the third derivative gives the jerk." For position s(t): s′ = velocity, s″ = acceleration, s‴ = jerk, how abruptly the acceleration changes.
+**Example.** f(x, y) = 3x² + 2xy − y³.
 
-**Mathematical meaning of the second derivative.** It measures concavity. f″ > 0 means the curve bends upward like a cup, so a stationary point there is a minimum; f″ < 0 means it bends downward, so a stationary point is a maximum. That is the second-derivative test, and it is the main reason higher derivatives appear in a first-year syllabus.
+- **∂f/∂x = 6x + 2y**: 3x² → 6x; 2xy → 2y (y is a constant multiplier); −y³ → 0.
+- **∂f/∂y = 2x − 3y²**: 3x² → 0; 2xy → 2x; −y³ → −3y².
 
-**Worked example 1.** Differentiate y = x⁵ − 3x⁴ + 2x² − 7 repeatedly.
+The pattern: **any term without the variable you are differentiating by dies**, by the constant rule.
 
-y′ = 5x⁴ − 12x³ + 4x; y″ = 20x³ − 36x² + 4; y‴ = 60x² − 72x; y⁽⁴⁾ = 120x − 72; y⁽⁵⁾ = 120; y⁽⁶⁾ = 0.
+> **SLIDE ERROR (Week 5, slide 21).** The second answer is labelled "**∂f/∂x** = 2x − 3y²". The expression is right but the label is not — it is ∂f/∂y. The words directly above it say "For ∂f/∂y we treat x as a constant", so the intent is unambiguous.
 
-A degree-n polynomial has a constant nth derivative and zero beyond. Degree 5 here, so y⁽⁵⁾ is constant ✓.
+**Partial versus implicit.** In ∂f/∂y the other variable is a **genuine constant** and contributes no dy/dx. That is the exact opposite of implicit differentiation, and the two topics sit nine slides apart in the same deck.
 
-**Worked example 2 — motion.** A particle has s(t) = t³ − 6t² + 9t metres after t seconds. Find velocity and acceleration at t = 1 and interpret.
+### 3.8 Higher-order derivatives
 
-v(t) = 3t² − 12t + 9; a(t) = 6t − 12.
+*Week 6 is one idea worked six times: to get a higher derivative, differentiate the derivative you already have, using the ordinary rules again. There is no new machinery.*
 
-v(1) = 3 − 12 + 9 = **0 m/s**. a(1) = 6 − 12 = **−6 m/s²**.
+**Notation.** f′, f″, f‴, then **f⁽⁴⁾(x)** — a bracketed superscript that **counts differentiations**, not a power. Her slide states it: "the notation for the fourth derivative can be written as f⁽⁴⁾(x) or (f‴(x))′." In Leibniz form: dy/dx, d²y/dx², d³y/dx³.
 
-The particle is momentarily at rest and the acceleration is negative, so it is about to move backwards. With v = 0 and a < 0, t = 1 is a local maximum of position — the far point of this leg.
+**The standard derivatives she supplies, and nothing beyond them:** d(tan x)/dx = sec²x, d(ln x)/dx = 1/x, d(sin x)/dx = cos x, d(eˣ)/dx = eˣ.
 
-**Where people go wrong.** Writing d²y/dx² as (dy/dx)². They are unrelated: for y = x², (dy/dx)² = 4x² but d²y/dx² = 2. Also stopping a round early.
+**Example — a polynomial.** f(x) = x⁴ + 2x³ − 15x + 4 gives f′(x) = **4x³ + 6x² − 15**. The constant does not become 4 and it does not survive; it vanishes.
 
-**In the exam.** Either "find the third derivative", which is easy marks, or a kinematics problem where you differentiate twice and interpret the signs — in words, not just numbers.
+**Example — a constant multiple survives.** y = 3 tan x + 3 gives dy/dx = 3·sec²x + 0 = **3 sec²x**. Do not confuse "the derivative of a constant is 0" with "constants disappear from products".
+
+**Example — rewrite the root first.** f(x) = √(x³) = x^(3/2).
+
+y′ = (3/2)x^(1/2), then y″ = (3/2)(1/2)x^(1/2 − 1) = **(3/4)x^(−1/2)**
+
+The coefficients **multiply** and the exponent falls by one even when it is a fraction, and even when it goes negative.
+
+**Example — negative powers.** f(x) = ln x.
+
+y′ = 1/x = x⁻¹; y″ = −x⁻²; y‴ = 2x⁻³, so **f‴(2) = 2/2³ = 1/4**
+
+The sign flips once and then flips back, and the coefficient climbs 1 → −1 → 2. Her habit of writing each answer **both ways** — as a fraction and as a negative power — exists because the negative-power form is the one you can differentiate again.
+
+**Example — the chain factor comes back every time.** For sin(5x) + e^(3x):
+
+dy/dx = 5cos(5x) + 3e^(3x)
+d²y/dx² = −25sin(5x) + 9e^(3x)
+d³y/dx³ = **−125cos(5x) + 27e^(3x)**
+
+Track the two coefficients separately: **5 → 25 → 125** with the sign cycling +, −, −; and **3 → 9 → 27** with **no sign change ever**, because eᵘ reproduces itself. The argument 5x never changes; the coefficient in front grows.
+
+**Her TASK 1 (slide 7), unanswered.** y = cos(3x): y′ = −3sin(3x), y″ = **−9cos(3x)**. The sign appears at the *first* step, and the second contributes none.
+
+**Her TASK 2 (slide 15), unanswered, and the only place the product rule is needed.** f(x) = xeˣ:
+
+f′ = (x + 1)eˣ, f″ = (x + 2)eˣ, f‴ = (x + 3)eˣ, so **f‴(2) = 5e² ≈ 36.95**
+
+Each differentiation adds exactly 1 to the bracket.
+
+**The deck's main exercise — ln(1 + x²), differentiated four times.** Five of its fifteen content slides are this one problem.
+
+Chain rule first: with u = 1 + x², f′(x) = (1/u)(2x) = **2x/(1 + x²)**.
+
+That is a quotient, so every order after it needs the quotient rule again. With u = 2x, v = 1 + x², u′ = 2, v′ = 2x:
+
+f″(x) = [(1 + x²)2 − 2x(2x)]/(1 + x²)² = **(2 − 2x²)/(1 + 2x² + x⁴)**
+
+She expands the denominator rather than leaving it bracketed, and carries the expansion forward. Applying the quotient rule twice more gives
+
+f‴(x) = (4x⁵ − 8x³ − 12x)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)
+
+and then the fourth derivative, whose numerator is
+
+−12x¹² + 24x¹⁰ + 204x⁸ + 336x⁶ + 204x⁴ + 24x² − 12
+
+over (1 + 4x² + 6x⁴ + 4x⁶ + x⁸)².
+
+> **SLIDE ERROR (Week 6, slides 13–14).** The slide prints the fourth-derivative numerator as −12x¹² + **40**x¹⁰ + **568**x⁸ + **416**x⁶ + **240**x⁴ + 24x² − 12. Four of the seven coefficients are wrong. The set-up on slide 13 — the u, v, u′, v′ and the quotient-rule line — is completely correct; only the final expansion is not. Learn the method from her and take the numbers from here.
+
+*A checking aside, not on her slides:* since 1 + 4x² + 6x⁴ + 4x⁶ + x⁸ is (1 + x²)⁴, the correct fourth derivative collapses to −12(x⁴ − 6x² + 1)/(1 + x²)⁴. She never simplifies, and you should answer her way — but this factorisation is a fast way to check your own expansion.
+
+> **SLIDE ERRORS (Week 6, minor).** Slides 8 and 15 both write "the third derivative of **f(2)** = ln x" and "of **f(2)** = xeˣ"; f(2) is a number and cannot be differentiated. Read them as f(x) = …, find f‴(2). Slide 9 writes "Let **dy/dx** = sin(5x) + e^(3x)" where it means "Let y = …", and labels the trigonometric and exponential rules as "the logarithmic rule". Every derivative she then writes is correct.
+
+**What Week 6 does not contain.** Concavity, points of inflection, the second-derivative test, maxima and minima, general nth-derivative formulas, the Leibniz expansion, or any worked motion problem. Her only application claim is that the **second derivative is acceleration** and the **third is jerk**, stated in words.
+
 ---
 
 ## Part 4 — Integration: the machinery
 
-*Weeks 7 and 8. Week 7: "Integration" — indefinite and definite integrals. Week 8: "Methods of Integration".*
+*Weeks 7 and 8. Week 7: the indefinite integral, the power rule, the Fundamental Theorem. Week 8: a table of standard integrals and four techniques.*
 
-### 4.1 What integration is
+### 4.1 The indefinite integral, and why + c is not optional
 
-**In plain words.** Integration is differentiation run backwards, and also the adding-up of infinitely many infinitely small pieces; the Fundamental Theorem says those are the same operation. The Week 7 introduction: "When we differentiate a function, we see its rate of change. When we integrate a function, we see its accumulated value."
+**Her definition (slide 4).** "Suppose that f is a continuous real-number function of a variable x. The indefinite integral of f is a function F such that **F′(x) = f(x)** added to the constant of integration c." Written **∫f(x)dx = F(x) + c**.
 
-**Two kinds,** also from that introduction. The **indefinite integral** is "the collection of all its possible antiderivatives" — a family of functions, written ∫f(x)dx = F(x) + C. The **definite integral** over an interval is "the total area between the curve and the independent-variable axis in that interval" — a number.
+**Her Example 1 is an argument, not a calculation.** Start from f(x) = x², whose derivative is 2x. Now look at ∫2x dx.
 
-**Why +C is not optional.** Differentiating kills constants: x³, x³ + 7 and x³ − 500 all have derivative 3x². Running backwards from 3x², you cannot know which constant was there, so you report all of them at once.
+> "At first thought, it's tempting to suppose that the antiderivative of g is the function G such that G(x) = x². But the situation isn't quite so simple, because G isn't the only function of x that can be differentiated to get g. Any real number c can be added to G."
 
-### 4.2 Indefinite integrals and standard forms
+Because [G(x) + c]′ = 2x + 0 = 2x, **∫2x dx = x² + c** for any real c. Writing ∫2x dx = x² is an incomplete answer, and this whole example exists to stop you doing it.
 
-*Missing-material note: Week 7's six slides headed INDEFINITE INTEGRALS and four headed DEFINITE INTEGRALS are blank, as are Week 8's three headed STANDARD INTEGRALS. Reconstruction follows.*
+**The one reliable check.** Her own justification is "when we differentiate the result, we always get g back again". So: **differentiate your answer.** If you recover the integrand, the integral is right. It takes ten seconds and catches nearly every error in this Part.
 
-**Power rule.** ∫xⁿdx = x^(n+1)/(n+1) + C, for every n except n = −1.
+### 4.2 The power rule for integration
 
-n = −1 is excluded because the formula would divide by zero; the correct result there is ∫x⁻¹dx = ln|x| + C. Memorise that exception separately.
+**Her rule (slide 7).** **∫xⁿ dx = x^(n+1)/(n+1) + c**, where n is real and **n ≠ −1**.
 
-Verify any integration formula by differentiating it: d/dx[x^(n+1)/(n+1)] = (n+1)xⁿ/(n+1) = xⁿ ✓. Do this in the exam whenever you are unsure.
+Raise the power by one, then **divide** by the new power. Differentiation multiplies by the old power; integration divides by the new one. n = −1 is excluded for an arithmetic reason: n + 1 = 0, and you cannot divide by zero.
 
-| ∫f(x)dx | Result |
-|---|---|
-| ∫k dx | kx + C |
-| ∫xⁿdx (n ≠ −1) | x^(n+1)/(n+1) + C |
-| ∫(1/x)dx | ln\|x\| + C |
-| ∫eˣdx | eˣ + C |
-| ∫e^(kx)dx | e^(kx)/k + C |
-| ∫aˣdx | aˣ/ln a + C |
-| ∫sin x dx | −cos x + C |
-| ∫cos x dx | sin x + C |
-| ∫sec²x dx | tan x + C |
-| ∫dx/(1 + x²) | arctan x + C |
-| ∫dx/√(1 − x²) | arcsin x + C |
+**∫x⁴dx = x⁵/5 + c.**
 
-**Linearity** (Week 8 summary): constants come out of the integral, and sums and differences split.
+**Negative powers go through the same rule.** ∫(2/x⁷)dx: rewrite as ∫2x⁻⁷dx, so n = −7 and the new exponent is −6:
 
-There is **no product rule and no quotient rule for integration.** ∫(f·g)dx is not (∫f)(∫g). The Week 8 introduction says so: derivatives "can always be solved by a systematic application of the standard rules. However, the inverse problem of integration is very different and has no such clear-cut solution."
+= 2·x⁻⁶/(−6) + c = **−1/(3x⁶) + c**
 
-**Worked example 1.** ∫(4x³ − 6x² + 2x − 5)dx term by term: 4x⁴/4 = x⁴; −6x³/3 = −2x³; 2x²/2 = x²; −5x. Answer **x⁴ − 2x³ + x² − 5x + C**. Differentiate to check ✓.
+Dividing by −6 is what produces the minus sign, and 2/(−6) = −1/3. Students routinely leave this positive.
 
-**Worked example 2 — rewrite first.** ∫(3/x² + 2√x)dx. As powers: 3x⁻² + 2x^(1/2).
+**Linearity.** Split term by term and pull each constant out front:
 
-3x⁻¹/(−1) = −3/x, and 2x^(3/2)/(3/2) = (4/3)x^(3/2).
+∫(11x¹⁰ − 4x⁹ + 1)dx = 11·x¹¹/11 − 4·x¹⁰/10 + x + C = **x¹¹ − (2/5)x¹⁰ + x + C**
 
-Answer **−3/x + (4/3)x^(3/2) + C**.
+Note **∫1 dx = x**, which is the power rule with n = 0: x^(0+1)/(0+1) = x. It is not 1 and it is not 0.
 
-**Where people go wrong.** Omitting +C — a mark every time. Using the power rule on 1/x and producing x⁰/0. Integrating a product term by term as if a product rule existed.
+**Her TASK 1 (slide 10).** ∫(2x² − 6x − 3)dx = **(2/3)x³ − 3x² − 3x + c**. Check by differentiating: 2x² − 6x − 3.
 
-**In the exam.** Several short indefinite integrals, one standard form each. Rewrite roots and reciprocals as powers before starting.
+**Where people go wrong.** ∫[f·g]dx is **not** (∫f)(∫g). Linearity licenses sums, differences and constant multiples, and nothing else.
 
 ### 4.3 Definite integrals and the Fundamental Theorem
 
-**In plain words.** A definite integral has limits and produces a number: the signed area between the curve and the x-axis from a to b.
+**Her theorem (slide 11).** "Let f be a continuous function of x on the interval [a, b]. If F(x) is an antiderivative of f(x), then **∫ₐᵇ f(x)dx = F(b) − F(a)**." Sometimes written **F(x)|ₐᵇ**.
 
-**The Fundamental Theorem.** If F is any antiderivative of f,
+A definite integral evaluates to **a number**, and it carries **no + c** — the constant cancels: (F(b) + c) − (F(a) + c) = F(b) − F(a).
 
-∫ from a to b of f(x)dx = F(b) − F(a)
+**Example.** ∫₀³ 4x dx. Here f(x) = 4x and F(x) = 2x², so
 
-Carry the C through and you get (F(b) + C) − (F(a) + C) — it cancels. Never write +C on a definite integral.
+∫₀³ 4x dx = 2x²|₀³ = 2(3² − 0²) = **18**
 
-**Why "signed".** Below the axis f(x) is negative, so those strips subtract. A definite integral can be zero or negative. If a question asks for *area* and the curve crosses the axis inside the interval, split it — see 6.1.
+Her habit: the coefficient 2 is **factored outside** the evaluation, so you substitute only into x². What is substituted is **F**, not f — f(3) − f(0) = 12 is the wrong number and a very common one.
 
-**Worked example 1.** ∫ from 1 to 3 of (3x² − 2x)dx. Antiderivative x³ − x².
+**Example with a negative lower limit.** ∫₋₁⁵ (3x² − 6)dx.
 
-F(3) = 27 − 9 = 18; F(1) = 1 − 1 = 0. Answer **18**.
+= x³|₋₁⁵ − 6x|₋₁⁵ = (5³ − (−1)³) − 6(5 − (−1)) = 126 − 36 = **90**
 
-**Worked example 2 — a negative result.** ∫ from 0 to 2 of (x² − 4)dx. F(x) = x³/3 − 4x.
+The trap the example is built around: **(−1)³ = −1**, so 5³ − (−1)³ = 125 + 1 = 126, not 124. And 5 − (−1) = 6, not 4.
 
-F(2) = 8/3 − 8 = −16/3; F(0) = 0. Answer **−16/3 ≈ −5.333**.
+**Example with a negative antiderivative.** ∫₂³ (1/x²)dx. Rewrite 1/x² as x⁻², so F(x) = x⁻¹/(−1) = −1/x:
 
-Negative because the parabola lies entirely below the axis on [0, 2]. The *area* is 16/3; the *integral* is −16/3. Two different questions.
+= (−1/x)|₂³ = −(1/3 − 1/2) = −(−1/6) = **1/6**
 
-**Useful properties.** ∫ from a to a = 0. Swapping limits flips the sign. Adjacent intervals add: ∫ from a to b + ∫ from b to c = ∫ from a to c.
+Two things at once: rewrite as a power so the rule applies, and factor the minus out of the evaluation.
 
-**Where people go wrong.** Computing F(a) − F(b). Substituting into f instead of F. Writing +C. And working in degrees — in calculus **angles are always radians**.
+**Her TASK 2 (slide 15).** ∫₋₁² (7x − 5)dx with F(x) = 7x²/2 − 5x: F(2) = 14 − 10 = 4 and F(−1) = 7/2 + 5 = 17/2, so the answer is 4 − 17/2 = **−4.5**. A negative answer is perfectly legitimate — a definite integral is a signed quantity.
 
-**In the exam.** Marks split between the antiderivative, both substitutions and the arithmetic. Write the square-bracket line explicitly so the first mark survives an arithmetic slip.
+**Where people go wrong.** Upper minus lower, in that order; reversing it flips the sign of the whole answer. And answering with a + c on a definite integral, or with a bare number to an indefinite one — either is a category error.
 
-### 4.4 Integration by substitution
+> **SLIDE ERROR (Week 7, slide 13).** The second line prints "− 6∫₋₁⁵ **x** dx". It must be ∫₋₁⁵ dx, that is ∫₋₁⁵ 1 dx, since G(x) = −6x. Every line after it is correct and the answer 90 is correct.
 
-*Missing-material note: Week 8's two SUBSTITUTION slides are blank. Standard method below.*
+### 4.4 The table of standard integrals
 
-**In plain words.** Substitution is the chain rule reversed. If the integrand contains a function and, as a separate factor, that function's derivative, rename the inner function u and the integral collapses to a standard form.
+*Week 8 opens with fifteen lines she introduces as "common indefinite integrals that should already be familiar". Week 7 taught only the power rule, so for you most of this table is new content to memorise, not revision. Every technique in the week exists to convert an integral into one of these lines.*
 
-**Method.** Choose u = the inner function (inside a bracket, root or exponent). Compute du = (du/dx)dx. Replace everything, leaving no x behind. Integrate in u. For an indefinite integral substitute back; for a definite one, change the limits to u-values instead and never substitute back.
+| | |
+|---|---|
+| ∫xⁿdx = x^(n+1)/(n+1) + C, n ≠ −1 | ∫x⁻¹dx = ln(x) + C |
+| ∫eˣdx = eˣ + C | ∫sin(x)dx = −cos(x) + C |
+| ∫cos(x)dx = sin(x) + C | ∫sec²(x)dx = tan(x) + C |
+| ∫sec(x)tan(x)dx = sec(x) + C | ∫[1/√(1 − x²)]dx = sin⁻¹(x) + C |
+| ∫[1/(1 + x²)]dx = tan⁻¹(x) + C | ∫[1/(x√(x² − 1))]dx = sec⁻¹(x) + C |
+| ∫ln(x)dx = x·ln(x) − x + C | ∫tan(x)dx = −ln(cos(x)) + C |
+| ∫sec(x)dx = ln(sec(x) + tan(x)) + C | ∫csc(x)dx = −ln(csc(x) + cot(x)) + C |
+| ∫cot(x)dx = ln(sin(x)) + C | |
 
-**Why it works.** By the chain rule, ∫F′(g(x))g′(x)dx = F(g(x)) + C. The pattern "function of g, times g′" is exactly what substitution detects.
+> **SLIDE ERROR (Week 8, slide 5).** The three inverse-trigonometric lines print as "= sin⁻¹ + C", "= tan⁻¹ + C", "= sec⁻¹ + C" with the argument missing. Write sin⁻¹(x), tan⁻¹(x), sec⁻¹(x); a bare sin⁻¹ is not a value.
 
-**Worked example 1 — indefinite.** ∫2x(x² + 1)⁵dx.
+> **NOTATION, not an error but worth knowing.** She writes **ln(x)** everywhere, never ln|x|. Standard textbooks carry the modulus because ln is undefined for negative arguments. Reproduce her form on her paper; know why the bars exist if a marker asks. Note also that she switches to a **capital C** for the constant in Week 8, having used lowercase c in Week 7.
 
-u = x² + 1, du = 2x dx — exactly what is present.
+### 4.5 Substitution
 
-∫u⁵du = u⁶/6 + C = **(x² + 1)⁶/6 + C**.
+**Her statement (slide 7).** "The general substitution formula states that **∫f′(g(x))·g′(x)dx = f(g(x)) + C**. It is just the Chain Rule, written in terms of integration via the Fundamental Theorem of Calculus."
 
-Check: differentiating gives 6(x² + 1)⁵·2x/6 = 2x(x² + 1)⁵ ✓.
+Read it right to left: if you can see an **inner function g(x)** and its **derivative multiplying it**, the integral is f evaluated at the inner function.
 
-**Worked example 2 — definite, limits changed.** ∫ from 0 to 2 of x√(x² + 1)dx.
+**Example 1 — a definite integral, with the limits changed.** ∫₀²(x + 2)³dx.
 
-u = x² + 1, du = 2x dx, so x dx = du/2. New limits: x = 0 → u = 1; x = 2 → u = 5.
+> "Let u = (x + 2), so that du = dx. Notice that if x = 0, then u = 2, and if x = 2, then u = 4."
 
-(1/2)∫ from 1 to 5 of u^(1/2)du = (1/2)(2/3)[u^(3/2)] from 1 to 5 = (1/3)(5√5 − 1).
+∫₀²(x + 2)³dx = ∫₂⁴u³du = (1/4)u⁴|₂⁴ = (256 − 16)/4 = **60**
 
-5√5 = 11.1803, minus 1 is 10.1803, divided by 3: **≈ 3.393**.
+The limits are **x-values converted into u-values**. Once they are converted the answer is a number, so there is no need to return to x.
 
-**Where people go wrong.** Leaving an x in the u-integral — if one survives, the substitution has failed. And changing the limits *and* substituting back.
+**Example 2 — spotting the inner function inside an exponent.** ∫2x·e^(x²)dx.
 
-**In the exam.** The derivative of your u will be sitting in the integrand, up to a constant multiple. Scan for that pairing.
+> "Since the exponential component is x², we let u = x², so that du = 2x dx."
 
-### 4.5 Integration by parts
+She rewrites 2x·e^(x²) as e^(x²)·2x so the du block sits visibly at the end, ready to be swallowed whole, and gets ∫eᵘdu = eᵘ + C.
 
-*Missing-material note: Week 8's three INTEGRATION BY PARTS slides are blank. Standard reconstruction.*
+> **SLIDE ERROR (Week 8, slide 8).** The slide stops at **eᵘ + C**. This is an indefinite integral, so the answer must be returned to the original variable: since u = x², the answer is **e^(x²) + C**. An answer left in u is not an answer to the question asked — u was your own invention and does not appear in the problem. (Example 1 could stop in u only because changing the limits turned it into a number.) Check: d/dx e^(x²) = 2x e^(x²).
 
-**In plain words.** The product rule reversed. Use it for a product of two *unrelated* functions — one you want to differentiate away, one you can integrate.
+> **MISPLACED TASK (Week 8, slide 9).** ∫₀¹x·eˣdx closes the substitution section but cannot be done by substitution — there is no inner function whose derivative is present. It is an integration-by-parts problem, and its indefinite version is literally the next slide's example. Using ∫x·eˣdx = x·eˣ − eˣ + C: (1·e − e) − (0 − 1) = **1**. The upper limit contributes exactly zero; the whole answer comes from the lower limit, where e⁰ = 1.
 
-**The formula.** ∫u dv = uv − ∫v du.
+### 4.6 Integration by parts
 
-**Why it works.** From (uv)′ = u′v + uv′, integrate both sides: uv = ∫u′v dx + ∫uv′ dx, then rearrange.
+**Her statement (slide 10).** "Let f(x) = u and g(x) = v then we have **∫u dv = uv − ∫v du**."
 
-**Choosing u — LIATE.** Whichever type comes first in this list becomes u: **L**ogarithmic, **I**nverse trig, **A**lgebraic, **T**rigonometric, **E**xponential. The logic: u should get simpler when differentiated. Polynomials do; eˣ and sin x never do.
+The procedure: name **u** and **dv**, differentiate u to get **du**, **integrate dv to get v**, then assemble uv − ∫v du. She gives no rule for choosing u — no LIATE anywhere in this course.
 
-**Worked example 1.** ∫x e^(2x)dx.
+**Example 1.** ∫x·eˣ dx. Let u = x (so du = dx) and dv = eˣdx (so v = eˣ):
 
-Algebraic beats exponential, so u = x, dv = e^(2x)dx. Then du = dx and v = e^(2x)/2.
+∫x·eˣdx = x·eˣ − ∫eˣdx = **x·eˣ − eˣ + C**
 
-∫x e^(2x)dx = x e^(2x)/2 − ∫e^(2x)/2 dx = **x e^(2x)/2 − e^(2x)/4 + C**.
+Why the choice works: differentiating x turns it into 1 and makes it vanish from the leftover integral; eˣ is unchanged by integration, so nothing gets worse. The reverse choice would give x²eˣ/2 − ∫(x²/2)eˣdx, in which the power of x has gone **up**.
 
-Check by differentiating: e^(2x)/2 + x e^(2x) − e^(2x)/2 = x e^(2x) ✓.
+**Example 2 — parts applied twice.** ∫3x²·sin(x)dx. Let u = 3x², du = 6x dx, dv = sin(x)dx, so **v = −cos(x)**:
 
-**Worked example 2 — the ln x trick.** ∫ln x dx. There seems to be one function; treat it as ln x times 1.
+∫3x²sin x dx = 3x²(−cos x) − ∫−cos x (6x dx) = −3x²cos x + 6∫x cos x dx
 
-u = ln x, dv = dx, so du = (1/x)dx and v = x.
+Now do ∫x cos x dx by parts again, with u = x and dv = cos x dx, so v = sin x:
 
-∫ln x dx = x ln x − ∫x·(1/x)dx = **x ln x − x + C**.
+∫x cos x dx = x sin x − ∫sin x dx = x sin x + cos x
 
-Check: ln x + x(1/x) − 1 = ln x ✓.
+Finally:
 
-**Where people go wrong.** Choosing u and dv the wrong way round, producing a harder integral. If that happens, stop and swap. Also forgetting the minus sign before the second integral.
+**∫3x²sin x dx = −3x²cos x + 6(x sin x + cos x) + C**
 
-**In the exam.** Recognisable by shape: x times sin, x times eˣ, x times ln, or a lone ln x. State u and dv before starting. ∫x²eˣdx needs the formula twice — that is expected.
+Three sign events, all examinable:
 
-### 4.6 Trigonometric substitution
+- **v = −cos x**, because ∫sin x dx = −cos x. That minus is why the first term is negative.
+- **−∫−cos x(6x dx) becomes +6∫x cos x dx.** Two minuses make a plus, and the 6 comes out front.
+- **−∫sin x dx = +cos x**, from ∫sin = −cos again.
 
-*Missing-material note: Week 8's four TRIGONOMETRIC SUBSTITUTION slides are blank. Standard reconstruction.*
+Note that she leaves the 6 outside until the final line, and that C is added **once**, at the very end — not at each pass.
 
-**In plain words.** When a square root of a sum or difference of squares blocks you, replace x with a trig function so a Pythagorean identity collapses the root.
+**Her TASK 2 (slide 13), unanswered.** ∫x·ln(x)dx. Here the habit her two examples establish — algebraic factor as u — gives the wrong answer, because ln(x) is not something you can easily integrate. Take **u = ln x** (du = dx/x) and **dv = x dx** (v = x²/2):
 
-| Expression | Substitute | Identity | Root becomes |
-|---|---|---|---|
-| √(a² − x²) | x = a sin θ | 1 − sin²θ = cos²θ | a cos θ |
-| √(a² + x²) | x = a tan θ | 1 + tan²θ = sec²θ | a sec θ |
-| √(x² − a²) | x = a sec θ | sec²θ − 1 = tan²θ | a tan θ |
+∫x ln x dx = (x²/2)ln x − ∫(x²/2)(1/x)dx = (x²/2)ln x − (1/2)∫x dx = **(x²/2)ln x − x²/4 + C**
 
-**Worked example 1.** ∫dx/√(9 − x²).
+The real constraint is that **dv must be something you can integrate.**
 
-a = 3, so x = 3 sin θ and dx = 3 cos θ dθ. The root: √(9 − 9sin²θ) = √(9cos²θ) = 3 cos θ.
+### 4.7 Trigonometric substitution
 
-∫(3 cos θ dθ)/(3 cos θ) = ∫dθ = θ + C.
+**Her framing (slide 14).** "To evaluate the following type of integrals, some trigonometric substitutions are required." No a-parameter table; she normalises instead.
 
-From sin θ = x/3: answer **arcsin(x/3) + C**.
+**Example — ∫√(1 − x²)dx.** Let **x = sin(u)**, so dx = cos(u)du:
 
-**Worked example 2.** ∫√(4 − x²)dx.
+∫√(1 − sin²u)·cos u du = ∫√(cos²u)·cos u du = ∫cos²u du
 
-a = 2, x = 2 sin θ, dx = 2 cos θ dθ, root = 2 cos θ.
+**1 − sin²u = cos²u is the entire reason for the substitution** — it removes the root. But cos²u cannot be integrated as it stands, so the double-angle identity is compulsory:
 
-∫4cos²θ dθ. Use cos²θ = (1 + cos 2θ)/2: 2∫(1 + cos 2θ)dθ = 2θ + sin 2θ + C.
+cos²u = (1 + cos 2u)/2, so ∫cos²u du = u/2 + sin(2u)/4 + C
 
-Convert back. θ = arcsin(x/2); sin θ = x/2; cos θ = √(4 − x²)/2. Then sin 2θ = 2 sin θ cos θ = 2(x/2)(√(4 − x²)/2) = x√(4 − x²)/2.
+(The extra 2 in the denominator of sin(2u)/4 comes from the chain rule on cos(2u).) Setting back, u = sin⁻¹(x), and unfolding sin(2u) = 2 sin u cos u = 2x√(1 − x²):
 
-Answer **2 arcsin(x/2) + x√(4 − x²)/2 + C**.
+**∫√(1 − x²)dx = sin⁻¹(x)/2 + x√(1 − x²)/2 + C**
 
-**Where people go wrong.** Converting x but not dx. And leaving the answer in θ — unless the limits were changed, it must come back to x.
+**Example — ∫√(4 − 9x²)dx, where the rewrite is the technique.** She factors the constant out of the root so that what remains is literally 1 − (something)²:
 
-**In the exam.** The root tells you which pattern you have. Sketching a right-angled triangle with x and a on the right sides makes the conversion back safer.
+4 − 9x² = 4(1 − 9x²/4) = 4(1 − (3x/2)²), and √4 = 2 comes outside
 
-### 4.7 Partial fractions
+∫√(4 − 9x²)dx = ∫2√(1 − (3x/2)²)dx
 
-*Missing-material note: Week 8's two PARTIAL FRACTIONS slides are blank. Standard reconstruction.*
+Now substitute on the **whole bracket**: 3x/2 = sin(u). Differentiating, (3/2)dx = cos u du, so **dx = (2/3)cos(u)du** — the reciprocal of 3/2, and forgetting it is the standard way to lose this question. The two constants multiply: 2 × 2/3 = 4/3, giving (4/3)∫cos²u du and finally
 
-**In plain words.** Split one fraction with a factorisable denominator into simpler fractions you can already integrate. It works because ∫dx/(x − k) = ln|x − k| + C is a standard form.
+**∫√(4 − 9x²)dx = 2sin⁻¹(3x/2)/3 + x√(4 − 9x²)/2 + C**
 
-**Procedure.** (1) If the numerator's degree is ≥ the denominator's, divide first. (2) Factorise the denominator. (3) One fraction per factor: linear (x − a) → A/(x − a); repeated (x − a)² → A/(x − a) + B/(x − a)²; irreducible quadratic → (Ax + B)/(x² + bx + c). (4) Multiply through to clear fractions. (5) Find the constants by substituting values that kill factors. (6) Integrate each piece.
+> **SLIDE ERRORS (Week 8).** Slide 16 is headed **"Example 1"** for the second time, so the section has two Example 1s and no Example 2 — refer to them by their integrands. Slide 15 prints a chain with mixed variables, "2sin(sin⁻¹(x))√(1 − sin²(u))", half converted to x and half still in u; the next expression fixes it and the final answer is correct.
 
-**Worked example.** ∫(5x − 4)/(x² − x − 2)dx.
+**Her TASK 3 (slide 18), unanswered, and the only task needing a technique she never demonstrates.** ∫√(1 + x²)dx. The root is a **plus**, so the identity that fits is 1 + tan²u = sec²u. With x = tan u, dx = sec²u du:
 
-Degrees are fine, so factorise: x² − x − 2 = (x − 2)(x + 1).
+∫sec³u du = (1/2)[sec u tan u + ln(sec u + tan u)]
 
-Write (5x − 4)/[(x − 2)(x + 1)] = A/(x − 2) + B/(x + 1), so 5x − 4 = A(x + 1) + B(x − 2).
+reached by parts and then solving algebraically for the integral, so that
 
-x = 2: 6 = 3A → **A = 2**.
-x = −1: −9 = −3B → **B = 3**.
+**∫√(1 + x²)dx = (1/2)[x√(1 + x²) + ln(x + √(1 + x²))] + C**
 
-Check at x = 0: A(1) + B(−2) = 2 − 6 = −4, and the left side at x = 0 is −4 ✓.
+Every ingredient is somewhere in her deck, but she never combines them. Know the answer; do not expect to reconstruct it under time pressure.
 
-∫[2/(x − 2) + 3/(x + 1)]dx = **2 ln|x − 2| + 3 ln|x + 1| + C**.
+### 4.8 Partial fractions
 
-**Where people go wrong.** Skipping the long division when the top degree is too high — the split then produces nonsense. Dropping the modulus bars in the logarithm; ln of a negative is undefined, and the bars make the formula valid on both sides of an asymptote. Using only A/(x − a)² for a repeated factor instead of the two-term form.
+**Her framing (slide 19).** "Some integrals are evaluated by first resolving them into partial fractions."
 
-**In the exam.** Recognisable by a factorisable denominator. Substituting killing values beats comparing coefficients.
+**Four steps: factor, split with unknowns, clear the denominator, substitute the roots.**
+
+**Example 1.** ∫[1/(x² + 3x)]dx. Factor: 1/(x(x + 3)). Split: A/x + B/(x + 3). Clear: **1 = A(x + 3) + Bx**.
+
+Now substitute the roots of the factors, each of which kills one unknown:
+
+at x = 0: 1 = 3A, so **A = 1/3**
+at x = −3: 1 = −3B, so **B = −1/3**
+
+∫[1/(x² + 3x)]dx = **(1/3)ln(x) − (1/3)ln(x + 3) + C**
+
+Note that B came out **negative** and that the negative is carried into the integral as a subtraction. Both terms integrate by the same standard line ∫x⁻¹dx = ln(x) + C.
+
+**Example 2.** ∫[(7x − 6)/((x − 2)(x + 3))]dx. Already factored, so: 7x − 6 = A(x + 3) + B(x − 2).
+
+at x = 2: 8 = 5A, so **A = 8/5**
+at x = −3: −27 = −5B, so **B = 27/5** — two negatives giving a positive, which is where this example is easiest to lose
+
+= **(8/5)ln(x − 2) + (27/5)ln(x + 3) + C**
+
+**Her TASK 4 (slide 21), unanswered.** ∫[(5x + 7)/((x − 1)(x + 3))]dx. Clearing gives 5x + 7 = A(x + 3) + B(x − 1); at x = 1, 12 = 4A so A = 3; at x = −3, −8 = −4B so B = 2. Answer: **3ln(x − 1) + 2ln(x + 3) + C**. Check the split: 3(x + 3) + 2(x − 1) = 5x + 7.
+
+**The four techniques, in her order, are the examinable spine of Week 8:** substitution, integration by parts, trigonometric substitution, partial fractions. Be able to name one integrand each is for.
 
 ---
 
 ## Part 5 — Improper integrals
 
-*Week 9: "Convergence and Divergence of Improper Integrals". Every mathematical slide — IMPROPER INTEGRALS, TYPE I (×3), TYPE II (×2), COMPARISON TEST (×4) — is blank. The objectives and introduction survive and are quoted; the rest is reconstruction.*
+*Week 9. Six things: what makes an integral improper, the Type I definitions, the Type II definitions, the Comparison Test, the p-test, and four worked examples.*
 
-### 5.1 What an improper integral is
+### 5.1 What makes an integral improper
 
-**In plain words.** An ordinary definite integral has finite limits and a well-behaved function between them. An improper integral breaks one of those conditions: either the interval is infinitely long, or the function blows up inside it.
+**Her slide 4, verbatim.** "The definite integral ∫ₐᵇ f(x)dx is called an improper integral if
 
-**Type I — infinite interval.**
+1. At least one of the limits of integration is infinite, or
+2. The integrand f(x) has one or more points of discontinuity on the interval [a, b]."
 
-∫ from a to ∞ of f(x)dx = lim(t→∞) ∫ from a to t of f(x)dx
+Trigger 1 is **Type I**, trigger 2 is **Type II**. Before anything else, say which one you have — and check for both.
 
-**Type II — infinite discontinuity.** If f blows up at b:
+Her motive, from the introduction: "Sometimes it is difficult to find the exact value of an improper integral by antidifferentiation. However, it is still possible to determine whether an improper integral converges or diverges." That sentence licenses everything in section 5.2: comparison answers **converges or diverges** and nothing else. It never produces a value.
 
-∫ from a to b of f(x)dx = lim(t→b⁻) ∫ from a to t of f(x)dx
+### 5.2 Type I — an infinite limit
 
-**Why limits are needed.** The Fundamental Theorem requires substituting a *number* into the antiderivative, and ∞ is not a number. So substitute a finite t, evaluate, then take the limit. Every improper integral question starts with that rewrite. A finite limit means the integral **converges**, and that number is its value; ±∞ or no limit means it **diverges**.
+**The definitions (slide 5).**
 
-**Worked example 1 — Type I, converging.** ∫ from 1 to ∞ of dx/x².
+∫ₐ^∞ f(x)dx = **lim t→∞ ∫ₐᵗ f(x)dx**, provided the limit exists
+∫₋∞ᵇ f(x)dx = **lim t→−∞ ∫ₜᵇ f(x)dx**, provided the limit exists
 
-lim(t→∞) [−1/x] from 1 to t = lim(t→∞) (1 − 1/t) = 1 − 0 = **1**.
+They are **convergent** if the corresponding limit exists and **divergent** if it does not. Note what that is *not* saying: convergence is about the limit, not about whether the region looks bounded.
 
-An infinitely long region with finite area.
+**The symbol has no meaning until you write the limit.** Replacing the infinite limit by a letter is the first line of every Type I answer, and marks are given for it. An answer that jumps straight to a number is unsupported even when the number is right.
 
-**Worked example 2 — Type I, diverging.** ∫ from 1 to ∞ of dx/x.
+**Both ends infinite means split — and both halves must already converge.** "If ∫ₐ^∞ f and ∫₋∞ᵇ f **are convergent**, then ∫₋∞^∞ f = ∫₋∞ᵃ f + ∫ₐ^∞ f." The convergence of the two halves is a **hypothesis**, not a conclusion.
 
-lim(t→∞) [ln x] from 1 to t = lim(t→∞) ln t = ∞. **Diverges.**
+**Example 1.** Determine whether ∫₀^∞ xe⁻ˣ dx converges.
 
-Note how close the two are: 1/x² converges, 1/x does not. The tail of 1/x² shrinks fast enough; the tail of 1/x does not.
+∫₀^∞ xe⁻ˣdx = lim t→∞ [−xe⁻ˣ − e⁻ˣ]|₀ᵗ = lim t→∞ [−te⁻ᵗ − e⁻ᵗ + 1]
 
-**Worked example 3 — Type II.** ∫ from 0 to 1 of dx/√x, where the integrand blows up at the lower limit: lim(t→0⁺) [2√x] from t to 1 = lim(t→0⁺)(2 − 2√t) = **2**. Converges.
+> "Notice that lim [−te⁻ᵗ] → −∞/∞. Therefore, applying L'Hôpital's Rule, we have"
 
-**The p-test — the most useful fact here.**
+lim t→∞ [−t/eᵗ] = lim t→∞ [−1/eᵗ] = 0
 
-| Integral | Converges | Diverges |
-|---|---|---|
-| ∫ from 1 to ∞ of dx/xᵖ | p > 1 | p ≤ 1 |
-| ∫ from 0 to 1 of dx/xᵖ | p < 1 | p ≥ 1 |
+so the value is 0 + 0 + 1 and **∫₀^∞ xe⁻ˣdx converges to 1**.
 
-The rows are opposites, and that is not a coincidence. On an infinite interval the problem is the tail, so the function must shrink fast — large p. Near zero the problem is the spike, so it must blow up slowly — small p. p = 1 diverges in both.
+Four separate marks in that: replace ∞ by t; get the antiderivative (by parts, u = x and dv = e⁻ˣdx, giving −xe⁻ˣ − e⁻ˣ); notice the lower limit contributes **+1**, since the value there is −1 and it is subtracted; and handle −te⁻ᵗ with L'Hôpital. Writing "−te⁻ᵗ → −∞ because t → ∞" is the standard wrong answer — **the exponential wins.**
 
-**Where people go wrong.** Substituting ∞ into the antiderivative and writing "−1/∞ = 0" with no limit anywhere; the answer may come out right but the method loses marks and fails on harder cases. Also failing to notice an integral is improper at all — check whether the integrand blows up inside the limits first.
+**Example 2 — a fast exit.** ∫₋∞^∞ (2x² − x + 3)dx.
 
-**In the exam.** "Determine whether the integral converges or diverges, and if it converges find its value." Set up the limit on line one; state the conclusion in words at the end.
+She splits at 0 and gives the two moving limits **two different letters**, a → −∞ and b → ∞. The antiderivative is 2x³/3 − x²/2 + 3x, and on the right-hand piece 2b³/3 drives the value to +∞. That alone settles it: **divergent**.
 
-### 5.2 The comparison test
+**Do not try to cancel the two infinities.** The definition requires each half to converge on its own, so one divergent half ends the question.
 
-**In plain words,** from the Week 9 introduction: "Sometimes it is difficult to find the exact value of an improper integral by antidifferentiation. However, it is still possible to determine whether an improper integral converges or diverges. The idea is to compare the integral to one whose behaviour we already know."
+### 5.3 Type II — a discontinuity
 
-**The statement.** Suppose 0 ≤ f(x) ≤ g(x) for all x ≥ a. Then:
+**The definitions (slide 8).**
 
-- If ∫g **converges**, ∫f converges.
-- If ∫f **diverges**, ∫g diverges.
+1. Discontinuity at b: ∫ₐᵇ f = **lim c→b⁻ ∫ₐᶜ f**
+2. Discontinuity at a: ∫ₐᵇ f = **lim c→a⁺ ∫_c^b f**
+3. Discontinuity at some c strictly inside (a, b): **∫ₐᵇ f = ∫ₐᶜ f + ∫_c^b f**
 
-**Why.** Both measure area under non-negative curves, and f's region sits inside g's. Finite area for the bigger forces finite area for the smaller; infinite area for the smaller forces infinite for the bigger. Direction matters: a small integral converging says nothing about the big one, and a big integral diverging says nothing about the small one.
+Read the bracket shapes: the square bracket is the good end, the round bracket is the bad end. The one-sided arrow always points **into** the interval.
 
-*The Week 9 summary puts this loosely as "if one integral dominates the other, the smaller one behaves the same way." That is only half right — correct for convergence, wrong for divergence. Use the two bullet points above.*
+**Example — the discontinuity is inside the interval.** ∫₋₁² (1/x⁴)dx. The function is undefined at **x = 0**, which lies strictly between −1 and 2, so split there:
 
-**Worked example 1 — convergence.** Show ∫ from 1 to ∞ of e^(−x²)dx converges.
+∫₋₁²(1/x⁴)dx = lim c→0⁻ [−1/(3x³)]|₋₁ᶜ + lim b→0⁺ [−1/(3x³)]|_b²
 
-e^(−x²) has no elementary antiderivative, so comparison is the only route.
+Left piece: −1/(3c³) − 1/3, and as c → 0⁻ the number c³ is small and **negative**, so −1/(3c³) → **+∞**.
+Right piece: −1/24 + 1/(3b³), and as b → 0⁺ this → **+∞**.
 
-For x ≥ 1, x² ≥ x, so −x² ≤ −x, so e^(−x²) ≤ e^(−x).
+Both pieces run to +∞, so the integral is **divergent**.
 
-∫ from 1 to ∞ of e^(−x)dx = lim(t→∞)[−e^(−x)] from 1 to t = lim(t→∞)(e^(−1) − e^(−t)) = 1/e.
+> **SLIDE ERROR (Week 9, slide 9).** The slide says "[−1/(3x³)] → **−∞** as c → 0⁻". It does not: c³ approaches 0 from below, so −1/(3c³) → **+∞**. Her verdict, divergent, is right; the sign is not. Write +∞ for both pieces.
 
-The larger integral converges, so **the original converges**, with value at most 1/e ≈ 0.368.
+**The examinable point of this example.** If you fail to notice the discontinuity and apply the Fundamental Theorem straight across, you get [−1/(3x³)]|₋₁² = −1/24 − 1/3 = −3/8: a **negative** answer for a strictly **positive** integrand, which is impossible. **Scan the interval for zeros of the denominator before you integrate anything.**
 
-**Worked example 2 — divergence.** Show ∫ from 1 to ∞ of dx/(x + √x) diverges.
+### 5.4 The Comparison Test and the p-test
 
-For x ≥ 1, √x ≤ x, so x + √x ≤ 2x. Taking reciprocals reverses it: 1/(x + √x) ≥ 1/(2x).
+**Her theorem (slide 10).** "Let f(x) and g(x) be any two continuous functions such that **0 ≤ g(x) ≤ f(x) for all x ≥ a**. Then
 
-∫ from 1 to ∞ of dx/(2x) diverges by the p-test with p = 1. The smaller function's integral diverges, so **the larger one diverges**.
+1. If ∫ₐ^∞ f(x)dx is convergent, then ∫ₐ^∞ g(x)dx is convergent,
+2. If ∫ₐ^∞ g(x)dx is divergent, then ∫ₐ^∞ f(x)dx is divergent."
 
-**Where people go wrong.** Getting the inequality backwards — write the chain out and check which function is on top. Forgetting that both functions must be non-negative throughout. And comparing to a function whose behaviour you never established: state *why* the comparison integral converges or diverges, usually by the p-test.
+**Get her letters the right way round.** In this course **g is underneath and f is on top** — the opposite of most textbooks. So: *the big one convergent drags the small one down with it; the small one divergent drags the big one up with it.*
 
-**In the exam.** The question names a function you cannot integrate. Find a simpler bound whose behaviour follows from the p-test — for large x, drop the smaller terms: 1/(x² + 3x + 1) behaves like 1/x², and 1/√(x³ + 1) like 1/x^(3/2). Then set up the inequality rigorously.
+**The two combinations she does not state give you nothing.** "∫f divergent" says nothing about the smaller g. "∫g convergent" says nothing about the bigger f. If your comparison lands in one of those boxes, find a different comparison function — there is no Limit Comparison Test in this course.
+
+**Note 1, the p-test (slide 11).** **∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.** This is the only convergence fact you may quote without working, and every one of her comparison examples ends by quoting it. **p = 1 is on the divergent side.**
+
+**Example 1 — bounding an oscillation.** ∫₂^∞ cos²(x)/x² dx.
+
+Since 0 ≤ cos²x ≤ 1, dividing by the positive quantity x² gives 0 ≤ cos²x/x² ≤ 1/x². Take f(x) = 1/x² and g(x) = cos²(x)/x². Then ∫₂^∞ dx/x² = 1/2, which converges, so by clause 1 the original **converges**.
+
+Two things to take. **cos²x is squared, so it never goes negative** — that is what makes the hypothesis 0 ≤ g hold; with cos x/x² the theorem would not apply at all. And **she only gets convergence, never a value**: the number 1/2 belongs to the comparison integral. Writing "∫₂^∞ cos²(x)/x² dx = 1/2" is a real error; all you may claim is that it is at most 1/2.
+
+**Example 2 — the divergent direction.** ∫₃^∞ dx/√(x² − 1). For x ≥ 3, x² − 1 < x², so √(x² − 1) < x, and taking reciprocals of two positive numbers **reverses** the inequality: 1/√(x² − 1) > 1/x. Here g(x) = 1/x is the small one, whose integral diverges by Note 1 with p = 1, so by clause 2 the original **diverges**.
+
+This is the one example where the messy integrand is the **larger** function, and it is the only one that can produce a divergence verdict.
+
+**Example 3 — the template.** ∫₁^∞ dx/√(x³ + 7). Four steps, in this order, every time:
+
+1. **Throw away the additive junk to make the denominator smaller:** x³ + 7 ≥ x³.
+2. **Take the root, which preserves the inequality:** √(x³ + 7) ≥ √(x³).
+3. **Take reciprocals, which reverses it:** 1/√(x³ + 7) ≤ 1/√(x³). *This is the step students drop.*
+4. **Rewrite as a power and read off p:** √(x³) = x^(3/2), so p = 3/2 > 1 and the comparison integral converges.
+
+Therefore ∫₁^∞ dx/√(x³ + 7) **converges**.
+
+**Her TASK (slide 14), unanswered.** ∫₁^∞ dx/√(x⁶ + 1). Same four steps: x⁶ + 1 ≥ x⁶, so √(x⁶ + 1) ≥ x³ (valid because x ≥ 1 > 0), so the integrand is at most 1/x³, where p = 3 > 1. **Converges.**
+
+> **SLIDE ERROR (Week 9, slide 11).** The comparison line prints "lim x→∞ ∫₂^∞ (1/x²)dx" — the limit variable collides with the variable of integration, and the upper limit is still ∞, so there is nothing left to take a limit of. It should read lim t→∞ ∫₂ᵗ (1/x²)dx. The value 1/2 is correct.
+
+**Where people go wrong.** Applying the p-test to something that is not a pure power. Note 1 is about 1/xᵖ; 1/√(x³ + 7) is not, so you must compare first and quote Note 1 about the *comparison* function. And note the p-test here is stated only **at infinity** — she gives you no rule at a singularity, so do not invent one.
+
 ---
 
 ## Part 6 — Area and volume by integration
 
-*Weeks 10 and 11. Week 10: "The Area of a Definite Curve". Week 11: "The Volume of a Definite Curve". Both decks are almost entirely blank — nine slides headed AREA BETWEEN CURVES in week 10 and nine headed VOLUMES BY INTEGRATION in week 11, with nothing under them. The introductions and the four-step procedure survive and are quoted; formulas and examples are reconstructions.*
+*Weeks 10 and 11. Week 10: three area rules with five examples and three tasks. Week 11: three volume formulas with six examples and three tasks. Every integrand in Week 11 is a polynomial.*
 
-### 6.1 Area under a curve
+### 6.1 Area between a curve and the x-axis
 
-**In plain words.** ∫ from a to b of f(x)dx gives the area between the curve and the x-axis, counted positively above the axis and negatively below.
+**Her rule (slide 4), verbatim.**
 
-**Why — the strip argument.** The Week 10 summary describes it exactly: "breaking down the region into infinitesimally small vertical strips, meticulously calculating each strip's area, and then summing them up." A strip at position x has width Δx and height f(x), so area f(x)Δx. Adding them gives Σf(x)Δx — a **Riemann sum**, also named in that summary. Let the strips become infinitely thin: the Σ becomes ∫ and the Δx becomes dx. That is where the notation comes from.
+> "If f(x) ≥ 0 on [a, b], then the area under the curve y = f(x) over [a, b] is **∫ₐᵇf(x)dx**.
+> If f(x) ≤ 0 on [a, b], then the area under the curve y = f(x) over [a, b] is **|∫ₐᵇf(x)dx|**."
 
-**Signed area.** For the **net** value, integrate straight through. For the **total geometric area**, find where the curve crosses the axis, split there, and take absolute values before adding.
+Read it as one procedure: **decide the sign first, then choose the formula.** The modulus is not decoration — below the axis the integral comes out negative, and an area cannot be.
 
-**Worked example.** Total area between y = x² − 4, the x-axis, and the lines x = 0 and x = 3.
+**When no interval is given, the limits are the roots.** "To determine the limits of integration (the points at which f(x) cuts the x-axis), we set f(x) = 0."
 
-Crossings: x² − 4 = 0 at x = ±2, so x = 2 lies inside the interval. On [0, 2] the curve is below the axis (at x = 0, y = −4); on [2, 3] it is above (at x = 3, y = 5).
+**Always test one interior point.** This is her habit in every single example, and it is what decides which case of the rule applies.
 
-Piece 1: ∫ from 0 to 2 of (x² − 4)dx = [x³/3 − 4x] from 0 to 2 = 8/3 − 8 = −16/3. Area 16/3.
+**Example 1.** Area between f(x) = 5x − x² and the x-axis.
 
-Piece 2: ∫ from 2 to 3 = (9 − 12) − (8/3 − 8) = −3 + 16/3 = 7/3.
+Roots: 5x − x² = x(5 − x) = 0, so x = 0 and x = 5.
+Test: f(2) = 10 − 4 = 6 > 0, so f ≥ 0 and no modulus is needed.
 
-Total area = 16/3 + 7/3 = **23/3 ≈ 7.667 square units**.
+A = ∫₀⁵(5x − x²)dx = [5x²/2 − x³/3]₀⁵ = 125/2 − 125/3 = **125/6 ≈ 20.83 square units**
 
-The plain integral over [0, 3] would give −16/3 + 7/3 = −3, which is the net value, not the area.
+The lower limit contributes 0, but she still writes the whole bracket out. Copy that habit; it is where marks live when the lower limit is not 0.
 
-**Where people go wrong.** Integrating straight through when the curve crosses the axis, and reporting a number too small — or a negative "area". Areas are never negative. Solve f(x) = 0 first, every time.
+**Example 2 — the curve crosses inside the interval.** Area bounded by f(x) = x² − 1, the x-axis, x = 0 and x = 2.
 
-**In the exam.** "Find the area bounded by the curve and the x-axis between x = a and x = b." Check for crossings first.
+Roots: x = ±1. **x = −1 is outside [0, 2] and is discarded; x = 1 is the split point.** On [0, 1] the curve is below the axis; on [1, 2] it is above.
+
+A = |∫₀¹(x² − 1)dx| + ∫₁²(x² − 1)dx = |−2/3| + 4/3 = **2 square units**
+
+Three things this teaches. The interval was given but the root was not — solve for it anyway. **The modulus goes on the piece below the axis only.** And splitting genuinely changes the answer: the unsplit ∫₀²(x² − 1)dx = 2/3, which is not 2 — and which happens to equal the first piece's magnitude, so a student who forgets to split can land on a number that looks like it came from somewhere.
+
+**Her TASK 1 (slide 7), unanswered.** Area between f(x) = 6x − x² and the x-axis. Roots x = 0 and x = 6; f(3) = 9 > 0, so no modulus; A = [3x² − x³/3]₀⁶ = 108 − 72 = **36 square units**.
 
 ### 6.2 Area between two curves
 
-**The formula.** Area = ∫ from a to b of [f(x) − g(x)]dx, where f is the upper curve throughout.
+**Her rule (slide 8), verbatim.**
 
-**Why it works.** The vertical strip now runs from the lower curve to the upper one, so its height is f(x) − g(x). This holds even when both curves are below the x-axis, because the subtraction cancels the shared negative part. All you must get right is which curve is on top.
+> "If f(x) and g(x) are continuous with **f(x) ≥ g(x)** on [a, b], then the area of the region between the curves … is given by **A = ∫ₐᵇ(f(x) − g(x))dx**.
+> If f(x) and g(x) are enclosed without a specific interval given, we let **f(x) = g(x)**, such that x = a and x = b are the bounds of the integration."
 
-**Four steps.** Solve f(x) = g(x) for the limits; test a point between them to see which is on top; integrate (top − bottom); evaluate.
+The condition f ≥ g is part of the rule, not a footnote. So the procedure is: **solve f = g for the limits, test an interior point to see which is on top, then integrate (top − bottom).**
 
-**Worked example.** Area enclosed between y = x² and y = x + 2.
+**Example 1 — a line and a parabola.** y = 3 − x and y = x² − 9.
 
-Intersections: x² = x + 2 → x² − x − 2 = 0 → (x − 2)(x + 1) = 0 → x = −1 and x = 2.
+Intersections: 3 − x = x² − 9 gives x² + x − 12 = (x + 4)(x − 3) = 0, so x = −4 and x = 3.
+Test at x = 2: f(2) = 1 and g(2) = −5, so f is on top.
 
-At x = 0 the parabola gives 0 and the line gives 2, so the **line is on top**.
+A = ∫₋₄³[(3 − x) − (x² − 9)]dx = [12x − x²/2 − x³/3]₋₄³ = 45/2 − (−104/3) = **343/6 ≈ 57.17 square units**
 
-Area = ∫ from −1 to 2 of [(x + 2) − x²]dx. Antiderivative x²/2 + 2x − x³/3.
+The single most likely slip is writing 45/2 − 104/3 = −73/6, having failed to double the minus. **Subtracting a negative adds.**
 
-At x = 2: 2 + 4 − 8/3 = 6 − 8/3 = 10/3.
-At x = −1: 1/2 − 2 + 1/3 = 3/6 − 12/6 + 2/6 = −7/6.
+Note also that the region straddles the axis — the parabola dips to y = −9 — and she still writes plain (f − g) with no modulus and no shifting. **The strip height is a difference of y-values; where the x-axis sits is irrelevant to it.**
 
-Area = 10/3 + 7/6 = 20/6 + 7/6 = 27/6 = **9/2 = 4.5 square units**.
+**Example 2 — the one where the second-named function is on top.** f(x) = 2 − x and g(x) = 4 − x².
 
-**Worked example — curves that swap over.** Total area between y = x³ and y = x from x = −1 to x = 1.
+Intersections: 2 − x = 4 − x² gives x² − x − 2 = 0, so x = −1 and x = 2.
+Test at x = 1: f(1) = 1 and g(1) = 3, so **g is on top**, and she writes **g − f**.
 
-x³ = x gives x(x² − 1) = 0, so x = −1, 0, 1. Three intersections means the top curve changes.
+A = ∫₋₁²[(4 − x²) − (2 − x)]dx = [2x − x³/3 + x²/2]₋₁² = 10/3 − (−7/6) = **9/2 = 4.5 square units**
 
-On (0, 1), at x = 0.5: x = 0.5 beats x³ = 0.125, so the **line is on top**.
-On (−1, 0), at x = −0.5: x³ = −0.125 beats x = −0.5, so the **cubic is on top**.
+**This is the example to remember for the order of subtraction.** She named f first in the question and still subtracted it second, because the test point said so. The order is decided by the test, never by which curve was written first.
 
-From 0 to 1: ∫(x − x³)dx = [x²/2 − x⁴/4] = 1/2 − 1/4 = 1/4.
-From −1 to 0: ∫(x³ − x)dx = [x⁴/4 − x²/2] from −1 to 0 = 0 − (1/4 − 1/2) = 1/4.
+### 6.3 Curves that cross inside the interval
 
-Total **1/2 square unit**. The two halves being equal is the expected symmetry for two odd functions.
+**Her rule (slide 12).** With an intersection at c ∈ (a, b):
 
-**Where people go wrong.** Subtracting the wrong way, giving a negative area. Missing a crossing between the outer intersections — integrating (x − x³) straight from −1 to 1 gives exactly 0, the net value, not the area.
+A₁ = ∫ₐᶜ(f(x) − g(x))dx where f ≥ g, A₂ = ∫ᶜᵇ(g(x) − f(x))dx where f ≤ g, and **A = A₁ + A₂**
 
-**In the exam.** "Find the points of intersection, then find the area." The intersection step carries its own marks. State which curve you are treating as upper and why.
+**In each piece, the function on top is written first.** That is what makes each piece non-negative, which is why no modulus appears anywhere in this rule — the difference from the modulus in 6.1. The labels A₁ and A₂ assume f is on top first; if the test point says otherwise, swap the integrands.
 
-### 6.3 Volumes of revolution — the disc method
+**Example — sin and cos over [0, π/2].**
 
-**In plain words.** Spin a region about a line and you get a solid. Slice perpendicular to the axis and each slice is a disc, like a coin. Add up the coins.
+She finds the crossing by dividing, not by inspection: sin x = cos x ⇒ sin x/cos x = 1 ⇒ tan x = 1 ⇒ **x = π/4**. Reproduce that line. Then cos ≥ sin on [0, π/4] and sin ≥ cos on [π/4, π/2]:
 
-**The Week 11 four-step procedure,** quoted: "1. Sketch the area and determine the axis of revolution (this determines the variable of integration). 2. Sketch the cross-section (disc, shell, washer) and determine the appropriate formula. 3. Determine the boundaries of the solid. 4. Set up the definite integral, and integrate."
+A₁ = ∫₀^(π/4)(cos x − sin x)dx = [sin x + cos x]₀^(π/4) = (1/√2 + 1/√2) − 1 = 2/√2 − 1
+A₂ = ∫_(π/4)^(π/2)(sin x − cos x)dx = [−cos x − sin x]_(π/4)^(π/2) = (0 − 1) − (−2/√2) = −1 + 2/√2
 
-**The formula,** revolving y = f(x) about the x-axis:
+**A = A₁ + A₂ = 4/√2 − 2 = 2√2 − 2 ≈ 0.83 square units**
 
-V = π ∫ from a to b of [f(x)]²dx
+She keeps sin(π/4) as **1/√2**, not √2/2. And watch the second antiderivative: the integrand sin x − cos x integrates to −cos x − sin x, with **both** signs negative.
 
-A slice at x is a disc of radius f(x) and thickness dx, so its volume is π[f(x)]²dx.
+**The trap, and the clearest demonstration in the deck of why this rule exists.** The single unsplit integral ∫₀^(π/2)(cos x − sin x)dx = (1 + 0) − (0 + 1) = **0**. The two lobes are congruent and cancel exactly.
 
-**A check on the formula.** Revolve the semicircle y = √(r² − x²) from −r to r: V = π∫(r² − x²)dx = π[r²x − x³/3] from −r to r = π(2r³ − 2r³/3) = **4πr³/3**, the known volume of a sphere. The formula is right.
+*Aside: these are the deck's first integrals that are not powers of x. Week 7 never stated ∫sin x dx or ∫cos x dx. Memorise the pair — ∫cos x dx = sin x + c and ∫sin x dx = −cos x + c — because the example assumes them.*
 
-**Worked example.** The region under y = √x above the x-axis, up to x = 4, is rotated about the x-axis.
+**Her TASK 2 (slide 11), unanswered, and it is a crossing problem in disguise.** Area bounded by y = x² and y = 2 − x² for 0 ≤ x ≤ 2. Setting x² = 2 − x² gives x = ±1, and x = 1 lies **inside** [0, 2]. On (0, 1) the curve 2 − x² is on top; on (1, 2) x² is on top.
 
-V = π∫ from 0 to 4 of x dx = π[x²/2] from 0 to 4 = **8π ≈ 25.13 cubic units**.
+A₁ = ∫₀¹(2 − 2x²)dx = 4/3, A₂ = ∫₁²(2x² − 2)dx = 8/3, so **A = 4 square units**
 
-Revolving about the y-axis instead: write x in terms of y and use V = π∫ from c to d of [g(y)]²dy.
+A single integral over [0, 2] would give −4/3 — negative, and its magnitude is not the area either.
 
-**Where people go wrong.** Forgetting to square the function — π∫f(x)dx is the commonest single error here. Also forgetting the π, and revolving about the y-axis while still integrating dx.
+**Her TASK 3 (slide 15), unanswered, and it is the counterweight.** Area bounded by y = cos x and y = 2 − cos x for 0 ≤ x ≤ 2π. Setting cos x = 2 − cos x gives cos x = 1, so x = 0 and x = 2π — **both intersections are the endpoints**, so the curves never cross on the interior and no split is needed. Testing x = π shows 2 − cos x is on top:
 
-### 6.4 The washer method
+A = ∫₀^(2π)(2 − 2cos x)dx = [2x − 2sin x]₀^(2π) = **4π square units ≈ 12.57**
 
-**In plain words.** If the region does not touch the axis, the solid has a hole. Each slice is a washer — a disc with a smaller disc punched out.
+After two slides of splitting, the reflex is to split again. **Check where the intersections actually are first.**
 
-**The formula.** V = π∫ from a to b of ([R(x)]² − [r(x)]²)dx, with R the outer radius and r the inner. The washer's area is πR² − πr².
+> **SLIDE WARNING (Week 10, slide 16).** Her summary compresses the three rules and **drops both sign conditions**: line 1 omits f(x) ≥ 0 and drops the modulus case entirely, and line 2 omits f(x) ≥ g(x). Her own Examples 2 on slides 6 and 10 need exactly those conditions. If a question asks you to "state the formula", state it **with its condition** — quote slides 4, 8 and 12, not the summary. (The summary slide also misspells "bounded" as "bounbed", twice.)
 
-**Worked example.** The region between y = x² and y = 2x is rotated about the x-axis.
+### 6.4 Volumes of revolution
 
-Intersections: x² = 2x → x(x − 2) = 0 → x = 0, 2. At x = 1 the line gives 2 and the parabola 1, so **R = 2x, r = x²**.
+**Definitions (slide 4).** "If a region in the plane is revolved about a given line, the resulting solid is a **solid of revolution**, and the line is called the **axis of revolution**."
 
-V = π∫ from 0 to 2 of (4x² − x⁴)dx = π[4x³/3 − x⁵/5] from 0 to 2 = π(32/3 − 32/5)
+**Her four-step procedure, in her words.** (1) Sketch the area and determine the axis of revolution — **this determines the variable of integration**. (2) Sketch the cross-section (disc, shell, washer) and determine the appropriate formula. (3) Determine the boundaries of the solid. (4) Set up the definite integral, and integrate.
 
-Common denominator 15: 160/15 − 96/15 = 64/15.
+**The three formulas, each stated twice, once in x and once in y:**
 
-V = **64π/15 ≈ 13.40 cubic units**.
+| Method | In x | In y |
+|---|---|---|
+| Disc | V = π∫ₐᵇ[R(x)]²dx | V = π∫ₐᵇ[R(y)]²dy |
+| Washer | V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx | V = π∫ₐᵇ([R(y)]² − [r(y)]²)dy |
+| Shell | V = 2π∫ₐᵇ x f(x)dx | V = 2π∫ₐᵇ y f(y)dy |
 
-**Where people go wrong.** Writing π∫(R − r)²dx instead of π∫(R² − r²)dx. They differ, since (R − r)² = R² − 2Rr + r². The squares are subtracted, not the radii. This is the defining error of the method.
+**π for discs and washers, 2π for shells.** The π is the area of a circle; the 2π is the circumference of the unrolled shell. **There is no square in the shell integrand** — radius times height, both to the first power.
 
-### 6.5 The shell method
+*Aside: her disc slide says "R(x) is the region". In every worked example R(x) is a **length** — the distance from the axis out to the curve. Read R as a radius.*
 
-**In plain words.** Instead of slicing across, wrap the solid in thin cylindrical shells, like onion layers. Unroll one and it is a thin sheet of height f(x), length 2πx and thickness dx.
+**Disc Example 1.** R bounded by y = −x + 1, the x-axis, x = 0 and x = 1, revolved about the x-axis. The radius is f(x) itself, because the distance from the x-axis up to the curve is the y-value:
 
-**The formula,** revolving about the **y-axis**:
+V = π∫₀¹(−x + 1)²dx = π[−(−x + 1)³/3]₀¹ = **π/3 cubic units**
 
-V = 2π ∫ from a to b of x·f(x)dx
+*She has reversed a chain rule there. The deck never teaches substitution, so if that step is uncomfortable, expand: (1 − x)² = 1 − 2x + x², and ∫₀¹(1 − 2x + x²)dx = 1 − 1 + 1/3 = 1/3. Same answer, Week 7 tools only.*
 
-Use shells when the region is described in x but you are revolving about the y-axis (or vice versa). The disc method would force you to rewrite the function with x as the subject, which is sometimes impossible.
+**Disc Example 2 — in y, about the line x = 3.** The region between x = y² + 1 and x = 3.
 
-**Worked example.** The region bounded by y = x², the x-axis and x = 2, revolved about the y-axis.
+Limits by solving: y² + 1 = 3 gives y = ±√2. Radius: R(y) = 3 − (y² + 1) = **2 − y²**.
 
-V = 2π∫ from 0 to 2 of x·x²dx = 2π[x⁴/4] from 0 to 2 = 2π(4) = **8π cubic units**.
+V = π∫₋√2^√2 (2 − y²)²dy = π∫(4 − 4y² + y⁴)dy = π[4y − 4y³/3 + y⁵/5]₋√2^√2 = **64√2π/15 cubic units**
 
-**Cross-check by washers in y.** The region runs from y = 0 to y = 4, and at height y the solid runs from x = √y to x = 2: V = π∫ from 0 to 4 of (4 − y)dy = π[4y − y²/2] = π(16 − 8) = 8π ✓. Two methods, one answer — verify volumes this way when you have time.
+The integrand is even, so the value at −√2 is the negative of that at +√2 and the subtraction **doubles** it: 32√2/15 becomes 64√2/15.
 
-**Where people go wrong.** Dropping the factor of x — it is the radius and the whole point of the method. Dropping the 2π. And mixing coordinates: shells about the y-axis integrate in x, which feels wrong but is correct.
+> **SLIDE MISPRINT (Week 11, slide 7).** The middle expression prints π∫[(4 − 4y² + y⁴)]²dy, with the square still attached after the bracket has already been expanded. The square must be dropped once you expand; the next line and the answer are correct.
 
-**In the exam.** "The region bounded by … is rotated through 2π radians about the x-axis. Find the volume." Decide first whether the region touches the axis (disc), leaves a gap (washer), or would be awkward to invert (shell). Sketch even roughly — that is what tells you which radius is outer.
+**Her disc TASK (slide 8), unanswered.** f(x) = √x, the x-axis, x = 1 and x = 4, about the x-axis. **The squaring is the whole point**: [√x]² = x, so
+
+V = π∫₁⁴ x dx = π[x²/2]₁⁴ = **15π/2 cubic units**
+
+A student who integrates √x itself gets 14π/3 and has computed nothing.
+
+**Washer — the disc with a hole punched through it.** Its area is πR² − πr², so the π comes out front and **the squares subtract**. π∫(R − r)²dx is a different and always smaller number.
+
+**Washer Example 1.** y = x², y = x⁵, x = 0, x = 1, about the x-axis. On [0, 1] every higher power is smaller, so x² ≥ x⁵: **R(x) = x², r(x) = x⁵**.
+
+V = π∫₀¹(x⁴ − x¹⁰)dx = π[x⁵/5 − x¹¹/11]₀¹ = π(1/5 − 1/11) = **6π/55 cubic units**
+
+Squaring the difference instead would give 9π/220 — a different number, and the standard wrong one.
+
+**Washer Example 2 — in y, about the y-axis.** x = y², x = 3, about the y-axis. The far boundary is the vertical line, so **R(y) = 3 is a constant** and r(y) = y². Limits from y² = 3:
+
+V = π∫₀^√3 (9 − y⁴)dy = π[9y − y⁵/5]₀^√3 = **36√3π/5 cubic units**
+
+R being constant is normal and does not mean you have made a mistake. *Her limits run from 0 to √3, i.e. the first-quadrant half; taking −√3 to √3 would double the answer.*
+
+**Her washer TASK (slide 12), unanswered — and the axis has moved.** The region under y = x² on [0, 2], rotated about the line **y = −1**. Every radius is now a distance from y = −1:
+
+R(x) = x² − (−1) = **x² + 1**, r(x) = 0 − (−1) = **1**
+
+V = π∫₀²([x² + 1]² − 1)dx = π∫₀²(x⁴ + 2x²)dx = π(32/5 + 16/3) = **176π/15 cubic units**
+
+**Subtract the axis before squaring.** Squaring first and shifting afterwards is a different and wrong number.
+
+**Shell.** Her formula reads: x is the **radius** (distance from the axis out to the strip) and f(x) is the **height** (the length of the strip). Multiply them, multiply by 2π, integrate.
+
+**Shell Example 1 — about the y-axis.** y = 2x² − x³ and y = 0. Limits from f(x) = 0: x²(2 − x) = 0 gives x = 0 and x = 2.
+
+V = 2π∫₀² x(2x² − x³)dx = 2π∫₀²(2x³ − x⁴)dx = 2π[x⁴/2 − x⁵/5]₀² = 2π(8 − 32/5) = **16π/5 cubic units**
+
+**Shell Example 2 — about the x-axis, integrating in y.** The region under y = √x from 0 to 1. Invert: **x = y²**, not √y. The strip is now horizontal at height y; it starts on the curve at x = y² and ends at the right-hand edge x = 1, so its length is **f(y) = 1 − y²**, and its radius is y:
+
+V = 2π∫₀¹ y(1 − y²)dy = 2π[y²/2 − y⁴/4]₀¹ = **π/2 cubic units**
+
+Free check: the same solid by discs is π∫₀¹[√x]²dx = π[x²/2]₀¹ = π/2. Two of her three methods agreeing on one solid is the best self-test in the deck.
+
+**Her shell TASK (slide 16), unanswered.** The region between y = x and y = x², about the y-axis. x = x² gives x = 0 and x = 1; on (0, 1) the line is above the parabola, so the strip height is **f(x) = x − x²**:
+
+V = 2π∫₀¹ x(x − x²)dx = 2π[x³/3 − x⁴/4]₀¹ = 2π(1/12) = **π/6 cubic units**
+
+Her formula is stated for a single f, but both this task and Shell Example 2 need the **difference of two boundaries**. Read f as "height of the strip" throughout.
+
+> **SLIDE ERROR (Week 11, slide 13).** "The shell method is used when integrating along an axis **parallel** to the axis of revolution." Her own two examples say the opposite: Example 1 revolves about the y-axis and integrates dx; Example 2 revolves about the x-axis and integrates dy. The reliable version: **for discs and washers you integrate along the axis of revolution; for shells you integrate perpendicular to it.** Say "perpendicular" and back it with her examples.
+
+> **SLIDE ERROR (Week 11, slide 10).** The slide is headed "VOLUMES BY INTEGRATION: **DISC** METHOD" but the working uses R and r and the washer formula. Do not conclude that the disc formula subtracts anything.
+
+**The three TASK answers she never gave: 15π/2, 176π/15, π/6.** They are the most likely exam templates in the week, precisely because she sets them and leaves them open.
 
 ---
 
 ## Part 7 — Integration applied to real problems
 
-*Week 12: "Application of Integration to Real-Life Problems". The slides — KINEMATICS (×3), FLUID FORCE, WORK AND ENERGY, MARGINAL ANALYSIS (×4), ENVIRONMENTAL SCIENCE (×2) — are all blank. The summary survives and is quoted; the problems are reconstructions of the standard type each heading names.*
+*Week 12. Five application areas, seven worked examples, and nothing else. Every one is a definite or indefinite integral of a polynomial, a square root, or e^(kt), evaluated with the tools of Weeks 7–11.*
 
-*Filing note: the Week 12 lecture file is named "Review-of-Key-Concepts-and-Practical-Problem-Solving", but its title slide reads "INTEGRATION: APPLICATION OF INTEGRATION TO REAL-LIFE PROBLEMS", matching the week summary. There is no separate revision deck in the source — if your timetable promised a week 12 review, what you were given is applications.*
-
-**The organising principle for all of Part 7.** Every application here has one shape:
-
-> You are given a **rate**. You want a **total**. Integrate the rate over the interval.
-
-Velocity is the rate of change of position — integrate for distance. Marginal cost is the rate of change of cost — integrate for total cost. Discharge rate, force varying with distance, growth rate: same move. Five applications, one idea, five sets of units. The Week 12 summary: "Integration serves as a bridge between abstract mathematical concepts and practical problem-solving," across "physics, engineering, economics, environmental science, and medicine."
+**The one principle underneath all of it:** **integrate a rate over an interval and you get the total accumulated over that interval.**
 
 ### 7.1 Kinematics
 
-Differentiation goes position → velocity → acceleration. Integration goes back the other way, and each integration introduces a constant fixed by an initial condition.
+**Example 1 — integrate a velocity, get a distance.** v(t) = 2t² + 6t + 1 km/h; find the distance travelled in the first 5 hours.
 
-**Worked example 1.** A particle starts at the origin with velocity 2 m/s and has acceleration a(t) = 6t m/s². Find v and s at t = 3.
+x = ∫₀⁵(2t² + 6t + 1)dt = [2t³/3 + 3t² + t]₀⁵ = 83.33 + 75 + 5 = **163.3 km**
 
-v(t) = ∫6t dt = 3t² + C₁. Since v(0) = 2, C₁ = 2, so v(t) = 3t² + 2.
-s(t) = ∫(3t² + 2)dt = t³ + 2t + C₂. Since s(0) = 0, C₂ = 0.
+**The rate at the end is not the total.** v(5) = 81 km/h is a speed; the integral is a distance. Reading the integrand at the upper limit is the single most common wrong answer in this week's material.
 
-At t = 3: v = 27 + 2 = **29 m/s**; s = 27 + 6 = **33 m**.
+*Aside: calling this "distance" is safe only because v is positive throughout [0, 5], so the car never reverses. She does not make the distance/displacement distinction anywhere.*
 
-**Worked example 2 — displacement versus distance.** v(t) = 3t² − 12 m/s over the first 3 seconds.
+**Example 2 — an initial condition, then a definite integral.** v(t) = 6t² − 6t − 12 m/s, with initial displacement −4 m.
 
-**Displacement** is the plain integral: [t³ − 12t] from 0 to 3 = 27 − 36 = **−9 m**. The particle finishes 9 m behind its start.
+**(a) The displacement function.** x(t) = ∫(6t² − 6t − 12)dt = 2t³ − 3t² − 12t + C. Substituting t = 0 kills the first three terms, so x(0) = C, and the given value reads straight off: **x(t) = 2t³ − 3t² − 12t − 4**.
 
-**Distance** needs a split where v changes sign: 3t² − 12 = 0 at t = 2. On [0, 2] v is negative (v(0) = −12); on [2, 3] it is positive (v(3) = 15).
+**(b) At t = 3.** x(3) = 54 − 27 − 36 − 4 = **−13 m**. A negative displacement is fine — the body is 13 m on the negative side of the origin.
 
-∫ from 0 to 2 = 8 − 24 = −16, so 16 m travelled.
-∫ from 2 to 3 = (27 − 36) − (8 − 24) = −9 + 16 = 7, so 7 m travelled.
+**(c) The net displacement in the first 5 seconds.**
 
-Total distance **23 m**.
+∫₀⁵(6t² − 6t − 12)dt = [2t³ − 3t² − 12t]₀⁵ = 250 − 75 − 60 = **115 m**
 
-**Where people go wrong.** Treating displacement and distance as the same. They differ whenever the object reverses. Also forgetting the constants, or the initial conditions that pin them down.
+**The most instructive thing in the whole week is that the −4 disappeared here.** Part (a) needed it; part (c) does not, because the constant cancels: (F(5) + C) − (F(0) + C) = F(5) − F(0). Carrying the −4 in and subtracting it once gives 111, which is x(5) — the body's *position* after 5 seconds, not the *change* in its position. Both are meaningful numbers; only one answers the question.
 
-**In the exam.** Very common. Read whether it wants displacement or distance travelled — different words, different answers.
+*Aside: v(t) = 6(t − 2)(t + 1) is negative on (0, 2) and positive on (2, 5), so the body goes back 20 m and then forward 135 m. The net 115 m is the sum of the signed pieces; the total distance would be 155 m. She neither asks for it nor teaches how to get it.*
 
-### 7.2 Work and energy
+### 7.2 Fluid force
 
-**In plain words.** Work is force times distance, but only when the force is constant. When force varies with position, integrate: W = ∫ from a to b of F(x)dx. Over a tiny displacement dx the force is effectively constant, so the work is F(x)dx.
+**Her formula (slide 7).** **F = ∫ₐᵇ w·h(x)·L(x)dx**, where **w = ρg** is the weight density of water, h(x) is the depth of the strip and L(x) is the width of the face there. For water, **w = ρg = (1000)(9.8) = 9800**.
 
-**Hooke's law.** A spring resists stretching with F(x) = kx, where k is the spring constant in N/m.
+**Example — a rectangular dam**, 100 m high and 300 m wide, top level with the water surface.
 
-**Worked example.** k = 200 N/m. Find the work done stretching the spring 0.3 m from its natural length.
+F = ∫₀¹⁰⁰ (9800)(x)(300)dx = 2.94 × 10⁶ [x²/2]₀¹⁰⁰ = 2.94 × 10⁶ × 5000 = **1.47 × 10¹⁰ N**
 
-W = ∫ from 0 to 0.3 of 200x dx = 100[x²] from 0 to 0.3 = 100(0.09) = **9 joules**.
+9800 × 300 = 2.94 × 10⁶ is pulled out front as a constant, and [x²/2] from 0 to 100 is 5000.
 
-Not 200 × 0.3 = 60 J. The force starts at zero and only reaches its maximum at the end, which is exactly why integration is needed.
+**Why an integral is needed at all:** the depth, and therefore the pressure, **increases as you go down**, so you cannot multiply one pressure by the whole area. The strip at depth x carries essentially constant pressure w·x; integrating adds the strips up.
 
-**Where people go wrong.** Using W = Fd with the final force. Also confusing extension with total length — the limits are extensions measured from the unstretched position.
+> **SLIDE ERROR (Week 12, slide 7).** The weight density is printed as **9800 N/m²**. Weight density ρg has units of newtons per **cubic** metre: kg/m³ × m/s² = N/m³. The number is right; the unit is not. Note also that her h(x) = x is measured **downward from the surface** — a depth, not a height above the base. It works cleanly here only because the top of the dam is level with the water.
 
-### 7.3 Fluid force
+### 7.3 Work and energy
 
-**In plain words.** Water pressure rises with depth, so a submerged vertical surface feels more force at the bottom. Slice horizontally and add the strips.
+**Her formula (slide 8).** **W = ∫ₐᵇ F(x)dx.** The examinable half is *building* F(x) before you integrate.
 
-**The formula.** F = ρg∫(depth)×(width)dy, with ρ = 1000 kg/m³ for water and g = 9.8 m/s². Pressure at depth y is ρgy, so a strip of width w(y) and thickness dy takes force ρgy·w(y)dy.
+**Example — a 60 m rope of mass 66 g/m hanging over a cliff, pulled to the top.** Her order:
 
-**Worked example.** A vertical rectangular dam face is 10 m wide and holds water 5 m deep. Find the total force.
+- Assume the rope has been pulled **x** m, so the amount still hanging is **(60 − x)** m.
+- 66 g/m = **0.066 kg/m**, so the hanging mass is 0.066(60 − x) kg.
+- Weight = mass × g, so **F(x) = 9.8(0.066)(60 − x) = 0.6468(60 − x)**.
 
-Measure y downward from the surface, 0 to 5; the width is constant at 10.
+W = ∫₀⁶⁰ 0.6468(60 − x)dx = [0.6468(60x − x²/2)]₀⁶⁰ = 0.6468 × 1800 = **1164.24 J**
 
-F = 1000 × 9.8 × 10 × [y²/2] from 0 to 5 = 98,000 × 12.5 = **1,225,000 N**, or 1.225 MN.
-
-**Where people go wrong.** Using the bottom depth for the whole plate. The pressure is not uniform — that is the point of the integral. Also switching the direction of y midway; pick one, state it, be consistent.
+Three examinable moves, in order: **convert the units** (leave it in grams and every joule is 1000 times too large); **weight = mass × g**, which is where 9.8 enters; and **the hanging length is 60 − x, not x and not 60**. The force starts at 38.8 N and falls to 0, which is exactly why W = F × d is unavailable — using the constant 38.8 N would give 2328 J.
 
 ### 7.4 Marginal analysis in economics
 
-**In plain words.** "Marginal" means "derivative". Marginal cost is C′(x), so total cost comes back by integration — and the constant of integration is the **fixed cost**, what you pay when you produce nothing. That gives +C a concrete meaning.
+**Total from marginal (slide 9).** **TR(Q) = ∫MR(Q)dQ**, with the constant fixed by a given data point.
 
-C(x) = ∫MC(x)dx + fixed cost. R(x) = ∫MR(x)dx. Profit = R(x) − C(x).
+MR = 100 + 20Q + 3Q², and TR(2) = 260.
 
-**Worked example 1.** MC(x) = 3x² − 4x + 20 naira per unit; fixed costs ₦500. Find the cost of 10 units and the extra cost of going from 10 to 20 units.
+TR(Q) = 100Q + 10Q² + Q³ + C, and TR(2) = 200 + 40 + 8 + C = 248 + C
 
-C(x) = x³ − 2x² + 20x + C, and C(0) = 500 gives C(x) = x³ − 2x² + 20x + 500.
+248 + C = 260, so **C = 12** and TR(Q) = 100Q + 10Q² + Q³ + 12.
 
-C(10) = 1000 − 200 + 200 + 500 = **₦1500**.
-C(20) = 8000 − 800 + 400 + 500 = ₦8100.
-Extra cost = 8100 − 1500 = **₦6600**.
+**An initial condition is an equation to solve, not a value to copy.** Setting C = 260 is the error this example is designed to catch.
 
-The extra cost is also just ∫ from 10 to 20 of MC(x)dx, which avoids the constant entirely. Same answer.
+**Capital growth (slide 10).** **K = ∫ₐᵇ I(t)dt.** With I(t) = 6√t between the 4th and 9th years, rewrite √t as t^(1/2) first:
 
-**Worked example 2 — consumer surplus.** Demand is p = 50 − 2q; the market settles at q = 15.
+K = 6∫₄⁹ t^(1/2)dt = 4t^(3/2)|₄⁹ = 4(27) − 4(8) = **76**
 
-Price: p = 50 − 30 = ₦20.
+The antiderivative: t^(3/2) divided by 3/2 is t^(3/2) × 2/3, and 6 × 2/3 = 4. Then 9^(3/2) = 27 and 4^(3/2) = 8.
 
-Consumer surplus is the area between the demand curve and the price line — what buyers were willing to pay, less what they paid.
+> **SLIDE ERROR (Week 12, slide 10).** The slide prints the final answer as **"= 4"**. Every line before it is correct — the rewrite, the antiderivative 4t^(3/2), the limits — and those lines evaluate to **76**. The 4 is the coefficient of t^(3/2), left stranded where the answer should be. Quote 76.
 
-∫ from 0 to 15 of (50 − 2q)dq = [50q − q²] from 0 to 15 = 750 − 225 = 525.
-Actually paid = 20 × 15 = 300.
+*Note also the other error this example invites: 6√9 − 6√4 = 6 substitutes into the integrand instead of the antiderivative.*
 
-CS = 525 − 300 = **₦225**.
+**Consumer and producer surplus (slides 11–12).** Demand D(Q) = 1000 − 25Q, supply S(Q) = 100 + Q².
 
-**Where people go wrong.** Setting the constant to zero and losing the fixed cost. Confusing marginal cost (the derivative) with average cost (C(x)/x).
+**Equilibrium first — the order is not negotiable**, because both surplus integrals contain Q₀ and P₀:
 
-**In the exam.** "Given the marginal cost function and fixed costs, find the total cost function." Integration with a named constant. Surplus questions need a sketch.
+1000 − 25Q = 100 + Q² ⇒ Q² + 25Q − 900 = 0 ⇒ Q = (−25 ± 65)/2
 
-### 7.5 Environmental science and population
+so Q = 20 or Q = −45; **a negative quantity is meaningless, so Q₀ = 20**, and P₀ = D(20) = **500** (check: S(20) = 500).
 
-**In plain words.** When something is discharged, consumed or produced at a varying rate, integrating the rate gives the accumulated total. The Week 12 summary lists "demand and supply, consumer surplus, population models" here.
+CS = ∫₀^Q₀ [D(Q) − P₀]dQ = ∫₀²⁰(500 − 25Q)dQ = [500Q − 25Q²/2]₀²⁰ = 10000 − 5000 = **5000**
 
-**Worked example 1 — cumulative pollutant.** A factory discharges at r(t) = 100e^(0.05t) kg per day. Find the total over the first 10 days.
+PS = ∫₀^Q₀ [P₀ − S(Q)]dQ = ∫₀²⁰(400 − Q²)dQ = [400Q − Q³/3]₀²⁰ = 8000 − 2666.67 ≈ **5333**
 
-∫ from 0 to 10 of 100e^(0.05t)dt = [2000e^(0.05t)] from 0 to 10 = 2000(e^(0.5) − 1) = 2000(1.64872 − 1) = **≈ 1297.4 kg**.
+Which way round each bracket goes: consumers gain when the price they *would* have paid, D(Q), exceeds what they *do* pay, P₀; producers gain when what they *receive*, P₀, exceeds what they *needed*, S(Q). The two numbers here are close enough that swapping them looks plausible and scores nothing.
 
-This is exactly the Week 12 case study, which describes "a factory discharges a pollutant into a river at a varying rate over a specific period" and computes the total as "the integral of the rate of discharge."
+### 7.5 Environmental science
 
-**Worked example 2 — population.** With growth rate P′(t) = 500e^(0.02t) per year, the increase over 10 years is ∫ from 0 to 10 of 500e^(0.02t)dt = [25000e^(0.02t)] from 0 to 10 = 25000(1.2214 − 1) = **≈ 5535 individuals**.
+**Example — copper consumption at 35e^(0.035t) thousand metric tons per year, t years since 2005.**
 
-**Where people go wrong.** Integrating e^(kt) without dividing by k. The reverse chain rule demands it: ∫e^(0.05t)dt = 20e^(0.05t). Missing the /k is the commonest slip here.
+**(a) A model for the total consumed.**
 
-**In the exam.** Word problems that reduce to a one-line integral. Extract the rate and the interval, write the integral before touching numbers, state the units.
+C(t) = ∫35e^(0.035t)dt = **1000e^(0.035t) + c**
+
+because 35 ÷ 0.035 = 1000. The condition "nothing consumed yet" is C(0) = 0, and e⁰ = 1, so 0 = 1000 + c and c = −1000:
+
+**C(t) = 1000e^(0.035t) − 1000**
+
+*Aside: the rule ∫e^(kt)dt = e^(kt)/k + c is used here and appears on no slide of the deck. It is the one formula you have to bring with you. **Divide** by k; multiplying would give 1.225 instead of 1000.*
+
+**(b) When 750 thousand metric tons are exhausted.**
+
+750 = 1000e^(0.035t) − 1000 ⇒ e^(0.035t) = 1.75 ⇒ t = ln(1.75)/0.035 = **15.989 ≈ 16 years**
+
+16 years after 2005 is **2021**.
+
+The shape of part (b) is the examinable thing: **set the accumulated total equal to the stock, isolate the exponential, take natural logs, divide by k, add to the base year.**
+
+> **SLIDE ERROR (Week 12, slide 14).** The denominator is printed **0.0035**; it must be **0.035**, the coefficient in the exponent. Her printed answer 15.989 is correct, so only the denominator is wrong — with 0.0035 you would get 159.89 years and the year 2165.
 
 ---
 
@@ -1104,63 +1264,125 @@ This is exactly the Week 12 case study, which describes "a factory discharges a 
 
 ### Functions (weeks 1–2)
 
-- **Function**: exactly one output per input. **Domain**: exclude zero denominators, negatives under even roots, non-positive log arguments. **Range**: the outputs produced.
-- **Vertical line test**: a function if no vertical line cuts the curve twice. **Injective**: no two inputs share an output. **Surjective**: every codomain element hit. **Bijective**: both.
-- **Inverse**: swap x and y, make y the subject; exists only if f is one-to-one; f⁻¹(x) ≠ 1/f(x).
-- **Composite**: (f ∘ g)(x) = f(g(x)) — inner first, not commutative.
-- Linear mx + b; quadratic ax² + bx + c with vertex at x = −b/(2a) and c the y-intercept; exponential bˣ; logarithmic log_b(x) with domain x > 0; |x| = x if x ≥ 0, −x if x < 0; polynomial degree = highest power, leading coefficient = its coefficient.
-- sin θ = opp/hyp, cos θ = adj/hyp, tan θ = opp/adj; csc, sec, cot are their reciprocals in that order.
+- **Function**: a relation assigning **exactly one output to each input**. Functions sit **inside** relations. **Domain** = allowed inputs, **codomain** = the set outputs are declared to live in, **range** = the outputs actually produced.
+- **Real-valued** = every output is a real number.
+- **Domain**: her rule is the denominator ≠ 0; also, nothing negative under a square root. Write it as **D = (…)** in interval notation.
+- **Range**, two methods: make x the subject and ask which y are legal; or build a chain of inequalities from |·| ≥ 0 or √· ≥ 0. **Multiplying by −1 reverses an inequality; adding does not.**
+- **Inverse**: *let* y = f(x), *switch* x with y, *isolate* y. f⁻¹(x) ≠ 1/f(x).
+- **Composite**: f ∘ g = f[g(x)] — the function nearest the x acts first, and f ∘ g ≠ g ∘ f.
+- Linear mx + b; quadratic ax² + bx + c with vertex at x = −b/2a and **c the y-intercept**; discriminant Δ = b² − 4ac; exponential a·bˣ (decay when 0 < b < 1); log_b x, the inverse of bˣ, argument > 0; |x| ≥ 0 always; piecewise branches on disjoint intervals; polynomial degree = highest power present and leading coefficient = its coefficient; sin and cos have period 2π, tan has π, sin(kx) has 2π/k.
 
-### Limits (weeks 3–4)
+### Limits and continuity (weeks 3–4)
 
-- The limit exists **iff** left limit = right limit.
-- Substitute first. 0/0 without a root → factorise; 0/0 with a root → rationalise by the conjugate.
-- **L'Hôpital**: for 0/0 or ∞/∞, lim f/g = lim f′/g′, differentiating top and bottom separately.
-- **Squeeze**: g ≤ f ≤ h with g, h → L forces f → L. lim(x→∞) 1/xᵖ = 0 for p > 0.
-- Limit laws: sum, difference, constant, constant multiple, product, quotient (M ≠ 0), power, composite, reciprocal.
-- **Continuity at c**: f(c) defined, the limit exists, and they are equal.
-- Discontinuities: **removable** (hole), **jump** (one-sided limits differ), **infinite** (asymptote), **essential** (a one-sided limit fails through oscillation).
+- Substitute first; a well-defined expression, however ugly, is a finished answer. Only 0/0 stops you.
+- **0/0 with polynomials** → factor and cancel, legal because x is near c but never equal to c. **A small fraction inside a big one** → multiply through by the common denominator. **2 − x = −1(x − 2)**, every time.
+- **0/0 with a root** → multiply by the conjugate **of the numerator**.
+- **L'Hôpital**: lim f/g = lim f′/g′, differentiating top and bottom separately; repeat while the form stays indeterminate and stop the moment it does not.
+- The ten properties: sum, difference, constant, constant multiple, product, quotient (**lim g ≠ 0**), power, composite, squeeze, reciprocal (**lim f ≠ 0**).
+- **Squeeze**, her letters: f ≤ g ≤ h with lim f = lim h = L forces lim g = L. The two outer limits must be **equal**.
+- **Continuity at c**: f(c) defined, the limit exists, and they are equal — all three.
+- A limit exists **iff** the left and right limits agree and are finite. Otherwise **DNE**. On a graph: the shaded dot is f(c); an open circle is not.
+- lim = ±∞ describes *how* a limit fails; it is not a value. A corner is not a break.
 
 ### Differentiation (weeks 5–6)
 
-- **First principles**: f′(x) = lim(h→0)[f(x + h) − f(x)]/h; geometrically the gradient of the tangent.
-- d/dx(k) = 0; d/dx(xⁿ) = nx^(n−1); (kf)′ = kf′; (f ± g)′ = f′ ± g′.
-- **Product** (uv)′ = u′v + uv′; **quotient** (u/v)′ = (u′v − uv′)/v²; **chain** d/dx f(g(x)) = f′(g(x))g′(x).
-- sin → cos; cos → −sin; tan → sec²; eˣ → eˣ; e^(kx) → k e^(kx); ln x → 1/x; aˣ → aˣ ln a.
-- **Implicit**: every y-term gains a dy/dx factor. **Parametric**: dy/dx = (dy/dt)/(dx/dt). **Partial**: ∂f/∂x freezes the other variables.
-- Orders f′, f″, f‴, f⁽⁴⁾; position → velocity → acceleration → jerk. f″ > 0 concave up (minimum); f″ < 0 concave down (maximum).
+- **Power**: f(x) = xⁿ gives f′ = nx^(n−1), with **x⁰ = 1**. Roots are fractional powers.
+- **First principles**: f′(x) = lim h→0 [f(x + h) − f(x)]/h. Cancel the h before letting h → 0. √x needs the conjugate and gives 1/(2√x).
+- **Product**, her order: f′ = u v′ + u′ v. **Quotient**, her order: f′ = (v u′ − u v′)/v², with the denominator **squared**.
+- **Chain**: f′(x) = y′(u)·u′(x), then put u back.
+- **Implicit**: every differentiated y leaves a dy/dx; collect, **factorise**, divide.
+- **Parametric**: dy/dx = dy/dt ÷ dx/dt; leaving the answer in t is correct.
+- **Constant**: no variable means derivative 0. **Partial**: freeze the other variable; any term without your variable dies.
+- Standard derivatives she uses: sin → cos, cos → **−sin**, tan → sec², ln x → 1/x, eˣ → eˣ. (She states the last three; she uses the first two without ever stating them.)
+- **Higher orders**: differentiate what you just wrote. f⁽⁴⁾(x) counts differentiations. The chain factor returns at **every** order: sin(5x) gives 5, 25, 125. Once a derivative is a quotient, the quotient rule applies at every order after it. Second derivative = acceleration, third = jerk.
 
 ### Integration (weeks 7–8)
 
-- ∫xⁿdx = x^(n+1)/(n+1) + C for n ≠ −1; ∫(1/x)dx = ln|x| + C; ∫eˣdx = eˣ + C; ∫e^(kx)dx = e^(kx)/k + C; ∫aˣdx = aˣ/ln a + C.
-- ∫sin x dx = −cos x + C; ∫cos x dx = sin x + C; ∫sec²x dx = tan x + C; ∫dx/(1 + x²) = arctan x + C; ∫dx/√(1 − x²) = arcsin x + C.
-- Constants come out and sums split; there is no product or quotient rule.
-- **Fundamental Theorem**: ∫ from a to b of f = F(b) − F(a). No +C on a definite integral; swapping limits flips the sign; adjacent intervals add.
-- **Substitution**: u = inner function, convert dx via du, change limits for definite integrals.
-- **By parts**: ∫u dv = uv − ∫v du, choosing u by **LIATE**.
-- **Trig substitution**: √(a² − x²) → a sin θ; √(a² + x²) → a tan θ; √(x² − a²) → a sec θ.
-- **Partial fractions**: divide if needed, factorise, one term per factor, substitute killing values, integrate to logarithms.
+- **∫f(x)dx = F(x) + c** where F′ = f. The **+ c is not optional**; check any integral by differentiating your answer.
+- **∫xⁿdx = x^(n+1)/(n+1) + c, n ≠ −1** — raise the power, then **divide** by the new power. ∫1 dx = x. Rewrite fractions and roots as powers first; negative exponents flip signs.
+- **FTC**: ∫ₐᵇ f = F(b) − F(a), a number, with **no + c**. Substitute into **F**, not f. Upper minus lower.
+- Her fifteen-line standard-integral table is Week 8's foundation, and most of it is new material to memorise.
+- **Substitution**: ∫f′(g(x))g′(x)dx = f(g(x)) + C — the chain rule backwards. On a definite integral, **convert the limits** and finish in u. On an indefinite one, **go back to x**.
+- **By parts**: ∫u dv = uv − ∫v du, and **v is the integral of dv** — which is why dv = sin x dx gives v = −cos x. Choose u so that differentiating it makes the leftover integral simpler; the real constraint is that dv must be integrable. Apply twice when a power of x survives.
+- **Trigonometric substitution**: kill the root with 1 − sin²u = cos²u; ∫cos²u du then needs cos²u = (1 + cos 2u)/2. Normalise a constant out of the root first — 4 − 9x² = 4(1 − (3x/2)²) — and remember dx = (2/3)cos u du, not (3/2).
+- **Partial fractions**: factor, split with unknowns, clear the denominator, **substitute the roots** (each kills one unknown). Every resulting term is a logarithm.
 
 ### Improper integrals, area, volume, applications (weeks 9–12)
 
-- **Type I** (infinite limit) and **Type II** (infinite discontinuity at an endpoint): replace the bad endpoint by t and take the limit. Finite ⇒ **converges**; otherwise **diverges**.
-- **p-test**: ∫ from 1 to ∞ of dx/xᵖ converges iff p > 1; ∫ from 0 to 1 of dx/xᵖ converges iff p < 1.
-- **Comparison**, 0 ≤ f ≤ g: ∫g converges ⇒ ∫f converges; ∫f diverges ⇒ ∫g diverges.
-- Area under a curve: ∫f(x)dx, signed — for total area split at every axis crossing and take absolute values. Area between curves: ∫[top − bottom]dx, limits from f = g.
-- **Disc** V = π∫[f(x)]²dx; **washer** V = π∫([R]² − [r]²)dx, subtracting the squares not the radii; **shell** V = 2π∫x·f(x)dx. Sphere check: 4πr³/3.
-- Applications principle: **integrate a rate to get a total**. Kinematics a → v → s with initial conditions; displacement is the plain integral, distance splits at every sign change of v.
-- Work W = ∫F(x)dx with F = kx; fluid force F = ρg∫(depth)(width)dy, ρ = 1000, g = 9.8.
-- C(x) = ∫MC(x)dx + fixed cost; profit = R − C; consumer surplus = ∫ from 0 to q* of (demand)dq − p*q*; accumulated quantity = ∫(rate)dt, with ∫e^(kt)dt = e^(kt)/k.
+- **Improper** = an infinite limit (Type I) or a discontinuity on the interval (Type II). Replace the bad endpoint by a letter and **write the limit** — that line is worth marks.
+- Convergent iff the limit exists. Two infinite ends need **two independent letters** and **both halves must converge**; one divergent half ends the question. A discontinuity **inside** the interval forces a split there.
+- **Comparison, her lettering 0 ≤ g ≤ f**: ∫f convergent ⇒ ∫g convergent; ∫g divergent ⇒ ∫f divergent. The other two directions prove nothing. Comparison gives a **verdict, never a value**.
+- **p-test**: ∫₁^∞ dx/xᵖ converges if p > 1, diverges if **p ≤ 1**. Taking reciprocals **reverses** an inequality.
+- **Area under a curve**: ∫f if f ≥ 0, |∫f| if f ≤ 0; find the limits by setting f(x) = 0 and **test an interior point**; split at any root inside the interval and put the modulus on the piece below the axis only.
+- **Area between curves**: solve f = g for the limits, test a point to see which is on top, integrate **top − bottom**. If they cross inside, A = A₁ + A₂ with the top function written first in each piece — no modulus. The strip height is a difference of y-values, so the x-axis is irrelevant.
+- **Disc** V = π∫[R]²dx; **washer** V = π∫([R]² − [r]²)dx, **subtracting the squares, not the radii**; **shell** V = 2π∫x f(x)dx with **no square**. π twice, 2π once. R is the boundary **farther from the axis**. If the axis moves, **subtract the axis before squaring**. Discs and washers integrate along the axis of revolution; shells integrate **perpendicular** to it.
+- **Applications**: integrate a rate to get a total. An indefinite integral needs one data point to pin the constant; a definite one does not, because the constant cancels. F = ∫w·h(x)·L(x)dx with **w = ρg = 9800 N/m³**; W = ∫F(x)dx, building F first; TR = ∫MR dQ; K = ∫I(t)dt; equilibrium before surplus, CS = ∫[D − P₀], PS = ∫[P₀ − S]; and **∫e^(kt)dt = e^(kt)/k**.
+
+### Every slide error in the course, in one place
+
+| Week | Slide | What it prints | What is correct |
+|---|---|---|---|
+| 1 | 21 | x² "increases exponentially" | it grows **quadratically** |
+| 1 | 22 | f(x) = x + 2 gives y = 2, 1, 0 | **2, 3, 4**; the printed table is that of 2 − x |
+| 1 | 25 | "an input (called the domain)" | the **domain is the set** of inputs |
+| 2 | — | c is the vertex's y-coordinate | c is the **y-intercept** |
+| 3 | 23 | upper bound 5 − x³ | **5 + x³**; the limit is 5 either way |
+| 3 | 27 | x→∞ means "from the right" | it is **end behaviour**, not a one-sided limit |
+| 5 | 7 | (6x − 5); final answer 8x³ + 24x² − 32x − 30 | (6x² − 5); **32x³ + 36x² − 40x − 30** |
+| 5 | 8 | (cos x + sin x)/cos²x | **(cos x + x sin x)/cos²x** |
+| 5 | 20 | ³√(x⁵) = x^(3/5) | the question is ⁵√(x³) = x^(3/5) |
+| 5 | 21 | second answer labelled ∂f/∂x | it is **∂f/∂y** |
+| 6 | 13–14 | numerator … 40x¹⁰ + 568x⁸ + 416x⁶ + 240x⁴ … | **24x¹⁰ + 204x⁸ + 336x⁶ + 204x⁴** |
+| 7 | 13 | − 6∫₋₁⁵ x dx | − 6∫₋₁⁵ dx |
+| 8 | 8 | ∫2xe^(x²)dx = eᵘ + C | **e^(x²) + C** |
+| 8 | 5 | sin⁻¹ + C, tan⁻¹ + C, sec⁻¹ + C | write the argument (x) |
+| 9 | 9 | −1/(3x³) → −∞ as c → 0⁻ | → **+∞**; both pieces run to +∞ |
+| 9 | 11 | lim x→∞ ∫₂^∞ | lim **t**→∞ ∫₂**ᵗ** |
+| 10 | 16 | the two area formulas without conditions | quote slides 4, 8 and 12, **with** f ≥ 0 and f ≥ g |
+| 11 | 13 | shells integrate **parallel** to the axis | **perpendicular** to it |
+| 11 | 10 | headed DISC METHOD | it is a **washer** example |
+| 12 | 7 | ρg = 9800 N/m² | **N/m³** |
+| 12 | 10 | capital growth = 4 | **76** |
+| 12 | 14 | t = ln(1.75)/0.0035 | /**0.035**, giving 16 years and 2021 |
+
+### The tasks she sets and never answers
+
+These are the likeliest exam templates in the whole course, because she wrote them as questions and left them open.
+
+| Week | Task | Answer |
+|---|---|---|
+| 1 | domain and range of h(x) = √(x + 2) − 8 | D = [−2, ∞), R = [−8, ∞) |
+| 3 | lim x→3 (x³ − 27)/(x − 3) | 27 |
+| 3 | lim x→4 (1/√x − 1/2)/(x − 4) | −1/16 |
+| 5 | derivative of (2x − 4)² | 8x − 16 |
+| 5 | dy/dx for x = t⁴, y = 7t² − 5t | (14t − 5)/(4t³) |
+| 6 | second derivative of cos(3x) | −9cos(3x) |
+| 6 | third derivative of xeˣ at 2 | 5e² ≈ 36.95 |
+| 7 | ∫(2x² − 6x − 3)dx | (2/3)x³ − 3x² − 3x + c |
+| 7 | ∫₋₁²(7x − 5)dx | −4.5 |
+| 8 | ∫₀¹ x eˣ dx | 1 |
+| 8 | ∫x ln x dx | (x²/2)ln x − x²/4 + C |
+| 8 | ∫√(1 + x²)dx | (1/2)[x√(1 + x²) + ln(x + √(1 + x²))] + C |
+| 8 | ∫[(5x + 7)/((x − 1)(x + 3))]dx | 3ln(x − 1) + 2ln(x + 3) + C |
+| 9 | ∫₁^∞ dx/√(x⁶ + 1) | converges, by comparison with 1/x³ |
+| 10 | area between 6x − x² and the x-axis | 36 |
+| 10 | area between x² and 2 − x² on [0, 2] | 4 |
+| 10 | area between cos x and 2 − cos x on [0, 2π] | 4π |
+| 11 | √x about the x-axis, 1 ≤ x ≤ 4 | 15π/2 |
+| 11 | y = x² on [0, 2] about y = −1 | 176π/15 |
+| 11 | between y = x and y = x² about the y-axis | π/6 |
 
 ### Final exam checklist
 
-1. Angles in radians, never degrees.
-2. +C on every indefinite integral; never on a definite one.
-3. State "this is of the form 0/0" before using L'Hôpital.
-4. Square the function in disc and washer volumes.
-5. Multiply by the inner derivative in the chain rule.
-6. Split the integral at every axis crossing when the question says "area".
-7. Show the limit set-up for every improper integral.
-8. State which curve is on top before subtracting.
-9. Areas and distances are never negative; displacements can be.
-10. Verify any integration by differentiating your answer — ten seconds, and it catches most errors.
+1. **+ c on every indefinite integral; never on a definite one.**
+2. Substitute into **F**, not f, and take upper minus lower.
+3. Say "this is 0/0" before using L'Hôpital, and stop as soon as the form is no longer indeterminate.
+4. Pay the inner derivative in every chain rule, and put u back at the end.
+5. Quotient rule: **v u′ − u v′**, over **v squared**.
+6. Square the radius in disc and washer volumes; do not square anything in a shell.
+7. Set f(x) = 0 or f(x) = g(x) to get limits, and **test an interior point** before choosing the formula.
+8. Split at any root inside the interval; put the modulus on the piece below the axis only.
+9. Write the limit line for every improper integral, and check the interval for a discontinuity before integrating.
+10. Areas and volumes are never negative; displacements and definite integrals can be.
+11. Report square units for an area and cubic units for a volume — she does, in every example.
+12. **Verify any integration by differentiating your answer.** It is her own justification, it takes ten seconds, and it catches most of the errors above.

@@ -259,11 +259,15 @@ function findByName(n){
 }
 function others(){ return S.people.filter(function(p){ return p.id!==ME; }); }
 function meName(){ var p=findPerson(ME); return p?p.name:"?"; }
-function signIn(id){ ME = id; try{ localStorage.setItem("miva_me", id); }catch(e){} }
+/* After signing in, always start on Home. Reload keeps your tab; a new sign-in
+   should not drop the other person into whatever page you were last reading. */
+function goHome(){ TAB = "home"; QUIZ = null; MANUAL = null; BUDDY = null; try{ syncUrl(); }catch(e){} }
+
+function signIn(id){ ME = id; try{ localStorage.setItem("miva_me", id); }catch(e){} goHome(); }
 function signOut(){
   ME = null;
   try{ localStorage.removeItem("miva_me"); }catch(e){}
-  TAB="home"; render();
+  goHome(); render();
 }
 function claimSlot(name){
   var n = String(name||"").trim();
@@ -411,7 +415,7 @@ function topicBlock(parent, text, cls){
 }
 var FLAME = '<svg width="13" height="15" viewBox="0 0 13 15" fill="currentColor" aria-hidden="true"><path d="M6.6 0S7.4 2.4 5.6 4.3C3.9 6.1 1 7.3 1 10.1A5.5 5.5 0 0 0 6.5 15 5.5 5.5 0 0 0 12 10.1c0-2.6-1.6-3.8-2.4-5.5-.3 1-.9 1.6-1.6 2 .6-2.4-.5-5-1.4-6.6Z"/></svg>';
 
-var COG = '<svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="2.3"/><path d="M8 1.2v1.9M8 12.9v1.9M14.8 8h-1.9M3.1 8H1.2M12.8 3.2l-1.3 1.3M4.5 11.5l-1.3 1.3M12.8 12.8l-1.3-1.3M4.5 4.5 3.2 3.2"/></svg>';
+var COG = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" aria-hidden="true"><path d="M 8.00 2.85 L 8.69 2.90 L 9.66 1.10 L 11.71 1.95 L 11.12 3.91 L 11.64 4.36 L 12.09 4.88 L 14.05 4.29 L 14.90 6.34 L 13.10 7.31 L 13.15 8.00 L 13.10 8.69 L 14.90 9.66 L 14.05 11.71 L 12.09 11.12 L 11.64 11.64 L 11.12 12.09 L 11.71 14.05 L 9.66 14.90 L 8.69 13.10 L 8.00 13.15 L 7.31 13.10 L 6.34 14.90 L 4.29 14.05 L 4.88 12.09 L 4.36 11.64 L 3.91 11.12 L 1.95 11.71 L 1.10 9.66 L 2.90 8.69 L 2.85 8.00 L 2.90 7.31 L 1.10 6.34 L 1.95 4.29 L 3.91 4.88 L 4.36 4.36 L 4.88 3.91 L 4.29 1.95 L 6.34 1.10 L 7.31 2.90 Z"/><circle cx="8" cy="8" r="2.55"/></svg>';
 
 /* ---------- confetti ---------- */
 function celebrate(){
@@ -849,8 +853,14 @@ function askBuddy(){
     method:"POST", headers:{"Content-Type":"application/json"},
     body: JSON.stringify({
       question: BUDDY.text, course: c.course, week: c.w,
-      topic: c.chk ? c.chk.topic : "", missed: c.missed,
-      asked: BUDDY.qs && BUDDY.qs[0] ? BUDDY.qs[0].q : ""
+      topic: c.chk ? c.chk.topic : "",
+      /* Only send what he got wrong when he opened this FROM a missed concept.
+         Sending it on a free question made the model answer the miss instead of
+         the question, and open by grading working it cannot see. */
+      missed: BUDDY.concept ? c.missed : [],
+      asked: BUDDY.concept && BUDDY.qs && BUDDY.qs[0] ? BUDDY.qs[0].q : "",
+      chose: "", right: (BUDDY.concept && BUDDY.qs && BUDDY.qs[0] && BUDDY.qs[0].options)
+             ? BUDDY.qs[0].options[BUDDY.qs[0].answerIndex] : ""
     })
   }).then(function(r){ return r.json().then(function(d){ return {s:r.status, d:d}; }); })
     .then(function(x){
@@ -865,29 +875,6 @@ function askBuddy(){
     })
     .catch(function(){ BUDDY.asking = false; BUDDY.err = "Couldn't reach the server."; render(); });
 }
-function copyForClaude(){
-  var c = buddyContext();
-  var parts = [
-    "I'm a 100-level student at Miva Open University. Course: " + (NAMES[c.course]||c.course) + ", week " + c.w + ".",
-    c.chk && c.chk.topic ? "\nTonight's session covered:\n" + c.chk.topic : "",
-    c.missed.length ? "\nI got these wrong:\n- " + c.missed.join("\n- ") : "",
-    BUDDY.qs && BUDDY.qs.length ? "\nThe question I missed:\n" + BUDDY.qs[0].q : "",
-    "\nMy question: " + (BUDDY.text || "Explain the concept above as simply as you can, then quiz me on it.")
-  ].filter(Boolean).join("\n");
-  var done = function(){ toast("Copied — paste it into Claude"); };
-  try{
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(parts).then(done, function(){ toast("Couldn't copy"); });
-      return;
-    }
-  }catch(e){}
-  var ta = document.createElement("textarea");
-  ta.value = parts; ta.style.cssText = "position:fixed;opacity:0";
-  document.body.appendChild(ta); ta.select();
-  try{ document.execCommand("copy"); done(); }catch(e){ toast("Couldn't copy"); }
-  ta.remove();
-}
-
 function buddyButton(root){
   var ctx = buddyContext();
   var b = el("button","buddybtn"+((ctx.missed && ctx.missed.length) ? " nudge" : ""));
@@ -957,14 +944,13 @@ function buddyPanel(root){
     });
     if(BUDDY.asking) go.setAttribute("disabled","");
     ar.appendChild(go);
-    ar.appendChild(btn("act ghost","Copy for Claude", copyForClaude));
     body.appendChild(ar);
 
     if(BUDDY.err){
       var e1 = el("div","bcard");
       e1.style.borderLeft = "3px solid var(--fast)";
       e1.appendChild(el("div","bw", esc(BUDDY.err)));
-      e1.appendChild(el("p","muted","<br>Use <b>Copy for Claude</b> instead — it puts the question and all of tonight's context on your clipboard, ready to paste into the Claude app."));
+      e1.appendChild(el("p","muted","<br>The concepts and video searches below still work — they need no key at all."));
       body.appendChild(e1);
     }
     if(BUDDY.answer){

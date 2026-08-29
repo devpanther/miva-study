@@ -20,19 +20,19 @@ D. the magnetic force is too weak, relative to the electric force, to do appreci
 
 **3.** A proton travelling due **north** enters a uniform magnetic field that also points due **north**. It:
 A. travels in a circle of radius mv/qB in a horizontal plane
-B. continues in a straight line at unchanged speed
-C. is deflected vertically upward, since qvB is greatest when v and B are aligned
-D. decelerates uniformly, the field opposing its motion
+B. is deflected vertically upward, since qvB is greatest when v and B are aligned
+C. decelerates uniformly, the field opposing its motion
+D. continues in a straight line at unchanged speed
 
 **4.** An electron and a proton are injected with the **same velocity** into the same uniform magnetic field, perpendicular to it. Compared with the proton's circular path, the electron's path has:
 A. a smaller radius and the same sense of circulation
 B. a smaller radius and the opposite sense of circulation
-C. the same radius and the opposite sense of circulation
+C. the same radius as the proton and the opposite sense of circulation
 D. a larger radius and the same sense of circulation
 
 **5.** A beam passes undeflected through crossed fields E = 6.0×10⁴ V/m and B = 0.15 T. The speed of the particles that get through is:
-A. 9.0×10³ m/s
-B. 4.0×10⁵ m/s
+A. 4.0×10⁵ m/s
+B. 9.0×10³ m/s
 C. 2.5×10⁻⁶ m/s
 D. indeterminate, since the charge and mass are not given
 
@@ -44,12 +44,12 @@ D. 51 N
 
 **7.** A **positive** charge moves vertically **upward** through a horizontal magnetic field pointing due **north**. The magnetic force on it is directed:
 A. due east
-B. due west
-C. vertically upward, along the velocity
-D. due north, along the field
+B. vertically upward, along the velocity
+C. due north, along the field
+D. due west
 
 **8.** "The magnetic force does no work" implies that, for a charge in a uniform magnetic field:
-A. its momentum is constant
+A. its momentum is constant in both magnitude and direction
 B. its speed is constant, though its momentum is not
 C. it must travel in a straight line
 D. its acceleration is zero
@@ -70,7 +70,7 @@ D. 1 C/(N·m)
 A. along ±x, in the direction of travel
 B. along ±y, parallel to E
 C. along ±z, perpendicular to both E and the direction of travel
-D. in no fixed direction; only E has a definite orientation
+D. in no fixed direction at all; only E has a definite orientation in space
 
 **12.** A microwave oven operates at 2.45 GHz. The wavelength of the radiation is:
 A. 12.2 cm
@@ -92,15 +92,15 @@ D. 8.17 m
 
 **2. C** — *F_B ⊥ v ⇒ P = F·v = 0.* Work is ∫F·dl, and dl is along v, so a force permanently perpendicular to v contributes nothing at any instant: the speed, and hence the kinetic energy, cannot change. A is a vague energy-bookkeeping story with no mechanism, and would equally forbid the (real) work done by electric fields. B invokes induction, which requires a *changing* flux and is irrelevant to a static field — and if a cancellation were the reason, the result would fail whenever no induced field existed. D makes the result quantitative and therefore defeasible: a strong enough field would then do work. The truth is exact and geometric, not a matter of size.
 
-**3. B** — *F = qvB sin θ with θ = 0 gives zero force.* v ∥ B means v × B = 0: no magnetic force at all, so the proton sails straight on at constant velocity. This is why charged particles in space spiral **along** field lines rather than across them. A applies r = mv/qB without checking that the formula assumes v ⊥ B. C is the sin/cos inversion — the force is greatest when v ⊥ B and zero when they are aligned. D imagines a retarding force; the magnetic force never changes speed even when it is non-zero.
+**3. D** — *F = qvB sin θ with θ = 0 gives zero force.* v ∥ B means v × B = 0: no magnetic force at all, so the proton sails straight on at constant velocity. This is why charged particles in space spiral **along** field lines rather than across them. A applies r = mv/qB without checking that the formula assumes v ⊥ B. B is the sin/cos inversion — the force is greatest when v ⊥ B and zero when they are aligned. C imagines a retarding force; the magnetic force never changes speed even when it is non-zero.
 
 **4. B** — *r = mv/(qB), and the sign of q sets the sense.* |q| is the same for both, but m_e is about 1/1836 of m_p, so the electron's radius is smaller by that factor. Its charge is negative, so **F = qv × B** points the opposite way and it circles the opposite way round. A gets the size right and the sense wrong — the commonest half-answer, from remembering the formula but not that q is signed. C confuses the *period's* independence of speed with a supposed independence of mass; the radius is proportional to m. D inverts the mass dependence, as though a light particle were harder to bend.
 
-**5. B** — *v = E/B, the velocity-selector condition.* Undeflected means qE = qvB, so v = E/B = (6.0×10⁴)/(0.15) = **4.0×10⁵ m/s**. A multiplies instead of dividing. C inverts, giving B/E. D is the misconception the device is built to defeat: q cancels from both sides and m never enters, so the selected speed is the same for every particle, positive or negative, light or heavy. (Mass only enters at the *next* stage, where B alone bends the beam to r = mv/qB.)
+**5. A** — *v = E/B, the velocity-selector condition.* Undeflected means qE = qvB, so v = E/B = (6.0×10⁴)/(0.15) = **4.0×10⁵ m/s**. B multiplies instead of dividing. C inverts, giving B/E. D is the misconception the device is built to defeat: q cancels from both sides and m never enters, so the selected speed is the same for every particle, positive or negative, light or heavy. (Mass only enters at the *next* stage, where B alone bends the beam to r = mv/qB.)
 
 **6. B** — *F = BIL sin θ, θ between the current and B, L in metres.* F = (0.50)(4.0)(0.60)(sin 25°) = (1.2)(0.4226) = **0.51 N**. A is 1.1 N = BIL cos 25°, the sin/cos swap. C is 1.2 N = BIL, the angle ignored altogether — the value only reached when the wire is perpendicular to the field. D is 51 N, from leaving L as 60 cm: a factor of 100, and a force that would tear the wire out of its mounting.
 
-**7. B** — *F = qv × B: up × north = west.* Taking east = x̂, north = ŷ, up = ẑ, we need ẑ × ŷ = −x̂, i.e. **due west**. By RHR-1: thumb up (v), fingers north (B), palm faces west, and the charge is positive so that is the force. A is the same calculation with the hands or the cross-product order reversed — the single commonest direction error, and it is a 180° error, not a small one. C puts F along v, which a cross product can never do. D puts F along B, likewise impossible: F ⊥ both.
+**7. D** — *F = qv × B: up × north = west.* Taking east = x̂, north = ŷ, up = ẑ, we need ẑ × ŷ = −x̂, i.e. **due west**. By RHR-1: thumb up (v), fingers north (B), palm faces west, and the charge is positive so that is the force. A is the same calculation with the hands or the cross-product order reversed — the single commonest direction error, and it is a 180° error, not a small one. B puts F along v, which a cross product can never do. C puts F along B, likewise impossible: F ⊥ both.
 
 **8. B** — *Constant speed, changing direction, therefore changing momentum.* Zero work fixes |v| and hence ½mv², but **p = mv is a vector**: its direction turns continuously round the circle, so p is not constant, and indeed reverses completely each half revolution. A conflates a scalar invariant with a vector one. C is the opposite error — no work does not mean no force; there is a real centripetal force qvB and a real acceleration qvB/m, both perpendicular to v. D says the acceleration vanishes, which would leave the particle undeflected and make the entire topic empty.
 

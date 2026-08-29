@@ -16,7 +16,7 @@ B. converges to 0
 C. diverges to ∞
 D. converges to −1
 
-**3.** In that example, lim_{t→∞} (−te⁻ᵗ) =
+**3.** In that example, lim(t→∞) (−te⁻ᵗ) =
 A. −∞
 B. 0
 C. −1
@@ -90,13 +90,13 @@ D. nothing — −3/8 is correct
 
 **1. C.** Slide 4 gives exactly two triggers: an infinite limit of integration, or a point of discontinuity of the integrand on [a, b]. A confuses continuity with differentiability — neither is the criterion, and a discontinuity is what matters. B is irrelevant; sign has nothing to do with it (Example 1's ln-free polynomial and the −3/8 trap both involve signs without being the issue). D describes a reason to use the Comparison Test, not a definition of improper.
 
-**2. A.** ∫₀^∞ xe⁻ˣdx = lim_{t→∞}[−xe⁻ˣ − e⁻ˣ]|₀ᵗ = lim(−te⁻ᵗ − e⁻ᵗ + 1) = 0 + 0 + 1 = 1. B forgets the lower-limit contribution, which is where the 1 comes from. C is what you get by claiming −te⁻ᵗ → −∞ (or +∞) instead of applying L'Hôpital. D drops the sign when subtracting the value at 0, which is −1.
+**2. A.** ∫₀^∞ xe⁻ˣdx = lim(t→∞)[−xe⁻ˣ − e⁻ˣ]|₀ᵗ = lim(−te⁻ᵗ − e⁻ᵗ + 1) = 0 + 0 + 1 = 1. B forgets the lower-limit contribution, which is where the 1 comes from. C is what you get by claiming −te⁻ᵗ → −∞ (or +∞) instead of applying L'Hôpital. D drops the sign when subtracting the value at 0, which is −1.
 
 **3. B.** −te⁻ᵗ = −t/eᵗ is of the form −∞/∞, so L'Hôpital differentiates top and bottom: −1/eᵗ → 0. A is the standard error — reading "t → ∞" off the numerator and ignoring that the exponential in the denominator grows faster. C guesses the coefficient. D confuses an indeterminate form with a non-existent limit; the indeterminate form is what L'Hôpital exists to resolve.
 
-**4. D.** The right-hand half, lim_{b→∞}[2x³/3 − x²/2 + 3x]|₀ᵇ, runs to ∞, and clause 3 of slide 5 only lets you add the two halves **if both converge**. One divergent half ends it. A and C are the same illegal move — cancelling +∞ against −∞, which the definition forbids because each half must converge on its own. B invents a finite value from the constant term.
+**4. D.** The right-hand half, lim(b→∞)[2x³/3 − x²/2 + 3x]|₀ᵇ, runs to ∞, and clause 3 of slide 5 only lets you add the two halves **if both converge**. One divergent half ends it. A and C are the same illegal move — cancelling +∞ against −∞, which the definition forbids because each half must converge on its own. B invents a finite value from the constant term.
 
-**5. A.** 1/x⁴ is undefined at x = 0, which lies strictly inside [−1, 2], so slide 8 clause 3 applies: split at 0 and take lim_{c→0⁻} on the left and lim_{b→0⁺} on the right. B is the trap the example is built around and yields the impossible −3/8. C is a Type I tool applied to a Type II problem, and 1/x⁴ is not smaller than 1/x² near 0 anyway. D invents an infinite limit; both limits here are finite numbers.
+**5. A.** 1/x⁴ is undefined at x = 0, which lies strictly inside [−1, 2], so slide 8 clause 3 applies: split at 0 and take lim(c→0⁻) on the left and lim(b→0⁺) on the right. B is the trap the example is built around and yields the impossible −3/8. C is a Type I tool applied to a Type II problem, and 1/x⁴ is not smaller than 1/x² near 0 anyway. D invents an infinite limit; both limits here are finite numbers.
 
 **6. C.** Note 1, verbatim: converges if p > 1, diverges if p ≤ 1. A and D both put the boundary p = 1 on the convergent side, and Example 2 depends on p = 1 being **divergent**. B is the rule for the singularity at 0 — a rule this deck never states — applied at the wrong end.
 
@@ -117,6 +117,6 @@ D. nothing — −3/8 is correct
 **14.** **It converges.** Working, in the lecturer's order: for all x ≥ 1, **x⁶ + 1 ≥ x⁶**; taking square roots preserves the inequality between non-negative quantities, so **√(x⁶ + 1) ≥ √(x⁶) = x³** (the last equality holds because x ≥ 1 > 0, so x³ is positive and √(x⁶) = |x³| = x³); taking reciprocals of positive quantities **reverses** it, giving **1/√(x⁶ + 1) ≤ 1/x³**. Let **f(x) = 1/x³** and **g(x) = 1/√(x⁶ + 1)**; both are continuous and positive on [1, ∞), so **0 ≤ g(x) ≤ f(x)** for all x ≥ 1. Now ∫₁^∞ (1/x³)dx has **p = 3 > 1**, so by **Note 1** it is convergent. By **clause 1** of the Comparison Test — the big one convergent forces the small one convergent — **∫₁^∞ dx/√(x⁶ + 1) converges.** No value is claimed and none is available by this method; all that also follows is that the integral is at most ∫₁^∞ dx/x³ = 1/2.
 
 **15.** The wrong claim is the **first**: "[−1/(3x³)] → −∞ as c → 0⁻". As c approaches 0 from below, c is a small negative number, so c³ is a small negative number, 3c³ → 0⁻, and −1/(3c³) → **+∞**, not −∞. Working each piece out fully, with F(x) = −1/(3x³):
-**Left piece:** lim_{c→0⁻} F(x)|₋₁ᶜ = lim_{c→0⁻} (−1/(3c³) − (−1/(3(−1)³))) = lim_{c→0⁻} (−1/(3c³) − 1/3) = **+∞**.
-**Right piece:** lim_{b→0⁺} F(x)|_b² = lim_{b→0⁺} (−1/24 − (−1/(3b³))) = lim_{b→0⁺} (−1/24 + 1/(3b³)) = **+∞**.
+**Left piece:** lim(c→0⁻) F(x)|₋₁ᶜ = lim(c→0⁻) (−1/(3c³) − (−1/(3(−1)³))) = lim(c→0⁻) (−1/(3c³) − 1/3) = **+∞**.
+**Right piece:** lim(b→0⁺) F(x)|_b² = lim(b→0⁺) (−1/24 − (−1/(3b³))) = lim(b→0⁺) (−1/24 + 1/(3b³)) = **+∞**.
 So both pieces tend to +∞. Note that the slide's second claim, −1/(3b³) → −∞ as b → 0⁺, is true **about the expression**, but b is the **lower** limit of the right-hand integral, so that value is subtracted and the piece itself goes to +∞ — the slide's phrasing invites you to read a −∞ into the answer that is not there. The verdict is nevertheless correct: divergence only requires that a limit fail to exist as a finite number, and here neither piece has a finite limit, so **∫₋₁² dx/x⁴ is divergent** — as the slide says. Write +∞ for both pieces in a script, and say so.

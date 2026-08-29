@@ -7,10 +7,10 @@
 ## The 8 most examinable things this week
 
 1. **Two triggers, and only two (slide 4).** "The definite integral ∫ₐᵇ f(x)dx is called an improper integral if **1. At least one of the limits of integration is infinite, or 2. The integrand f(x) has one or more points of discontinuity on the interval [a, b]**." Trigger 1 is Type I, trigger 2 is Type II. Before anything else, say which one you have — and check for both.
-2. **The symbol has no meaning until you write the limit (slide 5).** ∫ₐ^∞ f(x)dx = **lim_{t→∞} ∫ₐᵗ f(x)dx**, "provided this limit exists", and ∫₋∞ᵇ f(x)dx = **lim_{t→−∞} ∫ₜᵇ f(x)dx**. You replace the infinite limit by a letter, do an ordinary definite integral, then take the limit. Marks are given for that first line.
+2. **The symbol has no meaning until you write the limit (slide 5).** ∫ₐ^∞ f(x)dx = **lim(t→∞) ∫ₐᵗ f(x)dx**, "provided this limit exists", and ∫₋∞ᵇ f(x)dx = **lim(t→−∞) ∫ₜᵇ f(x)dx**. You replace the infinite limit by a letter, do an ordinary definite integral, then take the limit. Marks are given for that first line.
 3. **Convergent / divergent, defined by the limit (slide 5).** "The improper integrals ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx are called **convergent if the corresponding limit exists** and **divergent if the limit does not exist**." Note what she is *not* saying: convergence is about the limit, not about whether the region is bounded.
 4. **Both ends infinite means split, and both halves must already converge (slide 5, item 3).** "If ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx **are convergent**, then ∫₋∞^∞ f(x)dx = ∫₋∞ᵃ f(x)dx + ∫ₐ^∞ f(x)dx." The convergence of the two halves is a **hypothesis**, not a conclusion — that is why Example 2 is allowed to stop as soon as one half runs to ∞.
-5. **Type II takes a one-sided limit into the bad endpoint (slide 8).** Discontinuity at b: ∫ₐᵇ f = **lim_{c→b⁻} ∫ₐᶜ f**. Discontinuity at a: ∫ₐᵇ f = **lim_{c→a⁺} ∫_c^b f**. The arrow direction always points *into* the interval.
+5. **Type II takes a one-sided limit into the bad endpoint (slide 8).** Discontinuity at b: ∫ₐᵇ f = **lim(c→b⁻) ∫ₐᶜ f**. Discontinuity at a: ∫ₐᵇ f = **lim(c→a⁺) ∫_c^b f**. The arrow direction always points *into* the interval.
 6. **A discontinuity strictly inside forces a split (slide 8, item 3).** "If f is continuous on [a, b] except for some c in (a, b) at which f has an infinite discontinuity, then **∫ₐᵇ f(x)dx = ∫ₐᶜ f(x)dx + ∫_c^b f(x)dx**." Type II Example 1 is built entirely on spotting that x = 0 lies inside [−1, 2].
 7. **The Comparison Test, in her lettering (slide 10).** "Let f(x) and g(x) be any two continuous functions such that **0 ≤ g(x) ≤ f(x) for all x ≥ a**. Then **1. If ∫ₐ^∞ f(x)dx is convergent, then ∫ₐ^∞ g(x)dx is convergent. 2. If ∫ₐ^∞ g(x)dx is divergent, then ∫ₐ^∞ f(x)dx is divergent**." In this deck **g is the small one and f is the big one** — the opposite of most textbooks. Learn it her way: *the big one convergent drags the small one down with it; the small one divergent drags the big one up with it.*
 8. **Note 1, the p-test (slide 11).** "The integral **∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1**." This is the only convergence fact in the deck that you are allowed to quote without working, and every one of her three comparison examples ends by quoting it. **p = 1 is on the divergent side.**
@@ -25,8 +25,8 @@ Her introduction (slide 3) states the motive for the whole week: *"Sometimes it 
 
 ## Type I improper integrals — slide 5
 
-> 1. If ∫ₐᵗ f(x)dx exists for every number **t ≥ a**, then **∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx**, provided this limit exists.
-> 2. If ∫ₜᵇ f(x)dx exists for every number **t ≤ b**, then **∫₋∞ᵇ f(x)dx = lim_{t→−∞} ∫ₜᵇ f(x)dx**, provided this limit exists.
+> 1. If ∫ₐᵗ f(x)dx exists for every number **t ≥ a**, then **∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx**, provided this limit exists.
+> 2. If ∫ₜᵇ f(x)dx exists for every number **t ≤ b**, then **∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx**, provided this limit exists.
 > The improper integrals ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx are called **convergent** if the corresponding limit exists and **divergent** if the limit does not exist.
 > 3. If ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx are convergent, then **∫₋∞^∞ f(x)dx = ∫₋∞ᵃ f(x)dx + ∫ₐ^∞ f(x)dx**.
 
@@ -38,14 +38,14 @@ Her introduction (slide 3) states the motive for the whole week: *"Sometimes it 
 
 Solution, exactly as she writes it:
 
-∫₀^∞ xe⁻ˣdx = lim_{t→∞} ∫₀ᵗ xe⁻ˣdx = lim_{t→∞} [−xe⁻ˣ − e⁻ˣ]|₀ᵗ
-= lim_{t→∞}[−te⁻ᵗ − e⁻ᵗ + 0 + e⁻⁰] = lim_{t→∞}[−te⁻ᵗ − e⁻ᵗ + 1]
+∫₀^∞ xe⁻ˣdx = lim(t→∞) ∫₀ᵗ xe⁻ˣdx = lim(t→∞) [−xe⁻ˣ − e⁻ˣ]|₀ᵗ
+= lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 0 + e⁻⁰] = lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1]
 
-"Notice that lim_{t→∞}[−te⁻ᵗ] → −∞/∞. Therefore, applying **L'Hôpital's Rule**, we have"
+"Notice that lim(t→∞)[−te⁻ᵗ] → −∞/∞. Therefore, applying **L'Hôpital's Rule**, we have"
 
-lim_{t→∞}[−te⁻ᵗ] = lim_{t→∞}[−t/eᵗ] = lim_{t→∞}[−1/eᵗ] = 0, so that
+lim(t→∞)[−te⁻ᵗ] = lim(t→∞)[−t/eᵗ] = lim(t→∞)[−1/eᵗ] = 0, so that
 
-∫₀^∞ xe⁻ˣdx = lim_{t→∞}[−te⁻ᵗ − e⁻ᵗ + 1] = (0 + 0 + 1) = **1**.
+∫₀^∞ xe⁻ˣdx = lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1] = (0 + 0 + 1) = **1**.
 
 "Therefore, ∫₀^∞ xe⁻ˣdx **converges to 1**."
 
@@ -60,8 +60,8 @@ Four moves worth naming, because each is a separate mark:
 **Determine whether ∫₋∞^∞ (2x² − x + 3)dx is convergent or divergent.**
 
 ∫₋∞^∞(2x² − x + 3)dx = ∫₋∞⁰(2x² − x + 3)dx + ∫₀^∞(2x² − x + 3)dx
-= lim_{a→−∞} ∫ₐ⁰ (2x² − x + 3)dx + lim_{b→∞} ∫₀ᵇ (2x² − x + 3)dx
-= lim_{a→−∞} [2x³/3 − x²/2 + 3x]|ₐ⁰ + lim_{b→∞} [2x³/3 − x²/2 + 3x]|₀ᵇ = **∞**
+= lim(a→−∞) ∫ₐ⁰ (2x² − x + 3)dx + lim(b→∞) ∫₀ᵇ (2x² − x + 3)dx
+= lim(a→−∞) [2x³/3 − x²/2 + 3x]|ₐ⁰ + lim(b→∞) [2x³/3 − x²/2 + 3x]|₀ᵇ = **∞**
 
 "Therefore, ∫₋∞^∞(2x² − x + 3)dx **diverges**."
 
@@ -73,8 +73,8 @@ What to copy from this example:
 
 ## Type II improper integrals — slide 8
 
-> 1. If f is continuous on the interval **[a, b)** and has an infinite discontinuity at **b**, then **∫ₐᵇ f(x)dx = lim_{c→b⁻} ∫ₐᶜ f(x)dx**.
-> 2. If f is continuous on the interval **(a, b]** and has an infinite discontinuity at **a**, then **∫ₐᵇ f(x)dx = lim_{c→a⁺} ∫_c^b f(x)dx**.
+> 1. If f is continuous on the interval **[a, b)** and has an infinite discontinuity at **b**, then **∫ₐᵇ f(x)dx = lim(c→b⁻) ∫ₐᶜ f(x)dx**.
+> 2. If f is continuous on the interval **(a, b]** and has an infinite discontinuity at **a**, then **∫ₐᵇ f(x)dx = lim(c→a⁺) ∫_c^b f(x)dx**.
 > 3. If f is continuous on **[a, b]** except for some **c in (a, b)** at which f has an infinite discontinuity, then **∫ₐᵇ f(x)dx = ∫ₐᶜ f(x)dx + ∫_c^b f(x)dx**.
 
 Read the bracket shapes: **the square bracket is the good end, the round bracket is the bad end**. In clause 1 the interval is [a, b) — b is excluded because that is where f blows up — and the moving limit creeps up to it from the left, c → b⁻. In clause 2 it is (a, b] and the limit creeps down to a from the right, c → a⁺. The one-sided arrow always points *into* the interval you are integrating over.
@@ -89,8 +89,8 @@ Read the bracket shapes: **the square bracket is the good end, the round bracket
 
 ∫₋₁²(1/x⁴)dx = ∫₋₁⁰(1/x⁴)dx + ∫₀²(1/x⁴)dx
 
-∫₋₁²(1/x⁴)dx = lim_{c→0⁻} ∫₋₁ᶜ (1/x⁴)dx + lim_{b→0⁺} ∫_b² (1/x⁴)dx
-= lim_{c→0⁻} [−1/(3x³)]|₋₁ᶜ + lim_{b→0⁺} [−1/(3x³)]|_b²
+∫₋₁²(1/x⁴)dx = lim(c→0⁻) ∫₋₁ᶜ (1/x⁴)dx + lim(b→0⁺) ∫_b² (1/x⁴)dx
+= lim(c→0⁻) [−1/(3x³)]|₋₁ᶜ + lim(b→0⁺) [−1/(3x³)]|_b²
 
 "Notice that [−1/(3x³)] → −∞ as c → 0⁻ and [−1/(3x³)] → −∞ as b → 0⁺. Therefore, ∫₋₁²(1/x⁴)dx is **divergent**."
 
@@ -120,7 +120,7 @@ Both pieces run to **+∞**, so the integral is divergent — which is what she 
 
 "For all x ≥ 2, it can be seen that since **0 ≤ cos²(x) ≤ 1**, then **cos²(x)/x² ≤ 1/x²**. Let **f(x) = 1/x²** and **g(x) = cos²(x)/x²**. Then **0 ≤ g(x) ≤ f(x)**. Now,"
 
-∫₂^∞ f(x)dx = ∫₂^∞ (1/x²)dx = lim_{t→∞} ∫₂ᵗ (1/x²)dx = (−1/∞ − (−1)/2) = **1/2**
+∫₂^∞ f(x)dx = ∫₂^∞ (1/x²)dx = lim(t→∞) ∫₂ᵗ (1/x²)dx = (−1/∞ − (−1)/2) = **1/2**
 
 "Since ∫₂^∞ (1/x²)dx is convergent, then by the comparison test, ∫₂^∞ cos²(x)/x² dx is also **convergent**."
 
@@ -131,7 +131,7 @@ Three things to take:
 - **Dividing a bounded numerator by x² gives you the bound for free.** 0 ≤ cos²x ≤ 1 ⟹ 0 ≤ cos²x/x² ≤ 1/x², because x² > 0 on [2, ∞) and dividing an inequality by a positive quantity preserves it.
 - **She only gets convergence, never a value.** The number 1/2 is the value of ∫₂^∞ dx/x², the *comparison* integral. All that follows about the original is ∫₂^∞ cos²(x)/x² dx ≤ 1/2. Writing "= 1/2" is a real error and a common one.
 
-*(Aside on the slide's second line: it is printed as "lim_{x→∞} ∫₂^∞ (1/x²)dx" — the limit variable is written as x, colliding with the variable of integration, and the upper limit still reads ∞ rather than the new letter. The corrected line, which is what is written above, is lim_{t→∞} ∫₂ᵗ (1/x²)dx. Her arithmetic, (−1/∞ − (−1)/2) = 1/2, is just [−1/x] evaluated from 2 upward and is correct.)*
+*(Aside on the slide's second line: it is printed as "lim(x→∞) ∫₂^∞ (1/x²)dx" — the limit variable is written as x, colliding with the variable of integration, and the upper limit still reads ∞ rather than the new letter. The corrected line, which is what is written above, is lim(t→∞) ∫₂ᵗ (1/x²)dx. Her arithmetic, (−1/∞ − (−1)/2) = 1/2, is just [−1/x] evaluated from 2 upward and is correct.)*
 
 ### Comparison, Example 2 (slide 12) — the divergent direction
 
@@ -183,13 +183,13 @@ Three statements. That is the whole examinable inventory of the week.
 ## Errors and misprints on the slides — name them, do not copy them
 
 1. **Slide 9, Type II Example 1 — a genuine sign error.** The slide says "[−1/(3x³)] → −∞ as c → 0⁻". It does not: as c → 0⁻, c³ → 0 from **below**, so −1/(3c³) → **+∞**. The correct statement is that the **left piece** tends to +∞ (because −1/(3c³) − 1/3 → +∞) and the **right piece** also tends to +∞ (because the value at the lower limit b is subtracted: −1/24 − (−1/(3b³)) = −1/24 + 1/(3b³) → +∞). Her conclusion, divergent, is correct. If this appears in an exam, write **+∞ for both pieces** and say the integral diverges.
-2. **Slide 11, Comparison Example 1 — a notation misprint.** The line reads "lim_{x→∞} ∫₂^∞ (1/x²)dx". The limit variable must be a new letter and it must be the integral's upper limit: **lim_{t→∞} ∫₂ᵗ (1/x²)dx**. As printed, x is simultaneously the variable of integration and the variable going to ∞, and the upper limit is already ∞ so there is nothing left to take a limit of. The value 1/2 is correct.
+2. **Slide 11, Comparison Example 1 — a notation misprint.** The line reads "lim(x→∞) ∫₂^∞ (1/x²)dx". The limit variable must be a new letter and it must be the integral's upper limit: **lim(t→∞) ∫₂ᵗ (1/x²)dx**. As printed, x is simultaneously the variable of integration and the variable going to ∞, and the upper limit is already ∞ so there is nothing left to take a limit of. The value 1/2 is correct.
 3. **Slide 5, clause 3 — a letter collision.** The hypothesis names ∫₋∞ᵇ but the conclusion splits at a: ∫₋∞^∞ f = ∫₋∞ᵃ f + ∫ₐ^∞ f. Read both as the same split point. Nothing mathematical is wrong; the letters just do not line up.
 4. **Slide 8 — c used for two different things**, the moving limit in clauses 1 and 2 and the fixed interior bad point in clause 3. Read what the letter is approaching rather than the letter itself.
 
 ## Commonly confused
 
-- **Not writing the limit.** ∫ₐ^∞ f dx = lim_{t→∞} ∫ₐᵗ f dx is the first line of every Type I answer. An answer that jumps straight to a number is unsupported even when the number is right.
+- **Not writing the limit.** ∫ₐ^∞ f dx = lim(t→∞) ∫ₐᵗ f dx is the first line of every Type I answer. An answer that jumps straight to a number is unsupported even when the number is right.
 - **Her g is the small one.** 0 ≤ g ≤ f. Most textbooks write 0 ≤ f ≤ g. Quoting the theorem with the letters swapped reverses both conclusions.
 - **The two useless directions.** *Big one convergent ⟹ small one convergent* and *small one divergent ⟹ big one divergent* are the only two. "The small one converges, so the big one does" and "the big one diverges, so the small one does" are both false, and both are the natural thing to write when you have not checked which side of the inequality your integrand is on.
 - **p = 1 diverges.** Note 1 says converges if p > 1, diverges if **p ≤ 1**. The boundary belongs to the divergent side. Example 2 turns on exactly this.

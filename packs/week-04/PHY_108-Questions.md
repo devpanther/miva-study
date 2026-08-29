@@ -87,8 +87,8 @@ d) The use of DC rather than AC supplies
 ## Answers
 
 **1. c** — KCL expresses conservation of electric charge: charge does not accumulate at a node.
-**2. a** — The lesson's stated convention: entering currents positive, leaving currents negative.
-**3. d** — I1 and I2 enter (so -I1 - I2) and I3 leaves (+I3), summing to zero.
+**2. a** — The lesson's stated convention, printed on the slide: "Current Entering is +ve", so entering currents are positive and leaving currents negative. ⚠ Note before answering Q3: the deck does not keep to its own convention — see below.
+**3. d** — This is the equation the deck actually writes, "- I1 - I2 + I3 = 0", so it is the answer to give if the marker is working from the slide. But be clear that **the slide contradicts itself**: I1 and I2 *enter* node b and I3 *leaves* it, so under the stated entering-positive convention the equation should read **+I1 + I2 - I3 = 0**. The deck's printed equation is the *leaving*-positive form. The two halves of the slide — the convention in Q2 and the equation in Q3 — cannot both stand. Either sign convention gives the same physics (I1 + I2 = I3, the result the data confirm); only the deck's pairing of the two is wrong. Quote the deck's equation, and say in one line that its sign convention is stated the opposite way round.
 **4. b** — Breadboard, two DC power supplies, five variable resistors, three ammeters, connection cables.
 **5. a** — Step 2 sets the 50 V maximum-output range before the emfs are dialled to 9 V.
 **6. c** — Both supplies are set to 9 V with the voltage dial knob.

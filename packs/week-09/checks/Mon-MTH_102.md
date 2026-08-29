@@ -1,6 +1,6 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim_{t→−∞} ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.*
+*Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Slide 4 lists exactly two conditions under which the definite integral ∫ₐᵇ f(x)dx is called improper. Which pair is it?
@@ -12,7 +12,7 @@ D. The integrand is not differentiable on [a, b], or the interval is unbounded
 **2.** What does the symbol ∫ₐ^∞ f(x)dx actually mean, according to slide 5?
 A. The area under f from a onwards, computed directly by the Fundamental Theorem
 B. F(∞) − F(a), where F is any antiderivative of f
-C. lim_{t→∞} ∫ₐᵗ f(x)dx, provided that limit exists
+C. lim(t→∞) ∫ₐᵗ f(x)dx, provided that limit exists
 D. The sum of ∫ₐ^b f(x)dx over every b greater than a
 
 **3.** On slide 5 she says the improper integrals ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx are called convergent or divergent according to what test?
@@ -27,7 +27,7 @@ B. They are a reminder that the split point must be chosen where f is continuous
 C. They are optional; the sum formula holds for any f
 D. They are a hypothesis — you may only add the two halves once both are known to converge, so a single divergent half makes the whole integral divergent
 
-**5.** Slide 8 clause 1 covers f continuous on [a, b) with an infinite discontinuity at b, and gives ∫ₐᵇ f(x)dx = lim_{c→b⁻} ∫ₐᶜ f(x)dx. Why is the limit one-sided, and from that side?
+**5.** Slide 8 clause 1 covers f continuous on [a, b) with an infinite discontinuity at b, and gives ∫ₐᵇ f(x)dx = lim(c→b⁻) ∫ₐᶜ f(x)dx. Why is the limit one-sided, and from that side?
 A. Because the moving endpoint c must stay inside the interval [a, b) where f is continuous, so it can only approach b from below
 B. Because f is only defined for x less than b anywhere on the real line
 C. Because a two-sided limit would give an answer twice as large
@@ -60,14 +60,14 @@ D. Nothing at all — this is one of the two directions the theorem does not cov
 **11.** The deck's introduction says: 'Sometimes it is difficult to find the exact value of an improper integral by antidifferentiation. However, it is still possible to determine whether an improper integral converges or diverges.' Explain what the Comparison Test does and does not give you, using her Example 1 on ∫₂^∞ cos²(x)/x² dx.
 *(short answer)*
 
-**12.** Type I Example 1 reaches lim_{t→∞}[−te⁻ᵗ − e⁻ᵗ + 1] and the lecturer pauses to apply L'Hôpital's Rule. Explain what needed resolving, how she resolves it, and what the common wrong answer is.
+**12.** Type I Example 1 reaches lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1] and the lecturer pauses to apply L'Hôpital's Rule. Explain what needed resolving, how she resolves it, and what the common wrong answer is.
 *(short answer)*
 
 ## Answers
 
 **1. A** — Her definition has one clause about the limits of integration and one about the integrand: infinite limit (Type I), or a discontinuity somewhere on [a, b] (Type II). Option 2 imports sign, which is irrelevant — plenty of proper integrals are negative. Option 3 confuses a reason to reach for the Comparison Test with the definition; ∫₀^∞ xe⁻ˣdx has a perfectly ordinary antiderivative and is still improper. Option 4 swaps continuity for differentiability; the definition only asks about discontinuity.
 
-**2. C** — She defines it: if ∫ₐᵗ f(x)dx exists for every t ≥ a, then ∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx, provided this limit exists. You replace ∞ by a letter, do an ordinary definite integral, then take the limit — and the first line is worth marks on its own. Option 1 skips the definition and applies the Fundamental Theorem where it does not apply. Option 2 treats ∞ as a number you can substitute into F; it is not one. Option 4 invents an infinite sum, a different object altogether.
+**2. C** — She defines it: if ∫ₐᵗ f(x)dx exists for every t ≥ a, then ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx, provided this limit exists. You replace ∞ by a letter, do an ordinary definite integral, then take the limit — and the first line is worth marks on its own. Option 1 skips the definition and applies the Fundamental Theorem where it does not apply. Option 2 treats ∞ as a number you can substitute into F; it is not one. Option 4 invents an infinite sum, a different object altogether.
 
 **3. B** — Her wording is exact: convergent if the corresponding limit exists, divergent if it does not. Option 1 names a necessary-looking condition that is not sufficient — 1/x tends to 0 and ∫₁^∞ dx/x still diverges by Note 1 with p = 1. Option 3 is the intuition students carry in and it is wrong in both directions: the region under 1/x² from 1 onwards is unbounded in extent yet the integral converges. Option 4 has nothing to do with it; cos²(x)/x² is positive and convergent, 1/x is positive and divergent.
 
@@ -83,7 +83,7 @@ D. Nothing at all — this is one of the two directions the theorem does not cov
 
 **9.** A good answer reproduces the hypothesis first — f and g continuous with 0 ≤ g(x) ≤ f(x) for all x ≥ a — then both clauses: if ∫ₐ^∞ f(x)dx is convergent then ∫ₐ^∞ g(x)dx is convergent; if ∫ₐ^∞ g(x)dx is divergent then ∫ₐ^∞ f(x)dx is divergent. It should say clearly that in this deck g is the SMALLER function and f is the LARGER one, which is the reverse of most textbooks, and offer a memory hook such as: the big one convergent drags the small one down with it, the small one divergent drags the big one up with it. It should also note that 0 ≤ g is part of the hypothesis, not decoration — without non-negativity the areas can cancel and the argument collapses.
 
-**10.** A good answer goes back to slide 4: an integral is improper if a limit is infinite OR the integrand has a point of discontinuity on the interval. Here the limits −1 and 2 are finite, so trigger 1 does not apply — but 1/x⁴ is undefined at x = 0, and 0 lies strictly between −1 and 2, so trigger 2 does. That makes it Type II with an INTERIOR discontinuity, so slide 8 clause 3 applies: split as ∫₋₁⁰ + ∫₀², then take lim_{c→0⁻} on the left piece and lim_{b→0⁺} on the right. The answer should stress that the integral looks completely ordinary on the page and the only way to spot it is to check the zeros of the denominator against the interval before integrating, and can add the consequence of not doing so: the Fundamental Theorem applied straight through returns −3/8, a negative number for a strictly positive integrand.
+**10.** A good answer goes back to slide 4: an integral is improper if a limit is infinite OR the integrand has a point of discontinuity on the interval. Here the limits −1 and 2 are finite, so trigger 1 does not apply — but 1/x⁴ is undefined at x = 0, and 0 lies strictly between −1 and 2, so trigger 2 does. That makes it Type II with an INTERIOR discontinuity, so slide 8 clause 3 applies: split as ∫₋₁⁰ + ∫₀², then take lim(c→0⁻) on the left piece and lim(b→0⁺) on the right. The answer should stress that the integral looks completely ordinary on the page and the only way to spot it is to check the zeros of the denominator against the interval before integrating, and can add the consequence of not doing so: the Fundamental Theorem applied straight through returns −3/8, a negative number for a strictly positive integrand.
 
 **11.** A good answer separates the verdict from the number. In Example 1 she bounds 0 ≤ cos²(x) ≤ 1, divides by the positive x² to get 0 ≤ cos²(x)/x² ≤ 1/x², sets f = 1/x² and g = cos²(x)/x², evaluates ∫₂^∞ dx/x² = 1/2, and concludes by clause 1 that the original converges. The 1/2 is the value of the COMPARISON integral, not of the original — cos²x has no elementary antiderivative in this combination, which is why comparison was needed. All that follows about the original is that it converges and is at most 1/2. Writing ∫₂^∞ cos²(x)/x² dx = 1/2 is a genuine error. The answer should also note that squaring the cosine is what makes 0 ≤ g hold; with cos x itself the hypothesis fails.
 

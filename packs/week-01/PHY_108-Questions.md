@@ -102,4 +102,4 @@ d) −6 %, meaning the observed value is below the reference
 **12. d** — (4.7 − 5.0)/5.0 × 100 = −6 %; the negative sign means observed is below reference.
 **13.** Hooke: plot F (y) against x (x-axis), slope = k, intercept 0. Coulomb: plot F (y) against 1/r² (x-axis), slope = kq₁q₂, intercept 0 — in both cases the slope carries the constant of proportionality.
 **14.** Systematic = consistent instrument failure/bias, e.g. a zero error on a micrometer; it is the same every time, so averaging does not remove it (only calibration or subtracting the zero error does). Random = unpredictable, inconsistent factors, e.g. reaction-time scatter when timing oscillations; averaging repeated readings does reduce it.
-**15.** Gradient = (3.66 − 1.24)/(0.90 − 0.30) = 2.42/0.60 = 4.03 s² m⁻²; g = 4π²/4.03 = 39.478/4.03 = 9.80 m s⁻²; percentage error = (9.81 − 9.80)/9.81 × 100 ≈ 0.1 %.
+**15.** Gradient = (3.66 − 1.24)/(0.90 − 0.30) = 2.42/0.60 = 4.03 s² m⁻¹; g = 4π²/4.03 = 39.478/4.03 = 9.80 m s⁻²; percentage error = (9.81 − 9.80)/9.81 × 100 ≈ 0.1 %.

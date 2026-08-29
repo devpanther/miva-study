@@ -8,7 +8,7 @@
 
 The limit of f at a is fixed entirely by the values of f at points close to a, and never by f(a). That is why (x² − 4)/(x − 2) has limit 4 at x = 2 although the function has no value there, and it is why cancelling the factor (x − 2) is legitimate rather than a fudge.
 
-**Why it goes wrong.** Students read lim_{x→a} f(x) as an instruction to substitute a into f, so the limit becomes, in their heads, a slow way of computing f(a). The model survives because for polynomials, and for rational functions whose denominator is non-zero at a, the two genuinely coincide — and those are most of the examples they see. It breaks only at the holes, jumps and 0/0 forms that this topic exists to handle.
+**Why it goes wrong.** Students read lim(x→a) f(x) as an instruction to substitute a into f, so the limit becomes, in their heads, a slow way of computing f(a). The model survives because for polynomials, and for rational functions whose denominator is non-zero at a, the two genuinely coincide — and those are most of the examples they see. It breaks only at the holes, jumps and 0/0 forms that this topic exists to handle.
 
 1. Why does the definition insist on 0 < |x − a| rather than just |x − a| < δ?
 2. Why can (x² − 4)/(x − 2) have a limit of 4 at x = 2 when the function has no value at x = 2?
@@ -21,11 +21,11 @@ The limit of f at a is fixed entirely by the values of f at points close to a, a
 - It uses that to justify cancellation: the reduced function agrees with the original at every x except a, and since limits never look at a, the two functions must have the same limit there.
 - It separates limit from value with a concrete case of each kind — a hole, where the limit exists but f(a) does not, and a jump such as |x|/x at 0, where the one-sided limits disagree so no limit exists at all — and it names continuity as the extra demand that f(a) exists and equals the limit.
 
-**Worked example.** Evaluate lim_{x→2} (x² − 4)/(x − 2).
+**Worked example.** Evaluate lim(x→2) (x² − 4)/(x − 2).
 1. Substitute: (4 − 4)/(2 − 2) = 0/0 — indeterminate, so substitution is unavailable and x = 2 is not in the domain.
 2. Factor the numerator as a difference of squares: x² − 4 = (x − 2)(x + 2).
 3. Cancel: for every x ≠ 2, (x − 2)(x + 2)/(x − 2) = x + 2. The cancellation is valid precisely because the limit process only uses x ≠ 2, where (x − 2)/(x − 2) is genuinely 1.
-4. The reduced function x + 2 is a polynomial, hence continuous, so lim_{x→2} (x + 2) = 4. **The limit is 4.**
+4. The reduced function x + 2 is a polynomial, hence continuous, so lim(x→2) (x + 2) = 4. **The limit is 4.**
 5. Interpret: f(2) does not exist, so f is not continuous at 2; but the limit does exist, so the discontinuity is **removable** — defining f(2) = 4 patches the hole.
 6. Cross-check with L'Hôpital: differentiating numerator and denominator separately gives 2x/1 = 4 at x = 2 — the same answer, for the same reason, namely that both routes strip out the common vanishing factor (x − 2).
 

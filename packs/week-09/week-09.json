@@ -8,7 +8,7 @@
    "day": "Mon",
    "deep": {
     "course": "MTH_102",
-    "topic": "Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim_{t→−∞} ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.",
+    "topic": "Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.",
     "checkFile": "checks/Mon-MTH_102.md"
    },
    "fast": {
@@ -32,7 +32,7 @@
    "day": "Wed",
    "deep": {
     "course": "COS_102",
-    "topic": "Boolean expressions and control flow as concepts: simple statements versus blocks and why a block counts as a single statement, what makes a value true in C, what a Boolean expression evaluates to, the truth tables for &&, || and ! with De Morgan's laws, operator precedence, short-circuit evaluation and its effect on side effects, and the exact entry condition and pass count of if, if-else, if-else-if, switch, while, do-while, for and goto.",
+    "topic": "Boolean expressions, statements and control flow as concepts, exactly as the two decks give them: what makes a value true in C and what a comparison returns, the definitions of a simple statement and of a block and why a block counts as a single statement, why blocks exist and where they are used, programme control and branching with unconditional versus conditional, the deck's count of the decision making statements and the switch it teaches outside that count, and the entry condition of if, if-else, if-else-if, switch, while, do-while and for.",
     "checkFile": "checks/Wed-COS_102.md"
    },
    "fast": {
@@ -44,7 +44,7 @@
    "day": "Thu",
    "deep": {
     "course": "MTH_102",
-    "topic": "Problems-only session on Week 9. Evaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ; split ∫₋∞^∞ and stop at the first divergent half; split ∫₋₁² dx/x⁴ at the interior discontinuity and get the signs right; and run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p — on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.",
+    "topic": "Problems-only session on Week 9. Evaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ; split ∫₋∞^∞ and stop at the first divergent half; split ∫₋₁² dx/x⁴ at the interior discontinuity and get the signs right; and run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p — on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.",
     "checkFile": "checks/Thu-MTH_102.md"
    },
    "fast": {
@@ -68,7 +68,7 @@
    "day": "Sat",
    "deep": {
     "course": "COS_102",
-    "topic": "Code work only: tracing if, if-else, if-else-if, switch, while, do-while and for by hand to state exact output, counting loop passes and knowing what a control variable holds after a loop ends, and finding the four faults that compile in silence - the off-by-one condition, the dangling else, '=' written for '==' (and '>' for '>='), and a loop condition that never becomes false.",
+    "topic": "Code work only: tracing if-else, if-else-if chains, switch, while, do-while, for and goto by hand to state exact output, counting loop passes and knowing what a control variable holds after a loop ends, counting statements on one line, and finding the two faults that compile in silence - '=' written for '==', and a construct given several statements with no curly brackets to make them into a block.",
     "checkFile": "checks/Sat-COS_102.md"
    },
    "fast": {
@@ -209,7 +209,7 @@
    "day": "Mon",
    "course": "MTH_102",
    "slot": "deep",
-   "topic": "Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim_{t→−∞} ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.",
+   "topic": "Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.",
    "maxScore": 12,
    "questions": [
     {
@@ -231,12 +231,12 @@
      "options": [
       "The area under f from a onwards, computed directly by the Fundamental Theorem",
       "F(∞) − F(a), where F is any antiderivative of f",
-      "lim_{t→∞} ∫ₐᵗ f(x)dx, provided that limit exists",
+      "lim(t→∞) ∫ₐᵗ f(x)dx, provided that limit exists",
       "The sum of ∫ₐ^b f(x)dx over every b greater than a"
      ],
      "answerIndex": 2,
      "concept": "The infinite limit is defined by a limit, not evaluated directly",
-     "why": "She defines it: if ∫ₐᵗ f(x)dx exists for every t ≥ a, then ∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx, provided this limit exists. You replace ∞ by a letter, do an ordinary definite integral, then take the limit — and the first line is worth marks on its own. Option 1 skips the definition and applies the Fundamental Theorem where it does not apply. Option 2 treats ∞ as a number you can substitute into F; it is not one. Option 4 invents an infinite sum, a different object altogether."
+     "why": "She defines it: if ∫ₐᵗ f(x)dx exists for every t ≥ a, then ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx, provided this limit exists. You replace ∞ by a letter, do an ordinary definite integral, then take the limit — and the first line is worth marks on its own. Option 1 skips the definition and applies the Fundamental Theorem where it does not apply. Option 2 treats ∞ as a number you can substitute into F; it is not one. Option 4 invents an infinite sum, a different object altogether."
     },
     {
      "type": "mcq",
@@ -266,7 +266,7 @@
     },
     {
      "type": "mcq",
-     "q": "Slide 8 clause 1 covers f continuous on [a, b) with an infinite discontinuity at b, and gives ∫ₐᵇ f(x)dx = lim_{c→b⁻} ∫ₐᶜ f(x)dx. Why is the limit one-sided, and from that side?",
+     "q": "Slide 8 clause 1 covers f continuous on [a, b) with an infinite discontinuity at b, and gives ∫ₐᵇ f(x)dx = lim(c→b⁻) ∫ₐᶜ f(x)dx. Why is the limit one-sided, and from that side?",
      "options": [
       "Because the moving endpoint c must stay inside the interval [a, b) where f is continuous, so it can only approach b from below",
       "Because f is only defined for x less than b anywhere on the real line",
@@ -326,7 +326,7 @@
      "type": "short",
      "q": "Explain why ∫₋₁² dx/x⁴ is an improper integral at all, given that both its limits of integration are finite numbers, and say what the deck requires you to do about it.",
      "concept": "Recognising a Type II integral disguised as an ordinary one",
-     "why": "A good answer goes back to slide 4: an integral is improper if a limit is infinite OR the integrand has a point of discontinuity on the interval. Here the limits −1 and 2 are finite, so trigger 1 does not apply — but 1/x⁴ is undefined at x = 0, and 0 lies strictly between −1 and 2, so trigger 2 does. That makes it Type II with an INTERIOR discontinuity, so slide 8 clause 3 applies: split as ∫₋₁⁰ + ∫₀², then take lim_{c→0⁻} on the left piece and lim_{b→0⁺} on the right. The answer should stress that the integral looks completely ordinary on the page and the only way to spot it is to check the zeros of the denominator against the interval before integrating, and can add the consequence of not doing so: the Fundamental Theorem applied straight through returns −3/8, a negative number for a strictly positive integrand."
+     "why": "A good answer goes back to slide 4: an integral is improper if a limit is infinite OR the integrand has a point of discontinuity on the interval. Here the limits −1 and 2 are finite, so trigger 1 does not apply — but 1/x⁴ is undefined at x = 0, and 0 lies strictly between −1 and 2, so trigger 2 does. That makes it Type II with an INTERIOR discontinuity, so slide 8 clause 3 applies: split as ∫₋₁⁰ + ∫₀², then take lim(c→0⁻) on the left piece and lim(b→0⁺) on the right. The answer should stress that the integral looks completely ordinary on the page and the only way to spot it is to check the zeros of the denominator against the interval before integrating, and can add the consequence of not doing so: the Fundamental Theorem applied straight through returns −3/8, a negative number for a strictly positive integrand."
     },
     {
      "type": "short",
@@ -336,7 +336,7 @@
     },
     {
      "type": "short",
-     "q": "Type I Example 1 reaches lim_{t→∞}[−te⁻ᵗ − e⁻ᵗ + 1] and the lecturer pauses to apply L'Hôpital's Rule. Explain what needed resolving, how she resolves it, and what the common wrong answer is.",
+     "q": "Type I Example 1 reaches lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1] and the lecturer pauses to apply L'Hôpital's Rule. Explain what needed resolving, how she resolves it, and what the common wrong answer is.",
      "concept": "Why −te⁻ᵗ tends to 0 and not to −∞",
      "why": "A good answer identifies the problem: as t → ∞ the factor −t tends to −∞ while e⁻ᵗ tends to 0, so −te⁻ᵗ is an indeterminate product. Rewriting e⁻ᵗ as 1/eᵗ turns it into −t/eᵗ, which the slide labels −∞/∞ — a quotient of two quantities both running to infinity, so L'Hôpital's Rule applies. Differentiating numerator and denominator gives −1/eᵗ, and since eᵗ → ∞ this tends to 0. Hence the whole bracket tends to 0 + 0 + 1 = 1 and the integral converges to 1. The common wrong answer is to read −t → −∞ off the front and declare the limit −∞ (hence divergence); the point is that the exponential in the denominator grows faster than any polynomial, so it wins. A good answer may also note that the +1 comes from subtracting the value of −xe⁻ˣ − e⁻ˣ at x = 0, which is −1."
     }
@@ -367,13 +367,13 @@
      "q": "A charged particle moves through a uniform magnetic field in such a way that the magnetic force on it is a maximum. It follows that:",
      "options": [
       "its velocity is parallel to B, the two vectors reinforcing each other",
-      "its velocity is perpendicular to B, and the force is perpendicular to both v and B",
       "its velocity is perpendicular to B, and the force therefore lies along B",
+      "its velocity is perpendicular to B, and the force is perpendicular to both v and B",
       "its velocity is at 45 degrees to B, the angle that balances the sine and cosine factors"
      ],
-     "answerIndex": 1,
+     "answerIndex": 2,
      "concept": "Maximum force at theta = 90 degrees, with F still perpendicular to both vectors",
-     "why": "sin(theta) peaks at 90 degrees, so the force is greatest when v is perpendicular to B, and F = q*v cross B is then perpendicular to the plane containing them - perpendicular to v, hence no work, and perpendicular to B. (a) has the angle exactly backwards; parallel vectors give zero force. (c) is the sharpest distractor: right angle, wrong direction - v cross B is perpendicular to B by construction and can never lie along it. (d) invents a compromise angle by analogy with projectile range; there is no cosine factor in F = q*v*B*sin(theta) to balance."
+     "why": "sin(theta) peaks at 90 degrees, so the force is greatest when v is perpendicular to B, and F = q*v cross B is then perpendicular to the plane containing them - perpendicular to v, hence no work, and perpendicular to B. (a) has the angle exactly backwards; parallel vectors give zero force. (b) is the sharpest distractor: right angle, wrong direction - v cross B is perpendicular to B by construction and can never lie along it. (d) invents a compromise angle by analogy with projectile range; there is no cosine factor in F = q*v*B*sin(theta) to balance."
     },
     {
      "type": "mcq",
@@ -406,13 +406,13 @@
      "q": "The period T = 2*pi*m/(qB) of a charged particle's circular orbit does not depend on its speed. This is because:",
      "options": [
       "the magnetic force does no work, so no property of the motion can change",
-      "a faster particle sweeps a proportionally larger circle, and the extra path length exactly offsets the extra speed",
+      "the speed cancels because it enters the centripetal expression squared and the magnetic force once",
       "the period is fixed by the field alone, and the field has been specified as uniform",
-      "the speed cancels because it enters the centripetal expression squared and the magnetic force once"
+      "a faster particle sweeps a proportionally larger circle, and the extra path length exactly offsets the extra speed"
      ],
-     "answerIndex": 1,
+     "answerIndex": 3,
      "concept": "Circumference and speed are both proportional to v, so they cancel (isochronism)",
-     "why": "r = m*v_perp/(qB) grows in exact proportion to the speed, so the circumference does too, and T = 2*pi*r/v_perp = 2*pi*m/(qB) has no v in it: a faster particle travels further and proportionately faster, arriving at the same moment - which is what lets a cyclotron run at one fixed frequency. (a) is a true statement used as a non sequitur: no-work fixes the speed of a given particle and says nothing about comparing particles of different speeds. (c) is empty - the field is uniform in both cases, and T also depends on m and q. (d) is a pseudo-derivation: q*v*B = m*v^2/r cancels one power of v, leaving r proportional to v, and the second cancellation happens only on dividing the circumference by the speed."
+     "why": "r = m*v_perp/(qB) grows in exact proportion to the speed, so the circumference does too, and T = 2*pi*r/v_perp = 2*pi*m/(qB) has no v in it: a faster particle travels further and proportionately faster, arriving at the same moment - which is what lets a cyclotron run at one fixed frequency. (a) is a true statement used as a non sequitur: no-work fixes the speed of a given particle and says nothing about comparing particles of different speeds. (b) is a pseudo-derivation: q*v*B = m*v^2/r cancels one power of v, leaving r proportional to v, and the second cancellation happens only on dividing the circumference by the speed. (c) is empty - the field is uniform in both cases, and T also depends on m and q."
     },
     {
      "type": "mcq",
@@ -432,13 +432,13 @@
      "q": "The force on a current-carrying wire, F = I L cross B, is:",
      "options": [
       "an independent law, obtained from Ampere's law rather than from the Lorentz force",
-      "the single-charge law q*v cross B summed over the moving charges: dq = lambda*dl and I = lambda*v give dF = I dl cross B",
+      "a consequence of Newton's third law applied between the field and the wire",
       "valid only for wires, the Lorentz force being valid only for isolated charges, so the two are logically independent",
-      "a consequence of Newton's third law applied between the field and the wire"
+      "the single-charge law q*v cross B summed over the moving charges: dq = lambda*dl and I = lambda*v give dF = I dl cross B"
      ],
-     "answerIndex": 1,
+     "answerIndex": 3,
      "concept": "The wire law is the single-charge law counted per unit length",
-     "why": "An element dl carrying free charge of linear density lambda drifting at v holds dq = lambda*dl and feels dF = (dq) v cross B = (lambda*dl) v cross B; since I = lambda*v this is dF = I dl cross B, integrating to F = I L cross B with magnitude B*I*L*sin(theta). It is the same physics counted per unit length instead of per particle. (a) confuses the two halves of magnetostatics: Ampere's law says what a current produces, the Lorentz force says what a field does to a current. (c) makes two laws where there is one and leaves no account of why the constants agree. (d) misuses Newton's third law, which relates forces between two currents and cannot by itself yield B*I*L*sin(theta)."
+     "why": "An element dl carrying free charge of linear density lambda drifting at v holds dq = lambda*dl and feels dF = (dq) v cross B = (lambda*dl) v cross B; since I = lambda*v this is dF = I dl cross B, integrating to F = I L cross B with magnitude B*I*L*sin(theta). It is the same physics counted per unit length instead of per particle. (a) confuses the two halves of magnetostatics: Ampere's law says what a current produces, the Lorentz force says what a field does to a current. (b) misuses Newton's third law, which relates forces between two currents and cannot by itself yield B*I*L*sin(theta). (c) makes two laws where there is one and leaves no account of why the constants agree."
     },
     {
      "type": "mcq",
@@ -483,136 +483,136 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
-   "topic": "Boolean expressions and control flow as concepts: simple statements versus blocks and why a block counts as a single statement, what makes a value true in C, what a Boolean expression evaluates to, the truth tables for &&, || and ! with De Morgan's laws, operator precedence, short-circuit evaluation and its effect on side effects, and the exact entry condition and pass count of if, if-else, if-else-if, switch, while, do-while, for and goto.",
+   "topic": "Boolean expressions, statements and control flow as concepts, exactly as the two decks give them: what makes a value true in C and what a comparison returns, the definitions of a simple statement and of a block and why a block counts as a single statement, why blocks exist and where they are used, programme control and branching with unconditional versus conditional, the deck's count of the decision making statements and the switch it teaches outside that count, and the entry condition of if, if-else, if-else-if, switch, while, do-while and for.",
    "maxScore": 12,
    "questions": [
     {
      "type": "mcq",
      "q": "In C, which one of these conditions is FALSE?",
      "options": [
-      "if (-3)",
-      "if (2 - 2)",
-      "if ('a')",
-      "if (0.5)"
+      "if (2 - 5)",
+      "if (4 + 1)",
+      "if (10 - 3)",
+      "if (6 - 6)"
      ],
-     "answerIndex": 1,
-     "concept": "Truth in C is 'not zero'; falsity is 'exactly zero'.",
-     "why": "The course's rule is that Boolean values are returned as integers with 1 (or any other number that is not 0) representing true and 0 representing false. 2 - 2 evaluates to 0, the one value that is false. (a) -3 is not 0, so it is true; a negative number is just as true as a positive one, and 'true means positive' is the commonest form of the error. (c) 'a' is a character constant whose value is 97, which is not 0, so it is true. (d) 0.5 is not 0, so it is true; the trap is thinking a value 'between false and true' rounds down to false, when the only test performed is a comparison with zero. Note that none of the four contains a relational operator and all four are still perfectly ordinary conditions."
+     "answerIndex": 3,
+     "concept": "Truth in C is 'not zero'; falsity is 'exactly zero'",
+     "why": "The deck's rule is that 'Boolean values are returned as integers with; 1 (or any other number that is not 0) represents true, 0 represents false.' Each condition is an expression, so it is worked out first and then tested against zero: 6 - 6 is 0, and 0 is the one value that is false. Option (A) is -3, which is not 0 and is therefore TRUE - the parenthesis in the deck's sentence says 'any other number that is not 0' and says nothing about sign, and a negative value catches out more students than any other. Option (B) is 5 and option (C) is 7, both plainly non-zero. The commonest wrong reading is that a condition must equal 1 to be true, which would make all three of the distractors false as well."
     },
     {
      "type": "mcq",
-     "q": "The course says a block is 'treated like a single statement by the computer'. Which consequence follows DIRECTLY from that sentence?",
+     "q": "The deck says a block is 'treated like a single statement by the computer'. Which consequence follows DIRECTLY from that sentence?",
      "options": [
-      "That the statements inside a block are executed as one indivisible step, so no other part of the programme can interrupt them part-way through",
+      "That the statements inside a block are executed as one indivisible step, so that no other part of the programme is able to interrupt them part-way through",
       "That the compiler compresses the block into one machine instruction, which is why a block runs faster than the same statements written separately",
-      "That a block may be written anywhere a single statement is allowed, which is what lets an if or a while, each of which governs exactly one statement, control several statements at once",
+      "That a block may be written anywhere a single statement is allowed, which is what lets an if or a while control several statements at once",
       "That the statements inside a block share one semicolon, which is why the closing curly bracket does not need one of its own"
      ],
      "answerIndex": 2,
-     "concept": "The 'one statement' property is a syntactic fact, and it is what makes braces load-bearing.",
-     "why": "Constructs such as if, while and for are defined to govern exactly ONE statement. A block is treated like a single statement, so wrapping several statements in curly brackets is the only way to put more than one of them under a condition or inside a loop, which is why the course lists the applications of blocks as functions, decision making statements, and iterative statements. (a) reads 'treated like a single statement' as atomic or uninterruptible, importing an idea from concurrency the course never raises; the statements inside run one after another as they would anywhere else. (b) reads it as a performance claim; the block compiles to the same instructions and grouping is not an optimisation. (d) invents a shared semicolon; each statement keeps its own, and the right curly bracket takes no semicolon because the brace itself closes the block."
+     "concept": "The 'one statement' property is a syntactic fact, and it is what makes braces load-bearing",
+     "why": "'Treated like a single statement' is a statement about where a block may be written, not about how fast it runs or how it is interrupted. Each of if, while and for governs exactly ONE statement; a block is the device that turns several statements into one, which is why the deck lists functions, decision making statements and iterative statements as the places blocks are used. Option (A) reads it as an atomicity guarantee, which the deck never claims. Option (B) invents a speed claim. Option (D) gets the brace rule right by accident and the reason for it wrong - the closing bracket takes no semicolon because it closes the construct, not because the statements inside are sharing one."
     },
     {
      "type": "mcq",
-     "q": "Which expression is equivalent to !(a || b)?",
+     "q": "Which is the deck's definition of a SIMPLE statement?",
      "options": [
-      "!a || !b",
-      "a && b",
-      "!a && b",
-      "!a && !b"
-     ],
-     "answerIndex": 3,
-     "concept": "De Morgan: pushing a ! inside brackets flips the operator as well as negating each operand.",
-     "why": "'Not (a or b)' means 'neither' - both must be false - which is !a && !b. (a) negates the operands but leaves the operator, giving the law for !(a && b) instead; the two laws are commonly memorised as one and then applied to the wrong expression. Check a = 1, b = 0: !(1 || 0) is 0, but !1 || !0 is 0 || 1 = 1. (b) drops the negation and swaps the operator arbitrarily; it agrees with the original only when both operands are false. (c) negates one operand only, which cannot be right by symmetry - a and b play the same role in a || b, so they must play the same role in its negation."
-    },
-    {
-     "type": "mcq",
-     "q": "How does  a == 0 || b == 0 && c == 0  group?",
-     "options": [
-      "(a == 0) || ((b == 0) && (c == 0))",
-      "((a == 0) || (b == 0)) && (c == 0)",
-      "a == (0 || b) == (0 && c) == 0",
-      "((a == 0) || (b == 0)) && ((b == 0) && (c == 0))"
+      "It contains only one expression and it ends with a semicolon",
+      "It contains only one expression and it ends at the end of the line it is written on",
+      "It contains any number of expressions and it ends with a semicolon",
+      "It is any line of code that does not contain curly brackets"
      ],
      "answerIndex": 0,
-     "concept": "&& binds tighter than ||, exactly as * binds tighter than +.",
-     "why": "Equality forms first (a == 0, b == 0, c == 0), then && joins the last two, then || joins that result to the first. The expression is true if a is 0, OR if b and c are both 0. (b) is the reading of someone who takes || and && to be equal in precedence and left-associative, which would make the expression true only when c is 0 - a completely different condition, and the fault behind 'my check works except when c is nonzero'. (c) treats == as though it bound loosest and chains it, which is not how these operators associate. (d) invents a duplicated operand. The safe habit is to write the brackets of (a) explicitly even though they are not required."
+     "concept": "A simple statement: one expression, terminated by a semicolon",
+     "why": "'A simple statement contains only one expression and it ends with a semicolon.' Both halves matter, and the second is the one with consequences: the semicolon is the terminator, not the line ending, which is why the deck can ask 'Can we have more than one statement on a single line?' and why one statement may be spread over several lines. Option (B) makes the layout do the work, which is true in some other languages and false in C. Option (C) drops the 'only one expression' half. Option (D) defines a statement by what it lacks, and would make the header of an if into a statement."
     },
     {
      "type": "mcq",
-     "q": "check(x) && record(x) is evaluated, and check(x) returns 0. record(x) writes a line to a file and returns 1. What happens?",
+     "q": "Why does the deck say we need blocks?",
      "options": [
-      "record(x) is still called and still writes its line, but its return value is discarded, because && must have both values before it can produce a result",
-      "The compiler rejects the expression, because an operand of && may not be a function call that has an effect outside itself",
-      "record(x) is not called at all, so no line is written - a skipped operand's side effects do not happen - and the whole expression is 0",
-      "record(x) is not called, but the expression takes the value 1, because an operand that could not be evaluated is treated as true by default"
+      "Because a programme runs faster when its statements are grouped inside curly brackets",
+      "Because while breaking complex problems into smaller ones we need to treat solutions to the smaller problems as single units",
+      "Because the compiler needs the curly brackets in order to know where each of the statements inside the block ends and the next one begins",
+      "Because a Boolean expression may only be tested inside curly brackets"
      ],
-     "answerIndex": 2,
-     "concept": "Short-circuit evaluation: a skipped operand is not evaluated, so its side effects do not happen.",
-     "why": "&& evaluates its left operand first; check(x) returns 0, which is false, and no value of the right operand can make 0 && anything come out as anything but 0. The answer is settled, record(x) is never called, nothing is written, and the expression is 0. (a) is the misconception that && is like arithmetic and must collect both operands before combining them; if that were so, the standard guard if (n != 0 && total / n > 5) would divide by zero. (d) invents a default value for an unevaluated operand; there is no value, because there was no evaluation. (b) invents a restriction on what may appear in a condition; calls with effects are legal there, which is exactly why the skipping rule must be known rather than assumed."
+     "answerIndex": 1,
+     "concept": "Blocks exist for problem decomposition, not for tidiness",
+     "why": "The deck gives the reason twice, and it is about problem solving rather than syntax: 'We need blocks because while trying to solve complex problems by breaking them into smaller ones, we need to treat solutions to the smaller problems as single units', and 'the group of statements inside a block are treated like a single statement by the computer, which essentially means that solutions from different blocks can be seen as solutions to the smaller problems.' Option (C) gives the semicolon's job to the curly brackets - the semicolon ends a statement, the brackets group several. Option (A) invents a speed argument. Option (D) invents a rule about Booleans; a condition is tested wherever it is written."
+    },
+    {
+     "type": "mcq",
+     "q": "The deck names the places where blocks are used. Which list is it?",
+     "options": [
+      "Functions and nothing else",
+      "Decision making statements and iterative statements only",
+      "Every statement in C, since each one is a block containing a single statement",
+      "Functions, decision making statements, and iterative statements"
+     ],
+     "answerIndex": 3,
+     "concept": "Where blocks are used, and the deck's examples of each kind",
+     "why": "'We use blocks when writing functions, decision making statements, and iterative statements.' The deck then names the members of the last two groups: the decision making statements are the 'if', 'if-else' and 'else-if' statements, and the iterative statements are the 'for', 'while' and 'do-while' statements. Options (A) and (B) each drop part of the deck's list. Option (C) inverts the relationship: a block is made out of statements, and a single statement is not a block - which is exactly why an if without curly brackets governs one statement and no more."
     },
     {
      "type": "mcq",
      "q": "A loop's condition is already false at the moment control first reaches the loop. Which statement is correct?",
      "options": [
       "A while runs its body once and a do-while runs it zero times, since do-while checks the condition before committing to a pass",
-      "Both run their bodies zero times, since a false condition means there is nothing to do in either construct",
-      "A while runs its body zero times and a do-while runs it once, since a do-while tests the condition after the body and so is guaranteed to execute at least one time",
+      "Both run their bodies zero times, since a condition that is false at the outset means there is nothing at all for either of the two constructs to do",
+      "A while runs its body zero times and a do-while runs it once, since a do-while tests the condition after the body and so runs at least one time",
       "Both run their bodies once, since a loop must always complete one pass before it has anything to test"
      ],
      "answerIndex": 2,
-     "concept": "while tests before the body, do-while after; only do-while is guaranteed to run at least once.",
-     "why": "The course states it directly: a do-while loop works the same way as a while loop, except the fact that it is guaranteed to execute at least one time. With a condition false from the start, a while evaluates it, finds 0, and passes control to the line immediately following the loop without entering the body; a do-while executes the body first and only then discovers the condition is false, so exactly one pass has happened. (a) has both rules the right way round in the words and the wrong way round on the constructs - the classic swap, and the reason the answer must be reasoned from where the test sits. (b) applies the while rule to both, which would make do-while pointless as a separate construct. (d) applies the do-while rule to both, which would make a zero-pass while impossible and break every loop written to handle an empty list."
+     "concept": "while tests before the body, do-while after; only do-while is guaranteed to run at least once",
+     "why": "The while slide says the loop 'iterates while the condition is true' and that 'when the condition becomes false, the program control passes to the line immediately following the loop' - the test comes first, so a condition already false means no pass at all. The do-while slide says it 'works the same way as a while loop, except the fact that it is guaranteed to execute at least one time'. Option (A) has the two rules the right way round in the sentence and the wrong way round on the constructs, which is the classic swap. Option (B) applies the while rule to both and throws away the deck's one distinguishing sentence. Option (D) applies the do-while rule to both, which would make a zero-pass loop impossible."
     },
     {
      "type": "mcq",
      "q": "A programmer replaces  if (n > 100) A; else if (n > 50) B; else C;  with three separate if statements carrying the same three conditions. What has changed?",
      "options": [
-      "Nothing, provided the conditions are copied exactly, since the same tests are being applied to the same value",
-      "In the chain, the conditions are tested top to bottom and the first true one wins, so at most one branch runs; with three separate ifs each condition is tested independently, so n = 200 now runs A and B and C",
+      "Nothing at all, provided the three conditions have been copied out exactly, since the same tests are being applied to the same value in both versions",
+      "In the chain the first true condition wins, so at most one branch runs; with three separate ifs each condition is tested independently, so n = 200 runs A and B and C",
       "The chain is faster because it stops testing early, but the three separate ifs produce identical output, so the change is only a matter of efficiency",
       "The three separate ifs can no longer run C, because a bare else is the only construct that can execute when no condition is satisfied"
      ],
      "answerIndex": 1,
-     "concept": "An if-else-if chain stops at the first true condition; separate ifs test every condition independently.",
-     "why": "In the chain, n = 200 satisfies n > 100, so A runs and n > 50 is never even tested - every later condition is skipped. Rewritten as three separate ifs, all three conditions are evaluated: 200 > 100 is true so A runs, 200 > 50 is also true so B runs, and the third if runs C as well if its condition is true. The chain's later branches are written on the assumption that all earlier conditions failed, and separating them destroys that assumption silently. (a) is the belief that the same conditions must give the same behaviour; what differs is not the conditions but which of them are REACHED. (c) treats the difference as efficiency only, the half-right answer that costs the mark: the early stop is not merely faster, it is what makes the branches exclusive. (d) is wrong about else - a final else can be replaced by an if carrying the negation of the earlier conditions, so C is still reachable, just no longer automatic."
+     "concept": "An if-else-if chain stops at the first true condition; separate ifs test every condition independently",
+     "why": "The deck's if-else-if slide says that with it 'more that two choices are integrated into the decision making process', and the if-else slide says control moves into the if block when the condition is satisfied and 'otherwise' to the else - the word otherwise is what chains the branches together. Broken into separate ifs, each condition is a fresh decision: with n = 200, n > 100 is true, n > 50 is also true, and the final else has become an else on the third if alone. Option (C) sees the early stopping and misses that it changes WHICH code runs. Option (D) invents a limitation on else. Option (A) is the assumption the question exists to break."
     },
     {
      "type": "mcq",
-     "q": "Which pair of statements matches the course's definitions of unconditional and conditional branching?",
+     "q": "Which pair of statements matches the deck's definitions of unconditional and conditional branching?",
      "options": [
-      "Unconditional branching moves program control to a specific statement or block without checking any condition, goto being the example; conditional branching moves it depending on whether some predetermined conditions are satisfied, and its statements are also called decision making or selection statements",
+      "Unconditional branching moves control to a statement or block without checking any condition, goto being the example; conditional branching moves it only if predetermined conditions are satisfied",
       "Unconditional branching is the normal sequential movement from one line to the next, and conditional branching is any statement that interrupts it",
-      "Unconditional branching is performed by loops, because a loop repeats regardless of what any single statement says; conditional branching is performed by if, because only if mentions a condition",
+      "Unconditional branching is performed by the loops, because a loop repeats regardless of what any single statement in it says, whereas conditional branching is performed by if, because only if mentions a condition at all",
       "Unconditional branching is decided by the compiler before the programme runs, whereas conditional branching is decided while it runs, which is why goto costs nothing at run time"
      ],
      "answerIndex": 0,
-     "concept": "The course's definitions of unconditional and conditional branching.",
-     "why": "Word for word: unconditional statements can move program control to either a specific statement or block without checking any condition, the example given being goto; with conditional branching, where program control moves to is dependent on if some predetermined conditions are satisfied or not, and such statements are also known as decision making or selection statements. (b) inverts the definition of branching itself: branching means the computer can decide to move program control to another line of code INSTEAD OF the usual movement from one line to the next, so ordinary sequential flow is what branching departs from, not a kind of branching. (c) misassigns the constructs; loops are iterative statements, and goto - not the loop - is the deck's example of an unconditional branch. (d) invents a compile-time / run-time distinction; goto transfers control while the programme runs, and both kinds of branching are run-time behaviour."
+     "concept": "The deck's definitions of unconditional and conditional branching",
+     "why": "Word for word: 'With unconditional branching, some unconditional statements can move program control to either a specific statement or block without checking any condition', the example being goto, of which the deck says 'the goto statement did not specify any condition before moving program control'. And: 'With conditional branching, the normal flow of operation in our code is also altered but where program control moves to is dependent on if some predetermined conditions are satisfied or not. Conditional branching statements are also known as decision making or selection statements.' Option (B) redefines ordinary sequential flow as branching, when the deck's point is that branching is the DEPARTURE from 'the usual movement from one line to the next line'. Option (C) mislabels loops. Option (D) invents a compile-time/run-time split; goto branches while the programme runs."
     },
     {
      "type": "short",
-     "q": "Explain what a Boolean expression is and state precisely what it EVALUATES TO in C, quoting the course's rule about integers. Then use that rule to explain two separate faults: why if (x = 5) is always true no matter what x held before, and why if (flag == true) is a bug in a programme that sets flag to 2. Say in each case what should have been written.",
-     "concept": "A Boolean expression is an expression with an integer value, and both '=' and '== true' fail because of what that value is.",
-     "why": "WHAT IT IS. An expression whose purpose is to be true or false: typically a comparison of values or variables - the course's point that to make decisions and find answers in programming it is sometimes useful to compare values and variables, and when this comparison activity takes place the return value is usually a Boolean value - combined where necessary with &&, || and !. The six relational operators are ==, !=, <, >, <=, >=.\nWHAT IT EVALUATES TO. Not a question and not a special kind of thing: an ordinary INTEGER. The course's rule is that Boolean values are returned as integers, with 1 (or any other number that is not 0) representing true and 0 representing false. So 7 > 3 has the value 1 exactly as 3 + 4 has the value 7; it can be printed with %d, stored in an int, or added to another. An if does one thing only: it evaluates its expression and asks whether the result is zero.\nFAULT 1: if (x = 5). '=' is the assignment operator, not the comparison operator. x = 5 stores 5 in x, and the value of the assignment expression is the value assigned, namely 5. Five is not zero, so the condition is TRUE, and it is true regardless of what x held before, because the old value was overwritten before anything was tested. Two things go wrong at once: the branch always runs, and the variable is silently destroyed. It compiles without complaint because an assignment is a perfectly legal expression. Should have been written: if (x == 5).\nFAULT 2: if (flag == true). 'true' is the name <stdbool.h> gives to the integer 1, so this compares flag with 1 and nothing more. If flag holds 2, then flag == true is 2 == 1, which is 0, so the branch is skipped even though 2 is a perfectly good true value by the course's own rule. The test has quietly narrowed 'true' from 'not zero' to 'exactly one'. Should have been written: if (flag), and for the negation if (!flag) rather than if (flag == false).\nTHE PRINCIPLE behind both: an if never compares anything with truth - it compares with zero - so the condition should be written to BE the truth, not to be tested against it."
+     "q": "Explain what a Boolean is in the deck's terms, how a Boolean variable is declared in C and what values it may take, and state precisely what the deck says Boolean values are RETURNED as. Then explain what the deck means by \"comparing values and variables\" and what such a comparison returns. Finally, use the deck's rule to say which of these conditions are true and which false, and why: if (7), if (0), if (-2), if (3 - 3).",
+     "concept": "A Boolean, a Boolean variable, and the integer rule that decides every condition",
+     "why": "WHAT A BOOLEAN IS: 'Booleans represent values that are either true or false.' HOW ONE IS DECLARED: 'In C programming language, a Boolean variable is declared with the bool keyword and it can only take the values true or false.' WHAT THEY ARE RETURNED AS - the examinable sentence: 'It is noteworthy that Boolean values are returned as integers with; 1 (or any other number that is not 0) represents true, 0 represents false.' So truth in C is a NUMERIC property. The test a condition undergoes is not a comparison with true; it is a comparison with zero, and everything that is not zero passes it. COMPARING VALUES AND VARIABLES: 'To make decisions and find answers in programming, it is sometimes useful to compare values and variables. When this comparison activity takes place, the return value is usually a Boolean value.' Two things follow. First, a comparison is not a question the machine asks; it is an expression that HAS a value, exactly as 3 + 4 has the value 7. Second, by the previous rule that value arrives as an integer, 1 or 0, which is why a comparison can be printed, stored or used anywhere a number can. THE FOUR CONDITIONS: if (7) is TRUE, because 7 is not 0. if (0) is FALSE, because 0 is the value the rule names as false. if (-2) is TRUE, because the rule says 'any other number that is not 0', and it says nothing about sign - a negative value is just as true as a positive one, which is the part students most often get wrong. if (3 - 3) is FALSE, because the expression is evaluated first and its value is 0. In every case the machine does the same single thing: work out the value, and ask whether it is zero."
     },
     {
      "type": "short",
-     "q": "Write out the truth tables for a && b, a || b and !a, using 1 and 0 as C stores them. State each operator's rule in one sentence. Then state both of De Morgan's laws and prove one of them wrong-way-round by naming a single row on which !(a && b) and !a && !b disagree. Finally, explain why 0 < x < 10 is true for EVERY value of x, and what must be written instead.",
-     "concept": "The truth tables, De Morgan's laws, and why C has no chained comparison.",
-     "why": "THE TABLES, in C's own values. a=0,b=0: a&&b = 0, a||b = 0, !a = 1. a=0,b=1: a&&b = 0, a||b = 1, !a = 1. a=1,b=0: a&&b = 0, a||b = 1, !a = 0. a=1,b=1: a&&b = 1, a||b = 1, !a = 0.\nTHE RULES. && is true only when both operands are true, so a single false operand settles the result. || is false only when both operands are false, so a single true operand settles the result. ! swaps 1 and 0. (The 'single operand settles it' phrasing is the same fact as short-circuit evaluation, seen from the table rather than from the evaluation order.)\nDE MORGAN'S LAWS. !(a && b) is !a || !b - 'not both' means 'at least one is not'. !(a || b) is !a && !b - 'not either' means 'neither'. In both, the OPERATOR flips as well as the operands; that flip is the whole content of the law and it is what students drop.\nTHE DISPROOF. Take the row a = 0, b = 1. Then a && b is 0, so !(a && b) is 1. But !a is 1 and !b is 0, so !a && !b is 1 && 0 = 0. They disagree on that row, so !(a && b) is not !a && !b; the correct right-hand side is !a || !b. By symmetry they also disagree on a = 1, b = 0; they agree only on the two rows where a and b happen to be equal, which is why testing on tidy sample data does not expose the mistake.\nWHY 0 < x < 10 IS ALWAYS TRUE. Relational operators associate left to right and C has no chained comparison, so the expression means (0 < x) < 10. The inner comparison is evaluated first and - by the integer rule - yields 1 or 0. That integer is then compared with 10, and both 1 and 0 are less than 10, so the whole expression evaluates to 1 for every possible value of x, including x = -500. The result does not depend on x at all, which is what makes the bug total rather than occasional.\nWHAT TO WRITE INSTEAD: 0 < x && x < 10, i.e. two complete comparisons joined by &&. Each operand of && must be a full Boolean expression in its own right; a range test cannot be written by leaving one side of a comparison implicit. The same applies to if (x == 1 || 2), which means (x == 1) || 2 and is always true because 2 is nonzero - it must be x == 1 || x == 2."
+     "q": "Define programme control as the deck defines it, and say why a programmer would ever want to alter it. Then define branching, distinguish unconditional from conditional branching, give the deck's example of an unconditional statement and say what the deck observes about it, and give the two other names the deck offers for conditional branching statements. End by naming the three decision making statements the deck lists.",
+     "concept": "Programme control, branching, and the two kinds of branch",
+     "why": "PROGRAMME CONTROL: 'In the C programming language, programme control is responsible for the sequential execution of a programme from one line to the next line until it reached the last line of the programme.' That is the default behaviour of a programme - straight down the page. WHY ALTER IT: 'For some problem solving application, we want to alter this flow of operation to ensure that programme control moves to either a specific statement or block in our code.' Real problems need decisions and repetition, and neither is possible if control can only fall from one line to the next. BRANCHING: 'Branching basically means that the computer can decide to move program control to another line of code instead of the usual movement from one line to the next line.' UNCONDITIONAL: 'With unconditional branching, some unconditional statements can move program control to either a specific statement or block without checking any condition.' The deck's example is the goto statement, and its observation about it is that 'the goto statement did not specify any condition before moving program control' - the jump happens every time control reaches it, with nothing tested. CONDITIONAL: 'With conditional branching, the normal flow of operation in our code is also altered but where program control moves to is dependent on if some predetermined conditions are satisfied or not.' THE TWO OTHER NAMES: conditional branching statements 'are also known as decision making or selection statements'. THE THREE DECISION MAKING STATEMENTS: 'There are three types of decision making statements. The three statements are the \"if\", \"if-else\" and \"if-else-if\" statements.' The deck adds that 'each of these statements are usually blocks consisting of one or more statements', which is where the week's two halves join: branching decides which block runs, and a block is what makes several statements into one."
     },
     {
      "type": "short",
-     "q": "List the operators !, *, +, <, ==, &&, ||, = in order of precedence from highest to lowest, and use the list to bracket  x + 1 > y * 2 && !flag == 0  fully. Then explain what short-circuit evaluation guarantees for && and for ||, and why the order in which you write the two operands of && is part of the MEANING of the programme rather than a matter of style. End by saying what changes if && is replaced by &.",
-     "concept": "Precedence order, and short-circuiting as a rule about evaluation rather than about speed.",
-     "why": "PRECEDENCE, highest first: ! (unary), then *, then +, then < (with <=, >, >=), then == (with !=), then &&, then ||, then = last of all. Two features are examined repeatedly: ! binds tighter than every comparison, and relational binds tighter than equality, which binds tighter than &&, which binds tighter than ||. Assignment is not a special form but an operator, and the lowest-precedence one here, which is why x = a > b assigns the comparison's value to x.\nBRACKETING: ((x + 1) > (y * 2)) && ((!flag) == 0). Arithmetic forms first, giving x + 1 and y * 2; ! forms next, giving !flag; then > and == produce two truth values; then && joins them. Note what the right-hand half actually says: (!flag) == 0 is true exactly when !flag is 0, i.e. exactly when flag is true - so the whole clause is a long-winded way of writing flag, and anyone who read it as !(flag == 0) reached the same meaning by an argument that is wrong and will fail on the next example.\nWHAT SHORT-CIRCUITING GUARANTEES. For a && b: a is evaluated first, and if a is false, b is not evaluated at all, since the result is already 0. For a || b: a is evaluated first, and if a is true, b is not evaluated, since the result is already 1. This is a guarantee of the language about what gets evaluated, not a permission the compiler may or may not take up.\nWHY OPERAND ORDER IS MEANING. Because a skipped operand is never evaluated, its side effects never happen and any error it would have raised never occurs. So if (n != 0 && total / n > 5) is safe for n == 0 - the division is unreachable - while if (total / n > 5 && n != 0) performs the division first and divides by zero. The two have identical truth tables and different behaviour, which is only possible because evaluation is ordered. Likewise in i++ > 0 && j++ > 0, j is left untouched whenever the left operand is false, so the values of the variables afterwards depend on which operand was written first. The working rule: guard on the left, guarded expression on the right, and never hide an assignment, an increment or a call with an effect in the right-hand operand.\nIF && BECOMES &. & is the bitwise and, a different operator: it combines the operands bit by bit and, critically, always evaluates both of them. The guard is therefore gone, and if (n != 0 & total / n > 5) divides by zero. It also gives different answers, because it works on bits rather than truths: 2 && 1 is 1, but 2 & 1 is 0. The single-character typo is invisible on the page and changes both what is computed and what is executed."
+     "q": "The deck states, on its Conditional branching slide and again on its SUMMARY slide, that there are three types of decision making statement, and it names them. It then teaches a fourth statement under the same heading. Name the three, name the fourth, give the deck's one-sentence description of the fourth, and explain how a student who memorised the summary and a student who worked through the slides can give different answers to \"how many decision making statements are there?\" - both of them reading the deck correctly. Say what you would write in an examination.",
+     "concept": "The deck's count of the decision making statements disagrees with the deck's own slides",
+     "why": "THE THREE: 'There are three types of decision making statements. The three statements are the \"if\", \"if-else\" and \"if-else-if\" statements.' The SUMMARY slide repeats the same three word for word. THE FOURTH: switch, taught on the slides headed 'Conditional branching: switch', immediately after the if-else-if slides and under the same heading. THE DECK'S DESCRIPTION OF IT: 'With the switch statement, we can execute one code block among many alternatives.' That single sentence is the whole of what the deck says about switch, and it is what an examination can fairly ask. HOW THE TWO STUDENTS DIVERGE. The one who learned the SUMMARY answers 'three - if, if-else and if-else-if', because that is what the deck states twice and states as a count. The one who worked through the slides answers 'four kinds of conditional branching, switch among them', because switch is presented as a conditional branching statement, in the conditional branching sequence, doing exactly what the definition of conditional branching describes - moving control depending on whether a predetermined condition is satisfied. Neither student has misread anything. The deck disagrees with itself: it states a total of three and then teaches a fourth member of the same family. WHAT TO WRITE IN AN EXAMINATION. Answer the count when the question quotes the count - 'the lecture states that there are three: if, if-else and if-else-if' - and then add the sentence that closes the gap: 'the lecture also teaches switch under Conditional branching, describing it as executing one code block among many alternatives, although its stated total of three does not include it.' That answers what was asked and shows that the inconsistency was noticed rather than missed, which is the safest thing to do with an error in the material."
     },
     {
      "type": "short",
-     "q": "For each of if, if-else, if-else-if, switch, while, do-while and for, state exactly when program control enters the body and the minimum and maximum number of times the body can run. For for, say which of its three parts runs only once and when the condition is tested relative to the increment. For switch, say what happens after a matching case finishes if there is no break. Finally, explain why if-else and two separate ifs are not interchangeable.",
-     "concept": "The entry condition and pass count of every control construct in the week.",
-     "why": "if (c) S - control enters S only if c is true; the course's words are that program control will only move inside the if block if some conditions are satisfied, or else the entire block will be skipped. Body runs minimum 0, maximum 1 times.\nif (c) S else T - if the condition is satisfied program control moves inside the if block, otherwise it moves to the else statement block. Exactly one of the two runs, always: there is no path on which both run and none on which neither runs.\nif-else-if - used when more than two choices are integrated into the decision making process. Conditions are tested top to bottom and the FIRST TRUE ONE WINS; its branch runs and every remaining condition is skipped untested. At most one branch runs; if there is no final bare else and no condition is true, none runs. Each condition after the first is therefore read in the context of all the earlier ones having failed.\nswitch - we can execute one code block among many alternatives. The controlling expression is evaluated, control JUMPS to the matching case label, or to default if no label matches (and out of the switch entirely if there is no match and no default). After a matching case finishes with no break, control does not leave the switch: it falls straight through into the statements of the following case and continues doing so until it meets a break or the closing brace. So a missing break changes which code runs; it is not a formatting matter.\nwhile (c) S - the condition is tested BEFORE the body; the loop iterates while the condition is true, and when the condition becomes false, program control passes to the line immediately following the loop. Body runs minimum 0, maximum unbounded.\ndo S while (c); - the body runs first and the condition is tested AFTER it, so it is guaranteed to execute at least one time: minimum 1, maximum unbounded.\nfor (init; c; inc) S - the init step is executed first, and ONLY ONCE; then the condition is evaluated, and if it is true the body executes, if false the body does not execute. After each pass the INCREMENT runs, and only then is the condition tested again. So the order per pass is condition, body, increment, condition - the increment happens after the body and before the next test, which is why the control variable holds the first FAILING value once the loop has ended. Body runs minimum 0, maximum unbounded.\ngoto - unconditional: control moves without checking any condition at all, so there is no entry condition to state.\nWHY if-else AND TWO SEPARATE ifs DIFFER. With if (c) S else T, T runs precisely when c is false, the two branches are mutually exclusive by construction, and c is evaluated ONCE. With if (c) S followed by if (d) T, both conditions are evaluated independently, so if c and d are both true BOTH bodies run. Writing if (c) S then if (!c) T restores exclusivity but evaluates c twice, which differs if evaluating c has a side effect or if something between the two statements changes the value c depends on. The else is not shorthand for a second test; it is the guarantee that no second test is made."
+     "q": "For each of if, if-else, if-else-if, switch, while, do-while and for, give the deck's own description and say exactly when the body is entered. For for, say which of its three parts runs only once and what happens next. Then explain why if-else and two separate if statements are not interchangeable, and why a while whose condition is false at the outset behaves differently from a do-while with the same condition.",
+     "concept": "The entry condition of every control construct in the week",
+     "why": "IF: 'With the if statement, program control will only move inside the if block if some conditions are satisfied, or else, the entire block will be skipped.' Entered once when the condition is satisfied, not at all otherwise. IF-ELSE: 'With the if-else statement, if some conditions are satisfied, program control will move inside the if block, otherwise, it will move to the else statement block.' One of the two blocks is always entered, and never both. IF-ELSE-IF: 'With the if-else-if statement, more that two choices are integrated into the decision making process.' Control enters the branch whose condition is satisfied. SWITCH: 'With the switch statement, we can execute one code block among many alternatives.' Control enters the block belonging to the alternative that matches. WHILE: 'The loop iterates while the condition is true. When the condition becomes false, the program control passes to the line immediately following the loop.' The condition is tested BEFORE the body, so the body may be entered zero times; the deck adds that 'the condition may be any expression, and true is any nonzero value'. DO-WHILE: it 'works the same way as a while loop, except the fact that it is guaranteed to execute at least one time' - the body is entered before the condition is consulted at all. FOR: 'The init step is executed first, and only once. Next, the condition is evaluated. If it is true, the body of the loop is executed. If it is false, the body of the loop does not execute.' So the INIT step is the part that runs only once; after it, the condition decides, and the body may be entered zero times. WHY IF-ELSE IS NOT TWO IFS: with if-else exactly one branch runs, because the else is reached precisely when the if was not - that is what 'otherwise' means. Two separate ifs are two independent decisions, so both bodies can run, and a second condition that was written assuming the first had failed will now fire when it should not. WHY WHILE AND DO-WHILE DIVERGE: the difference is only where the test sits. With a condition false at the outset, the while tests first, finds it false and passes control to the line immediately following the loop, so nothing in the body happens; the do-while runs the body once and only then tests, so the body has already happened by the time the condition is found to be false. Every other feature of the two is the same, which is why the deck defines the second entirely by its exception to the first."
     }
    ]
   },
@@ -621,7 +621,7 @@
    "day": "Thu",
    "course": "MTH_102",
    "slot": "deep",
-   "topic": "Problems-only session on Week 9. Evaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ; split ∫₋∞^∞ and stop at the first divergent half; split ∫₋₁² dx/x⁴ at the interior discontinuity and get the signs right; and run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p — on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.",
+   "topic": "Problems-only session on Week 9. Evaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ; split ∫₋∞^∞ and stop at the first divergent half; split ∫₋₁² dx/x⁴ at the interior discontinuity and get the signs right; and run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p — on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.",
    "maxScore": 12,
    "questions": [
     {
@@ -635,7 +635,7 @@
      ],
      "answerIndex": 0,
      "concept": "Type I evaluation with a by-parts antiderivative and L'Hôpital",
-     "why": "Write it as lim_{t→∞} ∫₀ᵗ xe⁻ˣdx = lim_{t→∞}[−xe⁻ˣ − e⁻ˣ]|₀ᵗ = lim_{t→∞}(−te⁻ᵗ − e⁻ᵗ + 1). The middle term e⁻ᵗ → 0, and −te⁻ᵗ = −t/eᵗ is −∞/∞, so L'Hôpital gives −1/eᵗ → 0. Total: 0 + 0 + 1 = 1. Option 2 loses the +1, which comes from subtracting the value −1 that the antiderivative takes at x = 0. Option 3 keeps that −1 without flipping its sign under the subtraction. Option 4 is what you get from claiming −te⁻ᵗ → −∞; the exponential beats the linear factor."
+     "why": "Write it as lim(t→∞) ∫₀ᵗ xe⁻ˣdx = lim(t→∞)[−xe⁻ˣ − e⁻ˣ]|₀ᵗ = lim(t→∞)(−te⁻ᵗ − e⁻ᵗ + 1). The middle term e⁻ᵗ → 0, and −te⁻ᵗ = −t/eᵗ is −∞/∞, so L'Hôpital gives −1/eᵗ → 0. Total: 0 + 0 + 1 = 1. Option 2 loses the +1, which comes from subtracting the value −1 that the antiderivative takes at x = 0. Option 3 keeps that −1 without flipping its sign under the subtraction. Option 4 is what you get from claiming −te⁻ᵗ → −∞; the exponential beats the linear factor."
     },
     {
      "type": "mcq",
@@ -648,7 +648,7 @@
      ],
      "answerIndex": 1,
      "concept": "Finishing a p-integral as a limit rather than quoting Note 1",
-     "why": "lim_{t→∞}[−1/x]|₃ᵗ = lim_{t→∞}(−1/t + 1/3) = 1/3, since −1/t → 0. Note 1 only tells you it converges; the limit tells you to what. Option 1 substitutes 3 into the integrand 1/x² instead of into the antiderivative −1/x. Option 3 inverts the answer. Option 4 confuses p = 2 with the divergent side of Note 1; p = 2 > 1 converges."
+     "why": "lim(t→∞)[−1/x]|₃ᵗ = lim(t→∞)(−1/t + 1/3) = 1/3, since −1/t → 0. Note 1 only tells you it converges; the limit tells you to what. Option 1 substitutes 3 into the integrand 1/x² instead of into the antiderivative −1/x. Option 3 inverts the answer. Option 4 confuses p = 2 with the divergent side of Note 1; p = 2 > 1 converges."
     },
     {
      "type": "mcq",
@@ -661,7 +661,7 @@
      ],
      "answerIndex": 2,
      "concept": "A convergent p-integral with a fractional exponent, evaluated in full",
-     "why": "The antiderivative of x^(−3/2) is x^(−1/2)/(−1/2) = −2/√x, so lim_{t→∞}[−2/√x]|₁ᵗ = lim_{t→∞}(−2/√t + 2) = 2. Option 1 misapplies Note 1: p = 3/2 > 1, the convergent side. Option 2 is 1/p, guessed rather than derived. Option 4 comes from dividing by the new power 3/2 without the sign, i.e. treating the exponent as +3/2 instead of −3/2."
+     "why": "The antiderivative of x^(−3/2) is x^(−1/2)/(−1/2) = −2/√x, so lim(t→∞)[−2/√x]|₁ᵗ = lim(t→∞)(−2/√t + 2) = 2. Option 1 misapplies Note 1: p = 3/2 > 1, the convergent side. Option 2 is 1/p, guessed rather than derived. Option 4 comes from dividing by the new power 3/2 without the sign, i.e. treating the exponent as +3/2 instead of −3/2."
     },
     {
      "type": "mcq",
@@ -700,7 +700,7 @@
      ],
      "answerIndex": 2,
      "concept": "Interior discontinuity: split first, and both pieces run to +∞",
-     "why": "1/x⁴ is undefined at x = 0, inside [−1, 2], so slide 8 clause 3 forces the split. With F(x) = −1/(3x³): the left piece is lim_{c→0⁻}(−1/(3c³) − 1/3) = +∞, since c³ → 0 from below; the right piece is lim_{b→0⁺}(−1/24 + 1/(3b³)) = +∞. Neither limit is finite, so the integral diverges. Option 1 is exactly what the Fundamental Theorem returns if you drive straight through x = 0 — and its negativity, for a strictly positive integrand, is the tell that something is wrong. Option 2 is that same slip with the limits reversed. Option 4 is the upper-limit term alone."
+     "why": "1/x⁴ is undefined at x = 0, inside [−1, 2], so slide 8 clause 3 forces the split. With F(x) = −1/(3x³): the left piece is lim(c→0⁻)(−1/(3c³) − 1/3) = +∞, since c³ → 0 from below; the right piece is lim(b→0⁺)(−1/24 + 1/(3b³)) = +∞. Neither limit is finite, so the integral diverges. Option 1 is exactly what the Fundamental Theorem returns if you drive straight through x = 0 — and its negativity, for a strictly positive integrand, is the tell that something is wrong. Option 2 is that same slip with the limits reversed. Option 4 is the upper-limit term alone."
     },
     {
      "type": "mcq",
@@ -732,19 +732,19 @@
      "type": "short",
      "q": "Work Type I Example 1 in full: determine whether ∫₀^∞ xe⁻ˣ dx converges or diverges. Show the limit line, verify the antiderivative by differentiating it, and show the L'Hôpital step explicitly.",
      "concept": "A complete Type I evaluation, antiderivative check included",
-     "why": "A good answer opens with the definition line: ∫₀^∞ xe⁻ˣdx = lim_{t→∞} ∫₀ᵗ xe⁻ˣdx. It names the antiderivative −xe⁻ˣ − e⁻ˣ (from parts with u = x and dv = e⁻ˣdx, giving v = −e⁻ˣ and ∫xe⁻ˣdx = −xe⁻ˣ + ∫e⁻ˣdx = −xe⁻ˣ − e⁻ˣ) and checks it: the derivative of −xe⁻ˣ − e⁻ˣ is −e⁻ˣ + xe⁻ˣ + e⁻ˣ = xe⁻ˣ, the integrand. It then evaluates: [−xe⁻ˣ − e⁻ˣ]|₀ᵗ = (−te⁻ᵗ − e⁻ᵗ) − (0 − 1) = −te⁻ᵗ − e⁻ᵗ + 1, spelling out that the lower limit contributes +1. It resolves the indeterminate term by rewriting −te⁻ᵗ as −t/eᵗ, identifying the form −∞/∞, applying L'Hôpital to get −1/eᵗ, and noting that eᵗ → ∞ so the limit is 0. It concludes the whole limit is 0 + 0 + 1 = 1, so the integral converges to 1. Credit the explicit statement that this is a convergent integral WITH a value — unlike anything decided by comparison."
+     "why": "A good answer opens with the definition line: ∫₀^∞ xe⁻ˣdx = lim(t→∞) ∫₀ᵗ xe⁻ˣdx. It names the antiderivative −xe⁻ˣ − e⁻ˣ (from parts with u = x and dv = e⁻ˣdx, giving v = −e⁻ˣ and ∫xe⁻ˣdx = −xe⁻ˣ + ∫e⁻ˣdx = −xe⁻ˣ − e⁻ˣ) and checks it: the derivative of −xe⁻ˣ − e⁻ˣ is −e⁻ˣ + xe⁻ˣ + e⁻ˣ = xe⁻ˣ, the integrand. It then evaluates: [−xe⁻ˣ − e⁻ˣ]|₀ᵗ = (−te⁻ᵗ − e⁻ᵗ) − (0 − 1) = −te⁻ᵗ − e⁻ᵗ + 1, spelling out that the lower limit contributes +1. It resolves the indeterminate term by rewriting −te⁻ᵗ as −t/eᵗ, identifying the form −∞/∞, applying L'Hôpital to get −1/eᵗ, and noting that eᵗ → ∞ so the limit is 0. It concludes the whole limit is 0 + 0 + 1 = 1, so the integral converges to 1. Credit the explicit statement that this is a convergent integral WITH a value — unlike anything decided by comparison."
     },
     {
      "type": "short",
      "q": "Work Type I Example 2 in full: determine whether ∫₋∞^∞ (2x² − x + 3)dx converges or diverges. Show the split, the two independent limits, the antiderivative, and say at what point in the working you are entitled to stop.",
      "concept": "Splitting a doubly-infinite integral and stopping at the first divergent half",
-     "why": "A good answer splits at 0 as she does: ∫₋∞^∞(2x² − x + 3)dx = ∫₋∞⁰(2x² − x + 3)dx + ∫₀^∞(2x² − x + 3)dx, then writes the two halves with DIFFERENT moving letters, lim_{a→−∞}∫ₐ⁰ and lim_{b→∞}∫₀ᵇ, noting that they are independent and may not be tied into one symmetric limit. The antiderivative is the term-by-term power rule, 2x³/3 − x²/2 + 3x. Evaluating the right half gives 2b³/3 − b²/2 + 3b − 0, which is dominated by 2b³/3 and runs to +∞. That is the stopping point: clause 3 of slide 5 permits the two halves to be added only IF both converge, so a single divergent half settles the question and the integral diverges. A strong answer adds that the left half also runs to +∞ — it is 0 − (2a³/3 − a²/2 + 3a) and 2a³/3 → −∞ as a → −∞ — but stresses that even if the two halves had run to +∞ and −∞, cancelling them would not be permitted."
+     "why": "A good answer splits at 0 as she does: ∫₋∞^∞(2x² − x + 3)dx = ∫₋∞⁰(2x² − x + 3)dx + ∫₀^∞(2x² − x + 3)dx, then writes the two halves with DIFFERENT moving letters, lim(a→−∞)∫ₐ⁰ and lim(b→∞)∫₀ᵇ, noting that they are independent and may not be tied into one symmetric limit. The antiderivative is the term-by-term power rule, 2x³/3 − x²/2 + 3x. Evaluating the right half gives 2b³/3 − b²/2 + 3b − 0, which is dominated by 2b³/3 and runs to +∞. That is the stopping point: clause 3 of slide 5 permits the two halves to be added only IF both converge, so a single divergent half settles the question and the integral diverges. A strong answer adds that the left half also runs to +∞ — it is 0 − (2a³/3 − a²/2 + 3a) and 2a³/3 → −∞ as a → −∞ — but stresses that even if the two halves had run to +∞ and −∞, cancelling them would not be permitted."
     },
     {
      "type": "short",
      "q": "Work Type II Example 1 in full: determine whether ∫₋₁² dx/x⁴ converges or diverges. Justify the split, evaluate each piece with correct signs, and say what the naive Fundamental Theorem answer would have been and why it is visibly impossible.",
      "concept": "The interior-discontinuity split, done with the signs right",
-     "why": "A good answer notices first that 1/x⁴ is undefined at x = 0 and that 0 lies strictly inside [−1, 2], so slide 8 clause 3 applies: ∫₋₁² = ∫₋₁⁰ + ∫₀², i.e. lim_{c→0⁻}∫₋₁ᶜ dx/x⁴ + lim_{b→0⁺}∫_b² dx/x⁴. The antiderivative is ∫x⁻⁴dx = x⁻³/(−3) = −1/(3x³). Left piece: (−1/(3c³)) − (−1/(3(−1)³)) = −1/(3c³) − 1/3, and as c → 0⁻ the number c³ is small and NEGATIVE, so −1/(3c³) → +∞; the piece tends to +∞. Right piece: (−1/24) − (−1/(3b³)) = −1/24 + 1/(3b³) → +∞ as b → 0⁺. Neither limit is finite, so the integral diverges. The naive route gives [−1/(3x³)]|₋₁² = −1/24 − 1/3 = −3/8, which is impossible because 1/x⁴ is strictly positive wherever it is defined, so no correct answer can be negative — that impossibility is the diagnostic. A strong answer also notes that the slide's own line, '→ −∞ as c → 0⁻', has the sign wrong; both pieces go to +∞."
+     "why": "A good answer notices first that 1/x⁴ is undefined at x = 0 and that 0 lies strictly inside [−1, 2], so slide 8 clause 3 applies: ∫₋₁² = ∫₋₁⁰ + ∫₀², i.e. lim(c→0⁻)∫₋₁ᶜ dx/x⁴ + lim(b→0⁺)∫_b² dx/x⁴. The antiderivative is ∫x⁻⁴dx = x⁻³/(−3) = −1/(3x³). Left piece: (−1/(3c³)) − (−1/(3(−1)³)) = −1/(3c³) − 1/3, and as c → 0⁻ the number c³ is small and NEGATIVE, so −1/(3c³) → +∞; the piece tends to +∞. Right piece: (−1/24) − (−1/(3b³)) = −1/24 + 1/(3b³) → +∞ as b → 0⁺. Neither limit is finite, so the integral diverges. The naive route gives [−1/(3x³)]|₋₁² = −1/24 − 1/3 = −3/8, which is impossible because 1/x⁴ is strictly positive wherever it is defined, so no correct answer can be negative — that impossibility is the diagnostic. A strong answer also notes that the slide's own line, '→ −∞ as c → 0⁻', has the sign wrong; both pieces go to +∞."
     },
     {
      "type": "short",
@@ -895,7 +895,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
-   "topic": "Code work only: tracing if, if-else, if-else-if, switch, while, do-while and for by hand to state exact output, counting loop passes and knowing what a control variable holds after a loop ends, and finding the four faults that compile in silence - the off-by-one condition, the dangling else, '=' written for '==' (and '>' for '>='), and a loop condition that never becomes false.",
+   "topic": "Code work only: tracing if-else, if-else-if chains, switch, while, do-while, for and goto by hand to state exact output, counting loop passes and knowing what a control variable holds after a loop ends, counting statements on one line, and finding the two faults that compile in silence - '=' written for '==', and a construct given several statements with no curly brackets to make them into a block.",
    "maxScore": 12,
    "questions": [
     {
@@ -908,8 +908,8 @@
       "15 6"
      ],
      "answerIndex": 0,
-     "concept": "A for with i < b runs b - a passes, and the control variable survives the loop holding the first value that FAILED the test.",
-     "why": "The body runs for i = 1, 2, 3, 4, so total = 1 + 2 + 3 + 4 = 10. Then i++ makes i 5, the test 5 < 5 fails, and the loop ends - so i is 5 on the printf line, not 4. (b) 10 4 is the belief that the control variable keeps the last value the body used; it cannot, because the only way out of the loop is through an increment followed by a failed test. (c) 15 5 adds 5 into the total, i.e. reads the condition as i <= 5; that is the off-by-one, and note that it gets the final i right for the wrong reason. (d) 15 6 makes both mistakes at once. The rule worth carrying: from a start of a with step 1, i < b gives b - a passes and leaves i at b; i <= b gives b - a + 1 passes and leaves i at b + 1."
+     "concept": "A for with i < b runs b - a passes, and the control variable survives the loop holding the first value that FAILED the test",
+     "why": "The init step runs once, setting i to 1. The passes are i = 1, 2, 3 and 4, adding 1 + 2 + 3 + 4 = 10. After the pass with i = 4 the increment makes i 5, the condition 5 < 5 is false, so the body does not execute and control passes to the line after the loop with i still holding 5. Option (B) reports the last value USED in the body, forgetting that the loop only stops after an increment has produced a failing value. Option (C) adds 5 as well, which would need i <= 5."
     },
     {
      "type": "mcq",
@@ -921,21 +921,21 @@
       "A then 0"
      ],
      "answerIndex": 0,
-     "concept": "'=' assigns and its value is the value assigned, so if (x = 2) is always true and destroys x.",
-     "why": "x = 2 stores 2 in x; the value of that assignment expression is 2, which is not 0, so the condition is true and A prints. The else is unreachable for any right-hand side except 0. x now holds 2, so the second line prints 2. (b) is the reading of '=' as '==': 0 == 2 would be false, giving B, and x would still be 0 - the answer of someone who has not noticed that a single character is different. (c) spots the assignment but then tests the OLD value of x; the assignment happens first and the condition tests its result, not what was there before. (d) gets the branch right and forgets that the variable has been overwritten - the side effect is half the damage. The repair is if (x == 2); the habit that prevents it is to read every condition asking 'does this compare, or does it store?'"
+     "concept": "'=' assigns and its value is the value assigned, so if (x = 2) is always true and destroys x",
+     "why": "The condition is x = 2, not x == 2. It stores 2 in x, and the value of the whole condition is the value stored, 2. By the deck's rule a condition is true whenever its value is not 0, so 2 is true, the if block runs and A prints - and x has been changed to 2 on the way, which the last line shows. Option (B) reads the condition as a comparison and gets both halves wrong. Option (C) spots the side effect and then takes the wrong branch. Nothing here is rejected by the compiler: an assignment is an expression with a value, which is exactly why this typo survives."
     },
     {
      "type": "mcq",
-     "q": "What is printed?\n\nint score = 45, bonus = 0;\nif (score >= 40)\n    if (bonus > 0)\n        printf(\"Merit\\n\");\nelse\n    printf(\"Fail\\n\");\nprintf(\"Done\\n\");",
+     "q": "What is printed?\n\nint age = 22;\nif (age >= 26)\n    printf(\"adult\\n\");\nelse if (age >= 20)\n    printf(\"young adult\\n\");\nelse if (age >= 13)\n    printf(\"teen\\n\");\nelse\n    printf(\"child\\n\");",
      "options": [
-      "Done only",
-      "Fail then Done",
-      "Merit then Done",
-      "Fail only"
+      "teen",
+      "young adult",
+      "adult",
+      "young adult and then teen, since 22 also satisfies age >= 13"
      ],
      "answerIndex": 1,
-     "concept": "The dangling else binds to the nearest preceding unmatched if, so an else written under the outer if can fire on the inner one's condition.",
-     "why": "The else belongs to if (bonus > 0), whatever the indentation suggests. Trace it: score >= 40 is 45 >= 40, true, so control enters the inner construct. bonus > 0 is 0 > 0, false, so the inner else runs and prints Fail. Then printf(\"Done\\n\"), which is outside everything, prints Done. So a student with a score of 45 and no bonus is told they failed, on the strength of their bonus. (a) Done only is the indentation reading - bind the else to the outer if, find score >= 40 true, conclude the else is skipped and the inner if prints nothing; it is the misconception the question exists to catch and the only wrong answer a confident trace produces. (c) Merit needs bonus > 0. (d) Fail only forgets that Done is outside every branch and always runs. The repair is braces: if (score >= 40) { if (bonus > 0) printf(\"Merit\\n\"); } else printf(\"Fail\\n\");"
+     "concept": "An if-else-if chain stops at the first satisfied condition; the later ones are never tested",
+     "why": "The conditions are tested top to bottom. 22 >= 26 is false, so control moves to the next test; 22 >= 20 is true, so 'young adult' prints - and the whole of the rest of the chain, including the third test and the final else, is skipped. Option (D) is the trap and it is a true observation put to the wrong use: 22 does satisfy age >= 13, but that condition is never evaluated, because with if-else-if the else is reached only when the preceding if was not satisfied. Option (A) is what you get by testing the conditions in the wrong order or by using three separate ifs, which is precisely the difference between a chain and a list. The order of the branches is part of the logic: each condition may quietly assume that every earlier one failed."
     },
     {
      "type": "mcq",
@@ -947,8 +947,8 @@
       "10 | 10"
      ],
      "answerIndex": 2,
-     "concept": "A do-while tests AFTER the body, so it always runs at least once even when the condition is false from the outset.",
-     "why": "The body executes: '10 ' is printed and n becomes 7. Only then is n > 10 tested - 7 > 10 is false - so the loop stops after exactly one pass and '| 7' is printed. Note that the condition was ALREADY false at the start (10 > 10 is false), and it made no difference. (a) | 10 applies the while rule and tests before the body; that is what a while would print, and confusing the two is the whole point of the question. (b) runs the loop while the condition is FALSE, i.e. reads while (n > 10) as an exit condition rather than a continue condition - the loop iterates while the condition is TRUE. (d) runs the body once but forgets that the body also changed n before the printf was reached."
+     "concept": "A do-while tests AFTER the body, so it always runs at least once even when the condition is false from the outset",
+     "why": "The body runs before anything is tested: 10 is printed and n becomes 7. Only then is n > 10 evaluated, and 7 > 10 is false, so the loop ends with n holding 7. That is the deck's sentence in action - a do-while 'is guaranteed to execute at least one time'. Option (A) is what a while with the same condition would print, namely nothing, because a while tests first. Option (B) reads the condition as n > 0. Option (D) forgets that the body changed n before the test."
     },
     {
      "type": "mcq",
@@ -960,71 +960,71 @@
       "6 "
      ],
      "answerIndex": 2,
-     "concept": "A loop governs exactly one statement; without braces the second line is not in the loop, and indentation is invisible to the compiler.",
-     "why": "The for body is s = s + i; alone. Passes at i = 0, 1, 2 give s = 0 + 1 + 2 = 3. The loop then ends, and printf(\"%d \", s) executes ONCE, printing '3 '. (a) 0 1 3 is the indentation reading - the printf inside the loop, printing s after each addition; it is the answer this question is built to separate out, because it requires an otherwise correct trace. (b) 0 1 2 prints i rather than the running total, and also puts the printf in the loop. (d) 6 sums 1 + 2 + 3, the off-by-one that comes from reading i < 3 as i <= 3. The fix, and the habit: write the braces even when the body is one line, because the fault appears only when a second line is added and it is invisible on the page."
+     "concept": "A loop governs exactly one statement; without curly brackets the second line is not in the loop, and indentation is invisible to the compiler",
+     "why": "There are no curly brackets, so no block has been made, and the for governs the single statement that follows it - s = s + i. The loop therefore runs three times silently, accumulating 0 + 1 + 2 = 3. The printf is the next statement of the programme and runs once, after the loop has finished, printing 3. Option (A) is what the indentation suggests and what curly brackets would produce. Option (D) adds a fourth pass. This is the deck's block rule read the other way: 'the group of statements inside a block are treated like a single statement', so where there is no block there is only one statement under the loop."
     },
     {
      "type": "mcq",
-     "q": "What is printed?\n\nint day = 2;\nswitch (day) {\n    case 1: printf(\"Mon \");\n    case 2: printf(\"Tue \");\n    case 3: printf(\"Wed \"); break;\n    case 4: printf(\"Thu \");\n    default: printf(\"Other \");\n}",
+     "q": "What is printed?\n\nint day = 3;\nswitch (day) {\n    case 1: printf(\"Mon\"); break;\n    case 2: printf(\"Tue\"); break;\n    case 3: printf(\"Wed\"); break;\n    default: printf(\"Other\"); break;\n}",
      "options": [
-      "Tue ",
-      "Mon Tue Wed ",
-      "Tue Wed Thu Other ",
-      "Tue Wed "
+      "Mon Tue Wed",
+      "Other",
+      "Wed Other",
+      "Wed"
      ],
      "answerIndex": 3,
-     "concept": "A switch jumps to the matching label and then falls through the following cases until it meets a break.",
-     "why": "day is 2, so control jumps to case 2: and prints 'Tue '. That case has NO break, so control does not leave the switch; it runs straight on into case 3:, prints 'Wed ', and meets the break there, which ends the switch. (a) Tue is the if-else-if model applied to a switch - an if-else-if chain never falls through, a switch always does until stopped, so the missing break is a behaviour change and not a formatting slip. (c) continues past the break, which is exactly what a break prevents; Thu and Other are unreachable here. (b) falls through BACKWARDS into case 1:; a switch enters at the matching label and only ever proceeds forwards, so Mon cannot print when day is 2."
+     "concept": "With the switch statement we execute one code block among many alternatives",
+     "why": "The deck's one sentence on switch is that 'with the switch statement, we can execute one code block among many alternatives'. Here day is 3, so the alternative labelled case 3 is the one executed and Wed is printed; each alternative is closed by break, which is what keeps the statement to the one block the deck describes. Option (B) is the default, which is the alternative used when none of the labels matches - and one does. Option (C) adds the default on top of a matching case, treating it as a closing step rather than as one alternative among the others. Option (A) runs every alternative, which is not what a selection statement does."
     },
     {
      "type": "mcq",
-     "q": "What is printed?\n\nint i = 0, j = 0, k;\nk = (i++ > 0) && (j++ > 0);\nprintf(\"%d %d %d\\n\", i, j, k);",
+     "q": "The deck asks how many statements are in a piece of code, and whether more than one statement can be written on a single line. How many statements is this line, and what settles the count?\nint a = 5; int b = 7; printf(\"%d\\n\", a + b);",
      "options": [
-      "1 1 0",
-      "1 0 0",
-      "0 0 0",
-      "1 1 1"
+      "One, because a statement is a line and this is a line",
+      "Three, because a simple statement contains only one expression and ends with a semicolon, and there are three semicolons",
+      "Two, because the two definitions together count as one statement and the printf is the other",
+      "None, because C requires statements to be written one per line"
      ],
      "answerIndex": 1,
-     "concept": "Short-circuit evaluation: when the left operand of && is false the right operand is never evaluated, so its side effects never happen.",
-     "why": "i++ > 0 uses the CURRENT value of i, which is 0, so the comparison is 0 > 0 = false; the increment still happens, leaving i = 1. Because the left operand is false, the result of && is already 0 and the right operand (j++ > 0) is NOT evaluated at all - so j is never incremented and stays 0. k is 0. (a) 1 1 0 is the answer of someone who knows the truth table but not the evaluation rule: they get the result right and both increments wrong, which is exactly the split this question is testing. (c) 0 0 0 forgets that i++ increments even when the comparison it feeds is false. (d) 1 1 1 gets the truth value backwards as well. The practical lesson: never put an assignment, increment or call with an effect in the right-hand operand of && or ||, because whether it runs depends on the left one."
+     "concept": "The semicolon terminates a statement, so the layout does not decide the count",
+     "why": "'A simple statement contains only one expression and it ends with a semicolon.' The semicolon is what ends a statement, so counting statements means counting terminators, and there are three here: the definition of a, the definition of b, and the call to printf. This is the deck's own question - 'Can we have more than one statement on a single line?' - and the answer is yes, for exactly this reason. Option (A) and option (D) both make the line ending do the semicolon's job, which is true of some other languages and false of C; the same rule read the other way is what lets a single long statement be spread over several lines. Option (C) invents a grouping that only curly brackets could create, and a block would still be one construct rather than one statement out of two."
     },
     {
      "type": "mcq",
-     "q": "What does this do?\n\nint i;\nfor (i = 0; i != 10; i += 3)\n    printf(\"%d \", i);",
+     "q": "What is printed?\n\nint i = 0;\nagain:\n    printf(\"%d \", i);\n    i = i + 1;\n    if (i < 3) goto again;\nprintf(\"| %d\\n\", i);",
      "options": [
-      "Prints 0 3 6 9 and stops, because the loop ends as soon as i passes 10",
-      "Prints nothing, because i starts at 0 and the condition 0 != 10 is false at the first test",
-      "Prints 0 3 6 9 12 15 and onwards without ever stopping, because != requires i to land exactly on 10 and a step of 3 steps straight over it",
-      "Does not compile, because the condition of a for loop must use a relational operator such as < or >"
+      "0 1 2 3 | 4",
+      "0 | 1",
+      "Nothing, because a goto may only move program control forwards",
+      "0 1 2 | 3"
      ],
-     "answerIndex": 2,
-     "concept": "!= as a loop condition demands an exact landing; a step that does not divide the gap steps straight over the target.",
-     "why": "i takes the values 0, 3, 6, 9, 12, 15, ... and is compared with 10 each time. It is never EQUAL to 10, so i != 10 is never false and the loop never terminates. (a) is the belief that != behaves like < and stops once the target is passed; it does not - it tests equality and nothing else, and 12 is just as unequal to 10 as 0 is. This is the misconception the whole question is about, and it is invisible if you only test the loop with a step of 1. (b) has the condition backwards: 0 != 10 is TRUE, so the loop is entered; a loop iterates WHILE its condition is true. (d) invents a syntax rule; != is a perfectly legal condition and the compiler issues no warning, which is why the fault reaches run time. The safe form is i < 10, which stops for any step size because it tests a boundary rather than a single value."
+     "answerIndex": 3,
+     "concept": "goto is unconditional branching; the condition here belongs to the if, not to the goto",
+     "why": "Trace it. i = 0: prints 0, i becomes 1, 1 < 3 is true so control jumps back to the label. i = 1: prints 1, i becomes 2, 2 < 3 is true, jump. i = 2: prints 2, i becomes 3, 3 < 3 is false, so no jump and control falls through to the last line with i holding 3. Output: 0 1 2 | 3. The deck's point about goto is that 'the goto statement did not specify any condition before moving program control' - and that is still true here: the goto itself tests nothing, and the testing is done by the if that governs it. That is the difference between the two kinds of branching side by side in three lines. Option (A) prints one value too many and exits with i one too high. Option (B) treats the jump as never taken. Option (C) invents a direction rule; nothing in the deck restricts which way a branch may go, and jumping backwards is how a goto produces repetition."
     },
     {
      "type": "short",
      "q": "State the EXACT output of this programme, line for line. Then say how many times the INNER loop body runs in total, state the values i and j hold on the last line and explain precisely why each holds that value, and say what the total number of inner passes becomes if  j = i  is changed to  j = 1.\n\n#include <stdio.h>\n\nint main(void)\n{\n    int i, j;\n    for (i = 1; i <= 3; i++) {\n        for (j = i; j <= 3; j++)\n            printf(\"%d%d \", i, j);\n        printf(\"\\n\");\n    }\n    printf(\"i=%d j=%d\\n\", i, j);\n    return 0;\n}",
-     "concept": "Tracing nested loops, counting passes, and knowing what both control variables hold after the loops end.",
-     "why": "THE EXACT OUTPUT:\n11 12 13 \n22 23 \n33 \ni=4 j=4\nEach of the first three lines ends with a trailing space before the newline, because the newline is printed by the separate printf(\"\\n\") after the inner loop.\nTHE TRACE. The outer loop starts with i = 1. The inner loop starts at j = i, so: with i = 1, j runs 1, 2, 3, printing '11 ', '12 ', '13 '; j then becomes 4, 4 <= 3 fails, the inner loop ends and the newline is printed. With i = 2, the inner loop starts at j = 2 and runs 2, 3, printing '22 ', '23 ', then the newline. With i = 3 it starts at j = 3 and runs once, printing '33 ', then the newline. i then becomes 4, 4 <= 3 fails, and the outer loop ends.\nINNER PASSES: the inner body runs 3 + 2 + 1 = 6 times. The triangle shape comes entirely from j = i, which restarts the inner loop one step further along on every outer pass.\nFINAL VALUES: i = 4 and j = 4. Both hold the FIRST VALUE THAT FAILED THEIR TEST, because the only way out of a for loop is body, increment, test fails. i reached 4 and failed i <= 3. j is 4 because the inner loop was re-initialised on every outer pass (j = i runs each time the inner for is reached) and each time it climbed until j <= 3 failed, which is at j = 4; the last of those runs was the one with i = 3, which set j to 3 and then incremented it once to 4. The important point is that j survives the inner loop and is still in scope afterwards - it was declared in main, not in the for header - which is why the last line can print it at all.\nIF j = i BECOMES j = 1: the inner loop runs from 1 to 3 on every outer pass, so it runs 3 x 3 = 9 times, and the output becomes the full 3 x 3 grid 11 12 13 / 21 22 23 / 31 32 33. The final values are unchanged at i = 4, j = 4."
+     "concept": "Tracing nested loops, counting passes, and knowing what both control variables hold after the loops end",
+     "why": "THE OUTPUT, line for line:\n11 12 13 \n22 23 \n33 \ni=4 j=4\nTHE TRACE. The outer loop runs with i = 1, 2, 3. For each pass the inner loop starts at j = i and runs while j <= 3. With i = 1 the inner loop runs for j = 1, 2, 3, printing 11 12 13; then the printf(\"\\n\") inside the outer block ends the line. With i = 2 the inner loop starts at 2 and runs for j = 2, 3, printing 22 23. With i = 3 it runs once, for j = 3, printing 33. INNER PASSES IN TOTAL: 3 + 2 + 1 = 6. THE FINAL VALUES. i is 4 and j is 4. i is 4 because the outer loop ended when its condition first failed: after the pass with i = 3 the increment made i 4, and 4 <= 3 is false, so the loop stopped with i holding the first value that failed the test. j is 4 for the same reason, from its LAST run only: on the final outer pass the inner loop started at j = 3, ran once, and the increment made j 4, at which point 4 <= 3 failed. j is not reset afterwards, so it keeps the value it was left with, and it is visible on the last line because it was defined outside both loops. IF j = i BECOMES j = 1: every inner loop now runs for j = 1, 2, 3, so each of the three outer passes gives three inner passes and the total is 3 x 3 = 9 rather than 6. The output would become 11 12 13 / 21 22 23 / 31 32 33, and the final values would be unchanged at i = 4, j = 4, since neither loop's exit condition has been altered."
     },
     {
      "type": "short",
-     "q": "This is meant to print A for 70 and above, Pass for 50 to 69, and Fail below 50. State exactly what it prints for score = 45 and for score = 60, name the fault and say which if the else actually belongs to, and give a corrected version that behaves as intended for 45, 60 and 85.\n\n#include <stdio.h>\n\nint main(void)\n{\n    int score = 45;\n\n    if (score >= 50)\n        if (score >= 70)\n            printf(\"A\\n\");\n    else\n        printf(\"Fail\\n\");\n\n    printf(\"done\\n\");\n    return 0;\n}",
-     "concept": "The dangling else - an else binds to the nearest preceding unmatched if, regardless of indentation, and the fault shows up in two opposite ways.",
-     "why": "WHAT IT PRINTS. For score = 45: the outer condition 45 >= 50 is FALSE, so the outer if skips its one governed statement - and that single statement is the ENTIRE inner if-else, else included. Nothing inside is reached; score >= 70 is never even tested. The programme prints only:\ndone\nFor score = 60: 60 >= 50 is true, so control enters the inner construct; 60 >= 70 is false, so the inner else runs and prints Fail, then done:\nFail\ndone\nSo the programme has failed in both directions at once - a genuinely failing score of 45 is told nothing, and a passing score of 60 is told it failed.\nTHE FAULT. The else belongs to if (score >= 70), the NEAREST PRECEDING UNMATCHED if, not to if (score >= 50) as the indentation claims. C ignores whitespace entirely, so the layout is a comment on the code rather than part of it. The programmer intended the else to be the 'below 50' branch of the outer test; it is in fact the 'below 70' branch of the inner one, which is why it fires for 60 and is skipped for 45. There is also a missing branch: nothing anywhere prints Pass.\nTHE CORRECTION. Brace every branch, which makes the binding explicit and removes the whole class of fault; and since the three outcomes are three exclusive alternatives, an if-else-if chain says what is meant more directly:\n\n#include <stdio.h>\n\nint main(void)\n{\n    int score = 45;\n\n    if (score >= 70) {\n        printf(\"A\\n\");\n    } else if (score >= 50) {\n        printf(\"Pass\\n\");\n    } else {\n        printf(\"Fail\\n\");\n    }\n\n    printf(\"done\\n\");\n    return 0;\n}\n\nCheck all three: 45 fails >= 70 and fails >= 50, so Fail; 60 fails >= 70, meets >= 50, so Pass; 85 meets >= 70, so A - and in each case the remaining conditions are never tested, because the chain stops at the first true one. Note the order matters: written with score >= 50 first, every score of 70 or more would print Pass, because the first true condition wins."
+     "q": "This is meant to classify an age as teen (13 to 19), young adult (20 to 25) or adult (26 and over). State exactly what it prints for age = 17, for age = 22 and for age = 10, name the fault, explain it using the deck's description of the if-else-if statement, and give a corrected version that is right for all three ages and says something sensible for a child.\n\n#include <stdio.h>\n\nint main(void)\n{\n    int age = 10;\n\n    if (age >= 13)\n        printf(\"teen\\n\");\n    else if (age >= 20)\n        printf(\"young adult\\n\");\n    else\n        printf(\"adult\\n\");\n\n    return 0;\n}",
+     "concept": "In an if-else-if chain the first satisfied condition wins, so the order of the branches is part of the logic",
+     "why": "WHAT IT PRINTS. age = 17: 17 >= 13 is true, so 'teen' prints - correct, but by luck rather than by design. age = 22: 22 >= 13 is ALSO true, so 'teen' prints again and the second and third branches are never reached - wrong, it should be 'young adult'. age = 10: 10 >= 13 is false, so control moves to the next test; 10 >= 20 is false too, so the final else runs and 'adult' prints - wrong twice over, since a ten-year-old is neither an adult nor anything the programme was asked to classify. THE FAULT. The branches are in the wrong order, and the final else has been given to the wrong case. The deck's if-else-if slide says that with it 'more that two choices are integrated into the decision making process', and its if-else slide says control moves into the if block when the condition is satisfied and 'otherwise' to the else - so the chain is tested top to bottom and stops at the first condition that is satisfied, every later branch being skipped. That is what makes the order load-bearing: age >= 13 is satisfied by 22 and by 40 as well as by 17, so putting it first swallows every age above 12, and no later test can ever rescue them. Each condition in a chain is written to be read in the context of all the earlier ones having failed. Note also that the final else catches everything left over, which here is the ages BELOW 13 - the opposite of what it prints. THE REPAIR. Test the narrowest or highest band first, so that each later condition is reached only by the ages the earlier ones have already excluded, and give the else the case that really is left over:\n\n    if (age >= 26)\n        printf(\"adult\\n\");\n    else if (age >= 20)\n        printf(\"young adult\\n\");\n    else if (age >= 13)\n        printf(\"teen\\n\");\n    else\n        printf(\"child\\n\");\n\nNow 17 reaches the third test and prints teen; 22 fails the first, passes the second and prints young adult; 10 fails all three and prints child. Each condition needs only its own lower bound, because everything above it has already been taken by an earlier branch - which is the economy an if-else-if chain buys, and the reason it cannot be reordered freely."
     },
     {
      "type": "short",
-     "q": "State exactly what this prints. Then say what happens if the initial value of count is changed from 1 to 0, and explain why. Rewrite the loop condition so that it is safe for ANY starting value and any step, and give the output of your rewritten version for both starting values, 1 and 0.\n\n#include <stdio.h>\n\nint main(void)\n{\n    int count = 1, total = 0;\n\n    while (count != 10)\n    {\n        total = total + count;\n        count = count + 3;\n    }\n\n    printf(\"%d %d\\n\", total, count);\n    return 0;\n}",
-     "concept": "!= as a loop condition is fragile - it demands an exact landing, and a step that does not divide the gap produces an infinite loop.",
-     "why": "WHAT IT PRINTS AS WRITTEN: 12 10. Trace it: count = 1, 1 != 10 true, total = 1, count = 4; 4 != 10 true, total = 5, count = 7; 7 != 10 true, total = 12, count = 10; 10 != 10 is FALSE, so the loop ends with total = 1 + 4 + 7 = 12 and count = 10. It works - but only by luck, because 10 - 1 = 9 happens to be an exact multiple of the step 3.\nIF count STARTS AT 0: the values become 0, 3, 6, 9, 12, 15, 18, ... and none of them is ever EQUAL to 10, so count != 10 is never false and the loop NEVER TERMINATES. It prints nothing (the printf is after the loop) and runs forever, while total grows until the int overflows. Nothing about the source has changed except one initial value, and the compiler gives no warning: != is a perfectly legal condition.\nWHY != IS THE WRONG TOOL. != tests a single point. A loop condition needs to test a BOUNDARY, so that the loop stops the first time the variable is at or past the target, however it got there. With a step of 1 the two behave identically, which is precisely why the fault survives every test written with a step of 1 and appears only when someone later changes the step or the starting value.\nTHE SAFE REWRITE: while (count < 10). '<' is false for every value at or beyond 10, so the loop terminates for any starting value and any positive step.\nOUTPUTS OF THE REWRITTEN VERSION. Starting at 1: count = 1, 4, 7 are all < 10, so total = 12 and count finishes at 10 - it prints 12 10, unchanged, as it must for a value the original also handled. Starting at 0: count = 0, 3, 6, 9 are all < 10, so total = 0 + 3 + 6 + 9 = 18 and count finishes at 12 - it prints 18 12, terminating cleanly where the original hung.\nTHE GENERAL RULE: use < or > (or <= / >=) for loop conditions, and reserve != for cases where the variable provably lands exactly on the target, such as a sentinel value read from input."
+     "q": "This is meant to print Pass and Well done together when the score is 50 or more, and Fail on its own otherwise. State exactly what it prints for score = 30 and for score = 60, name the fault, quote the sentence from the deck that explains it, and give a corrected version. Then say why the compiler reports nothing.\n\n#include <stdio.h>\n\nint main(void)\n{\n    int score = 30;\n\n    if (score >= 50)\n        printf(\"Pass\\n\");\n        printf(\"Well done\\n\");\n    else\n        printf(\"Fail\\n\");\n\n    return 0;\n}",
+     "concept": "A construct governs exactly one statement; only curly brackets make several into one",
+     "why": "WHAT IT DOES. As written this programme does not even reach the question of what it prints, and that is the first thing to say: the if governs the single statement printf(\"Pass\\n\");, which ends at its semicolon, so the if statement is complete before printf(\"Well done\\n\"); is reached. The else that follows then belongs to nothing - there is no if immediately before it - and the compiler reports an error on the else. If the else and its printf are deleted, the fault becomes the silent one this question is really about: the if governs the first printf only, and printf(\"Well done\\n\"); is simply the next statement of the programme. With score = 30 nothing prints from the if and 'Well done' prints anyway; with score = 60, 'Pass' prints and then 'Well done' prints - right by accident. THE FAULT: two statements have been put under an if without being made into a block. THE DECK'S SENTENCE: 'The group of statements inside a block are treated like a single statement by the computer.' That is the property an if depends on, because an if governs exactly one statement; curly brackets are what turn several statements into one, and the deck adds that 'a block contains more than one statement contained inside curly brackets' and that 'the right curly bracket does not have a semicolon after it'. Indentation does none of this work - the compiler does not read it. THE REPAIR:\n\n    if (score >= 50) {\n        printf(\"Pass\\n\");\n        printf(\"Well done\\n\");\n    }\n    else\n        printf(\"Fail\\n\");\n\nNow score = 30 prints Fail alone and score = 60 prints Pass then Well done. WHY THE COMPILER IS SILENT - in the version without the else. Nothing there is ill-formed: an if with one statement under it is correct C, and a printf after it is correct C. The programme the compiler sees is exactly the programme it was given; what it cannot see is the programme that was INTENDED, and the indentation that expresses the intention is not part of the language. This is the reason for the habit of writing the curly brackets even when only one statement is under the if: the fault appears the day a second statement is added, and it is invisible on the page."
     },
     {
      "type": "short",
-     "q": "This is meant to print high when the average total / n is 30 or more, and low otherwise. Say what happens when it runs as written, and why. Then find the SECOND fault, which only shows up when n is 3, and say what the programme prints in that case and what it should print. Give a fully corrected if line. Finally, say what would change if && were replaced by &, and what  if (!n == 0)  would mean.\n\n#include <stdio.h>\n\nint main(void)\n{\n    int n = 0, total = 90;\n\n    if (total / n > 30 && n != 0)\n        printf(\"high\\n\");\n    else\n        printf(\"low\\n\");\n\n    return 0;\n}",
-     "concept": "Short-circuit evaluation makes operand order part of the meaning, and '>' versus '>=' is a separate wrong-comparison fault at the boundary.",
-     "why": "AS WRITTEN, THE PROGRAMME CRASHES WITH A DIVISION BY ZERO. && evaluates its LEFT operand first, and the left operand here is total / n > 30. With n = 0 that computes 90 / 0, which is undefined behaviour and on a typical machine terminates the programme immediately. The guard n != 0 is on the right, and short-circuiting only ever protects what is written to the RIGHT of &&; it can never protect something already evaluated. The programmer wrote both halves and got the order backwards, which is the whole fault: the truth table of && is symmetric, but its EVALUATION is not. Reordering to if (n != 0 && total / n > 30) fixes it: 0 != 0 is false, the result of && is settled at 0, and the division is never evaluated, so low prints and the programme survives.\nTHE SECOND FAULT, VISIBLE AT n = 3. With n = 3 and total = 90 the average is exactly 30. The specification says 30 or more should count as high, but the condition is total / n > 30, and 30 > 30 is FALSE - so the programme prints low when it should print high. This is the classic boundary error: '>' excludes the boundary value, '>=' includes it. It is invisible for every input except the exact boundary, which is why it survives casual testing and is exactly what an examiner picks. A third point worth noting: total / n is INTEGER DIVISION, so with total = 91 and n = 3 the average is 30 rather than 30.33 - the fractional part is discarded, not rounded.\nTHE FULLY CORRECTED LINE: if (n != 0 && total / n >= 30). The guard is on the left where short-circuiting can act on it, and the comparison includes the boundary.\nIF && WERE REPLACED BY &. & is the BITWISE and, a different operator with two consequences. First, it always evaluates both operands, so the guard stops guarding and n != 0 & total / n >= 30 divides by zero again - the protection is lost even though the operands are in the right order. Second, it combines the operands bit by bit rather than as truths, so it can give a different answer: 2 && 1 is 1, but 2 & 1 is 0. Here both operands happen to be 0 or 1, so the value would be the same when it did not crash, which makes the typo even harder to spot.\nWHAT if (!n == 0) WOULD MEAN. ! binds tighter than ==, so this groups as (!n) == 0, not as !(n == 0). !n is 1 when n is 0 and 0 when n is nonzero; comparing that with 0 is therefore true exactly when n is NONZERO - so if (!n == 0) is a roundabout way of writing if (n), and means the OPPOSITE of what someone writing 'not n equals zero' intended. If the test wanted is 'n is zero', write if (n == 0) or if (!n)."
+     "q": "Take this loop and answer four things. State exactly what it prints. State what a do-while with the same body and the same condition would print, and why. Rewrite the loop as a for, saying which part of the for header runs only once and when the condition is tested. Finally, say what each version prints if the initial value of n is changed to 7.\n\nint n = 1;\nwhile (n <= 3)\n{\n    printf(\"%d \", n);\n    n = n + 1;\n}\nprintf(\"| %d\\n\", n);",
+     "concept": "Where the test sits, and what the control variable holds when the loop ends",
+     "why": "WHAT THE WHILE PRINTS: 1 2 3 | 4. The condition is tested before each pass. n = 1: 1 <= 3 is true, prints 1, n becomes 2. n = 2: prints 2, n becomes 3. n = 3: prints 3, n becomes 4. Now 4 <= 3 is false, so - in the deck's words - 'the program control passes to the line immediately following the loop', which prints | 4. The loop variable is left holding the first value that failed the test, which is why it is 4 and not 3. THE DO-WHILE. Written as do { printf(\"%d \", n); n = n + 1; } while (n <= 3); with n starting at 1, the output is identical: 1 2 3 | 4. The reason it is identical is that the condition is true at the outset, so the one difference between the constructs never shows - the deck defines do-while entirely by its exception, that it 'is guaranteed to execute at least one time', and a guarantee of at least one pass changes nothing when a pass was going to happen anyway. AS A FOR: for (n = 1; n <= 3; n = n + 1) printf(\"%d \", n); The init step, n = 1, 'is executed first, and only once'. Then the condition is evaluated; if it is true the body executes, and if it is false 'the body of the loop does not execute'. After each pass the increment runs and the condition is tested again - so the test happens before every pass, exactly as in the while, which is why the two produce the same output and leave n at 4. WITH n STARTING AT 7. The while prints nothing at all and then | 7: 7 <= 3 is false at the very first test, so the body is never entered and n is never changed. The for behaves the same way, for the same reason - the init sets n to 7, the condition fails immediately, and the body does not execute. The do-while prints 7 | 8: its body runs before anything is tested, so 7 is printed and n becomes 8, and only then does the condition fail. That single case is the whole difference between the two loops, and it is why the deck's sentence about the guaranteed pass is the only thing it says to separate them."
     }
    ]
   },

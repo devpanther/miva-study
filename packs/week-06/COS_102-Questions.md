@@ -11,7 +11,10 @@ c) A textual representation of the sequence of operations in a computer program,
 d) A program written in simplified statements that a compiler translates before running it
 
 **2.** _________ can be written in any notation or language while _________ are written in a combination of natural and programming language elements.
-a) Algorithms…Pseudocode  b) Pseudocode…Algorithms  c) Flowcharts…Algorithms  d) Programs…Flowcharts
+a) Algorithms…Pseudocode
+b) Pseudocode…Algorithms
+c) Flowcharts…Algorithms
+d) Programs…Flowcharts
 
 **3.** A till must display a menu, read the cashier's choice, and go on doing so until the choice is "quit". The menu has to appear at least once. Which construct?
 a) FOR, because the number of transactions is settled before the till is switched on
@@ -27,7 +30,10 @@ REPEAT
 UNTIL x > 20
 PRINT x
 ```
-a) 16  b) 20  c) 32  d) 64
+a) 16
+b) 20
+c) 32
+d) 64
 
 **5.** Which fragment prints the largest of three numbers `a`, `b` and `c` for every possible set of values?
 a) `IF a > b THEN PRINT a ELSE PRINT b ENDIF; IF c > a THEN PRINT c ENDIF`
@@ -68,7 +74,10 @@ c) Pseudocode becomes executable once its keywords are capitalised and the bodie
 d) A flowchart can express loops and branches for which pseudocode has no construct, which is why both notations are taught
 
 **10.** A writer takes the finished pseudocode and works through it on paper on the case where no student passes at all. Which of the seven steps is being carried out?
-a) Using clear and concise language  b) Identification of main steps  c) Problem definition  d) Testing and refining
+a) Using clear and concise language
+b) Identification of main steps
+c) Problem definition
+d) Testing and refining
 
 **11.** The user types 5, 8, 3, 0. What does this print?
 ```
@@ -80,7 +89,10 @@ WHILE n <> 0
 ENDWHILE
 PRINT t
 ```
-a) 16  b) 13  c) 11  d) 8
+a) 16
+b) 13
+c) 11
+d) 8
 
 **12.** The course requires the header of a pseudocode to include:
 a) The name of the algorithm, a short description of its purpose, and a list of the required inputs and outputs

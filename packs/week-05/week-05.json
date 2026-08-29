@@ -20,7 +20,7 @@
    "day": "Tue",
    "deep": {
     "course": "PHY_102",
-    "topic": "Conceptual hour on Week 5 circuit analysis. What Kirchhoff's junction rule and loop rule each assert, and which conservation principle each one expresses: charge conservation with no accumulation at a node in the steady state, and conservation of energy per unit charge expressed as the single-valuedness of electric potential. Why the traversal sign rules take the form they do, in particular why the sign of an IR term depends on the direction of travel relative to the assumed current while the sign of an emf term depends only on the order in which the terminals are crossed. What goes wrong without a consistent convention, why only n minus 1 junction equations are independent for n junctions, and why a bridge circuit falls outside the series and parallel combination rules.",
+    "topic": "Conceptual session on Week 5 exactly as Dr Adeniji builds it: parallel splits current with one common voltage and 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N, series shares one current with R_eq = R₁ + R₂ + R₃ + ⋯ R_N; junction as a point where three or more conductors meet and loop as any closed conducting path; the junction rule ΣI = 0 as conservation of charge and the loop rule ΣV = 0 as conservation of energy; and her four traversal sign rules — − to + is +ε, + to − is −ε, with the current is −IR, against the current is +IR — plus what the sign of the answer means.",
     "checkFile": "checks/Tue-PHY_102.md"
    },
    "fast": {
@@ -56,7 +56,7 @@
    "day": "Fri",
    "deep": {
     "course": "PHY_102",
-    "topic": "Problem hour on Week 5 circuit analysis. Reducing a network by the series and parallel rules and recognising when that reduction is illegal. Setting up Kirchhoff equations for a two-loop network of two batteries with internal resistance and one shared resistor: choosing branch-current arrows, writing the junction equation, writing each loop equation with correct signs for the emf and IR terms, and solving for all three currents. Reading a negative current in the solution, computing terminal potential difference and power, and checking a finished answer independently. Includes diagnosing a wrong route and finding the balance condition of a bridge.",
+    "topic": "Computation on Week 5: evaluating 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N and inverting it, adding series resistances, and running Dr Adeniji's Example 1 end to end — the loop equation −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0 giving 8 V = I(16 Ω) and I = 0.5 A, the potential difference V_ab = (0.5)(7) + 4 + (0.5)(4) = 9.5 V checked by both paths, the emf powers P = εI of +6 W and −2 W, and the I²R energy balance — plus setting up the junction and loop equations for a bridge.",
     "checkFile": "checks/Fri-PHY_102.md"
    },
    "fast": {
@@ -342,136 +342,137 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
-   "topic": "Conceptual hour on Week 5 circuit analysis. What Kirchhoff's junction rule and loop rule each assert, and which conservation principle each one expresses: charge conservation with no accumulation at a node in the steady state, and conservation of energy per unit charge expressed as the single-valuedness of electric potential. Why the traversal sign rules take the form they do, in particular why the sign of an IR term depends on the direction of travel relative to the assumed current while the sign of an emf term depends only on the order in which the terminals are crossed. What goes wrong without a consistent convention, why only n minus 1 junction equations are independent for n junctions, and why a bridge circuit falls outside the series and parallel combination rules.",
+   "slot": "deep",
+   "topic": "Conceptual session on Week 5 exactly as Dr Adeniji builds it: parallel splits current with one common voltage and 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N, series shares one current with R_eq = R₁ + R₂ + R₃ + ⋯ R_N; junction as a point where three or more conductors meet and loop as any closed conducting path; the junction rule ΣI = 0 as conservation of charge and the loop rule ΣV = 0 as conservation of energy; and her four traversal sign rules — − to + is +ε, + to − is −ε, with the current is −IR, against the current is +IR — plus what the sign of the answer means.",
    "maxScore": 12,
    "questions": [
     {
      "type": "mcq",
-     "q": "Kirchhoff's junction rule states that the algebraic sum of the currents at a junction is zero. What physical principle is that a statement of?",
+     "q": "Slide 3 says a parallel connection 'splits the current in the resistors while the ... across each resistor is the same'. Which quantity is the same for every resistor in a parallel connection?",
      "options": [
-      "Energy is conserved, so the charges arriving at the junction carry the same energy as those leaving it.",
-      "Every point of a junction sits at the same potential, and that equality forces the currents to be equal.",
-      "Charge is conserved and cannot accumulate at a point in the steady state, so it arrives and leaves at equal rates.",
-      "Current always divides at a junction so as to follow the path of lowest resistance available to it."
-     ],
-     "answerIndex": 2,
-     "concept": "The junction rule as charge conservation under the steady-state condition of no charge accumulation",
-     "why": "The rule counts charge per second in and out. Charge is conserved, and in a steady current there is no build-up of charge at a point, so the two rates must be equal. It says nothing about energy or about potentials being equal."
-    },
-    {
-     "type": "mcq",
-     "q": "The loop rule says the algebraic sum of potential changes around any closed loop is zero. What makes that true?",
-     "options": [
-      "Electric potential is single-valued, so a charge taken once round a closed path returns to the potential it started at.",
-      "The current is the same at every point of a closed loop, so the potential changes across the elements must cancel.",
-      "A battery supplies exactly as much charge as the resistors consume, so the loop balances over one full circuit.",
-      "The total resistance measured around any closed conducting loop necessarily comes out to be zero."
-     ],
-     "answerIndex": 0,
-     "concept": "The loop rule as conservation of energy per unit charge, i.e. potential is a single-valued function of position",
-     "why": "Potential is a function of position, so returning to the same point returns you to the same value; the energy a unit charge gains from sources round the loop equals what it loses in resistances."
-    },
-    {
-     "type": "mcq",
-     "q": "While walking a loop you pass through a resistor R in the same direction as the assumed current I. Why is the term entered minus IR rather than plus IR?",
-     "options": [
-      "Because charge is used up inside the resistor, so less charge leaves it than entered it.",
-      "Because a resistor opposes the flow of current, and any opposing element is entered with a negative sign.",
-      "Because the loop happens to be walked clockwise, and clockwise traversals are conventionally negative.",
-      "Because current inside a resistor runs from high to low potential, so moving with it is moving downhill."
+      "The current",
+      "The power dissipated",
+      "The resistance",
+      "The voltage"
      ],
      "answerIndex": 3,
-     "concept": "Why the resistor sign follows from the direction of potential drop relative to the direction of travel",
-     "why": "In a resistor the current flows from the higher-potential end to the lower-potential end. Travelling in that same direction is travelling to a lower potential, so the potential change is negative."
+     "concept": "What parallel shares and what it splits",
+     "why": "In parallel every resistor is connected across the same two points, so the same potential difference V appears across each one; what divides is the current, which is why the reciprocals add. Option 1 is the series property — series elements sit on one path with no junction between them, so one current serves them all. Option 2 is false: with a common V, P = V²/R is largest in the smallest resistor. Option 3 is false in general; the resistors in her example are 4 Ω, 6 Ω and 10 Ω."
     },
     {
      "type": "mcq",
-     "q": "What fixes the sign of an emf term when you write a loop equation?",
+     "q": "Slide 8 gives the deck's definition of a junction. A junction is a point in a circuit where",
      "options": [
-      "Whether the assumed current leaves the source at its positive terminal or enters the source there.",
-      "The order in which the traversal crosses the terminals: minus to plus gives plus epsilon, plus to minus gives minus epsilon.",
-      "Whether the source is delivering energy to the circuit or is absorbing energy from the rest of the circuit.",
-      "Whether the loop as a whole is being traversed clockwise or anticlockwise around the circuit diagram."
+      "a battery is joined to the rest of the circuit",
+      "three or more conductors meet",
+      "the wire changes direction",
+      "the current changes value"
      ],
      "answerIndex": 1,
-     "concept": "The emf sign is set by terminal order alone, independently of current direction and of charging or discharging",
-     "why": "An emf term is the potential difference between the source's terminals, which is fixed by which terminal you enter and which you leave. The current direction is already accounted for separately in the Ir term."
+     "concept": "Junction defined by conductor count, not by geometry",
+     "why": "Her words: 'A point in a circuit where three or more conductors meet is called a junction, while a loop is any closed conducting path.' Three or more is what makes a split possible, and a split is what ΣI = 0 constrains. Option 1 is wrong — Example 1 has two batteries and no junction anywhere. Option 3 is the trap her figure prints as 'Not a Junction' at points c and d: a corner joins only two conductors, so nothing divides. Option 4 confuses the definition with its consequence."
     },
     {
      "type": "mcq",
-     "q": "A student solves a two-loop network and one branch current comes out negative. What does that tell them about the work they have done?",
+     "q": "Travelling round a loop you pass through a source of emf ε, crossing its − terminal first and its + terminal second. What term goes into the loop equation?",
      "options": [
-      "Nothing is wrong: the magnitude is right and the real current runs opposite to the arrow that was drawn.",
-      "One of the loop equations carries a sign error, because a real steady current cannot have a negative value.",
-      "The current arrows must all be redrawn the correct way round and the whole system solved again from scratch.",
-      "That branch is discharging, so its current is falling with time and the number found is only an instantaneous value."
+      "+ε",
+      "−ε",
+      "Zero, since a source has no resistance",
+      "+ε only if you are travelling with the assumed current"
      ],
      "answerIndex": 0,
-     "concept": "The assumed current arrows are a sign convention, not a physical claim; the algebra reports a reversed guess as a minus sign",
-     "why": "The equations are linear in the currents and are written consistently with whatever arrows were chosen, so a reversed guess simply returns the same magnitude with the opposite sign."
+     "concept": "The emf sign depends only on the order the terminals are crossed",
+     "why": "Slide 13: 'when we travel through a source in the direction from − to + the emf is considered to be positive.' Crossing − then + is a rise in potential, so the term is +ε. Option 2 reverses the rule. Option 3 confuses emf with internal resistance — the internal resistance is a separate IR term in the same branch. Option 4 is the error the deck is built to prevent: the current direction sets the sign of IR terms, never of emf terms, which is why the same 4 V battery contributes −4 V in Example 1(a) and +4 V in Example 1(b)."
     },
     {
      "type": "mcq",
-     "q": "A network has 4 junctions and 6 branches. How many independent junction equations can be written for it?",
+     "q": "You travel through a resistor R in the direction opposite to the assumed current I. Slides 14 and 15 say the term is",
      "options": [
-      "Four, because each junction imposes its own constraint on the currents meeting there.",
-      "Six, because one equation is needed for each of the branch currents that must be found.",
-      "Three, because the fourth is the sum of the other three and carries no new information.",
-      "Two, because one junction equation belongs to each independent loop that can be drawn."
+      "−IR, because current always falls in potential",
+      "zero, because you are moving against the flow",
+      "+IR, because this represents a rise of potential",
+      "+IR or −IR, decided by whichever emf is nearer"
      ],
      "answerIndex": 2,
-     "concept": "Redundancy among junction equations: for n junctions only n minus 1 are independent",
-     "why": "Adding all the junction equations together gives zero identically, since every branch current enters one and leaves another, so any one of them can be derived from the rest."
+     "concept": "IR sign is travel direction relative to the assumed current",
+     "why": "Her wording on slide 15: travelling opposite to the assumed current 'the IR term is positive because this represents a rise of potential' — you are walking uphill against the drop. Option 1 is slide 14's case, travelling with the current, and applying it here is the commonest sign error in the whole topic. Option 2 invents a rule; the potential change is real either way. Option 4 makes IR depend on emfs, which it never does."
     },
     {
      "type": "mcq",
-     "q": "Why can an unbalanced bridge circuit not be reduced to one resistance using only the series and parallel rules?",
+     "q": "Slide 7 gives the reason Kirchhoff's rules are introduced at all. What is it?",
      "options": [
-      "Because it contains more than one source of emf, and the combination rules assume there is only one.",
-      "Because no two of its resistors carry the same current or span the same pair of nodes.",
-      "Because its resistances are unequal, and the parallel formula only holds for equal resistances.",
-      "Because the current in the bridge arm keeps reversing, so it has no steady value that can be combined."
+      "Some circuits cannot be categorized into series and/or parallel connection",
+      "Ohm's law stops working when several batteries are present",
+      "Real batteries have internal resistance, which series and parallel rules cannot handle",
+      "The parallel formula becomes too long for more than three resistors"
      ],
-     "answerIndex": 1,
-     "concept": "The conditions that define series (same current) and parallel (same pair of nodes), and why a bridge satisfies neither",
-     "why": "Series requires that the same current be forced through both elements and parallel requires that both ends be common; the bridge arm breaks both conditions for every pair in the network."
+     "answerIndex": 0,
+     "concept": "Why the combination rules are not enough",
+     "why": "Her sentence: 'However, some circuits cannot be categorized into series and/or parallel connection. To find the currents in this network of resistors, we will apply the techniques developed by the German Physicist, Gustav Kirchhoff.' The bridge in Example 2 is exactly such a network: no two of its arms carry the same current and no two span the same pair of points. Option 2 is false and never claimed. Option 3 is tempting because Example 1 does have internal resistances, but they are handled as ordinary series resistors — that is not the obstacle. Option 4 confuses length with impossibility."
     },
     {
      "type": "mcq",
-     "q": "Exactly two conductors meet at point c in a circuit diagram. Why is c not a junction for the purposes of the current rule?",
+     "q": "The Summary slide pairs each rule with a conservation law. Which pairing does it give?",
      "options": [
-      "Because c lies in the interior of a loop rather than on the boundary between two adjacent loops.",
-      "Because the potential at c is zero, so no meaningful current equation can be written at that point.",
-      "Because no current passes through c at all, the connection there being nothing more than a joint.",
-      "Because only two conductors meet, so the same current passes on and there is nothing to divide."
+      "ΣI = 0 with conservation of energy; ΣV = 0 with conservation of charge",
+      "Both rules with conservation of energy",
+      "ΣI = 0 with conservation of charge; ΣV = 0 with conservation of energy",
+      "Both rules with conservation of momentum in the charge carriers"
+     ],
+     "answerIndex": 2,
+     "concept": "Which conservation law sits behind which rule",
+     "why": "The junction rule counts charge per unit time in and out of a point, so it is conservation of charge — 'no charge can accumulate at a junction'. The loop rule adds up energy per unit charge gained and lost on a round trip, so it is conservation of energy. Option 1 swaps them, which is the answer a student gives from memory rather than meaning. Option 2 loses the distinction entirely. Option 4 imports a mechanics idea that plays no role in circuit analysis."
+    },
+    {
+     "type": "mcq",
+     "q": "Slide 17 ends 'Since I is positive, our assumed current direction is correct.' What follows if a current had instead come out negative?",
+     "options": [
+      "The loop equation must be rewritten with the arrow reversed",
+      "That branch actually carries no current",
+      "An arithmetic mistake has been made somewhere",
+      "The magnitude is correct and the true current runs opposite to the drawn arrow"
      ],
      "answerIndex": 3,
-     "concept": "Definition of a junction as a point where three or more conductors meet, and why two-conductor points give no new equation",
-     "why": "With only two conductors the current entering must equal the current leaving trivially; the equation is the identity I equals I and contributes nothing to the solution."
+     "concept": "Reading the sign of a solved current",
+     "why": "The arrow you drew is only a definition of which direction counts as positive in that branch; the algebra reports back with a sign. A negative value therefore means the size is right and the direction is the reverse of your guess, and nothing needs redoing. Option 1 wastes time and gives the identical answer with the sign flipped. Option 2 confuses a negative number with zero. Option 3 is the panic response — the equations are still satisfied, so there is no error to find."
+    },
+    {
+     "type": "mcq",
+     "q": "In writing a loop equation you make two separate choices: the direction of each branch-current arrow, and the direction you walk the loop. What is the relationship between them?",
+     "options": [
+      "They must always agree, or the sign rules break down",
+      "They are independent; reversing the walk multiplies the whole loop equation by −1 and changes no answer",
+      "The walk direction fixes the current direction automatically",
+      "Reversing the walk direction changes the emf signs but not the IR signs"
+     ],
+     "answerIndex": 1,
+     "concept": "Travel direction versus assumed current direction",
+     "why": "Both choices are free. Reversing the walk flips the sign of every term at once, so the equation is the same equation multiplied by −1 and the solution is untouched. Reversing a current arrow instead flips the sign of that one current in the answer. Option 1 is contradicted by any shared branch, which is walked one way in one loop and the other way in the neighbouring loop while keeping a single current arrow. Option 3 removes a choice that is genuinely yours. Option 4 is half right and therefore dangerous: reversing the walk flips both kinds of term, since you cross the terminals in the opposite order and travel through resistors the opposite way too."
     },
     {
      "type": "short",
-     "q": "Explain why the loop rule can legitimately be applied to a network before you know the actual directions of any of the currents.",
-     "concept": "Assumed current directions function as sign definitions; both Kirchhoff rules are linear in the currents",
-     "why": "A full answer says that drawing an arrow defines what counts as positive current in that branch rather than asserting a fact about the circuit; that every loop and junction equation is then written consistently with those definitions; that because both rules are linear in the currents, a definition chosen opposite to reality yields the same solution with that current's sign reversed; and therefore the physics enters only through the emfs, resistances and topology, never through the guess."
+     "q": "State both of Kirchhoff's rules the way the deck states them, in symbols and in words, and name the conservation law each one rests on.",
+     "concept": "The two rules and their physical basis",
+     "why": "A good answer gives, first, the junction rule: the algebraic sum of the currents into any junction is zero, ΣI = 0 — equivalently, the total current entering a junction equals the total current leaving it, because no charge can accumulate at a point. That rests on conservation of charge. Second, the loop rule: the sum of the potential changes around any closed loop is zero, ΣV = 0. That rests on conservation of energy — a unit charge carried once round a closed path gains from the emfs exactly what it loses in the resistances. It is worth adding that 'algebraic' in the junction rule means signed: a current leaving is a negative current entering, so at a junction fed by I₁ and I₂ and drained by I₃, ΣI = 0 reads I₁ + I₂ − I₃ = 0."
     },
     {
      "type": "short",
-     "q": "Explain why the sign of a resistor term in a loop equation depends on the direction you traverse the loop, while the sign of an emf term does not depend on the direction of the current in that branch.",
-     "concept": "The two sign rules have different origins: IR is a potential change produced by the current, epsilon is a fixed property of the source's terminals",
-     "why": "A full answer says the loop equation sums potential changes along a chosen path, so every term's sign is set by which end you enter and which you leave. For a resistor the high-potential end is determined by the current direction, so the sign depends on travel direction relative to the current arrow. For a source the plus and minus terminals are fixed by its construction, so the sign depends only on terminal order; whether the source is charging or discharging is carried entirely by the separate Ir term and by the sign of the solved current, not by the emf term."
+     "q": "Example 1's circuit contains four resistors and two batteries, yet the solution never uses the junction rule. Explain why not, and say what feature of a circuit forces the junction rule to be used.",
+     "concept": "When the junction rule has nothing to say",
+     "why": "A good answer applies her own definition. Example 1 is a single closed rectangle: every point on it joins exactly two conductors, so by the slide-8 definition there is no junction anywhere in the circuit. With no junction there is nothing for ΣI = 0 to constrain, and one single current I passes through all four resistors and both batteries — which is why the loop equation has just one unknown. The junction rule becomes necessary as soon as a point joins three or more conductors, because the current must then split or merge and the branch currents become separate unknowns; Example 2's bridge, with five arms and two inner junctions, is exactly that case."
     },
     {
      "type": "short",
-     "q": "Explain why the junction rule would fail if charge were allowed to accumulate at a junction, and why the steady-state assumption is what rescues it.",
-     "concept": "The junction rule is charge conservation plus the steady-state condition dQ/dt equals zero at a node",
-     "why": "A full answer says charge conservation alone gives current in minus current out equals the rate of increase of charge stored at the node. If charge accumulated, that rate would be non-zero and the sum of currents would not vanish, as happens at a capacitor plate while it charges. In a steady current nothing at a junction changes with time, so the stored charge is constant, the rate is zero and the currents balance exactly. This also shows why the rule is applied to the node and not to the plates of a charging capacitor."
+     "q": "In Example 1 part (a) the 4 V battery contributes −4 V, but in part (b) the same battery contributes +4 V. Explain why, without appealing to any change in the circuit.",
+     "concept": "Why an emf term changes sign when the traversal reverses",
+     "why": "A good answer says nothing about the battery has changed — only the direction of travel. In part (a) she walks the bottom branch left to right, crossing that battery's + terminal first and its − terminal second, which by slide 13 makes the emf negative: −4 V. In part (b) she walks from b toward a, so the bottom branch is crossed right to left, entering at − and leaving at +, which makes the emf positive: +4 V. The rule depends only on the order in which the two terminals are crossed. A useful contrast to add: the IR terms also flip between the two parts, but for a different reason — there the sign turns on travel direction relative to the assumed current, which is why the 4 Ω term is −I(4) in part (a) and +(0.5)(4) in part (b)."
     },
     {
      "type": "short",
-     "q": "Explain why connecting one more resistor in parallel always lowers the equivalent resistance while connecting one more in series always raises it, in terms of what happens to the charge carriers.",
-     "concept": "Series and parallel as extra path length versus extra path, related through the conductance sum",
-     "why": "A full answer says that a parallel resistor supplies an additional route between the same two nodes, so at the same potential difference more total current flows; since conductances add, the total conductance rises and the equivalent resistance must fall below the smallest branch. A series resistor instead lengthens the single route every carrier must take, adding another potential drop at the same current, so the resistances add and the total exceeds the largest element. A good answer also notes the check that this provides on any numerical combination."
+     "q": "Explain why a parallel equivalent resistance is always smaller than the smallest resistor in the combination, and say what the single most common mistake with her parallel formula is.",
+     "concept": "Why parallel resistance comes down, and the missing inversion",
+     "why": "A good answer reasons physically: every extra branch is another path the current can take between the same two points, so adding a branch can only increase the total current for a fixed voltage, and by V = IR that means a lower equivalent resistance. Hence R_eq must sit below even the smallest branch — in her example, 1.94 Ω below 4 Ω. The standard mistake is stopping at 1/R_eq: the formula sums reciprocals, so 1/4 + 1/6 + 1/10 = 31/60 is a reciprocal resistance in Ω⁻¹, and the answer only becomes a resistance after inverting to 60/31 = 1.94 Ω. Quoting 0.52 Ω is that error. A good answer names the check too: if a parallel answer comes out larger than one of the branches, the inversion was skipped."
     }
    ]
   },
@@ -754,136 +755,137 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
-   "topic": "Problem hour on Week 5 circuit analysis. Reducing a network by the series and parallel rules and recognising when that reduction is illegal. Setting up Kirchhoff equations for a two-loop network of two batteries with internal resistance and one shared resistor: choosing branch-current arrows, writing the junction equation, writing each loop equation with correct signs for the emf and IR terms, and solving for all three currents. Reading a negative current in the solution, computing terminal potential difference and power, and checking a finished answer independently. Includes diagnosing a wrong route and finding the balance condition of a bridge.",
+   "slot": "deep",
+   "topic": "Computation on Week 5: evaluating 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N and inverting it, adding series resistances, and running Dr Adeniji's Example 1 end to end — the loop equation −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0 giving 8 V = I(16 Ω) and I = 0.5 A, the potential difference V_ab = (0.5)(7) + 4 + (0.5)(4) = 9.5 V checked by both paths, the emf powers P = εI of +6 W and −2 W, and the I²R energy balance — plus setting up the junction and loop equations for a bridge.",
    "maxScore": 12,
    "questions": [
     {
      "type": "mcq",
-     "q": "A 30 V battery of internal resistance 1.0 ohm feeds a 5.0 ohm resistor in series with a parallel pair of 6.0 ohm and 12.0 ohm. What current does the battery deliver?",
+     "q": "R₁ = 4 Ω, R₂ = 6 Ω and R₃ = 10 Ω are connected in parallel. The equivalent resistance is",
      "options": [
-      "2.0 A",
-      "3.0 A",
-      "1.3 A",
-      "3.3 A"
-     ],
-     "answerIndex": 1,
-     "concept": "Reducing a mixed network in the right order, and remembering that internal resistance is part of the total",
-     "why": "The parallel pair gives 4.0 ohm, so the total is 1.0 plus 5.0 plus 4.0 equals 10.0 ohm and I equals 30 divided by 10.0 equals 3.0 A."
-    },
-    {
-     "type": "mcq",
-     "q": "For that same circuit another student writes R total equals 1.0 plus 5.0 plus 6.0 plus 12.0 equals 24 ohm. Which specific mistake is that?",
-     "options": [
-      "They included the internal resistance, which should have been left out of the total resistance.",
-      "They used resistance values where the calculation requires conductances to be summed instead.",
-      "They forgot that the 5.0 ohm resistor carries a smaller current than the battery itself delivers.",
-      "They added the 6.0 ohm and 12.0 ohm as if in series, although both lie across the same pair of nodes."
-     ],
-     "answerIndex": 3,
-     "concept": "The test for series (same current) versus parallel (same pair of nodes), applied before any arithmetic",
-     "why": "Two elements connected between the same two nodes are in parallel and must be combined by the reciprocal rule; adding them treats them as if the same current passed through both, which it does not."
-    },
-    {
-     "type": "mcq",
-     "q": "Between nodes a and b are three branches: a 12 V battery with r equals 1 ohm, a 6 V battery with r equals 1 ohm (both with their positive terminals towards a), and a 4 ohm resistor. Take I1 and I2 as flowing b to a inside the batteries and I3 as flowing a to b through the resistor. Walking b to a through the 12 V battery and then a to b through the resistor, the loop equation is",
-     "options": [
-      "12 minus (1)I1 minus 4 I3 equals 0",
-      "12 plus (1)I1 minus 4 I3 equals 0",
-      "12 minus (1)I1 plus 4 I3 equals 0",
-      "minus 12 minus (1)I1 minus 4 I3 equals 0"
-     ],
-     "answerIndex": 0,
-     "concept": "Applying the four traversal sign rules to build a loop equation containing an emf, an internal resistance and an external resistor",
-     "why": "Entering the battery at its minus terminal gives plus 12; the internal resistance is traversed with I1, giving minus I1 r; the 4 ohm resistor is traversed with I3, giving minus 4 I3."
-    },
-    {
-     "type": "mcq",
-     "q": "Solving that network with the junction equation I3 equals I1 plus I2 and the two loop equations gives which value for the current in the 6 V branch?",
-     "options": [
-      "plus 2.0 A",
-      "plus 1.2 A",
-      "minus 2.0 A",
-      "minus 4.0 A"
+      "20 Ω",
+      "0.52 Ω",
+      "1.94 Ω",
+      "2.40 Ω"
      ],
      "answerIndex": 2,
-     "concept": "Executing the elimination on a two-loop system and keeping the signs through the substitution",
-     "why": "I1 equals 12 minus 4 I3 and I2 equals 6 minus 4 I3; substituting into I3 equals I1 plus I2 gives 9 I3 equals 18, so I3 equals 2.0 A and I2 equals 6 minus 8 equals minus 2.0 A."
+     "concept": "Evaluating and then inverting the parallel formula",
+     "why": "Over a common denominator of 60: 1/4 = 15/60, 1/6 = 10/60, 1/10 = 6/60, so 1/R_eq = 31/60 and R_eq = 60/31 = 1.94 Ω — below the smallest branch, as it must be. Option 1 adds the resistances as if they were in series. Option 2 is 31/60 left un-inverted; that number is a reciprocal resistance in Ω⁻¹, not a resistance, and it is the single most common lost mark on this slide. Option 4 drops the 1/10 term, since 1/4 + 1/6 = 5/12 inverts to 2.40 Ω."
     },
     {
      "type": "mcq",
-     "q": "What does that negative value tell you physically about the 6 V battery in that circuit?",
+     "q": "R₁ = 3 Ω, R₂ = 5 Ω, R₃ = 9 Ω and R₄ = 10 Ω are connected in series. The equivalent resistance is",
      "options": [
-      "Its effective emf has fallen below 6 V once the internal resistance is taken into account.",
-      "It has been short-circuited by the stronger battery and is carrying no useful current at all.",
-      "It delivers 2.0 A to the circuit, the minus sign being only an artefact of the bookkeeping.",
-      "Charge enters its positive terminal, so it is being charged and is absorbing 12 W from the circuit."
+      "27 Ω",
+      "1.34 Ω",
+      "0.74 Ω",
+      "6.75 Ω"
      ],
-     "answerIndex": 3,
-     "concept": "Translating the sign of a solved current back into physical behaviour of a source",
-     "why": "The true current is 2.0 A opposite to the assumed arrow, so it flows into the positive terminal; the 6 V source therefore absorbs energy at a rate epsilon times I equals 6 times 2.0 equals 12 W."
+     "answerIndex": 0,
+     "concept": "Series resistances add, and the total exceeds the largest",
+     "why": "R_eq = 3 + 5 + 9 + 10 = 27 Ω, which is larger than the biggest single resistor, 10 Ω — that comparison is the fastest sanity check there is. Option 2 applies the parallel formula (1/3 + 1/5 + 1/9 + 1/10 = 67/90, inverted to 1.34 Ω). Option 3 is that same parallel sum with the inversion forgotten. Option 4 is the arithmetic mean, which no rule in the deck produces."
     },
     {
      "type": "mcq",
-     "q": "With I1 equals 4.0 A, I2 equals minus 2.0 A and I3 equals 2.0 A, what is the potential difference V ab across the three parallel branches?",
+     "q": "Example 1's loop equation is −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0. Solving it gives",
      "options": [
-      "8.0 V",
-      "12 V",
+      "I = 1.0 A",
+      "I = 0.5 A",
+      "I = 0.25 A",
+      "I = 2.0 A"
+     ],
+     "answerIndex": 1,
+     "concept": "Collecting opposing emfs and total resistance in a single loop",
+     "why": "The emf terms give 12 V − 4 V = 8 V and the resistance terms give 4 + 7 + 2 + 3 = 16 Ω, so 8 V = I(16 Ω) and I = 8/16 = 0.5 A. Option 1 comes from adding the emfs, 12 + 4 = 16 V, instead of subtracting — but the batteries face each other, so only their difference drives the current. Option 3 halves the emf difference by keeping only the 4 V. Option 4 inverts the division, computing 16/8; the units expose it, since a current must come out as volts divided by ohms."
+    },
+    {
+     "type": "mcq",
+     "q": "With I = 0.5 A, Example 1 part (b) computes V_ab = (0.5)(7) + 4 + (0.5)(4). The value is",
+     "options": [
+      "3.5 V",
+      "5.5 V",
       "6.0 V",
-      "4.0 V"
+      "9.5 V"
      ],
-     "answerIndex": 0,
-     "concept": "Computing a node potential difference along any branch, including a branch whose current came out negative",
-     "why": "Along the 4 ohm branch V ab equals I3 R equals 2.0 times 4 equals 8.0 V, and the same value follows as 12 minus 4.0 times 1 along branch one and as 6 minus (minus 2.0) times 1 along branch two."
+     "answerIndex": 3,
+     "concept": "Adding potential changes along a chosen path from b to a",
+     "why": "3.5 + 4 + 2 = 9.5 V, so a sits 9.5 V above b. Option 1 keeps only the 7 Ω term and forgets that the walk continues along the bottom branch. Option 2 loses the 4 Ω term. Option 3 loses the 7 Ω term. The independent check settles it: walking the upper path instead gives 12 − (0.5)(2) − (0.5)(3) = 12 − 1.0 − 1.5 = 9.5 V, the same number by a completely different route."
     },
     {
      "type": "mcq",
-     "q": "Which computation is a genuinely independent check on that solution rather than a restatement of it?",
+     "q": "In Example 1, the power output of the emf of the 4 V battery, P = εI, comes out as",
      "options": [
-      "Re-substituting the three currents into the two loop equations that were used to solve the network.",
-      "Comparing the total power delivered by the sources with the power dissipated and absorbed elsewhere.",
-      "Confirming that every current in the final answer has come out as a positive number.",
-      "Confirming that the sum of the three branch resistances equals the network's equivalent resistance."
-     ],
-     "answerIndex": 1,
-     "concept": "What counts as an independent check: a relation not used in deriving the answer",
-     "why": "The power balance uses squares of the currents and is not one of the equations solved, so it can fail where re-substitution cannot; here 48 W delivered equals 36 W dissipated plus 12 W absorbed."
-    },
-    {
-     "type": "mcq",
-     "q": "A bridge has R1 equals 100 ohm above R2 equals 200 ohm in one branch and R3 equals 300 ohm above an unknown R4 in the other, with a galvanometer joining the two midpoints. What value of R4 gives zero galvanometer current?",
-     "options": [
-      "150 ohm",
-      "400 ohm",
-      "600 ohm",
-      "200 ohm"
+      "6 W",
+      "2 W",
+      "−2 W",
+      "−8 W"
      ],
      "answerIndex": 2,
-     "concept": "The balance condition R1 over R2 equals R3 over R4, and why balance makes the network reducible again",
-     "why": "Zero galvanometer current means both midpoints are at the same potential, so both branches divide the same p.d. in the same ratio: 100 over 200 equals 300 over R4 gives R4 equals 600 ohm."
+     "concept": "Negative emf power means the source is being charged",
+     "why": "That battery is traversed from + to − in the direction of the current, so its emf enters as −4 V and P = (−4)(0.5) = −2 W. The negative sign says it is absorbing 2 W: the 12 V battery is driving current into its positive terminal, charging it. Option 1 is the 12 V battery's output, (12)(0.5) = 6 W. Option 2 has the right magnitude with the sign of a discharging battery. Option 4 multiplies by the wrong quantity, using the 16 Ω loop total rather than the 4 V emf."
+    },
+    {
+     "type": "mcq",
+     "q": "Three resistors of 3 Ω, 6 Ω and 9 Ω are connected in parallel. R_eq is",
+     "options": [
+      "1.64 Ω",
+      "18 Ω",
+      "0.61 Ω",
+      "2.00 Ω"
+     ],
+     "answerIndex": 0,
+     "concept": "Common denominator then inversion, on new numbers",
+     "why": "Over a denominator of 18: 1/3 = 6/18, 1/6 = 3/18, 1/9 = 2/18, so 1/R_eq = 11/18 and R_eq = 18/11 = 1.64 Ω, comfortably below 3 Ω. Option 2 adds the resistances. Option 3 is 11/18 = 0.61 left un-inverted. Option 4 drops the 1/9 term, since 1/3 + 1/6 = 1/2 inverts to exactly 2 Ω — a suspiciously round answer, which is itself a warning sign."
+    },
+    {
+     "type": "mcq",
+     "q": "A single loop contains a 10 V battery and a 4 V battery connected so that they oppose each other, together with resistances of 2 Ω, 3 Ω, 4 Ω and 6 Ω. The current in the loop is",
+     "options": [
+      "0.93 A",
+      "2.5 A",
+      "0.67 A",
+      "0.4 A"
+     ],
+     "answerIndex": 3,
+     "concept": "Net driving emf over total series resistance",
+     "why": "Opposing emfs subtract: 10 V − 4 V = 6 V. The resistances are all in one loop, so they add: 2 + 3 + 4 + 6 = 15 Ω. Then 6 V = I(15 Ω) and I = 0.4 A, exactly the structure of Example 1. Option 1 adds the emfs to get 14 V. Option 2 divides the wrong way, 15/6. Option 3 ignores the opposing battery altogether and uses 10 V."
+    },
+    {
+     "type": "mcq",
+     "q": "In Example 1, I = 0.5 A and the four resistances total 16 Ω. The power dissipated in all the resistances together, I²R, is",
+     "options": [
+      "8 W",
+      "4 W",
+      "2 W",
+      "16 W"
+     ],
+     "answerIndex": 1,
+     "concept": "Checking the loop solution against the energy books",
+     "why": "I²R = (0.5)²(16) = 0.25 × 16 = 4 W, which matches the net emf output 6 W + (−2 W) = 4 W — the energy balance that conservation of energy demands. Option 1 uses IR rather than I²R, computing (0.5)(16). Option 3 forgets to square and instead halves. Option 4 uses I = 1 A. The habit worth keeping is doing this check every time: if emf power out and I²R do not agree, a sign in the loop equation is wrong."
     },
     {
      "type": "short",
-     "q": "Explain why drawing a branch-current arrow in the wrong direction cannot make a Kirchhoff solution wrong, and state exactly where in the algebra the mistaken guess shows up.",
-     "concept": "Current arrows as sign definitions; linearity of the junction and loop equations",
-     "why": "A full answer says the arrow defines which direction counts as positive current in that branch rather than claiming anything about the circuit; every junction and loop equation is then written consistently with that definition. Because both rules are linear in the currents, replacing a current by its negative reproduces the same system, so the solution is unchanged in magnitude. The mistaken guess appears solely as a minus sign on that current in the answer, which is read as the same current flowing the other way; nothing needs recalculating."
+     "q": "Evaluate the equivalent resistance of 4 Ω, 6 Ω and 10 Ω in parallel, showing the common denominator explicitly, and state two checks on your answer.",
+     "concept": "Full working for the parallel example, plus verification",
+     "why": "Model answer: 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ = 1/4 + 1/6 + 1/10. The lowest common denominator of 4, 6 and 10 is 60, giving 15/60 + 10/60 + 6/60 = 31/60. Therefore 1/R_eq = 31/60 and, inverting, R_eq = 60/31 = 1.94 Ω. Check one: the answer is smaller than 4 Ω, the smallest branch, as every parallel combination must be. Check two: the units. Each term 1/R has units of Ω⁻¹, so 31/60 is a reciprocal resistance and only becomes a resistance after inversion — an answer of 0.52 Ω would have failed both checks at once."
     },
     {
      "type": "short",
-     "q": "Explain why, for the two-battery network above, writing a third loop equation (around the loop containing both batteries) adds nothing to the two already written.",
-     "concept": "Independence of equations: a third loop is a linear combination of the other two, and the count of equations must match the count of unknowns",
-     "why": "A full answer says there are three unknown branch currents, so exactly three independent equations are needed and one junction plus two loops supplies them. The loop through both batteries is traced by following loop one forwards and loop two backwards, so its equation is the difference of the two already written and is satisfied automatically by any solution of them. Adding it produces a dependent system, not extra information, and a good answer notes the general rule that only branches not yet used create new independent loops."
+     "q": "Write out Example 1's loop equation term by term, justify the sign of each of the six terms, and solve for I with units carried through.",
+     "concept": "Applying the four sign rules in sequence around one loop",
+     "why": "Model answer, starting at a and travelling counterclockwise with the current. −I(4 Ω): along the bottom, walking with the current through the 4 V battery's internal resistance, so by slide 14 the IR term is negative. −4 V: crossing that battery + terminal first, − second, so by slide 13 the emf is negative. −I(7 Ω): up the right side, with the current, negative. +12 V: crossing the 12 V battery − first, + second, so the emf is positive. −I(2 Ω): along the top, with the current, negative. −I(3 Ω): down the left side, with the current, negative, arriving back at a. The sum is zero: −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0. Collecting, the emfs give 12 V − 4 V = 8 V and the resistances give 4 + 7 + 2 + 3 = 16 Ω, so 8 V = I(16 Ω) and I = 8 V / 16 Ω = 0.5 A. Volts divided by ohms is amperes, confirming the units, and I is positive, so the assumed direction was correct."
     },
     {
      "type": "short",
-     "q": "Explain why a power balance is a stronger check on a finished Kirchhoff solution than substituting the currents back into the equations that were used to obtain them.",
-     "concept": "Independent versus circular verification, and the extra information carried by the quadratic power relation",
-     "why": "A full answer says that re-substitution can only detect arithmetic slips made after those equations were written; if an equation itself carries a wrong sign, the wrong solution satisfies it perfectly, so the check passes on a wrong answer. The power balance is a separate physical statement, quadratic in the currents rather than linear, and was not used in deriving the solution, so a sign error in an emf or IR term generally breaks it. A good answer adds that sources with a negative current must be entered as absorbing power for the balance to close."
+     "q": "Example 1 finds V_ab = 9.5 V by the lower path. Verify the same value by the upper path, and say what the agreement of the two routes demonstrates.",
+     "concept": "Path independence of potential difference as a check on signs",
+     "why": "Model answer: walk from b to a over the top. First the 12 V battery, crossed − then +, contributing +12 V. Then the 2 Ω resistor, travelled in the same direction as the current, contributing −I(2) = −(0.5)(2) = −1.0 V. Then down the left side through the 3 Ω, again with the current, contributing −I(3) = −(0.5)(3) = −1.5 V. Total V_ab = 12 − 1.0 − 1.5 = 9.5 V, matching the lower path's 3.5 + 4 + 2 = 9.5 V. What the agreement demonstrates is the loop rule itself: potential difference between two points does not depend on the route taken, which is the same statement as ΣV = 0 round the closed loop formed by the two paths. In an exam it is the quickest way to catch a dropped minus sign, because a single sign error makes the two routes disagree."
     },
     {
      "type": "short",
-     "q": "Explain why the potential difference between the two nodes of that network must come out the same whichever of the three branches you compute it along, and what it means if two routes disagree.",
-     "concept": "Single-valuedness of potential as the content of the loop rule, used as a diagnostic",
-     "why": "A full answer says the two nodes have definite potentials, so their difference is one number and any branch joining them must reproduce it; the statement that two routes agree is exactly the loop rule for the loop those two branches form. A disagreement therefore means one of the loop equations has not in fact been satisfied, which locates the error to the branch whose route disagrees, usually a wrong emf sign, an omitted Ir term, or a current sign not carried through. A good answer shows the three routes for this circuit giving 8.0 V."
+     "q": "A bridge circuit has nodes a, b, c, d. A battery of emf 13 V sits between d and a with its + at a. The arms are a→b = 1 Ω, a→c = 1 Ω, b→c = 1 Ω, b→d = 1 Ω, c→d = 2 Ω. Assume currents I₁ (a→b), I₂ (a→c), I₃ (b→d), I₄ (c→d) and I₅ (b→c). Write the two junction equations and the loop equation for the loop a→b→c→a, and say what a solution I₅ = −1 A would mean.",
+     "concept": "Setting up a non-reducible network with the junction and loop rules",
+     "why": "Model answer. At junction b, I₁ arrives while I₃ and I₅ leave, so I₁ = I₃ + I₅. At junction c, I₂ and I₅ arrive while I₄ leaves, so I₄ = I₂ + I₅. The junction at d gives I₃ + I₄ = I₁ + I₂, which is just those two added and carries no new information. For the loop a→b→c→a: a to b travels with I₁ through 1 Ω, giving −I₁(1); b to c travels with I₅ through 1 Ω, giving −I₅(1); c to a travels against I₂ through 1 Ω, giving +I₂(1). Hence −I₁ − I₅ + I₂ = 0, that is I₂ = I₁ + I₅. A solution I₅ = −1 A does not signal an error: it means the bridge arm carries 1 A flowing from c to b, opposite to the assumed arrow, with the magnitude exactly as computed. It should also be noted why Kirchhoff is needed here at all — no two arms of a bridge carry the same current and no two span the same pair of points, so neither the series nor the parallel rule applies."
     }
    ]
   },

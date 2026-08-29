@@ -25,14 +25,14 @@ That is **twelve image pages** containing every definition, the theorem, Note 1,
 > 2. The integrand f(x) has one or more points of discontinuity on the interval [a, b]."
 
 **Slide 5 — TYPE I IMPROPER INTEGRALS, verbatim.**
-> "1. If ∫ₐᵗ f(x)dx exists for every number t ≥ a, then ∫ₐ^∞ f(x)dx = lim_{t→∞} ∫ₐᵗ f(x)dx, provided this limit exists.
-> 2. If ∫ₜᵇ f(x)dx exists for every number t ≤ b, then ∫₋∞ᵇ f(x)dx = lim_{t→−∞} ∫ₜᵇ f(x)dx, provided this limit exists.
+> "1. If ∫ₐᵗ f(x)dx exists for every number t ≥ a, then ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx, provided this limit exists.
+> 2. If ∫ₜᵇ f(x)dx exists for every number t ≤ b, then ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, provided this limit exists.
 > The improper integrals ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx are called convergent if the corresponding limit exists and divergent if the limit does not exist.
 > 3. If ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx are convergent, then ∫₋∞^∞ f(x)dx = ∫₋∞ᵃ f(x)dx + ∫ₐ^∞ f(x)dx."
 
 **Slide 8 — TYPE II IMPROPER INTEGRALS, verbatim.**
-> "1. If f is continuous on the interval [a, b) and has an infinite discontinuity at b, then ∫ₐᵇ f(x)dx = lim_{c→b⁻} ∫ₐᶜ f(x)dx.
-> 2. If f is continuous on the interval (a, b] and has an infinite discontinuity at a, then ∫ₐᵇ f(x)dx = lim_{c→a⁺} ∫_c^b f(x)dx.
+> "1. If f is continuous on the interval [a, b) and has an infinite discontinuity at b, then ∫ₐᵇ f(x)dx = lim(c→b⁻) ∫ₐᶜ f(x)dx.
+> 2. If f is continuous on the interval (a, b] and has an infinite discontinuity at a, then ∫ₐᵇ f(x)dx = lim(c→a⁺) ∫_c^b f(x)dx.
 > 3. If f is continuous on the interval [a, b] except for some c in (a, b) at which f has an infinite discontinuity, then ∫ₐᵇ f(x)dx = ∫ₐᶜ f(x)dx + ∫_c^b f(x)dx."
 
 **Slide 10 — the COMPARISON TEST, verbatim.**
@@ -53,19 +53,19 @@ That is the **entire** rule inventory of the deck. There is no fourth definition
 ## 2. Worked examples that were invisible (four of them)
 
 **TYPE I, Example 1 (slide 6).** "Determine whether ∫₀^∞ xe⁻ˣdx is convergent or divergent."
-> ∫₀^∞ xe⁻ˣdx = lim_{t→∞} ∫₀ᵗ xe⁻ˣdx = lim_{t→∞} [−xe⁻ˣ − e⁻ˣ]|₀ᵗ
-> = lim_{t→∞}[−te⁻ᵗ − e⁻ᵗ + 0 + e⁻⁰] = lim_{t→∞}[−te⁻ᵗ − e⁻ᵗ + 1].
-> "Notice that lim_{t→∞}[−te⁻ᵗ] → −∞/∞. Therefore, applying L'Hopital Rule, we have
-> lim_{t→∞}[−te⁻ᵗ] = lim_{t→∞}[−t/eᵗ] = lim_{t→∞}[−1/eᵗ] = 0, so that
-> ∫₀^∞ xe⁻ˣdx = lim_{t→∞}[−te⁻ᵗ − e⁻ᵗ + 1] = (0 + 0 + 1) = **1**.
+> ∫₀^∞ xe⁻ˣdx = lim(t→∞) ∫₀ᵗ xe⁻ˣdx = lim(t→∞) [−xe⁻ˣ − e⁻ˣ]|₀ᵗ
+> = lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 0 + e⁻⁰] = lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1].
+> "Notice that lim(t→∞)[−te⁻ᵗ] → −∞/∞. Therefore, applying L'Hopital Rule, we have
+> lim(t→∞)[−te⁻ᵗ] = lim(t→∞)[−t/eᵗ] = lim(t→∞)[−1/eᵗ] = 0, so that
+> ∫₀^∞ xe⁻ˣdx = lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1] = (0 + 0 + 1) = **1**.
 > Therefore, ∫₀^∞ xe⁻ˣdx converges to 1."
 
 The by-parts working that produces −xe⁻ˣ − e⁻ˣ is **not shown** on the slide; the antiderivative simply appears. (u = x, dv = e⁻ˣdx, v = −e⁻ˣ, so ∫xe⁻ˣdx = −xe⁻ˣ + ∫e⁻ˣdx = −xe⁻ˣ − e⁻ˣ. Differentiating back: −e⁻ˣ + xe⁻ˣ + e⁻ˣ = xe⁻ˣ ✓.) This is the only place in the deck where L'Hôpital's Rule or integration by parts appears.
 
 **TYPE I, Example 2 (slide 7).** "Determine whether ∫₋∞^∞(2x² − x + 3)dx is convergent or divergent."
 > ∫₋∞^∞(2x² − x + 3)dx = ∫₋∞⁰(2x² − x + 3)dx + ∫₀^∞(2x² − x + 3)dx
-> = lim_{a→−∞} ∫ₐ⁰ (2x² − x + 3)dx + lim_{b→∞} ∫₀ᵇ (2x² − x + 3)dx
-> = lim_{a→−∞} [2x³/3 − x²/2 + 3x]|ₐ⁰ + lim_{b→∞} [2x³/3 − x²/2 + 3x]|₀ᵇ = **∞**
+> = lim(a→−∞) ∫ₐ⁰ (2x² − x + 3)dx + lim(b→∞) ∫₀ᵇ (2x² − x + 3)dx
+> = lim(a→−∞) [2x³/3 − x²/2 + 3x]|ₐ⁰ + lim(b→∞) [2x³/3 − x²/2 + 3x]|₀ᵇ = **∞**
 > "Therefore, ∫₋∞^∞(2x² − x + 3)dx diverges."
 
 She splits at **0**, and uses **two different letters** for the two moving limits: a → −∞ on the left, b → ∞ on the right. She does not evaluate the brackets further; the line ends "= ∞".
@@ -73,19 +73,19 @@ She splits at **0**, and uses **two different letters** for the two moving limit
 **TYPE II, Example 1 (slide 9).** "Determine whether ∫₋₁²(1/x⁴)dx is convergent or divergent."
 > "The function is undefined at x = 0. Therefore, we could define this integral as
 > ∫₋₁²(1/x⁴)dx = ∫₋₁⁰(1/x⁴)dx + ∫₀²(1/x⁴)dx
-> ∫₋₁²(1/x⁴)dx = lim_{c→0⁻} ∫₋₁ᶜ (1/x⁴)dx + lim_{b→0⁺} ∫_b² (1/x⁴)dx
-> = lim_{c→0⁻} [−1/(3x³)]|₋₁ᶜ + lim_{b→0⁺} [−1/(3x³)]|_b²
+> ∫₋₁²(1/x⁴)dx = lim(c→0⁻) ∫₋₁ᶜ (1/x⁴)dx + lim(b→0⁺) ∫_b² (1/x⁴)dx
+> = lim(c→0⁻) [−1/(3x³)]|₋₁ᶜ + lim(b→0⁺) [−1/(3x³)]|_b²
 > Notice that [−1/(3x³)] → −∞ as c → 0⁻ and [−1/(3x³)] → −∞ as b → 0⁺. Therefore, ∫₋₁²(1/x⁴)dx is **divergent**."
 
 Correct working of the two pieces (see the errors section — the slide's first sign is wrong):
-Left: lim_{c→0⁻}(−1/(3c³) − 1/3) = **+∞**. Right: lim_{b→0⁺}(−1/24 + 1/(3b³)) = **+∞**.
+Left: lim(c→0⁻)(−1/(3c³) − 1/3) = **+∞**. Right: lim(b→0⁺)(−1/24 + 1/(3b³)) = **+∞**.
 
 **COMPARISON, Example 1 (slide 11).** "Determine whether ∫₂^∞ cos²(x)/x² dx converges or diverges."
 > "For all x ≥ 2, it can be seen that since 0 ≤ cos²(x) ≤ 1, then cos²(x)/x² ≤ 1/x². Let f(x) = 1/x² and g(x) = cos²(x)/x². Then 0 ≤ g(x) ≤ f(x). Now,
-> ∫₂^∞ f(x)dx = ∫₂^∞ (1/x²)dx = lim_{x→∞} ∫₂^∞ (1/x²)dx = (−1/∞ − (−1)/2) = **1/2**
+> ∫₂^∞ f(x)dx = ∫₂^∞ (1/x²)dx = lim(x→∞) ∫₂^∞ (1/x²)dx = (−1/∞ − (−1)/2) = **1/2**
 > Since ∫₂^∞ (1/x²)dx is convergent, then by the comparison test, ∫₂^∞ cos²(x)/x² dx is also convergent."
 
-(The limit line as printed is defective — see errors 2 below. The corrected line is lim_{t→∞} ∫₂ᵗ (1/x²)dx.)
+(The limit line as printed is defective — see errors 2 below. The corrected line is lim(t→∞) ∫₂ᵗ (1/x²)dx.)
 
 **COMPARISON, Example 2 (slide 12).** "Determine whether ∫₃^∞ 1/√(x² − 1) dx converges or diverges."
 > "For all x ≥ 3, it can be seen that 1/√(x² − 1) ≥ 1/x. By the p-integral test, ∫₃^∞ (1/x)dx diverges by the above Note 1, since p = 1. Therefore, by the comparison test, ∫₃^∞ 1/√(x² − 1) dx is **divergent**."
@@ -122,7 +122,7 @@ By clause 1, **∫₁^∞ dx/√(x⁶ + 1) converges.**
 ## 5. Errors and misprints on the slides
 
 1. **Slide 9 (Type II Example 1) — a genuine sign error, substantive.** The slide asserts "[−1/(3x³)] → −∞ as c → 0⁻". It tends to **+∞**: as c → 0⁻, c is negative, so c³ is negative, 3c³ → 0 from below, and −1/(3c³) → +∞. Worked properly, the **left piece** is −1/(3c³) − 1/3 → +∞ and the **right piece** is −1/24 + 1/(3b³) → +∞ (the value at the lower limit b is subtracted, which flips the −∞ she quotes into +∞). Both pieces run to **+∞**. Her verdict, divergent, is correct — divergence needs only the failure of a finite limit — but the stated reason has the sign wrong in one place and is misleading in the other. **The corrected working is what has been taught in the new material**, with the misprint flagged so it is not copied into an exam script.
-2. **Slide 11 (Comparison Example 1) — a notation misprint.** The line is printed "lim_{x→∞} ∫₂^∞ (1/x²)dx". Two defects at once: the limit variable is **x**, colliding with the variable of integration, and the integral's upper limit is still **∞** rather than the new variable, so there is nothing for the limit to act on. The line should read **lim_{t→∞} ∫₂ᵗ (1/x²)dx**. The arithmetic that follows, (−1/∞ − (−1)/2) = 1/2, is correct and is [−1/x] evaluated from 2 upward.
+2. **Slide 11 (Comparison Example 1) — a notation misprint.** The line is printed "lim(x→∞) ∫₂^∞ (1/x²)dx". Two defects at once: the limit variable is **x**, colliding with the variable of integration, and the integral's upper limit is still **∞** rather than the new variable, so there is nothing for the limit to act on. The line should read **lim(t→∞) ∫₂ᵗ (1/x²)dx**. The arithmetic that follows, (−1/∞ − (−1)/2) = 1/2, is correct and is [−1/x] evaluated from 2 upward.
 3. **Slide 5 clause 3 — a letter collision, cosmetic.** The hypothesis is stated about ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx, but the conclusion splits at **a**: ∫₋∞^∞ f = ∫₋∞ᵃ f + ∫ₐ^∞ f. The b of the hypothesis and the a of the conclusion are meant to be the same split point. Nothing mathematical is wrong.
 4. **Slide 8 — c does two jobs.** In clauses 1 and 2 it is the moving limit; in clause 3 it is the fixed interior bad point. In Example 1 (slide 9) she then uses c for the moving limit on the left of the bad point and b on the right. Read what each letter approaches, not the letter.
 5. **Slide 12 — Note 1 applied at a lower limit of 3** although Note 1 is stated for ∫₁^∞. This is legitimate (the finite piece ∫₁³ dx/x is an ordinary number and cannot change the tail's fate) but the deck does not say so.

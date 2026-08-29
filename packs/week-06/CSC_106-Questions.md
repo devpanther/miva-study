@@ -1,8 +1,8 @@
-# CSC_106 — Week 6 Question Set (sit 7 days later)
+# CSC_106 — Week 6 Questions
 
-*Sit this during Saturday catch-up in Week 7, not this week. Notes closed.*
+*Advanced JavaScript: forms and validation, events, asynchronous programming and ES6. Sat seven days later during Saturday catch-up in Week 7 as a retention test — notes closed.*
 
-## Section A - Multiple choice (12)
+## Multiple choice
 
 **1.** What is printed?
 
@@ -13,10 +13,10 @@ Promise.resolve().then(() => console.log("C"));
 console.log("D");
 ```
 
-a) A, B, C, D
-b) A, D, C, B
-c) A, D, B, C
-d) A, C, D, B
+A. A, B, C, D
+B. A, C, D, B
+C. A, D, B, C
+D. A, D, C, B
 
 **2.** What is printed?
 
@@ -27,10 +27,10 @@ async function f() {
 console.log(f());
 ```
 
-a) 42
-b) A Promise object
-c) undefined
-d) A SyntaxError, because `return` is not allowed in an async function
+A. A Promise object
+B. 42
+C. undefined
+D. A SyntaxError, because `return` is not allowed inside an `async` function
 
 **3.** What is printed?
 
@@ -44,10 +44,10 @@ go();
 console.log("3");
 ```
 
-a) 1, 2, 3
-b) 1, 3, 2
-c) 3, 1, 2
-d) 1, 2 — "3" never runs
+A. 1, 2, 3
+B. 3, 1, 2
+C. 1, 3, 2
+D. 1, 2 — "3" never runs
 
 **4.** What is printed?
 
@@ -57,96 +57,78 @@ user.name = "Bola";
 console.log(user.name);
 ```
 
-a) Ada
-b) Bola
-c) undefined
-d) Nothing — it throws `TypeError: Assignment to constant variable`
+A. Ada
+B. Bola
+C. undefined
+D. Nothing is printed — the line throws `TypeError: Assignment to constant variable`
 
-**5.** The page contains `<input id="qty" type="number" value="5">`. What is printed?
+**5.** In `button.addEventListener("click", handleClick);`, which part is the **event listener**, in the week's four-component vocabulary?
 
-```js
-const q = document.getElementById("qty").value;
-console.log(q + 1);
-```
+A. `handleClick`
+B. `button`
+C. `"click"`
+D. The object the browser hands to `handleClick` carrying information about the click
 
-a) 6
-b) 51
-c) NaN
-d) 5
+**6.** The lecture names three attributes a `<form>` element can carry. Which pairing of attribute to job is right?
 
-**6.** A form must be validated in JavaScript without the browser reloading the page. Which line does that?
+A. `method` gives the URL the data is sent to; `action` gives how the body is encoded
+B. `action` gives the URL the data is sent to; `method` gives how the body is encoded
+C. `action` gives the URL the data is sent to; `enctype` gives how the body is encoded
+D. `enctype` gives the URL the data is sent to; `method` gives how the body is encoded
 
-a) `form.addEventListener("submit", e => { e.preventDefault(); validate(); });`
-b) `form.addEventListener("submit", e => { e.stopPropagation(); validate(); });`
-c) `form.addEventListener("click", e => { return false; });`
-d) `form.submit = function () { validate(); };`
+**7.** A registration form must be validated in JavaScript without the browser submitting it and reloading the page. Which line does that?
 
-**7.** What is printed?
+A. `form.addEventListener("submit", e => { e.stopPropagation(); validate(); });`
+B. `form.addEventListener("click", e => { return false; });`
+C. `form.submit = function () { validate(); };`
+D. `form.addEventListener("submit", e => { e.preventDefault(); validate(); });`
 
-```js
-const base = { a: 1, b: 2 };
-const copy = { ...base, b: 9, c: 3 };
-console.log(copy.a, copy.b, copy.c);
-```
-
-a) 1 2 3
-b) 1 9 3
-c) undefined 9 3
-d) 1 9 undefined
-
-**8.** What is printed?
-
-```js
-const [first, ...others] = [10, 20, 30, 40];
-console.log(first, others.length);
-```
-
-a) 10 4
-b) 10 3
-c) 20 3
-d) 40 3
-
-**9.** What is printed?
-
-```js
-Promise.reject(new Error("bad"))
-  .then(() => console.log("A"))
-  .catch(() => console.log("B"))
-  .then(() => console.log("C"));
-```
-
-a) A, B, C
-b) B only
-c) B, C
-d) A, C
-
-**10.** This code logs `undefined`. Why?
+**8.** This code logs `undefined`. Why?
 
 ```js
 fetch("/api/user")
   .then(r => console.log(r.name));
 ```
 
-a) `fetch` is synchronous, so the request has not been sent yet
-b) The first `.then()` receives a **Response** object, not the data — the body must be parsed with `r.json()`, which itself returns a promise
-c) The first `.then()` receives raw JSON text, which must be passed to `JSON.parse` before any property is readable
-d) `.then()` cannot be used with `fetch`; only `async/await` works
+A. `fetch` is synchronous, so the request has not been sent yet
+B. The first `.then()` receives a **Response**, not the data; the body must be parsed with `r.json()`
+C. The first `.then()` receives raw JSON text, which must be passed to `JSON.parse` before any property can be read
+D. `.then()` cannot be used with `fetch`; only the `async/await` form gives access to the body
 
-**11.** A script served from `https://shop.example.com` calls `fetch("https://api.other.com/data")` and the browser blocks the response. What is the cause and the fix?
+**9.** A script served from `https://shop.example.com` calls `fetch("https://api.other.com/data")` and the browser blocks the response. What does the lecture call the restriction, and what are the two ways round it?
 
-a) HTTPS URLs cannot be used with `fetch`; switch to `XMLHttpRequest`
-b) The **same-origin policy** blocks cross-domain requests; the other server must send **CORS** headers, or the request must go through a server-side proxy
-c) JSON cannot be transferred between two different domains; the data must be sent as plain text
-d) The request must use `POST` rather than `GET` to leave the current domain
+A. The same-origin policy; use CORS or a server-side proxy
+B. Cross-domain JSON transfer is forbidden; re-send the data as plain text and parse it by hand
+C. `fetch` cannot be used with an HTTPS URL from another host; fall back to `XMLHttpRequest` with a callback
+D. A `GET` request may not leave the current domain; re-issue it as a `POST` with the URL in the body
 
-**12.** In `button.addEventListener("click", handleClick);`, which part is the **event listener**?
+**10.** The lecture names two vulnerabilities to protect against when working with forms. Which pairing of name to mechanism is right?
 
-a) `button`
-b) `"click"`
-c) `handleClick`
-d) The `event` argument the browser passes in
+A. XSS tricks a logged-in user's browser into sending an unwanted request; CSRF injects script into the page
+B. XSS and CSRF are two names for the same injection attack, one client-side and one server-side
+C. XSS is defended with anti-CSRF tokens; CSRF is defended by writing user input with `textContent`
+D. XSS injects script into the page; CSRF makes a logged-in user's browser send an unwanted request
 
-## Section B - Short answer (3)
+**11.** What is printed?
+
+```js
+const [first, ...others] = [10, 20, 30, 40];
+console.log(first, others.length);
+```
+
+A. 10 4
+B. 10 3
+C. 20 3
+D. 40 3
+
+**12.** The lecture's best practices for asynchronous code warn against one thing in particular. What, and why?
+
+A. Avoid `.catch()` and use only `try...catch`, because promises otherwise swallow their errors silently
+B. Avoid arrow functions inside callbacks, because `this` is rebound at call time and the handler loses its object
+C. Avoid long-running synchronous tasks, because they block the event loop and freeze the interface
+D. Avoid `async/await`, because nested callbacks give clearer error handling at each level
+
+## Short answer
 
 **13.** Write a `submit` handler that validates a registration form with a `username` field (must not be empty) and a `password` field (at least 8 characters), stopping submission when either fails. Then explain why passing client-side validation does **not** mean the server can trust the data, and name the two web vulnerabilities the lecture identifies as needing protection.
 
@@ -160,33 +142,33 @@ getUser(id, function (user) {
 });
 ```
 
-**15.** Name five ES6 features introduced in this week's material, giving a one-line example of each, and say what each one improves. Then explain what **transpilation** is and why it is needed.
+**15.** Name five ES6 features introduced in this week's material, giving a one-line example of each and saying what each one improves. Then explain what **transpilation** is and why it is needed.
 
 ## Answers
 
-**1. b** — *the event loop: synchronous code, then microtasks, then macrotasks*. `"A"` and `"D"` are synchronous and run first. When the stack empties, the **microtask queue** (promise callbacks) is drained, so `"C"`. Only then is a **macrotask** taken from the timer queue, so `"B"` — even though its delay is `0`. Option **a** assumes `setTimeout(…, 0)` is immediate; **c** treats the timer and the promise as the same queue and takes them in registration order; **d** forgets that a `.then()` callback is deferred at all.
+**1. D** — *the event loop: synchronous code, then microtasks, then macrotasks*. `"A"` and `"D"` are synchronous and run first. When the stack empties, the **microtask queue** (promise callbacks) is drained, so `"C"`. Only then is a **macrotask** taken from the timer queue, so `"B"` — even though its delay is `0`. **A** assumes `setTimeout(…, 0)` is immediate; **B** forgets that `"D"` is ordinary synchronous code; **C** treats the timer and the promise as one queue taken in registration order.
 
-**2. b** — *an `async` function always returns a promise*. Whatever value you `return` is used to **resolve** the promise, so `f()` evaluates to a promise wrapping `42`. Printing `42` requires `f().then(v => console.log(v))` or `console.log(await f())`. **a** confuses the resolved value with the return value; **c** confuses it with a function that has no `return`; **d** invents a rule — `return` is normal inside `async`.
+**2. A** — *an `async` function always returns a promise*. Whatever value you `return` is used to **resolve** that promise, so `f()` evaluates to a promise wrapping `42`. Printing `42` needs `f().then(v => console.log(v))` or `console.log(await f())`. **B** confuses the resolved value with the return value; **C** confuses it with a function that has no `return`; **D** invents a rule — `return` is perfectly normal inside `async`.
 
-**3. b** — *`await` suspends only its own function, not the program*. `"1"` prints, then `await` hands control back to the caller, so `"3"` prints next; the awaited promise resolves as a microtask and `"2"` prints last. **a** assumes `await` blocks everything (it does not — that is the whole point); **c** assumes the whole `async` function is deferred to the end; **d** assumes `await` halts the main thread.
+**3. C** — *`await` suspends only its own function, not the program*. `"1"` prints, then `await` hands control back to the caller, so `"3"` prints next; the awaited promise resolves as a microtask and `"2"` prints last. **A** assumes `await` blocks everything, which is the opposite of its purpose; **B** assumes the whole `async` function is deferred to the end; **D** assumes `await` halts the main thread.
 
-**4. b** — *`const` freezes the binding, not the object*. `const` only forbids **reassigning the variable** (`user = {}` would throw). The object it points to is still mutable, so `user.name = "Bola"` succeeds. **d** is the exact misunderstanding this tests; **a** assumes `const` makes contents read-only (that would need `Object.freeze`).
+**4. B** — *`const` freezes the binding, not the object*. `const` forbids only **reassigning the variable** (`user = {}` would throw). The object it points at is still mutable, so `user.name = "Bola"` succeeds. **D** is the exact misunderstanding this tests; **A** assumes `const` makes the contents read-only, which would need `Object.freeze`; **C** assumes the assignment silently fails.
 
-**5. b** — *`input.value` is always a string*. Even with `type="number"`, `.value` returns `"5"`. `+` with a string operand **concatenates**, giving `"51"`. To get `6` you need `Number(q) + 1` or `parseInt(q) + 1`. **a** assumes `type="number"` returns a number; **c** confuses this with an arithmetic operation on a non-numeric string.
+**5. A** — *the four components of an event*. The **event listener** is the function called when the event occurs. **B** `button` is the **event source** — the element that triggers the event; **C** `"click"` is the **event type**; **D** is the **event object**, which carries information about the event. Every wrong option names a real component, just the wrong one.
 
-**6. a** — *intercepting form submission*. You must listen for the **`submit`** event and call **`preventDefault()`** on the event object to cancel the browser's default action (sending the form and reloading). **b** cancels propagation to ancestors, which has nothing to do with the default action. **c** listens for the wrong event, and returning `false` from an `addEventListener` handler does not cancel anything. **d** overwrites the form's `submit` method rather than handling the event.
+**6. C** — *`action`, `method`, `enctype`*. `action` is the URL the data is sent to, `method` is `GET` or `POST`, and `enctype` decides how the body is encoded (`multipart/form-data` for file uploads). **A** and **D** move the URL onto an attribute that never carries it. **B** is the common half-memory: it gets `action` right but promotes `method` into the encoding role that belongs to `enctype`.
 
-**7. b** — *object spread, later keys win*. `{...base}` copies `a: 1` and `b: 2`; the explicit `b: 9` written **after** the spread overwrites `b`; `c: 3` is added. So `1 9 3`. **a** ignores the override; **c** assumes spread does not copy `a`; **d** assumes new keys cannot be added alongside a spread.
+**7. D** — *intercepting form submission*. You listen for the **`submit`** event and call **`preventDefault()`** on the event object to cancel the browser's default action — sending the form and reloading the page. **A** cancels propagation to ancestor elements, which has nothing to do with the default action. **B** listens for the wrong event, and returning `false` from an `addEventListener` handler cancels nothing. **C** overwrites the form's `submit` method instead of handling the event.
 
-**8. b** — *array destructuring with the rest element*. `first` takes the first value `10`; `...others` **gathers the remaining** values into `[20, 30, 40]`, so `others.length` is `3`. **a** counts the whole original array; **c** misreads which position `first` takes; **d** assumes rest collects from the end.
+**8. B** — *`fetch` resolves with a Response, and `.json()` is itself asynchronous*. The first `.then()` receives a `Response` object describing the reply; the body is not parsed yet, so `r.name` is `undefined`. The correct chain is `.then(r => r.json()).then(data => console.log(data.name))`. **A** is false — `fetch` is asynchronous and returns a promise. **C** is the `XMLHttpRequest.responseText` model, not `fetch`. **D** is false: `async/await` is other syntax for the same promise.
 
-**9. c** — *promise chaining: `.catch` handles, then the chain continues*. The rejection skips `.then(() => "A")` and is caught by `.catch`, printing `"B"`. Because `.catch` **returns normally**, the chain becomes fulfilled again and the following `.then` prints `"C"`. **a** assumes both a `.then` and a `.catch` can run for the same rejection; **b** assumes a caught error ends the chain; **d** assumes a rejection still runs the success handler.
+**9. A** — *same-origin policy and CORS*. AJAX requests are restricted to the same domain; to reach a different domain you handle **Cross-Origin Resource Sharing** or use a **server-side proxy** — the lecture's two named routes. **B** confuses the data format with the origin restriction; the block is on the origin, not on JSON. **C** and **D** invent rules about the protocol and the HTTP method, neither of which the same-origin policy concerns itself with.
 
-**10. b** — *`fetch` resolves with a Response, and `.json()` is itself asynchronous*. The first `.then()` gets a `Response` object describing the HTTP reply; the body is not parsed yet, so `r.name` is `undefined`. The correct chain is `.then(r => r.json()).then(data => console.log(data.name))`. **a** is wrong — `fetch` is asynchronous and returns a promise. **c** is the `XMLHttpRequest.responseText` model, not `fetch`. **d** is false: `async/await` is just other syntax for the same promise.
+**10. D** — *XSS vs CSRF*. **XSS (Cross-Site Scripting)** injects attacker script into your page, so it executes in the visitor's browser; **CSRF (Cross-Site Request Forgery)** makes an already-logged-in user's browser send a request you did not intend. **A** swaps the two definitions. **B** denies that they are distinct attacks. **C** swaps the defences: `textContent` instead of `innerHTML` guards against XSS, anti-CSRF tokens against CSRF.
 
-**11. b** — *same-origin policy and CORS*. AJAX requests are restricted to the same domain unless the responding server explicitly opts in with **Cross-Origin Resource Sharing** headers; the alternative is to route the call through a **server-side proxy** on your own domain. **a** and **d** invent rules about protocol and HTTP method; **c** confuses the data format with the origin restriction — the block is on the origin, not on JSON.
+**11. B** — *array destructuring with the rest element*. `first` takes the first value `10`; `...others` **gathers the remaining** values into `[20, 30, 40]`, so `others.length` is `3`. **A** counts the whole original array. **C** misreads which position `first` takes. **D** assumes rest collects from the end.
 
-**12. c** — *the four components of an event*. The **event listener** is the function called when the event occurs. `button` is the **event source** (a), `"click"` is the **event type** (b), and the argument passed in at call time is the **event object** (d) carrying information about the event. Each wrong option names a real component — just the wrong one.
+**12. C** — *be mindful of the event loop*. JavaScript is single-threaded, so a long synchronous task holds the call stack and nothing queued can run until it finishes — the page stops responding. The lecture's other best practices are to prefer promises or async/await over nested callbacks and to handle errors with `.catch()` or `try...catch`. **A** and **D** invert two of those practices. **B** states the opposite of how arrow functions behave: `this` is **lexical**, taken from the enclosing scope, which is why they suit callbacks.
 
 **13.** *Client-side validation, and why it is not security*:
 
@@ -207,9 +189,9 @@ form.addEventListener("submit", function (event) {
 });
 ```
 
-Client-side validation runs **in the user's browser**, so it can be disabled, edited or bypassed entirely — a request can be sent straight to the `action` URL without ever loading the page. Its purpose is **user experience** (instant feedback) and **reducing unnecessary server requests**, not security; the server must **re-validate and sanitise everything**. The two vulnerabilities named in the lecture are **XSS (Cross-Site Scripting)**, where attacker-supplied script is injected into and executed by the page, and **CSRF (Cross-Site Request Forgery)**, where a user's authenticated browser is tricked into sending an unwanted request. Defences: input sanitisation and validation, writing user data with `textContent` rather than `innerHTML`, and anti-CSRF tokens.
+Client-side validation runs **in the user's browser**, so it can be disabled, edited or bypassed entirely — a request can be sent straight to the `action` URL without the page ever being loaded. Its stated purpose is **user experience** (instant feedback) and **preventing unnecessary server requests**, not security; the server must re-validate and sanitise everything it receives. The two vulnerabilities named in the lecture are **XSS (Cross-Site Scripting)**, where attacker-supplied script is injected into and executed by the page, and **CSRF (Cross-Site Request Forgery)**, where a user's authenticated browser is tricked into sending an unwanted request. The named defences are input sanitisation and validation, writing user data with `textContent` rather than `innerHTML`, and anti-CSRF tokens.
 
-**14.** *Asynchronous programming and the event loop*: A **callback** is a function passed as an argument to another function and executed once that task completes — the original mechanism, but nesting several produces deeply indented, hard-to-read "callback hell" with error handling repeated at every level. A **promise** is an object representing a value that is not available yet and will either be **fulfilled** or **rejected**; it flattens the nesting into a `.then()` chain with a single `.catch()` at the end. **async/await** is syntax over promises: `await` pauses the enclosing `async` function until the promise settles, so asynchronous code reads top-to-bottom like synchronous code, and errors are handled with an ordinary `try...catch`. The **event loop** is JavaScript's concurrency model: the language is single-threaded, so the loop continuously checks the message/task queue and pushes queued callbacks onto the call stack whenever the stack is empty — which is why a long synchronous task freezes the interface and why deferred callbacks never interrupt code that is already running.
+**14.** *Asynchronous programming and the event loop*: A **callback** is a function passed as an argument to another function and executed after that task completes — the fundamental mechanism, but nesting several produces deeply indented code with error handling repeated at every level. A **promise** is a more structured object representing a value that is not available yet and will arrive either successfully or with an error; it flattens the nesting into a `.then()` chain with a single `.catch()`. **async/await** is the modern, concise form: `await` pauses the enclosing `async` function until the promise settles, so asynchronous code reads top-to-bottom like synchronous code and errors are handled with an ordinary `try...catch`. The **event loop** is a fundamental part of JavaScript's concurrency model: it **continuously checks the message queue for tasks to execute**, pushing queued callbacks onto the call stack when the stack is empty — which is why a long synchronous task freezes the interface, and (as the week's summary sets out) why a promise callback registered later still runs before a `setTimeout(…, 0)`.
 
 ```js
 async function showOrders(id) {
@@ -225,4 +207,4 @@ async function showOrders(id) {
 
 (This assumes `getUser` and `getOrders` return promises; a callback-only API must be wrapped in `new Promise(...)` first.)
 
-**15.** *ES6 features*: **`let` / `const`** — `let count = 0; const PI = 3.14;` — block-scoped declarations giving precise scoping control, unlike function-scoped `var`; `const` also prevents reassignment. **Arrow functions** — `const double = x => x * 2;` — concise syntax for anonymous functions, with `this` taken **lexically** from the enclosing scope instead of being rebound at call time. **Template literals** — `` const s = `Hi ${name}`; `` — backtick strings that support multi-line text and embedded expressions with `${}`, removing clumsy `+` concatenation. **Destructuring** — `const { city, state } = address;` — extracts values from objects and arrays into variables in one line. **Spread / rest** — `const copy = [...nums];` and `function sum(...args) {}` — spread expands an array or object into its elements for easy copying and merging; rest gathers an arbitrary number of arguments into an array. (Also acceptable: **classes**, `class Dog { constructor(n) { this.n = n; } }`, cleaner syntax over prototypes; **modules**, `export` / `import`, which split code into reusable files and enforce separation of concerns.) **Transpilation** is converting modern JavaScript source into an older, equivalent syntax — typically with **Babel** — so that code written with ES6+ features still runs in browsers that do not support them.
+**15.** *ES6 features*: **`let` / `const`** — `let count = 0; const PI = 3.14;` — block-scoped declarations giving better scoping control than the traditional `var`; `const` also prevents reassignment. **Arrow functions** — `const double = x => x * 2;` — concise syntax for anonymous functions, with `this` taken **lexically** from the enclosing scope. **Template literals** — `` const s = `Hi ${name}`; `` — backtick strings allowing multi-line text and embedded expressions with `${}`. **Destructuring** — `const { city, state } = address;` — a concise way to extract values from objects and arrays. **Spread / rest** — `const copy = [...nums];` and `function sum(...args) {}` — spread copies arrays and objects out, rest gathers function arguments in. (Also acceptable: **classes**, `class Dog { constructor(n) { this.n = n; } }`, class syntax for creating objects and prototypes; **modules**, `export` / `import`, organising code into separate files, which supports modular development and separation of concerns.) **Transpilation** is converting modern JavaScript into an older, equivalent syntax — the lecture names **Babel** as the tool — so that code written with ES6+ features still runs in older browsers that do not support them.

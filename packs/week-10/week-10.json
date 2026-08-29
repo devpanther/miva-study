@@ -917,14 +917,14 @@
      "type": "mcq",
      "q": "What does fact(3) do?\n\nint fact(int n)\n{\n    return n * fact(n - 1);\n}",
      "options": [
-      "Returns 6, since the multiplications 3 x 2 x 1 are performed and 1 x 0 contributes nothing",
-      "Returns 0: once n reaches 0 the expression becomes 0 * fact(-1), and zero times anything is zero, so the whole product collapses to zero and comes back up",
       "Recurses without end. There is no base case, so nothing stops the descent - n goes 3, 2, 1, 0, -1, -2, ... and each call takes a new stack frame until the stack is exhausted and the programme is killed. The multiplication by 0 never happens, because it is pending on a call that never returns",
+      "Returns 0: once n reaches 0 the expression becomes 0 * fact(-1), and zero times anything is zero, so the whole product collapses to zero and comes back up",
+      "Returns 6, since the multiplications 3 x 2 x 1 are performed and 1 x 0 contributes nothing",
       "Fails to compile: a function that calls itself must contain an if"
      ],
-     "answerIndex": 2,
+     "answerIndex": 0,
      "concept": "A missing base case, and why a pending multiplication by zero cannot rescue it.",
-     "why": "Key (c): no branch returns without recursing, so every call makes another, each taking a fresh frame that is never popped, and the stack region fills until the programme is terminated - usually within a fraction of a second. (b) is the distractor this question exists for, and it is genuinely tempting: 0 * fact(-1) does look as though the zero should annihilate the product. It cannot, because C evaluates the operands before it multiplies - the call fact(-1) must return a value before the * can be performed, and it never returns. The multiplication is pending, and a pending operation on a call that does not return is never carried out. (a) supplies a base case that is not in the code. (d) invents a compilation rule; the function is well formed and compiles without complaint, which is precisely why the fault reaches run time."
+     "why": "Key (a): no branch returns without recursing, so every call makes another, each taking a fresh frame that is never popped, and the stack region fills until the programme is terminated - usually within a fraction of a second. (b) is the distractor this question exists for, and it is genuinely tempting: 0 * fact(-1) does look as though the zero should annihilate the product. It cannot, because C evaluates the operands before it multiplies - the call fact(-1) must return a value before the * can be performed, and it never returns. The multiplication is pending, and a pending operation on a call that does not return is never carried out. (c) supplies a base case that is not in the code. (d) invents a compilation rule; the function is well formed and compiles without complaint, which is precisely why the fault reaches run time."
     },
     {
      "type": "mcq",
@@ -932,25 +932,25 @@
      "options": [
       "15",
       "14",
-      "2 + 3 + 4 + 5 plus whatever value happens to sit one element past the end of the array, because a[5] is outside the block of five and C neither checks nor prevents the read - so the printed number is not predictable and may differ between runs or machines",
-      "Nothing: the compiler rejects a[5], since the index exceeds the declared size"
+      "Nothing: the compiler rejects a[5], since the index exceeds the declared size",
+      "2 + 3 + 4 + 5 plus whatever value happens to sit one element past the end of the array, because a[5] is outside the block of five and C neither checks nor prevents the read - so the printed number is not predictable and may differ between runs or machines"
      ],
-     "answerIndex": 2,
+     "answerIndex": 3,
      "concept": "An off-by-one in the loop condition, and what reading past the end actually does.",
-     "why": "Key (c): the idiom is for (i = 0; i < n; i++). This loop starts at 1 and uses <=, making both errors at once - it visits indices 1 to 5, skipping a[0] and reaching a[5], one element past the end of a five-element block. The in-range part contributes 2 + 3 + 4 + 5 = 14; a[5] contributes whatever is stored at that address, which is not part of the array. (a) 15 is the sum the programmer intended, the answer of anyone who reads the loop as 'all five elements'. (b) 14 is the sharpest distractor: it correctly notices that a[0] is skipped but silently assumes a[5] reads as 0 or is ignored - the belief that out-of-range access is harmless, when it is undefined and can return anything, including a value that makes the output look plausible. (d) expects a diagnosis; C stores no length and checks no bounds, so the programme compiles and runs."
+     "why": "Key (d): the idiom is for (i = 0; i < n; i++). This loop starts at 1 and uses <=, making both errors at once - it visits indices 1 to 5, skipping a[0] and reaching a[5], one element past the end of a five-element block. The in-range part contributes 2 + 3 + 4 + 5 = 14; a[5] contributes whatever is stored at that address, which is not part of the array. (a) 15 is the sum the programmer intended, the answer of anyone who reads the loop as 'all five elements'. (b) 14 is the sharpest distractor: it correctly notices that a[0] is skipped but silently assumes a[5] reads as 0 or is ignored - the belief that out-of-range access is harmless, when it is undefined and can return anything, including a value that makes the output look plausible. (c) expects a diagnosis; C stores no length and checks no bounds, so the programme compiles and runs."
     },
     {
      "type": "mcq",
      "q": "What does f(3) print?\n\nvoid f(int n)\n{\n    if (n == 0) return;\n    printf(\"%d \", n);\n    f(n - 1);\n    printf(\"%d \", n);\n}",
      "options": [
       "3 2 1",
-      "3 2 1 1 2 3",
+      "1 2 3 3 2 1",
       "3 3 2 2 1 1",
-      "1 2 3 3 2 1"
+      "3 2 1 1 2 3"
      ],
-     "answerIndex": 1,
+     "answerIndex": 3,
      "concept": "Statements written after the recursive call run on the way back up, in reverse order of the calls.",
-     "why": "Key (b) 3 2 1 1 2 3: f(3) prints 3, calls f(2), and its second printf is pending; f(2) prints 2, calls f(1), pending; f(1) prints 1, calls f(0), pending; f(0) returns at once. The frames then unwind in reverse order, so f(1) resumes just after its call and prints 1, then f(2) prints 2, then f(3) prints 3 - descending output first, ascending output second. (a) 3 2 1 is what the function would print if the second printf were absent, the answer of someone who reads a recursive call as the end of the function. (c) 3 3 2 2 1 1 executes both printfs of a frame before descending, pairing each call's two prints together instead of separating them across the call. (d) reverses the two halves, which would require the base case to be reached before anything is printed."
+     "why": "Key (d) 3 2 1 1 2 3: f(3) prints 3, calls f(2), and its second printf is pending; f(2) prints 2, calls f(1), pending; f(1) prints 1, calls f(0), pending; f(0) returns at once. The frames then unwind in reverse order, so f(1) resumes just after its call and prints 1, then f(2) prints 2, then f(3) prints 3 - descending output first, ascending output second. (a) 3 2 1 is what the function would print if the second printf were absent, the answer of someone who reads a recursive call as the end of the function. (b) reverses the two halves, which would require the base case to be reached before anything is printed. (c) 3 3 2 2 1 1 executes both printfs of a frame before descending, pairing each call's two prints together instead of separating them across the call."
     },
     {
      "type": "mcq",

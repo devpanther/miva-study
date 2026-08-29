@@ -1,107 +1,84 @@
-# COS_102 — Week 9 Question Set (sit 7 days later)
+# COS_102 — Week 9 Questions
 
-*Sit this during Saturday catch-up in Week 10, not this week. Notes closed. 12 MCQ + 3 short answer, about 30 minutes.*
+*Statements, blocks, Booleans and branching — programme control, `goto`, the decision-making statements and the three loops; sat seven days later as a retention test, so recall the lecturer's own definitions and apply them.*
 
-## Section A — Multiple choice (12)
+## Multiple choice
 
-**1.** The course states that in C, Boolean values are returned as integers. Which statement follows *exactly* from that, and from nothing more?
+**1.** The deck states that Boolean values are returned as integers, with 1 — or any other number that is not 0 — representing true and 0 representing false. Which conclusion follows from that, and from nothing more?
+A. A condition is true only when its value is exactly 1, so any other value makes it false
+B. A condition may only be written with a relational operator, since only a comparison produces an integer for the `if` to test
+C. A condition is true whenever its value is not 0
+D. A `bool` variable is just an `int`, so it may hold any whole number and `if (flag == 5)` is an ordinary way to test one
 
-a) A condition is true when it equals `true`, and `true` is the integer 1, so any value other than 1 makes the condition false
-b) A condition is true when its value is **not 0** — so `-7`, `0.5` and `2` are all true, and only `0` is false
-c) A condition may only be written with a relational operator, because only a relational operator produces an integer the `if` can test
-d) A `bool` variable and an `int` variable are the same type, so `bool` may hold any integer and `if (b == 5)` is a normal way to test one
+**2.** Which pair of facts is the deck's definition of a **simple statement**?
+A. It contains only one expression, and it ends with a semicolon
+B. It contains only one expression, and it ends at the end of the line it is written on
+C. It contains any number of expressions, and it ends with a semicolon
+D. It contains any number of expressions, and it is closed by a right curly bracket
 
-**2.** `int n = 4; if (n = 0) printf("zero\n"); else printf("nonzero\n");` What is printed, and why?
+**3.** Which statement about a **block** is exactly what the deck says?
+A. A block contains exactly one statement inside curly brackets, and the right curly bracket takes a semicolon
+B. A block is any group of statements written at the same indentation, whether or not curly brackets are present
+C. A block contains more than one statement inside curly brackets, and the right curly bracket must be followed by a semicolon of its own, just as a simple statement is
+D. A block contains more than one statement inside curly brackets, and the right curly bracket does not have a semicolon after it
 
-a) `zero`, because the condition sets `n` to 0 and a condition holding 0 selects the `if` branch
-b) `nonzero`, because `n` is 4 when the condition is reached and `=` compares just as `==` does
-c) `nonzero`, because the assignment gives the condition the value 0, which is false, so control moves to the `else` block — and `n` is now 0 as a side effect
-d) Nothing is printed, because `n = 0` inside a condition is a compile error in C
+**4.** A student writes `if (score >= 50)` and then two indented `printf` lines with no curly brackets, and finds that the second message prints even when the score is 20. Which of the deck's own sentences explains it?
+A. The compiler reads the indentation of the first statement only, so any later line written at that same depth is attached to the enclosing function instead of to the `if`
+B. The group of statements inside a block are treated like a single statement — with no curly brackets there is no block, so the `if` governs only the next statement
+C. A condition that is false leaves the `if` unfinished, so control runs on through the lines below it until a block ends
+D. An `if` cannot suppress a `printf`; only assignments and loops may be placed under a condition
 
-**3.** Which expression is equivalent to `!(p && q)`?
+**5.** Why does the deck say we need blocks, and where does it say blocks are used?
+A. Because a programme runs faster when its statements are grouped, and the deck names loops as the place to use them
+B. Because the compiler needs the curly brackets in order to tell where each statement ends, and the deck names every statement in the language as a place where blocks are used
+C. Because we need to treat solutions to smaller problems as single units, and the deck names functions, decision making statements and iterative statements
+D. Because Booleans can only be tested inside curly brackets, and the deck names the decision making statements alone
 
-a) `!p && !q`
-b) `!p || !q`
-c) `p || q`
-d) `!(p) && q`
+**6.** What does the deck mean by **programme control**?
+A. It is responsible for the sequential execution of a programme from one line to the next until it reaches the last line of the programme
+B. It is the set of curly brackets that decides which statements belong together
+C. It is the compiler's choice of which memory address each variable is given
+D. It is the conversion of a Boolean value into an integer before the value is tested
 
-**4.** A programmer writes `if (0 <= age <= 17) printf("child\n");` and finds that every age prints `child`. Why?
+**7.** Which pair of statements matches the deck's definitions of **unconditional** and **conditional** branching?
+A. Unconditional branching is settled by the compiler before the programme runs and conditional branching only while it is running, which is why a `goto` costs nothing at run time and an `if` costs something
+B. Unconditional branching is the ordinary movement from one line to the next, and conditional branching is any departure from it
+C. Unconditional branching always moves control forwards in the file and conditional branching backwards, which is how loops are built
+D. Unconditional branching moves control without checking any condition, `goto` being the deck's example; conditional branching moves it only if predetermined conditions are satisfied, and is also called decision making or selection
 
-a) Because `age` was never initialised, so it holds a value that happens to satisfy both comparisons
-b) Because `<=` includes its boundary, so the two boundaries overlap and every value falls inside one of them
-c) Because the expression groups as `(0 <= age) <= 17`: the first comparison collapses to 1 or 0, and both 1 and 0 are `<= 17`, so the whole expression is always 1
-d) Because C evaluates chained comparisons right to left, so only `age <= 17` is tested and most ages satisfy it
+**8.** The deck states — on the *Conditional branching* slide and again on its SUMMARY slide — that "there are three types of decision making statements". Which of these is **not** one of the three it names?
+A. `if`
+B. `switch`
+C. `if-else`
+D. `if-else-if`
 
-**5.** `if (count != 0 && sum / count > 10)`. The programmer swaps the two operands to `if (sum / count > 10 && count != 0)`. What has changed?
+**9.** What does the deck say the `switch` statement lets us do?
+A. Repeat one code block until a condition becomes false
+B. Move program control without checking any condition at all
+C. Execute one code block among many alternatives
+D. Integrate more than two choices into the decision making process
 
-a) Nothing: `&&` is true only when both sides are true, and that does not depend on which side is written first
-b) The program now divides by zero when `count` is 0, because short-circuiting only protects the operand written to the **right** of `&&`
-c) The program is now faster, because the arithmetic test is more likely to fail and so ends the evaluation sooner
-d) The condition is now always false, because `sum / count` cannot be evaluated and an unevaluated operand counts as 0
+**10.** On the deck's descriptions of `if`, `if-else` and `if-else-if`, which account is correct?
+A. With `if`, control moves inside the block only if the condition is satisfied, or else the entire block is skipped; with `if-else`, one block or the other is entered
+B. With `if`, the block runs at least once whatever the condition is, because the condition is tested at the end of the block rather than before it, exactly as in a `do-while`
+C. With `if-else`, both of the blocks run when the condition is satisfied, and neither of them runs when the condition is not satisfied
+D. With `if-else-if`, exactly two choices are integrated into the decision making process
 
-**6.** How does `x + 1 > y * 2 && !flag == 0` group?
+**11.** A loop's condition is already false at the moment control first reaches the loop. What does a `while` do, and what does a `do-while` do?
+A. Both run their bodies once, because a loop must always complete one full pass before it has anything at all to test against its condition
+B. Both run their bodies zero times, because a false condition means there is nothing for either construct to do
+C. The `while` runs its body once and the `do-while` runs it zero times
+D. The `while` runs its body zero times and the `do-while` runs it once, since a `do-while` is guaranteed to execute at least once
 
-a) `((x + 1) > (y * 2)) && ((!flag) == 0)`
-b) `(x + 1) > ((y * 2) && (!(flag == 0)))`
-c) `x + (1 > y) * (2 && !flag) == 0`
-d) `((x + 1) > ((y * 2) && !flag)) == 0`
+**12.** Which account of the `for` loop matches the deck's?
+A. All three parts of the header run once each, in the order they are written, and then the body repeats until something inside it interrupts the loop
+B. The init step is executed first, and only once; then the condition is evaluated, and the body executes if it is true
+C. The condition is evaluated first, then the init step runs, then the body
+D. The body always executes once before the condition is evaluated for the first time
 
-**7.** `int i = 9; do { printf("%d ", i); i++; } while (i < 3);` and `int j = 9; while (j < 3) { printf("%d ", j); j++; }`. What does each print?
+## Short answer
 
-a) The first prints `9 `, the second prints nothing
-b) Both print nothing, because 9 is not less than 3
-c) Both print `9 `, since both loops must run their body before they have a value to test
-d) The first prints nothing and the second prints `9 `, since `do-while` tests before the body and `while` tests after it
-
-**8.** What is the output?
-
-```c
-int i;
-for (i = 1; i <= 4; i++) {
-    if (i == 2) continue;
-    printf("%d", i);
-}
-printf("|%d", i);
-```
-
-a) `134|4`  b) `134|5`  c) `1234|5`  d) `134|6`
-
-**9.** Which describes the difference between unconditional and conditional branching as the course defines them?
-
-a) Unconditional branching happens at compile time and conditional branching at run time
-b) Unconditional branching moves program control without checking any condition, as `goto` does; conditional branching moves it only if a predetermined condition is satisfied, and is also called decision making or selection
-c) Unconditional branching always moves control forwards in the file, conditional branching may move it backwards, which is how loops are built
-d) Unconditional branching is the ordinary line-by-line execution of a programme, and conditional branching is any departure from it
-
-**10.** What is printed?
-
-```c
-int a = -1, b = 5;
-if (a > 0)
-    if (b > 10) printf("X\n");
-else printf("Y\n");
-printf("Z\n");
-```
-
-a) `Y` then `Z`  b) `Z` only  c) `X` then `Z`  d) `Y` only
-
-**11.** A `switch` on `grade` has `case 'A': printf("Excellent\n"); case 'B': printf("Good\n"); break; default: printf("Other\n");`. With `grade = 'A'`, what is printed?
-
-a) `Excellent` only, since control leaves the `switch` once its case has been performed
-b) `Excellent` then `Good`, since control jumps to the matching label and then runs on through the following cases until it meets a `break`
-c) `Excellent`, `Good` and `Other`, since `default` runs after every `switch` as a closing step
-d) A compile error, since every `case` in a `switch` must end with `break`
-
-**12.** Why is it that `if (score >= 50)` followed by two indented `printf` calls, without braces, prints the second message even when `score` is 20?
-
-a) Because `printf` cannot be suppressed by an `if`; only assignments and loops can be placed under a condition
-b) Because an `if` governs exactly one statement, and only curly brackets make several statements into a block, which is then treated like a single statement; the second `printf` is simply the next statement of the programme
-c) Because the compiler reads the indentation of the first statement only, and any further line at the same depth is attached to the enclosing function instead
-d) Because a condition that is false leaves the `if` unfinished, so control falls into the statements below it until a semicolon-terminated block ends
-
-## Section B — Short answer (3)
-
-**13.** State the course's definitions of a **simple statement** and of a **block**, including what happens at the closing curly bracket. Then explain the property of a block that makes it usable by `if`, `while` and `for` — quote the course's own words — and use that property to explain precisely why this fragment prints `Fail` and `Pass` together for a score of 30:
+**13.** State the deck's definitions of a **simple statement** and of a **block**, including what happens at the right curly bracket. Then quote the property of a block that makes it usable by `if`, `while` and `for`, say why the deck says we need blocks at all, and use that property to explain precisely what this fragment prints when `score` is 30, and what it prints when `score` is 60.
 
 ```c
 if (score >= 50)
@@ -111,87 +88,46 @@ else
     printf("Pass\n");
 ```
 
-**14.** Give the truth tables for `&&`, `||` and `!`, using 1 and 0 as C stores them. Then, using the tables, prove that `!(a && b)` is **not** equal to `!a && !b` by naming a row where they differ, and state the correct equivalent. Finally, explain what short-circuit evaluation guarantees for `&&` and for `||`, and say what happens to the side effects of an operand that is skipped.
+**14.** Explain what a **Boolean** is in the deck's terms, how a Boolean variable is declared in C and what values it may take, and what the deck says Boolean values are returned as. Say what the deck means by *"comparing values and variables"* and what such a comparison returns. Then define **programme control** and **branching** as the deck defines them, distinguish **unconditional** from **conditional** branching with the deck's example of each, and give the other two names the deck gives to conditional branching statements.
 
-**15.** This is meant to print each mark and then the number of passes. It does neither correctly. State exactly what it prints, name **every** fault, and give a corrected version.
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    int marks[5] = {41, 55, 70, 39, 62};
-    int i, passes = 0;
-
-    for (i = 0; i <= 5; i++);
-    {
-        printf("%d ", marks[i]);
-        if (marks[i] = 50)
-            passes++;
-    }
-    printf("\npasses = %d\n", passes);
-    return 0;
-}
-```
+**15.** For each of `if`, `if-else`, `if-else-if`, `switch`, `while`, `do-while` and `for`, give the deck's own description and say when the body is entered. Then set out the deck's count of the decision-making statements, say which statement it teaches under *Conditional branching* without including it in that count, and explain why a student who learns the count and a student who learns the slides can disagree about the answer. Finally, write out the `while` skeleton exactly as the deck prints it and say what is wrong with it as C.
 
 ## Answers
 
-**1. b.** *Concept: truth in C is "not zero", not "equal to true".* The course's sentence is that **Boolean values are returned as integers with 1 (or any other number that is not 0) representing true, and 0 representing false** — the parenthesis is the whole content of the rule. (a) inverts it: it makes 1 the *only* true value, which would make `if (-7)` and `if (2)` false, and it is exactly the reasoning behind the bug `if (flag == true)`, which compares with 1 and so rejects every other nonzero value. (c) confuses where a value comes from with what makes it true; `if (n)` needs no relational operator at all, and `if (n % 3)` is a perfectly ordinary condition. (d) draws a conclusion the sentence does not support: `bool` **can only take the values `true` or `false`**, which is stated separately, and testing one against 5 is meaningless.
+**1. C** — *Concept: truth in C is "not zero".* The deck's sentence is *"Boolean values are returned as integers with; 1 (or any other number that is not 0) represents true, 0 represents false"*, and the parenthesis carries the whole rule: the test is against zero, not against 1. A drops that parenthesis and is the reasoning behind the bug `if (flag == true)`, which compares with 1 and so rejects every other non-zero value. B confuses where a value comes from with what makes it true — `if (n)` needs no comparison at all. D reads more into the sentence than it says: the deck states separately that a `bool` variable *"can only take the values true or false"*, so testing one against 5 is meaningless.
 
-**2. c — `nonzero`, with `n` left at 0.** *Concept: `=` assigns and yields the value assigned; `==` compares.* `n = 0` stores 0 in `n`, and the value of the whole assignment expression is that same 0. Zero is false, so the `else` branch runs and `nonzero` prints — and `n` has been silently destroyed on the way. (a) gets the assignment right and then reads 0 as true; 0 is the one value that is false. (b) is the belief that `=` and `==` are interchangeable in a condition, which is the fault this question is about: the two differ both in what they yield and in what they leave behind. (d) expects the compiler to reject it; an assignment is an expression with a value, so it is perfectly legal in a condition — which is precisely why the error is dangerous.
+**2. A** — *Concept: the definition of a simple statement.* *"A simple statement contains only one expression and it ends with a semicolon."* Both halves matter, and the second is the one with consequences: the semicolon is the terminator, so layout does not end a statement, which is why the deck can ask *"Can we have more than one statement on a single line?"* B replaces the semicolon with the line ending, which is true of some other languages and false of C. C and D both drop the "only one expression" half, and D borrows the curly bracket from the definition of a block.
 
-**3. b — `!p || !q`.** *Concept: De Morgan — negation flips the operator as well as the operands.* "Not (both p and q)" means "at least one of them is false", which is `!p || !q`. (a) is the standard error, distributing `!` without changing `&&` to `||`; check `p = 0, q = 1`: `!(0 && 1)` is 1, while `!0 && !1` is `1 && 0` = 0, so they differ on that row. (c) drops the negation entirely and happens to agree only on some rows. (d) negates one operand and leaves the other, which agrees with the original only when `q` is true.
+**3. D** — *Concept: the definition of a block, including the brace rule.* *"A block contains more than one statement contained inside curly brackets"*, and the deck adds explicitly that *"the right curly bracket does not have a semicolon after it."* C gets the first half right and then adds the semicolon the deck rules out — the commonest single error in writing a block. A miscounts the statements and repeats the semicolon error. B is the belief that indentation makes a block; the compiler reads curly brackets, and this is exactly the misunderstanding question 4 turns into a bug.
 
-**4. c.** *Concept: C has no chained comparison; `0 <= age <= 17` groups left to right.* `0 <= age` is evaluated first and yields **1** or **0**. That integer is then compared with 17, and both 1 and 0 are `<= 17`, so the full expression is 1 for every value of `age`. The correct range test is `age >= 0 && age <= 17`. (a) blames initialisation, but the result does not depend on `age` at all — that is what makes the bug so complete. (b) invents an overlap of boundaries, which would at most affect the values 0 and 17. (d) invents right-to-left evaluation for relational operators; they associate left to right, and even the right-to-left reading would not make the expression constant.
+**4. B** — *Concept: a construct governs one statement, and only braces make several into one.* The deck's sentence is *"the group of statements inside a block are treated like a single statement by the computer."* That is the property that lets an `if` control more than one line — but it requires the curly brackets, because they are what make the block. Without them the `if` governs the single statement that follows it, and the second `printf` is simply the next statement of the programme. A treats indentation as syntax. C invents a run-on rule that no construct has. D invents a restriction on `printf`, which is an ordinary statement like any other.
 
-**5. b.** *Concept: short-circuit evaluation makes operand order part of the meaning of `&&`.* `&&` evaluates its left operand first, and **if the left is false the right is never evaluated**. In the original, `count != 0` is false when `count` is 0, so `sum / count` never runs. Once swapped, the division is the left operand and runs unconditionally — with `count == 0` the program divides by zero before the guard is ever reached. (a) states the truth table and stops; the truth table is symmetric but the **evaluation** is not, and it is evaluation that crashes. (c) treats short-circuiting as a speed optimisation, which is the deeper misconception: it is a guarantee about *what is evaluated*, and here it is the difference between running and crashing. (d) invents a rule that an unevaluated operand counts as 0 — an operand that is not evaluated has no value and contributes nothing, because the answer was already settled.
+**5. C** — *Concept: why blocks exist, and the three places the deck names.* Word for word: *"We need blocks because while trying to solve complex problems by breaking them into smaller ones, we need to treat solutions to the smaller problems as single units"*, so that *"solutions from different blocks can be seen as solutions to the smaller problems."* And: *"We use blocks when writing functions, decision making statements, and iterative statements."* A invents a speed argument and names only one of the three places. B gets the role of the brackets backwards — the semicolon ends a statement, the brackets group several. D invents a rule about Booleans and again names only one of the three.
 
-**6. a.** *Concept: precedence order — arithmetic, then `!`, then relational, then equality, then `&&`.* Arithmetic binds tightest, so `x + 1` and `y * 2` form first. `!` binds tighter than any comparison, so `!flag` forms next. Relational `>` and equality `==` then apply, and `&&` — lower than both — joins the two results last. (b) and (d) put `&&` inside a comparison, which reverses the order: `&&` is nearly the lowest-precedence operator here. (c) scatters the operators as though `>` and `&&` bound tighter than `+` and `*`, inverting the whole table. The examinable trap inside this question is `!flag == 0`, which means `(!flag) == 0` and therefore is just another way of writing `flag` — not `!(flag == 0)`.
+**6. A** — *Concept: the definition of programme control.* *"In the C programming language, programme control is responsible for the sequential execution of a programme from one line to the next line until it reached the last line of the programme."* The definition is what makes branching intelligible: branching is the departure from that default. B describes blocks. C describes what the compiler does with variable names, which is a Week 7 matter. D describes how a condition's value is represented, not what moves through the programme.
 
-**7. a.** *Concept: `while` tests before the body, `do-while` after; only `do-while` is guaranteed to execute at least once.* The `do-while` runs its body first — printing `9 ` and making `i` 10 — and only then tests `10 < 3`, which is false, so it stops after one pass. The `while` tests `9 < 3` immediately, finds it false, and never enters the body at all. (b) applies the `while` rule to both and misses the course's own sentence that a `do-while` is **guaranteed to execute at least one time**. (c) applies the `do-while` rule to both, which would make a zero-pass `while` impossible. (d) has the two rules the right way round in the sentence and the wrong way round on the constructs — the classic swap.
+**7. D** — *Concept: the two kinds of branching, in the deck's words.* *"With unconditional branching, some unconditional statements can move program control to either a specific statement or block without checking any condition"* — the deck's example is `goto`, and it notes that *"the 'goto' statement did not specify any condition before moving program control."* *"With conditional branching … where program control moves to is dependent on if some predetermined conditions are satisfied or not"*, and *"conditional branching statements are also known as decision making or selection statements."* A invents a compile-time/run-time split, and `goto` branches while the programme runs. B redefines ordinary sequential flow as branching, when the deck's whole point is that *branching* is the departure from it. C invents a rule about direction; nothing in the deck restricts which way a branch may go.
 
-**8. b — `134|5`.** *Concept: `continue` skips the rest of the pass but not the increment; and a `for` control variable survives the loop holding the first value that failed the test.* Passes: `i = 1` prints `1`; `i = 2` hits `continue`, so the `printf` is skipped but `i++` still runs; `i = 3` prints `3`; `i = 4` prints `4`; then `i` becomes 5, `5 <= 4` is false, and the loop ends. So `134`, then `|5`. (a) assumes `i` still holds the last value used in the body, forgetting that the loop only stops *after* an increment has produced a failing value. (c) treats `continue` as `if`-less punctuation and prints 2. (d) counts one increment too many, the same off-by-one applied to the exit value.
+**8. B** — *Concept: the deck's own count, and where it does not hold.* The deck names the three as *"the 'if', 'if-else' and 'if-else-if' statements"*, and its SUMMARY slide repeats the same three. `switch` is therefore not one of the three — even though the very next slide of the same deck teaches `switch` under the heading *Conditional branching*. That inconsistency is in the course material, not in the question: the count says three, the slides teach four. Answer the count when a question quotes the count, and say in a written answer that `switch` is a conditional branching statement that the deck's own total leaves out.
 
-**9. b.** *Concept: the course's definitions of unconditional and conditional branching.* Word for word: unconditional statements **move program control to either a specific statement or block without checking any condition**, `goto` being the example; with conditional branching **where program control moves to is dependent on if some predetermined conditions are satisfied or not**, and such statements **are also known as decision making or selection statements**. (a) invents a compile-time/run-time split that the course never makes and that is false of `goto`, which branches at run time. (c) invents a direction rule; `goto` may jump either way and loops are built from iteration statements, not from a direction of branch. (d) redefines the ordinary sequential flow as branching, when the course's whole point is that **branching is the departure from** the usual movement from one line to the next.
+**9. C** — *Concept: the deck's one sentence on `switch`.* *"With the switch statement, we can execute one code block among many alternatives."* That is all the deck says about `switch`, and it is what an examination can fairly ask. D is the deck's description of the **`if-else-if`** statement — *"more that two choices are integrated into the decision making process"* — which is close enough in meaning to be the sharpest distractor here, and wrong because it is attached to a different statement. A describes a loop. B describes unconditional branching, which is `goto`.
 
-**10. b — `Z` only.** *Concept: the dangling `else` binds to the nearest preceding unmatched `if`, so an `else` can be skipped entirely by an outer condition it appears to belong to.* Despite its indentation, the `else` belongs to `if (b > 10)`, the nearest unmatched `if`. The fragment therefore reads: *if `a > 0`, execute the whole inner `if-else`.* Here `a` is −1, so `a > 0` is false and the outer `if` skips its single governed statement — and that one statement is the entire inner construct, `else` included. Nothing inside it is reached; `b` is never even examined. Control resumes at `printf("Z\n")`, so the output is `Z` alone. (a) `Y` then `Z` is the answer of a student who binds the `else` to the **outer** `if` on the strength of the indentation: on that reading `a > 0` is false, so the `else` fires and prints `Y`. It is exactly the misconception the question exists to catch, and it is the only wrong answer that a confident, self-consistent trace produces. (c) `X` then `Z` requires `b > 10`, and in any case the inner `if` is never reached. (d) `Y` only makes the same binding error as (a) and additionally forgets that `printf("Z\n")` sits outside every branch and always runs. The repair is braces: write `if (a > 0) { if (b > 10) printf("X\n"); } else printf("Y\n");` if the `else` was meant for the outer `if`.
+**10. A** — *Concept: the entry conditions of the three decision-making statements.* *"With the 'if' statement, program control will only move inside the 'if' block if some conditions are satisfied, or else, the entire block will be skipped."* And: *"With the 'if-else' statement, if some conditions are satisfied, program control will move inside the 'if' block, otherwise, it will move to the else statement block."* B describes a `do-while`, not an `if`. C would make the `else` pointless and contradicts *"otherwise"*. D misquotes the `if-else-if` slide, which says *more than* two choices are integrated, that being the whole reason the third form exists.
 
-**11. b — `Excellent` then `Good`.** *Concept: `switch` jumps to a label and falls through until it meets a `break`.* `case 'A'` matches, `Excellent` prints, and because that case has no `break`, control runs straight on into `case 'B'` and prints `Good`; the `break` there ends the `switch`. (a) is the `if-else-if` model applied to a `switch` — an `if-else-if` chain never falls through, a `switch` always does until stopped. (c) treats `default` as an epilogue; `default` is the label used when **no** case matches, and here control was stopped by the `break` before reaching it. (d) expects the compiler to enforce `break`; it does not, which is exactly why a missing `break` is a run-time behaviour change and not a compile error.
+**11. D** — *Concept: where the test sits relative to the body.* The `while` slide says *"the loop iterates while the condition is true. When the condition becomes false, the program control passes to the line immediately following the loop"* — the test comes first, so a condition already false means no pass at all. The `do-while` slide says it *"works the same way as a while loop, except the fact that it is guaranteed to execute at least one time"* — the body runs, and only then is the condition consulted. C has the two constructs the right way round in the sentence and the wrong way round on the names, which is the classic swap. A applies the `do-while` rule to both, which would make a zero-pass loop impossible. B applies the `while` rule to both and loses the deck's one distinguishing sentence.
 
-**12. b.** *Concept: a construct governs one statement; only braces make several statements into a block, and a block is treated like a single statement.* The course's sentence is that **the group of statements inside a block are treated like a single statement by the computer** — that is the property that lets an `if` control more than one line, and without braces the `if` controls only the statement immediately after it. The second `printf` is not inside anything; it is the next statement in `main`. (a) invents a restriction on `printf`, which is an ordinary statement. (c) treats indentation as syntax; C ignores whitespace entirely. (d) invents a "falls through until a semicolon-terminated block" rule, mixing up `switch` fall-through with the ordinary sequential flow; a false `if` skips its one statement and execution continues at the next.
+**12. B** — *Concept: the deck's account of `for`.* *"The init step is executed first, and only once. Next, the condition is evaluated. If it is true, the body of the loop is executed. If it is false, the body of the loop does not execute."* A has the initialisation right but discards the condition, which would make the loop unstoppable. C reverses the first two steps, so the condition would be tested on a variable that has not been set. D describes a `do-while`, and is the reason the deck states the order explicitly.
 
-**13.** *Concept: simple statement, block, and the "treated as one statement" property that makes braces load-bearing.* **Simple statement:** the course's definition is that **a simple statement contains only one expression and it ends with a semicolon**. The semicolon is the terminator, which is why **more than one statement may be written on a single line** and why a single statement may be spread over several lines — layout does not end a statement. **Block:** **a block contains more than one statement contained inside curly brackets**, and **the right curly bracket does not have a semicolon after it**, because the brace itself closes the construct. **The property.** The course states it directly: **the group of statements inside a block are treated like a single statement by the computer.** That is what makes blocks usable by `if`, `while` and `for`: each of these constructs governs exactly **one** statement, so if you want several statements under a condition or inside a loop, you must first turn them into one, and curly brackets are the only way to do that. The course adds the reason it matters for problem solving: **while trying to solve complex problems by breaking them into smaller ones, we need to treat solutions to the smaller problems as single units**, so **solutions from different blocks can be seen as solutions to the smaller problems**. **Applying it to the fragment.** With `score = 30`, `score >= 50` is false, so control moves to the `else`, whose single governed statement is `printf("Fail\n")`. That statement ends at its semicolon, and the `else` ends with it. The next line, `printf("Pass\n")`, is therefore **not part of the `else` at all** — it is simply the next statement of the programme, and it runs whatever the score is. The output for 30 is `Fail` then `Pass`; for 60 it is `Pass` then `Pass`. The indentation says otherwise, but indentation is invisible to the compiler. The fix is braces: `else { printf("Fail\n"); printf("Pass\n"); }` if both belong to the `else`, or leaving the last line unindented if it really is meant to run always. The general rule worth carrying away: **write the braces even for one statement**, because the fault appears only when a second statement is added later, and it is invisible on the page.
+**13.** *Concept: simple statement, block, and the property that makes braces load-bearing.* **Simple statement:** *"A simple statement contains only one expression and it ends with a semicolon."* The semicolon is the terminator, which is why more than one statement may sit on one line and why one statement may be spread across several — the layout is not what ends it. **Block:** *"A block contains more than one statement contained inside curly brackets"*, and *"the right curly bracket does not have a semicolon after it"*, because the bracket itself closes the construct. **The property:** *"The group of statements inside a block are treated like a single statement by the computer."* That is exactly what `if`, `while` and `for` need, because each of them governs **one** statement; to put several under a condition or inside a loop you must first make them into one, and curly brackets are what does it. **Why we need blocks at all:** *"while trying to solve complex problems by breaking them into smaller ones, we need to treat solutions to the smaller problems as single units"*, so that *"solutions from different blocks can be seen as solutions to the smaller problems"* — the deck names functions, decision making statements and iterative statements as where they are used. **The fragment.** There are no curly brackets, so no block has been made. The `else` governs the single statement `printf("Fail\n");`, which ends at its semicolon — and the `else` ends with it. The final `printf("Pass\n");` is therefore not part of the `else` at all; it is simply the next statement of the programme and runs every time. With `score = 30` the condition is false, control moves to the `else`, `Fail` prints, and then the next statement prints `Pass` — the output is `Fail` then `Pass`. With `score = 60` the condition is true, `Pass` prints from the `if`, the `else` is skipped, and the next statement prints `Pass` again — the output is `Pass` then `Pass`. The indentation says otherwise and the compiler cannot see it. The repair is to make a block: `else { printf("Fail\n"); printf("Pass\n"); }` if both lines belong to the `else`, or to unindent the last line if it was always meant to run. The habit worth forming is to write the brackets even for one statement, because the fault only appears when a second statement is added later and it is invisible on the page.
 
-**14.** *Concept: the truth tables, De Morgan's laws, and what short-circuiting guarantees.* **The tables**, with 1 for true and 0 for false as C stores them:
+**14.** *Concept: Booleans, comparison, programme control and the two kinds of branching.* **Booleans.** *"Booleans represent values that are either true or false."* In C, *"a Boolean variable is declared with the `bool` keyword and it can only take the values true or false."* But the examinable sentence is the next one: *"It is noteworthy that Boolean values are returned as integers with; 1 (or any other number that is not 0) represents true, 0 represents false."* So truth in C is a numeric property — zero is false and everything else is true — and that is why a Boolean can be printed, stored in an `int` or used in arithmetic. **Comparing values and variables.** *"To make decisions and find answers in programming, it is sometimes useful to compare values and variables. When this comparison activity takes place, the return value is usually a Boolean value."* A comparison is therefore not a question the machine asks; it is an expression that *has* a value, and by the previous sentence that value arrives as the integer 1 or 0. **Programme control.** *"In the C programming language, programme control is responsible for the sequential execution of a programme from one line to the next line until it reached the last line of the programme"*, and *"for some problem solving application, we want to alter this flow of operation to ensure that programme control moves to either a specific statement or block in our code."* **Branching.** *"Branching basically means that the computer can decide to move program control to another line of code instead of the usual movement from one line to the next line."* **Unconditional:** *"some unconditional statements can move program control to either a specific statement or block without checking any condition"*; the deck's example is the **`goto`** statement, and it points out that *"the 'goto' statement did not specify any condition before moving program control."* **Conditional:** *"the normal flow of operation in our code is also altered but where program control moves to is dependent on if some predetermined conditions are satisfied or not"*; the deck's examples are `if`, `if-else` and `if-else-if`, and it teaches `switch` under the same heading. **The other two names:** conditional branching statements *"are also known as decision making or selection statements."*
 
-| `a` | `b` | `a && b` | `a \|\| b` | `!a` |
-|---|---|---|---|---|
-| 0 | 0 | 0 | 0 | 1 |
-| 0 | 1 | 0 | 1 | 1 |
-| 1 | 0 | 0 | 1 | 0 |
-| 1 | 1 | 1 | 1 | 0 |
-
-Stated as rules: **`&&` is true only when both operands are true** — one false operand settles it; **`||` is false only when both operands are false** — one true operand settles it; **`!` swaps 1 and 0**. **The disproof.** Take the row `a = 0, b = 1`. Then `a && b` is 0, so `!(a && b)` is **1**. But `!a` is 1 and `!b` is 0, so `!a && !b` is `1 && 0` = **0**. The two expressions differ on that row, so they are not equal. (They also differ on `a = 1, b = 0`, by symmetry; they agree only on the two rows where `a` and `b` are the same.) **The correct equivalent** is De Morgan's law: `!(a && b)` is `!a || !b`, and correspondingly `!(a || b)` is `!a && !b`. The rule to memorise is that **pushing a `!` inside brackets flips the operator as well as negating each operand** — "not both" becomes "at least one is not", and "neither" becomes "not either". The same care applies to relational operators inside a negation: `!(x > 5)` is `x <= 5`, not `x < 5`, because the boundary value belongs to the negation. **Short-circuit evaluation.** For `a && b`, C evaluates `a` first; **if `a` is false, `b` is not evaluated at all**, because no value of `b` can make the result anything but 0. For `a || b`, C evaluates `a` first; **if `a` is true, `b` is not evaluated**, because the result is already 1. This is a guarantee of the language, not a compiler optimisation, and programmes are written to depend on it — `if (n != 0 && total / n > 5)` is safe only because the division is never reached when `n` is 0. **Side effects of a skipped operand do not happen.** In `if (i++ > 0 && j++ > 0)`, if `i++ > 0` is false then `j` is **never incremented** — after the statement, `i` has advanced and `j` has not. The practical consequences: put the guard on the left of `&&` and the guarded expression on the right; never hide an increment, an assignment or a function call with an effect inside the right-hand operand; and remember that `&` and `|` are the **bitwise** operators, which always evaluate both sides and so provide no protection at all.
-
-**15.** *Concept: three independent faults — a stray semicolon detaching the loop body, `i <= 5` running past the end of a five-element array, and `=` for `==` in a condition.* **What it prints.** The `for` header ends in a semicolon, so its body is the **empty statement**; the loop does nothing but run `i` from 0 up to 6, and it exits with `i == 6`. The braces below are then an ordinary free-standing block that executes **once**, with `i` equal to 6. `marks[6]` is two positions past the end of a five-element array, so `printf("%d ", marks[6])` prints whatever rubbish sits in that memory — the value is unpredictable and may differ between runs. Then `marks[6] = 50` **assigns** 50 (writing over memory that does not belong to the array), the assignment's value is 50, which is not 0 and therefore true, so `passes++` runs. The output is one junk number, then `passes = 1`. On many machines it will not even reach that: writing past the array can corrupt the stack and crash the programme. **Fault 1 — the stray semicolon after the `for` header.** `for (...);` gives the loop an empty body. The block that follows is not the loop's body; it is a plain block executed once, after the loop has finished. Nothing about the layout reveals this, and the compiler is silent. *Repair:* delete the semicolon so the block becomes the body. **Fault 2 — the off-by-one condition.** `marks` has five elements, valid indices 0 to 4. `i <= 5` gives six passes, indices 0, 1, 2, 3, 4 and **5**, and index 5 is outside the array. The idiom is `i < 5`, which from a start of 0 gives exactly five passes; with `i <= n` the count is always one more than intended. *Repair:* `i < 5`. **Fault 3 — `=` where `==` was meant.** `if (marks[i] = 50)` **stores** 50 into the element and then tests the value 50, which is not 0 and so is always true. Two things go wrong at once: every mark counts as a pass, and the data is destroyed as it is read. *Repair:* `if (marks[i] >= 50)` — note that "a pass" means 50 **or more**, so `==` alone would still be wrong. **Fault 4 (minor) — the counter's meaning.** Once the loop actually runs, `passes` accumulates properly; it printed 1 before only because the false condition fired on the single stray pass. **Corrected version:**
+**15.** *Concept: the seven constructs, the deck's count, and the deck's printed skeleton.* **`if`** — *"program control will only move inside the 'if' block if some conditions are satisfied, or else, the entire block will be skipped."* The body is entered once when the condition is satisfied and not at all otherwise. **`if-else`** — *"if some conditions are satisfied, program control will move inside the 'if' block, otherwise, it will move to the else statement block."* One of the two blocks is always entered, and never both. **`if-else-if`** — *"more that two choices are integrated into the decision making process."* Control enters the branch whose condition is satisfied; with three or more choices written as a chain, one branch is taken. **`switch`** — *"we can execute one code block among many alternatives."* Control enters the block belonging to the alternative that matches. **`while`** — *"the loop iterates while the condition is true. When the condition becomes false, the program control passes to the line immediately following the loop."* The condition is tested before the body, so a condition false at the outset means the body is never entered. The deck adds that *"the condition may be any expression, and true is any nonzero value."* **`do-while`** — *"works the same way as a while loop, except the fact that it is guaranteed to execute at least one time."* The body is entered before the condition is ever consulted. **`for`** — *"the init step is executed first, and only once. Next, the condition is evaluated. If it is true, the body of the loop is executed. If it is false, the body of the loop does not execute."* So the body may be entered zero times. **The count, and what it leaves out.** The deck says, on the *Conditional branching* slide and again in its SUMMARY, that *"there are three types of decision making statements. The three statements are the 'if', 'if-else' and 'if-else-if' statements."* It then teaches **`switch`** on the following slides, under that same heading *Conditional branching*, describing it as executing *"one code block among many alternatives"*. So the deck both excludes `switch` from the count and presents it as a conditional branching statement. A student who memorised the SUMMARY answers "three, and `switch` is not one of them"; a student who worked through the slides answers "four kinds of conditional branching, `switch` among them". Both are reading the deck correctly; the deck disagrees with itself. In an examination, answer the count when the question quotes the count, and add the sentence that `switch` is taught as a conditional branching statement even though the stated total of three does not include it. **The `while` skeleton as the deck prints it:**
 
 ```c
-#include <stdio.h>
-
-int main(void)
-{
-    int marks[5] = {41, 55, 70, 39, 62};
-    int i, passes = 0;
-
-    for (i = 0; i < 5; i++)
-    {
-        printf("%d ", marks[i]);
-        if (marks[i] >= 50)
-            passes++;
-    }
-    printf("\npasses = %d\n", passes);
-    return 0;
+While (condition) {
+     statement(s);
 }
 ```
 
-Output: `41 55 70 39 62 ` then `passes = 3` — 55, 70 and 62 are the marks of 50 or above. Check each fault against a symptom: the semicolon caused the body to run once instead of five times, the `<=` caused it to touch memory it does not own, and the `=` made every mark a pass while overwriting the array. All three compile without a single warning at default settings, which is why they are found by tracing the code by hand rather than by running it.
+The fault is the capital `W`. C is case-sensitive, and the keyword is `while`; `While` is read as an ordinary identifier, so the line will not compile as written. The body of the skeleton is correct — the condition in brackets, the statements inside curly brackets, and no semicolon after the right curly bracket, exactly as the definition of a block requires.

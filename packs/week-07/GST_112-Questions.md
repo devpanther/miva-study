@@ -59,7 +59,10 @@ C) National Broadcasting Commission
 D) Nigerian Union of Journalists
 
 **10.** The Violence Against Persons (Prohibition) Act, which criminalises various forms of abuse and provides mechanisms for reporting, prosecution and support services for survivors, was signed into law in:
-A) 1999  B) 2009  C) 2015  D) 2020
+A) 1999
+B) 2009
+C) 2015
+D) 2020
 
 **11.** The lesson gives the figure "about 367,000" for 2021. It refers to:
 A) Complaints received by the National Human Rights Commission

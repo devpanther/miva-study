@@ -1,187 +1,113 @@
-# Saturday — COS_102 code nightly check
+# Saturday — COS_102 nightly check
 
-*Code only: evaluating an expression by precedence and associativity, predicting both the value and the type an operation produces, integer versus floating-point division and where the cast has to go, character versus numeric versus string values, spotting the type or declaration error in a fragment, and reading structure and union code. No definitions asked for their own sake, no lists of categories, no benefits of OOP — those were Wednesday.*
+*Applied work only: writing a definition in the deck's order, reaching a member with the dot syntax, reading the summary sheet's `struct`, `union` and `class` code, deciding how many members a union can hold at once, sorting state from behaviour on a new object, `public` and `private`, and turning a problem into variables. The definitions themselves were Wednesday.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**1.** What is stored in `r`?
+**1.** Which of these lines is a variable definition written the way the deck's rule requires - "data type" followed by "variable name"?
+
+A. count int;
+B. count = int;
+C. int count;
+D. define count as int;
+
+**2.** A variable has been defined with  struct Dog d;  and its name must be set. The deck gives one way to reach a member in order to assign or modify a value. Which line uses it?
+
+A. strcpy(d.name, "Rex");
+B. strcpy(name.d, "Rex");
+C. strcpy(Dog.name, "Rex");
+D. strcpy(d name, "Rex");
+
+**3.** A struct Dog and a union Dog are each written with the three members char name[20], char breed[20] and char colour[20]. How many of the three members can hold a value at the same time in each?
+
+A. Three in the structure and three in the union
+B. One in the structure and three in the union
+C. One in the structure and one in the union
+D. Three in the structure and one in the union
+
+**4.** The week's summary sheet gives this class. Which part of it makes it a class rather than a structure?
 
 ```c
-int r = 20 - 6 / 2 * 3;
+class Dog {
+    char name[20];
+    char breed[20];
+    char colour[20];
+    char[] get_name() { return name; }
+};
 ```
-a) 11  b) 19  c) 21  d) 51
 
-**2.** What does this print?
+A. The line char[] get_name() { return name; } - a class has variables and, in addition, methods or functions
+B. The three char arrays, since only a class may hold several members of the same type
+C. The absence of a semicolon after the closing brace, which a structure requires
+D. The fact that all of its members start at the same location in memory
 
-```c
-int a = 7, b = 2;
-float x = a / b;
-printf("%f", x);
-```
-a) 3.500000
-b) 3.000000
-c) 4.000000
-d) Nothing: the compiler rejects line 2, because the result of an `int` division cannot be assigned to a `float`
+**5.** A library programme designs a LibraryBook object with title, author, copies_out, borrow() and return_book(). Which grouping matches the deck's account of state and behaviour?
 
-**3.** Keeping `a` and `b` as `int`, which single change makes that program print **3.500000**?
-a) `float x = (float)(a / b);`
-b) `float x = (float) a / b;`
-c) `double x = a / b;`
-d) `float x = a / b * 1.0;`
+A. State: borrow(), return_book(). Behaviour: title, author, copies_out
+B. State: title, author. Behaviour: copies_out, borrow(), return_book()
+C. State: title, author, copies_out. Behaviour: borrow(), return_book()
+D. State and behaviour cannot be separated here, because a book is not a real-world object with behaviour
 
-**4.** What does this print?
+**6.** In that library class the variable copies_out is private and the methods borrow() and return_book() are public. On the week's summary sheet, what is that arrangement called, and what does it achieve?
 
-```c
-int n = 'A' + 1;
-printf("%d %c", n, n);
-```
-a) 65 A
-b) 66 66
-c) A1 A1
-d) 66 B
+A. It is called modularity, and it makes each object smaller in memory
+B. It is called code reusability, and it lets one class borrow another class's variables
+C. It is called information overloading, and it lets two methods share a single name
+D. It is called data encapsulation - the implementation details are hidden from the user, who can interact with the object only through a set of public methods
 
-**5.** A digit has been read as a character. What are `v` and `w`?
+**7.** The deck asks: to find the average of the first five multiples of 9, what are the variables? Which set of definitions represents that problem as data?
 
-```c
-char c = '7';
-int  v = c;
-int  w = c - '0';
-```
-a) `v` is 7 and `w` is 7
-b) `v` is 7 and `w` is 55
-c) `v` is 55 and `w` is 7
-d) `v` is 55 and `w` is 55
-
-**6.** Which statement about this fragment is correct?
-
-```c
-1   int   first_score = 10;
-2   int   2nd_score   = 20;
-3   float average     = 0;
-4   char  grade       = 'A';
-```
-a) Line 2 is illegal: a C identifier may not begin with a digit
-b) Line 3 is illegal: a `float` must be initialised with a literal that contains a decimal point
-c) Line 4 is illegal: `'A'` is a string, and a string must be assigned to an array of `char`
-d) All four lines are legal: C works out each variable's type from the value written on the right
-
-**7.** What is printed, and what does `n` hold afterwards?
-
-```c
-int n = 7;
-if (n = 0)
-    puts("zero");
-else
-    puts("not zero");
-```
-a) `zero` is printed, and `n` holds 0
-b) `not zero` is printed, and `n` holds 7
-c) `not zero` is printed, and `n` holds 0
-d) Nothing: the compiler rejects the condition, because `=` is not a relational operator and may not appear in an `if`
+A. int nine; int five;
+B. int sum; int count; float average;
+C. float average;
+D. char name[20]; int age;
 
 **8.** What does this print?
 
 ```c
 union Dog { char name[20]; char breed[20]; char colour[20]; };
-
 union Dog d;
-strcpy(d.name,  "Rex");
+strcpy(d.name, "Rex");
 strcpy(d.breed, "Poodle");
 printf("%s %s", d.name, d.breed);
 ```
-a) `Rex Poodle`, because each member of a union gets its own storage, exactly as in a structure
-b) `Poodle Poodle`, because all members of a union start at the same location, so writing `breed` wrote over `name`
-c) `Rex Rex`, because the first member written to fixes the union's contents and later writes to other members are discarded
-d) Nothing: the compiler rejects `d.breed`, because a union variable may only be accessed through whichever member is named first in the definition
 
-**9. (explain why)** Take this fragment.
+A. Rex Poodle, because each member of a union gets its own storage, exactly as in a structure
+B. Poodle Poodle, because all members of a union start at the same location, so writing breed wrote over name
+C. Rex Rex, because the first member written to fixes the union's contents and later writes to other members are discarded
+D. Nothing: the compiler rejects d.breed, because a union variable may only be accessed through whichever member is named first in the definition
 
-```c
-int   total = 17, n = 5;
-float avg = total / n;
-printf("%f", avg);
-```
-State exactly what is printed and what the correct average is. Then explain the mechanism step by step — what type each subexpression has, when the conversion to `float` happens, and why the type of the variable on the left has no say in it. Give **two** different one-line fixes, and explain why `float avg = (float)(total / n);` is **not** one of them. Finally, state the value of `total % n` and say why `avg % n` would not compile.
+**9. (explain why)** Write the variable definitions a programme would need in order to find the average of the first five multiples of 9, following the deck's rule for a definition exactly. For each one, say which quantity in the problem it stands for, why you chose that data type, and what value it holds by the end. Then explain, in the deck's own terms, why 9 and 5 are not themselves the variables.
 
-**10. (explain why)** Every numbered line below is either wrong or does something the programmer did not intend. For each, name the error precisely, write the corrected line, and say whether the compiler will catch it or let it through.
+**10. (explain why)** The week's summary sheet asks: given the 'Dog' class example, how would you structure a 'LibraryBook' class, considering variables and methods, to efficiently manage books in a library? Answer it. Give the variables and the methods, say which members you would make private and which public and why, and justify the whole design by quoting the deck's two sentences about who may reach an object's state.
 
-```c
-1   int   1st_place = 4;
-2   float rate = 0.5
-3   char  grade = "B";
-4   int   n;
-5   n = n + 1;
-6   float leftover = rate % 2;
-```
+**11. (explain why)** The library system is to be built from programme objects rather than from separate entities. Set out the deck's four reasons for using programme objects, and for each one say what it would mean concretely for a LibraryBook. Then say exactly what the sentence "different objects can only interact with each other through their own individual methods" rules out, and give an example of a line of code it forbids.
 
-**11. (explain why)** Evaluate this by hand.
-
-```c
-int a = 5, b = 2, c = 3;
-int r = a + b * c > a * b + c && !(a - b == c);
-```
-Give the value of `r`, and set out the order in which the operators were applied and why that order and no other. State which subexpression is **never evaluated** and give the rule that causes it to be skipped. Then write the same expression with brackets showing how a student who believes `&&` binds tighter than `>` would read it, and give the value **that** reading produces.
-
-**12. (explain why)** Write out, in C, a structure `LibraryBook` with the members `char title[40]`, `char author[40]` and `int copies`. Then write the statements that create one such variable, set all three members, and print the title and the number of copies — using the correct syntax for each member's type. Say what `sizeof(struct LibraryBook)` is and how you worked it out. Then say exactly what would change, in the layout and in the behaviour of your statements, if `struct` were replaced by `union`, and what `sizeof` would become.
+**12. (explain why)** Write out, in C, a structure LibraryBook with the members char title[40], char author[40] and int copies. Then write the statements that create one such variable, set all three members and print the title and the number of copies, using the correct syntax for each member's type. Say what the size of the structure is and how you worked it out. Then say exactly what would change, in the layout and in the behaviour of your statements, if struct were replaced by union, and what the size would become.
 
 ---
 
 ## Answers
 
-**1. a — 11.** *Concept: `*`, `/` and `%` share one precedence level, and that level associates left to right.* Precedence alone does not settle this expression, because `/` and `*` are at the *same* level; associativity does. Left to right: `6 / 2` = 3, then `3 * 3` = 9, then the lower-precedence `-` gives `20 - 9` = **11**. (c) 21 is the answer you get by ignoring precedence entirely and working straight along the line: `20 - 6` = 14, `14 / 2` = 7, `7 * 3` = 21. (b) 19 encodes the belief that `*` outranks `/` — that reads it as `20 - 6 / (2 * 3)` = `20 - 1`. (d) 51 encodes doing the division first and then applying the remaining two operators left to right at the top level: `20 - 3` = 17, then `17 * 3` = 51; that gets precedence half right and then forgets that `-` is *lower* than `*`, so the multiplication cannot wait for it.
+**1. C** — *Concept: The order of a definition: data type, then variable name.* 'Variable definition always includes "data type" followed by "variable name".' 'int count;' is that order - type first, name second, semicolon last. Option (A) has the two the wrong way round, which is the order used in some other languages and the reason the deck bothers to state the rule. Option (B) writes an assignment rather than a definition, and puts a type name where a value should be. Option (D) is English, not C: a definition is a piece of syntax, not a description of one.
 
-**2. b — 3.000000.** *Concept: the operand types choose the operation; the assignment target has no vote.* `a` and `b` are both `int`, so `a / b` is an **integer** division: 7 divided by 2 is 3 with the fractional part truncated away, and the result is the `int` value 3. Only then, with the arithmetic already finished, is that 3 converted to `float` to be stored in `x` — giving 3.0, printed as `3.000000`. (a) is the answer of everyone who reads the line right to left and assumes that because the destination is a `float`, a floating-point division must have taken place; nothing about `x` reaches back into the expression. (c) assumes `/` rounds; it truncates towards zero, so `7 / 2` is 3 and `-7 / 2` is −3. (d) invents a rule: assigning an `int` to a `float` is a perfectly legal implicit conversion, and it is exactly the conversion that hides the bug.
+**2. A** — *Concept: The dot syntax reaches a member of a structure variable.* The deck's slide is explicit: 'To access members of a structure to either assign or modify values, use the dot syntax (.)' The form is VARIABLE dot MEMBER, so d.name. Option (B) has the two the wrong way round, which reads as 'the d belonging to name'. Option (C) uses the TYPE name where the variable name belongs - struct Dog is the type, d is the variable, and there is nothing to store in a type. Option (D) omits the dot altogether and is not an expression at all.
 
-**3. b — `float x = (float) a / b;`** *Concept: the cast must reach the division before the division happens.* A cast is a unary operator, so it binds tighter than `/`: this parses as `((float) a) / b`. Now one operand is `float`, the other `int` is promoted to match, and a **floating-point** division is performed — 3.5. (a) is the near-miss that catches most people: the brackets make the cast apply to `a / b`, which is evaluated first as an `int` division to 3, so it converts 3 to 3.0 and prints `3.000000`. Casting after the damage never undoes it. (c) changes only where the result is stored, exactly as in question 2, so it prints `3.000000` too. (d) multiplies afterwards: `a / b` is still `int` division giving 3, then `3 * 1.0` is 3.0. The general rule: make at least one operand floating **before** the operator runs — `(float) a / b`, `a / (float) b` or `a / 2.0` all work.
+**3. D** — *Concept: A union variable can represent the value of only one of its members at a time.* In a structure every member has its own storage, so all three hold values at once - that is what lets one dog have a name AND a breed AND a colour. In a union 'all of its members start at the same location in memory', so the three names refer to the same bytes, and the deck states the consequence directly: 'a union variable can represent the value of only one of its members at a time.' Option (A) treats the union as a structure, which is the whole thing the deck's Structure vs union slide exists to prevent. Options (B) and (C) get the structure wrong, which would leave no way to hold a record of several fields at all.
 
-**4. d — `66 B`.** *Concept: `char` is a small integer type; the conversion specifier decides how the same value is shown.* `'A'` is a character *literal* whose value is its code, 65, so `'A' + 1` is the `int` 66 and `n` holds 66. It is then printed twice: `%d` displays the value as a decimal number, giving `66`; `%c` displays the same value as the character with that code, and code 66 is `'B'`. (a) forgets the `+ 1` and also assumes `%c` reproduces the literal that was written. (b) treats `%c` as if it were another `%d` — it is the same value, but not the same rendering. (c) treats `'A' + 1` as if `+` on a character meant sticking a `1` on the end, which is string concatenation borrowed from another language; C has no such operator, and `+` on a `char` is ordinary integer arithmetic.
+**4. A** — *Concept: A class is a structure that also carries methods.* 'Classes are also similar to structures but in addition to having variables, classes also usually have methods or functions. So, using the dog example, a class will usually consist of variables such as "name", "breed" and "colour". Also, it will have methods such as a method that returns the name of a dog.' get_name() is that method, and it is the only thing here a structure could not have. Option (B) is false of all three constructs - a structure groups 'items of possibly different types', so several of one type is no obstacle. Option (D) is the definition of a UNION. Option (C) invents a punctuation rule and does not touch what a class is.
 
-**5. c — `v` is 55 and `w` is 7.** *Concept: the character `'7'` and the number 7 are different values.* `c` holds the character `'7'`, whose ASCII code is **55**; assigning it to an `int` simply widens that code, so `v` is 55. To get the *numeric* value of a digit character you subtract the code of `'0'`, which is 48: `'7' - '0'` = 55 − 48 = **7**, so `w` is 7. This works because the codes of `'0'` to `'9'` are guaranteed to run consecutively. (a) is the assumption that a `char` holding a digit "is" that number, which is exactly the trap; it also makes the `- '0'` look like pointless decoration. (b) has the two the wrong way round, treating the subtraction as damage rather than as the conversion. (d) spots that `c` is a code but then reads `- '0'` as subtracting the *character* zero in the sense of subtracting nothing.
+**5. C** — *Concept: State is what the object holds; behaviour is what it does.* 'Real-world objects have two main characteristics; they have state and behaviour', and in a programme 'the state of an object is stored in variables and the behaviour of objects is described by methods'. For the deck's dog the state is name, colour, breed and hungry, and the behaviour is barking, fetching and wagging its tail. Reading the book the same way: title, author and copies_out are values the object HOLDS, so they are state and become variables; borrowing and returning are things the object DOES, so they are behaviour and become methods. Option (A) is the mapping inverted. Option (B) counts copies_out as behaviour because its value changes - but a state variable is precisely the thing whose value changes; what makes something behaviour is that it is an action. Option (D) refuses the deck's own analogy, which it applies to a dog, to complex objects and to objects inside other objects.
 
-**6. a — Line 2 is illegal.** *Concept: the rules for a legal C identifier.* A name may contain letters, digits and underscores, but it **may not begin with a digit** — the compiler starts reading `2nd_score` as the number 2 and then finds `nd_score` where an operator should be. (b) invents a rule: `float average = 0;` is fine, the `int` literal 0 is converted to 0.0f by the ordinary implicit conversion, exactly as it would be at any other assignment. (c) has the quotes backwards: `'A'` in **single** quotes is a character literal, which is precisely what a `char` takes; `"A"` in **double** quotes would be the string, and *that* is the one that cannot be assigned to a `char`. (d) describes type inference, which C does not do at all — C's rule is the course's own, **data type followed by variable name**, and the type comes from what the programmer wrote on the left, never from the value on the right.
+**6. D** — *Concept: Data encapsulation and the access specifiers.* The summary sheet defines it: 'Data encapsulation is a programming concept that refers to the practice of hiding the implementation details of an object from the user. This means that the user can only interact with the object through a set of public methods, while the internal workings of the object remain hidden.' It adds that 'access specifiers like public and private control the access to class members'. The lecture supplies the reason it works: 'only the methods of a particular object have access to the variables or state of that object', which is what makes a private variable reachable through borrow() and return_book() and nowhere else. Options (A) and (B) name two of the three BENEFITS the summary sheet lists - modularity, code reusability and the independence of objects - and attach them to the wrong idea, with an invented mechanism in each case. Option (C) invents a term outright.
 
-**7. c — `not zero` is printed, and `n` holds 0.** *Concept: `=` assigns and yields the value it stored; `==` compares.* The condition is `n = 0`, not `n == 0`. It **assigns** 0 to `n`, so `n` is 0 from that moment on, and the value of the assignment expression is the value stored, namely 0. In C a condition is false when it is zero, so the `if` takes the **`else`** branch and `not zero` is printed — the message is the exact opposite of the state the variable is now in, which is why this bug is so hard to see in output. (a) is the answer of someone who reads the condition as the comparison that was meant, and it is the intended behaviour of `if (n == 0)`. (b) spots that the wrong branch is taken but misses the side effect: the assignment has already happened, so `n` cannot still be 7. (d) is wrong because an assignment *is* an expression with a value, which is exactly what makes the mistake legal and therefore dangerous; a compiler may warn, but it must accept it.
+**7. B** — *Concept: Representing a problem as data - the quantities, not the numbers in the wording.* 'When we programme problems, we represent the problem as data (or variable) and the variable is stored and processed by the computer.' The quantities the computer must hold here are the running total of the multiples (9 + 18 + 27 + 36 + 45 = 135), how many there are (5) and the average that comes out of the two (27). Each gets a definition in the deck's required form, data type followed by variable name. Option (A) mistakes the numbers MENTIONED in the wording for the quantities the programme must hold; 9 and 5 describe which multiples to use, they are not the data being processed. Option (C) keeps the answer and throws away everything needed to compute it, leaving nothing for the computer to process. Option (D) belongs to a different problem altogether.
 
-**8. b — `Poodle Poodle`.** *Concept: all members of a union start at the same location, so they alias each other.* The union's three arrays are not three arrays; they are one 20-byte block with three names. `strcpy(d.name, "Rex")` puts `R e x \0` at the start of that block; `strcpy(d.breed, "Poodle")` then writes `P o o d l e \0` over the same bytes. Reading `d.name` afterwards reads those same bytes, so both `%s` print `Poodle`. This is the direct consequence of the course's statement that **a union variable can represent the value of only one of its members at a time**. (a) is the structure's behaviour, and with `struct` in place of `union` the program really would print `Rex Poodle` — that contrast is the whole point of the question. (c) invents a write-once rule; nothing protects the earlier value, it is simply overwritten. (d) invents an access restriction; every member of a union may be written and read by name, and it is precisely because the language allows that without complaint that the programmer has to track which member is currently valid.
+**8. B** — *Concept: All members of a union start at the same location, so they overlap.* The union's three arrays are one 20-byte block with three names. strcpy(d.name, "Rex") writes R e x and a terminator at the start of that block; strcpy(d.breed, "Poodle") then writes over the same bytes, so both %s print Poodle. This is the direct consequence of a union variable being able to represent the value of only one of its members at a time. With struct in place of union the programme really would print 'Rex Poodle'. Option (C) invents a first-write-wins rule; nothing protects the earlier value. Option (D) invents a restriction on which member may be named - all of them may, which is exactly what makes the overwriting possible.
 
-**9.** *Concept: integer division, the point at which conversion happens, and where a cast must go.* **What is printed: `3.000000`. The correct average is 3.4.** Step by step. `total` and `n` are both `int`, so in `total / n` both operands are `int`; the usual arithmetic conversions have nothing to do, and the operation selected is **integer division**, which computes the quotient and truncates the fractional part towards zero. 17 ÷ 5 is 3 remainder 2, so the expression yields the `int` value **3** — and the 0.4 is not rounded, not stored somewhere else, it is simply gone. The conversion to `float` happens **afterwards**, at the assignment: the `int` 3 is converted to the `float` 3.0 and stored in `avg`, and `%f` prints it as `3.000000`. The type of `avg` has no say in any of this because C decides what an operator does from **the types of its operands**, which are fixed before the assignment is even considered; the assignment is a separate step that happens to the finished result. **Two fixes**, each making at least one operand floating *before* the division runs: `float avg = (float) total / n;` — the cast is a unary operator and binds tighter than `/`, so it applies to `total` alone, one operand becomes `float`, `n` is promoted to match, and floating-point division gives 3.4. Or `float avg = total / (float) n;`, or equivalently `float avg = total / 5.0;`, which does the same thing with a floating literal. **Why `(float)(total / n)` is not a fix:** the brackets make the cast apply to the *result*, so the integer division has already been performed and truncated inside them; converting 3 to 3.0 recovers nothing. A cast cannot restore information that the operation has already thrown away — it must be applied to an **operand**, not to a result. **`total % n`** is `17 % 5` = **2**, the remainder that the truncating division discarded; `total / n` and `total % n` together — 3 and 2 — reconstruct 17 as 3 × 5 + 2. **`avg % n` will not compile** because `%` is defined only for integer operands, and `avg` is a `float`; the remainder operator is not merely undefined on floating-point values, it is a constraint violation the compiler must diagnose. (The floating equivalent is the library function `fmod`.)
+**9.** *Concept: Turning a problem into definitions.* THE DEFINITIONS, each written as data type followed by variable name and ended with a semicolon: 'int multiple;' stands for the multiple currently being handled, and is an int because a multiple of 9 is a whole number; it holds 9, then 18, then 27, then 36, then 45 in turn, ending at 45. 'int sum;' stands for the running total of the multiples, and is an int because a total of whole numbers is a whole number; it ends holding 135, since 9 + 18 + 27 + 36 + 45 = 135. 'int count;' stands for how many multiples there are, and is an int because a count is a whole number; it holds 5. 'float average;' stands for the answer, and is a float because an average is a measurement rather than a count and need not come out whole; here it holds 27, because 135 shared among 5 is exactly 27. (Five separate int variables for the five multiples would also represent the problem, but one variable reused together with a running sum is the shape the work actually takes.) WHY 9 AND 5 ARE NOT THE VARIABLES. The deck's sentence is that 'we represent the problem as data (or variable) and the variable is stored and processed by the computer'. What has to be stored and processed is the quantities whose values the machine works on and changes as it goes - the multiple in hand, the total so far, the count and the average. 9 and 5 are part of the DESCRIPTION of the problem: they say which multiples to take and how many, and they never change. Mistaking the numbers in the wording for the data is the usual first error, and it produces a programme with nowhere to put the total it is computing. Note also the deck's instruction about choosing the type: 'you can select the data type according your programme logic and need' - the counts and totals take the basic type integer, and the average takes floating-point, because that is what each quantity is.
 
-**10.** *Concept: identifier rules, statement syntax, character versus string literals, uninitialised storage, and the operand types `%` demands.*
-**Line 1 — `int 1st_place = 4;`** An identifier **may not begin with a digit**. The compiler reads the numeric literal `1` and then finds `st_place` where it expected an operator or a semicolon. **Fix:** `int first_place = 4;` (or `place_1`). **Caught by the compiler** — it is a syntax error, so nothing compiles until it is fixed.
-**Line 2 — `float rate = 0.5`** The **semicolon is missing**. Every C statement is terminated by one; without it the compiler runs this line and the next together and reports the error, confusingly, on line 3. **Fix:** `float rate = 0.5;`. **Caught by the compiler.**
-**Line 3 — `char grade = "B";`** `"B"` in double quotes is a **string literal** — an array of two `char`s, `'B'` and the terminating `'\0'` — and what is being assigned is its address, a pointer. A `char` holds one character, not an address. The literal wanted is the **character** literal in single quotes. **Fix:** `char grade = 'B';`. **Caught by the compiler** (a constraint violation: assigning a pointer to an integer type without a cast; some older compilers report it as a warning and then store the low byte of an address, which is worse than an error because the program runs and the value is meaningless).
-**Line 4/5 — `int n;` then `n = n + 1;`** Line 4 is legal on its own: it is a **definition** and it reserves four bytes. The fault is at line 5, which **reads `n` before anything has been stored in it**. A definition without an initialiser leaves the bytes holding whatever the previous occupant of that memory left there, so `n + 1` adds one to an unknown value and the result is unpredictable — and different from run to run. **Fix:** `int n = 0;` on line 4. **Usually *not* caught:** the code is syntactically perfect and type-correct, so the compiler must accept it; a good compiler warns if warnings are switched on, but nothing obliges it to, and this is the classic error that appears to work in testing because the leftover bytes happened to be zero.
-**Line 6 — `float leftover = rate % 2;`** `%` requires **both operands to be of integer type**, and `rate` is a `float`. **Fix:** either work in integers (`int leftover = (int) rate % 2;`) or use the floating-point remainder function (`float leftover = fmodf(rate, 2.0f);` with `<math.h>`). **Caught by the compiler.**
-So: five faults across six lines, four of them refused outright, and the one the compiler lets through — the uninitialised read — is the only one capable of surviving into a running program.
+**10.** *Concept: Designing a class from the dog example, with access specifiers.* THE MODEL. The deck's dog class 'will usually consist of variables such as "name", "breed" and "colour"' and 'will have methods such as a method that returns the name of a dog', because 'the state of an object is stored in variables and the behaviour of objects is described by methods'. So the design proceeds by asking what a book HOLDS and what a book DOES. VARIABLES (the state): title, author, and a count of copies - say copies_owned and copies_out - and an identifier such as a catalogue number. Each is a value the object holds and each takes the data type its quantity calls for: the title and author are characters, the counts are integers. METHODS (the behaviour): borrow(), which lends a copy; return_book(), which takes one back; and readers such as get_title() and get_copies_available(), on the model of the dog's get_name(). PRIVATE AND PUBLIC. The variables are private and the methods are public. That is the arrangement the summary sheet names as data encapsulation - 'hiding the implementation details of an object from the user. This means that the user can only interact with the object through a set of public methods, while the internal workings of the object remain hidden' - with public and private being the access specifiers that 'control the access to class members'. The point of making copies_out private in particular is that every change to it then passes through borrow() and return_book(), which can refuse a loan when no copy is free; leave it public and any line anywhere in the programme can set it to anything, and the object can no longer keep its own promises. WHY THE DESIGN WORKS - the deck's two sentences: 'only the methods of a particular object have access to the variables or state of that object', and 'different objects can only interact with each other through their own individual methods'. Those are what make the private variables genuinely unreachable and the public methods genuinely the only route, so a Reader object or a Loan object must go through borrow() rather than touching the count. The deck's own reasons for building this way follow immediately: each book object can be created and maintained independently, it can be used in various parts of the programme, a faulty one can be removed and replaced without disturbing the rest of the code - 'similar to how a car works' - and the author controls how much is shared about the object with the outside world.
 
-**11.** *Concept: precedence across arithmetic, relational and logical operators, plus short-circuit evaluation.* **`r` is 0.** The expression is `a + b * c > a * b + c && !(a - b == c)` with `a = 5`, `b = 2`, `c = 3`, and the order is forced by the precedence ladder: **unary `!` binds tightest, then `*`, then `+` and `-`, then the relational `>`, then the equality `==`, then `&&`, then the assignment `=`.** So the arithmetic goes first, on both sides of the `>` independently: `b * c` = 2 × 3 = 6, so the left side is `5 + 6` = **11**; `a * b` = 5 × 2 = 10, so the right side is `10 + 3` = **13**. Only then is the comparison made: `11 > 13` is false, and a false relational operator yields the `int` **0**. That value is the left operand of `&&`. **The subexpression never evaluated is `!(a - b == c)`** — the entire right-hand operand of `&&`, including the subtraction, the equality test and the negation. The rule is **short-circuit evaluation**: `&&` yields 1 only if both operands are true, so once the left operand is known to be 0 the answer is 0 whatever the right operand would have been, and C guarantees the right operand is *not* evaluated in that case. (Had it been evaluated it would have given `5 - 2` = 3, `3 == 3` = 1, `!1` = **0** — the same 0, but reached by work the machine never did. The guarantee matters when the skipped side has a side effect or could fault, as in `p != NULL && p->value > 0`.) Finally `=` is the lowest-precedence operator in the line, which is why the whole comparison-and-logic expression is evaluated before anything is stored, and `r` receives **0**. **The mis-bracketed reading.** A student who thinks `&&` binds tighter than `>` reads it as `a + b * c > (a * b + c && !(a - b == c))`. Inside those brackets: `a * b + c` = 13, which is non-zero and therefore **true**; `!(a - b == c)` = `!(3 == 3)` = `!1` = **0**, false; so `13 && 0` is **0**. The comparison then becomes `11 > 0`, which is true, yielding **1**. So the two readings give **0** and **1** — opposite answers from the same characters, which is exactly why the precedence order has to be known rather than guessed.
+**11.** *Concept: The four reasons for programme objects, and the interaction rule.* THE FOUR REASONS, in the deck's words, each applied to the book. (1) 'Since objects are not dependent on each other, each object can be independently created and maintained.' A LibraryBook can be written, tested and corrected on its own; how it keeps its count of copies is nobody else's business, so that count can be re-arranged without the reader records or the fines code being touched. (2) 'An object can be used in various parts of our programme.' The same LibraryBook serves the search screen, the loans desk and the stock report, because it carries its own state with it and needs nothing set up around it first. (3) 'If an object is not working well or if it is creating problems for other objects in the programme, it can easily be removed and replaced without creating problems for the rest of the code. This is similar to how a car works!' A LibraryBook that miscounts can be replaced by a corrected one offering the same methods, and the rest of the system, which only ever called borrow() and return_book(), does not change. (4) 'The fact that the state of an object can only be accessed by the object's methods allows for information hiding. This means that we can control the amount of information we share about our objects to the outside world.' The library can publish get_title() and get_copies_available() while keeping the acquisition price or the borrower's identity unreachable. WHAT THE INTERACTION SENTENCE RULES OUT. It rules out one object reaching inside another and touching its variables directly. Every exchange between two objects must go through a method that the object whose state is involved has published. So a Reader object may call book.borrow(), and that is legal because borrow() is one of the book's own methods; what it may not do is 'book.copies_out = book.copies_out + 1;', reaching in and altering the book's state from outside. That forbidden line is exactly what makes the difference: it bypasses every check borrow() performs, and it makes the reader's code depend on how the book happens to store its count - so the book can no longer be maintained or replaced independently, and all four benefits go with it.
 
-**12.** *Concept: declaring a structure, reaching its members with the dot syntax, and what changes when the same members share one block of memory.*
-
-```c
-#include <stdio.h>
-#include <string.h>
-
-struct LibraryBook {
-    char title[40];
-    char author[40];
-    int  copies;
-};                                     /* the semicolon is part of the definition */
-
-int main(void)
-{
-    struct LibraryBook b;              /* definition: reserves the storage        */
-
-    strcpy(b.title,  "Things Fall Apart");   /* arrays: copy in, never b.title = ... */
-    strcpy(b.author, "Chinua Achebe");
-    b.copies = 3;                            /* a plain int: ordinary assignment     */
-
-    printf("%s: %d copies\n", b.title, b.copies);   /* %s for the array, %d for the int */
-    return 0;
-}
-```
-
-Two points of syntax that are marked. The **dot** is how a member is reached, for reading and for writing alike — `b.copies = 3;` and `printf(..., b.copies)`. And the two `char` arrays cannot be assigned with `=`, because an array name is not something you can store into; the contents must be **copied** in with `strcpy`, while `copies`, being a plain `int`, takes an ordinary assignment. The conversion specifiers follow the member types: `%s` for the arrays, `%d` for the `int`.
-
-**`sizeof(struct LibraryBook)` is 84 bytes.** Each member of a structure has its own storage, laid out in order, so the size is the sum of the members: 40 + 40 + 4 = 84. There is no padding to add here — `char` needs no alignment, so `copies` starts at offset 80, which is already a multiple of the 4 bytes an `int` requires, and 84 is already a multiple of the structure's own 4-byte alignment.
-
-**If `struct` became `union`:** the layout collapses. All three members would **start at the same location**, so `title`, `author` and `copies` would be three names for one block of memory rather than three separate blocks, and **`sizeof(union LibraryBook)` would be 40** — the size of the largest member, `char[40]`, which is already a multiple of the 4-byte alignment the `int` member demands. The behaviour of the statements above would change accordingly and destructively: `strcpy(b.title, "Things Fall Apart")` writes 18 bytes at offset 0; `strcpy(b.author, "Chinua Achebe")` then writes 14 bytes over the same place, so the title is gone; and `b.copies = 3` writes four bytes of integer over the first four bytes of that text, so `b.title` and `b.author` now read as whatever three-then-a-null-byte happens to spell. The `printf` would print rubbish for the title and 3 for the copies, because `copies` was the member written last. A union variable **can represent the value of only one of its members at a time**, so a `LibraryBook` — which genuinely needs a title *and* an author *and* a count simultaneously — must be a structure. A union is the right choice only where the members are **alternatives**, never coexisting values.
+**12.** *Concept: Declaring a structure, reaching its members with the dot syntax, and what changes when the members share one block.* THE CODE: 'struct LibraryBook { char title[40]; char author[40]; int copies; };' - note the semicolon after the closing brace. Then 'struct LibraryBook b;' defines a variable and reserves the storage; 'strcpy(b.title, "Things Fall Apart"); strcpy(b.author, "Chinua Achebe"); b.copies = 3;' set the members; 'printf("%s: %d copies\n", b.title, b.copies);' prints them. TWO POINTS OF SYNTAX: the dot is how a member is reached for both reading and writing, exactly as the deck's slide says - 'to access members of a structure to either assign or modify values, use the dot syntax' - and the two char arrays cannot be set with = because an array name is not something you can store into, so their contents are copied in with strcpy, while copies, being a plain int, takes an ordinary assignment. The conversion specifiers follow the member types: %s for the arrays, %d for the int. SIZE: 40 + 40 + 4 = 84 bytes. Each member of a structure has its own storage laid out in order, so the size of the structure is the sum of its members' sizes - the same arithmetic that makes the summary sheet's struct Dog, with three char[20] members, 60 bytes. IF struct BECAME union: the layout collapses. All three members would start at the same location, so title, author and copies would be three names for one block rather than three blocks, and the size would become 40 - the size of the largest member, char[40] - because a union is big enough for its largest member and no bigger. The statements would then be destructive: strcpy(b.title, ...) writes the title at the start of the block; strcpy(b.author, ...) writes over the same place, destroying it; and b.copies = 3 writes an integer over the first bytes of that text. The printf would print rubbish for the title and 3 for the copies, because copies was written last. A union variable can represent the value of only one member at a time, so a LibraryBook - which needs a title AND an author AND a count simultaneously - must be a structure; a union is right only where the members are alternatives that never coexist.

@@ -26,7 +26,7 @@ const MODELS = (process.env.ASK_MODEL
   : ["gemini-3.1-flash-lite", "gemini-2.5-flash-lite", "gemini-3.5-flash-lite", "gemini-2.5-flash"]);
 
 const API = "https://generativelanguage.googleapis.com/v1beta";
-const MAX_TOKENS = 1100;
+const MAX_TOKENS = 2600;
 
 /* Per-instance spend guard. Lambdas are short-lived so this is a speed bump, not a
    budget, but it stops a stuck loop running up a bill. */
@@ -145,25 +145,36 @@ export default async function handler(req, res) {
     summary ? "HIS LECTURER'S OWN MATERIAL FOR THIS WEEK:\n" + summary : ""
   ].filter(Boolean).join("\n\n");
 
+  /* The failure this replaces: asked a plain question, the model opened with "Yes,
+     your approach is correct", immediately contradicted itself with "you are likely
+     confusing...", and closed on a mandated say-it-out-loud line that restated the
+     definition it had already given. Three causes, all in the prompt: the missed-answer
+     guidance fired on every question, the Sunday line was unconditional, and nothing
+     forbade opening with validation. */
+  const mode = missed.length && asked ? "missed" : "free";
+
   const system = [
-    "You are a study partner for Gift, a 100-level student at Miva Open University in Nigeria, studying eight courses around full-time freelance work.",
-    "He has just watched a lecture and is being tested on it. Answer the question he asks.",
+    "You are Gift's study partner. He is a 100-level student at Miva Open University in Nigeria, studying eight courses around full-time freelance work. It is late and he is tired.",
     "",
-    "Return JSON with two fields.",
+    "THE USER TURN IS HIS QUESTION. Answer exactly that. Everything under CONTEXT is background about tonight's session: use it to ground the answer in his course, never as a substitute for what he asked. If his question has nothing to do with the context, ignore the context entirely.",
     "",
-    "\"answer\": the reply itself.",
-    "1. Teach from HIS course material below when it covers the point. Use his lecturer's notation and worked examples, not a textbook's. Where his material is silent, say so briefly, then teach the standard treatment.",
-    "2. Be concise. He is tired and it is late. Lead with the answer, then the reasoning. Short paragraphs, no preamble, no restating his question.",
-    "3. If he got something wrong, name the specific misunderstanding rather than re-explaining the whole topic. The useful thing is what he confused it with.",
-    "4. Maths in plain Unicode (∫ √ ≤ × ⁻¹ ₀ π θ Δ). Never LaTeX, never dollar signs.",
-    "5. He teaches his study partner on Sunday whatever he scored lowest on. If this is that topic, end with one line on what he needs to be able to SAY OUT LOUD to have understood it.",
-    "6. If his course material contains an error, say so plainly and teach the correct version.",
+    "\"answer\" — how to write it:",
+    "1. Open with the answer. Never open with agreement, praise, or a verdict on his approach: no \"Yes, your approach is correct\", no \"Great question\", no \"You are likely confusing...\". You cannot see his working, so you cannot assess it.",
+    "2. Ground it in HIS material. Use his lecturer's wording, notation and worked examples wherever the material below covers the point. Where it does not, say so in a few words and then teach the standard treatment.",
+    "3. Be short. Four to eight sentences for a concept. Longer only when working through an example, and then the extra length is the working, not the prose.",
+    "4. No filler. No \"Remember,\" no \"ask yourself\", no restating his question, no summarising what you just said, no encouragement.",
+    "5. Maths in plain Unicode (∫ √ ≤ × ⁻¹ ₀ π θ Δ). Never LaTeX, never dollar signs.",
+    "6. Never invent a video, a page number, a quotation, or a worked example and attribute it to his lecturer.",
+    "7. If his course material is wrong, say so plainly and teach the correct version.",
+    mode === "missed"
+      ? "8. He got the question below wrong and is asking about it. Name the specific thing that separates the right answer from the one he chose. One line at the end on what he would need to be able to say out loud to have understood it."
+      : "8. Do not mention his score, what he got wrong, or anything he did not ask about.",
     "",
-    "\"searches\": two or three YouTube search queries, best first.",
-    "Each must be a phrase a person would actually type: the specific technique or idea, four to eight words, no punctuation, no channel name, no course code, no words like 'explained' or 'tutorial' unless they genuinely narrow it.",
-    "Make them specific enough to land on the right video. \"integration by parts worked example\" is good; \"integration\" and \"MTH 102 week 7\" are both useless.",
-    "If a particular teacher genuinely is the best source for this exact topic, you may name them in ONE of the queries. Never invent a video title or URL.",
-    context ? "\n---\n" + context : ""
+    "\"searches\" — two or three YouTube queries, best first.",
+    "Each must read like something a person would type: the specific technique or idea, four to eight words, no punctuation, no channel name, no course code, no \"explained\" or \"tutorial\" unless it genuinely narrows the search.",
+    "\"integration by parts worked example\" is good. \"integration\" and \"MTH 102 week 7\" are both useless.",
+    "You may name a teacher in ONE query if that teacher is genuinely the best source for this exact topic. Never invent a video title or URL.",
+    context ? "\n--- CONTEXT ---\n" + context : ""
   ].join("\n");
 
   const payload = {
@@ -208,7 +219,13 @@ export default async function handler(req, res) {
     try { parsed = JSON.parse(text); } catch (e) { /* fall through to raw text */ }
 
     const answer = String((parsed && parsed.answer) || text || "").trim();
-    if (!answer) { lastError = model + " returned nothing"; continue; }
+    const finish = (((data.candidates || [])[0] || {}).finishReason) || "";
+    if (!answer) {
+      lastError = model + (finish === "MAX_TOKENS"
+        ? " spent its whole token budget before answering"
+        : " returned nothing" + (finish ? " (" + finish + ")" : ""));
+      continue;
+    }
 
     const searches = (parsed && Array.isArray(parsed.searches) ? parsed.searches : [])
       .map((s) => String(s).replace(/\s+/g, " ").trim())

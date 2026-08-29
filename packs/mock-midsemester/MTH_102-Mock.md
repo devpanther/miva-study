@@ -14,7 +14,7 @@ Mark Section B honestly against the model answers: a part-right answer with a wr
 a) {(1, 2), (2, 3), (1, 5), (3, 4)}   b) {(1, 2), (2, 2), (3, 2), (4, 2)}
 c) {(−1, 0), (0, 1), (1, 4), (2, 9)}   d) {(2, 7), (3, 7), (5, 1), (8, 6)}
 
-**2.** Evaluate lim_{x→2} (3x² − x + 4).
+**2.** Evaluate lim(x→2) (3x² − x + 4).
 
 a) 6   b) 10   c) 14   d) the limit does not exist
 
@@ -28,8 +28,8 @@ d) vertical asymptotes at x = 3 and x = −3
 **4.** Continuity of f at a point c requires all of the following **except**:
 
 a) f(c) is defined
-b) lim_{x→c} f(x) exists
-c) lim_{x→c} f(x) = f(c)
+b) lim(x→c) f(x) exists
+c) lim(x→c) f(x) = f(c)
 d) the graph of f has no sharp corner at c
 
 **5.** The domain of f(x) = (x + 4)/(x² − 9) is:
@@ -40,11 +40,11 @@ a) ℝ   b) ℝ \ {−3, 3}   c) ℝ \ {3}   d) ℝ \ {−4, −3, 3}
 
 a) f(x) = x⁴ − 3x²   b) f(x) = x³ + 1   c) f(x) = x⁵ − 2x   d) f(x) = x² − x
 
-**7.** Evaluate lim_{x→−2} (x² − 4)/(x² + 5x + 6).
+**7.** Evaluate lim(x→−2) (x² − 4)/(x² + 5x + 6).
 
 a) −4   b) 0   c) 4   d) the limit does not exist
 
-**8.** For a function f, lim_{x→2⁻} f(x) = 5, lim_{x→2⁺} f(x) = 5, and f(2) = 1. At x = 2, f has:
+**8.** For a function f, lim(x→2⁻) f(x) = 5, lim(x→2⁺) f(x) = 5, and f(2) = 1. At x = 2, f has:
 
 a) no discontinuity   b) a jump discontinuity
 c) a removable discontinuity   d) an infinite discontinuity
@@ -60,16 +60,16 @@ b) up on the left and up on the right
 c) down on the left and up on the right
 d) up on the left and down on the right
 
-**11.** Evaluate lim_{x→0} (√(x + 4) − 2)/x.
+**11.** Evaluate lim(x→0) (√(x + 4) − 2)/x.
 
 a) 0   b) 1/4   c) 1/2   d) the limit does not exist
 
 **12.** For x < 3 a graph rises to a **solid dot at (3, 4)**; for x > 3 it begins at an **open circle at (3, 2)** and continues to the right. Which statement is correct?
 
-a) lim_{x→3} f(x) does not exist, and f(3) = 4
-b) lim_{x→3} f(x) = 2, and f(3) = 2
-c) lim_{x→3} f(x) = 4, and f(3) = 4
-d) lim_{x→3} f(x) does not exist, and f(3) is undefined
+a) lim(x→3) f(x) does not exist, and f(3) = 4
+b) lim(x→3) f(x) = 2, and f(3) = 2
+c) lim(x→3) f(x) = 4, and f(3) = 4
+d) lim(x→3) f(x) does not exist, and f(3) is undefined
 
 **13.** The range of f: ℝ → ℝ, f(x) = x² − 8x + 21, is:
 
@@ -83,10 +83,10 @@ a) (0, 5)   b) (−2, 29)   c) (2, 5)   d) (2, −3)
 
 a) 0/0   b) ∞/∞   c) ∞ − ∞   d) 7/0
 
-**16.** If lim_{x→3⁻} f(x) = −∞ and lim_{x→3⁺} f(x) = +∞, then at x = 3 the function f has:
+**16.** If lim(x→3⁻) f(x) = −∞ and lim(x→3⁺) f(x) = +∞, then at x = 3 the function f has:
 
-a) a jump discontinuity, and lim_{x→3} f(x) = 0
-b) an infinite discontinuity, and lim_{x→3} f(x) does not exist
+a) a jump discontinuity, and lim(x→3) f(x) = 0
+b) an infinite discontinuity, and lim(x→3) f(x) does not exist
 c) a removable discontinuity, repairable by defining f(3)
 d) no discontinuity, since both one-sided limits have been found
 
@@ -101,16 +101,16 @@ b) y = 0
 c) there is none — the graph has the oblique asymptote y = (2/5)x instead
 d) y = 2
 
-**19.** Evaluate lim_{x→∞} (5x² + 3)/(2x³ − x).
+**19.** Evaluate lim(x→∞) (5x² + 3)/(2x³ − x).
 
 a) 5/2   b) 0   c) +∞   d) 2/5
 
 **20.** Which statement about g(x) = |x| at x = 0 is correct?
 
 a) g has a jump discontinuity at 0, because the graph turns sharply there
-b) lim_{x→0} g(x) does not exist, because the two arms use different formulas
+b) lim(x→0) g(x) does not exist, because the two arms use different formulas
 c) g is discontinuous at 0, because g is not smooth there
-d) g is continuous at 0, since lim_{x→0⁻} g(x) = lim_{x→0⁺} g(x) = 0 = g(0)
+d) g is continuous at 0, since lim(x→0⁻) g(x) = lim(x→0⁺) g(x) = 0 = g(0)
 
 **21.** With f(x) = 1/(x − 3) and g(x) = √x, the domain of f∘g is:
 
@@ -122,10 +122,10 @@ a) (−∞, 0) ∪ (1, 3)   b) (0, 1) ∪ (3, ∞)   c) (−∞, 0) ∪ (3, ∞)
 
 **23.** L'Hôpital's Rule may **not** be applied, as it stands, to which of these limits?
 
-a) lim_{x→0} (sin 3x)/(5x)
-b) lim_{x→∞} x²/eˣ
-c) lim_{x→1} (x² − 1)/(x − 1)
-d) lim_{x→0} (cos x)/(x + 1)
+a) lim(x→0) (sin 3x)/(5x)
+b) lim(x→∞) x²/eˣ
+c) lim(x→1) (x² − 1)/(x − 1)
+d) lim(x→0) (cos x)/(x + 1)
 
 **24.** An **essential** discontinuity at x = c is one where:
 
@@ -148,7 +148,7 @@ b) a V opening upward with vertex (3, 1)
 c) a V opening downward with vertex (−3, 1)
 d) a V opening upward with vertex (−3, −1)
 
-**27.** Evaluate lim_{x→0} x² cos(1/x).
+**27.** Evaluate lim(x→0) x² cos(1/x).
 
 a) 1
 b) it does not exist, since cos(1/x) has no limit at 0
@@ -186,23 +186,23 @@ d) domain x ≥ 0, vertical asymptote x = 0, passes through (0, 1)
 (c) Give both intercepts, and determine the behaviour of f as x → 2⁻ and as x → 2⁺.
 
 **33.** Evaluate each limit, naming the method you use and showing why direct substitution is not enough.
-(a) lim_{x→3} (x² − x − 6)/(x² − 9)
-(b) lim_{x→0} (√(9 + x) − 3)/x
-(c) lim_{x→0} (sin 3x)/(5x)
+(a) lim(x→3) (x² − x − 6)/(x² − 9)
+(b) lim(x→0) (√(9 + x) − 3)/x
+(c) lim(x→0) (sin 3x)/(5x)
 
 **34.** Let f(x) = x + 3 for x < 1; f(1) = 2; f(x) = x² + 3 for x > 1.
-(a) Find lim_{x→1⁻} f(x) and lim_{x→1⁺} f(x), and state lim_{x→1} f(x).
+(a) Find lim(x→1⁻) f(x) and lim(x→1⁺) f(x), and state lim(x→1) f(x).
 (b) Is f continuous at x = 1? Say precisely which of the three conditions fails, and which hold.
 (c) Classify the discontinuity and state the repair, if one exists.
 
 **35.** Let h(x) = (x + 1)/(x − 3).
 (a) Solve h(x) ≤ 2, using a sign chart. State clearly why you do not multiply through by (x − 3).
-(b) Find lim_{x→3⁻} h(x) and lim_{x→3⁺} h(x), and state lim_{x→3} h(x).
+(b) Find lim(x→3⁻) h(x) and lim(x→3⁺) h(x), and state lim(x→3) h(x).
 (c) Classify the discontinuity of h at x = 3 and say whether it can be removed.
 
 **36.** Let f(x) = (√(x + 7) − 3)/(x − 2).
 (a) State the domain of f.
-(b) Show that direct substitution fails, evaluate lim_{x→2} f(x) by rationalization, then confirm the value using L'Hôpital's Rule.
+(b) Show that direct substitution fails, evaluate lim(x→2) f(x) by rationalization, then confirm the value using L'Hôpital's Rule.
 (c) Classify the discontinuity at x = 2 and give the value of f(2) that removes it.
 
 ---
@@ -316,22 +316,22 @@ Near x = 2, use g(x) = (x + 1)/(x − 2). As x → 2⁻ the numerator → 3 > 0 
 
 **33.**
 
-**(a) lim_{x→3} (x² − x − 6)/(x² − 9).**
+**(a) lim(x→3) (x² − x − 6)/(x² − 9).**
 Substitute: (9 − 3 − 6)/(9 − 9) = 0/0 — indeterminate, so substitution decides nothing. **Method: factorization.**
 x² − x − 6 = (x − 3)(x + 2);  x² − 9 = (x − 3)(x + 3).
-lim_{x→3} [(x − 3)(x + 2)]/[(x − 3)(x + 3)] = lim_{x→3} (x + 2)/(x + 3)  (cancelling is legal because x ≠ 3 throughout)
+lim(x→3) [(x − 3)(x + 2)]/[(x − 3)(x + 3)] = lim(x→3) (x + 2)/(x + 3)  (cancelling is legal because x ≠ 3 throughout)
 = (3 + 2)/(3 + 3) = **5/6**.
 
-**(b) lim_{x→0} (√(9 + x) − 3)/x.**
+**(b) lim(x→0) (√(9 + x) − 3)/x.**
 Substitute: (√9 − 3)/0 = 0/0. **Method: rationalization** — multiply above and below by the conjugate √(9 + x) + 3:
 [(√(9+x) − 3)(√(9+x) + 3)] / [x(√(9+x) + 3)] = (9 + x − 9) / [x(√(9+x) + 3)] = x / [x(√(9+x) + 3)]
 = 1/(√(9 + x) + 3) for x ≠ 0.
 Now substitute: 1/(3 + 3) = **1/6**.
 
-**(c) lim_{x→0} (sin 3x)/(5x).**
+**(c) lim(x→0) (sin 3x)/(5x).**
 Substitute: sin 0 / 0 = 0/0, and both functions are differentiable near 0, so **L'Hôpital's Rule** applies. Differentiate numerator and denominator *separately*:
 d/dx (sin 3x) = 3 cos 3x;  d/dx (5x) = 5.
-lim_{x→0} (3 cos 3x)/5 = 3(1)/5 = **3/5**.
+lim(x→0) (3 cos 3x)/5 = 3(1)/5 = **3/5**.
 
 *Tests: choosing the right method for each 0/0 — factor, conjugate, L'Hôpital — and checking the form before choosing.* **[Week 3]**
 
@@ -340,14 +340,14 @@ lim_{x→0} (3 cos 3x)/5 = 3(1)/5 = **3/5**.
 **34.** f(x) = x + 3 for x < 1; f(1) = 2; f(x) = x² + 3 for x > 1.
 
 **(a) One-sided limits.**
-From the left, x < 1, so use x + 3: lim_{x→1⁻} f(x) = 1 + 3 = **4**.
-From the right, x > 1, so use x² + 3: lim_{x→1⁺} f(x) = 1² + 3 = **4**.
-The two agree, so **lim_{x→1} f(x) = 4** — the two-sided limit exists.
+From the left, x < 1, so use x + 3: lim(x→1⁻) f(x) = 1 + 3 = **4**.
+From the right, x > 1, so use x² + 3: lim(x→1⁺) f(x) = 1² + 3 = **4**.
+The two agree, so **lim(x→1) f(x) = 4** — the two-sided limit exists.
 
 **(b) Continuity check, condition by condition.**
 (i) f(1) is defined: yes, f(1) = 2. ✔
-(ii) lim_{x→1} f(x) exists: yes, it is 4. ✔
-(iii) lim_{x→1} f(x) = f(1): 4 ≠ 2. ✘
+(ii) lim(x→1) f(x) exists: yes, it is 4. ✔
+(iii) lim(x→1) f(x) = f(1): 4 ≠ 2. ✘
 So **f is not continuous at x = 1**; the failure is **condition (iii)** only — both (i) and (ii) hold. Note that f being defined at 1 is not enough on its own.
 
 **(c) Classification and repair.**
@@ -376,9 +376,9 @@ Endpoints: x = 7 gives 0, and "≥ 0" allows equality, so **include** 7; x = 3 i
 **Solution: (−∞, 3) ∪ [7, ∞).**
 
 **(b) One-sided limits at 3.**
-As x → 3⁻: the numerator → 3 + 1 = 4 > 0 and the denominator → 0 through negative values, so **lim_{x→3⁻} h(x) = −∞**.
-As x → 3⁺: the numerator → 4 > 0 and the denominator → 0 through positive values, so **lim_{x→3⁺} h(x) = +∞**.
-Neither is a finite real number, and in any case they disagree, so **lim_{x→3} h(x) does not exist**.
+As x → 3⁻: the numerator → 3 + 1 = 4 > 0 and the denominator → 0 through negative values, so **lim(x→3⁻) h(x) = −∞**.
+As x → 3⁺: the numerator → 4 > 0 and the denominator → 0 through positive values, so **lim(x→3⁺) h(x) = +∞**.
+Neither is a finite real number, and in any case they disagree, so **lim(x→3) h(x) does not exist**.
 
 **(c) Classification.**
 At least one one-sided limit is ±∞ and the graph hugs the line x = 3, so x = 3 is an **infinite discontinuity** (vertical asymptote). It is **not removable**: no single value assigned to h(3) can create a limit that does not exist to begin with.
@@ -401,11 +401,11 @@ Direct substitution: (√(2 + 7) − 3)/(2 − 2) = (√9 − 3)/0 = (3 − 3)/0
 = [(x + 7) − 9] / [(x − 2)(√(x+7) + 3)]
 = (x − 2) / [(x − 2)(√(x+7) + 3)]
 = 1/(√(x + 7) + 3)  for x ≠ 2 (the cancelling is valid because x never equals 2 in the limit process).
-Now substitute: lim_{x→2} f(x) = 1/(√9 + 3) = 1/(3 + 3) = **1/6**.
+Now substitute: lim(x→2) f(x) = 1/(√9 + 3) = 1/(3 + 3) = **1/6**.
 
 *Confirmation by L'Hôpital's Rule.* The form is 0/0 and both functions are differentiable near 2, so the rule is licensed. Differentiate numerator and denominator separately:
 d/dx [√(x + 7) − 3] = 1/(2√(x + 7));  d/dx (x − 2) = 1.
-lim_{x→2} [1/(2√(x + 7))] / 1 = 1/(2√9) = 1/(2 · 3) = **1/6**.
+lim(x→2) [1/(2√(x + 7))] / 1 = 1/(2√9) = 1/(2 · 3) = **1/6**.
 The two methods agree.
 
 **(c) The discontinuity at x = 2.**

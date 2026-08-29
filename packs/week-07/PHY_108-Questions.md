@@ -1,82 +1,82 @@
-# PHY_108 — Week 7 Question Set (sit 7 days later)
+# PHY_108 — Week 7 Questions
 
-*Sit this during Saturday catch-up in Week 8, not this week. Notes closed.*
+*Discharging a capacitor through a resistor: the time constant, the log plot and the experimental capacitance — sat seven days later, notes closed, as a retention test.*
 
-## Section A - Multiple choice (12)
+## Multiple choice
 
 **1.** The voltage across a capacitor discharging through a resistor obeys:
-a) V(t) = V₀(1 − e^(−t/τ))
-b) V(t) = V₀e^(−t/τ)
-c) V(t) = V₀e^(t/τ)
-d) V(t) = V₀(1 − e^(t/τ))
+A. V(t) = V₀e^(−t/τ)
+B. V(t) = V₀(1 − e^(−t/τ))
+C. V(t) = V₀e^(t/τ)
+D. V(t) = V₀(1 − e^(t/τ))
 
 **2.** Putting t = τ into the discharge equation shows that the time constant is the time for the capacitor voltage to:
-a) fall to 36.8% of its maximum value
-b) rise to 63.2% of its maximum value
-c) fall to zero
-d) fall to half of its maximum value
+A. fall to half of its maximum value
+B. fall to 36.8% of its maximum value
+C. fall to zero
+D. rise to 63.2% of its maximum value
 
 **3.** The discharge law is linearised by taking natural logs. Plotting ln V against t gives a straight line whose:
-a) gradient is −1/τ and whose intercept is ln V₀
-b) gradient is −τ and whose intercept is V₀
-c) gradient is +1/τ and whose intercept is ln V₀
-d) gradient is −1/τ and whose intercept is ln(V₀ − V)
+A. gradient is −τ and whose intercept is V₀
+B. gradient is +1/τ and whose intercept is ln V₀
+C. gradient is −1/τ and whose intercept is ln V₀
+D. gradient is −1/τ and whose intercept is ln(V₀ − V)
 
 **4.** A discharge trial uses R = 15 kΩ, and the graph gives an experimental time constant of 33 s. The experimental capacitance is:
-a) 2.2 μF
-b) 2200 μF
-c) 4.95 × 10⁵ μF
-d) 220 μF
+A. 4.95 × 10⁵ μF
+B. 220 μF
+C. 2.2 μF
+D. 2200 μF
 
 **5.** In the discharging experiment the stopwatch is started:
-a) as soon as the power supply is switched on
-b) when the switch key is closed and the LED lights up
-c) at the instant the switch key is opened, with the voltmeter at its maximum reading
-d) when the voltmeter reading has fallen to 0.368 of its maximum
+A. at the instant the switch key is opened, with the voltmeter at maximum
+B. as soon as the power supply is switched on
+C. when the switch key is closed and the LED lights up
+D. when the voltmeter reading has fallen to 0.368 of its maximum, which is the definition of the time constant
 
 **6.** The voltmeter used to follow the decay is connected across the capacitor and has a large but finite resistance. Its effect on the result is that:
-a) the measured τ is too small, because the voltmeter is a second discharge path in parallel with R
-b) the measured τ is too large, because the voltmeter adds resistance in series with R
-c) there is no effect, because a voltmeter draws no current at all
-d) the measured V₀ is too large, because the voltmeter adds its own emf
+A. the measured τ is too large, because the voltmeter adds resistance in series with R
+B. the measured τ is too small, because the voltmeter is a second discharge path in parallel with R
+C. there is no effect, because a voltmeter draws no current at all
+D. the measured V₀ is too large, because the voltmeter adds its own emf
 
 **7.** Why is the second graph (ln V against t) drawn at all, when τ can already be read off the first?
-a) Because V against t cannot be plotted from the downloaded data
-b) To show that the discharge is linear in time
-c) To obtain R independently of the marked value
-d) To obtain a second value of τ from a best-fit straight line through all the points, which must agree with the value read by eye from the curve
+A. Because the downloaded sheet logs ln V rather than V, so the first graph cannot be drawn from it
+B. To show that the discharge is linear in time
+C. To obtain a best-fit value of τ that must agree with the one read off the curve
+D. To obtain R independently of its marked value
 
 **8.** Which single change would make the capacitor discharge more slowly?
-a) Increasing the resistance R
-b) Decreasing the resistance R
-c) Decreasing the capacitance C
-d) Increasing the supply voltage V₀
+A. Decreasing the resistance R
+B. Decreasing the capacitance C
+C. Increasing the supply voltage V₀
+D. Increasing the resistance R
 
 **9.** The capacitance of a parallel-plate capacitor is increased by:
-a) increasing the separation d between the plates
-b) increasing the plate area A
-c) replacing the dielectric with one of lower permittivity
-d) increasing the voltage applied across it
+A. increasing the plate area A
+B. increasing the separation d between the plates
+C. replacing the dielectric with one of lower permittivity
+D. increasing the voltage applied across it
 
 **10.** On the ln V against t graph, the intercept on the vertical axis is used to:
-a) obtain τ, since the intercept equals −1/τ
-b) obtain R, since the intercept equals ln R
-c) check the fit, since e raised to the intercept should reproduce the measured maximum voltage V₀
-d) obtain C directly, since the intercept equals ln C
+A. obtain τ, since the intercept equals −1/τ
+B. check the fit, since e raised to the intercept should reproduce the measured maximum voltage V₀
+C. obtain R, since the intercept equals ln R
+D. obtain C directly, since the intercept equals ln C
 
 **11.** Comparing last week's charging practical with this week's discharging practical, which statement is correct?
-a) Charging is linearised as ln(V₀ − V) against t and discharging as ln V against t; both lines have gradient −1/τ
-b) Charging is linearised as ln V against t and discharging as ln(V₀ − V) against t; both lines have gradient −1/τ
-c) Both are linearised as ln V against t, but the charging line has gradient +1/τ
-d) Only the discharge can be linearised; the charging curve must be read by eye
+A. Both are linearised as ln V against t, but the charging line has gradient +1/τ
+B. Only the discharge can be linearised; the charging curve must be read by eye
+C. Charging is linearised as ln(V₀ − V) against t and discharging as ln V against t; both lines have gradient −1/τ
+D. Charging is linearised as ln V against t and discharging as ln(V₀ − V) against t; both lines have gradient −1/τ
 
 **12.** A capacitor is discharged from V₀ = 11 V with τ = 33 s. The voltmeter reading expected at t = 66 s is about:
-a) 1.49 V
-b) 4.05 V
-c) 5.50 V
-d) 0.55 V
+A. 4.05 V
+B. 5.50 V
+C. 0.55 V
+D. 1.49 V
 
-## Section B - Short answer (3)
+## Short answer
 
 **13.** Write down the discharge equation, define every symbol in it, state the formula for the time constant and say in one sentence what τ physically means for a discharging capacitor. Then give three precise differences between this week's discharging experiment and last week's charging experiment.
 
@@ -86,29 +86,29 @@ d) 0.55 V
 
 ## Answers
 
-**1. b** — *discharge law*: V(t) = V₀e^(−t/τ), the mirror of the charging law. Option a is the charging law (the "1 −" form) — the single most common substitution. Options c and d have a positive exponent, which would make the voltage grow without limit. Test by putting t = 0: discharging must give V₀, charging must give 0.
+**1. A** — *discharge law*: V(t) = V₀e^(−t/τ), the mirror of the charging law. Option B is the charging law (the "1 −" form) — the single most common substitution. Options C and D have a positive exponent, which would make the voltage grow without limit. Test by putting t = 0: discharging must give V₀, charging must give 0.
 
-**2. a** — *meaning of τ*: V(τ) = V₀e^(−1) = 0.3679V₀, so 36.8% of the maximum *remains*. Option b is the charging figure (63.2% *gained*); the two add to 100% and are constantly swapped. Option c confuses τ with the time to discharge completely (about 5τ). Option d assumes a half-life, which is 0.693τ, not τ.
+**2. B** — *meaning of τ*: V(τ) = V₀e^(−1) = 0.3679V₀, so 36.8% of the maximum *remains*. Option D is the charging figure (63.2% *gained*); the two add to 100% and are constantly swapped. Option C confuses τ with the time to discharge completely (about 5τ). Option A assumes a half-life, which is 0.693τ, not τ.
 
-**3. a** — *linearisation*: ln V(t) = ln V₀ − t/τ, of the form y = c + mx with m = −1/τ and c = ln V₀. Option b forgets that logs were taken, so it quotes τ and V₀ unlogged. Option c drops the minus sign that comes from the decaying exponential. Option d imports the *charging* linearisation ln(V₀ − V), and in any case an intercept cannot contain the variable V.
+**3. C** — *linearisation*: ln V(t) = ln V₀ − t/τ, of the form y = c + mx with m = −1/τ and c = ln V₀. Option A forgets that logs were taken, so it quotes τ and V₀ unlogged. Option B drops the minus sign that comes from the decaying exponential. Option D imports the *charging* linearisation ln(V₀ − V), and in any case an intercept cannot contain the variable V.
 
-**4. b** — *C = τ/R with units*: C = 33/(15 × 10³) = 2.2 × 10⁻³ F = 2200 μF. Option a is the answer of someone who divided by 15 instead of 15 000 — the kΩ-to-Ω slip, out by a factor of 1000. Option c is C = τR. Option d is a factor-of-10 arithmetic error.
+**4. D** — *C = τ/R with units*: C = 33/(15 × 10³) = 2.2 × 10⁻³ F = 2200 μF. Option C is the answer of someone who divided by 15 instead of 15 000 — the kΩ-to-Ω slip, out by a factor of 1000. Option A is C = τR. Option B is a factor-of-10 arithmetic error.
 
-**5. c** — *procedure and its order*: the capacitor is first charged with the key closed until the voltmeter reads approximately the supply voltage; *opening* the key starts the discharge, and that instant is t = 0, where the voltmeter reading is maximum. Options a and b describe the charging phase of Week 6. Option d would make every recorded time short by one full time constant.
+**5. A** — *procedure and its order*: the capacitor is first charged with the key closed until the voltmeter reads approximately the supply voltage; *opening* the key starts the discharge, and that instant is t = 0, where the voltmeter reading is maximum. Options B and C describe the charging phase of Week 6. Option D would start the clock a full time constant late, so every recorded time would be short by τ.
 
-**6. a** — *voltmeter loading*: the meter is in parallel with the capacitor, so charge leaks away through it as well as through R. The effective resistance is R∥R_v, which is smaller than R, so the decay is faster and the measured τ = R_eff C is too small — and hence C = τ/R comes out too small too. Option b has the meter in series, which is where an ammeter goes. Option c is the ideal-meter assumption, which is exactly what this error is about. Option d invents an emf a voltmeter does not have.
+**6. B** — *voltmeter loading*: the meter is in parallel with the capacitor, so charge leaks away through it as well as through R. The effective resistance is R∥R_v, which is smaller than R, so the decay is faster and the measured τ = R_eff C is too small — and hence C = τ/R comes out too small too. Option A has the meter in series, which is where an ammeter goes. Option C is the ideal-meter assumption, which is exactly what this error is about. Option D invents an emf a voltmeter does not have.
 
-**7. d** — *why two graphs*: reading 0.368V₀ off a hand-drawn curve uses one point and the eye; the log plot uses every reading through a best-fit straight line. The deck's own instruction is that the two values "have to be equal", so the comparison is an internal consistency check. Option b is the opposite of the truth — the decay is exponential, which is precisely why logs are taken. Option c confuses which quantity is known and which is deduced: R is known and C is deduced.
+**7. C** — *why two graphs*: reading 0.368V₀ off a hand-drawn curve uses one point and the eye; the log plot uses every reading through a best-fit straight line. The deck's own instruction is that the two values "have to be equal", so the comparison is an internal consistency check. Option A is false — the sheet logs V against t, and the first graph is drawn straight from it. Option B is the opposite of the truth: the decay is exponential, which is precisely why logs are taken. Option D confuses which quantity is known and which is deduced — R is known and C is deduced.
 
-**8. a** — *τ = RC controls the rate*: increasing R (or C) increases τ, and a larger τ means a slower discharge. Options b and c both decrease τ and speed the discharge up. Option d encodes the belief that a bigger starting voltage takes longer to drain — but τ is fixed by R and C alone, and the *fraction* remaining after any given time is unchanged by V₀.
+**8. D** — *τ = RC controls the rate*: increasing R (or C) increases τ, and a larger τ means a slower discharge. Options A and B both decrease τ and speed the discharge up. Option C encodes the belief that a bigger starting voltage takes longer to drain — but τ is fixed by R and C alone, and the *fraction* remaining after any given time is unchanged by V₀.
 
-**9. b** — *C = εA/d*: capacitance rises with plate area and permittivity and falls with separation. Option a increases d and so reduces C. Option c reduces ε and so reduces C. Option d confuses Q = CV with the definition of C: raising V raises the stored charge, not the capacitance — a capacitor is a device, capacitance is a fixed property of that device.
+**9. A** — *C = εA/d*: capacitance rises with plate area and permittivity and falls with separation. Option B increases d and so reduces C. Option C reduces ε and so reduces C. Option D confuses Q = CV with the definition of C: raising V raises the stored charge, not the capacitance — a capacitor is a device, capacitance is a fixed property of that device.
 
-**10. c** — *intercept of the log plot*: the intercept is ln V₀, so exponentiating it should return the measured maximum voltage; agreement confirms the fit and the value of V₀ used. Option a confuses intercept with gradient (the gradient is −1/τ). Options b and d put quantities in the intercept that simply are not in the equation ln V = ln V₀ − t/τ.
+**10. B** — *intercept of the log plot*: the intercept is ln V₀, so exponentiating it should return the measured maximum voltage; agreement confirms the fit and the value of V₀ used. Option A confuses intercept with gradient (the gradient is −1/τ). Options C and D put quantities in the intercept that simply are not in the equation ln V = ln V₀ − t/τ.
 
-**11. a** — *contrasting the two linearisations*: charging is V = V₀(1 − e^(−t/τ)), so V₀ − V = V₀e^(−t/τ) and one must plot ln(V₀ − V); discharging is already a pure exponential, so ln V is plotted directly. Both give gradient −1/τ and intercept ln V₀ — that is the point of the comparison. Option b swaps them. Option c would need a growing exponential. Option d is false: both linearise.
+**11. C** — *contrasting the two linearisations*: charging is V = V₀(1 − e^(−t/τ)), so V₀ − V = V₀e^(−t/τ) and one must plot ln(V₀ − V); discharging is already a pure exponential, so ln V is plotted directly. Both give gradient −1/τ and intercept ln V₀ — that is the point of the comparison. Option D swaps them. Option A would need a growing exponential. Option B is false: both linearise.
 
-**12. a** — *two time constants*: t = 66 s = 2τ, so V = 11 × e⁻² = 11 × 0.135 = 1.49 V, i.e. 13.5% remaining. Option b is the 1τ value (0.368 × 11 = 4.05 V) — reading the table one column too early. Option c halves the voltage, treating τ as a half-life. Option d applies 5% (the 3τ figure).
+**12. D** — *two time constants*: t = 66 s = 2τ, so V = 11 × e⁻² = 11 × 0.135 = 1.49 V, i.e. 13.5% remaining. Option A is the 1τ value (0.368 × 11 = 4.05 V) — reading the table one column too early. Option B halves the voltage, treating τ as a half-life. Option C applies 5% (the 3τ figure).
 
 **13.** *Discharge law, τ, and the contrast with charging*. **V(t) = V₀e^(−t/τ)**, where V(t) is the voltage across the capacitor at time t, V₀ the maximum voltage on the capacitor at the instant the switch key is opened (approximately the supply voltage), t the time since that instant, and τ the time constant. **τ = RC**, with R in ohms, C in farads and τ in seconds. Physically, **τ is the time for the capacitor voltage to fall to 0.3679 (36.8%) of its maximum value**. Differences from Week 6 (any three): the equation has no "1 −" term, so **at t = 0 the voltage is maximum rather than zero** and the curve **falls to an asymptote of zero rather than rising to V₀**; **timing begins when the switch key is opened**, after the capacitor has already been charged to its maximum, rather than when the key is closed; **at t = τ the reading is 36.8% of V₀, not 63.2%**; and the **linearised plot is ln V against t**, whereas charging requires ln(V₀ − V) against t. Everything downstream — τ = RC, C = τ/R, the percentage error, the apparatus and the voltmeter in parallel across the capacitor — is unchanged.
 
