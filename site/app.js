@@ -99,6 +99,7 @@ var GATE = "checking";   /* checking | locked | open | setup */
 var PWBUSY = false, PWERR = null;
 var CONFIRMSWITCH = false;
 var LMS = null;          /* what the LMS holds, by course and week */
+var SEL = null;          /* {text, rect} while something is highlighted */
 
 var EXAM = null;         /* course index */
 var EXAMCACHE = {};      /* course -> paper json */
@@ -420,6 +421,11 @@ function topicBlock(parent, text, cls){
   parent.appendChild(b);
 }
 var FLAME = '<svg width="13" height="15" viewBox="0 0 13 15" fill="currentColor" aria-hidden="true"><path d="M6.6 0S7.4 2.4 5.6 4.3C3.9 6.1 1 7.3 1 10.1A5.5 5.5 0 0 0 6.5 15 5.5 5.5 0 0 0 12 10.1c0-2.6-1.6-3.8-2.4-5.5-.3 1-.9 1.6-1.6 2 .6-2.4-.5-5-1.4-6.6Z"/></svg>';
+
+var QMARK_SM = '<svg width="13" height="13" viewBox="0 0 64 64" fill="none" aria-hidden="true">'
+  + '<path d="M20.5 24.5A11.5 11.5 0 1 1 32 36v5.5" stroke="currentColor" stroke-width="7" '
+  + 'stroke-linecap="round" stroke-linejoin="round"/>'
+  + '<circle cx="32" cy="50.5" r="4" fill="currentColor"/></svg>';
 
 var COG = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" aria-hidden="true"><path d="M 8.00 2.85 L 8.69 2.90 L 9.66 1.10 L 11.71 1.95 L 11.12 3.91 L 11.64 4.36 L 12.09 4.88 L 14.05 4.29 L 14.90 6.34 L 13.10 7.31 L 13.15 8.00 L 13.10 8.69 L 14.90 9.66 L 14.05 11.71 L 12.09 11.12 L 11.64 11.64 L 11.12 12.09 L 11.71 14.05 L 9.66 14.90 L 8.69 13.10 L 8.00 13.15 L 7.31 13.10 L 6.34 14.90 L 4.29 14.05 L 4.88 12.09 L 4.36 11.64 L 3.91 11.12 L 1.95 11.71 L 1.10 9.66 L 2.90 8.69 L 2.85 8.00 L 2.90 7.31 L 1.10 6.34 L 1.95 4.29 L 3.91 4.88 L 4.36 4.36 L 4.88 3.91 L 4.29 1.95 L 6.34 1.10 L 7.31 2.90 Z"/><circle cx="8" cy="8" r="2.55"/></svg>';
 
@@ -838,10 +844,85 @@ function whyFor_concept(chk, concept){
   if(!chk) return [];
   return chk.questions.filter(function(q){ return (q.concept||"") === concept; });
 }
-function openBuddy(view, concept){
+/* ---------- highlight anything, ask about it ----------
+   The exam guides run to forty-odd pages and the weekly summaries to several thousand
+   words. Reading those on a phone, the useful question is almost always about the
+   paragraph under your thumb — so selecting it offers to ask, rather than making you
+   retype it into a box. */
+
+var SELMIN = 3, SELMAX = 1800;
+
+function selText(){
+  var s;
+  try { s = window.getSelection(); } catch(e){ return null; }
+  if(!s || s.isCollapsed || !s.rangeCount) return null;
+  /* Never hijack a selection inside something the person is typing in. */
+  var n = s.anchorNode;
+  while(n && n !== document.body){
+    if(n.nodeType === 1){
+      var tag = n.tagName;
+      if(tag === "TEXTAREA" || tag === "INPUT" || n.isContentEditable) return null;
+    }
+    n = n.parentNode;
+  }
+  var t = String(s.toString()).replace(/\s+/g, " ").trim();
+  if(t.length < SELMIN) return null;
+  var r;
+  try { r = s.getRangeAt(0).getBoundingClientRect(); } catch(e){ return null; }
+  if(!r || (!r.width && !r.height)) return null;
+  return { text: t.slice(0, SELMAX), truncated: t.length > SELMAX, rect: r };
+}
+
+function clearSelPill(){
+  var old = document.getElementById("selpill");
+  if(old) old.remove();
+  SEL = null;
+}
+
+function showSelPill(){
+  var got = selText();
+  var old = document.getElementById("selpill");
+  if(!got){ if(old) old.remove(); SEL = null; return; }
+  SEL = got;
+
+  var b = old || el("button","selpill");
+  b.id = "selpill";
+  b.innerHTML = '<span class="sq">' + QMARK_SM + '</span><span>Ask about this</span>';
+  b.onmousedown = function(e){ e.preventDefault(); };   /* keep the selection alive */
+  b.onclick = function(e){
+    e.preventDefault(); e.stopPropagation();
+    var quote = SEL ? SEL.text : "";
+    clearSelPill();
+    try { window.getSelection().removeAllRanges(); } catch(err){}
+    openBuddy("ask", null, quote);
+  };
+  if(!old) document.body.appendChild(b);
+
+  /* Sit above the selection where there is room, below it otherwise, and never off
+     the side of a phone. */
+  var r = got.rect, w = b.offsetWidth || 150, h = b.offsetHeight || 36;
+  var top = r.top - h - 9;
+  if(top < 8) top = Math.min(r.bottom + 9, window.innerHeight - h - 8);
+  var left = r.left + r.width / 2 - w / 2;
+  left = Math.max(8, Math.min(left, window.innerWidth - w - 8));
+  b.style.top = Math.round(top) + "px";
+  b.style.left = Math.round(left) + "px";
+}
+
+var SELTIMER = null;
+function onSelChange(){
+  clearTimeout(SELTIMER);
+  SELTIMER = setTimeout(showSelPill, 180);   /* wait for the drag to settle */
+}
+document.addEventListener("selectionchange", onSelChange);
+document.addEventListener("scroll", function(){ if(SEL) showSelPill(); }, true);
+window.addEventListener("resize", function(){ if(SEL) showSelPill(); });
+
+function openBuddy(view, concept, quote){
   var c = buddyContext();
   var qs = concept ? whyFor_concept(c.chk, concept) : [];
-  BUDDY = {view: view || "home", concept: concept || null, qs: qs, asking:false, answer:null, searches:null, err:null, text:""};
+  BUDDY = {view: view || "home", concept: concept || null, qs: qs, quote: quote || null,
+           asking:false, answer:null, searches:null, err:null, text:""};
   render();
 }
 function loadSummary(w, course){
@@ -858,9 +939,13 @@ function askBuddy(){
   fetch("/api/ask", {
     method:"POST", headers:{"Content-Type":"application/json"},
     body: JSON.stringify({
-      question: BUDDY.text, course: c.course, week: c.w,
+      question: BUDDY.text,
+      /* Reading a guide means the question is about THAT course, not tonight's. */
+      course: (EXVIEW && EXVIEW.course) ? EXVIEW.course : c.course,
+      week: c.w,
       topic: c.chk ? c.chk.topic : "",
       who: meName(),
+      selection: BUDDY.quote || "",
       /* Only send what he got wrong when he opened this FROM a missed concept.
          Sending it on a free question made the model answer the miss instead of
          the question, and open by grading working it cannot see. */
@@ -937,10 +1022,32 @@ function buddyPanel(root){
     body.appendChild(br);
   }
   else if(BUDDY.view === "ask"){
-    body.appendChild(el("div","lbl","Ask"));
-    body.appendChild(el("p","muted","Your question goes out with tonight's topic, your lecturer's own summary, and what you got wrong — so the answer is about this course, not the subject in general."));
+    body.appendChild(el("div","lbl", BUDDY.quote ? "About the highlighted passage" : "Ask"));
+
+    if(BUDDY.quote){
+      var qb = el("div","quote");
+      qb.appendChild(el("div","qtext", esc(BUDDY.quote.slice(0, 420) + (BUDDY.quote.length > 420 ? "…" : ""))));
+      var qx = btn("qdrop","Drop it", function(){ BUDDY.quote = null; render(); });
+      qb.appendChild(qx);
+      body.appendChild(qb);
+
+      /* The three questions worth asking about a passage, so it is one tap rather
+         than a typing job on a phone at 23:00. */
+      var quick = el("div","row qrow");
+      [["Explain this", "Explain this passage."],
+       ["Why is it true?", "Why is this true? Show me the reasoning."],
+       ["Give an example", "Give me one worked example of this."]
+      ].forEach(function(q){
+        quick.appendChild(btn("chip qchip", q[0], function(){ BUDDY.text = q[1]; askBuddy(); }));
+      });
+      body.appendChild(quick);
+    } else {
+      body.appendChild(el("p","muted","Your question goes out with tonight's topic, your lecturer's own summary, and what you got wrong — so the answer is about this course, not the subject in general."));
+    }
+
     var ta = el("textarea");
-    ta.placeholder = BUDDY.concept ? "Why is " + BUDDY.concept + " actually true?" : "Ask anything about tonight's session…";
+    ta.placeholder = BUDDY.quote ? "…or ask your own question about it"
+                   : (BUDDY.concept ? "Why is " + BUDDY.concept + " actually true?" : "Ask anything about tonight's session…");
     ta.value = BUDDY.text || "";
     ta.oninput = function(){ BUDDY.text = ta.value; };
     body.appendChild(ta);

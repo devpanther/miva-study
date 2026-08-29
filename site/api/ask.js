@@ -137,6 +137,9 @@ export default async function handler(req, res) {
   /* Two people share this site. Baking one name into the prompt meant the other was
      addressed as the first, so the name comes from whoever is signed in. */
   const who = String(body.who || "").replace(/[^\p{L}\p{N} '-]/gu, "").slice(0, 24).trim();
+  /* A passage they highlighted in a summary or a guide. When present it is the subject
+     of the question, and the question is usually "explain this". */
+  const selection = String(body.selection || "").slice(0, 2000).trim();
 
   const summary = course ? await courseSummary(week, course) : "";
 
@@ -145,6 +148,7 @@ export default async function handler(req, res) {
     topic ? "WHAT THIS SESSION COVERS:\n" + topic : "",
     missed.length ? "CONCEPTS THEY GOT WRONG TONIGHT:\n- " + missed.join("\n- ") : "",
     asked ? "THE QUESTION THEY MISSED:\n" + asked + (chose ? "\nThey answered: " + chose : "") + (right ? "\nCorrect: " + right : "") : "",
+    selection ? "THE PASSAGE THEY HIGHLIGHTED — this is what the question is about:\n\"\"\"\n" + selection + "\n\"\"\"" : "",
     summary ? "THE LECTURER'S OWN MATERIAL FOR THIS WEEK:\n" + summary : ""
   ].filter(Boolean).join("\n\n");
 
@@ -170,6 +174,9 @@ export default async function handler(req, res) {
     "5. Maths in plain Unicode (∫ √ ≤ × ⁻¹ ₀ π θ Δ). Never LaTeX, never dollar signs.",
     "6. Never invent a video, a page number, a quotation, or a worked example and attribute it to the lecturer.",
     "7. If the course material is wrong, say so plainly and teach the correct version.",
+    selection
+      ? "They highlighted a passage from their course material and are asking about it. Answer about THAT passage specifically — not the surrounding topic. If the passage is a definition, say what it rules in and what it rules out. If it is a formula, say what each symbol is and when it does not apply. If it is a worked step, say why that step is legal. If the passage itself is wrong or garbled, say so."
+      : "",
     mode === "missed"
       ? "8. They got the question below wrong and are asking about it. Name the specific thing that separates the right answer from the one they chose. One line at the end on what they would need to be able to say out loud to have understood it."
       : "8. Do not mention their score, what they got wrong, or anything they did not ask about.",
