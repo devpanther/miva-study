@@ -85,6 +85,7 @@ var GUIDECACHE = {};     /* course -> markdown */
 var EXVIEW = null;       /* {course, mode:"guide"|"paper"} */
 var EXQUIZ = null;       /* an in-progress mock */
 var EXLS = "miva_exam_v1";
+var QLS = "miva_quiz_v1";
 
 /* ---------- state ---------- */
 function blankState(){
@@ -201,7 +202,7 @@ function defaultWeek(){
   var start = (cal >= 1 && cal <= 12) ? cal : 1;
   if(!ME) return start;
   for(var w = start; w <= 12; w++){
-    if(weekTally(ME, w).done < 6) return w;
+    if(deepDone(ME, w) < 6) return w;
   }
   return 12;
 }
@@ -254,8 +255,25 @@ function claimSlot(name){
 }
 
 /* ---------- scores ---------- */
-function key(person, w, day){ return person+"|w"+w+"|"+day; }
-function getScore(person, w, day){ return S.scores[key(person,w,day)] || null; }
+/* Deep-hour keys keep their original shape so nothing already logged moves.
+   The fast hour gets a "|f" suffix. */
+function key(person, w, day, slot){ return person+"|w"+w+"|"+day+(slot==="fast"?"|f":""); }
+function getScore(person, w, day, slot){ return S.scores[key(person,w,day,slot)] || null; }
+function checkFor(wd, day, slot){
+  if(!wd || !wd.checks) return null;
+  return wd.checks.filter(function(c){
+    return c.day === day && (c.slot || "deep") === (slot || "deep");
+  })[0] || null;
+}
+/* Every scoreable session in a week, deep first then fast where one exists. */
+function slotsFor(w){
+  var wd = weekData(w), out = [];
+  GRID.forEach(function(d){
+    out.push({day:d.day, slot:"deep", course:d.deep});
+    if(checkFor(wd, d.day, "fast")) out.push({day:d.day, slot:"fast", course:d.fast});
+  });
+  return out;
+}
 function scoreClass(s){
   if(!s) return "";
   var r = s.score / s.max;
@@ -287,19 +305,26 @@ function totalMarks(){
   return t;
 }
 function weekTally(person, w){
-  var got=0, max=0, done=0;
-  GRID.forEach(function(d){
-    var s = getScore(person, w, d.day);
+  var got=0, max=0, done=0, slots = slotsFor(w);
+  slots.forEach(function(x){
+    var s = getScore(person, w, x.day, x.slot);
     if(s){ got += s.score; max += s.max; done++; }
   });
-  return {got:got, max:max, done:done};
+  return {got:got, max:max, done:done, of:slots.length};
+}
+/* The deep hours are the spine: the week advances on those six, not on the
+   fast-hour extras, so a skipped 3-minute quiz never traps you on a week. */
+function deepDone(person, w){
+  var n = 0;
+  GRID.forEach(function(d){ if(getScore(person, w, d.day)) n++; });
+  return n;
 }
 function lowestFor(person, w){
   var out = [];
-  for(var i=0;i<GRID.length;i++){
-    var s = getScore(person, w, GRID[i].day);
-    if(s) out.push({day:GRID[i].day, course:GRID[i].deep, ratio:s.score/s.max, s:s});
-  }
+  slotsFor(w).forEach(function(x){
+    var s = getScore(person, w, x.day, x.slot);
+    if(s) out.push({day:x.day, slot:x.slot, course:x.course, ratio:s.score/s.max, s:s});
+  });
   out.sort(function(a,b){ return a.ratio - b.ratio; });
   return out;
 }
@@ -323,8 +348,7 @@ function sundayTopics(){
 }
 function topicName(pick, w){
   if(!pick) return null;
-  var wd = weekData(w); if(!wd || !wd.checks) return NAMES[pick.course]+" — "+pick.day+" session";
-  var c = wd.checks.filter(function(x){ return x.day===pick.day; })[0];
+  var c = checkFor(weekData(w), pick.day, pick.slot);
   return c && c.topic ? c.topic : NAMES[pick.course]+" — "+pick.day+" session";
 }
 function whyFor(pick, w){
@@ -612,7 +636,7 @@ function statsStrip(root){
   g.appendChild(s1);
 
   var s2 = el("div","stat week");
-  s2.innerHTML = '<div class="v">'+tal.done+'<span style="font-size:15px;color:var(--ink3)">/6</span></div><div class="k">week '+w+'</div>';
+  s2.innerHTML = '<div class="v">'+tal.done+'<span style="font-size:15px;color:var(--ink3)">/'+(tal.of||6)+'</span></div><div class="k">week '+w+'</div>';
   g.appendChild(s2);
 
   var s3 = el("div","stat marks");
@@ -622,13 +646,21 @@ function statsStrip(root){
 
   var pc = el("div","card");
   pc.appendChild(el("div","lbl","This week"));
-  var pips = el("div","pips");
-  GRID.forEach(function(d,i){
-    var s = getScore(ME, w, d.day);
-    var cls = "pip " + (s ? scoreClass(s) : "") + (i===di ? " today" : "");
-    pips.appendChild(el("div", cls, d.day.charAt(0)));
+  var hasFast = slotsFor(w).some(function(x){ return x.slot === "fast"; });
+  ["deep","fast"].forEach(function(slot){
+    if(slot === "fast" && !hasFast) return;
+    var line = el("div","piprow");
+    line.appendChild(el("span","piplbl", slot));
+    var pips = el("div","pips");
+    GRID.forEach(function(d,i){
+      var sc = getScore(ME, w, d.day, slot);
+      var has = slot === "deep" || checkFor(weekData(w), d.day, "fast");
+      var cls = "pip " + (sc ? scoreClass(sc) : (has ? "" : "none")) + (i===di ? " today" : "");
+      pips.appendChild(el("div", cls, d.day.charAt(0)));
+    });
+    line.appendChild(pips);
+    pc.appendChild(line);
   });
-  pc.appendChild(pips);
 
   if(S.people.length > 1){
     var duel = el("div","duel");
@@ -702,29 +734,48 @@ function weekGrid(root){
       var o = getScore(p.id,w,d.day);
       if(o) foot.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max));
     });
-    foot.appendChild(el("span","go", mine ? "retake →" : (hasCheck ? chk.questions.length+" questions →" : "log a score →")));
+    var dprog = hasCheck ? quizProgress(w, d.day, "deep") : 0;
+    foot.appendChild(el("span","go", mine ? "retake →"
+      : (dprog ? "resume · "+dprog+"/"+chk.questions.length+" →"
+      : (hasCheck ? chk.questions.length+" questions →" : "log a score →"))));
     dc.appendChild(foot);
     dc.onclick = function(){ if(hasCheck) startQuiz(d.day); else manualScore(d.day); };
     r.appendChild(dc);
 
-    /* fast hour - nothing to score, so tapping just opens the brief */
+    /* fast hour - its own short check when the pack has one */
+    var fchk = checkFor(wd, d.day, "fast");
+    var fmine = getScore(ME, w, d.day, "fast");
     var fc = el("div","cell f"+(i===di?" today":""));
     var label = (d.fast === "REVIEW" || d.fast === "CATCHUP") ? "no video · 1×" : "fast · 1.5–1.75×";
     fc.innerHTML = '<div class="ce">'+label+'</div>'
       + '<div class="cn">'+esc(NAMES[d.fast])+'</div>'
-      + '<div class="ct">'+esc(ft||d.fn)+'</div>';
-    var full = String(ft||d.fn||"");
-    if(full.length > 90){
-      var hint = el("div","cf");
-      hint.appendChild(el("span","go dim","read the brief"));
-      fc.appendChild(hint);
-      fc.onclick = function(){
-        var body = fc.querySelector(".ct");
-        var open = body.classList.toggle("open");
-        hint.querySelector(".go").textContent = open ? "show less" : "read the brief";
-      };
+      + '<div class="ct">'+esc((fchk&&fchk.topic)||ft||d.fn)+'</div>';
+    if(fchk && fchk.questions && fchk.questions.length){
+      var ff = el("div","cf");
+      if(fmine) ff.appendChild(el("span","sc "+scoreClass(fmine), "you "+fmine.score+"/"+fmine.max));
+      others().forEach(function(p){
+        var o = getScore(p.id, w, d.day, "fast");
+        if(o) ff.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max));
+      });
+      var fprog = quizProgress(w, d.day, "fast");
+      ff.appendChild(el("span","go fast", fmine ? "retake →"
+        : (fprog ? "resume · "+fprog+"/"+fchk.questions.length+" →" : fchk.questions.length+" questions →")));
+      fc.appendChild(ff);
+      fc.onclick = function(){ startQuiz(d.day, "fast"); };
     } else {
-      fc.classList.add("static");
+      var full = String((fchk&&fchk.topic)||ft||d.fn||"");
+      if(full.length > 90){
+        var hint = el("div","cf");
+        hint.appendChild(el("span","go dim","read the brief"));
+        fc.appendChild(hint);
+        fc.onclick = function(){
+          var body = fc.querySelector(".ct");
+          var open = body.classList.toggle("open");
+          hint.querySelector(".go").textContent = open ? "show less" : "read the brief";
+        };
+      } else {
+        fc.classList.add("static");
+      }
     }
     r.appendChild(fc);
     g.appendChild(r);
@@ -733,7 +784,7 @@ function weekGrid(root){
 
   var legend = el("p","muted");
   legend.style.cssText = "margin:2px 2px 0;font-size:13px";
-  legend.innerHTML = "Left is the <b>deep hour</b> — tap it to take that night's check. Right is the <b>fast hour</b>: watch at speed, quiz, forum, done. It isn't scored, so there is nothing to open.";
+  legend.innerHTML = "Left is the <b>deep hour</b>, an hour at 1× with a twelve-question check. Right is the <b>fast hour</b> at 1.5–1.75× with a short one. Tap either to sit it.";
   root.appendChild(legend);
 
   if(!wd){
@@ -903,9 +954,22 @@ function viewTonight(root){
   c2.appendChild(el("div","lbl","22:00 – 23:00 · fast hour · 1.5–1.75×"));
   c2.appendChild(el("h2",null,esc(NAMES[g.fast])));
   topicBlock(c2, fastTopic || g.fn, "muted");
-  if(g.fast==="REVIEW") c2.appendChild(el("p","muted","Read back this week's summaries, then look at your six scores. The lowest one is your Sunday topic."));
+  if(g.fast==="REVIEW") c2.appendChild(el("p","muted","Read back this week's summaries, then look at your scores. The lowest one is your Sunday topic."));
   else if(g.fast==="CATCHUP") c2.appendChild(el("p","muted","Last week's question set, sat cold. Or whatever you missed this week."));
   else c2.appendChild(el("p","muted","Watch at speed, read the PDF, take the quiz, post in the forum, close the laptop."));
+
+  var fchk = checkFor(wd, g.day, "fast");
+  var fsc = getScore(ME, w, g.day, "fast");
+  var row2 = el("div","row");
+  if(fsc){
+    row2.appendChild(el("span","sc "+scoreClass(fsc), "Scored "+fsc.score+"/"+fsc.max));
+    row2.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day, "fast"); }));
+    c2.appendChild(row2);
+  } else if(fchk && fchk.questions && fchk.questions.length){
+    row2.appendChild(btn("act","Quick check · "+fchk.questions.length+" questions", function(){ startQuiz(g.day, "fast"); }));
+    row2.appendChild(el("span","muted","about three minutes"));
+    c2.appendChild(row2);
+  }
   root.appendChild(c2);
 
   var c3 = el("div","card");
@@ -952,6 +1016,9 @@ function viewSunday(root){
     }
     if(l.bumped) c.appendChild(el("p","muted","Lowest score was in the same course as the other one, so this is the next lowest elsewhere."));
     c.appendChild(el("h3",null, esc(topicName(pick, w))));
+    if(pick.slot === "fast"){
+      c.appendChild(el("p","muted","This one is a recall course, so don't teach it as a concept — <b>quiz each other on the lists</b> until you can both produce them cold. Producing beats recognising."));
+    }
     c.appendChild(el("span","sc "+scoreClass(pick.s), NAMES[pick.course]+" · "+pick.s.score+"/"+pick.s.max));
     if(pick.s.wrong && pick.s.wrong.length){
       c.appendChild(el("p","muted","<br>Missed: "+pick.s.wrong.map(esc).join(" · ")));
@@ -983,46 +1050,50 @@ function viewSunday(root){
 
 /* ---------- progress ---------- */
 function viewProgress(root){
-  var ppl = S.people;
-  var rows = [];
+  var ppl = S.people, rows = [];
   for(var w=1; w<=12; w++){
-    var any=false, r={w:w, cells:[]};
+    var any = false, r = {w:w, cells:[]};
     GRID.forEach(function(d){
-      var got = ppl.map(function(p){ return {p:p, s:getScore(p.id,w,d.day)}; });
-      if(got.some(function(x){ return x.s; })) any=true;
-      r.cells.push(got);
+      var cell = [];
+      ["deep","fast"].forEach(function(slot){
+        ppl.forEach(function(p){
+          var s = getScore(p.id, w, d.day, slot);
+          if(s){ cell.push({p:p, s:s, slot:slot}); any = true; }
+        });
+      });
+      r.cells.push(cell);
     });
     if(any) rows.push(r);
   }
-  if(!rows.length){ root.appendChild(el("div","empty","<b>Nothing logged yet</b>Scores appear here as you take the nightly checks.")); return; }
+  if(!rows.length){ root.appendChild(el("div","empty","<b>Nothing logged yet</b>Scores appear here as you take the checks.")); return; }
 
   var t = el("div","tw");
   var html = '<table><thead><tr><th>Week</th>';
-  GRID.forEach(function(d){ html += '<th>'+d.day+'<br><span style="font-weight:400;text-transform:none;letter-spacing:0">'+NAMES[d.deep]+'</span></th>'; });
+  GRID.forEach(function(d){
+    html += '<th>'+d.day+'<br><span style="font-weight:400;text-transform:none;letter-spacing:0">'
+         + NAMES[d.deep]+' · '+NAMES[d.fast]+'</span></th>';
+  });
   html += '<th>Avg</th></tr></thead><tbody>';
   rows.forEach(function(r){
     html += '<tr><td class="k">W'+r.w+'</td>';
-    var tot=0,cnt=0;
-    r.cells.forEach(function(got){
-      var bits=[];
-      got.forEach(function(x){
-        if(x.s){
-          bits.push('<span class="sc '+scoreClass(x.s)+'">'+esc(x.p.name.charAt(0).toUpperCase())+' '+x.s.score+'</span>');
-          tot+=x.s.score/x.s.max; cnt++;
-        }
+    var tot = 0, cnt = 0;
+    r.cells.forEach(function(cell){
+      var bits = cell.map(function(x){
+        return '<span class="sc '+scoreClass(x.s)+(x.slot==="fast"?' sm':'')+'">'
+             + esc(x.p.name.charAt(0).toUpperCase())+' '+x.s.score+'</span>';
       });
+      cell.forEach(function(x){ tot += x.s.score/x.s.max; cnt++; });
       html += '<td>'+(bits.length?bits.join(" "):'<span class="muted">–</span>')+'</td>';
     });
     html += '<td class="k">'+(cnt?Math.round(tot/cnt*100)+"%":"–")+'</td></tr>';
   });
-  html += '</tbody></table>';
-  t.innerHTML = html;
+  t.innerHTML = html + '</tbody></table>';
   root.appendChild(t);
 
   var n = el("div","card");
   n.appendChild(el("div","lbl","Reading this"));
   var legend = ppl.map(function(p){ return esc(p.name.charAt(0).toUpperCase())+" is "+esc(p.name); }).join(", ");
-  n.appendChild(el("p","muted", legend+", out of 12. A column that stays red across weeks is a course to raise with a tutor, not something another Sunday will fix on its own."));
+  n.appendChild(el("p","muted", legend+". Each cell holds that day's deep-hour score and, in the paler pill, the fast-hour one. A column that stays red across weeks is a course to raise with a tutor, not something another Sunday will fix."));
   root.appendChild(n);
 }
 
@@ -1309,18 +1380,46 @@ function viewExamResult(root){
 }
 
 /* ---------- quiz ---------- */
-function startQuiz(day){
-  var w = wk(), wd = weekData(w);
-  var chk = wd && wd.checks ? (wd.checks.filter(function(x){return x.day===day;})[0]||null) : null;
-  if(!chk || !chk.questions || !chk.questions.length){ manualScore(day); return; }
-  QUIZ = {day:day, chk:chk, answers:{}, marks:{}, submitted:false, idx:0, celebrated:false};
+/* A check is twelve questions and a quarter of an hour. If the phone sleeps or the
+   tab is dropped, the answers so far are still here when you come back. */
+function quizKey(w, day, slot){ return QLS+":"+w+":"+day+":"+(slot||"deep"); }
+function quizSave(){
+  if(!QUIZ) return;
+  try{ localStorage.setItem(quizKey(wk(), QUIZ.day, QUIZ.slot), JSON.stringify({
+    answers:QUIZ.answers, marks:QUIZ.marks, idx:QUIZ.idx, submitted:QUIZ.submitted, at:Date.now()
+  })); }catch(e){}
+}
+function quizRestore(w, day, slot){
+  try{ var r = localStorage.getItem(quizKey(w, day, slot)); if(r) return JSON.parse(r); }catch(e){}
+  return null;
+}
+function quizClear(w, day, slot){ try{ localStorage.removeItem(quizKey(w, day, slot)); }catch(e){} }
+function quizProgress(w, day, slot){
+  var r = quizRestore(w, day, slot);
+  if(!r || r.submitted) return 0;
+  return Object.keys(r.answers||{}).length;
+}
+function startQuiz(day, slot){
+  slot = slot || "deep";
+  var chk = checkFor(weekData(wk()), day, slot);
+  if(!chk || !chk.questions || !chk.questions.length){ manualScore(day, slot); return; }
+  var prev = quizRestore(wk(), day, slot);
+  QUIZ = {
+    day:day, slot:slot, chk:chk,
+    answers:(prev && prev.answers) || {},
+    marks:(prev && prev.marks) || {},
+    submitted:!!(prev && prev.submitted),
+    idx:(prev && typeof prev.idx === "number") ? prev.idx : 0,
+    celebrated:false
+  };
   BRIEF = false;
   TAB = "quiz"; render();
   window.scrollTo(0,0);
 }
-function manualScore(day){
-  var ex = getScore(ME, wk(), day);
-  MANUAL = {day:day, score: ex?ex.score:null, wrong: ex&&ex.wrong?ex.wrong.join(", "):""};
+function manualScore(day, slot){
+  slot = slot || "deep";
+  var ex = getScore(ME, wk(), day, slot);
+  MANUAL = {day:day, slot:slot, score: ex?ex.score:null, wrong: ex&&ex.wrong?ex.wrong.join(", "):""};
   TAB = "manual"; render();
 }
 function answered(q, i){
@@ -1362,7 +1461,8 @@ function viewQuiz(root){
   if(q.submitted){ viewResult(root, q); return; }
 
   var n = q.chk.questions.length;
-  var course = NAMES[GRID.filter(function(g){return g.day===q.day;})[0].deep];
+  var gg = GRID.filter(function(g){return g.day===q.day;})[0];
+  var course = NAMES[q.slot==="fast" ? gg.fast : gg.deep];
 
   var bar = el("div","deckbar");
   var rail = el("div","rail");
@@ -1372,7 +1472,7 @@ function viewQuiz(root){
       if(j===q.idx) cls += " at";
       var b = el("button", cls, "");
       b.title = "Question "+(j+1);
-      b.onclick = function(){ q.idx = j; render(); };
+      b.onclick = function(){ q.idx = j; quizSave(); render(); };
       rail.appendChild(b);
     })(i);
   }
@@ -1405,8 +1505,8 @@ function viewQuiz(root){
       b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span>'+esc(opt)+'</span>';
       b.onclick = function(){
         q.answers[q.idx] = oi;
-        if(q.idx < n-1){ q.idx++; render(); window.scrollTo({top:0,behavior:"smooth"}); }
-        else render();
+        if(q.idx < n-1) q.idx++;
+        quizSave(); render(); window.scrollTo({top:0,behavior:"smooth"});
       };
       opts.appendChild(b);
     });
@@ -1419,32 +1519,35 @@ function viewQuiz(root){
       q.answers[q.idx] = ta.value;
       var rb = rail.children[q.idx];
       if(rb) rb.className = (ta.value.trim() ? "done" : "") + " at";
+      quizSave();
     };
     card.appendChild(ta);
     card.appendChild(el("p","muted","<br>You mark this one yourself after you submit — the model answer is waiting."));
   }
 
   var foot = el("div","deckfoot");
-  if(q.idx > 0) foot.appendChild(btn("act ghost","Back", function(){ q.idx--; render(); window.scrollTo(0,0); }));
+  if(q.idx > 0) foot.appendChild(btn("act ghost","Back", function(){ q.idx--; quizSave(); render(); window.scrollTo(0,0); }));
   foot.appendChild(el("div","spacer"));
 
   var left = unanswered(q);
   if(!left.length){
     foot.appendChild(btn("act big","Submit all "+n, function(){
-      q.submitted = true; q.idx = 0; render(); window.scrollTo(0,0);
+      q.submitted = true; q.idx = 0; quizSave(); render(); window.scrollTo(0,0);
     }));
   } else if(q.idx < n-1){
-    foot.appendChild(btn("act","Next", function(){ q.idx++; render(); window.scrollTo(0,0); }));
+    foot.appendChild(btn("act","Next", function(){ q.idx++; quizSave(); render(); window.scrollTo(0,0); }));
   } else {
     foot.appendChild(btn("act", left.length+" still blank", function(){
-      q.idx = left[0]; toast("Question "+(left[0]+1)+" is blank"); render(); window.scrollTo(0,0);
+      q.idx = left[0]; toast("Question "+(left[0]+1)+" is blank"); quizSave(); render(); window.scrollTo(0,0);
     }));
   }
   card.appendChild(foot);
   root.appendChild(card);
 
   var out = el("div","row");
-  out.appendChild(btn("act ghost","Leave without saving", function(){ QUIZ=null; TAB="tonight"; render(); }));
+  out.appendChild(btn("act ghost","Save and stop", function(){
+    quizSave(); QUIZ=null; TAB="home"; toast("Kept — pick up where you left off"); render();
+  }));
   root.appendChild(out);
 }
 
@@ -1531,8 +1634,8 @@ function viewResult(root, q){
 
     if(!isMcq){
       var sm = el("div","selfmark");
-      var y = btn(q.marks[i]===true ? "act" : "act ghost","I got this", function(){ q.marks[i]=true; render(); });
-      var nn = btn(q.marks[i]===false ? "act" : "act ghost","I missed it", function(){ q.marks[i]=false; render(); });
+      var y = btn(q.marks[i]===true ? "act" : "act ghost","I got this", function(){ q.marks[i]=true; quizSave(); render(); });
+      var nn = btn(q.marks[i]===false ? "act" : "act ghost","I missed it", function(){ q.marks[i]=false; quizSave(); render(); });
       sm.appendChild(y); sm.appendChild(nn);
       box.appendChild(sm);
     }
@@ -1543,13 +1646,15 @@ function viewResult(root, q){
   var sv = btn("act big","Save "+r.score+"/"+r.max, function(){
     var g2 = grade(q);
     if(g2.unmarked){ toast("Mark your written answers first"); return; }
-    S.scores[key(ME, wk(), q.day)] = {score:g2.score, max:g2.max, wrong:g2.wrong, at:new Date().toISOString()};
-    QUIZ=null; TAB="tonight"; save("Logged "+g2.score+"/"+g2.max);
+    S.scores[key(ME, wk(), q.day, q.slot)] = {score:g2.score, max:g2.max, wrong:g2.wrong, at:new Date().toISOString()};
+    quizClear(wk(), q.day, q.slot);
+    QUIZ=null; TAB="home"; save("Logged "+g2.score+"/"+g2.max);
   });
   if(r.unmarked) sv.setAttribute("disabled","");
   foot.appendChild(sv);
   foot.appendChild(btn("act ghost","Retake", function(){
-    QUIZ = {day:q.day, chk:q.chk, answers:{}, marks:{}, submitted:false, idx:0, celebrated:false};
+    quizClear(wk(), q.day, q.slot);
+    QUIZ = {day:q.day, slot:q.slot, chk:q.chk, answers:{}, marks:{}, submitted:false, idx:0, celebrated:false};
     render(); window.scrollTo(0,0);
   }));
   root.appendChild(foot);
@@ -1560,16 +1665,13 @@ function viewManual(root){
   if(!m){ TAB="tonight"; render(); return; }
   var g = GRID.filter(function(x){return x.day===m.day;})[0];
   var c = el("div","card deepc");
-  c.appendChild(el("div","lbl", m.day+" · "+NAMES[g.deep]+" · log a score"));
+  c.appendChild(el("div","lbl", m.day+" · "+NAMES[m.slot==="fast"?g.fast:g.deep]+" · log a score"));
   c.appendChild(el("h2",null,"How did it go?"));
   c.appendChild(el("p","muted","Fallback for a session with no generated check. Normally you'd answer the questions here and be graded."));
 
   var maxS = 12;
-  var wdm = weekData(wk());
-  if(wdm && wdm.checks){
-    var ck = wdm.checks.filter(function(x){ return x.day===m.day; })[0];
-    if(ck && ck.maxScore) maxS = ck.maxScore;
-  }
+  var ck = checkFor(weekData(wk()), m.day, m.slot);
+  if(ck && ck.maxScore) maxS = ck.maxScore;
   m.max = maxS;
   var pick = el("div","row");
   for(var i=0;i<=maxS;i++){
@@ -1593,7 +1695,7 @@ function viewManual(root){
   var r = el("div","row");
   r.appendChild(btn("act","Save", function(){
     if(m.score===null){ toast("Pick a score from 0 to "+(m.max||12)); return; }
-    S.scores[key(ME, wk(), m.day)] = {
+    S.scores[key(ME, wk(), m.day, m.slot)] = {
       score:m.score, max:(m.max||12),
       wrong: m.wrong.split(",").map(function(x){return x.trim();}).filter(Boolean),
       at:new Date().toISOString()

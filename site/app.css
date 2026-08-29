@@ -322,7 +322,16 @@ canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:80}
 .cell .cf{display:flex;gap:5px;flex-wrap:wrap;align-items:center;margin-top:9px}
 .cell .go{font-size:11.5px;font-weight:800;letter-spacing:.02em;color:var(--deep);margin-left:auto}
 .cell .go.dim{color:var(--ink3)}
-.cell.f{cursor:pointer}
+.cell.d,.cell.f{cursor:pointer}
 .cell.f:hover{border-color:var(--fast)}
 .cell.static{cursor:default}
 .cell.static:hover{border-color:var(--line)}
+
+/* ---------- deep / fast pip rows ---------- */
+.piprow{display:flex;align-items:center;gap:9px;margin-top:8px}
+.piplbl{flex:0 0 34px;font-size:9.5px;font-weight:800;letter-spacing:.09em;
+        text-transform:uppercase;color:var(--ink3)}
+.piprow .pips{margin-top:0}
+.pip.none{opacity:.4;border-style:dashed}
+.cell .go.fast{color:var(--fast)}
+.sc.sm{font-size:11px;padding:2px 7px;opacity:.85}

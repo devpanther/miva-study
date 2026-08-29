@@ -70,19 +70,38 @@ WHAT TO PRODUCE, all under packs/week-XX/
    recognises the vocabulary. No questions solvable by elimination. Every answer
    names the underlying concept, so a wrong answer says what to revisit.
 
+2c. FAST-HOUR CHECKS - checks/<Day>-<COURSE>-fast.md, four files:
+   Mon-GST_112, Tue-CSC_106, Wed-GST_122, Thu-PHY_108
+   FIVE MCQs each, no short answers. These are sat at the end of the fast hour,
+   around 23:00, and must take about three minutes. Friday and Saturday get none -
+   those hours are review and catch-up, with nothing new to test.
+   Pitch them at RECALL, not reasoning. GST_112 and GST_122 are examined almost
+   entirely on named lists, definitions, dates and theories, and producing a list
+   from memory is exactly what these should train. Ask for the item, the count,
+   the name, the year, the correct ordering. PHY_108 asks about apparatus,
+   procedure order and which quantity is plotted against which. CSC_106 asks about
+   protocol names, status codes, tag semantics and what a given snippet outputs.
+   Keep them short: a question that takes more than twenty seconds to read does
+   not belong in a three-minute check.
+   Every question still carries "concept" and "why", same as the nightly checks.
+   In week-XX.json these entries carry "slot": "fast", "maxScore": 5, and the
+   fast-hour course code. The six deep checks carry "slot": "deep" (or omit it).
+
 2b. ANSWER SPREAD - a hard check, not a judgement call
-   Before writing week-XX.json, count how many correct answers across ALL SIX
-   checks fall on option a, b, c and d. There are 48 MCQs in a week, so each
-   option should carry roughly 12.
-   REQUIRED: every option must hold at least 15% and at most 35% of the correct
-   answers (between 8 and 16 of 48). If any option is outside that band, go back
-   and rewrite questions - reorder the options so the correct one moves - until
-   it is inside. Then recount and confirm before continuing.
+   Before writing week-XX.json, count how many correct answers fall on option a,
+   b, c and d. Count the two sets SEPARATELY:
+     - the six deep checks: 48 MCQs, so each option should carry roughly 12
+     - the four fast checks: 20 MCQs, so each option should carry roughly 5
+   REQUIRED: in each set every option must hold at least 15% and at most 35% of
+   the correct answers - between 8 and 16 of the 48, and between 3 and 7 of the
+   20. If any option is outside its band, go back and rewrite questions - reorder
+   the options so the correct one moves - until it is inside. Then recount and
+   confirm before continuing.
    This is not cosmetic. If answers cluster, the check can be passed by guessing
    the popular letter, the score stops measuring understanding, and the Sunday
    topic gets picked from a meaningless number. A previous run put 42 of 48
    answers on option (a); that week had to be thrown away.
-   Report the final a/b/c/d counts in your closing message.
+   Report both sets of a/b/c/d counts in your closing message.
 
 3. WEEKLY SETS - <COURSE>-Questions.md, 12 MCQ + 3 short-answer per course.
    Sat SEVEN DAYS LATER: these test retention where the checks test
@@ -96,8 +115,10 @@ WHAT TO PRODUCE, all under packs/week-XX/
    other takes their next-lowest elsewhere.
 
 5. week-XX.json - follow data-schema.md in the repo root EXACTLY. All six days
-   Mon-Sat present, all six checks present with TWELVE questions each and
-   "maxScore": 12. Validate it parses before committing.
+   Mon-Sat present. TEN entries in "checks":
+     - six deep, "slot": "deep", TWELVE questions each, "maxScore": 12
+     - four fast, "slot": "fast", FIVE questions each, "maxScore": 5
+   Validate it parses before committing.
 
 CHECKPOINT WEEKS - additionally
   Week 5: timed mock per course covering Weeks 1-4, packs/mock-midsemester/
@@ -106,7 +127,7 @@ CHECKPOINT WEEKS - additionally
 
 COMMIT
 Commit everything to a claude/ branch and push. Use a clear message such as
-"Week 3 pack: 8 summaries, 6 checks, 8 question sets, recap, JSON".
+"Week 3 pack: 8 summaries, 10 checks, 8 question sets, recap, JSON".
 
 FINALLY
 Reply with 2-3 sentences: which week, what you produced, the two fallback recap
