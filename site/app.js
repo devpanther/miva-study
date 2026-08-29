@@ -100,6 +100,7 @@ var PWBUSY = false, PWERR = null;
 var CONFIRMSWITCH = false;
 var LMS = null;          /* what the LMS holds, by course and week */
 var SEL = null;          /* {text, rect} while something is highlighted */
+var GUIDEVIEW = null;    /* {course, week, from} while reading a week's study guide */
 
 var EXAM = null;         /* course index */
 var EXAMCACHE = {};      /* course -> paper json */
@@ -406,17 +407,50 @@ function el(tag, cls, html){
 }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
 function btn(cls, label, fn){ var b = el("button", cls, label); b.onclick = fn; return b; }
+/* Briefs are written as one long clause-chained sentence — "...the definition; why the
+   constant is forced; the power rule and why n ≠ −1; ...". Collapsed to a paragraph
+   that is a wall. The author already marked the joints with semicolons, so use them. */
+function briefParts(t){
+  var lead = t, rest = "";
+  var colon = t.search(/:\s/);
+  if(colon > 0 && colon < 140 && /;/.test(t.slice(colon))){
+    lead = t.slice(0, colon + 1);
+    rest = t.slice(colon + 1);
+  }
+  var parts = (rest || t).split(/;\s+/).map(function(x){ return x.trim(); }).filter(Boolean);
+  if(parts.length < 3) return null;
+  parts = parts.map(function(x){
+    x = x.replace(/[.;]+$/, "");
+    return x.charAt(0).toUpperCase() + x.slice(1);
+  });
+  return { lead: rest ? lead.trim() : "", parts: parts };
+}
+
 function topicBlock(parent, text, cls){
   var t = String(text||"").trim();
   if(!t) return;
+
   var p = el("p", (cls||"")+" clamp"); p.innerHTML = esc(t);
   parent.appendChild(p);
   if(t.length < 260){ p.className = cls||""; return; }
+
+  var full = null;
   var b = el("button","moreb","Read the full brief");
   b.onclick = function(){
-    var open = p.className.indexOf("clamp") === -1;
-    p.className = open ? (cls||"")+" clamp" : (cls||"");
-    b.textContent = open ? "Read the full brief" : "Show less";
+    if(full){ full.remove(); full = null; p.style.display = ""; b.textContent = "Read the full brief"; return; }
+    var split = briefParts(t);
+    full = el("div","brief");
+    if(split){
+      if(split.lead) full.appendChild(el("p", cls||"", esc(split.lead)));
+      var ul = el("ul");
+      split.parts.forEach(function(x){ ul.appendChild(el("li", null, esc(x))); });
+      full.appendChild(ul);
+    } else {
+      full.appendChild(el("p", cls||"", esc(t)));
+    }
+    p.style.display = "none";
+    parent.insertBefore(full, b);
+    b.textContent = "Show less";
   };
   parent.appendChild(b);
 }
@@ -464,8 +498,38 @@ function celebrate(){
 }
 
 /* ---------- markdown ---------- */
+/* A model that ignores the formatting rules writes "1. Input x. 2. Sum = x + y. 3. …"
+   inside one paragraph, which renders as a wall. Where a line carries three or more
+   ascending enumerators, break them onto their own lines so the list renderer below
+   picks them up. Deliberately strict: it must start at 1 and count up, so ordinary
+   prose containing "week 1." is left alone. */
+function unrunLists(src){
+  return String(src||"").split("\n").map(function(line){
+    if(line.length < 60 || /^\s*(\d+[.)]|[-*+])\s/.test(line)) return line;
+    /* An enumerator only counts when a sentence just ended before it. Without that,
+       "Average = Sum / 3. 4. Output" reads the 3 in the arithmetic as item three and
+       the sequence stops being ascending, so nothing is rescued. */
+    var re = /(?:^|[.;:!?]\s+)(\d{1,2})[.)]\s+(?=[A-Za-z(])/g, m, hits = [];
+    while((m = re.exec(line))){
+      hits.push({ n: +m[1], at: m.index + m[0].length - m[0].replace(/^[^\d]*/, "").length });
+      re.lastIndex = m.index + m[0].length - 1;
+    }
+    if(hits.length < 3) return line;
+    for(var i = 0; i < hits.length; i++) if(hits[i].n !== i + 1) return line;
+    var parts = [], prev = 0;
+    hits.forEach(function(h){
+      var chunk = line.slice(prev, h.at).trim();
+      if(chunk) parts.push(chunk);
+      prev = h.at;
+    });
+    var tail = line.slice(prev).trim();
+    if(tail) parts.push(tail);
+    return parts.join("\n");
+  }).join("\n");
+}
+
 function mdToHtml(src){
-  var lines = String(src||"").replace(/\r/g,"").split("\n");
+  var lines = unrunLists(src).replace(/\r/g,"").split("\n");
   var out = [], i = 0;
 
   function span(t){
@@ -1104,20 +1168,14 @@ function buddyPanel(root){
        so it distils into nonsense. Each question's concept names an actual idea. */
     videoRow(body, c.course, c.chk ? conceptsOf(c.chk) : "");
 
-    body.appendChild(el("div","lbl","This week's summary"));
-    var key = c.w+":"+c.course;
-    if(SUMCACHE[key] === undefined){
-      var lb = btn("act ghost","Load the summary", function(){ loadSummary(c.w, c.course); });
-      body.appendChild(lb);
-    } else if(SUMCACHE[key] === null){
-      body.appendChild(el("p","muted","Loading…"));
-    } else if(SUMCACHE[key] === "__none__"){
-      body.appendChild(el("p","muted","No summary in the repo for this one yet."));
-    } else {
-      var sm = el("div","bcard prose");
-      sm.innerHTML = mdToHtml(SUMCACHE[key]);
-      body.appendChild(sm);
-    }
+    body.appendChild(el("div","lbl","This week's study guide"));
+    body.appendChild(el("p","muted","Your lecturer's material for " + esc(NAMES[c.course]||c.course)
+      + " week " + c.w + ", written out in full. Highlight any line in it to ask about that line."));
+    var gb = el("div","row");
+    gb.appendChild(btn("act","Open the study guide", function(){
+      BUDDY = null; openGuide(c.course, c.w, "tonight");
+    }));
+    body.appendChild(gb);
   }
 
   if(BUDDY.view === "brief"){
@@ -1405,6 +1463,10 @@ function viewTonight(root){
   watchLine(c1, g.deep, w, true);
   c1.appendChild(el("p","muted","Keep this open beside the LMS. Pen in hand, phone in another room. Where there is no lecture video the PDF is the lesson, not the reference — read it properly rather than skimming."));
 
+  var gr1 = el("div","row"); gr1.style.marginTop = "6px";
+  gr1.appendChild(btn("act ghost","Study guide", function(){ openGuide(g.deep, w, "tonight"); }));
+  c1.appendChild(gr1);
+
   var sc = getScore(ME, w, g.day);
   var row1 = el("div","row");
   if(sc){
@@ -1428,6 +1490,12 @@ function viewTonight(root){
   else {
     c2.appendChild(el("p","muted","Watch at speed, read the PDF, take the quiz, post in the forum, close the laptop."));
     watchLine(c2, g.fast, w, false);
+  }
+
+  if(g.fast !== "REVIEW" && g.fast !== "CATCHUP"){
+    var gr2 = el("div","row"); gr2.style.marginTop = "6px";
+    gr2.appendChild(btn("act ghost","Study guide", function(){ openGuide(g.fast, w, "tonight"); }));
+    c2.appendChild(gr2);
   }
 
   var fchk = checkFor(wd, g.day, "fast");
@@ -1833,6 +1901,50 @@ function examGrade(){
     else missed.push(i);
   });
   return {score:score, max:q.order.length, missed:missed};
+}
+
+/* ---------- tonight's study guide ----------
+   The weekly per-course summary is a real teaching document — a thousand words for the
+   lighter courses, close to four thousand for MTH 102 — and it was reachable only from
+   inside the buddy panel behind a "Load the summary" button. For the weeks with no
+   lecture video it is the closest thing to the lesson, so it gets its own view, in the
+   same prose styling as the exam guides and highlightable the same way. */
+function viewGuide(root){
+  var g = GUIDEVIEW || {};
+  var w = g.week || wk(), course = g.course;
+  /* Landed here from a stale link with nothing to show. */
+  if(!course){ TAB = "tonight"; syncUrl(true); viewTonight(root); return; }
+
+  var head = el("div","card");
+  var r0 = el("div","row"); r0.style.marginTop = "0";
+  r0.appendChild(btn("act ghost","← Back", function(){
+    GUIDEVIEW = null; TAB = g.from || "tonight"; syncUrl(); render(); window.scrollTo(0,0);
+  }));
+  head.appendChild(r0);
+  head.appendChild(el("div","lbl","Week " + w + " · study guide"));
+  head.appendChild(el("h2",null, esc(NAMES[course] || course)));
+  head.appendChild(el("p","muted","Your lecturer's own material for the week, written out. Highlight any line to ask about it."));
+  root.appendChild(head);
+
+  var key = w + ":" + course;
+  if(SUMCACHE[key] === undefined){ loadSummary(w, course); }
+  if(SUMCACHE[key] === undefined || SUMCACHE[key] === null){
+    root.appendChild(el("div","empty","<b>Loading</b>Fetching the week's summary."));
+    return;
+  }
+  if(SUMCACHE[key] === "__none__"){
+    root.appendChild(el("div","empty","<b>Nothing written for this one yet</b>No summary in the repo for " + esc(course) + " week " + w + "."));
+    return;
+  }
+  var body = el("div","card prose");
+  body.innerHTML = mdToHtml(SUMCACHE[key]);
+  root.appendChild(body);
+}
+
+function openGuide(course, w, from){
+  GUIDEVIEW = {course: course, week: w, from: from || TAB};
+  QUIZ = null; MANUAL = null; BUDDY = null;
+  TAB = "guide"; syncUrl(); render(); window.scrollTo(0,0);
 }
 
 function viewExam(root){
@@ -2456,6 +2568,7 @@ function render(){
   else if(TAB==="sunday") viewSunday(wrap);
   else if(TAB==="progress") viewProgress(wrap);
   else if(TAB==="exam") viewExam(wrap);
+  else if(TAB==="guide") viewGuide(wrap);
   else if(TAB==="data") viewData(wrap);
   else if(TAB==="quiz") viewQuiz(wrap);
   else if(TAB==="manual") viewManual(wrap);
@@ -2476,7 +2589,7 @@ function render(){
    Transient states are deliberately NOT in the url: a quiz in progress restores from
    its own saved state, and a shared link should never drop someone into a half-finished
    paper. */
-var TABS_URL = {home:1, tonight:1, sunday:1, progress:1, exam:1, data:1, week:1};
+var TABS_URL = {home:1, tonight:1, sunday:1, progress:1, exam:1, data:1, week:1, guide:1};
 
 function readUrl(){
   var q;
@@ -2486,7 +2599,10 @@ function readUrl(){
   var w = parseInt(q.get("week"), 10);
   if(w >= 1 && w <= 12) VIEWWEEK = w;
   var c = q.get("course");
-  if(c && /^[A-Z]{3}_\d{3}$/.test(c) && TAB === "exam") EXVIEW = {course:c, mode:"guide"};
+  if(c && /^[A-Z]{3}_\d{3}$/.test(c)){
+    if(TAB === "exam")  EXVIEW = {course:c, mode:"guide"};
+    if(TAB === "guide") GUIDEVIEW = {course:c, week: (w>=1&&w<=12)?w:null, from:"tonight"};
+  }
 }
 
 function syncUrl(replace){
@@ -2495,6 +2611,8 @@ function syncUrl(replace){
     var t = (TAB === "quiz" || TAB === "manual") ? "tonight" : TAB;
     if(TABS_URL[t] && t !== "home") q.set("tab", t);
     if(VIEWWEEK) q.set("week", String(VIEWWEEK));
+    if(t === "guide" && GUIDEVIEW && GUIDEVIEW.course) q.set("course", GUIDEVIEW.course);
+    if(t === "exam" && EXVIEW && EXVIEW.course) q.set("course", EXVIEW.course);
     var s2 = q.toString();
     var next = window.location.pathname + (s2 ? "?" + s2 : "");
     if(next === window.location.pathname + window.location.search) return;

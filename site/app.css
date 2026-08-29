@@ -470,3 +470,10 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 .qrow{margin-top:2px}
 .chip.qchip{border-color:var(--deep);color:var(--deep);cursor:pointer}
 .chip.qchip:hover{background:var(--deep-bg)}
+
+/* the expanded session brief */
+.brief{margin:2px 0 6px}
+.brief p{color:var(--ink2);font-size:14px;margin:0 0 8px}
+.brief ul{margin:0;padding-left:19px;color:var(--ink2);font-size:14px;line-height:1.55}
+.brief li{margin-bottom:7px}
+.brief li::marker{color:var(--deep)}
