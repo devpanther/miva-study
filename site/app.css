@@ -449,14 +449,26 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 .muted.tight{font-size:13px;margin:2px 0 8px;line-height:1.45}
 
 /* ---------- highlight to ask ---------- */
-.selpill{position:fixed;z-index:90;display:inline-flex;align-items:center;gap:6px;
-  padding:8px 13px;border:0;border-radius:var(--r-pill);
+/* Pinned to the bottom, not to the selection: Android's own Copy / Share toolbar
+   owns the space around highlighted text and cannot be turned off. The right inset
+   clears the study-buddy button. */
+.selpill{position:fixed;z-index:90;left:16px;right:86px;bottom:18px;
+  display:flex;align-items:center;gap:8px;
+  padding:13px 16px;border:0;border-radius:var(--r-pill);
   background:var(--buddy);color:var(--buddy-ink);
-  font:800 13px/1 Nunito,sans-serif;white-space:nowrap;
+  font:800 14px/1.25 Nunito,sans-serif;text-align:left;
   box-shadow:var(--shadow-lift);
-  animation:pillin .13s cubic-bezier(.2,1.3,.4,1)}
-.selpill .sq{display:flex;opacity:.9}
-@keyframes pillin{from{transform:scale(.85);opacity:0}to{transform:none;opacity:1}}
+  animation:pillin .16s cubic-bezier(.2,1.1,.4,1)}
+.selpill .sq{display:flex;flex:none;opacity:.9}
+.selpill .sl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.selpill .sl b{font-weight:800;opacity:.85}
+@media (min-width:620px){ .selpill{left:auto;right:auto;
+  left:50%;transform:translateX(-50%);max-width:420px} }
+@keyframes pillin{from{transform:translateY(8px);opacity:0}to{transform:none;opacity:1}}
+@media (min-width:620px){
+  @keyframes pillin{from{transform:translateX(-50%) translateY(8px);opacity:0}
+                    to{transform:translateX(-50%);opacity:1}}
+}
 @media (prefers-reduced-motion:reduce){.selpill{animation:none}}
 
 .quote{position:relative;background:var(--surface2);border-left:3px solid var(--deep);

@@ -1058,8 +1058,13 @@ function showSelPill(){
 
   var b = old || el("button","selpill");
   b.id = "selpill";
-  b.innerHTML = '<span class="sq">' + QMARK_SM + '</span><span>Ask about this</span>';
-  b.onmousedown = function(e){ e.preventDefault(); };   /* keep the selection alive */
+  var snip = got.text.replace(/\s+/g, " ").trim();
+  if(snip.length > 34) snip = snip.slice(0, 34).replace(/\s\S*$/, "") + "…";
+  b.innerHTML = '<span class="sq">' + QMARK_SM + '</span>'
+              + '<span class="sl">Ask about <b>' + esc(snip) + '</b></span>';
+  /* Keep the selection alive through the tap, on both pointer types. */
+  b.onmousedown  = function(e){ e.preventDefault(); };
+  b.ontouchstart = function(e){ e.preventDefault(); };
   b.onclick = function(e){
     e.preventDefault(); e.stopPropagation();
     var quote = SEL ? SEL.text : "";
@@ -1068,16 +1073,11 @@ function showSelPill(){
     openBuddy("ask", null, quote);
   };
   if(!old) document.body.appendChild(b);
-
-  /* Sit above the selection where there is room, below it otherwise, and never off
-     the side of a phone. */
-  var r = got.rect, w = b.offsetWidth || 150, h = b.offsetHeight || 36;
-  var top = r.top - h - 9;
-  if(top < 8) top = Math.min(r.bottom + 9, window.innerHeight - h - 8);
-  var left = r.left + r.width / 2 - w / 2;
-  left = Math.max(8, Math.min(left, window.innerWidth - w - 8));
-  b.style.top = Math.round(top) + "px";
-  b.style.left = Math.round(left) + "px";
+  /* Deliberately NOT anchored to the selection. Android draws its own Copy / Share
+     toolbar right next to the highlighted text and there is no way to suppress it, so
+     anything placed there gets covered. The bar is pinned to the bottom instead,
+     inset on the right to clear the buddy button, where the native toolbar never
+     goes. */
 }
 
 var SELTIMER = null;
@@ -1828,6 +1828,19 @@ function viewData(root){
   r3.appendChild(btn("act ghost","Lock this device", lockOut));
   c3.appendChild(r3);
   root.appendChild(c3);
+
+  if(weekInfo().n < 12){
+    var ce = el("div","card");
+    ce.appendChild(el("div","lbl","Exam prep"));
+    ce.appendChild(el("h2",null,"Not yet"));
+    ce.appendChild(el("p","muted","A study guide and a hundred-question paper for each course. These are for revision week, so the tab appears in week 12 — it would only be noise before then. Open it early if you want a look."));
+    var re = el("div","row");
+    re.appendChild(btn("act ghost","Open exam prep anyway", function(){
+      QUIZ=null; MANUAL=null; TAB="exam"; syncUrl(); render(); window.scrollTo(0,0);
+    }));
+    ce.appendChild(re);
+    root.appendChild(ce);
+  }
 
   var c4 = el("div","card");
   c4.appendChild(el("div","lbl","Reference"));
@@ -2742,7 +2755,14 @@ function render(){
 
   if(GATE === "open" && ME && findPerson(ME)){
     var tabs = el("div","tabs");
-    [["home","Home"],["tonight","Tonight"],["sunday","Sunday"],["progress","Stats"],["exam","Exam"]].forEach(function(t){
+    /* Exam prep is end-of-semester work. Showing it from week 1 puts a hundred
+       questions per course in front of you every night for three months, when the
+       thing that matters tonight is tonight's check. It appears in week 12 and stays
+       for revision and exam week; before that it lives in Settings. */
+    var showExam = weekInfo().n >= 12 || TAB === "exam";
+    var TABSET = [["home","Home"],["tonight","Tonight"],["sunday","Sunday"],["progress","Stats"]];
+    if(showExam) TABSET.push(["exam","Exam"]);
+    TABSET.forEach(function(t){
       tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
         QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; } TAB=t[0]; syncUrl(); render(); window.scrollTo(0,0);
       }));
