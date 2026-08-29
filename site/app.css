@@ -480,3 +480,5 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 .lmsrow{gap:7px;margin-top:9px}
 .lmsrow .chip{text-decoration:none;color:var(--ink2)}
 .lmsrow .chip:hover{color:var(--deep);border-color:var(--deep)}
+.cell .cf .go{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.cell .cf .go:hover{filter:brightness(1.15)}

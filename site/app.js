@@ -101,6 +101,7 @@ var CONFIRMSWITCH = false;
 var LMS = null;          /* what the LMS holds, by course and week */
 var SEL = null;          /* {text, rect} while something is highlighted */
 var GUIDEVIEW = null;    /* {course, week, from} while reading a week's study guide */
+var SESSION = null;      /* {day, week, from} while looking at one evening */
 
 var EXAM = null;         /* course index */
 var EXAMCACHE = {};      /* course -> paper json */
@@ -1279,7 +1280,22 @@ function buddyPanel(root){
   if(BUDDY.view === "brief"){
     body.innerHTML = "";
     body.appendChild(el("div","lbl","Tonight's brief"));
-    body.appendChild(el("p","muted", esc((c.chk && c.chk.topic) || "No brief for this session.")));
+    var bt = String((c.chk && c.chk.topic) || "").trim();
+    if(!bt) body.appendChild(el("p","muted","No brief for this session."));
+    else {
+      var blocks = briefParts(bt), holder = el("div","brief");
+      if(blocks){
+        var bul = null;
+        blocks.forEach(function(b){
+          if(b.lead){ bul = null; holder.appendChild(el("p","muted", esc(b.lead))); }
+          else { if(!bul){ bul = el("ul"); holder.appendChild(bul); }
+                 bul.appendChild(el("li", null, esc(b.item))); }
+        });
+      } else {
+        sentences(bt).forEach(function(x){ holder.appendChild(el("p","muted", esc(x))); });
+      }
+      body.appendChild(holder);
+    }
     body.appendChild(btn("act ghost","← Back", function(){ openBuddy("home"); }));
   }
 
@@ -1323,8 +1339,8 @@ function weekGrid(root){
     var r = el("div","wr");
     r.appendChild(el("div","dn",d.day));
 
-    var chk = null, ft = null;
-    if(wd && wd.checks) chk = wd.checks.filter(function(x){ return x.day===d.day; })[0] || null;
+    var ft = null;
+    var chk = checkFor(wd, d.day, "deep");
     if(wd && wd.days){ var dd = wd.days.filter(function(x){ return x.day===d.day; })[0]; if(dd && dd.fast) ft = dd.fast.topic; }
     var hasCheck = !!(chk && chk.questions && chk.questions.length);
     var mine = getScore(ME, w, d.day);
@@ -1345,7 +1361,13 @@ function weekGrid(root){
       : (dprog ? "resume · "+dprog+"/"+chk.questions.length+" →"
       : (hasCheck ? chk.questions.length+" questions →" : "log a score →"))));
     dc.appendChild(foot);
-    dc.onclick = function(){ if(hasCheck) startQuiz(d.day); else manualScore(d.day); };
+    /* Tapping a topic used to launch the check cold. The card now opens the session —
+       brief, videos, study guide — and the footer is the way into the questions. */
+    dc.onclick = function(){ openSession(d.day, w); };
+    foot.querySelector(".go").onclick = function(e){
+      e.stopPropagation();
+      if(hasCheck) startQuiz(d.day); else manualScore(d.day);
+    };
     r.appendChild(dc);
 
     /* fast hour - its own short check when the pack has one */
@@ -1367,7 +1389,8 @@ function weekGrid(root){
       ff.appendChild(el("span","go fast", fmine ? "retake →"
         : (fprog ? "resume · "+fprog+"/"+fchk.questions.length+" →" : fchk.questions.length+" questions →")));
       fc.appendChild(ff);
-      fc.onclick = function(){ startQuiz(d.day, "fast"); };
+      fc.onclick = function(){ openSession(d.day, w); };
+      ff.querySelector(".go").onclick = function(e){ e.stopPropagation(); startQuiz(d.day, "fast"); };
     } else {
       var full = String((fchk&&fchk.topic)||ft||d.fn||"");
       if(full.length > 90){
@@ -1390,7 +1413,7 @@ function weekGrid(root){
 
   var legend = el("p","muted");
   legend.style.cssText = "margin:2px 2px 0;font-size:13px";
-  legend.innerHTML = "Left is the <b>deep hour</b>, an hour at 1× with a twelve-question check. Right is the <b>fast hour</b> at 1.5–1.75× with a short one. Tap either to sit it.";
+  legend.innerHTML = "Left is the <b>deep hour</b>, an hour at 1× with a twelve-question check. Right is the <b>fast hour</b> at 1.5–1.75× with a short one. Tap a card to open the session; tap the line at its foot to go straight to the questions.";
   root.appendChild(legend);
 
   if(!wd){
@@ -2021,6 +2044,84 @@ function examGrade(){
    inside the buddy panel behind a "Load the summary" button. For the weeks with no
    lecture video it is the closest thing to the lesson, so it gets its own view, in the
    same prose styling as the exam guides and highlightable the same way. */
+/* ---------- one session, opened deliberately ----------
+   A card that shows tonight's topic should open the session, not fire a graded check at
+   you. This is the same pair of cards the Tonight tab builds, for whichever day you
+   tapped, with the check as an explicit action at the end. */
+function viewSession(root){
+  var ss = SESSION || {};
+  var w = ss.week || wk();
+  var di = GRID.map(function(x){ return x.day; }).indexOf(ss.day);
+  if(di < 0){ TAB = "tonight"; syncUrl(true); viewTonight(root); return; }
+  var g = GRID[di], wd = weekData(w);
+
+  var head = el("div","card");
+  var r0 = el("div","row"); r0.style.marginTop = "0";
+  r0.appendChild(btn("act ghost","← Back", function(){
+    SESSION = null; TAB = ss.from || "home"; syncUrl(); render(); window.scrollTo(0,0);
+  }));
+  head.appendChild(r0);
+  head.appendChild(el("div","lbl", g.day + " · week " + w));
+  head.appendChild(el("h2",null, esc(NAMES[g.deep]) + "  then  " + esc(NAMES[g.fast])));
+  root.appendChild(head);
+
+  /* the deep hour */
+  var chk = checkFor(wd, g.day, "deep");
+  var c1 = el("div","card deepc");
+  c1.appendChild(el("div","lbl","21:00 – 22:00 · deep hour · 1×"));
+  c1.appendChild(el("h2",null, esc(NAMES[g.deep])));
+  topicBlock(c1, (chk && chk.topic) || g.dn, "muted");
+  watchLine(c1, g.deep, w, true);
+  var gr = el("div","row");
+  gr.appendChild(btn("act ghost","Study guide", function(){ openGuide(g.deep, w, "session"); }));
+  c1.appendChild(gr);
+
+  var sc = getScore(ME, w, g.day);
+  var rw = el("div","row");
+  if(sc){
+    rw.appendChild(el("span","sc "+scoreClass(sc), "Scored "+sc.score+"/"+sc.max));
+    rw.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day); }));
+  } else if(chk && chk.questions && chk.questions.length){
+    rw.appendChild(btn("act big","Take the check · "+chk.questions.length+" questions", function(){ startQuiz(g.day); }));
+  } else {
+    rw.appendChild(btn("act ghost","Log a score manually", function(){ manualScore(g.day); }));
+  }
+  c1.appendChild(rw);
+  root.appendChild(c1);
+
+  /* the fast hour */
+  var fchk = checkFor(wd, g.day, "fast");
+  var ftopic = null;
+  if(wd && wd.days){ var dd = wd.days.filter(function(x){ return x.day===g.day; })[0]; if(dd && dd.fast) ftopic = dd.fast.topic; }
+  var c2 = el("div","card fastc");
+  c2.appendChild(el("div","lbl","22:00 – 23:00 · fast hour · 1.5–1.75×"));
+  c2.appendChild(el("h2",null, esc(NAMES[g.fast])));
+  topicBlock(c2, (fchk && fchk.topic) || ftopic || g.fn, "muted");
+  if(g.fast !== "REVIEW" && g.fast !== "CATCHUP"){
+    watchLine(c2, g.fast, w, false);
+    var gr2 = el("div","row");
+    gr2.appendChild(btn("act ghost","Study guide", function(){ openGuide(g.fast, w, "session"); }));
+    c2.appendChild(gr2);
+  }
+  var fsc = getScore(ME, w, g.day, "fast");
+  var rw2 = el("div","row");
+  if(fsc){
+    rw2.appendChild(el("span","sc "+scoreClass(fsc), "Scored "+fsc.score+"/"+fsc.max));
+    rw2.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day, "fast"); }));
+    c2.appendChild(rw2);
+  } else if(fchk && fchk.questions && fchk.questions.length){
+    rw2.appendChild(btn("act","Quick check · "+fchk.questions.length+" questions", function(){ startQuiz(g.day, "fast"); }));
+    c2.appendChild(rw2);
+  }
+  root.appendChild(c2);
+}
+
+function openSession(day, w, from){
+  SESSION = {day: day, week: w || wk(), from: from || TAB};
+  QUIZ = null; MANUAL = null; BUDDY = null;
+  TAB = "session"; syncUrl(); render(); window.scrollTo(0,0);
+}
+
 function viewGuide(root){
   var g = GUIDEVIEW || {};
   var w = g.week || wk(), course = g.course;
@@ -2681,6 +2782,7 @@ function render(){
   else if(TAB==="progress") viewProgress(wrap);
   else if(TAB==="exam") viewExam(wrap);
   else if(TAB==="guide") viewGuide(wrap);
+  else if(TAB==="session") viewSession(wrap);
   else if(TAB==="data") viewData(wrap);
   else if(TAB==="quiz") viewQuiz(wrap);
   else if(TAB==="manual") viewManual(wrap);
@@ -2701,7 +2803,7 @@ function render(){
    Transient states are deliberately NOT in the url: a quiz in progress restores from
    its own saved state, and a shared link should never drop someone into a half-finished
    paper. */
-var TABS_URL = {home:1, tonight:1, sunday:1, progress:1, exam:1, data:1, week:1, guide:1};
+var TABS_URL = {home:1, tonight:1, sunday:1, progress:1, exam:1, data:1, week:1, guide:1, session:1};
 
 function readUrl(){
   var q;
@@ -2711,6 +2813,9 @@ function readUrl(){
   var w = parseInt(q.get("week"), 10);
   if(w >= 1 && w <= 12) VIEWWEEK = w;
   var c = q.get("course");
+  var dy = q.get("day");
+  if(dy && TAB === "session" && GRID.some(function(x){ return x.day === dy; }))
+    SESSION = {day: dy, week: (w>=1&&w<=12)?w:null, from:"home"};
   if(c && /^[A-Z]{3}_\d{3}$/.test(c)){
     if(TAB === "exam")  EXVIEW = {course:c, mode:"guide"};
     if(TAB === "guide") GUIDEVIEW = {course:c, week: (w>=1&&w<=12)?w:null, from:"tonight"};
@@ -2724,6 +2829,7 @@ function syncUrl(replace){
     if(TABS_URL[t] && t !== "home") q.set("tab", t);
     if(VIEWWEEK) q.set("week", String(VIEWWEEK));
     if(t === "guide" && GUIDEVIEW && GUIDEVIEW.course) q.set("course", GUIDEVIEW.course);
+    if(t === "session" && SESSION && SESSION.day) q.set("day", SESSION.day);
     if(t === "exam" && EXVIEW && EXVIEW.course) q.set("course", EXVIEW.course);
     var s2 = q.toString();
     var next = window.location.pathname + (s2 ? "?" + s2 : "");
