@@ -1,48 +1,69 @@
 # Wednesday — COS_102 nightly check
 
-*Problem types, the four steps, and algorithm/pseudocode/flowchart as planning tools.*
-*Sit cold, notes closed, 8 minutes. Score out of 6.*
+*This session took Week 1 conceptually: what problem-solving in computer science actually is and why it must be systematic; what makes a problem a computational problem; the four steps to problem-solving as a sequence of distinct jobs rather than a list to recite; the meaning of algorithm, pseudocode and flowchart and what each one buys you; the three required properties of an algorithm's steps and what breaks when each is missing; decomposition and its limits; the translator chain of interpreter, compiler and assembler; the difference between debugging and testing and between the three error types; the two kinds of program documentation and when documentation begins; and refactoring — what it must preserve, what it changes, and when it is not refactoring at all. No traces, no arithmetic.*
 
-**1.** A logistics company must deliver to 12 towns and wants the route with the lowest total fuel cost. Which computational problem type is this, and why?
-a) Decision problem — the driver must decide which road to take at each junction
-b) Search problem — the answer is a route, which is a value with a property
-c) Optimization problem — many valid routes exist and the one accepted as the solution is the best possible one
-d) Counting problem — the number of towns, 12, must be counted first
+*Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**2.** "Does any student in COS_102 have a final grade above 44?" Compare it with "List every student in COS_102 with a final grade above 44." The difference between these two is that:
-a) The first is a decision problem (answer is only YES or NO) and the second is a search problem (answer is the values with the property)
-b) The first is a search problem and the second is a counting problem
-c) Both are decision problems, because both test the condition "above 44"
-d) The first is a counting problem because it examines every student before answering
+**1.** The lesson insists that a programmer must first understand how a *human* would solve the problem before programming it. What is the reason?
 
-**3.** A student writes out an ordered, unambiguous, complete set of steps in English, then draws them as boxes and arrows, then types them in a program-like text form. How many algorithms does the student now have?
-a) Three — English steps, flowchart and pseudocode are three different algorithms
-b) Two — the flowchart and the pseudocode are algorithms; the English steps are only notes
-c) One — there is a single algorithm, shown in a graphical representation and a textual representation
-d) None — a set of steps only becomes an algorithm once it is compiled
+a) A computer can only run a procedure that has already been proved correct by hand.
+b) The computer supplies volume and speed, not method; it executes a procedure someone has worked out.
+c) High-level languages cannot express a problem that has not been written out on paper first.
+d) The CPU processes inputs in reverse order, so the human solution must be inverted before coding.
 
-**4.** A programmer inputs the five grades, computes the average, prints PASS or FAIL, and the program runs and gives correct output. Under the four steps, what remains to be done?
-a) Nothing — the plan has been carried out, so problem-solving is complete
-b) Step four: evaluate the working solution and see whether it can be refactored
-c) Return to step one, because understanding the problem must be repeated after coding
-d) Convert the pseudocode into a flowchart, since the flowchart is the final deliverable
+**2.** What makes a problem a *computational* problem in the sense used in this course?
 
-**5. (explain why)** A classmate says: "I skipped straight to writing code because I already knew the formula for the average." Using the course's account of *understanding the problem*, explain what specific things the classmate may not yet have settled, and why the course insists a programmer must first understand how a *human* would solve the problem.
+a) It can be answered YES or NO, which is the form a computer works in.
+b) It is a real-world problem rather than an abstract one.
+c) It is large enough that a human could not finish it by hand in reasonable time.
+d) It has a step-by-step solution, and its inputs, limitations and output conditions are well defined.
 
-**6. (explain why)** Explain why a pseudocode and a flowchart of the same solution can never disagree about what the program does — and what it means if a student's pseudocode and flowchart *do* disagree.
+**3.** A plan contains the step "keep adding the grades until you have enough of them". Which requirement on an algorithm's steps does this violate, and why does it matter?
 
----
+a) Unambiguity — "enough" reads two ways, so no one definite statement can replace it.
+b) Order — the step does not say whether the adding happens before or after the grades have been read into the program.
+c) Completeness — the algorithm names no stop condition anywhere, so no further step could ever be reached from it.
+d) None of them; the programmer supplies the missing detail during coding, which is exactly what the coding stage is for.
 
-## Answers
+**4.** Pseudocode "looks like the actual program" but cannot be compiled or executed. What follows from that?
 
-**1. c** — *Optimization vs search.* Optimization is defined as the problem where **the best possible solution is accepted as the solution**; here many routes satisfy "visits all 12 towns", so it is not enough to find one with the property. Distractor (b) encodes the classic search/optimization confusion: a search problem is satisfied by *any* value with the property.
+a) Pseudocode must be rewritten as a flowchart before it can be turned into a program.
+b) Pseudocode is only useful for problems too small to need a compiler.
+c) Nothing checks it for you, so an error in the pseudocode survives untouched into the source code.
+d) Pseudocode is therefore not a representation of the algorithm, only an informal comment on it.
 
-**2. a** — *Decision vs search.* A **decision** problem's solution can only be **YES or NO**; a **search** problem's solution is **the value or values with the particular property**. The trap in (d) is thinking the type is fixed by the *work done internally* (scanning every student) rather than by the *form of the answer*.
+**5.** In the compilation and execution process described this week, what distinguishes an interpreter from a compiler?
 
-**3. c** — *Algorithm vs its representations.* The algorithm is the ordered, unambiguous, complete **procedure**; the flowchart is its **graphical** representation and the pseudocode its **textual** one. (a) mistakes representation for identity; (d) mistakes pseudocode for compilable code — pseudocode cannot be compiled or executed at all.
+a) The interpreter catches logical as well as syntax errors, whereas the compiler can only ever report syntax errors.
+b) The interpreter goes straight to machine code; the compiler stops at assembly, which an assembler must still convert.
+c) The interpreter works on low-level languages, while the compiler is the tool that works on high-level languages.
+d) The interpreter produces the source code from the pseudocode, while the compiler produces the pseudocode itself.
 
-**4. b** — *The fourth step: evaluate and refactor.* A working solution is where step four begins, not where problem-solving ends: the solution is evaluated to see whether it can be made more concise, efficient and better structured **without changing its function**. (a) is the common "it runs, so I'm done" error.
+**6.** Debugging and testing are named as separate activities. What separates them?
 
-**5.** *Concept: understanding the problem — inputs, processes, output.* The classmate has not answered the three questions the course requires: **what are the inputs** (five grades, in what form and order), **what are the processes** (compute the average, then compare against the pass mark), and **what is the output** (PASS or FAIL, printed). Knowing the average formula settles only the process, not the inputs, output conditions or limitations, which are exactly what a computational problem requires to be well defined. The course insists the programmer first understands how a **human** would solve it because the computer cannot be told anything the programmer cannot already state as an ordered, unambiguous, complete human procedure — the computer contributes speed and volume, not understanding.
+a) Debugging finds errors so they can be removed; testing verifies that the program does what was expected.
+b) Debugging is done by the programmer, testing by the end user after the program is delivered.
+c) Debugging deals with syntax errors, testing with logical and run time errors.
+d) Debugging happens while coding, testing only after the program has been documented.
 
-**6.** *Concept: two representations, one algorithm.* They cannot disagree because both represent the **same single algorithm** — the pseudocode states its steps textually, the flowchart draws the same sequence graphically; neither is the algorithm itself, so neither can carry behaviour the other lacks. If a student's pseudocode and flowchart disagree — say the pseudocode tests `Grade > 44` and the flowchart tests `Grade > 45` — then at least one is a faulty transcription, so the underlying algorithm is not yet unambiguous and complete, and the conflict must be resolved at the planning stage before any code is written.
+**7.** Which change to a working program is a *refactor* in the sense the week defines?
+
+a) Adding a check that rejects a negative grade, so wrong data no longer reaches the average.
+b) Making the program run faster by no longer printing the grade alongside PASS or FAIL.
+c) Correcting a division that used the wrong number of grades, so the average comes out right.
+d) Replacing five repeated addition statements with one loop that produces the same output.
+
+**8.** The lesson advises that, when parts of a problem cannot be solved, you ignore the difficult parts and do the easier ones first. What is the actual cost of this tactic?
+
+a) It produces code that cannot later be refactored, because refactoring requires a complete solution.
+b) It reverses the four steps, since carrying out a partial plan comes before the plan is complete.
+c) The easy parts may be built on assumptions the hard part later overturns, forcing that work to be redone.
+d) None; the tactic is safe, because solving all the small problems automatically solves the main problem.
+
+**9. (explain why)** Pseudocode cannot be compiled or executed, so writing it costs time and returns nothing runnable. Explain why it is still worth writing — what does it give you that going straight to source code does not?
+
+**10. (explain why)** Explain why a program can compile cleanly and run to completion without crashing and still be wrong. Name which of the three error types the week identifies is responsible, and say why the compiler is powerless against it.
+
+**11. (explain why)** Explain why decomposition works — why solving every small subproblem should solve the main problem — and state one condition under which breaking a problem into pieces does *not* deliver a solution to the whole.
+
+**12. (explain why)** Program documentation is said to begin at the problem analysis stage rather than once the program works. Explain why that timing matters, and why user documentation and programmer documentation cannot sensibly be merged into one document.

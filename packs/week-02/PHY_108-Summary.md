@@ -1,96 +1,68 @@
-# PHY_108 — Week 2 Summary
+# PHY_108 — Week 2
 
-*General Physics Practical II · Week 2 (14–20 Sep 2026) · Topic: Ohmic Resistance & the Experiment to Verify Ohm's Law*
+*General Physics Practical II · Week 2 (14–20 Sep 2026)*
 
-## The 7 most examinable things this week
+*Note on source: the slide text extracted well, but every displayed equation image was dropped — the parallel-resistance formula slides came through blank. The parallel formulas below are reconstructed from the mid-lesson question/answer slides and standard physics; everything else is directly from the slides.*
 
-1. **Ohm's law**: the current I through a conductor is directly proportional to the potential difference V across it, **provided the temperature (and other physical conditions) stay constant**. V = IR. The temperature condition is the marks-bearing half of the statement.
-2. **Circuit rule**: ammeter **in series** with the resistor (it must carry the same current), voltmeter **in parallel** across it (it must share the same p.d.). Swap them and you short the circuit or read nothing.
-3. **The V–I graph**: plot V (y-axis) against I (x-axis) → straight line **through the origin**. **Gradient = R**. Compare V = IR with y = mx + c: y ≡ V, x ≡ I, m ≡ R, c = 0.
-4. **Ohmic vs non-ohmic**: ohmic → R constant, V–I straight through origin (metal wire, standard resistor at constant temperature). Non-ohmic → R varies with V or I, V–I curved (filament lamp, thermistor, varistor, LDR/photoresistor, diode).
-5. **Series**: R = R₁ + R₂ + … + R_N (same current, p.d. divides). **Parallel**: 1/R = 1/R₁ + 1/R₂ + … + 1/R_N; for two, R = R₁R₂/(R₁ + R₂) (same p.d., current divides).
-6. **Percentage error** on the measured resistance = |R_measured − R_true|/R_true × 100%; the lab expects agreement within **5%** of the nominal value (e.g. 1 kΩ).
-7. **Precautions/errors**: check and correct **zero error** on both meters; read scales **eye perpendicular to the pointer** (parallax); open the key between readings so the wire does not **heat up and raise R**; tighten terminals against **contact resistance**.
+## Most likely to be examined
 
-## Apparatus and circuit
+1. **State Ohm's law precisely**: the current *I* through a conductor is directly proportional to the potential difference *V* across it, **provided the temperature (and other physical conditions) stay constant**. The temperature proviso is the mark-earning clause.
+2. **V = IR mapped onto y = mx + c**: plotting **V (y-axis) against I (x-axis)** gives a straight line through the **origin**; the **gradient = R**, and **c = 0** confirms no stray EMF/offset.
+3. **Series formula**: R = R₁ + R₂ + … + R_N — same current through each, voltages differ.
+4. **Parallel formula**: 1/R = 1/R₁ + 1/R₂ + … + 1/R_N — same voltage across each, currents differ; equivalent R is always **smaller than the smallest** resistor.
+5. **Percentage error** in the measured R against the nominal value, and the pass criterion **within 5 %** of the default 1 kΩ.
+6. **Unit trap**: the virtual lab plots V in volts against I in **milliamperes**, so the raw gradient is in **kΩ**, not Ω. Multiply by 10³ (or divide mA by 1000) before quoting in ohms.
+7. **Ohmic vs non-ohmic**: ohmic = constant R, straight V–I line through origin, reversible under current reversal. Non-ohmic examples named in the slides: **varistor, photoresistor (LDR), thermistor** — curved V–I graph.
+8. **Apparatus and correct meter connection**: ammeter **in series** with the resistor, voltmeter **in parallel** across it.
 
-Apparatus: DC power supply (or cell/battery), the resistor(s) R₁ and R₂ under test, **ammeter** (low resistance), **voltmeter** (high resistance), **rheostat** (variable resistor, to vary the current), **key/switch**, connecting wires, jumpers/bridges and a breadboard or connection board.
+## Definitions and formulas
 
-Circuit: power supply → key → ammeter → rheostat → resistor R, all in one loop (**series**); voltmeter connected **across R only** (**parallel**).
+- **Ohm's law**: V = IR, with *V* = potential difference (volts, V), *I* = current (amperes, A), *R* = resistance (ohms, Ω). Formulated by **Georg Simon Ohm**, German physicist, **1827**.
+- **Resistor**: a device that resists the flow of current; resistance measured in ohms (Ω); used to control current and voltage in a circuit.
+- **Ohmic resistance**: a property of a material whose resistance stays **constant** over a wide range of current and voltage. Ohmic resistors: R independent of applied V or I; behaviour **reversible** — reverse the current and the voltage across it simply reverses.
+- **Non-ohmic**: R varies with V, I or temperature — varistors, photoresistors, thermistors.
+- **Series**: same current in each element, different potential differences (unless resistors are equal). R = R₁ + R₂ (two); R = R₁ + R₂ + R₃ + … + R_N (many).
+- **Parallel**: same potential difference across each element, different currents (unless equal). 1/R = 1/R₁ + 1/R₂, i.e. for two resistors R = R₁R₂/(R₁ + R₂); generally 1/R = Σ(1/Rᵢ).
 
-- **Ammeter in series** because the same current must pass through it; it is made of very low resistance so it barely alters the current.
-- **Voltmeter in parallel** because components in parallel share the same p.d.; it is made of very high resistance so it draws almost no current from R.
-- **Rheostat in series** to change the current in steps without changing the source voltage.
-- **Key/switch** to close the circuit only while taking a reading.
+**Apparatus**: breadboard; voltmeter and ammeter; DC power supply; connecting wires and bridges (jumpers); two resistors R₁ and R₂. (Run as the **Praxilabs virtual "Ohmic Resistor" lab**.)
 
-## Procedure (as done in the virtual lab)
+**Procedure, in order**
+1. Click the up-arrow (top right of the UI) to see the whole circuit; scroll-wheel to zoom in and identify components.
+2. Click the connection board and wire the circuit as shown in the figure; click anywhere on the board to zoom out.
+3. Click the **voltmeter**, connect it (in parallel with the resistor), zoom out.
+4. Click the **ammeter**, connect it (in series), zoom out.
+5. Click the **DC power supply**, connect it, zoom out. Expand the UI again with the down-arrow.
+6. Set the value of **R₁ in the range 1–20 kΩ**.
+7. Apply a potential difference using either the knob on the DC supply or the DC voltage slider on the UI; set it to a chosen value (say 1 V).
+8. Press **Record** to log both V and I.
+9. Repeat steps 7–8 **six more times** at different potential drops.
+10. On ending, an **Excel sheet of the recorded data downloads automatically**.
 
-1. Connect the circuit: connection board first, then voltmeter across R, then ammeter in series, then the DC power supply.
-2. Set the value of R₁ (range 1–20 kΩ in the simulation).
-3. Apply a potential difference using the knob on the DC power supply or the DC voltage slider — start at a low value (say 1 V).
-4. **Record** the pair of readings V and I.
-5. Adjust the voltage (or the rheostat) to a new value and record again — **repeat for at least six or seven different values** of the potential difference.
-6. End the run; the data are exported to a spreadsheet.
-7. Plot V against I, draw the best-fit straight line, find its gradient, and compare with the nominal resistance.
+**Data analysis / graph**
+- Plot **V (volts) on the y-axis against I (mA) on the x-axis**. Expect a straight line **through the origin**.
+- **Gradient = R** — the magnitude of the resistance used (R₁). **Intercept = 0** physically: zero applied voltage gives zero current, so a non-zero intercept means a systematic error (meter zero error, contact/lead resistance, or a stray EMF).
+- Gradient from two well-separated points on the **best-fit line** (never raw data points): m = (V₂ − V₁)/(I₂ − I₁).
+- **Percentage error**: % error = |R_measured − R_accepted| / R_accepted × 100 %. Accepted (default) value R₁ = **1 kΩ**; the result should agree **within 5 %**.
 
-## Tabulation
+## Worked example
 
-| S/N | V (V) | I (mA) | I (A) | R = V/I (Ω) |
-|---|---|---|---|---|
-| 1 | | | | |
-| 2 | | | | |
-| … | | | | |
-| 7 | | | | |
+Recorded pairs: (1.0 V, 1.02 mA), (2.0 V, 1.98 mA), (3.0 V, 3.05 mA), (4.0 V, 3.96 mA).
 
-Convert mA to A (**÷1000**) before computing R, or your resistance is out by a factor of 1000. Each row should give roughly the same R; the mean of the R column is a second, independent estimate to check against the gradient.
+Gradient using the first and last points on the best-fit line:
+m = (4.0 − 1.0) V / (3.96 − 1.02) mA = 3.0 / 2.94 = **1.02 V/mA = 1.02 kΩ = 1020 Ω**.
 
-## The V–I graph and its gradient
+% error = |1020 − 1000| / 1000 × 100 = **2.0 %** — inside the 5 % tolerance, so Ohm's law is verified.
 
-- Plot **V on the y-axis, I on the x-axis**. Points should lie on a straight line **passing through the origin** (V = 0 when I = 0).
-- **Gradient m = ΔV/ΔI = (V₂ − V₁)/(I₂ − I₁) = R**, in ohms — take two well-separated points **on the best-fit line**, not two raw data points.
-- If instead you plot **I against V**, the gradient is **1/R** (the conductance G, in siemens). Read the axes before quoting a value.
-- A line through the origin confirms **direct proportionality**; a straight line with a non-zero intercept indicates a systematic fault (e.g. meter zero error), not Ohm's law failing.
-- **% error** = |gradient value − nominal value| / nominal value × 100%, expected ≤ 5%.
-
-## Ohm's law: statement and conditions
-
-**V = IR**, R in ohms (Ω); 1 Ω = 1 V/A. Also I = V/R and R = V/I. Formulated by **Georg Simon Ohm** (German physicist, **1827**).
-
-Conditions for it to hold: constant temperature, and constant physical conditions generally (no change in length, cross-sectional area or material of the conductor). Ohm's law is **not** a universal law — it is a property of certain materials, and R = V/I is only *constant* for those.
-
-## Ohmic vs non-ohmic conductors
-
-| | Ohmic | Non-ohmic |
-|---|---|---|
-| R with V or I | constant | varies |
-| V–I graph | straight line through origin | curved |
-| Obeys V = IR with constant R | yes | no |
-| Reversing current | V reverses symmetrically | may be asymmetric (e.g. diode) |
-| Examples | metallic conductors, standard/carbon resistors at fixed temperature | filament lamp, thermistor, varistor, photoresistor (LDR), semiconductor diode, electrolytes |
-
-## Worked example — reading R off the graph
-
-Best-fit line passes through (I = 2.0 mA, V = 2.0 V) and (I = 6.0 mA, V = 6.1 V).
-Gradient = (6.1 − 2.0) V / (6.0 − 2.0) × 10⁻³ A = 4.1 / 4.0 × 10⁻³ = **1025 Ω ≈ 1.03 kΩ**.
-Against a nominal 1 kΩ: % error = (25/1000) × 100% = **2.5%** — within the 5% tolerance.
-
-## Series and parallel (mid-lesson questions)
-
-R₁ = 10 Ω, R₂ = 20 Ω, R₃ = 30 Ω.
-- **Series**: R = 10 + 20 + 30 = **60 Ω**. Note R_series is always larger than the largest resistor.
-- **Parallel**: 1/R = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60, so R = 60/11 ≈ **5.45 Ω**. Note R_parallel is always smaller than the smallest resistor — a useful sanity check.
-
-## Precautions and sources of error
-
-- **Zero error**: check both meters read zero before the key is closed; correct every reading by the zero offset. A zero error puts a non-zero intercept on the V–I line.
-- **Parallax error**: read the pointer with the eye directly above/perpendicular to it, using the mirror strip on the scale where one is fitted.
-- **Heating of the wire**: current warms the conductor, raising its resistance and bending the V–I line — keep currents small and open the key between readings so the wire cools.
-- **Contact/lead resistance**: loose terminals and dirty contacts add unwanted resistance and give a high R; tighten all connections and use clean, short leads.
-- Avoid exceeding the meters' ranges; connect meters with correct polarity (+ to +); take several readings and use a best-fit line rather than a single point.
+Combination check with the mid-lesson values R₁ = 10 Ω, R₂ = 20 Ω, R₃ = 30 Ω:
+- Series: R = 10 + 20 + 30 = **60 Ω**.
+- Parallel: 1/R = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60, so R = 60/11 = **5.45 Ω** (smaller than the smallest, 10 Ω — the sanity check).
 
 ## Commonly confused
 
-- **Ammeter vs voltmeter placement** — ammeter series/low resistance, voltmeter parallel/high resistance. Never in the other arrangement.
-- **Gradient of V–I vs gradient of I–V** — R vs 1/R.
-- **"Ohm's law fails" vs "the conductor is non-ohmic"** — the law is a statement about proportionality under constant temperature; a filament lamp simply is not an ohmic conductor.
-- **mA vs A** — the simulation records current in mA; convert before dividing.
+- **Series vs parallel** — ask "is the *current* forced to be the same, or the *voltage*?" Same current → series; same voltage → parallel.
+- **Ohmic vs non-ohmic** — is the V–I graph a straight line through the origin? Straight → ohmic; curved → non-ohmic.
+- **Gradient vs a single V/I ratio** — for a true ohmic resistor they agree; quote the **gradient of the best-fit line** because it averages all seven readings, while V/I from one point carries that point's full error.
+- **Ammeter vs voltmeter placement** — the ammeter must carry the current it measures (series, low resistance); the voltmeter must straddle the two points whose difference it measures (parallel, high resistance).
+- **kΩ vs Ω** — check the current axis: if I is in mA, a gradient of "1" means 1 kΩ, not 1 Ω.
+- **Resistance vs resistivity** — resistance is the property of *this* component in ohms; resistivity is a property of the *material*, independent of its dimensions.
+- **% error vs % difference** — % error compares your value to a known accepted value (1 kΩ here); % difference compares two equally uncertain measurements.

@@ -1,91 +1,119 @@
-# CSC_106 — Week 2 Question Set (sit 7 days later)
+# CSC_106 — Week 2 Retention Questions
 
-*Sit this during Saturday catch-up in Week 3, not this week. Notes closed.*
+*Introduction to Web Technologies · sit these SEVEN DAYS after the Week 2 session, closed-book.*
 
-## Multiple choice (12)
+## Multiple choice
 
-**1.** What does HTTPS add to HTTP?
-a) Faster page loading only
-b) A different set of request methods
-c) A TLS/SSL encrypted layer, providing confidentiality, integrity and server authentication
-d) Compression of HTML files
+**1.** SFTP is best described as:
+a) A faster version of FTP with no security changes
+b) A secure extension of FTP using encryption and strong authentication
+c) A protocol for retrieving email from a server
+d) An XML-based protocol for web services
 
-**2.** Which set of port numbers is correct?
-a) HTTP 80, HTTPS 443, FTP 21, SFTP 22
-b) HTTP 8080, HTTPS 843, FTP 22, SFTP 21
-c) HTTP 443, HTTPS 80, FTP 20, SFTP 25
-d) HTTP 80, HTTPS 445, FTP 23, SFTP 22
+**2.** Which markup language is a reformulation of HTML as an XML application?
+a) MathML
+b) SVG
+c) XHTML
+d) SGML
 
-**3.** HTTP is described as **stateless**. What does that mean?
-a) It cannot transfer files
-b) It has no status codes
-c) It works without an IP address
-d) The server retains no memory of previous requests; each request must carry all the information needed to process it
+**3.** A user reads an email on their phone and it immediately shows as read on their laptop. Which retrieval protocol is in use?
+a) SMTP
+b) POP3
+c) MIME
+d) IMAP
 
-**4.** Which status code class indicates a **client** error?
-a) 2xx  b) 4xx  c) 5xx  d) 3xx
+**4.** In the domain `admin.example.com`, `example` is the:
+a) Second-level domain
+b) Top-level domain
+c) Subdomain
+d) Root domain
 
-**5.** What is the main security weakness of FTP?
-a) It only transfers text files
-b) It requires a digital certificate
-c) It cannot cross firewalls
-d) Data and login credentials are transmitted in plaintext
+**5.** DNSSEC primarily provides:
+a) Encryption of all web page content
+b) Faster domain name resolution
+c) Digital signatures ensuring DNS data integrity and authenticity
+d) Automatic backup of DNS records
 
-**6.** SFTP is secure because it:
-a) Runs over SSH on port 22, encrypting commands, data and credentials
-b) Uses a certificate authority on port 443
-c) Compresses files before sending them
-d) Uses two separate unencrypted connections
+**6.** Which protocol provides full-duplex, bidirectional communication over a single TCP connection?
+a) REST
+b) SOAP
+c) SMTP
+d) WebSocket
 
-**7.** Which statement correctly distinguishes SFTP from FTPS?
-a) They are two names for the same protocol
-b) SFTP is FTP with TLS added; FTPS runs over SSH
-c) SFTP is file transfer over SSH; FTPS is ordinary FTP with TLS/SSL added
-d) SFTP is unencrypted; FTPS is encrypted
+**7.** In a RESTful API, which HTTP method is used to update an existing resource?
+a) GET
+b) POST
+c) PUT
+d) DELETE
 
-**8.** Which statement about FTP connections is correct?
-a) It uses a single connection for everything
-b) It uses a control connection for commands and a separate data connection for file contents
-c) It uses three connections: control, data and authentication
-d) It uses UDP only
+**8.** MIME exists mainly to:
+a) Relay outgoing mail between domains
+b) Support non-ASCII character sets and attachments in email
+c) Map domain names to IP addresses
+d) Encrypt email in transit
 
-**9.** What is the key difference between HTML and XML?
-a) HTML uses a predefined set of tags to structure web content; XML uses user-defined tags to store and exchange structured data
-b) HTML stores data; XML displays web pages
-c) XML is a styling language; HTML is a programming language
-d) There is no difference; XML is the newer name for HTML
+**9.** Which statement about REST is correct?
+a) It is stateless — every request must contain all information needed to process it
+b) It requires all messages to be encoded in XML
+c) It maintains a persistent connection between client and server
+d) It is a protocol rather than an architectural style
 
-**10.** Which markup language is a reformulation of HTML as an XML application?
-a) SVG  b) MathML  c) CSS  d) XHTML
+**10.** SVG is specifically designed for:
+a) Mathematical notations and equations
+b) Two-dimensional vector graphics that scale without quality loss
+c) Storing hierarchical configuration data
+d) Structuring headings and paragraphs on a web page
 
-**11.** A user wants their email to remain on the server and stay synchronised across a phone and a laptop. Which protocol?
-a) SMTP  b) POP3  c) IMAP  d) MIME
+**11.** `HELO`, `MAIL FROM` and `RCPT TO` are commands belonging to which protocol?
+a) IMAP
+b) POP3
+c) SMTP
+d) DNS
 
-**12.** Which web communication protocol provides full-duplex, persistent, low-latency communication over a single TCP connection?
-a) REST  b) WebSocket  c) SOAP  d) SMTP
+**12.** Which is listed as a disadvantage of SOAP compared with REST?
+a) It cannot carry attachments
+b) It is stateless and therefore insecure
+c) It works only over WebSocket connections
+d) It is complex and slower than REST
 
-## Short answer (3)
+## Short answer
 
-**13.** State the difference between HTTP and HTTPS, and between FTP and SFTP, giving the port number and security property of each of the four.
+**13.** State two differences between POP3 and IMAP.
 
-**14.** Name the five markup languages covered in the lecture and give the primary use of each in one phrase.
+**14.** A small Nigerian clinic currently uses plain HTTP for its patient portal and FTP to move patient record files to its backup server. Name the replacement protocol for each and state, in one sentence each, the specific security property gained.
 
-**15.** Compare REST and SOAP: give two key characteristics of each and one advantage and one disadvantage of each.
+**15.** List the four levels of the DNS hierarchy from highest to lowest, and give the DNS record type that tells the internet which server handles a domain's email.
+
+---
 
 ## Answers
 
-**1. c** — *HTTPS*: HTTP over TLS/SSL; adds encryption, integrity and server authentication via a CA-issued certificate. The methods and statelessness are unchanged.
-**2. a** — *ports*: 80 / 443 / 21 / 22. Memorise as a set; SFTP is 22 because it rides on SSH.
-**3. d** — *statelessness*: no memory between requests, so every request is self-contained. REST inherits this property from HTTP.
-**4. b** — *status classes*: 1xx informational, 2xx success, 3xx redirection, 4xx client error (e.g. 404), 5xx server error.
-**5. d** — *FTP security*: everything, including usernames and passwords, travels in plaintext and can be intercepted.
-**6. a** — *SFTP*: SSH File Transfer Protocol, encrypted over SSH on port 22 with strong authentication (passwords or key pairs).
-**7. c** — *SFTP vs FTPS*: different protocols. SFTP = over SSH, single connection, port 22; FTPS = FTP plus a TLS/SSL layer, still uses FTP's control/data connections and certificates.
-**8. b** — *FTP architecture*: control connection on port 21 carries commands and replies; a separate data connection carries the file. Active mode = server connects back to the client; passive mode = client connects to the server.
-**9. a** — *HTML vs XML*: fixed tags for presenting web content versus user-defined tags for storing and exchanging data.
-**10. d** — *XHTML*: HTML rewritten to XML rules — XML's strictness with HTML's familiarity. (CSS is not a markup language at all.)
-**11. c** — *IMAP*: keeps messages on the server and synchronises actions across devices. POP3 downloads and typically deletes from the server; SMTP only sends; MIME only extends message format.
-**12. b** — *WebSocket*: full-duplex, bidirectional, persistent single TCP connection, low latency — for live chat, gaming, stock updates.
-**13.** *Protocol pairs*: **HTTP** (port 80) transfers web data in plaintext with no security. **HTTPS** (port 443) is HTTP over TLS/SSL, providing encryption, integrity and server authentication by certificate. **FTP** (port 21) transfers files but sends data and credentials in plaintext. **SFTP** (port 22) transfers files over SSH, encrypting commands, data and credentials, with strong authentication.
-**14.** *Markup languages*: **HTML** — creating and structuring web content; **XML** — storing and exchanging structured data with user-defined tags; **SVG** — scalable two-dimensional vector graphics (logos, icons, diagrams); **MathML** — representing mathematical notations and equations on the web (XML-based); **XHTML** — HTML reformulated as an XML application for clean, standardised coding.
-**15.** *REST vs SOAP*: **REST** — stateless and resource-based, using standard HTTP methods (GET, POST, PUT, DELETE) on URLs; advantage: simplicity and wide adoption; disadvantage: not suited to real-time, limited to request-response. **SOAP** — XML-based messages and a strict protocol with predefined rules for structure and encoding; advantage: data integrity, security features and platform independence; disadvantage: complexity and slower than REST.
+**1. b** — SFTP is defined in the week as the secure extension of FTP employing encryption and strong authentication.
+
+**2. c** — XHTML reformulates HTML as an XML application, combining XML's strictness with HTML's familiarity.
+
+**3. d** — IMAP keeps messages on the server and synchronises actions across multiple devices; POP3 would not sync.
+
+**4. a** — `com` is the TLD, `example` the second-level domain, `admin` the subdomain.
+
+**5. c** — DNSSEC adds digital signatures to DNS data for integrity and authenticity, also preventing cache poisoning.
+
+**6. d** — Full-duplex over a single TCP connection is the defining characteristic of WebSocket.
+
+**7. c** — PUT updates data (e.g. `PUT /users/123`); POST creates, GET retrieves, DELETE removes.
+
+**8. b** — MIME extends email format to support character sets other than ASCII plus audio, video, image and application attachments.
+
+**9. a** — Statelessness is REST's first key characteristic; XML-only is SOAP, persistence is WebSocket, and REST is a style not a protocol.
+
+**10. b** — SVG describes 2-D vector graphics that scale without losing image quality.
+
+**11. c** — These are the SMTP commands used to relay a message to the recipient's server.
+
+**12. d** — The slides list SOAP's disadvantages as complexity, being slower than REST, and being less popular in web development.
+
+**13.** (i) POP3 downloads messages to the client device for offline access and typically removes them from the server, whereas IMAP leaves messages stored on the server. (ii) IMAP synchronises actions (read, delete) across multiple devices; POP3 does not.
+
+**14.** HTTP → **HTTPS**, gaining encryption so patient data stays confidential in transit rather than travelling in plaintext. FTP → **SFTP**, gaining encryption plus strong authentication so record files cannot be intercepted or transferred by an unauthenticated party.
+
+**15.** Root domain → Top-Level Domain (TLD) → Second-level domain → Subdomain. The record type for email is the **MX (Mail Exchanger)** record.

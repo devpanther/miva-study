@@ -18,8 +18,9 @@ data-schema.md                    the JSON contract
 ROUTINE-PROMPT.md                 paste this into the routine form
 ```
 
-Weeks 01–05 are generated and verified. Checks were 6 questions in Weeks 1–2 and
-are 12 from Week 3 onward, so `maxScore` changes from 6 to 12 at that point.
+Weeks 01–05 are generated and verified. Every check is 12 questions with
+`maxScore` 12. Weeks 1–2 were originally generated at 6 and have since been
+regenerated at 12, so the value is now uniform across the semester.
 
 ## The schedule this serves
 

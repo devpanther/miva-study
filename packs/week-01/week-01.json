@@ -2,78 +2,78 @@
   "week": 1,
   "startsOn": "2026-09-07",
   "endsOn": "2026-09-13",
-  "generatedOn": "2026-08-28",
+  "generatedOn": "2026-08-29",
   "days": [
     {
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Real-valued functions: relation vs function, domain/codomain/range, vertical line test",
+        "topic": "This session takes Week 1's material - real-valued functions, domain, codomain, range, the vertical and horizontal line tests, inverses and composites - and treats it conceptually rather than computationally. It asks what each object actually is: what a function is as a set of ordered pairs, why the definition insists on \"each input, exactly one output\", and what breaks in the notation f(x) if that clause is dropped. It looks at why domain restrictions arise from the arithmetic itself (no real even root of a negative, no division by zero, no logarithm of a non-positive) rather than being conventions imposed from outside. It separates range from codomain - computed versus declared - and separates the vertical line test from the horizontal line test by the question each one answers. It establishes why one-to-one is precisely the condition for an inverse to exist, and why reversing a many-to-one pairing produces something that is no longer a function. It closes on why the domain of a composite carries a two-part clause and why domain and range trade places under inversion. Almost no arithmetic is required.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "The three components of culture; society, nation-building and national integration"
+        "topic": "The Monday fast hour covers the whole of GST_112 Week 1 in a single pass, since the available material is only the MIVA recap deck. It opens with culture defined as a complex system of traditional behaviours, beliefs, practices and values, and drills the three fundamental components - technological (material culture), sociological (institutions and norms), and ideological (beliefs and values) - which is the week's most examinable list. It then moves to society, categorised into communal and associational forms, distinguished on three fixed bases: division of labour, social interactions, and traditions. Next it takes the historical emergence of society through two lenses: Karl Marx's vision of a communist society built on collective ownership of the means of production and distribution of wealth, and functionalism's view of society as an organism in which each component plays a crucial role. It then covers the impact of colonialism on African societies - specifically its alteration of governance, culture and family structures, using pre-colonial Yoruba communities as the worked example. The hour closes on nation-building, defined as mobilising resources for socio-economic and political development while constructing a national identity, and on national integration: why it matters for a diverse country, Nigeria's ethnic-diversity hurdle, and government initiatives to foster unity. Reference facts are drilled at the end: Cosmas Odinaka's 2020 study on nation-building and national integration, and the University of Lagos Centre for General Studies text Nigerian Peoples and Cultures (Lagos, 2013)."
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "Charge, its properties, and the three methods of charging",
+        "topic": "This session takes week 1's material - electric charge and the three methods of charging - and works it conceptually rather than numerically. It covers what charge is and what the two signs mean; the three properties of charge (quantisation, conservation, additivity) as statements about what nature permits rather than as formulas; and the mechanism behind each charging method: which particles actually move (electrons, never protons), whether contact occurs, and what sign each object is left with. It examines polarisation as charge separation with no net charge gained, and how grounding converts that temporary separation into a permanent net charge of opposite sign to the rod. It also covers why the extent of induction depends on the rod's distance, and why a charged object attracts neutral matter of either sign. Finally it covers what the electric field means as force per unit charge - a property of the source, not of whatever is placed in it. Arithmetic is kept to a minimum; every question is about mechanism.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
         "course": "CSC_106",
-        "topic": "Internet vs World Wide Web; browsers, servers and the client-server model"
+        "topic": "The Tuesday fast hour covers the whole of CSC_106 Week 1, which pairs a historical framing with a technical one. Start with the origin story: the Internet as a worldwide network of interconnected computers that grew out of ARPANET's military beginnings into academic use, and the World Wide Web introduced by Sir Tim Berners-Lee in 1989 as a system of hyperlinked pages - hammering the exam-favourite distinction that the Internet is the infrastructure while the Web is an application built on top of it. Then move to web development itself: the definition, the split between front-end work on the user interface and back-end work on server logic and databases, and the named languages HTML, CSS, JavaScript and Node.js. Cover web browsers (Chrome, Firefox, Safari, Edge) and their five functions - rendering, user interface, extensions and plugins, bookmarking and history, and security - against web servers (Apache, Nginx, Microsoft IIS) and their five functions of request handling, data storage, dynamic content generation, HTTPS security and load balancing. Drill the client-server model and its four-step interaction sequence: user enters a URL or clicks a link, browser sends an HTTP request, server processes it and returns an HTTP response, browser renders the content. Learn the key components by acronym - URL as Uniform Resource Locator, HTTP as Hypertext Transfer Protocol - and the four server types with their examples: web, database (MySQL, PostgreSQL, MongoDB), application (Node.js) and proxy. Close with the three categories of web development tools - text editors and IDEs, browser developer tools, and version control systems - plus Git's distributed branching model, GitHub and GitLab, and the four roles of VCS: collaboration, version history, branching and merging, and code backup. Finish on the three advantages of client-server architecture: scalability, centralised data management, and separation of concerns."
       }
     },
     {
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "Problem types, the four steps, and algorithm/pseudocode/flowchart as planning tools",
+        "topic": "This session takes Week 1 conceptually. It covers what problem-solving in computer science is and why a computer demands a systematic approach - the computer contributes volume, speed and efficiency, not method, so the programmer must first know how a human solves the problem. It establishes what makes a problem a computational problem: a step-by-step solution with well-defined inputs, limitations and output conditions. It treats the four steps to problem-solving as four distinct jobs rather than a list to recite, and works through what each of algorithm, pseudocode and flowchart actually is and what each buys you - including why pseudocode that cannot be compiled or executed is still worth writing. It examines the three required properties of an algorithm's steps (ordered, unambiguous, complete) and what specifically breaks when each is absent, and it looks at decomposition, why it works and where it stops working. It then covers the translator chain of interpreter, compiler and assembler, the difference between debugging and testing, and the three error types of syntax, logical and run time. It closes on the two kinds of program documentation, why documentation begins at problem analysis rather than after the program works, and on refactoring - what it must preserve, what it changes, and when a change is not a refactor at all. No traces and no worked arithmetic.",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "The four language skills and the four writing styles"
+        "topic": "The Wednesday fast hour covers GST_122 Week 1, \"Language Skills\", which establishes listening, speaking, reading and writing as the four building blocks of effective communication. It fixes the course's exact definition of each skill: listening is understanding, interpreting and responding to spoken language; speaking is articulating thoughts, ideas and information coherently and effectively; reading is comprehending, interpreting and analysing written text; and writing is conveying thoughts, information and emotions through written language. It draws the distinction between hearing and listening, and between active listening (full engagement, as in a lecture) and passive listening (merely hearing without deep comprehension, as with background music). On speaking, it covers the components of oral communication - clear pronunciation, appropriate tone, audience engagement, voice control, body language and delivery - worked through a persuasive-speech structure and two contrasting job-interview answers. On reading, it covers reading comprehension as grasping main ideas, context and subtext, using the passage \"The Dangers of Faking Mental Health Issues\" and its four takeaways. On writing, it names the four writing styles: persuasive, descriptive, narrative and expository. The hour closes with the marketing-team case study on emotive language and precision, and the claim that combining the skills strengthens critical thinking, engagement with complex discourse and a global perspective. Focus effort on stating definitions verbatim and on classifying given examples to the right skill or style, since that is how the course examines."
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Computing domains, ranges, inverses and composites",
+        "topic": "This session works the same Week 1 material as problems rather than ideas: given a function, produce the answer. It drills reading a question to see which restriction is in play and stacking several at once - an even root together with a denominator, a root inside a quotient. It covers completing the square to obtain a range, solving y = f(x) for x to obtain the range of a rational function, running the swap-and-solve algorithm for an inverse through the messy rational case, building composites in the correct order and evaluating them at a number, and applying the two-part domain rule to a composite. It also drills the habits around the algebra: checking an inverse by composing back to x, choosing between completing the square and solving for x before starting, and recognising the standard wrong routes - dropping the denominator condition, taking a reciprocal instead of an inverse, quoting the vertex's x-coordinate as the range bound, composing in the wrong order, and simplifying a composite then forgetting the inner function's own domain.",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "The linearisation table and the error formulas"
+        "topic": "The Thursday fast hour covers PHY_108 Week 1, the review of the equation of a straight line and error analysis that underpins every practical report this semester. It starts with y = mx + c - identifying the dependent and independent variable, reading the gradient from two points on a best-fit line, the y-intercept c, and the x-intercept as -c/m. It then drills linearisation: converting T = 2*pi*sqrt(L/g) into T^2 against L with slope 4*pi^2/g, N = N0*e^(-lambda*t) into ln N against t with slope -lambda and intercept ln N0, y = kx^n into log y against log x with slope n and intercept log k, plus the Hooke's law, Coulomb's law and Boyle's law rows of the same table. Next it covers the graphing rules that carry marks in a lab report - sensible scaling, labelled axes with units, accurate plotting, and a single best-fit line rather than dot-to-dot. The error half defines error as the difference between measured and true value, separates systematic from random error with their sources, and gives absolute error, relative or fractional error, percentage error and the signed percentage difference. It closes with the Week 1 case study idea that the mean of repeated measurements is the most likely value, and the Ohm's law framing from the week summary where V is plotted against I so the gradient gives the resistance. Work one numerical example end to end: gradient to g to percentage error."
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "Coulomb's law, superposition and charge quantisation calculations",
+        "topic": "This session takes the same week-1 material and works it as problems. It covers converting between a net charge and a number of transferred electrons using q = ne; tracking charge through transfers, including the averaging rule q' = (q1+q2)/2 for identical conducting spheres in contact and following a charge through two successive contacts; and computing Coulomb forces with attention to squaring the separation and converting centimetres to metres. It covers adding forces and fields as vectors, including the case of two equal and opposite charges whose contributions at the midpoint reinforce rather than cancel, and finding the point on a line where the resultant field vanishes. It covers computing the field of a point charge and the force it exerts on a charge placed in it, including the direction reversal for a negative charge. It also covers diagnosing a wrong route from the shape of a formula, and checking a result by units and by order of magnitude. Constants used throughout: k = 8.99x10^9 N.m^2.C^-2, e = 1.6x10^-19 C.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "Review",
-        "topic": "Week 1 review: read the confidence log, pick Sunday's two topics"
+        "topic": "Week 1 review: re-work every check question you got wrong Mon-Thu, then cold, on paper, do one domain question that stacks an even root on a denominator, one range by completing the square, and one inverse of a rational function checked by composing back to x. Then state, without notes, the mechanism of charging by induction and why it leaves the opposite sign. Finish by settling which two topics Sunday gets from the four scores so far."
       }
     },
     {
       "day": "Sat",
       "deep": {
         "course": "COS_102",
-        "topic": "Tracing the final-grade algorithm, boundary conditions, error types and refactoring",
+        "topic": "This session is Week 1 applied - the method worked through on concrete problems. The student traces the lecture's student-grade flowchart (five grades, average, pass mark 45, decision box \"Is Grade > 44\") on real numbers including the boundary case where the average lands exactly on 45, then alters the decision box to \"Is Grade > 45\" and works out precisely which candidates are misclassified as a result. He reads a faulty pseudocode that sums four grades but divides by five, identifies the fault and classifies it against the three error types, and reasons about which test inputs would and would not expose it. He runs step 1 of the four steps on the inventory management case study, separating genuine inputs, processes and outputs from outcomes and from the tools themselves, then decomposes that case study into subproblems and distinguishes real decomposition from mere phasing, delegation or file-splitting. He classifies stated scenarios into the four computational problem types, particularly the optimization-versus-search and decision-versus-search boundaries. Finally he diagnoses a failed attempt by another student and locates which of the four steps actually went wrong. Reading, tracing and applying rather than reciting.",
         "checkFile": "checks/Sat-COS_102.md"
       },
       "fast": {
         "course": "Catch-up",
-        "topic": "No prior week's question set exists yet in Week 1 - use the hour for any missed fast hour, or start the Week 1 question sets early"
+        "topic": "Catch-up: this is the first week of the semester, so nothing is yet due for a seven-day retest - use the hour to clear anything left over from this week instead. The two that most reward a second pass are the CSC_106 client-server sequence with its four server types, and the GST_112 three components of culture together with the communal-versus-associational distinction, both of which are pure recall and are cheapest to bank now. If time remains, re-read the PHY_108 linearisation table, since every practical this semester leans on it."
       }
     }
   ],
@@ -82,93 +82,122 @@
       "code": "PHY_102",
       "name": "General Physics II",
       "weekTopics": [
-        "Electric charge and its properties",
-        "Methods of charging: friction, conduction, induction",
-        "Electric fields",
-        "Coulomb's law and static electricity"
+        "Electric charge and the electric force",
+        "Properties of charge - quantisation, conservation, additivity",
+        "Charging by friction",
+        "Charging by conduction vs induction with grounding",
+        "Electric fields around charged objects"
       ],
       "summaryFile": "PHY_102-Summary.md",
-      "questionsFile": "PHY_102-Questions.md"
+      "questionsFile": "PHY_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_102/Week-01/Methods-of-Charging-PDF.pdf"
+      ]
     },
     {
       "code": "MTH_102",
       "name": "Elementary Mathematics II (Calculus)",
       "weekTopics": [
-        "Real-valued functions",
-        "Domain, codomain and range",
-        "Inverse functions",
-        "Composite functions"
+        "Real-valued functions and function notation",
+        "Function vs relation and the vertical line test",
+        "Domain restrictions (denominators, even roots, logarithms)",
+        "Range by completing the square and by solving for x",
+        "Inverse and composite functions"
       ],
       "summaryFile": "MTH_102-Summary.md",
-      "questionsFile": "MTH_102-Questions.md"
+      "questionsFile": "MTH_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/MTH_102/Week-01/Working-with-Real-Valued-Functions-pdf.pdf"
+      ]
     },
     {
       "code": "COS_102",
       "name": "Introduction to Problem Solving",
       "weekTopics": [
-        "Problem solving in computer science",
+        "Problem-solving in computer science",
         "Computational problem types",
         "The four steps to problem-solving",
         "Algorithms, pseudocode and flowcharts",
-        "Carrying out and refactoring the solution"
+        "Coding, debugging and refactoring"
       ],
       "summaryFile": "COS_102-Summary.md",
-      "questionsFile": "COS_102-Questions.md"
+      "questionsFile": "COS_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/COS_102/Week-01/Introduction-to-Problem-Solving-I-PDF.pdf",
+        "Courses/COS_102/Week-01/Introduction-to-problem-solving-II-PDF.pdf"
+      ]
     },
     {
       "code": "PHY_108",
       "name": "General Physics Practical II",
       "weekTopics": [
-        "Equation of a straight line",
-        "Linearising non-linear equations",
-        "Graphing in physics",
-        "Error analysis"
+        "Equation of a straight line (y = mx + c)",
+        "Linearising non-linear equations by logs",
+        "Slope and intercept interpretation",
+        "Basics of graphing and best-fit lines",
+        "Error analysis and percentage error"
       ],
       "summaryFile": "PHY_108-Summary.md",
-      "questionsFile": "PHY_108-Questions.md"
+      "questionsFile": "PHY_108-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_108/Week-01/Review-Equation-of-a-Straight-Line-and-Error-PDF.pdf"
+      ]
     },
     {
       "code": "GST_112",
       "name": "Nigerian Peoples and Culture",
       "weekTopics": [
-        "Culture and its three components",
-        "Communal and associational society",
-        "Marx's communism and functionalism",
-        "Colonialism, nation-building and national integration"
+        "Concept and components of culture",
+        "Communal vs associational society",
+        "Emergence of society and Karl Marx",
+        "Functionalism and impact of colonialism",
+        "Nation-building and national integration in Nigeria"
       ],
       "summaryFile": "GST_112-Summary.md",
-      "questionsFile": "GST_112-Questions.md"
+      "questionsFile": "GST_112-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_112/Week-01/Summary-PDF.pdf"
+      ]
     },
     {
       "code": "GST_122",
       "name": "Communication in English II",
       "weekTopics": [
-        "The four language skills",
-        "Active vs passive listening",
-        "Effective oral communication",
-        "Writing styles"
+        "The four key language skills",
+        "Listening skills and active vs passive listening",
+        "Speaking skills and oral communication delivery",
+        "Reading skills and comprehension",
+        "Writing skills and the four writing styles"
       ],
       "summaryFile": "GST_122-Summary.md",
-      "questionsFile": "GST_122-Questions.md"
+      "questionsFile": "GST_122-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_122/Week-01/Language-Skills-PDF.pdf"
+      ]
     },
     {
       "code": "CSC_106",
       "name": "Introduction to Web Technologies",
       "weekTopics": [
-        "The Internet and the World Wide Web",
-        "Web browsers and servers",
-        "The client-server model",
-        "Web development tools"
+        "Internet vs World Wide Web (ARPANET, Berners-Lee 1989)",
+        "Web development front-end vs back-end",
+        "Web browsers and web servers",
+        "The client-server model and HTTP request-response cycle",
+        "Web development tools (editors/IDEs, devtools, Git/VCS)"
       ],
       "summaryFile": "CSC_106-Summary.md",
-      "questionsFile": "CSC_106-Questions.md"
+      "questionsFile": "CSC_106-Questions.md",
+      "sourcePdfs": [
+        "Courses/CSC_106/Week-01/Slide-Introduction-to-Web-Development-PDF.pdf"
+      ]
     },
     {
       "code": "MIVA_COS_111",
       "name": "Technical Certification I",
       "weekTopics": [],
       "summaryFile": "MIVA_COS_111-Summary.md",
-      "questionsFile": null
+      "questionsFile": null,
+      "sourcePdfs": []
     }
   ],
   "checks": [
@@ -176,72 +205,136 @@
       "id": "mon-mth102",
       "day": "Mon",
       "course": "MTH_102",
-      "topic": "Real-valued functions: relation vs function, domain/codomain/range, vertical line test",
-      "maxScore": 6,
+      "topic": "This session takes Week 1's material - real-valued functions, domain, codomain, range, the vertical and horizontal line tests, inverses and composites - and treats it conceptually rather than computationally. It asks what each object actually is: what a function is as a set of ordered pairs, why the definition insists on \"each input, exactly one output\", and what breaks in the notation f(x) if that clause is dropped. It looks at why domain restrictions arise from the arithmetic itself (no real even root of a negative, no division by zero, no logarithm of a non-positive) rather than being conventions imposed from outside. It separates range from codomain - computed versus declared - and separates the vertical line test from the horizontal line test by the question each one answers. It establishes why one-to-one is precisely the condition for an inverse to exist, and why reversing a many-to-one pairing produces something that is no longer a function. It closes on why the domain of a composite carries a two-part clause and why domain and range trade places under inversion. Almost no arithmetic is required.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "The vertical line test works because:",
+          "q": "A relation pairs the input 2 with both 5 and 7. Dropping the \"exactly one output\" clause from the definition of a function would principally cost us:",
           "options": [
-            "a function's graph must be one unbroken curve",
-            "a vertical line x = a gathers every point of the graph whose input is a, so two intersections mean the single input a has been given two outputs",
-            "it checks that every real number appears as an input",
-            "it checks that no two different inputs produce the same output"
-          ],
-          "answerIndex": 1,
-          "concept": "Mechanism of the vertical line test",
-          "why": "The line x = a is exactly the set of points with first coordinate a, so two hits means the input a has two images, which the definition of a function forbids. Option 1 confuses functions with continuous curves, option 3 confuses the test with a claim about the domain, and option 4 describes the horizontal line test."
-        },
-        {
-          "type": "mcq",
-          "q": "A mapping diagram has domain X = {1, 2, 3, 4}, codomain Y = {5, 6, 7, 8}, with arrows 1 to 5, 2 to 5, 3 to 6, 4 to 7. Which statement is correct?",
-          "options": [
-            "It is not a function, because two elements of X map to the same element of Y",
-            "It is not a function, because 8 is not the image of any element of X",
-            "It is a function with range {5, 6, 7} and codomain {5, 6, 7, 8}",
-            "It is a function with range {5, 6, 7, 8}"
+            "the ability to draw a graph",
+            "the existence of a domain",
+            "the meaning of the symbol `f(2)`",
+            "the ability to list ordered pairs"
           ],
           "answerIndex": 2,
-          "concept": "Range is a subset of the codomain; many-to-one is allowed",
-          "why": "A function only requires each input to have exactly one output, so repeated outputs are legal (option 1 confuses this with injectivity) and unused codomain elements are legal (option 2 states the definition of onto). Option 4 is the standard error of equating range with codomain."
+          "concept": "Why the 'exactly one output' clause exists in the definition of a function",
+          "why": "Without uniqueness the symbol f(2) names no single value, so function notation and evaluation collapse; the graph, the domain and the list of ordered pairs all survive."
         },
         {
           "type": "mcq",
-          "q": "For f from R to R defined by f(x) = x^2, which statement is correct?",
+          "q": "For `f : ℝ → ℝ`, `f(x) = x²`, the codomain is `ℝ` but the range is `[0, ∞)`. The distinction matters because:",
           "options": [
-            "f is one-to-one, since each x produces exactly one value x^2",
-            "f is onto, since x^2 is a real number for every real x",
-            "f is neither one-to-one nor onto: f(-2) = f(2) = 4, and no real x gives f(x) = -1",
-            "f is bijective, so f^-1(x) = sqrt(x) is a function on R"
+            "the codomain is declared, the range is computed",
+            "the range is always smaller than the domain",
+            "the codomain lists the inputs",
+            "the range is the set of permitted `x`-values"
           ],
-          "answerIndex": 2,
-          "concept": "Function-ness, injectivity and surjectivity are three separate conditions",
-          "why": "Option 1 mistakes the defining property of a function (one output per input) for injectivity, and option 2 mistakes well-definedness for surjectivity, since being onto R would require negative values to be attained. Option 4 assumes bijectivity in order to produce an inverse."
+          "answerIndex": 0,
+          "concept": "Codomain is declared, range is computed",
+          "why": "f: R -> R declares the target set R, while the range [0, inf) is whatever the rule x^2 actually produces - the two are fixed by different acts."
         },
         {
           "type": "mcq",
-          "q": "The rule y^2 = x (with x >= 0 and y real) does not define y as a function of x. The precise reason is:",
+          "q": "A curve is met twice by some vertical line. This disqualifies it as the graph of a function because:",
           "options": [
-            "x = 0 produces only the single value y = 0",
-            "for x = 4 the rule assigns both y = 2 and y = -2, so one input carries two outputs",
-            "the graph is not a straight line",
-            "negative values of x are excluded, so the domain is not all of R"
+            "the curve is not continuous at that point",
+            "the curve fails to be one-to-one there",
+            "the domain is empty at that `x`",
+            "those two points share an `x` but differ in `y`"
+          ],
+          "answerIndex": 3,
+          "concept": "The mechanism behind the vertical line test",
+          "why": "A vertical line is the set of points with one fixed x, so two intersections mean one input carrying two different y-values, violating uniqueness - not continuity and not injectivity."
+        },
+        {
+          "type": "mcq",
+          "q": "`f(x) = ∛(x − 5)` has domain all of `ℝ`, while `g(x) = √(x − 5)` has domain `x ≥ 5`. The reason is:",
+          "options": [
+            "the cube root grows more slowly than the square root",
+            "no real number squares to a negative, but every real is some real's cube",
+            "the cube root is one-to-one and the square root is not",
+            "the cube root's graph passes the vertical line test"
           ],
           "answerIndex": 1,
-          "concept": "One-to-many disqualifies a relation from being a function",
-          "why": "The failure is a single input with two images, not the shape of the graph or the size of the domain. A function's domain need not be all of R, so option 4 is a misconception about what a domain must be."
+          "concept": "Why even roots restrict the domain and odd roots do not",
+          "why": "Squaring any real gives a non-negative result, so negatives have no real square root, whereas cubing is onto the reals, so every real has a real cube root."
+        },
+        {
+          "type": "mcq",
+          "q": "The definition of `f∘g` carries the clause \"`x` must lie in `dom g` **and** `g(x)` must lie in `dom f`\". The second half is there because:",
+          "options": [
+            "`g(x)` is handed to `f` as an input, so it must be legal for `f`",
+            "`f` and `g` are required to share a domain",
+            "composition is not commutative",
+            "`f∘g` is required to be one-to-one"
+          ],
+          "answerIndex": 0,
+          "concept": "Why dom(f o g) requires g(x) to lie in dom f",
+          "why": "g's output becomes f's input, so it must be a legal input for f; this is independent of commutativity, shared domains or injectivity."
+        },
+        {
+          "type": "mcq",
+          "q": "Requiring `f` to be one-to-one before `f⁻¹` exists is necessary because:",
+          "options": [
+            "a many-to-one `f` has no graph to reflect",
+            "`f⁻¹` must be given by the same rule as `f`",
+            "reflecting a curve in `y = x` destroys continuity",
+            "reversing a many-to-one pairing gives some input two outputs"
+          ],
+          "answerIndex": 3,
+          "concept": "Why invertibility requires the function to be one-to-one",
+          "why": "If f sends two distinct inputs to the same output, reversing every arrow gives that output two images, so the reversed pairing fails the uniqueness clause and is not a function."
+        },
+        {
+          "type": "mcq",
+          "q": "If `f` is invertible, the domain of `f⁻¹` is:",
+          "options": [
+            "the domain of `f`",
+            "the range of `f`",
+            "the whole of `ℝ`",
+            "the codomain of `f`"
+          ],
+          "answerIndex": 1,
+          "concept": "Domain and range swap under inversion",
+          "why": "f-inverse takes back exactly the values f actually produced, so dom(f-inverse) = ran(f) - the codomain may be strictly larger and is not the answer."
+        },
+        {
+          "type": "mcq",
+          "q": "Which pairing is still a legitimate function?",
+          "options": [
+            "inputs 1 and 2 are each sent to both 3 and 4",
+            "input 1 is sent to 3 and also to 5",
+            "inputs 1 and 2 are both sent to 3",
+            "input 1 is left unassigned"
+          ],
+          "answerIndex": 2,
+          "concept": "Repeated outputs are allowed, repeated inputs are not",
+          "why": "Two different inputs may legitimately share one output (a many-to-one function); only a repeated input with different outputs, or an unassigned input, breaks the definition."
         },
         {
           "type": "short",
-          "q": "A student writes: the range of f from R to R, f(x) = x^2 + 1, is R because the codomain is R. Explain precisely what is wrong, and state the actual range.",
-          "concept": "Range is a subset of the codomain, usually a proper subset",
-          "why": "Model answer: the codomain is the declared target set chosen in advance, while the range is the set of values f actually attains. Since x^2 >= 0 for all real x, f(x) >= 1, so the range is [1, infinity), a proper subset of the codomain R."
+          "q": "The vertical line test and the horizontal line test look like the same trick turned sideways, but they answer two different questions. State the question each one answers, and say why passing the first tells you nothing about the second.",
+          "concept": "The vertical and horizontal line tests answer different questions",
+          "why": "The vertical line test asks whether the relation is a function at all - whether any input carries two outputs. The horizontal line test asks whether that function is one-to-one - whether any output is shared by two inputs. Passing the first only establishes that the rule is well defined; x^2 passes it everywhere yet fails the horizontal test, so it has no inverse on R."
         },
         {
           "type": "short",
-          "q": "The vertical line test and the horizontal line test are not two versions of the same check. Say exactly which property each one tests, and what a failure of each one tells you.",
-          "concept": "Vertical test checks function-ness; horizontal test checks injectivity",
-          "why": "Model answer: the vertical line test asks whether the curve is a function at all, and failure means some input has two outputs. The horizontal line test asks whether an existing function is one-to-one, and failure means two different inputs share an output, so f is not invertible on that domain."
+          "q": "`f(x) = x²` on domain `ℝ` has no inverse, but the very same formula on domain `[0, ∞)` does. The rule never changed. Explain why the domain, and not the formula, is what decides.",
+          "concept": "Invertibility is a property of the rule together with its domain, not of the formula",
+          "why": "On R, x^2 sends 2 and -2 to the same output 4, so reversing the pairing would give 4 two images and is not a function. Restricting the domain to [0, inf) discards one member of every such pair, making the function one-to-one, so the reversal is a genuine function. The formula never changed; a function is a rule plus a domain, and it is the domain that decides."
+        },
+        {
+          "type": "short",
+          "q": "Explain why a function's range can be smaller than its codomain but never larger — and why writing `f : ℝ → ℝ` is not a claim that every real number is an output.",
+          "concept": "The range is always a subset of the codomain",
+          "why": "Every output f(x) is by definition an element of the declared codomain, so the range can never contain anything outside it. It can be strictly smaller when the rule simply never produces some of the declared values. Writing f: R -> R declares only where the outputs live, not that every real is attained - f(x) = x^2 has codomain R but range [0, inf)."
+        },
+        {
+          "type": "short",
+          "q": "`f⁻¹(x)` and `1/f(x)` are different objects. Say what each one does, and give the one-line check that separates them for any particular `f`.",
+          "concept": "Inverse function versus reciprocal",
+          "why": "f-inverse reverses the pairing: it takes an output of f back to the input that produced it, so f-inverse(f(x)) = x. By contrast 1/f(x) is ordinary division applied to the value f(x). The separating check is to compose: the inverse returns x, the reciprocal does not. For f(x) = 2x, f-inverse(x) = x/2 while 1/f(x) = 1/(2x)."
         }
       ]
     },
@@ -249,72 +342,136 @@
       "id": "tue-phy102",
       "day": "Tue",
       "course": "PHY_102",
-      "topic": "Charge, its properties, and the three methods of charging",
-      "maxScore": 6,
+      "topic": "This session takes week 1's material - electric charge and the three methods of charging - and works it conceptually rather than numerically. It covers what charge is and what the two signs mean; the three properties of charge (quantisation, conservation, additivity) as statements about what nature permits rather than as formulas; and the mechanism behind each charging method: which particles actually move (electrons, never protons), whether contact occurs, and what sign each object is left with. It examines polarisation as charge separation with no net charge gained, and how grounding converts that temporary separation into a permanent net charge of opposite sign to the rod. It also covers why the extent of induction depends on the rod's distance, and why a charged object attracts neutral matter of either sign. Finally it covers what the electric field means as force per unit charge - a property of the source, not of whatever is placed in it. Arithmetic is kept to a minimum; every question is about mechanism.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "A negatively charged plastic rod is held near - but never touching - an isolated neutral metal sphere on an insulating stand. A wire is connected from the sphere to earth, then the wire is disconnected, and only then is the rod taken away. The sphere finally carries:",
+          "q": "A negatively charged plastic rod is held close to, but not touching, an isolated neutral metal sphere resting on an insulating stand. What is the state of the sphere while the rod is held there?",
           "options": [
-            "a negative charge, since the rod is negative",
-            "a positive charge, spread uniformly over the sphere",
-            "no net charge, since the rod never touched it",
-            "a positive charge on the far side and a negative charge on the near side"
+            "The sphere acquires a net negative charge, because electrons leap across the narrow air gap onto it from the rod.",
+            "The sphere's net charge stays zero, but its near side is positive and its far side negative.",
+            "The sphere's near side becomes negative, since negative charge is drawn toward the rod.",
+            "Nothing changes inside the sphere at all, because the rod never touches it."
           ],
           "answerIndex": 1,
-          "concept": "Charging by induction: the final sign is opposite to the inducing rod",
-          "why": "The negative rod repels the sphere's free electrons to the far side and earthing lets them escape to ground, so the sphere is left electron-deficient and therefore positive. Once the wire and then the rod are removed, that positive charge spreads uniformly over the sphere."
+          "concept": "Polarisation of a neutral conductor by a nearby charge",
+          "why": "The rod's field separates charge inside the sphere - near side positive, far side negative - while the net charge stays zero because nothing crosses the air gap."
         },
         {
           "type": "mcq",
-          "q": "While that same rod is held near the sphere and BEFORE it is earthed, the face of the sphere nearest the rod becomes positive. The mechanism is:",
+          "q": "During charging by induction the conductor is briefly connected to earth by a wire. What does that earth connection actually do?",
           "options": [
-            "protons in the metal migrate through the lattice to the near face",
-            "free electrons are repelled to the far face, leaving an electron deficit at the near face",
-            "positive charge jumps across the air gap from the rod to the sphere",
-            "the metal's atoms rotate so that their positive ends point at the rod"
+            "It drains away all charge, leaving the conductor permanently neutral.",
+            "It supplies protons to the side of the conductor nearest the rod.",
+            "It shields the conductor from the rod's field so that charge can settle down.",
+            "It gives the repelled electrons somewhere to go, so an imbalance is left behind."
           ],
-          "answerIndex": 1,
-          "concept": "Charge carriers in a metal: only electrons are mobile",
-          "why": "In a solid conductor the nuclei are locked in the lattice, so a positive region is always a region short of electrons. Options 1 and 4 assume protons or whole atoms move, and option 3 invents a transfer across the gap that induction explicitly does not involve."
+          "answerIndex": 3,
+          "concept": "Function of the earth connection in charging by induction",
+          "why": "Earth is a charge reservoir into which the repelled electrons escape, so the sphere is left with a net imbalance once the ground connection is broken."
         },
         {
           "type": "mcq",
-          "q": "A metal sphere carrying a charge of -8 units touches an identical, neutral metal sphere, and the two are then separated. Their charges are:",
+          "q": "A charged comb picks up small scraps of neutral paper, and does so whether the comb is charged positively or negatively. The best explanation is:",
           "options": [
-            "-8 and 0",
-            "-4 and -4",
-            "-8 and -8",
-            "+4 and -4"
+            "The comb polarises the paper; the nearer end is oppositely charged and so is pulled harder.",
+            "The paper carries a small leftover charge that happens to be opposite to the comb's.",
+            "The paper's protons drift toward the comb, producing a net pull toward it.",
+            "A neutral body has no charge that can be repelled, so any charged object can only ever attract it, at any distance."
           ],
-          "answerIndex": 1,
-          "concept": "Charging by conduction combined with conservation of charge",
-          "why": "Identical conductors in contact share charge equally, and the total of -8 units must be conserved, giving -4 on each. Option 3 would create charge from nothing and option 4 confuses conduction with induced charge separation."
+          "answerIndex": 0,
+          "concept": "Why a charged object attracts neutral matter of either sign",
+          "why": "The comb polarises the paper, and the induced opposite charge sits nearer the comb, so the attraction on it exceeds the repulsion on the farther like charge."
         },
         {
           "type": "mcq",
-          "q": "A glass rod is rubbed with silk and ends up positively charged. Which statement is correct?",
+          "q": "Which of these net charges is impossible for an isolated object to carry?",
           "options": [
-            "The glass gained protons from the silk.",
-            "The glass transferred electrons to the silk, so the silk now carries an equal negative charge.",
-            "Friction created new positive charge on the glass; the silk stays neutral.",
-            "The glass lost electrons to the surrounding air, so the silk's charge is smaller in magnitude than the glass's."
+            "−3.2×10⁻¹⁹ C",
+            "+8.0×10⁻¹⁹ C",
+            "−2.4×10⁻¹⁹ C",
+            "+1.6×10⁻¹⁹ C"
+          ],
+          "answerIndex": 2,
+          "concept": "Quantisation of charge as q = ne",
+          "why": "-2.4x10^-19 C is 1.5e, not a whole-number multiple of the elementary charge, so no isolated object can carry it."
+        },
+        {
+          "type": "mcq",
+          "q": "A plastic rod rubbed with wool ends up carrying −6 nC. What is left on the wool, and why?",
+          "options": [
+            "−6 nC, because rubbing charges both surfaces negatively.",
+            "+6 nC, because the wool lost exactly the electrons the rod gained.",
+            "+6 nC, because protons moved from the wool onto the rod.",
+            "0, because only the rod becomes charged; the wool stays neutral."
           ],
           "answerIndex": 1,
-          "concept": "Charging by friction is electron transfer, and conservation makes the two charges equal and opposite",
-          "why": "Becoming positive means losing electrons, and every electron the glass loses is exactly the electrons the silk gains. Options 1 and 4 assume protons move or charge leaks away, and option 3 violates conservation of charge."
+          "concept": "Conservation of charge and electron-only transfer in friction",
+          "why": "The wool must hold +6 nC because it lost precisely the electrons the rod gained; protons never move between solids."
+        },
+        {
+          "type": "mcq",
+          "q": "The field at a point P near a fixed source charge is found by measuring the force on a small test charge q₀ and dividing by q₀. The test charge is then replaced by one of twice the size, still far too small to disturb the source. The value obtained for E at P:",
+          "options": [
+            "doubles, because the force on the test charge doubles",
+            "halves, because the same force is now divided by a bigger charge",
+            "is unchanged, because the force and the divisor both double",
+            "quadruples, because the field depends on the square of the charge"
+          ],
+          "answerIndex": 2,
+          "concept": "Field as force per unit charge, independent of the test charge",
+          "why": "Doubling q0 doubles the measured force, and the ratio F/q0 is unchanged because E is fixed by the source alone."
+        },
+        {
+          "type": "mcq",
+          "q": "Bringing the charged rod closer to a neutral conductor increases the extent of the induction. The mechanism is that:",
+          "options": [
+            "the conductor's net charge grows as the rod approaches",
+            "charge begins to leak across the shrinking air gap",
+            "the conductor gains extra free electrons that were unavailable further away",
+            "the rod's field at the conductor is stronger, so more free electrons are displaced"
+          ],
+          "answerIndex": 3,
+          "concept": "Why induction strengthens as the rod approaches",
+          "why": "Field strength rises as distance falls, so a stronger field displaces more of the conductor's free electrons before equilibrium is reached."
+        },
+        {
+          "type": "mcq",
+          "q": "You cannot charge a metal rod by rubbing it while holding it in your bare hand. Why not?",
+          "options": [
+            "Any charge produced escapes through your body to earth.",
+            "Metals have no charge to separate, since their electrons are already free.",
+            "Friction cannot separate charge on a smooth metal surface.",
+            "The freed electrons immediately recombine with the metal's protons and cancel out."
+          ],
+          "answerIndex": 0,
+          "concept": "Conductors and the human body as an earth path",
+          "why": "A metal rod held in the bare hand is continuously earthed through the body, so any charge separated by rubbing immediately leaks away."
         },
         {
           "type": "short",
-          "q": "A charged rod is brought near a small piece of NEUTRAL paper and the paper is attracted to the rod. Explain why the attraction happens even though the paper has zero net charge.",
-          "concept": "Polarisation of a neutral body plus the inverse-square dependence of the Coulomb force",
-          "why": "Model answer: the rod's field pulls the paper's opposite-sign charge slightly nearer and pushes its like-sign charge slightly farther away. Because the force falls off as 1 over r squared, the attraction on the nearer opposite charge is stronger than the repulsion on the farther like charge, so there is a net attraction despite the paper carrying no net charge."
+          "q": "A charged rod attracts a neutral scrap of foil, yet two rods charged in the same way repel each other. Explain, in terms of what happens to the charges inside the foil, why attraction of a *neutral* object is not evidence that the foil is charged.",
+          "concept": "Attraction of a neutral object is polarisation, not evidence of net charge",
+          "why": "The rod's field separates charge inside the foil: the opposite charge is drawn to the near face and the like charge pushed to the far face. Because the Coulomb force falls off with distance, the attraction on the nearer opposite charge exceeds the repulsion on the farther like charge, so the net force is attractive. The foil's total charge is zero throughout, which is why two identically charged rods - both carrying real net charge of the same sign - repel instead."
         },
         {
           "type": "short",
-          "q": "In charging by induction, explain why the earthing wire must be disconnected BEFORE the charging rod is taken away, and what happens if the order is reversed.",
-          "concept": "The role of the ground connection in charging by induction",
-          "why": "Model answer: the earth connection is the escape route that lets electrons leave or enter the conductor, while the rod's field is what holds the remaining charge at the far end. Breaking the ground first traps the net charge on the sphere; removing the rod first lets the displaced electrons flow straight back through the still-connected wire, leaving the sphere neutral."
+          "q": "Charging by conduction leaves the conductor with the *same* sign as the charging rod, while charging by induction leaves it with the *opposite* sign. Explain why the difference in outcome follows from the difference in mechanism, and say what happens to the rod's own charge in each case.",
+          "concept": "Conduction shares charge; induction separates it and drains one sign away",
+          "why": "In conduction the rod touches the conductor, charge flows until both carry the same sign, and the rod loses some of its own charge in the process. In induction there is no contact: the rod's field pushes like charge to the far side, the earth connection lets that charge escape, and breaking the earth before removing the rod leaves the conductor with the opposite sign. The rod's own charge is unchanged in induction, because nothing ever crossed the gap."
+        },
+        {
+          "type": "short",
+          "q": "Two objects are rubbed together and both end up charged, one positive and one negative. Explain why this does not mean charge has been created, and state what observation would count as a violation of conservation of charge.",
+          "concept": "Conservation of charge in frictional charging",
+          "why": "Rubbing only transfers electrons from one surface to the other, so the negative charge gained by one is exactly the positive charge left on the other and the algebraic total is unchanged at zero. No charge was created - only separated. A violation would be a closed, isolated system whose net charge changed: both objects ending up negative, say, or an isolated body spontaneously acquiring charge with nothing else altering."
+        },
+        {
+          "type": "short",
+          "q": "The electric field is defined as force per unit charge rather than simply as the force felt at a point. Explain what would go wrong if physicists instead tabulated \"the force at each point in space\" around a charged object.",
+          "concept": "Force per unit charge makes the field a property of the source alone",
+          "why": "Tabulating 'the force at each point' would describe the source together with whatever test charge happened to be used, so a fresh table would be needed for every different test charge. Dividing by q0 removes the test charge from the description and leaves a quantity fixed by the source charges alone. That is what makes E predictive: multiply it by any charge later placed there to get the force on that charge."
         }
       ]
     },
@@ -322,72 +479,136 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "Problem types, the four steps, and algorithm/pseudocode/flowchart as planning tools",
-      "maxScore": 6,
+      "topic": "This session takes Week 1 conceptually. It covers what problem-solving in computer science is and why a computer demands a systematic approach - the computer contributes volume, speed and efficiency, not method, so the programmer must first know how a human solves the problem. It establishes what makes a problem a computational problem: a step-by-step solution with well-defined inputs, limitations and output conditions. It treats the four steps to problem-solving as four distinct jobs rather than a list to recite, and works through what each of algorithm, pseudocode and flowchart actually is and what each buys you - including why pseudocode that cannot be compiled or executed is still worth writing. It examines the three required properties of an algorithm's steps (ordered, unambiguous, complete) and what specifically breaks when each is absent, and it looks at decomposition, why it works and where it stops working. It then covers the translator chain of interpreter, compiler and assembler, the difference between debugging and testing, and the three error types of syntax, logical and run time. It closes on the two kinds of program documentation, why documentation begins at problem analysis rather than after the program works, and on refactoring - what it must preserve, what it changes, and when a change is not a refactor at all. No traces and no worked arithmetic.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "A logistics company must deliver to 12 towns and wants the route with the lowest total fuel cost. Which computational problem type is this, and why?",
+          "q": "The lesson insists that a programmer must first understand how a *human* would solve the problem before programming it. What is the reason?",
           "options": [
-            "Decision problem - the driver must decide which road to take at each junction",
-            "Search problem - the answer is a route, which is a value with a property",
-            "Optimization problem - many valid routes exist and the one accepted as the solution is the best possible one",
-            "Counting problem - the number of towns, 12, must be counted first"
-          ],
-          "answerIndex": 2,
-          "concept": "Optimization vs search problems",
-          "why": "Optimization is defined as the problem where the best possible solution is accepted as the solution; a search problem would be satisfied by any route with the property, but here the cheapest must be selected."
-        },
-        {
-          "type": "mcq",
-          "q": "Compare 'Does any student in COS_102 have a final grade above 44?' with 'List every student in COS_102 with a final grade above 44.' The difference between these two is that:",
-          "options": [
-            "The first is a decision problem (answer is only YES or NO) and the second is a search problem (answer is the values with the property)",
-            "The first is a search problem and the second is a counting problem",
-            "Both are decision problems, because both test the condition 'above 44'",
-            "The first is a counting problem because it examines every student before answering"
-          ],
-          "answerIndex": 0,
-          "concept": "Decision vs search problems",
-          "why": "A decision problem's solution can only be YES or NO; a search problem's solution is the value or values with the particular property. The type is fixed by the form of the answer, not by the internal work done."
-        },
-        {
-          "type": "mcq",
-          "q": "A student writes out an ordered, unambiguous, complete set of steps in English, then draws them as boxes and arrows, then types them in a program-like text form. How many algorithms does the student now have?",
-          "options": [
-            "Three - English steps, flowchart and pseudocode are three different algorithms",
-            "Two - the flowchart and the pseudocode are algorithms; the English steps are only notes",
-            "One - there is a single algorithm, shown in a graphical representation and a textual representation",
-            "None - a set of steps only becomes an algorithm once it is compiled"
-          ],
-          "answerIndex": 2,
-          "concept": "Algorithm vs its representations",
-          "why": "The algorithm is the ordered, unambiguous and complete procedure itself; the flowchart is its graphical representation and the pseudocode its textual one. Pseudocode also cannot be compiled at all, which rules out the last option."
-        },
-        {
-          "type": "mcq",
-          "q": "A programmer inputs the five grades, computes the average, prints PASS or FAIL, and the program runs and gives correct output. Under the four steps, what remains to be done?",
-          "options": [
-            "Nothing - the plan has been carried out, so problem-solving is complete",
-            "Step four: evaluate the working solution and see whether it can be refactored",
-            "Return to step one, because understanding the problem must be repeated after coding",
-            "Convert the pseudocode into a flowchart, since the flowchart is the final deliverable"
+            "A computer can only run a procedure that has already been proved correct by hand.",
+            "The computer supplies volume and speed, not method; it executes a procedure someone has worked out.",
+            "High-level languages cannot express a problem that has not been written out on paper first.",
+            "The CPU processes inputs in reverse order, so the human solution must be inverted before coding."
           ],
           "answerIndex": 1,
-          "concept": "The fourth step: evaluate and refactor",
-          "why": "A working solution is where step four begins, not where problem-solving ends: it is evaluated to see whether it can be made more concise, efficient and better structured without changing its function."
+          "concept": "Why the programmer must understand the human solution first",
+          "why": "The computer supplies volume and speed but no method - it can only execute a procedure that has already been worked out, which is why the human solution must precede the program."
+        },
+        {
+          "type": "mcq",
+          "q": "What makes a problem a *computational* problem in the sense used in this course?",
+          "options": [
+            "It can be answered YES or NO, which is the form a computer works in.",
+            "It is a real-world problem rather than an abstract one.",
+            "It is large enough that a human could not finish it by hand in reasonable time.",
+            "It has a step-by-step solution, and its inputs, limitations and output conditions are well defined."
+          ],
+          "answerIndex": 3,
+          "concept": "The defining criterion of a computational problem",
+          "why": "A computational problem is one with a step-by-step solution whose inputs, limitations and output conditions are all well defined; being YES/NO, real-world, or large is not the criterion."
+        },
+        {
+          "type": "mcq",
+          "q": "A plan contains the step \"keep adding the grades until you have enough of them\". Which requirement on an algorithm's steps does this violate, and why does it matter?",
+          "options": [
+            "Unambiguity — \"enough\" reads two ways, so no one definite statement can replace it.",
+            "Order — the step does not say whether the adding happens before or after the grades have been read into the program.",
+            "Completeness — the algorithm names no stop condition anywhere, so no further step could ever be reached from it.",
+            "None of them; the programmer supplies the missing detail during coding, which is exactly what the coding stage is for."
+          ],
+          "answerIndex": 0,
+          "concept": "The 'unambiguous' requirement on an algorithm's steps",
+          "why": "'Enough' has more than one reading, so no single definite programming statement can replace the step; the order is clear and a stop condition is implied, so it is unambiguity that fails."
+        },
+        {
+          "type": "mcq",
+          "q": "Pseudocode \"looks like the actual program\" but cannot be compiled or executed. What follows from that?",
+          "options": [
+            "Pseudocode must be rewritten as a flowchart before it can be turned into a program.",
+            "Pseudocode is only useful for problems too small to need a compiler.",
+            "Nothing checks it for you, so an error in the pseudocode survives untouched into the source code.",
+            "Pseudocode is therefore not a representation of the algorithm, only an informal comment on it."
+          ],
+          "answerIndex": 2,
+          "concept": "The consequence of pseudocode being non-executable",
+          "why": "Because no compiler or machine ever checks pseudocode, any error in it passes silently into the source code - which is why pseudocode must be reasoned over by hand."
+        },
+        {
+          "type": "mcq",
+          "q": "In the compilation and execution process described this week, what distinguishes an interpreter from a compiler?",
+          "options": [
+            "The interpreter catches logical as well as syntax errors, whereas the compiler can only ever report syntax errors.",
+            "The interpreter goes straight to machine code; the compiler stops at assembly, which an assembler must still convert.",
+            "The interpreter works on low-level languages, while the compiler is the tool that works on high-level languages.",
+            "The interpreter produces the source code from the pseudocode, while the compiler produces the pseudocode itself."
+          ],
+          "answerIndex": 1,
+          "concept": "Interpreter versus compiler in the translation chain",
+          "why": "The interpreter converts high-level language directly to machine code, whereas the compiler produces assembly language that still requires an assembler to reach machine code."
+        },
+        {
+          "type": "mcq",
+          "q": "Debugging and testing are named as separate activities. What separates them?",
+          "options": [
+            "Debugging finds errors so they can be removed; testing verifies that the program does what was expected.",
+            "Debugging is done by the programmer, testing by the end user after the program is delivered.",
+            "Debugging deals with syntax errors, testing with logical and run time errors.",
+            "Debugging happens while coding, testing only after the program has been documented."
+          ],
+          "answerIndex": 0,
+          "concept": "Debugging versus testing as distinct activities",
+          "why": "Debugging is the process that finds errors so they can be removed to avoid failure; testing is the process that verifies the program works as expected - a difference of purpose, not of who does it or when."
+        },
+        {
+          "type": "mcq",
+          "q": "Which change to a working program is a *refactor* in the sense the week defines?",
+          "options": [
+            "Adding a check that rejects a negative grade, so wrong data no longer reaches the average.",
+            "Making the program run faster by no longer printing the grade alongside PASS or FAIL.",
+            "Correcting a division that used the wrong number of grades, so the average comes out right.",
+            "Replacing five repeated addition statements with one loop that produces the same output."
+          ],
+          "answerIndex": 3,
+          "concept": "What refactoring must preserve",
+          "why": "Replacing five additions with one loop leaves the function of the solution untouched while improving structure and concision; the other options each change what the program does or fix a fault, neither of which is refactoring."
+        },
+        {
+          "type": "mcq",
+          "q": "The lesson advises that, when parts of a problem cannot be solved, you ignore the difficult parts and do the easier ones first. What is the actual cost of this tactic?",
+          "options": [
+            "It produces code that cannot later be refactored, because refactoring requires a complete solution.",
+            "It reverses the four steps, since carrying out a partial plan comes before the plan is complete.",
+            "The easy parts may be built on assumptions the hard part later overturns, forcing that work to be redone.",
+            "None; the tactic is safe, because solving all the small problems automatically solves the main problem."
+          ],
+          "answerIndex": 2,
+          "concept": "The cost of the 'ignore the difficult parts' tactic",
+          "why": "The easy parts get built on assumptions the postponed hard part may overturn, forcing rework - decomposition only guarantees the whole when the pieces are genuinely independent."
         },
         {
           "type": "short",
-          "q": "A classmate says: 'I skipped straight to writing code because I already knew the formula for the average.' Using the course's account of understanding the problem, explain what specific things the classmate may not yet have settled, and why the course insists a programmer must first understand how a human would solve the problem.",
-          "concept": "Understanding the problem: inputs, processes, output",
-          "why": "Model answer: the classmate has not answered the three required questions - what are the inputs (the five grades, in what form), what are the processes (average, then compare against the pass mark), and what is the output (PASS or FAIL, printed). Knowing the formula settles only the process, while a computational problem requires inputs, limitations and output conditions to be well defined. The programmer must first understand the human solution because the computer cannot be told anything the programmer cannot state as an ordered, unambiguous and complete procedure - the computer contributes speed and volume, not understanding."
+          "q": "Pseudocode cannot be compiled or executed, so writing it costs time and returns nothing runnable. Explain why it is still worth writing — what does it give you that going straight to source code does not?",
+          "concept": "What pseudocode buys you despite not being executable",
+          "why": "It forces the algorithm to be made explicit and complete in ordinary language before syntax gets in the way, so logical gaps are found while they are still cheap to fix. It is also language-independent, so the same plan can be coded in any language, and it doubles as documentation and as a way of communicating the design to people who do not read code. Going straight to source mixes two hard jobs at once: deciding what to do, and satisfying the compiler."
         },
         {
           "type": "short",
-          "q": "Explain why a pseudocode and a flowchart of the same solution can never disagree about what the program does - and what it means if a student's pseudocode and flowchart do disagree.",
-          "concept": "Two representations, one algorithm",
-          "why": "Model answer: both are representations of the same single algorithm - the pseudocode states its steps textually, the flowchart draws the same sequence of operations graphically - so neither can carry behaviour the other lacks. If they disagree (say pseudocode tests Grade > 44 while the flowchart tests Grade > 45) then at least one is a faulty transcription, so the underlying algorithm is not yet unambiguous and complete and the conflict must be resolved at the planning stage before any code is written."
+          "q": "Explain why a program can compile cleanly and run to completion without crashing and still be wrong. Name which of the three error types the week identifies is responsible, and say why the compiler is powerless against it.",
+          "concept": "Logic errors survive both compilation and execution",
+          "why": "A logic error is one where every statement is syntactically legal and nothing illegal happens at run time, so the program compiles and runs to completion - it simply computes the wrong thing. The compiler only checks that the code obeys the rules of the language; it has no access to the programmer's intention, so it cannot know that dividing by 5 was meant to be dividing by 4. Only testing against known expected answers exposes it."
+        },
+        {
+          "type": "short",
+          "q": "Explain why decomposition works — why solving every small subproblem should solve the main problem — and state one condition under which breaking a problem into pieces does *not* deliver a solution to the whole.",
+          "concept": "Decomposition and the independence condition",
+          "why": "Decomposition works because a large problem that is hard to hold in mind can be split into subproblems each small enough to solve directly, and the solved pieces then reassemble into the whole. It relies on the pieces being genuinely independent and on their interfaces being correctly specified. It fails when the subproblems are coupled - when the right solution to one depends on a choice made in another - so solving each in isolation yields pieces that do not fit together."
+        },
+        {
+          "type": "short",
+          "q": "Program documentation is said to begin at the problem analysis stage rather than once the program works. Explain why that timing matters, and why user documentation and programmer documentation cannot sensibly be merged into one document.",
+          "concept": "Documentation begins at problem analysis and serves two different audiences",
+          "why": "Starting at analysis captures the reasoning - what the inputs were taken to be, what was assumed, why a route was chosen - while it is still known; reconstructed afterwards, that reasoning is guesswork. The two kinds cannot sensibly be merged because they answer different questions for different readers: user documentation says how to operate the program and assumes no knowledge of its internals, while programmer documentation describes structure and logic so the program can be maintained and upgraded. One document attempting both serves neither reader."
         }
       ]
     },
@@ -395,72 +616,136 @@
       "id": "thu-mth102",
       "day": "Thu",
       "course": "MTH_102",
-      "topic": "Computing domains, ranges, inverses and composites",
-      "maxScore": 6,
+      "topic": "This session works the same Week 1 material as problems rather than ideas: given a function, produce the answer. It drills reading a question to see which restriction is in play and stacking several at once - an even root together with a denominator, a root inside a quotient. It covers completing the square to obtain a range, solving y = f(x) for x to obtain the range of a rational function, running the swap-and-solve algorithm for an inverse through the messy rational case, building composites in the correct order and evaluating them at a number, and applying the two-part domain rule to a composite. It also drills the habits around the algebra: checking an inverse by composing back to x, choosing between completing the square and solving for x before starting, and recognising the standard wrong routes - dropping the denominator condition, taking a reciprocal instead of an inverse, quoting the vertex's x-coordinate as the range bound, composing in the wrong order, and simplifying a composite then forgetting the inner function's own domain.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "The domain of f(x) = sqrt(x+2)/(x-3) is:",
+          "q": "The domain of `f(x) = √(x + 4)/(x − 1)` is:",
           "options": [
-            "[-2, infinity)",
-            "[-2, 3) union (3, infinity)",
-            "(-2, 3) union (3, infinity)",
-            "R excluding 3"
+            "`[−4, ∞)`",
+            "`[−4, 1) ∪ (1, ∞)`",
+            "`(−4, 1) ∪ (1, ∞)`",
+            "`(−∞, −4] ∪ (1, ∞)`"
           ],
           "answerIndex": 1,
-          "concept": "Combining the even-root rule with the nonzero-denominator rule",
-          "why": "sqrt(x+2) needs x + 2 >= 0, so x = -2 is included (option 3 wrongly makes it strict), and the denominator needs x not equal to 3 (option 1 ignores this while option 4 ignores the square root)."
+          "concept": "Stacking an even-root condition with a denominator condition",
+          "why": "x + 4 >= 0 gives x >= -4 and x - 1 != 0 removes 1, so the intersection is [-4, 1) union (1, inf); -4 is included because the root is defined at 0."
         },
         {
           "type": "mcq",
-          "q": "The range of f(x) = -x^2 + 4x - 1 is:",
+          "q": "The range of `f(x) = x² − 6x + 11` is:",
           "options": [
-            "[3, infinity)",
-            "(-infinity, 3]",
-            "(-infinity, -3]",
-            "[-1, infinity)"
+            "`[11, ∞)`",
+            "`(−∞, 2]`",
+            "`[3, ∞)`",
+            "`[2, ∞)`"
           ],
-          "answerIndex": 1,
-          "concept": "Range of a quadratic by completing the square with a negative leading coefficient",
-          "why": "-x^2 + 4x - 1 = -(x-2)^2 + 3, and -(x-2)^2 <= 0, so f(x) <= 3 with equality at x = 2. Option 1 is what a student gets by reading the vertex as a minimum instead of a maximum."
+          "answerIndex": 3,
+          "concept": "Range of a quadratic by completing the square",
+          "why": "x^2 - 6x + 11 = (x - 3)^2 + 2, and (x - 3)^2 >= 0, so the minimum output is 2, giving [2, inf) - 3 is the vertex's x-coordinate, not a range bound."
         },
         {
           "type": "mcq",
-          "q": "If f(x) = (2x-1)/(x+3), then f^-1(x) =",
+          "q": "If `f(x) = (3x − 2)/(x + 4)`, then `f⁻¹(x)` equals:",
           "options": [
-            "(x+3)/(2x-1)",
-            "(3x+1)/(2-x)",
-            "(3x+1)/(x-2)",
-            "(1-2x)/(x+3)"
+            "`(4x + 2)/(3 − x)`",
+            "`(4x + 2)/(x − 3)`",
+            "`(x + 4)/(3x − 2)`",
+            "`(3x + 2)/(x − 4)`"
           ],
-          "answerIndex": 1,
-          "concept": "Finding an inverse by solving for x",
-          "why": "y(x+3) = 2x - 1 gives x(y-2) = -1 - 3y, so x = (3y+1)/(2-y). Option 1 is 1/f(x), the classic inverse-versus-reciprocal error; option 3 loses the sign; option 4 treats inverse as negation."
+          "answerIndex": 0,
+          "concept": "Swap-and-solve inverse for a rational function",
+          "why": "y(x + 4) = 3x - 2 rearranges to x(y - 3) = -(4y + 2), so x = (4x + 2)/(3 - x) after renaming; verified by f(2) = 2/3 and f-inverse(2/3) = 2."
         },
         {
           "type": "mcq",
-          "q": "If f(x) = 1/(x-1) and g(x) = x^2, the domain of f composed with g is:",
+          "q": "With `f(x) = 1/(x − 2)` and `g(x) = √x`, the domain of `f∘g` is:",
           "options": [
-            "R",
-            "R excluding 1",
-            "R excluding -1 and 1",
-            "R excluding 0 and 1"
+            "`[0, ∞)`",
+            "all `x ≠ 4`",
+            "`[0, 4) ∪ (4, ∞)`",
+            "`(0, ∞)`"
           ],
           "answerIndex": 2,
-          "concept": "Domain of a composite is not the domain of the inner function",
-          "why": "(f o g)(x) = 1/(x^2 - 1), so x^2 - 1 must be nonzero, excluding both x = 1 and x = -1. Option 2 is the common slip of solving only x = 1, and option 1 uses the domain of g while forgetting that g(x) must land in the domain of f."
+          "concept": "Two-part domain rule for a composite",
+          "why": "(f o g)(x) = 1/(sqrt(x) - 2) needs x >= 0 for g to be defined and sqrt(x) != 2, that is x != 4, for f to accept the output, giving [0, 4) union (4, inf)."
+        },
+        {
+          "type": "mcq",
+          "q": "If `f(x) = 2x − 1` and `g(x) = x² + x`, then `(g∘f)(3)` equals:",
+          "options": [
+            "23",
+            "60",
+            "25",
+            "30"
+          ],
+          "answerIndex": 3,
+          "concept": "Order of composition and correct evaluation",
+          "why": "g o f means f acts first: f(3) = 5, then g(5) = 25 + 5 = 30; reversing the order gives 23 and multiplying the values gives 60."
+        },
+        {
+          "type": "mcq",
+          "q": "A student claims the inverse of `f(x) = 2x + 7` is `g(x) = 2x − 7`. The quickest check that exposes the error is to:",
+          "options": [
+            "confirm that `g` is linear",
+            "compute `f(g(x))` and see that it is not `x`",
+            "apply the vertical line test to `g`",
+            "compare the two `y`-intercepts"
+          ],
+          "answerIndex": 1,
+          "concept": "Verifying a candidate inverse by composing back to x",
+          "why": "An inverse must satisfy f(g(x)) = x; here f(g(x)) = 2(2x - 7) + 7 = 4x - 7, which is not x, exposing the error immediately, whereas linearity and the vertical line test hold for both functions."
+        },
+        {
+          "type": "mcq",
+          "q": "The range of `f(x) = (2x + 1)/(x − 3)` is:",
+          "options": [
+            "all reals except 3",
+            "all reals except `−1/2`",
+            "all reals except 2",
+            "all reals"
+          ],
+          "answerIndex": 2,
+          "concept": "Range of a rational function by solving for x",
+          "why": "y = (2x + 1)/(x - 3) gives x = (3y + 1)/(y - 2), solvable for every y except 2, so the excluded output is 2 while 3 is the excluded input."
+        },
+        {
+          "type": "mcq",
+          "q": "With `f(x) = √(x − 1)` and `g(x) = x − 5`, the domain of `f/g` is:",
+          "options": [
+            "`[1, 5) ∪ (5, ∞)`",
+            "`[1, ∞)`",
+            "all `x ≠ 5`",
+            "`(1, ∞)`"
+          ],
+          "answerIndex": 0,
+          "concept": "Domain of a quotient of functions",
+          "why": "Take dom f intersect dom g = [1, inf), then remove the zero of the denominator at x = 5, giving [1, 5) union (5, inf); 1 stays because sqrt(0) is defined."
         },
         {
           "type": "short",
-          "q": "Let f(x) = 3x - 2 and g(x) = sqrt(x+1). Compute (g o f)(5) and state the domain of g o f. Show your work.",
-          "concept": "Composite evaluation and the condition f(x) must lie in the domain of g",
-          "why": "Model answer: (g o f)(5) = g(3*5 - 2) = g(13) = sqrt(14). For the domain, require f(x) + 1 >= 0, that is 3x - 2 + 1 >= 0, so 3x - 1 >= 0 and x >= 1/3, giving domain [1/3, infinity)."
+          "q": "A student gives the domain of `h(x) = √(x² − 9)` as `x ≥ 3`. Name the step at which that method went wrong, and give the correct domain with the reasoning that produces it.",
+          "concept": "Solving a quadratic inequality inside a root, not just the obvious branch",
+          "why": "The method went wrong where x^2 - 9 >= 0 was solved as though it forced x >= 3; the inequality holds whenever |x| >= 3, and the negative branch was simply dropped. Correctly, x^2 - 9 >= 0 factors as (x - 3)(x + 3) >= 0, which holds when both factors are non-negative (x >= 3) or both are non-positive (x <= -3). The domain is therefore (-inf, -3] union [3, inf)."
         },
         {
           "type": "short",
-          "q": "Find the range of f(x) = (x+2)/(x-4) by algebraic inversion, and point to the single step that reveals the excluded value.",
-          "concept": "Range of a rational function by algebraic inversion",
-          "why": "Model answer: y(x-4) = x + 2 gives yx - 4y = x + 2, then yx - x = 4y + 2, so x(y-1) = 4y + 2 and x = (4y+2)/(y-1). The revealing step is factoring x to get the coefficient (y-1): division fails when y = 1, so the range is R excluding 1."
+          "q": "Before touching the algebra, you must choose between completing the square and solving `y = f(x)` for `x` when a question asks for a range. Say what feature of the function tells you which to pick, and state which you would use for `f(x) = (x + 2)/(x − 4)` and why.",
+          "concept": "Choosing the route to a range from the shape of the function",
+          "why": "Completing the square is the route for a quadratic, because it exhibits the vertex and hence the single extreme value the parabola attains. Solving y = f(x) for x is the route for a rational function, because the range is then every y for which that solution exists. f(x) = (x + 2)/(x - 4) is rational, so solve for x: x = (4y + 2)/(y - 1), which fails only at y = 1, giving a range of all reals except 1."
+        },
+        {
+          "type": "short",
+          "q": "You have just produced a candidate `f⁻¹` for `f(x) = (x − 1)/(x + 2)`. Describe the check you would run, state exactly what the check must return, and say what a failure would tell you about where the error is.",
+          "concept": "Verifying a candidate inverse by composing in both directions",
+          "why": "Compose the candidate with f both ways round: the check must return f(f-inverse(x)) = x and f-inverse(f(x)) = x identically, not merely at one convenient test value. If only one composition returns x, the swap-and-solve algebra is sound but a domain restriction has been missed. If neither does, the error is in the rearrangement itself, and comparing the failed composite against x usually shows which term was mishandled."
+        },
+        {
+          "type": "short",
+          "q": "For `f(x) = 1/x` and `g(x) = x − 3`, explain why `f∘g` and `g∘f` have different domains, naming the excluded value in each case.",
+          "concept": "A composite's domain depends on the order of composition",
+          "why": "f o g means g runs first: (f o g)(x) = 1/(x - 3), which requires x - 3 != 0, so x = 3 is excluded. g o f means f runs first: (g o f)(x) = 1/x - 3, which requires x != 0, so x = 0 is excluded. The excluded value differs because in each case it is whatever makes the first function undefined, or makes its output an illegal input for the second - and the two orders ask different questions of the input."
         }
       ]
     },
@@ -468,72 +753,136 @@
       "id": "fri-phy102",
       "day": "Fri",
       "course": "PHY_102",
-      "topic": "Coulomb's law, superposition and charge quantisation calculations",
-      "maxScore": 6,
+      "topic": "This session takes the same week-1 material and works it as problems. It covers converting between a net charge and a number of transferred electrons using q = ne; tracking charge through transfers, including the averaging rule q' = (q1+q2)/2 for identical conducting spheres in contact and following a charge through two successive contacts; and computing Coulomb forces with attention to squaring the separation and converting centimetres to metres. It covers adding forces and fields as vectors, including the case of two equal and opposite charges whose contributions at the midpoint reinforce rather than cancel, and finding the point on a line where the resultant field vanishes. It covers computing the field of a point charge and the force it exerts on a charge placed in it, including the direction reversal for a negative charge. It also covers diagnosing a wrong route from the shape of a formula, and checking a result by units and by order of magnitude. Constants used throughout: k = 8.99x10^9 N.m^2.C^-2, e = 1.6x10^-19 C.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "Two point charges, q1 = +5.0 microcoulombs and q2 = -2.0 microcoulombs, are 0.30 m apart in vacuum. Taking k = 8.99e9 N m^2/C^2, the magnitude of the force between them is closest to:",
+          "q": "An object carries a net charge of −4.8×10⁻¹⁷ C. How many excess electrons does it hold?",
           "options": [
-            "1.0 N",
-            "0.30 N",
-            "3.0 N",
-            "1.0e-6 N"
+            "3.0×10³",
+            "3.3×10⁻³",
+            "3.0×10²",
+            "7.7×10⁻³⁶"
           ],
-          "answerIndex": 0,
-          "concept": "Coulomb's law with correct unit conversion and squaring of the separation",
-          "why": "F = (8.99e9)(5.0e-6)(2.0e-6)/(0.30)^2 = 0.0899/0.090, which is about 1.0 N and attractive. 0.30 N comes from dividing by r instead of r squared, 3.0 N from the slip (0.30)^2 = 0.03, and 1.0e-6 N from reading microcoulombs as nanocoulombs."
+          "answerIndex": 2,
+          "concept": "Converting a net charge to a number of electrons",
+          "why": "n = 4.8x10^-17 / 1.6x10^-19 = 3.0x10^2 electrons."
         },
         {
           "type": "mcq",
-          "q": "A charge of +3.0 microcoulombs sits at x = 0 and a charge of -3.0 microcoulombs at x = 0.40 m. A +2.0 microcoulomb charge is placed at the midpoint, x = 0.20 m. The net force on it is:",
+          "q": "Point charges of +2.0 μC and −5.0 μC are held 4.0 cm apart in vacuum. The magnitude of the force between them is:",
           "options": [
-            "2.7 N directed toward the negative charge",
-            "zero, because the two source charges are equal and opposite",
-            "1.3 N directed toward the negative charge",
-            "2.7 N directed toward the positive charge"
+            "2.2 N",
+            "9.0×10⁻² N",
+            "5.6×10⁻³ N",
+            "56 N"
           ],
-          "answerIndex": 0,
-          "concept": "Superposition: forces are added as vectors, not by cancelling charge magnitudes",
-          "why": "The positive source repels the test charge toward the negative one and the negative source attracts it the same way, so the two 1.35 N contributions add to 2.7 N. Choosing zero is the classic error of cancelling because the sources are equal and opposite."
+          "answerIndex": 3,
+          "concept": "Coulomb's law with unit conversion and r squared",
+          "why": "F = (8.99x10^9)(2.0x10^-6)(5.0x10^-6)/(0.040)^2 = 8.99x10^-2 / 1.6x10^-3 = 56 N."
         },
         {
           "type": "mcq",
-          "q": "An object carries a net charge of -8.0e-19 C. Taking e = 1.602e-19 C, the number of excess electrons on it is:",
+          "q": "Two identical metal spheres carry +9.0 nC and −3.0 nC. They are touched together and separated again. Each now carries:",
           "options": [
-            "5",
-            "8",
-            "0.20",
-            "1.3e-37"
+            "+6.0 nC",
+            "+3.0 nC",
+            "+4.5 nC",
+            "0"
           ],
-          "answerIndex": 0,
-          "concept": "Quantisation of charge, n = q divided by e",
-          "why": "n = 8.0e-19 / 1.602e-19 = 5 electrons. Option 2 reads the coefficient as the count, option 3 inverts the division, and option 4 multiplies by e instead of dividing."
+          "answerIndex": 1,
+          "concept": "Charge sharing between identical conductors, with signs kept",
+          "why": "q' = (+9.0 - 3.0)/2 = +3.0 nC on each sphere."
         },
         {
           "type": "mcq",
-          "q": "Two point charges exert a force F on each other. One of the charges is now tripled and the separation is halved. The new force is:",
+          "q": "A +2.0 μC charge sits at x = 0 and a +8.0 μC charge at x = 0.30 m. At what point between them is the resultant electric field zero?",
           "options": [
-            "12F",
-            "6F",
-            "1.5F",
-            "24F"
+            "0.10 m from the 2.0 μC charge",
+            "0.15 m from the 2.0 μC charge",
+            "0.060 m from the 2.0 μC charge",
+            "0.20 m from the 2.0 μC charge"
           ],
           "answerIndex": 0,
-          "concept": "Scaling in Coulomb's law: linear in charge, inverse-square in distance",
-          "why": "F is proportional to q1q2 over r squared, so tripling one charge multiplies by 3 and halving r multiplies by 2 squared = 4, giving 12F. 6F forgets to square the distance factor and 24F wrongly squares the charge factor too."
+          "concept": "Locating the null point of two like charges",
+          "why": "Equal field magnitudes require (0.30 - x)/x = sqrt(8/2) = 2, giving x = 0.10 m, nearer the smaller charge."
+        },
+        {
+          "type": "mcq",
+          "q": "At a certain point the electric field is 2.0×10⁴ N·C⁻¹ pointing east. An electron is released there. The force on it is:",
+          "options": [
+            "3.2×10⁻¹⁵ N east",
+            "3.2×10⁻¹⁵ N west",
+            "8.0×10⁻²⁴ N west",
+            "1.3×10²³ N east"
+          ],
+          "answerIndex": 1,
+          "concept": "Force on a negative charge in a known field",
+          "why": "F = eE = (1.6x10^-19)(2.0x10^4) = 3.2x10^-15 N, directed opposite to E because the electron is negative."
+        },
+        {
+          "type": "mcq",
+          "q": "Asked for the field 4.0 cm from a +2.0 nC point charge, a student writes E = kQ/r = (8.99×10⁹)(2.0×10⁻⁹)/(0.040) = 450 N·C⁻¹. Which statement is correct?",
+          "options": [
+            "The working is right; only the unit should be N·m·C⁻¹.",
+            "k is wrong here and should be ε₀ = 8.85×10⁻¹², giving 4.4×10⁻¹³ N·C⁻¹.",
+            "The separation must be squared, giving 1.1×10⁴ N·C⁻¹.",
+            "The charge must first be divided by e, giving 2.8×10²¹ N·C⁻¹."
+          ],
+          "answerIndex": 2,
+          "concept": "Diagnosing a wrong route: 1/r versus 1/r^2",
+          "why": "The field law divides by r^2, so E = 17.98/(0.040)^2 = 1.1x10^4 N.C^-1, not the student's 450."
+        },
+        {
+          "type": "mcq",
+          "q": "Charges of +4.0 μC and −4.0 μC are fixed at points A and B, 20 cm apart. A +1.0 μC charge is placed exactly midway between them. The net force on it is:",
+          "options": [
+            "zero, since the two charges are equal and opposite",
+            "3.6 N directed toward B",
+            "7.2 N directed toward A",
+            "7.2 N directed toward B"
+          ],
+          "answerIndex": 3,
+          "concept": "Vector superposition of two equal and opposite charges",
+          "why": "Both the attraction toward -4.0 uC and the repulsion from +4.0 uC point the same way, so the 3.6 N contributions add to 7.2 N toward B."
+        },
+        {
+          "type": "mcq",
+          "q": "Sphere X carries +8.0 nC. It is touched to identical neutral sphere Y and separated; Y is then touched to identical neutral sphere Z and separated. The final charge on Y is:",
+          "options": [
+            "+2.0 nC",
+            "+4.0 nC",
+            "+2.7 nC",
+            "+1.0 nC"
+          ],
+          "answerIndex": 0,
+          "concept": "Conservation traced through two successive contacts",
+          "why": "X and Y each take +4.0 nC, then Y and Z halve that to +2.0 nC each, and 4.0 + 2.0 + 2.0 = 8.0 nC confirms the total is conserved."
         },
         {
           "type": "short",
-          "q": "A charge of +q is at x = 0 and a charge of +4q is at x = 0.60 m. Find the point on the line between them where a small test charge feels ZERO net force, and show the reasoning that fixes which side of the midpoint it lies on.",
-          "concept": "Null point between two like charges, and why it sits nearer the weaker charge",
-          "why": "Model answer: set kq/x^2 = k(4q)/(0.60 - x)^2, take square roots to get (0.60 - x)/x = 2, so 0.60 - x = 2x and x = 0.20 m from the +q charge. It must lie nearer the smaller charge because only the extra distance from the larger charge, acting through the inverse-square factor, can offset its four-times-greater magnitude."
+          "q": "In a lab problem two small charged spheres about a metre apart carry charges of a few microcoulombs, and a student's answer for the force comes out as 4.0×10⁵ N. Explain why the size of that answer alone should tell you something has gone wrong, and describe how you would work backwards to locate the error.",
+          "concept": "Order-of-magnitude checking on a Coulomb's law result",
+          "why": "With charges of a few microcoulombs about a metre apart, F is roughly (9x10^9)(10^-6)(10^-6)/1, that is of order 10^-2 N - hundredths of a newton, not hundreds of kilonewtons. An answer of 4.0x10^5 N is about seven orders of magnitude too large, which points to a unit error rather than an arithmetic slip. Work backwards by checking the exponents one at a time: whether the microcoulombs were entered as 10^-6, whether the separation was squared, and whether centimetres were converted to metres."
         },
         {
           "type": "short",
-          "q": "Charges of +2.0 microcoulombs at x = 0 and +8.0 microcoulombs at x = 0.30 m are fixed on a line. A charge of -1.0 microcoulomb is placed at x = 0.10 m. Work out the net force on it, and explain what the result tells you about how distance and charge magnitude compete.",
-          "concept": "Superposition with attractive forces, and the dominance of the inverse-square distance factor",
-          "why": "Model answer: the +2.0 microcoulomb charge at 0.10 m pulls with F1 = k(2.0e-6)(1.0e-6)/(0.10)^2 = 1.80 N toward negative x, and the +8.0 microcoulomb charge at 0.20 m pulls with F2 = k(8.0e-6)(1.0e-6)/(0.20)^2 = 1.80 N toward positive x, so the net force is zero. Quadrupling the charge is exactly cancelled by doubling the distance, since 2/0.01 = 8/0.04, showing that distance is the more powerful variable and the bigger charge does not automatically win."
+          "q": "A student leaves the separation in centimetres in Coulomb's law. Explain why the answer is then wrong by a factor of 10⁴ rather than 10², and say whether the computed force comes out too large or too small.",
+          "concept": "Why a length-unit error is squared in Coulomb's law",
+          "why": "The separation enters the law as r^2, so any factor by which r is wrong is squared in the result. Leaving r in centimetres makes the number 100 times too large, and squaring that makes the denominator 10^4 times too large. The computed force therefore comes out 10^4 times too small."
+        },
+        {
+          "type": "short",
+          "q": "The field at a point can be found either as E = F/q₀ or as E = kQ/r². Show, by working through the units of each expression, that both must give N·C⁻¹, and explain why this is a useful check on a formula you half-remember.",
+          "concept": "Dimensional consistency of the two expressions for E",
+          "why": "F/q0 has units N/C directly. kQ/r^2 has units (N.m^2.C^-2)(C)/m^2 = N.m^2.C^-1/m^2 = N.C^-1, the same thing. This is a useful check because a half-remembered formula that has lost a power of r, or divided by the wrong quantity, will not reduce to N.C^-1 - the units fail before any arithmetic is done, so the error is caught early and for free."
+        },
+        {
+          "type": "short",
+          "q": "For two positive charges of different size, the point where the resultant field vanishes always lies nearer the *smaller* charge. Explain why this must be so without doing the algebra, and state what changes about the location of the null point if one of the charges is made negative instead.",
+          "concept": "Where the null point of two like charges must lie",
+          "why": "At the null point the two field magnitudes are equal. The larger charge produces the stronger field at any given distance, so to be matched by the smaller charge's field it must be viewed from further away - which places the null point nearer the smaller charge, and between the two for like charges. If one charge is made negative the two contributions no longer oppose each other between the charges; they reinforce there, so no null point exists between them and it moves outside the pair, on the side of the smaller charge."
         }
       ]
     },
@@ -541,72 +890,136 @@
       "id": "sat-cos102",
       "day": "Sat",
       "course": "COS_102",
-      "topic": "Tracing the final-grade algorithm, boundary conditions, error types and refactoring",
-      "maxScore": 6,
+      "topic": "This session is Week 1 applied - the method worked through on concrete problems. The student traces the lecture's student-grade flowchart (five grades, average, pass mark 45, decision box \"Is Grade > 44\") on real numbers including the boundary case where the average lands exactly on 45, then alters the decision box to \"Is Grade > 45\" and works out precisely which candidates are misclassified as a result. He reads a faulty pseudocode that sums four grades but divides by five, identifies the fault and classifies it against the three error types, and reasons about which test inputs would and would not expose it. He runs step 1 of the four steps on the inventory management case study, separating genuine inputs, processes and outputs from outcomes and from the tools themselves, then decomposes that case study into subproblems and distinguishes real decomposition from mere phasing, delegation or file-splitting. He classifies stated scenarios into the four computational problem types, particularly the optimization-versus-search and decision-versus-search boundaries. Finally he diagnoses a failed attempt by another student and locates which of the four steps actually went wrong. Reading, tracing and applying rather than reciting.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "Trace this fragment with the inputs 40, 50, 45, 40, 50. What does it print? Fragment: INPUT G1, G2, G3, G4, G5 / Grade <- (G1+G2+G3+G4+G5)/5 / IF Grade > 44 THEN PRINT PASS ELSE PRINT FAIL",
+          "q": "The lecture flowchart reads the five grades, computes Grade as their average, then asks \"Is Grade > 44\", printing PASS on the true branch and FAIL on the false branch. The grades entered are 40, 50, 45, 44, 46. What does it print?",
           "options": [
-            "FAIL - the average is 44, and 44 is not greater than 44",
-            "PASS - the average is 45, and 45 > 44",
-            "FAIL - three of the five grades are below the pass mark",
-            "PASS - the average is 44, and the pass mark is 44"
+            "FAIL, because the average works out at 44 and the pass mark is 45.",
+            "FAIL, because two of the five grades entered are themselves below the pass mark.",
+            "PASS, because three of the five grades are at or above the pass mark of 45.",
+            "PASS, because the average is 45 and 45 is greater than 44."
+          ],
+          "answerIndex": 3,
+          "concept": "Tracing the grade flowchart on a boundary input",
+          "why": "40 + 50 + 45 + 44 + 46 = 225, so Grade = 45; the box asks whether Grade > 44, which 45 satisfies, so the true branch prints PASS."
+        },
+        {
+          "type": "mcq",
+          "q": "A student decides the decision box is sloppy and rewrites it as \"Is Grade > 45\", saying the pass mark is 45 so the test should say 45. Who is now handled differently?",
+          "options": [
+            "A student averaging exactly 45 is printed FAIL, although 45 is the pass mark.",
+            "Every student is printed FAIL, because a strict inequality can never hold on an average.",
+            "A student averaging exactly 44 is now printed PASS instead of FAIL.",
+            "Nobody; since grades are whole numbers, \"> 44\" and \"> 45\" select exactly the same students."
           ],
           "answerIndex": 0,
-          "concept": "Tracing a fragment; strict inequality at the boundary",
-          "why": "40+50+45+40+50 = 225 and 225/5 = 44; the test is strictly greater than 44, so 44 fails - correctly, since the pass mark is 45. Option 3 encodes the misconception that individual grades, not the average, are compared with the pass mark."
+          "concept": "Off-by-one in the decision box",
+          "why": "'> 44' admits exactly 45 while '> 45' excludes it, so a student averaging precisely the pass mark of 45 is wrongly printed FAIL."
         },
         {
           "type": "mcq",
-          "q": "A student's flowchart uses the decision 'Is Grade > 45' instead of 'Is Grade > 44'. A candidate scores an average of exactly 45. What happens, and what kind of defect is it?",
+          "q": "Someone hands you this pseudocode for the same task:\n\n```\nREAD G1, G2, G3, G4, G5\nGrade = (G1 + G2 + G3 + G4) / 5\nIF Grade > 44 THEN PRINT \"PASS\" ELSE PRINT \"FAIL\"\n```\n\nWhat is wrong, and what kind of error is it?",
           "options": [
-            "The program refuses to run; a run-time error",
-            "The program prints FAIL for a student who passed; a logical error",
-            "The program prints PASS for a student who failed; a logical error",
-            "The program will not compile, because the greater-than operator cannot be used with the value 45; a syntax error"
-          ],
-          "answerIndex": 1,
-          "concept": "Off-by-one boundary condition is a logical error",
-          "why": "Pass mark 45 means pass if and only if Grade >= 45, that is Grade > 44; testing > 45 excludes exactly 45 and fails a genuine passer. The code is legal and runs to completion, so the defect is logical, not syntax or run-time."
-        },
-        {
-          "type": "mcq",
-          "q": "Classify each failure: (i) PRNT PASS is typed instead of PRINT PASS; (ii) the divisor is typed as 4 instead of 5, so every average comes out too high; (iii) the count of grades is read from the user as N and the average is computed as Sum/N, and the user enters N = 0.",
-          "options": [
-            "(i) logical, (ii) syntax, (iii) run-time",
-            "(i) syntax, (ii) logical, (iii) run-time",
-            "(i) syntax, (ii) run-time, (iii) logical",
-            "(i) run-time, (ii) logical, (iii) syntax"
-          ],
-          "answerIndex": 1,
-          "concept": "Syntax vs logical vs run-time errors",
-          "why": "PRNT breaks the language's rules, so it is caught as a syntax error before execution; dividing by 4 is legal code giving wrong results, a logical error; division by zero is legal code that fails while executing, a run-time error."
-        },
-        {
-          "type": "mcq",
-          "q": "Which rewrite of the pass/fail test is a genuine refactor? Original: IF Grade > 44 THEN PRINT PASS ELSE PRINT FAIL",
-          "options": [
-            "IF Grade >= 45 THEN PRINT PASS ELSE PRINT FAIL",
-            "IF Grade > 44 THEN PRINT PASS, and separately IF Grade > 45 THEN PRINT FAIL",
-            "PASSMARK <- 45 / IF Grade < PASSMARK THEN PRINT FAIL ELSE PRINT PASS",
-            "IF Grade > 44 THEN PRINT PASSED WITH DISTINCTION ELSE PRINT FAIL"
+            "A syntax error: the compiler will reject the second line because G5 is read but never used.",
+            "A run time error: the program will fail at the point where the unused fifth grade is reached.",
+            "A logic error: it runs to the end but averages wrongly, so only testing exposes it.",
+            "Nothing worth fixing: dropping one of five grades shifts the average by too little to change PASS or FAIL."
           ],
           "answerIndex": 2,
-          "concept": "Refactoring vs behaviour change",
-          "why": "Option 3 gives identical output for every input while naming the pass mark once, improving structure so a future change touches one line. Option 1 is behaviour-identical but improves nothing; option 2 changes behaviour (50 would print both PASS and FAIL); option 4 changes the output."
+          "concept": "Classifying a fault that compiles and runs",
+          "why": "Summing four grades and dividing by five is syntactically valid and never crashes; it simply computes a wrong average, which is the definition of a logic error, and only testing against known answers reveals it."
+        },
+        {
+          "type": "mcq",
+          "q": "Working step 1 (understand the problem) on the inventory case study, which line correctly separates input, process and output?",
+          "options": [
+            "Input: the reorder quantity. Process: the sales history. Output: the current stock level of the product.",
+            "Input: current stock level and sales history. Process: comparing stock against a reorder point. Output: the reorder quantity.",
+            "Input: lost sales and carrying costs. Process: the manager's judgement about demand. Output: an improved profit margin.",
+            "Input: the algorithm. Process: the flowchart drawn from it. Output: the pseudocode that the program is written from."
+          ],
+          "answerIndex": 1,
+          "concept": "Applying step 1 to separate input, process and output",
+          "why": "Stock level and sales history are the data going in, comparing against a reorder point is the processing, and the reorder quantity is what comes out; the other options swap the roles, name an outcome rather than an output, or confuse the tools with the data."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of these is a decomposition of the inventory problem in the sense step 2 means?",
+          "options": [
+            "Restock all the fast-moving products first, and deal with the slow-moving ones in a separate later phase of the work.",
+            "Write the whole thing as one long program first, then split that finished program across several smaller source files.",
+            "Hand each branch manager the same inventory problem and let them solve it independently for the branch they run.",
+            "Record current stock; compute each product's sales rate; set a reorder point; order when stock drops below it."
+          ],
+          "answerIndex": 3,
+          "concept": "What decomposition actually means",
+          "why": "Splitting the problem into smaller problems each small enough to solve - record stock, compute sales rate, set reorder point, raise order - whereas phasing, delegating and splitting files all leave the original problem intact."
+        },
+        {
+          "type": "mcq",
+          "q": "\"Within a fixed storage budget, choose the stock mix that keeps total carrying cost as low as possible while never running out of the top ten sellers.\" Which computational problem type is this, and why?",
+          "options": [
+            "Decision, because what is really being asked is whether the storage budget is sufficient.",
+            "Counting, because the number of product lines that fit inside the budget must be determined.",
+            "Optimization, because the best possible mix under stated limitations is what is accepted.",
+            "Search, because a stock mix having a particular stated property is what has to be found."
+          ],
+          "answerIndex": 2,
+          "concept": "Optimization versus search",
+          "why": "A budget-constrained mix that keeps carrying cost as low as possible is one where the best possible solution is what is accepted, which is optimization; search would accept any mix with the stated property, not the best one."
+        },
+        {
+          "type": "mcq",
+          "q": "\"At close of business, report whether any product at all has fallen below its reorder point.\" Which type is this?",
+          "options": [
+            "Decision, because the solution is either YES or NO.",
+            "Search, because the products that have fallen below must be located and listed.",
+            "Counting, because the number below their reorder points has to be totalled up.",
+            "Optimization, because the best reorder point for each product is being determined."
+          ],
+          "answerIndex": 0,
+          "concept": "Decision versus search",
+          "why": "The question asks only whether any product is below its reorder point, so the solution is YES or NO, which is a decision problem; naming or counting the products would be search or counting."
+        },
+        {
+          "type": "mcq",
+          "q": "Chidi opens his editor straight away and writes sixty lines from the case-study description. Only when it orders stock for products the store does not carry does he find that the sales file is keyed by supplier code, not product code. Which step failed?",
+          "options": [
+            "Step 3, carrying out the solution plan — he compiled the program when he should have interpreted it.",
+            "Step 1, understanding the problem — he never established what the inputs actually were.",
+            "Step 4, evaluate and refactor — the working solution simply needs refactoring to accept supplier codes.",
+            "Step 2, creating the plan — his steps were ordered and unambiguous, but not complete."
+          ],
+          "answerIndex": 1,
+          "concept": "Locating the failed step in someone else's attempt",
+          "why": "Chidi never established what the inputs actually were before writing code, so the failure is at step 1, understanding the problem - no amount of planning or refactoring rescues a misidentified input."
         },
         {
           "type": "short",
-          "q": "Two fragments compute the same total. Fragment A: Sum <- 0 / Sum <- Sum+G1 / Sum <- Sum+G2 / Sum <- Sum+G3 / Sum <- Sum+G4 / Sum <- Sum+G5 / Grade <- Sum/5. Fragment B: Sum <- 0 / FOR i FROM 1 TO 5 DO Sum <- Sum + G[i] / Grade <- Sum/5. Explain why B counts as a refactor of A, and state the one thing you would have to check about B before calling it a refactor rather than a rewrite.",
-          "concept": "Refactoring for concision and efficiency; loop-bound verification",
-          "why": "Model answer: B yields exactly the same Grade for the same five inputs but replaces five repeated additions with one loop - more concise, better structured and easily extended - which is precisely improving structure and efficiency without changing the function of the solution. Before calling it a refactor I would check the loop bounds: that FOR i FROM 1 TO 5 includes both 1 and 5 and that G[1] to G[5] are the same five grades A adds; an array indexed from 0 would silently change which values are summed, making it a rewrite."
+          "q": "Trace the lecture flowchart, box by box, on the grades 30, 60, 50, 40, 40. Name each box in the order it executes, give the value the process box produces, and say what is printed and why.",
+          "concept": "Tracing a flowchart box by box on given data",
+          "why": "Order of execution: Start; the input box reading G1..G5 as 30, 60, 50, 40, 40; the process box computing Grade = 220/5 = 44; the decision box 'Is Grade > 44?'; since 44 is not greater than 44 the false branch is taken; the output box prints FAIL; Stop. The process box produces 44, and FAIL is printed because the test is a strict inequality that 44 fails by exactly one mark."
         },
         {
           "type": "short",
-          "q": "A program is supposed to print PASS for a mark of exactly 45 but prints FAIL. The programmer runs it with the marks 45, 46 and 44, sees the wrong output for 45, then inspects the code, finds IF Grade > 45, and changes it to IF Grade > 44. Name which parts of this were testing, which were debugging, and explain why the final change is not a refactor.",
-          "concept": "Debugging vs testing; refactoring vs fixing a bug",
-          "why": "Model answer: running the program with 45, 46 and 44 and comparing output against expectation is testing - the process that verifies the program works as expected. Inspecting the code, locating IF Grade > 45 as the cause and removing it is debugging - the process that finds errors so they can be removed to avoid program failure. The change from > 45 to > 44 is not a refactor because refactoring improves structure, design or efficiency without changing the function of the solution, whereas this deliberately alters the output for a mark of exactly 45 from FAIL to PASS; changing behaviour on purpose is fixing a bug."
+          "q": "A classmate says the flowchart is wrong because FAIL is drawn on the left branch and PASS on the right, and \"a flowchart always takes the left branch when the condition is true\". Explain why the position of a branch on the page decides nothing, and say what actually determines which branch is taken.",
+          "concept": "Branch position on the page carries no meaning",
+          "why": "Which branch a flowchart takes is determined solely by the labels on the arrows leaving the decision box - the one marked true (or Yes) when the condition holds, the one marked false (or No) when it does not. Layout is a drafting convenience: the same chart may be drawn with the branches mirrored, rotated, or stacked one above the other, and it means exactly the same thing. There is no convention that true goes left, and a chart with unlabelled branches is ambiguous however it is drawn."
+        },
+        {
+          "type": "short",
+          "q": "Your grade program passes both of the tests you ran: 90, 90, 90, 90, 90 gives PASS and 10, 10, 10, 10, 10 gives FAIL. Explain why neither test would have caught the `(G1+G2+G3+G4)/5` fault from question 3, and give one set of five grades that would catch it.",
+          "concept": "Why unrepresentative test data hides a logic error",
+          "why": "The fault omits G5 while still dividing by 5, so the computed value falls short of the true average by exactly G5/5. With five 90s the true average is 90 and the faulty value 72 - both comfortably above 44, so PASS is printed either way. With five 10s the true average is 10 and the faulty value 8 - both well below 44, so FAIL is printed either way. Both tests sit far from the boundary, so an error of that size never changes the verdict. A set such as 40, 40, 40, 40, 90 catches it: the true average is 50 and should print PASS, but the faulty code computes 160/5 = 32 and prints FAIL."
+        },
+        {
+          "type": "short",
+          "q": "You replace the flowchart's five separate input boxes and its one long addition with a loop that reads a grade and adds it to a running total five times. Explain why this counts as refactoring under the week's definition, and state the one thing you must check before you are entitled to call it a refactor rather than a rewrite.",
+          "concept": "What makes a change a refactor rather than a rewrite",
+          "why": "It is refactoring because only the structure changes - five input boxes and one long addition become a single loop with a running total - while the function is untouched: the same five grades go in and the same average and the same PASS or FAIL come out. It improves concision and makes the number of grades easy to change. Before calling it a refactor you must check that the observable behaviour is identical on the same inputs, boundary cases included; if the loop reads a different number of grades, or the verdict shifts at the pass mark, it is a rewrite, not a refactor."
         }
       ]
     }
@@ -614,31 +1027,31 @@
   "recapCandidates": [
     {
       "course": "PHY_102",
-      "topic": "Charging by induction and the role of the ground connection",
-      "whyMisunderstood": "Students memorise the phrase 'induction charges an object without touching it' but never track what actually moves, so they default to conduction thinking and predict the object ends up with the same sign as the rod. The ground wire is treated as a decorative step rather than the escape route that makes the charge permanent, and the order of removal (wire first, then rod) is learned as a ritual instead of a consequence. Textbook phrasing that says 'the positive charges move to the near end' compounds the damage, because in a metal only electrons ever move.",
+      "topic": "Charging by induction versus charging by conduction: why contact leaves the same sign and no contact leaves the opposite one.",
+      "whyMisunderstood": "Both methods start with a charged rod near a conductor, so the two get filed as one procedure, and the earthing step is remembered as a place where charge is 'drained off' rather than as the step that selects which sign stays behind.",
       "whyQuestions": [
-        "Walk me through what happens when a negatively charged rod is brought near a neutral metal sphere - what physically moves, and in which direction?",
-        "You said the near side becomes positive. Which particles actually travelled to make that happen, and where are the protons during all of this?",
-        "Why does the sphere still end up with a net charge after grounding, when before grounding it was only polarised and would go back to neutral?",
-        "Why must the ground wire be removed before the rod, and not the other way round? Predict what the sphere's final charge is if you reverse the order, and say why.",
-        "If the rod were positive instead of negative, which way do the electrons flow through the ground wire, and what sign does the sphere end up with? Now explain why the sphere's final charge does not depend on how much charge the rod itself carries."
+        "Which particles actually move when any object is charged, and which never do?",
+        "In conduction, why do the rod and the sphere end up with the same sign?",
+        "In induction the rod never touches the sphere, so where does the sphere's charge come from?",
+        "Why must the earth connection be broken before the rod is taken away, and not after?",
+        "The rod loses charge in conduction but not in induction. Why does that difference follow from the mechanisms rather than being an extra fact to memorise?"
       ],
-      "goodAnswerContains": "Only free electrons move in the metal; a positive region means an electron deficit, never migrated protons, and the near face's sign is opposite to the rod's | Grounding provides a path for electrons to leave (negative rod) or enter (positive rod) the sphere, converting temporary polarisation into a real net charge that is opposite in sign to the rod | The ground must be broken while the rod is still present, because the rod's field is what holds the imbalance in place; remove the rod first and the electrons flow back and the sphere returns to neutral",
-      "workedExample": "A neutral metal sphere sits on an insulating stand and a negatively charged plastic rod is brought close without touching it; the rod's field repels the sphere's free electrons to the far side, so the far side is negative and the near side is positive by electron deficit, with the sphere's total charge still zero; a wire is now connected from the sphere to earth, and the repelled electrons flow down the wire into the ground because the earth is an effectively infinite reservoir and the rod keeps pushing them away; the wire is disconnected while the rod is still in place, trapping the electron shortage on the sphere; the rod is then withdrawn, and with no field to hold it the remaining positive charge redistributes uniformly over the sphere's surface; the sphere is left permanently positive, opposite in sign to the rod, and the rod has lost no charge of its own; had the rod been removed before the wire, the electrons would simply have flowed back up from earth and the sphere would have ended neutral."
+      "goodAnswerContains": "It says that only electrons move, in both methods, and that the sign of an object is decided by whether it has gained or lost them.\nIt explains conduction as direct sharing on contact - charge flows until the two bodies are at the same potential, so both carry the same sign and the rod is left with less than it began with.\nIt explains induction as separation followed by selective removal: the rod's field pushes like charge to the far side, earthing lets exactly that charge escape, and breaking the earth first traps the imbalance, leaving the opposite sign while the rod's own charge is untouched because nothing crossed the gap.",
+      "workedExample": "A negatively charged rod is brought near an isolated metal sphere on an insulating stand. CONDUCTION: touch the rod to the sphere. Electrons flow from the rod onto the sphere until both are at the same potential. Remove the rod: the sphere is left negative, the same sign as the rod, and the rod is now less negative than it was. INDUCTION: hold the rod close without touching. The sphere polarises - near side positive, far side negative - but its net charge is still zero. Now earth the far side with a wire: the repelled electrons escape to earth. Break the earth connection while the rod is still held in place. Only now remove the rod. The sphere is left with a net POSITIVE charge, opposite to the rod, and the rod's own charge is exactly what it was at the start. If instead you removed the rod before breaking the earth, electrons would flow straight back from earth and the sphere would end up neutral - which is the single most common way this is got wrong."
     },
     {
       "course": "MTH_102",
-      "topic": "The domain of a composite function f o g",
-      "whyMisunderstood": "Students compute (f o g)(x), simplify the formula, and then read the domain off the simplified expression as if it were an ordinary function, losing restrictions that came from g. They also assume the domain of f o g is just the domain of g, forgetting the second condition that g(x) must itself be an admissible input for f. Simplification is where the damage happens: cancelling a factor silently deletes a point that was never legal in the first place.",
+      "topic": "Why a function must be one-to-one before it can be inverted, and why the domain - not the formula - is what decides.",
+      "whyMisunderstood": "Inversion is learned as the three-step algorithm (write y = f(x), swap x and y, solve for y), and the algorithm runs happily on functions that have no inverse, so it produces an answer that looks right and nothing in the procedure flags the problem.",
       "whyQuestions": [
-        "For f(x) = 1/(x-2) and g(x) = sqrt(x), what is the formula for (f o g)(x) and what is its domain?",
-        "Why is x = 4 excluded, when 4 is a perfectly legal input for g?",
-        "Why do we also still require x >= 0, even though the number sqrt(x) - 2 would make sense for some negative x if we allowed complex values?",
-        "Write the general rule for the domain of f o g in set-builder form, and explain why it must be a subset of the domain of g rather than the domain of f.",
-        "For f(x) = 1/(x-1) and g(x) = x^2 you get 1/(x^2 - 1). If instead f(x) = (x^2 - 1)/(x - 1) and you simplify to x + 1, what has the simplification destroyed, and what does that tell you about when it is safe to read a domain off a simplified formula?"
+        "What does f-inverse actually do to a number, in one sentence, without mentioning the algorithm?",
+        "If f sends both 2 and -2 to 4, what would f-inverse(4) have to be?",
+        "Why does that make the reversed pairing fail to be a function, rather than merely being awkward?",
+        "The formula x^2 has no inverse on R but does on [0, inf). The rule never changed, so what did?",
+        "Given that, what is wrong with saying 'the inverse of x^2 is sqrt(x)' without further qualification?"
       ],
-      "goodAnswerContains": "The domain of f o g is {x : x is in dom(g) AND g(x) is in dom(f)} - two conditions, both compulsory. | It is always a subset of dom(g), never larger, and it can be strictly smaller because some legal inputs of g produce outputs that f cannot accept. | The domain must be fixed from the unsimplified composite: cancelling or simplifying can hide an excluded point, so restrictions are recorded before any algebra is done.",
-      "workedExample": "Take f(x) = 1/(x-2) and g(x) = sqrt(x); Condition 1: x must be in dom(g), so x >= 0; Condition 2: g(x) must be in dom(f), so sqrt(x) is not equal to 2, giving x not equal to 4; Form the composite: (f o g)(x) = f(sqrt(x)) = 1/(sqrt(x) - 2); Domain = [0, 4) union (4, infinity), which is a proper subset of dom(g) = [0, infinity); Check a value: (f o g)(9) = 1/(3 - 2) = 1, legal; Check the excluded value: (f o g)(4) = 1/(2 - 2) is undefined, confirming the exclusion; Contrast the reverse order: (g o f)(x) = sqrt(1/(x-2)) needs 1/(x-2) >= 0 and x not equal to 2, giving domain (2, infinity), a completely different set - so f o g is not equal to g o f"
+      "goodAnswerContains": "It defines the inverse as the reverse pairing - f-inverse takes an output of f back to the input that produced it - so that f-inverse(f(x)) = x, and not as a rearrangement recipe.\nIt shows that a many-to-one f makes that reversal ill-defined: the shared output would need two images, which violates the very 'exactly one output' clause that makes something a function in the first place.\nIt concludes that a function is a rule together with a domain, so restricting the domain to make f one-to-one is what creates the inverse, and that the horizontal line test is the graphical form of exactly this check.",
+      "workedExample": "Take f(x) = x^2 on domain R. Run the algorithm anyway: y = x^2, swap to get x = y^2, solve to get y = +/-sqrt(x). The '+/-' is the algorithm telling you it has failed - for x = 4 it offers both 2 and -2, so the result is not a function and f has no inverse. Check it against the definition: f(2) = 4 and f(-2) = 4, so f-inverse(4) would have to be 2 and -2 at once. Graphically, the horizontal line y = 4 meets the parabola twice. Now restrict the domain to [0, inf). The pairs (-2, 4), (-3, 9) and so on are gone, every horizontal line now meets the curve at most once, and the same algorithm returns y = +sqrt(x) only, a genuine function. Note what swapped: dom f = [0, inf) and ran f = [0, inf), so dom f-inverse = ran f = [0, inf). Restricting instead to (-inf, 0] is equally valid and gives f-inverse(x) = -sqrt(x) - which shows the inverse depends on the domain chosen, not on the formula x^2."
     }
   ]
 }

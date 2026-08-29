@@ -77,7 +77,8 @@ Study board (reference):    https://claude.ai/code/artifact/8d0bff19-5549-4d2d-9
 
 - `checks[].questions[]` mixes `mcq` and `short`. Short answers cannot be
   auto-scored — self-mark them. Score = correct mcq + self-marked short, out of
-  `maxScore` (12 from week 3 onward; weeks 1-2 were generated at 6).
+  `maxScore`, which is 12 for every week. (Weeks 1-2 were originally generated
+  at 6 and have been regenerated at 12, so no week now uses 6.)
 - Sunday topic is DERIVED, never stored in this file: take each person's lowest
   `score/maxScore` for the week. If both land on the same course, the lower
   ratio keeps it and the other takes their next-lowest from a different course.

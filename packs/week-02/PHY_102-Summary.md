@@ -1,108 +1,94 @@
-# PHY_102 — Week 2 Summary
+# PHY_102 — Week 2
 
-*General Physics II · Week 2 (14–20 Sep 2026) · Topic: Coulomb's Law & the Superposition Principle*
+*General Physics II · Week 2 (14–20 Sep 2026)*
 
-## The 8 most examinable things this week
+*Source note: the extracted week-2 text is **thin**. The slide deck ("Superposition of Forces & Electric Field", Dr Sharafadeen Adeniji) gives learning objectives, the wording of the principles, and the **statements** of three problems — but every worked solution, every field-line diagram and the summary slide are images that the extractor dropped. The problems below are the lecturer's own problem statements, worked out here in full by me using standard method; the field-line rules and the Lorentz-force and potential material are the standard content for the topics the slide titles and the week summary name. Numbers in the worked examples are mine, not copied from the slides.*
 
-1. **Coulomb's law, stated in words**: the electrostatic force between two point charges is *directly proportional to the product of the magnitudes of the charges* and *inversely proportional to the square of the distance between them*, directed along the line joining them.
-2. **F = k|q₁q₂|/r²**, with **k = 8.99×10⁹ N·m²/C²** (use 9.0×10⁹ if told to), **k = 1/(4πε₀)**, **ε₀ = 8.85×10⁻¹² C²/(N·m²)**.
-3. **The vector form** and the sign rule: keep the *signed* product and the force comes out with its own direction; or use magnitudes and decide attract/repel by inspection. Do one or the other, never both.
-4. **Superposition**: the net force on a charge is the **vector sum** of the individual pairwise forces. Each pair obeys Coulomb's law **as if the other charges were absent** — there is no shielding.
-5. **Collinear superposition**: put everything on one axis, give each force a **+ or −**, then add algebraically. Two guaranteed marks are lost by adding magnitudes.
-6. **2-D superposition**: resolve into components, ΣFₓ and ΣF_y separately, then F = √(ΣFₓ² + ΣF_y²) and θ = tan⁻¹(ΣF_y/ΣFₓ).
-7. **Null points / equilibrium positions**: set the two magnitudes equal and solve. **Like charges → the null point lies between them, nearer the smaller charge. Unlike charges → outside the pair, beyond the smaller charge.**
-8. **Electric field**: **E = F/q₀** (N/C) and **E = k|q|/r²** for a point charge; then **F = qE**, with the force on a negative charge *opposite* to E.
+## Most likely to be examined
 
-## Formulas, definitions and constants (state these exactly)
+1. **State Coulomb's law** in words and symbols, with the condition that it applies to **point charges at rest** (or uniform spheres, measuring r centre-to-centre).
+2. **State the superposition principle** and use it: net force on a charge = **vector** sum of the individual pairwise Coulomb forces, each computed as if the other charges were absent.
+3. **Collinear superposition** — three charges on a line (the lecturer's Example 2: −18 µC at x = −9 m, −12 µC at x = 1 m, +24 µC at x = 7 m). Find magnitude **and direction** of the net force on a named charge.
+4. **Electron between two protons** (Example 1): equal-magnitude sources at unequal distances, forces opposing, net = difference.
+5. **Electric field of a point charge**, E = kQ/r², and **E from F**: E = F/q₀ with q₀ a vanishingly small positive test charge; then F = qE on any charge placed there, with the force **antiparallel** to E for a negative charge.
+6. **Field superposition** (the solved problem: +2.00 nC at origin, −5.00 nC at x = 0.800 m; find **E** at x = 0.200 m, then the force on an electron there).
+7. **Electric-field-line rules**: start on +, end on − (or at infinity); never cross; density ∝ field strength; tangent gives direction of force on a **positive** charge.
+8. **Lorentz force** F = q(E + v × B): the magnetic part needs motion, is ⊥ to v, and does **no work**. **Electric potential** V = kQ/r is a **scalar** — add algebraically with signs.
 
-**Coulomb's law (magnitude)**
-F = k|q₁||q₂| / r² , k = 8.99×10⁹ N·m²/C² = 1/(4πε₀), ε₀ = 8.85×10⁻¹² C²/(N·m²)
+## Definitions
 
-**Coulomb's law (vector form)**
-**F**₁₂ = k q₁q₂ / r₁₂² · **r̂**₁₂ — the force *on* q₂ *by* q₁, where **r̂**₁₂ is the unit vector pointing **from q₁ towards q₂** and r₁₂ is their separation. With the charges entered *with their signs*: a **positive product** gives a force along **r̂** (pushed away → repulsion); a **negative product** gives a force along −**r̂** (pulled back → attraction). Newton's third law: **F**₂₁ = −**F**₁₂ — equal magnitude, opposite direction, *even when the charges are wildly unequal*.
+- **Point charge** — a charged body whose size is negligible compared with the distances involved.
+- **Coulomb's law** — the electrostatic force between two point charges is directly proportional to the product of the magnitudes of the charges and inversely proportional to the square of their separation; it acts along the line joining them (repulsive for like signs, attractive for unlike).
+- **Superposition principle (forces)** — when several charges act on a charge simultaneously, the total force on it is the **vector sum** of the forces each would exert alone; the presence of a third charge does not alter the force between the other two.
+- **Superposition principle (field)** — the electric field at a point due to several charges is the vector sum of the fields due to each individual charge.
+- **Electric field E** — force per unit positive charge at a point: a **vector**, a property of the source charges alone, existing whether or not a test charge is there. Unit N/C (= V/m).
+- **Electric field line** — a curve whose tangent at every point gives the direction of **E** there.
+- **Electric potential V** — a **scalar**: the electric potential energy per unit charge at a point; unit volt (V = J/C).
+- **Lorentz force** — the total force on a charge q moving with velocity **v** through fields **E** and **B**: F = q**E** + q(**v** × **B**). The second term is the magnetic force; it vanishes when v = 0 or when **v** ∥ **B**.
 
-**Validity**: point charges (or uniform spheres, using centre-to-centre r), at rest, in vacuum/air. k is the vacuum value; in a medium of permittivity ε the force is smaller by a factor ε/ε₀.
+## Formulas
 
-**Superposition principle**
-When several charges act simultaneously on a charge q, the total force on q is the vector sum of the forces each other charge would exert on it *individually*:
-**F**_net = **F**₁ + **F**₂ + **F**₃ + … = Σ **F**ᵢ
-The same statement for fields: **E**_net = Σ **E**ᵢ. Superposition is what extends a two-body law to any number of charges.
+| Quantity | Formula | Symbols |
+|---|---|---|
+| Coulomb force (magnitude) | F = k·\|q₁q₂\| / r² | k = 1/4πε₀ = 8.99 × 10⁹ N·m²/C²; ε₀ = 8.85 × 10⁻¹² C²/N·m²; q in C; r in m |
+| Superposition of forces | **F**net = **F**₁ + **F**₂ + … (vector) | each **F**ᵢ from Coulomb's law, direction from a sketch |
+| Field of a point charge | E = k\|Q\|/r² | away from +Q, toward −Q |
+| Field from force | **E** = **F**/q₀ | q₀ = small positive test charge |
+| Force from field | **F** = q**E** | q negative ⇒ **F** opposite **E** |
+| Field superposition | **E**net = **E**₁ + **E**₂ + … (vector) | resolve into components first if not collinear |
+| Potential of a point charge | V = kQ/r | **signed** Q; scalar |
+| Potential superposition | Vnet = ΣkQᵢ/rᵢ | algebraic sum, no directions |
+| Potential energy of a charge | U = qV | J |
+| Lorentz force | **F** = q(**E** + **v** × **B**) | magnetic magnitude qvB sin θ |
+| Elementary charge | e = 1.60 × 10⁻¹⁹ C | electron q = −e |
 
-**Electric field (definition)**
-**E** = **F**/q₀ — the force per unit positive test charge placed at that point. Units **N/C**. q₀ is taken vanishingly small so that it does not disturb the source charges. **E** is a property of the *source* charges and of the *point*; it exists whether or not a test charge sits there, and does **not** depend on q₀.
+## Worked examples
 
-**Field of a point charge**
-E = k|q|/r² , directed **radially outward from a positive charge and radially inward toward a negative charge**.
+**A. Superposition on a line, equal sources (lecturer's Example 1).** Two protons are 3.6 nm apart; an electron lies on the line between them, 1.2 nm from one proton. Find the net force on the electron.
 
-**Force on a charge in a field**
-**F** = q**E**. Positive q → force along **E**; negative q → force opposite to **E**, same magnitude |q|E.
+- Distances: r₁ = 1.2 nm = 1.2 × 10⁻⁹ m; r₂ = 3.6 − 1.2 = 2.4 nm = 2.4 × 10⁻⁹ m.
+- The electron is attracted to **both** protons, so the two forces point **opposite** ways along the line. Net = difference.
+- k·e² = (8.99 × 10⁹)(1.60 × 10⁻¹⁹)² = (8.99 × 10⁹)(2.56 × 10⁻³⁸) = 2.301 × 10⁻²⁸ N·m².
+- F₁ = 2.301 × 10⁻²⁸ / (1.2 × 10⁻⁹)² = 2.301 × 10⁻²⁸ / 1.44 × 10⁻¹⁸ = 1.598 × 10⁻¹⁰ N (toward near proton).
+- F₂ = 2.301 × 10⁻²⁸ / (2.4 × 10⁻⁹)² = 2.301 × 10⁻²⁸ / 5.76 × 10⁻¹⁸ = 3.996 × 10⁻¹¹ N (toward far proton).
+- Fnet = 1.598 × 10⁻¹⁰ − 0.3996 × 10⁻¹⁰ = 1.199 × 10⁻¹⁰ N.
+- **Fnet ≈ 1.20 × 10⁻¹⁰ N, directed toward the nearer proton.**
 
-**Field lines**: start on positive charges, end on negative charges (or run to infinity for an isolated charge); their direction is the direction a *positive* charge would be pushed; the **more closely spaced the lines, the stronger the field**. Lines never cross. **A charge feels no net force from its own field.**
+**B. Collinear superposition, mixed signs (lecturer's Example 2b, 2f).** Q₁ = −18 µC at x₁ = −9 m, Q₂ = −12 µC at x₂ = +1 m, Q₃ = +24 µC at x₃ = +7 m.
 
-**Also named this week (one line each)**: the **Lorentz force**, **F** = q(**E** + **v**×**B**) — the magnetic part acts only on a *moving* charge; **electric potential**, a **scalar** quantity describing the field at a point (developed later).
+Net force on Q₁ (r₁₂ = 10 m, r₁₃ = 16 m):
+- F₁₂ = (8.99 × 10⁹)(18 × 10⁻⁶)(12 × 10⁻⁶)/10² = 1.9418/100 = 1.942 × 10⁻² N — like signs, **repulsion**, so along −x.
+- F₁₃ = (8.99 × 10⁹)(18 × 10⁻⁶)(24 × 10⁻⁶)/16² = 3.8837/256 = 1.517 × 10⁻² N — unlike signs, **attraction**, so along +x.
+- Fnet = −1.942 × 10⁻² + 1.517 × 10⁻² = −4.25 × 10⁻³ N. **≈ 4.25 × 10⁻³ N in the −x direction.**
 
-## Worked example 1 — two-charge Coulomb force
+Net force on Q₂ (r₂₁ = 10 m, r₂₃ = 6 m):
+- F₂₁ = 1.942 × 10⁻² N — repulsion from Q₁ pushes Q₂ along **+x**.
+- F₂₃ = (8.99 × 10⁹)(12 × 10⁻⁶)(24 × 10⁻⁶)/6² = 2.5891/36 = 7.192 × 10⁻² N — attraction to Q₃, also along **+x**.
+- Both same way ⇒ add: Fnet = 1.942 × 10⁻² + 7.192 × 10⁻² = **9.13 × 10⁻² N in the +x direction.**
 
-q₁ = +4.0 μC and q₂ = −6.0 μC, separated by 0.20 m. Find the force on each.
+**C. Field superposition, then force on a charge (lecturer's solved problem).** +2.00 nC at the origin, −5.00 nC at x = 0.800 m. Find **E** at x = 0.200 m and the force there on an electron.
 
-1. Magnitudes in SI: 4.0×10⁻⁶ C, 6.0×10⁻⁶ C. Product = 2.4×10⁻¹¹ C².
-2. r² = (0.20)² = 0.040 m².
-3. F = (8.99×10⁹)(2.4×10⁻¹¹)/0.040 = 0.2158/0.040 = **5.4 N**.
-4. Signs: unlike charges → **attractive**, along the line joining them. Each charge feels 5.4 N pulling it toward the other (third law), *not* 5.4 N and something smaller.
+- From the +2.00 nC (r = 0.200 m): E₁ = (8.99 × 10⁹)(2.00 × 10⁻⁹)/(0.200)² = 17.98/0.0400 = 449.5 N/C, pointing **away** from it ⇒ **+x**.
+- From the −5.00 nC (r = 0.800 − 0.200 = 0.600 m): E₂ = (8.99 × 10⁹)(5.00 × 10⁻⁹)/(0.600)² = 44.95/0.360 = 124.9 N/C, pointing **toward** it ⇒ also **+x**.
+- Same direction ⇒ add: E = 449.5 + 124.9 = 574.4 N/C. **E ≈ 574 N/C in the +x direction.**
+- Force on an electron: F = |q|E = (1.60 × 10⁻¹⁹)(574.4) = 9.19 × 10⁻¹⁷ N; charge is negative ⇒ **F ≈ 9.19 × 10⁻¹⁷ N in the −x direction.**
 
-## Worked example 2 — three-charge collinear superposition
+**D. Potential superposition (same geometry).** V at x = 0.200 m:
+- V₁ = (8.99 × 10⁹)(+2.00 × 10⁻⁹)/0.200 = +89.9 V; V₂ = (8.99 × 10⁹)(−5.00 × 10⁻⁹)/0.600 = −74.9 V.
+- V = 89.9 − 74.9 = **+15.0 V** (scalar sum — note the fields added while the potentials nearly cancelled).
 
-Two protons are 3.6 nm apart. Find the total force on an electron on the line between them, 1.2 nm from one proton. (e = 1.6×10⁻¹⁹ C)
-
-1. Geometry: proton A at x = 0, proton B at x = 3.6 nm, electron at x = 1.2 nm. So r_A = 1.2×10⁻⁹ m, r_B = 2.4×10⁻⁹ m.
-2. k e² = (8.99×10⁹)(1.6×10⁻¹⁹)² = 2.30×10⁻²⁸ N·m².
-3. From A: F_A = 2.30×10⁻²⁸/(1.44×10⁻¹⁸) = 1.60×10⁻¹⁰ N, **attractive → toward A, i.e. −x**.
-4. From B: F_B = 2.30×10⁻²⁸/(5.76×10⁻¹⁸) = 4.00×10⁻¹¹ N, **attractive → toward B, i.e. +x**.
-5. Vector sum on one axis = algebraic sum: F_net = −1.60×10⁻¹⁰ + 0.40×10⁻¹⁰ = **1.2×10⁻¹⁰ N toward the nearer proton**.
-
-Note the structure: halving the distance to B relative to A made F_A **four** times F_B, not twice.
-
-## Worked example 3 — 2-D superposition (component resolution)
-
-q₀ = +2.0 μC sits at the origin. q₁ = +8.0 μC is at (0.30 m, 0) and q₂ = +6.0 μC is at (0, 0.30 m). Find the net force on q₀.
-
-1. Both separations are 0.30 m, so r² = 0.090 m² for both.
-2. F₁ = (8.99×10⁹)(8.0×10⁻⁶)(2.0×10⁻⁶)/0.090 = 1.60 N. All charges positive → q₀ is **pushed away from q₁**, i.e. along **−x**.
-3. F₂ = (8.99×10⁹)(6.0×10⁻⁶)(2.0×10⁻⁶)/0.090 = 1.20 N, pushed away from q₂, i.e. along **−y**.
-4. Components: ΣFₓ = −1.60 N, ΣF_y = −1.20 N.
-5. Magnitude: F = √(1.60² + 1.20²) = √(2.56 + 1.44) = √4.00 = **2.0 N**.
-6. Direction: tan θ = |ΣF_y|/|ΣFₓ| = 1.20/1.60 = 0.75 → θ = **36.9° below the −x axis** (i.e. 217° measured anticlockwise from +x).
-
-Arithmetic addition would have given 2.8 N — the classic error.
-
-## Worked example 4 — null point / equilibrium position
-
-q₁ = +9.0 μC at x = 0 and q₂ = +4.0 μC at x = 0.50 m. Where on the line can a third charge sit in equilibrium?
-
-1. Like charges → the point must be **between** them (only there do the two forces oppose). Let it be at distance x from q₁, so 0.50 − x from q₂.
-2. Set magnitudes equal: k q₃(9.0)/x² = k q₃(4.0)/(0.50 − x)² — note **q₃ and k cancel**, so the answer depends only on the two fixed charges.
-3. Take square roots: 3/x = 2/(0.50 − x) → 1.5 − 3x = 2x → 5x = 1.5.
-4. **x = 0.30 m from the 9.0 μC charge** (0.20 m from the 4.0 μC charge) — nearer the *smaller* charge, as it must be.
-5. If instead q₂ were −4.0 μC: between them both forces point the same way, so the null point moves **outside the pair, beyond the smaller charge**, and the equation becomes 3/x = 2/(x − 0.50), giving x = 1.5 m.
-
-## Worked example 5 — electric field of point charges, then the force
-
-A +2.00 nC charge is at the origin and a −5.00 nC charge is on the x-axis at x = 0.800 m. Find **E** at x = 0.200 m, and the force on an electron placed there.
-
-1. From the +2.00 nC, r = 0.200 m: E₁ = (8.99×10⁹)(2.00×10⁻⁹)/0.0400 = **450 N/C**, directed **away** from a positive charge → **+x**.
-2. From the −5.00 nC, r = 0.600 m: E₂ = (8.99×10⁹)(5.00×10⁻⁹)/0.360 = **125 N/C**, directed **toward** a negative charge → **+x**.
-3. Superpose: both point the same way, so E = 450 + 125 = **575 N/C in the +x direction**.
-4. Force on an electron: F = |q|E = (1.602×10⁻¹⁹)(575) = **9.2×10⁻¹⁷ N**, directed **−x**, i.e. *opposite* to **E** because the electron is negative.
+**E. Lorentz force.** A proton (q = +1.60 × 10⁻¹⁹ C) moves at v = 2.0 × 10⁵ m/s along +x through B = 0.50 T along +y and E = 300 N/C along +z.
+- Magnetic: F_B = qvB sin 90° = (1.60 × 10⁻¹⁹)(2.0 × 10⁵)(0.50) = 1.60 × 10⁻¹⁴ N; direction x̂ × ŷ = ẑ ⇒ **+z**.
+- Electric: F_E = qE = (1.60 × 10⁻¹⁹)(300) = 4.80 × 10⁻¹⁷ N, along **+z**.
+- Total: F = 1.600 × 10⁻¹⁴ + 0.0048 × 10⁻¹⁴ = **1.605 × 10⁻¹⁴ N along +z** (the magnetic part dominates by ~330×).
 
 ## Commonly confused
 
-- **Force vs field**: **E** = k|q|/r² has *one* charge in it and exists at an empty point; F = k|q₁q₂|/r² needs *two*. If your "field" answer has two charges multiplied together, you have computed a force.
-- **k vs ε₀**: k = 8.99×10⁹ N·m²/C² is the Coulomb constant; ε₀ = 8.85×10⁻¹² C²/(N·m²) is the permittivity of free space, and k = 1/(4πε₀). A **larger** permittivity means a **weaker** force.
-- **Adding magnitudes instead of vectors**: superposition is a *vector* sum. Two forces of 3 N and 4 N can give 7 N, 1 N, or 5 N depending on direction.
-- **Signs used twice**: either substitute signed charges into the vector form, or use magnitudes and fix the direction by "like repels, unlike attracts". Doing both flips the direction back.
-- **r vs r²**: forgetting to square the distance, and forgetting to convert cm → m and nm → m *before* squaring, are the two most common numerical losses.
-- **Third law with unequal charges**: a 1 μC and a 100 μC charge exert **equal and opposite** forces on each other. The *accelerations* differ, not the forces.
-- **Shielding**: placing a third charge between two others does **not** change the force between them. Superposition adds a new force; it does not modify the old ones.
-- **Null point on the wrong side**: for **unlike** charges there is *never* a zero-force point between them (both forces point the same way) — it lies outside, beyond the weaker charge. For **like** charges it is always between.
-- **Self-force**: a charge produces a field but feels no net force from its own field.
-- **The test charge in E = F/q₀**: doubling q₀ doubles F, so E is unchanged. E belongs to the source, not to the probe.
+- **Electric field vs electric force** — E is per unit charge and exists with no charge there; F needs a charge to act on. *Test:* if the answer's unit is N/C it is a field, if N it is a force.
+- **Field (vector) vs potential (scalar)** — *Test:* if you had to draw arrows and resolve components, it was E; if you only added signed numbers, it was V.
+- **kQ/r² vs kQ/r** — *Test:* units. N·m²/C² · C / m² = N/C (field); ÷ m only once gives N·m/C = J/C = volt (potential).
+- **Attraction/repulsion vs the sign of x** — *Test:* never substitute signed charges into F = k|q₁q₂|/r². Get the magnitude from magnitudes, then set the direction from a free-body sketch.
+- **"Forces oppose so subtract" vs "forces agree so add"** — *Test:* draw the arrow for each pairwise force **on the charge you are solving for**; two attractions to opposite sides subtract, an attraction one way plus a repulsion the same way add.
+- **Zero field vs zero potential** — midway between two equal **positive** charges E = 0 but V ≠ 0; midway between equal **opposite** charges V = 0 but E ≠ 0. *Test:* ask whether the two contributions are opposite arrows (E cancels) or opposite signs (V cancels).
+- **Electric force vs magnetic force in the Lorentz law** — *Test:* set v = 0. Whatever force survives is electric.
+- **Coulomb's law vs Newton's law of gravitation** — same 1/r² form, but charge comes in two signs so the Coulomb force can repel; gravity only attracts.

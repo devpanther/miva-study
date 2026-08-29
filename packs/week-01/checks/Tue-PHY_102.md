@@ -1,48 +1,61 @@
 # Tuesday — PHY_102 nightly check
 
-*Charge, its properties, and the three methods of charging.*
-*Sit cold, notes closed, 8 minutes. Score out of 6.*
+*This session took week 1's material — electric charge and the three methods of charging — and worked it conceptually rather than numerically. It covered what charge is and what the two signs mean; the three properties of charge (quantisation, conservation, additivity) as statements about what nature permits rather than as formulas; and the mechanism behind each charging method: which particles actually move (electrons, never protons), whether contact occurs, and what sign each object is left with. It examined polarisation as charge separation with no net charge gained, and how grounding converts that temporary separation into a permanent net charge of opposite sign to the rod. It also covered why the extent of induction depends on the rod's distance, why a charged object attracts neutral matter of either sign, and what the electric field means as force per unit charge — a property of the source, not of whatever is placed in it.*
 
-**1.** A negatively charged plastic rod is held near — but never touching — an isolated neutral metal sphere on an insulating stand. A wire is connected from the sphere to earth, then the wire is disconnected, and only then is the rod taken away. The sphere finally carries:
-a) a negative charge, since the rod is negative
-b) a positive charge, spread uniformly over the sphere
-c) no net charge, since the rod never touched it
-d) a positive charge on the far side and a negative charge on the near side
+*Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**2.** While that same rod is held near the sphere and **before** it is earthed, the face of the sphere nearest the rod becomes positive. The mechanism is:
-a) protons in the metal migrate through the lattice to the near face
-b) free electrons are repelled to the far face, leaving an electron deficit at the near face
-c) positive charge jumps across the air gap from the rod to the sphere
-d) the metal's atoms rotate so that their positive ends point at the rod
+**1.** A negatively charged plastic rod is held close to, but not touching, an isolated neutral metal sphere resting on an insulating stand. What is the state of the sphere while the rod is held there?
+a) The sphere acquires a net negative charge, because electrons leap across the narrow air gap onto it from the rod.
+b) The sphere's net charge stays zero, but its near side is positive and its far side negative.
+c) The sphere's near side becomes negative, since negative charge is drawn toward the rod.
+d) Nothing changes inside the sphere at all, because the rod never touches it.
 
-**3.** A metal sphere carrying a charge of −8 units touches an identical, neutral metal sphere, and the two are then separated. Their charges are:
-a) −8 and 0
-b) −4 and −4
-c) −8 and −8
-d) +4 and −4
+**2.** During charging by induction the conductor is briefly connected to earth by a wire. What does that earth connection actually do?
+a) It drains away all charge, leaving the conductor permanently neutral.
+b) It supplies protons to the side of the conductor nearest the rod.
+c) It shields the conductor from the rod's field so that charge can settle down.
+d) It gives the repelled electrons somewhere to go, so an imbalance is left behind.
 
-**4.** A glass rod is rubbed with silk and ends up positively charged. Which statement is correct?
-a) The glass gained protons from the silk.
-b) The glass transferred electrons to the silk, so the silk now carries an equal negative charge.
-c) Friction created new positive charge on the glass; the silk stays neutral.
-d) The glass lost electrons to the surrounding air, so the silk's charge is smaller in magnitude than the glass's.
+**3.** A charged comb picks up small scraps of neutral paper, and does so whether the comb is charged positively or negatively. The best explanation is:
+a) The comb polarises the paper; the nearer end is oppositely charged and so is pulled harder.
+b) The paper carries a small leftover charge that happens to be opposite to the comb's.
+c) The paper's protons drift toward the comb, producing a net pull toward it.
+d) A neutral body has no charge that can be repelled, so any charged object can only ever attract it, at any distance.
 
-**5. (explain why)** A charged rod is brought near a small piece of *neutral* paper and the paper is attracted to the rod. Explain why the attraction happens even though the paper has zero net charge.
+**4.** Which of these net charges is impossible for an isolated object to carry?
+a) −3.2×10⁻¹⁹ C
+b) +8.0×10⁻¹⁹ C
+c) −2.4×10⁻¹⁹ C
+d) +1.6×10⁻¹⁹ C
 
-**6. (explain why)** In charging by induction, explain why the earthing wire must be disconnected **before** the charging rod is taken away, and what happens if the order is reversed.
+**5.** A plastic rod rubbed with wool ends up carrying −6 nC. What is left on the wool, and why?
+a) −6 nC, because rubbing charges both surfaces negatively.
+b) +6 nC, because the wool lost exactly the electrons the rod gained.
+c) +6 nC, because protons moved from the wool onto the rod.
+d) 0, because only the rod becomes charged; the wool stays neutral.
 
----
+**6.** The field at a point P near a fixed source charge is found by measuring the force on a small test charge q₀ and dividing by q₀. The test charge is then replaced by one of twice the size, still far too small to disturb the source. The value obtained for E at P:
+a) doubles, because the force on the test charge doubles
+b) halves, because the same force is now divided by a bigger charge
+c) is unchanged, because the force and the divisor both double
+d) quadruples, because the field depends on the square of the charge
 
-## Answers
+**7.** Bringing the charged rod closer to a neutral conductor increases the extent of the induction. The mechanism is that:
+a) the conductor's net charge grows as the rod approaches
+b) charge begins to leak across the shrinking air gap
+c) the conductor gains extra free electrons that were unavailable further away
+d) the rod's field at the conductor is stronger, so more free electrons are displaced
 
-**1. b** — *Charging by induction: the final sign is opposite the inducing rod.* The negative rod repels the sphere's free electrons to the far side; earthing lets them escape to ground, so once the wire and then the rod are removed the sphere is left electron-deficient, i.e. positive, and that charge redistributes uniformly. Choosing (a) means applying *conduction* thinking to induction; (c) treats induction as mere temporary polarisation; (d) assumes the polarisation survives the removal of the rod.
+**8.** You cannot charge a metal rod by rubbing it while holding it in your bare hand. Why not?
+a) Any charge produced escapes through your body to earth.
+b) Metals have no charge to separate, since their electrons are already free.
+c) Friction cannot separate charge on a smooth metal surface.
+d) The freed electrons immediately recombine with the metal's protons and cancel out.
 
-**2. b** — *Charge carriers in a metal: only electrons are mobile.* A "positive region" in a conductor is a region with a *shortage* of electrons, never a place protons have moved to. (a) is the classic misconception that protons drift — nuclei are locked in the lattice; (c) invents charge transfer across a gap; (d) describes molecular dipole rotation, which is not the free-electron mechanism in a metal.
+**9. (explain why)** A charged rod attracts a neutral scrap of foil, yet two rods charged in the same way repel each other. Explain, in terms of what happens to the charges inside the foil, why attraction of a *neutral* object is not evidence that the foil is charged.
 
-**3. b** — *Charging by conduction plus conservation of charge.* Identical spheres in contact share the charge equally, and the total (−8) is conserved: −4 each. (a) ignores the transfer, (c) creates charge from nothing and violates conservation, (d) confuses conduction with induced charge separation.
+**10. (explain why)** Charging by conduction leaves the conductor with the *same* sign as the charging rod, while charging by induction leaves it with the *opposite* sign. Explain why the difference in outcome follows from the difference in mechanism, and say what happens to the rod's own charge in each case.
 
-**4. b** — *Charging by friction is electron transfer, and conservation makes the charges equal and opposite.* Positive means the glass *lost* electrons; the silk holds exactly the electrons the glass lost. (a) and (d) both assume protons move or charge leaks away; (c) violates conservation of charge.
+**11. (explain why)** Two objects are rubbed together and both end up charged, one positive and one negative. Explain why this does not mean charge has been created, and state what observation would count as a violation of conservation of charge.
 
-**5.** *Concept: polarisation of a neutral body plus the inverse-square dependence.* The rod's field pulls the paper's charge of opposite sign slightly nearer and pushes the like sign slightly farther away. Because the Coulomb force falls off as 1/r², the attraction on the nearer, opposite charge exceeds the repulsion on the farther, like charge, so there is a net attraction — with no net charge on the paper at all.
-
-**6.** *Concept: the role of the ground connection in induction.* While the rod is present, the earth connection is what lets electrons leave (or enter) the conductor, and the rod's field is what holds the remaining charge on the far side. Breaking the ground first traps that net charge on the sphere; if you remove the rod first, the displaced electrons simply flow back through the still-connected wire and the sphere returns to neutral.
+**12. (explain why)** The electric field is defined as force per unit charge rather than simply as the force felt at a point. Explain what would go wrong if physicists instead tabulated "the force at each point in space" around a charged object.

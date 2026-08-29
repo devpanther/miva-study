@@ -1,48 +1,61 @@
 # Monday — MTH_102 nightly check
 
-*Real-valued functions: relation vs function, domain/codomain/range, vertical line test.*
-*Sit cold, notes closed, 8 minutes. Score out of 6.*
+*This session took Week 1's material — real-valued functions, domain, codomain, range, the vertical and horizontal line tests, inverses and composites — and treated it conceptually rather than computationally. It asked what each object actually is: what a function is as a set of ordered pairs, why the definition insists on "each input, exactly one output", and what breaks in the notation `f(x)` if that clause is dropped. It looked at why domain restrictions arise from the arithmetic itself (no real even root of a negative, no division by zero, no log of a non-positive) rather than being conventions. It separated range from codomain — computed versus declared — and separated the vertical line test from the horizontal line test by the question each answers. It closed on why one-to-one is precisely the condition for an inverse to exist, why the domain of a composite carries a two-part clause, and why the domain and range trade places under inversion. Almost no arithmetic.*
 
-**1.** The vertical line test works because:
-a) a function's graph must be one unbroken curve
-b) a vertical line x = a gathers every point of the graph whose input is a, so two intersections mean the single input a has been given two outputs
-c) it checks that every real number appears as an input
-d) it checks that no two different inputs produce the same output
+*Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**2.** A mapping diagram has domain X = {1, 2, 3, 4}, codomain Y = {5, 6, 7, 8}, with arrows 1→5, 2→5, 3→6, 4→7. Which statement is correct?
-a) It is not a function, because two elements of X map to the same element of Y
-b) It is not a function, because 8 is not the image of any element of X
-c) It is a function with range {5, 6, 7} and codomain {5, 6, 7, 8}
-d) It is a function with range {5, 6, 7, 8}
+**1.** A relation pairs the input 2 with both 5 and 7. Dropping the "exactly one output" clause from the definition of a function would principally cost us:
+a) the ability to draw a graph
+b) the existence of a domain
+c) the meaning of the symbol `f(2)`
+d) the ability to list ordered pairs
 
-**3.** For f: ℝ → ℝ, f(x) = x², which statement is correct?
-a) f is one-to-one, since each x produces exactly one value x²
-b) f is onto, since x² is a real number for every real x
-c) f is neither one-to-one nor onto: f(−2) = f(2) = 4, and no real x gives f(x) = −1
-d) f is bijective, so f⁻¹(x) = √x is a function on ℝ
+**2.** For `f : ℝ → ℝ`, `f(x) = x²`, the codomain is `ℝ` but the range is `[0, ∞)`. The distinction matters because:
+a) the codomain is declared, the range is computed
+b) the range is always smaller than the domain
+c) the codomain lists the inputs
+d) the range is the set of permitted `x`-values
 
-**4.** The rule y² = x (x ≥ 0, y real) does not define y as a function of x. The precise reason is:
-a) x = 0 produces only the single value y = 0
-b) for x = 4 the rule assigns both y = 2 and y = −2, so one input carries two outputs
-c) the graph is not a straight line
-d) negative values of x are excluded, so the domain is not all of ℝ
+**3.** A curve is met twice by some vertical line. This disqualifies it as the graph of a function because:
+a) the curve is not continuous at that point
+b) the curve fails to be one-to-one there
+c) the domain is empty at that `x`
+d) those two points share an `x` but differ in `y`
 
-**5. (explain why)** A student writes: "The range of f: ℝ → ℝ, f(x) = x² + 1 is ℝ, because the codomain is ℝ." Explain precisely what is wrong, and state the actual range.
+**4.** `f(x) = ∛(x − 5)` has domain all of `ℝ`, while `g(x) = √(x − 5)` has domain `x ≥ 5`. The reason is:
+a) the cube root grows more slowly than the square root
+b) no real number squares to a negative, but every real is some real's cube
+c) the cube root is one-to-one and the square root is not
+d) the cube root's graph passes the vertical line test
 
-**6. (explain why)** The vertical line test and the horizontal line test are not two versions of the same check. Say exactly which property each one tests, and what a failure of each one tells you.
+**5.** The definition of `f∘g` carries the clause "`x` must lie in `dom g` **and** `g(x)` must lie in `dom f`". The second half is there because:
+a) `g(x)` is handed to `f` as an input, so it must be legal for `f`
+b) `f` and `g` are required to share a domain
+c) composition is not commutative
+d) `f∘g` is required to be one-to-one
 
----
+**6.** Requiring `f` to be one-to-one before `f⁻¹` exists is necessary because:
+a) a many-to-one `f` has no graph to reflect
+b) `f⁻¹` must be given by the same rule as `f`
+c) reflecting a curve in `y = x` destroys continuity
+d) reversing a many-to-one pairing gives some input two outputs
 
-## Answers
+**7.** If `f` is invertible, the domain of `f⁻¹` is:
+a) the domain of `f`
+b) the range of `f`
+c) the whole of `ℝ`
+d) the codomain of `f`
 
-**1. b** — *Mechanism of the vertical line test.* The line x = a is exactly the set of points with first coordinate a; if the graph meets it twice, the input a has two images, which the definition of a function forbids. (a) confuses functions with continuous curves; (c) confuses the test with a statement about the domain; (d) describes the horizontal line test.
+**8.** Which pairing is still a legitimate function?
+a) inputs 1 and 2 are each sent to both 3 and 4
+b) input 1 is sent to 3 and also to 5
+c) inputs 1 and 2 are both sent to 3
+d) input 1 is left unassigned
 
-**2. c** — *Range ⊆ codomain; many-to-one is legal.* A function only requires each input to have exactly one output — repeated outputs are allowed (kills a), and unused codomain elements are allowed (kills b, which is really the definition of *onto*). (d) is the standard error of treating codomain as the range.
+**9. (explain why)** The vertical line test and the horizontal line test look like the same trick turned sideways, but they answer two different questions. State the question each one answers, and say why passing the first tells you nothing about the second.
 
-**3. c** — *Function-ness, injectivity and surjectivity are three different conditions.* (a) mistakes the defining property of a function for injectivity; (b) mistakes well-definedness for surjectivity — being onto ℝ would require negatives to be attained; (d) assumes bijectivity in order to get an inverse.
+**10. (explain why)** `f(x) = x²` on domain `ℝ` has no inverse, but the very same formula on domain `[0, ∞)` does. The rule never changed. Explain why the domain, and not the formula, is what decides.
 
-**4. b** — *One-to-many disqualifies a relation from being a function.* The failure is a single input with two outputs, not the shape of the graph (c) or the size of the domain (d) — a function's domain need not be all of ℝ.
+**11. (explain why)** Explain why a function's range can be smaller than its codomain but never larger — and why writing `f : ℝ → ℝ` is not a claim that every real number is an output.
 
-**5.** *Concept: range ⊆ codomain, usually properly.* The codomain is the declared target set, chosen in advance; the range is the set of values f actually attains. Since x² ≥ 0 for all real x, f(x) ≥ 1, so the **range is [1, ∞)**, a proper subset of the codomain ℝ.
-
-**6.** *Concept: vertical test = function-ness; horizontal test = injectivity.* The vertical line test asks whether the curve is a function at all — failure means some input has two outputs. The horizontal line test asks whether an existing function is one-to-one — failure means two different inputs share an output, so f is not invertible on that domain.
+**12. (explain why)** `f⁻¹(x)` and `1/f(x)` are different objects. Say what each one does, and give the one-line check that separates them for any particular `f`.

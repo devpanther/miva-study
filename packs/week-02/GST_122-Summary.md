@@ -1,46 +1,59 @@
-# GST_122 — Week 2 Summary
+# GST_122 — Week 2
 
-*Communication in English II · Week 2 (14–20 Sep 2026) · Topic: Communication and Meaning*
+*Communication in English II · Week 2 (14–20 Sep 2026)*
 
-## The 7 most examinable things this week
+*Source note: the extracted Week 2 material is **thin** — it contains only the "In Summary" slide, the bullet-point summary, a case study ("The Ambiguity Challenge in Project Coordination"), the skills list and the reflection slide. There is no full lecture text. Everything below marked **[core]** is stated in the source; items marked **[supplied]** are standard GST_122 content added to fill out the scope named by the slide titles, and are flagged so you know they were not in the extract.*
 
-1. The **goal of communication is meaning**, not words. A message succeeds only when the meaning the sender intended is the meaning the receiver reconstructs.
-2. **Semiotics** is the study of signs and symbols and how they make meaning — communication runs on signs, not only on language.
-3. **Denotative meaning** is the literal, dictionary meaning of a word. **Connotative meaning** is the implied, emotional or cultural association it carries. This pair is the single most examinable distinction of the week.
-4. Connotation is **cultural and emotional** — the same word can carry opposite associations in two cultures, so effective communication requires cultural sensitivity.
-5. Meaning is **multifaceted and requires active interpretation by the listener**, taking context into account. Meaning is not sitting inside the word waiting to be collected.
-6. The two named sources of confusion are **homophones** ("hazardous homophones") and **ambiguity** — both to be avoided for clarity.
-7. The skills the lesson claims to build: **semiotic awareness, contextual interpretation, clarity in expression, active listening, conflict resolution, cultural sensitivity**.
+Topic: **Communication and Meaning**.
 
-## Every named term, defined
+## Most likely to be examined
 
-- **Semiotics** — the study of signs, symbols and the way they carry meaning in human interaction. *Example:* reading a red traffic light, a skull-and-crossbones on a bottle, and a thumbs-up as three meaningful messages containing no words.
-- **Sign** — anything that stands for something other than itself and is recognised as doing so. *Example:* smoke is a sign of fire; the word "dog" is a sign for the animal.
-- **Signifier** — the physical form of the sign: the sound, mark, image or gesture. *Example:* the four letters d-o-g on the page, or the spoken sound /dɒɡ/.
-- **Signified** — the concept the signifier calls up in the mind. *Example:* the mental idea of a four-legged barking animal. Sign = signifier + signified; the link between the two is largely arbitrary, which is why "dog", "aja" and "chien" all work.
-- **Icon** — a sign that resembles what it stands for. *Example:* a photograph of a person; the aeroplane picture on an airport sign.
-- **Index** — a sign physically or causally connected to what it stands for. *Example:* smoke indexes fire; a fever indexes infection; footprints index someone having passed.
-- **Symbol** — a sign whose link to its meaning is purely conventional, learned, and culture-bound. *Example:* the Nigerian flag standing for the nation; a wedding ring standing for marriage; all words of a language.
-- **Referent** — the actual thing in the world that the sign points to. *Example:* for the word "Abuja", the referent is the physical city itself, not the idea of it and not the letters.
-- **Denotation** — the literal, neutral, dictionary meaning. *Example:* "home" denotes a place where a person lives.
-- **Connotation** — the implied, suggested, emotional or cultural meaning layered on top. *Example:* "home" connotes warmth, safety and belonging, which "residence" or "dwelling" do not.
-- **Semantic meaning** — meaning at the level of the words and sentence itself, independent of who said it and why. *Example:* "Can you open the window?" semantically asks about your ability to open a window.
-- **Pragmatic meaning** — meaning in use: what the speaker is actually doing with the utterance in that situation. *Example:* the same sentence pragmatically is a polite request to open the window.
-- **Context** — the surrounding situation, culture, relationship and prior discourse that fixes which meaning applies. *Example:* "That's sick" means diseased in a medical report and excellent among friends; only context decides.
-- **Ambiguity** — a message that permits more than one reasonable interpretation. *Example:* "Send the report to the manager in Lagos" — is the manager in Lagos, or is the report to be sent to Lagos?
-- **Homophones** — words that sound alike but differ in meaning and spelling, a classic source of confusion in speech. *Example:* their / there / they're; principal / principle; write / right.
-- **Barriers to shared meaning** — anything that stops the receiver's meaning matching the sender's: ambiguity, homophones, differing cultural connotations, unshared context or jargon, assumptions about what the listener already knows, and failure to listen actively.
+1. **The goal of communication is that meaning is conveyed accurately** — communication is *not solely about words*; it also involves signs and symbols. [core]
+2. **Semiotics** = the study/field of signs and symbols and the role they play in daily interaction. Expect a definition question or "which of these is a semiotic (non-verbal) sign?" [core]
+3. **Denotative vs connotative meaning** — denotative = literal; connotative = implied or suggested, carrying cultural and emotional associations. Expect examples to classify. [core]
+4. **The two named sources of confusion: hazardous homophones and ambiguity** — the source names exactly these two, so a "which two?" question is very likely. [core]
+5. **Meaning is multifaceted and requires active interpretation by the listener**, considering context and recognising potential ambiguities — i.e. meaning is not simply transmitted, it is constructed by the receiver. [core]
+6. **Effective communication = conveying intended meanings accurately + being mindful of the broader cultural and emotional associations of words.** Learn this sentence; it is the lesson's closing definition. [core]
+7. **The six skills/competencies of the lesson**: Semiotic Awareness, Contextual Interpretation, Clarity in Expression, Active Listening, Conflict Resolution, Cultural Sensitivity. [core]
+8. **The case study lesson**: one ambiguous sentence about task assignment produced *diverse and conflicting interpretations* among team members, damaging project coordination — ambiguity's cost is misaligned action, not just confusion. [core]
 
-## The case study (know the shape of it)
+## Definitions and key terms
 
-A project team under deadline is given a deliberately ambiguous task-assignment sentence. Members' interpretations are collected, they diverge, the team discusses the discrepancies, and feedback is gathered on the workflow damage. The lesson's point: ambiguity is not a stylistic flaw but an operational risk that breaks coordination and creates conflicting understandings of responsibility.
+- **Communication (as framed here)** — the process whose ultimate goal is to ensure that meaning is *accurately conveyed*; it goes "beyond words" into signs and symbols. [core]
+- **Semiotics** — the field concerned with signs and symbols and how they operate in communication. Example: a traffic light, a logo, a nod, a uniform, an emoji — meaning carried without words. [core; examples supplied]
+- **Sign / symbol** — anything that stands for something other than itself and so carries meaning to an interpreter. [supplied]
+- **Denotative meaning** — the *literal*, dictionary meaning of a word. Example: *home* denotes "a place where one lives". [core; example supplied]
+- **Connotative meaning** — the *implied or suggested* meaning; the cultural and emotional associations a word carries beyond its literal sense. Example: *home* connotes warmth, safety, belonging. [core; example supplied]
+- **Hazardous homophones** — words that sound alike but differ in meaning (and usually spelling), and so mislead a listener. Example: *their / there / they're*; *principal / principle*; *bear / bare*. Named in the source as a source of confusion; examples supplied. [core term, examples supplied]
+- **Ambiguity** — a word, phrase or sentence open to more than one interpretation; the second named source of confusion. Case-study example: an ambiguous task-assignment sentence that different team members read differently. [core]
+- **Context** — the surrounding situation the listener must consider in order to fix which meaning is intended. [core]
+- **Active interpretation** — the listener's work of construing meaning, rather than passively receiving it. [core]
+- **Clarity** — the quality to be pursued to avoid the two sources of confusion. [core]
+- **Semiotic Awareness** — sensitivity to the signs and symbols in a message. [core]
+- **Contextual Interpretation** — reading meaning in the light of situation and culture. [core]
+- **Clarity in Expression** — phrasing so that only the intended meaning is available. [core]
+- **Active Listening** — attending fully in order to interpret accurately. [core]
+- **Conflict Resolution** — reconciling the discrepancies in understanding that miscommunication creates. [core]
+- **Cultural Sensitivity** — awareness that connotations vary across cultures; important in multicultural workplaces. [core]
+
+### Classification schemes
+
+| Scheme | Categories | Test / marker | Example |
+|---|---|---|---|
+| Levels of word meaning [core] | **Denotative** | literal, dictionary, culture-neutral | *snake* = a legless reptile |
+| | **Connotative** | implied/suggested; emotional + cultural baggage | *snake* = a treacherous person |
+| Sources of confusion [core] | **Hazardous homophones** | confusion arises from **sound** (identical sound, different meaning) | "He has no *peace/piece* of the work" |
+| | **Ambiguity** | confusion arises from **structure or word choice** (one form, several readings) | "Visiting relatives can be tiring" |
+| Channel of meaning [core] | **Verbal (words)** | meaning carried by language | a spoken instruction |
+| | **Semiotic (signs & symbols)** | meaning carried without words | a red traffic light, a logo |
+| Types of ambiguity [supplied — not in the extract] | **Lexical** | one *word* has two senses | "She went to the *bank*" |
+| | **Structural / syntactic** | the *sentence structure* allows two groupings | "I saw the man with the telescope" |
 
 ## Commonly confused
 
-- **Denotation vs connotation** — denotation is what the word *says* (dictionary, literal, stable); connotation is what the word *suggests* (emotional, cultural, variable between people and cultures). "Cheap" and "inexpensive" share a denotation but not a connotation.
-- **Sign vs symbol** — every symbol is a sign, but not every sign is a symbol. A sign is any meaning-bearer, including natural ones like smoke; a symbol is specifically a sign whose meaning is conventional and must be learned, like a flag or a word.
-- **Icon vs index vs symbol** — icon resembles (a photo), index is caused by or connected to (smoke, a fever), symbol is agreed by convention (a flag, a word).
-- **Meaning in the word vs meaning in the reader** — the exam trap. Words do not contain fixed meaning that is simply transmitted; the receiver actively interprets, using context and their own cultural and emotional associations. The sender's job is therefore to anticipate the receiver's interpretation, not merely to be technically correct.
-- **Semantic vs pragmatic** — semantic is what the sentence means; pragmatic is what the speaker means by it here and now.
-
-*Source note: the Week 2 GST_122 material is short — roughly 100 lines carrying only an "In Summary" paragraph, a five-point bullet summary, the ambiguity case study, and the reflection slides. The lesson slides themselves carried no extractable body text, so the terminology above (signifier/signified, icon/index/symbol, referent, semantic vs pragmatic) reconstructs the standard 100-level treatment of the concepts the source names, in the same way as the Week 1 packs.*
+- **Denotation vs connotation** — Ask: could you find this meaning in a dictionary entry? Yes → denotation; if it depends on feeling or culture → connotation.
+- **Homophone vs ambiguity** — Ask: would the confusion disappear if it were *written down*? Yes → homophone (sound-based); no, the written sentence is still two-ways readable → ambiguity.
+- **Ambiguity vs vagueness** — Ambiguity gives you *two or more distinct* readings; vagueness gives you *one* reading with fuzzy boundaries ("soon", "several"). [supplied]
+- **Semiotics vs non-verbal communication** — Semiotics is the *study/field* of signs and symbols; non-verbal communication is one *set of behaviours* it studies. Ask: is it a discipline or a behaviour?
+- **Semiotic Awareness vs Contextual Interpretation** — Awareness = noticing the sign is there; Contextual Interpretation = using the situation to decide what it means here.
+- **Accuracy vs clarity** — Accuracy = the meaning you sent is the meaning you intended; clarity = only one meaning is available to the receiver. The case study fails on clarity, not on accuracy.

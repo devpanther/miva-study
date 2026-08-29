@@ -1,67 +1,105 @@
-# PHY_108 — Week 1 Question Set (sit 7 days later)
+# PHY_108 — Week 1 Retention Questions
 
-*Sit this during Saturday catch-up in Week 2, not this week. Notes closed.*
+*Sit these seven days after the Week 1 session. Closed book. Target: 12/15.*
 
-## Multiple choice (12)
+## Multiple choice
 
-**1.** In the equation y = mx + c, what does m represent?
-A) The y-intercept  B) The slope  C) The x-intercept  D) The dependent variable
+**1.** In the straight-line equation y = mx + c, the constant c is:
+a) the rate of change of y with respect to x
+b) the value of y when x = 0
+c) the value of x when y = 0
+d) the gradient of the best-fit line
 
-**2.** Given y = mx + c, what is the x-intercept?
-A) c/m  B) −c/m  C) −m/c  D) m/c
+**2.** For a simple pendulum, T = 2π√(L/g). If T² is plotted against L, the slope of the graph is:
+a) g/4π²
+b) 4π²g
+c) 4π²/g
+d) 2π/√g
 
-**3.** To linearise exponential decay N = N₀e^(−λt), what should be plotted on the y-axis against t?
-A) N  B) ln(N)  C) N²  D) 1/N
+**3.** For radioactive decay N = N₀e^(−λt), a graph of ln N against t has:
+a) slope −λ and intercept ln N₀
+b) slope λ and intercept N₀
+c) slope −λt and intercept ln N
+d) slope ln N₀ and intercept −λ
 
-**4.** For the simple pendulum T = 2π√(L/g), what must be plotted to get a straight line, and what is the slope?
-A) T vs L, slope = 2π/g  B) T² vs L, slope = 4π²/g  C) T vs √L, slope = g/4π²  D) T² vs 1/L, slope = g
+**4.** For the power law y = kxⁿ, plotting log y against log x gives a y-intercept equal to:
+a) n
+b) k
+c) log n
+d) log k
 
-**5.** For Coulomb's law F = k(q₁q₂/r²), plotting F against 1/r² gives a slope equal to:
-A) k  B) kq₁q₂  C) q₁q₂/k  D) k/(q₁q₂)
+**5.** A straight line has equation y = 4x + 12. Its x-intercept is:
+a) +12
+b) +3
+c) −3
+d) −12
 
-**6.** For Boyle's law, log(P) = log(k) − log(V), the slope of the log(P) vs log(V) graph is:
-A) 1  B) −1  C) k  D) log(k)
+**6.** For Boyle's law written as log P = log k − log V, a graph of log P against log V has a slope of:
+a) −1
+b) +1
+c) log k
+d) −log k
 
-**7.** For Hooke's law F = kx, plotting F against x gives a slope equal to:
-A) k  B) x  C) F/k  D) 1/k
+**7.** An ammeter reads 0.05 A when nothing is connected to it, and every current reading is therefore 0.05 A too high. This is an example of:
+a) random error
+b) systematic error
+c) percentage difference
+d) a parallax error that averaging will remove
 
-**8.** Which type of error is caused by a consistent, repeatable fault in an instrument?
-A) Random error  B) Systematic error  C) Observation error  D) Percentage error
+**8.** A rope whose true length is 6.3 m is measured as 6.0 m. The percentage error is approximately:
+a) 0.30 %
+b) 3.00 %
+c) 5.00 %
+d) 4.76 %
 
-**9.** Random errors are best described as caused by:
-A) A consistently miscalibrated instrument  B) Unpredictable, inconsistent factors  C) Using the wrong formula  D) Rounding the final answer
+**9.** The most effective way to reduce the effect of random error in a measurement is to:
+a) use a more expensive instrument
+b) subtract the zero reading of the instrument
+c) take several readings and use their mean
+d) plot the data on a logarithmic scale
 
-**10.** Percentage error is calculated as:
-A) actual error ÷ true value  B) (actual error ÷ true value) × 100%  C) (true value ÷ actual error) × 100%  D) (observed − reference) ÷ reference
+**10.** In verifying Ohm's law, V is plotted against I for a metallic conductor. The gradient of the graph represents:
+a) the resistance of the conductor
+b) the conductance of the conductor
+c) the power dissipated
+d) the emf of the cell
 
-**11.** Percentage difference is calculated as:
-A) (actual error ÷ true value) × 100%  B) (observed value − reference value) ÷ reference value  C) (true value − observed value) ÷ true value  D) It is identical to percentage error
+**11.** Which of the following is NOT one of the stated guidelines for constructing a graph in physics?
+a) proper scaling of the axes
+b) joining each data point to the next with straight segments
+c) labelling of the axes
+d) drawing the best-fit line or curve
 
-**12.** A resistor has a true resistance of 100 Ω. A student measures 95 Ω. What is the magnitude of the percentage error?
-A) 0.05%  B) 5%  C) 95%  D) 100%
+**12.** An observed value of 4.7 is compared with a reference value of 5.0. The percentage difference is:
+a) +6 %, meaning the observed value is above the reference
+b) +0.06 %, meaning the values agree
+c) −0.3 %, meaning the observed value is below the reference
+d) −6 %, meaning the observed value is below the reference
 
-## Short answer (3)
+## Short answer
 
-**13.** A plot of T² (y-axis) against L (x-axis) for a simple pendulum gives a best-fit slope of 4.02 s²/m. Calculate g, showing the relationship you used.
+**13.** Hooke's law is F = kx and Coulomb's law is F = kq₁q₂/r². For each, state what you would plot on the y-axis and the x-axis to obtain a straight line, and say what the slope represents.
 
-**14.** The true diameter of a wire is 1.00 mm. A student measures it as 1.02 mm. Calculate the actual error, the relative error, and the percentage error.
+**14.** Distinguish between systematic and random error, giving one example of each and stating, for each, whether repeating and averaging the measurement will reduce it.
 
-**15.** Explain why you would plot ln(N) against t rather than N against t when analysing radioactive decay data, and state what physical quantity the slope of that line represents.
+**15.** A T²-against-L graph for a simple pendulum passes through the points (0.30 m, 1.24 s²) and (0.90 m, 3.66 s²) on the best-fit line. Calculate the gradient, hence the value of g, and the percentage error compared with 9.81 m s⁻².
 
-## Answer key
+---
 
-**1. B** — *slope*: m is the rate of change of y with respect to x.
-**2. B** — *intercepts*: set y = 0 in y = mx + c, giving x = −c/m.
-**3. B** — *logarithmic transformation*: ln(N) = −λt + ln(N₀) is linear in t.
-**4. B** — *linearisation table, pendulum row*: T² vs L, slope 4π²/g.
-**5. B** — *linearisation table, Coulomb row*: slope = kq₁q₂, not k alone.
-**6. B** — *Boyle's law linearised*: slope −1.
-**7. A** — *Hooke's law*: already linear, slope k.
-**8. B** — *systematic error*: consistent, one-directional instrument fault.
-**9. B** — *random error*: unpredictable and inconsistent, not a fixed bias.
-**10. B** — *percentage error formula*.
-**11. B** — *percentage difference formula*: compares observed against reference.
-**12. B** — *percentage error applied*: actual error = 5, (5/100)×100% = 5%.
-**13. g ≈ 9.82 m/s²** — *extracting a constant from a slope*: m = 4π²/g ⟹ g = 4π²/m = 4π²/4.02 ≈ 9.82 m/s².
-**14. Actual error = 0.02 mm; relative error = 0.02; percentage error = 2%** — *the three error formulas applied in sequence*.
-**15.** *Logarithmic transformation*: N vs t is an exponential curve and hard to fit accurately by hand, whereas ln(N) vs t is a straight line to which a best-fit line can be drawn. The slope of that line equals −λ, the decay constant.
+## Answers
+
+**1. b** — c is the y-intercept, the value of y when x = 0; m is the gradient.
+**2. c** — squaring gives T² = (4π²/g)L, so the coefficient of L is 4π²/g.
+**3. a** — ln N = −λt + ln N₀, so slope = −λ and intercept = ln N₀.
+**4. d** — log y = n log x + log k, so the intercept is log k and the slope is n.
+**5. c** — x-intercept = −c/m = −12/4 = −3.
+**6. a** — rearranged it is log P = (−1)log V + log k, so the slope is −1.
+**7. b** — a fixed, repeatable offset in one direction is systematic; averaging cannot remove it.
+**8. d** — actual error 0.3 m; (0.3/6.3) × 100 = 4.76 %.
+**9. c** — random errors scatter both ways, so the mean of repeats is the best estimate.
+**10. a** — V = IR, so with V on the y-axis and I on the x-axis the gradient is R.
+**11. b** — the guideline is a single smooth best-fit line, never dot-to-dot joining.
+**12. d** — (4.7 − 5.0)/5.0 × 100 = −6 %; the negative sign means observed is below reference.
+**13.** Hooke: plot F (y) against x (x-axis), slope = k, intercept 0. Coulomb: plot F (y) against 1/r² (x-axis), slope = kq₁q₂, intercept 0 — in both cases the slope carries the constant of proportionality.
+**14.** Systematic = consistent instrument failure/bias, e.g. a zero error on a micrometer; it is the same every time, so averaging does not remove it (only calibration or subtracting the zero error does). Random = unpredictable, inconsistent factors, e.g. reaction-time scatter when timing oscillations; averaging repeated readings does reduce it.
+**15.** Gradient = (3.66 − 1.24)/(0.90 − 0.30) = 2.42/0.60 = 4.03 s² m⁻²; g = 4π²/4.03 = 39.478/4.03 = 9.80 m s⁻²; percentage error = (9.81 − 9.80)/9.81 × 100 ≈ 0.1 %.

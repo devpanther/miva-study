@@ -1,71 +1,89 @@
-# Sunday Recap — Week 2
+# Sunday recap — Week 2
 
-*Sunday 20 September 2026, 19:00–20:00. One hour total, not one hour each. Two topics: one his, one his partner's.*
+*Sunday 20 September 2026, 19:00–20:00. One hour, two topics, one each, taught aloud with no notes.*
 
-## How the topic gets picked
+## How the topic is chosen
 
-**Your lowest nightly-check score of the week decides it.** Six checks (Mon MTH, Tue PHY, Wed COS, Thu MTH-problems, Fri PHY-problems, Sat COS-code), six out of six each. Whichever you scored lowest on is the topic you teach, no notes.
+The topic is **not** picked from this page. Each person takes the nightly check they scored lowest on this week — lowest `score ÷ 12`, across Mon–Sat — and teaches that topic. This page is the **fallback only**: use it if the scores tie, or if checks were skipped and there is no honest lowest.
 
-**You take the same eight courses, so do not both pick the same course.** Whoever scored lower on that course keeps it; the other person moves to their next-lowest score in a *different* course. Settle this in Friday's review hour, not at 19:00 on Sunday.
+**You take the same eight courses, so do not both pick the same course.** If your lowest lands on the same course, the person with the lower ratio keeps it and the other moves to their next-lowest check *in a different course*. Two people teaching the same topic wastes half the hour.
 
-The two topics below are **fallbacks only** — use them if the scores tie, or if the checks got skipped and there is no score to go on.
-
-```
-19:00  he teaches (10 min)      19:10  partner asks "why" until it breaks (5 min)
-19:15  partner teaches (10)     19:25  he asks "why" (5 min)
-19:30  close both gaps together (20 min)    19:50  slack
-```
+Teaching means explaining it out loud until the other person can restate the mechanism — not reciting the summary. The listener's job is to keep asking the "why" questions below until the explanation stops being a definition and starts being a reason.
 
 ---
 
-## Fallback topic 1 — PHY_102: The superposition principle — combining Coulomb forces and fields as vector sums
+## Fallback topic 1 — PHY_102: why E can vanish where V does not, and V vanish where E does not
 
-**Why it tends to be misunderstood.** Superposition looks trivially easy when it is stated — "just add up the forces" — and that is exactly why it costs marks. The word *add* hides the fact that the operation is a **vector** sum, so a student who has correctly computed every individual magnitude can still get the wrong answer by combining them arithmetically, or by cancelling the source charges (+4 and −4 look like they should give zero) instead of resolving the actual force directions. A second layer is the pairwise independence superposition asserts: everyday intuition says objects in between block things, so students expect a third charge placed between two others to screen the force between them, when in fact each pairwise Coulomb force is completely unaffected and superposition only adds new terms. A third layer is sign handling — the vector form already encodes attraction and repulsion in the signed product, so a student who substitutes signed charges *and then* flips the direction by inspection uses the sign twice and reverses the answer. Finally the inverse-square weighting is consistently underestimated: the distance ratio is squared while the charge ratio is not, so intuition about which charge dominates is often wrong, and null-point problems get the right algebra applied to the wrong geometry (between the charges for a like pair, outside for an unlike pair).
+**The claim:** the electric field is a vector and the potential is a scalar, and almost everything that looks paradoxical about the pair follows from that one fact.
 
-**Five escalating "why" questions for the listener:**
+**Why it tends to be misunderstood.** `E` and `V` are introduced in the same breath, both fall off with distance, and both are computed from the same charges — so they get filed as two names for roughly one thing. That makes it seem impossible that one could be exactly zero at the very point where the other is largest. It is not impossible; it is the normal case, and it happens in *opposite* configurations for the two quantities.
 
-1. Why is superposition a vector sum rather than a sum of magnitudes, and when is arithmetic addition legitimate?
-2. Why does placing a third charge between two others leave the force between those two completely unchanged?
-3. Why does the vector form F = (k q₁q₂ / r²) r̂ give the direction automatically, and why is applying "like repels, unlike attracts" on top of it an error?
-4. Why can there be no zero-force point *between* two unlike charges, while for two like charges the null point must lie between them and nearer the smaller one?
-5. Why does the location of a null point not depend on the size or sign of the charge you place there?
+**Five "why" questions for the listener, easy to hard.**
 
-**What a good answer contains:**
+1. What is the unit of `E` and what is the unit of `V` — and what does each unit tell you the quantity is *per unit of*?
+2. Why does a field contribution need a direction, while a potential contribution needs only a sign?
+3. At the midpoint between two equal **positive** charges, what are the two field arrows doing, and what are the two potential numbers doing?
+4. Now make one of those charges negative. Which of `E` and `V` is zero at the midpoint, and which is at a maximum?
+5. Why can you *not* recover `E` at a point just by dividing `V` at that point by a distance?
 
-- States superposition as: the net force (or field) on a charge is the **vector sum** of the forces each other charge would produce individually, each computed by Coulomb's law *as if the others were absent* — so charges never screen one another.
-- Shows the method: free-body diagram, resolve each contribution into components along fixed axes with explicit signs, sum components separately, then recombine with Pythagoras and arctan(F_y/F_x) — never by adding magnitudes.
-- Handles signs once and only once, and applies the inverse-square weighting explicitly, noting that a factor in distance counts squared while a factor in charge counts linearly.
+**What a good answer contains.**
 
-**Worked example.** A +2.0 μC charge q₀ sits at the origin. A +8.0 μC charge is at (0.30 m, 0) and a +6.0 μC charge is at (0, 0.30 m). Find the net force on q₀. Both separations are 0.30 m, so r² = 0.090 m² in each case. From the 8.0 μC charge: F₁ = (8.99×10⁹)(8.0×10⁻⁶)(2.0×10⁻⁶)/0.090 = **1.60 N**; all charges positive, so q₀ is pushed directly away, along −x. From the 6.0 μC charge: F₂ = (8.99×10⁹)(6.0×10⁻⁶)(2.0×10⁻⁶)/0.090 = **1.20 N**, pushing q₀ along −y. Superpose by components: ΣF_x = −1.60 N, ΣF_y = −1.20 N. Magnitude: F = √(1.60² + 1.20²) = √4.00 = **2.0 N**. Direction: tan θ = 1.20/1.60 = 0.75, so θ = **37° below the −x axis** (about 217° anticlockwise from +x). Note that adding the magnitudes arithmetically would have given 2.8 N — a 40 % error — and that the two forces are perpendicular here only because of where the charges happened to sit; in general every contribution must be resolved before it is added.
+- `E` is **force** per unit charge (N/C, a vector); `V` is **energy** per unit charge (J/C, a scalar). The whole difference is that force has a direction and energy does not.
+- Field contributions therefore add as arrows that can point against each other and cancel; potential contributions add as signed numbers, which cancel only when the charges differ in sign.
+- Hence two **like** charges give `E = 0` and `V` at a maximum at the midpoint, while two **unlike** charges of equal magnitude give `V = 0` and `E` at a maximum there. The two quantities vanish in opposite configurations — and neither can be got from the other by a simple division.
 
----
+**Worked example.** Two charges of `+q` sit a distance `2a` apart. Take the midpoint M.
 
-## Fallback topic 2 — MTH_102: Rational functions — holes vs vertical asymptotes, the degree rules, and rational inequalities
+*Field.* The left charge pushes a positive test charge to the right with magnitude `kq/a²`. The right charge pushes it to the left with the same magnitude `kq/a²`. Equal arrows, opposite directions → **E = 0** at M.
 
-**Why it tends to be misunderstood.** Students meet rational functions as a list of separate rules and never see that all of them come from one idea: what happens to a quotient when the denominator gets small, and what happens when x gets large. So they set the denominator to zero and declare a vertical asymptote *without first cancelling*, drawing an asymptote where the graph in fact has a single missing point; they take the ratio of leading coefficients as a reflex whenever they see a fraction, producing a horizontal asymptote for a function that actually has an oblique one or none; they treat a horizontal asymptote as a barrier the curve cannot cross, when it is only a claim about the far left and far right; and, worst of all in an exam, they treat a rational **inequality** like a rational **equation** and multiply both sides by the denominator — legitimate for an equation, not for an inequality, because the denominator changes sign across its own zero and the direction flips on one side but not the other. The habits reinforce each other: a student who never factors first will never notice a hole, and a student who never draws a sign chart has no way of seeing that the solution set usually comes in two disconnected pieces.
+*Potential.* Each contributes `+kq/a`, a positive number with no direction → **V = 2kq/a**, a maximum, not zero.
 
-**Five escalating "why" questions for the listener:**
+Now flip the right-hand charge to `−q`.
 
-1. Why does a factor that cancels give a hole rather than a vertical asymptote, and how do you find the height of that hole?
-2. Why is the ratio of leading coefficients the horizontal asymptote only when the degrees are equal, and what replaces it when the numerator degree is one higher?
-3. Why can a graph cross its horizontal asymptote but never its vertical asymptote?
-4. Why is it wrong to multiply both sides of (x+1)/(x−3) ≤ 2 by (x−3), even though the same move is fine for the equation (x+1)/(x−3) = 2?
-5. Why does the sign of a factored expression change at a root of odd multiplicity but not at one of even multiplicity — and why is the root still excluded from a strict inequality either way?
+*Field.* The `+q` pushes the test charge to the right with `kq/a²`; the `−q` **pulls** it to the right with `kq/a²`. Both now point the same way → **E = 2kq/a²**, a maximum.
 
-**What a good answer contains:**
+*Potential.* `+kq/a` from one and `−kq/a` from the other → **V = 0**.
 
-- Factor numerator and denominator *first*: cancelled factors give **holes** (height read off the reduced function), surviving denominator zeros give **vertical asymptotes**.
-- Compare degrees for the far-out behaviour: lower → y = 0; equal → ratio of leading coefficients; one higher → an **oblique** asymptote found by long division. A horizontal or oblique asymptote may be crossed at finite x.
-- For an inequality: move everything to one side over a common denominator, mark the zeros of numerator and denominator on a sign chart, test one value per interval, include numerator zeros only when the inequality is non-strict, and always exclude denominator zeros.
+The two cases have swapped exactly.
 
-**Worked example.** Sketch f(x) = (x²−4)/(x²−x−6), then solve f(x) ≥ 0. **Factor:** f(x) = (x−2)(x+2)/((x−3)(x+2)). The (x+2) cancels, so x = −2 is a **hole**, not an asymptote; the reduced function is (x−2)/(x−3), and the hole sits at height (−2−2)/(−2−3) = 4/5 — the open point (−2, 0.8). **Vertical asymptote:** the surviving denominator zero, x = 3. **Intercepts:** numerator of the reduced function vanishes at x = 2 → (2, 0); f(0) = (−4)/(−6) = 2/3 → (0, 2/3). **Far-out behaviour:** degrees equal, so horizontal asymptote y = 1/1 = 1; writing f(x) = 1 + 1/(x−3) shows f → 1 from above as x → +∞ and from below as x → −∞, and that f = 1 has no solution, so the graph never crosses it. **At the vertical asymptote:** as x → 3⁻ the numerator → 1 and the denominator → 0⁻, so f → −∞; as x → 3⁺, f → +∞. **Sign chart** on (x−2)/(x−3) with critical values 2 and 3: at x = 0, (−2)/(−3) > 0; at x = 2.5, (0.5)/(−0.5) < 0; at x = 4, 2/1 > 0. So **f(x) ≥ 0 on (−∞, 2] ∪ (3, ∞), minus the hole at x = −2** — x = 2 is included since f(2) = 0, x = 3 is excluded since f is undefined there, and x = −2 must be struck out because f is undefined there too.
+*The trap worth naming.* In that second case `V = 0` at M while `E` is at its largest — which is precisely why you cannot divide `V` by a distance to recover `E`. The real relation is that `E` measures the **rate at which V changes with position**, and a quantity can pass through zero while changing very fast indeed.
 
 ---
 
-## Reserve topic (if both fallbacks are already used) — COS_102: What "unsolvable" actually means
+## Fallback topic 2 — COS_102: what "unsolvable" and "undecidable" actually claim
 
-The word arrives with an everyday meaning already attached, and the course explicitly says that meaning is wrong: unsolvable problems are **not** problems for which no solution can possibly be found. Students read the slide, nod, and then reason from the everyday sense anyway — concluding that unsolvable means "nobody has cracked it yet", or "very hard", or "the answer does not exist". Three categories then collapse into one. A **non-routine** problem lacks a *standard* method but yields to a novel one built through critical study and creativity; an **unsolvable** problem lacks any systematic method for deciding it *in general*, though particular instances may be settled easily; an **undecidable** problem is the sharp subset where no algorithm returns an accurate true/false for every input.
+**The claim:** both words are statements about the existence of a *method*, not about the existence of an *answer*.
 
-Probe with: The course says unsolvable problems are not ones for which no solution can be found — so what exactly is it that cannot be done? → Why "unsolvable *decision* problems" rather than just "unsolvable problems"? → Why can originality rescue a non-routine problem but never an undecidable one? → In the BOB → BOOOB derivation the string grows to seven letters before shrinking to five; why does that single fact explain why no systematic method exists? → "Does my code have a bug" is undecidable, yet programmers find bugs every day — how are both true?
+**Why it tends to be misunderstood.** In ordinary speech "unsolvable" means "has no answer", so the technical sense gets read that way — and "undecidable" then sounds like a stronger word for "very hard indeed". Both readings are wrong. The lecture slide explicitly warns against the first, and it is exactly the kind of line that gets skimmed.
 
-A good answer says: unsolvable = no algorithm decides the question *in general*, which is why the course says *decision* problems; undecidable is the sharpened form and a subset; non-routine is a different axis entirely — no *standard* method, but a novel one can be developed. The trap to catch: "unsolvable means give up", or the belief that enough creativity beats the halting problem.
+**Five "why" questions for the listener, easy to hard.**
+
+1. In this course, what is being claimed when a problem is called unsolvable — something about the answer, or about something else?
+2. Take one specific program and one specific input. Does the question "does it halt?" have an answer at all?
+3. If every individual case *has* an answer, what is it that the halting problem says cannot be done?
+4. Why does a faster computer, or more memory, not help with an undecidable problem, when it plainly does help with a merely difficult one?
+5. Why are undecidable problems described as a *subset* of unsolvable ones, rather than as a separate category?
+
+**What a good answer contains.**
+
+- It states the lesson's own correction outright: unsolvable problems are **not** problems for which no solution can be found — the claim is that no systematic method exists for **deciding them for every input**.
+- It separates the individual case from the general procedure: any particular program either halts on a given input or does not, so every instance has a true answer. What fails to exist is *one algorithm returning the right answer for all instances*.
+- It distinguishes proved impossibility from cost: difficulty is about time and resources, where a faster machine helps; undecidability has been **proved**, so no machine, however fast, can do it. Undecidable problems sit inside the unsolvable ones as exactly those decision problems for which this has been established.
+
+**Worked example.** Ask for `H(P, I)`: a program that reads any program `P` and input `I` and prints HALTS or LOOPS, correctly, every time.
+
+*First, note the answer exists case by case.* `while true do nothing` loops. `print 1 and stop` halts. Each individual question has a definite true answer — so this is **not** a case of "no answer exists".
+
+*Now suppose `H` existed.* Build a program `D` that takes a program `P`, runs `H` on the pair `(P, P)`, and then does the **opposite** of what `H` says:
+
+- if `H` reports HALTS → `D` enters an infinite loop;
+- if `H` reports LOOPS → `D` stops immediately.
+
+*Run `D` on itself.*
+
+- If `D` halts, then `H(D, D)` reported HALTS — but `D` was built to loop in that case, so it does **not** halt.
+- If `D` loops, then `H(D, D)` reported LOOPS — but `D` was built to stop in that case, so it **does** halt.
+
+Either branch contradicts itself, so no such `H` can exist.
+
+*Note carefully what has been proved:* not that some particular program's behaviour is unknowable, but that **no single general method works for every input**. That is the whole difference between undecidable and merely difficult — and it is why a faster machine changes nothing at all.

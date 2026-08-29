@@ -1,48 +1,61 @@
 # Thursday — MTH_102 nightly check
 
-*MTH_102 problems: building a sketch, sign charts, solving equations and inequalities graphically and algebraically.*
-*Sit cold, notes closed, 8 minutes. Score out of 6.*
+*This session worked the same Week 2 function material as problems: reading a question, picking the right method and executing it cleanly. It covered evaluating compositions in the correct order; finding the largest domain of an expression combining a logarithm and a denominator; completing the square to locate a parabola's vertex; solving an absolute-value equation by its two cases; solving an exponential equation by isolating the power; evaluating a piecewise function at and around its boundary; recovering a line's equation from two points; and solving a logarithmic equation with the domain check that rejects a spurious root. The four written questions are about checking an answer and naming exactly where a standard wrong route goes astray — squaring an absolute-value equation, treating an exponential as a product, and reading end behaviour off a polynomial.*
 
-**1.** The solution set of (x + 1)/(x − 3) ≤ 2 is:
-a) x ≤ 7, obtained by multiplying both sides by (x − 3)
-b) [7, ∞)
-c) (−∞, 3) ∪ [7, ∞)
-d) (3, 7]
+*Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**2.** The solution set of (x − 1)²(x + 2) > 0 is:
-a) (−2, 1) ∪ (1, ∞)
-b) (−2, ∞)
-c) (−∞, −2) ∪ (1, ∞)
-d) (1, ∞)
+**1.** With f(x) = 2x + 3 and g(x) = x² − 1, the value of (f ∘ g)(2) is
+a) 48
+b) 21
+c) 9
+d) 10
 
-**3.** How many real solutions has x³ − 3x = 1?
-a) 1, because a cubic equation has exactly one real root
-b) 2, because the line y = 1 meets the curve once on each side of the y-axis
-c) 0, because x³ − 3x − 1 does not factorise over the integers
-d) 3: the curve y = x³ − 3x has a local maximum of 2 at x = −1 and a local minimum of −2 at x = 1, and the line y = 1 lies strictly between them, so it cuts all three branches
+**2.** The largest set of real x for which f(x) = log₁₀(x − 2) + 1/(x − 5) is defined is
+a) x > 2 with x ≠ 5
+b) x ≥ 2 with x ≠ 5
+c) x > 2
+d) all real x except x = 5
 
-**4.** The solution set of −x² + 4x − 3 > 0 is:
-a) x < 1 or x > 3
-b) 1 < x < 3
-c) x ≤ 1 or x ≥ 3
-d) all real x except x = 1 and x = 3
+**3.** The vertex of f(x) = 2x² − 12x + 7 is at
+a) (−3, −11)
+b) (3, 7)
+c) (6, −11)
+d) (3, −11)
 
-**5. (explain why)** For p(x) = (x + 1)³(x − 2)², explain how you decide the sign of p on each interval of a sign chart, and hence give the solution of p(x) < 0. Say explicitly what the multiplicity of each root does to the sign.
+**4.** The solution set of |2x − 5| = 7 is
+a) x = 6 only
+b) x = 6 or x = −1
+c) x = 6 or x = 1
+d) x = 1 or x = −6
 
-**6. (explain why)** You are asked to sketch f(x) = (x² + 1)/(x − 1). Explain how you find every asymptote, showing the working for the non-vertical one, and state the intercepts.
+**5.** Solving 3·2^x = 96 gives x =
+a) 5
+b) 16
+c) 32
+d) log₂96 ≈ 6.6
 
----
+**6.** For f(x) = 3x + 4 when x ≤ 1 and f(x) = x² when x > 1, the value of f(1) + f(3) is
+a) 10
+b) 20
+c) 16
+d) 14
 
-## Answers
+**7.** The line through (−2, 5) and (4, −7) has equation
+a) y = 2x + 9
+b) y = −2x + 1
+c) y = −½x + 4
+d) y = −2x + 9
 
-**1. c** — *Never multiply an inequality by an expression whose sign is unknown; collect on one side over a common denominator instead.* Subtracting: (x+1)/(x−3) − 2 = (x + 1 − 2x + 6)/(x − 3) = (7 − x)/(x − 3) ≤ 0, i.e. (x − 7)/(x − 3) ≥ 0. Critical values 3 (undefined, excluded) and 7 (zero, included since the inequality is ≤ in the original). Testing: x = 0 gives (−7)/(−3) > 0 ✓, x = 5 gives (−2)/2 < 0 ✗, x = 8 gives 1/5 > 0 ✓. (a) is exactly the forbidden move — it silently assumes x − 3 > 0 and even then loses the x < 3 branch; (b) keeps only the right-hand branch and forgets that every x below 3 makes the left side negative, hence ≤ 2; (d) reads the sign chart with the inequality reversed and wrongly includes 3.
+**8.** The solution of log₁₀x + log₁₀(x − 3) = 1 is
+a) x = 10 or x = 13
+b) x = 5 or x = −2
+c) x = 6.5
+d) x = 5
 
-**2. a** — *A factor of even multiplicity does not change the sign, but its root still makes the expression zero.* (x − 1)² ≥ 0 always, so the sign of p is the sign of (x + 2), giving p > 0 for x > −2 — except at x = 1, where p = 0 and the strict inequality fails. (b) forgets to remove x = 1; (c) assumes the sign alternates at every root, which is the odd-multiplicity rule applied blindly; (d) treats x = −2 as irrelevant and both roots as sign changes.
+**9. (explain why)** The equation |x − 4| = −3 has no solution, yet a student who squares both sides obtains x = 1 and x = 7. Say why there is no solution, and say precisely what the squaring step did to produce those two values.
 
-**3. d** — *Solving an equation graphically means intersecting the curve with a horizontal line, and the turning points decide how many intersections there are.* y = x³ − 3x turns at x = ±1 with values 2 and −2; a horizontal line at height strictly between −2 and 2 meets the falling middle branch once and each rising outer branch once. (a) confuses "a cubic has at least one real root" with "exactly one"; (b) ignores the middle branch between the turning points; (c) confuses irrational roots with no roots — the graph clearly crosses y = 1 three times, and factorising over ℤ is irrelevant.
+**10. (explain why)** You have found the vertex of f(x) = 2x² − 12x + 7 to be (3, −11). Give two independent checks — not a repeat of the completing-the-square work — that confirm this is right.
 
-**4. b** — *When you multiply or divide an inequality by a negative number the inequality reverses.* Multiply by −1: x² − 4x + 3 < 0, i.e. (x − 1)(x − 3) < 0; an upward parabola is negative strictly **between** its roots. (a) is the answer you get by forgetting to flip — it is the solution of x² − 4x + 3 > 0; (c) is (b)'s complement with wrongly included endpoints (the inequality is strict, and the roots give 0, not > 0); (d) treats the roots as excluded points of an otherwise positive function, ignoring that the parabola opens downwards.
+**11. (explain why)** A student solves 5^x = 40 by writing x = 40 ÷ 5 = 8. Explain what that student has misread about the expression 5^x, and give the correct one-line method together with roughly what x is.
 
-**5.** *Concept: sign charts, and the role of multiplicity.* Mark the roots x = −1 and x = 2 on a number line; they cut it into (−∞, −1), (−1, 2) and (2, ∞), and on each interval p has one constant sign, so testing a single convenient value decides the whole interval. Test x = −2: (−1)³(−4)² = −16 < 0. Test x = 0: (1)³(−2)² = 4 > 0. Test x = 3: (4)³(1)² = 64 > 0. The root x = −1 has **odd** multiplicity 3, so the sign **changes** across it (the graph crosses the axis); x = 2 has **even** multiplicity 2, so the sign **does not change** (the graph touches and turns back). Hence **p(x) < 0 on (−∞, −1)** only; the roots themselves give p = 0 and are excluded by the strict inequality.
-
-**6.** *Concept: asymptotes of a rational function — denominator zeros for vertical, degree comparison for the rest.* **Vertical:** x − 1 = 0 and it does not cancel (x² + 1 has no real factor), so **x = 1**. **Non-vertical:** deg N = 2 = deg D + 1, so there is no horizontal asymptote but there is an oblique one; long division gives x² + 1 = (x − 1)(x + 1) + 2, so f(x) = x + 1 + 2/(x − 1), and since 2/(x − 1) → 0 as x → ±∞ the line **y = x + 1** is the oblique asymptote. **Intercepts:** y-intercept f(0) = 1/(−1) = **−1**; no x-intercept, since x² + 1 = 0 has no real solution. (Near the asymptote: x → 1⁺ gives f → +∞, x → 1⁻ gives f → −∞.)
+**12. (explain why)** For f(x) = −x³ + 3x² − 2, state the degree and leading coefficient, then say what f(x) does as x → +∞ and as x → −∞. Show the reasoning that gets you there, not just the conclusion.

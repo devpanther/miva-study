@@ -1,39 +1,61 @@
-# Friday — PHY_102 problems nightly check
+# Friday — PHY_102 nightly check
 
-*Coulomb's law, superposition and charge quantisation calculations.*
-*Sit cold, notes closed, 8 minutes. Score out of 6. Constants: k = 8.99×10⁹ N·m²/C², e = 1.602×10⁻¹⁹ C.*
+*This session took the same week-1 material and worked it as problems. It covered converting between a net charge and a number of transferred electrons using q = ne; tracking charge through transfers, including the averaging rule q′ = (q₁+q₂)/2 for identical conducting spheres in contact and following a charge through two successive contacts; computing Coulomb forces, with attention to squaring the separation and converting centimetres to metres; adding forces and fields as vectors, including the case of two equal and opposite charges whose contributions at the midpoint reinforce rather than cancel; finding the point on a line where the resultant field is zero; computing the field of a point charge and the force it exerts on a charge placed in it, including the direction reversal for a negative charge; and diagnosing a wrong route from the shape of the formula and checking a result by units and by order of magnitude. Take k = 8.99×10⁹ N·m²·C⁻² and e = 1.6×10⁻¹⁹ C.*
 
-**1.** Two point charges, q₁ = +5.0 μC and q₂ = −2.0 μC, are 0.30 m apart in vacuum. The magnitude of the force between them is closest to:
-a) 1.0 N  b) 0.30 N  c) 3.0 N  d) 1.0×10⁻⁶ N
+*Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**2.** A charge of +3.0 μC sits at x = 0 and a charge of −3.0 μC at x = 0.40 m. A +2.0 μC charge is placed at the midpoint, x = 0.20 m. The net force on it is:
-a) 2.7 N directed toward the negative charge
-b) zero, because the two source charges are equal and opposite
-c) 1.3 N directed toward the negative charge
-d) 2.7 N directed toward the positive charge
+**1.** An object carries a net charge of −4.8×10⁻¹⁷ C. How many excess electrons does it hold?
+a) 3.0×10³
+b) 3.3×10⁻³
+c) 3.0×10²
+d) 7.7×10⁻³⁶
 
-**3.** An object carries a net charge of −8.0×10⁻¹⁹ C. The number of excess electrons on it is:
-a) 5  b) 8  c) 0.20  d) 1.3×10⁻³⁷
+**2.** Point charges of +2.0 μC and −5.0 μC are held 4.0 cm apart in vacuum. The magnitude of the force between them is:
+a) 2.2 N
+b) 9.0×10⁻² N
+c) 5.6×10⁻³ N
+d) 56 N
 
-**4.** Two point charges exert a force F on each other. One of the charges is now tripled and the separation is halved. The new force is:
-a) 12F  b) 6F  c) 1.5F  d) 24F
+**3.** Two identical metal spheres carry +9.0 nC and −3.0 nC. They are touched together and separated again. Each now carries:
+a) +6.0 nC
+b) +3.0 nC
+c) +4.5 nC
+d) 0
 
-**5. (explain why)** A charge of +q is at x = 0 and a charge of +4q is at x = 0.60 m. Find the point on the line between them where a small test charge feels **zero** net force, and show the reasoning that fixes which side of the midpoint it lies on.
+**4.** A +2.0 μC charge sits at x = 0 and a +8.0 μC charge at x = 0.30 m. At what point between them is the resultant electric field zero?
+a) 0.10 m from the 2.0 μC charge
+b) 0.15 m from the 2.0 μC charge
+c) 0.060 m from the 2.0 μC charge
+d) 0.20 m from the 2.0 μC charge
 
-**6. (explain why)** Charges of +2.0 μC at x = 0 and +8.0 μC at x = 0.30 m are fixed on a line. A charge of −1.0 μC is placed at x = 0.10 m. Work out the net force on it, and explain what the result tells you about how distance and charge magnitude compete.
+**5.** At a certain point the electric field is 2.0×10⁴ N·C⁻¹ pointing east. An electron is released there. The force on it is:
+a) 3.2×10⁻¹⁵ N east
+b) 3.2×10⁻¹⁵ N west
+c) 8.0×10⁻²⁴ N west
+d) 1.3×10²³ N east
 
----
+**6.** Asked for the field 4.0 cm from a +2.0 nC point charge, a student writes E = kQ/r = (8.99×10⁹)(2.0×10⁻⁹)/(0.040) = 450 N·C⁻¹. Which statement is correct?
+a) The working is right; only the unit should be N·m·C⁻¹.
+b) k is wrong here and should be ε₀ = 8.85×10⁻¹², giving 4.4×10⁻¹³ N·C⁻¹.
+c) The separation must be squared, giving 1.1×10⁴ N·C⁻¹.
+d) The charge must first be divided by e, giving 2.8×10²¹ N·C⁻¹.
 
-## Answers
+**7.** Charges of +4.0 μC and −4.0 μC are fixed at points A and B, 20 cm apart. A +1.0 μC charge is placed exactly midway between them. The net force on it is:
+a) zero, since the two charges are equal and opposite
+b) 3.6 N directed toward B
+c) 7.2 N directed toward A
+d) 7.2 N directed toward B
 
-**1. a** — *Coulomb's law with correct unit conversion and squaring of r.* F = (8.99×10⁹)(5.0×10⁻⁶)(2.0×10⁻⁶)/(0.30)² = 0.0899/0.090 ≈ 1.0 N, attractive. (b) is what you get by dividing by r instead of r²; (c) comes from the slip (0.30)² = 0.03; (d) comes from reading μC as nC.
+**8.** Sphere X carries +8.0 nC. It is touched to identical neutral sphere Y and separated; Y is then touched to identical neutral sphere Z and separated. The final charge on Y is:
+a) +2.0 nC
+b) +4.0 nC
+c) +2.7 nC
+d) +1.0 nC
 
-**2. a** — *Superposition: add force vectors, not charge magnitudes.* The positive source repels the test charge toward +x and the negative source attracts it toward +x, so the two 1.35 N contributions add to 2.7 N pointing at the negative charge. (b) is the common error of cancelling because the sources are ±equal; (c) counts only one source; (d) reverses the direction.
+**9. (explain why)** In a lab problem two small charged spheres about a metre apart carry charges of a few microcoulombs, and a student's answer for the force comes out as 4.0×10⁵ N. Explain why the size of that answer alone should tell you something has gone wrong, and describe how you would work backwards to locate the error.
 
-**3. a** — *Quantisation, n = q/e.* n = (8.0×10⁻¹⁹)/(1.602×10⁻¹⁹) = 5. (b) reads the coefficient as the count; (c) inverts the division; (d) multiplies instead of dividing.
+**10. (explain why)** A student leaves the separation in centimetres in Coulomb's law. Explain why the answer is then wrong by a factor of 10⁴ rather than 10², and say whether the computed force comes out too large or too small.
 
-**4. a** — *The inverse-square law scales with r², not r.* F ∝ q₁q₂/r², so tripling a charge gives ×3 and halving r gives ×2² = 4, hence ×12. (b) forgets to square the distance factor; (d) wrongly squares the charge factor too.
+**11. (explain why)** The field at a point can be found either as E = F/q₀ or as E = kQ/r². Show, by working through the units of each expression, that both must give N·C⁻¹, and explain why this is a useful check on a formula you half-remember.
 
-**5.** *Concept: the null point between two like charges lies nearer the weaker charge.* Set kq/x² = k(4q)/(0.60 − x)². Taking square roots, (0.60 − x)/x = 2, so 0.60 − x = 2x and **x = 0.20 m from the +q charge** (0.40 m from the +4q). It must sit nearer the smaller charge because only extra distance from the larger charge, working through the 1/r² factor, can bring the two magnitudes into balance; the factor-of-4 in charge is offset by a factor-of-2 in distance.
-
-**6.** *Concept: superposition with attractive forces, and the dominance of the inverse-square distance factor.* The net force is **zero**. From the +2.0 μC at r = 0.10 m: F₁ = k(2.0×10⁻⁶)(1.0×10⁻⁶)/(0.10)² = 1.80 N, attractive, in the −x direction. From the +8.0 μC at r = 0.20 m: F₂ = k(8.0×10⁻⁶)(1.0×10⁻⁶)/(0.20)² = 1.80 N, attractive, in the +x direction. They are equal and opposite, so the resultant is zero. Quadrupling the charge is exactly cancelled by doubling the distance (2/0.01 = 8/0.04 = 200): in Coulomb's law distance is the more powerful variable, so the larger charge does not automatically win.
+**12. (explain why)** For two positive charges of different size, the point where the resultant field vanishes always lies nearer the *smaller* charge. Explain why this must be so without doing the algebra, and state what changes about the location of the null point if one of the charges is made negative instead.
