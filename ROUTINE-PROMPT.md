@@ -70,6 +70,20 @@ WHAT TO PRODUCE, all under packs/week-XX/
    recognises the vocabulary. No questions solvable by elimination. Every answer
    names the underlying concept, so a wrong answer says what to revisit.
 
+2b. ANSWER SPREAD - a hard check, not a judgement call
+   Before writing week-XX.json, count how many correct answers across ALL SIX
+   checks fall on option a, b, c and d. There are 48 MCQs in a week, so each
+   option should carry roughly 12.
+   REQUIRED: every option must hold at least 15% and at most 35% of the correct
+   answers (between 8 and 16 of 48). If any option is outside that band, go back
+   and rewrite questions - reorder the options so the correct one moves - until
+   it is inside. Then recount and confirm before continuing.
+   This is not cosmetic. If answers cluster, the check can be passed by guessing
+   the popular letter, the score stops measuring understanding, and the Sunday
+   topic gets picked from a meaningless number. A previous run put 42 of 48
+   answers on option (a); that week had to be thrown away.
+   Report the final a/b/c/d counts in your closing message.
+
 3. WEEKLY SETS - <COURSE>-Questions.md, 12 MCQ + 3 short-answer per course.
    Sat SEVEN DAYS LATER: these test retention where the checks test
    understanding. Pitch them accordingly. Answers at the bottom.
