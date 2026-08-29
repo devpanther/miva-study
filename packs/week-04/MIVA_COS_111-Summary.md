@@ -1,6 +1,6 @@
 # MIVA_COS_111 — Week 4
 
-*Technical Certification I · Week 4 (28 Sep–4 Oct 2026)*
+*Technical Certification I · Week 4 (28 Sep – 4 Oct 2026)*
 
 **No material this week.** The Week 4 source document contains no MIVA_COS_111 section — the course heading is absent entirely, as it has been every week so far. This matches the course's shape: it carries only 2 PDFs across the whole semester, against 26–40 for every other course, so most weeks have nothing scheduled.
 

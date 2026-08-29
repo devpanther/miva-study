@@ -1,85 +1,103 @@
-# MTH_102 — Week 4 Question Set (sit 7 days later)
+# MTH_102 — Week 4 retention set
 
-*Sit this during Saturday catch-up in Week 5, not this week. Notes closed.*
+*Evaluating Limits Graphically · Continuity and Discontinuity of Limits. Sit this seven days after the lecture, notes closed. 15 questions, about 30 minutes.*
 
-## Section A — Multiple choice (12)
+## Multiple choice
 
-**1.** From a graph you read lim_{x→2⁻} f(x) = 3 and lim_{x→2⁺} f(x) = −4. Then lim_{x→2} f(x) is:
-a) −1   b) 3   c) −4   d) does not exist
+**1.** A function f satisfies lim_{x→4⁻} f(x) = 6, lim_{x→4⁺} f(x) = 6, and f(4) = 2. Which statement is correct?
+a) lim_{x→4} f(x) = 2, because the limit must agree with the function value
+b) lim_{x→4} f(x) does not exist, because f(4) disagrees with the approach value
+c) lim_{x→4} f(x) = 6, and f has a removable discontinuity at x = 4
+d) f is continuous at x = 4, because the two one-sided limits are equal
 
-**2.** A curve approaches height 4 from both sides of x = 3, where there is an open circle at (3, 4); a shaded dot sits at (3, 2). Then f(3) equals:
-a) 4   b) 2   c) 3   d) it is undefined
+**2.** The three conditions for f to be continuous at a point c in its domain are:
+a) f(c) is defined; lim_{x→c} f(x) exists; lim_{x→c} f(x) = f(c)
+b) f(c) is defined; f is increasing near c; lim_{x→c} f(x) exists
+c) lim_{x→c⁻} f(x) exists; lim_{x→c⁺} f(x) exists; the graph has no corner at c
+d) f(c) is defined; f(c) ≠ 0; lim_{x→c} f(x) exists
 
-**3.** f is continuous at c if and only if:
-a) lim_{x→c⁻} f(x) and lim_{x→c⁺} f(x) both exist and are finite
-b) f(c) is defined and f is defined on an open interval containing c
-c) f(c) is defined, lim_{x→c} f(x) exists, and the two are equal
-d) lim_{x→c} f(x) exists and f(c) is defined
+**3.** On a graph at x = 5 there is an open circle at (5, 1) and a shaded dot at (5, 4). Both branches of the curve run into height 1. What is f(5)?
+a) 1, because that is the height both branches approach
+b) The limit value, 1, since open circles are still plotted points
+c) Undefined, because there is an open circle at x = 5
+d) 4, because f(c) is read from the shaded dot
 
-**4.** A graph is unbroken except for a single open circle at (5, 1), with no other point plotted above x = 5. This is a:
-a) jump discontinuity   b) infinite discontinuity   c) removable discontinuity   d) essential discontinuity
+**4.** For lim_{x→c} f(x) to exist, it is necessary and sufficient that
+a) f(c) is defined and the graph is smooth at c
+b) lim_{x→c⁻} f(x) and lim_{x→c⁺} f(x) are both equal to the same finite number
+c) at least one of the one-sided limits is a finite number
+d) the graph can be drawn through x = c without lifting the pen
 
-**5.** To the left of x = 3 a graph plunges to −∞ along the line x = 3; to its right it descends from +∞ along the same line, and no dot is plotted at x = 3. Which is correct?
-a) lim_{x→3} f(x) = 0 and f(3) = 0
-b) lim_{x→3} f(x) = +∞ and f(3) is undefined
-c) lim_{x→3} f(x) does not exist and f(3) is undefined
-d) lim_{x→3} f(x) does not exist and f(3) = 3
+**5.** Evaluate lim_{x→1} (x² − 1)/(x − 1) and name the behaviour at x = 1.
+a) 2; removable discontinuity (hole at (1, 2))
+b) 0; the function equals 0/0 there, so the limit is 0
+c) Does not exist; substitution gives 0/0, which means no limit
+d) 2; jump discontinuity, since the denominator changes sign at 1
 
-**6.** For f(x) = (x² − 1)/(x − 1), lim_{x→1} f(x) is:
-a) 0, since the numerator vanishes at x = 1
-b) 2, and f(1) is undefined
-c) 2, and f(1) = 2
-d) it does not exist, since substitution gives 0/0
+**6.** A graph has lim_{x→3⁻} f(x) = −∞ and lim_{x→3⁺} f(x) = +∞. Which is correct?
+a) lim_{x→3} f(x) = ∞, so the limit exists and equals infinity
+b) The discontinuity is removable, since it happens at a single point
+c) lim_{x→3} f(x) does not exist; there is an infinite discontinuity with a vertical asymptote at x = 3
+d) lim_{x→3} f(x) = 0, since −∞ and +∞ cancel
 
-**7.** Read graphically, lim_{x→3} (2x + 1) is:
-a) 7   b) 3   c) 1   d) 2
+**7.** Which pair of readings identifies a **jump** discontinuity at x = a?
+a) lim_{x→a⁻} f(x) = 5 and lim_{x→a⁺} f(x) = 5, with f(a) undefined
+b) lim_{x→a⁻} f(x) = 5 and lim_{x→a⁺} f(x) = −1, both finite
+c) lim_{x→a⁻} f(x) = +∞ and lim_{x→a⁺} f(x) = +∞
+d) lim_{x→a⁻} f(x) = 5 and lim_{x→a⁺} f(x) = 5, with f(a) = 5
 
-**8.** For g(x) = |x|, the one-sided limit lim_{x→0⁺} g(x) is:
-a) 1, the slope of the right arm
-b) 0
-c) it does not exist, because the V has a corner at 0
-d) −0, approached from below
+**8.** Evaluating lim_{x→3} (2x + 1) graphically, you draw the line with slope 2 and y-intercept 1. The limit is
+a) 1, the y-intercept, since that is where the line meets the axis
+b) 2, the slope, since the slope is the rate of approach
+c) Undefined, since a limit needs a discontinuity to be interesting
+d) 7, since both branches of the line run into height 2(3) + 1 = 7 with no break there
 
-**9.** A jump discontinuity at x = a is characterised by:
-a) one-sided limits that both exist, are finite, and are unequal
-b) one-sided limits that agree, with f(a) missing or misplaced
-c) at least one one-sided limit equal to +∞ or −∞
-d) a function value f(a) that is defined but the graph has a corner there
+**9.** g(x) = |x|. Which statement about x = 0 is correct?
+a) lim_{x→0⁺} |x| = 0 but lim_{x→0⁻} |x| = −0, so the limit does not exist
+b) g has a jump discontinuity at 0 because the two arms have different slopes
+c) lim_{x→0⁺} |x| = lim_{x→0⁻} |x| = 0 = g(0), so g is continuous at 0
+d) g has a removable discontinuity at 0 that can be filled by defining g(0) = 0
 
-**10.** A graph levels off onto the horizontal line y = −2 as x runs far to the right, having crossed that line once at x = 4. Then lim_{x→+∞} f(x) is:
-a) 4   b) −2   c) it does not exist, since the graph crosses y = −2   d) +∞
+**10.** Which discontinuity can be repaired by changing the value of the function at exactly one point?
+a) Removable, because the two one-sided limits already agree on a single finite value
+b) Jump, because you can define f(a) to be the average of the two heights
+c) Infinite, because you can define f(a) to be a very large number
+d) Every discontinuity, provided the function is defined everywhere else
 
-**11.** Which statement is always true?
-a) If lim_{x→c} f(x) exists then f is continuous at c
-b) If f(c) is defined then f is continuous at c
-c) If f is continuous at c then lim_{x→c} f(x) = f(c)
-d) If f is discontinuous at c then lim_{x→c} f(x) does not exist
+**11.** A student substitutes x = 1 into (x² − 1)/(x − 1), gets 0/0, and writes "limit DNE". The error is that
+a) 0/0 equals 0, so the limit is 0, not DNE
+b) the limit should be evaluated only from the right when substitution fails
+c) direct substitution is never valid for evaluating any limit
+d) 0/0 is indeterminate, not a verdict; factoring and cancelling gives x + 1, whose limit at 1 is 2
 
-**12.** The graph of f has a vertical asymptote at x = 1. At x = 1 the function has:
-a) a removable discontinuity   b) a jump discontinuity   c) no discontinuity, only an asymptote   d) an infinite discontinuity
+**12.** Which statement about the pen-lifting picture of continuity is exactly right?
+a) The pen lifts wherever the curve has a sharp corner
+b) The pen lifts at x = c exactly when one of the three continuity conditions fails at c
+c) The pen lifts only when the function is undefined at the point
+d) The pen never lifts as long as both one-sided limits exist
 
-## Section B — Short answer (3)
+## Short answer
 
-**13.** A graph rises from the left to a shaded dot at (1, 2); to the right of x = 1 it starts at an open circle at (1, −3) and falls away. State lim_{x→1⁻} f(x), lim_{x→1⁺} f(x), lim_{x→1} f(x) and f(1), name the type of discontinuity, and say whether it can be repaired.
+**13.** A graph shows: for x < 2 the curve rises into height 3 (open circle at (2, 3)); for x > 2 the curve starts at an open circle at (2, −4) and falls; a shaded dot sits at (2, 1). State lim_{x→2⁻} f(x), lim_{x→2⁺} f(x), lim_{x→2} f(x) and f(2), and classify the discontinuity.
 
-**14.** Let f(x) = x + 4 for x < 2, f(2) = 7, and f(x) = 3x for x > 2. Test continuity at x = 2 using the three conditions, stating which (if any) fails, and say what single change would make f continuous at 2.
+**14.** State the three conditions for continuity of f at a point c, and give a single function-and-point example in which the first two hold but the third fails.
 
-**15.** Describe the graphical signature of a removable, a jump and an infinite discontinuity, and explain in each case which of the three continuity conditions fails.
+**15.** Explain, with the discriminating test, how you tell a removable discontinuity from a jump discontinuity when you are given only a graph.
 
 ## Answers
 
-1. **d** — *Existence criterion*: the two-sided limit exists only if the one-sided limits are equal; 3 ≠ −4, so DNE. Averaging them to −1 treats limits as something to be combined.
-2. **b** — *The filled dot gives the value, the open circle gives the limit*: f(3) = 2, while lim_{x→3} f(x) = 4.
-3. **c** — *Three conditions of continuity*: defined, limit exists, and the two agree. (a) drops the value entirely, (d) drops the equality, (b) confuses "defined near c" with continuous.
-4. **c** — *Removable discontinuity (hole)*: the one-sided limits agree at 1, but f(5) is undefined, so condition (i) fails; defining f(5) = 1 repairs it.
-5. **c** — *Infinite discontinuity*: −∞ on the left and +∞ on the right, so no number is approached and no shaded dot exists. "+∞" would be wrong because the two sides disagree in sign.
-6. **b** — *Cancelling gives the limit, not the domain*: (x−1)(x+1)/(x−1) = x + 1 for x ≠ 1, so the limit is 2, but the original expression is still 0/0 at x = 1, so f(1) is undefined.
-7. **a** — *Continuous function: the limit is the value*: 2(3) + 1 = 7, and the straight line has no break at x = 3.
-8. **b** — *One-sided limit from the right arm*: on x > 0, |x| = x, whose height shrinks to 0. The corner affects differentiability, not the limit.
-9. **a** — *Jump discontinuity*: both sides settle, on different heights. (b) is removable, (c) is infinite, (d) is a corner — continuous, not discontinuous.
-10. **b** — *Limit at infinity = horizontal asymptote*: the crossing at x = 4 is finite behaviour and irrelevant; only where the graph settles far to the right matters.
-11. **c** — *Continuity implies the limit equals the value*: that is condition (iii). (a) and (b) each keep only one of the three conditions; (d) forgets that a hole is a discontinuity whose limit exists.
-12. **d** — *Infinite discontinuity*: a vertical asymptote is precisely the graphical signature of a one-sided limit running to ±∞.
-13. lim_{x→1⁻} f(x) = **2**, lim_{x→1⁺} f(x) = **−3**, so **lim_{x→1} f(x) DNE**; f(1) = **2** (the shaded dot). This is a **jump discontinuity**, and it **cannot be repaired** — no choice of f(1) can make two different one-sided limits agree. — *Jump discontinuity: finite but unequal one-sided limits.*
-14. (i) f(2) = **7**, defined. (ii) lim_{x→2⁻} f(x) = 2 + 4 = **6** and lim_{x→2⁺} f(x) = 3(2) = **6**, so the limit **exists and equals 6**. (iii) 6 ≠ 7, so **condition (iii) fails** — a **removable discontinuity**. Redefining **f(2) = 6** makes f continuous at 2. — *Three-condition test on a piecewise function.*
-15. **Removable**: an open circle with the curve otherwise unbroken; the one-sided limits agree, so the limit exists, and what fails is (i) f(c) undefined or (iii) f(c) ≠ the limit. **Jump**: the curve breaks and restarts at a different height; both one-sided limits are finite but unequal, so (ii) fails. **Infinite**: a vertical asymptote with the graph running off to ±∞; at least one one-sided limit is infinite, so (ii) fails and normally (i) as well. — *Classifying discontinuities by which continuity condition fails.*
+**1. c** — L⁻ = L⁺ = 6 so the limit exists and equals 6; f(4) = 2 ≠ 6 makes it a removable discontinuity, not a change to the limit.
+**2. a** — f(c) defined, the limit exists, and the two are equal; nothing about monotonicity, sign or corners enters.
+**3. d** — f(c) is read from the shaded (solid) dot; an open circle marks a height the curve approaches but does not attain.
+**4. b** — the two-sided limit exists precisely when both one-sided limits are the same finite real number.
+**5. a** — (x−1)(x+1)/(x−1) = x + 1 for x ≠ 1, so the limit is 2, while f(1) is undefined: a hole at (1, 2).
+**6. c** — ±∞ are not real numbers, so the limit fails to exist; unbounded behaviour on both sides of x = 3 is an infinite discontinuity with a vertical asymptote.
+**7. b** — jump means both one-sided limits are finite but unequal; equal ones give removable or continuity, and ±∞ gives infinite.
+**8. d** — the line is unbroken at x = 3, and both sides run into 2(3) + 1 = 7.
+**9. c** — both arms of the V approach 0 and g(0) = 0, so all three continuity conditions hold; a corner is not a discontinuity.
+**10. a** — when L⁻ = L⁺ = L, setting f(c) := L makes all three conditions hold; if the limit itself fails, no single value can help.
+**11. d** — 0/0 is an indeterminate form and only signals that you must factor and cancel; the limit is 2.
+**12. b** — the lift is the graphical image of a failed condition: a hole (f(c) undefined or misplaced), a break (limit DNE), or a value off the curve.
+**13.** lim_{x→2⁻} f(x) = 3; lim_{x→2⁺} f(x) = −4; since 3 ≠ −4, lim_{x→2} f(x) = DNE; f(2) = 1 from the shaded dot. Both one-sided limits are finite and unequal, so it is a **jump discontinuity**; no choice of f(2) can repair it.
+**14.** (i) f(c) is defined; (ii) lim_{x→c} f(x) exists; (iii) lim_{x→c} f(x) = f(c). Example: f(x) = (x² − 1)/(x − 1) for x ≠ 1 with f(1) = 5. Then f(1) is defined and lim_{x→1} f(x) = 2 exists, but 2 ≠ 5, so (iii) fails and f is discontinuous at 1 (removable).
+**15.** Read the two one-sided limits off the graph. If the left and right branches run into the **same finite height** L (with the point missing or plotted elsewhere) the discontinuity is **removable** — a single hole, fillable by defining f(c) = L. If the branches run into **different finite heights** the discontinuity is a **jump** — the graph restarts at a new level and no single value repairs it. The discriminating test is the comparison L⁻ = L⁺ or L⁻ ≠ L⁺, not how big the visible gap looks.

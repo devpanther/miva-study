@@ -1,139 +1,200 @@
-# CSC_106 — Week 4 Summary
+# CSC_106 — Week 4
 
-*Introduction to Web Technologies · Week 4 (28 Sep–4 Oct 2026) · Topic: Styling HTML elements with Cascading Style Sheets (CSS)*
+*Introduction to Web Technologies · Week 4 (28 Sep – 4 Oct 2026)*
 
-## The 8 most examinable things this week
+Topic: Styling HTML Elements With CSS.
 
-1. **CSS separates content (HTML) from presentation (styling).** That one sentence is the definition the lecture opens and closes with, and it is the most likely one-line exam answer. CSS = **Cascading Style Sheets**, a *styling language* controlling presentation and layout — not a markup language, not a programming language.
-2. **Rule syntax**: `selector { property: value; }`. The selector picks the elements; the **declaration block** is in braces; each **declaration** is `property: value` closed with a **semicolon**. Missing colon, missing semicolon or missing brace is the classic "what is wrong with this rule?" question.
-3. **The five selectors the lecture names**: **type/element**, **class** (`.name`), **ID** (`#name`), **universal** (`*`), **descendant** (`article p`). Know the punctuation cold — **`.` for class, `#` for id** — and that `*` should be used sparingly because it affects the whole document.
-4. **The three ways to attach CSS**: **inline** (`style=""` on the tag), **internal** (`<style>` in `<head>`), **external** (`.css` file linked with `<link>`). Best practice in the slides: **prioritise external CSS** for consistency across a site.
-5. **Specificity order (which rule wins)**: inline style > ID > class > element; a tie is broken by **source order — the last rule written wins**. `!important` beats everything.
-6. **The box model has exactly four components: content, padding, border, margin** — inside out, in that order. Padding is *inside* the border, margin is *outside* it.
-7. **Total width = content + left/right padding + left/right border + left/right margin.** The worked slide example: 200 + 40 + 4 + 20 = **264px** wide; 100 + 40 + 4 + 20 = **164px** high.
-8. **display values**: `block` (full width of parent, starts a new line — `<div>`, `<p>`, `<h1>`), `inline` (only as wide as needed, no new line — `<span>`, `<a>`, `<strong>`), `inline-block` (inline flow *but* width/height can be set), `flex` (makes a flex container).
+## Most likely to be examined
 
-## Rule syntax and the three ways to attach CSS
+1. **The five selector types named by the deck** and what each targets: **type** (tag name, `p { }`), **class** (`.button { }`, matches `class="button"`), **ID** (`#header { }`, a single unique `id`), **universal** (`* { }`, all elements — use sparingly, it affects the entire document), **descendant** (`article p { }` — space between the two, selects `<p>` anywhere inside `<article>`).
+2. **The CSS Box Model's four components in order, innermost outwards: content → padding → border → margin**, and the total-size calculation: total width = content width + left/right padding + left/right border + left/right margin.
+3. **The worked box-model arithmetic**: a `<div>` with `width: 200px; height: 100px; padding: 20px; border: 2px solid; margin: 10px;` gives total **width 264px** (200 + 40 + 4 + 20) and total **height 164px** (100 + 40 + 4 + 20).
+4. **`display` values**: `block` (fills parent width, starts a new line — `<div>`, `<p>`, `<h1>`), `inline` (takes only the width it needs, no new line — `<span>`, `<a>`, `<strong>`), `inline-block` (flows inline but width/height can be set).
+5. **Flexbox vocabulary and properties**: flex container / flex item, main axis / cross axis; `display: flex` (or `inline-flex`), `flex-direction` (`row` default, `row-reverse`, `column`, `column-reverse`), `justify-content` (main axis), `align-items` / `align-self` (cross axis), `flex-wrap`, and the shorthand `flex: <flex-grow> <flex-shrink> <flex-basis>` **in that order**.
+6. **Which axis a property acts on**: `justify-content` = main axis; `align-items` and `align-self` = cross axis. `align-self` overrides `align-items` for one individual item.
+7. **Media query syntax** for responsive typography/layout: `@media (max-width: 768px) { h1 { font-size: 18px; } }` — applies when the viewport is 768px **or less**.
+8. **Text/typography properties by effect**: `font-family` (prioritised font list), `font-size`, `font-weight` (`normal`, `bold`, 100–900), `color`, `text-decoration`, `text-align` (`left`, `center`, `right`, `justify`), `line-height`, `letter-spacing`, `text-shadow`, `text-transform` (`uppercase`, `lowercase`, `capitalize`).
 
-```css
-p {                  /* selector */
-  color: blue;       /* declaration: property: value; */
-  font-size: 16px;
-}                    /* declaration block */
-```
+## Core definitions
 
-```html
-<!-- 1. Inline: on the element itself. Highest specificity, worst for maintenance. -->
-<p style="color: blue;">Hello</p>
-
-<!-- 2. Internal: in a <style> block inside <head>. Affects one page. -->
-<head><style> p { color: blue; } </style></head>
-
-<!-- 3. External: a separate .css file linked from <head>. Preferred. -->
-<head><link rel="stylesheet" href="styles.css"></head>
-```
-
-If all three set the same property on the same element, **inline wins**, then internal/external decided by **specificity, then source order** (whichever the browser reads last).
+- **CSS (Cascading Style Sheets)**: a styling language used to control the presentation and layout of HTML documents. It **separates content (HTML) from presentation (styling)**.
+- **Selectors**: patterns used to select and target HTML elements to apply styling rules; they determine which elements will be styled.
+- **Properties**: once elements are selected, properties define how those elements should appear.
+- **Font**: a set of characters with a specific style and design (varying in size, weight, style e.g. serif/sans-serif).
+- **Typography**: the art and technique of arranging and styling text for improved readability and visual impact — font selection, size, spacing, alignment and other text-related properties.
+- **Text styling**: formatting text elements — setting colours, backgrounds, text shadows, and more.
+- **Responsive typography**: adjusting font sizes and layouts so text stays readable and visually pleasing on different devices and screen sizes.
 
 ## Selectors
 
 ```css
-p            { color: blue; }               /* type/element: all <p> */
-.button      { background-color: #FF5733; } /* class: every element with class="button" */
-#header      { font-size: 24px; }           /* ID: the one element with id="header" */
-*            { margin: 0; padding: 0; }     /* universal: every element - use sparingly */
+p            { color: blue; }               /* type: all <p> */
+.button      { background-color: #FF5733; } /* class: class="button" */
+#header      { font-size: 24px; }           /* ID: id="header" */
+*            { margin: 0; padding: 0; }     /* universal: all elements */
 article p    { font-weight: bold; }         /* descendant: <p> inside <article> */
-h1, h2, h3   { display: inline-block; }     /* grouping: one rule, several selectors */
-a:hover      { color: red; }                /* pseudo-class: element in a given state */
-
-/* Combining selectors and properties (the slide example) */
-div.container .feature { color: #333; font-size: 18px; padding: 10px; }
 ```
 
-`div.container .feature` selects every element with class **feature** that is a descendant of a `<div>` with class **container**.
+Combining selectors and properties — all elements with class `feature` that are descendants of a `<div class="container">`:
 
-## Cascade, specificity and inheritance
+```css
+div.container .feature {
+  color: #333333;
+  font-size: 16px;
+  margin: 10px;
+}
+```
 
-- **Cascade** = the order the browser resolves conflicts: **importance** (`!important`) → **specificity** → **source order**.
-- **Specificity weights**: inline style **1000** > ID **100** > class / attribute / pseudo-class **10** > element / pseudo-element **1**; universal `*` = **0**. So `#header { color: red; }` beats `.title { color: blue; }` even if `.title` comes later in the file.
-- **Equal specificity → the later rule wins.** Two `p { color: … }` rules: the second one applies.
-- **Inheritance**: text-related properties (`color`, `font-family`, `font-size`, `font-weight`, `line-height`, `text-align`) pass down from parent to child; box properties (`margin`, `padding`, `border`, `width`, `height`, `background`) do **not**.
+## Property groups the deck names
 
-## The CSS box model
+- **Colour**: `color` (text colour), `background-color`, `border-color`.
+- **Typography**: `font-family`, `font-size`, `font-weight`.
+- **Layout**: `width`, `height`, `margin`, `padding`, `display`.
+- **Positioning**: `position` (e.g. `relative`, `absolute`) and `top`, `right`, `bottom`, `left`.
+- **Background**: `background-image`, `background-repeat`, `background-size`.
 
-Innermost to outermost: **content → padding → border → margin**.
+## The CSS Box Model
 
-- **Content** — the text/image itself; sized by `width` and `height`.
-- **Padding** — space *between content and border*; `padding-top/right/bottom/left`.
-- **Border** — the visual boundary; `border-width`, `border-style`, `border-color`.
-- **Margin** — space *outside the border*, creating gaps between elements; `margin-top/right/bottom/left`.
+Four components: **content** (innermost — holds text/images; sized by `width` and `height`), **padding** (space between content and border; `padding-top/right/bottom/left`), **border** (visual boundary around padding and content; `border-width`, `border-style`, `border-color`), **margin** (space outside the border, creating gaps between elements; `margin-top/right/bottom/left`).
+
+```css
+div  { width: 200px; height: 100px; }   /* content area */
+p    { padding: 10px; }                 /* 10px on all four sides */
+img  { border: 2px solid blue; }        /* 2-pixel solid blue border */
+li   { margin-top: 10px; margin-bottom: 10px; }
+```
+
+Total size example:
 
 ```css
 div {
   width: 200px; height: 100px;
-  padding: 20px;              /* 20 on every side */
-  border: 2px solid blue;     /* width style colour */
-  margin: 10px;               /* 10 on every side */
+  padding: 20px;
+  border: 2px solid;
+  margin: 10px;
+}
+/* Width : 200 + 40 (padding) + 4 (border) + 20 (margin) = 264px
+   Height: 100 + 40 (padding) + 4 (border) + 20 (margin) = 164px */
+```
+
+## Layout techniques: display, float, Flexbox, Grid
+
+```css
+h1, h2, h3 { display: inline-block; margin: 20px; }  /* side by side */
+
+img { float: left;  margin-right: 20px; }
+p   { float: right; }
+
+.container { display: flex; justify-content: space-between; }
+
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+```
+
+- `float: left | right` makes elements float within their containing element — used for multi-column layouts or aligning elements side by side.
+- **Flexbox (Flexible Box Layout)**: distributes space and aligns elements in a container even when item sizes are unknown or dynamic; a more efficient way to design complex layouts.
+- **CSS Grid Layout**: a **two-dimensional** grid system giving precise control over rows and columns (magazine-style and responsive designs).
+
+## Text styling and typography
+
+```css
+body            { font-family: Arial, Helvetica, sans-serif; }
+h1              { font-size: 24px; }
+p               { font-weight: bold; }
+a               { color: #1E90FF; }
+.link           { text-decoration: underline; }
+.centered-text  { text-align: center; }
+p               { line-height: 1.5; }
+h2              { letter-spacing: 2px; }
+.title          { text-shadow: 1px 1px 2px #888888; }
+.uppercase-text { text-transform: uppercase; }
+```
+
+`font-family` takes a **prioritised list**: if Arial is unavailable the browser uses Helvetica, and if that is unavailable it falls back to the generic `sans-serif`.
+
+### Responsive typography
+
+```css
+/* Fluid typography — font size follows the viewport width */
+html { font-size: 2vw; }
+
+/* Media query — viewport 768px or less */
+@media (max-width: 768px) {
+  h1 { font-size: 18px; }
+}
+
+/* Relative units — 1.2 times the parent element's font size */
+.container p { font-size: 1.2em; }
+```
+
+Units named: `px`, `em`, `rem`, `%`, `vw`. `em`/`rem` base font sizes on the parent element's font size, making typography consistent and scalable.
+
+## Flexbox in detail
+
+- **Flex container**: an HTML element containing one or more flex items; it defines the main and cross axes along which items are arranged.
+- **Flex item**: an element contained within a flex container.
+- **Main axis**: the primary axis items are arranged along — by default horizontal, left to right.
+- **Cross axis**: perpendicular to the main axis — by default vertical, top to bottom.
+
+```css
+.container { display: flex; }          /* or inline-flex */
+.row       { flex-direction: row; }    /* default: left → right */
+.col       { flex-direction: column; } /* top → bottom */
+```
+
+`flex-direction` values: `row` (default), `row-reverse` (right → left), `column` (top → bottom), `column-reverse` (bottom → top).
+
+`justify-content` (main axis): `flex-start`, `flex-end`, `center`, `space-between` (evenly distributed with space between them), `space-around` (space around them), `space-evenly` (equal space around them).
+
+`align-items` (cross axis): `flex-start` (top), `flex-end` (bottom), `center`, `baseline` (baselines align), `stretch` (default — items stretch to fill the container).
+
+`align-self` overrides `align-items` for one individual item:
+
+```css
+.container { display: flex; align-items: center; }
+.item      { align-self: flex-start; }   /* this item only, at the top */
+```
+
+**Flex properties**: `flex-grow` (how much an item grows relative to the others when there is extra space along the main axis), `flex-shrink` (how much it shrinks when there is not enough space), `flex-basis` (initial size of a flex item before extra space is distributed). Shorthand order is grow, shrink, basis:
+
+```css
+.item { flex: 1 0 auto; }  /* grows, will not shrink, initial size from content */
+```
+
+**Nested flex containers**: a flex container may sit inside another; each nested container behaves as an individual flex item within its parent container.
+
+```css
+.outer-container { display: flex; }
+.inner-container { display: flex; }
+```
+
+**Wrapping** — `flex-wrap`: `nowrap` (default, single line), `wrap` (items wrap to the next line when they exceed the container's width), `wrap-reverse` (wrap to the next line in reverse order).
+
+**Responsive design with Flexbox**:
+
+```css
+@media (max-width: 768px) {
+  .container { flex-direction: column; align-items: center; }
 }
 ```
 
-**Total width** = 200 (content) + 40 (20 left + 20 right padding) + 4 (2 + 2 border) + 20 (10 + 10 margin) = **264px**.
-**Total height** = 100 + 40 + 4 + 20 = **164px**.
+## Best practices
 
-## The property families
-
-```css
-/* Colour */      color: #1a73e8; background-color: green; border-color: red;
-/* Typography */  font-family: Arial, Helvetica, sans-serif; font-size: 24px; font-weight: bold;
-/* Text */        text-decoration: underline; text-align: center; line-height: 1.5;
-                  letter-spacing: 2px; text-shadow: 1px 1px 2px grey; text-transform: uppercase;
-/* Background */  background-image: url("bg.jpg"); background-repeat: no-repeat; background-size: cover;
-/* Box */         width: 300px; height: 150px; margin: 10px; padding: 10px; border: 2px solid blue;
-/* Display */     display: block | inline | inline-block | flex;
-/* Position */    position: relative; top: 10px; right: 0; bottom: 0; left: 20px;   /* also absolute */
-/* Float */       img { float: left; margin-right: 20px; }  p { float: right; }
-```
-
-`font-family` takes a **prioritised list** — if Arial is unavailable the browser tries Helvetica, then the generic `sans-serif`.
-
-## Responsive typography
-
-- **Fluid**: relative units — `body { font-size: 2vw; }` (viewport width), or `em`/`rem` based on the parent/root font size (`.container { font-size: 1.2em; }` = 1.2× the parent).
-- **Media queries**: `@media (max-width: 768px) { h1 { font-size: 18px; } }` — different styles at different screen widths.
-
-## Flexbox and Grid
-
-**Flexbox** (one-dimensional): make a **flex container** with `display: flex;` (or `inline-flex`); its children are **flex items**.
-
-```css
-.container { display: flex; flex-direction: row; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-.item      { flex: 1 0 auto; align-self: flex-start; }   /* flex-grow flex-shrink flex-basis */
-```
-
-- **Main axis** = direction set by `flex-direction` (`row` default, left→right; also `row-reverse`, `column`, `column-reverse`). **Cross axis** is perpendicular (vertical by default).
-- **`justify-content`** distributes items along the **main** axis: `flex-start`, `flex-end`, `center`, `space-between`, `space-around`, `space-evenly`.
-- **`align-items`** aligns along the **cross** axis: `flex-start`, `flex-end`, `center`, `baseline`, `stretch` (default). **`align-self`** overrides `align-items` for one item.
-- **`flex-wrap`**: `nowrap` (default), `wrap`, `wrap-reverse`. Flex containers can be **nested**.
-
-**CSS Grid** (two-dimensional — rows *and* columns):
-
-```css
-.grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-```
-
-## Best practices (straight from the slides)
-
-Use **meaningful class and ID names**; **group related properties** together; **prioritise external CSS files**; **test in different browsers** for cross-browser compatibility.
+- Use meaningful class and ID names to enhance code readability.
+- Group related properties together for easier maintenance.
+- Prioritise **external CSS files** for consistent styling across a website.
+- Test CSS in different browsers to ensure cross-browser compatibility.
 
 ## Commonly confused
 
-- **`#id` vs `.class`** — `#` selects the **one** element with that unique `id`; `.` selects **every** element carrying that `class`. An id must be unique on the page; a class can repeat.
-- **margin vs padding** — **padding** is *inside* the border (space between content and border); **margin** is *outside* it (gap between this element and its neighbours). Both add to total width.
-- **Inline CSS vs `display: inline`** — *inline CSS* is a **place to put the styles** (the `style` attribute on a tag); *`display: inline`* is a **property value** that makes an element flow in a line without breaking. Unrelated ideas that share a word.
-- **`<div>` vs `<span>`** — `<div>` is **block** by default (full width, new line); `<span>` is **inline** (only as wide as its content, no new line). Same styling power, different default display.
-- **Specificity ties** — when two rules have *equal* specificity, the **later one in source order wins**; specificity is only compared first. A `#header` rule still beats a `.title` rule written after it, because specificity is checked before order.
-- **`justify-content` vs `align-items`** — `justify-content` works along the **main** axis, `align-items` along the **cross** axis.
-- **Flexbox vs Grid** — Flexbox is **one-dimensional** (a row *or* a column); Grid is **two-dimensional** (rows *and* columns).
-- **CSS vs HTML** — HTML is the structure/content; CSS is the presentation. CSS is *not* a markup language.
-
-*Note: every code example in this week's slide deck is a screenshot image, so the PDF text extraction contains only the prose describing each snippet, never the CSS itself. All code above is the standard form of what the slides describe. The deck also does not itself spell out the three ways to attach CSS, the specificity ordering, inheritance, or grouping and pseudo-class selectors — those are given here in their standard treatment because the objectives and exam style require them.*
+- **Class vs ID selector**: `.name` matches any number of elements carrying that class; `#name` targets a **single** element with that unique ID. Test: dot or hash, and is the value unique on the page?
+- **`.a .b` vs `.a.b`**: with a space it is a **descendant** selector (`.b` inside `.a`); with no space it means one element carrying **both** classes.
+- **Padding vs margin**: padding is *inside* the border (between content and border); margin is *outside* the border (gap to other elements). Test: does the element's background extend into it? Padding yes, margin no.
+- **`justify-content` vs `align-items`**: `justify-content` distributes along the **main** axis, `align-items` aligns along the **cross** axis. With `flex-direction: column` the main axis becomes vertical, so the two swap visual direction.
+- **`align-items` vs `align-self`**: `align-items` is set on the container for all items; `align-self` is set on one item and overrides it.
+- **`inline` vs `inline-block`**: both stay on the same line, but only `inline-block` accepts `width` and `height`.
+- **`display: flex` vs `display: grid`**: Flexbox distributes items along one axis; Grid is a **two-dimensional** rows-and-columns system.
+- **`flex-direction` vs `flex-wrap`**: direction sets which way items run; wrap decides whether they spill onto a new line.
+- **`flex: grow shrink basis` order**: grow first, then shrink, then basis.
+- **`font-weight` vs `font-family`**: boldness is `font-weight` (`normal`, `bold`, 100–900); the typeface list is `font-family`.
+- **`text-decoration` vs `text-transform`**: `text-decoration` draws underlines, overlines and line-throughs; `text-transform` changes capitalisation (`uppercase`, `lowercase`, `capitalize`).
+- **`em`/`rem` vs `vw`**: `em`/`rem` scale from a parent/root font size; `vw` scales from the viewport width (fluid typography).

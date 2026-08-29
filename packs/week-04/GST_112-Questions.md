@@ -1,69 +1,110 @@
-# GST_112 — Week 4 Question Set (sit 7 days later)
+# GST_112 — Week 4 retention set
 
-*Sit this during Saturday catch-up in Week 5, not this week. Notes closed.*
+*Nigerian Peoples and Culture · sit this SEVEN DAYS after the Week 4 fast hour. No notes.*
 
-## Section A - Multiple choice (12)
+## Multiple choice (12)
 
-**1.** The Nigerian Council, set up in 1914, was established by:
-A) Sir Hugh Clifford  B) Lord Lugard  C) Sir Donald Cameron  D) Sir Arthur Richards
+**1.** The Nigerian Council set up by Lord Lugard in 1914 was made up of how many members, and how many of them were unofficial?
+a) 45 members, 15 unofficial
+b) 36 members, 4 unofficial
+c) 36 members, 6 unofficial
+d) 45 members, 6 unofficial
 
-**2.** Nigeria's first written constitution was devised by:
-A) Sir Arthur Richards  B) Sir Oliver Lyttleton  C) Sir Hugh Clifford  D) Sir John Macpherson
+**2.** Sir Hugh Clifford took over from Lord Lugard in which year, and produced his constitution in which year?
+a) Took over 1919, constitution 1922
+b) Took over 1922, constitution 1926
+c) Took over 1914, constitution 1919
+d) Took over 1919, constitution 1926
 
-**3.** The Clifford legislative council of 45 members contained how many elected Nigerians, and from where?
-A) 4 — 3 Lagos, 1 Calabar  B) 15 — all Lagos  C) 26 — all Southern Provinces  D) 28 — spread across three regions
+**3.** In the 1922 Clifford legislative council of 45 members, the four elected Nigerians were distributed how?
+a) 2 Lagos, 2 Calabar
+b) 4 Lagos
+c) 1 Lagos, 3 Calabar
+d) 3 Lagos, 1 Calabar
 
-**4.** Which constitution introduced the elective principle, thereby leading to the emergence of political parties and newspapers?
-A) Richards 1947  B) Clifford 1922  C) Macpherson 1951  D) Lyttleton 1954
+**4.** Which chain correctly states the significance of the Clifford Constitution as given in the lesson?
+a) Federalism → regional Premiers → derivation revenue
+b) Elective principle → emergence of political parties → establishment of newspapers
+c) Regionalism → three Houses of Assembly → national unity
+d) Consultation with Nigerians → House of Representatives → more political parties
 
-**5.** The Richards Constitution is chiefly remembered for introducing:
-A) Federalism  B) The office of Premier  C) Regionalism  D) The elective principle
+**5.** Which governor abolished the office of the Lieutenant Governor and the provincial court, and introduced the doctrine of separation of powers?
+a) Sir Donald Cameron (1930–1936)
+b) Bernard Bourdillon (1935)
+c) Sir Graham Thompson (1926)
+d) Sir Arthur Richards (1947)
 
-**6.** Which governor abolished the office of Lieutenant Governor, abolished the provincial court and introduced the doctrine of separation of powers?
-A) Sir Graham Thompson  B) Sir Bernard Bourdillon  C) Sir Donald Cameron  D) Sir Arthur Richards
+**6.** The Richards Constitution is best distinguished from the Macpherson Constitution by which fact?
+a) Richards renamed the Legislative Council the House of Representatives
+b) Richards made Lagos a Federal Capital Territory
+c) Richards created the office of Premier in the regions
+d) Richards introduced regionalism, with bicameral legislature in the North and unicameral elsewhere, and was drafted without consulting the locals
 
-**7.** Under the Macpherson Constitution the renamed Legislative Council, made supreme, was the House of Representatives with how many members?
-A) 45  B) 36  C) 136  D) 12
+**7.** Under the Macpherson Constitution of 1951, the Central Executive Council was renamed and reconstituted as:
+a) The House of Representatives, with 136 members
+b) The Council of Ministers, with the Governor as Prime Minister and twelve ministers
+c) The central legislative council, with 45 members
+d) The regional House of Assembly, with three Chief Commissioners
 
-**8.** The Macpherson Constitution did not last beyond three years because of:
-A) The Akassa raid  B) Enahoro's motion for independence  C) The Kano riots  D) The abolition of the provincial court
+**8.** Why did the Macpherson Constitution not last beyond three years?
+a) Sir Oliver Lyttleton replaced it as soon as he became Governor
+b) The North refused to join the legislative council
+c) Enahoro's motion for independence
+d) The NCNC sent a protest delegation to London
 
-**9.** The Lyttleton Constitution of 1954 was introduced by a man who was:
-A) Governor of Nigeria  B) Governor-General of the Federation  C) A Colonial Secretary, not a governor  D) Chief Commissioner of the Western Region
+**9.** Which set of features belongs to the Lyttleton Constitution of 1954?
+a) First written constitution; Cameroon joined Nigeria; Governor's veto
+b) Regionalism; 28 Nigerians of 45; two Nigerians on the Executive Council in 1949
+c) Wide consultation; ministers without portfolios; Lagos removed from the Western Region
+d) Federal system; Lieutenant Governors renamed Governors; Premiers in the regions; Lagos as Federal Capital Territory; revenue by derivation
 
-**10.** Which of the following is NOT a feature of the Lyttleton Constitution?
-A) Lagos made a Federal Capital Territory  B) Revenue allocation based on derivation
-C) The judiciary regionalised  D) A limited franchise confined to Lagos and Calabar
+**10.** Match party to newspaper.
+a) NNDP – *Lagos Daily News*; NYM – *Daily Service*; NCNC – *West African Pilot*
+b) NNDP – *Daily Service*; NYM – *West African Pilot*; NCNC – *Lagos Daily News*
+c) NNDP – *West African Pilot*; NYM – *Lagos Daily News*; NCNC – *Daily Service*
+d) NNDP – *Lagos Daily News*; NYM – *West African Pilot*; NCNC – *Daily Service*
 
-**11.** The first President of the NCNC and its first General Secretary were, respectively:
-A) Nnamdi Azikiwe and Herbert Macaulay  B) Herbert Macaulay and Nnamdi Azikiwe
-C) Ernest Ikoli and Samuel Akisanya  D) Obafemi Awolowo and Ahmadu Bello
+**11.** In 1938 the Nigeria Youth Movement did what, and what ended it?
+a) Won all three Lagos seats; ended by the 1946 constitution
+b) Formed the first Eastern Region government; ended by Macaulay's death
+c) Won all elective seats from the NNDP; destroyed in 1944 by internal party disputes
+d) Affiliated Yaba Higher College to a British university; dissolved into the Action Group in 1951
 
-**12.** Which pairing of party and newspaper is correct?
-A) NYM — West African Pilot  B) NPC — Lagos Daily News  C) NCNC — Daily Service  D) NNDP — Lagos Daily News
+**12.** Which statement about the NCNC and the Action Group is correct?
+a) The NCNC was formed in Ibadan in 1951; the AG grew out of Jam'iyyar Mutanen Arewa
+b) The NCNC was formed in August 1944 with Herbert Macaulay as first President and Nnamdi Azikiwe as first General Secretary; the AG was formed in Ibadan in 1951, out of Egbe Omo Oduduwa (1945)
+c) The NCNC was founded by Awolowo, the Ooni and Ajasin in 1945; the AG was founded by Herbert Macaulay in 1923
+d) Both were formed in 1951 and both aimed to retain northern regional autonomy
 
-## Section B - Short answer (3)
+---
 
-**13.** State the significance and the criticisms of the Clifford Constitution of 1922, giving the composition of its legislative council.
+## Short answer (3)
 
-**14.** Set out the Action Group and the Northern Peoples Congress side by side: year of formation, the organisation each grew out of, founders, regional base and stated aims.
+**13.** List the four constitutions covered this week in order, with the exact year(s) of each and the person who produced each — and state which one of the four men was not a Governor, and what office he held instead.
 
-**15.** The Macpherson Constitution of 1951 is said to have avoided the mistakes of its predecessors yet lasted less than three years. Explain, naming its main provisions, one merit and one demerit.
+**14.** State the two schools of thought on the 1914 Amalgamation as given in the Week 4 summary material, name the four commentators the material cites, and give the material's explanation of why the legacies of colonialism were not addressed after independence.
+
+**15.** Give the NPC's year of formation, the cultural organisation it emerged from, its four named founders (with Ahmadu Bello's title and party office), and its three objectives. Then give the four criticisms the lesson makes of Nigerian political parties generally.
+
+---
 
 ## Answers
 
-**1. B** — *the Nigerian Council*: set up by **Lord Lugard in 1914**, **36 members including six unofficial**, purely **advisory**, and the **foundation of constitutional development in Nigeria**. It is not a constitution.
-**2. C** — **Sir Hugh Clifford**, who took over after Lugard in **1919** and devised the **first written constitution**, the **Clifford Constitution of 1922**.
-**3. A** — *Clifford's council composition*: **45 members = 26 official (European) + 15 nominated + 4 elected Nigerians (3 Lagos, 1 Calabar)**.
-**4. B** — *the elective principle*: **Clifford 1922**. It led to the **emergence of political parties** and encouraged the **establishment of newspapers**.
-**5. C** — *regionalism*: **Richards 1947–1951** created a **regional House of Assembly in each of the three regions**, **bicameral in the North and unicameral elsewhere**, under one **central legislative council**. Federalism is Lyttleton's, not Richards'.
-**6. C** — **Sir Donald Cameron (1930–1936)**. Thompson (from 1926) had **no concessions to his credit**; **Bourdillon** prepared the ground for a new constitution and appealed to **northern leaders** to join the legislative council.
-**7. C** — **136 members**. (**45** was the size of both Clifford's and Richards' councils; **36** was Lugard's Nigerian Council.)
-**8. B** — **Enahoro's motion for independence**. The constitution's **merit** was that it led to the formation of more political parties — **AG and NPC**, both **1951**.
-**9. C** — **Sir Oliver Lyttleton** was a **Colonial Secretary, not a governor** like his predecessors. His constitution introduced the **federal system**, renamed the regional **Lieutenant Governors as Governors** and created the office of **Premier**.
-**10. D** — the **limited franchise for Lagos and Calabar** is a criticism of the **Richards** Constitution. A, B and C are all genuine Lyttleton provisions.
-**11. B** — *NCNC, August 1944*: **Herbert Macaulay** first President, **Nnamdi Azikiwe** first General Secretary; **Azikiwe became President after Macaulay died**.
-**12. D** — **NNDP — *Lagos Daily News***. The **NYM** ran the ***Daily Service***; the **NCNC** introduced and published the ***West African Pilot***; the NPC is given no newspaper.
-**13.** *Clifford 1922*. **Composition**: a legislative council of **45 members — 26 official members (Europeans), 15 nominated members and 4 elected Nigerians (3 from Lagos, 1 from Calabar)**; the country was divided into **three units — Lagos Colony, the Southern Provinces and the Northern Provinces**, with Lagos and the South subject to **legislative council-made laws** while the North was governed by **proclamation**; **Cameroon became part of Nigeria**. **Significance**: it was Nigeria's **first written constitution**; it introduced the **elective principle**; this **led to the emergence of political parties**; and it **encouraged the establishment of newspapers**. **Criticism**: the **Governor retained veto power**; there was **no local input in the drafting**; the council was **predominantly white**; and **Northern Nigeria was not represented**, which the lecture treats as **laying the foundation for disintegration**.
-**14.** *AG vs NPC, both 1951*. **Action Group**: formed in **1951 at Ibadan**, out of **Egbe Omo Oduduwa**, which **Awolowo, the Ooni and Ajasin** had formed in **1945**; led by **Obafemi Awolowo**; base the **Western Region**; aims — to **mobilise Western Nigerians to forestall the NCNC's control of the Western Region** and to **cooperate with other nationalist parties to win independence**. **NPC**: established **1951** as a **conservative** party emerging from the cultural organisation **Jam'iyyar Mutanen Arewa**; founders **Sir Alhaji Ahmadu Bello, the Sardauna of Sokoto (President), Tafawa Balewa, Yahaya Gusau and Aminu Kano**; base the **Northern Region**; objectives — to **unite the peoples of Northern Nigeria**, to **retain northern regional autonomy** and to **enhance the power of traditional Muslim rulers**.
-**15.** *Macpherson 1951*. Macpherson became Governor in **1948** and, unlike Richards, went into **wide consultations with Nigerians**. Provisions: the Legislative Council was renamed the **House of Representatives**, a **single central chamber of 136 members**, made **supreme**, its members reaching it **through the regional legislatures**; **bicameral legislatures for the Western and Northern Regions**; the **Colony of Lagos ceased to be part of the Western Region** and became an independent area; an Executive Council of **Chief Commissioners (one per region), the Attorney General, the Financial Secretary, the Director of Medical Services and the Director of Education**; the **Central Executive Council was renamed the Council of Ministers**, with the **Governor as Prime Minister and twelve ministers**; **Nigerians were made ministers but without ministries or portfolios**. **Merit**: it led to the formation of more political parties, namely the **AG and the NPC**. **Demerit**: it **did not last beyond three years**, collapsing over **Enahoro's motion for independence** — the breakdown that produced the **Lyttleton Constitution of 1954** and its federal structure.
+**1. c** — 36 members including six unofficial members; the Council was purely advisory.
+**2. a** — Clifford took over in 1919 after Lugard's tenure ended and devised Nigeria's first written constitution in 1922.
+**3. d** — Of the 45 members (26 official Europeans, 15 nominated), the 4 elected Nigerians were 3 from Lagos and 1 from Calabar.
+**4. b** — The elective principle led to the emergence of political parties and encouraged the establishment of newspapers.
+**5. a** — Cameron, Governor 1930–1936; Bourdillon (1935) instead prepared the ground for a new constitution and appealed to northern leaders.
+**6. d** — Regionalism, bicameral in the North only, and no local consultation are Richards' markers; the other options are Macpherson's or Lyttleton's.
+**7. b** — The Council of Ministers had the Governor as Prime Minister and twelve ministers; the 136-member House of Representatives was the renamed Legislative Council, a separate change.
+**8. c** — The lesson gives Enahoro's motion for independence as the reason it did not last beyond three years.
+**9. d** — All four are Lyttleton 1954 provisions; a is Clifford 1922, b is Richards, c is Macpherson.
+**10. a** — NNDP founded the *Lagos Daily News*, NYM established the *Daily Service*, NCNC introduced and published the *West African Pilot*.
+**11. c** — The NYM took all elective seats from the NNDP in 1938; internal party disputes destroyed it in 1944.
+**12. b** — Macaulay was NCNC's first President and Azikiwe its first General Secretary (President after Macaulay died); the AG was formed in Ibadan in 1951 from Egbe Omo Oduduwa, formed 1945 by Awolowo, the Ooni and Ajasin.
+
+**13.** Clifford 1922 (Sir Hugh Clifford); Richards 1947–1951 (Sir Arthur Richards); Macpherson 1951 (Sir John Macpherson, Governor from 1948); Lyttleton 1954 (Sir Oliver Lyttleton). **Lyttleton was not a Governor — he was a Colonial Secretary**, unlike his predecessors.
+
+**14.** School one: the amalgamation **merely formalised inter-group relations that already existed** before British intervention. School two: it **created a deeply divided nation**, and the Nigerian civil war and failures of national integration are linked to it. Commentators cited: **Dudley, Olusanya, E. Osaghae and Claude Ake** (with Lord Lugard's own texts and speeches examined in the case study). Explanation: leaders of independent Nigeria **had opportunities to address the legacies of colonialism, but self-interest often prevailed**; the material also notes **British officials' lack of experience with multi-racial states**.
+
+**15.** NPC: formed **1951**, a conservative party, emerging from the cultural organisation **Jam'iyyar Mutanen Arewa**. Founders: **the late Sir Alhaji Ahmadu Bello, Sardauna of Sokoto (President)**, **Tafawa Balewa**, **Yahaya Gusau** and **Aminu Kano**. Objectives: **unite the peoples of Northern Nigeria**; **retain northern regional autonomy**; **enhance the power of traditional Muslim rulers**. Criticisms of Nigerian political parties: **ethnocentric syndrome**; **lack of political ideology**; **weakened the central government**; **sacrificed national interest for ethnic interest**.

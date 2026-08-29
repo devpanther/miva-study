@@ -1,94 +1,108 @@
-# GST_122 — Week 4 Question Set (sit 7 days later)
+# GST_122 — Week 4 Retention Set
 
-*Sit this during Saturday catch-up in Week 5, not this week. Notes closed.*
+*Communication in English II · sit this SEVEN DAYS after the Week 4 lectures. Closed book.*
 
-## Section A - Multiple choice (12)
+## Section A — Multiple choice (12)
 
-**1.** The one component that every source agrees a good paragraph must have is:
-a) A rhetorical question  b) A topic sentence  c) A quotation  d) A transition word
+**1.** The deck lists the components of a good paragraph. Which of the following is **not** one of them?
+a) Unity
+b) Coherence
+c) Transition words
+d) One idea at a time
 
-**2.** Unity in a paragraph means that:
-a) Every sentence is the same length
-b) All sentences relate to a single central theme, with no digression
-c) The paragraph uses at least three transition words
-d) The paragraph is joined to the next by a conjunction
+**2.** Read this paragraph: *"In the morning, I woke up early to go for a run. The sun was shining brightly in the sky. My favourite breakfast is pancakes with maple syrup. After my run, I went to the park to read a book. I love spending time outdoors."* Every sentence makes sense on its own. What does the paragraph chiefly lack?
+a) Coherence
+b) Unity
+c) A topic sentence
+d) Supporting details
 
-**3.** Which sentence is punctuated correctly?
-a) The experiment yielded significant results, however further analysis is required.
-b) The experiment yielded significant results; however, further analysis is required.
-c) The experiment yielded significant results: however further analysis is required.
-d) The experiment yielded significant results however, further analysis is required.
+**3.** In *"Consequently, this warming effect causes the polar ice caps to melt,"* the transition word belongs to which category in the Week 4 table?
+a) Addition
+b) Emphasis
+c) Contrast
+d) Cause and Effect
 
-**4.** "In the morning, I woke up early to go for a run. The sun was shining brightly in the sky. My favourite breakfast is pancakes with maple syrup." Each sentence makes sense alone, but the paragraph fails in:
-a) Grammar  b) Coherence  c) Spelling  d) Punctuation
+**4.** An essay contains five paragraphs. According to the lecture, how many topic sentences must it contain?
+a) One, in the introduction
+b) Five
+c) As many as the writer chooses
+d) At least ten, since each paragraph needs an opening and a closing one
 
-**5.** Which version is punctuated correctly?
-a) The company revised it's policy after the audit.
-b) The company revised its' policy after the audit.
-c) The company revised its policy after the audit.
-d) The company revised its policy, after the audit.
+**5.** Which sentence is punctuated correctly?
+a) "The panel included Ada Obi, a lawyer, Ben Ojo, a doctor, and Chidi Eze, an engineer."
+b) "The panel included: Ada Obi, a lawyer; Ben Ojo, a doctor; and Chidi Eze, an engineer."
+c) "The panel included three experts: Ada Obi, a lawyer; Ben Ojo, a doctor; and Chidi Eze, an engineer."
+d) "The panel included three experts; Ada Obi, a lawyer, Ben Ojo, a doctor, and Chidi Eze, an engineer."
 
-**6.** "The conference will include speakers from London, UK; Berlin, Germany; and Paris, France." The semicolons are used here to:
-a) Join independent clauses
-b) Introduce a list
-c) Separate list items that already contain commas
-d) Indicate an omission
+**6.** *"The experiment yielded significant results ___ however, further analysis is required before drawing conclusions."* Which mark belongs in the gap?
+a) A semicolon
+b) A comma
+c) A colon
+d) A hyphen
 
-**7.** According to the lesson, the topic sentence is:
-a) Always the last sentence of the paragraph
-b) Often at the beginning, but sometimes in the middle or at the end
-c) Always the second sentence
-d) Optional in academic writing
+**7.** You are quoting a source and must insert a word of your own so the sentence reads clearly. Which mark encloses your insertion?
+a) Parentheses ( )
+b) An em dash (—)
+c) An ellipsis (…)
+d) Brackets [ ]
 
-**8.** Which sentence is punctuated correctly?
-a) The key to success is simple: hard work, dedication, and a relentless pursuit of knowledge.
-b) The key to success is simple; hard work, dedication, and a relentless pursuit of knowledge.
-c) The key to success is: simple hard work, dedication and a relentless pursuit of knowledge.
-d) The key to success is simple, hard work, dedication and a relentless pursuit of knowledge.
+**8.** In *"pages 10-15"*, which mark is in use, and why?
+a) A hyphen, because it joins a compound word
+b) An en dash, because it indicates a range
+c) An em dash, because it emphasises information
+d) A slash, because it shows alternatives
 
-**9.** "Let's eat, Grandma." and "Let's eat Grandma." differ only in a comma. This illustrates punctuation's role in:
-a) Emphasising a point  b) Changing the meaning  c) Formatting a citation  d) Shortening words
+**9.** The deck contrasts *"I like cooking, my family, and pets."* with *"I like cooking my family and pets."* Under which of its four headings does it place this pair?
+a) Emphasising a Point
+b) Conveying Nuance
+c) Clarifying Ambiguity
+d) Changing the Meaning
 
-**10.** Which sentence uses the hyphen correctly?
-a) She is a well known author of well-researched books.
-b) She is a well-known author of well researched books.
-c) She is a well-known author of well-researched books.
-d) She is a wellknown author of wellresearched books.
+**10.** Which of these is **not** one of the writing strategies named in the Week 4 summary?
+a) Problem-solution
+b) Process analysis
+c) Chronological order
+d) Transliteration
 
-**11.** "The team—except for a few members who were on leave—worked diligently to meet the deadline." The em dashes here are:
-a) Indicating a range of numbers
-b) Joining a compound adjective
-c) Setting off non-essential information, in place of parentheses or commas
-d) Marking omitted words in a quotation
+**11.** The Week 4 summary says sentence structuring contributes to effective communication. Which set of sentence types does it name?
+a) Declarative, interrogative, imperative, exclamatory
+b) Simple, compound, complex, compound-complex
+c) Active, passive, conditional, subjunctive
+d) Topic, supporting, transitional, concluding
 
-**12.** Which sentence is punctuated correctly?
-a) The results, which were surprising, were published in a prestigious journal.
-b) The results which were surprising, were published in a prestigious journal.
-c) The results, which were surprising were published in a prestigious journal.
-d) The results; which were surprising; were published in a prestigious journal.
+**12.** Which sentence is **mispunctuated**?
+a) "The state-of-the-art technology impressed the investors."
+b) "The students essays were well-written."
+c) "It's a beautiful day."
+d) "According to Smith (2019), the impact of climate change is severe."
 
-## Section B - Short answer (3)
+## Section B — Short answer (3)
 
-**13.** Name the components of a good paragraph given in the lesson and explain the difference between unity and coherence in one or two sentences each.
+**13.** Read this paragraph:
+> *Regular revision beats last-minute cramming for long-term recall. Students who review a topic weekly retrieve it faster in exams. Spacing the sessions also frees the mind from the panic that a single overnight session brings. Lecturers report clearer answers from students who plan their study weeks in advance.*
 
-**14.** The following sentence contains a comma splice: *"The rain fell heavily all night, the road to the campus was flooded by morning."* Rewrite it correctly in three different ways and name the device used in each.
+Identify the topic sentence, name what the remaining sentences are called, and state the one-line test you used to tell them apart.
 
-**15.** Write a short paragraph (four to five sentences) on any topic, then label its topic sentence, its supporting details and its concluding sentence, and underline the transition words you used.
+**14.** State the discriminating test that tells a semicolon from a colon, and give one correct example of each of your own.
+
+**15.** A student writes a paragraph in which every sentence is about mobile-phone use in class, but the sentences jump from bans, to battery life, to lecturers' opinions, to bans again, with no linking words. Name which component of a good paragraph the paragraph satisfies and which it fails, define both, and say what you would add to fix it.
+
+---
 
 ## Answers
 
-**1. b** — *topic sentence*: the slides list unity, coherence, topic sentence and one idea at a time, and state that across the literature the one constant component is the topic sentence.
-**2. b** — *unity*: a single central theme with all sentences supporting it; avoiding digression is what keeps the essay coordinated and focused.
-**3. b** — *semicolon vs comma splice*: "however" is a conjunctive adverb, not a coordinating conjunction, so a comma before it splices two independent clauses; the semicolon joins them correctly and the comma after "however" sets it off.
-**4. b** — *coherence*: the sentences are individually grammatical but are not ordered or linked, so the paragraph does not flow; coherence is achieved by logical order plus cohesive links.
-**5. c** — *its vs it's*: "its" is the possessive pronoun and takes no apostrophe; "it's" is only the contraction of "it is".
-**6. c** — *semicolon in complex lists*: when the items themselves contain commas, semicolons separate them to maintain clarity.
-**7. b** — *position of the topic sentence*: strong topic sentences are often positioned at the beginning, but the lesson allows the middle or the end of the paragraph.
-**8. a** — *colon*: a complete clause precedes the colon, which then introduces the explanation or list that follows.
-**9. b** — *punctuation changes meaning*: the lesson's first named use of punctuation, alongside emphasising a point, conveying nuance and clarifying ambiguity.
-**10. c** — *hyphen in compound adjectives*: a compound adjective standing before its noun is hyphenated; both "well-known" and "well-researched" qualify here.
-**11. c** — *em dash*: it sets off or emphasises information within a sentence and can replace parentheses or commas around non-essential material.
-**12. a** — *non-restrictive commas*: "which were surprising" is parenthetical, so it must be fenced by a comma on both sides, never on one side only.
-**13.** *Components of a good paragraph*: unity, coherence, a topic sentence, and one idea at a time (with adequate development of that idea through supporting sentences). Unity concerns content — the paragraph has a single central theme and every sentence relates to it, with no digression. Coherence concerns arrangement — the ideas are ordered logically and joined by cohesive links such as conjunctions, pronouns and transition words, so that the paragraph flows smoothly instead of reading as disconnected statements.
-**14.** *Comma splice*: a comma alone cannot join two independent clauses. (i) Comma plus coordinating conjunction: "The rain fell heavily all night, and the road to the campus was flooded by morning." (ii) Semicolon: "The rain fell heavily all night; the road to the campus was flooded by morning." (iii) Full stop, making two sentences: "The rain fell heavily all night. The road to the campus was flooded by morning." A fourth acceptable answer is subordination: "Because the rain fell heavily all night, the road to the campus was flooded by morning."
-**15.** *Paragraph structure*: any answer earns the marks if it shows one idea only, a topic sentence stating that idea (normally first), supporting sentences that explain, exemplify or give evidence for it, a concluding sentence that closes without introducing a new idea, and at least one transition word used correctly for its relationship (addition: additionally, furthermore, moreover; contrast: however, nevertheless, on the contrary; cause and effect: therefore, thus, consequently; conclusion: in conclusion, to sum up). Model shape, using the lesson's own example: "The concept of body positivity has become a subject of controversy" (topic sentence), followed by the advocates' argument, the critics' claim and the exclusion debate (supporting details), closing with "Ongoing discussions centre on the complex impact of the movement on mental health, societal perceptions, and overall well-being" (concluding sentence).
+**1. c** — Transition words are called "another important aspect" of a paragraph; the four listed components are Unity, Coherence, Topic sentence, One idea at a time.
+**2. a** — The sentences are individually sensible but not logically ordered or linked; that is exactly the coherence failure the source illustrates.
+**3. d** — The table places *Consequently* under Cause and Effect (alongside Therefore, Thus, As a result).
+**4. b** — Because each paragraph must discuss one idea, five paragraphs require five topic sentences.
+**5. c** — The colon follows a complete statement and introduces the list; semicolons separate list items that already contain internal commas. (a) reads as six people; (b) puts a colon after an incomplete statement; (d) misuses the semicolon as an introducer.
+**6. a** — Two closely related independent clauses joined without a coordinating conjunction take a semicolon; this is the source's own example.
+**7. d** — Brackets mark added or changed words inside quoted material; parentheses would be the writer's own aside, not an insertion into a quotation.
+**8. b** — The en dash is the shorter dash used for ranges; the em dash sets off or emphasises information.
+**9. c** — The lecture files this pair under "Clarifying Ambiguity"; "Let's eat, Grandma." is the example under "Changing the Meaning".
+**10. d** — Transliteration is not on the list of persuasion, narration, description, exposition, comparison, contrast, cause and effect, problem-solution, definition, chronological order and process analysis.
+**11. a** — The bullet-point summary names declarative, interrogative, imperative and exclamatory.
+**12. b** — Plural possession needs an apostrophe: "The students' essays were well-written."
+**13.** Topic sentence: *"Regular revision beats last-minute cramming for long-term recall."* The rest are supporting sentences (supporting details). Test: the topic sentence stands alone as a summary of the whole paragraph, while each other sentence only makes sense as evidence for it.
+**14.** Test: a semicolon needs a complete independent clause on **both** sides and joins them without a coordinating conjunction; a colon needs a complete statement only on its **left**, and what follows it delivers the list, explanation or quotation the statement announced. Examples — semicolon: "The rain stopped; the match resumed." Colon: "She had one rule: never cite what you have not read."
+**15.** It satisfies **Unity** (a single central theme — mobile-phone use in class — with no digression) but fails **Coherence** (ideas are not orderly or logically connected, and there are no cohesive links such as conjunctions and pronouns, so the reader meets monotony and ambiguity). Fix: reorder the sentences into a logical sequence and add transitional/cohesive links — e.g. *However*, *Furthermore*, *Consequently* — and group the two ban sentences together instead of splitting them.

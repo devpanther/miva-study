@@ -1,159 +1,94 @@
-# PHY_102 — Week 4 Summary
+# PHY_102 — Week 4
 
-*General Physics II · Week 4 (28 Sep–4 Oct 2026) · Topic: Analysis of DC Circuits, EMF & Electric Dipoles*
+*General Physics II · Week 4 (28 Sep – 4 Oct 2026)*
 
-## The 8 most examinable things this week
+*Note on the source: both lecture decks extracted as prose only — no worked algebra, no figures — and the "electric field of an electric dipole" slide names the axial and equatorial cases but states no formula. The third strand (the weekly Summary sheet) is headed "EMF and Electric Dipoles" but its body covers EMF and dielectrics. All three are examinable, so the standard formulas for the topics the decks name are supplied below.*
 
-1. **Real source of emf**: an emf ε in series with an **internal resistance r**. Terminal voltage **V = ε − Ir** — it *falls* as the load draws more current. An **ideal voltage source** has **r = 0** and holds V constant whatever the current.
-2. **Ideal current source**: delivers a constant current whatever voltage appears across the load; its internal resistance is **infinite**. A **real** current source = ideal current source **in parallel** with a finite internal resistance. (Voltage source → r in *series*; current source → r in *parallel*.)
-3. **Zeroing a source**: a dead/zeroed **voltage** source behaves as a **short circuit** (a plain wire); a zeroed **current** source behaves as an **open circuit** (a break). The two are complementary, and you need both for superposition.
-4. **Method of superposition**: the current in any branch equals the **sum of the currents produced in that branch by each independent source acting alone, with all the others zeroed**; likewise for node voltages. Valid only for **linear elements** (ohmic resistors, ideal sources), and **never for power**.
-5. **Thévenin / Norton**: any linear two-terminal network ≡ **V_Th in series with R_Th**, or **I_N in parallel with R_N**. **V_Th = open-circuit voltage**, **I_N = short-circuit current**, **R_Th = R_N = resistance looking into the terminals with all independent sources zeroed**, and **V_Th = I_N R_Th**.
-6. **Kirchhoff and nodal analysis**: **KCL** ΣI_in = ΣI_out at a node (charge conservation); **KVL** ΣV = 0 round a closed loop (energy conservation). Nodal recipe: pick a reference node and set it to 0 V (usually the battery's negative terminal) → label V₁, V₂, … → apply **KCL at each remaining node** → solve.
-7. **Electric dipole**: charges **+q and −q** a small distance **d** apart. **p = qd**, a **vector** of unit **C·m**, dimension **[M⁰L¹T¹I¹]**, directed **from −q to +q** (physics convention; Chemistry uses the opposite). Potential at (r, θ) from the centre, for r ≫ d: **V = (1/4πε₀)·p cos θ / r²** — so V = kp/r² **on the axis** and **V = 0 everywhere on the perpendicular bisector**.
-8. **Dipole in a uniform field E**: net force **zero** (equal and opposite forces qE and −qE), but a **torque τ = pE sin θ**, i.e. **τ = p × E**, turning p into alignment with E. Potential energy **U = −p·E = −pE cos θ**. In a **non-uniform** field the net force is *not* zero.
+## Most likely to be examined
 
-## Formulas, definitions and constants (state these exactly)
+1. **Terminal voltage of a real source:** `V = ε − I r` (discharging), `V = ε + I r` (charging). ε = emf in volts (work done by the source per coulomb driven round the circuit), I = current in amperes, r = internal resistance in ohms. Single loop: `I = ε /(R + r)`. On a plot of V (y-axis) against I (x-axis) the **y-intercept is ε and the gradient is −r, so r = −(gradient)**, in ohms. *(The deck says r is "the negative reciprocal of the slope" — wrong; the negative reciprocal has units of siemens.)*
+2. **Zeroing a source** (needed for superposition and for R_Th): a zeroed **ideal voltage source becomes a short circuit** (0 Ω wire — it holds 0 V across itself at any current); a zeroed **ideal current source becomes an open circuit** (it passes 0 A at any voltage). Ideal voltage source: r = 0. Ideal current source: internal resistance infinite; a real current source = ideal current source **in parallel** with r, a real voltage source = ideal emf **in series** with r.
+3. **Superposition:** the current in any branch equals the sum of the currents produced in that branch by each independent source acting alone with all other independent sources zeroed; likewise for node voltages. **Valid only for linear elements** (resistors, ideal sources), and **only for currents and voltages, never for power**, since P = I²R is quadratic.
+4. **Thévenin / Norton:** any linear two-terminal network ≡ `V_Th` in series with `R_Th`, or ≡ `I_N` in parallel with `R_N`. `V_Th = V_oc` (open-circuit voltage, load removed); `R_Th = R_N` = resistance looking into the terminals with all independent sources zeroed; `I_N = I_sc` (short-circuit current); and `V_Th = I_N R_Th`.
+5. **Electric dipole moment:** `p = q d`, a **vector directed from −q to +q** (physics convention; chemistry uses the reverse). Unit **C·m**; dimensions **[M⁰ L¹ T¹ I¹]**. Magnitude |p| = qd where q is the magnitude of *either* charge, not the sum.
+6. **Potential of a dipole (valid for r ≫ d):** `V = (1/4πε₀) · p cos θ / r²`, with θ measured at the dipole centre from the direction of p. θ = 0° → V = kp/r² (maximum); θ = 90° → **V = 0 everywhere on the equatorial plane**. Falls as 1/r², faster than a point charge's 1/r.
+7. **Field of a dipole (r ≫ d):** axial `E = (1/4πε₀)(2p/r³)`, **parallel to p**; equatorial `E = (1/4πε₀)(p/r³)`, **antiparallel to p**. Axial is exactly twice the equatorial at the same r; both fall as 1/r³.
+8. **Dipole in a uniform external field:** net force **zero** (forces qE and −qE are equal and opposite); torque `τ = p × E`, magnitude `τ = pE sin θ = 2qaE sin θ` with 2a = d. Potential energy `U = −p·E = −pE cos θ`. Stable equilibrium at θ = 0° (τ = 0, U = −pE); unstable at θ = 180°. In a **non-uniform** field the net force is generally non-zero and the dipole is drawn toward the stronger field. *(A slide says a non-uniform field means the net force "will undoubtedly be greater than zero" — it is generally non-zero, but can still vanish for particular orientations or symmetry points.)*
+9. **Dielectric in a capacitor:** `C = Q/V` (farads). Parallel plate in vacuum `C₀ = ε₀A/d`; with relative permittivity (dielectric constant) κ, `C = κ ε₀ A/d = κ C₀`. **At constant charge** (battery disconnected): `E = E₀/κ`, `V = V₀/κ`, `C = κC₀`. Susceptibility `χ_e = κ − 1`; permittivity `ε = κ ε₀`. Energy `U = ½CV² = ½QV = Q²/2C`.
 
-**Sources of emf**
-Ideal voltage source: constant V regardless of I; **r = 0**. Real: **V = ε − Ir** (V = terminal voltage, ε = emf in volts, I = output current, r = internal resistance in Ω). Plotting **V against I** gives a straight line of intercept **ε** and slope **−r**, so **r = −(slope)**; plotting I against V instead gives slope −1/r, i.e. r is then the *negative reciprocal* of the slope. Ideal current source: constant I regardless of V; **r = ∞**; real current source = ideal source **in parallel** with r.
+## The rest of the substance
 
-**Dependent (controlled) sources** — four types, identified by what controls them: **VCVS, VCCS, CCVS, CCCS** (voltage- or current-controlled voltage or current source). They are drawn as diamonds, independent sources as circles. **Dependent sources are never zeroed** in superposition — only *independent* sources are.
+**DC circuit vocabulary.** Circuit analysis = solving for all unknown branch currents, node voltages and effective resistances. Series `R_s = R₁ + R₂ + …`; parallel `1/R_p = 1/R₁ + 1/R₂ + …`. KCL: the algebraic sum of currents into a node is zero. KVL: the algebraic sum of emfs and IR drops round a closed loop is zero. *(A nodal-analysis slide writes "KCR"; read it as KCL.)*
 
-**Series and parallel**
-Series: the elements share a node with **nothing else attached**, so they carry the **same current**. **R_s = R₁ + R₂ + R₃ + …**
-Parallel: both ends common, so the **same potential difference** across each. **1/R_p = 1/R₁ + 1/R₂ + …**, and for two, **R_p = R₁R₂/(R₁+R₂)**. R_p is always **smaller than the smallest** resistor in the group.
+**Nodal analysis, the deck's four-step recipe.** (i) Choose a reference node and set its voltage to zero — conventionally the node joined to the negative terminal of the source; the choice is arbitrary because only potential *differences* are physical. (ii) Label the remaining node voltages V₁, V₂, … (iii) Apply KCL at each non-reference node, writing each branch current as (far-end voltage − node voltage)/resistance. (iv) Solve the simultaneous equations.
 
-**Potential divider** (resistors in series carrying the same current I):
-**V_i = V_total · R_i /(R₁+R₂+…)** — the **larger** resistance takes the **larger** share of voltage.
+**Ideal vs real sources.** Ideal voltage source: constant V across the load whatever current is drawn. Real cell: beyond a certain current the terminal voltage falls, attributed to an effective internal resistance r in series with the emf. Ideal current source: constant I into the load whatever voltage develops; real current sources are uncommon and are usually a voltage source with a large series resistor, or a transistor/IC circuit. **Power accounting:** `εI = I²R + I²r` — the source delivers εI, the load dissipates I²R, and I²r is wasted inside the source.
 
-**Current divider** (two resistors in parallel sharing a current I):
-**I₁ = I·R₂/(R₁+R₂)**, **I₂ = I·R₁/(R₁+R₂)** — note the **other** resistance sits on top; the **smaller** resistance takes the **larger** share of current.
+**Measuring emf.** A voltmeter across a cell reads the *terminal* voltage; it reads the emf only in the limit of zero current, i.e. open circuit or an ideal (infinite-resistance) meter. *(The Summary sheet's bullet "voltmeters are used to measure EMF" is only true under that condition.)*
 
-**Kirchhoff's rules**
-KCL (junction rule): **ΣI = 0** at a node, currents in positive, currents out negative — conservation of charge.
-KVL (loop rule): **ΣV = 0** round any closed loop — conservation of energy. Sign convention: across a resistor, −IR if you traverse it *with* the assumed current, +IR against it; across a cell, +ε entering at − and leaving at +, −ε the other way. A negative answer means the assumed direction was backwards; the magnitude is still right.
+**Dipole physics.** A dipole is a pair of equal and opposite charges q and −q separated by a small distance d; the midpoint is the centre and the line through both charges is the axis. The field at a general point is obtained by superposing E₊q and E₋q (Coulomb's law plus superposition, combined by the parallelogram rule). On the perpendicular bisector the two magnitudes are equal, the components perpendicular to the axis cancel, and the resultant points from +q toward −q, i.e. **opposite to p**.
 
-**Superposition (method)**
-I_branch = Σ (contribution of each independent source alone, others zeroed); V_node = Σ (contribution of each source alone). Contributions **add as signed quantities** — they can subtract. Because **P = I²R is quadratic**, powers may **not** be superposed.
+**Polar and non-polar molecules.** Polar: the centres of positive and negative charge do not coincide, so there is a permanent net dipole moment (HCl, H₂O, NaOH); these align with an applied field. Non-polar: the individual bond moments cancel, net p = 0 (CO₂, O₂, CH₄). The dipole moment reveals molecular geometry and orientation in 3-D space.
 
-**Thévenin and Norton**
-V_Th = open-circuit terminal voltage; R_Th = terminal resistance with independent voltage sources shorted and current sources opened; Norton: I_N = short-circuit current, R_N = R_Th, **V_Th = I_N R_Th**. Applicable **only to linear networks** — the theorems are stated without proof, and are the standard way to handle a "black box" whose internals are unknown.
+**Dielectrics (Summary strand).** Non-conducting materials placed between capacitor plates. An applied field **polarises** them — charge shifts within each molecule — producing bound surface charges whose own field opposes the applied field. Consequences: E is reduced by the factor κ, C rises by the factor κ, more energy is stored at a given voltage, and the reduced internal field raises the voltage the gap can withstand before **dielectric breakdown** (the slab also physically stops the plates touching, i.e. prevents a short). Example κ values from the sheet: air 1.0006, glass ≈ 7.
 
-**Electric dipole**
-**p = q d**, direction **−q → +q**, unit **C·m**. The line through both charges is the **dipole axis**; the midpoint is the **centre**.
-Potential (r ≫ d, θ measured from p at the centre): **V = (1/4πε₀)·(p cos θ)/r²**. θ = 0° → **V = kp/r²**; θ = 90° → **V = 0**.
-Field on the **axis** (r ≫ d): **E_axial = (1/4πε₀)·2p/r³ = 2kp/r³**, directed **parallel to p**.
-Field on the **perpendicular bisector / equatorial plane** (r ≫ d): **E_eq = (1/4πε₀)·p/r³ = kp/r³**, directed **antiparallel to p** (the vertical components of E₊ and E₋ cancel, the components along the axis add).
-So at equal r, **E_axial = 2 E_eq**, and both fall off as **1/r³** — faster than a point charge's 1/r², because the two charges nearly cancel at large distance.
-Exact forms (with a = d/2): axial **E = k·2pr/(r²−a²)²**; equatorial **E = kp/(r²+a²)^{3/2}**.
+*(One further caution: the DC deck's mid-lesson question asks for the line voltage of a three-phase 120° voltage-source inverter, V_L = V_DC/√2 = 16.97 V for V_DC = 24 V. That is power-electronics material, not DC circuit analysis; the arithmetic is right but the topic is off-syllabus for this deck — do not generalise "divide by √2" to anything else this week.)*
 
-**Dipole in an external field**
-Uniform E: **F_net = qE + (−q)E = 0**; **τ = qE · d sin θ = pE sin θ**, vectorially **τ = p × E**, direction perpendicular to the plane of p and E (out of the page for the standard diagram). τ = 0 when **θ = 0°** (stable, U = −pE minimum) and **θ = 180°** (unstable, U = +pE maximum). **U = −pE cos θ**, and the work done by an external agent turning p from θ₁ to θ₂ is **W = pE(cos θ₁ − cos θ₂) = ΔU**.
-Non-uniform E: net force **≠ 0** (the two charges sit in different field strengths), plus a torque.
+## Worked examples
 
-**Physical significance**
-**Polar molecules** have a permanent net dipole moment (HCl, NaOH, H₂O) — the centres of positive and negative charge do not coincide — and **align with an applied field**. **Non-polar molecules** (CO₂, O₂, CH₄) have individual moments that cancel, so **p = 0**. Dipole moment fixes the geometry and orientation of a molecule in 3-D.
+**A. Real source: terminal voltage and power.** ε = 12.0 V, r = 0.50 Ω, load R = 5.5 Ω.
+I = ε/(R + r) = 12.0/(5.5 + 0.50) = 12.0/6.0 = **2.00 A**.
+V = ε − Ir = 12.0 − (2.00)(0.50) = **11.0 V**. Check: V = IR = 2.00 × 5.5 = 11.0 V ✓
+Power: source εI = 12.0 × 2.00 = 24.0 W; load I²R = (2.00)²(5.5) = 22.0 W; internal I²r = (2.00)²(0.50) = 2.0 W; 22.0 + 2.0 = 24.0 W ✓
+*Same cell into 55 Ω: I = 12/55.5 = 0.216 A, V = 11.89 V — the "battery = fixed 12 V" model is nearly right here, which is exactly why it survives.*
 
-**From the week's Summary sheet (EMF and dielectrics)**
-EMF is what maintains a steady current in a circuit; sources include batteries, generators and solar cells; it is measured with a **voltmeter** (connected **in parallel**, high resistance). A **dielectric** is a non-conducting material placed between capacitor plates: it **polarises**, which **reduces the field between the plates**, **increases the capacitance** (**C = Q/V**, unit farad) and **prevents short circuits / dielectric breakdown**. Relative permittivity: air ≈ **1.0006**, glass ≈ **7.0**. **Electric susceptibility** measures how easily a dielectric polarises.
+**B. Superposition.** A 12 V source through 4 Ω and a 6 V source through 2 Ω both feed node A; A returns to ground through R₃ = 4 Ω. Find the current in R₃.
+*12 V alone* (6 V source replaced by a wire): the 12 V source sees 4 Ω in series with (2 ∥ 4) = 2×4/6 = 1.333 Ω, total 5.333 Ω. I = 12/5.333 = 2.25 A, V_A = 2.25 × 1.333 = 3.00 V, so I₃′ = 3.00/4 = **0.75 A** downward.
+*6 V alone* (12 V source replaced by a wire): 2 Ω in series with (4 ∥ 4) = 2.00 Ω, total 4.00 Ω. I = 6/4 = 1.50 A, V_A = 1.50 × 2.00 = 3.00 V, so I₃″ = **0.75 A** downward.
+Same direction ⇒ I₃ = 0.75 + 0.75 = **1.50 A**, V_A = 6.00 V.
+*Do not add powers:* true power in R₃ = (1.50)²(4) = 9.0 W, whereas adding single-source powers gives 2 × (0.75)²(4) = 4.5 W — wrong.
 
-## Worked example 1 — series/parallel reduction and terminal voltage
+**C. Nodal analysis (same circuit, independent check).** Reference = ground; unknown V_A. KCL, currents in = currents out:
+(12 − V_A)/4 + (6 − V_A)/2 = V_A/4. ×4: (12 − V_A) + 2(6 − V_A) = V_A → 24 − 3V_A = V_A → **V_A = 6.00 V**, I₃ = 6.00/4 = **1.50 A** ✓ (agrees with B).
 
-A battery of emf **20 V** and internal resistance **1.0 Ω** supplies a **6.0 Ω** resistor in series with a parallel pair, **4.0 Ω** and **12 Ω**. Find the current drawn, the terminal voltage and the current in each parallel branch.
+**D. Thévenin and Norton (same circuit, R₃ as the load).** Remove R₃ first.
+V_Th = V_oc: (12 − V)/4 = (V − 6)/2 → 12 − V = 2V − 12 → **V_Th = 8.00 V**.
+R_Th: zero both sources (each becomes a wire) → 4 ∥ 2 = 8/6 = **1.333 Ω**.
+Reconnect R₃: I₃ = V_Th/(R_Th + R₃) = 8.00/(1.333 + 4) = 8.00/5.333 = **1.50 A** ✓
+Norton: I_N = V_Th/R_Th = 8.00/1.333 = **6.00 A**, R_N = 1.333 Ω. Direct check of I_sc (A shorted to ground): 12/4 + 6/2 = 3 + 3 = 6.00 A ✓
 
-1. Parallel pair first (innermost group): R_p = (4.0)(12)/(4.0+12) = 48/16 = **3.0 Ω**. Note it is smaller than 4.0 Ω, as it must be.
-2. Total resistance of the loop: R = r + 6.0 + R_p = 1.0 + 6.0 + 3.0 = **10.0 Ω**.
-3. Current from the battery: I = ε/R = 20/10.0 = **2.0 A**.
-4. Terminal voltage: V = ε − Ir = 20 − (2.0)(1.0) = **18 V**. (Check: the *external* network takes 2.0 × 9.0 = 18 V. ✓)
-5. Across the parallel pair: V_p = I R_p = 2.0 × 3.0 = **6.0 V** — the *same* 6.0 V across both branches.
-6. Branch currents: I₄ = 6.0/4.0 = **1.5 A**, I₁₂ = 6.0/12 = **0.50 A**. They sum to 2.0 A ✓.
+**E. Dipole potential.** q = 2.0 nC, d = 1.0 mm ⇒ p = qd = (2.0×10⁻⁹)(1.0×10⁻³) = 2.0×10⁻¹² C·m. Find V at r = 5.0 cm, θ = 60°. (r/d = 50 ≫ 1, so the far-field formula is legitimate.)
+V = kp cos θ/r² = (8.99×10⁹)(2.0×10⁻¹²)(0.500)/(0.050)² = (1.798×10⁻²)(0.500)/(2.50×10⁻³) = **3.6 V**.
+At θ = 90° on the same sphere, V = 0 exactly.
 
-## Worked example 2 — potential divider and current divider
+**F. Dipole field, axial vs equatorial.** Same p, same r = 5.0 cm, r³ = 1.25×10⁻⁴ m³.
+Axial: E = 2kp/r³ = 2(8.99×10⁹)(2.0×10⁻¹²)/(1.25×10⁻⁴) = 3.596×10⁻²/1.25×10⁻⁴ = **2.9×10² N/C**, parallel to p.
+Equatorial: E = kp/r³ = **1.4×10² N/C**, antiparallel to p. Ratio exactly 2:1.
 
-(a) A **24 V** supply is across **4.0 Ω** in series with **8.0 Ω**. Find the p.d. across the 8.0 Ω.
-V₈ = 24 × 8.0/(4.0+8.0) = 24 × 2/3 = **16 V** (and V₄ = 8.0 V; they sum to 24 V). The **larger** resistor takes the **larger** voltage.
+**G. Torque and energy of a dipole in a field.** p = 2.0×10⁻¹² C·m in a uniform E = 3.0×10⁵ N/C at θ = 30°.
+τ = pE sin θ = (2.0×10⁻¹²)(3.0×10⁵)(0.500) = **3.0×10⁻⁷ N·m**, perpendicular to the p–E plane, turning p toward E.
+U = −pE cos θ = −(2.0×10⁻¹²)(3.0×10⁵)(0.866) = **−5.2×10⁻⁷ J**.
+Work to rotate to θ = 90°: W = ΔU = 0 − (−5.2×10⁻⁷) = **+5.2×10⁻⁷ J** must be supplied.
+Net force = 0 throughout, because E is uniform.
 
-(b) A current of **3.0 A** enters a parallel pair, **2.0 Ω** and **6.0 Ω**. Find each branch current.
-I₂ = 3.0 × 6.0/(2.0+6.0) = **2.25 A**; I₆ = 3.0 × 2.0/8.0 = **0.75 A**. Sum = 3.0 A ✓.
-Check by voltage: 2.25 × 2.0 = 4.5 V and 0.75 × 6.0 = 4.5 V — equal, as parallel demands. The **smaller** resistor takes the **larger** current, which is why the *other* resistance appears on top in the divider.
-
-## Worked example 3 — Kirchhoff loop analysis (two loops)
-
-Two batteries are connected in parallel across a common resistor. Branch 1: emf **12 V** with **3.0 Ω**. Branch 2: emf **8.0 V** with **2.0 Ω**. Both feed **R₃ = 2.0 Ω** between the same two nodes. Find all three currents.
-
-1. Assume I₁ and I₂ flow **into** the top node and I₃ flows **down** through R₃.
-2. **KCL**: I₁ + I₂ = I₃.
-3. **KVL, loop of branch 1 and R₃**: 12 = 3.0 I₁ + 2.0 I₃.
-4. **KVL, loop of branch 2 and R₃**: 8.0 = 2.0 I₂ + 2.0 I₃.
-5. Substitute I₃ = I₁ + I₂: 12 = 5.0 I₁ + 2.0 I₂ … (i); 8.0 = 2.0 I₁ + 4.0 I₂, i.e. 4.0 = I₁ + 2.0 I₂ … (ii).
-6. From (ii), I₁ = 4.0 − 2.0 I₂. Into (i): 5(4.0 − 2.0 I₂) + 2.0 I₂ = 12 → 20 − 8.0 I₂ = 12 → **I₂ = 1.0 A**.
-7. So **I₁ = 2.0 A** and **I₃ = 3.0 A**.
-8. Check the node voltage: V across R₃ = 3.0 × 2.0 = 6.0 V; branch 1 gives 12 − 3.0(2.0) = 6.0 V ✓; branch 2 gives 8.0 − 2.0(1.0) = 6.0 V ✓. All three agree, which is the sign that the algebra is right.
-
-## Worked example 4 — the same circuit by superposition
-
-1. **8.0 V source zeroed** → replace it by a **wire**, leaving its 2.0 Ω in place. The 12 V source then sees 3.0 Ω in series with (2.0 ∥ 2.0 = 1.0 Ω) = 4.0 Ω, so it drives 12/4.0 = 3.0 A. Equal parallel resistances split it equally: **1.5 A down through R₃**, 1.5 A back through the 2.0 Ω of branch 2.
-2. **12 V source zeroed** → replace it by a wire. The 8.0 V source sees 2.0 Ω in series with (3.0 ∥ 2.0 = 1.2 Ω) = 3.2 Ω, so it drives 8.0/3.2 = 2.5 A. Current divider: through R₃, 2.5 × 3.0/(3.0+2.0) = **1.5 A**; through the 3.0 Ω of branch 1, 2.5 × 2.0/5.0 = 1.0 A.
-3. **Superpose, with signs.** In R₃ both contributions point downward: I₃ = 1.5 + 1.5 = **3.0 A** ✓. In branch 1 they oppose: I₁ = 3.0 − 1.0 = **2.0 A** ✓. In branch 2 they oppose: I₂ = 2.5 − 1.5 = **1.0 A** ✓.
-4. **Do not superpose power**: the true power in R₃ is I₃²R₃ = 9 × 2.0 = 18 W, *not* 1.5²(2.0) + 1.5²(2.0) = 9 W.
-
-## Worked example 5 — Thévenin equivalent of the same circuit
-
-Find the Thévenin equivalent seen by R₃, then recover I₃.
-
-1. **Remove R₃** (open circuit). The two batteries now sit in one loop, opposing: circulating current = (12 − 8.0)/(3.0 + 2.0) = **0.80 A**, flowing out of the 12 V source.
-2. **V_Th** = open-circuit voltage across the terminals = 12 − (0.80)(3.0) = **9.6 V**. (Check from the other side: 8.0 + (0.80)(2.0) = 9.6 V ✓.)
-3. **R_Th** = resistance at those terminals with both emfs **shorted** = 3.0 ∥ 2.0 = (3.0)(2.0)/5.0 = **1.2 Ω**.
-4. Reconnect R₃: I₃ = V_Th/(R_Th + R₃) = 9.6/(1.2 + 2.0) = 9.6/3.2 = **3.0 A** ✓ — the same answer as Kirchhoff and superposition.
-5. **Norton form**: I_N = V_Th/R_Th = 9.6/1.2 = **8.0 A** in parallel with **1.2 Ω** — the short-circuit current you would measure across the open terminals.
-
-## Worked example 6 — dipole moment
-
-Charges **+4.0 nC** and **−4.0 nC** are held **5.0 mm** apart. Find the dipole moment.
-
-1. Convert: q = 4.0×10⁻⁹ C, d = 5.0×10⁻³ m.
-2. p = qd = (4.0×10⁻⁹)(5.0×10⁻³) = **2.0×10⁻¹¹ C·m**.
-3. Direction: **from the −4.0 nC charge toward the +4.0 nC charge**, along the axis.
-4. Use **one** charge, not the sum: the net charge is zero, but p is *not*. (For comparison, an electron and proton 1.0 Å apart give p = (1.6×10⁻¹⁹)(1.0×10⁻¹⁰) = 1.6×10⁻²⁹ C·m — the molecular scale.)
-
-## Worked example 7 — torque and potential energy in a uniform field
-
-A dipole of moment **p = 1.0×10⁻¹⁰ C·m** is held at **30°** to a uniform field **E = 2.0×10⁵ N/C**.
-
-1. Net force: **zero** — the field is uniform, so qE and −qE cancel exactly.
-2. Torque: τ = pE sin θ = (1.0×10⁻¹⁰)(2.0×10⁵)(sin 30° = 0.500) = **1.0×10⁻⁵ N·m**, turning p toward E, directed perpendicular to the plane containing p and E.
-3. Potential energy: U = −pE cos θ = −(1.0×10⁻¹⁰)(2.0×10⁵)(0.866) = **−1.73×10⁻⁵ J**.
-4. Work by an external agent to turn it to 90°: W = U(90°) − U(30°) = 0 − (−1.73×10⁻⁵) = **+1.73×10⁻⁵ J**.
-5. Work to flip it right over, 0° → 180°: W = pE(cos 0 − cos 180°) = 2pE = 2(1.0×10⁻¹⁰)(2.0×10⁵) = **4.0×10⁻⁵ J**. At 0° the torque is zero and the energy is a **minimum** (stable); at 180° the torque is again zero but the energy is a **maximum** (unstable — the least nudge flips it).
-
-## Worked example 8 — field and potential of a dipole, on axis and on the bisector
-
-The same dipole, p = **1.0×10⁻¹⁰ C·m**, d = 2.0 cm. Find E and V at **r = 0.50 m** from the centre (r ≫ d, so the far-field forms apply). Take k = 8.99×10⁹ N·m²/C².
-
-1. kp = (8.99×10⁹)(1.0×10⁻¹⁰) = 0.899 N·m²/C; r² = 0.250 m², r³ = 0.125 m³.
-2. **On the axis**: E = 2kp/r³ = 2(0.899)/0.125 = **14 N/C**, directed **along p** (from −q toward +q).
-3. **On the perpendicular bisector**: E = kp/r³ = 0.899/0.125 = **7.2 N/C**, directed **opposite to p** — exactly half the axial value, because on the bisector the components perpendicular to the axis cancel and only the (smaller) parallel components survive.
-4. **Potential on the axis** (θ = 0°): V = kp cos 0/r² = 0.899/0.250 = **3.6 V**.
-5. **Potential on the bisector** (θ = 90°): cos 90° = 0, so **V = 0** — every point of the bisector is equidistant from +q and −q, so their potentials (a *scalar* sum) cancel exactly.
-6. **At θ = 60°**: V = 3.6 × cos 60° = **1.8 V**.
-7. Sanity check on the exponents: V ∝ 1/r², E ∝ 1/r³ — one power of r *faster* than a single point charge (V ∝ 1/r, E ∝ 1/r²), because at large r the two opposite charges very nearly cancel.
+**H. Capacitor with a dielectric, charge held constant.** Parallel plates A = 2.0×10⁻² m², d = 1.0 mm, air.
+C₀ = ε₀A/d = (8.85×10⁻¹²)(2.0×10⁻²)/(1.0×10⁻³) = **1.77×10⁻¹⁰ F = 177 pF**.
+Charged to V₀ = 100 V: Q = C₀V₀ = **1.77×10⁻⁸ C = 17.7 nC**; E₀ = V₀/d = 1.0×10⁵ V/m.
+Disconnect the battery, insert a κ = 5.0 slab. Q is now fixed:
+C = κC₀ = **885 pF**; V = Q/C = 1.77×10⁻⁸/8.85×10⁻¹⁰ = **20 V** (= V₀/κ ✓); E = E₀/κ = **2.0×10⁴ V/m**.
+Energy before ½QV₀ = ½(1.77×10⁻⁸)(100) = 8.85×10⁻⁷ J; after ½QV = 1.77×10⁻⁷ J — energy **falls** by the factor κ, the difference being work done by the fringing field pulling the slab in. Susceptibility χ_e = κ − 1 = **4.0**.
 
 ## Commonly confused
 
-- **emf vs terminal voltage**: ε is fixed by the chemistry of the cell; V = ε − Ir is what the external circuit actually receives, and it drops as I rises. They are equal **only** when I = 0 (open circuit) or r = 0 (ideal source).
-- **Which source gets which internal resistance**: voltage source → r in **series**, ideal when **r = 0**; current source → r in **parallel**, ideal when **r = ∞**. Swapping these is the single most punished slip in this topic.
-- **Zeroed voltage vs zeroed current source**: dead voltage source → **short** (wire), dead current source → **open** (gap). "Zeroed" never means "delete the branch and its resistor" — the internal resistance stays.
-- **Superposing power**: currents and voltages superpose; **power does not**, because P = I²R is not linear. Add the currents first, then square.
-- **Current divider written upside down**: the current in R₁ is I·R₂/(R₁+R₂) — the *other* resistance on top. If your bigger resistor came out with the bigger current, you have inverted it. In the **potential** divider the resistor's *own* value goes on top.
-- **"They look in series on the diagram"**: series requires that *no third branch* joins between the two elements. Two resistors drawn end to end with a wire tapping off between them are **not** in series.
-- **R_p bigger than its parts**: a parallel combination is always **smaller than the smallest** member. If 4 Ω ∥ 12 Ω came out above 4 Ω, you forgot to invert 1/R_p.
-- **Net charge vs dipole moment**: a dipole has **zero net charge** but a **non-zero** p = qd. Use *one* charge in p = qd, not 2q.
-- **Direction convention**: in **physics** p points **−q → +q**; in **chemistry** the arrow is drawn the other way. Exam answers here follow physics.
-- **V = 0 does not mean E = 0**: on the perpendicular bisector the potential cancels (scalars, equal and opposite) but the field does **not** (vectors whose axial components add). Conversely E can be zero where V is not.
-- **sin θ vs cos θ**: torque uses **sin θ** (maximum at 90°, zero when aligned); potential energy and potential use **cos θ** (extreme when aligned, zero at 90°). Mixing them costs the whole mark.
-- **Torque zero ⇒ equilibrium, not stability**: θ = 0° and θ = 180° both give τ = 0. Only θ = 0° is stable (U = −pE, minimum).
-- **Uniform vs non-uniform field**: net force on a dipole is zero **only** in a uniform field. In a non-uniform field it is dragged toward the stronger region as well as being turned.
-- **1/r² vs 1/r³**: dipole **potential** ∝ 1/r², dipole **field** ∝ 1/r³, and the axial field is **twice** the equatorial field at the same r. Using kp/r² for a field is the standard error.
-
-*Note: the slide decks for this week state the learning objectives (identifying dependent sources, identifying series and parallel elements, superposition and equivalent circuits, the dipole field and potential) but carry much of the actual working in slide images that the text extractor dropped — the torque derivation arrives garbled as "τ = 2 q an E sinθ" (it should read τ = 2qa·E sin θ = pE sin θ with d = 2a), the equations for the axial and equatorial dipole fields are never written out, potential energy U = −pE cos θ is not stated at all, and the "mid-lesson question" on 3-phase inverter line voltage belongs to a power-electronics course rather than to this one and can be ignored. The formulas, worked reductions, divider rules, Kirchhoff/Thévenin treatment and dipole field results above are the standard 100-level treatment, consistent with the named references (Halliday & Resnick; Young & Freedman; Sanny, Ling & Moebs).*
+- **Emf vs terminal voltage.** ε is the source's own work per coulomb and is fixed; V is what appears at the terminals and depends on current. *Test:* is current flowing? If I = 0, V = ε; otherwise V = ε − Ir < ε on discharge.
+- **Zeroed voltage source vs zeroed current source.** Short circuit vs open circuit — complementary, and swapping them is the commonest superposition error. *Test:* ask what the dead element forces. Zero volts across it → a wire; zero amps through it → a break.
+- **r = −slope vs r = −1/slope on a V–I graph.** *Test:* units. Slope of V against I is V/A = Ω, so r = −slope; a reciprocal would give Ω⁻¹.
+- **Superposing currents vs superposing powers.** Currents and voltages superpose; powers do not. *Test:* is the quantity linear in the source strengths? P ∝ I² is not.
+- **V_Th vs the node voltage with the load still attached.** V_Th is the **open-circuit** voltage: 8.00 V in example D, not the 6.00 V measured with R₃ in place. *Test:* did you delete the load before finding the voltage?
+- **Axial vs equatorial dipole field.** Same 1/r³ law, but axial is twice as large and **parallel** to p; equatorial is **antiparallel**. *Test:* on the axis you are nearer one charge; on the bisector you are equidistant, so only the axis-parallel components survive, pointing +q → −q.
+- **V = 0 does not mean E = 0.** On the equatorial plane V = 0 everywhere, yet E = kp/r³ ≠ 0. *Test:* E is the gradient of V — V can be zero on a surface while changing rapidly across it.
+- **p = qd uses one charge, not both.** Magnitude = (magnitude of either charge) × separation, not 2qd. *Test:* the object is neutral overall, so "adding the two charges" is meaningless.
+- **Physics vs chemistry dipole direction.** Physics: −q → +q. Chemistry: +q → −q. *Test:* in any PHY_102 answer use −q → +q, and say which convention you are using.
+- **Dielectric at constant charge vs constant voltage.** Battery disconnected (Q fixed): V and E fall by κ, stored energy falls. Battery still attached (V fixed): Q rises by κ, E is unchanged, stored energy rises. *Test:* is the source still connected?
+- **κ vs ε vs χ_e.** ε = κε₀ and χ_e = κ − 1. *Test:* κ is dimensionless and ≥ 1; ε carries F/m.
+- **Net force vs net torque on a dipole.** Uniform field: force zero, torque generally non-zero. Aligned or anti-aligned in a *non-uniform* field: torque zero, force non-zero. *Test:* torque asks about orientation (sin θ); force asks about the field gradient.
