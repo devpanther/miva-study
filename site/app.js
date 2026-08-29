@@ -93,6 +93,7 @@ var SYNCING = false;
 var LS = "miva_state_v3";
 var GATE = "checking";   /* checking | locked | open | setup */
 var PWBUSY = false, PWERR = null;
+var CONFIRMSWITCH = false;
 var EXAM = null;         /* course index */
 var EXAMCACHE = {};      /* course -> paper json */
 var GUIDECACHE = {};     /* course -> markdown */
@@ -410,6 +411,8 @@ function topicBlock(parent, text, cls){
 }
 var FLAME = '<svg width="13" height="15" viewBox="0 0 13 15" fill="currentColor" aria-hidden="true"><path d="M6.6 0S7.4 2.4 5.6 4.3C3.9 6.1 1 7.3 1 10.1A5.5 5.5 0 0 0 6.5 15 5.5 5.5 0 0 0 12 10.1c0-2.6-1.6-3.8-2.4-5.5-.3 1-.9 1.6-1.6 2 .6-2.4-.5-5-1.4-6.6Z"/></svg>';
 
+var COG = '<svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="8" r="2.3"/><path d="M8 1.2v1.9M8 12.9v1.9M14.8 8h-1.9M3.1 8H1.2M12.8 3.2l-1.3 1.3M4.5 11.5l-1.3 1.3M12.8 12.8l-1.3-1.3M4.5 4.5 3.2 3.2"/></svg>';
+
 /* ---------- confetti ---------- */
 function celebrate(){
   if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -707,9 +710,105 @@ function statsStrip(root){
 }
 
 /* ---------- study buddy ---------- */
-function ytLink(course, concept, channel){
-  var q = (channel ? channel + " " : "") + (concept || NAMES[course] || "");
-  return "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
+/* What a course is ABOUT, in the words someone would type into YouTube. Anchors a
+   distilled phrase so "the constant of integration" lands in calculus and "stress"
+   lands in materials rather than in psychology. */
+var SUBJECT = {
+  MTH_102: "calculus", PHY_102: "physics electricity", PHY_108: "physics lab experiment",
+  COS_102: "programming", CSC_106: "web development",
+  GST_112: "Nigerian peoples and culture", GST_122: "communication skills English"
+};
+
+/* Turn a concept label into something searchable.
+   The concept field is written to be read on a results screen, so it is often a whole
+   clause: "Why the constant of integration is forced, not decorative". Typing that into
+   YouTube returns nothing. Strip the framing, cut at the first clause break, keep it to
+   a handful of words, and anchor it with the subject. */
+var STOP = ("a an the of to in on at for and or is are was were be been being it its that this these those "
+  + "with as by from into than then so not but which what why how when where who does do did has have had "
+  + "can could will would should must one actually simply just only always never really quite very there "
+  + "we you he she they i us our your their between within about over under through each any all some more most"
+  ).split(" ");
+
+function searchTerms(course, concept){
+  var s = String(concept || "").trim();
+  s = s.split(/[,;:(]|\s[-–—]\s/)[0];                         /* first clause only */
+  s = s.replace(/\b(slide|deck|lecture|week|question|option|example|session|material|topic)s?\s*\d*\b/gi, " ");
+  /* keep the characters that carry meaning in maths and physics: decimals, percents,
+     exponents, roots. Stripping those turned "63.2%" into "63 2". */
+  s = s.replace(/[^A-Za-z0-9.%+/^√∫π°′⁻¹²³ '’-]/g, " ");
+  s = s.replace(/\s+/g, " ").trim();
+
+  /* Drop the filler, then take the words. Truncating first is what produced
+     "n -1 is the one exponent the" — six words of which two meant anything. */
+  var kept = s.split(" ").filter(function(w){
+    var b = w.toLowerCase().replace(/^[^a-z0-9]+|[^a-z0-9%]+$/g, "");
+    return b.length > 0 && STOP.indexOf(b) < 0;
+  }).slice(0, 6);
+
+  var subj = SUBJECT[course] || "";
+  if(kept.length < 2) return subj || String(concept || "").trim();
+  /* anchor a short phrase with the subject; a long one is specific enough alone */
+  return kept.length <= 3 && subj ? (kept.join(" ") + " " + subj) : kept.join(" ");
+}
+
+function ytLink(query){
+  return "https://www.youtube.com/results?search_query=" + encodeURIComponent(String(query||"").trim());
+}
+
+/* The video row.
+   Where the buddy has answered, its own searches are used — a model that has just read
+   the week's material picks a far better query than any rule could. Otherwise the
+   concept is distilled locally. The trusted channels come last and only as a way to
+   re-run the same search inside one teacher's work, never as the search itself. */
+/* The distinct ideas a check tests, best first. */
+function conceptsOf(chk){
+  var out = [], seen = {};
+  ((chk && chk.questions) || []).forEach(function(q){
+    var c = String(q.concept || "").trim();
+    if(c && !seen[c.toLowerCase()]){ seen[c.toLowerCase()] = 1; out.push(c); }
+  });
+  return out.slice(0, 3);
+}
+
+function videoRow(parent, course, concept){
+  var picked;
+  if(BUDDY && BUDDY.searches && BUDDY.searches.length){
+    picked = BUDDY.searches.slice(0, 3);
+  } else {
+    var cands = Array.isArray(concept) ? concept : [concept];
+    var seen = {};
+    picked = cands.map(function(c){ return searchTerms(course, c); })
+                  .filter(function(q){
+                    if(!q || seen[q]) return false;
+                    seen[q] = 1; return true;
+                  }).slice(0, 3);
+  }
+  if(!picked.length) return;
+
+  parent.appendChild(el("div","lbl","Watch someone explain it"));
+  var vr = el("div","vids");
+  picked.forEach(function(q, i){
+    var a = el("a","vid"+(i===0?" first":""));
+    a.innerHTML = '<span class="vq">'+esc(q)+'</span><span class="vgo">search ↗</span>';
+    a.href = ytLink(q); a.target = "_blank"; a.rel = "noopener";
+    vr.appendChild(a);
+  });
+  parent.appendChild(vr);
+
+  var chans = CHANNELS[course] || [];
+  if(chans.length){
+    var cr = el("div","row");
+    cr.appendChild(el("span","muted","or inside one channel:"));
+    chans.forEach(function(ch){
+      var a = el("a","chip", esc(ch[0]));
+      a.href = ytLink(picked[0] + " " + ch[1]);
+      a.target = "_blank"; a.rel = "noopener";
+      a.style.textDecoration = "none";
+      cr.appendChild(a);
+    });
+    parent.appendChild(cr);
+  }
 }
 /* Tonight's session, whichever half he last touched. */
 function buddyContext(){
@@ -732,7 +831,7 @@ function whyFor_concept(chk, concept){
 function openBuddy(view, concept){
   var c = buddyContext();
   var qs = concept ? whyFor_concept(c.chk, concept) : [];
-  BUDDY = {view: view || "home", concept: concept || null, qs: qs, asking:false, answer:null, err:null, text:""};
+  BUDDY = {view: view || "home", concept: concept || null, qs: qs, asking:false, answer:null, searches:null, err:null, text:""};
   render();
 }
 function loadSummary(w, course){
@@ -756,7 +855,11 @@ function askBuddy(){
   }).then(function(r){ return r.json().then(function(d){ return {s:r.status, d:d}; }); })
     .then(function(x){
       BUDDY.asking = false;
-      if(x.d && x.d.ok) BUDDY.answer = x.d.answer;
+      if(x.d && x.d.ok){
+        BUDDY.answer = x.d.answer;
+        /* the model just read the week's material, so its searches beat any rule */
+        BUDDY.searches = (x.d.searches && x.d.searches.length) ? x.d.searches : null;
+      }
       else BUDDY.err = (x.d && (x.d.reason || x.d.error)) || "Couldn't get an answer.";
       render();
     })
@@ -833,15 +936,7 @@ function buddyPanel(root){
       card.appendChild(el("div","bw", esc(q.why||"")));
       body.appendChild(card);
     });
-    var vr = el("div","row");
-    (CHANNELS[c.course]||[]).forEach(function(ch){
-      var a = el("a","act ghost", esc(ch[0])+" ↗");
-      a.href = ytLink(c.course, BUDDY.concept, ch[1]);
-      a.target = "_blank"; a.rel = "noopener";
-      a.style.textDecoration = "none";
-      vr.appendChild(a);
-    });
-    body.appendChild(vr);
+    videoRow(body, c.course, BUDDY.concept);
     var br = el("div","row");
     br.appendChild(btn("act ghost","← Back", function(){ openBuddy("home"); }));
     br.appendChild(btn("act","Ask about this", function(){ BUDDY.view = "ask"; render(); }));
@@ -849,7 +944,7 @@ function buddyPanel(root){
   }
   else if(BUDDY.view === "ask"){
     body.appendChild(el("div","lbl","Ask"));
-    body.appendChild(el("p","muted","Your question goes out with tonight's topic, the summary, and what you got wrong — so the answer is about this course, not the subject in general."));
+    body.appendChild(el("p","muted","Your question goes out with tonight's topic, your lecturer's own summary, and what you got wrong — so the answer is about this course, not the subject in general."));
     var ta = el("textarea");
     ta.placeholder = BUDDY.concept ? "Why is " + BUDDY.concept + " actually true?" : "Ask anything about tonight's session…";
     ta.value = BUDDY.text || "";
@@ -869,13 +964,14 @@ function buddyPanel(root){
       var e1 = el("div","bcard");
       e1.style.borderLeft = "3px solid var(--fast)";
       e1.appendChild(el("div","bw", esc(BUDDY.err)));
-      e1.appendChild(el("p","muted","<br>Use <b>Copy for Claude</b> instead — it puts the question and all of tonight's context on your clipboard, ready to paste into the Claude app on your Max plan."));
+      e1.appendChild(el("p","muted","<br>Use <b>Copy for Claude</b> instead — it puts the question and all of tonight's context on your clipboard, ready to paste into the Claude app."));
       body.appendChild(e1);
     }
     if(BUDDY.answer){
       var an = el("div","bcard prose");
       an.innerHTML = mdToHtml(BUDDY.answer);
       body.appendChild(an);
+      videoRow(body, c.course, BUDDY.concept);
     }
     body.appendChild(btn("act ghost","← Back", function(){ openBuddy("home"); }));
   }
@@ -904,15 +1000,9 @@ function buddyPanel(root){
     }
     body.appendChild(r1);
 
-    body.appendChild(el("div","lbl","Watch it explained"));
-    var vr2 = el("div","row"); vr2.style.marginTop = "4px";
-    (CHANNELS[c.course]||[]).forEach(function(ch){
-      var a = el("a","act ghost", esc(ch[0])+" ↗");
-      a.href = ytLink(c.course, c.chk ? (c.chk.topic||"").split(/[.:]/)[0].slice(0,80) : "", ch[1]);
-      a.target = "_blank"; a.rel = "noopener"; a.style.textDecoration = "none";
-      vr2.appendChild(a);
-    });
-    body.appendChild(vr2);
+    /* The topic field is prose ABOUT the session ("This session is Week 1 applied…"),
+       so it distils into nonsense. Each question's concept names an actual idea. */
+    videoRow(body, c.course, c.chk ? conceptsOf(c.chk) : "");
 
     body.appendChild(el("div","lbl","This week's summary"));
     var key = c.w+":"+c.course;
@@ -1054,10 +1144,24 @@ function weekGrid(root){
   }
 }
 
+function greeting(){
+  var h = new Date().getHours();
+  if(h < 5)  return "Still up";
+  if(h < 12) return "Morning";
+  if(h < 17) return "Afternoon";
+  if(h < 22) return "Evening";
+  return "Late one";
+}
+
 function viewHome(root){
   var di = dayIdx(), w = wk(), wd = weekData(w);
 
   /* the way in */
+  var hail = el("div","hail");
+  hail.innerHTML = '<span class="hi">'+esc(greeting())+', <b>'+esc(meName())+'</b></span>'
+                 + '<span class="muted">week '+w+'</span>';
+  root.appendChild(hail);
+
   var hero = el("div","card deepc");
   if(di === -1){
     hero.appendChild(el("div","lbl","Sunday · 19:00"));
@@ -1067,8 +1171,8 @@ function viewHome(root){
     rs.appendChild(btn("act big","Open Sunday", function(){ TAB="sunday"; render(); window.scrollTo(0,0); }));
     hero.appendChild(rs);
   } else {
-    var g = GRID[di], chk = null;
-    if(wd && wd.checks) chk = wd.checks.filter(function(x){ return x.day===g.day; })[0] || null;
+    var g = GRID[di];
+    var chk = checkFor(wd, g.day, "deep");
     var sc = getScore(ME, w, g.day);
     hero.appendChild(el("div","lbl","Tonight · "+g.day+" · week "+w));
     hero.appendChild(el("h2",null, esc(NAMES[g.deep]) + "  then  " + esc(NAMES[g.fast])));
@@ -1372,6 +1476,15 @@ function viewProgress(root){
 
 /* ---------- data / sync ---------- */
 function viewData(root){
+  var top = el("div","card");
+  top.appendChild(el("div","lbl","Settings"));
+  top.appendChild(el("h2",null,"Signed in as "+esc(meName())));
+  top.appendChild(el("p","muted","Switching to the other person is down at the bottom of this page, deliberately. It used to be one tap on the header and was easy to do by accident."));
+  var tb = el("div","row");
+  tb.appendChild(btn("act ghost","← Back to Home", function(){ TAB="home"; syncUrl(); render(); window.scrollTo(0,0); }));
+  top.appendChild(tb);
+  root.appendChild(top);
+
   var c = el("div","card"+(STORAGE==="blob"?"":" fastc"));
   c.appendChild(el("div","lbl","Sync"));
   if(STORAGE === "blob"){
@@ -1416,9 +1529,15 @@ function viewData(root){
     }).join("");
     c3.appendChild(ul);
   }
-  c3.appendChild(el("p","muted","<br>Two places, claimed by name. Signing out here doesn't delete anything."));
+  c3.appendChild(el("p","muted","<br>Two places, claimed by name. Switching here doesn't delete anything — your scores stay against your name."));
   var r3 = el("div","row");
-  r3.appendChild(btn("act ghost","Sign out", signOut));
+  if(CONFIRMSWITCH){
+    r3.appendChild(el("span","muted","Switch away from "+esc(meName())+"?"));
+    r3.appendChild(btn("act","Yes, switch", function(){ CONFIRMSWITCH=false; signOut(); }));
+    r3.appendChild(btn("act ghost","Cancel", function(){ CONFIRMSWITCH=false; render(); }));
+  } else {
+    r3.appendChild(btn("act ghost","Switch person", function(){ CONFIRMSWITCH=true; render(); }));
+  }
   r3.appendChild(btn("act ghost","Lock this device", lockOut));
   c3.appendChild(r3);
   root.appendChild(c3);
@@ -2069,8 +2188,16 @@ function render(){
   brand.appendChild(el("h1",null,"Study Tracker"));
 
   if(GATE === "open" && ME && findPerson(ME)){
+    brand.appendChild(el("div","spacer"));
+    var st = streak();
+    if(st > 0) brand.appendChild(el("span","chip flame", FLAME+"<span>"+st+"</span>"));
+    if(aheadOfCalendar()) brand.appendChild(el("span","chip","ahead"));
+    if(SYNCING) brand.appendChild(el("span","chip","saving…"));
+    else if(STORAGE === "none" || STORAGE === "error") brand.appendChild(el("span","chip","local"));
+
     var sel = document.createElement("select");
     sel.className = "wksel";
+    sel.title = "Which week you are looking at";
     var cur = wk(), L = loadedWeeks();
     for(var i=1;i<=12;i++){
       var o=document.createElement("option"); o.value=i;
@@ -2079,18 +2206,19 @@ function render(){
       sel.appendChild(o);
     }
     sel.onchange=function(){
-      VIEWWEEK=parseInt(sel.value,10); QUIZ=null; MANUAL=null; ensureWeek(VIEWWEEK); render();
+      VIEWWEEK=parseInt(sel.value,10); QUIZ=null; MANUAL=null; ensureWeek(VIEWWEEK); syncUrl(); render();
     };
     brand.appendChild(sel);
-    brand.appendChild(el("div","spacer"));
-    var st = streak();
-    if(st > 0) brand.appendChild(el("span","chip flame", FLAME+"<span>"+st+"</span>"));
-    if(aheadOfCalendar()) brand.appendChild(el("span","chip","ahead"));
-    if(SYNCING) brand.appendChild(el("span","chip","saving…"));
-    else if(STORAGE === "none" || STORAGE === "error") brand.appendChild(el("span","chip","local"));
-    var nb = btn("chip me", esc(meName()), signOut);
-    nb.title = "Sign out";
-    brand.appendChild(nb);
+
+    /* A cog, not a name. The name here used to sign you out on one tap, which is far
+       too easy to do by accident when it sits beside the week selector. Switching
+       people now lives behind Settings, and Home says who you are instead. */
+    var cog = btn("chip cog"+(TAB==="data"?" on":""), COG, function(){
+      QUIZ=null; MANUAL=null; TAB="data"; syncUrl(); render(); window.scrollTo(0,0);
+    });
+    cog.title = "Settings";
+    cog.setAttribute("aria-label","Settings");
+    brand.appendChild(cog);
   } else {
     brand.appendChild(el("div","spacer"));
     brand.appendChild(el("span","chip", wi.label + (wi.n>0&&wi.n<13 ? " of 12" : "")));
@@ -2099,9 +2227,9 @@ function render(){
 
   if(GATE === "open" && ME && findPerson(ME)){
     var tabs = el("div","tabs");
-    [["home","Home"],["tonight","Tonight"],["sunday","Sunday"],["progress","Stats"],["data","Data"],["exam","Exam"]].forEach(function(t){
+    [["home","Home"],["tonight","Tonight"],["sunday","Sunday"],["progress","Stats"],["exam","Exam"]].forEach(function(t){
       tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
-        QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; } TAB=t[0]; render(); window.scrollTo(0,0);
+        QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; } TAB=t[0]; syncUrl(); render(); window.scrollTo(0,0);
       }));
     });
     bin.appendChild(tabs);
@@ -2142,9 +2270,53 @@ function render(){
 }
 
 /* ---------- boot ---------- */
+/* ---------- the address bar ----------
+   Reloading used to drop you back on Home in the current calendar week, which is the
+   wrong place whenever you were reading week 9 or halfway down the Exam tab. The tab
+   and the week now live in the query string, so a reload, a bookmark and the back
+   button all land where you were.
+
+   Transient states are deliberately NOT in the url: a quiz in progress restores from
+   its own saved state, and a shared link should never drop someone into a half-finished
+   paper. */
+var TABS_URL = {home:1, tonight:1, sunday:1, progress:1, exam:1, data:1, week:1};
+
+function readUrl(){
+  var q;
+  try{ q = new URLSearchParams(window.location.search); }catch(e){ return; }
+  var t = q.get("tab");
+  if(t && TABS_URL[t]) TAB = t;
+  var w = parseInt(q.get("week"), 10);
+  if(w >= 1 && w <= 12) VIEWWEEK = w;
+  var c = q.get("course");
+  if(c && /^[A-Z]{3}_\d{3}$/.test(c) && TAB === "exam") EXVIEW = {course:c, mode:"guide"};
+}
+
+function syncUrl(replace){
+  try{
+    var q = new URLSearchParams();
+    var t = (TAB === "quiz" || TAB === "manual") ? "tonight" : TAB;
+    if(TABS_URL[t] && t !== "home") q.set("tab", t);
+    if(VIEWWEEK) q.set("week", String(VIEWWEEK));
+    var s2 = q.toString();
+    var next = window.location.pathname + (s2 ? "?" + s2 : "");
+    if(next === window.location.pathname + window.location.search) return;
+    window.history[replace ? "replaceState" : "pushState"]({tab:t, week:VIEWWEEK}, "", next);
+  }catch(e){ /* an old browser just loses the niceness, not the app */ }
+}
+
+window.addEventListener("popstate", function(){
+  QUIZ = null; MANUAL = null; BUDDY = null;
+  readUrl();
+  if(VIEWWEEK) ensureWeek(VIEWWEEK);
+  render();
+});
+
 function boot(){
   INDEX = {semesterStart:"2026-09-07", weeks:[1,2,3,4,5,6,7,8,9,10,11,12].map(function(n){ return {week:n}; })};
+  readUrl();
   ensureWeek(wk());
+  syncUrl(true);
   loadExamIndex();
   pull().then(function(){
     try{

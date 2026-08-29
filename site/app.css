@@ -414,3 +414,28 @@ canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:80}
 .bcard.prose{background:var(--surface2)}
 .linkish{background:none;border:0;padding:0;color:var(--deep);font:inherit;
   text-align:left;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+
+/* ---------- who you are, and where you are ---------- */
+.hail{display:flex;align-items:baseline;gap:9px;padding:2px 2px 0}
+.hail .hi{font-family:Fredoka,ui-rounded,system-ui,sans-serif;font-size:17px;color:var(--ink2)}
+.hail .hi b{color:var(--ink);font-weight:600}
+.hail .muted{font-size:12px;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink3)}
+
+/* the cog sits where the name used to, but does something far less destructive */
+.chip.cog{padding:0 9px;color:var(--ink2)}
+.chip.cog:hover{color:var(--ink);border-color:var(--ink3)}
+.chip.cog.on{color:var(--deep);border-color:var(--deep)}
+.chip.cog svg{display:block}
+
+/* ---------- video suggestions ---------- */
+.vids{display:flex;flex-direction:column;gap:7px;margin:2px 0 10px}
+.vid{display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding:11px 13px;border-radius:var(--r-sm);background:var(--surface2);
+  border:1px solid var(--line);text-decoration:none;color:var(--ink);
+  transition:background .15s,border-color .15s,transform .12s}
+.vid:hover{background:var(--deep-bg);border-color:var(--deep);transform:translateY(-1px)}
+.vid.first{background:var(--deep-bg);border-color:var(--deep)}
+.vid .vq{font-weight:700;font-size:14px;line-height:1.35}
+.vid .vgo{flex:none;font-size:11.5px;font-weight:800;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--deep);white-space:nowrap}
