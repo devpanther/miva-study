@@ -1,0 +1,13 @@
+{
+  "name": "Miva Study Tracker",
+  "short_name": "Study",
+  "description": "Nightly checks, scores and Sunday's recap topic.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#F4F1FA",
+  "theme_color": "#5A46D6",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
