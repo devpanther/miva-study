@@ -1,88 +1,90 @@
 # Monday — MTH_102 nightly check
 
-*Definite integrals and area as concepts: what the definite integral is as a limit of Riemann sums and why it measures signed rather than actual area, the exact conditions the Fundamental Theorem needs and why no constant of integration survives, why the area between two curves is an integral of top minus bottom regardless of where the x-axis lies, what an intersection point does to the setup, and how the shape of a region's boundaries decides whether the strips run vertically or horizontally.*
+*Conceptual session on Week 10 area between curves exactly as the lecturer builds it: the two-case rule on slide 4 (∫ₐᵇf(x)dx when f(x) ≥ 0, |∫ₐᵇf(x)dx| when f(x) ≤ 0); finding limits by setting f(x) = 0 and testing an interior point; splitting at a root when the curve crosses the axis inside the interval; the two-curve rule A = ∫ₐᵇ(f(x) − g(x))dx with its condition f(x) ≥ g(x) and limits from f(x) = g(x); and slide 12's A = A₁ + A₂ when the curves intersect at c ∈ (a, b), including why one integral over the whole interval lets the pieces cancel.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**1.** To say that ∫ₐᵇf(x)dx computes a **signed** area means precisely that:
-a) the integral is positive whenever a < b and negative whenever a > b
-b) each strip contributes f(xᵢ*)Δx, which is negative wherever f(xᵢ*) < 0, so regions below the axis are subtracted from regions above
-c) the integral computes the area of the region and then attaches the sign of f(a)
-d) the integral gives the area of the part above the axis minus the length of the part below it
+**1.** Slide 4 gives two formulas for the area between y = f(x) and the x-axis over [a, b]. What decides which one you use?
+A. The sign of f(x) on [a, b]: the plain integral ∫ₐᵇf(x)dx if f(x) ≥ 0, the modulus |∫ₐᵇf(x)dx| if f(x) ≤ 0
+B. Whether a and b are themselves positive numbers
+C. Whether the interval [a, b] is symmetric about the origin
+D. Whether f is increasing or decreasing on [a, b]
 
-**2.** In the definition ∫ₐᵇf(x)dx = lim_{n→∞}Σᵢ₌₁ⁿ f(xᵢ*)Δx:
-a) Δx = 1/n, because the interval is rescaled to [0, 1] before the sum is formed
-b) Δx = (b − a)/n, but the limit exists only if xᵢ* is taken to be the right endpoint of each subinterval
-c) Δx = (f(b) − f(a))/n, the total change in the function shared out over the n strips
-d) Δx = (b − a)/n, and when f is continuous on [a, b] the limit is the same for every choice of sample point xᵢ*
+**2.** In Example 1 she solves 5x − x² = 0 to get x = 0 and x = 5, and then writes 'Taking any point, say 2 in [0,5], we see that f(2) = 5(2) − 2² = 6 > 0.' What is that second step for?
+A. To find out whether f is positive or negative between the roots, and so which case of the slide 4 rule to apply
+B. To check that the two roots were computed correctly
+C. To find the maximum value of f on the interval
+D. To supply a third limit of integration
 
-**3.** Two curves y = f(x) and y = g(x) lie **entirely below** the x-axis on [a, b], with f above g throughout. The area between them is ∫ₐᵇ[f(x) − g(x)]dx because:
-a) the negative signs of ∫f and ∫g cancel when one is subtracted from the other
-b) it is not valid — both curves must first be translated upward by a constant until they lie above the axis
-c) area is defined as |∫ₐᵇf dx| − |∫ₐᵇg dx|, and that is what the formula abbreviates
-d) the height of a vertical strip is f(x) − g(x), a difference of y-values, which is positive wherever f is above g whatever the signs of f and g individually
+**3.** Slide 8 states A = ∫ₐᵇ(f(x) − g(x))dx. What condition does the slide attach to this formula, and what does that condition do?
+A. f(x) ≥ 0 on [a, b], so that the region lies above the x-axis
+B. f(x) ≥ g(x) on [a, b], so that the subtraction is top minus bottom and every strip height is positive
+C. a ≥ 0 and b ≥ 0, so that the limits are non-negative
+D. Neither curve may cross the x-axis on [a, b]
 
-**4.** y = f(x) and y = g(x) cross at a single point x = c strictly between a and b, with f above g on [a, c] and g above f on [c, b]. The area they enclose over [a, b] is:
-a) ∫ₐᵇ(f − g)dx, since the crossing does not affect the antiderivative
-b) |∫ₐᵇ(f − g)dx|, since taking the modulus at the end repairs any sign the integral picked up
-c) ∫ₐ^c(f − g)dx + ∫_c^b(g − f)dx
-d) ∫ₐᵇ(g − f)dx, since the lower curve is always written first
+**4.** Two curves enclose a region and the question gives no interval. Where do the limits a and b come from?
+A. From the roots of f(x) = 0
+B. From solving f(x) = g(x)
+C. From the turning points of f(x) − g(x)
+D. They are taken as 0 and 1 by convention
 
-**5.** The reason to set an area up as ∫_c^d[x_right(y) − x_left(y)]dy rather than in x is:
-a) that a dy-integral always produces a smaller number, so it is the safer computation
-b) that the region's left and right boundaries are each a single function of y over the whole region, while the top or bottom boundary changes formula partway — so horizontal strips need one integral where vertical strips need two
-c) that it is required whenever any part of the region touches the y-axis
-d) that it is the only way to handle a region lying below the x-axis
+**5.** Slide 12 replaces one integral with A = A₁ + A₂ when f and g intersect at c strictly inside [a, b]. What goes wrong with a single integral ∫ₐᵇ(f(x) − g(x))dx there?
+A. The antiderivative is undefined at x = c
+B. Every interval must be halved before integrating
+C. f − g changes sign at c, so the piece where g is on top enters negatively and partly or wholly cancels the piece where f is on top
+D. A definite integral is only defined when the integrand keeps a constant sign
 
-**6.** ∫ₐᵇf(x)dx = F(b) − F(a) requires:
-a) f continuous and positive on [a, b], since otherwise F(b) − F(a) is not an area
-b) f continuous on [a, b], and F the particular antiderivative whose constant of integration is zero
-c) f differentiable on [a, b], with F the derivative of f
-d) f continuous on [a, b], and F any antiderivative of f on [a, b]
+**6.** In Example 1 on slides 13–14 the total area between y = sin x and y = cos x on [0, π/2] is 2√2 − 2, but the single unsplit integral ∫₀^(π/2)(cos x − sin x)dx = [sin x + cos x]₀^(π/2) = (1 + 0) − (0 + 1) = 0. What does that show?
+A. That sin x and cos x never actually meet on [0, π/2]
+B. That the antiderivative [sin x + cos x] must be wrong
+C. That a single integral across an interior crossing measures the difference of the two lobes, not their total, and vanishes entirely when the lobes are congruent
+D. That the area between any two curves over a symmetric interval is zero
 
-**7.** No arbitrary constant appears in the value of a definite integral because:
-a) (F(b) + C) − (F(a) + C) = F(b) − F(a), so every antiderivative of f gives the same number
-b) the constant is omitted by convention to save writing, and including it would be harmless
-c) a definite integral has no antiderivative at all — it is a limit of sums, and limits carry no constants
-d) the constant is only needed when the integrand is discontinuous somewhere in [a, b]
+**7.** The SUMMARY slide writes: 'The area bounded by the region of a function f(x) defined on [a, b] is given by ∫ₐᵇf(x)dx.' Compared with slide 4, what has been left out?
+A. The requirement that a < b
+B. The constant of integration c
+C. The requirement that f be differentiable on [a, b]
+D. The condition f(x) ≥ 0, and with it the whole second case, |∫ₐᵇf(x)dx| for f(x) ≤ 0
 
-**8.** f is continuous on [a, b] and changes sign exactly once, at x = c in (a, b). The area actually enclosed between y = f(x) and the x-axis on [a, b] is:
-a) |∫ₐᵇf(x)dx|
-b) ∫ₐᵇf(x)dx
-c) ∫ₐᵇ|f(x)|dx, computed as |∫ₐ^c f dx| + |∫_c^b f dx|
-d) ∫ₐ^c f(x)dx − ∫_c^b f(x)dx, in that order, always
+**8.** In Example 2 on slide 10 the lecturer names f(x) = 2 − x first and g(x) = 4 − x² second, then integrates (g(x) − f(x)). Why that order?
+A. Because g was defined second, and the second function is always the one subtracted from
+B. Because g is a quadratic and quadratics are always taken as the upper curve
+C. Because the region lies below the x-axis, which reverses the subtraction
+D. Because her test at x = 1 gives f(1) = 1 and g(1) = 3, so g is on top there, and slide 8 requires the upper function to be written first
 
-**9. (explain why)** Explain why the definite integral is *defined* as a limit of Riemann sums — say what Δx and xᵢ* are and what the sum represents geometrically — and state precisely what the Fundamental Theorem adds to that definition. Then say why the object so defined measures signed area rather than area.
+**9.** State both cases of the slide 4 rule as the deck gives them, and explain why the second case needs a modulus while the first does not.
+*(short answer)*
 
-**10. (explain why)** Explain why the area between two curves is set up as ∫[top − bottom]dx and not as ∫(f − g)dx with a modulus applied to the final number. State the exact role the intersection points play, and say what "top" means for a region that lies entirely below the x-axis.
+**10.** A question asks for the area enclosed by two curves and gives no interval. Set out, in order, the full procedure slide 8 prescribes, and say what each step prevents you getting wrong.
+*(short answer)*
 
-**11. (explain why)** A region is bounded by the curve x = y² and the line y = x − 2. Explain why setting its area up with vertical strips forces two integrals, while horizontal strips need only one, and state the general rule this illustrates. Do not evaluate anything.
+**11.** State slide 12's rule for curves that intersect at c ∈ (a, b), explain how you decide which function is written first in each of the two integrals, and say why no modulus appears anywhere in this rule.
+*(short answer)*
 
-**12. (explain why)** State the three orientation and additivity properties of the definite integral (the value of ∫ₐᵃ, the effect of swapping the limits, and how an integral splits at an interior point). Explain why swapping the limits changes the sign, and say exactly what goes wrong if you write the limits of an area calculation in decreasing order.
-
----
+**12.** Explain why 'take the modulus at the end', that is computing |∫ₐᵇ(f(x) − g(x))dx| across a crossing, is not a substitute for splitting. Use one of the deck's own examples as evidence.
+*(short answer)*
 
 ## Answers
 
-**1. b** — *Signed area comes from the sign of f inside the Riemann sum, one strip at a time.* Δx > 0 for a < b, so the sign of each term f(xᵢ*)Δx is the sign of f(xᵢ*); strips where the curve is below the axis contribute negatively and are subtracted from those above. (a) confuses the sign of the **integrand** with the sign of the **orientation** — reversing the limits does negate the integral, but that is a separate property and says nothing about f; (c) makes the sign depend on a single endpoint value, so a curve crossing the axis would be mis-signed everywhere past the crossing; (d) mixes dimensions, subtracting a length from an area, and is meaningless.
+**1. A** — Every strip below the axis contributes a negative amount to the integral, so on an interval where f ≤ 0 the integral is negative and the area is its magnitude; where f ≥ 0 the integral is already the area. Option 2 confuses the sign of the limits with the sign of the function — a and b are just x-values and never enter the choice. Option 3 imports a symmetry idea the deck never uses. Option 4 confuses monotonicity with sign: f(x) = x² − 1 on [0,1] is increasing and still negative, which is exactly the case in her Example 2.
 
-**2. d** — *Δx is the interval length shared out, and continuity buys independence of the sample point.* Δx = (b − a)/n, xᵢ* is any point of the i-th subinterval, and for f continuous on a closed bounded interval all such sums converge to the same limit — which is why the integral is well defined without specifying left, right or midpoint. (a) is the single most common formula slip: Δx = 1/n only when b − a = 1, and no rescaling happens; (b) inverts the theorem — right endpoints are a *convenient* choice for computing, not a *necessary* one for existence; (c) is a difference quotient in disguise, dividing a change in f rather than a change in x, and has the wrong units for a strip width.
+**2. A** — The roots tell you where the region starts and ends; they say nothing about whether the region sits above or below the axis, and that is what selects between ∫ₐᵇf and |∫ₐᵇf|. Option 2 misreads it as verification — substituting an interior point cannot confirm a root. Option 3 would need f′(x) = 0, giving x = 5/2, not x = 2; and the maximum plays no part in the area formula. Option 4 invents an extra bound; splitting happens at roots or intersections, never at a test point.
 
-**3. d** — *The strip height is a difference of ordinates and never refers to the axis.* At each x the strip runs from the lower curve up to the upper one, so its height is f(x) − g(x) > 0; the position of the x-axis has been eliminated by the subtraction. Concretely, ∫₀²[(−x² − 1) − (−x² − 5)]dx = ∫₀²4dx = 8. (a) gives the right formula for the wrong reason and collapses if one curve is above the axis and the other below — the derivation must not depend on either integral being negative; (b) is the translation superstition: adding k to both curves adds k to each integral and leaves the difference unchanged, which proves the translation was never needed; (c) subtracts magnitudes, which for a curve crossing the axis is not the area of anything.
+**3. B** — The slide's wording is 'If f(x) and g(x) are continuous with f(x) ≥ g(x) on [a, b]'. The height of a vertical strip is (upper y) − (lower y), so writing the lower function first would make every height negative and the answer the negative of the area. Option 1 attaches the wrong inequality — her Example 1 on slide 9 has g dipping to −9 and the formula still applies unchanged. Options 3 and 4 both put conditions on position relative to the axis, which is irrelevant: a difference of y-values does not know where the axis is.
 
-**4. c** — *Where f − g changes sign, the region must be split and the subtraction reversed.* On [a, c] the height is f − g; on [c, b] it is g − f. Both integrands are then non-negative and both integrals are genuine areas, so they may be added. (a) integrates a quantity that is positive on one piece and negative on the other, so the pieces cancel and the total is too small; (b) is the misconception the question is built on — the cancellation happens **inside** the integral, before the modulus can act, and for y = x³ and y = x on [−1, 1] it gives 0 for an area of 1/2; (d) invents a fixed order of subtraction, which is decided by a test point, not by which curve is written first.
+**4. B** — Slide 8: 'If f(x) and g(x) are enclosed without a specific interval given, we let f(x) = g(x), such that x = a and x = b are the bounds of the integration.' An enclosed region is bounded by where the two curves meet. Option 1 is the Part 1 method for a single curve against the axis — a different equation giving different points; for y = 3 − x and y = x² − 9 it would give x = 3 and x = ±3 rather than x = −4 and x = 3. Option 3 finds where the gap between the curves is widest, not where it closes. Option 4 is invented.
 
-**5. b** — *The strip direction is chosen so that every boundary of the region is one formula in the variable of integration.* Horizontal strips are worth using precisely when the left and right boundaries are single functions of y while the top or bottom boundary is piecewise in x; the dy-setup then needs one integral rather than two. (a) is arithmetic superstition — both setups compute the same number, and neither is systematically smaller; (c) confuses the y-axis with the y-variable: a region can touch the y-axis and still be simplest in x; (d) confuses being below the axis with being sideways — a region below the x-axis is handled perfectly well by vertical strips, since top − bottom is sign-free.
+**5. C** — Past c the roles swap: f − g becomes negative, so the single integral reports the difference of the two lobes rather than their total. Option 1 is false — the antiderivatives here are polynomials and trig functions, defined everywhere. Option 2 is not a rule; TASK 3's curves meet only at the endpoints and need one integral. Option 4 is false: her own slide 6 evaluates ∫₀¹(x² − 1)dx, whose integrand is negative, without difficulty — the integral exists, it just is not the area.
 
-**6. d** — *Continuity of f on the closed interval, and any antiderivative.* If F′ = f, so is F + C, and the theorem's conclusion is unaffected — that freedom is the theorem's content, not a loophole. (a) attaches a positivity condition the theorem does not have — F(b) − F(a) is always the signed area, and it is only its *interpretation* as an area that needs f ≥ 0; (b) invents a normalisation that is never needed and would have to be checked; (c) reverses the roles: F is the antiderivative of f, i.e. F′ = f, and demanding that f be differentiable asks for more than the theorem needs (continuity of f is enough).
+**6. C** — The lobe on [0, π/4] and the lobe on [π/4, π/2] are mirror images, each of area 2/√2 − 1, so they cancel exactly in one integral and add to 2√2 − 2 when handled separately. Option 1 contradicts the slide, which finds the meeting point at tan x = 1, x = π/4. Option 2 is wrong — differentiating sin x + cos x returns cos x − sin x, the integrand. Option 4 over-generalises a coincidence into a rule; the cancellation comes from the crossing, not from the interval.
 
-**7. a** — *The constant cancels in the subtraction, which is exactly why "any antiderivative" is allowed.* Evaluating the same C at both limits and subtracting removes it, so the number F(b) − F(a) does not depend on which antiderivative was chosen. (b) treats a theorem as a typographical convention — the constant is not omitted, it is annihilated, and a "+ C" left in an answer signals that the student thinks the result is a family of functions rather than a number; (c) is half-true and wholly misleading: the integral is indeed defined as a limit of sums, but it is *evaluated* through an antiderivative, and the question is why that antiderivative's constant does not survive; (d) invents a condition — discontinuity would threaten the theorem's applicability altogether, not the constant.
+**7. D** — Slide 4 states two cases with a sign condition on each; the summary keeps only the first formula and drops the condition, so as written it would report a negative number as an area for any curve below the axis — contradicting her own Example 2 on slide 6. Option 1 is a convention the deck never raises. Option 2 belongs to indefinite integrals; definite ones carry no c. Option 3 names the wrong hypothesis — slide 8 asks for continuity, not differentiability, and slide 4 asks for neither. Revise from slides 4, 8 and 12; treat slide 16 as an index to them.
 
-**8. c** — *Area is ∫|f|; in practice, split at the roots and add the magnitudes.* Because f changes sign at c, |f| = f on one side and −f on the other, so ∫ₐᵇ|f| = |∫ₐ^c f| + |∫_c^b f|. (a) applies the modulus after the two contributions have already cancelled, so it under-reports whenever both signs occur — for y = sin x on [0, 2π] it gives 0 instead of 4; (b) is the signed area, which is what "find the area" is explicitly not asking for; (d) happens to be right in the one case where f > 0 on (a, c) and f < 0 on (c, b), and wrong with the signs the other way round — the word "always" is what breaks it, and the safe statement is to take magnitudes rather than to memorise an order.
+**8. D** — The slide's own words are 'Taking x = 1, we see that, g(x) ≥ f(x)', and slide 8's condition is f(x) ≥ g(x) for the formula as written — so with g on top the roles are swapped and the integrand is g − f. Option 1 turns a coincidence of this one example into a rule; in Example 1 on slide 9 the first-named f is on top. Option 2 is false: in slide 9's example the parabola x² − 9 is the lower curve. Option 3 is the persistent 'shift it above the axis' superstition — the strip height is a difference of y-values and does not depend on where the axis is.
 
-**9.** *Concept: the definite integral is defined as a limit of approximating rectangles, the Fundamental Theorem is what makes it computable, and the sign of f inside the sum is what makes it signed.* Partition [a, b] into n equal subintervals, each of width **Δx = (b − a)/n**, and in the i-th subinterval pick any sample point xᵢ*. The product f(xᵢ*)Δx is the (signed) area of a rectangle of width Δx and height f(xᵢ*), so the Riemann sum Σᵢ₌₁ⁿ f(xᵢ*)Δx is the total area of a staircase approximating the region between the curve and the axis. Refining the partition, ∫ₐᵇf(x)dx = lim_{n→∞}Σᵢ₌₁ⁿ f(xᵢ*)Δx; if f is continuous on [a, b] this limit exists and is independent of the sample points. The definition, however, computes nothing — it only says what the number *is*, and evaluating it directly needs summation formulas that exist for very few functions. The **Fundamental Theorem** supplies the evaluation: if F is any antiderivative of f then ∫ₐᵇf(x)dx = F(b) − F(a), which converts a limit of sums into two substitutions and a subtraction, and links integration to differentiation. Finally, the object so defined is a **signed** area because Δx > 0 while f(xᵢ*) carries the sign of the function: rectangles under the axis enter the sum negatively. So ∫ₐᵇf dx reports the area above the axis **minus** the area below it, and the actual enclosed area is ∫ₐᵇ|f(x)|dx.
+**9.** A good answer quotes both: if f(x) ≥ 0 on [a, b] the area under y = f(x) over [a, b] is ∫ₐᵇf(x)dx; if f(x) ≤ 0 on [a, b] it is |∫ₐᵇf(x)dx|. The explanation should be about sign, not about convention: the definite integral accumulates f(x) times a positive width, so where f is negative every contribution is negative and the integral comes out negative. An area is a non-negative quantity, so the magnitude is taken. In the first case the integral is already non-negative and the modulus would change nothing. Credit any answer that notes the modulus is applied per piece, as in Example 2, not to the whole interval at once.
 
-**10.** *Concept: the integrand of an area is a strip height, which must be non-negative pointwise; the modulus belongs inside the integral, and intersection points are where the height changes formula.* A vertical strip at x runs from the lower boundary to the upper one, so its height is (top − bottom) and its area is (top − bottom)dx. Summing gives A = ∫ₐᵇ[f(x) − g(x)]dx **provided f is above g at every x in [a, b]** — that proviso is the whole argument. If the curves cross inside the interval, f − g is positive on one part and negative on the other, and the integral adds a positive area to a negative one; the two partly or entirely cancel **before** any modulus can be applied, so |∫(f − g)dx| is not the area. The correct object is ∫|f − g|dx, which in practice means splitting the interval at every crossing and integrating (top − bottom) on each piece with the roles taken in whichever order is correct there. The **intersection points** therefore do two jobs: for a region merely enclosed by the two curves they supply the limits a and b, obtained by solving f(x) = g(x); and any intersection strictly inside the interval is a point at which the region must be split and the subtraction reversed. For a region lying entirely below the x-axis, "top" still means **the curve with the greater y-value**, and nothing changes: top − bottom is a difference of ordinates, so it is positive whenever the ordering is right, and the position of the axis has already been subtracted out. The habitual translation of such curves upward is unnecessary — adding k to both leaves f − g unchanged.
+**10.** A good answer gives three steps in order. First, solve f(x) = g(x): 'If f(x) and g(x) are enclosed without a specific interval given, we let f(x) = g(x), such that x = a and x = b are the bounds of the integration' — this prevents integrating over an invented interval, which is how whole questions are lost. Second, take a convenient point strictly between the two solutions and evaluate both functions there, to see which is on top — this prevents subtracting in the wrong order and reporting the negative of the area, which is precisely why Example 2 on slide 10 integrates g − f. Third, integrate (upper − lower) between the two limits and report the answer in square units. It is worth adding that the condition in the rule is f(x) ≥ g(x), a comparison between the two curves, and has nothing to do with either curve's position relative to the x-axis.
 
-**11.** *Concept: integrate in the variable in which every boundary of the region is a single function; a boundary that changes formula partway is what forces a split.* The intersections are found from y² = y + 2, i.e. y² − y − 2 = 0, giving y = −1 and y = 2, so the corner points are (1, −1) and (4, 2). With **vertical** strips the top boundary is the upper half of the parabola, y = √x, all the way from x = 0 to x = 4; but the bottom boundary is not one thing. For 0 ≤ x ≤ 1 the strip's lower end is the *lower half of the parabola*, y = −√x; for 1 ≤ x ≤ 4 it is the *line*, y = x − 2. The formula for the strip height therefore changes at x = 1, and one integral cannot represent both, so the area is ∫₀¹[√x − (−√x)]dx + ∫₁⁴[√x − (x − 2)]dx — two integrals, and the first also requires recognising that both ends lie on the same curve. With **horizontal** strips the left boundary is x = y² and the right boundary is x = y + 2 for every y from −1 to 2, with no change of formula anywhere, so A = ∫₋₁²[(y + 2) − y²]dy is a single integral. The general rule: choose the strip direction so that the two boundaries the strip meets are each given by one equation across the whole region — that is a property of the region's geometry, not a matter of preference, and the number obtained is the same either way.
+**11.** A good answer states it: A₁ = ∫ₐᶜ(f(x) − g(x))dx where f(x) ≥ g(x), A₂ = ∫ᶜᵇ(g(x) − f(x))dx where f(x) ≤ g(x), and A = A₁ + A₂. On the decision: test one point inside each of the two sub-intervals and put whichever function is larger there first — the labels A₁ and A₂ on the slide assume f is on top first and g on top second, which is a labelling convention, not a fact about the curves; if the test says otherwise you swap the integrands. On the modulus: because the upper function is written first in each piece, each integrand is non-negative throughout its own interval, so each integral is already a positive area and they simply add. The modulus in Part 1 exists only because there the integrand is f itself, whose sign you do not control.
 
-**12.** *Concept: orientation and additivity are conventions forced on the integral by consistency, and an area calculation must respect them.* The three properties are: **∫ₐᵃf(x)dx = 0** (an interval of zero width contains no area); **∫ₐᵇf(x)dx = −∫_bᵃf(x)dx** (reversing the limits negates the value); and **∫ₐᵇf dx + ∫_b^c f dx = ∫ₐ^c f dx** (an integral splits at any interior point — and, with the sign convention in force, at points outside the interval too). The reason swapping the limits changes the sign is visible in the Riemann sum: Δx = (b − a)/n, so integrating from b to a makes Δx negative, and every term f(xᵢ*)Δx is negated. Equivalently, it is what the third property demands: putting c = a in the additivity rule gives ∫ₐᵇ + ∫_bᵃ = ∫ₐᵃ = 0. The consequence for area work is direct: an area computed with the limits written in decreasing order comes out as the **negative** of the true area, because the whole integral has been reversed. The fix is to write the limits left to right (or, for horizontal strips, bottom to top) and re-integrate, not to delete the minus sign — because a minus sign has two possible causes, reversed limits and a reversed order of subtraction, and only inspecting the setup distinguishes them. The third property is also what licenses splitting at an intersection point: ∫ₐᵇ = ∫ₐ^c + ∫_c^b is exactly the step that lets the two pieces of a crossing region be treated separately.
+**12.** A good answer makes the timing the point: the cancellation happens inside the integral, before the modulus is ever applied, so the modulus can only fix a sign, never restore a lost quantity. The strongest evidence in the deck is Example 1 on slides 13–14: ∫₀^(π/2)(cos x − sin x)dx = [sin x + cos x]₀^(π/2) = (1 + 0) − (0 + 1) = 0, and |0| = 0, while the true area is 2√2 − 2. TASK 2 gives a second case: ∫₀²[(2 − x²) − x²]dx = 4 − 16/3 = −4/3, whose magnitude 4/3 is nothing like the correct 4. The modulus is legitimate only where the integrand keeps one sign across the whole interval, which is exactly the situation slide 4 covers and slide 12 does not.

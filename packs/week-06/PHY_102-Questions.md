@@ -1,117 +1,118 @@
-# PHY_102 — Week 6 Question Set (sit 7 days later)
+# PHY_102 — Week 6 Questions
+*Peak and rms values of current and voltage. Twelve multiple choice, three short answer. Everything here comes from Dr. Adeniji's own slides — no reactance, no impedance, no phasors. Answers at the bottom; work them before you look.*
 
-*Sit this during Saturday catch-up in Week 7, not this week. Notes closed. Topic: Nomenclature in A.C. Circuits — Peak and RMS Values of Current and Voltage, Reactance, Impedance and the Series RLC Circuit.*
+## Multiple choice
 
-## Section A — Multiple choice (12)
+**1.** The deck defines the **peak value** of a waveform as
+A. the full swing from trough to crest
+B. the maximum instantaneous value in a cycle, measured from zero
+C. the reading an AC voltmeter displays
+D. 0.7071 × I_max
 
-**1.** An AC voltmeter connected across a mains socket reads 230 V. Which statement is correct?
-a) The instantaneous voltage never exceeds 230 V, that being the largest value the supply produces.
-b) The peak value is 163 V, since the rms is the larger of the two figures.
-c) The instantaneous voltage reaches a maximum of 325 V, and a 230 V DC supply would heat a given resistor at the same average rate.
-d) Averaged over a complete cycle the voltage is 230 V.
+**2.** The deck defines the **rms value** as
+A. the DC value that would dissipate the same power in a resistive load
+B. the average of the waveform over one complete cycle
+C. the maximum instantaneous value of the waveform
+D. the average of the waveform over one half-cycle
 
-**2.** The form factor of a sinusoid is 1.11 because it is:
-a) the ratio of the peak value to the rms value
-b) the ratio of the rms value (0.707 V_max) to the rectified mean value (0.637 V_max)
-c) the ratio of the peak value to the peak-to-peak value, doubled
-d) the factor by which the rms value exceeds the peak value
+**3.** A supply is quoted as 240 V. Its peak voltage is
+A. 170 V
+B. 120 V
+C. 339 V
+D. 480 V
 
-**3.** In which of these series circuits does the current **lead** the supply voltage?
-a) R = 30 Ω, X_L = 50 Ω, X_C = 20 Ω
-b) R = 30 Ω, X_L = 50 Ω, X_C = 50 Ω
-c) R = 0, X_L = 50 Ω, X_C = 20 Ω
-d) R = 30 Ω, X_L = 20 Ω, X_C = 50 Ω
+**4.** A source has f = 50 Hz. Its angular frequency ω is
+A. 50 rad s⁻¹
+B. 7.96 rad s⁻¹
+C. 0.02 rad s⁻¹
+D. 314 rad s⁻¹
 
-**4.** In a series RLC circuit the measured drops are V_R = 60 V, V_L = 120 V and V_C = 40 V. The supply voltage is:
-a) 100 V
-b) 220 V
-c) 140 V
-d) 171 V
+**5.** In (I²)_av = ½ I²_max, the ½ is the average value over a complete cycle of
+A. sin²ωt
+B. sin ωt
+C. I_max
+D. √2
 
-**5.** The voltage across the capacitor of a series RLC circuit can be larger than the supply voltage because:
-a) the capacitor accumulates charge cycle after cycle until its voltage rises above that of the source
-b) Kirchhoff's voltage law applies only to direct-current circuits
-c) the current through the capacitor is larger than the current through the other two components
-d) V_L and V_C are 180° out of phase with each other and largely cancel, so Kirchhoff's voltage law is satisfied by the vector sum rather than the arithmetic sum
+**6.** In her Question 3 (V_max = 24.0 V, R = 265 Ω), the rms current is
+A. 0.0906 A
+B. 0.0642 A
+C. 0.0454 A
+D. 0.0642 mA
 
-**6.** A series RLC circuit on a 240 V rms supply draws 5.0 A rms; its impedance is 48 Ω and its resistance 30 Ω. The average power drawn is:
-a) 1200 W
-b) 450 W
-c) 750 W
-d) 469 W
+**7.** In a resistor, the maximum power dissipated compared with the average power is
+A. equal to it
+B. half of it
+C. twice it
+D. √2 times it
 
-**7.** At series resonance:
-a) Z is a maximum, because the two reactances add
-b) Z is a minimum and equal to R, the current is a maximum, and current and supply voltage are in phase
-c) the current is zero, since X_L and X_C cancel and leave no path
-d) the voltages across L and across C are both zero
+**8.** An alternating current is i = 8 sin(100πt) A. Its rms value is
+A. 8 A
+B. 314 A
+C. 11.3 A
+D. 5.66 A
 
-**8.** As the supply frequency is raised well above the resonant frequency of a series RLC circuit:
-a) X_L grows and X_C shrinks, so Z rises, the circuit becomes increasingly inductive and the current lags further behind the voltage
-b) both reactances grow, so Z rises and the phase angle tends towards zero
-c) X_L shrinks and X_C grows, so the circuit becomes increasingly capacitive
-d) Z is unchanged, since impedance is fixed by R, L and C, which are properties of the components
+**9.** An AC source of maximum voltage 100 V feeds R = 50 Ω. The average power is
+A. 100 W
+B. 200 W
+C. 50 W
+D. 1.41 W
 
-**9.** A resistive heater draws 5.0 A rms from a 220 V rms supply. The **maximum instantaneous** power delivered to it is:
-a) 2200 W
-b) 1100 W
-c) 1556 W
-d) 550 W
+**10.** Question 3 supplies a frequency of 60.0 Hz but never uses it. Why?
+A. 60 Hz is a standard value and is simply assumed
+B. it cancels between P_av and P_max
+C. the circuit is purely resistive, so nothing asked depends on frequency
+D. rms values are averages over a cycle, which removes the frequency
 
-**10.** A 250 mH inductor is connected to a 400 Hz supply. Its reactance is:
-a) 100 Ω
-b) 628 000 Ω
-c) 1.59 mΩ
-d) 628 Ω
+**11.** The Practice question 2 slide and its solution slide disagree about
+A. the current: 10 A on one, 14.14 A on the other
+B. the ac voltage: 120 V on the question, 250 V in the solution
+C. the factor: 0.7071 on one, 1.4142 on the other
+D. nothing — the two slides agree
 
-**11.** A moving-coil (DC) ammeter is placed in a circuit carrying an alternating current of peak value 3.0 A. It reads approximately:
-a) 3.0 A
-b) 2.12 A
-c) zero
-d) 1.91 A
+**12.** Her slide-8 chain I = V/R = (V_max/R) sin ωt = I_max sin ωt establishes that
+A. the current lags the voltage by 90° in a resistor
+B. I_rms = V_max/R
+C. R depends on the frequency of the source
+D. I_max = V_max/R, and by the same factor I_rms = V_rms/R
 
-**12.** Which statement about a pure capacitor in an AC circuit is correct?
-a) It dissipates I_rms²X_C, by analogy with I_rms²R for a resistor.
-b) It dissipates no average power: over each cycle it returns to the source exactly the energy it stored.
-c) It blocks alternating current completely, just as it blocks direct current.
-d) Its reactance rises with frequency, so it passes low frequencies more readily than high ones.
+## Short answer
 
-## Section B — Short answer (3)
+**13.** State the two rms formulae exactly as the SUMMARY slide states them, and give each rearranged to find the peak value. Then explain, using her slide-9 argument, why the rms value rather than the plain average is used to describe an alternating quantity, and say precisely what "root mean square" instructs you to do in what order.
 
-**13.** For a sinusoidal supply, define the peak value, the peak-to-peak value, the rectified mean value and the rms value, giving each as a multiple of V_max. State the form factor and the peak factor and say which ratio each is. Then explain why supply voltages are quoted as rms values, and exactly what would go wrong if the mean value were quoted instead.
+**14.** Work PRACTICE QUESTION 3 in full — an AC generator of maximum voltage 24.0 V and frequency 60.0 Hz across R = 265 Ω; find (a) the rms voltage, (b) the rms current, (c) the average power and (d) the maximum power. Show the arithmetic for each. Then state which given is never used and why, and verify the relationship between your answers to (c) and (d).
 
-**14.** A series circuit of R = 25 Ω, L = 0.12 H and C = 60 μF is connected across a 150 V rms, 50 Hz supply. Find the two reactances, the impedance, the current, all three component voltages and the phase angle, stating whether the current leads or lags. Verify the supply voltage by vector addition, find the average power by two routes, and state the resonant frequency — using it to confirm the character of the circuit at 50 Hz.
+**15.** The Practice question 2 slide sets the house ac voltage at 120 V; the solution slide solves it at 250 V. Set out both answers in full, say which part of the question is unaffected by the discrepancy, and explain what a student should write in an exam if this question appears with only one of the two figures given.
 
-**15.** A series RLC circuit is tested at two frequencies. At 40 Hz the current is found to **lead** the supply voltage by 35°; at 90 Hz it **lags** it by 28°. Explain what this tells you about the resonant frequency, what happened to X_L and X_C between the two measurements, and what a third measurement made exactly at f₀ would show. Explain also why, for a fixed rms supply voltage, the average power is greatest at resonance.
+---
 
 ## Answers
 
-**1. c** — *Quoted AC voltages are rms, and rms is defined by equal heating.* V_max = √2(230) = 325 V, so the instantaneous value does exceed 230 V for part of each half-cycle; and the whole point of the rms definition is that 230 V AC and 230 V DC heat a given resistor identically. (a) treats the meter reading as the maximum, i.e. confuses rms with peak. (b) divides by √2 instead of multiplying and then compounds the error by asserting the peak is smaller than the rms — impossible for any waveform. (d) confuses rms with the mean; the mean of a sinusoid over a full cycle is exactly **zero**.
+**1. B.** Slide 4: "the maximum instantaneous value that a waveform reaches during one complete cycle… typically measured from the zero reference point." A is the trough-to-crest swing, which is **twice** the peak — a quantity the deck never names. C is the rms value, which is what meters read (slide 10). D inverts the rms formula and would make the peak smaller than the rms, which is impossible.
 
-**2. b** — *Form factor = rms ÷ rectified mean.* 0.707/0.637 = 1.11. It measures how peaked a waveform is relative to its average magnitude, and it is the number a rectifier-type meter's scale is calibrated with. (a) is the **peak factor** (crest factor), V_max/V_rms = √2 = 1.414 — the two factors are constantly swapped. (c) is a ratio that is 1 by construction (V_max/2V_max, doubled) and describes nothing. (d) reverses the inequality: the rms value is always *less* than the peak, never greater.
+**2. A.** Slide 5: "the equivalent direct current (DC) value that would produce the same amount of power dissipation in a resistive load." B is exactly the thing slide 9 rejects — the full-cycle average is **zero**. C is the peak value. D is the rectified half-cycle mean (0.6366 V_max), which appears on her diagram as a label but is never defined or used.
 
-**3. d** — *Current leads when the net reactance is capacitive, X_C > X_L.* Here X = 20 − 50 = −30 Ω, tan φ = −30/30 = −1, so φ = −45° and the current leads by 45°. (a) has X = +30 Ω: inductive, so the current **lags** — the mirror-image error. (b) has X_L = X_C, which is resonance: current and voltage are **in phase**, neither leading nor lagging. (c) has X_L > X_C with R = 0, giving the most strongly *lagging* case in the list, a full 90° behind — chosen by anyone who reads "the capacitor is present" as "capacitive".
+**3. C.** Quoted supply voltages are rms because meters read rms, so V_max = 1.4142 × 240 = **339 V**. A multiplies by 0.7071 instead of by √2 — the factor used in the wrong direction, and it gives a peak *smaller* than the rms, which no waveform can have. B halves. D doubles, confusing peak with the trough-to-crest swing.
 
-**4. a** — *KVL in an AC circuit is a vector sum: V_s = √(V_R² + (V_L − V_C)²).* V_L − V_C = 80 V, so V_s = √(60² + 80²) = √(3600 + 6400) = √10 000 = **100 V**. (b) adds all three arithmetically, 60 + 120 + 40 = 220 V, describing an instant that never occurs. (c) gets the net reactive drop right but then adds it to V_R arithmetically, 60 + 80 = 140 V, forgetting the 90° that still separates them. (d) **adds** V_L and V_C instead of subtracting: √(60² + 160²) = 171 V, missing the fact that they are in direct opposition.
+**4. D.** ω = 2πf = 2π(50) = **314 rad s⁻¹**. A uses f where ω belongs, out by 6.28. B divides by 2π instead of multiplying. C is the period T = 1/f = 0.02 s, in seconds, not an angular frequency at all — check the units before you answer.
 
-**5. d** — *Reactive voltages oppose one another, so each may exceed their resultant.* V_L leads the current by 90° and V_C lags it by 90°, so they are 180° apart; at the instant V_C is at its peak, V_L is at its opposite peak and V_R is passing through zero, and the instantaneous sum is still only the supply voltage. Near resonance the individual drops can be Q times the supply. (a) invents a DC-style accumulation; in the steady state the capacitor's charge simply oscillates and nothing builds up cycle to cycle. (b) is false — KVL holds instant by instant in any circuit; it is the *addition of amplitudes* that must be done vectorially. (c) contradicts the defining property of a series circuit, in which the current is common to every component.
+**5. A.** I² = I²_max sin²ωt, so averaging I² means averaging sin²ωt, whose mean over a cycle is ½. B is the average of the *unsquared* sinusoid, which is **zero** — the very reason she squares. C is a constant, so its average is itself, not ½. D is the factor that comes *out* at the end, after the square root, not the thing being averaged.
 
-**6. c** — *P_av = VI cos φ with cos φ = R/Z, equivalently I²R.* cos φ = 30/48 = 0.625, so P = (240)(5.0)(0.625) = **750 W**; check I²R = (25)(30) = 750 W ✔. (a) is the **apparent** power VI = 1200 VA — the power factor omitted, i.e. the circuit treated as if it were DC. (b) computes I²(Z − R) = (25)(18) = 450 W, the supposed "power in the reactance", which is not a power at all: L and C dissipate nothing. (d) squares the power factor, 1200 × 0.625² = 469 W.
+**6. B.** V_rms = 0.7071 × 24 = 17.0 V, then I_rms = V_rms/R = 17/265 = **0.0642 A**. A is I_max = V_max/R = 24/265 = 0.0906 A — the conversion never done. C applies 0.7071 a second time to an already-converted figure, 0.0642 × 0.7071 = 0.0454 A. D is the right number with the wrong prefix: 0.0642 A is 64.2 mA, not 0.0642 mA.
 
-**7. b** — *At series resonance the reactances cancel, leaving the minimum impedance.* X_L = X_C makes the net reactance zero, so Z = R, I = V/R is maximal, φ = 0 and the power factor is unity. (a) has the reactances adding rather than cancelling, and describes the parallel-resonant behaviour instead. (c) reads "cancel" as "block": cancellation removes *opposition*, so the current is larger than at any other frequency, not zero. (d) confuses a zero **resultant** with zero components — V_L and V_C are individually large, equal and opposite.
+**7. C.** P_max/P_av = (V_max/V_rms)² = (√2)² = **2**. Her Q3 shows it: 2.174 W against 1.09 W. A forgets that instantaneous power in a resistor swings between 0 and its peak. B inverts the ratio. D applies √2 once instead of squaring it — the classic slip of forgetting that power goes as V², so the voltage factor gets squared too.
 
-**8. a** — *X_L = 2πfL rises with f while X_C = 1/(2πfC) falls with it.* Well above f₀ the inductive term dominates, X_L − X_C is large and positive, Z rises and φ → +90°, so the current lags further and further. (b) has X_C growing with frequency — the relationship inverted — and would give a phase angle tending to zero, which happens only *at* resonance. (c) inverts both dependences at once, and would place the capacitive region above f₀ instead of below it. (d) treats impedance as a fixed component property; it is R, L and C that are fixed, while Z depends on frequency through them.
+**8. D.** In i = I_max sin ωt, I_max = 8 A, so I_rms = 0.7071 × 8 = **5.66 A**. A quotes the amplitude as though it were the rms value. B is ω = 100π = 314 rad s⁻¹ — an angular frequency in rad s⁻¹, not a current in amperes. C multiplies by 1.414 instead of dividing, giving an rms larger than the peak.
 
-**9. a** — *In a resistor the instantaneous power peaks at V_max I_max = 2P_av.* P_av = V_rms I_rms = (220)(5.0) = 1100 W, and p(t) = V_max I_max sin²ωt swings between 0 and V_max I_max = (√2 × 220)(√2 × 5.0) = 2 × 1100 = **2200 W**. (b) gives the average when the maximum was asked for. (c) applies the √2 once instead of twice, converting only one of the two quantities. (d) halves the average instead of doubling it, as though the ½ in ½V_max I_max applied to the rms values.
+**9. A.** V_rms = 0.7071 × 100 = 70.71 V, so P_av = V²_rms/R = 5000/50 = **100 W**. B uses V²_max/R = 10 000/50 = 200 W, which is P_**max**, exactly twice. C applies 0.7071 twice (V = 50 V) before squaring. D forgets to square at all: 70.71/50 = 1.41, which is an ampere figure wearing a watt label.
 
-**10. d** — *X_L = 2πfL, with L in henries.* 250 mH = 0.250 H, so X_L = 2π(400)(0.250) = **628 Ω**. (a) uses f instead of ω = 2πf, giving 400 × 0.250 = 100 Ω, a factor 6.28 too small. (b) leaves L in millihenries, 2π(400)(250), a thousand times too big. (c) takes the reciprocal, applying the capacitive formula to an inductor.
+**10. C.** The load is a plain resistor, and none of V_rms, I_rms, P_av or P_max contains f — recognising a redundant given is part of the question. A is not a reason, it is a guess. B is false: P_max and P_av are computed independently and neither contains f to cancel. D confuses the averaging *inside* the rms definition with the circuit's response; a circuit containing L or C would depend on f however the values were averaged.
 
-**11. c** — *A moving-coil meter deflects linearly with current, so it responds to the mean, which is zero.* Over a full cycle the positive and negative half-cycles cancel exactly; the pointer at most trembles about zero at the supply frequency. It is precisely this that forces AC instruments to use a squaring (moving-iron or thermal) movement, or a rectifier. (a) is the peak value, which no meter reads directly. (b) is the rms value, 3.0/√2 = 2.12 A, which a *moving-iron* meter would read. (d) is the rectified mean, 0.637 × 3.0 = 1.91 A, which is what a rectifier meter's movement actually senses before its scale is multiplied by the form factor 1.11 to display 2.12 A.
+**11. B.** Slide 13 sets the ac voltage at 120 V; slide 14 solves it with 250 V and gets V_max = 250/0.7071 = 353.56 V. A is not a disagreement — 10 A is the given rms current and 14.14 A is the answer derived from it. C is false: 0.7071 and 1.4142 are reciprocals and both slides use them consistently. D is the answer to avoid; the discrepancy is real and you should name it.
 
-**12. b** — *A pure reactance stores and returns energy; it dissipates none.* Instantaneous power into a capacitor is positive for one quarter-cycle (charging) and equally negative for the next (discharging back into the source), so the average is zero — equivalently P = VI cos 90° = 0. (a) is the "reactance is a kind of resistance" error; I²X_C is reactive volt-amperes, not watts. (c) over-generalises the DC behaviour: a capacitor blocks DC but *passes* AC, the more readily the higher the frequency. (d) inverts the frequency dependence — X_C = 1/(2πfC) **falls** as f rises.
+**12. D.** Dividing V = V_max sin ωt by R gives (V_max/R) sin ωt, and matching it to I_max sin ωt identifies **I_max = V_max/R**; since both amplitudes carry the same 0.7071 to become rms values, I_rms = V_rms/R too, which is how her Q3 part (b) proceeds. A is false — in a resistor voltage and current share the same sin ωt and are in phase; a 90° lag belongs to components this deck never covers. B crosses an rms value with a peak value, out by √2. C is false: R is a constant of the component.
 
-**13.** *Concept: the four descriptors of an alternating waveform, and why rms is the standard.* For v = V_max sin ωt: the **peak (maximum) value** V_max is the greatest instantaneous value, measured from zero; the **peak-to-peak value** is 2V_max, the full crest-to-trough swing; the **rectified mean value** is the average of one half-cycle, V_av = (2/π)V_max = **0.637 V_max** (the mean over a *complete* cycle is zero, since the halves cancel); and the **rms (effective) value** is V_rms = V_max/√2 = **0.707 V_max**, the square root of the mean of v². The **form factor** is rms ÷ rectified mean = 0.707/0.637 = **1.11**; the **peak (crest) factor** is peak ÷ rms = **1.414**. Supply voltages are quoted as rms because **power is what matters and power goes as the square**: P = V_rms²/R, so the rms value is by definition the DC voltage that would do the same job, and every rating — of a cable, a fuse, a heater, an insulation class — follows directly from it. If the mean were quoted instead, two things would break. First, the full-cycle mean of a sinusoid is exactly **zero**, which would describe every AC supply in the world as 0 V. Second, even using the rectified mean, 0.637 V_max, the figure would under-state the heating: power would come out as (0.637/0.707)² = 0.81 of the true value, a 19% error — and, worse, the ratio between mean and rms is a *different* number for a square or a triangular wave, so the quoted figure would not mean the same thing from one waveform to the next. The rms value alone makes the same power statement for every waveform.
+**13.** *Concept: the two formulae, both directions, and the logic behind rms.* The SUMMARY slide gives **I_rms = (1/√2) I_max = 0.7071 I_max** and **V_rms = (1/√2) V_max = 0.7071 V_max**. Rearranged: **I_max = √2 I_rms = I_rms/0.7071 = 1.4142 I_rms**, and **V_max = √2 V_rms = V_rms/0.7071 = 1.4142 V_rms**. Why rms and not the average: slide 9 says "Both alternating voltage and current have a zero value. So direct average gives no information (or useless)" — the instantaneous value is positive through one half-cycle and negative through the other, so over a complete cycle the two halves cancel exactly and the mean is zero, which would falsely predict that an alternating current does no heating. Squaring removes the sign: I² = I²_max sin²ωt is never negative, so it has a genuine non-zero mean, (I²)_av = ½I²_max, and the square root of that mean is a number that can stand in for the current. It is also the physically right number, because power in a resistance goes as I², so the mean of I² is exactly what determines the heating — which is why slide 5 can define the rms as the equivalent DC value. **Order of operations, from the name read backwards:** square the instantaneous value first, take the mean of the squares second, take the square root third. Not the mean of the roots, not the square of the mean.
 
-**14.** *Concept: the complete series RLC calculation with independent checks.* **ω = 2π(50) = 314.16 rad s⁻¹.** **X_L = ωL = (314.16)(0.12) = 37.7 Ω.** **X_C = 1/(ωC) = 1/[(314.16)(60 × 10⁻⁶)] = 1/(0.018850) = 53.1 Ω.** **Net X = 37.7 − 53.1 = −15.4 Ω** — negative, hence **capacitive**. **Z = √(25² + 15.4²) = √(625 + 236) = √861 = 29.3 Ω.** **I = 150/29.3 = 5.11 A** (common to all three). **Voltages**: V_R = (5.11)(25) = **128 V**; V_L = (5.11)(37.7) = **193 V**; V_C = (5.11)(53.1) = **271 V**. **Vector check**: √(128² + (193 − 271)²) = √(16 380 + 6080) = √22 460 = **150 V ✔**, while the arithmetic sum, 592 V, is meaningless. **Phase**: tan φ = −15.4/25 = −0.614, φ = **−31.6°** — the current **leads** the supply voltage by 31.6°, as a capacitive circuit must. **Average power, route 1**: cos φ = R/Z = 25/29.3 = 0.852, P = (150)(5.11)(0.852) = **653 W**. **Route 2**: P = I²R = (5.11)²(25) = (26.1)(25) = **653 W ✔** — every watt of it in the resistor. **Resonance**: f₀ = 1/(2π√(LC)) with LC = (0.12)(60 × 10⁻⁶) = 7.2 × 10⁻⁶ and √(LC) = 2.683 × 10⁻³, so f₀ = 1/0.016860 = **59.3 Hz**. The supply is at 50 Hz, **below** f₀, so X_C must exceed X_L and the circuit must be capacitive with a leading current — exactly what the sign of φ said, an independent confirmation of the whole calculation.
+**14.** *Concept: the full resistive AC calculation, with a redundant given.* **(a) V_rms = 0.7071 V_max = 0.7071 × 24 = 16.97 ≈ 17.0 V.** **(b) I_rms = V_rms/R = 17/265 = 0.06415 ≈ 0.0642 A** (64.2 mA). **(c) P_av = V²_rms/R = 17²/265 = 289/265 = 1.0906 ≈ 1.09 W**; the cross-check I²_rms R = (0.0642)² × 265 = 0.004122 × 265 = 1.09 W ✔ agrees, and both routes are on slide 15. **(d) P_max = V²_max/R = 24²/265 = 576/265 = 2.1736 ≈ 2.174 W.** **The unused given is the frequency, 60.0 Hz.** The load is a pure resistor, and R does not depend on frequency, so none of V_rms, I_rms, P_av or P_max contains f anywhere; the number is there to be recognised as redundant. **Verification of (c) against (d):** P_max/P_av = 2.174/1.09 = 1.995 ≈ **2**, exactly as it must be, since P_max/P_av = (V_max/V_rms)² = (√2)² = 2. The small shortfall from exactly 2 is only the rounding of 16.97 V to 17.0 V. If your P_max does not come out at twice your P_av, one of the two used the wrong voltage.
 
-**15.** *Concept: reading a circuit's character off its phase angle, and why resonance maximises the real power.* A **leading** current at 40 Hz means X_C > X_L there, so the circuit is capacitive and 40 Hz lies **below** the resonant frequency. A **lagging** current at 90 Hz means X_L > X_C, an inductive circuit, so 90 Hz lies **above** it. Because φ changes sign exactly once, at f₀, the resonant frequency **must lie between 40 Hz and 90 Hz**; it is not the midpoint, and since |φ| is larger at 40 Hz than at 90 Hz, 40 Hz is the further of the two from resonance. Between the measurements, **X_L = 2πfL rose** — more than doubling, since f did — while **X_C = 1/(2πfC) fell** by the same factor, so the difference X_L − X_C moved from negative to positive; the two curves cross at f₀. A measurement made exactly at **f₀** would show **φ = 0**, current and supply voltage in phase, the **minimum** impedance Z = R, the **maximum** current V/R, a **unity power factor**, and equal, opposite voltages across L and C. **Why the power is greatest there**: P_av = VI cos φ = V(V/Z)(R/Z) = V²R/Z², so with V and R fixed it is largest when **Z is smallest**; Z = √(R² + (X_L − X_C)²) is smallest exactly when the reactive term vanishes, i.e. at resonance, where Z = R and P = V²/R. Equivalently P = I²R with the current at its maximum. Away from resonance two effects work together against the power: the current falls because Z is larger, *and* a smaller fraction of the apparent power VI is real, because cos φ = R/Z has dropped below 1.
+**15.** *Concept: naming a misprint rather than quietly picking one figure.* **With 250 V (the figure the solution slide actually uses):** V_rms = 0.7071 V_max, so V_max = V_rms/0.7071 = 250/0.7071 = **353.56 V**. **With 120 V (the figure the question slide sets):** V_max = 120/0.7071 = 169.7 ≈ **170 V** — which is the same answer as Practice question 1, and that duplication is the likely reason the figure was altered on the solution slide. **The part unaffected is the current:** the question gives an ac current of 10 A on both slides, so I_max = I_rms/0.7071 = 10/0.7071 = **14.14 A** either way. **In an exam:** use whichever figure the question paper actually gives you, state the formula V_max = √2 V_rms before substituting so the method earns its marks independently of the number, and quote the answer with its unit. If both figures somehow appear, say in one line that the question is internally inconsistent, choose the one in the question stem, and give the other answer in brackets — that is worth more than silently computing one of them.

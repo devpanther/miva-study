@@ -7,12 +7,37 @@ Generate the Miva weekly study pack for Gift and his study partner.
 SOURCE — everything you need is in the cloned repository. Do not look anywhere
 else: not the LMS portal, not a local machine, not a Claude Project.
 
-  source/week-XX.md      (XX = 01..12, zero-padded)
+  source/week-XX.md            (XX = 01..12, zero-padded)
+  slides/<COURSE>/week-XX/     rendered slide images, where they exist
 
-Each holds the extracted text of every course PDF for that week, grouped by
-course under "## <COURSE>" then "### <pdf name>". The extractor drops some
-ligatures - "different" appears as "dierent", "efficient" as "ecient". Read
-through it.
+source/week-XX.md holds the extracted text of every course PDF for that week,
+grouped by course under "## <COURSE>" then "### <pdf name>". The extractor drops
+some ligatures - "different" appears as "dierent", "efficient" as "ecient".
+
+READ THIS BEFORE YOU TRUST THE EXTRACTED TEXT
+Many lecture slides are pictures of text. pdftotext sees their headings and
+nothing else, so a deck can look like a list of section titles when it actually
+contains the entire lecture. MTH_102 is the worst affected - most weeks are
+65-78% image-only - and PHY_102 weeks 2, 5, 6 and 12 are bad too. A whole
+semester of MTH_102 material was once written this way and taught a textbook
+treatment the lecturer never gave, with none of her worked examples in it.
+
+So: if slides/<COURSE>/week-XX/ exists, that course's agent must READ THE PNG
+PAGES, in page order, with the Read tool, and build everything from them. The
+extracted text is then only a cross-check. Where no slides folder exists, the
+text extraction is fine - those decks are genuine text.
+
+THE DECK IS THE SYLLABUS. Teach what the lecturer teaches, in her notation, with
+her worked examples, in her order. If she skips something a textbook would cover,
+leave it out - he is examined on her deck, not on the subject. Mark any addition
+of your own as an aside. If a slide contains an error, say so plainly and teach
+the correct version; do not quietly fix it, because the error will be in front of
+him in the exam.
+
+For any course you rebuilt from slides, also write packs/week-XX/<COURSE>-SlideNotes.md:
+the deck title, page count, lecturer, which pages were image-only, then the
+definitions, rules and worked examples reproduced verbatim. It is the audit trail,
+and it is what the next run reads instead of re-reading the images.
 
 Courses: PHY_102, MTH_102, COS_102, PHY_108, GST_112, GST_122, CSC_106,
 MIVA_COS_111.
@@ -41,11 +66,14 @@ whichever check they scored lowest on.
 
 USE SUBAGENTS - fan this out
 Launch the eight course agents in PARALLEL (one message, multiple Agent calls).
-Give each the course code and week number and tell it to read source/week-XX.md,
-use only its own course's section, and return finished markdown - not commentary -
-containing (a) a one-page exam-oriented summary, (b) 12 MCQ + 3 short-answer
-questions for a test sat SEVEN DAYS LATER, and (c) for PHY_102, MTH_102 and
-COS_102 only, the six-question nightly checks for that course's sessions.
+Give each the course code and week number, tell it to read slides/<COURSE>/week-XX/
+if that folder exists and source/week-XX.md otherwise, to use only its own course's
+section, and to return finished markdown - not commentary - containing (a) a
+one-page exam-oriented summary, (b) 12 MCQ + 3 short-answer questions for a test
+sat SEVEN DAYS LATER, (c) for PHY_102, MTH_102 and COS_102, the twelve-question
+nightly checks for that course's two sessions, (d) for GST_112, CSC_106, GST_122
+and PHY_108, the five-question fast-hour check, and (e) a SlideNotes file if it
+worked from slides.
 Weight the work: PHY_102, MTH_102 and COS_102 need real depth; GST_112, GST_122
 and CSC_106 can be brisk; MIVA_COS_111 usually needs nothing. Assemble their
 output yourself - do not let agents write the final files.
@@ -70,7 +98,8 @@ WHAT TO PRODUCE, all under packs/week-XX/
    recognises the vocabulary. No questions solvable by elimination. Every answer
    names the underlying concept, so a wrong answer says what to revisit.
 
-2c. FAST-HOUR CHECKS - checks/<Day>-<COURSE>-fast.md, four files:
+2c. FAST-HOUR CHECKS - checks/<Day>-<COURSE>-fast.md, four files
+   (the deep checks have no suffix; only these carry -fast):
    Mon-GST_112, Tue-CSC_106, Wed-GST_122, Thu-PHY_108
    FIVE MCQs each, no short answers. These are sat at the end of the fast hour,
    around 23:00, and must take about three minutes. Friday and Saturday get none -
@@ -97,10 +126,10 @@ WHAT TO PRODUCE, all under packs/week-XX/
    20. If any option is outside its band, go back and rewrite questions - reorder
    the options so the correct one moves - until it is inside. Then recount and
    confirm before continuing.
-   This is not cosmetic. If answers cluster, the check can be passed by guessing
-   the popular letter, the score stops measuring understanding, and the Sunday
-   topic gets picked from a meaningless number. A previous run put 42 of 48
-   answers on option (a); that week had to be thrown away.
+   The tracker now reshuffles the four options on every attempt, so a clustered
+   pack can no longer be gamed inside the app. The rule still stands, because the
+   markdown and PDF question sets are read as written - and an all-(a) answer key
+   is obvious on the page. A previous run put 42 of 48 answers on option (a).
    Report both sets of a/b/c/d counts in your closing message.
 
 3. WEEKLY SETS - <COURSE>-Questions.md, 12 MCQ + 3 short-answer per course.

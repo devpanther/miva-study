@@ -1,94 +1,90 @@
 # Thursday — MTH_102 nightly check
 
-*Integration technique problems: carrying out substitutions including the ones that need a leftover x re-expressed and the ones that change the limits of a definite integral, integrating by parts once, twice and in the cycling case where you solve for the integral, converting an integrand under a trigonometric substitution and getting back to x, and doing long division and partial-fraction decomposition before integrating — with the sign and constant traps at each step.*
+*Problems-only session on Week 8 integration techniques. Compute with substitution (including converting the limits of a definite integral), integration by parts once and twice, trigonometric substitution with the root normalised to 1 − (something)², and partial fractions found by substituting the roots — including all four TASK questions the lecturer set and never answered: ∫₀¹x·eˣdx, ∫x·ln(x)dx, ∫√(1 + x²)dx and ∫[(5x + 7)/((x − 1)(x + 3))]dx.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**1.** ∫₁² x(x² − 1)³dx =
-a) 81/4   b) 15/8   c) 81/8   d) 243/8
+**1.** Evaluate ∫₀²(x + 2)³dx by the substitution u = x + 2.
+A. 16
+B. 60
+C. 64
+D. 240
 
-**2.** ∫x e^{3x}dx =
-a) (x e^{3x})/3 − e^{3x}/3 + C
-b) (x e^{3x})/3 − e^{3x}/9 + C
-c) x e^{3x} − e^{3x} + C
-d) (x²/2)e^{3x} + C
+**2.** Evaluate ∫3x²·e^(x³)dx.
+A. 3x²·e^(x³) + C
+B. e^(x³)/(3x²) + C
+C. x³·e^(x³) + C
+D. e^(x³) + C
 
-**3.** ∫x ln x dx =
-a) x ln x − x + C
-b) (x²/2)ln x − x²/2 + C
-c) (x²/2)(1/x) + C
-d) (x²/2)ln x − x²/4 + C
+**3.** Following her method for √(9 − 25x²), you would first write it as 3√(1 − (5x/3)²) and then set 5x/3 = sin(u). What is dx?
+A. dx = (3/5)cos(u)du
+B. dx = (5/3)cos(u)du
+C. dx = cos(u)du
+D. dx = (3/5)sin(u)du
 
-**4.** Writing (4x − 5)/((x − 2)(x + 1)) = A/(x − 2) + B/(x + 1), the constants are:
-a) A = 3, B = 1   b) A = 1, B = 3   c) A = 1, B = −3   d) A = 3, B = −9
+**4.** Evaluate ∫[(7x − 6)/((x − 2)(x + 3))]dx.
+A. (27/5)ln(x − 2) + (8/5)ln(x + 3) + C
+B. (8/5)ln(x − 2) − (27/5)ln(x + 3) + C
+C. (8/5)ln(x − 2) + (27/5)ln(x + 3) + C
+D. 7ln(x − 2) − 6ln(x + 3) + C
 
-**5.** Under the substitution x = 3 tanθ, the integral ∫dx/(x² + 9)² becomes:
-a) (1/3)∫dθ
-b) (1/27)∫dθ
-c) (1/27)∫sec²θ dθ
-d) (1/27)∫cos²θ dθ
+**5.** Evaluate ∫x²·ln(x)dx.
+A. (x³/3)ln(x) + x³/9 + C
+B. (x³/3)ln(x) − x³/3 + C
+C. (x³/3)·(1/x) + C
+D. (x³/3)ln(x) − x³/9 + C
 
-**6.** ∫₀^π x sin x dx =
-a) π²/2   b) 0   c) π   d) −π
+**6.** Evaluate ∫x·sin(x)dx.
+A. −x·cos(x) + sin(x) + C
+B. x·cos(x) − sin(x) + C
+C. −x·cos(x) − sin(x) + C
+D. −(x²/2)cos(x) + C
 
-**7.** ∫eˣ sin x dx =
-a) eˣ(sin x − cos x)/2 + C
-b) eˣ(sin x + cos x)/2 + C
-c) −eˣ cos x + C
-d) eˣ sin x − eˣ cos x + C
+**7.** Evaluate ∫[1/(x² − 4)]dx by partial fractions.
+A. (1/2)ln(x − 2) − (1/2)ln(x + 2) + C
+B. ln(x − 2) − ln(x + 2) + C
+C. (1/4)ln(x − 2) − (1/4)ln(x + 2) + C
+D. (1/4)ln(x − 2) + (1/4)ln(x + 2) + C
 
-**8.** ∫(2x + 1)/(x − 3) dx =
-a) 2x + ln|x − 3| + C
-b) ln|2x + 1| − ln|x − 3| + C
-c) 2x + 7ln|x − 3| + C
-d) (x² + x)/(x²/2 − 3x) + C
+**8.** Evaluate ∫₀¹(x + 1)⁴dx.
+A. 1/5
+B. 31/5
+C. 32/5
+D. 33/5
 
-**9. (explain why)** Evaluate ∫x²cos x dx. Show both applications of parts, state what u and dv are each time, and say what would have gone wrong had you taken u = cos x on the first application.
+**9.** Work TASK 1 from slide 9 in full: evaluate ∫₀¹ x·eˣ dx. Say first which technique it needs and why.
+*(short answer)*
 
-**10. (explain why)** Evaluate ∫x√(x + 2) dx. Explain why the substitution does not finish at du = dx and what extra step the leftover x forces on you.
+**10.** Work TASK 2 from slide 13 in full: evaluate ∫x·ln(x)dx. Justify your choice of u and dv against the habit her two worked examples establish.
+*(short answer)*
 
-**11. (explain why)** Evaluate ∫(x² + x + 2)/(x(x² + 1))dx by partial fractions. Justify the form you write down, and explain why the term over x² + 1 splits into two different kinds of integral.
+**11.** Evaluate ∫√(4 − 9x²)dx her way. Show the rewriting, the substitution, dx, the integration of cos²(u), and the setting back.
+*(short answer)*
 
-**12. (explain why)** Evaluate ∫√(4 − x²)dx. State the substitution and its θ-range, show the identity that removes the root, show the step needed before cos²θ can be integrated, and complete the return to x.
-
----
+**12.** Work TASK 3 from slide 18: evaluate ∫√(1 + x²)dx. State which identity replaces 1 − sin²(u) = cos²(u) and why.
+*(short answer)*
 
 ## Answers
 
-**1. c** — *Substitution in a definite integral: divide by the constant in du, and move the limits with the variable.* u = x² − 1, du = 2x dx so x dx = du/2; x = 1 → u = 0 and x = 2 → u = 3. The integral is (1/2)∫₀³u³du = (1/2)[u⁴/4]₀³ = (1/2)(81/4) = 81/8. (a) forgets the ½ from x dx = du/2; (b) keeps the **x**-limits 1 and 2 and evaluates the u-antiderivative at them, giving (1/2)(16 − 1)/4 = 15/8 — the classic definite-substitution error; (d) expands (x² − 1)³ as x⁶ − 1, losing the cross terms, and integrates ∫₁²(x⁷ − x)dx = 243/8.
+**1. B** — u = x + 2 and du = dx; the limits go from x = 0, 2 to u = 2, 4. So ∫₂⁴u³du = (1/4)u⁴|₂⁴ = (1/4)(256 − 16) = 60. Option 1 comes from leaving the old limits in place and computing (1/4)(2⁴ − 0⁴) = 4, then compounding a slip; it is the classic failure to convert. Option 3 evaluates (1/4)u⁴ at the upper limit only and forgets to subtract. Option 4 is 4⁴ − 2⁴ = 240 with the division by 4 omitted.
 
-**2. b** — *Parts with u = x: v is the integral of dv, and the second term must be integrated too.* u = x, dv = e^{3x}dx ⟹ du = dx, v = e^{3x}/3. Then ∫ = xe^{3x}/3 − ∫e^{3x}/3 dx = xe^{3x}/3 − e^{3x}/9. (a) forgets the second division by 3 when integrating e^{3x}/3; (c) takes v = e^{3x}, dropping the ⅓ that ∫e^{3x}dx supplies, in both terms; (d) integrates the two factors separately and multiplies, which is the non-existent "product rule for integration". Differentiating (b) returns e^{3x}/3 + xe^{3x} − e^{3x}/3 = xe^{3x} ✓.
+**2. D** — The exponent is x³, so u = x³ and du = 3x²dx — which is exactly the rest of the integrand — giving ∫eᵘdu = eᵘ + C = e^(x³) + C. Option 1 differentiates rather than integrates. Option 2 divides by 3x² as though du were dx, a misunderstanding of what substitution consumes. Option 3 leaves the answer as u·eᵘ, multiplying by u instead of leaving eᵘ alone. Verify by differentiating: d/dx e^(x³) = e^(x³)·3x².
 
-**3. d** — *LIATE puts the logarithm in u; the traded integral is then purely algebraic.* u = ln x, dv = x dx ⟹ du = dx/x, v = x²/2. So ∫ = (x²/2)ln x − ∫(x²/2)(1/x)dx = (x²/2)ln x − ∫(x/2)dx = (x²/2)ln x − x²/4. (b) integrates x/2 as x²/2, dropping the ½; (c) differentiates ln x and multiplies by the integral of x, i.e. treats the product as separable; (a) is ∫ln x dx, the right answer to a different question — the x factor has been ignored.
+**3. A** — Differentiating 5x/3 = sin(u) gives (5/3)dx = cos(u)du, so dx = (3/5)cos(u)du — the coefficient appears reciprocated. Option 2 forgets to invert and is the standard way this question is lost; it is the same slip as writing dx = (3/2)cos(u)du in her ∫√(4 − 9x²) example, where the slide has (2/3). Option 3 is what you would get from x = sin(u) with no coefficient at all. Option 4 differentiates sin(u) to sin(u) instead of cos(u).
 
-**4. b** — *Cover-up: clear the denominators, then substitute each root in turn.* 4x − 5 = A(x + 1) + B(x − 2). Put x = 2: 3 = 3A ⟹ A = 1. Put x = −1: −9 = −3B ⟹ B = 3. (a) attaches each constant to the wrong factor — the value found by setting x = 2 belongs over (x − 2); (c) mishandles −9 = −3B and keeps a minus sign that the two negatives cancel; (d) reads off the left-hand sides 3 and −9 as the answers without dividing by the bracket values 3 and −3.
+**4. C** — 7x − 6 = A(x + 3) + B(x − 2). At x = 2: 8 = 5A so A = 8/5. At x = −3: −27 = −5B so B = 27/5, two negatives giving a positive. Option 1 swaps A and B, which happens if you substitute each root into the wrong bracket. Option 2 keeps B negative, forgetting that −27 divided by −5 is positive — the most common slip in this example. Option 4 reads the numerator's coefficients 7 and −6 straight off as the constants, which ignores the method entirely.
 
-**5. d** — *Every part of the integrand must be converted: the differential as well as the expression.* x = 3tanθ gives dx = 3sec²θ dθ and x² + 9 = 9tan²θ + 9 = 9sec²θ, so (x² + 9)² = 81sec⁴θ. Hence the integrand is 3sec²θ dθ/(81sec⁴θ) = (1/27)·(1/sec²θ)dθ = (1/27)cos²θ dθ. (a) squares nothing — it uses (x² + 9) in place of (x² + 9)², giving 3sec²θ/(9sec²θ); (b) squares the constant but not the secant, using 81sec²θ; (c) inverts the ratio sec²θ/sec⁴θ, turning it into sec²θ instead of cos²θ. Note that the answer will still need cos²θ = (1 + cos 2θ)/2 before it can be integrated.
+**5. D** — Take u = ln(x), du = (1/x)dx, dv = x²dx, v = x³/3. Then (x³/3)ln(x) − ∫(x³/3)(1/x)dx = (x³/3)ln(x) − (1/3)∫x²dx = (x³/3)ln(x) − x³/9. Option 1 has the sign of the parts formula wrong; the formula subtracts. Option 2 forgets the extra division by 3 when integrating x²/3. Option 3 multiplies v by du instead of integrating v du. Check by differentiating option 4: x²ln(x) + x²/3 − x²/3 = x²ln(x).
 
-**6. c** — *Definite parts: [uv] evaluated at the limits, then the remaining integral.* u = x, dv = sin x dx ⟹ v = −cos x. ∫₀^π x sin x dx = [−x cos x]₀^π + ∫₀^π cos x dx = (−π·(−1) − 0) + [sin x]₀^π = π + 0 = π. (d) takes v = cos x instead of −cos x, flipping the sign of the whole answer; (a) integrates the factors separately, giving [(x²/2)(−cos x)]₀^π = π²/2; (b) assumes the positive and negative halves cancel, which is true over [0, 2π] but false over [0, π], where sin x ≥ 0 throughout and the integrand x sin x is never negative — so the answer cannot possibly be 0.
+**6. A** — u = x, dv = sin(x)dx, so du = dx and v = −cos(x). Then x(−cos(x)) − ∫−cos(x)dx = −x·cos(x) + ∫cos(x)dx = −x·cos(x) + sin(x). Option 2 loses the minus that comes from v = −cos(x), i.e. treats v as sin(x)'s partner rather than its integral. Option 3 gets v right but then misses that −∫−cos(x)dx is a double negative. Option 4 integrates the two factors separately, which is never valid. Differentiating option 1 gives −cos(x) + x·sin(x) + cos(x) = x·sin(x).
 
-**7. a** — *The cycling case: apply parts twice with the same role for eˣ, then solve algebraically for I.* Let I = ∫eˣsin x dx. Taking u = sin x, dv = eˣdx: I = eˣsin x − ∫eˣcos x dx. Applying parts again to ∫eˣcos x dx with u = cos x, dv = eˣdx gives eˣcos x + ∫eˣsin x dx = eˣcos x + I. So I = eˣsin x − eˣcos x − I ⟹ 2I = eˣ(sin x − cos x) ⟹ I = eˣ(sin x − cos x)/2. (b) is the answer to ∫eˣcos x dx — the two are constantly swapped; (c) stops after treating ∫eˣcos x as though it vanished; (d) reaches 2I correctly but reports 2I as I, forgetting to halve. Differentiating (a): eˣ(sin x − cos x)/2 + eˣ(cos x + sin x)/2 = eˣ sin x ✓.
+**7. C** — x² − 4 = (x − 2)(x + 2), so 1 = A(x + 2) + B(x − 2). At x = 2: 1 = 4A, A = 1/4. At x = −2: 1 = −4B, B = −1/4. Options 1 and 2 come from dividing by 2 or by nothing instead of by 4, that is, from mis-evaluating the bracket at the root. Option 4 loses the minus that comes from B(−4) = 1, and it is worth noticing that the two constants in a 1/((x − a)(x + a)) split are always equal and opposite.
 
-**8. c** — *An improper rational integrand must be divided out before anything else.* 2x + 1 = 2(x − 3) + 7, so (2x + 1)/(x − 3) = 2 + 7/(x − 3) and the integral is 2x + 7ln|x − 3| + C. (a) divides carelessly, writing the remainder as 1 instead of 7 — check by multiplying back: 2(x − 3) + 1 = 2x − 5 ≠ 2x + 1; (b) takes the log of numerator and denominator separately, which is not a rule; (d) integrates top and bottom independently and divides, the quotient version of the same non-existent rule.
+**8. B** — u = x + 1, du = dx; x = 0 gives u = 1 and x = 1 gives u = 2. So ∫₁²u⁴du = (1/5)u⁵|₁² = (1/5)(32 − 1) = 31/5. Option 1 leaves the original limits 0 and 1 in place, giving (1/5)(1 − 0). Option 3 evaluates at the upper limit only and forgets to subtract (1/5)(1⁵). Option 4 subtracts in the wrong place, computing (32 + 1)/5. The lower limit becoming 1 rather than 0 is the whole point of the question.
 
-**9.** *Concept: parts applied repeatedly, once per power of x, with u chosen so that the algebraic factor is the one that degrades.* First application: u = x², dv = cos x dx ⟹ du = 2x dx, v = sin x, giving ∫x²cos x dx = x²sin x − ∫2x sin x dx. Second application on ∫2x sin x dx: u = 2x, dv = sin x dx ⟹ du = 2dx, v = −cos x, giving −2x cos x + ∫2cos x dx = −2x cos x + 2sin x. Substituting back, with the minus sign in front of the whole bracket:
-**∫x²cos x dx = x²sin x + 2x cos x − 2sin x + C.**
-Check: d/dx = 2x sin x + x²cos x + 2cos x − 2x sin x − 2cos x = x²cos x ✓.
-Had u = cos x been chosen first, du = −sin x dx and v = x³/3, so the traded integral would be ∫(x³/3)sin x dx — the power of x has gone **up**, and every further application makes it worse. The algebraic factor must be u precisely because differentiating it lowers its degree, so the process terminates after two steps.
+**9.** A good answer notes that although the task closes the SUBSTITUTION section it cannot be done by substitution — neither factor is the derivative of the other's inner function — and that it is integration by parts, exactly her next slide's Example 1. Take u = x, du = dx, dv = eˣdx, v = eˣ, giving ∫x·eˣdx = x·eˣ − ∫eˣdx = x·eˣ − eˣ. Then evaluate: (x·eˣ − eˣ)|₀¹ = (1·e − e) − (0·1 − 1) = 0 − (−1) = 1. Credit spelling out that e⁰ = 1, that the upper limit contributes exactly nothing, and that the whole answer therefore comes from the lower limit. No constant C appears, because the integral is definite.
 
-**10.** *Concept: a substitution is complete only when no x remains — a leftover x is removed by solving the substitution backwards, not by leaving it in.* Put u = x + 2, so du = dx. That converts √(x + 2) into √u, but the standalone factor x is still an x, and an integral containing both u and x is not an integral in one variable. The extra step is to solve the substitution for x: x = u − 2. Then
-∫x√(x + 2)dx = ∫(u − 2)u^{1/2}du = ∫(u^{3/2} − 2u^{1/2})du = (2/5)u^{5/2} − (4/3)u^{3/2} + C
-= **(2/5)(x + 2)^{5/2} − (4/3)(x + 2)^{3/2} + C.**
-This is the case people abandon too early: substitution has no requirement that the inner derivative "cancel" the leftover factor — it only requires that everything be expressible in u, and a linear substitution always allows that. (Multiplying out u^{1/2} into the bracket before integrating is compulsory; ∫(u − 2)u^{1/2}du is not (u − 2)·(2/3)u^{3/2}.)
+**10.** A good answer takes u = ln(x), du = (1/x)dx, dv = x dx, v = x²/2, and computes (x²/2)ln(x) − ∫(x²/2)(1/x)dx = (x²/2)ln(x) − (1/2)∫x dx = (x²/2)ln(x) − x²/4 + C. On the justification: both of her examples put the algebraic factor as u, but the binding constraint is that dv must be integrable, and ln(x) is far harder to integrate than x — reversing the roles would require v = x·ln(x) − x before the method even starts, making the leftover integral worse. Verification by differentiating is worth credit: x·ln(x) + (x²/2)(1/x) − x/2 = x·ln(x) + x/2 − x/2 = x·ln(x).
 
-**11.** *Concept: the decomposition form is dictated by the factors of the denominator, and an irreducible quadratic needs a linear numerator, which then splits into a log part and an arctan part.* x² + 1 has discriminant −4 < 0, so it is irreducible over the reals and must carry a **linear** numerator; x is a distinct linear factor and carries a constant. So write
-(x² + x + 2)/(x(x² + 1)) = A/x + (Bx + C)/(x² + 1) ⟹ x² + x + 2 = A(x² + 1) + (Bx + C)x.
-Put x = 0: 2 = A. Compare x²: 1 = A + B ⟹ B = −1. Compare x: 1 = C. So the integrand is 2/x + (1 − x)/(x² + 1), and
-∫ = 2ln|x| + ∫dx/(x² + 1) − ∫x dx/(x² + 1) = **2ln|x| + arctan x − (1/2)ln(x² + 1) + C.**
-The split is forced because the two pieces of a linear numerator do different jobs: the **x** part is (up to the factor ½) the derivative of x² + 1, so it integrates to a logarithm by substitution; the **constant** part has no such match and integrates to an inverse tangent. Writing B alone over x² + 1 would make the logarithm impossible to produce and the system of equations inconsistent.
+**11.** A good answer runs: 4 − 9x² = 4(1 − (3x/2)²), so the integral is ∫2√(1 − (3x/2)²)dx. Set 3x/2 = sin(u); then (3/2)dx = cos(u)du, so dx = (2/3)cos(u)du. The root becomes cos(u), and the constants multiply: 2 × (2/3) = 4/3, giving (4/3)∫cos²(u)du. Using cos²(u) = (1 + cos(2u))/2 this is (4/3)(u/2 + sin(2u)/4) = 4u/6 + 4sin(2u)/12. Setting back, u = sin⁻¹(3x/2), the first term is 2sin⁻¹(3x/2)/3; for the second, sin(2u) = 2sin(u)cos(u) with sin(u) = 3x/2 and cos(u) = √(4 − 9x²)/2, giving x√(4 − 9x²)/2. Final answer 2sin⁻¹(3x/2)/3 + x√(4 − 9x²)/2 + C. The reciprocal in dx = (2/3)cos(u)du is the step most often lost.
 
-**12.** *Concept: trigonometric substitution turns a difference of squares into a perfect square, and the resulting even power of cosine needs the double-angle identity before it can be integrated.* Put x = 2sinθ with −π/2 ≤ θ ≤ π/2, so dx = 2cosθ dθ and
-4 − x² = 4 − 4sin²θ = 4(1 − sin²θ) = 4cos²θ ⟹ √(4 − x²) = 2cosθ (no modulus needed, since cosθ ≥ 0 on that range).
-∫√(4 − x²)dx = ∫(2cosθ)(2cosθ)dθ = 4∫cos²θ dθ = 4∫(1 + cos 2θ)/2 dθ = 2θ + sin 2θ = 2θ + 2sinθcosθ.
-Return to x by the triangle (opposite x, hypotenuse 2, adjacent √(4 − x²)): θ = arcsin(x/2), sinθ = x/2, cosθ = √(4 − x²)/2. Hence
-**∫√(4 − x²)dx = 2arcsin(x/2) + x√(4 − x²)/2 + C.**
-The two steps most often skipped are the double-angle rewrite — ∫cos²θ dθ is not (cos³θ)/3 or anything like it — and the final conversion: an answer containing θ is not an answer in x.
+**12.** A good answer observes that the sign under the root is a plus, so 1 − sin² is useless and the identity needed is 1 + tan²(u) = sec²(u). Set x = tan(u), so dx = sec²(u)du and √(1 + x²) = sec(u), giving ∫sec³(u)du. Integrate by parts with the u-part sec(u) and dv = sec²(u)du, so v = tan(u): writing I = ∫sec³(u)du, I = sec(u)tan(u) − ∫sec(u)tan²(u)du = sec(u)tan(u) − ∫sec(u)(sec²(u) − 1)du = sec(u)tan(u) − I + ∫sec(u)du. Hence 2I = sec(u)tan(u) + ln(sec(u) + tan(u)), using ∫sec(x)dx = ln(sec(x) + tan(x)) + C from slide 6. Setting back with tan(u) = x and sec(u) = √(1 + x²): ∫√(1 + x²)dx = (1/2)[x√(1 + x²) + ln(x + √(1 + x²))] + C. It is fair to note that the deck never demonstrates solving algebraically for a repeated integral, so this task is harder than anything she works.

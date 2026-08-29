@@ -1,88 +1,90 @@
 # Monday — MTH_102 nightly check
 
-*Higher-order derivatives as concepts: what the second, third and nth derivatives mean, the prime, Leibniz dⁿy/dxⁿ and Dⁿ notations and why they are written that way, the physical reading as velocity, acceleration and jerk, and what the sign of f″(x) says about concavity, points of inflection and the second-derivative test.*
+*Conceptual session on Week 6 higher-order derivatives exactly as the deck builds them: that f″ is obtained by differentiating f′ again and no new rule is introduced; the power rule f′ = nx^(n−1) and the NOTE that the derivative of a constant is 0; rewriting √(x³) as x^(3/2) before differentiating; the chain rule f′(x) = y′(u)·u′(x) and why sin(5x) keeps depositing a factor 5 while e^(3x) keeps depositing a 3 without ever changing sign; the quotient rule [v·u′ − u·v′]/v² and why ln(1 + x²) needs it at every order after the first; and the notation f⁽⁴⁾(x) = (f‴(x))′.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**1.** The symbol d²y/dx² is correctly read as:
-a) the square of dy/dx, since the numerator and the denominator have both been squared
-b) the operator d/dx applied twice to y, i.e. d/dx(dy/dx) — the superscripts count differentiations
-c) the derivative of y with respect to the quantity x², i.e. differentiating against a squared variable
-d) dy/dx divided once more by dx, so a further division by the increment
+**1.** The SECOND-ORDER DERIVATIVE slide says how the second derivative is obtained. In her phrasing, it is obtained
+A. by differentiating the first derivative again
+B. by squaring the first derivative
+C. by differentiating the original function with respect to a second variable
+D. by differentiating the original function and multiplying the result by 2
 
-**2.** For a particle moving in a straight line with displacement s(t), s‴(t) is:
-a) the acceleration, since acceleration is the third quantity after position and speed
-b) the cube of the velocity
-c) zero for every motion, because acceleration is constant
-d) the jerk — the rate of change of the acceleration with respect to time
+**2.** In her sin(5x) + e^(3x) example the coefficients of the trigonometric term run 5, then 25, then 125 across the first three derivatives. Why do they keep growing?
+A. Because the argument 5x is raised to a higher power at each order
+B. Because the chain rule supplies the inner derivative 5 afresh at every differentiation
+C. Because the notation d²y/dx² and d³y/dx³ squares and cubes the coefficient
+D. Because sin(5x) has period 2π/5, and the period appears in the derivative
 
-**3.** f is a polynomial of degree 5. Which is true?
-a) f⁽⁵⁾(x) is a non-zero constant and f⁽⁶⁾(x) = 0 for all x
-b) f⁽⁵⁾(x) = 0 for all x, since five differentiations exhaust a degree-5 polynomial
-c) f⁽⁵⁾(x) is linear in x and f⁽⁶⁾(x) is a non-zero constant
-d) no derivative of f is ever identically zero, because a polynomial can be differentiated indefinitely
+**3.** For f(x) = ln(1 + x²), which rules does the deck use to reach the second derivative?
+A. The quotient rule for the first derivative, then the chain rule for the second
+B. The chain rule for both
+C. The chain rule for the first derivative, then the quotient rule for the second
+D. The product rule for the first derivative, then the chain rule for the second
 
-**4.** At a point where f′(a) = 0, finding f″(a) > 0 tells you that:
-a) the curve is rising at x = a, since a positive second derivative means the function is increasing
-b) the curve is concave up at x = a, so the stationary point is a local maximum
-c) the curve is concave up at x = a, so the stationary point is a local minimum
-d) x = a is a point of inflection, because f″(a) ≠ 0 rules out a turning point
+**4.** The FOURTH DERIVATIVE slide ends with a note on notation. It says f⁽⁴⁾(x) can also be written as
+A. [f(x)]⁴
+B. f(4)
+C. 4·f′(x)
+D. (f‴(x))′
 
-**5.** For a twice-differentiable f, "f″(c) = 0" means:
-a) c is certainly a point of inflection
-b) c is only a candidate: it is a point of inflection if f″ actually changes sign at c
-c) c is certainly a stationary point of f
-d) f is a straight line near c, since zero curvature means no bending
+**5.** Differentiating y = 3 tan x + 3 gives dy/dx = 3 sec²x. What has happened to each of the two threes?
+A. The multiplying 3 stays and multiplies sec²x; the added 3 differentiates to 0
+B. Both threes stay, giving 3 sec²x + 3
+C. Both threes vanish, giving sec²x
+D. The multiplying 3 vanishes and the added 3 survives
 
-**6.** A car's velocity is negative and its acceleration is positive. The car is:
-a) moving backwards and speeding up, since a positive acceleration always increases speed
-b) instantaneously at rest, since the two opposite signs cancel
-c) moving backwards but slowing down, since velocity and acceleration have opposite signs
-d) moving forwards, because the sign of the acceleration fixes the direction of travel
+**6.** Why does she rewrite f(x) = √(x³) as y = x^(3/2) before differentiating?
+A. Because the square root of a cube is undefined for negative x
+B. Because the power rule f′ = nx^(n−1) can only be applied to something already written as a power of x
+C. Because the second derivative of a square root would otherwise not exist
+D. Because fractional exponents differentiate to zero
 
-**7.** A company's profit satisfies P′(t) > 0 and P″(t) < 0. Then:
-a) profit is falling, because the second derivative is negative
-b) profit is rising at an ever-increasing rate
-c) profit is exactly at its maximum value at this instant
-d) profit is still rising, but by less and less as time goes on
+**7.** A student memorises the quotient rule as [u(x)v′(x) − v(x)u′(x)]/(v(x))². What does that do to the ln(1 + x²) working?
+A. Nothing, because subtraction of the two products is symmetric here
+B. It squares every answer
+C. It produces the negative of the correct derivative at every order
+D. It leaves the second derivative correct but breaks the third
 
-**8.** For f(x) = x³, which pair of values is correct?
-a) f″(x) = 6x and [f′(x)]² = 9x⁴
-b) f″(x) = 9x⁴, since the double prime is shorthand for the derivative squared
-c) f″(x) = 6x and [f′(x)]² = 3x⁴
-d) f″(x) = 6x² and [f′(x)]² = 9x⁴
+**8.** On her APPLICATION TO THE REAL-WORLD slide, what do the second and third derivatives of a car's position represent?
+A. Velocity and acceleration
+B. Acceleration and velocity
+C. Displacement and velocity
+D. Acceleration and jerk
 
-**9. (explain why)** Explain what d²y/dx² instructs you to do, why the superscripts sit on the d and on the dx rather than on y and on x, and why d²y/dx² and (dy/dx)² are different objects. Give one function where the two are visibly different.
+**9.** Explain what makes a derivative 'higher-order', and why this week introduces no new differentiation rules at all.
+*(short answer)*
 
-**10. (explain why)** A student says "f″(x) > 0 means the function is increasing." State precisely what f″(x) > 0 does mean, and give a function that is decreasing on an interval while f″ > 0 throughout that interval.
+**10.** In her result d³y/dx³ = −125 cos(5x) + 27e^(3x), explain why the exponential term is positive while the trigonometric term carries a minus sign.
+*(short answer)*
 
-**11. (explain why)** Explain, in terms of what each derivative measures, why acceleration is the *second* derivative of displacement, and why "negative acceleration" does not by itself mean "slowing down". State the correct test for speeding up.
+**11.** The THIRD-ORDER DERIVATIVE slide asks for 'the third derivative of f(2) = ln x'. Say what is wrong with that as printed, what she must have meant, and how you can tell.
+*(short answer)*
 
-**12. (explain why)** Explain why a polynomial of degree n must have f⁽ⁿ⁾(x) equal to a non-zero constant and f⁽ⁿ⁺¹⁾(x) = 0, and say what that constant is for f(x) = axⁿ. What does this say about how many orders of derivative a polynomial model can carry information in?
-
----
+**12.** Her SUMMARY slide lists the product rule among the rules used for higher-order derivatives, yet none of her six worked examples uses it. Where in the deck is it actually needed, and what does applying it there involve?
+*(short answer)*
 
 ## Answers
 
-**1. b** — *Leibniz notation is an operator applied repeatedly; the superscripts are counters, not exponents.* d²y/dx² is (d/dx)(d/dx)y, so the "2" records that the whole operator d/dx has acted twice — hence one 2 on the d and one on the dx. (a) reads it as an algebraic square, which is (dy/dx)², a genuinely different function; (c) attaches the 2 to the variable x alone, which would be differentiation with respect to x², a different thing again; (d) treats dy/dx as a real fraction and divides once more, but dy/dx is a single symbol standing for a limit, not a quotient of two numbers.
+**1. A** — Her line is exactly 'The second derivative is gotten by differentiating y′ again' — you feed the answer you already have back into the same machinery. Option 2 reads the double prime as a power; f″ and (f′)² are different functions, as x^(3/2) shows immediately. Option 3 imports partial derivatives, which the deck never mentions and which need a function of two variables. Option 4 confuses the order counter with a multiplier — nothing is multiplied by 2 anywhere in her working.
 
-**2. d** — *Each derivative of displacement steps one rung up the rate-of-change ladder.* s′ = velocity, s″ = acceleration, s‴ = jerk (rate of change of acceleration), s⁽⁴⁾ = jounce. (a) is off by one — it counts s itself as a "derivative"; (b) reads the primes as powers; (c) assumes uniform acceleration, which is a special case (s quadratic in t), not a general truth — any cubic or higher s(t) has non-zero jerk.
+**2. B** — The chain rule as she states it, f′(x) = y′(u)·u′(x), applies again every time you differentiate, and u = 5x always contributes u′ = 5 — so the coefficient is multiplied by 5 once per order: 5, 25, 125. Option 1 is false: the argument stays 5x throughout, it is the coefficient in front that changes. Option 3 treats the Leibniz superscript as an algebraic power; it is a counter. Option 4 is a true fact about the function that plays no part in differentiating it.
 
-**3. a** — *Each differentiation lowers a polynomial's degree by exactly one, so the orders run out one step later than students expect.* Degree 5 → 4 → 3 → 2 → 1 → 0: after five differentiations you are left with a constant (5!·leading coefficient ≠ 0), and the sixth kills it. (b) is off by one in the fatal direction, stopping the count one step early; (c) is off by one the other way; (d) confuses "infinitely differentiable" with "never zero" — a polynomial can always be differentiated again, but from some order on the answer is the zero function.
+**3. C** — ln(1 + x²) is a composite, so the chain rule gives f′(x) = 2x/(1 + x²). That answer is a quotient, so the second derivative needs the quotient rule — she says so explicitly: 'The first derivative is a quotient.' Option 1 swaps the order and would need a quotient to start with, which ln(1 + x²) is not. Option 2 misses that the chain rule has nothing to act on once the composite has been unwrapped. Option 4 misreads 2x/(1 + x²) — or the original — as a product.
 
-**4. c** — *The second-derivative test: at a stationary point, positive concavity means the curve bends upwards, so the point is the bottom of a bowl.* f′(a) = 0 makes the tangent horizontal, and f″(a) > 0 makes the gradient increasing through a — negative just before, zero at a, positive just after, i.e. a minimum. (a) confuses f″ > 0 with f′ > 0, concavity with increase; (b) gets the concavity right but inverts the conclusion; (d) confuses the two zero-tests — an inflection needs f″ to change sign, and f″(a) ≠ 0 is exactly what rules an inflection *out*.
+**4. D** — The fourth derivative is the derivative of the third, which is what (f‴(x))′ says; the brackets on the 4 exist precisely to stop it being read as a power. Option 1 is that misreading, and for f(x) = ln(1 + x²) the two are wildly different. Option 2 reads it as a value of f at 4 — the same confusion that produced the deck's own misprints 'f(2) = ln x' and 'f(2) = xeˣ'. Option 3 invents a constant multiple.
 
-**5. b** — *f″(c) = 0 is necessary but not sufficient for an inflection; the concavity has to actually change.* y = x⁴ has y″ = 12x², which is 0 at x = 0 but non-negative on both sides — the curve is concave up throughout, so x = 0 is a minimum, not an inflection. (a) is the standard error, treating a necessary condition as sufficient; (c) confuses f″ = 0 (candidate inflection) with f′ = 0 (stationary point) — for y = x⁴ + x both happen to be different points; (d) confuses "the second derivative vanishes at one point" with "the second derivative is identically zero", which is what a straight line requires.
+**5. A** — A constant multiplier is pulled outside the derivative and stays — she writes 3·d(tan x)/dx — while an added constant differentiates to 0, which is the bold NOTE on the FIRST-ORDER DERIVATIVE slide, d(4)/dx = 0. She even writes the '+ 0' rather than dropping it silently. Option 2 keeps a constant that must vanish. Option 3 applies the constant rule to a multiplier, which it does not govern. Option 4 gets both backwards.
 
-**6. c** — *Speed changes according to whether velocity and acceleration have the same sign, not according to the sign of the acceleration alone.* Since d/dt(½v²) = v·a, the speed |v| falls exactly when v·a < 0. Here v < 0 and a > 0, so v·a < 0: the car is travelling in the negative direction and its speed is decreasing. (a) treats "positive acceleration" as "getting faster", ignoring the direction of travel; (b) invents a cancellation — velocity and acceleration are independent quantities and neither forces the other to be zero; (d) confuses the sign of a with the direction of motion, which is fixed by the sign of v.
+**6. B** — The only rule she has for this function is f′ = nx^(n−1), and it needs to see an exponent n. Once √(x³) is x^(3/2), n = 3/2 and the rule runs twice without any new machinery: (3/2)x^(1/2), then (3/4)x^(−1/2). Option 1 raises a domain point that is true but irrelevant to why the rewrite is done. Option 3 is false — existence is not the issue. Option 4 confuses a fractional exponent with a constant; only constants differentiate to 0.
 
-**7. d** — *The first derivative gives the direction of change, the second gives how that rate is itself changing.* P′ > 0 says profit is increasing; P″ < 0 says the rate of increase is falling, so the graph rises while bending over (concave down). (a) reads P″ as if it were P′; (b) ignores the sign of P″ entirely; (c) confuses P″ < 0 with P′ = 0 — a maximum needs the *first* derivative to vanish, and here it does not.
+**7. C** — Swapping the two products negates the numerator, so f″ would come out as (2x² − 2)/(1 + 2x² + x⁴) instead of (2 − 2x²)/(1 + 2x² + x⁴) — the right expression with the wrong sign — and the error then propagates through the third and fourth orders. Option 1 is false: a − b and b − a differ whenever a ≠ b. Option 2 confuses the numerator order with the squared denominator. Option 4 wrongly suggests the mistake is self-correcting at one order.
 
-**8. a** — *The prime counts differentiations; squaring multiplies a derivative by itself. They are unrelated operations.* f′(x) = 3x², so f″(x) = 6x, whereas [f′(x)]² = (3x²)² = 9x⁴. (b) reads the double prime as a square, giving 9x⁴ where 6x belongs; (c) squares the power of x but forgets to square the coefficient 3; (d) differentiates 3x² by multiplying by the exponent but never reducing the power, leaving 6x² instead of 6x.
+**8. D** — Her words: the second derivative 'gives us the acceleration (how the car is speeding up or slowing down)' and the third 'tells us about jerk (how the acceleration is changing)'. Option 1 is off by one order — velocity is the first derivative. Option 2 has the right two words in the wrong order, so it makes jerk-free nonsense of the third derivative. Option 3 is off by two orders, since displacement is the position function itself.
 
-**9.** *Concept: d²y/dx² is repeated application of the operator d/dx, not an algebraic square.* d²y/dx² instructs you to differentiate y with respect to x, then differentiate the result with respect to x again: (d/dx)(dy/dx). Because it is the *operator* d/dx that is repeated, the counter goes on the d in the numerator and on the whole dx in the denominator — d²y/d²x would wrongly attach it to the variable, and no d may be cancelled, because dy/dx is a single symbol for a limit and not a ratio of two quantities. (dy/dx)² is by contrast one derivative multiplied by itself. For y = x³: d²y/dx² = 6x, while (dy/dx)² = (3x²)² = 9x⁴ — different degree, different value at every x except where they coincide. A dimensional check settles it: with y in metres and x in seconds, d²y/dx² is in m/s² but (dy/dx)² is in m²/s².
+**9.** A good answer says: a higher-order derivative is any derivative beyond the first, obtained by differentiating the previous derivative again — f″ = (f′)′, f‴ = (f″)′, f⁽⁴⁾ = (f‴)′ — so the nth derivative is written f⁽ⁿ⁾(x). No new rule is needed because at every stage you are differentiating an ordinary function of x with the ordinary rules: power, chain, quotient, product. What changes from order to order is only which rule the current expression demands, and her SUMMARY slide puts it exactly that way — the rules are 'applied iteratively'. The ln(1 + x²) example is the demonstration: the chain rule once, then the quotient rule three times, because the shape of the expression changed after the first step.
 
-**10.** *Concept: f′ controls whether the curve rises; f″ controls only how the curve bends.* f″(x) > 0 means the **gradient is increasing** — the curve is concave up, lying above each of its tangent lines. It says nothing at all about whether f itself is rising: the gradient may be increasing from −5 to −1 and still be negative throughout. Example: f(x) = e^{−x}. Then f′(x) = −e^{−x} < 0 for every x, so f is decreasing everywhere; but f″(x) = e^{−x} > 0 for every x, so f is concave up everywhere. A simpler instance is f(x) = x² on x < 0: f′ = 2x < 0 (falling) while f″ = 2 > 0 (concave up). The four sign combinations of f′ and f″ are independent.
+**10.** A good answer separates the two terms. For e^(3x): d(eˣ)/dx = eˣ, so the exponential reproduces itself exactly and the only thing each differentiation adds is a chain factor 3 — 3, 9, 27 — all positive, and no differentiation can ever introduce a minus. For sin(5x): the derivatives cycle sin → cos → −sin → −cos, so a sign appears at the second differentiation and is still there at the third; combined with the chain factors this gives 5 cos(5x), then −25 sin(5x), then −125 cos(5x). The answer should draw the moral: the minus belongs to the trigonometric term alone, and writing −125 cos(5x) − 27e^(3x) applies it to a term that can never be negative for real x.
 
-**11.** *Concept: each derivative measures the rate of change of the one below it; the sign of a alone does not determine what happens to speed.* Velocity is the rate of change of displacement, v = ds/dt. Acceleration is the rate of change of velocity, a = dv/dt = d/dt(ds/dt) = d²s/dt² — it is second because it is one rate of change applied to another, not because of anything about the units. "Negative acceleration" means the velocity is **decreasing** (becoming more negative or less positive), which is not the same as the speed |v| falling. Since d/dt(½v²) = v·a, speed increases when **v and a have the same sign** and decreases when they have opposite signs. So a particle with v = −4 m/s and a = −2 m/s² is speeding up, moving faster and faster in the negative direction, despite the negative acceleration.
+**11.** A good answer says that f(2) is a number — the value of f at x = 2 — and a number has no derivative with respect to x, so 'the third derivative of f(2)' is meaningless as written. The intended question is: for f(x) = ln x, find f‴(2). The evidence is the slide's own last line, 'Thus, f‴(2) = 2/2³ = 2/8 = 1/4', which evaluates the third derivative at x = 2. The answer should note that the same misprint recurs on the TASK slide, 'f(2) = xeˣ', so it should be read the same way — find f‴(2) — and that flagging it matters because copying 'f(2) = ln x' into an exam script would be marked wrong even though the arithmetic that follows is right.
 
-**12.** *Concept: differentiation lowers polynomial degree by exactly one, so the information runs out at a known order.* Differentiating axᵏ gives kaxᵏ⁻¹: the degree drops by exactly 1 each time and the leading coefficient stays non-zero (k ≠ 0 while k ≥ 1). Starting from degree n, after n differentiations the degree is 0 — a constant — and after n + 1 it is the zero function, which then stays zero forever. For f(x) = axⁿ the successive leading coefficients are an, an(n−1), an(n−1)(n−2), …, so f⁽ⁿ⁾(x) = **a·n!**, e.g. f(x) = 3x⁵ gives f⁽⁵⁾ = 3·120 = 360. The consequence for modelling: a polynomial of degree n carries genuine information in only n orders of derivative. A quadratic displacement model has constant acceleration and zero jerk built in — it cannot describe changing acceleration, so if jerk matters you need at least a cubic.
+**12.** A good answer identifies the second TASK slide, f(x) = xeˣ, as the only place: it is a product of x and eˣ, and neither factor is constant, so (uv)′ = u′v + uv′ is unavoidable. It should then show that the rule is needed afresh at each order, because each result is still a product: f′ = 1·eˣ + x·eˣ = (x + 1)eˣ; f″ = 1·eˣ + (x + 1)eˣ = (x + 2)eˣ; f‴ = 1·eˣ + (x + 2)eˣ = (x + 3)eˣ. A strong answer adds that each differentiation simply adds 1 to the bracket, and that since the slide's 'f(2)' means evaluate at 2, the answer is 5e². It should also note the scope point: the SUMMARY lists rules the deck names, not only rules it demonstrates.

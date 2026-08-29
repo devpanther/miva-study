@@ -1,115 +1,240 @@
 # MTH_102 — Week 6 Summary
 
-*Elementary Mathematics II (Calculus) · Week 6 (12–18 Oct 2026) · Topic: Higher-Order Derivatives — Examples and Applications*
+*Elementary Mathematics II (Calculus) · Topic: Higher-Order Derivatives — Examples and Its Applications · Lecturer: the deck's own title slide gives no name; MTH_102 is taught by Danjuma Rose Uwanassara, MSc Mathematics*
+
+**Scope note:** this rewrite follows the deck slide-for-slide. The whole of Week 6 is **one idea worked six times**: to get a higher derivative, differentiate the derivative you already have, using the ordinary rules again. She gives six worked examples and sets two TASKs. Her rule inventory is small and she supplies every rule she uses on the slide where she uses it: the power rule f′ = nx^(n−1), the derivative of a constant = 0, d(tan x)/dx = sec²x, d(ln x)/dx = 1/x, d(sin x)/dx = cos x, d(eˣ)/dx = eˣ, the chain rule, and the quotient rule.
+
+She does **not** cover: concavity, points of inflection, the second-derivative test, maxima and minima, implicit or parametric second derivatives, partial derivatives, general nth-derivative formulas (no aⁿe^(ax), no sin(x + nπ/2), no factorials), the Leibniz expansion (uv)″ = u″v + 2u′v′ + uv″, operator notation Dⁿ, or any kinematics calculation. Slide 16 mentions acceleration and jerk **in words only** — there is no worked motion problem anywhere in the deck. Note also that although her SUMMARY slide lists the product rule, **not one of her worked examples uses it**; the only place it is needed is her second TASK, f(x) = xeˣ.
+
+The centre of gravity of this deck is slides 10–14: a single function, ln(1 + x²), differentiated four times, with the quotient rule reapplied at every order. Five of the deck's fifteen content slides are that one problem. Learn it line by line.
 
 ## The 8 most examinable things this week
 
-1. A **higher-order derivative is a derivative of a derivative**: f″ = (f′)′, f‴ = (f″)′, and generally f⁽ⁿ⁾(x) = d/dx[f⁽ⁿ⁻¹⁾(x)], with f⁽⁰⁾(x) = f(x) by convention (n a non-negative integer).
-2. **Notation.** f′, f″, f‴ then f⁽⁴⁾, f⁽⁵⁾, …, f⁽ⁿ⁾ (brackets from the fourth on, so it is not read as a power); Leibniz d²y/dx², d³y/dx³, dⁿy/dxⁿ; operator Dⁿ_x y. The superscripts **count differentiations, they are not exponents**.
-3. **d²y/dx² ≠ (dy/dx)²** and **f⁽ⁿ⁾(x) ≠ [f(x)]ⁿ**. d²y/dx² is (d/dx)(dy/dx) — the operator applied twice.
-4. **Physical chain** for displacement s(t): s′ = **velocity** v, s″ = **acceleration** a, s‴ = **jerk**, s⁽⁴⁾ = jounce/snap. Speed increases when v and a have the **same sign**, not when a > 0.
-5. **Sign of f″ = concavity.** f″ > 0 ⟹ concave up (gradient increasing, curve above its tangents); f″ < 0 ⟹ concave down. A **point of inflection** needs f″ to **change sign**, not merely to be 0.
-6. **Second-derivative test.** If f′(a) = 0: f″(a) > 0 ⟹ local **minimum**; f″(a) < 0 ⟹ local **maximum**; f″(a) = 0 ⟹ **inconclusive**, fall back on the sign of f′ either side.
-7. **Polynomials terminate.** For a polynomial of degree n, each differentiation drops the degree by exactly 1, so f⁽ⁿ⁾(x) is a non-zero constant (= a·n! for leading term axⁿ) and f⁽ⁿ⁺¹⁾(x) = 0 for all x.
-8. **Standard nth-derivative patterns**: e^{ax} → aⁿe^{ax}; sin x → sin(x + nπ/2); 1/x → (−1)ⁿ n! x⁻⁽ⁿ⁺¹⁾; ln x → (−1)ⁿ⁻¹(n−1)! x⁻ⁿ (n ≥ 1).
+1. **A higher-order derivative is just the derivative of the previous derivative** (slide 6): "The second derivative is gotten by differentiating y′ again." There is no new machinery this week — only the Week 5 rules, applied again to whatever you have just written down.
+2. **Power rule (slide 4).** "Using the power rule which says when f(x) = xⁿ, **f′ = nx^(n−1)**." And the note she puts in bold on the same slide: **the derivative of a constant is zero**, i.e. d(4)/dx = 0.
+3. **Notation (slide 14), stated explicitly.** "The notation for the fourth derivative can be written as **f⁽⁴⁾(x)** or **(f‴(x))′**." From the fourth order on the prime marks are replaced by a bracketed superscript — a counter, not a power. In Leibniz form (slide 9) she writes dy/dx, d²y/dx², d³y/dx³.
+4. **Rewrite roots as fractional powers before differentiating (slide 6).** √(x³) "can also be written as y = x^(3/2)". Then the exponent arithmetic is done in full: y″ = (3/2)·(1/2)x^(1/2 − 1) = (3/4)x^(−1/2).
+5. **The standard derivatives she supplies, and nothing beyond them:** d(tan x)/dx = sec²x (slide 5), d(ln x)/dx = 1/x (slide 8), d(sin x)/dx = cos x and d(eˣ)/dx = eˣ (slide 9).
+6. **Chain rule as she states it (slide 10):** "If y = f(u), and u = g(x), then **f′(x) = y′(u)·u′(x)**." The consequence she demonstrates on slide 9: differentiating sin(5x) deposits **another factor 5 every single time** — 5, then 25, then 125 — and e^(3x) deposits another 3 every time.
+7. **Quotient rule (slide 11):** "if f(x) = u(x)/v(x) then **f′(x) = [v(x)u′(x) − u(x)v′(x)]/(v(x))²**." Numerator order matters: v·u′ first, then subtract u·v′.
+8. **Once a derivative is a quotient, every higher order needs the quotient rule again** (slides 11–13). She applies it three times in succession on ln(1 + x²), each time feeding the previous numerator in as the new u and the previous denominator as the new v. The expressions grow; that is expected, not a sign of error.
 
-## What the objects are
+## Her build, example by example
 
-There is nothing new to differentiate with — the Week 5 rules (constant, power, constant multiple, sum, product, quotient, chain) are the *only* tools. What is new is **iterating** them and reading the result.
+### FIRST-ORDER DERIVATIVE — Example on slide 4
 
-| Order | Prime | Leibniz | Operator | Reads as |
-|---|---|---|---|---|
-| 1st | f′(x), y′ | dy/dx | D_x y | rate of change; gradient of the tangent |
-| 2nd | f″(x), y″ | d²y/dx² | D²_x y | rate of change **of the rate of change**; concavity; acceleration |
-| 3rd | f‴(x) | d³y/dx³ | D³_x y | rate of change of the acceleration — jerk |
-| 4th | f⁽⁴⁾(x) | d⁴y/dx⁴ | D⁴_x y | jounce/snap; beam loading EI·d⁴y/dx⁴ = w(x) |
-| nth | f⁽ⁿ⁾(x) | dⁿy/dxⁿ | Dⁿ_x y | differentiate n times in succession |
+**What is the first derivative of f(x) = x⁴ + 2x³ − 15x + 4?**
 
-**Why the Leibniz superscripts sit where they do.** d²y/dx² is shorthand for (d/dx)(d/dx)y: the operator d/dx is applied twice, so the "2" is on the *whole* d in the numerator and on the *whole* dx in the denominator. Writing d²y/d²x or cancelling a d is meaningless.
+Solution. Using the power rule which says when f(x) = xⁿ,
 
-**Types of higher-order derivative you may meet.** Repeated ordinary derivatives (the whole of this week); repeated derivatives of an **implicit** relation (d²y/dx² for x² + y² = 25); repeated derivatives of **parametric** equations; and **partial** second derivatives ∂²z/∂x², ∂²z/∂y², ∂²z/∂x∂y for functions of two variables.
+**f′ = nx^(n−1)**
 
-## Concavity, inflection and the second-derivative test
+Then, the first-order derivative is
 
-- f″(x) > 0 on an interval: gradient **increasing**, curve **concave up** (holds water), lies above each tangent.
-- f″(x) < 0: gradient **decreasing**, curve **concave down**, lies below each tangent.
-- **Point of inflection** at x = c: the concavity changes, i.e. f″ changes sign at c. f″(c) = 0 is *necessary* (when f″ exists) but **not sufficient** — y = x⁴ has y″(0) = 0 yet is concave up on both sides, so x = 0 is a minimum, not an inflection.
-- A **stationary (horizontal) inflection** has f′(c) = 0 *and* f″ changing sign — e.g. y = x³ at x = 0.
-- Four independent facts, never to be merged: f′ > 0 (rising), f′ < 0 (falling), f″ > 0 (concave up), f″ < 0 (concave down). All four combinations occur.
+**f′(x) = 4x³ + 6x² − 15**
 
-## Kinematic and applied readings
+**NOTE:** the derivative of a constant is zero, i.e. d(4)/dx = 0.
 
-For s(t) in metres, t in seconds: v = ds/dt (m s⁻¹), a = d²s/dt² (m s⁻²), jerk = d³s/dt³ (m s⁻³).
+Term by term: x⁴ → 4x³; 2x³ → 2·3x² = 6x²; −15x → −15 (the power rule with n = 1 gives 15x⁰ = 15); +4 → 0. The constant does not become 4 and it does not survive — it vanishes.
 
-- "**At rest**" means v = 0, **not** a = 0. "**Acceleration zero**" is where v is stationary — v at a maximum or minimum.
-- **Speeding up ⟺ v and a have the same sign** (because d/dt(½v²) = va). Negative acceleration with negative velocity means *speeding up backwards*.
-- **Economics:** C′(x) is marginal cost; C″(x) < 0 with C′(x) > 0 means total cost still rising but each extra unit costs less than the last (economies of scale). Same reading for profit, revenue and utility.
-- **Engineering:** in control-system and structural design the third and fourth derivatives are the design quantities — jerk governs ride comfort, and beam deflection satisfies EI·d⁴y/dx⁴ = w(x).
+### FIRST DERIVATIVE — Example on slide 5
 
-## Worked examples
+**Differentiate y = 3 tan x + 3.**
 
-**(1) Polynomial, all orders.** y = 3x⁵ − 4x³ + 2x² − 7.
-y′ = 15x⁴ − 12x² + 4x; y″ = 60x³ − 24x + 4; y‴ = 180x² − 24; y⁽⁴⁾ = **360x**; y⁽⁵⁾ = **360**; y⁽⁶⁾ = **0**.
-Note the check: degree 5, so the 5th derivative is the constant 3·5! = 3·120 = 360 ✓ and everything above it vanishes. The −7 dies at the first step; the +4x survives to the second derivative as +4 and dies at the third.
+Solution. Recall from the trigonometry rule, **d(tan x)/dx = sec²x**. Thus,
 
-**(2) Product rule, iterated.** y = x²eˣ.
-y′ = 2xeˣ + x²eˣ = eˣ(x² + 2x).
-y″ = eˣ(x² + 2x) + eˣ(2x + 2) = **eˣ(x² + 4x + 2)**.
-y‴ = eˣ(x² + 4x + 2) + eˣ(2x + 4) = **eˣ(x² + 6x + 6)**.
-Each new order needs the **whole product rule again** — you cannot differentiate the two factors separately. The wrong formula u″v + uv″ would give eˣ(x² + 2), short by the cross term 2u′v′ = 4xeˣ.
+dy/dx = d(3 tan x)/dx + d(3)/dx
 
-**(3) Chain rule, iterated — the factors multiply up.** y = sin 3x.
-y′ = 3cos 3x; y″ = −9 sin 3x; y‴ = −27 cos 3x; y⁽⁴⁾ = **81 sin 3x**.
-So y″ = −9y — the curve satisfies y″ + 9y = 0, and the pattern repeats with period 4 in the *function* and a factor 3 per order in the *coefficient*. Generally d ⁿ/dxⁿ sin(ax) = aⁿ sin(ax + nπ/2).
+dy/dx = 3·d(tan x)/dx + 0
 
-**(4) Negative power — the general nth derivative.** y = 1/(2x + 1) = (2x + 1)⁻¹.
-y′ = −1(2x + 1)⁻²·2 = −2(2x + 1)⁻²;
-y″ = −2·(−2)(2x + 1)⁻³·2 = **8(2x + 1)⁻³**;
-y‴ = 8·(−3)(2x + 1)⁻⁴·2 = **−48(2x + 1)⁻⁴**.
-Pattern: **y⁽ⁿ⁾ = (−1)ⁿ·n!·2ⁿ·(2x + 1)⁻⁽ⁿ⁺¹⁾**. Three separate sources: (−1)ⁿ from the falling negative exponent, n! from the descending coefficients 1, 2, 6, 24, and 2ⁿ from the chain rule once per order. Check n = 3: (−1)³·6·8 = −48 ✓.
+**dy/dx = 3 sec²x**
 
-**(5) Roots and logs.** y = √x = x^{1/2}: y′ = ½x^{−1/2}, y″ = −¼x^{−3/2}, y‴ = (3/8)x^{−5/2}.
-y = ln x: y′ = x⁻¹, y″ = −x⁻², y‴ = 2x⁻³, y⁽⁴⁾ = −6x⁻⁴, i.e. **y⁽ⁿ⁾ = (−1)ⁿ⁻¹(n−1)!·x⁻ⁿ** for n ≥ 1.
+Two habits worth copying from the way she lays this out: she **splits the sum into separate derivatives first**, then **pulls the constant 3 outside** the derivative sign rather than absorbing it, and she writes the "+ 0" explicitly instead of silently dropping the constant term.
 
-**(6) Second-derivative test in full.** f(x) = x³ − 3x² − 9x + 5.
-f′(x) = 3x² − 6x − 9 = 3(x − 3)(x + 1) ⟹ stationary at x = 3 and x = −1.
-f″(x) = 6x − 6. f″(3) = 12 > 0 ⟹ **local minimum**, f(3) = 27 − 27 − 27 + 5 = **−22**.
-f″(−1) = −12 < 0 ⟹ **local maximum**, f(−1) = −1 − 3 + 9 + 5 = **10**.
-f″ = 0 at x = 1, and 6x − 6 changes sign there, so (1, f(1)) = (1, **−6**) is a genuine **point of inflection**.
+### SECOND-ORDER DERIVATIVE — Example on slide 6
 
-**(7) When the test fails.** f(x) = x⁴ − 4x³. f′ = 4x³ − 12x² = 4x²(x − 3) ⟹ stationary at x = 0, 3.
-f″ = 12x² − 24x = 12x(x − 2). f″(3) = 36 > 0 ⟹ minimum, f(3) = **−27**.
-f″(0) = 0 ⟹ **test inconclusive**. Sign of f′ = 4x²(x − 3): negative for x < 0 and negative for 0 < x < 3 — **no change**, so x = 0 is neither max nor min; it is a **stationary point of inflection** (f″ changes sign at 0, from + to −). f″ also changes sign at x = 2, giving a second inflection at (2, **−16**).
+**Given a function f(x) = √(x³). Find the second derivative.**
 
-**(8) Motion.** s = t³ − 6t² + 9t + 2 (m, s ≥ 0).
-v = ds/dt = 3t² − 12t + 9 = 3(t − 1)(t − 3); a = d²s/dt² = 6t − 12; jerk = 6 (constant).
-**At rest** at t = 1 s and t = 3 s. At t = 1, a = −6 m s⁻²; at t = 3, a = +6 m s⁻².
-**a = 0** at t = 2 s, where v = 12 − 24 + 9 = **−3 m s⁻¹** — the velocity is at its minimum there, and the particle is moving backwards, not standing still.
-Between t = 1 and t = 2, v < 0 and a < 0: same sign, so it is **speeding up** (backwards) even though the acceleration is negative.
+Solution. It can also be written as **y = x^(3/2)**.
 
-**(9) Implicit second derivative.** x² + y² = 25.
-2x + 2y·dy/dx = 0 ⟹ dy/dx = −x/y.
-d²y/dx² = d/dx(−x/y) = −[(1)(y) − x(dy/dx)]/y² = −[y − x(−x/y)]/y² = −[y + x²/y]/y² = −(y² + x²)/y³ = **−25/y³**.
-Two obligatory steps: **substitute dy/dx back in** (it is not a constant), then **use the original equation** to simplify x² + y² to 25.
+The first derivative is **y′ = (3/2)x^(1/2)**
 
-**(10) Higher derivative of a product — the correct expansion.** (uv)″ = u″v + **2u′v′** + uv″. For u = x², v = e^{−x}: u″v = 2e^{−x}, 2u′v′ = −4xe^{−x}, uv″ = x²e^{−x}, total **e^{−x}(x² − 4x + 2)**, which is what differentiating y′ = e^{−x}(2x − x²) directly gives.
+"The second derivative is gotten by differentiating y′ again":
+
+y″ = (3/2)·(1/2)x^(1/2 − 1)
+
+**y″ = (3/4)x^(−1/2)**
+
+Read the exponent line carefully: the new exponent is **1/2 − 1 = −1/2**, and the two coefficients **multiply**, 3/2 × 1/2 = 3/4. The exponent falls by one at every differentiation even when it is a fraction, and even when it goes negative.
+
+### TASK 1 (slide 7) — set by the lecturer, no answer given
+
+**What is the second derivative of y = cos(3x)?**
+
+Solution (worked here; the slide leaves it blank). The chain rule supplies a factor 3 each time, and cos differentiates to −sin.
+y′ = −3 sin(3x)
+y″ = −3·3 cos(3x) = **−9 cos(3x)**
+
+Note the sign appears at the **first** step (cos → −sin), and the second step (sin → cos) contributes no new sign, so the answer is −9 cos(3x) and not +9 cos(3x). Notice too that y″ = −9y, exactly the pattern slide 9 shows for sin(5x), where two differentiations produced −25 sin(5x) = −25y.
+
+### THIRD-ORDER DERIVATIVE — Example on slide 8
+
+**"What is the third derivative of f(2) = ln x?"**
+
+*(The question is misprinted. It should read f(x) = ln x, find f‴(2) — her own final line evaluates the third derivative at x = 2, which is what "f(2)" is standing in for. See the Errors section below.)*
+
+Solution. Let y = ln x.
+
+From the logarithmic rule: **d(ln x)/dx = 1/x**
+
+The first derivative is **y′ = 1/x or x⁻¹**
+The second derivative is **y″ = −1/x² or −x⁻²**
+The third derivative is **y‴ = 2/x³ or 2x⁻³**
+
+Thus, **f‴(2) = 2/2³ = 2/8 = 1/4.**
+
+Where each line comes from: x⁻¹ differentiates to (−1)x⁻² = −x⁻²; then −x⁻² differentiates to −(−2)x⁻³ = +2x⁻³. The sign flips once and then flips back, and the coefficient climbs 1 → −1 → 2. The habit she is drilling is writing each answer **both ways** — as a fraction and as a negative power — because the negative-power form is the one you can differentiate again.
+
+### THIRD DERIVATIVE — Example on slide 9
+
+**Find the first three derivatives of sin(5x) + e^(3x).**
+
+Solution. Let y = sin(5x) + e^(3x). *(The slide writes "Let dy/dx = sin(5x) + e^(3x)", which is a slip — everything after it treats the expression as y.)*
+
+From the rules: **d(sin x)/dx = cos x** and **d(eˣ)/dx = eˣ**. *(The slide labels these "the logarithmic rule"; they are the trigonometric and exponential rules. The mathematics is right, the label is not.)*
+
+The first derivative is **dy/dx = 5 cos(5x) + 3e^(3x)**
+The second derivative is **d²y/dx² = −25 sin(5x) + 9e^(3x)**
+The third derivative is **d³y/dx³ = −125 cos(5x) + 27e^(3x)**
+
+This is the deck's clearest demonstration of the chain factor. Track the two coefficients separately:
+- **sin(5x):** 5 → 25 → 125, one factor of 5 per differentiation, with the sign cycling +, −, − as cos, −sin, −cos.
+- **e^(3x):** 3 → 9 → 27, one factor of 3 per differentiation, with **no sign change ever**, because eᵘ reproduces itself.
+
+The exponent 5x and 3x never changes. It is the coefficient in front that grows, not the argument.
+
+### FOURTH DERIVATIVE — Example on slides 10–14 (the deck's main exercise)
+
+**Find the fourth derivative of ln(1 + x²).**
+
+**Step 1 — the first derivative, by the chain rule (slide 10).**
+
+Let f(x) = ln(1 + x²). Recall from the chain rule: if **y = f(u)** and **u = g(x)**, then **f′(x) = y′(u)·u′(x)**.
+
+From the above question, **y = ln(u) where u = (1 + x²)**, so
+
+y′(u) = 1/u,  u′(x) = 2x
+
+Therefore the first derivative is f′(x) = (1/u)·2x
+
+**f′(x) = 2x/(1 + x²)**
+
+**Step 2 — the second derivative, by the quotient rule (slide 11).**
+
+"The first derivative f′(x) = 2x/(1 + x²) **is a quotient.**" Recall the quotient rule: if f(x) = u(x)/v(x), then
+
+**f′(x) = [v(x)u′(x) − u(x)v′(x)]/(v(x))²**
+
+Thus u(x) = 2x, v(x) = 1 + x², u′(x) = 2, v′(x) = 2x.
+
+f″(x) = [(1 + x²)·2 − 2x(2x)]/(1 + x²)²
+
+f″(x) = (2 + 2x² − 4x²)/[(1 + x²)(1 + x²)]
+
+**f″(x) = (2 − 2x²)/(1 + 2x² + x⁴)**
+
+She expands the denominator (1 + x²)² into 1 + 2x² + x⁴ rather than leaving it bracketed — that expansion is what she carries forward into the next step.
+
+**Step 3 — the third derivative, quotient rule again (slide 12).**
+
+"Differentiating the second derivative, we get"
+
+u(x) = 2 − 2x²,  v(x) = 1 + 2x² + x⁴
+u′(x) = −4x,   v′(x) = 4x + 4x³
+
+f‴(x) = [(1 + 2x² + x⁴)(−4x) − (2 − 2x²)(4x + 4x³)]/(1 + 2x² + x⁴)²
+
+f‴(x) = [−4x − 8x³ − 4x⁵ − 8x − 8x³ + 8x³ + 8x⁵]/[(1 + 2x² + x⁴)(1 + 2x² + x⁴)]
+
+**f‴(x) = (4x⁵ − 8x³ − 12x)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)**
+
+Check the collection of terms yourself, it is where marks are lost: x terms −4x − 8x = **−12x**; x³ terms −8x³ − 8x³ + 8x³ = **−8x³**; x⁵ terms −4x⁵ + 8x⁵ = **+4x⁵**. And the denominator: (1 + 2x² + x⁴)² = **1 + 4x² + 6x⁴ + 4x⁶ + x⁸**.
+
+**Step 4 — the fourth derivative, quotient rule a third time (slides 13–14).**
+
+"Lastly, differentiating the third derivative, we obtain"
+
+u(x) = 4x⁵ − 8x³ − 12x,   v(x) = 1 + 4x² + 6x⁴ + 4x⁶ + x⁸
+u′(x) = 20x⁴ − 24x² − 12,  v′(x) = 8x + 24x³ + 24x⁵ + 8x⁷
+
+f⁽⁴⁾(x) = [(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)(20x⁴ − 24x² − 12) − (8x + 24x³ + 24x⁵ + 8x⁷)(4x⁵ − 8x³ − 12x)]/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)²
+
+**f⁽⁴⁾(x) = (−12x¹² + 24x¹⁰ + 204x⁸ + 336x⁶ + 204x⁴ + 24x² − 12)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)²**
+
+**The slide prints a different numerator — −12x¹² + 40x¹⁰ + 568x⁸ + 416x⁶ + 240x⁴ + 24x² − 12 — and it is wrong.** The line above is the correct expansion. Do not copy the slide's version. The arithmetic is spelled out in full in `notes.md` and again in the Errors section below.
+
+Slide 14 closes with the notation point: **"the notation for the fourth derivative can be written as f⁽⁴⁾(x) or (f‴(x))′."**
+
+*Aside (not on the slides, and clearly marked as such): since 1 + 4x² + 6x⁴ + 4x⁶ + x⁸ is (1 + x²)⁴, the correct fourth derivative collapses to **−12(x⁴ − 6x² + 1)/(1 + x²)⁴**. She never simplifies, and you should present the answer her way in an exam. But this factorisation is a quick way to check your own expansion.*
+
+### TASK 2 (slide 15) — set by the lecturer, no answer given
+
+**"Find the third derivative of f(2) = xeˣ"**
+
+*(Same misprint as slide 8: read it as f(x) = xeˣ, find f‴(2).)*
+
+Solution (worked here; the slide leaves it blank). This is the **only** place in the deck where the product rule is needed — (uv)′ = u′v + uv′ — and it must be applied afresh at every order.
+
+f(x) = xeˣ
+f′(x) = 1·eˣ + x·eˣ = **(x + 1)eˣ**
+f″(x) = 1·eˣ + (x + 1)eˣ = **(x + 2)eˣ**
+f‴(x) = 1·eˣ + (x + 2)eˣ = **(x + 3)eˣ**
+
+Then **f‴(2) = (2 + 3)e² = 5e² ≈ 36.95.**
+
+The pattern is worth noticing: each differentiation adds exactly 1 to the bracket, because eˣ is unchanged and the product rule contributes a fresh eˣ every time.
+
+## APPLICATION TO THE REAL-WORLD (slide 16)
+
+Her words, and this is all she claims — there is no worked motion problem in the deck:
+
+- "Higher-order derivatives play a significant role in understanding motion. The **second derivative represents acceleration** which we often see in Physics."
+- "For instance, when plotting the position of a car over time, the second derivative gives us the acceleration (how the car is speeding up or slowing down), and the **third derivative tells us about jerk** (how the acceleration is changing)."
+- "In analyzing **electrical circuits, control systems, vibrations in structures** etc."
+- "For example, in an alternating current (AC) circuit, the second derivative **(V″(t))** may help determine how quickly the voltage is oscillating, aiding in the analysis and design of electrical systems."
+
+## Her closing SUMMARY slide (18)
+
+- "Higher-order derivatives refer to derivatives of a function **beyond the first order**. The nth derivative of a function f(x) is denoted by **f⁽ⁿ⁾(x)**."
+- "They can be calculated using differentiation rules such as: the **power rule, product rule, chain rule**, etc., applied **iteratively**."
+- "Higher-order derivatives affect the **smoothness and behaviour** of functions — functions become smoother as the order of derivatives increases."
+- "They provide a deeper understanding of a function's behaviour, revealing information about **acceleration, jerk**, and other complex aspects."
+- "In physics, higher-order derivatives help model motion and forces. Engineers use them in **signal processing and control systems**. Economists analyze **growth and utility functions** with their aid."
+
+## Errors and misprints on the slides — name them, do not copy them
+
+1. **Slide 13/14, substantive arithmetic error.** The fourth derivative's numerator is printed as −12x¹² + 40x¹⁰ + 568x⁸ + 416x⁶ + 240x⁴ + 24x² − 12. Expanding her own quotient-rule line gives −12x¹² + **24**x¹⁰ + **204**x⁸ + **336**x⁶ + **204**x⁴ + 24x² − 12. Four of the seven coefficients are wrong. The set-up on slide 13 (the u, v, u′, v′ and the quotient-rule line) is completely correct; only the final expansion is wrong. Learn the method from her, take the numbers from this page.
+2. **Slide 8, misprinted question.** "What is the third derivative of **f(2)** = ln x?" — f(2) is a number, not a function, so it cannot be differentiated. It should read f(x) = ln x, find f‴(2). Her own last line, f‴(2) = 1/4, shows that is what was meant.
+3. **Slide 15, same misprint.** "Find the third derivative of **f(2)** = xeˣ" — read as f(x) = xeˣ, find f‴(2).
+4. **Slide 9, two slips.** "Let **dy/dx** = sin(5x) + e^(3x)" should be "Let **y** = sin(5x) + e^(3x)"; as printed, the derivatives would all be one order out. And "From the **logarithmic** rule: d(sin x)/dx = cos x and d(eˣ)/dx = eˣ" mislabels the trigonometric and exponential rules as logarithmic. Every derivative she then writes is correct.
+5. **Slide 10, garbled chain-rule statement.** "Recall from chain rule, given f(x) = g(f(x))" uses f on both sides. It should be a composite of two different functions — which is exactly what the next two lines say properly with y = f(u), u = g(x). Her application to ln(1 + x²) is correct.
+6. **Slide 8, typo.** "The third derivative **is is**".
 
 ## Commonly confused
 
-- **f″(x) vs [f′(x)]².** For f = x³: f″ = 6x, [f′]² = 9x⁴. The prime counts differentiations; it never means "raise to a power".
-- **d²y/dx² vs (dy/dx)².** Test by units: if y is metres and x seconds, d²y/dx² is m/s² but (dy/dx)² is m²/s². Different dimensions, so they cannot be the same thing.
-- **d²y/dx² written as d²y/d²x.** The 2 belongs to the whole dx, because the operator (d/dx) is squared, not the variable.
-- **f⁽⁴⁾ vs f⁴.** From the fourth order onward the brackets are compulsory: f⁴(x) would read as [f(x)]⁴.
-- **f″ > 0 means "increasing".** No — that is f′ > 0. f(x) = e^{−x} is decreasing everywhere yet f″ = e^{−x} > 0 everywhere (concave up).
-- **f″(c) = 0 means "inflection at c".** Only a candidate: y = x⁴ at x = 0 has y″ = 0 but no change of concavity, so it is a minimum.
-- **f′(c) = 0 vs f″(c) = 0.** The first locates stationary points; the second locates candidate inflections. A stationary inflection has both.
-- **Negative acceleration means slowing down.** Only if the velocity is positive. Same signs ⟹ speeding up; opposite signs ⟹ slowing down.
-- **"At rest" vs "acceleration zero".** v = 0 vs a = 0 — two different times in general.
-- **(uv)″ = u″v + uv″.** Missing the cross term 2u′v′; the product rule must be applied again to every term.
-- **A degree-n polynomial has f⁽ⁿ⁾ = 0.** Off by one: f⁽ⁿ⁾ is the constant a·n!, and it is f⁽ⁿ⁺¹⁾ that is 0.
-- **Dropping the chain factor on later orders.** For (2x + 1)⁶ each differentiation supplies another factor 2: y‴ = 6·5·4·2³(2x+1)³ = 960(2x+1)³, not 120(2x+1)³.
-- **Implicit second derivatives left with dy/dx in them.** d²y/dx² must be expressed in x and y only — substitute the first derivative back before simplifying.
+- **f⁽⁴⁾(x) is not [f(x)]⁴.** The bracketed superscript counts differentiations. Her slide 14 note exists precisely to make this unambiguous: f⁽⁴⁾(x) = (f‴(x))′.
+- **The derivative of a constant is 0, not the constant.** Slide 4's NOTE. The +4 in x⁴ + 2x³ − 15x + 4 disappears; the +3 in 3 tan x + 3 disappears.
+- **A constant multiple survives.** 3 tan x → 3 sec²x. Do not confuse "the derivative of a constant is 0" with "constants disappear from products".
+- **Differentiate the answer, not the original.** The second derivative of √(x³) comes from differentiating (3/2)x^(1/2), not from differentiating x^(3/2) a second time in isolation.
+- **The chain factor comes back every time.** sin(5x) gives 5, then 25, then 125 — not 5 once. This is the single biggest source of lost marks in her slide-9 example.
+- **e^(3x) never changes sign; sin and cos do.** In d³y/dx³ = −125 cos(5x) + 27e^(3x), the minus belongs to the trigonometric term alone.
+- **Quotient rule order.** [v·u′ − u·v′]/v², numerator **v·u′ first**. Reversing it flips the sign of the whole derivative.
+- **Once you have a quotient, you keep the quotient rule.** Slides 11, 12 and 13 are the same rule three times. There is no shortcut in this deck.
+- **Rewrite roots and reciprocals as powers before differentiating.** √(x³) → x^(3/2); 1/x² → x⁻². The power rule only sees xⁿ.
+- **Fractional exponents fall by 1 like any other.** 3/2 → 1/2 → −1/2. Students often stop at 1/2 or write 1/4.
+- **Do not simplify her denominators away mid-problem.** She carries (1 + x²)² forward as 1 + 2x² + x⁴ and squares that again to 1 + 4x² + 6x⁴ + 4x⁶ + x⁸. Answer in her form.
+- **Nothing about concavity, maxima, minima or inflection is in this deck.** If a question asks you to classify a stationary point, it is not from Week 6 material.
 
----
+## What you should be able to say out loud
 
-*Note on the source: this week's deck extracts as slide titles only — FIRST-ORDER DERIVATIVE, FIRST DERIVATIVE, SECOND-ORDER DERIVATIVE, THIRD-ORDER DERIVATIVE, THIRD DERIVATIVE, FOURTH DERIVATIVE (five slides), TASK, APPLICATION TO THE REAL-WORLD — because every formula and worked example sits inside a slide image that the text extractor cannot read. The week summary sheet names the same list plus the stated objectives (identify the different types of higher-order derivative; calculate higher-order derivatives; apply the rules of differentiation for higher orders), the prime and Leibniz notations, the first/second/third derivative as rate of change, acceleration and jerk, and then gives only an engineering control-systems case study. Every formula, statement and example above is the standard 100-level treatment of exactly those named objectives.*
+That a higher-order derivative is nothing more than differentiating again, and that the only thing that changes with order is which rule the current expression demands. That the power rule is f′ = nx^(n−1) and the derivative of a constant is zero. That √(x³) must be rewritten as x^(3/2) first, and that 1/2 − 1 = −1/2. That d(tan x)/dx = sec²x, d(ln x)/dx = 1/x, d(sin x)/dx = cos x and d(eˣ)/dx = eˣ. That the chain rule is f′(x) = y′(u)·u′(x), and that it therefore hands you another factor of 5 for every differentiation of sin(5x) — 5, 25, 125 — and another 3 for every differentiation of e^(3x). That the quotient rule is [v·u′ − u·v′]/v² and that once the first derivative of ln(1 + x²) turns out to be a quotient, you are using it at every order after that. That the third derivative of ln x is 2x⁻³, so f‴(2) = 1/4. That f⁽⁴⁾(x) means (f‴(x))′ and not the fourth power. And that the second derivative is acceleration while the third is jerk — the only application claim the deck makes.

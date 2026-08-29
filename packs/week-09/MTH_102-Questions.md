@@ -1,82 +1,122 @@
-# MTH_102 — Week 9 Question Set (sit 7 days later)
+# MTH_102 — Week 9 Questions
 
-*Sit this during Saturday catch-up in Week 10, not this week. Notes closed.*
+*Improper integrals: Type I, Type II, the Comparison Test and Note 1 (the p-test). Twelve multiple choice, three short answer. Answers at the bottom — work them before you look.*
 
-## Section A — Multiple choice (12)
+## Multiple choice
 
-**1.** ∫₁^∞ dx/x^{3/2} =
-a) 2   b) 1/2   c) 2/3   d) it diverges
+**1.** Slide 4 says ∫ₐᵇ f(x)dx is an improper integral if
+A. f is not differentiable somewhere on [a, b]
+B. f takes negative values on [a, b]
+C. a limit of integration is infinite, or f has a discontinuity on [a, b]
+D. f has no antiderivative in closed form
 
-**2.** ∫₀¹ dx/x^{1/3} =
-a) 3/2   b) 3   c) 2/3   d) it diverges
+**2.** ∫₀^∞ xe⁻ˣ dx
+A. converges to 1
+B. converges to 0
+C. diverges to ∞
+D. converges to −1
 
-**3.** ∫_{−∞}⁰ eˣ dx =
-a) 1   b) 0   c) −1   d) it diverges
+**3.** In that example, lim_{t→∞} (−te⁻ᵗ) =
+A. −∞
+B. 0
+C. −1
+D. it does not exist
 
-**4.** Given 0 ≤ f(x) ≤ g(x) on [a, ∞), which conclusion is valid?
-a) ∫ₐ^∞ f converges ⟹ ∫ₐ^∞ g converges
-b) ∫ₐ^∞ f diverges ⟹ ∫ₐ^∞ g diverges
-c) ∫ₐ^∞ g diverges ⟹ ∫ₐ^∞ f diverges
-d) ∫ₐ^∞ g converges ⟹ ∫ₐ^∞ f diverges
+**4.** ∫₋∞^∞ (2x² − x + 3)dx
+A. converges to 0, by symmetry
+B. converges to 3
+C. converges, because the two infinite halves cancel
+D. diverges
 
-**5.** ∫₁^∞ dx/(x² + x + 1):
-a) converges, by comparison with 1/x²
-b) diverges, by comparison with 1/x
-c) converges, by comparison with 1/x
-d) diverges, because 1/(x² + x + 1) < 1/x and ∫₁^∞ dx/x diverges
+**5.** The first thing to do with ∫₋₁² dx/x⁴ is
+A. split at x = 0 and take a one-sided limit into 0 from each side
+B. apply the FTC with −1/(3x³) straight from −1 to 2
+C. compare it with 1/x² and quote Note 1
+D. replace 2 by t and let t → ∞
 
-**6.** Which integral is improper at **both** ends and so must be split before testing?
-a) ∫₀^∞ dx/√x   b) ∫₁^∞ dx/x²   c) ∫₀¹ dx/√x   d) ∫₀¹ dx/(1 + x)
+**6.** Note 1: ∫₁^∞ (1/xᵖ)dx converges when
+A. p ≥ 1
+B. p < 1
+C. p > 1
+D. p ≤ 1
 
-**7.** ∫_{−1}¹ dx/x =
-a) 0, since the integrand is odd and the interval symmetric
-b) it diverges
-c) 0, since [ln|x|]_{−1}¹ = ln 1 − ln 1
-d) 2
+**7.** Given 0 ≤ g(x) ≤ f(x) for all x ≥ a, which conclusion does slide 10 license?
+A. ∫ₐ^∞ g converges ⟹ ∫ₐ^∞ f converges
+B. ∫ₐ^∞ g diverges ⟹ ∫ₐ^∞ f diverges
+C. ∫ₐ^∞ f diverges ⟹ ∫ₐ^∞ g diverges
+D. ∫ₐ^∞ f converges ⟹ ∫ₐ^∞ g diverges
 
-**8.** The Limit Comparison Test lets you conclude that ∫f and ∫g behave **the same way** provided f, g > 0 and lim_{x→∞} f/g = L with:
-a) L existing, finite or infinite   b) 0 < L < ∞   c) L = 1   d) L = 0
+**8.** ∫₃^∞ dx/√(x² − 1)
+A. converges, since 1/√(x² − 1) ≤ 1/x
+B. converges, by Note 1 with p = 2
+C. diverges, since 1/√(x² − 1) ≤ 1/x
+D. diverges, since 1/√(x² − 1) ≥ 1/x and ∫₃^∞ dx/x has p = 1
 
-**9.** ∫₂^∞ dx/(x ln x):
-a) converges, to 1/ln 2   b) it diverges   c) converges, to ln ln 2   d) converges, to 0
+**9.** In Example 3 the comparison function 1/√(x³) is
+A. 1/x³, so p = 3
+B. 1/x^(2/3), so p = 2/3
+C. 1/x^(3/2), so p = 3/2
+D. 1/x^(1/3), so p = 1/3
 
-**10.** ∫₁^∞ (2 + cos x)/x dx:
-a) diverges, since (2 + cos x)/x ≥ 1/x and ∫₁^∞ dx/x diverges
-b) converges, since cos x oscillates and its contributions cancel
-c) converges, since (2 + cos x)/x ≤ 3/x
-d) diverges, since (2 + cos x)/x ≤ 3/x and ∫₁^∞ 3dx/x diverges
+**10.** The TASK slide: ∫₁^∞ dx/√(x⁶ + 1)
+A. converges, by comparison with 1/x³, p = 3
+B. diverges, by comparison with 1/x, p = 1
+C. converges, by comparison with 1/x^(1/3)
+D. diverges, because √(x⁶ + 1) ≥ x³
 
-**11.** ∫₀¹ ln x dx =
-a) −1   b) 1   c) 0   d) it diverges
+**11.** From 0 ≤ cos²x ≤ 1 and ∫₂^∞ dx/x² = 1/2, what follows about ∫₂^∞ cos²(x)/x² dx?
+A. it equals 1/2
+B. it equals 1/2 minus a correction
+C. it diverges, because cos²x oscillates forever
+D. it converges, and is at most 1/2
 
-**12.** Comparing sin²x/x² with 1/x² on [1, ∞) establishes that ∫₁^∞ (sin²x)/x² dx:
-a) converges
-b) converges, and equals 1
-c) diverges
-d) nothing, because sin²x changes sign
+**12.** A student writes ∫₋₁² dx/x⁴ = [−1/(3x³)]|₋₁² = −1/24 − 1/3 = −3/8. What is wrong?
+A. the antiderivative should be −1/(4x⁴)
+B. the FTC was used across x = 0, where the integrand is undefined; the integral diverges
+C. the limits were subtracted in the wrong order
+D. nothing — −3/8 is correct
 
-## Section B — Short answer (3)
+## Short answer
 
-**13.** Starting from the antiderivative of x^{−p}, derive the condition on p for ∫₁^∞ dx/xᵖ to converge and the condition on p for ∫₀¹ dx/xᵖ to converge, giving the value in each convergent case. Then state in one sentence why the two conditions are opposites.
+**13.** State the Comparison Test exactly as slide 10 states it, hypothesis included. Then name the two implications the deck does **not** license, and give the reason no conclusion is available in those two cases.
 
-**14.** Determine whether ∫₁^∞ (x + 2)/(x³ + 1) dx converges. Use the Limit Comparison Test with a comparison function you justify, compute the limit L explicitly, and then give a direct comparison that reaches the same conclusion.
+**14.** Work the TASK slide in full: determine whether ∫₁^∞ dx/√(x⁶ + 1) converges or diverges. Show each inequality step, name f and g in the lecturer's lettering, and say which clause of the theorem you are using.
 
-**15.** The three integrals ∫₁^∞ dx/x², ∫₀¹ dx/x² and ∫₀^∞ dx/x² have the same integrand but three different treatments and two different fates. Classify each by type, state its fate with a limit computation, and say what this shows about applying a p-test without first asking where the trouble is.
+**15.** Slide 9 concludes that ∫₋₁² dx/x⁴ is divergent, and states "[−1/(3x³)] → −∞ as c → 0⁻ and [−1/(3x³)] → −∞ as b → 0⁺." One of those two claims is wrong. Say which, work out what each of the two pieces actually tends to, and explain why the slide's verdict is nevertheless correct.
+
+---
 
 ## Answers
 
-1. **a** — *p-test at infinity: ∫₁^∞ dx/xᵖ = 1/(p − 1) when p > 1.* p = 3/2, so the value is 1/(1/2) = 2; explicitly [−2x^{−1/2}]₁^t = 2 − 2/√t → 2. (b) is 1/p; (c) is 1/(p + 1), read off the wrong step of the power rule; (d) applies the near-zero rule (p < 1 converges) at the wrong end — 3/2 > 1 is precisely the convergent case here.
-2. **a** — *p-test near zero: ∫₀¹ dx/xᵖ = 1/(1 − p) when p < 1.* p = 1/3, so the value is 1/(2/3) = 3/2; explicitly [3x^{2/3}/2]_t¹ → 3/2. (b) is the antiderivative constant for x^{−2/3}, i.e. the right method applied to the wrong exponent; (c) is p read as the answer; (d) applies the infinity test at the origin, where small p is exactly what makes the singularity mild enough to integrate.
-3. **a** — *∫_{−∞}^b f = lim_{t→−∞}∫_t^b f.* Here lim_{t→−∞}[eˣ]_t⁰ = lim(1 − e^t) = 1, since e^t → 0 as t → −∞. (b) assumes e^t → 1; (c) has the subtraction reversed; (d) supposes eˣ grows as x → −∞, confusing the two ends of the exponential — it is ∫₀^∞ eˣ dx that diverges.
-4. **b** — *Bigger than divergent is divergent; smaller than convergent is convergent. Those two, and no others.* If the smaller function already encloses infinite area, the larger one must too. (a) is the false converse in the convergent direction — 1/x² ≤ 1/x has convergent f and divergent g; (c) is the false converse in the divergent direction, and 1/x² ≤ 1/x again refutes it; (d) is not even a comparison statement, since a convergent upper bound can never force divergence below it.
-5. **a** — *Keep leading terms and bound above by a convergent p-integral.* For x ≥ 1, x² + x + 1 > x² > 0, so 0 < 1/(x² + x + 1) < 1/x², and ∫₁^∞ dx/x² converges (p = 2). (b) and (d) rest on the true but useless inequality 1/(x² + x + 1) < 1/x: smaller than divergent proves nothing, and here it happens to point at the wrong verdict as well; (c) reaches the right verdict from the same invalid inequality, and would earn no marks — the comparison function for a convergence proof must itself converge.
-6. **a** — *Improper at both ends: Type II at 0 because 1/√x → ∞ there, and Type I at ∞ because the interval is unbounded.* It must be split, e.g. at 1, and each piece tested separately (here ∫₀¹ converges, p = 1/2 < 1, but ∫₁^∞ diverges, p = 1/2 < 1 at infinity, so the whole thing diverges). (b) is Type I only; (c) is Type II only; (d) is entirely proper — 1 + x never vanishes on [0, 1].
-7. **b** — *An infinite discontinuity at an interior point forces a split, and here each half diverges.* ∫₀¹ dx/x = lim_{t→0⁺}(−ln t) = ∞, so the integral diverges regardless of the other half. (a) and (c) are the two faces of the same error: applying the FTC or a symmetry argument across a point where the integrand is undefined. The symmetric limit lim_{ε→0}(∫_{−1}^{−ε} + ∫_ε¹) is 0, but that is the principal value, not the integral; (d) is an arithmetic guess with no derivation.
-8. **b** — *The two-way conclusion requires the ratio to settle on a strictly positive finite number.* Then f and g are eventually within constant multiples of each other in both directions, so neither can converge without the other. (a) admits L = 0 and L = ∞, which give only one-way implications (L = 0: g convergent ⟹ f convergent; L = ∞: g divergent ⟹ f divergent); (c) is unnecessarily strict — any L in (0, ∞) works, and requiring L = 1 would make the test nearly unusable; (d) names one of the two degenerate cases as though it were the hypothesis.
-9. **b** — *Substitute u = ln x, du = dx/x: the integral becomes ∫_{ln 2}^∞ du/u, a p = 1 integral, which diverges.* Explicitly [ln ln x]₂^t = ln ln t − ln ln 2 → ∞. (a) is the value of the neighbouring convergent integral ∫₂^∞ dx/(x(ln x)²) = 1/ln 2 — the extra power of ln x is the whole difference; (c) is the lower-limit term alone, mistaken for the answer; (d) confuses the integrand tending to 0 with the integral being 0. Note both integrands are smaller than 1/x, which is why "smaller than divergent" can never be conclusive.
-10. **a** — *Bound the oscillation below by a constant, then compare with the divergent 1/x.* Since cos x ≥ −1, we have 2 + cos x ≥ 1 > 0, so (2 + cos x)/x ≥ 1/x on [1, ∞); ∫₁^∞ dx/x diverges, so by the divergent half of the comparison test the given integral diverges. (b) treats bounded oscillation as if it produced cancellation, but the integrand here is strictly positive and never cancels anything; (c) and (d) both use the upper bound 3/x — a correct inequality, but pointing at a divergent function from below, which supports neither conclusion. (c) additionally draws a convergence conclusion from a divergent comparison, which is impossible in any direction.
-11. **a** — *Type II at x = 0, evaluated by parts inside a limit.* ∫ln x dx = x ln x − x, so ∫_t¹ ln x dx = (0 − 1) − (t ln t − t), and t ln t → 0 as t → 0⁺, so the limit is −1. (b) drops the sign, or evaluates only the upper limit; (c) assumes the singularity forces cancellation to 0; (d) assumes any infinite discontinuity means divergence — the integrand is unbounded at 0, but only mildly, and the area is finite. A negative answer is correct here because ln x < 0 on (0, 1).
-12. **a** — *Comparison decides convergence and nothing else.* 0 ≤ sin²x ≤ 1, so 0 ≤ sin²x/x² ≤ 1/x² on [1, ∞), and ∫₁^∞ dx/x² converges; hence the given integral converges. (b) misreads the comparison as an evaluation — all that follows is ∫₁^∞ sin²x/x² dx ≤ 1, and the actual value is smaller; (c) is the wrong verdict from the right inequality; (d) confuses sin x, which changes sign, with sin²x, which never does — squaring is exactly what makes the non-negativity hypothesis hold.
-13. **∫₁^∞ dx/xᵖ converges ⟺ p > 1, with value 1/(p − 1); ∫₀¹ dx/xᵖ converges ⟺ p < 1, with value 1/(1 − p).** For p ≠ 1 the antiderivative is x^{1−p}/(1 − p). At infinity: ∫₁^t = (t^{1−p} − 1)/(1 − p); if p > 1 then 1 − p < 0 so t^{1−p} → 0 and the limit is 1/(p − 1); if p < 1 then t^{1−p} → ∞ and it diverges. Near zero: ∫_t¹ = (1 − t^{1−p})/(1 − p); if p < 1 then t^{1−p} → 0 and the limit is 1/(1 − p); if p > 1 then t^{1−p} → ∞ and it diverges. In both cases p = 1 must be done separately with ln, and diverges: [ln x]₁^t → ∞ and [ln x]_t¹ = −ln t → ∞. The conditions are opposites because a large p makes xᵖ **big far away** (a fast-decaying integrand, which is what a convergent tail needs) but also **small near 0** (a fast-blowing-up integrand, which is what makes a singularity non-integrable) — the same exponent helps at one end exactly as much as it hurts at the other. — *The two p-tests, derived from one antiderivative.*
-14. **Converges.** Comparison function: for large x the integrand behaves like x/x³ = 1/x², since only leading terms survive, so take g(x) = 1/x². Both f(x) = (x + 2)/(x³ + 1) and g are positive and continuous on [1, ∞). Limit: L = lim_{x→∞} f/g = lim_{x→∞} x²(x + 2)/(x³ + 1) = lim (x³ + 2x²)/(x³ + 1) = 1, and 0 < 1 < ∞, so f and g behave the same way. ∫₁^∞ dx/x² converges (p = 2 > 1), therefore **∫₁^∞ (x + 2)/(x³ + 1) dx converges.** Direct comparison: on [1, ∞), x + 2 ≤ 3x and x³ + 1 > x³, so 0 < (x + 2)/(x³ + 1) < 3x/x³ = 3/x², and ∫₁^∞ 3dx/x² = 3 converges; the same conclusion follows, with the constant 3 harmlessly absorbed. Neither argument gives the value — only convergence. — *Limit comparison by dominant term, with a direct comparison as a check; a positive constant multiple never changes convergence.*
-15. **(i) ∫₁^∞ dx/x² — Type I, converges to 1.** The interval is infinite, the integrand continuous on it: lim_{t→∞}[−1/x]₁^t = lim(1 − 1/t) = 1. **(ii) ∫₀¹ dx/x² — Type II at the lower endpoint, diverges.** The interval is finite but 1/x² → ∞ as x → 0⁺: lim_{t→0⁺}[−1/x]_t¹ = lim(−1 + 1/t) = +∞. **(iii) ∫₀^∞ dx/x² — improper at both ends, diverges.** It must be split, ∫₀¹ + ∫₁^∞; the second piece converges by (i) but the first diverges by (ii), and one divergent piece is enough to make the whole integral divergent. What this shows is that "p = 2 > 1, therefore convergent" is not a statement about the function 1/x² at all — it is a statement about its behaviour **at infinity**, and it says nothing about a singularity at the origin, where the relevant test is p < 1 and p = 2 fails it. Before any p-test is quoted you must first locate where the integral is improper, and if it is improper in two places you must split and test each place with the test that belongs there. — *Locate the impropriety first; the same exponent gives opposite verdicts at the two ends.*
+**1. C.** Slide 4 gives exactly two triggers: an infinite limit of integration, or a point of discontinuity of the integrand on [a, b]. A confuses continuity with differentiability — neither is the criterion, and a discontinuity is what matters. B is irrelevant; sign has nothing to do with it (Example 1's ln-free polynomial and the −3/8 trap both involve signs without being the issue). D describes a reason to use the Comparison Test, not a definition of improper.
+
+**2. A.** ∫₀^∞ xe⁻ˣdx = lim_{t→∞}[−xe⁻ˣ − e⁻ˣ]|₀ᵗ = lim(−te⁻ᵗ − e⁻ᵗ + 1) = 0 + 0 + 1 = 1. B forgets the lower-limit contribution, which is where the 1 comes from. C is what you get by claiming −te⁻ᵗ → −∞ (or +∞) instead of applying L'Hôpital. D drops the sign when subtracting the value at 0, which is −1.
+
+**3. B.** −te⁻ᵗ = −t/eᵗ is of the form −∞/∞, so L'Hôpital differentiates top and bottom: −1/eᵗ → 0. A is the standard error — reading "t → ∞" off the numerator and ignoring that the exponential in the denominator grows faster. C guesses the coefficient. D confuses an indeterminate form with a non-existent limit; the indeterminate form is what L'Hôpital exists to resolve.
+
+**4. D.** The right-hand half, lim_{b→∞}[2x³/3 − x²/2 + 3x]|₀ᵇ, runs to ∞, and clause 3 of slide 5 only lets you add the two halves **if both converge**. One divergent half ends it. A and C are the same illegal move — cancelling +∞ against −∞, which the definition forbids because each half must converge on its own. B invents a finite value from the constant term.
+
+**5. A.** 1/x⁴ is undefined at x = 0, which lies strictly inside [−1, 2], so slide 8 clause 3 applies: split at 0 and take lim_{c→0⁻} on the left and lim_{b→0⁺} on the right. B is the trap the example is built around and yields the impossible −3/8. C is a Type I tool applied to a Type II problem, and 1/x⁴ is not smaller than 1/x² near 0 anyway. D invents an infinite limit; both limits here are finite numbers.
+
+**6. C.** Note 1, verbatim: converges if p > 1, diverges if p ≤ 1. A and D both put the boundary p = 1 on the convergent side, and Example 2 depends on p = 1 being **divergent**. B is the rule for the singularity at 0 — a rule this deck never states — applied at the wrong end.
+
+**7. B.** Clause 2: the small one divergent drags the big one up with it. A is the false converse in the convergent direction — 0 ≤ 1/x² ≤ 1/x has convergent ∫g and divergent ∫f. C is the false converse in the divergent direction, refuted by the same pair. D is not a comparison statement at all; a convergent upper bound can never force divergence underneath it.
+
+**8. D.** x² − 1 < x² ⟹ √(x² − 1) < x ⟹ 1/√(x² − 1) > 1/x. So 1/x is g, the messy one is f, ∫₃^∞ dx/x diverges by Note 1 with p = 1, and clause 2 gives divergence. A and C both invert the reciprocal step and get the inequality backwards. B misreads p: the exponent under the root is 2, but the function is not 1/x², and in any case Note 1 applies to the comparison function, not to whatever is under a radical.
+
+**9. C.** √(x³) = x^(3/2), so 1/√(x³) = 1/x^(3/2) and p = 3/2, which exceeds 1 — hence convergence by Note 1. A forgets the square root entirely. B inverts the fractional exponent. D takes the cube root instead of the square root of the cube.
+
+**10. A.** For x ≥ 1, x⁶ + 1 ≥ x⁶, so √(x⁶ + 1) ≥ x³ and therefore 1/√(x⁶ + 1) ≤ 1/x³. With f = 1/x³ (p = 3 > 1, convergent) and g the given integrand, clause 1 gives convergence. B compares with the wrong power. C halves the exponent instead of halving 6 to 3. D states a correct inequality but reads it backwards: a bigger denominator makes the fraction **smaller**, which is exactly what makes convergence available.
+
+**11. D.** 0 ≤ cos²x/x² ≤ 1/x² on [2, ∞), and ∫₂^∞ dx/x² = 1/2 converges, so by clause 1 the given integral converges — and being under a function whose integral is 1/2, its value is at most 1/2. A is the deck's own warning: 1/2 is the value of the **comparison** integral, not of this one. B invents a computable correction; comparison never produces a value. C treats oscillation as divergence, but cos²x is squared and never negative, and it is divided by x² anyway.
+
+**12. B.** −1/(3x³) is discontinuous at x = 0, which sits inside [−1, 2], so the Fundamental Theorem does not apply across the interval; splitting at 0 shows both pieces run to +∞ and the integral diverges. The tell-tale is that a strictly positive integrand has produced a negative answer. A is wrong — ∫x⁻⁴dx = x⁻³/(−3) = −1/(3x³), which is what the slide uses. C would only flip the sign to +3/8, which is still not an answer to a divergent integral. D accepts the trap.
+
+**13.** Slide 10, verbatim in substance: *let f(x) and g(x) be any two continuous functions such that **0 ≤ g(x) ≤ f(x) for all x ≥ a**; then (1) if ∫ₐ^∞ f(x)dx is convergent, then ∫ₐ^∞ g(x)dx is convergent, and (2) if ∫ₐ^∞ g(x)dx is divergent, then ∫ₐ^∞ f(x)dx is divergent.* The non-negativity 0 ≤ g is part of the hypothesis, not decoration. The two implications **not** licensed are: *∫ₐ^∞ g convergent ⟹ ∫ₐ^∞ f convergent*, and *∫ₐ^∞ f divergent ⟹ ∫ₐ^∞ g divergent*. Both fail for the same reason: knowing that the **smaller** function encloses finite area puts no ceiling on the larger one, and knowing that the **larger** one encloses infinite area puts no floor under the smaller one. A single pair settles both — take g(x) = 1/x² and f(x) = 1/x on [1, ∞), where 0 ≤ g ≤ f, ∫g converges by Note 1 (p = 2) and ∫f diverges by Note 1 (p = 1). So the small one can converge while the big one diverges, which refutes both. If your comparison lands in one of these two boxes it has told you nothing and you need a different comparison function; the deck offers no other tool.
+
+**14.** **It converges.** Working, in the lecturer's order: for all x ≥ 1, **x⁶ + 1 ≥ x⁶**; taking square roots preserves the inequality between non-negative quantities, so **√(x⁶ + 1) ≥ √(x⁶) = x³** (the last equality holds because x ≥ 1 > 0, so x³ is positive and √(x⁶) = |x³| = x³); taking reciprocals of positive quantities **reverses** it, giving **1/√(x⁶ + 1) ≤ 1/x³**. Let **f(x) = 1/x³** and **g(x) = 1/√(x⁶ + 1)**; both are continuous and positive on [1, ∞), so **0 ≤ g(x) ≤ f(x)** for all x ≥ 1. Now ∫₁^∞ (1/x³)dx has **p = 3 > 1**, so by **Note 1** it is convergent. By **clause 1** of the Comparison Test — the big one convergent forces the small one convergent — **∫₁^∞ dx/√(x⁶ + 1) converges.** No value is claimed and none is available by this method; all that also follows is that the integral is at most ∫₁^∞ dx/x³ = 1/2.
+
+**15.** The wrong claim is the **first**: "[−1/(3x³)] → −∞ as c → 0⁻". As c approaches 0 from below, c is a small negative number, so c³ is a small negative number, 3c³ → 0⁻, and −1/(3c³) → **+∞**, not −∞. Working each piece out fully, with F(x) = −1/(3x³):
+**Left piece:** lim_{c→0⁻} F(x)|₋₁ᶜ = lim_{c→0⁻} (−1/(3c³) − (−1/(3(−1)³))) = lim_{c→0⁻} (−1/(3c³) − 1/3) = **+∞**.
+**Right piece:** lim_{b→0⁺} F(x)|_b² = lim_{b→0⁺} (−1/24 − (−1/(3b³))) = lim_{b→0⁺} (−1/24 + 1/(3b³)) = **+∞**.
+So both pieces tend to +∞. Note that the slide's second claim, −1/(3b³) → −∞ as b → 0⁺, is true **about the expression**, but b is the **lower** limit of the right-hand integral, so that value is subtracted and the piece itself goes to +∞ — the slide's phrasing invites you to read a −∞ into the answer that is not there. The verdict is nevertheless correct: divergence only requires that a limit fail to exist as a finite number, and here neither piece has a finite limit, so **∫₋₁² dx/x⁴ is divergent** — as the slide says. Write +∞ for both pieces in a script, and say so.

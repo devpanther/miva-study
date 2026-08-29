@@ -50,8 +50,8 @@ var MISSED = [
   "<b>Keep the Sunday recap regardless.</b> It is the last thing to drop, not the first. It costs no preparation, and after a broken week it is the only hour that tells you what you actually retained."
 ];
 var DEEPHOUR = [
-  ["0–5", "Skim the PDF's headings. Five minutes knowing where the lecture goes saves twenty inside it."],
-  ["5–35", "The lecture, normal speed, pausing to write. Copy the derivations by hand — don't transcribe the talking."],
+  ["0–5", "Skim the PDF headings so you know where the video is going. Five minutes here saves twenty inside the lecture."],
+  ["5–35", "The video lecture on the LMS, normal speed, pausing to write. Copy the derivations by hand — don't transcribe the talking."],
   ["35–50", "The PDF properly. Mark anything the video skipped; that gap is usually where the exam question lives."],
   ["50–65", "The check. Twelve questions on exactly what you just covered, notes closed."],
   ["—", "Log the score. That is your confidence rating — you don't guess at it."]
@@ -68,6 +68,20 @@ var CALENDAR = [
   ["Exams", "7 – 13 Dec", "Weakest 20% only."]
 ];
 var OPEN = {};
+var BUDDY = null;      /* null | {view:"home"|"concept"|"ask", concept, why, asking, answer, err} */
+var SUMCACHE = {};
+
+/* Where to send him when a concept needs a better teacher than a slide deck.
+   Search URLs, never invented video ids. */
+var CHANNELS = {
+  MTH_102: [["Professor Leonard","Professor Leonard"],["Organic Chemistry Tutor","The Organic Chemistry Tutor"],["3Blue1Brown","3Blue1Brown"]],
+  PHY_102: [["Michel van Biezen","Michel van Biezen"],["MIT 8.02","MIT OpenCourseWare 8.02"],["Organic Chemistry Tutor","The Organic Chemistry Tutor"]],
+  PHY_108: [["Organic Chemistry Tutor","The Organic Chemistry Tutor physics lab"],["Michel van Biezen","Michel van Biezen"]],
+  COS_102: [["Abdul Bari","Abdul Bari"],["freeCodeCamp","freeCodeCamp"]],
+  CSC_106: [["freeCodeCamp","freeCodeCamp"],["Traversy Media","Traversy Media"]],
+  GST_112: [["Search","Nigerian peoples and culture"]],
+  GST_122: [["Search","communication in English"]]
+};
 
 var S, ME=null, TAB="home", QUIZ=null, MANUAL=null,
     TOAST=null, VIEWWEEK=null, BRIEF=false;
@@ -86,6 +100,17 @@ var EXVIEW = null;       /* {course, mode:"guide"|"paper"} */
 var EXQUIZ = null;       /* an in-progress mock */
 var EXLS = "miva_exam_v1";
 var QLS = "miva_quiz_v1";
+
+/* A fixed question bank sat twice teaches you the bank, not the subject. Every
+   sitting gets a fresh order of questions AND of options, so recognising "it was
+   the third one" stops working. The order is saved with the attempt so a resume
+   shows the same paper. */
+function shuffled(n){
+  var a = [], i, j, t;
+  for(i=0;i<n;i++) a.push(i);
+  for(i=n-1;i>0;i--){ j = Math.floor(Math.random()*(i+1)); t=a[i]; a[i]=a[j]; a[j]=t; }
+  return a;
+}
 
 /* ---------- state ---------- */
 function blankState(){
@@ -681,6 +706,241 @@ function statsStrip(root){
   root.appendChild(pc);
 }
 
+/* ---------- study buddy ---------- */
+function ytLink(course, concept, channel){
+  var q = (channel ? channel + " " : "") + (concept || NAMES[course] || "");
+  return "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
+}
+/* Tonight's session, whichever half he last touched. */
+function buddyContext(){
+  var w = wk(), di = dayIdx(), wd = weekData(w);
+  if(di < 0) di = 0;
+  var g = GRID[di];
+  var deep = getScore(ME, w, g.day), fast = getScore(ME, w, g.day, "fast");
+  var slot = (!deep && fast) ? "fast" : "deep";
+  var course = slot === "fast" ? g.fast : g.deep;
+  var chk = checkFor(wd, g.day, slot);
+  var sc = slot === "fast" ? fast : deep;
+  return {w:w, day:g.day, slot:slot, course:course, chk:chk, score:sc,
+          missed:(sc && sc.wrong) ? sc.wrong : []};
+}
+/* The pack already explains every question. Find the ones behind a concept. */
+function whyFor_concept(chk, concept){
+  if(!chk) return [];
+  return chk.questions.filter(function(q){ return (q.concept||"") === concept; });
+}
+function openBuddy(view, concept){
+  var c = buddyContext();
+  var qs = concept ? whyFor_concept(c.chk, concept) : [];
+  BUDDY = {view: view || "home", concept: concept || null, qs: qs, asking:false, answer:null, err:null, text:""};
+  render();
+}
+function loadSummary(w, course){
+  if(SUMCACHE[w+":"+course] !== undefined) return;
+  SUMCACHE[w+":"+course] = null;
+  fetch("/api/week?n="+w+"&doc=summary&course="+course)
+    .then(function(r){ return r.ok ? r.text() : null; })
+    .then(function(t){ SUMCACHE[w+":"+course] = t || "__none__"; render(); })
+    .catch(function(){ SUMCACHE[w+":"+course] = "__none__"; render(); });
+}
+function askBuddy(){
+  var c = buddyContext();
+  BUDDY.asking = true; BUDDY.err = null; BUDDY.answer = null; render();
+  fetch("/api/ask", {
+    method:"POST", headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({
+      question: BUDDY.text, course: c.course, week: c.w,
+      topic: c.chk ? c.chk.topic : "", missed: c.missed,
+      asked: BUDDY.qs && BUDDY.qs[0] ? BUDDY.qs[0].q : ""
+    })
+  }).then(function(r){ return r.json().then(function(d){ return {s:r.status, d:d}; }); })
+    .then(function(x){
+      BUDDY.asking = false;
+      if(x.d && x.d.ok) BUDDY.answer = x.d.answer;
+      else BUDDY.err = (x.d && (x.d.reason || x.d.error)) || "Couldn't get an answer.";
+      render();
+    })
+    .catch(function(){ BUDDY.asking = false; BUDDY.err = "Couldn't reach the server."; render(); });
+}
+function copyForClaude(){
+  var c = buddyContext();
+  var parts = [
+    "I'm a 100-level student at Miva Open University. Course: " + (NAMES[c.course]||c.course) + ", week " + c.w + ".",
+    c.chk && c.chk.topic ? "\nTonight's session covered:\n" + c.chk.topic : "",
+    c.missed.length ? "\nI got these wrong:\n- " + c.missed.join("\n- ") : "",
+    BUDDY.qs && BUDDY.qs.length ? "\nThe question I missed:\n" + BUDDY.qs[0].q : "",
+    "\nMy question: " + (BUDDY.text || "Explain the concept above as simply as you can, then quiz me on it.")
+  ].filter(Boolean).join("\n");
+  var done = function(){ toast("Copied — paste it into Claude"); };
+  try{
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(parts).then(done, function(){ toast("Couldn't copy"); });
+      return;
+    }
+  }catch(e){}
+  var ta = document.createElement("textarea");
+  ta.value = parts; ta.style.cssText = "position:fixed;opacity:0";
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand("copy"); done(); }catch(e){ toast("Couldn't copy"); }
+  ta.remove();
+}
+
+function buddyButton(root){
+  var ctx = buddyContext();
+  var b = el("button","buddybtn"+((ctx.missed && ctx.missed.length) ? " nudge" : ""));
+  b.setAttribute("aria-label","Open the study buddy");
+  /* A question mark that writes itself, the way you'd draw one: the hook sweeps
+     over and down, the stem follows, then the dot lands. pathLength="100" lets the
+     dash animation be written in plain percentages regardless of the real geometry. */
+  b.innerHTML = '<svg class="qmark" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">'
+    + '<path class="q-stroke" pathLength="100" '
+    + 'd="M20.5 24.5A11.5 11.5 0 1 1 32 36v5.5" '
+    + 'fill="none" stroke="currentColor" stroke-width="6.2" '
+    + 'stroke-linecap="round" stroke-linejoin="round"/>'
+    + '<circle class="q-dot" cx="32" cy="50.5" r="3.6" fill="currentColor"/>'
+    + '</svg>';
+  if(ctx.missed && ctx.missed.length) b.appendChild(el("span","dot", String(ctx.missed.length)));
+  b.onclick = function(){ openBuddy("home"); };
+  root.appendChild(b);
+}
+
+function buddyPanel(root){
+  var c = buddyContext();
+  var back = el("div","scrim");
+  back.onclick = function(){ BUDDY = null; render(); };
+  root.appendChild(back);
+
+  var p = el("div","sheet");
+  var head = el("div","sheeth");
+  head.innerHTML = '<div><div class="lbl" style="margin:0">'+esc(c.day)+' · '+esc(NAMES[c.course]||c.course)+' · week '+c.w+'</div>'
+                 + '<h2 style="margin:2px 0 0;font-size:18px">Study buddy</h2></div>';
+  var x = btn("chip","Close", function(){ BUDDY = null; render(); });
+  head.appendChild(x);
+  p.appendChild(head);
+
+  var body = el("div","sheetb");
+
+  if(BUDDY.view === "concept" && BUDDY.concept){
+    body.appendChild(el("div","lbl","You missed this"));
+    body.appendChild(el("h3",null, esc(BUDDY.concept)));
+    if(!BUDDY.qs.length) body.appendChild(el("p","muted","No explanation stored for that one."));
+    BUDDY.qs.forEach(function(q){
+      var card = el("div","bcard");
+      card.appendChild(el("div","bq", esc(q.q)));
+      if(q.type === "mcq" && q.options){
+        card.appendChild(el("div","ba","<b>Answer:</b> "+esc(q.options[q.answerIndex])));
+      }
+      card.appendChild(el("div","bw", esc(q.why||"")));
+      body.appendChild(card);
+    });
+    var vr = el("div","row");
+    (CHANNELS[c.course]||[]).forEach(function(ch){
+      var a = el("a","act ghost", esc(ch[0])+" ↗");
+      a.href = ytLink(c.course, BUDDY.concept, ch[1]);
+      a.target = "_blank"; a.rel = "noopener";
+      a.style.textDecoration = "none";
+      vr.appendChild(a);
+    });
+    body.appendChild(vr);
+    var br = el("div","row");
+    br.appendChild(btn("act ghost","← Back", function(){ openBuddy("home"); }));
+    br.appendChild(btn("act","Ask about this", function(){ BUDDY.view = "ask"; render(); }));
+    body.appendChild(br);
+  }
+  else if(BUDDY.view === "ask"){
+    body.appendChild(el("div","lbl","Ask"));
+    body.appendChild(el("p","muted","Your question goes out with tonight's topic, the summary, and what you got wrong — so the answer is about this course, not the subject in general."));
+    var ta = el("textarea");
+    ta.placeholder = BUDDY.concept ? "Why is " + BUDDY.concept + " actually true?" : "Ask anything about tonight's session…";
+    ta.value = BUDDY.text || "";
+    ta.oninput = function(){ BUDDY.text = ta.value; };
+    body.appendChild(ta);
+    var ar = el("div","row");
+    var go = btn("act", BUDDY.asking ? "Thinking…" : "Ask", function(){
+      if(!(BUDDY.text||"").trim()){ toast("Type a question first"); return; }
+      askBuddy();
+    });
+    if(BUDDY.asking) go.setAttribute("disabled","");
+    ar.appendChild(go);
+    ar.appendChild(btn("act ghost","Copy for Claude", copyForClaude));
+    body.appendChild(ar);
+
+    if(BUDDY.err){
+      var e1 = el("div","bcard");
+      e1.style.borderLeft = "3px solid var(--fast)";
+      e1.appendChild(el("div","bw", esc(BUDDY.err)));
+      e1.appendChild(el("p","muted","<br>Use <b>Copy for Claude</b> instead — it puts the question and all of tonight's context on your clipboard, ready to paste into the Claude app on your Max plan."));
+      body.appendChild(e1);
+    }
+    if(BUDDY.answer){
+      var an = el("div","bcard prose");
+      an.innerHTML = mdToHtml(BUDDY.answer);
+      body.appendChild(an);
+    }
+    body.appendChild(btn("act ghost","← Back", function(){ openBuddy("home"); }));
+  }
+  else {
+    if(c.missed.length){
+      body.appendChild(el("div","lbl","What you missed tonight"));
+      c.missed.forEach(function(m){
+        var row = el("button","mrow");
+        row.innerHTML = '<span>'+esc(m)+'</span><span class="chev">→</span>';
+        row.onclick = function(){ openBuddy("concept", m); };
+        body.appendChild(row);
+      });
+      body.appendChild(el("p","muted","<br>Tap one and I'll show you exactly what the wrong option was confusing it with, plus where to watch it explained."));
+    } else if(c.score){
+      body.appendChild(el("div","lbl","Tonight"));
+      body.appendChild(el("p","muted","You scored "+c.score.score+"/"+c.score.max+" and missed nothing. Nothing to unpick."));
+    } else {
+      body.appendChild(el("div","lbl","Tonight"));
+      body.appendChild(el("p","muted","Take tonight's check and whatever you miss shows up here, with the reasoning and a place to watch it explained."));
+    }
+
+    var r1 = el("div","row");
+    r1.appendChild(btn("act","Ask a question", function(){ BUDDY.view = "ask"; render(); }));
+    if(c.chk){
+      r1.appendChild(btn("act ghost","Tonight's brief", function(){ BUDDY.view = "brief"; render(); }));
+    }
+    body.appendChild(r1);
+
+    body.appendChild(el("div","lbl","Watch it explained"));
+    var vr2 = el("div","row"); vr2.style.marginTop = "4px";
+    (CHANNELS[c.course]||[]).forEach(function(ch){
+      var a = el("a","act ghost", esc(ch[0])+" ↗");
+      a.href = ytLink(c.course, c.chk ? (c.chk.topic||"").split(/[.:]/)[0].slice(0,80) : "", ch[1]);
+      a.target = "_blank"; a.rel = "noopener"; a.style.textDecoration = "none";
+      vr2.appendChild(a);
+    });
+    body.appendChild(vr2);
+
+    body.appendChild(el("div","lbl","This week's summary"));
+    var key = c.w+":"+c.course;
+    if(SUMCACHE[key] === undefined){
+      var lb = btn("act ghost","Load the summary", function(){ loadSummary(c.w, c.course); });
+      body.appendChild(lb);
+    } else if(SUMCACHE[key] === null){
+      body.appendChild(el("p","muted","Loading…"));
+    } else if(SUMCACHE[key] === "__none__"){
+      body.appendChild(el("p","muted","No summary in the repo for this one yet."));
+    } else {
+      var sm = el("div","bcard prose");
+      sm.innerHTML = mdToHtml(SUMCACHE[key]);
+      body.appendChild(sm);
+    }
+  }
+
+  if(BUDDY.view === "brief"){
+    body.innerHTML = "";
+    body.appendChild(el("div","lbl","Tonight's brief"));
+    body.appendChild(el("p","muted", esc((c.chk && c.chk.topic) || "No brief for this session.")));
+    body.appendChild(btn("act ghost","← Back", function(){ openBuddy("home"); }));
+  }
+
+  p.appendChild(body);
+  root.appendChild(p);
+}
+
 /* ---------- home ---------- */
 function fold(root, title, sub, build){
   var c = el("div","card fold");
@@ -934,7 +1194,7 @@ function viewTonight(root){
   c1.appendChild(el("div","lbl","21:00 – 22:00 · deep hour · 1×"));
   c1.appendChild(el("h2",null,esc(NAMES[g.deep])));
   topicBlock(c1, topic || g.dn, "muted");
-  c1.appendChild(el("p","muted","Pen in hand, phone in another room. Skim the PDF headings first — five minutes knowing where the lecture goes saves twenty inside it."));
+  c1.appendChild(el("p","muted","Watch the lecture on the LMS with this open beside it. Pen in hand, phone in another room. The PDF is the reference, not the lesson — skim its headings first so you know where the video is going, then read it properly afterwards for anything the video skipped."));
 
   var sc = getScore(ME, w, g.day);
   var row1 = el("div","row");
@@ -1160,7 +1420,8 @@ function viewData(root){
 function examSave(){
   if(!EXQUIZ) return;
   try{ localStorage.setItem(EXLS+":"+EXQUIZ.course, JSON.stringify({
-    answers:EXQUIZ.answers, idx:EXQUIZ.idx, submitted:EXQUIZ.submitted, at:Date.now()
+    order:EXQUIZ.order, opts:EXQUIZ.opts, answers:EXQUIZ.answers,
+    idx:EXQUIZ.idx, submitted:EXQUIZ.submitted, at:Date.now()
   })); }catch(e){}
 }
 function examRestore(course){
@@ -1172,8 +1433,8 @@ function examRestore(course){
 }
 function examProgress(course){
   var r = examRestore(course);
-  if(!r) return null;
-  return {done: Object.keys(r.answers||{}).length, submitted: !!r.submitted};
+  if(!r || !r.order) return null;
+  return {done: Object.keys(r.answers||{}).length, of: r.order.length, submitted: !!r.submitted};
 }
 function loadExamIndex(){
   if(EXAM) return;
@@ -1198,26 +1459,51 @@ function openExam(course, mode){
       .catch(function(){ EXAMCACHE[course] = "__fail__"; render(); });
   } else if(mode === "paper"){ startExam(course); }
 }
-function startExam(course){
+function newAttempt(pack, only){
+  var pool = only && only.length ? only.slice() : null;
+  var order = pool ? pool : shuffled(pack.questions.length);
+  if(pool){ var sp = shuffled(pool.length); order = sp.map(function(k){ return pool[k]; }); }
+  return {
+    order: order,
+    opts: order.map(function(oi){ return shuffled(pack.questions[oi].options.length); }),
+    answers: {}, idx: 0, submitted: false
+  };
+}
+function startExam(course, only){
   var pack = EXAMCACHE[course];
   if(!pack || pack === "__fail__"){ render(); return; }
-  var prev = examRestore(course);
+  var prev = only ? null : examRestore(course);
+  var a = (prev && prev.order && prev.opts) ? prev : newAttempt(pack, only);
   EXQUIZ = {
-    course: course, title: pack.title, questions: pack.questions,
-    answers: (prev && prev.answers) || {},
-    idx: (prev && typeof prev.idx === "number") ? prev.idx : 0,
-    submitted: !!(prev && prev.submitted),
+    course: course, title: pack.title, pack: pack,
+    order: a.order, opts: a.opts,
+    answers: a.answers || {},
+    idx: typeof a.idx === "number" ? a.idx : 0,
+    submitted: !!a.submitted,
     showAll: false
   };
+  if(only) examSave();
   render(); window.scrollTo(0,0);
+}
+/* display position -> the question and its shuffled options */
+function exQ(i){
+  var q = EXQUIZ;
+  var orig = q.order[i];
+  var src = q.pack.questions[orig];
+  return {
+    orig: orig, src: src, q: src.q, why: src.why,
+    options: q.opts[i].map(function(k){ return src.options[k]; }),
+    answerIndex: q.opts[i].indexOf(src.answerIndex)
+  };
 }
 function examGrade(){
   var q = EXQUIZ, score = 0, missed = [];
-  q.questions.forEach(function(qq, i){
-    if(q.answers[i] === qq.answerIndex) score++;
+  q.order.forEach(function(_, i){
+    var v = exQ(i);
+    if(q.answers[i] === v.answerIndex) score++;
     else missed.push(i);
   });
-  return {score:score, max:q.questions.length, missed:missed};
+  return {score:score, max:q.order.length, missed:missed};
 }
 
 function viewExam(root){
@@ -1242,7 +1528,7 @@ function viewExam(root){
       var meta = el("p","muted", c.questions + " questions" + (c.guideWords ? " · guide is about " + Math.round(c.guideWords/450) + " pages" : ""));
       card.appendChild(meta);
       if(p){
-        card.appendChild(el("span","sc "+(p.submitted?"g":"o"), p.submitted ? "Sat it" : p.done + "/" + c.questions + " answered"));
+        card.appendChild(el("span","sc "+(p.submitted?"g":"o"), p.submitted ? "Sat it" : p.done + "/" + (p.of||c.questions) + " answered"));
       }
       var r = el("div","row");
       r.appendChild(btn("act ghost","Study guide", function(){ openExam(c.course,"guide"); }));
@@ -1272,8 +1558,8 @@ function viewExam(root){
   if(!EXQUIZ || EXQUIZ.course !== EXVIEW.course){ root.appendChild(el("div","empty","<b>Loading the paper</b>A hundred questions.")); return; }
   if(EXQUIZ.submitted){ viewExamResult(root); return; }
 
-  var q = EXQUIZ, n = q.questions.length, left = [];
-  q.questions.forEach(function(qq,i){ if(typeof q.answers[i] !== "number") left.push(i); });
+  var q = EXQUIZ, n = q.order.length, left = [];
+  q.order.forEach(function(_,i){ if(typeof q.answers[i] !== "number") left.push(i); });
 
   var bar = el("div","deckbar");
   var track = el("div","track"); track.style.cssText="height:9px;border-radius:999px;background:var(--surface2);overflow:hidden";
@@ -1285,7 +1571,7 @@ function viewExam(root){
   bar.appendChild(meta);
   root.appendChild(bar);
 
-  var qq = q.questions[q.idx];
+  var qq = exQ(q.idx);
   var card = el("div","qcard");
   card.appendChild(el("div","qeyebrow","Question "+(q.idx+1)+" of "+n));
   card.appendChild(el("div","qt", esc(qq.q)));
@@ -1349,12 +1635,23 @@ function viewExamResult(root){
   }));
   r.appendChild(btn("act ghost","Sit it again", function(){
     try{ localStorage.removeItem(EXLS+":"+q.course); }catch(e){}
-    EXQUIZ = {course:q.course, title:q.title, questions:q.questions, answers:{}, idx:0, submitted:false, showAll:false};
-    render(); window.scrollTo(0,0);
+    startExam(q.course);
   }));
+  if(g.missed.length){
+    r.appendChild(btn("act ghost","Retake the "+g.missed.length+" I missed", function(){
+      var only = g.missed.map(function(i){ return q.order[i]; });
+      try{ localStorage.removeItem(EXLS+":"+q.course); }catch(e){}
+      startExam(q.course, only);
+    }));
+  }
   root.appendChild(r);
+  var note = el("p","muted");
+  note.style.cssText = "margin:2px 2px 0;font-size:13px";
+  note.textContent = "Questions and options are reshuffled every sitting, so you can sit this as many times as you like without learning the paper instead of the subject.";
+  root.appendChild(note);
 
-  q.questions.forEach(function(qq, i){
+  q.order.forEach(function(_, i){
+    var qq = exQ(i);
     var missed = q.answers[i] !== qq.answerIndex;
     if(!missed && !q.showAll) return;
     var box = el("div","rev "+(missed?"miss":"hit"));
@@ -1386,7 +1683,8 @@ function quizKey(w, day, slot){ return QLS+":"+w+":"+day+":"+(slot||"deep"); }
 function quizSave(){
   if(!QUIZ) return;
   try{ localStorage.setItem(quizKey(wk(), QUIZ.day, QUIZ.slot), JSON.stringify({
-    answers:QUIZ.answers, marks:QUIZ.marks, idx:QUIZ.idx, submitted:QUIZ.submitted, at:Date.now()
+    opts:QUIZ.opts, answers:QUIZ.answers, marks:QUIZ.marks,
+    idx:QUIZ.idx, submitted:QUIZ.submitted, at:Date.now()
   })); }catch(e){}
 }
 function quizRestore(w, day, slot){
@@ -1404,8 +1702,11 @@ function startQuiz(day, slot){
   var chk = checkFor(weekData(wk()), day, slot);
   if(!chk || !chk.questions || !chk.questions.length){ manualScore(day, slot); return; }
   var prev = quizRestore(wk(), day, slot);
+  var opts = (prev && prev.opts) || chk.questions.map(function(qq){
+    return (qq.type === "mcq" && qq.options) ? shuffled(qq.options.length) : null;
+  });
   QUIZ = {
-    day:day, slot:slot, chk:chk,
+    day:day, slot:slot, chk:chk, opts:opts,
     answers:(prev && prev.answers) || {},
     marks:(prev && prev.marks) || {},
     submitted:!!(prev && prev.submitted),
@@ -1422,6 +1723,19 @@ function manualScore(day, slot){
   MANUAL = {day:day, slot:slot, score: ex?ex.score:null, wrong: ex&&ex.wrong?ex.wrong.join(", "):""};
   TAB = "manual"; render();
 }
+/* Options are shown in a per-attempt random order. These two map between what is
+   on screen and what the pack says, so a clustered answer key cannot be guessed. */
+function qOptions(q, i){
+  var qq = q.chk.questions[i], perm = q.opts && q.opts[i];
+  if(!qq.options) return [];
+  if(!perm) return qq.options.slice();
+  return perm.map(function(k){ return qq.options[k]; });
+}
+function qCorrect(q, i){
+  var qq = q.chk.questions[i], perm = q.opts && q.opts[i];
+  if(!perm) return qq.answerIndex;
+  return perm.indexOf(qq.answerIndex);
+}
 function answered(q, i){
   var qq = q.chk.questions[i];
   if(qq.type==="mcq" && qq.options) return typeof q.answers[i] === "number";
@@ -1436,7 +1750,7 @@ function grade(q){
   var score=0, max=q.chk.questions.length, wrong=[], unmarked=false;
   q.chk.questions.forEach(function(qq,i){
     if(qq.type==="mcq" && qq.options){
-      if(q.answers[i]===qq.answerIndex) score++;
+      if(q.answers[i]===qCorrect(q,i)) score++;
       else wrong.push(qq.concept||("Q"+(i+1)));
     } else {
       if(q.marks[i]===true) score++;
@@ -1478,7 +1792,8 @@ function viewQuiz(root){
   }
   bar.appendChild(rail);
   var meta = el("div","deckmeta");
-  meta.appendChild(el("span",null, q.day + " · " + course + " · " + (n - unanswered(q).length) + "/" + n));
+  var countSpan = el("span",null, q.day + " · " + course + " · " + (n - unanswered(q).length) + "/" + n);
+  meta.appendChild(countSpan);
   var bb = el("button","moreb", BRIEF ? "Hide" : "Brief");
   bb.onclick = function(){ BRIEF = !BRIEF; render(); };
   meta.appendChild(bb);
@@ -1492,6 +1807,12 @@ function viewQuiz(root){
     root.appendChild(bc);
   }
 
+  /* Typing in a short answer must not re-render — that would steal the caret
+     mid-word. But the progress count and the submit gate both depend on how many
+     are still blank, so they get refreshed on their own. Assigned further down,
+     once the footer exists; called from the textarea handler. */
+  var refreshGate = function(){};
+
   var qq = q.chk.questions[q.idx];
   var card = el("div","qcard");
   card.appendChild(el("div","qeyebrow","Question "+(q.idx+1)+" of "+n));
@@ -1499,7 +1820,7 @@ function viewQuiz(root){
 
   if(qq.type === "mcq" && qq.options){
     var opts = el("div","opts");
-    qq.options.forEach(function(opt, oi){
+    qOptions(q, q.idx).forEach(function(opt, oi){
       var on = q.answers[q.idx] === oi;
       var b = el("button","opt"+(on?" on":""));
       b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span>'+esc(opt)+'</span>';
@@ -1520,6 +1841,7 @@ function viewQuiz(root){
       var rb = rail.children[q.idx];
       if(rb) rb.className = (ta.value.trim() ? "done" : "") + " at";
       quizSave();
+      refreshGate();
     };
     card.appendChild(ta);
     card.appendChild(el("p","muted","<br>You mark this one yourself after you submit — the model answer is waiting."));
@@ -1529,18 +1851,25 @@ function viewQuiz(root){
   if(q.idx > 0) foot.appendChild(btn("act ghost","Back", function(){ q.idx--; quizSave(); render(); window.scrollTo(0,0); }));
   foot.appendChild(el("div","spacer"));
 
-  var left = unanswered(q);
-  if(!left.length){
-    foot.appendChild(btn("act big","Submit all "+n, function(){
-      q.submitted = true; q.idx = 0; quizSave(); render(); window.scrollTo(0,0);
-    }));
-  } else if(q.idx < n-1){
-    foot.appendChild(btn("act","Next", function(){ q.idx++; quizSave(); render(); window.scrollTo(0,0); }));
-  } else {
-    foot.appendChild(btn("act", left.length+" still blank", function(){
-      q.idx = left[0]; toast("Question "+(left[0]+1)+" is blank"); quizSave(); render(); window.scrollTo(0,0);
-    }));
-  }
+  var gate = el("div","gate");
+  foot.appendChild(gate);
+  refreshGate = function(){
+    var left = unanswered(q);
+    countSpan.textContent = q.day + " · " + course + " · " + (n - left.length) + "/" + n;
+    gate.innerHTML = "";
+    if(!left.length){
+      gate.appendChild(btn("act big","Submit all "+n, function(){
+        q.submitted = true; q.idx = 0; quizSave(); render(); window.scrollTo(0,0);
+      }));
+    } else if(q.idx < n-1){
+      gate.appendChild(btn("act","Next", function(){ q.idx++; quizSave(); render(); window.scrollTo(0,0); }));
+    } else {
+      gate.appendChild(btn("act", left.length+" still blank", function(){
+        q.idx = left[0]; toast("Question "+(left[0]+1)+" is blank"); quizSave(); render(); window.scrollTo(0,0);
+      }));
+    }
+  };
+  refreshGate();
   card.appendChild(foot);
   root.appendChild(card);
 
@@ -1596,14 +1925,23 @@ function viewResult(root, q){
     wc.appendChild(el("div","lbl","What to revisit"));
     wc.appendChild(el("p","muted","Each of these is the concept behind a question you missed, not just the question itself."));
     var ul = el("ul"); ul.style.cssText="margin:8px 0 0;padding-left:20px;color:var(--ink2);font-size:14.5px";
-    r.wrong.forEach(function(c){ var li=el("li",null,esc(c)); li.style.marginBottom="5px"; ul.appendChild(li); });
+    r.wrong.forEach(function(cn){
+      var li = el("li");
+      var a = el("button","linkish", esc(cn));
+      a.onclick = function(){ openBuddy("concept", cn); };
+      li.appendChild(a);
+      li.style.marginBottom = "5px";
+      ul.appendChild(li);
+    });
     wc.appendChild(ul);
     root.appendChild(wc);
+    wc.appendChild(el("p","muted","<br>Tap any of them for the reasoning and somewhere to watch it explained."));
   }
 
   q.chk.questions.forEach(function(qq, i){
     var isMcq = qq.type==="mcq" && qq.options;
-    var missed = isMcq ? (q.answers[i] !== qq.answerIndex) : (q.marks[i] === false);
+    var right = isMcq ? qCorrect(q, i) : -1;
+    var missed = isMcq ? (q.answers[i] !== right) : (q.marks[i] === false);
     var pending = !isMcq && q.marks[i] === undefined;
     var box = el("div","rev "+(pending ? "" : (missed ? "miss" : "hit")));
     if(!pending) box.appendChild(el("span","tag "+(missed?"miss":"hit"), missed ? "Missed" : "Got it"));
@@ -1611,9 +1949,9 @@ function viewResult(root, q){
 
     if(isMcq){
       var opts = el("div","opts");
-      qq.options.forEach(function(opt, oi){
+      qOptions(q, i).forEach(function(opt, oi){
         var cls = "opt";
-        if(oi === qq.answerIndex) cls += " right";
+        if(oi === right) cls += " right";
         else if(q.answers[i] === oi) cls += " wrong";
         var b = el("button", cls);
         b.disabled = true;
@@ -1654,8 +1992,7 @@ function viewResult(root, q){
   foot.appendChild(sv);
   foot.appendChild(btn("act ghost","Retake", function(){
     quizClear(wk(), q.day, q.slot);
-    QUIZ = {day:q.day, slot:q.slot, chk:q.chk, answers:{}, marks:{}, submitted:false, idx:0, celebrated:false};
-    render(); window.scrollTo(0,0);
+    startQuiz(q.day, q.slot);
   }));
   root.appendChild(foot);
 }
@@ -1749,7 +2086,7 @@ function render(){
 
   if(GATE === "open" && ME && findPerson(ME)){
     var tabs = el("div","tabs");
-    [["home","Home"],["tonight","Tonight"],["sunday","Sunday"],["exam","Exam"],["progress","Stats"],["data","Data"]].forEach(function(t){
+    [["home","Home"],["tonight","Tonight"],["sunday","Sunday"],["progress","Stats"],["data","Data"],["exam","Exam"]].forEach(function(t){
       tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
         QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; } TAB=t[0]; render(); window.scrollTo(0,0);
       }));
@@ -1786,6 +2123,8 @@ function render(){
   else if(TAB==="manual") viewManual(wrap);
   root.appendChild(wrap);
 
+  if(TAB !== "quiz") buddyButton(root);
+  if(BUDDY) buddyPanel(root);
   if(TOAST) root.appendChild(el("div","toast", esc(TOAST)));
 }
 

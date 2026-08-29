@@ -1,88 +1,90 @@
 # Tuesday — PHY_102 nightly check
 
-*A.C. nomenclature as concepts: what peak, peak-to-peak, rectified mean and rms actually mean, why rms is defined by equal heating power and where the 1/√2 comes from, the phase behaviour of R, L and C under a sinusoidal supply, reactance, and why the impedance of a series RLC circuit adds in quadrature rather than arithmetically.*
+*Conceptual session on Week 6 exactly as Dr. Adeniji builds it: peak value as the maximum instantaneous value measured from zero; rms as the equivalent DC value that dissipates the same power in a resistive load; the source V = V_max sin ωt with ω = 2πf = 2π/T in rad s⁻¹; I = (V_max/R) sin ωt = I_max sin ωt so I_max = V_max/R; why a direct average of an alternating quantity is useless and why squaring fixes it, I² = I²_max sin²ωt with (I²)_av = ½I²_max; the two results I_rms = 0.7071 I_max and V_rms = 0.7071 V_max; why AC meters are calibrated in rms; and P_av = I²_rms R = V²_rms/R. Scope boundaries included: no reactance, impedance, phasors or resonance in this deck.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**1.** The rms value of an alternating current is defined as:
-a) the average of the instantaneous values of the current taken over one complete cycle
-b) the greatest instantaneous value the current reaches during a cycle, measured from zero
-c) the value of the steady direct current that would dissipate the same average power in the same resistance
-d) the square root of the peak value, which is where the figure 0.707 comes from
+**1.** Slide 4 defines the peak value of a waveform. Which statement is her definition?
+A. The maximum instantaneous value reached in one complete cycle, measured from the zero reference point
+B. The full swing of the waveform from its trough to its crest
+C. The value an AC voltmeter displays when connected to the supply
+D. The value of the waveform averaged over one positive half-cycle
 
-**2.** The factor 1/√2 that relates I_rms to I_max for a **sinusoid** arises because:
-a) the mean of sin²ωt over a complete cycle is ½, and the rms value is the square root of that mean square
-b) the mean of sin ωt over a half-cycle is 2/π, and √2 is what converts that into a peak value
-c) a sinusoid is negative for half of every cycle, so half of the peak value must be discarded
-d) average power is proportional to the current rather than to its square, so averaging the sinusoid itself supplies the factor
+**2.** Slide 9 opens by saying that a direct average of an alternating current 'gives no information (or useless)'. What exactly is wrong with it?
+A. The average is undefined because the current changes direction
+B. Over a complete cycle the positive and negative half-cycles cancel, so the mean is zero for every amplitude
+C. The average depends on where in the cycle you start measuring, so it is not unique
+D. The average is correct but too small to measure with ordinary instruments
 
-**3.** In a pure inductor carrying a sinusoidal current:
-a) the voltage across it lags the current by 90°, because an inductor always opposes a change in current
-b) the voltage across it leads the current by 90°, because the induced emf responds to the *rate of change* of the current
-c) voltage and current stay in phase, but the voltage amplitude is reduced by the factor ωL
-d) the voltage leads the current by an angle between 0° and 90° whose size depends on ωL
+**3.** She fixes the problem by squaring: I² = I²_max sin²ωt. What does the squaring achieve, and what does it cost?
+A. It doubles the frequency, which makes the average easier to compute
+B. It converts amperes to watts, so the result is already a power
+C. It removes the sign, so the negative half-cycle no longer cancels the positive one — at the cost that the answer must be square-rooted at the end to return to amperes
+D. It removes the time dependence entirely, leaving a constant
 
-**4.** The impedance of a series RLC circuit is Z = √(R² + (X_L − X_C)²) rather than R + X_L + X_C because:
-a) X_L and X_C are inherently negative quantities, so a square root is needed to return a positive Z
-b) the current is different in each of the three components, so their oppositions cannot simply be summed
-c) Kirchhoff's voltage law does not hold in an alternating circuit, so an alternative rule has to be used
-d) the three voltage drops do not reach their maxima at the same instant — V_L is 90° ahead of V_R and V_C is 90° behind it — so they must be added as vectors
+**4.** Slide 7 gives ω = 2πf = 2π/T. Which statement about these three quantities is correct?
+A. ω and f are the same quantity written in different letters, both in hertz
+B. T is measured in hertz and f in seconds
+C. ω is in hertz, and multiplying by 2π converts it to radians
+D. f is in Hz and T in s with f = 1/T, while ω is in rad s⁻¹ and is 2π times larger than f
 
-**5.** A series RLC circuit is driven at a frequency for which X_C > X_L. Then:
-a) the circuit is inductive, the current lags the supply voltage, and φ is positive
-b) the circuit is at resonance, since the two reactances are partly cancelling
-c) the circuit is capacitive, the current leads the supply voltage, and φ is negative
-d) the current leads the supply voltage by exactly 90°, since the capacitor is the dominant element
+**5.** Slide 10 ends: 'rms values are used when discussing alternating currents and voltages because AC ammeters and voltmeters are designed to read rms values.' Taken with the slide-5 definition, what does a meter reading of 240 V on an AC supply tell you?
+A. The supply would heat a given resistor at the same average rate as a steady 240 V DC supply, and its instantaneous voltage reaches about 339 V
+B. The instantaneous voltage never exceeds 240 V, that being the largest value the supply produces
+C. The voltage averaged over a complete cycle is 240 V
+D. The peak voltage is 170 V, since the rms is the larger of the two figures
 
-**6.** Averaged over a complete cycle, the power delivered to a **pure inductor** is:
-a) I_rms²X_L, since X_L is measured in ohms and plays the same role for the inductor that R plays for the resistor
-b) ½ I_max V_max, exactly as it would be for a resistor of resistance X_L
-c) zero only at the resonant frequency, where X_L is cancelled by X_C
-d) zero, because the energy stored in the magnetic field during one quarter-cycle is returned to the source during the next
+**6.** Slide 8 writes I = V/R = (V_max/R) sin ωt = I_max sin ωt. Which pair of conclusions does that chain establish?
+A. That the current lags the voltage by 90°, and that I_max = V_max/R
+B. That the current and the voltage share the same sin ωt and so are in phase, and that I_max = V_max/R
+C. That R changes with frequency, and that I_rms = V_max/R
+D. That the current is constant while the voltage alternates, and that I_max = V_max R
 
-**7.** The mean value of a sinusoidal current over a complete cycle is zero, yet a moving-iron ammeter in the circuit reads a definite non-zero value. This is because:
-a) the meter responds only to the positive half-cycles and displays their peak value
-b) the meter's deflection follows the *mean square* of the current, and its scale is calibrated to display the rms value
-c) the meter averages the current over a half-cycle, giving 0.637 I_max, and that is what "rms" means
-d) the meter measures the peak-to-peak value and halves it
+**7.** 'Root mean square' names three operations. In what order are they applied to the instantaneous current?
+A. Take the root, then the mean, then square the result
+B. Take the mean, then square it, then take the root
+C. Square it, then take the mean of the squares, then take the root
+D. Square it, then take the root, then average the result
 
-**8.** In a series RLC circuit under a sinusoidal supply, the quantity that is the same for R, L and C is:
-a) the current — both its rms value and its phase — while the three voltage drops differ in phase
-b) the voltage drop, because components in series all sit across the same supply
-c) the phase of the voltage drop, because all three drops are produced by one and the same source
-d) the average power, because the same current passes through all three components
+**8.** Which of these does the Week 6 deck actually contain?
+A. The condition for series resonance, X_L = X_C
+B. The impedance of a series RLC circuit, Z = √(R² + (X_L − X_C)²)
+C. Kirchhoff's voltage law applied by vector addition of component voltages
+D. The average power in a resistor, P_av = I²_rms R = V²_rms/R
 
-**9. (explain why)** Explain why the "effective" value of an alternating current is defined through equal *heating* rather than by averaging the waveform. Show where the factor 1/√2 comes from for a sinusoid, and say why the rectified mean (0.637 I_max) is not used as the standard quoted value.
+**9.** State the deck's definition of the rms value, and explain what the word 'equivalent' is doing in it.
+*(short answer)*
 
-**10. (explain why)** Take the current as reference and explain, from v_L = L(di/dt) and i_C = C(dv_C/dt), why the voltage leads the current by 90° in an inductor but lags it by 90° in a capacitor. State how X_L and X_C each depend on frequency, and what each element does at f → 0 and at f → ∞.
+**10.** Reproduce her slide-9 argument in your own words: why a plain average fails and why squaring rescues it.
+*(short answer)*
 
-**11. (explain why)** In a series RLC circuit the measured drops are V_R = 60 V, V_L = 130 V, V_C = 50 V, yet the supply is only 100 V. Explain why this does not violate Kirchhoff's voltage law, why V_L alone can exceed the supply voltage, and what rule replaces simple addition.
+**11.** Slide 15 says: 'Recall that the power, P = I²R. By replacing I with I_rms, we have the average value of power.' Explain why that substitution needs no correction factor, and state the two forms she ends with.
+*(short answer)*
 
-**12. (explain why)** Explain what series resonance is, what happens to Z, I, φ and the power factor there, and why the statement "the reactances cancel, so no current flows" is exactly backwards. Say also how you would tell, from a measurement of the phase angle alone, whether the supply frequency is above or below f₀.
-
----
+**12.** Her waveform diagram carries three labels: Peak Value (I_m), Average Value (I_av) = 0.6371 I_m, and RMS Value (I_rms) = 0.707 I_m. Explain what the middle one is, why it is not the rms value, and why you should not build an answer on it this week.
+*(short answer)*
 
 ## Answers
 
-**1. c** — *RMS is defined by equivalent heating power, not by the shape of the waveform.* An alternating current of rms value 5 A heats a given resistor at exactly the rate a steady 5 A DC would; this is why rms is also called the **effective** value, and why the definition works for *any* waveform, sinusoid or not. (a) is the full-cycle mean, which for a sinusoid is **zero** — it would predict no heating at all. (b) defines the **peak** value. (d) invents an arithmetic origin: 0.707 is 1/√2, obtained from the mean of the *square*, and √I_max is not even dimensionally a current.
+**1. A** — Her wording is 'the maximum instantaneous value that a waveform reaches during one complete cycle… typically measured from the zero reference point', so the reference point is the axis. Option 2 is the trough-to-crest swing, which is twice the peak — a quantity this deck never names or uses. Option 3 is the rms value: slide 10 says AC ammeters and voltmeters are designed to read rms, so a meter never shows you the peak. Option 4 is the rectified half-cycle mean, 0.6366 I_max, which appears only as a diagram label and is never defined.
 
-**2. a** — *rms = root of the mean of the square.* i² = I_max² sin²ωt, and sin²ωt = ½(1 − cos 2ωt), whose cosine term averages to zero over a whole cycle; so the mean square is I_max²/2 and its root is I_max/√2. (b) is the route to the **rectified mean**, 0.637 I_max, a different quantity. (c) treats the negative half-cycle as thrown away, but the negative half contributes just as much heating — i² is positive there too. (d) is the underlying misconception the whole definition exists to defeat: power goes as **i²**, not as i, which is precisely why the mean of i is useless here.
+**2. B** — The instantaneous value is positive through one half-cycle and negative through the other, and the two halves are equal in area, so the mean is exactly zero — the same zero for a 1 A supply and a 1000 A supply, which is why it carries no information. Option 1 confuses 'the mean is zero' with 'the mean does not exist'; it exists and equals 0. Option 3 is false for a whole number of cycles: the mean is zero from any starting point. Option 4 invents an instrumental problem where the problem is mathematical — a zero mean would predict zero heating, which is plainly wrong.
 
-**3. b** — *In an inductor the voltage leads the current by 90° (ELI).* v_L = L(di/dt), so with i = I_max sin ωt the voltage is ωLI_max cos ωt — a quarter of a cycle **ahead**. (a) states a correct physical fact (an inductor opposes change) but draws the opposite phase conclusion; leading/lagging swapped is the standard L/C confusion. (c) treats X_L as though it were a resistance, which would give zero phase shift and a dissipating element. (d) confuses a single element with a *combination*: an intermediate angle arises only when R is present, and for a pure L the shift is exactly 90° whatever the value of ωL.
+**3. C** — I² is never negative, so its graph (her slide-9 picture) sits wholly above the axis and has a genuine non-zero mean, I²_max/2. But I² is in A², so the square root at the end is not decoration — it is what returns the answer to amperes. Option 1 is a true side effect of squaring a sinusoid but not the reason she does it. Option 2 confuses I² with I²R; squaring a current does not by itself produce a power, since R is missing. Option 4 is false — I² still oscillates, as her diagram shows; only its average is constant.
 
-**4. d** — *Impedance adds in quadrature because the drops are out of phase.* Only quantities that peak together may be added arithmetically. V_R peaks with the current, V_L peaks a quarter-cycle earlier and V_C a quarter-cycle later, so V_L and V_C are 180° apart and partly cancel, leaving √(V_R² + (V_L − V_C)²) — divide by the common I to get Z. (a) is false: X_L and X_C are both positive quantities; it is their *difference* that carries a sign. (b) confuses series with parallel — in series the current is common and it is the *voltages* that differ. (c) is the opposite of the truth: KVL holds exactly, but as a **vector** (phasor) sum, which is precisely the point the week's material makes.
+**4. D** — f counts cycles per second (Hz), T is the seconds per cycle (s), and ω measures the angle swept per second, so ω = 2πf rad s⁻¹ because one cycle is 2π radians. At 50 Hz, ω = 314 rad s⁻¹ — the two numbers are not interchangeable, and putting f where ω belongs is out by 6.28. Option 1 collapses the distinction the slide exists to make. Option 2 swaps the units of T and f. Option 3 has the direction of the conversion right but attaches the wrong unit to ω itself.
 
-**5. c** — *The sign of the net reactance fixes the circuit's character.* X = X_L − X_C < 0, so tan φ = X/R < 0 and φ is negative: the current **leads**, the circuit is capacitive. (a) reverses the identification, the single commonest error in the topic. (b) confuses partial cancellation with the exact equality X_L = X_C that defines resonance. (d) forgets R: the angle is arctan(X/R), which reaches 90° only if R = 0.
+**5. A** — The rms value is defined by equal power dissipation in a resistive load, so 240 V rms and 240 V DC heat the same resistor identically; and V_max = 1.4142 × 240 = 339 V, so the instantaneous value does exceed the meter reading for part of every half-cycle. Option 2 confuses rms with peak. Option 3 confuses rms with the full-cycle mean, which is exactly zero. Option 4 uses the factor backwards and asserts a peak smaller than the rms, which no waveform can have.
 
-**6. d** — *A pure reactance stores energy, it does not dissipate it.* Over one quarter-cycle the current builds the magnetic field and the inductor absorbs energy; over the next the field collapses and returns it to the source. Instantaneous power is positive for half of each cycle and negative for the other half, in equal measure, so P_av = 0 — equivalently P_av = VI cos φ with φ = 90°, and cos 90° = 0. (a) is the "reactance is just a kind of resistance" error; I²X_L is reactive volt-amperes, not watts. (b) applies the resistor result ½V_max I_max, which already assumes v and i are in phase. (c) attaches a condition that has nothing to do with it — the average power in a pure inductor is zero at *every* frequency, and resonance is a property of a **combination**, not of one element.
+**6. B** — Dividing V_max sin ωt by the constant R leaves the same sin ωt, so nothing is shifted in time — in a resistor voltage and current rise, fall and cross zero together — and matching the result to I_max sin ωt identifies I_max = V_max/R. Option 1 imports a 90° shift that belongs to inductors and capacitors, neither of which is in this deck. Option 3 crosses an rms value with a peak value, out by √2, and makes a constant depend on frequency. Option 4 multiplies where Ohm's law divides, and would give amperes as volt-ohms.
 
-**7. b** — *A meter reads what its deflecting mechanism responds to.* A moving-iron (or thermal) instrument deflects with the **square** of the current, so it responds to the mean square, which is non-zero; the scale is then marked to show its square root, the rms value. A moving-coil (DC) meter, whose deflection is linear in i, would read essentially **zero** in the same circuit — the cleanest demonstration that the full-cycle mean really is zero. (a) would make the reading 3.0 A for I_max = 3.0 A, i.e. the peak. (c) is the standard rms/rectified-mean confusion: 0.637 I_max is the half-cycle average, and it differs from 0.707 I_max by the form factor 1.11. (d) is the peak-to-peak confusion; half of I_pp is the **peak**, not the rms.
+**7. C** — The name is read from the outside in: the root of the mean of the square. Squaring first is what removes the sign; averaging second gives I²_max/2; rooting third returns the answer to amperes as 0.7071 I_max. Option 1 reverses the order completely. Option 2 averages the raw current first, which gives zero, so squaring and rooting a zero still leaves zero. Option 4 undoes the squaring before the average is taken — the root of I² is the magnitude of I, whose average is the rectified mean 0.6366 I_max, not the rms.
 
-**8. a** — *In a series circuit the current is common; the voltages are not.* One conducting path means one current, identical in magnitude and phase at every point — which is why the current is taken as the phase reference and every drop is measured relative to it. (b) is the **parallel** property; in series the supply divides among the components. (c) is the core misconception the whole phasor method exists to correct: one source does not force one phase, because each element imposes its own 0°/+90°/−90° relationship. (d) confuses "same current" with "same power": P = I²R depends on the *resistance*, and L and C dissipate nothing at all.
+**8. D** — P_av = I²_rms R and P_av = V²_rms/R are the two lines of slide 15, and P_av is computed in her Question 3. The other three belong to the week's separate summary sheet and to the Week 7 deck on phasor diagrams and power; reactance, impedance, phase angle and resonance appear nowhere in these 21 slides. Knowing the boundary matters: a Week 6 answer built on impedance is answering a question she has not yet asked, and it costs time that should go on the three practice questions.
 
-**9.** *Concept: rms is defined by equal heating because power depends on the square of the current.* Heating in a resistance is i²R. Since i² is positive in **both** half-cycles it has a genuine non-zero average, whereas i itself averages to exactly zero over a full cycle — so an "average current" would predict no heating and be useless for rating a supply, a fuse or a cable. The effective (rms) value is therefore *defined* as the steady DC that would dissipate the same average power in the same resistance. For a sinusoid i = I_max sin ωt: i² = I_max² sin²ωt = I_max²·½(1 − cos 2ωt); the cos 2ωt term has zero mean over a cycle, so the **mean square** is I_max²/2, and **I_rms = √(I_max²/2) = I_max/√2 = 0.707 I_max**. The rectified mean 0.637 I_max is a perfectly real quantity — the half-cycle average, and what the movement of a rectifier-type meter actually senses — but it is not the value that predicts power: it is smaller than the rms by the **form factor 1.11**, so quoting it would under-state the heating by about 19% (0.637²/0.707² = 0.81). It is also related to the rms by a *different* factor for every waveform, whereas rms means the same thing (equal heating) for all of them, which is why standards quote rms.
+**9.** A good answer quotes slide 5: the rms value is a measure of the magnitude of an alternating current or voltage, representing the equivalent direct current value that would produce the same amount of power dissipation in a resistive load. On 'equivalent': it does not mean the AC and the DC are the same current — the AC is changing direction continuously and the DC is steady — it means they are interchangeable for one specific purpose, heating a resistance. So a 240 V rms supply and a 240 V DC supply make the same lamp equally bright and deliver the same average watts to the same resistor, which is exactly her slide-10 picture of an AC waveform set beside a flat 240 V DC line. The answer should draw the consequence: because the definition is about power, and power goes as the square, the rms is a root-mean-square rather than any kind of plain average.
 
-**10.** *Concept: the 90° shifts come from differentiation, and the frequency dependences follow.* Take the common current as reference, i = I_max sin ωt. **Inductor**: v_L = L(di/dt) = ωLI_max cos ωt = ωLI_max sin(ωt + 90°). The voltage is a quarter-cycle **ahead** of the current, and its amplitude is ωLI_max, so **X_L = ωL = 2πfL**. The physical reading: the inductor's voltage is largest when the current is changing fastest, which is as the current passes through **zero**, not at its peak. **Capacitor**: here it is the current that is a derivative, i = C(dv_C/dt), so if v_C = V_max sin ωt then i = ωCV_max cos ωt — the **current** is a quarter-cycle ahead, i.e. the voltage **lags** by 90°, with amplitude V_max/(1/ωC), so **X_C = 1/ωC = 1/(2πfC)**. (ELI the ICE man.) **Frequency**: X_L ∝ f — faster changes mean a bigger back-emf; X_C ∝ 1/f — at high frequency the plates never have time to charge up, so little voltage develops. **Limits**: at f → 0 (DC) an inductor is a **short circuit** (X_L → 0) and a capacitor an **open circuit** (X_C → ∞); at f → ∞ they exchange roles, the inductor blocking and the capacitor passing.
+**10.** A good answer runs it as an argument in three steps. First the problem: an alternating current is positive through one half-cycle and negative through the other, and the two halves have equal area, so averaged over a complete cycle it is exactly zero — her words, 'Both alternating voltage and current have a zero value. So direct average gives no information (or useless).' Zero is the answer for every amplitude, so it distinguishes nothing, and it would falsely predict no heating. Second the fix: square the current, I² = I²_max sin²ωt. A square is never negative, so the negative half-cycle no longer cancels the positive one and the graph of I² sits wholly above the axis, oscillating between 0 and I²_max about a mean of I²_max/2. Third the correction: I² is in A², so take the square root at the end, giving I_rms = I_max/√2 = 0.7071 I_max in amperes. It is worth adding that squaring is not an arbitrary trick — power in a resistance goes as I², so the mean of I² is precisely the quantity that determines the heating.
 
-**11.** *Concept: KVL in an AC circuit is a vector sum, because the drops peak at different instants.* KVL still holds instant by instant: at every moment v_s = v_R + v_L + v_C. What fails is adding the **amplitudes**, because the three drops reach their maxima at different times. With the common current as reference, V_R is in phase with it, V_L is 90° ahead and V_C is 90° behind — so **V_L and V_C are 180° apart and directly oppose one another**. The rule that replaces simple addition is **V_s = √(V_R² + (V_L − V_C)²)**. Here: V_L − V_C = 130 − 50 = 80 V, so V_s = √(60² + 80²) = √(3600 + 6400) = √10000 = **100 V** ✔ — exactly the supply. V_L alone can exceed the supply because at the instant the inductor's voltage peaks, the capacitor's is at its own opposite peak and the resistor's is passing through zero; the *sum at that instant* is still only 100 V. (The arithmetic sum 60 + 130 + 50 = 240 V corresponds to no instant that ever occurs.) This is also why a series circuit near resonance can develop component voltages several times the supply — a real hazard, not a paradox.
+**11.** A good answer says that the average of a product with a constant is the constant times the average, so the average of I²R is (I²)_av times R — and (I²)_av is by definition I²_rms, since I_rms is the square root of the mean square. The substitution is therefore an identity, not an approximation, and no factor is lost or gained. It should contrast this with the current itself: substituting the average current would give zero, and substituting I_max would give twice the true power, because (I²)_av = ½I²_max. The two forms are P_av = I²_rms R and, applying Ohm's law with V_rms = I_rms R, P_av = V²_rms/R, both in watts with I in amperes, V in volts and R in ohms. A good answer may close by noting that the same reasoning is why the maximum instantaneous power is V²_max/R, exactly twice P_av.
 
-**12.** *Concept: at series resonance the reactances cancel, leaving the minimum possible impedance.* Resonance is the frequency **f₀ = 1/(2π√(LC))** at which **X_L = X_C**. There the net reactance is zero, so **Z = √(R² + 0) = R**, its **minimum** value; **I = V/R** is therefore its **maximum**; **tan φ = 0/R = 0** so **φ = 0**, current and supply voltage in phase; and the **power factor cos φ = R/Z = 1**, so the circuit absorbs the full VI as real power and behaves as pure resistance. The claim "the reactances cancel so no current flows" inverts the mechanism: cancellation removes *opposition*, it does not insert a break. What cancels is the pair of **voltages** V_L and V_C — equal in size, opposite in direction, vector sum zero — and each of them individually may be many times the supply voltage (a factor Q = X_L/R). Nothing is disconnected; the loop is more open to current than at any other frequency. **From the phase angle alone**: if the current **lags** (φ > 0) the circuit is inductive, X_L > X_C, and the supply frequency is **above** f₀; if the current **leads** (φ < 0) it is capacitive and the frequency is **below** f₀; φ = 0 means you are exactly at f₀.
+**12.** A good answer identifies the middle label as the rectified mean — the average of the waveform over a single half-cycle, taken so that the full-cycle zero is avoided — and says plainly that it is a different average from the rms: the rms squares before averaging, the rectified mean does not, so 0.7071 I_max and 0.6366 I_max are answers to different questions. It should note two further things. First, the deck never defines, derives or uses this quantity anywhere — it exists only as a label on a picture, and every calculation in the deck uses 0.7071. Second, the printed figure 0.6371 is itself slightly wrong: the rectified mean of a sinusoid is 2/π = 0.6366 I_max. So the correct exam behaviour is to know what the label means, quote 0.6366 if ever asked, and use 0.7071 for every actual calculation in this week's material.

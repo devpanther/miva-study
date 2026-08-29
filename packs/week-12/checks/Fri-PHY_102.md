@@ -1,60 +1,90 @@
 # Friday — PHY_102 nightly check
 
-*The same week's transformers worked numerically: turns ratio and secondary voltage, primary current from the ideal power balance, the deck's two appliance examples, resistance transformed by the square of the turns ratio, efficiency from input and output power, and line loss in high-voltage transmission.*
+*Problems-only session on Week 12 transformers. Compute with the lecturer's three tools and nothing else: V₂/V₁ = N₂/N₁ for turns ratios and voltages, P_av = V₁I₁ together with I₁V₁ = I₂V₂ for currents, and V₁/I₁ = R/(N₂/N₁)² for resistances. Covers all six part-answers of her two worked examples — 2, 8.0 A, 60 Ω, 1/2, 6.67 A, 36 Ω — the line she leaves out of Example 2(c), fresh numbers on the same three formulas, and one wrong solution to diagnose.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**1.** A transformer's 500-turn primary is connected to a 240 V rms supply and its secondary has 25 turns. The secondary voltage is:
-a) 4800 V
-b) 12 V
-c) 20 V
-d) 0.050 V
+**1.** Example 1: a 960-W coffeemaker designed for a 240-V line is to run from the USA-standard 120-V line. What turns ratio N₂/N₁ does the lecturer obtain?
+A. 1/2
+B. 2
+C. 240
+D. 1/4
 
-**2.** The transformer of question 1 supplies a 12 V, 60 W lamp from its secondary. Treating it as ideal, the current drawn from the 240 V supply is:
-a) 100 A
-b) 5.0 A
-c) 0.0125 A
-d) 0.25 A
+**2.** Example 1(b): what current does the coffeemaker draw from the 120-V line?
+A. 4.0 A
+B. 2.0 A
+C. 0.125 A
+D. 8.0 A
 
-**3.** A 960 W appliance designed for a 240 V line is run from a 120 V supply through an ideal transformer. The current drawn from the 120 V supply is:
-a) 8.0 A
-b) 4.0 A
-c) 16 A
-d) 2.0 A
+**3.** Example 1(c): with V₁ = 120 V, I₁ = 8.0 A and N₂/N₁ = 2, what is the resistance of the coffeemaker?
+A. 60 Ω
+B. 15 Ω
+C. 30 Ω
+D. 7.5 Ω
 
-**4.** For that same 960 W, 240 V appliance: what resistance does it present at its own terminals, and what resistance does the 120 V supply appear to be driving?
-a) 60 Ω at the appliance and 60 Ω at the supply — a transformer does not alter resistance.
-b) 30 Ω at the appliance and 15 Ω at the supply.
-c) 60 Ω at the appliance and 15 Ω at the supply.
-d) 60 Ω at the appliance and 30 Ω at the supply.
+**4.** Example 2(b): the 1600-W dryer, rated 120 V, is run through a transformer from a 240-V European outlet. What current does it draw from that outlet?
+A. 13.3 A
+B. 3.33 A
+C. 6.67 A
+D. 1600 A
 
-**5.** A transformer draws 10.0 A from a 240 V rms supply, and its secondary delivers 22.0 A at 100 V rms. Its efficiency is about:
-a) 100 %
-b) 41.7 %
-c) 45.5 %
-d) 91.7 %
+**5.** Slide 21 ends at V₁/I₁ = 240/6.67 = 36 Ω without using the ratio N₂/N₁ = 1/2 it lists. Finish the calculation: what is the dryer's own resistance?
+A. 36 Ω
+B. 9 Ω
+C. 18 Ω
+D. 4.5 Ω
 
-**6.** A station sends 100 kW along a line of total resistance 4.0 Ω. The power wasted in the line at a transmission voltage of 1.0 kV, and at 10 kV, is respectively:
-a) 40 kW and 0.40 kW
-b) 40 kW and 4.0 kW
-c) 400 kW and 4.0 kW
-d) 0.40 kW and 40 kW
+**6.** An ideal transformer has N₁ = 400 turns and N₂ = 100 turns, with 240 V rms applied to the primary. What is the secondary voltage?
+A. 960 V
+B. 15 V
+C. 24 V
+D. 60 V
 
-**7.** A 60 W soldering iron rated at 24 V is run from the 240 V mains through an ideal transformer whose primary has 1200 turns. The number of secondary turns and the current in the primary are:
-a) 12 000 turns and 0.25 A
-b) 120 turns and 2.5 A
-c) 120 turns and 0.25 A
-d) 12 000 turns and 2.5 A
+**7.** An ideal transformer draws 5.0 A from a 200-V rms supply, and its secondary is at 25 V rms. What is the secondary current?
+A. 40 A
+B. 0.625 A
+C. 5.0 A
+D. 8.0 A
 
-**8.** An ideal transformer feeds a fixed resistive load from its secondary. The number of secondary turns is now doubled, with the supply, the primary and the load all unchanged. The secondary voltage, the power delivered to the load, and the primary current become, respectively:
-a) doubled, doubled, doubled
-b) doubled, quadrupled, quadrupled
-c) doubled, quadrupled, halved
-d) halved, quartered, halved
+**8.** A load of resistance 8.0 Ω is connected across the secondary of an ideal transformer whose turns ratio is N₂/N₁ = 1/4. What resistance does the primary source appear to be driving?
+A. 32 Ω
+B. 2.0 Ω
+C. 128 Ω
+D. 0.50 Ω
 
-**9. (explain why)** A 1600 W hair dryer designed for 120 V is taken to Europe, where the outlets supply 240 V rms. State what transformer is needed and its turns ratio, calculate the current the dryer draws from the European outlet and the resistance that outlet appears to be driving, and show that this apparent resistance agrees with the dryer's own resistance transformed by the square of the turns ratio.
+**9.** Work Example 1 in full, all three parts, in the lecturer's own steps, and finish with a check that power is conserved.
+*(short answer)*
 
-**10. (explain why)** A transformer supplied with 4.00 kW delivers 3.72 kW to its load. Calculate the efficiency and the power lost. Given that 200 W of that loss is I²R heating in the windings, explain what becomes of that 200 W and of the remaining 80 W when the load is disconnected but the primary is left connected to the mains.
+**10.** Work Example 2 parts (b) and (c) in full, then add the line slide 21 omits. Say what is exact and what is rounded in the numbers 6.67 A, 13.3 A and 36 Ω.
+*(short answer)*
 
-**11. (explain why)** A town needs 500 kW delivered along a line of resistance 2.0 Ω. Work out the line current and the power wasted in the line for transmission at 5.0 kV and at 25 kV, and explain from the formulae why raising the voltage by a factor of five cuts the waste by a factor of twenty-five rather than five.
+**11.** A 25 Ω load is connected across the secondary of an ideal transformer with N₂/N₁ = 5, and 60 V rms is applied to the primary. Using only the deck's formulas, find the resistance seen at the primary, the primary current, the secondary voltage and the secondary current, and verify the power.
+*(short answer)*
 
-**12. (explain why)** An amplifier of internal resistance 800 Ω is to drive an 8.0 Ω loudspeaker through a transformer. Find the turns ratio N₁ : N₂ required, and explain why connecting the loudspeaker straight to the amplifier delivers far less power to it, even though a direct connection involves no transformer losses at all.
+**12.** A student answers Example 1(c) like this: 'V₁/I₁ = 120/8 = 15 Ω, and N₂/N₁ = 2, so R = 15 × 2 = 30 Ω.' Diagnose the error, give the correct answer, and describe a check that would have caught it in seconds.
+*(short answer)*
+
+## Answers
+
+**1. B** — The 120-V line is the source, so V₁ = 120 V, and the coffeemaker is the load, so V₂ = 240 V: N₂/N₁ = V₂/V₁ = 240/120 = 2, twice as many turns on the secondary — a step-up transformer. Option 1 puts the appliance's rating in the primary, which is Example 2's answer, not this one. Option 3 quotes a voltage as if it were a ratio; the turns ratio is dimensionless. Option 4 squares an already inverted ratio, importing the square that belongs only in the resistance formula.
+
+**2. D** — P_av = V₁I₁ gives I₁ = P_av/V₁ = 960/120 = 8.0 A. Option 1 is the secondary current, I₂ = 960/240 = 4.0 A — the current in the coffeemaker itself, and the right answer to a question that was not asked. Option 2 halves that again, applying the turns ratio a second time. Option 3 inverts the formula, computing V₁/P_av. Always ask which side of the transformer the question is standing on.
+
+**3. A** — V₁/I₁ = 120/8 = 15 Ω, then V₁/I₁ = R/(N₂/N₁)² rearranges to R = (V₁/I₁)(N₂/N₁)² = 15(2)² = 15 × 4 = 60 Ω. Check: V₂/I₂ = 240/4.0 = 60 Ω. Option 2 stops at the apparent resistance and never applies the formula at all. Option 3 multiplies by the ratio instead of its square, the commonest slip in this calculation. Option 4 divides by the square instead of multiplying, running the formula backwards.
+
+**4. C** — The outlet is the primary, so I₁ = P_av/V₁ = 1600/240 = 6.67 A (exactly 20/3 A). Option 1 is I₂ = 1600/120 = 13.3 A, the current in the dryer element on the secondary — the mirror of the trap in Example 1(b). Option 2 halves 6.67 A, applying the turns ratio to a current that already accounts for it. Option 3 divides by nothing. Sanity check: I₁V₁ = 6.67 × 240 ≈ 1600 W = I₂V₂ = 13.3 × 120.
+
+**5. B** — R = (V₁/I₁)(N₂/N₁)² = 36 × (1/2)² = 36 × 1/4 = 9 Ω, confirmed independently by R = V₂/I₂ = 120/13.3 = 9 Ω and by V₂²/P_av = 14400/1600 = 9 Ω. Option 1 repeats the apparent resistance, which answers what the dryer appears to have at 240 V, not what it is. Option 2 multiplies by the ratio rather than its square. Option 4 applies the square once more on top of the correct answer. Note that Example 1(c) asked for the appliance's own resistance and Example 2(c) for the apparent one — the deck ends its two examples on different quantities.
+
+**6. D** — V₂ = V₁(N₂/N₁) = 240 × (100/400) = 240 × 1/4 = 60 V, and since N₂ < N₁ this is a step-down transformer, so a secondary voltage below 240 V is what you should expect. Option 1 inverts the ratio, multiplying by 4 instead of dividing — the answer a step-up transformer would give. Option 2 divides by the square of the ratio, 240/16, borrowing the square from the resistance formula where it does not belong. Option 3 divides by 10, a slip in the turns arithmetic.
+
+**7. A** — I₁V₁ = 5.0 × 200 = 1000 W, so I₂ = 1000/25 = 40 A: the voltage was stepped down by 8, so the current is stepped up by 8. Option 2 multiplies by 25/200 instead of dividing, treating current like voltage — the single most common error on this equation. Option 3 assumes the current is unchanged, which would violate the power equation. Option 4 quotes the ratio 200/25 itself as though a dimensionless number were an ampere reading.
+
+**8. C** — V₁/I₁ = R/(N₂/N₁)² = 8.0/(1/4)² = 8.0/(1/16) = 8.0 × 16 = 128 Ω. Because this is a step-down transformer the load looks larger from the primary, the opposite of Example 1, where a step-up made 60 Ω look like 15 Ω. Option 1 uses the ratio to the first power, 8.0 × 4. Option 2 divides by 4 instead of multiplying. Option 4 divides by 16 rather than multiplying, running the formula in reverse. Dividing by a fraction is what makes this number grow.
+
+**9.** A good answer sets V₁ = 120 V (the line, hence the primary) and V₂ = 240 V (the coffeemaker, hence the secondary). (a) N₂/N₁ = V₂/V₁ = 240/120 = 2, so the secondary needs twice as many turns as the primary — a step-up transformer. (b) P_av = V₁I₁ gives I₁ = 960/120 = 8.0 A from the line, and I₂ = P_av/V₂ = 960/240 = 4.0 A in the coffeemaker; the answer to (b) is 8.0 A. (c) V₁/I₁ = 120/8 = 15 Ω, then R = (V₁/I₁)(N₂/N₁)² = 15(2)² = 60 Ω. The check should be explicit: I₁V₁ = 8.0 × 120 = 960 W and I₂V₂ = 4.0 × 240 = 960 W, equal as slide 10 requires, and the current ratio 8.0/4.0 = 2 is the inverse of the voltage ratio. Credit naming which of the three equations each part used.
+
+**10.** A good answer sets V₁ = 240 V and V₂ = 120 V. (b) I₁ = P_av/V₁ = 1600/240 = 6.67 A from the outlet, and I₂ = P_av/V₂ = 1600/120 = 13.3 A in the dryer element. (c) V₁/I₁ = 240/6.67 = 36 Ω, the resistance the dryer appears to have at 240 V, which is what the question asked. The omitted line: R = (V₁/I₁)(N₂/N₁)² = 36 × (1/2)² = 9 Ω, the dryer's own resistance, confirmed by V₂/I₂ = 120/13.3 = 9 Ω. On rounding: 1600/240 = 20/3 = 6.666… A and 1600/120 = 40/3 = 13.33… A, so both currents are three-significant-figure roundings; 240 divided by the exact 20/3 is 36 Ω exactly, while 240/6.67 is 35.98, so her 36 Ω is the exact value rather than a rounding of the divided figure.
+
+**11.** A good answer works in the deck's own order. Resistance seen at the primary: V₁/I₁ = R/(N₂/N₁)² = 25/5² = 25/25 = 1.0 Ω. Primary current: I₁ = V₁ divided by that apparent resistance = 60/1.0 = 60 A. Secondary voltage from equation 3: V₂ = V₁(N₂/N₁) = 60 × 5 = 300 V. Secondary current from slide 10: I₂ = I₁V₁/V₂ = (60 × 60)/300 = 3600/300 = 12 A. Verification: I₁V₁ = 60 × 60 = 3600 W and I₂V₂ = 12 × 300 = 3600 W, equal; and as a second check the load itself takes V₂/R = 300/25 = 12 A, matching I₂. It should note that a step-up of 5 in voltage is a step-down of 5 in current, 60 A to 12 A, and that the 25 Ω load looks like only 1 Ω from the primary because the ratio enters squared.
+
+**12.** A good answer identifies the single defective step: the formula is V₁/I₁ = R/(N₂/N₁)², so rearranging gives R = (V₁/I₁)(N₂/N₁)², and the ratio must be squared — 15 × (2)² = 15 × 4 = 60 Ω, not 15 × 2 = 30 Ω. Everything before that line, including 120/8 = 15 Ω, is correct, so this is one arithmetic move rather than a misunderstanding of the setup. The check: the coffeemaker is a 960-W appliance running at 240 V, so its current is 960/240 = 4.0 A and its resistance is V₂/I₂ = 240/4.0 = 60 Ω, computed without the transformation formula at all; 30 Ω would imply 240/30 = 8 A through the coffeemaker and hence 1920 W, twice its rating. A good answer should say that recomputing the quantity a second way from the secondary side is the general habit worth having here.

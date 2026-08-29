@@ -1,106 +1,290 @@
 # PHY_102 — Week 6 Summary
 
-*General Physics II · Week 6 (12–18 Oct 2026) · Topic: Nomenclature in A.C. Circuits — Peak and RMS Values of Current and Voltage, Reactance, Impedance and the Series RLC Circuit*
+*General Physics II · Topic: Nomenclature in A.C. Circuits — Peak and RMS Values of Current and Voltage · Lecturer: Dr. Sharafadeen Adeniji, PhD Theoretical and Applied Physics*
+
+**Scope note:** this rewrite follows the deck slide-for-slide. The lecturer teaches one chain of
+ideas and nothing else: the sinusoidal source **V = V_max sin ωt**; the angular frequency
+**ω = 2πf = 2π/T**; the current that follows from Ohm's law, **I = (V_max/R) sin ωt = I_max sin ωt**;
+why a plain average of an alternating quantity is useless; the squaring fix, **I² = I²_max sin²ωt**
+with **(I²)_av = ½I²_max**; the two results **I_rms = (1/√2)I_max = 0.7071 I_max** and
+**V_rms = (1/√2)V_max = 0.7071 V_max**; and average power **P_av = I²_rms R = V²_rms/R**. She then
+works **three practice questions**, which are the whole of her problem-solving content.
+
+She does **NOT** cover, anywhere in these 21 pages: inductive or capacitive reactance (X_L, X_C),
+impedance Z, the series RLC circuit, phasor diagrams, resonance, phase angle φ, power factor
+cos φ, peak-to-peak value, form factor, peak (crest) factor, or the trigonometric derivation
+sin²ωt = ½(1 − cos 2ωt) that produces the ½. The **average value 0.6371 I_m appears only as a
+label on a diagram** (slide 7, repeated on slide 8) — she never defines it, never derives it and
+never uses it in a calculation.
+
+*Aside, clearly marked:* the week's **summary sheet** (a separate document from the deck) does
+discuss series RLC circuits, reactances and Kirchhoff's voltage law applied vectorially. **None of
+it is taught in this deck.** Phasor diagrams, resonance and power factor are the subject of the
+**Week 7** deck, "Phasor Diagrams and Power in an AC Circuit". Do not spend Week 6 revision on
+RLC algebra; spend it on the three practice questions below, which are the shape of the exam
+questions.
 
 ## The 8 most examinable things this week
 
-1. **The sinusoidal source.** v = V_max sin ωt and i = I_max sin(ωt ∓ φ), where **ω = 2πf = 2π/T** (rad s⁻¹), f is the frequency in Hz and T the period in s. One complete cycle = one positive half-cycle + one negative half-cycle. **V_max** (the amplitude, or peak value) is the largest instantaneous value measured **from zero**; **peak-to-peak = 2V_max**.
-2. **RMS is defined by equal heating, not by geometry.** The rms value of an alternating current is **the steady direct current that would dissipate the same average power in the same resistance**. For a *sinusoid only*: **I_rms = I_max/√2 = 0.707 I_max** and **V_rms = V_max/√2 = 0.707 V_max**, equivalently **I_max = √2 I_rms = 1.414 I_rms**.
-3. **Where the √2 comes from.** i² = I_max² sin²ωt, and sin²ωt = ½(1 − cos 2ωt) averages to **½** over a whole cycle. So the **mean square** is I_max²/2 and its root is I_max/√2. The factor is the square root of the mean of the *square* — nothing to do with averaging the sinusoid itself.
-4. **The full-cycle mean of a sinusoid is zero**; the useful average is the **rectified mean over a half-cycle**, **I_av = (2/π)I_max = 0.637 I_max**. Hence **form factor = I_rms/I_av = 0.707/0.637 = 1.11** and **peak (crest) factor = I_max/I_rms = √2 = 1.414**. Quoted mains values (220 V, 240 V) are always **rms**.
-5. **Average power.** In a resistor, **P_av = I_rms²R = V_rms²/R = V_rms I_rms = ½ V_max I_max**, and the **maximum instantaneous power is P_max = V_max I_max = 2P_av**. In the general AC circuit, **P_av = V_rms I_rms cos φ**, where **cos φ = R/Z** is the power factor. **A pure inductor or capacitor dissipates zero average power** — energy stored in one quarter-cycle is returned in the next.
-6. **Phase relationships, one per element** (with the *current* as reference, since the current is common in series):
- · **Resistor** — v and i **in phase**; V_R = IR.
- · **Inductor** — voltage **leads** current by **90°**, because v_L = L(di/dt) and the derivative of a sine is a cosine; **X_L = ωL = 2πfL** (Ω), rising with frequency.
- · **Capacitor** — voltage **lags** current by **90°**, because i = C(dv/dt); **X_C = 1/ωC = 1/(2πfC)** (Ω), falling with frequency.
- Mnemonic: **ELI the ICE man** — in L, E (voltage) leads I; in C, I leads E.
-7. **Series RLC by vector (phasor) addition.** The **current is common**, the voltage drops are not in phase, so Kirchhoff's voltage law is applied **vectorially**:
- **V_s = √(V_R² + (V_L − V_C)²)**, **Z = √(R² + (X_L − X_C)²)**, **I = V_s/Z**, **tan φ = (X_L − X_C)/R = (V_L − V_C)/V_R**.
- **X_L > X_C → inductive**, current **lags** V, φ positive (lagging). **X_C > X_L → capacitive**, current **leads** V, φ negative (leading).
-8. **Series resonance.** When **X_L = X_C**, the reactances cancel: **f₀ = 1/(2π√(LC))**, **Z = R (a minimum)**, **I = V/R (a maximum)**, **φ = 0**, **power factor = 1**, and the circuit behaves as pure resistance. V_L and V_C are then equal, opposite, and each may be **many times the supply voltage** — this is not a violation of KVL, because they cancel in the vector sum.
+1. **Peak value, defined (slide 4).** "Peak Value refers to the **maximum instantaneous value**
+   that a waveform reaches during one complete cycle. It represents the highest point of the
+   waveform and is typically **measured from the zero reference point**." Measured from zero — not
+   from trough to crest.
+2. **RMS value, defined (slide 5).** "Root Mean Square (RMS) value is a measure of the magnitude
+   of an alternating current (AC) or voltage. It represents the **equivalent direct current (DC)
+   value that would produce the same amount of power dissipation in a resistive load**." RMS is
+   defined by **equal heating**, not by the shape of the curve.
+3. **The source equation (slide 6).** **V = V_max sin ωt**, where V is the *instantaneous* voltage
+   (volts), V_max is the peak value or maximum output voltage — "otherwise known as the **voltage
+   amplitude**" — and ω is the angular frequency of the AC voltage.
+4. **Angular frequency (slide 7).** **ω = 2πf = 2π/T**, with f the frequency of the source (Hz)
+   and T the period of the source (s). ω is in **radians per second**, and the ωt inside the sine
+   is an **angle in radians**, never in hertz and never in degrees.
+5. **The current follows from Ohm's law (slide 8).** **I = V/R = (V_max/R) sin ωt = I_max sin ωt.**
+   Read off the identification: **I_max = V_max/R**. I is the instantaneous current; I_max is "the
+   peak value or maximum output current of the source (otherwise known as the **current
+   amplitude**)".
+6. **Why a direct average fails, and the fix (slide 9).** "Both alternating voltage and current
+   have a **zero value**. So direct average gives no information (or useless). In order to
+   evaluate an alternating parameter in quantity, we use **root mean square (rms)**: we square the
+   alternating current I" — **I² = I²_max sin²ωt**. Squaring destroys the sign, so the negative
+   half-cycle stops cancelling the positive one.
+7. **The mean square and the √2 (slide 10).** **(I²)_av = ½ I²_max**, and "RMS is the square root
+   of the above equation": **I_rms = (1/√2) I_max = 0.7071 I_max**, and likewise
+   **V_rms = (1/√2) V_max = 0.7071 V_max**. Her closing line, repeated on the SUMMARY slide: "rms
+   values are used when discussing alternating currents and voltages because **AC ammeters and
+   voltmeters are designed to read rms values**."
+8. **Average power (slide 15).** "Recall that the power, **P = I²R**. By replacing I with I_rms,
+   we have the average value of power, P as: **P_av = I²_rms R**. Apply Ohm's law,
+   **P_av = V²_rms/R**." Her Question 3 then uses **P_max = V²_max/R** for the maximum power.
 
-## Definitions of the AC quantities, stated exactly
+## Her development, in her order
 
-| Quantity | Symbol | For a sinusoid | Meaning |
-|---|---|---|---|
-| Instantaneous value | v, i | V_max sin ωt | value at one instant |
-| Peak (maximum) value | V_max, I_max | — | greatest instantaneous value, measured from zero |
-| Peak-to-peak | V_pp | 2V_max | crest to trough |
-| Mean over a full cycle | — | **0** | positive and negative halves cancel |
-| Rectified mean (half-cycle) | V_av | (2/π)V_max = 0.637 V_max | area under a half-cycle ÷ its length |
-| RMS (effective) value | V_rms | V_max/√2 = 0.707 V_max | the equivalent DC for power |
-| Form factor | — | 1.11 | rms ÷ rectified mean |
-| Peak factor | — | 1.414 | peak ÷ rms |
+### Slide 3 — Introduction (what a cycle is)
 
-**Why rms and not the mean.** Power in a resistance goes as **i²R**, and i² is positive in both half-cycles, so it has a genuine non-zero average; the current itself averages to zero and would predict zero heating. This is why "rms" is also called the **effective** value: a 240 V rms AC supply lights a lamp exactly as brightly as a 240 V DC supply. It also explains why a **moving-coil (DC) meter reads ~0** in an AC circuit while a **moving-iron or thermal meter reads the rms value** — the second responds to i².
+"An alternating current (AC) is a type of current that **changes direction over time**. A complete
+cycle of AC consists of two parts: a **positive half-cycle and a negative half-cycle**. When AC is
+graphed, the positive half-cycle starts at zero, rises to a maximum positive value, and then
+returns to zero. The negative half-cycle starts at zero, falls to a maximum negative value, and
+then returns to zero. This graph is called a **sinusoidal waveform**."
 
-**Reactance is not resistance.** X_L and X_C are measured in ohms and do limit the current (V = IX), but they **dissipate no energy** — they store it and give it back. This is precisely why they enter Z at 90° to R rather than adding to it.
+The sign convention that matters for the rest of the week is here: the instantaneous value is a
+**signed** quantity — positive for half the cycle, negative for the other half. Peak and rms values
+are **magnitudes**; they are always quoted positive.
 
-| | R | L | C |
-|---|---|---|---|
-| Opposition (Ω) | R | X_L = 2πfL | X_C = 1/(2πfC) |
-| Frequency dependence | none | ∝ f | ∝ 1/f |
-| Phase of V relative to I | 0° | +90° (leads) | −90° (lags) |
-| Average power | I_rms²R | 0 | 0 |
-| At f → 0 (DC) | R | 0 (short) | ∞ (block) |
-| At f → ∞ | R | ∞ (block) | 0 (short) |
+### Slides 6–7 — the source and its angular frequency
 
-## Worked example 1 — peak, rms and power in a resistive AC circuit
+**V = V_max sin ωt**, with **ω = 2πf = 2π/T** (slide 7 adds: "f is the frequency of the source, T
+is the period of the source"). Slide 7 closes with the sentence that fixes the sign convention:
+"The voltage is **positive during one half of the cycle and negative during the other half**."
 
-*An AC generator of maximum voltage 24.0 V and frequency 60.0 Hz is connected to R = 265 Ω. Find (a) the rms voltage, (b) the rms current, (c) the average power, (d) the maximum power dissipated.*
+Units, carefully: f in Hz (s⁻¹), T in s, ω in **rad s⁻¹**. The three are one equation read three
+ways — f = 1/T, ω = 2πf, ω = 2π/T. If a question gives you ω and asks for f, divide by 2π; if it
+gives f and asks for ω, multiply. Substituting f where ω belongs scales the angle by 6.28.
 
-(a) V_rms = V_max/√2 = 24.0/1.41421 = **16.97 V**.
-(b) I_rms = V_rms/R = 16.97/265 = **0.0640 A = 64.0 mA**. (Equivalently I_max = 24.0/265 = 0.0906 A, then I_rms = 0.0906/1.41421 = 0.0640 A — *the same √2 must be applied once, not twice*.)
-(c) P_av = V_rms I_rms = (16.97)(0.0640) = **1.09 W**. Cross-check: V_rms²/R = 288.0/265 = 1.087 W ✔ and I_rms²R = (0.0640)²(265) = 1.087 W ✔.
-(d) P_max = V_max I_max = (24.0)(0.0906) = **2.17 W**, which is exactly **2P_av** — the instantaneous power in a resistor oscillates between 0 and 2P_av at twice the supply frequency, never going negative.
-The 60.0 Hz is not needed for any part: in a **purely resistive** circuit nothing depends on frequency.
+*Note on her notation:* in the typeset formulae she writes the argument of the sine as **wt**
+(a Latin w) rather than ωt, on slides 8 and 9. It is the same angular frequency ω defined on
+slide 7. Write ω in your own work.
 
-## Worked example 2 — full series RLC solve
+### Slide 8 — the current, from Ohm's law
 
-*R = 30 Ω, L = 0.1 H, C = 50 μF, supplied with 100 V rms at 50 Hz. Find X_L, X_C, Z, I, the three component voltages, the phase angle and the average power.*
+**I = V/R = (V_max/R) sin ωt = I_max sin ωt.**
 
-1. **ω = 2πf = 2π(50) = 314.16 rad s⁻¹.** (Using f = 50 here instead of ω is the single commonest error in the whole topic.)
-2. **X_L = ωL = (314.16)(0.1) = 31.4 Ω.**
- **X_C = 1/(ωC) = 1/[(314.16)(50 × 10⁻⁶)] = 1/0.015708 = 63.7 Ω.** (50 μF = 50 × 10⁻⁶ F, *not* 50.)
-3. **Net reactance X = X_L − X_C = 31.4 − 63.7 = −32.2 Ω** — negative, so the circuit is **capacitive**.
-4. **Z = √(R² + X²) = √(30² + 32.2²) = √(900 + 1040) = √1940 = 44.0 Ω.** (Note the sign of X is irrelevant here because it is squared; it matters only for φ.)
-5. **I = V_s/Z = 100/44.0 = 2.27 A** — the same current in all three components.
-6. **V_R = IR = (2.27)(30) = 68.1 V; V_L = IX_L = (2.27)(31.4) = 71.3 V; V_C = IX_C = (2.27)(63.7) = 145 V.**
- Arithmetic sum = 284 V, which is nonsense. **Vector sum**: √(68.1² + (71.3 − 145)²) = √(4640 + 5360) = √10000 = **100 V ✔** — the supply, as KVL requires.
- Note **V_C = 145 V exceeds the 100 V supply**. Perfectly legal: V_L and V_C are 180° apart and cancel each other before the resultant is taken.
-7. **tan φ = X/R = −32.2/30 = −1.075 → φ = −47.1°.** The current **leads** the supply voltage by **47.1°** (capacitive). Power factor cos φ = R/Z = 30/44.0 = **0.681 leading**.
-8. **P_av = V_rms I_rms cos φ = (100)(2.27)(0.681) = 155 W.** Cross-check I²R = (2.27)²(30) = **155 W ✔** — all of it in the resistor; L and C dissipate nothing.
-9. **Resonance for the same components**: f₀ = 1/(2π√(LC)) = 1/(2π√(0.1 × 50 × 10⁻⁶)) = 1/(2π × 2.236 × 10⁻³) = **71.2 Hz**. Since 50 Hz < 71.2 Hz the circuit is capacitive, exactly as the sign of X said. Driven at 71.2 Hz instead, Z would fall to 30 Ω and I would rise to 3.33 A.
+Two things are being asserted at once, and both are examinable. First, in a **resistor** the
+current is in step with the voltage — the same sin ωt, no phase shift, no extra angle. Second, the
+amplitudes are related by Ohm's law: **I_max = V_max/R** (amperes = volts ÷ ohms). Because the
+relation is a plain proportionality, the *same* factor 0.7071 converts each amplitude to its rms
+value, so **I_rms = V_rms/R** as well. That is why Question 3 can go straight from V_rms to I_rms
+without ever computing I_max.
 
-## Worked example 3 — reading the phase angle backwards from data
+### Slides 9–10 — why rms, and where the √2 comes from
 
-*A series RLC circuit draws 4.0 A rms from a 200 V rms supply, and the current lags the voltage by 60°. Find Z, R, the net reactance and the average power.*
+Her argument in three moves:
 
-Z = V/I = 200/4.0 = **50 Ω**. Lagging → **inductive**, so X_L − X_C is **positive**.
-R = Z cos φ = 50 cos 60° = 50(0.500) = **25 Ω**. X = Z sin φ = 50 sin 60° = 50(0.866) = **+43.3 Ω**.
-Check: √(25² + 43.3²) = √(625 + 1875) = √2500 = 50 ✔.
-P_av = VI cos φ = (200)(4.0)(0.500) = **400 W**; check I²R = (16.0)(25) = **400 W ✔**.
-The circuit *appears* to draw VI = 800 VA, but only 400 W is real power — the other 400 var surges in and out of the reactance every cycle without being consumed.
+1. **The problem.** "Both alternating voltage and current have a zero value. So direct average
+   gives no information (or useless)." Over a whole cycle the positive and negative halves cancel
+   exactly, so the mean of I is zero — which would predict that an AC current does no heating at
+   all, which is false.
+2. **The fix.** Square it: **I² = I²_max sin²ωt.** Her diagram on slide 9 plots I² against t: the
+   squared current never goes below zero, oscillates between 0 and I²_max, and visibly has its
+   mean line at **I²_max / 2**.
+3. **The result.** "Now, we can average I²": **(I²)_av = ½ I²_max.** "RMS is the square root of the
+   above equation": **I_rms = (1/√2) I_max = 0.7071 I_max**, and **V_rms = (1/√2) V_max =
+   0.7071 V_max**.
 
-## Commonly confused
+Read the name backwards to remember the order of operations: **root** of the **mean** of the
+**square**. Square first, average second, square-root third. It is *not* the average of the
+waveform and it is *not* the square root of the average.
 
-- **Peak vs rms.** V_max = √2 V_rms (multiply) and V_rms = V_max/√2 (divide). Going the wrong way turns 240 V into 170 V instead of 339 V. Mains figures quoted anywhere are **rms**.
-- **Peak vs peak-to-peak.** V_pp = 2V_max. An oscilloscope trace 6 cm tall about the axis has V_max = 3 cm worth, not 6.
-- **RMS vs average.** rms = 0.707 V_max, rectified mean = 0.637 V_max, full-cycle mean = **0**. The rms is the root of the mean of the **square**; it is not any kind of average of the waveform itself.
-- **ω vs f.** X_L = 2πfL, not fL; X_C = 1/(2πfC), not 1/(fC). Dropping the 2π scales every reactance by 6.28.
-- **X_L vs X_C.** X_L = ωL (rises with f); X_C = 1/ωC (falls with f). Writing X_C = ωC is the standard slip and gives a number ~10⁴ times too small.
-- **Prefixes.** mH = 10⁻³ H, μF = 10⁻⁶ F, and both must be converted **before** substitution. A capacitance left in μF gives a reactance a million times too small.
-- **Which leads in which element.** In **L** the *voltage* leads the current; in **C** the *current* leads the voltage. Stating "the current leads in an inductor" reverses the whole circuit's character.
-- **Leading vs lagging for the circuit.** X_L > X_C → inductive → current **lags**, φ > 0. X_C > X_L → capacitive → current **leads**, φ < 0. Decide from the *net* reactance, never from which component "looks bigger" on the diagram.
-- **Adding impedances arithmetically.** Z ≠ R + X_L + X_C, and Z ≠ R + (X_L − X_C). Only the quadrature form √(R² + (X_L − X_C)²) is correct, because the drops peak at different instants.
-- **Adding component voltages arithmetically.** V_s ≠ V_R + V_L + V_C. Use √(V_R² + (V_L − V_C)²). This is why V_C or V_L may legitimately exceed the supply.
-- **Reactance treated as resistance in power.** P = I²R only. I²X_L is not a power — it is reactive volt-amperes. The average power in a pure L or C is exactly **zero**.
-- **VI vs VI cos φ.** VI is the apparent power (VA); the real average power is VI cos φ (W). They coincide only when φ = 0, i.e. a purely resistive circuit or one at resonance.
-- **P_max vs P_av.** In a resistor P_max = V_max I_max = 2P_av. Reporting the peak power as the power dissipated doubles the answer.
-- **Resonance means the current is zero.** It is the opposite: at series resonance Z is at its **minimum** (= R) and the current at its **maximum**. The reactances cancel each other, they do not block the circuit.
-- **"V_L and V_C are zero at resonance."** They are **equal and opposite** — individually they can be enormous (Q = X_L/R times the supply), but their vector sum is zero.
-- **Frequency-independence.** A purely resistive AC circuit does not care about f at all; the moment L or C is present, every one of Z, I, φ and P depends on it.
+Her slide-10 diagram makes the physical claim visually: an AC voltage waveform with V_peak and
+V_rms marked, set beside a flat **240 V DC** line. That is the definition from slide 5 drawn — the
+DC voltage that heats a resistor at the same average rate.
+
+*Numerical values worth holding:* 1/√2 = 0.7071, and √2 = 1.4142. Going peak → rms you
+**multiply by 0.7071** (the answer gets smaller). Going rms → peak you **multiply by 1.4142**, or
+equivalently **divide by 0.7071** (the answer gets bigger). The rms value of a sinusoid is always
+less than its peak value; if your answer says otherwise, you have used the factor the wrong way.
+
+### Slide 15 — average power
+
+"Recall that the power, **P = I²R**. By replacing I with I_rms, we have the average value of
+power, P as: **P_av = I²_rms R**. Apply Ohm's law, **P_av = V²_rms/R**."
+
+The reason this works is the whole point of rms and is worth being able to say: power in a
+resistance goes as the **square** of the current, and the mean of I² is exactly I²_rms by
+definition, so putting the rms value into P = I²R gives the true average power with no correction
+factor at all. Watts, with I in amperes and R in ohms.
 
 ---
 
-*Note on the source: this week's lecture deck extracts as slide titles only for its quantitative content — PEAK VALUES OF VOLTAGE AND CURRENT (two slides), RMS CURRENT AND VOLTAGE (two slides), AVERAGE POWER, Solution question 1, Solution to question 2, SOLUTION TO QUESTION 3 and SUMMARY are all blank in the text layer because the formulae and worked solutions sit inside slide images. What survives is the definitions of peak and rms value in words, the source equation V = V_max sin ωt, and the three practice questions themselves (household 120 V rms → peak; 120 V and 10 A ac → maximum values; the 24.0 V, 60.0 Hz, 265 Ω generator), which are reproduced and worked above. The week summary sheet then covers a wider brief than the deck — series RLC circuits, phase relationships, reactance, impedance, Kirchhoff's voltage law applied vectorially, and leading/lagging phase angle — and the standard 100-level treatment of exactly those named objectives has been supplied above. Ligatures are lost throughout the source ("dierent" for "different", "reect" for "reflect").*
+## The three practice questions, worked as she works them
+
+### PRACTICE question 1 (slide 11) — Solution question 1 (slide 12)
+
+**"Typical household circuit operates with an rms voltage of 120 V. What is the maximum, or peak
+value of the voltage in the circuit?"**
+
+Using **V_rms = (1/√2) V_max**
+
+**V_max = V_rms √2**
+
+**∴ V_max = 120√2 = 170 V**
+
+Every line of that is on the slide. Note the direction: she has been *given* the rms value and
+wants the peak, so she **rearranges to multiply by √2**. 120 × 1.4142 = 169.7, which she rounds to
+**170 V**. The two numbers 120 V and 170 V are worth memorising as a pair — they are the standard
+US mains figures and she reuses 120 V in Question 2.
+
+### PRACTICE question 2 (slide 13) — Solution to question 2 (slide 14)
+
+**As set on slide 13:** "For a particular device, the house ac voltage is **120 V** and the ac
+current is 10 A. What are their maximum values?"
+
+**As restated and solved on slide 14:** "For a particular device, the house ac voltage is
+**250 V** and the ac current is 10 A. What are their maximum values?"
+
+**⚠ The two slides give different voltages. This is a genuine misprint in the deck** — see the note
+below. Here is her working exactly as printed on slide 14, using 250 V:
+
+**I_rms = 0.7071 I_max**
+
+**I_max = I_rms / 0.7071 = 10 / 0.7071 = 14.14 A**
+
+Also,
+
+**V_rms = 0.7071 V_max**
+
+**V_max = V_rms / 0.7071 = 250 / 0.7071 = 353.56 V**
+
+Check the arithmetic yourself: 10 ÷ 0.7071 = 14.142 ✔ and 250 ÷ 0.7071 = 353.56 ✔. Both are the
+given rms values **multiplied by 1.4142**, which is the same operation written as a division by
+0.7071.
+
+**⚠ The misprint, named so you are not caught by it.** Slide 13 sets the problem with an ac
+voltage of **120 V**; slide 14 solves it with **250 V**. One of the two is wrong and the deck never
+reconciles them. If the intended figure is 120 V, the answer is
+**V_max = 120 / 0.7071 = 169.7 ≈ 170 V** — the same answer as Question 1, which is very likely why
+the figure was changed on the solution slide, to avoid repeating it. **Be able to produce both
+numbers**: 120 V rms → 170 V peak, and 250 V rms → 353.56 V peak. The current part is unaffected:
+10 A rms → 14.14 A peak either way. (Slide 14 also prints the denominator as "o.7071" twice, with
+a letter o for the zero. Read it as 0.7071.)
+
+### PRACTICE QUESTION 3 (slide 16) — SOLUTION TO QUESTION 3 (slide 17)
+
+**"An AC generator with a maximum voltage of 24.0 V and a frequency of 60.0 Hz is connected to a
+resistor with a resistance R = 265 Ω. Find (a) the rms voltage (b) the rms current in the circuit.
+Determine (c) the average and (d) maximum power dissipated in the resistor."**
+
+**(a) The rms voltage is given as:**
+**V_rms = 0.7071 V_max = 0.7071 × 24 = 17.0 V**
+
+**(b) The rms current is given as:**
+**I_rms = V_rms / R = 17 / 265 = 0.0642 A**
+
+**(c) The average power, P_av = V²_rms / R = 17² / 265 = 1.09 W**
+
+**(d) The maximum power, P_max = V²_max / R = (24)² / 265 = 2.174 W**
+
+Every number checks: 0.7071 × 24 = 16.97 ≈ 17.0 V ✔; 17 ÷ 265 = 0.06415 ≈ 0.0642 A ✔;
+17² = 289 and 289 ÷ 265 = 1.0906 ≈ 1.09 W ✔; 24² = 576 and 576 ÷ 265 = 2.1736 ≈ 2.174 W ✔.
+
+Four things about this solution are worth taking away:
+
+- **She converts once, at the start.** V_max → V_rms happens in part (a), and every later part uses
+  the rms figure. Applying 0.7071 a second time somewhere downstream is the standard way to halve
+  your own answer.
+- **Ohm's law is used with rms on both sides.** I_rms = V_rms / R is legitimate because the same
+  factor 0.7071 divides out of both amplitudes. Mixing them — V_rms / R to get I_max, or
+  V_max / R to get I_rms — is the error to watch for.
+- **P_av uses V_rms; P_max uses V_max.** Both are V²/R with the *same* R. The ratio is fixed:
+  **P_max / P_av = (V_max / V_rms)² = (√2)² = 2**, and indeed 2.174 ≈ 2 × 1.09. Peak power in a
+  resistor is exactly **twice** the average power, always.
+- **The 60.0 Hz is not used in any part.** The circuit is a **pure resistor**, and nothing in
+  V_rms, I_rms, P_av or P_max depends on frequency. The number is there to be ignored — recognising
+  a redundant given is itself an exam skill.
+
+### SUMMARY slide (18) — what she says the week was
+
+"We have discussed the meaning and formulas for calculating the peak and rms values of current and
+voltage.
+**I_rms = (1/√2) I_max = 0.7071 I_max**
+While the rms value of the voltage in a AC circuit is
+**V_rms = (1/√2) V_max = 0.7071 V_max**
+rms values are used when discussing alternating currents and voltages because AC ammeters and
+voltmeters are designed to read rms values."
+
+Two formulae and one sentence about meters. That is the examinable core of the week.
+
+## Commonly confused
+
+- **Which way the factor goes.** V_rms = 0.7071 V_max (peak → rms, *smaller*);
+  V_max = 1.4142 V_rms = V_rms/0.7071 (rms → peak, *bigger*). Getting it backwards turns 240 V rms
+  into 170 V instead of 339 V. The rms value of a sinusoid can never exceed its peak.
+- **Multiplying by 0.7071 twice.** In Question 3, V_rms is already the converted figure; dividing
+  it again by √2 to get "the rms current" gives 0.0454 A, not 0.0642 A.
+- **Peak measured from zero, not trough to crest.** Slide 4 says "measured from the zero reference
+  point". The trough-to-crest swing is twice the peak — and the deck never names it or uses it.
+- **Instantaneous vs peak vs rms.** V is the value at one instant and is **signed** (negative for
+  half of every cycle). V_max and V_rms are **magnitudes** and are quoted positive. A question that
+  says "the voltage is 250 V" without qualification means the rms value, because that is what the
+  meter reads.
+- **The full-cycle average is zero, and that is her actual argument.** Slide 9's "Both alternating
+  voltage and current have a zero value" means *zero average value over a complete cycle* — the
+  instantaneous values are obviously not all zero. Quote it as "the mean over a complete cycle is
+  zero" so the sentence is defensible.
+- **Root of the mean of the square, in that order.** Not the mean of the root, not the square of
+  the mean. Square first (which kills the sign), then average, then take the root.
+- **ω is not f.** ω = 2πf rad s⁻¹. At 50 Hz, ω = 314 rad s⁻¹; at 60 Hz, ω = 377 rad s⁻¹. Writing
+  sin(50t) for a 50 Hz source is out by a factor of 6.28.
+- **ωt is an angle in radians.** Setting a calculator to degrees and evaluating sin(314 × 0.001)
+  gives nonsense.
+- **P_av = I²_rms R, never I²_max R.** Using the peak current doubles the power. Equivalently,
+  P_av = V²_rms/R and P_max = V²_max/R, and P_max = 2P_av exactly.
+- **I_max = V_max/R, I_rms = V_rms/R — never crossed.** Ohm's law relates amplitudes to amplitudes
+  and rms values to rms values, because R is a constant and both sides scale by the same 0.7071.
+- **0.6371 I_m is a diagram label, not a result.** It appears on her waveform picture as "Average
+  Value" and is never defined, derived or used. (It is also mistyped: the rectified half-cycle mean
+  of a sinusoid is 2/π = **0.6366** I_max, not 0.6371.) Do not build an answer on it.
+- **Frequency is often a redundant given.** In a purely resistive AC circuit, none of V_rms,
+  I_rms, P_av or P_max depends on f. Question 3 supplies 60.0 Hz and never uses it.
+- **Do not import Week 7.** Reactance, impedance, phase angle, power factor and resonance are not
+  in this deck. If a Week 6 question mentions an inductor or a capacitor, it is not from these
+  slides.
+
+## To have understood the week, you should be able to say out loud
+
+- What a complete cycle of AC is, and that the instantaneous value is positive through one half of
+  it and negative through the other.
+- The peak value is the maximum instantaneous value in a cycle, **measured from zero**.
+- The rms value is the **equivalent DC value that would dissipate the same power in a resistive
+  load** — and that this, not the shape of the curve, is what defines it.
+- Why the plain average is useless (it is zero over a cycle) and why squaring fixes it (I² is
+  never negative).
+- That (I²)_av = ½I²_max, so I_rms = I_max/√2 = 0.7071 I_max, and the same for voltage.
+- ω = 2πf = 2π/T, in rad s⁻¹, and how to get any one of ω, f, T from another.
+- I = I_max sin ωt with I_max = V_max/R, and that the same relation holds for the rms pair.
+- P_av = I²_rms R = V²_rms/R, and that the maximum power V²_max/R is exactly twice it.
+- Why meters are calibrated in rms, and therefore why "the mains is 240 V" is a statement about
+  rms and implies a peak of 339 V.
+- All three of her practice questions from memory, including that Q2's own two slides disagree
+  about whether the supply is 120 V or 250 V.

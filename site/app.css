@@ -3,6 +3,7 @@
   --ground:#F4F1FA; --surface:#FFFFFF; --surface2:#EDE9F7; --line:#DED8EE;
   --ink:#26203C; --ink2:#6B6390; --ink3:#948BB8;
   --deep:#5A46D6; --deep-bg:#EBE7FB;
+  --buddy:#5A46D6; --buddy-ink:#FFFFFF;
   --fast:#EE8C3C; --fast-bg:#FDEEE0;
   --good:#17A97F; --good-bg:#E1F5EE;
   --bad:#E0505F;  --bad-bg:#FCE9EB;
@@ -16,6 +17,7 @@
     --ground:#151327; --surface:#1F1B38; --surface2:#2A2549; --line:#37305C;
     --ink:#F1EDFF; --ink2:#A99FD0; --ink3:#7C72A8;
     --deep:#9484FF; --deep-bg:#2C2555;
+    --buddy:#6E5CE8; --buddy-ink:#FFFFFF;
     --fast:#F5A45E; --fast-bg:#3B2A1E;
     --good:#3FD3A6; --good-bg:#12362F;
     --bad:#FF7684;  --bad-bg:#3D1F27;
@@ -28,6 +30,7 @@
   --ground:#151327; --surface:#1F1B38; --surface2:#2A2549; --line:#37305C;
   --ink:#F1EDFF; --ink2:#A99FD0; --ink3:#7C72A8;
   --deep:#9484FF; --deep-bg:#2C2555;
+  --buddy:#6E5CE8; --buddy-ink:#FFFFFF;
   --fast:#F5A45E; --fast-bg:#3B2A1E;
   --good:#3FD3A6; --good-bg:#12362F;
   --bad:#FF7684;  --bad-bg:#3D1F27;
@@ -214,6 +217,7 @@ input.nameinp:focus{border-color:var(--deep);outline:none}
 
 .deckfoot{display:flex;gap:8px;align-items:center;margin-top:14px}
 .deckfoot .spacer{flex:1}
+.deckfoot .gate{display:contents}
 
 /* ---------- result ---------- */
 .reveal{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
@@ -335,3 +339,78 @@ canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:80}
 .pip.none{opacity:.4;border-style:dashed}
 .cell .go.fast{color:var(--fast)}
 .sc.sm{font-size:11px;padding:2px 7px;opacity:.85}
+
+/* ---------- study buddy ---------- */
+/* A solid disc with a question mark that writes itself. The button itself never
+   moves; all the life is inside the glyph. */
+.buddybtn{position:fixed;right:16px;bottom:16px;z-index:70;width:58px;height:58px;
+  border:0;border-radius:50%;background:var(--buddy);color:var(--buddy-ink);
+  box-shadow:var(--shadow-lift);
+  display:grid;place-items:center;padding:0;overflow:visible;
+  transition:box-shadow .18s,transform .18s,background .18s}
+.buddybtn:hover{transform:scale(1.05)}
+.buddybtn:active{box-shadow:var(--shadow);transform:scale(.97)}
+
+/* The hook sweeps over and down, the stem follows, the dot lands, and it holds
+   solid for seven seconds before writing itself again. */
+.qmark .q-stroke{stroke-dasharray:100;stroke-dashoffset:100;
+  animation:qdraw 9s cubic-bezier(.5,0,.2,1) infinite}
+@keyframes qdraw{
+  0%{stroke-dashoffset:100;opacity:1}
+  14%{stroke-dashoffset:0}
+  92%{stroke-dashoffset:0;opacity:1}
+  97%,100%{stroke-dashoffset:0;opacity:0}
+}
+.qmark .q-dot{transform-box:fill-box;transform-origin:center;transform:scale(0);
+  animation:qdot 9s cubic-bezier(.3,1.5,.5,1) infinite}
+@keyframes qdot{
+  0%,14%{transform:scale(0);opacity:1}
+  22%,92%{transform:scale(1);opacity:1}
+  97%,100%{transform:scale(1);opacity:0}
+}
+/* reach for it and it redraws immediately rather than waiting out the loop */
+.buddybtn:hover .qmark .q-stroke{animation:qdraw 1.5s cubic-bezier(.5,0,.2,1)}
+.buddybtn:hover .qmark .q-dot{animation:qdot 1.5s cubic-bezier(.3,1.5,.5,1)}
+
+/* Someone who has asked not to see motion gets the finished mark, held still. */
+@media (prefers-reduced-motion:reduce){
+  .qmark .q-stroke,.qmark .q-dot,
+  .buddybtn:hover .qmark .q-stroke,.buddybtn:hover .qmark .q-dot{animation:none}
+  .qmark .q-stroke{stroke-dashoffset:0}
+  .qmark .q-dot{transform:scale(1)}
+  .buddybtn:hover{transform:none}
+}
+.buddybtn .dot{position:absolute;top:-2px;right:-2px;min-width:22px;height:22px;padding:0 5px;
+  border-radius:11px;background:var(--bad);color:#fff;font:800 12px/22px Nunito,sans-serif;
+  box-shadow:0 0 0 3px var(--ground);animation:pop2 .3s cubic-bezier(.2,1.4,.4,1)}
+@keyframes pop2{from{transform:scale(0)}to{transform:scale(1)}}
+
+.scrim{position:fixed;inset:0;z-index:74;background:rgba(20,16,38,.5);
+  animation:fadein .18s ease;backdrop-filter:blur(2px)}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:75;max-height:86vh;
+  max-width:760px;margin:0 auto;background:var(--surface);
+  border:1px solid var(--line);border-bottom:0;border-radius:20px 20px 0 0;
+  box-shadow:var(--shadow-lift);display:flex;flex-direction:column;
+  animation:slideup .26s cubic-bezier(.2,.9,.3,1)}
+@keyframes slideup{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+.sheeth{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding:16px 17px 12px;border-bottom:1px solid var(--line)}
+.sheeth .chip{cursor:pointer}
+.sheetb{overflow-y:auto;padding:14px 17px 26px;display:flex;flex-direction:column;gap:9px}
+.sheetb .lbl{margin:6px 0 0}
+.sheetb .row{margin-top:6px}
+.sheetb textarea{min-height:80px}
+
+.mrow{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;
+  text-align:left;background:var(--surface2);border:1px solid var(--line);
+  border-left:3px solid var(--bad);border-radius:var(--r-sm);
+  padding:11px 13px;color:var(--ink);font:600 14.5px Nunito,sans-serif;transition:.13s}
+.mrow:hover{background:var(--bad-bg);border-color:var(--bad)}
+.mrow .chev{color:var(--bad);font-weight:800}
+.bcard{background:var(--surface2);border-radius:var(--r-sm);padding:12px 13px}
+.bcard .bq{font-weight:700;font-size:14.5px;margin-bottom:7px}
+.bcard .ba{font-size:14px;color:var(--good);margin-bottom:7px}
+.bcard .bw{font-size:14px;color:var(--ink2);line-height:1.6}
+.bcard.prose{background:var(--surface2)}
+.linkish{background:none;border:0;padding:0;color:var(--deep);font:inherit;
+  text-align:left;text-decoration:underline;text-underline-offset:3px;cursor:pointer}

@@ -1,88 +1,90 @@
 # Monday — MTH_102 nightly check
 
-*Integration techniques as concepts: what substitution, integration by parts, trigonometric substitution and partial fractions each are, the exact condition each one needs before it may be used, which differentiation rule each one reverses and why that makes it work, and how the shape of an integrand decides which technique it needs.*
+*Conceptual session on Week 8 integration techniques exactly as the lecturer builds them: the standard-integral table of slides 4–6; her substitution formula ∫f′(g(x))·g′(x)dx = f(g(x)) + C and when an answer may be left in u; integration by parts ∫u dv = uv − ∫v du and why v is the integral of dv; trigonometric substitution driven by 1 − sin²(u) = cos²(u), including why √(4 − 9x²) is first normalised to 2√(1 − (3x/2)²); and the four steps of partial fractions with the roots substituted to find A and B.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**1.** The formula ∫u dv = uv − ∫v du is obtained by:
-a) integrating both sides of the chain rule d/dx f(g(x)) = f′(g(x))·g′(x)
-b) integrating both sides of the quotient rule, since a product can be written as a division
-c) integrating both sides of d(uv) = u dv + v du and rearranging
-d) applying linearity, since ∫(u + v)dx = ∫u dx + ∫v dx
+**1.** The deck states the general substitution formula and then says: 'It is just the Chain Rule, written in terms of integration via the Fundamental Theorem of Calculus.' Which formula is she describing?
+A. ∫f(g(x))·g′(x)dx = f′(g(x)) + C
+B. ∫f′(g(x))dx = f(g(x)) + C
+C. ∫f′(g(x))·g′(x)dx = f(g(x)) + C
+D. ∫f′(x)·g′(x)dx = f(x)·g(x) + C
 
-**2.** Which integral is immediately ready for the substitution u = x² + 1, in the sense that it converts to an integral in u alone after moving only a constant?
-a) ∫(x² + 1)⁵dx
-b) ∫x(x² + 1)⁵dx
-c) ∫x²(x² + 1)⁵dx
-d) ∫x(x³ + 1)⁵dx
+**2.** Her substitution Example 1 finishes as (1/4)u⁴|₂⁴ = 60 and never converts back to x, while Example 2 introduces u = x² and stops at eᵘ + C. Under what condition is it legitimate to finish in u?
+A. Only for a definite integral whose limits have themselves been converted to u-values
+B. Whenever the substitution was a linear one such as u = x + 2
+C. Whenever u was chosen as the inner function rather than the outer one
+D. Always, since u is only a renaming and the two answers are equal
 
-**3.** An integrand contains √(x² − 9). The right substitution, and the reason, is:
-a) x = 3 tanθ, because tan²θ + 1 = sec²θ turns the root into 3secθ
-b) x = 3 sinθ, because 1 − sin²θ = cos²θ turns the root into 3cosθ
-c) x = 9 secθ, because 9 is the constant appearing under the root
-d) x = 3 secθ, because sec²θ − 1 = tan²θ turns the root into 3tanθ
+**3.** In her integration-by-parts Example 2 she writes: 'let dv = sin(x)dx. Then v = −cos(x).' What operation produced v, and why does it matter here?
+A. v is dv with the dx removed, so v = sin(x)
+B. v is the derivative of dv, so v = cos(x)
+C. v is dv divided by du, and the minus is a convention of the formula
+D. v is the integral of dv, so v = ∫sin(x)dx = −cos(x), and that minus propagates through every later line
 
-**4.** In ∫x³ln x dx the standard choice is u = ln x, dv = x³dx. The reason is:
-a) u must always be whichever factor is written last
-b) ln x differentiates to 1/x, which removes the logarithm, and x³ can be integrated — so the traded integral ∫v du is purely algebraic
-c) x³ differentiates to 3x², which is simpler than x³, so the factor that simplifies on differentiation is x³
-d) the choice does not matter; either assignment gives the same answer, only with more lines of working
+**4.** For ∫x·eˣdx she takes u = x and dv = eˣdx. What makes that the productive choice rather than u = eˣ, dv = x dx?
+A. eˣ cannot be integrated, so it has to be the factor that is differentiated
+B. Differentiating x reduces it to 1, so the leftover integral ∫v du is simpler than the one you started with, whereas the other choice raises x to x²/2 and makes it worse
+C. The parts formula requires u to be whichever factor is written first in the integrand
+D. u must always be the factor of lower degree, by definition
 
-**5.** Before (x³ + 1)/(x² − 4) can be split into partial fractions you must:
-a) factor the numerator, since x³ + 1 = (x + 1)(x² − x + 1)
-b) do nothing further — the decomposition works for any ratio of polynomials
-c) divide out, because the numerator's degree is not less than the denominator's
-d) substitute u = x² − 4, since the denominator is a difference of squares
+**5.** In ∫√(1 − x²)dx she sets x = sin(u). What exactly does that substitution accomplish?
+A. It makes dx simpler, since dx = cos(u)du has no square root in it
+B. It changes the limits of integration into angles
+C. 1 − x² becomes 1 − sin²(u) = cos²(u), so the square root disappears: √(cos²(u)) = cos(u)
+D. It converts the integrand into a standard form already listed on slide 5
 
-**6.** The correct partial-fraction form for (5x + 1)/((x + 2)(x − 1)²) is:
-a) A/(x + 2) + B/(x − 1)²
-b) A/(x + 2) + (Bx + C)/(x − 1)²
-c) (Ax + B)/(x + 2) + (Cx + D)/(x − 1)²
-d) A/(x + 2) + B/(x − 1) + C/(x − 1)²
+**6.** Before substituting anything into ∫√(4 − 9x²)dx she rewrites it as ∫2√(1 − (3x/2)²)dx. Why is that rewriting necessary?
+A. Because the identity she uses is 1 − sin²(u) = cos²(u), so the expression under the root must be brought to the exact form 1 − (something)² before anything can be set equal to sin(u)
+B. Because a square root can only be integrated once the coefficient of x² is 1
+C. Because 4 − 9x² is negative for large x and the rewriting fixes the domain
+D. Because the constant 2 has to be outside the integral sign before dx can be replaced
 
-**7.** You substitute u = g(x) into a definite integral ∫₀² f(x)dx. You must then:
-a) keep 0 and 2 as the limits and evaluate the antiderivative in u at them
-b) replace the limits 0 and 2 by g(0) and g(2), or else return to x before substituting the original limits
-c) keep 0 and 2 but swap them if g is decreasing on the interval
-d) drop the limits, since the substitution has turned the problem into an indefinite integral, and add + C
+**7.** After clearing the denominator in 1/(x(x+3)) = A/x + B/(x+3) she has 1 = A(x + 3) + B(x), and then 'setting x = 0 and x = −3' gives A and B. Why those two values of x?
+A. They are the only values that make the left-hand side equal to 1
+B. They are chosen at random; any two values of x would give the same answer with less arithmetic
+C. They make the equation an identity rather than an equation
+D. Each is a root of one of the factors, so it makes one of the two terms vanish and leaves a single unknown to read off
 
-**8.** The standard route to ∫x dx/(x² + 6x + 8) is:
-a) the substitution u = x² + 6x + 8, since there is an x in the numerator
-b) integration by parts, with u = x and dv = dx/(x² + 6x + 8)
-c) partial fractions, after factoring the denominator as (x + 2)(x + 4)
-d) trigonometric substitution, after completing the square to (x + 3)² − 1
+**8.** Slide 9 sets the TASK ∫₀¹ x·eˣ dx at the end of the SUBSTITUTION section. What feature of the integrand shows that substitution cannot do it?
+A. The limits are 0 and 1, and substitution requires limits that convert to whole numbers
+B. There is no inner function whose derivative also appears as a factor — the derivative of x is 1, not eˣ, and the derivative of eˣ is eˣ, not x
+C. eˣ is not on the list of standard integrals, so no substitution can reach a standard form
+D. The integrand is a product, and substitution never applies to products
 
-**9. (explain why)** There is no "product rule for integration", yet integration by parts comes directly from the product rule. Explain how, and state precisely what parts does and does not promise you about the integral you started with.
+**9.** Explain, without computing anything, what the deck means by calling the substitution formula 'just the Chain Rule, written in terms of integration'. Say what each of f, g and g′ is doing in ∫f′(g(x))·g′(x)dx = f(g(x)) + C.
+*(short answer)*
 
-**10. (explain why)** A student integrating ∫(x² − 1)⁴dx writes "let u = x² − 1, du = 2x dx, so dx = du/(2x), giving (1/2x)∫u⁴du = (x² − 1)⁵/(10x)". Name the exact step that is illegal, state the general rule about what may and may not be moved across the integral sign, and say how you would show the answer is wrong in one line.
+**10.** Her trigonometric-substitution example reaches ∫cos²(u)du and then quotes cos²(u) = (1 + cos(2u))/2. Explain why that identity is compulsory rather than a convenience.
+*(short answer)*
 
-**11. (explain why)** Explain why the substitution x = a sinθ removes the root in √(a² − x²), why θ is restricted to −π/2 ≤ θ ≤ π/2, and how you get from an answer written in θ back to an answer in x.
+**11.** Her SUMMARY slide names four techniques. List them in her order, and for each one say what feature of an integrand tells you to reach for it, with an example from the deck.
+*(short answer)*
 
-**12. (explain why)** You are given ∫dx/(x² − 9), ∫x dx/(x² − 9) and ∫dx/√(9 − x²). Name the technique each one needs and say exactly which feature of the integrand decides it. Do not evaluate them.
-
----
+**12.** State the integration-by-parts formula as the deck states it, and explain why ∫x·eˣdx needs one application while ∫3x²sin(x)dx needs two.
+*(short answer)*
 
 ## Answers
 
-**1. c** — *Integration by parts is the product rule read backwards.* From d(uv) = u dv + v du, integrating gives uv = ∫u dv + ∫v du, and rearranging isolates ∫u dv. (a) is the origin of **substitution**, not parts — that is the standard swap of the two techniques' provenance; (b) invents a rule: no integration technique this week comes from the quotient rule, and rewriting a product as a division does not help; (d) is linearity, which only splits sums and constant multiples and never touches a product.
+**1. C** — Differentiating f(g(x)) by the chain rule gives f′(g(x))·g′(x); integrating that expression must therefore return f(g(x)). Option 1 puts the prime on the answer instead of the integrand, so it describes differentiation. Option 2 drops the g′(x) factor — but that factor being present is the entire condition for substitution to work, and without it the method fails. Option 4 invents a product rule for integrals; no such rule exists, and it is the mistake behind answers like ∫x·eˣdx = (x²/2)eˣ.
 
-**2. b** — *Substitution needs the inner derivative present up to a constant multiple.* With u = x² + 1, du = 2x dx, so x dx = du/2 and the integral becomes (1/2)∫u⁵du. In (a) there is no x factor at all, so dx = du/(2x) leaves an x that cannot be removed; in (c) the factor is x², an **even** power — one x pairs with du, and the leftover single x is not expressible as a function of u without a square root, so this needs a different route; (d) has the right *shape* but the wrong inner function — its inner derivative is 3x², so u = x² + 1 simply does not appear in it. Matching the pattern by eye rather than checking g′ is the error.
+**2. A** — In Example 1 she converts the limits with the variable — x = 0 gives u = 2, x = 2 gives u = 4 — so evaluating between them yields a number, 60, with no variable left to convert. Option 2 confuses the kind of substitution with the kind of integral; a linear substitution in an indefinite integral still has to be undone. Option 3 describes how u is chosen, which is unrelated. Option 4 is false: eᵘ and e^(x²) are different expressions, and only the second answers a question posed in x. Example 2 as printed is therefore incomplete.
 
-**3. d** — *Trig substitution is chosen by which Pythagorean identity kills the particular root.* Setting x = 3secθ gives x² − 9 = 9(sec²θ − 1) = 9tan²θ, so the root becomes 3tanθ. (a) would give 9tan²θ − 9 = 9(tan²θ − 1), which is not a perfect square and simplifies to nothing; (b) gives 9sin²θ − 9 = −9cos²θ, a negative under the root; (c) uses a² = 9 where the substitution needs **a = 3** — the constant substituted is the square root of the constant in the expression, and x = 9secθ gives 81sec²θ − 9, which factors as 9(9sec²θ − 1) and no identity applies.
+**3. D** — The formula ∫u dv = uv − ∫v du needs an actual function v, obtained by integrating dv; ∫sin(x)dx = −cos(x) from her standard-integral table, and that minus is why the first term of the answer is −3x²cos(x). Option 1 is the single most common error — treating v as the visible factor — and it silently loses the sign. Option 2 differentiates when the method requires integrating, the exact reverse. Option 3 invents a rule; the minus in the formula sits in front of ∫v du, not inside v.
 
-**4. b** — *In parts, dv must be integrable and u should collapse when differentiated.* ln x has no standard antiderivative available before this week, so it cannot be dv; and differentiating it gives 1/x, so ∫v du = ∫(x⁴/4)(1/x)dx = ∫x³/4 dx is elementary. (a) is a mnemonic that does not exist — position on the page decides nothing; (c) applies the right criterion (simplifies on differentiation) but ignores the other half of it, that the remaining factor must be integrable as dv, and ln x is not; (d) is false: with u = x³ and dv = ln x dx you cannot even find v, and in general a wrong choice makes ∫v du harder, not merely longer.
+**4. B** — Parts exchanges ∫u dv for uv − ∫v du, so it is progress only when ∫v du is easier. Here du = dx kills the algebraic factor entirely and leaves ∫eˣdx. Option 1 is false — ∫eˣdx = eˣ is on her slide-4 table; eˣ is one of the easiest things to integrate, which is exactly why it makes a good dv. Option 3 mistakes typography for mathematics. Option 4 states a rule the deck never gives, and TASK 2 (∫x·ln(x)dx) breaks it: there u = ln(x), not the algebraic factor.
 
-**5. c** — *Partial fractions require a proper rational function.* deg(x³ + 1) = 3 ≥ deg(x² − 4) = 2, so long division must come first: (x³ + 1)/(x² − 4) = x + (4x + 1)/(x² − 4), and only the remainder is decomposed. (a) factors the wrong polynomial — decomposition works on the **denominator**'s factors; (b) is the belief that causes the error, and it produces an inconsistent system of equations with no solution; (d) tries a substitution whose du = 2x dx is nowhere present in the integrand.
+**5. C** — The obstacle is the square root, and 1 − sin² = cos² is a perfect square, so the root evaluates to a bare cos(u). Option 1 gets the effect on dx right but names a side-effect rather than the purpose. Option 2 is irrelevant — this example is an indefinite integral with no limits at all. Option 4 is wrong because the resulting ∫cos²(u)du is not on her table either; it still needs the double-angle identity before it can be integrated.
 
-**6. d** — *A repeated linear factor contributes one term for every power up to its multiplicity.* (x − 1)² needs both B/(x − 1) and C/(x − 1)²; with three unknowns over a cubic denominator the system is exactly determined. (a) omits the first-power term, and the resulting equations are inconsistent; (b) treats (x − 1)² as an **irreducible quadratic** and gives it a linear numerator — but (x − 1)² is a repeated *linear* factor, and irreducible means the quadratic has no real roots; (c) puts linear numerators over linear denominators, which makes each piece improper and defeats the whole point of the decomposition.
+**6. A** — She never gives the x = a·sinθ table; her method is to factor the constant out — 4 − 9x² = 4(1 − (3x/2)²), with √4 = 2 coming outside — so that what remains matches Example 1 exactly and 3x/2 can be set to sin(u). Option 2 is a rule about x², not about the root, and it is not what she does. Option 3 confuses a domain remark with the algebra; the rewriting changes nothing about where the expression is defined. Option 4 is false — constants may be moved across an integral sign at any point, and she in fact leaves the 2 inside for one more line.
 
-**7. b** — *A substitution changes the variable, so the limits, which are values of that variable, must change with it.* The limits 0 and 2 are x-values; the antiderivative is now a function of u, so it must be evaluated at the corresponding u-values g(0) and g(2). The alternative is equally valid: back-substitute to get an antiderivative in x and use 0 and 2 unchanged. (a) evaluates a u-function at x-numbers, which is the single most common definite-substitution error; (c) invents a rule about direction — a decreasing g simply produces an upper u-limit smaller than the lower one, and you leave it that way; (d) confuses a change of variable with a change of the kind of integral: the value is still a number and no + C appears.
+**7. D** — At x = 0 the B(x) term is zero, so 1 = 3A immediately; at x = −3 the A(x + 3) term is zero, so 1 = −3B. Each substitution isolates one unknown. Option 1 misreads the equation — the left side is the constant 1 for every x. Option 2 is half true and half wrong: other values are legitimate but give two simultaneous equations to solve rather than an answer you can read off, which is precisely the point of choosing the roots. Option 3 has it backwards; the expression is already an identity, which is why any x may be substituted.
 
-**8. c** — *A ratio of polynomials whose denominator factors over the reals is partial-fraction work.* x² + 6x + 8 = (x + 2)(x + 4), so the integrand splits into constants over linear factors and integrates to logs. (a) fails the substitution condition: du = (2x + 6)dx, and the numerator is x, not a constant multiple of 2x + 6 — you would have to write x = ½(2x + 6) − 3, which still leaves a piece needing partial fractions; (b) chooses a dv that is exactly the integral you are trying to do, so parts makes it worse, not better; (d) is not impossible, but completing the square is what you do when the quadratic is **irreducible** or sits under a root — here the denominator factors over the reals, so trig substitution imports arcsecs and back-substitution for an answer that two logs would have given directly.
+**8. B** — Her formula needs the pattern f′(g(x))·g′(x); in x·eˣ neither factor is the derivative of the other's inner function, so no choice of u eliminates x. The task is in fact answered by the very next slide, which does it by parts. Option 1 is invented. Option 3 is false — ∫eˣdx = eˣ + C is the third line of slide 4. Option 4 is false too: her own Example 2, ∫2x·e^(x²)dx, is a product and yields to substitution immediately, because there the 2x really is the derivative of the inner x².
 
-**9.** *Concept: parts is the product rule integrated, and it trades one integral for another rather than evaluating it.* Differentiation has a product rule because (uv)′ is determined by u, v and their derivatives. Integration has no such rule: ∫f·g dx cannot be built from ∫f and ∫g (test it — ∫x·x dx = x³/3, but (x²/2)(x²/2) = x⁴/4). What can be done is to integrate the product rule itself: from d(uv) = u dv + v du, integrating gives uv = ∫u dv + ∫v du, i.e. **∫u dv = uv − ∫v du**. So parts promises only an **exchange**: the integral ∫u dv is replaced by a boundary term uv and a different integral ∫v du. It promises nothing about that new integral being easier — that depends entirely on the choice of u and dv, which is why a bad choice can produce a harder integral and the correct response is to swap the roles and start again.
+**9.** A good answer starts from differentiation: the chain rule says d/dx[f(g(x))] = f′(g(x))·g′(x). Integration undoes differentiation, so integrating the right-hand side must recover the left, which is the formula as printed. It should then identify the parts: g(x) is the inner function that you rename u; g′(x)dx is the du that must already be sitting in the integrand for the method to apply; f′ is the outer function as it appears in the integrand, and f is its antiderivative, the thing you actually write down. It is worth adding the practical reading — you are looking for a composite together with the derivative of its inside — and noting that the constant C appears because the result is an indefinite integral, a whole family.
 
-**10.** *Concept: only constants may be moved across the integral sign; a function of x may not, so a missing variable factor cannot be manufactured.* The illegal step is writing "(1/2x)∫u⁴du" — pulling 1/(2x) outside the integral. ∫k·f = k∫f holds for a **constant** k because k is unaffected by the variable being integrated; 1/(2x) varies with the very variable being integrated (and, once the substitution is made, is not even expressible in u without a root), so it cannot be pulled out. Equivalently: substitution requires g′(x) to be **present in the integrand up to a constant multiple**, and here g′ = 2x is simply absent. The one-line disproof is to differentiate the claimed answer: d/dx[(x² − 1)⁵/(10x)] needs the quotient rule and gives [10x(x² − 1)⁴·2x − (x² − 1)⁵]/(10x²), which is not (x² − 1)⁴. The correct route is to expand the bracket and integrate term by term.
+**10.** A good answer says that none of the fifteen standard integrals on slides 4–6 covers cos²(u): the table has ∫cos(x)dx and ∫sec²(x)dx but nothing for a squared cosine, and the power rule ∫xⁿdx applies to powers of the variable, not to powers of a function of it — writing cos³(u)/3 would be applying it illegitimately, and differentiating that expression returns −cos²(u)sin(u), not cos²(u). The double-angle identity rewrites the integrand as a sum of two things that are on the table, a constant and a cosine, giving u/2 + sin(2u)/4. A strong answer also notes where the 4 comes from: integrating cos(2u) produces sin(2u)/2 because of the inner 2, and the outer 1/2 from the identity makes it sin(2u)/4.
 
-**11.** *Concept: trig substitution replaces a sum or difference of squares by a Pythagorean identity so that the root becomes a perfect square.* Putting x = a sinθ gives a² − x² = a² − a²sin²θ = a²(1 − sin²θ) = a²cos²θ, so √(a² − x²) = a|cosθ| — the root disappears because a² cos²θ is an exact square, which is precisely what a² − x² was not. Restricting θ to [−π/2, π/2] does two things: cosθ ≥ 0 there, so the modulus can be dropped and √(a² − x²) = a cosθ; and sin is one-to-one there, so θ = arcsin(x/a) is well defined and every x in (−a, a) is reached exactly once. To return to x, use the right-angled triangle the substitution describes — opposite x, hypotenuse a, adjacent √(a² − x²) — giving sinθ = x/a, cosθ = √(a² − x²)/a, tanθ = x/√(a² − x²) and θ = arcsin(x/a). An answer left in θ is not an answer to the question asked, because the question was about x.
+**11.** A good answer gives: (1) substitution — a composite function with the derivative of its inner function present as a factor, as in ∫2x·e^(x²)dx where 2x is the derivative of x²; (2) integration by parts — a product of two unrelated kinds of function, neither being the other's derivative, as in ∫x·eˣdx and ∫3x²sin(x)dx; (3) trigonometric substitution — a square root of a quadratic, as in ∫√(1 − x²)dx and ∫√(4 − 9x²)dx, where a Pythagorean identity is what removes the root; (4) partial fractions — a ratio of polynomials whose denominator factors, as in ∫[1/(x² + 3x)]dx and ∫[(7x − 6)/((x − 2)(x + 3))]dx. It should stress that the decision is made from the shape of the integrand, and may note that the slide-9 TASK is a case where the shape (a plain product) contradicts the section it was printed in.
 
-**12.** *Concept: the technique is chosen by the shape of the integrand, and three integrands that look alike can need three different techniques.* ∫dx/(x² − 9): the denominator is a **difference of squares that factors over the reals**, (x − 3)(x + 3), and the numerator is a constant — **partial fractions** (equivalently, the standard form giving (1/6)ln|(x − 3)/(x + 3)|). ∫x dx/(x² − 9): the numerator is now **a constant multiple of the derivative of the denominator** (2x), so it is an f′/f pattern — **substitution** u = x² − 9, giving a single log. ∫dx/√(9 − x²): the quadratic is **under a root and in the form a² − x²**, which nothing rational can remove — **trigonometric substitution** x = 3sinθ (it is also a standard form, arcsin(x/3)). The decisive features are, in order: is there a root over the quadratic; is the numerator the denominator's derivative; does the denominator factor over the reals.
+**12.** A good answer states 'Let f(x) = u and g(x) = v then we have ∫u dv = uv − ∫v du', and explains that each application differentiates u once. In ∫x·eˣdx, u = x differentiates to 1, so the leftover integral is ∫eˣdx, which is on the standard table and needs no further work. In ∫3x²sin(x)dx, u = 3x² differentiates only to 6x, so the leftover integral is 6∫x·cos(x)dx — still a product of an algebraic and a trigonometric factor, which is the same shape as the original and therefore needs parts again, this time with u = x. It should draw the general rule: each pass lowers the power of x by one, so a factor xⁿ requires n applications, and add that the constant C is written once, at the end, not at each stage.

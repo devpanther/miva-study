@@ -27,18 +27,25 @@ export default async function handler(req, res) {
   }
 
   const pad = String(n).padStart(2, "0");
-  const path = "/packs/week-" + pad + "/week-" + pad + ".json";
+  const course = /^[A-Z]{3}_\d{3}$/.test(String(req.query.course || "")) ? req.query.course : "";
+  const wantSummary = req.query.doc === "summary" && course;
+  const path = wantSummary
+    ? "/packs/week-" + pad + "/" + course + "-Summary.md"
+    : "/packs/week-" + pad + "/week-" + pad + ".json";
   let lastError = null;
 
   for (const repo of REPOS) {
     const url = "https://raw.githubusercontent.com/" + repo + "/" + BRANCH + path;
     try {
-      const r = await fetch(url, { headers: { Accept: "application/json" } });
+      const r = await fetch(url);
       if (!r.ok) { lastError = repo + " -> " + r.status; continue; }
-      const pack = await r.json();
       res.setHeader("Cache-Control", "private, max-age=300");
+      if (wantSummary) {
+        res.setHeader("Content-Type", "text/plain; charset=utf-8");
+        return res.status(200).send(await r.text());
+      }
       res.setHeader("Content-Type", "application/json");
-      return res.status(200).json(pack);
+      return res.status(200).json(await r.json());
     } catch (e) {
       lastError = repo + " -> " + String((e && e.message) || e);
     }

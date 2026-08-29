@@ -1,112 +1,118 @@
-# PHY_102 — Week 12 Question Set (sit 7 days later)
+# PHY_102 — Week 12 Questions
+*Transformers: the emf chain, step-up and step-down, energy and resistance transformation. Twelve multiple choice, three short answer. Answers at the bottom — work them before you look.*
 
-*Sit this during Saturday catch-up in Week 13, not this week. Notes closed.*
+## Multiple choice
 
-## Section A — Multiple choice (12)
+**1.** Slide 8 writes ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt with the same dΦ_B/dt. Her conclusion from this is that
+A. the two coils carry the same current
+B. the induced emf per turn is the same in both coils
+C. the primary emf is always larger
+D. the flux leaks equally from both coils
 
-**1.** A transformer will not operate from a steady DC supply. The reason is that:
-a) direct current cannot flow through the insulated laminations of the core.
-b) a steady current produces a steady core flux, and only a changing flux induces an emf in the secondary.
-c) the transformer equation holds only for rms voltages, and DC has no rms value.
-d) the primary and secondary are not electrically connected, so DC cannot cross the gap.
+**2.** ε₂/ε₁ = N₂/N₁ becomes V₂/V₁ = N₂/N₁ only because
+A. emf and voltage are two names for one quantity
+B. the minus signs cancel
+C. in an ideal transformer the induced emfs equal the terminal voltages
+D. the core is laminated
 
-**2.** An 800-turn primary is connected to a 240 V rms supply; the secondary has 60 turns. The secondary voltage is:
-a) 3200 V
-b) 13.3 V
-c) 18 V
-d) 0.075 V
+**3.** In Example 1, the 960 W coffeemaker rated at 240 V is run from the 120 V line. Her turns ratio N₂/N₁ is
+A. 1/2
+B. 240
+C. 120
+D. 2
 
-**3.** An ideal transformer steps 120 V up to 480 V. The primary draws 8.0 A. The secondary current is:
-a) 2.0 A
-b) 32 A
-c) 8.0 A
-d) 0.50 A
+**4.** Example 1(b): the current drawn **from the 120 V line** is
+A. 8.0 A
+B. 4.0 A
+C. 2.0 A
+D. 0.125 A
 
-**4.** A transformer core is laminated — built from thin sheets of metal insulated from each other. This is done in order to:
-a) increase the flux linkage between primary and secondary.
-b) reduce the hysteresis loss in the core material.
-c) reduce the resistance of the primary and secondary windings.
-d) prevent eddy currents from circulating through the bulk of the core and heating it.
+**5.** Example 1(c): the resistance of the coffeemaker is
+A. 15 Ω
+B. 60 Ω
+C. 30 Ω
+D. 240 Ω
 
-**5.** A transformer is supplied with 500 W and delivers 460 W to its load. Its efficiency and the power lost are:
-a) 108.7 % and 40 W
-b) 92.0 % and 960 W
-c) 92.0 % and 40 W
-d) 8.0 % and 40 W
+**6.** Example 2: the 1600 W dryer rated at 120 V is run from a 240 V outlet. Her turns ratio N₂/N₁ is
+A. 2
+B. 13.3
+C. 1/2
+D. 1/4
 
-**6.** Electrical energy is transmitted over long distances at very high voltage because, for a given power delivered:
-a) the line current is smaller, and the power wasted as I²R heating in the line falls as the square of the current.
-b) the resistance of the cables decreases as the voltage across them increases.
-c) a high voltage moves the energy along the cables more quickly, allowing less time for losses.
-d) high-voltage transmission reduces the eddy-current losses in the cables themselves.
+**7.** Example 2(b): the current in the dryer element itself is
+A. 6.67 A
+B. 3.33 A
+C. 1600 A
+D. 13.3 A
 
-**7.** A 20 Ω load is connected to the secondary of an ideal transformer whose turns ratio N₁ : N₂ is 1 : 4. The resistance the primary source appears to be driving is:
-a) 20 Ω
-b) 320 Ω
-c) 5.0 Ω
-d) 1.25 Ω
+**8.** Example 2(c): the resistance the dryer appears to have at 240 V is
+A. 36 Ω
+B. 9 Ω
+C. 18 Ω
+D. 144 Ω
 
-**8.** A transformer has 250 turns on its primary and 5000 turns on its secondary. It is:
-a) a step-down transformer, dividing the voltage by 20 and dividing the current by 20 as well.
-b) a step-up transformer, multiplying the voltage by 20 and dividing the current by 20.
-c) a step-up transformer, multiplying both the voltage and the current by 20.
-d) a step-down transformer, dividing the voltage by 20 and multiplying the current by 20.
+**9.** An ideal transformer doubles the voltage. By slide 10, the secondary current is
+A. also doubled
+B. halved
+C. unchanged
+D. quartered
 
-**9.** A transformer is driven at 50 Hz by a 3 : 1 step-down turns ratio. The output frequency is:
-a) 50 Hz, because the turns ratio scales amplitudes and cannot change the frequency.
-b) 150 Hz, because stepping the voltage down steps the frequency up in the same ratio.
-c) 16.7 Hz, because the frequency is divided by the turns ratio along with the voltage.
-d) zero, because the output of a step-down transformer is direct current.
+**10.** The core is built from thin sheets of metal insulated from each other in order to
+A. increase the number of turns
+B. raise the secondary voltage
+C. stop eddy currents flowing from one sheet to the next
+D. keep the frequency constant
 
-**10.** Which measure attacks hysteresis loss specifically?
-a) Using thicker copper wire for the windings.
-b) Laminating the core into insulated sheets.
-c) Winding the primary and secondary on opposite limbs of the core.
-d) Choosing a soft magnetic core material that needs little energy per cycle to reverse its magnetisation.
+**11.** A 50 Hz supply drives a step-down transformer of ratio 1/4. The secondary frequency is
+A. 50 Hz
+B. 12.5 Hz
+C. 200 Hz
+D. 0 Hz
 
-**11.** An ideal transformer draws 2.0 A from a 230 V rms supply and its secondary output is 23 V rms. The secondary current is:
-a) 2.0 A
-b) 20 A
-c) 0.20 A
-d) 46 A
+**12.** Equation 2 (ε₂/ε₁ = N₂/N₁) has no minus sign. The reason is that
+A. Lenz's law does not apply to transformers
+B. the lecturer dropped it by mistake
+C. emfs are always positive quantities
+D. both emfs carry the same minus sign, so it cancels in the ratio
 
-**12.** Which statement about an ideal transformer is correct?
-a) A step-up transformer increases the voltage and the current together.
-b) The power in the secondary exceeds that in the primary by the turns ratio.
-c) The product of voltage and current is the same on both sides.
-d) Its efficiency exceeds 100 % because the secondary voltage may exceed the primary voltage.
+## Short answer
 
-## Section B — Short answer (3)
+**13.** Work Example 1(c) exactly as the lecturer works it: state the givens, compute V₁/I₁, quote the formula from slide 10, and finish. Say in one sentence what the intermediate 15 Ω is and what the final 60 Ω is.
 
-**13.** State the transformer equation and the ideal-transformer power relation, defining every symbol with its SI unit. Explain in one or two sentences the physical reason why the voltage ratio equals the turns ratio, and state what the turns ratio does to the current and to the frequency.
+**14.** Set out the chain from slide 8 to slide 9 as an argument: why the flux per turn being shared gives ε₂/ε₁ = N₂/N₁, and what extra assumption is needed before you may write V₂/V₁ = N₂/N₁.
 
-**14.** A 960 W coffeemaker designed for a 240 V line is to be operated from a 120 V supply. Say what transformer is required and give its turns ratio; calculate the current drawn from the 120 V line, the current in the coffeemaker itself, and the coffeemaker's resistance; then state the resistance the 120 V line appears to be driving and verify it with the impedance-transformation rule.
-
-**15.** Name four sources of energy loss in a real transformer and give, for each, the practical measure that reduces it. Then explain which of these losses continue when the secondary is left open-circuited with the primary still energised, and why.
+**15.** Slide 21 lists N₂/N₁ = 1/2 among its givens, computes V₁/I₁ = 240/6.67 = 36 Ω, and stops. Say why 36 Ω is nevertheless the right answer to the question asked, then finish the calculation the slide left out to find the dryer's own resistance, and check it a second way.
 
 ---
 
 ## Answers
 
-**Section A**
+**1. B.** Both emfs share one dΦ_B/dt, so dividing either by its own N gives the same number — "the induced emf per turn is the same in the two coils", which is the whole basis of equation 2. A is false and is contradicted by slide 10, where I₁ and I₂ differ. C reverses the point: which emf is larger depends on which N is larger. D invents flux leakage, a loss the deck never mentions.
 
-1. **b** — The secondary emf is −N₂ dΦ/dt; with DC the core flux is constant after switch-on, so dΦ/dt = 0. (A transient pulse does appear at switch-on and switch-off, when the flux is changing.)
-2. **c** — V₂ = V₁N₂/N₁ = 240 × 60/800 = 18 V; option a inverts the turns ratio and b quotes the ratio 800/60 itself.
-3. **a** — Ideal ⇒ V₁I₁ = V₂I₂, so I₂ = 8.0 × 120/480 = 2.0 A; a step-up in voltage is a step-down in current (option b applies the ratio the wrong way).
-4. **d** — The insulation between sheets breaks the wide conducting loops in which eddy currents would otherwise circulate; hysteresis is cured by the choice of core material, not by lamination.
-5. **c** — η = 460/500 = 0.920 = 92.0 %; the missing 40 W appears as heat in the windings and the core.
-6. **a** — I = P/V, so P_loss = I²R_line = P²R_line/V²; ten times the voltage means one hundredth of the line loss.
-7. **d** — R_apparent = (N₁/N₂)²R = (1/4)² × 20 = 1.25 Ω; resistance transforms with the *square* of the turns ratio (option c uses the first power).
-8. **b** — N₂/N₁ = 20 > 1, so it steps the voltage up by 20; the ideal power balance then forces the secondary current down by the same factor of 20.
-9. **a** — A transformer changes amplitude only; every voltage and current in it has the same frequency as the source, which is also why it can neither rectify nor convert AC to DC.
-10. **d** — Hysteresis loss is the energy per cycle used in reversing the core's magnetisation, so it is attacked through the core material; laminating attacks eddy currents and thicker wire attacks copper loss.
-11. **b** — V₁I₁ = V₂I₂ ⇒ I₂ = 2.0 × 230/23 = 20 A; option a assumes the current is unchanged, option d is the input power 460 W read as a current.
-12. **c** — V₁I₁ = V₂I₂ is exactly the statement that an ideal transformer conserves power; voltage is gained only at the cost of current, and efficiency can never exceed 100 %.
+**2. C.** Slide 9 supplies the assumption: "In an ideal transformer, the induced emfs ε₁ and ε₂ ... are equal to the terminal voltages, respectively." A is the error the assumption exists to prevent — emf and terminal voltage are distinct in a real transformer. B is true of equation 2 but has nothing to do with the emf-to-voltage step. D is about eddy-current losses, a different slide and a different issue.
 
-**Section B**
+**3. D.** N₂/N₁ = V₂/V₁ = 240/120 = 2; the appliance is the load, so its 240 V is V₂. A inverts the ratio, which is Example 2's answer, not this one. B and C quote a raw voltage as if it were a ratio — the turns ratio is dimensionless.
 
-**13.** Transformer equation: V₂/V₁ = N₂/N₁, where V₁ and V₂ are the rms primary and secondary voltages in volts (V) and N₁, N₂ the numbers of turns (pure numbers). Ideal power relation: P₁ = P₂, i.e. V₁I₁ = V₂I₂ with currents in amperes (A) and power in watts (W); hence I₁/I₂ = N₂/N₁. The physical reason is that the same alternating core flux Φ (webers, Wb) threads every turn of both windings, so each turn has the same induced emf dΦ/dt, and a coil's total emf is simply that per-turn emf multiplied by its number of turns. The turns ratio therefore changes the current in the *inverse* ratio to the voltage, and it changes the frequency not at all — the secondary alternates at exactly the source frequency.
+**4. A.** P_av = V₁I₁, so I₁ = 960/120 = 8.0 A. B is I₂ = 960/240, the current in the coffeemaker rather than in the line — the answer to a question that was not asked. C halves 4.0 A for no reason. D inverts, computing V₁/P_av.
 
-**14.** The appliance needs 240 V from a 120 V supply, so a **step-up transformer** with N₂/N₁ = 240/120 = **2** (1 : 2). Ideal, so P₁ = P₂ = 960 W: current from the line I₁ = 960/120 = **8.0 A**; current in the coffeemaker I₂ = 960/240 = **4.0 A** (and indeed I₁/I₂ = 2 ✓). Its resistance R = V₂²/P = 240²/960 = **60 Ω**. The line appears to drive V₁/I₁ = 120/8.0 = **15 Ω**, which matches the rule R_apparent = (N₁/N₂)²R = (½)² × 60 = 15 Ω ✓.
+**5. B.** V₁/I₁ = 120/8 = 15 Ω, then R = (V₁/I₁)(N₂/N₁)² = 15(2)² = 60 Ω. A stops at the apparent resistance and never applies the formula. C multiplies by the ratio instead of the ratio squared — the standard slip. D divides V₂ by 1, treating the rating as a resistance.
 
-**15.** (i) **Copper loss** — I²R heating in the windings; reduced by using thicker, lower-resistance conductors. (ii) **Eddy-current loss** — currents induced in the core itself; reduced by laminating the core into thin sheets insulated from one another. (iii) **Hysteresis loss** — energy spent reversing the core's magnetisation each cycle; reduced by using a soft magnetic material such as silicon steel. (iv) **Flux leakage** (and mechanical/humming loss) — flux that fails to link the secondary; reduced by a closed core of high permeability with the windings well coupled, and by clamping the laminations tightly. With the secondary open-circuited, no secondary current flows and the primary draws only a small magnetising current, so copper loss becomes almost negligible — but the core is still being magnetised and demagnetised at the supply frequency, so the **eddy-current and hysteresis (core) losses continue essentially unchanged**. Copper loss depends on the load current; core loss depends on the flux and frequency, and so is present whenever the primary is energised.
+**6. C.** N₂/N₁ = V₂/V₁ = 120/240 = 1/2, so the secondary has half as many turns: step-down. A is Example 1's ratio, obtained by putting the dryer's rating in the primary. B is a current, not a ratio. D squares the ratio prematurely — the square belongs only in the resistance formula.
+
+**7. D.** I₂ = P_av/V₂ = 1600/120 = 13.3 A. A is I₁ = 1600/240, the current from the outlet, which is what part (b) asks for but not what this question asks for. B halves 6.67 A, applying the ratio the wrong way round. C divides nothing.
+
+**8. A.** V₁/I₁ = 240/6.67 = 36 Ω, which is the resistance the dryer *appears* to have at 240 V. B is the dryer's own resistance, R = 36 × (1/2)² = 9 Ω — the right number for the wrong question. C multiplies by the ratio rather than by its square. D squares 12 for no reason.
+
+**9. B.** I₁V₁ = I₂V₂, so doubling V₂ halves I₂ for the same power. A would double the power out of nothing. C breaks the power equation. D applies the square from the resistance formula to a current, where it does not belong.
+
+**10. C.** Slide 5: the core is laminated "to minimize eddy current losses" and "the insulation prevents the eddy currents from flowing from one sheet of metal to the next". A confuses the core with the windings. B is done by the turns ratio, not the core construction. D is true of transformers but has no connection with lamination — slide 7 gives the frequency statement separately.
+
+**11. A.** Slide 7: "All of the currents and voltages in the transformer have the same frequency as the AC source." B and C apply the turns ratio to the frequency, which it never touches. D would mean the transformer produced DC, which it cannot.
+
+**12. D.** ε₂/ε₁ = (−N₂ dΦ_B/dt)/(−N₁ dΦ_B/dt): the derivative cancels and so do the two identical minus signs. A is false — the minus sign in equation 1 *is* Lenz's law and it is on her slide. B accuses her of an error where the algebra is exact. C is false; an induced emf can perfectly well be negative at a given instant.
+
+**13.** Givens: V₁ = 120 V, I₁ = 8.0 A, and N₂/N₁ = V₂/V₁ = 240/120 = 2. Then V₁/I₁ = 120/8 = 15 Ω. Using V₁/I₁ = R/(N₂/N₁)², R = (V₁/I₁)(N₂/N₁)² = 15(2)² = 15 × 4 = 60 Ω. The 15 Ω is the **apparent** resistance — what the 120 V line sees when it looks through the transformer; the 60 Ω is the coffeemaker's **actual** resistance, which is what part (c) asked for. Checking with numbers already on the slides, R = V₂/I₂ = 240/4.0 = 60 Ω.
+
+**14.** One core carries one flux, and slide 8 states that the flux per turn Φ_B is the same in the primary and the secondary. Faraday's law applied to each winding therefore uses the *same* dΦ_B/dt: ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt. Divide the second by the first — dΦ_B/dt cancels, and so do the two minus signs — leaving ε₂/ε₁ = N₂/N₁ at every instant. That statement is about **emfs**. To replace the emfs by the terminal voltages V₁ and V₂ you need slide 9's extra assumption: in an **ideal** transformer, with no energy losses in the windings or the core, each winding's induced emf is equal to the voltage at its terminals. Only with that assumption in hand does V₂/V₁ = N₂/N₁ follow.
+
+**15.** Part (c) asked what resistance the dryer will *appear* to have when operated at 240 V, and the resistance seen from the primary is by definition V₁/I₁ = 240/6.67 = 36 Ω (exactly 36 Ω, since I₁ = 1600/240 = 20/3 A). So the slide's last line does answer its own question. What it leaves out is the dryer's own resistance: using slide 10's V₁/I₁ = R/(N₂/N₁)² with N₂/N₁ = 1/2, R = (V₁/I₁)(N₂/N₁)² = 36 × (1/2)² = 36 × 1/4 = 9 Ω. Second check, from the secondary side: R = V₂/I₂ = 120/13.3 = 9 Ω, and equivalently R = V₂²/P_av = 120²/1600 = 14400/1600 = 9 Ω. Note that this is where Example 2 differs from Example 1: Example 1(c) wanted the appliance's own resistance and so ended with the multiplication by (N₂/N₁)², while Example 2(c) wanted the apparent resistance and stopped one line earlier.

@@ -1,106 +1,118 @@
-# MTH_102 — Week 3 retention set
-
-*Elementary Mathematics II (Calculus) · sat seven days after Week 3 · notes closed*
+# MTH_102 — Week 3 Questions
+*Evaluating limits algebraically: direct substitution, factorization, rationalization, L'Hôpital's Rule, and the ten properties. Twelve multiple choice, three short answer. Answers at the bottom — work them before you look.*
 
 ## Multiple choice
 
-**1.** lim_{x→2} (x² − 4)/(x − 2) equals
-a) 0
-b) the limit does not exist, because the function is undefined at x = 2
-c) 4
-d) 2
+**1.** lim x→3 (x² + 2x − 3) =
+A. 12
+B. 15
+C. 18
+D. 9
 
-**2.** L'Hôpital's Rule may be applied to lim_{x→a} f(x)/g(x) only when
-a) direct substitution produces 0/0 or ∞/∞, and f and g are differentiable near a
-b) f and g are both polynomials
-c) the limit is known in advance to exist
-d) f(a) = 0 and g(a) ≠ 0
+**2.** lim x→2 (x³ − 3)/(x² − 6) =
+A. 5/2
+B. Does not exist
+C. −5/2
+D. 0/0, indeterminate
 
-**3.** lim_{x→0} (√(x + 1) − 1)/x equals
-a) 0
-b) 1
-c) the limit does not exist
-d) 1/2
+**3.** Direct substitution in lim x→2 (x² − 4)/(x − 2) gives 0/0. That tells you
+A. the limit is 0
+B. the form decides nothing, so more algebra is needed
+C. the limit does not exist
+D. the limit is 1
 
-**4.** For f(x) = |x − 5|/(x − 5), lim_{x→5} f(x) is
-a) 1
-b) non-existent, because the left-hand limit is −1 and the right-hand limit is 1
-c) 0
-d) −1
+**4.** lim x→3 (x³ − 27)/(x − 3) =
+A. 0
+B. 18
+C. Does not exist
+D. 27
 
-**5.** lim_{x→∞} (4x³ + 2x)/(7x³ − x² + 1) equals
-a) 4/7
-b) 0
-c) ∞
-d) 4
+**5.** lim x→2 (1/x − 1/2)/(x − 2) =
+A. 1/4
+B. −1
+C. 0
+D. −1/4
 
-**6.** The quotient law lim (f/g) = (lim f)/(lim g) requires one extra hypothesis. Which?
-a) f must be continuous at a
-b) f(a) must be defined
-c) lim_{x→a} g(x) ≠ 0
-d) g must be a polynomial
+**6.** lim x→0 (√(x+9) − 3)/x =
+A. 1/6
+B. 1/3
+C. 0
+D. Does not exist
 
-**7.** lim_{x→0} x sin(1/x) equals
-a) 1
-b) 0
-c) the limit does not exist, because sin(1/x) oscillates without settling
-d) ∞
+**7.** lim x→0 (x + 4)³ =
+A. 12
+B. 4
+C. 64
+D. 0
 
-**8.** Which of these is **not** an indeterminate form?
-a) ∞ − ∞
-b) 1^∞
-c) 0 · ∞
-d) 5/0
+**8.** lim x→4 (1/√x − 1/2)/(x − 4) =
+A. 1/16
+B. −1/16
+C. −1/8
+D. −1/4
 
-**9.** lim_{x→0} (sin 5x)/(2x) equals
-a) 5
-b) 0
-c) 5/2
-d) 2/5
+**9.** L'Hôpital's Rule replaces lim f(x)/g(x) by
+A. lim (f′g − fg′)/g²
+B. lim f′(x)/g′(x)
+C. lim f′(x)·g′(x)
+D. lim [f(x)/g(x)]′
 
-**10.** f(x) = (x² − x − 6)/(x − 3) is undefined at x = 3. What value assigned to f(3) makes f continuous there?
-a) 5
-b) 3
-c) 0
-d) No value works; the discontinuity is not removable
+**10.** lim x→∞ x²/eˣ =
+A. ∞
+B. 1
+C. 2
+D. 0
 
-**11.** By L'Hôpital's Rule, lim_{x→∞} (ln x)/x equals
-a) 1
-b) ∞
-c) e
-d) 0
+**11.** The Quotient property lim (f/g) = (lim f)/(lim g) holds
+A. provided lim x→c g(x) ≠ 0
+B. provided g(c) is defined
+C. provided f and g are polynomials
+D. provided lim x→c f(x) ≠ 0
 
-**12.** lim_{x→3} f(x) exists if and only if
-a) f(3) is defined
-b) lim_{x→3⁻} f(x) and lim_{x→3⁺} f(x) both exist and are equal
-c) f is a polynomial on some interval containing 3
-d) f(3) = 0
+**12.** If 5 − x³ ≤ f(x) ≤ 5 + x³, then lim x→0 f(x) =
+A. 0
+B. 10
+C. 5
+D. Cannot be found without knowing f
 
 ## Short answer
 
-**S1.** Evaluate lim_{x→9} (√x − 3)/(x − 9). Name the method, show every step, and say in one sentence why direct substitution failed.
+**S1.** Evaluate lim x→2 (1/x − 1/2)/(x − 2), showing every step the lecturer shows on slide 7. Name the common denominator she multiplies by, and say exactly which step produces the minus sign in the answer.
 
-**S2.** State L'Hôpital's Rule precisely, including its hypotheses. Then give one concrete limit for which applying the rule produces a *wrong* answer, and explain which hypothesis was violated.
+**S2.** Work the slide 8 TASK in full: find lim x→3 (x³ − 27)/(x − 3). State why direct substitution fails, give the factorization of x³ − 27, and then check your answer by a second method from the deck.
 
-**S3.** For f(x) = 2x + 1 when x < 1, and f(x) = 4 − x when x ≥ 1, determine lim_{x→1} f(x) and decide whether f is continuous at x = 1. Justify each step from the definitions.
+**S3.** The SUMMARY slide says: "lim x→∞ f(x) represents the limit approaching x from the right while lim x→−∞ f(x) is used when the limit approaches x from the left on the graph." Say what is wrong with that sentence, state correctly what lim x→∞ f(x) and lim x→−∞ f(x) mean, and give the notation that actually does mean "approaching from the right" and "approaching from the left".
+
+---
 
 ## Answers
 
-**1. c** — 0/0, so factor: (x+2)(x−2)/(x−2) → x + 2 → 4; being undefined at 2 does not stop the limit existing.
-**2. a** — The rule is licensed only by an indeterminate quotient form plus differentiability of f and g near a (with g′ ≠ 0).
-**3. d** — Multiply by the conjugate √(x+1)+1: x/[x(√(x+1)+1)] → 1/(1+1) = 1/2.
-**4. b** — Right of 5, |x−5| = x−5 giving 1; left of 5, |x−5| = −(x−5) giving −1; unequal one-sided limits ⟹ no limit.
-**5. a** — Equal degrees as x → ∞, so the limit is the ratio of leading coefficients, 4/7.
-**6. c** — Division by a limit of zero is undefined, so the law is stated only for lim g ≠ 0; g(a) itself is irrelevant.
-**7. b** — −|x| ≤ x sin(1/x) ≤ |x| and both bounds tend to 0, so the Squeeze Theorem forces the limit to 0.
-**8. d** — With a non-zero numerator over 0 the limit is ±∞ or non-existent; the form already determines the outcome, so it is not indeterminate.
-**9. c** — L'Hôpital (or sin u ≈ u): (5 cos 5x)/2 → 5/2.
-**10. a** — (x−3)(x+2)/(x−3) → x + 2, whose limit at 3 is 5; matching f(3) to the limit removes the hole.
-**11. d** — Form ∞/∞; differentiating gives (1/x)/1 = 1/x → 0, so logarithms grow slower than x.
-**12. b** — Existence of a two-sided limit is exactly agreement of the two one-sided limits; the value f(3) plays no part.
+**1. A.** Substitute directly: (3)² + 2(3) − 3 = 9 + 6 − 3 = 15 − 3 = 12. B stops at 9 + 6 and forgets to subtract the 3. C flips the sign of the constant, adding 3 instead of subtracting. D reads 3² as 3 × 2 = 6, giving 6 + 6 − 3.
 
-**S1.** Substitution gives (3 − 3)/(9 − 9) = 0/0, indeterminate, so substitution fails. Use **rationalization**: multiply numerator and denominator by the conjugate √x + 3 to get (x − 9)/[(x − 9)(√x + 3)] = 1/(√x + 3) for x ≠ 9; the limit is 1/(3 + 3) = **1/6**.
+**2. C.** (2³ − 3)/(2² − 6) = (8 − 3)/(4 − 6) = 5/(−2) = −2.5. A loses the minus that 4 − 6 = −2 produces. B assumes a negative denominator makes the limit fail; it does not — only a zero denominator with a zero numerator stops substitution. D confuses "negative" with "indeterminate": 5/(−2) is perfectly well defined, so the substitution stands.
 
-**S2.** *Statement:* if f and g are differentiable on an open interval containing a (except possibly at a), g′(x) ≠ 0 there, and lim_{x→a} f(x)/g(x) is of the form 0/0 or ∞/∞, then lim_{x→a} f(x)/g(x) = lim_{x→a} f′(x)/g′(x) provided the latter limit exists (or is ±∞). *Misapplication:* lim_{x→0} (cos x)/(x + 1) is 1/1 = 1 by substitution, but differentiating top and bottom gives (−sin x)/1 → 0. The violated hypothesis is the indeterminate-form condition: the quotient was never 0/0 or ∞/∞, so the rule does not apply. A full answer must say that the form must be re-checked before *each* application.
+**3. B.** 0/0 is indeterminate: the form alone decides nothing, which is exactly why slide 6 goes on to factor. A treats 0/0 as ordinary division into zero. C is the standard trap — the function is undefined at x = 2, yet the limit is 4. D treats 0/0 as if any number over itself were 1.
 
-**S3.** Left-hand: for x < 1 the rule is 2x + 1, so lim_{x→1⁻} f(x) = 2(1) + 1 = 3. Right-hand: for x ≥ 1 the rule is 4 − x, so lim_{x→1⁺} f(x) = 4 − 1 = 3. The one-sided limits agree, so **lim_{x→1} f(x) = 3**. For continuity check all three conditions: f(1) = 4 − 1 = 3 is defined, the limit exists and equals 3, and 3 = 3 — so f **is continuous** at x = 1. (A piecewise rule change does not by itself create a discontinuity; only a mismatch does.)
+**4. D.** 0/0, so factor the difference of cubes: x³ − 27 = (x − 3)(x² + 3x + 9). Cancel to get lim (x² + 3x + 9) = 9 + 9 + 9 = 27. A comes from the wrong factorization (x − 3)(x² − 9), whose second factor vanishes at 3. B comes from the equally wrong (x − 3)(x² + 9), giving 9 + 9. C repeats the error of question 3 — 0/0 does not mean non-existence.
+
+**5. D.** Multiply top and bottom by 2x to get (2 − x)/[2x(x − 2)], then write 2 − x = −1(x − 2) and cancel: −1/(2x) = −1/(2(2)) = −1/4. A cancels 2 − x against x − 2 without the −1 and so loses the sign. B cancels correctly to −1 but forgets the 2x that remains downstairs. C is the 0/0-means-0 error again.
+
+**6. A.** Multiply by the conjugate √(x+9) + 3: the numerator becomes (x + 9) − 9 = x, cancel the x, leaving 1/(√(x+9) + 3) → 1/(3 + 3) = 1/6. B forgets the "+ 3" left in the denominator and evaluates 1/√9. C substitutes into the original numerator and stops. D repeats the 0/0-means-non-existence error.
+
+**7. C.** Take the limit first, then the power: [lim (x + 4)]³ = 4³ = 64. A multiplies by the exponent instead of raising to it, 3 × 4. B takes the limit and forgets the cube entirely. D substitutes x = 0 into x³ and ignores the +4.
+
+**8. B.** 1/√x − 1/2 = (2 − √x)/(2√x); with x − 4 = (√x − 2)(√x + 2) and 2 − √x = −1(√x − 2), everything cancels to −1/[2√x(√x + 2)] = −1/[2(2)(4)] = −1/16. A loses the −1 in the rewrite. C drops the √x factor from the denominator, using −1/[2(√x + 2)]. D forgets to double, i.e. uses 2 + 2 = 4 for the whole denominator.
+
+**9. B.** The rule "replaces the original function with its derivatives" — numerator and denominator differentiated separately. A is the quotient rule, and a g² appearing in your working is the tell that you used it by mistake. C multiplies the derivatives instead of dividing them. D differentiates the whole quotient as one object, which is again the quotient rule in disguise.
+
+**10. D.** One application gives 2x/eˣ, still ∞/∞; a second gives 2/eˣ, and since eˣ grows without bound the limit is 0. A reads the numerator's growth and ignores that eˣ outgrows every power. B is what you would get by cancelling the two infinities. C stops after the second differentiation and reads off the numerator 2 without dividing by eˣ.
+
+**11. A.** The slide states it explicitly: the quotient of the limits is valid "as long as the denominator's limit is not zero". B is about the value g(c), which a limit never inspects. C invents a restriction the property does not carry. D puts the proviso on the wrong function — a zero numerator limit is completely harmless.
+
+**12. C.** Both bounds tend to 5 as x → 0: 5 − 0³ = 5 and 5 + 0³ = 5, so f is trapped between 5 and 5. A takes the limit of x³ instead of the whole bound. B adds the two bounds together. D misses that the Squeeze Theorem exists precisely to give an answer when f itself is unknown. *(Note: the slide misprints the upper bound as 5 − x³ in the two working lines. The answer 5 is unaffected because both bounds collapse to 5 anyway.)*
+
+**S1.** The expression is a complex fraction. The common denominator of 1/x and 1/2 is **2x**, so multiply numerator and denominator by 2x: the numerator (1/x − 1/2)·2x becomes 2 − x, the denominator (x − 2)·2x becomes 2x(x − 2), giving lim x→2 (2 − x)/[2x(x − 2)]. Now 2 − x will not cancel against x − 2 as it stands, so factor out −1: 2 − x = −1(x − 2). Then lim x→2 [−1(x − 2)]/[2x(x − 2)] = lim x→2 (−1)/(2x) = −1/(2(2)) = **−1/4**. The minus sign is produced by exactly one step: the −1 factored out when rewriting 2 − x as −1(x − 2). Nothing in the clearing of the fractions and nothing in the final substitution contributes it, which is why a student who cancels 2 − x against x − 2 directly gets +1/4.
+
+**S2.** Direct substitution gives (3³ − 27)/(3 − 3) = (27 − 27)/0 = 0/0, an indeterminate form, so substitution fails and the factorization method applies. The difference of cubes factors as **x³ − 27 = (x − 3)(x² + 3x + 9)**. Then lim x→3 [(x − 3)(x² + 3x + 9)]/(x − 3) = lim x→3 (x² + 3x + 9), cancelling the common factor, which is legitimate because x is near 3 but never equal to 3 throughout the limit. Substituting now: 3² + 3(3) + 9 = 9 + 9 + 9 = **27**. Check by L'Hôpital, since the form was 0/0: f(x) = x³ − 27 and g(x) = x − 3 give f′(x) = 3x² and g′(x) = 1, so the limit is 3(3)²/1 = 27. The two methods agree.
+
+**S3.** The sentence confuses two different ideas. lim x→∞ f(x) and lim x→−∞ f(x) are **limits at infinity**: they describe the function's end behaviour, what f(x) settles towards as x grows without bound in the positive direction and in the negative direction respectively. No finite point is being approached at all, so talking about approaching "x" from a side is meaningless there. What the sentence is reaching for is the **one-sided limit**, which does approach a finite point c: lim x→c⁺ f(x) is the right-hand limit, taken through values of x slightly greater than c, and lim x→c⁻ f(x) is the left-hand limit, taken through values slightly less than c. That ⁺/⁻ superscript notation never appears anywhere in this deck, so it is worth writing it out yourself; and if the exam quotes the SUMMARY slide's wording, answer with the correct distinction rather than repeating it.
