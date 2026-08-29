@@ -1,67 +1,106 @@
-# PHY_108 — Week 4 Question Set (sit 7 days later)
+# PHY_108 — Week 4 Retention Set
 
-*Sit this during Saturday catch-up in Week 5, not this week. Notes closed.*
+*Verification of Kirchhoff's Current Law · sit this seven days after the lesson*
 
-## Section A - Multiple choice (12)
+## Multiple choice
 
-**1.** Kirchhoff's Current Law states that at any junction in a circuit:
-A) The sum of the voltages is zero  B) The sum of the currents entering equals the sum of the currents leaving  C) The current is the same in every branch  D) The total resistance equals the sum of the branch resistances
+**1.** Kirchhoff's Current Law is a direct consequence of the conservation of:
+a) energy
+b) momentum
+c) electric charge
+d) magnetic flux
 
-**2.** KCL is a direct consequence of the conservation of:
-A) Energy  B) Momentum  C) Electric charge  D) Power
+**2.** In the sign convention used in this experiment, a current entering the junction is taken as ______ and one leaving it as ______.
+a) positive; negative
+b) negative; positive
+c) positive; positive
+d) negative; negative
 
-**3.** In the algebraic form of KCL, ΣI = 0, the usual sign convention takes currents:
-A) Entering the junction as negative and leaving as positive  B) Entering as positive and leaving as negative  C) All currents as positive  D) Clockwise as positive
+**3.** With that convention, the node equation at node b is written as:
+a) I1 + I2 + I3 = 0
+b) I1 - I2 - I3 = 0
+c) I1 + I2 - I3 = 0
+d) -I1 - I2 + I3 = 0
 
-**4.** Kirchhoff's *second* law deals with:
-A) Currents at a junction  B) The sum of p.d.s round a closed loop  C) The resistance of a parallel network  D) The heating effect of a current
+**4.** Which set is the complete apparatus list for this experiment?
+a) Breadboard, one DC supply, five resistors, three voltmeters, cables
+b) Breadboard, two DC power supplies, five variable resistors, three ammeters, connection cables
+c) Breadboard, two DC power supplies, three variable resistors, five ammeters, connection cables
+d) Breadboard, two batteries, five capacitors, three ammeters, connection cables
 
-**5.** The apparatus list for this experiment includes:
-A) One power supply, two resistors and one ammeter  B) Two DC power supplies, five variable resistors and three ammeters  C) A rheostat, a voltmeter and a metre bridge  D) Three voltmeters and one ammeter
+**5.** Immediately after connecting the circuit, the next procedural step is to:
+a) set the maximum output voltage of both DC supplies to 50 V
+b) click Record to log the three ammeter readings
+c) save the downloaded Excel file
+d) increase the emf in 3 V steps
 
-**6.** At node b in the experiment's circuit, the correct node equation is:
-A) I₁ + I₂ + I₃ = 0  B) I₁ = I₂ + I₃  C) I₁ + I₂ = I₃  D) I₁ − I₂ − I₃ = 0
+**6.** The emfs of both supplies are first adjusted to:
+a) 3 V
+b) 50 V
+c) 9 V
+d) 15 V
 
-**7.** In one run, I₁ = 1.055 mA and I₂ = −0.344 mA. The computed value of I₃ is:
-A) 1.399 mA  B) 0.711 mA  C) −0.711 mA  D) 0.344 mA
+**7.** After the first set of readings is recorded, the emf is then:
+a) reduced to zero and the resistors changed
+b) held constant while R1–R5 are varied
+c) doubled once and the run ended
+d) increased in regular 3 V steps, repeating the recording at each step
 
-**8.** The negative sign on the I₂ reading means:
-A) The ammeter is faulty  B) The current in that branch is smaller than assumed  C) The current in that branch actually flows opposite to the assumed direction  D) The reading should be discarded
+**8.** In the recorded data, I2 is negative in every row. This means that:
+a) the ammeter is faulty and the run must be repeated
+b) the current in that branch flows opposite to the assumed positive direction, i.e. it leaves the junction
+c) the resistance R2 has a negative value
+d) the current there is smaller than the resolution of the meter
 
-**9.** Each of the three ammeters is connected:
-A) In parallel with its branch  B) In series in its branch  C) Across the power supply  D) Between the two power supplies
+**9.** For the row I1 = 1.055 mA and I2 = -0.344 mA, the computed I3 is:
+a) 0.711 mA
+b) 1.399 mA
+c) -0.711 mA
+d) 0.344 mA
 
-**10.** An ammeter is built with very low resistance so that:
-A) It draws no current from the branch  B) It barely alters the current it is measuring  C) It can measure high voltages  D) It protects the voltmeter
+**10.** The law is verified from the readings by:
+a) averaging I1, I2 and I3 and checking the mean is zero
+b) plotting I3 against R3 and taking the gradient
+c) checking that I1 = I2 = I3 at every emf setting
+d) computing I3 = I1 + I2 from the measured I1 and I2 and comparing it with the measured I3 at each setting
 
-**11.** In the procedure, both DC supplies are first set to a maximum output of 50 V and their emfs adjusted to 9 V; the run then continues by:
-A) Changing R₁ in steps of 1 kΩ  B) Increasing the emf in regular 3 V steps and recording again  C) Reversing the ammeters  D) Replacing the breadboard
+**11.** Which is the correct pairing of Kirchhoff's laws?
+a) First Law = Voltage Law (loop); Second Law = Current Law (node)
+b) First Law = Current Law (node); Second Law = Voltage Law (loop)
+c) Both laws describe voltages, one for series and one for parallel circuits
+d) Both laws describe currents, one for DC and one for AC circuits
 
-**12.** A student measures I₃ = 0.500 mA while I₁ + I₂ gives 0.479 mA. The percentage difference, and the verdict, are:
-A) 4.2%, KCL verified within the usual 5% tolerance  B) 21%, KCL disproved  C) 0.021%, KCL verified  D) 4.2%, KCL disproved
+**12.** Which of the following is a genuine source of error in this experiment?
+a) The junction storing charge between readings
+b) Kirchhoff's law failing at high currents
+c) The internal resistance of the ammeters loading the branches they measure
+d) The use of DC rather than AC supplies
 
-## Section B - Short answer (3)
+## Short answer
 
-**13.** State Kirchhoff's Current Law in both of its usual forms, name the conservation principle it rests on, and write the node equation for a junction where I₁ and I₂ enter and I₃ leaves.
+**S1.** State Kirchhoff's Current Law in both of the forms given in the lesson, and name the conservation principle it expresses.
 
-**14.** From the experiment: R₁ = 10 kΩ, R₂ = 1 kΩ, R₃ = 2.5 kΩ, R₄ = 7 kΩ, R₅ = 5 kΩ, E₂ = 9 V, E₁ = 15 V gives I₁ = 1.215 mA, I₂ = −0.271 mA and a measured I₃ = 0.944 mA. Compute I₃ from I₁ and I₂, find the percentage difference from the measured value, and comment on the result.
+**S2.** List, in order, the six steps of the experimental procedure.
 
-**15.** State four precautions taken in this experiment and, for each, the source of error it guards against.
+**S3.** Give three precautions and three sources of error for this experiment, and explain in one sentence why a negative ammeter reading must be recorded with its sign.
 
 ## Answers
 
-**1. B** — *statement of KCL*: ΣI_in = ΣI_out at every junction.
-**2. C** — *physical basis*: charge cannot be created, destroyed or accumulated at a node; energy conservation is KVL, not KCL.
-**3. B** — *sign convention*: entering positive, leaving negative, so that −I₁ − I₂ + I₃ = 0 is the same statement as I₁ + I₂ = I₃.
-**4. B** — *KCL vs KVL*: the first law is the current law (junctions); the second is the voltage law (closed loops, conservation of energy).
-**5. B** — *apparatus*: breadboard, two DC power supplies, five variable resistors, three ammeters and connection cables.
-**6. C** — *node equation*: two currents enter and one leaves, so I₁ + I₂ = I₃, i.e. −I₁ − I₂ + I₃ = 0.
-**7. B** — *algebraic addition*: 1.055 + (−0.344) = 0.711 mA. Keep the sign; do not add magnitudes.
-**8. C** — *meaning of a negative reading*: the assumed direction was wrong, so that branch is really carrying current away from the node. The reading is valid and is used with its sign.
-**9. B** — *ammeter placement*: in series, so it carries the whole current of the branch it measures.
-**10. B** — *ammeter design*: a low internal resistance adds almost nothing to the branch, so the current is essentially undisturbed.
-**11. B** — *procedure*: after setting the 50 V range and 9 V emfs, the emf is raised in 3 V intervals and the three ammeters recorded at each step; the data are saved to Excel.
-**12. A** — *percentage difference*: |0.479 − 0.500|/0.500 × 100% = 4.2%, inside the ~5% tolerance, so the discrepancy is experimental (meter resolution, loading, contact resistance) and KCL stands.
-**13.** *Statement and node equation*: (i) The sum of the currents entering a junction equals the sum of the currents leaving it, ΣI_in = ΣI_out. (ii) The algebraic sum of all the currents entering and leaving a junction is zero, ΣI = 0, with currents entering taken as positive and currents leaving as negative. It rests on the **conservation of electric charge** — charge is neither created nor destroyed, and none accumulates at the junction. For the junction described: **I₁ + I₂ = I₃**, or equivalently −I₁ − I₂ + I₃ = 0.
-**14. I₃(computed) = 0.944 mA; percentage difference = 0%** — *verification of KCL*: I₁ + I₂ = 1.215 + (−0.271) = 0.944 mA, identical to the measured 0.944 mA, so |0.944 − 0.944|/0.944 × 100% = 0%. Comment: the computed and measured values of I₃ agree, so the current entering node b equals the current leaving it and Kirchhoff's Current Law is verified; any small difference in a real lab (up to about 5%) would be attributed to ammeter resistance and zero error, resistor tolerance and contact resistance, not to a failure of the law.
-**15.** *Precautions and the errors they guard against* (any four): **check and correct the ammeter zeros** — a zero error is a systematic offset that unbalances I₁ + I₂ = I₃; **connect every ammeter in series and with correct polarity** — wrong connection short-circuits the branch or reverses the sign of the reading; **fix and label an assumed current direction in each branch before starting** — mixing conventions midway makes correct data appear to violate KCL; **press the 50 V range button before dialling the emf** — prevents overloading the meters and resistors; **push components firmly into the breadboard and tighten connections** — avoids contact and lead resistance that starves one branch; **let readings settle before clicking Record and keep currents small / switch off between runs** — avoids fluctuation and the heating that raises the resistances during a run.
+**1. c** — KCL expresses conservation of electric charge: charge does not accumulate at a node.
+**2. a** — The lesson's stated convention: entering currents positive, leaving currents negative.
+**3. d** — I1 and I2 enter (so -I1 - I2) and I3 leaves (+I3), summing to zero.
+**4. b** — Breadboard, two DC power supplies, five variable resistors, three ammeters, connection cables.
+**5. a** — Step 2 sets the 50 V maximum-output range before the emfs are dialled to 9 V.
+**6. c** — Both supplies are set to 9 V with the voltage dial knob.
+**7. d** — Step 5: raise the emf in 3 V intervals (9 → 12 → 15 V) and repeat the recording.
+**8. b** — A negative sign only reverses the assumed direction; that branch carries current away from the junction.
+**9. a** — 1.055 + (-0.344) = 0.711 mA, matching the measured I3 for that row.
+**10. d** — The I3-computed column is compared row by row with the measured I3.
+**11. b** — Kirchhoff's First Law is the Current Law at a node; the Second Law is the Voltage Law around a loop.
+**12. c** — Ammeter burden resistance alters the very currents being measured; the other options are not real effects.
+
+**S1.** Form 1: the sum of the currents entering a junction equals the sum of the currents leaving it. Form 2: the algebraic sum of all currents entering and leaving a junction is zero, with entering currents positive and leaving currents negative. It expresses conservation of electric charge.
+
+**S2.** (1) Select R1–R5 and connect the circuit as shown. (2) Set the maximum output voltage of both DC supplies to 50 V using the 50 V button. (3) Adjust both emfs to 9 V with the voltage dial. (4) Click Record to log the three ammeter readings. (5) Increase the emf in regular 3 V intervals and repeat step 4 at each setting. (6) Save the downloaded Excel file.
+
+**S3.** Precautions (any three): select the 50 V range before dialling the emf up; connect each ammeter in series in its branch with correct polarity; keep R1–R5 fixed and change only the emf; use the specified regular 3 V steps and let readings settle before recording; check all breadboard connections before powering up. Sources of error (any three): ammeter internal resistance loading the branch; meter zero, calibration and resolution/rounding error; resistor tolerance against the nominal 10, 1, 2.5, 7 and 5 kΩ; supply emf drift relative to the dial setting; contact and lead resistance at the breadboard; resistor self-heating. The sign must be kept because the node sum is algebraic — dropping the minus on I2 would give I1 + I2 = 1.399 mA instead of the measured 0.479 mA and would appear to disprove KCL.

@@ -1,84 +1,104 @@
-# PHY_108 — Week 5 Summary
+# PHY_108 — Week 5
 
-*General Physics Practical II · Week 5 (5–11 Oct 2026) · Experiment: Verification of Kirchhoff's Voltage Law (KVL)*
+*General Physics Practical II · Week 5 (5 – 11 Oct 2026)*
 
-## The 8 most examinable things this week
+## Most likely to be examined
 
-1. **KVL (statement)**: around any closed loop in a circuit, **the sum of the voltage drops across all branches in the loop equals the sum of the emfs of the batteries in the loop** — equivalently, **the algebraic sum of all voltages around a closed loop is zero**. Σε = ΣIR, or ΣV = 0. Know both wordings.
-2. **KVL rests on conservation of energy** (a charge taken once round a loop returns to the same potential). **KCL rests on conservation of charge**. That one-line pairing is a standard mark.
-3. **Sign convention — resistors**: the potential difference is **positive if the resistance is traversed in the same direction as the current flowing through it, and negative otherwise**.
-4. **Sign convention — sources**: the emf of the battery is **positive if the battery is traversed from its positive terminal to its negative terminal in the loop, and negative otherwise**.
-5. **Last week vs this week**: KCL applies at a **node/junction** (ΣI_in = ΣI_out), verified with **ammeters in series** in each branch; KVL applies around a **closed loop/mesh**, and voltages are measured with a **voltmeter in parallel** across each element. Junctions vs loops; series vs parallel.
-6. **Definitions**: a **node** is a point where two or more components meet; a **branch** is a single path connecting two nodes; a **loop (mesh)** is a closed pathway formed by interconnected branches.
-7. **The three working equations** of this experiment (KCL at node b, KVL round loop 1, KVL round loop 2): **I₁ + I₂ = I₃** … (1); **I₃R₃ + I₃R₄ + I₁R₅ = E₁** … (2); **I₂R₂ − I₁R₅ + I₂R₁ = −E₂** … (3). Solve simultaneously for I₁, I₂, I₃.
-8. **The verification**: solve (1)–(3) analytically, then compare the **computed I₃ with the measured I₃**; agreement (conventionally within **5%**) verifies KVL. A **negative current** (I₂ came out negative) simply means the true direction is opposite to the one assumed — it is not an error.
+1. **Statement of KVL** — around any closed loop, the algebraic sum of all voltage drops is zero; equivalently, the sum of the voltage drops across the branches in the loop equals the sum of the emfs of the batteries in that loop. It rests on **conservation of energy**.
+2. **The two sign rules**, stated exactly: a potential difference across a resistance is **positive if the resistance is traversed in the same direction as the current** flowing through it, negative otherwise; an emf is **positive if the battery is traversed from its positive terminal to its negative terminal**, negative otherwise.
+3. **Definitions**: node (a point where two or more components meet), branch (a single path connecting two nodes, containing one or more elements), loop/mesh (a closed pathway formed by interconnected branches).
+4. **The three circuit equations** and which law each comes from — one KCL node equation and two KVL loop equations (the deck mislabels the third; see the flag below).
+5. **Apparatus list** — breadboard, **two** DC power supplies, **five** variable resistors, **three** ammeters, connection cables.
+6. **Procedure order**, especially: set both supplies' maximum output to 50 V (the 50 V button) *before* dialling the emfs to 9 V; Record all three ammeters; then step the emf up in **3 V** intervals.
+7. **How the law is verified** — measured currents compared against currents computed by solving the simultaneous equations; agreement verifies KVL.
+8. **The sign of I2** — it comes out **negative**, meaning the true current direction is opposite to the direction assumed on the diagram. A negative answer is not an error.
 
-## Aim and apparatus
+## Aim
 
-**Aim**: verification of Kirchhoff's voltage law.
+Verification of Kirchhoff's Voltage Law (KVL).
 
-**Apparatus**: breadboard; **two DC power supplies** (E₁ and E₂); **five variable resistors** (R₁–R₅); **three ammeters** (one per branch, for I₁, I₂, I₃); connection cables.
+## Apparatus
 
-Note there is **no voltmeter in the apparatus list** — this KVL circuit is verified *indirectly*, through the branch currents predicted by the KVL loop equations. In the simpler textbook demonstration (one battery, resistors in series) a **voltmeter is connected in parallel across each resistor** and you check V_battery = V_R1 + V_R2.
+Breadboard; two DC power supplies; five variable resistors (R1–R5); three ammeters; connection cables.
 
-## The circuit and how it is connected
+## Theory
 
-Two loops sharing the middle branch that carries R₅:
+- **Node** — a point or junction where two or more components (wires, electrical devices) meet.
+- **Branch** — a single path connecting two nodes, consisting of one or more components in series or parallel.
+- **Loop (mesh)** — a closed pathway within the circuit formed by interconnected branches.
+- **KVL** — based on the principle of conservation of energy. Around any closed path, the sum of all voltage drops on all branches within the loop equals the sum of the emfs of the batteries within the loop; equivalently, the algebraic sum of all voltage drops around the loop is zero.
+- **KCL** (used as the supporting equation here) — the sum of currents entering a node equals the sum of currents leaving it.
 
-- **Loop 1**: E₁ → R₃ → R₄ (carrying I₃) → the shared branch R₅ (carrying I₁) and back to E₁.
-- **Loop 2**: E₂ → R₁ → R₂ (carrying I₂) → the same shared branch R₅ and back to E₂.
-- **Node b** is where the three branches meet: I₁ and I₂ flow in, I₃ flows out, so **I₁ + I₂ = I₃**.
-- Each **ammeter is in series** in its own branch (it must carry that branch's current, so it is made of very low resistance). A **voltmeter, where used, goes in parallel** across the element (it must share the p.d., so it is made of very high resistance).
-- Both DC supplies feed the network; **R₅ is the shared branch**, which is why I₁ appears in both loop equations with opposite signs.
+**Sign convention (as given in the deck):**
+- Potential difference across a resistance: **positive** if the resistance is traversed in the same direction as the current flowing through it; **negative** otherwise.
+- Emf of a battery: **positive** if the battery is traversed from its **positive terminal to its negative terminal**; **negative** otherwise.
+
+**The circuit equations.** Symbols: E1, E2 are the two supply emfs; R1…R5 the five resistances; I1, I2, I3 the branch currents; b is the node.
+
+- (1) KCL at node b: **I1 + I2 = I3**
+- (2) KVL around loop 1: **I3·R3 + I3·R4 + I1·R5 = E1**
+- (3) KVL around loop 2: **I2·R2 − I1·R5 + I2·R1 = −E2**
+
+> **Error in the deck — do not reproduce.** The slide introduces equation (3) with "Apply KCL to node b". It is not a node equation: every term is a voltage (IR products and an emf), so it is a **KVL loop equation** for loop 2. This is the same class of slip as last week's deck. Read (3) as KVL. Its minus signs are the sign convention at work: traversing loop 2 goes *against* I1 through the shared resistor R5, and *against* the driving sense of E2.
+
+Solving (1)–(3) simultaneously (analytically) gives I1, I2 and I3.
 
 ## Procedure (in order)
 
-1. Select values for **R₁ through R₅** and connect the circuit as shown.
-2. Set the **maximum output of both DC supplies to 50 V** (press the 50 V button above the voltage dial).
-3. **Adjust both emfs to 9 V** with the voltage dial knob.
-4. Click **Record** to log the readings of the **three ammeters** (I₁, I₂, I₃).
-5. **Increase the emf in regular 3 V steps** and repeat step 4 (the sample table runs 9 V → 12 V → 15 V).
-6. **Substitute** the resistances and emfs used into equations (1), (2) and (3).
-7. **Solve** the equations for I₁, I₂ and I₃.
-8. **Repeat** for different values of the resistances and the emfs.
-9. **Compare** the calculated values with the experimental values and **comment on the result**.
+1. Select the values of R1 through R5 and connect the circuit as shown.
+2. Set the maximum output voltage of **both** DC power supplies to 50 V by pressing the 50 V button above the voltage dial.
+3. Adjust the emfs of both supplies to 9 V using the voltage-dial knob.
+4. Click the **Record** button to record the readings of the three ammeters.
+5. Increase the emf at regular **3 V** intervals and repeat step 4.
+6. Substitute the values of the resistances and emfs used into equations (1), (2) and (3).
+7. Solve the equations for I1, I2 and I3.
+8. Repeat the above steps for different values of the resistances and of the supply emfs.
+9. Compare the calculated values with the experimental values and comment on the results.
 
-## Table of readings
+## What is measured, and how KVL is verified
 
-| R₁ (kΩ) | R₂ (kΩ) | R₃ (kΩ) | R₄ (kΩ) | R₅ (kΩ) | E₂ (V) | E₁ (V) | I₁ (mA) | I₂ (mA) | I₃ (mA) | I₃ computed (mA) |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 10 | 1 | 2.5 | 7 | 5 | 9 | 9 | 0.895 | −0.416 | 0.479 | |
-| 10 | 1 | 2.5 | 7 | 5 | 9 | 12 | 1.055 | −0.344 | 0.711 | |
-| 10 | 1 | 2.5 | 7 | 5 | 9 | 15 | 1.215 | −0.271 | 0.944 | |
+**Measured:** the three branch currents I1, I2 and I3 on the three ammeters, at each setting of the resistances and emfs. Note that the quantities read are **currents, not voltages** — there is no voltmeter in the apparatus list.
 
-Work in **kΩ with mA** and the products come out directly in **volts** (kΩ × mA = V) — no conversion needed. The last column is the value you compute from (1)–(3); the comparison of the last two columns is the verification.
+**Verification:** the resistance and emf values actually used are substituted into the KCL/KVL equations, which are solved analytically for I1, I2 and I3. The computed I3 is tabulated in a column beside the measured I3. If computed and measured currents agree within experimental uncertainty at every setting — and continue to agree when the resistances and emfs are changed — the loop equations, and hence KVL, are verified.
 
-## Worked example (row 1: E₁ = E₂ = 9 V)
+**Sample data** (R1 = 10 kΩ, R2 = 1 kΩ, R3 = 2.5 kΩ, R4 = 7 kΩ, R5 = 5 kΩ, E2 = 9 V; kΩ multiplied by mA gives volts directly, so no unit conversion is needed):
 
-(2): I₃(2.5 + 7) + 5I₁ = 9, and with I₃ = I₁ + I₂ → **14.5I₁ + 9.5I₂ = 9**.
-(3): I₂(1 + 10) − 5I₁ = −9 → **11I₂ − 5I₁ = −9**, so I₂ = (5I₁ − 9)/11.
-Substituting: 159.5I₁ + 47.5I₁ − 85.5 = 99 → 207I₁ = 184.5 → **I₁ = 0.891 mA**; **I₂ = −0.413 mA**; **I₃ = 0.478 mA**.
-Measured I₃ = 0.479 mA. **% difference = |0.479 − 0.478|/0.478 × 100% ≈ 0.2%** — well inside the 5% tolerance, so KVL is verified.
+| E1 (V) | I1 (mA) | I2 (mA) | I3 (mA) |
+|---|---|---|---|
+| 9  | 0.895 | −0.416 | 0.479 |
+| 12 | 1.055 | −0.344 | 0.711 |
+| 15 | 1.215 | −0.271 | 0.944 |
+
+Two things the table shows at a glance: **I1 + I2 = I3 in every row** (KCL holds), and **I2 is negative** — the direction assumed for I2 on the diagram is opposite to the actual one. Solving (1)–(3) for the first row gives I1 = 0.891, I2 = −0.413, I3 = 0.478 mA, matching the measured values to about 1 %.
 
 ## Precautions and sources of error
 
-- **Assume and mark current directions on the diagram first**, then keep those directions throughout; a sign flipped halfway destroys the equations.
-- **Traverse each loop in one consistent sense** (all clockwise, or all anticlockwise) and apply the two sign rules above without exception.
-- **Zero error** on the ammeters — check each reads zero before the supply is switched on and correct every reading.
-- **Parallax error** — read the pointer with the eye perpendicular to the scale.
-- **Contact/lead resistance** — loose or dirty terminals on the breadboard add unwanted resistance and shift the currents; press connections home and use clean short leads.
-- **Heating of the resistors** at higher emf raises their resistance; keep currents small and do not leave the supply on between readings.
-- **Do not exceed meter ranges**; observe correct **polarity** on meters and supplies, and cross-check that the supplies are still at the set emf (loading can pull them down).
-- **Internal resistance of the sources** is neglected in equations (2) and (3); it is a systematic reason for a small residual disagreement.
-- **Rounding** — carry enough significant figures through the simultaneous equations before comparing.
+*The deck has no precautions slide and no sources-of-error slide; the following are derived from its stated procedure and theory.*
+
+**Precautions**
+- Press the 50 V range button **before** dialling the emfs, so the voltage dial reads on the correct range.
+- Set both supplies to exactly 9 V at the start, and step only in exact 3 V intervals.
+- Connect the ammeters **in series** in their branches and observe polarity, so a reversed current registers as a negative reading rather than reading zero or deflecting off-scale.
+- Fix the assumed direction of each current on the diagram before recording, and keep that assignment unchanged for all readings — the signs in equations (2) and (3) depend on it.
+- Traverse each loop consistently in one direction when applying the sign convention.
+- Check that every breadboard connection is firm before switching on; a loose lead adds unknown series resistance.
+- Substitute the resistance values actually set (measured), not the nominal ones, into the equations.
+- Do not exceed the supplies' rated output, and switch off before rewiring.
+
+**Sources of error**
+- Tolerance and setting error of the variable resistors: the resistance substituted into the equations differs from the resistance actually in the circuit.
+- Instrumental error in the ammeters — calibration error, limited resolution of the last digit, parallax on an analogue scale.
+- The finite internal resistance of the ammeters, added in series with each branch, lowers the measured currents slightly below the ideal computed values.
+- Internal resistance of the DC supplies, so the terminal voltage is slightly below the dialled 9 / 12 / 15 V.
+- Contact and lead resistance at breadboard connections.
+- Drift of the supply voltage and heating of the resistors during a run.
+- Rounding when solving the simultaneous equations, and sign errors when reading or recording a reversed current.
 
 ## Commonly confused
 
-- **KCL vs KVL** — KCL: at a **junction**, conservation of **charge**, ΣI_in = ΣI_out. KVL: round a **loop**, conservation of **energy**, Σε = ΣIR. Last week was junctions; this week is loops.
-- **Ammeter vs voltmeter** — ammeter **in series**, low resistance, reads branch current; voltmeter **in parallel**, high resistance, reads p.d. across an element.
-- **Node vs branch vs loop** — a point, a path between two points, a closed path.
-- **"Sum of voltage drops = sum of emfs" vs "algebraic sum = 0"** — the same law; the second just moves the emfs to the other side with their signs.
-- **A negative current is not a wrong answer** — it means the assumed direction was opposite to the actual one; the magnitude still stands.
-- **kΩ × mA = V** — mixing kΩ with A (or Ω with mA) throws the answer out by 1000.
-
-*Note: the circuit diagram, the node/loop labelling and the walk-through video are carried by slide images, and the extracted text is garbled in places (missing "fi"/"ff" ligatures; equation (3) is captioned "Apply KCL to node b" when it is in fact KVL round loop 2; step 5 says "increase E₂" while the table actually steps E₁ from 9 V to 15 V with E₂ fixed at 9 V; no percentage tolerance is quoted). The circuit description, the 5% acceptance criterion and the precautions above are the standard treatment supplied to fill those gaps.*
+- **KVL vs. KCL.** *Discriminating test:* look at what the equation contains. A **KCL** equation is written at a **node** and contains **currents only** — no resistances and no emfs (e.g. I1 + I2 = I3). A **KVL** equation is written around a **closed loop** and every term has units of volts — IR products and emfs (e.g. I3R3 + I3R4 + I1R5 = E1). KCL expresses conservation of **charge** at a point; KVL expresses conservation of **energy** around a path. This is exactly the trap the deck falls into when it labels equation (3) "KCL".
+- **"Sum of drops = sum of emfs" vs. "algebraic sum = 0".** These are the same law rearranged. The deck's two sign rules belong to the **sum-of-drops-equals-zero** form, in which a battery traversed from + to − counts as a positive drop. If instead you put the drops on the left and the emfs on the right, an emf counts **positive on the right when traversed from − to +**. Choose one form and stay in it; mixing the two flips a sign.
+- **A negative current is not a wrong answer.** I2 < 0 simply means the real direction is opposite to the arrow assumed on the diagram; the magnitude is still correct. Do not "fix" it by dropping the minus sign.
+- **This experiment measures currents, not voltages.** The KVL loop equations are verified *through* the currents they predict. Do not write that voltmeter readings were taken.
+- **Branch vs. loop.** A branch is a single path between two nodes; a loop is closed and returns to its starting point.
+- **R5 is the shared branch.** It carries I1 and appears in both loop equations, with opposite sign in each because the two loops traverse it in opposite senses. Getting that sign wrong is the commonest route to a wrong I2.

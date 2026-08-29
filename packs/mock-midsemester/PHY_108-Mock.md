@@ -2,136 +2,214 @@
 
 *General Physics Practical II · Weeks 1–4 · 45 minutes · notes closed · 24 marks*
 
-You have **45 minutes** for all 24 questions, notes closed; **one mark per question**, so spend about 1½ minutes on each multiple choice and about 5 minutes on each short answer.
-Do not look at the Answers section until the 45 minutes are up, then mark Section B **honestly** against the model answers — award the mark only where your own words carry the same physics, not merely the same final number.
+**Instructions.** 45 minutes, notes closed, a calculator is allowed — Section A is 20 questions at 1 mark each and Section B is 4 questions at 1 mark each, for 24 marks; do not look at the Answers until the time is up.
+Mark Section B honestly against the model answers: a part-right answer with a wrong final value, or a right value reached by a method the model answer does not use, scores 0 — write down which week each lost mark came from and take that row of the revision table.
+
+---
 
 ## Section A — Multiple choice (20)
 
-**1.** A best-fit line has slope 2.5 and cuts the y-axis at −4. Its x-intercept is:
-A) −1.6  B) −10  C) 1.6  D) 10
+**1.** For a straight line y = mx + c, the x-intercept is given by
+a) c   b) −c/m   c) −m/c   d) c/m
 
-**2.** For a power law y = kxⁿ, a graph of log(y) against log(x) has:
-A) Intercept k and slope n  B) Intercept log(k) and slope n  C) Intercept log(n) and slope log(k)  D) Intercept n and slope log(k)
+**2.** The decay equation N = N₀e^(−λt) is linearised by taking natural logs and plotting ln(N) against t. The gradient and the intercept of that line are
+a) gradient λ, intercept N₀   b) gradient −λ, intercept N₀   c) gradient ln(N₀), intercept −λ   d) gradient −λ, intercept ln(N₀)
 
-**3.** A plot of ln(N) against t for a decaying sample gives a straight line of gradient −0.40 s⁻¹ and intercept 3.0. It follows that:
-A) λ = −0.40 s⁻¹ and ln(N₀) = 3.0  B) λ = 2.5 s and N₀ = 3.0  C) λ = 3.0 s⁻¹ and ln(N₀) = −0.40  D) λ = 0.40 s⁻¹ and ln(N₀) = 3.0
+**3.** To linearise the simple-pendulum relation T = 2π√(L/g), you plot
+a) T² against L, with slope 4π²/g   b) T against L, with slope 2π/√g   c) T² against L, with slope g/4π²   d) T against L², with slope 4π²/g
 
-**4.** A stopwatch is found to run 0.2 s slow on every single timing taken with it. This is:
-A) A random error, which averages out over repeated readings  B) A systematic error, which biases every reading in the same direction  C) A random error, which biases every reading in the same direction  D) A systematic error, which averages out over repeated readings
+**4.** Which statement correctly distinguishes the two types of error?
+a) Systematic errors scatter readings both ways and average out, while random errors bias every reading in one direction.   b) Systematic and random errors are both removed by taking the mean of repeated readings.   c) Systematic error comes from a consistent instrument fault and biases every reading the same way, while random error is unpredictable and averages out over repeated readings.   d) Systematic error is the difference between measured and true value, and random error is that same difference written as a percentage.
 
-**5.** An observed period of 5.6 s is compared with a reference value of 5.0 s. The percentage difference is:
-A) −12%  B) +10.7%  C) +12%  D) +0.12%
+**5.** A man measures a rope as 6.0 m when its true length is 6.3 m. The percentage error in his measurement is
+a) 0.3%   b) 4.8%   c) 5.0%   d) 30%
 
-**6.** For a resistor obeying Ohm's law, the best-fit line of I (A) against V (V) has gradient 5.0 × 10⁻⁴ A/V. Which statement is correct?
-A) R = 0.50 kΩ, and the gradient itself is the resistance R  B) R = 2.0 Ω, and the gradient itself is the conductance 1/R  C) R = 2.0 kΩ, and the gradient itself is the resistance R  D) R = 2.0 kΩ, and the gradient itself is the conductance 1/R
+**6.** Which is the complete statement of Ohm's law as required in this lab?
+a) The current through a conductor is directly proportional to the potential difference across it, provided the temperature and other physical conditions remain constant.   b) The current through a conductor is inversely proportional to the potential difference across it at all temperatures.   c) The resistance of a conductor is directly proportional to the current through it at constant temperature.   d) The potential difference across a conductor is proportional to its resistance whatever the temperature.
 
-**7.** A student wires the voltmeter in series in the loop and the ammeter across R. The expected outcome is:
-A) Both meters read correctly, since the same loop carries the same current either way  B) The voltmeter's high resistance chokes the current to nearly zero while the ammeter short-circuits R  C) The voltmeter reads the p.d. across R correctly, but the ammeter reads zero  D) The ammeter reads the branch current correctly, but the voltmeter reads the supply voltage
+**7.** In the circuit used to verify Ohm's law, the meters are connected as
+a) ammeter in parallel with R and of high resistance, voltmeter in series with R and of low resistance   b) both meters in parallel across R, the ammeter being of high resistance   c) ammeter in parallel across R and voltmeter in series with R, both of high resistance   d) ammeter in series with R and of very low resistance, voltmeter in parallel across R and of very high resistance
 
-**8.** A 1.0 kΩ resistor and a 4.0 kΩ resistor are joined in parallel. The equivalent resistance is:
-A) 0.80 kΩ  B) 5.0 kΩ  C) 2.5 kΩ  D) 1.25 kΩ
+**8.** A student plots I on the y-axis against V on the x-axis for an ohmic resistor. The gradient of that line is
+a) R, in ohms   b) R², in ohms squared   c) 1/R, the conductance in siemens   d) zero, because the line passes through the origin
 
-**9.** In the virtual Ohm's law lab, the correct order of connection is:
-A) DC power supply first, then the connection board, then the ammeter and the voltmeter  B) Connection board, ammeter across R, voltmeter in series, DC power supply last  C) Connection board, ammeter in series, DC power supply, voltmeter across the supply  D) Connection board, voltmeter across R, ammeter in series, DC power supply last
+**9.** Three resistors R₁ = 10 Ω, R₂ = 20 Ω and R₃ = 30 Ω are connected in parallel. The equivalent resistance is
+a) 60 Ω   b) 5.45 Ω   c) 20 Ω   d) 0.183 Ω
 
-**10.** Which single observation shows that the component under test is **not** ohmic?
-A) The V–I line is straight but cuts the V-axis at 0.2 V  B) The V–I plot bends over as V increases  C) The R = V/I column varies by about 2% down the table  D) The gradient differs from the nominal resistance by 3%
+**10.** A student's V–I plot is a good straight line but cuts the V-axis at 0.4 V instead of passing through the origin. The best explanation is
+a) an uncorrected zero error on one of the meters — a systematic fault, not a failure of Ohm's law   b) the resistor under test is non-ohmic   c) the current was recorded in mA and never converted to A   d) the voltmeter was connected in series with the resistor
 
-**11.** Why does the I–V graph of a tungsten filament bend rather than run straight?
-A) I²R heating raises the filament's temperature, R falls, so equal steps in V give ever larger steps in I  B) The rising voltage lowers the current directly, so R appears to rise while the temperature is unchanged  C) I²R heating raises the filament's temperature, R rises, so equal steps in V give ever smaller steps in I  D) The filament cools as the current rises, R rises, and the curve bends towards the I-axis
+**11.** In the non-ohmic resistor experiment, which pair of statements about the two graphs is correct?
+a) I against V is a straight line through the origin; P against I² is a curve.   b) I against V is a curve; P against I² is also a curve, of increasing gradient.   c) I against V is a straight line; P against I² is a straight line of gradient 1/R.   d) I against V is a curve; P against I² is a straight line of gradient R.
 
-**12.** At a chosen point on the I–V curve of the tungsten resistor, the resistance is obtained from:
-A) The gradient of the tangent drawn at that point  B) V/I, the chord from the origin to that point  C) The reciprocal of the chord from the origin to that point  D) The gradient of the whole curve between the first and last points
+**12.** Joule's law — the relation that the straight-line plot in this experiment verifies — is
+a) P = IV, the power computed from each recorded pair of readings   b) P = V²R   c) P = I²R, the power dissipated as heat being proportional to the square of the current and to the resistance   d) P = I/R²
 
-**13.** Two points on a best-fit P against I² line are (I = 0.45 A, I² = 0.20 A², P = 2.4 W) and (I = 0.89 A, I² = 0.80 A², P = 9.6 W). The gradient is:
-A) 12 Ω  B) 0.083 Ω  C) 16 Ω  D) 12 W
+**13.** The apparatus list for the non-ohmic resistor experiment includes resistors made of which two materials?
+a) tungsten and iron   b) copper and nichrome   c) tungsten and carbon   d) iron and constantan
 
-**14.** A student records the tungsten resistor only between 0.1 V and 1.0 V instead of over the whole range. The likely consequence is:
-A) The curvature is exaggerated, so an ohmic resistor would wrongly appear non-ohmic  B) The P against I² plot becomes curved, so Joule's law appears to fail  C) The R column falls steadily down the table, showing that R decreases with current  D) The points look like a straight line through the origin, so the filament is wrongly reported as ohmic
+**14.** Why does a tungsten filament behave non-ohmically?
+a) Its resistance falls as it heats, so the current rises faster than the voltage.   b) The current heats it (P = I²R), its temperature rises, its resistance rises, and so the current stops increasing linearly with the applied voltage.   c) Tungsten has effectively no resistance until a threshold voltage is reached.   d) Reversing the polarity of the supply changes the filament's resistance.
 
-**15.** Tungsten is chosen for lamp filaments mainly because:
-A) Its resistance falls as it heats, so the current climbs steadily once the lamp is on  B) Its melting point (~3422 °C) is high enough for it to be driven white-hot without melting  C) Its resistivity is very low, so almost none of the supplied energy is wasted as heat  D) It stays ohmic at every temperature, so V/I holds constant as the lamp warms
+**15.** Which statement describes the procedure correctly?
+a) Set the supply to 50 V first, then reduce it in steps and record.   b) Record only the current at each setting; V is read from the power-supply dial afterwards.   c) Start at about 0.1 V, click Record to save both V and I, increase the voltage a step at a time and Record again, covering the whole 0.1 V to 50 V range.   d) Select tungsten and iron in turn and plot both sets of readings on one graph.
 
-**16.** At a junction, I₁ = 2.40 mA and I₂ = −0.85 mA are both connected as entering currents and I₃ leaves. The computed I₃ is:
-A) 3.25 mA  B) −1.55 mA  C) 1.55 mA  D) 2.40 mA
+**16.** Kirchhoff's Current Law states that
+a) the algebraic sum of the emfs around a closed loop equals the sum of the IR drops in that loop   b) the current is the same in every branch of a parallel network   c) the sum of the resistances meeting at a junction is zero   d) the sum of the currents entering a junction equals the sum of the currents leaving it, so the algebraic sum of all currents at the node is zero
 
-**17.** Which statement is Kirchhoff's **second** law?
-A) Round any closed loop the sum of the p.d.s is zero, from conservation of energy  B) At any junction the current entering equals the current leaving, from conservation of charge  C) Round any closed loop the sum of the currents is zero, from conservation of charge  D) At any junction the sum of the p.d.s is zero, from conservation of energy
+**17.** In this experiment, at node b, the sign convention and the node equation are
+a) leaving positive, so that I₁ + I₂ − I₃ = 0   b) entering positive and leaving negative, so that I₁ + I₂ = I₃ is written −I₁ − I₂ + I₃ = 0   c) entering negative and leaving positive, so that I₁ + I₂ + I₃ = 0   d) all currents taken as positive, so that I₁ + I₂ + I₃ = 0
 
-**18.** In the KCL circuit you also want the p.d. across R₃. You would use:
-A) A voltmeter in series in that branch, so the whole branch current passes through it  B) An ammeter in parallel across R₃, since it is built with a very low resistance  C) A voltmeter across the terminals of E₁, since the p.d. is the same everywhere  D) A voltmeter in parallel across R₃, since components in parallel share the same p.d.
+**18.** The two circuit laws used in this week's theory were formulated by
+a) Georg Simon Ohm, a German physicist, in 1827   b) Justa Kirchhoff, a Russian scientist, in 1845   c) Gustav Kirchhoff, a German physicist, in 1845   d) James Joule, an English physicist, in 1841
 
-**19.** Halfway through a run a student reverses the leads of ammeter 2 so that its reading stops being negative. The effect on the verification is:
-A) Nothing changes, because only the magnitudes of the currents matter at a junction  B) The computed I₁ + I₂ stops matching the measured I₃, so sound data appear to break KCL  C) All three readings change sign together, so the node equation still balances  D) KCL genuinely fails, because the law holds only for one fixed set of connections
+**19.** In every row of the results table the second ammeter reads a negative value, e.g. I₂ = −0.416 mA. This means that
+a) the current in that branch flows opposite to the assumed positive direction — it leaves the node rather than entering it — and the minus sign is kept in the arithmetic   b) the ammeter is faulty and the value should be recorded as 0.416 mA   c) charge is being destroyed at the node   d) the resistance of that branch is negative
 
-**20.** A student's I₁ + I₂ disagrees with the measured I₃ by 18%. The correct conclusion is:
-A) KCL has been disproved for this particular circuit  B) KCL applies only to circuits driven by a single power supply, and this one has two  C) There is an experimental fault — a meter zero error, a loose contact or a mis-signed reading — since charge must be conserved  D) Some of the current has been used up in the resistors, which is normal in a resistive network
+**20.** Which sequence of power-supply settings matches the stated procedure?
+a) Set both emfs to 9 V with the dial, then press the 50 V button, then lower the emf in 3 V steps.   b) Press the 3 V button on each supply, then set the emf to 50 V.   c) Set the emf of each supply to 50 V and take one set of readings.   d) Press the 50 V maximum-output range button on both supplies, set both emfs to 9 V with the voltage dial, click Record, then raise the emf in regular 3 V steps and Record again at each step.
 
 ## Section B — Short answer (4)
 
-**21.** Boyle's law is to be tested with a set of P and V readings. Show how it is linearised, state exactly what is plotted on each axis and what the slope and intercept represent. A best-fit line through the transformed data passes through (log V = 0.20, log P = 1.90) and (log V = 1.00, log P = 1.10): calculate its gradient and say whether the result supports Boyle's law.
+**21.** A quantity y is believed to follow a power law y = kxⁿ. A student plots log(y) against log(x) and obtains a straight line passing through the points (log x = 0.00, log y = 0.60) and (log x = 2.00, log y = 3.60).
+(a) Write down the linearised form of y = kxⁿ and state what the gradient and the intercept represent.
+(b) Find n and k from the graph.
+(c) The accepted value of n is 1.60. Calculate the percentage error in the student's value of n.
 
-**22.** Explain why the ammeter must be connected in series with R and the voltmeter in parallel across it in the Ohm's law experiment, referring in each case to the meter's own internal resistance, and state what happens to the circuit and to the readings if the two are interchanged.
+**22.** In the Ohm's law experiment a nominal 2.0 kΩ resistor is used. The best-fit line drawn through the V–I points passes through (I = 2.0 mA, V = 4.1 V) and (I = 8.0 mA, V = 16.3 V).
+(a) Calculate the gradient of the line and state, with units, the physical quantity it represents.
+(b) Calculate the percentage error against the nominal value and say whether the result is acceptable in this lab.
+(c) State what would be indicated if the same line had cut the V-axis at 0.5 V, and name one precaution that prevents it.
 
-**23.** Using the same set of tungsten readings, a student obtains a curve when plotting I against V but a straight line when plotting P against I². Explain why both results are expected, and state what the gradient of the straight line represents and which law it verifies.
+**23.** A tungsten filament is tested and, from each recorded pair of V and I, the values of P and I² are computed. The best-fit line of P against I² passes through (I² = 0.0100 A², P = 0.240 W) and (I² = 0.0500 A², P = 1.200 W). One of the recorded pairs was V = 3.6 V, I = 0.15 A.
+(a) Calculate the gradient of the P–I² line and state what it represents.
+(b) Using the recorded pair, compute P and I² and check that they are consistent with your gradient.
+(c) Explain why the intercept of this line should be zero, and why the I–V graph for the same filament is nevertheless a curve.
 
-**24.** In one row of the KCL table, I₁ = 1.480 mA, I₂ = −0.512 mA and the third ammeter reads I₃ = 0.940 mA. Compute I₃ from I₁ and I₂, find the percentage difference from the measured value, and comment on whether KCL is verified.
+**24.** At a further emf setting in the KCL experiment the three ammeters read I₁ = 1.375 mA, I₂ = −0.199 mA and I₃ = 1.170 mA.
+(a) State the sign convention in use and write the node equation at b in both of its forms.
+(b) Compute I₃(computed) from I₁ and I₂ and compare it with the measured I₃, giving the percentage difference.
+(c) Comment on what the comparison shows, and name two sources of error that account for the discrepancy.
+
+---
 
 ## Answers
 
-**1. C** — *x-intercept from y = mx + c*: x = −c/m = −(−4)/2.5 = 1.6. A comes from using +c/m, B from multiplying c by m, D from reading the gradient as its reciprocal (0.4) before dividing. **[Week 1]**
+**1.** b) −c/m — set y = 0 in y = mx + c to get 0 = mx + c, so x = −c/m. **[Week 1]**
 
-**2. B** — *power-law (log–log) transformation*: log(y) = n·log(x) + log(k), so the slope is n and the intercept is log(k), not k itself. **[Week 1]**
+**2.** d) gradient −λ, intercept ln(N₀) — ln(N) = −λt + ln(N₀) compared term by term with y = mx + c. **[Week 1]**
 
-**3. D** — *logarithmic transformation of exponential decay*: ln(N) = −λt + ln(N₀), so m = −λ gives λ = +0.40 s⁻¹ and c = ln(N₀) = 3.0. A keeps the minus sign that belongs to −λ, B inverts the gradient, C swaps slope and intercept. **[Week 1]**
+**3.** a) T² against L, with slope 4π²/g — squaring gives T² = (4π²/g)L, a line through the origin; g must then be extracted algebraically from the slope. **[Week 1]**
 
-**4. B** — *systematic vs random error*: a consistent instrument fault biases every reading the same way and does **not** average out; random error is the inconsistent, unpredictable one that does. **[Week 1]**
+**4.** c) — systematic error is a consistent, one-directional instrument fault that does not average out; random error is inconsistent and unpredictable and does average out over repeated readings. **[Week 1]**
 
-**5. C** — *percentage difference*: (observed − reference)/reference × 100% = (5.6 − 5.0)/5.0 × 100% = +12%, the sign showing the observed value is the higher. B divides by the observed value instead of the reference. **[Week 1]**
+**5.** b) 4.8% — actual error = 6.3 − 6.0 = 0.3 m; percentage error = (0.3/6.3) × 100 = 4.76 ≈ 4.8%. (Option c is the trap of dividing by the measured value instead of the true value.) **[Week 1]**
 
-**6. D** — *gradient of I–V vs gradient of V–I*: I = (1/R)V, so this gradient is the conductance and R = 1/(5.0 × 10⁻⁴) = 2000 Ω = 2.0 kΩ. A and C read the gradient straight off as R; B fails to work in amperes. **[Week 2]**
+**6.** a) — the constant-temperature (constant physical conditions) proviso is the marks-bearing half of the statement; without it the statement is incomplete. **[Week 2]**
 
-**7. B** — *ammeter series, voltmeter parallel*: the voltmeter's very high resistance placed in the loop reduces the current to almost nothing, while the ammeter's very low resistance placed across R short-circuits it. **[Week 2]**
+**7.** d) — the ammeter must carry the same current, so it goes in series and is made of very low resistance; the voltmeter must share the same p.d., so it goes in parallel across R and is made of very high resistance. **[Week 2]**
 
-**8. A** — *parallel combination*: R = R₁R₂/(R₁ + R₂) = (1000 × 4000)/5000 = 800 Ω = 0.80 kΩ, sensibly smaller than the smaller resistor. B uses the series formula, C averages, D quotes 1/R (1.25 × 10⁻³) without inverting it. **[Week 2]**
+**8.** c) 1/R, the conductance in siemens — I = (1/R)V, so with I on the y-axis the gradient is 1/R; only a V-against-I plot gives R directly. **[Week 2]**
 
-**9. D** — *procedure order*: connection board first, then the voltmeter across R, then the ammeter in series, and the DC power supply last, so nothing is energised while the wiring is still open. **[Week 2]**
+**9.** b) 5.45 Ω — 1/R = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60, so R = 60/11 = 5.45 Ω, correctly smaller than the smallest resistor. **[Week 2]**
 
-**10. B** — *ohmic vs non-ohmic*: only curvature of the V–I plot shows that R is changing. A straight line with an intercept is a zero error, and small percentage scatter is ordinary experimental error within the 5% tolerance. **[Week 2]**
+**10.** a) — a straight line with a non-zero intercept points to a systematic fault such as an uncorrected meter zero error; Ohm's law itself would show up as curvature, not as an offset. **[Week 2]**
 
-**11. C** — *Joule heating as the mechanism*: P = I²R heats the conductor, its temperature rises, a metal's resistance rises with temperature, so the curve flattens towards the V-axis. A has the temperature behaviour of a thermistor, not of a metal. **[Week 3]**
+**11.** d) — the I–V response of a non-ohmic resistor is a curve, while P plotted against I² is a straight line whose gradient equals R, verifying P = I²R. **[Week 3]**
 
-**12. B** — *chord, not tangent*: R = V/I at a point is the chord from the origin to that point, and it grows along the curve; the tangent's gradient is the classic trap. **[Week 3]**
+**12.** c) P = I²R — that is Joule's law, the relation being verified; P = IV is only how P is computed from the recorded readings. **[Week 3]**
 
-**13. A** — *gradient of P against I² = R*: (9.6 − 2.4)/(0.80 − 0.20) = 7.2/0.60 = 12 Ω. B inverts the gradient, C divides by ΔI instead of ΔI², D has the right number attached to the wrong quantity — the gradient is a resistance, in ohms. **[Week 3]**
+**13.** a) tungsten and iron — these are the two selectable conductor materials in the virtual experiment. **[Week 3]**
 
-**14. D** — *cover the full 0.1–50 V range*: heating is significant only at high current, so readings bunched at low voltage lie on what looks like a straight line and the non-ohmic behaviour is missed. **[Week 3]**
+**14.** b) — self-heating raises the filament's temperature, a metal's resistance rises with temperature, and so the current ceases to rise in proportion to the voltage, most markedly at high current. **[Week 3]**
 
-**15. B** — *why tungsten*: the highest melting point of the metals lets the filament reach incandescence without melting; its resistance **rises** strongly with temperature, which is precisely why a lamp is non-ohmic. **[Week 3]**
+**15.** c) — start low (about 0.1 V), Record both readings, step the voltage up and Record again, spanning the full 0.1–50 V range so the curvature at the high-voltage end is visible. **[Week 3]**
 
-**16. C** — *algebraic addition with signs*: I₃ = I₁ + I₂ = 2.40 + (−0.85) = 1.55 mA. A adds the magnitudes, D discards the negative reading as a fault; the minus sign only means that branch really carries current out of the node. **[Week 4]**
+**16.** d) — KCL is the First Law, a statement about currents at a node, and it follows from conservation of charge; option a is KVL, the Second Law. **[Week 4]**
 
-**17. A** — *KCL vs KVL*: the first law is the current law at a junction (charge conserved); the second is the voltage law round a closed loop (energy conserved). **[Week 4]**
+**17.** b) — currents entering the junction are positive and those leaving are negative, so I₁ + I₂ = I₃ is equivalently written −I₁ − I₂ + I₃ = 0. **[Week 4]**
 
-**18. D** — *voltmeter placement and design*: in parallel across the component, because parallel components share the same p.d., and its very high resistance means it draws almost no current away from R₃. **[Week 4]**
+**18.** c) Gustav Kirchhoff, a German physicist, in 1845 — the date and the two laws are as given in the deck, but the deck's "Justa Kirchhoff, Russian scientist" (option b) is wrong on both the name and the nationality. **[Week 4]**
 
-**19. B** — *fix the assumed direction before starting*: reversing a meter mid-run changes the sign convention for that branch only, so I₁ + I₂ no longer equals the measured I₃ even though the circuit is unchanged. **[Week 4]**
+**19.** a) — a negative reading is a direction result, not a fault; the branch current runs against the assumed positive sense, and the sign must be carried into I₁ + I₂. **[Week 4]**
 
-**20. C** — *a discrepancy is experimental, not a failure of the law*: KCL follows from conservation of charge, so an 18% mismatch points to zero error, ammeter loading, contact resistance or a sign taken wrongly. Current is never "used up" in a resistor. **[Week 4]**
+**20.** d) — the 50 V button sets the maximum-output *range*, and the dial then sets the actual emf of 9 V; these are two distinct steps, after which the emf is raised in regular 3 V intervals. **[Week 4]**
 
-**21.** *Linearisation of Boyle's law and reading its gradient*: Boyle's law PV = k is linearised by taking logs, giving **log(P) = log(k) − log(V)**. Plot **log(P) on the y-axis against log(V) on the x-axis**; comparing with y = mx + c, the **slope m = −1** and the **intercept c = log(k)**. Gradient of the given line = (1.10 − 1.90)/(1.00 − 0.20) = **−0.80/0.80 = −1.00**. A slope of −1 is exactly what Boyle's law predicts, so the data support it; the intercept, c = 1.90 − (−1)(0.20) = **2.10 = log(k)**, gives the constant k ≈ 1.3 × 10². **[Week 1]**
+---
 
-**22.** *Meter placement and the internal-resistance reason*: The **ammeter is connected in series** with R because it must carry the whole of the current that flows through R; it is built with a **very low resistance** so that inserting it barely alters that current. The **voltmeter is connected in parallel, across R only**, because components in parallel share the same potential difference; it is built with a **very high resistance** so that it draws almost no current away from R and leaves the p.d. undisturbed. If the two are interchanged, the ammeter's low resistance placed across R **short-circuits it**, diverting the current away from the resistor, while the voltmeter's high resistance placed in the loop **chokes the current to nearly zero**; the readings are then meaningless (and the meters may be damaged). **[Week 2]**
+**21.**
 
-**23.** *Two graphs from one data set*: The **I–V graph is a curve** because the filament is non-ohmic: current dissipates heat at a rate P = I²R, the temperature of the tungsten rises, and a metal's resistance rises with temperature, so R is not constant. Equal increases in V then produce progressively smaller increases in I and the curve **bends over towards the V-axis**, still passing through the origin. The **P against I² graph is a straight line through the origin** because P = I²R is obeyed at every individual reading, whatever the value of R at that moment; comparing P = RI² with y = mx + c gives y ≡ P, x ≡ I², c = 0 and **m ≡ R**, so the **gradient is the resistance in ohms**, and the straight line **verifies Joule's law, P = I²R**. The two results are consistent: the first shows R is changing, the second shows the power relation still holds. **[Week 3]**
+(a) Taking logs of y = kxⁿ gives log(y) = n·log(x) + log(k). Compared with y = mx + c, plotting log(y) on the y-axis against log(x) on the x-axis gives **gradient m = n** (the power) and **intercept c = log(k)**.
 
-**24. I₃(computed) = 0.968 mA; percentage difference ≈ 3.0%; KCL verified** — *verification of KCL with a percentage difference*: keeping the sign, I₃ = I₁ + I₂ = 1.480 + (−0.512) = **0.968 mA**. Percentage difference = |0.968 − 0.940|/0.940 × 100% = (0.028/0.940) × 100% = **2.98% ≈ 3.0%**, which is inside the usual **5%** tolerance, so the current entering node b equals the current leaving it and **KCL is verified**. The small residual discrepancy is experimental — ammeter zero error and loading, resistor tolerance, contact resistance at the breadboard — not a failure of the law. **[Week 4]**
+(b) Gradient:
 
-## What to revise
+m = (3.60 − 0.60) / (2.00 − 0.00) = 3.00 / 2.00 = **1.50**, so **n = 1.50** (dimensionless).
 
-| Week | Topic | Questions | What to re-read |
+Intercept: the line's value of log(y) at log(x) = 0 is 0.60, so log(k) = 0.60 and
+
+k = 10^0.60 = **3.98** (to 3 s.f.), in the units of y.
+
+(c) Actual error = |1.50 − 1.60| = 0.10.
+
+Percentage error = (0.10 / 1.60) × 100 = **6.25%**.
+
+*Tested: the power-law (log–log) linearisation, reading n from the gradient and k from the intercept by antilogarithm, and the percentage-error formula taken against the true value.* **[Week 1]**
+
+**22.**
+
+(a) Convert the currents to amperes first: 2.0 mA = 2.0 × 10⁻³ A and 8.0 mA = 8.0 × 10⁻³ A.
+
+Gradient = ΔV/ΔI = (16.3 − 4.1) V / (8.0 × 10⁻³ − 2.0 × 10⁻³) A = 12.2 V / 6.0 × 10⁻³ A = **2033 Ω (2.03 kΩ)**.
+
+Because V is on the y-axis and I on the x-axis, the gradient **is the resistance R, in ohms** (1 Ω = 1 V/A).
+
+(b) Percentage error = |2033 − 2000| / 2000 × 100 = (33.3 / 2000) × 100 = **1.67%**.
+
+This is well within the 5% tolerance the lab expects, so the result is **acceptable**.
+
+(c) A line cutting the V-axis at 0.5 V would mean a p.d. is being registered at zero current, which cannot be true of a resistor obeying V = IR; it indicates a **systematic fault, most commonly an uncorrected zero error on a meter** (contact/lead resistance and wrong meter polarity are related causes). The precaution: **check both meters read zero before the key is closed and correct every reading by the zero offset** (equally acceptable: tighten all terminals against contact resistance).
+
+*Tested: reading R off the gradient of a V–I best-fit line with the mA-to-A conversion carried through, the 5% percentage-error check against the nominal value, and the meaning of a non-zero intercept together with its precaution.* **[Week 2]**
+
+**23.**
+
+(a) Gradient = ΔP/ΔI² = (1.200 − 0.240) W / (0.0500 − 0.0100) A² = 0.960 W / 0.0400 A² = **24.0 W/A² = 24.0 Ω**.
+
+Comparing P = R·I² with y = mx + c, the **gradient is R, the resistance of the conductor in ohms**.
+
+(b) From the recorded pair: P = IV = 0.15 A × 3.6 V = **0.54 W**, and I² = (0.15 A)² = **0.0225 A²**.
+
+Check: P/I² = 0.54 W / 0.0225 A² = **24.0 Ω**, which agrees with the gradient, so the point lies on the line.
+
+(c) The **intercept should be zero** because zero current dissipates zero power — with I = 0, P = I²R = 0 — so the line must pass through the origin; a noticeably non-zero intercept would signal systematic error. The **I–V graph is still a curve** because the current heats the filament (P = I²R), the temperature rises, and tungsten's resistance rises with temperature; V/I is therefore not constant, and the curvature is strongest at high current where the heating is greatest. That resistance change is exactly the non-ohmic behaviour the experiment is designed to show.
+
+*Tested: the P-against-I² plot as the verification of Joule's law, the gradient as R, computing P = IV and I² from a recorded pair, and the heating-causes-non-linearity chain.* **[Week 3]**
+
+**24.**
+
+(a) Sign convention: **currents entering the junction are positive, currents leaving it are negative.** At node b the equation is
+
+**I₁ + I₂ = I₃**   and equivalently   **−I₁ − I₂ + I₃ = 0.**
+
+(b) Keeping the sign of I₂:
+
+I₃(computed) = I₁ + I₂ = 1.375 mA + (−0.199 mA) = **1.176 mA**.
+
+Measured I₃ = 1.170 mA.
+
+Percentage difference = (observed − reference)/reference × 100 = (1.170 − 1.176)/1.176 × 100 = **−0.51%**.
+
+(The negative sign means the measured value is slightly lower than the computed one.)
+
+(c) The computed and measured values agree to about half a per cent, a discrepancy far smaller than the currents themselves. The comparison therefore **verifies KCL at this node**: no charge accumulates there, as charge conservation requires. The verification is a row-by-row comparison at each emf setting, not an average over rows. Two sources of error (any two): **ammeter internal resistance (burden voltage) loading the branches and slightly altering the currents being measured**; **finite display resolution and rounding of the mA readings**; also acceptable — tolerance in the nominal resistor values, drift in the emf actually delivered, contact and lead resistance at the breadboard, or self-heating of the resistors.
+
+*Tested: the KCL sign convention and both forms of the node equation, algebraic addition of a negative branch current, the percentage-difference calculation, and the named sources of error in the verification.* **[Week 4]**
+
+## Revision table
+
+| Week | Experiment | Questions | Your score |
 |---|---|---|---|
-| **Week 1** | Straight line, linearisation and error | 1, 2, 3, 4, 5, 21 | The linearisation table (what goes on each axis, and what m and c equal for each law), x-intercept = −c/m, and the four error formulas — especially percentage error vs percentage difference, and systematic vs random. |
-| **Week 2** | Ohmic resistance, verifying Ohm's law | 6, 7, 8, 9, 10, 22 | Ammeter series/low resistance vs voltmeter parallel/high resistance, the order of connection, series and parallel formulas, and the V–I gradient = R while the I–V gradient = 1/R. |
-| **Week 3** | Non-ohmic resistor, Joule's law | 11, 12, 13, 14, 15, 23 | The heating mechanism P = I²R → temperature ↑ → R ↑ → curve flattens; the I–V curve (R is the chord, not the tangent) against the straight P–I² line whose gradient is R; the full 0.1–50 V range and why tungsten. |
-| **Week 4** | Kirchhoff's Current Law | 16, 17, 18, 19, 20, 24 | Both statements of KCL and the entering-positive sign convention, I₁ + I₂ = I₃ at node b, keeping negative readings with their signs, the percentage-difference check against measured I₃, and the error/precaution list. |
+| 1 | Review of the equation of a straight line, linearisation and error analysis | 1, 2, 3, 4, 5, 21 | |
+| 2 | Ohmic resistance — experiment to verify Ohm's law | 6, 7, 8, 9, 10, 22 | |
+| 3 | Non-linear relationship between current and voltage in a non-ohmic resistor | 11, 12, 13, 14, 15, 23 | |
+| 4 | Verification of Kirchhoff's Current Law (KCL) | 16, 17, 18, 19, 20, 24 | |

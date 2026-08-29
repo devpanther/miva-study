@@ -1,73 +1,30 @@
-# CSC_106 — Week 5 Question Set (sit 7 days later)
+# CSC_106 — Week 5 Retention Set
 
-*Sit this during Saturday catch-up in Week 6, not this week. Notes closed.*
+*Introduction to Web Technologies · sit this seven days after the lesson.*
 
-## Section A - Multiple choice (12)
+## Multiple choice (12)
 
-**1.** What is printed?
-
+**1.** What happens when this runs?
 ```js
-console.log("5" == 5);
-console.log("5" === 5);
+const rate = 5;
+rate = 6;
+console.log(rate);
 ```
+a) Logs `5`
+b) Logs `6`
+c) Throws an error — a `const` variable cannot be reassigned
+d) Logs `undefined`
 
-a) true, true
-b) true, false
-c) false, false
-d) false, true
-
-**2.** Which statement about `let`, `var` and `const` is correct?
-
-a) `const` variables are read-only and cannot be reassigned; `let` variables can be reassigned
-b) `let` variables are read-only; `const` variables can be reassigned
-c) `var` is the only keyword that creates block scope
-d) All three are identical in behaviour
-
-**3.** What happens when this runs?
-
+**2.** What does this log?
 ```js
-if (true) {
-  let a = 1;
-  var b = 2;
-}
-console.log(b);
-console.log(a);
+console.log(5 === "5");
 ```
+a) `false`
+b) `true`
+c) `5`
+d) An error
 
-a) Prints 2, then 1
-b) Prints 1, then 2
-c) Prints 2, then throws a ReferenceError because `a` is block-scoped
-d) Throws an error immediately because `var` cannot be used inside an `if`
-
-**4.** What is printed?
-
-```js
-let a = 10;
-let b = "20";
-console.log(a + b);
-```
-
-a) 30
-b) "1020"
-c) NaN
-d) 210
-
-**5.** What is printed?
-
-```js
-let colors = ["red", "green", "blue"];
-colors.push("yellow");
-colors.pop();
-console.log(colors[1], colors.length);
-```
-
-a) red 4
-b) green 3
-c) green 4
-d) blue 3
-
-**6.** What is printed?
-
+**3.** What does this log?
 ```js
 let n = 5;
 do {
@@ -75,130 +32,136 @@ do {
   n++;
 } while (n < 3);
 ```
-
 a) Nothing
-b) 5
-c) 5 6 7
-d) An infinite loop
+b) `5 6 7 ...` forever
+c) `0 1 2`
+d) `5`
 
-**7.** What is printed?
+**4.** You need a new array containing only the elements of an existing array that pass a test, leaving the original untouched. Which method?
+a) `forEach()`
+b) `filter()`
+c) `splice()`
+d) `push()`
 
+**5.** What does this log?
 ```js
-for (let i = 1; i <= 10; i++) {
-  console.log(i);
+let x = [10, 20, 30];
+x.push(40);
+x.pop();
+console.log(x.length);
+```
+a) `3`
+b) `4`
+c) `2`
+d) `x.length()` is required, so it errors
+
+**6.** Why does the last line fail?
+```js
+if (true) {
+  let blockVar = "hi";
 }
+console.log(blockVar);
 ```
+a) `blockVar` was never assigned a value
+b) `if (true)` is not a valid condition
+c) `console.log` cannot print strings
+d) `let` gives `blockVar` block scope, so it exists only inside the `{ }` block
 
-The **last** number printed is:
+**7.** Which is the correct ternary operator syntax?
+a) `let r = if (age >= 18) "Yes" else "No";`
+b) `let r = age >= 18 ? "Yes" : "No";`
+c) `let r = age >= 18 : "Yes" ? "No";`
+d) `let r = (age >= 18) => "Yes", "No";`
 
-a) 9  b) 10  c) 11  d) 1
+**8.** In a `switch` statement, what is the purpose of `break`?
+a) It ends the whole programme
+b) It skips to the `default` case
+c) It exits the switch block once a matching case has run
+d) It compares the value against the next case
 
-**8.** What is printed?
-
+**9.** What does this log, and what is the feature called?
 ```js
-function add(a, b) {
-  a + b;
+function outer() {
+  let outerVar = "kept";
+  function inner() { console.log(outerVar); }
+  return inner;
 }
-console.log(add(2, 3));
+outer()();
 ```
+a) `kept` — a closure
+b) `undefined` — the outer scope is destroyed
+c) An error — `outerVar` is out of scope
+d) `kept` — an IIFE
 
-a) 5
-b) undefined
-c) null
-d) "23"
+**10.** "JavaScript is a client-side scripting language" means that:
+a) Its code runs on the web server and only the result is sent to the browser
+b) It can only be used to style pages, like CSS
+c) It must be compiled before a browser can read it
+d) Its code is executed by the user's browser, not on the server
 
-**9.** What is printed?
+**11.** Which construct is defined and executed immediately, and is used to create a private scope so variables do not pollute the global scope?
+a) An arrow function
+b) An IIFE (Immediately Invoked Function Expression)
+c) An object constructor
+d) A `do-while` loop
 
-```js
-let day = 2;
-switch (day) {
-  case 1: console.log("Mon");
-  case 2: console.log("Tue");
-  case 3: console.log("Wed"); break;
-  default: console.log("Other");
-}
-```
-
-a) Tue
-b) Tue, Wed
-c) Tue, Wed, Other
-d) Mon, Tue, Wed
-
-**10.** What is the value of `status`?
-
-```js
-let age = 15;
-let status = age >= 18 ? "Adult" : "Minor";
-```
-
-a) "Adult"  b) true  c) "Minor"  d) 15
-
-**11.** Given the object below, which expression returns `"Lagos"`?
-
+**12.** What does this log?
 ```js
 let person = {
   firstName: "Ada",
-  address: { city: "Lagos", state: "Lagos" }
+  address: { city: "Lagos" }
 };
+console.log(person["firstName"] + " " + person.address.city);
 ```
+a) `undefined Lagos`
+b) An error — you cannot mix square brackets and dot notation
+c) `Ada Lagos`
+d) `firstName Lagos`
 
-a) `person[address][city]`
-b) `person.address.city`
-c) `person.city`
-d) `person[0].city`
+## Short answer (3)
 
-**12.** Which line correctly makes a button with the ID `my-button` show an alert when clicked?
+**13.** State the difference between `==` and `===`, and give one example where the two give different results.
 
-a) `document.getElementById("my-button").addEventListener("click", function () { alert("Hi"); });`
-b) `document.getElementById(my-button).onEvent("click", alert("Hi"));`
-c) `document.getClassName("my-button").click(alert("Hi"));`
-d) `document.querySelector("my-button").addEvent(click, "Hi");`
+**14.** Name the three kinds of variable scope covered this week, and say in one line where a variable of each kind can be accessed.
 
-## Section B - Short answer (3)
+**15.** Write a JavaScript function `calculateRectangleArea` that takes `length` and `width` as parameters and returns the area, then state what `calculateRectangleArea(8, 4)` returns. Name the keyword that sends the value back to the caller.
 
-**13.** Write a JavaScript function that calculates the area of a rectangle, taking two parameters, `length` and `width`. Show how you would call it with a length of 8 and a width of 4, and state the result. Explain the difference between a **parameter** and a **return value**.
-
-**14.** Explain **global scope**, **local scope** and **block scope** in JavaScript, giving a one-line example of each. Then define a **closure** and say why it is useful.
-
-**15.** Compare **arrays** and **objects** in JavaScript: state what each is best suited for, how elements/properties are accessed in each, and name two array methods with what they do.
+---
 
 ## Answers
 
-**1. b** — *loose vs strict equality*: `==` converts types before comparing, so `"5" == 5` is `true`; `===` requires the same value **and** the same data type, so `"5" === 5` is `false`.
+**1. c** — `const` is read-only; reassigning it throws a TypeError ("Assignment to constant variable").
 
-**2. a** — *declaration keywords*: `let` can be reassigned, `const` is read-only, `var` is the older function-scoped keyword. Block scope came in with `let` and `const`, not `var`.
+**2. a** — `===` is strict equal: the values match but the data types (Number vs String) do not, so it is `false`.
 
-**3. c** — *block scope*: `var b` is function-scoped and leaks out of the `if` block, so `2` prints. `let a` is block-scoped and does not exist outside the braces, so the next line throws a ReferenceError.
+**3. d** — A `do-while` always executes the block once before checking the condition; `5 < 3` is false, so it stops after logging `5`.
 
-**4. b** — *string concatenation vs numeric addition*: if either operand of `+` is a string, JavaScript concatenates. `10 + "20"` gives the string `"1020"`, not `30`.
+**4. b** — `filter()` creates a new array with all elements that pass the provided test; `forEach()` returns nothing and `splice()` mutates the original.
 
-**5. b** — *array methods and zero-indexing*: `push` adds `"yellow"` to the end (length 4), `pop` removes it again (length 3). `colors[1]` is the **second** element, `"green"`, because arrays are zero-indexed.
+**5. a** — `push` adds `40` to the end (length 4), `pop` removes the last element again, leaving 3; `length` is a property, not a method.
 
-**6. b** — *do...while*: the block runs **first** and the condition is checked afterwards, so `5` prints once; `n` becomes 6, `6 < 3` is false, loop ends. A plain `while (n < 3)` would have printed nothing.
+**6. d** — `let` and `const` introduce block scope, so `blockVar` is not defined outside the `if` block.
 
-**7. b** — *for loop*: the loop runs while `i <= 10`, so the last value printed is `10`. It then increments to 11, fails the condition, and stops.
+**7. b** — The syntax is `condition ? valueIfTrue : valueIfFalse`.
 
-**8. b** — *return values*: the function computes `a + b` but never returns it, so the call evaluates to `undefined`. Add `return a + b;` to get `5`.
+**8. c** — `break` exits the switch block once a match is found, preventing later cases from running.
 
-**9. b** — *switch fall-through*: `case 2` matches and prints "Tue", but with no `break` execution falls through into `case 3` and prints "Wed"; the `break` there exits the switch. `break` is what stops fall-through.
+**9. a** — `inner` retains access to `outerVar` after `outer` has finished executing; that is a closure.
 
-**10. c** — *ternary operator*: `condition ? valueIfTrue : valueIfFalse`. `15 >= 18` is false, so `"Minor"` is assigned.
+**10. d** — Client-side means the code runs in the user's browser (adding interactivity, DOM changes, form validation), as opposed to server-side code that runs on the server.
 
-**11. b** — *nested object access*: dot notation chains through the nested object. Bracket notation would need quoted strings: `person["address"]["city"]`. `person.city` is `undefined` — `city` belongs to `address`, not to `person`.
+**11. b** — An IIFE is a function expression defined and executed immediately, creating a private scope.
 
-**12. a** — *events and DOM*: `getElementById` takes the ID as a **string**, and `addEventListener("click", handler)` registers the function to run when the event fires.
+**12. c** — `person["firstName"]` is square-bracket access and `person.address.city` is dot notation into a nested object; both are valid, giving `Ada Lagos`.
 
-**13.** *Functions, parameters and return values*:
+**13.** `==` checks only whether two values are equal; `===` (strict equal) checks that they are equal **and** of the same data type. Example: `5 == "5"` is `true` but `5 === "5"` is `false`.
 
+**14.** Global — declared outside any function, accessible anywhere in the code. Local (function) — declared inside a function, accessible only within that function. Block — declared with `let` or `const` inside `{ }`, accessible only within that block.
+
+**15.**
 ```js
 function calculateRectangleArea(length, width) {
   return length * width;
 }
-console.log(calculateRectangleArea(8, 4));   // 32
 ```
-
-The result is **32**. **Parameters** (`length`, `width`) are placeholders named in the function definition that receive the **arguments** (8 and 4) supplied at the call; the **return value** is the value the `return` statement sends back to the code that called the function, so it can be stored or printed. A function with no `return` gives back `undefined`.
-
-**14.** *Scope and closure*: **Global scope** — a variable declared outside any function, accessible anywhere: `let g = "global";`. **Local (function) scope** — declared inside a function, accessible only within it: `function f() { let m = "hi"; }` — `m` is invisible outside `f`. **Block scope** — introduced by `let`/`const`, limited to the `{ }` block it is declared in: `if (true) { let b = 1; }` — `b` is invisible outside the `if`. A **closure** is a function that keeps access to variables of its enclosing function **even after that outer function has finished executing**; it is used for data encapsulation, private variables, maintaining state and callbacks.
-
-**15.** *Arrays vs objects*: **Arrays** are **ordered** collections of values, best for lists of similar items (names, numbers) and for iterating; elements are accessed by **numeric index** in square brackets, `colors[0]`, and arrays are **zero-indexed**. **Objects** are collections of **key–value pairs**, best for structured data where each value has a unique identifier (a person's properties, a product's attributes); properties are accessed by **key**, using dot notation `person.age` or bracket notation `person["age"]`. Two array methods: **`push()`** adds one or more elements to the end of an array; **`pop()`** removes the last element. (Also acceptable: `splice()` adds/removes/replaces at an index, `forEach()` runs a function once per element, `filter()` returns a new array of elements passing a test.)
+`calculateRectangleArea(8, 4)` returns `32`. The `return` keyword/statement sends the value back to the calling code.

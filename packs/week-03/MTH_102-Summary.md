@@ -1,104 +1,113 @@
-# MTH_102 — Week 3 Summary
+# MTH_102 — Week 3
 
-*Elementary Mathematics II (Calculus) · Week 3 (21–27 Sep 2026) · Topic: Concept of Limits and their Notation — Evaluating Limits Algebraically*
+*Elementary Mathematics II (Calculus) · Week 3 (21 – 27 Sep 2026)*
 
-## The 8 most examinable things this week
+*Note: the Week 3 deck ("Evaluating Limits Algebraically") is almost entirely images — the extracted text gives only slide titles (DIRECT SUBSTITUTION, FACTORIZATION METHOD, RATIONALIZATION, L'HÔPITAL'S RULE, the ten limit properties, APPLICATIONS). No formula or worked example survived extraction. The scope below is the deck's own list of topics, filled in with the standard content for each, so the week is still usable for revision.*
 
-1. What lim_{x→a} f(x) = L **means**: f(x) can be forced as close to L as you like by taking x close enough to a — **with x ≠ a**. The value f(a) is irrelevant, and may not even exist.
-2. **Two-sided limit exists ⟺ both one-sided limits exist and are equal.** This is the only test for existence, and the only reason a limit "does not exist" in most exam questions.
-3. The **limit laws** (sum, difference, constant, constant multiple, product, quotient, power/root, composite, reciprocal, squeeze) and the hypothesis every one of them carries: **the separate limits must exist**, and for quotient/reciprocal the bottom limit must be **non-zero**.
-4. **Direct substitution first.** For a polynomial or a rational function with a in its domain, lim_{x→a} f(x) = f(a). Only when substitution fails do you reach for a technique.
-5. Telling an **indeterminate form (0/0, ∞/∞, 0·∞, ∞−∞, 0⁰, 1^∞, ∞⁰)** from a merely **infinite** one (c/0 with c ≠ 0). Indeterminate = "do more algebra"; c/0 = "the limit is ±∞, check each side".
-6. Matching the technique to the shape: **0/0 with polynomials ⟹ factor and cancel**; **0/0 with a surd ⟹ multiply by the conjugate**; **0/0 with stacked fractions ⟹ common denominator**; **x → ±∞ ⟹ divide top and bottom by the highest power of x**.
-7. **L'Hôpital's rule**: only for 0/0 or ∞/∞, and you differentiate **numerator and denominator separately** — never with the quotient rule.
-8. **Continuity at a** = three conditions (f(a) defined, the limit exists, they are equal), and the three failures: **removable (hole)**, **jump**, **infinite (asymptote)**.
+## Most likely to be examined
 
-## Definition and notation
+1. **Definition of a limit.** lim_{x→a} f(x) = L means f(x) can be made arbitrarily close to L by taking x sufficiently close to a **but not equal to a**. Formally (ε–δ, the picture on the objectives slide): for every ε > 0 there is δ > 0 with 0 < |x − a| < δ ⟹ |f(x) − L| < ε.
+2. **One-sided limits and the existence test.** lim_{x→a} f(x) = L ⟺ lim_{x→a⁻} f(x) = lim_{x→a⁺} f(x) = L. If the two one-sided limits differ, the limit does not exist (jump discontinuity).
+3. **Direct substitution and when it is legal.** For polynomials and for rational functions with non-zero denominator at a, lim_{x→a} f(x) = f(a). Continuity at a: f(a) defined, lim_{x→a} f(x) exists, and the two are equal.
+4. **Factorization method for 0/0.** lim_{x→2} (x² − 4)/(x − 2) = lim_{x→2} (x+2)(x−2)/(x−2) = lim_{x→2} (x + 2) = 4. Cancellation is valid because x ≠ 2 throughout the limit process.
+5. **Rationalization method for 0/0 with radicals.** Multiply by the conjugate: lim_{x→0} (√(x+9) − 3)/x = lim_{x→0} x/[x(√(x+9)+3)] = 1/6.
+6. **L'Hôpital's Rule.** If lim_{x→a} f(x)/g(x) has the form 0/0 or ∞/∞, with f, g differentiable near a and g′(x) ≠ 0, then lim_{x→a} f(x)/g(x) = lim_{x→a} f′(x)/g′(x), provided that limit exists. Differentiate numerator and denominator **separately** — never the quotient rule.
+7. **The limit laws**: sum, difference, constant, constant multiple, product, quotient (needs lim g ≠ 0), power, composite (needs outer function continuous), reciprocal (needs lim f ≠ 0). Every law presupposes the individual limits exist.
+8. **Squeeze (Sandwich) Theorem.** If g(x) ≤ f(x) ≤ h(x) near a and lim_{x→a} g(x) = lim_{x→a} h(x) = L, then lim_{x→a} f(x) = L. Standard use: lim_{x→0} x² sin(1/x) = 0.
 
-**lim_{x→a} f(x) = L** is read "the limit of f of x as x approaches a is L". Formally (the ε–δ picture on the slide): for every ε > 0 there is a δ > 0 such that **0 < |x − a| < δ ⟹ |f(x) − L| < ε** — whatever horizontal band L ± ε you name, some window a ± δ traps the graph inside it. The strict inequality 0 < |x − a| is what excludes x = a itself.
+## Definitions
 
-**One-sided limits.** lim_{x→a⁻} f(x) = L (x approaches a from the **left**, x < a); lim_{x→a⁺} f(x) = L (from the **right**, x > a). **lim_{x→a} f(x) = L if and only if lim_{x→a⁻} f(x) = lim_{x→a⁺} f(x) = L.**
+- **Limit.** lim_{x→a} f(x) = L: f(x) → L as x → a with x ≠ a. The value f(a) is irrelevant; it may be undefined, or defined and different from L.
+- **ε–δ definition.** ∀ ε > 0 ∃ δ > 0 : 0 < |x − a| < δ ⟹ |f(x) − L| < ε.
+- **Left-hand limit** lim_{x→a⁻} f(x): x approaches a through values **less** than a. **Right-hand limit** lim_{x→a⁺} f(x): through values **greater** than a.
+- **Continuity at a point.** f is continuous at a ⟺ (i) f(a) is defined, (ii) lim_{x→a} f(x) exists, (iii) lim_{x→a} f(x) = f(a).
+- **Discontinuities.** *Removable* (limit exists but f(a) is undefined or different — a "hole"); *jump* (one-sided limits exist but differ); *infinite* (a one-sided limit is ±∞, i.e. a vertical asymptote).
+- **Indeterminate forms.** 0/0, ∞/∞, 0·∞, ∞ − ∞, 1^∞, 0⁰, ∞⁰. "Indeterminate" means the form alone does not decide the limit — more algebra is needed. Note that a/0 with a ≠ 0 is **not** indeterminate.
+- **Limit at infinity.** lim_{x→∞} f(x) = L: f(x) → L as x grows without bound (horizontal asymptote y = L).
 
-**Infinite limits.** lim_{x→a} f(x) = ∞ says f grows without bound near a — it is a **description of divergence**, not a number; the limit does not "exist" in the ordinary sense. **Limits at infinity** lim_{x→±∞} f(x) = L describe end behaviour (the horizontal asymptotes of Week 2). Key fact: **lim_{x→±∞} 1/xⁿ = 0** for every n > 0.
+## Formulas — properties of limits
 
-**Continuity.** f is continuous at a if (i) f(a) is defined, (ii) lim_{x→a} f(x) exists, (iii) the two are equal. Failures: **removable** — the limit exists but f(a) is missing or wrong (a hole); **jump** — the one-sided limits exist but differ; **infinite** — a one-sided limit is ±∞ (a vertical asymptote).
+Assume lim_{x→a} f(x) = L and lim_{x→a} g(x) = M, both existing.
 
-## The limit laws
-
-Assume lim_{x→a} f(x) = L and lim_{x→a} g(x) = M **both exist and are finite**. Then:
-
-| Law | Statement |
+| Property | Statement |
 |---|---|
+| Sum | lim [f(x) + g(x)] = L + M |
+| Difference | lim [f(x) − g(x)] = L − M |
 | Constant | lim_{x→a} c = c |
-| Identity | lim_{x→a} x = a |
-| Sum / Difference | lim (f ± g) = L ± M |
-| Constant multiple | lim (c·f) = c·L |
-| Product | lim (f·g) = L·M |
-| Quotient | lim (f/g) = L/M, **provided M ≠ 0** |
-| Reciprocal | lim (1/f) = 1/L, **provided L ≠ 0** |
-| Power / Root | lim (f)ⁿ = Lⁿ; lim ⁿ√f = ⁿ√L (n even needs L > 0) |
-| Composite | if lim_{x→a} f(x) = b and g is continuous at b, lim_{x→a} g(f(x)) = g(b) |
-| Squeeze (Sandwich) | if g(x) ≤ f(x) ≤ h(x) near a and lim g = lim h = L, then lim f = L |
+| Constant multiple | lim [c·f(x)] = c·L |
+| Product | lim [f(x)·g(x)] = L·M |
+| Quotient | lim [f(x)/g(x)] = L/M, **provided M ≠ 0** |
+| Power / root | lim [f(x)]ⁿ = Lⁿ; lim ⁿ√(f(x)) = ⁿ√L (need L ≥ 0 if n is even) |
+| Composite | if lim_{x→a} f(x) = L and g is continuous at L, then lim_{x→a} g(f(x)) = g(L) |
+| Reciprocal | lim 1/f(x) = 1/L, **provided L ≠ 0** |
+| Identity / linear | lim_{x→a} x = a; lim_{x→a} (mx + c) = ma + c |
+| Squeeze | g ≤ f ≤ h near a and lim g = lim h = L ⟹ lim f = L |
 
-**Direct substitution property.** If f is a polynomial, or a rational function with a in its domain, then lim_{x→a} f(x) = f(a). This is a *consequence* of the laws above, not a separate rule.
+Other standard results: lim_{x→0} (sin x)/x = 1; lim_{x→0} (1 − cos x)/x = 0; lim_{x→∞} (1 + 1/x)^x = e. For a rational function as x → ∞: equal degrees ⟹ ratio of leading coefficients; numerator degree lower ⟹ 0; numerator degree higher ⟹ ±∞.
 
-Two traps. (1) The laws are **one-way**: lim (f + g) can exist while neither lim f nor lim g does — e.g. f = 1/x, g = −1/x at 0. (2) The quotient law is **silent**, not false, when M = 0; it simply does not apply, and you must look at the numerator to decide between 0/0 (indeterminate) and c/0 (infinite).
-
-## Indeterminate forms and the named techniques
-
-**Indeterminate:** 0/0, ∞/∞, 0·∞, ∞ − ∞, 0⁰, 1^∞, ∞⁰. These carry **no information** — the answer can be any number, or ±∞, or nothing; you must rewrite. **Not indeterminate:** c/0 (c ≠ 0) → ±∞; 0/c → 0; ∞ + ∞ → ∞; ∞·c → ±∞.
-
-- **Direct substitution** — always try first.
-- **Factorisation** — for 0/0 in polynomials. Factor top and bottom, cancel the common factor (legal because x ≠ a inside a limit), then substitute. Useful identities: a² − b² = (a−b)(a+b); a³ − b³ = (a−b)(a² + ab + b²); a³ + b³ = (a+b)(a² − ab + b²).
-- **Rationalisation** — for 0/0 containing a square root. Multiply top **and** bottom by the conjugate (√A − B ↦ √A + B), use (√A − B)(√A + B) = A − B², cancel, substitute.
-- **Common denominator** — for ∞ − ∞ or stacked fractions: combine into a single fraction first.
-- **Divide by the highest power of x** — for x → ±∞. Then every 1/xⁿ term dies. Equivalently: deg N < deg D ⟹ 0; deg N = deg D ⟹ ratio of leading coefficients; deg N > deg D ⟹ ±∞.
-- **L'Hôpital's rule** — if lim f/g is of the form 0/0 or ∞/∞ and f, g are differentiable near a with g′ ≠ 0, then **lim f/g = lim f′/g′**, and may be repeated while the form stays indeterminate. Differentiate top and bottom **separately**; check the form again before each application.
-- **Squeeze theorem** — for oscillating factors the product law cannot handle, e.g. sin(1/x).
-- **Special limits** worth knowing: lim_{x→0} (sin x)/x = 1, lim_{x→0} (1 − cos x)/x = 0, lim_{x→0} (1 + x)^{1/x} = e.
+**Choosing the method (exam decision tree).**
+1. Try direct substitution. A number ⟹ done.
+2. Non-zero number over 0 ⟹ the limit is ±∞ (check the sign from each side); the two-sided limit does not exist.
+3. 0/0 ⟹ indeterminate: factor and cancel (polynomials), multiply by the conjugate (radicals), clear the compound fraction (fractions within fractions), or apply L'Hôpital.
+4. x → ∞ giving ∞/∞ ⟹ divide top and bottom by the highest power of x in the denominator, or apply L'Hôpital.
 
 ## Worked examples
 
-**(1) Direct substitution.** lim_{x→3} (2x² − x + 1). Polynomial, so substitute: 2(9) − 3 + 1 = **16**. Nothing further is needed — no "technique" is required when the function is defined and continuous at the point.
+**1 — Direct substitution.** Evaluate lim_{x→3} (2x² − 5x + 1).
+A polynomial is continuous everywhere, so substitution is legal.
+= 2(3)² − 5(3) + 1 = 18 − 15 + 1 = **4**.
 
-**(2) Factor and cancel (0/0).** lim_{x→2} (x³ − 8)/(x² − 4). Substitution gives **0/0**, so factor: x³ − 8 = (x − 2)(x² + 2x + 4) and x² − 4 = (x − 2)(x + 2).
-(x−2)(x² + 2x + 4) / [(x−2)(x+2)] = (x² + 2x + 4)/(x + 2) for x ≠ 2. Substitute: (4 + 4 + 4)/4 = **3**.
-The cancellation is legal precisely because the limit never evaluates at x = 2.
+**2 — Direct substitution, rational function.** Evaluate lim_{x→1} (x + 4)/(x² + 2).
+Denominator at x = 1 is 1 + 2 = 3 ≠ 0, so the quotient law applies.
+= (1 + 4)/(1 + 2) = **5/3**.
 
-**(3) Rationalising a conjugate (0/0 with a surd).** lim_{x→0} (√(x + 9) − 3)/x. Substitution gives 0/0. Multiply by (√(x+9) + 3)/(√(x+9) + 3):
-numerator → (x + 9) − 9 = x, so the quotient is x / [x(√(x+9) + 3)] = 1/(√(x+9) + 3).
-Substitute: 1/(3 + 3) = **1/6**. (Same trick for lim_{x→1} (x − 1)/(√x − 1): the conjugate gives √x + 1 → **2**.)
+**3 — Factorization.** Evaluate lim_{x→3} (x² − 9)/(x² − 4x + 3).
+Substitute: (9 − 9)/(9 − 12 + 3) = 0/0 — indeterminate, so factor.
+x² − 9 = (x − 3)(x + 3);  x² − 4x + 3 = (x − 3)(x − 1).
+lim_{x→3} [(x − 3)(x + 3)]/[(x − 3)(x − 1)] = lim_{x→3} (x + 3)/(x − 1)   (cancel x − 3; valid since x ≠ 3)
+= (3 + 3)/(3 − 1) = 6/2 = **3**.
 
-**(4) Limits at infinity — divide by the highest power.** lim_{x→∞} (3x² − 5x + 1)/(2x² + 7). Divide every term by x²:
-(3 − 5/x + 1/x²)/(2 + 7/x²) → (3 − 0 + 0)/(2 + 0) = **3/2**.
-**Sign trap with roots:** lim_{x→−∞} √(9x² + 1)/(x + 2). Here √(9x² + 1) = |x|√(9 + 1/x²), and for x < 0, |x| = **−x**. Dividing by x: (−√(9 + 1/x²))/(1 + 2/x) → **−3** (it is +3 as x → +∞).
+**4 — Rationalization.** Evaluate lim_{x→4} (√x − 2)/(x − 4).
+Substitute: (2 − 2)/(4 − 4) = 0/0. Multiply above and below by the conjugate √x + 2:
+= lim_{x→4} [(√x − 2)(√x + 2)]/[(x − 4)(√x + 2)] = lim_{x→4} (x − 4)/[(x − 4)(√x + 2)]
+= lim_{x→4} 1/(√x + 2) = 1/(2 + 2) = **1/4**.
 
-**(5) ∞ − ∞ by conjugate.** lim_{x→∞} (√(x² + 3x) − x) is **∞ − ∞**, not 0. Multiply by (√(x²+3x) + x)/(√(x²+3x) + x): the top becomes (x² + 3x) − x² = 3x, so the expression is 3x/(√(x² + 3x) + x). Divide by x: 3/(√(1 + 3/x) + 1) → 3/(1 + 1) = **3/2**.
+**5 — L'Hôpital's Rule (0/0).** Evaluate lim_{x→0} (sin 3x)/(5x).
+Substitute: 0/0, and both functions are differentiable near 0.
+d/dx(sin 3x) = 3 cos 3x;  d/dx(5x) = 5.
+= lim_{x→0} (3 cos 3x)/5 = 3(1)/5 = **3/5**.
 
-**(6) One-sided limits, and when the two-sided limit fails.** f(x) = (x + 1)/(x − 3) at x = 3. Substitution gives 4/0 — **not indeterminate**, so check signs. As x → 3⁻ the top → 4 > 0 and the bottom → 0⁻, so f → **−∞**; as x → 3⁺ the bottom → 0⁺, so f → **+∞**. The one-sided limits differ, so **lim_{x→3} f(x) does not exist** (an infinite discontinuity).
-Contrast lim_{x→3} 1/(x−3)² : the bottom is 0⁺ from both sides, so both one-sided limits are +∞ and we write lim = **+∞** — still not a finite limit, but the two sides now agree.
+**6 — L'Hôpital's Rule (∞/∞), applied twice.** Evaluate lim_{x→∞} x²/e^x.
+Form ∞/∞ ⟹ lim_{x→∞} 2x/e^x — still ∞/∞ ⟹ lim_{x→∞} 2/e^x = **0**.
+Re-check the form after each application; stop the moment it is no longer indeterminate.
 
-**(7) Piecewise and absolute value.** lim_{x→2} |x − 2|/(x² − 4). Rewrite the absolute value by side.
-Left (x < 2): |x − 2| = 2 − x = −(x − 2), so the quotient is −(x−2)/[(x−2)(x+2)] = −1/(x + 2) → **−1/4**.
-Right (x > 2): |x − 2| = x − 2, giving 1/(x + 2) → **+1/4**.
-Different one-sided limits ⟹ **the limit does not exist** (jump). Same method for f(x) = {ax + 1, x < 3; x² − 2, x ≥ 3}: left limit 3a + 1, right limit 7, so the limit exists only when 3a + 1 = 7, i.e. **a = 2** — matching the two formulas at the joint, not evaluating one of them.
+**7 — One-sided limits / existence.** For f(x) = |x|/x, find lim_{x→0} f(x).
+x > 0: |x| = x so f(x) = 1 ⟹ lim_{x→0⁺} f(x) = 1.
+x < 0: |x| = −x so f(x) = −1 ⟹ lim_{x→0⁻} f(x) = −1.
+1 ≠ −1, so **the limit does not exist** (jump discontinuity at 0). f(0) being undefined is not itself the reason.
 
-**(8) L'Hôpital's rule (and the squeeze theorem).** lim_{x→0} (eˣ − 1 − x)/x² is 0/0. Differentiate top and bottom separately: (eˣ − 1)/(2x) — still 0/0 — again: eˣ/2 → **1/2**. Always re-check the form before reapplying; had the second step given 3/4 you would stop and read off 3/4.
-**Squeeze:** lim_{x→0} x² sin(1/x). The product law fails because lim sin(1/x) does not exist. But −1 ≤ sin(1/x) ≤ 1, so **−x² ≤ x² sin(1/x) ≤ x²**, and both bounds → 0, so the limit is **0**.
+**8 — Squeeze Theorem.** Evaluate lim_{x→0} x² sin(1/x).
+sin(1/x) has no limit at 0, so the product law is unusable. But −1 ≤ sin(1/x) ≤ 1 for x ≠ 0, hence
+−x² ≤ x² sin(1/x) ≤ x².
+lim_{x→0}(−x²) = 0 and lim_{x→0} x² = 0, so by the Squeeze Theorem the limit is **0**.
+
+**9 — Limit at infinity.** Evaluate lim_{x→∞} (3x² − x + 2)/(5x² + 7).
+Divide top and bottom by x², the highest power in the denominator:
+= lim_{x→∞} (3 − 1/x + 2/x²)/(5 + 7/x²) = (3 − 0 + 0)/(5 + 0) = **3/5**.
+
+**10 — Continuity check and classification.** Is f(x) = (x² − 1)/(x − 1) continuous at x = 1?
+f(1) = 0/0 is undefined, so condition (i) fails ⟹ **not continuous at 1**.
+But lim_{x→1} (x − 1)(x + 1)/(x − 1) = lim_{x→1} (x + 1) = 2 exists, so the discontinuity is **removable**: defining f(1) = 2 repairs it.
 
 ## Commonly confused
 
-- **The limit vs the value of the function** — lim_{x→a} f(x) never consults f(a). f can be undefined at a and still have a limit; f can be defined at a and have no limit.
-- **"Indeterminate" vs "does not exist"** — 0/0 means *the form tells you nothing yet*, not that the answer is missing. Most 0/0 questions have a perfectly good finite answer after one line of algebra.
-- **c/0 called indeterminate** — 7/0 is not indeterminate; it is an infinite limit, and the work is a sign check on each side, not factoring.
-- **Cancelling |x − a| against (x − a)** — legal only on the right, where the absolute value is positive; on the left it costs a minus sign. This is what turns an apparently removable point into a jump.
-- **Using the quotient law when the bottom limit is 0** — the law simply does not apply; nothing may be concluded from it either way.
-- **L'Hôpital on a non-indeterminate form** — applying it to (x² + 3)/(x − 1) at x = 1 (form 4/0) gives 2x/1 → 2, which is flatly wrong: the true behaviour is −∞ / +∞ from the two sides.
-- **L'Hôpital done with the quotient rule** — the rule differentiates numerator and denominator *separately*; (f/g)′ is a different expression entirely.
-- **Forgetting |x| = −x for x < 0** when a square root meets x → −∞ — the commonest sign error in limits at infinity.
-- **Squeeze theorem with a one-sided bound** — f(x) ≤ h(x) alone proves nothing; you need functions on *both* sides with the *same* limit.
-- **Stopping L'Hôpital too early or too late** — check the form after every differentiation; once it is no longer 0/0 or ∞/∞, substitute.
-
----
-
-*Note on the source: this week's deck lists its objectives — define the limit, evaluate limits by direct substitution, factorisation and rationalisation, handle indeterminate forms with L'Hôpital's rule, and know the properties of a limit — and then names each item on slides ("DIRECT SUBSTITUTION", "FACTORIZATION METHOD", "RATIONALIZATION", "L'HOPITAL'S RULE", "LIMIT OF A SUM" … "SQUEEZE THEOREM", "LIMIT OF A RECIPROCAL") with every statement, example and task carried entirely by slide images that the text extraction could not read; the week summary adds only a bullet list and a bridge case study. The definitions, laws, forms, techniques and worked examples above are the standard 100-level treatment of exactly the objectives and slide headings the deck names.*
+- **lim_{x→a} f(x) vs f(a).** The limit ignores the point a; f(a) is the value at the point. *Test:* you can change f(a) freely without changing the limit — so they are different objects.
+- **"Limit does not exist" vs "f is undefined at a".** (x² − 4)/(x − 2) is undefined at 2 yet its limit there is 4. *Test:* ask whether f(x) settles on one number from both sides; that alone decides existence.
+- **0/0 vs a/0 with a ≠ 0.** 0/0 is indeterminate — keep working. a/0 is not indeterminate: the limit is ±∞ / does not exist. *Test:* does the numerator also tend to 0?
+- **L'Hôpital's Rule vs the Quotient Rule.** L'Hôpital gives f′/g′ (differentiate separately); the quotient rule gives (f′g − fg′)/g². *Test:* if a g² appears in your working you used the wrong rule.
+- **Applying L'Hôpital when the form is not indeterminate.** lim_{x→0} (cos x)/(x + 1) = 1 by substitution, but L'Hôpital would give (−sin x)/1 → 0, which is wrong. *Test:* substitute first; only 0/0 or ∞/∞ licenses the rule.
+- **"Illegal" cancellation of (x − a).** Cancelling inside a limit is legitimate because x ≠ a throughout; it would be illegal only as a claim about the value *at* a. *Test:* the simplified function agrees with the original everywhere except the single point a, and limits never inspect that point.
+- **Quotient law used without its hypothesis.** lim(f/g) = L/M requires M ≠ 0; students apply it to 0/0 and conclude the limit fails to exist. *Test:* check M ≠ 0 before quoting the law.
+- **Squeeze Theorem bounds.** The two bounding functions must have the *same* limit; bounds with different limits prove nothing. *Test:* did lim g and lim h come out equal?
+- **One-sided notation.** x → a⁻ means x is *below* a, not that x is negative. *Test:* with a = 3, x → 3⁻ means x = 2.9, 2.99, …
+- **Composite limit.** lim g(f(x)) = g(lim f(x)) requires g continuous at the inner limit L. *Test:* if g jumps at L, moving the limit inside is invalid.

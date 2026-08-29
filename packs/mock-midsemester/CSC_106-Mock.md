@@ -2,96 +2,62 @@
 
 *Introduction to Web Technologies · Weeks 1–4 · 45 minutes · notes closed · 24 marks*
 
-Work straight through in **45 minutes** with no notes, no slides and no browser open; one mark per question, 24 marks in total.
-Do not read the Answers section until the time is up — then mark Section B **honestly** against the model answers, giving yourself the mark only where you actually wrote the named point.
+**Instructions.** 45 minutes, notes closed — Section A is 20 questions at 1 mark each and Section B is 4 questions at 1 mark each, for 24 marks; do not look at the Answers until the time is up.
+Mark Section B honestly against the model answers: code that would not do what was asked scores 0, however close it looks — write down which week each lost mark came from and take that row of the revision table.
+
+---
 
 ## Section A — Multiple choice (20)
 
-**1.** One developer writes the page's HTML and CSS; another writes the code that authenticates logins and queries the database. Which statement matches the lecture's split?
-a) The first does front-end (user interface and visual aspects); the second does back-end (server operations and databases)
-b) The first does back-end (the pages are served by the server); the second does front-end (logins face the user)
-c) Both are front-end; back-end refers only to the network hardware and cabling underneath
-d) Both are back-end; front-end refers only to graphic design work done outside any code
+**1.** A classmate says "the Internet and the World Wide Web are two names for the same thing." Which statement corrects him?
+a) The Internet is a system of pages joined by hyperlinks; the Web is the network of cables and computers underneath it.   b) The Internet is the global network infrastructure; the Web is an application of hyperlinked pages that runs on top of it.   c) The Internet is what browsers use; the Web is what servers use.   d) The Internet was introduced by Sir Tim Berners-Lee in 1989; the Web grew out of ARPANET.
 
-**2.** A site is moved from `http://` to `https://`. Which statement describes what actually changes?
-a) The request methods change from GET and POST to encrypted equivalents of the same names
-b) The transport becomes TLS/SSL-encrypted on port 443; methods, status codes and statelessness are unchanged
-c) The protocol becomes stateful, so the server now remembers a client's previous requests
-d) The address bar gains a padlock, but the data itself still travels across the network in plaintext
+**2.** These are the four steps of client–server interaction, listed out of order:
 
-**3.** What is wrong with this line?
-
-```html
-<a src="contact.html">Contact us</a>
 ```
-a) Nothing — `src` and `href` may be used interchangeably on an `<a>` element
-b) The link needs the complete URL including the protocol before it will work at all
-c) `src` should be `href` — `href` gives a link's destination, `src` pulls in a file to display
-d) `<a>` is a void element, so it must be written without a closing tag as `<a src="contact.html">`
-
-**4.** What colour is the paragraph?
-
-```html
-<div class="card">
-  <p class="lead">Registration opens Monday.</p>
-</div>
+(i)   The browser renders and displays the received content.
+(ii)  The browser sends an HTTP request to the appropriate web server.
+(iii) A user enters a URL or clicks a link in the browser.
+(iv)  The server processes the request, retrieves the resource and sends an HTTP response back.
 ```
-```css
-.lead  { color: crimson; }
-div p  { color: navy; }
+
+Which one is the **third** step?
+a) (i)   b) (ii)   c) (iii)   d) (iv)
+
+**3.** A team needs software that executes application-specific code, manages sessions and generates dynamic content for clients; they have chosen Node.js. Which type of server have they chosen?
+a) A web server   b) A proxy server   c) An application server   d) A database server
+
+**4.** Which pairing is correct?
+a) Git is a hosting platform and GitHub is the version control system that runs on it.   b) VS Code, Sublime Text and Atom are IDEs, while WebStorm is a text editor.   c) Git is the version control system itself; GitHub and GitLab are hosting and collaboration platforms for Git repositories.   d) Browser developer tools are a version control system used for branching and merging.
+
+**5.** Which set names the three advantages of client-server architecture given in the course?
+a) Scalability, centralised data management, separation of concerns   b) Encryption, data integrity, server authentication   c) Code collaboration, version history, branching and merging   d) Rendering, bookmarking and history, extensions and plugins
+
+**6.** A site is served over HTTPS and its files are uploaded to the server with SFTP. Which pair of ports is in use?
+a) 80 and 21   b) 443 and 22   c) 443 and 21   d) 80 and 22
+
+**7.** Consider this document:
+
+```xml
+<invoice>
+  <customer>Ada Lovelace</customer>
+  <total currency="NGN">4500</total>
+</invoice>
 ```
-a) navy, because `div p` is written last and the later rule always wins
-b) navy, because a two-part selector always outranks a one-part selector
-c) crimson, because a class (10) outweighs two element selectors (1 + 1)
-d) crimson, because a descendant selector is not allowed to set the `color` property
 
-**5.** In the four-step client–server cycle, what happens immediately after the server retrieves the requested resource?
-a) The user enters a URL in the address bar or clicks a link in the browser
-b) The browser sends an HTTP request to the appropriate web server
-c) The server sends an HTTP response carrying the resource back to the browser
-d) The browser renders and displays the received content on the screen
+Which statement about it is correct?
+a) It is HTML, because it uses tags and an attribute.   b) It is SVG, because it describes structured two-dimensional data.   c) It is not markup at all, because it has no `<!DOCTYPE>` line.   d) It is XML: the tags are user-defined and its purpose is storing and exchanging structured data.
 
-**6.** A firewall is set to allow outbound traffic on ports 443 and 22 only. Which pair of protocols still works?
-a) HTTP and FTP
-b) HTTPS and SFTP
-c) HTTPS and FTP
-d) HTTP and SFTP
+**8.** Which of these is **not** a markup language?
+a) CSS   b) SVG   c) MathML   d) XHTML
 
-**7.** A form asks "Which of these languages do you speak?" and the user must be able to pick more than one. Which markup is correct?
-a) Several `<input type="radio" name="lang">` controls that share the one `name` value
-b) Several `<input type="checkbox" name="lang">` controls, one for each language offered
-c) A single `<input type="text" name="lang" multiple>` control that accepts several entries
-d) A single `<select name="lang">` with one `<option>` element for each language offered
+**9.** A student reads her mail on both a phone and a laptop, and wants a message she deletes on one device to disappear on the other. Which retrieval protocol should she use, and why?
+a) POP3, because it downloads messages to the device and removes them from the server.   b) SMTP, because it sends and relays outgoing mail between servers.   c) IMAP, because it keeps messages on the server and synchronises changes across devices.   d) MIME, because it extends the message format to carry attachments.
 
-**8.** What total height does this element occupy on the page?
+**10.** A live chat feature needs both the browser and the server to send messages at any moment over one connection that stays open. Which technology fits, and why?
+a) REST, because it is stateless and resource-based.   b) SOAP, because its XML messages follow strict predefined rules.   c) FTP, because it holds a control connection open on port 21.   d) WebSocket, because it is full-duplex over a single persistent connection.
 
-```css
-.box {
-  width: 250px;
-  height: 80px;
-  padding: 15px;
-  border: 5px solid red;
-  margin: 10px;
-}
-```
-a) 110px
-b) 120px
-c) 130px
-d) 140px
-
-**9.** Which pairing of server type and named example is correct?
-a) Nginx — application server
-b) Node.js — web server
-c) MongoDB — database server
-d) Apache — proxy server
-
-**10.** In the domain name `admin.example.com`, which label is the **second-level domain**?
-a) `com`
-b) `example`
-c) `admin`
-d) `admin.example`
-
-**11.** How does a browser render this?
+**11.** What does this markup produce?
 
 ```html
 <table>
@@ -99,199 +65,229 @@ d) `admin.example`
   <tr><td>CSC_106</td><td>2</td></tr>
 </table>
 ```
-a) One row of two header cells, bold and centred by default, above a row of two ordinary data cells
-b) Two columns of four cells, because each `<th>` supplies the heading for a whole column
-c) A single row only, because `<td>` cells are ignored unless they are wrapped in a `<th>`
-d) Two rows in which every cell is bold, because `<tr>` marks the row as a header row
 
-**12.** A `<p>` sits directly inside `<body>` and has no rules of its own. Which of these does it inherit?
+a) Two rows: `<th>` marks the two header cells of the first row and `<td>` marks the two data cells of the second.   b) Two rows in which `<td>` marks the header cells and `<th>` marks the data cells.   c) Two columns, because `<tr>` marks a column and each one here holds a single cell.   d) Nothing usable — a table must use `<dt>` and `<dd>` to label its columns.
 
-```css
-body { color: darkgreen; font-size: 18px; padding: 40px; }
-```
-a) `color` and `font-size`, but not `padding`
-b) All three, because every property passes from parent to child
-c) `padding` only, because box properties are the ones that cascade downwards
-d) None of them — inheritance happens only where `inherit` is written explicitly
-
-**13.** A team commits locally and stores the repository online. Which statement is correct?
-a) Git is the hosting platform; GitHub is the version control system installed on each machine
-b) Git is the version control system; GitHub is a hosting and collaboration platform for Git repositories
-c) Git and GitHub are one product under two names; GitHub is simply the paid tier of Git
-d) Git provides branching and merging while GitHub provides version history, so both are required
-
-**14.** Which list contains **only** markup languages as defined in the lecture?
-a) HTML, XML, CSS
-b) HTML, SVG, MathML
-c) XHTML, JavaScript, XML
-d) HTML, CSS, JavaScript
-
-**15.** Which attribute makes a password field refuse anything shorter than 8 characters?
-a) `min="8"`
-b) `maxlength="8"`
-c) `minlength="8"`
-d) `required="8"`
-
-**16.** The list below keeps its default background. Why?
+**12.** A student writes this and the text is not clickable:
 
 ```html
-<ul class="menu"> ... </ul>
+<a src="about.html">About us</a>
 ```
-```css
-#menu { background-color: black; }
-```
-a) `#` selects an `id` but the list carries a `class`, so the selector should be `.menu`
-b) `background-color` is not inherited, so it has to be set on each `<li>` instead
-c) A `<ul>` cannot take a background colour; only a `<div>` container can take one
-d) The rule is valid, but class-based rules are always overridden by the browser default
 
-**17.** Which pair correctly assigns each function to the browser or the server?
-a) Rendering web pages — server; dynamic content generation — browser
-b) Rendering web pages — browser; dynamic content generation — server
-c) Load balancing — browser; bookmarking and history — server
-d) Security — browser only; the server plays no part in security at all
+Why does it fail?
+a) The anchor text must go inside an attribute, not between the tags.   b) `<a>` needs `href` to give the link's destination; `src` gives the source file for embedded content such as `<img>`.   c) Internal links must give the complete URL including `https://`.   d) The element needs `target="_blank"` before a browser will follow it.
 
-**18.** A laptop mail client is set up with **POP3** behaving as it does by default. The user reads her mail on the laptop, then opens the same account on her phone. What does she find?
-a) The messages are on the phone as well, with read and deleted status kept in step
-b) The messages downloaded to the laptop are gone from the server, so the phone lacks them
-c) The messages reach the phone only once SMTP has relayed each of them a second time
-d) The messages reach the phone but every attachment is missing until MIME is switched on
-
-**19.** What does the user see **on the page itself** from this code?
+**13.** A user types `html` into this form and presses Go:
 
 ```html
-<head>
-  <meta charset="UTF-8">
-  <title>Exam Results</title>
-</head>
+<form action="/search" method="GET">
+  <input type="text" name="q">
+  <button type="submit">Go</button>
+</form>
 ```
-a) "Exam Results" printed as a heading across the top of the page content
-b) Nothing from it — `<head>` holds meta-information; the title shows in the browser tab only
-c) "UTF-8" printed above the page content, as the declared character encoding
-d) Nothing at all, because the browser ignores everything written inside `<head>`
 
-**20.** Where does `justify-content: center` place the items here?
+Which statement is true?
+a) The value is appended to the URL as a query parameter, because GET puts form data in the URL.   b) The value is placed in the request body, where it cannot be seen in the address bar.   c) Nothing is submitted, because the input has no `id`.   d) The form fails, because `enctype="multipart/form-data"` is missing.
+
+**14.** A registration form must let a student pick exactly one of three mutually exclusive study modes. Which markup is correct?
+a) Three `<input type="checkbox">` elements sharing one `name`.   b) A single `<textarea>` with `maxlength="1"`.   c) Three `<button type="submit">` elements, one per mode.   d) Three `<input type="radio">` elements sharing the same `name`.
+
+**15.** What is wrong with this document?
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Miva</title>
+    <h1>Welcome</h1>
+  </head>
+  <body></body>
+</html>
+```
+
+a) `<!DOCTYPE html>` must be placed after the opening `<html>` tag.   b) `<title>` belongs in `<body>`, since the user needs to see it.   c) `<h1>` is visible content and belongs in `<body>`; `<head>` holds meta-information that is not displayed.   d) `<html>` cannot be the root element unless `<head>` comes after `<body>`.
+
+**16.** Given this markup and this rule:
+
+```html
+<article>
+  <p class="lead">First</p>
+</article>
+<p class="lead">Second</p>
+```
 
 ```css
-.stack {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+article p { color: red; }
 ```
-a) Centred horizontally, because `justify-content` always works from left to right
-b) Centred vertically, because `flex-direction: column` makes the vertical axis the main axis
-c) Centred both horizontally and vertically, because `justify-content` centres on both axes
-d) Nowhere — `justify-content` is ignored unless `align-items` is given a value as well
+
+Which paragraph turns red?
+a) Both of them, because both carry `class="lead"`.   b) Only "First", because a space between two selectors means "descendant of", so it matches a `<p>` inside `<article>`.   c) Only "Second", because the rule matches `<p>` elements that follow an `<article>`.   d) Neither, because the rule would need `article.p` to match a class.
+
+**17.** Using the total-size calculation taught in the course, how much width does this element occupy in total?
+
+```css
+.box { width: 200px; padding: 20px; border: 2px solid; margin: 10px; }
+```
+
+a) 200px   b) 244px   c) 264px   d) 224px
+
+**18.** The badge below stays as wide as the word "New". Why?
+
+```html
+<span class="tag">New</span>
+```
+
+```css
+.tag { width: 120px; height: 40px; background-color: #FF5733; }
+```
+
+a) `<span>` is an inline element by default, and inline elements do not accept `width` and `height`.   b) A class selector cannot set `width`; only an ID selector can.   c) `width` must be declared before `background-color` or it is ignored.   d) `width` only takes effect on elements inside a flex container.
+
+**19.** What does `justify-content: center` do here?
+
+```css
+.container { display: flex; flex-direction: column; justify-content: center; }
+```
+
+a) Centres the items horizontally, because `justify-content` always works left to right.   b) Centres the items vertically, because it acts on the main axis, and `flex-direction: column` has made the main axis vertical.   c) Nothing — a column layout must use `align-items` instead.   d) Centres the text inside each item, in the way `text-align: center` does.
+
+**20.** A phone has a viewport 480px wide. What `font-size` does the `<h1>` get, and why?
+
+```css
+h1 { font-size: 32px; }
+@media (max-width: 768px) { h1 { font-size: 18px; } }
+```
+
+a) 32px — the media query only takes effect above 768px.   b) 25px — the browser interpolates between the two declared sizes.   c) 32px — a media query cannot override a rule declared earlier for the same element.   d) 18px — `max-width: 768px` applies when the viewport is 768px or less, and 480px qualifies.
 
 ## Section B — Short answer (4)
 
-**21.** A student types `https://www.mivastudents.com` into her browser and presses Enter. Set out the **four steps** of the client–server cycle that follow, saying what the **URL** and **HTTP** each contribute, and name which **two server types** would be involved if the page shows her own stored grades.
+**21.** A student types `https://library.miva.edu.ng/books` and a page listing borrowed books appears. Write out, in order, the four steps of client–server interaction the course specifies, saying what the browser sends and what the server sends back. Then name **two** of the four server types the course lists that would be involved in producing that page, and say what each one does.
 
-**22.** A colleague says: "My login page is on plain `http://` and it works fine — the padlock is only decoration." Write a short reply that states what is exposed on HTTP, what exactly HTTPS adds, the **port number** of each, and what a **Certificate Authority** does.
+**22.** A developer defends a login page: *"Our form posts to `/login` over plain HTTP, but the password field is `<input type="password">` so the characters are hidden — that is secure enough."* Say why this reasoning is wrong, then state the change that fixes it, the port it moves to, and the three things that change gives you.
 
-**23.** The snippet below contains **three** faults, one per line. Name each fault, then rewrite the snippet correctly.
+**23.** Write the markup for a registration form that sends its data to `/register` using the HTTP method suited to sensitive data, contains one labelled email field that the browser will not let the user leave empty, and lets the user attach a CV file. Name the attribute on the `<form>` element that the file upload requires.
 
-```html
-<p><strong>Download the timetable</p></strong>
-<img src="timetable.png"></img>
-<a src="timetable.pdf">Get the PDF</a>
-```
+**24.** Write the CSS rule that turns `.toolbar` into a flex container laying its items out in a row, pushed to the two ends of the bar with the space between them, and vertically centred. Then say which axis each of those two alignment properties acted on, and write the one extra declaration — saying where it goes — that would make a single item with class `logo` sit at the top of the bar instead of centred.
 
-**24.** The rule set below contains **three** faults. Name each one and rewrite the CSS correctly, then state what colour `<h2 class="sub">Notice</h2>` ends up and why.
-
-```css
-sub {
-  color: teal
-  font-size: 20px;
-
-h2 { color: maroon; }
-```
+---
 
 ## Answers
 
-**1. a** — *front-end vs back-end*: front-end is the user interface and visual side; back-end is server-side operations and databases. The split is about **where the code runs**, not about whether a user can see the feature. [Week 1]
+**1.** b) — The Internet is the infrastructure (interconnected networks); the Web is an application of hyperlinked pages running on it. **[Week 1]**
 
-**2. b** — *HTTP vs HTTPS*: HTTPS is HTTP layered over TLS/SSL on port 443. Methods, status codes and statelessness are all identical; only the transport is now encrypted, authenticated and integrity-checked. [Week 2]
+**2.** d) — The order is (iii) user enters a URL, (ii) browser sends the HTTP request, (iv) server processes and responds, (i) browser renders; the third is (iv). **[Week 1]**
 
-**3. c** — *`href` vs `src`*: `href` points to where a link **goes** (`<a>`, `<link>`); `src` names a file to be **pulled in and displayed** (`<img>`, `<script>`, `<iframe>`). `<a>` is a paired element, and a relative URL like `contact.html` is perfectly valid for an internal link. [Week 3]
+**3.** c) — Application servers execute application-specific code and generate dynamic content; Node.js is the course's example. **[Week 1]**
 
-**4. c** — *specificity beats source order*: `.lead` scores 10 (one class); `div p` scores 2 (two element selectors). Specificity is compared **first**, so crimson wins even though `div p` is written later. [Week 4]
+**4.** c) — Git is the distributed version control system; GitHub and GitLab host repositories and add collaboration features. **[Week 1]**
 
-**5. c** — *the four-step request cycle*: user enters a URL → browser sends the HTTP request → server processes it, retrieves the resource and sends the HTTP **response** → browser renders and displays. [Week 1]
+**5.** a) — Scalability, centralised data management and separation of concerns; b is HTTPS, c is the role of version control, d is browser functionality. **[Week 1]**
 
-**6. b** — *the ports as a set*: HTTP 80, HTTPS **443**, FTP 21, SFTP **22** (because it rides on SSH). Only the two secure protocols pass this firewall. [Week 2]
+**6.** b) — HTTPS runs on 443 and SFTP on 22, because SFTP runs over SSH. **[Week 2]**
 
-**7. b** — *radio vs checkbox*: checkboxes allow one **or more** selections; radio buttons sharing a `name` are mutually exclusive, and a plain `<select>` picks one. [Week 3]
+**7.** d) — `<invoice>`, `<customer>` and `<total>` are not HTML tags: user-defined tags describing stored data are the mark of XML. **[Week 2]**
 
-**8. d** — *box model total height*: 80 (content) + 30 (15 + 15 padding) + 10 (5 + 5 border) + 20 (10 + 10 margin) = **140px**. Every layer is counted on **both** sides. [Week 4]
+**8.** a) — CSS is a style sheet language for presentation; SVG, MathML and XHTML all annotate content with tags and are markup. **[Week 2]**
 
-**9. c** — *the four server types*: MongoDB is a database server; Apache and Nginx are web servers; Node.js is the lecture's example of an application server; proxy servers have no named product in the slides. [Week 1]
+**9.** c) — IMAP leaves messages on the server and synchronises changes across devices; POP3 downloads and removes them. **[Week 2]**
 
-**10. b** — *DNS hierarchy*: reading right to left, `com` is the TLD, `example` is the second-level domain, and `admin` is a subdomain of it. [Week 2]
+**10.** d) — WebSocket gives full-duplex, low-latency communication over one persistent TCP connection; REST is request-response only. **[Week 2]**
 
-**11. a** — *table parts*: `<tr>` is a row, `<th>` a header cell (bold and centred by default), `<td>` a data cell. Cells sit inside rows; `<th>` styles one cell, it does not define a column. [Week 3]
+**11.** a) — `<tr>` is a row, `<th>` a header cell and `<td>` a data cell; `<dt>`/`<dd>` belong to definition lists, not tables. **[Week 3]**
 
-**12. a** — *inheritance*: text-related properties (`color`, `font-family`, `font-size`, `font-weight`, `line-height`, `text-align`) inherit; box properties (`margin`, `padding`, `border`, `width`, `height`, `background`) do not. [Week 4]
+**12.** b) — `href` gives a link's destination and belongs on `<a>` and `<link>`; `src` names a file to embed and belongs on `<img>` and `<script>`. **[Week 3]**
 
-**13. b** — *Git vs GitHub*: Git is the distributed version control system itself; GitHub and GitLab host repositories and support collaboration. All four VCS roles — collaboration, version history, branching and merging, backup — belong to version control, not to the host. [Week 1]
+**13.** a) — GET appends form data to the URL as query parameters, which is why it suits search forms; POST would put it in the request body. **[Week 3]**
 
-**14. b** — *markup vs styling vs scripting*: the five markup languages are HTML, XML, SVG, MathML and XHTML. CSS is a style sheet language and JavaScript is a scripting language, so neither counts. [Week 2]
+**14.** d) — Radio buttons sharing one `name` are the mutually exclusive control; checkboxes allow one *or more* selections. **[Week 3]**
 
-**15. c** — *HTML5 validation attributes*: `minlength`/`maxlength` bound **text length**; `min`/`max` bound a **numeric value**; `required` takes no value at all. [Week 3]
+**15.** c) — `<head>` holds meta-information and is not visible; visible content such as `<h1>` belongs in `<body>`. **[Week 3]**
 
-**16. a** — *`#id` vs `.class`*: `#` selects the one element with that `id`, `.` selects every element carrying that `class`. The markup uses `class="menu"`, so the selector must be `.menu`. [Week 4]
+**16.** b) — `article p` is a descendant selector, so it matches only the `<p>` inside `<article>`; the class on both paragraphs is irrelevant to it. **[Week 4]**
 
-**17. b** — *browser functions vs server functions*: the browser renders pages, provides the interface, extensions, bookmarks and history; the server handles requests, stores data, generates dynamic content, provides HTTPS security and does load balancing. Both sides have a security role. [Week 1]
+**17.** c) — 200 + 40 (padding) + 4 (border) + 20 (margin) = 264px. **[Week 4]**
 
-**18. b** — *POP3 vs IMAP*: POP3 downloads messages to one device and typically **removes them from the server**, so a second device sees nothing. IMAP is the protocol that leaves mail on the server and synchronises across devices. [Week 2]
+**18.** a) — `<span>` is inline, so `width` and `height` do not apply; `display: inline-block` would let it stay on the line and still accept them. **[Week 4]**
 
-**19. b** — *the `<head>` section*: `<head>` content is meta-information and is not rendered in the page. It is read and used — `<title>` supplies the tab/title-bar text and `<meta charset>` sets the encoding — but nothing from it appears in the body area. [Week 3]
+**19.** b) — `justify-content` always acts on the main axis, and `flex-direction: column` turns the main axis vertical. **[Week 4]**
 
-**20. b** — *main axis vs cross axis*: `justify-content` works along the **main** axis, and `flex-direction` sets which axis that is. With `column` the main axis is vertical, so the items are centred vertically; `align-items` would then work horizontally. [Week 4]
+**20.** d) — `@media (max-width: 768px)` means "768px or less", so a 480px viewport gets the 18px rule. **[Week 4]**
 
-**21.** *The client–server model and server types* — [Week 1]
-1. The student enters the **URL** (the web address specifying the location of the resource) or clicks a link.
-2. The browser sends an **HTTP request** to the appropriate web server — HTTP being the protocol for browser–server communication.
-3. The server processes the request, retrieves the requested resource, and sends an **HTTP response** back.
-4. The browser **renders and displays** the content.
-Because the page shows her own stored grades, a **web server** (serving the content and handling the HTTP request) and a **database server** (storing and retrieving the grades) are both involved; an **application server** running the logic that fetches them is also acceptable.
+---
 
-**22.** *HTTP vs HTTPS, TLS and certificates* — [Week 2]
-On plain **HTTP** (**port 80**) everything travels in **plaintext**, so the username and password typed into that login page can be read by anyone intercepting the traffic — eavesdropping or a man-in-the-middle attack. **HTTPS** (**port 443**) is the same protocol layered over **TLS** (successor to SSL) and adds three things: **encryption** (confidentiality), **data integrity**, and **authentication** of the server. A **Certificate Authority** issues the server's **digital certificate**, which proves the site is who it claims to be; the padlock is the browser reporting that verified, encrypted connection, not decoration.
+**21.** The four steps, in order:
 
-**23.** *Nesting, void elements and `href` vs `src`* — [Week 3]
-- Line 1: **improper nesting** — the inner `<strong>` must be closed before the outer `<p>`.
-- Line 2: `<img>` is a **void element**, so it takes no closing tag, and the required **`alt`** attribute is missing.
-- Line 3: an `<a>` link takes **`href`**, not `src`.
+1. The user enters a URL (`https://library.miva.edu.ng/books`) or clicks a link in the browser.
+2. The browser sends an **HTTP request** to the appropriate web server.
+3. The server processes the request, retrieves the requested resource, and sends an **HTTP response** back to the browser.
+4. The browser **renders and displays** the received content to the user.
+
+Two server types involved:
+
+- **Web server** (Apache, Nginx, Microsoft IIS) — handles the incoming HTTP request, locates the resource and delivers the HTML, CSS and JavaScript to the browser.
+- **Database server** (MySQL, PostgreSQL, MongoDB) — stores the borrowing records and processes the query that retrieves the list of books.
+
+An **application server** (Node.js) is also accepted as the second type, if described as executing the application code that builds the page dynamically from those records. Full mark needs all four steps in the right order *and* two server types with the right job attached to each.
+
+*Tested: the exact four-step client–server request cycle, and the four server types by function.* **[Week 1]**
+
+**22.** `type="password"` only masks the characters on the screen as they are typed — it does nothing to the data once it leaves the browser. The value is still placed in the request and sent across the network, and plain **HTTP has no security property at all**: everything travels in **plaintext** on **port 80**, so anyone positioned to intercept the traffic (eavesdropping, man-in-the-middle) can read the password. Using POST rather than GET does not rescue it either: POST moves the data from the URL into the request body, but that body is still plaintext under HTTP.
+
+The fix is to serve and submit the form over **HTTPS** — the same HTTP protocol layered over **TLS** (Transport Layer Security, the successor to SSL) — on **port 443**. That gives three things: **encryption** (confidentiality in transit), **data integrity**, and **authentication of the server**, proved by a **digital certificate** issued by a Certificate Authority, which is what puts the padlock in the address bar.
+
+*Tested: HTTP vs HTTPS — that the difference is the encrypted transport underneath, not the form markup — plus the port and the three guarantees.* **[Week 2]**
+
+**23.**
 
 ```html
-<p><strong>Download the timetable</strong></p>
-<img src="timetable.png" alt="Semester timetable">
-<a href="timetable.pdf">Get the PDF</a>
+<form action="/register" method="POST" enctype="multipart/form-data">
+  <label for="email">Email address</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="cv">Upload your CV</label>
+  <input type="file" id="cv" name="cv">
+
+  <button type="submit">Register</button>
+</form>
 ```
 
-**24.** *Class selector syntax, declaration syntax and specificity* — [Week 4]
-- The class selector is missing its **dot**: written bare, `sub` is a type selector looking for a `<sub>` element.
-- The declaration `color: teal` is missing its closing **semicolon**, so the browser cannot parse it or the declaration after it.
-- The declaration block is missing its closing **brace**, so the `h2` rule is swallowed into it.
+The attribute the file upload requires on `<form>` is **`enctype="multipart/form-data"`**.
+
+Award the mark only if all of these are present: `action="/register"`; `method="POST"` (sensitive data goes in the request body, not the URL); `<input type="email">` carrying `required`; a `<label>` whose `for` value matches the input's `id`; `<input type="file">`; and the `enctype`. Losing `required`, or writing `<label for="…">` that points at the `name` instead of the `id`, loses the mark.
+
+*Tested: form `action` and `method`, HTML5 validation with `required`, `type="email"` and `type="file"`, `label for` / `id` pairing, and the `enctype` needed for uploads.* **[Week 3]**
+
+**24.**
 
 ```css
-.sub {
-  color: teal;
-  font-size: 20px;
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-
-h2 { color: maroon; }
 ```
 
-With the CSS corrected, `<h2 class="sub">Notice</h2>` is **teal**: the class selector scores 10 against the element selector's 1, and specificity is compared before source order.
+`justify-content: space-between` acts on the **main axis** — horizontal here, because `flex-direction: row` is in force — and pushes the items to the two ends with the free space distributed between them. `align-items: center` acts on the **cross axis**, which is the perpendicular one, vertical here, so the items sit centred in the height of the bar.
 
-## What to revise
+To lift one item out of that centring, put `align-self` on **the item itself**, not on the container:
 
-| Week | Questions | What to re-read |
-|---|---|---|
-| **Week 1** — The Internet and the WWW | 1, 5, 9, 13, 17, 21 | The four-step client–server cycle in order, the four server types with their named examples, front-end vs back-end, Git vs GitHub, and the split between browser functions and server functions. |
-| **Week 2** — Protocols and markup languages | 2, 6, 10, 14, 18, 22 | The port table as a single set (80 / 443 / 21 / 22), what TLS actually adds to HTTP and the CA's role, the DNS hierarchy labels, the five markup languages (CSS and JavaScript are not among them), and POP3 vs IMAP. |
-| **Week 3** — HTML | 3, 7, 11, 15, 19, 23 | `href` vs `src`, void elements and their required attributes, correct nesting order, the table elements, radio vs checkbox, the HTML5 validation attributes, and what `<head>` does without being visible. |
-| **Week 4** — CSS | 4, 8, 12, 16, 20, 24 | Selector punctuation (`.` class, `#` id), rule syntax faults (semicolon, brace), the specificity weights and that they are checked **before** source order, the four box-model layers counted on both sides, what inherits and what does not, and main axis vs cross axis in flexbox. |
+```css
+.logo { align-self: flex-start; }
+```
+
+`align-self` overrides the container's `align-items` for that single item, placing it at the start of the cross axis — the top.
+
+Setting `align-self` on `.toolbar`, or reaching for `justify-content` to move one item vertically, scores 0.
+
+*Tested: writing a flex container rule, knowing which axis `justify-content` and `align-items` each act on, and that `align-self` goes on the item to override `align-items`.* **[Week 4]**
+
+## Revision table
+
+| Week | Topic | Questions | Your score |
+|---|---|---|---|
+| 1 | The Internet vs the World Wide Web; web development front-end/back-end; the client–server model and its four-step cycle; browser and server functions; the four server types; development tools and version control | 1, 2, 3, 4, 5, 21 |  |
+| 2 | HTTP and HTTPS; FTP and SFTP; ports; markup languages (HTML, XML, SVG, MathML, XHTML); email protocols; DNS; WebSocket, REST and SOAP | 6, 7, 8, 9, 10, 22 |  |
+| 3 | HTML document structure and `<!DOCTYPE html>`; content and semantic elements; tables and definition lists; hyperlinks, `href` and anchor text; web forms, `action` and `method`, input types, validation attributes and file uploads | 11, 12, 13, 14, 15, 23 |  |
+| 4 | CSS selector types; the box model and total-size arithmetic; `display` values; Flexbox containers, axes and properties; responsive typography and media queries | 16, 17, 18, 19, 20, 24 |  |

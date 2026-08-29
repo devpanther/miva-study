@@ -1,67 +1,117 @@
-# PHY_108 — Week 3 Question Set (sit 7 days later)
+# PHY_108 — Week 3 retention set
 
-*Sit this during Saturday catch-up in Week 4, not this week. Notes closed.*
+*General Physics Practical II · Experiment to verify the non-linear relationship between current and voltage in a non-ohmic resistor. Sit this seven days after the lesson, closed-book.*
 
-## Section A - Multiple choice (12)
+## Multiple choice
 
-**1.** The aim of this week's experiment is to study the relationship between current and voltage in:
-A) An ohmic resistor  B) A non-ohmic resistor  C) A parallel combination of resistors  D) A capacitor
+**1.** Which set is the apparatus list for this experiment?
+a) Voltmeter, ohmmeter, AC power supply, copper wire
+b) Ammeter, galvanometer, battery, thermistor, LDR
+c) Voltmeter, ammeter, DC power supply, a tungsten resistor, an iron resistor
+d) Voltmeter, ammeter, AC power supply, a carbon resistor, a diode
 
-**2.** The two conductor materials selectable in the simulation are:
-A) Copper and aluminium  B) Carbon and nichrome  C) Tungsten and iron  D) Silicon and germanium
+**2.** In the simulation, what is the very first step of the procedure?
+a) Inspect the circuit connection
+b) Select the conductor material from the drop-down list
+c) Set the power supply to 0.1 V
+d) Click the Record button
 
-**3.** Joule's law of heating is expressed as:
-A) P = IR  B) P = I²R  C) P = I/R²  D) P = IR²
+**3.** Over what range of applied voltage should readings be taken?
+a) 0 V to 1 V
+b) 0.1 V to 5 V
+c) 1 V to 50 V
+d) 0.1 V to 50 V
 
-**4.** According to the lesson, a conducting device obeys Ohm's law if its resistance between any pair of points is:
-A) Small  B) Independent of the magnitude and polarity of the applied p.d.  C) Proportional to the current  D) Measured at high temperature only
+**4.** A graph of I (A) against V (V) for the tungsten resistor is expected to be
+a) a straight line through the origin
+b) a curve, showing the non-linear relation between I and V
+c) a straight line with a large negative intercept
+d) a horizontal line
 
-**5.** A graph of I (y-axis) against V (x-axis) for the tungsten resistor is:
-A) A straight line through the origin  B) A horizontal line  C) A curve that flattens as V increases  D) A straight line with a negative intercept
+**5.** Joule's law as used in this experiment is
+a) P = I²R
+b) P = V²I
+c) V = IR
+d) P = I/R²
 
-**6.** In the data analysis, which graph is expected to be a straight line?
-A) I against V  B) V against I  C) P against I²  D) R against V
+**6.** After the current values are recorded, which two quantities are computed in the spreadsheet before the second graph is plotted?
+a) V² and R
+b) R and 1/R
+c) I² and V/I
+d) I² and P = IV
 
-**7.** The gradient of the P (W) against I² (A²) graph gives:
-A) The current  B) The resistance in ohms  C) The voltage  D) The conductance in siemens
+**7.** The graph of P (W) against I² (A²) is expected to be
+a) a curve of increasing slope
+b) a straight line, illustrating Joule's power law
+c) a curve of decreasing slope
+d) a straight line of negative gradient
 
-**8.** As the current through the tungsten filament increases, its resistance:
-A) Increases, because the filament heats up  B) Decreases, because the filament heats up  C) Stays constant  D) Falls to zero
+**8.** On the graph of P against I², the gradient represents
+a) the power dissipated
+b) the applied voltage
+c) the resistance R of the conductor
+d) the reciprocal of the resistance, 1/R
 
-**9.** The full range of applied voltage to be covered in the procedure is:
-A) 0.1 V to 5 V  B) 1 V to 10 V  C) 0.1 V to 50 V  D) 0 V to 240 V
+**9.** Ideally, the intercept of the P against I² line is
+a) equal to R
+b) equal to the maximum voltage used
+c) equal to the first recorded current
+d) zero, because zero current dissipates zero power
 
-**10.** Which of the following is NOT a non-ohmic component?
-A) A light bulb  B) A diode  C) A transistor  D) A copper connecting wire at constant temperature
+**10.** Ohm's law, as stated in the lesson, says a conducting device obeys it if the resistance between any pair of points is independent of
+a) the magnitude and polarity of the applied potential difference
+b) the temperature of the conductor only
+c) the length and cross-sectional area of the conductor
+d) the material from which the conductor is made
 
-**11.** Thermistors are preferred in temperature-sensing circuits because:
-A) Their resistance is constant  B) Their resistance changes drastically with temperature, allowing precise measurement  C) They obey Ohm's law exactly  D) They conduct in one direction only
+**11.** Physically, why does the tungsten resistor stop obeying Ohm's law at higher currents?
+a) The ammeter saturates and under-reads the current
+b) Heat generated (P = I²R) raises the temperature, which changes the resistance
+c) The polarity of the DC supply reverses at high voltage
+d) The voltmeter draws an increasing share of the current
 
-**12.** From a set of readings, V = 4.0 V gives I = 0.50 A. The power dissipated and the resistance at that point are:
-A) 2.0 W and 8.0 Ω  B) 8.0 W and 2.0 Ω  C) 2.0 W and 0.125 Ω  D) 0.5 W and 8.0 Ω
+**12.** Which real-world non-ohmic device was given as the example for temperature-sensing circuits such as oven control, air conditioning and automotive engine management?
+a) Light-dependent resistor (LDR)
+b) Diode
+c) Thermistor
+d) Nichrome heating element
 
-## Section B - Short answer (3)
+## Short answer
 
-**13.** Explain, using Joule's law, why the I–V graph of a tungsten filament is a curve rather than a straight line. State the equation, define each symbol with its unit, and describe the shape of the curve.
+**13.** List, in the correct order, the steps of the procedure from selecting the conductor material to the point where the Excel sheet is downloaded.
 
-**14.** Two points on the best-fit P against I² line are (I² = 0.10 A², P = 1.5 W) and (I² = 0.50 A², P = 7.5 W). Calculate the resistance, state which law this straight line verifies, and say what the gradient represents.
+**14.** State Joule's law with its symbols and units, and explain in two or three sentences how it accounts for the curved I–V graph obtained for tungsten.
 
-**15.** List the apparatus for this experiment, state the correct placement of the ammeter and the voltmeter with a reason for each, and give three precautions to be observed while taking readings.
+**15.** Give three precautions to be observed while taking the readings and three likely sources of error in this experiment.
 
 ## Answers
 
-**1. B** — *aim of the experiment*: to study the nonlinear relation between current and voltage in a non-ohmic resistor.
-**2. C** — *apparatus*: a resistor made of tungsten and a resistor made of iron, chosen from the drop list.
-**3. B** — *Joule's law*: the power dissipated as heat is proportional to the square of the current and to the resistance, P = I²R.
-**4. B** — *definition of ohmic behaviour*: independence of both magnitude **and polarity** of the applied potential difference is the full condition.
-**5. C** — *non-ohmic I–V curve*: R rises with temperature, so equal increases in V give progressively smaller increases in I and the curve bends towards the V-axis.
-**6. C** — *verification of Joule's law*: P plotted against I² is linear through the origin; the I–V plot is deliberately curved.
-**7. B** — *P = RI² vs y = mx + c*: gradient m ≡ R, in ohms, intercept zero.
-**8. A** — *resistance and temperature*: I²R heating raises the filament's temperature and a metal's resistance increases with temperature.
-**9. C** — *procedure*: record from 0.1 V up to 50 V using the three push buttons above the voltage dial knob.
-**10. D** — *ohmic conductors*: copper wire at constant temperature has constant resistance; bulbs, diodes and transistors all have resistance that varies with the applied conditions.
-**11. B** — *thermistor application*: its non-linear response gives precise temperature measurement over a specific range, used in ovens, air conditioning and engine management.
-**12. A** — *power and resistance from one reading*: P = IV = 0.50 × 4.0 = 2.0 W; R = V/I = 4.0/0.50 = 8.0 Ω.
-**13.** *Joule heating and non-ohmic behaviour*: Current flowing through the filament meets resistance and dissipates energy as heat at a rate given by Joule's law, **P = I²R**, where P is the power dissipated as heat in watts (W), I is the current in amperes (A) and R is the resistance in ohms (Ω). As the applied voltage and hence the current increase, the heat generated rises as the square of the current, the filament's temperature rises, and the resistance of the tungsten increases with temperature. Because R is no longer constant, V/I is not constant and the response to voltage is nonlinear. The graph of I against V therefore starts steep near the origin and progressively **bends over towards the V-axis** (flattens) at higher voltages, passing through the origin but never becoming a straight line.
-**14. R = 15 Ω** — *gradient of the P–I² graph*: gradient = (7.5 − 1.5) W / (0.50 − 0.10) A² = 6.0/0.40 = 15 Ω. The straight line through the origin verifies **Joule's power law, P = I²R**, and the gradient represents the **resistance of the conductor in ohms**.
-**15.** *Apparatus, meter placement and precautions*: Apparatus — voltmeter, ammeter, DC power supply (0.1–50 V), a resistor made of tungsten and a resistor made of iron, with connecting wires. The **ammeter is connected in series** with the test resistor so that the whole current under test passes through it; it is built with very low resistance so it barely alters that current. The **voltmeter is connected in parallel, across the resistor only**, so that it shares the same potential difference; it is built with very high resistance so it draws almost no current away from the resistor. Precautions (any three): check and correct **zero error** on both meters before starting; read the scales with the **eye perpendicular** to the pointer to avoid parallax; allow the reading to **settle at each voltage** before pressing Record, since the filament needs time to reach a steady temperature; take **many readings spread over the full 0.1–50 V range** so the curvature is visible; do not exceed the **meter ranges**, and observe correct **polarity**; keep terminals **clean and tight** to avoid contact resistance.
+**1. c** — The deck lists voltmeter, ammeter, DC power supply, a tungsten resistor and an iron resistor.
+
+**2. a** — Inspect the circuit connection comes before selecting the material.
+
+**3. d** — The procedure says to cover all the available voltage range, starting from 0.1 V to 50 V.
+
+**4. b** — I against V is the non-linear plot; that curvature is the whole point of the experiment.
+
+**5. a** — Joule's law: power dissipated as heat is proportional to the square of the current and to the resistance.
+
+**6. d** — The analysis says compute I², compute P using IV, then plot P against I².
+
+**7. b** — P = R·I² is of the form y = mx, so the plot is linear, illustrating Joule's power law.
+
+**8. c** — Comparing P = R·I² with y = mx, the gradient m is the resistance R in ohms.
+
+**9. d** — With no current there is no power dissipated, so the line should pass through the origin.
+
+**10. a** — The lesson's wording is "independent of the magnitude and polarity of the applied potential difference".
+
+**11. b** — Current produces heat, temperature rises, resistance changes, so I no longer rises linearly with V; the effect is largest at high current.
+
+**12. c** — Thermistors are semiconductor devices whose resistance changes sharply with temperature, giving precise measurement over a range.
+
+**13.** Select tungsten or iron from the drop-down list → adjust the DC supply output to a low voltage (e.g. 0.1 V) → click Record to save V and I → increase the voltage (e.g. to 0.3 V) → click Record again → repeat over the full 0.1–50 V range using the three push buttons above the voltage dial knob → the experiment ends automatically and the Excel sheet of saved data is downloaded.
+
+**14.** P = I²R, with P the power dissipated as heat in watts (W), I the current in amperes (A) and R the resistance in ohms (Ω). Current flowing through the resistance generates heat, so as I rises the power dissipated rises with the square of the current and the filament's temperature rises. The rise in temperature changes R, so V/I is no longer constant and the I–V graph bends instead of staying straight — most noticeably at high currents.
+
+**15.** Precautions (any three): check the circuit connections before applying voltage; start at 0.1 V and increase in steps rather than jumping to high voltage; do not exceed 50 V; record both V and I at each setting, clicking Record only after the voltage is adjusted; let each reading settle before recording; take enough well-spread points across the full range; keep the same material for one data set. Sources of error (any three): self-heating causing R to drift during a reading; meter resolution, zero error and loading by the voltmeter/ammeter; parallax or misreading of scales and rounding of recorded values; too few or badly spaced points, especially at high voltage; drift in the DC supply output; poor scale choice or drawing a straight best-fit line through genuinely curved data.

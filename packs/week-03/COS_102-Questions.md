@@ -1,105 +1,129 @@
-# COS_102 — Week 3 Question Set (sit 7 days later)
+# COS_102 — Week 3 Retention Set
 
-*Sit this during Saturday catch-up in Week 4, not this week. Notes closed. 12 MCQ + 3 short answer, about 30 minutes.*
+*Introduction to Problem Solving · Week 3 (21 – 27 Sep 2026) · sit this seven days after the week, notes closed.*
 
-## Section A — Multiple choice (12)
+## Multiple choice
 
-**1.** The course defines computational approaches to problem solving as approaches that:
-a) Reduce every problem to an arithmetic operation
-b) Express solutions in a form that can be run on a computer, using algorithms, models and simulations
-c) Decide whether a problem is solvable by the Universal Turing Machine
-d) Break a problem into sub-problems and store their answers
+**1.** Which of the following describes **pipelining**?
 
-**2.** Which of the following is **not** one of the six computational methods listed in Lesson I?
-a) Problem recognition  b) Pipelining  c) Dynamic programming  d) Visualisation
+a) Dividing a task into a series of subtasks where each subtask leads to the next, the result of one process feeding into the next until the whole task is completed
+b) Splitting a complex problem into smaller independent parts, solving each, and combining the results
+c) Going through all possible choices until a solution is found
+d) Breaking a problem into sub-problems and saving their solutions so they need not be recomputed
 
-**3.** "_______ deals with evaluating if a program works as expected or not before it is released, and using this knowledge to make it more effective."
-a) Performance testing  b) Data mining  c) Pipelining  d) Backtracking
+**2.** Before deciding whether computational approaches can be used on a problem, the lesson names three factors to consider. Which of the following is one of them?
 
-**4.** Which trio are the three factors that must be considered before deciding that computational approaches can be used on a problem?
-a) Nature and parameters identified; criteria for success specified; problem grouped as a type
-b) Clearly defined; computable; data requirements examined
-c) Split; solve each part; combine the parts
-d) Null hypothesis stated; significance level chosen; p-value computed
+a) Determining whether the problem can be grouped as a specific type of problem
+b) Examining the data requirements — identifying the required data types and storage capacity
+c) Coming up with a set of test scenarios and success criteria
+d) Exploring the possibility of reducing the problem to a more general case
 
-**5.** In backtracking, on reaching a final state the algorithm:
-a) Stores the result so the same state is never recomputed
-b) Chooses the option with the best immediate value and continues
-c) Checks whether the state is accepted or rejected, then backtracks to try unconsidered options
-d) Splits the remaining states into smaller sets
+**3.** The **significance level** of a test is:
 
-**6.** A company examines millions of song ratings and playlist shares to find out which artists are most popular and which features of its platform are least used. This is:
-a) Data mining  b) Performance testing  c) Hypothesis testing  d) Visualisation
+a) The probability that the null hypothesis is true
+b) The probability of accepting the null hypothesis when it is false
+c) The probability of rejecting the null hypothesis when it is true
+d) The number between 0 and 1 that is computed from the collected data
 
-**7.** The course's example of reducing a problem to a more general case — optimising a building's power cable infrastructure by finding the **minimum spanning tree** of a graph — belongs to which method?
-a) Visualisation  b) Problem recognition  c) Divide and conquer  d) Greedy algorithm
+**4.** Which approach is described as guaranteeing that an optimal solution can be found, provided a solution to the problem exists?
 
-**8.** Pipelining is best described as:
-a) Splitting a task into subtasks in a series, each one's result feeding the next
-b) Splitting a problem into smaller copies of itself and combining their solutions
-c) Trying every possible choice until a solution is found
-d) Saving each sub-problem's solution so it is never computed twice
+a) Greedy algorithm
+b) Brute force
+c) Backtracking
+d) Dynamic programming
 
-**9.** Brute force is described by the course as:
-a) Fast but unreliable, because it makes an intelligent guess at each stage
-b) Simple and consistent, but very slow, because it goes through all possible choices
-c) Guaranteed optimal, because it stores every result it computes
-d) Suitable only for problems that cannot be clearly defined
+**5.** A padlock has 4 digits, each from 0 to 9, and you have forgotten the combination. Using brute force, how many combinations must you be prepared to try?
 
-**10.** Which statement about the greedy algorithm matches the course?
-a) It always produces the optimal solution, which is why it is preferred to brute force
-b) It examines every possible path and keeps the best one found
-c) It applies the best possible solution at each stage, but might not always produce an optimal solution
-d) It stores the solution of each stage so that no stage is ever repeated
+a) 10,000
+b) 40
+c) 5,040
+d) 9,999
 
-**11.** What does dynamic programming add to simply breaking a problem into sub-problems?
-a) The sub-problems are made independent of one another
-b) The sub-problems are ordered so that each feeds the next
-c) The best-looking sub-problem is solved first at every stage
-d) The solutions of the sub-problems are saved so no result is computed again
+**6.** In backtracking, what happens when the algorithm reaches a final state?
 
-**12.** A test uses a significance level of 0.05 and the data produce a p-value of 0.02. On the course's rule:
-a) The null hypothesis is rejected, because the p-value is below the significance level
-b) The null hypothesis is accepted, because a small p-value supports it
-c) The result is inconclusive until the significance level is raised
-d) The null hypothesis is rejected, which proves the effect is real
+a) It saves the state's result so that the state need not be evaluated again
+b) It checks whether the state is accepted or rejected, then returns to a previous state to try options not yet considered
+c) It keeps the branch that looked best at the last decision and permanently discards the others
+d) It splits the remaining search space into two halves and recurses on each
 
-## Section B — Short answer (3)
+**7.** Reducing "produce an algorithm that optimises the power cable infrastructure of a building" to "determine the minimum spanning tree of a given graph" is an illustration of:
 
-**13.** Name the six computational methods taught in Lesson I and give a one-line definition of each. Then name the five more sophisticated approaches taught in Lesson II.
+a) Visualisation
+b) Data mining
+c) Problem recognition
+d) Divide and conquer
 
-**14.** Explain the fundamental principle of divide and conquer: how it breaks a complex problem down, and the key conditions for its effectiveness. Then illustrate it by sorting **2, 8, 4, 9, 3** into descending order with merge sort, showing the splits and the merges.
+**8.** Six activities have start times 2, 4, 1, 6, 9, 6 and end times 3, 5, 7, 8, 10, 10 respectively. You cannot work on more than one activity at a time. What is the maximum number of activities you can perform?
 
-**15.** Define the greedy algorithm and say how it prioritises choices. Give one real-world scenario where it is useful, then state its drawback and explain, with a short example, why it may fail to give an optimal solution. Finish by naming the approach the course says *does* guarantee an optimal solution, and the proviso attached to that guarantee.
+a) 3
+b) 5
+c) 6
+d) 4
+
+**9.** A test is run at a significance level of 0.05 and the data give a p-value of 0.03. The correct conclusion is:
+
+a) Reject the null hypothesis — the evidence against it is strong enough at this significance level
+b) Accept the null hypothesis, because 0.03 is a small probability
+c) Conclude that the null hypothesis has been proved false
+d) Lower the significance level to 0.01 and repeat the test before concluding anything
+
+**10.** Which condition must hold for divide and conquer to be worth applying?
+
+a) The sub-problems must overlap, so that stored results can be reused
+b) The smaller parts must genuinely be simpler than the complex whole, and combining their solutions must be less complicated than solving the original directly
+c) Each subtask must pass its output to the next subtask in a fixed order
+d) Every possible way of splitting the problem must be tried before one is chosen
+
+**11.** A team runs a new program with deliberately erroneous data to check that it handles errors effectively before release. This is an example of:
+
+a) Data mining
+b) Hypothesis testing
+c) Performance testing
+d) Problem recognition
+
+**12.** Visualisation is included among computational approaches because:
+
+a) It reduces the number of computations a machine must perform
+b) It converts any problem into graph form so that a computer can solve it automatically
+c) It is the standard way of checking that a program's output is correct
+d) People often process and retain information better as an image than as text, so it helps humans solve problems more effectively
+
+## Short answer
+
+**13.** Sort the numbers 2, 8, 4, 9, 3 into **descending** order using Merge sort. Write out the split and the merge steps.
+
+**14.** State, in the lesson's own terms, the difference between a greedy algorithm and dynamic programming, and explain why a greedy algorithm may fail to give an optimal solution while dynamic programming does not.
+
+**15.** A researcher's hypothesis is: "Consumption of a particular medicine reduces the chances of heart arrest." State the null hypothesis, then state the rule that decides whether the null hypothesis is rejected or accepted, and say what a rejection does and does not establish.
 
 ## Answers
 
-**1. b — Express solutions in a form that can be run on a computer, using algorithms, models and simulations.** *Concept: definition of computational approaches.* The definition is about the form the solution takes, not the difficulty of the problem. (d) is dynamic programming, one member of the family.
+**1. a** — Pipelining is a *series*: each subtask leads to the next and one process's result feeds the next. (b) is divide and conquer, (c) brute force, (d) dynamic programming.
 
-**2. c — Dynamic programming.** *Concept: the Lesson I inventory.* The six are **problem recognition, backtracking, data mining, performance testing, pipelining, visualisation**. Dynamic programming belongs to the five **more sophisticated** approaches of Lesson II, alongside brute force, divide and conquer, greedy and hypothesis testing.
+**2. b** — The three factors are: the problem is clearly defined; the problem is computable; the data requirements are examined (data types and storage capacity). (a) and (d) belong to problem recognition, (c) to performance testing.
 
-**3. a — Performance testing.** *Concept: performance testing.* This is the lesson's own mid-lesson question. The method is to come up with a set of test scenarios and success criteria, then measure the system against them — using erroneous data and simulated real-life circumstances (stress testing).
+**3. c** — The significance level is the probability of rejecting the null hypothesis when it is true; 0.05 = a 5% risk of concluding something exists when it does not.
 
-**4. b — Clearly defined; computable; data requirements examined.** *Concept: the three gating factors.* Clearly defined means identifying the current situation, the end goal, how to reach it and possible obstacles; computable means the required calculations are possible given processing times and capacity; data requirements means identifying data types and storage capacity. (a) is the trap: those are **problem recognition's** three factors.
+**4. d** — Dynamic programming: provided a solution exists, it guarantees an optimal solution can be found. Greedy carries no such guarantee.
 
-**5. c.** *Concept: the backtracking mechanism.* It checks whether the final state is accepted or rejected and then returns to a previous state to try other unconsidered options; backtracking algorithms most often use recursion to move between states. (a) is dynamic programming, (b) is greedy.
+**5. a** — Four independent digit positions, ten values each: 10 × 10 × 10 × 10 = 10,000. Digits may repeat, so it is not 10P4 = 5,040, and 0000 is a valid combination, so not 9,999.
 
-**6. a — Data mining.** *Concept: data mining.* Extracting valuable information from large data sets through unnoticed patterns and underlying relationships, in order to make informed decisions or predict trends. The music-centric social network is the course's own example.
+**6. b** — At a final state the algorithm checks acceptance or rejection and then "backtracks" to a previous state to try unconsidered options. Saving results (a) is dynamic programming; discarding alternatives permanently (c) is greedy.
 
-**7. b — Problem recognition.** *Concept: reducing a problem to a more general case.* Problem recognition exists to ensure the proposed solution deals with the **root cause**; identifying the problem's nature and parameters, its criteria for success and its type also opens up reducing it to a general case already solved. A graph appears in the answer, but drawing a graph to explain a route is **visualisation**, a different method.
+**7. c** — Problem recognition includes exploring the possibility of reducing the problem to a more general case; the minimum-spanning-tree reduction is the lesson's own example.
 
-**8. a.** *Concept: pipelining.* A task is divided into a series of subtasks, each executed by a different process, with the result of one feeding into the next until the whole task is done — as when the total cost of an order is produced by summing the product costs and then adding VAT to that sum. (b) is divide and conquer, (c) brute force, (d) dynamic programming.
+**8. d** — Choosing by earliest finishing time: (2,3), then (4,5), then (6,8), then (9,10) — four activities. (1,7) and (6,10) both conflict with the chosen set.
 
-**9. b.** *Concept: brute force.* It solves a problem by going through **all possible choices** until a solution is found, relying solely on computing power rather than improving efficiency with advanced techniques — simple and consistent, but very slow. A 4-digit padlock with digits 0–9 gives it 10 000 combinations to work through.
+**9. a** — The rule is: p-value less than or equal to the significance level → reject the null hypothesis. 0.03 ≤ 0.05, so reject; but rejection is evidence, not proof, which is why (c) is wrong.
 
-**10. c.** *Concept: the greedy caveat.* The best possible solution is applied at each stage, aiming at the optimal solution overall; but the course states it **might not always produce an optimal solution**, though it does for many problems — and where it does, those solutions are always simple and highly efficient.
+**10. b** — Divide and conquer can only work if the small parts are simpler than the whole, and the recombination must cost less than solving the original directly, otherwise the split gains nothing. (a) is the dynamic programming condition, (c) is pipelining.
 
-**11. d.** *Concept: dynamic programming versus plain decomposition.* The solutions of the sub-problems are **saved** so there is no need to compute the result again; on that basis, provided a solution exists, dynamic programming guarantees an optimal solution can be found, which is why it is mostly used for optimization problems. (b) describes pipelining, (c) greedy.
+**11. c** — Performance testing evaluates whether a system or program works as expected *before it is released*; testing with erroneous data is the lesson's own example.
 
-**12. a.** *Concept: the accept/reject rule.* When the p-value is less than or equal to the significance level, the null hypothesis is rejected; when it is higher, the null is accepted. (b) inverts the meaning of the p-value — the **smaller** it is, the stronger the evidence to reject. (d) overclaims: the course states that rejecting the null hypothesis does not prove something does not exist, only that the evidence is not enough.
+**12. d** — Visualisation works because people process and retain information better as images than as text; it helps humans rather than computers.
 
-**13.** *Concept: the two inventories.* **Lesson I — the six computational methods.** **Problem recognition:** making sure the proposed solution deals with the root cause, by identifying the problem's nature and parameters, specifying its requirement or criteria for success, and determining whether it can be grouped as a specific type of problem (and possibly reduced to a more general case). **Backtracking:** examining more than one possible solution, usually with recursion, moving between problem states and, on reaching a final state, checking whether it is accepted or rejected before returning to a previous state to try unconsidered options. **Data mining:** extracting valuable information from large data sets through unnoticed patterns and underlying relationships, using machine learning and statistical analysis, to inform decisions or predict trends. **Performance testing:** evaluating whether a system or program works as expected before it is released, by measuring it against a set of test scenarios and success criteria, and using what is learned to make it more effective. **Pipelining:** dividing a task into a series of subtasks, each executed by a different process, with each one's result feeding into the next until the whole task is complete. **Visualisation:** using diagrams, graphs and images to illustrate what a problem entails and how to approach its solution, because people process and retain information better as images than as text; it helps humans rather than computers. **Lesson II — the five sophisticated approaches:** brute force, divide and conquer, greedy algorithm, dynamic programming, hypothesis testing.
+**13.** Split 2, 8, 4, 9, 3 → [2, 8] and [4, 9, 3]. Split again → [2] [8], and [4] and [9, 3] → [9] [3]. Merge for descending order (take the larger head first): [2] + [8] → [8, 2]; [9] + [3] → [9, 3]; [4] + [9, 3] → [9, 4, 3]. Final merge [8, 2] with [9, 4, 3]: 9, then 8, then 4, then 3, then 2 → **[9, 8, 4, 3, 2]**. Full marks require both the recursive splitting to single elements and the comparison-by-heads merging, not just the final list.
 
-**14.** *Concept: divide and conquer, its conditions, and merge sort.* **The principle:** a complex problem is **first split into smaller, easier parts**; each of those parts is then **solved**, and the solutions of the parts lead to the solution of the complex problem. The parts are smaller instances of the same kind of problem, so the split can be repeated until the parts are trivial. The military analogy in the notes is a commander occupying **smaller territories one at a time** in order to occupy a large territory. **The conditions for effectiveness:** first, the small easier parts must genuinely be **simpler than the complex whole** — splitting a problem into parts as hard as the original gains nothing; second, **combining the solutions of the parts must be less complicated than solving the original problem directly** — if the recombination costs more than the direct attack, the split has added work rather than removed it. **Merge sort on 2, 8, 4, 9, 3, descending.** Split into `[2, 8]` and `[4, 9, 3]`; split again into `[2]`, `[8]`, and `[4]`, `[9]`, `[3]`. Merge, taking the larger head each time: `[2]` and `[8]` give `[8, 2]`; `[9]` and `[3]` give `[9, 3]`; `[4]` with `[9, 3]` gives `[9, 4, 3]`. Final merge of `[8, 2]` with `[9, 4, 3]`: 8 vs 9 → 9; 8 vs 4 → 8; 2 vs 4 → 4; 2 vs 3 → 3; then the last element, 2. Result: **`[9, 8, 4, 3, 2]`**. Note that descending order is produced inside the merge, by taking the larger head, not by sorting upwards and reversing at the end.
+**14.** A greedy algorithm applies the best possible solution *at each stage*, committing to the locally optimal choice and never revisiting it; dynamic programming breaks the problem into sub-problems and *saves* their solutions so they are not recomputed, and compares the resulting combinations. Greedy may fail because a choice that is best at one stage can close off a better overall completion, and greedy has no mechanism for going back; dynamic programming keeps the sub-problem solutions and so, provided a solution exists, it can find the optimal one. Greedy is nevertheless simple and highly efficient on the problems where its local choice is safe.
 
-**15.** *Concept: greedy algorithms, their drawback, and dynamic programming's guarantee.* **Definition:** with a greedy algorithm, the **best possible solution is applied at each stage** of solving the problem; by always selecting the best optimal path available at that stage it aims at reaching the optimal solution to the whole problem. It prioritises the **immediate** optimal choice and never revisits a choice once made — which is what makes it fast. The course's simple case is a set of numbers 5, 9, 1, 4, 2, 6: the largest single digit is found by taking the best available at once (9), and the largest two-digit number by taking the best, then the best of what is left (96). Its activity-selection case takes, at each stage, the activity that finishes earliest among those still available. **A real-world scenario:** a delivery driver with a list of undelivered orders who always drives to the nearest one — a rule that is simple, immediate and needs no view of the whole route. **The drawback:** the course states that greedy algorithms **might not always produce an optimal solution**, although they do for many problems, and where they do the solutions are always **simple and highly efficient**. The reason is that "best at this stage" and "best overall" are different quantities: at each stage the algorithm compares only the options leading out of where it currently stands, so it cannot see that a slightly worse choice now would open a much better remainder. **Example:** in a city with one-way streets, order A is 2 minutes from the restaurant and order B is 5, but the leg A → B takes 12 minutes while B → A takes 3. Greedy delivers A first because 2 beats 5, and then pays the 12-minute leg — 14 minutes to deliver both, against 8 minutes for the route that goes to B first. **The approach with the guarantee:** **dynamic programming**, which breaks the problem into sub-problems and saves their solutions so nothing is recomputed; the proviso is that it guarantees an optimal solution can be found **provided that a solution to the problem exists**, and it is mostly applied to optimization problems, where a minimum or a maximum is sought.
+**15.** Null hypothesis: *the consumption of the medicine does not reduce the chances of heart arrest.* Rule: if the p-value is less than or equal to the significance level, the null hypothesis is rejected; if the p-value is higher, the null hypothesis is accepted. A rejection means the evidence against the null hypothesis is strong enough at the chosen significance level — it does not prove the medicine works, and, symmetrically, accepting the null hypothesis does not prove that no effect exists; it just means the evidence is not enough.

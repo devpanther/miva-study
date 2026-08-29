@@ -1,139 +1,129 @@
-# CSC_106 — Week 3 Question Set (sit 7 days later)
+# CSC_106 — Week 3 retention set
 
-*Sit this during Saturday catch-up in Week 4, not this week. Notes closed.*
+*Introduction to Web Technologies · sit this seven days after the lesson · 12 MCQ + 3 short answer*
 
-## Section A - Multiple choice (12)
+## Multiple choice
 
-**1.** Which line must come first in an HTML5 document, and what is its purpose?
-a) `<html>` — it opens the root element
-b) `<!DOCTYPE html>` — it tells the browser which version of HTML is being used
-c) `<head>` — it declares the character encoding
-d) `<meta charset="UTF-8">` — it declares the document type
+**1.** A page contains `<h2 id="fees">Fees</h2>` near the bottom and, at the top, `<a href="#fees">Jump to fees</a>`. Clicking the link:
 
-**2.** What does the following render?
+a) opens a file named `fees` in a new tab
+b) submits a form to the URL `fees`
+c) scrolls to the `<h2>` element on the same page
+d) does nothing, because `href` must always start with `http://`
 
-```html
-<ol>
-  <li>Register</li>
-  <li>Login</li>
-</ol>
-```
-a) Two bulleted items
-b) A definition list with two terms
-c) A numbered list: 1. Register, 2. Login
-d) Two paragraphs on separate lines
+**2.** The exact first line of an HTML5 document is:
 
-**3.** What is wrong with this line?
+a) `<!DOCTYPE html>`
+b) `<!DOCTYPE HTML5>`
+c) `<doctype html="5">`
+d) `<html doctype="5">`
 
-```html
-<img src="logo.png"></img>
-```
-a) `src` should be `href`
-b) `<img>` is a void element — it needs no closing tag, and the required `alt` attribute is missing
-c) Images must be inside a `<div>`
-d) Nothing is wrong
+**3.** In `<img src="team.jpg" alt="Our team">`, the `alt` attribute:
 
-**4.** Which section of an HTML document is **not** visible to the user?
-a) `<body>`  b) `<main>`  c) `<head>`  d) `<footer>`
+a) sets the image width
+b) names the image when the form is submitted
+c) links the image to another page
+d) provides alternative text for the image
 
-**5.** Which attribute pair is correct for a hyperlink that opens an external site in a new tab?
-a) `<a src="https://example.com" target="_new">`
-b) `<a href="https://example.com" target="_blank">`
-c) `<a link="https://example.com" open="new">`
-d) `<a href="#example.com" target="_self">`
+**4.** A login form must send a username and password. Which attribute setting is appropriate, and why?
 
-**6.** In a form, what is the difference between the `action` and `method` attributes?
-a) `action` names the button; `method` names the form
-b) `action` validates the input; `method` styles the form
-c) `action` is the URL the data is sent to; `method` is the HTTP method (GET or POST) used to send it
-d) `action` sets the encoding; `method` sets the maximum length
+a) `method="GET"`, because the data is appended to the URL as query parameters
+b) `method="POST"`, because the data is sent in the request body, suiting sensitive data
+c) `action="POST"`, because `action` names the HTTP method
+d) `method="SEND"`, because credentials need a dedicated method
 
-**7.** What does this snippet do?
+**5.** Which input will only accept a 5-digit number?
 
-```html
-<a href="#services">Our services</a>
-...
-<h2 id="services">Services</h2>
-```
-a) Downloads a file called services
-b) Opens services.html in a new window
-c) Links to an external site named services
-d) Jumps to the section on the same page whose `id` is "services"
+a) `<input type="text" pattern="[0-9]{5}">`
+b) `<input type="text" maxlength="5">`
+c) `<input type="number" min="5" max="5">`
+d) `<input type="text" required="5">`
 
-**8.** Which set of elements makes up a table?
-a) `<table>`, `<tr>`, `<th>`, `<td>`
-b) `<table>`, `<td>`, `<dt>`, `<dd>`
-c) `<tab>`, `<row>`, `<col>`, `<cell>`
-d) `<table>`, `<ul>`, `<li>`, `<th>`
+**6.** A form contains `<input type="file" name="cv">` but uploads fail on the server. The most likely omission on the `<form>` tag is:
 
-**9.** A form must let the user attach a photograph. What is required?
-a) `<input type="image">` only
-b) `<input type="file">` and `enctype="multipart/form-data"` on the `<form>`
-c) `<input type="upload">` and `method="get"`
-d) `<img src="">` inside the form
+a) `target="_blank"`
+b) `multiple`
+c) `maxlength="1"`
+d) `enctype="multipart/form-data"`
 
-**10.** Which HTML5 attribute forces the input to match a 5-digit number?
-a) `required="5"`  b) `maxlength="5"`  c) `pattern="[0-9]{5}"`  d) `min="5"`
+**7.** A registration form must let a user tick several interests at once from a list. The correct control is:
 
-**11.** What is wrong with the following?
+a) `<input type="radio">`
+b) `<input type="checkbox">`
+c) `<select>` with one `<option>`
+d) `<input type="text">`
 
-```html
-<p><strong>Deadline is Friday</p></strong>
-```
-a) `<strong>` cannot be used inside `<p>`
-b) The elements are improperly nested — the inner element must be closed before the outer one
-c) `<p>` needs a closing slash on the opening tag
-d) `<strong>` must come before `<p>`
+**8.** Which snippet is a correctly formed definition list?
 
-**12.** Which statement about GET and POST is correct?
-a) GET sends data in the request body; POST appends it to the URL
-b) Both send the data in the URL; only the speed differs
-c) GET appends data to the URL as query parameters; POST sends it in the request body, suiting sensitive or large data
-d) POST can only be used for file uploads
+a) `<dl><dd>HTML</dd><dt>HyperText Markup Language</dt></dl>`
+b) `<dt><dl>HTML</dl><dd>HyperText Markup Language</dd></dt>`
+c) `<dl><dt>HTML</dt><dd>HyperText Markup Language</dd></dl>`
+d) `<dl><li>HTML</li><li>HyperText Markup Language</li></dl>`
 
-## Section B - Short answer (3)
+**9.** You want to colour just the word "urgent" inside a paragraph, without breaking the line. The correct element is:
 
-**13.** Write a complete, minimal HTML5 document skeleton, naming the four structural components and stating in one phrase what each is for.
+a) `<div>`
+b) `<br>`
+c) `<section>`
+d) `<span>`
 
-**14.** Write a login form that sends the data to `/login` using the POST method, containing a labelled text input for the username, a password input, and a submit button. State why POST is the right method here.
+**10.** Which attribute makes an external link open in a new browser tab or window?
 
-**15.** Distinguish between: (a) an internal and an external hyperlink, (b) `<ol>` and `<ul>`, (c) `<br>` and `<p>`. Give one line of HTML for each of the six.
+a) `target="_blank"`
+b) `href="_blank"`
+c) `rel="new"`
+d) `method="_blank"`
+
+**11.** A student puts `<h1>Welcome</h1>` inside the `<head>` section and is surprised nothing appears. The reason is:
+
+a) `<h1>` must be inside `<title>`
+b) `<h1>` is only valid once per document
+c) the `<head>` holds meta-information and is not visible to the user; visible content goes in `<body>`
+d) headings must be numbered `<h2>` upwards
+
+**12.** What is wrong with `<a href=about.html>About<a>`?
+
+a) nothing; both tags are valid
+b) the closing tag is missing its forward slash — it should be `</a>`
+c) `<a>` cannot link to a relative URL
+d) `href` should be `src`
+
+## Short answer
+
+**13.** Write the HTML for a hyperlink to "https://www.mivastudents.com" with suitable anchor text, and state what "anchor text" means.
+
+**14.** Name the four elements used to build a table in HTML and say what each one is for.
+
+**15.** List four HTML5 form validation attributes and state precisely what each one enforces.
 
 ## Answers
 
-**1. b** — *document type declaration*: `<!DOCTYPE html>` is the very first line and informs the browser which version of HTML is being used so it renders the page correctly. It is a declaration, not an element.
-**2. c** — *ordered lists*: `<ol>` numbers its `<li>` items; `<ul>` would bullet them. Both use `<li>` for each item.
-**3. b** — *void elements and required attributes*: `<img>` is empty — written `<img src="logo.png" alt="Company logo">` with no closing tag. `alt` provides alternative text for accessibility; `src` specifies the image file's source.
-**4. c** — *head section*: `<head>` holds meta-information (`<meta>`, `<title>`, `<link>`, `<script>`) and is not displayed; `<body>` contains all visible content.
-**5. b** — *external links*: `href` carries the complete URL including the protocol, and `target="_blank"` opens it in a new tab or window, keeping the user on your site.
-**6. c** — *form submission*: `action` is the URL, typically a server-side script, that processes the data; `method` is the HTTP method, GET or POST.
-**7. d** — *anchor links*: `href="#id"` combined with a matching `id` attribute on the target element scrolls to that section within the same page.
-**8. a** — *tables*: `<table>` wraps the table, `<tr>` a row, `<th>` a header cell, `<td>` a data cell. `<dt>`/`<dd>` belong to definition lists (`<dl>`).
-**9. b** — *file uploads*: `<input type="file">` provides the control, and `enctype="multipart/form-data"` on the form is necessary for the server to handle the upload.
-**10. c** — *HTML5 validation*: `pattern` takes a regular expression; `[0-9]{5}` means exactly five digits. `required`, `min`/`max` and `minlength`/`maxlength` are the other validation attributes.
-**11. b** — *nesting*: elements must be closed in reverse order of opening — `<p><strong>Deadline is Friday</strong></p>`.
-**12. c** — *GET vs POST*: GET puts the data in the URL as visible query parameters (good for searches and simple retrieval); POST puts it in the request body (suited to sensitive data such as passwords, or large amounts).
-**13.** *Document structure*: 
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Page title</title>
-  </head>
-  <body>
-    <h1>Hello</h1>
-  </body>
-</html>
-```
-**`<!DOCTYPE html>`** — first line, declares the HTML version so the browser renders correctly; **`<html>`** — the root element containing all other elements; **`<head>`** — invisible meta-information (title, character encoding, links to CSS and JavaScript); **`<body>`** — the visible content of the page.
-**14.** *Forms*: 
-```html
-<form action="/login" method="post">
-  <label for="user">Username:</label>
-  <input type="text" id="user" name="username" required>
-  <input type="password" name="password" required>
-  <button type="submit">Log in</button>
-</form>
-```
-POST is correct because it sends the form data in the **request body** rather than appending it to the URL, which suits sensitive data such as a password. The `<label for="user">` matches the input's `id`, which is the accessibility requirement.
-**15.** *Links and list/break elements*: (a) an **internal** link navigates within the same website using a relative URL — `<a href="about.html">About</a>` — while an **external** link goes to another domain and needs the complete URL including the protocol — `<a href="https://www.mivastudents.com">Miva Students</a>`. (b) `<ol>` produces a numbered list where order matters — `<ol><li>Step one</li></ol>` — and `<ul>` produces a bulleted list where it does not — `<ul><li>Item</li></ul>`. (c) `<br>` is a void element that forces a line break inside text — `Line one<br>Line two` — while `<p>` is a paired element creating a separate paragraph block — `<p>A paragraph.</p>`.
+**1. c** — `href="#fees"` is a same-page anchor: it targets the element whose `id` is `fees`.
+
+**2. a** — For HTML5 the declaration is exactly `<!DOCTYPE html>`, and it is the very first line.
+
+**3. d** — `src` specifies the image file's source; `alt` provides alternative text.
+
+**4. b** — POST sends form data in the request body, which suits sensitive or large data; GET would expose it in the URL.
+
+**5. a** — `pattern` takes a regular expression; `[0-9]{5}` forces exactly five digits. `maxlength` only caps length, not content.
+
+**6. d** — `enctype="multipart/form-data"` is necessary when handling file uploads on the server.
+
+**7. b** — Checkboxes allow one or more selections; radio buttons allow only one from mutually exclusive choices.
+
+**8. c** — `<dl>` is the definition list, `<dt>` the term, `<dd>` the definition, in that order.
+
+**9. d** — `<span>` is an inline container for styling specific parts of text within a larger element; `<div>` is a block container.
+
+**10. a** — `target="_blank"` opens the link in a new tab or window.
+
+**11. c** — `<head>` provides meta-information (title, character encoding, links to CSS/JS) and is not visible; `<body>` contains the visible content.
+
+**12. b** — A closing tag is the opening tag with a forward slash before the element name, so it must be `</a>` (the unquoted `href` value is also poor practice).
+
+**13.** `<a href="https://www.mivastudents.com">Open Miva Students Page</a>` — the anchor text is the visible, clickable part of the hyperlink that describes the linked content, here "Open Miva Students Page".
+
+**14.** `<table>` defines the table; `<tr>` is a table row; `<th>` is a table header cell; `<td>` is a table data cell.
+
+**15.** `required` — the field must be filled out before submission; `min` and `max` — the minimum and maximum allowed values for numeric input types; `minlength` and `maxlength` — the minimum and maximum lengths for text input fields; `pattern` — a regular expression pattern the input value must match.
