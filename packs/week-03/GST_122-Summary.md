@@ -1,58 +1,98 @@
-# GST_122 — Week 3 Summary
+# GST_122 — Week 3
 
-*Communication in English II · Week 3 (21–27 Sep 2026) · Topic: Grammar — Sentences by Function and Structure, and Word Classes (Function vs Content Words)*
+*Communication in English II · Week 3 (21 – 27 Sep 2026)*
 
-## The 8 most examinable things this week
+## Most likely to be examined
 
-1. A **sentence** is a group of words expressing a complete thought, and must contain a **subject** (noun or pronoun) and a **predicate** (verb). *"I danced at the party."* — subject *I*, predicate *danced at the party*.
-2. Every sentence can be analysed **two separate ways**: by **function** (its purpose) and by **structure** (how its clauses are built). Both labels apply to the same sentence at once — the exam's favourite trap.
-3. The **four structural types**: simple, compound, complex, compound-complex. Count **independent** and **dependent clauses** to decide.
-4. The **four functional types**: declarative, imperative, interrogative, exclamatory. **Conditional ("if") sentences** are named as an extra fifth category.
-5. Words split into **two classes**: **function (grammatical/structure) words** and **content (lexical) words**.
-6. Function words = **conjunctions, auxiliary/helping verbs, prepositions, articles, pronouns** (plus modals, qualifiers, and question words in some cases). Content words = **nouns, verbs, adjectives, adverbs**.
-7. In speech, **content words are stressed; function words are unstressed** — the lesson's stated pronunciation payoff. Pennebaker: function words are **under 0.1% of your vocabulary but ~60% of the words you use**.
-8. At this level you are expected to write more **compound and compound-complex** sentences, and a "healthy paragraph" mixes sentence functions, structures, punctuation, connectives and context clues.
+1. **Definition of a sentence**: a group of words that expresses a complete thought or idea; to be complete it must contain a **noun or pronoun (subject)** and a **verb (predicate)**. A sentence is an aspect of **syntax**, which is an aspect of language.
+2. **The two ways a sentence is analysed**: by **function** (its purpose) and by **structure** (how it is made up of different parts or elements — subjects, predicates, objects, nouns, verbs).
+3. **The four structural types, in order**: simple, compound, complex, compound-complex — and the clause count that defines each. Expect "classify this sentence" items.
+4. **The four functional types**: declarative, imperative, interrogative, exclamatory — plus the **fifth, additional category: conditional ("if") sentences**.
+5. **The test for compound vs complex**: count independent clauses. Two or more independent clauses joined by a **coordinating conjunction** (and, but, or, so) or a **semicolon** = compound. One independent clause + at least one **dependent (subordinate)** clause, usually signalled by a **subordinating conjunction** (although, because, while, since) = complex. Both features together = compound-complex.
+6. **Function words vs content words**: function words have a primarily grammatical role and convey little or no meaning alone; content words (lexical words) carry the main meaning. **Function = conjunctions, auxiliary/helping verbs, prepositions, articles, pronouns** (also modals, qualifiers, question words). **Content = nouns, verbs, adjectives, adverbs.**
+7. **The stress test**: in spoken English, **content words are stressed/emphasised; function words are non-stressed.** This is the stated reason the distinction matters — comprehension and pronunciation.
+8. **Concord** = the set of rules governing **agreement between different elements in a sentence**. The fundamental rule is **subject-verb agreement**: the **number of the subject must match the number of the verb**.
+9. **The Rule of Proximity Agreement**: the verb (or noun) must **align with the closest subject** where a sentence has multiple elements — and the presence of **"or"** in the subject decides whether the verb is singular or plural.
+10. **The five tips for creating compound-complex sentences**: relative clauses, parenthesis, context clues, punctuation (semicolon, hyphen), details and explanations.
 
-## Structure: count the clauses
+---
 
-An **independent clause** stands alone as a sentence. A **dependent (subordinate) clause** cannot — it is introduced by a subordinator (*although, because, while, since, if, when*) or a relative pronoun (*who, which, that*).
+## Sentence: definition and parts
 
-- **Simple** = **one** independent clause, no dependent clause. *"She sings beautifully."* / *"I like pizza."* One subject, one predicate, complete on its own.
-- **Compound** = **two or more independent clauses**, joined by a coordinating conjunction (*and, but, or, so, for, nor, yet*) or a semicolon, **no dependent clause**. *"I wanted to go to the store, but it started raining."* — both halves could stand alone. *"She loves to read; he prefers to watch movies."*
-- **Complex** = **one independent clause + at least one dependent clause**. *"Although it was raining, we went for a walk."* — *Although it was raining* cannot stand alone; *we went for a walk* can. Also *"Because she studied hard, she aced the exam."* and *"Nneoma cooked dinner, while Lara slept."*
-- **Compound-complex** = **two or more independent clauses + at least one dependent clause**. *"Nneoma cooked dinner while Lara slept, and Esohe swept the floor."* — independents: *Nneoma cooked dinner* and *Esohe swept the floor*; dependent: *while Lara slept*. Also *"She went to the store because she needed groceries, and I stayed home to cook dinner."*
+**Sentence** — a group of words expressing a complete thought or idea, containing a subject (noun/pronoun) and a predicate (verb). It is an aspect of **syntax**, which is an aspect of language.
+*Example:* "I danced at the party." — *I* = subject, *danced at the party* = predicate.
 
-**Boundary rule:** no dependent clause at all → simple (one independent) or compound (two+). A dependent clause present → complex (one independent) or compound-complex (two+ independents). The subordinate clause can sit at the front, at the end, or be embedded mid-sentence — *"Jane, while the orthopedic surgeon cracked her ankle in place, squeaked loudly"* — and its position never changes the label.
+**Function** — describing a sentence by its **purpose**.
+**Structure** — describing how a sentence is **made up of different parts or elements** (subjects, predicates, objects, nouns, verbs).
 
-## Function: what the sentence is for
+## Types of sentences — STRUCTURE
 
-- **Declarative** — makes a statement, gives a fact, opinion or idea; ends with a full stop. *"The sun rises in the east."* / *"I enjoy reading books."*
-- **Imperative** — gives a command, instruction or request; the subject *you* is understood and usually invisible, so it opens with the bare verb. *"Close the door."* / *"Please pass the salt."*
-- **Interrogative** — asks a question; ends with a question mark, and usually opens with *who, what, where, when, why, how* or an inverted auxiliary. *"What is your name?"* / *"Where are you going?"*
-- **Exclamatory** — expresses strong emotion (surprise, excitement, anger); ends with an exclamation mark. *"Wow, that was amazing!"* / *"Ouch, that hurt!"*
-- **Conditional ("if" sentences)** — states a condition and its likely result; often complex in structure. *"If it rains, we will stay indoors."* / *"I would go to the party if I had more time."*
+| Type | Definition (source) | My example |
+|---|---|---|
+| **Simple** | One independent clause — a complete thought that can stand alone as a sentence; typically contains a subject and a predicate. | *Amaka missed the bus.* |
+| **Compound** | Two or more independent clauses joined by a coordinating conjunction (and, but, or, so) **or a semicolon**. | *Amaka missed the bus, but she still arrived early.* / *Amaka missed the bus; she still arrived early.* |
+| **Complex** | One independent clause and at least one dependent (subordinate) clause; dependent clauses cannot stand alone and rely on the independent clause for meaning; often uses a subordinating conjunction (although, because, while, since). | *Because Amaka missed the bus, she walked to campus.* |
+| **Compound-complex** | A combination of a compound sentence and a complex sentence: two or more independent clauses **and** at least one dependent clause. | *Because Amaka missed the bus, she walked to campus, and her lecturer excused her.* |
 
-**Boundary rule:** punctuation settles interrogative (?) and exclamatory (!) instantly. The declarative/imperative boundary is the one the lesson opens with: a declarative has a visible subject and reports something (*You close the door* = declarative); an imperative has an understood subject and tells someone to do something (*Close the door* = imperative). "Please" at the front is a strong imperative signal, not a question.
+Source examples to recognise: "She sings beautifully." (simple) · "I wanted to go to the store, but it started raining." (compound) · "Although it was raining, we went for a walk." (complex) · "Nneoma cooked dinner while Lara slept, and Esohe swept the floor." (compound-complex).
 
-## Word classes: function vs content
+**Clause position is free** — the subordinate clause may come last, first, or inside the main clause, and the structural label does not change: *Jane squeaked loudly, while the orthopedic surgeon cracked her ankle in place.* / *While the orthopedic surgeon cracked her ankle in place, Jane squeaked loudly.* / *Jane, while the orthopedic surgeon cracked her ankle in place, squeaked loudly.*
 
-- **Function words** (also *grammatical words, structure words, empty words, form words, grammatical morphemes/functors*) have a mainly grammatical job and carry little or no meaning alone; they connect content words and hold the structure together. **Closed classes** — the list rarely gains new members. Named parts of speech: **conjunctions** (*but, although, since, so, for*), **auxiliary/helping verbs** (*was, been, has, have, did*), **prepositions** (*between, in, at, up, over*), **articles** (*a, an, the*), **pronouns** (*they, she, them, it, my*), plus **modals** (*can, could, may, should, will*), **qualifiers** (*very, quite, too, much, somewhat*) and **question words** in some cases (*who, why, where, when, which*).
-- **Content words** (also *lexical words*) carry the main meaning — real-world or abstract entities, actions, qualities and relations. **Open classes** — new members are added freely. Named parts of speech: **nouns** (*table, bag, boy, mountain, plaza*), **verbs** (*drown, dig, bury, kill, suffocate*), **adjectives** (*robust, clever, abrasive, difficult, beautiful*), **adverbs** (*quietly, loudly, irritably, surreptitiously, predictably*).
-- **Worked example:** *"The clever boy quietly buried a bag under the mountain."* Content = *clever, boy, quietly, buried, bag, mountain*. Function = *the, a, under*. Strip the function words and the meaning still limps through; strip the content words and nothing is left — that is the test.
+**Creating compound-complex sentences — the five tips:** 1. relative clauses 2. parenthesis 3. context clues (use the various types) 4. punctuation (semicolon, hyphen) 5. details and explanations.
+Their purpose: they **flesh out and boost your paragraph writing**. A good paragraph must contain a wide range of sentences (function and structure), a range of punctuation, context clues and connectives. At this level you are expected to write more **compound** and **compound-complex** sentences.
 
-## Concord (from the week's Summary sheet)
+## Types of sentences — FUNCTION
 
-**Concord** is grammatical agreement — the rules that make elements of a sentence match. **Subject-verb agreement**: the number of the verb must match the number of the subject (*The student writes* / *The students write*). The **Rule of Proximity Agreement**: where a subject has multiple elements, the verb agrees with the **nearest** one (*Neither the manager nor the developers* **are** *ready*; *Neither the developers nor the manager* **is** *ready*). The presence of **"or"** (unlike "and") therefore decides between a singular and a plural verb.
+| Type | Definition (source) | My example |
+|---|---|---|
+| **Declarative** | Makes statements or provides information; used to convey facts, opinions or ideas. | *The library closes at nine.* |
+| **Imperative** | Gives commands, instructions or requests; tells someone to do something or makes a suggestion. | *Submit your assignment before midnight.* |
+| **Interrogative** | Used to ask questions; seeks information and typically begins with question words like who, what, where, when, why or how. | *Where did you keep the attendance sheet?* |
+| **Exclamatory** | Expresses strong emotions or exclamations; often ends with an exclamation mark (!) and conveys surprise, excitement, anger or other intense feelings. | *What a terrible result that was!* |
+| **Conditional ("if" sentences)** — an **additional** category beyond the four main types | Expresses conditions and their likely results; can be complex and is used to describe hypothetical situations. | *If the network improves, we will stream the lecture live.* |
+
+Note the source's own framing: questions and exclamations are easy to spot **because of the punctuation used** (? and !); the harder discrimination is **imperative vs declarative**.
+
+## Word classes: function words vs content words
+
+Words can be categorised into **two main classes** based on the **grammatical and semantic roles** they play in sentences.
+
+**Function words** — also known as grammatical words or structure words. They have a **primarily grammatical function** and convey **little or no meaning on their own**; instead they **connect or build relationships between content words**, and are crucial for the grammatical structure of a sentence. (This does not mean they are useless.)
+*Other names given:* grammatical morphemes, function morphemes, empty words, structure words, grammatical words, grammatical functors, form words. Pennebaker: they "account for less than one-tenth of 1 percent of your vocabulary but make up almost 60 percent of the words you use."
+*Parts of speech:* conjunctions, auxiliary/helping verbs, prepositions, articles, pronouns. *Also listed:* modals (can, could, may, should, will), qualifiers (very, quite, too, much, somewhat), question words (who, why, where, when, which) in some cases.
+*Word examples given:* a, an, and, be, under, the, he.
+*My example:* In "**She has been** waiting **under the** shed **since** morning," the function words are *she, has, been, under, the, since*.
+
+**Content words** — also referred to as **lexical words**. They **carry the main meaning** in a sentence, conveying information about real-world or abstract entities, actions, qualities or relationships. They are typically **nouns, verbs, adjectives and adverbs**.
+*Examples given:* table, bag, boy, mountain, plaza (nouns); drown, dig, bury, kill, suffocate (verbs); robust, clever, abrasive, difficult, beautiful (adjectives); quietly, loudly, irritably, surreptitiously, predictably (adverbs).
+*My example:* In "She has been **waiting quietly** near the **broken gate**," the content words are *waiting, quietly, broken, gate*.
+
+**Why the distinction matters:** emphasis in English conversation is placed on **content words**, while **function words remain non-stressed**. Function words lack emphasis in spoken language, whereas content words are accentuated. Familiarity with this disparity contributes to comprehension and, crucially, to refining **pronunciation** skills.
+
+## Concord (grammatical agreement)
+
+**Concord** — a **set of rules governing the agreement between different elements in a sentence**; it ensures linguistic harmony and coherence, and prevents the distraction caused by bad grammar. Concord rules build **credibility** in written and spoken language.
+
+- **Subject-verb agreement (the fundamental rule)** — the **number of the subject must match the number of the verb**.
+  *Example:* *The invigilator **checks** the register* (singular) / *The invigilators **check** the register* (plural).
+- **The Rule of Proximity Agreement** — where a sentence has multiple elements, the **verb or noun must align with the closest subject**. This is the rule the lesson flags as complex and commonly misunderstood.
+  *Example:* *Neither the developers nor the **designer has** submitted the mock-up.* (verb agrees with *designer*, the nearest subject) / *Neither the designer nor the **developers have** submitted the mock-up.*
+- **The effect of "or"** — the presence of **"or"** in the subject **influences the choice between a singular and a plural verb**, which is why sentence structure must be read carefully. With *or* / *nor* the verb follows the nearer subject; contrast *and*, which normally joins subjects into a plural.
+  *Example:* *The lecturer **or** the students **are** waiting.* vs *The lecturer **and** the students **are** waiting.*
+
+*Skills the lesson names:* concord proficiency, structural analysis, communication precision, critical thinking, team communication, conjunction mastery.
 
 ## Commonly confused
 
-- **Compound vs complex** — compound joins clauses that could each stand alone (coordinating conjunction or semicolon); complex attaches a clause that could not (subordinating conjunction). *"It rained, but we walked"* = compound; *"Although it rained, we walked"* = complex. The conjunction type is the giveaway.
-- **Complex vs compound-complex** — both contain a dependent clause; count the **independent** clauses. One → complex. Two or more → compound-complex.
-- **Simple vs compound** — a simple sentence may have a compound subject or compound verb (*"Lara and Esohe swept and mopped"*) and still be **simple**: only one clause. Two full subject-predicate units are needed for compound.
-- **Function vs structure** — they are not rival answers. *"Although it rained, did you walk?"* is **interrogative by function** and **complex by structure**. If a question asks "what type", give the label the question's frame is asking for.
-- **Declarative vs imperative** — visible subject and a report → declarative; understood *you* and a command, instruction or request → imperative.
-- **Exclamatory vs an emphatic declarative** — the exclamation mark plus an emotion word (*Wow, Ouch*) marks exclamatory; a full stop makes it declarative however strongly worded.
-- **Function word vs content word inside the same part of speech** — helping verbs (*has, was, did, will*) are **function** words; the main lexical verb they support (*buried, sings*) is a **content** word. Pronouns are function words, but the nouns they replace are content words.
-- **Conditional is a function label, not a structure label** — *"If it rains, we will stay indoors"* is conditional by function and complex by structure.
-
-*Source note: the week's Summary sheet covers concord and the Rule of Proximity Agreement, while the two lesson decks cover sentence types and word classes — treat all three as examinable. The open/closed class terminology, the clause-counting boundary rules, the stress example and the worked classifications above supply the standard 100-level treatment behind objectives that the slides state but carry only in images or lists.*
+- **Compound vs complex.** Count the independent clauses. Two that could each stand alone (joined by and/but/or/so or a semicolon) = compound. If one part cannot stand alone ("Although it was raining…") = complex.
+- **Complex vs compound-complex.** Complex has exactly **one** independent clause. Compound-complex has **two or more** independent clauses *plus* at least one dependent clause. Test: delete the dependent clause — if more than one complete sentence remains, it is compound-complex.
+- **Coordinating vs subordinating conjunction.** and, but, or, so join equals → compound. although, because, while, since make their clause dependent → complex.
+- **Simple vs compound.** A simple sentence may have a long predicate or a compound subject and still be simple — it has only **one** independent clause. Two subjects and one verb is still simple; two full clauses is compound.
+- **Imperative vs declarative.** An imperative issues a command, instruction or request and its subject ("you") is understood, not written: *Close the door.* A declarative states information and carries an explicit subject: *You closed the door.*
+- **Interrogative vs conditional.** Both can sound tentative, but an interrogative asks and ends in "?"; a conditional states a condition and its likely result with "if" and normally ends in a full stop.
+- **Exclamatory vs an emphatic declarative.** The exclamatory expresses strong emotion and takes "!"; a fact stated forcefully but closing with a full stop is still declarative.
+- **Function vs content word — pronouns and auxiliaries.** A pronoun (*she, them*) is a **function** word even though it points to a thing; an auxiliary/helping verb (*has, been, did*) is a **function** word even though it looks like a verb. Only main/lexical verbs are content words.
+- **Function vs content word — the stress test.** Say the sentence aloud: the words you naturally stress are content words; the ones you swallow are function words.
+- **"and" vs "or"/"nor" in a compound subject.** *and* normally makes the subject plural and takes a plural verb; with *or* / *nor* the Rule of Proximity applies and the verb agrees with the **nearest** subject only — so the same two nouns can take a singular or a plural verb depending on the order they appear in.
+- **Subject-verb agreement vs proximity agreement.** Plain subject-verb agreement matches the verb to *the* subject's number; proximity agreement is the special case for sentences with **multiple** subject elements, where the verb matches the **closest** one, not the first or the "main" one. Ask: is there more than one subject noun before the verb?
+- **Structure label vs function label.** A sentence always carries **both** at once — "Although it was raining, we went for a walk." is *complex* (structure) and *declarative* (function). Never answer a structure question with a function name.
