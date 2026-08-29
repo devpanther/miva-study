@@ -1,0 +1,705 @@
+{
+ "base": "https://lms.miva.university",
+ "courses": {
+  "COS_102": {
+   "id": 362,
+   "weeks": {
+    "1": {
+     "section": 6,
+     "intro": {
+      "n": 4,
+      "secs": 732
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 5610
+     }
+    },
+    "2": {
+     "section": 7,
+     "intro": {
+      "n": 2,
+      "secs": 309
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 5469
+     }
+    },
+    "3": {
+     "section": 8,
+     "intro": {
+      "n": 4,
+      "secs": 531
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 4831
+     }
+    },
+    "4": {
+     "section": 9,
+     "intro": {
+      "n": 3,
+      "secs": 345
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 5365
+     }
+    },
+    "5": {
+     "section": 12,
+     "intro": {
+      "n": 3,
+      "secs": 345
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 3841
+     }
+    },
+    "6": {
+     "section": 13,
+     "intro": {
+      "n": 2,
+      "secs": 338
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 3795
+     }
+    },
+    "7": {
+     "section": 16,
+     "intro": {
+      "n": 6,
+      "secs": 706
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 5363
+     }
+    },
+    "8": {
+     "section": 17,
+     "intro": {
+      "n": 6,
+      "secs": 706
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 3783
+     }
+    },
+    "9": {
+     "section": 18,
+     "intro": {
+      "n": 4,
+      "secs": 715
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 4696
+     }
+    },
+    "10": {
+     "section": 20,
+     "intro": {
+      "n": 3,
+      "secs": 346
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 5422
+     }
+    },
+    "11": {
+     "section": 21,
+     "intro": {
+      "n": 3,
+      "secs": 350
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 4055
+     }
+    },
+    "12": {
+     "section": 22,
+     "intro": {
+      "n": 5,
+      "secs": 698
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 3496
+     }
+    }
+   },
+   "speed": 1.25,
+   "note": "Conceptual weeks run at 1.25×. Drop to 1× for the flowchart and pseudocode walkthroughs and for any code being written on screen."
+  },
+  "CSC_106": {
+   "id": 363,
+   "weeks": {
+    "1": {
+     "section": 6,
+     "intro": {
+      "n": 1,
+      "secs": 404
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "2": {
+     "section": 7,
+     "intro": {
+      "n": 1,
+      "secs": 219
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "3": {
+     "section": 8,
+     "intro": {
+      "n": 1,
+      "secs": 350
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 3185
+     }
+    },
+    "4": {
+     "section": 9,
+     "intro": {
+      "n": 1,
+      "secs": 227
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 3410
+     }
+    },
+    "5": {
+     "section": 12,
+     "intro": {
+      "n": 1,
+      "secs": 120
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 3234
+     }
+    },
+    "6": {
+     "section": 13,
+     "intro": {
+      "n": 1,
+      "secs": 141
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 2918
+     }
+    },
+    "7": {
+     "section": 16,
+     "intro": {
+      "n": 1,
+      "secs": 373
+     },
+     "lecture": {
+      "n": 2,
+      "secs": 5048
+     }
+    },
+    "8": {
+     "section": 17,
+     "intro": {
+      "n": 2,
+      "secs": 462
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 2766
+     }
+    },
+    "9": {
+     "section": 18,
+     "intro": {
+      "n": 2,
+      "secs": 437
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "10": {
+     "section": 20,
+     "intro": {
+      "n": 1,
+      "secs": 549
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "11": {
+     "section": 21,
+     "intro": {
+      "n": 2,
+      "secs": 513
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "12": {
+     "section": 22,
+     "intro": {
+      "n": 1,
+      "secs": 448
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    }
+   },
+   "speed": 1.75,
+   "note": "Orientation material you mostly know. 1.75× throughout."
+  },
+  "MTH_102": {
+   "id": 365,
+   "weeks": {
+    "1": {
+     "section": 5,
+     "intro": {
+      "n": 2,
+      "secs": 351
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 3434
+     }
+    },
+    "2": {
+     "section": 6,
+     "intro": {
+      "n": 2,
+      "secs": 375
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1463
+     }
+    },
+    "3": {
+     "section": 7,
+     "intro": {
+      "n": 2,
+      "secs": 610
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 2075
+     }
+    },
+    "4": {
+     "section": 8,
+     "intro": {
+      "n": 2,
+      "secs": 344
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "5": {
+     "section": 10,
+     "intro": {
+      "n": 3,
+      "secs": 681
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 2788
+     }
+    },
+    "6": {
+     "section": 11,
+     "intro": {
+      "n": 2,
+      "secs": 309
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 2035
+     }
+    },
+    "7": {
+     "section": 13,
+     "intro": {
+      "n": 1,
+      "secs": 410
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 2676
+     }
+    },
+    "8": {
+     "section": 14,
+     "intro": {
+      "n": 1,
+      "secs": 350
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "9": {
+     "section": 15,
+     "intro": {
+      "n": 1,
+      "secs": 482
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "10": {
+     "section": 17,
+     "intro": {
+      "n": 1,
+      "secs": 420
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "11": {
+     "section": 18,
+     "intro": {
+      "n": 1,
+      "secs": 484
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "12": {
+     "section": 19,
+     "intro": {
+      "n": 1,
+      "secs": 601
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    }
+   },
+   "speed": 1.0,
+   "note": "Normal speed, pen in hand. Copy the derivations rather than transcribing the talking."
+  },
+  "PHY_102": {
+   "id": 536,
+   "weeks": {
+    "1": {
+     "section": 5,
+     "intro": {
+      "n": 1,
+      "secs": 469
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1194
+     }
+    },
+    "2": {
+     "section": 6,
+     "intro": {
+      "n": 2,
+      "secs": 340
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 2141
+     }
+    },
+    "3": {
+     "section": 7,
+     "intro": {
+      "n": 3,
+      "secs": 431
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "4": {
+     "section": 8,
+     "intro": {
+      "n": 2,
+      "secs": 415
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "5": {
+     "section": 10,
+     "intro": {
+      "n": 2,
+      "secs": 500
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1733
+     }
+    },
+    "6": {
+     "section": 11,
+     "intro": {
+      "n": 2,
+      "secs": 442
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1095
+     }
+    },
+    "7": {
+     "section": 13,
+     "intro": {
+      "n": 3,
+      "secs": 643
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "8": {
+     "section": 14,
+     "intro": {
+      "n": 3,
+      "secs": 606
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "9": {
+     "section": 15,
+     "intro": {
+      "n": 3,
+      "secs": 676
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "10": {
+     "section": 17,
+     "intro": {
+      "n": 1,
+      "secs": 540
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "11": {
+     "section": 18,
+     "intro": {
+      "n": 2,
+      "secs": 605
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1507
+     }
+    },
+    "12": {
+     "section": 19,
+     "intro": {
+      "n": 2,
+      "secs": 360
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1105
+     }
+    }
+   },
+   "speed": 1.0,
+   "note": "Normal speed for derivations and numericals."
+  },
+  "PHY_108": {
+   "id": 537,
+   "weeks": {
+    "1": {
+     "section": 5,
+     "intro": {
+      "n": 2,
+      "secs": 285
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "2": {
+     "section": 6,
+     "intro": {
+      "n": 2,
+      "secs": 279
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1709
+     }
+    },
+    "3": {
+     "section": 7,
+     "intro": {
+      "n": 2,
+      "secs": 321
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "4": {
+     "section": 8,
+     "intro": {
+      "n": 2,
+      "secs": 416
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "5": {
+     "section": 10,
+     "intro": {
+      "n": 1,
+      "secs": 405
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1528
+     }
+    },
+    "6": {
+     "section": 11,
+     "intro": {
+      "n": 2,
+      "secs": 317
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "7": {
+     "section": 13,
+     "intro": {
+      "n": 2,
+      "secs": 366
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1443
+     }
+    },
+    "8": {
+     "section": 14,
+     "intro": {
+      "n": 2,
+      "secs": 420
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1020
+     }
+    },
+    "9": {
+     "section": 15,
+     "intro": {
+      "n": 2,
+      "secs": 387
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "10": {
+     "section": 17,
+     "intro": {
+      "n": 2,
+      "secs": 372
+     },
+     "lecture": {
+      "n": 0,
+      "secs": 0
+     }
+    },
+    "11": {
+     "section": 18,
+     "intro": {
+      "n": 2,
+      "secs": 314
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 981
+     }
+    },
+    "12": {
+     "section": 19,
+     "intro": {
+      "n": 2,
+      "secs": 497
+     },
+     "lecture": {
+      "n": 1,
+      "secs": 1227
+     }
+    }
+   },
+   "speed": 1.75,
+   "note": "Practical and procedure. 1.75×, then write the report immediately."
+  }
+ },
+ "absent": {
+  "GST_112": "Not in your LMS course list yet.",
+  "GST_122": "Not in your LMS course list yet.",
+  "MIVA_COS_111": "Not in your LMS course list yet."
+ }
+}

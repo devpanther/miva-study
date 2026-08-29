@@ -439,3 +439,11 @@ canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:80}
 .vid .vq{font-weight:700;font-size:14px;line-height:1.35}
 .vid .vgo{flex:none;font-size:11.5px;font-weight:800;letter-spacing:.04em;
   text-transform:uppercase;color:var(--deep);white-space:nowrap}
+
+/* ---------- what the LMS holds for tonight ---------- */
+.watch{display:flex;align-items:baseline;gap:9px;margin:10px 0 8px;flex-wrap:wrap}
+.watch .wmin{flex:none;font-family:Fredoka,ui-rounded,system-ui,sans-serif;font-size:15px;
+  font-weight:600;color:var(--deep);font-variant-numeric:tabular-nums}
+.watch .wtxt{font-size:13.5px;color:var(--ink2);line-height:1.4}
+a.lmsb{display:inline-block;margin-bottom:4px}
+.muted.tight{font-size:13px;margin:2px 0 8px;line-height:1.45}

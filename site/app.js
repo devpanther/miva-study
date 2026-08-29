@@ -4,9 +4,13 @@
 
 var BOARD = "https://claude.ai/code/artifact/8d0bff19-5549-4d2d-953c-b3c7a827420e";
 
+/* The descriptions are what the LMS actually holds, not what the plan assumed.
+   MTH 102 has no lecture video from week 8, PHY 102 has none in six weeks, and
+   CSC 106 carries close to an hour of lecture in weeks 3 to 8 — which is not the
+   "you know this already" course the original grid described. */
 var GRID = [
-  {day:"Mon", deep:"MTH_102", dn:"New week's topic",   fast:"GST_112", fn:"Whole week + forum post"},
-  {day:"Tue", deep:"PHY_102", dn:"New week's topic",   fast:"CSC_106", fn:"Whole week. You know this."},
+  {day:"Mon", deep:"MTH_102", dn:"New topic",          fast:"GST_112", fn:"Whole week + forum post"},
+  {day:"Tue", deep:"PHY_102", dn:"New topic",          fast:"CSC_106", fn:"Whole week at 1.75×"},
   {day:"Wed", deep:"COS_102", dn:"Theory + algorithm", fast:"GST_122", fn:"Whole week + forum post"},
   {day:"Thu", deep:"MTH_102", dn:"Problems only",      fast:"PHY_108", fn:"Practical + report now"},
   {day:"Fri", deep:"PHY_102", dn:"Derivations",        fast:"REVIEW",  fn:"Summaries + pick Sunday topics"},
@@ -94,6 +98,8 @@ var LS = "miva_state_v3";
 var GATE = "checking";   /* checking | locked | open | setup */
 var PWBUSY = false, PWERR = null;
 var CONFIRMSWITCH = false;
+var LMS = null;          /* what the LMS holds, by course and week */
+
 var EXAM = null;         /* course index */
 var EXAMCACHE = {};      /* course -> paper json */
 var GUIDECACHE = {};     /* course -> markdown */
@@ -1164,6 +1170,7 @@ function viewHome(root){
     hero.appendChild(el("div","lbl","Tonight · "+g.day+" · week "+w));
     hero.appendChild(el("h2",null, esc(NAMES[g.deep]) + "  then  " + esc(NAMES[g.fast])));
     hero.appendChild(el("p","muted", chk && chk.topic ? esc(chk.topic).slice(0,150)+"…" : esc(g.dn)));
+    watchLine(hero, g.deep, w, true);
     var r = el("div","row");
     if(sc){
       r.appendChild(el("span","sc "+scoreClass(sc), "Scored "+sc.score+"/"+sc.max));
@@ -1288,7 +1295,8 @@ function viewTonight(root){
   c1.appendChild(el("div","lbl","21:00 – 22:00 · deep hour · 1×"));
   c1.appendChild(el("h2",null,esc(NAMES[g.deep])));
   topicBlock(c1, topic || g.dn, "muted");
-  c1.appendChild(el("p","muted","Watch the lecture on the LMS with this open beside it. Pen in hand, phone in another room. The PDF is the reference, not the lesson — skim its headings first so you know where the video is going, then read it properly afterwards for anything the video skipped."));
+  watchLine(c1, g.deep, w, true);
+  c1.appendChild(el("p","muted","Keep this open beside the LMS. Pen in hand, phone in another room. Where there is no lecture video the PDF is the lesson, not the reference — read it properly rather than skimming."));
 
   var sc = getScore(ME, w, g.day);
   var row1 = el("div","row");
@@ -1310,7 +1318,10 @@ function viewTonight(root){
   topicBlock(c2, fastTopic || g.fn, "muted");
   if(g.fast==="REVIEW") c2.appendChild(el("p","muted","Read back this week's summaries, then look at your scores. The lowest one is your Sunday topic."));
   else if(g.fast==="CATCHUP") c2.appendChild(el("p","muted","Last week's question set, sat cold. Or whatever you missed this week."));
-  else c2.appendChild(el("p","muted","Watch at speed, read the PDF, take the quiz, post in the forum, close the laptop."));
+  else {
+    c2.appendChild(el("p","muted","Watch at speed, read the PDF, take the quiz, post in the forum, close the laptop."));
+    watchLine(c2, g.fast, w, false);
+  }
 
   var fchk = checkFor(wd, g.day, "fast");
   var fsc = getScore(ME, w, g.day, "fast");
@@ -1555,6 +1566,98 @@ function examProgress(course){
   if(!r || !r.order) return null;
   return {done: Object.keys(r.answers||{}).length, of: r.order.length, submitted: !!r.submitted};
 }
+/* ---------- the LMS side of the evening ----------
+   The tracker cannot see into Moodle, so this is a snapshot taken by crawling it:
+   how many videos each course-week has and how long they run. It exists so an evening
+   can be sized before it starts, and so one tap gets you to the right page. */
+function loadLms(){
+  if(LMS) return;
+  fetch("/api/lms").then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){ if(d && d.courses){ LMS = d; render(); } })
+    .catch(function(){ /* runtimes just stay hidden */ });
+}
+
+function lmsFor(course, w){
+  if(!LMS || !LMS.courses || !LMS.courses[course]) return null;
+  var c = LMS.courses[course], wk = c.weeks && c.weeks[String(w)];
+  return wk ? {cid:c.id, sec:wk.section, intro:wk.intro, lecture:wk.lecture,
+               speed:c.speed || 1, note:c.note || ""} : null;
+}
+
+function lmsLink(info){
+  if(!info || !LMS) return null;
+  return LMS.base + "/course/view.php?id=" + info.cid + (info.sec ? "&section=" + info.sec : "");
+}
+
+/* Minutes for ONE session.
+   The speed belongs to the course, not to the kind of clip: a fast-hour lecture runs at
+   1.75x like everything else in that hour. Getting this wrong made the fast hour look
+   twice as long as it is, and made COS 102 look impossible. Intro clips are always
+   orientation, so they always run at 1.75x. A course gets two deep hours a week, so its
+   lectures are split across them. */
+function sessionMinutes(info, halve, speed){
+  if(!info) return null;
+  var d = halve ? 2 : 1, sp = speed || info.speed || 1;
+  return Math.round((info.intro.secs / 1.75 + info.lecture.secs / sp) / 60 / d);
+}
+
+/* The line that tells you what tonight actually is. */
+function watchLine(parent, course, w, halve){
+  var info = lmsFor(course, w);
+
+  if(!info){
+    /* A course on the timetable that the LMS has no enrolment for. Saying nothing
+       here reads as a loading failure, so say the thing. */
+    var absent = LMS && LMS.absent && LMS.absent[course];
+    if(absent){
+      var a0 = el("div","watch");
+      a0.appendChild(el("span","wmin","—"));
+      a0.appendChild(el("span","wtxt", esc(absent) + " Use the hour on last week's question set."));
+      parent.appendChild(a0);
+    }
+    return;
+  }
+
+  var mins = sessionMinutes(info, halve);
+  var nL = info.lecture.n, nI = info.intro.n;
+  var row = el("div","watch");
+
+  var what;
+  if(nL === 0 && nI === 0) what = "No video this week — the PDF is the whole lesson.";
+  else if(nL === 0)        what = "No lecture video this week. " + nI + " short clip" + (nI>1?"s":"") + ", then the PDF is the lesson.";
+  else {
+    var shown = halve ? Math.max(1, Math.round(nL / 2)) : nL;
+    what = shown + " lecture video" + (shown > 1 ? "s" : "")
+         + (nI ? " + " + nI + " short clip" + (nI > 1 ? "s" : "") : "")
+         + (info.speed !== 1 ? " at " + info.speed + "×" : "");
+  }
+
+  row.appendChild(el("span","wmin", mins ? "~" + mins + " min" : "—"));
+  row.appendChild(el("span","wtxt", esc(what)));
+  parent.appendChild(row);
+
+  /* Where the speed is what makes the evening fit, say so — otherwise the number
+     looks like a fact rather than a choice. */
+  var checkMins = halve ? 15 : 5;
+  if(nL && info.speed > 1){
+    var atOne = sessionMinutes(info, halve, 1);
+    if(atOne + checkMins > 60 && mins + checkMins <= 60){
+      parent.appendChild(el("p","muted tight",
+        "At 1× this is " + atOne + " min, which leaves no room for the check. The "
+        + info.speed + "× is what makes the hour work — drop to 1× only where code or a derivation is on screen."));
+    }
+  }
+  if(mins && mins + checkMins > 60){
+    parent.appendChild(el("p","muted tight",
+      "This is over the hour even before the check. Take the video tonight and the check tomorrow, or split it across both sessions."));
+  }
+
+  var a = el("a","act ghost lmsb", "Open on the LMS ↗");
+  a.href = lmsLink(info); a.target = "_blank"; a.rel = "noopener";
+  a.style.textDecoration = "none";
+  parent.appendChild(a);
+}
+
 function loadExamIndex(){
   if(EXAM) return;
   fetch("/api/exam").then(function(r){ return r.ok ? r.json() : null; }).then(function(j){
@@ -2305,6 +2408,7 @@ function boot(){
   ensureWeek(wk());
   syncUrl(true);
   loadExamIndex();
+  loadLms();
   pull().then(function(){
     try{
       var m2 = localStorage.getItem("miva_me");
