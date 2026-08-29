@@ -1,71 +1,75 @@
-# Sunday Recap — Week 1
+# Sunday recap — Week 1
 
-*Sunday 13 September 2026, 19:00–20:00. One hour total, not one hour each. Two topics: one his, one his partner's.*
+*Sunday 13 September 2026, 19:00–20:00. One hour, two topics, one each, taught aloud with no notes.*
 
-## How the topic gets picked
+## How the topic is chosen
 
-**Your lowest nightly-check score of the week decides it.** Six checks (Mon MTH, Tue PHY, Wed COS, Thu MTH-problems, Fri PHY-problems, Sat COS-code), six out of six each. Whichever you scored lowest on is the topic you teach, no notes.
+The topic is **not** picked from this page. Each person takes the nightly check they scored lowest on this week — lowest `score ÷ 12`, across Mon–Sat — and teaches that topic. This page is the **fallback only**: use it if the scores tie, or if checks were skipped and there is no honest lowest.
 
-**You take the same eight courses, so do not both pick the same course.** Whoever scored lower on that course keeps it; the other person moves to their next-lowest score in a *different* course. Settle this in Friday's review hour, not at 19:00 on Sunday.
+**You take the same eight courses, so do not both pick the same course.** If your lowest lands on the same course, the person with the lower ratio keeps it and the other moves to their next-lowest check *in a different course*. Two people teaching the same topic wastes half the hour.
 
-The two topics below are **fallbacks only** — use them if the scores tie, or if the checks got skipped and there is no score to go on.
-
-```
-19:00  he teaches (10 min)      19:10  partner asks "why" until it breaks (5 min)
-19:15  partner teaches (10)     19:25  he asks "why" (5 min)
-19:30  close both gaps together (20 min)    19:50  slack
-```
+Teaching means explaining it out loud until the other person can restate the mechanism — not reciting the summary. The listener's job is to keep asking the "why" questions below until the explanation stops being a definition and starts being a reason.
 
 ---
 
-## Fallback topic 1 — PHY_102: Charging by induction and the role of the ground connection
+## Fallback topic 1 — PHY_102: charging by induction versus charging by conduction
 
-**Why it tends to be misunderstood.** Students memorise the phrase "induction charges an object without touching it" but never track what actually moves, so they default to conduction thinking and predict the object ends up with the same sign as the rod. The ground wire is treated as a decorative step rather than the escape route that makes the charge permanent, and the order of removal (wire first, then rod) is learned as a ritual instead of a consequence. Textbook phrasing that says "the positive charges move to the near end" compounds the damage, because in a metal only electrons ever move.
+**The claim:** contact leaves the same sign; no contact leaves the opposite sign.
 
-**Five escalating "why" questions for the listener:**
+**Why it tends to be misunderstood.** Both methods start the same way — a charged rod brought near a conductor — so the two get filed in memory as one procedure with a variation. The earthing step is then remembered as a place where charge is vaguely "drained off", rather than as the step that *selects which sign stays behind*. That is why so many people can state both outcomes and still not predict either one.
 
-1. Walk me through what happens when a negatively charged rod is brought near a neutral metal sphere — what physically moves, and in which direction?
-2. You said the near side becomes positive. Which particles actually travelled to make that happen, and where are the protons during all of this?
-3. Why does the sphere still end up with a net charge after grounding, when before grounding it was only polarised and would go back to neutral?
-4. Why must the ground wire be removed before the rod, and not the other way round? Predict the sphere's final charge if you reverse the order, and say why.
-5. If the rod were positive instead of negative, which way do the electrons flow through the ground wire, and what sign does the sphere end up with? Now explain why the sphere's final charge does not depend on how much charge the rod itself carries.
+**Five "why" questions for the listener, easy to hard.**
 
-**What a good answer contains:**
+1. Which particles actually move when any object is charged, and which never do?
+2. In conduction, why do the rod and the sphere end up with the *same* sign?
+3. In induction the rod never touches the sphere. So where does the sphere's charge come from?
+4. Why must the earth connection be broken *before* the rod is taken away, and not after?
+5. The rod loses charge in conduction but not in induction. Why does that difference *follow* from the two mechanisms, rather than being an extra fact to memorise?
 
-- Only free electrons move in the metal; a positive region means an electron deficit, never migrated protons, and the near face's sign is opposite to the rod's.
-- Grounding provides a path for electrons to leave (negative rod) or enter (positive rod) the sphere, converting temporary polarisation into a real net charge opposite in sign to the rod.
-- The ground must be broken while the rod is still present, because the rod's field is what holds the imbalance in place; remove the rod first and the electrons flow back and the sphere returns to neutral.
+**What a good answer contains.**
 
-**Worked example.** A neutral metal sphere sits on an insulating stand and a negatively charged plastic rod is brought close without touching it. The rod's field repels the sphere's free electrons to the far side, so the far side is negative and the near side is positive by electron deficit, with the sphere's total charge still zero. A wire is now connected from the sphere to earth, and the repelled electrons flow down the wire into the ground, because the earth is an effectively infinite reservoir and the rod keeps pushing them away. The wire is disconnected while the rod is still in place, trapping the electron shortage on the sphere. The rod is then withdrawn, and with no field to hold it the remaining positive charge redistributes uniformly over the sphere's surface. The sphere is left permanently positive, opposite in sign to the rod, and the rod has lost no charge of its own. Had the rod been removed before the wire, the electrons would simply have flowed back up from earth and the sphere would have ended neutral.
+- Only electrons move, in both methods, and the sign of an object is decided by whether it has gained or lost them — protons never travel between solids.
+- Conduction is direct sharing on contact: charge flows until the two bodies sit at the same potential, so both carry the same sign, and the rod ends up with less charge than it started with.
+- Induction is separation followed by *selective removal*: the rod's field pushes like charge to the far side, earthing lets exactly that charge escape, and breaking the earth first traps the imbalance — leaving the opposite sign, with the rod's own charge untouched because nothing ever crossed the gap.
 
----
+**Worked example.** A negatively charged rod is brought near an isolated metal sphere on an insulating stand.
 
-## Fallback topic 2 — MTH_102: The domain of a composite function f∘g
+*By conduction.* Touch the rod to the sphere. Electrons flow from the rod onto the sphere until both are at the same potential. Remove the rod: the sphere is left **negative** — the same sign as the rod — and the rod is now less negative than it was.
 
-**Why it tends to be misunderstood.** Students compute (f∘g)(x), simplify the formula, and then read the domain off the simplified expression as if it were an ordinary function, losing restrictions that came from g. They also assume the domain of f∘g is just the domain of g, forgetting the second condition that g(x) must itself be an admissible input for f. Simplification is where the damage happens: cancelling a factor silently deletes a point that was never legal in the first place.
+*By induction.* Hold the rod close, without touching. The sphere polarises: near side positive, far side negative, but net charge still **zero**. Now earth the far side with a wire — the repelled electrons escape to earth. **Break the earth connection while the rod is still held in place.** Only then remove the rod. The sphere is left with a net **positive** charge, opposite to the rod, and the rod's own charge is exactly what it was at the start.
 
-**Five escalating "why" questions for the listener:**
-
-1. For f(x) = 1/(x−2) and g(x) = √x, what is the formula for (f∘g)(x) and what is its domain?
-2. Why is x = 4 excluded, when 4 is a perfectly legal input for g?
-3. Why do we also still require x ≥ 0, even though the number √x − 2 would make sense for some negative x if we allowed complex values?
-4. Write the general rule for the domain of f∘g in set-builder form, and explain why it must be a subset of the domain of g rather than the domain of f.
-5. For f(x) = 1/(x−1) and g(x) = x² you get 1/(x²−1). If instead f(x) = (x²−1)/(x−1) and you simplify to x + 1, what has the simplification destroyed, and what does that tell you about when it is safe to read a domain off a simplified formula?
-
-**What a good answer contains:**
-
-- The domain of f∘g is {x : x ∈ dom(g) **and** g(x) ∈ dom(f)} — two conditions, both compulsory.
-- It is always a subset of dom(g), never larger, and it can be strictly smaller because some legal inputs of g produce outputs that f cannot accept.
-- The domain must be fixed from the *unsimplified* composite: cancelling or simplifying can hide an excluded point, so restrictions are recorded before any algebra is done.
-
-**Worked example.** Take f(x) = 1/(x−2) and g(x) = √x. Condition 1: x must be in dom(g), so x ≥ 0. Condition 2: g(x) must be in dom(f), so √x ≠ 2, giving x ≠ 4. Form the composite: (f∘g)(x) = f(√x) = 1/(√x − 2). Domain = [0, 4) ∪ (4, ∞), a proper subset of dom(g) = [0, ∞). Check a value: (f∘g)(9) = 1/(3 − 2) = 1, legal. Check the excluded value: (f∘g)(4) = 1/(2 − 2) is undefined, confirming the exclusion. Contrast the reverse order: (g∘f)(x) = √(1/(x−2)) needs 1/(x−2) ≥ 0 and x ≠ 2, giving domain (2, ∞) — a completely different set, so f∘g ≠ g∘f.
+*The standard error.* Remove the rod before breaking the earth, and electrons flow straight back from earth: the sphere ends up neutral and the whole procedure has done nothing. If you can explain why that happens, you understand induction.
 
 ---
 
-## Reserve topic (if both fallbacks are already used) — COS_102: The compiler / interpreter / assembler chain
+## Fallback topic 2 — MTH_102: why a function must be one-to-one before it can be inverted
 
-Students memorise "a compiler turns code into machine code" from general knowledge and never notice that this course splits the job in two: the **compiler stops at assembly language** and the **assembler** finishes the trip to machine code. The **interpreter** then gets lumped in as "a slower compiler" rather than being recognised as the one translator that goes from high-level language to machine code **directly**, skipping assembly entirely.
+**The claim:** the domain, not the formula, is what decides whether an inverse exists.
 
-Probe with: Why can a computer not simply run the C or Java source the programmer typed? → Why does the course say the compiler produces assembly rather than machine code — what is left for another tool to do? → Why is assembly needed at all, if the interpreter can reach machine code directly? → Why is the interpreter's route different *in kind* rather than just faster or slower? → What would a programmer actually notice differently when an error appears, depending on which route their language uses?
+**Why it tends to be misunderstood.** Inversion is learned as a three-step algorithm — write `y = f(x)`, swap `x` and `y`, solve for `y` — and the algorithm runs perfectly happily on functions that have no inverse at all. It produces something that *looks* like an answer, and nothing in the procedure raises a flag. So the condition gets treated as a footnote rather than as the thing that makes the whole operation legal.
 
-A good answer names the input and output of each tool: compiler takes high-level and gives assembly; assembler takes assembly and gives machine code; interpreter takes high-level and gives machine code. The trap to catch: saying "the compiler produces machine code" collapses two tools into one and leaves the assembler with no job in the chain.
+**Five "why" questions for the listener, easy to hard.**
+
+1. What does `f⁻¹` actually *do* to a number — in one sentence, without mentioning the algorithm?
+2. If `f` sends both 2 and −2 to 4, what would `f⁻¹(4)` have to be?
+3. Why does that make the reversed pairing fail to be a *function*, rather than merely being awkward?
+4. `x²` has no inverse on ℝ but does have one on `[0, ∞)`. The rule never changed — so what did?
+5. Given that, what is wrong with saying "the inverse of `x²` is `√x`" without further qualification?
+
+**What a good answer contains.**
+
+- The inverse is the *reverse pairing*: `f⁻¹` takes an output of `f` back to the input that produced it, so `f⁻¹(f(x)) = x`. It is not a rearrangement recipe — the recipe is only how you find it.
+- A many-to-one `f` makes that reversal ill-defined: the shared output would need two images, which violates the very "exactly one output" clause that makes something a function in the first place.
+- A function is a rule **together with a domain**. Restricting the domain so that `f` becomes one-to-one is what *creates* the inverse — and the horizontal line test is simply the graphical form of that check.
+
+**Worked example.** Take `f(x) = x²` on domain ℝ.
+
+Run the algorithm anyway: `y = x²` → swap → `x = y²` → solve → `y = ±√x`. **That `±` is the algorithm telling you it has failed.** For `x = 4` it offers both 2 and −2, so the result is not a function and `f` has no inverse.
+
+Check it against the definition: `f(2) = 4` and `f(−2) = 4`, so `f⁻¹(4)` would have to be 2 and −2 at once. Graphically, the horizontal line `y = 4` meets the parabola twice.
+
+Now restrict the domain to `[0, ∞)`. The pairs `(−2, 4)`, `(−3, 9)` and the rest are gone; every horizontal line now meets the curve at most once; and the same algorithm returns `y = +√x` only — a genuine function.
+
+Note what swapped: `dom f = [0, ∞)` and `ran f = [0, ∞)`, so `dom f⁻¹ = ran f = [0, ∞)`.
+
+*And the point that settles it:* restricting instead to `(−∞, 0]` is equally valid, and gives `f⁻¹(x) = −√x`. Same formula `x²`, different domain, different inverse. The inverse depends on the domain chosen, not on the formula.

@@ -1,48 +1,61 @@
 # Tuesday — PHY_102 nightly check
 
-*Coulomb's law: statement, constants, vector form and sign conventions; the superposition principle; the electric field concept.*
-*Sit cold, notes closed, 8 minutes. Score out of 6.*
+*This session took the week-2 electrostatics material conceptually rather than numerically: what Coulomb's law actually claims and where it stops being valid; what the superposition principle asserts about charges acting simultaneously and why it is an experimental fact rather than a definition; what the electric field is as a quantity, why it is defined per unit test charge and why it belongs to the source charges rather than to the test charge; what field lines encode and what their spacing, direction and non-crossing tell you; why the electric field is a vector while electric potential is a scalar, and what follows from that when several charges are present; and the structure of the Lorentz force — which term needs motion, which term does work, and which does not. Arithmetic was kept to a minimum throughout; the questions ask what each quantity means, why each relation holds, and what would go wrong without it.*
 
-**1.** Two point charges q₁ and q₂ are clamped a fixed distance apart and exert a force of 6.0 N on each other. A third charge q₃ is now clamped on the line **exactly midway between them**, without moving q₁ or q₂. The force that q₁ now exerts on q₂ is:
-a) still exactly 6.0 N; q₃ adds a further force on each of them but does not alter the q₁–q₂ force
-b) less than 6.0 N, because q₃ partially screens q₂ from q₁
-c) zero, because q₃ intercepts the field lines running between them
-d) still 6.0 N only if q₃ happens to be neutral; any charged q₃ changes it
+*Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**2.** The vector form of Coulomb's law is **F**₁₂ = (k q₁q₂ / r₁₂²) **r̂**₁₂, where **F**₁₂ is the force on q₂ due to q₁ and **r̂**₁₂ points from q₁ toward q₂. You substitute q₁ = +3.0 μC and q₂ = −5.0 μC **with their signs**. The expression returns:
-a) a vector along +**r̂**₁₂, since the magnitude of a force can never be negative
-b) a negative number that should be reported as "a repulsive force of negative magnitude"
-c) the same vector you obtain by using the magnitudes and *then* reversing the direction because the charges are unlike
-d) a vector along −**r̂**₁₂ — q₂ is pulled back toward q₁, i.e. attraction, with no further sign reasoning needed
+**1.** Charges q₁ and q₂ sit 1 m apart. A third charge q₃ is then brought into the region. What happens to the force that q₂ exerts on q₁?
+a) It grows, because there is now more total charge nearby.
+b) It is unchanged; q₃ contributes a separate force that is added vectorially.
+c) It falls, because q₃ screens off part of q₁'s field.
+d) It changes only if q₃ lies on the line joining q₁ and q₂.
 
-**3.** A test charge of +2.0 nC placed at point P feels a force of 8.0×10⁻⁶ N. It is removed and a −6.0 nC charge is placed at exactly the same point P, with the source charges untouched. The electric field **at P** is now:
-a) three times larger and reversed in direction
-b) unchanged in both magnitude and direction
-c) the same magnitude but reversed in direction
-d) zero, because a negative charge cannot define a field
+**2.** The electric field is defined as **E** = **F**/q₀ using a test charge q₀ that is taken to be vanishingly small. Why must q₀ be small?
+a) A large q₀ would disturb the source charges and change the field being measured.
+b) The definition is only valid for charges of magnitude smaller than one coulomb.
+c) F grows in proportion to q₀², so the ratio F/q₀ is constant only when q₀ is small.
+d) A large q₀ would also feel a magnetic force, which would spoil the measurement.
 
-**4.** Which statement about the constants in Coulomb's law is correct?
-a) k = 4πε₀, so a medium of larger permittivity gives a larger force between the same charges
-b) k = 1/(4πε₀), so a medium of larger permittivity **strengthens** the force between the same two charges
-c) k = 1/(4πε₀), so replacing the vacuum with a medium of **larger** permittivity **weakens** the force between the same two charges at the same separation
-d) ε₀ = 8.99×10⁹ C²/(N·m²) and k = 8.85×10⁻¹² N·m²/C²
+**3.** A single point charge sits alone in otherwise empty space. Which statement is correct?
+a) It feels a force from its own field, directed radially outward.
+b) It produces no field, since a field requires two charges to exist.
+c) It produces a field everywhere, but feels no net force from that field.
+d) Its field exists only at points where another charge has been placed.
 
-**5. (explain why)** Superposition is always stated as a **vector** sum, never as a sum of magnitudes. Explain why, and describe one specific arrangement of three charges in which the net force on one of them is **smaller** than the force either of the other two would exert on it alone.
+**4.** Two electric field lines can never cross one another. The reason is that:
+a) field lines are only ever drawn emerging from positive charges.
+b) a crossing point would have to be a point of zero field strength.
+c) field lines repel each other in the way that like charges do.
+d) the field at a point has one direction, and a crossing would give it two.
 
-**6. (explain why)** The electric field is defined using a positive test charge, yet the field of a **negative** point charge is drawn pointing **toward** the charge. Explain why. Then explain why that charge feels no net force from the field it produces itself.
+**5.** Why may the potentials due to several charges be added as ordinary signed numbers, while the fields must be added as vectors?
+a) Potential is energy per unit charge, and energy has no direction — only a sign.
+b) Potential is always a positive quantity, so no conflict of signs can arise.
+c) Potential falls off as 1/r rather than 1/r², so the directions cancel out.
+d) Potential is defined only along a field line, which already fixes its direction.
 
----
+**6.** At the exact midpoint between two equal positive charges, **E** = 0 but V ≠ 0. Which account of this is right?
+a) V must be zero there too, since V is obtained directly from E by division.
+b) E vanishes because the two charges are equal; V survives because it depends on their sign.
+c) The field contributions are opposite arrows that cancel; the potentials are positive numbers that add.
+d) E vanishes because the midpoint is where both field lines terminate; V survives because work was done reaching it.
 
-## Answers
+**7.** A charged particle moves through a region containing both an electric and a magnetic field. Which statement about the Lorentz force is correct?
+a) The magnetic term does work on the particle and so changes its speed.
+b) The magnetic term stays perpendicular to **v**, so it turns the particle but cannot speed it up.
+c) The magnetic term acts on the charge whether or not the particle happens to be moving.
+d) The electric term acts only while the particle is in motion.
 
-**1. a** — *Superposition: forces are pairwise and additive, and charges do not shield one another.* Each pair obeys Coulomb's law using only that pair's charges and separation, so the q₁–q₂ force is untouched at 6.0 N; what changes is the *net* force on q₁ and on q₂, since a new term is added to the vector sum. (b) and (c) import the everyday idea of "blocking", which has no counterpart in Coulomb's law — electrostatic force is not a beam that can be intercepted. (d) invents a condition: even a charged q₃ contributes an extra force rather than modifying an existing one.
+**8.** Which of the following is a true statement about Coulomb's law as it was given this week?
+a) It applies to any two charged objects, whatever their size or separation.
+b) The distance r is measured between the nearest surfaces of the two bodies.
+c) Doubling both charges and also doubling the separation halves the force.
+d) It is stated for point charges at rest, spheres being treated from their centres.
 
-**2. d** — *Sign convention in the vector form: the signed product carries the direction.* q₁q₂ < 0 makes the whole coefficient negative, so the force lies along −**r̂**₁₂ — pointing from q₂ back toward q₁, which is exactly attraction. (a) confuses "magnitude" with the vector's component along **r̂**. (b) treats the negative sign as a defective magnitude rather than as direction information. (c) is the commonest error of all — using the sign **twice**, once in the algebra and once again "by inspection", which flips the direction back to repulsion. Use signed charges *or* magnitudes-plus-inspection, never both.
+**9. (explain why)** Coulomb's law is a statement about exactly two charges. Explain why the superposition principle is what licenses you to use it on a system of five charges, and say what would have to be true of nature for that step to fail.
 
-**3. b** — *The field is a property of the source charges and of the point, not of the probe.* **E** = **F**/q₀ is a *ratio*: putting a bigger or oppositely signed charge at P changes the force it feels in exactly the same proportion, leaving E = 4.0×10³ N/C in the same direction. (a) and (c) confuse the field with the *force on the new charge*, which does indeed grow threefold and reverse. (d) mistakes the sign of the probe for the existence of the field.
+**10. (explain why)** The electric field at a point is said to be a property of the source charges alone, even though it is *defined* by putting a test charge there and measuring a force. Explain why this is not a contradiction.
 
-**4. c** — *k = 1/(4πε₀): permittivity sits in the denominator.* Because ε₀ (or ε for a medium) is in the denominator, a larger permittivity gives a smaller constant and therefore a weaker force — the medium "permits" the field more readily and screens the interaction. (a) inverts the relationship; (b) has the correct formula but reads the inverse dependence backwards, which is the real discriminator here; (d) swaps the two numerical values and their units.
+**11. (explain why)** Halfway between two equal positive charges the field is zero, but halfway between a positive and an equal negative charge it is not. Explain why, in terms of the directions of the two contributions — and say what happens to the *potential* in each of those two cases.
 
-**5.** *Concept: superposition is a vector sum, so direction is part of the addition.* Forces have direction, and two forces of the same size acting in different directions do not combine to twice that size — the sum depends on the angle between them, giving anything from the difference of the magnitudes (opposite directions) to their sum (same direction). Concrete arrangement: put a +2 μC charge at the origin with a +5 μC charge at x = +0.10 m and another +5 μC charge at x = −0.10 m. Each outer charge alone would push the middle charge with a substantial force, but the two forces are equal and exactly opposite, so the net force is **zero** — smaller than either alone. (Any arrangement with the two forces more than 90° apart works.)
-
-**6.** *Concept: field direction is the direction of the force on a positive test charge; and a charge exerts no net force on itself.* By definition **E** = **F**/q₀ with q₀ **positive**, so the field arrow at each point shows which way a positive test charge would be pushed. A positive test charge near a negative source is **attracted**, i.e. pulled inward, so the arrows — and the field lines — point radially inward, terminating on the negative charge. As for self-force: the field a charge creates is spherically symmetric about the charge itself, so there is no preferred direction for it to push in; every element of that field is matched by an opposite one, and a net self-force would let an isolated charge accelerate itself, violating momentum conservation. A charge's field acts on *other* charges only.
+**12. (explain why)** Explain why a magnetic field can change the direction of a moving charged particle but never its kinetic energy, whereas an electric field can change both. Refer to the structure of the Lorentz force in your answer.

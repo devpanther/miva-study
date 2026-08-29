@@ -1,78 +1,105 @@
-# MTH_102 — Week 2 Summary
+# MTH_102 — Week 2
 
-*Elementary Mathematics II (Calculus) · Week 2 (14–20 Sep 2026) · Topic: How to Graph Functions*
+*Elementary Mathematics II (Calculus) · Week 2 (14–20 Sep 2026)*
 
-## The 8 most examinable things this week
+*Note on the source: the slide text extracted cleanly, but the deck is a survey of function **types** with no worked algebra, and every graph is an image that the extractor dropped. I have kept all the slides' definitions and filled out the standard technique (composition, domains, completing the square, log/exponential solving, absolute-value cases, end behaviour) so the week is examinable. One slide claim is mathematically wrong and is flagged in "Commonly confused": for f(x) = ax² + bx + c, c is **not** the y-coordinate of the vertex and b does **not** simply "shift the parabola horizontally".*
 
-1. Recognising a function **from its equation** and naming the shape it must have (line, parabola, cubic S, exponential, log, V, hyperbola).
-2. Intercepts: y-intercept = f(0) (**at most one**); x-intercepts = solutions of f(x) = 0 (**possibly many**).
-3. The even/odd test done **algebraically on f(−x)**, not by eyeballing the powers.
-4. Vertical asymptotes come from zeros of the denominator that **survive cancelling** — a cancelled factor gives a **hole**, not an asymptote.
-5. Horizontal vs oblique asymptote by **comparing degrees** (deg N < deg D ⟹ y = 0; equal ⟹ y = leading-coefficient ratio; deg N = deg D + 1 ⟹ oblique, found by long division).
-6. End behaviour of a polynomial is decided by the **leading term alone** (degree parity + sign of aₙ).
-7. Sign charts: list every zero and every undefined point, test one number in each interval, read off the solution set.
-8. Rational inequalities: move everything to one side over a **common denominator** — never multiply by an expression whose sign you do not know.
+## Most likely to be examined
 
-## Function families and their shapes
+1. **Definition of a function** — a rule assigning to *every* element of the domain A *exactly one* element of the codomain B. Both clauses (totality and uniqueness) must be quoted.
+2. **Vertical line test** — if any vertical line meets the curve more than once the graph is a relation, not a function; if every vertical line meets it at most once, it is a function.
+3. **Injective / surjective / bijective**, and composition (f ∘ g)(x) = f(g(x)) — including that f ∘ g ≠ g ∘ f in general.
+4. **Identify a function type from its equation** and read off its parameters: m and b for a line, a, b, c for a quadratic, base b for exponential/log, degree n and leading coefficient aₙ for a polynomial.
+5. **Quadratics**: complete the square, get vertex (−b/2a, f(−b/2a)), direction from sign of a, roots from the discriminant.
+6. **Exponential ↔ logarithm as inverses**: b^y = x ⇔ y = log_b x, with the restrictions b > 0, b ≠ 1, x > 0; solving equations of the form A·b^x = C.
+7. **Piecewise and absolute-value functions**: choosing the branch, evaluating at boundary points, solving |ax + b| = c by two cases.
+8. **Polynomial degree and leading coefficient** and the end behaviour they force.
 
-- **Constant** f(x) = c — horizontal line. **Linear** f(x) = mx + b — straight line, slope m (steepness/direction), y-intercept b.
-- **Quadratic** f(x) = ax² + bx + c — parabola; a > 0 opens up, a < 0 opens down; **vertex at x = −b/2a**; axis of symmetry x = −b/2a.
-- **Polynomial** f(x) = aₙxⁿ + … + a₁x + a₀, n a non-negative integer (**degree**), aₙ the **leading coefficient**. Degree n gives **at most n x-intercepts** and **at most n−1 turning points**. Cubic = S-shape.
-- **Exponential** f(x) = bˣ (b > 0, b ≠ 1) — through (0,1), HA y = 0; b > 1 growth, 0 < b < 1 decay. **Logarithmic** f(x) = log_b x — inverse of bˣ, through (1,0), **vertical asymptote x = 0**, domain x > 0.
-- **Absolute value** f(x) = |x| = x for x ≥ 0, −x for x < 0 — V-shape, vertex at the point where the inside is 0.
-- **Piecewise** — different formula on different intervals; check each endpoint for a jump (closed dot vs open dot).
-- **Trigonometric** — sin and cos: period 2π, oscillate between −1 and 1 (cos is sin phase-shifted); tan: period π, vertical asymptotes at x = π/2 + kπ.
-- **Rational** f(x) = N(x)/D(x) — asymptotes and/or holes; the family this week's exam questions live in.
+## Definitions
 
-## Characteristics and how each is found
+- **Relation**: any set of ordered pairs (x, y). **Function** f: A → B: a relation in which every x ∈ A appears in exactly one pair. A = **domain**, B = **codomain**, {f(x) : x ∈ A} = **range** (range ⊆ codomain).
+- **Injective (one-to-one)**: f(x₁) = f(x₂) ⇒ x₁ = x₂. No element of B is hit twice. Detected by the *horizontal* line test.
+- **Surjective (onto)**: every b ∈ B equals f(x) for some x ∈ A, i.e. range = codomain.
+- **Bijective**: injective and surjective. Exactly the functions with an inverse f⁻¹: B → A.
+- **Composition**: (f ∘ g)(x) = f(g(x)); g runs first. Defined only where g(x) lies in the domain of f.
+- **Linear function**: f(x) = mx + b; m = slope, b = y-intercept. Graph is a straight line.
+- **Quadratic function**: f(x) = ax² + bx + c with a ≠ 0; graph is a parabola, opening up if a > 0, down if a < 0.
+- **Exponential function**: f(x) = a·b^x, base b > 0, b ≠ 1; growth if b > 1, decay if 0 < b < 1.
+- **Logarithmic function**: f(x) = log_b x, the inverse of b^x; b > 0, b ≠ 1, argument x > 0.
+- **Absolute value**: |x| = x if x ≥ 0, −x if x < 0. It is the distance of x from 0, so |x| ≥ 0 always.
+- **Piecewise function**: several formulas on disjoint intervals whose union is the domain.
+- **Polynomial**: f(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹ + … + a₁x + a₀, n a non-negative integer = **degree**, aₙ ≠ 0 = **leading coefficient**.
+- **Periodic**: f(x + P) = f(x) for all x; smallest such P > 0 is the **period**.
 
-- **Intercepts.** y-intercept: put x = 0 (only if 0 is in the domain). x-intercepts: solve numerator = 0 (and check it is in the domain).
-- **Symmetry.** Compute f(−x). If **f(−x) = f(x)** the function is **even** — symmetric in the y-axis. If **f(−x) = −f(x)** it is **odd** — 180° rotational symmetry about the origin. Otherwise **neither**. A single stray term (e.g. the +1 in x³ + 1, or the −x in x² − x) destroys the symmetry.
-- **Vertical asymptote.** Reduce N/D to lowest terms first. Each remaining zero of the denominator, x = a, gives the VA **x = a**, with f(x) → ±∞ as x → a; check each side separately by sign. A **cancelled** factor (x − a) gives a **hole** at x = a, height = the reduced function evaluated at a.
-- **Horizontal asymptote** (behaviour as x → ±∞). deg N < deg D ⟹ **y = 0**. deg N = deg D ⟹ **y = aₙ/bₘ** (ratio of leading coefficients). deg N > deg D ⟹ **no HA**. A graph **may cross its HA** — the HA only describes the far-out behaviour.
-- **Oblique (slant) asymptote.** Exactly when deg N = deg D + 1. Do polynomial long division: N/D = (qx + r) + remainder/D; the line **y = qx + r** is the asymptote (the remainder term → 0).
-- **End behaviour of a polynomial.** Governed by aₙxⁿ. n even, aₙ > 0: up/up. n even, aₙ < 0: down/down. n odd, aₙ > 0: down (left)/up (right). n odd, aₙ < 0: up/down.
-- **Increasing / decreasing.** f is increasing on an interval if x₁ < x₂ ⟹ f(x₁) < f(x₂) (graph rises left to right); decreasing if the inequality reverses. Read intervals **of x**, never of y.
-- **Turning point (local max/min).** A point where the graph stops rising and starts falling, or vice versa. It is a point **on the graph**, so it can never sit at a vertical asymptote or outside the domain.
-- **Sign chart.** Factor fully. Mark on a number line every zero of the numerator and every zero of the denominator. These cut the line into intervals; on each interval the expression has one constant sign, so test one convenient value. The sign flips at a factor of **odd** multiplicity and does **not** flip at one of **even** multiplicity.
+## Formulas
+
+| Object | Formula | Symbols |
+|---|---|---|
+| Slope from two points | m = (y₂ − y₁)/(x₂ − x₁) | (x₁,y₁), (x₂,y₂) on the line |
+| Point–slope line | y − y₁ = m(x − x₁) | m slope |
+| Vertex of parabola | x_v = −b/2a, y_v = f(x_v) | from f(x)=ax²+bx+c |
+| Completed square | a(x − h)² + k, h = −b/2a, k = c − b²/4a | vertex (h, k) |
+| Roots | x = (−b ± √(b² − 4ac))/2a | Δ = b² − 4ac: Δ>0 two roots, Δ=0 one, Δ<0 none |
+| y-intercept | f(0) = c | any function: set x = 0 |
+| Exponential ↔ log | b^y = x ⇔ y = log_b x | b > 0, b ≠ 1, x > 0 |
+| Log laws | log(MN)=log M+log N; log(M/N)=log M−log N; log(Mᵏ)=k log M | M, N > 0 |
+| Change of base | log_b x = ln x / ln b | any convenient base |
+| Compound interest | A(t) = P(1 + r/n)^{nt} | P principal, r rate, n periods/yr |
+| Continuous growth/decay | P(t) = P₀e^{rt}; N(t) = N₀e^{−λt} | r growth rate, λ decay constant |
+| Trig ratios | sin θ = opp/hyp, cos θ = adj/hyp, tan θ = opp/adj | csc, sec, cot are their reciprocals |
+| Periods | sin, cos: 2π (range [−1,1]); tan: π | for sin(kx): period 2π/k |
+| End behaviour | sign of aₙxⁿ decides both tails | n even: tails agree; n odd: tails oppose |
 
 ## Worked examples
 
-**(1) Full sketch of a rational function.** f(x) = (x² − 4)/(x² − x − 6).
-Factor: (x−2)(x+2) / ((x−3)(x+2)). Common factor (x+2) ⟹ **hole at x = −2**; reduced f(x) = (x−2)/(x−3), so the hole height is (−2−2)/(−2−3) = **4/5**, giving the open point (−2, 4/5).
-**VA:** x = 3 (survives cancelling). **x-intercept:** x − 2 = 0 ⟹ (2, 0). **y-intercept:** f(0) = (−4)/(−6) = **2/3**.
-**HA:** degrees equal ⟹ y = 1/1 = **y = 1**. Writing f(x) = 1 + 1/(x−3) shows f → 1 **from above** as x → +∞ and **from below** as x → −∞, and that f = 1 has no solution, so the graph never crosses the HA.
-**Near the VA:** as x → 3⁻, numerator → 1 > 0, denominator → 0⁻, so f → **−∞**; as x → 3⁺, f → **+∞**.
-**Sign chart** on (x−2)/(x−3): x < 2 positive, 2 < x < 3 negative, x > 3 positive.
-Sketch: left branch coming up from just under y = 1, crossing (2,0), diving to −∞ at x = 3; right branch from +∞ at x = 3 falling towards y = 1 from above; open circle at (−2, 4/5).
+**1. Composition.** f(x) = 2x + 3, g(x) = x² − 1. Find (f ∘ g)(2) and (g ∘ f)(2).
+(f ∘ g)(2) = f(g(2)); g(2) = 2² − 1 = 3; f(3) = 2(3) + 3 = 9.
+(g ∘ f)(2) = g(f(2)); f(2) = 2(2) + 3 = 7; g(7) = 7² − 1 = 48.
+**(f ∘ g)(2) = 9, (g ∘ f)(2) = 48 — composition is not commutative.**
 
-**(2) Oblique asymptote.** f(x) = (x² + 1)/(x − 1). deg N = deg D + 1, so no HA — divide: x² + 1 = (x − 1)(x + 1) + 2, so **f(x) = x + 1 + 2/(x−1)**. Since 2/(x−1) → 0, the asymptote is **y = x + 1**; VA **x = 1**; y-intercept f(0) = 1/(−1) = **−1**; no x-intercept (x² + 1 ≠ 0).
+**2. Linear function from two points.** Line through (−2, 5) and (4, −7).
+m = (−7 − 5)/(4 − (−2)) = −12/6 = −2.
+y − 5 = −2(x − (−2)) = −2(x + 2) = −2x − 4, so y = −2x + 1.
+**f(x) = −2x + 1; slope −2, y-intercept 1.**
 
-**(3) Even/odd test.** f(x) = x³ − 4x: f(−x) = (−x)³ − 4(−x) = −x³ + 4x = −(x³ − 4x) = −f(x) ⟹ **odd**, symmetric about the origin. g(x) = x⁴ − 3x²: g(−x) = x⁴ − 3x² = g(x) ⟹ **even**. h(x) = x³ + 1: h(−x) = −x³ + 1, which equals neither h(x) nor −h(x) ⟹ **neither** (the +1 lifts the odd graph off the origin).
+**3. Quadratic — completing the square.** f(x) = 2x² − 12x + 7.
+= 2(x² − 6x) + 7 = 2(x² − 6x + 9 − 9) + 7 = 2(x − 3)² − 18 + 7 = 2(x − 3)² − 11.
+a = 2 > 0, so it opens upward; y-intercept f(0) = 7; Δ = 144 − 56 = 88 > 0, two real roots.
+**Vertex (3, −11), minimum value −11, axis of symmetry x = 3.**
 
-**(4) Rational inequality with a sign chart.** Solve (x + 1)/(x − 3) ≤ 2.
-Do **not** multiply by (x − 3) — its sign is unknown. Move everything to one side:
-(x+1)/(x−3) − 2 ≤ 0 ⟹ [(x+1) − 2(x−3)]/(x−3) ≤ 0 ⟹ (7 − x)/(x − 3) ≤ 0 ⟹ (x − 7)/(x − 3) ≥ 0 (multiplying by −1 flips the sign).
-Critical values 3 (undefined) and 7 (zero). Test: x = 0 ⟹ (−7)/(−3) > 0 ✓; x = 5 ⟹ (−2)/(2) < 0 ✗; x = 8 ⟹ (1)/(5) > 0 ✓.
-Include x = 7 (equality allowed), exclude x = 3 (undefined). **Solution: (−∞, 3) ∪ [7, ∞).**
+**4. Exponential equation.** Solve 3·2^x = 96.
+2^x = 96/3 = 32. Since 32 = 2⁵, **x = 5.** (General route: x = log₂32 = ln32/ln2 = 5.)
 
-**(5) Polynomial inequality.** Solve x³ − 4x² + 3x < 0. Factor: x(x − 1)(x − 3) < 0. Critical values 0, 1, 3. Test x = −1: (−)(−)(−) < 0 ✓; x = 0.5: (+)(−)(−) > 0 ✗; x = 2: (+)(+)(−) < 0 ✓; x = 4: (+)(+)(+) > 0 ✗. **Solution: (−∞, 0) ∪ (1, 3).** (Quadratic version: x² − x − 6 ≥ 0 ⟹ (x−3)(x+2) ≥ 0 ⟹ x ≤ −2 or x ≥ 3 — the *outside* of the roots because the parabola opens up.)
+**5. Logarithmic equation.** Solve log₁₀x + log₁₀(x − 3) = 1.
+Domain first: x > 0 and x − 3 > 0 ⇒ x > 3.
+log₁₀[x(x − 3)] = 1 ⇒ x(x − 3) = 10¹ = 10 ⇒ x² − 3x − 10 = 0 ⇒ (x − 5)(x + 2) = 0 ⇒ x = 5 or x = −2.
+x = −2 fails x > 3 and is rejected. **x = 5.**
 
-**(6) Turning points and end behaviour of a cubic.** f(x) = −x³ + 3x² − 2 (degree 3, aₙ = −1). End behaviour: odd degree, negative leading coefficient ⟹ **up on the left, down on the right**. f′(x) = −3x² + 6x = −3x(x − 2) = 0 at x = 0 and x = 2: **local min (0, −2)**, **local max (2, 2)** — two turning points, the maximum allowed for degree 3. x = 1 is a root, and −x³+3x²−2 = −(x−1)(x² − 2x − 2), so the x-intercepts are x = 1 and x = 1 ± √3. y-intercept −2.
+**6. Absolute value equation and inequality.** Solve |2x − 5| = 7, then |2x − 5| < 7.
+Case 1: 2x − 5 = 7 ⇒ 2x = 12 ⇒ x = 6. Case 2: 2x − 5 = −7 ⇒ 2x = −2 ⇒ x = −1.
+Inequality: −7 < 2x − 5 < 7 ⇒ −2 < 2x < 12 ⇒ −1 < x < 6.
+**x = 6 or x = −1; and |2x − 5| < 7 ⇔ −1 < x < 6.**
 
-**(7) Reading transformations of a base graph.** f(x) = −2|x − 3| + 1 from the base y = |x|. Inside the function acts **horizontally and in the opposite direction**: x − 3 shifts **right 3**. Outside acts **vertically and as written**: ×2 stretches vertically by 2, the minus **reflects in the x-axis**, +1 shifts **up 1**. Result: a V turned upside-down with **vertex (3, 1)** and arms of slope −2 and +2. x-intercepts: |x − 3| = 1/2 ⟹ x = 2.5, 3.5. Same rules give y = (x+2)² − 5 (left 2, down 5) and y = 1/(x − 4) + 3 (VA x = 4, HA y = 3).
+**7. Piecewise evaluation.** f(x) = 3x + 4 if x ≤ 1; x² if x > 1. Find f(1), f(3), f(−2).
+x = 1 satisfies x ≤ 1 ⇒ first branch: f(1) = 3(1) + 4 = 7.
+x = 3 satisfies x > 1 ⇒ second branch: f(3) = 9. x = −2 ⇒ first branch: f(−2) = −2.
+**f(1) = 7, f(3) = 9, f(−2) = −2** (the branches need not agree at x = 1; the jump from 7 to 1⁺ is legal).
+
+**8. Polynomial degree and end behaviour.** f(x) = −x³ + 3x² − 2.
+Degree n = 3 (odd), leading coefficient aₙ = −1 (negative). For large |x| the term −x³ dominates.
+x → +∞: −x³ → −∞. x → −∞: −x³ → +∞. y-intercept f(0) = −2.
+**Degree 3, leading coefficient −1; falls to −∞ on the right, rises to +∞ on the left.**
 
 ## Commonly confused
 
-- **Hole vs vertical asymptote** — a denominator zero that cancels gives a removable hole; only the surviving zeros give asymptotes.
-- **Horizontal asymptote vs "the graph cannot cross it"** — an HA describes behaviour as x → ±∞ only; e.g. f(x) = 4x/(x² + 1) has HA y = 0 and crosses it at x = 0.
-- **Ratio of leading coefficients when the degrees are not equal** — (2x³ − x)/(5x² + 4) has **no** HA (it has the oblique y = (2/5)x), not y = 2/5.
-- **Judging even/odd by the leading power** — always compute f(−x); x³ + 1 has an odd leading power but is neither even nor odd.
-- **Multiplying an inequality by a variable expression** — legal only if you know its sign; otherwise collect on one side and use a sign chart.
-- **Forgetting to flip the inequality** when multiplying or dividing by a negative number (or by −1 to tidy a fraction).
-- **Even-multiplicity roots** — (x−1)²(x+2) > 0 excludes x = 1 (the expression is 0 there) even though the sign does not change across it.
-- **Range vs interval of increase** — increasing/decreasing intervals are sets of **x**-values, not of outputs.
-
----
-
-*Note on the source: this week's deck names the function families and gives their general forms, but the objectives it lists — function characteristics, analysing behaviour, and solving equations and inequalities — were carried almost entirely by slide images, and the summary sheet adds only a case-study narrative. The asymptote, symmetry, sign-chart and inequality material above is the standard 100-level treatment those objectives name.*
+- **c vs the vertex y-coordinate (the slide's error).** c = f(0) is the *y-intercept*. Test: put x = 0 — you get c, and the vertex sits at x = −b/2a, which is 0 only when b = 0.
+- **Vertical vs horizontal line test.** Vertical = "is it a function?" (uniqueness of output). Horizontal = "is it injective?" (uniqueness of input). Test: ask whether you are checking outputs per input or inputs per output.
+- **Injective vs surjective.** Injective: no B is hit twice. Surjective: no B is missed. Test: is the failure a *collision* or a *gap*?
+- **Range vs codomain.** Codomain is declared; range is achieved. Test: they are equal exactly when f is surjective.
+- **f ∘ g vs g ∘ f.** Test: read the inner function first — in f(g(x)), g acts on x.
+- **f⁻¹(x) vs 1/f(x).** Inverse undoes f; reciprocal divides. Test: does f⁻¹(f(x)) = x hold? For 1/f it does not.
+- **Exponential x^b vs b^x.** Power function has the variable in the base; exponential has it in the exponent. Test: where is x sitting?
+- **log(M + N) vs log M + log N.** Only the *product* splits: log M + log N = log(MN). Test: substitute M = N = 1 — the false rule gives 0 = 0 but M=N=10 gives log 20 ≠ 2.
+- **|x| = x vs |x| = ±x.** |x| is a single non-negative number; the *two cases* apply to the expression inside, not to the output. Test: is x negative? Then |x| = −x, which is positive.
+- **|x| = k with k < 0.** No solution, because a distance cannot be negative. Test: squaring both sides destroys this and manufactures false roots.
+- **Piecewise ≠ continuous.** Branches need not meet at the boundary. Test: the only requirement is that each input falls in exactly one branch.

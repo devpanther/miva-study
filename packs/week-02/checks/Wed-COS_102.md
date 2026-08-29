@@ -1,48 +1,61 @@
 # Wednesday — COS_102 nightly check
 
-*The six problem-solving strategies: what each one is, the condition attached to it, and what distinguishes it from its neighbour.*
-*Sit cold, notes closed, 8 minutes. Score out of 6.*
+*This session took Week 2 conceptually: what a problem-solving strategy actually is and why choosing one before starting changes the outcome; the internal mechanism of each of the six named strategies (brainstorming, heuristics, trial-and-error, means-ends analysis, abstraction, analogy) — what each one does to the problem, what it costs, and the conditions under which it stops working; and the conceptual basis of the week's two classifications: well-defined vs ill-defined, routine vs non-routine, and solvable vs unsolvable / decidable vs undecidable, including what the UTM contributes to the idea of solvability and why "unsolvable" is really a claim about decision procedures rather than about answers. No traces, no arithmetic.*
 
-**1.** A laptop will not join the office Wi-Fi. Technician A immediately reboots the router because "it is nearly always the router", then moves to the next ticket without checking anything else. Technician B disconnects the printer and retests, then the desk phone and retests, then the laptop's VPN and retests, until the connection works. Which names both correctly?
-a) Both are trial and error; A simply performed fewer trials than B
-b) A is heuristics — the decision was made without stopping to think about the next course of action, saving time and energy and accepting a possibly sub-optimal outcome; B is trial and error — approaches were implemented one after another until the failure was removed
-c) A is means-ends analysis, because the desired end determined the means; B is heuristics, because B used a rule of thumb about peripherals
-d) A is trial and error, because A made one trial; B is brainstorming, because B considered several possible causes
+*Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**2.** A student must find which of 4 fuses in a box has blown. A developer must find which of 3,000 lines of code carries a logic fault. Applying the course's stated conditions for trial and error:
-a) It suits both, because in both cases errors are recognised and removed through experimental trials
-b) It suits the 3,000 lines, because a computer can run the trials quickly, while the fuse box calls for heuristics
-c) It suits the fuse box, where the possible solutions are few, but is time-consuming and inefficient on the 3,000 lines, where many possible solutions exist
-d) It suits neither, because the course states that trial and error does not always produce a rational solution
+**1.** Trial-and-error is described as time-consuming and inefficient in some cases but perfectly reasonable in others. What decides which?
+a) Whether the problem is well-defined or ill-defined
+b) How many candidate solutions have to be tried before one works
+c) Whether the solver has met a similar problem before
+d) Whether the answer eventually reached is optimal or merely acceptable
 
-**3.** A ministry must cut the average city commute from 70 minutes to 45 within two years. **Team A** writes down that target, lists the obstacles it expects to meet (bus shortages, junction delays, fare-queue times), splits the target into those three sub-goals, and assigns the best-suited method to each. **Team B** redraws the city as a diagram of stops and connecting lines only, discarding road names, building heights and district boundaries, in order to see where the network is thin. Which is correct?
-a) Both are means-ends analysis, since each reduces a large problem to smaller ones
-b) A is abstraction and B is means-ends analysis: A abstracts the target into sub-goals, and B derives the means from the diagram
-c) A is means-ends analysis and B is analogy, because B understands the city by treating it as a different but similar system — a diagram
-d) A is means-ends analysis and B is abstraction: A keeps every sub-problem and solves each with the best possible approach, while B removes the attributes that will not help reach a solution
+**2.** Heuristics let a decision be made "without stopping to think about the next course of action." In the lesson's terms, what is surrendered in exchange for that speed?
+a) The requirement that the problem first be broken down into smaller sub-problems
+b) The possibility of applying the strategy jointly with a group of colleagues
+c) The need for the required facts and numbers to be supplied with the problem
+d) The guarantee that the result is rational, so only sub-optimal outcomes are safe
 
-**4.** A doctor must destroy a tumour deep in the body with a high-intensity ray, but one ray strong enough to destroy the tumour would also destroy the healthy tissue it passes through. The doctor recalls a general who could not march a whole army down one mined road to a fortress and so split it into small groups converging from many roads at once — and fires several weak rays from different directions that meet at the tumour. Which is correct?
-a) This is abstraction: the doctor filtered out the unneeded attributes of the medical problem to concentrate on the important ones
-b) This is analogy, and it is sound because the two situations share surface features — both involve attacking a target
-c) This is analogy, and it is sound because the underlying principle is the same in both: a force too destructive to apply in one piece can be divided into weak parts that converge on the target
-d) This is trial and error: the doctor tried one strong ray, and when that failed, tried several weak ones
+**3.** What exactly does abstraction do to a problem, and what is the thing it leaves behind called?
+a) Deletes the attributes that will not help reach a solution, leaving a model
+b) Deletes the hardest parts of the problem so that the remaining easy part can be solved
+c) Restates the problem in fewer words so that it is easier to memorise and communicate
+d) Splits the problem into smaller sub-problems, each of which is then solved separately
 
-**5. (explain why)** A team lead gathers six colleagues to find the causes of a delivery delay. After each suggestion she says "no, that cannot be it, we checked that last year." The hour yields six ideas, and she concludes that brainstorming does not work for her team. Using the course's account of brainstorming, explain what she actually ran, name the two rules of brainstorming she broke, and state what the course says other people's ideas are for.
+**4.** Why does means-ends analysis reduce the work of a large problem in a way that simply attacking it head-on does not?
+a) It replaces the original problem with a smaller one whose answer is close enough to serve
+b) It generates a large number of candidate ideas at once, so a workable one is likely to appear
+c) It settles the intended solution in advance, then splits the problem and gives each part its best-suited approach
+d) It strips out every part of the problem that does not contribute directly to reaching the goal
 
-**6. (explain why)** The course says abstraction produces a **model**. Explain precisely what is removed and what is kept in forming that model, why an abstraction that removed the *wrong* attributes would still look like a successful abstraction to the person who made it, and how that risk differs from the risk carried by analogy.
+**5.** Brainstorming forbids criticism of ideas while the session runs. What is the mechanism-level reason?
+a) Criticism is unprofessional and damages the morale of the team taking part
+b) Every idea offered in a brainstorming session is equally likely to be the correct one
+c) The group is required to reach full consensus before any single idea may be judged
+d) The method runs on volume of ideas and on fine-tuning others' ideas; criticism kills both
 
----
+**6.** An analogy transfers understanding from a system you already know to a new one. Under what condition does that transfer remain valid?
+a) The two systems belong to the same industry or field of study
+b) The underlying principles of the two systems are the same
+c) The earlier system's solution was the optimal one available
+d) Both systems are well-defined, with clear goals and solution paths
 
-## Answers
+**7.** What makes a problem non-routine?
+a) No standard method for solving it exists, so a novel method must be developed
+b) Its solution cannot be reached by arithmetic operations, however involved
+c) It has no single correct answer, only a range of acceptable approximations
+d) It takes a long time to solve, even in the hands of an experienced solver
 
-**1. b** — *Heuristics vs trial and error.* The dividing line is not how many attempts were made but whether candidate solutions are actually **implemented and tested**. Technician B "implements various approaches until a solution is arrived at" — the course's definition of trial and error. Technician A tests nothing: the decision is made **without stopping to think about the next course of action**, buying speed at the cost of a possibly irrational or sub-optimal outcome, which is heuristics. (a) is the common "one trial still counts as trial and error" error — A performed no trial at all, because A never checked whether the reboot fixed it. (c) misuses means-ends analysis, which requires the target to be broken into sub-problems, and (d) misuses brainstorming, which is a **group** technique for generating ideas, not one person testing them.
+**8.** In this lesson, calling a problem "unsolvable" is a claim about what?
+a) The answer: no answer to the problem exists at all
+b) The machine: the UTM's tape is finite, so it runs out of space
+c) The method: no systematic method exists for deciding it, for every input value
+d) The time: it runs longer than any computer could, though a faster machine would help
 
-**2. c** — *The suitability condition for trial and error.* The course ties trial and error to the **number of possible solutions**: useful where they are **few**, time-consuming and inefficient where **many** exist. Four fuses is few; 3,000 candidate lines is not. (b) inverts the condition and smuggles in speed of execution, which the course never uses as the criterion. (d) is the most tempting wrong answer because it quotes a real sentence from the course — but "solutions are not always rational" is stated of **heuristics**, not trial and error. (a) is true of the definition and irrelevant to the suitability rule, which is what the question asks.
+**9. (explain why)** The lesson says that after choosing a strategy, "the rules and procedures of that strategy must be studied." Explain why choosing and studying a strategy first is treated as part of solving the problem, rather than as a delay before solving it.
 
-**3. d** — *Means-ends analysis vs abstraction.* Both shrink the problem, which is exactly why (a) is tempting, but they shrink it by opposite operations. Means-ends analysis **thinks about the solution beforehand, determines the best strategy from the issues that will be encountered**, then **breaks the problem into smaller problems and solves each with the best possible approach** — nothing is discarded; every sub-problem must still be solved. Abstraction **filters out the unneeded attributes** so that all patterns that will not help reach a solution are **removed**, leaving a model — Team B's map is the London Underground case exactly. (b) simply swaps the labels. (c) mistakes a simplified picture of the *same* city for analogy; analogy requires a **different** system whose underlying principles match.
+**10. (explain why)** Explain why the halting problem is called *undecidable* rather than merely *very difficult* — and why undecidable problems are described as a subset of unsolvable ones.
 
-**4. c** — *Analogy rests on underlying principles, not surface similarity.* The course defines analogy as using previously existing understanding to understand a new similar system **as long as the underlying principles are the same**. (b) states the right strategy for the wrong reason, and it is the answer that separates the student who memorised the word from the student who understood the constraint: "both involve a target" is a surface feature shared by countless situations that would give the doctor no usable idea, whereas "divide a force too strong to apply whole into converging weak parts" is the structure that actually transfers. (a) fails because nothing was filtered out of the medical problem — understanding was imported from outside it. (d) fails because no strong ray was ever fired; nothing was tried and rejected.
+**11. (explain why)** Abstraction and means-ends analysis both leave you with something smaller than the original problem. Explain why they are nevertheless different operations, and what each one does to the information in the problem.
 
-**5.** *Concept: brainstorming and its rules.* What she ran was an evaluation meeting, not brainstorming. Brainstorming is a **group-focused technique** in which people come together and generate **various solutions spontaneously**, and the course attaches two rules to it: **avoid criticism of ideas** and **gather as many ideas as possible**. She broke both — criticising each suggestion as it arrived, which is precisely what suppresses spontaneous generation, and thereby ending the hour with six ideas rather than the largest possible set. Her conclusion is therefore unfounded: the strategy was never applied. The course also states that **other people's ideas can be fine-tuned** — an idea's value in brainstorming is not whether it is correct as offered but that it is raw material others can refine, so "we checked that last year" is a reason to develop the idea in a later evaluation stage, not to delete it during generation.
-
-**6.** *Concept: abstraction and the model.* In abstraction you **remove the unneeded attributes of the problem — all the aspects or patterns that will not help you arrive at a solution — and keep the parts that bear on the solution**, and what remains is an **essential idea of what the problem is and how to solve it**, called a **model**. The risk is that the model is judged only against itself: once an attribute has been discarded it is invisible, so the abstraction *feels* clean and workable exactly as a good one does — the Underground map looks perfect until you need walking distance between two stations, which the map deliberately does not carry. A faulty abstraction therefore fails **silently**, and only reappears as a wrong solution to the real problem later. Analogy carries a different risk: it does not delete anything, it **imports** understanding from a second system, so its failure mode is choosing an analogue whose **underlying principles are not the same** — a surface match. Abstraction fails by dropping something that mattered; analogy fails by borrowing from something that never matched.
+**12. (explain why)** Explain why a heuristic is a sound choice for picking a brand of rice in a shop but an unsound one for deciding how much money Dan gave away, given the two things a heuristic trades against each other.

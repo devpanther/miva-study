@@ -1,73 +1,106 @@
-# GST_112 — Week 2 Question Set (sit 7 days later)
+# GST_112 — Week 2 Retention Set
 
-*Sit this during Saturday catch-up in Week 3, not this week. Notes closed.*
+*Sit this seven days after the Week 2 session. Closed book. Target: 12/15.*
 
-## Multiple choice (12)
+## Multiple choice
 
-**1.** Intergroup relations, as defined this week, is the interaction between two or more distinct:
-A) Religious sects  B) Linguistic and cultural groups  C) Political parties  D) Trading companies
+**1.** Inter-group relations is defined in this course as the interaction between two or more distinct:
+a) political parties and their supporters
+b) trading guilds and craft associations
+c) linguistic and cultural groups
+d) religious denominations
 
-**2.** Nigeria is said to have how many language groups and ethnic groups respectively?
-A) 374 and 348  B) 250 and 300  C) 36 and 774  D) Over 348 and 374
+**2.** The two major factors given for identifying groups are:
+a) culture and language
+b) religion and territory
+c) language and population size
+d) dress and cuisine
 
-**3.** The Kanuri trace their origin to Saif; the Hausa trace theirs to Bayajidda. Both traditions point back to:
-A) Mecca  B) Cairo  C) Baghdad  D) Timbuktu
+**3.** Nigeria is said to have over how many language groups and ethnic groups respectively?
+a) 374 language groups and 348 ethnic groups
+b) 250 language groups and 250 ethnic groups
+c) 348 ethnic groups and 374 language groups only in the north
+d) 348 language groups and 374 ethnic groups
 
-**4.** According to the legend, Bayajidda settled among the Kanuri and married the daughter of the:
-A) Mai  B) Ooni  C) Oba  D) Emir
+**4.** The Kanuri trace their descent to Saif and the Hausa to Bayajidda; both traditions trace origin to:
+a) Mecca
+b) Baghdad
+c) Cairo
+d) Timbuktu
 
-**5.** The Kisra legend is said to have founded which two kingdoms, with Kisra regarding the Ooni of Ife as his brother?
-A) Kanem and Bornu  B) Yoruba and Borgu  C) Benin and Warri  D) Kano and Katsina
+**5.** According to the Kisra legend, Kisra founded the Yoruba and Borgu kingdoms and regarded which ruler as his brother?
+a) The Ooni of Ife
+b) The Oba of Benin
+c) The Mai of Bornu
+d) The Attah of Igala
 
-**6.** The Kano people fought wars with Katsina principally for:
-A) Religious conversion  B) Control of the Ooni's title  C) Access to the sea  D) Control of trade routes
+**6.** Which alliance was formed to fight the Nupe?
+a) Jukun and Igala
+b) Kano and Katsina
+c) Efik and Ijaw
+d) Bariba and Yoruba
 
-**7.** Through military conquest the Jukun extended their sphere of influence to the:
-A) Kanuri, Hausa, Igala, Idoma and Ebira
-B) Itsekiri, Urhobo, Isoko and Okpe
-C) Efik, Ibibio and Ijaw
-D) Tuareg, Gonja and Kwararafa
+**7.** The Kano and Katsina people fought wars primarily over:
+a) succession to the Sokoto caliphate
+b) control of trade routes
+c) grazing land for Fulani herds
+d) access to the River Niger
 
-**8.** Benin's conquests and expedition reached as far as which city, whose early kings Ado and Asipa were of Benin origin?
-A) Calabar  B) Ibadan  C) Eko (Lagos)  D) Onitsha
+**8.** Benin extended its influence by conquest to Auchi, Idah, Itsekiri, Urhobo, Isoko and Okpe, and sent a military expedition as far as Eko (Lagos). Which early Lagos kings are said to have come from Benin?
+a) Oranmiyan and Eweka
+b) Saif and Kisra
+c) Ado and Asipa
+d) Ikwo and Ezza
 
-**9.** The Jukun exchanged salt with the Tiv in return for:
-A) Kola nuts  B) Firewood  C) Horses  D) Brasswork
+**9.** The Illah people illustrate Igala–Nsukka Igbo interaction because:
+a) they pay tribute to both the Attah and the Obi
+b) their kings are chosen alternately from each group
+c) they trade salt for firewood with the Igala
+d) they speak Igbo but their masquerades speak Igala
 
-**10.** It was through which polity that the Yoruba and Nupe participated in the trans-Saharan trade?
-A) Oyo  B) The Sokoto Caliphate  C) Benin  D) Kanem Bornu
+**10.** In the trans-Saharan trade, the Yoruba and Nupe participated mainly through which intermediary?
+a) Kanem-Bornu
+b) The Efik of Calabar
+c) The Jukun of Kwararafa
+d) The Tuaregs of Agadez
 
-**11.** Ibibio land served as a trade corridor between:
-A) The hinterland Igbo and the coastal Efik and Ijaw
-B) The Hausa and the Tuareg
-C) Oyo and Nupe
-D) Borgu and Bariba
+**11.** Which pairing of deity/cult and its place of origin is correct?
+a) Bori cult — Efik origin
+b) Ekpe and Ekpo — Nupe origin
+c) Ibini Ukpabi — Ibibio origin, now common among the Igbo
+d) Igunu — Ibibio origin, now common among the Hausa
 
-**12.** Which pairing of religious institution and place of origin is correct?
-A) Ibini Ukpabi — Yoruba origin  B) Bori cult — Efik origin  C) Ekpe and Ekpo — Efik origin, now popular among Igbo subgroups  D) Igunu — Idoma origin
+**12.** Which zone is described as Nigeria's most ethnically diverse, housing groups such as Borgu, Nupe, Igala and Tiv?
+a) North East
+b) North Central
+c) South South
+d) South East
 
-## Short answer (3)
+## Short answer
 
-**13.** Name the four indicators used this week to establish the nature of pre-colonial intergroup relations, and give one named example for each.
+**13.** Name the four indicators used in this lesson to establish the nature of pre-colonial intergroup relations, and give one concrete example for each.
 
-**14.** The Igala and Nsukka Igbo fought territorial wars, yet the lesson treats this as evidence of relations rather than of separation. Explain why, using the Illah example, and give one further example of cultural diffusion arising from war.
+**14.** Explain, with two examples from the lesson, how conflict produced cultural diffusion rather than only separation between Nigerian groups.
 
-**15.** List the commodities the Nupe exchanged with the Yoruba, and state what the Oyo–Nupe case shows about the relationship between conflict and trade.
+**15.** List Nigeria's six geo-political zones and name the dominant ethnic group(s) associated with each in the Week 2 summary.
 
 ## Answers
 
-**1. B** — *intergroup relations*: interaction between distinct **linguistic and cultural** groups; culture and language are the two factors for identifying a group.
-**2. D** — over **348 language groups** and **374 ethnic groups**. The ethnic figure is the larger of the two.
-**3. C** — both the **Saif** (Kanuri) and **Bayajidda** (Hausa) traditions trace origin to **Baghdad**, which is itself the evidence of shared tradition.
-**4. A** — the **Mai**, the Kanuri ruler. (The **Ooni** is the Ife/Yoruba ruler — that title belongs to the Kisra legend.)
-**5. B** — **Kisra**, also from Baghdad, founded the **Yoruba and Borgu** kingdoms and considered the **Ooni of Ife** his brother.
-**6. D** — **control of trade routes**, the standard cause of the wars among the Hausa states.
-**7. A** — **Jukun** → Kanuri, Hausa, Igala, Idoma, Ebira. Option B is Benin's list, not Jukun's.
-**8. C** — **Eko (Lagos)**; Benin also reached Auchi, Idah, Itsekiri, Urhobo, Isoko and Okpe, and early Lagos kings **Ado** and **Asipa** were from Benin.
-**9. B** — **firewood**. Salt for firewood is the named Jukun–Tiv exchange.
-**10. D** — **Kanem Bornu** was the major player in the **trans-Saharan trade** and the channel through which Yoruba and Nupe took part.
-**11. A** — **Ibibio land** linked the **hinterland Igbo** with the **coastal Efik and Ijaw**.
-**12. C** — **Ekpe and Ekpo** originated among the **Efik** and are now popular among Igbo subgroups. Ibini Ukpabi is **Ibibio** in origin, the **Bori cult** is Hausa, and **Igunu** (Yoruba) traces to **Ndakogbaya** among the **Nupe**.
-**13.** *The four indicators*: **traditions of origin** (Kanuri from Saif and Hausa from Bayajidda, both from Baghdad; the Kisra legend founding Yoruba and Borgu; the Yoruba–Benin link through Oranmiyan and Eweka); **conflict** (Oyo–Nupe wars with the Bariba–Yoruba alliance; Kano vs Katsina over trade routes; Jukun and Benin conquests); **trade and commerce** (Jukun salt for Tiv firewood; Kanem Bornu and the trans-Saharan trade; Ibibio land as corridor between the Igbo and the Efik and Ijaw); **religion** (Igunu from the Nupe Ndakogbaya; Ibini Ukpabi of Ibibio origin among the Igbo; Ekpe and Ekpo of Efik origin; the Bori cult in Hausaland).
-**14.** *Igala–Nsukka Igbo*: the wars were territorial, but they **forged political ties and increased interaction** between the two peoples — sustained contact, not separation. The **Illah** people are the proof: they **speak Igbo but their masquerades speak Igala**, so the language of their ritual life carries the mark of the contact. A further example of war-driven **cultural diffusion**: the **Emowa and Isoko** sub-groups claim their gods are still located in **Patani**, an **Ijaw** town.
-**15.** *Nupe–Yoruba commodities*: **shea butter, bangles, brasswork, potash and straw hats**. The Oyo–Nupe case shows that conflict and trade were **not mutually exclusive** — the same two peoples fought repeated wars (prompting the Bariba–Yoruba alliance against the Nupe) while maintaining considerable trade relations. Both war and commerce are indicators of relations; hostility is evidence of contact, not of its absence.
+**1. c** — The course defines it strictly as interaction between distinct linguistic and cultural groups.
+**2. a** — Culture and language are the two stated identifiers of a group.
+**3. d** — Over 348 language groups and over 374 ethnic groups; the ethnic figure is the larger.
+**4. b** — Both the Saif (Kanuri) and Bayajidda (Hausa) traditions point to Baghdad.
+**5. a** — Kisra considered the Ooni of Ife his brother, linking Borgu and Yoruba origins.
+**6. d** — The Bariba allied with the Yoruba against the Nupe after Oyo–Nupe wars.
+**7. b** — Wars among the Hausa states, including Kano vs Katsina, were for control of trade routes.
+**8. c** — Ado and Asipa, early kings of Lagos, were from Benin.
+**9. d** — Illah speak Igbo while their masquerades speak Igala, evidence of deep interaction from territorial wars.
+**10. a** — Kanem-Bornu played the major role in the trans-Saharan trade and was the channel for Yoruba and Nupe participation.
+**11. c** — Ibini Ukpabi is of Ibibio origin but is today common among the Igbo; Ekpe/Ekpo are Efik, Igunu is Yoruba (from Nupe Ndakogbaya), and Bori is Hausa.
+**12. b** — The North Central zone is named the most ethnically diverse, with Borgu, Nupe, Igala and Tiv.
+
+**13.** Traditions of origin (Kanuri/Hausa both tracing to Baghdad via Saif and Bayajidda; Kisra founding Yoruba and Borgu); conflict (Oyo–Nupe wars with the Bariba–Yoruba alliance; Jukun conquest over Kanuri, Hausa, Igala, Idoma, Ebira); trade and commerce (Jukun salt for Tiv firewood; Ibibio land as corridor between hinterland Igbo and coastal Efik and Ijaw; Nupe shea butter, bangles, brasswork, potash and straw hats to the Yoruba); religion (shared priests/priestesses, incantations, sacrifice, pantheon and nature worship, masquerades; Bori cult across Hausaland).
+
+**14.** Wars forced sustained contact, and cultural elements crossed with the fighting. The Igala–Nsukka Igbo territorial wars forged political ties so close that the Illah speak Igbo while their masquerades speak Igala. The Emowa and Isoko sub-groups, brought into contact through warfare, still claim their gods are located in Patani, an Ijaw town. Benin's conquests likewise planted Benin-descended kings, Ado and Asipa, on the throne of Lagos.
+
+**15.** North West — Hausa and Fulani (conquest and assimilation, common language, Islam); North East — Kanuri and Jukun; North Central — the most diverse, with Borgu, Nupe, Igala and Tiv; South West — Yoruba; South East — Igbo (democratic age-grade system); South South — Edo, Itsekiri, Ijaw and Efik.

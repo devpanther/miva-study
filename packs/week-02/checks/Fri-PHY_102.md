@@ -1,48 +1,61 @@
 # Friday — PHY_102 nightly check
 
-*PHY_102 problems: multi-charge superposition calculations, component resolution, equilibrium/null points, and ratio and scaling problems.*
-*Sit cold, notes closed, 8 minutes. Score out of 6.*
+*This session worked the same week-2 material as problems rather than ideas: setting up superposition calculations from a sketch, deciding for each pairwise force whether it is an attraction or a repulsion and therefore whether contributions add or subtract, and carrying the arithmetic through with unit conversions (nm, µm, µC, nC) intact. It covered the three problems from the deck — the electron between two protons, the three collinear charges of −18 µC, −12 µC and +24 µC, and the +2.00 nC / −5.00 nC pair whose field and force on an electron must be found — plus choosing an efficient route (symmetry versus brute-force summation), diagnosing a result that has come out wrong, and checking a finished answer by its units or by a second independent relation. The emphasis throughout is on the set-up and the check, not on recalling statements.*
 
-**1.** Q₁ = +4.0 μC is fixed at x = 0 and Q₂ = −4.0 μC is fixed at x = 0.60 m. A charge q₃ = +2.0 μC is placed at x = 0.30 m. Each of the two charges alone would exert about 0.80 N on q₃. The **net** force on q₃ is:
-a) zero, because the two source charges are equal and opposite
-b) 0.80 N in the +x direction
-c) 1.6 N in the −x direction, toward the +4.0 μC charge
-d) 1.6 N in the +x direction, toward the −4.0 μC charge
+*Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
-**2.** A charge at the origin is acted on by two forces from two other charges: 6.0×10⁻³ N along +x and 8.0×10⁻³ N along +y. The resultant force is:
-a) 1.0×10⁻² N at 53° above the +x axis
-b) 1.4×10⁻² N at 45° above the +x axis
-c) 1.0×10⁻² N at 37° above the +x axis
-d) 2.0×10⁻³ N along the +y axis
+**1.** Two protons sit 3.6 nm apart, with an electron on the line between them, 1.2 nm from one proton. Which expression gives the magnitude of the net force on the electron?
+a) ke²[1/(1.2 × 10⁻⁹)² + 1/(2.4 × 10⁻⁹)²]
+b) ke²/(3.6 × 10⁻⁹)²
+c) ke²[1/(1.2 × 10⁻⁹)² − 1/(2.4 × 10⁻⁹)²]
+d) ke²[1/(1.2 × 10⁻⁹)² − 1/(3.6 × 10⁻⁹)²]
 
-**3.** A charge of +9.0 μC is fixed at x = 0 and a charge of −4.0 μC is fixed at x = 1.0 m. A third point charge placed on the x-axis experiences **zero** net force at:
-a) x = 0.60 m
-b) x = 3.0 m
-c) x = −3.0 m
-d) x = 0.50 m
+**2.** Evaluate that net force (k = 8.99 × 10⁹ N·m²/C², e = 1.60 × 10⁻¹⁹ C).
+a) 4.0 × 10⁻¹¹ N
+b) 2.0 × 10⁻¹⁰ N
+c) 1.6 × 10⁻¹⁰ N
+d) 1.2 × 10⁻¹⁰ N
 
-**4.** Two point charges separated by r exert a force F on each other. One charge is then **tripled**, the other is **halved**, and the separation is **doubled**. The new force is:
-a) 3F/2
-b) 3F/4
-c) 3F/8
-d) 6F
+**3.** Q₁ = −18 µC sits at x = −9 m, Q₂ = −12 µC at x = +1 m, and Q₃ = +24 µC at x = +7 m. The net electric force on Q₁ is:
+a) 4.2 × 10⁻³ N toward −x
+b) 4.2 × 10⁻³ N toward +x
+c) 3.5 × 10⁻² N toward −x
+d) 1.5 × 10⁻² N toward +x
 
-**5. (explain why)** A student locates the null point between two fixed positive charges by placing a +1.0 μC charge on the line and solving for zero net force. She then repeats the calculation with a −3.0 μC charge and gets exactly the same position. Explain why the third charge's size and sign make no difference, and explain why the null point always lies **nearer the smaller** of the two fixed charges.
+**4.** For the same three charges, the net electric force on Q₂ is:
+a) 5.3 × 10⁻² N toward +x
+b) 9.1 × 10⁻² N toward +x
+c) 9.1 × 10⁻² N toward −x
+d) 7.2 × 10⁻² N toward +x
 
-**6. (explain why)** In a collinear three-charge problem, moving the test point from 1.0 cm to 3.0 cm from a source charge cuts the force to **one-ninth**, not one-third. Explain why. Then use the same reasoning to explain why, in a typical three-charge line problem, the **nearer** charge usually dominates the net force even when it is the charge of smaller magnitude.
+**5.** A +2.00 nC charge is at the origin and a −5.00 nC charge is at x = 0.800 m. The electric field at x = 0.200 m is:
+a) 325 N/C in the +x direction
+b) 574 N/C in the −x direction
+c) 449 N/C in the +x direction
+d) 574 N/C in the +x direction
 
----
+**6.** An electron is now placed at x = 0.200 m in that same field. The force on it is:
+a) 9.2 × 10⁻¹⁷ N in the −x direction
+b) 9.2 × 10⁻¹⁷ N in the +x direction
+c) 5.7 × 10² N in the −x direction
+d) 1.8 × 10⁻¹⁶ N in the −x direction
 
-## Answers
+**7.** A student's algebra for the field of a point charge comes out as E = kq/r. A units check condemns it because:
+a) kq/r carries units of N·C/m, which is not a unit of anything in this topic.
+b) kq/r carries units of N·m/C, which is a volt — a potential, not a field.
+c) kq/r carries units of N/C, so the units are fine and the mistake lies elsewhere.
+d) kq/r carries units of J/C², which is neither a field nor a potential.
 
-**1. d** — *Collinear superposition: add the force **vectors**, not the source charges.* q₃ is **repelled** by the +4.0 μC on its left (pushed toward +x) and **attracted** by the −4.0 μC on its right (pulled toward +x). Both forces point the same way, so they add: 0.80 + 0.80 = 1.6 N in +x. (a) is the trap — it cancels the *charges* (+4 and −4) instead of resolving the *forces*, and is what you get by never drawing the free-body diagram. (b) adds only one contribution or averages them. (c) gets the magnitude right but reverses both directions, i.e. treats attraction as repulsion.
+**8.** Four equal positive charges sit at the corners of a square and you must find **E** at its centre. The quickest correct route is to:
+a) add the four magnitudes kq/r², since all four charges are equal and positive.
+b) find the potential at the centre first, then divide it by the corner-to-centre distance.
+c) note that the charges pair up across the diagonals, so the field is zero by symmetry.
+d) sum the fields of two adjacent charges and double the result, by the square's symmetry.
 
-**2. a** — *Component resolution: Pythagoras for the magnitude, arctan(F_y/F_x) for the angle.* F = √((6.0)² + (8.0)²)×10⁻³ = 1.0×10⁻² N, and tan θ = F_y/F_x = 8.0/6.0 = 1.33, so θ = 53° **above the +x axis**. (b) adds the magnitudes arithmetically (6.0 + 8.0 = 14) and guesses 45°, the error superposition exists to prevent. (c) has the correct magnitude but inverts the tangent ratio (arctan 6/8 = 37°) — the single commonest slip in 2-D problems, so check which component is on top. (d) subtracts the magnitudes, which is only valid for anti-parallel forces.
+**9. (explain why)** You compute the net force on a charge that is being pulled in opposite directions by two others, and your answer comes out larger than either individual force. Explain what has almost certainly gone wrong, and how you would locate the error without redoing the whole calculation.
 
-**3. b** — *Null point geometry for **unlike** charges: it lies outside the pair, beyond the smaller charge.* Between two unlike charges, the force from one is repulsive and the other attractive but **both point the same way**, so cancellation there is impossible. Outside, on the side of the weaker (−4.0 μC) charge, the extra distance to the stronger charge can compensate: 9/x² = 4/(x − 1)² → 3/x = 2/(x − 1) → x = 3.0 m. (a) = 0.60 m is exactly what you get by applying the **like-charge** "between them" equation 3/x = 2/(1 − x) — the right algebra with the wrong geometry. (c) puts the point beyond the *larger* charge, where the stronger, nearer charge always wins and no solution exists. (d) is the midpoint, which is only the null point when the two charges are equal *and* like.
+**10. (explain why)** Before doing any arithmetic, explain how you would decide whether the point of zero net field between two unequal *like* charges lies nearer the larger or the smaller charge — and why, for two charges of *opposite* sign, no such point exists between them at all.
 
-**4. c** — *Scaling by proportional reasoning: F ∝ q₁q₂/r².* The numerator changes by 3 × ½ = 3/2 and the denominator by 2² = 4, so F → (3/2)/4 = **3F/8**. (b) = 3F/4 comes from dividing by 2 instead of 2² — forgetting that the distance is squared. (a) tracks only the charges and ignores the separation. (d) multiplies by both charge factors as though they were 3 and 2 and drops the distance entirely.
+**11. (explain why)** Explain why you should substitute charge *magnitudes* into F = k|q₁q₂|/r² and fix the direction from a sketch, instead of substituting the signed values and trusting the sign of the answer. Illustrate with the Q₁/Q₃ pair from question 3.
 
-**5.** *Concept: the null point depends only on the two source charges, because the probe cancels out of the equation.* Setting the two magnitudes equal gives k|q₃||Q₁|/x² = k|q₃||Q₂|/(d − x)², and |q₃| — like k — appears on **both** sides and divides out; the resulting equation contains only Q₁, Q₂ and the geometry. Changing the probe's sign merely reverses **both** forces at once, so wherever they cancelled before they still cancel. As for the location: the two forces can only oppose each other at a point *between* two like charges, and to balance a larger charge against a smaller one the point must be **farther from the larger** charge, since the 1/r² fall-off is what compensates for the bigger numerator. That places it nearer the smaller charge — and in the 9 : 1 case, three times as far from the big charge as from the small one, because the distances scale as the square roots of the charges.
-
-**6.** *Concept: the inverse-square dependence, and why proximity beats magnitude.* The distance enters Coulomb's law as r², not r: tripling r multiplies r² by 9, so the force falls by a factor of 9. The force is not proportional to distance in any direct way, and "three times as far so one-third the force" is 1/r reasoning smuggled in from formulas like F ∝ 1/r. The consequence for a three-charge line: the ratio of the two forces on the middle charge is (Q_near/Q_far) × (r_far/r_near)², so the distance ratio is **squared** while the charge ratio is not. A charge half the size but at half the distance produces ½ × 4 = **twice** the force of its larger partner. This is why you must always compute both contributions rather than assuming the bigger charge wins — and why answers should be checked by asking whether the net force sensibly leans toward the nearer charge.
+**12. (explain why)** Show how a units check would catch each of these two errors: writing F = kq₁q₂/r instead of /r², and writing E = Fq instead of F/q. State the units you get in each case and what quantity, if any, those units actually belong to.

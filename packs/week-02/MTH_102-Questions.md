@@ -1,79 +1,99 @@
-# MTH_102 — Week 2 Question Set (sit 7 days later)
+# MTH_102 — Week 2 retention set
 
-*Sit this during Saturday catch-up in Week 3, not this week. Notes closed.*
+*Elementary Mathematics II (Calculus) · sat SEVEN DAYS after the Week 2 material. Notes closed. 12 MCQ then 3 short-answer. Answers at the bottom.*
 
-## Section A — Multiple choice (12)
+**1.** Which of the following does **not** define y as a function of x?
+a) y = |x|
+b) y = x³
+c) x = y²
+d) y = 3
 
-**1.** The vertex of f(x) = 2x² − 8x + 5 is at:
-a) (−2, 29)   b) (4, 5)   c) (2, −3)   d) (2, 5)
+**2.** A graph passes the vertical line test but fails the horizontal line test. It is
+a) not a function at all
+b) a function that is not injective
+c) a function that is not surjective
+d) a bijection from ℝ to ℝ
 
-**2.** The graph of f(x) = log_b(x), b > 1, has:
-a) a horizontal asymptote y = 0 and domain ℝ
-b) a vertical asymptote x = 0 and domain x > 0
-c) a vertical asymptote x = 1 and domain x ≥ 0
-d) no asymptote, and it passes through (0, 1)
+**3.** With f(x) = x² − 1 and g(x) = 2x + 3, the value of (g ∘ f)(1) is
+a) 3
+b) 24
+c) 5
+d) 0
 
-**3.** For f(x) = (x² − 1)/(x − 1), the graph is:
-a) the line y = x + 1 with a hole at (1, 2)
-b) the line y = x + 1 with a vertical asymptote at x = 1
-c) a hyperbola with asymptotes x = 1 and y = 0
-d) the line y = x − 1 with a hole at (1, 0)
+**4.** The slope of the line through (1, 4) and (5, −4) is
+a) 2
+b) −2
+c) −½
+d) ½
 
-**4.** The x-intercepts of f(x) = (x − 1)(x + 4)/(x − 2) are:
-a) x = 2 only   b) x = −1 and x = 4   c) x = 1, −4 and 2   d) x = 1 and x = −4
+**5.** The vertex of f(x) = x² + 6x + 5 is at
+a) (3, −4)
+b) (−3, 5)
+c) (−3, −4)
+d) (−6, −4)
 
-**5.** The horizontal asymptote of f(x) = (3x² − 1)/(2x² + x) is:
-a) y = 0   b) y = 3/2   c) y = 3   d) there is none
+**6.** The equation x² − 4x + 7 = 0 has
+a) two distinct real roots
+b) one repeated real root
+c) no real roots
+d) two real roots of opposite sign
 
-**6.** The horizontal asymptote of f(x) = (5x + 2)/(x³ − 1) is:
-a) y = 5   b) y = 5/1 = 5x   c) y = 0   d) there is none
+**7.** Which function models exponential **decay**?
+a) f(x) = 2^x
+b) f(x) = (0.5)^x
+c) f(x) = x²
+d) f(x) = log₂ x
 
-**7.** f(x) = (x² − 3x + 2)/(x + 1) has an asymptote that is the line:
-a) y = x − 4   b) y = 1   c) y = x − 3   d) y = x + 1
+**8.** log₃ 81 equals
+a) 27
+b) 3
+c) 9
+d) 4
 
-**8.** f(x) = x/(x² + 1) is:
-a) even, symmetric about the y-axis
-b) neither even nor odd
-c) even, because the denominator contains x²
-d) odd, symmetric about the origin
+**9.** The solution set of |x − 3| < 5 is
+a) −2 < x < 8
+b) x < 8
+c) x > 8 or x < −2
+d) −5 < x < 5
 
-**9.** For f(x) = −3x⁴ + 2x³ − 7, as x → −∞ the values f(x):
-a) → +∞   b) → −7   c) → −∞   d) → 0
+**10.** The period of f(x) = sin(2x) is
+a) 4π
+b) 2π
+c) π/2
+d) π
 
-**10.** A polynomial of degree 5 can have at most:
-a) 4 x-intercepts and 5 turning points
-b) 5 x-intercepts and 4 turning points
-c) 5 x-intercepts and 5 turning points
-d) 6 x-intercepts and 4 turning points
+**11.** For f(x) = 5 − 2x⁴ + x³, the degree and leading coefficient are
+a) degree 4, leading coefficient −2
+b) degree 4, leading coefficient 5
+c) degree 3, leading coefficient 1
+d) degree 4, leading coefficient 2
 
-**11.** The solution of x² − 5x + 6 > 0 is:
-a) 2 < x < 3   b) x > 3   c) x ≤ 2 or x ≥ 3   d) x < 2 or x > 3
+**12.** For f(x) = 2x + 1 when x ≤ 0 and f(x) = x² − 3 when x > 0, the value of f(0) is
+a) −3
+b) both 1 and −3
+c) undefined
+d) 1
 
-**12.** The solution of (x − 1)/(x + 2) ≥ 0 is:
-a) (−∞, −2) ∪ [1, ∞)   b) [−2, 1]   c) (−∞, −2] ∪ [1, ∞)   d) (−2, 1]
+**13. (short answer)** State the definition of a function f: A → B in full, naming both conditions it imposes. Then use it to explain why x = y² does not define y as a function of x, giving one specific x that shows the failure.
 
-## Section B — Short answer (3)
+**14. (short answer)** Solve 2^(x+1) = 8^(x−1), showing every step.
 
-**13.** For f(x) = (x + 3)/(x − 2), state the vertical and horizontal asymptotes, both intercepts, and what happens to f(x) as x approaches 2 from each side.
-
-**14.** Solve x³ − x² − 6x ≥ 0, showing the sign chart you used.
-
-**15.** Describe how y = −(x − 2)² + 4 is obtained from the base graph y = x², and give its vertex, its direction of opening, and its intercepts.
+**15. (short answer)** For f(x) = −2x² + 8x − 5, find the vertex, say whether it is a maximum or a minimum and why, and give the y-intercept.
 
 ## Answers
 
-1. **c** — *Vertex of a parabola*: x = −b/2a = 8/4 = 2, then f(2) = 8 − 16 + 5 = −3.
-2. **b** — *Log graph*: log_b(x) is the inverse of bˣ, so the exponential's HA y = 0 becomes the log's **VA x = 0**; the argument must be positive.
-3. **a** — *Cancelled factor gives a hole*: (x²−1)/(x−1) = (x−1)(x+1)/(x−1) = x + 1 for x ≠ 1, so there is a removable hole at (1, 2), not an asymptote.
-4. **d** — *x-intercepts come from the numerator*: x − 1 = 0 and x + 4 = 0; x = 2 is where the function is undefined, not where it is zero.
-5. **b** — *Equal degrees ⟹ ratio of leading coefficients*: 3/2.
-6. **c** — *deg N < deg D ⟹ y = 0*: the denominator grows far faster, so f(x) → 0.
-7. **a** — *deg N = deg D + 1 ⟹ oblique asymptote by long division*: x² − 3x + 2 = (x + 1)(x − 4) + 6, so y = x − 4.
-8. **d** — *Odd test*: f(−x) = −x/(x² + 1) = −f(x), so the graph has 180° rotational symmetry about the origin.
-9. **c** — *End behaviour from the leading term*: −3x⁴; the degree is even so both ends go the same way, and the leading coefficient is negative, so both go to −∞.
-10. **b** — *Degree bounds*: at most n roots and at most n − 1 turning points.
-11. **d** — *Quadratic inequality*: (x − 2)(x − 3) > 0; the upward parabola is positive **outside** its roots, and the inequality is strict so the roots are excluded.
-12. **a** — *Rational inequality*: zero at x = 1 (include it, since ≥), undefined at x = −2 (always exclude). Testing gives positive on (−∞,−2) and on (1,∞).
-13. **VA x = 2; HA y = 1** (equal degrees, 1/1); **x-intercept (−3, 0)**, **y-intercept (0, −3/2)**. As x → 2⁻ the numerator → 5 > 0 and the denominator → 0⁻, so **f(x) → −∞**; as x → 2⁺, **f(x) → +∞**. — *Asymptotes and one-sided behaviour by sign.*
-14. **[−2, 0] ∪ [3, ∞)** — *Sign chart for a factored cubic*: x³ − x² − 6x = x(x² − x − 6) = x(x − 3)(x + 2). Critical values −2, 0, 3. Test x = −3: (−)(−)(−) < 0; x = −1: (−)(−)(+) > 0; x = 1: (+)(−)(+) < 0; x = 4: (+)(+)(+) > 0. The inequality is ≥, so the three zeros are included.
-15. **Shift right 2, reflect in the x-axis, shift up 4.** Vertex **(2, 4)**, opening **downward** (leading coefficient −1). x-intercepts: (x − 2)² = 4 ⟹ **x = 0 and x = 4**; y-intercept **(0, 0)**. — *Transformations: inside the bracket acts horizontally and in the opposite direction; outside acts vertically and as written.*
+**1. c** — x = 4 gives y = 2 and y = −2, two outputs for one input, so it fails the vertical line test.
+**2. b** — passing the vertical test makes it a function; failing the horizontal test means two inputs share an output, i.e. not one-to-one.
+**3. a** — f(1) = 1 − 1 = 0, then g(0) = 2(0) + 3 = 3; the inner function runs first.
+**4. b** — m = (−4 − 4)/(5 − 1) = −8/4 = −2.
+**5. c** — x_v = −b/2a = −6/2 = −3, and f(−3) = 9 − 18 + 5 = −4.
+**6. c** — Δ = (−4)² − 4(1)(7) = 16 − 28 = −12 < 0, so the parabola never meets the x-axis.
+**7. b** — the base 0.5 lies strictly between 0 and 1, so successive powers shrink.
+**8. d** — 3⁴ = 81, and log_b x asks for the exponent, not the value.
+**9. a** — |x − 3| < 5 means −5 < x − 3 < 5, so adding 3 throughout gives −2 < x < 8.
+**10. d** — sin(kx) has period 2π/k, and here k = 2, giving 2π/2 = π.
+**11. a** — the highest power present is x⁴, so the degree is 4 and its coefficient −2 leads; 5 is only the constant term.
+**12. d** — x = 0 satisfies x ≤ 0, so the first branch applies: f(0) = 2(0) + 1 = 1.
+**13.** Every element of A must be assigned a value (totality), and each is assigned **exactly one** element of B (uniqueness). x = y² gives, at x = 4, both y = 2 and y = −2, breaking uniqueness — so y is not a function of x.
+**14.** 8 = 2³, so 8^(x−1) = 2^(3x−3); equal bases force equal exponents: x + 1 = 3x − 3 ⇒ 4 = 2x ⇒ **x = 2** (check: 2³ = 8 = 8¹ ✓).
+**15.** x_v = −8/(2·(−2)) = 2 and f(2) = −8 + 16 − 5 = 3, so the vertex is **(2, 3)**; it is a **maximum** because a = −2 < 0 so the parabola opens downward; the y-intercept is f(0) = **−5**.

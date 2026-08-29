@@ -1,67 +1,117 @@
-# PHY_108 — Week 2 Question Set (sit 7 days later)
+# PHY_108 — Week 2 Retention Set
 
-*Sit this during Saturday catch-up in Week 3, not this week. Notes closed.*
+*General Physics Practical II · sit this SEVEN DAYS after the Week 2 session. Closed book.*
 
-## Multiple choice (12)
+## Multiple choice
 
 **1.** Ohm's law states that the current through a conductor is directly proportional to the potential difference across it, provided that:
-A) The temperature is constant  B) The current is small  C) The resistance is large  D) The circuit is in parallel
+a) the resistance is greater than 1 kΩ
+b) the temperature remains constant
+c) the current is measured in milliamperes
+d) the resistors are connected in parallel
 
-**2.** In the Ohm's law experiment, the ammeter and voltmeter are connected respectively:
-A) Both in series with R  B) Ammeter in parallel, voltmeter in series  C) Ammeter in series, voltmeter in parallel with R  D) Both in parallel with R
+**2.** In the verification experiment, V is plotted against I. The gradient of the resulting line represents:
+a) the current through the resistor
+b) the power dissipated
+c) the resistance of the resistor
+d) the EMF of the DC supply
 
-**3.** A graph of V (y-axis) against I (x-axis) for an ohmic conductor is:
-A) A curve through the origin  B) A straight line through the origin  C) A straight line with a large positive intercept  D) A horizontal line
+**3.** A line of V against I for an ohmic resistor should pass through the origin. A clearly non-zero intercept most likely indicates:
+a) a systematic error such as meter zero error or stray contact resistance
+b) that Ohm's law is disproved for all conductors
+c) that the resistor is in parallel with another
+d) that the voltage axis is in millivolts
 
-**4.** The gradient of that V–I graph is equal to:
-A) 1/R  B) VI  C) The power dissipated  D) R
+**4.** Three resistors of 10 Ω, 20 Ω and 30 Ω are connected in series. The equivalent resistance is:
+a) 5.45 Ω
+b) 11 Ω
+c) 20 Ω
+d) 60 Ω
 
-**5.** If instead I is plotted on the y-axis against V on the x-axis, the gradient equals:
-A) 1/R  B) R  C) R²  D) V/I
+**5.** The same three resistors (10 Ω, 20 Ω, 30 Ω) connected in parallel give an equivalent resistance of about:
+a) 60 Ω
+b) 20 Ω
+c) 5.45 Ω
+d) 0.183 Ω
 
-**6.** Which of these is a non-ohmic component?
-A) A carbon resistor at constant temperature  B) A copper wire at constant temperature  C) A filament lamp  D) A standard 1 kΩ resistor
+**6.** In a parallel connection of resistors, the quantity that is the same across every resistor is:
+a) the potential difference
+b) the current
+c) the resistance
+d) the power
 
-**7.** Three resistors of 10 Ω, 20 Ω and 30 Ω are connected in series. The equivalent resistance is:
-A) 5.45 Ω  B) 20 Ω  C) 600 Ω  D) 60 Ω
+**7.** Which of these is a non-ohmic component named in the lesson?
+a) A 1 kΩ carbon resistor
+b) A copper connecting wire
+c) A breadboard jumper
+d) A thermistor
 
-**8.** The same three resistors connected in parallel give an equivalent resistance of approximately:
-A) 11 Ω  B) 5.45 Ω  C) 60 Ω  D) 0.18 Ω
+**8.** In the virtual lab, the voltmeter and ammeter are connected respectively:
+a) both in series with the resistor
+b) voltmeter in parallel with the resistor, ammeter in series
+c) voltmeter in series, ammeter in parallel
+d) both in parallel with the resistor
 
-**9.** The voltmeter is designed to have a very high resistance so that:
-A) It increases the current in the circuit  B) It protects the ammeter  C) It reduces the supply voltage  D) It draws almost no current from the component it measures
+**9.** A graph of V (in volts) against I (in mA) has a gradient of 1.03. The resistance is:
+a) 1.03 kΩ
+b) 1.03 Ω
+c) 1.03 mΩ
+d) 0.97 kΩ
 
-**10.** A student's V–I line is straight but cuts the V-axis at 0.2 V instead of passing through the origin. The most likely cause is:
-A) Random error in plotting  B) The resistor is non-ohmic  C) A zero error in the voltmeter  D) The rheostat is faulty
+**10.** After recording the readings, the procedure requires the voltage step to be repeated so that in total you obtain:
+a) two readings
+b) four readings
+c) seven readings
+d) twenty readings
 
-**11.** In the experiment, the rheostat is included in order to:
-A) Vary the current through the resistor  B) Measure the current  C) Measure the potential difference  D) Prevent parallax error
+**11.** The measured resistance is 1.06 kΩ and the accepted default value is 1 kΩ. The percentage error and verdict are:
+a) 6 %, within the 5 % tolerance
+b) 0.6 %, within tolerance
+c) 60 %, outside tolerance
+d) 6 %, outside the 5 % tolerance
 
-**12.** A resistor with a nominal value of 1.00 kΩ gives a graph gradient of 1.06 kΩ. The percentage error is:
-A) 0.06%  B) 6%  C) 60%  D) 1.06%
+**12.** Which statement about an ohmic resistor is correct?
+a) Its resistance rises steadily as the applied voltage rises
+b) Reversing the current direction simply reverses the voltage across it
+c) Its V–I graph curves away from the origin at high current
+d) It only obeys V = IR when connected in parallel
 
-## Short answer (3)
+## Short answer
 
-**13.** State Ohm's law in full, write its equation defining every symbol and its unit, and explain how the V–I graph is used to obtain the resistance.
+**S1.** State Ohm's law in full, write its equation defining every symbol and its unit, and explain how the form V = IR corresponds to y = mx + c for the graph drawn in this experiment.
 
-**14.** A best-fit V–I line passes through the points (I = 1.0 mA, V = 1.2 V) and (I = 5.0 mA, V = 6.0 V). Calculate the resistance in ohms, and state the percentage error if the resistor's nominal value is 1.2 kΩ.
+**S2.** List, in the correct order, the main steps of the Praxilabs Ohmic Resistor procedure from connecting the circuit through to obtaining the data file, and state the range within which R₁ is set.
 
-**15.** List four precautions or sources of error in the Ohm's law experiment and explain briefly, for each, how it affects the result.
+**S3.** A student's best-fit line of V against I (mA) passes through (0.5 mA, 0.52 V) and (4.5 mA, 4.62 V). Calculate the gradient, state the resistance in ohms, and compute the percentage error against the default value of 1 kΩ. State whether the experiment has verified Ohm's law and why.
 
-## Answer key
+## Answers
 
-**1. A** — *conditions of Ohm's law*: constant temperature (and other physical conditions) is part of the statement.
-**2. C** — *circuit rule*: ammeter in series so the same current flows through it; voltmeter in parallel so it shares R's p.d.
-**3. B** — *ohmic behaviour*: direct proportionality gives a straight line through the origin.
-**4. D** — *V = IR vs y = mx + c*: gradient m = R, intercept c = 0.
-**5. A** — *axes reversed*: I = (1/R)V, so the gradient is the conductance 1/R.
-**6. C** — *non-ohmic*: the filament heats up, its resistance rises and the V–I graph curves.
-**7. D** — *series*: 10 + 20 + 30 = 60 Ω.
-**8. B** — *parallel*: 1/R = 1/10 + 1/20 + 1/30 = 11/60, R = 60/11 ≈ 5.45 Ω.
-**9. D** — *voltmeter design*: high resistance means negligible current is diverted, so the measured p.d. is undisturbed.
-**10. C** — *zero error*: a systematic instrument offset shifts the whole line up, giving a false intercept; random error would scatter points, not shift the line.
-**11. A** — *rheostat*: a variable resistor used to change the current in steps so several (V, I) pairs can be recorded.
-**12. B** — *percentage error*: |1.06 − 1.00|/1.00 × 100% = 6% (outside the 5% tolerance).
-**13.** *Statement and use of the graph*: The current I through a conductor is directly proportional to the potential difference V across it, provided the temperature and other physical conditions remain constant. V = IR, where V = potential difference in volts (V), I = current in amperes (A), R = resistance in ohms (Ω). Plot V on the y-axis against I on the x-axis; the points give a straight line through the origin, and its gradient ΔV/ΔI, taken from two well-separated points on the best-fit line, equals R.
-**14. R = 1200 Ω = 1.2 kΩ; percentage error = 0%** — *gradient calculation*: (6.0 − 1.2) V / (5.0 − 1.0) × 10⁻³ A = 4.8/4.0 × 10⁻³ = 1200 Ω, which matches the nominal 1.2 kΩ exactly. Note the mA → A conversion.
-**15.** *Precautions and errors* (any four): **zero error** — meters not reading zero before the key is closed bias every reading and create a false intercept, so check and correct the offset; **parallax error** — reading the pointer at an angle gives values that are consistently too high or too low, so view the scale perpendicularly; **heating of the wire** — current warms the conductor, raising R and bending the V–I graph, so keep the current small and open the key between readings; **contact resistance** — loose or dirty terminals add extra unwanted resistance and inflate the measured R, so tighten all connections; also, do not exceed the meter ranges and observe correct polarity.
+**1. b** — the constant-temperature proviso is part of the statement of the law; without it the resistance can drift.
+
+**2. c** — comparing V = IR with y = mx + c, the gradient m is R (intercept c = 0).
+
+**3. a** — theory demands zero current at zero applied voltage, so an offset is instrumental, not physical.
+
+**4. d** — series resistances add: 10 + 20 + 30 = 60 Ω.
+
+**5. c** — 1/R = 1/10 + 1/20 + 1/30 = 11/60, so R = 60/11 = 5.45 Ω, less than the smallest resistor.
+
+**6. a** — parallel elements share the same two nodes, so they share the same potential difference; the currents differ.
+
+**7. d** — thermistors (with varistors and photoresistors) change resistance with conditions, so their V–I graph is not a straight line.
+
+**8. b** — the ammeter must carry the current it measures (series); the voltmeter must straddle the resistor (parallel).
+
+**9. a** — volts divided by milliamperes gives kilohms, so 1.03 V/mA = 1.03 kΩ = 1030 Ω.
+
+**10. c** — one reading is taken, then the voltage-set-and-record step is repeated six more times, giving seven points.
+
+**11. d** — |1.06 − 1.00|/1.00 × 100 = 6 %, which exceeds the stated 5 % acceptance limit.
+
+**12. b** — reversibility under current reversal is a listed characteristic of ohmic resistors; constant R rules out (a) and (c).
+
+**S1.** Ohm's law: the electric current I passing through a conductor is directly proportional to the potential difference V across it, at constant temperature. V = IR, where V is potential difference in volts (V), I is current in amperes (A) and R is resistance in ohms (Ω). Plotting V on the y-axis against I on the x-axis makes V ≡ y, I ≡ x, R ≡ m (gradient) and c = 0, so the graph is a straight line through the origin whose gradient equals the resistance.
+
+**S2.** Expand the UI (up-arrow) and zoom in to identify components; open the connection board and wire the circuit as in the figure, then zoom out; click the voltmeter and connect it, zoom out; click the ammeter and connect it, zoom out; click the DC power supply and connect it, zoom out; re-expand the UI; set R₁ within **1–20 kΩ**; apply a potential difference with the supply knob or the DC voltage slider (e.g. 1 V); press Record to log V and I; repeat the set-and-record step six more times at different voltages; on ending, an Excel sheet of the data downloads automatically.
+
+**S3.** Gradient = (4.62 − 0.52)/(4.5 − 0.5) = 4.10/4.00 = 1.025 V/mA = 1.025 kΩ = **1025 Ω**. % error = |1025 − 1000|/1000 × 100 = **2.5 %**. This is within the 5 % tolerance and the line is straight through the origin, so Ohm's law is verified for this resistor.

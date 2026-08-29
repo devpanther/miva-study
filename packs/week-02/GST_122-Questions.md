@@ -1,76 +1,104 @@
-# GST_122 — Week 2 Question Set (sit 7 days later)
+# GST_122 — Week 2 Retention Set
 
-*Sit this during Saturday catch-up in Week 3, not this week. Notes closed.*
+*Communication and Meaning · sit this SEVEN DAYS after the lesson, closed-book.*
 
-## Multiple choice (12)
+## Multiple choice
 
-**1.** Semiotics is best defined as the study of:
-a) Signs and symbols and how they convey meaning
-b) The grammar rules of a language
-c) The history of written alphabets
-d) Speech sounds and pronunciation
+**1.** According to the lesson, the ultimate goal of communication is that:
+a) as many words as possible are used
+b) the speaker feels understood
+c) meaning is accurately conveyed
+d) the listener remains silent
 
-**2.** The denotative meaning of a word is:
-a) The tone of voice used to say it
-b) Its emotional or cultural association
-c) Its literal, dictionary meaning
-d) The meaning the listener assumes
+**2.** Semiotics is best defined as the field concerned with:
+a) signs and symbols and the role they play in interaction
+b) the grammar of sentences
+c) the speed of speech delivery
+d) the correction of spelling errors
 
-**3.** The words "cheap" and "inexpensive" refer to the same thing but feel different. This difference is one of:
-a) Denotation  b) Homophony  c) Syntax  d) Connotation
+**3.** "Connotative meaning" refers to a word's:
+a) dictionary definition
+b) pronunciation
+c) part of speech
+d) implied or suggested meaning, with cultural and emotional associations
 
-**4.** In the sign "dog", the letters on the page are the ____ and the mental idea of the animal is the ____.
-a) Signified; signifier  b) Signifier; signified  c) Referent; icon  d) Index; symbol
+**4.** The lesson names exactly two potential sources of confusion in communication. They are:
+a) slang and jargon
+b) hazardous homophones and ambiguity
+c) accent and volume
+d) grammar and punctuation
 
-**5.** Smoke telling you there is a fire is an example of which type of sign?
-a) Index  b) Icon  c) Symbol  d) Referent
+**5. Classify:** A colleague says, *"That plan is a real minefield."* The word *minefield* here is being used for its:
+a) denotative meaning
+b) connotative meaning
+c) homophonic meaning
+d) phonetic meaning
 
-**6.** A national flag standing for a country is an example of which type of sign?
-a) Icon  b) Index  c) Homophone  d) Symbol
+**6. Classify:** A student writes, *"The principle called the whole school to the hall."* This is an instance of:
+a) structural ambiguity
+b) connotation
+c) vagueness
+d) a hazardous homophone
 
-**7.** "Their", "there" and "they're" are an example of:
-a) Connotations  b) Icons  c) Homophones  d) Referents
+**7. Classify:** *"The manager told the supervisor that he would be promoted."* The confusion here is an example of:
+a) ambiguity
+b) a homophone
+c) denotation
+d) semiotic awareness
 
-**8.** According to the lesson, the two named potential sources of confusion in communication are:
-a) Homophones and ambiguity  b) Slang and accent  c) Jargon and volume  d) Grammar and spelling
+**8. Classify:** A red traffic light stopping a driver is an example of meaning carried through:
+a) denotation only
+b) ambiguity
+c) signs and symbols (semiotics)
+d) active listening
 
-**9.** The sentence "Send the report to the manager in Lagos" can be understood in more than one way. This illustrates:
-a) Connotation  b) Ambiguity  c) Denotation  d) Semiotics
+**9.** In the case study "The Ambiguity Challenge in Project Coordination", the core problem observed was that:
+a) team members could not hear the instruction
+b) one ambiguous task-assignment sentence produced conflicting interpretations of tasks and responsibilities
+c) the client changed the deadline
+d) the team lacked technical skill
 
-**10.** The word "home" carries associations of warmth, safety and belonging. Those associations are:
-a) Its denotation  b) Its referent  c) Its signifier  d) Its connotation
+**10.** Which of the following is NOT listed among the skills and competencies acquired in this lesson?
+a) Cultural Sensitivity
+b) Conflict Resolution
+c) Contextual Interpretation
+d) Persuasive Advertising
 
-**11.** The lesson stresses that meaning is multifaceted and:
-a) Fixed permanently inside each word
-b) Requires active interpretation by the listener, considering context
-c) Determined only by the speaker's intention
-d) Irrelevant once the words are grammatically correct
+**11.** The lesson stresses that meaning is "multifaceted" and therefore requires:
+a) longer sentences from the speaker
+b) elimination of all non-verbal signs
+c) active interpretation by the listener, with attention to context and possible ambiguities
+d) translation into a second language
 
-**12.** "Can you open the window?" literally asks about your ability, but is used as a polite request. The literal reading is its ____ meaning and the request is its ____ meaning.
-a) Pragmatic; semantic  b) Connotative; denotative  c) Semantic; pragmatic  d) Indexical; iconic
+**12.** Which single test best separates a homophone problem from an ambiguity problem?
+a) Write the sentence down — if the confusion vanishes, it was a homophone
+b) Count the words in the sentence
+c) Check whether the speaker is a native speaker
+d) Ask whether the word appears in a dictionary
 
-## Short answer (3)
+## Short answer
 
-**13.** Define denotation and connotation, and give one word that shows the difference clearly.
+**13.** Define *denotative* and *connotative* meaning, and give one word that has a neutral denotation but a negative connotation, explaining both senses.
 
-**14.** Distinguish an icon, an index and a symbol, with one example of each.
+**14.** The lesson says effective communication involves two things. State both, in the lesson's own terms.
 
-**15.** Name the two sources of confusion identified in the lesson and explain why awareness of connotation matters in a multicultural workplace.
+**15.** Give one ambiguous English sentence of your own, state the two possible interpretations, then rewrite it so that only one interpretation survives. Name the skill from the lesson's competency list that the rewrite demonstrates.
 
 ## Answers
 
-**1. a** — *semiotics*: the study of signs and symbols and how they make meaning, beyond words alone.
-**2. c** — *denotation*: the literal, dictionary meaning, stable across speakers.
-**3. d** — *connotation*: the implied, emotional or cultural association layered on a shared denotation.
-**4. b** — *signifier/signified*: the signifier is the physical form (letters, sound); the signified is the concept it calls up.
-**5. a** — *index*: a sign causally or physically connected to what it stands for.
-**6. d** — *symbol*: the link to its meaning is purely conventional and must be learned.
-**7. c** — *homophones*: same sound, different meaning and spelling; the lesson calls them "hazardous".
-**8. a** — *sources of confusion*: homophones and ambiguity, both to be avoided for clarity.
-**9. b** — *ambiguity*: the sentence permits more than one reasonable interpretation, exactly the case study's point about broken task coordination.
-**10. d** — *connotation*: the emotional and cultural aura around the literal meaning "a place where one lives".
-**11. b** — *active interpretation*: the lesson's core claim is that the listener constructs meaning using context, so meaning is not simply transmitted.
-**12. c** — *semantic vs pragmatic*: semantic is what the sentence says; pragmatic is what the speaker is doing with it in that situation.
-**13.** *Denotation vs connotation*: denotation is the literal dictionary meaning; connotation is the implied, emotional or cultural association. Example: "cheap" and "inexpensive" share the denotation "low in price", but "cheap" connotes poor quality while "inexpensive" is neutral. ("Home" vs "residence" is equally acceptable.)
-**14.** *Icon, index, symbol*: an icon resembles what it stands for (a photograph, the aeroplane picture on an airport sign); an index is caused by or physically connected to it (smoke for fire, a fever for infection); a symbol is linked only by convention and must be learned (a flag, a wedding ring, any word).
-**15.** *Sources of confusion and cultural connotation*: the two named sources are hazardous homophones and ambiguity. Connotation matters across cultures because the emotional and cultural associations of a word are not universal — a word that is neutral or complimentary in one culture may be offensive or misleading in another, so a speaker who attends only to denotation can convey an unintended meaning and damage trust or coordination.
+**1. c** — The lesson opens by stating the ultimate goal is to ensure meaning is accurately conveyed.
+**2. a** — Semiotics is the field of signs and symbols, which is why communication is "not solely about words".
+**3. d** — Connotation is the implied/suggested meaning, carrying cultural and emotional associations; denotation is the literal one.
+**4. b** — The bullet summary names hazardous homophones and ambiguity as the two sources of confusion.
+**5. b** — *Minefield* literally denotes ground planted with explosives; here it suggests hidden danger, an emotional association, so it is connotative.
+**6. d** — *Principle* and *principal* sound alike but differ in meaning; the error is sound-based, so it is a homophone.
+**7. a** — "He" can refer to the manager or the supervisor: one written form, two readings, so it is ambiguity (structural/referential), not a sound confusion.
+**8. c** — Meaning is carried with no words at all, which is exactly the semiotic (signs and symbols) dimension.
+**9. b** — The case study collected individual interpretations of one intentionally ambiguous sentence and observed conflicting understandings of tasks and responsibilities.
+**10. d** — The listed competencies are Semiotic Awareness, Contextual Interpretation, Clarity in Expression, Active Listening, Conflict Resolution and Cultural Sensitivity; persuasive advertising is not among them.
+**11. c** — The summary states meaning requires active interpretation by the listener, considering context and recognising potential ambiguities.
+**12. a** — Homophone confusion is created by identical sound, so writing removes it; an ambiguous sentence stays two-ways readable on the page.
+
+**13.** Denotative = the literal, dictionary meaning; connotative = the implied or suggested meaning with cultural and emotional associations. Example: *cheap* denotes "low in price" but connotes "shoddy, of poor quality".
+**14.** (i) Conveying intended meanings accurately, and (ii) being mindful of the broader cultural and emotional associations of words.
+**15.** Any valid pair, e.g. "Flying planes can be dangerous" — (i) the act of piloting is dangerous, (ii) planes in flight are dangerous. Rewrite: "Piloting a plane can be dangerous." The rewrite demonstrates **Clarity in Expression** (credit Contextual Interpretation only if the answer resolves the sense using context rather than by rewording).

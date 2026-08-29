@@ -1,105 +1,100 @@
-# COS_102 — Week 2 Question Set (sit 7 days later)
+# COS_102 — Week 2 retention set
 
-*Sit this during Saturday catch-up in Week 3, not this week. Notes closed. 12 MCQ + 3 short answer, about 30 minutes.*
+*Introduction to Problem Solving · Week 2 (14–20 Sep 2026) · sat seven days later, notes closed.*
+*12 multiple choice, then 3 short answer. Answers at the bottom.*
 
-## Section A — Multiple choice (12)
+**1.** The lesson defines a problem-solving strategy as:
+a) A plan used to find a solution or overcome a challenge
+b) The single fastest route from a stated problem to its answer
+c) An algorithm guaranteed to terminate on every valid input
+d) The set of facts and numbers supplied along with a question
 
-**1.** The course defines a problem-solving strategy as:
-a) A finished solution to a business problem
-b) A plan used to find a solution or overcome a challenge
-c) An arithmetic operation applied to a routine problem
-d) A graphical representation of an algorithm
+**2.** Which strategy is described as group-focused, spontaneous, and dependent on gathering as many ideas as possible?
+a) Means-ends analysis
+b) Heuristics
+c) Brainstorming
+d) Analogy
 
-**2.** According to the course, trial and error is recommended when:
-a) The number of possible solutions is few
-b) The number of possible solutions is large, because more trials mean more information
-c) A sub-optimal solution is acceptable
-d) The problem has already been re-expressed as a substitution puzzle
+**3.** Heuristics are said to be relevant in which kind of situation?
+a) Where the problem is well-defined with a clear solution path
+b) Where the number of possible solutions is small enough to test
+c) Where a group of people is available to contribute ideas
+d) Where a sub-optimal solution to the problem is acceptable
 
-**3.** A shopper picks a brand of rice off the shelf because the packet looks familiar, without comparing prices or weights. This is:
-a) Trial and error, because other brands were rejected
-b) Abstraction, because the price and weight were filtered out
-c) Means-ends analysis, because the end (buying rice) determined the means
-d) Heuristics, because the decision saves time and energy and a sub-optimal choice is acceptable
+**4.** Trial and error is recommended when:
+a) The problem has previously been solved in another domain
+b) The number of possible solutions to the problem is few
+c) The unneeded attributes of the problem have been filtered out
+d) The problem can be re-expressed as a substitution puzzle
 
-**4.** The London Underground map is the course's example of:
-a) Analogy  b) Brainstorming  c) Abstraction  d) Means-ends analysis
+**5.** Means-ends analysis involves:
+a) Breaking a problem into smaller problems and solving each with the best approach
+b) Choosing the first solution that comes to mind in order to save time and energy
+c) Producing ideas spontaneously in a group while withholding all criticism
+d) Removing every pattern of the problem that will not help reach a solution
 
-**5.** Which strategy is described as "thinking about the solution beforehand, determining the best strategy to adopt based on the issues that will be encountered", and breaking the problem into smaller problems solved with the best possible approach?
-a) Brainstorming  b) Means-ends analysis  c) Heuristics  d) Analogy
+**6.** Abstraction filters out unneeded attributes of a problem. The essential idea it leaves behind is called:
+a) An algorithm
+b) A heuristic
+c) A model
+d) An analogy
 
-**6.** Which of the following is **not** a rule of brainstorming as the course states it?
-a) Avoid criticism of ideas
-b) Gather as many ideas as possible
-c) Other people's ideas can be fine-tuned
-d) Rank and eliminate each idea as soon as it is offered
+**7.** The first step in solving a problem by analogy is to:
+a) Find similarities between the two systems and select one analogy
+b) Define the problem and generate analogies
+c) Use description and similarities to generate ideas
+d) Confirm that the underlying principles of both systems match
 
-**7.** "Dan had $500, gave some away, and now has $287. How much did he give away?" This is:
-a) A routine problem, because it can be solved with an arithmetic operation
-b) A non-routine problem, because it is stated in words
-c) An undecidable problem, because the amount given is unknown
-d) An ill-defined problem, because no solution path is given
+**8.** Which of the following is **not** an attribute of routine problems?
+a) Provides a question needing an answer, plus some required facts or numbers
+b) Can be solved with algorithms
+c) Is solely about identifying the most appropriate algorithm to apply
+d) Can usually be solved using various unconventional approaches
 
-**8.** "Give an approximate number of hairs on your head." This is a non-routine problem because:
-a) The answer is a number rather than YES or NO
-b) No answer to it exists
-c) There is no standard method for solving it, so a novel method must be developed
-d) It cannot be re-expressed as a substitution puzzle
+**9.** Which is named as one of Turing's most significant contributions to the modern computer?
+a) Storing encoded instructions in the computer's own memory
+b) Separating the program tape from the machine's fixed instruction table
+c) Proving that every mathematical problem can be solved by some machine
+d) Showing that arithmetic problems require a different machine from text problems
 
-**9.** Which sequence is the course's method for tackling a non-routine problem?
-a) Gather information → guess → check the guess arithmetically
-b) Study the problem critically → gather relevant information → identify and implement an effective strategy
-c) Decompose → code → compile → test
-d) Generate analogies → find similarities → apply an arithmetic operation
+**10.** Which of these is given as an example of an **undecidable** problem?
+a) Sorting a list of names into alphabetical order
+b) Calculating the area of a rectangular parking space
+c) The halting problem
+d) Finding the shortest route on the London Underground map
 
-**10.** In the course's sense, an **unsolvable** problem is one for which:
-a) No solution can possibly be found under any circumstances
-b) The solution takes longer than a human lifetime to compute
-c) The inputs and outputs have not yet been defined
-d) There is no systematic method (no algorithm / no UTM program) for deciding it
+**11.** Solvable problems based on data structures include problems on:
+a) Sorting, divide and conquer, recursion, searching, text processing
+b) Vectors, stacks, queues, arrays, heaps, trees, graphs, linked lists
+c) Rule of thumb, brand choice, migration to an unfamiliar country
+d) Chess problems, substitution puzzles, and the halting problem
 
-**11.** The halting problem — determining whether a running program will eventually halt or run infinitely — is the course's example of:
-a) A routine problem  b) An optimization problem  c) An undecidable problem  d) A well-defined problem with a known algorithm
+**12.** "Unsolvable problem" in this lesson most precisely means:
+a) A problem whose answer has not yet been discovered by anybody
+b) A problem too large for the memory of any existing computer
+c) A problem with more than one correct answer, so no answer is final
+d) A problem for which no systematic method of deciding it exists
 
-**12.** Turing showed that any task for which we can write an instruction table can be carried out by:
-a) The Universal Turing Machine  b) A compiler  c) A heuristic  d) A substitution puzzle
+**13. (short answer)** Name the four problem-solving strategies the week's summary lists, and the two further strategies taught in the lecture slides. For any two of the six, state the condition under which that strategy is the right choice.
 
-## Section B — Short answer (3)
+**14. (short answer)** Distinguish routine from non-routine problems, giving one example of each from the lesson, and list the three steps of the method used to attack a non-routine problem.
 
-**13.** Name the four problem-solving strategies given in the week's summary, and for each state in one line the class of problem it suits. Then name the two further strategies taught in the lecture slides.
-
-**14.** Distinguish routine from non-routine problems using the course's definitions, and give one example of each. Then explain, in one sentence, why classifying the problem must come *before* choosing a strategy.
-
-**15.** Explain what the course means by saying that we really have "unsolvable *decision* problems" rather than simply "unsolvable problems", and state the difference between an unsolvable problem and an undecidable one.
+**15. (short answer)** In three or four sentences, explain what the universal Turing machine has to do with whether a problem is solvable, and why "unsolvable" is better stated as "unsolvable decision problem".
 
 ## Answers
 
-**1. b — A plan used to find a solution or overcome a challenge.** *Concept: definition of a strategy.* A strategy is a plan containing multiple steps that guide you to a solution; it is not itself the solution.
-
-**2. a — The number of possible solutions is few.** *Concept: suitability of trial and error.* The course states it is time-consuming and inefficient when many possible solutions exist. (c) is the condition for **heuristics**, not trial and error.
-
-**3. d — Heuristics.** *Concept: heuristics vs trial and error.* The shopper never *tries* the other brands, so nothing is being tested and rejected; the decision is made without stopping to think about the next course of action, saving time and energy, and a sub-optimal choice is acceptable. The grocery-brand case is the course's own example.
-
-**4. c — Abstraction.** *Concept: abstraction produces a model.* Geography and true distances — unneeded attributes — are filtered out so only the connections remain.
-
-**5. b — Means-ends analysis.** *Concept: means-ends analysis.* It is the strategy defined by determining the best strategy in advance from the issues expected, then breaking the problem into sub-problems solved with the best possible approach.
-
-**6. d.** *Concept: brainstorming rules.* Brainstorming requires that criticism of ideas be **avoided** while ideas are being gathered; evaluating and eliminating each idea on arrival suppresses exactly the spontaneous generation the technique exists to produce.
-
-**7. a — Routine.** *Concept: routine problems.* It supplies a question plus the required numbers and is settled by one arithmetic operation ($500 − $287 = $213); being a word problem is irrelevant.
-
-**8. c.** *Concept: non-routine problems.* A non-routine problem is one that **does not have a standard method for solving it**; the solver must develop a novel method using originality and creativity. It is numeric, which shows that numbers alone do not make a problem routine.
-
-**9. b.** *Concept: the novel method for non-routine problems.* Study critically → gather relevant information → identify and implement an effective strategy.
-
-**10. d.** *Concept: the meaning of unsolvable.* The course explicitly warns that unsolvable problems are **not** problems for which no solution can possibly be found; what is missing is a systematic method for deciding.
-
-**11. c — Undecidable.** *Concept: decidable vs undecidable.* No algorithm gives an accurate true/false for every input value; undecidable problems are a subset of unsolvable ones. The course's other example is "does my code have a bug?".
-
-**12. a — The Universal Turing Machine.** *Concept: the UTM.* Its pre-loaded fixed table of instructions lets it implement any task for which an instruction table can be written, once that table is placed on its tape.
-
-**13.** *Concept: the strategy inventory.* **Brainstorming** — open, ill-defined problems needing many candidate ideas and group insight. **Heuristics** — situations where a fast, sub-optimal solution is acceptable and time and energy must be saved. **Trial and error** — problems where the number of possible solutions is few. **Means-ends analysis** — large goal-directed problems with a stated target, broken into sub-problems each solved with the best possible approach. The two further slide strategies are **abstraction** (filter out unneeded attributes to form a model) and **analogy** (reuse understanding of a similar system whose underlying principles are the same).
-
-**14.** *Concept: routine vs non-routine, and classification before strategy.* A **routine** problem is any problem that can be solved with an **arithmetic operation**: it supplies the question plus the required facts, is solved with algorithms, and is solely about identifying the most appropriate algorithm — e.g. the area of a 150 m × 2000 m parking space. A **non-routine** problem is any problem with **no standard method** for solving it: procedures and answers are not immediately clear, it demands unconventional thinking based on originality and creativity, and usually admits several approaches — e.g. estimating the number of hairs on your head. Classification must come first because it determines what you are even looking for: for a routine problem the job is selecting an existing algorithm, whereas for a non-routine problem no algorithm is waiting to be selected and a novel method has to be built.
-
-**15.** *Concept: unsolvable decision problems; undecidability.* Calling a problem unsolvable does not mean that no answer exists — a given substitution puzzle may perfectly well "come out". What is unsolvable is **deciding**, for an arbitrary case, whether it comes out: there is **no systematic method** that will settle the yes/no question in general, so the thing that fails is the decision procedure, not the existence of an answer. An **undecidable** problem is the sharpened form of this: one for which **no algorithm can return an accurate true/false for every input value**, and undecidable problems are a **subset** of unsolvable problems.
+**1. a** — the lesson's own wording: a plan used to find a solution or overcome a challenge.
+**2. c** — brainstorming is the only group-focused strategy; its rules are avoid criticism, gather many ideas.
+**3. d** — heuristics trade rationality for speed, so they fit only where sub-optimal outcomes are acceptable.
+**4. b** — its cost grows with the number of candidates, so it is only efficient when the candidates are few.
+**5. a** — decomposition into sub-problems, each solved by the best possible approach, is the definition.
+**6. c** — the lesson explicitly calls the idea formed by abstraction a model (e.g. the Underground map).
+**7. b** — the three analogy steps run: define and generate analogies → find similarities and select → generate ideas.
+**8. d** — unconventional, various approaches is the mark of *non-routine* problems (mid-lesson question 2).
+**9. a** — storing encoded instructions in memory, plus one fixed machine computing all the UTM computes.
+**10. c** — the two named undecidable examples are the halting problem and "does my code have a bug?".
+**11. b** — those are the data structures listed; option (a) is the *algorithm*-based list.
+**12. d** — it is a claim about the absence of a systematic decision method, not about answers existing.
+**13.** Summary's four: brainstorming, heuristics, trial-and-error, means-ends analysis; plus abstraction and analogy from the slides. Conditions, e.g.: trial-and-error when possible solutions are few; heuristics when a sub-optimal solution is acceptable; analogy when the underlying principles of the two systems are the same.
+**14.** Routine = solvable by an arithmetic operation / a standard algorithm, the only work being to pick the right algorithm, and solved quickly (e.g. area of a 150 m × 2000 m parking space). Non-routine = no standard method exists, procedures and answers are not immediately clear, needs originality, takes time (e.g. approximating the number of hairs on your head). Steps: study the problem critically → gather relevant information → identify and implement an effective strategy.
+**15.** The UTM holds a fixed table of instructions and executes any instruction table written onto its tape; a problem is solvable exactly when a systematic method (algorithm) for it exists, i.e. when the UTM can do it. Problems the UTM cannot do are unsolvable. But this does not mean no solution can ever be found — what fails is the existence of a systematic method for *deciding* the question for every input, as with substitution puzzles "coming out", so the precise term is unsolvable decision problem, of which undecidable problems are a subset.

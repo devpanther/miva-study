@@ -2,78 +2,78 @@
   "week": 2,
   "startsOn": "2026-09-14",
   "endsOn": "2026-09-20",
-  "generatedOn": "2026-08-28",
+  "generatedOn": "2026-08-29",
   "days": [
     {
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Function types and their characteristic shapes, intercepts, symmetry, asymptotes and end behaviour",
+        "topic": "This session takes Week 2's function material conceptually rather than computationally, starting from what a function actually is: a rule assigning to every element of a domain A exactly one element of a codomain B, and what breaks if either the totality clause or the uniqueness clause is dropped. It works through why the vertical line test detects a failure of uniqueness of output while the horizontal line test detects a failure of uniqueness of input, and why a graph can pass one and fail the other. It separates the injective condition (no element of the codomain is hit twice) from the surjective condition (no element is missed), distinguishes range from codomain, and establishes why only a bijection can be inverted - a collision makes the inverse ambiguous, a gap makes it undefined. It examines why the logarithm carries the restrictions b > 0, b != 1 and x > 0, and why exponential and logarithmic functions swap domain and range as inverses of each other. It covers why a piecewise function's conditions must be disjoint (a boundary point assigned twice with different values would break single-valuedness) while the branches are under no obligation to agree there. It asks why the absolute value is defined by two cases rather than by \"removing the minus sign\", since the sign of an expression like x - 3 depends on x. It closes on why the degree and leading coefficient alone govern a polynomial's behaviour far from the origin, because every lower-degree term becomes negligible relative to the leading term.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Intergroup relations among pre-colonial Nigerian peoples: the four indicators (traditions of origin, conflict, trade, religion) and the named peoples, polities, wars and commodities under each"
+        "topic": "The Monday fast hour covers Week 2 of Nigerian Peoples and Culture, Dr Abimbola Oyarinu's lecture on intergroup relations among pre-colonial Nigerian peoples. It opens with the definition of inter-group relations as interaction between two or more distinct linguistic and cultural groups, the two identifiers of a group (culture and language), and the scale of Nigerian diversity - over 348 language groups and 374 ethnic groups. The bulk of the hour works through the four indicators used to reconstruct pre-colonial interaction. Traditions of origin covers the shared Kanuri and Hausa myths tracing to Baghdad through Saif and Bayajidda, Bayajidda settling among the Kanuri and marrying the Mai's daughter, the Kisra legend founding the Yoruba and Borgu kingdoms with the Ooni of Ife as Kisra's brother, the Yoruba-Benin link through Oranmiyan and Eweka, and the Umu-Ezechinma Igbo and Isoko ties to Edo. Conflict covers the Oyo-Nupe wars and the Bariba-Yoruba alliance, the Kano-Katsina wars over trade routes, Jukun conquest over the Kanuri, Hausa, Igala, Idoma and Ebira, Benin's expansion to Auchi, Idah, Itsekiri, Urhobo, Isoko, Okpe and Eko (Lagos) with the Benin-descended Lagos kings Ado and Asipa, and the Igala-Nsukka Igbo wars that left the Illah speaking Igbo while their masquerades speak Igala. Trade and commerce covers the Jukun salt-for-Tiv-firewood exchange, Kanem-Bornu's role in the trans-Saharan trade as the channel for Yoruba and Nupe participation, Ibibio land as the corridor between hinterland Igbo and coastal Efik and Ijaw, and Nupe goods traded to the Yoruba. Religion covers shared indigenous practices and borrowed deities and cults: Yoruba Igunu from Nupe Ndakogbaya, Ibibio-origin Ibini Ukpabi among the Igbo, Efik-origin Ekpe and Ekpo among Igbo subgroups, and the Bori cult across Hausaland. The hour closes with Nigeria's six geo-political zones and their dominant ethnic groups, and Nigeria's history dating back to 39,000 BC."
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "Coulomb's law statement, constants, vector form and sign conventions; the superposition principle; the electric field concept",
+        "topic": "The Tuesday deep hour takes the week-2 electrostatics material conceptually rather than numerically. It works through what Coulomb's law actually claims - force proportional to the product of charge magnitudes and to the inverse square of separation, acting along the line joining them - and where the law stops being valid, namely point charges at rest with spheres treated from their centres. It then examines the superposition principle as an experimental fact rather than a definition: that the pairwise force between two charges is unaffected by a third charge, which is precisely what licenses applying a two-body law to a many-body system. The session covers what the electric field is as a quantity, why it is defined as force per unit vanishingly small test charge, and why it belongs to the source charges rather than to the test charge that reveals it. Field lines are read as a representation: what their direction, spacing and non-crossing encode, and why a single isolated charge produces a field but feels no net force from its own field. The session then contrasts the vector nature of the electric field with the scalar nature of electric potential, and draws out the consequence that fields can cancel where potentials add and potentials can cancel where fields add. It closes on the structure of the Lorentz force - which term requires motion, which term does work and which cannot.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
         "course": "CSC_106",
-        "topic": "HTTP vs HTTPS and FTP vs SFTP - ports 80/443/21/22, what each encrypts, plus HTML vs XML"
+        "topic": "The Tuesday fast hour covers Week 2 of Introduction to Web Technologies, which is a protocol-and-markup survey rather than a coding week. It opens with the four transfer protocols the week is titled after - HTTP as the insecure foundation of web data communication, HTTPS as its encrypted counterpart, FTP as the unencrypted file transfer protocol, and SFTP as the secure extension that adds encryption and strong authentication. It then moves to markup languages as the backbone of structured content: HTML for structuring web content through elements, tags and attributes; XML for storing and exchanging structured data using user-defined tags; SVG for scalable two-dimensional vector graphics; MathML for mathematical notation; and XHTML as HTML reformulated as an XML application. The email block follows, splitting SMTP (sending and relaying outgoing mail, with its HELO, MAIL FROM and RCPT TO commands) from the retrieval protocols POP3 (downloads for offline access) and IMAP (keeps mail on the server and synchronises across devices), plus MIME for non-ASCII text and attachments. Next comes the Domain Name System: domain name resolution, name-to-IP mapping and reverse lookup, the root domain, TLD, second-level domain and subdomain hierarchy, resolvers and authoritative servers, MX records, and DNSSEC for signing DNS data against cache poisoning. The hour closes on web communication protocols - WebSocket's full-duplex persistent TCP connection, REST's stateless resource-based use of GET, POST, PUT and DELETE mapped to CRUD, and SOAP's strict XML messaging - with their stated advantages and disadvantages. The emphasis throughout is memorising acronym expansions and being able to discriminate each pair, since that is what the assessment format rewards."
       }
     },
     {
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "The six problem-solving strategies: what each one is, the condition attached to it, and what distinguishes it from its neighbour",
+        "topic": "The Wednesday deep hour takes Week 2's material conceptually, without traces or arithmetic. It starts from the lesson's own definition of a problem-solving strategy - a plan, made of multiple steps, used to find a solution or overcome a challenge - and the claim that different problems require different strategies, so that choosing and then studying a strategy's rules and procedures is part of solving rather than a delay. It then works through the internal mechanism of each of the six named strategies: brainstorming's dependence on volume of ideas and on deferred criticism; the heuristic trade of rationality for speed, valid only where a sub-optimal solution is acceptable; trial-and-error's cost scaling with the number of candidate solutions; means-ends analysis fixing the intended solution in advance and decomposing the problem so each part gets its best-suited approach; abstraction deleting the attributes that will not help reach a solution and leaving a model; and analogy transferring understanding from a known system, valid only while the underlying principles are the same. For each, the session asks what it costs and under what conditions it fails. The second half covers the conceptual basis of the week's classifications: well-defined versus ill-defined, and routine versus non-routine as a question of whether a standard method exists rather than whether arithmetic is involved. It closes on solvability - what the universal Turing machine contributes to the idea of an algorithm, and why \"unsolvable\" is a claim about the absence of a systematic decision procedure for every input rather than a claim that no answer exists, with decidable and undecidable problems and the halting problem treated in those terms.",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Communication and Meaning: semiotics, signs vs symbols, and denotation vs connotation in cultural context"
+        "topic": "The Wednesday fast hour covers GST_122 Week 2, \"Communication and Meaning\", whose organising claim is that the ultimate goal of communication is that meaning is conveyed accurately, and that communication is not solely about words. Start with semiotics - the field of signs and symbols and the role they play in everyday interaction - and the point that meaning travels through non-verbal signs as well as language. Then drill the central distinction the course examines on: denotative meaning (the literal, dictionary sense) versus connotative meaning (the implied or suggested sense, carrying cultural and emotional associations), practising on example words rather than reciting the definitions. Next take the two named sources of confusion, hazardous homophones and ambiguity, and learn the discriminating test between them: written down, a homophone problem disappears while an ambiguous sentence is still readable two ways. Work through the week's case study, \"The Ambiguity Challenge in Project Coordination\", in which a single ambiguous task-assignment sentence produced conflicting interpretations of tasks and responsibilities across a project team. Close by memorising the lesson's definition of effective communication - conveying intended meanings accurately while being mindful of the broader cultural and emotional associations of words - and the six named competencies: Semiotic Awareness, Contextual Interpretation, Clarity in Expression, Active Listening, Conflict Resolution and Cultural Sensitivity. Since the course tests classification of examples, spend the last ten minutes labelling sample sentences as denotative, connotative, homophone or ambiguity."
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Constructing sketches, sign charts, and solving equations and inequalities graphically and algebraically",
+        "topic": "This session works the same Week 2 function material as problems: reading a question, choosing a method, executing it accurately and checking the result. It covers evaluating compositions in the correct order and seeing that f o g and g o f differ; finding the largest domain of an expression that combines a logarithm with a denominator, where two separate restrictions must both be imposed; completing the square on a quadratic to locate its vertex, axis of symmetry and direction of opening; solving an absolute-value equation by splitting it into its two cases; solving an exponential equation by isolating the power and recognising it as a power of the base; evaluating a piecewise function at and either side of its boundary point by first deciding which condition the input satisfies; recovering a line's equation from two points via the slope formula and point-slope form; and solving a logarithmic equation by combining logs, clearing the log, and then rejecting the root that violates the domain. The written questions are diagnostic: naming exactly where standard wrong routes go astray - squaring an absolute-value equation and manufacturing extraneous roots, treating 5^x as 5 times x, taking c to be the vertex y-coordinate - and checking a vertex by independent means before reading end behaviour off a cubic.",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Verifying Ohm's law: circuit setup, the V-I graph whose gradient is R, ohmic vs non-ohmic conductors, and the standard precautions"
+        "topic": "The Thursday fast hour covers Week 2 of General Physics Practical II: Ohmic resistance and the experiment to verify Ohm's law. Start with the statement of Ohm's law - current through a conductor is directly proportional to the potential difference across it at constant temperature - and the equation V = IR with each symbol and unit defined, plus the distinction between ohmic resistors (constant R, straight V-I line through the origin, reversible behaviour) and non-ohmic ones such as varistors, photoresistors and thermistors. Then drill the two combination rules: series resistors carry the same current and add as R = R1 + R2 + ... + RN, while parallel resistors share the same potential difference and combine as 1/R = 1/R1 + 1/R2 + ..., checked against the worked values 10 ohm, 20 ohm and 30 ohm giving 60 ohm in series and 5.45 ohm in parallel. Next walk the Praxilabs virtual Ohmic Resistor procedure in order: wire the breadboard circuit, connect the voltmeter in parallel and the ammeter in series, connect the DC power supply, set R1 between 1 and 20 kilohm, apply a chosen voltage with the knob or slider, press Record, and repeat six more times for seven data points before the Excel file downloads. Finish on the analysis that carries the marks: plot V on the y-axis against I in mA on the x-axis, map V = IR onto y = mx + c so that the gradient is the resistance and a zero intercept confirms no systematic offset, watch the unit trap that volts per milliamp gives kilohms, and compute the percentage error against the 1 kilohm default value, which must fall within 5 per cent for the verification to pass."
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "PHY_102 problems: multi-charge superposition calculations, component resolution, equilibrium/null points, and ratio and scaling problems",
+        "topic": "The Friday deep hour works the same week-2 material as problems. It concentrates on setting up superposition calculations from a free-body sketch: identifying each pairwise force, deciding from the signs whether it is an attraction or a repulsion, and therefore whether contributions add or subtract along the line - the single step where most marks are lost. It carries the arithmetic through with unit conversions (nm, um, nC, uC) intact and with the Coulomb constant applied correctly. The session works the three problems set in the deck: the electron on the line between two protons 3.6 nm apart, the three collinear charges of -18 uC, -12 uC and +24 uC and the net force on each, and the +2.00 nC / -5.00 nC pair whose resultant field at an intermediate point must be found and then converted to a force on an electron placed there. It also drills route selection - recognising when symmetry gives an answer instantly versus when a brute-force component sum is unavoidable - and error diagnosis, such as spotting that a net force larger than either contributing force means opposing contributions were wrongly added. Finally it covers checking a finished answer, either by dimensional analysis or by recomputing through a second independent relation. The emphasis throughout is on the set-up and the check, not on recalling statements.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "Review",
-        "topic": "Week 2 review: re-work any check question you got wrong, then read the confidence log and pick Sunday's two topics"
+        "topic": "Week 2 review: re-work every check question you got wrong Mon-Thu, then cold, on paper, do one composite evaluated in both orders, one vertex by completing the square checked against -b/(2a), and one three-charge collinear superposition where you settle every direction from a sketch before touching the arithmetic. Then state, without notes, why potentials add as signed numbers while fields add as vectors. Finish by settling which two topics Sunday gets from the four scores so far."
       }
     },
     {
       "day": "Sat",
       "deep": {
         "course": "COS_102",
-        "topic": "Applying the strategies to stated problems: tracing a substitution puzzle, decomposing a target, choosing and justifying a strategy, and spotting where a strategy fails",
+        "topic": "The Saturday session is COS_102 applied, working the week's method through on concrete cases rather than restating it. The student is given stated problems and has to classify them by testing rather than by surface appearance - recognising that Bridget's 50-question exam-marks problem is non-routine despite using only arithmetic, that the parking-space area is routine because a known formula applies, and that \"approximate the number of hairs on your head\" is non-routine rather than unsolvable. Scenarios are then read and matched to the strategy actually in use, including cases designed to mislead: XYZ Corporation's $2bn turnover target decomposed into quarterly and regional targets is means-ends analysis, while the doctor converging several weaker rays on a deep tumour after recalling an army dividing to take a fortress is analogy, not means-ends, despite the division into smaller parts. The session runs the two ordered procedures of the week in sequence - the three analogy steps and the three steps for attacking a non-routine problem. It traces the substitution puzzle one replacement at a time, obtaining BOOOB from BOB via the rules OB->BOOB and BOB->O. Finally it diagnoses attempts that went wrong: a heuristic applied to a routine problem where an exact answer is required, a brainstorming session ruined by immediate criticism, and a premature conclusion that a substitution puzzle does not come out. The halting problem is met applied, as a request to write a program that decides termination for any input.",
         "checkFile": "checks/Sat-COS_102.md"
       },
       "fast": {
         "course": "Catch-up",
-        "topic": "Sit the Week 1 question sets - they are now seven days old and due; use any remaining time on a missed fast hour"
+        "topic": "Catch-up: sit the Week 1 question sets, now seven days old and due - all seven of them, since this is the first retest of the semester and the retention gap is the whole point. Then clear anything left over from this week: the CSC_106 protocol and markup acronyms and the GST_112 four indicators of intergroup relations with their named examples are the two that most reward a second pass, both being pure recall that is cheapest to bank now. If time remains, re-read the PHY_108 series and parallel combination rules."
       }
     }
   ],
@@ -82,114 +82,122 @@
       "code": "PHY_102",
       "name": "General Physics II",
       "weekTopics": [
-        "Coulomb's law: statement, formula F = k|q1 q2|/r^2, and the constants k = 8.99 x 10^9 N m^2/C^2 and epsilon-0 = 8.85 x 10^-12 C^2/(N m^2)",
-        "Vector form of Coulomb's law, sign conventions, and Newton's third law for charge pairs",
-        "The superposition principle: net force and net field as a vector sum of pairwise contributions",
-        "Collinear (one-axis) superposition of Coulomb forces",
-        "Two-dimensional superposition by resolution into x and y components",
-        "Null points and equilibrium positions on the line joining two charges",
-        "Electric field: E = F/q0, E = k|q|/r^2 for a point charge, F = qE, and field lines",
-        "Named in passing: the Lorentz force F = q(E + v x B) and electric potential as a scalar quantity"
+        "Coulomb's law for point charges",
+        "Superposition of electrostatic forces",
+        "Electric field and field lines",
+        "Electric potential as a scalar",
+        "Lorentz force on a moving charge"
       ],
       "summaryFile": "PHY_102-Summary.md",
-      "questionsFile": "PHY_102-Questions.md"
+      "questionsFile": "PHY_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_102/Week-02/Superposition-of-force-and-Electric-Field-PDF.pdf"
+      ]
     },
     {
       "code": "MTH_102",
       "name": "Elementary Mathematics II (Calculus)",
       "weekTopics": [
-        "How to graph functions: identifying function types",
-        "Function families and their characteristic shapes: linear, quadratic, polynomial, exponential, logarithmic, trigonometric, absolute value, piecewise, rational, constant",
-        "Function characteristics: intercepts, symmetry (even and odd), asymptotes (vertical, horizontal, oblique), holes",
-        "Analysing function behaviour: end behaviour from the leading term, increasing and decreasing intervals, turning points",
-        "Solving equations and inequalities graphically and algebraically, using sign charts"
+        "Functions, relations and the vertical line test",
+        "Injective, surjective and bijective maps; composition",
+        "Linear and quadratic functions (slope, intercept, vertex)",
+        "Exponential and logarithmic functions as inverses",
+        "Piecewise, absolute-value, trigonometric and polynomial functions"
       ],
       "summaryFile": "MTH_102-Summary.md",
-      "questionsFile": "MTH_102-Questions.md"
+      "questionsFile": "MTH_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/MTH_102/Week-02/How-to-Graph-Functions-PDF-pdf.pdf"
+      ]
     },
     {
       "code": "COS_102",
       "name": "Introduction to Problem Solving",
       "weekTopics": [
-        "Problem-solving strategies: definition, why different problems need different strategies, and how an efficient strategy yields a robust and reliable solution",
-        "The six strategies taught: brainstorming, heuristics, trial and error, means-ends analysis, abstraction, analogy (the week summary names the first four)",
-        "The condition attached to each strategy: few possible solutions for trial and error; acceptable sub-optimal solutions for heuristics; matching underlying principles for analogy",
-        "Root cause analysis as the first methodology step in the XYZ Corporation declining-quality case study",
-        "Understanding problems: well-defined versus ill-defined problems (clear or absent goals, expected solutions and solution paths)",
-        "Routine problems: solvable by an arithmetic operation, solved with algorithms, solely a matter of picking the right algorithm",
-        "Non-routine problems: no standard method exists, so a novel method must be developed by studying the problem critically, gathering information, and implementing an effective strategy",
-        "The Universal Turing Machine: a fixed pre-loaded instruction table, programs placed on its tape, and Turing's two contributions to the modern computer",
-        "Solvable versus unsolvable problems, and the fact that unsolvable means no systematic method for deciding, not that no solution exists",
-        "Decidable versus undecidable problems, the halting problem, and substitution puzzles"
+        "Problem-solving strategies (brainstorming, heuristics, trial-and-error, means-ends analysis)",
+        "Abstraction and analogy",
+        "Well-defined vs ill-defined problems",
+        "Routine vs non-routine problems",
+        "Universal Turing machine; solvable, unsolvable and undecidable problems"
       ],
       "summaryFile": "COS_102-Summary.md",
-      "questionsFile": "COS_102-Questions.md"
+      "questionsFile": "COS_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/COS_102/Week-02/Problem-solving-strategies-PDF.pdf",
+        "Courses/COS_102/Week-02/Understanding-problems-and-problem-types-PDF.pdf"
+      ]
     },
     {
       "code": "PHY_108",
       "name": "General Physics Practical II",
       "weekTopics": [
-        "Ohm's law: statement, V = IR, and the constant-temperature condition",
-        "Experiment to verify Ohm's law: apparatus and circuit (ammeter in series, voltmeter in parallel, rheostat, key)",
-        "Procedure, tabulation of V and I, and unit conversion from mA to A",
-        "V-I graph: straight line through the origin, gradient = R (I-V gradient = 1/R)",
-        "Ohmic vs non-ohmic conductors and their characteristic graphs",
-        "Resistors in series (R = R1 + R2 + ...) and in parallel (1/R = 1/R1 + 1/R2 + ...)",
-        "Percentage error on the measured resistance and the 5% tolerance",
-        "Precautions and sources of error: zero error, parallax, heating of the wire, contact resistance"
+        "Ohm's law and V = IR",
+        "Ohmic vs non-ohmic resistance",
+        "Resistors in series and parallel",
+        "Praxilabs virtual Ohmic Resistor experiment",
+        "V-I graph gradient and percentage error"
       ],
       "summaryFile": "PHY_108-Summary.md",
-      "questionsFile": "PHY_108-Questions.md"
+      "questionsFile": "PHY_108-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_108/Week-02/Experiment-to-Verify-Ohm-s-Law-PDF.pdf"
+      ]
     },
     {
       "code": "GST_112",
       "name": "Nigerian Peoples and Culture",
       "weekTopics": [
-        "Intergroup relations among pre-colonial Nigerian peoples: definition, and culture and language as the two factors identifying a group",
-        "Traditions of origin as an indicator: Saif (Kanuri) and Bayajidda (Hausa) from Baghdad, the Kisra legend founding the Yoruba and Borgu kingdoms, Oranmiyan and Eweka linking Yoruba and Benin, Umu-Ezechinma and Isoko links to the Edo",
-        "Conflict as an indicator: Oyo vs Nupe and the Bariba-Yoruba alliance, Kano vs Katsina over trade routes, Jukun conquests over the Kanuri, Hausa, Igala, Idoma and Ebira, Benin conquests to Auchi, Idah, Itsekiri, Urhobo, Isoko, Okpe and Eko (Lagos), Igala vs Nsukka Igbo",
-        "Trade and commerce as an indicator: Jukun salt for Tiv firewood, Kanem Bornu and the trans-Saharan trade, Ibibio land as corridor between the hinterland Igbo and the coastal Efik and Ijaw, Hausa trade with the Tuareg, Kanuri, Gonja, Oyo, Igala and Kwararafa, Nupe goods traded to the Yoruba",
-        "Religion as an indicator: shared practices (priests and priestesses, incantations, animal sacrifice, pantheon and nature worship, masquerades) and shared institutions (Igunu from Ndakogbaya, Ibini Ukpabi, Ekpe and Ekpo, the Bori cult)",
-        "Nigeria's six geo-political zones and their principal ethnic groups"
+        "Inter-group relations defined",
+        "Traditions of origin as indicator",
+        "Conflict and conquest as indicator",
+        "Trade and commerce as indicator",
+        "Religion as indicator; Nigeria's six geo-political zones"
       ],
       "summaryFile": "GST_112-Summary.md",
-      "questionsFile": "GST_112-Questions.md"
+      "questionsFile": "GST_112-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_112/Week-02/Intergroup-Relations-Among-Precolonial-Nigerian-People-pdf.pdf"
+      ]
     },
     {
       "code": "GST_122",
       "name": "Communication in English II",
       "weekTopics": [
-        "Communication and meaning: meaning as the goal of communication",
-        "Semiotics: signs and symbols",
-        "Signifier, signified and referent; icon, index and symbol",
-        "Denotative (literal) vs connotative (implied) meaning",
-        "Cultural and emotional associations of words",
-        "Context and active interpretation by the listener",
-        "Barriers to shared meaning: ambiguity and hazardous homophones"
+        "Communication and meaning",
+        "Semiotics - signs and symbols",
+        "Denotative vs connotative meaning",
+        "Hazardous homophones",
+        "Ambiguity and contextual interpretation"
       ],
       "summaryFile": "GST_122-Summary.md",
-      "questionsFile": "GST_122-Questions.md"
+      "questionsFile": "GST_122-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_122/Week-02/Summary.pdf"
+      ]
     },
     {
       "code": "CSC_106",
       "name": "Introduction to Web Technologies",
       "weekTopics": [
-        "HTTP and HTTPS: request/response, statelessness, methods, status code classes, TLS/SSL and certificates, ports 80 and 443",
-        "FTP and SFTP: control vs data connections, active vs passive mode, plaintext credentials, SSH-based security, ports 21 and 22, and how SFTP differs from FTPS",
-        "Markup languages: HTML, XML, SVG, MathML and XHTML, and how HTML differs from XML",
-        "Email protocols: SMTP, POP3, IMAP and MIME",
-        "DNS: domain name resolution, hierarchy (root, TLD, second-level, subdomain), resolvers and authoritative servers, DNSSEC",
-        "Web communication protocols: WebSocket, REST and SOAP"
+        "HTTP vs HTTPS and FTP vs SFTP",
+        "Markup languages (HTML, XML, SVG, MathML, XHTML)",
+        "Email protocols (SMTP, POP3, IMAP, MIME)",
+        "DNS hierarchy and DNSSEC",
+        "Web communication protocols (WebSocket, REST, SOAP)"
       ],
       "summaryFile": "CSC_106-Summary.md",
-      "questionsFile": "CSC_106-Questions.md"
+      "questionsFile": "CSC_106-Questions.md",
+      "sourcePdfs": [
+        "Courses/CSC_106/Week-02/Web-Development-Protocols-and-Markup-Languages-PDF.pdf"
+      ]
     },
     {
       "code": "MIVA_COS_111",
       "name": "Technical Certification I",
       "weekTopics": [],
       "summaryFile": "MIVA_COS_111-Summary.md",
-      "questionsFile": null
+      "questionsFile": null,
+      "sourcePdfs": []
     }
   ],
   "checks": [
@@ -197,72 +205,136 @@
       "id": "mon-mth102",
       "day": "Mon",
       "course": "MTH_102",
-      "topic": "Function types and their characteristic shapes, intercepts, symmetry, asymptotes and end behaviour",
-      "maxScore": 6,
+      "topic": "This session takes Week 2's function material conceptually rather than computationally, starting from what a function actually is: a rule assigning to every element of a domain A exactly one element of a codomain B, and what breaks if either the totality clause or the uniqueness clause is dropped. It works through why the vertical line test detects a failure of uniqueness of output while the horizontal line test detects a failure of uniqueness of input, and why a graph can pass one and fail the other. It separates the injective condition (no element of the codomain is hit twice) from the surjective condition (no element is missed), distinguishes range from codomain, and establishes why only a bijection can be inverted - a collision makes the inverse ambiguous, a gap makes it undefined. It examines why the logarithm carries the restrictions b > 0, b != 1 and x > 0, and why exponential and logarithmic functions swap domain and range as inverses of each other. It covers why a piecewise function's conditions must be disjoint (a boundary point assigned twice with different values would break single-valuedness) while the branches are under no obligation to agree there. It asks why the absolute value is defined by two cases rather than by \"removing the minus sign\", since the sign of an expression like x - 3 depends on x. It closes on why the degree and leading coefficient alone govern a polynomial's behaviour far from the origin, because every lower-degree term becomes negligible relative to the leading term.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "For f(x) = (x^2 - 4)/(x^2 - x - 6), the vertical asymptotes are:",
+          "q": "The definition of a function f: A → B says every element of A is assigned **exactly one** element of B. If \"exactly one\" were weakened to \"at least one\", what specifically breaks?",
           "options": [
-            "x = 3 only; the factor (x + 2) cancels, leaving a hole at (-2, 4/5)",
-            "x = -2 and x = 3, since both make the denominator zero",
-            "x = -2 and x = 2, since these are where the numerator vanishes",
-            "none, because the numerator and denominator share a common factor"
-          ],
-          "answerIndex": 0,
-          "concept": "A denominator zero gives a vertical asymptote only if it survives cancelling",
-          "why": "Factoring gives (x-2)(x+2)/((x-3)(x+2)); the (x+2) cancels, so x = -2 is a removable hole at height (-2-2)/(-2-3) = 4/5, and only x = 3 sends the function to plus or minus infinity. Option 2 reads the unfactored denominator; option 3 confuses zeros of the numerator (x-intercepts) with asymptotes; option 4 over-generalises the cancellation, since only the shared factor is removed and x = 3 is untouched."
-        },
-        {
-          "type": "mcq",
-          "q": "f(x) = (2x^3 - x)/(5x^2 + 4). Which is correct?",
-          "options": [
-            "Horizontal asymptote y = 2/5, the ratio of the leading coefficients",
-            "Horizontal asymptote y = 0, since the function is a proper fraction",
-            "No asymptotes at all, since 5x^2 + 4 is never zero",
-            "No horizontal asymptote; the degree of the numerator exceeds that of the denominator by one, and long division gives the oblique asymptote y = (2/5)x"
-          ],
-          "answerIndex": 3,
-          "concept": "Which asymptote you get is decided by comparing degrees, not by taking a ratio automatically",
-          "why": "deg N = 3 and deg D = 2, so the ratio 2/5 is not a horizontal asymptote; dividing gives f(x) = (2/5)x - (13/5)x/(5x^2 + 4), and the remainder term approaches 0, so the graph hugs the line y = (2/5)x. Option 1 misapplies the equal-degrees rule; option 2 misapplies the deg N < deg D rule; option 3 assumes that no vertical asymptote means no asymptotes, but end behaviour is a separate question."
-        },
-        {
-          "type": "mcq",
-          "q": "f(x) = x^3 + 1. Which statement is correct?",
-          "options": [
-            "Odd, because the highest power of x is odd, so the graph has rotational symmetry about the origin",
-            "Neither: f(-x) = -x^3 + 1, which is neither f(x) nor -f(x); the +1 lifts the odd graph of x^3 off the origin",
-            "Even, because f(-x) = -x^3 + 1 differs from f(x) only by a sign",
-            "Odd, because f(x) - 1 = x^3 is odd and a constant term cannot affect symmetry"
+            "The domain would no longer be the whole of A.",
+            "The symbol f(x) would no longer name a definite value.",
+            "The range could become larger than the codomain.",
+            "The function could no longer be surjective."
           ],
           "answerIndex": 1,
-          "concept": "Symmetry is decided by computing f(-x), not by inspecting the powers",
-          "why": "f(-x) = -x^3 + 1 differs from f(x) = x^3 + 1 and also from -f(x) = -x^3 - 1, so the function is neither even nor odd. Options 1 and 4 both assume symmetry is a property of the x-terms alone, but a vertical shift moves the centre of rotation away from the origin. Option 3 misstates the even condition, which is f(-x) = f(x) exactly."
+          "concept": "The uniqueness clause in the definition of a function",
+          "why": "Weakening 'exactly one' to 'at least one' lets a single input carry two outputs, so the notation f(x) no longer denotes a single definite value."
         },
         {
           "type": "mcq",
-          "q": "For f(x) = -2x^4 + 7x^3 - 5, the end behaviour is:",
+          "q": "The vertical line test detects the failure of which clause?",
           "options": [
-            "f(x) approaches +infinity as x approaches -infinity, and f(x) approaches -infinity as x approaches +infinity",
-            "f(x) approaches +infinity at both ends, since a negative x raised to the fourth power is positive",
-            "f(x) approaches -infinity at both ends: the degree is even so the two ends match, and the leading coefficient is negative so both point downwards",
-            "f(x) approaches -5 at both ends, since the constant term dominates for large |x|"
+            "That the domain is an unbroken interval.",
+            "That every element of the codomain is used.",
+            "That no two inputs share an output.",
+            "That each input has only one output."
+          ],
+          "answerIndex": 3,
+          "concept": "What the vertical line test actually tests",
+          "why": "A vertical line collects every point with the same first coordinate, so two intersections mean one input has two outputs - a failure of uniqueness of output, not of injectivity or surjectivity."
+        },
+        {
+          "type": "mcq",
+          "q": "A map f: A → B is described as surjective but not injective. Which must be true?",
+          "options": [
+            "Every element of B is reached, and some element of B twice.",
+            "Every element of A is reached, and some element of A twice.",
+            "The range is a proper subset of the codomain of f.",
+            "f has a well-defined inverse on the whole of B."
+          ],
+          "answerIndex": 0,
+          "concept": "Distinguishing surjective from injective",
+          "why": "Surjective means every element of the codomain is reached; not injective means some element of the codomain is reached by more than one input."
+        },
+        {
+          "type": "mcq",
+          "q": "f: A → B is surjective but fails to be injective. What exactly goes wrong when you try to define f⁻¹?",
+          "options": [
+            "f⁻¹ would have a domain larger than B.",
+            "f⁻¹ would be undefined at some elements of B.",
+            "Some element of B would have to be sent to two different elements of A.",
+            "f⁻¹ ∘ f would be the identity on B instead of on A."
           ],
           "answerIndex": 2,
-          "concept": "End behaviour is set by the leading term alone: parity of the degree plus the sign of the leading coefficient",
-          "why": "The term -2x^4 dominates; x^4 goes to +infinity at both ends, and multiplying by -2 sends both ends to -infinity. Option 1 is the odd-degree pattern; option 2 computes x^4 correctly but drops the -2; option 4 inverts the dominance, since the constant is negligible for large |x|."
+          "concept": "Why invertibility requires injectivity",
+          "why": "If two inputs share an output, the proposed inverse would have to send that one output to two different inputs, which is not a function."
+        },
+        {
+          "type": "mcq",
+          "q": "log_b(x) is defined only for b > 0 **and b ≠ 1**. What is the reason for excluding b = 1?",
+          "options": [
+            "A power of the number 1 has no defined value at all.",
+            "log₁(x) would come out negative whenever x is below 1.",
+            "The curve y = 1^x would fail to cross the y-axis anywhere.",
+            "Every power of 1 equals 1, so nothing else is reachable."
+          ],
+          "answerIndex": 3,
+          "concept": "Why the logarithm base excludes b = 1",
+          "why": "Since 1^y = 1 for every y, the function 1^x is constant and hits no other value, so it has no inverse to serve as log base 1."
+        },
+        {
+          "type": "mcq",
+          "q": "In f(x) = 2x + 1 for x ≤ 0 and f(x) = x² − 3 for x > 0, why is the second condition written x > 0 rather than x ≥ 0?",
+          "options": [
+            "Because x = 0 is already assigned by the first branch.",
+            "Because the expression x² − 3 has no defined value when x is 0.",
+            "Because the two branches are required to agree in value at x = 0.",
+            "Because the graph of a function must be unbroken at a boundary."
+          ],
+          "answerIndex": 0,
+          "concept": "Why piecewise conditions must be disjoint",
+          "why": "x = 0 is already covered by x <= 0; using x >= 0 in the second branch would assign x = 0 both 1 and -3, destroying single-valuedness."
+        },
+        {
+          "type": "mcq",
+          "q": "Why is |x| defined by two cases (x if x ≥ 0, −x if x < 0) instead of the instruction \"remove the minus sign\"?",
+          "options": [
+            "Because −x is a positive number whatever the value of x.",
+            "Because the graph of |x| has to be smooth at the origin.",
+            "Because which case applies depends on x, not on a visible sign.",
+            "Because absolute value is defined for real inputs only."
+          ],
+          "answerIndex": 2,
+          "concept": "Why absolute value is defined by cases",
+          "why": "The rule cannot be 'remove the minus sign' because in |x - 3| there is no visible sign - which case applies is determined by the value of x."
+        },
+        {
+          "type": "mcq",
+          "q": "For a polynomial of degree n with leading coefficient aₙ, why do those two numbers alone decide the shape of the graph far from the origin?",
+          "options": [
+            "Because the lower-degree terms become zero once |x| is large.",
+            "Because every other term, divided by aₙxⁿ, tends to 0 as |x| grows.",
+            "Because polynomials of equal degree have identical graphs.",
+            "Because a₀ is only the y-intercept and never affects shape."
+          ],
+          "answerIndex": 1,
+          "concept": "Why degree and leading coefficient fix end behaviour",
+          "why": "Dividing any lower-degree term by the leading term gives a ratio tending to 0 as |x| grows, so the leading term dominates - the other terms become negligible relative to it, not zero in themselves."
         },
         {
           "type": "short",
-          "q": "A student writes: 'f(x) = 4x/(x^2 + 1) has the horizontal asymptote y = 0, so the graph can never touch the x-axis.' Explain precisely what a horizontal asymptote does and does not claim, and say where this graph actually meets y = 0.",
-          "concept": "A horizontal asymptote describes behaviour only as x approaches plus or minus infinity, and may be crossed",
-          "why": "Model answer: saying y = 0 is a horizontal asymptote means f(x) approaches 0 as x approaches +infinity and as x approaches -infinity; it says nothing about what the graph does at finite x. Here 4x/(x^2 + 1) = 0 exactly when the numerator 4x = 0, that is at x = 0, so the graph passes straight through the asymptote at the origin, then rises, turns and settles back towards y = 0. Contrast a vertical asymptote, which genuinely can never be crossed because the function is undefined there."
+          "q": "Every function is a relation, but not every relation is a function. Explain the difference using the slide's set language — \"A has many B\" versus \"B can have many A\" — and say which of those two situations is allowed.",
+          "concept": "Every function is a relation; the converse fails on the uniqueness clause",
+          "why": "A relation is any pairing of elements of A with elements of B. A function is a relation with one extra restriction: each element of A is paired with exactly one element of B. In the slide's language, 'B can have many A' is allowed - several different inputs may share one output, which is just a many-to-one function. What is forbidden is 'A has many B': one input carrying several outputs. That is the situation the vertical line test detects, and it is precisely what stops a relation from being a function."
         },
         {
           "type": "short",
-          "q": "Explain what it means to say a graph is increasing on an interval and that it has a turning point at x = c, and explain why a turning point can never occur at a vertical asymptote.",
-          "concept": "Increasing/decreasing and turning points are statements about x-intervals of points that actually lie on the graph",
-          "why": "Model answer: f is increasing on an interval if for any x1 < x2 in that interval f(x1) < f(x2), so the graph rises from left to right; decreasing is the reverse. A turning point at x = c is a point (c, f(c)) on the graph where the behaviour switches from increasing to decreasing (local maximum) or from decreasing to increasing (local minimum). At a vertical asymptote x = a the function is undefined, so there is no point (a, f(a)) available to be a turning point; the graph runs off to plus or minus infinity there instead of turning back."
+          "q": "The vertical line test and the horizontal line test look almost identical but answer different questions. Explain what property each one is testing and why a graph can pass one and fail the other.",
+          "concept": "The two line tests check different clauses of the pairing",
+          "why": "The vertical line test checks whether each input has only one output - that is, whether the relation is a function at all. The horizontal line test checks whether each output comes from only one input - that is, whether the function is injective and therefore invertible. A graph can pass the first and fail the second: y = x^2 is a perfectly good function, since every x gives exactly one y, but the line y = 4 meets it twice, so two inputs share an output and it has no inverse on R. The two tests scan in perpendicular directions because they interrogate opposite halves of the pairing."
+        },
+        {
+          "type": "short",
+          "q": "Explain why f(x) = b^x and g(x) = log_b(x) are called inverses, and why the domain of one is the range of the other. Use this to explain why log_b(x) is undefined for x ≤ 0.",
+          "concept": "Exponential and logarithm as mutual inverses, with domain and range exchanged",
+          "why": "log_b(x) is defined as the exponent to which b must be raised to give x, so b^(log_b x) = x and log_b(b^x) = x - each undoes the other, which is exactly what makes them inverses. Under inversion the domain and range swap: b^x has domain all reals and range (0, inf), so log_b(x) has domain (0, inf) and range all reals. That is why log_b(x) is undefined for x <= 0 - no real exponent applied to a positive base ever produces zero or a negative number, so there is nothing for the logarithm to return."
+        },
+        {
+          "type": "short",
+          "q": "A slide states that in f(x) = ax² + bx + c, \"c is the y-coordinate of the vertex\". Explain why this is false as written, what c genuinely is, and the one special case in which the slide's claim happens to be true.",
+          "concept": "What c actually is in ax^2 + bx + c, and the single case where the slide is accidentally right",
+          "why": "c is the y-intercept: setting x = 0 gives f(0) = c, so c is the height at which the curve crosses the y-axis. The vertex sits at x = -b/(2a), and its y-coordinate is f(-b/(2a)) = c - b^2/(4a), which differs from c by b^2/(4a). The slide's claim is therefore false whenever b is not zero. The one special case in which it happens to be true is b = 0: the vertex then lies on the y-axis at x = 0, so the vertex's y-coordinate and the y-intercept are the same point, and both equal c."
         }
       ]
     },
@@ -270,72 +342,136 @@
       "id": "tue-phy102",
       "day": "Tue",
       "course": "PHY_102",
-      "topic": "Coulomb's law statement, constants, vector form and sign conventions; the superposition principle; the electric field concept",
-      "maxScore": 6,
+      "topic": "The Tuesday deep hour takes the week-2 electrostatics material conceptually rather than numerically. It works through what Coulomb's law actually claims - force proportional to the product of charge magnitudes and to the inverse square of separation, acting along the line joining them - and where the law stops being valid, namely point charges at rest with spheres treated from their centres. It then examines the superposition principle as an experimental fact rather than a definition: that the pairwise force between two charges is unaffected by a third charge, which is precisely what licenses applying a two-body law to a many-body system. The session covers what the electric field is as a quantity, why it is defined as force per unit vanishingly small test charge, and why it belongs to the source charges rather than to the test charge that reveals it. Field lines are read as a representation: what their direction, spacing and non-crossing encode, and why a single isolated charge produces a field but feels no net force from its own field. The session then contrasts the vector nature of the electric field with the scalar nature of electric potential, and draws out the consequence that fields can cancel where potentials add and potentials can cancel where fields add. It closes on the structure of the Lorentz force - which term requires motion, which term does work and which cannot.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "Two point charges q1 and q2 are clamped a fixed distance apart and exert a force of 6.0 N on each other. A third charge q3 is now clamped on the line exactly midway between them, without moving q1 or q2. The force that q1 now exerts on q2 is:",
+          "q": "Charges q₁ and q₂ sit 1 m apart. A third charge q₃ is then brought into the region. What happens to the force that q₂ exerts on q₁?",
           "options": [
-            "still exactly 6.0 N; q3 adds a further force on each of them but does not alter the q1-q2 force",
-            "less than 6.0 N, because q3 partially screens q2 from q1",
-            "zero, because q3 intercepts the field lines running between them",
-            "still 6.0 N only if q3 happens to be neutral; any charged q3 changes it"
-          ],
-          "answerIndex": 0,
-          "concept": "Superposition: forces are pairwise and additive, and charges do not shield one another",
-          "why": "Each pair obeys Coulomb's law using only that pair's charges and separation, so the q1-q2 force is untouched at 6.0 N; what changes is the net force on q1 and on q2, since a new term is added to the vector sum. Options (b) and (c) import the everyday idea of blocking, which has no counterpart in Coulomb's law - electrostatic force is not a beam that can be intercepted. Option (d) invents a condition: even a charged q3 contributes an extra force rather than modifying an existing one."
-        },
-        {
-          "type": "mcq",
-          "q": "The vector form of Coulomb's law is F_12 = (k q1 q2 / r_12^2) r-hat_12, where F_12 is the force on q2 due to q1 and r-hat_12 points from q1 toward q2. You substitute q1 = +3.0 microcoulomb and q2 = -5.0 microcoulomb with their signs. The expression returns:",
-          "options": [
-            "a vector along +r-hat_12, since the magnitude of a force can never be negative",
-            "a negative number that should be reported as a repulsive force of negative magnitude",
-            "the same vector you obtain by using the magnitudes and then reversing the direction because the charges are unlike",
-            "a vector along -r-hat_12 - q2 is pulled back toward q1, i.e. attraction, with no further sign reasoning needed"
-          ],
-          "answerIndex": 3,
-          "concept": "Sign convention in the vector form: the signed product carries the direction",
-          "why": "q1 q2 is negative, which makes the whole coefficient negative, so the force lies along -r-hat_12, pointing from q2 back toward q1 - exactly attraction. Option (a) confuses magnitude with the vector's component along r-hat. Option (b) treats the negative sign as a defective magnitude rather than as direction information. Option (c) is the commonest error of all - using the sign twice, once in the algebra and again by inspection, which flips the direction back to repulsion. Use signed charges or magnitudes-plus-inspection, never both."
-        },
-        {
-          "type": "mcq",
-          "q": "A test charge of +2.0 nC placed at point P feels a force of 8.0 x 10^-6 N. It is removed and a -6.0 nC charge is placed at exactly the same point P, with the source charges untouched. The electric field at P is now:",
-          "options": [
-            "three times larger and reversed in direction",
-            "unchanged in both magnitude and direction",
-            "the same magnitude but reversed in direction",
-            "zero, because a negative charge cannot define a field"
+            "It grows, because there is now more total charge nearby.",
+            "It is unchanged; q₃ contributes a separate force that is added vectorially.",
+            "It falls, because q₃ screens off part of q₁'s field.",
+            "It changes only if q₃ lies on the line joining q₁ and q₂."
           ],
           "answerIndex": 1,
-          "concept": "The electric field is a property of the source charges and of the point, not of the probe",
-          "why": "E = F/q0 is a ratio: putting a bigger or oppositely signed charge at P changes the force it feels in exactly the same proportion, leaving E = 4.0 x 10^3 N/C in the same direction. Options (a) and (c) confuse the field with the force on the new charge, which does indeed grow threefold and reverse. Option (d) mistakes the sign of the probe for the existence of the field."
+          "concept": "Superposition: pairwise forces are independent of the other charges present",
+          "why": "Bringing q3 in adds a third force vectorially but leaves the q1-q2 force exactly as Coulomb's law gives it - charge does not pool and there is no electrostatic screening in vacuum."
         },
         {
           "type": "mcq",
-          "q": "Which statement about the constants in Coulomb's law is correct?",
+          "q": "The electric field is defined as **E** = **F**/q₀ using a test charge q₀ that is taken to be vanishingly small. Why must q₀ be small?",
           "options": [
-            "k = 4 pi epsilon-0, so a medium of larger permittivity gives a larger force between the same charges",
-            "k = 1/(4 pi epsilon-0), so a medium of larger permittivity strengthens the force between the same two charges",
-            "k = 1/(4 pi epsilon-0), so replacing the vacuum with a medium of larger permittivity weakens the force between the same two charges at the same separation",
-            "epsilon-0 = 8.99 x 10^9 C^2/(N m^2) and k = 8.85 x 10^-12 N m^2/C^2"
+            "A large q₀ would disturb the source charges and change the field being measured.",
+            "The definition is only valid for charges of magnitude smaller than one coulomb.",
+            "F grows in proportion to q₀², so the ratio F/q₀ is constant only when q₀ is small.",
+            "A large q₀ would also feel a magnetic force, which would spoil the measurement."
+          ],
+          "answerIndex": 0,
+          "concept": "Why the test charge in E = F/q0 must be vanishingly small",
+          "why": "A finite test charge exerts its own forces back on the source charges, displacing them and altering the very field being measured, so the limit of small q0 is needed for E to be a property of the sources."
+        },
+        {
+          "type": "mcq",
+          "q": "A single point charge sits alone in otherwise empty space. Which statement is correct?",
+          "options": [
+            "It feels a force from its own field, directed radially outward.",
+            "It produces no field, since a field requires two charges to exist.",
+            "It produces a field everywhere, but feels no net force from that field.",
+            "Its field exists only at points where another charge has been placed."
           ],
           "answerIndex": 2,
-          "concept": "k = 1/(4 pi epsilon-0): permittivity sits in the denominator",
-          "why": "Because epsilon-0 (or epsilon for a medium) is in the denominator, a larger permittivity gives a smaller constant and therefore a weaker force - the medium permits the field more readily and screens the interaction. Option (a) inverts the relationship; option (b) has the correct formula but reads the inverse dependence backwards, which is the real discriminator here; option (d) swaps the two numerical values and their units."
+          "concept": "A charge produces a field everywhere but exerts no net force on itself",
+          "why": "The field is defined by the force it would exert on a second charge; a lone charge's own field is real everywhere but cannot produce a net self-force."
+        },
+        {
+          "type": "mcq",
+          "q": "Two electric field lines can never cross one another. The reason is that:",
+          "options": [
+            "field lines are only ever drawn emerging from positive charges.",
+            "a crossing point would have to be a point of zero field strength.",
+            "field lines repel each other in the way that like charges do.",
+            "the field at a point has one direction, and a crossing would give it two."
+          ],
+          "answerIndex": 3,
+          "concept": "Why field lines never cross",
+          "why": "The field at any point has a single, unique direction - the tangent to the line there - and a crossing would assign two directions to one point, meaning two different forces on the same test charge."
+        },
+        {
+          "type": "mcq",
+          "q": "Why may the potentials due to several charges be added as ordinary signed numbers, while the fields must be added as vectors?",
+          "options": [
+            "Potential is energy per unit charge, and energy has no direction — only a sign.",
+            "Potential is always a positive quantity, so no conflict of signs can arise.",
+            "Potential falls off as 1/r rather than 1/r², so the directions cancel out.",
+            "Potential is defined only along a field line, which already fixes its direction."
+          ],
+          "answerIndex": 0,
+          "concept": "Why potentials add algebraically while fields add vectorially",
+          "why": "Potential is energy per unit charge and energy is a scalar, so each contribution carries only a sign, not a direction - there is nothing to resolve into components."
+        },
+        {
+          "type": "mcq",
+          "q": "At the exact midpoint between two equal positive charges, **E** = 0 but V ≠ 0. Which account of this is right?",
+          "options": [
+            "V must be zero there too, since V is obtained directly from E by division.",
+            "E vanishes because the two charges are equal; V survives because it depends on their sign.",
+            "The field contributions are opposite arrows that cancel; the potentials are positive numbers that add.",
+            "E vanishes because the midpoint is where both field lines terminate; V survives because work was done reaching it."
+          ],
+          "answerIndex": 2,
+          "concept": "Zero field with non-zero potential at the midpoint of two like charges",
+          "why": "The two field contributions are equal-magnitude arrows pointing opposite ways and cancel, while the two potential contributions are both positive numbers and simply add."
+        },
+        {
+          "type": "mcq",
+          "q": "A charged particle moves through a region containing both an electric and a magnetic field. Which statement about the Lorentz force is correct?",
+          "options": [
+            "The magnetic term does work on the particle and so changes its speed.",
+            "The magnetic term stays perpendicular to **v**, so it turns the particle but cannot speed it up.",
+            "The magnetic term acts on the charge whether or not the particle happens to be moving.",
+            "The electric term acts only while the particle is in motion."
+          ],
+          "answerIndex": 1,
+          "concept": "Structure of the Lorentz force: the magnetic term does no work",
+          "why": "The q(v x B) term is always perpendicular to v, so it supplies turning but zero power, changing direction while leaving speed and kinetic energy unchanged."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following is a true statement about Coulomb's law as it was given this week?",
+          "options": [
+            "It applies to any two charged objects, whatever their size or separation.",
+            "The distance r is measured between the nearest surfaces of the two bodies.",
+            "Doubling both charges and also doubling the separation halves the force.",
+            "It is stated for point charges at rest, spheres being treated from their centres."
+          ],
+          "answerIndex": 3,
+          "concept": "Domain of validity of Coulomb's law",
+          "why": "The law as stated holds for point charges at rest, with uniformly charged spheres treated as points at their centres; r is centre-to-centre, not surface-to-surface."
         },
         {
           "type": "short",
-          "q": "Superposition is always stated as a vector sum, never as a sum of magnitudes. Explain why, and describe one specific arrangement of three charges in which the net force on one of them is smaller than the force either of the other two would exert on it alone.",
-          "concept": "Superposition is a vector sum, so direction is part of the addition",
-          "why": "Model answer: Forces have direction, and two forces of the same size acting in different directions do not combine to twice that size - the sum depends on the angle between them, giving anything from the difference of the magnitudes (opposite directions) to their sum (same direction). Concrete arrangement: put a +2 microcoulomb charge at the origin with a +5 microcoulomb charge at x = +0.10 m and another +5 microcoulomb charge at x = -0.10 m. Each outer charge alone would push the middle charge with a substantial force, but the two forces are equal and exactly opposite, so the net force is zero - smaller than either alone. Any arrangement with the two forces more than 90 degrees apart works."
+          "q": "Coulomb's law is a statement about exactly two charges. Explain why the superposition principle is what licenses you to use it on a system of five charges, and say what would have to be true of nature for that step to fail.",
+          "concept": "Superposition is what licenses extending a two-body law to many bodies",
+          "why": "Coulomb's law tells you the force between exactly two charges and nothing more. Superposition is the separate, experimentally established claim that the force between any two charges is completely unaffected by the presence of others, so the total force on one charge is the vector sum of the pairwise Coulomb forces from each of the other four taken one at a time. Without it there is no route from a two-charge law to a five-charge system. It would fail if nature were non-linear in this respect - if a third charge could screen, enhance or otherwise modify the q1-q2 interaction, so that a pairwise force depended on what else was in the room."
         },
         {
           "type": "short",
-          "q": "The electric field is defined using a positive test charge, yet the field of a negative point charge is drawn pointing toward the charge. Explain why. Then explain why that charge feels no net force from the field it produces itself.",
-          "concept": "Field direction is the direction of the force on a positive test charge; and a charge exerts no net force on itself",
-          "why": "Model answer: By definition E = F/q0 with q0 positive, so the field arrow at each point shows which way a positive test charge would be pushed. A positive test charge near a negative source is attracted, i.e. pulled inward, so the arrows - and the field lines - point radially inward, terminating on the negative charge. As for self-force: the field a charge creates is spherically symmetric about the charge itself, so there is no preferred direction for it to push in; every element of that field is matched by an opposite one, and a net self-force would let an isolated charge accelerate itself, violating momentum conservation. A charge's field acts on other charges only."
+          "q": "The electric field at a point is said to be a property of the source charges alone, even though it is *defined* by putting a test charge there and measuring a force. Explain why this is not a contradiction.",
+          "concept": "Definition by measurement versus ownership of the quantity",
+          "why": "The test charge is a probe, not a participant: it is used to reveal the field and is required to be vanishingly small precisely so that it does not disturb the sources. Dividing the measured force by q0 removes every trace of the probe from the result, and the ratio F/q0 comes out the same whatever test charge was used. So although a test charge appears in the definition, it appears only in order to be cancelled out. The field is therefore fixed entirely by the source charges and their positions, and exists at points where no test charge has ever been placed."
+        },
+        {
+          "type": "short",
+          "q": "Halfway between two equal positive charges the field is zero, but halfway between a positive and an equal negative charge it is not. Explain why, in terms of the directions of the two contributions — and say what happens to the *potential* in each of those two cases.",
+          "concept": "Directions decide cancellation for E, signs decide it for V - and they differ",
+          "why": "Between two equal positive charges each field contribution points away from its own charge, so at the midpoint the two arrows point in opposite directions and, being equal in magnitude, cancel to zero. Between a positive and an equal negative charge the field of the positive points away from it while the field of the negative points toward it - both in the same direction - so at the midpoint they reinforce and the field is at its largest. The potentials behave oppositely, because they carry a sign rather than a direction: two positive charges give two positive contributions that add to a non-zero maximum, while a positive and an equal negative give +kq/r and -kq/r, which sum to exactly zero. E and V therefore vanish in opposite configurations."
+        },
+        {
+          "type": "short",
+          "q": "Explain why a magnetic field can change the direction of a moving charged particle but never its kinetic energy, whereas an electric field can change both. Refer to the structure of the Lorentz force in your answer.",
+          "concept": "The magnetic term of the Lorentz force is always perpendicular to the velocity",
+          "why": "The Lorentz force is F = qE + q(v x B). The magnetic term is a cross product with v, so it is perpendicular to v at every instant. Work is force times displacement along the direction of motion, and a force always perpendicular to the motion has no component along it, so the magnetic term does zero work and the kinetic energy cannot change - it can only turn the particle, which is why charged particles follow circular or helical paths in a uniform magnetic field. The electric term qE carries no such constraint: its direction is fixed by E independently of v, so it generally has a component along the motion, does work, and changes both speed and direction."
         }
       ]
     },
@@ -343,72 +479,136 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "The six problem-solving strategies: what each one is, the condition attached to it, and what distinguishes it from its neighbour",
-      "maxScore": 6,
+      "topic": "The Wednesday deep hour takes Week 2's material conceptually, without traces or arithmetic. It starts from the lesson's own definition of a problem-solving strategy - a plan, made of multiple steps, used to find a solution or overcome a challenge - and the claim that different problems require different strategies, so that choosing and then studying a strategy's rules and procedures is part of solving rather than a delay. It then works through the internal mechanism of each of the six named strategies: brainstorming's dependence on volume of ideas and on deferred criticism; the heuristic trade of rationality for speed, valid only where a sub-optimal solution is acceptable; trial-and-error's cost scaling with the number of candidate solutions; means-ends analysis fixing the intended solution in advance and decomposing the problem so each part gets its best-suited approach; abstraction deleting the attributes that will not help reach a solution and leaving a model; and analogy transferring understanding from a known system, valid only while the underlying principles are the same. For each, the session asks what it costs and under what conditions it fails. The second half covers the conceptual basis of the week's classifications: well-defined versus ill-defined, and routine versus non-routine as a question of whether a standard method exists rather than whether arithmetic is involved. It closes on solvability - what the universal Turing machine contributes to the idea of an algorithm, and why \"unsolvable\" is a claim about the absence of a systematic decision procedure for every input rather than a claim that no answer exists, with decidable and undecidable problems and the halting problem treated in those terms.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "A laptop will not join the office Wi-Fi. Technician A immediately reboots the router because it is nearly always the router, then moves to the next ticket without checking anything else. Technician B disconnects the printer and retests, then the desk phone and retests, then the laptop VPN and retests, until the connection works. Which names both correctly?",
+          "q": "Trial-and-error is described as time-consuming and inefficient in some cases but perfectly reasonable in others. What decides which?",
           "options": [
-            "Both are trial and error; A simply performed fewer trials than B",
-            "A is heuristics - the decision was made without stopping to think about the next course of action, saving time and energy and accepting a possibly sub-optimal outcome; B is trial and error - approaches were implemented one after another until the failure was removed",
-            "A is means-ends analysis, because the desired end determined the means; B is heuristics, because B used a rule of thumb about peripherals",
-            "A is trial and error, because A made one trial; B is brainstorming, because B considered several possible causes"
+            "Whether the problem is well-defined or ill-defined",
+            "How many candidate solutions have to be tried before one works",
+            "Whether the solver has met a similar problem before",
+            "Whether the answer eventually reached is optimal or merely acceptable"
           ],
           "answerIndex": 1,
-          "concept": "Heuristics vs trial and error",
-          "why": "The dividing line is not how many attempts were made but whether candidate solutions are actually implemented and tested. Technician B implements various approaches until a solution is arrived at, which is the course definition of trial and error. Technician A tests nothing: the decision is made without stopping to think about the next course of action, buying speed at the cost of a possibly irrational or sub-optimal outcome, which is heuristics. Option a is the common one-trial-still-counts error - A performed no trial at all, because A never checked whether the reboot fixed it. Option c misuses means-ends analysis, which requires the target to be broken into sub-problems. Option d misuses brainstorming, which is a group technique for generating ideas, not one person testing them."
+          "concept": "Trial-and-error's cost is driven by the size of the candidate set, not by difficulty",
+          "why": "The lesson ties its efficiency solely to whether the number of possible solutions is few; many candidates make it time-consuming and inefficient."
         },
         {
           "type": "mcq",
-          "q": "A student must find which of 4 fuses in a box has blown. A developer must find which of 3,000 lines of code carries a logic fault. Applying the course stated conditions for trial and error:",
+          "q": "Heuristics let a decision be made \"without stopping to think about the next course of action.\" In the lesson's terms, what is surrendered in exchange for that speed?",
           "options": [
-            "It suits both, because in both cases errors are recognised and removed through experimental trials",
-            "It suits the 3,000 lines, because a computer can run the trials quickly, while the fuse box calls for heuristics",
-            "It suits the fuse box, where the possible solutions are few, but is time-consuming and inefficient on the 3,000 lines, where many possible solutions exist",
-            "It suits neither, because the course states that trial and error does not always produce a rational solution"
-          ],
-          "answerIndex": 2,
-          "concept": "The suitability condition for trial and error",
-          "why": "The course ties trial and error to the number of possible solutions: useful where they are few, time-consuming and inefficient where many exist. Four fuses is few; 3,000 candidate lines is not. Option b inverts the condition and smuggles in speed of execution, which the course never uses as the criterion. Option d is the most tempting wrong answer because it quotes a real sentence from the course, but solutions are not always rational is stated of heuristics, not trial and error. Option a is true of the definition and irrelevant to the suitability rule, which is what the question asks."
-        },
-        {
-          "type": "mcq",
-          "q": "A ministry must cut the average city commute from 70 minutes to 45 within two years. Team A writes down that target, lists the obstacles it expects to meet (bus shortages, junction delays, fare-queue times), splits the target into those three sub-goals, and assigns the best-suited method to each. Team B redraws the city as a diagram of stops and connecting lines only, discarding road names, building heights and district boundaries, in order to see where the network is thin. Which is correct?",
-          "options": [
-            "Both are means-ends analysis, since each reduces a large problem to smaller ones",
-            "A is abstraction and B is means-ends analysis: A abstracts the target into sub-goals, and B derives the means from the diagram",
-            "A is means-ends analysis and B is analogy, because B understands the city by treating it as a different but similar system - a diagram",
-            "A is means-ends analysis and B is abstraction: A keeps every sub-problem and solves each with the best possible approach, while B removes the attributes that will not help reach a solution"
+            "The requirement that the problem first be broken down into smaller sub-problems",
+            "The possibility of applying the strategy jointly with a group of colleagues",
+            "The need for the required facts and numbers to be supplied with the problem",
+            "The guarantee that the result is rational, so only sub-optimal outcomes are safe"
           ],
           "answerIndex": 3,
-          "concept": "Means-ends analysis vs abstraction",
-          "why": "Both shrink the problem, which is why option a is tempting, but they shrink it by opposite operations. Means-ends analysis thinks about the solution beforehand, determines the best strategy from the issues that will be encountered, then breaks the problem into smaller problems and solves each with the best possible approach - nothing is discarded and every sub-problem must still be solved. Abstraction filters out the unneeded attributes so that all patterns that will not help reach a solution are removed, leaving a model; Team B is the London Underground case exactly. Option b simply swaps the labels. Option c mistakes a simplified picture of the same city for analogy, which requires a different system whose underlying principles match."
+          "concept": "The heuristic trade-off: speed and energy saved against rationality of the result",
+          "why": "Heuristics solve fast but their solutions are not always rational, so they are only appropriate where a sub-optimal solution is acceptable."
         },
         {
           "type": "mcq",
-          "q": "A doctor must destroy a tumour deep in the body with a high-intensity ray, but one ray strong enough to destroy the tumour would also destroy the healthy tissue it passes through. The doctor recalls a general who could not march a whole army down one mined road to a fortress and so split it into small groups converging from many roads at once, and fires several weak rays from different directions that meet at the tumour. Which is correct?",
+          "q": "What exactly does abstraction do to a problem, and what is the thing it leaves behind called?",
           "options": [
-            "This is abstraction: the doctor filtered out the unneeded attributes of the medical problem to concentrate on the important ones",
-            "This is analogy, and it is sound because the two situations share surface features - both involve attacking a target",
-            "This is analogy, and it is sound because the underlying principle is the same in both: a force too destructive to apply in one piece can be divided into weak parts that converge on the target",
-            "This is trial and error: the doctor tried one strong ray, and when that failed, tried several weak ones"
+            "Deletes the attributes that will not help reach a solution, leaving a model",
+            "Deletes the hardest parts of the problem so that the remaining easy part can be solved",
+            "Restates the problem in fewer words so that it is easier to memorise and communicate",
+            "Splits the problem into smaller sub-problems, each of which is then solved separately"
+          ],
+          "answerIndex": 0,
+          "concept": "Abstraction as deletion of non-contributing attributes, producing a model",
+          "why": "Abstraction filters out unneeded attributes and removes the patterns that will not help reach a solution; the essential idea left behind is called a model."
+        },
+        {
+          "type": "mcq",
+          "q": "Why does means-ends analysis reduce the work of a large problem in a way that simply attacking it head-on does not?",
+          "options": [
+            "It replaces the original problem with a smaller one whose answer is close enough to serve",
+            "It generates a large number of candidate ideas at once, so a workable one is likely to appear",
+            "It settles the intended solution in advance, then splits the problem and gives each part its best-suited approach",
+            "It strips out every part of the problem that does not contribute directly to reaching the goal"
           ],
           "answerIndex": 2,
-          "concept": "Analogy rests on underlying principles, not surface similarity",
-          "why": "The course defines analogy as using previously existing understanding to understand a new similar system as long as the underlying principles are the same. Option b states the right strategy for the wrong reason and is the answer that separates the student who memorised the word from the student who understood the constraint: both involve a target is a surface feature shared by countless situations that would give the doctor no usable idea, whereas dividing a force too strong to apply whole into converging weak parts is the structure that actually transfers. Option a fails because nothing was filtered out of the medical problem - understanding was imported from outside it. Option d fails because no strong ray was ever fired, so nothing was tried and rejected."
+          "concept": "Means-ends analysis as forward planning plus decomposition into best-suited sub-solutions",
+          "why": "It settles the intended solution beforehand, breaks the problem into smaller problems, and solves each with the best possible approach until the main problem is solved."
+        },
+        {
+          "type": "mcq",
+          "q": "Brainstorming forbids criticism of ideas while the session runs. What is the mechanism-level reason?",
+          "options": [
+            "Criticism is unprofessional and damages the morale of the team taking part",
+            "Every idea offered in a brainstorming session is equally likely to be the correct one",
+            "The group is required to reach full consensus before any single idea may be judged",
+            "The method runs on volume of ideas and on fine-tuning others' ideas; criticism kills both"
+          ],
+          "answerIndex": 3,
+          "concept": "Why brainstorming defers criticism - the method runs on idea volume and on refining others' ideas",
+          "why": "Its two rules are to avoid criticism and to gather as many ideas as possible, and it works by fine-tuning other people's ideas; criticism suppresses both mechanisms."
+        },
+        {
+          "type": "mcq",
+          "q": "An analogy transfers understanding from a system you already know to a new one. Under what condition does that transfer remain valid?",
+          "options": [
+            "The two systems belong to the same industry or field of study",
+            "The underlying principles of the two systems are the same",
+            "The earlier system's solution was the optimal one available",
+            "Both systems are well-defined, with clear goals and solution paths"
+          ],
+          "answerIndex": 1,
+          "concept": "The validity condition on analogical transfer",
+          "why": "Analogy uses existing understanding of a similar system only as long as the underlying principles are the same - a shared field of study or an optimal earlier solution is irrelevant."
+        },
+        {
+          "type": "mcq",
+          "q": "What makes a problem non-routine?",
+          "options": [
+            "No standard method for solving it exists, so a novel method must be developed",
+            "Its solution cannot be reached by arithmetic operations, however involved",
+            "It has no single correct answer, only a range of acceptable approximations",
+            "It takes a long time to solve, even in the hands of an experienced solver"
+          ],
+          "answerIndex": 0,
+          "concept": "Non-routine defined by absence of a standard method, not by absence of arithmetic",
+          "why": "A non-routine problem is one for which no standard method of solving exists, so a novel method must be developed by the solver."
+        },
+        {
+          "type": "mcq",
+          "q": "In this lesson, calling a problem \"unsolvable\" is a claim about what?",
+          "options": [
+            "The answer: no answer to the problem exists at all",
+            "The machine: the UTM's tape is finite, so it runs out of space",
+            "The method: no systematic method exists for deciding it, for every input value",
+            "The time: it runs longer than any computer could, though a faster machine would help"
+          ],
+          "answerIndex": 2,
+          "concept": "'Unsolvable' as a claim about decision procedures, not about the existence of answers",
+          "why": "The lesson states explicitly that unsolvable problems are not ones for which no solution can be found; there is no systematic method for deciding them for every input, hence 'unsolvable decision problems'."
         },
         {
           "type": "short",
-          "q": "A team lead gathers six colleagues to find the causes of a delivery delay. After each suggestion she says no, that cannot be it, we checked that last year. The hour yields six ideas, and she concludes that brainstorming does not work for her team. Using the course account of brainstorming, explain what she actually ran, name the two rules of brainstorming she broke, and state what the course says other people ideas are for.",
-          "concept": "Brainstorming and its rules",
-          "why": "What she ran was an evaluation meeting, not brainstorming. Brainstorming is a group-focused technique in which people come together and generate various solutions spontaneously, and the course attaches two rules to it: avoid criticism of ideas, and gather as many ideas as possible. She broke both - criticising each suggestion as it arrived, which is precisely what suppresses spontaneous generation, and thereby ending the hour with six ideas rather than the largest possible set. Her conclusion is therefore unfounded, because the strategy was never applied. The course also states that other people ideas can be fine-tuned: an idea value in brainstorming is not whether it is correct as offered but that it is raw material others can refine, so we checked that last year is a reason to develop the idea in a later evaluation stage, not to delete it during generation."
+          "q": "The lesson says that after choosing a strategy, \"the rules and procedures of that strategy must be studied.\" Explain why choosing and studying a strategy first is treated as part of solving the problem, rather than as a delay before solving it.",
+          "concept": "Choosing and studying a strategy is part of the solving, not a preliminary to it",
+          "why": "The lesson's claim is that different problems require different strategies, so the choice of strategy determines what you actually do to the problem - and therefore determines the outcome, not merely the speed of reaching it. A strategy applied without knowing its rules and procedures is applied wrongly: a heuristic used where an exact answer is required, or a brainstorming session run with criticism allowed, produces a bad result rather than a slow one. Studying the strategy is what makes the subsequent steps correct, so it is doing the work rather than delaying it."
         },
         {
           "type": "short",
-          "q": "The course says abstraction produces a model. Explain precisely what is removed and what is kept in forming that model, why an abstraction that removed the wrong attributes would still look like a successful abstraction to the person who made it, and how that risk differs from the risk carried by analogy.",
-          "concept": "Abstraction and the model",
-          "why": "In abstraction you remove the unneeded attributes of the problem - all the aspects or patterns that will not help you arrive at a solution - and keep the parts that bear on the solution, and what remains is an essential idea of what the problem is and how to solve it, called a model. The risk is that the model is judged only against itself: once an attribute has been discarded it is invisible, so the abstraction feels clean and workable exactly as a good one does. The Underground map looks perfect until you need walking distance between two stations, which the map deliberately does not carry. A faulty abstraction therefore fails silently and only reappears as a wrong solution to the real problem later. Analogy carries a different risk: it does not delete anything, it imports understanding from a second system, so its failure mode is choosing an analogue whose underlying principles are not the same - a surface match. Abstraction fails by dropping something that mattered; analogy fails by borrowing from something that never matched."
+          "q": "Explain why the halting problem is called *undecidable* rather than merely *very difficult* — and why undecidable problems are described as a subset of unsolvable ones.",
+          "concept": "Undecidable means no algorithm exists, not that none has yet been found",
+          "why": "Difficulty is a statement about cost - a very difficult problem still has a method, and a faster machine or a cleverer programmer improves matters. Undecidability is a statement about existence: it has been proved that no algorithm whatsoever can return a correct true/false answer for every possible input, so no amount of time, memory or ingenuity will produce one. The halting problem is of this kind. Undecidable problems are a subset of unsolvable ones because 'unsolvable' in this lesson means there is no systematic method for deciding the problem for every input, and undecidable problems are exactly the decision problems for which that has been proved."
+        },
+        {
+          "type": "short",
+          "q": "Abstraction and means-ends analysis both leave you with something smaller than the original problem. Explain why they are nevertheless different operations, and what each one does to the information in the problem.",
+          "concept": "Abstraction discards information; means-ends analysis preserves it and partitions it",
+          "why": "Abstraction removes attributes: it deletes the features of the problem that will not help reach a solution, and what remains is a model - smaller because information has been thrown away, and a genuine simplification of the original. Means-ends analysis removes nothing: it fixes the intended solution in advance and then divides the whole problem into smaller problems, each solved by its best-suited approach, so all the information is still present, merely distributed across the parts. One produces a single simpler problem; the other produces several complete smaller ones."
+        },
+        {
+          "type": "short",
+          "q": "Explain why a heuristic is a sound choice for picking a brand of rice in a shop but an unsound one for deciding how much money Dan gave away, given the two things a heuristic trades against each other.",
+          "concept": "A heuristic trades rationality of outcome against speed of decision",
+          "why": "A heuristic buys a fast decision at the cost of any guarantee that the result is rational or optimal, so it is sound exactly where a sub-optimal answer is acceptable. Choosing a brand of rice is such a case: the cost of a slightly worse choice is trivial, and the time saved by not comparing every brand is worth more than the accuracy given up. How much money Dan gave away is not: an exact algorithm exists, the question demands the exact figure, and 'about 200' is simply wrong. The trade is only worth making when the loss on the accuracy side is one you can afford."
         }
       ]
     },
@@ -416,72 +616,136 @@
       "id": "thu-mth102",
       "day": "Thu",
       "course": "MTH_102",
-      "topic": "Constructing sketches, sign charts, and solving equations and inequalities graphically and algebraically",
-      "maxScore": 6,
+      "topic": "This session works the same Week 2 function material as problems: reading a question, choosing a method, executing it accurately and checking the result. It covers evaluating compositions in the correct order and seeing that f o g and g o f differ; finding the largest domain of an expression that combines a logarithm with a denominator, where two separate restrictions must both be imposed; completing the square on a quadratic to locate its vertex, axis of symmetry and direction of opening; solving an absolute-value equation by splitting it into its two cases; solving an exponential equation by isolating the power and recognising it as a power of the base; evaluating a piecewise function at and either side of its boundary point by first deciding which condition the input satisfies; recovering a line's equation from two points via the slope formula and point-slope form; and solving a logarithmic equation by combining logs, clearing the log, and then rejecting the root that violates the domain. The written questions are diagnostic: naming exactly where standard wrong routes go astray - squaring an absolute-value equation and manufacturing extraneous roots, treating 5^x as 5 times x, taking c to be the vertex y-coordinate - and checking a vertex by independent means before reading end behaviour off a cubic.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "The solution set of (x + 1)/(x - 3) <= 2 is:",
+          "q": "With f(x) = 2x + 3 and g(x) = x² − 1, the value of (f ∘ g)(2) is",
           "options": [
-            "x <= 7, obtained by multiplying both sides by (x - 3)",
-            "[7, infinity)",
-            "(-infinity, 3) union [7, infinity)",
-            "(3, 7]"
+            "48",
+            "21",
+            "9",
+            "10"
           ],
           "answerIndex": 2,
-          "concept": "Never multiply an inequality by an expression whose sign is unknown; collect on one side over a common denominator instead",
-          "why": "Subtracting gives (x + 1 - 2x + 6)/(x - 3) = (7 - x)/(x - 3) <= 0, that is (x - 7)/(x - 3) >= 0, with critical values 3 (undefined, excluded) and 7 (zero, included). Testing x = 0 gives (-7)/(-3) > 0, x = 5 gives (-2)/2 < 0, x = 8 gives 1/5 > 0. Option 1 is the forbidden move: it silently assumes x - 3 > 0 and even then loses the x < 3 branch. Option 2 keeps only the right-hand branch and forgets that every x below 3 makes the left side negative. Option 4 reads the sign chart with the inequality reversed and wrongly includes 3."
+          "concept": "Order of composition",
+          "why": "(f o g)(2) means f(g(2)): g(2) = 3, then f(3) = 2(3) + 3 = 9; option a) is g o f, b) multiplies the values, d) composes in the wrong place."
         },
         {
           "type": "mcq",
-          "q": "The solution set of (x - 1)^2 (x + 2) > 0 is:",
+          "q": "The largest set of real x for which f(x) = log₁₀(x − 2) + 1/(x − 5) is defined is",
           "options": [
-            "(-2, 1) union (1, infinity)",
-            "(-2, infinity)",
-            "(-infinity, -2) union (1, infinity)",
-            "(1, infinity)"
+            "x > 2 with x ≠ 5",
+            "x ≥ 2 with x ≠ 5",
+            "x > 2",
+            "all real x except x = 5"
           ],
           "answerIndex": 0,
-          "concept": "A factor of even multiplicity does not change the sign, but its root still makes the expression zero",
-          "why": "(x - 1)^2 is never negative, so the sign of the product is the sign of (x + 2), giving a positive value for every x > -2 except x = 1, where the product is 0 and the strict inequality fails. Option 2 forgets to remove x = 1; option 3 assumes the sign alternates at every root, which is the odd-multiplicity rule applied blindly; option 4 treats both roots as sign changes."
+          "concept": "Combining two separate domain restrictions",
+          "why": "log(x - 2) needs x - 2 > 0 strictly, and 1/(x - 5) needs x != 5, so both conditions apply simultaneously."
         },
         {
           "type": "mcq",
-          "q": "How many real solutions has x^3 - 3x = 1?",
+          "q": "The vertex of f(x) = 2x² − 12x + 7 is at",
           "options": [
-            "1, because a cubic equation has exactly one real root",
-            "2, because the line y = 1 meets the curve once on each side of the y-axis",
-            "0, because x^3 - 3x - 1 does not factorise over the integers",
-            "3: the curve y = x^3 - 3x has a local maximum of 2 at x = -1 and a local minimum of -2 at x = 1, and the line y = 1 lies strictly between them, so it cuts all three branches"
+            "(−3, −11)",
+            "(3, 7)",
+            "(6, −11)",
+            "(3, −11)"
           ],
           "answerIndex": 3,
-          "concept": "Solving an equation graphically means intersecting the curve with a horizontal line, and the turning points decide how many intersections there are",
-          "why": "y = x^3 - 3x turns at x = -1 and x = 1 with values 2 and -2; a horizontal line at a height strictly between -2 and 2 meets the falling middle branch once and each rising outer branch once. Option 1 confuses 'a cubic has at least one real root' with 'exactly one'; option 2 ignores the middle branch between the turning points; option 3 confuses irrational roots with no roots, and factorising over the integers is irrelevant."
+          "concept": "Completing the square to find a vertex",
+          "why": "2x^2 - 12x + 7 = 2(x - 3)^2 - 11, so the vertex is (3, -11); option b) is the slide's error of taking c as the vertex height."
         },
         {
           "type": "mcq",
-          "q": "The solution set of -x^2 + 4x - 3 > 0 is:",
+          "q": "The solution set of |2x − 5| = 7 is",
           "options": [
-            "x < 1 or x > 3",
-            "1 < x < 3",
-            "x <= 1 or x >= 3",
-            "all real x except x = 1 and x = 3"
+            "x = 6 only",
+            "x = 6 or x = −1",
+            "x = 6 or x = 1",
+            "x = 1 or x = −6"
           ],
           "answerIndex": 1,
-          "concept": "Multiplying or dividing an inequality by a negative number reverses the inequality",
-          "why": "Multiplying by -1 gives x^2 - 4x + 3 < 0, that is (x - 1)(x - 3) < 0, and an upward parabola is negative strictly between its roots. Option 1 is what you get by forgetting to flip; it is the solution of x^2 - 4x + 3 > 0. Option 3 is the complement with wrongly included endpoints, since the inequality is strict and the roots give 0. Option 4 treats the roots as isolated exclusions from an otherwise positive function, ignoring that this parabola opens downwards."
+          "concept": "Two-case method for absolute-value equations",
+          "why": "2x - 5 = 7 gives x = 6 and 2x - 5 = -7 gives x = -1; both branches must be taken."
+        },
+        {
+          "type": "mcq",
+          "q": "Solving 3·2^x = 96 gives x =",
+          "options": [
+            "5",
+            "16",
+            "32",
+            "log₂96 ≈ 6.6"
+          ],
+          "answerIndex": 0,
+          "concept": "Isolating the power before solving",
+          "why": "Divide first: 2^x = 32 = 2^5, so x = 5; option b) comes from reading 2^x as 2x and c) from stopping at 32."
+        },
+        {
+          "type": "mcq",
+          "q": "For f(x) = 3x + 4 when x ≤ 1 and f(x) = x² when x > 1, the value of f(1) + f(3) is",
+          "options": [
+            "10",
+            "20",
+            "16",
+            "14"
+          ],
+          "answerIndex": 2,
+          "concept": "Selecting the correct piecewise branch",
+          "why": "x = 1 satisfies x <= 1 so f(1) = 7, and x = 3 satisfies x > 1 so f(3) = 9, giving 16."
+        },
+        {
+          "type": "mcq",
+          "q": "The line through (−2, 5) and (4, −7) has equation",
+          "options": [
+            "y = 2x + 9",
+            "y = −2x + 1",
+            "y = −½x + 4",
+            "y = −2x + 9"
+          ],
+          "answerIndex": 1,
+          "concept": "Line through two points",
+          "why": "m = (-7 - 5)/(4 + 2) = -2, and y - 5 = -2(x + 2) gives y = -2x + 1; d) uses x = +2 when finding the intercept."
+        },
+        {
+          "type": "mcq",
+          "q": "The solution of log₁₀x + log₁₀(x − 3) = 1 is",
+          "options": [
+            "x = 10 or x = 13",
+            "x = 5 or x = −2",
+            "x = 6.5",
+            "x = 5"
+          ],
+          "answerIndex": 3,
+          "concept": "Domain check after solving a logarithmic equation",
+          "why": "Combining gives x^2 - 3x - 10 = 0 with roots 5 and -2, but x = -2 makes log x undefined, so only x = 5 survives."
         },
         {
           "type": "short",
-          "q": "For p(x) = (x + 1)^3 (x - 2)^2, explain how you decide the sign of p on each interval of a sign chart, and hence give the solution of p(x) < 0. Say explicitly what the multiplicity of each root does to the sign.",
-          "concept": "Sign charts and the role of root multiplicity",
-          "why": "Model answer: mark the roots x = -1 and x = 2 on a number line; they cut it into (-infinity, -1), (-1, 2) and (2, infinity), and on each interval p has one constant sign, so one test value decides the whole interval. Test x = -2: (-1)^3 (-4)^2 = -16 < 0. Test x = 0: (1)^3 (-2)^2 = 4 > 0. Test x = 3: (4)^3 (1)^2 = 64 > 0. The root x = -1 has odd multiplicity 3, so the sign changes across it and the graph crosses the axis; x = 2 has even multiplicity 2, so the sign does not change and the graph touches and turns back. Hence p(x) < 0 on (-infinity, -1) only, with the roots themselves excluded because the inequality is strict."
+          "q": "The equation |x − 4| = −3 has no solution, yet a student who squares both sides obtains x = 1 and x = 7. Say why there is no solution, and say precisely what the squaring step did to produce those two values.",
+          "concept": "Squaring is not a reversible step: it manufactures extraneous roots",
+          "why": "|x - 4| is an absolute value, so it is non-negative for every real x, while the right-hand side is -3; a non-negative quantity can never equal a negative one, so the equation has no solution and no algebra can produce one. Squaring both sides gives (x - 4)^2 = 9, which discards the sign information entirely, because the square of -3 and the square of +3 are the same number - so the squared equation is really solving |x - 4| = +3. Its roots x = 1 and x = 7 are the solutions of that different equation, and both fail when substituted back into the original. That is exactly why every root obtained after squaring must be checked in the original equation."
         },
         {
           "type": "short",
-          "q": "You are asked to sketch f(x) = (x^2 + 1)/(x - 1). Explain how you find every asymptote, showing the working for the non-vertical one, and state the intercepts.",
-          "concept": "Asymptotes of a rational function: denominator zeros for vertical, degree comparison for the rest",
-          "why": "Model answer: vertical asymptote where the denominator vanishes and does not cancel, x - 1 = 0, so x = 1 (x^2 + 1 has no real factor to cancel). For the non-vertical one, deg N = 2 = deg D + 1, so there is no horizontal asymptote but there is an oblique one: long division gives x^2 + 1 = (x - 1)(x + 1) + 2, so f(x) = x + 1 + 2/(x - 1), and since 2/(x - 1) approaches 0 as x approaches plus or minus infinity, the line y = x + 1 is the oblique asymptote. Intercepts: y-intercept f(0) = 1/(-1) = -1; no x-intercept, since x^2 + 1 = 0 has no real solution. Near the vertical asymptote, x approaching 1 from above sends f to +infinity and from below to -infinity."
+          "q": "You have found the vertex of f(x) = 2x² − 12x + 7 to be (3, −11). Give two independent checks — not a repeat of the completing-the-square work — that confirm this is right.",
+          "concept": "Independent checks on a computed vertex",
+          "why": "Check one, the axis of symmetry: the vertex's x-coordinate must equal -b/(2a) = 12/4 = 3, which matches, and this uses a formula rather than a repeat of the completing-the-square algebra. Check two, symmetry of the function values: points equidistant either side of x = 3 must have equal f-values, and f(2) = 8 - 24 + 7 = -9 while f(4) = 32 - 48 + 7 = -9, confirming symmetry about x = 3, with f(3) = 18 - 36 + 7 = -11 confirming the height. Since a = 2 > 0 the parabola opens upward, so -11 must be a minimum, and both neighbouring values being larger confirms that too."
+        },
+        {
+          "type": "short",
+          "q": "A student solves 5^x = 40 by writing x = 40 ÷ 5 = 8. Explain what that student has misread about the expression 5^x, and give the correct one-line method together with roughly what x is.",
+          "concept": "An exponent is not a multiplier",
+          "why": "The student has read 5^x as 5 times x, and has therefore solved 5x = 40. In 5^x the x is the exponent - the number of times 5 is used as a factor - not a coefficient, so the operation that undoes it is a logarithm, not division. The correct one-line method is x = log base 5 of 40, that is log 40 / log 5. Since 5^2 = 25 and 5^3 = 125, x lies between 2 and 3, and is roughly 2.3."
+        },
+        {
+          "type": "short",
+          "q": "For f(x) = −x³ + 3x² − 2, state the degree and leading coefficient, then say what f(x) does as x → +∞ and as x → −∞. Show the reasoning that gets you there, not just the conclusion.",
+          "concept": "End behaviour read off the degree and leading coefficient",
+          "why": "f(x) = -x^3 + 3x^2 - 2 has degree 3 and leading coefficient -1. For large |x| the term -x^3 dominates, because dividing either lower-degree term by -x^3 gives 3x^2/(-x^3) = -3/x and -2/(-x^3) = 2/x^3, both of which tend to 0 - so the lower terms become negligible relative to the leading term, not zero in themselves. As x tends to +infinity, x^3 tends to +infinity so -x^3 tends to -infinity, hence f(x) tends to -infinity. As x tends to -infinity, x^3 tends to -infinity so -x^3 tends to +infinity, hence f(x) tends to +infinity. This is the standard odd-degree, negative-leading-coefficient shape: up on the left, down on the right."
         }
       ]
     },
@@ -489,72 +753,136 @@
       "id": "fri-phy102",
       "day": "Fri",
       "course": "PHY_102",
-      "topic": "PHY_102 problems: multi-charge superposition calculations, component resolution, equilibrium/null points, and ratio and scaling problems",
-      "maxScore": 6,
+      "topic": "The Friday deep hour works the same week-2 material as problems. It concentrates on setting up superposition calculations from a free-body sketch: identifying each pairwise force, deciding from the signs whether it is an attraction or a repulsion, and therefore whether contributions add or subtract along the line - the single step where most marks are lost. It carries the arithmetic through with unit conversions (nm, um, nC, uC) intact and with the Coulomb constant applied correctly. The session works the three problems set in the deck: the electron on the line between two protons 3.6 nm apart, the three collinear charges of -18 uC, -12 uC and +24 uC and the net force on each, and the +2.00 nC / -5.00 nC pair whose resultant field at an intermediate point must be found and then converted to a force on an electron placed there. It also drills route selection - recognising when symmetry gives an answer instantly versus when a brute-force component sum is unavoidable - and error diagnosis, such as spotting that a net force larger than either contributing force means opposing contributions were wrongly added. Finally it covers checking a finished answer, either by dimensional analysis or by recomputing through a second independent relation. The emphasis throughout is on the set-up and the check, not on recalling statements.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "Q1 = +4.0 microcoulomb is fixed at x = 0 and Q2 = -4.0 microcoulomb is fixed at x = 0.60 m. A charge q3 = +2.0 microcoulomb is placed at x = 0.30 m. Each of the two charges alone would exert about 0.80 N on q3. The net force on q3 is:",
+          "q": "Two protons sit 3.6 nm apart, with an electron on the line between them, 1.2 nm from one proton. Which expression gives the magnitude of the net force on the electron?",
           "options": [
-            "zero, because the two source charges are equal and opposite",
-            "0.80 N in the +x direction",
-            "1.6 N in the -x direction, toward the +4.0 microcoulomb charge",
-            "1.6 N in the +x direction, toward the -4.0 microcoulomb charge"
-          ],
-          "answerIndex": 3,
-          "concept": "Collinear superposition: add the force vectors, not the source charges",
-          "why": "q3 is repelled by the +4.0 microcoulomb on its left (pushed toward +x) and attracted by the -4.0 microcoulomb on its right (pulled toward +x). Both forces point the same way, so they add: 0.80 + 0.80 = 1.6 N in +x. Option (a) is the trap - it cancels the charges (+4 and -4) instead of resolving the forces, and is what you get by never drawing the free-body diagram. Option (b) adds only one contribution or averages them. Option (c) gets the magnitude right but reverses both directions, i.e. treats attraction as repulsion."
-        },
-        {
-          "type": "mcq",
-          "q": "A charge at the origin is acted on by two forces from two other charges: 6.0 x 10^-3 N along +x and 8.0 x 10^-3 N along +y. The resultant force is:",
-          "options": [
-            "1.0 x 10^-2 N at 53 degrees above the +x axis",
-            "1.4 x 10^-2 N at 45 degrees above the +x axis",
-            "1.0 x 10^-2 N at 37 degrees above the +x axis",
-            "2.0 x 10^-3 N along the +y axis"
-          ],
-          "answerIndex": 0,
-          "concept": "Component resolution: Pythagoras for the magnitude, arctan(Fy/Fx) for the angle",
-          "why": "F = sqrt(6.0^2 + 8.0^2) x 10^-3 = 1.0 x 10^-2 N, and tan(theta) = Fy/Fx = 8.0/6.0 = 1.33, so theta = 53 degrees above the +x axis. Option (b) adds the magnitudes arithmetically (6.0 + 8.0 = 14) and guesses 45 degrees, the error superposition exists to prevent. Option (c) has the correct magnitude but inverts the tangent ratio (arctan 6/8 = 37 degrees) - the single commonest slip in 2-D problems, so check which component is on top. Option (d) subtracts the magnitudes, which is only valid for anti-parallel forces."
-        },
-        {
-          "type": "mcq",
-          "q": "A charge of +9.0 microcoulomb is fixed at x = 0 and a charge of -4.0 microcoulomb is fixed at x = 1.0 m. A third point charge placed on the x-axis experiences zero net force at:",
-          "options": [
-            "x = 0.60 m",
-            "x = 3.0 m",
-            "x = -3.0 m",
-            "x = 0.50 m"
-          ],
-          "answerIndex": 1,
-          "concept": "Null point geometry for unlike charges: it lies outside the pair, beyond the smaller charge",
-          "why": "Between two unlike charges the force from one is repulsive and the other attractive but both point the same way, so cancellation there is impossible. Outside, on the side of the weaker (-4.0 microcoulomb) charge, the extra distance to the stronger charge can compensate: 9/x^2 = 4/(x-1)^2 gives 3/x = 2/(x-1), so x = 3.0 m. Option (a), 0.60 m, is exactly what you get by applying the like-charge between-them equation 3/x = 2/(1-x) - the right algebra with the wrong geometry. Option (c) puts the point beyond the larger charge, where the stronger, nearer charge always wins and no solution exists. Option (d) is the midpoint, which is only the null point when the two charges are equal and like."
-        },
-        {
-          "type": "mcq",
-          "q": "Two point charges separated by r exert a force F on each other. One charge is then tripled, the other is halved, and the separation is doubled. The new force is:",
-          "options": [
-            "3F/2",
-            "3F/4",
-            "3F/8",
-            "6F"
+            "ke²[1/(1.2 × 10⁻⁹)² + 1/(2.4 × 10⁻⁹)²]",
+            "ke²/(3.6 × 10⁻⁹)²",
+            "ke²[1/(1.2 × 10⁻⁹)² − 1/(2.4 × 10⁻⁹)²]",
+            "ke²[1/(1.2 × 10⁻⁹)² − 1/(3.6 × 10⁻⁹)²]"
           ],
           "answerIndex": 2,
-          "concept": "Scaling by proportional reasoning: F is proportional to q1 q2 / r^2",
-          "why": "The numerator changes by 3 x 1/2 = 3/2 and the denominator by 2^2 = 4, so F becomes (3/2)/4 = 3F/8. Option (b), 3F/4, comes from dividing by 2 instead of 2^2 - forgetting that the distance is squared. Option (a) tracks only the charges and ignores the separation. Option (d) multiplies by both charge factors as though they were 3 and 2 and drops the distance entirely."
+          "concept": "Setting up collinear superposition when the two forces oppose",
+          "why": "The electron is attracted to both protons, which lie on opposite sides of it, so the contributions subtract; the relevant distances are 1.2 nm and 3.6 - 1.2 = 2.4 nm."
+        },
+        {
+          "type": "mcq",
+          "q": "Evaluate that net force (k = 8.99 × 10⁹ N·m²/C², e = 1.60 × 10⁻¹⁹ C).",
+          "options": [
+            "4.0 × 10⁻¹¹ N",
+            "2.0 × 10⁻¹⁰ N",
+            "1.6 × 10⁻¹⁰ N",
+            "1.2 × 10⁻¹⁰ N"
+          ],
+          "answerIndex": 3,
+          "concept": "Executing that calculation with correct nm-to-m conversion",
+          "why": "ke^2 = 2.301x10^-28; dividing by 1.44x10^-18 and by 5.76x10^-18 gives 1.598x10^-10 and 3.996x10^-11 N, whose difference is 1.2x10^-10 N."
+        },
+        {
+          "type": "mcq",
+          "q": "Q₁ = −18 µC sits at x = −9 m, Q₂ = −12 µC at x = +1 m, and Q₃ = +24 µC at x = +7 m. The net electric force on Q₁ is:",
+          "options": [
+            "4.2 × 10⁻³ N toward −x",
+            "4.2 × 10⁻³ N toward +x",
+            "3.5 × 10⁻² N toward −x",
+            "1.5 × 10⁻² N toward +x"
+          ],
+          "answerIndex": 0,
+          "concept": "Net force on an end charge with one repulsion and one attraction",
+          "why": "F12 = 1.942x10^-2 N pushes Q1 along -x (both charges negative) while F13 = 1.517x10^-2 N pulls it along +x, leaving 4.2x10^-3 N toward -x."
+        },
+        {
+          "type": "mcq",
+          "q": "For the same three charges, the net electric force on Q₂ is:",
+          "options": [
+            "5.3 × 10⁻² N toward +x",
+            "9.1 × 10⁻² N toward +x",
+            "9.1 × 10⁻² N toward −x",
+            "7.2 × 10⁻² N toward +x"
+          ],
+          "answerIndex": 1,
+          "concept": "Recognising when two pairwise forces reinforce rather than oppose",
+          "why": "On Q2 the repulsion from Q1 (1.942x10^-2 N) and the attraction toward Q3 (7.192x10^-2 N) both point along +x, so they add to 9.1x10^-2 N toward +x."
+        },
+        {
+          "type": "mcq",
+          "q": "A +2.00 nC charge is at the origin and a −5.00 nC charge is at x = 0.800 m. The electric field at x = 0.200 m is:",
+          "options": [
+            "325 N/C in the +x direction",
+            "574 N/C in the −x direction",
+            "449 N/C in the +x direction",
+            "574 N/C in the +x direction"
+          ],
+          "answerIndex": 3,
+          "concept": "Field superposition between an unlike pair, where the contributions reinforce",
+          "why": "E1 = 449.5 N/C points away from the +2.00 nC charge and E2 = 124.9 N/C points toward the -5.00 nC charge; both lie along +x, giving 574 N/C in the +x direction."
+        },
+        {
+          "type": "mcq",
+          "q": "An electron is now placed at x = 0.200 m in that same field. The force on it is:",
+          "options": [
+            "9.2 × 10⁻¹⁷ N in the −x direction",
+            "9.2 × 10⁻¹⁷ N in the +x direction",
+            "5.7 × 10² N in the −x direction",
+            "1.8 × 10⁻¹⁶ N in the −x direction"
+          ],
+          "answerIndex": 0,
+          "concept": "Converting a field to a force on a negative charge",
+          "why": "F = |q|E = (1.60x10^-19)(574.4) = 9.2x10^-17 N, and the electron's negative charge reverses the direction relative to E, giving -x."
+        },
+        {
+          "type": "mcq",
+          "q": "A student's algebra for the field of a point charge comes out as E = kq/r. A units check condemns it because:",
+          "options": [
+            "kq/r carries units of N·C/m, which is not a unit of anything in this topic.",
+            "kq/r carries units of N·m/C, which is a volt — a potential, not a field.",
+            "kq/r carries units of N/C, so the units are fine and the mistake lies elsewhere.",
+            "kq/r carries units of J/C², which is neither a field nor a potential."
+          ],
+          "answerIndex": 1,
+          "concept": "Using dimensional analysis to condemn a wrong expression",
+          "why": "kq/r has units (N.m^2/C^2)(C)/m = N.m/C = J/C = volt, which is a potential rather than the N/C a field requires - the error is one missing power of r."
+        },
+        {
+          "type": "mcq",
+          "q": "Four equal positive charges sit at the corners of a square and you must find **E** at its centre. The quickest correct route is to:",
+          "options": [
+            "add the four magnitudes kq/r², since all four charges are equal and positive.",
+            "find the potential at the centre first, then divide it by the corner-to-centre distance.",
+            "note that the charges pair up across the diagonals, so the field is zero by symmetry.",
+            "sum the fields of two adjacent charges and double the result, by the square's symmetry."
+          ],
+          "answerIndex": 2,
+          "concept": "Choosing a symmetry route over brute-force summation",
+          "why": "The four equidistant equal charges pair up across the diagonals into equal and opposite field vectors, so E at the centre is exactly zero without any arithmetic."
         },
         {
           "type": "short",
-          "q": "A student locates the null point between two fixed positive charges by placing a +1.0 microcoulomb charge on the line and solving for zero net force. She then repeats the calculation with a -3.0 microcoulomb charge and gets exactly the same position. Explain why the third charge's size and sign make no difference, and explain why the null point always lies nearer the smaller of the two fixed charges.",
-          "concept": "The null point depends only on the two source charges, because the probe cancels out of the equation",
-          "why": "Model answer: Setting the two magnitudes equal gives k|q3||Q1|/x^2 = k|q3||Q2|/(d-x)^2, and |q3| - like k - appears on both sides and divides out; the resulting equation contains only Q1, Q2 and the geometry. Changing the probe's sign merely reverses both forces at once, so wherever they cancelled before they still cancel. As for the location: the two forces can only oppose each other at a point between two like charges, and to balance a larger charge against a smaller one the point must be farther from the larger charge, since the inverse-square fall-off is what compensates for the bigger numerator. That places it nearer the smaller charge - and in a 9 to 1 case, three times as far from the big charge as from the small one, because the distances scale as the square roots of the charges."
+          "q": "You compute the net force on a charge that is being pulled in opposite directions by two others, and your answer comes out larger than either individual force. Explain what has almost certainly gone wrong, and how you would locate the error without redoing the whole calculation.",
+          "concept": "A net force larger than either contribution means opposing forces were added",
+          "why": "If two forces genuinely pull a charge in opposite directions, the resultant is their difference and must therefore be smaller than the larger of the two. A resultant larger than either one means the contributions were added when they should have been subtracted - that is, the direction of one force was assigned wrongly, almost always by misreading an attraction as a repulsion or by getting wrong which charge lies on which side. To locate it without redoing the arithmetic, sketch the charges on a line and mark the direction of each pairwise force from the signs alone: like repels, unlike attracts. Compare those arrows against the signs used in the sum, and the mismatched one is the error."
         },
         {
           "type": "short",
-          "q": "In a collinear three-charge problem, moving the test point from 1.0 cm to 3.0 cm from a source charge cuts the force to one-ninth, not one-third. Explain why. Then use the same reasoning to explain why, in a typical three-charge line problem, the nearer charge usually dominates the net force even when it is the charge of smaller magnitude.",
-          "concept": "The inverse-square dependence, and why proximity beats magnitude",
-          "why": "Model answer: The distance enters Coulomb's law as r^2, not r: tripling r multiplies r^2 by 9, so the force falls by a factor of 9. The force is not proportional to distance in any direct way, and three times as far so one-third the force is 1/r reasoning smuggled in from other formulas. The consequence for a three-charge line: the ratio of the two forces on the middle charge is (Q_near/Q_far) x (r_far/r_near)^2, so the distance ratio is squared while the charge ratio is not. A charge half the size but at half the distance produces 1/2 x 4 = twice the force of its larger partner. This is why you must always compute both contributions rather than assuming the bigger charge wins - and why answers should be checked by asking whether the net force sensibly leans toward the nearer charge."
+          "q": "Before doing any arithmetic, explain how you would decide whether the point of zero net field between two unequal *like* charges lies nearer the larger or the smaller charge — and why, for two charges of *opposite* sign, no such point exists between them at all.",
+          "concept": "Where a null point sits, and why it cannot lie between unlike charges",
+          "why": "The null point requires the two field magnitudes to be equal. The larger charge makes the stronger field at any given distance, so its contribution can only be matched by viewing it from further away - which places the null point nearer the smaller charge, and between the two when the charges are alike, since only there do the contributions oppose. For charges of opposite sign the picture changes: between them the field of the positive points away from it and the field of the negative points toward it, so both point the same way and reinforce everywhere along that segment. Since they never oppose there they can never cancel there, and the null point moves outside the pair, beyond the smaller charge."
+        },
+        {
+          "type": "short",
+          "q": "Explain why you should substitute charge *magnitudes* into F = k|q₁q₂|/r² and fix the direction from a sketch, instead of substituting the signed values and trusting the sign of the answer. Illustrate with the Q₁/Q₃ pair from question 3.",
+          "concept": "Magnitudes into the formula, directions from the sketch",
+          "why": "Substituting signed values makes the sign of the answer carry two different meanings at once - the signs of the charges and the direction along an axis - and the formula has no way of knowing how the charges are arranged in space, so the resulting sign tells you nothing reliable about direction. Substituting magnitudes gives an unambiguous size, and the sketch settles the direction from a rule that never fails: like charges repel, unlike attract. For the Q1/Q3 pair, k|q1q3|/r^2 = (8.99x10^9)(18x10^-6)(24x10^-6)/16^2 = 1.52x10^-2 N. Q1 is negative and Q3 positive, so they attract, and since Q3 lies to the right of Q1 the force on Q1 is toward +x. The sketch, not the algebra, produced that direction."
+        },
+        {
+          "type": "short",
+          "q": "Show how a units check would catch each of these two errors: writing F = kq₁q₂/r instead of /r², and writing E = Fq instead of F/q. State the units you get in each case and what quantity, if any, those units actually belong to.",
+          "concept": "Units as a check on a half-remembered formula",
+          "why": "F = kq1q2/r has units (N.m^2.C^-2)(C)(C)/m = N.m, which is a joule - an energy, not a force. The missing power of r has turned the expression into something with the dimensions of work, which condemns it immediately; the correct /r^2 gives (N.m^2.C^-2)(C^2)/m^2 = N. E = Fq has units (N)(C) = N.C, which belongs to no quantity in electrostatics at all; the correct F/q gives N.C^-1, the unit of electric field. In both cases the units fail before any number is substituted, so the error is caught for free."
         }
       ]
     },
@@ -562,72 +890,136 @@
       "id": "sat-cos102",
       "day": "Sat",
       "course": "COS_102",
-      "topic": "Applying the strategies to stated problems: tracing a substitution puzzle, decomposing a target, choosing and justifying a strategy, and spotting where a strategy fails",
-      "maxScore": 6,
+      "topic": "The Saturday session is COS_102 applied, working the week's method through on concrete cases rather than restating it. The student is given stated problems and has to classify them by testing rather than by surface appearance - recognising that Bridget's 50-question exam-marks problem is non-routine despite using only arithmetic, that the parking-space area is routine because a known formula applies, and that \"approximate the number of hairs on your head\" is non-routine rather than unsolvable. Scenarios are then read and matched to the strategy actually in use, including cases designed to mislead: XYZ Corporation's $2bn turnover target decomposed into quarterly and regional targets is means-ends analysis, while the doctor converging several weaker rays on a deep tumour after recalling an army dividing to take a fortress is analogy, not means-ends, despite the division into smaller parts. The session runs the two ordered procedures of the week in sequence - the three analogy steps and the three steps for attacking a non-routine problem. It traces the substitution puzzle one replacement at a time, obtaining BOOOB from BOB via the rules OB->BOOB and BOB->O. Finally it diagnoses attempts that went wrong: a heuristic applied to a routine problem where an exact answer is required, a brainstorming session ruined by immediate criticism, and a premature conclusion that a substitution puzzle does not come out. The halting problem is met applied, as a request to write a program that decides termination for any input.",
+      "maxScore": 12,
       "questions": [
         {
           "type": "mcq",
-          "q": "Trace this substitution puzzle. The two rules are: replace OB with BOOB, and replace BOB with O. Starting from BOB, which sequence actually produces BOOOB?",
+          "q": "\"An exam has 50 questions. 4 marks are awarded per correct response and 2 marks deducted per wrong one. Bridget scored 165. How many correct responses did she give?\" How should this be classified, and why?",
           "options": [
-            "BOB -> BOOB -> BOOOB: apply the first rule to the whole word, then again",
-            "BOB -> O -> OB -> BOOB -> BOOOB: shrink first, then rebuild",
-            "BOB -> BBOOB -> BOOB -> BOOOB: grow by one rule, shrink, then grow again, never exceeding five letters",
-            "BOB -> BBOOB -> BBOBOOB -> BOOOB: grow twice to seven letters, then apply the second rule"
-          ],
-          "answerIndex": 3,
-          "concept": "Tracing a substitution puzzle; a derivation may have to grow before it shrinks",
-          "why": "Take it one rule application at a time. BOB contains exactly one OB (letters 2 to 3), so rule 1 gives B + BOOB = BBOOB. In BBOOB the only OB is letters 4 to 5, so rule 1 gives BBO + BOOB = BBOBOOB. Now letters 2 to 4 of BBOBOOB are B, O, B, so rule 2 replaces them with O: B + O + OOB = BOOOB. Option a misreads rule 1 as licensing BOB -> BOOB; the rule rewrites the substring OB, not the whole word. Option b dies at the first step: BOB -> O is legal, but a lone O contains neither OB nor BOB, so nothing can ever be applied to it again. Option c catches anyone who assumes a derivation should never overshoot the target length: BBOOB -> BOOB deletes a single B, and no rule deletes a single letter. That grow past the target then collapse step is exactly why there is no systematic method for deciding whether an arbitrary substitution puzzle comes out - nothing bounds how far the string may have to grow first."
-        },
-        {
-          "type": "mcq",
-          "q": "There are 50 questions in an exam. 2 marks are deducted for every wrong response and 4 marks awarded for every correct response. Bridget scored 165 marks. How many correct responses did she provide? A student sets c + w = 50 and 4c - 2w = 165, then tries every whole value of c from 0 to 50 and finds that none gives 165. What has this established?",
-          "options": [
-            "Nothing yet; the search must be widened to allow unanswered questions, which will then produce a solution",
-            "6c - 100 = 165 gives c = 44.17, so the answer is 44 correct responses - trial and error merely lost the fraction",
-            "Every attainable score 4c - 2w equals 2(2c - w) and is therefore even, while 165 is odd, so no combination of correct, wrong and unanswered responses can score 165; the trials exhausted the candidates without ever explaining why, whereas one abstraction settles it at once",
-            "The trial-and-error run failed only because 51 candidates is too many for the method; on a shorter exam the same approach would have worked"
+            "Routine — it is settled entirely by arithmetic operations on the given numbers",
+            "Unsolvable — there are two unknowns and only one equation relating them",
+            "Non-routine — no standard method presents itself, so the solver must devise one",
+            "Undecidable — no algorithm returns a true/false answer for every such input"
           ],
           "answerIndex": 2,
-          "concept": "Abstraction succeeding where trial and error can only exhaust",
-          "why": "Every correct response adds 4 and every wrong one subtracts 2, so any attainable score is 4c - 2w = 2(2c - w), always even. 165 is odd, so it is unattainable, and this holds whether or not every question was answered. Option a is the natural next move and still fails, because relaxing c + w = 50 changes nothing about parity - the constraint the student relaxed was never the binding one. Option b is the arithmetic-slip answer: 6c - 100 = 165 really does give c = 44.17, and rounding a non-integer into an answer is precisely the error the exhaustive trials should have warned against. Option d misapplies the course rule about trial and error: 51 candidates is few, so the method was legitimately applicable; it simply returns none of these without supplying the reason, which is its true limitation here. Trial and error can only report the outcome of the trials it ran, whereas abstraction, by filtering the problem down to the single relevant attribute (the parity of the score), yields the reason in one line."
+          "concept": "Classifying an arithmetic-looking problem that has no standard method",
+          "why": "The exam-marks problem gives no immediately clear procedure, so the solver must devise one - the definition of non-routine - even though the arithmetic itself is elementary."
         },
         {
           "type": "mcq",
-          "q": "XYZ Corporation product quality is declining. Engineering lists 26 candidate causes across the manufacturing line. A junior proposes altering one input at a time and shipping a production batch after each change to see whether quality recovers. Judge this against the course.",
+          "q": "Starting from the string **BOB** and applying the rule \"replace `OB` with `BOOB`\" once, what do you get?",
           "options": [
-            "It is a good plan: trial and error recognises and removes errors through experimental trials, which is exactly what a quality problem needs",
-            "It is trial and error applied where the number of possible solutions is not few, so it is time-consuming and inefficient; the case study instead begins with root cause analysis to identify the manufacturing process issues, narrowing the candidates before anything is changed",
-            "It is heuristics, and heuristics is barred from quality work because its solutions are not always rational; the case study begins by forming a cross-functional team",
-            "It is a poor plan because trial and error can never remove an error once introduced; the case study begins with brainstorming"
+            "BOOB",
+            "BBOOB",
+            "BOOBB",
+            "BOOOB"
           ],
           "answerIndex": 1,
-          "concept": "Strategy fit judged by the course condition, not by the definition",
-          "why": "The junior plan matches the definition of trial and error perfectly, which is what makes option a so tempting, but a strategy is chosen by its condition, and the course states that trial and error is time-consuming and inefficient when the number of possible solutions is not few. Twenty-six candidate causes, each costing a full production batch to test, is the textbook case of many. The case study methodology begins with root cause analysis to identify the manufacturing process issues, then analyses customer feedback, quality records and production reports, and forms a cross-functional team, all of which shrink 26 candidates to a few before any change is made. Option c invents a prohibition the course never states and misnames the strategy, since nothing here is decided without thinking. Option d contradicts the definition of trial and error, whose whole point is recognising and removing errors through trials."
+          "concept": "Tracing one substitution step accurately, at the right position in the string",
+          "why": "BOB contains OB at positions 2-3; replacing that OB with BOOB leaves the leading B and yields BBOOB."
         },
         {
           "type": "mcq",
-          "q": "A student is asked to write a program H that takes any program P plus P input, prints YES if P eventually halts on that input, and NO if P runs for ever. He plans to have H simply run P and print YES the moment P stops. Which is correct?",
+          "q": "XYZ Corporation wants $2 billion turnover this year. The board fixes the annual figure, splits it into quarterly targets, splits each quarter by sales region, and lets each region choose the tactic that suits its own market. Which strategy is this?",
           "options": [
-            "The plan is sound and only needs enough memory and a fast enough machine to be practical",
-            "This is a non-routine problem, so the student must develop a novel method by studying the problem critically, gathering information and implementing an effective strategy",
-            "The halting problem is undecidable - no algorithm returns an accurate true/false for every input value - and the student plan never prints NO at all, so it does not decide the question; it is not a systematic method",
-            "The halting problem is unsolvable, meaning no program halting behaviour can ever be determined, so H cannot be written and no individual P can be judged either"
+            "Means-ends analysis",
+            "Abstraction",
+            "Trial and error",
+            "Brainstorming"
+          ],
+          "answerIndex": 0,
+          "concept": "Recognising means-ends analysis in a decomposition scenario",
+          "why": "The goal is fixed in advance, then split into quarterly and regional sub-problems each solved by its best-suited approach - exactly means-ends analysis."
+        },
+        {
+          "type": "mcq",
+          "q": "A doctor must destroy a tumour deep inside a patient with a high-intensity ray without burning the healthy tissue the ray must pass through. She recalls an army that captured a fortress by dividing into small groups that converged from many roads, and fires several weaker rays from different directions at once. Which strategy is this?",
+          "options": [
+            "Means-ends analysis, because the single strong ray was broken up into several smaller rays",
+            "Abstraction, because the surrounding healthy tissue was filtered out of the model she used",
+            "Brainstorming, because a number of possible routes to the tumour were considered together",
+            "Analogy, because a previously understood system with the same principle was reused"
+          ],
+          "answerIndex": 3,
+          "concept": "Distinguishing analogy from means-ends when the analogy itself involves division",
+          "why": "The solution is imported wholesale from a previously understood system - the army and the fortress - whose underlying principle matches; the division is a feature of the source system, not a decomposition of this problem."
+        },
+        {
+          "type": "mcq",
+          "q": "Dan had $500 and now has $287; a student is asked how much he gave away. The student does not subtract, but says \"about 200 — that feels right.\" Which diagnosis is correct?",
+          "options": [
+            "He used trial and error where the number of possible answers was far too large",
+            "He used a heuristic on a routine problem, where a sub-optimal answer is not acceptable",
+            "He treated a non-routine problem as routine by reaching for a standard algorithm",
+            "He skipped the brainstorming stage, so no alternative candidate answers were raised"
+          ],
+          "answerIndex": 1,
+          "concept": "Diagnosing a strategy applied outside its conditions of use",
+          "why": "Estimating instead of subtracting applies a heuristic to a routine problem that has an exact algorithm, and here a sub-optimal answer is not acceptable."
+        },
+        {
+          "type": "mcq",
+          "q": "Two problems: (i) \"Calculate the area of a 150 m × 2000 m parking space.\" (ii) \"Give an approximate number of hairs on your head.\" How are they classified?",
+          "options": [
+            "(i) routine, since a known formula applies; (ii) non-routine",
+            "(i) routine, (ii) unsolvable, since nobody can count them",
+            "(i) non-routine, since it is geometry and not plain arithmetic; (ii) non-routine",
+            "Both routine, since both end in a number produced by arithmetic"
+          ],
+          "answerIndex": 0,
+          "concept": "Applying the routine/non-routine test without over-reaching to 'unsolvable'",
+          "why": "The area has a known formula so it is routine; the hair count has no standard method but is not undecidable - no decision procedure is at stake."
+        },
+        {
+          "type": "mcq",
+          "q": "A lecturer asks the class to write one program that reads any other program plus its input and prints whether that program will finish or run forever. What is the correct response?",
+          "options": [
+            "It is possible, but only for programs short enough to be read through in reasonable time",
+            "It is possible on a UTM, whose tape is unbounded, but not on any real modern computer",
+            "It is possible, but so slow in practice that the answer arrives long after it is useful",
+            "It is impossible — this is the halting problem, undecidable for every input"
+          ],
+          "answerIndex": 3,
+          "concept": "Recognising the halting problem when it is posed as an engineering task",
+          "why": "No algorithm returns an accurate true/false answer for every input, so the program is impossible in principle; speed, program length and choice of machine are all irrelevant."
+        },
+        {
+          "type": "mcq",
+          "q": "A design team decides to solve a new problem by analogy. In what order must they carry out the steps?",
+          "options": [
+            "Find similarities → define the problem → generate ideas from the description",
+            "Generate ideas → define the problem → select an analogy that fits those ideas",
+            "Define the problem and generate analogies → find similarities and select one → generate ideas",
+            "Select an analogy → define the problem in its terms → check the underlying principles match"
           ],
           "answerIndex": 2,
-          "concept": "Decidable vs undecidable, and what unsolvable does not mean",
-          "why": "An undecidable problem is one for which no algorithm can give an accurate true/false for every input value, and the halting problem is the course named example. The student plan is not merely slow, it is not an algorithm for the problem at all: on a program that never halts it never returns, so the NO branch is unreachable and no answer is ever produced. Option a is the just-add-hardware error - the obstacle is not resources but that no systematic method exists. Option b is the sharpest distractor because it is a true-sounding sentence about a different category: a non-routine problem merely lacks a standard method and originality can supply one, whereas an undecidable problem admits no method however creative the solver. Option d is the misreading the course explicitly warns against: unsolvable does not mean no solution can possibly be found, since plenty of individual programs can be shown to halt or loop; what fails is the existence of a general deciding procedure."
+          "concept": "Executing the analogy procedure in its stated order",
+          "why": "The lesson's steps run: define the problem and generate analogies, then find similarities and select one, then use the description and similarities to generate ideas."
         },
         {
           "type": "short",
-          "q": "A student must complete a degree syllabus of 8 courses, each carrying 12 weeks of material, in 6 months, while working 20 hours a week. Set this out as means-ends analysis would: state the target, at least three sub-problems the decomposition produces, and for each sub-problem the approach you would pick. Then state the one requirement means-ends analysis adds that just break it into pieces does not.",
-          "concept": "Means-ends analysis - decomposition plus a chosen approach per sub-problem",
-          "why": "Target: 96 course-weeks of material covered and assessed within 26 calendar weeks, alongside 20 paid working hours a week. Means-ends analysis begins by thinking about the solution beforehand and identifying the issues that will be encountered - here a roughly 4:1 compression of material, a fixed weekly time budget, and eight assessments to pass. The decomposition might run: (i) Time budget - establish how many study hours per week actually exist after 20 working hours; approach: arithmetic scheduling, a routine sub-problem solved with a straightforward algorithm. (ii) Material triage - decide which of the 96 course-weeks are load-bearing and which are supporting detail; approach: abstraction, filtering out material that will not contribute to passing so a model of the syllabus remains. (iii) Sequencing - order the eight courses so prerequisites come first and assessment deadlines are met; approach: dependency ordering, a solvable problem naturally expressed as a graph. (iv) Recovery - decide in advance what happens in a week lost to work; approach: heuristics, since a fast good-enough rule beats a perfect but late plan. The requirement means-ends analysis adds: it is not enough to split the problem, because each smaller problem must be solved with the best possible approach, chosen in advance from the issues expected to arise, and every sub-problem must be solved, since it is the solving of all of them that solves the main problem. Plain decomposition stops at the split; means-ends analysis is answerable for the method attached to each piece and for the target the pieces must close."
+          "q": "A classmate tries `OB`→`BOOB` once on **BOB**, does not reach **BOOOB**, and concludes the puzzle does not come out. Give a sequence of replacements that does reach **BOOOB**, and explain why his conclusion was premature.",
+          "concept": "Failing to reach a target in one step is not proof that no sequence exists",
+          "why": "A sequence that works is BOB -> (OB to BOOB) -> BBOOB -> (OB to BOOB on the trailing OB) -> BBOBOOB -> (BOB to O on the BOB at positions 2-4) -> BOOOB. His conclusion was premature because he tried a single application of a single rule and treated that one failure as covering every possibility. The puzzle has two rules that may be applied any number of times, in any order, and at any matching position in the string, so the search space is a tree of sequences rather than a list of single moves. Exhausting one branch says nothing about the others, and establishing that a target is unreachable requires an argument about all sequences, not one trial."
         },
         {
           "type": "short",
-          "q": "An online store checkout fails for roughly 1 user in 500; the cause is unknown and the team has drawn up 40 candidate causes. A junior engineer proposes disabling one feature at a time in production until the failures stop. A senior engineer says it is always the payment gateway, start there. Evaluate each proposal against the course stated condition for its strategy, say what each risks, and explain how abstraction could make the junior method viable.",
-          "concept": "Matching a strategy to its stated condition; abstraction as a precondition for trial and error",
-          "why": "The junior is proposing trial and error, whose condition is that the number of possible solutions be few. With 40 candidate causes, and a fault that shows only once in 500 checkouts, it is squarely in the case the course calls time-consuming and inefficient: each trial needs enough traffic to be sure the failure has really stopped rather than merely not recurred yet, so 40 trials could take months, and disabling live features risks introducing new failures that contaminate the very signal being measured. The senior is proposing heuristics, whose condition is that a sub-optimal solution be acceptable and whose payoff is saving time and energy by deciding without stopping to think about the next course of action; the course also warns that such solutions are not always rational. The risk is exactly that: if the gateway is innocent, the team has spent its effort on a confident guess and has learned nothing that narrows the remaining 39 causes. Neither strategy is wrong in itself; each is being asked to work outside its condition. Abstraction repairs this by changing the number the condition depends on: filter out every attribute of the failing sessions that cannot bear on the fault - browser chrome, page styling, user names - and keep what might, such as payment method, cart size, currency, network region, and whether the session was resumed. The resulting model of which sessions fail typically eliminates most of the 40 candidates at a stroke. Once the candidate set is genuinely few, trial and error becomes the right instrument, and the senior rule of thumb becomes what it should have been all along: one hypothesis inside that small set rather than a substitute for narrowing it."
+          "q": "Bridget's exam-marks problem is solved with nothing but addition, subtraction and multiplication, yet it is classified as non-routine while \"what is 500 − 287?\" is routine. Explain what the solver has to do in the first case that he does not have to do in the second.",
+          "concept": "Routine versus non-routine turns on whether a method presents itself",
+          "why": "For 500 - 287 the solver recognises the operation immediately: the problem states which quantities to combine and the standard subtraction algorithm applies directly, so no method has to be invented. Bridget's problem states no such operation. The solver must first introduce the unknowns, notice that correct and wrong responses together must total 50, express the score as 4c - 2(50 - c), and only then does an equation appear that can be solved routinely. That construction step - devising a representation and a method where none was given - is what makes it non-routine, and it is entirely independent of how elementary the arithmetic then turns out to be."
+        },
+        {
+          "type": "short",
+          "q": "At XYZ Corp's idea session on the falling product quality, the manager explains why each suggestion won't work as soon as it is offered, and the session ends with three surviving ideas. Explain why this session did not produce what brainstorming is designed to produce.",
+          "concept": "Criticism during the session destroys the two mechanisms brainstorming runs on",
+          "why": "Brainstorming is designed to produce a large volume of ideas, weak and half-formed ones included, on the expectation that participants will fine-tune and build on each other's contributions. Criticising each suggestion as it arrives defeats both mechanisms: people stop offering ideas they suspect are weak, so the volume collapses, and an idea shot down immediately is never available for anyone to improve or combine with another. Three surviving ideas is the symptom - the session produced a filtered shortlist, which is what the later evaluation stage is for, instead of the wide pool of raw material the session was supposed to generate. The judging was not wrong in itself, only done at the wrong time."
+        },
+        {
+          "type": "short",
+          "q": "Apply means-ends analysis to XYZ Corp's declining product quality: state the overall goal, name two sub-problems it breaks into, and explain why attacking the sub-problems separately is legitimate here rather than a way of dodging the real problem.",
+          "concept": "Means-ends analysis on a real goal, and when decomposition is legitimate",
+          "why": "The overall goal is fixed in advance: restore product quality to an agreed standard by a stated date. Two sub-problems it breaks into are, first, identifying where in the production line the defects are being introduced, by inspecting output at each stage; and second, establishing whether the cause is materials, machine condition or operator training, and correcting it. Each can be given the approach that suits it - sampling and measurement for the first, testing and comparison for the second. This is legitimate rather than evasive because the two sub-problems together account for the whole of the original goal and their solutions recombine into it: fixing the identified stage and its identified cause is what restoring quality consists of. It would be dodging only if a hard part were set aside and the easy parts solved on assumptions the hard part might later overturn."
         }
       ]
     }
@@ -635,31 +1027,31 @@
   "recapCandidates": [
     {
       "course": "PHY_102",
-      "topic": "The superposition principle: combining Coulomb forces and electric fields as vector sums",
-      "whyMisunderstood": "Superposition looks trivially easy when it is stated - just add up the forces - and that is exactly why students lose marks on it. The word add hides the fact that the operation is a vector sum, so a student who has correctly computed every individual magnitude can still get the wrong answer by combining them arithmetically, or by cancelling the source charges (+4 and -4 look like they should give zero) instead of resolving the actual force directions. A second layer of confusion comes from the pairwise independence that superposition asserts: because everyday intuition says that objects in between block things, students expect a third charge placed between two others to reduce or screen the force between them, when in fact each pairwise Coulomb force is completely unaffected and superposition only adds new terms. A third layer is sign handling: the vector form already encodes attraction and repulsion in the signed product, so a student who substitutes signed charges and then also flips the direction by inspection uses the sign twice and reverses the answer. Finally the inverse-square weighting is consistently underestimated - the distance ratio is squared while the charge ratio is not, so intuition about which charge dominates is often wrong, and null-point problems get solved with the right algebra applied to the wrong geometry (between the charges for a like pair, outside for an unlike pair).",
+      "topic": "Why the electric field can vanish where the potential does not, and the potential vanish where the field does not - the consequence of E being a vector and V a scalar.",
+      "whyMisunderstood": "E and V are introduced together, both fall off with distance and both are computed from the same charges, so they get treated as two names for one thing - which makes it seem paradoxical that one can be zero exactly where the other is largest.",
       "whyQuestions": [
-        "Why is superposition a vector sum rather than a sum of magnitudes, and when is arithmetic addition legitimate?",
-        "Why does placing a third charge between two others leave the force between those two completely unchanged?",
-        "Why does the vector form F = (k q1 q2 / r^2) r-hat give the direction automatically, and why is applying like-repels-unlike on top of it an error?",
-        "Why can there be no zero-force point between two unlike charges, while for two like charges the null point must lie between them and nearer the smaller one?",
-        "Why does the location of a null point not depend on the size or sign of the charge you place there?"
+        "What is the unit of E and what is the unit of V, and what does each unit tell you the quantity is per unit of?",
+        "Why does a field contribution need a direction while a potential contribution needs only a sign?",
+        "At the midpoint between two equal positive charges, what are the two field arrows doing, and what are the two potential numbers doing?",
+        "Now make one of those charges negative. Which of E and V is zero at the midpoint, and which is at a maximum?",
+        "Why can you not recover E at a point just by dividing V at that point by a distance?"
       ],
-      "goodAnswerContains": "States superposition as: the net force (or field) on a charge is the vector sum of the forces (or fields) each other charge would produce individually, each computed by Coulomb's law as if the others were absent - so charges never screen one another.\nShows the working method: draw a free-body diagram, resolve each contribution into components along fixed axes with explicit signs, sum the components separately, then recombine with Pythagoras and arctan(Fy/Fx) - never by adding magnitudes.\nHandles signs once and only once, and applies the inverse-square weighting explicitly, noting that a factor in distance counts squared while a factor in charge counts linearly.",
-      "workedExample": "A +2.0 microcoulomb charge q0 sits at the origin. A +8.0 microcoulomb charge is at (0.30 m, 0) and a +6.0 microcoulomb charge is at (0, 0.30 m). Find the net force on q0. Both separations are 0.30 m, so r^2 = 0.090 m^2 in each case. Force from the 8.0 microcoulomb charge: F1 = (8.99 x 10^9)(8.0 x 10^-6)(2.0 x 10^-6)/0.090 = 1.60 N; all charges are positive, so q0 is pushed directly away from it, along -x. Force from the 6.0 microcoulomb charge: F2 = (8.99 x 10^9)(6.0 x 10^-6)(2.0 x 10^-6)/0.090 = 1.20 N, pushing q0 along -y. Now superpose as a vector sum by components: sum of Fx = -1.60 N, sum of Fy = -1.20 N. Magnitude: F = sqrt(1.60^2 + 1.20^2) = sqrt(2.56 + 1.44) = sqrt(4.00) = 2.0 N. Direction: tan(theta) = 1.20/1.60 = 0.75, so theta = 37 degrees below the -x axis (about 217 degrees measured anticlockwise from +x). Note that adding the magnitudes arithmetically would have given 2.8 N, a 40 percent error, and that the two forces are perpendicular here only because of where the charges were placed - in general every contribution must be resolved before it is added."
+      "goodAnswerContains": "It identifies E as force per unit charge (N/C, a vector) and V as energy per unit charge (J/C, a scalar), and grounds the whole difference in the fact that force has a direction and energy does not.\nIt therefore adds field contributions as arrows that can point against each other and cancel, and potential contributions as signed numbers that cancel only when the signs of the charges differ.\nIt draws the consequence: two like charges give E = 0 and V at a maximum at the midpoint, while two unlike charges of equal magnitude give V = 0 and E at a maximum there - so the two quantities vanish in opposite configurations, and neither can be obtained from the other by a simple division.",
+      "workedExample": "Two charges of +q sit a distance 2a apart; take the midpoint M. FIELD: the left charge pushes a positive test charge to the right with magnitude kq/a^2; the right charge pushes it to the left with the same magnitude kq/a^2. Equal arrows, opposite directions, so E = 0 at M. POTENTIAL: each contributes +kq/a, a positive number with no direction, so V = kq/a + kq/a = 2kq/a, which is a maximum, not zero. Now flip the right-hand charge to -q. FIELD: the +q pushes the test charge to the right with kq/a^2, and the -q pulls it to the right with kq/a^2 - both now point the same way, so E = 2kq/a^2, a maximum. POTENTIAL: +kq/a from one and -kq/a from the other, so V = 0. The two cases have swapped exactly. Note the final trap: at M in the second case V = 0 yet E is at its largest, which is why V cannot be divided by a distance to recover E - the correct relation is that E measures the rate at which V changes with position, and V can pass through zero while changing very fast indeed."
     },
     {
-      "course": "MTH_102",
-      "topic": "Rational functions: holes versus vertical asymptotes, the degree rules for horizontal and oblique asymptotes, and solving rational inequalities",
-      "whyMisunderstood": "Students meet rational functions as a list of separate rules and never see that all of them come from one idea: what happens to a quotient when the denominator gets small, and what happens when x gets large. So they set the denominator to zero and declare a vertical asymptote without first cancelling, drawing an asymptote where the graph in fact has a single missing point; they take the ratio of leading coefficients as a reflex whenever they see a fraction, producing a horizontal asymptote for a function that actually has an oblique one, or none; they treat a horizontal asymptote as a barrier the curve cannot cross, when it is only a claim about the far left and far right; and, worst of all in an exam, they treat a rational inequality like a rational equation and multiply both sides by the denominator, which is legitimate for an equation but not for an inequality, because the denominator changes sign across its own zero and the direction of the inequality flips on one side and not the other. The habits reinforce each other: a student who never factors first will never notice a hole, and a student who never draws a sign chart has no way of seeing that the solution set of a rational inequality usually comes in two disconnected pieces.",
+      "course": "COS_102",
+      "topic": "What 'unsolvable' and 'undecidable' actually claim - and why they are statements about methods, not about answers.",
+      "whyMisunderstood": "The everyday sense of 'unsolvable' is 'has no answer', so the lesson's technical sense gets read that way, and 'undecidable' then sounds like a stronger word for 'very hard'. Both readings are wrong, and the lecture slide warning against the first is easy to skim past.",
       "whyQuestions": [
-        "Why does a factor that cancels give a hole rather than a vertical asymptote, and how do you find the height of that hole?",
-        "Why is the ratio of leading coefficients the horizontal asymptote only when the degrees are equal, and what replaces it when the numerator degree is one higher?",
-        "Why can a graph cross its horizontal asymptote but never its vertical asymptote?",
-        "Why is it wrong to multiply both sides of (x + 1)/(x - 3) <= 2 by (x - 3), even though the same move is fine for the equation (x + 1)/(x - 3) = 2?",
-        "Why does the sign of a factored expression change at a root of odd multiplicity but not at one of even multiplicity, and why is the root still excluded from a strict inequality either way?"
+        "In this course, what exactly is being claimed when a problem is called unsolvable - about the answer, or about something else?",
+        "Does a program that is asked whether it halts have an answer at all, for a particular given input?",
+        "If every individual case has an answer, what is it that the halting problem says cannot be done?",
+        "Why does a faster computer, or more memory, not help with an undecidable problem, when it does help with a merely difficult one?",
+        "Why are undecidable problems described as a subset of unsolvable ones rather than as a separate category?"
       ],
-      "goodAnswerContains": "Factor numerator and denominator first: cancelled factors give holes (height from the reduced function), surviving denominator zeros give vertical asymptotes.\nCompare degrees for the far-out behaviour: lower gives y = 0, equal gives the ratio of leading coefficients, one higher gives an oblique asymptote found by long division; a horizontal or oblique asymptote may be crossed at finite x.\nFor an inequality, move everything to one side over a common denominator, mark the zeros of the numerator and denominator on a sign chart, test one value per interval, and include numerator zeros only when the inequality is non-strict while always excluding denominator zeros.",
-      "workedExample": "Sketch f(x) = (x^2 - 4)/(x^2 - x - 6) and then solve f(x) >= 0. Step 1, factor: f(x) = (x - 2)(x + 2)/((x - 3)(x + 2)). The factor (x + 2) cancels, so x = -2 is a hole, not an asymptote; the reduced function is (x - 2)/(x - 3), and the hole sits at height (-2 - 2)/(-2 - 3) = 4/5, giving the open point (-2, 0.8). Step 2, vertical asymptote: the surviving denominator zero is x = 3. Step 3, intercepts: the numerator of the reduced function vanishes at x = 2, giving the x-intercept (2, 0); f(0) = (-4)/(-6) = 2/3, giving the y-intercept (0, 2/3). Step 4, far-out behaviour: the degrees are equal, so the horizontal asymptote is y = 1/1 = 1; writing f(x) = 1 + 1/(x - 3) shows f approaches 1 from above as x approaches +infinity and from below as x approaches -infinity, and that f = 1 has no solution, so the graph never crosses that asymptote. Step 5, behaviour at the vertical asymptote: as x approaches 3 from below the numerator tends to 1 and the denominator to 0 from the negative side, so f tends to -infinity; from above, f tends to +infinity. Step 6, sign chart on (x - 2)/(x - 3) with critical values 2 and 3: at x = 0 the value is (-2)/(-3) > 0, at x = 2.5 it is (0.5)/(-0.5) < 0, at x = 4 it is 2/1 > 0. So f(x) >= 0 on (-infinity, 2] together with (3, infinity), minus the hole at x = -2 which must be removed because f is undefined there; x = 2 is included since f(2) = 0, and x = 3 is excluded since f is undefined there."
+      "goodAnswerContains": "It states the lesson's own correction explicitly: unsolvable problems are not problems for which no solution can be found - the claim is that no systematic method exists for deciding them for every input.\nIt separates the individual case from the general procedure: any particular program either halts on a given input or does not, so every instance has a true answer; what fails to exist is one algorithm that returns the right answer for all instances.\nIt distinguishes proved impossibility from cost, noting that difficulty is about time and resources - where a faster machine helps - while undecidability has been proved, so no machine, however fast, can do it; and it places undecidable problems inside the unsolvable ones as exactly those decision problems for which this has been established.",
+      "workedExample": "Ask for H(P, I): a program that reads any program P and input I and prints HALTS or LOOPS, correctly, every time. First note the answer exists case by case: the program 'while true do nothing' loops, and 'print 1 and stop' halts - each individual question has a definite true answer, so this is not a case of 'no answer exists'. Now suppose H existed. Build a new program D that takes a program P, runs H on the pair (P, P), and then does the opposite of what H says: if H reports HALTS, D enters an infinite loop; if H reports LOOPS, D stops immediately. Now run D on itself. If D halts, then H(D, D) must have reported HALTS - but D was built to loop in that case, so it does not halt. If D loops, then H reported LOOPS - but D was built to stop in that case, so it halts. Either way the assumption produces a contradiction, so no such H can exist. Note carefully what has been proved: not that some particular program's behaviour is unknowable, but that no single general method works for every input. That is the difference between undecidable and merely difficult, and it is why a faster machine changes nothing."
     }
   ]
 }
