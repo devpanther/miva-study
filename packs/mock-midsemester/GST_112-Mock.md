@@ -2,150 +2,153 @@
 
 *Nigerian Peoples and Culture · Weeks 1–4 · 45 minutes · notes closed · 24 marks*
 
-Sit this in one 45-minute block with notes closed and nothing open beside you: 20 multiple choice and 4 short answers, **one mark per question, 24 marks in total**.
-Mark Section B honestly against the model answers — a point you only half-remembered does not score, and the four short answers are where the exam separates people who know the names from people who recognise them.
+**Instructions.** 45 minutes, notes closed — Section A is 20 questions at 1 mark each and Section B is 4 questions at 1 mark each, for 24 marks; do not look at the Answers until the time is up.
+Mark Section B honestly against the model answers: a part-right answer that misses a named date, person or cause the model answer gives scores 0 — write down which week each lost mark came from and take that row of the revision table.
+
+---
 
 ## Section A — Multiple choice (20)
 
-**1.** Communal and associational society are distinguished along which three dimensions?
-A) Division of labour, social interactions, and traditions
-B) Technology, institutions, and beliefs
-C) Governance, culture, and family structures
-D) Resource mobilisation, national identity, and integration
+**1.** Which of the following belongs to the **ideological** component of culture?
+a) The tools and material objects a people produce and use   b) The rules governing marriage, family and kinship   c) A people's religious beliefs, moral values and worldview   d) The specialised division of labour within a society
 
-**2.** Which statement matches the course's distinction between nation-building and national integration?
-A) Nation-building is the effort — mobilising resources and forging a national identity; national integration is the outcome — the unification of diverse groups
-B) National integration is the effort — mobilising resources and forging a national identity; nation-building is the outcome — the unification of diverse groups
-C) The two are used interchangeably in the course, with no distinction drawn between them
-D) Nation-building follows automatically from independence; national integration is achieved by mobilising resources for development
+**2.** Communal and associational societies are distinguished along which three dimensions?
+a) Division of labour, social interactions, and traditions   b) Kinship, religion, and language   c) Technology, institutions, and beliefs   d) Population, territory, and government
 
-**3.** Which statement correctly separates the sociological from the ideological component of culture?
-A) The sociological covers the institutions and norms of a society; the ideological covers the beliefs and values behind them
-B) The sociological covers beliefs and values; the ideological covers institutions such as marriage and government
-C) The sociological covers tools and material objects; the ideological covers institutions and norms
-D) The sociological covers a people's worldview; the ideological covers their division of labour
+**3.** Karl Marx's communist vision is described as a society built on:
+a) The replacement of traditional authority by formal contract   b) Collective ownership of the means of production and the distribution of wealth   c) An organism in which each institution sustains the whole   d) Mobilising resources for development and constructing a national identity
 
-**4.** Which statement correctly distinguishes culture from society?
-A) Culture is the shared system of behaviours, beliefs, values and practices; society is the organised group of people who hold and live it out
-B) Culture is the organised group of people; society is the shared system of beliefs and values they hold
-C) Culture is the material technology of a people; society is their religion and worldview
-D) Culture is the government of a people; society is their kinship and marriage system
+**4.** Functionalism accounts for the stability of a society by arguing that:
+a) Attachment to tradition binds members more tightly than contract does   b) Removing private ownership removes the basis of class division   c) Conflict between groups forces institutions to adapt or perish   d) Society works like an organism in which each component performs a role that sustains the whole
 
-**5.** Karl Marx's communist vision would eliminate which of the following as the basis of class division?
-A) Private ownership of the means of production
-B) The specialised division of labour
-C) Strong attachment to tradition
-D) Informal, kinship-based social interaction
+**5.** Colonialism's impact on African societies is described as the alteration of which three things?
+a) Trade routes, currency, and land tenure   b) Division of labour, social interactions, and traditions   c) Governance structures, culture, and family structures   d) Technology, institutions, and beliefs
 
-**6.** Which geo-political zone is described as the most ethnically diverse, taking in the Borgu, Nupe, Igala and Tiv?
-A) North East  B) North Central  C) South South  D) North West
+**6.** Nigeria is said to contain over how many language groups and how many ethnic groups?
+a) 374 language groups and 348 ethnic groups   b) 348 language groups and 374 ethnic groups   c) 250 language groups and 374 ethnic groups   d) 348 language groups and 250 ethnic groups
 
-**7.** The Yoruba–Benin connection in the traditions of origin is traced through which pair of figures?
-A) Saif and Bayajidda  B) Ado and Asipa  C) Oranmiyan and Eweka  D) Ekpe and Ekpo
+**7.** The Kanuri trace their descent to ——, the Hausa to ——, and both traditions place the origin at ——.
+a) Kisra; Bayajidda; Ife   b) Saif; Kisra; Baghdad   c) Saif; Bayajidda; Baghdad   d) Bayajidda; Saif; Baghdad
 
-**8.** In the wars against the Nupe, the Yoruba were allied with the:
-A) Bariba  B) Jukun  C) Tuareg  D) Igala
+**8.** In the Kisra legend, Kisra founded which kingdoms, and regarded which ruler as his brother?
+a) The Yoruba and Borgu kingdoms; the Ooni of Ife   b) The Yoruba and Benin kingdoms; the Oba of Benin   c) The Hausa and Borgu kingdoms; the Mai of Bornu   d) The Nupe and Igala kingdoms; the Attah of Igala
 
-**9.** The Igunu institution found among the Yoruba is traceable to which Nupe original?
-A) Ibini Ukpabi  B) Ndakogbaya  C) The Bori cult  D) Ekpo
+**9.** Through military conquest, the **Jukun** extended their sphere of influence to which peoples?
+a) Auchi, Idah, Itsekiri, Urhobo, Isoko and Okpe   b) The Kanuri, Hausa, Igala, Idoma and Ebira   c) The Tuareg, Kanuri, Gonja, Oyo, Igala and Kwararafa   d) The Gwari, Nupe and Yoruba
 
-**10.** The lesson lists the Hausa as trading with which set of peoples?
-A) Kanuri, Hausa, Igala, Idoma and Ebira
-B) Auchi, Idah, Itsekiri, Urhobo and Okpe
-C) Tuareg, Kanuri, Gonja, Oyo, Igala and Kwararafa
-D) Igbo, Efik, Ijaw, Ibibio and Isoko
+**10.** Which pairing of a religious institution with its origin is correct?
+a) Ibini Ukpabi — Efik in origin, today common among the Ibibio   b) Ekpe and Ekpo — Ibibio in origin, today popular among the Efik   c) The Bori cult — Nupe in origin, today common among the Yoruba   d) Igunu of the Yoruba — traceable to the Ndakogbaya among the Nupe
 
-**11.** Which scholar called the triangular trade "the largest intercontinental migration in western History", spanning a period of 300 years?
-A) Paul Lovejoy  B) Phillip Curtin  C) Walter Rodney  D) Claude Ake
+**11.** In the account of the 15th-century incursion, the Portuguese are identified as:
+a) The biggest slave traders of the century, carrying more than half of all slaves from Africa   b) The first European power to establish a regular trade in slaves from West Africa to the Americas, and the developers of the triangular trade route   c) The power whose consul was sent on a treaty-making tour of the Niger   d) The nation that joined the leading slavers in the 17th century and took over the trade
 
-**12.** The Pope's division of the Old World between two European powers allotted:
-A) Africa to Portugal and the Americas to Spain
-B) Africa to Spain and the Americas to Portugal
-C) Africa to Portugal and the Americas to Britain
-D) Africa to Spain and the Americas to Britain
+**12.** Portuguese sailors began exploring the West African coast in the early 15th century, driven chiefly by ——; the ship design named as their key improvement is the ——.
+a) The desire for new markets; the caravel   b) The demand for plantation labour in Brazil; the caravel   c) The desire for new markets; the steamship   d) The search for the source of the River Niger; the galleon
 
-**13.** From which year did Britain begin seizing slave ships and repatriating those on board to Sierra Leone?
-A) 1792  B) 1833  C) 1840  D) 1849
+**13.** When the National African Company first applied for a royal charter in 1881, the application was refused on the ground that:
+a) The company lacked the capacity to administer the territory   b) Its capital had not yet been raised to £1 million   c) French firms were still trading on the Niger   d) The Berlin Conference had not yet allocated spheres of influence
 
-**14.** In 1884 the British government instructed Consul Hewett to make a treaty-making tour, in which many chiefs placed themselves under British protection. This became the basis of:
-A) The grant of the Royal Charter to the National African Company
-B) The Asiento, the right to trade in slaves in the New World
-C) A British claim to a sphere of influence at the Berlin Conference
-D) The renaming of the Oil Rivers Protectorate as the Niger Coast Protectorate
+**14.** Kosoko refused the treaty the British offered him in 1851. What followed directly?
+a) Lagos was annexed and made a British colony   b) Beecroft was appointed for the purpose of control and supervision   c) A treaty granted British traders storage facilities in return for import and export duties   d) Lagos was bombarded, and on 29 December 1851 Akitoye regained the seat while Kosoko fled to Epe
 
-**15.** Which scholar argued that "it was mainly because the development of productive forces stagnated at a certain stage in African history that the colonisers were able to subordinate the continent"?
-A) Wole Soyinka  B) Washington Alco  C) Claude Ake  D) Paul Lovejoy
+**15.** By 1895 two significant but unrelated events had combined to weaken the Royal Niger Company. They were:
+a) The appointment of Salisbury as Colonial Secretary and a price war in the Delta   b) The appointment of Sir Ralph Moor as Consul of the Oil Rivers and widespread smuggling   c) The appointment of Joseph Chamberlain as Colonial Secretary and the raid on Akassa by the Brass people   d) The Kirk Commission of Enquiry and the revocation of the company's charter
 
-**16.** The central legislative council created under the Richards Constitution was composed of:
-A) 45 members, 28 of them Nigerians, of whom 4 were elected
-B) 45 members, 26 official Europeans, 15 nominated and 4 elected Nigerians
-C) 136 members reaching the chamber through the regional legislatures
-D) 36 members, six of them unofficial members
+**16.** Clifford's Legislative Council of 1922 had 45 members, made up of:
+a) 28 Nigerians, of whom 4 were elected   b) 26 nominated Nigerians, 15 officials and 4 elected members   c) 36 members, of whom 6 were unofficial   d) 26 official (European) members, 15 nominated members and 4 elected Nigerians
 
-**17.** In 1938 which party won all the elective seats from the NNDP, before internal disputes destroyed it in 1944?
-A) NCNC  B) NYM  C) AG  D) NPC
+**17.** The Nigerian Council of 1914 was:
+a) Set up by Lord Lugard, with 36 members including 6 unofficial, and advisory functions only   b) Set up by Sir Hugh Clifford, with 45 members and power to make law   c) Set up by Sir Arthur Richards, with a House of Assembly in each of the three regions   d) Set up by Lord Lugard, with 45 members of whom 4 were elected
 
-**18.** Egbe Omo Oduduwa, the cultural organisation out of which the Action Group later grew, was formed in 1945 by:
-A) Ernest Ikoli, Samuel Akisanya and Kofo Abayomi
-B) Herbert Macaulay, Nnamdi Azikiwe and Ernest Ikoli
-C) Ahmadu Bello, Tafawa Balewa and Yahaya Gusau
-D) Obafemi Awolowo, the Ooni and Ajasin
+**18.** Under the Macpherson Constitution the Legislative Council was renamed the House of Representatives with —— members, and the constitution lasted less than three years because ——.
+a) 45; the Lyttleton Constitution replaced it   b) 136; of Enahoro's motion for independence   c) 136; the Northern Region rejected the elective principle   d) 45; of Enahoro's motion for independence
 
-**19.** Which of the following is one of the four stated criticisms of Nigeria's political parties?
-A) They weakened the central government
-B) They established newspapers to reach the public
-C) They spread political education among Nigerians
-D) They sought to retain regional autonomy in the North
+**19.** Which statement about the Lyttleton Constitution of 1954 is correct?
+a) It was the work of a Governor, Sir John Macpherson, and introduced regionalism   b) It introduced regionalism and left the franchise limited to Lagos and Calabar   c) It made the Governor Prime Minister over a Council of Ministers of twelve   d) It was introduced by Sir Oliver Lyttleton, a Colonial Secretary rather than a Governor, and established the federal system with the office of Premier in each region
 
-**20.** On the 1914 Amalgamation two schools of thought are given. One holds that it merely formalised pre-existing inter-group relations; the other holds that it:
-A) Created a deeply divided nation
-B) Ended the era of company rule in the Niger basin
-C) Introduced the elective principle to Nigeria
-D) Laid the foundation of the federal system
+**20.** The NCNC, formed in August 1944, had:
+a) Nnamdi Azikiwe as first President and the *Daily Service* as its newspaper   b) Herbert Macaulay as first President and the *Lagos Daily News* as its newspaper   c) Herbert Macaulay as first President, Nnamdi Azikiwe as first General Secretary, and the *West African Pilot* as its newspaper   d) Ernest Ikoli as first President and the *West African Pilot* as its newspaper
 
 ## Section B — Short answer (4)
 
-**21.** Marx and the functionalists offer two different pictures of what a society is. Set out each briefly, then state which of the two forms of society — communal or associational — is marked by a high, specialised division of labour, and what its social interactions are based on.
+**21.** Nation-building and national integration are not the same thing. Define each, state precisely how they differ, and explain — with reference to what colonialism did to African societies — why integration has proved so difficult in Nigeria.
 
-**22.** Taking trade and religion as two of the four indicators of pre-colonial intergroup relations, give three named trade facts and three named religious borrowings, saying in each case which group supplied or originated the item and which received it.
+**22.** Historians read pre-colonial intergroup relations indirectly, through indicators. Name all four indicators, give one named example under each, and explain why conflict counts as evidence of *relations* rather than as the opposite of them.
 
-**23.** Set out, in order and with the year for each step, the chain of events running from Britain's first move against the slave ships to the annexation of Lagos, naming the men involved at each stage.
+**23.** Reconstruct, in order and with dates, the chain that runs from Britain's first move against the slave trade to the annexation of Lagos, and state the argument that made annexation the logical next step.
 
-**24.** List the four constitutions in order, with the year, the man behind each and the one thing each is remembered for introducing; then explain why the Nigerian Council of 1914 is not counted as one of them.
+**24.** Compare the Richards Constitution (1947) and the Macpherson Constitution (1951): what each introduced, how they were drafted, the numbers attached to each, and why Macpherson's fell.
+
+---
 
 ## Answers
 
-**1. A** — *the three dimensions of society*: division of labour, social interactions, traditions. **[Week 1]**
-**2. A** — *nation-building vs national integration*: nation-building is the effort, integration is the outcome. **[Week 1]**
-**3. A** — *sociological vs ideological components*: institutions are the structures, beliefs are the ideas behind them. **[Week 1]**
-**4. A** — *culture vs society*: the shared system versus the organised group of people who live it out. **[Week 1]**
-**5. A** — *Marx's communist vision*: collective ownership and distribution of wealth, removing private ownership as the basis of class. **[Week 1]**
-**6. B** — *the six geo-political zones*: North Central is the most ethnically diverse — Borgu, Nupe, Igala, Tiv. **[Week 2]**
-**7. C** — *traditions of origin*: the Yoruba–Benin link runs through **Oranmiyan and Eweka**. (Saif and Bayajidda are the Kanuri and Hausa origins; Ado and Asipa are the early Lagos kings of Benin origin.) **[Week 2]**
-**8. A** — *the Oyo–Nupe wars*: the **Bariba** allied with the Yoruba against the Nupe. **[Week 2]**
-**9. B** — *religious borrowing*: **Igunu** (Yoruba) traces to **Ndakogbaya** (Nupe). Ibini Ukpabi is Ibibio in origin, Ekpo Efik, and the Bori cult Hausa. **[Week 2]**
-**10. C** — *Hausa trade partners*: Tuareg, Kanuri, Gonja, Oyo, Igala and Kwararafa. Option A is the Jukun conquest list and B the Benin list. **[Week 2]**
-**11. B** — *Phillip Curtin* on the triangular trade: the largest intercontinental migration in western history, over 300 years. **[Week 3]**
-**12. A** — *the papal division of the Old World*: **Africa to Portugal, the Americas to Spain**. **[Week 3]**
-**13. A** — **1792**, when Britain began seizing slave ships and repatriating them to **Sierra Leone**; Buxton's bill came later, in **1833**. **[Week 3]**
-**14. C** — *sphere of influence*: Hewett's **1884** treaty tour underpinned Britain's claim at the **Berlin Conference**. The Royal Charter came in 1886, and the ORP was renamed in 1893. **[Week 3]**
-**15. C** — *Claude Ake* on the stagnation of productive forces. (Soyinka: the twin evils of slavery and colonialism; Alco: loss of skilled tradesmen; Lovejoy: the figures and the relocation away from slavers' routes.) **[Week 3]**
-**16. A** — *Richards' central council*: **45 members, 28 Nigerians, 4 elected**. Option B is Clifford's 45, C is Macpherson's 136 and D is Lugard's Nigerian Council of 36. **[Week 4]**
-**17. B** — *the NYM*: formed **1935**, beat the NNDP at the polls in **1938**, destroyed by internal disputes in **1944**. **[Week 4]**
-**18. D** — *Egbe Omo Oduduwa, 1945*: **Awolowo, the Ooni and Ajasin**; the Action Group followed at Ibadan in **1951**. **[Week 4]**
-**19. A** — *criticism of the parties*: ethnocentric syndrome; lack of political ideology; **weakened the central government**; sacrificed national interest for ethnic interest. B is one of the ways the parties advanced independence, C an NCNC aim and D an NPC objective. **[Week 4]**
-**20. A** — *the 1914 Amalgamation*: the second school holds that it **created a deeply divided nation**, and the civil war and the failures of national integration are traced back to it. **[Week 4]**
+**1.** c) — Ideological = beliefs, values and worldview; tools are technological and marriage rules are sociological. **[Week 1]**
+**2.** a) — The three dimensions are division of labour, social interactions and traditions. **[Week 1]**
+**3.** b) — Marx's vision is collective ownership of the means of production plus distribution of wealth; d) is nation-building and c) is functionalism. **[Week 1]**
+**4.** d) — Functionalism treats society as an organism whose components each contribute to the survival and stability of the whole. **[Week 1]**
+**5.** c) — Colonialism altered governance, disrupted culture, and reshaped family structures. **[Week 1]**
+**6.** b) — Over 348 language groups and 374 ethnic groups; the larger number is the ethnic one. **[Week 2]**
+**7.** c) — Saif = Kanuri, Bayajidda = Hausa, both traditions tracing to Baghdad. **[Week 2]**
+**8.** a) — Kisra, also from Baghdad, founded the Yoruba and Borgu kingdoms and considered the Ooni of Ife his brother. **[Week 2]**
+**9.** b) — Jukun conquest reached the Kanuri, Hausa, Igala, Idoma and Ebira; a) is Benin's list and c) is the Hausa's trading partners. **[Week 2]**
+**10.** d) — The Yoruba Igunu deity is traceable to the Ndakogbaya among the Nupe; Ibini Ukpabi is Ibibio in origin and Ekpe/Ekpo are Efik. **[Week 2]**
+**11.** b) — The Portuguese were first to run a regular slave trade from West Africa to the Americas and built the triangular route; the British were merely the biggest traders, in the 18th century. **[Week 3]**
+**12.** a) — The motive named is the desire for new markets, and the named vessel is the caravel; Laird's steam expedition is 1857, four centuries later. **[Week 3]**
+**13.** a) — The 1881 refusal was for lack of capacity; the £1 million capital and the obstructing French firms belong to 1882, and the charter came in 1886. **[Week 3]**
+**14.** d) — His refusal caused the bombardment, after which Akitoye regained the seat on 29 December 1851 and Kosoko fled to Epe; the storage-facilities treaty is 1852 and annexation is 1861. **[Week 3]**
+**15.** c) — Chamberlain's appointment as Colonial Secretary and the Brass raid on Akassa; the Kirk Commission and the charter's revocation were the consequences, not the causes. **[Week 3]**
+**16.** d) — 26 official Europeans, 15 nominated, 4 elected Nigerians (3 Lagos, 1 Calabar); "28 Nigerians of whom 4 elected" is Richards's council. **[Week 4]**
+**17.** a) — Lugard's Nigerian Council: 36 members, 6 unofficial, advisory only; the 45-member law-making council is Clifford's, of 1922. **[Week 4]**
+**18.** b) — The House of Representatives had 136 members, and Enahoro's motion for independence ended the constitution inside three years. **[Week 4]**
+**19.** d) — Lyttleton was a Colonial Secretary, not a Governor; he introduced federalism and the office of Premier, while regionalism was Richards's and the Prime Minister title was Macpherson's. **[Week 4]**
+**20.** c) — Macaulay was first President and Azikiwe first General Secretary, becoming President after Macaulay died; the *West African Pilot* was the NCNC paper, the *Daily Service* the NYM's and the *Lagos Daily News* the NNDP's. **[Week 4]**
 
-**21.** *Marx, functionalism and the two forms of society*. **Marx's** vision is of a society built on the **collective ownership of the means of production** and the **distribution of wealth**, so that **private ownership** no longer functions as the basis of class division. **Functionalism** views society as **an organism**, in which each component institution performs a role that contributes to the **survival and stability of the whole** — order rather than class conflict. The form of society marked by a **high, specialised division of labour** is the **associational** society, whose social interactions are **formal and impersonal**, based on **interest or contract** rather than kinship, and which has a **weaker attachment to tradition**. **[Week 1]**
-**22.** *Trade and religion as indicators*. **Trade**: the **Jukun** gave **salt** to the **Tiv** in exchange for **firewood**; **Kanem Bornu** was the channel through which the **Yoruba and Nupe** joined the **trans-Saharan trade**; **Ibibio land** was the corridor between the hinterland **Igbo** and the coastal **Efik and Ijaw**; and the **Nupe** supplied the **Yoruba** with **shea butter, bangles, brasswork, potash and straw hats**. (The **Hausa** also traded with the **Tuareg, Kanuri, Gonja, Oyo, Igala and Kwararafa**.) **Religion**: **Igunu** among the **Yoruba** traces to **Ndakogbaya** among the **Nupe**; **Ibini Ukpabi** is of **Ibibio** origin but is now common among the **Igbo**; **Ekpe and Ekpo** are of **Efik** origin and are now popular among **Igbo** subgroups; the **Bori cult** is found throughout **Hausaland**, and the peoples of **Jos** share religious symbols with the **Jukun**. **[Week 2]**
-**23.** *From abolition to annexation*. **1792** — Britain begins **seizing slave ships**, repatriating those aboard to **Sierra Leone**. **1833** — **Thomas Fowell Buxton**, a British parliamentarian, sponsors the **abolition bill**, arguing that the trade must be stopped **from Africa**. **1840** — the **Bight of Benin** is still the **last centre** of the trade in West Africa, with **Lagos** the leading slave port. **1849** — **Beecroft** is appointed for control and supervision, the **beginning of Britain's direct influence in Nigeria**. **1851** — Britain signs a treaty with **Kosoko** to end the slave trade; his **refusal** brings the **bombardment** of Lagos, and on **29 December 1851 Akitoye** regains the seat of Lagos while **Kosoko flees to Epe**. **1852** — a treaty protecting British traders, granting the right to trade and the erection of storage facilities, with European merchants paying import and export duties. **1857** — **Macgregor Laird's** expedition establishes the Delta ports of **Ado, Onitsha and Gbebe**. **1861** — the **annexation of Lagos** (the year Laird died). **[Week 3]**
-**24.** *The four constitutions*. **Clifford, 1922, Sir Hugh Clifford** — Nigeria's **first written constitution**, remembered for the **elective principle**, which produced the political parties and the newspapers. **Richards, 1946/1947–1951, Sir Arthur Richards** — **regionalism**, with a House of Assembly in each of the three regions under one central legislative council. **Macpherson, 1951, Sir John Macpherson** — **wide consultation with Nigerians** and the supreme **House of Representatives** of 136 members. **Lyttleton, 1954, Sir Oliver Lyttleton** (a **Colonial Secretary**, not a Governor) — **federalism**, power shared between centre and regions, plus the office of **Premier**, a regionalised judiciary and Lagos as **Federal Capital Territory**. The **Nigerian Council of 1914**, set up by **Lord Lugard** with **36 members including six unofficial**, is **not** a constitution because it was **purely advisory** and had **no law-making power**; it only **laid the foundation** for constitutional development. **[Week 4]**
+**21.** **Nation-building** is the active, two-part process of (1) mobilising resources for socio-economic and political development and (2) constructing a national identity. **National integration** is the process — and the outcome — of unifying diverse groups into a cohesive nation. The difference is effort versus result: nation-building is what a state does, integration is what it is trying to produce.
 
-## What to revise
+Integration is difficult in Nigeria because the country is exceptionally diverse — Hausa-Fulani, Yoruba, Igbo and hundreds of other groups, over 348 language groups and 374 ethnic groups — and because these peoples were arbitrarily grouped into a single colonial territory rather than choosing union. Colonialism compounded the problem in three specific ways it is credited with in Week 1: it **altered indigenous governance structures**, **disrupted culture**, and **reshaped family structures** — so the traditional institutions that might have bound communities together were themselves damaged before independence. That is why integration in Nigeria has required deliberate government initiatives to foster unity, pursued alongside (not instead of) socio-economic development.
 
-| Week | Topic | Questions | What to re-read |
+*Tested: the nation-building / national integration distinction and the named impacts of colonialism.* **[Week 1]**
+
+**22.** The four indicators are **traditions of origin, conflict, trade and commerce, and religion**. They are used because pre-colonial groups left no single written record, so the relationship has to be read indirectly.
+
+- **Traditions of origin** — the Kanuri (from Saif) and the Hausa (from Bayajidda) both trace their origin to Baghdad; Bayajidda settled among the Kanuri and married the Mai's daughter. (Also acceptable: the Kisra legend founding the Yoruba and Borgu kingdoms; the Yoruba–Benin link through Oranmiyan and Eweka.)
+- **Conflict** — Kano fought Katsina for control of the trade routes. (Also acceptable: Oyo versus Nupe with a Bariba–Yoruba alliance; Benin's expedition up to Eko/Lagos.)
+- **Trade and commerce** — the Jukun exchanged salt for firewood from the Tiv; it was through Kanem Bornu that the Yoruba and Nupe took part in the trans-Saharan trade; Ibibio land was the corridor between the hinterland Igbo and the coastal Efik and Ijaw.
+- **Religion** — the Yoruba Igunu is traceable to the Nupe Ndakogbaya; Ibini Ukpabi is of Ibibio origin but is now Igbo-associated; Ekpe and Ekpo are Efik in origin and popular among Igbo subgroups; the Bori cult runs throughout Hausaland.
+
+Conflict counts as evidence of relations because war *produced* contact rather than preventing it. The Igala–Nsukka Igbo territorial wars **forged political ties** and increased interaction — the Illah speak Igbo but their masquerades speak Igala. War also drove cultural diffusion: the Emowa and Isoko claim their gods are still located at Patani, an Ijaw town. And the same pair could do both — Oyo and Nupe fought each other and traded with each other, the Nupe supplying shea butter, bangles, brasswork, potash and straw hats.
+
+*Tested: the four indicators with named examples, and the point that conflict and cooperation are not opposites.* **[Week 2]**
+
+**23.** The chain, in order:
+
+1. **From 1792** — the British begin **seizing slave ships** and repatriating those aboard to **Sierra Leone**.
+2. **1833** — **Thomas Fowell Buxton**, a British parliamentarian, sponsors the bill to abolish slavery.
+3. **By 1840** — the **Bight of Benin** is the **last centre of the slave trade in West Africa**, and **Lagos is the leading slave port**.
+4. **1849** — **Beecroft is appointed** "for the purpose of control and supervision": the beginning of **Britain's direct influence in Nigeria**.
+5. **1851** — against the background of the rulership feud between **Kosoko** and **Akitoye**, the British sign a treaty with **Kosoko** to end the slave trade and embrace "legitimate" trade; **Kosoko refuses**, and the **bombardment** follows.
+6. **29 December 1851** — **Akitoye regains the seat of Lagos**; **Kosoko flees to Epe**.
+7. **1852** — a treaty covering the protection of British traders, the right to trade and the erection of storage facilities in Lagos, in return for import and export duties paid by European merchants.
+8. **1861** — the **annexation of Lagos**.
+
+The argument: seizing ships at sea had not achieved much success, so **Buxton argued that for the slave trade to stop, it must be stopped from Africa itself**. If the trade had to be strangled at source, then Britain had to hold the source — and by 1840 the leading slave port was Lagos. The annexation of 1861 is the direct implication of that argument.
+
+*Tested: the abolition-to-annexation chronology with dates and names, and Buxton's causal argument.* **[Week 3]**
+
+**24.** **Richards, 1947–1951** — the work of **Sir Arthur Richards**, successor to Bourdillon. It introduced **regionalism**: a **regional House of Assembly in each of the three regions**, **bicameral in the North** and unicameral elsewhere, with a single central legislative council and one Executive Council at the centre for the whole of Nigeria. Of its **45** council members, **28 were Nigerians**, of whom **4 were elected**; in **1949** two Nigerians were appointed to the Executive Council. Its weakness was in the drafting and the franchise: **locals were not consulted**, and voting rights remained **limited to Lagos and Calabar**.
+
+**Macpherson, 1951** — the work of **Sir John Macpherson**, Governor from **1948**. Its defining feature is exactly the correction of Richards's fault: **wide consultation with Nigerians**. The Legislative Council was renamed the **House of Representatives**, given **136 members** and made **supreme**, its members selected through the regional legislatures; the Central Executive Council was renamed the **Council of Ministers**, with the **Governor as Prime Minister** and **twelve ministers**; Lagos Colony was removed from the Western Region. Its merit was that it led to the formation of more political parties — the **Action Group** and the **NPC**, both **1951**.
+
+Why Macpherson's fell: it **did not last beyond three years**, ended by **Enahoro's motion for independence** — not by the Lyttleton Constitution, which was the replacement (**1954**) rather than the cause. The two constitutions also mark different steps: Richards introduced **regionalism**, Lyttleton later introduced **federalism**.
+
+*Tested: the Richards/Macpherson comparison — consultation, composition, the 45-versus-136 discriminator, and the cause of Macpherson's collapse.* **[Week 4]**
+
+## Revision table
+
+| Week | Topic | Questions | Your score |
 |---|---|---|---|
-| **Week 1** | Culture, Society and Nation-Building | 1, 2, 3, 4, 5, 21 | The three components of culture and the three dimensions separating communal from associational society; Marx versus functionalism; nation-building as the effort, integration as the outcome. |
-| **Week 2** | Intergroup Relations Among Pre-colonial Peoples | 6, 7, 8, 9, 10, 22 | The four indicators with their named examples — who conquered whom, who traded what with whom, which deity came from which people — plus the six geo-political zones. |
-| **Week 3** | Slave Trade to Formal Occupation | 11, 12, 13, 14, 15, 23 | The date chain 1792 → 1861 and the company chain to the 1886 charter; who said what (Curtin, Lovejoy, Soyinka, Alco, Ake); 1884 — Hewett, the ORP and Berlin. |
-| **Week 4** | Constitutions and Political Parties | 16, 17, 18, 19, 20, 24 | The four constitutions with year, man and the "first" each introduced; the numbers 36, 45, 45 and 136; the five parties with founders, bases and newspapers; the 1914 Amalgamation. |
+| 1 | Culture and its three components; communal vs associational society; Marx and functionalism; colonialism's impacts; nation-building and national integration | 1, 2, 3, 4, 5, 21 | |
+| 2 | Intergroup relations among pre-colonial Nigerian peoples: the four indicators — traditions of origin, conflict, trade and commerce, religion; the 348/374 figures | 6, 7, 8, 9, 10, 22 | |
+| 3 | The Portuguese incursion of the 15th century; the trans-Atlantic slave trade and abolition; 'legitimate' trade, the annexation of Lagos, and company rule to the RNC's fall | 11, 12, 13, 14, 15, 23 | |
+| 4 | Constitutional development 1914–1954 — Nigerian Council, Clifford, Richards, Macpherson, Lyttleton; political parties, founders and newspapers; the 1914 Amalgamation | 16, 17, 18, 19, 20, 24 | |

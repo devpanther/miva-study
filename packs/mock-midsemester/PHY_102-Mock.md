@@ -2,308 +2,497 @@
 
 *General Physics II · Weeks 1–4 · 75 minutes · notes closed · 36 marks*
 
-Work for **75 minutes** in one sitting with a calculator but no notes: Section A is **one mark each** (30 marks) and Section B is **one mark each** (6 marks), so budget roughly 1½ minutes per multiple-choice question and 5 minutes per short answer.
-Write your Section B working out in full before you look at anything, then **mark Section B honestly against the model answers** — award the mark only if your working reaches the stated number *and* names the physics, because that is how the real script is marked.
+**Instructions.** 75 minutes, notes closed, a calculator is allowed — Section A is 30 questions at 1 mark each and Section B is 6 questions at 1 mark each, for 36 marks; do not look at the Answers until the time is up.
+Mark Section B honestly against the model answers: a part-right answer with a wrong final value, or a right value reached by a method the model answer does not use, scores 0 — write down which week each lost mark came from and take that row of the revision table.
 
-Take **k = 8.99×10⁹ N·m²/C²**, **ε₀ = 8.85×10⁻¹² F/m**, **e = 1.602×10⁻¹⁹ C**.
-
-## Section A — Multiple choice (30)
-
-**1.** Charges of +8.0 μC, −5.0 μC and −6.0 μC are all placed on a single isolated conductor. The net charge on the conductor is:
-A. +19 μC  B. −11 μC  C. −3.0 μC  D. +3.0 μC
-
-**2.** A metal sphere carries a net charge of +9.6×10⁻¹⁴ C. This corresponds to:
-A. an excess of 6.0×10⁵ electrons
-B. a deficit of 6.0×10⁵ electrons
-C. a gain of 6.0×10⁵ protons from the charging body
-D. a deficit of 1.7×10⁻⁶ electrons
-
-**3.** A polythene rod is rubbed with fur and 1.5×10¹³ electrons pass from the fur to the rod. The charge left on the **fur** is:
-A. +2.4 μC  B. −2.4 μC  C. zero  D. +4.8 μC
-
-**4.** The correct sequence for charging a metal sphere by induction is:
-A. bring the rod near, earth the sphere, remove the earth wire, then remove the rod
-B. bring the rod near, earth the sphere, remove the rod, then remove the earth wire
-C. touch the sphere with the rod, earth the sphere, then withdraw both together
-D. earth the sphere, bring the rod near, then withdraw the rod while still earthed
-
-**5.** A rod carrying charge −Q is touched to an identical uncharged conductor and withdrawn. The conductor is left:
-A. negatively charged, the charge having been shared between the two
-B. positively charged, with the sign opposite to that of the rod
-C. uncharged overall, with only a polarised surface distribution
-D. carrying exactly −Q, the rod having surrendered all of its charge
-
-**6.** Point charges of +6.0 μC and +2.0 μC are held 0.20 m apart in air. The force between them is:
-A. 0.54 N, repulsive  B. 2.7 N, attractive  C. 2.7 N, repulsive  D. 2.7×10⁶ N, repulsive
-
-**7.** A charge of 4.0 nC placed at a point in a field experiences a force of 1.2×10⁻⁴ N. The field strength there is:
-A. 1.2×10⁻⁴ N/C  B. 3.0×10⁴ N/C  C. 4.8×10⁻¹³ N/C  D. 3.0×10⁻⁵ N/C
-
-**8.** A positively charged rod attracts a small scrap of neutral paper. The correct explanation is that:
-A. the paper must already carry a small net negative charge
-B. protons migrate out of the rod into the near face of the paper
-C. the rod polarises the paper, drawing its electrons to the near face
-D. the rod strips electrons from the paper, leaving the paper negative
-
-**9.** q₁ = +3.0 μC sits at x = 0 and q₂ = −5.0 μC at x = 0.60 m. The net force on a +2.0 μC charge at x = 0.20 m is:
-A. 1.3 N toward the −5.0 μC charge
-B. 0.79 N toward the −5.0 μC charge
-C. 1.9 N toward the −5.0 μC charge
-D. 1.9 N toward the +3.0 μC charge
-
-**10.** q₀ = +1.0 μC is at the origin, q₁ = +3.0 μC at (0.30 m, 0) and q₂ = −4.0 μC at (0, −0.30 m). The net force on q₀ is:
-A. 0.70 N at 53° below the −x axis
-B. 0.50 N at 53° below the −x axis
-C. 0.50 N at 37° below the −x axis
-D. 0.10 N along the −y axis
-
-**11.** A charge of +9.0 μC is at x = 0 and one of −1.0 μC at x = 0.20 m. The net electric field vanishes:
-A. 0.05 m from the +9.0 μC charge, between the two charges
-B. 0.10 m beyond the −1.0 μC charge, away from the pair
-C. 0.10 m beyond the +9.0 μC charge, away from the pair
-D. nowhere on the line, because unlike charges cannot give a null point
-
-**12.** The magnitude of the electric field 0.15 m from an isolated −6.0 nC point charge is:
-A. 54 N/C, directed toward the charge
-B. 3.6×10² N/C, directed toward the charge
-C. 2.4×10³ N/C, directed away from the charge
-D. 2.4×10³ N/C, directed toward the charge
-
-**13.** The test charge q₀ used to probe the field at a point is replaced by one of twice the charge. Then:
-A. the force doubles and the deduced field is unchanged
-B. the force doubles and the deduced field doubles
-C. the force is unchanged and the deduced field is halved
-D. the force is halved and the deduced field is unchanged
-
-**14.** In **F**₁₂ = k q₁q₂ **r̂**₁₂/r₁₂², with the charges entered **with their signs**, a negative product means:
-A. the force on q₂ lies along −**r̂**₁₂, i.e. it is attractive
-B. the force on q₂ lies along +**r̂**₁₂, i.e. it is repulsive
-C. the force has negative magnitude, so the pair does not interact
-D. the direction must be reversed again by the "unlike attract" rule
-
-**15.** Two fixed charges are transferred, at unchanged separation, from vacuum into a liquid of permittivity ε = 3ε₀. The force between them becomes:
-A. three times its vacuum value  B. one third of its vacuum value
-C. one ninth of its vacuum value  D. unchanged, since only q and r appear in the law
-
-**16.** Which statement about electric field lines is correct?
-A. they crowd together where the field is weakest and spread where it is strongest
-B. they give the direction in which a negative test charge would be pushed
-C. they may cross at a point where two source charges contribute equally
-D. they begin on positive charge, end on negative charge, and never cross
-
-**17.** A cell of emf 9.0 V and internal resistance 1.0 Ω is connected across a 3.5 Ω resistor. The power wasted **inside** the cell is:
-A. 4.0 W  B. 6.6 W  C. 14 W  D. 18 W
-
-**18.** A cell's terminal voltage is 4.5 V when it delivers 0.30 A and 3.0 V when it delivers 0.80 A. Its emf and internal resistance are:
-A. ε = 4.5 V, r = 3.0 Ω  B. ε = 5.4 V, r = −3.0 Ω
-C. ε = 5.4 V, r = 3.0 Ω  D. ε = 3.0 V, r = 5.4 Ω
-
-**19.** A bar of length 0.25 m slides at 4.0 m/s along rails perpendicular to a 0.50 T field; the circuit resistance is 0.20 Ω. The mechanical power the pushing agent must supply is:
-A. zero, since the magnetic force does no work  B. 0.31 W
-C. 1.25 W  D. 20 W
-
-**20.** A 250-turn coil of area 2.0×10⁻² m² lies perpendicular to a field that rises steadily from 0.10 T to 0.50 T in 0.50 s. The induced emf is:
-A. 0.016 V  B. 2.0 V  C. 4.0 V  D. 5.0 V
-
-**21.** A 3.0 μF capacitor is charged by a 200 V battery. The energy stored and the work done by the battery are respectively:
-A. 0.060 J and 0.12 J  B. 0.12 J and 0.060 J
-C. 0.060 J and 0.060 J  D. 0.12 J and 0.24 J
-
-**22.** A parallel-plate capacitor has plate area 0.050 m², separation 2.0 mm, and a field of 4.0×10⁴ V/m between the plates. The **total** energy stored in the field is:
-A. 7.1×10⁻³ J  B. 3.5×10⁻⁴ J  C. 1.4×10⁻⁶ J  D. 7.1×10⁻⁷ J
-
-**23.** In electrostatic equilibrium the electric field inside the body of a copper block is zero because:
-A. its free electrons rearrange until any internal field is cancelled
-B. copper has no free electrons available to set up a field
-C. its high resistivity prevents an internal field from forming
-D. the field vanishes only while a current is flowing through it
-
-**24.** A **real current source** is modelled as an ideal current source:
-A. in parallel with a finite internal resistance
-B. in series with a finite internal resistance
-C. in series with an infinite internal resistance
-D. in parallel with a zero internal resistance
-
-**25.** A circuit contains a 5.0 A current source and a 10 V battery. When superposition is applied and the battery alone is considered, the current source is replaced by:
-A. a short circuit, its internal resistance staying in place
-B. an open circuit, its internal resistance staying in place
-C. a 2.0 Ω resistor, obtained from 10 V ÷ 5.0 A
-D. nothing at all — its whole branch is deleted from the diagram
-
-**26.** A battery of emf 24 V and internal resistance 0.50 Ω drives 5.5 Ω in series with a parallel pair of 6.0 Ω and 3.0 Ω. The current in the **6.0 Ω** resistor is:
-A. 1.0 A  B. 1.5 A  C. 2.0 A  D. 3.0 A
-
-**27.** An 18 V source in series with 6.0 Ω has a 3.0 Ω resistor across its output terminals. Looking into those terminals, the Thévenin equivalent is:
-A. V_Th = 6.0 V, R_Th = 2.0 Ω  B. V_Th = 6.0 V, R_Th = 9.0 Ω
-C. V_Th = 12 V, R_Th = 2.0 Ω  D. V_Th = 18 V, R_Th = 9.0 Ω
-
-**28.** Acting alone, each of two independent sources drives 2.0 A the same way through a 3.0 Ω resistor. With both sources active, the power dissipated in that resistor is:
-A. 12 W  B. 24 W  C. 48 W  D. 144 W
-
-**29.** A dipole of moment 5.0×10⁻⁹ C·m is held at 120° to a uniform field of 4.0×10⁴ N/C. Its potential energy is:
-A. −1.7×10⁻⁴ J  B. −1.0×10⁻⁴ J
-C. +1.0×10⁻⁴ J  D. zero, the net force in a uniform field being zero
-
-**30.** At a point on the perpendicular bisector of a short dipole, at distance r ≫ d from the centre:
-A. V = 0 and E = kp/r³, antiparallel to **p**
-B. V = 0 and E = 0, since zero potential implies zero field
-C. V = 0 and E = kp/r², antiparallel to **p**
-D. V = kp/r² and E = 2kp/r³, parallel to **p**
-
-## Section B — Short answer (6)
-
-**31.** A polythene rod is rubbed with wool and 2.5×10¹³ electrons pass from the wool to the rod.
-(a) Find the charge on the rod and on the wool, naming the property of charge that fixes the relation between them.
-(b) The rod is now held **near but not touching** an insulated metal sphere; the sphere is momentarily earthed, the earth wire is removed, and only then is the rod taken away. State the sign of the sphere's final charge and describe the electron movement at each of the three steps.
-(c) The sphere ends up with +0.20 μC. Find the magnitude and nature of the force it exerts on a small ball of charge −0.50 μC held 0.30 m away.
-
-**32.** A charge Q = +2.0 μC is at the origin. A charge q₁ = +6.0 μC is at (0.30 m, 0) and a charge q₂ = −8.0 μC is at (0, 0.30 m).
-(a) Find the magnitude and direction of the force each of q₁ and q₂ exerts on Q, stating clearly which way each acts.
-(b) Resolve into components and find the magnitude and direction of the **net** force on Q. State the value a candidate who added the magnitudes arithmetically would have obtained.
-(c) Hence find the electric field at the origin produced by q₁ and q₂, and explain why that field would be the same if Q were removed.
-
-**33.** A cell of emf 6.0 V and internal resistance 0.50 Ω is connected across a 2.5 Ω load.
-(a) Find the current, the "lost volts" and the terminal potential difference, and say why the terminal pd is not 6.0 V.
-(b) Draw up the full power balance: the power delivered by the source, the power in the load, and the power wasted in the cell. Show the three agree.
-(c) The load is now replaced by a thick copper wire of negligible resistance. Find the current and the terminal potential difference, and explain the result in one sentence.
-(d) Explain why electromotive force is **not** a force, and derive its dimensional formula from ε = W/Q.
-
-**34.** (a) A 2.0 μF and a 4.0 μF capacitor are connected across a 12 V supply, first in parallel and then in series. Find the equivalent capacitance and the total energy stored in each arrangement, and state which arrangement stores more energy and why.
-(b) The 4.0 μF capacitor alone is now charged to 12 V and a slab of dielectric constant K = 3.0 is slid between its plates. Work out C, Q, E and U after insertion (i) with the battery still connected and (ii) with the battery disconnected first. State in each case which quantity is held fixed and where the energy difference comes from.
-
-**35.** Two branches are connected in parallel between the same pair of nodes and both feed a common resistor R₃ = 2.0 Ω joining those nodes. Branch 1 is a 14 V cell in series with 2.0 Ω; branch 2 is a 12 V cell in series with 4.0 Ω.
-(a) State Kirchhoff's two rules and the conservation law each expresses.
-(b) Taking I₁ and I₂ into the top node and I₃ down through R₃, write the junction equation and the two loop equations, and solve for I₁, I₂ and I₃.
-(c) Find the terminal voltage of the 14 V cell, and check it against the voltage across R₃.
-(d) Now find the Thévenin equivalent (V_Th and R_Th) of the network seen by R₃, and use it to recover I₃.
-
-**36.** Charges of +6.0 nC and −6.0 nC are held 4.0 mm apart.
-(a) Find the dipole moment, giving its unit and its direction, and say why the answer is not zero even though the net charge is.
-(b) The dipole is placed at 60° to a uniform field of 3.0×10⁵ N/C. Find the net force on it, the torque on it and its potential energy.
-(c) Find the work an external agent must do to turn it from 60° to 180°. State which orientations give zero torque and which of those is stable.
-(d) Find E and V at a point 0.20 m from the centre **on the axis**, and state what each becomes on the perpendicular bisector at the same distance.
-
-## Answers
-
-**1. C** — *Additivity of charge.* Charges add **algebraically**: +8.0 − 5.0 − 6.0 = −3.0 μC. A adds the magnitudes and ignores the signs; B adds only the two negatives and drops the +8.0; D gets the size right but subtracts the wrong way round. **[Week 1]**
-
-**2. B** — *Quantisation, q = ±ne.* n = (9.6×10⁻¹⁴)/(1.602×10⁻¹⁹) = 6.0×10⁵, and a **positive** object is one with an electron **deficit**. A has the sign of the carrier backwards; C moves protons, which never migrate in a solid; D divides e by q instead of q by e — and a fractional electron count contradicts quantisation outright. **[Week 1]**
-
-**3. A** — *Charging by friction with conservation.* The fur **loses** 1.5×10¹³ electrons, so it is positive by (1.5×10¹³)(1.602×10⁻¹⁹) = 2.4×10⁻⁶ C. B gives the fur the rod's sign; C thinks friction leaves both bodies neutral because "charge is conserved" — conservation applies to the *pair*, not to each body; D doubles the transfer, as if each electron changed both bodies by e twice over. **[Week 1]**
-
-**4. A** — *Induction with grounding.* The earth wire must go **before** the rod, so that the induced charge is trapped. B removes the rod first, so the electrons drain back and the sphere ends neutral; C is charging by conduction, which gives the same sign as the rod; D never has the rod present while the earth path is open, so nothing is driven to or from earth. **[Week 1]**
-
-**5. A** — *Charging by conduction.* Contact **shares** the charge, so both bodies end with the **same** sign. B applies the induction rule (opposite sign) to a contact method; C is induction *without* grounding, where the conductor is only polarised; D forgets that the charge is shared between two bodies, not handed over whole. **[Week 1]**
-
-**6. C** — *Coulomb's law with like charges.* F = (8.99×10⁹)(6.0×10⁻⁶)(2.0×10⁻⁶)/(0.20)² = 0.10788/0.040 = 2.7 N, repulsive because both are positive. A divides by r instead of r²; B gets the size right but the sign rule backwards; D leaves one charge in microcoulombs, a factor of 10⁶. **[Week 1]**
-
-**7. B** — *E = F/q.* E = (1.2×10⁻⁴)/(4.0×10⁻⁹) = 3.0×10⁴ N/C. A quotes the force as though it were the field, never dividing; C multiplies F by q instead of dividing; D leaves the charge in nanocoulombs. **[Week 1]**
-
-**8. C** — *Polarisation of a neutral body.* The rod's field pulls the paper's electrons to the near face; that face is then closer than the far face, so attraction beats repulsion. A insists attraction proves a net charge, the classic error; B moves protons; D confuses *losing* electrons (which would make the paper positive, and therefore repelled) with gaining them. **[Week 1]**
-
-**9. C** — *Collinear superposition.* r₁ = 0.20 m, r₂ = 0.40 m. F₁ = (8.99×10⁹)(3.0×10⁻⁶)(2.0×10⁻⁶)/0.040 = 1.35 N, **repulsive → +x**; F₂ = (8.99×10⁹)(5.0×10⁻⁶)(2.0×10⁻⁶)/0.160 = 0.56 N, **attractive → +x**. Both act the same way, so F = 1.9 N toward the −5.0 μC charge. A uses the nearer charge only; B subtracts the two because "one repels and one attracts", forgetting that the geometry makes them agree; D has the direction reversed. **[Week 2]**
-
-**10. B** — *2-D superposition by components.* F₁ = 0.30 N along −x (repulsion), F₂ = 0.40 N along −y (attraction toward q₂). F = √(0.30² + 0.40²) = 0.50 N, at tan⁻¹(0.40/0.30) = 53° below the −x axis. A adds the magnitudes arithmetically — the single commonest loss on this technique; C takes tan⁻¹(F_x/F_y) and so reports the complementary angle; D subtracts the magnitudes, treating perpendicular forces as antiparallel. **[Week 2]**
-
-**11. B** — *Null point for unlike charges.* Between unlike charges both fields point the same way, so the null point lies **outside the pair, beyond the smaller charge**: 3/x = 1/(x − 0.20) gives x = 0.30 m from the +9.0 μC, i.e. 0.10 m past the −1.0 μC. A imports the like-charge geometry (between them); C puts it outside but beyond the **larger** charge, where the fields again reinforce; D forgets that outside the pair the fields can and do oppose. **[Week 2]**
-
-**12. D** — *Field of a point charge.* E = k|q|/r² = (8.99×10⁹)(6.0×10⁻⁹)/(0.0225) = 2.4×10³ N/C, directed **toward** a negative source. A never divides by r² at all and quotes k|q|; B divides by r instead of r²; C has the magnitude right but reverses the direction rule for a negative charge. **[Week 2]**
-
-**13. A** — *E belongs to the source, not the probe.* F = q₀E, so doubling q₀ doubles F and leaves E = F/q₀ untouched. B is the belief that the field is a property of the test charge; C and D invert the proportionality between F and q₀. **[Week 2]**
-
-**14. A** — *Sign convention in the vector form.* A negative product means **F** lies along −**r̂**₁₂, back toward q₁ — attraction. B has the rule inverted; C treats a signed component as a "negative magnitude"; D is the *signs-used-twice* error, applying the "unlike attract" rule on top of the signed substitution and flipping the direction back to repulsion. **[Week 2]**
-
-**15. B** — *Permittivity of the medium.* In a medium the force is smaller by the factor ε/ε₀, so ε = 3ε₀ gives F/3. A has larger permittivity strengthening the force; C squares the ratio, as if permittivity entered like a distance; D forgets that k = 1/(4πε₀) carries the medium in it. **[Week 2]**
-
-**16. D** — *Properties of field lines.* They run from positive to negative (or to infinity), never cross, and their direction is that of the force on a **positive** test charge. A inverts the density rule — close spacing means a **strong** field; B uses a negative test charge; C would mean two field directions at one point, which is impossible since the vector sum is unique. **[Week 2]**
-
-**17. A** — *ε = I(R + r) and the power balance.* I = 9.0/(3.5 + 1.0) = 2.0 A, so the internal loss is I²r = (2.0)²(1.0) = 4.0 W. B comes from I = ε/R = 2.57 A, the standard slip of ignoring r before dividing; C is I²R, the power in the **load**; D is εI, the **total** power delivered. **[Week 3]**
-
-**18. C** — *The V–I line: V = ε − Ir.* Gradient = (3.0 − 4.5)/(0.80 − 0.30) = −3.0 Ω, so r = 3.0 Ω; extrapolating to I = 0, ε = 4.5 + (0.30)(3.0) = 5.4 V. A takes the larger *reading* as the emf instead of extrapolating to zero current; B quotes the gradient itself as r, but a resistance is positive — the minus sign is expected in the gradient only; D swaps intercept and gradient. **[Week 3]**
-
-**19. C** — *Motional emf and the energy chain.* ε = Bvl = (0.50)(4.0)(0.25) = 0.50 V; I = ε/R = 2.5 A; F = BIl = 0.31 N; P = Fv = 1.25 W = I²R = (2.5)²(0.20) ✓. A misapplies the true statement that the *magnetic* force does no work — the agent still supplies every watt dissipated; B quotes the retarding force in newtons as though it were a power; D omits the bar length (ε = Bv = 2.0 V), giving I = 10 A and 20 W. **[Week 3]**
-
-**20. C** — *Faraday's law, ε = N dΦ_B/dt.* dB/dt = 0.40/0.50 = 0.80 T/s, dΦ_B/dt = A dB/dt = 1.6×10⁻² Wb/s, ε = (250)(1.6×10⁻²) = 4.0 V. A forgets to multiply by N; B multiplies by the flux change without dividing by the time; D uses the **final** field 0.50 T instead of the **change** 0.40 T — a steady flux, however large, induces nothing. **[Week 3]**
-
-**21. A** — *U = ½CV² versus W = QV.* U = ½(3.0×10⁻⁶)(200)² = 0.060 J; Q = CV = 6.0×10⁻⁴ C, so the battery does W = QV = 0.12 J, twice the stored energy, the other half going as heat in the charging circuit. B swaps the two; C assumes everything the battery does is stored, i.e. drops the ½; D drops the ½ from both. **[Week 3]**
-
-**22. D** — *u_E = ½ε₀E² is a density; U = u_E(Ad).* u_E = ½(8.85×10⁻¹²)(4.0×10⁴)² = 7.08×10⁻³ J/m³; volume Ad = (0.050)(2.0×10⁻³) = 1.0×10⁻⁴ m³; U = 7.1×10⁻⁷ J. A quotes the density in J/m³ as if it were an energy in J — the error printed in the lecture slides; B multiplies by the plate **area** instead of the volume; C forgets the ½ before multiplying by the volume. **[Week 3]**
-
-**23. A** — *Zero field inside a conductor in electrostatic equilibrium.* Free electrons move until their own field exactly cancels the applied one; that redistribution is the mechanism. B denies conductors their defining free electrons; C attributes high resistivity to a conductor, which is the insulator's property; D reverses the condition — the statement holds in the *static* case, and a current-carrying wire does have a field along it. **[Week 3]**
-
-**24. A** — *Real current source.* Current source → internal resistance in **parallel** (ideal when r = ∞); voltage source → internal resistance in **series** (ideal when r = 0). B applies the voltage-source model to a current source, the single most punished slip in the topic; C puts an infinite resistance in series, which would block all current; D makes r = 0, the ideal *voltage* source condition. **[Week 4]**
-
-**25. B** — *Zeroing an independent source.* A zeroed **current** source is an **open circuit** (a break); its parallel internal resistance stays. A gives the rule for a zeroed **voltage** source, the complementary case; C invents a source transformation and turns the source into a resistor; D deletes the branch, but "zeroed" never removes the resistance. **[Week 4]**
-
-**26. A** — *Series/parallel reduction then the current divider.* R_p = (6.0)(3.0)/9.0 = 2.0 Ω; total = 0.50 + 5.5 + 2.0 = 8.0 Ω; I = 24/8.0 = 3.0 A; V across the pair = (3.0)(2.0) = 6.0 V; I₆ = 6.0/6.0 = 1.0 A. B splits the current equally between unequal branches; C is the current in the **3.0 Ω** branch — the divider written upside down, giving the bigger resistor the bigger current; D treats the parallel branches as carrying the whole 3.0 A, i.e. as if in series. **[Week 4]**
-
-**27. A** — *Thévenin equivalent.* V_Th is the **open-circuit** voltage = 18 × 3.0/(6.0 + 3.0) = 6.0 V; R_Th is the terminal resistance with the source **shorted** = 6.0 ∥ 3.0 = 2.0 Ω. B gets V_Th right but adds the resistances in series, forgetting that shorting the source puts them in parallel; C inverts the potential divider and takes the 6.0 Ω share; D leaves the source active and never applies the divider at all. **[Week 4]**
-
-**28. C** — *Superposition applies to currents, never to power.* Add the currents first: I = 2.0 + 2.0 = 4.0 A, so P = I²R = (4.0)²(3.0) = 48 W. B superposes the powers (12 + 12), which is wrong because P = I²R is quadratic; A is one source acting alone; D computes V = IR = 12 V and quotes V² without dividing by R. **[Week 4]**
-
-**29. C** — *U = −pE cos θ.* pE = (5.0×10⁻⁹)(4.0×10⁴) = 2.0×10⁻⁴ J; cos 120° = −0.500, so U = −(2.0×10⁻⁴)(−0.500) = **+1.0×10⁻⁴ J** — positive, because past 90° the dipole is turned against the field. B drops the sign of cos 120° and keeps the energy negative; A uses sin 120° in the energy, the sin/cos swap that belongs to the torque; D confuses zero net **force** in a uniform field with zero **energy**. **[Week 4]**
-
-**30. A** — *Dipole on the perpendicular bisector.* θ = 90°, so V = kp cos 90°/r² = 0, but the field does not vanish: the components perpendicular to the axis cancel and the axial components add to E = kp/r³, directed **antiparallel** to **p**. B makes the classic leap from V = 0 to E = 0 — a scalar cancellation is not a vector one; C uses the point-charge power 1/r² for a dipole field; D quotes the **axial** results, which are twice as large and parallel to **p**. **[Week 4]**
+Constants: e = 1.602×10⁻¹⁹ C · k = 8.99×10⁹ N·m²/C² · ε₀ = 8.85×10⁻¹² C²/(N·m²)
 
 ---
 
-**31.** *Quantisation, conservation, induction with grounding, then Coulomb's law.* **[Week 1]**
-(a) q = ne = (2.5×10¹³)(1.602×10⁻¹⁹) = 4.005×10⁻⁶ ≈ **4.0×10⁻⁶ C**. The rod **gained** the electrons, so the rod carries **−4.0 μC** and the wool **+4.0 μC**. The property used is **conservation of charge** — rubbing creates nothing, it only transfers electrons, so the two charges are equal in magnitude and opposite in sign and the pair still totals zero. (Quantisation is what lets us write q = ne in the first place.)
-(b) The sphere ends **positively** charged — always the **opposite** sign to the rod. Step 1, rod near: the rod is negative, so free electrons in the sphere are **repelled to the far face**, leaving the near face positive; the sphere is still neutral overall, only polarised. Step 2, earth the sphere: the repelled electrons now have somewhere to go, so **electrons flow from the sphere down to earth**. Step 3, remove the earth wire **while the rod is still there**: the electron deficit is trapped. Only then remove the rod, and the remaining positive charge **spreads uniformly** over the sphere. Removing the rod before the earth wire would let the electrons flow back up and leave the sphere neutral.
-(c) F = k|q₁q₂|/r² = (8.99×10⁹)(2.0×10⁻⁷)(5.0×10⁻⁷)/(0.30)² = (8.99×10⁹)(1.0×10⁻¹³)/0.090 = 8.99×10⁻⁴/0.090 = **1.0×10⁻² N**, and since the charges are **unlike** the force is **attractive**, along the line joining them, with each body pulling on the other equally (Newton's third law).
+## Section A — Multiple choice (30)
 
-**32.** *Two-dimensional superposition by components, and the field that produced it.* **[Week 2]**
-(a) Both separations are 0.30 m, so r² = 0.090 m² in each case.
-From q₁: F₁ = (8.99×10⁹)(6.0×10⁻⁶)(2.0×10⁻⁶)/0.090 = 0.10788/0.090 = **1.2 N**. Both charges are positive, so Q is **pushed away** from q₁ — along **−x**.
-From q₂: F₂ = (8.99×10⁹)(8.0×10⁻⁶)(2.0×10⁻⁶)/0.090 = 0.14384/0.090 = **1.6 N**. q₂ is negative, so Q is **pulled toward** it — along **+y**.
-(b) ΣF_x = −1.2 N, ΣF_y = +1.6 N. Magnitude F = √(1.2² + 1.6²) = √(1.44 + 2.56) = √4.00 = **2.0 N**. Direction: tan θ = 1.6/1.2 = 1.33, θ = **53° from the −x axis toward +y** (127° measured anticlockwise from +x). A candidate who added magnitudes would have written 1.2 + 1.6 = **2.8 N** — wrong, because superposition is a **vector** sum and these two forces are perpendicular, not collinear.
-(c) **E** = **F**/Q = 2.0/(2.0×10⁻⁶) = **1.0×10⁶ N/C**, in the same direction as the net force (53° from −x toward +y), because Q is positive. That field would be **unchanged** if Q were removed: **E** is a property of the **source** charges q₁ and q₂ and of the point, not of the probe. Doubling Q would double F and leave F/Q the same — the field exists at the point whether or not anything is there to feel it.
+**1.** Which of the following could **not** be the net charge on an isolated body?
 
-**33.** *emf, internal resistance, the power balance, short circuit and dimensions.* **[Week 3]**
-(a) I = ε/(R + r) = 6.0/(2.5 + 0.50) = 6.0/3.0 = **2.0 A**. Lost volts = Ir = (2.0)(0.50) = **1.0 V**. Terminal pd V = ε − Ir = 6.0 − 1.0 = **5.0 V** (check: V = IR = 2.0 × 2.5 = 5.0 V ✓). It is not 6.0 V because **1.0 V per coulomb is spent inside the cell** driving the current through its own internal resistance; V = ε only when I = 0.
-(b) Total delivered by the source: εI = (6.0)(2.0) = **12 W**. To the load: I²R = (4.0)(2.5) = **10 W**. Wasted in the cell: I²r = (4.0)(0.50) = **2.0 W**. 10 + 2.0 = 12 ✓ — every watt is accounted for.
-(c) Short circuit, R → 0: I_max = ε/r = 6.0/0.50 = **12 A**, and V = ε − Ir = 6.0 − (12)(0.50) = **0**. The whole emf is now dropped internally, so the cell delivers its maximum current and no useful voltage — all 72 W is dissipated as heat inside the cell.
-(d) It is **not a force**: ε = W/Q is an **energy per unit charge**, measured in **volts (1 V = 1 J/C)**, whereas a force is measured in newtons. Dimensions: work = force × distance = [M][L T⁻²][L] = **[M¹ L² T⁻²]**; charge = current × time = **[I¹ T¹]**. Hence ε = [M L² T⁻²]/[I T] = **[M¹ L² T⁻³ I⁻¹]**, which is plainly not [M L T⁻²].
+a) −4.806×10⁻¹⁹ C   b) +2.403×10⁻¹⁹ C   c) −1.602×10⁻¹⁹ C   d) +8.010×10⁻¹⁹ C
 
-**34.** *Capacitor combinations, stored energy, and a dielectric at fixed V versus fixed Q.* **[Week 3]**
-(a) **Parallel**: C = C₁ + C₂ = 2.0 + 4.0 = **6.0 μF**; U = ½CV² = ½(6.0×10⁻⁶)(12)² = ½(6.0×10⁻⁶)(144) = **4.32×10⁻⁴ J**.
-**Series**: 1/C = 1/2.0 + 1/4.0 = 3/4.0, so C = **1.33 μF**; U = ½(1.33×10⁻⁶)(144) = **9.6×10⁻⁵ J**.
-The **parallel** arrangement stores more — 4.5 times more here. At a fixed supply voltage U = ½CV² ∝ C, and a parallel combination always gives the **largest** equivalent capacitance (larger than the biggest single capacitor), while a series combination gives one **smaller than the smallest**. This is the opposite of the intuition carried over from resistors.
-(b) Before insertion: C = 4.0 μF, V = 12 V, Q = CV = **48 μC**, U = ½CV² = **2.88×10⁻⁴ J**, and E = V/d.
-(i) **Battery connected — V is held fixed at 12 V.** C′ = KC = **12 μF**; Q′ = C′V = **144 μC = 3Q**; E′ = V/d, i.e. **unchanged**; U′ = ½C′V² = **8.64×10⁻⁴ J = 3U**. The extra energy (and the extra charge) is **supplied by the battery**, which pumps more charge onto the plates to hold V constant.
-(ii) **Battery disconnected first — Q is held fixed at 48 μC.** C′ = **12 μF**; V′ = Q/C′ = (4.8×10⁻⁵)/(1.2×10⁻⁵) = **4.0 V = V/3**; E′ = V′/d = **E/3**, because the dielectric polarises and partly cancels the field; U′ = Q²/2C′ = (4.8×10⁻⁵)²/(2 × 1.2×10⁻⁵) = **9.6×10⁻⁵ J = U/3**. The energy **falls**, and the missing energy is the **work done by the field in pulling the slab in** — the slab is sucked into the gap.
-State which quantity is fixed *before* writing anything: connected → V fixed, U rises by K; disconnected → Q fixed, U falls by K.
+**2.** Coulomb's law states that the electrostatic force between two point charges is
 
-**35.** *Kirchhoff's rules, then the same answer by Thévenin.* **[Week 4]**
-(a) **KCL (junction rule)**: the sum of currents entering a node equals the sum leaving, ΣI = 0 — this expresses **conservation of charge**, since charge cannot pile up at a junction. **KVL (loop rule)**: the algebraic sum of potential differences round any closed loop is zero, ΣV = 0 — this expresses **conservation of energy**, since a charge returned to its starting point must be back at its starting potential.
-(b) **Junction**: I₁ + I₂ = I₃.
-**Loop 1** (14 V cell, its 2.0 Ω, and R₃): 14 = 2.0 I₁ + 2.0 I₃.
-**Loop 2** (12 V cell, its 4.0 Ω, and R₃): 12 = 4.0 I₂ + 2.0 I₃.
-Substitute I₃ = I₁ + I₂: 14 = 4.0 I₁ + 2.0 I₂ … (i); 12 = 2.0 I₁ + 6.0 I₂ … (ii).
-From (i), I₂ = 7.0 − 2.0 I₁. Into (ii): 2.0 I₁ + 6.0(7.0 − 2.0 I₁) = 12 → 42 − 10 I₁ = 12 → **I₁ = 3.0 A**, hence **I₂ = 1.0 A** and **I₃ = 4.0 A**. All three come out positive, so the assumed directions were right.
-(c) Terminal voltage of the 14 V cell: V = ε − I₁r = 14 − (3.0)(2.0) = **8.0 V**. Across R₃: V = I₃R₃ = (4.0)(2.0) = **8.0 V** ✓. Checking from the other branch: 12 − (1.0)(4.0) = 8.0 V ✓ — all three agree, which is the sign the algebra is right.
-(d) **Remove R₃.** The two cells then sit in one loop, opposing: circulating current = (14 − 12)/(2.0 + 4.0) = 0.333 A. **V_Th** = 14 − (0.333)(2.0) = **13.3 V** (check from the other side: 12 + (0.333)(4.0) = 13.3 V ✓). **R_Th** = resistance at the terminals with both emfs **shorted** = 2.0 ∥ 4.0 = (2.0)(4.0)/6.0 = **1.33 Ω**. Reconnect R₃: I₃ = V_Th/(R_Th + R₃) = 13.3/(1.33 + 2.0) = 13.3/3.33 = **4.0 A** ✓ — identical to the Kirchhoff answer, as it must be.
+a) directly proportional to the product of the magnitudes of the charges and inversely proportional to the square of their separation, directed along the line joining them
+b) directly proportional to the sum of the charges and inversely proportional to their separation
+c) directly proportional to the product of the charges and inversely proportional to their separation
+d) inversely proportional to the product of the charges and directly proportional to the square of their separation
 
-**36.** *Dipole moment, torque and energy in a uniform field, and the far field.* **[Week 4]**
-(a) p = qd = (6.0×10⁻⁹)(4.0×10⁻³) = **2.4×10⁻¹¹ C·m**, unit the **coulomb-metre**, directed along the axis **from the −6.0 nC charge toward the +6.0 nC charge** (the physics convention; chemistry draws the arrow the other way). It is not zero because p uses **one** of the charges times the separation — the *net charge* is zero, but the two charges sit at different places, and it is that separation that p measures. Using 2q would double the answer wrongly.
-(b) **Net force = zero**: the field is **uniform**, so qE and −qE are equal and opposite and cancel exactly. (In a non-uniform field they would not.)
-pE = (2.4×10⁻¹¹)(3.0×10⁵) = 7.2×10⁻⁶ J.
-**Torque** τ = pE sin θ = (7.2×10⁻⁶)(sin 60° = 0.866) = **6.2×10⁻⁶ N·m**, directed perpendicular to the plane of **p** and **E**, turning **p** into alignment with **E**.
-**Potential energy** U = −pE cos θ = −(7.2×10⁻⁶)(cos 60° = 0.500) = **−3.6×10⁻⁶ J**. Note torque takes **sin θ**, energy takes **cos θ**.
-(c) W = ΔU = U(180°) − U(60°) = (+7.2×10⁻⁶) − (−3.6×10⁻⁶) = **+1.08×10⁻⁵ J**. Equivalently W = pE(cos 60° − cos 180°) = (7.2×10⁻⁶)(0.500 + 1) = 1.08×10⁻⁵ J. Zero torque occurs at **θ = 0° and θ = 180°**; only **θ = 0°** is **stable**, since there U = −pE = −7.2×10⁻⁶ J is a **minimum**, while at 180° U = +pE is a maximum and the least nudge flips the dipole over.
-(d) kp = (8.99×10⁹)(2.4×10⁻¹¹) = 0.2158 N·m²/C; r² = 0.0400 m², r³ = 8.00×10⁻³ m³.
-**On the axis**: E = 2kp/r³ = 2(0.2158)/(8.00×10⁻³) = **54 N/C**, directed **parallel to p**; V = kp cos 0°/r² = 0.2158/0.0400 = **5.4 V**.
-**On the perpendicular bisector at the same r**: E = kp/r³ = **27 N/C** — exactly **half** the axial value — directed **antiparallel to p**; and V = kp cos 90°/r² = **0**, because that point is equidistant from +q and −q and potential is a scalar sum. Note V ∝ 1/r² and E ∝ 1/r³, one power faster than for a single point charge, since the two opposite charges nearly cancel far away.
+**3.** A cell of emf 9.0 V and internal resistance 0.60 Ω drives an external resistor of 5.4 Ω. The terminal potential difference is
 
-## What to revise
+a) 9.0 V   b) 9.9 V   c) 8.1 V   d) 1.5 V
 
-Coverage is deliberately even — **9 marks per week**, so a weak row is a weak week, not an unlucky paper.
+**4.** A cell's terminal voltage V is plotted against the current I it delivers. Two points on the line are (0.50 A, 11.75 V) and (2.50 A, 11.25 V). The internal resistance of the cell is
 
-| Week | Topic | Section A | Section B | If several went wrong, re-read |
-|---|---|---|---|---|
-| **Week 1** | Electric Charge | 1, 2, 3, 4, 5, 6, 7, 8 | 31 | The three properties (additivity/conservation/quantisation) and the three charging methods with their **final signs** — especially the induction-with-earthing sequence, where the earth wire always goes **before** the rod, and q = ne counting in both directions (electrons gained → negative, removed → positive). |
-| **Week 2** | Coulomb's Law & Superposition | 9, 10, 11, 12, 13, 14, 15, 16 | 32 | Superposition as a **vector** sum: collinear problems with signs on one axis, 2-D problems by ΣF_x and ΣF_y, and the null-point rule (**like** → between, nearer the smaller; **unlike** → outside, beyond the smaller). Then the force/field split — E = k\|q\|/r² has **one** charge in it, and E does not depend on the test charge. |
-| **Week 3** | emf & Energy in Electric Fields | 17, 18, 19, 20, 21, 22, 23 | 33, 34 | ε = I(R + r) before anything else, the V–I graph (intercept ε, gradient −r), the full power balance εI = I²R + I²r, and motional emf ε = Bvl feeding I, F = BIl and Fv = I²R. On the capacitor side: C = ε₀A/d, the three forms of U, **u_E = ½ε₀E² is a density in J/m³** and needs × (Ad), and the dielectric rule — battery connected → V fixed, U ×K; disconnected → Q fixed, U ÷K. |
-| **Week 4** | DC Circuits & Electric Dipoles | 24, 25, 26, 27, 28, 29, 30 | 35, 36 | Voltage source → r in **series** (ideal r = 0); current source → r in **parallel** (ideal r = ∞); zeroed voltage source → short, zeroed current source → open. Then the divider rules (own resistance on top for voltage, **other** resistance on top for current), Kirchhoff → Thévenin as two routes to the same current, and never superposing power. For dipoles: p = qd from −q to +q, τ uses **sin θ**, U uses **cos θ**, and E_axial = 2kp/r³ = 2E_eq, V ∝ 1/r². |
+a) 0.25 Ω   b) 4.0 Ω   c) 0.50 Ω   d) 11.9 Ω
 
-**Cross-week traps that cost marks in more than one row**: converting μC, nC, mm and cm to SI **before** squaring anything (Q6, Q12, Q26, Q36); squaring the distance at all (Q6, Q12); and keeping the ½ in ½CV² and ½ε₀E² (Q21, Q22). If two or more weeks came out weak, start with Week 2 — superposition underpins Weeks 3 and 4 as well.
+**5.** A metal sphere carries a net charge of +6.4 μC. This means that, to a good approximation,
+
+a) 4.0×10¹³ electrons have been removed from it
+b) 4.0×10¹³ electrons have been added to it
+c) 4.0×10¹³ protons have been added to it
+d) 1.0×10¹³ electrons have been removed from it
+
+**6.** Two point charges of +3.0 μC each are held 0.10 m apart in air. The force each exerts on the other is
+
+a) 0.81 N, repulsive   b) 8.1 N, attractive   c) 8.1 N, repulsive   d) 81 N, repulsive
+
+**7.** The energy density of a uniform electric field of strength 300 N/C in vacuum is
+
+a) 3.98×10⁻⁷ J/m³   b) 3.98×10⁻⁷ J   c) 7.97×10⁻⁷ J/m³   d) 3.98×10⁻⁵ J/m³
+
+**8.** When independent sources are "zeroed" in order to apply superposition or to find a Thévenin resistance,
+
+a) both an ideal voltage source and an ideal current source become short circuits
+b) an ideal voltage source becomes an open circuit and an ideal current source becomes a short circuit
+c) both become open circuits
+d) an ideal voltage source becomes a short circuit and an ideal current source becomes an open circuit
+
+**9.** A negatively charged rod is held near, but not touching, a neutral metal sphere on an insulating stand. The sphere is momentarily earthed; the earth wire is removed, and only then is the rod taken away. The sphere is left
+
+a) neutral, because no contact was ever made
+b) negatively charged, the same sign as the rod
+c) positively charged, because electrons were driven through the earth wire
+d) polarised only, positive on the near face and negative on the far face
+
+**10.** A +1.0 μC charge and a +100 μC charge are held 5.0 cm apart. Comparing the electric forces they exert on each other,
+
+a) the 100 μC charge feels a force 100 times larger
+b) the two forces are equal in magnitude and opposite in direction
+c) the 1.0 μC charge feels a force 100 times larger
+d) the forces are equal only when the two charges are equal
+
+**11.** A parallel-plate capacitor in vacuum has plate area A = 0.02 m² and plate separation d = 0.005 m. Its capacitance is
+
+a) 3.54×10⁻¹² F   b) 3.54×10⁻¹¹ F   c) 3.54×10⁻⁹ F   d) 8.85×10⁻¹¹ F
+
+**12.** The superposition theorem may be used to find
+
+a) currents, voltages and powers in any circuit whatever
+b) powers only, since energy is conserved
+c) currents and voltages in linear circuits, but never powers
+d) currents and voltages in any circuit, linear or not
+
+**13.** Two identical metal spheres carry +8.0 μC and −2.0 μC. They are touched together and then separated. Each sphere now carries
+
+a) +8.0 μC and −2.0 μC as before   b) +6.0 μC   c) zero   d) +3.0 μC
+
+**14.** A charge experiences a force of 6.0 N in the −x direction from one neighbour and 8.0 N in the −y direction from another. The net force on it is
+
+a) 14.0 N   b) 2.0 N   c) 7.0 N   d) 10.0 N
+
+**15.** A straight rod of length 0.40 m slides at 6.0 m/s along rails, perpendicular to a uniform magnetic field of 0.25 T. The motional emf induced is
+
+a) 0.015 V   b) 9.6 V   c) 1.5 V   d) 0.60 V
+
+**16.** The Thévenin voltage V_Th of a two-terminal network is
+
+a) the voltage across the terminals with the load still connected
+b) the open-circuit voltage measured with the load removed
+c) the short-circuit current multiplied by the load resistance
+d) the emf of the largest source inside the network
+
+**17.** The extent of the charge induced on a metal sphere by a nearby charged rod increases when
+
+a) the rod is moved further away from the sphere
+b) the rod is brought closer to the sphere
+c) the rod is made to touch the sphere
+d) nothing — it does not depend on the separation
+
+**18.** Charges of +9 μC and −4 μC are fixed 1.0 m apart. A point on the line through them at which the net electric field is zero
+
+a) lies between them, nearer the −4 μC charge
+b) lies between them, nearer the +9 μC charge
+c) lies outside the pair, beyond the −4 μC charge
+d) does not exist anywhere on that line
+
+**19.** A 150-turn coil has the flux through it fall from 0.040 Wb to 0.010 Wb in 0.050 s. The magnitude of the induced emf is
+
+a) 90 V   b) 0.60 V   c) 9.0 V   d) 4500 V
+
+**20.** Charges of +5.0 nC and −5.0 nC are held 4.0 mm apart. The electric dipole moment of the pair is
+
+a) 2.0×10⁻¹¹ C·m, directed from the −5.0 nC charge towards the +5.0 nC charge
+b) 2.0×10⁻¹¹ C·m, directed from the +5.0 nC charge towards the −5.0 nC charge
+c) 4.0×10⁻¹¹ C·m, directed from the −5.0 nC charge towards the +5.0 nC charge
+d) 1.25×10⁻⁶ C·m, directed along the axis of the pair
+
+**21.** Which statement correctly separates charging by conduction from charging by induction?
+
+a) Conduction needs contact and leaves the object with the same sign as the charging body; induction needs no contact and, with earthing, leaves it with the opposite sign
+b) Conduction needs no contact and leaves the opposite sign; induction needs contact and leaves the same sign
+c) Both need contact, and both leave the same sign as the charging body
+d) Both leave the opposite sign, but only induction needs contact
+
+**22.** The electric field 0.20 m from a −4.0 nC point charge has magnitude and direction
+
+a) 9.0×10² N/C, directed towards the charge
+b) 9.0×10² N/C, directed away from the charge
+c) 1.8×10² N/C, directed towards the charge
+d) 3.6×10³ N/C, directed away from the charge
+
+**23.** Three capacitors are to be connected across a supply of fixed voltage so as to store the greatest possible energy. They should be connected
+
+a) all in series
+b) two in series with the third in parallel across them
+c) all in parallel
+d) in any arrangement — the stored energy is the same
+
+**24.** At the same large distance r from an electric dipole,
+
+a) the axial field is half the equatorial field and is parallel to **p**
+b) the two fields are equal in magnitude and both are parallel to **p**
+c) the axial field is twice the equatorial field and is antiparallel to **p**, while the equatorial field is parallel to **p**
+d) the axial field is twice the equatorial field and is parallel to **p**, while the equatorial field is antiparallel to **p**
+
+**25.** A glass rod is rubbed with a silk cloth and becomes positively charged. It follows that
+
+a) protons moved from the silk to the rod
+b) the silk is left positively charged as well, by an equal amount
+c) the rod gained electrons and the silk lost the same number
+d) the rod lost electrons and the silk gained exactly the same number
+
+**26.** An electron is placed at a point where the electric field is 500 N/C in the +x direction. The force on the electron is
+
+a) 8.0×10⁻¹⁷ N in the +x direction
+b) 8.0×10⁻¹⁷ N in the −x direction
+c) 1.6×10⁻¹⁶ N in the −x direction
+d) zero, because the electron sits in its own field
+
+**27.** In electrostatic equilibrium,
+
+a) the field inside a conductor is reduced by the factor K but is not zero
+b) the field inside a conductor is exactly zero, while inside a dielectric it is only reduced by the factor K
+c) the field inside both a conductor and a dielectric is exactly zero
+d) the field inside a dielectric is exactly zero, while a conductor merely reduces it
+
+**28.** A charged parallel-plate capacitor is disconnected from its battery and a slab of dielectric constant κ = 4.0 is then slid between the plates. Compared with their values before the slab was inserted,
+
+a) C, V and U all rise by the factor 4.0
+b) C rises by the factor 4.0, V is unchanged, and U rises by the factor 4.0
+c) C rises by the factor 4.0, while V, E and U each fall by the factor 4.0
+d) C falls by the factor 4.0, while V and E rise by the factor 4.0
+
+**29.** A charged plastic rod attracts a small neutral scrap of paper. The best explanation is that
+
+a) the paper must have carried a small charge of the opposite sign all along
+b) charge flowed from the rod to the paper through the air
+c) the rod's field polarises the paper, so the nearer, opposite charge is pulled harder than the farther, like charge is pushed
+d) neutral objects are always attracted to charged objects because gravity dominates at small separations
+
+**30.** Two point charges exert a force F on each other. One of the charges is then tripled and the separation is doubled. The new force is
+
+a) 6F   b) 3F/2   c) 12F   d) 3F/4
+
+## Section B — Short answer (6)
+
+**31.** A glass rod is rubbed with a silk cloth. Exactly 5.0×10¹² electrons are transferred from the rod to the silk.
+(a) State the sign and calculate the magnitude of the final charge on the rod and on the silk, naming the property of charge that fixes each.
+(b) The rod is then held 0.15 m from the silk (treat both as point charges). Calculate the electrostatic force between them and state whether it is attractive or repulsive.
+(c) The charged rod is now brought near a small neutral scrap of paper, which moves towards it. Explain why, and state what the net charge on the paper is while it is being attracted.
+
+**32.** A charge q₁ = +6.0 μC sits at x = 0 and a charge q₂ = −2.0 μC sits at x = 0.40 m on the same axis.
+(a) Calculate the magnitude and direction of the net electric field at the midpoint x = 0.20 m.
+(b) An electron is released at that midpoint. Calculate the magnitude and direction of the force on it at the instant of release.
+(c) Find the position on the x-axis at which the net electric field is zero. Argue first, before calculating, on which side of the pair the point must lie.
+
+**33.** A cell is investigated by varying the external resistance and recording the terminal voltage V against the current I. Two of the readings are (0.40 A, 5.60 V) and (1.60 A, 5.00 V).
+(a) Find the emf ε and the internal resistance r of the cell from these readings, and justify by a units argument why r = −(gradient) of the V–I line and not −1/(gradient).
+(b) At I = 1.60 A, find the external resistance R, the total power delivered by the cell, the power dissipated in R and the power wasted inside the cell, and show that the three powers balance.
+(c) Starting from the magnetic force on a free charge carrier, derive the motional emf ε = Bvl for a rod of length l moving at speed v perpendicular to a uniform field B. Evaluate it for B = 0.20 T, l = 0.35 m, v = 4.0 m/s, and state what the minus sign in Faraday's law does and does not tell you.
+
+**34.** A parallel-plate capacitor in vacuum has plate area A = 0.040 m² and plate separation d = 2.0 mm. It is charged to 100 V and the battery is then disconnected.
+(a) Calculate the capacitance and the charge stored.
+(b) Calculate the field between the plates, the energy density of that field, and hence the total energy stored. Confirm the total by a second, independent route, and state the units of each quantity carefully.
+(c) A slab of dielectric constant κ = 3.0 now fills the gap, the battery still being disconnected. Calculate the new capacitance, potential difference, field and stored energy, and explain in one sentence where the missing energy went.
+
+**35.** In a two-source DC network, an 18 V ideal source in series with 6 Ω and a 9 V ideal source in series with 3 Ω both feed a common node A. From A a load resistor R₃ = 6 Ω returns to the reference node (ground).
+(a) Use superposition to find the current in R₃, showing the contribution of each source separately.
+(b) Replace everything but R₃ by its Thévenin equivalent: find V_Th and R_Th, give the Norton equivalent, and use the Thévenin circuit to check your answer to (a).
+(c) Calculate the true power dissipated in R₃, and then calculate what you would get by adding the powers due to each source acting alone. Explain the discrepancy.
+
+**36.** Two charges of +4.0 nC and −4.0 nC are held 2.0 mm apart, forming an electric dipole.
+(a) Calculate the magnitude of the dipole moment and state its direction, naming the convention you are using.
+(b) Calculate the potential at a point 10.0 cm from the centre of the dipole on a line making 60° with **p**, and the magnitude and direction of the field at 10.0 cm on the equatorial plane. Comment on the value of V at that equatorial point.
+(c) The dipole is placed in a uniform external field of 2.0×10⁵ N/C with **p** at 60° to the field. Find the torque on it, the net force on it, its potential energy, and the work done by the field as it swings round to alignment.
+
+---
+
+## Answers
+
+**1.** b) — 2.403×10⁻¹⁹ C = 1.5e, and charge is quantised, so only whole multiples of e are possible; the others are 3e, 1e and 5e. **[Week 1]**
+
+**2.** a) — the force goes as the *product of the magnitudes* and as the *inverse square* of the separation, along the line joining the charges. **[Week 2]**
+
+**3.** c) — I = ε/(R + r) = 9.0/6.0 = 1.50 A, so V = ε − Ir = 9.0 − (1.50)(0.60) = 8.1 V. **[Week 3]**
+
+**4.** a) — gradient = (11.25 − 11.75)/(2.50 − 0.50) = −0.25 V/A, and r = −(gradient) = 0.25 Ω; 4.0 Ω is the *negative reciprocal*, which would carry siemens, not ohms. **[Week 4]**
+
+**5.** a) — a positive object has an electron deficit, and n = q/e = 6.4×10⁻⁶/1.602×10⁻¹⁹ = 4.0×10¹³. **[Week 1]**
+
+**6.** c) — F = kq₁q₂/r² = (8.99×10⁹)(9.0×10⁻¹²)/(0.010) = 8.1 N, and like charges repel. **[Week 2]**
+
+**7.** a) — u_E = ½ε₀E² = ½(8.85×10⁻¹²)(300)² = 3.98×10⁻⁷ **J/m³**; the expression is a density, so joules alone is wrong, and dropping the ½ gives 7.97×10⁻⁷. **[Week 3]**
+
+**8.** d) — a dead voltage source holds 0 V at any current (a wire); a dead current source passes 0 A at any voltage (a break). **[Week 4]**
+
+**9.** c) — electrons in the sphere are repelled by the rod and leave through the earth wire; removing the wire before the rod traps the deficit, leaving a net positive charge. **[Week 1]**
+
+**10.** b) — Newton's third law: the pair of forces is equal and opposite however unequal the charges; only the accelerations differ. **[Week 2]**
+
+**11.** b) — C = ε₀A/d = (8.85×10⁻¹²)(0.02)/0.005 = 3.54×10⁻¹¹ F; 3.54×10⁻¹² F is out by the factor 10 (the slide's misprint). **[Week 3]**
+
+**12.** c) — superposition holds for quantities linear in the source strengths; P = I²R is quadratic, so powers may never be superposed. **[Week 4]**
+
+**13.** d) — total charge +8.0 + (−2.0) = +6.0 μC is conserved and shared equally between identical spheres, giving +3.0 μC each. **[Week 1]**
+
+**14.** d) — the two forces are perpendicular, so F = √(6.0² + 8.0²) = 10.0 N; adding magnitudes to get 14.0 N is the classic error. **[Week 2]**
+
+**15.** d) — ε = Bvl = (0.25)(6.0)(0.40) = 0.60 V. **[Week 3]**
+
+**16.** b) — V_Th = V_oc, measured with the load removed; the terminal voltage with the load still in place is smaller. **[Week 4]**
+
+**17.** b) — bringing the rod closer strengthens its field at the sphere, so more free electrons are attracted or repelled; contact would be conduction, not induction. **[Week 1]**
+
+**18.** c) — for *unlike* charges the two fields point the same way everywhere between them, so the null point must lie outside the pair, beyond the smaller charge. **[Week 2]**
+
+**19.** a) — |ε| = N|ΔΦ|/Δt = 150 × 0.030/0.050 = 90 V. **[Week 3]**
+
+**20.** a) — p = qd = (5.0×10⁻⁹)(4.0×10⁻³) = 2.0×10⁻¹¹ C·m, using *one* charge, and the physics convention points **p** from −q to +q. **[Week 4]**
+
+**21.** a) — contact/same sign for conduction; no contact and, with earthing, opposite sign for induction. **[Week 1]**
+
+**22.** a) — E = k|q|/r² = (8.99×10⁹)(4.0×10⁻⁹)/0.040 = 9.0×10² N/C, and the field of a negative charge points radially inwards. **[Week 2]**
+
+**23.** c) — C_parallel = ΣC is larger than any single capacitance, and at fixed V, U = ½CV² grows with C. **[Week 3]**
+
+**24.** d) — E_axial = 2kp/r³ parallel to **p**; E_equatorial = kp/r³ antiparallel to **p**; the ratio is exactly 2:1. **[Week 4]**
+
+**25.** d) — only electrons move in solids, and conservation makes the two charges equal in magnitude and opposite in sign. **[Week 1]**
+
+**26.** b) — F = |q|E = (1.602×10⁻¹⁹)(500) = 8.0×10⁻¹⁷ N, directed opposite to **E** because the charge is negative. **[Week 2]**
+
+**27.** b) — a conductor's free electrons rearrange until the internal field is exactly zero; a dielectric's charges are bound, so polarisation only divides the field by K. **[Week 3]**
+
+**28.** c) — with the battery disconnected Q is fixed, so C = κC₀ while V = V₀/κ, E = E₀/κ and U = U₀/κ. **[Week 4]**
+
+**29.** c) — the field polarises the neutral paper; the induced near-face charge is closer, so its attraction beats the repulsion of the far face. The paper's net charge stays zero. **[Week 1]**
+
+**30.** d) — F ∝ q/r², so the force is multiplied by 3 and divided by 2² = 4, giving 3F/4. **[Week 2]**
+
+---
+
+**31.**
+
+(a) Electrons carry negative charge, and only electrons move, so the rod, having *lost* 5.0×10¹² electrons, is **positive** and the silk, having *gained* them, is **negative**.
+
+Magnitude: q = ne = (5.0×10¹²)(1.602×10⁻¹⁹ C) = **8.01×10⁻⁷ C**.
+
+So the rod carries **+8.01×10⁻⁷ C** and the silk **−8.01×10⁻⁷ C**.
+
+The magnitude follows from **quantisation** (q = ne, whole numbers of e only); the equality of the two magnitudes and the opposite signs follow from **conservation** — no charge was created, only transferred.
+
+(b) F = k|q₁||q₂|/r²
+ = (8.99×10⁹ N·m²/C²)(8.01×10⁻⁷ C)(8.01×10⁻⁷ C)/(0.15 m)²
+ = (8.99×10⁹)(6.416×10⁻¹³ C²)/(2.25×10⁻² m²)
+ = (5.768×10⁻³ N·m²)/(2.25×10⁻² m²)
+ = **0.26 N**, and since the charges are unlike the force is **attractive**, along the line joining them.
+
+(c) The rod's field polarises the paper: the paper's electrons shift towards (or away from) the rod, so the face nearer the rod acquires the charge *opposite* to the rod and the far face the *like* charge. Because force falls as 1/r², the attraction on the nearer face exceeds the repulsion on the farther face, and the paper is pulled in. No charge is transferred, so the **net charge on the paper remains zero** throughout — attraction alone is not evidence of charge.
+
+*Tests: signs and magnitudes from conservation and quantisation, Coulomb's law with unit conversion, and the polarisation explanation of attraction of a neutral body.* **[Week 1]**
+
+**32.**
+
+(a) Both charges are 0.20 m from the midpoint, so r² = 0.040 m² for each.
+
+From q₁ = +6.0 μC: E₁ = k|q₁|/r² = (8.99×10⁹ N·m²/C²)(6.0×10⁻⁶ C)/(0.040 m²) = **1.348×10⁶ N/C**, directed *away* from a positive charge, i.e. in the **+x** direction.
+
+From q₂ = −2.0 μC: E₂ = (8.99×10⁹)(2.0×10⁻⁶)/(0.040) = **4.495×10⁵ N/C**, directed *towards* a negative charge, i.e. also in the **+x** direction.
+
+Both point the same way, so they add:
+E = 1.348×10⁶ + 0.4495×10⁶ = **1.80×10⁶ N/C in the +x direction**.
+
+(b) F = |q|E = (1.602×10⁻¹⁹ C)(1.798×10⁶ N/C) = **2.88×10⁻¹³ N**.
+
+The electron is negative, so the force is **opposite to E**, i.e. in the **−x direction** (back towards q₁).
+
+(c) *Argument first:* the charges are **unlike**, so anywhere between them the two fields point the same way and cannot cancel. The null point must lie **outside** the pair, and on the side of the **smaller** charge, i.e. beyond q₂ at x > 0.40 m — only there is the smaller charge close enough to compete.
+
+Let the point be at distance x from q₁, so it is (x − 0.40) m from q₂. Setting the magnitudes equal:
+
+k(6.0×10⁻⁶)/x² = k(2.0×10⁻⁶)/(x − 0.40)²
+
+k and 10⁻⁶ cancel: 6.0/x² = 2.0/(x − 0.40)² → x²/(x − 0.40)² = 3.0
+
+Take square roots (both lengths positive): x/(x − 0.40) = √3 = 1.732
+
+x = 1.732x − 0.6928 → 0.732x = 0.6928 → **x = 0.95 m**
+
+So the field is zero **0.95 m from the +6.0 μC charge**, that is 0.55 m beyond the −2.0 μC charge, as the argument required.
+
+*Tests: superposition of point-charge fields with directions, F = qE for a negative charge, and the null-point argument for unlike charges.* **[Week 2]**
+
+**33.**
+
+(a) The line is V = ε − rI.
+
+gradient = (5.00 V − 5.60 V)/(1.60 A − 0.40 A) = (−0.60 V)/(1.20 A) = **−0.50 V/A**
+
+r = −(gradient) = **0.50 Ω**
+
+ε = V + Ir = 5.60 V + (0.40 A)(0.50 Ω) = 5.60 + 0.20 = **5.80 V**
+(check with the other point: 5.00 + (1.60)(0.50) = 5.80 V ✓)
+
+*Units argument:* the gradient of V (volts) against I (amperes) has units V/A = Ω, which is already a resistance, so r = −(gradient). The **negative reciprocal** would have units A/V = Ω⁻¹ = siemens, which is a conductance and cannot be an internal resistance. The sign is negative simply because V *falls* as I rises.
+
+(b) R = V/I = 5.00 V/1.60 A = **3.125 Ω**
+
+Power delivered by the cell: P_total = εI = (5.80 V)(1.60 A) = **9.28 W**
+Power in the load: P_R = I²R = (1.60 A)²(3.125 Ω) = 2.56 × 3.125 = **8.00 W** (= VI = 5.00 × 1.60 ✓)
+Power wasted inside: P_r = I²r = (1.60 A)²(0.50 Ω) = 2.56 × 0.50 = **1.28 W**
+
+Balance: 8.00 W + 1.28 W = 9.28 W = εI ✓
+
+(c) *Derivation.* A rod of length l moves with velocity v perpendicular to a uniform field B, itself perpendicular to the rod. Each free charge carrier q inside the rod is carried along at speed v, so it feels the magnetic part of the Lorentz force
+
+F = qvB, directed along the length of the rod.
+
+This force pushes carriers to one end, so it does work on a carrier moved from one end of the rod to the other:
+
+W = F × l = qvBl
+
+The emf is the work done per unit charge:
+
+ε = W/q = qvBl/q = **Bvl**
+
+(Equivalently, the enclosed flux is Φ_B = Blx with x changing at rate v, so |ε| = dΦ_B/dt = Blv — the same result.)
+
+Evaluating: ε = Bvl = (0.20 T)(4.0 m/s)(0.35 m) = **0.28 V**
+
+*The minus sign in ε = −N dΦ_B/dt* is Lenz's law: it tells you the **direction** of the induced emf and current — they oppose the change of flux that produced them. It tells you **nothing about the magnitude**, so it must be dropped when a size is asked for.
+
+*Tests: extracting ε and r from a V–I line with the units/sign argument, the power balance εI = I²R + I²r, and the derivation of motional emf from the Lorentz force.* **[Week 3]**
+
+**34.**
+
+(a) C₀ = ε₀A/d = (8.85×10⁻¹² C²/N·m²)(0.040 m²)/(2.0×10⁻³ m)
+ = (3.54×10⁻¹³)/(2.0×10⁻³) = **1.77×10⁻¹⁰ F = 177 pF**
+
+Q = C₀V₀ = (1.77×10⁻¹⁰ F)(100 V) = **1.77×10⁻⁸ C = 17.7 nC**
+
+(b) Field (uniform between the plates):
+E₀ = V₀/d = (100 V)/(2.0×10⁻³ m) = **5.0×10⁴ V/m**
+
+Energy density:
+u_E = ½ε₀E₀² = ½(8.85×10⁻¹² C²/N·m²)(5.0×10⁴ V/m)² = ½(8.85×10⁻¹²)(2.5×10⁹) = **1.11×10⁻² J/m³**
+
+Volume between the plates:
+Ad = (0.040 m²)(2.0×10⁻³ m) = **8.0×10⁻⁵ m³**
+
+Total energy:
+U = u_E × Ad = (1.106×10⁻² J/m³)(8.0×10⁻⁵ m³) = **8.85×10⁻⁷ J**
+
+*Independent check:* U = ½C₀V₀² = ½(1.77×10⁻¹⁰ F)(100 V)² = ½(1.77×10⁻¹⁰)(1.0×10⁴) = 8.85×10⁻⁷ J ✓
+
+Units: u_E is an energy **density**, in **J/m³**; only after multiplying by the volume Ad does the answer become **joules**. ½CV² is already in joules and needs no volume.
+
+(c) With the battery disconnected the **charge is fixed** at Q = 1.77×10⁻⁸ C.
+
+C = κC₀ = (3.0)(1.77×10⁻¹⁰ F) = **5.31×10⁻¹⁰ F = 531 pF**
+V = Q/C = (1.77×10⁻⁸ C)/(5.31×10⁻¹⁰ F) = **33.3 V** (= V₀/κ ✓)
+E = V/d = (33.3 V)/(2.0×10⁻³ m) = **1.67×10⁴ V/m** (= E₀/κ ✓)
+U = ½QV = ½(1.77×10⁻⁸ C)(33.3 V) = **2.95×10⁻⁷ J** (= U₀/κ ✓)
+
+The stored energy falls by the factor κ because the fringing field at the edges of the plates **pulls the slab in**, so the field does work on the slab; that work is the missing 5.90×10⁻⁷ J.
+
+*Tests: parallel-plate capacitance, the J/m³ vs J distinction for field energy, and the constant-charge dielectric relations.* **[Week 3]**
+
+**35.**
+
+(a) **Superposition.** Each source acts alone with the other replaced by a wire (a zeroed ideal voltage source is a short circuit).
+
+*18 V source alone* (9 V source shorted): from the 18 V source the 6 Ω is in series with (3 Ω ∥ 6 Ω).
+3 ∥ 6 = (3 × 6)/(3 + 6) = 18/9 = 2.00 Ω; total = 6 + 2.00 = 8.00 Ω
+I = 18 V/8.00 Ω = 2.25 A, so V_A′ = (2.25 A)(2.00 Ω) = 4.50 V
+I₃′ = V_A′/R₃ = 4.50 V/6 Ω = **0.75 A** (from A to ground)
+
+*9 V source alone* (18 V source shorted): the 3 Ω is in series with (6 Ω ∥ 6 Ω).
+6 ∥ 6 = 3.00 Ω; total = 3 + 3.00 = 6.00 Ω
+I = 9 V/6.00 Ω = 1.50 A, so V_A″ = (1.50 A)(3.00 Ω) = 4.50 V
+I₃″ = 4.50 V/6 Ω = **0.75 A** (also from A to ground)
+
+Both contributions are in the same direction, so
+I₃ = 0.75 A + 0.75 A = **1.50 A**, and V_A = (1.50 A)(6 Ω) = 9.00 V.
+
+(b) **Thévenin.** Remove R₃ and find the open-circuit voltage at A:
+
+(18 − V)/6 = (V − 9)/3 → 18 − V = 2(V − 9) = 2V − 18 → 3V = 36 → **V_Th = 12.0 V**
+
+R_Th: zero both sources (each becomes a wire), so looking back into A we see 6 Ω ∥ 3 Ω:
+R_Th = (6 × 3)/(6 + 3) = 18/9 = **2.00 Ω**
+
+Norton: I_N = V_Th/R_Th = 12.0 V/2.00 Ω = **6.00 A**, in parallel with R_N = R_Th = **2.00 Ω**.
+(Direct check of I_sc with A shorted to ground: 18/6 + 9/3 = 3.00 + 3.00 = 6.00 A ✓)
+
+Check of (a): reconnect R₃ across the Thévenin source:
+I₃ = V_Th/(R_Th + R₃) = 12.0 V/(2.00 + 6) Ω = 12.0/8.00 = **1.50 A** ✓
+
+Note that V_Th = 12.0 V is *not* the 9.00 V measured at A with R₃ still in place — the load must be removed first.
+
+(c) True power in R₃: P = I₃²R₃ = (1.50 A)²(6 Ω) = 2.25 × 6 = **13.5 W**
+
+Adding the single-source powers: 2 × (0.75 A)²(6 Ω) = 2 × 0.5625 × 6 = **6.75 W**
+
+The two disagree by a factor of 2 because **power does not superpose**: P = I²R is quadratic in the current, so (I′ + I″)²R = I′²R + I″²R + 2I′I″R, and the cross term 2(0.75)(0.75)(6) = 6.75 W is exactly what the naive addition throws away. Superposition applies to currents and voltages only.
+
+*Tests: superposition with correctly zeroed sources, Thévenin/Norton reduction and the open-circuit condition, and the non-superposition of power.* **[Week 4]**
+
+**36.**
+
+(a) p = qd, using the magnitude of *either* charge (the pair is neutral overall, so adding the two charges would be meaningless):
+
+p = (4.0×10⁻⁹ C)(2.0×10⁻³ m) = **8.0×10⁻¹² C·m**
+
+Direction: from the **−4.0 nC charge towards the +4.0 nC charge**, along the axis — the **physics convention** (chemistry uses the reverse).
+
+(b) The point is at r = 0.100 m while d = 2.0×10⁻³ m, so r/d = 50 ≫ 1 and the far-field formulae are legitimate.
+
+kp = (8.99×10⁹ N·m²/C²)(8.0×10⁻¹² C·m) = 7.19×10⁻² N·m²/C
+
+*Potential at θ = 60°:*
+V = kp cos θ/r² = (7.19×10⁻² N·m²/C)(cos 60° = 0.500)/(0.100 m)²
+ = (3.596×10⁻² N·m²/C)/(1.00×10⁻² m²) = **3.60 V**
+
+*Field on the equatorial plane at r = 0.100 m:* r³ = 1.00×10⁻³ m³
+E = kp/r³ = (7.19×10⁻² N·m²/C)/(1.00×10⁻³ m³) = **71.9 N/C**, directed **antiparallel to p** (i.e. from +q towards −q, since on the perpendicular bisector the components along **p**'s perpendicular cancel and only the axis-parallel components survive).
+
+*Comment:* on the equatorial plane θ = 90°, so cos θ = 0 and **V = 0 exactly**, yet E = 71.9 N/C is not zero. V = 0 on a surface does not imply E = 0 — E is the *gradient* of V, and V changes rapidly as you move off that plane.
+
+(c) *Torque:* τ = pE sin θ = (8.0×10⁻¹² C·m)(2.0×10⁵ N/C)(sin 60° = 0.866)
+ = (1.60×10⁻⁶ N·m)(0.866) = **1.39×10⁻⁶ N·m**, perpendicular to the **p**–**E** plane, turning **p** towards **E**.
+
+*Net force:* the field is **uniform**, so the forces +qE and −qE on the two charges are equal and opposite: **net force = 0 N**. (Only a non-uniform field can give a net force.)
+
+*Potential energy at 60°:* U = −pE cos θ = −(8.0×10⁻¹² C·m)(2.0×10⁵ N/C)(0.500) = **−8.0×10⁻⁷ J**
+
+*At alignment, θ = 0°:* U = −pE = −(8.0×10⁻¹²)(2.0×10⁵)(1) = −1.60×10⁻⁶ J
+
+*Work done by the field* as the dipole swings from 60° to 0°:
+W = U(60°) − U(0°) = (−8.0×10⁻⁷ J) − (−1.60×10⁻⁶ J) = **+8.0×10⁻⁷ J** released by the field.
+(Equivalently, an external agent would have to do −8.0×10⁻⁷ J, i.e. absorb that energy; θ = 0° is the stable equilibrium.)
+
+*Tests: p = qd with the direction convention, dipole potential and equatorial field including the V = 0 but E ≠ 0 point, and torque, zero net force and potential energy in a uniform field.* **[Week 4]**
+
+## Revision table
+
+| Week | Topic | Questions | Your score |
+|---|---|---|---|
+| 1 | Electric charge: additivity, conservation, quantisation; charging by friction, conduction and induction; polarisation and the electric field | 1, 5, 9, 13, 17, 21, 25, 29, 31 | /9 |
+| 2 | Coulomb's law and its vector form; superposition in 1-D and 2-D; null points; electric field of a point charge and F = qE | 2, 6, 10, 14, 18, 22, 26, 30, 32 | /9 |
+| 3 | EMF, terminal p.d. and internal resistance; motional emf and Faraday's law; energy and energy density in electric fields; capacitance, dielectrics, conductors and insulators | 3, 7, 11, 15, 19, 23, 27, 33, 34 | /9 |
+| 4 | Real vs ideal sources and the V–I graph; zeroing sources, superposition, Thévenin and Norton; electric dipoles — moment, potential, field, torque and energy; dielectrics | 4, 8, 12, 16, 20, 24, 28, 35, 36 | /9 |

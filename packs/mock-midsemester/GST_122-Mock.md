@@ -2,153 +2,161 @@
 
 *Communication in English II · Weeks 1–4 · 45 minutes · notes closed · 24 marks*
 
-Work straight through in 45 minutes with your notes and slides closed; every question carries one mark, so aim for about 100 seconds per question and do not linger on any single item.
-Mark Section A against the letters, then mark Section B honestly against the model answers — give yourself the mark only if your answer contains the named concept and the reason, not just the right label.
+**Instructions.** 45 minutes, notes closed — Section A is 20 questions at 1 mark each and Section B is 4 questions at 1 mark each, for 24 marks; do not look at the Answers until the time is up.
+Mark Section B honestly against the model answers: a part-right answer that misses a rule or a term the model answer names scores 0 — write down which week each lost mark came from and take that row of the revision table.
+
+---
 
 ## Section A — Multiple choice (20)
 
-**1.** "Cassava must first be peeled and washed. It is then grated, pressed to drain the liquid, and sieved before frying. The whole process takes about two days." This passage is an example of:
-a) Narrative writing  b) Expository writing  c) Descriptive writing  d) Persuasive writing
+**1.** Which writing style does this extract belong to? — *"The kettle sat on the blue enamel stove, its dented sides catching the last of the light. The kitchen smelled of woodsmoke and wet cloves, and the floor was cold enough to sting bare feet."*
+a) narrative   b) descriptive   c) expository   d) persuasive
 
-**2.** "The market at dusk smelled of smoked fish and wet earth, and the lanterns swinging above the stalls threw yellow light across the mud." This passage is an example of:
-a) Descriptive writing  b) Narrative writing  c) Expository writing  d) Persuasive writing
+**2.** A student plays a documentary with the sound on while scrolling through her phone. Afterwards she can name the topic but cannot reproduce a single step of the argument. What does this illustrate?
+a) active listening, because she chose the documentary herself   b) hearing rather than listening, because she never perceived the sound at all   c) reading comprehension, because the documentary carried subtitles   d) passive listening — sound registering without deep comprehension
 
-**3.** "The university should extend library opening hours to midnight. Students who work during the day have nowhere quiet to study, and two extra staff hours cost far less than a failed semester." This passage is an example of:
-a) Expository writing, because it presents facts about students and costs
-b) Persuasive writing, because it argues for a position and asks for an action
-c) Narrative writing, because it describes what students do during the day
-d) Descriptive writing, because it pictures the library at night
+**3.** Ibrahim is taking down figures a colleague is dictating over the phone, typing them straight into an email as he hears them. In terms of the receptive/productive split, he is using:
+a) two receptive skills, listening and writing   b) two productive skills, listening and writing   c) one receptive skill (listening) and one productive skill (writing)   d) one receptive skill (writing) and one productive skill (listening)
 
-**4.** Amaka listens to a recorded lecture and then writes a summary of it for her study group. In terms of the four language skills she has moved from:
-a) A productive skill to a receptive skill
-b) A receptive skill to a productive skill
-c) One receptive skill to another receptive skill
-d) One productive skill to another productive skill
+**4.** Which writing style does this extract belong to? — *"The university should extend the semester by three weeks. Students lost eleven teaching days to the strike, and no amount of compressed revision will recover them. Approve the extension at Senate on Thursday."*
+a) persuasive   b) expository   c) narrative   d) descriptive
 
-**5.** Bola had the radio on all morning while filing documents; asked afterwards, she could not say what the main news story had been. Her behaviour is best described as:
-a) Hearing rather than listening, since hearing means sound that is fully interpreted but not acted upon
-b) Passive listening, since the sound registered without deep comprehension
-c) Active listening, since she processed two streams of information at the same time
-d) Active listening, since she could still report that the radio had been playing
+**5.** A student presenter is criticised as follows: *"Her points were sound, but she mumbled, stared at her slides the whole time, and spoke at one flat volume from start to finish."* Which named components of effective oral communication has she failed on?
+a) clear pronunciation, audience engagement and voice control   b) unity, coherence and a topic sentence   c) denotation, connotation and context   d) simple, compound and complex structure
 
-**6.** A hospital brochure calls a room "compact" rather than "cramped". Both words fit the same room. The difference between them lies in their:
-a) Denotation  b) Connotation  c) Referent  d) Signifier
+**6.** A ranger sees smoke drifting above the trees and concludes there is a fire. In the icon / index / symbol classification, the smoke is:
+a) an icon, because it looks like the fire   b) a symbol, because rangers have agreed that smoke will mean fire   c) a referent, because it is the actual thing out there in the world   d) an index, because it is physically and causally connected to what it stands for
 
-**7.** A nurse reads a high temperature on a thermometer and concludes that the patient has an infection. The high temperature is functioning as:
-a) An icon, because the reading resembles the illness it reports
-b) An index, because it is causally connected to what it stands for
-c) A symbol, because thermometer readings are a learned convention
-d) A signified, because it is the concept the nurse has in mind
+**7.** An estate agent describes a small flat as *"cosy"* rather than *"cramped"*. The difference between the two words is best described as a difference of:
+a) denotation, since one of them names a larger room   b) connotation, since they can describe the same room literally but carry opposite associations   c) homophony, since the two words are easily confused in speech   d) referent, since the two words point to two different flats
 
-**8.** The pictogram of a knife and fork on a roadside sign tells drivers that a restaurant is ahead. That pictogram is:
-a) An index, because it stands physically close to the restaurant
-b) A symbol, because road signs must be taught before they are understood
-c) An icon, because it resembles the thing it stands for
-d) A referent, because it points at a real restaurant down the road
+**8.** A supervisor types *"Can you send me the file?"* and the assistant sends the file rather than replying "yes". The assistant has responded to the sentence's:
+a) pragmatic meaning — what the speaker is doing with the utterance here and now   b) semantic meaning   c) connotative meaning   d) denotative meaning
 
-**9.** A student walks in twenty minutes late and the lecturer says, "You are early today." The reprimand the lecturer is actually delivering is the sentence's:
-a) Semantic meaning  b) Connotative meaning  c) Pragmatic meaning  d) Denotative meaning
+**9.** A team is emailed the instruction *"Send the report to the manager in Lagos."* Why does the lesson treat this as an operational risk rather than a matter of style?
+a) it contains a homophone that will be misheard when read aloud on a call   b) "report" carries a connotation the manager is likely to resent   c) it is ambiguous — "in Lagos" may attach either to the manager or to the destination, so team members act on conflicting instructions   d) it is a complex sentence, and instructions at this level should be simple sentences
 
-**10.** In the sentence "Lagos is on the coast", the actual city — its streets, buildings and people — is the sign's:
-a) Signified  b) Referent  c) Signifier  d) Symbol
+**10.** A lecturer holds up a photograph of a dog, writes the letters *d-o-g* on the board, and then points through the window at the animal asleep in the yard. In the week's terminology, the animal in the yard is:
+a) the signifier   b) the referent   c) the signified   d) the symbol
 
-**11.** "Because the generator failed, the lecture moved online, and the students joined from their hostels." By structure this sentence is:
-a) Compound  b) Complex  c) Compound-complex  d) Simple
+**11.** Classify by structure: *"Because the generator failed, the hall went dark, and the invigilator postponed the paper."*
+a) simple   b) complex   c) compound-complex   d) compound
 
-**12.** "The technicians arrived early and tested every microphone before the ceremony began." By structure this sentence is:
-a) Compound  b) Complex  c) Compound-complex  d) Simple
+**12.** Classify by structure: *"Amaka and her brother collected the results and filed them in the registry."*
+a) simple   b) compound   c) complex   d) compound-complex
 
-**13.** Choose the correct verb: "Neither the head of department nor the lecturers ____ satisfied with the new timetable."
-a) is  b) has been  c) are  d) was
+**13.** A student labels *"Kindly forward the minutes to the committee."* as declarative because it tells the reader what should happen. The correct label and reason is:
+a) declarative, because it conveys information about the minutes   b) exclamatory, because "kindly" signals the writer's attitude   c) interrogative, because it expects a response from the reader   d) imperative, because it makes a request and its subject "you" is understood rather than written
 
-**14.** Which of these sentences is imperative by function?
-a) You lock the laboratory at six every evening.
-b) Lock the laboratory before you leave.
-c) Could you lock the laboratory at six?
-d) That laboratory door is far too heavy!
+**14.** In *"She has been waiting under the shed since morning,"* which set contains **only** function words?
+a) waiting, shed, morning   b) she, has, been, under, the, since   c) has, been, waiting, morning   d) she, shed, since, waiting
 
-**15.** "She has been reading the report since morning." Which set contains ONLY function words from that sentence?
-a) has, been, reading, since
-b) has, been, the, since
-c) she, report, the, morning
-d) reading, report, morning, she
+**15.** Complete correctly: *"Neither the developers nor the designer ___ submitted the mock-up."*
+a) have   b) were   c) has   d) are
 
-**16.** Which version is punctuated correctly?
-a) The deadline was extended, we submitted the report on Friday.
-b) The deadline was extended, therefore we submitted the report on Friday.
-c) The deadline was extended; we submitted the report on Friday.
-d) The deadline was extended we submitted the report on Friday.
+**16.** Every sentence below is about the same journey and every sentence makes sense on its own, yet the paragraph still reads badly. Which component of a good paragraph is it chiefly failing? — *"I left the hostel at six. The road to the campus gate was flooded. Lectures at Miva begin at eight. I reached the hall with wet shoes."*
+a) unity   b) coherence   c) one idea at a time   d) the topic sentence
 
-**17.** "The candidates, who had passed the screening test, were invited for interview." Following the rule on commas and essential information, this sentence says that:
-a) Only the candidates who passed were invited; the others were not
-b) All the candidates passed, and all of them were invited
-c) The candidates were invited before the screening test was held
-d) Some candidates passed, but the sentence does not say who was invited
+**17.** Which component does the fourth sentence break? — *"Group study improves retention in three ways. First, explaining a point aloud exposes the gaps in your own understanding. Second, peers catch errors a solitary reader simply repeats. My cousin studies medicine in Ilorin. Third, a fixed meeting time defeats procrastination."*
+a) coherence   b) the topic sentence   c) one idea at a time   d) unity
 
-**18.** Which version is punctuated correctly?
-a) The registrar asked whether the results were final?
-b) The registrar asked whether the results were final.
-c) The registrar asked, "whether the results were final?"
-d) The registrar asked: whether the results were final?
+**18.** *"The rains came six weeks late; consequently, the harvest failed."* Which transition category is *consequently* serving **in this sentence**?
+a) cause and effect   b) conclusion/summary   c) contrast   d) emphasis
 
-**19.** "Solar lamps have changed evening study in rural schools. Pupils now revise after dark without kerosene fumes. Teachers report better attendance at evening classes. My uncle has driven the same car for eleven years. Two more districts have ordered lamps for next term." The fourth sentence breaks the paragraph's:
-a) Coherence, because it is not linked to the sentence before it
-b) Unity, because it does not relate to the paragraph's single theme
-c) Adequate development, because it adds no supporting evidence
-d) Topic sentence, because it states a second main idea first
+**19.** Which mark belongs in the gap, and why? — *"The laboratory kit needs three items ___ gloves, goggles and a mask."*
+a) a semicolon, because the two halves are closely related   b) a comma, because what follows is a list of three items   c) a colon, because a complete statement comes first and the second half delivers the list it announces   d) a hyphen, because the list is being joined to the statement
 
-**20.** "Fuel queues stretched past the roundabout for a third day. Lecture halls were half empty by ten o'clock. Three departments moved their tests online at short notice. The scarcity has disrupted almost every part of campus life this week." The topic sentence of this paragraph is:
-a) The first sentence, since a topic sentence must open the paragraph
-b) The second sentence, since it names the effect on lectures
-c) The fourth sentence, since it carries the paragraph's main idea
-d) None of them, since the paragraph does not begin with a topic sentence
+**20.** A student quoting a source inserts the city's name into the quoted words to make the reference clear: *"The report read, 'The city ___London___ is a vibrant metropolis.'"* Which mark belongs in the gaps, and why?
+a) parentheses, because the addition is the writer's own supplementary information   b) an em dash pair, because the addition emphasises the name   c) quotation marks, because the name is itself being quoted   d) brackets, because the words were added by the quoter inside someone else's quoted text
 
 ## Section B — Short answer (4)
 
-**21.** Read this passage: *"Turn the key gently until it clicks, then press the green button. If the light stays red, wait ten seconds and repeat."* Name its writing style, justify your choice in one sentence, and state what would have to change in it for it to count as persuasive writing instead.
+**21.** Below are two extracts. Name the writing style of each from the four named in the lesson, and justify each label by one feature of the extract itself — not by a definition. Then state which language skill the writer of each is exercising, and whether that skill is receptive or productive.
+*Extract A:* "Do not renew the vendor's contract. They have missed three deadlines this year, and every missed deadline has cost the support desk a full week. Renewing now tells them nothing needs to change."
+*Extract B:* "A hurricane forms when warm ocean water evaporates and rises. As the vapour cools it condenses, releasing heat that drives still more air upward. The rotation of the earth sets the rising column spinning."
 
-**22.** A team leader emails: *"Send the revised budget to the accountant in Abuja before Friday."* Two team members act on it differently. State the two readings the sentence permits, name the barrier to shared meaning it illustrates, and rewrite the sentence so that only one reading survives.
+**22.** A project lead sends the team this sentence: *"The lecturer told the students after the exam they would receive their scripts."* Name the source of confusion the lesson identifies here (and name the other source of confusion the lesson lists alongside it). Set out the two readings the sentence permits. Explain in one sentence why the lesson treats this as an operational risk rather than a stylistic fault. Then rewrite the sentence twice, once for each reading, so that only one reading survives in each.
 
-**23.** A student labels *"Ngozi and her brother cooked the rice and washed the plates"* a compound sentence. Explain why that label is wrong, give the correct structural label with your reason, and then change the sentence as little as possible to make it genuinely compound.
+**23.** Each sentence below breaks a concord rule. Rewrite each one correctly and name the specific rule it breaks, stating what the verb has been made to agree with in your corrected version.
+(i) "Neither the students nor the lecturer have signed the attendance sheet."
+(ii) "The list of approved candidates were pinned to the notice board."
+(iii) "The bursar or the auditors is expected at the meeting."
 
-**24.** Rewrite this passage with correct punctuation and name each of the three errors you fixed: *"The examinations office released it's timetable on Monday, the students complained immediately. Two departments timetables clashed with the practical sessions."*
+**24.** Three punctuation marks in the passage below are wrong. For each, name the mark that should replace it and state the rule that makes the printed mark wrong. (Take it as given that the words *goggles included* were added by the student writing the report, not by the supplier.)
+*"The kit needs three items; gloves, goggles and a mask. The first delivery was short, the second never arrived at all. The supplier's note read: 'we dispatched the complete order (goggles included) on Friday.'"*
+
+---
 
 ## Answers
 
-**1. b** — *expository writing*: it explains a process and presents the steps as information, not as a story about a particular occasion. **[Week 1]**
-**2. a** — *descriptive writing*: sensory detail (smell, light, colour) paints the scene rather than reporting a sequence of events. **[Week 1]**
-**3. b** — *persuasive writing*: it argues a position and calls for an action; the facts are used as reasons, which is what separates it from expository writing. **[Week 1]**
-**4. b** — *receptive and productive skills*: listening is receptive (language taken in), writing is productive (language produced). **[Week 1]**
-**5. b** — *passive listening*: sound registers without deep comprehension. It is not "hearing", which is the merely physical perception of sound, and it is not active listening, which requires full engagement and understanding. **[Week 1]**
-**6. b** — *connotation*: the two words share a denotation (small in size) but differ in the emotional and cultural associations layered on it. **[Week 2]**
-**7. b** — *index*: a sign physically or causally connected to what it stands for, exactly like smoke for fire or a fever for infection. **[Week 2]**
-**8. c** — *icon*: a sign that resembles what it stands for; the convention of where road signs are placed does not change the resemblance relation. **[Week 2]**
-**9. c** — *pragmatic meaning*: what the speaker is doing with the utterance here and now, as against its semantic meaning (that the student arrived before time). **[Week 2]**
-**10. b** — *referent*: the actual thing in the world the sign points to, as against the signified, which is the mental concept it calls up. **[Week 2]**
-**11. c** — *compound-complex*: two independent clauses ("the lecture moved online", "the students joined from their hostels") plus the dependent clause "Because the generator failed". **[Week 3]**
-**12. b** — *complex*: one independent clause with a compound verb ("arrived early and tested every microphone") plus the dependent clause "before the ceremony began"; a compound verb is not a second independent clause. **[Week 3]**
-**13. c** — *Rule of Proximity Agreement*: with "neither… nor" the verb agrees with the nearest subject element, "the lecturers", so the plural "are" is required. **[Week 3]**
-**14. b** — *imperative*: a command or instruction with the understood subject "you". (a) has a visible subject and reports a fact, so it is declarative; (c) is interrogative in form even though it makes a request; (d) is exclamatory. **[Week 3]**
-**15. b** — *function words*: auxiliaries "has" and "been", the article "the", the preposition "since". "Reading" is the main lexical verb and therefore a content word, and "report" and "morning" are nouns. **[Week 3]**
-**16. c** — *comma splice*: a comma alone (a) or nothing at all (d) cannot join two independent clauses, and "therefore" (b) is a conjunctive adverb, not a coordinating conjunction, so it needs a semicolon before it. **[Week 4]**
-**17. b** — *non-restrictive commas*: the commas mark the clause as non-essential extra information about all the candidates; without the commas it would restrict the invitation to the subgroup who passed. **[Week 4]**
-**18. b** — *indirect question*: a reported question takes a full stop, not a question mark, and takes no quotation marks or colon because no words are being quoted. **[Week 4]**
-**19. b** — *unity*: unity concerns content — one theme, every sentence relating to it, no digression. Coherence would be the fault if the sentences were on topic but badly ordered or unlinked. **[Week 4]**
-**20. c** — *position of the topic sentence*: it carries the paragraph's main idea, and the lesson allows it at the beginning, in the middle or at the end; the other sentences are supporting details. **[Week 4]**
+**1.** b) descriptive — it paints a subject through sensory detail (sight, smell, touch) with no sequence of events and no argument. **[Week 1]**
 
-**21.** *Expository writing*: the passage explains a procedure step by step, informing the reader how to carry it out without arguing any position — the marks are for naming **expository** and for the reason (it explains or informs, presenting a process clearly). To become **persuasive** it would have to stop merely instructing and start arguing a viewpoint the reader could reject — for example claiming that this starting method is better than the alternative and urging the reader to adopt it, supported by reasons meant to change the reader's mind. Note that the sequence of steps does not make it narrative: narrative tells a story of events that happened, not a repeatable procedure. **[Week 1]**
+**2.** d) passive listening — the sound is registering without deep comprehension; she did perceive it, so this is not merely "hearing", and she is not fully engaged, so it is not active listening. **[Week 1]**
 
-**22.** *Ambiguity*: the two readings are (i) the accountant is the one based in Abuja, so send the budget to that person wherever they are, and (ii) the budget is to be sent to Abuja, where the accountant is currently to be found — the phrase "in Abuja" can attach either to "the accountant" or to "send". The barrier to shared meaning is **ambiguity** (a message permitting more than one reasonable interpretation), which the lesson treats as an operational risk, not a stylistic flaw, because it breaks coordination and leaves members with conflicting understandings of the task. An acceptable rewrite fixes the attachment, for example: "Send the revised budget to Mr Okoro, our Abuja-based accountant, before Friday" or "Before Friday, send the revised budget to our accountant at the Abuja office." **[Week 2]**
+**3.** c) one receptive skill (listening) and one productive skill (writing) — listening and reading are receptive, speaking and writing productive. **[Week 1]**
 
-**23.** *Simple vs compound*: the label is wrong because "Ngozi and her brother" is a **compound subject** and "cooked the rice and washed the plates" is a **compound verb** — but there is still only **one clause**, one subject-predicate unit, so the sentence is **simple**. A compound sentence needs two or more *independent clauses*, each with its own subject and predicate, joined by a coordinating conjunction or a semicolon; repeating "and" inside one clause does not create a second clause. Minimal fix: supply a second subject-predicate unit, e.g. "Ngozi cooked the rice, and her brother washed the plates" (or "Ngozi and her brother cooked the rice; they washed the plates afterwards"). **[Week 3]**
+**4.** a) persuasive — it argues a position and demands an action ("Approve the extension"), rather than merely explaining the strike. **[Week 1]**
 
-**24.** *Punctuation correction*: "The examinations office released **its** timetable on Monday**;** the students complained immediately. Two **departments'** timetables clashed with the practical sessions." The three errors are (i) **its vs it's** — "it's" is only the contraction of "it is"/"it has", while the possessive pronoun "its" takes no apostrophe; (ii) a **comma splice** — a comma alone cannot join the two independent clauses, so a semicolon, a full stop, or a comma plus a coordinating conjunction ("…on Monday, and the students complained immediately") is required; (iii) a **missing plural possessive apostrophe** — the timetables belong to two departments, so the apostrophe goes after the plural s: "departments'". **[Week 4]**
+**5.** a) clear pronunciation, audience engagement and voice control — mumbling fails pronunciation, staring at the slides fails audience engagement and body language, one flat volume fails voice control. **[Week 1]**
 
-## What to revise
+**6.** d) an index, because it is physically and causally connected to what it stands for — an icon resembles, a symbol is conventional, and the referent is the fire itself. **[Week 2]**
 
-| Week | Topic | Questions | If you dropped marks, re-read |
+**7.** b) connotation — the two words share a denotation (a small room) but carry opposite emotional associations, which is exactly the denotation/connotation split. **[Week 2]**
+
+**8.** a) pragmatic meaning — semantically the sentence asks about ability; pragmatically the supervisor is making a polite request, and the assistant has read the meaning in use. **[Week 2]**
+
+**9.** c) it is ambiguous — the sentence permits more than one reasonable interpretation, so team members form conflicting understandings of the task, which breaks coordination rather than merely reading awkwardly. **[Week 2]**
+
+**10.** b) the referent — the actual thing in the world; the letters are the signifier, the mental concept is the signified, and the photograph is an icon. **[Week 2]**
+
+**11.** c) compound-complex — "the hall went dark" and "the invigilator postponed the paper" are two independent clauses joined by *and*, plus the dependent clause "Because the generator failed". **[Week 3]**
+
+**12.** a) simple — a compound subject (*Amaka and her brother*) and a compound predicate still make only **one** independent clause. **[Week 3]**
+
+**13.** d) imperative, because it makes a request and its subject "you" is understood rather than written — the imperative/declarative test is the unwritten subject, not politeness. **[Week 3]**
+
+**14.** b) she, has, been, under, the, since — a pronoun and auxiliary verbs are function words despite looking like a thing and a verb; *waiting, shed, morning* are content words. **[Week 3]**
+
+**15.** c) has — the Rule of Proximity Agreement: with *neither…nor* the verb agrees with the nearest subject, *designer*, which is singular. **[Week 3]**
+
+**16.** b) coherence — every sentence relates to the same theme (so unity holds), but the ideas are out of logical order and carry no cohesive links, so nothing flows. **[Week 4]**
+
+**17.** d) unity — the cousin in Ilorin is a digression from the single central theme announced by the topic sentence. **[Week 4]**
+
+**18.** a) cause and effect — *consequently* also appears under Conclusion/Summary, but here it links a cause (late rains) to its effect (failed harvest), and the job the word does in the sentence decides the column. **[Week 4]**
+
+**19.** c) a colon, because a complete statement comes first and the second half delivers the list it announces — a semicolon would need an independent clause on both sides, and the list is not one. **[Week 4]**
+
+**20.** d) brackets, because the words were added by the quoter inside someone else's quoted text — parentheses there would claim the original author actually wrote *London*, which is a misquotation. **[Week 4]**
+
+---
+
+**21.** **Extract A is persuasive.** Justification from the text: it opens with a directive ("Do not renew") and marshals the missed deadlines as reasons for a decision the reader is being pushed to take — it argues a side rather than laying out the facts neutrally.
+**Extract B is expository.** Justification from the text: it explains how a process works, step by step, presenting facts without recommending anything or taking a side. Note the trap: B moves in a sequence, but that does not make it narrative — narrative tells the story of particular events, whereas B explains a general process, so it is expository.
+In both cases the writer is exercising **writing**, which is a **productive** skill (as is speaking; listening and reading are the receptive pair).
+*Tested: applying the four writing styles to specimens, the persuasive/expository and narrative/descriptive discriminations, and the receptive/productive split.* **[Week 1]**
+
+**22.** **Source of confusion: ambiguity** — the sentence permits more than one reasonable interpretation. The other source the lesson names alongside it is **homophones** ("hazardous homophones"), words that sound alike but differ in meaning and spelling.
+**The two readings:** (i) the telling happened after the exam — the lecturer spoke to the students after the exam, and told them they would receive their scripts; (ii) the receiving happens after the exam — the lecturer told the students that they would receive their scripts after the exam. "After the exam" can attach backwards to *told* or forwards to *would receive*.
+**Why it is an operational risk, not a style fault:** because the receiver actively reconstructs meaning, two readers will act on two different understandings of when something happens, so the ambiguity breaks coordination and creates conflicting understandings of responsibility — exactly the failure the week's case study demonstrates.
+**Rewrites:** (i) "After the exam, the lecturer told the students that they would receive their scripts." (ii) "The lecturer told the students that they would receive their scripts after the exam."
+*Tested: identifying ambiguity, the two named sources of confusion, meaning as reconstructed by the receiver, and repair by moving the ambiguous element.* **[Week 2]**
+
+**23.** (i) **"Neither the students nor the lecturer *has* signed the attendance sheet."** Rule broken: the **Rule of Proximity Agreement**. With *neither…nor* the verb agrees with the **closest** subject, *lecturer*, which is singular — not with *students*, which is merely the first noun in the sentence.
+(ii) **"The list of approved candidates *was* pinned to the notice board."** Rule broken: plain **subject-verb agreement** — the number of the subject must match the number of the verb. The subject is *the list* (singular); *of approved candidates* is a modifying phrase, and the plural noun inside it does not control the verb.
+(iii) **"The bursar or the auditors *are* expected at the meeting."** Rule broken: the **Rule of Proximity Agreement** again, driven by **"or"** — the verb aligns with the nearest subject, *auditors*, which is plural. Note the contrast: with *and* ("The bursar and the auditors are expected") the two subjects simply join into a plural, so the order of the nouns would not matter; with *or*/*nor* the same two nouns take a singular or a plural verb depending on which one comes last.
+*Tested: concord — subject-verb agreement, the Rule of Proximity Agreement, and the effect of "or"/"nor" versus "and".* **[Week 3]**
+
+**24.** **(1) The semicolon after "three items" should be a colon (:).** Rule: a colon introduces a list, explanation or quotation and follows a complete statement — the first half announces, the second half delivers. The semicolon is wrong because a semicolon requires an **independent clause on both sides**, and "gloves, goggles and a mask" is a list, not a clause.
+**(2) The comma after "The first delivery was short" should be a semicolon (;).** Rule: a semicolon connects two closely related independent clauses **without** a coordinating conjunction. The comma is wrong because a comma may join two independent clauses only when a coordinating conjunction (and, but, or, so) follows it; as printed it is a comma splice. ("…was short, but the second never arrived" would also be correct.)
+**(3) The parentheses around "goggles included" should be brackets [ ].** Rule: brackets mark words the quoter has added or changed inside someone else's quoted material; parentheses enclose the writer's own supplementary information. Since the student added those words, parentheses inside the quotation falsely claim the supplier wrote them — a misquotation.
+*Tested: colon vs semicolon vs comma (including the comma splice), and parentheses vs brackets inside quoted material.* **[Week 4]**
+
+## Revision table
+
+| Week | Topic | Questions | Your score |
 |---|---|---|---|
-| Week 1 | Language Skills | 1, 2, 3, 4, 5, 21 | The four writing styles as a set (especially expository vs persuasive and narrative vs descriptive), and the listening / hearing / active / passive ladder plus the receptive-productive split. |
-| Week 2 | Communication and Meaning | 6, 7, 8, 9, 10, 22 | Denotation vs connotation, the icon / index / symbol trio, signifier / signified / referent, semantic vs pragmatic meaning, and ambiguity as a barrier to shared meaning. |
-| Week 3 | Grammar: Sentences and Word Classes | 11, 12, 13, 14, 15, 23 | The clause-counting boundary rules (compound verb ≠ second clause; count independents to split complex from compound-complex), declarative vs imperative, function vs content words, and the Rule of Proximity Agreement. |
-| Week 4 | Paragraphs and Punctuation | 16, 17, 18, 19, 20, 24 | The comma splice and its four fixes, restrictive vs non-restrictive commas, its vs it's and the apostrophe rules, indirect questions, unity vs coherence, and the three possible positions of the topic sentence. |
+| Week 1 | Language skills: the four skills and the receptive/productive split; listening vs hearing; active vs passive listening; components of effective oral communication; the four writing styles | 1, 2, 3, 4, 5, 21 | |
+| Week 2 | Communication and meaning: semiotics; signifier / signified / referent; icon, index and symbol; denotation vs connotation; semantic vs pragmatic meaning; ambiguity and homophones | 6, 7, 8, 9, 10, 22 | |
+| Week 3 | Grammar: sentence structure (simple, compound, complex, compound-complex); sentence function (declarative, imperative, interrogative, exclamatory, conditional); function vs content words; concord — subject-verb agreement and the Rule of Proximity Agreement | 11, 12, 13, 14, 15, 23 | |
+| Week 4 | Paragraphs and punctuation: unity, coherence, topic sentence, one idea at a time; transition words by category; comma, semicolon and colon; hyphen, en dash and em dash; parentheses vs brackets | 16, 17, 18, 19, 20, 24 | |

@@ -1,6 +1,6 @@
 # Mid-semester mocks — Weeks 1–4
 
-*Checkpoint for the Week 5 pack. Seven timed papers, one per course, covering everything from Week 1 to Week 4. MIVA_COS_111 has had no material all semester, so it has no paper.*
+*Checkpoint for the Week 5 pack (5–11 October 2026). Seven timed papers, one per course, covering everything from Week 1 to Week 4. MIVA_COS_111 has had no material all semester, so it has no paper.*
 
 | Paper | Course | Length | Marks |
 |-------|--------|--------|-------|
@@ -18,7 +18,8 @@
 
 Suggested spread, so nothing is skipped and the normal schedule survives:
 
-- **Sat Week 5, catch-up hour** — `MTH_102-Mock.md`
+- **Fri Week 5, review hour** — `MTH_102-Mock.md`
+- **Sat Week 5, catch-up hour** — start the fast-course papers
 - **Sunday Week 5, after the recap** — `PHY_102-Mock.md` and `COS_102-Mock.md`
 - **Week 6 fast hours**, each paper on the evening that course already owns — Mon `GST_112`, Tue `CSC_106`, Wed `GST_122`, Thu `PHY_108`
 
@@ -28,11 +29,14 @@ Deep-course papers are 30 MCQ + 6 short answer; fast-course papers are 20 MCQ + 
 
 Section A marks itself. **Section B you mark yourself, honestly, against the model answer** — the model answers say what a full answer contains, so give the mark only if you actually said it. Half-remembered is a zero here; that is the whole point of a mock.
 
-Every answer names the week it came from, as `[Week 2]`, and each paper closes with a **What to revise** table mapping the weeks to their question numbers. Score each week's row separately — the total tells you much less than the row does.
+Every answer carries a **[Week N]** tag. Total your marks by week into the revision table at the foot of each paper: a week that comes out clearly below the others is the week to re-read, and it is a better signal than any single nightly check because it is four weeks cold rather than one day old.
 
-- **A row below about 60%** means go back and re-read that week's `<COURSE>-Summary.md` before Week 6, and re-sit that week's nightly checks.
-- **A row at 80% or better** is done; do not spend Week 6 revising it.
+## What these papers test
 
-## One thing to do with the results
+Where a lecture slide was wrong and the week's summary corrected it, **the correct version is what these papers test**, and in several cases the slide's version appears as a distractor — so a mark lost there means the slide was memorised instead of the physics. That applies to the internal resistance read off a V–I graph (minus the slope, not its negative reciprocal), the energy density of an electric field (J/m³, not J), Kirchhoff's first name and nationality (Gustav, German), the divide-and-conquer recombination condition, and the colon rules that the punctuation deck printed under a second Comma heading.
 
-If a mock row is clearly worse than any nightly check from Week 5, **let the mock pick Sunday's teaching topic instead of the check scores** — four weeks of accumulated fog is worth more of that hour than one bad evening. The Week 5 `Sunday-Recap.md` says the same.
+Weeks 3 and 4 also gained strands that an earlier version of those packs had dropped — the 15th-century Portuguese incursion in GST_112 and concord with the Rule of Proximity Agreement in GST_122 — and both are examinable here.
+
+## Answer spread
+
+Correct answers are spread deliberately evenly across a, b, c and d — 8/7/8/7 on the 30-question papers and 5/5/5/5 on the 20-question papers — so no paper can be improved by guessing a favourite letter.
