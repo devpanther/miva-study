@@ -1,3 +1,5 @@
 exam-bundle.tar.gz
 site-bundle.tar.gz
 api-patch.tar.gz
+.vercel
+.env*
