@@ -13,6 +13,13 @@
      "lecture": {
       "n": 2,
       "secs": 5610
+     },
+     "ids": {
+      "pop": 23004,
+      "practice": 23049,
+      "forum": 23096,
+      "pdf": 15669,
+      "pdfMod": "page"
      }
     },
     "2": {
@@ -24,6 +31,13 @@
      "lecture": {
       "n": 2,
       "secs": 5469
+     },
+     "ids": {
+      "pop": 23202,
+      "practice": 23279,
+      "forum": 23357,
+      "pdf": 15676,
+      "pdfMod": "page"
      }
     },
     "3": {
@@ -35,6 +49,13 @@
      "lecture": {
       "n": 2,
       "secs": 4831
+     },
+     "ids": {
+      "pop": 23489,
+      "practice": 23586,
+      "forum": 23568,
+      "pdf": 15684,
+      "pdfMod": "page"
      }
     },
     "4": {
@@ -46,6 +67,13 @@
      "lecture": {
       "n": 2,
       "secs": 5365
+     },
+     "ids": {
+      "pop": 23636,
+      "practice": 23688,
+      "forum": 23669,
+      "pdf": 15691,
+      "pdfMod": "page"
      }
     },
     "5": {
@@ -57,6 +85,13 @@
      "lecture": {
       "n": 2,
       "secs": 3841
+     },
+     "ids": {
+      "pop": 23719,
+      "practice": 24030,
+      "forum": 24009,
+      "pdf": 15698,
+      "pdfMod": "page"
      }
     },
     "6": {
@@ -68,6 +103,13 @@
      "lecture": {
       "n": 2,
       "secs": 3795
+     },
+     "ids": {
+      "pop": 24120,
+      "practice": 24166,
+      "forum": 24152,
+      "pdf": 15705,
+      "pdfMod": "page"
      }
     },
     "7": {
@@ -79,6 +121,13 @@
      "lecture": {
       "n": 2,
       "secs": 5363
+     },
+     "ids": {
+      "pop": 24238,
+      "practice": 24539,
+      "forum": 24533,
+      "pdf": 28794,
+      "pdfMod": "url"
      }
     },
     "8": {
@@ -90,6 +139,13 @@
      "lecture": {
       "n": 2,
       "secs": 3783
+     },
+     "ids": {
+      "pop": 24589,
+      "practice": 24689,
+      "forum": 24748,
+      "pdf": 28700,
+      "pdfMod": "url"
      }
     },
     "9": {
@@ -101,6 +157,12 @@
      "lecture": {
       "n": 2,
       "secs": 4696
+     },
+     "ids": {
+      "pop": 24780,
+      "forum": 24922,
+      "pdf": 28841,
+      "pdfMod": "url"
      }
     },
     "10": {
@@ -112,6 +174,13 @@
      "lecture": {
       "n": 2,
       "secs": 5422
+     },
+     "ids": {
+      "pop": 24959,
+      "practice": 25046,
+      "forum": 25036,
+      "pdf": 28865,
+      "pdfMod": "url"
      }
     },
     "11": {
@@ -123,6 +192,13 @@
      "lecture": {
       "n": 2,
       "secs": 4055
+     },
+     "ids": {
+      "pop": 25099,
+      "practice": 25152,
+      "forum": 25131,
+      "pdf": 28894,
+      "pdfMod": "url"
      }
     },
     "12": {
@@ -134,6 +210,13 @@
      "lecture": {
       "n": 2,
       "secs": 3496
+     },
+     "ids": {
+      "pop": 25190,
+      "practice": 25261,
+      "forum": 25254,
+      "pdf": 28958,
+      "pdfMod": "url"
      }
     }
    },
@@ -152,6 +235,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 23060,
+      "practice": 23123,
+      "forum": 23242,
+      "pdf": 15712,
+      "pdfMod": "page"
      }
     },
     "2": {
@@ -163,6 +253,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 23333,
+      "practice": 23459,
+      "forum": 23519,
+      "pdf": 15716,
+      "pdfMod": "page"
      }
     },
     "3": {
@@ -174,6 +271,13 @@
      "lecture": {
       "n": 1,
       "secs": 3185
+     },
+     "ids": {
+      "pop": 23679,
+      "practice": 23983,
+      "forum": 24011,
+      "pdf": 15724,
+      "pdfMod": "page"
      }
     },
     "4": {
@@ -185,6 +289,13 @@
      "lecture": {
       "n": 1,
       "secs": 3410
+     },
+     "ids": {
+      "pop": 24173,
+      "practice": 24227,
+      "forum": 24296,
+      "pdf": 15732,
+      "pdfMod": "page"
      }
     },
     "5": {
@@ -196,6 +307,13 @@
      "lecture": {
       "n": 1,
       "secs": 3234
+     },
+     "ids": {
+      "pop": 24349,
+      "practice": 24441,
+      "forum": 24470,
+      "pdf": 15739,
+      "pdfMod": "page"
      }
     },
     "6": {
@@ -207,6 +325,13 @@
      "lecture": {
       "n": 1,
       "secs": 2918
+     },
+     "ids": {
+      "pop": 24517,
+      "practice": 24583,
+      "forum": 24609,
+      "pdf": 15746,
+      "pdfMod": "page"
      }
     },
     "7": {
@@ -218,6 +343,13 @@
      "lecture": {
       "n": 2,
       "secs": 5048
+     },
+     "ids": {
+      "pop": 24931,
+      "practice": 24940,
+      "forum": 24941,
+      "pdf": 35974,
+      "pdfMod": "url"
      }
     },
     "8": {
@@ -229,6 +361,13 @@
      "lecture": {
       "n": 1,
       "secs": 2766
+     },
+     "ids": {
+      "pop": 25052,
+      "practice": 25055,
+      "forum": 25056,
+      "pdf": 35550,
+      "pdfMod": "url"
      }
     },
     "9": {
@@ -240,6 +379,12 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25165,
+      "forum": 25169,
+      "pdf": 35541,
+      "pdfMod": "url"
      }
     },
     "10": {
@@ -251,6 +396,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25272,
+      "practice": 25274,
+      "forum": 25275,
+      "pdf": 35490,
+      "pdfMod": "url"
      }
     },
     "11": {
@@ -262,6 +414,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25383,
+      "practice": 25385,
+      "forum": 25386,
+      "pdf": 35477,
+      "pdfMod": "url"
      }
     },
     "12": {
@@ -273,6 +432,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25442,
+      "practice": 25444,
+      "forum": 25445,
+      "pdf": 35413,
+      "pdfMod": "url"
      }
     }
    },
@@ -291,6 +457,11 @@
      "lecture": {
       "n": 1,
       "secs": 3434
+     },
+     "ids": {
+      "pop": 23184,
+      "practice": 23264,
+      "forum": 23323
      }
     },
     "2": {
@@ -324,6 +495,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 24092,
+      "practice": 24200,
+      "forum": 24228,
+      "pdf": 15784,
+      "pdfMod": "page"
      }
     },
     "5": {
@@ -335,6 +513,13 @@
      "lecture": {
       "n": 1,
       "secs": 2788
+     },
+     "ids": {
+      "pop": 24300,
+      "practice": 24393,
+      "forum": 24371,
+      "pdf": 15789,
+      "pdfMod": "page"
      }
     },
     "6": {
@@ -346,6 +531,13 @@
      "lecture": {
       "n": 1,
       "secs": 2035
+     },
+     "ids": {
+      "pop": 24667,
+      "practice": 24721,
+      "forum": 24738,
+      "pdf": 15794,
+      "pdfMod": "page"
      }
     },
     "7": {
@@ -357,6 +549,13 @@
      "lecture": {
       "n": 1,
       "secs": 2676
+     },
+     "ids": {
+      "pop": 24820,
+      "practice": 24890,
+      "forum": 24947,
+      "pdf": 30237,
+      "pdfMod": "url"
      }
     },
     "8": {
@@ -368,6 +567,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 24972,
+      "practice": 25016,
+      "forum": 25061,
+      "pdf": 30259,
+      "pdfMod": "url"
      }
     },
     "9": {
@@ -379,6 +585,12 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25076,
+      "forum": 25107,
+      "pdf": 30321,
+      "pdfMod": "url"
      }
     },
     "10": {
@@ -390,6 +602,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25122,
+      "practice": 25181,
+      "forum": 25202,
+      "pdf": 30334,
+      "pdfMod": "url"
      }
     },
     "11": {
@@ -401,6 +620,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25221,
+      "practice": 25266,
+      "forum": 25291,
+      "pdf": 30347,
+      "pdfMod": "url"
      }
     },
     "12": {
@@ -412,6 +638,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25320,
+      "practice": 25398,
+      "forum": 25402,
+      "pdf": 30356,
+      "pdfMod": "url"
      }
     }
    },
@@ -430,6 +663,13 @@
      "lecture": {
       "n": 1,
       "secs": 1194
+     },
+     "ids": {
+      "pop": 25043,
+      "practice": 25082,
+      "forum": 25223,
+      "pdf": 20665,
+      "pdfMod": "page"
      }
     },
     "2": {
@@ -441,6 +681,13 @@
      "lecture": {
       "n": 1,
       "secs": 2141
+     },
+     "ids": {
+      "pop": 25115,
+      "practice": 25240,
+      "forum": 25324,
+      "pdf": 20670,
+      "pdfMod": "page"
      }
     },
     "3": {
@@ -452,6 +699,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25430,
+      "practice": 25449,
+      "forum": 25673,
+      "pdf": 20674,
+      "pdfMod": "page"
      }
     },
     "4": {
@@ -463,6 +717,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25495,
+      "practice": 25517,
+      "forum": 25677,
+      "pdf": 20680,
+      "pdfMod": "page"
      }
     },
     "5": {
@@ -474,6 +735,13 @@
      "lecture": {
       "n": 1,
       "secs": 1733
+     },
+     "ids": {
+      "pop": 25552,
+      "practice": 25696,
+      "forum": 25725,
+      "pdf": 20687,
+      "pdfMod": "page"
      }
     },
     "6": {
@@ -485,6 +753,13 @@
      "lecture": {
       "n": 1,
       "secs": 1095
+     },
+     "ids": {
+      "pop": 25710,
+      "practice": 25736,
+      "forum": 25778,
+      "pdf": 20692,
+      "pdfMod": "page"
      }
     },
     "7": {
@@ -496,6 +771,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25748,
+      "practice": 25790,
+      "forum": 25884,
+      "pdf": 29797,
+      "pdfMod": "url"
      }
     },
     "8": {
@@ -507,6 +789,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25844,
+      "practice": 25922,
+      "forum": 25934,
+      "pdf": 29799,
+      "pdfMod": "url"
      }
     },
     "9": {
@@ -518,6 +807,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25925,
+      "practice": 46794,
+      "forum": 26109,
+      "pdf": 29801,
+      "pdfMod": "url"
      }
     },
     "10": {
@@ -529,6 +825,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25960,
+      "practice": 26123,
+      "forum": 26167,
+      "pdf": 29803,
+      "pdfMod": "url"
      }
     },
     "11": {
@@ -540,6 +843,13 @@
      "lecture": {
       "n": 1,
       "secs": 1507
+     },
+     "ids": {
+      "pop": 26153,
+      "practice": 26196,
+      "forum": 26245,
+      "pdf": 29805,
+      "pdfMod": "url"
      }
     },
     "12": {
@@ -551,6 +861,13 @@
      "lecture": {
       "n": 1,
       "secs": 1105
+     },
+     "ids": {
+      "pop": 26219,
+      "practice": 26260,
+      "forum": 26297,
+      "pdf": 29807,
+      "pdfMod": "url"
      }
     }
    },
@@ -569,6 +886,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 25829,
+      "practice": 25905,
+      "forum": 26058,
+      "pdf": 20697,
+      "pdfMod": "page"
      }
     },
     "2": {
@@ -580,6 +904,13 @@
      "lecture": {
       "n": 1,
       "secs": 1709
+     },
+     "ids": {
+      "pop": 26086,
+      "practice": 26220,
+      "forum": 26292,
+      "pdf": 20702,
+      "pdfMod": "page"
      }
     },
     "3": {
@@ -591,6 +922,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 26473,
+      "practice": 26525,
+      "forum": 26597,
+      "pdf": 20707,
+      "pdfMod": "page"
      }
     },
     "4": {
@@ -602,6 +940,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 26624,
+      "practice": 26675,
+      "forum": 26708,
+      "pdf": 20711,
+      "pdfMod": "page"
      }
     },
     "5": {
@@ -613,6 +958,13 @@
      "lecture": {
       "n": 1,
       "secs": 1528
+     },
+     "ids": {
+      "pop": 26715,
+      "practice": 26753,
+      "forum": 26812,
+      "pdf": 20716,
+      "pdfMod": "page"
      }
     },
     "6": {
@@ -624,6 +976,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 26827,
+      "practice": 26883,
+      "forum": 26952,
+      "pdf": 20720,
+      "pdfMod": "page"
      }
     },
     "7": {
@@ -635,6 +994,13 @@
      "lecture": {
       "n": 1,
       "secs": 1443
+     },
+     "ids": {
+      "pop": 26982,
+      "practice": 26986,
+      "forum": 26987,
+      "pdf": 29955,
+      "pdfMod": "url"
      }
     },
     "8": {
@@ -646,6 +1012,13 @@
      "lecture": {
       "n": 1,
       "secs": 1020
+     },
+     "ids": {
+      "pop": 27105,
+      "practice": 27107,
+      "forum": 27108,
+      "pdf": 30018,
+      "pdfMod": "url"
      }
     },
     "9": {
@@ -657,6 +1030,12 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 27167,
+      "forum": 27170,
+      "pdf": 30048,
+      "pdfMod": "url"
      }
     },
     "10": {
@@ -668,6 +1047,13 @@
      "lecture": {
       "n": 0,
       "secs": 0
+     },
+     "ids": {
+      "pop": 27224,
+      "practice": 27228,
+      "forum": 27226,
+      "pdf": 30098,
+      "pdfMod": "url"
      }
     },
     "11": {
@@ -679,6 +1065,13 @@
      "lecture": {
       "n": 1,
       "secs": 981
+     },
+     "ids": {
+      "pop": 27398,
+      "practice": 27400,
+      "forum": 27401,
+      "pdf": 30122,
+      "pdfMod": "url"
      }
     },
     "12": {
@@ -690,6 +1083,13 @@
      "lecture": {
       "n": 1,
       "secs": 1227
+     },
+     "ids": {
+      "pop": 27495,
+      "practice": 27497,
+      "forum": 27498,
+      "pdf": 30181,
+      "pdfMod": "url"
      }
     }
    },
@@ -701,5 +1101,31 @@
   "GST_112": "Not in your LMS course list yet.",
   "GST_122": "Not in your LMS course list yet.",
   "MIVA_COS_111": "Not in your LMS course list yet."
+ },
+ "graded": {
+  "status": "January Cohort 2026 windows, already closed. This cohort's have not been published.",
+  "perCourse": [
+   {
+    "name": "Mid-Semester Assessment",
+    "type": "quiz",
+    "sits": "after week 4"
+   },
+   {
+    "name": "Lab Assessment",
+    "type": "assign",
+    "sits": "after week 4"
+   },
+   {
+    "name": "End of Semester Assessment",
+    "type": "quiz",
+    "sits": "after week 9"
+   }
+  ],
+  "alsoPerCourse": [
+   "Pre-semester Test (ungraded)",
+   "Post-semester Test",
+   "Mid-Course Evaluation",
+   "End-of-Course Evaluation"
+  ]
  }
 }

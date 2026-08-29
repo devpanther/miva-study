@@ -407,23 +407,113 @@ function el(tag, cls, html){
 }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
 function btn(cls, label, fn){ var b = el("button", cls, label); b.onclick = fn; return b; }
-/* Briefs are written as one long clause-chained sentence — "...the definition; why the
-   constant is forced; the power rule and why n ≠ −1; ...". Collapsed to a paragraph
-   that is a wall. The author already marked the joints with semicolons, so use them. */
-function briefParts(t){
-  var lead = t, rest = "";
-  var colon = t.search(/:\s/);
-  if(colon > 0 && colon < 140 && /;/.test(t.slice(colon))){
-    lead = t.slice(0, colon + 1);
-    rest = t.slice(colon + 1);
+/* Turn a session brief into something readable.
+
+   Briefs are written as one long sentence chain. Three shapes appear in the real data:
+   semicolon lists, sentence sequences, and — the one that defeated the first attempt —
+   a colon followed by comma-separated gerund phrases:
+
+     "...the concrete problems the lessons name: counting the search space of the
+      four-digit padlock, tracing Merge sort on a small set, running the greedy
+      activity-selection example with start times 2, 4, 1, 6, 9, 6 and end times..."
+
+   Splitting that on commas shatters the number list. So a comma only counts as a
+   joint when the words after it start a new phrase of the same kind: a gerund, or an
+   interrogative like "how" or "which". Numbers never do. */
+
+var LEADIN  = /^(?:how|which|what|why|whether|where|when)\b/i;
+var DETER   = /^(?:the|a|an|its|his|her|their|each|both|every|this|these|those)\s+[a-z]/i;
+var QUALIFY = /^(including|excluding|involving|regarding|concerning|especially|namely|such)$/i;
+
+function isJoint(after){
+  var w = after.trim().replace(/^(?:and|then|or)\s+/i, "").trim();
+  if(w.length < 12) return false;                     // too short to be its own item
+  if(LEADIN.test(w)) return true;
+  var first = (w.match(/^[A-Za-z-]+/) || [""])[0];
+  if(QUALIFY.test(first)) return false;               // qualifies the item before it
+  if(DETER.test(w)) return true;                      // "the quotient rule…", "a block…"
+  return first.length > 4 && /ing$/.test(first);      // a gerund: counting, tracing…
+}
+
+function splitPhrases(s){
+  var out = [], buf = "", i = 0, depth = 0;
+  while(i < s.length){
+    var c = s[i];
+    if(c === "(" || c === "[") depth++;
+    else if(c === ")" || c === "]") depth = Math.max(0, depth - 1);
+    /* A list inside brackets — "(code inspection, monitoring, backtracking)" — belongs
+       to the item that introduced it, so commas in there are never joints. */
+    else if(c === "," && depth === 0 && isJoint(s.slice(i + 1, i + 48))){
+      out.push(buf.trim()); buf = ""; i++; continue;
+    }
+    buf += c; i++;
   }
-  var parts = (rest || t).split(/;\s+/).map(function(x){ return x.trim(); }).filter(Boolean);
-  if(parts.length < 3) return null;
-  parts = parts.map(function(x){
-    x = x.replace(/[.;]+$/, "");
-    return x.charAt(0).toUpperCase() + x.slice(1);
+  if(buf.trim()) out.push(buf.trim());
+  /* Anything too small to stand alone goes back onto its neighbour. */
+  var merged = [];
+  out.forEach(function(x){
+    if(merged.length && x.replace(/^(and|or|then)\s+/i,"").length < 18) merged[merged.length-1] += ", " + x;
+    else merged.push(x);
   });
-  return { lead: rest ? lead.trim() : "", parts: parts };
+  return merged;
+}
+
+function sentences(t){
+  return t.split(/(?<=[.!?])\s+(?=[A-Z(])/).map(x=>x.trim()).filter(Boolean);
+}
+
+function briefParts(text){
+  var t = String(text || "").trim();
+  if(t.length < 200) return null;
+
+  var blocks = [];
+  sentences(t).forEach(function(sen){
+    if((sen.match(/;/g) || []).length >= 2){
+      var colon = sen.search(/:\s/);
+      var head = colon > 0 ? sen.slice(0, colon + 1) : "";
+      var rest = colon > 0 ? sen.slice(colon + 1) : sen;
+      if(head) blocks.push({lead: head.trim()});
+      rest.split(/;\s+/).forEach(function(x){
+        x = x.trim().replace(/[.;]+$/, "");
+        if(x) blocks.push({item: x.charAt(0).toUpperCase() + x.slice(1)});
+      });
+      return;
+    }
+    var colon2 = sen.search(/:\s/);
+    if(colon2 > 0 && colon2 < 160){
+      var parts = splitPhrases(sen.slice(colon2 + 1));
+      if(parts.length >= 3){
+        blocks.push({lead: sen.slice(0, colon2 + 1).trim()});
+        parts.forEach(function(x){
+          x = x.trim().replace(/[.]+$/, "");
+          if(x) blocks.push({item: x.charAt(0).toUpperCase() + x.slice(1)});
+        });
+        return;
+      }
+    }
+    var p2 = splitPhrases(sen);
+    if(p2.length >= 3){
+      p2.forEach(function(x){
+        x = x.trim().replace(/[.]+$/, "");
+        if(x) blocks.push({item: x.charAt(0).toUpperCase() + x.slice(1)});
+      });
+      return;
+    }
+    blocks.push({item: sen});
+  });
+
+  /* A scene-setting sentence that lands before a lead-in reads as a stray bullet.
+     Promote it: "The same Week 3 approaches, treated as practice." is a preamble,
+     not the first item of the list that follows. */
+  for(var k = 0; k < blocks.length - 1; k++){
+    if(blocks[k].item && blocks[k+1] && blocks[k+1].lead){
+      blocks[k] = {lead: blocks[k].item};
+    } else if(blocks[k].lead) continue;
+    else break;
+  }
+
+  var items = blocks.filter(b=>b.item).length;
+  return items >= 3 ? blocks : null;
 }
 
 function topicBlock(parent, text, cls){
@@ -441,12 +531,20 @@ function topicBlock(parent, text, cls){
     var split = briefParts(t);
     full = el("div","brief");
     if(split){
-      if(split.lead) full.appendChild(el("p", cls||"", esc(split.lead)));
-      var ul = el("ul");
-      split.parts.forEach(function(x){ ul.appendChild(el("li", null, esc(x))); });
-      full.appendChild(ul);
+      var ul = null;
+      split.forEach(function(b){
+        if(b.lead){
+          ul = null;
+          full.appendChild(el("p", cls||"", esc(b.lead)));
+        } else {
+          if(!ul){ ul = el("ul"); full.appendChild(ul); }
+          ul.appendChild(el("li", null, esc(b.item)));
+        }
+      });
     } else {
-      full.appendChild(el("p", cls||"", esc(t)));
+      /* Not a list — but one paragraph of four hundred characters is still a wall,
+         so give each sentence its own line. */
+      sentences(t).forEach(function(x){ full.appendChild(el("p", cls||"", esc(x))); });
     }
     p.style.display = "none";
     parent.insertBefore(full, b);
@@ -1756,7 +1854,7 @@ function lmsFor(course, w){
   if(!LMS || !LMS.courses || !LMS.courses[course]) return null;
   var c = LMS.courses[course], wk = c.weeks && c.weeks[String(w)];
   return wk ? {cid:c.id, sec:wk.section, intro:wk.intro, lecture:wk.lecture,
-               speed:c.speed || 1, note:c.note || ""} : null;
+               ids: wk.ids || {}, speed:c.speed || 1, note:c.note || ""} : null;
 }
 
 function lmsLink(info){
@@ -1827,10 +1925,24 @@ function watchLine(parent, course, w, halve){
       "This is over the hour even before the check. Take the video tonight and the check tomorrow, or split it across both sessions."));
   }
 
-  var a = el("a","act ghost lmsb", "Open on the LMS ↗");
-  a.href = lmsLink(info); a.target = "_blank"; a.rel = "noopener";
-  a.style.textDecoration = "none";
-  parent.appendChild(a);
+  var row2 = el("div","row lmsrow");
+  var add = function(cls, label, href){
+    if(!href) return;
+    var x = el("a", cls, label);
+    x.href = href; x.target = "_blank"; x.rel = "noopener";
+    x.style.textDecoration = "none";
+    row2.appendChild(x);
+  };
+  add("act ghost", "Open on the LMS ↗", lmsLink(info));
+
+  /* The plan says "read the PDF, take the quiz, post in the forum" every night and
+     then makes you go and find all three. */
+  var id = info.ids || {}, base = LMS.base + "/mod/";
+  add("chip", "PDF",   id.pdf   ? base + (id.pdfMod || "page") + "/view.php?id=" + id.pdf : null);
+  add("chip", "Pop quiz", id.pop ? base + "quiz/view.php?id=" + id.pop : null);
+  add("chip", "Practice", id.practice ? base + "quiz/view.php?id=" + id.practice : null);
+  add("chip", "Forum", id.forum ? base + "forum/view.php?id=" + id.forum : null);
+  parent.appendChild(row2);
 }
 
 function loadExamIndex(){

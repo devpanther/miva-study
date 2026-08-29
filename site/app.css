@@ -477,3 +477,6 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 .brief ul{margin:0;padding-left:19px;color:var(--ink2);font-size:14px;line-height:1.55}
 .brief li{margin-bottom:7px}
 .brief li::marker{color:var(--deep)}
+.lmsrow{gap:7px;margin-top:9px}
+.lmsrow .chip{text-decoration:none;color:var(--ink2)}
+.lmsrow .chip:hover{color:var(--deep);border-color:var(--deep)}
