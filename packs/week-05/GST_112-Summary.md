@@ -1,75 +1,102 @@
-# GST_112 — Week 5 Summary
+# GST_112 — Week 5
 
-*Nigerian Peoples and Culture · Week 5 (5–11 Oct 2026) · Topic: Nigeria from Independence to the Civil War, and the Military in Nigerian Politics*
+*Nigerian Peoples and Culture · Week 5 (5 – 11 Oct 2026)*
 
-## The 8 most examinable things this week
+## Most likely to be examined
 
-1. **The first military coup in Africa was in Egypt in 1952.** Nigeria has seen **six coups and two attempted coups** (the lesson then numbers eight interventions in sequence — learn both statements).
-2. **15 January 1966 — the first coup, the "five majors": Nzeogwu, Ifeajuna, Okafor, Anuforo, Ademoyega**, led by **Major Chukwuma Kaduna Nzeogwu**. Stated grievance: **tribalism and corruption** / the bigotry of First Republic politicians.
-3. **Who was killed in January 1966**: PM **Abubakar Tafawa Balewa**, the **Sardauna of Sokoto**, Finance Minister **Festus Okotie-Eboh**, Western Region Premier **Ladoke Akintola**, Brigadier **Zakariya Maimalari** (2nd Brigade), Brigadier **S. A. Ademulegun** (1st Brigade), **R. A. Shodeinde** (Commandant, Nigerian Defence Academy).
-4. **29 July 1966 — the countercoup** by northern NCOs and officers. **Ironsi captured and killed in Ibadan**; **Lt-Col Yakubu Gowon** became Head of State and immediately repealed **Decree No. 34**.
-5. **The pogrom: between 80,000 and 100,000 easterners massacred in the north**, sparking revenge killings of northerners in the East and the mass return of Igbos.
-6. **Aburi Accord → failure → Ojukwu declares the East's independence on 30 May 1967.** Gowon replies with a state of emergency and the creation of **twelve states** (three from the East, only **one predominantly Igbo**).
-7. **The war ends January 1970**: Biafra overrun, **Ojukwu fled to Ivory Coast**, **Effiong surrendered to Gowon in Lagos on 12 January 1970**. Up to **3 million dead, 3 million displaced**; Gowon's **"no winner, no vanquished"**; the **3 Rs — reconstruction, reconciliation, rehabilitation**.
-8. **The coup dates in order: 1966 (Jan), 1966 (July), 1975, 1976, 1983, 1985, 1990, 1993** — with **1976 (Dimka) and 1990 (Orkar) the two failures**.
+1. **15 January 1966** — first Nigerian coup, the "five majors": **Nzeogwu, Ifeajuna, Okafor, Anuforo, Ademoyega**, led by Major **Chukwuma Kaduna Nzeogwu**. Killed PM **Abubakar Tafawa Balewa**, the **Sardauna of Sokoto**, Finance Minister **Festus Okotie-Eboh**, Western Region Premier **Ladoke Akintola**. Bloodiest coup; called an "Igbo coup".
+2. **29 July 1966** — the **countercoup** by northern NCOs/officers; **Aguiyi-Ironsi captured and killed in Ibadan**; **Lt-Col Yakubu Gowon** made Head of State and immediately repealed **Decree No. 34** (the Unification Decree). Do not confuse with January.
+3. **Causal chain**: first coup → Ironsi's gaffes (released the plotters, Igbo advisers, accelerated Igbo promotions, Decree 34) → northern fear of Igbo domination → 29 July 1966 countercoup → **pogrom (80,000–100,000 easterners massacred in the north)** → mass return of Igbos → Ojukwu's secession quest → **Aburi Accord** fails → **30 May 1967** Biafra declared → civil war.
+4. **1 October 1960** — independence from Britain; the **national question** ("What is Nigeria? Who are Nigerians?") and regionalism, where national power required first holding regional power, breeding fear of domination.
+5. **Coup sequence and who replaced whom**: Balewa → Ironsi (Jan 1966) → Gowon (Jul 1966) → Murtala Muhammed (29 Jul 1975) → Obasanjo (after Dimka's failed coup, 1976) → Shagari (civilian) → Buhari (1983) → Babangida (1985) → Shonekan (interim, 1993) → Abacha (17 Nov 1993) → Abdulsalami Abubakar (1998) → Obasanjo elected 1999.
+6. **War end**: Biafra overrun by January 1970; **Ojukwu fled to Ivory Coast**; **Effiong surrendered to Gowon in Lagos on 12 January 1970** ("Eiong" in source = **Effiong**). Up to **3 million dead, 3 million displaced**; Gowon's **"no winner, no vanquished"**; the **3 Rs — reconstruction, reconciliation, rehabilitation** — which the source says **failed**.
+7. **First National Development Plan (FNDP) 1962–1968** — agriculture, industry, education; economy grew 1960–1966; ended by the 1966 coup. **Richards Constitution** ("Richard's" in source) was the first to introduce **regionalism** and the regional development corporations.
+8. **Summary-PDF strand**: over **250 distinct ethnic groups**; integration policies named as **"No Victor, No Vanquished"** and the **NYSC** scheme; colonial legacy of **arbitrary borders**; ethnicity as the recurring driver of **state creation**.
 
-## Chronology
+## Strand 1 — Military in Nigeria Politics (Dr Abimbola Oyarinu)
 
-- **1 October 1960** — independence from British colonial rule. The **national question** emerges: *What is Nigeria? Who are Nigerians?* The **regional system** blocks national consciousness — national power required first holding **regional** power, which bred **fear of domination**.
-- **Early 1960s** — efforts at unity through a **strong central state** and a **state-run economy**; defeated by **official corruption, rigged elections, ethnic baiting, bullying and thuggery** in the First Republic.
-- **Art and the national question** — **Amos Tutuola, *The Palm-Wine Drinkard* (1952)**; **Chinua Achebe, *Things Fall Apart* (1958)**; **Wole Soyinka, *A Dance of the Forest* (1960)**. Sculptors **Uche Okeke, Susanne Wenger, Felix Idubor** drew on pre-colonial motifs. Plays and universities were **multi-ethnic** and fostered unity.
-- **1962–1968 — First National Development Plan (FNDP)**: **agriculture, industry, education**. Growth 1960–66: **agriculture 63.4% → 55.6% of GNP; manufacturing 3.6% → 6.2%; mining 0.9% → 4.8%; distribution of goods 9.1% → 14%**; **national income grew 5% on average**; per capita rose from **$48.1m to $53.8m**. **The 1966 coup ended development planning.**
-- **Regionalism** — **Richards Constitution** was the **first to introduce regionalism**, carried into the First Republic. **Western Nigeria Development Corporation, Eastern Nigeria Development Corporation, Northern Nigeria Development Corporation**. Comparative advantage: **West — cocoa, timber; East — palm oil; North — groundnut.**
-- **First Republic instability, in the source's own list**: the **1959 election**; **fear of dominance**; the **quota system**; **disproportionate project allocation**; the **Western Region crisis**; the **creation of the Mid-Western Region**; the **census crisis of 1962–3**; the **1964 election crisis — UPGA vs NNA**; the **Western Region election of 1965**.
-- **15 Jan 1966** — first coup. It **failed** (the plotters could not seize power); **Nwafor Orizu**, acting President of the Senate, **voluntarily transferred power** to **Major-General Johnson Aguiyi-Ironsi**, the highest-ranking officer, who **suspended the constitution** and formed an **interim federal military government**.
-- **Ironsi's programme**: restore law and order, maintain essential services, **eradicate regionalism and tribalism**, end corruption. He appointed **military governors**, one being **Chukwuemeka Odumegwu Ojukwu** in the **East**. Popular in the south as the end of northern dominance.
-- **Ironsi's gaffes** (the exam list): the plotters killed **very few easterners** — mostly northerners and some Yoruba; he **released the coup plotters**; he **surrounded himself with Igbo advisers** and accelerated **promotion of Igbo officers**; **Decree No. 34** (the **Unification Decree**).
-- **29 July 1966** — countercoup. Motives: **fear of Igbo domination**, Ironsi's **compromising handling of the plotters**, **the Unification Decree**, and **revenge**. **Gowon** repeals Decree 34; **Ojukwu and Gowon face off on seniority**.
-- **Pogrom → Aburi Accord → 30 May 1967**, Ojukwu declares independence. The FMG refused secession because of **belief in Nigerian unity**, fear of **fragmentation into small states**, and **Biafra leaving with the oil-producing states**.
-- **The war** — two and a half years. **Twelve states** created; economic war by **blockade of the coastline** and **currency change**, causing **malnutrition, inflation and economic strangulation** — which produced **international sympathy**, not internal uprising. Biafran propaganda used **pictures of starving children** as proof of **genocide**.
-- **International alignment**: **OAU** refused to treat it as a civil war, calling it a war **between two independent nations**; **US and UK neutral**; **USSR supported the FMG** with **aircraft and advisers**; **Tanzania, Gabon, Ivory Coast and Zambia formally recognised Biafra in 1968**; **France and Portugal** gave supplies and logistics; **Israel** sympathetic; **China** supportive but with **no serious material support**; the **Catholic Church and the International Red Cross** gave humanitarian aid. International support **prolonged the war**.
-- **12 January 1970** — surrender. Then **1970–75 Gowon**, and the coup sequence below.
-- **1999** — **Obasanjo came from prison** to beat **Olu Falae** and become elected president of the **Fourth Republic**.
+First military coup in Africa: **Egypt, 1952**. The source states Nigeria has seen **six coups and two attempted coups**, but then numbers eight events "First" to "Eighth" (see Commonly confused). The Nigerian military **inherited the British tradition of professionalism and neutrality**; the post-independence era brought its **politicisation**.
 
-## The coups, as the source names them
+| # | Date | Leader / actor | Overthrown | Outcome & stated reason |
+|---|---|---|---|---|
+| 1st | 15 Jan 1966 | Major Chukwuma **Kaduna Nzeogwu** + five majors | Balewa's civilian govt | Bloodiest; bigotry/tribalism/corruption of First Republic politicians; **Nwafor Orizu**, acting President of the Senate, transferred power to Maj-Gen **Johnson Aguiyi-Ironsi**, who suspended the constitution and set up an interim federal military government |
+| 2nd | Jul 1966 ("six months after"; **29 Jul 1966**) | Northern soldiers/NCOs and officers | **Ironsi** (captured and killed at Ibadan) | Fear of Igbo domination in the north; Ironsi's compromising handling of the plotters; the **Unification Decree (No. 34)**; revenge for the first coup. **Gowon** selected, ruled to 1975 |
+| 3rd | **29 July 1975** | Colonel **Joseph Nanven Garba** | **Gowon** (bloodless) | Gowon promised to end military rule **1 Oct 1976** but in **1974** postponed the transition. Plotters appointed Brig-Gen **Murtala Muhammed** Head of State, Brig-Gen **Olusegun Obasanjo** his deputy |
+| 4th | **1976** | Lt-Col **Buka Suka Dimka** | assassinated **Murtala Muhammed** | Cited corruption and maladministration; **failed** — no senior-officer support, crushed by government troops; **Lt-Gen Obasanjo** assumed office as head of state and later returned power to civilian **Shehu Shagari** |
+| 5th | **1983** | Maj-Gen **Muhammadu Buhari**, General Officer Commanding 3rd Armoured Division, Jos | **Shagari** (after his re-election) | Shagari government "inept and corrupt" |
+| 6th | **1985** | Gen **Ibrahim Gbadamosi Babangida**, then **Chief of Army Staff** | **Buhari** | Buhari regime "rigid and uncompromising"; bloodless — Buhari out of Lagos, VP **Idiagbon** out of the country. Buhari detained in **Benin City until 1988**; Idiagbon under house arrest **3 years**. Babangida shifted the handover date on **three occasions**, ruled to **1993** |
+| 7th | **20 April 1990** | Major **Gideon Orkar** | attempt on **Babangida** — **failed** | Attacked **Dodan Barracks**; Babangida escaped by a back route; Orkar seized the **FRCN** and announced the **secession of southern Nigeria from the north**; put down **within 10 hours**; **42 men** arrested, convicted and summarily executed in **July 1990** |
+| 8th | **17 Nov 1993** | Gen **Sani Abacha** | **Ernest Shonekan**, interim president (3 months in) | After the annulment of **June 12**, Babangida handed to an interim government; Abacha cited Shonekan's stagnation and inability to manage the democratic process |
 
-| # | Date | Led by | Overthrew / killed | Who took power | Stated grievance |
-|---|---|---|---|---|---|
-| 1 | **15 Jan 1966** | Five majors: **Nzeogwu** (leader), Ifeajuna, Okafor, Anuforo, Ademoyega | **Balewa**, Sardauna of Sokoto, **Okotie-Eboh**, **Akintola**, Maimalari, Ademulegun, Shodeinde — the **bloodiest** coup | **Aguiyi-Ironsi** (power devolved via **Nwafor Orizu**) | **Tribalism and corruption**; bigotry of First Republic politicians |
-| 2 | **29 July 1966** (countercoup) | Northern **NCOs and officers** | **Ironsi**, captured and killed in **Ibadan** | **Yakubu Gowon** (to 1975) | Fear of **Igbo domination**; Ironsi's handling of the plotters; **Decree No. 34**; revenge |
-| 3 | **29 July 1975** | **Colonel Joseph Nanven Garba** | Gowon — **bloodless** | **Brig-Gen Murtala Muhammed**, deputy **Brig-Gen Olusegun Obasanjo** | Gowon's **1974 postponement** of the promised **1 Oct 1976** handover |
-| 4 | **1976 (failed)** | **Lt-Col Buka Suka Dimka** | Assassinated **Murtala Muhammed** | **Lt-Gen Obasanjo** (later handed to **Shehu Shagari**) | Perceived **corruption and maladministration**; Dimka arrested without trial |
-| 5 | **1983** | **Maj-Gen Muhammadu Buhari**, GOC **3rd Armoured Division, Jos** | **Shagari**, after his re-election | Buhari | Shagari government **"inept and corrupt"** |
-| 6 | **1985** | **Gen Ibrahim Gbadamosi Babangida**, then **Chief of Army Staff** | Buhari — **bloodless** (Buhari not in Lagos, VP **Idiagbon** abroad) | Babangida (to **1993**; shifted the handover date **three times**) | Buhari regime **"rigid and uncompromising"** |
-| 7 | **20 April 1990 (failed)** | **Major Gideon Orkar** | Attacked **Dodan Barracks**; Babangida escaped by a back route | Babangida remained | Seized the **FRCN** and announced the **secession of the south from the north**; crushed **within 10 hours**; **42 men executed July 1990** |
-| 8 | **17 Nov 1993** | **Gen Sani Abacha** | **Ernest Shonekan's** interim government, **three months** old | Abacha (died **1998** in mysterious circumstances) | Shonekan's **stagnant** government and inability to manage the democratic process |
+**End of military rule:** Abacha **died in mysterious circumstances in 1998** — believed to have "stepped on too many toes" after his arrest of **Olusegun Obasanjo** and the continued detention of **Diya** and **Abiola** (source prints "Diya Abiola's", almost certainly two men). Power was transferred to **Abdulsalami Abubakar** (source: "Abubakar Abdulsalam"), who supervised the **shortest transition to democracy**. **Obasanjo came from prison** to contest against **Olu Falae** in **1999** and won, becoming elected president of the **Fourth Republic**.
 
-**After Abacha**: power to **Abubakar Abdulsalam**, who supervised the **shortest transition to democracy**. Buhari had been **detained in Benin City until 1988**; **Idiagbon** was under **house arrest for 3 years**. Abacha's fall is linked to his **arrest of Obasanjo** and the continued detention of **Diya and Abiola**.
+**Pros of military rule:** kept Nigeria as one; infrastructural development; **relocation of the FCT to Abuja**; **creation of states**; bold policy decisions — **NYSC** and **ECOWAS**; intentional foreign policy thrust under **Murtala Muhammed**.
 
-## Pros and cons of military rule (memorise as two lists)
+**Cons:** the military was responsible for the civil war; corruption and impoverishment; lack of checks and balances; uncoordinated policy thrust; lacked the requisite administrative acumen; wanton killings and human-rights violations; suppression of the press; coups leading to economic uncertainty; **mismanagement of the oil boom**; stooges of IGOs like the **IMF**; lack of respect for the rule of law and the judiciary.
 
-**Pros** — kept Nigeria one; infrastructural development; **relocation of the FCT to Abuja**; **creation of states**; bold policies such as **NYSC and ECOWAS**; an intentional **foreign policy thrust under Murtala Muhammed**.
+**Verdict quoted:** **Awolowo** — "the best military government cannot be better than the worst civilian government."
 
-**Cons** — the military caused the **civil war**; corruption and impoverishment; no **checks and balances**; uncoordinated policy; lacked administrative acumen; **wanton killings and human rights violations**; **suppression of the press**; coups causing economic uncertainty; **mismanagement of the oil boom**; **stooges of IGOs like the IMF**; no respect for the **rule of law and the judiciary**. **Awolowo**: *the best military government cannot be better than the worst civilian government.*
+## Strand 2 — Nigeria from Independence to the Civil War
 
-## From the Week 5 Summary PDF
+**Independence 1 Oct 1960.** The **national question** emerged; the regional system blocked national consciousness because access to national power came from first holding power in the region → fear of domination. Efforts at a strong central state and a state-run economy failed because of **official corruption, rigged elections, ethnic baiting, bullying and thuggery** in the First Republic.
 
-**Over 250 distinct ethnic groups**. Integration policies named: the **"No Victor, No Vanquished"** initiative and the **NYSC** scheme. The **colonial legacy** — arbitrary borders, diverse groups forced into one nation — underlies the nation-building problem; **ethnicity** has driven **state creation**, motivated by **political motives, resource distribution and minority concerns**.
+**Art and the national question** (memorise author–work–year):
+- **Chinua Achebe**, *Things Fall Apart*, **1958**
+- **Amos Tutuola**, *The Palm-Wine Drinkard*, **1952**
+- **Wole Soyinka**, *A Dance of the Forest[s]*, **1960**
+- Sculptors **Uche Okeke**, **Susanne Wenger**, **Felix Idubor** — drew on the pre-colonial past and traditional design motifs.
+
+Plays and universities had a multi-ethnic make-up which fostered unity; still the national question was unsolved and ethnic tensions culminated in the civil war.
+
+**Economic development.** **FNDP 1962–1968**: agriculture, industry, education. Growth 1960–66 — Agriculture **63.4% → 55.6%** of GNP; Manufacturing **3.6% → 6.2%**; Mining **0.9% → 4.8%**; Distribution of goods **9.1% → 14%**; national income grew at a **5%** average; per capita figure rose **$48.1 million → $53.8 million** (source line garbled: "per capita peal"). The **1966 military coup ended development planning efforts**.
+
+**Development corporations.** **Richards Constitution** was the first to introduce **regionalism**, adopted during the First Republic. Western Nigeria Development Corporation / Eastern Nigeria Development Corporation / Northern Nigeria Development Corporation. Comparative advantage: **West — cocoa, timber; East — palm oil; North — groundnut.** The regions grew at their own pace.
+
+**Political instability of the First Republic (source's own list, in order):** election of **1959**; fear of dominance; **quota system**; disproportionate project allocation; **Western Region crisis**; creation of the **Mid-Western Region**; **census crisis of 1962–3**; **1964 election crisis — UPGA vs NNA**; **Western Region election of 1965**.
+
+**First coup, Strand 2's account:** launched 15 January 1966 by the "five majors" — **Nzeogwu, Ifeajuna, Okafor, Anuforo, Ademoyega**; reasons claimed were **tribalism and corruption**. Northern leaders and officers killed, notable politicians killed in the west, **very few easterners** died — hence "Igbo coup". The **coup failed** because the plotters could not seize power; power devolved to the commanding officer of the army, **Major-General Aguiyi-Ironsi**.
+
+**Ironsi's ascendancy:** aimed to restore law and order, maintain essential services, **eradicate regionalism and tribalism**, end corruption. Appointed military governors, one being **Chukwuemeka Odumegwu Ojukwu** for the Eastern Region. Popular in the south as the end of northern dominance; his later policies were read as a plot for wider Igbo dominance.
+
+**Ironsi's gaffes:** the plotters killed very few easterners (mostly northerners and some Yorubas); he **released the coup plotters**; surrounded himself with **Igbo advisers**; accelerated promotion of **Igbo officers**; **Decree No. 34**. These made northerners fear domination → countercoup.
+
+**Countercoup → pogrom → war:** **29 July 1966**, northern NCOs and officers; Ironsi **captured and killed in Ibadan**; **Lt-Col Yakubu Gowon** selected as Head of State; **Decree 34 repealed immediately**; **Ojukwu and Gowon faced off on seniority**; Igbos targeted in the north → **pogrom, 80,000–100,000 easterners massacred**, sparking revenge killings of northerners in the East and a **mass return of Igbos to the East**. Negotiations, including the **Aburi Accord**, failed; Ojukwu declared the East's independence **30 May 1967**.
+
+**The civil war (Biafran War), two and a half years.** The federal government could not allow secession because of: belief in the practicability of Nigerian unity; fragmentation of Nigeria into small states; **the prospect of Biafra leaving with the oil-producing states**. Gowon declared a **state of emergency** and announced **state creation**: **twelve states** out of the existing regions — **three carved out of the Eastern region, only one predominantly Igbo** — designed to isolate the Igbos and stiffen the Biafran economy, plus a **blockade of the coastline** and a **currency change**. The twin policy caused malnutrition, inflation and economic strangulation; instead of an internal uprising it produced **international sympathy and support for Biafra**.
+
+**International intervention:** Biafran propaganda used **pictures of starving children as proof of genocide** and proved effective; international support **prolonged the war**. The **OAU** refused to treat it as a civil war, treating it as a war between two independent nations; the **US and UK chose neutrality**; the **USSR supported the Federal Military Government with aircraft and advisers**. Recognising Biafra in **1968**: OAU members **Tanzania, Gabon, Ivory Coast, Zambia**. **France and Portugal** provided supplies and logistics; **Israel** shared sympathies; **China** showed support but with no serious material support; the **Catholic Church and the International Red Cross** provided humanitarian aid.
+
+**End and legacy:** by **January 1970** Biafra was overrun by federal troops and collapsed; Ojukwu fled to **Ivory Coast**; **Effiong surrendered to Gowon in Lagos, 12 January 1970**. Up to **3 million Nigerians killed, another 3 million displaced**. Gowon declared "**no winner, no vanquished**" and "no winners or losers in the war between brothers". The **3 Rs — reconstruction, reconciliation, rehabilitation** — began swiftly but **failed**; Igbos have continually suffered marginalisation; **Rwanda** is offered as a working template for post-war management.
+
+## Strand 3 — Week 5 Summary-PDF (Nation-Building and State Creation)
+
+Case-study title: **Nation-Building and State Creation in Post-Independence Nigeria**.
+
+- Nigeria's diverse ethnic and cultural landscape — **over 250 distinct ethnic groups** — has posed significant hurdles to forging a unified national identity.
+- Named national-integration efforts: the **"No Victor, No Vanquished"** initiative and the establishment of the **National Youth Service Corps (NYSC)** scheme.
+- The **colonial legacy** — **arbitrary borders** and the imposition of diverse groups within a single nation — contributed to nation-building challenges **in Africa**, not just Nigeria.
+- **Ethnicity has played a recurring role in state creation**, with minority groups pushing for **recognition and self-determination**.
+- The creation of multiple states over the years was influenced by **political motives, resource distribution, and the desire to address minority concerns**.
+- The **Nigerian Civil War / Biafran War** left a deep scar: significant loss of life and **unresolved national questions**.
+- Case-study objectives: analyse the historical context of the nation-building challenge; examine integration policies and initiatives; understand the role of ethnicity in state creation; assess the war's impact on nation-building. **Method:** historical and analytical, primary and secondary sources, a chronological narrative.
+- Questions to ponder: colonialism's role in shaping Nigeria's nation-building challenges; the key obstacles to national integration and cohesion; how state creation shaped the political and social landscape and what motivated it.
+- Skills claimed: critical thinking on complex historical/political issues; understanding nation-building dynamics for a multi-ethnic, multi-cultural state; knowledge of the events and policies that shaped Nigeria's political landscape.
+- Key references cited on the slides: **Falola & Heaton, *A History of Nigeria* (Cambridge, 2008)**; **University of Lagos, *Nigerian Peoples and Culture* (2013)**; **Ikime & Historical Society of Nigeria, *Groundwork of Nigerian History* (Heinemann, 1980)**.
 
 ## Commonly confused
 
-- **January vs July 1966.** **January 15, 1966** = the **five majors**, led by **Nzeogwu**, killing **Balewa, the Sardauna, Okotie-Eboh and Akintola**; called an **Igbo coup**; power went to **Ironsi**. **July 29, 1966** = the **northern countercoup**, killing **Ironsi at Ibadan**; power went to **Gowon**. Do not attribute the killing of Balewa to July or the killing of Ironsi to January.
-- **29 July 1966 vs 29 July 1975.** The same calendar date carries two different coups: **1966 = Ironsi killed, Gowon in**; **1975 = Gowon out (bloodless, Garba), Murtala in**.
-- **Nzeogwu vs Ojukwu vs Ironsi.** **Nzeogwu** led the January coup; **Ironsi** received power and was killed in July 1966; **Ojukwu** was Ironsi's **military governor of the East** and later declared **Biafra**.
-- **The census crisis vs the election crises.** **Census crisis = 1962–3**. **Election crises = 1959** (listed as a source of instability), **1964 (UPGA vs NNA, federal)** and **1965 (Western Region)**. Three separate election items, one census item.
-- **Aburi vs the creation of states.** **Aburi Accord** = the **negotiation** that failed, *before* secession. **Creation of twelve states** = Gowon's **response after** the 30 May 1967 declaration, alongside the state of emergency; it was designed to **isolate the Igbos** (three states from the East, only **one predominantly Igbo**).
-- **Decree No. 34 (Unification Decree)** — issued by **Ironsi**, **repealed by Gowon** immediately on taking power. It is a cause of the countercoup, not of the January coup.
-- **The two failed coups: Dimka (1976) and Orkar (1990).** **Dimka killed Murtala but did not take power** (crushed for lack of senior support; **Obasanjo** became Head of State). **Orkar did not kill Babangida** (escape from **Dodan Barracks**), announced the **south's secession** on the **FRCN**, and was crushed **in 10 hours**; **42 executed in July 1990**.
-- **Who handed to whom.** **Obasanjo → Shehu Shagari** (1979 civilian handover). **Babangida → Ernest Shonekan** (interim, after the **June 12** annulment). **Abdulsalam → Obasanjo** (1999, beating **Olu Falae**).
-- **Richards Constitution** introduced **regionalism** — it did **not** abolish or centralise it (this is the source's own pop-up quiz, answer **B**).
-- **Who backed whom in the war.** **USSR → Federal Military Government** (aircraft, advisers). **France, Portugal, Israel, China → Biafra** (China with **no serious material support**). **US and UK → neutral.** **Recognised Biafra in 1968: Tanzania, Gabon, Ivory Coast, Zambia.** **OAU** refused the "civil war" label.
-- **Ojukwu vs Effiong at the end.** **Ojukwu fled to Ivory Coast**; it was **Effiong** who **surrendered to Gowon in Lagos on 12 January 1970**.
+- **January 1966 vs July 1966.** 15 Jan 1966 = **Nzeogwu** and the five majors, killed **Balewa**, brought **Ironsi** to power. 29 Jul 1966 = **northern countercoup**, killed **Ironsi**, brought **Gowon** to power. If the answer names Nzeogwu it is January; if it names Gowon it is July.
+- **Nzeogwu vs Ironsi.** Nzeogwu *led* the January coup; Ironsi *benefited* from it (power devolved to him as the highest-ranking officer / army commanding officer) but did not plot it — which is why releasing the plotters became his fatal gaffe.
+- **Joseph Nanven Garba vs Murtala Muhammed (1975).** **Garba led** the 29 July 1975 bloodless coup; **Murtala** was the man the plotters *appointed* Head of State. Garba never ruled.
+- **Dimka (1976) vs Orkar (1990).** Both failed. **Dimka** assassinated Murtala, after which **Obasanjo** took over; **Orkar** failed to catch Babangida at Dodan Barracks, announced the south's secession on the FRCN, and 42 men were executed in July 1990.
+- **Babangida vs Abacha (1993).** Babangida **annulled June 12** and **handed over** to **Shonekan**; **Abacha** then **overthrew Shonekan on 17 Nov 1993**.
+- **Decree No. 34 = the Unification Decree.** Ironsi issued it; **Gowon repealed it immediately** after the countercoup. Deck 1 calls it the "Unification Decree", Deck 2 "Decree No. 34" — the same instrument.
+- **30 May 1967** (Biafra declared) vs **12 January 1970** (surrender) vs **1 Oct 1960** (independence) vs **1 Oct 1976** (Gowon's promised, abandoned handover date).
+- **Ojukwu vs Effiong.** Ojukwu **fled to Ivory Coast**; it was **Effiong** who **surrendered to Gowon in Lagos**.
+- **Who backed whom.** **USSR** backed the **federal** side (aircraft, advisers); **France and Portugal** supplied **Biafra**; **US and UK were neutral**; the four that formally **recognised** Biafra in 1968 were **Tanzania, Gabon, Ivory Coast, Zambia**.
+- **Number of coups.** Deck 1 says "six coups and two attempted coups" yet numbers eight (First–Eighth). Reconcile: the two **failed/attempted** ones are **Dimka 1976** and **Orkar 1990**; the six successful are Jan 1966, Jul 1966, 1975, 1983, 1985, 1993.
+- **Richards Constitution** *introduced* **regionalism** and the regional development corporations — it did not abolish regionalism, centralise power, or dissolve the regional governments (the deck's own pop quiz, answer **B**).
+- **Obasanjo twice.** Military head of state after Dimka's failed coup (handing power to **Shagari**), then **elected** president in **1999**, beating **Olu Falae**.
+- **Egypt 1952** = first military coup **in Africa**; **Nigeria 1966** = Nigeria's first.
 
----
-
-*Source note: the source is a full pair of lecture decks plus the weekly Summary PDF; nothing material is carried by images alone. The extractor drops ligatures ("dierent" = "different", "oicers" = "officers", "aempted" = "attempted"), and a few names arrive damaged — "Eiong" is **Effiong**, "Diya Abiola" is **Diya and Abiola**, "Abubakar Abdulsalam" is **Abdulsalami Abubakar**, and the per-capita figure ("per capita peal increased from $48.1 million to $53.8 million") is garbled in the original. The deck also says Nigeria saw "six coups and two attempted coups" while numbering eight interventions — quote the deck's figure if asked for a number.*
+*Ligature/OCR notes: "Chukwuma Nzeogwu Kaduna" = **Kaduna Nzeogwu**; "Eiong" = **Effiong**; "Abubakar Abdulsalam" = **Abdulsalami Abubakar**; "Babaginda" = **Babangida**; "Diya Abiola's" = **Diya and Abiola**; "Richard's constitution" = **Richards Constitution**; "per capita peal" is garbled in the source.*

@@ -1,79 +1,103 @@
-# GST_112 — Week 5 Question Set (sit 7 days later)
+# GST_112 — Week 5 Retention Set
 
-*Sit this during Saturday catch-up in Week 6, not this week. Notes closed.*
+*Nigerian Peoples and Culture · sit this seven days after the Week 5 lectures.*
 
-## Section A - Multiple choice (12)
+## Multiple choice
 
-**1.** The first military coup in Africa occurred in:
-A) Nigeria in 1966  B) Ghana in 1966  C) Egypt in 1952  D) Sudan in 1958
+**1.** On what date did Nigeria's first military coup take place?
+a) 1 October 1960
+b) 29 July 1966
+c) 15 January 1966
+d) 30 May 1967
 
-**2.** Nigeria achieved independence from British colonial rule on:
-A) 1 October 1960  B) 1 October 1963  C) 15 January 1966  D) 30 May 1967
+**2.** After the countercoup of July 1966, who was selected as Head of State?
+a) Lieutenant-Colonel Yakubu Gowon
+b) Major Chukwuma Kaduna Nzeogwu
+c) Major-General Johnson Aguiyi-Ironsi
+d) Brigadier-General Murtala Muhammed
 
-**3.** The "five majors" who launched the coup of 15 January 1966 were:
-A) Nzeogwu, Ifeajuna, Okafor, Anuforo and Ademoyega
-B) Gowon, Garba, Dimka, Orkar and Abacha
-C) Ironsi, Ojukwu, Effiong, Orizu and Akintola
-D) Buhari, Babangida, Idiagbon, Shonekan and Abacha
+**3.** Which officer led the bloodless coup of 29 July 1975 that removed Gowon?
+a) Lieutenant-Colonel Buka Suka Dimka
+b) Colonel Joseph Nanven Garba
+c) Brigadier-General Murtala Muhammed
+d) Brigadier-General Olusegun Obasanjo
 
-**4.** Which of these was NOT killed in the January 1966 coup?
-A) Abubakar Tafawa Balewa  B) Festus Okotie-Eboh  C) Ladoke Akintola  D) Johnson Aguiyi-Ironsi
+**4.** Which of Ironsi's measures did Gowon announce the repeal of immediately on taking power?
+a) The Aburi Accord
+b) The First National Development Plan
+c) The quota system
+d) Decree No. 34 (the Unification Decree)
 
-**5.** Power was transferred to Major-General Aguiyi-Ironsi in January 1966 by:
-A) Nnamdi Azikiwe  B) Nwafor Orizu, acting President of the Senate  C) Major Nzeogwu  D) The Sardauna of Sokoto
+**5.** How many easterners does the lecture say were massacred in the northern pogrom?
+a) Between 8,000 and 10,000
+b) Between 80,000 and 100,000
+c) About 3 million
+d) 42
 
-**6.** Ironsi's policy that is repeatedly named as a cause of the July 1966 countercoup, and which Gowon immediately repealed, was:
-A) The First National Development Plan  B) The quota system  C) Decree No. 34, the Unification Decree  D) The creation of twelve states
+**6.** Who surrendered to Gowon in Lagos on 12 January 1970?
+a) Effiong
+b) Chukwuemeka Odumegwu Ojukwu
+c) Nwafor Orizu
+d) Ernest Shonekan
 
-**7.** During the pogrom in the north, the number of easterners massacred is given as:
-A) 3 million  B) Between 80,000 and 100,000  C) 42  D) Between 8,000 and 10,000
+**7.** Which power supported the Federal Military Government during the civil war, supplying aircraft and advisers?
+a) France
+b) Portugal
+c) Israel
+d) The USSR
 
-**8.** Richards Constitution is significant in the First Republic because it:
-A) Abolished regionalism in Nigeria
-B) Introduced regionalism, establishing regional development corporations
-C) Centralised power in the federal government
-D) Led to the dissolution of the regional governments
+**8.** Which instrument was the first to introduce regionalism, the system adopted during the First Republic?
+a) The Independence Constitution of 1960
+b) The Aburi Accord
+c) Richards Constitution
+d) Decree No. 34
 
-**9.** The coup of 29 July 1975 that removed Gowon was led by Colonel Joseph Nanven Garba, and installed as Head of State:
-A) Olusegun Obasanjo  B) Buka Suka Dimka  C) Murtala Muhammed  D) Muhammadu Buhari
+**9.** On what date did General Sani Abacha overthrow the interim government of Ernest Shonekan?
+a) 17 November 1993
+b) 20 April 1990
+c) 12 June 1993
+d) 29 July 1975
 
-**10.** In the failed coup of 20 April 1990, Major Gideon Orkar seized the FRCN and announced:
-A) The annulment of the June 12 election
-B) The secession of the southern part of Nigeria from the north
-C) The creation of twelve states
-D) The death of General Babangida
+**10.** Who seized the Federal Radio Corporation of Nigeria and announced the secession of southern Nigeria from the north?
+a) Lieutenant-Colonel Buka Suka Dimka
+b) Major Adewale Ademoyega
+c) Brigadier Tunde Idiagbon
+d) Major Gideon Orkar
 
-**11.** Which country supplied aircraft and advisers to the Federal Military Government during the civil war?
-A) France  B) Portugal  C) The USSR  D) The United Kingdom
+**11.** According to the Week 5 summary, roughly how many distinct ethnic groups does Nigeria contain?
+a) Over 50
+b) Over 250
+c) Over 100
+d) Over 500
 
-**12.** The Biafran surrender was made in Lagos on 12 January 1970 by:
-A) Ojukwu, who then fled to Ivory Coast
-B) Effiong, Ojukwu having fled to Ivory Coast
-C) Gowon, to Ojukwu
-D) Ernest Shonekan
+**12.** Which pair does the Week 5 summary name as efforts to foster national integration?
+a) The First National Development Plan and ECOWAS
+b) The Aburi Accord and the 3 Rs
+c) The "No Victor, No Vanquished" initiative and the NYSC scheme
+d) Decree No. 34 and the quota system
 
-## Section B - Short answer (3)
+## Short answer
 
-**13.** Set out the coups of 1966 in order: give the date of each, who led it, who was killed, who emerged as head of state, and the stated grievance in each case.
+**13.** Set out the causal chain, with dates, that runs from the coup of 15 January 1966 to Ojukwu's declaration of Biafran independence. Name at least four of Ironsi's actions that the lecture treats as the trigger for the countercoup.
 
-**14.** Trace the road from the pogrom to the outbreak of the civil war, naming the negotiation that failed, the date of the declaration, and the two measures Gowon took immediately afterwards. State why the Federal Military Government refused to allow secession.
+**14.** The lecture says Nigeria saw "six coups and two attempted coups" yet numbers eight. Identify the two that failed, giving the year, the leader and the reason each failed.
 
-**15.** List the pros and the cons of military rule in Nigeria as the lesson gives them, and quote the judgement attributed to Awolowo.
+**15.** Explain how the federal government tried to strangle Biafra economically after May 1967, why it created twelve states, and why the strategy backfired.
 
 ## Answers
 
-**1. C** — *the African precedent*: the first military coup in Africa was in **Egypt in 1952**; other African states followed. Nigeria's own first coup was **15 January 1966**.
-**2. A** — **1 October 1960**. Note the date's echo: Gowon promised to end military rule on **1 October 1976** and then postponed it in 1974.
-**3. A** — the **five majors**: **Nzeogwu, Ifeajuna, Okafor, Anuforo, Ademoyega**, led by **Major Chukwuma Kaduna Nzeogwu**.
-**4. D** — **Ironsi** was not killed in January; he *received* power in January and was **captured and killed in Ibadan** in the **July 1966 countercoup**. The January dead include **Balewa, the Sardauna of Sokoto, Okotie-Eboh, Akintola, Maimalari, Ademulegun and Shodeinde**.
-**5. B** — **Nwafor Orizu**, acting President of the Senate, **voluntarily transferred power** to Ironsi as highest-ranking officer; the coup itself had **failed** to seize power.
-**6. C** — **Decree No. 34**, the **Unification Decree**. Gowon **announced its repeal immediately** on becoming Head of State.
-**7. B** — **80,000 to 100,000** easterners massacred in the north, sparking revenge killings of northerners in the East and the mass return of Igbos. (**3 million** is the war's death toll; **42** is the number executed after the Orkar coup.)
-**8. B** — *regionalism*: **Richards Constitution** was the **first to introduce regionalism**, producing the **Western, Eastern and Northern Nigeria Development Corporations** — West cocoa and timber, East palm oil, North groundnut.
-**9. C** — **Murtala Muhammed**, with **Obasanjo** as his deputy. **Obasanjo** only became Head of State after **Dimka** assassinated Murtala in the **failed 1976** coup.
-**10. B** — Orkar announced the **secession of the south from the north**; Babangida escaped **Dodan Barracks** by a back route, the coup was crushed **within 10 hours**, and **42 men were executed in July 1990**.
-**11. C** — the **USSR** backed the **FMG** with **aircraft and advisers**. **France and Portugal** supplied **Biafra**; the **US and UK were neutral**; **Tanzania, Gabon, Ivory Coast and Zambia recognised Biafra in 1968**.
-**12. B** — **Effiong surrendered to Gowon in Lagos on 12 January 1970**; **Ojukwu had fled to Ivory Coast**.
-**13.** *The two coups of 1966.* **15 January 1966** — the **five majors** (**Nzeogwu, Ifeajuna, Okafor, Anuforo, Ademoyega**), led by **Nzeogwu**; killed **Prime Minister Abubakar Tafawa Balewa**, the **Sardauna of Sokoto**, Finance Minister **Festus Okotie-Eboh**, Western Region Premier **Ladoke Akintola**, Brigadiers **Maimalari** (2nd Brigade) and **Ademulegun** (1st Brigade), and **R. A. Shodeinde** of the **NDA**; the plotters could not seize power, so **Nwafor Orizu** handed power to **Major-General Aguiyi-Ironsi**, who **suspended the constitution** and formed an **interim federal military government**; grievance: **tribalism and corruption** and the **bigotry of First Republic politicians**. Called an **Igbo coup** because it was led largely by officers of Igbo extraction and **very few easterners died**. **29 July 1966** — the **countercoup** by **northern NCOs and officers**; **Ironsi captured and killed in Ibadan**; **Lt-Col Yakubu Gowon** chosen as Head of State (ruling to **1975**); grievances: **fear of Igbo domination**, Ironsi's **compromising treatment of the January plotters** (he **released** them), his **Igbo advisers and accelerated promotion of Igbo officers**, **Decree No. 34**, and **revenge**.
-**14.** *Pogrom to war.* The countercoup was followed by the targeting of Igbos in the north: **between 80,000 and 100,000 easterners massacred**, revenge killings of northerners in the East, and the **mass return of Igbos to the East**. **Ojukwu** pressed for **secession** while **Gowon** insisted on the status quo; the two also **faced off on seniority**. Negotiations followed, notably the **Aburi Accord**, which **failed**. **Ojukwu declared the East's independence on 30 May 1967.** Gowon immediately **declared a state of emergency** and **announced the creation of twelve states** — **three carved out of the Eastern region, only one predominantly Igbo** — designed to **isolate the Igbos**, backed by a **blockade of the coastline** and a **currency change** that produced **malnutrition, inflation and economic strangulation**. The **FMG refused secession** because it **believed in the practicability of Nigerian unity**, feared the **fragmentation of Nigeria into small states**, and would not let **Biafra leave with the oil-producing states**.
-**15.** *Implications of military rule.* **Pros**: they **kept Nigeria as one**; **infrastructural development**; the **relocation of the FCT to Abuja**; the **creation of states**; bold policy decisions such as **NYSC and ECOWAS**; an intentional **foreign policy thrust under Murtala Muhammed**. **Cons**: the military was **responsible for the civil war**; **corruption and impoverishment**; **lack of checks and balances**; **uncoordinated policy thrust**; lacked the **requisite administrative acumen**; **wanton killings and violations of human rights**; **suppression of the press**; **coups leading to economic uncertainty**; **mismanagement of the oil boom**; acting as **stooges of IGOs like the IMF**; **lack of respect for the rule of law and the judiciary**. **Awolowo** is quoted to the effect that **the best military government cannot be better than the worst civilian government**.
+**1.** c — 15 January 1966; 29 July 1966 is the countercoup, 30 May 1967 the Biafran declaration.
+**2.** a — Northern NCOs and officers killed Ironsi at Ibadan and selected Gowon, who ruled until 1975.
+**3.** b — Garba led the coup; Murtala was the man the plotters then appointed Head of State, with Obasanjo as deputy.
+**4.** d — Decree No. 34, the Unification Decree, was among the northern grievances that produced the countercoup.
+**5.** b — 80,000–100,000 easterners; the 3 million figure is the war's total dead, and 42 the men executed after Orkar's coup.
+**6.** a — Ojukwu fled to Ivory Coast; it was Effiong who surrendered in Lagos.
+**7.** d — The USSR backed the FMG; France and Portugal supplied Biafra and the US and UK stayed neutral.
+**8.** c — Richards Constitution introduced regionalism and hence the regional development corporations.
+**9.** a — 17 November 1993, three months into Shonekan's interim reign; 12 June 1993 is the annulled election, 20 April 1990 Orkar's failed coup.
+**10.** d — Orkar attacked Dodan Barracks; Babangida escaped by a back route and the coup was put down within 10 hours.
+**11.** b — Over 250 distinct groups, named as the central obstacle to a unified national identity.
+**12.** c — Both are listed explicitly in the bullet-point summary as integration efforts.
+**13.** Chain: 15 Jan 1966 coup by the five majors kills Balewa, the Sardauna of Sokoto, Okotie-Eboh and Akintola → Orizu devolves power to Ironsi → Ironsi's gaffes (released the coup plotters; surrounded himself with Igbo advisers; accelerated promotion of Igbo officers; Decree No. 34; the coup had killed mostly northerners and Yorubas) → northern fear of Igbo domination → countercoup of 29 July 1966, Ironsi killed at Ibadan, Gowon Head of State → pogrom of 80,000–100,000 easterners and mass return of Igbos → Aburi Accord and other negotiations fail → Ojukwu declares the East's independence on 30 May 1967.
+**14.** Dimka, 1976: he assassinated Murtala Muhammed but lacked senior-officer support and government troops crushed the attempt, so Obasanjo took power. Orkar, 20 April 1990: the plotters attacked Dodan Barracks but Babangida escaped, the announced secession of the south was quashed by a senior officer and the coup collapsed within 10 hours; 42 men were executed in July 1990.
+**15.** Gowon declared a state of emergency and created twelve states out of the regions — three from the East, only one predominantly Igbo — to isolate the Igbos, and added a blockade of the coastline and a currency change. The twin policy caused malnutrition, inflation and economic strangulation, which was expected to provoke an internal uprising; instead the images of starving children became effective genocide propaganda, drew international sympathy, recognition from Tanzania, Gabon, Ivory Coast and Zambia in 1968, and supplies from France and Portugal, all of which prolonged the war.
