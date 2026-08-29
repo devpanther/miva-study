@@ -1,184 +1,112 @@
 # COS_102 — Week 11 Question Set (sit 7 days later)
 
-*Sit this during Saturday catch-up in Week 12, not this week. Notes closed. 12 MCQ + 3 short answer, about 30 minutes.*
+*Sit this during Saturday catch-up in Week 12, not this week. Notes closed.*
 
 ## Section A — Multiple choice (12)
 
-**1.** A system is divided into two units. Unit X cannot compute anything until it has read the internal table held by unit Y, and unit Y contains both the payroll rules and the timetable rules. On the course's definition of modularisation, which conditions have been broken?
+**1.** Complete the deck's definition: "Modularisation can be explained as the process of dividing a program's functionality into independent modules, such that each independent module has everything it needs to implement ___."
+a) only a part of the program's functionality
+b) the whole of the program's functionality
+c) the interfaces of the modules that depend on it
+d) at least one function of every other module
 
-a) Neither: the functionality has been divided into two separate units, which is what the definition requires
-b) Only the "everything it needs" condition, since X depends on Y; unit Y is acceptable because holding two sets of rules is a matter of size rather than of design
-c) Both: X does not have **everything it needs** to work, and Y implements **more than one part** of the functionality — the definition's two clauses being the coupling condition and the cohesion condition respectively
-d) Only the "only a part" condition, since Y holds two sets of rules; X's dependence on Y is not a fault because modules are expected to call one another
+**2.** Cohesion and coupling are best described as
+a) two names for the same measure, one used inside modules and one between them
+b) two design approaches, cohesion being top-down and coupling bottom-up
+c) the two measures of module independence: cohesion inside a module, coupling between modules
+d) two forms of structural partitioning, cohesion horizontal and coupling vertical
 
-**2.** How does the course relate decomposition to modularisation?
+**3.** Which of these is **not** listed by the deck as an advantage of modularisation?
+a) Modules and functions can be reused in other parts of the program or in another program
+b) Large programs can be written by several or different people
+c) Smaller modules and functions are easier and faster to design, develop, test and publish
+d) Inter-module communication problems are reduced
 
-a) They are opposites: decomposition breaks a system apart and modularisation puts the pieces back together into a working whole
-b) The meaning of decomposition is embedded in the definition of modularisation — by separating the codes in an application into different modules and functions, we are essentially decomposing the application into modules
-c) Decomposition is done at the design stage on paper and modularisation is done at the coding stage in files, so the two never occur together
-d) Decomposition applies to data and modularisation applies to functions, which is why the course treats data structures and processing details separately
+**4.** The single responsibility principle, as stated for modules, demands that modules
+a) contain no more than one function each
+b) should not have more than a single responsibility and should not depend on other modules
+c) expose exactly one public interface per data structure they own
+d) be assigned to exactly one developer for the life of the project
 
-**3.** Which of these is a stated **advantage** of modularisation in the course's list?
+**5.** Refactoring is defined as the process of modifying a software system to
+a) improve its external behaviour without changing the internal structure of design
+b) reduce its execution time and storage size while preserving its module boundaries
+c) improve the internal structure of design without changing its external behaviour
+d) replace low-level idioms with medium-level design patterns
 
-a) The program occupies less storage, because a function written once is not stored more than once
-b) The program executes faster, because each module can begin work without waiting for the others
-c) Compilation is quicker, because only the changed module has to be compiled
-d) Modules and functions can easily be used either in other parts of our program or in another program
+**6.** During refactoring, the existing design is checked for flaws such as
+a) redundancy, poorly constructed algorithms and data structures
+b) missing test coverage and undocumented interfaces
+c) excessive abstraction at the higher levels of the hierarchy
+d) violations of the chosen programming language's idioms
 
-**4.** After modularising, a team finds that the program's memory footprint has grown and that its startup is slower. What does the course say about this?
+**7.** Which is a stated benefit of **structural partitioning**?
+a) It decreases the probability of adverse effects by hiding data structures
+b) The negative impacts spread slowly, and the software can be extended easily
+c) It removes the need to choose between top-down and bottom-up design
+d) It guarantees that every module ends up with high cohesion
 
-a) These are two of its five stated disadvantages — storage size may be increased, and compilation and loading time may be longer — and they are the price of the advantages, not evidence of a design error
-b) These are the symptoms of high coupling, since modules that depend on one another must all be loaded before any of them can run
-c) These indicate that the modules were divided along the wrong lines, since a correct division leaves size and loading time unchanged
-d) These are the reason the course recommends refactoring, whose purpose is to reduce the storage and loading cost of a modular design
+**8.** In horizontal partitioning, control modules are used to
+a) perform decision-making while doing little processing themselves
+b) carry out all input, computation and output tasks
+c) hide the data structures of the worker modules from one another
+d) communicate between functions and execute the functions
 
-**5.** Module `admin_tools` contains `reset_password`, `export_timetable_csv`, `resize_logo` and `send_bulk_sms`. None calls any other. What is its cohesion, and on what grounds?
+**9.** Software architecture refers to the structure of the system, which contains
+a) the components, the attributes (properties) of those components, and the relationship between them
+b) the components of a program/system only
+c) the components and the programming-language idioms used to implement them
+d) the subsystems and the rules for refactoring them
 
-a) High, because the four functions do not depend on one another, so nothing inside the module is entangled with anything else inside it
-b) Low, because the module has no single ultimate aim that all four functions work towards — each would change for a different reason — which is the deck's own low-cohesion example
-c) High, because all four are used by administrators, so they share a common purpose within the system
-d) Undecidable, because cohesion is a count of the calls between the functions in a module and no calls are shown
+**10.** Which pattern level is programming-language specific and often termed a coding pattern?
+a) Architectural pattern
+b) Design pattern
+c) Idiom
+d) All three, since every pattern is eventually written in some language
 
-**6.** Which of these two versions of module `billing` is more loosely coupled to module `student`, and why?
+**11.** Top-down design is more suitable when
+a) a system is created from an existing system whose basic primitives can be reused
+b) the amount of abstraction must increase at each higher level
+c) the architecture is hierarchical and must be partitioned horizontally
+d) the software solution needs to be designed from scratch and specific details are unknown
 
-```python
-# VERSION 1
-import student
-def owing(sid):
-    rec = student.ROWS[sid]
-    return rec[4] - rec[5]
-
-# VERSION 2
-import student
-def owing(sid):
-    return student.charges(sid) - student.payments(sid)
-```
-
-a) Version 1, because it reaches `student` once where Version 2 calls it twice, and coupling is the extent of the traffic between modules
-b) Version 1, because it does its own arithmetic instead of relying on `student` to supply figures, which makes it the more self-contained of the two
-c) Version 2, because it depends only on two published questions continuing to be answered, whereas Version 1 depends on `ROWS` existing, on its indexing, and on fields 4 and 5 keeping their positions
-d) They are identical in coupling, since both import `student` and coupling records whether a dependency exists rather than what it is upon
-
-**7.** The course says modules "pass only that much information to each other, which is required to accomplish the software functions". What does the final clause rule out?
-
-a) It rules out passing a module less than it needs, so information hiding can never be used as a reason to withhold information a receiving module requires to do its job
-b) It rules out passing any information at all except through a return value, since anything else would exceed what is required
-c) It rules out modules communicating more than once per operation, since a second exchange would be information that was not required the first time
-d) It rules out a module hiding its data structures from a module that genuinely needs them, since need overrides hiding
-
-**8.** Which of these is a refactoring?
-
-a) Rewriting a slow sorting routine so that it produces the same sorted output in a quarter of the time
-b) Splitting a component whose four functions have a limited relationship with one another into four components of high cohesion, the system's outputs being unchanged for every input
-c) Correcting a total that had been including cancelled orders, so that the report now shows the right figure
-d) Adding a confirmation email to the registration process, so that new users are told their account exists
-
-**9.** Which statement about structural partitioning is correct?
-
-a) Vertical partitioning requires the passing of more data across the module interface, which makes the control flow of the problem more complex
-b) Horizontal partitioning distributes the functionality top-down, with control modules doing the decision-making and worker modules doing all input, computation and output
-c) Horizontal partitioning uses control modules to communicate between functions and execute the functions, and requires the passing of more data across the module interface, making control flow more complex
-d) Structural partitioning is applied when a design has no hierarchical structure, and its purpose is to introduce one
-
-**10.** The course defines software architecture as the structure of the system. What does that structure contain?
-
-a) The components of the program or system, the attributes or properties of those components, and the relationships between them
-b) The modules, the functions inside each module, and the files in which they are stored
-c) The subsystems, the programming language in which each is written, and the order in which they are compiled
-d) The components of the system and the sequence in which they execute at run time
-
-**11.** A team writes down a rule about how the elements already identified by their architectural pattern should be refined, and about the mechanism by which two components will interact. Which level of software pattern are they working at?
-
-a) An architectural pattern, since anything concerning the relationship between components belongs to the overall structure and organisation of the system
-b) An idiom, since a mechanism of interaction between components must be expressed in the code and idioms describe the method used for interaction among software components
-c) A design pattern: a medium-level strategy providing a means for the refinement of the elements defined by an architectural pattern, addressing relationships among components and mechanisms affecting component-to-component interaction
-d) None of the three, since a pattern must describe a solution reusable across projects and a rule written for one project is not reusable
-
-**12.** Why does the course say the two design approaches are "not individually practicable"?
-
-a) Because top-down works only for small systems and bottom-up only for large ones, so a project of medium size can use neither on its own
-b) Because pure top-down subdivides on assumptions about primitives it has not yet met, while pure bottom-up composes good parts with no statement of the system's aim to compose them towards — so a good combination of both is used
-c) Because a design must be documented in both directions before it can be reviewed, one direction for the stakeholders and the other for the programmers
-d) Because top-down is a decomposition and bottom-up is a composition, and a system must be both decomposed and composed before it can be built
+**12.** A module is specified so that its data structures and processing details are not accessible to other modules, and it passes them only the information required to accomplish the software functions. This is
+a) encapsulation of the module's responsibilities
+b) information hiding
+c) vertical partitioning
+d) refactoring for cohesion
 
 ## Section B — Short answer (3)
 
-**13.** Define **cohesion** and **coupling** in the course's terms, stating for each where the measurement is taken and which direction it should go. Explain how the two clauses of the course's definition of modularisation — "has everything it needs" and "implements only a part of the functionality" — correspond to them. Then deal with the trap: a team reduces the coupling between two modules to zero by merging them, and reports this as an improvement. Say exactly what has and has not changed, what has happened to cohesion, and what the correct operation would have been. Finish with the car analogy: what the steering wheel, radiator, battery and brake show about cohesion, and what the starter's need for the battery shows about the difference between **low** coupling and **no** coupling.
+**13.** Define cohesion and coupling exactly as the deck does, state the direction each should take, and explain — using a car's steering wheel, radiator, battery and brake — what high cohesion and low coupling look like in that system.
 
-**14.** This module works today. Name every dependency it has on the internals of `results`, say which of them information hiding forbids and why, state precisely what happens on the day `results` inserts a new column in position 2, and rewrite the module. Then say which module the GPA formula belongs in, and justify the answer using cohesion and the single responsibility principle.
+**14.** A component performs four functions that have a limited relationship with one another. State what the deck prescribes, what the prescription achieves, and name three of the five disadvantages of modularisation that the prescription may bring with it.
 
-```python
-# module: transcript
-import results
+**15.** Distinguish top-down from bottom-up design, name the situation each suits, and explain why the deck insists that neither is individually practicable.
 
-def gpa(student_id):
-    rows = results.TABLE
-    mine = [r for r in rows if r[0] == student_id]
-    return sum(r[2] * r[3] for r in mine) / sum(r[3] for r in mine)
-    # column 0 = student id, column 2 = grade point, column 3 = credit units
-```
-
-**15.** A social-media platform must support user registration, profile creation, posting updates, and following other users. (i) Decompose it in the course's manner, showing at least one feature broken down into subproblems, and then group the subproblems into modules, naming your modules and the ultimate aim of each. (ii) State the course's definition of **software architecture**, all three of its constituents, and set out the three levels of **software pattern** with what each is often considered equivalent to. (iii) Say which of **top-down** and **bottom-up** design you used in part (i), which one you would use instead if the platform were being built on a library of modules the team already owns, and why the course insists that a good combination of both is used.
+---
 
 ## Answers
 
-**1. c.** *Concept: the definition of modularisation contains the coupling condition and the cohesion condition.* "Each independent module has **everything it needs** to implement **only a part** of the program's functionality." X fails the first: it cannot perform its function until Y supplies something, which is coupling — "the extent to which modules depend on other modules before performing their function". Y fails the second: payroll rules and timetable rules are two parts of the functionality, so Y has more than a single responsibility, which is low cohesion. (a) treats "divided into units" as sufficient; the words *independent*, *everything it needs* and *only a part* are all doing work, and a division that ignores them is a split, not a modularisation. (b) excuses Y on grounds of size, but nothing in the definition mentions size — a large module implementing one part passes, and a tiny one implementing two fails. (d) excuses X on the ground that modules call one another, which is true and beside the point: X is not merely calling Y, it is reading Y's **internal table**, so it depends on how Y stores things, not on what Y promises.
+**Section A**
 
-**2. b.** *Concept: decomposition and modularisation are one act named from two sides.* The deck says the meaning of decomposition **is actually embedded in the definition of modularisation**, and that **by separating the codes in an application into different modules and functions, we are essentially decomposing the application into modules**. (a) inverts one of them: nothing in the course describes modularisation as reassembly — modularisation *is* the dividing, and what puts the pieces to work is the program's control flow. (c) invents a stage boundary; the deck never distinguishes design-stage decomposition from coding-stage modularisation, and treats them as the same activity. (d) borrows the phrase "data structures and processing details" from the **information hiding** slide and reuses it as a division of labour between the two words, which the deck does not make.
+1. **a** — the definition's point is that a module is complete *for its own part only*, not for the whole program.
+2. **c** — they are the two measures of module independence; cohesion is within a module, coupling between modules.
+3. **d** — the deck lists inter-module communication problems as *increased*, and as a disadvantage.
+4. **b** — the principle is stated for modules exactly as for functions: one responsibility, no dependence on other modules.
+5. **c** — internal structure improves, external behaviour is unchanged.
+6. **a** — the deck names redundancy and poorly constructed algorithms and data structures.
+7. **b** — testing and maintenance become easier, negative impacts spread slowly, the software can be extended easily; a is a benefit of information hiding.
+8. **d** — that is the deck's wording for horizontal; a and c describe vertical control and worker modules.
+9. **a** — components, their attributes (properties), and the relationships between them.
+10. **c** — idioms are low-level, language-specific, and often termed coding patterns.
+11. **d** — top-down suits from-scratch design with unknown details; a is the bottom-up case.
+12. **b** — this is the deck's definition of information hiding, including the "only that much information" clause.
 
-**3. d.** *Concept: the five stated advantages.* The list is: large programs can be **written by several or different people**; it is **easier to manage and add** smaller modules and functions; **understanding a small module and function is easier**; **we can easily use the modules and functions either in other parts of our program or in another program**; and smaller units are **easier and faster to design, develop, test and publish**. (d) is the fourth of these, word for word. (a), (b) and (c) are all sensible-sounding claims that the course lists on the **other** slide, with the opposite sign: **storage size may be increased**, **execution time may be longer**, and **compilation and loading time may be longer**. Each option is a real belief students hold — and each is precisely a stated disadvantage, which is why the disadvantages slide is worth learning as carefully as the advantages one.
+**Section B**
 
-**4. a.** *Concept: the disadvantages are the cost of modularity itself.* The five are **longer execution time, increased storage size, longer compilation and loading time, increased inter-module communication problems, and more initial design time**. They are caused mechanically by there being boundaries at all: separately stored units take more room, separately compiled and linked units take longer to build and load, and crossings cost time. (b) reaches for a vocabulary word and misapplies it; high coupling shows itself as a change in one module forcing a change in another, not on a stopwatch. (c) asserts that good design is free, which contradicts the disadvantages slide's existence and the warning that modularisation **demands more initial design time**. (d) misstates refactoring, which is defined as improving the **internal structure of design without changing external behaviour** — it makes no promise about storage or loading at all.
+**13.** Cohesion is the extent to which the functions in a module work together to achieve the ultimate aim of the module, and we want it high; coupling is the extent to which modules depend on other modules before performing their function, and we want it low. In a car, each part is internally cohesive: every element of the braking system serves stopping the car, and every element of the radiator serves cooling. Coupling is low because the parts meet only at narrow, agreed connections — the brake pedal, a coolant hose, a battery terminal — so a redesigned radiator does not force a redesign of the steering wheel. Cohesion is judged inside a part; coupling is judged at the joints between parts.
 
-**5. b.** *Concept: cohesion is judged against a single ultimate aim, not against internal calls or shared users.* Resetting passwords, exporting a timetable, resizing an image and sending bulk SMS are four aims that change for four different reasons — a security rule, a timetable format, an image library, a messaging provider. This is the deck's refactoring example exactly: a component performing **four functions that have a limited relationship with one another**, to be split into **four components each exhibiting high cohesion**. (a) is the commonest inversion: absence of internal calls is not evidence of cohesion, and functions that never call each other are highly cohesive whenever both serve the module's aim. (c) is the subtler trap — "used by administrators" names a **user**, not an aim; grouping by who invokes the code produces exactly the `utils` module the deck warns about, because the same administrator may need twenty unrelated things. (d) offers a definition of cohesion the course does not give; the course's test is the **ultimate aim of the module**, judgeable from the four names alone.
+**14.** The deck prescribes refactoring the component into four different components, each exhibiting high cohesion. This achieves easier integration, testing and maintenance of the software components, because each component now has one aim and can be changed and tested without dragging the other three along, while external behaviour is unchanged. The costs are drawn from the disadvantages of modularisation: any three of longer execution time, increased storage size, longer compilation and loading time, increased inter-module communication problems, and more initial design time.
 
-**6. c.** *Concept: coupling counts what a module must know, not how many times it speaks.* Version 1 cannot perform its function unless `student` keeps a name `ROWS`, keeps it indexable by `sid`, and keeps charges in field 4 and payments in field 5 — all of them **data structures**, which information hiding says must not be accessible to other modules. Reorder the fields and Version 1 goes on running and returns wrong money. Version 2 depends on two published questions continuing to be answered, and survives any internal change to `student`. (a) counts calls; two hundred calls through a published interface are looser than one line that reads a structure. (b) sounds like self-containment but is the opposite: doing the arithmetic on fields you had to know the positions of is dependence on the *inside* of another module, whereas Version 2's arithmetic uses only values it was given. (d) reduces coupling to a yes/no when the definition says **extent** — the whole content of the word is how much is depended upon.
-
-**7. a.** *Concept: "required" sets a floor on what crosses the interface.* Information hiding says modules "pass only that much information to each other, **which is required to accomplish the software functions**". Delete the clause and you get "pass as little as possible", which is not a design principle but a way of breaking things: a module starved of what it needs cannot do its job, and no information has been hidden by that. What is hidden is the **data structures and processing details**, never the service. (b) invents a rule about return values that the deck does not state and that would forbid parameters. (c) invents a limit on the number of exchanges; the requirement is about *what* is passed, not how often. (d) inverts the principle into its opposite, licensing any module to reach into another's internals by asserting need — the reply is that a genuine need is met by **widening the published interface**, not by bypassing it.
-
-**8. b.** *Concept: refactoring is defined by unchanged external behaviour.* "A process of modifying a software system to improve the internal structure of design **without changing its external behaviour**", which "reduces the complexity of module design while keeping its **behaviour or function unchanged**". Option (b) is the deck's own worked example, and the clause "the system's outputs being unchanged for every input" is what qualifies it. (a) is the most instructive distractor: the sorted output is identical, so it looks like a refactoring, but speed is an externally observable property of the system and, more importantly, the deck's definition speaks of improving the **internal structure of design** — a faster algorithm is a change of algorithm, which is why the deck lists "poorly constructed algorithms" among the **flaws refactoring looks for** rather than among its methods. Treat (a) as an optimisation. (c) changes the number the report prints for the same input, so external behaviour has changed; it is a bug fix, and the discipline is to do it as a separate step so that a later failure can be attributed. (d) adds an externally visible act, so it is a feature.
-
-**9. c.** *Concept: which cost belongs to which partitioning.* The deck: in **horizontal** partitioning, "**control modules are used to communicate between functions and execute the functions**", and it "**requires the passing of more data across the module interface, which makes the control flow of the problem more complex**, especially where data moves rapidly from one function to another". (a) attaches that cost to **vertical**, which is the commonest swap in this topic — the deck states it of horizontal only. (b) gives the definition of **vertical** partitioning under the name of horizontal: "the functionality is distributed among the modules in a top-down manner. The modules at the top level called control modules perform the decision-making and do little processing whereas the modules at the low level called worker modules perform all input, computation and output tasks." (d) inverts the precondition: structural partitioning applies "**when the architectural style of a design follows a hierarchical nature**" — it presupposes the hierarchy rather than creating one.
-
-**10. a.** *Concept: the three constituents of the architecture.* "Software architecture refers to the structure of the system, which contains **various components** of a program/system, the **attributes (properties) of those components** and the **relationship between them**." An answer naming only the components has given a third of the definition, and the attributes are the part most often dropped. (b) describes a file layout, which is a consequence of modularisation, not the architecture. (c) mixes in the programming language, which belongs to the **idiom** level of pattern, and the compilation order, which appears nowhere. (d) replaces the attributes and relationships with an execution sequence; architecture is a description of **structure**, and the deck's reason for wanting it — creating intellectual models of how the system is organised and how components interact — is about organisation, not chronology.
-
-**11. c.** *Concept: the three levels, and what each addresses.* Design patterns are "**medium-level strategies that are used to solve design problems**"; they "provide a means for the **refinement of the elements (as defined by architectural pattern)** of a software system or the relationship among them", and "**specific design elements such as relationship among components or mechanisms that affect component-to-component interaction are addressed by design patterns**". The question is built from those two sentences. (a) is right that architectural patterns concern relationships between elements, which is why it is a genuine distractor — but the giveaway is *refinement of the elements already defined by the architectural pattern*, which is the design level's job by definition. (b) picks up "method used for interaction among software components", which is indeed in the **idiom** slide — but the idiom clause continues "**in a specific programming language**", and no language has been named here. (d) misreads reusability: a pattern is a description of a solution to a **recurring** problem, and using one on a project does not stop it being a pattern.
-
-**12. b.** *Concept: why each direction alone runs out of information.* The deck states the conclusion — "top-down and bottom-up approaches are **not individually practicable**. Instead, a good combination of both is used" — and the reason follows from its own descriptions of the two. Top-down "takes the whole software system as one entity and then decomposes it", repeatedly, until the lowest level is reached; but the lowest level is where the real primitives live, and a decomposition that assumed a different shape must be redone. Bottom-up "starts with the most specific and basic components" and composes upward "until the desired system is evolved as one single component"; but nothing in that procedure states what the system is *for*, so it can compose excellent parts into the wrong whole. (a) invents a size rule the deck never gives. (c) invents a documentation requirement. (d) is a pun on the two words: top-down does decompose and bottom-up does compose, but the deck's claim is about the **practicability of each approach on its own**, not about a system needing both operations performed.
-
-**13.** *Concept: cohesion and coupling — definitions, directions, the clauses they come from, the merge trap, and the car.* **Definitions and directions.** **Cohesion** "describes the extent to which the functions in a module work together to achieve the **ultimate aim of the module**", and "we usually want **high** cohesion between the functions in a module". **Coupling** "describes the extent to which **modules depend on other modules** before performing their function", and "since we want our modules to be independent, we usually want **low** coupling between the modules in a project". **Where each is measured.** Cohesion is a reading taken **inside one module**: state the module's single aim, then ask of each function whether it serves that aim. Coupling is a reading taken **across a boundary**: name two modules, then ask what one must know about the other before it can work. Because they are taken in different places they are not two ends of one scale — a design can be poor on both simultaneously — and the arrows point in **opposite directions**, which is the pair of facts the exam most often asks for in one line. **The correspondence to the definition.** Modularisation is dividing functionality into independent modules "such that each independent module **has everything it needs** to implement **only a part** of the program's functionality". "Has everything it needs" is the **coupling** condition: a module that must first obtain something from another module does not have everything it needs. "Implements only a part" is the **cohesion** condition, and it is the same demand as the single responsibility principle, which the deck states as modules **not having more than a single responsibility** and **not depending on other modules** — the two ideas in one sentence. **The merge trap.** Suppose `orders` calls `stock` and the team merges them into `sales`. *What has changed:* there is no longer a boundary between `orders` and `stock`, so there is no longer a coupling reading to take, and the metric reports zero. *What has not changed:* the dependency. The same code needs the same stock information at the same moments; it has simply moved to where **no interface governs it**, where no review sees it, and where nothing stops it growing into direct reads of internal structures. The team has hidden the dependency from the measurement rather than from the modules. *What has happened to cohesion:* it has fallen. `sales` now has **two** responsibilities, breaking the single responsibility principle, and it can no longer be described by naming a single ultimate aim. Note the reductio: any two coupled modules can be "fixed" this way, and repeating the fix yields one module containing everything — the 5,000-line function the course opens by condemning. *The correct operation:* keep the boundary and **narrow what crosses it** — replace the fourteen call sites' varied demands with one or two published questions, and make `stock`'s data structures inaccessible so that no further dependency can form. The test to apply is not "did a number improve" but "**if `stock` is reorganised internally, must `orders` change?**" **The car analogy.** The car's aim is to transport passengers. The **steering wheel**, **radiator**, **battery** and **brake** each exist for exactly one purpose — steering, cooling, storing charge, stopping — so each is **highly cohesive**; that is why a fault can be traced to a part and a part replaced on its own, and why nobody expects the radiator to also charge a phone. The parts are nevertheless **not unconnected**: the starter genuinely cannot work without the battery, and pretending otherwise misreads the analogy. What makes the coupling **low** is that the starter needs only **twelve volts at two terminals** — it knows nothing of the battery's chemistry, plates or internal wiring, so a different battery with the same terminals works and not one part of the starter changes. **Low coupling is a real dependency running through a narrow, defined interface; no coupling is a part that does nothing.** The battery's terminals are its published interface and its chemistry is its hidden data structure, which is information hiding in metal.
-
-**14.** *Concept: identifying a hidden dependency exactly, repairing it, and placing the formula where the aim is.* **The dependencies on `results`'s internals.** (1) That a name **`TABLE`** exists in `results` — a **data structure**, not a service. (2) That `TABLE` is an **iterable of rows** that can be filtered one by one. (3) That **column 0** holds the student id. (4) That **column 2** holds the grade point. (5) That **column 3** holds the credit units. (6) That every row for a student is present in that one table — a fact about how `results` **processes** and stores its data. Only the import of `results` itself is legitimate; items 1 to 6 are exactly what the deck forbids, since "the **data structures and processing details** of one module are **not accessible to other modules**", and modules should pass only **that much information as is required**. Six pieces of storage trivia are not required to compute a GPA; a list of (points, units) pairs is. **What happens when a column is inserted at position 2.** Nothing visible, which is the point of the question. `TABLE` still exists, rows are still iterable, `r[0]` is still the student id — so the module **compiles, runs and produces numbers**. But `r[2]` is now the new column and `r[3]` is the grade point, so the function multiplies the wrong two fields and divides by the wrong one. Every GPA in the system is quietly wrong, no error is raised, no test that only checks "a number came back" fails, and the fault is in a module nobody edited. Compare a loud failure — `results.TABLE` being deleted outright — which is far preferable, because it is found in seconds. Silent corruption is the characteristic damage of coupling to another module's field order. **The rewrite.**
-
-```python
-# module: transcript
-import results
-
-def gpa(student_id):
-    entries = results.entries_for(student_id)      # [(grade_point, credit_units), ...]
-    total_units = sum(u for _, u in entries)
-    return sum(p * u for p, u in entries) / total_units
-```
-
-`results` now publishes one question — *what did this student earn?* — and answers it from whatever storage it likes. Insert a column, move to a database, change the row order: `transcript` does not notice, which is the deck's benefit that information hiding **restricts the effects of changes in one component on others**. **Where the GPA formula belongs, and why.** In **`transcript`**, as written above — not in `results`. The tempting alternative, `return results.weighted_average(student_id)`, removes the same field-order dependency but at a cost: `results`'s ultimate aim is to **hold and serve results**, and giving it the GPA formula adds a second responsibility — storage *and* academic arithmetic — which is the **single responsibility principle** broken, and low **cohesion** created, in order to save one line in the caller. `transcript`'s ultimate aim is to compute and present a student's academic record, and the GPA formula is part of that aim; put it there and both modules have one aim each. The test that settles it is the reason-to-change test: the GPA formula changes when the university changes its grading policy, and the storage changes when the database changes. Two different reasons, therefore two different modules.
-
-**15.** *Concept: a full decomposition, the architecture and pattern vocabulary, and the two directions of design.* **(i) The decomposition.** Follow the case study's method: identify the main features, break each into subproblems, then group related subproblems into modules. The features are **user registration, profile creation, posting updates, and following other users**. Taking registration and breaking it down as the case study does: **validating the user's input**, **creating a new user account**, and **sending a confirmation email**. Profile creation breaks into validating the profile fields, storing them, and processing the avatar image. Posting breaks into validating the text, storing the post, and placing it on the followers' timelines. Following breaks into recording the relationship, and answering "who follows whom". Grouping the subproblems, the case study's modules are **user management, post management and following management**, and the aim of each must be nameable in a phrase:
-
-```python
-# module: user_management        aim: everything about who a user IS
-def validate(details): ...
-def create_account(details): ...
-def send_confirmation(address): ...
-def update_profile(uid, details): ...
-def exists(uid): ...
-
-# module: post_management        aim: everything about what a user SAYS
-def create_post(uid, text): ...
-def timeline_for(uid): ...
-
-# module: following_management   aim: everything about who follows WHOM
-def follow(a, b): ...
-def followers_of(uid): ...
-```
-
-Check the two readings. **Cohesion** is high in each: every function in `user_management` serves the one aim, and the fact that `validate` and `send_confirmation` never call each other is irrelevant, since cohesion is about serving the aim, not about internal calls. **Coupling** is low: `post_management` needs to know that a user exists, so it calls `user_management.exists(uid)` — one narrow question — and never reads a user record's fields, so how accounts are stored is a **processing detail** hidden inside `user_management`. Contrast the bad grouping, by technical activity — `validation`, `database`, `email` — where no module has a single aim, every feature is spread across all three, and every one of them must know the shape of every record. **(ii) Architecture and patterns.** **Software architecture** "refers to the **structure of the system**, which contains **various components** of a program/system, the **attributes (properties) of those components**, and the **relationship between them**", and it "enables the software engineers to **analyze the software design efficiently**". Its three stated purposes are to **enable efficient communication between all the interested stakeholders**, to **highlight early design decisions that affect activities such as coding and testing**, and to **create intellectual models of how the system is organized into components and how these components interact with each other**. A **software pattern** "provides a description of the solution to a **recurring design problem of some specific domain** in such a way that **the solution can be used again and again**". The three levels: **architectural patterns**, **high-level strategies** concerning the **overall structure and organization** of a system, defining its elements — subsystems, components, classes — and the relationships between them with the rules and guidelines for specifying those relationships, **often considered equivalent to software architecture**; **design patterns**, **medium-level strategies** used to solve design problems, providing a means for the **refinement of the elements defined by an architectural pattern** and addressing **relationships among components and mechanisms that affect component-to-component interaction**, **often considered equivalent to software components**; and **idioms**, **low-level patterns** which are **programming-language specific**, describing the **implementation of a software component and the method used for interaction among software components in a specific programming language**, **often termed coding patterns**. The discriminator between the three is level of strategy, and the discriminator that separates the idiom from both others is that it is tied to a **particular language**. **(iii) Which approach.** Part (i) is **top-down**: it "takes the whole software system as one entity and then decomposes it to achieve more than one sub-system or component based on some characteristics", each sub-system being "treated as a system and decomposed further" — the platform to features, features to subproblems — and it "starts with a generalized model of system and keeps on defining the more specific part of it". That is the right choice here because the platform "needs to be designed **from scratch** and **specific details are unknown**", which is the course's stated condition for top-down. If the team already owned a library of working modules, the right approach would be **bottom-up**: it "starts with the most specific and basic components", composes higher-level components from them, and "with each higher level, the amount of abstraction is increased" — and it is "more suitable when a system needs to be **created from some existing system, where the basic primitives can be used in the newer system**". **Why a combination is required.** The course says the two "are **not individually practicable**. Instead, a good combination of both is used." Pure top-down keeps subdividing on assumptions about what will exist at the bottom; when it arrives there and finds primitives of a different shape — an existing storage module, a mail service with its own interface — some of the decomposition must be redone, and the deeper it went the more is wasted. Pure bottom-up builds excellent, highly cohesive components upward with nothing stating what the system is ultimately for, so it can produce a fine set of parts that compose into the wrong system, or one whose top-level structure cannot be explained to a stakeholder — which is exactly what the architecture slide says an architecture exists to do. In practice the top-down pass fixes the aims and the boundaries, the bottom-up pass supplies the primitives and the reality check, and the design meets in the middle; whichever direction the work travels in, every boundary it produces is judged by the same three tests — **cohesion inside, coupling across, and whether the data structures and processing details on each side are genuinely inaccessible from the other.**
+**15.** Top-down design takes the whole software system as one entity and decomposes it into sub-systems or components on some characteristic, then treats each as a system and decomposes further until the lowest level is reached; it moves from a generalised model towards more specific parts and suits a solution designed from scratch where specific details are unknown. Bottom-up starts from the most specific and basic components and composes higher-level components from them until the system evolves as one single component, with the amount of abstraction increasing at each higher level; it suits a system created from an existing system whose basic primitives can be reused. Neither is individually practicable: top-down alone decomposes on assumptions about a lowest level that may not exist as imagined, while bottom-up alone builds parts with no guarantee they compose into the system actually wanted. A good combination of both is used.

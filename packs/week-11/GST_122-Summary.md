@@ -1,70 +1,67 @@
-# GST_122 — Week 11 Summary
+# GST_122 — Week 11
 
-*Communication in English II · Week 11 (16 – 22 Nov 2026) · Topic: The Importance of Listening (with the summary sheet's Hearing vs Listening and academic listening strategies)*
+*Communication in English II · Week 11 (16 – 22 Nov 2026)*
 
-## The 8 most examinable things this week
+## Most likely to be examined
 
-1. **Hearing vs listening — the one distinction the whole week turns on.** The summary sheet states it flatly: **"Hearing is passive and involuntary while listening is an active and voluntary process requiring a conscious effort to interpret and understand spoken messages."** Four words carry the marks: *passive, involuntary* for hearing; *active, voluntary* (plus *conscious effort*) for listening. The deck says the same thing from the other side: listening "involves **not just hearing words** but actively paying attention to and understanding the message being conveyed."
-2. **The deck's six named headings under "Importance of Listening", in its own order: Effective Communication, Building Relationships, Conflict Resolution, Learning and Growth, Leadership Effectiveness, Avoiding Miscommunication.** Expect to be given a scenario and asked which heading it belongs under. Learn the list as a list — six items, that order.
-3. **Effective Communication.** Listening is a **fundamental component** of effective communication. Good listeners are **"better equipped to respond appropriately, ask relevant questions, and provide thoughtful feedback"** — three named outputs — "contributing to clearer and more meaningful conversations."
-4. **Building Relationships.** Active listening **"fosters deeper connections and understanding"**; when individuals **feel heard and understood, trust and rapport are strengthened**. It **demonstrates empathy** and shows you **value and respect the perspectives of others**, giving more positive and fulfilling relationships **both personally and professionally**.
-5. **Conflict Resolution.** Effective listening lets parties **"express their concerns, feelings, and viewpoints without interruption"** — *without interruption* is the examinable phrase — which allows a **comprehensive understanding of the issues**. Through active listening individuals **identify common ground, find solutions, and prevent misunderstandings**.
-6. **Learning and Growth; Leadership Effectiveness.** *Learning*: attentive listening enables individuals to **absorb information, gain insights, and acquire new knowledge and skills**, in **educational settings or professional development**; especially valuable in **collaborative environments**, where diverse perspectives contribute to **innovation and problem-solving**. *Leadership*: by actively listening to team members' concerns and ideas, leaders **make informed decisions, boost morale, and create an inclusive and collaborative work environment**; leaders who listen well are **perceived as approachable** and are **more likely to inspire trust and loyalty**.
-7. **Avoiding Miscommunication.** Poor listening leads to **misunderstandings, misinterpretations, and conflicts**; careful listening avoids confusion and ensures the **intended message is accurately received**. Miscommunication has **serious consequences personally and professionally**. The deck's closing line: listening is a **foundational skill underpinning successful communication, relationships and personal growth**, and listening **actively and empathetically** contributes to a **more harmonious and productive society**.
-8. **The three techniques named in the learning objectives — paraphrasing, summarising, and asking clarifying questions.** These are the deck's own answer to "how do you actively listen?", and the summary sheet repeats all three inside its longer strategy list. If a question asks for named *techniques* rather than named *benefits*, these three are the safest core.
+1. **Hearing vs listening** — "Hearing is **passive and involuntary** while listening is an **active and voluntary** process requiring a **conscious effort to interpret and understand** spoken messages." This one-line contrast is the deck's headline distinction.
+2. **The six areas under "Importance of Listening"** — know all six headings, in order (below).
+3. **The six listening strategies** named in the bullet-point summary (below) — and the **six practical strategies** in the case study, which are a *different* list.
+4. Listening "involves **not just hearing words** but actively paying attention to and understanding the message being conveyed."
+5. The three **learning-objective techniques** for active listening: **paraphrasing, summarising, and asking clarifying questions**.
+6. The **six skills/competencies** the lesson claims to build.
+7. Recognising and respecting **communication differences across cultures** = **cultural competence**, and it is called "an essential skill for effective listening."
+8. Listening is "a **foundational skill** that underpins successful communication, relationships, and personal growth."
 
-## The six headings — trigger phrase and worked example
+## The six areas of the Importance of Listening (deck order)
 
-| Heading | The deck's own test | Recognise it by |
-|---|---|---|
-| **Effective Communication** | Not just hearing words, but attending to and understanding the message | Responding appropriately, asking relevant questions, giving thoughtful feedback |
-| **Building Relationships** | People **feel heard and understood** | Trust, rapport, empathy, respect for others' perspectives |
-| **Conflict Resolution** | Concerns and viewpoints expressed **without interruption** | Common ground found, solutions reached, misunderstandings prevented |
-| **Learning and Growth** | Attentive listening **absorbs** information | Lectures, professional development, collaborative teams, innovation |
-| **Leadership Effectiveness** | Leaders listen to **concerns and ideas of team members** | Informed decisions, morale, inclusive workplace, approachability, loyalty |
-| **Avoiding Miscommunication** | The **intended message accurately received** | Misinterpretation, confusion, serious personal or professional consequences |
+1. **Effective Communication** — listening is a fundamental component of it; good listeners are better equipped to respond appropriately, ask relevant questions, and provide thoughtful feedback.
+2. **Building Relationships** — active listening fosters deeper connections; when individuals feel heard and understood, **trust and rapport** are strengthened; it demonstrates **empathy**.
+3. **Conflict Resolution** — lets parties express concerns, feelings and viewpoints **without interruption**; helps identify **common ground**, find solutions, prevent misunderstandings.
+4. **Learning and Growth** — a key component of the learning process; attentive listening lets us **absorb information, gain insights, acquire new knowledge and skills**; especially valuable in collaborative environments (innovation and problem-solving).
+5. **Leadership Effectiveness** — successful leaders are adept listeners; listening lets them make **informed decisions, boost morale**, create an inclusive collaborative environment; they are seen as **approachable** and inspire **trust and loyalty**.
+6. **Avoiding Miscommunication** — poor listening leads to **misunderstandings, misinterpretations, and conflicts**; miscommunication has serious personal and professional consequences.
 
-## Listening in academics, and the strategies the summary sheet names
+## The three learning objectives
 
-**Why it matters academically:** effective listening is **crucial for academic success**, aiding in **understanding course content, following instructions, and grasping complex/key concepts**, and so **contributing to better academic performance**. It is **particularly essential in subjects requiring comprehension of intricate details from lectures or discussions**.
+Enhance **active listening** by practising **paraphrasing, summarising, and asking clarifying questions**; apply effective listening skills in **professional environments**; **critically analyse communication dynamics**, evaluating the impact of both effective and ineffective listening on interpersonal and group interactions.
 
-**Strategies named (learn this list):** **active listening · nonverbal communication · empathetic listening · paraphrasing · summarizing · note-taking** — plus, under the case study's *practical strategies*, **asking clarifying questions, minimizing distractions, and avoiding prejudgment**. Two more headings sit alongside them: **cultural awareness** — recognising and respecting **communication differences across cultures**, which the sheet calls "an essential skill for effective listening" and a demonstration of **cultural competence** — and **reflective practice**, i.e. **regular self-assessment to identify areas for improvement**.
+## The six listening strategies (bullet-point summary)
 
-**Case study — "The Art of Effective Listening: A Path to Academic Success."** *Objective*: to emphasise the role of listening skills in academic success and equip learners with practical strategies to become proficient listeners. *Methodology*, in the sheet's order: **Active Listening** (full attention, eye contact, nodding, verbal cues); **Nonverbal Communication** (attend to body language and facial expressions); **Empathetic Listening** (understand the speaker's emotions, express empathy); **Practical Strategies** (paraphrasing, summarizing, clarifying questions, minimizing distractions, avoiding prejudgment, note-taking); **Cultural Awareness**; **Reflective Practice**. *Conclusion*: effective listening **coupled with strategic practices** significantly contributes to academic success and overall communication proficiency.
+**Active listening, nonverbal communication, empathetic listening, paraphrasing, summarizing, and note-taking** — these "enhance comprehension and engagement."
 
-**Skills the sheet says you have acquired:** Active Engagement, Critical Listening, Cultural Competence, Note-Taking Mastery, Empathetic Communication, Continuous Improvement.
+## The case-study methodology — six headings
 
-## The listening-practice passage (quantum entanglement) — what it is testing
+1. **Active Listening** — full attention, eye contact, nodding, verbal cues.
+2. **Nonverbal Communication** — attend to **body language and facial expressions**.
+3. **Empathetic Listening** — understand the **speaker's emotions** and express empathy.
+4. **Practical Strategies** — the six: **paraphrasing, summarizing, asking clarifying questions, minimizing distractions, avoiding prejudgment, and note-taking**.
+5. **Cultural Awareness** — recognise and respect **communication differences across cultures**.
+6. **Reflective Practice** — regular **self-assessment** to identify areas for improvement.
 
-The deck plays a passage and asks six comprehension questions; the point is the *listening* skill, but the model answers are examinable as content. **Quantum entanglement** = a phenomenon where **two particles become interconnected, influencing each other's properties regardless of distance**; it **challenges classical physics** because the **correlated states** observed **defy classical notions of independent behaviour**. The team **entangled particles over considerable distances** using an **advanced setup** and found **correlated states**, suggesting a strong link between the particles' properties. **Interpretation is difficult** because the results deviate from classical principles and require a **deep understanding of quantum mechanics**, and because **entanglement is hard to maintain over extended periods** — a limitation that **raises questions about the feasibility** of real-world use. **Potential applications**: **quantum computing and communication** — **faster and more secure data processing and transmission**.
+Case study title: *The Art of Effective Listening: A Path to Academic Success*.
 
-Note the exam-technique lesson buried in the exercise: you are told to **listen again before checking the responses**. A second pass with the questions already in mind is the deck's demonstration of purposeful, active listening as against passive hearing.
+## The six skills and competencies acquired
 
-## The named types of listening (standard 100-level treatment)
+**Active Engagement, Critical Listening, Cultural Competence, Note-Taking Mastery, Empathetic Communication, Continuous Improvement.**
 
-The lesson names **active**, **empathetic** and **critical** listening but never defines the full set; these are the labels a paper will use.
+## Importance of listening in academics
 
-- **Active listening** — full attention, conscious interpretation, and visible signalling back (eye contact, nodding, verbal cues, paraphrasing, clarifying questions). The umbrella term for everything this week teaches.
-- **Empathetic (or therapeutic) listening** — listening to understand the speaker's **emotions** and to express empathy; the goal is that the speaker feels understood, not that a problem is solved.
-- **Critical (or evaluative) listening** — listening to **judge**: to weigh evidence, detect bias and assess whether a claim holds. The right mode for a debate or an advertisement.
-- **Comprehensive (or informational) listening** — listening to **understand and retain content**; the lecture-hall mode, and the one the academic strategies above are built for.
-- **Appreciative listening** — listening for **enjoyment** (music, a story, a well-made speech).
-- **Discriminative listening** — the most basic: distinguishing **sounds, tone and vocal cues** rather than meaning; it is what tells you a speaker is annoyed before you have parsed a word.
-- **Selective / partial listening** — attending only to parts that interest you. Not a virtue; it is the failure mode behind the deck's "Avoiding Miscommunication".
+Effective listening is crucial for **understanding course content, following instructions, and grasping complex/key concepts**, contributing to **better academic performance**. Especially essential in subjects requiring comprehension of **intricate details from lectures or discussions**.
+
+## Listening practice
+
+A recorded passage on **quantum entanglement** with **six comprehension questions** (definition and challenge to classical physics; the experiments and key findings; why interpretation is challenging; applications in quantum computing and communication; the difficulty of maintaining entanglement over extended periods; how deep understanding of quantum mechanics aids comprehension). The exercise itself is the point: listen, then listen again to spot answers you missed.
+
+**Further reading:** Adler (1983) *How to speak, how to listen*; Bommelje (2011) *LISTEN, LISTEN, LISTEN*; Brownell (1996) *Listening: Attitudes, principles, and skills*. Summary key references: Barnes (1992), Barnes (2008).
 
 ## Commonly confused
 
-- **Hearing vs listening** — hearing is **passive and involuntary** (a physiological event you cannot switch off); listening is **active and voluntary**, a **conscious effort to interpret and understand**. Test: was effort applied? You hear traffic; you listen to a lecture.
-- **Listening vs active listening** — the sheet treats listening as already active, but the deck reserves *active listening* for listening **plus visible engagement** (eye contact, nodding, verbal cues, paraphrasing, clarifying questions). Active listening is listening that the speaker can *see* happening.
-- **Empathetic vs sympathetic listening** — empathetic listening **understands the speaker's emotions from their position**; sympathy feels *for* them from your own and slides into pity or advice. The lesson names only **empathetic**.
-- **Critical vs comprehensive listening** — critical listening **evaluates** a message for soundness; comprehensive listening **absorbs** it for understanding and recall. Using critical mode on a first-pass lecture costs you content; using comprehensive mode on a sales pitch costs you money.
-- **Appreciative vs discriminative listening** — appreciative listens for **enjoyment** of the message; discriminative listens for the **sounds and tone** beneath it, without yet processing meaning.
-- **Paraphrasing vs summarising** — paraphrasing restates **one point in your own words at roughly the same length**, to confirm you have it right; summarising **compresses the whole** into its main points. Both are named techniques; they are not interchangeable.
-- **Clarifying question vs leading question** — a clarifying question **asks the speaker to supply what you missed** ("when you say 'soon', do you mean this week?"); a leading question **plants your own answer** and is the opposite of listening.
-- **Nonverbal communication vs verbal cues** — nonverbal communication here means **reading the speaker's body language and facial expressions**; verbal cues are the short sounds *you* give back ("I see", "mm-hm") to show engagement. One is input, the other is output.
-- **Cultural awareness vs cultural competence** — awareness is **recognising and respecting that communication differs across cultures**; competence is the demonstrated **skill of listening well across those differences**. The sheet uses awareness as the strategy and competence as the acquired skill.
-- **Reflective practice vs reflective listening** — reflective **practice** is the sheet's term: **regular self-assessment of your own listening** after the fact. Reflective **listening** is mirroring a speaker's content and feeling back to them in the moment (a form of active listening). The sheet lists only the first.
-- **Conflict Resolution vs Avoiding Miscommunication** — both deck headings concern trouble, but resolution is about **conflicts that already exist** (letting parties speak without interruption, finding common ground); avoiding miscommunication is **preventive** (ensuring the intended message is accurately received in the first place).
-- **Learning and Growth vs Leadership Effectiveness** — if the listener is **acquiring knowledge or skill**, it is Learning and Growth; if the listener is **making decisions about, or for, other people**, it is Leadership Effectiveness.
-
-*Source note: Week 11's material comes in two strands that do not quite match. The slide deck ("Importance of Listening") gives the three learning objectives, the six importance headings, the listening-practice passage on quantum entanglement with its six model responses, and a closing summary; it never defines hearing, never contrasts it with listening, and never names a type of listening beyond "active". The week's separate Summary sheet ("Topic: Listening") supplies exactly what the deck omits — the hearing/listening definition, the academic-success framing, the strategy list, the cultural-awareness and reflective-practice headings, and the case study "The Art of Effective Listening" — and omits in turn everything the deck's six headings cover. Both strands are set out above because either may be examined. The named types of listening beyond active, empathetic and critical are the standard 100-level set, added because the lesson uses the labels without defining them. Extraction drops ligatures throughout ("effective" as "eective", "different" as "dierent", "attention" as "aention", "better" as "beer", "settings" as "seings", "findings" as "ﬁndings"); read through them.*
+- **Hearing vs listening** — hearing = *passive, involuntary* (sound reaches you); listening = *active, voluntary*, a conscious effort to interpret and understand. If a question says "involuntary," the answer is hearing.
+- **Active listening vs empathetic listening** — active listening is about **demonstrating engagement** (full attention, eye contact, nodding, verbal cues); empathetic listening is about **understanding the speaker's emotions** and expressing empathy. Both appear in the strategies list as separate items.
+- **Paraphrasing vs summarizing** — both are listed separately; paraphrasing restates a point in your own words, summarizing condenses the whole. Do not merge them into one strategy.
+- **Nonverbal communication vs cultural awareness** — nonverbal = reading **body language and facial expressions**; cultural awareness = recognising and respecting **communication differences across cultures**. Culture-clash scenarios go to cultural awareness, not nonverbal.
+- **The six listening strategies vs the six practical strategies** — the strategies list ends in *note-taking* but includes *active listening / nonverbal communication / empathetic listening*; the case-study **practical** strategies swap those three out for *asking clarifying questions, minimizing distractions, avoiding prejudgment*.
+- **Building Relationships vs Conflict Resolution** — relationships = trust, rapport, empathy in ordinary interaction; conflict resolution = letting parties air concerns **without interruption** and finding **common ground**.
+- **Learning and Growth vs Avoiding Miscommunication** — the first is about **gaining** knowledge; the second is about **preventing** misunderstanding, misinterpretation and conflict.
+- **Leadership Effectiveness vs Effective Communication** — leadership names the *outcomes* for leaders (informed decisions, morale, trust and loyalty); effective communication is the general mechanism (respond appropriately, ask relevant questions, give thoughtful feedback).
