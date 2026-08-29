@@ -427,8 +427,12 @@ var DETER   = /^(?:the|a|an|its|his|her|their|each|both|every|this|these|those)\
 var QUALIFY = /^(including|excluding|involving|regarding|concerning|especially|namely|such)$/i;
 
 function isJoint(after){
-  var w = after.trim().replace(/^(?:and|then|or)\s+/i, "").trim();
+  var raw = after.trim();
+  var w = raw.replace(/^(?:and|then|or)\s+/i, "").trim();
   if(w.length < 12) return false;                     // too short to be its own item
+  /* "…on real numbers, then alters the decision box…" — "then" is an explicit
+     sequencer, so it starts a step whatever word follows it. */
+  if(/^(?:and\s+)?then\s/i.test(raw)) return true;
   if(LEADIN.test(w)) return true;
   var first = (w.match(/^[A-Za-z-]+/) || [""])[0];
   if(QUALIFY.test(first)) return false;               // qualifies the item before it
@@ -492,8 +496,10 @@ function briefParts(text){
         return;
       }
     }
+    /* Two parts is enough to be worth splitting once a sentence is long; below that
+       length, splitting in two just makes a short line shorter. */
     var p2 = splitPhrases(sen);
-    if(p2.length >= 3){
+    if(p2.length >= 3 || (p2.length === 2 && sen.length > 190)){
       p2.forEach(function(x){
         x = x.trim().replace(/[.]+$/, "");
         if(x) blocks.push({item: x.charAt(0).toUpperCase() + x.slice(1)});
@@ -517,6 +523,24 @@ function briefParts(text){
   return items >= 3 ? blocks : null;
 }
 
+/* Every place the brief appears renders it through here. It used to be written out
+   raw in three separate views, so fixing one left the others as walls. */
+function briefInto(parent, text, cls){
+  var t = String(text || "").trim();
+  if(!t){ parent.appendChild(el("p", cls||"muted", "No brief for this session.")); return; }
+  var blocks = briefParts(t), holder = el("div","brief"), ul = null;
+  if(blocks){
+    blocks.forEach(function(b){
+      if(b.lead){ ul = null; holder.appendChild(el("p", cls||"muted", esc(b.lead))); }
+      else { if(!ul){ ul = el("ul"); holder.appendChild(ul); }
+             ul.appendChild(el("li", null, esc(b.item))); }
+    });
+  } else {
+    sentences(t).forEach(function(x){ holder.appendChild(el("p", cls||"muted", esc(x))); });
+  }
+  parent.appendChild(holder);
+}
+
 function topicBlock(parent, text, cls){
   var t = String(text||"").trim();
   if(!t) return;
@@ -529,24 +553,8 @@ function topicBlock(parent, text, cls){
   var b = el("button","moreb","Read the full brief");
   b.onclick = function(){
     if(full){ full.remove(); full = null; p.style.display = ""; b.textContent = "Read the full brief"; return; }
-    var split = briefParts(t);
-    full = el("div","brief");
-    if(split){
-      var ul = null;
-      split.forEach(function(b){
-        if(b.lead){
-          ul = null;
-          full.appendChild(el("p", cls||"", esc(b.lead)));
-        } else {
-          if(!ul){ ul = el("ul"); full.appendChild(ul); }
-          ul.appendChild(el("li", null, esc(b.item)));
-        }
-      });
-    } else {
-      /* Not a list — but one paragraph of four hundred characters is still a wall,
-         so give each sentence its own line. */
-      sentences(t).forEach(function(x){ full.appendChild(el("p", cls||"", esc(x))); });
-    }
+    full = el("div");
+    briefInto(full, t, cls);
     p.style.display = "none";
     parent.insertBefore(full, b);
     b.textContent = "Show less";
@@ -1280,22 +1288,7 @@ function buddyPanel(root){
   if(BUDDY.view === "brief"){
     body.innerHTML = "";
     body.appendChild(el("div","lbl","Tonight's brief"));
-    var bt = String((c.chk && c.chk.topic) || "").trim();
-    if(!bt) body.appendChild(el("p","muted","No brief for this session."));
-    else {
-      var blocks = briefParts(bt), holder = el("div","brief");
-      if(blocks){
-        var bul = null;
-        blocks.forEach(function(b){
-          if(b.lead){ bul = null; holder.appendChild(el("p","muted", esc(b.lead))); }
-          else { if(!bul){ bul = el("ul"); holder.appendChild(bul); }
-                 bul.appendChild(el("li", null, esc(b.item))); }
-        });
-      } else {
-        sentences(bt).forEach(function(x){ holder.appendChild(el("p","muted", esc(x))); });
-      }
-      body.appendChild(holder);
-    }
+    briefInto(body, (c.chk && c.chk.topic) || "", "muted");
     body.appendChild(btn("act ghost","← Back", function(){ openBuddy("home"); }));
   }
 
@@ -2457,7 +2450,7 @@ function viewQuiz(root){
   if(BRIEF && q.chk.topic){
     var bc = el("div","card");
     bc.appendChild(el("div","lbl","Tonight's brief"));
-    bc.appendChild(el("p","muted", esc(q.chk.topic)));
+    briefInto(bc, q.chk.topic, "muted");
     root.appendChild(bc);
   }
 
