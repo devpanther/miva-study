@@ -1,0 +1,1079 @@
+{
+  "week": 7,
+  "startsOn": "2026-10-19",
+  "endsOn": "2026-10-25",
+  "generatedOn": "2026-08-28",
+  "days": [
+    {
+      "day": "Mon",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Integration concepts: the antiderivative and the indefinite integral as the whole family of functions with a given derivative, why the arbitrary constant exists and why it cancels in a definite integral, the notation of the indefinite integral of f(x) dx and of the definite integral from a to b, what a definite integral denotes as net signed area and as accumulated change, and the Fundamental Theorem of Calculus together with the properties and the limits of the integration rules",
+        "checkFile": "checks/Mon-MTH_102.md"
+      },
+      "fast": {
+        "course": "GST_112",
+        "topic": "Human rights defined and located in Chapter IV of the 1999 Constitution (Sections 33-46) and the African Charter, and the five common human rights abuses in Nigeria - extra-judicial killing, rape, restriction of freedom of expression, child marriage and domestic violence - with the NHRC's 2020-2021 complaint figures and the VAPP Act 2015"
+      }
+    },
+    {
+      "day": "Tue",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Power in an A.C. circuit as concepts: the instantaneous power p(t) = v(t)i(t) and its oscillation at twice the supply frequency, the derivation of P = Vrms*Irms*cos(phi), why a pure reactance dissipates no average power, and the distinction between real, reactive and apparent power with the power factor cos(phi) = R/Z = P/S",
+        "checkFile": "checks/Tue-PHY_102.md"
+      },
+      "fast": {
+        "course": "CSC_106",
+        "topic": "The DOM as a document tree: element, attribute and text nodes, the five selection methods and what each returns, textContent vs innerHTML and the XSS risk, attribute and dataset changes, createElement/appendChild/removeChild, and click event listeners"
+      }
+    },
+    {
+      "day": "Wed",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Data types, variables and programme objects as concepts: what a data type fixes about size and interpretation, definition versus declaration and the rules for a legal variable name, why variable names are replaced by memory addresses, the six operator categories with their precedence and associativity, and what a programme object is - state in variables, behaviour in methods, and structure versus union versus class",
+        "checkFile": "checks/Wed-COS_102.md"
+      },
+      "fast": {
+        "course": "GST_122",
+        "topic": "Comprehension strategies and SQ3R: the five stages in order - Survey, Question, Read, Recite, Review - what each requires, why the reader generates their own questions, and the supporting strategies of context clues, fact vs opinion, inference, and explicit vs implicit meaning"
+      }
+    },
+    {
+      "day": "Thu",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Integration problems: carrying out indefinite integrals by the power rule after rewriting, the n = -1 case that gives ln|x|, the standard trigonometric and exponential forms, linear inner functions and substitution, evaluating definite integrals as F(b) - F(a) with the limits changed correctly, area problems where part of the curve lies below the axis, and fixing the constant of integration from a given point",
+        "checkFile": "checks/Thu-MTH_102.md"
+      },
+      "fast": {
+        "course": "PHY_108",
+        "topic": "Experiment on discharging a capacitor: the decay law V(t) = V0 * e^(-t/tau) and its contrast with last week's charging law, the procedure order (charge to maximum, then open the switch and start timing), the V-against-t and ln V-against-t graphs with gradient -1/tau and intercept ln V0, and the finishing calculations C = tau/R and the percentage error"
+      }
+    },
+    {
+      "day": "Fri",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Numerical work on power in an A.C. circuit: substituting into X_L = 2*pi*f*L and X_C = 1/(2*pi*f*C), computing Z, I and cos(phi), then P = Vrms*Irms*cos(phi) = Irms^2 R with Q and S, checking by S^2 = P^2 + Q^2, and doing power-factor correction, resonance and instantaneous-power calculations",
+        "checkFile": "checks/Fri-PHY_102.md"
+      },
+      "fast": {
+        "course": "Review",
+        "topic": "Week 7 review: re-work every check question you got wrong Mon-Thu, redo one definite integral and one power-factor calculation cold, and settle which two topics Sunday gets"
+      }
+    },
+    {
+      "day": "Sat",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Code on data types, variables and operators: evaluating an expression by precedence and associativity, predicting both the value and the type an operation produces, integer versus floating-point division and where the cast has to go, character versus numeric versus string values, spotting the type or declaration error in a fragment, and reading structure and union code",
+        "checkFile": "checks/Sat-COS_102.md"
+      },
+      "fast": {
+        "course": "Catch-up",
+        "topic": "Catch-up: sit the Week 6 question sets, now seven days old and due, then clear anything left over from the week"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "code": "PHY_102",
+      "name": "General Physics II",
+      "weekTopics": [
+        "Instantaneous power in an AC circuit: p(t) = v(t)i(t) at every instant, so the DC relation P = VI survives only as an instantaneous statement and must be averaged over a whole cycle before it can be called the power",
+        "Decomposition of the instantaneous power: with v = V0 sin(wt) and i = I0 sin(wt - phi), p(t) = (V0*I0/2)[cos(phi) - cos(2wt - phi)], a constant term plus a ripple at twice the supply frequency whose average over a cycle is zero",
+        "The master formula P_av = (1/2)V0*I0*cos(phi) = Vrms*Irms*cos(phi) = Irms^2 * R, so that only the resistance dissipates and a pure reactance consumes no average power however large its current and voltage",
+        "Real, reactive and apparent power distinguished: P = Vrms*Irms*cos(phi) in watts, Q = Vrms*Irms*sin(phi) in volt-amperes reactive, S = Vrms*Irms in volt-amperes, forming a right-angled power triangle with S^2 = P^2 + Q^2 and tan(phi) = Q/P",
+        "Power factor PF = P/S = cos(phi) = R/Z, dimensionless and between 0 and 1, with the sign of phi carried separately as lagging (inductive, Q positive) or leading (capacitive, Q negative) since cos(phi) is an even function",
+        "The sign of the instantaneous power: p(t) oscillates about P with amplitude S, so its minimum S(cos(phi) - 1) is negative in any circuit with a net reactance and zero only when phi = 0; negative p means energy returning to the source, and for a pure L or C the positive and negative areas cancel exactly",
+        "Element by element: a resistor has p = P(1 - cos 2wt) swinging from 0 to 2P and never negative; an inductor has p = -Vrms*Irms*sin(2wt) with zero mean, storing up to (1/2)L*I0^2 in the magnetic field and returning it; a capacitor behaves identically with the electric field and the opposite sign of Q",
+        "Practical consequences: power-factor correction by a parallel capacitor with Q_C = P[tan(phi1) - tan(phi2)] and C = Q_C/(w*Vrms^2), which leaves P unchanged while cutting the line current and the I^2 R feeder loss; and series resonance at X_L = X_C, w0 = 1/sqrt(LC), where Z falls to R, PF = 1 and the real power Vrms^2/R is a maximum"
+      ],
+      "summaryFile": "PHY_102-Summary.md",
+      "questionsFile": "PHY_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_102/Week-07/Power-in-an-AC-Circuit-PDF.pdf"
+      ]
+    },
+    {
+      "code": "MTH_102",
+      "name": "Elementary Mathematics II (Calculus)",
+      "weekTopics": [
+        "The indefinite integral of f is the whole family of its antiderivatives: (integral of f(x) dx) = F(x) + C means F'(x) = f(x), and the arbitrary constant is there because any two functions with the same derivative differ by a constant",
+        "The power rule for integration, (integral of x^n dx) = x^(n+1)/(n+1) + C for every n except n = -1 - raise the power, then divide by the new power, after rewriting roots and reciprocals as powers - with the excluded case filled by (integral of dx/x) = ln|x| + C, whose modulus is needed because 1/x is defined for negative x while ln x is not",
+        "Integration is linear - it splits over sums and differences and lets constant multiples out - but there is no product, quotient or chain rule for integration, so products must be expanded, quotients divided out and composites substituted before anything can be integrated",
+        "Standard forms: sin x -> -cos x, cos x -> sin x, sec^2 x -> tan x, e^x -> e^x, e^(kx) -> e^(kx)/k, a^x -> a^x/ln a, and 1/(ax + b) -> (1/a) ln|ax + b|, where integration divides by the inner derivative exactly where differentiation multiplied by it, and only when that inner function is linear",
+        "Integration by substitution reverses the chain rule: setting u = g(x) with du = g'(x) dx turns the integral into one in u alone, which works only when the inner derivative is already present up to a constant multiple, and in a definite integral the limits must be converted to u-values or the answer converted back to x",
+        "The definite integral (integral from a to b of f(x) dx) is a number - the limit of the Riemann sums, sum of f(x_i*) times delta x - read either as the net signed area between the curve and the x-axis over [a, b] or as the total accumulated change of a quantity whose rate of change is f",
+        "The Fundamental Theorem of Calculus, d/dx of (integral from a to x of f(t) dt) = f(x) and (integral from a to b of f(x) dx) = F(b) - F(a) for any antiderivative F, together with the properties (zero width, reversal of limits, additivity over intervals, average value) and the split-at-the-roots method for total area as opposed to signed area",
+        "Applications: recovering a curve from its gradient function by fixing C from a given point, and recovering velocity and displacement from acceleration and velocity, where displacement is the integral of v and distance travelled needs the total-area treatment"
+      ],
+      "summaryFile": "MTH_102-Summary.md",
+      "questionsFile": "MTH_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/MTH_102/Week-07/Integrals-Definite-and-Indefinite-Integrals-PDF.pdf"
+      ]
+    },
+    {
+      "code": "COS_102",
+      "name": "Introduction to Problem Solving",
+      "weekTopics": [
+        "A programme is a series of instructions that causes a computer or a microcontroller to perform a particular task; it also contains data and the memory addresses in which the instructions work, and is written in a programming language such as C, C++, Rust, Assembly, Java or Python",
+        "A data type is used for specifying the type of a variable; data types determine the type and size of the data associated with variables, and the three basic types in C are characters (char, 1 byte), integers (int, typically 4 bytes, exact within its range) and floating-point numbers (float 4 bytes, double 8 bytes, approximate to a fixed number of significant digits)",
+        "Variable definition always includes 'data type' followed by 'variable name'; a variable definition is also a declaration but not all declarations are definitions - a declaration gives the compiler a name and a type, a definition additionally reserves the storage, and 'extern int total;' declares without defining",
+        "The rules governing a variable name in C: letters, digits and the underscore only, never beginning with a digit, no spaces or other punctuation, never a keyword, and case-sensitive; and variable names are not stored inside the computer memory - the compiler replaces them with memory location addresses, so the name exists only at compile time",
+        "The six operator categories the course lists - arithmetic (+ - * / % ++ --), relational (== != > < >= <=), logical (&& || !), bitwise (& | ^ ~ << >>), assignment (= += -= etc) and misc (sizeof, address-of &, dereference *, ?: and the cast) - with relational and logical operators yielding the int 1 or 0 and assignment yielding the value it stored",
+        "Precedence and associativity: unary -> * / % -> + - -> << >> -> < <= > >= -> == != -> & -> ^ -> | -> && -> || -> ?: -> assignment -> comma, with the binary operators associating left to right and the unary operators, ?: and assignment associating right to left; short-circuit evaluation means && skips its right operand when the left is false and || skips it when the left is true",
+        "The operand types choose the operation, not the variable being assigned to: 7 / 2 is the int 3 because both operands are int and the fractional part is truncated towards zero, so a cast must be applied to an operand ((float) a / b) and never to the result ((float)(a / b)); and '5' is the char code 53, 5 is the int, and \"5\" is a two-character string",
+        "Programme objects: real-world objects have two main characteristics, state and behaviour, and in a programme the state of an object is stored in variables while the behaviour is described by methods; only the methods of a particular object have access to that object's variables, and different objects interact only through their own methods, which is information hiding and is controlled by the access specifiers public and private",
+        "Structures, unions and classes: a structure is a user-defined data type grouping items of possibly different types into a single type, defined with struct and accessed with the dot syntax, each member having its own storage; a union is defined the same way but all its members start at the same location in memory so it can represent the value of only one member at a time; a class is like a structure but also has methods or functions",
+        "Why use programme objects: objects are not dependent on each other so each can be independently created and maintained, an object can be used in various parts of the programme, a faulty object can be removed and replaced without disturbing the rest of the code (similar to how a car works), and because state is reachable only through methods we control how much we share with the outside world - giving modularity, code reusability and independence"
+      ],
+      "summaryFile": "COS_102-Summary.md",
+      "questionsFile": "COS_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/COS_102/Week-07/Data-Types-Variables-and-Operators-PDF.pdf",
+        "Courses/COS_102/Week-07/Program-Objects-PDF.pdf"
+      ]
+    },
+    {
+      "code": "PHY_108",
+      "name": "General Physics Practical II",
+      "weekTopics": [
+        "Aim of the experiment: study the discharge of a capacitor, determine the time constant tau, determine the experimental capacitance C, and calculate the percentage error for C",
+        "Theory of the capacitor: two conductors separated by a distance d with plate area A and a dielectric of permittivity epsilon, so C = epsilon*A/d; the stored charge is Q = CV; capacitors pass AC and block DC and are used as filters in DC supplies, energy-storage banks for pulsed lasers, timing control, backup power and voltage stabilisation",
+        "Discharge law: once the switch key is opened the capacitor voltage decays exponentially as V(t) = V0 * e^(-t/tau), the mirror of last week's charging law V(t) = V0 * (1 - e^(-t/tau)); at t = 0 the voltmeter reads maximum and the curve falls asymptotically to zero",
+        "Time constant: tau = RC in seconds with R in ohms and C in farads, and putting t = tau in the discharge equation gives V = V0 * e^(-1) = 0.3679*V0, so tau is the time for the voltage to fall to 36.8 percent of its maximum (against 63.2 percent gained when charging), with the capacitor effectively empty after about 5 tau",
+        "Apparatus and circuit: voltmeter, power supply, discharging circuit (capacitor, resistor, switch key), stopwatch and wires in the Praxilabs virtual RC Circuit Discharging laboratory, with the voltmeter connected in parallel across the capacitor",
+        "Procedure in order: connect the circuit, set the supply output voltage, close the switch key until the voltmeter reaches its maximum, then open the switch key and start the stopwatch at that instant, recording the voltmeter reading every 10 seconds for at least 7 (preferably 10) readings before ending the trial and downloading the data sheet",
+        "Data analysis and the two graphs: plot V on the y-axis against t on the x-axis and read tau where V = 0.3679*V0; then linearise as ln V(t) = ln V0 - t/tau and plot ln V against t to get a straight line of gradient -1/tau and intercept ln V0, the two values of tau having to agree",
+        "Calculations and errors: obtain C = tau/R and percentage error = (theoretical - experimental)/theoretical x 100, worked for the sample trial (V0 = 11 V, R = 15 kohm, nominal C = 2200 microfarads, theoretical tau = 33.0 s, graph tau about 32.9 s giving C about 2193 microfarads and 0.3 percent error), plus precautions and sources of error such as reaction time, voltmeter loading and dielectric leakage (both of which shorten the measured tau), lead resistance and component tolerance"
+      ],
+      "summaryFile": "PHY_108-Summary.md",
+      "questionsFile": "PHY_108-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_108/Week-07/Experiment-on-Discharging-a-Capacitor-PDF.pdf"
+      ]
+    },
+    {
+      "code": "GST_112",
+      "name": "Nigerian Peoples and Culture",
+      "weekTopics": [
+        "Human rights are rights inherent to all human beings regardless of race, sex, nationality, ethnicity, language, religion or any other status, and Article 1 of the UN Declaration of Human Rights holds that all human beings are born free and equal in dignity and rights, endowed with reason and conscience and bound to act towards one another in the spirit of brotherhood; they include the right to life and liberty, freedom from slavery and torture, freedom of opinion and expression, and the right to work and education",
+        "In Nigeria human rights are contained in Chapter IV of the 1999 Constitution, Sections 33 to 46, and the African Charter on Human and People's Rights also guarantees that they are enforceable in Nigerian courts of law, the rights named for Nigeria being freedom of religion, freedom of speech, the right to education, freedom of movement and the right to life",
+        "A human rights abuse is anything that harms someone's human rights, including harm to people, communities and the environment; the 1979 Constitution introduced Fundamental Objectives and Directive Principles of State Policy alongside Fundamental Human Rights, shortcomings and inhibitions remain in the 2009 Rules, and the National Human Rights Commission received 1,701,519 cases of rights violations in 2021 against 1,287,280 complaints in 2020, the five common abuses named being extra-judicial killing, rape, restriction of freedom of expression, child marriage and domestic violence",
+        "Extra-judicial killing: the Nigerian security forces, particularly the police and military, have been implicated in extrajudicial killings, torture and excessive use of force, the #EndSARS protests of October 2020 brought international attention to police brutality, and the categories given are law enforcement officials, non-state actors, death sentences and deaths in custody due to the use of force or failure to protect the right to life",
+        "Rape is a serious human rights abuse in Nigeria, with about 367,000 women and gender-related issues recorded in 2021, obstructed by social stigma, underreporting of cases, inadequate legal frameworks, lack of access to justice and limited support services for survivors; and freedom of expression is restricted, with journalists threatened, intimidated, arrested and detained over political corruption and security, and much of the electronic media controlled through the National Broadcasting Commission's regulatory oversight of television and radio stations",
+        "Child marriage is prohibited under international law, and a State violates that law if it fails to establish a minimum age of marriage, enforce it, provide for and enforce the same minimum age for boys and girls, act with due diligence to prevent it, or if it involves public officials in it; 43% of girls in Nigeria are married before their 18th birthday and 16% before the age of 15 (Aliogo, 2023)",
+        "Domestic violence is addressed by the Violence Against Persons (Prohibition) Act signed into law in 2015, which criminalises various forms of abuse and provides mechanisms for reporting, prosecution and support for survivors, though underreporting from social stigma, inadequate enforcement, limited awareness and inaccessible support services persist",
+        "The week's framing of democracy and the rule of law: democracy as government of the people, by the people and for the people, built on strong institutions rather than individuals or groups; the rule of law as governance by law rather than arbitrary decisions of officials, resting on supremacy of law, equality before the law and protection of individual rights through the courts; and Nigeria classified as a hybrid state on the Democracy Index, its democracy a work in progress, with the conclusion that human rights are not validated by the number of treaties a government has signed but by domestic enforcement, every agency being bound to enforce the norms of the Constitution and penalties being imposed regardless of socioeconomic class"
+      ],
+      "summaryFile": "GST_112-Summary.md",
+      "questionsFile": "GST_112-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_112/Week-07/Human-Right-Abuses-in-Nigeria-PDF.pdf"
+      ]
+    },
+    {
+      "code": "GST_122",
+      "name": "Communication in English II",
+      "weekTopics": [
+        "Reading strategies defined as techniques and approaches used to enhance reading comprehension, retention and overall effectiveness with written text, helping the reader process information, extract meaning and gain deeper understanding, with SQ3R as one such strategy rather than the whole category",
+        "SQ3R read as S + Q + 3R and expanding to five stages in a fixed order: Survey, Question, Read, Recite, Review",
+        "Survey: quickly scanning the entire text before detailed reading, taking in headings, subheadings, images, captions and other structural features, to obtain a sense of the text's structure and main ideas",
+        "Question: generating your own questions from what the survey revealed rather than answering the questions supplied by the passage, so that the questions guide the reading and focus it on the most critical information",
+        "Read: the first full contact with the prose, with two stated goals - reading to answer the questions you generated, and reading to engage with the material for a fuller understanding",
+        "Recite: vocalising your thoughts by reciting or verbally explaining the key points, words and concepts in your own words, described in the summary slide as verbally or mentally summarising what you have learned to reinforce understanding",
+        "Review: creating summaries, outlines or notes and revisiting them and the text, the stage tied specifically to maintaining a deep understanding over time and being able to recall and apply it in exams or discussions",
+        "The supporting comprehension strategies from the week's summary sheet: context clues as in-text hints to the meaning of unfamiliar words, inference as a logical conclusion drawn from explicit details plus background knowledge, the fact/opinion distinction between the objective and verifiable and the subjective, and explicit meaning (directly stated, no inference) versus implicit meaning (suggested, requiring inference)"
+      ],
+      "summaryFile": "GST_122-Summary.md",
+      "questionsFile": "GST_122-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_122/Week-07/Comprehension-Strategies-SQ3R-PDF.pdf"
+      ]
+    },
+    {
+      "code": "CSC_106",
+      "name": "Introduction to Web Technologies",
+      "weekTopics": [
+        "The Document Object Model is a programming interface that represents an HTML, XHTML or XML document as a tree of objects, so scripts can read and change a page after it has loaded",
+        "DOM nodes come in three kinds that the exam distinguishes: element nodes (the tags such as div, button and a), attribute nodes (src, alt, id, class) and text nodes (the text inside an element)",
+        "The DOM tree is hierarchical: an element node has a parent node, child nodes and sibling nodes, and the text inside a paragraph is a text-node child of that paragraph rather than of its container",
+        "The document object is the entry point to the DOM and represents the whole page; document.title and every selection call start from it",
+        "Five selection methods and what each returns: getElementById -> one element or null, getElementsByClassName and getElementsByTagName -> a live HTMLCollection, querySelector -> the first CSS-selector match or null, querySelectorAll -> a static NodeList of all matches",
+        "Content modification with textContent (plain text, markup shown literally) versus innerHTML (parsed HTML), and the cross-site-scripting risk of assigning untrusted input through innerHTML",
+        "Attribute modification with getAttribute, setAttribute, removeAttribute and hasAttribute, plus custom data- attributes read through element.dataset, where data-user-id becomes dataset.userId and the value is always a string",
+        "Building and removing nodes with createElement (which produces a detached node), appendChild to attach it to the tree and parent.removeChild to take it out, and event handling with addEventListener(\"click\", handler) where the handler is passed rather than called"
+      ],
+      "summaryFile": "CSC_106-Summary.md",
+      "questionsFile": "CSC_106-Questions.md",
+      "sourcePdfs": [
+        "Courses/CSC_106/Week-07/Document-Object-Model-DOM-PDF.pdf"
+      ]
+    },
+    {
+      "code": "MIVA_COS_111",
+      "name": "Technical Certification I",
+      "weekTopics": [],
+      "summaryFile": "MIVA_COS_111-Summary.md",
+      "questionsFile": null
+    }
+  ],
+  "checks": [
+    {
+      "id": "mon-mth102",
+      "day": "Mon",
+      "course": "MTH_102",
+      "topic": "Integration concepts: the antiderivative and the indefinite integral as the whole family of functions with a given derivative, why the arbitrary constant exists and why it cancels in a definite integral, the notation of the indefinite integral of f(x) dx and of the definite integral from a to b, what a definite integral denotes as net signed area and as accumulated change, and the Fundamental Theorem of Calculus together with the properties and the limits of the integration rules",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "The statement (integral of f(x) dx) = F(x) + C means precisely that:",
+          "options": [
+            "F'(x) = f(x), and every function whose derivative is f has the form F(x) + C",
+            "f'(x) = F(x), so integrating f produces the function it was differentiated from",
+            "F(x) + C is the area under y = f(x) from 0 to x, with C the area to the left of 0",
+            "F(x) is obtained by multiplying f(x) by the small quantity dx and adding the pieces up"
+          ],
+          "answerIndex": 0,
+          "concept": "Indefinite integral as the complete family of antiderivatives",
+          "why": "Integration is defined as differentiation run backwards: F is an antiderivative of f exactly when F' = f, and because any two antiderivatives differ by a constant, F(x) + C captures all of them at once."
+        },
+        {
+          "type": "mcq",
+          "q": "Why does an arbitrary constant appear in every indefinite integral?",
+          "options": [
+            "An indefinite integral carries no limits, so C stands in for the limits that will be substituted later.",
+            "Integration reverses differentiation only approximately, and C absorbs the discrepancy.",
+            "The derivative of a constant is 0, so infinitely many functions share the same derivative and any two of them differ only by a constant.",
+            "C is the value of the antiderivative at x = 0, which the integration process itself cannot supply."
+          ],
+          "answerIndex": 2,
+          "concept": "Antiderivatives are determined only up to an additive constant",
+          "why": "x^3 + 1, x^3 - 7 and x^3 all have derivative 3x^2; conversely if F' = G' then (F - G)' = 0, so F - G is constant, and the answer must therefore be a whole family."
+        },
+        {
+          "type": "mcq",
+          "q": "For a continuous f, the symbol (integral from 2 to 5 of f(x) dx) denotes:",
+          "options": [
+            "a function of x whose derivative is f(x), evaluated between the limits 2 and 5",
+            "a number: the net signed area between y = f(x) and the x-axis over [2, 5]",
+            "F(5) - F(2) + C, so its value is settled only once the arbitrary constant is chosen",
+            "the total area enclosed between the curve and the axis over [2, 5], and so never negative"
+          ],
+          "answerIndex": 1,
+          "concept": "A definite integral is a number, not a function: net signed area",
+          "why": "Both limits are constants, so nothing in the answer varies with x; area below the axis counts negative, which is why the value can be negative or zero."
+        },
+        {
+          "type": "mcq",
+          "q": "The power rule (integral of x^n dx) = x^(n+1)/(n+1) + C excludes n = -1 because:",
+          "options": [
+            "1/x is undefined at x = 0, and an integrand must be defined everywhere",
+            "the power rule holds only for positive exponents, so every negative power is excluded",
+            "1/x has no antiderivative at all",
+            "the formula would give x^0/0; the antiderivative of x^-1 is ln|x| + C"
+          ],
+          "answerIndex": 3,
+          "concept": "The n = -1 exception and the logarithm that fills it",
+          "why": "With n = -1 the divisor n + 1 is zero, so the formula is meaningless there; d/dx(ln|x|) = 1/x supplies the missing antiderivative instead."
+        },
+        {
+          "type": "mcq",
+          "q": "The Fundamental Theorem of Calculus says, in essence:",
+          "options": [
+            "differentiation and integration are separate processes that happen to agree for polynomials",
+            "the accumulation of f over [a, b] can be got from any one antiderivative: (integral from a to b of f dx) = F(b) - F(a)",
+            "the area under a curve equals the gradient of the tangent at the midpoint of the interval",
+            "d/dx of (integral from a to b of f(t) dt) = f(x), for any constants a and b"
+          ],
+          "answerIndex": 1,
+          "concept": "Fundamental Theorem of Calculus as the link between accumulation and antidifferentiation",
+          "why": "It replaces the limit of Riemann sums by a subtraction of two values of any single antiderivative, which is what makes definite integrals computable at all."
+        },
+        {
+          "type": "mcq",
+          "q": "In (integral from 0 to 3 of x^2 dx), the letter x:",
+          "options": [
+            "must be kept, because (integral from 0 to 3 of t^2 dt) is a different quantity",
+            "is the variable the answer depends on, so the result is a function of x",
+            "is a dummy variable: writing t throughout gives the identical number, 9",
+            "records that the answer is to be left in terms of x once the limits are substituted"
+          ],
+          "answerIndex": 2,
+          "concept": "The variable of integration in a definite integral is a dummy",
+          "why": "The value depends only on f and the limits: [x^3/3] from 0 to 3 is 9, and the same computation in t gives 9, because after substituting the limits no variable remains."
+        },
+        {
+          "type": "mcq",
+          "q": "If (integral from 1 to 4 of f(x) dx) = 10 and (integral from 4 to 7 of f(x) dx) = -3, then (integral from 7 to 1 of f(x) dx) =",
+          "options": [
+            "13",
+            "7",
+            "-13",
+            "-7"
+          ],
+          "answerIndex": 3,
+          "concept": "Additivity over adjoining intervals, then reversal of limits",
+          "why": "The integral from 1 to 7 is 10 + (-3) = 7 by additivity, and reversing the limits changes the sign, giving -7."
+        },
+        {
+          "type": "mcq",
+          "q": "A particle moves along a line with velocity v(t) m/s. The quantity (integral from 0 to 4 of v(t) dt) represents:",
+          "options": [
+            "the distance travelled in the first 4 seconds, necessarily positive",
+            "the displacement over the first 4 seconds - the net change in position",
+            "the average velocity over the interval from t = 0 to t = 4",
+            "the velocity gained, i.e. the acceleration accumulated over those 4 seconds"
+          ],
+          "answerIndex": 1,
+          "concept": "The integral of a rate of change is the net change in the quantity",
+          "why": "Velocity is ds/dt, so integrating it from 0 to 4 gives s(4) - s(0), the displacement, which is negative if the particle finishes behind where it started."
+        },
+        {
+          "type": "short",
+          "q": "Explain why the indefinite integral of f is a family of functions while the definite integral from a to b is a single number, and show algebraically why the arbitrary constant cannot affect the value of the definite integral.",
+          "concept": "Indefinite integral = family of functions; definite integral = one number, and C cancels",
+          "why": "An indefinite integral asks which functions have derivative f; since the derivative of a constant is 0 there are infinitely many, differing only by that constant, so the answer must be written F(x) + C. A definite integral asks how much accumulates between two fixed numbers, so its answer is a number. Evaluating with the general antiderivative: [F(x) + C] from a to b = [F(b) + C] - [F(a) + C] = F(b) - F(a); the constant appears in both bracketed values and subtracts out. That is why the theorem may say 'any antiderivative F', and why writing + C after a definite answer is wrong."
+        },
+        {
+          "type": "short",
+          "q": "Explain why the integral of dx/x cannot be done with the power rule, state what the antiderivative is, and say why the modulus signs in ln|x| are needed rather than decorative.",
+          "concept": "The n = -1 case and why the modulus is required",
+          "why": "The power rule needs n + 1 not equal to 0; at n = -1 it produces x^0/0, a division by zero, so it is silent there rather than merely inconvenient. The antiderivative is ln|x| + C because d/dx(ln x) = 1/x. The modulus is needed because 1/x is perfectly well defined for negative x while ln x is not: for x < 0, ln|x| = ln(-x), whose derivative by the chain rule is (-1)/(-x) = 1/x, the same function. So ln|x| works on both sides of the origin, whereas ln x silently restricts you to x > 0 and would make the integral from -3 to -1 of dx/x impossible to write down."
+        },
+        {
+          "type": "short",
+          "q": "A student writes down three rules: (i) integral of [f + g] = integral of f + integral of g, (ii) integral of [k*f] = k times the integral of f for constant k, (iii) integral of [f*g] = (integral of f)(integral of g). Say which are valid, and disprove the invalid one with a specific counterexample.",
+          "concept": "Linearity of integration, and the absence of any product rule for integration",
+          "why": "(i) and (ii) are valid: they follow from the corresponding derivative rules, since differentiating F + G gives f + g and differentiating kF gives kf. (iii) is false. Counterexample: take f(x) = g(x) = x. Then the integral of x*x dx is x^3/3 + C, whereas (integral of x dx)(integral of x dx) = (x^2/2)(x^2/2) = x^4/4 - not even the same degree, so no choice of constants reconciles them. Structurally, differentiating a product gives two terms, u'v + uv', so nothing about a product survives being run backwards term by term; products need expanding, substitution, or (later) integration by parts."
+        },
+        {
+          "type": "short",
+          "q": "The integral from -2 to 2 of x^3 dx is 0, yet the curve y = x^3 clearly encloses a visible region with the x-axis between x = -2 and x = 2. Explain why there is no contradiction, and state how you would compute the total area instead.",
+          "concept": "Net signed area versus total area",
+          "why": "On [-2, 0] the curve lies below the axis, so that part contributes a negative amount; on [0, 2] it lies above and contributes an equal positive amount. Explicitly, the integral from -2 to 0 is [x^4/4] = 0 - 4 = -4 and from 0 to 2 it is 4 - 0 = +4, summing to 0. Nothing has vanished: a definite integral measures net accumulation, not how much region exists. For the total area, split at the zero of the integrand (x = 0), integrate each piece separately and add the absolute values: |-4| + |4| = 8 square units. The same distinction separates displacement (integral of v dt) from distance travelled."
+        }
+      ]
+    },
+    {
+      "id": "tue-phy102",
+      "day": "Tue",
+      "course": "PHY_102",
+      "topic": "Power in an A.C. circuit as concepts: the instantaneous power p(t) = v(t)i(t) and its oscillation at twice the supply frequency, the derivation of P = Vrms*Irms*cos(phi), why a pure reactance dissipates no average power, and the distinction between real, reactive and apparent power with the power factor cos(phi) = R/Z = P/S",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "For v = V0 sin(wt) and i = I0 sin(wt - phi), the instantaneous power p(t) = v*i can be written as a constant plus a single oscillating term. That form is:",
+          "options": [
+            "(V0*I0/2)[cos(phi) - cos(wt - phi)]",
+            "(V0*I0/2)[sin(phi) - sin(2wt - phi)]",
+            "(V0*I0/2)[cos(phi) - cos(2wt - phi)]",
+            "V0*I0*cos(phi)*sin^2(wt)"
+          ],
+          "answerIndex": 2,
+          "concept": "Instantaneous power decomposed by the product-to-sum identity",
+          "why": "sin A sin B = (1/2)[cos(A-B) - cos(A+B)] with A = wt and B = wt - phi gives a constant term carrying the whole average plus a double-frequency ripple. Option a keeps the ripple at w, forgetting that A + B = 2wt - phi. Option b interchanges sine and cosine, which would make the average power zero for a resistor. Option d is the correct form only for phi = 0 and then multiplies by cos(phi) again, double-counting the power factor."
+        },
+        {
+          "type": "mcq",
+          "q": "The instantaneous power in an AC circuit oscillates at:",
+          "options": [
+            "the supply frequency f, in phase with the current",
+            "twice the supply frequency, 2f",
+            "half the supply frequency, f/2",
+            "a frequency that depends on the power factor"
+          ],
+          "answerIndex": 1,
+          "concept": "Power ripple frequency is 2f",
+          "why": "v and i each change sign twice per cycle and, in a resistor, do so together, so their product completes two cycles for every one of the supply - the 2wt term in the decomposition. Option a confuses the frequency of the current with that of its square, option c inverts the relation, and option d confuses the ripple's frequency, always 2f, with its offset, which is what cos(phi) sets."
+        },
+        {
+          "type": "mcq",
+          "q": "An ideal inductor on an AC supply carries a large current and has a large voltage across it, yet its average power is zero. The reason is that:",
+          "options": [
+            "an ideal inductor carries no current, so p = vi is zero at every instant",
+            "the current averages to zero over a cycle, and the average of a product is the product of the averages",
+            "X_L is measured in ohms but is an imaginary quantity, so I^2 X_L cannot be a real power",
+            "the stored magnetic energy is returned to the source in the quarter-cycle after it is taken"
+          ],
+          "answerIndex": 3,
+          "concept": "A reactance stores and returns energy rather than converting it",
+          "why": "Over one quarter-cycle the source pours energy into the magnetic field, up to (1/2)L*I0^2, and over the next it is returned, so p(t) is positive for two quarter-cycles and equally negative for the other two and the mean is exactly zero. Option a is false, since the current is V/X_L. Option b invokes a rule that does not exist: a resistor's current also averages to zero, yet its power does not. Option c confuses complex-number bookkeeping with physics; I^2 X_L is a real number of var."
+        },
+        {
+          "type": "mcq",
+          "q": "For a series AC circuit, the power factor is:",
+          "options": [
+            "cos(phi) = R/Z, the ratio of real power to apparent power",
+            "sin(phi) = X/Z, the ratio of reactive power to apparent power",
+            "tan(phi) = X/R, the ratio of reactive power to real power",
+            "cos(phi) = Z/R, so a circuit with reactance has a power factor above 1"
+          ],
+          "answerIndex": 0,
+          "concept": "Power factor is P/S = cos(phi) = R/Z",
+          "why": "PF = P/S = (VI cos phi)/(VI) = cos(phi), and from the impedance triangle cos(phi) = R/Z. Option b is the reactive factor Q/S, a real quantity but not the power factor. Option c is tan(phi) = Q/P. Option d inverts the ratio and would give values above 1, which is impossible: no circuit can consume more watts than the volt-amperes it draws."
+        },
+        {
+          "type": "mcq",
+          "q": "Two loads each draw the same rms current from the same supply; one has a power factor of 0.80 lagging, the other 0.80 leading. Comparing them:",
+          "options": [
+            "the lagging load consumes more, because inductive loads are the ones that do mechanical work",
+            "the leading load consumes negative real power, since energy flows back to the source",
+            "both consume the same real power, and differ only in the sign of their reactive power",
+            "the leading load has the larger apparent power, because of its extra charging current"
+          ],
+          "answerIndex": 2,
+          "concept": "cos(phi) is an even function, so the sign of phi lives entirely in Q",
+          "why": "P = VI cos(phi) and cos(+36.9 deg) = cos(-36.9 deg) = 0.80, so both consume the same watts; what differs is Q = VI sin(phi), positive for the lagging load and negative for the leading one, which is exactly why one can correct the other. Option a substitutes an application for the mathematics. Option b confuses a leading current with reverse power flow. Option d is wrong because S = VI depends only on the two magnitudes, which are equal by hypothesis."
+        },
+        {
+          "type": "mcq",
+          "q": "A slide states that in a purely reactive AC circuit 'the power can be calculated using P = V x I x sin(theta)'. The correct reading of that expression is:",
+          "options": [
+            "it is right as written - a purely reactive circuit consumes V*I*sin(theta) watts",
+            "it is the reactive power, measured in var; the real power consumed is zero",
+            "it is the apparent power, which for a purely reactive circuit is equal to V*I",
+            "it is the real power for a capacitor only; for an inductor the sign is reversed"
+          ],
+          "answerIndex": 1,
+          "concept": "V*I*sin(theta) is reactive power Q, not power consumed",
+          "why": "It measures the rate at which energy is borrowed from and returned to the source. In a purely reactive circuit theta = +/-90 deg, so V*I*sin(theta) = +/-V*I: the whole apparent power is reactive and the real power is zero. Option a contradicts the deck's own correct statement that reactances do not dissipate energy. Option c confuses Q with S, which happen to be equal in magnitude here only because P = 0. Option d invents a distinction between L and C; both dissipate nothing."
+        },
+        {
+          "type": "mcq",
+          "q": "Over part of every cycle p(t) is negative. This means that:",
+          "options": [
+            "the current has reversed direction, as it does twice in every AC cycle",
+            "the circuit is generating energy, which is how reactance raises the power factor",
+            "the measurement is faulty, since a wattmeter reading is always positive",
+            "energy is flowing from the circuit back to the source at that instant"
+          ],
+          "answerIndex": 3,
+          "concept": "Negative instantaneous power is a reverse flow of energy",
+          "why": "During those instants v and i have opposite signs, so the circuit returns stored field energy to the source rather than taking it. Option a is true but irrelevant: in a resistor the current reverses too, yet v reverses with it and p stays positive. Option b confuses returning borrowed energy with creating it. Option c treats a real feature of p(t) as an instrument fault; a wattmeter reads the average, which is what stays positive for a passive load."
+        },
+        {
+          "type": "mcq",
+          "q": "Transformers and supply cables are rated in kVA rather than kW because:",
+          "options": [
+            "their winding heating and core flux are set by current and voltage, not by the load's phase angle",
+            "the transformer itself consumes reactive power, which must be added to the load's watts",
+            "the power factor of a transformer is always 1, so kVA and kW are numerically equal",
+            "kVA is the larger number and so builds a safety margin into the nameplate"
+          ],
+          "answerIndex": 0,
+          "concept": "Apparent power is what limits plant, because current and voltage set the stresses",
+          "why": "Copper loss goes as I^2 R and core flux is set by V, so a 100 kW load at PF 0.50 stresses a transformer exactly as hard as a 200 kW load at unity power factor - hence a VA rating. Option b invents a load; the transformer's own magnetising vars are small and are not what the rating expresses. Option c is false, since a transformer's power factor is whatever its load makes it. Option d mistakes a physical limit for padding."
+        },
+        {
+          "type": "short",
+          "q": "Starting from p(t) = v(t)i(t), derive P_av = Vrms*Irms*cos(phi). Say precisely which term of your expression vanishes on averaging and why it vanishes, and explain what the surviving term represents physically.",
+          "concept": "Average power is the constant term of p(t); the double-frequency term integrates to zero",
+          "why": "With v = V0 sin(wt) and i = I0 sin(wt - phi), p(t) = V0*I0*sin(wt)*sin(wt - phi), and sin A sin B = (1/2)[cos(A-B) - cos(A+B)] gives p(t) = (V0*I0/2)[cos(phi) - cos(2wt - phi)]. The second term is a pure sinusoid of angular frequency 2w, and the integral of a sinusoid over a whole number of periods is zero, so it contributes nothing to the mean however large its amplitude. Only the first term survives, and being constant it is its own average: P_av = (V0*I0/2)cos(phi) = Vrms*Irms*cos(phi), since Vrms*Irms = (V0/sqrt2)(I0/sqrt2) = V0*I0/2. Physically the constant term is the part of the energy flow that goes one way only - the irreversible conversion in the resistance - while the 2w term is the reversible sloshing of energy into and out of the magnetic and electric fields, transporting energy back and forth but delivering none over a full cycle. Note that p(t) oscillates about P with amplitude V0*I0/2 = S, so it dips below zero whenever cos(phi) < 1."
+        },
+        {
+          "type": "short",
+          "q": "Explain why neither a pure inductor nor a pure capacitor dissipates any average power, although each carries current and has voltage across it. Then explain why this is the reason X_L and X_C enter the impedance at right angles to R rather than being added to it.",
+          "concept": "Reactances store and return energy, so their voltage is entirely in quadrature with the current",
+          "why": "In an inductor the voltage leads the current by exactly 90 deg, so p = vi is positive while both have the same sign and negative while they have opposite signs; because the offset is a quarter of a period the positive and negative areas over one cycle are exactly equal. Energy taken from the source builds the magnetic field, peak store (1/2)L*I0^2, and is handed back intact in the next quarter-cycle. The same argument runs for a capacitor with the current leading by 90 deg and the store (1/2)C*V0^2. Formally cos(+/-90 deg) = 0, so P = Vrms*Irms*cos(phi) = 0. Why this makes them perpendicular: the average power delivered to an element depends only on the component of its voltage that is in phase with the current. A resistor's voltage is entirely in phase (all of it does work); a reactance's voltage is entirely in quadrature (none of it does work). In phase and in quadrature are perpendicular directions in the phasor plane, so the resistive and reactive drops - and hence R and X - combine by Pythagoras, Z = sqrt(R^2 + X^2), not arithmetically. If they simply added, a reactance would raise the dissipation exactly as a resistance does, which the zero-average result forbids."
+        },
+        {
+          "type": "short",
+          "q": "Define real, reactive and apparent power, giving the unit of each, and explain why S^2 = P^2 + Q^2 rather than S = P + Q. Explain also why a power factor of 0.60 tells you the ratio of two of these quantities but not whether the current leads or lags.",
+          "concept": "The power triangle - three quantities, three units, combined in quadrature",
+          "why": "Real (true, active) power P = Vrms*Irms*cos(phi) = I^2 R, in watts (W), is the rate of irreversible conversion to heat or work and the only one that is consumed. Reactive power Q = Vrms*Irms*sin(phi) = I^2 X, in volt-amperes reactive (var), is the rate at which energy is exchanged with the magnetic and electric fields, averaging to zero net transfer. Apparent power S = Vrms*Irms = I^2 Z, in volt-amperes (VA), is the product of the two meter readings and fixes the current the conductors must carry. S^2 = P^2 + Q^2 because P follows the component of the current in phase with the voltage and Q the component in quadrature with it; these are perpendicular components of the same current, so multiplying each by Vrms gives two perpendicular sides of a right-angled triangle with S as hypotenuse - the power triangle is the impedance triangle scaled by I^2. Adding arithmetically double-counts: 800 W with 600 var is 1000 VA, not 1400 VA. A power factor of 0.60 fixes P/S = 0.60 but not the sign of phi, because cos is an even function: phi = +53.1 deg and phi = -53.1 deg give the same cosine. Only the sign of sin(phi), i.e. of Q, distinguishes inductive (current lagging) from capacitive (current leading), which is why a power factor must always be quoted as lagging or leading."
+        },
+        {
+          "type": "short",
+          "q": "The lecture deck states both that 'in a purely reactive AC circuit the power can be calculated using P = V*I*sin(theta)' and, two slides later, that 'reactances do not dissipate energy'. Explain why these cannot both be true as written, identify which one is right, and say what the other expression actually measures.",
+          "concept": "The deck's P = V*I*sin(theta) is reactive power; its later statement is the correct one",
+          "why": "The two are contradictory because the first assigns a non-zero consumption to a circuit that the second says consumes nothing: in a purely reactive circuit theta = +/-90 deg, so V*I*sin(theta) = +/-V*I, the entire apparent power - the largest value the expression can take, in a circuit that by the second statement dissipates none of it. The second statement is correct. A reactance stores energy for a quarter-cycle and returns it in the next, so its average power is exactly zero; equivalently P = V*I*cos(theta) with theta = +/-90 deg gives cos(theta) = 0. The first expression is really Q = Vrms*Irms*sin(theta), the reactive power, in volt-amperes reactive (var) - the amplitude of the energy shuttling back and forth, not a rate of consumption. The correct general statement is P = Vrms*Irms*cos(theta) = Irms^2 R, which automatically returns zero for a pure reactance (R = 0) and Vrms*Irms for a pure resistance (theta = 0). A useful sanity check on any such formula: it must give zero for R = 0 and must never exceed Vrms*Irms."
+        }
+      ]
+    },
+    {
+      "id": "wed-cos102",
+      "day": "Wed",
+      "course": "COS_102",
+      "topic": "Data types, variables and programme objects as concepts: what a data type fixes about size and interpretation, definition versus declaration and the rules for a legal variable name, why variable names are replaced by memory addresses, the six operator categories with their precedence and associativity, and what a programme object is - state in variables, behaviour in methods, and structure versus union versus class",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "The slides state: \"A variable definition is also a declaration, but not all variable declarations are definitions.\" What does this actually mean?",
+          "options": [
+            "A definition is a declaration that also gives the variable a starting value, so 'int x;' is a declaration and 'int x = 0;' is a definition",
+            "A declaration is what you write inside a function body; a definition is what you write outside all functions, at the top of the file",
+            "The programmer writes the declaration and the compiler creates the definition later, when it decides which memory address the variable will occupy",
+            "A declaration introduces a name and its type to the compiler; a definition does that AND reserves the storage, so 'extern int total;' declares total without defining it"
+          ],
+          "answerIndex": 3,
+          "concept": "Declaration vs definition - storage is the dividing line",
+          "why": "A declaration gives the compiler a name and a type so uses of it can be checked; a definition additionally causes bytes to be set aside. Every definition therefore declares, but 'extern int total;' declares without reserving anything. Option (a) is the common confusion of definition with initialisation: 'int x;' is a complete definition whose bytes simply hold whatever was there before."
+        },
+        {
+          "type": "mcq",
+          "q": "\"Variable names are not stored inside the computer memory; the compiler replaces them with memory location addresses.\" Which conclusion follows from that?",
+          "options": [
+            "A variable's name should be kept short, because every extra character in a name occupies extra memory while the program runs",
+            "The name exists only while the program is being compiled; at run time the machine works from an address, so renaming a variable consistently throughout the source cannot change what the compiled program does",
+            "Because the name is discarded, the value stored in a variable cannot be read back once something else has been assigned to it",
+            "The compiler must build a table of names into the finished program so that the running program can look each variable up by name when it needs it"
+          ],
+          "answerIndex": 1,
+          "concept": "Names are compile-time; addresses are run-time",
+          "why": "Once compilation is finished every use of the name has become 'the bytes at such-and-such an address', so the identifier plays no further part - long names cost nothing at run time and a consistent rename produces the same machine code. Option (d) describes a debug symbol table, which exists for the debugger, not so that a program can find its own variables."
+        },
+        {
+          "type": "mcq",
+          "q": "What does specifying a data type actually accomplish?",
+          "options": [
+            "It restricts what the variable may be called, since each type permits a different set of names",
+            "It fixes how many bytes are set aside and how the bit pattern in those bytes is to be interpreted, and therefore which operations are legal on the variable",
+            "It fixes the variable's value for the rest of the program, so that later statements cannot change it",
+            "It makes the program convert whatever the user types at the keyboard into the right form automatically"
+          ],
+          "answerIndex": 1,
+          "concept": "What a type fixes - size, interpretation and legal operations",
+          "why": "The course's wording is that data types determine the type and size of the data associated with variables: size is the byte count reserved, type is the reading rule for those bytes, and together they decide what may be done with them - which is why % is legal on two ints and illegal on a float. Option (c) confuses a type with the const qualifier."
+        },
+        {
+          "type": "mcq",
+          "q": "Beyond \"one of them has a decimal point\", what is the real difference between int and float?",
+          "options": [
+            "An int lives in main memory while a float is held in the processor's floating-point registers",
+            "A float is a signed type and an int is unsigned, which is why float can hold negative values",
+            "An int holds a whole number exactly within a fixed range; a float holds an approximation of a real number to a fixed number of significant digits, so a value such as 0.1 is not stored exactly",
+            "A float can hold every value an int can hold and more besides, so declaring everything float removes a whole class of errors"
+          ],
+          "answerIndex": 2,
+          "concept": "Exactness versus range",
+          "why": "int is exact but bounded; float trades exactness for range by storing a sign, an exponent and a fixed number of significant digits, so most decimal fractions are stored as the nearest representable value. Option (d) is the trap: a float really does reach larger magnitudes, but a 4-byte float cannot hold every 4-byte int exactly, so counting in float accumulates error."
+        },
+        {
+          "type": "mcq",
+          "q": "&& and & are both listed by the course, in different categories. What separates them?",
+          "options": [
+            "&& is the logical AND for integers and & the logical AND for floating-point values",
+            "They are the same operator; & is simply the older spelling that C inherited and && the modern one",
+            "&& is logical: it takes whole truth values, yields 1 or 0, and evaluates its right operand only if the left has not already settled the answer. & is bitwise: it combines the two operands bit by bit and always evaluates both",
+            "& is only ever the address-of operator, so the bitwise AND has to be written &&, which is why the two look alike"
+          ],
+          "answerIndex": 2,
+          "concept": "Logical vs bitwise operators, and short-circuit evaluation",
+          "why": "Two differences, both examinable. && treats each operand as one truth value (zero false, anything else true) and yields 1 or 0, while & pairs the operands bit by bit - which is why 1 & 2 is 0 but 1 && 2 is 1. And && stops as soon as the left operand is false, whereas & always evaluates both."
+        },
+        {
+          "type": "mcq",
+          "q": "Which list puts the operator categories in order from HIGHEST precedence to LOWEST?",
+          "options": [
+            "* / % -> + - -> unary (! - ++ cast) -> == != and < <= > >= at the same level -> && -> || -> =",
+            "= -> && and || -> == != -> < <= > >= -> + - -> * / % -> unary (! - ++ cast)",
+            "unary (! - ++ cast) -> * / % -> + - -> < <= > >= -> == != -> && -> || -> =",
+            "* / % and + - at the same level -> unary (! - ++ cast) -> && -> || -> == != and < <= > >= -> ="
+          ],
+          "answerIndex": 2,
+          "concept": "The precedence ladder",
+          "why": "Unary binds tightest, then multiplicative, then additive, then relational, then equality, then &&, then ||, with assignment near the bottom - which is why 'a + 1 < b * 2 && c != 0' needs no brackets. Option (b) is the exact reversal; option (a) puts the unary operators below the binary arithmetic, which would make !a && b mean !(a && b)."
+        },
+        {
+          "type": "mcq",
+          "q": "Precedence and associativity are two different rules. Which statement gets both right?",
+          "options": [
+            "Precedence decides between operators at different levels; associativity decides between operators at the SAME level, which is the only thing that can settle 6 / 2 * 3",
+            "Precedence applies to arithmetic operators and associativity to logical operators, which is why the logical ones come last",
+            "Associativity decides which operator is applied first and precedence decides which operand each one takes",
+            "Associativity only matters for the assignment operator; every other operator in C is evaluated strictly left to right regardless of level"
+          ],
+          "answerIndex": 0,
+          "concept": "Precedence vs associativity - different levels vs the same level",
+          "why": "Precedence compares operators at different levels (* outranks +). Associativity is the tie-break at one level: / and * are both multiplicative, so only left-to-right associativity settles 6 / 2 * 3 as (6 / 2) * 3 = 9 rather than 6 / (2 * 3) = 1. Assignment and the unary operators associate the other way, which is why a = b = 0 works."
+        },
+        {
+          "type": "mcq",
+          "q": "A 'struct Dog' and a 'union Dog' are written with the same three members - char name[20], char breed[20], char colour[20]. On the course's definitions, what is the difference?",
+          "options": [
+            "The union may group members of different types; the structure requires every member to be the same type, which is why this union is the more useful of the two here",
+            "In the structure each member has its own storage, so all three can hold values at the same time; in the union all members start at the same location in memory, so the variable can represent the value of only one member at a time",
+            "The structure is a user-defined data type while the union is one of C's built-in types, which is why the union needs no struct-style keyword before it",
+            "The union is a structure that has been given methods as well as variables, which is what makes it the halfway step between a structure and a class"
+          ],
+          "answerIndex": 1,
+          "concept": "Structure vs union - same syntax, different memory layout",
+          "why": "The course defines both with the same phrase about grouping items of possibly different types, so that wording cannot separate them; the difference is that all of a union's members start at the same location, making the struct 60 bytes with three independent strings and the union 20 bytes in which writing breed overwrites name. Option (d) confuses union with class, which is the one that adds methods."
+        },
+        {
+          "type": "short",
+          "q": "State what a data type is in the course's own words, name the three basic types it gives for C, and then explain the mechanism: what does \"determines the type AND size of data associated with variables\" mean once the program is running? Use it to explain how the same four bytes of memory could be a perfectly good int and a perfectly good float, and what decides which one they are.",
+          "concept": "A data type as a size plus a reading rule",
+          "why": "A data type is used for specifying the type of a variable, and data types determine the type and size of the data associated with variables; the three basic types in C are characters, integers and floating-point numbers (char, int, float, with double as the wider floating type). Size is the number of bytes the definition reserves - typically 1 for char, 4 for int, 4 for float, 8 for double - and type is the rule for reading those bytes, because memory holds nothing but bits. Four bytes are 32 bits: read as a two's-complement integer they are one number; read as an IEEE-754 value, where the leading bit is a sign, the next eight an exponent and the remaining twenty-three a mantissa, they are a different number entirely. Nothing in the bytes says which, so the DECLARED TYPE decides - and it decides at compile time, because the compiler has already chosen the instructions (integer add or floating add, integer divide or floating divide) and built them into the code. Three consequences: the size fixes the range, which is why an int overflows near +/-2.1 billion; the reading rule fixes which operations are legal, which is why % works on two ints and is rejected on a float; and the reading rule fixes what an operation MEANS, which is why 7 / 2 is 3 with two ints and 3.5 with a floating operand."
+        },
+        {
+          "type": "short",
+          "q": "Distinguish declaration, definition and initialisation, with one example of each. Explain why C needs the declaration/definition distinction at all - what would a programmer be unable to do if every mention of a name reserved storage? Then state the rules that make a variable name legal in C, and say which rule each of 2ndScore, 'total score', float and unit-price breaks.",
+          "concept": "Declaration, definition, initialisation, and the naming rules",
+          "why": "A DECLARATION tells the compiler that a name exists and what type it has, so uses of it can be checked: 'extern int total;'. A DEFINITION does that and also reserves the storage: 'int total;' - the course's rule, data type followed by variable name. An INITIALISATION is a definition that also supplies a starting value: 'int total = 0;'. Every definition is a declaration; not every declaration is a definition; and a definition without an initialiser leaves the reserved bytes holding whatever was there, which is not zero and not nothing. WHY THE DISTINCTION IS NEEDED: a real program is built from several source files compiled separately, and each must be checkable on its own. If every mention reserved storage, a variable shared between two files would be created twice - two addresses, two values, one name - and neither file could refer to the other's. The declaration lets file B say 'an int called total exists, defined elsewhere', so the linker can join the reference to the single definition; the same split is what makes function prototypes work. NAMING RULES: letters, digits and underscores only; must not begin with a digit; no spaces or other punctuation; must not be a keyword; case-sensitive, so Total and total are two variables. So 2ndScore begins with a digit; 'total score' contains a space and would be read as two tokens; float is a reserved keyword naming a type; unit-price contains a character that is not permitted and would be read as unit minus price."
+        },
+        {
+          "type": "short",
+          "q": "Explain how a real-world object's state and behaviour become parts of a programme object, and what the course means by \"only the methods of a particular object have access to the variables of that object\" and \"different objects can only interact with each other through their own individual methods\". Then explain the mechanism by which that single restriction produces the four benefits the course claims - independent creation and maintenance, reuse in various parts of the programme, safe removal and replacement, and information hiding.",
+          "concept": "State in variables, behaviour in methods, and encapsulation as the mechanism behind every benefit",
+          "why": "Real-world objects have two main characteristics, state and behaviour: the course's dog has the state name, colour, breed, hungry and the behaviour barking, fetching, wagging its tail. In a programme object the mapping is exact - the state of an object is stored in variables and the behaviour is described by methods - and every object has its OWN variables and methods, so two dog objects have two separate name variables. The restriction is that the variables are not reachable from outside: the only doors into an object's state are the methods it publishes, which the access specifiers private and public control, and which data encapsulation names (hiding the implementation details so the user interacts only through public methods). Each benefit follows from that one fact. INDEPENDENT CREATION AND MAINTENANCE: since no outside code touches the variables, nothing outside can depend on how they are arranged, so the internals can be rewritten and every user still compiles, provided the method signatures hold. REUSE: the object carries its own state, so it does not depend on a surrounding context and needs no shared global set up before it will work. REMOVAL AND REPLACEMENT ('similar to how a car works'): the rest of the code only ever spoke to the object through its methods, so a replacement with the same method signatures drops straight in. INFORMATION HIDING: because state is reachable only through methods, the author chooses which methods exist and therefore controls how much is shared - a get_name() with no matching setter makes the name readable and unchangeable, which no arrangement of loose variables can enforce."
+        },
+        {
+          "type": "short",
+          "q": "Explain the difference between a structure, a union and a class, saying for each what it can hold and how its members are laid out in memory. Given the three members char name[20], char breed[20], char colour[20], state the size of the structure and the size of the union and explain why they differ. Then say what a programmer gains by choosing a union, and what they must be careful about in return.",
+          "concept": "Structure, union and class - what each holds and how it is laid out",
+          "why": "A STRUCTURE is a user-defined data type that groups items of possibly different types into a single type, defined with struct and accessed with the dot syntax; it holds variables only, and each member gets its own storage laid out one after another, so all members hold values at once and the size is the sum of the members plus any alignment padding. A UNION is defined the same way and also holds variables only, but all of its members start at the same location in memory, overlapping completely, so a union variable can represent the value of only one member at a time and its size is the size of its LARGEST member. A CLASS is similar to a structure but in addition to variables it also has methods or functions - the dog class has name, breed, colour and get_name() - and it adds access specifiers (public, private) that make encapsulation enforceable rather than conventional. SIZES: each member here is char[20], and char needs no alignment padding, so sizeof(struct Dog) = 20 + 20 + 20 = 60 bytes because the three arrays sit at three different offsets, while sizeof(union Dog) = 20 bytes because all three start at offset 0 and share the same 20 bytes; a union must be big enough for its largest member and no bigger. WHAT THE UNION BUYS: memory. Where a value is known to be one of several alternatives and never more than one at a time - a token that is either an integer, a float or a string - the union stores it in the space of the largest alternative rather than the sum of all of them, which matters in the small-memory settings C is used in. THE PRICE: the type system no longer tracks which alternative is live. Writing one member silently destroys the others, and reading a member that was not the last one written gives the previous member's bytes reinterpreted, which is meaningless rather than merely wrong. The programmer must carry that knowledge separately - conventionally by wrapping the union in a STRUCTURE together with a small tag variable recording which member is currently valid, and checking the tag before every read."
+        }
+      ]
+    },
+    {
+      "id": "thu-mth102",
+      "day": "Thu",
+      "course": "MTH_102",
+      "topic": "Integration problems: carrying out indefinite integrals by the power rule after rewriting, the n = -1 case that gives ln|x|, the standard trigonometric and exponential forms, linear inner functions and substitution, evaluating definite integrals as F(b) - F(a) with the limits changed correctly, area problems where part of the curve lies below the axis, and fixing the constant of integration from a given point",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "Integral of (6x^2 - 8/x^3 + 3/x) dx =",
+          "options": [
+            "2x^3 - 4/x^2 + 3 ln|x| + C",
+            "6x^3 + 4/x^2 + 3 ln|x| + C",
+            "2x^3 + 4/x^2 + 3 ln|x| + C",
+            "2x^3 + 24/x^4 + 3 ln|x| + C"
+          ],
+          "answerIndex": 2,
+          "concept": "Power rule after rewriting, including the sign from a negative exponent and the ln case",
+          "why": "6x^2 gives 6x^3/3 = 2x^3; -8x^-3 gives -8 x^-2/(-2) = +4/x^2, the two negatives making a plus; 3/x is the excluded exponent and gives 3 ln|x|."
+        },
+        {
+          "type": "mcq",
+          "q": "Integral of (4x - 1)^7 dx =",
+          "options": [
+            "(4x - 1)^8/32 + C",
+            "(4x - 1)^8/8 + C",
+            "(4x - 1)^8/2 + C",
+            "28(4x - 1)^6 + C"
+          ],
+          "answerIndex": 0,
+          "concept": "Integrating a power of a linear function: divide by the new power and by the inner derivative",
+          "why": "The new power is 8 and the inner derivative is the constant 4, so the divisor is 8 x 4 = 32; differentiating (4x-1)^8/32 gives back (4x-1)^7."
+        },
+        {
+          "type": "mcq",
+          "q": "Integral of e^(-3x) dx =",
+          "options": [
+            "-3e^(-3x) + C",
+            "(1/3)e^(-3x) + C",
+            "e^(-3x)/(-3x) + C",
+            "-(1/3)e^(-3x) + C"
+          ],
+          "answerIndex": 3,
+          "concept": "Integral of e^(kx) is e^(kx)/k: divide by the inner derivative, sign included",
+          "why": "Here k = -3, so the factor is -1/3; check by differentiating: -(1/3)(-3)e^(-3x) = e^(-3x)."
+        },
+        {
+          "type": "mcq",
+          "q": "Integral of (2 sin x - 3 cos x) dx =",
+          "options": [
+            "2 cos x - 3 sin x + C",
+            "-2 cos x - 3 sin x + C",
+            "-2 cos x + 3 sin x + C",
+            "2 cos x + 3 sin x + C"
+          ],
+          "answerIndex": 1,
+          "concept": "Trigonometric integrals reverse the derivative signs",
+          "why": "Integration sends sin x to -cos x and cos x to +sin x, so 2 sin x gives -2 cos x and -3 cos x gives -3 sin x."
+        },
+        {
+          "type": "mcq",
+          "q": "Integral from 1 to 2 of (3x^2 - 4x + 5) dx =",
+          "options": [
+            "10",
+            "-6",
+            "6",
+            "5"
+          ],
+          "answerIndex": 2,
+          "concept": "Evaluating a definite integral as F(b) - F(a)",
+          "why": "F(x) = x^3 - 2x^2 + 5x, so F(2) = 10 and F(1) = 4, giving 10 - 4 = 6."
+        },
+        {
+          "type": "mcq",
+          "q": "Integral from 0 to 1 of x(x^2 + 1)^3 dx =",
+          "options": [
+            "15/8",
+            "15/4",
+            "1/8",
+            "15/16"
+          ],
+          "answerIndex": 0,
+          "concept": "Definite integration by substitution, with the limits converted to u-values",
+          "why": "With u = x^2 + 1, x dx = du/2 and the limits run u = 1 to u = 2, so the value is (1/2)[u^4/4] from 1 to 2 = (16 - 1)/8 = 15/8."
+        },
+        {
+          "type": "mcq",
+          "q": "The area enclosed between the curve y = x^2 - 4x and the x-axis is:",
+          "options": [
+            "64/3",
+            "16/3",
+            "-32/3",
+            "32/3"
+          ],
+          "answerIndex": 3,
+          "concept": "Area where the curve lies below the axis: take the magnitude of the signed integral",
+          "why": "The roots are x = 0 and x = 4 and the curve is below the axis between them, so the integral is [x^3/3 - 2x^2] from 0 to 4 = 64/3 - 32 = -32/3 and the area is 32/3."
+        },
+        {
+          "type": "mcq",
+          "q": "A curve satisfies dy/dx = 4x - 6 and passes through the point (1, 4). Its equation is:",
+          "options": [
+            "y = 2x^2 - 6x + 4",
+            "y = 2x^2 - 6x + 8",
+            "y = 2x^2 - 6x",
+            "y = 2x^2 - 6x + C"
+          ],
+          "answerIndex": 1,
+          "concept": "Fixing the constant of integration from a boundary condition",
+          "why": "Integrating gives y = 2x^2 - 6x + C; substituting (1, 4) gives 2 - 6 + C = 4, so C = 8."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate the integral of (2x + 1)/sqrt(x) dx, showing the rewriting step in full, and explain why you may not integrate the numerator and the denominator separately. Verify your answer.",
+          "concept": "Rewrite a quotient as separate powers: there is no quotient rule for integration",
+          "why": "Rewrite (2x + 1)/sqrt(x) = (2x + 1)x^(-1/2) = 2x^(1/2) + x^(-1/2). Then the integral of 2x^(1/2) is 2 x^(3/2)/(3/2) = (4/3)x^(3/2), and the integral of x^(-1/2) is x^(1/2)/(1/2) = 2 sqrt(x), so the answer is (4/3)x^(3/2) + 2 sqrt(x) + C. Top and bottom may not be integrated separately because integration splits only over sums and constant multiples; the derivative rules that would have to be reversed for a quotient or a product each produce two terms, not one. Check by differentiating: (4/3)(3/2)x^(1/2) + 2(1/2)x^(-1/2) = 2 sqrt(x) + 1/sqrt(x) = (2x + 1)/sqrt(x)."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate the integral from 0 to 1 of x^2 (x^3 + 2)^4 dx by substitution, twice: once by changing the limits to u-values and once by converting back to x. State the number a student gets who evaluates the u-antiderivative at the original x-limits, and say exactly what has gone wrong.",
+          "concept": "In a substituted integral the limits belong to the new variable",
+          "why": "Put u = x^3 + 2, so du = 3x^2 dx and x^2 dx = du/3. Changing limits: x = 0 gives u = 2 and x = 1 gives u = 3, so the value is (1/3)[u^5/5] from 2 to 3 = (243 - 32)/15 = 211/15. Converting back: (x^3 + 2)^5/15 evaluated from 0 to 1 = (3^5 - 2^5)/15 = 211/15, the same. A student who evaluates u^5/15 at the x-limits 0 and 1 gets (1 - 0)/15 = 1/15, wrong by a factor of over 200: the numbers 0 and 1 are values of x, and once the integral is written in u the limits must be the matching values of u. Either change them, or change back - never mix."
+        },
+        {
+          "type": "short",
+          "q": "Find the total area enclosed between the curve y = x^3, the x-axis and the lines x = -1 and x = 2. Explain why this is not the same as the integral from -1 to 2 of x^3 dx and give both numbers.",
+          "concept": "Total area needs a split at every crossing of the axis; the integral gives net signed area",
+          "why": "The curve crosses the axis at x = 0, so split there. The integral from -1 to 0 is [x^4/4] = 0 - 1/4 = -1/4 (below the axis), so that piece has area 1/4; the integral from 0 to 2 is 4 - 0 = 4 (above). Total area = 1/4 + 4 = 17/4. The plain definite integral is [x^4/4] from -1 to 2 = 4 - 1/4 = 15/4, smaller by 1/2 - exactly twice the sub-axis piece, because it was subtracted rather than added. A definite integral measures net signed area, while 'the area enclosed' counts every piece positively; the two agree only when the curve keeps one sign throughout."
+        },
+        {
+          "type": "short",
+          "q": "A student writes the integral of (2x + 5)^3 dx = (2x + 5)^4/8 + C, which is correct, and then by the same reasoning writes the integral of (x^2 + 5)^3 dx = (x^2 + 5)^4/(8x) + C. Explain why the first works and the second does not, demonstrate the failure by differentiating, and integrate (x^2 + 5)^3 correctly.",
+          "concept": "Dividing by the inner derivative is legal only when that derivative is a constant",
+          "why": "The first is right because the inner function 2x + 5 is linear: its derivative is the constant 2, and constants may be taken in and out of an integral freely; check by differentiating (2x+5)^4/8, which gives 4(2x+5)^3 (2)/8 = (2x+5)^3. The second is wrong because the inner derivative 2x is a variable, and dividing by it treats it as a constant. Differentiating exposes this, since the quotient rule now produces an extra term: d/dx[(x^2+5)^4/(8x)] = [4(x^2+5)^3 (2x)(8x) - (x^2+5)^4 (8)]/(64x^2) = (x^2+5)^3 (7x^2 - 5)/(8x^2), which is not (x^2+5)^3; at x = 1 the integrand is 216 while this gives 54. Substitution does not save it either: u = x^2 + 5 needs du = 2x dx and there is no x in the integrand to supply it (by contrast the integral of x(x^2+5)^3 dx does work, precisely because that x is present). The correct route is to expand: (x^2 + 5)^3 = x^6 + 15x^4 + 75x^2 + 125, so the integral is x^7/7 + 3x^5 + 25x^3 + 125x + C."
+        }
+      ]
+    },
+    {
+      "id": "fri-phy102",
+      "day": "Fri",
+      "course": "PHY_102",
+      "topic": "Numerical work on power in an A.C. circuit: substituting into X_L = 2*pi*f*L and X_C = 1/(2*pi*f*C), computing Z, I and cos(phi), then P = Vrms*Irms*cos(phi) = Irms^2 R with Q and S, checking by S^2 = P^2 + Q^2, and doing power-factor correction, resonance and instantaneous-power calculations",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A coil of resistance 9.0 ohm and inductance 38.2 mH is connected across a 120 V rms, 50 Hz supply. The rms current drawn is:",
+          "options": [
+            "13.3 A",
+            "8.00 A",
+            "5.71 A",
+            "10.0 A"
+          ],
+          "answerIndex": 1,
+          "concept": "Reactance first, then combine with R in quadrature",
+          "why": "X_L = 2*pi*f*L = 2*pi*(50)(0.0382) = 12.0 ohm; Z = sqrt(9^2 + 12^2) = sqrt(225) = 15.0 ohm; I = 120/15.0 = 8.00 A. Option a is 120/9, ignoring the reactance. Option c is 120/(9 + 12), adding R and X arithmetically instead of in quadrature. Option d is 120/12, ignoring the resistance."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same coil on the 120 V rms supply, the real power consumed is:",
+          "options": [
+            "960 W",
+            "1600 W",
+            "768 W",
+            "576 W"
+          ],
+          "answerIndex": 3,
+          "concept": "P = I^2 R; only the resistance dissipates",
+          "why": "P = (8.00)^2 (9.0) = 576 W, confirmed by P = V*I*cos(phi) = (120)(8.00)(0.600) = 576 W. Option a is S = V*I = 960 VA with the power factor left out. Option b is V^2/R = 14400/9, using the whole supply voltage across R although only V_R = I*R = 72 V is there. Option c is I^2 X_L = 768 var, the reactive power, which nothing consumes."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same coil on the 120 V rms supply, the power factor is:",
+          "options": [
+            "0.60 lagging",
+            "0.80 lagging",
+            "0.60 leading",
+            "1.67"
+          ],
+          "answerIndex": 0,
+          "concept": "PF = cos(phi) = R/Z, and an inductive circuit lags",
+          "why": "9/15 = 0.600, and since the reactance is inductive the current lags the voltage, so it is 0.600 lagging. Option b is sin(phi) = X/Z = 12/15, the reactive factor. Option c has the right number but the wrong sense, which would require a net capacitive reactance. Option d is Z/R = 15/9, an inverted ratio that is impossible: a power factor above 1 would mean more watts consumed than volt-amperes drawn."
+        },
+        {
+          "type": "mcq",
+          "q": "A series circuit has R = 16 ohm, X_L = 30 ohm and X_C = 18 ohm across a 100 V rms supply. The impedance is:",
+          "options": [
+            "64 ohm",
+            "50.6 ohm",
+            "20 ohm",
+            "12 ohm"
+          ],
+          "answerIndex": 2,
+          "concept": "Net reactance first: X_L and X_C subtract, then combine with R in quadrature",
+          "why": "X = 30 - 18 = 12 ohm, so Z = sqrt(16^2 + 12^2) = sqrt(400) = 20 ohm. Option a adds all three as though they were series resistances. Option b is sqrt(16^2 + 48^2) = 50.6 ohm, adding the two reactances instead of subtracting them. Option d is the net reactance alone, ignoring R."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same series circuit (R = 16 ohm, X_L = 30 ohm, X_C = 18 ohm, 100 V rms), the real power consumed is:",
+          "options": [
+            "400 W",
+            "500 W",
+            "300 W",
+            "625 W"
+          ],
+          "answerIndex": 0,
+          "concept": "P = I^2 R after finding I from the full impedance",
+          "why": "I = 100/20 = 5.00 A, so P = (25.0)(16) = 400 W, confirmed by V*I*cos(phi) = (100)(5.00)(0.800) = 400 W. Option b is S = V*I = 500 VA with the power factor omitted. Option c is I^2 X = (25.0)(12) = 300 var, the reactive power. Option d is V^2/R = 10000/16, using the supply voltage across R rather than V_R = 80 V, and 80^2/16 = 400 W."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same series circuit (R = 16 ohm, X_L = 30 ohm, X_C = 18 ohm), the circuit is:",
+          "options": [
+            "capacitive, with the current leading the supply voltage by 36.9 deg",
+            "inductive, with the current lagging the supply voltage by 36.9 deg",
+            "inductive, with the current lagging the supply voltage by 53.1 deg",
+            "at resonance, since R is greater than the net reactance"
+          ],
+          "answerIndex": 1,
+          "concept": "X_L > X_C makes the circuit inductive; tan(phi) = X/R fixes the angle",
+          "why": "The net reactance is +12 ohm, so the current lags, and tan(phi) = 12/16 = 0.750 gives phi = 36.9 deg, consistent with cos(phi) = 0.800. Option a has the character backwards, which would need X_C > X_L. Option c has the character right but inverts the tangent, using R/X = 16/12 to get 53.1 deg. Option d confuses resistance dominating the net reactance with resonance, which requires X_L = X_C exactly."
+        },
+        {
+          "type": "mcq",
+          "q": "R = 20 ohm, L = 0.50 H and C = 8.0 microfarad are in series across a 60 V rms supply driven at the resonant frequency. The current is:",
+          "options": [
+            "0 A",
+            "0.12 A",
+            "0.24 A",
+            "3.00 A"
+          ],
+          "answerIndex": 3,
+          "concept": "At series resonance the reactances cancel and Z falls to R",
+          "why": "w0 = 1/sqrt(LC) = 1/sqrt(0.50 x 8.0e-6) = 1/sqrt(4.0e-6) = 500 rad/s, so X_L = X_C = 250 ohm and Z = R = 20 ohm, giving I = 60/20 = 3.00 A, a maximum. Option a is the parallel (rejector) resonance result, where the impedance is a maximum, applied to a series circuit. Option b is 60/sqrt(20^2 + 500^2), adding the reactances instead of subtracting them. Option c is 60/250, using X_L alone as the impedance."
+        },
+        {
+          "type": "mcq",
+          "q": "In that same resonant circuit (R = 20 ohm, L = 0.50 H, C = 8.0 microfarad, 60 V rms), the rms voltage across the inductor is:",
+          "options": [
+            "60 V",
+            "0 V",
+            "750 V",
+            "250 V"
+          ],
+          "answerIndex": 2,
+          "concept": "At resonance V_L and V_C are equal and opposite, and each can greatly exceed the supply",
+          "why": "V_L = I*X_L = (3.00)(250) = 750 V, and V_C is the same 750 V in antiphase, so they cancel in the vector sum and the supply still sees only V_R = (3.00)(20) = 60 V. The factor 750/60 = 12.5 is the Q-factor X_L/R = 250/20. Option a assumes no drop can exceed the supply. Option b confuses V_L and V_C cancelling each other with each being zero. Option d quotes the reactance in ohms as though it were a voltage."
+        },
+        {
+          "type": "short",
+          "q": "A coil of resistance 40 ohm and inductance 95.5 mH is connected across a 240 V rms, 50 Hz supply. Find X_L, Z, the rms current, the power factor, and P, Q and S. Verify P and Q by a second route and check the power triangle.",
+          "concept": "The full power set for a series RL circuit, cross-checked two ways",
+          "why": "X_L = 2*pi*f*L = 2*pi*(50)(0.0955) = 30.0 ohm. Z = sqrt(40^2 + 30^2) = sqrt(2500) = 50.0 ohm. I = 240/50.0 = 4.80 A. cos(phi) = R/Z = 40/50 = 0.800 lagging, phi = 36.9 deg with the current lagging since the reactance is inductive. P = V*I*cos(phi) = (240)(4.80)(0.800) = 921.6 W, and by the second route P = I^2 R = (23.04)(40) = 921.6 W. Q = V*I*sin(phi) = (240)(4.80)(0.600) = 691.2 var inductive, and Q = I^2 X_L = (23.04)(30) = 691.2 var. S = V*I = 1152 VA, and also I^2 Z = (23.04)(50) = 1152 VA. Triangle check: 921.6^2 + 691.2^2 = 849346.6 + 477757.4 = 1327104 = 1152^2. Note that V^2/R = 57600/40 = 1440 W is not the answer, because only V_R = I*R = 192 V sits across the resistance, and 192^2/40 = 921.6 W."
+        },
+        {
+          "type": "short",
+          "q": "A workshop draws 9.6 kW from a 240 V rms, 50 Hz supply at a power factor of 0.60 lagging. Find the apparent power, the line current and the reactive power; then find the parallel capacitance that would raise the power factor to unity, the new line current, and the fractional change in the I^2 R loss in the feeder cable.",
+          "concept": "Power-factor correction changes Q and the current, never P",
+          "why": "S = P/PF = 9600/0.600 = 16000 VA = 16.0 kVA. I = S/V = 16000/240 = 66.7 A. sin(phi) = 0.800, so Q = S*sin(phi) = 12800 var = 12.8 kvar lagging. To reach unity the capacitor must supply all of it, Q_C = 12800 var, so C = Q_C/(w*V^2) = 12800/[(314.16)(240^2)] = 12800/18096000 = 7.07e-4 F, about 707 microfarad. Check: I_C = w*C*V = (314.16)(7.07e-4)(240) = 53.3 A and (240)(53.3) = 12800 var, this current circulating only between the capacitor and the load, not in the feeder. With PF = 1 the supply carries only the in-phase component, I = P/V = 9600/240 = 40.0 A, down from 66.7 A. The feeder loss goes as I^2, so it falls to (40.0/66.7)^2 = 0.360, a 64 per cent reduction, while the workshop still consumes exactly 9.6 kW; the transformer requirement drops from 16.0 kVA to 9.6 kVA."
+        },
+        {
+          "type": "short",
+          "q": "A 110 V rms, 50 Hz supply is connected first across a 22 ohm resistor and then across a pure inductor of reactance 22 ohm. For each, write p(t), and give its peak value, its average value and its ripple frequency. Explain why the two averages differ although the two rms currents are the same.",
+          "concept": "The same rms current can carry all the power or none of it, depending on phi",
+          "why": "Resistor: I = 110/22 = 5.00 A rms; V0 = sqrt2 (110) = 155.6 V and I0 = sqrt2 (5.00) = 7.071 A, so V0*I0 = 1100 W. With v and i in phase, p = V0*I0*sin^2(wt) = 1100 sin^2(314.2 t) = 550[1 - cos(628.3 t)] W: peak 1100 W, minimum 0, average 550 W (= Vrms*Irms = 550 = I^2 R = (25.0)(22)), ripple frequency 2f = 100 Hz, and p is never negative. Inductor: X_L = 22 ohm gives the same I = 5.00 A rms, but the current lags by 90 deg, so i = -I0 cos(wt) and p = -V0*I0*sin(wt)cos(wt) = -(V0*I0/2) sin(2wt) = -550 sin(628.3 t) W: peak +/-550 W, average 0, ripple frequency again 100 Hz, and p is negative for exactly half of every cycle. The averages differ because P = Vrms*Irms*cos(phi) and the circuits differ only in phi: 0 deg for the resistor (cos phi = 1) and 90 deg for the inductor (cos phi = 0). In the resistor v and i reverse together, so the product is positive throughout and every joule delivered becomes heat; in the inductor they are a quarter-cycle apart, so the positive and negative areas are exactly equal and the energy taken to build the field, (1/2)L*I0^2 = 1.75 J per quarter-cycle, is handed straight back."
+        },
+        {
+          "type": "short",
+          "q": "A student analysing a series circuit with R = 8.0 ohm and X_L = 6.0 ohm on a 100 V rms supply writes: 'Z = 8 + 6 = 14 ohm, so I = 100/14 = 7.14 A and P = (100)(7.14) = 714 W.' Identify both errors, give the correct values of Z, I, PF, P, Q and S, and state the single check that would have exposed the mistake without redoing the whole calculation.",
+          "concept": "Reactance adds in quadrature, and V*I is apparent power, not real power",
+          "why": "Error 1: Z was found by adding R and X_L arithmetically. They are 90 deg apart, so Z = sqrt(R^2 + X_L^2) = sqrt(64 + 36) = 10.0 ohm, not 14 ohm. Error 2: the power factor was omitted, so (100)(7.14) is an apparent power in VA, whereas real power needs the factor cos(phi). Correct values: Z = 10.0 ohm, I = 100/10.0 = 10.0 A, cos(phi) = R/Z = 8/10 = 0.800 lagging (phi = 36.9 deg), P = (100)(10.0)(0.800) = 800 W, Q = (100)(10.0)(0.600) = 600 var, S = 1000 VA, and 800^2 + 600^2 = 1000000 = 1000^2. The check that exposes it: the real power must also equal I^2 R, and the student's own numbers give (7.14)^2 (8.0) = 408 W, nowhere near the 714 W claimed - two routes to the same quantity disagreeing by three-quarters. Equivalently, P can never exceed V*I*cos(phi) <= V*I, so claiming P = V*I asserts a power factor of 1 in a circuit that plainly has 6 ohm of reactance. Computing P by both V*I*cos(phi) and I^2 R, and confirming S^2 = P^2 + Q^2, catches essentially every slip of this kind in one line each."
+        }
+      ]
+    },
+    {
+      "id": "sat-cos102",
+      "day": "Sat",
+      "course": "COS_102",
+      "topic": "Code on data types, variables and operators: evaluating an expression by precedence and associativity, predicting both the value and the type an operation produces, integer versus floating-point division and where the cast has to go, character versus numeric versus string values, spotting the type or declaration error in a fragment, and reading structure and union code",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "What is stored in r?    int r = 20 - 6 / 2 * 3;",
+          "options": [
+            "11",
+            "19",
+            "21",
+            "51"
+          ],
+          "answerIndex": 0,
+          "concept": "* / % share one precedence level, and that level associates left to right",
+          "why": "Precedence alone cannot settle this, because / and * are at the same level; associativity does. Left to right: 6 / 2 = 3, then 3 * 3 = 9, then 20 - 9 = 11. 21 comes from ignoring precedence and working straight along the line; 19 from believing * outranks /, giving 20 - 6 / (2 * 3); 51 from doing the division and then applying the remaining operators left to right, (20 - 3) * 3."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this print?    int a = 7, b = 2;  float x = a / b;  printf(\"%f\", x);",
+          "options": [
+            "3.500000",
+            "3.000000",
+            "4.000000",
+            "Nothing: the compiler rejects the second line, because the result of an int division cannot be assigned to a float"
+          ],
+          "answerIndex": 1,
+          "concept": "The operand types choose the operation; the assignment target has no vote",
+          "why": "a and b are both int, so a / b is an integer division: 7 divided by 2 is 3 with the fractional part truncated, and the result is the int 3. Only then is that 3 converted to float and stored in x, giving 3.0, printed as 3.000000. Option (a) is the belief that a float destination forces a floating-point division; nothing about x reaches back into the expression."
+        },
+        {
+          "type": "mcq",
+          "q": "Keeping a and b as int, which single change makes that program print 3.500000?",
+          "options": [
+            "float x = (float)(a / b);",
+            "float x = (float) a / b;",
+            "double x = a / b;",
+            "float x = a / b * 1.0;"
+          ],
+          "answerIndex": 1,
+          "concept": "The cast must reach the division before the division happens",
+          "why": "A cast is a unary operator and binds tighter than /, so this parses as ((float) a) / b: one operand is float, the other is promoted to match, and a floating-point division gives 3.5. Option (a) is the near-miss - the brackets make the cast apply to a / b, which is already the truncated int 3. Options (c) and (d) also convert only after the integer division has finished."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this print?    int n = 'A' + 1;  printf(\"%d %c\", n, n);",
+          "options": [
+            "65 A",
+            "66 66",
+            "A1 A1",
+            "66 B"
+          ],
+          "answerIndex": 3,
+          "concept": "char is a small integer type; the conversion specifier decides how the same value is shown",
+          "why": "'A' is a character literal whose value is its code, 65, so 'A' + 1 is the int 66 and n holds 66. %d displays that value as a decimal number, giving 66; %c displays the same value as the character with that code, and code 66 is 'B'. Option (c) treats + on a character as string concatenation, which C has no operator for."
+        },
+        {
+          "type": "mcq",
+          "q": "A digit has been read as a character. What are v and w?    char c = '7';  int v = c;  int w = c - '0';",
+          "options": [
+            "v is 7 and w is 7",
+            "v is 7 and w is 55",
+            "v is 55 and w is 7",
+            "v is 55 and w is 55"
+          ],
+          "answerIndex": 2,
+          "concept": "The character '7' and the number 7 are different values",
+          "why": "c holds the character '7', whose ASCII code is 55, and assigning it to an int simply widens that code, so v is 55. Subtracting the code of '0' (48) gives the digit's numeric value: 55 - 48 = 7, so w is 7. This works because the codes of '0' to '9' are guaranteed to run consecutively."
+        },
+        {
+          "type": "mcq",
+          "q": "Which statement about this fragment is correct?    1 int first_score = 10;   2 int 2nd_score = 20;   3 float average = 0;   4 char grade = 'A';",
+          "options": [
+            "Line 2 is illegal: a C identifier may not begin with a digit",
+            "Line 3 is illegal: a float must be initialised with a literal that contains a decimal point",
+            "Line 4 is illegal: 'A' is a string, and a string must be assigned to an array of char",
+            "All four lines are legal: C works out each variable's type from the value written on the right"
+          ],
+          "answerIndex": 0,
+          "concept": "The rules for a legal C identifier",
+          "why": "A name may contain letters, digits and underscores but may not begin with a digit - the compiler reads the literal 2 and then finds nd_score where an operator should be. Line 3 is fine (the int literal 0 is converted to 0.0f by the ordinary implicit conversion) and line 4 is fine because 'A' in SINGLE quotes is a character literal; \"A\" in double quotes would be the string that cannot be assigned to a char. C does no type inference at all."
+        },
+        {
+          "type": "mcq",
+          "q": "What is printed, and what does n hold afterwards?    int n = 7;  if (n = 0) puts(\"zero\"); else puts(\"not zero\");",
+          "options": [
+            "zero is printed, and n holds 0",
+            "not zero is printed, and n holds 7",
+            "not zero is printed, and n holds 0",
+            "Nothing: the compiler rejects the condition, because = is not a relational operator and may not appear in an if"
+          ],
+          "answerIndex": 2,
+          "concept": "= assigns and yields the value it stored; == compares",
+          "why": "The condition is n = 0, not n == 0. It assigns 0 to n, so n is 0 from that moment, and the value of the assignment expression is the value stored, 0. A condition is false when it is zero, so the else branch runs and 'not zero' is printed - the exact opposite of the state the variable is now in. Option (b) spots the wrong branch but misses the side effect."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this print?    union Dog { char name[20]; char breed[20]; char colour[20]; };  union Dog d;  strcpy(d.name, \"Rex\");  strcpy(d.breed, \"Poodle\");  printf(\"%s %s\", d.name, d.breed);",
+          "options": [
+            "Rex Poodle, because each member of a union gets its own storage, exactly as in a structure",
+            "Poodle Poodle, because all members of a union start at the same location, so writing breed wrote over name",
+            "Rex Rex, because the first member written to fixes the union's contents and later writes to other members are discarded",
+            "Nothing: the compiler rejects d.breed, because a union variable may only be accessed through whichever member is named first in the definition"
+          ],
+          "answerIndex": 1,
+          "concept": "All members of a union start at the same location, so they alias each other",
+          "why": "The union's three arrays are one 20-byte block with three names. strcpy(d.name, \"Rex\") writes R e x NUL at offset 0; strcpy(d.breed, \"Poodle\") then writes over the same bytes, so both %s print Poodle. This is the direct consequence of a union variable being able to represent the value of only one of its members at a time. With struct in place of union the program really would print 'Rex Poodle'."
+        },
+        {
+          "type": "short",
+          "q": "Take this fragment: int total = 17, n = 5;  float avg = total / n;  printf(\"%f\", avg);  State exactly what is printed and what the correct average is. Then explain the mechanism step by step - what type each subexpression has, when the conversion to float happens, and why the type of the variable on the left has no say in it. Give TWO different one-line fixes, and explain why 'float avg = (float)(total / n);' is NOT one of them. Finally, state the value of total % n and say why avg % n would not compile.",
+          "concept": "Integer division, the point at which conversion happens, and where a cast must go",
+          "why": "It prints 3.000000; the correct average is 3.4. STEP BY STEP: total and n are both int, so in total / n both operands are int, the usual arithmetic conversions have nothing to do, and the operation selected is integer division, which truncates the quotient towards zero. 17 / 5 is 3 remainder 2, so the expression yields the int 3 - and the 0.4 is not rounded or stored anywhere, it is gone. The conversion to float happens afterwards, at the assignment: the int 3 becomes the float 3.0. The type of avg has no say because C chooses an operator's meaning from the types of its OPERANDS, which are settled before the assignment is considered. TWO FIXES: 'float avg = (float) total / n;' - the cast is a unary operator and binds tighter than /, so it applies to total alone, one operand becomes float, n is promoted, and floating division gives 3.4. Or 'float avg = total / (float) n;' (equivalently total / 5.0), which does the same from the other side. WHY (float)(total / n) FAILS: the brackets put the cast on the RESULT, so the integer division has already truncated inside them; converting 3 to 3.0 recovers nothing, because a cast cannot restore information an operation has thrown away - it must be applied to an operand. total % n is 17 % 5 = 2, the remainder the truncating division discarded, and 3 * 5 + 2 = 17 reconstructs the original. avg % n will not compile because % is defined only for integer operands and avg is a float; it is a constraint violation the compiler must diagnose, and the floating equivalent is the library function fmod."
+        },
+        {
+          "type": "short",
+          "q": "Every numbered line below is either wrong or does something the programmer did not intend. For each, name the error precisely, write the corrected line, and say whether the compiler will catch it or let it through.    1 int 1st_place = 4;   2 float rate = 0.5   3 char grade = \"B\";   4 int n;   5 n = n + 1;   6 float leftover = rate % 2;",
+          "concept": "Identifier rules, statement syntax, character versus string literals, uninitialised storage, and the operand types % demands",
+          "why": "LINE 1: an identifier may not begin with a digit - the compiler reads the literal 1 and then finds st_place where an operator should be. Fix: 'int first_place = 4;'. CAUGHT (syntax error). LINE 2: the semicolon is missing; every C statement is terminated by one, and without it the compiler runs this line into the next and reports the error confusingly on line 3. Fix: 'float rate = 0.5;'. CAUGHT. LINE 3: \"B\" in double quotes is a string literal - an array of two chars, 'B' and the terminating NUL - and what is assigned is its address, a pointer; a char holds one character, not an address. Fix: 'char grade = 'B';'. CAUGHT (a constraint violation; older compilers may only warn and then store the low byte of an address, which is worse because the program runs and the value is meaningless). LINES 4 and 5: line 4 is legal on its own - it is a definition and it reserves four bytes. The fault is line 5, which READS n before anything has been stored in it, so n + 1 adds one to whatever the previous occupant of that memory left there and the result is unpredictable and different from run to run. Fix: 'int n = 0;' on line 4. USUALLY NOT CAUGHT: the code is syntactically perfect and type-correct, so the compiler must accept it; a good compiler warns if warnings are on, but nothing obliges it to, and this is the classic error that appears to work in testing because the leftover bytes happened to be zero. LINE 6: % requires BOTH operands to be of integer type and rate is a float. Fix: work in integers ('int leftover = (int) rate % 2;') or use the floating remainder ('float leftover = fmodf(rate, 2.0f);' with math.h). CAUGHT. So five faults across six lines, four refused outright, and the one the compiler lets through - the uninitialised read - is the only one capable of surviving into a running program."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate this by hand: int a = 5, b = 2, c = 3;  int r = a + b * c > a * b + c && !(a - b == c);  Give the value of r, and set out the order in which the operators were applied and why that order and no other. State which subexpression is NEVER evaluated and give the rule that causes it to be skipped. Then write the same expression with brackets showing how a student who believes && binds tighter than > would read it, and give the value that reading produces.",
+          "concept": "Precedence across arithmetic, relational and logical operators, plus short-circuit evaluation",
+          "why": "r is 0. The order is forced by the precedence ladder: unary ! binds tightest, then *, then + and -, then the relational >, then the equality ==, then &&, then the assignment =. So the arithmetic runs first on both sides of the > independently: b * c = 6, so the left side is 5 + 6 = 11; a * b = 10, so the right side is 10 + 3 = 13. Then the comparison: 11 > 13 is false, and a false relational operator yields the int 0. That 0 is the left operand of &&. NEVER EVALUATED: the whole right-hand operand of &&, !(a - b == c), including the subtraction, the equality test and the negation. The rule is SHORT-CIRCUIT EVALUATION - && yields 1 only if both operands are true, so once the left is known to be 0 the answer is 0 whatever the right would have been, and C guarantees the right operand is not evaluated. (Had it run it would have given 5 - 2 = 3, 3 == 3 = 1, !1 = 0 - the same 0, by work the machine never did. The guarantee matters when the skipped side has a side effect or could fault, as in 'p != NULL && p->value > 0'.) Finally = is the lowest-precedence operator on the line, so the whole expression is evaluated before anything is stored, and r receives 0. THE MIS-BRACKETED READING: a student who thinks && binds tighter than > reads it as 'a + b * c > (a * b + c && !(a - b == c))'. Inside the brackets, a * b + c = 13, which is non-zero and therefore true; !(a - b == c) = !(3 == 3) = 0, false; so 13 && 0 is 0. The comparison becomes 11 > 0, which is true, yielding 1. The two readings give opposite answers, 0 and 1, from the same characters - which is why the precedence order must be known rather than guessed."
+        },
+        {
+          "type": "short",
+          "q": "Write out, in C, a structure LibraryBook with the members char title[40], char author[40] and int copies. Then write the statements that create one such variable, set all three members, and print the title and the number of copies - using the correct syntax for each member's type. Say what sizeof(struct LibraryBook) is and how you worked it out. Then say exactly what would change, in the layout and in the behaviour of your statements, if struct were replaced by union, and what sizeof would become.",
+          "concept": "Declaring a structure, reaching its members with the dot syntax, and what changes when the same members share one block of memory",
+          "why": "THE CODE: 'struct LibraryBook { char title[40]; char author[40]; int copies; };' - note the semicolon after the closing brace. Then 'struct LibraryBook b;' defines a variable and reserves the storage; 'strcpy(b.title, \"Things Fall Apart\"); strcpy(b.author, \"Chinua Achebe\"); b.copies = 3;' set the members; 'printf(\"%s: %d copies\\n\", b.title, b.copies);' prints them. TWO POINTS OF SYNTAX: the dot is how a member is reached for both reading and writing, and the two char arrays cannot be assigned with = because an array name is not something you can store into - their contents must be COPIED in with strcpy, while copies, being a plain int, takes an ordinary assignment. The conversion specifiers follow the member types: %s for the arrays, %d for the int. SIZE: sizeof(struct LibraryBook) is 84 bytes. Each member of a structure has its own storage laid out in order, so the size is 40 + 40 + 4 = 84; no padding is needed because char requires no alignment, copies starts at offset 80 which is already a multiple of the 4 bytes an int requires, and 84 is already a multiple of the structure's own 4-byte alignment. IF struct BECAME union: the layout collapses - all three members would start at the same location, so title, author and copies would be three names for one block rather than three blocks, and sizeof(union LibraryBook) would be 40, the size of the largest member char[40], which is already a multiple of the int's 4-byte alignment. The statements would then be destructive: strcpy(b.title, ...) writes 18 bytes at offset 0; strcpy(b.author, ...) writes 14 bytes over the same place, destroying the title; and b.copies = 3 writes four bytes of integer over the first four bytes of that text. The printf would print rubbish for the title and 3 for the copies, because copies was written last. A union variable can represent the value of only one member at a time, so a LibraryBook - which needs a title AND an author AND a count simultaneously - must be a structure; a union is right only where the members are alternatives that never coexist."
+        }
+      ]
+    }
+  ],
+  "recapCandidates": [
+    {
+      "course": "MTH_102",
+      "topic": "Integrating a composite function: why you may divide by the inner derivative only when the inner function is linear, and what substitution actually requires",
+      "whyMisunderstood": "This is the week's deepest trap because the wrong method is a faithful copy of a right one. Students meet (integral of (2x + 5)^3 dx) = (2x + 5)^4/8 + C early, notice that the divisor is the new power times the inner derivative, and store the pattern 'integrate the bracket, divide by the power and by the derivative of the inside'. Applied to (x^2 + 5)^3 that pattern produces (x^2 + 5)^4/(8x), which looks structurally identical, has the right degree of bracket, and shows no symptom of being wrong - no division by zero, no missing domain, nothing absurd. What has actually happened is that a function of x has been dragged through the integral sign as though it were a constant. Constants can be moved in and out of an integral because integration is linear in constant multiples; 2x cannot, because integration has no rule that lets a variable factor cross the integral sign, and dividing by 2x is exactly that move. The belief survives self-checking for three reasons. First, students check integrals by looking at them rather than by differentiating them, and this one looks fine; differentiate it and the quotient rule immediately produces a term that has no counterpart in the integrand. Second, the correct linear case and the false general case agree on structure but differ on a fact students do not consciously hold - that the chain rule multiplied by a factor which can only be undone by division when that factor is constant. Third, the neighbouring integral (integral of x(x^2 + 5)^3 dx) does work by substitution, and works out to almost the same expression, so a student who has done both remembers 'brackets to a power come out as bracket-to-the-next-power over something' and cannot recall which cases needed the stray x in front. The underlying confusion is about what substitution requires: not that the integrand contain a bracket, but that the inner derivative already be present in the integrand up to a constant multiple, so that dx can be exchanged for du with nothing in x left over. When it is not present, no substitution exists, and the integral must be expanded, rewritten, or (later in the syllabus) attacked by a different technique altogether.",
+      "whyQuestions": [
+        "Why does the integral of (2x + 3)^5 dx come out as (2x + 3)^6/12 rather than (2x + 3)^6/6 - where does the 2 in the divisor come from?",
+        "Why is exactly the same move illegal for the integral of (x^2 + 3)^5 dx, when the two integrands look structurally identical?",
+        "Why does substitution work at all - what is the line du = g'(x) dx actually saying about the chain rule run backwards?",
+        "Why can the integral of x(x^2 + 1)^3 dx be done by substitution while the integral of (x^2 + 1)^3 dx cannot, even though the second one looks simpler?",
+        "Why, when you substitute in a definite integral, may you either change the limits to u-values or convert the antiderivative back to x - but never evaluate the u-antiderivative at the original x-limits?"
+      ],
+      "goodAnswerContains": "States the rule with its condition: you may divide by the inner derivative only when that derivative is a constant, because only constant multiples may cross an integral sign - a variable factor such as 2x cannot be moved through, and dividing by it is precisely that illegal move.\nExplains what substitution genuinely requires and why: u = g(x) forces du = g'(x) dx, so the integrand must already contain g'(x) up to a constant multiple, leaving nothing in x behind once dx is exchanged for du; substitution is the chain rule read backwards, and a missing inner derivative means there is no chain-rule product to reverse.\nGives the diagnostic and the fallback: every integral is checked by differentiating the answer - the false form fails visibly because differentiating a quotient produces an extra term - and when substitution is unavailable the honest routes are to expand the bracket, rewrite the integrand, or use a technique introduced later.",
+      "workedExample": "(1) The case that works. Integral of (2x + 5)^3 dx.\nThe inner function 2x + 5 is linear, so its derivative is the constant 2. Substituting u = 2x + 5 gives du = 2 dx, i.e. dx = du/2, so the integral becomes (1/2) integral of u^3 du = u^4/8 = (2x + 5)^4/8 + C.\nCheck by differentiating: 4(2x + 5)^3 (2)/8 = (2x + 5)^3. Correct.\n\n(2) The same move on a non-linear inner function. Integral of (x^2 + 5)^3 dx.\nCopying the pattern gives (x^2 + 5)^4/(4 x 2x) = (x^2 + 5)^4/(8x). Differentiate it and it fails, because the expression is now a quotient:\nd/dx[(x^2 + 5)^4/(8x)] = [4(x^2 + 5)^3 (2x)(8x) - (x^2 + 5)^4 (8)]/(64x^2)\n= 8(x^2 + 5)^3 [8x^2 - (x^2 + 5)]/(64x^2)\n= (x^2 + 5)^3 (7x^2 - 5)/(8x^2),\nwhich is not (x^2 + 5)^3. At x = 1 the integrand is 6^3 = 216 while this gives 216 x 2/8 = 54 - out by a factor of 4, and the discrepancy varies with x, so no constant of integration can repair it.\n\n(3) Why the two cases differ. In (1) the factor being divided out is the number 2, and constants may cross an integral sign freely. In (2) the factor is 2x, a function of x, and nothing in the rules of integration permits a variable factor to be taken outside; writing /(8x) does exactly that.\n\n(4) The case substitution does handle. Integral of x(x^2 + 5)^3 dx.\nu = x^2 + 5, du = 2x dx, so x dx = du/2 and the integral is (1/2) integral of u^3 du = u^4/8 = (x^2 + 5)^4/8 + C.\nCheck: 4(x^2 + 5)^3 (2x)/8 = x(x^2 + 5)^3. Correct. The only difference from (2) is the x standing in front - which is the inner derivative up to the constant 1/2, and is exactly what substitution consumes.\n\n(5) So the correct route for (2) is to expand.\n(x^2 + 5)^3 = x^6 + 15x^4 + 75x^2 + 125, so the integral is x^7/7 + 3x^5 + 25x^3 + 125x + C.\nCheck by differentiating: x^6 + 15x^4 + 75x^2 + 125. Correct.\n\n(6) The definite version, limits changed with the substitution. Integral from 0 to 1 of x(x^2 + 5)^3 dx.\nu = x^2 + 5 runs from u = 5 to u = 6, so the value is (1/2)[u^4/4] from 5 to 6 = (1296 - 625)/8 = 671/8.\nThe same by converting back: (x^2 + 5)^4/8 from 0 to 1 = (6^4 - 5^4)/8 = 671/8. Evaluating u^4/8 at the x-limits 0 and 1 would have given (1 - 0)/8 = 1/8, which is the standard wrong answer."
+    },
+    {
+      "course": "PHY_102",
+      "topic": "Why a reactance carries current and voltage yet consumes no power - the power factor cos(phi), and why the slide's 'P = V*I*sin(theta)' is reactive power in var, not power consumed in watts",
+      "whyMisunderstood": "Every student can write P = V*I*cos(phi) within a minute of seeing it, and that fluency is exactly the problem: the formula is memorised as a rule for decorating an answer with an extra factor, not as the statement that only the in-phase part of the current does any work. What the student actually believes is that power is 'voltage times current, adjusted a bit', so cos(phi) becomes an efficiency-like fudge somewhere between 0 and 1 rather than a projection. Three things follow. First, a pure inductor or capacitor is felt to consume 'a little' power, because it plainly has volts across it and amps through it, and the idea that a large voltage times a large current can average to exactly zero looks like a trick; the student cannot say what happens to the energy, and 'it is returned to the source' sounds like a slogan rather than a quarter-cycle-by-quarter-cycle account. Second, the deck's own slide actively teaches the error: it says that in a purely reactive circuit 'the power can be calculated using P = V*I*sin(theta)', which for theta = 90 degrees returns the entire apparent power as though it were consumed, and two slides later says that 'reactances do not dissipate energy'. A student who reads both without noticing the contradiction ends up holding both, and will use whichever the question seems to invite. Third, the misunderstanding survives self-checking because the arithmetic never protests. V*I*sin(phi) is a perfectly real number with the right order of magnitude, and calling it watts instead of var breaks nothing on the page; the units are the only thing that would have caught it, and units are exactly what gets dropped. It also survives because the two safe cross-checks - that P must equal I^2 R, and that S^2 = P^2 + Q^2 - are almost never run. Run either one and the error is instant: with R = 0, I^2 R is zero however large V*I*sin(phi) may be. The underlying repair is to stop reading cos(phi) as a discount and start reading it as the fraction of the current that is in phase with the voltage, with everything in quadrature being borrowed and repaid every cycle.",
+      "whyQuestions": [
+        "Why is the average power in an AC circuit Vrms*Irms*cos(phi) rather than simply Vrms*Irms?",
+        "Why does an ideal inductor, which clearly carries a large current and has a large voltage across it, dissipate no average power at all?",
+        "Why does the instantaneous power oscillate at twice the supply frequency, and why does it dip below zero in every circuit that has any net reactance but never in a purely resistive one?",
+        "Why is the slide's 'P = V*I*sin(theta) for a purely reactive circuit' not the power consumed, what quantity is it, and what units should it carry?",
+        "Why do the three powers combine as S^2 = P^2 + Q^2 rather than S = P + Q, and why does that force a supplier to size its cables and transformers by S while billing only for P?"
+      ],
+      "goodAnswerContains": "States the mechanism, not the formula: p(t) = v(t)i(t) expands to (V0*I0/2)[cos(phi) - cos(2wt - phi)], a constant plus a 2w ripple whose average over a whole cycle is exactly zero, so the entire average power is the constant term Vrms*Irms*cos(phi) - and cos(phi) is the fraction of the current in phase with the voltage, not a discount factor.\nAccounts for the energy in a reactance quarter-cycle by quarter-cycle: the source pours up to (1/2)L*I0^2 into the magnetic field (or (1/2)C*V0^2 into the electric field) and gets all of it back in the next quarter-cycle, so the positive and negative areas of p(t) cancel exactly and P = 0, while P = Irms^2 R shows that only the resistance ever dissipates.\nNames the three quantities with their units and separates them: P = V*I*cos(phi) in watts is consumed, Q = V*I*sin(phi) in var is borrowed and returned, S = V*I in VA is what the conductors carry, they combine in quadrature as S^2 = P^2 + Q^2, and the slide's V*I*sin(theta) is Q - checkable in one line because P must equal Irms^2 R, which is zero whenever R is zero.",
+      "workedExample": "A 240 V rms, 50 Hz supply feeds a coil of resistance R = 30 ohm and inductive reactance X_L = 40 ohm.\n\nStep 1 - impedance and current.\nZ = sqrt(R^2 + X_L^2) = sqrt(900 + 1600) = sqrt(2500) = 50.0 ohm.\nI = V/Z = 240/50.0 = 4.80 A rms.\n\nStep 2 - power factor.\ncos(phi) = R/Z = 30/50 = 0.600 lagging, so phi = 53.1 degrees, the current lagging the voltage.\n\nStep 3 - the three powers, each computed twice.\nP = V*I*cos(phi) = (240)(4.80)(0.600) = 691.2 W; check P = I^2 R = (23.04)(30) = 691.2 W.\nQ = V*I*sin(phi) = (240)(4.80)(0.800) = 921.6 var; check Q = I^2 X_L = (23.04)(40) = 921.6 var.\nS = V*I = (240)(4.80) = 1152 VA; check S = I^2 Z = (23.04)(50) = 1152 VA.\nTriangle: P^2 + Q^2 = 691.2^2 + 921.6^2 = 477757.4 + 849346.6 = 1327104 = 1152^2. Correct.\nNote the coil is dissipating 691.2 W while 921.6 var shuttles in and out of its magnetic field, and the cable must carry the whole 1152 VA.\n\nStep 4 - now delete the resistance and see the misunderstanding fail.\nTake the pure inductor, X_L = 40 ohm, alone on the same 240 V supply. Then I = 240/40 = 6.00 A rms and theta = 90 degrees.\nThe slide's rule gives 'P' = V*I*sin(theta) = (240)(6.00)(1) = 1440.\nThe correct rule gives P = V*I*cos(theta) = (240)(6.00)(0) = 0 W.\nThe check settles it: P = I^2 R = (36.0)(0) = 0 W. A wattmeter in this circuit reads zero, while an ammeter reads 6.00 A and a voltmeter reads 240 V.\nThe number 1440 is real, but it is Q = 1440 var - the rate at which energy is exchanged with the magnetic field, not consumed. Its peak store is (1/2)L*I0^2 with I0 = sqrt2 (6.00) = 8.49 A and L = X_L/w = 40/314.16 = 0.1273 H, giving (0.5)(0.1273)(72.0) = 4.58 J, taken from the source each quarter-cycle and returned in the next.\n\nStep 5 - the moral.\nAdding a resistance changes P from 0 to 691.2 W; changing the reactance changes only Q. Whenever a computed 'power' does not equal Irms^2 R, what has been computed is S or Q, not P."
+    }
+  ]
+}

@@ -1,0 +1,1077 @@
+{
+  "week": 8,
+  "startsOn": "2026-10-26",
+  "endsOn": "2026-11-01",
+  "generatedOn": "2026-08-29",
+  "days": [
+    {
+      "day": "Mon",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Integration techniques as concepts: what substitution, integration by parts, trigonometric substitution and partial fractions each are, the exact condition each one needs before it may be used, which differentiation rule each one reverses and why that makes it work, and how the shape of an integrand decides which technique it needs",
+        "checkFile": "checks/Mon-MTH_102.md"
+      },
+      "fast": {
+        "course": "GST_112",
+        "topic": "Citizenship and civic responsibilities: the three routes to Nigerian citizenship under Chapter Three of the 1999 Constitution and their exact conditions, dual citizenship, renunciation and deprivation, and the Section 24 duties of every citizen"
+      }
+    },
+    {
+      "day": "Tue",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Magnetic dipoles as concepts: what a dipole is and why a magnet cannot be split into poles, the current-loop and pole models, the definition and right-hand-rule direction of mu = NIA, the vector reasoning behind torque = mu x B and U = -mu.B, the electron's moment M = g(-eL/2m), and the geometry of the fields of a bar magnet, a wire and a solenoid",
+        "checkFile": "checks/Tue-PHY_102.md"
+      },
+      "fast": {
+        "course": "CSC_106",
+        "topic": "JavaScript libraries and frameworks: what distinguishes a library from a framework in terms of control flow, the domains of jQuery, Lodash and Moment.js, the component, virtual-DOM and data-binding differences between React, Angular and Vue.js, and the Django, Express.js, Ruby on Rails and ASP.NET backend frameworks with Express middleware"
+      }
+    },
+    {
+      "day": "Wed",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Abstraction and the anatomy of functions and modules as concepts: what abstraction hides, data versus functional abstraction, access specifiers and header files, why a complex project is decomposed at all, declaration versus definition, the four parts of a function definition, parameters versus arguments, return type and void, local versus global scope, and what makes a module different from a function",
+        "checkFile": "checks/Wed-COS_102.md"
+      },
+      "fast": {
+        "course": "GST_122",
+        "topic": "Vocabulary expansion and word formation: the seven named processes - affixation, compounding, conversion, derivation, blending, acronyms and borrowing - with the deck's own examples, prefix and suffix meanings and the word class each produces, derivational vs inflectional affixes, and the four named strategies for expanding vocabulary"
+      }
+    },
+    {
+      "day": "Thu",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Integration technique problems: carrying out substitutions including the ones that need a leftover x re-expressed and the ones that change the limits of a definite integral, integrating by parts once, twice and in the cycling case where you solve for the integral, converting an integrand under a trigonometric substitution and getting back to x, and doing long division and partial-fraction decomposition before integrating - with the sign and constant traps at each step",
+        "checkFile": "checks/Thu-MTH_102.md"
+      },
+      "fast": {
+        "course": "PHY_108",
+        "topic": "Verifying Boyle's law with a J-tube: P = P_a + rho*g*h and V = l*A for a fixed mass of gas at constant temperature, the P-against-V hyperbola versus the P-against-1/V straight line through the origin whose gradient is the constant PV, and the precautions and error sources that protect the isothermal and fixed-mass conditions"
+      }
+    },
+    {
+      "day": "Fri",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Numerical magnetic-dipole work: computing mu = NIA with areas converted to m^2, torque mu*B*sin(theta) and its maximum, energy -mu*B*cos(theta) and the work to rotate or flip a dipole, B = mu_0*I/(2*pi*r) for a straight wire and B = mu*n*I for a solenoid with turns per unit length and a core, the electron's moment from its angular momentum, and the unit, angle and direction traps in each",
+        "checkFile": "checks/Fri-PHY_102.md"
+      },
+      "fast": {
+        "course": "Review",
+        "topic": "Week 8 review: re-work every check question you got wrong Mon-Thu, redo one integration-by-parts problem and one magnetic-torque calculation cold, and settle which two topics Sunday gets"
+      }
+    },
+    {
+      "day": "Sat",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Code work on abstraction, functions and modules: tracing a call through its parameters to the value it returns and to what appears on the screen, predicting the return of a void function or one whose return sits in the wrong place, spotting the scope, shadowing or pass-by-value fault in a fragment, reading escape sequences in a printf string, and choosing the correct decomposition and import form for a stated task",
+        "checkFile": "checks/Sat-COS_102.md"
+      },
+      "fast": {
+        "course": "Catch-up",
+        "topic": "Catch-up: sit the Week 7 question sets, now seven days old and due, then clear anything left over from the week"
+      }
+    }
+  ],
+  "courses": [
+    {
+      "code": "PHY_102",
+      "name": "General Physics II",
+      "weekTopics": [
+        "Magnetism and magnetic field lines: every magnet has a north and a south pole, like poles repel and unlike attract, the field is mapped with iron filings or a compass, it is stronger where the lines are denser, and because there are no magnetic monopoles every line of B is a closed loop running N to S outside the magnet and S to N inside it",
+        "A magnetic dipole and its two models: a current loop and a pair of separated poles give the same field far from the source but different predictions inside the source region, the current-loop model being the physically correct one",
+        "Magnetic dipole moment mu = IA for one turn and mu = NIA for N turns, a vector along the normal to the loop with its sense given by the right-hand rule, measured in A*m^2 (equivalently J/T)",
+        "Torque on a dipole in a uniform field, torque = mu x B with magnitude mu*B*sin(theta) where theta is the angle between mu and B, maximum when the plane of the loop contains B and zero when mu lies along B; the net force in a uniform field is zero, so the dipole turns but does not translate",
+        "Potential energy of a dipole, U = -mu.B = -mu*B*cos(theta), minimum -mu*B at alignment (stable) and maximum +mu*B when anti-aligned (unstable), so the work to flip a dipole end for end is 2*mu*B",
+        "Magnetic dipole moment of an electron, M = g(-eL/2m), where the minus sign records that the moment is antiparallel to the angular momentum because the charge is negative and g is the g-factor (about 1 for orbital motion and about 2 for spin), giving the Bohr magneton eh-bar/2m = 9.27e-24 J/T",
+        "Fields produced by currents: B = mu_0*I/(2*pi*r) in closed circles around a long straight wire, B = mu_0*N*I/(2R) at the centre of a flat coil, and B = mu*n*I inside a long solenoid where n = N/L is turns per unit length and the core permeability multiplies the result",
+        "Applications of magnetic dipoles: NMR tomography and MRI, electric motors, credit-card magnetic strips, and the Earth as a dipole whose field reverses roughly every 200 thousand years"
+      ],
+      "summaryFile": "PHY_102-Summary.md",
+      "questionsFile": "PHY_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_102/Week-08/Magnetic-Dipoles-PDF.pdf"
+      ]
+    },
+    {
+      "code": "MTH_102",
+      "name": "Elementary Mathematics II (Calculus)",
+      "weekTopics": [
+        "Integration has no algorithm the way differentiation does, so every technique this week is a way of converting an integral you cannot do into a standard form you can, and the working stops only when a table entry is reached - checked, as always, by differentiating the answer back",
+        "The standard integrals extended beyond Week 7 to the forms the techniques aim at: (integral of f'(x)/f(x) dx) = ln|f(x)|, (integral of dx/(a^2 + x^2)) = (1/a) arctan(x/a), (integral of dx/sqrt(a^2 - x^2)) = arcsin(x/a), (integral of dx/(x^2 - a^2)) = (1/2a) ln|(x - a)/(x + a)|, and (integral of tan x dx) = ln|sec x|",
+        "Integration by substitution as the reverse of the chain rule: u = g(x) with du = g'(x) dx works only when g'(x) is present in the integrand up to a constant multiple, a numerical factor may be moved across the integral sign to fix du but a function of x never may, a leftover x is removed by solving u = g(x) back for x, and a definite integral must either have its limits converted to u-values or be returned to x first",
+        "Integration by parts as the reverse of the product rule: integrating d(uv) = u dv + v du gives (integral of u dv) = uv - (integral of v du), which trades one integral for another rather than evaluating it, so u is chosen by LIATE - logarithmic, inverse trigonometric, algebraic, trigonometric, exponential - and dv must be something that can actually be integrated",
+        "The three standard uses of parts: repeated application, once per power of x, for integrands like x^2 sin x; the dv = dx trick that makes (integral of ln x dx) = x ln x - x possible at all; and the cycling integrals (integral of e^x sin x dx) and (integral of e^x cos x dx), where the original integral I reappears and the answer comes from solving 2I = ... algebraically",
+        "Trigonometric substitution for a square root of a quadratic: x = a sin(theta) for sqrt(a^2 - x^2) using 1 - sin^2 = cos^2, x = a tan(theta) for sqrt(a^2 + x^2) using 1 + tan^2 = sec^2, and x = a sec(theta) for sqrt(x^2 - a^2) using sec^2 - 1 = tan^2, with the theta-range chosen so no modulus is needed and with the return to x made through the right-angled triangle rather than left in theta",
+        "Partial fractions for rational integrands: long-divide first whenever the numerator's degree is not strictly less than the denominator's, then give each distinct linear factor a constant numerator, each repeated linear factor (x - a)^k one term for every power from 1 to k, and each irreducible quadratic a linear numerator Ax + B which then splits into an f'/f logarithm and an arctan",
+        "Choosing the technique from the shape of the integrand rather than its difficulty: a composite with its inner derivative present is a substitution, a numerator that is the derivative of the denominator is a bare logarithm, a product of two unrelated types is parts, a root over a quadratic is a trigonometric substitution, and a ratio of polynomials is division followed by partial fractions"
+      ],
+      "summaryFile": "MTH_102-Summary.md",
+      "questionsFile": "MTH_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/MTH_102/Week-08/Integration-Techniques-Approach-PDF.pdf"
+      ]
+    },
+    {
+      "code": "COS_102",
+      "name": "Introduction to Problem Solving",
+      "weekTopics": [
+        "Abstraction is defined as the process of hiding the internal details of an application from the outer world, illustrated by the car ignition analogy in which the driver twists the key without concerning themselves with what happens in the engine in between",
+        "The two named types of abstraction: data abstraction, in which the data of an object is not directly exposed to other programmes and no other programme can alter that data without obtaining the necessary permissions; and functional abstraction, in which the implementation of an object's methods is not exposed and a caller is given only the method's name, the format of the input and the format of the output",
+        "The two mechanisms for implementing abstraction - access specifiers, where public and private are applied to the properties and functions of an object and restrict the access of other programmes to only some of them, and header files, which let you use a library's functions without any knowledge of how each is implemented - and the four stated benefits: applications are more secure because the implementation is not exposed, code readability and reusability are enhanced, the implementation of a method can be changed without breaking other parts of the code, and duplication of code is prevented",
+        "Why complex projects are decomposed: a large project is impossible or time-wasting for one person, so it is broken into functions that different people can work on at the same time; functions let a project scale up because a project that becomes complex only needs more functions added and the system remains stable, and they avoid duplicating code because a function is implemented once however many times it is used",
+        "A function is a group of statements that perform a task, with the division of code among functions left to the programmer but made logically so that each function performs a specific task; a function declaration tells the compiler about the name, return type and parameters, while a function definition provides the actual body and consists of a function header plus a function body",
+        "The four parts of a function definition: the return type, which is the data type of the value returned and can also be void; the function name; the parameters, each a placeholder that receives a value when the function is invoked, with a function permitted to have none; and the function body, the collection of statements defining what the function does - together with parameters versus arguments, return versus print, and local versus global scope",
+        "Modules are functions at a much larger scale because they can contain various functions and classes, and are brought into use by importing: 'import special_functions' makes the module available, while 'from special_functions import max' explicitly specifies one function so that only that function may be used - the same job C does with header files and #include",
+        "Writing and reading simple C: all C programmes have main() as the entry-point function, comments run from /* to */, braces describe the start and end of a function block, printf() is a standard library function that prints a character string to standard output, and the escape sequences \\' \\\" \\\\ \\0 \\a \\b \\f \\n \\r \\t \\v carry the meanings single quote, double quote, backslash, null, bell, backspace, form feed, newline, carriage return, horizontal tab and vertical tab"
+      ],
+      "summaryFile": "COS_102-Summary.md",
+      "questionsFile": "COS_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/COS_102/Week-08/Abstraction-Concepts-PDF.pdf",
+        "Courses/COS_102/Week-08/Functions-and-Modules-PDF.pdf"
+      ]
+    },
+    {
+      "code": "PHY_108",
+      "name": "General Physics Practical II",
+      "weekTopics": [
+        "Aim of the experiment: to verify Boyle's law, which states that at constant temperature the pressure of a definite (fixed) quantity of an ideal gas is inversely proportional to its volume, written PV = constant, P proportional to 1/V, or P1*V1 = P2*V2",
+        "Pressure defined and its units: P = F/A, the SI unit being the pascal (1 Pa = 1 N/m^2), with the conversions 1 atm = 76 cmHg = 760 mmHg = 1.013 x 10^5 Pa and 1 ml = 1 cm^3 = 1 x 10^-6 m^3 needed throughout the analysis",
+        "Place of Boyle's law in the theory of gases: published by Robert Boyle in 1662 and discovered independently by Edme Mariotte in 1679 (the Boyle-Mariotte law), and one of the empirical laws - with Charles's, Avogadro's and Gay-Lussac's laws - that combine into the ideal gas law underpinning the kinetic theory of gases",
+        "Apparatus and the J-tube: a J-tube with one closed end and one open end, a thermometer, a pressure sensor, a gas sample and the Praxilabs virtual Boyle's Law laboratory; mercury poured into the open end traps a fixed column of air in the closed limb, and when the mercury stands at the same level in both limbs (h = 0) the trapped air is at atmospheric pressure",
+        "Pressure and volume of the trapped gas: raising the open limb so that the mercury levels differ by a vertical height h raises the pressure by rho*g*h, giving P_f = P_a + rho*g*h with rho = 13600 kg/m^3 and g = 9.8 m/s^2, while the volume follows from the length of the trapped air column, V_f = l*A, the bore being uniform with A = 1 cm^2 so that V_f is numerically equal to l",
+        "Procedure in order: begin with the mercury level in both limbs (h = 0) and record the initial volume and temperature, raise the open limb to h = 50 mm and note that the air column has shortened, click Record to log the volume, repeat in 50 mm steps through h = 100, 150, 200 and 250 mm recording the volume at each height, then download the Excel data sheet and compute P_f and 1/V_f for every row",
+        "The graph and what it means: P against V at constant temperature is a rectangular hyperbola (an isotherm) that approaches but never meets either axis and proves nothing by eye, whereas P against 1/V (or the deck's 1/V against P) is a straight line through the origin - that line is the verification; the gradient of P against 1/V equals the constant PV (2.026 J for the sample gas, since P0*V0 = 1.013 x 10^5 x 20 x 10^-6), the gradient of 1/V against P equals 1/(PV) = 0.494 J^-1, and the intercept must be zero, a non-zero intercept signalling a systematic error such as omitting atmospheric pressure from P",
+        "Conditions, precautions and sources of error: the law holds only for a fixed mass of gas at constant temperature, so the gas must be allowed to return to room temperature after each compression (compression warms it and makes PV drift upward) and the closed limb must be gas-tight; other precautions are keeping the tube vertical, taking h as the difference of the two mercury levels, and avoiding parallax at the convex meniscus, while further error sources are dead space or a non-uniform bore, moisture in the trapped air adding a saturated vapour pressure, uncertainty in rho, g and the barometric reading, and real-gas deviation at high pressure"
+      ],
+      "summaryFile": "PHY_108-Summary.md",
+      "questionsFile": "PHY_108-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_108/Week-08/Experiment-to-Verify-Boyle-s-Law-PDF.pdf"
+      ]
+    },
+    {
+      "code": "GST_112",
+      "name": "Nigerian Peoples and Culture",
+      "weekTopics": [
+        "Citizenship is described as the state of being a citizen, as well as the rights, obligations and advantages that come with it: with citizenship of a nation you have the right to live, work, vote and pay taxes there, it is usually granted in the nation where you were born, and an immigrant from another nation must apply; the lesson warns that citizenship is often confused with nationality, which is of a wider scope than citizenship",
+        "The Nigerian Constitution from the time of independence provides for some types of citizenship, but before the date of independence there were no Nigerian citizens, and since 1979 there have been significant changes in the law relating to citizenship, the instruments named being the Constitution of the Federal Republic of Nigeria 1979, the Nigeria Citizenship Act 1960 and the Nigerian Citizenship Act 1961; every country has the right to decide who will be its citizen, and Chapter Three of the Constitution of the Federal Republic of Nigeria 1999 (as amended) provides extensively for citizenship in Nigeria through exactly three routes - by birth, by registration and by naturalisation",
+        "Citizenship by birth under the 1999 Constitution arises where both parents are Nigerians, or either parent is a Nigerian, or any one of the grandparents is a Nigerian - the three limbs are alternatives, so a single qualifying relative suffices and no requirement of birth on Nigerian soil is imposed",
+        "Citizenship by registration is open to two classes only: a non-Nigerian woman who is married to a Nigerian, and every person of full age and capacity born outside Nigeria whose grandparent is a citizen of Nigeria; to qualify, the foreigner must prove to the President that he or she is a person of good character, has shown a clear intention of the desire to be domiciled or to live or reside in Nigeria, and has taken the prescribed Oath of Allegiance to Nigeria contained in the Seventh Schedule to the 1999 Constitution",
+        "Naturalisation is the process by which an individual becomes a legal citizen of a specific country, the formal act of granting citizenship to a foreign national who meets the predetermined eligibility criteria established by that country's laws and regulations; in Nigeria it is done by fulfilling the requirements stipulated in section 27 of the 1999 Constitution, after which a certificate of grant of citizenship by naturalisation is issued, and it is the means by which any foreigner who has lived for a long time in Nigeria may become a Nigerian citizen",
+        "Dual citizenship is allowed: a foreigner who is a citizen of another country by birth may also be a citizen of Nigeria by registration or by naturalisation, and a Nigerian citizen by birth may acquire the citizenship of another country without renouncing his Nigerian citizenship; a citizen of full age may renounce and abandon Nigerian citizenship by the prescribed declaration, but the President may refuse to register that declaration where it is made when Nigeria is involved in a war or where it is contrary to public policy",
+        "Loss of citizenship reaches only acquired citizenship: the President may deprive a person who is not a Nigerian by birth where that person is sentenced to a term of imprisonment of not less than 3 years within a period of 7 years after becoming a citizen by naturalisation, and persons who acquired citizenship by naturalisation or by registration may lose it for disloyalty to Nigeria by act or speech, for trading with or associating in business with an enemy country at war with Nigeria, for assisting such an enemy country in any manner, or for unlawfully communicating with it to the detriment of or with intent to damage Nigeria",
+        "Civic responsibility is the duties and obligations that citizens are expected to fulfil for the betterment of their society and the functioning of their country, outlined in various laws, policies and cultural expectations; the six named are obeying the law, protection of public property, payment of taxes, rendering national service, loyalty and respect for others' rights, and they are contained in section 24 of the 1999 Constitution (as amended), which makes it the duty of every citizen to abide by the Constitution and respect its ideals and institutions, the National Flag, the National Anthem, the National Pledge and legitimate authorities; to help enhance the power, prestige and good name of Nigeria, defend Nigeria and render such national service as may be required; to respect the dignity of other citizens and the rights and legitimate interests of others and live in unity and harmony in the spirit of common brotherhood; to make positive and useful contribution to the advancement, progress and well-being of the community where he resides; to render assistance to appropriate and lawful agencies in the maintenance of law and order; and to declare his income honestly to appropriate and lawful agencies and pay his tax promptly - civic responsibility being not only a legal obligation but also a moral duty that promotes active citizenship and contributes to the overall development of Nigeria"
+      ],
+      "summaryFile": "GST_112-Summary.md",
+      "questionsFile": "GST_112-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_112/Week-08/Citizenship-and-Civic-Responsibilities-and-Pattern-of-Citizenship-acqu.pdf"
+      ]
+    },
+    {
+      "code": "GST_122",
+      "name": "Communication in English II",
+      "weekTopics": [
+        "Vocabulary expansion defined as the process of increasing one's repertoire of words and expressions in a language, a fundamental aspect of language development that supports effective communication, cognitive growth, academic success and overall linguistic proficiency",
+        "The seven word formation processes the lesson names - affixation, compounding, conversion, derivation, blending, acronyms and borrowing - each with the deck's own example: unadulterated and correctly, raincoat, email used as a verb, teacher, brunch, NASA and sushi",
+        "Affixes as bound forms attached to an existing base: prefixes go before the base (un- in unadulterated, meaning 'not') and suffixes after it (-ly in correctly), and their stated function is to alter meaning and function while expanding vocabulary",
+        "The distinctions that carry the marks: compounding merges two whole words while blending fuses only parts of them, conversion changes word class with no affix at all while derivation adds a derivational affix to create a new word, and an acronym is pronounced as a word (NASA) while an initialism is spelled out (ATM)",
+        "Derivational versus inflectional affixes: a derivational suffix makes a new lexeme with its own dictionary entry and usually a new word class (teach -> teacher, happy -> happiness), whereas inflectional -s, -ed, -ing, -er and -est only mark number, tense or degree and create no new word",
+        "Suffixes grouped by the word class they produce - nouns from -tion, -ment, -ness, -ity, -ance, -er, -ist and -ship; adjectives from -ful, -less, -able, -ive, -ous, -al and -ic; verbs from -ise, -ify, -en and -ate; adverbs from -ly - and prefixes grouped by meaning, including negation (un-, in-, non-, dis-), repetition (re-), error (mis-), time (pre-, post-) and number (mono-, bi-, multi-)",
+        "The seven benefit headings for vocabulary expansion - communication skills, intellectual growth, academic achievement, professional success, cultural competence, lifelong learning, and reading and writing proficiency - together with the four named strategies: reading widely and regularly, using vocabulary-building tools such as dictionaries, thesauruses and language-learning apps, engaging in conversations, discussions and debates, and playing word games and language-related activities",
+        "The academic word list to be known by definition rather than recognition, including pedagogy, epistemology, didactic and didacticism, elocution, lexicon, dissertation, thesis, cacophony, syllogism, semiotics, metacognition, exegesis, synthesis, mentorship, scholarship, curriculum, citation, prerequisite, peer review, academic rigor, academician, seminar, tenure, quantitative analysis, rubric and interdisciplinary, plus the Technolingo case study on how tech neologisms are coined and analysed etymologically"
+      ],
+      "summaryFile": "GST_122-Summary.md",
+      "questionsFile": "GST_122-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_122/Week-08/Vocabulary-Expansion-PDF.pdf"
+      ]
+    },
+    {
+      "code": "CSC_106",
+      "name": "Introduction to Web Technologies",
+      "weekTopics": [
+        "The distinction between a library and a framework turns on control flow: a library is pre-written code that your program calls while you keep control, whereas a framework provides the whole application's structure and calls your code at the points it defines",
+        "JavaScript libraries are pre-written collections of functions integrated into a project to simplify development; jQuery's five named features are DOM manipulation, event handling, AJAX requests, animation and cross-browser compatibility",
+        "Lodash is a utility library for arrays, objects and strings that emphasises method chaining, functional programming and efficient processing of large datasets, while Moment.js handles date parsing, formatting, date arithmetic, timezones and locales",
+        "Choosing a library depends on project requirements, library size and page-load impact, whether modern native JavaScript already covers the need, team familiarity, and the library's maintenance and longevity",
+        "React is a component-based UI library from Facebook that uses a virtual DOM (it tracks the difference between the virtual DOM and the actual DOM and updates only the parts that differ) and enforces unidirectional data flow from parent to child",
+        "Angular is Google's comprehensive framework built on modules and components, with dependency injection managing the creation and sharing of services and two-way data binding synchronising UI and model in both directions, while Vue.js is a progressive, incrementally adoptable view-layer framework using directives and components with a gentle learning curve; the choice between them turns on requirements, team familiarity, community, scalability and learning curve",
+        "Backend frameworks studied: Django (Python, MVC, generated admin interface, built-in authentication and authorization, DRY), Express.js (Node.js, minimalist and flexible, routing and template engines), Ruby on Rails (Convention over Configuration, DRY, Active Record ORM, RESTful routing, scaffolding) and ASP.NET (C#, MVC and Razor Pages, cross-platform ASP.NET Core, Visual Studio tooling)",
+        "Express.js middleware functions have access to the request and response objects in the request-response cycle and execute in the order they are defined, forming a custom pipeline for authentication, logging and data parsing before the route handler runs"
+      ],
+      "summaryFile": "CSC_106-Summary.md",
+      "questionsFile": "CSC_106-Questions.md",
+      "sourcePdfs": [
+        "Courses/CSC_106/Week-08/JavaScript-Libraries-and-Frameworks-PDF.pdf"
+      ]
+    },
+    {
+      "code": "MIVA_COS_111",
+      "name": "Technical Certification I",
+      "weekTopics": [],
+      "summaryFile": "MIVA_COS_111-Summary.md",
+      "questionsFile": null
+    }
+  ],
+  "checks": [
+    {
+      "id": "mon-mth102",
+      "day": "Mon",
+      "course": "MTH_102",
+      "topic": "Integration techniques as concepts: what substitution, integration by parts, trigonometric substitution and partial fractions each are, the exact condition each one needs before it may be used, which differentiation rule each one reverses and why that makes it work, and how the shape of an integrand decides which technique it needs",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "The formula (integral of u dv) = uv - (integral of v du) is obtained by:",
+          "options": [
+            "integrating both sides of the chain rule d/dx f(g(x)) = f'(g(x)) * g'(x)",
+            "integrating both sides of the quotient rule, since a product can be written as a division",
+            "integrating both sides of d(uv) = u dv + v du and rearranging",
+            "applying linearity, since (integral of (u + v) dx) = (integral of u dx) + (integral of v dx)"
+          ],
+          "answerIndex": 2,
+          "concept": "Integration by parts as the product rule integrated",
+          "why": "From d(uv) = u dv + v du, integrating both sides gives uv = (integral of u dv) + (integral of v du), and rearranging isolates (integral of u dv). The chain rule is the origin of substitution, not of parts; no technique this week comes from the quotient rule; and linearity never touches a product."
+        },
+        {
+          "type": "mcq",
+          "q": "Which integral is immediately ready for the substitution u = x^2 + 1, in the sense that it converts to an integral in u alone after moving only a constant?",
+          "options": [
+            "integral of (x^2 + 1)^5 dx",
+            "integral of x(x^2 + 1)^5 dx",
+            "integral of x^2 (x^2 + 1)^5 dx",
+            "integral of x(x^3 + 1)^5 dx"
+          ],
+          "answerIndex": 1,
+          "concept": "The condition for substitution: the inner derivative must be present up to a constant",
+          "why": "du = 2x dx, so x dx = du/2 and the integral becomes (1/2)(integral of u^5 du). Option (a) has no x factor, so dx = du/(2x) leaves an x that cannot be removed; (c) has an even power of x, whose leftover single x is not expressible in u; (d) has the right shape but the wrong inner function, since its inner derivative is 3x^2."
+        },
+        {
+          "type": "mcq",
+          "q": "An integrand contains sqrt(x^2 - 9). The right substitution, and the reason, is:",
+          "options": [
+            "x = 3 tan(theta), because tan^2 + 1 = sec^2 turns the root into 3 sec(theta)",
+            "x = 3 sin(theta), because 1 - sin^2 = cos^2 turns the root into 3 cos(theta)",
+            "x = 9 sec(theta), because 9 is the constant appearing under the root",
+            "x = 3 sec(theta), because sec^2 - 1 = tan^2 turns the root into 3 tan(theta)"
+          ],
+          "answerIndex": 3,
+          "concept": "Matching the trigonometric substitution to the Pythagorean identity that kills the root",
+          "why": "x = 3 sec(theta) gives x^2 - 9 = 9(sec^2 - 1) = 9 tan^2, so the root becomes 3 tan(theta). The tan substitution leaves 9(tan^2 - 1), which is no square; the sin substitution leaves a negative under the root; and x = 9 sec(theta) uses a^2 = 9 where the substitution needs a = 3."
+        },
+        {
+          "type": "mcq",
+          "q": "In (integral of x^3 ln x dx) the standard choice is u = ln x, dv = x^3 dx. The reason is:",
+          "options": [
+            "u must always be whichever factor is written last",
+            "ln x differentiates to 1/x, which removes the logarithm, and x^3 can be integrated, so the traded integral (integral of v du) is purely algebraic",
+            "x^3 differentiates to 3x^2, which is simpler than x^3, so the factor that simplifies on differentiation is x^3",
+            "the choice does not matter; either assignment gives the same answer, only with more lines of working"
+          ],
+          "answerIndex": 1,
+          "concept": "Choosing u and dv: dv must be integrable and u must collapse on differentiation",
+          "why": "ln x has no antiderivative available yet, so it cannot be dv; differentiating it gives 1/x, which makes (integral of v du) = (integral of x^3/4 dx) elementary. Position on the page decides nothing, the criterion in (c) ignores the requirement that dv be integrable, and a wrong choice makes the traded integral harder, not merely longer."
+        },
+        {
+          "type": "mcq",
+          "q": "Before (x^3 + 1)/(x^2 - 4) can be split into partial fractions you must:",
+          "options": [
+            "factor the numerator, since x^3 + 1 = (x + 1)(x^2 - x + 1)",
+            "do nothing further - the decomposition works for any ratio of polynomials",
+            "divide out, because the numerator's degree is not less than the denominator's",
+            "substitute u = x^2 - 4, since the denominator is a difference of squares"
+          ],
+          "answerIndex": 2,
+          "concept": "Partial fractions require a proper rational function",
+          "why": "Degree 3 is not less than degree 2, so long division comes first: (x^3 + 1)/(x^2 - 4) = x + (4x + 1)/(x^2 - 4), and only the remainder is decomposed. Decomposition works on the denominator's factors, the belief in (b) produces an inconsistent system with no solution, and the substitution in (d) needs a 2x that is not present."
+        },
+        {
+          "type": "mcq",
+          "q": "The correct partial-fraction form for (5x + 1)/((x + 2)(x - 1)^2) is:",
+          "options": [
+            "A/(x + 2) + B/(x - 1)^2",
+            "A/(x + 2) + (Bx + C)/(x - 1)^2",
+            "(Ax + B)/(x + 2) + (Cx + D)/(x - 1)^2",
+            "A/(x + 2) + B/(x - 1) + C/(x - 1)^2"
+          ],
+          "answerIndex": 3,
+          "concept": "A repeated linear factor contributes one term for every power up to its multiplicity",
+          "why": "(x - 1)^2 needs both B/(x - 1) and C/(x - 1)^2, giving three unknowns over a cubic denominator. Option (a) omits the first-power term and the equations become inconsistent; (b) treats a repeated linear factor as an irreducible quadratic; (c) gives linear factors linear numerators, which makes each piece improper."
+        },
+        {
+          "type": "mcq",
+          "q": "You substitute u = g(x) into a definite integral (integral from 0 to 2 of f(x) dx). You must then:",
+          "options": [
+            "keep 0 and 2 as the limits and evaluate the antiderivative in u at them",
+            "replace the limits 0 and 2 by g(0) and g(2), or else return to x before substituting the original limits",
+            "keep 0 and 2 but swap them if g is decreasing on the interval",
+            "drop the limits, since the substitution has turned the problem into an indefinite integral, and add + C"
+          ],
+          "answerIndex": 1,
+          "concept": "Limits belong to the variable of integration and must change with it",
+          "why": "0 and 2 are x-values, so once the antiderivative is a function of u it must be evaluated at g(0) and g(2); the equally valid alternative is to back-substitute to x first. Evaluating a u-function at x-numbers is the commonest definite-substitution error, a decreasing g simply yields an upper limit below the lower one, and a change of variable does not turn a number into a family of functions."
+        },
+        {
+          "type": "mcq",
+          "q": "The standard route to (integral of x dx/(x^2 + 6x + 8)) is:",
+          "options": [
+            "the substitution u = x^2 + 6x + 8, since there is an x in the numerator",
+            "integration by parts, with u = x and dv = dx/(x^2 + 6x + 8)",
+            "partial fractions, after factoring the denominator as (x + 2)(x + 4)",
+            "trigonometric substitution, after completing the square to (x + 3)^2 - 1"
+          ],
+          "answerIndex": 2,
+          "concept": "Technique selection: a rational function whose denominator factors over the reals is partial-fraction work",
+          "why": "x^2 + 6x + 8 = (x + 2)(x + 4), so the integrand splits into constants over linear factors and integrates to logarithms. Substitution fails because du = (2x + 6) dx and the numerator is only x; the dv in (b) is the very integral being attempted; and completing the square is for quadratics that are irreducible or sit under a root, not for one that factors."
+        },
+        {
+          "type": "short",
+          "q": "There is no 'product rule for integration', yet integration by parts comes directly from the product rule. Explain how, and state precisely what parts does and does not promise you about the integral you started with.",
+          "concept": "Integration by parts as an exchange derived from the product rule",
+          "why": "Integration has no product rule because (integral of f*g dx) cannot be built from (integral of f) and (integral of g) - test it on (integral of x*x dx) = x^3/3 against (x^2/2)(x^2/2) = x^4/4. What can be done is to integrate the product rule itself: from d(uv) = u dv + v du, uv = (integral of u dv) + (integral of v du), hence (integral of u dv) = uv - (integral of v du). So parts promises only an exchange - the integral is replaced by a boundary term uv and a different integral (integral of v du). It promises nothing about that new integral being easier; that depends entirely on the choice of u and dv, which is why a bad choice can produce a harder integral and the correct response is to swap the roles and start again."
+        },
+        {
+          "type": "short",
+          "q": "A student integrating (integral of (x^2 - 1)^4 dx) writes: 'let u = x^2 - 1, du = 2x dx, so dx = du/(2x), giving (1/2x)(integral of u^4 du) = (x^2 - 1)^5/(10x)'. Name the exact step that is illegal, state the general rule about what may and may not be moved across the integral sign, and say how you would show the answer is wrong in one line.",
+          "concept": "Only constants may be moved across the integral sign; a missing variable factor cannot be manufactured",
+          "why": "The illegal step is pulling 1/(2x) outside the integral. (integral of k*f) = k(integral of f) holds for a constant k because k is unaffected by the variable being integrated; 1/(2x) varies with that very variable and, once the substitution is made, is not even expressible in u without a root. Equivalently, substitution requires g'(x) = 2x to be present in the integrand up to a constant multiple, and here it is simply absent. The one-line disproof is to differentiate the claimed answer: d/dx[(x^2 - 1)^5/(10x)] needs the quotient rule and gives [10x(x^2 - 1)^4 * 2x - (x^2 - 1)^5]/(10x^2), which is not (x^2 - 1)^4. The correct route is to expand the bracket and integrate term by term."
+        },
+        {
+          "type": "short",
+          "q": "Explain why the substitution x = a sin(theta) removes the root in sqrt(a^2 - x^2), why theta is restricted to -pi/2 <= theta <= pi/2, and how you get from an answer written in theta back to an answer in x.",
+          "concept": "Trigonometric substitution: a Pythagorean identity turns a difference of squares into a perfect square",
+          "why": "x = a sin(theta) gives a^2 - x^2 = a^2(1 - sin^2(theta)) = a^2 cos^2(theta), so sqrt(a^2 - x^2) = a|cos(theta)| - the root disappears because a^2 cos^2 is an exact square, which a^2 - x^2 was not. Restricting theta to [-pi/2, pi/2] does two things: cos(theta) >= 0 there, so the modulus can be dropped and the root is exactly a cos(theta); and sin is one-to-one there, so theta = arcsin(x/a) is well defined and every x in (-a, a) is reached once. To return to x, use the triangle the substitution describes - opposite x, hypotenuse a, adjacent sqrt(a^2 - x^2) - giving sin(theta) = x/a, cos(theta) = sqrt(a^2 - x^2)/a, tan(theta) = x/sqrt(a^2 - x^2) and theta = arcsin(x/a). An answer left in theta does not answer a question asked about x."
+        },
+        {
+          "type": "short",
+          "q": "You are given (integral of dx/(x^2 - 9)), (integral of x dx/(x^2 - 9)) and (integral of dx/sqrt(9 - x^2)). Name the technique each one needs and say exactly which feature of the integrand decides it. Do not evaluate them.",
+          "concept": "Choosing the technique from the shape of the integrand",
+          "why": "(integral of dx/(x^2 - 9)): the denominator is a difference of squares that factors over the reals as (x - 3)(x + 3) and the numerator is a constant, so this is partial fractions (equivalently the standard form (1/6) ln|(x - 3)/(x + 3)|). (integral of x dx/(x^2 - 9)): the numerator is now a constant multiple of the denominator's derivative 2x, an f'/f pattern, so substitution u = x^2 - 9 gives a single logarithm. (integral of dx/sqrt(9 - x^2)): the quadratic is under a root and in the form a^2 - x^2, which nothing rational removes, so it needs the trigonometric substitution x = 3 sin(theta) (it is also the standard arcsin form). The deciding features, in order, are: is there a root over the quadratic; is the numerator the denominator's derivative; does the denominator factor over the reals."
+        }
+      ]
+    },
+    {
+      "id": "tue-phy102",
+      "day": "Tue",
+      "course": "PHY_102",
+      "topic": "Magnetic dipoles as concepts: what a dipole is and why a magnet cannot be split into poles, the current-loop and pole models, the definition and right-hand-rule direction of mu = NIA, the vector reasoning behind torque = mu x B and U = -mu.B, the electron's moment M = g(-eL/2m), and the geometry of the fields of a bar magnet, a wire and a solenoid",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A bar magnet is cut in half across its middle, and each half is found to be a complete magnet with a north and a south pole. The reason is that:",
+          "options": [
+            "the freshly cut faces acquire induced poles from the Earth's magnetic field, and this is what supplies the new N and S",
+            "each half keeps half of the original north pole and half of the original south pole, the pole material dividing with the metal",
+            "magnetic field lines are closed loops with no ends, so lines still leave one new face and enter the other",
+            "the two halves attract each other after the cut, and attraction is possible only between opposite poles"
+          ],
+          "answerIndex": 2,
+          "concept": "No magnetic monopoles: every line of B is closed",
+          "why": "Because B has no sources or sinks, any fragment of a magnet is crossed by lines that must enter one face and leave the other, and those faces are its south and north poles; subdivide to a single atom and you still have a current loop, never a lone pole."
+        },
+        {
+          "type": "mcq",
+          "q": "The field lines of a bar magnet:",
+          "options": [
+            "run from N to S outside the magnet and from S to N inside it, so that every line closes on itself",
+            "run from N to S both outside and inside, beginning at the north pole and ending at the south",
+            "run from S to N outside, since B must point towards the pole that attracts a compass's north end",
+            "close on themselves only in a ring magnet; in a straight bar they terminate on the two pole faces"
+          ],
+          "answerIndex": 0,
+          "concept": "Field lines are closed loops; N to S outside, S to N inside",
+          "why": "The external run from N to S is what a compass traces, and the return path through the material is what makes each line closed, which is exactly why the flux out of any closed surface is zero."
+        },
+        {
+          "type": "mcq",
+          "q": "A flat coil of N turns, each of area A, carries current I. Its magnetic dipole moment has magnitude and direction:",
+          "options": [
+            "NIA, lying in the plane of the coil, parallel to the current where it crosses the top of the loop",
+            "NIA, along the normal to the coil's plane, in the sense of the right thumb when the fingers curl along the current",
+            "IA, along the normal to the plane; N does not enter, since every turn carries the same current",
+            "NIA, along B, since a dipole moment is defined only once an external field has been applied"
+          ],
+          "answerIndex": 1,
+          "concept": "mu = NIA, directed along the normal by the right-hand rule",
+          "why": "The magnitude accumulates over the turns, and the only direction intrinsic to a flat loop is its normal, since the current itself points a different way at every point of the loop."
+        },
+        {
+          "type": "mcq",
+          "q": "A current loop lies in a uniform field with the plane of the loop containing B. In torque = mu*B*sin(theta), the angle theta is:",
+          "options": [
+            "0 degrees, because theta is the angle between B and the plane of the loop, and here the field lies wholly within that plane",
+            "0 degrees, because the flux through the loop vanishes in this orientation, and sin(theta) tracks that flux",
+            "undefined, since mu and B are perpendicular and a cross product vanishes for perpendicular vectors",
+            "90 degrees, since theta is measured from the loop's normal - the direction of mu - which is here perpendicular to B"
+          ],
+          "answerIndex": 3,
+          "concept": "theta is the angle between mu and B, and mu is the normal",
+          "why": "With the plane containing B the normal is perpendicular to B, so theta = 90 degrees, sin(theta) = 1 and the torque is at its maximum; measuring the angle from the plane instead swaps sin and cos everywhere afterwards."
+        },
+        {
+          "type": "mcq",
+          "q": "A magnetic dipole in a uniform field has U = -mu.B. Its position of stable equilibrium is:",
+          "options": [
+            "theta = 0 degrees, where U = -mu*B is a minimum and the torque is zero",
+            "theta = 90 degrees, where the torque is greatest and the dipole is most strongly driven towards the field",
+            "theta = 180 degrees, where U = +mu*B is a maximum, and a body at rest sits at an extremum of the energy",
+            "theta = 0 degrees and theta = 180 degrees alike, since the torque vanishes at both and U differs only by an additive constant"
+          ],
+          "answerIndex": 0,
+          "concept": "Stable equilibrium is the energy minimum, not merely zero torque",
+          "why": "U = -mu*B*cos(theta) is least at theta = 0, and a displacement there produces a torque mu*B*sin(theta) that restores the dipole; at 180 degrees the energy is a maximum, so the same torque drives it away."
+        },
+        {
+          "type": "mcq",
+          "q": "The current-loop model and the two-pole model of a magnetic dipole:",
+          "options": [
+            "agree everywhere, so which one is used is purely a matter of convenience",
+            "agree inside the source but diverge far from it, where only the pole model gives the right 1/r^3 fall-off",
+            "agree far from the source but give different predictions inside the source region",
+            "disagree everywhere, the pole model being obsolete and making no correct prediction"
+          ],
+          "answerIndex": 2,
+          "concept": "The two dipole models coincide in the far field only",
+          "why": "Far away both give the same 1/r^3 dipole field; inside the source the pole model has B running N to S in the gap, opposite to mu, while the loop model has B parallel to mu through the loop, and the loop model is the physically correct one."
+        },
+        {
+          "type": "mcq",
+          "q": "In M = g(-eL/2m) for an electron, the minus sign records that:",
+          "options": [
+            "the moment always opposes the applied field, by Lenz's law",
+            "the electron's charge is negative, so its magnetic moment points opposite to its angular momentum",
+            "the electron's energy in a field is negative when its moment is aligned with the field",
+            "the g-factor is itself negative for an electron, and the sign shown merely displays that fact"
+          ],
+          "answerIndex": 1,
+          "concept": "The moment of a negative charge is antiparallel to its angular momentum",
+          "why": "Conventional current is the flow of positive charge, so an electron circulating one way constitutes a current the other way, and mu = IA therefore points opposite to L = mvr."
+        },
+        {
+          "type": "mcq",
+          "q": "A solenoid is rewound using twice as many turns of the same wire at the same pitch, so it becomes twice as long; the current is unchanged. The field on the axis at its middle:",
+          "options": [
+            "doubles, since B is proportional to the number of turns N",
+            "halves, since the same total flux is now spread over twice the length",
+            "doubles near the middle, the regions near the ends being unaffected",
+            "is unchanged, since B = mu_0*n*I depends on turns per unit length, and n has not changed"
+          ],
+          "answerIndex": 3,
+          "concept": "B = mu_0*n*I, with n the turns per unit length",
+          "why": "Doubling N while doubling the length leaves n = N/L untouched, so the interior field is exactly what it was; this is the sharpest test of whether a student is using n rather than N."
+        },
+        {
+          "type": "short",
+          "q": "Explain why a magnet cannot be cut into a separate north pole and a separate south pole, whereas an electric dipole can be pulled apart into two isolated charges. State the property of magnetic field lines this implies, and the law that expresses it.",
+          "concept": "Absence of magnetic monopoles and the closure of field lines",
+          "why": "An electric dipole is two separate objects, each a genuine source of field that exists perfectly well alone. A magnetic pole is not an object: magnetism originates in circulating currents and spins, and a loop has no ends, so what we call a north pole is only the face out of which lines emerge. Cut the magnet and the lines crossing the cut plane now emerge from one new face and enter the other, so each fragment is at once a complete dipole; continue to a single atom and the source is still a loop. The implied property is that magnetic field lines never begin or end - every line of B is a closed loop. The law is Gauss's law for magnetism: the net magnetic flux through any closed surface is zero (equivalently div B = 0), in contrast to Gauss's law for electricity, whose right-hand side is the enclosed charge and which is what permits an isolated electric source."
+        },
+        {
+          "type": "short",
+          "q": "For a rectangular current loop in a uniform field, explain - from the forces on the individual sides - why the net force is zero but the net torque is not, and why the resulting torque is mu*B*sin(theta) with theta measured from the normal to the loop rather than from its plane.",
+          "concept": "Origin of torque = mu x B and the meaning of the angle",
+          "why": "Take a loop of sides a and b, the sides of length a parallel to the rotation axis. Each feels F = BIa from F = IL x B, and because the current runs in opposite directions along them the two forces are equal and opposite, so their vector sum is zero: in a uniform field the loop cannot translate, only turn. The other pair cancels likewise. But the two forces do not act along the same line - they form a couple, and the perpendicular distance between their lines of action is b*sin(theta), where theta is the angle the normal has turned away from B. Hence torque = (BIa)(b*sin(theta)) = I(ab)B*sin(theta) = mu*B*sin(theta), and vectorially torque = mu x B. The angle appears as the angle from the normal because that is what the lever arm delivers: normal along B means the forces are collinear, arm zero, torque zero; normal perpendicular to B (plane containing B) means the arm is the full b and the torque is maximum. Measuring from the plane reverses both statements."
+        },
+        {
+          "type": "short",
+          "q": "Explain why the potential energy is U = -mu.B and not +mu.B, what distinguishes the stable from the unstable equilibrium given that the torque is zero at both, and why the work needed to flip a dipole end for end is 2*mu*B rather than mu*B.",
+          "concept": "The sign of U, stability as a second-order property, and the flip energy",
+          "why": "The torque always acts to rotate mu towards B, and a conservative torque satisfies torque = -dU/dtheta, so U must decrease towards theta = 0. With U = -mu*B*cos(theta), dU/dtheta = +mu*B*sin(theta) and the torque is restoring, as required; writing +mu.B instead would make the anti-aligned position the minimum and compass needles would point south. The torque vanishes at both theta = 0 and theta = 180 degrees, so zero torque cannot distinguish them; what does is the behaviour of U on either side. At 0 degrees U is a minimum, any displacement raises the energy and the torque restores - stable. At 180 degrees U is a maximum, any displacement lowers the energy and the torque carries the dipole further away - unstable, like a pencil on its point. The flip energy is U(180) - U(0) = (+mu*B) - (-mu*B) = 2*mu*B: the two ends sit symmetrically at plus and minus mu*B, so the gap is twice the depth of the well. Quoting mu*B is the error of taking only the final energy and forgetting the initial energy was -mu*B."
+        },
+        {
+          "type": "short",
+          "q": "Compare the field of a long straight wire with the field inside a long solenoid: the geometry of each, and what each depends on. Explain in particular why the solenoid's interior field does not depend on its radius, and why the wire's field is tangential rather than radial even though its strength falls as 1/r, like that of a line of charge.",
+          "concept": "Geometry of the wire and solenoid fields",
+          "why": "Straight wire: B = mu_0*I/(2*pi*r), the lines being closed concentric circles in planes perpendicular to the wire, sense given by the right-hand grip rule; it depends only on the current and the perpendicular distance, falling as 1/r, with no dependence on position along an ideal infinite wire. Solenoid: B = mu*n*I inside, with n = N/L in turns per metre; the interior field is uniform and axial and essentially zero outside, depending on the core permeability, on n and on I - not on the radius and not on N alone. The radius drops out because each turn encircles the interior: a wider coil encloses more area per turn but spreads that turn's field over exactly the same larger area. Formally, Ampere's law on a rectangular path of length l inside encloses n*l turns and gives B*l = mu*n*l*I, in which no radius appears. The wire's field is tangential because its source is a current, a vector along the wire, and the law is a cross product, B proportional to I x r-hat, necessarily perpendicular to both current and radius; a line of charge has a scalar source, so its E has nowhere to point but along r-hat. The 1/r fall-off is shared because it comes from the one-dimensional geometry of the source, but the directions are unrelated, and a field pointing away from a wire would have open lines and contradict zero net flux."
+        }
+      ]
+    },
+    {
+      "id": "wed-cos102",
+      "day": "Wed",
+      "course": "COS_102",
+      "topic": "Abstraction and the anatomy of functions and modules as concepts: what abstraction hides, data versus functional abstraction, access specifiers and header files, why a complex project is decomposed at all, declaration versus definition, the four parts of a function definition, parameters versus arguments, return type and void, local versus global scope, and what makes a module different from a function",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A team publishes a routine to the rest of the company and tells them: here is its name, here is the format of the input, here is the format of the output, and we reserve the right to rewrite the body whenever we like. Which kind of abstraction is that, on the course's own definitions?",
+          "options": [
+            "Data abstraction, because the values the routine works on have been kept out of everybody else's reach",
+            "Functional abstraction, because what is not exposed is the implementation of the method, and a caller is given only the name and the input and output formats",
+            "Data abstraction, because other programmes must obtain permission from the team before they may alter anything",
+            "Neither: publishing a name with input and output formats is what a header file does, and a header file is a file, not a type of abstraction"
+          ],
+          "answerIndex": 1,
+          "concept": "Functional abstraction hides the implementation; the interface is the name plus input and output formats",
+          "why": "The course's wording is almost verbatim: the implementation of the methods of an object is not directly exposed, and if other programmes need to use the method, all they need to know is the method's name, the format of the input, and the format of the output. Options a and c both reach for data abstraction, which is about the object's DATA not being exposed and about no other programme altering that data without obtaining the necessary permissions - nothing in the scenario mentions data at all, only a body that may be rewritten. Option d confuses the mechanism with the concept: a header file is one way to implement this, but what has been described is the abstraction itself."
+        },
+        {
+          "type": "mcq",
+          "q": "What, exactly, do the public and private access specifiers do?",
+          "options": [
+            "They restrict the access of other programmes to only some of the properties and functions of an object",
+            "They state which of a function's parameters must be supplied with an argument at a call and which may be left out",
+            "They mark which of an object's functions is the entry point, so that the compiler knows which function to run first",
+            "They decide whether an object's data is stored in the programme itself or in a separate header file"
+          ],
+          "answerIndex": 0,
+          "concept": "What access specifiers actually control",
+          "why": "The course says the public and private specifiers are applied to the properties and functions of an object and restrict the access of other programmes to only some of them - they control who may name a thing, and nothing else. Option b invents optional arguments, confusing an access specifier with a parameter list. Option c confuses public with the role of main(), which the course names separately as the entry-point function of every C programme. Option d confuses the access specifier with the header file, the other implementation mechanism in the same lesson; specifiers say nothing about where anything is stored."
+        },
+        {
+          "type": "mcq",
+          "q": "The course presents the header file as a way of implementing abstraction, not merely as a convenience. Why?",
+          "options": [
+            "Because including a header file removes the library's source code from the machine, so nobody can read the implementation at all",
+            "Because a header file is processed before main() and therefore runs first, which keeps the implementation out of the way of your own code",
+            "Because by including it you can use its functions without having any knowledge of how the function is implemented - you are given names and input and output formats and nothing more",
+            "Because a header file is where an object's public and private specifiers must be written, and those specifiers are what does the actual hiding"
+          ],
+          "answerIndex": 2,
+          "concept": "A header file is functional abstraction delivered by the toolchain",
+          "why": "The course's own sentence: by including a header file we can easily use functions from the header file without having any knowledge of how the function is implemented, which is exactly the name-plus-input-format-plus-output-format interface of functional abstraction. Option a is the commonest misconception in the topic - reading abstraction as secrecy; header files are ordinary readable text, and what is withheld is the implementation, not the file. Option b invents an execution order; nothing in a header runs, and main() remains the entry point. Option d fuses the two mechanisms into one, when the course lists them as separate ways of implementing the same idea."
+        },
+        {
+          "type": "mcq",
+          "q": "A small programme is growing rapidly and more people are being put on it. What does the course say functions do about that, and why?",
+          "options": [
+            "They shorten the programme, so that the growing code still fits on a page and stays readable to everyone on the team",
+            "They let the project scale up, because a project that becomes complex only needs more functions added and the system remains stable, and different people can work on separate smaller functions at the same time",
+            "They make the programme run faster, because a function that has already been called once does not have to be executed again the next time",
+            "They remove the need for anybody to agree on names, because each function keeps its own copy of the data it needs and never consults another"
+          ],
+          "answerIndex": 1,
+          "concept": "The course's stated reason for decomposition - people and stability, not brevity",
+          "why": "The lesson's argument runs: a complex project is impossible or time-wasting for one person, the more complex the task the more people are needed, so break it into smaller pieces that different people can work on at the same time; and the stated benefit is that even if a small project rapidly becomes complex, we only need to add more functions and the system will remain stable. Option a is a real side effect, but readability is listed as a benefit of abstraction, not as the reason functions exist. Option c invents caching: a function called ten times executes ten times, and what functions avoid is duplicating the code, not the running. Option d inverts the point - decomposition needs more agreement about interfaces, not less, and a function that never consults another could not be called by one."
+        },
+        {
+          "type": "mcq",
+          "q": "'double area(double r);' appears near the top of a file. Further down the same file appears 'double area(double r) { return 3.14159 * r * r; }'. What are these two things?",
+          "options": [
+            "Two definitions: the second repeats the first with the body filled in, and the compiler keeps whichever it meets last",
+            "A function header and a function body, which together make up one declaration of area",
+            "A call and a definition: the call must be written above the function it uses, which is what the first line does",
+            "A declaration, which tells the compiler the name, return type and parameters, and a definition, which provides the actual body - the body being defined separately is exactly what a declaration permits"
+          ],
+          "answerIndex": 3,
+          "concept": "Declaration versus definition",
+          "why": "The first line is a declaration: it tells the compiler about a function name, return type, and parameters, ends in a semicolon and has no body. The second is the definition, which provides the actual body; the course explicitly says the actual body of the function can be defined separately. Option a misses that only one of them has a body and invents a last-one-wins rule that no language has. Option b is the sharpest distractor and the commonest error: header and body are the two parts of the DEFINITION - the header is the line 'double area(double r)' and the body is what sits between the braces - so neither of them is the declaration. Option c confuses a declaration with a call; a call passes actual values and appears inside another function's body."
+        },
+        {
+          "type": "mcq",
+          "q": "In 'int total(int a, int b) { int s = a + b; return s; }', which reading is correct?",
+          "options": [
+            "'int total(int a, int b)' is the function header, 'int' is the return type, 'total' the name, 'a' and 'b' the parameters, and the braces enclose the function body",
+            "'int' is the return type, 'total(int a, int b)' is the function header, and 'int s = a + b;' is the return type of s, since that is the line where the returned value is built",
+            "'a' and 'b' are the arguments, because an argument is what a function is given, and these are the two things this function is given",
+            "'{ int s = a + b; return s; }' is the function header, because a header is what sits at the head of the braces, and 'int total(int a, int b)' is the declaration"
+          ],
+          "answerIndex": 0,
+          "concept": "Naming the four parts of a function definition on a real line of code",
+          "why": "Return type int, name total, parameters int a and int b - together the function header - and the braces enclose the function body, the collection of statements that define what the function does. Option b gets the return type right and then invents a second one for the local variable; 'int s' is a declaration of a local, not a return type. Option c is the parameter/argument swap: a and b are placeholders written in the header, so they are parameters; arguments are the actual values passed at a call, and no call appears here. Option d reverses header and body outright, on the plausible-sounding but wrong ground that the head is what the braces enclose."
+        },
+        {
+          "type": "mcq",
+          "q": "The course says a parameter is 'like a placeholder' and that 'when a function is invoked, a value is passed to the parameter'. Which statement follows from that?",
+          "options": [
+            "Parameter and argument are two words for the same thing, and which one is used is purely a matter of house style",
+            "The argument is the name written in the function's header and the parameter is the value written at the call, since the parameter is what is actually being passed",
+            "The parameter is the name written in the function's header, and the argument is the actual value supplied at a call - so one parameter takes a different argument every time the function is invoked",
+            "A parameter keeps whatever value the first call gave it, which is why later calls of the same function may leave that argument out"
+          ],
+          "answerIndex": 2,
+          "concept": "Parameter versus argument",
+          "why": "The parameter is written once, in the header, as a placeholder; the argument is the actual value passed when the function is invoked, and it may differ at every call - which is precisely why the placeholder is needed. Option a is the 'the distinction is pedantry' answer; it is not, because the two live in different places and one is fixed while the other varies. Option b has the two terms the right way round in the sentence and the wrong way round in fact - the classic swap. Option d reads 'placeholder' as 'storage that holds on to its value', which quietly turns a parameter into a global; each call passes a value afresh, and a call that omits an argument the header requires is simply an error."
+        },
+        {
+          "type": "mcq",
+          "q": "A variable declared inside a function's body cannot be seen by any other function. Why is that the right arrangement rather than an inconvenience to be worked around with globals?",
+          "options": [
+            "It is a limitation of the compiler, which keeps a single table of names and would otherwise report every repeated name as a clash",
+            "It is what makes the body genuinely private: two functions may reuse the same names without interfering, and no caller can depend on or corrupt what a body keeps",
+            "It is because local variables live in the header file while globals live in the source file, so the two are never visible in the same place at once",
+            "It is because a local variable has no value until its function returns, so letting other functions see it early would let them read meaningless data"
+          ],
+          "answerIndex": 1,
+          "concept": "Local scope is functional abstraction enforced by the language",
+          "why": "Because a local (and a parameter) exists only while that call runs and is invisible outside it, the body of a function is genuinely private: whatever names it uses for its working values are its own business, so two functions can both use i or total, and no caller can come to depend on an internal name - which is exactly what lets the body be rewritten without breaking anybody. Option a mistakes a design decision for a compiler restriction; compilers manage many names, and languages chose to scope them. Option c invents a storage rule from the header-file lesson; a header file holds declarations, not local variables. Option d confuses scope with lifetime and initialisation - a local has a perfectly good value while the function is running, which is precisely when it is used."
+        },
+        {
+          "type": "short",
+          "q": "State the course's one-sentence definition of abstraction. Then name its two types and say precisely what each one hides and what it still lets the outside world have. Finally, explain why the benefit 'we can change the implementation of a method without breaking other parts of the code' is a consequence of the second type rather than a separate feature that has to be added.",
+          "concept": "Abstraction, its two types, and why one benefit follows from one of them",
+          "why": "Definition: abstraction is the process of hiding the internal details of an application from the outer world - the car-ignition analogy, where the driver twists the key and does not concern themselves with what happens in the engine in between. Data abstraction is writing the programme so that the data of an object is not directly exposed to the outside world or to other programmes; what the outside still has is access through permitted routes only, and the stated guarantee is that no other programme can alter the object data without obtaining the necessary permissions. Functional abstraction is writing it so that the implementation of the methods of an object is not directly exposed; what the outside still has is exactly three things - the method's name, the format of the input, and the format of the output. Why the benefit follows: if callers were only ever given the name and the two formats, then no caller's code can contain any reference to how the body works - there is nothing there for them to have relied on, so rewriting the body cannot break them provided the name and the two formats are unchanged. That is not an extra feature bolted on; it is the definition restated from the caller's side. The converse makes it vivid: expose the implementation, let callers reach into it, and every one of them becomes a reason not to change it. This is also why the course pairs the benefit with 'it prevents the duplication of codes' - one implementation, held behind one interface, is the only thing that can be changed in one place."
+        },
+        {
+          "type": "short",
+          "q": "Explain the difference between a function declaration and a function definition, and between a function header and a function body - four terms, and two of them are parts of a third. Say what each of the four contains, which one the compiler needs in order to accept a call, and why a language would bother to let the two be separated at all.",
+          "concept": "Declaration, definition, header, body - and why separation is worth having",
+          "why": "A function declaration tells the compiler about a function name, return type, and parameters; it has no body and ends with a semicolon, e.g. 'int max(int a, int b);'. A function definition provides the actual body. The definition is made of two parts: the function header, which is the line carrying the return type, the function name and the parameters - 'int max(int a, int b)' - and the function body, the collection of statements that define what the function does, held between the braces. So the four terms are not four parallel things: header and body are the two parts of the definition, and the declaration is a separate statement that duplicates only the header's information. What the compiler needs to accept a call is the declaration - name, return type and parameters are enough to check that the call passes the right number and kind of arguments and to know what type of value comes back; it does not need the body, which is supplied later by the definition. Why allow the separation: first, order - main can call a function defined below it because the declaration above has already told the compiler what to expect; second, it is the mechanism behind header files, where the header carries declarations and the compiled library carries definitions, which is how you can call printf without having any knowledge of how it is implemented; third, it is functional abstraction written into the language, since the declaration IS the name plus the input and output formats, exactly what the course says a caller is entitled to know, and the definition is exactly what the course says should be hidden."
+        },
+        {
+          "type": "short",
+          "q": "Explain the difference between a local and a global variable, and say what happens when a function declares a local with the same name as an existing global. Then explain why a programmer who moves a variable out of a function and makes it global to 'save passing it around' has weakened the functional abstraction of every function in the file, and name the specific thing that can now go wrong.",
+          "concept": "Local versus global scope, shadowing, and the cost of a global",
+          "why": "A local variable is declared inside a function's body - and a parameter is a local too. It comes into existence when the call starts, is invisible to every other function, and ceases to exist when the function returns. A global is declared outside all functions: it is visible to every function in the file and persists between calls. When a local has the same name as a global, the local shadows the global inside that function: every use of the name there refers to the local, and assignments there leave the global untouched. So a function containing 'int total;' that then does 'total = a + b;' does not change a global called total at all - the two are different variables that happen to share a spelling, and the return value is the only thing that gets out. Why a global weakens abstraction: a function whose behaviour depends on a global no longer has an honest interface, because its name, its input format (the parameters) and its output format (the return type) no longer describe everything that governs it - a value it never received can change what it does, and a value it never returned can be changed by it. Callers therefore must know about the internals, which is what functional abstraction exists to prevent, and the benefit that the implementation can be changed without breaking other parts of the code is gone because the body and the rest of the file now share state. The specific fault: two functions writing to the same global at different times, so that one function's result silently depends on whether the other has already been called, and how many times. That is invisible in either function read on its own, which is why it survives testing; a parameter and a return value would have made the dependency visible in the header."
+        },
+        {
+          "type": "short",
+          "q": "A module 'special_functions' contains the functions max and min. Explain what a module is and how the course says it differs from a function, then explain the difference between 'import special_functions' and 'from special_functions import max' - what each makes usable, and what each does not. Finally, say why the course discusses C header files under abstraction and modules under functions, when the two are doing much the same job.",
+          "concept": "Modules versus functions, the two import forms, and why headers and modules are the same idea",
+          "why": "The course says modules and functions are very similar; the main difference is that modules are used on a much larger scale. A function is a group of statements that perform a task - one specific task, on a small scale. A module is larger because it can contain various functions and classes; it is a whole file's worth of capability rather than a single task. The relationship is one of scale, not of kind: you call a function, you import a module, and after importing you still call the functions inside it. 'import special_functions' brings in the module, so everything in it is reachable through the module's name - special_functions.max(4, 7), special_functions.min(4, 7) - and the bare name max is NOT introduced. 'from special_functions import max' explicitly specifies the exact function we want to use, so the name max becomes usable directly, max(4, 7), and as the course puts it we can only use the max function: min has not been brought in and special_functions itself is not available as a name either. Same module, different names made usable. Why headers sit under abstraction and modules under functions: they are the same mechanism seen from two sides. '#include <stdio.h>' and 'import special_functions' both let you use somebody else's function while knowing only its name, the format of its input and the format of its output; the deck puts the header file under abstraction because that is the point it illustrates - using a function without having any knowledge of how it is implemented - and puts modules under functions because that is the point they illustrate, breaking a large complex project into smaller pieces so that different people can work on them at once. Decomposition and abstraction are two descriptions of one act: you cut the problem into pieces, and each cut is only useful if the piece can be used from outside without being understood from inside."
+        }
+      ]
+    },
+    {
+      "id": "thu-mth102",
+      "day": "Thu",
+      "course": "MTH_102",
+      "topic": "Integration technique problems: carrying out substitutions including the ones that need a leftover x re-expressed and the ones that change the limits of a definite integral, integrating by parts once, twice and in the cycling case where you solve for the integral, converting an integrand under a trigonometric substitution and getting back to x, and doing long division and partial-fraction decomposition before integrating - with the sign and constant traps at each step",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "integral from 1 to 2 of x(x^2 - 1)^3 dx =",
+          "options": [
+            "81/4",
+            "15/8",
+            "81/8",
+            "243/8"
+          ],
+          "answerIndex": 2,
+          "concept": "Substitution in a definite integral: the constant in du and the change of limits",
+          "why": "u = x^2 - 1, du = 2x dx so x dx = du/2, and the limits become u = 0 and u = 3. The integral is (1/2)(integral from 0 to 3 of u^3 du) = (1/2)(81/4) = 81/8. Option (a) forgets the 1/2, (b) keeps the x-limits 1 and 2 under the u-antiderivative, and (d) expands (x^2 - 1)^3 as x^6 - 1, losing the cross terms."
+        },
+        {
+          "type": "mcq",
+          "q": "integral of x e^(3x) dx =",
+          "options": [
+            "(x e^(3x))/3 - e^(3x)/3 + C",
+            "(x e^(3x))/3 - e^(3x)/9 + C",
+            "x e^(3x) - e^(3x) + C",
+            "(x^2/2) e^(3x) + C"
+          ],
+          "answerIndex": 1,
+          "concept": "Integration by parts with u = x: v is the integral of dv, and the traded integral must be integrated too",
+          "why": "u = x, dv = e^(3x) dx gives v = e^(3x)/3, so the integral is x e^(3x)/3 - (integral of e^(3x)/3 dx) = x e^(3x)/3 - e^(3x)/9. Option (a) forgets the second division by 3, (c) takes v = e^(3x) and drops the 1/3 in both terms, and (d) integrates the two factors separately. Differentiating (b) returns e^(3x)/3 + x e^(3x) - e^(3x)/3 = x e^(3x)."
+        },
+        {
+          "type": "mcq",
+          "q": "integral of x ln x dx =",
+          "options": [
+            "x ln x - x + C",
+            "(x^2/2) ln x - x^2/2 + C",
+            "(x^2/2)(1/x) + C",
+            "(x^2/2) ln x - x^2/4 + C"
+          ],
+          "answerIndex": 3,
+          "concept": "LIATE: the logarithm becomes u, and the traded integral is purely algebraic",
+          "why": "u = ln x, dv = x dx gives du = dx/x and v = x^2/2, so the integral is (x^2/2) ln x - (integral of (x/2) dx) = (x^2/2) ln x - x^2/4. Option (b) integrates x/2 as x^2/2 and drops the 1/2, (c) treats the product as separable, and (a) is the answer to (integral of ln x dx), ignoring the x factor."
+        },
+        {
+          "type": "mcq",
+          "q": "Writing (4x - 5)/((x - 2)(x + 1)) = A/(x - 2) + B/(x + 1), the constants are:",
+          "options": [
+            "A = 3, B = 1",
+            "A = 1, B = 3",
+            "A = 1, B = -3",
+            "A = 3, B = -9"
+          ],
+          "answerIndex": 1,
+          "concept": "Finding partial-fraction constants by the cover-up method",
+          "why": "Clearing denominators gives 4x - 5 = A(x + 1) + B(x - 2). Putting x = 2 gives 3 = 3A so A = 1; putting x = -1 gives -9 = -3B so B = 3. Option (a) attaches each constant to the wrong factor, (c) keeps a minus sign that the two negatives cancel, and (d) reports the left-hand sides 3 and -9 without dividing by the bracket values."
+        },
+        {
+          "type": "mcq",
+          "q": "Under the substitution x = 3 tan(theta), the integral (integral of dx/(x^2 + 9)^2) becomes:",
+          "options": [
+            "(1/3)(integral of d(theta))",
+            "(1/27)(integral of d(theta))",
+            "(1/27)(integral of sec^2(theta) d(theta))",
+            "(1/27)(integral of cos^2(theta) d(theta))"
+          ],
+          "answerIndex": 3,
+          "concept": "Converting every part of the integrand under a trigonometric substitution, the differential included",
+          "why": "dx = 3 sec^2(theta) d(theta) and x^2 + 9 = 9 sec^2(theta), so (x^2 + 9)^2 = 81 sec^4(theta) and the integrand is 3 sec^2/(81 sec^4) = (1/27) cos^2(theta). Option (a) uses (x^2 + 9) rather than its square, (b) squares the constant but not the secant, and (c) inverts the ratio sec^2/sec^4. The answer will still need cos^2 = (1 + cos 2theta)/2 before it can be integrated."
+        },
+        {
+          "type": "mcq",
+          "q": "integral from 0 to pi of x sin x dx =",
+          "options": [
+            "pi^2/2",
+            "0",
+            "pi",
+            "-pi"
+          ],
+          "answerIndex": 2,
+          "concept": "Definite integration by parts: evaluate the uv term at the limits, then the remaining integral",
+          "why": "u = x, dv = sin x dx gives v = -cos x, so the value is [-x cos x] from 0 to pi plus (integral from 0 to pi of cos x dx) = pi + 0 = pi. Option (d) takes v = cos x and flips the sign, (a) integrates the factors separately, and (b) assumes cancellation that happens over [0, 2pi] but not over [0, pi], where x sin x is never negative."
+        },
+        {
+          "type": "mcq",
+          "q": "integral of e^x sin x dx =",
+          "options": [
+            "e^x (sin x - cos x)/2 + C",
+            "e^x (sin x + cos x)/2 + C",
+            "-e^x cos x + C",
+            "e^x sin x - e^x cos x + C"
+          ],
+          "answerIndex": 0,
+          "concept": "The cycling case of integration by parts: apply it twice with the same role for e^x, then solve for I",
+          "why": "With I = (integral of e^x sin x dx), one application gives I = e^x sin x - (integral of e^x cos x dx), and a second gives (integral of e^x cos x dx) = e^x cos x + I, so I = e^x sin x - e^x cos x - I and 2I = e^x(sin x - cos x). Option (b) is the answer to (integral of e^x cos x dx), (c) stops after one application, and (d) reports 2I as I."
+        },
+        {
+          "type": "mcq",
+          "q": "integral of (2x + 1)/(x - 3) dx =",
+          "options": [
+            "2x + ln|x - 3| + C",
+            "ln|2x + 1| - ln|x - 3| + C",
+            "2x + 7 ln|x - 3| + C",
+            "(x^2 + x)/(x^2/2 - 3x) + C"
+          ],
+          "answerIndex": 2,
+          "concept": "Long division before integrating an improper rational function",
+          "why": "2x + 1 = 2(x - 3) + 7, so the integrand is 2 + 7/(x - 3) and the integral is 2x + 7 ln|x - 3| + C. Option (a) divides carelessly, since 2(x - 3) + 1 = 2x - 5; (b) takes logs of numerator and denominator separately; (d) integrates top and bottom independently."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate (integral of x^2 cos x dx). Show both applications of parts, state what u and dv are each time, and say what would have gone wrong had you taken u = cos x on the first application.",
+          "concept": "Repeated integration by parts, with the algebraic factor as u so the process terminates",
+          "why": "First application: u = x^2, dv = cos x dx, so du = 2x dx and v = sin x, giving x^2 sin x - (integral of 2x sin x dx). Second application on that integral: u = 2x, dv = sin x dx, so du = 2 dx and v = -cos x, giving -2x cos x + (integral of 2 cos x dx) = -2x cos x + 2 sin x. Substituting back, minding the minus in front of the whole bracket: (integral of x^2 cos x dx) = x^2 sin x + 2x cos x - 2 sin x + C. Check: differentiating gives 2x sin x + x^2 cos x + 2 cos x - 2x sin x - 2 cos x = x^2 cos x. Had u = cos x been chosen, du = -sin x dx and v = x^3/3, so the traded integral would be (integral of (x^3/3) sin x dx) - the power of x has gone up and every further application makes it worse. The algebraic factor must be u precisely because differentiating it lowers its degree, so the process terminates after two steps."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate (integral of x sqrt(x + 2) dx). Explain why the substitution does not finish at du = dx and what extra step the leftover x forces on you.",
+          "concept": "Substitution with a leftover x: solve the substitution backwards for x",
+          "why": "Put u = x + 2, so du = dx. That converts sqrt(x + 2) into sqrt(u), but the standalone factor x is still an x, and an integral containing both u and x is not an integral in one variable. The extra step is to solve the substitution for x: x = u - 2. Then (integral of x sqrt(x + 2) dx) = (integral of (u - 2) u^(1/2) du) = (integral of (u^(3/2) - 2u^(1/2)) du) = (2/5)u^(5/2) - (4/3)u^(3/2) + C = (2/5)(x + 2)^(5/2) - (4/3)(x + 2)^(3/2) + C. This is the case abandoned too early: substitution does not require the inner derivative to cancel the leftover factor, only that everything be expressible in u, which a linear substitution always allows. Multiplying u^(1/2) into the bracket before integrating is compulsory."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate (integral of (x^2 + x + 2)/(x(x^2 + 1)) dx) by partial fractions. Justify the form you write down, and explain why the term over x^2 + 1 splits into two different kinds of integral.",
+          "concept": "Partial fractions with an irreducible quadratic factor, splitting into a logarithm and an arctangent",
+          "why": "x^2 + 1 has discriminant -4 < 0, so it is irreducible and must carry a linear numerator, while x is a distinct linear factor and carries a constant: (x^2 + x + 2)/(x(x^2 + 1)) = A/x + (Bx + C)/(x^2 + 1), so x^2 + x + 2 = A(x^2 + 1) + (Bx + C)x. Putting x = 0 gives A = 2; comparing x^2 gives 1 = A + B so B = -1; comparing x gives C = 1. The integrand is therefore 2/x + (1 - x)/(x^2 + 1), and the integral is 2 ln|x| + arctan x - (1/2) ln(x^2 + 1) + C. The split is forced because the two pieces of a linear numerator do different jobs: the x part is, up to a factor 1/2, the derivative of x^2 + 1 and so integrates to a logarithm, while the constant part has no such match and integrates to an inverse tangent. A constant numerator alone over x^2 + 1 would make the logarithm impossible and the equations inconsistent."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate (integral of sqrt(4 - x^2) dx). State the substitution and its theta-range, show the identity that removes the root, show the step needed before cos^2(theta) can be integrated, and complete the return to x.",
+          "concept": "Trigonometric substitution with the double-angle identity and the back-substitution triangle",
+          "why": "Put x = 2 sin(theta) with -pi/2 <= theta <= pi/2, so dx = 2 cos(theta) d(theta) and 4 - x^2 = 4(1 - sin^2(theta)) = 4 cos^2(theta), giving sqrt(4 - x^2) = 2 cos(theta) with no modulus needed on that range. Then the integral is (integral of 4 cos^2(theta) d(theta)) = 4(integral of (1 + cos 2theta)/2 d(theta)) = 2 theta + sin 2theta = 2 theta + 2 sin(theta) cos(theta). The triangle (opposite x, hypotenuse 2, adjacent sqrt(4 - x^2)) gives theta = arcsin(x/2), sin(theta) = x/2 and cos(theta) = sqrt(4 - x^2)/2, so the answer is 2 arcsin(x/2) + x sqrt(4 - x^2)/2 + C. The two steps most often skipped are the double-angle rewrite, since (integral of cos^2) is not cos^3/3, and the final conversion, since an answer containing theta is not an answer in x."
+        }
+      ]
+    },
+    {
+      "id": "fri-phy102",
+      "day": "Fri",
+      "course": "PHY_102",
+      "topic": "Numerical magnetic-dipole work: computing mu = NIA with areas converted to m^2, torque mu*B*sin(theta) and its maximum, energy -mu*B*cos(theta) and the work to rotate or flip a dipole, B = mu_0*I/(2*pi*r) for a straight wire and B = mu*n*I for a solenoid with turns per unit length and a core, the electron's moment from its angular momentum, and the unit, angle and direction traps in each",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A rectangular coil of 40 turns, measuring 6.0 cm x 4.0 cm, carries 2.5 A in a uniform field of 0.30 T. The magnitude of its magnetic dipole moment is:",
+          "options": [
+            "6.0e-3 A*m^2",
+            "0.24 A*m^2",
+            "2.4e3 A*m^2",
+            "0.072 A*m^2"
+          ],
+          "answerIndex": 1,
+          "concept": "mu = NIA, with the area in m^2",
+          "why": "A = (0.060)(0.040) = 2.4e-3 m^2, so mu = (40)(2.5)(2.4e-3) = 0.24 A*m^2. Dropping N gives 6.0e-3, leaving the area in cm^2 gives 2.4e3, and multiplying in B gives 0.072, which is the torque and not the moment."
+        },
+        {
+          "type": "mcq",
+          "q": "The same coil (40 turns, 6.0 cm x 4.0 cm, 2.5 A, field 0.30 T) is held with its normal at 30 degrees to B. The torque on it is:",
+          "options": [
+            "0.072 N*m",
+            "0.062 N*m",
+            "0.036 N*m",
+            "0.018 N*m"
+          ],
+          "answerIndex": 2,
+          "concept": "torque = mu*B*sin(theta), theta measured from the normal",
+          "why": "torque = (0.24)(0.30)sin(30) = (0.072)(0.500) = 0.036 N*m. Quoting 0.072 is the maximum torque with the angle ignored, and 0.062 is mu*B*cos(30), the sin/cos swap that follows from measuring the angle from the plane."
+        },
+        {
+          "type": "mcq",
+          "q": "For the same coil (mu = 0.24 A*m^2 in 0.30 T), the work that must be done to turn it from fully aligned to fully anti-aligned is:",
+          "options": [
+            "0.144 J",
+            "0.072 J",
+            "0.226 J",
+            "zero"
+          ],
+          "answerIndex": 0,
+          "concept": "Flip energy = 2*mu*B",
+          "why": "U = -mu*B*cos(theta), so U(0) = -0.072 J and U(180) = +0.072 J; the work is the difference, 0.144 J. Quoting 0.072 uses only the final energy, and 0.226 is torque_max times pi, which wrongly treats the torque as constant through the turn."
+        },
+        {
+          "type": "mcq",
+          "q": "A very long straight vertical wire carries 6.0 A vertically upward. The magnitude of B at a point 3.0 cm from the wire is:",
+          "options": [
+            "4.0e-7 T",
+            "8.0e-5 T",
+            "1.3e-4 T",
+            "4.0e-5 T"
+          ],
+          "answerIndex": 3,
+          "concept": "B = mu_0*I/(2*pi*r) for a long straight wire",
+          "why": "With mu_0/(2*pi) = 2e-7, B = (2e-7)(6.0)/(0.030) = 4.0e-5 T. Leaving r in centimetres gives 4.0e-7 T, losing the 2 in 2*pi*r gives 8.0e-5 T, and using the loop-centre formula mu_0*I/(2R) gives 1.3e-4 T."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same wire (6.0 A vertically upward), the field at a point due north of the wire points:",
+          "options": [
+            "horizontally, due west",
+            "horizontally, due east",
+            "vertically upward, parallel to the current",
+            "horizontally, due north - directly away from the wire"
+          ],
+          "answerIndex": 0,
+          "concept": "Right-hand grip rule: the field circles the wire",
+          "why": "Right thumb up along the current, the fingers curl anticlockwise seen from above; at a point due north of the wire the tangent to that circle points due west. The field is always perpendicular to the current and tangential, never radial."
+        },
+        {
+          "type": "mcq",
+          "q": "A solenoid of 600 turns wound over a length of 30 cm carries 2.0 A. With an air core, the field well inside it is:",
+          "options": [
+            "1.5e-3 T",
+            "5.0e-5 T",
+            "5.0e-3 T",
+            "2.5e-3 T"
+          ],
+          "answerIndex": 2,
+          "concept": "B = mu_0*n*I with n = N/L in turns per metre",
+          "why": "n = 600/0.30 = 2000 per metre, so B = (4*pi*1e-7)(2000)(2.0) = 5.0e-3 T. Using N in place of n gives 1.5e-3 T, leaving the length in centimetres gives 5.0e-5 T, and halving gives 2.5e-3 T."
+        },
+        {
+          "type": "mcq",
+          "q": "An iron core of relative permeability 250 is inserted into that solenoid, everything else unchanged. The interior field becomes:",
+          "options": [
+            "5.0e-3 T",
+            "1.3 T",
+            "3.1e-4 T",
+            "2.0e-5 T"
+          ],
+          "answerIndex": 1,
+          "concept": "A core multiplies the field by its relative permeability",
+          "why": "B = mu_r*mu_0*n*I = (250)(5.0e-3) = 1.3 T. Leaving it unchanged assumes the core is irrelevant, 3.1e-4 T is mu_r*mu_0 quoted as though it were a field, and dividing by 250 has the effect of a core exactly backwards."
+        },
+        {
+          "type": "mcq",
+          "q": "An electron has orbital angular momentum L = 1.05e-34 J*s. Taking g = 1, e = 1.60e-19 C and m = 9.11e-31 kg, the magnitude of its orbital magnetic moment is:",
+          "options": [
+            "1.8e-23 J/T",
+            "4.6e-24 J/T",
+            "-9.2e-24 J/T",
+            "9.2e-24 J/T"
+          ],
+          "answerIndex": 3,
+          "concept": "mu = g*e*L/(2m), the Bohr magneton for L = h-bar",
+          "why": "mu = (1.60e-19)(1.05e-34)/(2 x 9.11e-31) = 1.68e-53/1.82e-30 = 9.2e-24 J/T. Dividing by m rather than 2m doubles it, dividing by 4m halves it, and the negative version misreads a statement about direction as a negative magnitude."
+        },
+        {
+          "type": "short",
+          "q": "A circular coil of 25 turns and radius 5.0 cm carries 1.2 A in a uniform field of 0.50 T. Find (i) its magnetic dipole moment, (ii) the maximum torque it can experience, (iii) its potential energy when the normal makes 60 degrees with B, and (iv) the work done by the field as it turns from that orientation into alignment. Say what the sign of your answer to (iv) means.",
+          "concept": "mu = NIA for a circular coil, with torque, energy and the sign of the work",
+          "why": "(i) A = pi*r^2 = pi(0.050)^2 = 7.85e-3 m^2, so mu = (25)(1.2)(7.85e-3) = 0.236 A*m^2 - radius not diameter, and pi*r^2 not 2*pi*r. (ii) Maximum torque is at theta = 90 degrees, with the plane of the coil containing B: torque_max = mu*B = (0.236)(0.50) = 0.118 N*m. (iii) U(60) = -mu*B*cos(60) = -(0.118)(0.500) = -5.89e-2 J, negative because 60 degrees is nearer the aligned orientation than the anti-aligned one. (iv) U(0) = -0.118 J, so the work done by the field is -(U(0) - U(60)) = +5.89e-2 J. The positive sign means the field does the work: the dipole is falling into its energy minimum, and with nothing to damp it, it will overshoot and oscillate about theta = 0. An external agent guiding it slowly would do -0.0589 J, i.e. would have to absorb that energy."
+        },
+        {
+          "type": "short",
+          "q": "Two long parallel straight wires, 10 cm apart, each carry 5.0 A. Find the magnitude of the field each produces at the midpoint between them, then find the resultant field at that midpoint when (i) the currents are in the same direction and (ii) they are in opposite directions. Explain the difference in terms of the direction of each field, not merely the arithmetic.",
+          "concept": "Superposition of two wire fields, decided by direction",
+          "why": "Each wire is 0.050 m from the midpoint, so each contributes B = (2e-7)(5.0)/(0.050) = 2.0e-5 T. (i) Same direction, say both currents out of the page: each field circles its own wire anticlockwise, and because the midpoint lies on opposite sides of the two wires, the left wire's field points up the page there while the right wire's points down. They cancel exactly: the resultant is zero. (ii) Opposite directions: reversing one current reverses its whole circulation, so at the midpoint both fields point the same way and add to 4.0e-5 T, directed in the plane containing the wires and perpendicular to the line joining them. The lesson is that the result is the opposite of what naive addition suggests - parallel currents give zero field between them though they attract, antiparallel currents give the maximum field between them though they repel - and only the grip rule applied separately to each wire settles it."
+        },
+        {
+          "type": "short",
+          "q": "A solenoid 40 cm long is to produce an interior field of 12 mT with a current of 3.0 A and an air core. How many turns are needed? Then find the current that would give the same 12 mT if an iron core of relative permeability 200 were inserted and the winding left alone. Explain which quantity in B = mu*n*I each step is solving for, and why the answer to the first part does not depend on the solenoid's diameter.",
+          "concept": "Rearranging B = mu*n*I for the unknown quantity",
+          "why": "First part, solve for n and hence N: n = B/(mu_0*I) = 12e-3/((4*pi*1e-7)(3.0)) = 12e-3/3.77e-6 = 3.18e3 turns per metre, so N = n*L = (3183)(0.40) = about 1.3e3 turns (1273). Check: (4*pi*1e-7)(3183)(3.0) = 1.20e-2 T. Second part, solve for I with mu_r = 200: since B = mu_r*mu_0*n*I and both B and n are fixed, the current falls by the factor mu_r, giving I = 3.0/200 = 0.015 A (15 mA). The diameter does not enter because B = mu*n*I contains no radius: Ampere's law on a rectangular path of length l inside the solenoid, one long side on the axis and the other outside where B is about zero, gives B*l = mu*(n*l)*I, and the enclosed current depends only on l and n. Widening the coil enlarges the area each turn encloses but spreads the same current over a proportionally larger cross-section. A wider solenoid needs the same n and the same I, but more wire per turn and so more power for the same field."
+        },
+        {
+          "type": "short",
+          "q": "An electron with magnetic moment 9.3e-24 J/T sits in the 1.5 T field of an MRI magnet. Find its potential energy when aligned and when anti-aligned, and the energy needed to flip it. Convert that energy to electronvolts, and to the frequency of a photon that would supply it (h = 6.63e-34 J*s). Then explain why a real MRI scanner at 1.5 T operates at about 64 MHz rather than the frequency you just computed.",
+          "concept": "Dipole energies, the flip energy 2*mu*B, and interpreting the number",
+          "why": "Aligned U = -mu*B = -(9.3e-24)(1.5) = -1.4e-23 J; anti-aligned U = +1.4e-23 J. Flip energy = 2*mu*B = 2.79e-23 J. In electronvolts that is 2.79e-23/1.60e-19 = 1.7e-4 eV, some five thousand times smaller than a visible photon. The photon frequency is f = 2.79e-23/6.63e-34 = 4.2e10 Hz, about 42 GHz, in the microwave band. That number is for an electron moment, which is electron spin resonance, not MRI. Medical MRI flips the moments of hydrogen nuclei - protons - in the body's water, and a proton's moment is smaller than an electron's by roughly the mass ratio 1836, since the moment scales as e/2m: it is 1.41e-26 J/T. Repeating the calculation, 2*mu*B = 4.2e-26 J and f = 4.2e-26/6.63e-34 = 6.4e7 Hz = 64 MHz, in the radio band, exactly the operating frequency of a 1.5 T clinical scanner and the reason MRI is non-ionising. The physics is identical; only the mass in e/2m has changed, and that factor of about 2000 moves the answer from microwaves to radio."
+        }
+      ]
+    },
+    {
+      "id": "sat-cos102",
+      "day": "Sat",
+      "course": "COS_102",
+      "topic": "Code work on abstraction, functions and modules: tracing a call through its parameters to the value it returns and to what appears on the screen, predicting the return of a void function or one whose return sits in the wrong place, spotting the scope, shadowing or pass-by-value fault in a fragment, reading escape sequences in a printf string, and choosing the correct decomposition and import form for a stated task",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "What does this programme print? int bump(int x) { x = x + 3; return x * 2; } int main(void) { int a = 4; int b = bump(a); printf(\"%d %d\\n\", a, b); return 0; }",
+          "options": [
+            "4 14",
+            "7 14",
+            "4 8",
+            "7 8"
+          ],
+          "answerIndex": 0,
+          "concept": "A parameter is a local copy; assigning to it cannot reach the caller's variable",
+          "why": "The call passes the VALUE of a, which is 4, into the parameter x. Inside bump, x becomes 7 and the function returns 7 * 2 = 14. Back in main, a was never touched - x is a separate variable that merely started with a copy of a's value - so a is still 4 and b is 14. Option b is the belief that x and a are the same variable under two names, the commonest error in the topic; if that were true, no function could safely use its parameters as working storage. Option c returns 4 * 2 and forgets that the body ran at all before the return. Option d makes both mistakes at once."
+        },
+        {
+          "type": "mcq",
+          "q": "'void tax(double amt) { printf(\"%.2f\\n\", amt * 0.075); }', and a caller writes 'double t = tax(1000);'. What happens, and why?",
+          "options": [
+            "t becomes 75.00, since that is the value the function worked out and put on the screen",
+            "t becomes 0, because a void function has nothing else to hand back and so hands back zero",
+            "t becomes 1000, because when a function returns no value the argument is passed straight back to the caller",
+            "The line is invalid: void is the return type of a function that returns no value at all, so there is nothing for t to receive - putting characters on the screen and handing a value back are different acts"
+          ],
+          "answerIndex": 3,
+          "concept": "void means no value returned; printing is not returning",
+          "why": "The return type void names a function that hands nothing back, so its call is a statement in its own right and cannot appear on the right of an equals sign. Option a is the trap the question exists for: the number 75.00 certainly appears, but printf sends characters to the screen and that is the end of them - nothing in the programme can pick them up again, and only return gives a value to the caller. Option b invents a default return value; 'returns nothing' and 'returns zero' are different states, and 'return 0;' would require the return type to be a number type in the first place. Option c invents a pass-back rule; arguments travel one way, into the parameters, and the parameters are copies."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this print? int count = 0; void bump(void) { int count = 0; count = count + 1; } int main(void) { bump(); bump(); printf(\"%d\\n\", count); return 0; }",
+          "options": [
+            "2",
+            "1",
+            "0",
+            "It does not compile, because the name count has already been used"
+          ],
+          "answerIndex": 2,
+          "concept": "Shadowing - a local with the same name as a global hides it, and assignments there never reach the global",
+          "why": "Inside bump, 'int count;' declares a NEW local variable, and every use of count in that body refers to it. Each call sets the local to 0, raises it to 1, and then the local is destroyed when the call ends. The global count is never mentioned inside bump at all, so it is still 0 when main prints it. Option a is the answer of someone who reads the two names as one variable and counts the two calls - it is what the programme would print if the line 'int count;' were deleted. Option b counts one call, which no reading supports. Option d treats a shadowed name as a redeclaration clash; it is legal precisely because the two names live in different scopes, which is what makes a function body private."
+        },
+        {
+          "type": "mcq",
+          "q": "You want exactly these two lines on the screen, the gaps being tab stops: line 1 'Name:' tab 'Ada', line 2 'Path:' tab 'C:\\temp'. Which call produces them?",
+          "options": [
+            "printf(\"Name:\\tAda\\nPath:\\tC:\\temp\\n\");",
+            "printf(\"Name:\\tAda\\nPath:\\tC:\\\\temp\\n\");",
+            "printf(\"Name:\\\\tAda\\\\nPath:\\\\tC:\\\\temp\\\\n\");",
+            "printf(\"Name:/tAda/nPath:/tC:/temp/n\");"
+          ],
+          "answerIndex": 1,
+          "concept": "Reading escape sequences - every backslash inside a string starts one",
+          "why": "\\t is a horizontal tab, \\n a newline, and \\\\ is the escape whose meaning is a single backslash, so the second option gives Name:, tab, Ada, newline, Path:, tab, C:\\temp, newline - exactly the target. Option a is the fault this question is about: in C:\\temp the \\t is ALSO read as an escape, so the second line comes out as 'Path:' tab 'C:' tab 'emp'; nothing in the source looks wrong, which is why the mistake survives being read back. Option c doubles every backslash, so nothing is an escape any more and the call prints the literal characters on one line. Option d uses forward slashes, which have no escape meaning at all in C - /t and /n print as themselves."
+        },
+        {
+          "type": "mcq",
+          "q": "A task: read three students' scores, print a letter grade for each, and print the average of the three. Which decomposition follows this week's material?",
+          "options": [
+            "grade(score), which works out and prints one grade, and average3(a, b, c), which returns the mean; main reads the scores, calls grade three times and average3 once",
+            "gradeStudent1(s1), gradeStudent2(s2) and gradeStudent3(s3), one function per student so that each student's grading can later be changed on its own, plus main for the average",
+            "One function doEverything(a, b, c) holding the whole job, called once by main, so that all of the working is in a single place away from the entry point",
+            "No functions beyond main, since the task is small and every extra function is a further name that the reader of main has to go and look up"
+          ],
+          "answerIndex": 0,
+          "concept": "Decomposition - one function per specific task, written once however many times it is used",
+          "why": "The course's rule is that the division is up to the programmer but logically such that each function performs a specific task, and the stated benefit is that a function is implemented only once regardless of how many times it is used. Grading is one task needed three times, so it becomes one function called three times; averaging is a different task, so it is a different function. Option b is the exact inversion of the benefit: three functions with identical bodies is the duplication that functions exist to remove, and the excuse describes a requirement the task does not have. Option c puts the whole job in one function and renames the problem: doEverything performs no specific task, so nothing has been decomposed and nothing can be reused. Option d is the 'it's small now' answer that the course's opening argument answers directly - projects grow, more people join, and the point of functions is that the system remains stable as more are added."
+        },
+        {
+          "type": "mcq",
+          "q": "'double bmi(double mass, double height) { return mass / (height * height); }'. A caller writes 'printf(\"%.4f\\n\", bmi(1.75, 70));', meaning a mass of 70 kg and a height of 1.75 m. What is printed?",
+          "options": [
+            "22.8571, since the compiler matches each argument to the parameter it was meant for by its type and its name",
+            "A compile error is reported, because 1.75 is not a plausible mass and the parameter is named mass",
+            "0.0004, because arguments bind to parameters strictly by position: mass takes 1.75 and height takes 70, and as both are double nothing warns you",
+            "0.0000, because dividing a small number by a much larger one gives a result that is truncated away before printing"
+          ],
+          "answerIndex": 2,
+          "concept": "Arguments bind to parameters by position",
+          "why": "bmi(1.75, 70) gives mass the value 1.75 and height the value 70, so the function computes 1.75 / (70 * 70) = 1.75 / 4900 = 0.000357..., printed to four places as 0.0004. The intended calculation was 70 / (1.75 * 1.75) = 70 / 3.0625 = 22.8571. Option a is the belief that the parameter's name or its meaning does the matching; names are for the reader, position is for the compiler. Option b expects the compiler to check plausibility; a compiler checks types, and both values are double, so the swap passes in complete silence - which is why this fault reaches the marked script. Option d invents integer truncation in a double expression; nothing here is an int, and 0.000357 is a perfectly representable value."
+        },
+        {
+          "type": "mcq",
+          "q": "What is printed? int twice(int n) { return n * 2; } int addOne(int n) { return n + 1; } int main(void) { printf(\"%d\\n\", twice(addOne(3))); return 0; }",
+          "options": [
+            "6",
+            "7",
+            "8",
+            "9"
+          ],
+          "answerIndex": 2,
+          "concept": "A nested call is evaluated inside-out; its return value becomes the argument to the outer call",
+          "why": "addOne(3) runs first and returns 4; that 4 is then the argument passed to twice, which returns 8, and 8 is the argument printf displays. Option b, 7, is addOne(twice(3)) - the two functions applied in the wrong order, which is what you get by reading the line left to right as though the outer name acted first. Option a, 6, drops addOne entirely and computes twice(3). Option d, 9, adds one after doubling, the same order error worked from the other end. Only one of the four is what the brackets say, and the brackets are the whole content of the question."
+        },
+        {
+          "type": "mcq",
+          "q": "What does sumTo(4) return? int sumTo(int n) { int s = 0; int i = 1; while (i <= n) { s = s + i; i = i + 1; return s; } return 0; }",
+          "options": [
+            "10, since the loop runs while i <= 4 and s accumulates 1 + 2 + 3 + 4 before the finished total is handed back",
+            "1, because return does not merely end the current pass of the loop - it ends the whole function at once, on the first pass, when s is still 1",
+            "4, because a return placed inside a loop hands back the number of passes the loop completed",
+            "0, because a return inside a loop body is skipped and the function falls through to the 'return 0;' at the bottom"
+          ],
+          "answerIndex": 1,
+          "concept": "return ends the function immediately, not just the loop pass",
+          "why": "The loop body runs once: s becomes 0 + 1 = 1, i becomes 2, and then 'return s;' executes - which hands 1 back and terminates sumTo on the spot. The condition i <= n is never tested a second time and the 'return 0;' at the bottom is never reached. Option a is what the function was meant to do and what it would do if the 'return s;' were moved below the closing brace of the loop; it is the answer of anyone who reads return as 'end this pass'. Option c invents a meaning for return inside a loop; return hands back the value of the expression written after it, and that expression is s. Option d is the belief that the last return in a function is the one that counts; execution reaches at most one return, and it is whichever one it meets first."
+        },
+        {
+          "type": "short",
+          "q": "Trace this programme and state exactly what it prints, then explain why the global total holds the value it does, naming the mechanism; say which one line you would delete to make add update the global instead, and why that would be a bad trade. Programme: 'int total = 0;' at file scope; 'int add(int a, int b) { int total; total = a + b; return total; }'; 'void report(int v) { printf(\"v = %d, total = %d\\n\", v, total); }'; 'int main(void) { int x = 3, y = 5; int r = add(x, y); total = total + 1; report(r); return 0; }'.",
+          "concept": "Tracing a programme with a shadowed global; what a function's interface does and does not include",
+          "why": "It prints 'v = 8, total = 1'. Trace: main sets x = 3, y = 5 and calls add(3, 5). Inside add the parameters a and b receive 3 and 5, and the line 'int total;' declares a LOCAL variable of that name, which shadows the global for the whole of add's body. 'total = a + b;' therefore writes 8 into the local, and 'return total;' hands that 8 back, so r is 8. When add returns, its local total ceases to exist and the global - never mentioned inside add - is still 0. main then executes 'total = total + 1;', and here there is no local of that name in scope, so this IS the global: it becomes 1. report(8) receives 8 into its parameter v and prints the global total, which it can see because a global is visible to every function in the file. The mechanism is shadowing, and the value 8 got out of add by the only route it had - the return value. The one-line deletion: remove 'int total;' from add; then the name inside add resolves to the global and the programme would print 'v = 8, total = 9'. Why that is a bad trade: add's header, 'int add(int a, int b)', states its input format and its output format, and after the deletion it no longer tells the truth, because the function would also silently write to something the caller never passed and never received. Every caller then has to know its internals - the thing functional abstraction exists to prevent - and the benefit that the implementation can be changed without breaking other parts of the code is lost, because body and callers now share state. Concretely: main would have to know whether to increment total before or after calling add, and any second function that also wrote to total would make add's effect depend on the order in which the two were called. The local costs one line and buys a function whose header is a complete description of it."
+        },
+        {
+          "type": "short",
+          "q": "This is meant to exchange two values, and does not. State what it prints, explain exactly what went wrong in terms of what a parameter is, and give two different repairs - one that keeps the values in the caller and one that changes what is passed - saying what each repair costs. Code: 'void swap(int a, int b) { int t = a; a = b; b = t; }' and 'int main(void) { int p = 2, q = 9; swap(p, q); printf(\"%d %d\\n\", p, q); return 0; }'.",
+          "concept": "Pass-by-value - a parameter receives a copy, so a function cannot alter the caller's variables through one",
+          "why": "It prints '2 9', unchanged. What went wrong: the course says a parameter is like a placeholder, and that when a function is invoked a value is passed to the parameter. A VALUE is passed, not the variable itself: a and b are two fresh local variables of swap that begin life holding copies of 2 and 9. The body swaps those copies perfectly - after the three lines a is 9 and b is 2 - and then swap returns, its locals are destroyed, and p and q, which were never touched, still hold 2 and 9. The function is not wrong about swapping; it is swapping the wrong two variables, and it has no way to reach the right ones because nothing about p and q was ever passed to it. Repair 1, keep the values in the caller: do the exchange where the variables live, 'int t = p; p = q; q = t;' in main. Cost: the exchange is no longer a named, reusable piece of the programme - if it is needed in five places it is written five times, exactly the duplication functions exist to prevent - and a function can return only one value, so a single swap returning both is not available at this level. Repair 2, change what is passed: pass the addresses of the caller's variables, 'void swap(int *a, int *b) { int t = *a; *a = *b; *b = t; }', called as 'swap(&p, &q);', which then prints '9 2'. Cost: the interface is harder - the caller must write & and the body must write * - and the header now advertises that the function reaches into the caller's variables, a real loss of abstraction, which is exactly why it must be visible in the header rather than hidden. The general lesson: if a function must change something the caller holds, that has to be part of its declared interface, either as a returned value or as something explicitly passed; it can never happen by accident through an ordinary parameter."
+        },
+        {
+          "type": "short",
+          "q": "A programme must read three test scores, print A for a score of 70 or more, Pass for 50 or more, Fail otherwise, then print the average of the three. The first draft writes the whole if/else-if/else chain out three times inside main and computes the average with (a + b + c) / 3. Rewrite it as a decomposition into functions: give each function's header and body, say for one call which value is the argument and which name is the parameter, state what the programme prints for the scores 82, 64 and 41, and explain the one arithmetic fault in (a + b + c) / 3.",
+          "concept": "Extracting a repeated block into a function, and integer division",
+          "why": "Two specific tasks appear in the statement - deciding and printing one grade, and averaging three numbers - so there are two functions. 'void printGrade(int score) { if (score >= 70) printf(\"A\\n\"); else if (score >= 50) printf(\"Pass\\n\"); else printf(\"Fail\\n\"); }' and 'double average3(int a, int b, int c) { return (a + b + c) / 3.0; }', with main holding 'int s1 = 82, s2 = 64, s3 = 41;', three calls to printGrade and one to average3, printed with %.2f. The grading chain is now written once and used three times, which is the course's stated benefit; printGrade is void because its job is to put characters on the screen, while average3 has a return type because its job is to hand a number back for main to print. Parameter and argument at one call: in printGrade(s1) the PARAMETER is score - the placeholder written once in the header - and the ARGUMENT is the value of s1, namely 82, supplied at this particular call; the next call supplies 64 to the same parameter. What it prints: A, then Pass, then Fail, then 62.33 - because 82 >= 70 gives A, 64 fails 70 but meets 50 giving Pass, 41 fails both giving Fail, and the sum 82 + 64 + 41 = 187 divided by 3 is 62.333..., shown to two places as 62.33. The arithmetic fault in (a + b + c) / 3: all three scores are int and 3 is an int, so this is INTEGER division - the fractional part is discarded rather than rounded, and 187 / 3 evaluates to 62, not 62.33. Storing the result in a double afterwards does not help, because the damage is done before the assignment; the fix is to make one operand a real number, / 3.0, so the division is done in floating point. The error is invisible whenever the total happens to divide exactly, which is why it survives testing on tidy sample data."
+        },
+        {
+          "type": "short",
+          "q": "A module file 'special_functions' contains the functions max and min. Write both import forms, and beside each write the call that finds the larger of 4 and 7. Then say for each form which names have become usable in your code and which have not. Finally, explain what is wrong with the two lines 'import special_functions' followed by 'm = max(4, 7)', and give the two different one-line fixes.",
+          "concept": "The two import forms, and what each makes usable",
+          "why": "The two forms with the matching call: 'import special_functions' then 'm = special_functions.max(4, 7)'; or 'from special_functions import max' then 'm = max(4, 7)'. What each makes usable: after 'import special_functions', the name special_functions is usable and through it every function and class in the module - special_functions.max, special_functions.min - while the bare names max and min are NOT usable, since nothing has been added to your code's own names. After 'from special_functions import max', the name max is usable directly; what is NOT usable is min, because you explicitly specified the exact function you want and, as the course puts it, you can only use the max function - and the name special_functions is not made available either, so special_functions.min(4, 7) fails as well. What is wrong with the fragment: it imports the module and then calls max as though the second form had been used. The module has been made available under its own name, but no name called max has been introduced into this code, so max(4, 7) does not name the module's function. The two one-line fixes work in opposite places: keep the import and qualify the call, 'm = special_functions.max(4, 7)'; or keep the call and change the import, 'from special_functions import max'. The choice is the ordinary trade this week is about - qualifying the call keeps it obvious which module a function came from at the cost of a longer line every time, while importing the name directly keeps calls short at the cost of hiding where max came from and of introducing a name that may collide with one of your own. Either way, what you know about max is only its name and the format of its input and output, which is why the same mechanism appears in C as #include of a header file."
+        }
+      ]
+    }
+  ],
+  "recapCandidates": [
+    {
+      "course": "MTH_102",
+      "topic": "Integration by parts: that (integral of u dv) = uv - (integral of v du) trades one integral for another rather than evaluating it, so the choice of u and dv is what decides whether the trade is progress, and an integral that reappears is the method working rather than failing",
+      "whyMisunderstood": "Students meet parts as a formula to be filled in, and the formula can be filled in for any product whatsoever - which is exactly the problem. Because both assignments of u and dv produce a valid line of algebra, the belief forms that the choice is cosmetic: pick either, and the answer will come out with more or fewer lines. What actually happens is that the wrong choice trades the integral for a strictly harder one - in (integral of x^3 ln x dx), taking u = x^3 gives v = (integral of ln x dx), which is itself a parts problem, and in (integral of x cos x dx), taking u = cos x raises the power of x from 1 to 2, so every further application makes it worse. The second half of the misunderstanding is what counts as an answer. Parts hands back another integral sign, and a student who believes a technique must deliver a closed form reads that as failure, gives up, or quietly drops the (integral of v du) term and reports uv alone. That belief is fatal in the cycling integrals (integral of e^x sin x dx) and (integral of e^x cos x dx), where the original integral I genuinely reappears and the answer comes from treating the equation I = e^x sin x - e^x cos x - I as an equation and solving 2I = ..., a step that looks like cheating to someone who thinks integration only ever moves forwards. Both errors survive self-checking because the student never differentiates the result: uv alone differentiates to u dv + v du, which contains the integrand as one of its two terms, so a quick glance appears to confirm it, and a wrong u/dv choice usually ends not in a wrong answer but in an abandoned page, which reads as 'this one was too hard' rather than 'I chose badly'. LIATE is then memorised as a magic ordering rather than as a summary of the two real conditions - dv must be something you can integrate, and u should be something that collapses when differentiated.",
+      "whyQuestions": [
+        "Why does integration have no product rule, when differentiation has one?",
+        "Why does the formula (integral of u dv) = uv - (integral of v du) count as progress at all, given that the right-hand side still contains an integral?",
+        "Why, in (integral of x^3 ln x dx), does taking u = ln x work while taking u = x^3 does not - what exactly goes wrong in the second case?",
+        "Why does (integral of e^x sin x dx) come back to itself after two applications, and why is that a solvable situation rather than a dead end?",
+        "Why must the second application of parts in a cycling integral keep the exponential as dv, and what precisely happens to the equation if you swap the roles instead?"
+      ],
+      "goodAnswerContains": "That parts is the product rule d(uv) = u dv + v du integrated and rearranged, so it exchanges (integral of u dv) for a boundary term uv plus a different integral (integral of v du), and promises nothing about that new integral being easier.\nThat the choice of u and dv is governed by two conditions, not by a mnemonic: dv must be integrable to get v at all, and u should simplify when differentiated - which is why the algebraic factor is u against a trigonometric or exponential dv (the power drops by one each time and the process terminates), while a logarithm is u because it has no antiderivative to serve as dv.\nThat an integral reappearing is not failure: in the cycling case the identity is treated as an algebraic equation in I and solved, and the whole result is then checked by differentiating it back to the integrand.",
+      "workedExample": "Evaluate I = (integral of e^x cos x dx).\n\nStep 1 - first application. Take u = cos x, dv = e^x dx, so du = -sin x dx and v = e^x.\n  I = e^x cos x - (integral of e^x (-sin x) dx) = e^x cos x + (integral of e^x sin x dx).\nThe new integral is no simpler than the old one - but it is no worse either, and that is the signal to apply parts a second time rather than to give up.\n\nStep 2 - second application, keeping e^x as dv again. Let J = (integral of e^x sin x dx), and take u = sin x, dv = e^x dx, so du = cos x dx and v = e^x.\n  J = e^x sin x - (integral of e^x cos x dx) = e^x sin x - I.\n\nStep 3 - solve for I. Substituting J back into Step 1:\n  I = e^x cos x + e^x sin x - I\n  2I = e^x (sin x + cos x)\n  I = e^x (sin x + cos x)/2 + C.\n\nStep 4 - check by differentiating. d/dx [e^x (sin x + cos x)/2] = e^x (sin x + cos x)/2 + e^x (cos x - sin x)/2 = e^x (2 cos x)/2 = e^x cos x. Correct.\n\nWhat the wrong choice does. Suppose that at Step 2 you swap the roles and take u = e^x, dv = sin x dx, so v = -cos x:\n  J = -e^x cos x + (integral of e^x cos x dx) = -e^x cos x + I.\nSubstituting into Step 1 gives I = e^x cos x - e^x cos x + I, that is I = I - a true statement carrying no information. The second application must undo nothing: whichever factor was dv the first time must be dv again, or the two steps cancel."
+    },
+    {
+      "course": "COS_102",
+      "topic": "What actually crosses the boundary of a function call - a parameter receives a copy, and returning a value is not the same as printing one",
+      "whyMisunderstood": "Students learn the words of this week easily - a function is a group of statements that perform a task, a parameter is like a placeholder, the return type is the data type of the value the function returns - and can recite all of it while holding a mental picture that is wrong in one specific way: they imagine that naming a variable in a call somehow gives the function that variable. On that picture, 'passing n' means the function now has n, so anything it does to it happens to n; and 'the function produced the number' means the number is now available, whether it came out through a return or through printf. Both halves of the picture are false, and each one produces a family of bugs that look like different topics until you see they are the same. From the first half come the mutated-parameter faults: a void function that 'updates' a price and changes nothing, a swap that swaps two copies, a loop counter that a helper function was supposed to advance and did not. From the second half come the missing-return faults: a function with a non-void return type whose body only prints, a void function assigned to a variable, a caller that calls a function and then wonders where the answer went. The reason the wrong belief survives self-checking is that the evidence usually agrees with it. The number does appear on the screen, because printf ran; the calculation inside the function is right, because the student traced it and it was; the programme compiles, because C is perfectly happy to let you assign to a parameter and, in a beginner's compiler settings, will not stop you writing a function that falls off the end without returning. The single test that would expose the belief - print the caller's variable after the call, not the function's - is the one thing the student does not do, because on their picture there is nothing to check. Two further confusions sit on top. 'Returns nothing' gets collapsed into 'returns zero', so void looks like a value rather than the absence of one. And scope gets read as a nuisance instead of as the mechanism doing the work: a local that shadows a global, or a parameter that hides one, is seen as a naming accident rather than as the language enforcing that a function body is private - which is why the reflex fix, making the variable global so everyone can reach it, feels like a simplification while actually destroying the property that made functions worth having.",
+      "whyQuestions": [
+        "Why does a function need a parameter at all, when the value it wants is already sitting in a variable in main?",
+        "Why does assigning a new value to a parameter inside a function leave the caller's variable completely unchanged?",
+        "Why is printing a value not the same as returning it, when in both cases the number ends up on the screen?",
+        "Why does a local variable that shares its name with a global leave the global untouched - and why is that the right rule rather than a trap for the unwary?",
+        "Why does moving a variable out to global scope, so that functions need not pass it around, destroy the very guarantee - that an implementation can be changed without breaking other parts of the code - that abstraction was supposed to deliver?"
+      ],
+      "goodAnswerContains": "Names what physically crosses the boundary at a call: the ARGUMENT's value is copied into the PARAMETER, which is a new local variable belonging to that call and destroyed when it ends, so the caller's variable is not reachable from inside and assigning to a parameter changes only the copy.\nNames the only two ways anything gets back out, and keeps them apart: the RETURN VALUE, which the caller can store, test and pass on, and which requires a non-void return type; and side effects such as printf, which put characters on the screen where no part of the programme can retrieve them - so 'it printed 75' and 'it returned 75' are different facts, and void means there is no value at all to assign, not that the value is zero.\nTies both to the week's abstraction: a function's header - name, parameters, return type - is exactly the course's 'name, format of the input, format of the output', so anything that crosses the boundary without appearing in the header (a global read or written inside the body) is a hidden dependency that makes the header a lie and forfeits the benefit that the body can be rewritten without breaking callers.",
+      "workedExample": "Two functions with the SAME body, differing only in how they end. Trace both and say what main knows afterwards.\n\n    #include <stdio.h>\n\n    void addTenA(int amount)          /* A: void - prints */\n    {\n        amount = amount + 10;\n        printf(\"inside A: %d\\n\", amount);\n    }\n\n    int addTenB(int amount)           /* B: int - returns */\n    {\n        amount = amount + 10;\n        return amount;\n    }\n\n    int main(void)\n    {\n        int n = 5;\n\n        addTenA(n);\n        printf(\"after A: %d\\n\", n);\n\n        n = addTenB(n);\n        printf(\"after B: %d\\n\", n);\n        return 0;\n    }\n\nOutput:\n    inside A: 15\n    after A: 5\n    after B: 15\n\nStep by step.\n(1) n = 5 in main.\n(2) addTenA(n) evaluates the argument to the VALUE 5 and copies it into the parameter 'amount', a new local variable of this call. Inside, amount becomes 15 and printf puts '15' on the screen. Then the call ends and amount is destroyed. Nothing was handed back - the return type is void - so main learns nothing from the call. n is still 5. The 15 that appeared on the screen is not a value the programme holds; it is ink.\n(3) addTenB(n) does exactly the same arithmetic on its own copy, but ends with 'return amount;', which hands 15 back as the VALUE OF THE CALL. main writes that value into n with 'n = addTenB(n);', so now n is 15.\nThe only difference between A and B is the last line of the body and the return type - and it is the whole difference between a function that changes what the programme knows and one that does not.\n\nThe three failures that follow, and their fixes.\n\n(a) 'double t = addTenA(5);' - INVALID. void is the return type of a function that returns no value, so the call has no value to assign. It is not zero; there is nothing there. Fix: use addTenB, whose return type is int.\n\n(b) A function that promises and does not deliver:\n        double net(double gross) { printf(\"%.2f\\n\", gross * 0.9); }\n    The return type says a double comes back; no 'return' statement exists, so 'double n = net(200);' leaves n meaningless while 180.00 sits harmlessly on the screen. Fix: 'return gross * 0.9;' and let the caller print it - or change the return type to void and stop assigning it.\n\n(c) The swap that swaps nothing:\n        void swap(int a, int b) { int t = a; a = b; b = t; }\n        int p = 2, q = 9;  swap(p, q);  printf(\"%d %d\\n\", p, q);   /* prints 2 9 */\n    a and b are copies; they are exchanged perfectly and then destroyed. The body is correct and the function is useless, which is why re-reading the body never finds the bug. Fix at this level: pass the addresses, 'void swap(int *a, int *b) { int t = *a; *a = *b; *b = t; }' called as 'swap(&p, &q);' - and note that the fix had to appear in the HEADER, because a function that reaches into its caller's variables must say so in its interface.\n\nThe check that exposes all three in one line: after any call, print the CALLER'S variable, not the function's. If it did not change and no value was returned, the call did nothing that the rest of the programme can use."
+    }
+  ]
+}
