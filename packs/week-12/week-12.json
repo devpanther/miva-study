@@ -1,0 +1,1069 @@
+{
+  "week": 12,
+  "startsOn": "2026-11-23",
+  "endsOn": "2026-11-29",
+  "generatedOn": "2026-08-29",
+  "days": [
+    {
+      "day": "Mon",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "Applications of integration treated conceptually: why integrating a rate over an interval gives the total change (the net change theorem) and how units confirm it, why acceleration alone cannot determine velocity without an initial condition, the difference between displacement ∫v dt and distance ∫|v| dt and why the sign of v forces a split, why a varying force gives W = ∫F dx rather than F×d and why a vertical submerged plate must be cut into horizontal strips of pressure ρgh, what the constant of integration in C(q) = ∫MC dq + K actually is, what consumer surplus measures as an area, and why an average value is the total divided by the interval length rather than the midpoint value.",
+        "checkFile": "checks/Mon-MTH_102.md"
+      },
+      "fast": {
+        "course": "GST_112",
+        "topic": "Monday's fast hour runs the whole Social Vices deck at 1.5-1.75x: the crime-versus-deviance split and the seven named theories of deviance and crime, the 1950s Pirates Confraternity origin of campus cultism and the 3-year and 21-year cultism penalties, then the kidnapping and armed robbery sections with their causes, effect lists and case figures (838 in 2018 to 4,600 in 2022; 11,858 in 2013 down to 10,249 in 2014), closing on the six geo-political zones' different versions of kidnapping and the EFCC."
+      }
+    },
+    {
+      "day": "Tue",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "Transformers treated conceptually: what the device is (primary N1 and secondary N2 windings on a laminated soft-iron core) and why it works only on AC, how the common changing core flux gives every turn the same induced emf and so produces the transformer equation V2/V1 = N2/N1, why step-up in voltage is necessarily step-down in current through the ideal power balance V1I1 = V2I2, why the frequency is untouched by the turns ratio, what a transformer does to a load resistance (R_apparent = (N1/N2)^2 R, the deck's impedance matching), why long-distance transmission uses high voltage, and where a real transformer loses its 1-10 per cent — copper, eddy-current, hysteresis, leakage and mechanical losses, each with its own cure.",
+        "checkFile": "checks/Tue-PHY_102.md"
+      },
+      "fast": {
+        "course": "CSC_106",
+        "topic": "A brisk terminology-and-examples run through the four future trends in the deck — WebAssembly (binary format compiled from C++/Rust/TypeScript, its speed, compatibility and sandbox advantages and its use cases), serverless architecture (FaaS, event-driven, stateless, plus cold starts and vendor lock-in), ML and AI on the web (AI versus ML versus deep learning, supervised versus unsupervised, NLP, computer vision and the named frameworks and vendor examples), and web accessibility (WCAG's POUR principles, A11Y, assistive tools and ADA compliance) — with a short tack-on for the summary sheet's Progressive Web Apps and service workers."
+      }
+    },
+    {
+      "day": "Wed",
+      "deep": {
+        "course": "COS_102",
+        "topic": "The Software Testing Life Cycle and Debugging deck: what software testing is and why a defined life cycle is needed at all, the six STLC phases in sequential order with the specific activities each phase owns, entry and exit points, the definition of a test case as inputs, process and expected outputs, and debugging as the process of identifying and resolving bugs together with its named methods (code inspection, monitoring, logging, unit, integration and system testing) and tool categories (debuggers, trace tools, profilers).",
+        "checkFile": "checks/Wed-COS_102.md"
+      },
+      "fast": {
+        "course": "GST_122",
+        "topic": "Wednesday's fast hour drills the recall spine of the Active Listening and Note-Taking deck — the three benefits of active listening, the six active-listening techniques, and the note-taking tips culminating in the Cornell method's cue/notes/summary layout and mind mapping — plus a quick pass over the mismatched summary card's deductive-versus-inductive reasoning and its two named fallacies."
+      }
+    },
+    {
+      "day": "Thu",
+      "deep": {
+        "course": "MTH_102",
+        "topic": "The same applications worked as problems: recovering v(t) and s(t) from a(t) with initial conditions and computing both displacement and total distance by splitting at the zeros of v, finding a spring constant from a measured force and computing W = ∫kx dx, evaluating fluid force ρg∫h·w(h)dh on rectangular and triangular plates and checking it with F = ρg·h̄·A, obtaining the extra cost between two output levels from ∫MC dq and the profit-maximising output from MR = MC, computing consumer and producer surplus after solving D(q) = S(q), and integrating an exponential discharge rate to get the total pollutant.",
+        "checkFile": "checks/Thu-MTH_102.md"
+      },
+      "fast": {
+        "course": "PHY_108",
+        "topic": "Thursday's fast hour covers the Young modulus beam experiment: definitions of stress, strain and E = σ/ε in pascals, the central-depression formula Y = mgℓ³/(48EI) with I = bd³/12 collapsing to Y = mgℓ³/(4Ebd³), the dial-gauge/masses/2-mounts apparatus and the 50-500 g loading procedure, and the Y-against-m straight line through the origin whose gradient gives E = gℓ³/(4bd³s), plus the thickness-cubed error and the elastic-limit precautions."
+      }
+    },
+    {
+      "day": "Fri",
+      "deep": {
+        "course": "PHY_102",
+        "topic": "The same week's transformers worked numerically: secondary voltage from the turns ratio, primary and secondary currents from the ideal power balance V1I1 = V2I2, the deck's two appliance problems (960 W/240 V coffeemaker run from a 120 V line and 1600 W/120 V hair dryer run from a 240 V line) in all three parts, the resistance a source appears to drive R_apparent = (N1/N2)^2 R including impedance matching to a loudspeaker, efficiency eta = P_out/P_in with the copper-versus-core-loss split, and transmission-line waste P_loss = I^2 R = P^2 R / V^2 at two different transmission voltages.",
+        "checkFile": "checks/Fri-PHY_102.md"
+      },
+      "fast": {
+        "course": "Review",
+        "topic": "Week 12 review: re-work every check question you got wrong Mon-Thu, then redo one transformer problem that crosses between the two windings and one displacement-versus-distance problem cold, and settle which two topics Sunday gets. This is the last review hour of the teaching semester — also list what still needs revising before 30 November."
+      }
+    },
+    {
+      "day": "Sat",
+      "deep": {
+        "course": "COS_102",
+        "topic": "Applying the Software Testing Methods deck to real code: classifying a failure as functional or non-functional and choosing the method (unit, integration, system, acceptance versus usability, performance, security, compatibility), choosing the integration direction top-down or bottom-up, deciding between black, white and grey box for a given situation and knowing which levels each applies to, designing test data by equivalence partitioning and boundary value analysis, and reading a debugger's breakpoint and variable watch to name the defect class.",
+        "checkFile": "checks/Sat-COS_102.md"
+      },
+      "fast": {
+        "course": "Catch-up",
+        "topic": "Catch-up: sit the Week 11 question sets, now seven days old and due, then clear any end-semester mock papers in packs/mock-endsemester/ still outstanding. Check the LMS page for MIVA_COS_111, which has had no weekly material all semester and whose assessment will not arrive through a weekly deck."
+      }
+    }
+  ],
+  "courses": [
+    {
+      "code": "PHY_102",
+      "name": "General Physics II",
+      "weekTopics": [
+        "A transformer transfers energy between two circuits by mutual induction: a primary winding of N1 turns and a secondary of N2 turns on a laminated soft-iron core, the core increasing the magnetic flux and carrying it from one coil to the other. It works only on AC, because the secondary emf is -N2 dPhi/dt and a steady DC current gives a steady core flux and hence zero induced emf.",
+        "The transformer equation V2/V1 = N2/N1 (voltages rms, in volts; turns are pure numbers) follows because the same changing core flux threads every turn of both windings, so V1 = -N1 dPhi/dt and V2 = -N2 dPhi/dt give V1/N1 = V2/N2. N2 > N1 is step-up, N2 < N1 is step-down, N2 = N1 is an isolation transformer; the frequency of the output always equals that of the source.",
+        "In an ideal transformer there are no winding or core losses, so P1 = P2, i.e. V1 I1 = V2 I2 and I1/I2 = N2/N1 = V2/V1: the current ratio is the inverse of the voltage ratio, so voltage is gained only at the cost of current and no energy is created. Real efficiency is eta = P_out/P_in x 100%, typically 90-99%.",
+        "A transformer also transforms resistance: a load R on the secondary appears to the source as R_apparent = (N1/N2)^2 R, with the SQUARE of the turns ratio. Choosing the turns ratio so that this equals the source's own internal resistance is impedance matching, which gives maximum power transfer from source to load.",
+        "Real losses and their cures: copper loss (I^2 R heating in the windings, reduced by thicker low-resistance conductors, and load-dependent); eddy-current loss (currents induced in the core, reduced by laminating it into thin insulated sheets); hysteresis loss (energy per cycle to reverse the core's magnetisation, reduced by a soft magnetic material); plus flux leakage and mechanical/humming loss. Eddy and hysteresis are core losses and continue at no load.",
+        "Power is transmitted at high voltage because for a fixed delivered power P the line current is I = P/V, so the line waste is P_loss = I^2 R_line = P^2 R_line / V^2 and falls as the inverse square of the transmission voltage; AC beats DC for distribution precisely because transformers can step the voltage up for the line and back down for homes and businesses."
+      ],
+      "summaryFile": "PHY_102-Summary.md",
+      "questionsFile": "PHY_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_102/Week-12/Step-Up-and-Step-Down-Transformer-PDF.pdf"
+      ]
+    },
+    {
+      "code": "MTH_102",
+      "name": "Elementary Mathematics II (Calculus)",
+      "weekTopics": [
+        "Net change / accumulation: if a quantity changes at rate r(t) then the total change over [a,b] is ∫ₐᵇ r(t) dt = f(b) − f(a); the units of the integral are (units of r)×(units of t), which is what identifies the answer as litres, joules, newtons, naira or kilograms. The average value of the rate is (1/(b−a))∫ₐᵇ r dt, not r at the midpoint.",
+        "Kinematics: antidifferentiate a(t) to get v(t) and v(t) to get s(t), each step fixed by an initial condition (v(0), s(0)). Displacement over [a,b] is ∫ₐᵇ v dt; total distance is ∫ₐᵇ |v| dt, obtained by splitting the interval at the zeros of v and adding magnitudes.",
+        "Work by a variable force: W = ∫ₐᵇ F(x) dx, valid because the force is effectively constant on a slice of width dx. For a spring obeying Hooke's law F = kx (k from a measured force and extension), W = ½k(b² − a²); F × d is only correct for a constant force.",
+        "Fluid force on a vertically submerged plate: pressure at depth h is ρgh, so the strip at depth h of width w(h) carries force ρg·h·w(h)dh and F = ρg∫ₐᵇ h·w(h) dh, with h measured downwards from the free surface (water: ρg = 9800 N/m³). Equivalent check: F = ρg·h̄·A with h̄ the centroid depth.",
+        "Marginal analysis: C(q) = ∫₀^q MC dq + C(0) where C(0) is fixed cost, and the extra cost from q₁ to q₂ is ∫_{q₁}^{q₂} MC dq with no fixed cost involved; likewise R(q) = ∫₀^q MR dq. Profit change is ∫(MR − MC) dq and is maximised where MR = MC, an output the fixed cost cannot move.",
+        "Consumer and producer surplus: solve D(q) = S(q) for the equilibrium (q₀, p₀), then CS = ∫₀^{q₀}[D(q) − p₀]dq (area between the demand curve and the price line) and PS = ∫₀^{q₀}[p₀ − S(q)]dq (area between the price line and the supply curve); their sum is the total surplus used to judge market efficiency.",
+        "Environmental science: the cumulative amount of pollutant discharged over [0,T] is ∫₀^T r(t) dt, with ∫₀^T Ae^{kt} dt = (A/k)(e^{kT} − 1); population change is P(T) = P₀ + ∫₀^T r(t) dt, and constant relative growth P′ = kP gives P = P₀e^{kt}."
+      ],
+      "summaryFile": "MTH_102-Summary.md",
+      "questionsFile": "MTH_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/MTH_102/Week-12/Review-of-Key-Concepts-and-Practical-Problem-Solving-PDF.pdf"
+      ]
+    },
+    {
+      "code": "COS_102",
+      "name": "Introduction to Problem Solving",
+      "weekTopics": [
+        "The software testing life cycle: six phases in sequential order — requirement analysis, test planning, test case development, test environment setup, test execution, test cycle closure — each with an entry point where it begins and an exit point reached only when all the objectives of that phase have been achieved.",
+        "What each STLC phase owns: requirement analysis decides what is to be tested (document review, stakeholder interviews, issue identification); test planning fixes strategy, cost, duration and roles; test case development writes and reviews cases specifying inputs, process and expected outputs; test environment setup specifies software and hardware; test execution runs, retests and reports; test cycle closure confirms objectives met, writes the summary report and collects feedback.",
+        "Debugging as the process of identifying and resolving errors or bugs in a software system, distinct from testing, which only finds out whether the given output matches the expected output. Its methods are code inspection, monitoring, logging, unit, integration and system testing, and debugging tools — debuggers (Radare2, WinDbg, Valgrind), trace tools and profilers.",
+        "Functional testing methods, which check that the program performs as expected: unit testing on execution paths within functions, integration testing of how parts work together (top-down tests higher-level modules first, bottom-up tests lower-level modules first), system testing of the integrated whole against technical and functional requirements, and acceptance testing against expected requirements.",
+        "Non-functional testing methods, which check how well the software behaves rather than what it does: usability testing by observing users, performance testing for network, database and client-side delays under different load conditions, security testing for data security, availability, confidentiality and integrity, and compatibility testing across browsers, platforms and operating systems.",
+        "Black box, white box and grey box testing, separated purely by how much of the internal structure the tester knows: black box (unknown; integration, system, acceptance), white box (known, inputs chosen to exercise paths through the code, programming know-how essential; unit, integration, system), grey box (partially known, internals used to design the cases but tests run at the user level; primarily integration).",
+        "Designing test data in practice: equivalence partitioning takes one representative from each class the program should treat identically, boundary value analysis adds the values just below, at and just above each edge, and a debugger's breakpoint, step and variable watch locate where program state first becomes wrong so the defect class can be named."
+      ],
+      "summaryFile": "COS_102-Summary.md",
+      "questionsFile": "COS_102-Questions.md",
+      "sourcePdfs": [
+        "Courses/COS_102/Week-12/Software-Testing-Life-Cycle-and-Debugging-PDF.pdf",
+        "Courses/COS_102/Week-12/Software-Testing-Methods-PDF.pdf"
+      ]
+    },
+    {
+      "code": "PHY_108",
+      "name": "General Physics Practical II",
+      "weekTopics": [
+        "Stress σ = F/A in N/m² (Pa), strain ε = Δℓ/ℓ (dimensionless), and Hooke's law σ = Eε, valid only below the proportional limit.",
+        "Young modulus E = stress/strain = Fℓ/(AΔℓ), unit N/m² = Pa; a measure of stiffness, about 70 GPa for aluminium and 120 GPa for copper. (The deck misprints the unit as N/m.)",
+        "Central depression of a beam of length ℓ loaded with mass m at its midpoint: Y = mgℓ³/(48EI), the beam treated as two opposite cantilevers, g = 9.8 m/s².",
+        "Rectangular cross-section second moment I = bd³/12 (b = breadth, d = thickness), giving the linear working equation Y = mgℓ³/(4Ebd³).",
+        "Graph of depression Y (m) against load m (kg): a straight line through the origin of gradient s = gℓ³/(4Ebd³) in m/kg, hence E = gℓ³/(4bd³s).",
+        "Apparatus (dial gauge, beams of different materials, set of masses, 2 mounts), the 50 g to 500 g loading procedure, and the dominant error: d is cubed, so a 5% error in thickness gives about 15% error in E."
+      ],
+      "summaryFile": "PHY_108-Summary.md",
+      "questionsFile": "PHY_108-Questions.md",
+      "sourcePdfs": [
+        "Courses/PHY_108/Week-12/Experiment-to-Determine-the-Young-Modulus-of-a-Metallic-Rod-PDF.pdf"
+      ]
+    },
+    {
+      "code": "GST_112",
+      "name": "Nigerian Peoples and Culture",
+      "weekTopics": [
+        "Social vices defined as actions that stray from accepted moral norms, classified into crime (violates social laws) versus deviance (violates social norms and rules).",
+        "Four theories of deviance — Structural Functionalism, Social Strain Typology, Conflict Theory, Labelling Theory — and three theories of crime — Rational Choice, Strain, Social Learning.",
+        "Background of campus cultism: Wole Soyinka and six friends founded the Pirates Confraternity at the University of Ibadan in the early 1950s as a social group with patriotic and philanthropic beliefs; about 45 secret cults operate today, each with hierarchy, insignia and distinct attire.",
+        "Cultist activities, the reasons students join, and the legal penalties: 3 years for hosting a cult meeting in a building belonging to you, 21 years for membership or for soliciting members of an unlawful society.",
+        "Kidnapping — definition, the two named causes (unemployment and the political factor), ten listed effects, and the rise from 838 reported cases in 2018 to 4,600 in 2022.",
+        "Armed robbery — definition, six causes including proliferation of firearms, five effects, and prison records of 11,858 cases in 2013 falling to 10,249 in 2014; plus the EFCC as the government's anti-corruption body."
+      ],
+      "summaryFile": "GST_112-Summary.md",
+      "questionsFile": "GST_112-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_112/Week-12/Social-Vices-Cultism-Kidnapping-Armed-Robbery-PDF.pdf",
+        "Courses/GST_112/Week-12/Summary-PDF.pdf"
+      ]
+    },
+    {
+      "code": "GST_122",
+      "name": "Communication in English II",
+      "weekTopics": [
+        "Active listening: the three named benefits — Enhanced Understanding (words plus underlying emotions, intentions and context), Conflict Resolution (acknowledging perspectives to find common ground), and Problem Solving (fully comprehending details to give informed solutions).",
+        "The six techniques for becoming a more active listener: maintain eye contact, avoid interrupting, minimise distractions, ask open-ended questions, use verbal and non-verbal affirmations, and paraphrase and summarise.",
+        "The Cornell Note-Taking Method: dividing the page into cue column, note-taking area and summary, and summarising the main ideas shortly after the lecture.",
+        "Mind mapping as a visual note-taking format connecting main ideas to subtopics and supporting details, plus bullet points, headings/subheadings and highlighting to keep notes scannable.",
+        "Note-taking discipline: never transcribe verbatim (capture main ideas, key concepts and supporting evidence to avoid information overload) and use a personal abbreviation and symbol system such as 'w/' and '→', which formal writing does not tolerate.",
+        "A mislabelled Week 12 summary card on logical and critical reasoning in presentations: central thesis, deductive versus inductive reasoning, and the strawman and hasty-generalization fallacies."
+      ],
+      "summaryFile": "GST_122-Summary.md",
+      "questionsFile": "GST_122-Questions.md",
+      "sourcePdfs": [
+        "Courses/GST_122/Week-12/Active-Listening-and-Note-Taking-PDF.pdf"
+      ]
+    },
+    {
+      "code": "CSC_106",
+      "name": "Introduction to Web Technologies",
+      "weekTopics": [
+        "WebAssembly (Wasm): a binary instruction format for browsers, compiled from C++/Rust/TypeScript; advantages of speed, cross-platform compatibility and sandboxed security; use cases in gaming, video and image processing, AR/VR, scientific simulation and serverless.",
+        "Serverless architecture: provider-managed infrastructure; the key concepts FaaS, event-driven and stateless; benefits of scalability, cost-efficiency and automatic scaling; challenges of cold starts and vendor lock-in.",
+        "Machine learning and AI on the web: AI versus ML versus deep learning, supervised and unsupervised learning, NLP and computer vision; applications in personalisation (Netflix), search (Google RankBrain), chatbots (Alexa), content generation (GPT-3) and fraud detection.",
+        "ML frameworks and future AI trends: TensorFlow, PyTorch, Scikit-Learn, Microsoft Azure ML, Google Cloud AI Platform; challenges of privacy, bias, scalability, interoperability and cybersecurity; Edge AI, Explainable AI (XAI) and quantum machine learning.",
+        "Web accessibility and inclusivity: WCAG and the POUR principles (Perceivable, Operable, Understandable, Robust), A11Y, screen readers, voice recognition, keyboard navigation, captions and colour-contrast tools; ADA and EU Web Accessibility Directive compliance.",
+        "Progressive Web Apps (from the summary sheet, which does not match the slides): progressive enhancement, service workers for offline access, caching and push notifications, responsive design; Twitter Lite, Flipkart, Starbucks and Trivago as real-world PWAs."
+      ],
+      "summaryFile": "CSC_106-Summary.md",
+      "questionsFile": "CSC_106-Questions.md",
+      "sourcePdfs": [
+        "Courses/CSC_106/Week-12/Future-Trends-of-Web-Technologies-PDF.pdf"
+      ]
+    },
+    {
+      "code": "MIVA_COS_111",
+      "name": "Technical Certification I",
+      "weekTopics": [
+        "No MIVA_COS_111 material this week: the Week 12 source document contains no section for the course, as in every week of the semester. Week 12 is the last teaching week, so check the LMS course page directly for its assessment requirement."
+      ],
+      "summaryFile": "MIVA_COS_111-Summary.md",
+      "questionsFile": null,
+      "sourcePdfs": []
+    }
+  ],
+  "checks": [
+    {
+      "id": "mon-mth102",
+      "day": "Mon",
+      "course": "MTH_102",
+      "topic": "Applications of integration treated conceptually: why integrating a rate over an interval gives the total change (the net change theorem) and how units confirm it, why acceleration alone cannot determine velocity without an initial condition, the difference between displacement ∫v dt and distance ∫|v| dt and why the sign of v forces a split, why a varying force gives W = ∫F dx rather than F×d and why a vertical submerged plate must be cut into horizontal strips of pressure ρgh, what the constant of integration in C(q) = ∫MC dq + K actually is, what consumer surplus measures as an area, and why an average value is the total divided by the interval length rather than the midpoint value.",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A tank is being filled at a rate r(t) litres per minute, t in minutes. The quantity ∫₃⁷ r(t) dt represents:",
+          "options": [
+            "the number of litres added to the tank between t = 3 and t = 7",
+            "the rate at which the tank is filling at t = 7, in litres per minute",
+            "the average filling rate over those four minutes, in litres per minute",
+            "the increase in the filling rate between t = 3 and t = 7, in litres per minute"
+          ],
+          "answerIndex": 0,
+          "concept": "Net change theorem: integrating a rate over an interval gives the total accumulated, and the units multiply out",
+          "why": "r dt has units (litres/min)(min) = litres, and ∫₃⁷ r dt = V(7) − V(3), the volume added over the interval; the rate at an instant, the average rate and the change in the rate are all different quantities."
+        },
+        {
+          "type": "mcq",
+          "q": "Knowing the acceleration a(t) of a body for every t is still not enough to determine its velocity v(t) because:",
+          "options": [
+            "acceleration can be negative, and a negative integrand makes the integral ambiguous",
+            "integrating acceleration produces a quantity with units of distance, so a term with units of velocity must be added to it",
+            "a definite integral cannot be evaluated until both of its limits have been specified",
+            "antidifferentiation fixes v only up to an additive constant, and that constant is the velocity at the chosen starting instant — the same acceleration history is consistent with any initial speed"
+          ],
+          "answerIndex": 3,
+          "concept": "The constant of integration in a → v → s, fixed by an initial condition",
+          "why": "Two bodies pushed identically but launched at different speeds have the same a(t) and different v(t); the antiderivative is determined only up to +C, and v(0) is what pins C down. (Integrating m/s² over s gives m/s, not distance.)"
+        },
+        {
+          "type": "mcq",
+          "q": "A particle moves along a line with velocity v(t) that changes sign somewhere inside [a,b]. Then:",
+          "options": [
+            "∫ₐᵇ v dt is the total distance travelled, and ∫ₐᵇ |v| dt is the displacement",
+            "∫ₐᵇ v dt is the displacement; the total distance is ∫ₐᵇ |v| dt, evaluated by splitting the interval at the zeros of v",
+            "the two are equal, since displacement and distance always agree over a closed interval",
+            "∫ₐᵇ v dt is the displacement, and the total distance is |∫ₐᵇ v dt|"
+          ],
+          "answerIndex": 1,
+          "concept": "Signed versus unsigned accumulation: displacement ∫v dt against distance ∫|v| dt",
+          "why": "A negative v contributes negatively, so ∫v dt lets backward motion cancel forward motion — exactly what displacement is; distance needs |v|, and the zeros of v are where the integrand changes formula. Taking the modulus after integrating cancels first and so still loses the backtracking."
+        },
+        {
+          "type": "mcq",
+          "q": "The work done by a force F(x) as an object moves from x = a to x = b is ∫ₐᵇ F(x) dx rather than F × (b − a) because:",
+          "options": [
+            "force and displacement are vectors, and a product of vectors must be written as an integral",
+            "work is the area under the force–time graph, so time has to be integrated out",
+            "on a sub-interval short enough that F is essentially constant the work is F(x)Δx; adding those contributions and letting Δx → 0 is exactly the integral, and F × (b − a) is correct only when F does not vary",
+            "the integration is what converts newton-metres into joules"
+          ],
+          "answerIndex": 2,
+          "concept": "Slice-and-sum: a varying quantity is constant on a small enough slice, and the sum of the slices is the integral",
+          "why": "Work is force times displacement only while the force is constant, so the interval is cut into pieces on which F barely changes, the elementary works F(x)Δx are added, and the limit is ∫ₐᵇ F dx; the graph involved is force against position, not time."
+        },
+        {
+          "type": "mcq",
+          "q": "A plate is submerged vertically in a liquid of weight density ρg. The force on one face is found by cutting the plate into **horizontal** strips because:",
+          "options": [
+            "the pressure ρgh depends only on the depth, so it is constant along a horizontal strip but different for every strip; the force on one strip is (ρgh)·w(h)dh and these must be added",
+            "the width of the plate varies with depth while the pressure does not",
+            "pressure acts vertically downwards, so vertical strips would feel no force at all",
+            "the force equals the weight of the column of liquid standing directly above the plate, and that column must be integrated over its height"
+          ],
+          "answerIndex": 0,
+          "concept": "Fluid pressure depends only on depth, so the strip must be a line of constant depth",
+          "why": "Every point of a horizontal strip is at the same depth h and so at the same pressure ρgh; that makes force = pressure × area usable on the strip, giving dF = ρg·h·w(h)dh, and F = ρg∫h·w(h)dh. A vertical strip would span many depths and so many pressures."
+        },
+        {
+          "type": "mcq",
+          "q": "If the marginal cost C′(q) = MC(q) is known, then C(q) = ∫MC(q) dq + K, where K is:",
+          "options": [
+            "the marginal cost of the first unit produced",
+            "zero, since producing nothing costs nothing",
+            "the average cost per unit at the break-even output",
+            "the fixed cost C(0) — the cost already incurred at zero output, which no amount of marginal information can supply"
+          ],
+          "answerIndex": 3,
+          "concept": "The constant of integration in total cost is the fixed cost; marginal data determines only changes",
+          "why": "Setting q = 0 in C(q) = ∫₀^q MC dq + K gives K = C(0). Rent and plant costs are paid at zero output, so C(0) ≠ 0 in general, and no derivative can detect a constant."
+        },
+        {
+          "type": "mcq",
+          "q": "At the equilibrium price p₀ and quantity q₀, the consumer surplus CS = ∫₀^{q₀}[D(q) − p₀] dq measures:",
+          "options": [
+            "the total amount the consumers actually pay for the q₀ units",
+            "the total of the amounts consumers would have been willing to pay over and above what they did pay, added up across all q₀ units",
+            "the revenue producers receive in excess of what it cost them to produce the q₀ units",
+            "the amount the buyer of the very last unit would have paid, minus the price of that unit"
+          ],
+          "answerIndex": 1,
+          "concept": "Consumer surplus as the area between the demand curve and the price line",
+          "why": "D(q) is what the buyer of the q-th unit would have paid; D(q) − p₀ is that buyer's gain, and integrating adds the gains of all q₀ buyers. What consumers actually pay is p₀q₀; the producers' analogue is producer surplus; and the last unit's gain is a single value of the integrand, not the integral."
+        },
+        {
+          "type": "mcq",
+          "q": "A pollutant enters a lake at rate r(t) = 20 + 3t² kg/month. The average discharge rate over the first six months is (1/6)∫₀⁶ r(t) dt, and this is **not** equal to r(3) because:",
+          "options": [
+            "the mean value theorem for integrals applies only to increasing functions",
+            "an average rate is obtained by dividing the total discharged by the total, not by the elapsed time",
+            "the average value is the height of the rectangle having the same area as the region under r; that height coincides with the midpoint value only when r is linear (or symmetric about the midpoint), and this r is quadratic",
+            "r(3) is the median rate over the interval, and the median of a positive function always exceeds its mean"
+          ],
+          "answerIndex": 2,
+          "concept": "Average value of a function = (1/(b−a))∫ₐᵇ f, i.e. the equal-area rectangle height",
+          "why": "Here the total is 336 kg so the average is 56 kg/month, while r(3) = 47: the curve rises faster than linearly, so the later months contribute more area than the midpoint rectangle allows. Averaging divides by the interval length, which is what makes the units come out as kg/month."
+        },
+        {
+          "type": "short",
+          "q": "State the theorem that makes \"integrate the rate to get the total\" true, and explain using units why ∫₀^{10} r(t) dt is a number of kilograms when r is measured in kilograms per day. Say what the same integral would mean if r were instead a concentration in mg/L.",
+          "concept": "The net change theorem and dimensional analysis of an integral",
+          "why": "The net change theorem (a form of the Fundamental Theorem): if Q is differentiable with Q′ = r, then ∫ₐᵇ r(t)dt = Q(b) − Q(a), so integrating the rate of change recovers the total change. Dimensionally, r dt carries (kg/day)(day) = kg, and the integral is a limit of sums of such terms, so it is a mass in kg — 10 days of discharge. If r were a concentration in mg/L, r dt would carry (mg/L)(day) = mg·day/L, which is an exposure or area-under-the-curve (as in pharmacokinetics), not a mass: to get a mass you must integrate a rate of input, not a concentration."
+        },
+        {
+          "type": "short",
+          "q": "A particle's velocity is positive on part of [0,4] and negative on the rest. Explain the difference between its displacement and the distance it travels, what you must do to the integral to get the distance, and why the sign of v is what forces that step.",
+          "concept": "Displacement versus total distance, and splitting at the zeros of the velocity",
+          "why": "Displacement is the net change in position, s(4) − s(0) = ∫₀⁴ v dt; distance is how far the particle actually moves, ∫₀⁴|v|dt. Where v < 0 the integrand is negative and the integral subtracts that motion, which is right for displacement (the particle really has come back) and wrong for distance. To get the distance, find the zeros of v inside [0,4], integrate v over each sub-interval separately, take the absolute value of each result and add them. The two agree only when v does not change sign; otherwise distance > |displacement|."
+        },
+        {
+          "type": "short",
+          "q": "Work done by a variable force and fluid force on a vertical plate are set up by the same manoeuvre. Explain what the thin slice is in each case and what quantity is treated as constant on it, and explain why (pressure at the top edge) × (area of the plate) is not the fluid force.",
+          "concept": "One slicing principle behind W = ∫F dx and F = ρg∫h·w(h)dh",
+          "why": "In both, the region is cut into pieces small enough that the varying quantity is effectively constant on each piece, the elementary contribution is written, and the pieces are integrated. For work the slice is a displacement dx over which F(x) is taken as constant, giving dW = F(x)dx. For fluid force the slice is a horizontal strip of thickness dh at depth h, over which the pressure ρgh is constant (pressure depends only on depth), giving dF = ρg·h·w(h)dh. Using the pressure at the top edge assumes the whole plate feels the smallest pressure it experiences, so it underestimates the force; the bottom-edge pressure overestimates it. The only single pressure that works is the one at the centroid depth, F = ρg·h̄·A."
+        },
+        {
+          "type": "short",
+          "q": "Explain why marginal cost alone determines total cost only up to a constant, say exactly what that constant is, and explain why the extra cost of raising output from q = 2 to q = 5 can still be computed without knowing it.",
+          "concept": "Fixed cost as the constant of integration; definite integrals of MC give changes only",
+          "why": "MC is the derivative of C, and any two functions differing by a constant have the same derivative, so antidifferentiating MC gives C only up to +K. Putting q = 0 identifies K = C(0), the fixed cost — rent, plant, licences — which is paid before any unit is made and which no marginal information can reveal. The extra cost of moving from q = 2 to q = 5 is C(5) − C(2) = ∫₂⁵ MC dq, and the K in C(5) and C(2) cancels in the subtraction; the fixed cost is already spent and is not incurred again. Adding it to that answer is a standard error."
+        }
+      ]
+    },
+    {
+      "id": "tue-phy102",
+      "day": "Tue",
+      "course": "PHY_102",
+      "topic": "Transformers treated conceptually: what the device is (primary N1 and secondary N2 windings on a laminated soft-iron core) and why it works only on AC, how the common changing core flux gives every turn the same induced emf and so produces the transformer equation V2/V1 = N2/N1, why step-up in voltage is necessarily step-down in current through the ideal power balance V1I1 = V2I2, why the frequency is untouched by the turns ratio, what a transformer does to a load resistance (R_apparent = (N1/N2)^2 R, the deck's impedance matching), why long-distance transmission uses high voltage, and where a real transformer loses its 1-10 per cent — copper, eddy-current, hysteresis, leakage and mechanical losses, each with its own cure.",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A transformer is connected to a steady 12 V DC supply instead of an AC source. After the brief switch-on transient the secondary voltage settles at zero. The reason is:",
+          "options": [
+            "The transformer equation is defined only for rms quantities, and a DC supply has no rms value.",
+            "Iron cannot sustain a steady magnetic flux, so no flux from the primary reaches the secondary.",
+            "A steady current gives a steady core flux, and only a changing flux induces an emf in the secondary.",
+            "The primary winding has almost no resistance, so the whole supply voltage is dropped inside the source."
+          ],
+          "answerIndex": 2,
+          "concept": "A transformer needs a CHANGING core flux; DC gives dΦ/dt = 0 and hence no secondary emf.",
+          "why": "The secondary emf is −N₂dΦ/dt; steady DC gives a steady flux in the core, so after the switch-on transient dΦ/dt = 0 and V₂ = 0."
+        },
+        {
+          "type": "mcq",
+          "q": "The transformer equation V₂/V₁ = N₂/N₁ follows most directly from the fact that:",
+          "options": [
+            "the same changing core flux threads every turn of both coils, so each turn carries the same induced emf.",
+            "the power delivered by the secondary equals the power supplied to the primary in an ideal transformer.",
+            "the resistance of a winding is proportional to the number of turns it contains.",
+            "the current in a winding is inversely proportional to the number of turns it contains."
+          ],
+          "answerIndex": 0,
+          "concept": "Where the turns ratio comes from: the common core flux gives every turn of both coils the same induced emf.",
+          "why": "V₁ = −N₁dΦ/dt and V₂ = −N₂dΦ/dt with the same Φ, so V₁/N₁ = V₂/N₂ — the power balance is a separate statement, giving the current ratio instead."
+        },
+        {
+          "type": "mcq",
+          "q": "A step-up transformer raises 110 V to 550 V. For an ideal transformer, the secondary:",
+          "options": [
+            "delivers five times the power of the primary, since the voltage has been raised five times.",
+            "carries the same current as the primary, since the same charge per second must pass round both circuits.",
+            "carries five times the primary current, because voltage and current both scale with the turns ratio.",
+            "carries one fifth of the primary current, so that the power delivered equals the power supplied."
+          ],
+          "answerIndex": 3,
+          "concept": "Ideal transformer: V₁I₁ = V₂I₂, so the current ratio is the INVERSE of the voltage ratio.",
+          "why": "P₁ = P₂ forces I₂ = I₁(V₁/V₂) = I₁/5; the power is unchanged, so a five-fold voltage gain costs a five-fold current loss."
+        },
+        {
+          "type": "mcq",
+          "q": "The iron core of a transformer is built from thin sheets insulated from one another rather than as a single solid block. The purpose is to:",
+          "options": [
+            "reduce hysteresis loss by giving the magnetic domains less room in which to rotate.",
+            "interrupt the currents induced in the core itself, which would otherwise circulate in wide loops and heat it.",
+            "increase the flux in the core by giving the magnetic field more surfaces to concentrate on.",
+            "lower the resistance of the windings, since a laminated core allows thicker wire to be wound on it."
+          ],
+          "answerIndex": 1,
+          "concept": "Lamination attacks eddy-current loss, by breaking up the conducting loops inside the core.",
+          "why": "Insulated thin sheets stop induced eddy currents from circulating in wide loops through the core's bulk; hysteresis is dealt with by the choice of material, not by lamination."
+        },
+        {
+          "type": "mcq",
+          "q": "A student writes: \"a step-up transformer is an amplifier — it gives out more energy than it takes in.\" The correct response is:",
+          "options": [
+            "Right in principle; the gain is simply limited to about 99 % by practical losses.",
+            "Wrong; it raises the voltage while lowering the current in the same ratio, so the output power is at best equal to the input power.",
+            "Wrong; a step-up transformer raises voltage and current together, but the output frequency falls to compensate.",
+            "Right for the secondary circuit alone; the extra energy is drawn from the magnetic field stored in the core."
+          ],
+          "answerIndex": 1,
+          "concept": "A transformer is not an energy source: voltage gain is paid for exactly by current loss.",
+          "why": "In the ideal case V₁I₁ = V₂I₂ exactly, and in a real one P_out < P_in; a step-up transformer raises V and lowers I in the same ratio."
+        },
+        {
+          "type": "mcq",
+          "q": "Electrical power is sent across country at very high voltage. For a fixed power delivered, the reason is that:",
+          "options": [
+            "a higher voltage drives the energy along the line faster, so less of it leaks away en route.",
+            "the resistance of a transmission line falls as the voltage applied across it rises.",
+            "high voltage reduces the hysteresis loss in the transformers at each end of the line.",
+            "the line current is correspondingly smaller, and the line's I²R heating falls as the square of the current."
+          ],
+          "answerIndex": 3,
+          "concept": "Line loss is I²R_line, so for fixed delivered power it falls as 1/V².",
+          "why": "I = P/V, so P_loss = I²R_line = P²R_line/V²: raising the transmission voltage shrinks the current and the heating falls as the square of it."
+        },
+        {
+          "type": "mcq",
+          "q": "A transformer is placed between an amplifier and a loudspeaker for \"impedance matching\". What does it do to the load resistance as the amplifier sees it?",
+          "options": [
+            "It presents (N₁/N₂)² R, so the turns ratio can be chosen to match the source and give maximum power transfer.",
+            "It presents the same R, since a transformer changes voltages and currents but not resistances.",
+            "It presents (N₁/N₂) R, since resistance scales with the turns ratio in exactly the way voltage does.",
+            "It presents zero resistance, so that the whole of the amplifier's output power reaches the loudspeaker."
+          ],
+          "answerIndex": 0,
+          "concept": "Resistance transforms with the SQUARE of the turns ratio: R_apparent = (N₁/N₂)²R.",
+          "why": "V₁/I₁ = (N₁/N₂)²(V₂/I₂), so the load looks like (N₁/N₂)²R to the source — the deck's impedance matching for maximum power transfer."
+        },
+        {
+          "type": "mcq",
+          "q": "Which pairing of a real transformer loss with the measure that reduces it is correct?",
+          "options": [
+            "Copper loss — laminating the core into thin insulated sheets.",
+            "Eddy-current loss — winding the coils from thicker, lower-resistance wire.",
+            "Hysteresis loss — using a soft magnetic core material whose magnetisation reverses with little energy per cycle.",
+            "Flux leakage — raising the frequency of the AC supply."
+          ],
+          "answerIndex": 2,
+          "concept": "Matching each real loss to its own cure: copper/eddy/hysteresis are three different mechanisms.",
+          "why": "Hysteresis loss is the energy per cycle spent reversing the core's magnetisation, so a soft magnetic core reduces it; lamination cures eddy currents and thicker wire cures copper loss."
+        },
+        {
+          "type": "short",
+          "q": "A step-up transformer takes in 240 V and puts out 2400 V. Explain why this does not create energy, saying precisely what happens to the current, and state where the energy delivered to the secondary circuit actually comes from.",
+          "concept": "Conservation of energy in an ideal transformer, and the true origin of the secondary's energy.",
+          "why": "The turns ratio is 10, so the secondary voltage is ten times the primary's and the secondary current is one tenth of it: V₁I₁ = V₂I₂ and the output power is at best equal to the input power (less, in a real transformer). No energy is created — the energy delivered to the secondary circuit is drawn from the AC source through the primary, carried across by the alternating flux in the core; if the load draws more current from the secondary, the primary immediately draws proportionately more from the mains."
+        },
+        {
+          "type": "short",
+          "q": "A transformer driven at 50 Hz delivers 50 Hz whatever its turns ratio. Explain why the turns ratio cannot change the frequency, and use that to explain why a transformer on its own cannot be used to run a 12 V DC device from the mains.",
+          "concept": "A transformer changes amplitude only — never frequency, and never AC to DC.",
+          "why": "The secondary emf is −N₂dΦ/dt and the core flux Φ alternates at exactly the rate the primary current does; the turns ratio multiplies the size of the emf but not the rate at which it reverses, so the output alternates at the source frequency. Hence a transformer alone gives 12 V AC, not 12 V DC: it cannot rectify, and a rectifier (plus smoothing) is needed after it. It also cannot work from DC in the first place, since a steady flux induces nothing."
+        },
+        {
+          "type": "short",
+          "q": "The primary and secondary windings are not electrically connected to each other at any point, yet power passes from one to the other. Explain the mechanism by which it does, and why a 1 : 1 isolation transformer is a useful device even though it changes neither voltage nor current.",
+          "concept": "Mutual induction as the transfer mechanism, and the point of a 1:1 isolation transformer.",
+          "why": "The primary's alternating current sets up an alternating magnetic flux which the iron core carries round to the secondary; that changing flux induces an emf in the secondary by Faraday's law. The coupling is entirely magnetic, so no charge crosses between the circuits. A 1:1 transformer exploits exactly that: it passes the power through while leaving the secondary circuit with no conducting path back to the supply, so a person touching one secondary conductor and earth completes no circuit — an electrical safety measure, and a way of isolating sensitive equipment from the mains."
+        },
+        {
+          "type": "short",
+          "q": "Suppose a transformer's windings were made of a perfect conductor of zero resistance. Explain why it would still not be 100 % efficient, name the losses that would remain, and say which of a real transformer's losses depends strongly on how much current the load draws and which does not.",
+          "concept": "Copper loss versus core loss: which losses depend on the load current and which do not.",
+          "why": "Zero-resistance windings would remove the copper (I²R) loss only. The core losses would remain: eddy-current loss (currents induced in the iron itself) and hysteresis loss (energy spent reversing the core's magnetisation each cycle), together with some flux leakage. Copper loss is the load-dependent one, growing as the square of the load current; eddy and hysteresis losses depend on the flux and the frequency, not on the load, so they persist even with the secondary open-circuited."
+        }
+      ]
+    },
+    {
+      "id": "wed-cos102",
+      "day": "Wed",
+      "course": "COS_102",
+      "topic": "The Software Testing Life Cycle and Debugging deck: what software testing is and why a defined life cycle is needed at all, the six STLC phases in sequential order with the specific activities each phase owns, entry and exit points, the definition of a test case as inputs, process and expected outputs, and debugging as the process of identifying and resolving bugs together with its named methods (code inspection, monitoring, logging, unit, integration and system testing) and tool categories (debuggers, trace tools, profilers).",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A tester has finished reviewing the requirement document and the strategy, cost and duration have been signed off. She now writes documents that each list the inputs to supply, the process to follow, and the output that should result. Which phase is she in, and which phase must still be completed before the software can actually be exercised?",
+          "options": [
+            "Test planning; test case development must still be completed",
+            "Test environment setup; test execution must still be completed",
+            "Test case development; test environment setup must still be completed",
+            "Test execution; test cycle closure must still be completed"
+          ],
+          "answerIndex": 2,
+          "concept": "The order of the six STLC phases and the activities each owns",
+          "why": "Writing inputs, process and expected outputs is test case development; test environment setup, where the software and hardware are specified, still stands between it and test execution."
+        },
+        {
+          "type": "mcq",
+          "q": "A team declares the test case development phase closed and moves into test execution, although a third of the written test cases have not yet been reviewed. Which idea from the deck does this most directly violate?",
+          "options": [
+            "The exit point of a phase is reached only when all the objectives of that phase have been achieved, and review of test cases is an objective of test case development",
+            "The entry point of test execution is the writing of test cases, so execution cannot begin until every case exists",
+            "Test cases may only be reviewed during test cycle closure, so the review is out of sequence",
+            "A phase may not be closed until the defects found in it have been corrected, which happens in test execution"
+          ],
+          "answerIndex": 0,
+          "concept": "Entry and exit points, and the fact that an exit point requires the phase's objectives to have been achieved",
+          "why": "Identification, writing and review of test cases are the objectives of that phase, so its exit point has not been reached."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following activities belongs to the **test planning** phase rather than to any other phase?",
+          "options": [
+            "Setting up the test data and the hardware on which the tests will run",
+            "Assigning roles to the members of the testing team",
+            "Interviewing stakeholders about the software requirement document",
+            "Collecting feedback and creating the summary report"
+          ],
+          "answerIndex": 1,
+          "concept": "Which activities belong to which STLC phase",
+          "why": "Assignment of roles to team members is listed under test planning; a is environment setup, c is requirement analysis, d is test cycle closure."
+        },
+        {
+          "type": "mcq",
+          "q": "A tester interviewing stakeholders records that the payment provider's sandbox is scheduled to be offline for two of the four planned test weeks. Which phase does this activity belong to, and why does it belong there rather than to test environment setup?",
+          "options": [
+            "Test planning, because anything affecting duration is a planning concern by definition",
+            "Test environment setup, because a sandbox is part of the software requirements of the test",
+            "Test cycle closure, because an unavailable dependency is a defect that must be reported",
+            "Requirement analysis, whose activities include stakeholder interviews and the identification of possible issues that might affect the testing process, before any environment is specified"
+          ],
+          "answerIndex": 3,
+          "concept": "Requirement analysis: stakeholder interviews and identifying issues that might affect the testing process",
+          "why": "The deck places stakeholder interviews and identification of possible issues affecting the testing process in requirement analysis, the phase that decides what is to be tested."
+        },
+        {
+          "type": "mcq",
+          "q": "Both the test execution phase and the test cycle closure phase involve defects and reports. What separates them, as the deck describes their activities?",
+          "options": [
+            "Execution implements the tests, retests to fix defects, and analyses and reports the results; closure checks that the testing objectives have been achieved and the software is ready for use, and produces the summary report and feedback",
+            "Execution records defects only; closure is the only phase permitted to correct them",
+            "Execution produces the summary report; closure re-runs any test that produced a defect",
+            "Execution covers automated tests, closure covers the manual ones, since manual results need human summarising"
+          ],
+          "answerIndex": 0,
+          "concept": "Test execution versus test cycle closure, and the activities each lists",
+          "why": "Execution asks whether the tests pass; closure asks whether testing is finished and the software is ready for use, and produces the summary report and feedback."
+        },
+        {
+          "type": "mcq",
+          "q": "An automated suite reports that `total_due` came back as 4,300 where 4,500 was expected. What has the deck's definition of software testing delivered here, and what remains to be done?",
+          "options": [
+            "Testing has resolved the error; what remains is to confirm that no requirement is missing",
+            "Testing has found that the given output differs from the expected output and has located an error; debugging must still identify and resolve the bug that caused it",
+            "Testing has identified the bug; debugging will now re-run the suite to confirm the fix",
+            "Testing has proved that a requirement is missing, since a wrong total can only come from an unimplemented requirement"
+          ],
+          "answerIndex": 1,
+          "concept": "Testing versus debugging: detecting a mismatch versus identifying and resolving its cause",
+          "why": "Testing compares actual with expected output and locates errors; debugging is the separate process of identifying and resolving the bug."
+        },
+        {
+          "type": "mcq",
+          "q": "A deployed system never crashes and returns correct results, but between 4 p.m. and 6 p.m. its responses become very slow, and no test in the suite fails. Which debugging method from the deck is the natural first move, and on what grounds?",
+          "options": [
+            "Code inspection, because a fault invisible to the tests can only be found by reading the source",
+            "Unit testing, because slowness must originate inside a single function's execution paths",
+            "Monitoring, because it watches a running system for unusual behaviour or performance issues that indicate the presence of bugs, which is exactly what is observed here",
+            "Integration testing, because a symptom that appears only at certain hours must come from the interaction of components"
+          ],
+          "answerIndex": 2,
+          "concept": "The debugging methods, in particular monitoring for unusual behaviour or performance issues in a running system",
+          "why": "Monitoring is defined as watching a software system for unusual behaviour or performance issues indicating bugs, which is precisely a load-dependent slowdown no test reproduces."
+        },
+        {
+          "type": "mcq",
+          "q": "A team can reproduce a fault but cannot see where the program's state first goes wrong, and separately wants to know which routine consumes most of the running time. Which of the deck's debugging tool categories serve these two needs?",
+          "options": [
+            "A profiler for the first, a trace tool for the second",
+            "Logging for the first, code inspection for the second",
+            "A trace tool for both, since both concern the order of execution",
+            "A debugger or trace tool for the first, a profiler for the second"
+          ],
+          "answerIndex": 3,
+          "concept": "The three debugging tool categories: debuggers, trace tools and profilers, and what each is for",
+          "why": "Debuggers and trace tools follow execution and state to locate where things go wrong; profilers measure where the time is spent."
+        },
+        {
+          "type": "short",
+          "q": "The deck justifies the STLC by saying that without a standard process which clearly defines the deliverables and objectives of each phase, \"we might not be sure that we are testing our software the right way.\" Explain what specifically goes wrong in a project that tests hard but has no defined phases, and name two phases whose omission would produce the clearest damage.",
+          "concept": "The rationale for having a software testing life cycle at all",
+          "why": "Without defined phases nothing states the deliverables and objectives of each stage, so no phase has an exit criterion and the team can never say whether testing is adequate, whether the software meets the set requirements, or whether it is free of defects; effort is spent without a definition of done, and the same ground is retested while other ground is never touched. Omitting requirement analysis is the clearest damage: nobody has decided what is to be tested, so the tests measure the testers' assumptions rather than the requirements. Omitting test case development is next: without written cases specifying inputs, process and expected outputs the results cannot be reproduced, reviewed or handed to anyone else. (Test planning or test cycle closure are also defensible second choices if argued on the same grounds — no roles, cost or duration; or no check that objectives were met and the software is ready for use.)"
+        },
+        {
+          "type": "short",
+          "q": "A test case specifies inputs, process and expected outputs. Explain why the *expected output* must be fixed during test case development rather than decided when the test is run, and what would be lost if a tester decided at run time whether the result looked reasonable.",
+          "concept": "The definition of a test case, and why test case development is a phase of its own",
+          "why": "Software testing is defined as finding out whether the output the computer gives is the same as the expected output, so the expected output is the standard against which the run is judged; it has to exist before the run or there is nothing to compare against. Fixing it during test case development means it is derived from the requirements and reviewed, which is exactly what that phase's activities — identification, writing and review — are for. If the tester decides at run time whether the result looks reasonable, the actual output silently becomes the expected output: a wrong result that is plausible is accepted, the test is not reproducible by anyone else, and retesting after a fix has no fixed baseline. The judgement also stops tracing back to a requirement, so missing requirements can no longer be detected."
+        },
+        {
+          "type": "short",
+          "q": "Testing and debugging are different processes but the deck lists unit, integration and system testing among the debugging methods. Explain how the same three activities can belong to both, and state what changes about the purpose when they are used for debugging.",
+          "concept": "Testing versus debugging, and why the same activities appear in both lists",
+          "why": "The activities are the same mechanically — run part or all of the software on chosen data and compare actual with expected output — but the purpose differs. As testing methods they are used before a bug is known, to find out whether output matches expectation and whether requirements are missing; they are a verification exercise driven by the requirements. As debugging methods they are used after a malfunction is already known, to narrow down where it lives: a unit test isolates a single function so the fault can be attributed to it or ruled out, an integration test decides whether the fault lies in the interaction between components rather than inside either one, and a system test decides whether the whole assembled system still misbehaves. Testing detects and locates that something is wrong; when the same runs are used for debugging they serve identifying and resolving the specific error already observed."
+        },
+        {
+          "type": "short",
+          "q": "Explain the difference between logging and monitoring as debugging techniques, and describe a fault for which logging succeeds where monitoring cannot, and a fault for which monitoring succeeds where logging cannot.",
+          "concept": "Logging versus monitoring in the deck's list of debugging methods",
+          "why": "Logging records events and messages related to the software system, so it produces a durable internal record of what the program did and with what values. Monitoring watches the running system for unusual behaviour or performance issues that indicate the presence of bugs, so it observes external symptoms as they happen. Logging succeeds where monitoring cannot on a fault that leaves no outward sign: a rounding error that quietly writes a wrong balance to the database, where the system stays fast and stable but the logged intermediate values show the wrong figure being computed and stored, and the record can be read hours later. Monitoring succeeds where logging cannot on a fault nobody thought to log: memory consumption creeping upward until the process is killed at 3 a.m., or responses degrading only under peak load — no log line was written because the code never anticipated the condition, but the running system's behaviour is visibly abnormal to something watching it."
+        }
+      ]
+    },
+    {
+      "id": "thu-mth102",
+      "day": "Thu",
+      "course": "MTH_102",
+      "topic": "The same applications worked as problems: recovering v(t) and s(t) from a(t) with initial conditions and computing both displacement and total distance by splitting at the zeros of v, finding a spring constant from a measured force and computing W = ∫kx dx, evaluating fluid force ρg∫h·w(h)dh on rectangular and triangular plates and checking it with F = ρg·h̄·A, obtaining the extra cost between two output levels from ∫MC dq and the profit-maximising output from MR = MC, computing consumer and producer surplus after solving D(q) = S(q), and integrating an exponential discharge rate to get the total pollutant.",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A body has acceleration a(t) = 6t + 4 m/s² and velocity v(0) = 5 m/s. Its velocity at t = 3 s is",
+          "options": [
+            "39 m/s",
+            "44 m/s",
+            "71 m/s",
+            "22 m/s"
+          ],
+          "answerIndex": 1,
+          "concept": "Antidifferentiating acceleration and applying the initial condition",
+          "why": "v(t) = 3t² + 4t + 5, so v(3) = 27 + 12 + 5 = 44. 39 drops v(0); 71 comes from writing 6t² instead of 3t²; 22 is a(3), the acceleration, not the velocity."
+        },
+        {
+          "type": "mcq",
+          "q": "A particle moves with velocity v(t) = t² − 4t + 3 m/s. The total distance it travels between t = 0 and t = 4 s is",
+          "options": [
+            "3 m",
+            "4/3 m",
+            "8/3 m",
+            "4 m"
+          ],
+          "answerIndex": 3,
+          "concept": "Total distance = ∫|v| dt, split at the zeros of v",
+          "why": "v = (t − 1)(t − 3) vanishes at t = 1 and 3, and each of the three pieces has magnitude 4/3, so the distance is 4 m. 4/3 m is the displacement (no split); 8/3 m omits the piece on [3,4]; 3 m is v(4)."
+        },
+        {
+          "type": "mcq",
+          "q": "A force of 12 N holds a spring stretched 0.3 m beyond its natural length. The work done in stretching it from its natural length to 0.5 m is",
+          "options": [
+            "5 J",
+            "6 J",
+            "10 J",
+            "20 J"
+          ],
+          "answerIndex": 0,
+          "concept": "Hooke's law to find k, then W = ∫kx dx = ½kx²",
+          "why": "k = 12/0.3 = 40 N/m, so W = ∫₀^{0.5}40x dx = ½(40)(0.25) = 5 J. 10 J omits the ½; 6 J is 12 N × 0.5 m, treating the force as constant; 20 J is the force at full stretch, kx = 20 N, read as work."
+        },
+        {
+          "type": "mcq",
+          "q": "A rectangular plate 2 m wide and 3 m deep hangs vertically in water with its top edge 1 m below the surface (ρg = 9800 N/m³). The fluid force on one face is",
+          "options": [
+            "58.8 kN",
+            "73.5 kN",
+            "147 kN",
+            "235.2 kN"
+          ],
+          "answerIndex": 2,
+          "concept": "F = ρg∫h·w(h)dh with h measured from the free surface",
+          "why": "F = 9800∫₁⁴2h dh = 9800(16 − 1) = 147 kN, confirmed by ρg·h̄·A = 9800(2.5)(6). 58.8 kN uses the top-edge pressure over the whole area, 235.2 kN the bottom-edge pressure, and 73.5 kN drops the width factor 2."
+        },
+        {
+          "type": "mcq",
+          "q": "A firm's marginal cost is MC(q) = 3q² − 4q + 10 (₦ per unit) and its fixed cost is ₦50. The additional cost of raising output from q = 2 to q = 5 is",
+          "options": [
+            "₦51",
+            "₦105",
+            "₦125",
+            "₦155"
+          ],
+          "answerIndex": 1,
+          "concept": "Change in total cost = ∫_{q₁}^{q₂} MC dq, with fixed cost cancelling",
+          "why": "∫₂⁵(3q² − 4q + 10)dq = [q³ − 2q² + 10q]₂⁵ = 125 − 20 = ₦105. ₦155 adds the fixed cost, which is already spent; ₦125 forgets the lower limit; ₦51 is MC(5) − MC(2), a difference of rates rather than an accumulation."
+        },
+        {
+          "type": "mcq",
+          "q": "In a market with demand p = 50 − 2q and supply p = 5 + q, the consumer surplus at equilibrium is",
+          "options": [
+            "225",
+            "337.5",
+            "450",
+            "112.5"
+          ],
+          "answerIndex": 0,
+          "concept": "Solve D(q) = S(q) first, then CS = ∫₀^{q₀}[D(q) − p₀]dq",
+          "why": "50 − 2q = 5 + q gives q₀ = 15, p₀ = 20, so CS = ∫₀¹⁵(30 − 2q)dq = 450 − 225 = 225. 112.5 is the producer surplus, 337.5 the total surplus, and 450 treats the gain as a constant 30 per unit (a rectangle instead of the area under the demand curve)."
+        },
+        {
+          "type": "mcq",
+          "q": "In the same market (demand p = 50 − 2q, supply p = 5 + q), the producer surplus at equilibrium is",
+          "options": [
+            "225",
+            "300",
+            "337.5",
+            "112.5"
+          ],
+          "answerIndex": 3,
+          "concept": "PS = ∫₀^{q₀}[p₀ − S(q)]dq, the area between the price line and the supply curve",
+          "why": "PS = ∫₀¹⁵(20 − 5 − q)dq = 225 − 112.5 = 112.5. 225 is the consumer surplus, 337.5 is CS + PS, and 300 is p₀q₀, the money actually paid, which is neither surplus."
+        },
+        {
+          "type": "mcq",
+          "q": "A factory discharges a pollutant into a river at a rate r(t) = 60e^{0.1t} kg/day. The total mass discharged over the first 10 days is",
+          "options": [
+            "6(e − 1) ≈ 10.3 kg",
+            "60(e − 1) ≈ 103 kg",
+            "600(e − 1) ≈ 1031 kg",
+            "600e ≈ 1631 kg"
+          ],
+          "answerIndex": 2,
+          "concept": "Accumulating an exponential rate: ∫₀^T Ae^{kt}dt = (A/k)(e^{kT} − 1)",
+          "why": "∫₀¹⁰60e^{0.1t}dt = (60/0.1)[e^{0.1t}]₀¹⁰ = 600(e − 1) ≈ 1031 kg. 60(e − 1) forgets the 1/k factor, 6(e − 1) multiplies by 0.1 instead of dividing, and 600e drops the value at the lower limit."
+        },
+        {
+          "type": "short",
+          "q": "A body has acceleration a(t) = 6t − 12 m/s², with v(0) = 9 m/s and s(0) = 0, over 0 ≤ t ≤ 4 s. Find v(t) and s(t), then give both the displacement and the total distance travelled. Explain why the two differ and where the interval had to be split.",
+          "concept": "a → v → s with initial conditions, then signed versus unsigned accumulation",
+          "why": "v(t) = 3t² − 12t + 9 (the constant is v(0) = 9) and s(t) = t³ − 6t² + 9t (the constant is s(0) = 0). Displacement = s(4) − s(0) = 64 − 96 + 36 = 4 m. Since v = 3(t − 1)(t − 3) vanishes at t = 1 and t = 3, split there: s(1) − s(0) = 4, s(3) − s(1) = 0 − 4 = −4, s(4) − s(3) = 4 − 0 = 4, so the distance is 4 + 4 + 4 = 12 m. They differ because the body moves forward, comes back the same 4 m, then moves forward again; the return cancels in the signed integral (correctly, for displacement) but must be counted in the distance."
+        },
+        {
+          "type": "short",
+          "q": "A spring has natural length 20 cm, and a force of 15 N holds it at 25 cm. Find the work done in stretching it from 25 cm to 35 cm. State the value of k and explain why the answer is not (15 N) × (0.10 m).",
+          "concept": "Hooke's law with x measured from natural length; work as ∫F dx",
+          "why": "x is the extension beyond natural length, so 25 cm means x = 0.05 m and 15 = k(0.05) gives k = 300 N/m. Stretching from x = 0.05 m to x = 0.15 m: W = ∫_{0.05}^{0.15}300x dx = 150(0.15² − 0.05²) = 150(0.0225 − 0.0025) = 3 J. The product (15 N)(0.10 m) = 1.5 J would be right only if the force stayed at 15 N, but it grows from 15 N to 45 N over the stretch; the integral is exactly the average force (30 N) times the 0.10 m displacement."
+        },
+        {
+          "type": "short",
+          "q": "A vertical triangular gate has a horizontal base 4 m wide whose depth is 2 m, and its apex points downwards 3 m below that base (so the gate spans depths 2 m to 5 m). Taking ρg = 9800 N/m³, write the width w(h) of the strip at depth h, set up the force integral and evaluate it. Check your answer using the centroid.",
+          "concept": "Fluid force on a non-rectangular plate: the width is a linear function of depth",
+          "why": "The width falls linearly from 4 m at h = 2 to 0 at h = 5, so w(h) = 4(5 − h)/3. Then F = ρg∫₂⁵ h·w(h)dh = 9800(4/3)∫₂⁵(5h − h²)dh = 9800(4/3)[5h²/2 − h³/3]₂⁵ = 9800(4/3)(52.5 − 39) = 9800(4/3)(13.5) = 176 400 N ≈ 176.4 kN. Check: the centroid of a triangle lies one third of the way from the base towards the apex, at h̄ = 2 + 1 = 3 m, and A = ½(4)(3) = 6 m², so ρg·h̄·A = 9800(3)(6) = 176 400 N ✓."
+        },
+        {
+          "type": "short",
+          "q": "A firm has MR(q) = 60 − 2q and MC(q) = 12 + q (₦ per unit), with fixed cost ₦300. Find the output that maximises profit, and the increase in profit obtained in going from q = 0 to that output. Explain why the fixed cost does not change the optimal output, and say what the fixed cost does change.",
+          "concept": "Profit change as ∫(MR − MC)dq; the optimum at MR = MC is independent of fixed cost",
+          "why": "Profit P(q) has P′ = MR − MC = 48 − 3q, which is zero at q = 16 and changes from positive to negative there, so q = 16 maximises profit. The increase from q = 0 is ∫₀¹⁶(48 − 3q)dq = [48q − 1.5q²]₀¹⁶ = 768 − 384 = ₦384. The fixed cost is a constant in C(q), so its derivative is zero: it appears in neither MC nor MR − MC and cannot move the optimum. What it changes is the level of profit — at q = 0 the firm is ₦300 down, and at q = 16 its profit is −300 + 384 = ₦84, so a large enough fixed cost turns the whole operation into a loss without changing the best output to produce."
+        }
+      ]
+    },
+    {
+      "id": "fri-phy102",
+      "day": "Fri",
+      "course": "PHY_102",
+      "topic": "The same week's transformers worked numerically: secondary voltage from the turns ratio, primary and secondary currents from the ideal power balance V1I1 = V2I2, the deck's two appliance problems (960 W/240 V coffeemaker run from a 120 V line and 1600 W/120 V hair dryer run from a 240 V line) in all three parts, the resistance a source appears to drive R_apparent = (N1/N2)^2 R including impedance matching to a loudspeaker, efficiency eta = P_out/P_in with the copper-versus-core-loss split, and transmission-line waste P_loss = I^2 R = P^2 R / V^2 at two different transmission voltages.",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A transformer's 500-turn primary is connected to a 240 V rms supply and its secondary has 25 turns. The secondary voltage is:",
+          "options": [
+            "4800 V",
+            "12 V",
+            "20 V",
+            "0.050 V"
+          ],
+          "answerIndex": 1,
+          "concept": "Transformer equation V₂ = V₁N₂/N₁ — get the ratio the right way up.",
+          "why": "V₂ = 240 × 25/500 = 12 V; option a inverts the turns ratio and c quotes the ratio 500/25 itself."
+        },
+        {
+          "type": "mcq",
+          "q": "The transformer of question 1 supplies a 12 V, 60 W lamp from its secondary. Treating it as ideal, the current drawn from the 240 V supply is:",
+          "options": [
+            "100 A",
+            "5.0 A",
+            "0.0125 A",
+            "0.25 A"
+          ],
+          "answerIndex": 3,
+          "concept": "Ideal power balance: get the primary current from P₁ = P₂, not by re-scaling with the turns ratio.",
+          "why": "P = 60 W on both sides, so I₁ = 60/240 = 0.25 A (the secondary carries 60/12 = 5.0 A; option c wrongly uses the SQUARE of the turns ratio, which applies to resistance, not current)."
+        },
+        {
+          "type": "mcq",
+          "q": "A 960 W appliance designed for a 240 V line is run from a 120 V supply through an ideal transformer. The current drawn from the 120 V supply is:",
+          "options": [
+            "8.0 A",
+            "4.0 A",
+            "16 A",
+            "2.0 A"
+          ],
+          "answerIndex": 0,
+          "concept": "Deciding which side of the transformer the question is standing on before dividing.",
+          "why": "The appliance still consumes 960 W, so the 120 V line must deliver I₁ = 960/120 = 8.0 A; the 4.0 A of option b is the current inside the appliance at 240 V."
+        },
+        {
+          "type": "mcq",
+          "q": "For that same 960 W, 240 V appliance: what resistance does it present at its own terminals, and what resistance does the 120 V supply appear to be driving?",
+          "options": [
+            "60 Ω at the appliance and 60 Ω at the supply — a transformer does not alter resistance.",
+            "30 Ω at the appliance and 15 Ω at the supply.",
+            "60 Ω at the appliance and 15 Ω at the supply.",
+            "60 Ω at the appliance and 30 Ω at the supply."
+          ],
+          "answerIndex": 2,
+          "concept": "Resistance transformation: R at the load, but (N₁/N₂)²R as the source sees it.",
+          "why": "R = V₂²/P = 240²/960 = 60 Ω; the supply sees V₁/I₁ = 120/8.0 = 15 Ω = (½)² × 60 Ω — option d divides by the turns ratio instead of its square."
+        },
+        {
+          "type": "mcq",
+          "q": "A transformer draws 10.0 A from a 240 V rms supply, and its secondary delivers 22.0 A at 100 V rms. Its efficiency is about:",
+          "options": [
+            "100 %",
+            "41.7 %",
+            "45.5 %",
+            "91.7 %"
+          ],
+          "answerIndex": 3,
+          "concept": "Efficiency is a ratio of POWERS, not of voltages or of currents.",
+          "why": "P_in = 240 × 10.0 = 2400 W, P_out = 100 × 22.0 = 2200 W, so η = 2200/2400 = 91.7 %; options b and c are the voltage ratio and the current ratio."
+        },
+        {
+          "type": "mcq",
+          "q": "A station sends 100 kW along a line of total resistance 4.0 Ω. The power wasted in the line at a transmission voltage of 1.0 kV, and at 10 kV, is respectively:",
+          "options": [
+            "40 kW and 0.40 kW",
+            "40 kW and 4.0 kW",
+            "400 kW and 4.0 kW",
+            "0.40 kW and 40 kW"
+          ],
+          "answerIndex": 0,
+          "concept": "Transmission loss P_loss = I²R_line with I = P/V — the loss falls as the square of the voltage.",
+          "why": "At 1.0 kV, I = 100 A and P_loss = 100²×4.0 = 40 kW; at 10 kV, I = 10 A and P_loss = 10²×4.0 = 400 W = 0.40 kW — a hundredfold reduction, not tenfold."
+        },
+        {
+          "type": "mcq",
+          "q": "A 60 W soldering iron rated at 24 V is run from the 240 V mains through an ideal transformer whose primary has 1200 turns. The number of secondary turns and the current in the primary are:",
+          "options": [
+            "12 000 turns and 0.25 A",
+            "120 turns and 2.5 A",
+            "120 turns and 0.25 A",
+            "12 000 turns and 2.5 A"
+          ],
+          "answerIndex": 2,
+          "concept": "Combining the turns ratio for the secondary with the power balance for the primary current.",
+          "why": "N₂ = 1200 × 24/240 = 120 turns; I₁ = P/V₁ = 60/240 = 0.25 A (the 2.5 A of option b is the current in the iron itself, 60/24)."
+        },
+        {
+          "type": "mcq",
+          "q": "An ideal transformer feeds a fixed resistive load from its secondary. The number of secondary turns is now doubled, with the supply, the primary and the load all unchanged. The secondary voltage, the power delivered to the load, and the primary current become, respectively:",
+          "options": [
+            "doubled, doubled, doubled",
+            "doubled, quadrupled, quadrupled",
+            "doubled, quadrupled, halved",
+            "halved, quartered, halved"
+          ],
+          "answerIndex": 1,
+          "concept": "Chaining the relations: V₂ ∝ N₂, but P = V₂²/R for a fixed resistive load, and then P₁ = P₂.",
+          "why": "Doubling N₂ doubles V₂; with R fixed, P = V₂²/R quadruples; and since P₁ = P₂ with V₁ fixed, I₁ = P/V₁ quadruples too."
+        },
+        {
+          "type": "short",
+          "q": "A 1600 W hair dryer designed for 120 V is taken to Europe, where the outlets supply 240 V rms. State what transformer is needed and its turns ratio, calculate the current the dryer draws from the European outlet and the resistance that outlet appears to be driving, and show that this apparent resistance agrees with the dryer's own resistance transformed by the square of the turns ratio.",
+          "concept": "The deck's hair-dryer example: step-down ratio, supply current from the power balance, and the squared resistance rule.",
+          "why": "The dryer needs 120 V from a 240 V outlet, so a step-down transformer with N₂/N₁ = 120/240 = ½ (2:1). Ideal, so P = 1600 W on both sides: from the outlet I₁ = 1600/240 = 6.67 A (the dryer element itself carries I₂ = 1600/120 = 13.3 A). The outlet appears to be driving V₁/I₁ = 240/6.67 = 36 Ω. The dryer's own resistance is V₂²/P = 120²/1600 = 9.0 Ω, and (N₁/N₂)²R = 2² × 9.0 = 36 Ω ✓ — resistance transforms with the square of the turns ratio."
+        },
+        {
+          "type": "short",
+          "q": "A transformer supplied with 4.00 kW delivers 3.72 kW to its load. Calculate the efficiency and the power lost. Given that 200 W of that loss is I²R heating in the windings, explain what becomes of that 200 W and of the remaining 80 W when the load is disconnected but the primary is left connected to the mains.",
+          "concept": "Efficiency arithmetic, and the split between load-dependent copper loss and load-independent core loss.",
+          "why": "η = 3720/4000 = 0.930 = 93.0 %, and the power lost is 4000 − 3720 = 280 W. Of that, 200 W is copper loss, which depends on the load current (∝ I²); with the load disconnected the secondary current is zero and the primary draws only a small magnetising current, so this part very nearly vanishes. The remaining 80 W is core loss — eddy currents plus hysteresis — which depends on the alternating flux and the frequency, not on the load; the core is still being magnetised and demagnetised 50 times a second, so that 80 W continues essentially unchanged. This is why a transformer left plugged in with nothing attached is still warm."
+        },
+        {
+          "type": "short",
+          "q": "A town needs 500 kW delivered along a line of resistance 2.0 Ω. Work out the line current and the power wasted in the line for transmission at 5.0 kV and at 25 kV, and explain from the formulae why raising the voltage by a factor of five cuts the waste by a factor of twenty-five rather than five.",
+          "concept": "Why the transmission loss goes as the inverse SQUARE of the voltage.",
+          "why": "At 5.0 kV: I = 500 000/5000 = 100 A, P_loss = I²R = 100² × 2.0 = 20 000 W = 20 kW. At 25 kV: I = 500 000/25 000 = 20 A, P_loss = 20² × 2.0 = 800 W = 0.80 kW. Raising V by 5 divides the current by 5 because I = P/V at fixed delivered power, and the loss depends on the square of that current, P_loss = I²R = P²R/V², so it is divided by 5² = 25. The voltage enters twice: once in reducing the current, and once again because the heating is quadratic in current."
+        },
+        {
+          "type": "short",
+          "q": "An amplifier of internal resistance 800 Ω is to drive an 8.0 Ω loudspeaker through a transformer. Find the turns ratio N₁ : N₂ required, and explain why connecting the loudspeaker straight to the amplifier delivers far less power to it, even though a direct connection involves no transformer losses at all.",
+          "concept": "Impedance matching: choosing the turns ratio so (N₁/N₂)²R equals the source resistance.",
+          "why": "Require (N₁/N₂)²R = 800 Ω with R = 8.0 Ω, so (N₁/N₂)² = 100 and N₁ : N₂ = 10 : 1 (a step-down transformer). Connected directly, the 8.0 Ω speaker is a tiny fraction of the 808 Ω total circuit resistance, so almost all the power is dissipated inside the amplifier's own 800 Ω rather than in the speaker. The transformer makes the speaker look like 800 Ω to the amplifier, which is the condition for maximum power transfer from a source of internal resistance 800 Ω — so even after transformer losses, far more power reaches the loudspeaker."
+        }
+      ]
+    },
+    {
+      "id": "sat-cos102",
+      "day": "Sat",
+      "course": "COS_102",
+      "topic": "Applying the Software Testing Methods deck to real code: classifying a failure as functional or non-functional and choosing the method (unit, integration, system, acceptance versus usability, performance, security, compatibility), choosing the integration direction top-down or bottom-up, deciding between black, white and grey box for a given situation and knowing which levels each applies to, designing test data by equivalence partitioning and boundary value analysis, and reading a debugger's breakpoint and variable watch to name the defect class.",
+      "maxScore": 12,
+      "questions": [
+        {
+          "type": "mcq",
+          "q": "A function is specified to accept a whole-number score from 0 to 100 and return a band:\n\n```\ndef grade(score):\n    if score >= 70:  return \"A\"\n    elif score >= 60: return \"B\"\n    elif score >= 50: return \"C\"\n    else:             return \"F\"\n```\n\nWhich set of inputs is the one chosen by equivalence partitioning together with boundary value analysis?",
+          "options": [
+            "0, 25, 50, 75, 100 — five evenly spaced values across the whole permitted range",
+            "49, 50, 59, 60, 69, 70, together with 0 and 100 — the value on each side of every band edge, plus the two ends of the input domain",
+            "55, 65, 75, 85 — one representative taken from the middle of each band",
+            "70, 60 and 50 — the three thresholds alone, since a threshold that behaves correctly guarantees the rest of its band"
+          ],
+          "answerIndex": 1,
+          "concept": "Equivalence partitioning combined with boundary value analysis when designing test data",
+          "why": "Partitioning identifies the four bands, and boundary analysis adds the values immediately below and at each edge, plus the ends of the domain — the places where a wrong relational operator shows up; c is partitioning without boundaries, and d is boundaries without the partitions."
+        },
+        {
+          "type": "mcq",
+          "q": "A registration form is specified to accept applicants aged 18 to 65 **inclusive**. The implementation reads `if age > 18 and age <= 65:`. Which single boundary value exposes the fault, and what class of defect is it?",
+          "options": [
+            "66, and it is a wrong branch order, because the upper test is evaluated after the lower one",
+            "17, and it is an uninitialised-variable defect, because nothing sets a default for under-age input",
+            "18, and it is an off-by-one produced by a wrong relational operator, `>` used where `>=` was required",
+            "65, and it is an integer-division defect, because the range is compared rather than divided"
+          ],
+          "answerIndex": 2,
+          "concept": "Boundary value analysis and naming the defect class it exposes",
+          "why": "Only age 18 distinguishes `>` from `>=`: the spec includes 18 but the code rejects it, an off-by-one at the lower boundary; 17, 65 and 66 all behave identically under both versions."
+        },
+        {
+          "type": "mcq",
+          "q": "A developer opens the source of `grade` above, counts the four execution paths through it, and picks one input to drive each path. Which method is she using, and which testing levels does the deck say it applies to?",
+          "options": [
+            "White box testing; applicable to unit testing, integration testing and system testing",
+            "Black box testing; applicable to integration testing, system testing and acceptance testing",
+            "Grey box testing; primarily used in integration testing",
+            "White box testing; applicable to acceptance testing only, since every execution path ends in an output the user sees"
+          ],
+          "answerIndex": 0,
+          "concept": "White box testing: internals known, inputs chosen to exercise paths, and the levels it applies to",
+          "why": "Choosing inputs to exercise paths through known code is white box, which the deck says applies to unit, integration and system testing — notably not acceptance."
+        },
+        {
+          "type": "mcq",
+          "q": "A tester reads the source of the `cart` and `pricing` modules to work out which combinations of discount and stock level are interesting, then exercises those combinations only through the application's public checkout page. How should this be classified?",
+          "options": [
+            "Black box testing, because every test was actually run through the exposed interface",
+            "White box testing, because the source of both modules was studied before any test ran",
+            "Unit testing, because two named modules are the target of the tests",
+            "Grey box testing, in which internal data structures and algorithms are used to design the test cases while the testing is done at the user or black-box level, and which is primarily used in integration testing"
+          ],
+          "answerIndex": 3,
+          "concept": "Grey box testing: internals used to design the cases, execution at the black-box level",
+          "why": "This is the deck's own grey box example — two modules' code studied to design the cases, the tests then conducted through the exposed interfaces."
+        },
+        {
+          "type": "mcq",
+          "q": "A team tests the currency-conversion and date helper modules first, then the transaction module that calls them, then the reporting module above that. Which approach is this, and what would the alternative have done?",
+          "options": [
+            "Top-down integration; the alternative would have started with the reporting module",
+            "Bottom-up integration, in which lower-level modules are tested first; the top-down alternative would have tested the higher-level modules first",
+            "Bottom-up design in the Week 11 sense, which concerns composition of components and says nothing about the order of integration tests",
+            "System testing, because all three layers are included by the time the sequence ends"
+          ],
+          "answerIndex": 1,
+          "concept": "Top-down versus bottom-up integration testing",
+          "why": "Lower-level modules tested before higher-level ones is bottom-up integration; top-down reverses the order, testing higher-level modules first."
+        },
+        {
+          "type": "mcq",
+          "q": "A loan page computes interest correctly to the last kobo. With five users it responds in under a second; with five hundred concurrent users it takes forty seconds. Which classification and method does this failure call for?",
+          "options": [
+            "Functional testing has failed, because a forty-second response is not the expected output of the program",
+            "Usability testing, because the delay is discovered by observing users while they use the software",
+            "Non-functional testing, specifically performance testing, which checks how the software will perform under different load conditions",
+            "Compatibility testing, because the software behaves differently in one situation from another"
+          ],
+          "answerIndex": 2,
+          "concept": "Functional versus non-functional methods, and performance testing under different load conditions",
+          "why": "The output is correct, so the function is right; what fails is how well it performs under load, which is performance testing — a non-functional method."
+        },
+        {
+          "type": "mcq",
+          "q": "A tester writes twelve unit tests for a function containing two nested conditionals and a loop. All twelve pass, and she reports the function as proven correct. Assess the claim.",
+          "options": [
+            "Sound, provided the twelve cases were derived from the specification rather than from reading the code",
+            "Sound, because unit testing operates on the functions in a program and this is a single function",
+            "Unsound, because unit testing is a non-functional method and non-functional methods cannot establish correctness",
+            "Unsound, because the deck states that it is practically impossible to test all the execution paths in a software and that the number and type of test data are limited, so passing tests show only that the paths exercised behaved as expected"
+          ],
+          "answerIndex": 3,
+          "concept": "The stated limitation of unit testing: untestable path coverage and limited test data",
+          "why": "The deck's limitation is explicit — all execution paths cannot practically be tested and the test data is limited in number and type, so passing tests never amount to proof."
+        },
+        {
+          "type": "mcq",
+          "q": "`average([10, 20, 30])` returns 10.0 where 20.0 is expected:\n\n```\ndef average(scores):\n    total = 0\n    for i in range(len(scores) - 1):\n        total = total + scores[i]\n    return total / len(scores)\n```\n\nA breakpoint is set on the `return` line and `total` is watched on each pass through the loop. What does the watch show, and what is the defect?",
+          "options": [
+            "`total` ends at 30 rather than 60, because the loop stops one element early; the defect is an off-by-one in the bound given to `range`",
+            "`total` ends at 60, and the division then truncates the result; the defect is integer division",
+            "`total` is never initialised, so the first addition works on a stale value; the defect is an uninitialised accumulator",
+            "`total` ends at 60, and the fault is in `len(scores)`, which yields 3 where 2 is required; the defect is a wrong operator"
+          ],
+          "answerIndex": 0,
+          "concept": "Reading a debugger's variable watch to locate where state first goes wrong, and naming the defect class",
+          "why": "`range(len(scores) - 1)` gives i = 0 and 1 only, so total reaches 30 and 30/3 = 10.0; the watch shows 10 then 30 and stops — a classic off-by-one in the loop bound."
+        },
+        {
+          "type": "short",
+          "q": "A payment module has already passed unit tests for every one of its functions, yet the checkout fails as soon as it is wired to the inventory module. Explain why passing unit tests could not have prevented this, name the level of testing that would have caught it, and say which of the two integration directions you would choose here and why.",
+          "concept": "Unit versus integration testing, and choosing top-down or bottom-up integration",
+          "why": "Unit testing checks the execution paths within individual functions, mostly on the functions of one module in isolation; it says nothing about how different parts of the software work together, so a mismatch in what the two modules pass to each other — a differently shaped record, a different unit of currency, a different assumption about when stock is decremented — sits entirely outside what any unit test observes. Integration testing is the level that tests how well different parts of a software work together, and is what would have caught it. Either direction is defensible if justified: bottom-up, testing the lower-level payment and inventory modules together first before bringing in the checkout module above them, is the stronger choice here because both modules already exist and are individually tested, so the interface between them is the one unknown and should be exercised directly; top-down would exercise the checkout module first and rely on the lower modules being reached later, which delays the very interaction that is failing."
+        },
+        {
+          "type": "short",
+          "q": "Two testers produce identical sets of inputs for the same login form. One read the source first; the other never saw it. Explain why their tests are not the same kind of test, what each is called, and why the deck says grey box is \"primarily used in integration testing\".",
+          "concept": "Black, white and grey box classified by what the tester knows, not by what the run looks like",
+          "why": "The classification turns on whether the internal structure, design and implementation are known to the tester, not on the inputs that result. The tester who never saw the source is doing black box testing: she works from the outside, supplying inputs and verifying outputs against expected outcomes, and any coverage of the internal paths is incidental. The tester who read the source and used it to pick her inputs is not doing black box testing even though the run looks identical; because she designed the cases from internal knowledge but exercised them through the ordinary interface, she is doing grey box testing — internals partially known, cases designed from data structures and algorithms, testing conducted at the user or black-box level. (Had she also verified the outputs by reasoning about the implementation and driven the paths directly, that would be white box.) Grey box is primarily used in integration testing because that is where its combination pays: the interesting faults live in the interaction between modules, so you need to read both modules' code to know which combinations are worth trying, but you exercise them through the exposed interfaces, which is exactly how the modules meet in the real system."
+        },
+        {
+          "type": "short",
+          "q": "A function is specified to accept a discount percentage from 0 to 50 inclusive. Explain, using this spec, why equivalence partitioning alone would probably miss the most likely defect, which specific values boundary value analysis adds, and what the deck's stated limitation of unit testing implies about how much confidence a passing run of those values earns.",
+          "concept": "Equivalence partitioning, boundary value analysis, and the limits of what passing unit tests prove",
+          "why": "Equivalence partitioning splits the input domain into classes the program should treat identically — below range, valid, above range — and takes one representative from each, say -10, 25 and 80. Those pass under a correct implementation and also under one that wrote `discount < 50` instead of `discount <= 50`, or `> 0` instead of `>= 0`, because 25 is nowhere near an edge; the most likely defect is exactly such an off-by-one at a boundary, and a mid-class representative cannot see it. Boundary value analysis adds the values just below, at and just above each edge: -1, 0, 1 at the lower edge and 49, 50, 51 at the upper. Even with all of these passing, the deck's limitation on unit testing still applies — it is practically impossible to test all the execution paths in a software, and the number and type of test data we can use is limited — so a passing run establishes only that the paths those inputs exercised behaved as expected. It raises confidence at the places defects cluster; it does not prove the function correct, and it says nothing about paths no chosen input reaches."
+        },
+        {
+          "type": "short",
+          "q": "A bank's mobile app returns correct balances, but the branch manager reports that customers on older Android phones cannot complete a transfer, and that new customers abandon the transfer screen halfway. Explain which non-functional method applies to each of the two complaints, why neither is a functional failure, and what a functional failure on the same screen would look like instead.",
+          "concept": "Non-functional methods — compatibility and usability — against functional failure",
+          "why": "The older-Android complaint is for compatibility testing, which determines how compatible the software is with different environments such as different browsers, platforms and operating systems, and ensures it performs as expected across every environment the end users will actually use. The abandonment complaint is for usability testing, which discovers issues with the help of users: users are observed while using the software and the problems they face are identified and addressed. Neither is a functional failure because the program does perform its intended function — on a supported device, driven by someone who gets through the screen, the transfer is computed and the balance returned correctly; functional methods ask whether the program does what is expected of it, while these two ask in what environment it can do it and whether a real person can get it done. A functional failure on the same screen would be the transfer itself being wrong: 5,000 debited from the sender but 500 credited to the recipient, a transfer to a closed account accepted, or the balance not updating after a successful transfer — a case where the actual output differs from the expected output, which unit, integration, system or acceptance testing would catch."
+        }
+      ]
+    }
+  ],
+  "recapCandidates": [
+    {
+      "course": "MTH_102",
+      "topic": "An integral of a rate is a SIGNED accumulation, so it returns displacement and never distance; the repair is to split at the zeros of v and add magnitudes, never to take a modulus at the end. And the constant of integration is a physical quantity the rate cannot contain — v(0) in kinematics, the fixed cost C(0) in economics — which is also why the extra cost between two outputs needs no fixed cost at all.",
+      "whyMisunderstood": "Every early example has a positive integrand, so the signed nature of the integral stays invisible until v changes sign; and the attempted repair, taking the modulus after integrating, cannot recover a cancellation that has already happened inside the integral.",
+      "whyQuestions": [
+        "Why does ∫₃⁷ r(t)dt come out in litres when r is in litres per minute — and what in that unit calculation tells you the answer is an amount rather than a rate?",
+        "Why is ∫₀⁴ v dt the displacement rather than the distance, when the same integral over a positive velocity gives both?",
+        "Why does |∫₀⁴ v dt| fail to fix it, and what exactly has been lost by the time you reach the modulus?",
+        "Why can a(t), known perfectly for every instant, still not tell you v(t) — and what is the physical name of the missing information in the kinematics case and in the marginal-cost case?",
+        "Why must the fixed cost be added to get C(5), yet left out entirely to get the extra cost of going from q = 2 to q = 5 — and why is it the same fact about constants that answers both halves?"
+      ],
+      "goodAnswerContains": "States the net change theorem with 'net' doing real work: ∫ₐᵇ r dt = f(b) − f(a) is a balance in which intervals where r < 0 subtract from those where r > 0, which is exactly what displacement means and exactly what distance must not do; confirms the reading dimensionally, (units of r)x(units of t).\nGives the procedure for distance rather than just the formula ∫|v|dt — locate the zeros of v, integrate each sub-interval separately, take the modulus of each result, add — and says why the modulus must go inside: after integrating, the forward and backward motion have already cancelled.\nTreats the constant of integration as a physical fact, not notation: antidifferentiation fixes the function only up to +C, so v(0) or C(0) supplies information the rate does not contain; then closes the loop by noting the constant vanishes from every difference, so it matters for a level and is irrelevant to a change.",
+      "workedExample": "v(t) = t² − 4t + 3 m/s on [0,4], s(0) = 0. Since v = (t − 1)(t − 3), v > 0 on [0,1), v < 0 on (1,3), v > 0 on (3,4]. Displacement = ∫₀⁴ v dt = [t³/3 − 2t² + 3t]₀⁴ = 4/3 m — nothing further is needed, the integral has already accounted for the backward leg. Total distance: split at t = 1 and t = 3 to get +4/3, −4/3 and +4/3, so the distance is 4 m. The wrong approach, |∫₀⁴ v dt| = 4/3, is the displacement wearing a modulus sign; the split shows the middle leg's −4/3 silently annihilating the first leg's +4/3, and the cheap check is that distance must exceed |displacement| whenever v changes sign. Splitting anywhere else fails: at t = 2 the two pieces are +2/3 and +2/3, giving 4/3 again, because the zeros of v are the only points where cancellation can begin. The same fact in money: with MC(q) = 3q² − 4q + 10 and fixed cost ₦50, C(q) = q³ − 2q² + 10q + 50, so C(5) = ₦175 (a level, fixed cost included) while the extra cost from q = 2 to q = 5 is ∫₂⁵ MC dq = 125 − 20 = ₦105 (a change, fixed cost cancelled). ₦155 pays the rent twice; MC(5) − MC(2) = ₦51 differences the rate instead of accumulating it, the exact analogue of reading v(4) when asked how far the particle went."
+    },
+    {
+      "course": "PHY_102",
+      "topic": "A transformer is not an amplifier. It buys voltage with current at an exactly equal rate, V₁I₁ = V₂I₂, so the turns ratio multiplies voltage by N₂/N₁ and divides current by the same factor — but it transforms a load resistance by the SQUARE of that ratio, (N₁/N₂)²R. And none of it functions on DC, because every volt it produces comes from dΦ/dt.",
+      "whyMisunderstood": "The first questions asked about transformers are voltage questions, which the turns ratio answers without ever mentioning current, so the amplifier intuition survives; the power balance then arrives as a second formula to memorise rather than as the reason the first cannot mean what the student thought.",
+      "whyQuestions": [
+        "Why does the transformer equation V₂/V₁ = N₂/N₁ hold at all — what is the same for both coils, and what does each turn contribute?",
+        "Why must the secondary current go down when the secondary voltage goes up, and what statement of physics fixes the two ratios as exact reciprocals rather than merely opposite in tendency?",
+        "Why is a load resistance transformed by the square of the turns ratio when voltage and current are each transformed by only the first power — and can you get the square out of the two rules rather than recalling it?",
+        "Why does connecting an 8 Ω loudspeaker directly to an amplifier of 800 Ω internal resistance deliver less power to it than putting a lossy transformer in between, even though the transformer can only waste energy?",
+        "Why does a transformer produce nothing at all on DC — and, given that answer, why does the output frequency equal the input frequency no matter what the turns ratio is?"
+      ],
+      "goodAnswerContains": "Derives the turns ratio rather than asserting it: one alternating flux threads every turn of both windings, so each turn carries the same emf −dΦ/dt, giving V₁ = −N₁dΦ/dt and V₂ = −N₂dΦ/dt and hence V₁/N₁ = V₂/N₂; then names the current ratio as a separate statement coming from conservation of energy.\nObtains the resistance rule from the other two in front of the listener: V₁/I₁ = (N₁/N₂)²(V₂/I₂), one factor from the voltage and one from the current, and connects it to impedance matching for maximum power transfer.\nIdentifies the transformer as a Faraday's-law device throughout, so the AC requirement is a consequence, not an extra rule: steady DC gives dΦ/dt = 0 and zero output; the turns ratio scales the size of the emf but not the rate at which the flux reverses, so the frequency is untouched and a transformer cannot rectify.",
+      "workedExample": "A 60 W, 24 V soldering iron run from 240 V rms mains through an ideal transformer with a 1200-turn primary. Turns: N₂ = 1200 x 24/240 = 120 (fewer volts out means fewer turns out; 12 000 inverts the ratio). Currents: in the iron I₂ = 60/24 = 2.5 A, but the mains current comes from the power balance, not the turns ratio — P₁ = P₂ = 60 W so I₁ = 60/240 = 0.25 A. The voltage fell by 10 and the current rose by 10, and 240 x 0.25 = 24 x 2.5 = 60 W on both sides, which is itself the answer to 'does it amplify?'. Resistance: the iron is V₂²/P = 9.6 Ω, but the mains sees V₁/I₁ = 240/0.25 = 960 Ω = 10² x 9.6 — the square appears because the source supplies 10x the voltage AND 1/10 the current, and 10 divided by 1/10 is 100; 96 Ω uses the first power. Same physics at scale: 100 kW down a 4.0 Ω line at 1.0 kV means I = 100 A and I²R = 40 kW wasted; at 10 kV, I = 10 A and the waste is 400 W — a hundredfold saving for a tenfold voltage, because V enters twice, once in I = P/V and again because the heating is quadratic. The delivered 100 kW is identical in both cases: the transformer bought nothing, it just moved the power as a small current at high voltage."
+    }
+  ]
+}
