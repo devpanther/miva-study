@@ -34,10 +34,11 @@ const MODELS = (process.env.GRADE_MODEL
 const API = "https://generativelanguage.googleapis.com/v1beta";
 const MAX_TOKENS = 4200;
 
-/* Marking is per-check, not per-question, so the ceiling can be low. */
+/* Marking is one request per check, so an evening is two. The ceiling is a stop on a
+   stuck loop, not a budget — a batch of test runs should not trip it. */
 const HITS = new Map();
 const WINDOW = 60 * 60 * 1000;
-const MAX_PER_HOUR = 40;
+const MAX_PER_HOUR = 120;
 
 function clientKey(req) {
   const f = req.headers["x-forwarded-for"];
