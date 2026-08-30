@@ -2137,7 +2137,7 @@ function viewSession(root){
   var g = GRID[di], wd = weekData(w);
 
   var head = el("div","card");
-  var r0 = el("div","row"); r0.style.marginTop = "0";
+  var r0 = el("div","row backrow");
   r0.appendChild(btn("act ghost","← Back", function(){
     SESSION = null; TAB = ss.from || "home"; syncUrl(); render(); window.scrollTo(0,0);
   }));
@@ -2210,7 +2210,7 @@ function viewGuide(root){
   if(!course){ TAB = "tonight"; syncUrl(true); viewTonight(root); return; }
 
   var head = el("div","card");
-  var r0 = el("div","row"); r0.style.marginTop = "0";
+  var r0 = el("div","row backrow");
   r0.appendChild(btn("act ghost","← Back", function(){
     GUIDEVIEW = null; TAB = g.from || "tonight"; syncUrl(); render(); window.scrollTo(0,0);
   }));
