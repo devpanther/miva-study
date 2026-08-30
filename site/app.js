@@ -816,7 +816,10 @@ function briefInto(parent, text, cls){
   makeSelectable(holder);
 }
 
-function topicBlock(parent, text, cls){
+/* `foot` lets the caller decide where the expand button lands — so it can share a row
+   with something else, spaced by that row's gap, instead of two inline things ending up
+   jammed against each other. */
+function topicBlock(parent, text, cls, foot){
   var t = String(text||"").trim();
   if(!t) return;
 
@@ -831,10 +834,10 @@ function topicBlock(parent, text, cls){
     full = el("div");
     briefInto(full, t, cls);
     p.style.display = "none";
-    parent.insertBefore(full, b);
+    parent.insertBefore(full, p.nextSibling);
     b.textContent = "Show less";
   };
-  parent.appendChild(b);
+  (foot || parent).appendChild(b);
 }
 var FLAME = '<svg width="13" height="15" viewBox="0 0 13 15" fill="currentColor" aria-hidden="true"><path d="M6.6 0S7.4 2.4 5.6 4.3C3.9 6.1 1 7.3 1 10.1A5.5 5.5 0 0 0 6.5 15 5.5 5.5 0 0 0 12 10.1c0-2.6-1.6-3.8-2.4-5.5-.3 1-.9 1.6-1.6 2 .6-2.4-.5-5-1.4-6.6Z"/></svg>';
 
@@ -2435,15 +2438,15 @@ function viewSunday(root){
        the brief renderer it is a clamped summary with the full thing one tap away. */
     c.appendChild(el("h3",null, esc(NAMES[pick.course] || pick.course) + " · " + esc(pick.day)
       + (pick.slot === "fast" ? " fast hour" : " deep hour")));
-    topicBlock(c, topicName(pick, w), "muted");
+    /* The brief's expand link and the score sit on one line, spaced by the row's own
+       gap. As bare inline siblings they touched. */
+    var foot = el("div","row");
+    topicBlock(c, topicName(pick, w), "muted", foot);
+    foot.appendChild(el("span","sc "+scoreClass(pick.s), NAMES[pick.course]+" · "+pick.s.score+"/"+pick.s.max));
+    c.appendChild(foot);
     if(pick.slot === "fast"){
       c.appendChild(el("p","muted","This one is a recall course, so don't teach it as a concept — <b>quiz each other on the lists</b> until you can both produce them cold. Producing beats recognising."));
     }
-    /* The score belongs on its own line. Left as a bare inline span it landed hard
-       against the "Read the full brief" link, reading as one control. */
-    var scr = el("div","row");
-    scr.appendChild(el("span","sc "+scoreClass(pick.s), NAMES[pick.course]+" · "+pick.s.score+"/"+pick.s.max));
-    c.appendChild(scr);
     if(pick.s.wrong && pick.s.wrong.length){
       /* These are separate concept names, one per question missed. Joined into a
          sentence with middle dots they read as one long broken sentence, which is

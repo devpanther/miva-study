@@ -167,7 +167,7 @@ button{font:inherit;cursor:pointer}
 .muted{color:var(--ink2);font-size:14px}
 .clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .moreb{background:none;border:0;color:var(--deep);font-weight:700;font-size:13.5px;
-       padding:4px 0;text-decoration:underline;text-underline-offset:3px}
+       padding:4px 0;text-decoration:underline;text-underline-offset:3px;flex:none}
 .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:13px}
 /* Back sits above the heading, so it needs room under it, not over it. */
 .row.backrow{margin:0 0 16px}
