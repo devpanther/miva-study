@@ -266,6 +266,12 @@ function wk(){
   if(VIEWWEEK) return VIEWWEEK;
   return defaultWeek();
 }
+/* The runway is a place you can be, not just a date that has not arrived. VIEWWEEK 0
+   means you chose it; null means nobody has chosen anything and the calendar decides. */
+function onRunway(){
+  if(VIEWWEEK === 0) return true;
+  return (VIEWWEEK === null || VIEWWEEK === undefined) && weekInfo().n === 0;
+}
 function aheadOfCalendar(){
   var cal = weekInfo().n;
   return (cal >= 1 && cal <= 12) && wk() > cal;
@@ -1875,12 +1881,12 @@ function viewHome(root){
   /* the way in */
   var hail = el("div","hail");
   hail.innerHTML = '<span class="hi">'+esc(greeting())+', <b>'+esc(meName())+'</b></span>'
-                 + '<span class="muted">'+(wi.n === 0 ? "runway" : "week "+w)+'</span>';
+                 + '<span class="muted">'+(onRunway() ? "runway" : "week "+w)+'</span>';
   root.appendChild(hail);
 
-  /* Term has not started. Showing a week-1 evening as "tonight" would be a lie, and the
-     runway has its own work, so it takes the hero slot until Monday the 7th. */
-  if(wi.n === 0){
+  /* Term has not started, or you have gone back to look at the runway. Showing a
+     week-1 evening as "tonight" would be a lie, and the runway has its own work. */
+  if(onRunway()){
     runwayCard(root, wi);
     var la = el("div","card");
     la.appendChild(el("div","lbl","Looking ahead"));
@@ -2076,7 +2082,7 @@ function runwayCard(root, wi){
 function viewTonight(root){
   var wi = weekInfo(), di = dayIdx();
 
-  if(wi.n === 0){
+  if(onRunway()){
     runwayCard(root, wi);
     if(!wk()) return;
     statsStrip(root);
@@ -3664,6 +3670,136 @@ function maybeCelebrate(w){
   setTimeout(function(){ courseParty(course, w, tally); }, 260);
 }
 
+/* ---------- the week picker ----------
+   A native <select> could not say the two things that matter here: which week the
+   calendar is actually on, and that the runway is over. So this is a real listbox.
+
+   On a phone it opens as a bottom sheet, because a thirteen-row menu hanging off a
+   control in the top-right corner is a menu you read with your thumb over it. On a
+   pointer device it is a popover under the button, which is what a mouse expects.
+   Either way the same list, the same keys, the same markup. */
+var WKMENU = null;
+
+function weekOptions(){
+  var cal = weekInfo(), loaded = loadedWeeks(), out = [];
+  out.push({
+    v: "runway",
+    label: "Runway",
+    badge: cal.n === 0 ? "now" : "over",
+    sub: cal.n === 0
+      ? cal.daysToStart + " day" + (cal.daysToStart === 1 ? "" : "s") + " until week 1"
+      : "Ended when week 1 opened",
+    off: cal.n !== 0
+  });
+  for(var i = 1; i <= 12; i++){
+    out.push({
+      v: i,
+      label: "Week " + i,
+      badge: cal.n === i ? "now" : "",
+      sub: loaded.indexOf(i) >= 0 ? "" : "not published yet",
+      off: false
+    });
+  }
+  return out;
+}
+
+function pickWeek(v){
+  QUIZ = null; MANUAL = null;
+  if(v === "runway"){ VIEWWEEK = 0; }
+  else { VIEWWEEK = v; ensureWeek(v); }
+  syncUrl(); render();
+}
+
+function closeWeekMenu(focusBack){
+  if(!WKMENU) return;
+  var m = WKMENU; WKMENU = null;
+  document.removeEventListener("keydown", m.onKey, true);
+  if(m.scrim) m.scrim.remove();
+  m.box.classList.add("out");
+  setTimeout(function(){ if(m.box.parentNode) m.box.remove(); }, 180);
+  if(focusBack && m.anchor && document.contains(m.anchor)) m.anchor.focus();
+}
+
+function openWeekMenu(anchor){
+  if(WKMENU){ closeWeekMenu(true); return; }
+  var touch = !(window.matchMedia && window.matchMedia("(hover:hover)").matches);
+  var opts = weekOptions();
+  var cur = onRunway() ? "runway" : wk();
+
+  var scrim = el("div","wkscrim");
+  var box = el("div","wkmenu" + (touch ? " assheet" : ""));
+  box.setAttribute("role","listbox");
+  box.setAttribute("aria-label","Which week to show");
+
+  if(touch) box.appendChild(el("div","grab"));
+  var head = el("div","wkmhead","Show me");
+  box.appendChild(head);
+
+  var list = el("div","wkmlist");
+  var rows = [];
+  opts.forEach(function(o, i){
+    var row = el("button","wkrow" + (o.v === cur ? " on" : "") + (o.off ? " off" : ""));
+    row.setAttribute("role","option");
+    row.setAttribute("aria-selected", o.v === cur ? "true" : "false");
+    if(o.off) row.setAttribute("aria-disabled","true");
+    row.innerHTML =
+        '<span class="wkck">' + (o.v === cur ? "✓" : "") + '</span>'
+      + '<span class="wkl"><b>' + esc(o.label) + '</b>'
+      + (o.sub ? '<i>' + esc(o.sub) + '</i>' : '') + '</span>'
+      + (o.badge ? '<span class="wkb ' + o.badge + '">' + esc(o.badge) + '</span>' : '');
+    if(!o.off){
+      row.onclick = function(){ closeWeekMenu(false); pickWeek(o.v); };
+      rows.push(row);
+    } else {
+      row.tabIndex = -1;
+      row.onclick = function(e){ e.preventDefault(); };
+    }
+    list.appendChild(row);
+  });
+  box.appendChild(list);
+
+  scrim.onclick = function(){ closeWeekMenu(true); };
+  document.body.appendChild(scrim);
+  document.body.appendChild(box);
+
+  if(!touch){
+    /* Under the button, and nudged back on screen if it would hang off the edge. */
+    var r = anchor.getBoundingClientRect();
+    box.style.top = Math.round(r.bottom + 8) + "px";
+    var w = box.offsetWidth || 240;
+    box.style.left = Math.round(Math.max(10, Math.min(window.innerWidth - w - 10, r.right - w))) + "px";
+  } else {
+    dismissable(box, list, function(){ closeWeekMenu(true); });
+  }
+
+  /* Open on the row you are already on, so the current week is under your thumb and
+     the arrow keys start from somewhere sensible. */
+  var here = rows.filter(function(r2){ return r2.classList.contains("on"); })[0] || rows[0];
+  if(here){
+    here.focus({preventScroll:true});
+    here.scrollIntoView({block:"nearest"});
+  }
+
+  var onKey = function(e){
+    if(!WKMENU) return;
+    var idx = rows.indexOf(document.activeElement);
+    if(e.key === "Escape"){ e.preventDefault(); closeWeekMenu(true); return; }
+    if(e.key === "ArrowDown" || e.key === "ArrowUp"){
+      e.preventDefault();
+      var n = idx < 0 ? 0 : idx + (e.key === "ArrowDown" ? 1 : -1);
+      n = Math.max(0, Math.min(rows.length - 1, n));
+      rows[n].focus(); rows[n].scrollIntoView({block:"nearest"});
+      return;
+    }
+    if(e.key === "Home"){ e.preventDefault(); rows[0].focus(); rows[0].scrollIntoView({block:"nearest"}); return; }
+    if(e.key === "End"){ e.preventDefault(); var l = rows.length-1; rows[l].focus(); rows[l].scrollIntoView({block:"nearest"}); return; }
+    if(e.key === "Tab"){ e.preventDefault(); }        /* the menu is modal while it is open */
+  };
+  document.addEventListener("keydown", onKey, true);
+
+  WKMENU = {box:box, scrim:scrim, anchor:anchor, onKey:onKey};
+}
+
 /* ---------- keeping your place ----------
    Every navigation used to end with window.scrollTo(0,0), so opening a study guide from
    a card halfway down the week and coming back put you at the top of the page, hunting
@@ -3730,6 +3866,7 @@ function applyScroll(){
 function render(){
   var root = document.getElementById("root");
   SCROLLKEY = null;          /* stop recording while the DOM is swapped out */
+  closeWeekMenu(false);      /* its anchor is about to be replaced */
   clearSelPill();
   root.innerHTML = "";
 
@@ -3747,24 +3884,24 @@ function render(){
     if(SYNCING) brand.appendChild(el("span","chip","saving…"));
     else if(STORAGE === "none" || STORAGE === "error") brand.appendChild(el("span","chip","local"));
 
-    var sel = document.createElement("select");
-    sel.className = "wksel";
-    sel.title = "Which week you are looking at";
-    var cur = wk(), L = loadedWeeks();
-    for(var i=1;i<=12;i++){
-      var o=document.createElement("option"); o.value=i;
-      o.textContent = "Week "+i + (L.indexOf(i)>=0 ? "" : " –") + (weekInfo().n===i ? "  ·  now" : "");
-      if(i===cur) o.selected=true;
-      sel.appendChild(o);
-    }
-    sel.onchange=function(){
-      VIEWWEEK=parseInt(sel.value,10); QUIZ=null; MANUAL=null; ensureWeek(VIEWWEEK); syncUrl(); render();
-    };
-    /* The native chevron sits wherever the platform puts it, which on Android is hard
-       against the right edge of the pill. Wrapping lets us draw our own and give it
-       room. */
+    /* The trigger. It says where you are and, when that is not where the calendar is,
+       nothing else — the "now" badge only appears when the two agree, so its absence is
+       itself the signal that you are looking at another week. */
+    var cal = weekInfo(), here = onRunway(), curW = wk();
     var selw = el("span","wkwrap");
-    selw.appendChild(sel);
+    var trig = el("button","wksel");
+    trig.id = "wkbtn";
+    trig.setAttribute("aria-haspopup","listbox");
+    trig.setAttribute("aria-expanded","false");
+    trig.title = "Which week you are looking at";
+    trig.innerHTML = '<span class="wkv">' + (here ? "Runway" : "Week " + curW) + '</span>'
+      + ((here ? cal.n === 0 : cal.n === curW) ? '<span class="wkb now">now</span>' : '');
+    trig.onclick = function(e){
+      e.stopPropagation();
+      trig.setAttribute("aria-expanded", WKMENU ? "false" : "true");
+      openWeekMenu(trig);
+    };
+    selw.appendChild(trig);
     brand.appendChild(selw);
 
     /* A cog, not a name. The name here used to sign you out on one tap, which is far
@@ -3857,7 +3994,9 @@ function readUrl(){
   try{ q = new URLSearchParams(window.location.search); }catch(e){ return; }
   var t = q.get("tab");
   if(t && TABS_URL[t]) TAB = t;
-  var w = parseInt(q.get("week"), 10);
+  var wRaw = q.get("week");
+  if(wRaw === "runway") VIEWWEEK = 0;
+  var w = parseInt(wRaw, 10);
   if(w >= 1 && w <= 12) VIEWWEEK = w;
   var c = q.get("course");
   var dy = q.get("day");
@@ -3874,7 +4013,8 @@ function syncUrl(replace){
     var q = new URLSearchParams();
     var t = (TAB === "quiz" || TAB === "manual") ? "tonight" : TAB;
     if(TABS_URL[t] && t !== "home") q.set("tab", t);
-    if(VIEWWEEK) q.set("week", String(VIEWWEEK));
+    if(VIEWWEEK === 0) q.set("week", "runway");
+    else if(VIEWWEEK) q.set("week", String(VIEWWEEK));
     if(t === "guide" && GUIDEVIEW && GUIDEVIEW.course) q.set("course", GUIDEVIEW.course);
     if(t === "session" && SESSION && SESSION.day) q.set("day", SESSION.day);
     if(t === "exam" && EXVIEW && EXVIEW.course) q.set("course", EXVIEW.course);

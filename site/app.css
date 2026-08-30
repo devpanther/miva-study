@@ -64,7 +64,7 @@ button{font:inherit;cursor:pointer}
 .bar{position:sticky;top:0;z-index:40;background:var(--ground);
      border-bottom:1px solid var(--line);
      padding-top:env(safe-area-inset-top, 0px)}
-.barin{max-width:960px;margin:0 auto;
+.barin{max-width:760px;margin:0 auto;
        padding:12px calc(16px + env(safe-area-inset-right, 0px)) 0 calc(16px + env(safe-area-inset-left, 0px))}
 .brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .brand h1{font-size:19px;font-weight:600;margin:0;letter-spacing:-.015em}
@@ -75,21 +75,68 @@ button{font:inherit;cursor:pointer}
 .chip.flame{color:var(--fast)}
 .chip.me{color:var(--deep);border-color:var(--deep)}
 .chip svg{display:block}
-/* The week selector. A native select puts its own chevron hard against the right edge,
-   which on Android reads as a rendering mistake, so the arrow is drawn here instead and
-   given the same breathing room as the label. */
+/* ---------- the week picker ---------- */
 .wkwrap{position:relative;display:inline-flex;color:var(--ink2)}
 .wkwrap::after{content:"";position:absolute;right:13px;top:50%;pointer-events:none;
   width:6px;height:6px;margin-top:-4.5px;border-right:2.1px solid currentColor;
   border-bottom:2.1px solid currentColor;border-radius:1.5px;
-  transform:rotate(45deg);transition:color .15s}
+  transform:rotate(45deg);transition:color .15s,transform .18s}
 .wkwrap:hover{color:var(--deep)}
-select.wksel{font-family:inherit;font-size:12.5px;font-weight:700;height:29px;
-  padding:0 30px 0 13px;border-radius:var(--r-pill);border:1px solid var(--line);
+.wkwrap:has(.wksel[aria-expanded="true"])::after{transform:rotate(-135deg);margin-top:-1.5px}
+.wksel{display:inline-flex;align-items:center;gap:7px;
+  font:700 12.5px/1 inherit;height:29px;padding:0 30px 0 13px;
+  border-radius:var(--r-pill);border:1px solid var(--line);
   background:var(--surface);color:var(--ink2);cursor:pointer;box-shadow:var(--shadow);
-  -webkit-appearance:none;appearance:none;line-height:1;transition:border-color .15s}
-select.wksel:hover{border-color:var(--deep);color:var(--ink)}
-select.wksel:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
+  transition:border-color .15s}
+.wksel:hover{border-color:var(--deep);color:var(--ink)}
+.wksel:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
+.wksel .wkv{white-space:nowrap}
+
+/* "now" is the whole point of the control: it says which week the calendar is on, so
+   looking at another one is visibly a choice rather than a mistake. */
+.wkb{flex:none;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  padding:2px 6px;border-radius:99px;line-height:1.5}
+.wkb.now{background:var(--deep);color:#fff}
+.wkb.over{background:var(--surface2);color:var(--ink3);border:1px solid var(--line)}
+
+.wkscrim{position:fixed;inset:0;z-index:88;background:rgba(20,16,38,.42);
+  animation:fadein .16s ease}
+@media (hover:hover){ .wkscrim{background:transparent;backdrop-filter:none} }
+
+.wkmenu{position:fixed;z-index:89;background:var(--surface);
+  border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lift);
+  width:264px;max-height:min(70vh,460px);display:flex;flex-direction:column;
+  overflow:hidden;transform-origin:top right;
+  animation:wkin .16s cubic-bezier(.2,1.15,.4,1) both}
+@keyframes wkin{from{opacity:0;transform:translateY(-6px) scale(.97)}to{opacity:1;transform:none}}
+.wkmenu.out{animation:wkin .15s ease reverse both}
+
+/* On a phone it is a sheet: a menu pinned to a corner control is a menu under a thumb. */
+.wkmenu.assheet{left:0;right:0;bottom:0;top:auto;width:auto;max-width:760px;margin:0 auto;
+  border-radius:20px 20px 0 0;border-bottom:0;max-height:78vh;
+  padding-bottom:env(safe-area-inset-bottom, 0px);
+  transform-origin:center bottom;
+  animation:slideup .24s cubic-bezier(.2,.9,.3,1)}
+.wkmenu.assheet.out{animation:slideup .18s ease reverse both}
+
+.wkmhead{flex:none;padding:12px 16px 8px;font-size:10.5px;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)}
+.wkmenu.assheet .wkmhead{padding-top:8px}
+.wkmlist{overflow-y:auto;overscroll-behavior:contain;padding:0 8px 10px}
+
+.wkrow{display:flex;align-items:center;gap:10px;width:100%;text-align:left;
+  border:0;background:none;border-radius:11px;padding:9px 10px;color:var(--ink);
+  font:inherit;cursor:pointer;transition:background .12s}
+.wkrow:hover{background:var(--surface2)}
+.wkrow:focus-visible{outline:2px solid var(--deep);outline-offset:-2px;background:var(--surface2)}
+.wkrow.on{background:var(--deep-bg)}
+.wkrow .wkck{flex:none;width:14px;color:var(--deep);font-weight:900;font-size:13px}
+.wkrow .wkl{flex:1;min-width:0}
+.wkrow .wkl b{display:block;font-weight:700;font-size:14.5px}
+.wkrow .wkl i{display:block;font-style:normal;font-size:11.5px;color:var(--ink3);margin-top:1px}
+.wkrow.off{cursor:default;opacity:.5}
+.wkrow.off:hover{background:none}
+.wkrow.off .wkl b{text-decoration:line-through}
 
 .tabs{display:flex;gap:3px;margin:11px -4px 0;padding:0 4px 9px;overflow-x:auto;
       scrollbar-width:none}
@@ -99,7 +146,7 @@ select.wksel:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
 .tabs button:hover{color:var(--ink2);background:var(--surface2)}
 .tabs button.on{background:var(--deep);color:#fff;box-shadow:var(--shadow)}
 
-.wrap{max-width:960px;margin:0 auto;
+.wrap{max-width:760px;margin:0 auto;
       padding:16px calc(16px + env(safe-area-inset-right, 0px))
               calc(72px + env(safe-area-inset-bottom, 0px))
               calc(16px + env(safe-area-inset-left, 0px));
@@ -453,7 +500,7 @@ body:has(.party) canvas.confetti{z-index:121}
 .scrim{position:fixed;inset:0;z-index:74;background:rgba(20,16,38,.5);
   animation:fadein .18s ease;backdrop-filter:blur(2px)}
 .sheet{position:fixed;left:0;right:0;bottom:0;z-index:75;max-height:86vh;
-  max-width:960px;margin:0 auto;background:var(--surface);
+  max-width:760px;margin:0 auto;background:var(--surface);
   border:1px solid var(--line);border-bottom:0;border-radius:20px 20px 0 0;
   box-shadow:var(--shadow-lift);display:flex;flex-direction:column;
   animation:slideup .26s cubic-bezier(.2,.9,.3,1)}
