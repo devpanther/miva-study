@@ -70,9 +70,21 @@ button{font:inherit;cursor:pointer}
 .chip.flame{color:var(--fast)}
 .chip.me{color:var(--deep);border-color:var(--deep)}
 .chip svg{display:block}
-select.wksel{font-family:Nunito;font-size:12.5px;font-weight:700;height:29px;
-  padding:0 8px;border-radius:var(--r-pill);border:1px solid var(--line);
-  background:var(--surface);color:var(--ink2);cursor:pointer;box-shadow:var(--shadow)}
+/* The week selector. A native select puts its own chevron hard against the right edge,
+   which on Android reads as a rendering mistake, so the arrow is drawn here instead and
+   given the same breathing room as the label. */
+.wkwrap{position:relative;display:inline-flex;color:var(--ink2)}
+.wkwrap::after{content:"";position:absolute;right:13px;top:50%;pointer-events:none;
+  width:6px;height:6px;margin-top:-4.5px;border-right:2.1px solid currentColor;
+  border-bottom:2.1px solid currentColor;border-radius:1.5px;
+  transform:rotate(45deg);transition:color .15s}
+.wkwrap:hover{color:var(--deep)}
+select.wksel{font-family:inherit;font-size:12.5px;font-weight:700;height:29px;
+  padding:0 30px 0 13px;border-radius:var(--r-pill);border:1px solid var(--line);
+  background:var(--surface);color:var(--ink2);cursor:pointer;box-shadow:var(--shadow);
+  -webkit-appearance:none;appearance:none;line-height:1;transition:border-color .15s}
+select.wksel:hover{border-color:var(--deep);color:var(--ink)}
+select.wksel:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
 
 .tabs{display:flex;gap:3px;margin:11px -4px 0;padding:0 4px 9px;overflow-x:auto;
       scrollbar-width:none}

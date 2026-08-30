@@ -2811,7 +2811,7 @@ function viewQuiz(root){
       refreshGate();
     };
     card.appendChild(ta);
-    card.appendChild(el("p","muted","<br>You mark this one yourself after you submit — the model answer is waiting."));
+    card.appendChild(el("p","muted","<br>Written answer. It gets marked after you submit, against what the question asked for — so say the thing, however roughly. Spelling and shorthand cost you nothing."));
   }
 
   var foot = el("div","deckfoot");
@@ -3278,7 +3278,12 @@ function render(){
     sel.onchange=function(){
       VIEWWEEK=parseInt(sel.value,10); QUIZ=null; MANUAL=null; ensureWeek(VIEWWEEK); syncUrl(); render();
     };
-    brand.appendChild(sel);
+    /* The native chevron sits wherever the platform puts it, which on Android is hard
+       against the right edge of the pill. Wrapping lets us draw our own and give it
+       room. */
+    var selw = el("span","wkwrap");
+    selw.appendChild(sel);
+    brand.appendChild(selw);
 
     /* A cog, not a name. The name here used to sign you out on one tap, which is far
        too easy to do by accident when it sits beside the week selector. Switching
