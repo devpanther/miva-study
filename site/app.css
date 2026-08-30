@@ -458,8 +458,15 @@ body:has(.party) canvas.confetti{z-index:121}
   box-shadow:var(--shadow-lift);display:flex;flex-direction:column;
   animation:slideup .26s cubic-bezier(.2,.9,.3,1)}
 @keyframes slideup{from{transform:translateY(24px);opacity:0}to{transform:none;opacity:1}}
+/* The grab handle. It is the only hint that the sheet can be pushed away, so it is
+   there on touch devices and absent on a mouse, where the Close chip is the way out. */
+.grab{flex:none;width:38px;height:4px;border-radius:99px;background:var(--line);
+  margin:8px auto 0;display:none}
+@media (hover:none){ .grab{display:block} }
 .sheeth{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
-  padding:16px 17px 12px;border-bottom:1px solid var(--line)}
+  padding:13px 17px 12px;border-bottom:1px solid var(--line);
+  touch-action:none}          /* the header is a handle, so the browser must not pan it */
+.sheetb{overscroll-behavior:contain}
 .sheeth .chip{cursor:pointer}
 .sheetb{overflow-y:auto;padding:14px 17px 26px;display:flex;flex-direction:column;gap:9px}
 .sheetb .lbl{margin:6px 0 0}

@@ -1483,6 +1483,91 @@ function sayHello(){
   window.addEventListener("pointerdown", hideHello, {once:true});
 }
 
+/* ---------- dragging the sheet away ----------
+   On a phone the natural way to dismiss a bottom sheet is to push it down, not to hunt
+   for a Close chip in the corner. The whole difficulty is that the sheet and the list
+   inside it both want the same downward swipe, so the rule has to be unambiguous:
+
+     the sheet only takes the gesture when the content is already at its top.
+
+   That is decided ONCE, at touchstart, and never revisited mid-gesture. Deciding it
+   continuously is what makes these things feel broken — you flick a long list up, it
+   hits the top, and the sheet suddenly starts moving under your thumb halfway through a
+   scroll you did not finish. So: scrolled down at the moment you touched? The list owns
+   the whole swipe, to the end. At the top? The sheet owns it, and the list stays put.
+
+   Dragging from the header always moves the sheet, whatever the list is doing — that is
+   what a grab handle is for. */
+function dismissable(sheet, scroller, close){
+  var startY = 0, startX = 0, dy = 0, mine = false, decided = false;
+  var lastY = 0, lastT = 0, vel = 0;
+
+  var setY = function(px){
+    sheet.style.transition = "none";
+    sheet.style.transform = px ? "translateY(" + px + "px)" : "";
+    var scrim = document.querySelector(".scrim");
+    if(scrim) scrim.style.opacity = String(Math.max(0, 1 - px / 420));
+  };
+  var release = function(px, ms){
+    sheet.style.transition = "transform " + ms + "ms cubic-bezier(.2,.9,.3,1)";
+    sheet.style.transform = px ? "translateY(" + px + "px)" : "";
+  };
+
+  sheet.addEventListener("touchstart", function(e){
+    if(e.touches.length !== 1) return;
+    var t = e.touches[0];
+    startY = lastY = t.clientY; startX = t.clientX;
+    dy = 0; vel = 0; lastT = nowMs();
+    decided = false; mine = false;
+    /* The one decision. Header, or a list already at its top, and the sheet may move. */
+    var onHandle = !!(e.target.closest && e.target.closest(".sheeth"));
+    var atTop = !scroller || scroller.scrollTop <= 0;
+    sheet.__grab = onHandle || atTop;
+  }, {passive:true});
+
+  sheet.addEventListener("touchmove", function(e){
+    if(e.touches.length !== 1) return;
+    var t = e.touches[0];
+    dy = t.clientY - startY;
+
+    if(!decided){
+      var dx = t.clientX - startX;
+      if(Math.abs(dy) < 6 && Math.abs(dx) < 6) return;      /* still a tap */
+      decided = true;
+      /* Downward, mostly vertical, and allowed to grab. Anything else is the list's. */
+      mine = sheet.__grab && dy > 0 && Math.abs(dy) > Math.abs(dx);
+      if(mine && scroller) scroller.style.overflowY = "hidden";
+    }
+    if(!mine) return;
+
+    e.preventDefault();               /* stop the page rubber-banding behind the sheet */
+    var now = nowMs();
+    if(now > lastT){ vel = (t.clientY - lastY) / (now - lastT); lastT = now; lastY = t.clientY; }
+    /* Pulling up goes nowhere, but it should not feel dead either. */
+    setY(dy > 0 ? dy : dy / 5);
+  }, {passive:false});
+
+  var end = function(){
+    if(scroller) scroller.style.overflowY = "";
+    if(!mine){ decided = false; return; }
+    mine = false; decided = false;
+    var far  = dy > Math.min(150, sheet.offsetHeight * 0.28);
+    var fast = vel > 0.55 && dy > 40;         /* a flick counts even if it was short */
+    if(far || fast){
+      release(sheet.offsetHeight + 60, 200);
+      var scrim = document.querySelector(".scrim");
+      if(scrim){ scrim.style.transition = "opacity .2s"; scrim.style.opacity = "0"; }
+      setTimeout(close, 190);
+    } else {
+      release(0, 240);                         /* not far enough: springs back */
+      var s2 = document.querySelector(".scrim");
+      if(s2){ s2.style.transition = "opacity .24s"; s2.style.opacity = "1"; }
+    }
+  };
+  sheet.addEventListener("touchend", end, {passive:true});
+  sheet.addEventListener("touchcancel", end, {passive:true});
+}
+
 function buddyPanel(root){
   var c = buddyContext();
   var back = el("div","scrim");
@@ -1490,6 +1575,7 @@ function buddyPanel(root){
   root.appendChild(back);
 
   var p = el("div","sheet");
+  p.appendChild(el("div","grab"));
   var head = el("div","sheeth");
   head.innerHTML = '<div><div class="lbl" style="margin:0">'+esc(c.day)+' · '+esc(NAMES[c.course]||c.course)+' · week '+c.w+'</div>'
                  + '<h2 style="margin:2px 0 0;font-size:18px">Kizito</h2></div>';
@@ -1621,6 +1707,7 @@ function buddyPanel(root){
 
   p.appendChild(body);
   root.appendChild(p);
+  dismissable(p, body, function(){ BUDDY = null; render(); });
 }
 
 /* ---------- home ---------- */
