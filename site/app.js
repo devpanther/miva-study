@@ -448,7 +448,7 @@ function rwSet(id, on){
 var RWSYNC = null;
 function rwSave(){
   clearTimeout(RWSYNC);
-  RWSYNC = setTimeout(function(){ push("Runway saved"); }, 900);
+  RWSYNC = setTimeout(function(){ RWSYNC = null; push("Runway saved"); }, 900);
   mirror();
 }
 function rwTally(){
@@ -3324,8 +3324,11 @@ function viewResult(root, q){
   if(!r.unmarked && !q.logged){
     q.logged = logScore(q, r);
     quizSave();
-    push(q.logged.cold ? "Logged " + r.score + "/" + r.max : "Practice run saved");
+    /* Before the push, not after: marking a course celebrated writes to the same store
+       the score does, and doing it afterwards left the flag on this device only — so
+       signing in anywhere else replayed every celebration you had already had. */
     maybeCelebrate(wk());
+    push(q.logged.cold ? "Logged " + r.score + "/" + r.max : "Practice run saved");
   }
 
   var st = stampFor(r);
@@ -3557,8 +3560,9 @@ function viewManual(root){
       wrong: m.wrong.split(",").map(function(x){return x.trim();}).filter(Boolean),
       at:new Date().toISOString()
     };
-    MANUAL=null; TAB="tonight"; save("Logged "+m.score+"/"+(m.max||12));
+    MANUAL=null; TAB="tonight";
     maybeCelebrate(wk());
+    save("Logged "+m.score+"/"+(m.max||12));
   }));
   r.appendChild(btn("act ghost","Cancel", function(){ MANUAL=null; TAB="tonight"; render(); }));
   c.appendChild(r);
@@ -3930,6 +3934,13 @@ fetch("/api/login", {cache:"no-store"})
 document.addEventListener("visibilitychange", function(){
   if(document.visibilityState === "visible" && STORAGE === "blob" && !QUIZ){
     pull().then(render);
+    return;
+  }
+  /* Leaving with a tick still inside its debounce would have kept it on this device
+     until the next thing you saved. Send it now instead. */
+  if(document.visibilityState === "hidden" && RWSYNC){
+    clearTimeout(RWSYNC); RWSYNC = null;
+    push();
   }
 });
 })();
