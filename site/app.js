@@ -2439,9 +2439,27 @@ function viewSunday(root){
     if(pick.slot === "fast"){
       c.appendChild(el("p","muted","This one is a recall course, so don't teach it as a concept — <b>quiz each other on the lists</b> until you can both produce them cold. Producing beats recognising."));
     }
-    c.appendChild(el("span","sc "+scoreClass(pick.s), NAMES[pick.course]+" · "+pick.s.score+"/"+pick.s.max));
+    /* The score belongs on its own line. Left as a bare inline span it landed hard
+       against the "Read the full brief" link, reading as one control. */
+    var scr = el("div","row");
+    scr.appendChild(el("span","sc "+scoreClass(pick.s), NAMES[pick.course]+" · "+pick.s.score+"/"+pick.s.max));
+    c.appendChild(scr);
     if(pick.s.wrong && pick.s.wrong.length){
-      c.appendChild(el("p","muted","<br>Missed: "+pick.s.wrong.map(esc).join(" · ")));
+      /* These are separate concept names, one per question missed. Joined into a
+         sentence with middle dots they read as one long broken sentence, which is
+         exactly what they are not — so they get a line each. */
+      var mh = el("div","lbl","The " + pick.s.wrong.length + " you missed in that session");
+      mh.style.marginTop = "14px";
+      c.appendChild(mh);
+      var ml = el("ul","misslist");
+      pick.s.wrong.forEach(function(cn){
+        var li = el("li");
+        var a = el("button","linkish", esc(cn));
+        a.onclick = function(){ openBuddy("concept", cn); };
+        li.appendChild(a);
+        ml.appendChild(li);
+      });
+      c.appendChild(ml);
     }
     var h = el("p"); h.style.cssText="margin-top:14px;font-weight:800;font-size:14px";
     h.textContent="Questions for the listener — keep going until they run out of answer";

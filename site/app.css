@@ -779,3 +779,16 @@ ol.insteps b{color:var(--ink)}
 .krow:hover .kfill{filter:brightness(1.08)}
 @media (max-width:400px){ .krow{grid-template-columns:64px 1fr 46px;gap:8px} }
 @media (prefers-reduced-motion:reduce){ .kfill{transition:none} }
+
+/* One concept per line. They are a list of separate things, so they look like one. */
+ul.misslist{list-style:none;margin:6px 0 0;padding:0}
+ul.misslist li{position:relative;padding-left:15px;margin-bottom:6px;
+  font-size:14px;line-height:1.55}
+ul.misslist li::before{content:"";position:absolute;left:0;top:9px;
+  width:5px;height:5px;border-radius:50%;background:var(--bad)}
+/* Seven underlined lines in a row reads as a wall. They are still links — the colour
+   says so, and the underline comes back when you reach for one. */
+ul.misslist .linkish{text-align:left;font-size:14px;line-height:1.55;
+  text-decoration:none;color:var(--ink)}
+ul.misslist .linkish:hover{color:var(--deep);text-decoration:underline;
+  text-underline-offset:3px}
