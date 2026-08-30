@@ -9,6 +9,7 @@
  */
 
 import { guard, statePrefix } from "./_auth.js";
+import { cleanScores } from "./_scores.js";
 
 function noStore(res) {
   res.setHeader("Cache-Control", "no-store, max-age=0");
@@ -80,19 +81,7 @@ export default async function handler(req, res) {
         return res.status(409).json({ ok: false, error: "both places are taken" });
       }
 
-      const scores = {};
-      const raw = body.scores || {};
-      Object.keys(raw).forEach((k) => {
-        if (k.indexOf(id + "|") !== 0) return;
-        const s = raw[k];
-        if (!s || typeof s.score !== "number" || typeof s.max !== "number") return;
-        scores[k] = {
-          score: Math.max(0, Math.min(999, Math.round(s.score))),
-          max: Math.max(1, Math.min(999, Math.round(s.max))),
-          wrong: Array.isArray(s.wrong) ? s.wrong.slice(0, 40).map((x) => String(x).slice(0, 300)) : [],
-          at: typeof s.at === "string" ? s.at.slice(0, 40) : new Date().toISOString()
-        };
-      });
+      const scores = cleanScores(body.scores, id);
 
       const doc = {
         id,
