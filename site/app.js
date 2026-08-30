@@ -2081,7 +2081,8 @@ function examSave(){
   if(!EXQUIZ) return;
   try{ localStorage.setItem(EXLS+":"+EXQUIZ.course, JSON.stringify({
     order:EXQUIZ.order, opts:EXQUIZ.opts, answers:EXQUIZ.answers,
-    idx:EXQUIZ.idx, submitted:EXQUIZ.submitted, at:Date.now()
+    idx:EXQUIZ.idx, submitted:EXQUIZ.submitted, at:Date.now(),
+    debrief:EXQUIZ.debrief
   })); }catch(e){}
 }
 function examRestore(course){
@@ -2246,6 +2247,7 @@ function startExam(course, only){
     answers: a.answers || {},
     idx: typeof a.idx === "number" ? a.idx : 0,
     submitted: !!a.submitted,
+    debrief: a.debrief || null,
     showAll: false
   };
   if(only) examSave();
@@ -2505,6 +2507,44 @@ function viewExam(root){
   root.appendChild(r2);
 }
 
+/* A hundred questions can leave twenty or thirty misses, and the stored rationale
+   explains the question rather than the mistake. This asks for the mistake: why the
+   option you picked is wrong, and what the right one turns on. Ten at a time, because
+   the misses that matter most are the ones you look at first. */
+function askExamDebrief(q, g, done){
+  if(q.debriefing) return;
+  var want = g.missed.filter(function(i){ return !(q.debrief && q.debrief[i] !== undefined); }).slice(0, 10);
+  if(!want.length) return;
+  q.debriefing = true;
+  q.debriefError = null;
+
+  var missed = want.map(function(i){
+    var qq = exQ(i);
+    return { i:i, q:qq.q,
+             chose: (qq.options[q.answers[i]] || "(no answer)"),
+             right: (qq.options[qq.answerIndex] || ""),
+             notes: qq.why || "" };
+  });
+
+  fetch("/api/grade", {
+    method: "POST",
+    headers: {"content-type":"application/json"},
+    body: JSON.stringify({ course: q.course, week: 12, items: [], missed: missed })
+  }).then(function(r){ return r.json(); }).then(function(d){
+    q.debriefing = false;
+    q.debrief = q.debrief || {};
+    if(!d || !d.ok){ q.debriefError = (d && d.reason) || "The marker could not be reached."; done(); return; }
+    (d.debrief || []).forEach(function(x){ q.debrief[x.i] = x.teach; });
+    want.forEach(function(i){ if(q.debrief[i] === undefined) q.debrief[i] = ""; });
+    examSave();
+    done();
+  }).catch(function(){
+    q.debriefing = false;
+    q.debriefError = "The marker could not be reached.";
+    done();
+  });
+}
+
 function viewExamResult(root){
   var q = EXQUIZ, g = examGrade();
   var pct = Math.round(g.score/g.max*100);
@@ -2540,6 +2580,32 @@ function viewExamResult(root){
   note.textContent = "Questions and options are reshuffled every sitting, so you can sit this as many times as you like without learning the paper instead of the subject.";
   root.appendChild(note);
 
+  if(g.missed.length){
+    var db = el("div","card");
+    var pending = g.missed.filter(function(i){ return !(q.debrief && q.debrief[i] !== undefined); });
+    db.appendChild(el("div","lbl","Why you missed them"));
+    if(q.debriefing){
+      db.appendChild(el("p","muted","Working through the ones you got wrong. A few seconds."));
+      db.appendChild(el("div","gradebar"));
+    } else if(q.debriefError){
+      db.appendChild(el("p","muted", esc(q.debriefError) + " The stored explanation under each question still stands."));
+      var rr = el("div","row");
+      rr.appendChild(btn("act ghost","Try again", function(){ q.debriefError = null; askExamDebrief(q, g, function(){ render(); }); render(); }));
+      db.appendChild(rr);
+    } else if(pending.length){
+      db.appendChild(el("p","muted","The explanation under each question says what the question is about. This says what went wrong with the option you actually chose."));
+      var r2 = el("div","row");
+      r2.appendChild(btn("act","Explain my " + Math.min(10, pending.length) + " worst" + (pending.length > 10 ? " (of " + pending.length + ")" : ""), function(){
+        askExamDebrief(q, g, function(){ render(); });
+        render();
+      }));
+      db.appendChild(r2);
+    } else {
+      db.appendChild(el("p","muted","Done — each miss below now says what went wrong with the option you chose."));
+    }
+    root.appendChild(db);
+  }
+
   q.order.forEach(function(_, i){
     var qq = exQ(i);
     var missed = q.answers[i] !== qq.answerIndex;
@@ -2562,6 +2628,13 @@ function viewExamResult(root){
       e2.innerHTML = esc(qq.why);
       box.appendChild(e2);
     }
+    var dt = q.debrief && q.debrief[i];
+    if(dt){
+      var tb = el("div","teach");
+      tb.appendChild(el("div","lbl","Why you missed it"));
+      tb.appendChild(el("p", null, esc(dt)));
+      box.appendChild(tb);
+    }
     root.appendChild(box);
   });
 }
@@ -2574,7 +2647,9 @@ function quizSave(){
   if(!QUIZ) return;
   try{ localStorage.setItem(quizKey(wk(), QUIZ.day, QUIZ.slot), JSON.stringify({
     opts:QUIZ.opts, answers:QUIZ.answers, marks:QUIZ.marks,
-    idx:QUIZ.idx, submitted:QUIZ.submitted, at:Date.now()
+    idx:QUIZ.idx, submitted:QUIZ.submitted, at:Date.now(),
+    /* Marking costs a request; losing it to a reload would cost another. */
+    marked:QUIZ.marked, debrief:QUIZ.debrief
   })); }catch(e){}
 }
 function quizRestore(w, day, slot){
@@ -2601,6 +2676,8 @@ function startQuiz(day, slot){
     marks:(prev && prev.marks) || {},
     submitted:!!(prev && prev.submitted),
     idx:(prev && typeof prev.idx === "number") ? prev.idx : 0,
+    marked:(prev && prev.marked) || null,
+    debrief:(prev && prev.debrief) || null,
     celebrated:false
   };
   BRIEF = false;
@@ -2770,7 +2847,85 @@ function viewQuiz(root){
   root.appendChild(out);
 }
 
+/* ---------- marking the written answers ----------
+   Sent as one request per check: every written answer, plus the multiple-choice ones
+   that were missed so the debrief comes back in the same round trip. The result is
+   cached on the attempt, so re-rendering the review does not re-mark it and money is
+   spent once per check rather than once per repaint. */
+function needsMarking(q){
+  if(!q || !q.chk) return false;
+  return q.chk.questions.some(function(qq, i){
+    return !(qq.type === "mcq" && qq.options) && q.marks[i] === undefined;
+  });
+}
+
+function askGrader(q, done){
+  if(q.grading) return;
+  q.grading = true;
+  q.gradeError = null;
+
+  var items = [], missed = [];
+  q.chk.questions.forEach(function(qq, i){
+    if(qq.type === "mcq" && qq.options){
+      if(q.answers[i] !== qCorrect(q, i)){
+        missed.push({ i:i, q:qq.q,
+          chose: (qOptions(q, i)[q.answers[i]] || "(no answer)"),
+          right: (qOptions(q, i)[qCorrect(q, i)] || ""),
+          notes: qq.why || "" });
+      }
+    } else {
+      items.push({ i:i, q:qq.q, notes: qq.why || qq.concept || "", answer: q.answers[i] || "" });
+    }
+  });
+  if(!items.length && !missed.length){ q.grading = false; return; }
+
+  var g = GRID.filter(function(x){ return x.day === q.day; })[0] || {};
+  var course = q.slot === "fast" ? g.fast : g.deep;
+
+  fetch("/api/grade", {
+    method: "POST",
+    headers: {"content-type":"application/json"},
+    body: JSON.stringify({ course: course, week: wk(), items: items, missed: missed })
+  }).then(function(r){ return r.json(); }).then(function(d){
+    q.grading = false;
+    if(!d || !d.ok){
+      q.gradeError = (d && d.reason) || "The marker could not be reached.";
+      done(); return;
+    }
+    q.marked = {};
+    (d.marks || []).forEach(function(m){
+      q.marked[m.i] = m;
+      /* An unmarked item stays undefined so the save gate still catches it. */
+      if(!m.unmarked) q.marks[m.i] = !!m.correct;
+    });
+    q.debrief = {};
+    (d.debrief || []).forEach(function(x){ q.debrief[x.i] = x.teach; });
+    q.gradeModel = d.model;
+    quizSave();
+    done();
+  }).catch(function(){
+    q.grading = false;
+    q.gradeError = "The marker could not be reached.";
+    done();
+  });
+}
+
 function viewResult(root, q){
+  /* Mark first, then show the score. Showing a score that is about to change would be
+     worse than waiting three seconds for the real one. */
+  if(needsMarking(q) && !q.gradeError){
+    if(!q.grading) askGrader(q, function(){ if(TAB === "quiz" && QUIZ === q) render(); });
+    if(q.grading){
+      var wait = el("div","card deepc");
+      wait.appendChild(el("div","lbl","Marking"));
+      wait.appendChild(el("h2",null,"Reading your written answers"));
+      wait.appendChild(el("p","muted","Each one is checked against what the question actually asked for. A few seconds."));
+      wait.appendChild(el("div","gradebar"));
+      root.appendChild(wait);
+      return;
+    }
+  }
+
   var r = grade(q);
   var st = stampFor(r);
 
@@ -2783,6 +2938,20 @@ function viewResult(root, q){
     ? "The " + r.wrong.length + " you missed are below, each with what the wrong option was confusing it with. That second part is usually where the real gap is."
     : "Nothing missed. Read the explanations anyway — a right answer for the wrong reason still scores 12."));
   root.appendChild(rev);
+
+  if(q.gradeError){
+    var ge = el("div","card fastc");
+    ge.appendChild(el("div","lbl","Marking unavailable"));
+    ge.appendChild(el("p","muted", esc(q.gradeError) + " Mark the written answers yourself below and the score saves as normal."));
+    var gr = el("div","row");
+    gr.appendChild(btn("act ghost","Try marking again", function(){
+      q.gradeError = null; q.marked = null;
+      q.chk.questions.forEach(function(qq, i){ if(!(qq.type==="mcq"&&qq.options)) q.marks[i] = undefined; });
+      render();
+    }));
+    ge.appendChild(gr);
+    root.appendChild(ge);
+  }
 
   setTimeout(function(){
     var node = document.getElementById("bigscore");
@@ -2860,12 +3029,51 @@ function viewResult(root, q){
       box.appendChild(e2);
     }
 
-    if(!isMcq){
+    /* The marker's working, for the written answers. Shown in full rather than as a
+       verdict alone: a mark you cannot see the reasoning behind is a mark you cannot
+       tell is wrong. */
+    var mk = q.marked && q.marked[i];
+    if(!isMcq && mk && !mk.unmarked){
+      var mb = el("div","mark" + (mk.correct ? " ok" : " no"));
+      if(mk.verdict) mb.appendChild(el("p","mv", esc(mk.verdict)));
+      if(mk.required && mk.required.length){
+        var ul = el("ul","reqs");
+        mk.required.forEach(function(rq, ri){
+          var got = mk.met[ri];
+          var li = el("li", got ? "y" : "n");
+          li.innerHTML = '<span class="rk">' + (got ? "✓" : "✕") + '</span><span>' + esc(rq) + '</span>';
+          ul.appendChild(li);
+        });
+        mb.appendChild(ul);
+      }
+      if(!mk.confident){
+        var warn = el("p","mwarn","This one was close to the line. If you think the mark is wrong, change it.");
+        mb.appendChild(warn);
+      }
+      var over = el("div","row"); over.style.marginTop = "8px";
+      over.appendChild(btn("act ghost tiny", mk.correct ? "I didn't get this" : "I did get this", function(){
+        q.marks[i] = !q.marks[i];
+        q.marked[i] = Object.assign({}, mk, {correct: q.marks[i], overridden: true,
+          verdict: q.marks[i] ? "You marked this right yourself." : "You marked this wrong yourself."});
+        quizSave(); render();
+      }));
+      mb.appendChild(over);
+      box.appendChild(mb);
+    }
+    else if(!isMcq && q.marks[i] === undefined){
       var sm = el("div","selfmark");
-      var y = btn(q.marks[i]===true ? "act" : "act ghost","I got this", function(){ q.marks[i]=true; quizSave(); render(); });
-      var nn = btn(q.marks[i]===false ? "act" : "act ghost","I missed it", function(){ q.marks[i]=false; quizSave(); render(); });
-      sm.appendChild(y); sm.appendChild(nn);
+      sm.appendChild(btn("act ghost","I got this", function(){ q.marks[i]=true; quizSave(); render(); }));
+      sm.appendChild(btn("act ghost","I missed it", function(){ q.marks[i]=false; quizSave(); render(); }));
       box.appendChild(sm);
+    }
+
+    /* What the marker taught about this specific question. */
+    var teach = (mk && mk.teach) || (q.debrief && q.debrief[i]) || "";
+    if(teach){
+      var tb = el("div","teach");
+      tb.appendChild(el("div","lbl", missed ? "Why you missed it" : "Worth knowing"));
+      tb.appendChild(el("p", null, esc(teach)));
+      box.appendChild(tb);
     }
     root.appendChild(box);
   });

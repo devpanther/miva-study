@@ -577,3 +577,28 @@ a.lmsb{display:inline-block;margin-bottom:4px}
   .conf{display:none}
   .party,.party.out{animation:none}
 }
+
+/* ---------- the written answers, marked ---------- */
+.gradebar{height:6px;border-radius:99px;background:var(--surface2);overflow:hidden;margin-top:13px;position:relative}
+.gradebar::after{content:"";position:absolute;inset:0;width:38%;border-radius:99px;
+  background:var(--deep);animation:gslide 1.15s ease-in-out infinite}
+@keyframes gslide{0%{left:-38%}100%{left:100%}}
+
+.mark{margin-top:10px;padding:11px 13px;border-radius:12px;border:1px solid var(--line);
+  background:var(--surface2)}
+.mark.ok{border-color:var(--good);background:var(--good-bg)}
+.mark.no{border-color:var(--bad);background:var(--bad-bg)}
+.mark .mv{margin:0;font-weight:700;font-size:14px;color:var(--ink)}
+.mark .mwarn{margin:8px 0 0;font-size:12.5px;color:var(--ink3)}
+ul.reqs{list-style:none;margin:9px 0 0;padding:0}
+ul.reqs li{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;
+  color:var(--ink2);margin-bottom:4px}
+ul.reqs li .rk{flex:none;width:16px;font-weight:900}
+ul.reqs li.y .rk{color:var(--good)}
+ul.reqs li.n .rk{color:var(--bad)}
+ul.reqs li.n{color:var(--ink)}
+.act.tiny{font-size:12.5px;padding:5px 11px}
+
+.teach{margin-top:10px;padding:11px 13px;border-radius:12px;
+  background:var(--surface2);border-left:3px solid var(--deep)}
+.teach p{margin:0;font-size:13.8px;color:var(--ink2);line-height:1.62}
