@@ -34,13 +34,26 @@ var GENERIC_WHY = [
 var RUNWAY = [
   {id:"tests", label:"Take the 8 pre-semester tests",
    detail:"Ungraded. They show where you are weak before you spend an hour anywhere.",
-   per:["MTH_102","PHY_102","COS_102","PHY_108","GST_112","GST_122","CSC_106","MIVA_COS_111"]},
+   per:["MTH_102","PHY_102","COS_102","PHY_108","GST_112","GST_122","CSC_106","MIVA_COS_111"],
+   /* Each course chip opens that course on the LMS, where its pre-semester test sits. */
+   linkFor:function(c){ return lmsCourseLink(c); }},
   {id:"cos111", label:"Clear MIVA-COS 111 entirely",
-   detail:"Three activities, and then that course never asks for another evening."},
-  {id:"csc106", label:"Speed-run CSC 106 weeks 1–3 at 1.75×",
-   detail:"Three weeks ahead on the lightest course is three Tuesdays of slack."},
+   detail:"Three activities, and then that course never asks for another evening.",
+   links:function(){ return [{label:"Find it on the LMS \u2197", href: LMS ? LMS.base + "/my/courses.php" : null}]; }},
+  {id:"csc106", label:"Speed-run CSC 106 weeks 1\u20133 at 1.75\u00d7",
+   detail:"Three weeks ahead on the lightest course is three Tuesdays of slack.",
+   links:function(){
+     return [1,2,3].map(function(w){ return {label:"Week " + w + " \u2197", href: lmsWeekLink("CSC_106", w)}; });
+   }},
   {id:"skim", label:"Skim the study-guide PDFs for PHY 102 and MTH 102",
-   detail:"Not to learn them. To know what is coming, so week 1 is not a cold start."}
+   detail:"Not to learn them. To know what is coming, so week 1 is not a cold start.",
+   links:function(){
+     return ["PHY_102","MTH_102"].map(function(c){
+       var info = lmsFor(c, 1), pdf = info && info.ids && info.ids.pdf;
+       return {label:(NAMES[c] || c) + " week 1 " + (pdf ? "PDF" : "on the LMS") + " \u2197",
+               href: lmsPdfLink(c, 1)};
+     });
+   }}
 ];
 var LETTERS = ["A","B","C","D","E","F"];
 
@@ -1715,8 +1728,8 @@ function viewHome(root){
     la.appendChild(el("h2",null,"Week 1 is already loaded"));
     la.appendChild(el("p","muted","Every check, summary and study guide for week 1 is here now. Working ahead is free slack — nothing resets when the week actually opens."));
     var lr = el("div","row");
-    lr.appendChild(btn("act big","Look at week 1", function(){ TAB="tonight"; syncUrl(); render(); window.scrollTo(0,0); }));
-    lr.appendChild(btn("act ghost","The calendar", function(){ TAB="sunday"; syncUrl(); render(); window.scrollTo(0,0); }));
+    lr.appendChild(btn("act big","Look at week 1", function(){ TAB="tonight"; syncUrl(); render(); }));
+    lr.appendChild(btn("act ghost","The calendar", function(){ TAB="sunday"; syncUrl(); render(); }));
     la.appendChild(lr);
     root.appendChild(la);
     installCard(root);
@@ -1731,7 +1744,7 @@ function viewHome(root){
     hero.appendChild(el("h2",null,"Recap night"));
     hero.appendChild(el("p","muted","One hour. One topic each, taught with no notes."));
     var rs = el("div","row");
-    rs.appendChild(btn("act big","Open Sunday", function(){ TAB="sunday"; render(); window.scrollTo(0,0); }));
+    rs.appendChild(btn("act big","Open Sunday", function(){ TAB="sunday"; render(); }));
     hero.appendChild(rs);
   } else {
     var g = GRID[di];
@@ -1744,9 +1757,9 @@ function viewHome(root){
     var r = el("div","row");
     if(sc){
       r.appendChild(el("span","sc "+scoreClass(sc), "Scored "+sc.score+"/"+sc.max));
-      r.appendChild(btn("act","Open the session", function(){ TAB="tonight"; render(); window.scrollTo(0,0); }));
+      r.appendChild(btn("act","Open the session", function(){ TAB="tonight"; render(); }));
     } else {
-      r.appendChild(btn("act big","Start tonight's session", function(){ TAB="tonight"; render(); window.scrollTo(0,0); }));
+      r.appendChild(btn("act big","Start tonight's session", function(){ TAB="tonight"; render(); }));
     }
     hero.appendChild(r);
   }
@@ -1807,7 +1820,7 @@ function viewHome(root){
       "Whatever you couldn't explain goes to the top of next week's list."
     ]);
     var r = el("div","row");
-    r.appendChild(btn("act ghost","Open Sunday", function(){ TAB="sunday"; render(); window.scrollTo(0,0); }));
+    r.appendChild(btn("act ghost","Open Sunday", function(){ TAB="sunday"; render(); }));
     b.appendChild(r);
   });
 
@@ -1856,12 +1869,51 @@ function runwayCard(root, wi){
         var chips = el("div","rwchips");
         item.per.forEach(function(cs){
           var k = item.id + ":" + cs, on = rwDone(k);
-          var b = btn("rwchip" + (on ? " on" : ""), (on ? "✓ " : "") + (NAMES[cs] || cs), function(){
+          var href = item.linkFor ? item.linkFor(cs) : null;
+          var gone = lmsAbsent(cs);
+
+          /* One chip, two jobs. The name ticks it off; the arrow opens the LMS. They are
+             separate hit areas because opening a test is not the same as saying you have
+             done it, and a chip that did both would be wrong half the time. */
+          var pair = el("span","rwchip" + (on ? " on" : "") + (href ? " haslink" : ""));
+          var tick = btn("rwtick-b", (on ? "✓ " : "") + (NAMES[cs] || cs), function(){
             rwSet(k, !on); draw(); rwSave();
           });
-          chips.appendChild(b);
+          pair.appendChild(tick);
+          if(href){
+            var a = el("a","rwgo","↗");
+            a.href = href; a.target = "_blank"; a.rel = "noopener";
+            a.title = "Open " + (NAMES[cs] || cs) + " on the LMS";
+            a.onclick = function(e){ e.stopPropagation(); };
+            pair.appendChild(a);
+          }
+          chips.appendChild(pair);
         });
         row.appendChild(chips);
+
+        /* No hover on a phone, so the ones with nowhere to link say so in words. */
+        var away = item.per.filter(function(c){ return !(item.linkFor && item.linkFor(c)) && lmsAbsent(c); });
+        if(away.length){
+          var names = away.map(function(c){ return NAMES[c] || c; });
+          var last = names.pop();
+          row.appendChild(el("p","rwnote",
+            esc(names.length ? names.join(", ") + " and " + last : last)
+            + (away.length > 1 ? " are" : " is") + " not in your LMS course list yet, so there is nothing to open."));
+        }
+      }
+
+      /* Whole-item links, for the tasks that are one job rather than eight. */
+      if(item.links){
+        var ls = item.links().filter(function(x){ return x && x.href; });
+        if(ls.length){
+          var lr = el("div","rwlinks");
+          ls.forEach(function(x){
+            var a = el("a","rwlink", esc(x.label));
+            a.href = x.href; a.target = "_blank"; a.rel = "noopener";
+            lr.appendChild(a);
+          });
+          row.appendChild(lr);
+        }
       }
       body.appendChild(row);
     });
@@ -2108,7 +2160,7 @@ function viewData(root){
   top.appendChild(el("h2",null,"Signed in as "+esc(meName())));
   top.appendChild(el("p","muted","Switching to the other person is down at the bottom of this page, deliberately. It used to be one tap on the header and was easy to do by accident."));
   var tb = el("div","row");
-  tb.appendChild(btn("act ghost","← Back to Home", function(){ TAB="home"; syncUrl(); render(); window.scrollTo(0,0); }));
+  tb.appendChild(btn("act ghost","← Back to Home", function(){ TAB="home"; syncUrl(); render(); }));
   top.appendChild(tb);
   root.appendChild(top);
 
@@ -2185,7 +2237,7 @@ function viewData(root){
     ce.appendChild(el("p","muted","A study guide and a hundred-question paper for each course. These are for revision week, so the tab appears in week 12 — it would only be noise before then. Open it early if you want a look."));
     var re = el("div","row");
     re.appendChild(btn("act ghost","Open exam prep anyway", function(){
-      QUIZ=null; MANUAL=null; TAB="exam"; syncUrl(); render(); window.scrollTo(0,0);
+      QUIZ=null; MANUAL=null; TAB="exam"; syncUrl(); render();
     }));
     ce.appendChild(re);
     root.appendChild(ce);
@@ -2239,6 +2291,25 @@ function lmsFor(course, w){
 function lmsLink(info){
   if(!info || !LMS) return null;
   return LMS.base + "/course/view.php?id=" + info.cid + (info.sec ? "&section=" + info.sec : "");
+}
+
+/* A course's front page: where its pre-semester test lives, among other things. */
+function lmsCourseLink(course){
+  if(!LMS || !LMS.courses || !LMS.courses[course]) return null;
+  return LMS.base + "/course/view.php?id=" + LMS.courses[course].id;
+}
+function lmsWeekLink(course, w){
+  var info = lmsFor(course, w);
+  return info ? lmsLink(info) : lmsCourseLink(course);
+}
+function lmsPdfLink(course, w){
+  var info = lmsFor(course, w);
+  if(!info || !info.ids || !info.ids.pdf) return lmsWeekLink(course, w);
+  return LMS.base + "/mod/" + (info.ids.pdfMod || "page") + "/view.php?id=" + info.ids.pdf;
+}
+/* Some courses are not in the LMS list at all, and saying so beats a dead link. */
+function lmsAbsent(course){
+  return (LMS && LMS.absent && LMS.absent[course]) || null;
 }
 
 /* Minutes for ONE session.
@@ -2333,7 +2404,7 @@ function loadExamIndex(){
 }
 function openExam(course, mode){
   EXVIEW = {course:course, mode:mode};
-  TAB = "exam"; render(); window.scrollTo(0,0);
+  TAB = "exam"; render();
   if(mode === "guide" && !GUIDECACHE[course]){
     fetch("/api/exam?course="+course+"&doc=guide")
       .then(function(r){ return r.ok ? r.text() : null; })
@@ -2372,7 +2443,7 @@ function startExam(course, only){
     showAll: false
   };
   if(only) examSave();
-  render(); window.scrollTo(0,0);
+  render();
 }
 /* display position -> the question and its shuffled options */
 function exQ(i){
@@ -2415,7 +2486,7 @@ function viewSession(root){
   var head = el("div","card");
   var r0 = el("div","row backrow");
   r0.appendChild(btn("act ghost","← Back", function(){
-    SESSION = null; TAB = ss.from || "home"; syncUrl(); render(); window.scrollTo(0,0);
+    SESSION = null; TAB = ss.from || "home"; syncUrl(); render();
   }));
   head.appendChild(r0);
   head.appendChild(el("div","lbl", g.day + " · week " + w));
@@ -2476,7 +2547,7 @@ function viewSession(root){
 function openSession(day, w, from){
   SESSION = {day: day, week: w || wk(), from: from || TAB};
   QUIZ = null; MANUAL = null; BUDDY = null;
-  TAB = "session"; syncUrl(); render(); window.scrollTo(0,0);
+  TAB = "session"; syncUrl(); render();
 }
 
 function viewGuide(root){
@@ -2488,7 +2559,7 @@ function viewGuide(root){
   var head = el("div","card");
   var r0 = el("div","row backrow");
   r0.appendChild(btn("act ghost","← Back", function(){
-    GUIDEVIEW = null; TAB = g.from || "tonight"; syncUrl(); render(); window.scrollTo(0,0);
+    GUIDEVIEW = null; TAB = g.from || "tonight"; syncUrl(); render();
   }));
   head.appendChild(r0);
   head.appendChild(el("div","lbl","Week " + w + " · study guide"));
@@ -2515,7 +2586,7 @@ function viewGuide(root){
 function openGuide(course, w, from){
   GUIDEVIEW = {course: course, week: w, from: from || TAB};
   QUIZ = null; MANUAL = null; BUDDY = null;
-  TAB = "guide"; syncUrl(); render(); window.scrollTo(0,0);
+  TAB = "guide"; syncUrl(); render();
 }
 
 function viewExam(root){
@@ -2552,7 +2623,7 @@ function viewExam(root){
   }
 
   var back = el("div","row"); back.style.marginTop = "0";
-  back.appendChild(btn("act ghost","← All courses", function(){ EXVIEW = null; EXQUIZ = null; render(); window.scrollTo(0,0); }));
+  back.appendChild(btn("act ghost","← All courses", function(){ EXVIEW = null; EXQUIZ = null; render(); }));
   root.appendChild(back);
 
   if(EXVIEW.mode === "guide"){
@@ -2596,18 +2667,18 @@ function viewExam(root){
     b.onclick = function(){
       q.answers[q.idx] = oi; examSave();
       if(q.idx < n-1){ q.idx++; }
-      render(); window.scrollTo(0,0);
+      render();
     };
     opts.appendChild(b);
   });
   card.appendChild(opts);
 
   var foot = el("div","deckfoot");
-  if(q.idx > 0) foot.appendChild(btn("act ghost","Back", function(){ q.idx--; examSave(); render(); window.scrollTo(0,0); }));
+  if(q.idx > 0) foot.appendChild(btn("act ghost","Back", function(){ q.idx--; examSave(); render(); }));
   foot.appendChild(el("div","spacer"));
-  if(q.idx < n-1) foot.appendChild(btn("act","Next", function(){ q.idx++; examSave(); render(); window.scrollTo(0,0); }));
+  if(q.idx < n-1) foot.appendChild(btn("act","Next", function(){ q.idx++; examSave(); render(); }));
   if(!left.length) foot.appendChild(btn("act big","Submit", function(){
-    q.submitted = true; examSave(); render(); window.scrollTo(0,0);
+    q.submitted = true; examSave(); render();
   }));
   card.appendChild(foot);
   root.appendChild(card);
@@ -2615,11 +2686,11 @@ function viewExam(root){
   var r2 = el("div","row");
   if(left.length){
     r2.appendChild(btn("act ghost","Next blank ("+left.length+")", function(){
-      q.idx = left[0]; render(); window.scrollTo(0,0);
+      q.idx = left[0]; render();
     }));
     r2.appendChild(btn("act ghost","Mark it now", function(){
       if(!window.confirm(left.length + " questions are blank. They will be marked wrong. Submit anyway?")) return;
-      q.submitted = true; examSave(); render(); window.scrollTo(0,0);
+      q.submitted = true; examSave(); render();
     }));
   }
   r2.appendChild(btn("act ghost","Save and stop", function(){
@@ -2682,7 +2753,7 @@ function viewExamResult(root){
 
   var r = el("div","row");
   r.appendChild(btn("act", q.showAll ? "Show only misses" : "Show all "+g.max, function(){
-    q.showAll = !q.showAll; render(); window.scrollTo(0,0);
+    q.showAll = !q.showAll; render();
   }));
   r.appendChild(btn("act ghost","Sit it again", function(){
     try{ localStorage.removeItem(EXLS+":"+q.course); }catch(e){}
@@ -2811,7 +2882,6 @@ function startQuiz(day, slot, fresh){
   };
   BRIEF = false;
   TAB = "quiz"; render();
-  window.scrollTo(0,0);
 }
 function manualScore(day, slot){
   slot = slot || "deep";
@@ -2944,7 +3014,7 @@ function viewQuiz(root){
   }
 
   var foot = el("div","deckfoot");
-  if(q.idx > 0) foot.appendChild(btn("act ghost","Back", function(){ q.idx--; quizSave(); render(); window.scrollTo(0,0); }));
+  if(q.idx > 0) foot.appendChild(btn("act ghost","Back", function(){ q.idx--; quizSave(); render(); }));
   foot.appendChild(el("div","spacer"));
 
   var gate = el("div","gate");
@@ -2955,13 +3025,13 @@ function viewQuiz(root){
     gate.innerHTML = "";
     if(!left.length){
       gate.appendChild(btn("act big","Submit all "+n, function(){
-        q.submitted = true; q.idx = 0; quizSave(); render(); window.scrollTo(0,0);
+        q.submitted = true; q.idx = 0; quizSave(); render();
       }));
     } else if(q.idx < n-1){
-      gate.appendChild(btn("act","Next", function(){ q.idx++; quizSave(); render(); window.scrollTo(0,0); }));
+      gate.appendChild(btn("act","Next", function(){ q.idx++; quizSave(); render(); }));
     } else {
       gate.appendChild(btn("act", left.length+" still blank", function(){
-        q.idx = left[0]; toast("Question "+(left[0]+1)+" is blank"); quizSave(); render(); window.scrollTo(0,0);
+        q.idx = left[0]; toast("Question "+(left[0]+1)+" is blank"); quizSave(); render();
       }));
     }
   };
@@ -3290,7 +3360,7 @@ function viewResult(root, q){
   var foot = el("div","row");
   foot.appendChild(btn("act big","Done", function(){
     quizClear(wk(), q.day, q.slot);
-    QUIZ=null; TAB="home"; render(); window.scrollTo(0,0);
+    QUIZ=null; TAB="home"; render();
   }));
   foot.appendChild(btn("act ghost", "Practise this again", function(){
     startQuiz(q.day, q.slot, true);
@@ -3441,9 +3511,72 @@ function maybeCelebrate(w){
   setTimeout(function(){ courseParty(course, w, tally); }, 260);
 }
 
+/* ---------- keeping your place ----------
+   Every navigation used to end with window.scrollTo(0,0), so opening a study guide from
+   a card halfway down the week and coming back put you at the top of the page, hunting
+   for the row you had just tapped.
+
+   Each screen now remembers where it was left. The position is saved when you navigate
+   away and restored when you come back; a screen you have never been to has nothing
+   stored and so opens at the top, which is what it did before.
+
+   Two screens deliberately opt out, by returning null: the question decks. There you
+   always want the top of the next question, never wherever you happened to be standing
+   when you answered the last one. */
+var SCROLLS = {}, SCROLLKEY = null, SETTLE = 0;
+
+/* Positions are recorded from actual scrolling, never from a render. That distinction
+   matters: a view whose content arrives over the network renders twice, and the first
+   render is short, so reading the scroll position back at render time would file a 0
+   over the place you were actually standing. */
+/* performance.now(), not Date.now(): monotonic, and immune to the clock being changed
+   under it. */
+function nowMs(){
+  try{ return performance.now(); }catch(e){ return +new Date(); }
+}
+function onScroll(){
+  if(!SCROLLKEY || nowMs() < SETTLE) return;
+  SCROLLS[SCROLLKEY] = window.pageYOffset || document.documentElement.scrollTop || 0;
+}
+window.addEventListener("scroll", onScroll, {passive:true});
+
+function viewKey(){
+  var w = VIEWWEEK || wk();
+  if(TAB === "quiz"){
+    if(!QUIZ) return "quiz";
+    return QUIZ.submitted ? "quiz-result:" + QUIZ.day + ":" + QUIZ.slot : null;
+  }
+  if(TAB === "exam"){
+    if(EXQUIZ && !EXQUIZ.submitted) return null;
+    if(EXQUIZ) return "exam-result:" + EXQUIZ.course;
+    if(EXVIEW) return "exam:" + EXVIEW.course + ":" + (EXVIEW.mode || "guide");
+    return "exam";
+  }
+  if(TAB === "guide")   return "guide:" + ((GUIDEVIEW && GUIDEVIEW.course) || "") + ":" + w;
+  if(TAB === "session") return "session:" + ((SESSION && SESSION.day) || "") + ":" + w;
+  if(TAB === "manual")  return null;
+  return TAB + ":" + w;
+}
+
+function applyScroll(){
+  var k = viewKey();
+  var y = (k && SCROLLS[k]) || 0;
+  /* Our own scrolling must not be mistaken for yours. */
+  SETTLE = nowMs() + 240;
+  SCROLLKEY = k;
+  window.scrollTo(0, y);
+  if(y > 0){
+    /* The page may still be growing — a font, an image, a card that has not finished.
+       Put it back once more after layout, then leave it alone. */
+    requestAnimationFrame(function(){ window.scrollTo(0, y); });
+    setTimeout(function(){ window.scrollTo(0, y); }, 80);
+  }
+}
+
 /* ---------- shell ---------- */
 function render(){
   var root = document.getElementById("root");
+  SCROLLKEY = null;          /* stop recording while the DOM is swapped out */
   clearSelPill();
   root.innerHTML = "";
 
@@ -3485,7 +3618,7 @@ function render(){
        too easy to do by accident when it sits beside the week selector. Switching
        people now lives behind Settings, and Home says who you are instead. */
     var cog = btn("chip cog"+(TAB==="data"?" on":""), COG, function(){
-      QUIZ=null; MANUAL=null; TAB="data"; syncUrl(); render(); window.scrollTo(0,0);
+      QUIZ=null; MANUAL=null; TAB="data"; syncUrl(); render();
     });
     cog.title = "Settings";
     cog.setAttribute("aria-label","Settings");
@@ -3507,7 +3640,7 @@ function render(){
     if(showExam) TABSET.push(["exam","Exam"]);
     TABSET.forEach(function(t){
       tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
-        QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; } TAB=t[0]; syncUrl(); render(); window.scrollTo(0,0);
+        QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; } TAB=t[0]; syncUrl(); render();
       }));
     });
     bin.appendChild(tabs);
@@ -3523,12 +3656,14 @@ function render(){
     else viewLock(wrap);
     root.appendChild(wrap);
     if(TOAST) root.appendChild(el("div","toast", esc(TOAST)));
+    SCROLLKEY = null; window.scrollTo(0, 0);
     return;
   }
   if(!ME || !findPerson(ME)){
     viewSignIn(wrap);
     root.appendChild(wrap);
     if(TOAST) root.appendChild(el("div","toast", esc(TOAST)));
+    SCROLLKEY = null; window.scrollTo(0, 0);
     return;
   }
   if(TAB==="home") viewHome(wrap);
@@ -3547,6 +3682,8 @@ function render(){
   if(TAB !== "quiz") buddyButton(root);
   if(BUDDY) buddyPanel(root);
   if(TOAST) root.appendChild(el("div","toast", esc(TOAST)));
+
+  applyScroll();
 }
 
 /* ---------- boot ---------- */

@@ -564,9 +564,26 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 .rwit.on .rwl b{opacity:.55;text-decoration:line-through}
 .rwl i{display:block;font-style:normal;color:var(--ink3);font-size:13px;margin-top:2px}
 .rwchips{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 0 32px}
-.rwchip{font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:99px;
-  border:1px solid var(--line);background:var(--surface);color:var(--ink2)}
-.rwchip.on{background:var(--deep);border-color:var(--deep);color:#fff}
+/* A chip is two controls in one shell: the name ticks it, the arrow opens the LMS. */
+.rwchip{display:inline-flex;align-items:stretch;border-radius:99px;overflow:hidden;
+  border:1px solid var(--line);background:var(--surface)}
+.rwchip .rwtick-b{border:0;background:none;color:var(--ink2);
+  font-size:12.5px;font-weight:700;padding:6px 11px;border-radius:0}
+.rwchip.on{background:var(--deep);border-color:var(--deep)}
+.rwchip.on .rwtick-b{color:#fff}
+.rwchip .rwgo{display:grid;place-items:center;width:30px;flex:none;
+  border-left:1px solid var(--line);color:var(--ink3);font-size:13px;
+  text-decoration:none;transition:background .12s,color .12s}
+.rwchip .rwgo:hover{background:var(--surface2);color:var(--deep)}
+.rwchip.on .rwgo{border-left-color:rgba(255,255,255,.28);color:rgba(255,255,255,.85)}
+.rwchip.on .rwgo:hover{background:rgba(255,255,255,.14);color:#fff}
+.rwnote{margin:8px 0 0 32px;font-size:12.5px;color:var(--ink3);line-height:1.55}
+
+.rwlinks{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 0 32px}
+.rwlink{font-size:12.5px;font-weight:700;padding:6px 11px;border-radius:99px;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink2);
+  text-decoration:none;transition:border-color .12s,color .12s}
+.rwlink:hover{border-color:var(--deep);color:var(--deep)}
 
 /* ---------- finishing a course for the week ---------- */
 .cstrip{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
