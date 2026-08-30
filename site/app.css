@@ -64,7 +64,7 @@ button{font:inherit;cursor:pointer}
 .bar{position:sticky;top:0;z-index:40;background:var(--ground);
      border-bottom:1px solid var(--line);
      padding-top:env(safe-area-inset-top, 0px)}
-.barin{max-width:760px;margin:0 auto;
+.barin{max-width:960px;margin:0 auto;
        padding:12px calc(16px + env(safe-area-inset-right, 0px)) 0 calc(16px + env(safe-area-inset-left, 0px))}
 .brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .brand h1{font-size:19px;font-weight:600;margin:0;letter-spacing:-.015em}
@@ -99,7 +99,7 @@ select.wksel:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
 .tabs button:hover{color:var(--ink2);background:var(--surface2)}
 .tabs button.on{background:var(--deep);color:#fff;box-shadow:var(--shadow)}
 
-.wrap{max-width:760px;margin:0 auto;
+.wrap{max-width:960px;margin:0 auto;
       padding:16px calc(16px + env(safe-area-inset-right, 0px))
               calc(72px + env(safe-area-inset-bottom, 0px))
               calc(16px + env(safe-area-inset-left, 0px));
@@ -453,7 +453,7 @@ body:has(.party) canvas.confetti{z-index:121}
 .scrim{position:fixed;inset:0;z-index:74;background:rgba(20,16,38,.5);
   animation:fadein .18s ease;backdrop-filter:blur(2px)}
 .sheet{position:fixed;left:0;right:0;bottom:0;z-index:75;max-height:86vh;
-  max-width:760px;margin:0 auto;background:var(--surface);
+  max-width:960px;margin:0 auto;background:var(--surface);
   border:1px solid var(--line);border-bottom:0;border-radius:20px 20px 0 0;
   box-shadow:var(--shadow-lift);display:flex;flex-direction:column;
   animation:slideup .26s cubic-bezier(.2,.9,.3,1)}
