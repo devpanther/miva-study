@@ -63,13 +63,14 @@ const SCHEMA = {
         properties: {
           i: { type: "INTEGER" },
           required: { type: "ARRAY", items: { type: "STRING" } },
+          evidence: { type: "ARRAY", items: { type: "STRING" } },
           met: { type: "ARRAY", items: { type: "BOOLEAN" } },
           correct: { type: "BOOLEAN" },
           confident: { type: "BOOLEAN" },
           verdict: { type: "STRING" },
           teach: { type: "STRING" }
         },
-        required: ["i", "required", "met", "correct", "confident", "verdict", "teach"]
+        required: ["i", "required", "evidence", "met", "correct", "confident", "verdict", "teach"]
       }
     },
     debrief: {
@@ -95,6 +96,8 @@ const SYSTEM = [
   "",
   "You are given, for each written question: the question, the marking notes (the lecturer's own explanation of what a good answer contains), and what the student wrote.",
   "",
+  "The two ways to get this wrong are equally bad. Failing an answer that was right is as serious as passing one that was wrong. Both come from the same mistake — deciding from the shape of the answer instead of from its words — so the steps below force you to quote the words.",
+  "",
   "MARK EACH ONE IN THIS ORDER. Do not skip a step and do not reorder them.",
   "",
   "STEP 1 — \"required\": list what THIS QUESTION asks for, as 1 to 4 short atomic points.",
@@ -102,36 +105,47 @@ const SYSTEM = [
   "  If the question asks for two things (\"name X and explain why Y\"), that is two points. If it asks for one thing, that is one point. Never invent a fifth.",
   "  Each point must be a claim that can be present or absent, not a quality judgement. \"States that the denominator cannot be zero\" is a point. \"Shows good understanding\" is not.",
   "",
-  "STEP 2 — \"met\": for each required point, in the same order, true if the student's answer contains it and false if it does not.",
+  "STEP 2 — \"evidence\": for each required point, in the same order, quote the words FROM THE STUDENT'S ANSWER that settle it. Copy them exactly, up to about 25 words. This is the most important step: you must find the sentence and read what it actually says, not what an answer on this topic usually says.",
+  "  If nothing in their answer addresses that point, put the empty string.",
+  "  Never quote the question, the notes, or your own words. Only their answer.",
   "",
-  "  CREDIT the point when the substance is there:",
+  "STEP 3 — \"met\": for each required point, in the same order, true only if BOTH of these hold:",
+  "  (a) the quoted evidence genuinely addresses that point, and",
+  "  (b) what the quoted evidence says is TRUE.",
+  "  Judge (b) yourself, on the subject matter. Work out the value, check the sign, check the direction, run the trace. A student can address every point and still be wrong about one of them — that is the most common way a nearly-right answer fails, and it is the case you must catch.",
+  "  Where a point covers several quantities (\"states the period, the frequency and the rms current\"), check every one of them. One wrong value fails the whole point.",
+  "  If the evidence is the empty string, met is false.",
+  "",
+  "  CREDIT the point when the substance is there and true:",
   "  - different words, informal phrasing, their own analogy, or the idea explained the long way round",
+  "  - colloquial or idiomatic phrasing of a correct idea (\"it misses by nothing\" for falling exactly on the boundary)",
   "  - different but equivalent notation (f'(x) or dy/dx; 3.6 nm or 3.6e-9 m; \"top over bottom\" for a fraction)",
   "  - spelling, grammar, punctuation and capitalisation errors, texting shorthand, missing articles",
   "  - a correct answer with no working shown, when the question did not ask for working",
   "  - a correct answer that also contains something irrelevant but harmless",
   "  - the right idea stated with less precision than the notes use, as long as nothing in it is false",
+  "  - an answer that reaches the right conclusion by a route the notes never mention",
   "",
   "  DO NOT CREDIT the point when:",
   "  - the answer only restates the question, or names the topic without saying anything about it",
   "  - it is a true statement that does not address this point",
-  "  - the point is there but with a wrong value, wrong sign, wrong direction, wrong units, or the two halves swapped",
+  "  - the point is addressed but what is said about it is false: a wrong value, a flipped sign, a reversed direction, wrong units, an inequality the wrong way round, two things swapped, or the wrong one of a pair named",
   "  - the answer asserts both the right thing and something that contradicts it — a self-contradicting answer has not demonstrated the point",
   "  - it is so vague that it would fit several different questions equally well",
   "",
-  "STEP 3 — \"correct\": true only if every entry in \"met\" is true. Nothing else feeds this. Do not soften it because the answer was close, and do not harden it because the writing was poor.",
+  "STEP 4 — \"correct\": true only if every entry in \"met\" is true. Nothing else feeds this. Do not soften it because the answer was close, and do not harden it because the writing was poor.",
   "",
-  "STEP 4 — \"confident\": false if this one is genuinely borderline — the answer is ambiguous, or hinges on a reading of their wording that could go either way. True otherwise. Be honest here; it is used to flag the mark for review, not to grade you.",
+  "STEP 5 — \"confident\": false if this one is genuinely borderline — their wording could be read two ways, or the point turns on a judgement a second marker might make differently. True otherwise. Be honest here; it is used to flag the mark for review, not to grade you.",
   "",
-  "STEP 5 — \"verdict\": one sentence, addressed to them as \"you\", saying what decided it. If correct, name the point they got that carries the answer. If not, name the specific thing that is missing or wrong — never \"your answer was incomplete\".",
+  "STEP 6 — \"verdict\": one sentence, addressed to them as \"you\", saying what decided it. If correct, name the point they got that carries the answer. If not, name the specific thing that is missing or wrong, and if it is wrong rather than missing, say what the right version is. Never \"your answer was incomplete\".",
   "",
-  "STEP 6 — \"teach\": two to four sentences teaching the point they missed, in their course's own terms. If they got it right, use this to add the one thing that would make the answer stronger next time, or say what the common wrong version of this answer is. Never praise. Never open with \"Great\" or \"Correct!\" — the verdict already says that.",
+  "STEP 7 — \"teach\": two to four sentences teaching the point they missed, in their course's own terms. If they got it right, use this to add the one thing that would make the answer stronger next time, or say what the common wrong version of this answer is. Never praise. Never open with \"Great\" or \"Correct!\" — the verdict already says that.",
   "",
   "MULTIPLE CHOICE. Where a \"missed\" list is given, write one \"debrief\" entry per item: two to four sentences on why the option they chose is wrong and what the correct one turns on. Name the actual difference between the two options. Do not restate the question.",
   "",
   "STYLE for \"verdict\" and \"teach\": plain sentences, no markdown, no headings, no lists, no bold. Maths in plain Unicode (∫ √ ≤ × ⁻¹ ₀ π θ Δ), never LaTeX and never dollar signs. Address them as \"you\". These are read on a phone at 23:00, so be short.",
   "",
-  "Return one \"marks\" entry per written question, with \"i\" copied exactly from the input. Never omit one."
+  "Return one \"marks\" entry per written question, with \"i\" copied exactly from the input. \"required\", \"evidence\" and \"met\" must be the same length. Never omit a question."
 ].join("\n");
 
 export default async function handler(req, res) {
@@ -189,7 +203,7 @@ export default async function handler(req, res) {
   items.forEach((it) => {
     if (EMPTY.test(it.answer)) {
       decided.push({
-        i: it.i, required: [], met: [], correct: false, confident: true,
+        i: it.i, required: [], evidence: [], met: [], correct: false, confident: true,
         verdict: it.answer.trim() ? "You didn't attempt this one." : "You left this one blank.",
         teach: ""
       });
@@ -272,12 +286,14 @@ export default async function handler(req, res) {
     const byIndex = new Map();
     parsed.marks.forEach((m) => {
       const req2 = (Array.isArray(m.required) ? m.required : []).map((x) => String(x).slice(0, 240));
+      const ev = (Array.isArray(m.evidence) ? m.evidence : []).map((x) => String(x).slice(0, 400));
       const met = (Array.isArray(m.met) ? m.met : []).map(Boolean);
       const aligned = req2.length > 0 && met.length === req2.length;
       const fromList = aligned ? met.every(Boolean) : !!m.correct;
       byIndex.set(parseInt(m.i, 10), {
         i: parseInt(m.i, 10),
         required: req2,
+        evidence: ev,
         met: met,
         correct: fromList,
         /* A checklist that does not line up with its own requirements is not a mark to
@@ -294,7 +310,7 @@ export default async function handler(req, res) {
       const m = byIndex.get(it.i);
       if (m) marks.push(m);
       else marks.push({
-        i: it.i, required: [], met: [], correct: false, confident: false,
+        i: it.i, required: [], evidence: [], met: [], correct: false, confident: false,
         verdict: "", teach: "", unmarked: true
       });
     });

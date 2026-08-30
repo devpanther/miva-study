@@ -3041,7 +3041,13 @@ function viewResult(root, q){
         mk.required.forEach(function(rq, ri){
           var got = mk.met[ri];
           var li = el("li", got ? "y" : "n");
-          li.innerHTML = '<span class="rk">' + (got ? "✓" : "✕") + '</span><span>' + esc(rq) + '</span>';
+          /* The words from your own answer the marker used to decide. Without them a
+             mark is an assertion; with them you can see whether it read you right. */
+          var quote = mk.evidence && mk.evidence[ri];
+          li.innerHTML = '<span class="rk">' + (got ? "✓" : "✕") + '</span>'
+                       + '<span>' + esc(rq)
+                       + (quote ? '<i class="rev-ev">you wrote: “' + esc(quote) + '”</i>' : '')
+                       + '</span>';
           ul.appendChild(li);
         });
         mb.appendChild(ul);
