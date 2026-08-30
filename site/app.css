@@ -495,17 +495,12 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 .cell .cf .go{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .cell .cf .go:hover{filter:brightness(1.15)}
 
-/* ---------- tap to select a paragraph ----------
-   Native selection is off here so Android never draws its own toolbar over ours. */
-.selectable{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
-.selectable > *{cursor:pointer;border-radius:9px;
-  transition:background .12s,box-shadow .12s}
-.selectable > *:hover{background:var(--surface2)}
-.selectable > *:hover{box-shadow:0 0 0 5px var(--surface2)}
-.selectable > .selblk,.selectable > .selblk:hover{
-  background:var(--deep-bg);box-shadow:0 0 0 5px var(--deep-bg)}
-.selectable ul,.selectable ol{cursor:auto}
-.selectable li{cursor:pointer;border-radius:7px;transition:background .12s}
+/* ---------- selecting text to ask about it ----------
+   Ordinary hold-and-drag selection: hold a word, drag the handles, take as much or as
+   little as you want. Android draws its own Copy / Share toolbar beside the highlight,
+   so ours is pinned to the bottom of the screen where that toolbar never goes. */
+.selectable{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
+.selectable ::selection{background:var(--deep-bg)}
 
 .selcopy{position:fixed;z-index:90;right:16px;bottom:84px;
   width:44px;height:44px;border:0;border-radius:50%;

@@ -1024,58 +1024,17 @@ function whyFor_concept(chk, concept){
 
 var SELMIN = 3, SELMAX = 1800;
 
-/* ---------- tap-to-select, on the reading surfaces ----------
-   Native selection on Android summons Chrome's own Copy / Share toolbar over whatever
-   you put near the text, and there is no way to suppress it — but there IS a way to
-   stop the selection happening at all. So on the long reading surfaces (study guides,
-   summaries, briefs) native selection is turned off and blocks are tapped instead.
+/* ---------- selecting text to ask about it ----------
+   Plain native selection: hold a word and drag, exactly like anywhere else. The earlier
+   tap-a-paragraph experiment turned out worse than the thing it replaced — a tap in a
+   list took the whole list, and you could never take half a sentence.
 
-   A paragraph is the honest unit anyway: on a phone, dragging two handles to the exact
-   word is miserable, and "explain this paragraph" is what you actually mean. Tap one
-   block, then tap another to take everything between them. Copy lives in the bar, so
-   nothing is lost by taking it off the OS. */
+   Android still draws its own Copy / Share toolbar beside the highlight and there is no
+   suppressing it, so ours is pinned to the bottom of the screen instead, where that
+   toolbar never reaches. */
 
-var TAPSEL = null;   /* {root, a, b} — indices of the anchor and focus blocks */
-
-function selBlocks(root){
-  return [].slice.call(root.children).filter(function(n){
-    return n.nodeType === 1 && n.innerText && n.innerText.trim().length > 1;
-  });
-}
-
-function paintTapSel(){
-  document.querySelectorAll(".selblk").forEach(function(n){ n.classList.remove("selblk"); });
-  if(!TAPSEL) return null;
-  var blocks = selBlocks(TAPSEL.root);
-  var lo = Math.min(TAPSEL.a, TAPSEL.b), hi = Math.max(TAPSEL.a, TAPSEL.b);
-  var text = [];
-  for(var i = lo; i <= hi && i < blocks.length; i++){
-    blocks[i].classList.add("selblk");
-    text.push(blocks[i].innerText.replace(/\s+/g, " ").trim());
-  }
-  return text.join("\n\n");
-}
-
-function clearTapSel(){
-  TAPSEL = null;
-  document.querySelectorAll(".selblk").forEach(function(n){ n.classList.remove("selblk"); });
-  showSelPill();
-}
-
-/* Make a rendered block of prose tappable. */
 function makeSelectable(root){
   root.classList.add("selectable");
-  var blocks = selBlocks(root);
-  blocks.forEach(function(n, i){
-    n.addEventListener("click", function(e){
-      /* a link inside the prose is still a link */
-      if(e.target.closest && e.target.closest("a")) return;
-      if(!TAPSEL || TAPSEL.root !== root){ TAPSEL = {root: root, a: i, b: i}; }
-      else if(TAPSEL.a === i && TAPSEL.b === i){ TAPSEL = null; }
-      else { TAPSEL.b = i; }
-      showSelPill();
-    });
-  });
 }
 
 function selText(){
@@ -1100,6 +1059,7 @@ function selText(){
 }
 
 function clearSelPill(){
+  clearTimeout(SELGRACE); SELGRACE = null;
   var old = document.getElementById("selpill");
   if(old) old.remove();
   var c = document.getElementById("selcopy");
@@ -1107,35 +1067,48 @@ function clearSelPill(){
   SEL = null;
 }
 
+var SELSEEN = 0, SELGRACE = null;   /* when we last had a real selection */
+
 function showSelPill(){
-  var tapped = paintTapSel();
-  var got = tapped ? {text: tapped.slice(0, SELMAX), tap: true} : selText();
+  var got = selText();
   var old = document.getElementById("selpill");
-  if(!got || got.text.length < SELMIN){ if(old) old.remove(); SEL = null; return; }
+  if(!got || got.text.length < SELMIN){
+    /* Touching the bar collapses the selection before the tap lands on it, so a bar
+       that vanished the instant the highlight did could never be pressed on a phone.
+       Hold it for a moment after the selection goes. */
+    if(SEL && old && Date.now() - SELSEEN < 2600){
+      /* and come back when the grace runs out, or a bar nobody pressed would hang
+         around until the next selection */
+      clearTimeout(SELGRACE);
+      SELGRACE = setTimeout(showSelPill, 2600 - (Date.now() - SELSEEN) + 40);
+      return;
+    }
+    clearSelPill();
+    return;
+  }
   SEL = got;
+  SELSEEN = Date.now();
 
   var b = old || el("button","selpill");
   b.id = "selpill";
   var snip = got.text.replace(/\s+/g, " ").trim();
   if(snip.length > 34) snip = snip.slice(0, 34).replace(/\s\S*$/, "") + "…";
-  var n = 0;
-  if(got.tap && TAPSEL){ n = Math.abs(TAPSEL.b - TAPSEL.a) + 1; }
   b.innerHTML = '<span class="sq">' + QMARK_SM + '</span>'
-              + '<span class="sl">Ask about '
-              + (n > 1 ? '<b>these ' + n + ' paragraphs</b>' : '<b>' + esc(snip) + '</b>')
-              + '</span>';
-  /* Keep the selection alive through the tap, on both pointer types. */
-  b.onmousedown  = function(e){ e.preventDefault(); };
-  b.ontouchstart = function(e){ e.preventDefault(); };
-  b.onclick = function(e){
+              + '<span class="sl">Ask about <b>' + esc(snip) + '</b></span>';
+  /* mousedown default is what would drop a desktop selection; cancelling it is safe.
+     touchstart is NOT cancelled — doing that also cancels the click that follows, which
+     is precisely why this button used to be dead on a phone. touchend fires the action
+     directly instead, and cancelling THAT suppresses the duplicate click. */
+  var fire = function(e){
     e.preventDefault(); e.stopPropagation();
     var quote = SEL ? SEL.text : "";
-    TAPSEL = null;
     clearSelPill();
-    document.querySelectorAll(".selblk").forEach(function(x){ x.classList.remove("selblk"); });
     try { window.getSelection().removeAllRanges(); } catch(err){}
-    openBuddy("ask", null, quote);
+    if(quote) openBuddy("ask", null, quote);
   };
+  b.onmousedown = function(e){ e.preventDefault(); };
+  b.ontouchend  = fire;
+  b.onclick     = fire;
   if(!old) document.body.appendChild(b);
 
   /* Copy is off the OS menu now, so it lives here instead. */
@@ -1145,14 +1118,17 @@ function showSelPill(){
     cp.id = "selcopy";
     cp.title = "Copy";
     cp.innerHTML = '<svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="7" y="7" width="10" height="10" rx="2.2"/><path d="M13 5.2A2.2 2.2 0 0 0 10.8 3H5.2A2.2 2.2 0 0 0 3 5.2v5.6A2.2 2.2 0 0 0 5.2 13"/></svg>';
-    cp.onmousedown  = function(e){ e.preventDefault(); };
-    cp.ontouchstart = function(e){ e.preventDefault(); };
+    cp.onmousedown = function(e){ e.preventDefault(); };
     document.body.appendChild(cp);
   }
-  cp.onclick = function(e){
+  var doCopy = function(e){
     e.preventDefault(); e.stopPropagation();
     var txt = SEL ? SEL.text : "";
-    var done = function(){ toast("Copied"); TAPSEL = null; clearSelPill(); };
+    var done = function(){
+      toast("Copied");
+      clearSelPill();
+      try { window.getSelection().removeAllRanges(); } catch(err){}
+    };
     try{
       if(navigator.clipboard && navigator.clipboard.writeText)
         navigator.clipboard.writeText(txt).then(done, done);
@@ -1165,6 +1141,8 @@ function showSelPill(){
       }
     }catch(err){ done(); }
   };
+  cp.ontouchend = doCopy;
+  cp.onclick    = doCopy;
   /* Deliberately NOT anchored to the selection. Android draws its own Copy / Share
      toolbar right next to the highlighted text and there is no way to suppress it, so
      anything placed there gets covered. The bar is pinned to the bottom instead,
@@ -2802,7 +2780,7 @@ function viewManual(root){
 /* ---------- shell ---------- */
 function render(){
   var root = document.getElementById("root");
-  if(TAPSEL && !root.contains(TAPSEL.root)) TAPSEL = null;
+  clearSelPill();
   root.innerHTML = "";
 
   var wi = weekInfo();
