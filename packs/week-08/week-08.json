@@ -363,6 +363,7 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Magnetic dipoles as concepts: what a dipole is and why a magnet cannot be split into poles, the current-loop and pole models, the definition and right-hand-rule direction of mu = NIA, the vector reasoning behind torque = mu x B and U = -mu.B, the electron's moment M = g(-eL/2m), and the geometry of the fields of a bar magnet, a wire and a solenoid",
    "maxScore": 12,
    "questions": [
@@ -500,6 +501,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Abstraction and the anatomy of functions and modules as concepts: what abstraction hides, data versus functional abstraction, access specifiers and header files, why a complex project is decomposed at all, declaration versus definition, the four parts of a function definition, parameters versus arguments, return type and void, local versus global scope, and what makes a module different from a function",
    "maxScore": 12,
    "questions": [
@@ -775,6 +777,7 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Numerical magnetic-dipole work: computing mu = NIA with areas converted to m^2, torque mu*B*sin(theta) and its maximum, energy -mu*B*cos(theta) and the work to rotate or flip a dipole, B = mu_0*I/(2*pi*r) for a straight wire and B = mu*n*I for a solenoid with turns per unit length and a core, the electron's moment from its angular momentum, and the unit, angle and direction traps in each",
    "maxScore": 12,
    "questions": [
@@ -912,6 +915,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Code work on abstraction, functions and modules: tracing a call through its parameters to the value it returns and to what appears on the screen, predicting the return of a void function or one whose return sits in the wrong place, spotting the scope, shadowing or pass-by-value fault in a fragment, reading escape sequences in a printf string, and choosing the correct decomposition and import form for a stated task",
    "maxScore": 12,
    "questions": [

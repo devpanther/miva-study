@@ -348,6 +348,7 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Electromagnetic induction as concepts: what magnetic flux is and which angle enters Phi = B*A*cos(theta), the three ways of changing it and why a changing flux - not motion - is the criterion, why an emf appears in an open circuit with no current, what the minus sign in emf = -N d(Phi)/dt means and what sign convention it belongs to, Lenz's law as opposition to the change rather than to the field, the energy argument that forces that direction, and what self-inductance actually opposes",
    "maxScore": 12,
    "questions": [
@@ -485,6 +486,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Arrays and recursion as concepts: the course's definition of an array and what each of 'fixed-size', 'sequential collection' and 'elements of the same type' makes possible, the declaration syntax datatype arrayName[arraySize] and the one-sided initialiser rule, why an index is an offset so that the first is 0 and the largest for int a[10] is 9, what happens at compile time and at run time when an index falls outside that range, the two components a recursive function must have plus the implicit third condition that every call must make progress that actually lands on the base case, the call stack with one frame and one set of parameters per call and its pending operations, direct versus indirect and tail versus non-tail recursion as two independent classifications, and what the deck's iteration-versus-recursion table really trades away.",
    "maxScore": 12,
    "questions": [
@@ -760,6 +762,7 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Numerical induction work: computing Phi = B*A*cos(theta) with areas and angles converted properly, emf = N*d(Phi)/dt and the induced charge q = N*d(Phi)/R, motional emf = B*L*v with the retarding force B^2*L^2*v/R and the mechanical-to-electrical power audit, the rotating-coil peak emf = N*B*A*omega with the 2*pi*f and rms traps, self-inductance L = mu_0*mu_r*N^2*A/l with back-emf L*dI/dt and stored energy 0.5*L*I^2, mutual inductance, and the ideal transformer's turns and current ratios",
    "maxScore": 12,
    "questions": [
@@ -897,6 +900,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Code work on arrays and recursion: tracing a recursive call down to its base case and back up through its pending operations, predicting the return value of an array recursion and the output of one- and two-dimensional array loops, spotting a missing base case and a base case that is never reached, finding off-by-one and out-of-bounds faults in traversals and in recursive index expressions, distinguishing tail from non-tail recursion on a real listing, recognising that an array name cannot be assigned so a copy must be a loop, and diagnosing infinite recursion as a stack overflow rather than a hang.",
    "maxScore": 12,
    "questions": [
@@ -1115,7 +1119,7 @@
    "questions": [
     {
      "type": "mcq",
-     "q": "Which language is named for event-driven, non-blocking I/O?",
+     "q": "Which server-side technology is named for event-driven, non-blocking I/O?",
      "options": [
       "Node.js",
       "Python",
@@ -1124,7 +1128,7 @@
      ],
      "answerIndex": 0,
      "concept": "The Node.js justification",
-     "why": "Node.js is the deck's answer for real-time stock prices, because event-driven non-blocking I/O handles many concurrent connections. Python is named for versatility, Ruby for elegant syntax, Java for reliability."
+     "why": "Node.js is the deck's answer for real-time stock prices, because event-driven non-blocking I/O handles many concurrent connections. Python is named for versatility, Ruby for elegant syntax, Java for reliability. Strictly, Node.js is a JavaScript runtime, not a language; the deck's own summary slide lists it among the server-side languages, which is why it appears in this set."
     },
     {
      "type": "mcq",
@@ -1283,11 +1287,11 @@
       "East-west",
       "North-south",
       "Vertically",
-      "Along the magnetic meridian"
+      "At 45 degrees to the magnetic meridian"
      ],
      "answerIndex": 0,
      "concept": "The end-on (Tan A) position",
-     "why": "East-west puts the magnet's axial field at right angles to B_H, which is what makes the tangent law apply. North-south is the broadside-on Tan B position, with a different formula."
+     "why": "East-west puts the magnet's axial field at right angles to B_H, which is what makes the tangent law apply. North-south is the broadside-on Tan B position, with a different formula. North-south and the magnetic meridian are the same direction — the meridian is the vertical plane containing B_H — which is why only one of them is offered."
     },
     {
      "type": "mcq",

@@ -274,6 +274,8 @@ td.k{font-weight:800;color:var(--ink2);font-variant-numeric:tabular-nums}
   animation:rise .25s cubic-bezier(.2,1.2,.4,1)}
 @keyframes rise{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
 canvas.confetti{position:fixed;inset:0;pointer-events:none;z-index:80}
+/* during a course party the burst belongs above the dim, not under it */
+body:has(.party) canvas.confetti{z-index:121}
 
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}
@@ -518,3 +520,60 @@ a.lmsb{display:inline-block;margin-bottom:4px}
   box-shadow:var(--shadow-lift);animation:pillin .16s cubic-bezier(.2,1.1,.4,1)}
 .selcopy:hover{color:var(--deep);border-color:var(--deep)}
 @media (min-width:620px){ .selcopy{right:calc(50% - 250px)} }
+
+/* ---------- the runway ---------- */
+.rwbar{height:7px;border-radius:99px;background:var(--surface2);overflow:hidden;margin:12px 0 7px}
+.rwbar span{display:block;height:100%;border-radius:99px;background:var(--deep);
+  transition:width .25s cubic-bezier(.2,1.1,.4,1)}
+.rwit{border-top:1px solid var(--line);padding:11px 0 12px}
+.rwit:first-of-type{border-top:0}
+.rwh{display:flex;gap:11px;align-items:flex-start;width:100%;text-align:left;
+  background:none;border:0;padding:0;color:inherit}
+.rwtick{flex:none;width:21px;height:21px;margin-top:1px;border-radius:7px;
+  border:1.6px solid var(--line);display:grid;place-items:center;
+  font-size:12px;font-weight:900;color:#fff;transition:background .14s,border-color .14s}
+.rwit.on .rwtick{background:var(--deep);border-color:var(--deep)}
+.rwl{display:block;min-width:0}
+.rwl b{display:block;font-weight:700;font-size:14.5px}
+.rwit.on .rwl b{opacity:.55;text-decoration:line-through}
+.rwl i{display:block;font-style:normal;color:var(--ink3);font-size:13px;margin-top:2px}
+.rwchips{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 0 32px}
+.rwchip{font-size:12.5px;font-weight:700;padding:5px 10px;border-radius:99px;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink2)}
+.rwchip.on{background:var(--deep);border-color:var(--deep);color:#fff}
+
+/* ---------- finishing a course for the week ---------- */
+.cstrip{display:flex;flex-wrap:wrap;gap:6px;margin-top:11px}
+.cpill{display:flex;align-items:baseline;gap:6px;padding:5px 10px;border-radius:99px;
+  border:1px solid var(--line);background:var(--surface);font-size:12.5px}
+.cpill .cpn{font-weight:800;color:var(--ink2)}
+.cpill .cpd{font-weight:700;color:var(--ink3);font-variant-numeric:tabular-nums}
+.cpill.part{border-color:var(--deep)}
+.cpill.part .cpn{color:var(--ink)}
+.cpill.on{background:var(--deep);border-color:var(--deep)}
+.cpill.on .cpn,.cpill.on .cpd{color:#fff}
+
+.party{position:fixed;inset:0;z-index:120;display:grid;place-items:center;
+  background:rgba(12,10,30,.42);backdrop-filter:blur(2px);overflow:hidden;
+  animation:pfade .2s ease}
+.party.out{animation:pfade .24s ease reverse forwards}
+@keyframes pfade{from{opacity:0}to{opacity:1}}
+.party .pbox{position:relative;z-index:2;text-align:center;padding:0 26px;max-width:340px}
+.party .plot{width:230px;height:230px;margin:0 auto -18px;pointer-events:none}
+.party .lbl{color:rgba(255,255,255,.72)}
+.party h2{font-family:Fredoka,ui-rounded,system-ui,sans-serif;font-size:30px;
+  color:#fff;margin:2px 0 6px;letter-spacing:-.01em}
+.party p{color:rgba(255,255,255,.8);margin:0;font-size:14px}
+
+.conf{position:absolute;top:-24px;z-index:1;display:block;border-radius:2px;
+  animation-name:cfall;animation-timing-function:cubic-bezier(.25,.6,.5,1);
+  animation-fill-mode:both}
+@keyframes cfall{
+  0%{transform:translate3d(0,-10vh,0) rotate(0);opacity:0}
+  8%{opacity:1}
+  100%{transform:translate3d(var(--drift),108vh,0) rotate(var(--spin));opacity:.85}
+}
+@media (prefers-reduced-motion:reduce){
+  .conf{display:none}
+  .party,.party.out{animation:none}
+}

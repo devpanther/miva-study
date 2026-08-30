@@ -343,6 +343,7 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "This session takes week 1's material - electric charge and the three methods of charging - and works it conceptually rather than numerically. It covers what charge is and what the two signs mean; the three properties of charge (quantisation, conservation, additivity) as statements about what nature permits rather than as formulas; and the mechanism behind each charging method: which particles actually move (electrons, never protons), whether contact occurs, and what sign each object is left with. It examines polarisation as charge separation with no net charge gained, and how grounding converts that temporary separation into a permanent net charge of opposite sign to the rod. It also covers why the extent of induction depends on the rod's distance, and why a charged object attracts neutral matter of either sign. Finally it covers what the electric field means as force per unit charge - a property of the source, not of whatever is placed in it. Arithmetic is kept to a minimum; every question is about mechanism.",
    "maxScore": 12,
    "questions": [
@@ -480,6 +481,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "This session takes Week 1 conceptually. It covers what problem-solving in computer science is and why a computer demands a systematic approach - the computer contributes volume, speed and efficiency, not method, so the programmer must first know how a human solves the problem. It establishes what makes a problem a computational problem: a step-by-step solution with well-defined inputs, limitations and output conditions. It treats the four steps to problem-solving as four distinct jobs rather than a list to recite, and works through what each of algorithm, pseudocode and flowchart actually is and what each buys you - including why pseudocode that cannot be compiled or executed is still worth writing. It examines the three required properties of an algorithm's steps (ordered, unambiguous, complete) and what specifically breaks when each is absent, and it looks at decomposition, why it works and where it stops working. It then covers the translator chain of interpreter, compiler and assembler, the difference between debugging and testing, and the three error types of syntax, logical and run time. It closes on the two kinds of program documentation, why documentation begins at problem analysis rather than after the program works, and on refactoring - what it must preserve, what it changes, and when a change is not a refactor at all. No traces and no worked arithmetic.",
    "maxScore": 12,
    "questions": [
@@ -755,6 +757,7 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "This session takes the same week-1 material and works it as problems. It covers converting between a net charge and a number of transferred electrons using q = ne; tracking charge through transfers, including the averaging rule q' = (q1+q2)/2 for identical conducting spheres in contact and following a charge through two successive contacts; and computing Coulomb forces with attention to squaring the separation and converting centimetres to metres. It covers adding forces and fields as vectors, including the case of two equal and opposite charges whose contributions at the midpoint reinforce rather than cancel, and finding the point on a line where the resultant field vanishes. It covers computing the field of a point charge and the force it exerts on a charge placed in it, including the direction reversal for a negative charge. It also covers diagnosing a wrong route from the shape of a formula, and checking a result by units and by order of magnitude. Constants used throughout: k = 8.99x10^9 N.m^2.C^-2, e = 1.6x10^-19 C.",
    "maxScore": 12,
    "questions": [
@@ -892,6 +895,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "This session is Week 1 applied - the method worked through on concrete problems. You trace the lecture's student-grade flowchart (five grades, average, pass mark 45, decision box \"Is Grade > 44\") on real numbers including the boundary case where the average lands exactly on 45, then alters the decision box to \"Is Grade > 45\" and works out precisely which candidates are misclassified as a result. He reads a faulty pseudocode that sums four grades but divides by five, identifies the fault and classifies it against the three error types, and reasons about which test inputs would and would not expose it. He runs step 1 of the four steps on the inventory management case study, separating genuine inputs, processes and outputs from outcomes and from the tools themselves, then decomposes that case study into subproblems and distinguishes real decomposition from mere phasing, delegation or file-splitting. He classifies stated scenarios into the four computational problem types, particularly the optimization-versus-search and decision-versus-search boundaries. Finally he diagnoses a failed attempt by another student and locates which of the four steps actually went wrong. Reading, tracing and applying rather than reciting.",
    "maxScore": 12,
    "questions": [

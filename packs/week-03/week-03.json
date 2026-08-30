@@ -346,6 +346,7 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Week 3 of General Physics II treated conceptually: what electromotive force actually is (energy delivered per coulomb, not a force), how it differs from terminal potential difference and why the difference is the lost volts Ir, and the microscopic origin of motional emf in the Lorentz force qvB on carriers in a moving rod. It also covers the meaning of the minus sign in Faraday's law, the idea that electrostatic energy is stored in the field itself with density one-half epsilon-nought E squared, why the factor of one half appears in the capacitor energy, and what a dielectric does to capacitance, field and breakdown. No lengthy calculation is required; every question asks what a quantity means, why a relation holds, or what would go wrong without it.",
    "maxScore": 12,
    "questions": [
@@ -483,6 +484,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Computational approaches to problem solving, treated conceptually. This session covers what a computational approach is and the three factors (clear definition, computability, data requirements) that decide whether one can be used; the mechanism and cost of each of the eleven named approaches — problem recognition, backtracking, data mining, performance testing, pipelining, visualisation, brute force, divide and conquer, greedy algorithms, dynamic programming and hypothesis testing. The emphasis is on why each approach works, what it costs, and the conditions under which it fails: the divide-and-conquer recombination condition, the greedy algorithm's lack of an optimality guarantee against dynamic programming's guarantee, and the meaning of significance level and p-value in the accept/reject rule. It does not ask for traces or worked arithmetic; that is Saturday.",
    "maxScore": 12,
    "questions": [
@@ -758,6 +760,7 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Week 3 of General Physics II worked as problems: setting up and solving circuit questions with internal resistance using epsilon = I(R + r) and V = epsilon - Ir, extracting emf and internal resistance from a V-I graph, computing motional emf from Bvl and the induced current, force and power that follow, and applying Faraday's law with N turns to a changing flux. It also covers capacitor numerical work: C = K epsilon-nought A/d, V = Ed, U = CV^2/2 = Q^2/2C, and energy density one-half epsilon E squared multiplied by the volume Ad. Several questions ask you to diagnose a wrong route rather than produce a number, and to check an answer by units or by a second independent relation. Take epsilon-nought = 8.85 x 10^-12 F/m.",
    "maxScore": 12,
    "questions": [
@@ -895,6 +898,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "The same Week 3 computational approaches, treated as practice. This session applies them to the concrete problems the lessons name: counting the search space of the four-digit padlock under brute force, tracing Merge sort on a small set as a divide and conquer algorithm, running the greedy activity-selection example with start times 2, 4, 1, 6, 9, 6 and end times 3, 5, 7, 8, 10, 10, and converting a naive recursive Fibonacci into a dynamic programming solution. It also asks which named approach fits a described situation, how to lay out a pipelined calculation, and how to diagnose a solution that is wrong or wastefully slow, including the food-delivery routing case study. Definitions are assumed known from Wednesday; here they must be executed.",
    "maxScore": 12,
    "questions": [

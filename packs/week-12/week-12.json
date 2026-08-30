@@ -493,6 +493,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "The Software Testing Life Cycle and Debugging deck: what software testing is and why a defined life cycle is needed at all, the six STLC phases in sequential order with the specific activities each phase owns, entry and exit points, the definition of a test case as inputs, process and expected outputs, and debugging as the process of identifying and resolving bugs together with its named methods (code inspection, monitoring, logging, unit, integration and system testing) and tool categories (debuggers, trace tools, profilers).",
    "maxScore": 12,
    "questions": [
@@ -906,6 +907,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Applying the Software Testing Methods deck to real code: classifying a failure as functional or non-functional and choosing the method (unit, integration, system, acceptance versus usability, performance, security, compatibility), choosing the integration direction top-down or bottom-up, deciding between black, white and grey box for a given situation and knowing which levels each applies to, designing test data by equivalence partitioning and boundary value analysis, and reading a debugger's breakpoint and variable watch to name the defect class.",
    "maxScore": 12,
    "questions": [

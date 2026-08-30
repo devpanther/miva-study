@@ -501,6 +501,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Pseudocode concepts: what a pseudocode is and what it is for, the rules that govern it, the eight constructs and where each one tests its condition, the seven steps of writing one, its stated advantages and disadvantages, and how it relates to an algorithm and to a flowchart",
    "maxScore": 12,
    "questions": [
@@ -914,6 +915,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Applied pseudocode: tracing a fragment line by line to what it prints, finding the bug in a fragment and naming the rule or condition it breaks, choosing the fragment that implements a stated task, and the off-by-one and loop-condition traps in FOR, WHILE and REPEAT-UNTIL",
    "maxScore": 12,
    "questions": [
@@ -1150,11 +1152,11 @@
       "event.stopPropagation()",
       "form.reset()",
       "event.preventDefault()",
-      "return false in the listener"
+      "return false from an addEventListener callback"
      ],
      "answerIndex": 2,
      "concept": "preventDefault cancels the browser's default action",
-     "why": "preventDefault cancels the default action, here the submission and reload. stopPropagation only stops the event travelling to ancestor elements, and reset clears the fields instead."
+     "why": "preventDefault cancels the default action, here the submission and reload. stopPropagation only stops the event travelling to ancestor elements, and reset clears the fields instead. Returning false does nothing from a listener registered with addEventListener — it cancels the default only in an inline onsubmit=\"return false\" attribute, in a handler assigned to the .onsubmit property, or inside a jQuery .on() handler."
     },
     {
      "type": "mcq",

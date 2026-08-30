@@ -354,6 +354,7 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Faraday's law and Lenz's law as concepts. Covers what the flux rule actually asserts — that only a changing magnetic flux Φ_B = BA cos θ induces an emf, never the flux itself — and the meaning of θ as the angle from the loop's normal. Covers the physical content of the minus sign: the induced current opposes the CHANGE in flux, not the external field, together with the deck's three working rules and the right-hand grip rule for getting the sense of the current. Ends on the energy argument, that Lenz's law is conservation of energy rather than a separate empirical law.",
    "maxScore": 12,
    "questions": [
@@ -491,6 +492,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "The concepts of both Week 11 decks. Decomposition versus modularisation, module independence measured by cohesion and coupling, the single responsibility principle, information hiding and its benefits, refactoring, and horizontal versus vertical structural partitioning. From the second deck: the definition and purpose of software architecture, the three levels of software pattern (architectural, design, idiom), and the two generic design approaches. Questions target the precise wording of the definitions and the mechanism behind each claim rather than recognition of the vocabulary.",
    "maxScore": 12,
    "questions": [
@@ -766,6 +768,7 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "The same Faraday/Lenz material worked numerically. Computing induced emf from a rate of change of B in an N-turn coil, evaluating Φ = BA cos θ when the question specifies the angle to the loop's PLANE, and motional emf ε = BLv with its induced current I = ε/R and retarding force F = B²L²v/R. Also generator output, ε_peak = NBAω with ω = 2πf and ε_rms = ε_peak/√2, and the time-independent circulated charge q = N|ΔΦ|/R. Emphasis throughout on the unit, angle, 2π and current-sense traps.",
    "maxScore": 12,
    "questions": [
@@ -903,6 +906,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "The same Week 11 material applied to concrete design judgements rather than recalled. You read short module listings and pseudocode and decide whether a module is cohesive, what it is coupled to and why, which principle a design violates, and how to redraw the boundaries. Scenarios cover judging cohesion from a function list, spotting coupling through a shared data structure, evaluating what a proposed refactor buys and costs, checking a hierarchy against vertical partitioning, choosing top-down or bottom-up for a given project, and deciding whether a change qualifies as refactoring at all.",
    "maxScore": 12,
    "questions": [

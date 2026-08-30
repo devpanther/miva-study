@@ -114,7 +114,7 @@
       "why": "Every number on her slides follows from k = 1/4πε₀ = 9.0 × 10⁹ N m²/C². Match it and your arithmetic matches hers; use a more precise value and you will get 574 N/C where her slide reads 575 and think you have erred. ε₀ appears only inside the definition of k and is never used numerically; μ₀ belongs to magnetism, weeks 8 to 12; and 1.6 × 10⁻¹⁹ C is the elementary charge, not a constant of the force law."
     },
     {
-      "q": "Two protons are 3.6 nm apart. She computes the two forces on an electron 1.2 nm from one of them as |F₁₃| = 16 × 10⁻¹¹ N and |F₂₃| = 4 × 10⁻¹¹ N. The total force on the electron is",
+      "q": "Two protons are 3.6 nm apart. She computes the two forces on an electron that lies on the line between them, 1.2 nm from one of the protons, as |F13| = 16 × 10⁻¹¹ N and |F23| = 4 × 10⁻¹¹ N. The total force on the electron is",
       "options": [
         "20 × 10⁻¹¹ N, toward the nearer proton.",
         "16 × 10⁻¹¹ N, toward the nearer proton.",
@@ -559,10 +559,10 @@
         "17.0 V and 0.0906 A",
         "24.0 V and 0.0906 A",
         "17.0 V and 0.0454 A",
-        "17.0 V and 0.0642 A"
+        "17.0 V and 0.0640 A"
       ],
       "answerIndex": 3,
-      "why": "V_rms = 0.7071 × 24 = 17.0 V, and then Ohm's law with rms on BOTH sides: I_rms = V_rms/R = 17/265 = 0.0642 A. 0.0906 A is V_max/R, which gives the peak current, not the rms one; the pair 24.0 V and 0.0906 A never converts to rms at all; and 0.0454 A applies the 0.7071 a second time to an already-converted figure, the standard way to halve your own answer."
+      "why": "V_rms = 24.0/√2 = 16.97 V, which is 17.0 V to three figures, and then Ohm's law with rms on BOTH sides: I_rms = V_rms/R = 16.97/265 = 0.0640 A. Divide the rounded 17.0 rather than the exact 16.97 and you get 0.0642 A, which is why the answer is quoted to three figures. V_rms = 0.7071 × 24 = 17.0 V, and then Ohm's law with rms on BOTH sides: I_rms = V_rms/R = 17/265 = 0.0642 A. 0.0906 A is V_max/R, which gives the peak current, not the rms one; the pair 24.0 V and 0.0906 A never converts to rms at all; and 0.0454 A applies the 0.7071 a second time to an already-converted figure, the standard way to halve your own answer."
     },
     {
       "q": "For that same circuit the average and maximum powers dissipated in the resistor are",

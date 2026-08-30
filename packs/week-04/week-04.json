@@ -207,6 +207,7 @@
    "id": "mon-mth102",
    "day": "Mon",
    "course": "MTH_102",
+   "slot": "deep",
    "topic": "Week 4 of Elementary Mathematics II treated conceptually: what the objects in a limit statement actually are and why each continuity criterion is there. Covers the three-condition definition of continuity at a point c (f(c) defined, lim as x approaches c exists, and the two are equal), one-sided limits and the existence criterion that the left and right limits must agree on one finite real number, what an open circle and a shaded dot each encode on a graph, and why 'limit equals infinity' is a description of failure rather than a value. Covers the four types of discontinuity (removable, jump, infinite, essential) as names for which criterion fails and in what way, including why a removable one can be repaired by redefining a single point and a jump or infinite one cannot. No computation is required; every question asks what breaks without a given condition.",
    "maxScore": 12,
    "questions": [
@@ -344,6 +345,7 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Conceptual hour on Week 4 of General Physics II: what the quantities in DC circuit analysis and electrostatic dipoles actually are, and why each rule holds. Covers ideal versus real voltage and current sources, the meaning of internal resistance and the emf/terminal-voltage distinction, why a zeroed voltage source becomes a short and a zeroed current source an open circuit, the linearity that superposition and the Thevenin and Norton theorems depend on, and why a reference node may be set to zero in nodal analysis. Also covers the electric dipole moment as a vector from minus q to plus q, why the dipole potential falls as one over r squared and vanishes on the equatorial plane, why the axial and equatorial fields differ in size and direction, and why a dipole feels torque but no net force in a uniform field. Finally, why polarisation of a dielectric lowers the field and raises the capacitance. No numerical work is required in this session.",
    "maxScore": 12,
    "questions": [
@@ -481,6 +483,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Week 4 Algorithm Concepts taken conceptually: what an algorithm is as distinct from a computer program, why the five-step development process puts a high-level algorithm before stepwise refinement, and why representation must supply sequence, selection and repetition. Then the analysis side: what priori analysis can settle before any code exists and what only posterior analysis can report, what Big O actually measures and what it deliberately throws away, and why worst case rather than best case is the figure normally quoted. Finally the characteristics and design considerations as claims about cost and failure: what language independence buys, what robustness means beyond correctness, and why a better algorithm rather than more hardware is what delivers scalability in the e-commerce case study.",
    "maxScore": 12,
    "questions": [
@@ -618,6 +621,7 @@
    "id": "thu-mth102",
    "day": "Thu",
    "course": "MTH_102",
+   "slot": "deep",
    "topic": "Week 4 of Elementary Mathematics II worked as problems: taking numbers off graphs and out of formulas. Covers reading lim as x approaches c from the left, from the right, the two-sided limit and the value f(c) from a described graph, and classifying the point as removable, jump or infinite from the pair of one-sided limits. Covers the algebraic cases the deck uses — lim(x→3) of 2x+1 read off a line of slope 2 and intercept 1, lim(x→1) of (x²−1)/(x−1) by factoring and cancelling, and one-sided limits of |x| and |x|/x at 0 — plus choosing a constant that makes a piecewise function continuous at its joining point. Also covers diagnosing wrong routes, in particular treating the indeterminate form 0/0 as proof that a limit does not exist, and checking a classification against the graph before quoting it.",
    "maxScore": 12,
    "questions": [
@@ -755,6 +759,7 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Problem-solving hour on the same Week 4 material of General Physics II. Sets up and executes numerical work on real sources (finding current and terminal voltage from emf, internal resistance and load, with the power balance as a check), on multi-source resistive networks by superposition, by nodal analysis with a chosen reference node, and by reduction to a Thevenin or Norton equivalent. Then on electric dipoles: computing the dipole moment from charge and separation, the far-field potential k p cos theta over r squared, the axial and equatorial field magnitudes and directions, and the torque and potential energy of a dipole in a uniform field. Finally a parallel-plate capacitor problem with a dielectric inserted at fixed charge. Emphasis throughout is on choosing the right relation, carrying units, and diagnosing the specific wrong routes that give plausible but incorrect numbers.",
    "maxScore": 12,
    "questions": [
@@ -892,6 +897,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Week 4 Algorithm Concepts taken as practice: tracing the lecture's own algorithms by hand and writing them out. You trace the sum-and-count flowchart to a printed value and a decision count, work the maximum-of-a-set problem through the five development steps, and write the refined pseudocode using sequence, selection and repetition correctly. You then apply the Big O loop rules to concrete code fragments — a decrementing loop, a halving loop, nested loops — and diagnose faulty or wasteful solutions: a maximum initialised to zero, selection used where repetition was needed, and an O(n squared) pairwise comparison where one pass would do.",
    "maxScore": 12,
    "questions": [

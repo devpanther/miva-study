@@ -346,6 +346,7 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "The Lorentz force as concepts: what each term in F = q(E + v cross B) means and the exact conditions under which each one vanishes, why the magnetic force is perpendicular to both v and B and therefore does no work, the RHR-1 direction rule and what reversing the sign of q changes, why the orbit in a uniform field is a circle or a helix and why its period is independent of speed, how the crossed-field velocity selector works, why F = I L cross B is the single-charge law summed over the moving charges in a wire, and the transverse geometry of an electromagnetic wave",
    "maxScore": 12,
    "questions": [
@@ -483,6 +484,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Boolean expressions, statements and control flow as concepts, exactly as the two decks give them: what makes a value true in C and what a comparison returns, the definitions of a simple statement and of a block and why a block counts as a single statement, why blocks exist and where they are used, programme control and branching with unconditional versus conditional, the deck's count of the decision making statements and the switch it teaches outside that count, and the entry condition of if, if-else, if-else-if, switch, while, do-while and for.",
    "maxScore": 12,
    "questions": [
@@ -758,6 +760,7 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Numerical Lorentz-force work: computing q*v*B*sin(theta) and qE and combining them as vectors rather than as numbers, showing the magnetic force does zero work, evaluating the orbit radius r = mv/(qB) and period T = 2*pi*m/(qB) and the helical pitch, applying F = B*I*L*sin(theta) with the length converted to metres and the angle taken from the current, finding the selector speed v = E/B, converting gauss to tesla, and getting wavelength and photon energy from c = f*lambda and E = h*f, with the unit, angle, sign and direction traps at each step",
    "maxScore": 12,
    "questions": [
@@ -895,6 +898,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Code work only: tracing if-else, if-else-if chains, switch, while, do-while, for and goto by hand to state exact output, counting loop passes and knowing what a control variable holds after a loop ends, counting statements on one line, and finding the two faults that compile in silence - '=' written for '==', and a construct given several statements with no curly brackets to make them into a block.",
    "maxScore": 12,
    "questions": [
@@ -1073,7 +1077,7 @@
      ],
      "answerIndex": 2,
      "concept": "Who chaired the Public Bureau behind MAMSER",
-     "why": "The deck names Samuel Cookey as head of the Public Bureau whose recommendation produced MAMSER in 1987. The other three are scholars cited in the course, not officials."
+     "why": "The deck names Samuel Cookey as head of the Public Bureau whose recommendation produced MAMSER in 1987. The other three are scholars cited in the course, not officials. Note: the deck calls it the 'Public Bureau'; the body was in fact the Political Bureau (1986–87), chaired by Dr S. J. Cookey."
     },
     {
      "type": "mcq",

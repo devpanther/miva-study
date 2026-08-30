@@ -480,6 +480,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Week 5 flowchart concepts treated conceptually: what each flowchart symbol means and why the notation gives it that role. Covers the process, decision, input/output, preparation, predefined process, merge, summing junction, comment and connector symbols; the rules governing how many flow lines may enter and leave each; why a flowchart needs one entry point and reachable exit points; and what breaks when those rules are ignored. Also covers why the four drawing principles are stated as principles rather than as correctness rules, and how the four flowchart types (process, workflow, swimlane, data) differ in what they are for. No hand-tracing of charts is required in this session.",
    "maxScore": 12,
    "questions": [
@@ -893,6 +894,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Week 5 flowchart concepts treated as practice. Every chart is described in words and must be traced by hand: the sum-of-five-numbers loop from the lecture, a compare-two-numbers selection, and a fault-finding lamp chart. The session asks what a described chart prints for given inputs, which construct a fragment implements, how to lay out the opening steps of a chart for a stated problem, and how to diagnose a chart that loops forever, resets an accumulator, reads one item too many, or leaves a path with no route to Stop. It does not ask for symbol definitions in the abstract.",
    "maxScore": 12,
    "questions": [

@@ -365,6 +365,7 @@
    "id": "tue-phy102",
    "day": "Tue",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Power in an A.C. circuit as concepts: the instantaneous power p(t) = v(t)i(t) and its oscillation at twice the supply frequency, the derivation of P = Vrms*Irms*cos(phi), why a pure reactance dissipates no average power, and the distinction between real, reactive and apparent power with the power factor cos(phi) = R/Z = P/S",
    "maxScore": 12,
    "questions": [
@@ -502,6 +503,7 @@
    "id": "wed-cos102",
    "day": "Wed",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Data types, variables and programme objects as concepts, exactly as the two decks give them: what a programme contains besides its instructions, what a data type is and the three basic types in C, the deck's rule for a variable definition and its sentence that a definition is also a declaration but not every declaration is a definition, why variable names are replaced by memory addresses, the six operator categories by name, and what a programme object is - state in variables, behaviour in methods, who may reach the state, and structure versus union versus class.",
    "maxScore": 12,
    "questions": [
@@ -777,6 +779,7 @@
    "id": "fri-phy102",
    "day": "Fri",
    "course": "PHY_102",
+   "slot": "deep",
    "topic": "Numerical work on power in an A.C. circuit: substituting into X_L = 2*pi*f*L and X_C = 1/(2*pi*f*C), computing Z, I and cos(phi), then P = Vrms*Irms*cos(phi) = Irms^2 R with Q and S, checking by S^2 = P^2 + Q^2, and doing power-factor correction, resonance and instantaneous-power calculations",
    "maxScore": 12,
    "questions": [
@@ -914,6 +917,7 @@
    "id": "sat-cos102",
    "day": "Sat",
    "course": "COS_102",
+   "slot": "deep",
    "topic": "Applied work on this week's material: writing a definition in the deck's required order, reaching a member with the dot syntax, reading struct, union and class code from the week's summary sheet, deciding what a union can hold at one time, separating an object's state from its behaviour on a new example, data encapsulation with public and private, and representing a problem as data.",
    "maxScore": 12,
    "questions": [
@@ -967,7 +971,7 @@
      ],
      "answerIndex": 0,
      "concept": "A class is a structure that also carries methods",
-     "why": "'Classes are also similar to structures but in addition to having variables, classes also usually have methods or functions. So, using the dog example, a class will usually consist of variables such as \"name\", \"breed\" and \"colour\". Also, it will have methods such as a method that returns the name of a dog.' get_name() is that method, and it is the only thing here a structure could not have. Option (B) is false of all three constructs - a structure groups 'items of possibly different types', so several of one type is no obstacle. Option (D) is the definition of a UNION. Option (C) invents a punctuation rule and does not touch what a class is."
+     "why": "'Classes are also similar to structures but in addition to having variables, classes also usually have methods or functions. So, using the dog example, a class will usually consist of variables such as \"name\", \"breed\" and \"colour\". Also, it will have methods such as a method that returns the name of a dog.' get_name() is that method, and it is the only thing here a structure could not have. Option (B) is false of all three constructs - a structure groups 'items of possibly different types', so several of one type is no obstacle. Option (D) is the definition of a UNION. Option (C) invents a punctuation rule and does not touch what a class is. The listing is quoted from the lecturer's summary sheet as printed: char[] get_name() is Java syntax, and C cannot return an array by value — the equivalent member would be const char *get_name() { return name; }. Note also that class is C++, not C. Neither point changes which line makes this a class rather than a structure."
     },
     {
      "type": "mcq",

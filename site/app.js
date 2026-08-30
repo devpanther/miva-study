@@ -28,11 +28,19 @@ var GENERIC_WHY = [
   "What is the simplest case where this still applies?",
   "How would you check you got the right answer, without the answer?"
 ];
+/* Before week 1 there is a runway, and it is not dead time — everything on this list
+   buys back an evening later in the semester. Each line ticks off and the ticks sync
+   like scores do, so the runway is a thing you finish rather than a thing you read. */
 var RUNWAY = [
-  "Take all 8 pre-semester tests — ungraded, and they show where you are weak before you spend an hour anywhere",
-  "Clear MIVA-COS 111 entirely — 3 activities",
-  "Speed-run CSC 106 Weeks 1–3 at 1.75×",
-  "Skim the study guide PDF for PHY 102 and MTH 102"
+  {id:"tests", label:"Take the 8 pre-semester tests",
+   detail:"Ungraded. They show where you are weak before you spend an hour anywhere.",
+   per:["MTH_102","PHY_102","COS_102","PHY_108","GST_112","GST_122","CSC_106","MIVA_COS_111"]},
+  {id:"cos111", label:"Clear MIVA-COS 111 entirely",
+   detail:"Three activities, and then that course never asks for another evening."},
+  {id:"csc106", label:"Speed-run CSC 106 weeks 1–3 at 1.75×",
+   detail:"Three weeks ahead on the lightest course is three Tuesdays of slack."},
+  {id:"skim", label:"Skim the study-guide PDFs for PHY 102 and MTH 102",
+   detail:"Not to learn them. To know what is coming, so week 1 is not a cold start."}
 ];
 var LETTERS = ["A","B","C","D","E","F"];
 
@@ -313,6 +321,66 @@ function slotsFor(w){
   });
   return out;
 }
+/* ---------- the runway ----------
+   Ticks live in the same store the scores do, so they follow you between devices and
+   between the two of you. They carry no "at" and no "score", which keeps them out of
+   the streak and out of the mark total — a runway tick is not an evening's work. */
+function rwKey(id){ return ME + "|runway|" + id; }
+function rwDone(id){ var v = S.scores[rwKey(id)]; return !!(v && v.done); }
+function rwSet(id, on){
+  if(on) S.scores[rwKey(id)] = {done:true, on: ymd(today())};
+  else delete S.scores[rwKey(id)];
+}
+/* Ticking runs down a list of twelve, so syncing on every tap would toast twelve times
+   and re-render under your thumb. Paint immediately, save once you stop. */
+var RWSYNC = null;
+function rwSave(){
+  clearTimeout(RWSYNC);
+  RWSYNC = setTimeout(function(){ push("Runway saved"); }, 900);
+  mirror();
+}
+function rwTally(){
+  var done = 0, total = 0;
+  RUNWAY.forEach(function(t){
+    if(t.per){ total += t.per.length; t.per.forEach(function(c){ if(rwDone(t.id+":"+c)) done++; }); }
+    else { total += 1; if(rwDone(t.id)) done++; }
+  });
+  return {done:done, total:total};
+}
+
+/* ---------- finishing a course for the week ----------
+   A course is done for the week when every session it owns that week has been scored.
+   MTH, PHY and COS own two evenings each; the fast courses own one. */
+function courseSlots(w){
+  var wd = weekData(w), out = {};
+  GRID.forEach(function(d){
+    (out[d.deep] = out[d.deep] || []).push({day:d.day, slot:"deep"});
+    if(d.fast !== "REVIEW" && d.fast !== "CATCHUP" && checkFor(wd, d.day, "fast"))
+      (out[d.fast] = out[d.fast] || []).push({day:d.day, slot:"fast"});
+  });
+  return out;
+}
+function courseTally(person, w, course){
+  var slots = (courseSlots(w)[course] || []), got = 0, max = 0, done = 0;
+  slots.forEach(function(x){
+    var sc = getScore(person, w, x.day, x.slot);
+    if(sc){ got += sc.score; max += sc.max; done++; }
+  });
+  return {done:done, of:slots.length, got:got, max:max, complete: slots.length > 0 && done === slots.length};
+}
+/* Courses this person has just finished for the week and not yet been congratulated on. */
+function newlyFinished(w){
+  if(!ME) return [];
+  var out = [];
+  Object.keys(courseSlots(w)).forEach(function(c){
+    if(!courseTally(ME, w, c).complete) return;
+    if(S.scores[ME + "|party|w" + w + "|" + c]) return;
+    out.push(c);
+  });
+  return out;
+}
+function markCelebrated(w, course){ S.scores[ME + "|party|w" + w + "|" + course] = {done:true}; }
+
 function scoreClass(s){
   if(!s) return "";
   var r = s.score / s.max;
@@ -1400,6 +1468,25 @@ function bullets(parent, items){
   items.forEach(function(x){ var li = el("li",null,x); li.style.marginBottom = "7px"; ul.appendChild(li); });
   parent.appendChild(ul);
 }
+/* Which courses are finished for the week, at a glance. The celebration is a moment;
+   this is the part that is still there tomorrow. */
+function courseStrip(parent, w){
+  var slots = courseSlots(w), names = Object.keys(slots);
+  if(!names.length) return;
+  var order = ["MTH_102","PHY_102","COS_102","GST_112","CSC_106","GST_122","PHY_108"];
+  names.sort(function(a,b){ return order.indexOf(a) - order.indexOf(b); });
+  var strip = el("div","cstrip");
+  names.forEach(function(c){
+    var t = courseTally(ME, w, c);
+    var pill = el("div","cpill" + (t.complete ? " on" : (t.done ? " part" : "")));
+    pill.innerHTML = '<span class="cpn">' + esc(NAMES[c] || c) + '</span>'
+      + '<span class="cpd">' + (t.complete ? "✓ done" : t.done + "/" + t.of) + '</span>';
+    if(t.complete && t.max) pill.title = NAMES[c] + ": " + t.got + "/" + t.max + " this week";
+    strip.appendChild(pill);
+  });
+  parent.appendChild(strip);
+}
+
 function weekGrid(root){
   var w = wk(), wd = weekData(w), di = dayIdx();
   var g = el("div","wg");
@@ -1501,13 +1588,31 @@ function greeting(){
 }
 
 function viewHome(root){
-  var di = dayIdx(), w = wk(), wd = weekData(w);
+  var di = dayIdx(), w = wk(), wd = weekData(w), wi = weekInfo();
 
   /* the way in */
   var hail = el("div","hail");
   hail.innerHTML = '<span class="hi">'+esc(greeting())+', <b>'+esc(meName())+'</b></span>'
-                 + '<span class="muted">week '+w+'</span>';
+                 + '<span class="muted">'+(wi.n === 0 ? "runway" : "week "+w)+'</span>';
   root.appendChild(hail);
+
+  /* Term has not started. Showing a week-1 evening as "tonight" would be a lie, and the
+     runway has its own work, so it takes the hero slot until Monday the 7th. */
+  if(wi.n === 0){
+    runwayCard(root, wi);
+    var la = el("div","card");
+    la.appendChild(el("div","lbl","Looking ahead"));
+    la.appendChild(el("h2",null,"Week 1 is already loaded"));
+    la.appendChild(el("p","muted","Every check, summary and study guide for week 1 is here now. Working ahead is free slack — nothing resets when the week actually opens."));
+    var lr = el("div","row");
+    lr.appendChild(btn("act big","Look at week 1", function(){ TAB="tonight"; syncUrl(); render(); window.scrollTo(0,0); }));
+    lr.appendChild(btn("act ghost","The calendar", function(){ TAB="sunday"; syncUrl(); render(); window.scrollTo(0,0); }));
+    la.appendChild(lr);
+    root.appendChild(la);
+    statsStrip(root);
+    weekGrid(root);
+    return;
+  }
 
   var hero = el("div","card deepc");
   if(di === -1){
@@ -1541,6 +1646,7 @@ function viewHome(root){
   var wh = el("div","card");
   wh.appendChild(el("div","lbl","The week · deep hour then fast hour"));
   wh.appendChild(el("p","muted","Six identical days. No day is heavier than another, and no course is ever more than three days from your attention. Tap any deep-hour cell to take that check."));
+  courseStrip(wh, w);
   root.appendChild(wh);
   weekGrid(root);
 
@@ -1599,19 +1705,66 @@ function viewHome(root){
   });
 }
 
+/* ---------- the runway ----------
+   Shown wherever the calendar says week 1 has not started. Ticking a line re-renders
+   the card in place rather than the whole screen, so the list does not jump under your
+   thumb while you work down it. */
+function runwayCard(root, wi){
+  var c = el("div","card deepc");
+  c.appendChild(el("div","lbl","Before week 1 · " + wi.daysToStart + " day" + (wi.daysToStart===1?"":"s") + " to go"));
+  c.appendChild(el("h2",null,"Runway"));
+  c.appendChild(el("p","muted","Week 1 opens Monday 7 September. Everything here buys back an evening later — it is worth more now than it will be at any point after."));
+
+  var body = el("div");
+  var draw = function(){
+    body.innerHTML = "";
+    var t = rwTally();
+    var bar = el("div","rwbar");
+    bar.innerHTML = '<span style="width:' + Math.round(100*t.done/t.total) + '%"></span>';
+    body.appendChild(bar);
+    body.appendChild(el("div","lbl", t.done + " of " + t.total + " done"));
+
+    RUNWAY.forEach(function(item){
+      var whole = item.per
+        ? item.per.every(function(cs){ return rwDone(item.id+":"+cs); })
+        : rwDone(item.id);
+      var row = el("div","rwit" + (whole ? " on" : ""));
+      var head = el("button","rwh");
+      head.innerHTML = '<span class="rwtick">' + (whole ? "✓" : "") + '</span>'
+                     + '<span class="rwl"><b>' + esc(item.label) + '</b>'
+                     + '<i>' + esc(item.detail) + '</i></span>';
+      head.onclick = function(){
+        if(item.per) item.per.forEach(function(cs){ rwSet(item.id+":"+cs, !whole); });
+        else rwSet(item.id, !whole);
+        draw(); rwSave();
+      };
+      row.appendChild(head);
+
+      if(item.per){
+        var chips = el("div","rwchips");
+        item.per.forEach(function(cs){
+          var k = item.id + ":" + cs, on = rwDone(k);
+          var b = btn("rwchip" + (on ? " on" : ""), (on ? "✓ " : "") + (NAMES[cs] || cs), function(){
+            rwSet(k, !on); draw(); rwSave();
+          });
+          chips.appendChild(b);
+        });
+        row.appendChild(chips);
+      }
+      body.appendChild(row);
+    });
+  };
+  draw();
+  c.appendChild(body);
+  root.appendChild(c);
+}
+
 /* ---------- tonight ---------- */
 function viewTonight(root){
   var wi = weekInfo(), di = dayIdx();
 
   if(wi.n === 0){
-    var c0 = el("div","card deepc");
-    c0.appendChild(el("div","lbl","Before week 1"));
-    c0.appendChild(el("h2",null,"Runway"));
-    c0.appendChild(el("p","muted","Week 1 opens Monday 7 September. Four things worth doing before it does — they buy you a week of slack."));
-    var ul = el("ul"); ul.style.cssText="margin:8px 0 0;padding-left:20px;color:var(--ink2);font-size:14.5px";
-    RUNWAY.forEach(function(t){ var li=el("li",null,esc(t)); li.style.marginBottom="6px"; ul.appendChild(li); });
-    c0.appendChild(ul);
-    root.appendChild(c0);
+    runwayCard(root, wi);
     if(!wk()) return;
     statsStrip(root);
     var pv = el("div","card");
@@ -2724,6 +2877,7 @@ function viewResult(root, q){
     S.scores[key(ME, wk(), q.day, q.slot)] = {score:g2.score, max:g2.max, wrong:g2.wrong, at:new Date().toISOString()};
     quizClear(wk(), q.day, q.slot);
     QUIZ=null; TAB="home"; save("Logged "+g2.score+"/"+g2.max);
+    maybeCelebrate(wk());
   });
   if(r.unmarked) sv.setAttribute("disabled","");
   foot.appendChild(sv);
@@ -2775,10 +2929,106 @@ function viewManual(root){
       at:new Date().toISOString()
     };
     MANUAL=null; TAB="tonight"; save("Logged "+m.score+"/"+(m.max||12));
+    maybeCelebrate(wk());
   }));
   r.appendChild(btn("act ghost","Cancel", function(){ MANUAL=null; TAB="tonight"; render(); }));
   c.appendChild(r);
   root.appendChild(c);
+}
+
+/* ---------- the celebration ----------
+   Finishing a course for the week is the only milestone in here that is worth a noise,
+   so it gets one: the Lottie in the middle of the screen and confetti across the page.
+   It fires once per course per week — the marker on the week grid is what remains. */
+var LOTTIE = null, PARTY = false;
+
+function loadLottie(){
+  if(window.lottie) return Promise.resolve(window.lottie);
+  if(LOTTIE) return LOTTIE;
+  /* Served from the app, not a CDN: this is a PWA and the celebration should still
+     happen on a bad connection or with no connection at all. 168 KB, loaded the first
+     time a course is finished and never again. */
+  LOTTIE = new Promise(function(res, rej){
+    var t = document.createElement("script");
+    t.src = "lottie.min.js";
+    t.onload = function(){ res(window.lottie); };
+    t.onerror = function(){ LOTTIE = null; rej(); };
+    document.head.appendChild(t);
+  });
+  return LOTTIE;
+}
+
+/* Paper across the whole page, independent of the Lottie so the celebration still
+   reads as one even when the CDN is unreachable. */
+function paperStorm(host){
+  var COLS = ["#6C4DF6","#F2B705","#26C281","#FF6B6B","#3AA0FF","#FF8FD1"];
+  var n = Math.min(120, Math.round(window.innerWidth / 4));
+  for(var i = 0; i < n; i++){
+    var b = document.createElement("i");
+    b.className = "conf";
+    var size = 6 + Math.random() * 7;
+    b.style.cssText =
+      "left:" + (Math.random() * 100) + "vw;" +
+      "width:" + size + "px;height:" + (size * (0.4 + Math.random())) + "px;" +
+      "background:" + COLS[i % COLS.length] + ";" +
+      "animation-delay:" + (Math.random() * 0.6).toFixed(2) + "s;" +
+      "animation-duration:" + (2.2 + Math.random() * 1.8).toFixed(2) + "s;" +
+      "--spin:" + Math.round(360 + Math.random() * 900) + "deg;" +
+      "--drift:" + Math.round(-140 + Math.random() * 280) + "px;" +
+      (Math.random() < 0.35 ? "border-radius:50%;" : "");
+    host.appendChild(b);
+  }
+}
+
+function courseParty(course, w, tally){
+  if(PARTY) return;
+  PARTY = true;
+
+  var ov = el("div","party");
+  ov.innerHTML =
+    '<div class="pbox">'
+  +   '<div class="plot" id="plotbox"></div>'
+  +   '<div class="lbl">Week ' + w + ' · finished</div>'
+  +   '<h2>' + esc(NAMES[course] || course) + '</h2>'
+  +   '<p class="muted">' + (tally.max
+        ? 'Every session for this course is scored. ' + tally.got + ' out of ' + tally.max + '.'
+        : 'Every session for this course is scored.') + '</p>'
+  + '</div>';
+  document.body.appendChild(ov);
+  paperStorm(ov);
+  celebrate();   /* the canvas burst as well, so the page itself reacts */
+
+  var close = function(){
+    if(!ov.parentNode) return;
+    ov.classList.add("out");
+    setTimeout(function(){ if(ov.parentNode) ov.remove(); PARTY = false; }, 260);
+  };
+  ov.onclick = close;
+  setTimeout(close, 4200);
+
+  loadLottie().then(function(lot){
+    var host = document.getElementById("plotbox");
+    if(!host || !ov.parentNode) return;
+    var anim = lot.loadAnimation({
+      container: host, renderer: "svg", loop: false, autoplay: true,
+      path: "confetti.json"
+    });
+    ov.addEventListener("click", function(){ try{ anim.destroy(); }catch(e){} });
+  }).catch(function(){
+    /* If the player will not load, take its 230 px back rather than leaving a hole. */
+    var host = document.getElementById("plotbox");
+    if(host) host.style.display = "none";
+  });
+}
+
+/* Called after every score is written. */
+function maybeCelebrate(w){
+  var due = newlyFinished(w);
+  if(!due.length) return;
+  var course = due[0];
+  var tally = courseTally(ME, w, course);
+  due.forEach(function(c){ markCelebrated(w, c); });
+  setTimeout(function(){ courseParty(course, w, tally); }, 260);
 }
 
 /* ---------- shell ---------- */
