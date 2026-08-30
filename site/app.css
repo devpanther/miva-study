@@ -45,7 +45,12 @@ body{
   background:var(--ground); color:var(--ink);
   font:15px/1.6 Nunito, ui-rounded, "Segoe UI", system-ui, sans-serif;
   -webkit-font-smoothing:antialiased;
+  /* Buttons, labels, headings and stat numbers are not there to be highlighted, and
+     catching one by accident on a phone is annoying. Selection is switched on only
+     where there is something worth reading. */
+  -webkit-user-select:none; user-select:none; -webkit-touch-callout:none;
 }
+input,textarea{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 h1,h2,h3,.num,.big{font-family:Fredoka, ui-rounded, "Segoe UI", system-ui, sans-serif}
 .num,.tnum{font-variant-numeric:tabular-nums}
 a{color:var(--deep)}
@@ -497,8 +502,10 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 
 /* ---------- selecting text to ask about it ----------
    Ordinary hold-and-drag selection: hold a word, drag the handles, take as much or as
-   little as you want. Android draws its own Copy / Share toolbar beside the highlight,
-   so ours is pinned to the bottom of the screen where that toolbar never goes. */
+   little as you want. Turned on for the reading surfaces only — study guides, weekly
+   summaries, briefs, the buddy's answers — since those are the places a question comes
+   from. Android draws its own Copy / Share toolbar beside the highlight, so ours is
+   pinned to the bottom of the screen where that toolbar never goes. */
 .selectable{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 .selectable ::selection{background:var(--deep-bg)}
 

@@ -1041,15 +1041,19 @@ function selText(){
   var s;
   try { s = window.getSelection(); } catch(e){ return null; }
   if(!s || s.isCollapsed || !s.rangeCount) return null;
-  /* Never hijack a selection inside something the person is typing in. */
-  var n = s.anchorNode;
+  /* Only the reading surfaces offer to be asked about, and never something the person
+     is typing in. CSS already stops a selection starting anywhere else, but a select-all
+     or a stray programmatic range can still land outside, so check it here too. */
+  var n = s.anchorNode, inside = false;
   while(n && n !== document.body){
     if(n.nodeType === 1){
       var tag = n.tagName;
       if(tag === "TEXTAREA" || tag === "INPUT" || n.isContentEditable) return null;
+      if(n.classList && n.classList.contains("selectable")) inside = true;
     }
     n = n.parentNode;
   }
+  if(!inside) return null;
   var t = String(s.toString()).replace(/\s+/g, " ").trim();
   if(t.length < SELMIN) return null;
   var r;
