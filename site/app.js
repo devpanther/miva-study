@@ -1506,22 +1506,33 @@ function weekGrid(root){
       + '<div class="cn">'+esc(NAMES[d.deep])+'</div>'
       + '<div class="ct">'+esc(chk&&chk.topic?chk.topic:d.dn)+'</div>';
     var foot = el("div","cf");
-    if(mine) foot.appendChild(el("span","sc "+scoreClass(mine), "you "+mine.score+"/"+mine.max));
+    if(mine){
+      foot.appendChild(el("span","sc "+scoreClass(mine), "you "+mine.score+"/"+mine.max));
+      if(mine.tries > 1 && mine.best > mine.score)
+        foot.appendChild(el("span","sc best", "best "+mine.best+"/"+mine.max));
+      if(mine.overrides)
+        foot.appendChild(el("span","sc best", mine.overrides + " changed"));
+    }
     others().forEach(function(p){
       var o = getScore(p.id,w,d.day);
       if(o) foot.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max));
     });
     var dprog = hasCheck ? quizProgress(w, d.day, "deep") : 0;
-    foot.appendChild(el("span","go", mine ? "retake →"
+    var dsaved = hasCheck ? quizRestore(w, d.day, "deep") : null;
+    var dreview = !!(dsaved && dsaved.submitted);
+    foot.appendChild(el("span","go", dreview ? "review →"
+      : (mine ? "practise →"
       : (dprog ? "resume · "+dprog+"/"+chk.questions.length+" →"
-      : (hasCheck ? chk.questions.length+" questions →" : "log a score →"))));
+      : (hasCheck ? chk.questions.length+" questions →" : "log a score →")))));
     dc.appendChild(foot);
     /* Tapping a topic used to launch the check cold. The card now opens the session —
        brief, videos, study guide — and the footer is the way into the questions. */
     dc.onclick = function(){ openSession(d.day, w); };
     foot.querySelector(".go").onclick = function(e){
       e.stopPropagation();
-      if(hasCheck) startQuiz(d.day); else manualScore(d.day);
+      if(!hasCheck){ manualScore(d.day); return; }
+      /* Scored, with nothing left to reopen: the only thing left to do is practise. */
+      startQuiz(d.day, "deep", !dreview && !!mine);
     };
     r.appendChild(dc);
 
@@ -2649,7 +2660,9 @@ function quizSave(){
     opts:QUIZ.opts, answers:QUIZ.answers, marks:QUIZ.marks,
     idx:QUIZ.idx, submitted:QUIZ.submitted, at:Date.now(),
     /* Marking costs a request; losing it to a reload would cost another. */
-    marked:QUIZ.marked, debrief:QUIZ.debrief
+    marked:QUIZ.marked, debrief:QUIZ.debrief, overrides:QUIZ.overrides,
+    /* so that reopening the results never counts as sitting it again */
+    logged:QUIZ.logged
   })); }catch(e){}
 }
 function quizRestore(w, day, slot){
@@ -2662,11 +2675,15 @@ function quizProgress(w, day, slot){
   if(!r || r.submitted) return 0;
   return Object.keys(r.answers||{}).length;
 }
-function startQuiz(day, slot){
+function startQuiz(day, slot, fresh){
   slot = slot || "deep";
   var chk = checkFor(weekData(wk()), day, slot);
   if(!chk || !chk.questions || !chk.questions.length){ manualScore(day, slot); return; }
   var prev = quizRestore(wk(), day, slot);
+  /* A finished attempt is kept so you can go back and read the explanations again —
+     safe now that the score locked when you submitted, so re-reading cannot improve it.
+     Starting a fresh sitting is an explicit choice, and it is always practice. */
+  if(fresh){ quizClear(wk(), day, slot); prev = null; }
   var opts = (prev && prev.opts) || chk.questions.map(function(qq){
     return (qq.type === "mcq" && qq.options) ? shuffled(qq.options.length) : null;
   });
@@ -2678,6 +2695,8 @@ function startQuiz(day, slot){
     idx:(prev && typeof prev.idx === "number") ? prev.idx : 0,
     marked:(prev && prev.marked) || null,
     debrief:(prev && prev.debrief) || null,
+    overrides:(prev && prev.overrides) || 0,
+    logged:(prev && prev.logged) || null,
     celebrated:false
   };
   BRIEF = false;
@@ -2847,6 +2866,50 @@ function viewQuiz(root){
   root.appendChild(out);
 }
 
+/* ---------- logging the score ----------
+   The score is written the moment the marking lands, before a single correct answer is
+   revealed. It used to be written by a Save button at the bottom of the results, which
+   meant you could submit, read every answer and explanation, walk away without saving,
+   and sit the same check again knowing the paper. The number is supposed to say how
+   much you knew at 21:00 on a Tuesday, and a number you can decline after seeing the
+   answers cannot say that.
+
+   Retakes still run — reading the explanations and going again is most of the point —
+   but the first, cold sitting is the score. Later attempts are kept alongside as a best,
+   and it is the cold score that Sunday's topics and the week's course strip read. */
+function logScore(q, g){
+  var k = key(ME, wk(), q.day, q.slot);
+  var prev = S.scores[k];
+  var now = new Date().toISOString();
+  if(prev && prev.at){
+    S.scores[k] = {
+      score: prev.score, max: prev.max, wrong: prev.wrong, at: prev.at,
+      tries: (prev.tries || 1) + 1,
+      best: Math.max(prev.best === undefined ? prev.score : prev.best, g.score),
+      overrides: prev.overrides || 0,
+      lastAt: now
+    };
+    return {cold:false, logged: g.score, kept: prev.score, max: g.max};
+  }
+  S.scores[k] = {score:g.score, max:g.max, wrong:g.wrong, at:now, tries:1};
+  return {cold:true, logged: g.score, max: g.max};
+}
+
+/* Changing a mark yourself has to move the score, or the button is decoration and a
+   marker that got one wrong stays wrong. It is recorded, and it is shown wherever the
+   score is shown — a corrected mark should look different from one nobody touched. */
+function relogAfterOverride(q, g, n){
+  var k = key(ME, wk(), q.day, q.slot);
+  var rec = S.scores[k];
+  if(!rec) return;
+  if(q.logged && q.logged.cold){
+    rec.score = g.score; rec.wrong = g.wrong;
+  }
+  rec.best = Math.max(rec.best === undefined ? rec.score : rec.best, g.score);
+  rec.overrides = (rec.overrides || 0) + 1;
+  push("Mark changed");
+}
+
 /* ---------- marking the written answers ----------
    Sent as one request per check: every written answer, plus the multiple-choice ones
    that were missed so the debrief comes back in the same round trip. The result is
@@ -2927,6 +2990,15 @@ function viewResult(root, q){
   }
 
   var r = grade(q);
+
+  /* Locked here, not at a button. Nothing below this line has been seen yet. */
+  if(!r.unmarked && !q.logged){
+    q.logged = logScore(q, r);
+    quizSave();
+    push(q.logged.cold ? "Logged " + r.score + "/" + r.max : "Practice run saved");
+    maybeCelebrate(wk());
+  }
+
   var st = stampFor(r);
 
   var rev = el("div","reveal");
@@ -2938,6 +3010,20 @@ function viewResult(root, q){
     ? "The " + r.wrong.length + " you missed are below, each with what the wrong option was confusing it with. That second part is usually where the real gap is."
     : "Nothing missed. Read the explanations anyway — a right answer for the wrong reason still scores 12."));
   root.appendChild(rev);
+
+  /* Say plainly what went into the record, so a practice run is never mistaken for the
+     score and the score is never something you thought you could still decline. */
+  if(q.logged){
+    var lg = el("div", "logline" + (q.logged.cold ? "" : " practice"));
+    var ov = q.overrides
+      ? " You have changed " + q.overrides + " mark" + (q.overrides === 1 ? "" : "s") + " yourself, which is recorded."
+      : "";
+    lg.innerHTML = q.logged.cold
+      ? "<b>Logged " + r.score + "/" + r.max + ".</b> It went in when the marking landed, before any answer below was shown." + ov
+      : "<b>Practice run.</b> Your logged score for this check is still " + q.logged.kept + "/" + q.logged.max
+        + ", and that is the one Sunday reads. This attempt counts towards your best." + ov;
+    root.appendChild(lg);
+  }
 
   if(q.gradeError){
     var ge = el("div","card fastc");
@@ -2975,11 +3061,11 @@ function viewResult(root, q){
   if(r.unmarked){
     var mk = el("div","card fastc");
     mk.appendChild(el("div","lbl","Mark these first"));
-    mk.appendChild(el("p","muted","Your written answers can't be graded automatically. Read the model answer under each one below and mark yourself honestly — the score only means something if you do."));
+    mk.appendChild(el("p","muted","The marker could not be reached, so the written ones are yours to mark. The model answers and the multiple-choice results stay hidden until you have — marking after reading them would not be marking."));
     root.appendChild(mk);
   }
 
-  if(r.wrong.length){
+  if(r.wrong.length && !r.unmarked){
     var wc = el("div","card");
     wc.appendChild(el("div","lbl","What to revisit"));
     wc.appendChild(el("p","muted","Each of these is the concept behind a question you missed, not just the question itself."));
@@ -3002,16 +3088,21 @@ function viewResult(root, q){
     var right = isMcq ? qCorrect(q, i) : -1;
     var missed = isMcq ? (q.answers[i] !== right) : (q.marks[i] === false);
     var pending = !isMcq && q.marks[i] === undefined;
-    var box = el("div","rev "+(pending ? "" : (missed ? "miss" : "hit")));
-    if(!pending) box.appendChild(el("span","tag "+(missed?"miss":"hit"), missed ? "Missed" : "Got it"));
+    var hush = r.unmarked;   /* nothing is revealed until the marking is settled */
+    var box = el("div","rev "+((pending || hush) ? "" : (missed ? "miss" : "hit")));
+    if(!pending && !hush) box.appendChild(el("span","tag "+(missed?"miss":"hit"), missed ? "Missed" : "Got it"));
     box.appendChild(el("div","rq", (i+1)+". "+esc(qq.q)));
 
     if(isMcq){
       var opts = el("div","opts");
       qOptions(q, i).forEach(function(opt, oi){
         var cls = "opt";
-        if(oi === right) cls += " right";
-        else if(q.answers[i] === oi) cls += " wrong";
+        /* While written answers are still unmarked, show what you picked and nothing
+           more. Which one was right is part of what you would be marking yourself on. */
+        if(!r.unmarked){
+          if(oi === right) cls += " right";
+          else if(q.answers[i] === oi) cls += " wrong";
+        } else if(q.answers[i] === oi) cls += " chosen";
         var b = el("button", cls);
         b.disabled = true;
         b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span>'+esc(opt)+'</span>';
@@ -3022,7 +3113,7 @@ function viewResult(root, q){
       box.appendChild(el("div","yours","<b>You wrote:</b> "+esc(q.answers[i]||"(nothing)")));
     }
 
-    if(qq.why || qq.concept){
+    if((qq.why || qq.concept) && !(r.unmarked && isMcq)){
       var e2 = el("div","expl");
       e2.innerHTML = (qq.concept ? "<b>"+esc(qq.concept)+"</b><br>" : "") + esc(qq.why||"");
       e2.style.marginTop = "9px";
@@ -3061,6 +3152,8 @@ function viewResult(root, q){
         q.marks[i] = !q.marks[i];
         q.marked[i] = Object.assign({}, mk, {correct: q.marks[i], overridden: true,
           verdict: q.marks[i] ? "You marked this right yourself." : "You marked this wrong yourself."});
+        q.overrides = (q.overrides || 0) + 1;
+        relogAfterOverride(q, grade(q), q.overrides);
         quizSave(); render();
       }));
       mb.appendChild(over);
@@ -3085,19 +3178,12 @@ function viewResult(root, q){
   });
 
   var foot = el("div","row");
-  var sv = btn("act big","Save "+r.score+"/"+r.max, function(){
-    var g2 = grade(q);
-    if(g2.unmarked){ toast("Mark your written answers first"); return; }
-    S.scores[key(ME, wk(), q.day, q.slot)] = {score:g2.score, max:g2.max, wrong:g2.wrong, at:new Date().toISOString()};
+  foot.appendChild(btn("act big","Done", function(){
     quizClear(wk(), q.day, q.slot);
-    QUIZ=null; TAB="home"; save("Logged "+g2.score+"/"+g2.max);
-    maybeCelebrate(wk());
-  });
-  if(r.unmarked) sv.setAttribute("disabled","");
-  foot.appendChild(sv);
-  foot.appendChild(btn("act ghost","Retake", function(){
-    quizClear(wk(), q.day, q.slot);
-    startQuiz(q.day, q.slot);
+    QUIZ=null; TAB="home"; render(); window.scrollTo(0,0);
+  }));
+  foot.appendChild(btn("act ghost", "Practise this again", function(){
+    startQuiz(q.day, q.slot, true);
   }));
   root.appendChild(foot);
 }

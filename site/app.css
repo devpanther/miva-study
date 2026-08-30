@@ -219,6 +219,9 @@ select.wksel:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
         color:var(--ink2);transition:.12s}
 .opt.on{border-color:var(--deep);background:var(--deep-bg)}
 .opt.on .k{background:var(--deep);color:#fff}
+/* Your pick, before anything is revealed. */
+.opt.chosen{border-color:var(--ink3)}
+.opt.chosen .k{background:var(--ink3);color:#fff}
 .opt.right{border-color:var(--good);background:var(--good-bg)}
 .opt.right .k{background:var(--good);color:#fff}
 .opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
@@ -616,3 +619,9 @@ ul.reqs li.n{color:var(--ink)}
 .teach{margin-top:10px;padding:11px 13px;border-radius:12px;
   background:var(--surface2);border-left:3px solid var(--deep)}
 .teach p{margin:0;font-size:13.8px;color:var(--ink2);line-height:1.62}
+
+.sc.best{background:var(--surface2);color:var(--ink3);border:1px solid var(--line)}
+.logline{padding:11px 14px;border-radius:12px;font-size:13.5px;line-height:1.6;
+  background:var(--good-bg);color:var(--ink2);border:1px solid var(--good)}
+.logline b{color:var(--ink)}
+.logline.practice{background:var(--surface2);border-color:var(--line)}
