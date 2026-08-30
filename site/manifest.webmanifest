@@ -65,8 +65,8 @@
   ],
   "shortcuts": [
     {
-      "name": "Tonight's session",
-      "short_name": "Tonight",
+      "name": "Tonight's study",
+      "short_name": "Study",
       "description": "The deep hour and the fast hour for today",
       "url": "./?tab=tonight",
       "icons": [
@@ -78,9 +78,9 @@
       ]
     },
     {
-      "name": "Sunday recap",
-      "short_name": "Sunday",
-      "description": "Tonight's two topics and the questions to ask",
+      "name": "Weekend class",
+      "short_name": "Weekend",
+      "description": "The two topics to teach, and everything to work on",
       "url": "./?tab=sunday",
       "icons": [
         {

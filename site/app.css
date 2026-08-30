@@ -744,3 +744,38 @@ ul.reqs li.n{color:var(--ink)}
 ol.insteps{margin:10px 0 0;padding-left:20px;color:var(--ink2);font-size:14px;line-height:1.7}
 ol.insteps li{margin-bottom:5px}
 ol.insteps b{color:var(--ink)}
+
+/* ---------- what to work on ---------- */
+.wkhd{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;
+  flex-wrap:wrap;margin-bottom:4px}
+.wkhd h3{font-size:17px;font-weight:600;margin:0}
+.gap{border-top:1px solid var(--line);padding:11px 0 12px}
+.gap:first-of-type{border-top:0;padding-top:6px}
+.gapn{font-size:14.5px;font-weight:700;line-height:1.45}
+.gapm{font-size:12px;color:var(--ink3);margin-top:2px}
+.row.gapa{margin-top:8px;gap:6px}
+.row.gapa .chip{cursor:pointer;height:27px;padding:0 10px;font-size:12px}
+.row.gapa a.chip{display:inline-flex;align-items:center}
+.row.gapa .chip:hover{border-color:var(--deep);color:var(--deep)}
+
+/* ---------- the knowledge chart ----------
+   One series, one hue, sorted. The fill is the same deep the app uses for progress
+   everywhere else; the coverage track underneath is deliberately quieter, because it
+   qualifies the bar rather than competing with it. */
+.kchart{margin-top:12px;display:flex;flex-direction:column;gap:11px}
+.krow{display:grid;grid-template-columns:74px 1fr 52px;align-items:center;gap:10px}
+.kname{font-size:12.5px;font-weight:700;color:var(--ink2);white-space:nowrap;
+  overflow:hidden;text-overflow:ellipsis}
+.kbars{min-width:0}
+.ktrack{height:12px;border-radius:99px;background:var(--surface2);overflow:hidden}
+.kfill{display:block;height:100%;border-radius:99px;background:var(--deep);
+  transition:width .4s cubic-bezier(.2,.9,.3,1)}
+.kcov{height:3px;border-radius:99px;background:var(--surface2);margin-top:4px;overflow:hidden}
+.kcov span{display:block;height:100%;border-radius:99px;background:var(--ink3);opacity:.55}
+.kval{text-align:right;line-height:1.2}
+.kval b{display:block;font-size:13.5px;font-weight:800;font-variant-numeric:tabular-nums}
+.kval i{display:block;font-style:normal;font-size:10.5px;color:var(--ink3);
+  font-variant-numeric:tabular-nums}
+.krow:hover .kfill{filter:brightness(1.08)}
+@media (max-width:400px){ .krow{grid-template-columns:64px 1fr 46px;gap:8px} }
+@media (prefers-reduced-motion:reduce){ .kfill{transition:none} }

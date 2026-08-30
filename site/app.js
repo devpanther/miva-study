@@ -13,7 +13,7 @@ var GRID = [
   {day:"Tue", deep:"PHY_102", dn:"New topic",          fast:"CSC_106", fn:"Whole week at 1.75×"},
   {day:"Wed", deep:"COS_102", dn:"Theory + algorithm", fast:"GST_122", fn:"Whole week + forum post"},
   {day:"Thu", deep:"MTH_102", dn:"Problems only",      fast:"PHY_108", fn:"Practical + report now"},
-  {day:"Fri", deep:"PHY_102", dn:"Derivations",        fast:"REVIEW",  fn:"Summaries + pick Sunday topics"},
+  {day:"Fri", deep:"PHY_102", dn:"Derivations",        fast:"REVIEW",  fn:"Summaries + pick the weekend topics"},
   {day:"Sat", deep:"COS_102", dn:"Write the code",     fast:"CATCHUP", fn:"Last week's questions"}
 ];
 var NAMES = {
@@ -72,7 +72,7 @@ var MISSED = [
   "<b>Missed a whole day?</b> Saturday's second hour absorbs it. That is what it is there for.",
   "<b>Missed several?</b> Deep hours only for the rest of the week. Let the GST courses ride — you can clear two of those weeks in one sitting later. You cannot do that with physics.",
   "<b>Lost the whole week?</b> Rejoin the current week. Never study two weeks at once; that is what actually ends these plans. The missed week gets picked up in revision.",
-  "<b>Keep the Sunday recap regardless.</b> It is the last thing to drop, not the first. It costs no preparation, and after a broken week it is the only hour that tells you what you actually retained."
+  "<b>Keep the weekend class regardless.</b> It is the last thing to drop, not the first. It costs no preparation, and after a broken week it is the only hour that tells you what you actually retained."
 ];
 var DEEPHOUR = [
   ["0–5", "Skim the PDF headings so you know where the video is going. Five minutes here saves twenty inside the lecture."],
@@ -553,8 +553,8 @@ function lowestFor(person, w){
   out.sort(function(a,b){ return a.ratio - b.ratio; });
   return out;
 }
-function sundayTopics(){
-  var w = wk();
+function sundayTopics(){ return sundayTopicsFor(wk()); }
+function sundayTopicsFor(w){
   var lists = S.people.map(function(p){ return {person:p, all:lowestFor(p.id, w)}; });
   if(!lists.some(function(l){ return l.all.length; })) return null;
   lists.forEach(function(l){ l.pick = l.all[0] || null; });
@@ -571,6 +571,94 @@ function sundayTopics(){
   }
   return lists;
 }
+/* ---------- what you are shaky on ----------
+   Every score carries the concepts behind the questions that were missed, so twelve
+   weeks of checks is already a map of what has not landed. This reads that map.
+
+   It is deliberately one-sided: a course you are getting right is not on it. The hour
+   is short and the point of it is the gaps, so anything already solid is folded into a
+   single line at the bottom and otherwise left alone. */
+var SOLID = 0.8;          /* at or above this, a course is not the problem */
+
+function masteryFor(person){
+  var by = {};
+  var touch = function(c){
+    if(!by[c]) by[c] = {course:c, got:0, max:0, done:0, of:0, concepts:{}};
+    return by[c];
+  };
+  /* Seed from the timetable, not from the weeks that happen to be loaded. A course you
+     have never sat still has to appear — "not sat yet" is a thing worth being told. */
+  GRID.forEach(function(d){
+    if(d.deep !== "REVIEW" && d.deep !== "CATCHUP") touch(d.deep);
+    if(d.fast !== "REVIEW" && d.fast !== "CATCHUP") touch(d.fast);
+  });
+  for(var w = 1; w <= 12; w++){
+    slotsFor(w).forEach(function(x){
+      if(x.course === "REVIEW" || x.course === "CATCHUP") return;
+      var m = touch(x.course);
+      m.of++;
+      var sc = getScore(person, w, x.day, x.slot);
+      if(!sc) return;
+      m.done++; m.got += sc.score; m.max += sc.max;
+      (sc.wrong || []).forEach(function(cn){
+        var k = String(cn).trim();
+        if(!k) return;
+        if(!m.concepts[k]) m.concepts[k] = {name:k, n:0, weeks:[], last:w, day:x.day, slot:x.slot};
+        var e = m.concepts[k];
+        e.n++; e.last = w; e.day = x.day; e.slot = x.slot;
+        if(e.weeks.indexOf(w) < 0) e.weeks.push(w);
+      });
+    });
+  }
+  return Object.keys(by).map(function(c){
+    var m = by[c];
+    m.ratio = m.max ? m.got / m.max : null;             /* null = never sat one */
+    m.missed = Object.keys(m.concepts).map(function(k){ return m.concepts[k]; })
+      .sort(function(a, b){ return (b.n - a.n) || (b.last - a.last); });
+    return m;
+  }).sort(function(a, b){
+    if(a.ratio === null) return 1;
+    if(b.ratio === null) return -1;
+    return a.ratio - b.ratio;
+  });
+}
+
+/* Both of you, because the hour is shared. A concept either of you missed is worth the
+   room; who missed it decides who is teaching and who is listening. */
+function weakAreas(){
+  var people = S.people.length ? S.people : (ME ? [{id:ME, name:meName()}] : []);
+  var per = people.map(function(p){ return {person:p, mastery:masteryFor(p.id)}; });
+  var merged = {};
+  per.forEach(function(row){
+    row.mastery.forEach(function(m){
+      if(!merged[m.course]) merged[m.course] = {course:m.course, who:[], missed:{}, done:0, of:m.of};
+      var g = merged[m.course];
+      g.done += m.done;
+      g.who.push({name:row.person.name, id:row.person.id, ratio:m.ratio, done:m.done, of:m.of});
+      m.missed.forEach(function(c){
+        var e = g.missed[c.name] || (g.missed[c.name] = {name:c.name, n:0, last:c.last, day:c.day, slot:c.slot, by:[]});
+        e.n += c.n;
+        if(c.last > e.last){ e.last = c.last; e.day = c.day; e.slot = c.slot; }
+        if(e.by.indexOf(row.person.name) < 0) e.by.push(row.person.name);
+      });
+    });
+  });
+  return Object.keys(merged).map(function(c){
+    var g = merged[c];
+    var rated = g.who.filter(function(x){ return x.ratio !== null; });
+    g.ratio = rated.length ? rated.reduce(function(a, x){ return a + x.ratio; }, 0) / rated.length : null;
+    g.list = Object.keys(g.missed).map(function(k){ return g.missed[k]; })
+      .sort(function(a, b){ return (b.n - a.n) || (b.last - a.last); });
+    /* Weak means: scoring below the bar, or missing the same thing more than once. */
+    g.weak = (g.ratio !== null && g.ratio < SOLID) || g.list.some(function(x){ return x.n > 1; });
+    return g;
+  }).sort(function(a, b){
+    if(a.ratio === null) return 1;
+    if(b.ratio === null) return -1;
+    return a.ratio - b.ratio;
+  });
+}
+
 function topicName(pick, w){
   if(!pick) return null;
   var c = checkFor(weekData(w), pick.day, pick.slot);
@@ -988,7 +1076,7 @@ function viewSignIn(root){
   wrap.appendChild(el("div","lbl","Sign in"));
   if(S.people.length === 0){
     wrap.appendChild(el("h2",null,"Who's setting this up?"));
-    wrap.appendChild(el("p","muted","Type your name. It becomes your area — your scores, your streak, your Sunday topic. There's room for two of you."));
+    wrap.appendChild(el("p","muted","Type your name. It becomes your area — your scores, your streak, your weekend topic. There's room for two of you."));
   } else if(S.people.length < (S.maxPeople||2)){
     wrap.appendChild(el("h2",null,"Which one are you?"));
     wrap.appendChild(el("p","muted", esc(S.people[0].name)+" is already here. Sign in as them, or take the second place."));
@@ -1022,7 +1110,7 @@ function viewSignIn(root){
   var info = el("div","card");
   info.appendChild(el("div","lbl","How this works"));
   info.appendChild(el("p","muted", STORAGE === "blob"
-    ? "Your scores are stored with the site, not on this device. Sign in with the same name on your phone or another laptop and everything comes with it — and you each see the other's scores, which is what picks Sunday's topics."
+    ? "Your scores are stored with the site, not on this device. Sign in with the same name on your phone or another laptop and everything comes with it — and you each see the other's scores, which is what picks the weekend class's topics."
     : "Scores are being kept on this device for now. Once the shared store is connected they follow you between devices and your partner can see them."));
   root.appendChild(info);
 }
@@ -1906,10 +1994,10 @@ function viewHome(root){
   var hero = el("div","card deepc");
   if(di === -1){
     hero.appendChild(el("div","lbl","Sunday · 19:00"));
-    hero.appendChild(el("h2",null,"Recap night"));
+    hero.appendChild(el("h2",null,"Weekend class"));
     hero.appendChild(el("p","muted","One hour. One topic each, taught with no notes."));
     var rs = el("div","row");
-    rs.appendChild(btn("act big","Open Sunday", function(){ TAB="sunday"; render(); }));
+    rs.appendChild(btn("act big","Open the weekend class", function(){ TAB="sunday"; render(); }));
     hero.appendChild(rs);
   } else {
     var g = GRID[di];
@@ -1975,7 +2063,7 @@ function viewHome(root){
     ]);
   });
 
-  fold(root, "The Sunday recap", "1 hr, both of you", function(b){
+  fold(root, "The weekend class", "1 hr, both of you", function(b){
     b.appendChild(el("p","muted","Teach the topic you understood <b>least</b>, not the one you understood best. Explaining something you only half-know is where it gets built — you find the hole the moment you say it out loud, and someone is there to notice you glossed over it."));
     bullets(b, [
       "One hour in total, not one hour each. Two topics — one yours, one theirs.",
@@ -1985,7 +2073,7 @@ function viewHome(root){
       "Whatever you couldn't explain goes to the top of next week's list."
     ]);
     var r = el("div","row");
-    r.appendChild(btn("act ghost","Open Sunday", function(){ TAB="sunday"; render(); }));
+    r.appendChild(btn("act ghost","Open the weekend class", function(){ TAB="sunday"; render(); }));
     b.appendChild(r);
   });
 
@@ -2096,10 +2184,10 @@ function viewTonight(root){
     statsStrip(root);
     var cs = el("div","card recapc");
     cs.appendChild(el("div","lbl","Sunday · 19:00"));
-    cs.appendChild(el("h2",null,"Recap night"));
-    cs.appendChild(el("p","muted","One hour. One topic each, taught with no notes. Open Sunday for tonight's two topics and the questions to ask."));
+    cs.appendChild(el("h2",null,"Weekend class"));
+    cs.appendChild(el("p","muted","One hour. One topic each, taught with no notes — then everything the week showed you were shaky on, with somewhere to go for each."));
     var r = el("div","row");
-    r.appendChild(btn("act big","Go to Sunday", function(){ TAB="sunday"; render(); }));
+    r.appendChild(btn("act big","Open the weekend class", function(){ TAB="sunday"; render(); }));
     cs.appendChild(r);
     root.appendChild(cs);
     return;
@@ -2146,7 +2234,7 @@ function viewTonight(root){
   c2.appendChild(el("div","lbl","22:00 – 23:00 · fast hour · 1.5–1.75×"));
   c2.appendChild(el("h2",null,esc(NAMES[g.fast])));
   topicBlock(c2, fastTopic || g.fn, "muted");
-  if(g.fast==="REVIEW") c2.appendChild(el("p","muted","Read back this week's summaries, then look at your scores. The lowest one is your Sunday topic."));
+  if(g.fast==="REVIEW") c2.appendChild(el("p","muted","Read back this week's summaries, then look at your scores. The lowest one is your weekend topic."));
   else if(g.fast==="CATCHUP") c2.appendChild(el("p","muted","Last week's question set, sat cold. Or whatever you missed this week."));
   else {
     c2.appendChild(el("p","muted","Watch at speed, read the PDF, take the quiz, post in the forum, close the laptop."));
@@ -2193,25 +2281,142 @@ function viewTonight(root){
 function viewWeek(root){
   var head = el("div","card");
   head.appendChild(el("div","lbl","The shape of every week"));
-  head.appendChild(el("p","muted","Deep hour first at normal speed, fast hour second at 1.5–1.75×. Six days. Sunday is the recap only."));
+  head.appendChild(el("p","muted","Deep hour first at normal speed, fast hour second at 1.5–1.75×. Six days. Sunday is the weekend class only."));
   root.appendChild(head);
   weekGrid(root);
 }
 
 /* ---------- sunday ---------- */
+/* Everything the term has shown you are shaky on, and — the part that matters — a way
+   into each one. A list of your weaknesses with nothing to do about it is just a list
+   of your weaknesses. */
+function weakSection(root){
+  var all = weakAreas();
+  if(!all.length) return;
+
+  var weak = all.filter(function(g){ return g.weak && g.ratio !== null; });
+  var solid = all.filter(function(g){ return !g.weak && g.ratio !== null; });
+  var untouched = all.filter(function(g){ return g.ratio === null; });
+
+  var head = el("div","card");
+  head.appendChild(el("div","lbl","What to work on"));
+  head.appendChild(el("h2",null, weak.length
+    ? "The " + weak.length + " course" + (weak.length === 1 ? "" : "s") + " the term says you are shaky on"
+    : "Nothing is behind"));
+  head.appendChild(el("p","muted", weak.length
+    ? "Drawn from every check you have taken, not just this week. Each line is a concept behind a question one of you missed, and each has somewhere to go — the written guide, the lecturer's own video, someone else teaching it, or Kizito."
+    : "Every course you have sat is at " + Math.round(SOLID * 100) + "% or better with nothing missed twice. Teach the two topics above and take the hour back."));
+  root.appendChild(head);
+
+  weak.forEach(function(g){
+    var c = el("div","card");
+    var top = el("div","wkhd");
+    top.innerHTML = '<div><div class="lbl" style="margin:0">' + esc(NAMES[g.course] || g.course) + '</div>'
+      + '<h3 style="margin:2px 0 0">' + Math.round(g.ratio * 100) + '% across ' + g.done + ' session' + (g.done === 1 ? "" : "s") + '</h3></div>';
+    var pills = el("div","row"); pills.style.marginTop = "0";
+    g.who.forEach(function(x){
+      if(x.ratio === null) return;
+      pills.appendChild(el("span","sc " + (x.ratio >= SOLID ? "g" : x.ratio >= 0.5 ? "o" : "b"),
+        esc(x.name.toLowerCase()) + " " + Math.round(x.ratio * 100) + "%"));
+    });
+    top.appendChild(pills);
+    c.appendChild(top);
+
+    if(!g.list.length){
+      c.appendChild(el("p","muted","Low overall, but nothing missed twice — read the week summaries back rather than hunting one concept."));
+      var gr = el("div","row");
+      gr.appendChild(btn("act ghost","Study guide", function(){ openGuide(g.course, wk(), "sunday"); }));
+      c.appendChild(gr);
+      root.appendChild(c);
+      return;
+    }
+
+    g.list.slice(0, 5).forEach(function(x){
+      var row = el("div","gap");
+      row.appendChild(el("div","gapn", esc(x.name)));
+      var meta = [];
+      if(x.n > 1) meta.push("missed " + x.n + " times");
+      meta.push("week " + x.last);
+      if(x.by.length && S.people.length > 1) meta.push(x.by.map(function(n){ return n.toLowerCase(); }).join(" and "));
+      row.appendChild(el("div","gapm", esc(meta.join(" · "))));
+
+      var acts = el("div","row gapa");
+      acts.appendChild(btn("chip","Guide", function(){ openGuide(g.course, x.last, "sunday"); }));
+      var lms = lmsWeekLink(g.course, x.last);
+      if(lms){
+        var a2 = el("a","chip","LMS ↗");
+        a2.href = lms; a2.target = "_blank"; a2.rel = "noopener";
+        a2.style.textDecoration = "none";
+        acts.appendChild(a2);
+      }
+      var q = searchTerms(g.course, x.name);
+      if(q){
+        var yt = el("a","chip","Watch ↗");
+        yt.href = "https://www.youtube.com/results?search_query=" + encodeURIComponent(q);
+        yt.target = "_blank"; yt.rel = "noopener";
+        yt.title = q;
+        yt.style.textDecoration = "none";
+        acts.appendChild(yt);
+      }
+      acts.appendChild(btn("chip","Ask Kizito", function(){ openBuddy("concept", x.name); }));
+      row.appendChild(acts);
+      c.appendChild(row);
+    });
+    if(g.list.length > 5)
+      c.appendChild(el("p","muted","And " + (g.list.length - 5) + " more, further down the list."));
+    root.appendChild(c);
+  });
+
+  /* What is going fine gets one line and no attention. */
+  if(solid.length || untouched.length){
+    var f = el("div","card");
+    f.appendChild(el("div","lbl","Not on the list"));
+    if(solid.length){
+      f.appendChild(el("p","muted","<b>Going fine:</b> " + solid.map(function(g){
+        return esc(NAMES[g.course] || g.course) + " " + Math.round(g.ratio * 100) + "%";
+      }).join(" · ") + ". Left alone on purpose."));
+    }
+    if(untouched.length){
+      f.appendChild(el("p","muted","<b>Not sat yet:</b> " + untouched.map(function(g){
+        return esc(NAMES[g.course] || g.course);
+      }).join(" · ") + ". Nothing to say about these until you take a check."));
+    }
+    root.appendChild(f);
+  }
+}
+
+function weekHasScores(w){
+  return slotsFor(w).some(function(x){
+    return S.people.some(function(p){ return !!getScore(p.id, w, x.day, x.slot); });
+  });
+}
+
 function viewSunday(root){
   var w = wk();
-  if(w===0){ root.appendChild(el("div","empty","<b>No week loaded yet</b>The first recap is Sunday 13 September.")); return; }
-  var t = sundayTopics();
+  if(w===0){ root.appendChild(el("div","empty","<b>No week loaded yet</b>The first weekend class is Sunday 13 September.")); return; }
+
+  /* The class is about the week you just finished. Once a week is complete the picker
+     walks on to the next one, which on Sunday night is a week with nothing in it — so
+     unless you have chosen a week yourself, fall back to the last one that has scores. */
+  var moved = false;
+  if(!weekHasScores(w) && (VIEWWEEK === null || VIEWWEEK === undefined)){
+    for(var b2 = w - 1; b2 >= 1; b2--){
+      if(weekHasScores(b2)){ w = b2; moved = true; break; }
+    }
+  }
+  var t = sundayTopicsFor(w);
 
   var intro = el("div","card recapc");
-  intro.appendChild(el("div","lbl","Sunday 19:00 – 20:00"));
+  intro.appendChild(el("div","lbl","Sunday 19:00 – 20:00" + (moved ? " · week " + w : "")));
   intro.appendChild(el("h2",null,"One hour. One topic each."));
   intro.appendChild(el("p","muted","Teach the thing you scored <b>lowest</b> on, not the thing you know best. You find the hole the moment you try to say it out loud, and there is someone there to notice you glossed over it."));
+  if(moved) intro.appendChild(el("p","muted","Week " + w + ", because that is the week with scores in it — the picker has already moved on to the next one."));
   root.appendChild(intro);
 
   if(!t || !t.some(function(l){ return l.pick; })){
-    root.appendChild(el("div","empty","<b>No scores logged this week</b>Take one check and the topics pick themselves."));
+    root.appendChild(el("div","empty","<b>Nothing scored in week " + w + " yet</b>Take one check and the two topics pick themselves. What to work on, below, looks across the whole term."));
+    /* The term-wide gaps do not depend on this week having scores, so they stay. */
+    weakSection(root);
     return;
   }
 
@@ -2226,7 +2431,11 @@ function viewSunday(root){
       root.appendChild(c); return;
     }
     if(l.bumped) c.appendChild(el("p","muted","Lowest score was in the same course as the other one, so this is the next lowest elsewhere."));
-    c.appendChild(el("h3",null, esc(topicName(pick, w))));
+    /* A session topic runs to a paragraph. As an <h3> it was a wall of bold; through
+       the brief renderer it is a clamped summary with the full thing one tap away. */
+    c.appendChild(el("h3",null, esc(NAMES[pick.course] || pick.course) + " · " + esc(pick.day)
+      + (pick.slot === "fast" ? " fast hour" : " deep hour")));
+    topicBlock(c, topicName(pick, w), "muted");
     if(pick.slot === "fast"){
       c.appendChild(el("p","muted","This one is a recall course, so don't teach it as a concept — <b>quiz each other on the lists</b> until you can both produce them cold. Producing beats recognising."));
     }
@@ -2242,6 +2451,8 @@ function viewSunday(root){
     c.appendChild(ol);
     root.appendChild(c);
   });
+
+  weakSection(root);
 
   var a = S.people[0] ? esc(S.people[0].name) : "You";
   var b = S.people[1] ? esc(S.people[1].name) : "Them";
@@ -2260,7 +2471,53 @@ function viewSunday(root){
 }
 
 /* ---------- progress ---------- */
+/* ---------- how much of it you actually know ----------
+   The job is magnitude, low to high, across seven courses — so it is a bar chart, one
+   hue, sorted worst first, and the number is written on the bar rather than guessed
+   off an axis. No legend: there is one series and the title names it.
+
+   The second number on each row is the one that keeps it honest. 100% across one
+   session is not knowing a course; it is having sat one check. Accuracy without
+   coverage is the way this kind of chart usually lies, so both are always shown and a
+   thin coverage track sits under the bar. */
+function knowledgeChart(root){
+  var rows = weakAreas().filter(function(g){ return g.ratio !== null; });
+  var none = weakAreas().filter(function(g){ return g.ratio === null; });
+  if(!rows.length) return false;
+
+  var c = el("div","card");
+  c.appendChild(el("div","lbl","What you know"));
+  c.appendChild(el("h2",null,"Accuracy by course, weakest first"));
+  c.appendChild(el("p","muted","Every check either of you has taken. The thin line under each bar is how much of that course you have actually sat — a high score over one session is a small sample, not a strong course."));
+
+  var ch = el("div","kchart");
+  rows.forEach(function(g){
+    var pct = Math.round(g.ratio * 100);
+    var cov = g.of ? Math.min(1, g.done / g.of) : 0;
+    var r = el("div","krow");
+    r.setAttribute("title", (NAMES[g.course] || g.course) + ": " + pct + "% over "
+      + g.done + " of " + g.of + " sessions");
+    r.innerHTML =
+        '<div class="kname">' + esc(NAMES[g.course] || g.course) + '</div>'
+      + '<div class="kbars">'
+      +   '<div class="ktrack"><span class="kfill" style="width:' + Math.max(pct, 1.5) + '%"></span></div>'
+      +   '<div class="kcov"><span style="width:' + Math.round(cov * 100) + '%"></span></div>'
+      + '</div>'
+      + '<div class="kval"><b>' + pct + '%</b><i>' + g.done + '/' + g.of + '</i></div>';
+    ch.appendChild(r);
+  });
+  c.appendChild(ch);
+
+  if(none.length){
+    c.appendChild(el("p","muted","<b>No data:</b> " + none.map(function(g){
+      return esc(NAMES[g.course] || g.course); }).join(" · ") + ". Not drawn rather than drawn as zero — you have not sat them."));
+  }
+  root.appendChild(c);
+  return true;
+}
+
 function viewProgress(root){
+  var drew = knowledgeChart(root);
   var ppl = S.people, rows = [];
   for(var w=1; w<=12; w++){
     var any = false, r = {w:w, cells:[]};
@@ -2276,7 +2533,11 @@ function viewProgress(root){
     });
     if(any) rows.push(r);
   }
-  if(!rows.length){ root.appendChild(el("div","empty","<b>Nothing logged yet</b>Scores appear here as you take the checks.")); return; }
+  if(!rows.length){
+    if(!drew) root.appendChild(el("div","empty","<b>Nothing logged yet</b>Scores appear here as you take the checks."));
+    return;
+  }
+  root.appendChild(el("div","lbl","Every score, week by week"));
 
   var t = el("div","tw");
   var html = '<table><thead><tr><th>Week</th>';
@@ -2332,7 +2593,7 @@ function viewData(root){
   c.appendChild(el("div","lbl","Sync"));
   if(STORAGE === "blob"){
     c.appendChild(el("h2",null,"Shared"));
-    c.appendChild(el("p","muted","Scores are saved with the site. Both of you see the same thing on any device, and Sunday's topics are picked from both sets of scores."));
+    c.appendChild(el("p","muted","Scores are saved with the site. Both of you see the same thing on any device, and the weekend class picks its topics from both sets of scores."));
   } else if(STORAGE === "none"){
     c.appendChild(el("h2",null,"This device only"));
     c.appendChild(el("p","muted","No shared store is connected yet, so scores stay in this browser. Everything else works. Connect a Blob store to the Vercel project and this switches over on its own — nothing here needs changing."));
@@ -3087,7 +3348,7 @@ function stampFor(r){
   if(p >= 0.83) return {t:"Sharp", c:"g"};
   if(p >= 0.66) return {t:"Solid", c:"o"};
   if(p >= 0.5)  return {t:"Shaky", c:"o"};
-  return {t:"Sunday's topic", c:"b"};
+  return {t:"For the weekend", c:"b"};
 }
 
 function viewQuiz(root){
@@ -3713,6 +3974,10 @@ function pickWeek(v){
 function closeWeekMenu(focusBack){
   if(!WKMENU) return;
   var m = WKMENU; WKMENU = null;
+  /* The chevron points up while the menu is open, and it is aria-expanded that turns
+     it. Only the open and close functions may set it: leaving that to the click
+     handler meant closing by Escape or by tapping outside never turned it back. */
+  if(m.anchor) m.anchor.setAttribute("aria-expanded", "false");
   document.removeEventListener("keydown", m.onKey, true);
   if(m.scrim) m.scrim.remove();
   m.box.classList.add("out");
@@ -3720,8 +3985,18 @@ function closeWeekMenu(focusBack){
   if(focusBack && m.anchor && document.contains(m.anchor)) m.anchor.focus();
 }
 
+/* Under the button, and nudged back on screen if it would hang off the edge. */
+function placeWeekMenu(box, anchor){
+  if(!box || !anchor || box.classList.contains("assheet")) return;
+  var r = anchor.getBoundingClientRect();
+  box.style.top = Math.round(r.bottom + 8) + "px";
+  var w = box.offsetWidth || 264;
+  box.style.left = Math.round(Math.max(10, Math.min(window.innerWidth - w - 10, r.right - w))) + "px";
+}
+
 function openWeekMenu(anchor){
   if(WKMENU){ closeWeekMenu(true); return; }
+  if(anchor) anchor.setAttribute("aria-expanded", "true");
   var touch = !(window.matchMedia && window.matchMedia("(hover:hover)").matches);
   var opts = weekOptions();
   var cur = onRunway() ? "runway" : wk();
@@ -3763,11 +4038,7 @@ function openWeekMenu(anchor){
   document.body.appendChild(box);
 
   if(!touch){
-    /* Under the button, and nudged back on screen if it would hang off the edge. */
-    var r = anchor.getBoundingClientRect();
-    box.style.top = Math.round(r.bottom + 8) + "px";
-    var w = box.offsetWidth || 240;
-    box.style.left = Math.round(Math.max(10, Math.min(window.innerWidth - w - 10, r.right - w))) + "px";
+    placeWeekMenu(box, anchor);
   } else {
     dismissable(box, list, function(){ closeWeekMenu(true); });
   }
@@ -3866,7 +4137,6 @@ function applyScroll(){
 function render(){
   var root = document.getElementById("root");
   SCROLLKEY = null;          /* stop recording while the DOM is swapped out */
-  closeWeekMenu(false);      /* its anchor is about to be replaced */
   clearSelPill();
   root.innerHTML = "";
 
@@ -3898,7 +4168,6 @@ function render(){
       + ((here ? cal.n === 0 : cal.n === curW) ? '<span class="wkb now">now</span>' : '');
     trig.onclick = function(e){
       e.stopPropagation();
-      trig.setAttribute("aria-expanded", WKMENU ? "false" : "true");
       openWeekMenu(trig);
     };
     selw.appendChild(trig);
@@ -3926,7 +4195,9 @@ function render(){
        thing that matters tonight is tonight's check. It appears in week 12 and stays
        for revision and exam week; before that it lives in Settings. */
     var showExam = weekInfo().n >= 12 || TAB === "exam";
-    var TABSET = [["home","Home"],["tonight","Tonight"],["sunday","Sunday"],["progress","Stats"]];
+    /* The URL keys stay as they were, so old links and the home-screen shortcuts keep
+       working; only what you read has changed. */
+    var TABSET = [["home","Home"],["tonight","Study"],["sunday","Weekend class"],["progress","Stats"]];
     if(showExam) TABSET.push(["exam","Exam"]);
     TABSET.forEach(function(t){
       tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
@@ -3975,6 +4246,21 @@ function render(){
 
   applyScroll();
   armHello();
+
+  /* The menu lives on <body>, but its anchor was just thrown away and rebuilt. Point it
+     at the new button rather than closing: a background refresh — the LMS index landing,
+     a sync finishing — used to dismiss the menu under your thumb, which on a slow
+     connection is exactly when it would happen. */
+  if(WKMENU){
+    var nb = document.getElementById("wkbtn");
+    if(nb){
+      WKMENU.anchor = nb;
+      nb.setAttribute("aria-expanded", "true");
+      placeWeekMenu(WKMENU.box, nb);
+    } else {
+      closeWeekMenu(false);
+    }
+  }
 }
 
 /* ---------- boot ---------- */
