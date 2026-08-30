@@ -58,9 +58,14 @@ button{font:inherit;cursor:pointer}
 :focus-visible{outline:2.5px solid var(--deep);outline-offset:2px;border-radius:6px}
 
 /* ---------- shell ---------- */
+/* Installed to a home screen the page runs under the status bar and the home
+   indicator, so every fixed edge is inset by the safe area. On a browser tab these
+   all resolve to zero and nothing moves. */
 .bar{position:sticky;top:0;z-index:40;background:var(--ground);
-     border-bottom:1px solid var(--line)}
-.barin{max-width:760px;margin:0 auto;padding:12px 16px 0}
+     border-bottom:1px solid var(--line);
+     padding-top:env(safe-area-inset-top, 0px)}
+.barin{max-width:760px;margin:0 auto;
+       padding:12px calc(16px + env(safe-area-inset-right, 0px)) 0 calc(16px + env(safe-area-inset-left, 0px))}
 .brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .brand h1{font-size:19px;font-weight:600;margin:0;letter-spacing:-.015em}
 .spacer{flex:1}
@@ -94,7 +99,10 @@ select.wksel:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
 .tabs button:hover{color:var(--ink2);background:var(--surface2)}
 .tabs button.on{background:var(--deep);color:#fff;box-shadow:var(--shadow)}
 
-.wrap{max-width:760px;margin:0 auto;padding:16px 16px 72px;
+.wrap{max-width:760px;margin:0 auto;
+      padding:16px calc(16px + env(safe-area-inset-right, 0px))
+              calc(72px + env(safe-area-inset-bottom, 0px))
+              calc(16px + env(safe-area-inset-left, 0px));
       display:flex;flex-direction:column;gap:13px}
 
 /* ---------- cards ---------- */
@@ -367,7 +375,8 @@ body:has(.party) canvas.confetti{z-index:121}
 /* ---------- study buddy ---------- */
 /* A solid disc with a question mark that writes itself. The button itself never
    moves; all the life is inside the glyph. */
-.buddybtn{position:fixed;right:16px;bottom:16px;z-index:70;width:58px;height:58px;
+.buddybtn{position:fixed;right:calc(16px + env(safe-area-inset-right, 0px));
+  bottom:calc(16px + env(safe-area-inset-bottom, 0px));z-index:70;width:58px;height:58px;
   border:0;border-radius:50%;background:var(--buddy);color:var(--buddy-ink);
   box-shadow:var(--shadow-lift);
   display:grid;place-items:center;padding:0;overflow:visible;
@@ -476,7 +485,8 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 /* Pinned to the bottom, not to the selection: Android's own Copy / Share toolbar
    owns the space around highlighted text and cannot be turned off. The right inset
    clears the study-buddy button. */
-.selpill{position:fixed;z-index:90;left:16px;right:86px;bottom:18px;
+.selpill{position:fixed;z-index:90;left:calc(16px + env(safe-area-inset-left, 0px));
+  right:calc(86px + env(safe-area-inset-right, 0px));bottom:calc(18px + env(safe-area-inset-bottom, 0px));
   display:flex;align-items:center;gap:8px;
   padding:13px 16px;border:0;border-radius:var(--r-pill);
   background:var(--buddy);color:var(--buddy-ink);
@@ -528,7 +538,8 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 .selectable{-webkit-user-select:text;user-select:text;-webkit-touch-callout:default}
 .selectable ::selection{background:var(--deep-bg)}
 
-.selcopy{position:fixed;z-index:90;right:16px;bottom:84px;
+.selcopy{position:fixed;z-index:90;right:calc(16px + env(safe-area-inset-right, 0px));
+  bottom:calc(84px + env(safe-area-inset-bottom, 0px));
   width:44px;height:44px;border:0;border-radius:50%;
   background:var(--surface);color:var(--ink2);
   border:1px solid var(--line);display:grid;place-items:center;
@@ -625,3 +636,9 @@ ul.reqs li.n{color:var(--ink)}
   background:var(--good-bg);color:var(--ink2);border:1px solid var(--good)}
 .logline b{color:var(--ink)}
 .logline.practice{background:var(--surface2);border-color:var(--line)}
+
+/* ---------- installing it ---------- */
+.card.instc{border-top:3px solid var(--deep)}
+ol.insteps{margin:10px 0 0;padding-left:20px;color:var(--ink2);font-size:14px;line-height:1.7}
+ol.insteps li{margin-bottom:5px}
+ol.insteps b{color:var(--ink)}

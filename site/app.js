@@ -321,6 +321,105 @@ function slotsFor(w){
   });
   return out;
 }
+/* ---------- installing it ----------
+   The whole point of this thing is that it opens in one tap at 21:00, which means it
+   belongs on a home screen rather than in a browser tab behind eleven others.
+
+   Android hands us a real prompt, so we show a button that fires it. iOS never has, and
+   never will, so there we show the actual steps — which are worth spelling out because
+   "Add to Home Screen" is buried in the share sheet and is only in Safari, not Chrome. */
+var INSTALL = null;      /* Android's deferred prompt, when the browser offers one */
+var INSTALL_LS = "miva_install_v1";
+
+window.addEventListener("beforeinstallprompt", function(e){
+  e.preventDefault();
+  INSTALL = e;
+  if(TAB === "home" || TAB === "settings") render();
+});
+window.addEventListener("appinstalled", function(){
+  INSTALL = null;
+  try{ localStorage.setItem(INSTALL_LS, "installed"); }catch(e){}
+  toast("Installed");
+  render();
+});
+
+function isInstalled(){
+  try{
+    if(window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) return true;
+    if(window.matchMedia && window.matchMedia("(display-mode: minimal-ui)").matches) return true;
+  }catch(e){}
+  return !!window.navigator.standalone;   /* iOS */
+}
+function isIOS(){
+  var ua = navigator.userAgent || "";
+  if(/iPad|iPhone|iPod/.test(ua)) return true;
+  /* iPadOS reports itself as a Mac; the touch points give it away. */
+  return /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+}
+function isSafari(){
+  var ua = navigator.userAgent || "";
+  return /Safari/.test(ua) && !/CriOS|FxiOS|EdgiOS|OPiOS|Chrome|Chromium/.test(ua);
+}
+function installDismissed(){
+  try{ return !!localStorage.getItem(INSTALL_LS); }catch(e){ return false; }
+}
+function dismissInstall(){
+  try{ localStorage.setItem(INSTALL_LS, "dismissed"); }catch(e){}
+  render();
+}
+
+/* The card on Home. Offered once; after that it lives in Settings and nowhere else. */
+function installCard(root, always){
+  if(isInstalled()) return;
+  if(!always && installDismissed()) return;
+  if(!always && !INSTALL && !isIOS()) return;   /* a desktop browser with no prompt: leave it alone */
+
+  var c = el("div","card instc");
+  c.appendChild(el("div","lbl","Put it on your home screen"));
+  c.appendChild(el("h2",null,"One tap at nine o'clock"));
+
+  if(INSTALL){
+    c.appendChild(el("p","muted","It installs as a proper app: its own icon, no browser bars, and the shell still opens when the signal does not."));
+    var r = el("div","row");
+    r.appendChild(btn("act big","Install", function(){
+      var p2 = INSTALL; INSTALL = null;
+      p2.prompt();
+      p2.userChoice.then(function(res){
+        if(res && res.outcome === "accepted"){ try{ localStorage.setItem(INSTALL_LS,"installed"); }catch(e){} }
+        else { INSTALL = p2; }
+        render();
+      });
+    }));
+    if(!always) r.appendChild(btn("act ghost","Not now", dismissInstall));
+    c.appendChild(r);
+  }
+  else if(isIOS() && isSafari()){
+    c.appendChild(el("p","muted","Safari does not offer a button for this, so it is three taps by hand:"));
+    var ol = el("ol","insteps");
+    ol.appendChild(el("li",null,"Tap the <b>Share</b> button at the bottom of Safari — the square with an arrow out of it."));
+    ol.appendChild(el("li",null,"Scroll down and tap <b>Add to Home Screen</b>."));
+    ol.appendChild(el("li",null,"Tap <b>Add</b>. It appears on your home screen as <b>Study</b>."));
+    c.appendChild(ol);
+    if(!always){
+      var r2 = el("div","row");
+      r2.appendChild(btn("act ghost","Done, hide this", dismissInstall));
+      c.appendChild(r2);
+    }
+  }
+  else if(isIOS()){
+    c.appendChild(el("p","muted","On an iPhone only Safari can add a page to the home screen — Chrome and the rest cannot. Open this same address in Safari and the steps are under the Share button."));
+    if(!always){
+      var r3 = el("div","row");
+      r3.appendChild(btn("act ghost","Not now", dismissInstall));
+      c.appendChild(r3);
+    }
+  }
+  else {
+    c.appendChild(el("p","muted","Your browser has not offered to install it yet. In Chrome it is the icon at the right-hand end of the address bar, or Install from the ⋮ menu."));
+  }
+  root.appendChild(c);
+}
+
 /* ---------- the runway ----------
    Ticks live in the same store the scores do, so they follow you between devices and
    between the two of you. They carry no "at" and no "score", which keeps them out of
@@ -1620,6 +1719,7 @@ function viewHome(root){
     lr.appendChild(btn("act ghost","The calendar", function(){ TAB="sunday"; syncUrl(); render(); window.scrollTo(0,0); }));
     la.appendChild(lr);
     root.appendChild(la);
+    installCard(root);
     statsStrip(root);
     weekGrid(root);
     return;
@@ -1652,6 +1752,7 @@ function viewHome(root){
   }
   root.appendChild(hero);
 
+  installCard(root);
   statsStrip(root);
 
   var wh = el("div","card");
@@ -2010,6 +2111,15 @@ function viewData(root){
   tb.appendChild(btn("act ghost","← Back to Home", function(){ TAB="home"; syncUrl(); render(); window.scrollTo(0,0); }));
   top.appendChild(tb);
   root.appendChild(top);
+
+  if(isInstalled()){
+    var ic = el("div","card");
+    ic.appendChild(el("div","lbl","Installed"));
+    ic.appendChild(el("p","muted","You are running this from your home screen. The shell is kept on the device, so it opens even with no signal — your scores and the week's material still need a connection."));
+    root.appendChild(ic);
+  } else {
+    installCard(root, true);
+  }
 
   var c = el("div","card"+(STORAGE==="blob"?"":" fastc"));
   c.appendChild(el("div","lbl","Sync"));
