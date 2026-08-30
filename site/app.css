@@ -384,39 +384,71 @@ body:has(.party) canvas.confetti{z-index:121}
 .buddybtn:hover{transform:scale(1.05)}
 .buddybtn:active{box-shadow:var(--shadow);transform:scale(.97)}
 
-/* The hook sweeps over and down, the stem follows, the dot lands, and it holds
-   solid for seven seconds before writing itself again. */
-.qmark .q-stroke{stroke-dasharray:100;stroke-dashoffset:100;
-  animation:qdraw 9s cubic-bezier(.5,0,.2,1) infinite}
-@keyframes qdraw{
-  0%{stroke-dashoffset:100;opacity:1}
-  14%{stroke-dashoffset:0}
-  92%{stroke-dashoffset:0;opacity:1}
-  97%,100%{stroke-dashoffset:0;opacity:0}
-}
-.qmark .q-dot{transform-box:fill-box;transform-origin:center;transform:scale(0);
-  animation:qdot 9s cubic-bezier(.3,1.5,.5,1) infinite}
-@keyframes qdot{
-  0%,14%{transform:scale(0);opacity:1}
-  22%,92%{transform:scale(1);opacity:1}
-  97%,100%{transform:scale(1);opacity:0}
-}
-/* reach for it and it redraws immediately rather than waiting out the loop */
-.buddybtn:hover .qmark .q-stroke{animation:qdraw 1.5s cubic-bezier(.5,0,.2,1)}
-.buddybtn:hover .qmark .q-dot{animation:qdot 1.5s cubic-bezier(.3,1.5,.5,1)}
+/* ---------- Kizito ----------
+   Fur takes its colour from the theme so he sits on the button rather than on top of
+   it. He breathes, his ears tilt out of step with each other, and he blinks on a slow
+   loop that is deliberately not a round number of seconds — a blink you can predict
+   reads as a machine. */
+.buddybtn{--fur:#F0B36A; --fur-in:#FCE3C0; --fur-ink:#4A2C13}
+@media (prefers-color-scheme:dark){ .buddybtn{--fur:#E9A85B; --fur-in:#FBDDB4; --fur-ink:#3E230F} }
+[data-theme="dark"] .buddybtn{--fur:#E9A85B; --fur-in:#FBDDB4; --fur-ink:#3E230F}
 
-/* Someone who has asked not to see motion gets the finished mark, held still. */
-@media (prefers-reduced-motion:reduce){
-  .qmark .q-stroke,.qmark .q-dot,
-  .buddybtn:hover .qmark .q-stroke,.buddybtn:hover .qmark .q-dot{animation:none}
-  .qmark .q-stroke{stroke-dashoffset:0}
-  .qmark .q-dot{transform:scale(1)}
-  .buddybtn:hover{transform:none}
+.teddy{display:block;overflow:visible}
+.teddy .t-bob{transform-origin:32px 40px;animation:tbob 4.2s ease-in-out infinite}
+@keyframes tbob{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  25%{transform:translateY(-1.1px) rotate(-1.6deg)}
+  50%{transform:translateY(0) rotate(0deg)}
+  75%{transform:translateY(-1.1px) rotate(1.6deg)}
 }
-.buddybtn .dot{position:absolute;top:-2px;right:-2px;min-width:22px;height:22px;padding:0 5px;
-  border-radius:11px;background:var(--bad);color:#fff;font:800 12px/22px Nunito,sans-serif;
-  box-shadow:0 0 0 3px var(--ground);animation:pop2 .3s cubic-bezier(.2,1.4,.4,1)}
-@keyframes pop2{from{transform:scale(0)}to{transform:scale(1)}}
+.teddy .t-ear{transform-box:fill-box;transform-origin:center}
+.teddy .t-ear-l{animation:tearl 4.2s ease-in-out infinite}
+.teddy .t-ear-r{animation:tearr 4.2s ease-in-out infinite}
+@keyframes tearl{0%,100%{transform:rotate(0) scale(1)}30%{transform:rotate(-7deg) scale(1.06)}}
+@keyframes tearr{0%,100%{transform:rotate(0) scale(1)}70%{transform:rotate(7deg) scale(1.06)}}
+.teddy .t-eyes{transform-box:fill-box;transform-origin:center;animation:tblink 5.7s infinite}
+@keyframes tblink{0%,95.5%,100%{transform:scaleY(1)}97.4%{transform:scaleY(.12)}}
+
+/* Reached for, or waving hello: he perks up. */
+.buddybtn:hover .teddy .t-bob{animation-duration:1.4s}
+.buddybtn.waving .teddy .t-bob{animation:twave 1.6s cubic-bezier(.3,1.4,.5,1)}
+@keyframes twave{
+  0%{transform:translateY(0) rotate(0)}
+  18%{transform:translateY(-3px) rotate(-11deg)}
+  38%{transform:translateY(-1px) rotate(9deg)}
+  58%{transform:translateY(-2.5px) rotate(-7deg)}
+  78%{transform:translateY(0) rotate(4deg)}
+  100%{transform:translateY(0) rotate(0)}
+}
+
+/* The greeting. Beside the button, never over the page, and it cannot be tapped —
+   so it can never take a tap meant for whatever is underneath it. */
+.hello{position:fixed;z-index:69;pointer-events:none;
+  right:calc(84px + env(safe-area-inset-right, 0px));
+  bottom:calc(30px + env(safe-area-inset-bottom, 0px));
+  max-width:min(60vw,240px);
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:10px 14px;box-shadow:var(--shadow-lift);
+  transform-origin:calc(100% + 26px) 60%;
+  animation:hellin .42s cubic-bezier(.2,1.25,.4,1) both}
+.hello b{display:block;font-family:Fredoka,ui-rounded,system-ui,sans-serif;
+  font-size:15px;font-weight:500;color:var(--ink);letter-spacing:-.01em}
+.hello i{display:block;font-style:normal;font-size:12.5px;color:var(--ink3);margin-top:2px}
+.hello::after{content:"";position:absolute;right:-6px;bottom:16px;width:12px;height:12px;
+  background:var(--surface);border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+  transform:rotate(-45deg);border-radius:0 0 3px 0}
+.hello.out{animation:hellin .3s cubic-bezier(.4,0,.6,1) reverse both}
+@keyframes hellin{
+  from{opacity:0;transform:translateX(14px) scale(.72)}
+  to{opacity:1;transform:translateX(0) scale(1)}
+}
+
+/* Someone who has asked not to see motion gets a still bear and a still greeting. */
+@media (prefers-reduced-motion:reduce){
+  .teddy .t-bob,.teddy .t-ear,.teddy .t-eyes{animation:none}
+  .buddybtn.waving .teddy .t-bob{animation:none}
+  .hello,.hello.out{animation:none}
+}
 
 .scrim{position:fixed;inset:0;z-index:74;background:rgba(20,16,38,.5);
   animation:fadein .18s ease;backdrop-filter:blur(2px)}
@@ -577,7 +609,6 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 .rwchip .rwgo:hover{background:var(--surface2);color:var(--deep)}
 .rwchip.on .rwgo{border-left-color:rgba(255,255,255,.28);color:rgba(255,255,255,.85)}
 .rwchip.on .rwgo:hover{background:rgba(255,255,255,.14);color:#fff}
-.rwnote{margin:8px 0 0 32px;font-size:12.5px;color:var(--ink3);line-height:1.55}
 
 .rwlinks{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 0 32px}
 .rwlink{font-size:12.5px;font-weight:700;padding:6px 11px;border-radius:99px;

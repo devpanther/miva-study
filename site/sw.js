@@ -22,7 +22,7 @@
  * cache is only what you fall back to when the network does not answer.
  */
 
-const VERSION = "v3-2026-08-30";
+const VERSION = "v4-kaizen-2026-08-30";
 const SHELL = "shell-" + VERSION;
 
 /* Everything the app needs to draw its first screen. The Lottie player and its animation

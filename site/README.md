@@ -1,4 +1,4 @@
-# Miva Study Tracker
+# Kaizen
 
 Live: https://miva-study-tracker.vercel.app
 Vercel project: huddles/miva-study-tracker

@@ -1077,7 +1077,7 @@ function statsStrip(root){
   root.appendChild(pc);
 }
 
-/* ---------- study buddy ---------- */
+/* ---------- Kizito, the study buddy ---------- */
 /* What a course is ABOUT, in the words someone would type into YouTube. Anchors a
    distilled phrase so "the constant of integration" lands in calculus and "stress"
    lands in materials rather than in psychology. */
@@ -1392,23 +1392,95 @@ function askBuddy(){
     })
     .catch(function(){ BUDDY.asking = false; BUDDY.err = "Couldn't reach the server."; render(); });
 }
+/* Kizito. Drawn rather than imported so he inherits the theme, stays a few hundred
+   bytes, and can be animated a piece at a time — the ears tilt, the head bobs, the eyes
+   blink on their own schedule. Every moving part is its own group so nothing has to be
+   redrawn to make him move. */
+var TEDDY = ''
+  + '<svg class="teddy" viewBox="0 0 64 64" width="38" height="38" aria-hidden="true">'
+  +   '<g class="t-bob">'
+  +     '<g class="t-ear t-ear-l">'
+  +       '<circle cx="17" cy="15.5" r="9" fill="var(--fur)"/>'
+  +       '<circle cx="17" cy="15.5" r="4.6" fill="var(--fur-in)"/>'
+  +     '</g>'
+  +     '<g class="t-ear t-ear-r">'
+  +       '<circle cx="47" cy="15.5" r="9" fill="var(--fur)"/>'
+  +       '<circle cx="47" cy="15.5" r="4.6" fill="var(--fur-in)"/>'
+  +     '</g>'
+  +     '<circle cx="32" cy="34" r="21" fill="var(--fur)"/>'
+  +     '<ellipse cx="32" cy="40" rx="12.5" ry="10" fill="var(--fur-in)"/>'
+  +     '<g class="t-eyes">'
+  +       '<ellipse class="t-eye" cx="24" cy="29.5" rx="2.9" ry="3.4" fill="var(--fur-ink)"/>'
+  +       '<ellipse class="t-eye" cx="40" cy="29.5" rx="2.9" ry="3.4" fill="var(--fur-ink)"/>'
+  +     '</g>'
+  +     '<circle cx="25.1" cy="28.4" r="1.05" fill="#fff" opacity=".9"/>'
+  +     '<circle cx="41.1" cy="28.4" r="1.05" fill="#fff" opacity=".9"/>'
+  +     '<ellipse cx="32" cy="36.4" rx="4.1" ry="3.1" fill="var(--fur-ink)"/>'
+  +     '<path d="M32 39.4v2.3M32 41.7c0 2.1-2.6 2.1-2.6 0M32 41.7c0 2.1 2.6 2.1 2.6 0" '
+  +       'stroke="var(--fur-ink)" stroke-width="1.7" stroke-linecap="round" fill="none"/>'
+  +   '</g>'
+  + '</svg>';
+
 function buddyButton(root){
   var ctx = buddyContext();
   var b = el("button","buddybtn"+((ctx.missed && ctx.missed.length) ? " nudge" : ""));
-  b.setAttribute("aria-label","Open the study buddy");
-  /* A question mark that writes itself, the way you'd draw one: the hook sweeps
-     over and down, the stem follows, then the dot lands. pathLength="100" lets the
-     dash animation be written in plain percentages regardless of the real geometry. */
-  b.innerHTML = '<svg class="qmark" viewBox="0 0 64 64" width="34" height="34" aria-hidden="true">'
-    + '<path class="q-stroke" pathLength="100" '
-    + 'd="M20.5 24.5A11.5 11.5 0 1 1 32 36v5.5" '
-    + 'fill="none" stroke="currentColor" stroke-width="6.2" '
-    + 'stroke-linecap="round" stroke-linejoin="round"/>'
-    + '<circle class="q-dot" cx="32" cy="50.5" r="3.6" fill="currentColor"/>'
-    + '</svg>';
+  b.id = "buddybtn";
+  b.setAttribute("aria-label","Ask Kizito");
+  b.innerHTML = TEDDY;
   if(ctx.missed && ctx.missed.length) b.appendChild(el("span","dot", String(ctx.missed.length)));
-  b.onclick = function(){ openBuddy("home"); };
+  b.onclick = function(){ hideHello(); openBuddy("home"); };
   root.appendChild(b);
+}
+
+/* ---------- "Hi, I'm Kizito" ----------
+   He says it once, when the app has finished loading, and then gets out of the way.
+   The bubble is fixed beside the button rather than over the page, takes no pointer
+   events, and retracts on its own after a few seconds — or the moment you scroll,
+   tap anything, or open him, because a greeting that interrupts you is not a greeting.
+
+   It lives on <body>, not inside #root, so a re-render mid-wave does not tear it out. */
+var HELLO_DONE = false, HELLO_TIMER = null, HELLO_ARMED = false;
+
+/* Armed from render, not from boot: whether you are signed in is only settled after the
+   lock is answered and a person is chosen, and boot runs before both. */
+function armHello(){
+  if(HELLO_DONE || HELLO_ARMED) return;
+  if(GATE !== "open" || !ME || !findPerson(ME)) return;
+  if(TAB === "quiz" || BUDDY) return;
+  HELLO_ARMED = true;
+  setTimeout(sayHello, 950);
+}
+
+function hideHello(){
+  clearTimeout(HELLO_TIMER);
+  var h = document.getElementById("hello");
+  if(!h || h.classList.contains("out")) return;
+  h.classList.add("out");
+  setTimeout(function(){ if(h.parentNode) h.remove(); }, 320);
+}
+
+function sayHello(){
+  if(HELLO_DONE) return;
+  if(GATE !== "open" || !ME || !findPerson(ME)) return;
+  if(TAB === "quiz" || BUDDY) return;                    /* never over a question or the sheet */
+  if(!document.getElementById("buddybtn")) return;
+  if(document.getElementById("hello")) return;
+  /* A toast lands in the same corner. Two things talking at once is worse than one of
+     them arriving a moment later, so he waits for the room to be quiet. */
+  if(TOAST){ setTimeout(sayHello, 1200); return; }
+  HELLO_DONE = true;
+
+  var h = el("div","hello");
+  h.id = "hello";
+  h.innerHTML = '<b>Hi, I\u2019m Kizito.</b><i>Ask me anything tonight.</i>';
+  document.body.appendChild(h);
+  /* the button notices him arriving */
+  var btn2 = document.getElementById("buddybtn");
+  if(btn2){ btn2.classList.add("waving"); setTimeout(function(){ btn2.classList.remove("waving"); }, 1600); }
+
+  HELLO_TIMER = setTimeout(hideHello, 4200);
+  window.addEventListener("scroll", hideHello, {passive:true, once:true});
+  window.addEventListener("pointerdown", hideHello, {once:true});
 }
 
 function buddyPanel(root){
@@ -1420,7 +1492,7 @@ function buddyPanel(root){
   var p = el("div","sheet");
   var head = el("div","sheeth");
   head.innerHTML = '<div><div class="lbl" style="margin:0">'+esc(c.day)+' · '+esc(NAMES[c.course]||c.course)+' · week '+c.w+'</div>'
-                 + '<h2 style="margin:2px 0 0;font-size:18px">Study buddy</h2></div>';
+                 + '<h2 style="margin:2px 0 0;font-size:18px">Kizito</h2></div>';
   var x = btn("chip","Close", function(){ BUDDY = null; render(); });
   head.appendChild(x);
   p.appendChild(head);
@@ -1890,16 +1962,6 @@ function runwayCard(root, wi){
           chips.appendChild(pair);
         });
         row.appendChild(chips);
-
-        /* No hover on a phone, so the ones with nowhere to link say so in words. */
-        var away = item.per.filter(function(c){ return !(item.linkFor && item.linkFor(c)) && lmsAbsent(c); });
-        if(away.length){
-          var names = away.map(function(c){ return NAMES[c] || c; });
-          var last = names.pop();
-          row.appendChild(el("p","rwnote",
-            esc(names.length ? names.join(", ") + " and " + last : last)
-            + (away.length > 1 ? " are" : " is") + " not in your LMS course list yet, so there is nothing to open."));
-        }
       }
 
       /* Whole-item links, for the tasks that are one job rather than eight. */
@@ -3584,7 +3646,7 @@ function render(){
   var bar = el("div","bar");
   var bin = el("div","barin");
   var brand = el("div","brand");
-  brand.appendChild(el("h1",null,"Study Tracker"));
+  brand.appendChild(el("h1",null,"Kaizen"));
 
   if(GATE === "open" && ME && findPerson(ME)){
     brand.appendChild(el("div","spacer"));
@@ -3684,6 +3746,7 @@ function render(){
   if(TOAST) root.appendChild(el("div","toast", esc(TOAST)));
 
   applyScroll();
+  armHello();
 }
 
 /* ---------- boot ---------- */
