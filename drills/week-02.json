@@ -1,0 +1,1279 @@
+{
+  "week": 2,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "With f(x) = 3x − 1 and g(x) = x² + 2, what is (g ∘ f)(2)?",
+        "options": [
+          "11",
+          "17",
+          "25",
+          "27"
+        ],
+        "answerIndex": 3,
+        "concept": "Order of composition",
+        "why": "In g ∘ f the inner function f runs first: f(2) = 3(2) − 1 = 5, then g(5) = 5² + 2 = 27. The tempting 17 is (f ∘ g)(2), the other order, and 25 is where you squared but forgot g's +2 — read the inner function before you touch the outer one."
+      },
+      {
+        "q": "What is the axis of symmetry of f(x) = x² + 6x + 5?",
+        "options": [
+          "x = −3",
+          "x = −6",
+          "x = 3",
+          "y = 5"
+        ],
+        "answerIndex": 0,
+        "concept": "Axis of symmetry at −b/2a",
+        "why": "The axis runs vertically through the vertex, at x = −b/2a = −6/2 = −3. The tempting x = −6 is b itself rather than b divided by 2a, and y = 5 is the y-intercept c, which sits on the axis only in the special case b = 0."
+      },
+      {
+        "q": "The graph of f(x) = 3x² − 5x + 4 crosses the y-axis at y =",
+        "options": [
+          "4",
+          "3",
+          "−5",
+          "5/6"
+        ],
+        "answerIndex": 0,
+        "concept": "y-intercept is c, not the vertex",
+        "why": "Set x = 0 and everything with an x in it dies: f(0) = c = 4. The slide claiming c is the vertex's y-coordinate is wrong, and 5/6 is the trap it sets — that is the vertex's x-coordinate, −b/2a, not an intercept."
+      },
+      {
+        "q": "Solve |3x + 1| = 10.",
+        "options": [
+          "x = 3 only",
+          "x = 3 or x = −11/3",
+          "x = 3 or x = 11/3",
+          "x = −3 or x = 11/3"
+        ],
+        "answerIndex": 1,
+        "concept": "Two cases for an absolute-value equation",
+        "why": "The two cases apply to what is inside the bars: 3x + 1 = 10 gives x = 3, and 3x + 1 = −10 gives x = −11/3. Taking x = 3 alone drops the second case, and the +11/3 version puts the minus sign on the answer instead of on the right-hand side."
+      },
+      {
+        "q": "Which values of x satisfy |x − 2| < 5?",
+        "options": [
+          "−3 < x < 7",
+          "−7 < x < 3",
+          "x < −3 or x > 7",
+          "3 < x < 7"
+        ],
+        "answerIndex": 0,
+        "concept": "Absolute-value inequality as a distance",
+        "why": "Read it as a distance: x lies less than 5 away from 2, so −3 < x < 7. The 'or' form is the solution of |x − 2| > 5, and −7 < x < 3 comes from subtracting the 2 where you should add it when unwrapping the bars."
+      },
+      {
+        "q": "Solve 5·3^x = 405.",
+        "options": [
+          "x = 3",
+          "x = 5",
+          "x = 81",
+          "x = 4"
+        ],
+        "answerIndex": 3,
+        "concept": "Solving A·b^x = C",
+        "why": "Divide by the coefficient before touching the exponent: 3^x = 81, and 81 = 3⁴, so x = 4. Answering 81 means you stopped one step early, and 3 comes from miscounting the powers of 3 — 3³ is 27, not 81."
+      },
+      {
+        "q": "Written in exponential form, log₅ x = 3 becomes",
+        "options": [
+          "x = 3⁵",
+          "x = 5³",
+          "5 = x³",
+          "3 = x⁵"
+        ],
+        "answerIndex": 1,
+        "concept": "b^y = x ⇔ y = log_b x",
+        "why": "The base of the logarithm is the base of the power, so b = 5 and y = 3 give x = 5³ = 125. The tempting x = 3⁵ swaps base and exponent, which is the single commonest way to lose a log-to-exponential conversion."
+      },
+      {
+        "q": "log₁₀ 8 + log₁₀ 5 equals",
+        "options": [
+          "log₁₀ 13",
+          "log₁₀ 1.6",
+          "log₁₀ 40",
+          "log₁₀ 3"
+        ],
+        "answerIndex": 2,
+        "concept": "Log of a product",
+        "why": "Only the product splits: log M + log N = log(MN), so this is log₁₀(8 × 5) = log₁₀ 40. The tempting log₁₀ 13 applies a rule about log(M + N) that does not exist, and log₁₀ 1.6 is what a difference of logs would have given."
+      },
+      {
+        "q": "For f: ℝ → ℝ with f(x) = x², which is true?",
+        "options": [
+          "It is bijective",
+          "It is injective but not surjective",
+          "It is surjective but not injective",
+          "It is neither injective nor surjective"
+        ],
+        "answerIndex": 3,
+        "concept": "Injective and surjective tested together",
+        "why": "f(−2) = f(2) = 4 is a collision, so injectivity fails, and no input gives a negative output, so the codomain ℝ has a gap and surjectivity fails too. Choosing 'surjective but not injective' spots the collision but forgets that the negatives are never reached."
+      },
+      {
+        "q": "The horizontal line y = 0 meets the graph of f(x) = x³ − x three times. What does that establish?",
+        "options": [
+          "f is not surjective",
+          "f is not injective",
+          "f is not a function",
+          "f has no y-intercept"
+        ],
+        "answerIndex": 1,
+        "concept": "Horizontal line test",
+        "why": "Three inputs share one output, which is exactly a failure of injectivity. It says nothing about whether f is a function — that is the vertical line test, which counts outputs per input rather than inputs per output."
+      },
+      {
+        "q": "f(x) = x² − 1 for x < 2 and f(x) = 4x for x ≥ 2. What is f(2)?",
+        "options": [
+          "3",
+          "4",
+          "8",
+          "Undefined, since 2 is a boundary point"
+        ],
+        "answerIndex": 2,
+        "concept": "Choosing the branch at a boundary",
+        "why": "x = 2 satisfies x ≥ 2, so the second branch owns it: f(2) = 4(2) = 8. The tempting 3 uses the first branch, whose condition is strictly x < 2; the branches need not agree at the boundary, and 2 still falls in exactly one of them."
+      },
+      {
+        "q": "How many real roots does x² − 4x + 7 have?",
+        "options": [
+          "Two distinct real roots",
+          "No real roots",
+          "One repeated real root",
+          "Two real roots of opposite sign"
+        ],
+        "answerIndex": 1,
+        "concept": "Discriminant",
+        "why": "Δ = b² − 4ac = 16 − 28 = −12, and a negative discriminant means the parabola never meets the x-axis. Answering 'two' usually comes from computing 16 + 28 — the minus sign in −4ac is what decides the whole question."
+      },
+      {
+        "q": "For f(x) = 2x⁴ − 7x + 1, what happens as x → +∞ and as x → −∞?",
+        "options": [
+          "It rises to +∞ on both sides",
+          "It falls to −∞ on both sides",
+          "It rises on the right and falls on the left",
+          "It falls on the right and rises on the left"
+        ],
+        "answerIndex": 0,
+        "concept": "End behaviour from degree and leading coefficient",
+        "why": "Degree 4 is even and the leading coefficient 2 is positive, so 2x⁴ dominates both tails and both rise. 'Rises right, falls left' is the pattern for an odd degree with a positive leading coefficient — the −7x term settles nothing far from the origin."
+      },
+      {
+        "q": "What is the period of f(x) = sin(3x)?",
+        "options": [
+          "6π",
+          "2π",
+          "2π/3",
+          "π/3"
+        ],
+        "answerIndex": 2,
+        "concept": "Period of sin(kx)",
+        "why": "For sin(kx) the period is 2π/k, so k = 3 squeezes one full cycle into 2π/3. The tempting 6π multiplies by k instead of dividing, and π/3 is the period you would get for tan(3x), whose base period is π rather than 2π."
+      },
+      {
+        "q": "If f(x) = x + 7, then f⁻¹(x) =",
+        "options": [
+          "1/(x + 7)",
+          "−x − 7",
+          "7 − x",
+          "x − 7"
+        ],
+        "answerIndex": 3,
+        "concept": "Inverse function versus reciprocal",
+        "why": "The inverse undoes the rule, so if f adds 7 then f⁻¹ subtracts it, and f⁻¹(f(x)) = x checks out. The tempting 1/(x + 7) is the reciprocal 1/f(x) — the −1 in f⁻¹ is notation for an inverse, not an exponent."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "The SI unit of electric field strength is",
+        "options": [
+          "N/C",
+          "N",
+          "C/N",
+          "N·m²/C²"
+        ],
+        "answerIndex": 0,
+        "concept": "Unit of E",
+        "why": "E = F/q₀ is a force divided by a charge, so the unit is newtons per coulomb. N·m²/C² is the unit of k in Coulomb's law, and a bare N is a force — if your answer has no coulomb in the denominator you have quoted a force, not a field."
+      },
+      {
+        "q": "Which value of k does this week's deck use in every calculation?",
+        "options": [
+          "8.85 × 10⁻¹² C²/N m²",
+          "9.0 × 10⁹ N m²/C²",
+          "1.6 × 10⁻¹⁹ C",
+          "3.0 × 10⁸ N m²/C²"
+        ],
+        "answerIndex": 1,
+        "concept": "Coulomb constant used in the deck",
+        "why": "She uses k = 1/4πε₀ = 9.0 × 10⁹ N m²/C² throughout, so match it and your answers match hers. The tempting 8.85 × 10⁻¹² is ε₀ itself, which appears only inside the definition of k and is never substituted numerically this week."
+      },
+      {
+        "q": "Which way does the electric field point around an isolated negative point charge?",
+        "options": [
+          "Radially outward, away from the charge",
+          "Along the line joining it to the nearest positive charge",
+          "Nowhere — the formula |E| = kQ/r² needs a positive Q",
+          "Radially inward, toward the charge"
+        ],
+        "answerIndex": 3,
+        "concept": "Field direction for −Q",
+        "why": "The field points the way a positive test charge would be pushed, and a positive test charge is pulled toward −Q, so the arrows run radially inward. The magnitude formula is identical for both signs — only the arrow changes, so a negative charge certainly does have a field."
+      },
+      {
+        "q": "In a field-line diagram, closely spaced lines mean that",
+        "options": [
+          "The field there is weaker",
+          "The field there is more uniform",
+          "The field there is stronger",
+          "The charge sitting there is larger"
+        ],
+        "answerIndex": 2,
+        "concept": "Field-line spacing",
+        "why": "Her rule is blunt: the more closely spaced the field lines, the stronger the force. Even spacing is what signals a uniform field, as between two parallel plates, so 'more uniform' is the neighbouring idea rather than this one."
+      },
+      {
+        "q": "A proton and an electron are placed at the same point in a field E pointing along +x. What happens?",
+        "options": [
+          "Equal-magnitude forces in opposite directions",
+          "Both are pushed along +x, the proton harder",
+          "Both are pushed along −x, the electron harder",
+          "Neither feels a force, since neither created E"
+        ],
+        "answerIndex": 0,
+        "concept": "F = qE and the sign of the charge",
+        "why": "F = qE and the two charges have the same magnitude e, so the force magnitudes match; the electron's negative sign turns its force antiparallel to E, along −x. Nothing about E itself changes between the two cases — only the sign of q does."
+      },
+      {
+        "q": "A 4.0 μC charge in an electric field feels a force of 8.0 mN. The field magnitude is",
+        "options": [
+          "2.0 × 10⁻³ N/C",
+          "3.2 × 10⁻⁸ N/C",
+          "5.0 × 10⁻⁴ N/C",
+          "2.0 × 10³ N/C"
+        ],
+        "answerIndex": 3,
+        "concept": "E = F/q₀",
+        "why": "E = (8.0 × 10⁻³ N)/(4.0 × 10⁻⁶ C) = 2.0 × 10³ N/C; the whole job is the prefixes, since m = 10⁻³ and μ = 10⁻⁶ leave 10³. The tempting 5.0 × 10⁻⁴ divides the wrong way round, and 3.2 × 10⁻⁸ multiplies where you should divide."
+      },
+      {
+        "q": "What is the magnitude of the electric field 2.0 m from a +4.0 μC point charge?",
+        "options": [
+          "1.8 × 10⁴ N/C",
+          "3.6 × 10⁴ N/C",
+          "9.0 × 10³ N/C",
+          "4.5 × 10³ N/C"
+        ],
+        "answerIndex": 2,
+        "concept": "|E| = k|Q|/r² for a point charge",
+        "why": "|E| = (9.0 × 10⁹ × 4.0 × 10⁻⁶)/(2.0)² = 3.6 × 10⁴/4 = 9.0 × 10³ N/C. The tempting 1.8 × 10⁴ divides by r instead of r², and 3.6 × 10⁴ forgets to divide at all — the square in the denominator is the whole character of the law."
+      },
+      {
+        "q": "Two 2.0 μC point charges are 0.10 m apart. The force between them is",
+        "options": [
+          "3.6 N",
+          "0.36 N",
+          "36 N",
+          "0.036 N"
+        ],
+        "answerIndex": 0,
+        "concept": "Coulomb's law, one-step substitution",
+        "why": "F = k|q₁q₂|/r² = 9.0 × 10⁹ × (2.0 × 10⁻⁶)²/(0.10)² = 3.6 × 10⁻²/1.0 × 10⁻² = 3.6 N. The tempting 0.36 N divides by 0.10 rather than by (0.10)² = 0.010 — the separation is squared before it divides."
+      },
+      {
+        "q": "Two charges 2.0 cm apart repel with a force of 0.80 N. Moved to 1.0 cm apart, they repel with",
+        "options": [
+          "1.6 N",
+          "3.2 N",
+          "0.40 N",
+          "0.20 N"
+        ],
+        "answerIndex": 1,
+        "concept": "Inverse-square dependence",
+        "why": "F ∝ 1/r², so halving r divides the denominator by 4 and multiplies the force by 4: 0.80 × 4 = 3.2 N. The tempting 1.6 N treats the law as an inverse first power, and her own numbers run the same rule backwards — 1.2 nm to 2.4 nm took 16 × 10⁻¹¹ N down to 4 × 10⁻¹¹ N."
+      },
+      {
+        "q": "In the lecturer's notation, on whose free-body diagram does F₃₁ belong?",
+        "options": [
+          "Q₃'s — the first subscript names whose diagram it is",
+          "Q₁'s — the second subscript names the charge acted on",
+          "Both diagrams, since the pair is equal and opposite",
+          "Neither; F₃₁ denotes a field rather than a force"
+        ],
+        "answerIndex": 1,
+        "concept": "The Fᵢⱼ subscript convention",
+        "why": "Fᵢⱼ is the force i exerts on j, so F₃₁ is Q₃'s pull on Q₁ and is drawn on Q₁'s diagram. Reading the first subscript instead lands you on Q₃'s diagram, which is where F₁₃ lives — source first, victim second."
+      },
+      {
+        "q": "In Example 2, F₁₂ and F₂₁ both come out as 0.0194 N. If yours came out different, what would that mean?",
+        "options": [
+          "Q₁ is the larger charge, so it pushes harder",
+          "You used the wrong separation in one of them",
+          "Superposition does not apply to that pair",
+          "One force is attractive and the other repulsive"
+        ],
+        "answerIndex": 1,
+        "concept": "Newton's third law for the Coulomb pair",
+        "why": "The two are a third-law pair built from the same product |q₁q₂| and the same separation, so only their directions differ. A mismatch in magnitude means you slipped r₁₃ or r₂₃ in where r₁₂ belonged — the bigger charge never 'wins' inside a single pair."
+      },
+      {
+        "q": "A single isolated point charge sits in the field it produces. The net force on it from that field is",
+        "options": [
+          "kQ²/r², directed outward",
+          "Infinite, since r = 0 at the charge itself",
+          "Equal and opposite to the field it produces",
+          "Zero — a charge feels no net force from its own field"
+        ],
+        "answerIndex": 3,
+        "concept": "A charge and its own field",
+        "why": "Slide 12 says it outright: a charge produces a field around itself but that field cannot exert a net force on the charge producing it. That is why you never include a charge's own contribution when computing the force on it, and 'infinite' is what blindly substituting r = 0 would wrongly suggest."
+      },
+      {
+        "q": "A sketch shows field lines streaming outward with nothing for them to terminate on. What does that tell you?",
+        "options": [
+          "The sketch is faulty; every line must end on a charge",
+          "The field in that region must be uniform",
+          "There is no negative charge nearby, so the lines run to infinity",
+          "The source charge must be a negative one"
+        ],
+        "answerIndex": 2,
+        "concept": "Where field lines end",
+        "why": "Her rule allows two endings: lines start on positive charges and end on negative charges, or, for a single charge, they end at infinity. Lines with nothing to land on tell you the source is positive and unpaired, not that the drawing is wrong."
+      },
+      {
+        "q": "A +3 nC charge sits at x = 0 and a −3 nC charge at x = 0.40 m. At the midpoint, the two field contributions",
+        "options": [
+          "Point the same way (+x) and add",
+          "Point opposite ways and cancel to zero",
+          "Are perpendicular, so you combine them by Pythagoras",
+          "Both point back toward the positive charge"
+        ],
+        "answerIndex": 0,
+        "concept": "Superposition of collinear fields",
+        "why": "E from the positive charge points away from it, so rightward at the midpoint, and E from the negative charge points toward it, so rightward as well; same arrows means add. The 'cancel' answer belongs to two like charges, where the contributions really would oppose."
+      },
+      {
+        "q": "A 2.40 μC charge sits where the field is 1250 N/C. The force on it is",
+        "options": [
+          "5.2 × 10² N",
+          "3.0 N",
+          "3.0 mN",
+          "0.52 mN"
+        ],
+        "answerIndex": 2,
+        "concept": "F = q₀E, the definition run backwards",
+        "why": "F = q₀E = (2.40 × 10⁻⁶ C)(1250 N/C) = 3.0 × 10⁻³ N = 3.0 mN. The tempting 5.2 × 10² divides E by q instead of multiplying — check the units, since N/C times C leaves newtons while dividing would leave N/C²."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "How many problem-solving strategies does this week's lecture deck actually teach?",
+        "options": [
+          "Three",
+          "Four",
+          "Five",
+          "Six"
+        ],
+        "answerIndex": 3,
+        "concept": "The six strategies (and the summary's four)",
+        "why": "The deck covers six: brainstorming, heuristics, trial-and-error, means-ends analysis, abstraction and analogy. Four is the number on the week's summary page, which quietly omits abstraction and analogy — if a question asks for 'the four', give the summary's four, but the deck's list is six."
+      },
+      {
+        "q": "The London Underground map is the week's example of which strategy?",
+        "options": [
+          "Analogy",
+          "Abstraction",
+          "Heuristics",
+          "Means-ends analysis"
+        ],
+        "answerIndex": 1,
+        "concept": "Abstraction",
+        "why": "The map throws away distance, scale and surface geography and keeps only what a traveller needs, and that discarding of irrelevant attributes is abstraction. Analogy is the neighbouring idea, but it imports understanding from a different system instead of deleting detail from this one."
+      },
+      {
+        "q": "The essential idea that abstraction leaves behind is called",
+        "options": [
+          "A model",
+          "An algorithm",
+          "A heuristic",
+          "A prototype"
+        ],
+        "answerIndex": 0,
+        "concept": "The product of abstraction",
+        "why": "What survives the filtering is called a model. An algorithm is a systematic method for solving rather than a simplified picture of the problem, and calling it a heuristic confuses the output of one strategy with the name of another."
+      },
+      {
+        "q": "Which describes an ill-defined problem?",
+        "options": [
+          "It yields to arithmetic once the right algorithm is chosen",
+          "It has no systematic method that works for every input",
+          "It needs a novel method because no standard one exists",
+          "It lacks clear goals, expected solutions and solution paths"
+        ],
+        "answerIndex": 3,
+        "concept": "Ill-defined versus non-routine",
+        "why": "Ill-defined is about clarity: the goals, the expected solutions and the paths to them are all missing. The third option describes a non-routine problem, where the goal can be perfectly clear and only the method is absent — that is the distinction the week keeps drawing."
+      },
+      {
+        "q": "For a routine problem, what is the solver's real work?",
+        "options": [
+          "Inventing a method nobody has used before",
+          "Gathering relevant information after critical study",
+          "Identifying the most appropriate algorithm",
+          "Generating analogies and picking the closest"
+        ],
+        "answerIndex": 2,
+        "concept": "Routine problems",
+        "why": "A standard algorithm already exists, so the work is solely selecting the right one and running it. Inventing a method is what a non-routine problem forces on you, and the study-then-gather sequence is the non-routine procedure rather than this one."
+      },
+      {
+        "q": "Which of these does the week name as an undecidable problem?",
+        "options": [
+          "Deciding whether a given program has a bug",
+          "Sorting a list of names alphabetically",
+          "Computing the area of a parking space",
+          "Replacing OB with BOOB inside a string"
+        ],
+        "answerIndex": 0,
+        "concept": "Named undecidable problems",
+        "why": "The week names two: 'Does my code have a bug?' and the halting problem. Sorting and area are solvable, algorithm-based tasks, and applying a substitution rule is mechanical — what is undecidable about the puzzle is knowing in advance whether it comes out."
+      },
+      {
+        "q": "Which was one of Turing's two contributions to the modern computer?",
+        "options": [
+          "Proving that every decision problem is decidable",
+          "Showing that no single machine can compute everything",
+          "Introducing binary arithmetic to computing hardware",
+          "Storing encoded instructions in the computer's memory"
+        ],
+        "answerIndex": 3,
+        "concept": "Turing and the modern computer",
+        "why": "His two contributions were storing encoded instructions in memory and showing that one machine of fixed structure can carry out every computation the UTM can. The second option inverts precisely that result — the point is that a single fixed machine suffices."
+      },
+      {
+        "q": "On a Universal Turing Machine, where does the program you want run go?",
+        "options": [
+          "Into the machine's fixed table of instructions",
+          "Into the read head that scans the tape",
+          "Onto the tape, as a string of letters",
+          "Into a separate output register"
+        ],
+        "answerIndex": 2,
+        "concept": "How a UTM is given a task",
+        "why": "The instruction table is pre-loaded and fixed; the program is written as a string of letters on the tape, which the machine reads and then implements. Putting the program into the table confuses what is permanent about the machine with what changes from task to task."
+      },
+      {
+        "q": "Apply the rule `BOB` → `O` once to the string **BOB**. What do you get?",
+        "options": [
+          "O",
+          "BOOB",
+          "BOOOB",
+          "OB"
+        ],
+        "answerIndex": 0,
+        "concept": "Substitution puzzles",
+        "why": "The rule replaces the whole of BOB with the single letter O, so one application leaves O. BOOB is what the other rule, OB → BOOB, produces, and BOOOB is the puzzle's eventual target rather than the result of a single step."
+      },
+      {
+        "q": "In a shop you pick the rice brand you always pick and move on. Which strategy is that?",
+        "options": [
+          "Trial and error",
+          "Means-ends analysis",
+          "Brainstorming",
+          "Heuristics"
+        ],
+        "answerIndex": 3,
+        "concept": "Heuristics",
+        "why": "A heuristic is a shortcut taken without stopping to think about the next course of action — fast, energy-saving, and accepted without checking that it is optimal. Trial and error is the neighbour, but it tests successive candidates and discards the failures, and you tested nothing here."
+      },
+      {
+        "q": "A manager handles a difficult employee the way a former colleague handled a similar case. Which strategy?",
+        "options": [
+          "Means-ends analysis",
+          "Abstraction",
+          "Analogy",
+          "Trial and error"
+        ],
+        "answerIndex": 2,
+        "concept": "Analogy",
+        "why": "Understanding is imported from a different system already understood, which is analogy, and it stays valid only while the underlying principles of the two cases match. Means-ends analysis would instead split this case into sub-problems built from its own details."
+      },
+      {
+        "q": "An efficient problem-solving strategy is said to produce",
+        "options": [
+          "The fastest solution available in the circumstances",
+          "A robust and reliable solution",
+          "A solution requiring no algorithm at all",
+          "A solution guaranteed to be optimal"
+        ],
+        "answerIndex": 1,
+        "concept": "What efficiency buys",
+        "why": "The lesson's wording is that an efficient strategy produces a robust and reliable solution. Speed is what a heuristic buys, and it explicitly costs rationality, so 'fastest' names a different trade; nothing in the week promises optimality."
+      },
+      {
+        "q": "Solvable problems are described as based either on data structures or on",
+        "options": [
+          "Algorithms, such as sorting, searching and recursion",
+          "Heuristics, such as rules of thumb",
+          "Analogies drawn from problems already solved",
+          "Undecidable decision procedures"
+        ],
+        "answerIndex": 0,
+        "concept": "The two bases of solvable problems",
+        "why": "The week splits solvable problems into the data-structure kind (stacks, queues, trees, graphs, linked lists) and the algorithm kind (sorting, divide and conquer, recursion, searching, text processing). Heuristics and analogies are strategies you apply, not the basis on which a problem counts as solvable."
+      },
+      {
+        "q": "In what order does the week's non-routine procedure run?",
+        "options": [
+          "Gather information → study critically → implement a strategy",
+          "Study critically → gather relevant information → identify and implement a strategy",
+          "Identify a strategy → study the problem → gather information",
+          "Gather information → identify a strategy → study the problem"
+        ],
+        "answerIndex": 1,
+        "concept": "Procedure for non-routine problems",
+        "why": "Critical study comes first, because only it tells you which information is even relevant; gathering follows, and the strategy is chosen and implemented last. Starting with the gathering is the usual inversion and leaves you collecting facts you cannot yet use."
+      },
+      {
+        "q": "Which is NOT one of brainstorming's rules?",
+        "options": [
+          "Avoid criticising the ideas offered",
+          "Gather as many ideas as possible",
+          "Judge each idea as soon as it is offered",
+          "Other people's ideas may be fine-tuned"
+        ],
+        "answerIndex": 2,
+        "concept": "Rules of brainstorming",
+        "why": "Brainstorming defers criticism and chases quantity, so judging on the spot is exactly what the rules forbid — it shuts down the spontaneous production the technique depends on. Strip those two rules away and what is left is an ordinary group discussion."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "What does HTTPS add to HTTP?",
+        "options": [
+          "Encryption, so data stays confidential in transit",
+          "Faster transfer of large files",
+          "User-defined tags for structured data",
+          "Automatic conversion of names to IP addresses"
+        ],
+        "answerIndex": 0,
+        "concept": "HTTP versus HTTPS",
+        "why": "HTTPS is HTTP plus encryption, protecting confidentiality while data crosses the network, whereas plain HTTP travels in plaintext and can be intercepted. Speed is not the difference, and turning names into IP addresses is DNS's job in a different part of the week."
+      },
+      {
+        "q": "Which protocol sends and relays outgoing mail between servers?",
+        "options": [
+          "POP3",
+          "IMAP",
+          "SMTP",
+          "MIME"
+        ],
+        "answerIndex": 2,
+        "concept": "Email protocols by direction",
+        "why": "SMTP is the outbound one: it sends mail and relays it between servers and domains. POP3 and IMAP only retrieve, and MIME is not a transport at all — it defines the format of the message being carried."
+      },
+      {
+        "q": "What is MIME for?",
+        "options": [
+          "Encrypting the message while it is in transit",
+          "Retrieving stored mail for offline reading",
+          "Naming which servers handle a domain's mail",
+          "Extending the format for attachments and non-ASCII text"
+        ],
+        "answerIndex": 3,
+        "concept": "MIME versus SMTP",
+        "why": "MIME extends the email format so it can carry non-ASCII character sets, rich text and attachments such as audio, video and images. Retrieval is POP3 and IMAP, and naming a domain's mail servers is what an MX record does."
+      },
+      {
+        "q": "You delete a message on your phone and it is still there on your laptop. Which retrieval protocol is in use?",
+        "options": [
+          "IMAP",
+          "POP3",
+          "SMTP",
+          "MIME"
+        ],
+        "answerIndex": 1,
+        "concept": "POP3 versus IMAP",
+        "why": "POP3 downloads mail to each device separately, so nothing you do on one device propagates to another. IMAP is the protocol that keeps messages on the server and synchronises actions across devices, and SMTP never enters this — it only sends."
+      },
+      {
+        "q": "Which markup language describes 2-D graphics that scale without losing quality?",
+        "options": [
+          "MathML",
+          "XHTML",
+          "SVG",
+          "HTML"
+        ],
+        "answerIndex": 2,
+        "concept": "The five markup languages",
+        "why": "SVG is Scalable Vector Graphics, used for logos, icons and interactive diagrams precisely because scaling costs no quality. MathML is also a specialised markup built on XML, but for equations rather than pictures."
+      },
+      {
+        "q": "MathML is built on which underlying language?",
+        "options": [
+          "XML",
+          "HTML",
+          "SVG",
+          "JSON"
+        ],
+        "answerIndex": 0,
+        "concept": "MathML",
+        "why": "MathML is XML-based markup for mathematical notation on the web, which is where it gets its tag rules and its strictness. Answering HTML confuses the page that hosts the equation with the language that describes it."
+      },
+      {
+        "q": "Which language is HTML reformulated as an XML application, so every tag must be closed and well-formed?",
+        "options": [
+          "HTML5",
+          "XML",
+          "SVG",
+          "XHTML"
+        ],
+        "answerIndex": 3,
+        "concept": "XHTML",
+        "why": "XHTML is HTML rewritten to obey XML's rules — closed tags, lowercase, well-formed throughout. Plain XML also demands well-formedness, but it is not a reformulation of HTML: it carries user-defined tags for describing data rather than a fixed vocabulary for pages."
+      },
+      {
+        "q": "A reverse DNS lookup does what?",
+        "options": [
+          "Turns a domain name into an IP address",
+          "Turns an IP address back into a domain name",
+          "Signs DNS records to prove they are authentic",
+          "Caches answers so later queries run faster"
+        ],
+        "answerIndex": 1,
+        "concept": "Reverse DNS",
+        "why": "Ordinary resolution runs name → IP; the reverse lookup DNS also supports runs IP → name. Signing records for authenticity is DNSSEC, which is an addition bolted onto DNS rather than a kind of lookup."
+      },
+      {
+        "q": "The DNS hierarchy descends in which order?",
+        "options": [
+          "TLD → root → subdomain → second-level",
+          "Root → TLD → second-level → subdomain",
+          "Subdomain → second-level → TLD → root",
+          "Root → second-level → TLD → subdomain"
+        ],
+        "answerIndex": 1,
+        "concept": "DNS hierarchy",
+        "why": "It descends root → TLD → second-level → subdomain, which is why com sits above example, which sits above admin. The third option is the order the labels appear when you read admin.example.com left to right — a name is written most-specific-first, against the hierarchy."
+      },
+      {
+        "q": "The .uk at the end of a web address is an example of",
+        "options": [
+          "A generic TLD (gTLD)",
+          "A second-level domain",
+          "A subdomain of .com",
+          "A country-code TLD (ccTLD)"
+        ],
+        "answerIndex": 3,
+        "concept": "gTLD versus ccTLD",
+        "why": "Country-code TLDs are the national ones such as .uk; generic TLDs are .com, .org and .net. Both live at the top level, so the only question is whether the label names a country."
+      },
+      {
+        "q": "What does DNSSEC do?",
+        "options": [
+          "Adds digital signatures for integrity, blocking cache poisoning",
+          "Encrypts all DNS traffic from end to end",
+          "Replaces DNS with a distributed ledger",
+          "Balances query load across authoritative servers"
+        ],
+        "answerIndex": 0,
+        "concept": "DNSSEC",
+        "why": "DNSSEC signs DNS data so answers can be checked for integrity and authenticity, which is what defeats cache poisoning. It is not encryption: the records stay perfectly readable, and what changes is only that they can be proved genuine."
+      },
+      {
+        "q": "WebSocket is best described as",
+        "options": [
+          "Stateless request-response layered on HTTP",
+          "Full-duplex, persistent communication over one TCP connection",
+          "An XML-based messaging protocol for enterprise services",
+          "A markup language for building real-time dashboards"
+        ],
+        "answerIndex": 1,
+        "concept": "WebSocket",
+        "why": "WebSocket holds a single TCP connection open and lets either end send at any moment, which is why chat, gaming and live updates use it. Stateless request-response describes REST, and the XML-based enterprise protocol is SOAP."
+      },
+      {
+        "q": "REST is best described as",
+        "options": [
+          "A protocol with a strict XML message format",
+          "A transport protocol sitting underneath HTTP",
+          "An architectural style: stateless, resource-based, over HTTP",
+          "A markup language for describing web resources"
+        ],
+        "answerIndex": 2,
+        "concept": "REST versus SOAP",
+        "why": "REST is a set of architectural constraints rather than a protocol — it rides on ordinary HTTP methods and keeps no server-side session state. The strict XML message format belongs to SOAP, the protocol REST is usually contrasted with."
+      },
+      {
+        "q": "SOAP messages must be written in",
+        "options": [
+          "XML",
+          "JSON",
+          "Plain-text key-value pairs",
+          "HTML"
+        ],
+        "answerIndex": 0,
+        "concept": "SOAP",
+        "why": "SOAP is an XML-message-based protocol, and that strict format is exactly what makes it heavier and slower than REST. JSON is common in REST APIs, but SOAP does not permit it."
+      },
+      {
+        "q": "Which HTTP method does REST use to update the resource at /users/123?",
+        "options": [
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "answerIndex": 2,
+        "concept": "REST verbs and CRUD",
+        "why": "PUT maps to Update in CRUD, so PUT /users/123 replaces that user's data. POST is Create and would add a new user rather than change this one, and GET only retrieves what is already there."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "Inter-group relations are defined as",
+        "options": [
+          "Trade agreements between neighbouring kingdoms",
+          "Interaction between two or more distinct linguistic and cultural groups",
+          "The merging of two ethnic groups into a single people",
+          "The administration of a region by one central authority"
+        ],
+        "answerIndex": 1,
+        "concept": "Definition of inter-group relations",
+        "why": "The definition to quote is interaction between two or more distinct linguistic and cultural groups, and the distinctness matters — the groups stay separate while they interact. Trade is only one of the four indicators of that interaction, not the definition of it."
+      },
+      {
+        "q": "Which two factors are named as the major means of identifying a group?",
+        "options": [
+          "Culture and language",
+          "Religion and trade",
+          "Territory and population",
+          "Origin and conflict"
+        ],
+        "answerIndex": 0,
+        "concept": "Identifying a group",
+        "why": "Culture and language are the two identifiers — they answer 'who counts as a distinct group?'. Origin, conflict, trade and religion are the four indicators of how groups interacted, a different question with a different count, so check which one the stem is asking."
+      },
+      {
+        "q": "Nigeria is said to have over 374 of which?",
+        "options": [
+          "Language groups",
+          "Kingdoms",
+          "Geo-political divisions",
+          "Ethnic groups"
+        ],
+        "answerIndex": 3,
+        "concept": "348 versus 374",
+        "why": "There are over 348 language groups and over 374 ethnic groups, so the bigger number is the ethnic one. Swapping the two is the standard slip — anchor it by remembering that ethnic groups outnumber languages."
+      },
+      {
+        "q": "The Kanuri trace their origin to which ancestor?",
+        "options": [
+          "Bayajidda",
+          "Kisra",
+          "Saif",
+          "Oranmiyan"
+        ],
+        "answerIndex": 2,
+        "concept": "Traditions of origin",
+        "why": "Saif is the Kanuri ancestor and Bayajidda the Hausa one, though both traditions run back to Baghdad. Kisra belongs to the Borgu and Yoruba story, and Oranmiyan to the Yoruba–Benin dynastic link."
+      },
+      {
+        "q": "The Kanuri, Hausa and Kisra traditions of origin all point back to which city?",
+        "options": [
+          "Mecca",
+          "Baghdad",
+          "Cairo",
+          "Timbuktu"
+        ],
+        "answerIndex": 1,
+        "concept": "The shared Baghdad origin",
+        "why": "All three name Baghdad, and that shared destination is exactly why the legends count as evidence of historical ties between the groups. Mecca is the tempting guess if you assume any legend of this era must point there, but the slides say Baghdad in all three cases."
+      },
+      {
+        "q": "Bayajidda settled among the Kanuri and married whose daughter?",
+        "options": [
+          "The Ooni of Ife's",
+          "The Oba of Benin's",
+          "The Sarki of Kano's",
+          "The Mai's, the Kanuri ruler"
+        ],
+        "answerIndex": 3,
+        "concept": "The Bayajidda legend",
+        "why": "He married the daughter of the Mai, the Kanuri ruler, and that marriage is the tie the legend is used to demonstrate. The Ooni belongs to the Kisra legend instead, as the man Kisra called his brother."
+      },
+      {
+        "q": "The Kisra legend credits him with founding which kingdoms?",
+        "options": [
+          "Kanem and Bornu",
+          "Oyo and Nupe",
+          "Yoruba and Borgu",
+          "Benin and Itsekiri"
+        ],
+        "answerIndex": 2,
+        "concept": "The Kisra legend",
+        "why": "Kisra is said to have founded the Yoruba and Borgu kingdoms and to have called the Ooni of Ife his brother. Oyo and Nupe is the pairing you want for the war example rather than the founding one."
+      },
+      {
+        "q": "In the Oyo–Nupe wars, which alliance was formed?",
+        "options": [
+          "A Bariba–Yoruba alliance against the Nupe",
+          "A Nupe–Jukun alliance against Oyo",
+          "A Hausa–Kanuri alliance against Oyo",
+          "An Igala–Igbo alliance against the Nupe"
+        ],
+        "answerIndex": 0,
+        "concept": "Conflict as an indicator",
+        "why": "The Bariba allied with the Yoruba against the Nupe, and alliances like this are why conflict counts as an indicator of relations rather than merely of hostility. The Igala–Igbo pairing belongs to the separate Nsukka wars, which forged political ties of their own."
+      },
+      {
+        "q": "Jukun conquest extended their influence over which peoples?",
+        "options": [
+          "Auchi, Idah, Itsekiri, Urhobo and Isoko",
+          "Tuaregs, Gonja, Oyo and Kwararafa",
+          "Efik, Ijaw, Ibibio and Okpe",
+          "Kanuri, Hausa, Igala, Idoma and Ebira"
+        ],
+        "answerIndex": 3,
+        "concept": "Jukun versus Benin expansion",
+        "why": "Jukun influence ran north and into the middle belt: Kanuri, Hausa, Igala, Idoma, Ebira. The first list is Benin's expansion, which ran south and west — sorting the two conquest lists by compass direction is the reliable way to keep them apart."
+      },
+      {
+        "q": "Which early kings of Lagos came from Benin?",
+        "options": [
+          "Saif and Kisra",
+          "Oranmiyan and Eweka",
+          "Ikwo and Ezza",
+          "Ado and Asipa"
+        ],
+        "answerIndex": 3,
+        "concept": "Benin's expansion to Eko",
+        "why": "Benin's military expedition reached Eko (Lagos), and its early kings Ado and Asipa came from Benin. Oranmiyan and Eweka are the other Benin connection — the dynastic link to the Yoruba — while Ikwo and Ezza are warlike Igbo groups."
+      },
+      {
+        "q": "The Yoruba–Benin dynastic link runs through which two figures?",
+        "options": [
+          "Ado and Asipa",
+          "Saif and Bayajidda",
+          "Oranmiyan and Eweka",
+          "Ekpe and Ekpo"
+        ],
+        "answerIndex": 2,
+        "concept": "Yoruba–Benin ties",
+        "why": "The two traditions are joined through Oranmiyan and Eweka. Ado and Asipa are the Benin-descended kings of early Lagos, a different Benin connection running south-west rather than into Yoruba dynastic origins."
+      },
+      {
+        "q": "Ekpe and Ekpo originated among which people before spreading to Igbo subgroups?",
+        "options": [
+          "The Ibibio",
+          "The Efik",
+          "The Igbo themselves",
+          "The Ijaw"
+        ],
+        "answerIndex": 1,
+        "concept": "Borrowed cults as evidence of contact",
+        "why": "Ekpe and Ekpo began among the Efik and later spread to some Igbo subgroups. Ibini Ukpabi is the one of Ibibio origin — both ended up with the Igbo, which is precisely why the two get swapped."
+      },
+      {
+        "q": "The Bori cult is described as",
+        "options": [
+          "Common throughout Hausaland",
+          "A Yoruba deity traced back to the Nupe",
+          "A men's society originating among the Efik",
+          "An Ibibio oracle later adopted by the Igbo"
+        ],
+        "answerIndex": 0,
+        "concept": "Religion as an indicator",
+        "why": "Bori is a spirit-possession cult common throughout Hausaland. The Yoruba deity traced to a Nupe original is Igunu from Ndakogbaya, and the Ibibio oracle taken up by the Igbo is Ibini Ukpabi."
+      },
+      {
+        "q": "Whose land formed the corridor linking the hinterland Igbo with the coastal Efik and Ijaw?",
+        "options": [
+          "The Ibibio",
+          "The Itsekiri",
+          "The Urhobo",
+          "The Tiv"
+        ],
+        "answerIndex": 0,
+        "concept": "Trade and commerce as an indicator",
+        "why": "Ibibio land was the corridor through which the hinterland Igbo traded with the coastal Efik and Ijaw. The Tiv belong to a different trade fact — firewood exchanged for Jukun salt — and the Itsekiri and Urhobo appear in Benin's expansion."
+      },
+      {
+        "q": "Which geo-political zone is named the most ethnically diverse?",
+        "options": [
+          "South South",
+          "North East",
+          "North Central",
+          "North West"
+        ],
+        "answerIndex": 2,
+        "concept": "The six geo-political zones",
+        "why": "North Central holds Borgu, Nupe, Igala and Tiv and carries the label 'most ethnically diverse'. South South is also described as diverse, which is what makes it tempting, but the superlative is attached to North Central."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "Which two sources of confusion does the lesson name?",
+        "options": [
+          "Technical jargon and workplace slang",
+          "Ambiguity and vagueness of reference",
+          "Homophones and near-synonyms",
+          "Hazardous homophones and ambiguity"
+        ],
+        "answerIndex": 3,
+        "concept": "The two named sources of confusion",
+        "why": "The source names exactly two: hazardous homophones and ambiguity. Vagueness is a real phenomenon but is never one of the lesson's two, and it differs from ambiguity by offering one fuzzy reading rather than several distinct ones."
+      },
+      {
+        "q": "Calling a treacherous person a 'snake' uses which kind of meaning?",
+        "options": [
+          "Connotative meaning",
+          "Denotative meaning",
+          "A hazardous homophone",
+          "A semiotic sign"
+        ],
+        "answerIndex": 0,
+        "concept": "Denotation versus connotation",
+        "why": "The dictionary sense of snake is a legless reptile; the treachery is the cultural and emotional association the word drags along, which is connotation. Ask whether a dictionary entry would carry that meaning — if not, you are in connotation."
+      },
+      {
+        "q": "'Visiting relatives can be tiring' is an example of",
+        "options": [
+          "A hazardous homophone",
+          "Connotation",
+          "Structural ambiguity",
+          "Vagueness"
+        ],
+        "answerIndex": 2,
+        "concept": "Structural ambiguity",
+        "why": "Every word is clear; it is the structure that permits two groupings — relatives who visit, or the act of visiting them. Writing the sentence down does not repair it, which is the test that rules out a homophone."
+      },
+      {
+        "q": "The pair 'principal' and 'principle' illustrates",
+        "options": [
+          "Structural ambiguity",
+          "Vagueness",
+          "Hazardous homophones",
+          "Connotation"
+        ],
+        "answerIndex": 2,
+        "concept": "Hazardous homophones",
+        "why": "They sound alike and differ in meaning and spelling, which is what makes them hazardous homophones. The confusion lives in the sound, so it disappears as soon as the sentence is written down — an ambiguity would survive being written."
+      },
+      {
+        "q": "Which of these carries meaning without using words?",
+        "options": [
+          "A spoken instruction",
+          "A red traffic light",
+          "A written memo",
+          "A dictionary definition"
+        ],
+        "answerIndex": 1,
+        "concept": "Semiotic versus verbal channel",
+        "why": "A traffic light is a sign carrying meaning without language, which is exactly what semiotics studies. The other three all deliver meaning through words, spoken or written, and the channel is what separates verbal from semiotic."
+      },
+      {
+        "q": "Semiotics is best described as",
+        "options": [
+          "A set of non-verbal behaviours people use",
+          "The literal meaning a sign carries",
+          "A technique for removing ambiguity from sentences",
+          "The field that studies signs and symbols in interaction"
+        ],
+        "answerIndex": 3,
+        "concept": "Semiotics as a discipline",
+        "why": "Semiotics is a field of study — signs and symbols and the role they play in daily interaction. Non-verbal communication is one set of behaviours that field examines, so answering with the behaviours confuses the subject matter with the subject."
+      },
+      {
+        "q": "Which named competency is using the situation to decide what a sign means here?",
+        "options": [
+          "Semiotic Awareness",
+          "Active Listening",
+          "Contextual Interpretation",
+          "Clarity in Expression"
+        ],
+        "answerIndex": 2,
+        "concept": "The six competencies",
+        "why": "Contextual Interpretation is reading meaning in the light of situation and culture. Semiotic Awareness is the step before it — noticing that a sign is present at all — and the two are separated exactly on that noticing-versus-deciding line."
+      },
+      {
+        "q": "Which is NOT one of the lesson's six competencies?",
+        "options": [
+          "Conflict Resolution",
+          "Cultural Sensitivity",
+          "Persuasive Writing",
+          "Active Listening"
+        ],
+        "answerIndex": 2,
+        "concept": "The six competencies",
+        "why": "The six are Semiotic Awareness, Contextual Interpretation, Clarity in Expression, Active Listening, Conflict Resolution and Cultural Sensitivity — writing is not among them. Conflict Resolution earns its place because miscommunication creates discrepancies in understanding that then have to be reconciled."
+      },
+      {
+        "q": "The lesson says meaning requires active interpretation. Whose work is that?",
+        "options": [
+          "The speaker's, who must choose words precisely",
+          "The listener's, who construes meaning using context",
+          "The dictionary's, which fixes each sense",
+          "Nobody's — meaning is simply transmitted"
+        ],
+        "answerIndex": 1,
+        "concept": "Meaning is constructed by the receiver",
+        "why": "Meaning is built by the receiver, who weighs context and watches for ambiguities, rather than passively taking in what was sent. The speaker's precision matters too, but the lesson's specific claim is about the listener's interpretive work."
+      },
+      {
+        "q": "In the case study, what did the one ambiguous sentence actually cost the team?",
+        "options": [
+          "Conflicting interpretations and misaligned action",
+          "A missed deadline caused by a technical fault",
+          "A breakdown in the reporting hierarchy",
+          "The loss of a client through rude phrasing"
+        ],
+        "answerIndex": 0,
+        "concept": "The cost of ambiguity",
+        "why": "Team members read the same sentence in diverse, conflicting ways and then acted on their readings, so coordination fell apart. The lesson is that ambiguity costs aligned action, not merely a moment of confusion."
+      },
+      {
+        "q": "The case study's sentence failed on which quality?",
+        "options": [
+          "Accuracy — the sender meant something other than what was said",
+          "Cultural sensitivity — connotations differed across cultures",
+          "Semiotic awareness — a non-verbal cue was missed",
+          "Clarity — more than one meaning was available to the receivers"
+        ],
+        "answerIndex": 3,
+        "concept": "Accuracy versus clarity",
+        "why": "The sender's intention was fine; the fault was that the wording left several readings open, which is a failure of clarity. Accuracy asks whether the meaning sent matches the meaning intended, while clarity asks whether only one meaning is available at the other end."
+      },
+      {
+        "q": "Words like 'soon' and 'several' are examples of",
+        "options": [
+          "Vagueness, since the single reading has fuzzy boundaries",
+          "Ambiguity, since they carry two distinct readings",
+          "Homophony, since they sound like other words",
+          "Connotation, since they suggest more than they say"
+        ],
+        "answerIndex": 0,
+        "concept": "Ambiguity versus vagueness",
+        "why": "Vagueness gives one meaning whose edges are undefined — how soon is soon? Ambiguity is different in kind: it offers two or more distinct readings and forces you to choose between them."
+      },
+      {
+        "q": "'She went to the bank' is an example of which type of ambiguity?",
+        "options": [
+          "Structural",
+          "Lexical",
+          "Phonological",
+          "Cultural"
+        ],
+        "answerIndex": 1,
+        "concept": "Lexical versus structural ambiguity",
+        "why": "A single word carries two senses, riverside or financial institution, which is lexical ambiguity. Structural ambiguity comes from how the sentence is assembled, as in 'I saw the man with the telescope', where every individual word is perfectly clear."
+      },
+      {
+        "q": "Communication is said to go beyond words. What else carries the meaning?",
+        "options": [
+          "Volume and tone of voice",
+          "Grammar and syntax",
+          "The size of your vocabulary",
+          "Signs and symbols"
+        ],
+        "answerIndex": 3,
+        "concept": "Communication beyond words",
+        "why": "The lesson pushes past words into signs and symbols, which is the doorway into semiotics. Tone of voice really does carry meaning, but it is not the lesson's own phrasing, and grammar is still firmly inside the verbal channel."
+      },
+      {
+        "q": "Which question best separates denotation from connotation?",
+        "options": [
+          "Could a dictionary entry carry this meaning?",
+          "Is the word spoken or written?",
+          "Does the sentence have two readings?",
+          "Is the meaning verbal or non-verbal?"
+        ],
+        "answerIndex": 0,
+        "concept": "Test for denotation",
+        "why": "Denotation is the dictionary sense, so the dictionary test settles it, and anything resting on feeling or culture is connotation. The two-readings test belongs to ambiguity and the spoken-or-written test to homophones."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "Ohm's law was formulated by whom, and in which year?",
+        "options": [
+          "Michael Faraday, 1831",
+          "André-Marie Ampère, 1820",
+          "Georg Simon Ohm, 1827",
+          "Alessandro Volta, 1800"
+        ],
+        "answerIndex": 2,
+        "concept": "Origin of Ohm's law",
+        "why": "The law is Georg Simon Ohm's, published in 1827. Faraday, Ampère and Volta each have a law or a unit in this same area, which is what makes them tempting, but only Ohm gives you V = IR."
+      },
+      {
+        "q": "Your V–I graph is straight but does not pass through the origin. What does that indicate?",
+        "options": [
+          "The resistor must be non-ohmic after all",
+          "The gradient has to be requoted in ohms",
+          "The current axis was plotted in amperes",
+          "A systematic error, such as a meter zero error"
+        ],
+        "answerIndex": 3,
+        "concept": "Meaning of the intercept",
+        "why": "Zero applied voltage must physically give zero current, so the line belongs on the origin, and an offset points to a systematic fault such as a meter zero error or contact resistance. Non-ohmic behaviour shows up as a curve, not as a straight line sitting off the origin."
+      },
+      {
+        "q": "Resistors of 5 Ω, 10 Ω and 15 Ω are connected in series. The total resistance is",
+        "options": [
+          "30 Ω",
+          "2.7 Ω",
+          "10 Ω",
+          "0.37 Ω"
+        ],
+        "answerIndex": 0,
+        "concept": "Series combination",
+        "why": "In series the resistances simply add: 5 + 10 + 15 = 30 Ω. The 2.7 Ω answer is what the parallel formula would produce, and the check that catches it is that a series total must always exceed the largest single resistor."
+      },
+      {
+        "q": "A 6 Ω and a 3 Ω resistor are connected in parallel. The equivalent resistance is",
+        "options": [
+          "9 Ω",
+          "4.5 Ω",
+          "2 Ω",
+          "0.5 Ω"
+        ],
+        "answerIndex": 2,
+        "concept": "Parallel combination",
+        "why": "R = R₁R₂/(R₁ + R₂) = 18/9 = 2 Ω. The 0.5 Ω answer stops at 1/R = 1/6 + 1/3 = 1/2 and forgets to invert, and 2 Ω sits below the smaller resistor, which is the sanity check every parallel answer must pass."
+      },
+      {
+        "q": "The equivalent resistance of a parallel combination is always",
+        "options": [
+          "Larger than the largest resistor",
+          "Somewhere between the two resistor values",
+          "Smaller than the smallest resistor",
+          "Equal to the average of the resistors"
+        ],
+        "answerIndex": 2,
+        "concept": "Parallel sanity check",
+        "why": "Every extra parallel path gives current somewhere else to go, so the combination resists less than any single branch. 'Between the two values' is the intuition that wrecks parallel questions — that is what averaging gives, and the reciprocal formula does not average."
+      },
+      {
+        "q": "Three resistors carry identical currents but drop different voltages. How are they connected?",
+        "options": [
+          "In parallel with one another",
+          "In series with one another",
+          "In parallel across the supply",
+          "Each in its own separate loop"
+        ],
+        "answerIndex": 1,
+        "concept": "Series versus parallel",
+        "why": "One shared path forces one shared current, and the voltages then differ unless the resistors happen to be equal — that is series. Shared voltage with differing currents is the parallel signature, so ask which quantity the circuit forces to be common."
+      },
+      {
+        "q": "You measure R = 1080 Ω against an accepted value of 1 kΩ. What is the percentage error, and does it pass?",
+        "options": [
+          "8 %, so it passes",
+          "8 %, so it fails",
+          "7.4 %, so it fails",
+          "80 %, so it fails"
+        ],
+        "answerIndex": 1,
+        "concept": "Percentage error and the 5 % criterion",
+        "why": "% error = |1080 − 1000|/1000 × 100 = 8 %, which is outside the experiment's 5 % tolerance. The 7.4 % answer divides by the measured value instead of the accepted one — the accepted value always sits in the denominator."
+      },
+      {
+        "q": "Two points on the best-fit line are (0.50 mA, 1.0 V) and (2.50 mA, 5.0 V). What is R?",
+        "options": [
+          "2.0 Ω",
+          "0.50 kΩ",
+          "200 Ω",
+          "2.0 kΩ"
+        ],
+        "answerIndex": 3,
+        "concept": "Gradient of the V–I line",
+        "why": "The gradient is (5.0 − 1.0)/(2.50 − 0.50) = 2.0 V/mA, and volts over milliamps is kilohms, so R = 2.0 kΩ = 2000 Ω. Quoting 2.0 Ω is the standard unit trap: the milliamp axis is worth a factor of 1000."
+      },
+      {
+        "q": "You reverse the current through an ohmic resistor. What happens?",
+        "options": [
+          "Its resistance drops as the material heats",
+          "The V–I graph becomes curved",
+          "The voltage across it simply reverses; R is unchanged",
+          "It stops conducting until the current is restored"
+        ],
+        "answerIndex": 2,
+        "concept": "Reversibility of ohmic behaviour",
+        "why": "Ohmic behaviour is reversible: reverse the current and the voltage reverses with it, the ratio staying put. A resistance that changed with the direction or size of the current would be non-ohmic, which is what a thermistor or varistor does."
+      },
+      {
+        "q": "A component's V–I graph comes out curved. What does that tell you?",
+        "options": [
+          "Its resistance varies, so it is non-ohmic",
+          "It is ohmic but has been mis-wired",
+          "The ammeter has been connected in parallel",
+          "The line simply has a non-zero intercept"
+        ],
+        "answerIndex": 0,
+        "concept": "Ohmic versus non-ohmic from a graph",
+        "why": "A straight line through the origin is what constant resistance looks like, so curvature means R changes with V, I or temperature and the component is non-ohmic. A wiring fault or a zero error shifts or tilts the line rather than bending it."
+      },
+      {
+        "q": "To read the potential difference across R₁, the voltmeter must be placed",
+        "options": [
+          "In series with the resistor",
+          "In series with the ammeter",
+          "Across the DC supply terminals only",
+          "In parallel across the resistor"
+        ],
+        "answerIndex": 3,
+        "concept": "Meter placement",
+        "why": "A voltmeter measures the difference between two points, so it must straddle them — in parallel across the resistor, and built with high resistance so it draws almost no current. Put it in series and it chokes the very current you are trying to measure."
+      },
+      {
+        "q": "Which quantity belongs to the material itself, independent of the sample's dimensions?",
+        "options": [
+          "Resistance, measured in ohms",
+          "Resistivity",
+          "The gradient of the V–I line",
+          "The percentage error in R"
+        ],
+        "answerIndex": 1,
+        "concept": "Resistance versus resistivity",
+        "why": "Resistivity is a property of the material and does not change when you cut the sample shorter or thicker; resistance belongs to this particular component and does change. If the quantity is quoted in ohms with a component behind it, you are talking about resistance."
+      },
+      {
+        "q": "A 12 V supply is placed across a 4 kΩ resistor. The current is",
+        "options": [
+          "3 A",
+          "3 mA",
+          "48 mA",
+          "0.33 mA"
+        ],
+        "answerIndex": 1,
+        "concept": "V = IR rearranged",
+        "why": "I = V/R = 12/(4 × 10³) = 3 × 10⁻³ A = 3 mA. Answering 3 A drops the kilo from the resistance — volts over kilohms lands you in milliamps, which is exactly why the lab's graph uses a mA axis."
+      },
+      {
+        "q": "The Praxilabs procedure tells you to set R₁ in which range?",
+        "options": [
+          "1–20 kΩ",
+          "1–20 Ω",
+          "0.1–1 kΩ",
+          "1–20 MΩ"
+        ],
+        "answerIndex": 0,
+        "concept": "Experimental procedure",
+        "why": "The procedure specifies 1–20 kΩ, with 1 kΩ the default accepted value the 5 % check is made against. The ohm-scale option is the same numbers with the prefix dropped, which is the mistake this whole experiment punishes."
+      },
+      {
+        "q": "You set a voltage and press Record, then repeat at six further voltages. How many readings does your graph rest on?",
+        "options": [
+          "Six",
+          "Seven",
+          "Eight",
+          "Twelve"
+        ],
+        "answerIndex": 1,
+        "concept": "Number of recorded readings",
+        "why": "One reading plus six repeats gives seven pairs of V and I, which is why the gradient of the best-fit line beats a single V/I ratio — it averages all seven instead of carrying one point's full error. Answering six forgets the original reading."
+      }
+    ]
+  }
+}

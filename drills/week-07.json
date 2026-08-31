@@ -1,0 +1,754 @@
+{
+  "week": 7,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "Evaluate ∫x⁶dx.",
+        "options": ["6x⁵ + c", "x⁷ + c", "x⁷/7 + c", "x⁵/5 + c"],
+        "answerIndex": 2,
+        "concept": "Power rule for a positive exponent",
+        "why": "Raise the power by one and divide by the new power: n = 6 gives x⁷/7 + c. The tempting wrong pick is 6x⁵ + c, which is what you get by differentiating instead — differentiation multiplies by the old power, integration divides by the new one. x⁷ + c does the raising but skips the division."
+      },
+      {
+        "q": "Evaluate ∫5 dx.",
+        "options": ["5x + c", "5 + c", "5x²/2 + c", "x⁵/5 + c"],
+        "answerIndex": 0,
+        "concept": "Integrating a constant (power rule with n = 0)",
+        "why": "A constant is the power rule with n = 0: 5·x^(0+1)/(0+1) = 5x. The tempting 5x²/2 treats the integrand as 5x rather than 5. Writing 5 + c leaves the integrand untouched, and differentiating it gives 0, not 5."
+      },
+      {
+        "q": "Evaluate ∫x⁻⁴dx.",
+        "options": ["1/(3x³) + c", "−1/(5x⁵) + c", "−4x⁻⁵ + c", "−1/(3x³) + c"],
+        "answerIndex": 3,
+        "concept": "Power rule with a negative exponent",
+        "why": "n = −4, so the new exponent is −3 and you divide by −3: x⁻³/(−3) = −1/(3x³). The tempting +1/(3x³) loses the sign that dividing by a negative number produces. −1/(5x⁵) lowered the power instead of raising it."
+      },
+      {
+        "q": "Which of these functions is an antiderivative of 6x²?",
+        "options": ["12x", "2x³ − 7", "18x³", "6x³/2"],
+        "answerIndex": 1,
+        "concept": "The family of antiderivatives",
+        "why": "Differentiate 2x³ − 7 and you recover 6x², because the derivative of the constant is 0 — that is exactly the lecturer's Example 1 argument. 12x is the derivative of 6x², not an antiderivative. 18x³ multiplied by the power instead of dividing by the new one."
+      },
+      {
+        "q": "Which answer to ∫(x⁵ − 2x)dx survives the check-by-differentiating test?",
+        "options": ["x⁶/6 − 2x² + c", "5x⁴ − 2 + c", "x⁶/6 − x² + c", "x⁶ − x² + c"],
+        "answerIndex": 2,
+        "concept": "Verifying an integral by differentiating",
+        "why": "Differentiate x⁶/6 − x² and you get x⁵ − 2x, the integrand back. The tempting x⁶/6 − 2x² carries the coefficient 2 through untouched, but 2x integrates to 2·x²/2 = x², so differentiating it returns x⁵ − 4x. This one check catches every sign and coefficient slip in ten seconds."
+      },
+      {
+        "q": "Evaluate ∫₁³ 2x dx.",
+        "options": ["8", "4", "10", "−8"],
+        "answerIndex": 0,
+        "concept": "Fundamental Theorem of Calculus",
+        "why": "F(x) = x², so the value is F(3) − F(1) = 9 − 1 = 8. The tempting 4 comes from substituting into f rather than F: 2(3) − 2(1) = 4. You substitute into the antiderivative, never into the integrand. −8 has the limits the wrong way round."
+      },
+      {
+        "q": "Evaluate ∫₀² 4x³ dx.",
+        "options": ["8", "16", "32", "64"],
+        "answerIndex": 1,
+        "concept": "Definite integral of a monomial",
+        "why": "F(x) = x⁴, so the value is 2⁴ − 0⁴ = 16. The tempting 32 substitutes into f: 4(2³) = 32. 64 forgets to divide by the new power and uses 4x⁴ as the antiderivative."
+      },
+      {
+        "q": "Evaluate ∫₋₃⁰ x² dx.",
+        "options": ["−9", "0", "27", "9"],
+        "answerIndex": 3,
+        "concept": "Definite integral with a negative lower limit",
+        "why": "F(x) = x³/3, so the value is F(0) − F(−3) = 0 − (−9) = 9. The trap is (−3)³ = −27, and subtracting a negative adds. Picking −9 subtracts in the wrong order; the rule is upper minus lower, always."
+      },
+      {
+        "q": "Evaluate ∫(4x³ − 1)dx.",
+        "options": ["x⁴ − 1 + c", "12x² − 1 + c", "x⁴ − x + c", "x⁴/4 − x + c"],
+        "answerIndex": 2,
+        "concept": "Linearity with a constant term",
+        "why": "Split it: 4·x⁴/4 = x⁴, and ∫1dx = x by the power rule with n = 0. The tempting x⁴ − 1 leaves the constant term unintegrated — a constant does not stay a constant. x⁴/4 forgot to multiply the coefficient 4 back in."
+      },
+      {
+        "q": "Evaluate ∫(1/x⁶)dx.",
+        "options": ["−1/(5x⁵) + c", "1/(5x⁵) + c", "−1/(7x⁷) + c", "−6x⁻⁷ + c"],
+        "answerIndex": 0,
+        "concept": "Rewriting a fraction as a negative power",
+        "why": "Rewrite 1/x⁶ as x⁻⁶ first, so n = −6, the new exponent is −5, and you divide by −5 to get −1/(5x⁵). The tempting +1/(5x⁵) drops the sign that dividing by −5 produces. The rule only ever sees xⁿ, so the rewrite has to come first."
+      },
+      {
+        "q": "Evaluate ∫₃³ 5x dx.",
+        "options": ["15", "0", "45/2", "5"],
+        "answerIndex": 1,
+        "concept": "Equal limits in a definite integral",
+        "why": "The theorem gives F(3) − F(3), which is 0 whatever F happens to be. The tempting 45/2 is F(3) alone, i.e. forgetting there is a subtraction at all. You never need to work out the antiderivative here."
+      },
+      {
+        "q": "You are told ∫₁⁴ f(x)dx = 10. What is ∫₄¹ f(x)dx?",
+        "options": ["10", "0", "1/10", "−10"],
+        "answerIndex": 3,
+        "concept": "Reversing the limits of integration",
+        "why": "Swapping the limits computes F(1) − F(4), which is the negative of F(4) − F(1), so the answer is −10. Picking 10 assumes the order does not matter; it always does, because the theorem is upper minus lower in that order."
+      },
+      {
+        "q": "Evaluate ∫(x² · x³)dx.",
+        "options": ["x⁶/6 + c", "(x³/3)(x⁴/4) + c", "x⁵/5 + c", "x⁶ + c"],
+        "answerIndex": 0,
+        "concept": "No product rule for integration",
+        "why": "Multiply the powers together first: x²·x³ = x⁵, so n = 5 and the answer is x⁶/6 + c. The tempting second option integrates each factor separately and multiplies — but ∫[f·g]dx is not (∫f)(∫g). Linearity only licenses splitting sums, differences and constant multiples."
+      },
+      {
+        "q": "Evaluate ∫8x³dx.",
+        "options": ["8x⁴ + c", "24x² + c", "2x⁴ + c", "x⁴/2 + c"],
+        "answerIndex": 2,
+        "concept": "Pulling a constant multiple out",
+        "why": "Take the 8 outside: 8·x⁴/4 = 2x⁴ + c. The tempting 8x⁴ raises the power but forgets to divide by 4. 24x² is the derivative — you multiplied by the old power instead of dividing by the new one."
+      },
+      {
+        "q": "By the power rule with n = 0, ∫1 dx equals:",
+        "options": ["1 + c", "x + c", "0 + c", "x²/2 + c"],
+        "answerIndex": 1,
+        "concept": "∫1 dx = x",
+        "why": "Put n = 0 into x^(n+1)/(n+1): that is x¹/1 = x. The tempting 1 + c leaves the 1 alone, but differentiating it gives 0, not 1. x²/2 is what you would get from ∫x dx, treating the integrand as x."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "Reactive power Q is measured in:",
+        "options": ["watts, W", "volt-amperes, VA", "volt-amperes reactive, var", "joules per second, J/s"],
+        "answerIndex": 2,
+        "concept": "Units of the three powers",
+        "why": "Q = V_rms I_rms sin φ is quoted in var. The tempting watt belongs to real power P, which is the only one of the three that is actually dissipated and billed. Volt-amperes belong to apparent power S, the product V_rms I_rms with no cos φ."
+      },
+      {
+        "q": "A load has P = 600 W and Q = 800 var. Its apparent power is:",
+        "options": ["1000 VA", "1400 VA", "200 VA", "700 VA"],
+        "answerIndex": 0,
+        "concept": "The power triangle",
+        "why": "S² = P² + Q², so S = √(600² + 800²) = 1000 VA. The tempting 1400 VA adds them arithmetically, but the triangle is right-angled — P and Q sit at 90° to each other and never add that way."
+      },
+      {
+        "q": "A motor draws P = 1.2 kW and S = 2.0 kVA. Its power factor is:",
+        "options": ["0.40", "0.60", "0.80", "1.67"],
+        "answerIndex": 1,
+        "concept": "Power factor as P/S",
+        "why": "PF = P/S = 1200/2000 = 0.60. The tempting 1.67 inverts it to S/P, which cannot be a power factor at all — PF is confined to the range 0 to 1. 0.80 is sin φ, the reactive factor, not the power factor."
+      },
+      {
+        "q": "A series circuit has R = 9 Ω and Z = 15 Ω. Its power factor is:",
+        "options": ["1.67", "0.36", "0.80", "0.60"],
+        "answerIndex": 3,
+        "concept": "PF = cos φ = R/Z",
+        "why": "The power factor is the resistance over the hypotenuse: 9/15 = 0.60. The tempting 0.80 is X/Z with X = 12 Ω, which is sin φ — that inverts every answer you build on it. Z/R = 1.67 exceeds 1 and is impossible."
+      },
+      {
+        "q": "5.0 A rms flows through R = 12 Ω in series with X_L = 16 Ω. The real power is:",
+        "options": ["300 W", "400 W", "500 W", "700 W"],
+        "answerIndex": 0,
+        "concept": "P = I²R — only R dissipates",
+        "why": "P = I_rms²R = 25 × 12 = 300 W. The tempting 400 W is I²X_L, which is the reactive power in var, not watts — a reactance carries current and holds voltage but consumes nothing on average. 500 W is I²Z, the apparent power in VA."
+      },
+      {
+        "q": "A resistor on an AC supply dissipates 200 W on average. Its peak instantaneous power is:",
+        "options": ["200 W", "283 W", "400 W", "100 W"],
+        "answerIndex": 2,
+        "concept": "Peak versus average power in a resistor",
+        "why": "For a resistor p(t) = P(1 − cos 2ωt), which swings from 0 to 2P, so the peak is 400 W. The tempting 283 W is √2 × 200 — the peak-to-rms factor applies to voltage and current, not to power, which is their product."
+      },
+      {
+        "q": "L = 0.10 H and C = 10 μF in series. The resonant angular frequency ω₀ is:",
+        "options": ["100 rad s⁻¹", "1000 rad s⁻¹", "10⁶ rad s⁻¹", "159 rad s⁻¹"],
+        "answerIndex": 1,
+        "concept": "ω₀ = 1/√(LC)",
+        "why": "LC = 0.10 × 10⁻⁵ = 10⁻⁶, so √(LC) = 10⁻³ and ω₀ = 1000 rad s⁻¹. The tempting 159 is f₀ = ω₀/2π in hertz — the question asks for the angular frequency, so do not divide by 2π."
+      },
+      {
+        "q": "A parallel capacitor raises a workshop's power factor from 0.70 lagging to unity. The real power the workshop draws:",
+        "options": ["falls in proportion to the current", "falls to zero at unity power factor", "rises by the capacitor's reactive power", "is exactly what it was before"],
+        "answerIndex": 3,
+        "concept": "What power-factor correction does and does not change",
+        "why": "The capacitor cancels the lagging reactive power only; P = V_rms I_rms cos φ is still whatever the load needs to do its work. The tempting first option confuses the line current, which does fall, with the power, which does not — that is the whole point of correcting."
+      },
+      {
+        "q": "A 6.6 kW load on a 220 V rms supply has been corrected to unity power factor. The line current is:",
+        "options": ["30 A", "21 A", "43 A", "15 A"],
+        "answerIndex": 0,
+        "concept": "Line current at unity power factor",
+        "why": "At PF = 1, S = P, so I = P/V = 6600/220 = 30 A. The tempting 43 A comes from dividing by a power factor that is no longer there; at unity there is nothing left to divide by."
+      },
+      {
+        "q": "To correct a lagging load to unity power factor, the parallel capacitor's reactive power must equal:",
+        "options": ["the load's real power P", "the load's apparent power S", "the load's reactive power Q", "half the load's apparent power"],
+        "answerIndex": 2,
+        "concept": "Q_C = P(tan φ₁ − tan φ₂)",
+        "why": "With φ₂ = 0 the formula reduces to Q_C = Q_load — the capacitor must supply all of the lagging reactive power. Picking P confuses the side of the triangle you cancel with the side you must leave completely alone."
+      },
+      {
+        "q": "A student writes Z = √(R² + (X_L + X_C)²). What is wrong with it?",
+        "options": ["nothing — that expression is correct", "X_L and X_C subtract, being 180° apart", "R and X must be added before squaring", "the root should apply to the resistance only"],
+        "answerIndex": 1,
+        "concept": "Reactances subtract before combining with R",
+        "why": "The net reactance is X = X_L − X_C, because the inductive and capacitive voltages are half a cycle apart and partly cancel; only then does X go into quadrature with R. Adding them inflates Z, and at resonance it would predict a huge impedance where the true one falls all the way to R."
+      },
+      {
+        "q": "For an ideal capacitor on an AC supply, taken over a full cycle:",
+        "options": ["P = 0 and Q is negative (leading)", "P = 0 and Q is positive (lagging)", "P = I²X_C and Q = 0", "both P and Q are zero"],
+        "answerIndex": 0,
+        "concept": "Real and reactive power for a pure reactance",
+        "why": "A capacitor stores energy in its electric field and returns every joule of it, so the average real power is zero, but it still exchanges reactive power, taken as negative because the current leads. The tempting second option describes an inductor, whose Q is positive."
+      },
+      {
+        "q": "R = 6.0 Ω in series with X_L = 8.0 Ω across 100 V rms. A student writes P = 100²/6 = 1667 W. The correct real power is:",
+        "options": ["1667 W", "1000 W", "800 W", "600 W"],
+        "answerIndex": 3,
+        "concept": "When P = V²/R is legal",
+        "why": "Z = 10 Ω so I = 10 A, and P = I²R = 600 W. V²/R is legal only when the whole supply voltage sits across R; here only V_R = IR = 60 V does, and 60²/6 = 600 W. The 1000 W option is S = V_rms I_rms, the apparent power."
+      },
+      {
+        "q": "In which circuit does the instantaneous power p(t) never dip below zero?",
+        "options": ["a series RL circuit on a mains supply", "a pure capacitor on a mains supply", "a series RLC circuit driven at resonance", "a series RLC driven well below resonance"],
+        "answerIndex": 2,
+        "concept": "p_min = S(cos φ − 1)",
+        "why": "The minimum of p(t) is S(cos φ − 1), which is zero only when φ = 0. At resonance X_L = X_C, so φ = 0 and the source sees pure resistance even though L and C are still in the circuit. Any net reactance, as in the RL circuit, sends p negative twice per cycle."
+      },
+      {
+        "q": "The energy an ideal inductor borrows from the supply and returns each quarter-cycle peaks at:",
+        "options": ["L I₀²", "½L I₀²", "½L I_rms²", "I₀² X_L"],
+        "answerIndex": 1,
+        "concept": "Energy stored in an inductor",
+        "why": "The magnetic-field energy reaches ½LI₀² at the instant the current peaks, then is handed straight back. Using I_rms halves it again; I₀²X_L has the units of power, not energy, so it cannot be the answer whatever the numbers."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "In C, what is the value of `7 / 2`?",
+        "options": ["3.5", "3", "4", "1"],
+        "answerIndex": 1,
+        "concept": "Integer division truncates",
+        "why": "Both operands are int, so the operation performed is integer division and the fractional part is thrown away towards zero. 3.5 is what you get only if one operand is made floating first — and note that assigning the result to a float changes nothing. 1 is `7 % 2`."
+      },
+      {
+        "q": "In C, what is the value of `7 % 2`?",
+        "options": ["1", "3", "0", "3.5"],
+        "answerIndex": 0,
+        "concept": "The remainder operator",
+        "why": "% gives the remainder: 7 = 3 × 2 + 1, so the answer is 1. The tempting 3 is the quotient, `7 / 2`, which is the operator next to it in the arithmetic group. % requires integer operands and is illegal on a float."
+      },
+      {
+        "q": "Evaluate `20 - 6 / 2 * 3` in C.",
+        "options": ["21", "19", "51", "11"],
+        "answerIndex": 3,
+        "concept": "Precedence and left-to-right associativity",
+        "why": "/ and * sit at the same level and associate left to right: 6/2 = 3, then 3*3 = 9, then 20 − 9 = 11. The tempting 19 comes from believing * outranks /, giving 6/(2*3) = 1. 21 works straight left to right and ignores precedence entirely."
+      },
+      {
+        "q": "With `int sum = 90;` and `int count = 4;`, which line leaves average holding 22.5?",
+        "options": ["float average = sum / count;", "float average = (float)(sum / count);", "float average = (float) sum / count;", "float average = sum / count + 0.5;"],
+        "answerIndex": 2,
+        "concept": "Cast an operand, never the result",
+        "why": "The cast has to reach an operand before the division happens, so `(float) sum / count` makes it a floating division and gives 22.5. The tempting `(float)(sum / count)` casts too late — the int division has already produced 22 and thrown the fraction away. The assignment target has no say in which division is performed."
+      },
+      {
+        "q": "In C, what is the numeric value of the character literal `'5'`?",
+        "options": ["5", "48", "35", "53"],
+        "answerIndex": 3,
+        "concept": "char holds a character code",
+        "why": "A char stores the character's code, and '5' is ASCII 53. The tempting 5 is the int literal `5`, a different thing entirely; 48 is the code for '0'. Subtracting them, `'5' - '0'`, is how you turn the character into the number."
+      },
+      {
+        "q": "The week gives the size of a `double` as:",
+        "options": ["8 bytes", "4 bytes", "2 bytes", "16 bytes"],
+        "answerIndex": 0,
+        "concept": "Sizes of the basic types",
+        "why": "float is 4 bytes with about 6–7 significant digits, and double is 8 with about 15–16. Picking 4 confuses double with float — they hold the same kind of value, and only the precision and the storage differ. char is 1 byte and int typically 4."
+      },
+      {
+        "q": "Which type does the week describe as exact within its range rather than an approximation?",
+        "options": ["float", "int", "double", "long double"],
+        "answerIndex": 1,
+        "concept": "int versus floating-point",
+        "why": "int holds a whole number exactly, from about −2.1 billion to +2.1 billion. float and double both hold approximations to a fixed number of significant digits — 0.1 cannot be stored exactly in either, however many bytes it gets. The test is: are you counting, or measuring?"
+      },
+      {
+        "q": "Which of these is a legal variable name in C?",
+        "options": ["2total", "total-2", "_total2", "float"],
+        "answerIndex": 2,
+        "concept": "Rules for a C variable name",
+        "why": "Letters, digits and the underscore only, never beginning with a digit, and never a keyword. `total-2` is tempting because it reads as a name, but C parses the hyphen as subtraction; `float` is a keyword, so the compiler already has a meaning for it."
+      },
+      {
+        "q": "`int a = 0;` and then the expression `a && f(x)` is evaluated. What happens to f?",
+        "options": ["It is not called at all", "It is called exactly once", "It is called, but its result is discarded", "It is called before a is tested"],
+        "answerIndex": 0,
+        "concept": "Short-circuit evaluation",
+        "why": "&& evaluates its right operand only when the left is true. a is 0, so the whole expression is already known to be false and the right side is skipped entirely. Written with a single & instead, both sides would be evaluated every time — that is the practical difference between them."
+      },
+      {
+        "q": "In C, `1 & 2` and `1 && 2` evaluate to:",
+        "options": ["1 and 1", "0 and 0", "2 and 1", "0 and 1"],
+        "answerIndex": 3,
+        "concept": "Bitwise & versus logical &&",
+        "why": "& combines the operands bit by bit: 01 and 10 share no set bit, so the result is 0. && asks only whether both operands are non-zero, and both are, so it yields 1. The similar spelling is the whole trap — one works on bits, the other on truth values."
+      },
+      {
+        "q": "What does `if (n = 0)` do in C?",
+        "options": ["It compares n with 0 and is true when n is zero", "It stores 0 in n, so the test is always false", "It is rejected by the compiler", "It stores 0 in n, so the test is always true"],
+        "answerIndex": 1,
+        "concept": "= assigns, == compares",
+        "why": "= stores and then yields the value it stored, which here is 0, and 0 is false — so the branch never runs and n has been quietly overwritten. `==` is the comparison you meant. The compiler accepts the line without complaint, which is exactly why this bug survives."
+      },
+      {
+        "q": "`int a = 5; int b = a++;` After these two lines:",
+        "options": ["a is 5 and b is 5", "a is 6 and b is 6", "a is 6 and b is 5", "a is 5 and b is 6"],
+        "answerIndex": 2,
+        "concept": "Post-increment versus pre-increment",
+        "why": "a++ increments a but yields the value from before the increment, so b takes 5 while a becomes 6. The tempting second option is what ++a would give — both forms add 1 to a, and they differ only in what they hand back."
+      },
+      {
+        "q": "In C, `x < y < z` actually compares:",
+        "options": ["the 0 or 1 from (x < y) against z", "x against y and y against z", "x against the smaller of y and z", "nothing — it is a syntax error"],
+        "answerIndex": 0,
+        "concept": "Relational operators chain left to right",
+        "why": "The left comparison runs first and yields the int 1 or 0, and that number is then compared with z. It compiles cleanly and is almost never what was meant — the mathematical reading, the second option, has to be written as `x < y && y < z`."
+      },
+      {
+        "q": "What does a relational operator such as `>=` yield in C?",
+        "options": ["a bool, true or false", "the int 1 or 0", "the larger of the two operands", "1 or −1"],
+        "answerIndex": 1,
+        "concept": "Result type of relational and logical operators",
+        "why": "Relational and logical operators both yield the int 1 for true and 0 for false, which is why the result can be stored in an int or added to one. The bool option is tempting from other languages, but in this course's treatment C has only the int codes."
+      },
+      {
+        "q": "`struct Dog` and `union Dog` each hold three `char[20]` members. Their sizes are:",
+        "options": ["20 bytes and 60 bytes", "60 bytes and 60 bytes", "20 bytes and 20 bytes", "60 bytes and 20 bytes"],
+        "answerIndex": 3,
+        "concept": "Struct versus union in memory",
+        "why": "Every struct member gets its own storage, so 3 × 20 = 60 bytes; every union member starts at the same address, so the union is only as big as its largest member, 20 bytes. That shared block is the reason a union can represent the value of only one member at a time."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "Which call selects the element written as `<div id=\"box\">`?",
+        "options": ["document.getElementById('#box')", "document.querySelector('box')", "document.getElementById('box')", "document.getElementsByTagName('box')"],
+        "answerIndex": 2,
+        "concept": "getElementById takes a bare ID",
+        "why": "getElementById only ever matches IDs, so it takes the bare name with no hash. Adding the # is the classic error — it goes looking for an ID literally spelled \"#box\" and finds nothing. querySelector('box') is a CSS selector and hunts for a <box> tag."
+      },
+      {
+        "q": "`document.querySelector('.note')` returns:",
+        "options": ["the first element with class note, or null", "every element with class note", "a live HTMLCollection of the notes", "the value of the class attribute"],
+        "answerIndex": 0,
+        "concept": "querySelector returns one match",
+        "why": "querySelector stops at the first element the CSS selector matches and gives null if there is none. The tempting second option is querySelectorAll, which returns all of them as a static NodeList — the singular and plural names are one letter apart in behaviour terms."
+      },
+      {
+        "q": "Which of these returns a live collection that updates as the page changes?",
+        "options": ["document.querySelectorAll('.note')", "document.querySelector('.note')", "document.getElementById('note')", "document.getElementsByClassName('note')"],
+        "answerIndex": 3,
+        "concept": "Live HTMLCollection versus static NodeList",
+        "why": "The getElementsBy… methods return live HTMLCollections that keep themselves in step with the document. querySelectorAll is the tempting wrong pick because it also returns many elements, but its NodeList is a snapshot taken at the moment you called it."
+      },
+      {
+        "q": "`items = document.getElementsByClassName('item')` matches 2 elements. You then create a third .item element and appendChild it. `items.length` now prints:",
+        "options": ["2", "3", "4", "0"],
+        "answerIndex": 1,
+        "concept": "Live collections update themselves",
+        "why": "The collection is live, so attaching a third matching element updates it without you re-running the query. The tempting 2 is what you would get from querySelectorAll, whose NodeList was frozen at two before the new element existed."
+      },
+      {
+        "q": "Given `<div id=\"box\">Total: <b>5</b></div>`, what is `box.textContent`?",
+        "options": ["\"Total: <b>5</b>\"", "\"5\"", "\"Total: 5\"", "\"Total:\""],
+        "answerIndex": 2,
+        "concept": "textContent strips markup",
+        "why": "textContent returns the text of every descendant with the tags stripped, so the 5 inside the <b> comes along with \"Total: \". The tempting first option is innerHTML, which is the property that keeps the markup in the string."
+      },
+      {
+        "q": "Assigning untrusted user input through `innerHTML` risks:",
+        "options": ["cross-site scripting (XSS)", "a CORS failure", "a memory leak in the collection", "silently clearing the page"],
+        "answerIndex": 0,
+        "concept": "The security cost of innerHTML",
+        "why": "innerHTML parses what you give it, so markup in the input becomes real elements — including a script an attacker planted in a comment field. textContent inserts the same string as literal characters and carries no such risk, which is why it is the default for user data."
+      },
+      {
+        "q": "A page shows cat.jpg. What does `img.setAttribute('src', 'dog.jpg')` do?",
+        "options": ["reads the current src and returns it", "changes the picture on screen to dog.jpg", "creates a second img element", "removes the src attribute"],
+        "answerIndex": 1,
+        "concept": "setAttribute writes an attribute",
+        "why": "setAttribute writes the attribute and the browser re-renders, so the image swaps immediately. The tempting first option is getAttribute, the reader of the pair; removeAttribute is the deleter. All three take the attribute's own name as a string."
+      },
+      {
+        "q": "After `img.removeAttribute('alt')`, what does `img.hasAttribute('alt')` return?",
+        "options": ["true", "null", "\"\"", "false"],
+        "answerIndex": 3,
+        "concept": "removeAttribute deletes the attribute",
+        "why": "removeAttribute takes the attribute off the element entirely, so hasAttribute reports false. The tempting empty string assumes it was blanked rather than deleted — but an element carrying alt=\"\" still has the attribute, and hasAttribute would return true for it."
+      },
+      {
+        "q": "Given `<li data-task-id=\"42\">Buy milk</li>`, which reads the value 42?",
+        "options": ["li.dataset['data-task-id']", "li.taskId", "li.dataset.taskId", "li.dataset.task-id"],
+        "answerIndex": 2,
+        "concept": "Reading data- attributes through dataset",
+        "why": "dataset drops the data- prefix and converts the hyphenated name to camelCase, so data-task-id becomes taskId — and the value arrives as the string \"42\", never a number. The last option is not even valid property syntax, since the hyphen reads as subtraction."
+      },
+      {
+        "q": "Which line removes the paragraph `p` from the page?",
+        "options": ["p.parentNode.removeChild(p)", "p.removeChild(p)", "document.removeChild(p)", "p.removeChild()"],
+        "answerIndex": 0,
+        "concept": "removeChild is called on the parent",
+        "why": "removeChild is called on the parent and passed the child to take out. The tempting `p.removeChild(p)` asks the paragraph to remove one of its own children, which p is not; document.removeChild(p) fails too, because p is not a direct child of document."
+      },
+      {
+        "q": "Which property lists only element nodes, leaving out text and whitespace?",
+        "options": ["childNodes", "children", "firstChild", "nodeList"],
+        "answerIndex": 1,
+        "concept": "children versus childNodes",
+        "why": "children filters the list down to element nodes. The tempting childNodes includes every kind of node, so the whitespace and line breaks between your tags turn up as text nodes and the count is larger than you expected."
+      },
+      {
+        "q": "In `<img src=\"cat.jpg\" alt=\"A cat\">`, which is an attribute node?",
+        "options": ["the <img> tag itself", "the whole element and everything in it", "the text \"A cat\" as displayed text", "src=\"cat.jpg\""],
+        "answerIndex": 3,
+        "concept": "Element, attribute and text nodes",
+        "why": "Attributes written on a tag are attribute nodes; the tag itself is an element node. The alt value is tempting to call a text node, but text nodes are the text sitting between an element's tags — and an <img> has no content between tags at all."
+      },
+      {
+        "q": "What does `document.getElementsByClassName('note').textContent = 'x'` do?",
+        "options": ["sets the text of every .note", "nothing at all, and silently", "sets the text of the first .note", "throws a TypeError at once"],
+        "answerIndex": 1,
+        "concept": "A collection is not an element",
+        "why": "The call returns a collection, and assigning to a property a collection does not have is silently ignored — no error, no visible change, which is what makes it hard to spot. You must index into it, notes[0].textContent, or loop over it."
+      },
+      {
+        "q": "In `<div id=\"parentDiv\"><p>One</p><p>Two</p></div>`, the two <p> elements are:",
+        "options": ["siblings of the div and parents of the text", "children of the text nodes One and Two", "children of the div and siblings of each other", "attribute nodes belonging to the div"],
+        "answerIndex": 2,
+        "concept": "Parent, child and sibling in the DOM tree",
+        "why": "The div is their parent, and two elements sharing a parent are siblings. \"One\" and \"Two\" are text nodes and are children of the <p> elements, not of the div — the tempting first option has that relationship exactly upside down."
+      },
+      {
+        "q": "The DOM is best described as:",
+        "options": ["a programming interface representing the page as a tree of objects", "a JavaScript library for animating and styling web pages", "a stricter version of HTML that browsers parse internally", "the browser engine that matches CSS selectors to elements"],
+        "answerIndex": 0,
+        "concept": "What the DOM is",
+        "why": "It is the object model that lets a script read and change a page after it has loaded. The tempting library option treats it as something you add to a project — the DOM is neither HTML nor JavaScript, but the interface that lets the second manipulate the first."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "Chapter IV of the 1999 Constitution runs from which sections to which?",
+        "options": ["Sections 1 to 32", "Sections 33 to 46", "Sections 13 to 24", "Sections 46 to 60"],
+        "answerIndex": 1,
+        "concept": "Where the rights sit in Nigerian law",
+        "why": "Fundamental Human Rights are Chapter IV, Sections 33 to 46. Sections 13 to 24 are tempting because they are also a numbered rights-sounding block, but they hold the Fundamental Objectives and Directive Principles of State Policy, which are a separate thing in Chapter II."
+      },
+      {
+        "q": "Article 1 of the UN Declaration of Human Rights says all human beings are born free and equal in dignity and rights, and are endowed with:",
+        "options": ["reason and conscience", "dignity and conscience", "reason and liberty", "conscience and property"],
+        "answerIndex": 0,
+        "concept": "UDHR Article 1, quoted",
+        "why": "The wording is \"endowed with reason and conscience and should act towards one another in the spirit of brotherhood\". Dignity is tempting because it does appear in the same sentence — but in the earlier clause, born free and equal in dignity and rights."
+      },
+      {
+        "q": "On the lesson's definition, a human rights abuse can harm:",
+        "options": ["individuals but not communities", "individuals and communities alike", "people, communities and the environment", "citizens of the state, but not visitors"],
+        "answerIndex": 2,
+        "concept": "Definition of a human rights abuse",
+        "why": "The lesson is explicit that abuses include harm to people, communities and the environment. The environment is the part students drop, because it does not fit the picture of one person harming another — but it is named in the definition itself."
+      },
+      {
+        "q": "Which constitution introduced the Fundamental Objectives and Directive Principles of State Policy?",
+        "options": ["the 1999 Constitution", "the 1963 Constitution", "the 2009 Rules", "the 1979 Constitution"],
+        "answerIndex": 3,
+        "concept": "Constitutional history",
+        "why": "The 1979 Constitution introduced them alongside the Fundamental Human Rights. The 1999 Constitution is tempting because it is where the rights are contained now, but it did not introduce them; the 2009 Rules are enforcement rules, not a constitution."
+      },
+      {
+        "q": "The National Human Rights Commission's recorded cases of rights violations in 2021 numbered:",
+        "options": ["1,701,519", "1,287,280", "367,000", "1,207,519"],
+        "answerIndex": 0,
+        "concept": "The NHRC figures",
+        "why": "1,701,519 is the 2021 figure; 1,287,280 is the 2020 one, so the count rose year on year. 367,000 is a different statistic altogether — women and gender-related issues in 2021 — and is the one most often pulled into the wrong slot."
+      },
+      {
+        "q": "The figure of about 367,000 recorded for 2021 refers to:",
+        "options": ["complaints received by the NHRC", "girls married before the age of 15", "women and gender-related issues", "journalists detained over security reporting"],
+        "answerIndex": 2,
+        "concept": "Matching each statistic to its abuse",
+        "why": "It is quoted in the lesson's treatment of rape. The NHRC's own count for 2021 is 1,701,519, which is the number this one is most often swapped with — keep the six-figure statistic with women and gender-related issues and the seven-figure ones with the Commission."
+      },
+      {
+        "q": "According to Aliogo (2023), the share of Nigerian girls married before their 18th birthday is:",
+        "options": ["16%", "43%", "34%", "61%"],
+        "answerIndex": 1,
+        "concept": "Child marriage figures",
+        "why": "43% before 18 and 16% before 15. The larger figure has to go with the higher age, since every girl married before 15 is also married before 18 — use that to check yourself rather than trying to memorise which is which."
+      },
+      {
+        "q": "A State sets a minimum age of marriage and enforces it, but sets a lower age for girls than for boys. Under the five-part test the State:",
+        "options": ["has met the requirement", "is in violation only if the girls' age is under 15", "is outside the scope of the test", "is still in violation"],
+        "answerIndex": 3,
+        "concept": "The five-part test on child marriage",
+        "why": "The test requires the same minimum age for boys and girls, so having an age and enforcing it satisfies only the first two of the five points. This is the point exam questions turn on: a State can do most of the work and still be in violation."
+      },
+      {
+        "q": "Which body does the lesson name as monitoring and regulating broadcast media?",
+        "options": ["the National Broadcasting Commission", "the National Human Rights Commission", "the National Assembly", "the African Charter Commission"],
+        "answerIndex": 0,
+        "concept": "NBC versus NHRC",
+        "why": "The NBC is the vehicle of the press-freedom abuse — the government controlled much of the electronic media through its regulatory oversight. The NHRC is the tempting near-twin, but its job is receiving complaints of violations, not licensing stations."
+      },
+      {
+        "q": "\"Freedom of expression\" appears in the lesson's list of five abuses. What is meant is:",
+        "options": ["its extension to online platforms", "its protection by the Constitution", "its restriction", "its removal from Chapter IV"],
+        "answerIndex": 2,
+        "concept": "A right named among the abuses",
+        "why": "The list names abuses, so the entry stands for the restriction of speech and press — journalists threatened, intimidated, arrested and detained. Give the phrase as the lesson gives it if asked to list the five, but read it as restriction."
+      },
+      {
+        "q": "Which is NOT one of the five rights the lesson names for Nigeria?",
+        "options": ["freedom of movement", "the right to own property", "freedom of religion", "the right to education"],
+        "answerIndex": 1,
+        "concept": "The five rights named for Nigeria",
+        "why": "The five are freedom of religion, freedom of speech, the right to education, freedom of movement and the right to life. Property rights are tempting because they do exist elsewhere in the Constitution — but they are not on this lesson's list of five."
+      },
+      {
+        "q": "Which pair is among the four categories the lesson gives under extra-judicial killing?",
+        "options": ["the judiciary and the legislature", "civil society groups and the press", "non-state actors and the judiciary", "law enforcement officials and non-state actors"],
+        "answerIndex": 3,
+        "concept": "Categories of extra-judicial killing",
+        "why": "The four are law enforcement officials, non-state actors, death sentences, and deaths in custody. The judiciary is tempting because death sentences are on the list — but they appear as a category of killing, not as an actor named in its own right."
+      },
+      {
+        "q": "The lesson gives the key principles of the rule of law as:",
+        "options": ["supremacy of law, equality before it, protection of rights by courts", "separation of powers, federalism and regular free elections", "supremacy of parliament, judicial discretion and binding precedent", "free speech, a free press and freedom of peaceful assembly"],
+        "answerIndex": 0,
+        "concept": "Principles of the rule of law",
+        "why": "Those three are the lesson's own list. Separation of powers and free elections are tempting but belong to its treatment of democracy — democracy is about who governs, the rule of law about whether officials are bound by law or may decide arbitrarily."
+      },
+      {
+        "q": "On the Democracy Index the lesson classifies Nigeria as:",
+        "options": ["a full democracy", "a hybrid state", "a flawed democracy", "an authoritarian regime"],
+        "answerIndex": 1,
+        "concept": "Nigeria's Democracy Index classification",
+        "why": "Hybrid state — the lesson calls Nigerian democracy \"a work in progress\" because it does not meet the criteria of a full democracy. \"Flawed democracy\" is a genuine category on that index, which is exactly what makes it the tempting wrong pick."
+      },
+      {
+        "q": "The lesson concludes that human rights are validated by:",
+        "options": ["the number of international treaties a country has signed", "the size of the constitution's rights chapter", "domestic enforcement by every government agency", "the socioeconomic class of the complainant"],
+        "answerIndex": 2,
+        "concept": "The lesson's conclusion",
+        "why": "International documents are only standards; every government agency has to enforce the norms established by the Constitution, and penalties should be imposed regardless of socioeconomic class. Treaty-counting is the position the conclusion explicitly rejects."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "The S and the Q in SQ3R stand for:",
+        "options": ["Skim and Query", "Survey and Question", "Study and Question", "Survey and Quiz"],
+        "answerIndex": 1,
+        "concept": "What SQ3R expands to",
+        "why": "The acronym reads S + Q + 3R: Survey, Question, then three stages beginning with R. \"Skim\" is tempting because skimming is a fair description of what the Survey stage does, but it is not the word the acronym uses."
+      },
+      {
+        "q": "Which of these is NOT one of the 3R in SQ3R?",
+        "options": ["Reflect", "Recite", "Review", "Read"],
+        "answerIndex": 0,
+        "concept": "The three R stages",
+        "why": "The three are Read, Recite and Review. Reflect, Revise, Record and Recall all begin with R and all belong to other study systems, so any of them slips in unnoticed — if you cannot name all three, you have lost the acronym."
+      },
+      {
+        "q": "Which stage comes immediately after Survey?",
+        "options": ["Read", "Recite", "Question", "Review"],
+        "answerIndex": 2,
+        "concept": "The fixed order of the stages",
+        "why": "You turn what the survey showed into your own questions before any detailed reading, so those questions can steer it. Going straight to Read is the tempting shortcut and the commonest way the method is broken — you then read with no purpose set."
+      },
+      {
+        "q": "Recite means:",
+        "options": ["reading the passage aloud a second time", "answering the questions printed in the chapter", "writing an outline of what you read", "saying the key points back in your own words"],
+        "answerIndex": 3,
+        "concept": "The Recite stage",
+        "why": "It is closed-book retrieval — vocalising the key points, words and concepts in your own words. Writing an outline is tempting but that is Review, which produces paper; reading the passage aloud again is just Read repeated and reinforces nothing."
+      },
+      {
+        "q": "The Read stage has two stated goals: answering the questions you generated, and:",
+        "options": ["memorising the key terms for later recall", "engaging with the material for a fuller understanding", "checking the questions at the chapter's end", "timing yourself to build reading speed"],
+        "answerIndex": 1,
+        "concept": "The two goals of the Read stage",
+        "why": "The second goal is engagement for fuller understanding. Students remember the first goal and drop this one, which turns Read into question-hunting and misses everything your questions did not happen to anticipate."
+      },
+      {
+        "q": "Reading strategies are defined as techniques that enhance:",
+        "options": ["comprehension, retention and overall effectiveness", "grammar, spelling and punctuation accuracy", "reading speed, stamina and eye movement", "vocabulary, handwriting and note neatness"],
+        "answerIndex": 0,
+        "concept": "Definition of reading strategies",
+        "why": "The definition names comprehension, retention and overall effectiveness with written text, and the strategies help you process information, extract meaning and gain deeper understanding. Speed is tempting but appears nowhere in the definition given."
+      },
+      {
+        "q": "The relationship between SQ3R and reading strategies is:",
+        "options": ["they are two names for the same thing", "reading strategies are a stage within SQ3R", "SQ3R is one reading strategy among several", "SQ3R replaced reading strategies as a method"],
+        "answerIndex": 2,
+        "concept": "SQ3R as one strategy, not the category",
+        "why": "The week names context clues, inference, fact-versus-opinion and explicit-versus-implicit meaning as strategies alongside SQ3R. Treating SQ3R as the whole category is the error the opening definition is written to stop."
+      },
+      {
+        "q": "An inference is:",
+        "options": ["a guess made when the text is unclear", "a statement quoted directly from the text", "a subjective preference of the reader", "a conclusion from stated details plus background knowledge"],
+        "answerIndex": 3,
+        "concept": "Drawing inferences",
+        "why": "An inference is not written on the page, but it must be supported by details that are, together with what you already know. That anchoring is what separates it from the tempting first option — a guess has no such support and cannot be defended from the text."
+      },
+      {
+        "q": "On the summary sheet's definition, a fact is:",
+        "options": ["anything the author states as true", "objective and verifiable", "any claim supported by an inference", "a belief that is widely held"],
+        "answerIndex": 1,
+        "concept": "Fact versus opinion",
+        "why": "Verifiability is the whole test; an opinion is subjective and needs no such check. The tempting first option makes the author the authority, but an author can state an opinion just as confidently as a fact, which is why you separate them yourself."
+      },
+      {
+        "q": "Implicit meaning is:",
+        "options": ["suggested, and requiring the reader to infer it", "directly stated, requiring no inference", "the dictionary meaning of a difficult word", "the author's stated purpose in writing"],
+        "answerIndex": 0,
+        "concept": "Explicit versus implicit meaning",
+        "why": "Implicit meaning is suggested and has to be inferred; explicit meaning is on the page and quotable. The test is whether you can underline the sentence that says it — if you can, it is explicit, which is the second option."
+      },
+      {
+        "q": "What separates an inference from an opinion?",
+        "options": ["an inference is always correct", "an opinion is always about the writer", "an inference is anchored to stated details", "an opinion requires background knowledge"],
+        "answerIndex": 2,
+        "concept": "Inference versus opinion",
+        "why": "An inference can be defended from the text because the details supporting it are printed there. An opinion is subjective and needs no textual anchor. The tempting first option overstates it — an inference can be wrong, but it must still be supportable."
+      },
+      {
+        "q": "Context clues are used to work out:",
+        "options": ["the writer's overall argument", "whether a statement is fact or opinion", "the structure of a chapter", "the meaning of an unfamiliar word"],
+        "answerIndex": 3,
+        "concept": "Context clues",
+        "why": "They are hints inside the text that let you infer a word's meaning without reaching for a dictionary, and the skill they build is vocabulary acquisition. They are one route to an inference, not a synonym for it — inference draws a conclusion about content."
+      },
+      {
+        "q": "You find yourself extracting meaning from individual sentences. Which stage have you left?",
+        "options": ["Survey", "Question", "Recite", "Review"],
+        "answerIndex": 0,
+        "concept": "Survey versus Read",
+        "why": "Survey is deliberately fast, whole-text and structural — headings, subheadings, images, captions. The moment you are reading sentences for their meaning you have moved into Read, however much of the chapter is still unturned."
+      },
+      {
+        "q": "Why does SQ3R have you generate your own questions rather than use the ones printed in the chapter?",
+        "options": ["the printed ones are usually harder than yours", "yours come from your gaps and set a purpose before reading", "yours can be answered without reading the text", "the printed ones cannot be answered after reading"],
+        "answerIndex": 1,
+        "concept": "Why your own questions",
+        "why": "Your questions come from what the survey left unclear, so they turn passive scanning into an active search and give an immediate test of whether the reading worked. The book's questions test the book's priorities and can only be attempted after reading."
+      },
+      {
+        "q": "Surveying a history textbook, you take in the chapter titles, the subtitles and:",
+        "options": ["the answers printed at the chapter's end", "the first sentence of every paragraph", "the captions of the illustrations", "the index and the bibliography"],
+        "answerIndex": 2,
+        "concept": "What the Survey stage looks at",
+        "why": "The source example names chapter titles, subtitles and the captions of illustrations — the structural features that give an overview fast. Reading one sentence from every paragraph is tempting but that is prose, and you have stopped surveying."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "τ = RC gives τ in seconds when R is in ohms and C is in:",
+        "options": ["farads", "microfarads", "coulombs", "coulombs per second"],
+        "answerIndex": 0,
+        "concept": "Units in τ = RC",
+        "why": "Ohms × farads = seconds, so a capacitance quoted in microfarads has to be converted first: 2200 μF is 2.2 × 10⁻³ F. Leaving it as 2200 puts your time constant out by a factor of a million. Coulombs measure charge, through Q = CV, not capacitance."
+      },
+      {
+        "q": "R = 20 kΩ and C = 1000 μF. The time constant is:",
+        "options": ["0.02 s", "2.0 s", "20 s", "2000 s"],
+        "answerIndex": 2,
+        "concept": "Computing the time constant",
+        "why": "τ = RC = 2.0 × 10⁴ × 1.0 × 10⁻³ = 20 s. The tempting 0.02 s comes from using R as 20 rather than 20 000 Ω — the kilo is the conversion most often dropped, and it costs you a factor of a thousand in both directions."
+      },
+      {
+        "q": "A graph gives τ = 30 s with R = 15 kΩ. The experimental capacitance is:",
+        "options": ["2.0 F", "2000 μF", "450 μF", "0.5 μF"],
+        "answerIndex": 1,
+        "concept": "C = τ/R",
+        "why": "C = τ/R = 30/(1.5 × 10⁴) = 2.0 × 10⁻³ F, which is 2000 μF. The tempting 2.0 F uses R = 15 instead of 15 000 Ω. 450 μF is τR rather than τ/R — check the dimensions, since seconds divided by ohms gives farads."
+      },
+      {
+        "q": "The nominal capacitance is 2200 μF and the experiment gives 2090 μF. The percentage error is:",
+        "options": ["11%", "0.05%", "5.3%", "5.0%"],
+        "answerIndex": 3,
+        "concept": "Percentage error formula",
+        "why": "(theoretical − experimental)/theoretical × 100 = 110/2200 × 100 = 5.0%. The tempting 5.3% divides by the experimental value instead — the denominator in this course's formula is always the theoretical, nominal figure."
+      },
+      {
+        "q": "After two time constants, the fraction of V₀ still on a discharging capacitor is about:",
+        "options": ["13.5%", "36.8%", "86.5%", "5.0%"],
+        "answerIndex": 0,
+        "concept": "The discharge table",
+        "why": "36.8% remains after one τ and 13.5% after two. The tempting 86.5% is the charging figure at 2τ — what has been gained, not what remains, and the two always sum to 100%. 5.0% is the discharging figure at 3τ."
+      },
+      {
+        "q": "The capacitor is treated as effectively discharged after about:",
+        "options": ["1τ", "2τ", "5τ", "10τ"],
+        "answerIndex": 2,
+        "concept": "The 5τ convention",
+        "why": "Only 0.7% of V₀ remains at 5τ, which is the usual working convention. Picking 1τ confuses the time constant with the discharge time — at one τ there is still 36.8% of the voltage left, so τ is a long way from empty."
+      },
+      {
+        "q": "The time for the capacitor voltage to fall to half of V₀ is:",
+        "options": ["0.5τ", "0.693τ", "τ", "1.44τ"],
+        "answerIndex": 1,
+        "concept": "Half-life versus time constant",
+        "why": "Setting e^(−t/τ) = 0.5 gives t = τ ln 2 = 0.693τ. The tempting τ is the standard slip: one time constant takes the voltage to 36.8%, which is well past half, so quoting τ as the half-life overstates it by about 44%."
+      },
+      {
+        "q": "Repeating the trial with the power supply set to a higher output changes:",
+        "options": ["τ, in proportion to V₀", "τ and C, both upward", "the capacitance C, but not τ", "every reading, but not τ"],
+        "answerIndex": 3,
+        "concept": "τ depends only on R and C",
+        "why": "τ = RC is fixed by the components alone. A larger V₀ scales the whole decay curve vertically, but the time taken to fall to 36.8% of whatever the starting value is stays the same — which is why the experiment works at any supply voltage."
+      },
+      {
+        "q": "The figure 63.2% belongs to:",
+        "options": ["the fraction gained after one τ while charging", "the fraction remaining after one τ while discharging", "the fraction remaining after two τ", "the largest acceptable percentage error"],
+        "answerIndex": 0,
+        "concept": "63.2% versus 36.8%",
+        "why": "Charging gains 63.2% in one time constant; discharging leaves 36.8%, and the two sum to 100%. The tempting second option is this week's figure with last week's number attached — the discharge law has no \"1 −\" in it."
+      },
+      {
+        "q": "To linearise a discharge run you plot:",
+        "options": ["ln(V₀ − V) against t", "V against ln t", "ln V against t", "1/V against t"],
+        "answerIndex": 2,
+        "concept": "Linearising the exponential decay",
+        "why": "Taking logs of V = V₀e^(−t/τ) gives ln V = ln V₀ − t/τ, a straight line in ln V and t. The tempting ln(V₀ − V) is the charging linearisation — skipping that extra subtraction is one of the conveniences discharging gives you."
+      },
+      {
+        "q": "Exponentiating the intercept of the ln V against t line should hand back:",
+        "options": ["the measured V₀", "the time constant τ", "the experimental capacitance", "the percentage error"],
+        "answerIndex": 0,
+        "concept": "Intercept of the linearised plot",
+        "why": "The line is ln V = ln V₀ − t/τ, so the intercept is ln V₀ and e raised to it returns V₀ — in the sample trial, e^2.398 = 11.0 V, the measured value. That agreement confirms the fit. τ comes from the gradient, not the intercept, so the second option confuses the two readings."
+      },
+      {
+        "q": "The voltmeter sits in parallel with the capacitor, giving it a second discharge path. The effect is that:",
+        "options": ["τ comes out too large and C too large", "τ comes out too large and C too small", "τ and C are both unaffected", "τ comes out too small and C too small"],
+        "answerIndex": 3,
+        "concept": "Voltmeter loading",
+        "why": "The effective resistance is R in parallel with the meter, which is less than R, so the capacitor empties faster and the measured τ is short. Since you then compute C = τ/R using the marked R, the capacitance comes out low too — both errors run the same way."
+      },
+      {
+        "q": "Reaction time in starting the stopwatch records every reading as slightly late. That makes the measured τ:",
+        "options": ["too small", "too large", "unchanged", "negative"],
+        "answerIndex": 1,
+        "concept": "Direction of the reaction-time error",
+        "why": "Each voltage is credited to a later moment than it really occurred, so the decay looks slower and τ looks longer. The tempting \"too small\" is the direction of the other two errors — voltmeter loading and dielectric leakage both shorten the measured τ."
+      },
+      {
+        "q": "With the plate area and the dielectric unchanged, moving the plates further apart:",
+        "options": ["increases the capacitance", "leaves the capacitance unchanged", "decreases the capacitance", "increases the charge stored at a fixed V"],
+        "answerIndex": 2,
+        "concept": "C = εA/d",
+        "why": "d is in the denominator, so a larger separation means a smaller capacitance. The last option fails for the same reason: Q = CV, so a smaller C at the same voltage stores less charge, not more."
+      },
+      {
+        "q": "A capacitor in a circuit:",
+        "options": ["blocks AC and passes DC", "passes AC and blocks DC", "passes both equally", "blocks both once fully charged"],
+        "answerIndex": 1,
+        "concept": "Capacitors pass AC and block DC",
+        "why": "This is why they work as filters in DC supplies — the steady component is blocked and the ripple passes through. The reversed statement is the standard slip, and it makes nonsense of every application the week lists."
+      }
+    ]
+  }
+}

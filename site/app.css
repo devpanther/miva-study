@@ -69,7 +69,7 @@ button{font:inherit;cursor:pointer}
 .brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .brand h1{font-size:19px;font-weight:600;margin:0;letter-spacing:-.015em}
 .spacer{flex:1}
-.chip{display:inline-flex;align-items:center;gap:5px;height:29px;padding:0 11px;
+.chip{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 11px;
       border-radius:var(--r-pill);background:var(--surface);border:1px solid var(--line);
       font-size:12.5px;font-weight:700;color:var(--ink2);box-shadow:var(--shadow)}
 .chip.flame{color:var(--fast)}
@@ -202,9 +202,54 @@ button{font:inherit;cursor:pointer}
          font-variant-numeric:tabular-nums}
 .stat .k{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
          color:var(--ink3);margin-top:2px}
-.stat.flame .v{color:var(--fast)}
-.stat.marks .v{color:var(--deep)}
-.stat.week .v{color:var(--good)}
+.stat .si{display:flex;justify-content:center;align-items:center;height:14px;margin-bottom:3px}
+.stat.flame .v,.stat.flame .si{color:var(--fast)}
+.stat.marks .v,.stat.marks .si{color:var(--deep)}
+.stat.week .v,.stat.week .si{color:var(--good)}
+.stat.drill .v,.stat.drill .si{color:var(--deep)}
+/* The flame catching when a streak lands. Short, and only ever on the streak. */
+@keyframes streaklit{
+  0%{transform:scale(1)} 18%{transform:scale(1.32) rotate(-6deg)}
+  38%{transform:scale(1.12) rotate(5deg)} 58%{transform:scale(1.24) rotate(-3deg)}
+  100%{transform:scale(1) rotate(0)}
+}
+.stat.lit .si{animation:streaklit 900ms ease-out}
+.stat.lit{border-color:var(--fast);box-shadow:0 0 0 3px rgba(238,140,60,.18),var(--shadow)}
+
+/* ---------- walking through the week ---------- */
+.daynav{display:flex;align-items:center;gap:8px;margin:12px 0 8px}
+.dstep{flex:0 0 auto;width:38px;height:38px;border-radius:12px;border:1px solid var(--line);
+       background:var(--surface);color:var(--ink2);display:grid;place-items:center;
+       box-shadow:var(--shadow);cursor:pointer;transition:background .12s,color .12s}
+.dstep:hover:not(:disabled){background:var(--surface2);color:var(--ink)}
+.dstep:active:not(:disabled){transform:scale(.94)}
+.dstep:disabled{opacity:.32;cursor:default;box-shadow:none}
+.dhead{flex:1 1 auto;min-width:0;text-align:center}
+.dhead .dh1{font-family:Fredoka;font-size:19px;font-weight:600;line-height:1.15;color:var(--ink);
+            white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dhead .dh2{display:flex;justify-content:center;align-items:center;gap:6px;margin-top:2px;
+            font-size:11px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--ink3)}
+.dhead .dnow{background:var(--deep);color:#fff;border-radius:999px;padding:1px 7px;letter-spacing:.06em}
+.dhead .dpast{background:var(--surface2);color:var(--ink3);border-radius:999px;padding:1px 7px;
+              border:1px solid var(--line);letter-spacing:.06em}
+.dstrip{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin:0 0 14px}
+.dchip{position:relative;padding:8px 2px 9px;border-radius:11px;border:1.5px solid var(--line);
+       background:var(--surface);color:var(--ink3);font-size:11.5px;font-weight:800;
+       cursor:pointer;transition:border-color .12s,background .12s,color .12s;
+       overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dchip:hover{background:var(--surface2);color:var(--ink2)}
+.dchip:active{transform:scale(.95)}
+/* The bar under a pill is what you scored that night; the pill itself only ever shows
+   selection. Colouring the whole pill made the selected one impossible to find. */
+.dchip.g::after,.dchip.o::after,.dchip.b::after{content:"";position:absolute;left:22%;right:22%;
+       bottom:3px;height:2.5px;border-radius:2px}
+.dchip.g::after{background:var(--good)}
+.dchip.o::after{background:var(--fast)}
+.dchip.b::after{background:var(--bad)}
+.dchip.istoday{border-style:dashed;border-color:var(--deep);color:var(--deep)}
+.dchip.on{background:var(--deep);border-color:var(--deep);color:#fff;box-shadow:var(--shadow)}
+.dchip.on:hover{background:var(--deep);color:#fff}
+.dchip.on.istoday{border-style:solid}
 
 /* week pips */
 .pips{display:flex;gap:5px;justify-content:center;margin-top:8px}
@@ -688,6 +733,10 @@ a.lmsb{display:inline-block;margin-bottom:4px}
 @keyframes pfade{from{opacity:0}to{opacity:1}}
 .party .pbox{position:relative;z-index:2;text-align:center;padding:0 26px;max-width:340px}
 .party .plot{width:230px;height:230px;margin:0 auto -18px;pointer-events:none}
+/* The flame fills its whole box, unlike the confetti burst which is mostly empty air,
+   so it needs real space under it rather than a negative margin pulling the heading up
+   into the fire. */
+.party.fire .plot{width:150px;height:180px;margin:0 auto 6px}
 .party .lbl{color:rgba(255,255,255,.72)}
 .party h2{font-family:Fredoka,ui-rounded,system-ui,sans-serif;font-size:30px;
   color:#fff;margin:2px 0 6px;letter-spacing:-.01em}
@@ -754,7 +803,9 @@ ol.insteps b{color:var(--ink)}
 .gapn{font-size:14.5px;font-weight:700;line-height:1.45}
 .gapm{font-size:12px;color:var(--ink3);margin-top:2px}
 .row.gapa{margin-top:8px;gap:6px}
-.row.gapa .chip{cursor:pointer;height:27px;padding:0 10px;font-size:12px}
+/* These sit in a row of four and were shrunk to fit; 27px is under the height a thumb
+   reliably hits, and they wrap perfectly well at 30. */
+.row.gapa .chip{cursor:pointer;height:30px;padding:0 11px;font-size:12px}
 .row.gapa a.chip{display:inline-flex;align-items:center}
 .row.gapa .chip:hover{border-color:var(--deep);color:var(--deep)}
 
@@ -788,7 +839,154 @@ ul.misslist li::before{content:"";position:absolute;left:0;top:9px;
   width:5px;height:5px;border-radius:50%;background:var(--bad)}
 /* Seven underlined lines in a row reads as a wall. They are still links — the colour
    says so, and the underline comes back when you reach for one. */
-ul.misslist .linkish{text-align:left;font-size:14px;line-height:1.55;
+ul.misslist .linkish{text-align:left;font-size:14px;line-height:1.55;padding:5px 0;
   text-decoration:none;color:var(--ink)}
 ul.misslist .linkish:hover{color:var(--deep);text-decoration:underline;
   text-underline-offset:3px}
+
+/* ============================================================================
+   DRILLS
+   The evening check is graded work and looks like it: one long deck, a submit, a
+   verdict. A drill is the opposite in every respect — one question filling the screen,
+   an answer that lands the moment you tap it, and a footer with exactly one thing in
+   it. It should be possible to do this one-handed on a bus without reading anything
+   twice.
+   ============================================================================ */
+
+.card.goodc{border-top:3px solid var(--good)}
+.card.badc{border-top:3px solid var(--bad)}
+.lbl2{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+      color:var(--ink3);margin:16px 0 2px}
+
+.drillmeta{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:10px 0 2px;
+  font-size:12px;font-weight:700;color:var(--ink3)}
+.drillmeta .hot{display:inline-flex;align-items:center;gap:4px;color:var(--fast);
+  background:var(--fast-bg);border-radius:999px;padding:2px 9px}
+.drillmeta .hot svg{display:block}
+
+/* running a drill */
+.drhead{display:flex;align-items:center;gap:10px;margin:2px 0 14px}
+.drhead .drn,.drhead .drr{flex:none;font-size:11px;font-weight:800;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink3);font-variant-numeric:tabular-nums}
+.drhead .drr{color:var(--good)}
+.drbar{flex:1;height:6px;border-radius:99px;background:var(--surface2);overflow:hidden}
+.drfill{height:100%;background:var(--deep);border-radius:99px;transition:width .3s cubic-bezier(.2,.9,.3,1)}
+
+.opt .ot{flex:1;min-width:0}
+.drwhy{margin-top:14px;padding:12px 14px;border-radius:var(--r-sm);
+  background:var(--bad-bg);border:1px solid var(--line)}
+.drwhy.ok{background:var(--good-bg)}
+.drwhy .drv{font-family:Fredoka,ui-rounded,system-ui,sans-serif;font-size:17px;
+  font-weight:600;color:var(--bad);line-height:1.2}
+.drwhy.ok .drv{color:var(--good)}
+/* Not uppercased. A concept name here can be a formula — "χ_e = κ − 1" — and
+   text-transform turns Greek letters into things that read as Latin ones: chi becomes
+   an X, kappa becomes a K, and the label now says something false. */
+.drwhy .drc{font-size:12px;font-weight:800;color:var(--ink3);margin-top:3px}
+.drwhy p{margin:7px 0 0;font-size:14px;line-height:1.6;color:var(--ink2)}
+.drwhy p + p{margin-top:9px}
+
+.drscore{font-family:Fredoka,ui-rounded,system-ui,sans-serif;font-size:46px;font-weight:600;
+  line-height:1.05;margin:4px 0 2px;font-variant-numeric:tabular-nums}
+.drscore .of{font-size:22px;color:var(--ink3)}
+.drstreak{display:inline-flex;align-items:center;gap:7px;margin-top:12px;padding:6px 13px;
+  border-radius:999px;background:var(--fast-bg);color:var(--fast);font-size:13px}
+.drstreak svg{display:block}
+.drstreak b{font-weight:800}
+
+.drmiss{padding:12px 0;border-top:1px solid var(--line)}
+.drmiss:first-of-type{border-top:0;padding-top:4px}
+.drmiss .drc{font-size:12px;font-weight:800;color:var(--ink3)}
+.drmiss .drq{font-weight:700;font-size:15px;line-height:1.45;margin-top:4px;color:var(--ink)}
+.drmiss .dra{font-size:14px;margin-top:6px;color:var(--good)}
+.drmiss .dra b{font-weight:800;text-transform:uppercase;font-size:10.5px;letter-spacing:.08em;
+  color:var(--ink3);margin-right:5px}
+.drmiss p{margin:6px 0 0;font-size:14px;line-height:1.6;color:var(--ink2)}
+.drmiss p + p{margin-top:8px}
+
+/* the fortnight */
+/* A fortnight always fits the width it is given. The first version was a flex row of
+   fixed-width columns, which on a phone meant the last four days lived off the right
+   edge behind a scrollbar nobody would find — a chart you have to scroll is a chart
+   that has stopped being a glance. */
+.dhist{display:grid;grid-template-columns:repeat(var(--dhn,14),1fr);align-items:end;
+  gap:4px;margin-top:12px}
+.dhcol{min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px}
+.dhv{font-size:10px;font-weight:800;color:var(--ink3);font-variant-numeric:tabular-nums}
+.dhb{width:100%;max-width:26px;border-radius:5px 5px 3px 3px;background:var(--surface2)}
+.dhb.g{background:var(--good)} .dhb.o{background:var(--fast)} .dhb.b{background:var(--bad)}
+.dhd{font-size:9.5px;font-weight:700;color:var(--ink3);font-variant-numeric:tabular-nums}
+
+/* ---------- goals ---------- */
+/* A goal you already hold, and a goal the app is offering, are two different things and
+   look it: the first is a bar you are filling, the second is a card with a number you
+   can move before you commit to it. */
+.goal{padding:12px 0;border-top:1px solid var(--line)}
+.goal:first-of-type{border-top:0;padding-top:6px}
+.gtop{display:flex;align-items:center;gap:8px}
+.gtop .gi{flex:none;display:flex;color:var(--deep)}
+.gtop .gi svg{display:block}
+.gtop .gl{flex:1;min-width:0;font-weight:700;font-size:14.5px;line-height:1.35;color:var(--ink)}
+.gtop .gdone{flex:none;font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
+  background:var(--good);color:#fff;border-radius:999px;padding:2px 8px}
+.goal.won .gtop .gi{color:var(--good)}
+.gbar{height:7px;border-radius:99px;background:var(--surface2);overflow:hidden;margin:9px 0 7px}
+.gfill{height:100%;background:var(--deep);border-radius:99px;transition:width .35s cubic-bezier(.2,.9,.3,1)}
+.gfill.met{background:var(--good)}
+.gfoot{display:flex;align-items:center;gap:10px}
+.gnum{flex:1;min-width:0;font-size:12.5px;font-weight:700;color:var(--ink3);
+  font-variant-numeric:tabular-nums}
+.gacts{flex:none;display:flex;align-items:center;gap:6px}
+.gstep{width:30px;height:30px;border-radius:9px;border:1px solid var(--line);background:var(--surface);
+  color:var(--ink2);font-weight:800;font-size:15px;line-height:1;display:grid;place-items:center;
+  transition:background .12s,color .12s,border-color .12s}
+.gstep:hover{background:var(--surface2);color:var(--ink);border-color:var(--ink3)}
+.gstep:active{transform:scale(.92)}
+.gstep.drop:hover{border-color:var(--bad);color:var(--bad)}
+
+.gidea{margin-top:12px;padding:12px 13px;border-radius:var(--r-sm);
+  border:1px dashed var(--line);background:var(--surface2)}
+.gidea .ghint{margin:6px 0 0;font-size:13px;line-height:1.5;color:var(--ink3)}
+.gid2{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:11px}
+.gtweak{display:flex;align-items:center;gap:6px}
+.gtweak .gstep{background:var(--surface)}
+.gtarget{min-width:64px;text-align:center;font-family:Fredoka,ui-rounded,system-ui,sans-serif;
+  font-size:16px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.gid2 .gacts{margin-left:auto}
+/* A ghost button inside a proposal card would otherwise be surface2 on surface2 — the
+   same colour as the card it sits in, which reads as plain text rather than a choice. */
+.gidea .act.ghost{background:var(--surface);border:1px solid var(--line);color:var(--ink3)}
+.gidea .act.ghost:hover{background:var(--surface);border-color:var(--ink3);color:var(--ink2)}
+/* No-data placeholder in a stat box. */
+.stat .v.none{color:var(--ink3)}
+
+/* The drill's own footer sticks to the bottom of the viewport. One tap per question,
+   in the same place every time, whatever length the explanation turned out to be. */
+.deckfoot.drfoot{position:sticky;bottom:0;z-index:20;margin:14px -16px 0;
+  padding:12px calc(16px + env(safe-area-inset-right,0px))
+          calc(12px + env(safe-area-inset-bottom,0px)) calc(16px + env(safe-area-inset-left,0px));
+  background:linear-gradient(to top, var(--ground) 62%, transparent);
+  border:0}
+.deckfoot.drfoot .act{width:100%;justify-content:center;text-align:center}
+
+/* Code inside a question. Monospace, and a fenced listing keeps its line breaks —
+   "what does this print?" is not a question you can answer about a program that has
+   been folded into one line. */
+.qt code,.drwhy code,.opt code,.drq code,.dra code,.drc code{
+  font:.92em/1.4 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  background:var(--surface2);border-radius:5px;padding:1px 5px}
+.qcode{display:block;margin:9px 0 2px;padding:11px 13px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--line);
+  font:13px/1.55 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  white-space:pre;overflow-x:auto;color:var(--ink)}
+.opt .qcode{margin:4px 0 0;font-size:12.5px;padding:8px 10px}
+
+/* An explanation is now paragraphs rather than one block, wherever it appears: the
+   check review, the exam review, and Kizito quoting a question back at you. */
+.expl p,.bw p{margin:0}
+.expl p + p,.bw p + p{margin-top:8px}
+.expl .explc{margin-bottom:5px}
+.expl code,.bw code,.bq code,.ba code{
+  font:.92em/1.4 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  background:var(--surface);border-radius:5px;padding:1px 5px}
+.expl .qcode,.bw .qcode,.bq .qcode{margin:8px 0 2px;background:var(--surface)}

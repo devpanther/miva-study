@@ -2,7 +2,7 @@
   "id": "/",
   "name": "Kaizen",
   "short_name": "Kaizen",
-  "description": "Tonight's check, your scores, and Sunday's recap topic across a twelve-week semester.",
+  "description": "Tonight's check, your morning drills, and the weekend class across a twelve-week semester.",
   "start_url": "./?src=home",
   "scope": "./",
   "display": "standalone",
@@ -69,6 +69,19 @@
       "short_name": "Study",
       "description": "The deep hour and the fast hour for today",
       "url": "./?tab=tonight",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Today's drill",
+      "short_name": "Drills",
+      "description": "Ten quick questions from what you have studied",
+      "url": "./?tab=drill",
       "icons": [
         {
           "src": "icons/icon-192.png",

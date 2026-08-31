@@ -1,0 +1,754 @@
+{
+  "week": 5,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "Differentiate f(x) = 7x⁵.",
+        "options": ["7x⁴", "5x⁴", "35x⁴", "35x⁵"],
+        "answerIndex": 2,
+        "concept": "Power rule",
+        "why": "The power rule multiplies by the old power and then drops the power by one, so 7×5 = 35 and the index falls to 4. Picking 35x⁵ means you brought the 5 down but never reduced the power; picking 7x⁴ means you reduced the power but left the 5 behind."
+      },
+      {
+        "q": "Applying the power rule to 6x gives 6·1·x⁰. Why is the answer 6?",
+        "options": ["Because the power rule always discards the final factor", "Because x⁰ = 1", "Because x⁰ = 0", "Because 6x⁰ is undefined at x = 0"],
+        "answerIndex": 1,
+        "concept": "x⁰ = 1",
+        "why": "You treat x as x¹, so its derivative is 1·x⁰, and the lecturer writes out x⁰ = 1 as a separate line for exactly this reason. The tempting wrong option is x⁰ = 0, which would kill the term altogether and make the derivative of 6x vanish."
+      },
+      {
+        "q": "Use the product rule on f(x) = x³ cos x.",
+        "options": ["3x² cos x − x³ sin x", "3x² cos x + x³ sin x", "x³ cos x − 3x² sin x", "−3x² sin x"],
+        "answerIndex": 0,
+        "concept": "Product rule with a trigonometric factor",
+        "why": "With u = x³ and v = cos x you need u v′ + u′ v = x³(−sin x) + 3x² cos x. The plus-sign version forgets that cos differentiates to minus sin, and that missing minus is where most of this week's marks are lost."
+      },
+      {
+        "q": "Use the quotient rule on f(x) = (sin x)/x.",
+        "options": ["(sin x − x cos x)/x²", "(x cos x − sin x)/x", "(x cos x + sin x)/x²", "(x cos x − sin x)/x²"],
+        "answerIndex": 3,
+        "concept": "Quotient rule, her order",
+        "why": "Her numerator is v u′ − u v′ = x·cos x − sin x·1, and the denominator is the whole of v squared. The first option has the two numerator terms swapped, which is exactly the negative of the right answer; the second forgets to square the denominator."
+      },
+      {
+        "q": "Applying the quotient rule to f(x) = (2x + 1)/(3x³), what is the denominator of f′(x)?",
+        "options": ["3x⁶", "9x⁶", "6x⁶", "9x⁹"],
+        "answerIndex": 1,
+        "concept": "The quotient rule squares the whole of v(x)",
+        "why": "The rule divides by (v(x))², so (3x³)² squares the 3 as well as the x³, giving 9x⁶. Choosing 3x⁶ squares only the power of x and leaves the coefficient standing, which is the same slip as writing (5x²)² = 5x⁴."
+      },
+      {
+        "q": "Differentiate f(x) = sin(4x + 1).",
+        "options": ["cos(4x + 1)", "4 sin(4x + 1)", "4 cos(4x + 1)", "−4 cos(4x + 1)"],
+        "answerIndex": 2,
+        "concept": "Chain rule",
+        "why": "Differentiate the outside first — sin(u) gives cos(u) — then multiply by the inner derivative u′ = 4. Answering cos(4x + 1) alone is the classic omission of u′(x), and the minus sign belongs to cos, not sin."
+      },
+      {
+        "q": "Differentiate f(x) = (5x − 2)⁴.",
+        "options": ["20(5x − 2)³", "4(5x − 2)³", "20(5x − 2)⁴", "5(5x − 2)³"],
+        "answerIndex": 0,
+        "concept": "The inner derivative is owed",
+        "why": "Let u = 5x − 2, so y′(u) = 4u³ and u′(x) = 5, and the two multiply to 20(5x − 2)³. The option 4(5x − 2)³ is the power rule used alone; the base here is not a bare x, so you owe the inner derivative 5."
+      },
+      {
+        "q": "Differentiating y = (x² + 3)⁵ you reach f′(x) = 10x·u⁴. What must the final line be?",
+        "options": ["10x·u⁴, since u was defined in the working", "5(x² + 3)⁴", "2x(x² + 3)⁴", "10x(x² + 3)⁴"],
+        "answerIndex": 3,
+        "concept": "Substituting u back",
+        "why": "u was only ever a temporary name for x² + 3, so you put it back and leave the answer in x. Stopping at 10x·u⁴ writes a correct derivative in the wrong variable, which is the error the lecturer's slide-10 working is designed to prevent."
+      },
+      {
+        "q": "Differentiate x² + 4y² = 20 implicitly and make dy/dx the subject.",
+        "options": ["−4x/y", "−x/(4y)", "−x/(8y)", "−2x/y"],
+        "answerIndex": 1,
+        "concept": "Implicit differentiation",
+        "why": "Differentiating both sides gives 2x + 8y(dy/dx) = 0, so dy/dx = −2x/8y = −x/(4y). The answer −x/(8y) comes from cancelling the 2 on the top without carrying it through the whole division."
+      },
+      {
+        "q": "Differentiating the term x²y with respect to x gives",
+        "options": ["2xy", "x²(dy/dx)", "2xy + x²(dy/dx)", "2x(dy/dx)"],
+        "answerIndex": 2,
+        "concept": "Product rule inside an implicit differentiation",
+        "why": "x²y is a product, so you need u′v + uv′, and the y factor differentiates to dy/dx because y is a function of x. Answering 2xy alone treats y as a genuine constant, which is what partial differentiation does — not implicit."
+      },
+      {
+        "q": "You reach 3x(dy/dx) − dy/dx = 5. What is dy/dx?",
+        "options": ["5/(3x − 1)", "5/(3x + 1)", "(3x − 1)/5", "5/3x − 5"],
+        "answerIndex": 0,
+        "concept": "Factorising dy/dx out",
+        "why": "Collect and factorise first: (dy/dx)(3x − 1) = 5, then divide. Skip the factorisation and there is nothing to divide by; 5/(3x + 1) is what you get by mislaying the minus sign on the lone dy/dx term."
+      },
+      {
+        "q": "For x(t) = t³ and y(t) = 5t² + 2, dy/dx is",
+        "options": ["10t", "10t/3", "3t²/(10t)", "10/(3t)"],
+        "answerIndex": 3,
+        "concept": "Parametric differentiation",
+        "why": "The parametric rule divides: dy/dx = (dy/dt) ÷ (dx/dt) = 10t ÷ 3t² = 10/(3t). Answering 10t hands back dy/dt on its own, which is not the gradient of the curve, and 3t²/(10t) has the division upside down."
+      },
+      {
+        "q": "Which of these has derivative zero with respect to x?",
+        "options": ["y = 7x", "y = √7", "y = 7/x", "y = x⁷"],
+        "answerIndex": 1,
+        "concept": "Constant rule",
+        "why": "Her test is in words: if the expression holds no variable it is a constant, and the derivative of a constant is zero. √7 is just a number, whereas 7/x is x⁻¹ in disguise and still carries the variable."
+      },
+      {
+        "q": "In f′(x) = lim(h→0)[f(x + h) − f(x)]/h with f(x) = 7x − 2, what is f(x + h)?",
+        "options": ["7x − 2 + h", "7x + h − 2", "7x + 7h − 2", "7(x − 2) + h"],
+        "answerIndex": 2,
+        "concept": "First principle — the substitution step",
+        "why": "You put x + h in place of every x, so 7(x + h) − 2 = 7x + 7h − 2. Writing 7x + h − 2 adds h to the function instead of feeding it into the function, and then the h will not cancel cleanly from the denominator."
+      },
+      {
+        "q": "For f(x, y) = x²y³ + 4y, the partial derivative ∂f/∂y is",
+        "options": ["3x²y² + 4", "2xy³ + 4", "3x²y²", "2xy³"],
+        "answerIndex": 0,
+        "concept": "Partial differentiation",
+        "why": "For ∂f/∂y you treat x as a genuine constant, so x²y³ gives x²·3y² and 4y gives 4. Choosing 2xy³ + 4 differentiates by x instead, and dropping the 4 forgets that 4y still carries the variable you are differentiating by."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "Resistors of 2 Ω and 3 Ω are connected in parallel. The equivalent resistance is",
+        "options": ["5 Ω", "1.2 Ω", "0.83 Ω", "2.5 Ω"],
+        "answerIndex": 1,
+        "concept": "Parallel combination — remember to invert",
+        "why": "1/R_eq = 1/2 + 1/3 = 5/6, so R_eq = 6/5 = 1.2 Ω. The value 0.83 Ω is 5/6 left uninverted — the formula hands you 1/R_eq, never R_eq itself."
+      },
+      {
+        "q": "Two identical resistors of resistance R are connected in parallel. The equivalent resistance is",
+        "options": ["R/2", "2R", "R", "R²/2"],
+        "answerIndex": 0,
+        "concept": "Parallel of two equal resistors",
+        "why": "1/R_eq = 1/R + 1/R = 2/R, so R_eq = R/2 — below the smaller branch, as every parallel result is. Answering 2R applies the series rule, which adds the resistances instead of their reciprocals."
+      },
+      {
+        "q": "Resistors of 5 Ω, 8 Ω and 20 Ω are in parallel. Which value could NOT be the equivalent resistance?",
+        "options": ["2.5 Ω", "1.0 Ω", "6.5 Ω", "3.1 Ω"],
+        "answerIndex": 2,
+        "concept": "A parallel equivalent lies below the smallest branch",
+        "why": "Adding a branch only gives current another route, so the equivalent must land below the smallest resistor — anything above 5 Ω is impossible before you calculate. The true value is about 2.7 Ω; 6.5 Ω is the sort of number an un-inverted answer produces."
+      },
+      {
+        "q": "A 6 Ω and a 12 Ω resistor together give an equivalent of 4 Ω. How are they connected?",
+        "options": ["In series", "In parallel with a third resistor of 12 Ω", "The value 4 Ω is impossible for this pair", "In parallel"],
+        "answerIndex": 3,
+        "concept": "Series adds up, parallel comes down",
+        "why": "Series would give 18 Ω, so only parallel can land below the smaller resistor, and 1/6 + 1/12 = 3/12 gives exactly 4 Ω. Calling 4 Ω impossible is the mistake of someone who remembers the parallel bound but not that it is a bound from above."
+      },
+      {
+        "q": "Three unequal resistors are connected in series. Which quantity is the same in all three?",
+        "options": ["The current", "The voltage across each", "The power dissipated in each", "The resistance of each"],
+        "answerIndex": 0,
+        "concept": "Series shares the current",
+        "why": "Slide 5 says it plainly: in series the current must be the same in all of them, but the voltage may vary. The tempting swap is 'the voltage across each' — that is the parallel case, where one voltage is shared and the current divides."
+      },
+      {
+        "q": "Four wires are soldered together at point P; at point Q two wires join end to end. By the deck's definition, which is a junction?",
+        "options": ["Both P and Q", "P only", "Q only", "Neither, since neither carries a battery"],
+        "answerIndex": 1,
+        "concept": "Junction — three or more conductors",
+        "why": "A junction needs three or more conductors meeting, so P qualifies and Q does not; the deck prints 'Not a Junction' on exactly this kind of two-wire point. At Q the current has nowhere to go but onward, so there is nothing for ΣI = 0 to constrain."
+      },
+      {
+        "q": "At a junction, currents of 3 A and 5 A flow in and two currents flow out, one of which is 2 A. The other outgoing current is",
+        "options": ["4 A", "10 A", "6 A", "2 A"],
+        "answerIndex": 2,
+        "concept": "Junction rule arithmetic",
+        "why": "ΣI = 0 with signs reads 3 + 5 − 2 − I = 0, so I = 6 A: everything arriving must leave. Answering 4 A subtracts the 2 A from one incoming current only, instead of from the total that arrives."
+      },
+      {
+        "q": "What fixes the sign of an emf term in a loop equation?",
+        "options": ["The direction of the assumed current in that branch", "Whether the battery is the larger of the two", "Whether the battery is charging or discharging", "The order in which you cross its two terminals"],
+        "answerIndex": 3,
+        "concept": "emf sign rule",
+        "why": "Cross from − to + and the emf is positive; cross from + to − and it is negative — nothing else enters into it. The current direction signs the IR terms, not the emfs, and running the two rules together is the commonest sign error of the week."
+      },
+      {
+        "q": "A single loop contains one 9 V battery and resistances of 2 Ω, 4 Ω and 6 Ω. The current is",
+        "options": ["0.75 A", "1.5 A", "0.33 A", "12 A"],
+        "answerIndex": 0,
+        "concept": "Loop rule on a single loop",
+        "why": "There are no junctions, so one current serves the whole loop: 9 V = I(12 Ω) gives I = 0.75 A. Answering 12 A divides the wrong way round — carry the units, because V ÷ Ω = A tells you which division was meant."
+      },
+      {
+        "q": "A 15 V and a 6 V battery are placed in one loop so that they oppose each other. What net emf drives the current?",
+        "options": ["21 V", "9 V", "15 V", "4.5 V"],
+        "answerIndex": 1,
+        "concept": "Opposing emfs subtract",
+        "why": "Sources that face each other subtract, so only 15 − 6 = 9 V is left to push current round the loop. Adding them to 21 V is what you get by never checking which terminal each + points toward."
+      },
+      {
+        "q": "In a circuit the current is driven into a battery's + terminal by a stronger source. Its power output P = εI is",
+        "options": ["Positive, since a source always delivers energy", "Zero, since no net energy is exchanged", "Negative, meaning it is being charged", "Negative, but only while the current exceeds 1 A"],
+        "answerIndex": 2,
+        "concept": "Negative power output",
+        "why": "That battery's emf enters the loop equation with a minus sign, so εI comes out negative, and a negative output means it is absorbing energy rather than delivering it. Assuming every battery must supply power is what makes this answer look impossible."
+      },
+      {
+        "q": "The loop rule ΣV = 0 sums which terms?",
+        "options": ["Only the IR drops across the resistors", "Only the emfs of the sources", "The IR drops, with the emfs added afterwards", "Every potential change round the loop, emfs and IR terms alike"],
+        "answerIndex": 3,
+        "concept": "What ΣV = 0 actually sums",
+        "why": "The loose phrase 'sum of the voltage drops' leaves the batteries out; what sums to zero is every potential change, so emfs sit in the same equation as the IR terms. Drop the emfs and a single loop reduces to 0 = I·R, giving a current of zero."
+      },
+      {
+        "q": "Why can a bridge circuit not be reduced by series and parallel steps?",
+        "options": ["No two of its resistors carry one current, and no two span one pair of points", "Because it contains more than one battery in the same network", "Because its five resistances all take different numerical values", "Because the junction rule fails at its two inner nodes"],
+        "answerIndex": 0,
+        "concept": "Why Kirchhoff's rules exist",
+        "why": "Series needs two resistors carrying one current and parallel needs two across one pair of points, and a bridge offers neither — which is the reason the rules are introduced at all. Unequal values are not the issue: a bridge of five equal resistors is just as irreducible."
+      },
+      {
+        "q": "IR has the units of ___ and εI has the units of ___.",
+        "options": ["amperes; volts", "volts; watts", "watts; volts", "ohms; amperes"],
+        "answerIndex": 1,
+        "concept": "Carrying units through the algebra",
+        "why": "A × Ω = V and V × A = W, which is why she writes '8 V = I(16 Ω)' rather than bare numbers. Getting the pair the wrong way round is the signal that you have multiplied where you should have divided."
+      },
+      {
+        "q": "You apply Kirchhoff's rules to a bridge with five arms. How many current unknowns are there before any equation is written?",
+        "options": ["Three, one for each loop", "Two, one for each inner junction", "Five, one for each arm", "One, since a single current serves the network"],
+        "answerIndex": 2,
+        "concept": "Step 1 — an assumed current on every arm",
+        "why": "Her method starts by marking an assumed current arrow on every arm, so five arms give five unknowns. The 'one current' answer is right only for a single loop with no junctions; a bridge has two inner junctions, so the current must split."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "A flowchart is best described as",
+        "options": ["A written narrative of what a program is meant to achieve", "A table pairing each variable with its memory location", "A list of a program's instructions in a chosen language", "A graphical representation of the sequence of operations in a program"],
+        "answerIndex": 3,
+        "concept": "Definition of a flowchart",
+        "why": "The definition is graphical and it is about sequence — equivalently, the graphical representation of an algorithm. A list of instructions in a language is source code and a narrative of intent is a specification; neither is built from boxes and flow lines."
+      },
+      {
+        "q": "Which flowchart symbol is drawn as a parallelogram?",
+        "options": ["Input/output", "Process", "Decision", "Terminator"],
+        "answerIndex": 0,
+        "concept": "Symbol shapes",
+        "why": "The slanted rectangle marks data going in or coming out — read, enter, print, display. The plain rectangle is a process, and the two get swapped because both sit singly on the flow path with one arrow in and one out."
+      },
+      {
+        "q": "A hexagon pointed at both ends is the symbol for",
+        "options": ["A predefined process", "Preparation", "A merge", "A document"],
+        "answerIndex": 1,
+        "concept": "Preparation symbol",
+        "why": "Preparation covers steps that set up for work — initialising a total, setting a counter — as opposed to steps that do the work. The predefined process is the rectangle with a double line down each vertical side, the shape most often confused with it."
+      },
+      {
+        "q": "A rectangle with a double line down each vertical side represents",
+        "options": ["A step repeated a fixed number of times", "A comment attached to a step", "A complex or well-known operation defined elsewhere", "The body of a loop"],
+        "answerIndex": 2,
+        "concept": "Predefined process",
+        "why": "That is the predefined process: the box names an operation rather than spelling out the work. Apply the test — if the box states the step itself it is an ordinary process in a plain rectangle."
+      },
+      {
+        "q": "Which symbol shows where data is stored?",
+        "options": ["A wavy-bottomed rectangle", "A circle containing a cross", "A downward-pointing triangle", "A cylinder"],
+        "answerIndex": 3,
+        "concept": "Database symbol",
+        "why": "The cylinder — a drum on its side — is the database, usually paired with a read or write step. The wavy-bottomed rectangle is a document, which is data being presented rather than data being held."
+      },
+      {
+        "q": "Stacked wavy-bottomed rectangles mean",
+        "options": ["Several different reports or documents", "One document printed several times", "A database holding several tables", "A process repeated once per document"],
+        "answerIndex": 0,
+        "concept": "Multiple documents",
+        "why": "One wavy-bottomed rectangle is a document; the stack means several different reports or documents. Reading the stack as repetition imports loop meaning into a symbol that carries none — only a backward flow line shows repetition."
+      },
+      {
+        "q": "A flow line enters a small circle labelled B, but no other B appears anywhere on the chart. What is wrong?",
+        "options": ["Connectors may be labelled with numbers only, never letters", "Every connector label needs a matching partner, so this flow leads nowhere", "A connector may not take an incoming arrow", "Connectors are valid only between separate pages"],
+        "answerIndex": 1,
+        "concept": "Connector labels come in pairs",
+        "why": "Connectors work in labelled pairs: one circle takes the arrow in and its twin sends one out. A lone B leaves the flow with no destination, which breaks the chart as surely as a missing arrow does."
+      },
+      {
+        "q": "Which of these makes a flowchart invalid?",
+        "options": ["A chart with two Stop terminators", "A decision whose two branches rejoin at a merge", "A symbol other than Start with no arrow entering it", "A flow line that runs upward"],
+        "answerIndex": 2,
+        "concept": "Every symbol must be reachable",
+        "why": "Every symbol but Start needs an arrow entering it, and every symbol but Stop one leaving; a dangling symbol can never be reached. Several Stops are allowed, rejoining branches are ordinary selection, and an upward line is exactly what arrowheads exist to permit."
+      },
+      {
+        "q": "The four main types of flowchart are",
+        "options": ["Sequence, selection, repetition, iteration", "Logical, physical, abstract, concrete", "Input, process, output, storage", "Process, workflow, swimlane, data"],
+        "answerIndex": 3,
+        "concept": "The four flowchart types",
+        "why": "Process, workflow, swimlane and data are the four named types. Sequence, selection and repetition are the control constructs a chart can express, not types of chart — that is the substitution the first option invites."
+      },
+      {
+        "q": "One of the four drawing principles concerns comparisons. What does it say?",
+        "options": ["Instructions for comparisons should be made as simple as possible", "Comparisons should always be placed at the top of the chart", "Every comparison must be given a page of its own", "Comparisons should be written out as full sentences"],
+        "answerIndex": 0,
+        "concept": "Drawing principles",
+        "why": "The principle asks for simple comparisons, alongside a start and a stop point, flow lines that avoid crossing, and a neat, clear chart. Nothing in the principles governs where a comparison sits or how much room it is given."
+      },
+      {
+        "q": "Which of these is listed as an advantage of flowcharts?",
+        "options": ["They make the resulting program run measurably faster", "They can be attached to a program specification for other programmers", "They remove the need to test the program afterwards", "They shorten the code that eventually has to be written"],
+        "answerIndex": 1,
+        "concept": "Advantages, not efficiency",
+        "why": "Clarity is the advantage: the chart simplifies the logic and can be added to specification documents for other programmers. Efficiency is the opposite — flowchart logic is listed as a disadvantage because it can make a program unnecessarily longer."
+      },
+      {
+        "q": "Which of these is named as a use of flowcharts?",
+        "options": ["Compiling source code into machine instructions", "Measuring how long a program takes to run", "Modelling a business process", "Allocating memory for a program's variables"],
+        "answerIndex": 2,
+        "concept": "Uses of flowcharts",
+        "why": "The named uses are planning a project, documenting one, modelling a business process, managing workflow, managing data and mapping an algorithm. The other three describe what a compiler or a profiler does, not what a diagram does."
+      },
+      {
+        "q": "A chart has a diamond whose two labelled exits both lead forward and then rejoin. Which construct is this?",
+        "options": ["Repetition", "A summing junction", "An invalid chart", "Selection"],
+        "answerIndex": 3,
+        "concept": "Selection versus repetition",
+        "why": "Selection is a diamond with two labelled exits that go different ways and then come back together. The test for repetition is whether either exit points backward to a symbol already executed, and here neither does."
+      },
+      {
+        "q": "A symbol has three flow lines entering it and one leaving. Which symbol is it definitely NOT?",
+        "options": ["A decision", "A merge", "A summing junction", "A process reached from three places"],
+        "answerIndex": 0,
+        "concept": "Count the arrows",
+        "why": "A decision takes one arrow in and sends exactly two out, so three in and one out rules it out at once. Count arrows rather than trusting the shape you half-remember — a merge and a summing junction both take many in and send one out."
+      },
+      {
+        "q": "Trace this chart. Start; X = 10; A: Print X; X = X − 3; decision 'Is X > 0?' Yes back to A, No to Stop. What is printed?",
+        "options": ["10, 7, 4", "10, 7, 4, 1", "7, 4, 1", "10, 7, 4, 1, −2"],
+        "answerIndex": 1,
+        "concept": "Tracing a loop whose print precedes the update",
+        "why": "The print happens before the subtraction, so 10, 7, 4 and 1 all reach the page; after 1 is printed X becomes −2, the test fails and the chart stops. Adding −2 to the list prints a value the flow never carries back to Print."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "JavaScript was created by",
+        "options": ["Tim Berners-Lee", "James Gosling", "Brendan Eich", "Douglas Crockford"],
+        "answerIndex": 2,
+        "concept": "Origin of JavaScript",
+        "why": "The deck names Brendan Eich as the creator of JavaScript. Tim Berners-Lee introduced the World Wide Web and James Gosling created Java — a name close enough to JavaScript to be the trap set here."
+      },
+      {
+        "q": "Which of these can client-side JavaScript NOT do?",
+        "options": ["Read a database on the server directly", "Validate a form before it is submitted", "Change the text inside an element", "Respond to a button click"],
+        "answerIndex": 0,
+        "concept": "Client-side versus server-side",
+        "why": "Client-side code runs in the user's browser, so reaching a database or file system is server-side work. The other three are precisely what the deck lists JavaScript for — and since its source is visible to the user, it can never be trusted for security either."
+      },
+      {
+        "q": "Which keywords introduce block scope?",
+        "options": ["var and let", "let and const", "var and const", "var, let and const"],
+        "answerIndex": 1,
+        "concept": "Block scope",
+        "why": "Block scope — visibility limited to the enclosing { } — comes with let and const only. var is the older keyword and is not confined to the block, which is the whole point of the distinction."
+      },
+      {
+        "q": "What is the value of `17 % 5`?",
+        "options": ["3", "3.4", "12", "2"],
+        "answerIndex": 3,
+        "concept": "Modulus operator",
+        "why": "The modulus operator returns the remainder, and 17 divided by 5 leaves 2. Answering 3 or 3.4 gives the quotient instead — `/` divides, `%` reports what is left over."
+      },
+      {
+        "q": "How does `if (x = 5)` differ from `if (x == 5)`?",
+        "options": ["The first assigns 5 to x and is always truthy; the second tests x", "The first tests both value and type; the second tests value only", "They are the same, since one `=` is shorthand", "The first is a syntax error in JavaScript"],
+        "answerIndex": 0,
+        "concept": "`=` versus `==`",
+        "why": "A single `=` assigns, so the condition becomes the assigned value 5, which is truthy every time and the else branch can never run. The description about matching types belongs to `===`, not to either of these two."
+      },
+      {
+        "q": "`let s = score >= 50 ? 'Pass' : 'Fail';` If score is 50, what is s?",
+        "options": ["'Fail'", "'Pass'", "true", "undefined"],
+        "answerIndex": 1,
+        "concept": "Ternary operator",
+        "why": "The ternary reads condition ? valueIfTrue : valueIfFalse, and 50 >= 50 is true, so the first value is taken. Answering 'Fail' reads `>=` as a strict 'greater than', which is the boundary slip this question is built on."
+      },
+      {
+        "q": "In a `switch` statement, what does `break` do?",
+        "options": ["Ends the whole function", "Skips ahead to test the next case", "Exits the switch block once a match has been handled", "Cancels the switch when no case matches"],
+        "answerIndex": 2,
+        "concept": "`break` in a switch",
+        "why": "`break` leaves the switch as soon as the matched case has run. Without it execution simply continues into the cases below, which is why the deck writes a break into every case it shows."
+      },
+      {
+        "q": "What does this log? ```js let n = 3; while (n > 0) { console.log(n); n--; }```",
+        "options": ["3 2 1 0", "2 1 0", "3", "3 2 1"],
+        "answerIndex": 3,
+        "concept": "`while` tests before each pass",
+        "why": "The condition is checked before every pass, so 3, 2 and 1 are logged and the loop stops when n reaches 0, because 0 > 0 is false. Including 0 logs a value the condition has already rejected."
+      },
+      {
+        "q": "After `let a = [1, 2, 3]; a.push(4); a.pop();` what is a?",
+        "options": ["[1, 2, 3]", "[1, 2, 3, 4]", "[2, 3, 4]", "[1, 2]"],
+        "answerIndex": 0,
+        "concept": "`push()` and `pop()`",
+        "why": "`push` adds 4 to the end and `pop` removes the last element, which is the 4 you just added, so the array returns to where it began. Answering [1, 2] treats `pop` as removing the first element, which is not what it does."
+      },
+      {
+        "q": "After `let c = ['a', 'b', 'c']; c.splice(1, 1, 'z');` what is c?",
+        "options": ["['z', 'b', 'c']", "['a', 'z', 'c']", "['a', 'b', 'z']", "['a', 'z', 'b', 'c']"],
+        "answerIndex": 1,
+        "concept": "`splice()` at an index",
+        "why": "`splice` works at a given index: it starts at index 1, removes one element and puts 'z' in its place. Answering ['z', 'b', 'c'] forgets that arrays are zero-indexed, so index 1 is the second element, not the first."
+      },
+      {
+        "q": "Which expression gives the number of elements in `colors`?",
+        "options": ["length(colors)", "colors.size", "colors.length", "colors.length()"],
+        "answerIndex": 2,
+        "concept": "`.length` is a property",
+        "why": "`length` is a property on an array, so it takes no parentheses. Writing `colors.length()` tries to call it as a method and errors — this is one of the deck's own named confusions."
+      },
+      {
+        "q": "What does `forEach()` return?",
+        "options": ["A new array holding the elements that passed a test", "The last element that it visited in the array", "The number of elements that it visited in the array", "Nothing — it only runs the function once per element"],
+        "answerIndex": 3,
+        "concept": "`forEach()` versus `filter()`",
+        "why": "`forEach` exists for its effect, not its value: it walks the array and hands you nothing back. Returning a new array is what `filter` does, and expecting the two to behave alike is the confusion the deck flags."
+      },
+      {
+        "q": "```js let c = { r: 2, area: function () { return 3.14 * this.r * this.r; } }; c.area();``` returns",
+        "options": ["12.56", "6.28", "3.14", "undefined"],
+        "answerIndex": 0,
+        "concept": "Object method and `this`",
+        "why": "Inside the object's own method `this.r` is 2, so the result is 3.14 × 2 × 2 = 12.56. Answering 6.28 multiplies by the radius only once, which is a circumference-shaped number rather than the area the method defines."
+      },
+      {
+        "q": "In `function add(a, b)` called as `add(3, 4)`, the 3 and 4 are",
+        "options": ["Parameters", "Arguments", "Declarations", "Return values"],
+        "answerIndex": 1,
+        "concept": "Parameter versus argument",
+        "why": "Parameters are the placeholders written in the definition; arguments are the actual values supplied at the call. The two names get swapped constantly, which is why the deck separates them explicitly."
+      },
+      {
+        "q": "You need a collection in which each value is reached by a unique named identifier. What should you use?",
+        "options": ["An array, indexed from zero", "A nested array", "An object of key-value pairs", "An array whose elements are strings"],
+        "answerIndex": 2,
+        "concept": "Array versus object",
+        "why": "Objects hold key-value pairs reached by dot notation or square brackets, which is what a unique named identifier means. Arrays are ordered and reached by numeric index, so they suit a list of similar items rather than named ones."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "The first Nigerian military coup took place on",
+        "options": ["15 January 1966", "29 July 1966", "30 May 1967", "1 October 1960"],
+        "answerIndex": 0,
+        "concept": "Date of the first coup",
+        "why": "15 January 1966 is the coup of the five majors; 29 July 1966 is the countercoup that killed Ironsi. When both 1966 dates are offered, decide by the name attached — January belongs to Nzeogwu, July to Gowon."
+      },
+      {
+        "q": "Which Prime Minister was killed in the coup of 15 January 1966?",
+        "options": ["Ladoke Akintola", "Abubakar Tafawa Balewa", "Festus Okotie-Eboh", "Nnamdi Azikiwe"],
+        "answerIndex": 1,
+        "concept": "Victims of the January 1966 coup",
+        "why": "Balewa was the Prime Minister. Akintola was Premier of the Western Region and Okotie-Eboh the Finance Minister — both were also killed that night, which is exactly what makes them tempting here."
+      },
+      {
+        "q": "Who transferred power to Major-General Aguiyi-Ironsi after the January 1966 coup?",
+        "options": ["Major Chukwuma Kaduna Nzeogwu", "Yakubu Gowon", "Nwafor Orizu, acting President of the Senate", "Obafemi Awolowo"],
+        "answerIndex": 2,
+        "concept": "How Ironsi came to power",
+        "why": "Orizu, as acting President of the Senate, handed power to Ironsi as the army's commanding officer. Nzeogwu led the coup but never ruled — the plotters failed to seize power, which is why it devolved to Ironsi at all."
+      },
+      {
+        "q": "Ironsi was captured and killed at",
+        "options": ["Kaduna", "Lagos", "Enugu", "Ibadan"],
+        "answerIndex": 3,
+        "concept": "The July 1966 countercoup",
+        "why": "The countercoup caught him at Ibadan. Kaduna attaches to Nzeogwu — 'Kaduna Nzeogwu' is part of his name — which makes it the wrong option most likely to be picked."
+      },
+      {
+        "q": "Ironsi's Decree No. 34 was intended to",
+        "options": ["Unify the country by abolishing the regional structure", "Create twelve states out of the existing regions", "Return the country to civilian rule by 1976", "Establish the National Youth Service Corps"],
+        "answerIndex": 0,
+        "concept": "The Unification Decree",
+        "why": "Decree No. 34 is the Unification Decree, and northern officers read it as a step toward Igbo domination. State creation was Gowon's wartime measure and the 1976 handover was his abandoned promise — different men, different years."
+      },
+      {
+        "q": "How many easterners does the course say were massacred in the northern pogrom of 1966?",
+        "options": ["About 250,000", "80,000 to 100,000", "Up to 3 million", "42"],
+        "answerIndex": 1,
+        "concept": "The 1966 pogrom",
+        "why": "The pogrom figure is 80,000 to 100,000, and it is what drove the mass return of Igbos to the East. Up to 3 million is the death toll of the war itself — the two numbers sit next to each other in the causal chain and get swapped."
+      },
+      {
+        "q": "The Aburi Accord was",
+        "options": ["The ceremony at which Biafra surrendered", "The agreement that created twelve states", "The negotiation that failed before Biafra was declared", "The treaty by which Britain granted independence"],
+        "answerIndex": 2,
+        "concept": "Aburi and the road to secession",
+        "why": "Aburi was the attempt at settlement between Gowon and Ojukwu, and its failure led straight to the declaration of 30 May 1967. The surrender came much later, on 12 January 1970, and it was Effiong's, not Ojukwu's."
+      },
+      {
+        "q": "The human cost of the civil war is given as",
+        "options": ["Up to 100,000 killed and 250,000 displaced", "About 1 million killed and 1 million displaced", "80,000 to 100,000 killed, with no displacement figure", "Up to 3 million killed and another 3 million displaced"],
+        "answerIndex": 3,
+        "concept": "Cost of the civil war",
+        "why": "The figures given are up to 3 million killed and a further 3 million displaced. The 80,000 to 100,000 figure belongs to the 1966 pogrom, before the war had begun."
+      },
+      {
+        "q": "Gowon's post-war programme was known as the 3 Rs. They were",
+        "options": ["Reconstruction, reconciliation, rehabilitation", "Recovery, reform, reunification", "Reconstruction, restitution, reintegration", "Reconciliation, redistribution, renewal"],
+        "answerIndex": 0,
+        "concept": "The 3 Rs",
+        "why": "Reconstruction, reconciliation and rehabilitation are the three, and the course judges that they failed. Each wrong option keeps one genuine R and swaps the others, so learn all three as a set rather than one at a time."
+      },
+      {
+        "q": "The 1983 coup led by Major-General Muhammadu Buhari overthrew",
+        "options": ["Yakubu Gowon", "Shehu Shagari", "Ernest Shonekan", "Ibrahim Babangida"],
+        "answerIndex": 1,
+        "concept": "Coup sequence, 1983",
+        "why": "Buhari removed Shagari shortly after Shagari's re-election, on the charge that the government was inept and corrupt. Shonekan is the interim president Abacha removed ten years later, in November 1993."
+      },
+      {
+        "q": "What post did Babangida hold when he took power in 1985?",
+        "options": ["General Officer Commanding, 3rd Armoured Division", "Minister of Defence", "Chief of Army Staff", "Military Governor of Kaduna State"],
+        "answerIndex": 2,
+        "concept": "Coup sequence, 1985",
+        "why": "Babangida was Chief of Army Staff. General Officer Commanding of the 3rd Armoured Division at Jos is Buhari's post in 1983 — the two men's commands are listed one row apart and are easy to cross."
+      },
+      {
+        "q": "During his failed coup attempt of 1990, Gideon Orkar seized the FRCN and announced",
+        "options": ["The dissolution of the National Assembly", "An immediate return to civilian rule", "The annulment of the June 12 election", "The secession of southern Nigeria from the north"],
+        "answerIndex": 3,
+        "concept": "The Orkar attempt, 1990",
+        "why": "Orkar's broadcast announced the south's secession from the north, and the attempt was put down within ten hours. The June 12 annulment was Babangida's own act three years later, not anything announced in a coup."
+      },
+      {
+        "q": "Who took power after Abacha's death in 1998 and supervised the transition to democracy?",
+        "options": ["Abdulsalami Abubakar", "Ernest Shonekan", "Olusegun Obasanjo", "Ibrahim Babangida"],
+        "answerIndex": 0,
+        "concept": "End of military rule",
+        "why": "Abdulsalami Abubakar took over and ran what the course calls the shortest transition to democracy. Obasanjo came out of prison to contest the election that transition produced — he was its beneficiary, not its supervisor."
+      },
+      {
+        "q": "In the 1999 presidential election Obasanjo defeated",
+        "options": ["Moshood Abiola", "Olu Falae", "Alex Ekwueme", "Shehu Shagari"],
+        "answerIndex": 1,
+        "concept": "The Fourth Republic begins",
+        "why": "Olu Falae was his opponent in 1999. Abiola belongs to the annulled June 12 1993 election and died in detention, so he could not have stood — the two elections are six years and one military regime apart."
+      },
+      {
+        "q": "The Richards Constitution is significant as the first to",
+        "options": ["Give Nigerians an elected majority in the legislature", "Create a federal capital territory", "Introduce regionalism and the regional development corporations", "Abolish the office of Lieutenant Governor"],
+        "answerIndex": 2,
+        "concept": "Richards Constitution",
+        "why": "Richards introduced regionalism, and with it the regional development corporations of the First Republic. It did not abolish regionalism or centralise power — that reversal is exactly what the wrong options are built to suggest."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "Pre-writing is best defined as",
+        "options": ["The first quick draft of the piece, to be revised and refined later", "The phase before composition, where ideas are generated and a framework built", "The stage where a completed draft is checked for typos and misspellings", "The point at which the finished work is shared with its intended audience"],
+        "answerIndex": 1,
+        "concept": "Definition of pre-writing",
+        "why": "Pre-writing precedes the actual composition: it generates and organises ideas, establishes a purpose and constructs a preliminary framework. The 'first quick draft' option describes the during-writing stage — pre-writing produces a plan, not prose."
+      },
+      {
+        "q": "Post-writing begins",
+        "options": ["Once the initial draft is complete", "As soon as the topic has been chosen", "When the outline is finished", "Only after the work has been published"],
+        "answerIndex": 0,
+        "concept": "Definition of post-writing",
+        "why": "Post-writing is everything done after the initial draft — revising, editing and refining toward a polished final version. Publishing is not the start of post-writing but its last step, the one that ends the process."
+      },
+      {
+        "q": "A writer reorders the paragraphs of an essay and rewrites the introduction so it previews the argument properly. This is",
+        "options": ["Editing", "Proofreading", "Revision", "Formatting"],
+        "answerIndex": 2,
+        "concept": "Revising",
+        "why": "Revision works at the level of content and structure — moving, cutting and rewriting whole paragraphs. Calling this proofreading has the level wrong: proofreading touches nothing beyond typos, spelling and punctuation."
+      },
+      {
+        "q": "A journalist removes grammatical errors, improves sentence structure and makes the writing style consistent. This is",
+        "options": ["Revision", "Proofreading", "Peer review", "Editing for grammar and style"],
+        "answerIndex": 3,
+        "concept": "Editing",
+        "why": "Editing operates at the sentence and word level: grammar, structure and consistency of style. Revision would change which ideas appear and in what order, and proofreading would go no deeper than a misspelling."
+      },
+      {
+        "q": "In what order are these three carried out?",
+        "options": ["Revise, edit, proofread", "Proofread, edit, revise", "Edit, revise, proofread", "Revise, proofread, edit"],
+        "answerIndex": 0,
+        "concept": "Order of the three refining activities",
+        "why": "You settle content first, then sentences, then the surface — proofreading is last because there is no sense polishing text you may still cut. Any order that puts proofreading before revision has you correcting typos in paragraphs due for deletion."
+      },
+      {
+        "q": "A novelist writes continuously and without structure to explore a character's backstory. Which pre-writing technique is this?",
+        "options": ["Brainstorming", "Free-writing", "Clustering", "Storyboarding"],
+        "answerIndex": 1,
+        "concept": "Free-writing",
+        "why": "Free-writing is continuous unstructured prose, written to discover what you think. Brainstorming is its nearest neighbour but its output is a list of ideas — ask whether the product is a list or a flow of sentences."
+      },
+      {
+        "q": "Before an essay on climate change a student lists causes, environmental effects and possible solutions. Which technique is this?",
+        "options": ["Free-writing", "Mind mapping", "Brainstorming", "Research"],
+        "answerIndex": 2,
+        "concept": "Brainstorming",
+        "why": "Brainstorming produces an unfiltered pool of related topics and engages divergent thinking. Research would mean going out to gather facts and evidence; here the student draws only on what is already in mind."
+      },
+      {
+        "q": "For an argumentative essay on social media, a student draws a diagram with branches for positive and negative aspects. Which technique is this?",
+        "options": ["Listing", "Outlining", "Storyboarding", "Mind mapping"],
+        "answerIndex": 3,
+        "concept": "Mind mapping",
+        "why": "Mind mapping is the branching diagram that shows connections between ideas. Outlining is the option to rule out: it fixes sequence and hierarchy as a roadmap, whereas a mind map explores relationships without committing to order."
+      },
+      {
+        "q": "For a compare-and-contrast essay on two historical figures, a student sets down similarities and differences item by item. Which technique is this?",
+        "options": ["Listing", "Clustering", "Mind mapping", "Free-writing"],
+        "answerIndex": 0,
+        "concept": "Listing",
+        "why": "Listing is a linear enumeration, and here it gives the essay its item-by-item structure. Clustering also groups ideas, but it associates words and images around a central theme rather than running down a line."
+      },
+      {
+        "q": "A journalist writes out the interview questions before meeting the subject. Which pre-writing technique is this?",
+        "options": ["Identifying audience and purpose", "Drafting questions", "Research", "Outlining"],
+        "answerIndex": 1,
+        "concept": "Drafting questions",
+        "why": "Drafting questions prepares the specific questions that will secure the information needed. It is most often confused with identifying audience and purpose, but that technique decides tone, style and content for a known readership."
+      },
+      {
+        "q": "A business professional asks who will read the report and why. What does this settle?",
+        "options": ["The length of the finished report", "Which sources will be cited", "The tone, style and content", "The order of the paragraphs"],
+        "answerIndex": 2,
+        "concept": "Identifying audience and purpose",
+        "why": "Identifying audience and purpose is what fixes tone, style and content before a word is written. Paragraph order is settled by outlining, and citations belong to research first and to the checking of references afterwards."
+      },
+      {
+        "q": "Research gathers sources before writing. What is its post-writing counterpart?",
+        "options": ["Peer review", "Polishing transitions", "Formatting and presentation", "Checking citations and references"],
+        "answerIndex": 3,
+        "concept": "Research versus checking citations",
+        "why": "Checking citations verifies the accuracy and formatting of sources already used, which mirrors the gathering done before writing. The two are conflated because both involve sources — but one collects and the other audits."
+      },
+      {
+        "q": "Peer review and seeking feedback from an instructor are both external feedback. What separates them?",
+        "options": ["Peer review swaps drafts with a fellow writer; the other goes to an authority", "Peer review comes before a draft exists; the other comes after it is done", "Peer review is always anonymous, while the other is always attributed", "Peer review looks only at grammar, while the other looks only at content"],
+        "answerIndex": 0,
+        "concept": "Peer review versus instructor feedback",
+        "why": "The difference is who reads it: a fellow writer swapping drafts, or an instructor or editor offering constructive criticism. Both happen after the draft exists, so timing is not what tells them apart."
+      },
+      {
+        "q": "Attending closely to the links between paragraphs and ideas is",
+        "options": ["Revision", "Polishing transitions", "Proofreading", "Finalising conclusions"],
+        "answerIndex": 1,
+        "concept": "Polishing transitions",
+        "why": "Polishing transitions targets the joins, so the argument flows smoothly from one paragraph to the next. Revision is the near miss: it may move or rewrite the paragraphs themselves rather than the seams between them."
+      },
+      {
+        "q": "Which cognitive mode does pre-writing brainstorming engage?",
+        "options": ["Convergent thinking", "Analytical thinking", "Divergent thinking", "Reflective thinking"],
+        "answerIndex": 2,
+        "concept": "Divergent thinking",
+        "why": "Divergent thinking is named as the mode of brainstorming, realised through mind mapping, free-writing and concept clustering. Convergent thinking narrows toward a single answer, which is the opposite of what a brainstorm is for."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "The apparatus list for this experiment specifies",
+        "options": ["Two DC supplies, five variable resistors and three ammeters", "One DC supply, five variable resistors and two ammeters", "Two DC supplies, three variable resistors and five ammeters", "Two DC supplies, five variable resistors and three voltmeters"],
+        "answerIndex": 0,
+        "concept": "Apparatus",
+        "why": "Two supplies, five resistors, three ammeters, a breadboard and cables — and no voltmeter anywhere on the list. That last point matters: this experiment reads currents, not voltages."
+      },
+      {
+        "q": "In this deck, a node is",
+        "options": ["A closed pathway formed by interconnected branches", "A point where two or more components meet", "A single path connecting two nodes", "A point where exactly three conductors meet"],
+        "answerIndex": 1,
+        "concept": "Node",
+        "why": "This deck's node takes two or more components, which is looser than the PHY_102 junction, where three or more conductors are required. The single path between two nodes is a branch, and the closed pathway is a loop."
+      },
+      {
+        "q": "A loop, or mesh, is",
+        "options": ["A point where two or more components meet", "A single path between two nodes holding one or more elements", "A closed pathway within the circuit formed by interconnected branches", "Any path along which a current is measured"],
+        "answerIndex": 2,
+        "concept": "Loop versus branch",
+        "why": "A loop closes on itself and returns to where it started; a branch runs between two nodes and does not. That closure is what makes the sum of potential changes round it zero."
+      },
+      {
+        "q": "By the deck's sign convention, the potential difference across a resistance is positive when",
+        "options": ["The current through it exceeds 1 mA", "It lies in the loop carrying the larger emf", "It is traversed opposite to the current through it", "It is traversed in the same direction as the current through it"],
+        "answerIndex": 3,
+        "concept": "Sign rule for a resistance",
+        "why": "This deck counts a drop as positive when you walk with the current and negative otherwise. Note that it is the reverse of the PHY_102 loop-rule convention, so pick one form and stay inside it — mixing the two flips a sign."
+      },
+      {
+        "q": "How can you tell a KVL equation from a KCL equation just by looking at it?",
+        "options": ["Every term of a KVL equation is a voltage; a KCL equation holds currents only", "The KVL equation always carries more terms than the KCL equation", "A KCL equation always contains at least one emf among its terms", "The KVL equation is the one that is written at a node"],
+        "answerIndex": 0,
+        "concept": "Telling the two laws apart",
+        "why": "A node equation like I1 + I2 = I3 holds nothing but currents, while a loop equation holds IR products and emfs, every one of them a voltage. That single test is what exposes the deck's own mislabelling of equation (3)."
+      },
+      {
+        "q": "The deck introduces equation (3), I2·R2 − I1·R5 + I2·R1 = −E2, with 'Apply KCL to node b'. Why is that wrong?",
+        "options": ["It should contain three currents, not two", "Every term is a voltage, so it is a KVL loop equation", "Node b has only two branches, so no equation can be written there", "All its signs should be positive"],
+        "answerIndex": 1,
+        "concept": "The deck's mislabelled equation",
+        "why": "IR products and an emf are voltages, so this is a loop equation for loop 2 and belongs to KVL, not KCL. Its minus signs come from traversing loop 2 against I1 through the shared R5 and against the driving sense of E2."
+      },
+      {
+        "q": "Kirchhoff's Current Law rests on the conservation of",
+        "options": ["Energy", "Momentum", "Charge", "Power"],
+        "answerIndex": 2,
+        "concept": "Which conservation law underlies KCL",
+        "why": "Charge cannot pile up at a node, so whatever enters per second must leave per second. Energy is the law behind KVL — the two are paired one to each rule, and swapping them is the standard slip."
+      },
+      {
+        "q": "When must the 50 V range button on each supply be pressed?",
+        "options": ["After all three ammeters have been recorded", "Only once the emf exceeds 15 V", "After the first 3 V increment", "Before the emfs are dialled to 9 V"],
+        "answerIndex": 3,
+        "concept": "Procedure order",
+        "why": "Setting the maximum output first puts the voltage dial on the correct range, so the 9 V you then dial is the 9 V you actually get. Pressing it later would change the scale underneath a reading already taken."
+      },
+      {
+        "q": "At the start of the procedure, both supplies are adjusted to",
+        "options": ["9 V", "50 V", "12 V", "3 V"],
+        "answerIndex": 0,
+        "concept": "Starting emf",
+        "why": "Both emfs are set to 9 V with the voltage dial before the first recording. The 50 V is the maximum-output range rather than a working emf, and 3 V is the size of each later increment."
+      },
+      {
+        "q": "The three instruments in the circuit read",
+        "options": ["The voltage drops across R1, R2 and R5", "The three branch currents I1, I2 and I3", "The two supply emfs and their difference", "The resistances actually set on R1, R2 and R3"],
+        "answerIndex": 1,
+        "concept": "What is measured",
+        "why": "The apparatus holds three ammeters and no voltmeter, so what is recorded at each setting is three currents. KVL is verified through the currents its loop equations predict, never by reading voltages directly."
+      },
+      {
+        "q": "How is KVL verified in this experiment?",
+        "options": ["By showing the three ammeters read the same value", "By checking that the supply voltages add to the total drop", "By comparing the measured currents with currents computed from the equations", "By plotting voltage against current and taking the slope"],
+        "answerIndex": 2,
+        "concept": "The verification",
+        "why": "The resistances and emfs actually used go into equations (1) to (3), which are solved for I1, I2 and I3, and the computed values are tabulated beside the measured ones. Agreement across several settings is what verifies the law."
+      },
+      {
+        "q": "In one row of the table I1 = 1.055 mA and I2 = −0.344 mA. What should I3 read?",
+        "options": ["1.399 mA", "0.344 mA", "−0.711 mA", "0.711 mA"],
+        "answerIndex": 3,
+        "concept": "KCL at node b",
+        "why": "The node equation is I1 + I2 = I3, and 1.055 + (−0.344) = 0.711 mA. Answering 1.399 mA adds the magnitudes and throws the minus sign away, which is exactly the error a negative I2 is there to catch."
+      },
+      {
+        "q": "Why does the sample data need no unit conversion?",
+        "options": ["Because kΩ multiplied by mA gives volts directly", "Because all the resistances are equal", "Because the currents are small enough to neglect", "Because the supplies are set in whole volts"],
+        "answerIndex": 0,
+        "concept": "kΩ with mA",
+        "why": "A kilo and a milli cancel, so kΩ × mA lands in volts with nothing to convert. Working in Ω and A gives the same answer only if you rescale every quantity — mixing the two is where a factor of a thousand appears."
+      },
+      {
+        "q": "Why does R5 appear in both loop equations with opposite signs?",
+        "options": ["Because it carries the largest current", "Because the two loops traverse it in opposite senses", "Because it sits between the two supplies", "Because its value is measured rather than set"],
+        "answerIndex": 1,
+        "concept": "The shared branch",
+        "why": "R5 is the branch shared by both loops, so walking loop 1 and walking loop 2 take you through it in opposite directions and the sign rule then gives opposite signs. Getting that one sign wrong is the commonest route to a wrong I2."
+      },
+      {
+        "q": "The finite internal resistance of the ammeters makes the measured currents",
+        "options": ["Fluctuate randomly about the computed values", "Slightly higher than the computed values", "Slightly lower than the computed values", "Unaffected, since ammeters are treated as ideal"],
+        "answerIndex": 2,
+        "concept": "Source of error",
+        "why": "Each ammeter adds a little resistance in series with its branch, so slightly less current flows than the equations predict. That is a systematic effect and pushes every reading the same way, unlike random fluctuation."
+      }
+    ]
+  }
+}

@@ -71,6 +71,37 @@ export function cleanScores(raw, id) {
       continue;
     }
 
+    /* A morning drill: "drill|2026-09-14". Its own score, deliberately shaped nothing
+       like a session record — `n` rather than `score` — so that nothing which walks the
+       map looking for marks can pick one up by accident. */
+    if (/^drill\|\d{4}-\d{2}-\d{2}$/.test(rest)) {
+      if (typeof v.n !== "number") continue;
+      const rec = {
+        n: num(v.n, 0, 200),
+        of: num(v.of, 1, 200),
+        at: str(v.at, 40) || new Date().toISOString(),
+        sits: num(v.sits, 1, 999),
+        missed: Array.isArray(v.missed) ? v.missed.slice(0, 10).map((x) => String(x).slice(0, 120)) : []
+      };
+      out[k] = rec;
+      continue;
+    }
+
+    /* A goal: "goal|streak", "goal|acc", "goal|week", "goal|topics", "goal|course:MTH_102".
+       The target lives in the value, not the key, so nudging it up or down edits the
+       goal you already have rather than leaving a graveyard of abandoned keys. Zero is a
+       real target for the one goal where a smaller number is the good one. */
+    if (/^goal\|(streak|acc|week|topics|course)(:[A-Z]{3,4}_\d{3})?$/.test(rest)) {
+      if (typeof v.target !== "number") continue;
+      out[k] = {
+        target: num(v.target, 0, 1000),
+        done: !!v.done,
+        off: !!v.off,
+        at: str(v.at, 40) || new Date().toISOString()
+      };
+      continue;
+    }
+
     /* Anything else is not a thing this app writes. */
   }
   return out;

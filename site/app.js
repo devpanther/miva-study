@@ -110,6 +110,8 @@ var CHANNELS = {
 
 var S, ME=null, TAB="home", QUIZ=null, MANUAL=null,
     TOAST=null, VIEWWEEK=null, BRIEF=false;
+/* null = let the calendar and your progress decide; otherwise -1 (weekend) or 0-5. */
+var VIEWDAY = null;
 var WEEKS = {};          /* week number -> pack, fetched on demand */
 var LOADING = {};        /* week number -> true while in flight */
 var INDEX = null;
@@ -164,11 +166,16 @@ function myScores(){
   Object.keys(S.scores).forEach(function(k){ if(k.indexOf(pre)===0) out[k] = S.scores[k]; });
   return out;
 }
+/* msg === false means save without saying so.
+   A drill writes on every sitting and a goal writes on every tap of + or −, and a toast
+   for each one turns the bottom of the screen into a ticker. Failures still speak up:
+   silence is only ever the success case. */
 function push(msg){
   mirror();
-  if(STORAGE !== "blob"){ toast(msg ? msg + " · this device only" : "Saved on this device"); return; }
+  var quiet = msg === false;
+  if(STORAGE !== "blob"){ if(!quiet) toast(msg ? msg + " · this device only" : "Saved on this device"); return; }
   var p = findPerson(ME);
-  if(!p){ toast(msg||"Saved"); return; }
+  if(!p){ if(!quiet) toast(msg||"Saved"); return; }
   SYNCING = true; render();
   fetch("/api/state", {
     method:"POST",
@@ -176,7 +183,7 @@ function push(msg){
     body: JSON.stringify({id:p.id, name:p.name, joinedAt:p.joinedAt, scores:myScores()})
   }).then(function(r){ return r.json(); }).then(function(d){
     SYNCING = false;
-    if(d && d.ok) toast(msg || "Saved for both of you");
+    if(d && d.ok){ if(!quiet) toast(msg || "Saved for both of you"); }
     else toast((d && d.error) ? d.error : "Could not sync — kept on this device");
     render();
   }).catch(function(){
@@ -245,7 +252,65 @@ function weekInfo(){
   if(n > 12) return {n:13, label:"Revision"};
   return {n:n, label:"Week "+n};
 }
-function dayIdx(){ var d = today().getDay(); return d===0 ? -1 : d-1; }
+/* ---------- which day you are looking at ----------
+   Two different questions that used to share one answer.
+
+   "What day is it" is a calendar fact: todayIdx(). "Which day of this week am I
+   reading" is a place in the app, and the two only coincide in the week the calendar
+   is actually in. Opening week 7 on a Thursday in week 3 used to land on Thursday of
+   week 7 — a night that has not happened, chosen for no reason except that today
+   happens to be a Thursday.
+
+   So: in the current week, the day is today. In any other week it is the first evening
+   you have not logged, and once a week is complete it is the weekend class that closes
+   it. Either way you can then walk the week with the arrows, and the choice sticks
+   until you change week. */
+var DAYORDER = [0,1,2,3,4,5,-1];   /* Mon…Sat, then the weekend class */
+var FULLDAY = {Mon:"Monday", Tue:"Tuesday", Wed:"Wednesday", Thu:"Thursday",
+               Fri:"Friday", Sat:"Saturday"};
+
+function todayIdx(){ var d = today().getDay(); return d===0 ? -1 : d-1; }
+
+function autoDay(w){
+  if(!ME || !w) return todayIdx();
+  if(weekInfo().n === w) return todayIdx();
+  for(var i = 0; i < GRID.length; i++){
+    if(!getScore(ME, w, GRID[i].day)) return i;
+  }
+  return -1;                       /* the week is done; the weekend closes it */
+}
+function dayIdx(){
+  if(VIEWDAY === 0 || VIEWDAY) return VIEWDAY;   /* 0 is a real day, not "unset" */
+  if(VIEWDAY === -1) return -1;
+  return autoDay(wk());
+}
+function dayName(i){ return i === -1 ? "Weekend class" : FULLDAY[GRID[i].day]; }
+/* Walking off either end of a week rolls into the next or previous one, so the arrows
+   are a continuous line through the term rather than seven dead ends. */
+function stepDay(delta){
+  var here = dayIdx(), at = DAYORDER.indexOf(here);
+  if(at < 0) at = 0;
+  var next = at + delta, w = wk();
+  if(next < 0){
+    if(onRunway() || w <= 1) return;
+    VIEWWEEK = w - 1; ensureWeek(VIEWWEEK); VIEWDAY = DAYORDER[DAYORDER.length - 1];
+  } else if(next >= DAYORDER.length){
+    if(onRunway() || w >= 12) return;
+    VIEWWEEK = w + 1; ensureWeek(VIEWWEEK); VIEWDAY = DAYORDER[0];
+  } else {
+    VIEWDAY = DAYORDER[next];
+  }
+  QUIZ = null; MANUAL = null;
+  syncUrl(); render();
+}
+function canStep(delta){
+  var at = DAYORDER.indexOf(dayIdx());
+  if(at < 0) at = 0;
+  var next = at + delta;
+  if(next >= 0 && next < DAYORDER.length) return true;
+  if(onRunway()) return false;
+  return delta < 0 ? wk() > 1 : wk() < 12;
+}
 function loadedWeeks(){
   if(INDEX && INDEX.weeks) return INDEX.weeks.map(function(x){ return x.week; });
   return Object.keys(WEEKS).map(Number).sort(function(a,b){ return a-b; });
@@ -504,11 +569,20 @@ function scoreClass(s){
   var r = s.score / s.max;
   return r >= 0.83 ? "g" : (r >= 0.5 ? "o" : "b");
 }
+/* One person's map holds several kinds of thing under one prefix, and the study streak
+   and the mark total must only ever see one of them. A drill has an `at` too, and
+   before this guard existed a morning drill would have quietly kept the evening streak
+   alive on a night you never opened a check. */
+function isSession(k, pre){
+  if(k.indexOf(pre) !== 0) return false;
+  var rest = k.slice(pre.length);
+  return /^w\d{1,2}\|[A-Za-z]{3}(\|f)?$/.test(rest);
+}
 function streak(){
   if(!ME) return 0;
   var days = {}, pre = ME+"|";
   Object.keys(S.scores).forEach(function(k){
-    if(k.indexOf(pre)!==0) return;
+    if(!isSession(k, pre)) return;
     var s = S.scores[k];
     if(s && s.at) days[String(s.at).slice(0,10)] = true;
   });
@@ -525,7 +599,7 @@ function totalMarks(){
   if(!ME) return 0;
   var pre = ME+"|", t = 0;
   Object.keys(S.scores).forEach(function(k){
-    if(k.indexOf(pre)===0) t += (S.scores[k].score||0);
+    if(isSession(k, pre)) t += (S.scores[k].score||0);
   });
   return t;
 }
@@ -682,6 +756,97 @@ function el(tag, cls, html){
 }
 function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
 function btn(cls, label, fn){ var b = el("button", cls, label); b.onclick = fn; return b; }
+
+/* Code in a question should look like code.
+
+   Both banks were written in markdown, so a C or JavaScript question arrives with
+   backticks in it: `n` for a variable, and a fenced block for a listing. Escaping and
+   printing that verbatim puts literal backticks on screen and runs a four-line program
+   into one unreadable line — which for a "what does this print?" question is not a
+   cosmetic problem, it is the question becoming unanswerable.
+
+   Deliberately not a markdown parser. Two constructs, nothing else: everything is
+   escaped first, so no text from a pack can put markup on the page. */
+/* Break an explanation into paragraphs.
+
+   Every `why` in the bank is written to the same shape: the reason the right answer is
+   right, then the reason the tempting one is not. Rendered as one block that is 250 to
+   390 characters of unbroken prose on a phone — a grey wall you skim instead of read,
+   which for the one part of a drill that actually teaches you something is the whole
+   thing failing quietly.
+
+   So it is split at sentence boundaries. Deliberately not labelled: sometimes the
+   explanation runs to two sentences and the trap to one, and a heading that guesses
+   wrong is worse than no heading. Two or three short paragraphs need no headings. */
+function whyInto(parent, text, cls){
+  var t = String(text == null ? "" : text).trim();
+  if(!t) return;
+  /* Split on sentence ends, keeping the punctuation. Decimals, "e.g." and initials do
+     not qualify: a full stop only ends a sentence when whitespace and then a capital,
+     an opening quote, or a list marker follows.
+
+     The list marker matters more than it looks. Several of the longer teaching notes
+     are numbered lists written inline — "…each applied to the book. (1) Since objects
+     are not dependent… (2) …" — and without this they stayed one 800-character block,
+     which is the exact shape of text this whole function exists to break up. */
+  var parts = t.split(/(?<=[.!?;:])\s+(?=["\u201c]?\(?[A-Z\u03b1-\u03c9\u0391-\u03a9\d]|\([a-z]\))/);
+  var out = [], buf = "";
+  var flush = function(){ if(buf.trim()){ out.push(buf.trim()); buf = ""; } };
+  for(var i = 0; i < parts.length; i++){
+    buf = buf ? buf + " " + parts[i] : parts[i];
+    /* Break after any sentence long enough to stand as a paragraph. A short clause
+       stays joined to the next one, so this never produces a stack of one-line
+       fragments — and there is no cap, because capping the count is what left a
+       four-sentence explanation with a 360-character block at the end of it. */
+    if(buf.length >= 90 && i < parts.length - 1) flush();
+  }
+  flush();
+  if(!out.length) out = [t];
+
+  /* A second pass, for the handful that are still walls.
+
+     About one explanation in twenty is a single sentence of three hundred characters or
+     more, held together by semicolons — a teaching note listing what each definition
+     means, or why each of four options is wrong. A semicolon separates independent
+     clauses, so breaking there is safe; but it is only done to paragraphs that are
+     already too long, because doing it everywhere would shred ordinary prose into
+     fragments. */
+  var final = [];
+  out.forEach(function(p){
+    if(p.length <= 300 || p.indexOf("; ") < 0){ final.push(p); return; }
+    var bits = p.split(/;\s+/), acc = "";
+    bits.forEach(function(bit, i){
+      acc = acc ? acc + "; " + bit : bit;
+      if(acc.length >= 140 && i < bits.length - 1){ final.push(acc); acc = ""; }
+    });
+    if(acc.trim()) final.push(acc.trim());
+  });
+
+  final.forEach(function(p){ parent.appendChild(el("p", cls || null, codeHtml(p))); });
+}
+
+function codeHtml(t){
+  var out = esc(String(t == null ? "" : t));
+
+  /* Fenced blocks come out first and are held aside, because everything below rewrites
+     newlines — and a <br> inside a white-space:pre block is a blank line the author
+     never wrote. They go back in at the end, untouched. */
+  var held = [];
+  out = out.replace(/```[a-zA-Z0-9+#-]*\n?([\s\S]*?)```/g, function(m, body){
+    held.push(body.replace(/^\n+|\n+$/g, ""));
+    return "\u0000" + (held.length - 1) + "\u0000";
+  });
+
+  out = out.replace(/`([^`\n]+)`/g, '<code>$1</code>');
+  /* A newline left in a stem is a line the author meant to keep. */
+  out = out.replace(/\n/g, "<br>");
+
+  out = out.replace(/\u0000(\d+)\u0000/g, function(m, i){
+    return '<pre class="qcode">' + held[Number(i)] + '</pre>';
+  });
+  return out;
+}
+
 /* Turn a session brief into something readable.
 
    Briefs are written as one long sentence chain. Three shapes appear in the real data:
@@ -840,6 +1005,16 @@ function topicBlock(parent, text, cls, foot){
   (foot || parent).appendChild(b);
 }
 var FLAME = '<svg width="13" height="15" viewBox="0 0 13 15" fill="currentColor" aria-hidden="true"><path d="M6.6 0S7.4 2.4 5.6 4.3C3.9 6.1 1 7.3 1 10.1A5.5 5.5 0 0 0 6.5 15 5.5 5.5 0 0 0 12 10.1c0-2.6-1.6-3.8-2.4-5.5-.3 1-.9 1.6-1.6 2 .6-2.4-.5-5-1.4-6.6Z"/></svg>';
+
+/* Arrows for the day strip, and a small icon for each thing the stats row counts.
+   They are separate glyphs on purpose: the flame is the streak and nothing else, so
+   when it lights up you know without reading what it is telling you. */
+var CHEVL = '<svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg>';
+var CHEVR = '<svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg>';
+var ICO_CAL = '<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="1.9" y="3" width="12.2" height="11.1" rx="2"/><path d="M1.9 6.6h12.2M5.2 1.6v2.6M10.8 1.6v2.6" stroke-linecap="round"/></svg>';
+var ICO_STAR = '<svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.3l1.86 3.94 4.14.62-3 3.05.71 4.32L8 11.2l-3.71 2.03.71-4.32-3-3.05 4.14-.62z"/></svg>';
+var ICO_TARGET = '<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6.1"/><circle cx="8" cy="8" r="3.1"/><circle cx="8" cy="8" r="0.9" fill="currentColor" stroke="none"/></svg>';
+var ICO_BOLT = '<svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M9.2 1 3.4 9.1h3.3L6.1 15l6.1-8.4H8.7z"/></svg>';
 
 var QMARK_SM = '<svg width="13" height="13" viewBox="0 0 64 64" fill="none" aria-hidden="true">'
   + '<path d="M20.5 24.5A11.5 11.5 0 1 1 32 36v5.5" stroke="currentColor" stroke-width="7" '
@@ -1124,16 +1299,20 @@ function statsStrip(root){
   var st = streak(), tal = weekTally(ME, w);
   var g = el("div","stats");
 
+  /* One icon per thing, and the flame belongs to the streak alone. Three identical
+     numbers in three identical boxes read as one number repeated; the glyph is what
+     tells you at a glance which is which. */
   var s1 = el("div","stat flame");
-  s1.innerHTML = '<div class="v">'+st+'</div><div class="k">day streak</div>';
+  s1.id = "streakstat";
+  s1.innerHTML = '<div class="si">'+FLAME+'</div><div class="v">'+st+'</div><div class="k">day streak</div>';
   g.appendChild(s1);
 
   var s2 = el("div","stat week");
-  s2.innerHTML = '<div class="v">'+tal.done+'<span style="font-size:15px;color:var(--ink3)">/'+(tal.of||6)+'</span></div><div class="k">week '+w+'</div>';
+  s2.innerHTML = '<div class="si">'+ICO_CAL+'</div><div class="v">'+tal.done+'<span style="font-size:15px;color:var(--ink3)">/'+(tal.of||6)+'</span></div><div class="k">week '+w+'</div>';
   g.appendChild(s2);
 
   var s3 = el("div","stat marks");
-  s3.innerHTML = '<div class="v">'+totalMarks()+'</div><div class="k">marks</div>';
+  s3.innerHTML = '<div class="si">'+ICO_STAR+'</div><div class="v">'+totalMarks()+'</div><div class="k">marks</div>';
   g.appendChild(s3);
   root.appendChild(g);
 
@@ -1688,11 +1867,13 @@ function buddyPanel(root){
     if(!BUDDY.qs.length) body.appendChild(el("p","muted","No explanation stored for that one."));
     BUDDY.qs.forEach(function(q){
       var card = el("div","bcard");
-      card.appendChild(el("div","bq", esc(q.q)));
+      card.appendChild(el("div","bq", codeHtml(q.q)));
       if(q.type === "mcq" && q.options){
-        card.appendChild(el("div","ba","<b>Answer:</b> "+esc(q.options[q.answerIndex])));
+        card.appendChild(el("div","ba","<b>Answer:</b> "+codeHtml(q.options[q.answerIndex])));
       }
-      card.appendChild(el("div","bw", esc(q.why||"")));
+      var bw = el("div","bw");
+      whyInto(bw, q.why);
+      card.appendChild(bw);
       body.appendChild(card);
     });
     videoRow(body, c.course, BUDDY.concept);
@@ -2169,6 +2350,60 @@ function runwayCard(root, wi){
   root.appendChild(c);
 }
 
+/* ---------- walking through the week ----------
+   Seven targets and two arrows. The arrows are there because a thumb on a phone is
+   better at "the night before this one" than at hitting a 34px pill, and the pills are
+   there because sometimes you know exactly which night you want.
+
+   Each pill carries the colour of what you scored that night, so the strip doubles as
+   the week at a glance: green means it went well, red means it is worth another sitting,
+   hollow means you have not been there yet. */
+function dayNav(root){
+  var di = dayIdx(), w = wk(), cal = weekInfo().n, tdy = todayIdx();
+  var nav = el("div","daynav");
+
+  var back = btn("dstep", CHEVL, function(){ stepDay(-1); });
+  back.disabled = !canStep(-1);
+  back.setAttribute("aria-label","The day before");
+  nav.appendChild(back);
+
+  var head = el("div","dhead");
+  head.appendChild(el("div","dh1", esc(dayName(di))));
+  var sub = el("div","dh2");
+  sub.appendChild(el("span",null,"week " + w));
+  if(cal === w && di === tdy) sub.appendChild(el("span","dnow","today"));
+  else if(cal === w) sub.appendChild(el("span","dpast", di < tdy || tdy === -1 ? "earlier this week" : "still to come"));
+  else if(w > cal && cal > 0) sub.appendChild(el("span","dpast","ahead"));
+  else if(cal > w) sub.appendChild(el("span","dpast","done week"));
+  head.appendChild(sub);
+  nav.appendChild(head);
+
+  var fwd = btn("dstep", CHEVR, function(){ stepDay(1); });
+  fwd.disabled = !canStep(1);
+  fwd.setAttribute("aria-label","The day after");
+  nav.appendChild(fwd);
+  root.appendChild(nav);
+
+  var strip = el("div","dstrip");
+  strip.setAttribute("role","tablist");
+  DAYORDER.forEach(function(i){
+    var lbl = i === -1 ? "Wknd" : GRID[i].day;
+    var sc  = i === -1 ? null : getScore(ME, w, GRID[i].day);
+    var cls = "dchip" + (i === di ? " on" : "")
+            + (cal === w && i === tdy ? " istoday" : "")
+            + (sc ? " " + scoreClass(sc) : "");
+    var b = btn(cls, esc(lbl), function(){
+      if(VIEWDAY === i) return;
+      VIEWDAY = i; QUIZ = null; MANUAL = null; syncUrl(); render();
+    });
+    b.setAttribute("role","tab");
+    b.setAttribute("aria-selected", i === di ? "true" : "false");
+    b.title = i === -1 ? "Weekend class" : FULLDAY[GRID[i].day] + " of week " + w;
+    strip.appendChild(b);
+  });
+  root.appendChild(strip);
+}
+
 /* ---------- tonight ---------- */
 function viewTonight(root){
   var wi = weekInfo(), di = dayIdx();
@@ -2185,6 +2420,7 @@ function viewTonight(root){
   }
   else if(di === -1){
     statsStrip(root);
+    dayNav(root);
     var cs = el("div","card recapc");
     cs.appendChild(el("div","lbl","Sunday · 19:00"));
     cs.appendChild(el("h2",null,"Weekend class"));
@@ -2197,6 +2433,7 @@ function viewTonight(root){
   }
   else {
     statsStrip(root);
+    dayNav(root);
   }
 
   var g = GRID[di], w = wk(), wd = weekData(w);
@@ -2537,8 +2774,55 @@ function knowledgeChart(root){
   return true;
 }
 
+/* The drills, on the stats page, kept visibly apart from the marks.
+
+   They belong here — a fortnight of drills is a real signal about what you know, and
+   Stats is where you come to ask that. But they are not graded work, and putting the
+   two in one table would invite exactly the reading this whole design avoids: that a
+   good morning on the bus makes up for a check you skipped. So it gets its own strip,
+   under its own heading, in its own words. */
+function drillStatsPanel(root){
+  var days = drillDays();
+  if(!days.length) return false;
+  var r7 = drillRecent(7), r30 = drillRecent(30), st = drillStreak(), all = drillTotal();
+
+  var c = el("div","card");
+  c.appendChild(el("div","lbl","Drills"));
+  c.appendChild(el("p","muted","Separate from your marks. This is practice, and it counts for nothing except what it tells you."));
+
+  var g = el("div","stats");
+  var mk = function(cls, icon, v, k){
+    var d = el("div","stat " + cls);
+    d.innerHTML = '<div class="si">'+icon+'</div><div class="v">'+v+'</div><div class="k">'+k+'</div>';
+    return d;
+  };
+  g.appendChild(mk("flame", FLAME, st, "day streak"));
+  g.appendChild(mk("drill", ICO_TARGET,
+    r30.ratio === null ? '<span class="none">0</span>'
+      : Math.round(r30.ratio*100) + '<span style="font-size:15px;color:var(--ink3)">%</span>', "last 30 days"));
+  g.appendChild(mk("marks", ICO_STAR, all.got + '<span style="font-size:15px;color:var(--ink3)">/' + all.of + '</span>', "all time"));
+  c.appendChild(g);
+
+  if(r7.sat && r30.sat > r7.sat){
+    var a = Math.round(r7.ratio*100), b = Math.round(r30.ratio*100);
+    c.appendChild(el("p","muted", "The last seven days are " + a + "%, against " + b + "% over the month"
+      + (a > b ? " — going the right way." : (a < b ? ", so the recent ones have been harder going." : "."))));
+  }
+
+  var weak = drillWeak().slice(0, 6);
+  if(weak.length){
+    c.appendChild(el("div","lbl2","What the drills keep catching"));
+    var ul = el("ul","misslist");
+    weak.forEach(function(w){ ul.appendChild(el("li", null, esc(w))); });
+    c.appendChild(ul);
+  }
+  root.appendChild(c);
+  return true;
+}
+
 function viewProgress(root){
   var drew = knowledgeChart(root);
+  if(drillStatsPanel(root)) drew = true;
   var ppl = S.people, rows = [];
   for(var w=1; w<=12; w++){
     var any = false, r = {w:w, cells:[]};
@@ -2983,6 +3267,10 @@ function viewSession(root){
 
 function openSession(day, w, from){
   SESSION = {day: day, week: w || wk(), from: from || TAB};
+  /* Opening Thursday's session is choosing Thursday. Coming back to Study should land
+     on the night you were just reading, not on whatever the calendar says. */
+  var at = GRID.map(function(d){ return d.day; }).indexOf(day);
+  if(at >= 0) VIEWDAY = at;
   QUIZ = null; MANUAL = null; BUDDY = null;
   TAB = "session"; syncUrl(); render();
 }
@@ -3095,7 +3383,7 @@ function viewExam(root){
   var qq = exQ(q.idx);
   var card = el("div","qcard");
   card.appendChild(el("div","qeyebrow","Question "+(q.idx+1)+" of "+n));
-  card.appendChild(el("div","qt", esc(qq.q)));
+  card.appendChild(el("div","qt", codeHtml(qq.q)));
   var opts = el("div","opts");
   qq.options.forEach(function(opt, oi){
     var on = q.answers[q.idx] === oi;
@@ -3254,7 +3542,7 @@ function viewExamResult(root){
     box.appendChild(opts);
     if(qq.why){
       var e2 = el("div","expl"); e2.style.marginTop = "9px";
-      e2.innerHTML = esc(qq.why);
+      whyInto(e2, qq.why);
       box.appendChild(e2);
     }
     var dt = q.debrief && q.debrief[i];
@@ -3419,7 +3707,7 @@ function viewQuiz(root){
   var qq = q.chk.questions[q.idx];
   var card = el("div","qcard");
   card.appendChild(el("div","qeyebrow","Question "+(q.idx+1)+" of "+n));
-  card.appendChild(el("div","qt", esc(qq.q)));
+  card.appendChild(el("div","qt", codeHtml(qq.q)));
 
   if(qq.type === "mcq" && qq.options){
     var opts = el("div","opts");
@@ -3735,7 +4023,8 @@ function viewResult(root, q){
 
     if((qq.why || qq.concept) && !(r.unmarked && isMcq)){
       var e2 = el("div","expl");
-      e2.innerHTML = (qq.concept ? "<b>"+esc(qq.concept)+"</b><br>" : "") + esc(qq.why||"");
+      if(qq.concept) e2.appendChild(el("div","explc", "<b>" + codeHtml(qq.concept) + "</b>"));
+      whyInto(e2, qq.why);
       e2.style.marginTop = "9px";
       box.appendChild(e2);
     }
@@ -3942,6 +4231,56 @@ function courseParty(course, w, tally){
   });
 }
 
+/* The flame, full screen, when a streak lands.
+   Deliberately quicker and quieter than the course confetti: a streak happens often and
+   a four-second interruption every morning would become something to dismiss rather
+   than something to enjoy. */
+function fireParty(n, what){
+  if(PARTY) return;
+  PARTY = true;
+
+  var ov = el("div","party fire");
+  ov.innerHTML =
+    '<div class="pbox">'
+  +   '<div class="plot" id="firebox"></div>'
+  +   '<div class="lbl">' + esc(what || "streak") + '</div>'
+  +   '<h2>' + n + ' day' + (n === 1 ? "" : "s") + ' running</h2>'
+  +   '<p class="muted">Come back tomorrow and it is ' + (n + 1) + '.</p>'
+  + '</div>';
+  document.body.appendChild(ov);
+
+  var close = function(){
+    if(!ov.parentNode) return;
+    ov.classList.add("out");
+    setTimeout(function(){ if(ov.parentNode) ov.remove(); PARTY = false; }, 260);
+  };
+  ov.onclick = close;
+  setTimeout(close, 3000);
+
+  loadLottie().then(function(lot){
+    var host = document.getElementById("firebox");
+    if(!host || !ov.parentNode) return;
+    var anim = lot.loadAnimation({
+      container: host, renderer: "svg", loop: true, autoplay: true,
+      path: "fire.json"
+    });
+    ov.addEventListener("click", function(){ try{ anim.destroy(); }catch(e){} });
+  }).catch(function(){
+    var host = document.getElementById("firebox");
+    if(host) host.style.display = "none";
+  });
+}
+/* The small version: the flame in the stats row catches for a moment. Used where a
+   full-screen takeover would be too much — every ordinary day of a streak. */
+function litStreak(){
+  setTimeout(function(){
+    var s = document.getElementById("streakstat");
+    if(!s) return;
+    s.classList.add("lit");
+    setTimeout(function(){ s.classList.remove("lit"); }, 1000);
+  }, 120);
+}
+
 /* Called after every score is written. */
 function maybeCelebrate(w){
   var due = newlyFinished(w);
@@ -3950,6 +4289,814 @@ function maybeCelebrate(w){
   var tally = courseTally(ME, w, course);
   due.forEach(function(c){ markCelebrated(w, c); });
   setTimeout(function(){ courseParty(course, w, tally); }, 260);
+}
+
+/* ============================================================================
+   DRILLS
+   ============================================================================
+
+   The evening check is the spine of the week and it is graded work: one sitting, a
+   cold score, and it decides whether the week advances. That is the right shape for
+   an hour at 21:00 and the wrong shape for five minutes on a bus.
+
+   So this is the other thing. Ten multiple-choice questions from a separate bank of
+   1260, drawn from the weeks you have actually studied and weighted towards what you
+   have been getting wrong. Instant feedback on every question, because the point is to
+   learn the idea now rather than to measure you. Its own score, its own streak, and
+   nothing it does touches the marks that count — you can sit it four times before
+   breakfast without moving a single grade.
+
+   It is not enforced. There is no penalty for a day you skip; the streak simply starts
+   again, which is the only pressure that belongs on something optional.             */
+
+var DRILLBANK = {};      /* week -> the published bank for that week */
+var DRILLLOAD = {};      /* week -> true while in flight */
+var DRILL = null;        /* the sitting in progress */
+var DRILLSEEN = "miva_drillseen_v1";   /* per-device, for variety only */
+var DRILLN = 10;
+
+/* ---------- what has been sat ---------- */
+function drillKey(d){ return ME + "|drill|" + d; }
+function drillDay(d){ return S.scores[drillKey(d)] || null; }
+function drillToday(){ var t = today(); t.setHours(0,0,0,0); return drillDay(ymd(t)); }
+
+/* Every drill day, newest first. */
+function drillDays(){
+  if(!ME) return [];
+  var pre = ME + "|drill|", out = [];
+  Object.keys(S.scores).forEach(function(k){
+    if(k.indexOf(pre) !== 0) return;
+    var v = S.scores[k];
+    if(v && typeof v.n === "number") out.push({on: k.slice(pre.length), n: v.n, of: v.of || DRILLN, missed: v.missed || []});
+  });
+  out.sort(function(a, b){ return a.on < b.on ? 1 : -1; });
+  return out;
+}
+/* Consecutive days ending today or yesterday. Unlike the study streak this one counts
+   Sundays: a drill is five minutes and there is no reason a Sunday should break it. */
+function drillStreak(){
+  var days = {};
+  drillDays().forEach(function(d){ days[d.on] = true; });
+  var d = today(); d.setHours(0,0,0,0);
+  if(!days[ymd(d)]) d.setDate(d.getDate() - 1);
+  var n = 0, guard = 0;
+  while(guard++ < 400 && days[ymd(d)]){ n++; d.setDate(d.getDate() - 1); }
+  return n;
+}
+function drillRecent(days){
+  var cut = today(); cut.setHours(0,0,0,0); cut.setDate(cut.getDate() - (days - 1));
+  var lim = ymd(cut), got = 0, of = 0, sat = 0;
+  drillDays().forEach(function(d){
+    if(d.on < lim) return;
+    got += d.n; of += d.of; sat++;
+  });
+  return {got: got, of: of, sat: sat, ratio: of ? got / of : null};
+}
+function drillTotal(){
+  var got = 0, of = 0;
+  drillDays().forEach(function(d){ got += d.n; of += d.of; });
+  return {got: got, of: of, ratio: of ? got / of : null};
+}
+/* Concepts the drills themselves keep catching, most recent first.
+
+   Windowed on purpose. A list that never forgets is a list that only ever grows, and a
+   topic you sorted out in week 3 would still be sitting there in week 11 telling you
+   you are bad at it. Only the last `days` drill days count, so the way to leave this
+   list is to stop missing the thing. */
+function drillWeak(days){
+  var seen = {}, out = [], n = 0, lim = days || 21;
+  drillDays().forEach(function(d){
+    if(n++ >= lim) return;
+    (d.missed || []).forEach(function(c){
+      var k = String(c).trim();
+      if(!k || seen[k]) return;
+      seen[k] = true; out.push(k);
+    });
+  });
+  return out;
+}
+
+/* ---------- the bank ---------- */
+function ensureDrills(w){
+  if(!w || w < 1 || w > 12 || DRILLBANK[w] || DRILLLOAD[w]) return;
+  DRILLLOAD[w] = true;
+  fetch("/api/drills?n=" + w).then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){
+      DRILLLOAD[w] = false;
+      if(d && d.courses){ DRILLBANK[w] = d; render(); }
+    })
+    .catch(function(){ DRILLLOAD[w] = false; });
+}
+/* The weeks a drill may draw from: everything you have sat something in, plus the week
+   the calendar is on. Drilling week 9 in week 2 would be testing you on material you
+   have not been taught, which is not difficulty, it is noise. */
+function drillWeeks(){
+  var set = {}, cal = weekInfo().n;
+  if(cal >= 1 && cal <= 12) set[cal] = true;
+  for(var w = 1; w <= 12; w++){
+    if(ME && slotsFor(w).some(function(x){ return getScore(ME, w, x.day, x.slot); })) set[w] = true;
+  }
+  var out = Object.keys(set).map(Number).sort(function(a, b){ return a - b; });
+  return out.length ? out : [1];
+}
+function drillReady(){
+  return drillWeeks().some(function(w){ return !!DRILLBANK[w]; });
+}
+
+/* You and your partner must never sit the same questions on the same day.
+
+   There is no server to coordinate through and no reason to add one: the bank is
+   fixed, both of you know today's date, and both of you know the roster. So the split
+   is computed rather than negotiated. Every question falls on one side of a partition
+   decided by a hash of its id and today's date, and you only ever draw from your side.
+
+   Two properties matter. It is *disjoint*: two people can never be handed the same
+   question on the same day, whichever order you sit them in and whether or not you are
+   online. And it *rotates*: the date is in the hash, so the half of the bank you get is
+   different tomorrow, and nobody is quietly locked out of half the material for a term.
+
+   Alone, there is no partition — half a bank for no reason is just less practice. */
+function hash32(str){
+  var h = 2166136261;
+  for(var i = 0; i < str.length; i++){
+    h ^= str.charCodeAt(i);
+    h = (h + ((h << 1) + (h << 4) + (h << 7) + (h << 8) + (h << 24))) >>> 0;
+  }
+  return h >>> 0;
+}
+/* Sorted ids, so both devices agree on who is 0 and who is 1 without asking. */
+function myLane(){
+  var ids = S.people.map(function(p){ return p.id; }).sort();
+  if(ids.length < 2) return {i: 0, of: 1};
+  var i = ids.indexOf(ME);
+  return {i: i < 0 ? 0 : i, of: ids.length};
+}
+function inMyLane(id, on){
+  var lane = myLane();
+  if(lane.of < 2) return true;
+  return hash32(id + "|" + on) % lane.of === lane.i;
+}
+
+function seenMap(){
+  try{ return JSON.parse(localStorage.getItem(DRILLSEEN) || "{}") || {}; }catch(e){ return {}; }
+}
+function markSeen(ids){
+  try{
+    var m = seenMap(), now = Date.now();
+    ids.forEach(function(id){ m[id] = now; });
+    /* Keep the map from growing without bound — a fortnight of history is all the
+       variety rule ever reads. */
+    var cut = now - 14 * 86400000;
+    Object.keys(m).forEach(function(k){ if(m[k] < cut) delete m[k]; });
+    localStorage.setItem(DRILLSEEN, JSON.stringify(m));
+  }catch(e){}
+}
+
+/* Loose matching, because the bank and the checks were written from the same summaries
+   by different hands: "Direct substitution" and "Substituting directly into a
+   polynomial" are the same weakness and should pull the same questions. */
+function conceptEcho(a, b){
+  var norm = function(s){
+    return String(s || "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").split(/\s+/)
+      .filter(function(w){ return w.length > 3 && ["with","from","that","this","into","when","what","which","their","using","the"].indexOf(w) < 0; });
+  };
+  var x = norm(a), y = norm(b);
+  if(!x.length || !y.length) return false;
+  var hit = 0;
+  x.forEach(function(w){ if(y.indexOf(w) >= 0) hit++; });
+  return hit >= 2 || (hit === 1 && Math.min(x.length, y.length) <= 2);
+}
+
+/* Choose the questions.
+
+   Weighted sampling, not a shuffle. What you are weakest at should come up more often
+   without ever being the only thing that comes up: a drill that only ever asked about
+   your worst course would stop telling you anything about the rest, and there is no
+   faster way to make someone stop opening it. */
+function drillDraw(n){
+  var weeks = drillWeeks().filter(function(w){ return !!DRILLBANK[w]; });
+  if(!weeks.length) return [];
+
+  var mast = ME ? masteryFor(ME) : [];
+  var acc = {}, missedBy = {};
+  mast.forEach(function(m){
+    acc[m.course] = m.ratio;
+    missedBy[m.course] = (m.missed || []).map(function(x){ return x.name; });
+  });
+  var dweak = drillWeak();
+  var seen = seenMap(), now = Date.now();
+
+  var t0 = today(); t0.setHours(0,0,0,0);
+  var on = ymd(t0);
+
+  var pool = [];
+  weeks.forEach(function(w){
+    var cs = DRILLBANK[w].courses || {};
+    Object.keys(cs).forEach(function(c){
+      (cs[c] || []).forEach(function(q, i){
+        if(!q || !q.options || q.options.length < 2) return;
+        var id = w + ":" + c + ":" + i;
+        if(!inMyLane(id, on)) return;      /* today, this one belongs to the other of you */
+        var wt = 1;
+
+        /* A course you are behind on. null means never sat — worth asking about, but
+           not treated as a weakness you have demonstrated. */
+        var r = acc[c];
+        if(r !== null && r !== undefined){
+          if(r < 0.5) wt *= 2.6;
+          else if(r < 0.7) wt *= 1.9;
+          else if(r < 0.83) wt *= 1.3;
+          else wt *= 0.75;
+        }
+        /* A concept the evening checks caught. */
+        if((missedBy[c] || []).some(function(m){ return conceptEcho(m, q.concept); })) wt *= 2.2;
+        /* A concept the drills themselves keep catching. */
+        if(dweak.some(function(m){ return conceptEcho(m, q.concept); })) wt *= 1.8;
+        /* Recently asked. Not banned — a question you got wrong two days ago is worth
+           asking again — just pushed down the list. */
+        var last = seen[id];
+        if(last){
+          var age = (now - last) / 86400000;
+          wt *= age < 1 ? 0.06 : (age < 3 ? 0.3 : (age < 7 ? 0.6 : 0.9));
+        }
+        /* This week, and the week before it, are what you are actually being taught. */
+        var cal = weekInfo().n;
+        if(w === cal) wt *= 1.5;
+        else if(w === cal - 1) wt *= 1.2;
+
+        pool.push({id: id, week: w, course: c, wt: wt, q: q});
+      });
+    });
+  });
+  if(!pool.length) return [];
+
+  var out = [];
+  for(var k = 0; k < n && pool.length; k++){
+    /* Never the same course twice running: the drill should feel like the week, not
+       like a single-subject test. */
+    var lastCourse = out.length ? out[out.length - 1].course : null;
+    var elig = pool.filter(function(x){ return x.course !== lastCourse; });
+    if(!elig.length) elig = pool;
+
+    var total = 0;
+    elig.forEach(function(x){ total += x.wt; });
+    var r = Math.random() * total, pick = elig[elig.length - 1];
+    for(var i = 0; i < elig.length; i++){ r -= elig[i].wt; if(r <= 0){ pick = elig[i]; break; } }
+    out.push(pick);
+    pool = pool.filter(function(x){ return x.id !== pick.id; });
+  }
+  return out;
+}
+
+/* ---------- a sitting ---------- */
+function startDrill(){
+  var picked = drillDraw(DRILLN);
+  if(!picked.length){ toast("The drill bank has not loaded yet."); return; }
+  DRILL = {
+    items: picked.map(function(p){
+      /* Shuffle the options. The bank spreads its answer letters, but a bank sat over
+         and over would still teach position, and this costs nothing. */
+      var opts = p.q.options.map(function(t, i){ return {t: t, right: i === p.q.answerIndex}; });
+      for(var i = opts.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1)), t = opts[i]; opts[i] = opts[j]; opts[j] = t;
+      }
+      return {id: p.id, week: p.week, course: p.course, q: p.q, opts: opts, chose: null};
+    }),
+    i: 0, right: 0, done: false, at: new Date().toISOString()
+  };
+  markSeen(DRILL.items.map(function(x){ return x.id; }));
+  TAB = "drill"; QUIZ = null; MANUAL = null; BUDDY = null;
+  syncUrl(); render();
+}
+
+function answerDrill(k){
+  var it = DRILL.items[DRILL.i];
+  if(it.chose !== null) return;
+  it.chose = k;
+  if(it.opts[k].right) DRILL.right++;
+  render();
+}
+function nextDrill(){
+  if(DRILL.i < DRILL.items.length - 1){ DRILL.i++; render(); return; }
+  finishDrill();
+}
+
+/* Writing the result.
+
+   A day's record is its BEST sitting, and only the first sitting of the day creates it.
+   Going again can improve the number but never invents a second day, so the streak is
+   a count of days you turned up rather than of times you tapped Start. */
+function finishDrill(){
+  DRILL.done = true;
+  var t = today(); t.setHours(0,0,0,0);
+  var on = ymd(t), prev = drillDay(on), before = drillStreak();
+
+  var missed = DRILL.items.filter(function(x){ return x.chose === null || !x.opts[x.chose].right; })
+    .map(function(x){ return String(x.q.concept || "").slice(0, 110); })
+    .filter(Boolean).slice(0, 10);
+
+  var rec = {
+    n: prev ? Math.max(prev.n, DRILL.right) : DRILL.right,
+    of: DRILLN,
+    at: prev && prev.at ? prev.at : DRILL.at,
+    sits: (prev && prev.sits ? prev.sits : 0) + 1,
+    missed: missed
+  };
+  S.scores[drillKey(on)] = rec;
+
+  var after = drillStreak();
+  DRILL.gained = !prev;
+  DRILL.streak = after;
+  var goalsHit = sweepGoals();
+  save(false);
+
+  /* One celebration, not three. A streak milestone outranks an ordinary day, and a
+     completed goal outranks both. */
+  if(goalsHit.length) setTimeout(function(){ goalParty(goalsHit[0]); }, 300);
+  else if(!prev && MILESTONES.indexOf(after) >= 0) setTimeout(function(){ fireParty(after, "drill streak"); }, 300);
+  else if(!prev && after > before) litStreak();
+}
+var MILESTONES = [3, 7, 14, 21, 30, 50, 75, 100, 150, 200];
+
+/* ---------- goals ----------
+   Four kinds, and every one of them is computed live from what is already stored. No
+   goal keeps a snapshot of where you were when you set it, because a snapshot is a
+   thing that can be wrong, and a goal that quietly disagrees with the numbers beside it
+   is worse than no goal at all.
+
+   The app proposes; you accept, adjust the number, or send it away. */
+var GOALKINDS = {
+  streak: {
+    icon: function(){ return FLAME; },
+    label: function(g){ return "Drill " + g.target + " days running"; },
+    hint: "Any day you sit a drill counts, Sundays included.",
+    unit: "days", min: 3, max: 60, step: 1,
+    now: function(){ return drillStreak(); },
+    fmt: function(v){ return v + " day" + (v === 1 ? "" : "s"); },
+    pick: function(v){ return v + " days"; },
+    fire: true
+  },
+  acc: {
+    icon: function(){ return ICO_TARGET; },
+    label: function(g){ return "Hold " + g.target + "% on drills"; },
+    hint: "Across every drill of the last seven days.",
+    unit: "%", min: 50, max: 100, step: 5,
+    now: function(){ var r = drillRecent(7); return r.ratio === null ? 0 : Math.round(r.ratio * 100); },
+    fmt: function(v){ return v + "%"; },
+    ready: function(){ return drillRecent(7).sat >= 2; }
+  },
+  week: {
+    icon: function(){ return ICO_CAL; },
+    label: function(g){ return "Finish " + g.target + " of this week's six"; },
+    hint: "The deep hour each night, Monday to Saturday.",
+    unit: "nights", min: 2, max: 6, step: 1,
+    now: function(){ return ME ? deepDone(ME, wk()) : 0; },
+    fmt: function(v){ return v + " of 6"; },
+    pick: function(v){ return v + " night" + (v === 1 ? "" : "s"); }
+  },
+  /* The only goal where a smaller number is the good one. Your weak list is whatever
+     the drills of the last week caught; clearing something means going a week without
+     missing it again, which is a real thing to aim at rather than an average. */
+  topics: {
+    icon: function(){ return ICO_BOLT; },
+    label: function(g){ return "Get down to " + g.target + " weak topic" + (g.target === 1 ? "" : "s"); },
+    hint: "Anything the drills caught in the last seven days. Stop missing it and it drops off.",
+    unit: "topics", min: 0, max: 12, step: 1, invert: true,
+    now: function(){ return drillWeak(7).length; },
+    fmt: function(v){ return v + " topic" + (v === 1 ? "" : "s"); },
+    ready: function(){ return drillWeak(7).length > 0; }
+  },
+  course: {
+    icon: function(){ return ICO_BOLT; },
+    label: function(g){ return "Get " + (NAMES[g.course] || g.course) + " to " + g.target + "%"; },
+    hint: "Your average across every check sat in that course.",
+    unit: "%", min: 50, max: 95, step: 5,
+    now: function(g){
+      var m = ME ? masteryFor(ME) : [];
+      var f = m.filter(function(x){ return x.course === g.course; })[0];
+      return (f && f.ratio !== null) ? Math.round(f.ratio * 100) : 0;
+    },
+    fmt: function(v){ return v + "%"; }
+  }
+};
+function goalSlug(g){ return g.kind + (g.course ? ":" + g.course : ""); }
+/* A number you are part-way through adjusting, before you have committed to it.
+
+   This has to live outside the card that draws it. The app re-renders on its own — a
+   week's bank landing, a sync finishing — and a target held in the button's closure was
+   silently reset to the proposed default every time that happened, which looks exactly
+   like the app refusing to take your input. */
+var GOALDRAFT = {};
+function goalKey(g){ return ME + "|goal|" + goalSlug(g); }
+function goalFrom(slug, v){
+  var bits = String(slug).split(":");
+  return {kind: bits[0], course: bits[1] || null, target: v.target, done: !!v.done, off: !!v.off, at: v.at || ""};
+}
+function goals(){
+  if(!ME) return [];
+  var pre = ME + "|goal|", out = [];
+  Object.keys(S.scores).forEach(function(k){
+    if(k.indexOf(pre) !== 0) return;
+    var g = goalFrom(k.slice(pre.length), S.scores[k]);
+    if(GOALKINDS[g.kind] && !g.off) out.push(g);
+  });
+  return out;
+}
+function goalIsOff(kind, course){
+  var v = S.scores[ME + "|goal|" + kind + (course ? ":" + course : "")];
+  return !!(v && v.off);
+}
+function goalProgress(g){
+  var k = GOALKINDS[g.kind];
+  var now = k.now(g), met, pct;
+  if(k.invert){
+    /* Down from wherever you started, so the bar fills as the number falls. Starting
+       point is the goal's own target plus whatever you are over it by, which keeps the
+       bar honest without storing a snapshot that could go stale. */
+    met = now <= g.target;
+    pct = met ? 1 : Math.max(0, Math.min(1, g.target / Math.max(1, now)));
+  } else {
+    met = now >= g.target;
+    pct = g.target ? Math.min(1, now / g.target) : 0;
+  }
+  /* "14 days of 7 days" is what you get from one readout doing both jobs. Once a goal is
+     met the interesting number is what you are at, with the target as a footnote. */
+  /* "2 topics of 1 topic" is what one readout doing three jobs produces. Each state
+     gets its own sentence: climbing to a number, coming down to one, or done. */
+  var text;
+  if(met) text = k.fmt(now) + " · target was " + k.fmt(g.target);
+  else if(k.invert) text = k.fmt(now) + " · down to " + k.fmt(g.target);
+  else text = k.fmt(now) + " of " + k.fmt(g.target);
+  return {now: now, pct: pct, met: met, text: text};
+}
+function setGoal(g){
+  S.scores[goalKey(g)] = {target: g.target, done: !!g.done, at: g.at || new Date().toISOString(), off: !!g.off};
+}
+/* Mark anything newly reached, and hand back what just landed so it can be celebrated
+   once rather than every time the page draws. */
+function sweepGoals(){
+  var hit = [];
+  goals().forEach(function(g){
+    if(g.done) return;
+    if(goalProgress(g).met){ g.done = true; setGoal(g); hit.push(g); }
+  });
+  return hit;
+}
+/* What to offer. Only things that are true right now: no "get MTH 102 to 80%" before
+   you have sat a single MTH 102 check, and no accuracy target before there are drills
+   to average. */
+function goalIdeas(){
+  var have = {};
+  goals().forEach(function(g){ have[goalSlug(g)] = true; });
+  var out = [];
+  var offer = function(kind, course, target){
+    var slug = kind + (course ? ":" + course : "");
+    if(have[slug] || goalIsOff(kind, course)) return;
+    var k = GOALKINDS[kind];
+    if(k.ready && !k.ready()) return;
+    var draft = GOALDRAFT[slug];
+    out.push({kind: kind, course: course, target: (typeof draft === "number") ? draft : target});
+  };
+
+  /* Order matters: only three are shown at a time, and dismissing one brings the next
+     up. Most concrete first — a named list of topics you can actually go and fix beats
+     a percentage — with the streak leading because it is the one that gets you to open
+     the page tomorrow. */
+  var st = drillStreak();
+  offer("streak", null, st >= 7 ? Math.min(60, (Math.floor(st / 7) + 1) * 7) : 7);
+
+  var wk7 = drillWeak(7).length;
+  if(wk7 > 1) offer("topics", null, Math.max(0, Math.floor(wk7 / 2)));
+
+  var m = ME ? masteryFor(ME) : [];
+  var sat = m.filter(function(x){ return x.ratio !== null; });
+  if(sat.length){
+    var worst = sat[0];
+    var pc = Math.round(worst.ratio * 100);
+    offer("course", worst.course, Math.min(95, Math.max(60, Math.ceil((pc + 10) / 5) * 5)));
+  }
+  if(ME && deepDone(ME, wk()) < 6 && !onRunway()) offer("week", null, 6);
+
+  var r = drillRecent(7);
+    /* Eight points above where you are, and never above 90: a target you cannot plausibly
+     hit this week is not a goal, it is a reason to stop looking at the page. */
+  var base = r.ratio === null ? 80 : Math.min(90, Math.max(60, Math.ceil((r.ratio * 100 + 8) / 5) * 5));
+  offer("acc", null, base);
+
+  return out.slice(0, 3);
+}
+
+function goalParty(g){
+  var k = GOALKINDS[g.kind];
+  if(k.fire){ fireParty(GOALKINDS.streak.now(), "goal reached"); return; }
+  if(PARTY) return;
+  PARTY = true;
+  var ov = el("div","party");
+  ov.innerHTML = '<div class="pbox"><div class="plot" id="plotbox"></div>'
+    + '<div class="lbl">Goal reached</div><h2>' + esc(k.label(g)) + '</h2>'
+    + '<p class="muted">' + esc(k.hint) + '</p></div>';
+  document.body.appendChild(ov);
+  paperStorm(ov);
+  celebrate();
+  var close = function(){
+    if(!ov.parentNode) return;
+    ov.classList.add("out");
+    setTimeout(function(){ if(ov.parentNode) ov.remove(); PARTY = false; }, 260);
+  };
+  ov.onclick = close;
+  setTimeout(close, 3800);
+  loadLottie().then(function(lot){
+    var host = document.getElementById("plotbox");
+    if(!host || !ov.parentNode) return;
+    var anim = lot.loadAnimation({container: host, renderer: "svg", loop: false, autoplay: true, path: "confetti.json"});
+    ov.addEventListener("click", function(){ try{ anim.destroy(); }catch(e){} });
+  }).catch(function(){
+    var host = document.getElementById("plotbox");
+    if(host) host.style.display = "none";
+  });
+}
+
+/* ---------- the drills page ---------- */
+function viewDrill(root){
+  drillWeeks().forEach(ensureDrills);
+
+  if(DRILL && !DRILL.done){ drillRunner(root); return; }
+  if(DRILL && DRILL.done){ drillResult(root); return; }
+
+  var st = drillStreak(), tdy = drillToday(), all = drillTotal(), r7 = drillRecent(7);
+
+  var stats = el("div","stats");
+  var s1 = el("div","stat flame");
+  s1.id = "streakstat";
+  s1.innerHTML = '<div class="si">'+FLAME+'</div><div class="v">'+st+'</div><div class="k">drill streak</div>';
+  stats.appendChild(s1);
+  var s2 = el("div","stat drill");
+  s2.innerHTML = '<div class="si">'+ICO_TARGET+'</div>'
+    + (r7.ratio === null
+        ? '<div class="v none">0</div>'
+        : '<div class="v">' + Math.round(r7.ratio*100) + '<span style="font-size:15px;color:var(--ink3)">%</span></div>')
+    + '<div class="k">last 7 days</div>';
+  stats.appendChild(s2);
+  var s3 = el("div","stat marks");
+  s3.innerHTML = '<div class="si">'+ICO_STAR+'</div><div class="v">'+all.got+'</div><div class="k">drills right</div>';
+  stats.appendChild(s3);
+  root.appendChild(stats);
+
+  /* the start card */
+  var c = el("div","card deepc");
+  c.appendChild(el("div","lbl", tdy ? "Today · already sat" : "Today's drill"));
+  c.appendChild(el("h2", null, tdy ? tdy.n + " out of " + tdy.of : DRILLN + " quick questions"));
+  var weeks = drillWeeks();
+  c.appendChild(el("p","muted", tdy
+    ? "Your best today. Going again can raise it, and cannot lower it — the streak is already yours."
+    : "Multiple choice, straight after each answer you find out why. Nothing here touches your marks."));
+
+  var meta = el("div","drillmeta");
+  meta.appendChild(el("span", null, "drawn from week" + (weeks.length > 1 ? "s " : " ")
+    + (weeks.length > 3 ? weeks[0] + "–" + weeks[weeks.length-1] : weeks.join(", "))));
+  if(st > 0) meta.appendChild(el("span","hot", FLAME + " " + st + " day" + (st===1?"":"s")));
+  c.appendChild(meta);
+
+  var row = el("div","row");
+  var go = btn("act big", drillReady() ? (tdy ? "Go again" : "Start the drill") : "Loading the bank…", startDrill);
+  go.disabled = !drillReady();
+  row.appendChild(go);
+  c.appendChild(row);
+  root.appendChild(c);
+
+  goalsSection(root);
+  drillHistory(root);
+}
+
+function goalsSection(root){
+  var live = goals(), ideas = goalIdeas();
+  var c = el("div","card");
+  c.appendChild(el("div","lbl","Goals"));
+
+  if(!live.length && !ideas.length){
+    c.appendChild(el("p","muted","Nothing to aim at yet. Sit a drill or two and this fills itself in."));
+    root.appendChild(c);
+    return;
+  }
+  if(!live.length) c.appendChild(el("p","muted","Nothing set. Below are the ones worth setting, going by where you actually are."));
+
+  live.forEach(function(g){
+    var k = GOALKINDS[g.kind], pr = goalProgress(g);
+    var g1 = el("div","goal" + (pr.met ? " won" : ""));
+    var top = el("div","gtop");
+    top.appendChild(el("span","gi", k.icon()));
+    top.appendChild(el("span","gl", esc(k.label(g))));
+    if(pr.met) top.appendChild(el("span","gdone","done"));
+    g1.appendChild(top);
+
+    var barw = el("div","gbar");
+    var fill = el("div","gfill" + (pr.met ? " met" : ""));
+    fill.style.width = Math.round(pr.pct * 100) + "%";
+    barw.appendChild(fill);
+    g1.appendChild(barw);
+
+    var ft = el("div","gfoot");
+    ft.appendChild(el("span","gnum", esc(pr.text)));
+    var acts = el("div","gacts");
+    var mv = function(by){
+      g.target = Math.max(k.min, Math.min(k.max, g.target + by));
+      /* Raising the bar past where you are re-arms the celebration for the new one. */
+      if(g.done && g.target > pr.now) g.done = false;
+      setGoal(g); save(false);
+    };
+    var down = btn("gstep","−", function(){ mv(-k.step); });
+    down.setAttribute("aria-label","Lower the target");
+    var up = btn("gstep","+", function(){ mv(k.step); });
+    up.setAttribute("aria-label","Raise the target");
+    acts.appendChild(down);
+    acts.appendChild(up);
+    var drop = btn("gstep drop", "\u00d7", function(){
+      g.off = true; setGoal(g); save(pr.met ? "Goal cleared" : "Goal dropped");
+    });
+    drop.setAttribute("aria-label","Remove this goal");
+    acts.appendChild(drop);
+    ft.appendChild(acts);
+    g1.appendChild(ft);
+    c.appendChild(g1);
+  });
+
+  ideas.forEach(function(g){
+    var k = GOALKINDS[g.kind];
+    var box = el("div","gidea");
+    var top = el("div","gtop");
+    top.appendChild(el("span","gi", k.icon()));
+    top.appendChild(el("span","gl", esc(k.label(g))));
+    box.appendChild(top);
+    box.appendChild(el("p","ghint", esc(k.hint)));
+    var row = el("div","gid2");
+    var slug = goalSlug(g);
+    var pick = k.pick || k.fmt;
+    var num = el("span","gtarget", pick(g.target));
+    var nudge = function(by){
+      g.target = Math.max(k.min, Math.min(k.max, g.target + by));
+      GOALDRAFT[slug] = g.target;
+      num.textContent = pick(g.target);
+    };
+    var tweak = el("div","gtweak");
+    var minus = btn("gstep","−", function(){ nudge(-k.step); });
+    minus.setAttribute("aria-label","Lower the target");
+    var plus = btn("gstep","+", function(){ nudge(k.step); });
+    plus.setAttribute("aria-label","Raise the target");
+    tweak.appendChild(minus);
+    tweak.appendChild(num);
+    tweak.appendChild(plus);
+    row.appendChild(tweak);
+    var acts = el("div","gacts");
+    acts.appendChild(btn("act tiny", "Set it", function(){
+      delete GOALDRAFT[slug];
+      setGoal({kind:g.kind, course:g.course, target:g.target, done:false, off:false});
+      sweepGoals();
+      save("Goal set");
+    }));
+    acts.appendChild(btn("act tiny ghost", "Not now", function(){
+      delete GOALDRAFT[slug];
+      S.scores[ME + "|goal|" + slug] = {target: g.target, done: false, off: true, at: new Date().toISOString()};
+      save(false);
+    }));
+    row.appendChild(acts);
+    box.appendChild(row);
+    c.appendChild(box);
+  });
+  root.appendChild(c);
+}
+
+function drillHistory(root){
+  var days = drillDays().slice(0, 14);
+  if(!days.length) return;
+  var c = el("div","card");
+  c.appendChild(el("div","lbl","The last fortnight"));
+  var bars = el("div","dhist");
+  bars.style.setProperty("--dhn", String(days.length));
+  days.slice().reverse().forEach(function(d){
+    var col = el("div","dhcol");
+    var b = el("div","dhb" + (d.n / d.of >= 0.83 ? " g" : (d.n / d.of >= 0.5 ? " o" : " b")));
+    b.style.height = Math.max(8, Math.round((d.n / d.of) * 46)) + "px";
+    b.title = d.on + " · " + d.n + "/" + d.of;
+    col.appendChild(el("div","dhv", String(d.n)));
+    col.appendChild(b);
+    col.appendChild(el("div","dhd", d.on.slice(8)));
+    bars.appendChild(col);
+  });
+  c.appendChild(bars);
+
+  var weak = drillWeak().slice(0, 5);
+  if(weak.length){
+    c.appendChild(el("div","lbl2","Kept catching you"));
+    var ul = el("ul","misslist");
+    weak.forEach(function(w){ ul.appendChild(el("li", null, esc(w))); });
+    c.appendChild(ul);
+  }
+  root.appendChild(c);
+}
+
+/* One question at a time, answered by tapping, explained immediately. */
+function drillRunner(root){
+  var it = DRILL.items[DRILL.i], n = DRILL.items.length;
+  var answered = it.chose !== null;
+
+  var head = el("div","drhead");
+  head.appendChild(el("span","drn", (DRILL.i + 1) + " of " + n));
+  var bar = el("div","drbar");
+  var fill = el("div","drfill");
+  fill.style.width = Math.round(((DRILL.i + (answered ? 1 : 0)) / n) * 100) + "%";
+  bar.appendChild(fill);
+  head.appendChild(bar);
+  head.appendChild(el("span","drr", DRILL.right + " right"));
+  root.appendChild(head);
+
+  var c = el("div","qcard");
+  c.appendChild(el("div","qeyebrow", esc((NAMES[it.course] || it.course) + " · week " + it.week)));
+  var qt = el("div","qt", codeHtml(it.q.q));
+  c.appendChild(qt);
+
+  var opts = el("div","opts");
+  it.opts.forEach(function(o, k){
+    var cls = "opt";
+    if(answered){
+      if(o.right) cls += " right";
+      else if(k === it.chose) cls += " wrong";
+    }
+    var b = el("button", cls);
+    b.innerHTML = '<span class="k">' + "ABCD".charAt(k) + '</span><span class="ot">' + codeHtml(o.t) + '</span>';
+    if(answered) b.disabled = true;
+    else b.onclick = function(){ answerDrill(k); };
+    opts.appendChild(b);
+  });
+  c.appendChild(opts);
+
+  if(answered){
+    var right = it.opts[it.chose].right;
+    var why = el("div","drwhy" + (right ? " ok" : ""));
+    why.appendChild(el("div","drv", right ? "Right" : "Not this one"));
+    if(it.q.concept) why.appendChild(el("div","drc", codeHtml(it.q.concept)));
+    whyInto(why, it.q.why);
+    c.appendChild(why);
+    makeSelectable(why);
+  }
+  root.appendChild(c);
+
+  /* Sticky, not at the foot of the page. Answering a question adds a paragraph of
+     explanation below it, which on a phone pushes Next off the bottom of the screen —
+     so a ten-question drill becomes ten scrolls you did not ask for. */
+  var foot = el("div","deckfoot drfoot");
+  if(answered){
+    foot.appendChild(btn("act big", DRILL.i < n - 1 ? "Next" : "Finish", nextDrill));
+  } else {
+    var skip = btn("act ghost", "Skip", function(){
+      it.chose = -1;
+      if(DRILL.i < n - 1){ DRILL.i++; } else { finishDrill(); }
+      render();
+    });
+    foot.appendChild(skip);
+  }
+  root.appendChild(foot);
+}
+
+function drillResult(root){
+  var n = DRILL.items.length, got = DRILL.right, pc = Math.round((got / n) * 100);
+  var c = el("div","card " + (pc >= 83 ? "goodc" : (pc >= 50 ? "" : "badc")));
+  c.appendChild(el("div","lbl","Drill done"));
+  var big = el("div","drscore");
+  big.id = "drillscore";
+  big.innerHTML = got + '<span class="of">/' + n + '</span>';
+  c.appendChild(big);
+  c.appendChild(el("p","muted", pc >= 83
+    ? "That is the level. Nothing here moved your marks — it moved what you know."
+    : (pc >= 50 ? "Middling. The ones below are the ones to look at."
+                : "A rough one, and that is what this is for. Nothing was graded.")));
+  if(DRILL.gained){
+    var s = el("div","drstreak");
+    s.innerHTML = FLAME + '<b>' + DRILL.streak + ' day' + (DRILL.streak === 1 ? "" : "s") + ' running</b>';
+    c.appendChild(s);
+  }
+  var row = el("div","row");
+  row.appendChild(btn("act big","Go again", startDrill));
+  row.appendChild(btn("act ghost","Done", function(){ DRILL = null; render(); }));
+  c.appendChild(row);
+  root.appendChild(c);
+
+  var missed = DRILL.items.filter(function(x){ return x.chose === null || x.chose === -1 || !x.opts[x.chose].right; });
+  if(missed.length){
+    var m = el("div","card");
+    m.appendChild(el("div","lbl", missed.length + (missed.length === 1 ? " to look at" : " to look at")));
+    missed.forEach(function(x){
+      var b = el("div","drmiss");
+      b.appendChild(el("div","drc", esc((NAMES[x.course] || x.course) + " · ") + codeHtml(x.q.concept || "")));
+      b.appendChild(el("div","drq", codeHtml(x.q.q)));
+      var ans = x.opts.filter(function(o){ return o.right; })[0];
+      b.appendChild(el("div","dra", "<b>Answer</b> " + codeHtml(ans ? ans.t : "")));
+      whyInto(b, x.q.why);
+      makeSelectable(b);
+      m.appendChild(b);
+    });
+    root.appendChild(m);
+  }
+  goalsSection(root);
 }
 
 /* ---------- the week picker ----------
@@ -3987,6 +5134,9 @@ function weekOptions(){
 
 function pickWeek(v){
   QUIZ = null; MANUAL = null;
+  /* A day you picked belongs to the week you picked it in. Carrying Thursday across
+     into another week is the bug this whole day model exists to remove. */
+  VIEWDAY = null;
   if(v === "runway"){ VIEWWEEK = 0; }
   else { VIEWWEEK = v; ensureWeek(v); }
   syncUrl(); render();
@@ -4133,6 +5283,11 @@ function viewKey(){
     if(EXVIEW) return "exam:" + EXVIEW.course + ":" + (EXVIEW.mode || "guide");
     return "exam";
   }
+  /* A drill runner is a fresh screen every tap; restoring a scroll into one would put
+     you halfway down question 4. */
+  if(TAB === "drill")   return (DRILL && !DRILL.done) ? null : "drill";
+  /* Each night of a week keeps its own place. */
+  if(TAB === "tonight") return "tonight:" + w + ":" + dayIdx();
   if(TAB === "guide")   return "guide:" + ((GUIDEVIEW && GUIDEVIEW.course) || "") + ":" + w;
   if(TAB === "session") return "session:" + ((SESSION && SESSION.day) || "") + ":" + w;
   if(TAB === "manual")  return null;
@@ -4218,11 +5373,16 @@ function render(){
     var showExam = weekInfo().n >= 12 || TAB === "exam";
     /* The URL keys stay as they were, so old links and the home-screen shortcuts keep
        working; only what you read has changed. */
-    var TABSET = [["home","Home"],["tonight","Study"],["sunday","Weekend class"],["progress","Stats"]];
+    var TABSET = [["home","Home"],["tonight","Study"],["drill","Drills"],["sunday","Weekend class"],["progress","Stats"]];
     if(showExam) TABSET.push(["exam","Exam"]);
     TABSET.forEach(function(t){
       tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
-        QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; } TAB=t[0]; syncUrl(); render();
+        QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; }
+        /* Leaving the tab abandons a half-finished drill rather than freezing it —
+           nothing was graded, and coming back to question 4 of a drill you walked away
+           from three days ago is worse than starting a fresh one. */
+        if(t[0]!=="drill") DRILL=null;
+        TAB=t[0]; syncUrl(); render();
       }));
     });
     bin.appendChild(tabs);
@@ -4257,11 +5417,15 @@ function render(){
   else if(TAB==="guide") viewGuide(wrap);
   else if(TAB==="session") viewSession(wrap);
   else if(TAB==="data") viewData(wrap);
+  else if(TAB==="drill") viewDrill(wrap);
   else if(TAB==="quiz") viewQuiz(wrap);
   else if(TAB==="manual") viewManual(wrap);
   root.appendChild(wrap);
 
-  if(TAB !== "quiz") buddyButton(root);
+  /* Kizito sits bottom-right and the drill's Next button is full width down there.
+     A drill is a one-tap-per-question rhythm; a teddy in the way of the tap is the
+     same mistake as during a check, so he steps out for both. */
+  if(TAB !== "quiz" && !(TAB === "drill" && DRILL && !DRILL.done)) buddyButton(root);
   if(BUDDY) buddyPanel(root);
   if(TOAST) root.appendChild(el("div","toast", esc(TOAST)));
 
@@ -4294,7 +5458,7 @@ function render(){
    Transient states are deliberately NOT in the url: a quiz in progress restores from
    its own saved state, and a shared link should never drop someone into a half-finished
    paper. */
-var TABS_URL = {home:1, tonight:1, sunday:1, progress:1, exam:1, data:1, week:1, guide:1, session:1};
+var TABS_URL = {home:1, tonight:1, drill:1, sunday:1, progress:1, exam:1, data:1, week:1, guide:1, session:1};
 
 function readUrl(){
   var q;
@@ -4309,6 +5473,12 @@ function readUrl(){
   var dy = q.get("day");
   if(dy && TAB === "session" && GRID.some(function(x){ return x.day === dy; }))
     SESSION = {day: dy, week: (w>=1&&w<=12)?w:null, from:"home"};
+  /* Which night you are reading survives a reload and a Back, the same as which week. */
+  if(dy === "wknd") VIEWDAY = -1;
+  else if(dy && TAB !== "session"){
+    var at = GRID.map(function(x){ return x.day; }).indexOf(dy);
+    if(at >= 0) VIEWDAY = at;
+  }
   if(c && /^[A-Z]{3}_\d{3}$/.test(c)){
     if(TAB === "exam")  EXVIEW = {course:c, mode:"guide"};
     if(TAB === "guide") GUIDEVIEW = {course:c, week: (w>=1&&w<=12)?w:null, from:"tonight"};
@@ -4324,6 +5494,8 @@ function syncUrl(replace){
     else if(VIEWWEEK) q.set("week", String(VIEWWEEK));
     if(t === "guide" && GUIDEVIEW && GUIDEVIEW.course) q.set("course", GUIDEVIEW.course);
     if(t === "session" && SESSION && SESSION.day) q.set("day", SESSION.day);
+    else if(t === "tonight" && VIEWDAY !== null && VIEWDAY !== undefined)
+      q.set("day", VIEWDAY === -1 ? "wknd" : GRID[VIEWDAY].day);
     if(t === "exam" && EXVIEW && EXVIEW.course) q.set("course", EXVIEW.course);
     var s2 = q.toString();
     var next = window.location.pathname + (s2 ? "?" + s2 : "");
@@ -4334,6 +5506,10 @@ function syncUrl(replace){
 
 window.addEventListener("popstate", function(){
   QUIZ = null; MANUAL = null; BUDDY = null;
+  /* Back must land on the URL you are going to, not on that URL plus whatever week and
+     day happen to be left in memory. readUrl only ever sets these when the URL names
+     them, so they are cleared first. */
+  VIEWWEEK = null; VIEWDAY = null; DRILL = null;
   readUrl();
   if(VIEWWEEK) ensureWeek(VIEWWEEK);
   render();
@@ -4390,4 +5566,30 @@ document.addEventListener("visibilitychange", function(){
     push();
   }
 });
+
+/* ---------- a handle for tests ----------
+   Everything above is closed inside this function, which is how it should be: nothing
+   on the page can reach in and move a score. But a browser test that can only see
+   pixels ends up asserting on wording and spacing, and then breaks every time a label
+   is reworded — so it gets one read-only window onto what the app believes.
+
+   Read-only in the sense that matters: these are the same functions the views call, and
+   there is no setter here. Nothing the app does depends on this object existing. */
+window.KAIZEN = {
+  code: codeHtml,
+  lane: myLane,
+  laneOf: function(id, on){ return hash32(id + "|" + on) % 2; },
+  /* Test hook: does a roster of this size partition at all? */
+  lanePartitions: function(n){ return n >= 2; },
+  render: render,
+  streak: streak, marks: totalMarks,
+  drillStreak: drillStreak, drillToday: drillToday, drillTotal: drillTotal,
+  drillWeeks: drillWeeks, drillReady: drillReady, draw: drillDraw,
+  goals: goals, goalProgress: goalProgress, goalIdeas: goalIdeas,
+  weak7: function(){ return drillWeak(7); },
+  day: function(){ return dayIdx(); }, week: function(){ return wk(); },
+  drill: function(){ return DRILL; },
+  scores: function(){ return S.scores; }
+};
+
 })();

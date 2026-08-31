@@ -1,0 +1,754 @@
+{
+  "week": 10,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "The curve y = 3x − x² cuts the x-axis at x = 0 and x = 3. What area does it enclose with the axis?",
+        "options": ["9/2 square units", "27/2 square units", "9 square units", "3/2 square units"],
+        "answerIndex": 0,
+        "concept": "Limits from the roots, then a straight integral",
+        "why": "Test the interior first: f(1) = 2 > 0, so f ≥ 0 on [0, 3] and no modulus is needed; A = [3x²/2 − x³/3]₀³ = 27/2 − 9 = 9/2. The 27/2 is the first bracket term on its own — you still have to subtract the 9 from it, and 9 is that second term reported by itself."
+      },
+      {
+        "q": "The line f(x) = 2x − 6 crosses the x-axis inside [0, 5]. What area does it enclose with the axis over that interval?",
+        "options": ["9 square units", "5 square units", "13 square units", "4 square units"],
+        "answerIndex": 2,
+        "concept": "Splitting at a root inside the interval",
+        "why": "The root is x = 3, so A = |∫₀³(2x − 6)dx| + ∫₃⁵(2x − 6)dx = 9 + 4 = 13. The 5 is the trap — the magnitude of the unsplit integral, in which the piece below the axis has already cancelled most of the piece above it — and 9 and 4 are the two pieces reported one at a time."
+      },
+      {
+        "q": "You split at the roots of which equation — for a curve against the x-axis, and for two curves?",
+        "options": ["f(x) = g(x) in both cases", "f(x) = 0 for the axis case, f(x) = g(x) for two curves", "f(x) = 0 in both cases", "f(x) = g(x) for the axis case, f(x) = 0 for two curves"],
+        "answerIndex": 1,
+        "concept": "Where the split points come from",
+        "why": "Against the axis the region changes side where the curve crosses the axis, that is where f(x) = 0; between two curves it changes which function is on top where they meet, that is where f(x) = g(x). Answering f(x) = 0 for both is the usual slip, and it sends you looking for axis crossings that have nothing to do with which curve is above."
+      },
+      {
+        "q": "Find the area enclosed by y = 2x and y = x².",
+        "options": ["8/3 square units", "2 square units", "2/3 square units", "4/3 square units"],
+        "answerIndex": 3,
+        "concept": "Enclosed region supplies its own limits",
+        "why": "No interval is given, so set 2x = x²: x(x − 2) = 0 and the limits are 0 and 2; at x = 1 the line gives 2 and the parabola 1, so the line is on top and A = ∫₀²(2x − x²)dx = 4 − 8/3 = 4/3. The 8/3 is ∫₀²x²dx alone — you have subtracted nothing."
+      },
+      {
+        "q": "f(x) = x² − 2x and g(x) = x meet at x = 0 and x = 3, and at x = 1, f(1) = −1 while g(1) = 1. Which integral gives the enclosed area?",
+        "options": ["∫₀³((x² − 2x) − x)dx", "∫₀¹(x − (x² − 2x))dx + ∫₁³((x² − 2x) − x)dx", "∫₀³(x − (x² − 2x))dx", "∫₀³|x² − 2x|dx"],
+        "answerIndex": 2,
+        "concept": "Test point decides the order of subtraction",
+        "why": "The test at x = 1 says g is above f, and the curves meet only at the two ends, so one integral of (top − bottom) = (g − f) does it. Writing f − g because f was named first gives the same number with a minus in front; splitting at x = 1 is answering a slide-12 question that was never asked, since nothing crosses inside."
+      },
+      {
+        "q": "∫sin x dx equals:",
+        "options": ["−cos x + C", "cos x + C", "−sin x + C", "sin x + C"],
+        "answerIndex": 0,
+        "concept": "The trig antiderivatives the deck assumes",
+        "why": "Differentiating −cos x gives +sin x, so the minus belongs in the antiderivative. Dropping it is what turns the bracket [−cos x − sin x] on slide 14 into a wrong sign, and cos x + C is the one you will reach for if you are half-remembering that ∫cos x dx = sin x + C."
+      },
+      {
+        "q": "The single integral ∫₀^π cos x dx works out to 0. What is the actual area between y = cos x and the x-axis on [0, π]?",
+        "options": ["0 square units", "1 square unit", "π/2 square units", "2 square units"],
+        "answerIndex": 3,
+        "concept": "Cancellation across a root",
+        "why": "cos x cuts the axis at x = π/2, so A = ∫₀^(π/2)cos x dx + |∫_(π/2)^π cos x dx| = 1 + 1 = 2. The 0 is what the unsplit integral reports because the lobe below the axis exactly cancels the one above it, and 1 is what you get if you compute only the first half."
+      },
+      {
+        "q": "Part of the region between two curves lies below the x-axis. What extra step does that force?",
+        "options": ["Split the region where each curve cuts the x-axis", "None — you still integrate top minus bottom over the same limits", "Put a modulus round the whole integral before evaluating", "Shift both curves up until the region is above the axis"],
+        "answerIndex": 1,
+        "concept": "Strip height is a difference of y-values",
+        "why": "The integrand f − g is the height of a vertical strip, and a height does not care where the axis is: in her slide-9 example the parabola runs down to y = −9 and she still writes plain (f − g). Splitting at axis crossings is the Part 1 rule leaking into Part 2, and it will hand you extra limits that mean nothing here."
+      },
+      {
+        "q": "y = x and y = x³ cross at x = 1. What is the total area between them from x = 0 to x = 2?",
+        "options": ["5/2 square units", "2 square units", "9/4 square units", "1/4 square units"],
+        "answerIndex": 0,
+        "concept": "Curves that cross strictly inside the interval",
+        "why": "They meet at x = 1 inside [0, 2]; on [0, 1] the line is on top (A₁ = 1/4) and on [1, 2] the cubic is (A₂ = 9/4), so A = 5/2. The 2 is exactly what one unsplit integral ∫₀²(x³ − x)dx gives, with the first lobe subtracting from the second instead of adding to it."
+      },
+      {
+        "q": "The only points at which f and g meet are the two endpoints a and b. How many integrals does the area need?",
+        "options": ["Two, one on each side of the midpoint", "Two, with a modulus on the second", "One, over [a, b], with the top curve first", "Three, one for each intersection"],
+        "answerIndex": 2,
+        "concept": "Check where the intersections actually are",
+        "why": "A₁ + A₂ exists only for an intersection at c strictly inside (a, b); meeting at the endpoints leaves one function on top throughout, so a single integral of (top − bottom) is correct. After two slides of splitting the reflex is to split again — check the intersections first, as TASK 3 is built to catch exactly this."
+      },
+      {
+        "q": "Evaluate the area under y = x² from x = 1 to x = 3.",
+        "options": ["8/3 square units", "9 square units", "13/3 square units", "26/3 square units"],
+        "answerIndex": 3,
+        "concept": "Both limits substituted, interval given",
+        "why": "x² ≥ 0 everywhere, so no split and no modulus: A = [x³/3]₁³ = 9 − 1/3 = 26/3. The 9 is the upper substitution on its own, which is the error the lecturer guards against by writing the full bracket even when the lower limit contributes 0."
+      },
+      {
+        "q": "f(x) = x² − 6x + 8 lies between its roots x = 2 and x = 4. The area between the curve and the x-axis there is:",
+        "options": ["−4/3 square units", "4/3 square units", "4 square units", "8/3 square units"],
+        "answerIndex": 1,
+        "concept": "The modulus case of the slide 4 rule",
+        "why": "Test x = 3: f(3) = −1 < 0, so f ≤ 0 on [2, 4] and A = |∫₂⁴f(x)dx| = |16/3 − 20/3| = 4/3. Option A is the integral itself, and an area is never negative — the modulus is the whole point of the second case on slide 4."
+      },
+      {
+        "q": "Past the crossing at x = π/4 the sine is on top. Evaluate that second piece, A₂ = ∫_(π/4)^(π/2)(sin x − cos x)dx.",
+        "options": ["1 − √2 square units", "2√2 − 2 square units", "√2 − 1 square units", "√2 square units"],
+        "answerIndex": 2,
+        "concept": "One lobe of the sin–cos region",
+        "why": "Past x = π/4 the sine is on top, so A = ∫_(π/4)^(π/2)(sin x − cos x)dx = [−cos x − sin x] = (0 − 1) − (−1/√2 − 1/√2) = √2 − 1. The 2√2 − 2 is the whole region on [0, π/2] — both lobes — and 1 − √2 is that same lobe with the subtraction done the wrong way round."
+      },
+      {
+        "q": "How many separate integrals does the area between y = x² and y = 3x − 2 over [0, 3] need?",
+        "options": ["Three — the curves cross twice inside the interval", "One — the interval [0, 3] is given in the question", "Two — one integral for each of the two curves", "Four — one for each root of the two equations"],
+        "answerIndex": 0,
+        "concept": "One integral per piece between consecutive crossings",
+        "why": "x² = 3x − 2 gives x = 1 and x = 2, both strictly inside [0, 3], so the top function changes twice and you need pieces [0,1], [1,2] and [2,3], each written top first. Slide 12's A₁ + A₂ is the two-piece case of the same idea, not a limit of two — count the interior crossings and add one."
+      },
+      {
+        "q": "For f(x) = x² − 9 on [0, 2], setting f(x) = 0 gives x = ±3, neither of them inside the interval. The area is:",
+        "options": ["8/3 square units", "18 square units", "−46/3 square units", "46/3 square units"],
+        "answerIndex": 3,
+        "concept": "Discarding roots outside the interval",
+        "why": "Neither root is in [0, 2], so there is nothing to split; f(1) = −8 < 0 puts the whole piece below the axis and A = |∫₀²(x² − 9)dx| = |8/3 − 18| = 46/3. Option C is the same integral without the modulus, and 8/3 is what you get by integrating x² and then forgetting the −9 entirely."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "One weber is the same as:",
+        "options": ["1 T/m²", "1 T·m²", "1 A·m²", "1 V/s"],
+        "answerIndex": 1,
+        "concept": "Units of magnetic flux",
+        "why": "Φ = BA, so a tesla times a square metre — and since ε = dΦ/dt in volts, 1 Wb is also 1 V·s. T/m² inverts the area and is the shape you would write if you were thinking of B as flux per unit area rather than flux itself; A·m² is the unit of magnetic moment, from a different topic."
+      },
+      {
+        "q": "A 40-turn coil sits in a circuit of total resistance 5.0 Ω. The flux through each turn changes by 2.0 × 10⁻³ Wb. How much charge circulates?",
+        "options": ["1.6 mC", "160 mC", "8.0 mC", "16 mC"],
+        "answerIndex": 3,
+        "concept": "Induced charge q = N ΔΦ / R",
+        "why": "q = NΔΦ/R = (40)(2.0 × 10⁻³)/5.0 = 1.6 × 10⁻² C = 16 mC, and note that no time appears — make the change ten times slower and the charge is identical. The 8.0 mC is what you get by dropping the N, which is the same omission that makes the deck's ε = −dΦ/dt inconsistent with more turns giving more voltage."
+      },
+      {
+        "q": "A rod of length 0.30 m slides at 5.0 m/s on rails in a field of 0.20 T perpendicular to the circuit. The emf is:",
+        "options": ["3.0 V", "0.15 V", "0.30 V", "0.030 V"],
+        "answerIndex": 2,
+        "concept": "Motional emf ε = BLv",
+        "why": "ε = BLv = (0.20)(0.30)(5.0) = 0.30 V — one multiplication, no resistance needed, because Faraday gives the emf and Ohm only afterwards gives the current. The 0.15 V is BLv/2, a half that belongs to nothing here, and 3.0 V is a decimal-point slip worth checking against the size of B."
+      },
+      {
+        "q": "That same rod (0.30 m, 5.0 m/s, 0.20 T) is in a circuit of resistance 0.60 Ω. The force needed to keep it moving steadily is:",
+        "options": ["0.030 N", "0.050 N", "0.30 N", "0.15 N"],
+        "answerIndex": 0,
+        "concept": "Retarding force F = B²L²v/R",
+        "why": "I = ε/R = 0.30/0.60 = 0.50 A, so F = BIL = (0.20)(0.50)(0.30) = 0.030 N, which is also B²L²v/R. The 0.15 N is εI/... no — it is what you get by using ε in place of I in F = BIL, so check that the quantity you put in the middle is a current in amperes."
+      },
+      {
+        "q": "A rod slides on rails, but the field B points along the rod's direction of travel. The emf is:",
+        "options": ["BLv, exactly as for any rod on rails", "BLv, but reversed in sign by Lenz's law", "half of BLv, as only one component counts", "zero, because the flux does not change"],
+        "answerIndex": 3,
+        "concept": "ε = BLv needs all three mutually perpendicular",
+        "why": "The rod sweeps out area, but with B lying in the plane of that area no extra field lines thread the circuit, so Φ is constant and ε = 0. Motion is not the criterion — a changing flux is — which is why a rod sliding along its own length generates nothing either."
+      },
+      {
+        "q": "A generator coil is spun at 30 revolutions per second. Its angular speed, and the frequency of the emf it produces, are:",
+        "options": ["30 rad/s and 30 Hz", "188 rad/s and 30 Hz", "188 rad/s and 188 Hz", "60 rad/s and 30 Hz"],
+        "answerIndex": 1,
+        "concept": "ω = 2πf, and one cycle per revolution",
+        "why": "ω = 2π(30) = 188 rad/s, while the output frequency is one full sine cycle per revolution, so 30 Hz. Putting the 30 straight into ε₀ = NBAω in place of ω is the commonest generator error and leaves the answer short by a factor of 2π; the two numbers are not interchangeable even though both come from the same spin rate."
+      },
+      {
+        "q": "An a.c. generator has a peak emf of 12 V. An a.c. voltmeter across its terminals reads:",
+        "options": ["8.5 V", "12 V", "17 V", "6.0 V"],
+        "answerIndex": 0,
+        "concept": "ε_rms = ε₀/√2",
+        "why": "Meters read the r.m.s. value, 12/√2 = 8.5 V; the 12 V peak is what the insulation has to survive. The 17 V is the same factor applied upside down (12 × √2), which is the slip to watch when a question gives you the r.m.s. value and wants the peak."
+      },
+      {
+        "q": "The coil of an a.c. generator is spun twice as fast. The peak emf and the output frequency:",
+        "options": ["peak emf doubles, frequency unchanged", "peak emf unchanged, frequency doubles", "both double", "peak emf quadruples, frequency doubles"],
+        "answerIndex": 2,
+        "concept": "ε₀ = NBAω and f = ω/2π",
+        "why": "Both are proportional to ω, so both double — and since the power into a fixed resistor goes as ε², it goes up four-fold, which is why the shaft becomes markedly harder to turn. The quadrupling belongs to the power, not to the emf; that is the swap in option D."
+      },
+      {
+        "q": "An air-cored solenoid is 0.20 m long, has 400 turns and a cross-sectional area of 4.0 cm². Its self-inductance is:",
+        "options": ["1.0 μH", "4.0 mH", "0.10 mH", "0.40 mH"],
+        "answerIndex": 3,
+        "concept": "L = μ₀N²A/ℓ",
+        "why": "L = (4π × 10⁻⁷)(400²)(4.0 × 10⁻⁴)/0.20 = 4.0 × 10⁻⁴ H = 0.40 mH — note N², not N. The 1.0 μH is what N instead of N² gives you, and the factor is exactly the 400 you left out."
+      },
+      {
+        "q": "An inductor of 0.25 H carries a steady 4.0 A. The energy stored in its magnetic field is:",
+        "options": ["1.0 J", "2.0 J", "4.0 J", "0.50 J"],
+        "answerIndex": 1,
+        "concept": "U = ½LI²",
+        "why": "U = ½(0.25)(4.0²) = 2.0 J, stored in the field and returned when the current decays. The 1.0 J is ½LI with the current not squared — and remember this is an energy in joules, not the back-emf, which is zero here because dI/dt = 0."
+      },
+      {
+        "q": "The current in a 20 mH coil rises uniformly from 0 to 3.0 A in 5.0 ms. The magnitude of the induced emf is:",
+        "options": ["0.060 V", "1.2 V", "12 V", "60 V"],
+        "answerIndex": 2,
+        "concept": "Back-emf ε = L dI/dt",
+        "why": "dI/dt = 3.0/0.0050 = 600 A/s, so |ε| = (0.020)(600) = 12 V. The 0.060 V is L × I, using the current instead of its rate of change — the emf is set by how fast the current changes, never by how large it is."
+      },
+      {
+        "q": "One henry is the same as:",
+        "options": ["1 Wb/A", "1 Wb·A", "1 T·m²", "1 V·A/s"],
+        "answerIndex": 0,
+        "concept": "Units of inductance",
+        "why": "L = NΦ/I, so webers per ampere, equivalently V·s/A: one henry is the inductance in which 1 A/s induces 1 V. T·m² is the weber itself, which is what you would quote if you were confusing the inductance with the flux it links."
+      },
+      {
+        "q": "Two coils have self-inductances 8.0 mH and 2.0 mH and a coupling coefficient of 0.50. Their mutual inductance is:",
+        "options": ["5.0 mH", "4.0 mH", "2.5 mH", "2.0 mH"],
+        "answerIndex": 3,
+        "concept": "M = k√(L₁L₂)",
+        "why": "√(8.0 × 2.0) = 4.0 mH, and half of that is 2.0 mH. The 4.0 mH is the perfectly coupled value you would get with k = 1, and 5.0 mH comes from averaging the two inductances instead of taking their geometric mean."
+      },
+      {
+        "q": "An ideal transformer has 800 primary turns on a 240 V a.c. supply and 40 secondary turns. The secondary voltage is:",
+        "options": ["12 V", "24 V", "6.0 V", "4800 V"],
+        "answerIndex": 0,
+        "concept": "Turns ratio V_s/V_p = N_s/N_p",
+        "why": "V_s = 240 × 40/800 = 12 V, a step-down of 20 — which means the secondary current is stepped up by 20, since V_pI_p = V_sI_s. The 4800 V is the ratio inverted, and it is worth a sanity check: fewer turns can never give more volts."
+      },
+      {
+        "q": "The north pole of a magnet is pulled away from a coil. The face of the coil nearest the magnet becomes:",
+        "options": ["a north pole, pushing the magnet away", "no pole at all until the magnet stops", "a south pole, pulling the magnet back", "alternately north and south as the magnet recedes"],
+        "answerIndex": 2,
+        "concept": "Lenz's law in pole form",
+        "why": "The flux is falling, so the induced current acts to maintain it, which means attracting the departing north pole with an induced south pole. Answering north is Lenz's law misremembered as 'always repel' — the induced field opposes the change, and a receding magnet is opposed by being held back."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "For `double s[] = {2.5, 3.5, 4.5};`, what is the size and the largest legal index?",
+        "options": ["size 4, largest index 3", "size 3, largest index 3", "size 3, largest index 2", "no fixed size — it grows as you assign"],
+        "answerIndex": 2,
+        "concept": "Size inferred from the initialiser",
+        "why": "Omitting the size makes an array just big enough for the initialiser, so this is a three-element array indexed s[0] to s[2]. The size is not absent, it is inferred, and it is just as fixed afterwards — the 'it grows' belief is imported from Python lists."
+      },
+      {
+        "q": "After `int a[6] = {1, 2, 3};`, what is the value of `a[4]`?",
+        "options": ["0", "3", "an unpredictable junk value", "nothing — the declaration will not compile"],
+        "answerIndex": 0,
+        "concept": "Too few initialisers is legal",
+        "why": "Fewer values than elements is allowed and the remaining elements become 0, so a[3], a[4] and a[5] are all 0. The junk-value answer is what you would get from an uninitialised array such as `int a[6];` — the presence of a brace list is what zeroes the rest."
+      },
+      {
+        "q": "What is the status of `int a[3] = {1, 2, 3, 4};`?",
+        "options": ["Legal — the extra value is quietly ignored", "Legal — the array is enlarged to hold four", "Legal, but a[3] then holds a junk value", "Illegal — more values in braces than elements declared"],
+        "answerIndex": 3,
+        "concept": "The one-sided initialiser rule",
+        "why": "The number of values between braces cannot be larger than the number of elements between square brackets, so this is rejected at compile time. The rule is one-sided: too few is fine and the rest become 0, which is why 'extra values are ignored' feels plausible and is wrong."
+      },
+      {
+        "q": "Which two-dimensional declaration is legal?",
+        "options": ["`int m[2][] = {{1,2,3},{4,5,6}};`", "`int m[][3] = {{1,2,3},{4,5,6}};`", "`int m[][] = {{1,2,3},{4,5,6}};`", "`int m[2,3] = {{1,2,3},{4,5,6}};`"],
+        "answerIndex": 1,
+        "concept": "Only the leftmost dimension may be omitted",
+        "why": "The compiler can count the rows for itself but must know the row width to compute an address, so the column size has to be written and the row size may be left out. Option D also fails on notation: each subscript needs its own pair of square brackets."
+      },
+      {
+        "q": "Given `int m[2][3];`, which expression reads row 1, column 2?",
+        "options": ["`m[1][2]`", "`m[1,2]`", "`m[2][1]`", "`m(1)(2)`"],
+        "answerIndex": 0,
+        "concept": "Separate brackets per subscript",
+        "why": "Each subscript must be enclosed in its own pair of square brackets, first the row and then the column. `m[1,2]` is not a two-dimensional access at all and will not give you row 1 column 2; `m[2][1]` swaps the two and reaches past the last row, since the rows run 0–1."
+      },
+      {
+        "q": "What does `sum` hold?  `int a[5] = {3, 1, 4, 1, 5}; int i, sum = 0; for (i = 0; i < 5; i += 2) sum += a[i];`",
+        "options": ["7", "14", "12", "2"],
+        "answerIndex": 2,
+        "concept": "Reading a traversal with a step other than 1",
+        "why": "The index takes the values 0, 2 and 4, so the sum is a[0] + a[2] + a[4] = 3 + 4 + 5 = 12. The 14 is every element added, which is what you get if you read `i += 2` as `i++`, and 2 is the elements at the odd indices you skipped."
+      },
+      {
+        "q": "Why does C not report `a[10]` on an array declared `int a[10];`?",
+        "options": ["It does report it, but only at run time", "The compiler quietly clamps the index to the last element", "The array stores its own length and ignores bad indices", "The address is computed by arithmetic and no length is stored anywhere"],
+        "answerIndex": 3,
+        "concept": "Why bounds are not checked",
+        "why": "`a[i]` is the start of a plus i times the width of one element, and nothing in the running programme holds a length to compare i against, so the expression names real memory belonging to something else. Nothing is clamped and nothing is reported: you get a junk value, a corrupted variable, or a confident wrong answer."
+      },
+      {
+        "q": "What does `f(4)` return?  `int f(int n) { if (n == 0) return 0; return f(n - 1) + 2 * n; }`",
+        "options": ["10", "20", "8", "24"],
+        "answerIndex": 1,
+        "concept": "Tracing a non-tail recursion",
+        "why": "The calls unwind as 2 + 4 + 6 + 8 = 20, each doubling pending until the call below it returns. The 10 is 1 + 2 + 3 + 4, which is what you get by ignoring the factor of 2, and 8 is the last term alone — the term you see written beside the call is only one of the four."
+      },
+      {
+        "q": "How is this classified?  `int p(int n, int acc) { if (n == 0) return acc; return p(n - 1, acc + 2); }`",
+        "options": ["Non-tail, because the addition acc + 2 is pending", "Non-tail, because the call is written on the last line", "Tail, because nothing is left to do with the returned value", "Indirect, because two parameters change at once"],
+        "answerIndex": 2,
+        "concept": "Tail recursion and the pending-work test",
+        "why": "The addition happens before the call, in building the argument, so when the inner call returns its value there is nothing left to do with it — the inner result is the answer. Option A confuses work done on the arguments with work pending on the result, which is the whole test."
+      },
+      {
+        "q": "What does `c(a, 4)` return, with `int a[4] = {42, 7, 42, 42};`?  `int c(int a[], int n) { if (n == 0) return 0; return c(a, n - 1) + (a[n - 1] == 42); }`",
+        "options": ["3", "1", "4", "0"],
+        "answerIndex": 0,
+        "concept": "Counting occurrences by the n − 1 decomposition",
+        "why": "`(a[n-1] == 42)` evaluates to 1 or 0, and three of the four elements are 42, so the returned sum is 3. The 1 is what you would get if you thought the comparison returned only the last element's verdict, and 4 is the array's length rather than the count."
+      },
+      {
+        "q": "Why does the two-halves version of count42 need a different header from the n − 1 version?",
+        "options": ["Because it makes two recursive calls instead of one", "Because halving can leave an odd number of elements", "Because it needs a second base case for the empty piece", "Because a half needs a start as well as an end"],
+        "answerIndex": 3,
+        "concept": "The header follows from the decomposition",
+        "why": "'The first n − 1 elements' always begins at the front, so one length describes it; 'the second half' begins somewhere in the middle, so the function must be told lo as well as hi. Options A and C are true of the halving version but neither of them forces a change to the parameter list."
+      },
+      {
+        "q": "An array holds n elements. What is wrong with `for (i = 0; i <= n; i++)`?",
+        "options": ["It touches a[n], one place past the last element", "It never reaches a[n - 1], the last element", "It starts at the wrong element, since indices begin at 1", "Nothing — <= is the correct comparison for n elements"],
+        "answerIndex": 0,
+        "concept": "The traversal idiom i < n",
+        "why": "With n elements the legal indices stop at n − 1, so `<=` runs one iteration too many and reads or writes memory outside the array — silently, because nothing is checked. Option B is the mirror error you would make by starting at 1 with a `<` test."
+      },
+      {
+        "q": "In the deck's comparison table, the iterative factorial declares how many local variables, and the recursive one how many?",
+        "options": ["One and one", "None and two", "Two and none", "Two and one"],
+        "answerIndex": 2,
+        "concept": "The iteration-versus-recursion table",
+        "why": "The loop needs a counter i and an accumulator result; the recursive version needs neither, because it returns its answer as a single expression. Note what 'none' counts: local variables written in your source, not memory used at run time, which is greater for the recursion because every call gets its own frame."
+      },
+      {
+        "q": "In `return sumArray(a, n - 1) + a[n - 1];`, why is the element written `a[n - 1]` and not `a[n]`?",
+        "options": ["Because the array is being read backwards", "Because with n elements the last one sits at offset n − 1", "Because a[n] would be the first element of the next row", "Because the base case has already consumed a[0]"],
+        "answerIndex": 1,
+        "concept": "Zero-base in the recursive decomposition",
+        "why": "The index is an offset from the first element, so an n-element array ends at n − 1 and a[n] is one past the end — exactly the location that is not diagnosed. The sub-problem takes the first n − 1 elements and this term is the remaining one, so the two together cover the array exactly once."
+      },
+      {
+        "q": "How is `int m[2][3];` actually stored?",
+        "options": ["As two separate arrays that the compiler links together", "As a table of addresses, one per row", "As three columns of two values, in column order", "As one contiguous block of six ints, the rows laid end to end"],
+        "answerIndex": 3,
+        "concept": "Row-major storage of a two-dimensional array",
+        "why": "The array is still a single sequential block, and the two subscripts are a notation for the address arithmetic over that block, not a lookup in a table. That is why the row width must be known at compile time while the number of rows need not be."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "Which server-side language does the course single out for its elegant syntax?",
+        "options": ["Python", "PHP", "Java", "Ruby"],
+        "answerIndex": 3,
+        "concept": "The one word each named language is known for",
+        "why": "Ruby is named for elegant syntax and paired with Ruby on Rails. Python's word is versatility beyond web development, PHP's is simplicity and being embedded in HTML, and Java's is reliability and scalability — each language has exactly one adjective in this list, and swapping them is the whole of the question."
+      },
+      {
+        "q": "Guarding a site against SQL injection and cross-site scripting belongs to which of the five reasons server-side languages matter?",
+        "options": ["Data Processing", "Security", "Scalability", "User Authentication"],
+        "answerIndex": 1,
+        "concept": "The five reasons, and which named threat sits where",
+        "why": "Security is the reason whose named examples are SQL injection and XSS. User Authentication is the neighbouring trap: it covers verifying identity and securing access to parts of a site, not defending against injected input, and Data Processing is about retrieving, updating and deleting data."
+      },
+      {
+        "q": "A weather site whose readings change from minute to minute is an example of:",
+        "options": ["Dynamic Content Generation", "Data Processing", "Scalability", "Ecosystem Expansion"],
+        "answerIndex": 0,
+        "concept": "Dynamic content generation",
+        "why": "Weather updates sit alongside social media feeds and e-commerce listings as the course's own examples of content generated in real time. Data Processing is the tempting neighbour, but it names the database operations behind the scenes rather than the changing page the client renders."
+      },
+      {
+        "q": "A server environment is best described as:",
+        "options": ["the web server software alone, such as Apache or Nginx", "the operating system the server runs on", "the hardware, software and networking components together", "the physical machine and its storage devices"],
+        "answerIndex": 2,
+        "concept": "Server environment versus server software",
+        "why": "The definition is the collection of hardware, software and networking components that let a server do its job — eight components, of which server software is only one. LAMP names an environment; Apache on its own is a piece of server software inside one."
+      },
+      {
+        "q": "Which environment does the course pair with microservices?",
+        "options": ["LAMP on Ubuntu Server", "PostgreSQL on CentOS with a private network", "EC2 with RDS and Lambda", "Docker with Kubernetes on cloud VMs"],
+        "answerIndex": 3,
+        "concept": "Matching the four worked environments to their jobs",
+        "why": "The application server environment for microservices is Docker plus Kubernetes, monitored with Prometheus and Grafana and packaged with Helm. LAMP is the web environment, PostgreSQL the database one, and the AWS list the cloud one — four stacks, four jobs, and the exam tests the pairing."
+      },
+      {
+        "q": "In the course's AWS example, which service is the serverless one?",
+        "options": ["EC2", "Lambda", "RDS", "CloudWatch"],
+        "answerIndex": 1,
+        "concept": "The named AWS components",
+        "why": "Lambda is listed as the serverless service; EC2 supplies instances, RDS the managed database and CloudWatch the monitoring. EC2 is the usual wrong pick because it is the most familiar name in the list, but an instance you provision is the opposite of serverless."
+      },
+      {
+        "q": "Nagios and Prometheus monitor performance. What are Ansible and Puppet named for?",
+        "options": ["scanning containers for vulnerabilities", "collecting and graphing performance metrics", "managing resources and configuration", "storing and querying application data"],
+        "answerIndex": 2,
+        "concept": "Monitoring tools versus management tools",
+        "why": "Both pairs sit in the same component of a server environment, monitoring and management tools, but Nagios and Prometheus watch while Ansible and Puppet configure. Option B is the monitoring half restated, which is exactly the confusion the pairing is set to catch."
+      },
+      {
+        "q": "Dividing data across related tables to cut redundancy and improve integrity is:",
+        "options": ["normalization", "indexing", "replication", "vertical scaling"],
+        "answerIndex": 0,
+        "concept": "Normalization versus indexing",
+        "why": "Normalization is a design activity aimed at redundancy and integrity; indexing is a performance activity that adds structures to speed up queries. They are often confused because normalization can slow reads down and indexing is how you get the speed back — but only one of them reorganises the tables."
+      },
+      {
+        "q": "Which DBMS does the course recommend for large-scale applications with complex data models and strong JSON support?",
+        "options": ["MySQL", "MongoDB", "Oracle Database", "PostgreSQL"],
+        "answerIndex": 3,
+        "concept": "Matching a DBMS to the job described",
+        "why": "PostgreSQL is the relational system listed for large-scale applications, advanced data types and strong JSON support. MySQL is the small-to-medium web choice, Oracle the enterprise and data-warehouse one, and MongoDB is not relational at all — the word 'JSON' tempts you towards it, but that is a storage feature of PostgreSQL here."
+      },
+      {
+        "q": "MongoDB is described in the course as:",
+        "options": ["schema-less and document-oriented", "an in-memory key-value store", "a relational, ACID-compliant database", "a domain-specific language for queries"],
+        "answerIndex": 0,
+        "concept": "The two NoSQL systems are not interchangeable",
+        "why": "MongoDB is the schema-less, document-oriented store for large volumes of unstructured or semi-structured data; the in-memory key-value store is Redis, used for caching, real-time analytics and message brokering. NoSQL is a category, not a product, so naming one of them for the other's job loses the mark."
+      },
+      {
+        "q": "'Change the delivery address on order 482.' Which HTTP method?",
+        "options": ["GET", "POST", "PUT", "DELETE"],
+        "answerIndex": 2,
+        "concept": "PUT updates an existing resource",
+        "why": "The order already exists and has its own endpoint, so this is an update: PUT. POST is the trap because it also carries a body, but its named job is creating a new resource, typically at a collection endpoint like /api/orders."
+      },
+      {
+        "q": "A client sends far more requests than the API allows in the time window. Which status code comes back?",
+        "options": ["401", "429", "403", "404"],
+        "answerIndex": 1,
+        "concept": "Mapping the course's terms onto status codes",
+        "why": "Rate limiting caps how many requests you may make and reports 429. 401 and 403 belong to authentication and authorisation — who you are and what you may access — and 404 means the endpoint or resource was not found; identity is not the problem when you are simply asking too often."
+      },
+      {
+        "q": "Checking an API key or token to establish who the caller is, is:",
+        "options": ["rate limiting", "authorisation", "versioning", "authentication"],
+        "answerIndex": 3,
+        "concept": "Authentication, authorisation and rate limiting",
+        "why": "Authentication verifies identity, using API keys, tokens or other methods. Authorisation is the next step and decides what that identified caller may access; rate limiting applies regardless of identity. The three sit next to each other in the key-terms list and are routinely swapped."
+      },
+      {
+        "q": "Adding more servers to carry a growing load is:",
+        "options": ["vertical scaling", "replication", "horizontal scaling", "load normalization"],
+        "answerIndex": 2,
+        "concept": "Horizontal versus vertical scaling",
+        "why": "Horizontal scaling adds more servers; vertical scaling upgrades the resources of the server you already have. Replication is the neighbouring technique in the same list, but its purpose is data availability and fault tolerance rather than capacity."
+      },
+      {
+        "q": "Which of the seven API development steps comes last?",
+        "options": ["Versioning", "Documentation", "Testing", "Security"],
+        "answerIndex": 0,
+        "concept": "The order of the seven development steps",
+        "why": "The sequence runs define the purpose, design, implement, test, document, secure, and finally version — versioning is last because it is about keeping the API backward-compatible as it changes after release. Documentation and testing both come earlier, in the middle of the build."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "Popular culture is defined in contrast to:",
+        "options": ["the official culture of the state and governing classes", "the traditional culture of rural communities", "the mass media culture of the post-war West", "the consumer culture created by manufacturers"],
+        "answerIndex": 0,
+        "concept": "What the term was coined against",
+        "why": "The definition is the cultural traditions of the people set against the official culture of the state or governing classes — and the same sentence is repeated on the deck's summary slide. Options C and D name things popular culture later merged with, not what it was defined against."
+      },
+      {
+        "q": "Scholars trace the origins of popular culture to:",
+        "options": ["the spread of radio and television after 1945", "the arrival of international record labels", "the middle class created by the Industrial Revolution", "the movement of workers out of the cities"],
+        "answerIndex": 2,
+        "concept": "The origin story in order",
+        "why": "The chain runs Industrial Revolution to middle class, then people configured into working classes moving into urban environments, then post-war innovations in mass media. Option A is a real stage of that story but a later one, and option D reverses the direction — the movement was into the cities, not out of them."
+      },
+      {
+        "q": "Afrobeat became mainstream in which wave of Nigerian popular music?",
+        "options": ["First wave, 1950–67", "Third wave, 1980–90", "Fourth wave, 1992–present", "Second wave, 1967–80"],
+        "answerIndex": 3,
+        "concept": "The four waves and their dates",
+        "why": "The second wave is when Highlife regained popularity, Afrobeat became mainstream and Fuji emerged. The first wave is the deeply traditional one of Juju, Apala and Highlife; the third brings Waka, Yo Pop and Afro Juju along with the international labels — learn the dates with the genres attached."
+      },
+      {
+        "q": "Fela is named in the course for:",
+        "options": ["signing to an international record label", "addressing social ills through his music", "fusing Apala with Ajisari", "making Juju the music of the upper class"],
+        "answerIndex": 1,
+        "concept": "Who is credited with what in the second wave",
+        "why": "Fela is described as a household name who addressed social ills with his brand of music. The fusion of Apala and Ajisari is Fuji, and the label signings belong to the third wave — Island to Sunny Ade and Virgin to Ebenezer Obey."
+      },
+      {
+        "q": "Which label signed King Sunny Ade?",
+        "options": ["Virgin Records", "Motown Records", "Island Records", "Decca Records"],
+        "answerIndex": 2,
+        "concept": "The two third-wave label signings",
+        "why": "Island Record signed Sunny Ade and Virgin Records signed Ebenezer Obey. The two are named a line apart in the same deck, so reversing them is the obvious distractor — attach Island to Ade and the other pairing follows."
+      },
+      {
+        "q": "Salawa Abeni came to fame with which brand of music?",
+        "options": ["Waka", "Fuji", "Apala", "Afro Juju"],
+        "answerIndex": 0,
+        "concept": "Third-wave genres and their artists",
+        "why": "Waka is Salawa Abeni's brand, one of the three new third-wave sounds along with Yo Pop and Afro Juju. Apala belongs to the first wave and Haruna Ishola, Fuji to the second and Barrister, and Afro Juju to Shina Peters."
+      },
+      {
+        "q": "Yo Pop is associated with:",
+        "options": ["Shina Peters", "Wasiu Ayinde Marshall", "Sikiru Ayinde Barrister", "Segun Adewale"],
+        "answerIndex": 3,
+        "concept": "Third-wave sounds and their originators",
+        "why": "Segun Adewale is named for Yo Pop; Shina Peters is Afro Juju and Wasiu Ayinde Marshall is Fuji, all three of them third-wave figures. Barrister belongs a wave earlier, to Fuji's emergence in the second wave."
+      },
+      {
+        "q": "Juju in the second wave is described as music for:",
+        "options": ["the upper class", "the lower class", "students and the unemployed", "rural traditional audiences"],
+        "answerIndex": 0,
+        "concept": "The class map of the second wave",
+        "why": "Juju is called a song for the upper class while Fuji, the fusion of Apala and Ajisari with Islamic influences, is described as mostly for the lower class. Getting the pair the wrong way round is the standard error, so hold them together: Juju up, Fuji down."
+      },
+      {
+        "q": "In Ghana, where Nigeria borrowed it, Highlife was:",
+        "options": ["feel-good music for the upper class, as in Nigeria", "dance music confined to the nightclubs", "a genre that addressed social problems", "a fusion of calypso and mambo"],
+        "answerIndex": 2,
+        "concept": "Highlife in Nigeria versus Highlife in Ghana",
+        "why": "In Nigeria Highlife was feel-good, upper-class music, and it was that Nigerian form the Civil War particularly affected; in Ghana it addressed social problems. Calypso and Mambo are external influences on the first wave generally, not a definition of Highlife."
+      },
+      {
+        "q": "Which act belongs to the fourth wave?",
+        "options": ["Junior and Pretty", "Plantashun Boiz", "I.K. Dairo and his Blue Spots", "Sikiru Ayinde Barrister"],
+        "answerIndex": 1,
+        "concept": "Placing artists in their wave",
+        "why": "The fourth wave, 1992 to the present, names Remedies, Plantashun Boiz, Styl Plus, Psquare and Mo'Hits Crew. Junior and Pretty came out of Ajegunle in the third wave, I.K. Dairo is first wave, and Barrister is second — the list you are given is small, so learn one or two names per wave."
+      },
+      {
+        "q": "The immediate cause of the October 2020 crisis was:",
+        "options": ["the refusal of the government to disband SARS", "the shooting of protesters at the Lekki toll gate", "the report of 91 deaths caused by police actions", "a video of a police officer shooting an unarmed civilian"],
+        "answerIndex": 3,
+        "concept": "Immediate cause versus underlying causes and consequences",
+        "why": "The immediate cause is the shooting captured on video in which an officer targeted an unarmed civilian. Lekki is the outcome three weeks later, not the trigger, and the 91 deaths are The Cable's earlier count — background, not the spark."
+      },
+      {
+        "q": "The October 2020 protest lasted:",
+        "options": ["three days", "three months", "three weeks", "the whole of 2020"],
+        "answerIndex": 2,
+        "concept": "The shape of the October 2020 protest",
+        "why": "Three weeks, ending with the army firing on unarmed protesters. Keep the three dates apart: the hashtag begins in 2017, the crisis runs through October 2020 for three weeks, and the Lekki shooting is 20 October 2020."
+      },
+      {
+        "q": "Which body reported 164 cases of extrajudicial killings between January and September 2021?",
+        "options": ["Global Rights", "The Cable", "Amnesty International", "INEC"],
+        "answerIndex": 0,
+        "concept": "Three bodies, three figures, three windows",
+        "why": "Global Rights recorded 164 extrajudicial killings in the nine months to September 2021 — just one year after the crisis. The Cable's figure is 91 deaths from March 2019 to February 2020, and Amnesty's is 52 unlawful killings plus 62 arbitrary arrests in the south-east alone."
+      },
+      {
+        "q": "Oyarinu attributes the birth of SARS to:",
+        "options": ["the failure to decolonise the police force", "the spread of social media among the youth", "the collapse of the courts after 1999", "post-oil-boom economic turmoil and poor leadership"],
+        "answerIndex": 3,
+        "concept": "Ochonu's argument versus Oyarinu's",
+        "why": "Oyarinu lists the falling economy after the oil boom, the depreciating naira, the civil war, the Structural Adjustment Programme and poor leadership — conditions ripe for insecurity and violent crime. The decolonisation argument, with its line that brute force was the primary operating philosophy of the police, is Ochonu's."
+      },
+      {
+        "q": "What share of the newly registered voters before the 2023 elections were young people?",
+        "options": ["40%", "76%", "29%", "60%"],
+        "answerIndex": 1,
+        "concept": "Keeping the four percentages apart",
+        "why": "76% of the newly registered voters were young, and 40% of those registered as students. The 29% is the countrywide turnout, the lowest in six decades of independence, and 60% is the youth share of the population — four figures, four different denominators."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "Which word properly describes a good inductive argument?",
+        "options": ["valid", "sound", "necessary", "strong"],
+        "answerIndex": 3,
+        "concept": "The vocabulary each kind of reasoning takes",
+        "why": "Inductive arguments are strong or weak, and a strong one with true premises is cogent; valid and sound belong to deduction only. The mismatch is the exam's favourite trap in this topic — never call an inductive argument valid, and never call a deductive one strong."
+      },
+      {
+        "q": "'If it is raining, the ground is wet. The ground is wet. Therefore it is raining.' This is:",
+        "options": ["modus ponens, and valid", "affirming the consequent, and invalid", "modus tollens, and valid", "denying the antecedent, and invalid"],
+        "answerIndex": 1,
+        "concept": "Affirming the consequent",
+        "why": "The second premise restates the 'then' half, and reasoning back to the 'if' half is a formal fallacy — a burst pipe would wet the ground just as well. Modus ponens affirms the antecedent, so ask which clause of the conditional the second premise actually repeats."
+      },
+      {
+        "q": "'If the alarm sounds, the door is locked. The alarm did not sound. So the door is not locked.' This is:",
+        "options": ["modus tollens, a valid form", "a weak inductive generalisation", "denying the antecedent, a formal fallacy", "affirming the consequent, a valid form"],
+        "answerIndex": 2,
+        "concept": "Denying the antecedent",
+        "why": "Modus tollens denies the consequent — not B, therefore not A — and is valid; denying the antecedent runs the negation on the wrong clause and proves nothing, since the sprinkler can wet the ground without rain. Both forms are negative, so identify which clause is negated rather than noticing only that something is."
+      },
+      {
+        "q": "Affirming the antecedent of a true conditional in order to get its consequent is:",
+        "options": ["modus ponens", "modus tollens", "analogical reasoning", "a categorical syllogism"],
+        "answerIndex": 0,
+        "concept": "Modus ponens",
+        "why": "If A then B, and A, therefore B — the deck's rain example, and a valid and certain deductive argument. Modus tollens is the other valid conditional form and works from the negated consequent; a categorical syllogism links classes rather than an if–then pair."
+      },
+      {
+        "q": "'Past results and current polling give Candidate A a 70% probability of winning.' Which type of inductive reasoning is this?",
+        "options": ["generalisation", "analogical reasoning", "abductive reasoning", "statistical reasoning"],
+        "answerIndex": 3,
+        "concept": "The three named types of induction",
+        "why": "Statistical reasoning draws its conclusion from data or probability and normally attaches a figure, which is what the 70% signals. Generalisation would move from observed instances to a broad qualitative claim; abductive reasoning is one of the four types the deck leaves for private reading."
+      },
+      {
+        "q": "After seeing many people in sunglasses on sunny days you conclude that many people wear sunglasses on sunny days. This is:",
+        "options": ["generalisation", "statistical reasoning", "analogical reasoning", "a categorical syllogism"],
+        "answerIndex": 0,
+        "concept": "Generalisation",
+        "why": "A broad statement about a group based on specific observations is the deck's definition of generalisation, and its own example. Statistical reasoning is the near neighbour and would carry a figure; nothing here is being compared to a similar case, which is what analogical reasoning requires."
+      },
+      {
+        "q": "'All mammals have a backbone. Whales are mammals. So whales have a backbone.' This is:",
+        "options": ["modus ponens, and inductive", "an analogy, and probable", "a categorical syllogism, and deductive", "a generalisation, and inductive"],
+        "answerIndex": 2,
+        "concept": "Categorical syllogism",
+        "why": "The premises link classes and establish a necessary relationship, so the conclusion is certain given true premises — deductive, not probable. Modus ponens is the neighbouring deductive form but needs an if–then first premise, which this argument does not have."
+      },
+      {
+        "q": "'The sum of two even numbers is always even; 2 and 4 are even; so 2 + 4 is even.' Why is the conclusion certain?",
+        "options": ["because the two numbers are small enough to check by hand", "because it follows the logical rules of mathematics", "because it has held in every case observed so far", "because both premises are about the same category"],
+        "answerIndex": 1,
+        "concept": "Mathematical proof as a deductive form",
+        "why": "The certainty comes from proving theorems from axioms and established rules, which is what makes mathematics and formal logic the home ground of deduction. Option C is the inductive answer — 'every case so far' is exactly the reasoning that leaves a conclusion merely probable."
+      },
+      {
+        "q": "'All cats are reptiles. Fluffy is a cat. So Fluffy is a reptile.' The argument is:",
+        "options": ["invalid, because the conclusion is false", "valid and sound", "neither valid nor invalid, only weak", "valid but not sound"],
+        "answerIndex": 3,
+        "concept": "Validity versus soundness",
+        "why": "Validity is a property of the form: if the premises were true the conclusion would have to be, so the argument is valid — and unsound, because the first premise is false. Judging validity from the truth of the conclusion is the error option A makes, and it gets this one backwards."
+      },
+      {
+        "q": "'Every student in this hall has paid the fee. Ada is a student in this hall. So Ada has paid the fee.' The reasoning is:",
+        "options": ["inductive, because it generalises from the students who were checked", "deductive, but only because the hall is small enough to check", "deductive, because the conclusion is certain if the premises are true", "inductive, because the conclusion is only probable"],
+        "answerIndex": 2,
+        "concept": "Necessity, not direction, is the test",
+        "why": "The premises establish a necessary relationship — Ada is inside a class every member of which has paid — so the conclusion cannot be false while they are true. Option A confuses how the first premise was arrived at with what the argument now does with it; how the evidence was gathered does not change the form of the inference."
+      },
+      {
+        "q": "Every past rise in mosquito activity was followed by more cases of a mosquito-borne disease; activity has risen again; so an outbreak is likely. The conclusion is:",
+        "options": ["probable, and the argument is inductive", "certain, and the argument is deductive", "certain, provided both premises are true", "probable, but the argument is still deductive"],
+        "answerIndex": 0,
+        "concept": "Prediction from an observed correlation",
+        "why": "The word 'likely' is doing real work: the premises describe a pattern and the conclusion goes beyond them, which is induction. Option C states the deductive guarantee, and it is precisely what this argument cannot offer even with both premises true."
+      },
+      {
+        "q": "Treating a pattern that merely happens to hold as though it were a cause is which named limitation of inductive reasoning?",
+        "options": ["sampling bias", "reliance on incomplete data", "unrepresentative evidence", "coincidental patterns"],
+        "answerIndex": 3,
+        "concept": "The named weaknesses of induction",
+        "why": "The potential for coincidental patterns is the deck's own term for what logicians call false cause, and it is the live risk in the mosquito example. Sampling bias is about who or what got into the evidence, not about mistaking correlation for causation."
+      },
+      {
+        "q": "Black swans exist. What does that show about 'every observed swan is white, so all swans are white'?",
+        "options": ["the argument was invalid in its form all along", "a strong inductive argument can have a false conclusion", "at least one of the premises must have been false", "the argument was really deductive, and unsound"],
+        "answerIndex": 1,
+        "concept": "Why the swan example is in the deck",
+        "why": "Every premise can be true — every swan you saw really was white — and the conclusion still false, because induction goes beyond its evidence. Calling it invalid imports deductive vocabulary that does not apply; inductive arguments are only ever strong or weak."
+      },
+      {
+        "q": "What does the conclusion of a valid deductive argument add to its premises?",
+        "options": ["nothing new — it is already contained in them", "a probability estimate for the conclusion", "new content that goes beyond the evidence", "a generalisation drawn from the cases listed"],
+        "answerIndex": 0,
+        "concept": "What each kind of reasoning contributes",
+        "why": "Deduction unpacks what the premises already contain, which is why the conclusion cannot be false when they are true. Options C and D describe induction — new content beyond the evidence — and that extra reach is exactly what costs induction its certainty."
+      },
+      {
+        "q": "The strength of an inductive conclusion depends on:",
+        "options": ["whether the form of the argument is valid", "whether the conclusion turns out to be true", "the quantity and quality of the evidence", "whether the premises are universal statements"],
+        "answerIndex": 2,
+        "concept": "What makes an inductive argument stronger",
+        "why": "The deck states it directly: inductive conclusions are probable, and their strength depends on the quantity and quality of the evidence, which is why strength comes in degrees. Validity belongs to deduction and is all-or-nothing, so option A applies the wrong measure to the wrong kind of argument."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "In this experiment, the coil of the tangent galvanometer:",
+        "options": ["carries the current whose field deflects the needle", "is replaced by the bar magnet", "carries no current — it is only the mounting and the degree scale", "supplies the field that cancels the Earth's"],
+        "answerIndex": 2,
+        "concept": "What the instrument is doing here",
+        "why": "No current flows anywhere in this experiment; the deflecting field comes entirely from the bar magnet, and the needle on its degree scale is the measuring instrument. Option A is the galvanometer's original use as a current meter, where the same tangent law gives tan θ ∝ I — same law, different unknown."
+      },
+      {
+        "q": "The SI unit of pole strength is:",
+        "options": ["A·m", "A·m²", "T·m²", "A/m"],
+        "answerIndex": 0,
+        "concept": "Pole strength versus magnetic moment",
+        "why": "Pole strength m is in ampere-metres; the ampere-metre squared is the unit of the magnetic moment M, and the two differ by a length because M = 2mL. Quoting A·m² for a pole strength is an automatic loss, so check which of the two quantities the question asked for."
+      },
+      {
+        "q": "A bar magnet 8.0 cm long has a magnetic moment of 3.0 A·m². Its pole strength is:",
+        "options": ["0.24 A·m", "24 A·m", "75 A·m", "37.5 A·m"],
+        "answerIndex": 3,
+        "concept": "m = M/(2L)",
+        "why": "The magnet's full length is 2L = 0.080 m, so m = 3.0/0.080 = 37.5 A·m. The 75 A·m comes from dividing by the half-length 0.040 m instead — the formula divides by the whole length, and it is the half-length that appears as L everywhere else."
+      },
+      {
+        "q": "You are handed a bar magnet 12 cm long. In the working formula, L is:",
+        "options": ["0.060 m", "0.12 m", "0.24 m", "12 m"],
+        "answerIndex": 0,
+        "concept": "L is the half-length",
+        "why": "In this deck L is the half-length, so a 12 cm magnet gives L = 0.060 m and 2L = 0.12 m. Putting the full 0.12 m in as L wrecks the abscissa, where L enters squared inside a bracket that is then squared again — a small slip here moves every plotted point."
+      },
+      {
+        "q": "The end-on field of a bar magnet at a distance d from its centre is:",
+        "options": ["(μ₀/4π)·M/(d² + L²)³ᐟ²", "(μ₀/4π)·2M/d³", "(μ₀/4π)·2Md/(d² − L²)²", "(μ₀/4π)·2mL/(d² − L²)"],
+        "answerIndex": 2,
+        "concept": "The end-on (Tan A) field",
+        "why": "Adding the two inverse-square pole fields along the axis gives 2Md/(d² − L²)², with a minus in the bracket and the whole bracket squared. Option A is the broadside-on result, with a plus and a 3/2 power, and option B is only the far-field limit of the correct expression."
+      },
+      {
+        "q": "If the metre stick were laid north–south instead — the broadside-on, Tan B position — which expression would apply?",
+        "options": ["(μ₀/4π)·2Md/(d² − L²)², unchanged", "(μ₀/4π)·M/(d² + L²)³ᐟ²", "(μ₀/4π)·2M/d³", "B_H tan θ, with no dependence on d at all"],
+        "answerIndex": 1,
+        "concept": "End-on versus broadside-on",
+        "why": "Broadside-on the two pole fields add differently and give M/(d² + L²)³ᐟ² — a plus sign and a three-halves power. Using the end-on formula in the broadside-on geometry, or the reverse, is the classic full-marks-to-zero slip, so read which way the stick is laid before writing anything."
+      },
+      {
+        "q": "Why does the analysis keep the (d² − L²)² denominator instead of using B = (μ₀/4π)·2M/d³?",
+        "options": ["because the point-dipole form applies only to electromagnets", "because d is measured from the pole rather than the centre", "because the Earth's field would otherwise have to be known", "because d here is only a few times L, not far larger"],
+        "answerIndex": 3,
+        "concept": "Near field versus the point-dipole limit",
+        "why": "2M/d³ is only the d ≫ L limit of the exact two-pole result, and this experiment deliberately works down to d = 30 cm with L = 5 cm, where the two differ by about 6% and M comes out underestimated. B_H is needed either way, so option C changes nothing about which field formula you use."
+      },
+      {
+        "q": "With L = 0.05 m and d = 0.25 m, the quantity d/(d² − L²)² is:",
+        "options": ["4.2 m⁻³", "17.4 m⁻³", "69.4 m⁻³", "64.0 m⁻³"],
+        "answerIndex": 2,
+        "concept": "Computing the abscissa",
+        "why": "d² − L² = 0.0625 − 0.0025 = 0.0600 m², squaring gives 0.00360 m⁴, and 0.25/0.00360 = 69.4 m⁻³. The 4.2 is what you get by forgetting to square the bracket, and 17.4 by putting d² in the numerator — the deck's own data analysis slide makes that second mistake."
+      },
+      {
+        "q": "A graph of tan θ_AV against d/(d² − L²)² has gradient s = 0.020 m³. With B_H = 4.0 × 10⁻⁵ T, the magnetic moment is:",
+        "options": ["4.0 A·m²", "0.40 A·m²", "40 A·m²", "8.0 A·m²"],
+        "answerIndex": 0,
+        "concept": "M from the gradient",
+        "why": "M = 2πB_H s/μ₀, and 2π/μ₀ = 5 × 10⁶, so M = 5 × 10⁶ × 0.020 × 4.0 × 10⁻⁵ = 4.0 A·m². The 8.0 A·m² is the same arithmetic with the factor 2 kept twice — check the dimensions instead: s is in m³, and s·B_H/μ₀ comes out in A·m²."
+      },
+      {
+        "q": "The best-fit line comes out with a clear positive intercept. The most likely reason is:",
+        "options": ["the magnet is too strong for the needle", "tan θ was averaged instead of θ", "the distances were measured from the centre of the magnet", "the needle was not zeroed, or stray iron is adding a fixed field"],
+        "answerIndex": 3,
+        "concept": "What a non-zero intercept means",
+        "why": "The working equation has no constant term, so the line must pass through the origin; an intercept means a fixed extra deflection — an unzeroed needle, a stick that is not east–west, or iron on the bench. Option C describes the correct procedure, so it cannot be the fault."
+      },
+      {
+        "q": "A reading error of ±0.5° does the most damage to tan θ at which deflection?",
+        "options": ["44°", "12°", "31°", "it does the same damage at every angle"],
+        "answerIndex": 1,
+        "concept": "Where the angular readings are least reliable",
+        "why": "At 12° a half-degree is worth about 4% of tan θ, against about 1% at 44°, which is why the d = 50 cm row is the stray value in the ratio column and why you work in the 30°–60° band where you can. The error in degrees is the same everywhere; the fractional error in tan θ is not."
+      },
+      {
+        "q": "Recording the angles again with the magnet on the other side of the galvanometer removes the error from:",
+        "options": ["the magnet not being exactly centred on the needle", "the needle sitting off-centre on its pivot", "a zero error or any residual field", "parallax when reading the scale"],
+        "answerIndex": 0,
+        "concept": "Which of the eight readings cancels which error",
+        "why": "Each pair kills a different fault: both ends of the needle for eccentricity of the pivot, reversed polarity for zero error and residual field, and both sides for a magnet that is not exactly centred. They are not repeats for the sake of averaging, so skipping a pair reinstates precisely the error it was there to remove."
+      },
+      {
+        "q": "Which is usually the largest single uncertainty in the value of M?",
+        "options": ["reading the deflection angles only to the nearest degree", "the pole strength of the needle not being known", "taking B_H as the nominal 40 × 10⁻⁶ T, not the local value", "the 5 cm steps in d being too coarse to plot"],
+        "answerIndex": 2,
+        "concept": "Dominant source of error",
+        "why": "M scales directly with B_H, so a 10% error in the assumed Earth's field is a 10% error in M — larger than the few per cent the whole-degree readings contribute. The needle's own strength cancels out of B = B_H tan θ, which is why the method needs no calibration of it."
+      },
+      {
+        "q": "In the working formula, the distance d is measured:",
+        "options": ["from the nearest pole of the magnet to the needle", "from the end of the metre stick to the needle", "from the far pole of the magnet to the needle", "from the centre of the magnet to the needle pivot"],
+        "answerIndex": 3,
+        "concept": "d is a centre-to-centre distance",
+        "why": "2Md/(d² − L²)² is the standard centre-to-point result, so every d must run from the magnet's centre to the pivot. Measuring from the near pole puts every reading out by L — a systematic error, and worst at small d where the graph is most sensitive."
+      },
+      {
+        "q": "Materials that magnetise easily and keep their magnetisation after the field is removed are:",
+        "options": ["paramagnetic", "ferromagnetic", "diamagnetic", "non-magnetic"],
+        "answerIndex": 1,
+        "concept": "The three magnetic classes",
+        "why": "Iron, nickel and cobalt are ferromagnetic, and retaining the magnetisation is what makes a bar magnet possible in the first place. Paramagnetic materials are weakly attracted and lose it as soon as the field goes; diamagnetic ones are weakly repelled."
+      }
+    ]
+  }
+}

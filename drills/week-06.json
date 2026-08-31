@@ -1,0 +1,754 @@
+{
+  "week": 6,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "From the trigonometry rule she supplies, d(tan x)/dx is",
+        "options": ["sec²x", "sec x tan x", "−cosec²x", "1/cos x"],
+        "answerIndex": 0,
+        "concept": "Standard derivative of tan x",
+        "why": "The slide states d(tan x)/dx = sec²x, and that is the only trigonometric derivative besides sin and cos that the week supplies. The tempting wrong pick is sec x tan x, which is the derivative of sec x, not of tan x; −cosec²x belongs to cot x. Note it is sec²x, the square, not sec x times anything."
+      },
+      {
+        "q": "For f(x) = 2x³ − 5x + 8, what is f‴(x)?",
+        "options": ["6x² − 5", "12x", "12", "0"],
+        "answerIndex": 2,
+        "concept": "Repeated power rule on a polynomial",
+        "why": "Differentiate three times: f′ = 6x² − 5, f″ = 12x, f‴ = 12. If you picked 12x you stopped one order early, which is the commonest slip when the question says third and you have written three lines including the original. Zero is what the fourth derivative would be, not the third."
+      },
+      {
+        "q": "The second derivative of y = sin(4x) is",
+        "options": ["16 sin(4x)", "−16 sin(4x)", "−4 sin(4x)", "−16 cos(4x)"],
+        "answerIndex": 1,
+        "concept": "Chain factor repeated, with the sign from sin → cos → −sin",
+        "why": "y′ = 4 cos(4x), and differentiating again gives 4 × (−4 sin(4x)) = −16 sin(4x). The chain hands you another 4 at every order, so −4 sin(4x) means you collected the factor only once. The minus arrives at the second step, where cos differentiates to −sin, so +16 is the sign error."
+      },
+      {
+        "q": "For y = e^(2x), what is d⁴y/dx⁴?",
+        "options": ["2e^(2x)", "8e^(2x)", "e^(2x)", "16e^(2x)"],
+        "answerIndex": 3,
+        "concept": "Exponential chain factor, no sign change",
+        "why": "Each differentiation deposits another factor 2 and leaves e^(2x) untouched, so four of them give 2⁴ = 16. Picking 8e^(2x) means you stopped at the third derivative. Unlike sin and cos, the exponential never changes sign, so no minus can appear here at any order."
+      },
+      {
+        "q": "Before differentiating y = 1/x³ by the power rule, you rewrite it as",
+        "options": ["x⁻³", "x^(1/3)", "3x⁻¹", "−x³"],
+        "answerIndex": 0,
+        "concept": "Reciprocals as negative powers",
+        "why": "The power rule only sees xⁿ, so 1/x³ must be written x⁻³ before you touch it — exactly the habit she drills when she rewrites √(x³) as x^(3/2). The trap is x^(1/3), which is the cube root, a different function entirely. Moving the power to the numerator flips its sign; it does not turn it into a fraction."
+      },
+      {
+        "q": "Her quotient rule for f(x) = u(x)/v(x) has numerator",
+        "options": ["u·v′ − v·u′", "u′·v′ − u·v", "v·u′ + u·v′", "v·u′ − u·v′"],
+        "answerIndex": 3,
+        "concept": "Order of terms in the quotient rule",
+        "why": "She writes f′(x) = [v(x)u′(x) − u(x)v′(x)]/(v(x))², so v·u′ comes first and u·v′ is subtracted. The near-miss u·v′ − v·u′ is the same two terms in the wrong order, and it flips the sign of the entire derivative. The version with a plus is the product rule wearing a denominator."
+      },
+      {
+        "q": "f⁽⁵⁾(x) is another way of writing",
+        "options": ["[f(x)]⁵", "5 f′(x)", "(f⁽⁴⁾(x))′", "(f′(x))⁵"],
+        "answerIndex": 2,
+        "concept": "Bracketed superscript as a counter, not a power",
+        "why": "The bracketed number counts differentiations, so f⁽⁵⁾(x) is the fourth derivative differentiated once more. The trap is [f(x)]⁵, reading the superscript as an exponent — that is why the brackets are there in the first place. She makes the same point one order lower with f⁽⁴⁾(x) = (f‴(x))′."
+      },
+      {
+        "q": "Differentiating y = 7 ln x − 12 gives dy/dx =",
+        "options": ["7/x − 12", "7/x", "7x⁻¹ − 12x", "1/x"],
+        "answerIndex": 1,
+        "concept": "Constant multiple survives, constant term vanishes",
+        "why": "The 7 is a constant multiple so it stays outside, giving 7 × (1/x); the −12 is a constant term so its derivative is 0 and it disappears. Keeping the −12 confuses the two roles a number can play. Dropping the 7 as well over-applies the rule — only additive constants die."
+      },
+      {
+        "q": "For y = x^(5/2), the second derivative y″ is",
+        "options": ["(15/4)x^(1/2)", "(5/2)x^(3/2)", "(15/4)x^(−1/2)", "(5/4)x^(1/2)"],
+        "answerIndex": 0,
+        "concept": "Fractional exponents falling by one at each order",
+        "why": "y′ = (5/2)x^(3/2), then y″ = (5/2)(3/2)x^(1/2), and the coefficients multiply to 15/4 while the exponent falls from 3/2 to 1/2. If you picked (5/2)x^(3/2) you gave the first derivative. The exponent 1/2 is right here; −1/2 would be the third derivative, one order too far."
+      },
+      {
+        "q": "For y = ln x, the second derivative y″ is",
+        "options": ["1/x²", "2/x³", "−1/x", "−1/x²"],
+        "answerIndex": 3,
+        "concept": "Differentiating 1/x again",
+        "why": "y′ = x⁻¹, and differentiating gives (−1)x⁻² = −1/x², so the sign turns negative at the second order. The positive 1/x² drops that sign, which is the single commonest error on this chain. 2/x³ is the third derivative, where the sign has flipped back to positive."
+      },
+      {
+        "q": "The third derivative of y = cos(2x) is",
+        "options": ["−8 sin(2x)", "8 cos(2x)", "−4 sin(2x)", "8 sin(2x)"],
+        "answerIndex": 3,
+        "concept": "Sign cycle of cos under repeated differentiation",
+        "why": "y′ = −2 sin(2x), y″ = −4 cos(2x), y‴ = +8 sin(2x): the coefficient collects a 2 each time while the sign cycles −, −, +. Choosing −8 sin(2x) means you carried the minus one step too far; the third step turns −cos into +sin. The 8 is 2³, not 2 used once."
+      },
+      {
+        "q": "Which rule must you use to differentiate f(x) = x²eˣ?",
+        "options": ["the quotient rule", "the chain rule", "the product rule", "the power rule alone"],
+        "answerIndex": 2,
+        "concept": "Recognising a product",
+        "why": "Two functions of x are multiplied, so you need (uv)′ = u′v + uv′ — the same situation as her TASK on xeˣ, the only place in the deck the product rule is needed. The chain rule is for a function inside a function, like e^(x²), which this is not. Differentiating each factor separately and multiplying gives 2x·eˣ, which is wrong."
+      },
+      {
+        "q": "The chain rule, as she states it on the slide, is",
+        "options": ["f′(x) = y′(u) + u′(x)", "f′(x) = y′(u)·u′(x)", "f′(x) = y′(u)/u′(x)", "f′(x) = y(u)·u′(x)"],
+        "answerIndex": 1,
+        "concept": "Statement of the chain rule",
+        "why": "If y = f(u) and u = g(x), then f′(x) = y′(u)·u′(x) — the outer derivative multiplied by the inner derivative. The version with y(u) rather than y′(u) forgets to differentiate the outer function, which is what turns ln(1 + x²) into (1 + x²)·2x instead of 2x/(1 + x²). Adding rather than multiplying loses the whole mechanism."
+      },
+      {
+        "q": "In her ln(1 + x²) working, (1 + 2x² + x⁴)² expands to",
+        "options": ["1 + 4x² + 4x⁴ + 4x⁶ + x⁸", "1 + 2x² + 2x⁴ + 2x⁶ + x⁸", "1 + 4x² + 6x⁴ + 4x⁶ + x⁸", "1 + 4x² + 6x⁴ + 4x⁶ + x¹⁶"],
+        "answerIndex": 2,
+        "concept": "The denominator she carries into the fourth derivative",
+        "why": "Squaring 1 + 2x² + x⁴ gives 1 + 4x² + 6x⁴ + 4x⁶ + x⁸, the binomial coefficients 1, 4, 6, 4, 1 on rising even powers — it is (1 + x²)⁴. The last option squares the exponent of the final term instead of doubling it, which is the slip to watch: squaring a power doubles its exponent, 8 not 16. The middle coefficient is 6, not 4."
+      },
+      {
+        "q": "Which of these is NOT part of Week 6's material?",
+        "options": ["the second-derivative test for a maximum", "the notation f⁽⁴⁾(x) = (f‴(x))′", "the rule d(ln x)/dx = 1/x", "the quotient rule applied twice over"],
+        "answerIndex": 0,
+        "concept": "The boundary of the week",
+        "why": "The deck covers only how to compute higher derivatives; concavity, inflection points and the second-derivative test never appear. The other three are all on her slides — the notation note on slide 14, the logarithmic rule on slide 8, and the repeated quotient rule through the ln(1 + x²) example. Knowing that f″ means acceleration is as far as the applications go."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "An alternating voltage has a peak value of 100 V. Its rms value is",
+        "options": ["70.7 V", "141.4 V", "50.0 V", "63.7 V"],
+        "answerIndex": 0,
+        "concept": "Peak to rms conversion",
+        "why": "V_rms = 0.7071 V_max, so 0.7071 × 100 = 70.7 V, and going peak to rms the number must get smaller. Picking 141.4 V uses the factor the wrong way round, which is the standard error — an rms value can never exceed its peak. The 63.7 V is the 0.637 average-value label from her diagram, which she never uses in a calculation."
+      },
+      {
+        "q": "An AC ammeter reads 5.0 A. The peak current in the circuit is",
+        "options": ["3.54 A", "7.07 A", "5.00 A", "10.0 A"],
+        "answerIndex": 1,
+        "concept": "rms to peak conversion, and what a meter reads",
+        "why": "Meters are calibrated in rms, so 5.0 A is I_rms and I_max = 5.0 / 0.7071 = 7.07 A. The 3.54 A comes from multiplying by 0.7071 instead of dividing, halving your answer instead of raising it. Doubling to 10.0 A confuses the peak with the peak-to-peak swing."
+      },
+      {
+        "q": "An AC source has ω = 200π rad s⁻¹. Its frequency is",
+        "options": ["100 Hz", "200 Hz", "628 Hz", "50 Hz"],
+        "answerIndex": 0,
+        "concept": "ω = 2πf read backwards",
+        "why": "From ω = 2πf, f = ω/2π = 200π/2π = 100 Hz. Choosing 200 Hz reads the coefficient of π straight off as the frequency, forgetting the 2. The 628 Hz multiplies by 2π instead of dividing, which is the same error in the other direction."
+      },
+      {
+        "q": "For a resistor on an AC supply, the ratio P_max / P_av is exactly",
+        "options": ["√2", "1", "½", "2"],
+        "answerIndex": 3,
+        "concept": "Maximum power is twice the average power",
+        "why": "P_max = V²_max/R and P_av = V²_rms/R with the same R, so the ratio is (V_max/V_rms)² = (√2)² = 2 — her Question 3 gives 2.174 W and 1.09 W, which checks. Answering √2 forgets to square: the √2 relates the voltages, not the powers. The ratio is fixed for a sinusoid and never depends on R or f."
+      },
+      {
+        "q": "An AC supply of peak voltage 60 V drives a 30 Ω resistor. I_max is",
+        "options": ["1.41 A", "0.71 A", "2.83 A", "2.0 A"],
+        "answerIndex": 3,
+        "concept": "Ohm's law relates amplitudes to amplitudes",
+        "why": "I_max = V_max/R = 60/30 = 2.0 A, because Ohm's law connects peak to peak just as it connects rms to rms. The 1.41 A comes from converting to rms somewhere in the middle, which crosses the two families. Never divide V_rms by R and call the result I_max, or the other way round."
+      },
+      {
+        "q": "The trough-to-crest swing of a sinusoid of peak value I_m is",
+        "options": ["2I_m, and the deck never uses it", "I_m, the same as the peak", "0.707I_m, the rms value", "0.637I_m, the average value"],
+        "answerIndex": 0,
+        "concept": "Peak-to-peak is not the peak",
+        "why": "The peak is measured from the zero reference point, so the full swing from trough to crest is twice it — and peak-to-peak is a quantity the deck never names or uses. Reading a waveform's total height as the peak halves every rms and power figure that follows. The 0.707 and 0.637 factors both scale the peak; neither is a swing."
+      },
+      {
+        "q": "The label 0.6371 I_m on her waveform diagram is",
+        "options": ["the rms value derived on slide 10", "the average value, never defined or used", "the peak of the squared current", "the DC equivalent of the waveform"],
+        "answerIndex": 1,
+        "concept": "A diagram label that is not a result",
+        "why": "It sits on the picture as Average Value and is never defined, derived or used in any calculation — and it is mistyped, since the rectified mean of a sinusoid is 2/π = 0.6366. The DC equivalent is the rms value, 0.7071 I_max, which is a different number with a different meaning. Do not build an answer on the 0.637 figure."
+      },
+      {
+        "q": "In her Question 3, the given frequency of 60.0 Hz is used to find",
+        "options": ["the rms voltage", "the average power", "nothing — it is not used", "the maximum power"],
+        "answerIndex": 2,
+        "concept": "Recognising a redundant given",
+        "why": "The circuit is a pure resistor, and none of V_rms, I_rms, P_av or P_max depends on frequency, so the 60.0 Hz never enters the arithmetic. If you reached for it, you were probably heading toward reactance, which belongs to Week 7 and not to this deck. Spotting a redundant given is itself an exam skill."
+      },
+      {
+        "q": "The angular frequency ω is measured in",
+        "options": ["hertz", "seconds", "degrees per second", "radians per second"],
+        "answerIndex": 3,
+        "concept": "Units of ω, and why the argument is an angle",
+        "why": "ω = 2πf has units of radians per second, so ωt inside the sine is an angle in radians. Answering hertz treats ω as if it were f, which is out by a factor of 6.28 — at 50 Hz, ω is 314 rad s⁻¹. A calculator left in degree mode will make nonsense of sin(ωt) for the same reason."
+      },
+      {
+        "q": "The statement that the mains supply is 240 V refers to",
+        "options": ["the peak voltage", "the peak-to-peak voltage", "the rms voltage", "the average voltage"],
+        "answerIndex": 2,
+        "concept": "An unqualified AC voltage means rms",
+        "why": "AC voltmeters are designed to read rms values, so a bare quoted voltage is the rms figure — 240 V rms implies a peak of about 339 V. Reading it as the peak makes every power calculation come out half the size. The full-cycle average is zero, so it could not be a useful quoted value at all."
+      },
+      {
+        "q": "Averaging I² = I²_max sin²ωt over a complete cycle gives",
+        "options": ["I²_max", "½ I²_max", "0", "(1/√2) I²_max"],
+        "answerIndex": 1,
+        "concept": "The mean square, where the √2 comes from",
+        "why": "Her slide 10 states (I²)_av = ½ I²_max, and taking the square root of that is what produces I_rms = I_max/√2. Answering 0 applies the argument for the plain average of I, but squaring has already removed the sign so I² never goes negative. The 1/√2 factor belongs to the current itself, not to its square."
+      },
+      {
+        "q": "A supply has an rms voltage of 230 V. Its peak voltage is about",
+        "options": ["163 V", "460 V", "325 V", "230 V"],
+        "answerIndex": 2,
+        "concept": "Multiplying by 1.4142 to go rms to peak",
+        "why": "V_max = 230 × 1.4142 = 325 V, the same operation as dividing by 0.7071. The 163 V comes from multiplying by 0.7071 instead, which is the conversion for the other direction and always gives too small a number. Doubling to 460 V confuses the peak with the peak-to-peak swing."
+      },
+      {
+        "q": "Writing I_rms = V_rms/R is legitimate because",
+        "options": ["the current lags the voltage by 90°", "both amplitudes scale by the same 0.7071", "rms is defined by equal heating in a resistor", "the frequency cancels from both sides"],
+        "answerIndex": 1,
+        "concept": "Why Ohm's law survives the rms conversion",
+        "why": "R is a constant, so dividing both V_max and I_max by the same √2 leaves the ratio untouched, and Ohm's law holds between rms values just as it holds between peaks. The equal-heating statement is the definition of rms, which is true but is not what makes this particular step valid. In a resistor there is no phase lag at all — that is a Week 7 idea."
+      },
+      {
+        "q": "A 10 Ω resistor carries an rms current of 2.0 A. The average power dissipated is",
+        "options": ["20 W", "28 W", "80 W", "40 W"],
+        "answerIndex": 3,
+        "concept": "P_av = I²_rms R",
+        "why": "P_av = I²_rms R = 2.0² × 10 = 40 W, straight substitution with no correction factor — that is the whole point of using rms. The 80 W would come from using a peak current of 2.83 A, which doubles the answer. The 20 W drops the square and computes I × R instead."
+      },
+      {
+        "q": "Which statement is always true of a sinusoidal current?",
+        "options": ["its rms value is less than its peak value", "its rms value exceeds its peak value", "its rms value equals its peak value", "its rms value equals its average value"],
+        "answerIndex": 0,
+        "concept": "A sanity check on every conversion you do",
+        "why": "I_rms = 0.7071 I_max, and since the factor is less than one the rms value is always the smaller of the two. If an answer says otherwise you have used the conversion backwards, and this is the fastest check available to you. The full-cycle average is zero, so rms and average are never equal for an AC waveform."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "`FOR i = 3 TO 9` runs its body how many times?",
+        "options": ["6", "9", "3", "7"],
+        "answerIndex": 3,
+        "concept": "FOR bounds are inclusive at both ends",
+        "why": "The count is b − a + 1 = 9 − 3 + 1 = 7, with i taking 3, 4, 5, 6, 7, 8 and 9. Answering 6 subtracts the bounds and forgets the + 1, which is the off-by-one that costs marks every time. The 9 reads the upper bound as the count, which is only right when the loop starts at 1."
+      },
+      {
+        "q": "Which construct's body is guaranteed to run at least once?",
+        "options": ["WHILE", "REPEAT-UNTIL", "FOR", "CASE"],
+        "answerIndex": 1,
+        "concept": "Where each loop tests its condition",
+        "why": "REPEAT-UNTIL tests at the ending or bottom, so the body has already executed before any test happens. WHILE tests at the beginning or top, so if the condition is false on arrival the body runs zero times. A FOR loop with bounds that never meet also runs zero times."
+      },
+      {
+        "q": "`UNTIL c` at the foot of a loop corresponds to which WHILE test?",
+        "options": ["WHILE c", "WHILE c = 0", "WHILE c IS TRUE", "WHILE NOT c"],
+        "answerIndex": 3,
+        "concept": "The sense of the two loop conditions is inverted",
+        "why": "REPEAT-UNTIL stops when its condition becomes true, while WHILE continues while its condition is true, so the equivalent test is the negation. Writing WHILE c keeps the same condition and reverses the loop's behaviour entirely. Remember also that the conversion needs the first READ written before the loop, since WHILE must have something to test on arrival."
+      },
+      {
+        "q": "What does this fragment leave in p?\nSET p TO 1\nFOR j = 1 TO 4\n    SET p TO p × j\nENDFOR",
+        "options": ["10", "4", "24", "0"],
+        "answerIndex": 2,
+        "concept": "Accumulating a product across a FOR loop",
+        "why": "p runs 1, 1, 2, 6, 24 as j takes 1, 2, 3 and 4, so 24 is printed. The 10 is what you get if you accumulate a sum instead of a product, reading × as +. Starting p at 0 rather than 1 would give 0 forever, which is why a product accumulator must be initialised to 1."
+      },
+      {
+        "q": "Which of these is one of the course's INPUT verbs?",
+        "options": ["DISPLAY", "INCREMENT", "OBTAIN", "DETERMINE"],
+        "answerIndex": 2,
+        "concept": "The SEQUENCE verb list",
+        "why": "Input is READ, OBTAIN, GET. DISPLAY is output alongside PRINT and SHOW, DETERMINE is compute alongside COMPUTE and CALCULATE, and INCREMENT is the add verb with BUMP. These are the exact words the course expects to see in your answer, so learn them by group."
+      },
+      {
+        "q": "Which pair of verbs initialises a variable?",
+        "options": ["READ, GET", "COMPUTE, CALCULATE", "BUMP, DECREMENT", "SET, INIT"],
+        "answerIndex": 3,
+        "concept": "Initialising versus reading and computing",
+        "why": "SET and INIT give a variable its starting value from within the algorithm. READ and GET are input verbs — they take a value from outside, which is a different act even though both end with a variable holding something. BUMP and DECREMENT change a value that already exists."
+      },
+      {
+        "q": "The REPEAT skeleton must be closed with",
+        "options": ["ENDREPEAT", "ENDWHILE condition", "UNTIL condition", "ENDFOR condition"],
+        "answerIndex": 2,
+        "concept": "A misprint on the slide worth naming",
+        "why": "The construct is REPEAT / sequence / UNTIL condition — the closing keyword carries the test. The deck prints ENDFOR condition here, which is a genuine slide error; do not memorise it. There is no ENDREPEAT in the course's list of skeletons at all."
+      },
+      {
+        "q": "If `SET total TO 0` is written inside the loop rather than before it, at the end total holds",
+        "options": ["only the last pass's contribution", "the sum over all passes", "zero always", "the number of passes"],
+        "answerIndex": 0,
+        "concept": "Initialising inside versus outside a loop",
+        "why": "The line resets the accumulator at the top of every pass, so whatever earlier passes added is thrown away and only the final pass survives. It is not zero, because the addition still happens after the reset within that pass — which is exactly why this bug is so hard to spot. The output looks like a plausible number rather than an obvious error."
+      },
+      {
+        "q": "The header of a pseudocode must give",
+        "options": ["the name, purpose, inputs and outputs", "the variables and their data types", "the constructs used in the body", "the programming language chosen"],
+        "answerIndex": 0,
+        "concept": "Step 3, header writing",
+        "why": "The header carries the name of the algorithm, a short description of its purpose, and a list of the required inputs and outputs. Variables and their data types come later, at step 4, and belong to the body rather than the header. Naming a programming language would break the language-independence rule outright."
+      },
+      {
+        "q": "Which construct responds to unexpected events while the program is running?",
+        "options": ["CASE / OTHERS", "IF-THEN-ELSE", "CALL / RETURNING", "EXCEPTION / WHEN"],
+        "answerIndex": 3,
+        "concept": "Exception handling versus ordinary selection",
+        "why": "EXCEPTION / WHEN sits after a BEGIN block and each WHEN names one unwanted event and the statements that deal with it. CASE / OTHERS is the near-miss: it also picks one branch from several, but among expected values of an expression, as part of the normal design. The WHEN clauses are handlers that fire on failure, not alternatives you choose between."
+      },
+      {
+        "q": "In an IF-THEN-ELSE, how many of the two sequences run?",
+        "options": ["both, in order", "exactly one", "neither, unless ENDIF is present", "one or both, by condition"],
+        "answerIndex": 1,
+        "concept": "IF-THEN-ELSE is exclusive",
+        "why": "The condition selects one branch and the other is skipped entirely — that is what makes it a change to the normal sequential flow. ENDIF marks where the construct stops; it does not decide whether anything runs. If you want two things to happen you need two statements inside one branch, not both branches."
+      },
+      {
+        "q": "Handing a syntactically perfect pseudocode to a compiler",
+        "options": ["fails — it is not meant to be executed", "produces a working program", "produces a flowchart", "works only in a text editor"],
+        "answerIndex": 0,
+        "concept": "Pseudocode is a representation, not a program",
+        "why": "The course is explicit that pseudocode is not meant to be executed as the actual code; it just describes the flow and logic. It looks executable because it borrows keywords, but those keywords belong to no language and no grammar defines them. The text editor is where you write it, not something that runs it."
+      },
+      {
+        "q": "What value does c hold at ENDWHILE?\nSET c TO 0\nSET n TO 1\nWHILE n <= 5\n    IF n is even THEN\n        SET c TO c + 1\n    ENDIF\n    SET n TO n + 1\nENDWHILE",
+        "options": ["3", "2", "1", "5"],
+        "answerIndex": 1,
+        "concept": "Counting inside a WHILE with a condition in the body",
+        "why": "n takes 1, 2, 3, 4, 5 and the even ones are 2 and 4, so c ends at 2. Answering 3 counts the odd values instead, or includes an n = 6 pass that never happens because the test is n <= 5. The 5 is the number of passes, not the number of hits."
+      },
+      {
+        "q": "Which line best follows step 6, using clear and concise language?",
+        "options": ["`FOR i = 0 to 20`", "`for (i=0;i<20;i++)`", "`FOR each index of string`", "`FOR i = 0 to string.length`"],
+        "answerIndex": 2,
+        "concept": "Language independence in practice",
+        "why": "FOR each index of string names the intention without borrowing any language's indexing or bounds syntax. The course's own comparison rejects FOR i = 0 to 20 for exactly that reason, and the C-style header is worse still. Watch also for the mixed register — capitals on one line and lowercase on the next — which the deck names as the worst case."
+      },
+      {
+        "q": "The CASE construct is closed by",
+        "options": ["ENDCASE", "OTHERS", "ENDIF", "ENDSWITCH"],
+        "answerIndex": 0,
+        "concept": "The CASE skeleton and its closing keyword",
+        "why": "The skeleton is CASE expression OF, then the conditions with their sequences, then OTHERS with the default sequence, then ENDCASE. OTHERS is a branch inside the construct, not its terminator — a construct with no unmatched values still needs ENDCASE. ENDSWITCH belongs to particular programming languages, not to this course's pseudocode."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "Which `enctype` must a form use to upload files?",
+        "options": ["application/json", "text/plain", "application/x-www-form-urlencoded", "multipart/form-data"],
+        "answerIndex": 3,
+        "concept": "The three form attributes",
+        "why": "enctype says how the body is encoded, and file uploads require multipart/form-data. The default is application/x-www-form-urlencoded, which handles ordinary name/value pairs but cannot carry binary file content. Remember the trio: action names the URL, method chooses GET or POST, enctype fixes the encoding."
+      },
+      {
+        "q": "For `<input type=\"number\">`, what type is `input.value` in JavaScript?",
+        "options": ["a number", "null until submitted", "always a string", "a boolean"],
+        "answerIndex": 2,
+        "concept": "Reading a value off a form control",
+        "why": "value is always a string, whatever the input's type attribute says — so \"5\" + 1 gives \"51\" unless you convert first with Number() or parseInt(). The type attribute controls what the browser will accept and how it renders, not what JavaScript hands you. This is why numeric validation on forms so often fails silently."
+      },
+      {
+        "q": "What happens when `const u = {n: 1}; u.n = 2;` runs?",
+        "options": ["runs fine — const blocks reassignment only", "throws a TypeError", "throws a SyntaxError", "silently does nothing"],
+        "answerIndex": 0,
+        "concept": "const freezes the binding, not the object",
+        "why": "const stops you pointing the name at a different value, so u.n = 2 is legal while u = {} throws a TypeError. Expecting a throw here confuses immutability of the binding with immutability of the contents. If you need the object itself frozen, that is a separate step."
+      },
+      {
+        "q": "What does this print?\n`console.log(\"A\"); setTimeout(() => console.log(\"B\"), 0); Promise.resolve().then(() => console.log(\"C\")); console.log(\"D\");`",
+        "options": ["A B C D", "A D B C", "A C D B", "A D C B"],
+        "answerIndex": 3,
+        "concept": "The event loop: sync, then microtasks, then macrotasks",
+        "why": "All synchronous lines run first (A, D), then the microtask queue drains (C), and only then does the loop take a macrotask (B). Answering A D B C assumes the zero-delay timer wins because it was registered first, but a promise callback always jumps ahead of setTimeout. A B C D treats setTimeout(fn, 0) as if it ran immediately."
+      },
+      {
+        "q": "An `async` function whose whole body is `return 1;` returns",
+        "options": ["the number 1", "undefined", "a promise resolving to 1", "a callback"],
+        "answerIndex": 2,
+        "concept": "async functions always return a promise",
+        "why": "Marking a function async wraps whatever you return in a promise, so you get Promise{1} and must await it or use .then() to see the 1. Assigning the call straight to a variable and printing it gives a Promise object, not the number — a very common surprise. This holds whatever the body returns, including nothing at all."
+      },
+      {
+        "q": "A `fetch` request that receives HTTP 404",
+        "options": ["rejects the promise", "throws immediately", "retries automatically", "resolves — check response.ok"],
+        "answerIndex": 3,
+        "concept": "fetch rejects only on network failure",
+        "why": "fetch treats a 404 or 500 as a successful round trip, so the promise resolves and you must inspect response.ok or response.status yourself. Expecting a rejection means your .catch() never fires and your error path is dead code. Only a network-level failure — no connection, DNS error — rejects the promise."
+      },
+      {
+        "q": "`stopPropagation()` does what `preventDefault()` does not?",
+        "options": ["cancels the browser's default action", "stops the event reaching ancestor elements", "blocks the form submission", "removes the listener"],
+        "answerIndex": 1,
+        "concept": "Two different things you can stop",
+        "why": "preventDefault cancels what the browser would have done — submitting, following a link — while stopPropagation halts the event travelling up through nested elements. Blocking a form submission is preventDefault's job, so that option describes the other method. Neither of them removes a listener; that is removeEventListener."
+      },
+      {
+        "q": "The four named components of an event are",
+        "options": ["source, type, listener, object", "source, target, bubble, capture", "type, listener, queue, handler", "element, handler, callback, promise"],
+        "answerIndex": 0,
+        "concept": "Event anatomy as the lecture lists it",
+        "why": "The event source is the element that triggers it, the event type is the name such as click or submit, the event listener is the function called, and the event object carries the information. Bubbling and capturing describe event propagation, which is a separate item, not one of the four components. Learn the four as a set — questions ask for them by count."
+      },
+      {
+        "q": "CSRF differs from XSS in that it",
+        "options": ["injects script into your page", "steals cookies through innerHTML", "makes the user's browser send a request", "bypasses client-side validation"],
+        "answerIndex": 2,
+        "concept": "XSS versus CSRF",
+        "why": "CSRF makes a logged-in user's browser issue an unwanted request to your site using their existing session, and it is defended with anti-CSRF tokens. Injecting script into the page is XSS, the attack you avoid by writing user input with textContent rather than innerHTML. The two are often listed together but they attack from opposite directions."
+      },
+      {
+        "q": "To place untrusted user text into a page safely you use",
+        "options": ["innerHTML", "textContent", "document.write", "outerHTML"],
+        "answerIndex": 1,
+        "concept": "Avoiding XSS when writing to the DOM",
+        "why": "textContent inserts the string as text, so any tags in it appear as characters rather than being parsed and executed. innerHTML parses what you give it, which is precisely the XSS hole. outerHTML has the same problem and additionally replaces the element itself."
+      },
+      {
+        "q": "Client-side validation exists mainly for",
+        "options": ["user experience and fewer requests", "security — it cannot be bypassed", "encrypting the form body", "replacing server-side checks"],
+        "answerIndex": 0,
+        "concept": "Client-side versus server-side validation",
+        "why": "Checking before submission gives instant feedback and saves unnecessary server round trips, but a user can disable JavaScript or post directly, so it can always be bypassed. That is why server-side validation is described as mandatory and never optional. Validation is not encryption — it inspects values, it does not protect them in transit."
+      },
+      {
+        "q": "In `const copy = [...arr];` the `...` is",
+        "options": ["rest", "destructuring", "spread", "a template literal"],
+        "answerIndex": 2,
+        "concept": "Spread versus rest, same symbol",
+        "why": "Inside a call or a literal the dots expand a collection outwards, which is spread. The identical syntax in a parameter list — function f(...args) — gathers arguments inwards, which is rest. The rule of thumb: spread copies out, rest gathers in."
+      },
+      {
+        "q": "Inside an arrow function, `this` is",
+        "options": ["taken from the enclosing scope", "the global object", "undefined always", "the element that fired the event"],
+        "answerIndex": 0,
+        "concept": "Lexical this in arrow functions",
+        "why": "An arrow function does not bind its own this; it inherits whatever this meant in the scope where it was written. In an ordinary function used as an event handler this would be the element that fired the event, which is exactly the difference being tested. That difference is why arrow functions are a poor choice for handlers that need the element."
+      },
+      {
+        "q": "Babel's job is to",
+        "options": ["minify JavaScript", "convert modern JS into older syntax", "bundle modules into one file", "run JavaScript on a server"],
+        "answerIndex": 1,
+        "concept": "Transpilation",
+        "why": "Transpiling rewrites modern syntax — arrow functions, classes, template literals — into an older equivalent so old browsers can run it. Minifying shrinks code by stripping names and whitespace, and bundling merges modules; those are different tools doing different jobs. Transpilation changes syntax, not behaviour."
+      },
+      {
+        "q": "In a fetch chain, `response.json()` returns",
+        "options": ["a JavaScript object", "a JSON string", "the raw Response", "another promise"],
+        "answerIndex": 3,
+        "concept": "Two promises in every fetch chain",
+        "why": "The first .then() hands you a Response object, and .json() begins reading and parsing the body, which is itself asynchronous — so it returns another promise and needs a second .then() before you have the data. Treating it as the object directly is why data prints as Promise{pending}. Under await, the same structure appears as two separate await lines."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "The 2006 census put Nigeria's population at",
+        "options": ["120,003,542", "180,000,000", "140,431,790", "160,213,000"],
+        "answerIndex": 2,
+        "concept": "The two population figures and their dates",
+        "why": "140,431,790 is the 2006 census figure — a count, with the digits to prove it. The 180 million is the 2015 estimate, and mixing the two swaps a census for a projection nine years later. Hold them as a pair, each tied to its own year."
+      },
+      {
+        "q": "By 2015 the estimated 180 million made Nigeria",
+        "options": ["first in Africa, tenth in the world", "first in Africa, sixth in the world", "second in Africa, sixth in the world", "first in Africa, third in the world"],
+        "answerIndex": 1,
+        "concept": "Nigeria's population ranking",
+        "why": "First in Africa and sixth most populated in the world, behind China, India, the USA, Indonesia and Brazil — five countries ahead, so sixth. Second in Africa is wrong on the lesson's own account; Nigeria leads the continent. Counting the five ahead is the quickest way to fix the sixth in your memory."
+      },
+      {
+        "q": "Which country is NOT among the five the lesson lists as more populous than Nigeria?",
+        "options": ["Indonesia", "Brazil", "the United States", "Japan"],
+        "answerIndex": 3,
+        "concept": "The five countries ahead of Nigeria",
+        "why": "The list is China, India, the USA, Indonesia and Brazil; Japan is not on it. Japan is the tempting pick because it is a large, familiar economy, but population and economic size are different rankings. If you can recite the five, the sixth-place claim answers itself."
+      },
+      {
+        "q": "Before independence, agriculture's share of Nigeria's GDP was",
+        "options": ["over fifty per cent", "over 75 per cent", "about 25 per cent", "about 40 per cent"],
+        "answerIndex": 0,
+        "concept": "Output share versus employment share",
+        "why": "Over fifty per cent is agriculture's share of GDP before independence. The over 75 per cent figure is a different statistic — the share of the workforce agriculture absorbed in 1960 — and swapping them is the mistake the lesson explicitly warns about. One measures output, the other measures jobs."
+      },
+      {
+        "q": "GDP growth between 1960 and 1965 moved from",
+        "options": ["0.58% to 6.59%", "1.89% to 4.89%", "4.89% to 1.89%", "1.89% to 6.59%"],
+        "answerIndex": 1,
+        "concept": "The independence-era growth pair",
+        "why": "1.89% in 1960 rising to 4.89% in 1965 is the independence pair. The 0.58% to 6.59% pair belongs to the 1999 return to democracy, some thirty-four years later, and the two are easy to swap because both show a rise. Anchor each pair to its era before you memorise the digits."
+      },
+      {
+        "q": "The growth figures 0.58% rising to 6.59% belong to",
+        "options": ["independence in 1960", "the SAP era", "the 1999 return to democracy", "the 2014 oil slump"],
+        "answerIndex": 2,
+        "concept": "Dating the second growth pair",
+        "why": "This pair marks the return to democracy in 1999, cited to Premium Times. The independence figures are 1.89% to 4.89%, and the SAP era and the 2014 slump are both periods of decline rather than recovery. Both recovery pairs rise, so only the era tells them apart."
+      },
+      {
+        "q": "The figure of $20 billion names",
+        "options": ["the foreign reserve peak", "the 2015 reserve figure", "the cost of the SAP", "debt relief under Obasanjo"],
+        "answerIndex": 3,
+        "concept": "Three dollar figures, only one a debt",
+        "why": "The $20 billion is debt relief secured under Obasanjo — a cancellation, not a holding. The $64 billion is the reserve peak in the same administration, and the $34 billion is what was left in 2015 under Jonathan. Only the first is a debt figure; the other two are reserves at two moments."
+      },
+      {
+        "q": "Under Obasanjo, foreign reserves rose to",
+        "options": ["above $64 billion", "above $34 billion", "above $20 billion", "above $100 billion"],
+        "answerIndex": 0,
+        "concept": "The reserve peak",
+        "why": "Reserves jumped above $64 billion during the Obasanjo recovery. The $34 billion is the 2015 figure after those savings had been spent, and the $20 billion is the debt relief, not a reserve at all. The $100 figure in this week is a crude oil price, not a dollar total."
+      },
+      {
+        "q": "By 2015, under Jonathan, reserves had fallen to",
+        "options": ["$64 billion", "$34 billion", "$20 billion", "$14 billion"],
+        "answerIndex": 1,
+        "concept": "The reserve fall, and what makes it striking",
+        "why": "Reserves fell to $34 billion in 2015, and the lesson's sting is that this happened while oil stood above $100 for most of that administration. The $64 billion is where they started, so choosing it reverses the direction of the story. Hold the pair 64 down to 34 as a single fact."
+      },
+      {
+        "q": "The 1990s oil boom was wasted because",
+        "options": ["no savings were made for a rainy day", "SAP flooded the market with imports", "Abacha looted the treasury into foreign banks", "the US stopped buying Nigerian crude"],
+        "answerIndex": 2,
+        "concept": "Two booms, two different failures",
+        "why": "The 1990s boom was looted by Sani Abacha, who kept the funds in foreign banks. The failure to save for a rainy day is the 1970s boom's fault — different decade, different mechanism, and swapping them is the trap. The US purchase cut belongs to 2014, two decades later."
+      },
+      {
+        "q": "What did SAP do to Nigerian manufacturing?",
+        "options": ["protected it with tariffs", "left it untouched", "moved it to the regions", "destroyed it as imports flooded in"],
+        "answerIndex": 3,
+        "concept": "The consequences of SAP",
+        "why": "SAP destroyed the manufacturing base by flooding the economy with imported goods that beat local products on both price and quality, and the currency began a downward movement that has continued since. Protection with tariffs is the opposite policy and is not what happened. SAP further weakened the economy rather than repairing it."
+      },
+      {
+        "q": "Which came first in the mid-1980s?",
+        "options": ["austerity measures, then SAP", "SAP, then austerity measures", "both were adopted together", "SAP only — austerity never came"],
+        "answerIndex": 0,
+        "concept": "The order of the two responses to the oil crunch",
+        "why": "Austerity measures came first, under the Buhari regime, as Nigeria's own response to the oil market crunch; SAP followed under IMF pressure. Reversing them makes the IMF the initiator of the whole sequence, which the lesson does not say. They are two distinct responses, not one policy under two names."
+      },
+      {
+        "q": "Nigeria was tipped to join the world's 20 largest economies by 1980, ahead of",
+        "options": ["South Korea", "Malaysia", "Brazil", "Indonesia"],
+        "answerIndex": 1,
+        "concept": "The comparison the lesson makes",
+        "why": "The lesson names Malaysia specifically as the country Nigeria was expected to outpace. South Korea is the tempting alternative because it is the usual textbook comparison for missed development, but it is not the name given here. Brazil and Indonesia appear in this week only in the population list."
+      },
+      {
+        "q": "Olivier Jakob, quoted on the future of Nigerian crude, is",
+        "options": ["a Nigerian finance minister", "an IMF director", "a Swiss-based consultant", "a Premium Times editor"],
+        "answerIndex": 2,
+        "concept": "Attributing the quotation",
+        "why": "He is a Swiss-based consultant, quoted saying that Nigerian crude may need to be discounted to reach new Asian markets because the US is awash with light crude. Premium Times is the source of the 1999 growth figures, not of this quotation. The IMF appears in this week only over SAP."
+      },
+      {
+        "q": "The indigenous trade system is dated to",
+        "options": ["c. 1500–1800 AD", "c. 1000–1500 AD", "c. 1800–1900 AD", "c. 1400–1600 AD"],
+        "answerIndex": 0,
+        "concept": "The period of the indigenous trade system",
+        "why": "The system thrived between 1500 and 1800 AD, shaped by geography and natural resources and carried on the Niger River. The nineteenth century is when colonial intrusion begins to transform it into a Western capitalist model, so 1800–1900 names the disruption rather than the system. Three centuries is the span to remember."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "The lesson defines a report as",
+        "options": ["a formal document presenting analysis, findings and conclusions", "a condensed version of a larger text, with its main ideas", "a written message addressed to a specific person or group", "an outline of the methods used to gather data"],
+        "answerIndex": 0,
+        "concept": "The three definitions, kept apart",
+        "why": "A report is a formal document presenting detailed information, analysis, findings and conclusions on a specific topic, structured as introduction, methodology, findings, conclusions, recommendations. The condensed-version wording is the definition of a summary, and the message to a specific person is the definition of a letter. Methodology is one section of a report, not the whole of it."
+      },
+      {
+        "q": "How many steps does the lesson give for letter writing?",
+        "options": ["eight", "nine", "eleven", "seven"],
+        "answerIndex": 1,
+        "concept": "The three step-counts",
+        "why": "Letter writing has nine steps, summary writing has eight and report writing has eleven. Eight is the tempting wrong answer because it is the summary's count, and the two lists sit next to each other in the deck. Learn the trio as 8, 9, 11 in that order."
+      },
+      {
+        "q": "How many steps does the lesson give for report writing?",
+        "options": ["eight", "nine", "eleven", "thirteen"],
+        "answerIndex": 2,
+        "concept": "The longest of the three step-lists",
+        "why": "Report writing runs to eleven steps, from define purpose through to review and revise. Nine belongs to letter writing and eight to summary writing, so picking either means you have attached the count to the wrong procedure. The report is longest because it adds research, methodology, conclusions, recommendations and appendices."
+      },
+      {
+        "q": "A summary should run to about",
+        "options": ["half the original", "three quarters of the original", "the same length, reworded", "one third or less of the original"],
+        "answerIndex": 3,
+        "concept": "The length convention",
+        "why": "The convention is roughly one third or less of the original — a summary must be a genuine condensation, not a paraphrase at the same length. Rewording without shortening fails the purpose entirely, since the point is that a reader grasps the core content quickly. Half is closer but still above what the convention allows."
+      },
+      {
+        "q": "Which of these must a summary never contain?",
+        "options": ["the writer's own opinion", "the original's main idea", "the supporting key points", "continuous prose"],
+        "answerIndex": 0,
+        "concept": "Summary conventions",
+        "why": "A summary carries no new material, no personal opinion and no direct quotation, and is written in continuous prose in the third person. The main idea and the key points are precisely what it must contain — they are steps 2 and 3. Continuous prose is the required form, not something to avoid."
+      },
+      {
+        "q": "Step 5 of summary writing, maintain structure, requires you to",
+        "options": ["reorder the points for clarity", "keep the original's logical order", "copy the original's headings", "use the original's own sentences"],
+        "answerIndex": 1,
+        "concept": "Retaining the original's order",
+        "why": "You keep the original's logical order while condensing — you are not re-arguing the text. Reordering breaks the rule even when your new order is genuinely clearer, which is the exact case the lesson flags. Using the original's own sentences breaks a different step, step 4, which demands your own words."
+      },
+      {
+        "q": "Step 6 tells you to eliminate minor details",
+        "options": ["in every case, without exception", "only in academic summaries", "unless they are crucial to the main idea", "only if the summary is too long"],
+        "answerIndex": 2,
+        "concept": "The qualifier on eliminating details",
+        "why": "The rule is to omit minor details and examples unless they are crucial to the main idea, and that qualifier is examinable in its own right. Reading the step as an absolute strips out examples that were carrying the argument. Length is not the trigger — relevance to the main idea is."
+      },
+      {
+        "q": "A conclusion differs from a recommendation in that a conclusion",
+        "options": ["carries a budget", "names the data sources", "comes last in the report", "interprets what the findings mean"],
+        "answerIndex": 3,
+        "concept": "Conclusions versus recommendations",
+        "why": "A conclusion interprets what the findings mean; a recommendation prescribes what someone should now do about it. The lesson's test is whether the sentence could be handed to a person as an instruction with a budget attached — if so it is a recommendation. Neither comes last: the summary, references and appendices follow both."
+      },
+      {
+        "q": "New data must never appear in",
+        "options": ["the conclusions", "the findings", "the methodology", "the appendices"],
+        "answerIndex": 0,
+        "concept": "Findings versus conclusions",
+        "why": "The findings are the evidence itself, with its supporting tables and charts; the conclusions are the judgement drawn from that evidence, and nothing new may enter there. Introducing a fresh statistic in the conclusions means the reader never saw it tested. Appendices exist precisely to hold the extra material that would clutter the body."
+      },
+      {
+        "q": "A report's introduction states",
+        "options": ["the methods used to gather data", "the topic, purpose and scope", "the main findings and outcomes", "the actionable suggestions"],
+        "answerIndex": 1,
+        "concept": "What belongs in the introduction",
+        "why": "The introduction gives topic, purpose and scope — what the report is about to do. The methods belong to the methodology section, and restating the main points and outcomes is the summary near the end, which says what the report did. Confusing the introduction with the summary is the standard slip because both are overviews."
+      },
+      {
+        "q": "In the letter-writing steps, closing salutation means",
+        "options": ["the final paragraph of thanks", "the subject heading", "the sign-off phrase plus signature", "the recipient's address block"],
+        "answerIndex": 2,
+        "concept": "Closing versus closing salutation",
+        "why": "The closing salutation is the sign-off phrase and your signature, as in Yours sincerely followed by your name. The closing is the separate step before it — the final paragraph that summarises and expresses gratitude or goodwill. They are two consecutive steps in the nine, not one step under two names."
+      },
+      {
+        "q": "Yours faithfully is the correct sign-off when the salutation is",
+        "options": ["Dear Mr Azeez", "a note to a close friend", "any business letter at all", "Dear Sir or Madam"],
+        "answerIndex": 3,
+        "concept": "Sincerely versus faithfully",
+        "why": "Yours faithfully goes with an impersonal salutation, where you have not named the recipient. Yours sincerely goes with a named recipient such as Dear Mr Azeez, which is what the lesson's own sample letter uses. It is the salutation, not the formality of the letter, that decides which you write."
+      },
+      {
+        "q": "The five key parts named in the sample letter are",
+        "options": ["greeting, opening sentence, purpose, closing, signature", "address, date, greeting, body, signature", "heading, greeting, body, closing, postscript", "greeting, body, findings, closing, signature"],
+        "answerIndex": 0,
+        "concept": "The parts of the sample letter",
+        "why": "The lesson names greeting, opening sentence, purpose of the letter, closing and signature, in that order. The writer's address and the date belong to a formal letter's block above the salutation, but they are not among the five parts the sample identifies. Findings belong to a report, never to a letter."
+      },
+      {
+        "q": "In the body of a letter, each paragraph should",
+        "options": ["restate the purpose", "address one specific point", "end with a salutation", "carry a supporting quotation"],
+        "answerIndex": 1,
+        "concept": "Organising the body",
+        "why": "The body is the main content in organised paragraphs, each addressing one specific point. Restating the purpose is the introduction's job, done once and briefly. Only the very end carries a salutation, and a letter has no requirement to quote anything."
+      },
+      {
+        "q": "The first step of report writing is to",
+        "options": ["gather the research", "outline the structure", "define the purpose", "write the introduction"],
+        "answerIndex": 2,
+        "concept": "The order of the first four report steps",
+        "why": "Define the purpose comes first, then research and gather information, then outline the structure, and only then write the introduction. Starting with research means you collect material without knowing what question it must answer. Notice the parallel: letter writing also opens by identifying purpose and audience."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "Multiplying an ohm by a farad gives which unit?",
+        "options": ["the second", "the farad", "the coulomb", "the volt"],
+        "answerIndex": 0,
+        "concept": "Dimension check on τ = RC",
+        "why": "Ω × F = s, which is the fastest confirmation that the time constant is a product and not a ratio. If you find yourself writing τ = R/C, this check kills it immediately because the units come out wrong. Use it whenever you are unsure which way round R and C belong."
+      },
+      {
+        "q": "After one time constant of discharging, the voltage remaining is",
+        "options": ["63.2%", "36.8%", "50.0%", "13.5%"],
+        "answerIndex": 1,
+        "concept": "63.2% gained versus 36.8% remaining",
+        "why": "36.8% is what remains while discharging; 63.2% is what has been gained while charging, and the two add to 100%. Picking 63.2% applies the charging figure to a discharge, which is the commonest confusion in this experiment. The 13.5% is the discharge figure at 2τ, not 1τ."
+      },
+      {
+        "q": "The charging law for the capacitor is",
+        "options": ["V(t) = V₀e^(−t/τ)", "V(t) = V₀e^(t/τ)", "V(t) = V₀(1 − e^(−t/τ))", "V(t) = V₀(1 + e^(−t/τ))"],
+        "answerIndex": 2,
+        "concept": "Charging versus discharging equations",
+        "why": "Charging rises from zero toward V₀, which the 1 − e^(−t/τ) form gives: at t = 0 it is zero and as t grows it approaches V₀. The bare V₀e^(−t/τ) is the discharging law, falling from V₀ toward zero — the mirror image. The 1 + form would start at 2V₀, which no charging curve does."
+      },
+      {
+        "q": "By convention the capacitor is taken as fully charged after about",
+        "options": ["1τ", "2τ", "3τ", "5τ"],
+        "answerIndex": 3,
+        "concept": "The 5τ convention",
+        "why": "At 5τ the capacitor has reached 99.3% of V₀, close enough that it is treated as full. At 1τ it is only 63.2% charged, which is why calling one time constant full is wrong — τ is a marker on the curve, not its end. At 3τ it is 95.0%, still short of the convention."
+      },
+      {
+        "q": "At t = 3τ the capacitor has charged to what fraction of V₀?",
+        "options": ["95.0%", "86.5%", "99.3%", "63.2%"],
+        "answerIndex": 0,
+        "concept": "The charging table",
+        "why": "The charging sequence is 63.2% at 1τ, 86.5% at 2τ, 95.0% at 3τ and 99.3% at 5τ. Picking 86.5% shifts you one time constant early, which is easy to do because the values crowd together near the top. The 99.3% is the 5τ figure that underwrites the fully-charged convention."
+      },
+      {
+        "q": "The charge stored on a capacitor is given by",
+        "options": ["Q = C/V", "Q = CV", "Q = V/C", "Q = ½CV"],
+        "answerIndex": 1,
+        "concept": "Q = CV",
+        "why": "Charge is proportional to voltage with capacitance as the constant of proportionality, so Q = CV in coulombs, farads and volts. The half appears in the energy formula E = ½CV², not in the charge, so ½CV mixes the two. Note that the capacitor is the device while capacitance is the property of it."
+      },
+      {
+        "q": "For parallel plates of area A separated by distance d in a dielectric of permittivity ε, the capacitance is",
+        "options": ["C = εd/A", "C = Ad/ε", "C = εA/d", "C = ε/(Ad)"],
+        "answerIndex": 2,
+        "concept": "Capacitance from construction",
+        "why": "C = εA/d: bigger plates store more charge at a given voltage, and moving the plates further apart reduces the capacitance. The inverted form εd/A gets both dependences backwards, predicting that pulling the plates apart would help. Only the separation sits in the denominator."
+      },
+      {
+        "q": "A graph gives τ = 6.0 s and the resistor is 3.0 kΩ. The experimental capacitance is",
+        "options": ["2.0 F", "0.5 × 10⁻³ F", "18 × 10⁻³ F", "2.0 × 10⁻³ F"],
+        "answerIndex": 3,
+        "concept": "C = τ/R with the resistance in ohms",
+        "why": "C = τ/R = 6.0 / 3000 = 2.0 × 10⁻³ F, or 2000 μF. Answering 2.0 F uses 3.0 rather than 3000 and lands a factor of a thousand out — always convert kΩ to Ω before dividing. The 18 × 10⁻³ multiplies instead of divides, which the τ = RC relation forbids."
+      },
+      {
+        "q": "The percentage error on your capacitance is",
+        "options": ["(theoretical − experimental)/theoretical × 100", "(experimental − theoretical)/experimental × 100", "(theoretical − experimental)/experimental × 100", "(theoretical + experimental)/theoretical × 100"],
+        "answerIndex": 0,
+        "concept": "Percentage error against the nominal value",
+        "why": "The difference is divided by the theoretical value, since that is the reference the measurement is being judged against. Dividing by the experimental value instead makes the denominator move with your own result, so two labs measuring the same thing get incomparable errors. Remember too that an electrolytic capacitor's nominal value is itself only ±20% reliable."
+      },
+      {
+        "q": "Increasing R while C is unchanged makes the capacitor",
+        "options": ["charge faster, because τ falls", "charge more slowly, because τ rises", "reach a higher final voltage", "reach V₀ in the same time"],
+        "answerIndex": 1,
+        "concept": "How τ responds to R",
+        "why": "τ = RC, so raising R raises τ and every stage of the charge takes proportionally longer. The final voltage is unaffected — the capacitor still ends at V₀, because charging stops when the p.d. matches the supply, not when the resistance runs out. Raising C at fixed R has exactly the same slowing effect."
+      },
+      {
+        "q": "Plotting ln(V₀ − V) against t gives a straight line of gradient",
+        "options": ["1/τ", "−τ", "−1/τ", "−RC"],
+        "answerIndex": 2,
+        "concept": "The linearised charging plot",
+        "why": "Taking logs of V₀ − V = V₀e^(−t/τ) gives ln(V₀ − V) = ln V₀ − t/τ, so the gradient is −1/τ and τ = −1/gradient. Answering −τ reads the gradient as the time constant itself rather than its reciprocal. Since τ = RC, the option −RC is the same mistake dressed differently."
+      },
+      {
+        "q": "The tangent drawn at the origin of the V–t curve cuts the line V = V₀ at",
+        "options": ["t = 0.632τ", "t = 5τ", "t = 2τ", "t = τ"],
+        "answerIndex": 3,
+        "concept": "Reading τ from the initial gradient",
+        "why": "The initial gradient is V₀/τ, so a straight line at that slope would reach V₀ after exactly one time constant — this is the second way of getting τ off the same graph. The 0.632 figure belongs to the other method, where you find 0.632V₀ on the V axis and trace across to the curve. At 5τ the real curve, not its tangent, is effectively at V₀."
+      },
+      {
+        "q": "Charging slows as time passes because",
+        "options": ["the p.d. across R falls, so the current falls", "the dielectric heats up and resists", "the capacitance falls as charge builds", "the supply voltage drops steadily"],
+        "answerIndex": 0,
+        "concept": "Why the approach to V₀ is exponential",
+        "why": "As V rises, less of the supply voltage is left across the resistor, so I = (V₀ − V)/R falls and charge arrives more slowly — that feedback is what makes the curve exponential rather than linear. The capacitance is a fixed property of the device and does not change as it charges. The supply holds V₀ steady throughout."
+      },
+      {
+        "q": "Voltmeter loading in this experiment",
+        "options": ["raises V₀ and lengthens τ", "lowers V₀ and shortens τ", "has no effect on either", "changes R but not τ"],
+        "answerIndex": 1,
+        "concept": "Why the voltmeter must have high resistance",
+        "why": "The meter sits in parallel with the capacitor, so its finite resistance offers a leakage path that bleeds charge away: the observed maximum is lower and the apparent time constant shorter. A voltmeter of very high resistance minimises this, which is why they are built that way. Leakage through the dielectric does the same thing for the same reason."
+      },
+      {
+        "q": "The energy stored on a charged capacitor is",
+        "options": ["CV²", "½QV²", "½CV²", "CV"],
+        "answerIndex": 2,
+        "concept": "Energy versus charge",
+        "why": "E = ½CV², with the half arising because the voltage climbed from zero to V as the charge went on. CV with no square is the charge Q, a different quantity in different units. The ½QV² form doubles up on the charge, since Q already equals CV."
+      }
+    ]
+  }
+}

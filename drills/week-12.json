@@ -1,0 +1,754 @@
+{
+  "week": 12,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "A pump's flow rate r(t) is in litres per minute and t is in minutes. What are the units of ∫₀¹⁰ r(t) dt?",
+        "options": ["Litres", "Litres per minute", "Litres per minute squared", "Minutes"],
+        "answerIndex": 0,
+        "concept": "Units of an accumulated rate",
+        "why": "Integrating a rate multiplies (units of r) by (units of t), so litres/min × min = litres — a total, not a rate. If you picked litres per minute you kept the rate's own units, which is the same slip as quoting r(10) instead of the accumulated amount."
+      },
+      {
+        "q": "A car moves with v(t) = 3t² + 2 in m/s. How far does it travel in the first 2 seconds?",
+        "options": ["14 m", "8 m", "12 m", "16 m"],
+        "answerIndex": 2,
+        "concept": "Distance as the definite integral of velocity",
+        "why": "∫₀²(3t² + 2)dt = [t³ + 2t]₀² = 8 + 4 = 12 m. 14 m is v(2), the speed at the end of the interval rather than the distance covered — reading the integrand at the upper limit is the standard wrong answer here. 16 m comes from wrongly integrating the constant 2 to 2t²."
+      },
+      {
+        "q": "For v(t) = 4t − 3 m/s with x(0) = 5 m, the displacement function x(t) is",
+        "options": ["2t² − 3t", "2t² − 3t + 5", "2t² − 3t − 5", "4t² − 3t + 5"],
+        "answerIndex": 1,
+        "concept": "Fixing the constant of an indefinite integral",
+        "why": "∫(4t − 3)dt = 2t² − 3t + C, and substituting t = 0 kills both t-terms, so x(0) = C = 5. Option 0 is the family with the constant simply dropped; the initial condition exists precisely to pin it. Note 4t integrates to 2t², not 4t²."
+      },
+      {
+        "q": "A body has v(t) = 2t − 6 m/s and x(0) = 10 m. What is its net displacement over the first 4 seconds?",
+        "options": ["2 m", "18 m", "−18 m", "−8 m"],
+        "answerIndex": 3,
+        "concept": "The constant cancels in a definite integral",
+        "why": "∫₀⁴(2t − 6)dt = [t² − 6t]₀⁴ = 16 − 24 = −8 m. The tempting 2 m is x(4) = 16 − 24 + 10, the body's position after 4 s — you carried the initial 10 in and subtracted it only once. Net displacement is a change, so the constant cancels: (F(4) + C) − (F(0) + C)."
+      },
+      {
+        "q": "In F = ∫ₐᵇ w·h(x)·L(x) dx the weight density of water is w = 9800. What is its unit?",
+        "options": ["N/m²", "N/m³", "N/m", "kg/m³"],
+        "answerIndex": 1,
+        "concept": "Unit of weight density ρg",
+        "why": "w = ρg = kg/m³ × m/s² = N/m³. N/m² is pascals, the unit of the pressure ρgh, not of the density that produces it — and the deck itself misprints it that way, so this is worth having straight. kg/m³ is ρ alone, without the g."
+      },
+      {
+        "q": "A rectangular sluice gate is 4 m deep and 5 m wide, its top level with the water surface. Evaluate F = ∫₀⁴ (9800)(x)(5) dx.",
+        "options": ["3.92 × 10⁵ N", "7.84 × 10⁵ N", "1.96 × 10⁵ N", "9.80 × 10⁴ N"],
+        "answerIndex": 0,
+        "concept": "Fluid force on a vertical face",
+        "why": "Pull out 9800 × 5 = 49000, then [x²/2]₀⁴ = 8, giving 49000 × 8 = 3.92 × 10⁵ N. 7.84 × 10⁵ N is what you get by forgetting to divide by the new power — writing [x²]₀⁴ = 16 instead of [x²/2]₀⁴ = 8 doubles every fluid-force answer."
+      },
+      {
+        "q": "The same dam face is rebuilt twice as wide, with the water depth unchanged. The fluid force on it is now",
+        "options": ["four times as large", "unchanged", "half as large", "twice as large"],
+        "answerIndex": 3,
+        "concept": "How F depends on width versus depth",
+        "why": "L(x) is a constant factor in F = ∫w·h(x)·L(x)dx, so doubling the width doubles the integral. Four times is what happens if you double the *depth* instead: depth appears both in h(x) and in the upper limit, so it enters as a square. Width is linear, depth is quadratic."
+      },
+      {
+        "q": "A 40 m chain of mass 0.5 kg/m hangs over a cliff and is pulled up. After x m have been pulled, the force needed is",
+        "options": ["4.9x N", "0.5(40 − x) N", "4.9(40 − x) N", "196 N"],
+        "answerIndex": 2,
+        "concept": "Building F(x) for a hanging chain",
+        "why": "The length still hanging is 40 − x, its mass is 0.5(40 − x) kg, and weight = mass × g gives 9.8 × 0.5 × (40 − x) = 4.9(40 − x). Option 1 is that same length left as a mass, with the 9.8 never applied; 196 N is the starting force treated as constant, which is exactly what forbids W = F × d."
+      },
+      {
+        "q": "Evaluate W = ∫₀⁴⁰ 4.9(40 − x) dx for that chain.",
+        "options": ["7840 J", "1960 J", "392 J", "3920 J"],
+        "answerIndex": 3,
+        "concept": "Work done by a variable force",
+        "why": "[4.9(40x − x²/2)]₀⁴⁰ = 4.9(1600 − 800) = 4.9 × 800 = 3920 J. 7840 J is 196 N × 40 m, the force-times-distance shortcut using the starting force — but the force falls to zero as the last link comes over the edge, so the true work is exactly half of that."
+      },
+      {
+        "q": "MR = 40 + 6Q and TR(1) = 50. Find the total revenue function TR(Q).",
+        "options": ["40Q + 3Q² + 50", "40Q + 3Q² + 7", "40Q + 6Q² + 7", "40Q + 3Q² − 7"],
+        "answerIndex": 1,
+        "concept": "Recovering a total from a marginal",
+        "why": "∫(40 + 6Q)dQ = 40Q + 3Q² + C, then TR(1) = 40 + 3 + C = 43 + C = 50, so C = 7. Option 0 copies the given 50 straight into C — an initial condition is an equation to solve, not a value to paste. Note 6Q integrates to 3Q², not 6Q²."
+      },
+      {
+        "q": "The rate of investment is I(t) = 8√t. Find the capital growth between the 1st and the 4th years.",
+        "options": ["37.3", "8.0", "5.3", "56.0"],
+        "answerIndex": 0,
+        "concept": "Capital growth as ∫I(t)dt",
+        "why": "Rewrite as 8t^(1/2), integrate to (16/3)t^(3/2), then (16/3)(4^(3/2) − 1^(3/2)) = (16/3)(8 − 1) = 112/3 ≈ 37.3. The 8.0 is I(4) − I(1) = 16 − 8: you substituted into the integrand instead of the antiderivative. 5.3 is the stranded coefficient 16/3."
+      },
+      {
+        "q": "D(Q) = 90 − 5Q and S(Q) = Q² + 24. What is the equilibrium quantity Q₀?",
+        "options": ["66", "11", "6", "−11"],
+        "answerIndex": 2,
+        "concept": "Equilibrium from D(Q) = S(Q)",
+        "why": "90 − 5Q = Q² + 24 gives Q² + 5Q − 66 = 0, i.e. (Q + 11)(Q − 6) = 0, so Q = 6 or Q = −11. A negative quantity is meaningless, so take the positive root. Picking 11 is taking the size of the rejected root; 66 is the constant term of the quadratic."
+      },
+      {
+        "q": "With Q₀ = 6 and P₀ = 60 for D(Q) = 90 − 5Q, evaluate the consumer surplus.",
+        "options": ["180", "90", "45", "360"],
+        "answerIndex": 1,
+        "concept": "Consumer surplus integral",
+        "why": "CS = ∫₀⁶(90 − 5Q − 60)dQ = ∫₀⁶(30 − 5Q)dQ = [30Q − 2.5Q²]₀⁶ = 180 − 90 = 90. The 180 is the first term alone, with the −5Q piece never integrated; that missing 2.5Q² is the whole area between the demand line and the price line that you are not entitled to."
+      },
+      {
+        "q": "A resource is consumed at 20e^(0.04t) tonnes per year, with nothing consumed at t = 0. The cumulative model is",
+        "options": ["C(t) = 0.8e^(0.04t) − 0.8", "C(t) = 20e^(0.04t) − 20", "C(t) = 500e^(0.04t) + 500", "C(t) = 500e^(0.04t) − 500"],
+        "answerIndex": 3,
+        "concept": "Cumulative model from an exponential rate",
+        "why": "∫e^(kt)dt = e^(kt)/k, so 20/0.04 = 500 and C(t) = 500e^(0.04t) + c; then C(0) = 0 gives 500 + c = 0, c = −500. Option 0 multiplies by k (20 × 0.04) instead of dividing — divide by k, never multiply. Option 2 has the sign of c wrong, so C(0) would be 1000."
+      },
+      {
+        "q": "Using C(t) = 500e^(0.04t) − 500, when does the cumulative total reach 1500 tonnes?",
+        "options": ["After about 34.7 years", "After about 27.5 years", "After about 347 years", "After about 3.5 years"],
+        "answerIndex": 0,
+        "concept": "Solving an accumulation model with logs",
+        "why": "1500 = 500e^(0.04t) − 500 gives e^(0.04t) = 4, so t = ln 4 / 0.04 = 1.386/0.04 ≈ 34.7. The 27.5 comes from ln 3 / 0.04 — forgetting to add the 500 back before dividing. 347 years is dividing by 0.004 instead of 0.04, the misprint the deck itself makes."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "A 50 Hz supply feeds an ideal transformer with N₂/N₁ = 10. What is the frequency of the secondary output?",
+        "options": ["500 Hz", "5 Hz", "50 Hz", "100 Hz"],
+        "answerIndex": 2,
+        "concept": "Frequency is unchanged by a transformer",
+        "why": "All currents and voltages in a transformer have the same frequency as the AC source. The turns ratio scales voltage and current, never frequency, so 500 Hz is the turns ratio applied to the wrong quantity entirely."
+      },
+      {
+        "q": "A transformer wound with 250 turns on the primary and 1000 on the secondary is fed 110 V rms. What comes out?",
+        "options": ["440 V", "27.5 V", "110 V", "1760 V"],
+        "answerIndex": 0,
+        "concept": "The transformer equation V₂/V₁ = N₂/N₁",
+        "why": "V₂ = V₁ × N₂/N₁ = 110 × 1000/250 = 110 × 4 = 440 V. The 27.5 V is 110 ÷ 4, the ratio inverted — the primary is always the side connected to the source, here the 110 V side, and N₂ > N₁ makes this a step-up."
+      },
+      {
+        "q": "That same transformer delivers 2.0 A to its load. What current does it draw from the 110 V supply?",
+        "options": ["0.50 A", "2.0 A", "4.0 A", "8.0 A"],
+        "answerIndex": 3,
+        "concept": "Power in equals power out",
+        "why": "I₁V₁ = I₂V₂ gives I₁ = 2.0 × 440/110 = 8.0 A. The 0.50 A applies the turns ratio the same way round as for voltage; currents go the opposite way. Voltage stepped up by 4 means current stepped down by 4, so the primary carries the larger current."
+      },
+      {
+        "q": "The secondary of an ideal transformer with N₂/N₁ = 5 carries a 100 Ω load. What resistance does the source see?",
+        "options": ["20 Ω", "4 Ω", "500 Ω", "2500 Ω"],
+        "answerIndex": 1,
+        "concept": "Resistance transformation with the squared ratio",
+        "why": "V₁/I₁ = R/(N₂/N₁)² = 100/25 = 4 Ω. The 20 Ω divides by 5 rather than by 5² — the turns ratio enters squared, and applying it to the first power is the commonest error in this whole topic."
+      },
+      {
+        "q": "The turns ratio N₂/N₁ of a transformer is doubled with the same load. The resistance seen from the primary is multiplied by",
+        "options": ["¼", "½", "2", "4"],
+        "answerIndex": 0,
+        "concept": "Apparent resistance scales as the inverse square of the turns ratio",
+        "why": "R_apparent = R/(N₂/N₁)², so doubling the ratio divides the apparent resistance by 4. Picking ½ treats the ratio as first-power; picking 4 also drops the ratio into the numerator, which would make a step-up transformer's load look bigger, not smaller."
+      },
+      {
+        "q": "Equation 2, ε₂/ε₁ = N₂/N₁, carries no minus sign. Why not?",
+        "options": ["The minus sign was dropped for convenience and should be restored", "Lenz's law applies only to the primary winding", "Dividing the two emfs cancels both minus signs along with dΦ_B/dt", "Magnetic flux is a scalar, so no sign can ever appear"],
+        "answerIndex": 2,
+        "concept": "Why the ratio of the two Faraday emfs is sign-free",
+        "why": "Both emfs are −N dΦ_B/dt with the same shared flux, so dividing one by the other cancels the derivative and both minus signs. No sign was lost, so there is nothing to restore. The scalar nature of Φ_B is true but is not what removes the signs — the division is."
+      },
+      {
+        "q": "In the deck's derivation, which quantity is identical for the primary and the secondary?",
+        "options": ["The total induced emf", "The induced emf per turn", "The number of turns", "The current in the winding"],
+        "answerIndex": 1,
+        "concept": "Same flux per turn in both windings",
+        "why": "One changing flux threads every turn of both coils, so the emf *per turn* is the same in each — that is exactly what makes ε₂/ε₁ = N₂/N₁. The total emfs are not equal; they differ by precisely the turns ratio, which is the whole point of the device."
+      },
+      {
+        "q": "Which energy loss does this deck actually name in a real transformer?",
+        "options": ["Hysteresis loss", "Copper (I²R) loss in the windings", "Flux leakage from the core", "Eddy-current loss in the core"],
+        "answerIndex": 3,
+        "concept": "The one loss mechanism in the deck",
+        "why": "Eddy currents are the only loss the deck names, and lamination — thin insulated sheets — is the only cure it gives. Hysteresis and copper loss are real transformer losses but appear nowhere in this material, so do not attribute lamination to them."
+      },
+      {
+        "q": "What power efficiency does the deck quote for most real transformers?",
+        "options": ["50% to 70%", "75% to 85%", "90% to 99%", "99.9% to 100%"],
+        "answerIndex": 2,
+        "concept": "Real transformer efficiency",
+        "why": "The figure quoted is 90% to 99%. Note it is only quoted, never calculated with — there is no efficiency formula in this week's material. 99.9% to 100% describes the *ideal* transformer, which is an assumption, not a measurement."
+      },
+      {
+        "q": "An ideal transformer is connected to a steady 12 V DC supply. What appears across the secondary?",
+        "options": ["12 V, unchanged", "0 V", "12 V × N₂/N₁", "12 V × N₁/N₂"],
+        "answerIndex": 1,
+        "concept": "Transformers need a changing flux",
+        "why": "The secondary emf is −N₂ dΦ_B/dt, and steady DC gives a steady core flux, so dΦ_B/dt = 0 and the output is zero. Applying the turns ratio anyway is the trap: equation 3 was derived from a time derivative and simply has nothing to act on here."
+      },
+      {
+        "q": "Besides changing voltages, what other use does the closing summary slide give for transformers?",
+        "options": ["Isolating electrical circuits from one another", "Converting alternating current into direct current", "Raising the frequency of the supply", "Storing energy for release at peak demand"],
+        "answerIndex": 0,
+        "concept": "Isolation as a stated use",
+        "why": "The summary slide adds that transformers isolate circuits from each other, useful for safety. Converting AC to DC is a rectifier's job, not a transformer's — a transformer needs the alternation to work at all, so it can never remove it."
+      },
+      {
+        "q": "A 240 V rms line draws 4.0 A through an ideal transformer with N₂/N₁ = 3. What is the load's own resistance?",
+        "options": ["20 Ω", "60 Ω", "180 Ω", "540 Ω"],
+        "answerIndex": 3,
+        "concept": "Apparent versus actual resistance",
+        "why": "V₁/I₁ = 240/4.0 = 60 Ω is what the source *appears* to be driving; the load's real resistance is R = (V₁/I₁)(N₂/N₁)² = 60 × 9 = 540 Ω. Stopping at 60 Ω answers a different question, and 180 Ω multiplies by 3 rather than 3²."
+      },
+      {
+        "q": "A 1200 W appliance rated at 200 V is run from a 100 V line through an ideal transformer. What current does it draw from the 100 V line?",
+        "options": ["12 A", "6.0 A", "24 A", "3.0 A"],
+        "answerIndex": 0,
+        "concept": "Line current is the primary current",
+        "why": "The line is the primary, so I₁ = P/V₁ = 1200/100 = 12 A. The 6.0 A is 1200/200, the current in the appliance itself — both numbers are correct, but the question names the 100 V line, and reading which current is wanted is half the mark."
+      },
+      {
+        "q": "In that same set-up, what current flows in the appliance itself?",
+        "options": ["12 A", "24 A", "6.0 A", "2.0 A"],
+        "answerIndex": 2,
+        "concept": "Secondary current from P = V₂I₂",
+        "why": "I₂ = P/V₂ = 1200/200 = 6.0 A. The 12 A is the line current on the primary side. Check with power: 12 × 100 = 1200 W and 6.0 × 200 = 1200 W, and the current ratio 12/6 = 2 is the inverse of the voltage ratio 200/100."
+      },
+      {
+        "q": "An ideal transformer has N₁ = 600 turns and N₂ = 150 turns. It is",
+        "options": ["step-up, with V₂ four times V₁", "step-up, with V₂ one quarter of V₁", "step-down, with V₂ four times V₁", "step-down, with V₂ one quarter of V₁"],
+        "answerIndex": 3,
+        "concept": "Step-up and step-down defined by turns",
+        "why": "N₂ < N₁ is step-down by definition, and V₂/V₁ = N₂/N₁ = 150/600 = ¼. The two halves have to agree: a step-down transformer cannot raise the voltage, so options pairing 'step-down' with 'four times' are self-contradictory even before you do the division."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "Which is the last phase of the software testing life cycle?",
+        "options": ["Test execution", "Test cycle closure", "Acceptance testing", "Test environment setup"],
+        "answerIndex": 1,
+        "concept": "Order of the six STLC phases",
+        "why": "The six run requirement analysis → test planning → test case development → test environment setup → test execution → test cycle closure. Acceptance testing is tempting because it sounds final, but it is a testing *method*, not an STLC phase — do not mix the two lists."
+      },
+      {
+        "q": "Which STLC phase decides what is to be tested?",
+        "options": ["Test planning", "Test case development", "Test environment setup", "Requirement analysis"],
+        "answerIndex": 3,
+        "concept": "What requirement analysis owns",
+        "why": "Requirement analysis decides what is to be tested, through document review, stakeholder interviews and identifying issues that could affect testing. Test planning is the neighbouring phase and decides *how* — strategy, cost, duration and roles — not what."
+      },
+      {
+        "q": "A phase's exit point is reached only when",
+        "options": ["all the objectives of that phase have been achieved", "the time allowed for the phase has run out", "the next phase's entry point has been defined", "the phase's first deliverable has been signed off"],
+        "answerIndex": 0,
+        "concept": "Entry and exit points",
+        "why": "The entry point is merely where a phase begins, but the exit point requires that every objective of the phase has been achieved. Treating the schedule as the exit condition is the error behind moving into execution with test cases still unreviewed."
+      },
+      {
+        "q": "Assigning roles to team members belongs to which phase?",
+        "options": ["Requirement analysis", "Test case development", "Test planning", "Test environment setup"],
+        "answerIndex": 2,
+        "concept": "What test planning owns",
+        "why": "Test planning fixes strategy, cost and duration, identifies objectives, environment, cases and deliverables, and assigns roles. Test case development is the neighbour that only writes and reviews the cases themselves — people, money and time are all decided one phase earlier."
+      },
+      {
+        "q": "Specifying the software and hardware the tests will run on is the job of",
+        "options": ["test planning", "requirement analysis", "test execution", "test environment setup"],
+        "answerIndex": 3,
+        "concept": "Test environment setup versus test planning",
+        "why": "Setup specifies the software and hardware requirements and does the actual test data and environment setup. Planning only *identifies* the testing environment as one of its objectives — identifying it and specifying and building it are two different phases."
+      },
+      {
+        "q": "Alongside debuggers and trace tools, which third category of debugging tool does the deck name?",
+        "options": ["Linters", "Profilers", "Compilers", "Version control systems"],
+        "answerIndex": 1,
+        "concept": "Debugging tool categories",
+        "why": "The three named categories are debuggers, trace tools and profilers — a profiler tells you which routine consumes the running time. Linters are real tools but analyse code without running it, and are not in this list."
+      },
+      {
+        "q": "Which of these is NOT one of the debugging methods the deck lists?",
+        "options": ["Usability testing", "Code inspection", "Logging", "Monitoring"],
+        "answerIndex": 0,
+        "concept": "The debugging-methods list",
+        "why": "The methods are code inspection, monitoring, logging, unit testing, integration testing, system testing and debugging tools. Usability testing is a non-functional *testing* method — it observes users, which finds symptoms rather than locating causes in the code."
+      },
+      {
+        "q": "Which set names the four functional testing methods?",
+        "options": ["Unit, integration, usability, acceptance", "Unit, system, security, acceptance", "Unit, integration, system, acceptance", "Integration, system, performance, acceptance"],
+        "answerIndex": 2,
+        "concept": "Functional versus non-functional taxonomy",
+        "why": "Functional testing checks that the program does the right thing: unit, integration, system, acceptance. Usability, security and performance are the non-functional side, which asks how *well* it behaves — each wrong option smuggles exactly one of those in."
+      },
+      {
+        "q": "Testing for data confidentiality, integrity and availability is which method?",
+        "options": ["Security testing", "Acceptance testing", "System testing", "Compatibility testing"],
+        "answerIndex": 0,
+        "concept": "Security testing",
+        "why": "Security testing hunts vulnerabilities and flaws in data security, availability, confidentiality and integrity. System testing also examines the whole product, but against technical and functional requirements — it asks whether the software works, not whether it can be attacked."
+      },
+      {
+        "q": "Running the same site on Chrome, Safari and Edge, and on Windows and Android, is",
+        "options": ["system testing", "performance testing", "usability testing", "compatibility testing"],
+        "answerIndex": 3,
+        "concept": "Compatibility testing",
+        "why": "Compatibility testing varies the environment — browsers, platforms, operating systems — with the software held fixed. System testing varies nothing: it tests the integrated whole in one environment against the requirements, so the moving part here is the giveaway."
+      },
+      {
+        "q": "Which method finds its issues by observing users while they use the software?",
+        "options": ["Acceptance testing", "Performance testing", "Usability testing", "Grey box testing"],
+        "answerIndex": 2,
+        "concept": "Usability testing",
+        "why": "Usability testing finds issues with the help of users, who are observed while using the software. Performance testing is its neighbour on the non-functional list but measures the *system* — network delays, database and client-side processing under load — not the people."
+      },
+      {
+        "q": "Top-down integration testing exercises which modules first?",
+        "options": ["The lower-level modules", "The higher-level modules", "The modules with the most defects", "All the modules at once"],
+        "answerIndex": 1,
+        "concept": "Top-down versus bottom-up integration",
+        "why": "Top-down tests higher-level modules first; bottom-up tests lower-level ones first. Testing everything at once is not integration testing at all — that is system testing, which comes after the parts are already integrated."
+      },
+      {
+        "q": "Which testing level does the deck list for black box testing but NOT for white box?",
+        "options": ["Unit testing", "Integration testing", "System testing", "Acceptance testing"],
+        "answerIndex": 3,
+        "concept": "Which levels each visibility class covers",
+        "why": "Black box covers integration, system and acceptance; white box covers unit, integration and system. Acceptance testing is the one only black box reaches. Unit testing is the mirror-image trap — it is white box only, since it needs the internals."
+      },
+      {
+        "q": "Which limitation does the deck give for unit testing?",
+        "options": ["It is practically impossible to test all the execution paths", "It cannot be automated, so every path must be run by hand", "It requires the whole system to be integrated before it starts", "It must be carried out by the end users rather than developers"],
+        "answerIndex": 0,
+        "concept": "Limits of unit testing",
+        "why": "Unit testing checks execution paths inside a function, but all the paths cannot be covered and the number and type of test data are limited — which is why passing every unit test never proves a function correct. Needing integration first describes integration testing, its neighbour on the list."
+      },
+      {
+        "q": "A field accepts whole quantities from 1 to 20 inclusive. Which set is the boundary value analysis?",
+        "options": ["1 and 20 only", "0, 1, 2, 19, 20, 21", "1, 10 and 20", "Any three values between 1 and 20"],
+        "answerIndex": 1,
+        "concept": "Boundary value analysis",
+        "why": "Defects cluster at the edges, so you test just below, at, and just above each edge: 0, 1, 2 and 19, 20, 21. Testing 1 and 20 only sits *on* the edges and misses the off-by-one just outside them; option 3 is equivalence partitioning, which takes one representative per class."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "WebAssembly code is compiled from which languages, as the deck lists them?",
+        "options": ["Python, Java and Go", "JavaScript, PHP and Ruby", "C++, Java and Python", "C++, Rust and TypeScript"],
+        "answerIndex": 3,
+        "concept": "Wasm source languages",
+        "why": "The three named are C++, Rust and TypeScript, compiled into a binary the browser executes directly. JavaScript is not a Wasm source language — it is the interpreted language whose performance limits Wasm exists to fix, and the two complement each other."
+      },
+      {
+        "q": "Which Wasm advantage does 'runs in a sandboxed environment' describe?",
+        "options": ["Cross-platform compatibility", "Security", "Speed and performance", "Interoperability"],
+        "answerIndex": 1,
+        "concept": "Wasm's three advantages",
+        "why": "The three advantages are speed/performance, cross-platform compatibility and security, and the sandbox is the security one — its example is running untrusted code safely. Cross-platform compatibility is the neighbouring claim: supported by all major browsers, desktop and mobile."
+      },
+      {
+        "q": "Porting the game 'Cut the Rope' to run in the browser is the deck's example of which Wasm use case?",
+        "options": ["AR and VR", "Scientific simulations", "Gaming", "Video and image processing"],
+        "answerIndex": 2,
+        "concept": "Wasm use cases and their examples",
+        "why": "'Cut the Rope' is the named gaming example. Each use case has its own worked example: a virtual museum tour for AR/VR, a climate-change model for scientific simulation, an online photo editor for video and image processing. Learn the example with the category."
+      },
+      {
+        "q": "In serverless architecture, who manages the infrastructure?",
+        "options": ["The cloud provider", "The application developer", "The end user's browser", "Nobody — there are no servers"],
+        "answerIndex": 0,
+        "concept": "What 'serverless' actually means",
+        "why": "The cloud provider manages the infrastructure, so developers only write code. 'No servers exist' is the name-driven trap: the servers are still there, you simply never provision or scale them yourself, which is where the cost-efficiency comes from."
+      },
+      {
+        "q": "Which of these is NOT one of the deck's named real-world progressive web apps?",
+        "options": ["Flipkart", "Spotify", "Twitter Lite", "Starbucks"],
+        "answerIndex": 1,
+        "concept": "The named PWA examples",
+        "why": "The four named are Twitter Lite, Flipkart, Starbucks and Trivago. Spotify is a plausible fifth but is not on the list — this material is a terminology-and-examples deck, so the exact roster of names is what gets marked."
+      },
+      {
+        "q": "Functions that respond to HTTP requests, database changes and file uploads illustrate which serverless key concept?",
+        "options": ["Stateless", "FaaS", "Automatic scaling", "Event-driven"],
+        "answerIndex": 3,
+        "concept": "The three serverless key concepts",
+        "why": "Event-driven names *what triggers* the code: HTTP requests, database changes, file uploads. FaaS names what runs — code executed in response to events — and stateless names what must not be kept between invocations. Automatic scaling is a benefit, not a key concept."
+      },
+      {
+        "q": "Paying only for the compute time actually used is which serverless benefit?",
+        "options": ["Cost-efficiency", "Automatic scaling", "Faster development", "Scalability"],
+        "answerIndex": 0,
+        "concept": "Serverless benefits and their examples",
+        "why": "Cost-efficiency is paying only for compute actually consumed, with a start-up avoiding server provisioning as its example. Scalability and automatic scaling are about handling load — a holiday traffic surge, sensor data from thousands of devices — not about the bill."
+      },
+      {
+        "q": "A spam filter trained on emails already marked spam or not spam is an example of",
+        "options": ["unsupervised learning", "natural language processing", "supervised learning", "computer vision"],
+        "answerIndex": 2,
+        "concept": "Supervised versus unsupervised learning",
+        "why": "The emails carry labels, so the system is trained on labelled data to classify — that is supervised learning, and the spam filter is its named example. Unsupervised learning works on *unlabelled* data to find groupings, whose example is clustering customers into segments."
+      },
+      {
+        "q": "Which nesting of the three terms is correct?",
+        "options": ["AI is a subset of machine learning, which is a subset of deep learning", "Deep learning is a subset of machine learning, which is a subset of AI", "Machine learning is a subset of deep learning, which is a subset of AI", "AI, machine learning and deep learning are three separate fields"],
+        "answerIndex": 1,
+        "concept": "AI versus ML versus deep learning",
+        "why": "AI is the broad concept, ML is a subset of AI that learns from data, and deep learning is a subset of ML using many-layered neural networks. Option 0 inverts the whole nesting; option 2 swaps the inner two, making the narrowest term the widest."
+      },
+      {
+        "q": "How does the deck define deep learning?",
+        "options": ["machine learning using neural networks with many layers", "machine learning trained only on unlabelled data", "any system that interprets and generates human language", "any AI model that runs inside the web browser"],
+        "answerIndex": 0,
+        "concept": "Definition of deep learning",
+        "why": "Deep learning is the subset of ML built on neural networks with many layers, with image recognition as its example. Training on unlabelled data defines unsupervised learning, and interpreting and generating human language defines NLP — both are separate rows of the same table."
+      },
+      {
+        "q": "Facial recognition in a security system is the deck's example of",
+        "options": ["natural language processing", "unsupervised learning", "supervised learning", "computer vision"],
+        "answerIndex": 3,
+        "concept": "Computer vision versus NLP",
+        "why": "Computer vision interprets visual information from images and video, and facial recognition is its named example. NLP is the language counterpart, whose example is a chatbot answering queries — the split is visual input versus language input."
+      },
+      {
+        "q": "Which machine learning framework does the deck attribute to Google?",
+        "options": ["PyTorch", "Scikit-Learn", "TensorFlow", "Microsoft Azure ML"],
+        "answerIndex": 2,
+        "concept": "ML frameworks and their owners",
+        "why": "TensorFlow is the open-source framework by Google. PyTorch is named for flexibility and dynamic computation, Scikit-Learn is a Python library, and Azure ML is Microsoft's cloud platform — Google's other entry is the Cloud AI Platform, not PyTorch."
+      },
+      {
+        "q": "Google's RankBrain is the deck's example of machine learning applied to",
+        "options": ["search engines", "personalisation", "content generation", "fraud detection"],
+        "answerIndex": 0,
+        "concept": "ML applications and their named examples",
+        "why": "RankBrain is the search-engine example. Personalisation is Netflix recommendations, content generation is GPT-3, and fraud detection is banks spotting unusual spending — Google appears in more than one place in this week's material, so pair the product with the application, not the company."
+      },
+      {
+        "q": "Making every interactive element reachable by keyboard satisfies which WCAG principle?",
+        "options": ["Perceivable", "Operable", "Understandable", "Robust"],
+        "answerIndex": 1,
+        "concept": "The POUR principles",
+        "why": "Operable means navigable by various inputs including keyboard and voice, and keyboard access is its example. Perceivable is about being able to *sense* the content — alt text for screen readers — and Robust is about working with current and future technologies, whose example is semantic HTML."
+      },
+      {
+        "q": "A11Y is a numeronym standing for",
+        "options": ["availability", "analytics", "allyship", "accessibility"],
+        "answerIndex": 3,
+        "concept": "A11Y and WCAG",
+        "why": "A11Y is 'accessibility' with the eleven middle letters replaced by the number. Availability is a genuine term in this week's material but belongs to security testing's list, not to web accessibility — and WCAG is the separate acronym for the guidelines themselves."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "How does the deck define social vices?",
+        "options": ["Actions that stray from accepted moral norms", "Any act made punishable by imprisonment", "Behaviour learned from criminal associates", "Offences committed only by young people"],
+        "answerIndex": 0,
+        "concept": "Definition of social vices",
+        "why": "Social vices are actions that stray from accepted moral norms, and they split into crime (violating laws) and deviance (violating norms and rules). Defining them by imprisonment covers only the crime half and would leave out most of the deck's own list."
+      },
+      {
+        "q": "Which theory holds that deviance often follows from a deviant-like label being applied to a person?",
+        "options": ["Conflict Theory", "Structural Functionalism", "Social Strain Typology", "Labelling Theory"],
+        "answerIndex": 3,
+        "concept": "Theories of deviance",
+        "why": "Labelling Theory says deviance is often a consequence of having a deviant-like label applied. Conflict Theory is the near neighbour on the same list but blames material inequality, and Structural Functionalism claims deviance plays a constructive role in defining what is acceptable."
+      },
+      {
+        "q": "Social Strain Typology bases deviance on two criteria. Which pair?",
+        "options": ["A person's material inequality and their access to weapons", "The deviant label applied and the authority of the person applying it", "A person's adherence to cultural goals and their belief in attaining them", "The cost and risk of the act weighed against the benefit expected"],
+        "answerIndex": 2,
+        "concept": "Social Strain Typology's two criteria",
+        "why": "The two criteria are a person's motivations or adherence to cultural goals, and their belief in how to attain those goals. Weighing cost and risk against benefit is Rational Choice Theory — and note that is a theory of *crime*, not of deviance."
+      },
+      {
+        "q": "Which theory of crime says offenders weigh cost and risk against the benefits before acting?",
+        "options": ["Social Learning Theory", "Rational Choice Theory", "Strain Theory", "Conflict Theory"],
+        "answerIndex": 1,
+        "concept": "Theories of crime",
+        "why": "Rational Choice Theory has criminals weighing cost and risk against benefit. Strain Theory, its neighbour on the crime list, says social structures pressure citizens into crime — and Conflict Theory is not on the crime list at all; it is one of the four deviance theories."
+      },
+      {
+        "q": "Criminal behaviour acquired by observing and imitating others is the claim of",
+        "options": ["Strain Theory", "Rational Choice Theory", "Labelling Theory", "Social Learning Theory"],
+        "answerIndex": 3,
+        "concept": "Social Learning Theory",
+        "why": "Social Learning Theory holds that criminal behaviour is acquired by observing and imitating others. Labelling Theory is the tempting one because it also involves other people, but there the others *apply a label* to you rather than model behaviour you copy."
+      },
+      {
+        "q": "Which trio are the deck's three theories of crime?",
+        "options": ["Rational Choice, Strain, Social Learning", "Rational Choice, Conflict, Labelling", "Strain, Structural Functionalism, Labelling", "Social Strain Typology, Conflict, Social Learning"],
+        "answerIndex": 0,
+        "concept": "Separating the crime list from the deviance list",
+        "why": "The three crime theories are Rational Choice, Strain and Social Learning; the four deviance theories are Structural Functionalism, Social Strain Typology, Conflict and Labelling. Watch the near-identical names: Strain Theory is crime, Social Strain Typology is deviance."
+      },
+      {
+        "q": "When was the Pirates Confraternity founded?",
+        "options": ["The late 1940s", "The early 1950s", "The early 1960s", "The late 1970s"],
+        "answerIndex": 1,
+        "concept": "Origin of campus cultism",
+        "why": "It was founded in the early 1950s at the University of Ibadan, as a social group with patriotic and philanthropic beliefs. The early 1960s is the tempting alternative because it is when Nigeria became independent, but the confraternity predates that."
+      },
+      {
+        "q": "Which was NOT one of the Pirates Confraternity's three stated goals?",
+        "options": ["To resist foreign norms nonviolently but intellectually", "To resurrect the period of chivalry", "To protect members from victimisation by lecturers", "To find a lasting solution to tribalism and ethnicity"],
+        "answerIndex": 2,
+        "concept": "The founding goals versus today's motives",
+        "why": "The three goals were resisting foreign norms intellectually, resurrecting chivalry, and solving tribalism and ethnicity. Protection from victimisation by lecturers appears in the deck's separate list of reasons students join cults *now* — that list describes a later degeneration, not the founding aims."
+      },
+      {
+        "q": "Each of the secret cults operating today is described as having",
+        "options": ["a written constitution filed with the university", "a single recognised national leader", "no fixed membership from term to term", "an elaborate hierarchy, insignia and distinct attire"],
+        "answerIndex": 3,
+        "concept": "Structure of present-day cults",
+        "why": "Each of the roughly 45 cults has an elaborate hierarchy, insignia and distinct attire. The hierarchy is internal to each group, which is why 'a single national leader' is wrong — the point is that each cult is separately organised, not that they share one command."
+      },
+      {
+        "q": "Where does the deck say cultists commonly hold their meetings?",
+        "options": ["Cemeteries, valleys and abandoned buildings", "Lecture halls and laboratories after hours", "Student union offices and campus car parks", "Off-campus rented hostels and lodges only"],
+        "answerIndex": 0,
+        "concept": "Activities of cultists",
+        "why": "The named meeting places are cemeteries, valleys and abandoned buildings — 'odd places' chosen for concealment. The residence question is separate: hosting a meeting in a building belonging to you is the offence carrying three years, not the usual venue."
+      },
+      {
+        "q": "How does the deck define kidnapping?",
+        "options": ["Using weapons to steal from individuals, homes or vehicles", "Detaining a lawfully arrested person beyond the legal time", "Unlawful abduction and detention for ransom, gain or revenge", "Moving people across an international border for forced labour"],
+        "answerIndex": 2,
+        "concept": "Definition of kidnapping",
+        "why": "Kidnapping is unlawful abduction and detention, usually for financial gain or motives such as ransom or revenge. Option 0 is the deck's definition of armed robbery — weapons used to steal — and human trafficking appears only as one of kidnapping's ten listed *effects*."
+      },
+      {
+        "q": "How many causes of kidnapping does the deck name, and what are they?",
+        "options": ["Six, including proliferation of firearms", "Two — unemployment and the political factor", "Ten, one for each of the listed effects", "Three — unemployment, corruption and weak policing"],
+        "answerIndex": 1,
+        "concept": "Causes of kidnapping",
+        "why": "Only two causes are named: unemployment (the major one, with graduates job-hunting three or more years) and the political factor. Six causes including proliferation of firearms belongs to armed robbery, and ten is the count of kidnapping's *effects*, not its causes."
+      },
+      {
+        "q": "What do prison records give for armed robbery cases in 2013 and 2014?",
+        "options": ["11,858 falling to 10,249", "10,249 rising to 11,858", "838 rising to 4,600", "4,600 falling to 838"],
+        "answerIndex": 0,
+        "concept": "Armed robbery figures",
+        "why": "Armed robbery cases fell from 11,858 in 2013 to 10,249 in 2014. The 838 and 4,600 are the kidnapping figures for 2018 and 2022, which *rose*. Remember the direction with the crime: kidnapping up, armed robbery down."
+      },
+      {
+        "q": "Which of these is listed as a CAUSE of armed robbery rather than an effect?",
+        "options": ["Erosion of trust", "Psychological impact", "Disruption of daily life", "Proliferation of firearms"],
+        "answerIndex": 3,
+        "concept": "Causes versus effects of armed robbery",
+        "why": "The six causes include proliferation of firearms, alongside socio-economic factors, corruption, weak law enforcement, drug abuse and societal factors. Erosion of trust, psychological impact and disruption of daily life are three of the five *effects* — all real entries, just on the other list."
+      },
+      {
+        "q": "Which agency does the summary name as the government's anti-corruption body?",
+        "options": ["The NDLEA", "The EFCC", "The NSCDC", "The Nigeria Police Force"],
+        "answerIndex": 1,
+        "concept": "Government response to social vices",
+        "why": "The Economic and Financial Crimes Commission is named as the body set up to fight corruption. The NDLEA handles drugs and the NSCDC civil defence — both are genuine agencies, but the summary attaches only the EFCC to corruption."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "Grasping not only the words spoken but the emotions, intentions and context behind them is which benefit?",
+        "options": ["Conflict Resolution", "Problem Solving", "Enhanced Understanding", "Efficient information processing"],
+        "answerIndex": 2,
+        "concept": "The three benefits of active listening",
+        "why": "Enhanced Understanding is grasping not only the words spoken but the underlying emotions, intentions and context. Problem Solving is the near neighbour, but it is about fully comprehending the *details* of a problem in order to offer informed solutions."
+      },
+      {
+        "q": "Acknowledging each other's perspectives to find common ground is which benefit?",
+        "options": ["Enhanced Understanding", "Conflict Resolution", "Problem Solving", "Improved retention"],
+        "answerIndex": 1,
+        "concept": "Conflict Resolution",
+        "why": "Conflict Resolution is described as a key skill: it lets individuals acknowledge each other's perspectives, a crucial step in finding common ground and resolving disputes. Improved retention is real but comes from the closing summary line, not from the three named benefits."
+      },
+      {
+        "q": "Which meaning does the deck give for the abbreviation 'w/'?",
+        "options": ["without", "why", "which", "with"],
+        "answerIndex": 3,
+        "concept": "Abbreviations and symbols in notes",
+        "why": "The two worked examples are 'w/' for 'with' and '→' for 'leads to'. 'Without' is the plausible near-miss because it is the same root word, but the deck's example is the shorter one — and the point of any such system is that it must be consistent for you."
+      },
+      {
+        "q": "What caveat does the deck attach to abbreviations and symbols?",
+        "options": ["They may not be tolerated in formal writing", "They must be agreed with the lecturer first", "They should be expanded during the lecture itself", "They can only be used in the Cornell method"],
+        "answerIndex": 0,
+        "concept": "Personal notes versus formal writing",
+        "why": "Your notes are a personal document, not something to be turned in, and abbreviations and symbols may not be tolerated in formal writing. Exam questions hinge on that caveat, so learn it as attached to the tip rather than as a separate rule."
+      },
+      {
+        "q": "Not writing down what you hear verbatim is said to prevent",
+        "options": ["losing eye contact with the speaker", "the need for a summary section", "information overload", "any use of abbreviations"],
+        "answerIndex": 2,
+        "concept": "Do not transcribe verbatim",
+        "why": "Capturing main ideas rather than transcribing everything is what prevents information overload. Eye contact is a real tip but belongs to the six *listening* techniques, not to the note-taking tips — the two lists sit side by side and are easy to cross-answer."
+      },
+      {
+        "q": "Instead of transcribing everything, what should your notes capture?",
+        "options": ["Every definition and example, word for word", "Only the worked examples given in the lecture", "Only the material the lecturer says is examinable", "Main ideas, key concepts and supporting evidence"],
+        "answerIndex": 3,
+        "concept": "What to write down",
+        "why": "The three named targets are main ideas, key concepts and supporting evidence, jotted in clear and simple sentences. Capturing definitions word for word is transcription under another name, which is precisely the habit the tip is written against."
+      },
+      {
+        "q": "When does the Cornell method say the summary should be written?",
+        "options": ["Before the lecture, from the reading list", "Shortly after the lecture", "During the lecture, inside the cue column", "Only when revising for the exam"],
+        "answerIndex": 1,
+        "concept": "The Cornell summary",
+        "why": "Cornell encourages you to summarise the main ideas shortly after the lecture, while the material is fresh. Writing it in the cue column confuses the two zones — cues sit in their own narrow column, the summary in its own band at the foot of the page."
+      },
+      {
+        "q": "Which technique restates the speaker's point back to them and opens the way to clarification?",
+        "options": ["Paraphrase and summarise", "Ask open-ended questions", "Use verbal and non-verbal affirmations", "Maintain eye contact"],
+        "answerIndex": 0,
+        "concept": "The six active-listening techniques",
+        "why": "Paraphrasing and summarising periodically shows you are trying to comprehend accurately and provides an opportunity for clarification. Do not confuse it with the Cornell summary: this one is spoken back to the speaker, the other is written on your own page afterwards."
+      },
+      {
+        "q": "Nodding, smiling and saying 'I see' or 'Tell me more' are which technique?",
+        "options": ["Maintaining eye contact throughout", "Paraphrasing and summarising the point", "Asking open-ended follow-up questions", "Using verbal and non-verbal affirmations"],
+        "answerIndex": 3,
+        "concept": "Verbal and non-verbal affirmations",
+        "why": "Affirmations cover both the spoken cues ('I see', 'I understand', 'Tell me more') and the physical ones (nodding, smiling), and they encourage the speaker to continue. Eye contact is its own separate technique in the list of six, even though it is also non-verbal."
+      },
+      {
+        "q": "Why does the deck tell you to avoid interrupting?",
+        "options": ["It costs you time you could spend writing your notes", "It shows you have not prepared for the discussion at all", "It breaks the flow and makes the speaker feel unheard", "It draws your own attention away from what is being said"],
+        "answerIndex": 2,
+        "concept": "Avoid interrupting versus minimise distractions",
+        "why": "Interrupting hinders the flow of communication and makes the speaker feel unheard — the harm lands on the *speaker*. Option 3 is the reasoning behind 'minimise distractions', where the harm lands on your own attention. Two techniques, two different victims."
+      },
+      {
+        "q": "Maintaining eye contact is described as",
+        "options": ["a non-verbal cue conveying attention and interest", "a way of checking whether the speaker is honest", "a verbal affirmation of your understanding", "a substitute for taking written notes"],
+        "answerIndex": 0,
+        "concept": "Maintaining eye contact",
+        "why": "Eye contact conveys attention and interest and is a non-verbal cue signalling active engagement. Calling it a verbal affirmation collapses it into the fifth technique — affirmations are what you say or do in response, eye contact is how you hold your attention throughout."
+      },
+      {
+        "q": "What do bullet points do for your notes, as the deck puts it?",
+        "options": ["They create a clear structure for finding information later", "They make the information scannable and easier to review", "They emphasise key terms with a colour-based visual cue", "They connect main ideas to subtopics and details"],
+        "answerIndex": 1,
+        "concept": "Bullet points",
+        "why": "Bullet points make information scannable and easier to review. The three wrong options are the three neighbouring tips: headings and subheadings give structure for later retrieval, highlighting is the colour-based visual cue, and mind mapping is what links ideas to subtopics."
+      },
+      {
+        "q": "Headings and subheadings are recommended because they",
+        "options": ["make each separate point scannable", "highlight the key terms in colour", "organise notes so specific information can be found later", "link main ideas to their supporting details visually"],
+        "answerIndex": 2,
+        "concept": "Headings and subheadings",
+        "why": "Headings and subheadings organise notes into a clear structure, which helps you find specific information later. Scannability belongs to bullet points and the visual web to mind mapping — the deck lists all three as separate tips, so do not merge them."
+      },
+      {
+        "q": "On the Week 12 summary card, inductive reasoning moves in which direction?",
+        "options": ["From specific observations to broader generalizations", "From general premises to specific conclusions", "From a conclusion back to the premises that support it", "From evidence to counterargument and back again"],
+        "answerIndex": 0,
+        "concept": "Inductive versus deductive reasoning",
+        "why": "Inductive reasoning goes from specific observations to broader generalizations. Option 1 is deductive reasoning, its exact mirror image — general premises to specific conclusions — and the pair is only worth marks if you can say which way each one runs."
+      },
+      {
+        "q": "Which two logical fallacies does the summary card name?",
+        "options": ["Ad hominem and slippery slope", "False dilemma and circular reasoning", "Appeal to authority and red herring", "Strawman and hasty generalization"],
+        "answerIndex": 3,
+        "concept": "The two named fallacies",
+        "why": "Only strawman and hasty generalization are named. The other six are genuine fallacies and would be defensible answers in a general logic course, which is exactly why they make good distractors — this card names two, and the question asks what the card names."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "Stress is defined as",
+        "options": ["the relative change in a dimension, and has no unit", "the normal force per unit area, in N/m²", "the force needed to break the material, in newtons", "the energy stored per unit volume, in J/m³"],
+        "answerIndex": 1,
+        "concept": "Stress and its unit",
+        "why": "Stress σ = F/A is the perpendicular force per unit area, measured in N/m² or pascals. Option 0 is strain, ε = Δℓ/ℓ, which is a ratio of two lengths and therefore dimensionless — the pair is the commonest mix-up in this experiment."
+      },
+      {
+        "q": "Young modulus E is",
+        "options": ["stress divided by strain", "strain divided by stress", "stress multiplied by strain", "force multiplied by length"],
+        "answerIndex": 0,
+        "concept": "Definition of Young modulus",
+        "why": "E = σ/ε = (F/A)/(Δℓ/ℓ) = Fℓ/(AΔℓ). Inverting it gives the compliance, not the modulus, and would make a stiffer material score a smaller number. Because strain has no unit, E carries the same unit as stress: N/m², not N/m as the deck misprints."
+      },
+      {
+        "q": "What property of a material does E quantify?",
+        "options": ["Its density", "Its hardness under scratching", "Its stiffness — resistance to deformation under load", "The largest load it can carry before breaking"],
+        "answerIndex": 2,
+        "concept": "E as the modulus of elasticity",
+        "why": "E is the modulus of elasticity and measures stiffness: how much stress is needed per unit of strain. The breaking load is a different property altogether — a material can be very stiff and still fail early, so a large E says nothing about strength."
+      },
+      {
+        "q": "Hooke's law σ = Eε holds",
+        "options": ["for any load, however large, in any material", "only while the material is being unloaded again", "only for metals loaded in tension, not in bending", "only while the proportional limit is not exceeded"],
+        "answerIndex": 3,
+        "concept": "Validity of Hooke's law",
+        "why": "Stress is proportional to strain only below the proportional limit; past it the relation and your straight line both fail. That is why loads are kept small enough for the beam to return to zero — exceeding the limit leaves a permanent set and destroys the graph."
+      },
+      {
+        "q": "In deriving Y = mgℓ³/(48EI), the loaded beam is treated as",
+        "options": ["two opposite cantilevers", "a simple pendulum of length ℓ", "a uniform rod in pure tension", "a spring obeying Hooke's law"],
+        "answerIndex": 0,
+        "concept": "The two-cantilever picture behind the 48",
+        "why": "The beam supported at both ends with the load at its centre is treated as two opposite cantilevers, which is where the 48 comes from. Some texts use 192 for a genuinely clamped-clamped beam; this deck's data reproduces 69 GPa for aluminium with 48, so use 48."
+      },
+      {
+        "q": "In E = gℓ³/(4bd³s), which of the beam's three dimensions affects E only in proportion, not as a cube?",
+        "options": ["The thickness d", "The breadth b", "The span ℓ", "None — all three are cubed"],
+        "answerIndex": 1,
+        "concept": "Which dimensions are cubed",
+        "why": "Both ℓ and d appear cubed, but b appears to the first power, so a 5% error in b costs about 5% in E while the same error in d costs about 15%. That is why d and ℓ get the micrometer and several repeat readings and b is the least critical of the three."
+      },
+      {
+        "q": "Copper (≈120 GPa) and aluminium (≈70 GPa) beams of identical dimensions are tested. The Y-against-m line for copper is",
+        "options": ["steeper than aluminium's", "identical to aluminium's", "curved rather than straight", "shallower than aluminium's"],
+        "answerIndex": 3,
+        "concept": "Slope and stiffness are inversely related",
+        "why": "The gradient is s = gℓ³/(4Ebd³), so E sits in the denominator and a stiffer material gives a smaller slope — less depression per kilogram. Expecting the stiffer metal to give the steeper line is reading the graph as if E were on top."
+      },
+      {
+        "q": "A beam has ℓ = 0.80 m, b = 0.025 m, d = 0.008 m and slope s = 2.0 × 10⁻³ m/kg. Taking g = 9.8 m/s², E is about",
+        "options": ["4.9 × 10⁸ Pa", "9.8 × 10¹⁰ Pa", "4.9 × 10¹⁰ Pa", "2.0 × 10¹⁰ Pa"],
+        "answerIndex": 2,
+        "concept": "Computing E from the gradient",
+        "why": "E = gℓ³/(4bd³s): the numerator is 9.8 × 0.512 = 5.02, the denominator is 4 × 0.025 × 5.12 × 10⁻⁷ × 2.0 × 10⁻³ = 1.02 × 10⁻¹⁰, giving 4.9 × 10¹⁰ Pa. The 4.9 × 10⁸ has the same digits with the exponent slipped — always check the answer lands in the tens of GPa for a metal."
+      },
+      {
+        "q": "What is the unit of the gradient s of the Y-against-m graph?",
+        "options": ["m/N", "m/kg", "kg/m", "It is dimensionless"],
+        "answerIndex": 1,
+        "concept": "Units of the slope",
+        "why": "Y is a depression in metres and the x-axis is the load in kilograms, so s is in m/kg. m/N is what you would get by plotting against the weight mg instead; because the graph is against mass, the g stays inside the gradient expression."
+      },
+      {
+        "q": "Your Y-against-m line is perfectly straight but crosses the Y-axis at 0.04 mm. The most likely cause is",
+        "options": ["the beam has passed its elastic limit", "the load was hung away from the mid-point", "the breadth was recorded in mm instead of m", "the dial gauge was not zeroed before loading"],
+        "answerIndex": 3,
+        "concept": "Zero error and the intercept",
+        "why": "Y = sm has no constant term, so the line must pass through the origin; a fixed offset on every reading shifts it bodily up, which is a dial-gauge zero error. Passing the elastic limit would bend the line rather than lift it, and a unit slip in b changes only your computed E."
+      },
+      {
+        "q": "Hanging the load away from the beam's mid-point does what to the measured depression?",
+        "options": ["Reduces it, as a systematic error", "Increases it, as a systematic error", "Leaves it unchanged", "Makes it scatter randomly about the true value"],
+        "answerIndex": 0,
+        "concept": "Off-centre loading",
+        "why": "The formula assumes the load acts at the centre, where the depression is greatest; moving it off-centre reduces the depression every time, so the error is systematic and one-directional. Random scatter comes from reading and parallax, which the best-fit line handles."
+      },
+      {
+        "q": "How would you know the beam had been loaded past its proportional limit?",
+        "options": ["The dial gauge would read zero at every load applied", "The depression would fall as the load was increased", "The beam would not return to zero, and the line would bend", "The gradient would come out in the wrong units entirely"],
+        "answerIndex": 2,
+        "concept": "Detecting permanent set",
+        "why": "Past the proportional limit the material takes a permanent set, so it does not spring back to zero when the masses are removed and the straight line begins to curve. The units of the gradient never change — a unit check will not catch this fault, only the return-to-zero test will."
+      },
+      {
+        "q": "In the deck's table ℓ is in cm, d in cm and b in mm. Before computing E you must",
+        "options": ["convert them all to centimetres", "leave them as they are, since the units cancel", "convert only the thickness, because it is cubed", "convert all three to metres"],
+        "answerIndex": 3,
+        "concept": "Convert to SI before substituting",
+        "why": "E = gℓ³/(4bd³s) mixes g in m/s² and s in m/kg with the three dimensions, so every length must be in metres for the answer to come out in pascals. The units do not cancel — ℓ³ over b·d³ leaves one length in the denominator, so any mismatch scales the answer by a power of ten."
+      },
+      {
+        "q": "Why take the gradient from a best-fit line through all six loads rather than from one (m, Y) pair?",
+        "options": ["A single pair would give the gradient the wrong units", "A large slope triangle averages out the random reading error", "The working formula is only valid for six or more readings", "A single pair of readings cannot be converted into SI units"],
+        "answerIndex": 1,
+        "concept": "Using the best-fit gradient",
+        "why": "Every dial-gauge reading carries scatter, and one pair passes all of that straight into E; a best-fit line over the full 50 g to 500 g range averages it out and gives a large slope triangle. The formula itself is valid for any number of points — six is a choice, not a requirement."
+      },
+      {
+        "q": "Who first developed the quantity now called Young's modulus, as 'the absolute elasticity'?",
+        "options": ["Leonhard Euler", "Thomas Young", "Robert Hooke", "Isaac Newton"],
+        "answerIndex": 0,
+        "concept": "History of the modulus",
+        "why": "Euler developed it in the 18th century as 'the absolute elasticity'; Thomas Young came a century later and gave it the name it now carries. Hooke supplies the proportionality law σ = Eε that bounds where the modulus is valid, but not the modulus itself."
+      }
+    ]
+  }
+}

@@ -1,0 +1,754 @@
+{
+  "week": 9,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "The improper integral ∫₀^∞ dx/(x + 1)² has the value:",
+        "options": ["1", "1/2", "0", "It diverges"],
+        "answerIndex": 0,
+        "concept": "Type I on something that is not a pure power",
+        "why": "Replace ∞ by t: lim(t→∞)[−1/(x + 1)]₀ᵗ = 0 − (−1) = 1. Note 1 settles nothing here, because 1/(x + 1)² is not of the form 1/xᵖ — you either integrate it outright, as here, or compare it with a pure power first. Answering 1/2 carries in a factor from differentiating the square instead of integrating it."
+      },
+      {
+        "q": "Rewrite ∫₁^∞ dx/(x²√x) as a p-integral and apply Note 1.",
+        "options": ["p = 2, so it diverges", "p = 5/2, so it converges", "p = 3/2, so it converges", "p = 1/2, so it diverges"],
+        "answerIndex": 1,
+        "concept": "Reading p off a product of powers",
+        "why": "x²√x = x²·x^(1/2) = x^(5/2), so p = 5/2 > 1 and Note 1 gives convergence. Reading only the x² and calling p = 2 lands on the right verdict for the wrong reason; p = 3/2 comes from adding the exponents as 1 + 1/2 instead of 2 + 1/2."
+      },
+      {
+        "q": "On [1, ∞), which chain is the correct first step for comparing 1/(x² + 5) with a pure power?",
+        "options": ["x² + 5 ≥ x², so 1/(x² + 5) ≥ 1/x²", "x² + 5 ≤ x², so 1/(x² + 5) ≤ 1/x²", "x² + 5 ≥ x², so 1/(x² + 5) ≤ 1/x²", "x² + 5 ≥ x², so 1/(x² + 5) = 1/x²"],
+        "answerIndex": 2,
+        "concept": "Taking reciprocals reverses an inequality",
+        "why": "A bigger denominator makes a smaller fraction: taking reciprocals of two positive quantities reverses the inequality. The first option carries the ≥ straight through, which is the step students drop; it would leave you claiming the messy integrand is the larger one and hunting for a divergence that 1/x² can never give you."
+      },
+      {
+        "q": "∫₀² dx/(x − 2)² is improper. Which limit statement does slide 8 require?",
+        "options": ["lim(c→2⁺) ∫₀ᶜ dx/(x − 2)²", "lim(c→0⁺) ∫_c² dx/(x − 2)²", "lim(c→2⁻) ∫_c² dx/(x − 2)²", "lim(c→2⁻) ∫₀ᶜ dx/(x − 2)²"],
+        "answerIndex": 3,
+        "concept": "Type II clause 1: bad point at the upper endpoint",
+        "why": "The integrand blows up at x = 2, the upper endpoint, so the moving limit is the upper one and it creeps up to 2 from inside the interval, c → 2⁻. The first option approaches 2 from outside [0, 2], and the second treats 0 as the bad point although the integrand is perfectly finite there."
+      },
+      {
+        "q": "The integral ∫₋∞⁰ eˣ dx works out to:",
+        "options": ["It diverges", "1", "0", "−1"],
+        "answerIndex": 1,
+        "concept": "Type I with the infinite limit at the bottom",
+        "why": "By her second Type I definition it is lim(t→−∞)[eˣ]ₜ⁰ = 1 − lim(t→−∞) eᵗ = 1 − 0 = 1. Answering −1 subtracts in the wrong order; answering divergent assumes an infinite interval must give an infinite answer, which is exactly what the definition denies."
+      },
+      {
+        "q": "In Type I Example 1 the antiderivative −xe⁻ˣ − e⁻ˣ is evaluated at the lower limit x = 0. What does that substitution contribute?",
+        "options": ["+1", "−1", "0", "+e"],
+        "answerIndex": 0,
+        "concept": "The lower limit in ∫₀^∞ xe⁻ˣdx",
+        "why": "At x = 0 the antiderivative is −0·e⁰ − e⁰ = −1, and the Fundamental Theorem subtracts that value, so it adds +1. Since both upper-limit terms go to 0, this +1 is the entire answer; writing −1 means you forgot that the lower value is the one being subtracted."
+      },
+      {
+        "q": "Which integral is improper for both of the reasons slide 4 lists?",
+        "options": ["∫₀^∞ e⁻ˣ dx", "∫₋₁¹ dx/x²", "∫₁⁵ dx/(x − 7)", "∫₁^∞ dx/(x − 4)"],
+        "answerIndex": 3,
+        "concept": "Both triggers at once",
+        "why": "∫₁^∞ dx/(x − 4) has an infinite upper limit and an infinite discontinuity at x = 4, which lies inside the interval. The first has only the infinite limit, the second only the interior discontinuity, and the third is an ordinary proper integral because x = 7 is outside [1, 5]. Check for both triggers, not just the one you noticed first."
+      },
+      {
+        "q": "Determine whether ∫₂^∞ (2 + sin x)/x² dx converges, and by what comparison.",
+        "options": ["Diverges; 2 + sin x ≥ 1, so the integrand exceeds 1/x²", "Diverges; sin x oscillates, so the limit does not exist", "Converges; 2 + sin x ≤ 3, so the integrand is at most 3/x²", "Converges; its value is exactly 3/2"],
+        "answerIndex": 2,
+        "concept": "Bounding an oscillating numerator",
+        "why": "sin x lies between −1 and 1, so 0 ≤ (2 + sin x)/x² ≤ 3/x², and ∫₂^∞ 3dx/x² converges since p = 2 > 1. The first option states a true inequality but a useless one: sitting above a convergent integral proves nothing. The last confuses a verdict with a value — comparison never produces one."
+      },
+      {
+        "q": "Which comparison settles ∫₂^∞ dx/√(x − 1)?",
+        "options": ["1/√(x − 1) ≤ 1/√x, and p = 1/2 ≤ 1, so it diverges", "1/√(x − 1) ≤ 1/x, and p = 1 ≤ 1, so it converges", "1/√(x − 1) ≥ 1/√x, and p = 1/2 ≤ 1, so it diverges", "1/√(x − 1) ≥ 1/x², and p = 2 > 1, so it converges"],
+        "answerIndex": 2,
+        "concept": "Comparison clause 2, the divergent direction",
+        "why": "x − 1 < x gives √(x − 1) < √x, and reciprocals reverse it, so the integrand sits above 1/x^(1/2). With p = 1/2 ≤ 1 the small one diverges and clause 2 drags the big one up with it. The first option has the inequality backwards; the last pairs a correct p with a useless direction, since a convergent lower bound tells you nothing."
+      },
+      {
+        "q": "Which of these must be split into two pieces before any limit is written?",
+        "options": ["∫₁³ dx/(x − 1)²", "∫₀¹ dx/√x", "∫₂⁵ dx/(x − 1)", "∫₀³ dx/(x − 1)²"],
+        "answerIndex": 3,
+        "concept": "Type II clause 3: an interior discontinuity",
+        "why": "The split is forced only when the infinite discontinuity is strictly inside the interval, and x = 1 lies between 0 and 3. In the first the bad point is the endpoint a, so a single one-sided limit does the job; the second is bad at the endpoint 0; the third has no bad point anywhere in [2, 5]."
+      },
+      {
+        "q": "You are settling ∫₁^∞ dx/√(x⁴ + 2) by her four-step template. Which comparison function f do you take?",
+        "options": ["f(x) = 1/x²", "f(x) = 1/x⁴", "f(x) = 1/x^(1/2)", "f(x) = 1/x^(3/2)"],
+        "answerIndex": 0,
+        "concept": "Choosing the comparison function",
+        "why": "Throw away the +2: x⁴ + 2 ≥ x⁴, so √(x⁴ + 2) ≥ x², and reciprocals give 1/√(x⁴ + 2) ≤ 1/x². With p = 2 > 1 the comparison converges and clause 1 carries that back. Choosing 1/x⁴ forgets to take the square root; 1/x^(1/2) halves the wrong exponent."
+      },
+      {
+        "q": "Her Example 1 uses cos²(x)/x², not cos(x)/x². Why does the squaring matter?",
+        "options": ["Without it the integral would have no antiderivative", "Without it the hypothesis 0 ≤ g(x) fails, since cos x changes sign", "Without it the bound by 1/x² would no longer hold", "Without it the p-test would give p = 1 instead of p = 2"],
+        "answerIndex": 1,
+        "concept": "The non-negativity hypothesis",
+        "why": "Her theorem opens with 0 ≤ g(x) ≤ f(x), so the small function must never go negative, and cos x is negative on half of every period. Squaring traps it between 0 and 1. The size bound by 1/x² would still hold in magnitude, so that is not what breaks — the hypothesis is."
+      },
+      {
+        "q": "A student writes ∫₋∞^∞ x³ dx = 0, arguing that the two halves cancel by symmetry. By slide 5 clause 3, the verdict is:",
+        "options": ["0, since the integrand is odd", "0, provided both moving limits use the same letter", "convergent, but to a value other than 0", "divergent, because neither half converges on its own"],
+        "answerIndex": 3,
+        "concept": "Both halves must converge first",
+        "why": "Clause 3 hands you the sum only if both halves are already convergent, and ∫₀^∞ x³dx runs to +∞. Cancelling +∞ against −∞ is not permitted however symmetric the picture looks; the definition asks about each half separately, which is also why Example 2 may stop the moment one half fails."
+      },
+      {
+        "q": "Which of these is NOT an improper integral?",
+        "options": ["∫₋₂² dx/x⁴", "∫₋∞⁵ e²ˣ dx", "∫₀¹ dx/(x − 2)", "∫₀⁴ dx/√x"],
+        "answerIndex": 2,
+        "concept": "Checking the denominator's zeros against the interval",
+        "why": "∫₀¹ dx/(x − 2) has finite limits and a continuous integrand on [0, 1], because its only bad point, x = 2, is outside that interval. The first is bad at the interior point 0, the second has an infinite lower limit, and the last blows up at the endpoint 0. Locating the bad point is not enough — you must ask whether it is in range."
+      },
+      {
+        "q": "∫₀⁴ dx/√x is improper at x = 0. Its value is:",
+        "options": ["4", "2", "It diverges", "8"],
+        "answerIndex": 0,
+        "concept": "A Type II integral that converges",
+        "why": "The integrand blows up at x = 0, so clause 2 gives lim(c→0⁺)[2√x]_c⁴ = 4 − 2√c → 4. Answering 2 uses √x instead of 2√x as the antiderivative. It converges even though the integrand is unbounded: convergence is about the limit existing, not about the region being bounded."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "A proton and an electron are injected perpendicular to the same uniform field at the same speed. Compared with the proton's orbital period, the electron's is:",
+        "options": ["the same, since T = 2πm/(qB) contains no speed", "about 43 times shorter", "about 1836 times shorter", "about 1836 times longer"],
+        "answerIndex": 2,
+        "concept": "T = 2πm/(qB) scales with mass",
+        "why": "The period is proportional to mass and the two charges have equal magnitude, so the electron's is smaller by the mass ratio 1836. The first option gives the right reason for the wrong quantity: T is independent of speed, not of mass. 43 is √1836, which appears if you drag the mass ratio through a square root that is not in the formula."
+      },
+      {
+        "q": "A charge follows a helix with velocity component 2.0×10⁶ m/s along B and an orbital period of 4.0×10⁻⁷ s. Its pitch is:",
+        "options": ["0.80 m", "0.40 m", "5.0 m", "0.20 m"],
+        "answerIndex": 0,
+        "concept": "Pitch of a helical path",
+        "why": "Pitch is the advance along the field in one full turn, v∥T = (2.0×10⁶)(4.0×10⁻⁷) = 0.80 m. Halving it to 0.40 m counts only half a turn, and 5.0 m comes from dividing rather than multiplying. The component along B is untouched by the magnetic force, which is precisely why it is the one that sets the pitch."
+      },
+      {
+        "q": "The Earth's magnetic field is about 0.5 G. In SI units that is:",
+        "options": ["5×10³ T", "0.5×10⁴ T", "5×10⁻⁴ T", "5×10⁻⁵ T"],
+        "answerIndex": 3,
+        "concept": "Gauss to tesla",
+        "why": "1 T = 10⁴ G, so 1 G = 10⁻⁴ T and 0.5 G = 5×10⁻⁵ T. Multiplying by 10⁴ instead of dividing produces the first two options. The tesla is the large unit, so any everyday field quoted in tesla should come out small — an answer in thousands of tesla means the conversion went the wrong way."
+      },
+      {
+        "q": "A photon has frequency 5.0×10¹⁴ Hz. Taking h = 6.63×10⁻³⁴ J·s, its energy is:",
+        "options": ["6.6×10⁻²⁰ J", "3.3×10⁻¹⁹ J", "7.5×10²⁰ J", "3.3×10⁻²⁷ J"],
+        "answerIndex": 1,
+        "concept": "E = hf",
+        "why": "E = hf = (6.63×10⁻³⁴)(5.0×10¹⁴) = 3.3×10⁻¹⁹ J, about 2 eV — visible light. The first option drops the factor of 5, the third divides h by f instead of multiplying. Photon energy is fixed by frequency alone: a brighter lamp of the same colour sends more photons, not more energetic ones."
+      },
+      {
+        "q": "Which list runs in order of increasing frequency?",
+        "options": ["gamma → X-rays → ultraviolet → visible → infrared → radio", "radio → infrared → microwave → visible → X-rays → gamma", "radio → microwave → infrared → visible → ultraviolet → gamma", "microwave → radio → infrared → ultraviolet → visible → gamma"],
+        "answerIndex": 2,
+        "concept": "Order of the electromagnetic spectrum",
+        "why": "Increasing frequency means decreasing wavelength: radio, microwave, infrared, visible, ultraviolet, X-rays, gamma. The first option is that list reversed, which is the order of increasing wavelength. The second swaps microwave and infrared — microwaves are the longer-wavelength, lower-frequency member of that pair."
+      },
+      {
+        "q": "A radio wave in vacuum has wavelength 3.0 m. Its frequency is:",
+        "options": ["9.0×10⁸ Hz", "1.0×10⁻⁸ Hz", "3.0×10⁸ Hz", "1.0×10⁸ Hz"],
+        "answerIndex": 3,
+        "concept": "c = fλ",
+        "why": "f = c/λ = (3.00×10⁸)/3.0 = 1.0×10⁸ Hz, i.e. 100 MHz. The first option multiplies instead of dividing and the third simply quotes c. Frequency and wavelength are inversely related while the speed stays pinned at c, so a metres-long wave must have a frequency far below optical values."
+      },
+      {
+        "q": "Light passes from vacuum into glass. Which quantity is unchanged?",
+        "options": ["the frequency", "the wavelength", "the speed", "none — all three change"],
+        "answerIndex": 0,
+        "concept": "What survives entry into a medium",
+        "why": "c = fλ holds in vacuum; in a medium of refractive index n the speed and the wavelength both fall by n while the frequency, set by the source, is untouched. Choosing wavelength is the usual slip: colour tracks frequency, which is why light does not change colour on entering glass."
+      },
+      {
+        "q": "A wire is laid exactly along the field lines of a uniform magnetic field. Steadily raising the current in it produces:",
+        "options": ["a force that grows in proportion to the current", "no force at all, at any current", "a force along the wire, pushing it lengthwise", "a force that grows until the wire begins to turn"],
+        "answerIndex": 1,
+        "concept": "F = BIL sin θ with θ between current and B",
+        "why": "θ is the angle between the current and B, and here it is 0, so sin θ = 0 and the force vanishes however large I becomes. The last option is the cos-for-sin error, which would make alignment the strongest case rather than the null one. Nor is a magnetic force ever along the wire: it is perpendicular to both the current and B."
+      },
+      {
+        "q": "A charge of −2 μC moves along +x in a field B along +y. The magnetic force on it points along:",
+        "options": ["−z", "+z", "+y", "−x"],
+        "answerIndex": 0,
+        "concept": "RHR-1 and the sign of the charge",
+        "why": "x̂ × ŷ = ẑ, so a positive charge would be pushed along +z, and the negative sign of q reverses it to −z. Answering +z is forgetting the charge's sign, the commonest slip here. The force can never lie along B (+y) or along v (+x): it is perpendicular to the plane of both."
+      },
+      {
+        "q": "1 tesla is equivalent to:",
+        "options": ["1 N·A·m", "1 N·m/A", "1 N/(A·m)", "1 C/(N·m)"],
+        "answerIndex": 2,
+        "concept": "The tesla in terms of N, A and m",
+        "why": "Rearranging F = BIL sin θ gives B = F/(IL), newtons per ampere-metre, the same as 1 Wb/m². The distractors are the same three symbols rearranged, so derive it rather than recalling it. If a laboratory field comes out in hundreds of tesla, a unit conversion has gone wrong somewhere earlier."
+      },
+      {
+        "q": "Suppose you wrote F = qvB cos θ instead of F = qvB sin θ. What would that predict?",
+        "options": ["a force that still vanishes when v is parallel to B", "a maximum force when v ∥ B and none when v ⊥ B", "a force independent of the angle between v and B", "a force that does work on the particle"],
+        "answerIndex": 1,
+        "concept": "Why it is sin θ and not cos θ",
+        "why": "cos θ is 1 at θ = 0 and 0 at θ = 90°, which inverts both facts you need: the force is zero when v ∥ B and maximum, qvB, when v ⊥ B. This single swap is the commonest wrong answer in the topic, and it also destroys the reason charged particles spiral along field lines instead of crossing them."
+      },
+      {
+        "q": "A proton (m = 1.67×10⁻²⁷ kg, q = 1.60×10⁻¹⁹ C) circulates in a field of 0.50 T. Its cyclotron frequency is about:",
+        "options": ["7.6 kHz", "4.8×10⁷ Hz", "1.3×10⁻⁷ Hz", "7.6 MHz"],
+        "answerIndex": 3,
+        "concept": "f = qB/(2πm)",
+        "why": "f = (1.60×10⁻¹⁹ × 0.50)/(2π × 1.67×10⁻²⁷) ≈ 7.6×10⁶ Hz. The second option drops the 2π; the third is the period, 1.3×10⁻⁷ s, quoted as though it were a frequency. Nothing in the answer depends on how fast the proton is going, which is exactly what makes a cyclotron possible."
+      },
+      {
+        "q": "r = mv/(qB) is often said to measure not the particle's speed but its:",
+        "options": ["kinetic energy", "mass-to-charge ratio", "momentum", "cyclotron period"],
+        "answerIndex": 2,
+        "concept": "r = p/(qB)",
+        "why": "Since p = mv, the formula reads r = p/(qB): the radius reports momentum for a given charge and field. That is why doubling the speed doubles the radius while leaving T = 2πm/(qB) untouched. The mass-to-charge ratio only becomes the sorting variable once the speed has already been fixed, as in a mass spectrometer's second stage."
+      },
+      {
+        "q": "A d.c. motor needs a commutator because:",
+        "options": ["the force reverses with the current, so the torque would otherwise flip each half turn", "the magnetic force would otherwise do work on the coil and overheat its windings", "a permanent magnet's field decays away unless the driving current alternates", "F = BIL sin θ comes out zero unless the current is switched on and off"],
+        "answerIndex": 0,
+        "concept": "Why the current must be reversed each half turn",
+        "why": "The force on each side of the loop reverses when the current does, so as a side swings past the field the commutator flips I and keeps the torque pointing one way. The second option misuses the no-work property: the magnetic force does no work on the charges' motion along the wire, and that is not what limits a motor."
+      },
+      {
+        "q": "In a plane electromagnetic wave, the direction of propagation is the direction of:",
+        "options": ["E", "B", "B × E", "E × B"],
+        "answerIndex": 3,
+        "concept": "Transverse structure of an EM wave",
+        "why": "The wave is transverse: E and B are perpendicular to each other and both perpendicular to the travel direction, which is the direction of E × B. Taking the cross product in the other order, B × E, points backwards. Saying E lies along the direction of propagation is the standard wrong answer — nothing in the wave points along its own travel."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "What is printed by `printf(\"%d\\n\", (7 > 3) + (2 > 5));`?",
+        "options": ["0", "1", "2", "nothing — comparisons cannot be added"],
+        "answerIndex": 1,
+        "concept": "A comparison is an expression with a value",
+        "why": "7 > 3 has the value 1 and 2 > 5 has the value 0, so the sum is 1. Answering 2 assumes both comparisons are true. Expecting a compile error misses the deck's own sentence: Boolean values are returned as integers, so they add like any other int."
+      },
+      {
+        "q": "How does C group `a == 0 || b == 0 && c == 0`?",
+        "options": ["`(a == 0 || b == 0) && (c == 0)`", "`((a == 0 || b == 0) && c) == 0`", "`a == (0 || b) == (0 && c) == 0`", "`(a == 0) || ((b == 0) && (c == 0))`"],
+        "answerIndex": 3,
+        "concept": "&& binds tighter than ||",
+        "why": "`&&` binds tighter than `||`, exactly as `*` binds tighter than `+`, so the `&&` pair is gathered first. The first option is what plain left-to-right reading suggests, and it is a genuinely different condition: with a = 0 and c = 1 the real expression is true while that one is false."
+      },
+      {
+        "q": "With `int x = 20;`, what does the expression `0 < x < 10` evaluate to?",
+        "options": ["1", "0", "20", "nothing — C rejects chained comparisons"],
+        "answerIndex": 0,
+        "concept": "Chained comparison collapses to 1 or 0",
+        "why": "It groups as `(0 < x) < 10`: `0 < 20` is 1, and `1 < 10` is 1. The expression is true for every x whatsoever, which is what makes it the costliest precedence error at this level. C compiles it without complaint; a range test must be written `0 < x && x < 10`."
+      },
+      {
+        "q": "How does C group `!x == y`?",
+        "options": ["`!(x == y)`", "`!(x) == !(y)`", "`(!x) == y`", "`x != y`"],
+        "answerIndex": 2,
+        "concept": "! binds tighter than ==",
+        "why": "The negation happens first and its result, 1 or 0, is then compared with y. With x = 0 and y = 5, `(!x) == y` is `1 == 5`, false, while `!(x == y)` would be true — so the two groupings are not merely different in style, they give different answers."
+      },
+      {
+        "q": "Which expression is equivalent to `!(a || b)`?",
+        "options": ["`!a || !b`", "`!a || b`", "`a && b`", "`!a && !b`"],
+        "answerIndex": 3,
+        "concept": "De Morgan's laws",
+        "why": "De Morgan flips the operator as well as the operands: not-either is neither. The first option keeps the `||` and is really `!(a && b)`. Check it on a = 0, b = 1: `!(a || b)` is 0 while `!a || !b` is 1."
+      },
+      {
+        "q": "Which condition is equivalent to `!(x > 5)`?",
+        "options": ["`x < 5`", "`x <= 5`", "`x >= 5`", "`x != 5`"],
+        "answerIndex": 1,
+        "concept": "Negating a relational operator",
+        "why": "The negation of `>` is `<=`: the boundary value belongs to the negation. At x = 5 exactly, `!(x > 5)` is true while `x < 5` is false, so the first option is wrong precisely on the one value that distinguishes them — which is why it survives casual testing."
+      },
+      {
+        "q": "What is printed?\n\n```c\nint i = 0, j = 0;\nif (i++ > 0 && j++ > 0)\n    printf(\"in \");\nprintf(\"%d %d\\n\", i, j);\n```",
+        "options": ["`in 1 1`", "`1 1`", "`1 0`", "`0 0`"],
+        "answerIndex": 2,
+        "concept": "Short-circuit evaluation skips side effects",
+        "why": "`i++` yields 0 and then makes i 1, so the left operand is false and `&&` short-circuits: the right operand is never evaluated, `j++` never runs, and j stays 0. A skipped operand's side effects do not happen — that is a guarantee of the language, not an optimisation."
+      },
+      {
+        "q": "What are the values of `2 && 1` and `2 & 1`?",
+        "options": ["1 and 0", "1 and 1", "0 and 1", "2 and 2"],
+        "answerIndex": 0,
+        "concept": "Logical && versus bitwise &",
+        "why": "`&&` is logical: both operands are non-zero, so the result is 1. `&` is bitwise: 2 is binary 10 and 1 is binary 01, sharing no bits, so the result is 0. Writing `&` for `&&` also throws away short-circuiting, so any guard you were relying on stops protecting what follows it."
+      },
+      {
+        "q": "What does this print when `n` is −5?\n\n```c\nif (n > 0);\n    printf(\"positive\\n\");\n```",
+        "options": ["nothing", "`positive`", "nothing — it fails to compile", "`positive` twice"],
+        "answerIndex": 1,
+        "concept": "A stray semicolon after if",
+        "why": "The semicolon straight after the condition is an empty statement, and that empty statement is the entire body of the `if`. The `printf` is simply the next statement in the programme, so it runs unconditionally. The indentation says otherwise, but the compiler reads punctuation, not layout."
+      },
+      {
+        "q": "What is printed?\n\n```c\nint g = 2;\nswitch (g) {\n    case 1: printf(\"A\");\n    case 2: printf(\"B\");\n    case 3: printf(\"C\"); break;\n    default: printf(\"D\");\n}\n```",
+        "options": ["`B`", "`ABC`", "`BC`", "`BCD`"],
+        "answerIndex": 2,
+        "concept": "Fall-through in a switch",
+        "why": "Control jumps to the matching label and then runs on through the following cases until it meets a `break`, so B and C both print and the `break` after C stops it before `default`. Answering `B` assumes each case is self-contained, which is how `if-else-if` behaves — a `switch` does not."
+      },
+      {
+        "q": "What is printed?\n\n```c\nint a = -1, b = 5;\nif (a > 0)\n    if (b > 0) printf(\"X\");\nelse printf(\"Y\");\n```",
+        "options": ["`X`", "`Y`", "`XY`", "nothing"],
+        "answerIndex": 3,
+        "concept": "The dangling else",
+        "why": "The `else` binds to the nearest unmatched `if`, which is `if (b > 0)`, however the lines are indented. Since `a > 0` is false the whole inner construct — `else` included — is skipped, so nothing prints at all. Reading the indentation instead of the braces is what makes `Y` look right."
+      },
+      {
+        "q": "How many times does the body of `for (i = 0; i <= 4; i++)` run?",
+        "options": ["5", "4", "6", "3"],
+        "answerIndex": 0,
+        "concept": "i < n versus i <= n",
+        "why": "i takes 0, 1, 2, 3, 4 — five passes — because `<=` includes the limit. Starting from 0, `i < n` gives exactly n passes and `i <= n` gives n + 1. The extra pass usually reads one position past the end of the data and the programme still runs, which is why the fault survives testing."
+      },
+      {
+        "q": "With `int x = 5;` and `<stdbool.h>` included, is `if (x == true)` entered?",
+        "options": ["yes — x is non-zero, so it counts as true", "yes — any comparison against `true` succeeds", "no — `true` is 1, and 5 == 1 is false", "no — an int may not be compared with a bool"],
+        "answerIndex": 2,
+        "concept": "Never compare a condition with true",
+        "why": "`true` is just the name for 1, so this compares 5 with 1 and fails, even though `if (x)` would succeed — truth in C is only not-zero. That mismatch is the whole reason to write `if (x)` and let the language's own rule decide."
+      },
+      {
+        "q": "A loop runs `while (i != 10)` with `i` starting at 0 and `i += 3` each pass. What happens?",
+        "options": ["it runs 4 times and then stops with i at 10", "it runs 3 times, since the value 10 is never reached", "it stops at 9, the last value below the limit 10", "it never stops: i goes 0, 3, 6, 9, 12, stepping over 10"],
+        "answerIndex": 3,
+        "concept": "!= as a loop condition",
+        "why": "`!=` demands that i land exactly on the value, and a step of 3 from 0 jumps straight over it. Had i started at 1 the values would be 1, 4, 7, 10 and the loop would end — which is why this fault is easy to miss in testing. `i < 10` is safe for any step."
+      },
+      {
+        "q": "What does this do?\n\n```c\nint n = 3;\nwhile (n > 0)\n    printf(\"%d \", n);\n    n = n - 1;\n```",
+        "options": ["prints `3 ` for ever", "prints `3 2 1 `", "prints `3 ` once, then stops", "nothing — it fails to compile"],
+        "answerIndex": 0,
+        "concept": "A loop without braces governs one statement",
+        "why": "A `while` without braces governs exactly one statement, so only the `printf` repeats; `n = n - 1` sits outside the loop and never runs, leaving the condition permanently true. Braces are what turn several statements into the single statement a loop can take."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "In PHP, what is the value of `17 % 5`?",
+        "options": ["3.4", "5", "85", "2"],
+        "answerIndex": 3,
+        "concept": "Modulus returns the remainder",
+        "why": "`%` is the modulus operator: 17 divided by 5 is 3 remainder 2, and the remainder is what you get. The first option is `17 / 5`, the quotient, which is the confusion the lecture flags explicitly; the third is `17 * 5`."
+      },
+      {
+        "q": "Which of these is a valid PHP variable name?",
+        "options": ["`$2fast`", "`2fast`", "`$_total`", "`$-total`"],
+        "answerIndex": 2,
+        "concept": "Variable naming rules",
+        "why": "A name is a dollar sign, then a letter or underscore, then letters, numbers or underscores. `$_total` obeys that. `$2fast` starts with a digit, `2fast` has no dollar sign at all, and a hyphen is not a permitted character inside a name."
+      },
+      {
+        "q": "A script sets `$age = 17;` and later `$Age = 30;`. What does `echo $age;` print?",
+        "options": ["30", "17", "nothing — the name was reassigned", "nothing — PHP reports a redeclaration"],
+        "answerIndex": 1,
+        "concept": "Variable names are case-sensitive",
+        "why": "`$age` and `$Age` are two entirely separate variables, so the second assignment leaves the first untouched. Expecting 30 is the natural reading if you assume names match case-insensitively — as they in fact do for PHP function names, which is what makes this worth remembering."
+      },
+      {
+        "q": "After `$can_vote = ($age >= 18) ? \"Yes\" : \"No\";` with `$age = 16`, `$can_vote` holds:",
+        "options": ["`\"No\"`", "`\"Yes\"`", "`false`", "nothing — a ternary only echoes"],
+        "answerIndex": 0,
+        "concept": "The ternary operator yields a value",
+        "why": "16 >= 18 is false, so the value after the colon is produced and stored. The ternary is a concise if-else whose result can be put in a variable, which is exactly what the last option denies; and it hands back the branch's own value, so `false` is not what lands there."
+      },
+      {
+        "q": "What does this print with `$score = 55`?\n\n```php\nif ($score >= 70) { echo \"Distinction\"; }\nelseif ($score >= 50) { echo \"Pass\"; }\nelse { echo \"Fail\"; }\n```",
+        "options": ["`Fail`", "`Distinction`", "`PassFail`", "`Pass`"],
+        "answerIndex": 3,
+        "concept": "elseif stops at the first true condition",
+        "why": "The first condition fails, the `elseif` is then tested, 55 >= 50 is true, its block runs and everything after it is skipped. `PassFail` is what two independent `if` statements would give — the chain's whole point is that later branches are read assuming every earlier one failed."
+      },
+      {
+        "q": "Given `function greetGuest($name = \"Guest\") { echo \"Hello, \" . $name; }`, what does `greetGuest();` print?",
+        "options": ["`Hello, `", "nothing — a required argument is missing", "`Hello, Guest`", "`Hello, $name`"],
+        "answerIndex": 2,
+        "concept": "Default parameter values",
+        "why": "A default value makes the parameter optional, so a call with no argument uses \"Guest\". The second option is what would happen without the default. Note the dot: `.` is PHP's concatenation operator, and `+` would not join these two strings."
+      },
+      {
+        "q": "In `function greet($name) { ... }` followed by `greet(\"Robert\")`, the string \"Robert\" is:",
+        "options": ["the argument", "the parameter", "the return value", "a default value"],
+        "answerIndex": 0,
+        "concept": "Parameter versus argument",
+        "why": "A parameter is the placeholder named when the function is defined; an argument is the actual value supplied at the call. `$name` is the parameter, \"Robert\" the argument. Nothing is returned here at all — the function echoes, and the lecture notes that not all functions need a return value."
+      },
+      {
+        "q": "What does this print?\n\n```php\nfunction counter() {\n    $hits = 0;\n    static $visits = 0;\n    $hits++; $visits++;\n    echo $hits . $visits . \" \";\n}\ncounter(); counter();\n```",
+        "options": ["`11 11`", "`11 12`", "`11 22`", "`12 12`"],
+        "answerIndex": 1,
+        "concept": "Static versus local scope",
+        "why": "`$hits` is local and created afresh on every call, so it is always 1; `static $visits` retains its value between calls, so it reads 1 then 2. Answering `11 11` treats static like an ordinary local; `12 12` treats the local as though it too survived the return."
+      },
+      {
+        "q": "PHP comments come in exactly two kinds. They are:",
+        "options": ["`#` and `<!-- -->`", "`//` and `#`", "`/* */` and `<!-- -->`", "`//` and `/* */`"],
+        "answerIndex": 3,
+        "concept": "The two comment forms",
+        "why": "The lecture names single-line `//` and multi-line `/* */`, both ignored by the interpreter. `<!-- -->` is an HTML comment: it is sent to the browser rather than stripped by PHP, so it hides nothing that PHP would otherwise have run."
+      },
+      {
+        "q": "A `switch` case matches but its block has no `break`. What happens?",
+        "options": ["execution falls through and the following cases run too", "the switch exits straight after that block anyway", "the `default` block runs instead", "nothing runs — PHP reports a syntax error"],
+        "answerIndex": 0,
+        "concept": "break exits a switch",
+        "why": "`break` is what exits the switch once a match is found; without it control keeps running into the next case's statements. That is why stacked labels with nothing between them, as for Sat and Sun, deliberately share one block — fall-through is a tool, but only when you meant it."
+      },
+      {
+        "q": "After `$total = 10; $total += 5;` the variable `$total` holds:",
+        "options": ["`105`", "`5`", "`15`", "`50`"],
+        "answerIndex": 2,
+        "concept": "Compound assignment",
+        "why": "`+=` adds and assigns, so `$total` becomes 10 + 5. The first option is what joining them as text would give — and in PHP that would need the dot, since `+` is arithmetic only. Reaching for `+` to join strings is the standard error carried over from other languages."
+      },
+      {
+        "q": "What does this print?\n\n```php\n$days = [\"Mon\", \"Tue\"];\nforeach ($days as $d) { echo $d . \"-\"; }\n```",
+        "options": ["`Mon-`", "`Mon-Tue-`", "`MonTue`", "`0-1-`"],
+        "answerIndex": 1,
+        "concept": "foreach runs once per element",
+        "why": "The body runs once for each array element with `$d` holding the element itself, and the dot concatenates a dash onto each. The last option is what you would see if `$d` held the keys rather than the values, and the third is what you would get with the dashes omitted."
+      },
+      {
+        "q": "The lecture's separation of concerns organises code into which three layers?",
+        "options": ["presentation, business logic, data", "client, server, database", "HTML, PHP, SQL", "input, processing, output"],
+        "answerIndex": 0,
+        "concept": "Separation of concerns",
+        "why": "The best-practice slide names the presentation layer, the business logic layer and the data layer. The second option describes where code runs rather than how it is organised, and the third names technologies — you can mix all three in one file and still have no separation of concerns at all."
+      },
+      {
+        "q": "Which of these is a built-in PHP function that gives the length of a string?",
+        "options": ["`count()`", "`length()`", "`sizeof()`", "`strlen()`"],
+        "answerIndex": 3,
+        "concept": "Built-in string functions",
+        "why": "`strlen()` is the string-length function in PHP's built-in library, alongside `strtoupper()`, `count()` and `date()`. `count()` is real but counts array elements, which is the near-miss worth knowing, and `length()` is not a PHP function at all."
+      },
+      {
+        "q": "Using the lecture's `factorial($n)` with base case `$n <= 1`, how many calls to `factorial` happen in total when you evaluate `factorial(4)`?",
+        "options": ["3", "5", "4", "24"],
+        "answerIndex": 2,
+        "concept": "Recursion and the base case",
+        "why": "The calls are factorial(4), factorial(3), factorial(2) and factorial(1) — four in all, the last hitting the base case and returning 1 without recursing further. Answering 3 counts only the recursive calls, and 24 is the value returned rather than the number of calls."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "The deck defines reorientation strategies as authorities, institutions or programmes aimed at:",
+        "options": ["raising revenue to fund social programmes during an economic downturn", "reshaping people's attitudes, beliefs or behaviours towards a set of ideals", "replacing military rule with an elected civilian administration", "increasing domestic food output to cut dependence on imports"],
+        "answerIndex": 1,
+        "concept": "Definition of reorientation strategies",
+        "why": "The definition turns on attitudes, beliefs and behaviours being redirected towards a purpose or set of ideals. The last option is the aim of Operation Feed the Nation specifically, and the first belongs to austerity measures — both are items on the deck's list, not the definition of the category they sit in."
+      },
+      {
+        "q": "Which is NOT one of the five activities the deck names for promoting good change?",
+        "options": ["currency devaluation", "public awareness campaigns", "skill development", "community outreach"],
+        "answerIndex": 0,
+        "concept": "The five reorientation activities",
+        "why": "The five are public awareness campaigns, educational programmes, skill development, counselling and community outreach. Currency devaluation is an economic instrument and belongs with austerity and SAP — it changes prices, not attitudes, which is the whole business of this category."
+      },
+      {
+        "q": "The NOA is described as the successor of:",
+        "options": ["the Public Bureau headed by Samuel Cookey", "the War Against Indiscipline Brigade", "the Directorate for Social Mobilisation – MAMSER", "the Directorate for Food, Roads and Rural Infrastructure"],
+        "answerIndex": 2,
+        "concept": "NOA and MAMSER",
+        "why": "The deck treats MAMSER and the Directorate for Social Mobilisation as one body under two names, and the NOA succeeded it — the NOA absorbed MAMSER, never the reverse. The Public Bureau recommended MAMSER's creation but is not the body absorbed, and DFRRI belongs to the Operation Feed the Nation list."
+      },
+      {
+        "q": "In the deck's dating of the OFN sub-programmes, which two fall in the same year as each other?",
+        "options": ["ADP and ACGS", "ACGS and RBDA", "GR and DFRRI", "RBDA and RBS"],
+        "answerIndex": 3,
+        "concept": "Dating the OFN sub-programmes",
+        "why": "The dates run ADP 1976, ACGS 1977, RBDA 1978, RBS 1978, GR 1980, DFRRI 1986, so the pair is River Basin Development and Rural Banking System. The two 1978 entries are the trap in any year-matching question; GR and DFRRI are the pair dated at or after OFN's own end."
+      },
+      {
+        "q": "ACGS (1977) stands for:",
+        "options": ["Agricultural Credit Guarantee Scheme", "Agricultural Cooperative Growers Scheme", "Agricultural Crop Guarantee Subsidy", "Agrarian Credit and Grain Storage"],
+        "answerIndex": 0,
+        "concept": "Expanding the OFN acronyms",
+        "why": "It is credit, not crops, that ACGS guarantees. It sits between ADP, the Agricultural Development Project of 1976, and the two 1978 entries, and every distractor here is a plausible expansion of the same four letters — which is exactly how the acronym is tested."
+      },
+      {
+        "q": "Which instruction is the deck's signature detail of Operation Feed the Nation?",
+        "options": ["farmers were guaranteed a minimum price for their grain", "food imports were banned outright for the duration", "urban dwellers were encouraged to garden undeveloped plots", "rural banks were opened in every local government area"],
+        "answerIndex": 2,
+        "concept": "OFN's characteristic instruction",
+        "why": "Gardening undeveloped urban plots is the detail the deck singles out, and it fits the aim of reducing dependence on food imports by pulling town dwellers into production. Rural banking is a separate sub-programme, RBS of 1978, not OFN's own instruction."
+      },
+      {
+        "q": "The criticism the deck levels at Operation Feed the Nation is that:",
+        "options": ["it was cancelled before any of the programmes under it could begin", "the promised seedlings, insecticides and tractors were not provided", "it favoured urban traders at the expense of rural farmers", "it was funded entirely by foreign agricultural loans"],
+        "answerIndex": 1,
+        "concept": "Why OFN failed, in the deck's terms",
+        "why": "The complaint is about delivery: resources promised were never supplied, activities were not effectively performed, farmers were sceptical of the new methods, officials did not do the job expected of them, and the manpower to expand farming never materialised. It ran six named sub-programmes, so the first option is the factual opposite."
+      },
+      {
+        "q": "Austerity measures are defined in the deck as:",
+        "options": ["policies that raise government spending to stimulate a weak economy", "the reorganisation of state agencies into fewer ministries", "the deliberate devaluation of the naira to boost exports", "strict, frugal economic policies used by government to manage public debt"],
+        "answerIndex": 3,
+        "concept": "Definition of austerity",
+        "why": "The definition turns on debt: strict, frugal policies undertaken in periods of economic hardship or budget deficits. The first option is stimulus, the opposite approach. The deck's own criticism is that austerity kept failing because waste and government spending were never tackled while the burden was shifted onto the masses."
+      },
+      {
+        "q": "Which of these is one of the three main types of austerity the deck names?",
+        "options": ["higher taxes with higher government spending", "fiscal consolidation", "lower taxes with lower government spending", "revenue diversification"],
+        "answerIndex": 2,
+        "concept": "The three types versus the six examples",
+        "why": "The three types are phrased as tax-and-spend combinations: higher taxes alone; higher taxes plus lower spending; lower taxes plus lower spending. Fiscal consolidation and revenue diversification are real, but they belong to the separate list of six examples implemented in Nigeria."
+      },
+      {
+        "q": "Which of these appears in the deck's six examples of austerity implemented in Nigeria?",
+        "options": ["reduction of recurrent expenditure", "higher taxes to fund government spending", "lower taxes with lower spending", "raising taxes and cutting spending together"],
+        "answerIndex": 0,
+        "concept": "The six Nigerian austerity examples",
+        "why": "The six are fiscal consolidation, reduction of recurrent expenditure, subsidy reforms, revenue diversification, debt management, and rationalisation of subsidies and social programmes. The other three options are the three types — the same trap as the previous idea, running in the other direction."
+      },
+      {
+        "q": "War Against Indiscipline promoted which set of behaviours?",
+        "options": ["saving, thrift and investment in local industry", "literacy, numeracy and regular school attendance", "farming, gardening and household food self-sufficiency", "punctuality, queueing, cleanliness and traffic discipline"],
+        "answerIndex": 3,
+        "concept": "What WAI actually targeted",
+        "why": "WAI went after everyday social conduct — punctuality, respect for queues, environmental cleanliness and adherence to traffic regulations — under the stated aim of correcting social maladjustments. The third option describes Operation Feed the Nation, a different programme under a different head of state."
+      },
+      {
+        "q": "The deck says WAI's utmost criticism was:",
+        "options": ["that it never reached the rural areas", "the high handedness of the WAI Brigade", "that it was abandoned before any results appeared", "the cost of running it during a recession"],
+        "answerIndex": 1,
+        "concept": "WAI's success and its criticism are one fact",
+        "why": "The Brigade dealt decisively with offenders, and that decisiveness is what drew the objection — the same fact read two ways. A question asking for the criticism wants high handedness, not the claim that the programme failed, which the deck never makes."
+      },
+      {
+        "q": "MAMSER stands for:",
+        "options": ["Mass Mobilisation for Self-reliance, Social Justice and Economic Recovery", "Mass Mobilisation for Social Reform and Economic Rebirth", "Movement for Agricultural Modernisation, Self-reliance and Rural Empowerment", "Mass Awareness Movement for Social and Economic Reorientation"],
+        "answerIndex": 0,
+        "concept": "The MAMSER acronym",
+        "why": "Three goals are named in the title itself — self-reliance, social justice and economic recovery — and they reappear in its stated aim of mobilising Nigerians for nation-building. The distractors keep the rhythm of the acronym while substituting words the deck never uses."
+      },
+      {
+        "q": "What does the deck give for War Against Indiscipline and Corruption (WAIC)?",
+        "options": ["a founding decree and a launch year", "the same content slide as WAI, since they are one programme", "a place on the list of six efforts, but no slide of its own", "a criticism but no stated aim"],
+        "answerIndex": 2,
+        "concept": "WAIC as a distinct but undeveloped entry",
+        "why": "WAIC is a separate item on the list of six reorientation efforts and gets no content slide at all. A question naming WAIC is checking that you noticed it is distinct from WAI — the dates and the leader belong to WAI, which ended in September 1985."
+      },
+      {
+        "q": "The 3 R's policy that followed the Nigeria-Biafra civil war stood for:",
+        "options": ["reform, restructuring and redistribution", "recovery, reorientation and rebuilding", "relief, resettlement and repatriation", "reconciliation, reconstruction and rehabilitation"],
+        "answerIndex": 3,
+        "concept": "Gowon's post-war 3 R's",
+        "why": "Reconciliation, reconstruction and rehabilitation was Gowon's policy for reintegrating the Igbos after the surrender of January 1970, with the National Rehabilitation Commission handling the last two, mainly in the Eastern States. The distractors borrow language from austerity and from relief work, neither of which the three R's name."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "Which guideline comes immediately after Understand the Prompt/Question?",
+        "options": ["Introduction", "Address the Key Points", "Organise Your Thoughts", "Stay Relevant"],
+        "answerIndex": 2,
+        "concept": "The order of the first three guidelines",
+        "why": "The first three are all pre-speech and fixed in order: understand, then organise, then open. Organising is silent and internal — a mental outline or jotted points — while the introduction is the first thing you actually say, so anything that puts the opening before the outline has the sequence wrong."
+      },
+      {
+        "q": "Which is the last of the thirteen guidelines?",
+        "options": ["Conclude Effectively", "Adapt to the Context", "Practice Active Listening", "Manage Time Effectively"],
+        "answerIndex": 3,
+        "concept": "The tail of the list",
+        "why": "The final three govern delivery in the room — adapt, listen, manage time — and time management closes the list. Conclude Effectively is the tempting choice because it finishes the speech, but it is tenth: it ends the body of your answer, not the sequence of guidelines."
+      },
+      {
+        "q": "The phrase succinct yet comprehensive resolves the tension between which two guidelines?",
+        "options": ["Speak Clearly and Concisely, and Elaborate and Expand", "Stay Relevant, and Balance", "Introduction, and Conclude Effectively", "Provide Examples and Evidence, and Address the Key Points"],
+        "answerIndex": 0,
+        "concept": "Concision against elaboration",
+        "why": "Concision targets jargon, complex language, pace and enunciation; elaboration demands sufficient detail to fully address the prompt. They only look contradictory: cut the padding, not the substance. Stay Relevant and Balance is the other pair that seems to pull apart, and it resolves differently — a counter-argument on the set topic is not a tangent."
+      },
+      {
+        "q": "Which guideline forbids veering off into unrelated tangents?",
+        "options": ["Balance", "Stay Relevant", "Address the Key Points", "Manage Time Effectively"],
+        "answerIndex": 1,
+        "concept": "Relevance versus balance",
+        "why": "Stay Relevant is the guideline that names tangents and says they dilute the impact of the answer. Balance is its near neighbour and asks for the opposite movement — different angles and counter-arguments — so the test is the topic: an argument on the set topic is balance, a story about something else is a tangent however well argued."
+      },
+      {
+        "q": "A speaker ends by introducing a fresh argument not raised earlier. Which guideline has been broken?",
+        "options": ["Organise Your Thoughts", "Elaborate and Expand", "Conclude Effectively", "Adapt to the Context"],
+        "answerIndex": 2,
+        "concept": "What a conclusion may contain",
+        "why": "The conclusion is defined as brief, summarising your main points and reinforcing the key message, so new material fails that description outright. Elaborate and Expand is tempting because it licenses more detail — but it asks for depth on your existing key points, inside the body."
+      },
+      {
+        "q": "The deck's own example of adapting to the context is that:",
+        "options": ["an academic setting may require a more formal tone than casual talk", "a longer prompt deserves a correspondingly longer answer", "you should mirror the vocabulary of the person questioning you", "technical topics need worked examples and non-technical ones do not"],
+        "answerIndex": 0,
+        "concept": "Adapt to the Context",
+        "why": "Register is what you adjust: formal for an academic setting, looser in casual conversation, with job interviews, academic assessments and group discussions named as the contexts to practise for. Adapting responds to the setting; adjusting to what an interlocutor has just said is Practice Active Listening instead."
+      },
+      {
+        "q": "Which guideline is about tracking follow-up questions and comments during an ongoing exchange?",
+        "options": ["Adapt to the Context", "Stay Relevant", "Balance", "Practice Active Listening"],
+        "answerIndex": 3,
+        "concept": "Active listening inside a conversation",
+        "why": "Active listening is the interlocutor-facing guideline: attend to follow-ups so you can adapt and stay relevant as the exchange develops. Adapt to the Context is the setting-facing one — register and tone for the room. The two are easy to swap because both are about adjusting."
+      },
+      {
+        "q": "In \"I didn't say you should bring coffee\", stressing should implies:",
+        "options": ["someone else should bring it", "it was not an obligation, merely a suggestion", "I wrote it rather than said it", "something other than coffee was meant"],
+        "answerIndex": 1,
+        "concept": "Sentence stress shifts the denial",
+        "why": "Each stress position moves the denial onto a different element, and should is the word carrying obligation, so denying it denies that anyone was required to do this. The first option is what stressing you does, the third what stressing say does, and the last what stressing coffee does."
+      },
+      {
+        "q": "Stressing say in the same sentence implies:",
+        "options": ["I implied or wrote it, but I did not say it", "I deny the whole thing flatly", "someone other than me said it", "it should be sent rather than brought"],
+        "answerIndex": 0,
+        "concept": "Stress on the verb of speaking",
+        "why": "Stressing the verb denies the manner of communication rather than the content, conceding that the message may have got across some other way. A flat denial of everything is what stressing didn't gives, and shifting the actor is what stressing I gives."
+      },
+      {
+        "q": "Which word does the deck use to demonstrate word stress?",
+        "options": ["coffee", "movies", "communication", "demonstrate"],
+        "answerIndex": 3,
+        "concept": "Word stress versus sentence stress",
+        "why": "The deck demonstrates word stress with demonstrate, showing how moving emphasis between syllables alters pronunciation and meaning. Coffee and movies come from the sentence-stress examples, where the unit carrying the stress is a whole word inside a sentence rather than a syllable inside a word."
+      },
+      {
+        "q": "Which of these was NOT one of the deck's three worked speaking prompts?",
+        "options": ["the ethical implications of advances in artificial intelligence", "the environmental cost of urban transport in Nigeria", "cross-cultural communication and international business strategies", "the socio-economic implications of the gig economy"],
+        "answerIndex": 1,
+        "concept": "The three model prompts",
+        "why": "The three are cross-cultural communication under globalisation, AI ethics in healthcare and autonomous vehicles, and the gig economy's effect on labour markets. All three follow one shape — introduction, both sides with a named example, proposed solutions, conclusion — which is the template worth carrying into Section B."
+      },
+      {
+        "q": "The AI ethics sample answer worked through which two domains?",
+        "options": ["education and banking", "manufacturing and agriculture", "healthcare and autonomous vehicles", "healthcare and social media"],
+        "answerIndex": 2,
+        "concept": "The AI sample's two examples",
+        "why": "Better diagnoses and treatment planning are set against patient privacy and algorithmic bias in healthcare, and life-threatening decision dilemmas in autonomous vehicles. Using two domains rather than one is exactly what the analysis credited as producing a well-rounded answer."
+      },
+      {
+        "q": "The gig economy sample proposed which interventions?",
+        "options": ["minimum wage legislation and union recognition", "cultural sensitivity training and better communication technology", "transparency, accountability and inclusivity as a framework", "updating labour laws, portable benefits and lifelong learning"],
+        "answerIndex": 3,
+        "concept": "Matching solutions to samples",
+        "why": "Those three are the gig economy answer's recommendations, credited by the analysis as showing practical understanding. The second option belongs to the cross-cultural sample and the third to the AI sample — every one of the three answers proposes solutions, so it is their content that tells them apart."
+      },
+      {
+        "q": "Which of these is one of the skills and competencies listed with the stress case study?",
+        "options": ["Listening Acuity", "Critical Thinking", "Language Proficiency", "Building Confidence"],
+        "answerIndex": 0,
+        "concept": "The case study's skill list",
+        "why": "The case study lists Listening Acuity, Effective Communication, Cultural Sensitivity, Adaptability, Interpretation Skills and Conscious Speaking. The other three are headings from the nine importances of speaking prompts, which belong to the slide deck rather than to the summary sheet on stress — two separate lists from two separate documents."
+      },
+      {
+        "q": "The structured format the deck draws out of all three model answers is:",
+        "options": ["a claim, three supporting points and the claim restated at the end", "a definition, a short history and a set of worked examples", "a clear introduction, comprehensive analysis and thoughtful conclusion", "a question, a counter-question and a proposed resolution"],
+        "answerIndex": 2,
+        "concept": "The model-answer shape",
+        "why": "That three-part shape is what the deck says every sample followed, handling complexity through in-depth exploration, examples and proposed solutions. It maps straight onto the guidelines: the introduction is guideline 3, the analysis covers 4 to 9, and the conclusion is guideline 10."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "How much heat is needed to raise 0.20 kg of water by 5.0 °C? (c_w = 4186 J/kg·°C)",
+        "options": ["4.2×10³ J", "8.4×10² J", "2.1×10⁴ J", "4.2×10⁶ J"],
+        "answerIndex": 0,
+        "concept": "Q = mc∆T",
+        "why": "Q = 0.20 × 4186 × 5.0 = 4186 J. The third option leaves out the mass and the second leaves out the temperature rise. The factor of a thousand in the last is what a gram-kilogram mix-up costs — the error that makes an answer absurd rather than merely wrong."
+      },
+      {
+        "q": "A calorimeter has m_c c_c = 20.0 J/°C. Its water equivalent (c_w = 4186 J/kg·°C) is about:",
+        "options": ["20 g", "84 g", "4.8 g", "209 g"],
+        "answerIndex": 2,
+        "concept": "Water equivalent",
+        "why": "The water equivalent is the mass of water with the same heat capacity: m = (m_c c_c)/c_w = 20.0/4186 kg ≈ 4.8 g. The last option divides the wrong way round; the first quotes the heat capacity itself, which is in J/°C and is not a mass at all."
+      },
+      {
+        "q": "Which ordering of temperatures must hold in a successful run?",
+        "options": ["T_s > T_r > T_f", "T_s > T_f > T_r", "T_f > T_s > T_r", "T_r > T_f > T_s"],
+        "answerIndex": 1,
+        "concept": "Where T_f sits",
+        "why": "The hot solid falls to the mixture temperature and the cold water rises to it, so T_f lies between the two. Both differences in the working equation, (T_s − T_f) and (T_f − T_r), are then positive; a negative specific heat at the end means one of them was subtracted backwards."
+      },
+      {
+        "q": "Why does the procedure insist on crucible tongs for the transfer?",
+        "options": ["to avoid contaminating the water with grease from the hand", "so the block can be weighed while it is still hot", "because the calorimeter must not be touched once the jacket is closed", "so the block reaches the water still at the recorded T_s"],
+        "answerIndex": 3,
+        "concept": "Why the transfer must be fast",
+        "why": "Every second in the air is heat the block loses that the equation still credits to the water — that, plus not scalding your hand at 95 °C, is what the tongs are for. Heat lost in transfer inflates (T_s − T_f) and drives the computed c_s too low."
+      },
+      {
+        "q": "Some hot water is carried over into the calorimeter on the surface of the block. The computed c_s is then:",
+        "options": ["too high, because heat arrives that the equation never counts", "too low, because the block loses heat on the way across", "unaffected, because water is already part of the mixture", "too low, because m_w has been understated at the balance"],
+        "answerIndex": 0,
+        "concept": "Water carried over on the block",
+        "why": "The extra hot water raises T_f without being counted in m_w, so the heat gained looks larger than the block alone could have supplied and c_s is inflated. Contrast it with slow transfer, which loses heat and pushes c_s the other way — naming which term each error touches is what separates a full-mark answer."
+      },
+      {
+        "q": "Heat leaks from the calorimeter to the room while equilibrium is reached. The computed c_s comes out:",
+        "options": ["unchanged, since both sides of the equation fall together", "too low, because T_f is depressed and the heat gained understated", "too high, because the solid appears to have lost more heat", "too low, because (T_s − T_f) is overstated"],
+        "answerIndex": 1,
+        "concept": "Jacket loss deflates the numerator",
+        "why": "Leaking to the room makes T_f lower than it should be, so (T_f − T_r) and with it the heat gained are too small. The last option reaches the right verdict by the wrong route: overstating (T_s − T_f) is what heat lost during transfer does, and that inflates the denominator instead."
+      },
+      {
+        "q": "Which is the dominant random error in the deck's copper run?",
+        "options": ["the balance reading of m_s to 0.1 g", "the accepted value taken for c_w", "the 0.9 °C rise read on a thermometer graduated in 0.1 °C", "the 91.3 °C starting temperature of the block"],
+        "answerIndex": 2,
+        "concept": "Where the uncertainty actually lives",
+        "why": "A 0.1 °C uncertainty on a rise of only 0.9 °C is roughly 11 per cent, and it passes straight into c_s. The rise is small because 8.9 g of metal, with about a tenth of water's specific heat, is warming 68.6 g of water — which is why the advice is a large block and no more water than covers it."
+      },
+      {
+        "q": "Plotting Q_gained against m_s(T_s − T_f) over several runs gives a straight line through the origin. Its gradient is:",
+        "options": ["the heat capacity of the calorimeter, in J/°C", "the water equivalent of the calorimeter, in kg", "the total heat capacity of the mixture, in J/°C", "the specific heat of the solid, in J/kg·°C"],
+        "answerIndex": 3,
+        "concept": "Reading c_s off a gradient",
+        "why": "Q_gained = c_s · m_s(T_s − T_f), so the plot is y = c_s x and the gradient is c_s itself. The third option is the gradient of the other graph in this topic — Q against ∆T for the mixture — and reading one plot for the other is the easy slip."
+      },
+      {
+        "q": "That same line is found to cut the x-axis at a positive value rather than passing through the origin. This suggests:",
+        "options": ["the thermometer carries a positive zero error", "the solid lost heat that never reached the water", "the mass of water was recorded too small", "heat was gained from the thermometer and stirrer"],
+        "answerIndex": 1,
+        "concept": "What a negative intercept means",
+        "why": "Cutting the x-axis to the right means some of m_s(T_s − T_f) bought no measured heat at all: it went to the room during transfer or through the jacket, or the calorimeter term was mishandled. A positive intercept is the opposite case and points to heat arriving from elsewhere, or a thermometer zero error."
+      },
+      {
+        "q": "For a single run, plotting Q against ∆T for the mixture gives a line whose gradient is:",
+        "options": ["m_w c_w + m_c c_c, in J/°C", "c_w alone, in J/kg·°C", "c_s, in J/kg·°C", "m_s c_s, in J/°C"],
+        "answerIndex": 0,
+        "concept": "Total heat capacity of the mixture",
+        "why": "What warms is the water together with the vessel, so the heat per degree is their combined heat capacity in J/°C. The third option is the gradient of the other plot, Q_gained against m_s(T_s − T_f); the two graphs answer different questions and only one hands you the unknown directly."
+      },
+      {
+        "q": "Why are J/kg·°C and J/kg·K interchangeable here?",
+        "options": ["because every temperature in the run is close to room temperature", "because the 273.15 offset cancels between numerator and denominator", "because specific heat is defined only above 0 °C", "because an interval of one degree Celsius is an interval of one kelvin"],
+        "answerIndex": 3,
+        "concept": "Celsius and kelvin intervals",
+        "why": "Only differences of temperature appear in Q = mc∆T, and the two scales have the same degree size, so a rise of 1 °C is a rise of 1 K and the number for c is identical. The 273.15 offset matters only for absolute temperatures, and this experiment never needs one."
+      },
+      {
+        "q": "Water's specific heat of 4186 J/kg·°C, roughly ten times a metal's, is the reason:",
+        "options": ["metal cookware takes longer to heat than the water in it", "the calorimeter term can safely be neglected", "water is used as a coolant in industrial processes", "the mixture reaches equilibrium almost instantly"],
+        "answerIndex": 2,
+        "concept": "What a high specific heat is good for",
+        "why": "A high specific heat means a great deal of energy absorbed for a small temperature rise, which is exactly what a coolant is for, and why the sea moderates coastal climate. The first option is backwards: metals have low specific heats and so heat up fast, which is why metal cookware works."
+      },
+      {
+        "q": "Why may every mass in the working equation be left in grams?",
+        "options": ["because mass appears above and below the line, so the unit cancels", "because the deck's data sheet quotes both specific heats per gram", "because the calorimeter and the solid are made of the same metal", "because the temperature differences are themselves unitless ratios"],
+        "answerIndex": 0,
+        "concept": "When gram masses are safe",
+        "why": "c_s = (m_w c_w + m_c c_c)(T_f − T_r)/[m_s(T_s − T_f)] has mass in the numerator and the denominator, so grams throughout give the same number as kilograms throughout. What wrecks the answer is mixing them: a gram mass against a J/kg·°C specific heat is an error of a thousand."
+      },
+      {
+        "q": "T_f should be read:",
+        "options": ["exactly one minute after the transfer", "as soon as the cover is replaced", "as the average of the readings taken while it rises", "at the highest steady value the thermometer reaches"],
+        "answerIndex": 3,
+        "concept": "When to take the final temperature",
+        "why": "Too early and equilibrium has not been reached; too late and the mixture has begun to cool towards the room, so a fixed waiting time is the wrong rule. Take the peak steady reading — with a rise of under a degree, a tenth lost either way is a large fraction of the whole measurement."
+      },
+      {
+        "q": "Whose apparatus established the mechanical equivalent of heat?",
+        "options": ["Antoine Lavoisier", "Lord Kelvin", "James Joule", "Robert Boyle"],
+        "answerIndex": 2,
+        "concept": "Where the energy equation comes from",
+        "why": "Joule's mid-19th-century experiments fixed the link between mechanical work and heat and made heat is a form of energy quantitative, which is what licenses the conservation step in this experiment. Lavoisier is the other name in the notes, but for building one of the first calorimeters in the late 18th century."
+      }
+    ]
+  }
+}

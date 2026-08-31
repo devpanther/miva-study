@@ -1,0 +1,1279 @@
+{
+  "week": 1,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "For f(x) = 5x + 2, what is f(−3)?",
+        "options": [
+          "−13",
+          "−15",
+          "−5",
+          "17"
+        ],
+        "answerIndex": 0,
+        "concept": "Evaluating a linear rule at a negative input",
+        "why": "Follow the rule in her order: multiply first, 5(−3) = −15, then add 2 to get −13. The tempting wrong answer is −15, where you stopped before adding the 2; −5 comes from adding inside the bracket first, 5(−3 + 2), which is the mistake slide 10 exists to prevent."
+      },
+      {
+        "q": "For g(x) = x² + 2x, what is g(−5)?",
+        "options": [
+          "35",
+          "15",
+          "−35",
+          "−15"
+        ],
+        "answerIndex": 1,
+        "concept": "Squaring a negative input before adding the linear term",
+        "why": "(−5)² = +25 and 2(−5) = −10, so g(−5) = 25 − 10 = 15. The trap is 35, where you kept 25 but added the 10 instead of subtracting it; the negative options come from writing (−5)² as −25, which loses the whole point that squaring kills the sign."
+      },
+      {
+        "q": "Which set of ordered pairs is NOT a function?",
+        "options": [
+          "{(1, 5), (2, 5), (3, 5)}",
+          "{(0, 0), (1, 1), (2, 4)}",
+          "{(−1, 3), (0, 3), (1, 4)}",
+          "{(2, 1), (2, 7), (5, 3)}"
+        ],
+        "answerIndex": 3,
+        "concept": "The one-output test looks at inputs, not outputs",
+        "why": "The input 2 is sent to both 1 and 7, so exactly one output per input fails. The other three sets repeat outputs — 5 three times, 3 twice — and you may be tempted to disqualify them, but repeated outputs never break the definition; only a repeated input with different outputs does."
+      },
+      {
+        "q": "What is the domain of f(x) = (x + 4)/(2x − 6)?",
+        "options": [
+          "All real x except x = 3",
+          "All real x except x = −4",
+          "All real x except x = −3",
+          "(−∞, ∞)"
+        ],
+        "answerIndex": 0,
+        "concept": "Only the denominator restricts a domain",
+        "why": "Set the denominator ≠ 0: 2x − 6 ≠ 0 gives x ≠ 3. The trap is x ≠ −4, which is the zero of the numerator — a numerator is allowed to vanish, and it places no restriction at all on the domain."
+      },
+      {
+        "q": "What is the domain of f(x) = √(5 − x)?",
+        "options": [
+          "[5, ∞)",
+          "(−∞, 5]",
+          "(−∞, 5)",
+          "[−5, ∞)"
+        ],
+        "answerIndex": 1,
+        "concept": "Square-root domain and the direction of the inequality",
+        "why": "What sits under the root cannot be negative, so 5 − x ≥ 0, which rearranges to x ≤ 5. The tempting [5, ∞) comes from solving the inequality the wrong way round; the bracket at 5 is square because x = 5 gives √0 = 0, a perfectly legal input."
+      },
+      {
+        "q": "Find the range of f(x) = −|x − 2| − 1.",
+        "options": [
+          "(−∞, −1]",
+          "[−1, ∞)",
+          "(−∞, 1]",
+          "[1, ∞)"
+        ],
+        "answerIndex": 0,
+        "concept": "Building a range upward from |·| ≥ 0 when a minus sign is present",
+        "why": "Start from |x − 2| ≥ 0, multiply by −1 to get −|x − 2| ≤ 0, then subtract 1: y ≤ −1. The trap is [−1, ∞), which is what you get if you forget that multiplying by −1 reverses the inequality; subtracting the 1 afterwards does not reverse it again."
+      },
+      {
+        "q": "What is the inverse of f(x) = (x − 2)/5?",
+        "options": [
+          "5/(x − 2)",
+          "(x + 2)/5",
+          "5x + 2",
+          "5x − 2"
+        ],
+        "answerIndex": 2,
+        "concept": "Let, switch, isolate — and inverse is not reciprocal",
+        "why": "Let y = (x − 2)/5, switch to x = (y − 2)/5, then isolate y: 5x = y − 2, so y = 5x + 2. The option 5/(x − 2) is the reciprocal 1/f(x), not the inverse; check yours by composing, since an inverse hands x back while a reciprocal hands back 1."
+      },
+      {
+        "q": "A function f has an inverse, and f(3) = 11. What is f⁻¹(11)?",
+        "options": [
+          "1/11",
+          "11",
+          "1/3",
+          "3"
+        ],
+        "answerIndex": 3,
+        "concept": "What an inverse actually does to an input-output pair",
+        "why": "The inverse reverses the pairing, so if f sends 3 to 11 then f⁻¹ sends 11 back to 3. The options 1/11 and 1/3 come from reading f⁻¹ as 1/f, which is the single most common misreading of that superscript."
+      },
+      {
+        "q": "With f(x) = x + 7 and g(x) = 3x, what is f ∘ g?",
+        "options": [
+          "3x + 21",
+          "x + 21",
+          "3x² + 7",
+          "3x + 7"
+        ],
+        "answerIndex": 3,
+        "concept": "Order in a composite: the function nearest the x acts first",
+        "why": "f ∘ g means f[g(x)], so g runs first: f[3x] = 3x + 7. The trap 3x + 21 is g ∘ f = 3(x + 7), which is what you get by applying them in reading order instead of right to left."
+      },
+      {
+        "q": "With f(x) = 3x + 1 and g(x) = x − 4, what is (f ∘ g)(6)?",
+        "options": [
+          "2",
+          "7",
+          "15",
+          "19"
+        ],
+        "answerIndex": 1,
+        "concept": "Evaluating a composite at a number, inner function first",
+        "why": "g(6) = 2, and then f(2) = 3(2) + 1 = 7. Option 2 is where you stop if you forget to feed the result into f; 15 is (g ∘ f)(6), the composite taken in the wrong order."
+      },
+      {
+        "q": "f is declared from {1, 2, 3} into {0, 1, 4, 9, 16} by f(x) = x². Which pairing is correct?",
+        "options": [
+          "Range {0, 1, 4, 9, 16}, codomain {1, 2, 3}",
+          "Range {1, 2, 3}, codomain {1, 4, 9}",
+          "Range {0, 1, 4, 9, 16}, codomain {1, 4, 9}",
+          "Range {1, 4, 9}, codomain {0, 1, 4, 9, 16}"
+        ],
+        "answerIndex": 3,
+        "concept": "The range is what is hit; the codomain is what was offered",
+        "why": "Only 1, 4 and 9 are actually produced, so they are the range; 0 and 16 sit in the declared codomain unreached, exactly as 17, 23 and 19 do on slide 5. The tempting option calls the whole declared set the range, which erases the distinction the slide is drawn to make."
+      },
+      {
+        "q": "The point (4, 6) lies on the graph of f. What does that tell you?",
+        "options": [
+          "f(6) = 4",
+          "f(4) = f(6)",
+          "f(4) = 6",
+          "Both 4 and 6 are inputs of f"
+        ],
+        "answerIndex": 2,
+        "concept": "A graph is the set of points (x, f(x))",
+        "why": "The x-coordinate is the input and the y-coordinate is the output, so (4, 6) says f(4) = 6. The trap f(6) = 4 reads the pair backwards, which is the same slip as confusing domain with range."
+      },
+      {
+        "q": "Consider the set {(1, 3), (2, 3)}. It is:",
+        "options": [
+          "a relation but not a function",
+          "a function but not a relation",
+          "both a relation and a function",
+          "neither a relation nor a function"
+        ],
+        "answerIndex": 2,
+        "concept": "Every function is a relation; repeated outputs are harmless",
+        "why": "Both inputs have exactly one output, so it is a function, and every function is a set of ordered pairs, so it is a relation too. The tempting first option treats the repeated output 3 as disqualifying, but the definition constrains inputs only."
+      },
+      {
+        "q": "The domain of h(x) = √(x + 6) is [−6, ∞). What is its range?",
+        "options": [
+          "[0, ∞)",
+          "[−6, ∞)",
+          "(−∞, 0]",
+          "(−∞, ∞)"
+        ],
+        "answerIndex": 0,
+        "concept": "A square root's output floor is zero, whatever the shift inside",
+        "why": "A square root is never negative and reaches 0 at x = −6, so the outputs run from 0 upward. The trap [−6, ∞) copies the domain into the range; the +6 shifts which inputs are legal, not how low the output can go."
+      },
+      {
+        "q": "A rule pairs each student in a class with their surname. Why is this not a real-valued function?",
+        "options": [
+          "Two students could share a surname",
+          "The inputs are not numbers",
+          "The outputs are not real numbers",
+          "It is a relation rather than a function"
+        ],
+        "answerIndex": 2,
+        "concept": "What 'real-valued' adds to 'function'",
+        "why": "Real-valued is a condition on the outputs, and surnames are not real numbers. The trap is 'the inputs are not numbers' — slide 8's own diagram has the letters A, B, C, D as inputs and is still asking about the output set, so non-numeric inputs are not the objection."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "How many electrons must be removed from a neutral sphere to leave it with a charge of +3.2×10⁻⁹ C?",
+        "options": [
+          "2.0×10¹⁰",
+          "5.0×10⁻¹¹",
+          "3.2×10¹⁰",
+          "5.1×10⁻²⁸"
+        ],
+        "answerIndex": 0,
+        "concept": "Quantisation q = ne used to count electrons",
+        "why": "n = q/e = 3.2×10⁻⁹ / 1.6×10⁻¹⁹ = 2.0×10¹⁰, a pure count with no unit. The tempting 5.1×10⁻²⁸ multiplies by e instead of dividing, and 5.0×10⁻¹¹ divides the wrong way round — check by asking whether your answer is a plausible number of electrons."
+      },
+      {
+        "q": "An object carries 5.0×10¹² excess electrons. Its net charge is:",
+        "options": [
+          "+8.0×10⁻⁷ C",
+          "−3.1×10³¹ C",
+          "−8.0×10⁻⁵ C",
+          "−8.0×10⁻⁷ C"
+        ],
+        "answerIndex": 3,
+        "concept": "q = ne with the sign carried by the electrons",
+        "why": "q = ne = (5.0×10¹²)(1.6×10⁻¹⁹) = 8.0×10⁻⁷ C, negative because the excess is electrons. The trap is the same magnitude with a plus sign, which is what you write if you compute the size and forget that an excess of electrons makes an object negative."
+      },
+      {
+        "q": "Two point charges of +6.0 μC and +2.0 μC are 3.0 cm apart in vacuum. The force between them is about:",
+        "options": [
+          "1.2×10² N",
+          "3.6 N",
+          "1.2×10⁻² N",
+          "2.4×10² N"
+        ],
+        "answerIndex": 0,
+        "concept": "Coulomb's law with the separation converted to metres",
+        "why": "F = (8.99×10⁹)(6.0×10⁻⁶)(2.0×10⁻⁶)/(0.030)² = 0.108/9.0×10⁻⁴ ≈ 1.2×10² N. The trap 1.2×10⁻² N is what you get leaving r in centimetres — r is squared, so that costs a factor of 10⁴, not 10²; 3.6 N uses 1/r instead of 1/r²."
+      },
+      {
+        "q": "Two point charges attract each other with force F. The separation is tripled and nothing else changes. The new force is:",
+        "options": [
+          "F/3",
+          "3F",
+          "9F",
+          "F/9"
+        ],
+        "answerIndex": 3,
+        "concept": "The inverse-square dependence of Coulomb's law",
+        "why": "F ∝ 1/r², so tripling r divides the force by 3² = 9. The tempting F/3 treats the law as inverse-first-power; the quick test is that halving r must quadruple the force, not double it."
+      },
+      {
+        "q": "Two identical metal spheres are touched together and separated, and each is then found to carry +8.0 nC. One of them carried +5.0 nC beforehand. The other carried:",
+        "options": [
+          "+3.0 nC",
+          "+16.0 nC",
+          "+11.0 nC",
+          "+8.0 nC"
+        ],
+        "answerIndex": 2,
+        "concept": "Charge sharing between identical conductors, run backwards",
+        "why": "Identical spheres leave contact with the average, so the total before must be 2 × 8.0 = 16.0 nC, and 16.0 − 5.0 = +11.0 nC. The trap +16.0 nC is that total rather than the one sphere's share, and +3.0 nC comes from working with the difference instead of the sum."
+      },
+      {
+        "q": "What is the magnitude of the electric field 2.0 cm from a +8.0 nC point charge?",
+        "options": [
+          "1.8×10¹ N·C⁻¹",
+          "3.6×10³ N·C⁻¹",
+          "7.2×10⁵ N·C⁻¹",
+          "1.8×10⁵ N·C⁻¹"
+        ],
+        "answerIndex": 3,
+        "concept": "E = kQ/r² for a point charge",
+        "why": "E = (8.99×10⁹)(8.0×10⁻⁹)/(0.020)² = 71.9/4.0×10⁻⁴ ≈ 1.8×10⁵ N·C⁻¹. The tempting 1.8×10¹ leaves r in centimetres, and 3.6×10³ divides by r instead of r² — both are unit-and-power slips rather than wrong physics."
+      },
+      {
+        "q": "At a point 5.0 cm from an isolated −4.0 nC point charge, the electric field points:",
+        "options": [
+          "away from the charge",
+          "toward the charge",
+          "at right angles to the line joining them",
+          "in a direction set by the sign of the test charge"
+        ],
+        "answerIndex": 1,
+        "concept": "Field direction is defined for a positive test charge",
+        "why": "E is defined as the force per unit positive test charge, and a positive test charge is pulled toward a negative source, so the field points inward. The last option is the trap: the field belongs to the source alone, and swapping the test charge changes the force's direction but not E."
+      },
+      {
+        "q": "A test charge of +2.0 μC placed at a point feels a force of 6.0×10⁻³ N. The field there is:",
+        "options": [
+          "1.2×10⁻⁸ N·C⁻¹",
+          "3.0×10³ N·C⁻¹",
+          "3.3×10⁻⁴ N·C⁻¹",
+          "3.0×10⁻³ N·C⁻¹"
+        ],
+        "answerIndex": 1,
+        "concept": "E = F/q₀ as force per unit charge",
+        "why": "E = F/q₀ = 6.0×10⁻³ / 2.0×10⁻⁶ = 3.0×10³ N·C⁻¹. The trap 3.3×10⁻⁴ divides q₀ by F instead of F by q₀; the units are the check, since N·C⁻¹ requires the charge underneath."
+      },
+      {
+        "q": "A charged rod is held near an isolated neutral conductor, which is never earthed. The rod is then taken far away. The conductor is left:",
+        "options": [
+          "with a net charge opposite to the rod",
+          "with a net charge of the same sign as the rod",
+          "neutral, with its charge spread uniformly again",
+          "neutral, but permanently polarised"
+        ],
+        "answerIndex": 2,
+        "concept": "Polarisation without grounding is reversible",
+        "why": "With no path to earth, nothing left or joined the conductor: the charge merely shifted, and it spreads out again once the rod goes. The trap is 'opposite to the rod', which is the outcome of induction *with* grounding — the earth connection is what makes the separation permanent."
+      },
+      {
+        "q": "Which statement about charging solid objects is correct?",
+        "options": [
+          "Protons move from the positive body to the negative one",
+          "Only electrons move; protons stay bound in the nuclei",
+          "Equal numbers of protons and electrons are exchanged",
+          "Charge is created on one body and destroyed on the other"
+        ],
+        "answerIndex": 1,
+        "concept": "Charging transfers electrons, never protons",
+        "why": "In solids the protons are locked in nuclei, so every charging process is electrons moving one way. The tempting first option feels symmetric, but if your account has protons flowing between objects it is wrong, and the last option breaks conservation of charge outright."
+      },
+      {
+        "q": "Two equal positive point charges are fixed a distance d apart. At the exact midpoint of the line joining them, the resultant field is:",
+        "options": [
+          "twice that of one charge",
+          "zero at that point",
+          "half that of one charge",
+          "toward the nearer charge"
+        ],
+        "answerIndex": 1,
+        "concept": "Vector superposition of two equal like charges",
+        "why": "The two contributions have equal magnitude at the midpoint and point in opposite directions, so as vectors they cancel. The trap is doubling them, which is what you get by adding magnitudes and ignoring that E is a vector."
+      },
+      {
+        "q": "In Coulomb's law F = kq₁q₂/r², the constant k has the value:",
+        "options": [
+          "8.99×10⁹ N·m²·C⁻²",
+          "8.85×10⁻¹² C²·N⁻¹·m⁻²",
+          "1.6×10⁻¹⁹ C",
+          "4π × 8.99×10⁹ N·m²·C⁻²"
+        ],
+        "answerIndex": 0,
+        "concept": "k versus ε₀ in the electrostatic constant",
+        "why": "k = 1/(4πε₀) = 8.99×10⁹ N·m²·C⁻², and it multiplies the product of the charges. The trap is 8.85×10⁻¹², which is ε₀ and only ever appears inside 1/(4πε₀); dropping one in for the other changes your answer by about 10²¹."
+      },
+      {
+        "q": "Which observation proves that a small object carries a net charge, rather than merely being polarised?",
+        "options": [
+          "It is attracted to a negatively charged rod",
+          "It is attracted to a positively charged rod",
+          "It is repelled by a charged rod",
+          "It is attracted by rods of either sign"
+        ],
+        "answerIndex": 2,
+        "concept": "Repulsion, not attraction, is the test for net charge",
+        "why": "A neutral object polarises and is attracted by a rod of either sign, so attraction proves nothing; only a charged object can be pushed away. The last option is the strongest trap because it sounds like double evidence, when in fact it is the signature of a neutral body."
+      },
+      {
+        "q": "Static electricity differs from an electric current in that the charges:",
+        "options": [
+          "build up on a surface rather than flowing",
+          "are positive rather than negative ones",
+          "are not quantised in units of e",
+          "obey a quite different force law"
+        ],
+        "answerIndex": 0,
+        "concept": "Static build-up versus continuous flow",
+        "why": "Static electricity is charge building up on a surface; a current is charge flowing continuously. The quantisation option is the trap worth naming: q = ne holds for every net charge, static or flowing, so that can never be the distinction."
+      },
+      {
+        "q": "An electron and a proton are placed in turn at the same point in a uniform electric field. The electric forces on them are:",
+        "options": [
+          "larger on the proton, because it is heavier",
+          "larger on the electron, because it is lighter",
+          "equal in size and in the same direction",
+          "equal in size and opposite in direction"
+        ],
+        "answerIndex": 3,
+        "concept": "F = qE depends on charge, not on mass",
+        "why": "The charges are equal in magnitude and opposite in sign, so F = qE gives equal sizes and opposite directions. Mass never enters F = qE — it decides the resulting acceleration, which is where the tempting mass-based options come from."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "A plan for averaging marks ends at \"divide the total by the number of marks\" and never says what to do if the list is empty. Which requirement on an algorithm's steps does it fail?",
+        "options": [
+          "ordered",
+          "unambiguous",
+          "efficient",
+          "complete"
+        ],
+        "answerIndex": 3,
+        "concept": "The three required properties of an algorithm's steps",
+        "why": "A case the plan does not cover means the steps are not complete: there is an input for which the algorithm says nothing. The tempting answer is unambiguous, but every step here has exactly one reading — the fault is a missing step, not a fuzzy one, and efficiency is not one of the three required properties at all."
+      },
+      {
+        "q": "Which of these is a decision problem?",
+        "options": [
+          "Which numbers in this list are prime?",
+          "How many primes are there below 100?",
+          "Is the number 4 391 a prime number?",
+          "What is the largest prime below 100?"
+        ],
+        "answerIndex": 2,
+        "concept": "The four computational problem types by answer-form",
+        "why": "A decision problem's solution is YES or NO, and \"is 4 391 prime?\" answers exactly that. The other three are the neighbouring types you must keep apart: naming the values is search, stating how many there are is counting, and picking the best one is optimization."
+      },
+      {
+        "q": "Which of these is NOT one of the flowchart symbols named this week?",
+        "options": [
+          "merge",
+          "decision",
+          "process",
+          "loop"
+        ],
+        "answerIndex": 3,
+        "concept": "The flowchart symbol set as the week lists it",
+        "why": "The listed symbols are start, stop, input, process, merge and decision — there is no loop symbol, because repetition is drawn with a decision and a line that goes back. Merge is the one students most often assume is invented, but it is on the list."
+      },
+      {
+        "q": "You are handed a page of indented near-English steps using words like READ and PRINT. It will not compile. What is it?",
+        "options": [
+          "source code with syntax errors",
+          "machine code",
+          "a flowchart in text form",
+          "pseudocode"
+        ],
+        "answerIndex": 3,
+        "concept": "Pseudocode versus source code",
+        "why": "Pseudocode is the textual representation of an algorithm: it looks like a program and deliberately cannot be compiled or executed. The trap is \"source code with syntax errors\", but broken source code is code that was meant to compile, whereas pseudocode never was."
+      },
+      {
+        "q": "Which translator takes assembly language as its input?",
+        "options": [
+          "compiler",
+          "interpreter",
+          "assembler",
+          "debugger"
+        ],
+        "answerIndex": 2,
+        "concept": "The translator chain: what goes in and what comes out",
+        "why": "The assembler takes assembly language and produces machine code. Ask what goes *in*: a compiler takes a high-level language and produces assembly, so it is the previous link in the chain, not this one; a debugger translates nothing."
+      },
+      {
+        "q": "Which pair names a high-level language and then a low-level one, in that order?",
+        "options": [
+          "Java and machine code",
+          "assembly language and C",
+          "machine code and Java",
+          "C and C#"
+        ],
+        "answerIndex": 0,
+        "concept": "High-level versus low-level languages",
+        "why": "High-level means written in a form humans easily understand (C, C#, Java); low-level means the form the machine understands (assembly, machine code). The second option has the right two categories in the wrong order, which is the trap if you read the pair too quickly."
+      },
+      {
+        "q": "A program builds and runs, then stops abruptly when a user types 0 into a division. Which error type is this?",
+        "options": [
+          "syntax error",
+          "logical error",
+          "compilation error",
+          "run time error"
+        ],
+        "answerIndex": 3,
+        "concept": "Syntax, logical and run time errors",
+        "why": "The program was built successfully and failed only while running, which is exactly what a run time error is. A syntax error would have stopped it being built at all, and a logical error would let it run to the end while quietly giving the wrong answer."
+      },
+      {
+        "q": "Which item belongs in programmer documentation rather than user documentation?",
+        "options": [
+          "installation steps for the end user",
+          "the module structure, for maintainers",
+          "a list of the keyboard shortcuts to use",
+          "a guide to reading the on-screen report"
+        ],
+        "answerIndex": 1,
+        "concept": "User versus programmer documentation",
+        "why": "Ask whether the reader needs to *use* the program or to *change* it: module structure is for whoever must upgrade and maintain it. Installation steps feel technical, which is why they tempt you, but they are written for the end user and so belong to user documentation."
+      },
+      {
+        "q": "A programmer finishes writing the actual program. What is the thing just written called?",
+        "options": [
+          "the source code",
+          "the machine code",
+          "the pseudocode",
+          "the algorithm"
+        ],
+        "answerIndex": 0,
+        "concept": "Coding produces source code",
+        "why": "Coding is writing the actual program, and the coded program is called the source code. Machine code is what a translator eventually produces from it, and the pseudocode and algorithm both existed before any coding began — they belong to step 2, not step 3."
+      },
+      {
+        "q": "Which of these is named in the week as an input a computer can work with?",
+        "options": [
+          "a retinal scan",
+          "a printed document",
+          "a chart or graph",
+          "digitized speech"
+        ],
+        "answerIndex": 0,
+        "concept": "Inputs versus outputs in step 1",
+        "why": "Inputs are anything convertible to digital form — numbers, letters, pictures, music, videos, sound waves, retinal scans, Wi-Fi signals. The other three are on the *output* list, and digitized speech is the sharpest trap because sound waves are an input while digitized speech is what the program produces."
+      },
+      {
+        "q": "Preparing the algorithm and drawing its flowchart belongs to which of the four steps?",
+        "options": [
+          "understand the problem",
+          "create a solution step-by-step plan",
+          "carry out the solution plan",
+          "evaluate and refactor the solution"
+        ],
+        "answerIndex": 1,
+        "concept": "Where algorithm, pseudocode and flowchart sit in the four steps",
+        "why": "Step 2 is where you decompose the problem and write the algorithm as pseudocode and a flowchart. The trap is step 3, but carrying out the plan starts at coding — by then the algorithm already exists and is being used as the guide."
+      },
+      {
+        "q": "Within \"carry out the solution plan\", which activity comes immediately after coding?",
+        "options": [
+          "debugging and testing",
+          "program documentation",
+          "compilation and execution",
+          "decomposition"
+        ],
+        "answerIndex": 2,
+        "concept": "The order of activities inside step 3",
+        "why": "The sequence is coding, then compilation and execution, then debugging and testing, then documentation. Debugging is the tempting answer because it feels like the natural next move, but you must first build and run the program to have something to debug."
+      },
+      {
+        "q": "Which question belongs to step 4, evaluate and refactor?",
+        "options": [
+          "What are the inputs and outputs?",
+          "Can the performance be improved?",
+          "How shall the problem be decomposed?",
+          "Which compiler shall be used?"
+        ],
+        "answerIndex": 1,
+        "concept": "The questions that define step 4",
+        "why": "Step 4 asks whether the result could be derived differently, whether performance can be improved, what other refactorings exist and how others solved it. Inputs and outputs belong to step 1 and decomposition to step 2 — both are asked before any code exists, not after."
+      },
+      {
+        "q": "Decomposition means:",
+        "options": [
+          "breaking the problem into smaller solvable problems",
+          "improving structure without changing function",
+          "translating a high-level program into machine code",
+          "testing each part of the program separately"
+        ],
+        "answerIndex": 0,
+        "concept": "Decomposition as a step-2 tactic",
+        "why": "You split the main problem into subproblems small enough to solve, and solving all of them solves the whole. The second option is the definition of refactoring, which is the neighbouring idea most often swapped in here because both involve breaking work into pieces."
+      },
+      {
+        "q": "Compared with a human solving the same problem, the computer's contribution is:",
+        "options": [
+          "a better method than the human's",
+          "larger volumes, faster and more efficiently",
+          "the ability to solve otherwise unsolvable problems",
+          "removing the need for a plan"
+        ],
+        "answerIndex": 1,
+        "concept": "What the computer adds to a human solution",
+        "why": "The method still comes from the human; the computer supplies scale, speed and efficiency. That is precisely why the lesson insists you first work out how a person would solve it — the tempting \"better method\" option inverts the whole point of step 1."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "ARPANET stands for:",
+        "options": [
+          "Advanced Research Projects Agency Network",
+          "Applied Routing Protocol and Network",
+          "Advanced Regional Packet Network",
+          "American Research Project Network"
+        ],
+        "answerIndex": 0,
+        "concept": "The origin network behind the Internet",
+        "why": "ARPANET is the Advanced Research Projects Agency Network, built for military purposes and later opened to academic use. The distractors keep the same rhythm and one or two real words, which is exactly how this is tested — learn the expansion, not the shape."
+      },
+      {
+        "q": "According to the summary, what made navigation of the Web seamless?",
+        "options": [
+          "the URL",
+          "the HTTP protocol",
+          "the domain name system",
+          "hyperlinks between pages"
+        ],
+        "answerIndex": 3,
+        "concept": "What the Web added on top of the Internet",
+        "why": "The Web offers interconnected pages joined by hyperlinks, and it is the hyperlink that the summary credits with seamless navigation. HTTP is the tempting answer because it carries the request, but it is the transport rule, not the thing that links one page to the next."
+      },
+      {
+        "q": "Which statement is correct?",
+        "options": [
+          "HTTP gives the location of a resource; the URL fetches it",
+          "The URL gives the location of a resource; HTTP fetches it",
+          "Both the URL and HTTP give the location of a resource",
+          "The URL is the secure version of HTTP"
+        ],
+        "answerIndex": 1,
+        "concept": "URL versus HTTP",
+        "why": "A URL is an address — it says *where* the resource is; HTTP is the protocol — it says *how* browser and server talk. The first option simply swaps the two roles, which is the mistake to guard against; HTTPS, not the URL, is the secure protocol."
+      },
+      {
+        "q": "In the four-step interaction, what happens after the server sends its HTTP response?",
+        "options": [
+          "the browser renders and displays the content",
+          "the server retrieves the resource from storage",
+          "the user enters a URL or clicks a link",
+          "the browser sends an HTTP request"
+        ],
+        "answerIndex": 0,
+        "concept": "The last step of the client-server sequence",
+        "why": "The four steps are: user enters a URL, browser sends an HTTP request, server processes and responds, browser renders the content. Retrieving the resource is tempting but happens *inside* step three, before the response is sent."
+      },
+      {
+        "q": "Which is NOT one of the five server functions the week names?",
+        "options": [
+          "request handling",
+          "dynamic content generation",
+          "rendering web pages",
+          "load balancing"
+        ],
+        "answerIndex": 2,
+        "concept": "Server functions versus browser functions",
+        "why": "Rendering pages is a browser function; the server's five are request handling, data storage, dynamic content generation, security via HTTPS, and load balancing. Dynamic content generation is the trap in the other direction — the server builds the content, the browser only draws it."
+      },
+      {
+        "q": "A developer builds the page layout and the buttons the user clicks. This work is:",
+        "options": [
+          "back-end development",
+          "database administration",
+          "proxy configuration",
+          "front-end development"
+        ],
+        "answerIndex": 3,
+        "concept": "Front-end versus back-end",
+        "why": "If the user can see or click it, it is front-end — the visual aspects and user interface. Back-end is the tempting answer whenever a page is dynamic, but the test is where the work runs: in the browser, or on the server and its database."
+      },
+      {
+        "q": "Which trio are named as the core technologies for creating and displaying web content?",
+        "options": [
+          "HTML, MySQL and Node.js",
+          "Apache, Nginx and IIS",
+          "Git, GitHub and GitLab",
+          "HTML, CSS and JavaScript"
+        ],
+        "answerIndex": 3,
+        "concept": "Structure, style and behaviour",
+        "why": "HTML gives structure, CSS gives style, JavaScript gives behaviour — that trio is what creates and displays web content. The first option is the trap because HTML is genuinely in it, but MySQL is a database server and Node.js a server-side runtime."
+      },
+      {
+        "q": "MySQL, PostgreSQL and MongoDB are examples of:",
+        "options": [
+          "web servers",
+          "database servers",
+          "application servers",
+          "proxy servers"
+        ],
+        "answerIndex": 1,
+        "concept": "The four server types and their examples",
+        "why": "These three store, query and manage data, so they are database servers. Application server is the neighbouring category, exampled by Node.js — it executes application code and manages state rather than holding the data itself."
+      },
+      {
+        "q": "Which server type holds no content of its own and sits between client and server for caching, load balancing and security?",
+        "options": [
+          "web server",
+          "database server",
+          "application server",
+          "proxy server"
+        ],
+        "answerIndex": 3,
+        "concept": "What a proxy server does",
+        "why": "A proxy stores nothing of its own; it stands between the client and the server. Web server is the tempting answer because it also handles requests, but a web server stores and serves the actual content."
+      },
+      {
+        "q": "Which is NOT one of the four roles of version control in web development?",
+        "options": [
+          "code collaboration",
+          "version history",
+          "code compilation",
+          "branching and merging"
+        ],
+        "answerIndex": 2,
+        "concept": "What a VCS is for",
+        "why": "The four roles are collaboration, version history for rollbacks and comparisons, branching and merging, and code backup. Compilation belongs to a compiler or build tool — a VCS tracks changes to code, it never translates it."
+      },
+      {
+        "q": "Git and GitHub differ in that:",
+        "options": [
+          "Git hosts repositories online; GitHub runs on your machine",
+          "Git is the version control software; GitHub hosts repositories",
+          "Git handles branching; GitHub handles committing",
+          "they are two names for the same tool"
+        ],
+        "answerIndex": 1,
+        "concept": "Git versus GitHub",
+        "why": "Git is the distributed version control software running on your machine; GitHub is an online platform that hosts Git repositories. The first option is the same sentence with the two swapped, which is the error to watch for."
+      },
+      {
+        "q": "Which of these is listed as an IDE rather than a text editor?",
+        "options": [
+          "Visual Studio Code",
+          "Sublime Text",
+          "JetBrains WebStorm",
+          "Atom"
+        ],
+        "answerIndex": 2,
+        "concept": "Text editor versus IDE",
+        "why": "WebStorm, Microsoft Visual Studio and Eclipse are the IDEs; VS Code, Sublime Text and Atom are the text editors. Visual Studio Code is the deliberate trap — the name contains \"Visual Studio\", but the week lists it as a lightweight editor."
+      },
+      {
+        "q": "Browser developer tools are used to:",
+        "options": [
+          "host and share code repositories online",
+          "inspect elements and debug scripts in the page",
+          "store, index and query application data",
+          "serve stored files in answer to requests"
+        ],
+        "answerIndex": 1,
+        "concept": "The purpose of browser developer tools",
+        "why": "They are built into the browser for inspecting and manipulating page elements, debugging JavaScript, analysing network traffic and optimising performance. Analysing network traffic is why the serving option tempts you, but the tools observe requests, they do not answer them."
+      },
+      {
+        "q": "In the client-server model, which side initiates the exchange?",
+        "options": [
+          "the client",
+          "the web server",
+          "the database server",
+          "the proxy server"
+        ],
+        "answerIndex": 0,
+        "concept": "Who requests and who responds",
+        "why": "The client — a browser or mobile app — initiates the request, and the server processes it and delivers content. The server is tempting because it does most of the work, but it never speaks first; every exchange starts on the client side."
+      },
+      {
+        "q": "Load balancing means:",
+        "options": [
+          "encrypting data as it travels the network",
+          "generating page content for each request",
+          "spreading requests across several servers",
+          "storing copies of pages closer to users"
+        ],
+        "answerIndex": 2,
+        "concept": "Load balancing as a server function",
+        "why": "Load balancing spreads incoming requests over multiple servers for performance and reliability. Caching copies nearer the user is the neighbouring idea and the strongest distractor — it also improves performance, but by avoiding requests rather than sharing them out."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "Which component of culture carries the gloss \"material culture\"?",
+        "options": [
+          "ideological",
+          "sociological",
+          "associational",
+          "technological"
+        ],
+        "answerIndex": 3,
+        "concept": "The three components of culture and their glosses",
+        "why": "The technological component is the material culture — tools, artefacts, technology. The trap is \"associational\", which sounds like it belongs to this list but is actually one of the two *forms of society*, not a component of culture."
+      },
+      {
+        "q": "Marriage institutions and the norms of respect for elders belong to which component of culture?",
+        "options": [
+          "technological",
+          "ideological",
+          "sociological",
+          "communal"
+        ],
+        "answerIndex": 2,
+        "concept": "Sociological component: institutions and norms",
+        "why": "Institutions and norms are the sociological component. Ideological is the tempting neighbour because beliefs sit close to norms, but ideological covers what people believe is true or good, while sociological covers the structures they operate inside."
+      },
+      {
+        "q": "Karl Marx envisioned a society characterised by:",
+        "options": [
+          "a specialised division of labour and contractual ties",
+          "each component playing a crucial role for the whole",
+          "shared traditions binding people by kinship",
+          "collective ownership of production and of wealth"
+        ],
+        "answerIndex": 3,
+        "concept": "Marx's communist society",
+        "why": "Marx's vision is a communist society: collective ownership of the means of production and of the distribution of wealth. The second option is functionalism's organism metaphor — the two are examined side by side, so keep ownership with Marx and roles-for-the-whole with functionalism."
+      },
+      {
+        "q": "Face-to-face interaction, a simple division of labour and strongly binding traditions describe:",
+        "options": [
+          "a functionalist society",
+          "an associational society",
+          "a communal society",
+          "a communist society"
+        ],
+        "answerIndex": 2,
+        "concept": "Communal versus associational society",
+        "why": "Those three features are the communal end of each of the course's three bases of difference. Associational is the mirror image — specialised labour, impersonal or contractual interaction, weaker tradition — and \"communist\" is a Marx term, not one of the two forms of society."
+      },
+      {
+        "q": "Nigeria is described as one state containing many nations. In that sentence a \"nation\" is:",
+        "options": [
+          "the political and legal apparatus of governance",
+          "an ethnic group holding its own territory",
+          "a people sharing a common identity",
+          "any grouping of people who trade together"
+        ],
+        "answerIndex": 2,
+        "concept": "Nation versus state",
+        "why": "A nation is a people sharing an identity; the state is the political-legal apparatus, which is the first option. Getting these round the right way is what makes sense of why integration is Nigeria's challenge — one state, many nations."
+      },
+      {
+        "q": "Which statement separates culture from society correctly?",
+        "options": [
+          "Society is what a people share; culture is the people",
+          "Culture is what a people share; society is the people",
+          "Culture is material objects; society is beliefs held",
+          "Culture and society name the same grouping of people"
+        ],
+        "answerIndex": 1,
+        "concept": "Culture versus society",
+        "why": "Culture is what a people share — behaviours, beliefs, practices, values; society is the people themselves organised as a group. The first option is the same sentence reversed, which is the only error worth guarding against here."
+      },
+      {
+        "q": "Which does the recap name as Nigeria's chief obstacle to national integration?",
+        "options": [
+          "low literacy levels",
+          "ethnic diversity",
+          "foreign debt",
+          "rapid urbanisation"
+        ],
+        "answerIndex": 1,
+        "concept": "Nigeria's hurdle to integration",
+        "why": "The case study names ethnic diversity as the hurdle, which is why government initiatives to foster unity are set against it. The other three are real national problems, which is what makes them plausible — but the recap names diversity."
+      },
+      {
+        "q": "Which named example is used for colonialism's reshaping of family and social structures?",
+        "options": [
+          "pre-colonial Yoruba communities",
+          "the Kanuri of Borno",
+          "the Hausa city-states",
+          "the Igbo village republics"
+        ],
+        "answerIndex": 0,
+        "concept": "The worked example for colonial impact",
+        "why": "The recap uses pre-colonial Yoruba communities as its worked case for how colonialism altered family dynamics and social structures. The other three are genuine Nigerian pre-colonial formations, so you cannot rule them out by plausibility — this is a recall item."
+      },
+      {
+        "q": "Which is NOT one of the case-study methods listed for studying nation-building in Nigeria?",
+        "options": [
+          "laboratory experiment",
+          "document review",
+          "historical analysis",
+          "comparative analysis"
+        ],
+        "answerIndex": 0,
+        "concept": "The listed methods of study",
+        "why": "The methods are historical analysis, document review, case studies, government policy evaluation, surveys and interviews, and comparative analysis. A laboratory experiment is the odd one out because this is a documentary and comparative subject, not an experimental one."
+      },
+      {
+        "q": "In what year was Cosmas Odinaka's study of nation-building and national integration published?",
+        "options": [
+          "2020",
+          "2003",
+          "2013",
+          "2023"
+        ],
+        "answerIndex": 0,
+        "concept": "The key reference and its date",
+        "why": "Odinaka's \"Nation-Building and National Integration in Nigeria: A Historical Study\" is dated 2020. The trap is 2013, which is the year of the University of Lagos textbook, and 2023 is the copyright year on the recap deck itself."
+      },
+      {
+        "q": "Nigerian Peoples and Cultures, the course's key textbook, was published by:",
+        "options": [
+          "the MIVA Open University",
+          "UNILAG Centre for General Studies",
+          "the National Orientation Agency",
+          "the University of Ibadan Press"
+        ],
+        "answerIndex": 1,
+        "concept": "The key textbook and its publisher",
+        "why": "It is published by the University of Lagos, Centre for General Studies, in Lagos, 2013. MIVA is the tempting answer because MIVA provides the course, but MIVA produced the recap deck, not the textbook."
+      },
+      {
+        "q": "Which is NOT among the skills the lesson claims to build?",
+        "options": [
+          "cultural awareness",
+          "historical awareness",
+          "interdisciplinary thinking",
+          "statistical modelling"
+        ],
+        "answerIndex": 3,
+        "concept": "The skills claimed for the lesson",
+        "why": "The five claimed are cultural awareness, historical awareness, sociological understanding, interdisciplinary thinking and communication skills. Statistical modelling sounds academic enough to belong, but nothing in this week is quantitative."
+      },
+      {
+        "q": "The course defines culture as:",
+        "options": [
+          "the arts and music a people produce",
+          "the material objects a people manufacture",
+          "a complex system of behaviours and values",
+          "the political apparatus governing a people"
+        ],
+        "answerIndex": 2,
+        "concept": "The course definition of culture",
+        "why": "Culture is a complex system encompassing traditional behaviours, beliefs, practices and values — all three components at once. The material-objects option is the trap because that is only the technological component, one third of the definition."
+      },
+      {
+        "q": "The two forms of society the course recognises are:",
+        "options": [
+          "communal and associational",
+          "rural and urban",
+          "traditional and industrial",
+          "communal and communist"
+        ],
+        "answerIndex": 0,
+        "concept": "The two categories of society",
+        "why": "The course splits society into communal and associational, differing on division of labour, social interactions and traditions. The last option is the sharpest trap because it keeps the right first word and swaps in Marx's term for the second."
+      },
+      {
+        "q": "Which test separates the sociological from the ideological component of culture?",
+        "options": [
+          "Is it hand-made, or made by a machine?",
+          "Is it a structure to act inside, or a belief?",
+          "Is it ancient, or only newly adopted?",
+          "Is it held by everyone, or only by an elite?"
+        ],
+        "answerIndex": 1,
+        "concept": "Telling sociological from ideological",
+        "why": "Sociological covers institutions and norms — the structures people operate inside; ideological covers beliefs and values — what people hold to be true or good. The hand-made test is the wrong axis entirely: it separates the technological component from the other two."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "Speaking is defined in the course as the ability to:",
+        "options": [
+          "comprehend, interpret and analyse written text",
+          "understand, interpret and respond to spoken language",
+          "convey thoughts, information and emotions in writing",
+          "articulate thoughts, ideas and information coherently"
+        ],
+        "answerIndex": 3,
+        "concept": "The course wording of the definition of speaking",
+        "why": "Speaking is articulating thoughts, ideas and information coherently and effectively. The other three are the course's own definitions of reading, listening and writing — this family of items is answered by matching the exact verbs, not the general sense."
+      },
+      {
+        "q": "Composing a well-structured persuasive essay is the set example of which skill?",
+        "options": [
+          "reading",
+          "listening",
+          "writing",
+          "speaking"
+        ],
+        "answerIndex": 2,
+        "concept": "Matching the set examples to the four skills",
+        "why": "Composing an essay is written and outgoing, so it is the writing example. Speaking is the trap because the essay is persuasive and the course also demonstrates a persuasive *speech* — the medium, written or spoken, is what decides the skill."
+      },
+      {
+        "q": "Summarising the main ideas of a TED Talk is the set example of which skill?",
+        "options": [
+          "listening",
+          "speaking",
+          "reading",
+          "writing"
+        ],
+        "answerIndex": 0,
+        "concept": "Matching the set examples to the four skills",
+        "why": "The input is spoken and you must understand, interpret and respond to it, so it is listening. Writing tempts you because you might write the summary down, but the skill is named for the channel the material arrives through."
+      },
+      {
+        "q": "Job Seeker B answers an interview question by talking about friends, TV and a cat. In the lesson he is:",
+        "options": [
+          "an example of passive listening at work",
+          "a model of engaging with an audience",
+          "an example of narrative writing style",
+          "the failure model of effective speaking"
+        ],
+        "answerIndex": 3,
+        "concept": "The Job Seeker A / Job Seeker B contrast",
+        "why": "The pair illustrates effective speaking: A is structured, relevant and work-focused; B is the failure model. Passive listening is the tempting misfile because B is clearly not paying attention, but he is producing speech, not receiving it."
+      },
+      {
+        "q": "A piece that sets out events in the order they happened is written in which style?",
+        "options": [
+          "narrative",
+          "descriptive",
+          "expository",
+          "persuasive"
+        ],
+        "answerIndex": 0,
+        "concept": "The four writing styles",
+        "why": "Narrative tells a story with events in sequence. Descriptive is the neighbour that catches people out — it also uses vivid detail, but it paints a static picture rather than moving through time."
+      },
+      {
+        "q": "A paragraph that paints a market's colours and smells, with no events unfolding, is:",
+        "options": [
+          "narrative",
+          "expository",
+          "descriptive",
+          "persuasive"
+        ],
+        "answerIndex": 2,
+        "concept": "Descriptive versus narrative writing",
+        "why": "Detail without a sequence of events is descriptive writing. Narrative is the tempting answer because vivid market scenes usually appear inside stories — ask whether time is passing, and if nothing happens next, it is description."
+      },
+      {
+        "q": "The model essay \"The Benefits of Regular Exercise\" illustrates:",
+        "options": [
+          "persuasive writing",
+          "expository writing",
+          "reading comprehension",
+          "active listening"
+        ],
+        "answerIndex": 0,
+        "concept": "The set example for persuasive writing",
+        "why": "The essay urges you to prioritise exercise, so it argues a position: persuasive. Expository is the closest distractor, since an essay about exercise could simply explain the physiology — the difference is whether the writer is taking a side."
+      },
+      {
+        "q": "Which single test separates hearing from listening?",
+        "options": [
+          "Was the sound loud enough to be noticed?",
+          "Was the speaker visible to the listener?",
+          "Was meaning processed and a response formed?",
+          "Were notes taken while the person spoke?"
+        ],
+        "answerIndex": 2,
+        "concept": "Hearing versus listening",
+        "why": "Hearing is the bare reception of sound; listening adds understanding, interpretation and response. Note-taking is the tempting proxy, but you can listen well without writing anything and write plenty while understanding nothing."
+      },
+      {
+        "q": "Which is NOT one of the competencies credited for this lesson?",
+        "options": [
+          "public debating",
+          "active listening",
+          "persuasive writing",
+          "critical thinking"
+        ],
+        "answerIndex": 0,
+        "concept": "The skills credited for the lesson",
+        "why": "The five credited are active listening, effective speaking, reading comprehension, persuasive writing and critical thinking. Public debating is plausible because the lesson does demonstrate a persuasive speech, but effective speaking is the term the course actually uses."
+      },
+      {
+        "q": "Which of the passage's four takeaways names the damage done to the credibility of genuine claims?",
+        "options": [
+          "Misallocation of Resources",
+          "Obstructing Access to Support",
+          "Honesty and Understanding",
+          "Undermining Legitimacy"
+        ],
+        "answerIndex": 3,
+        "concept": "The four takeaways of the mental-health passage",
+        "why": "Undermining Legitimacy is about genuine conditions being doubted. Obstructing Access to Support is the closest neighbour and also concerns real sufferers, but it names the practical blocking of help rather than the loss of credibility."
+      },
+      {
+        "q": "In the marketing-team case study, the skill-building sessions emphasised:",
+        "options": [
+          "speed and volume of output",
+          "formal register and jargon",
+          "grammar drills and spelling",
+          "emotive language and precision"
+        ],
+        "answerIndex": 3,
+        "concept": "The case study on team communication",
+        "why": "The sessions emphasised emotive language, so the message resonates, and precision in communication. Grammar and spelling is the tempting answer, but the course's own line is that communication is about expressing ideas effectively, not about correctness for its own sake."
+      },
+      {
+        "q": "The course lists the four language skills in which order?",
+        "options": [
+          "reading, writing, listening, speaking",
+          "listening, speaking, reading, writing",
+          "speaking, listening, writing, reading",
+          "writing, reading, speaking, listening"
+        ],
+        "answerIndex": 1,
+        "concept": "The order of the four key language skills",
+        "why": "The course's order is listening, speaking, reading, writing — spoken pair first, written pair second, receiving before producing within each. \"Reading, writing…\" is the trap drawn from the everyday phrase, not from this course."
+      },
+      {
+        "q": "In the demonstrated persuasive speech, the body gives historical context, arguments in favour, and:",
+        "options": [
+          "a short biography of the speaker",
+          "ethical points on the other side",
+          "a list of the references used",
+          "a repeat of the introduction given"
+        ],
+        "answerIndex": 1,
+        "concept": "The structure of the model persuasive speech",
+        "why": "The body covers historical context, arguments for personal autonomy and compassion, and the ethical considerations against — sanctity of life and potential for abuse — so both sides are represented. Repeating the introduction is tempting because a conclusion often restates a position, but that is not what the body does."
+      },
+      {
+        "q": "Combining the four skills effectively is said to enhance:",
+        "options": [
+          "typing speed and neat handwriting",
+          "critical thinking and complex discourse",
+          "vocabulary size, above everything else",
+          "examination technique and nothing more"
+        ],
+        "answerIndex": 1,
+        "concept": "Why the four skills matter together",
+        "why": "The course claims that combining them enhances critical thinking, the ability to engage complex discourse and a global perspective. Vocabulary size is the trap: the course explicitly says communication is not about fancy words."
+      },
+      {
+        "q": "According to the course, good grammar matters mainly because it:",
+        "options": [
+          "shows off the size of your vocabulary",
+          "makes your writing longer and fuller",
+          "aids credibility and attention to detail",
+          "is the whole point of communicating"
+        ],
+        "answerIndex": 2,
+        "concept": "Why grammar matters, on the course's own account",
+        "why": "Grammar and word choice increase credibility and improve problem-solving and attention to detail. The last option is the trap the lesson is written against — communication is expressing ideas effectively, and grammar serves that rather than being the goal."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "Two points on a best-fit line are (2, 5) and (6, 17). The gradient is:",
+        "options": [
+          "3",
+          "4",
+          "1/3",
+          "12"
+        ],
+        "answerIndex": 0,
+        "concept": "Gradient from two points on the line",
+        "why": "m = (y₂ − y₁)/(x₂ − x₁) = (17 − 5)/(6 − 2) = 12/4 = 3. The trap 12 is the rise alone with the run forgotten, and 1/3 is the fraction inverted — always divide the change in y by the change in x, in that order."
+      },
+      {
+        "q": "A best-fit line of slope 2.0 passes through the point (3, 10). Its intercept c is:",
+        "options": [
+          "10",
+          "−4",
+          "16",
+          "4"
+        ],
+        "answerIndex": 3,
+        "concept": "Finding c from y = mx + c",
+        "why": "Substitute: 10 = 2.0(3) + c, so c = 10 − 6 = 4. The tempting 10 treats the y-value at x = 3 as the intercept, but c is the value of y where x = 0, and 16 comes from adding the 6 instead of subtracting it."
+      },
+      {
+        "q": "Where does the line y = 4x − 12 cut the x-axis?",
+        "options": [
+          "x = −3",
+          "x = 12",
+          "x = 3",
+          "x = −12"
+        ],
+        "answerIndex": 2,
+        "concept": "x-intercept versus y-intercept",
+        "why": "Set y = 0: 0 = 4x − 12, so x = 3, which is −c/m with c = −12. The trap x = −3 comes from using +c/m or losing the sign of c; x = −12 is the y-intercept, which is what you get by setting x = 0 instead."
+      },
+      {
+        "q": "For a simple pendulum, T² is plotted against L. What should the intercept be, and what does a clearly non-zero one suggest?",
+        "options": [
+          "4π²/g, and a random error in timing",
+          "g, and a wrongly chosen graph scale",
+          "2π, and nothing at all worth noting",
+          "zero, and a systematic measurement error"
+        ],
+        "answerIndex": 3,
+        "concept": "Reading the intercept of a linearised relation",
+        "why": "T² = (4π²/g)L has no constant term, so the line should pass through the origin; a real offset points to a consistent bias, such as a mis-set zero on the length. The trap names 4π²/g as the intercept — that is the *slope*, and confusing the two is the standard error here."
+      },
+      {
+        "q": "On a plot of ln N against t for N = N₀e^(−λt), the intercept is:",
+        "options": [
+          "N₀",
+          "−λ",
+          "λt",
+          "ln N₀"
+        ],
+        "answerIndex": 3,
+        "concept": "Linearising exponential decay",
+        "why": "Taking logs gives ln N = −λt + ln N₀, so the intercept is ln N₀ and the slope is −λ. The trap N₀ forgets that the axis carries ln N, not N — the intercept is read on the logged axis, so it must itself be a logarithm."
+      },
+      {
+        "q": "For y = kxⁿ, plotting log y against log x gives a line whose slope is:",
+        "options": [
+          "k",
+          "log k",
+          "1/n",
+          "n"
+        ],
+        "answerIndex": 3,
+        "concept": "Linearising a power law",
+        "why": "log y = n log x + log k, so the slope is the exponent n and the intercept is log k. The tempting log k swaps slope for intercept, which is the same mix-up as reading a pendulum graph the wrong way round."
+      },
+      {
+        "q": "Hooke's law F = kx is plotted as F against x. The slope and intercept are:",
+        "options": [
+          "k and zero",
+          "1/k and zero",
+          "k and k",
+          "zero and k"
+        ],
+        "answerIndex": 0,
+        "concept": "A relation that is already linear",
+        "why": "F = kx is already in the form y = mx + c with m = k and c = 0, so no transformation is needed. The trap 1/k is what you get by plotting the axes the other way round — x against F — which is a different graph with a reciprocal slope."
+      },
+      {
+        "q": "In the linearised Boyle's law, log P = −log V + log k, the theoretical slope is:",
+        "options": [
+          "+1",
+          "−1",
+          "log k",
+          "−log k"
+        ],
+        "answerIndex": 1,
+        "concept": "Reading a slope straight from the linearised form",
+        "why": "The coefficient of log V is −1, so the line should fall at 45° on equal log scales. The tempting log k is the intercept, and +1 drops the minus sign — which matters, since the negative slope is what expresses P and V being inversely related."
+      },
+      {
+        "q": "Which logarithm is used to linearise N = N₀e^(−λt)?",
+        "options": [
+          "log₁₀, because the data are decimal",
+          "either one, since only the intercept changes",
+          "the natural log, because the relation contains e",
+          "neither; you plot N against t directly"
+        ],
+        "answerIndex": 2,
+        "concept": "ln versus log₁₀",
+        "why": "Use ln whenever the equation contains e, so that ln(e^(−λt)) collapses cleanly to −λt. Option two is the seductive one: switching base does keep the plot straight, but it rescales the slope by a constant, so the slope no longer reads as −λ."
+      },
+      {
+        "q": "Why is a non-linear relation rewritten before plotting?",
+        "options": [
+          "to remove random error from the readings",
+          "to avoid having to label the axes",
+          "so slope and intercept come off a line",
+          "to make the points fit on a single page"
+        ],
+        "answerIndex": 2,
+        "concept": "The purpose of linearisation",
+        "why": "Linearising turns the relation into y = mx + c, so the constants you want come straight off the slope and intercept of a line you can draw by eye. Reducing random error is the trap — averaging repeats does that, and linearising does nothing to the scatter."
+      },
+      {
+        "q": "Which trio does the week name as the sources of error?",
+        "options": [
+          "instrument, observation and human error",
+          "random, systematic and parallax error",
+          "zero, scale and reading error",
+          "absolute, relative and percentage error"
+        ],
+        "answerIndex": 0,
+        "concept": "Sources of error versus types and measures of error",
+        "why": "The named sources are instrument, observation and human error. The last option is the strongest trap because those three words are all in the week — but absolute, relative and percentage are ways of *quantifying* an error, not places it comes from."
+      },
+      {
+        "q": "A metre rule gives 1.42 m for a length whose true value is 1.50 m. The absolute error is:",
+        "options": [
+          "0.08 m",
+          "5.3 %",
+          "0.053",
+          "−0.08 m"
+        ],
+        "answerIndex": 0,
+        "concept": "Absolute error as a magnitude with units",
+        "why": "Actual error = |true − measured| = |1.50 − 1.42| = 0.08 m, carrying the unit of the measurement. The 5.3 % is the percentage error and 0.053 the relative one; absolute error is quoted as a magnitude, so the signed version belongs to a percentage-difference calculation instead."
+      },
+      {
+        "q": "A current is measured as 2.05 A where the true value is 2.00 A. The percentage error is:",
+        "options": [
+          "0.05 %",
+          "2.5 %",
+          "5.0 %",
+          "0.025 %"
+        ],
+        "answerIndex": 1,
+        "concept": "Percentage error against the true value",
+        "why": "(0.05/2.00) × 100 = 2.5 %. The trap 0.05 % quotes the absolute error and simply attaches a per-cent sign, and 0.025 % is the fraction without the ×100 — divide by the true value first, then multiply by 100."
+      },
+      {
+        "q": "An observed value of 4.60 is compared with a reference value of 5.00. The percentage difference is:",
+        "options": [
+          "+8.0 %",
+          "−8.0 %",
+          "−8.7 %",
+          "0.40 %"
+        ],
+        "answerIndex": 1,
+        "concept": "Percentage difference keeps its sign",
+        "why": "(4.60 − 5.00)/5.00 × 100 = −8.0 %, and the minus sign says the observed value is below the reference. The trap −8.7 % divides by the observed value instead of the reference, and +8.0 % throws away the sign that carries the information."
+      },
+      {
+        "q": "Which of these is a fault in a laboratory graph?",
+        "options": [
+          "labelling each axis with quantity and unit",
+          "drawing a large gradient triangle",
+          "joining the plotted points dot to dot",
+          "choosing a scale that fills the page"
+        ],
+        "answerIndex": 2,
+        "concept": "What earns and loses marks on a practical graph",
+        "why": "You draw one best-fit straight line, never a dot-to-dot zigzag, because the scatter is measurement error rather than real structure. The other three are exactly what the marks are given for, and a large gradient triangle in particular is a requirement, not a fault."
+      }
+    ]
+  }
+}

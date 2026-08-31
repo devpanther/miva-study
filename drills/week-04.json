@@ -1,0 +1,1279 @@
+{
+  "week": 4,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "Evaluate lim(x→2) (3x − 4).",
+        "options": [
+          "2",
+          "3",
+          "6",
+          "−4"
+        ],
+        "answerIndex": 0,
+        "concept": "Reading a limit off a straight line by substitution",
+        "why": "A straight line has no hole, jump or break anywhere, so the limit is just the height at x = 2: 3(2) − 4 = 2. The tempting wrong pick is 6, which is 3 × 2 with the −4 forgotten; 3 is the x-value you are approaching, not the height, and −4 is the y-intercept."
+      },
+      {
+        "q": "What is lim(x→5) (x² − 25)/(x − 5)?",
+        "options": [
+          "0, because substituting x = 5 gives 0/0",
+          "5, the value that x is approaching",
+          "10, from the cancelled factor x + 5",
+          "It does not exist, because f(5) is undefined"
+        ],
+        "answerIndex": 2,
+        "concept": "Factor and cancel before deciding a 0/0 limit",
+        "why": "Factor x² − 25 = (x − 5)(x + 5) and cancel, legal because x never equals 5 inside a limit, leaving x + 5 → 10. The trap is reading 0/0 as a verdict: it is indeterminate, a signal to factor, and the fact that f(5) is undefined only tells you there is a hole at (5, 10)."
+      },
+      {
+        "q": "At x = c, lim(x→c⁻) f(x) = lim(x→c⁺) f(x) = 5 and f(c) = 2. Classify the discontinuity.",
+        "options": [
+          "Removable",
+          "Jump",
+          "Infinite",
+          "Essential"
+        ],
+        "answerIndex": 0,
+        "concept": "Classifying from the pair (L⁻, L⁺) together with f(c)",
+        "why": "Both one-sided limits agree on one finite number, so the two-sided limit exists and equals 5; only the plotted value is wrong, and redefining f(c) := 5 repairs it. You may be drawn to jump because the graph visibly breaks, but jump requires the two one-sided limits to disagree, and here they agree."
+      },
+      {
+        "q": "f(x) = x + 1 for x < 3 and f(x) = 2x + k for x ≥ 3. Which k makes f continuous at x = 3?",
+        "options": [
+          "k = 2",
+          "k = −2",
+          "k = 4",
+          "k = 6"
+        ],
+        "answerIndex": 1,
+        "concept": "Matching one-sided values at the joining point of a piecewise function",
+        "why": "The left branch runs into 3 + 1 = 4 and the right branch starts at 6 + k, so continuity needs 6 + k = 4, giving k = −2. If you got k = 4 you set k equal to the left-hand height instead of solving for it, and k = 2 comes from subtracting in the wrong order."
+      },
+      {
+        "q": "f(x) = −2 for x < 1 and f(x) = 5 for x ≥ 1. What kind of discontinuity is at x = 1?",
+        "options": [
+          "Removable, because f(1) is defined",
+          "Jump, because the finite one-sided limits differ",
+          "Infinite, because the graph breaks vertically",
+          "None; f is continuous because f(1) = 5 exists"
+        ],
+        "answerIndex": 1,
+        "concept": "Jump discontinuity in a step-defined function",
+        "why": "L⁻ = −2 and L⁺ = 5 are both finite but unequal, so the two-sided limit is DNE and the break is a jump. The tempting answer is 'none', on the grounds that f(1) is defined — but being defined is only condition (i) of three, and here condition (ii) already fails."
+      },
+      {
+        "q": "g(x) = |x − 3| has a sharp corner at x = 3. Is g continuous there?",
+        "options": [
+          "Yes: both one-sided limits and g(3) are 0",
+          "No: a corner is a jump discontinuity",
+          "No: the limit exists but g(3) is undefined",
+          "Yes, but only from the right-hand side"
+        ],
+        "answerIndex": 0,
+        "concept": "A corner is not a discontinuity",
+        "why": "Both arms run into height 0 at x = 3 and g(3) = 0, so all three conditions hold and the pen never lifts. The trap is treating the sharp change of direction as a break: continuity is about lifting the pen, not about the smoothness of the direction."
+      },
+      {
+        "q": "f(x) = (x² − 4)/(x − 2) has a hole at x = 2. Defining f(2) as which value repairs it?",
+        "options": [
+          "0",
+          "2",
+          "−2",
+          "4"
+        ],
+        "answerIndex": 3,
+        "concept": "Repairing a removable discontinuity by filling the hole at the limit value",
+        "why": "Cancelling gives x + 2 for x ≠ 2, so the limit is 4 and setting f(2) = 4 makes all three continuity conditions hold. Picking 2 uses the x-value rather than the height the curve approaches, and 0 comes from the 0/0 that substitution produced."
+      },
+      {
+        "q": "A curve dives to −∞ on both sides of a vertical dashed line at x = −1, with no dot plotted there. Classify x = −1.",
+        "options": [
+          "Removable discontinuity",
+          "Jump discontinuity",
+          "Infinite discontinuity",
+          "Essential discontinuity"
+        ],
+        "answerIndex": 2,
+        "concept": "Vertical asymptote as an infinite discontinuity",
+        "why": "The curve runs off without bound in a definite direction alongside a vertical asymptote, which is exactly the infinite case. Essential is the tempting neighbour, but that name is reserved for a one-sided limit that fails even to run to ±∞ — the values oscillate and settle on nothing."
+      },
+      {
+        "q": "Near x = 0 the values of f oscillate faster and faster between −1 and 1, settling on nothing. Which discontinuity is this?",
+        "options": [
+          "Infinite",
+          "Removable",
+          "Jump",
+          "Essential"
+        ],
+        "answerIndex": 3,
+        "concept": "Essential discontinuity as failure of a one-sided limit to exist at all",
+        "why": "Neither one-sided limit exists — the values never approach any height, finite or infinite — which is what makes the discontinuity essential. Infinite is the near miss: that requires the values to run to +∞ or −∞ in a definite direction, giving an asymptote, and here they do not."
+      },
+      {
+        "q": "lim(x→c⁻) f(x) = 7 and lim(x→c⁺) f(x) = 7, but f(c) is undefined. Which is true?",
+        "options": [
+          "The limit is DNE, since f(c) is undefined",
+          "The limit is 7 and f is discontinuous at c",
+          "The limit is 7 and f is continuous at c",
+          "Neither the limit nor continuity can be decided"
+        ],
+        "answerIndex": 1,
+        "concept": "The limit is built from x near c, never from f(c)",
+        "why": "The two sides agree on one finite number, so the limit is 7; continuity then fails at condition (i) because there is no value to compare it with. The trap is letting the missing value kill the limit — f(c) plays no part in computing it."
+      },
+      {
+        "q": "Which single test separates a removable discontinuity from a jump?",
+        "options": [
+          "Whether f(c) is defined at the point",
+          "Whether the graph shows an open circle",
+          "Whether the curve has a vertical asymptote",
+          "Whether L⁻ and L⁺ are equal"
+        ],
+        "answerIndex": 3,
+        "concept": "The discriminator between removable and jump",
+        "why": "Equal one-sided limits give one hole you can fill by redefining a single point; unequal ones give two heights no single value can reconcile. Checking whether f(c) is defined tells you nothing here, since a jump can have f(c) defined and a hole can have it defined at the wrong height."
+      },
+      {
+        "q": "Evaluate lim(x→2) (x³ − 5x)/(x + 1).",
+        "options": [
+          "−2",
+          "0",
+          "−2/3",
+          "2/3"
+        ],
+        "answerIndex": 2,
+        "concept": "Direct substitution where the denominator is non-zero",
+        "why": "The denominator is 3 at x = 2, not 0, so substitution is legitimate: (8 − 10)/3 = −2/3. Picking −2 means you evaluated the numerator and stopped, and the sign flips to +2/3 only if you mislay the minus on 8 − 10."
+      },
+      {
+        "q": "On a graph the left branch runs into an open circle at (3, 2), the right branch leaves an open circle at (3, 2), and a shaded dot sits at (3, −1). What is lim(x→3) f(x)?",
+        "options": [
+          "−1",
+          "2",
+          "DNE",
+          "1"
+        ],
+        "answerIndex": 1,
+        "concept": "Reading a two-sided limit past a misplaced function value",
+        "why": "Both branches approach height 2, so the limit is 2; the open circles still show the approach height even though the curve is not defined there. The shaded dot at −1 is f(3), and quoting it as the limit is the standard slip — that mismatch is what makes this a removable discontinuity."
+      },
+      {
+        "q": "Writing lim(x→3⁺) f(x) = +∞ tells you that at x = 3 the limit:",
+        "options": [
+          "Fails to exist, in an unbounded way",
+          "Exists and has the value infinity",
+          "Exists but cannot be measured exactly",
+          "Is equal to the very large value of f(3)"
+        ],
+        "answerIndex": 0,
+        "concept": "'Limit = ∞' as a description of failure, not a value",
+        "why": "A limit exists only when it is a single finite real number, and ∞ is not one, so the notation describes how the limit fails rather than naming an answer. The tempting reading is that it is a value like any other, which would let you write it into the third continuity condition — you cannot."
+      },
+      {
+        "q": "In the week's bridge-design case study, why do engineers evaluate limits at the joints between spans?",
+        "options": [
+          "To find the maximum traffic load a span carries",
+          "To calculate the total length of the bridge",
+          "To confirm the segments join continuously",
+          "To measure the slope of the approach ramps"
+        ],
+        "answerIndex": 2,
+        "concept": "Continuity as the design criterion at a joint",
+        "why": "A discontinuity where two segments meet is a physical break in the structure, so the graphical limit check is a check that the spans meet at the same height. Maximum load is a real design concern, but it is an optimisation question, not the one continuity answers."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "A cell of emf 9.0 V delivers 1.5 A, and a voltmeter across it reads 8.4 V. What is r?",
+        "options": [
+          "0.60 Ω",
+          "0.40 Ω",
+          "6.0 Ω",
+          "5.6 Ω"
+        ],
+        "answerIndex": 1,
+        "concept": "Recovering internal resistance from the drop between emf and terminal voltage",
+        "why": "The missing 0.6 V is dropped inside the cell, so r = (9.0 − 8.4)/1.5 = 0.40 Ω. Picking 5.6 Ω divides the terminal voltage by the current, which gives the external load resistance instead — that is the resistance the drop happens outside of, not inside."
+      },
+      {
+        "q": "A battery of emf 14.0 V and internal resistance 0.40 Ω is being charged at 2.0 A. What voltage must the charger hold at its terminals?",
+        "options": [
+          "13.2 V",
+          "14.0 V",
+          "14.8 V",
+          "5.6 V"
+        ],
+        "answerIndex": 2,
+        "concept": "V = ε + I r when a source is being charged rather than discharging",
+        "why": "On charge the current is pushed into the battery, so the internal drop adds instead of subtracting: V = 14.0 + (2.0)(0.40) = 14.8 V. The trap is reaching for the discharge formula and getting 13.2 V — check the direction of the current before choosing the sign."
+      },
+      {
+        "q": "A cell's terminal voltage is plotted against the current it delivers, and the straight line has gradient −0.25 V/A. What is the internal resistance?",
+        "options": [
+          "4.0 Ω",
+          "−4.0 Ω",
+          "0.25 siemens",
+          "0.25 Ω"
+        ],
+        "answerIndex": 3,
+        "concept": "r = −(gradient) of a V–I plot, checked by units",
+        "why": "Volts per amp is already ohms, so r is just the magnitude of the gradient, 0.25 Ω. The 4.0 Ω answer comes from taking a reciprocal, which turns the units into siemens and cannot be a resistance."
+      },
+      {
+        "q": "A real current source is modelled as an ideal current source together with its internal resistance r. How are the two connected?",
+        "options": [
+          "In series with r",
+          "In parallel with r",
+          "In series with 1/r",
+          "There is no internal resistance"
+        ],
+        "answerIndex": 1,
+        "concept": "Real current source = ideal current source in parallel with r",
+        "why": "A current source is ideal when its internal resistance is infinite, so the finite r that spoils it must sit in parallel, siphoning off part of the current. Series is the arrangement for a real voltage source, where the ideal case is r = 0 instead."
+      },
+      {
+        "q": "Superposition may be used to combine the separate contributions of independent sources for which quantities?",
+        "options": [
+          "Branch currents and node voltages only",
+          "Currents, voltages and powers alike",
+          "Powers and resistances only",
+          "Any quantity, in any linear or non-linear circuit"
+        ],
+        "answerIndex": 0,
+        "concept": "What superposition may and may not be applied to",
+        "why": "Currents and voltages are linear in the source strengths, so their contributions add; power is not, because P = I²R is quadratic in the current. Including power in the list is the standard error, and it always gives an answer that is too small."
+      },
+      {
+        "q": "A Thévenin equivalent has V_Th = 10.0 V and R_Th = 2.5 Ω. What is the Norton current of the same network?",
+        "options": [
+          "2.5 A",
+          "25 A",
+          "4.0 A",
+          "10.0 A"
+        ],
+        "answerIndex": 2,
+        "concept": "Converting Thévenin to Norton with I_N = V_Th/R_Th",
+        "why": "The short-circuit current is what flows when the terminals are joined through R_Th alone: 10.0/2.5 = 4.0 A. Picking 2.5 A copies the resistance value across, and 25 A multiplies where you should divide."
+      },
+      {
+        "q": "How does the Norton resistance R_N of a network compare with its Thévenin resistance R_Th?",
+        "options": [
+          "R_N = 1/R_Th",
+          "R_N is always larger",
+          "R_N = R_Th",
+          "They are unrelated quantities"
+        ],
+        "answerIndex": 2,
+        "concept": "R_N = R_Th — both are the resistance seen with the sources zeroed",
+        "why": "Both are defined the same way, by looking into the terminals with every independent source zeroed, so they are the same number. The reciprocal answer confuses the resistance with the conversion between V_Th and I_N, which is the one place a division belongs."
+      },
+      {
+        "q": "Two charges of +3.0 nC and −3.0 nC are held 2.0 mm apart. What is the magnitude of the dipole moment?",
+        "options": [
+          "6.0 × 10⁻¹² C·m",
+          "1.2 × 10⁻¹¹ C·m",
+          "1.5 × 10⁻⁶ C·m",
+          "3.0 × 10⁻¹² C·m"
+        ],
+        "answerIndex": 0,
+        "concept": "p = qd uses the magnitude of one charge, not both",
+        "why": "p = (3.0 × 10⁻⁹)(2.0 × 10⁻³) = 6.0 × 10⁻¹² C·m, taking q as the magnitude of either charge. Doubling it to 1.2 × 10⁻¹¹ treats the pair as carrying 2q, but the object is neutral overall, so adding the two charges is meaningless."
+      },
+      {
+        "q": "In the physics convention, the dipole moment vector p points:",
+        "options": [
+          "From +q toward −q",
+          "Along the equatorial plane",
+          "In whichever direction E points",
+          "From −q toward +q"
+        ],
+        "answerIndex": 3,
+        "concept": "Direction of p in the physics convention",
+        "why": "In PHY_102 p runs from the negative charge to the positive one; chemistry uses the reverse, which is why you should always say which convention you are using. Choosing the direction of E confuses the dipole's own property with the field it happens to sit in."
+      },
+      {
+        "q": "On the equatorial plane of a dipole the potential is zero everywhere, yet the field is not. Which relation explains this?",
+        "options": [
+          "E is proportional to V at every point",
+          "E is the gradient of V, so V can be zero while changing",
+          "E and V are independent and never related",
+          "V is zero only where the two charges cancel exactly"
+        ],
+        "answerIndex": 1,
+        "concept": "V = 0 does not imply E = 0",
+        "why": "The field measures how fast the potential changes across a point, not how big it is there, so V can be flat at zero along a surface while varying steeply across it. Treating E as proportional to V is the shortcut that makes 'V = 0 so E = 0' look reasonable."
+      },
+      {
+        "q": "At the same distance r, a dipole's field and a point charge's field fall off as which powers of r?",
+        "options": [
+          "1/r³ and 1/r² respectively",
+          "1/r² and 1/r respectively",
+          "1/r² and 1/r² respectively",
+          "1/r³ and 1/r respectively"
+        ],
+        "answerIndex": 0,
+        "concept": "The dipole field falls one power faster than a point charge's",
+        "why": "The two charges nearly cancel at large r, costing the dipole one extra power: its field goes as 1/r³ against the point charge's 1/r². The pairing 1/r² and 1/r is the potentials, not the fields — the dipole potential goes as 1/r² and the point charge's as 1/r."
+      },
+      {
+        "q": "A permanent dipole sits in a uniform field. At which orientation is it in stable equilibrium, and what is U there?",
+        "options": [
+          "θ = 90°, with U = 0",
+          "θ = 180°, with U = +pE",
+          "θ = 0°, with U = −pE",
+          "θ = 0°, with U = +pE"
+        ],
+        "answerIndex": 2,
+        "concept": "U = −pE cos θ and the stable orientation of a dipole",
+        "why": "Aligned with the field the torque vanishes and U = −pE cos 0° = −pE, the lowest energy available, so a nudge brings it back. Anti-aligned at 180° also gives zero torque, but there U = +pE is the maximum, so that equilibrium is unstable."
+      },
+      {
+        "q": "A slide claims a dipole in a non-uniform field 'will undoubtedly' feel a net force greater than zero. What is the correct position?",
+        "options": [
+          "The force is always zero, uniform field or not",
+          "The force is non-zero only when the dipole is at 90°",
+          "The claim is right: the force can never be zero there",
+          "The force is generally non-zero but can vanish by symmetry"
+        ],
+        "answerIndex": 3,
+        "concept": "Net force on a dipole in a non-uniform field",
+        "why": "A field gradient means the two charges feel unequal pulls, so a net force generally appears and drags the dipole toward the stronger field — but particular orientations and symmetry points can still cancel it. The overstated version treats 'generally' as 'always', which is the error the summary flags."
+      },
+      {
+        "q": "A charged parallel-plate capacitor stays connected to its battery while a dielectric slab is inserted. What happens?",
+        "options": [
+          "Q rises by κ, E is unchanged, stored energy rises",
+          "Q is fixed, E falls by κ, stored energy falls",
+          "Q rises by κ, E falls by κ, stored energy falls",
+          "Q is fixed, E is unchanged, stored energy is unchanged"
+        ],
+        "answerIndex": 0,
+        "concept": "Dielectric inserted at constant voltage rather than constant charge",
+        "why": "With the battery still attached V is pinned, so E = V/d cannot change; instead C rises by κ and the battery pushes in extra charge, raising the stored energy. The version with Q fixed and E falling is the disconnected case, where and everything moves the other way — always ask whether the source is still connected."
+      },
+      {
+        "q": "A dielectric has κ = 7.0. What is its electric susceptibility χ_e?",
+        "options": [
+          "7.0",
+          "6.0",
+          "8.0",
+          "0.14"
+        ],
+        "answerIndex": 1,
+        "concept": "χ_e = κ − 1",
+        "why": "Susceptibility measures the excess over vacuum, so χ_e = 7.0 − 1 = 6.0, and it is zero for empty space. Quoting 7.0 confuses χ_e with κ itself, and 0.14 is a reciprocal, which no version of the definition calls for."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "According to the lecture, an algorithm consists of which three parts?",
+        "options": [
+          "Inputs, a process, and outputs",
+          "Variables, loops, and conditions",
+          "Pseudocode, flowchart, and program",
+          "Client, programmer, and computer"
+        ],
+        "answerIndex": 0,
+        "concept": "The three parts of an algorithm",
+        "why": "Every algorithm takes something in, does something to it, and hands something back — inputs, process, outputs. Variables and loops are features of the code you eventually write, which is the program, not the plan the algorithm describes."
+      },
+      {
+        "q": "The lecture gives exactly two ways of representing an algorithm. They are:",
+        "options": [
+          "Flowcharts and source code",
+          "Pseudocode and flowcharts",
+          "Pseudocode and source code",
+          "Flowcharts and Big O notation"
+        ],
+        "answerIndex": 1,
+        "concept": "Pseudocode and flowcharts as the two representations",
+        "why": "Both are language-independent ways of writing the plan down, which is exactly what a representation has to be. Source code is not a representation of an algorithm but the conversion of one into a particular language, so including it breaks the language-independence requirement."
+      },
+      {
+        "q": "A team ports their solution from Python to Java and has to rewrite it. What have they rewritten?",
+        "options": [
+          "The algorithm, since its steps have changed",
+          "Both the algorithm and the program",
+          "The program, not the algorithm",
+          "The problem description"
+        ],
+        "answerIndex": 2,
+        "concept": "Algorithm versus computer program",
+        "why": "The plan for solving the problem is unchanged; only the instructions describing the steps to a particular computer had to be rewritten. If something must change when the language changes, that is the program by definition — the algorithm is designed by people and is language-independent."
+      },
+      {
+        "q": "What is Step 2, problem analysis, meant to establish?",
+        "options": [
+          "The detailed pseudocode of each step",
+          "The starting and ending points of the process",
+          "The programming language to be used",
+          "The worst-case time complexity"
+        ],
+        "answerIndex": 1,
+        "concept": "Step 2 fixes the starting and ending points",
+        "why": "Analysis asks what data you have and what results you expect, so that both ends of the journey are pinned down before any steps are written. Detailed steps belong to Step 4, refinement, and complexity questions belong to Step 5, review."
+      },
+      {
+        "q": "Which pair of questions belongs to Step 5, algorithm review?",
+        "options": [
+          "What data do we have, and where is it?",
+          "Who will implement it, and what do they know?",
+          "Is the description ambiguous or incomplete?",
+          "Does it generalise, and can its complexity be reduced?"
+        ],
+        "answerIndex": 3,
+        "concept": "The two review questions of Step 5",
+        "why": "Review confirms the algorithm actually solves the problem and asks whether it reaches further and whether it can be made cheaper. The implementer's knowledge is what guides Step 4 refinement, so that pair is the tempting neighbour one step earlier."
+      },
+      {
+        "q": "Stepwise refinement in Step 4 is guided by three considerations. Which is one of them?",
+        "options": [
+          "The computer's specifications",
+          "The client's budget for the project",
+          "The number of inputs expected",
+          "The choice between a flowchart and pseudocode"
+        ],
+        "answerIndex": 0,
+        "concept": "What guides Step 4 refinement",
+        "why": "Refinement asks who will implement the algorithm, how much they know, and what the machine can do, because how much detail to spell out depends on all three. Budget never appears in the lecture's list, though it sounds like the sort of thing that should."
+      },
+      {
+        "q": "A loop runs i from 1 to n, adding 3 to i on each pass. What is its time complexity?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n³)"
+        ],
+        "answerIndex": 2,
+        "concept": "A loop variable changed by a constant amount gives O(n)",
+        "why": "Adding 3 each pass is still a constant step, so the number of passes stays proportional to n and the growth rate is linear. O(log n) is the tempting neighbour, but that needs the loop variable multiplied or divided by a constant, not increased by one."
+      },
+      {
+        "q": "Three loops are nested, each running from 1 to n, with one statement innermost. The complexity is:",
+        "options": [
+          "O(3n)",
+          "O(n³)",
+          "O(n log n)",
+          "O(2ⁿ)"
+        ],
+        "answerIndex": 1,
+        "concept": "Nested loops give O(nᶜ), counted by the innermost statement",
+        "why": "The innermost statement runs once for every triple of values, that is n × n × n times, so the complexity is O(n³). O(3n) treats the loops as if they ran one after another, which would be the answer if they were side by side rather than nested."
+      },
+      {
+        "q": "A function contains no loop, no recursion, and no call to any non-constant-time function. Its complexity is:",
+        "options": [
+          "O(n)",
+          "O(log n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "answerIndex": 3,
+        "concept": "The O(1) rule",
+        "why": "With nothing that repeats and nothing that hides a repetition in a call, the work does not grow with n at all, which is what constant time means. The rule is worth reading carefully: a single call to a linear function would be enough to break it."
+      },
+      {
+        "q": "Which loop behaviour gives O(log log n) under the lecture's rules?",
+        "options": [
+          "The loop variable is reduced exponentially by a constant",
+          "The loop variable is divided by a constant",
+          "The loop variable is decremented by a constant",
+          "The loop is nested inside another loop"
+        ],
+        "answerIndex": 0,
+        "concept": "The O(log log n) rule",
+        "why": "Only an exponential reduction of the loop variable collapses the count that fast. Division by a constant is the neighbouring rule and gives plain O(log n) — a slower collapse, and the one you will meet far more often."
+      },
+      {
+        "q": "Which description matches the lecture's O(2ⁿ) rule?",
+        "options": [
+          "Two loops running one after the other",
+          "A loop whose variable doubles each pass",
+          "Recursion on two subproblems of size n − 1",
+          "Two nested loops, each running to n"
+        ],
+        "answerIndex": 2,
+        "concept": "The O(2ⁿ) rule",
+        "why": "Each call spawning two calls on a problem only one smaller doubles the work at every level, which is what makes it exponential. A loop whose variable doubles is the opposite case — that shrinks the count and gives O(log n)."
+      },
+      {
+        "q": "Which pair correctly states what the two complexities measure?",
+        "options": [
+          "Time = lines of code; space = number of variables",
+          "Time = execution duration; space = computer space needed",
+          "Time = number of inputs; space = size of the output",
+          "Time = growth rate; space = the constant factor"
+        ],
+        "answerIndex": 1,
+        "concept": "Time complexity versus space complexity",
+        "why": "Time complexity is how long execution takes, space complexity is how much computer space the algorithm needs to finish. Both are written in Big O, so the notation alone never tells you which of the two is being quoted — the words around it must."
+      },
+      {
+        "q": "How does the lecture define average case time complexity?",
+        "options": [
+          "The mean of the best and worst cases",
+          "The maximum time for an input of size n",
+          "The time measured on real hardware",
+          "The time for a typical input of size n"
+        ],
+        "answerIndex": 3,
+        "concept": "Average case as the time for a typical input",
+        "why": "Average case is the time an ordinary input of size n costs, not an arithmetic average of the two extremes. Reaching for the mean of best and worst is the natural guess from the word 'average' and is not the definition given."
+      },
+      {
+        "q": "The deck compares 1000N with N². Which is the less efficient, and why?",
+        "options": [
+          "1000N, because its constant is large",
+          "1000N, because it is larger for small n",
+          "N², because it grows faster as n increases",
+          "Neither: they are the same order"
+        ],
+        "answerIndex": 2,
+        "concept": "Growth rate, not the value at one particular n",
+        "why": "Efficiency is judged by what happens as n increases, and N² eventually overtakes 1000N however big that constant is. The trap is checking a small n, where 1000N really is far larger — that comparison tells you nothing about growth."
+      },
+      {
+        "q": "Which of these is NOT one of the seven design factors listed in the Summary sheet?",
+        "options": [
+          "Portability",
+          "Robustness",
+          "Modularity",
+          "Extensibility"
+        ],
+        "answerIndex": 0,
+        "concept": "The seven design factors",
+        "why": "The list is modularity, correctness, maintainability, functionality, robustness, simplicity and extensibility; portability is not on it. It is the tempting extra because language independence is a characteristic of algorithms, which makes portability sound like it belongs — a different list."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "What does `.card.featured { }` select?",
+        "options": [
+          "Elements with class featured inside class card",
+          "One element carrying both classes",
+          "All elements with either class",
+          "An element whose id is card featured"
+        ],
+        "answerIndex": 1,
+        "concept": "Compound class selector versus descendant selector",
+        "why": "With no space between them the two class names describe the same element, so it must carry both. Insert a space and it becomes `.card .featured`, a descendant selector matching a featured element anywhere inside a card — the space is the whole difference."
+      },
+      {
+        "q": "`* { margin: 0; padding: 0; }` is a universal selector. What does the deck warn about it?",
+        "options": [
+          "It only works inside a media query",
+          "It cannot set margin or padding",
+          "It affects the entire document, so use it sparingly",
+          "It overrides ID selectors automatically"
+        ],
+        "answerIndex": 2,
+        "concept": "The universal selector and its reach",
+        "why": "The star matches every element on the page, which is why it resets so effectively and why it is easy to overreach with. It has no special power over other selectors — thinking it beats an ID confuses reach with priority."
+      },
+      {
+        "q": "A `<div>` has `width: 300px; padding: 10px; border: 5px solid; margin: 15px;`. What is its total width?",
+        "options": [
+          "330px",
+          "340px",
+          "360px",
+          "300px"
+        ],
+        "answerIndex": 2,
+        "concept": "Total width = content + padding + border + margin, both sides each",
+        "why": "Every layer is counted twice, once per side: 300 + 20 + 10 + 30 = 360px. Getting 340px means you counted the padding and border but forgot the margin, and 330px counts only one side of each."
+      },
+      {
+        "q": "An element has a coloured background. Where does that background stop?",
+        "options": [
+          "At the edge of the content only",
+          "At the outer edge of the padding",
+          "At the outer edge of the margin",
+          "It fills content, padding and margin alike"
+        ],
+        "answerIndex": 1,
+        "concept": "Padding is inside the box, margin is outside it",
+        "why": "Padding is space inside the border, so the background extends through it; margin is the gap outside the border and stays transparent. That is the practical test for telling the two apart when a layout looks wrong."
+      },
+      {
+        "q": "Which describes an element with `display: block`?",
+        "options": [
+          "Fills the parent's width and starts a new line",
+          "Takes only the width it needs, no new line",
+          "Flows inline but accepts width and height",
+          "Is removed from the page entirely"
+        ],
+        "answerIndex": 0,
+        "concept": "The block display value",
+        "why": "A block element such as a `<div>`, `<p>` or `<h1>` claims the full width of its parent and pushes what follows onto a new line. Taking only the width it needs is `inline`, and the version that flows inline yet still takes width and height is `inline-block`."
+      },
+      {
+        "q": "`.row { flex-direction: row-reverse; }`. How are the items laid out?",
+        "options": [
+          "Top to bottom",
+          "Bottom to top",
+          "Left to right",
+          "Right to left"
+        ],
+        "answerIndex": 3,
+        "concept": "flex-direction values",
+        "why": "`row-reverse` keeps the main axis horizontal but runs it backwards, so items start at the right. Top to bottom is `column` and bottom to top is `column-reverse` — reversing changes the direction along the axis, not which axis is used."
+      },
+      {
+        "q": "What is the default value of `flex-wrap`, and what does it do?",
+        "options": [
+          "`wrap`, so items spill to a new line",
+          "`nowrap`, so items stay on a single line",
+          "`wrap-reverse`, so items wrap backwards",
+          "`stretch`, so items fill the container"
+        ],
+        "answerIndex": 1,
+        "concept": "flex-wrap and its default",
+        "why": "By default flex items are held on one line and shrink rather than wrap, which is why a row of items can end up squeezed. `stretch` is the default of `align-items`, not of `flex-wrap` — two different properties with two different defaults."
+      },
+      {
+        "q": "A flex container sets `align-items: center` and one child sets `align-self: flex-start`. What happens?",
+        "options": [
+          "That child sits at the start of the cross axis",
+          "The whole container realigns to the start",
+          "The child's rule is ignored by the container",
+          "All items move to the start of the main axis"
+        ],
+        "answerIndex": 0,
+        "concept": "align-self overrides align-items for one item",
+        "why": "`align-items` sets the cross-axis alignment for every item, and `align-self` on a single item overrides it for that item alone. Neither property touches the main axis — that is `justify-content`'s job."
+      },
+      {
+        "q": "In `flex: 1 0 auto`, which property sets an item's initial size before free space is shared out?",
+        "options": [
+          "flex-grow",
+          "flex-shrink",
+          "flex-basis",
+          "align-self"
+        ],
+        "answerIndex": 2,
+        "concept": "flex-basis in the flex shorthand",
+        "why": "`flex-basis` is the starting size, here `auto`, meaning take it from the content; grow and shrink then decide what happens to the space left over. `flex-grow` is how much extra space the item claims, which is a share of the remainder, not the starting point."
+      },
+      {
+        "q": "`body { font-family: Arial, Helvetica, sans-serif; }` on a machine with no Arial. What is used?",
+        "options": [
+          "Helvetica",
+          "sans-serif",
+          "The system default font",
+          "No text at all"
+        ],
+        "answerIndex": 0,
+        "concept": "font-family as a prioritised list",
+        "why": "The browser walks the list in order and takes the first face it has, so Helvetica is used and the generic sans-serif is only the last resort. The list is a fallback chain the browser reads left to right, not an instruction to fetch a missing font."
+      },
+      {
+        "q": "Which rule renders the text in capitals without changing the HTML?",
+        "options": [
+          "`text-decoration: uppercase;`",
+          "`font-weight: uppercase;`",
+          "`text-align: uppercase;`",
+          "`text-transform: uppercase;`"
+        ],
+        "answerIndex": 3,
+        "concept": "text-transform versus text-decoration",
+        "why": "`text-transform` changes the capitalisation shown, taking `uppercase`, `lowercase` or `capitalize`. `text-decoration` is the neighbouring property but it draws underlines, overlines and line-throughs, and has no capitalisation values at all."
+      },
+      {
+        "q": "A rule must take effect only on viewports wider than 1024px. Which query is correct?",
+        "options": [
+          "`@media (max-width: 1024px)`",
+          "`@media (width: 1024px)`",
+          "`@media (min-width: 1024px)`",
+          "`@media (screen: 1024px)`"
+        ],
+        "answerIndex": 2,
+        "concept": "min-width media queries",
+        "why": "`min-width` sets a floor, so the rules switch on at 1024px and stay on for anything wider. `max-width` is its mirror image, applying at that width or below, and reading one as the other inverts your whole breakpoint."
+      },
+      {
+        "q": "`html { font-size: 2vw; }` is an example of what, and what does the size follow?",
+        "options": [
+          "Fluid typography, following the viewport width",
+          "Relative units, following the parent's size",
+          "A media query, following the breakpoint",
+          "Fixed typography, following the root size"
+        ],
+        "answerIndex": 0,
+        "concept": "vw units and fluid typography",
+        "why": "`vw` is a percentage of the viewport width, so the text rescales continuously as the window changes — that is fluid typography. `em` and `rem` are the units that follow a parent or root font size instead, and they do not react to the window at all."
+      },
+      {
+        "q": "`.container p { font-size: 1.2em; }` where the container's font size is 20px. What size is the paragraph text?",
+        "options": [
+          "1.2px",
+          "12px",
+          "20px",
+          "24px"
+        ],
+        "answerIndex": 3,
+        "concept": "em as a multiple of the parent's font size",
+        "why": "`em` multiplies the parent's font size, so 1.2 × 20px = 24px. Reading 1.2em as a fixed small value misses the point of relative units — the same rule gives a different pixel size under a different parent."
+      },
+      {
+        "q": "A flex container is placed inside another flex container. How does the inner one behave?",
+        "options": [
+          "It cancels the outer container's flex layout",
+          "It behaves as a flex item within its parent",
+          "Nesting flex containers is not permitted",
+          "It inherits the outer container's flex-direction"
+        ],
+        "answerIndex": 1,
+        "concept": "Nested flex containers",
+        "why": "The inner element plays two roles at once: a flex item to its parent, and a flex container to its own children. Its `flex-direction` is set independently, so an inner column inside an outer row is perfectly normal and nothing is inherited."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "What functions did the Nigerian Council of 1914 have?",
+        "options": [
+          "Law-making for the whole colony",
+          "Advisory functions only",
+          "Judicial review of the Governor",
+          "Control of regional revenue"
+        ],
+        "answerIndex": 1,
+        "concept": "The Nigerian Council of 1914 as an advisory body",
+        "why": "Lugard's Council could advise but not legislate, which is precisely why it counts as the foundation of constitutional development rather than a constitution. Law-making arrived with Clifford's Legislative Council in 1922, and confusing the two is the standard slip."
+      },
+      {
+        "q": "Under the Clifford Constitution, how was Northern Nigeria governed and represented?",
+        "options": [
+          "By proclamation, and unrepresented on the council",
+          "By the legislative council, with four elected seats",
+          "By proclamation, with three seats reserved for it",
+          "By its own regional assembly at Kaduna"
+        ],
+        "answerIndex": 0,
+        "concept": "The North under Clifford, 1922",
+        "why": "Lagos and the South came under legislative-council law while the North was governed by proclamation and had no seats, which is why the constitution is said to have laid the foundation for disintegration. The four elected seats went to Lagos and Calabar only, and regional assemblies did not arrive until Richards in 1947."
+      },
+      {
+        "q": "What did Governor Bernard Bourdillon do from 1935?",
+        "options": [
+          "Introduced the elective principle",
+          "Created the office of Premier",
+          "Made Lagos the Federal Capital Territory",
+          "Appealed to northern leaders to join the legislative council"
+        ],
+        "answerIndex": 3,
+        "concept": "Bourdillon and northern participation",
+        "why": "Bourdillon prepared the ground for a new constitution and pressed northern leaders to take seats on the legislative council. The elective principle belongs to Clifford in 1922, and both the Premiership and Lagos as FCT belong to Lyttleton in 1954."
+      },
+      {
+        "q": "Which constitution introduced regionalism, with a House of Assembly in each of the three regions?",
+        "options": [
+          "Richards, 1947",
+          "Clifford, 1922",
+          "Macpherson, 1951",
+          "Lyttleton, 1954"
+        ],
+        "answerIndex": 0,
+        "concept": "Richards introduced regionalism, not federalism",
+        "why": "Richards created regional Houses of Assembly under one central legislative council, which is regionalism — power still flowed from the centre. Lyttleton in 1954 is the near miss: he went further and introduced the federal system, in which centre and regions each held their own jurisdiction."
+      },
+      {
+        "q": "Which region had a bicameral legislature under the Richards Constitution?",
+        "options": [
+          "The West only",
+          "The East only",
+          "The North only",
+          "All three regions"
+        ],
+        "answerIndex": 2,
+        "concept": "Bicameral in the North, unicameral elsewhere under Richards",
+        "why": "Only the North had two chambers under Richards; the other regions had one each. It is Macpherson in 1951 who extended a bicameral legislature to the Western Region as well, so the two constitutions differ on exactly this point."
+      },
+      {
+        "q": "What happened in 1949 under the Richards Constitution?",
+        "options": [
+          "The franchise was extended beyond Lagos and Calabar",
+          "Two Nigerians were appointed to the Executive Council",
+          "Enahoro moved his motion for independence",
+          "The Legislative Council was renamed"
+        ],
+        "answerIndex": 1,
+        "concept": "The 1949 appointments to the Executive Council",
+        "why": "Two Nigerians reached the Executive Council in 1949, a step forward for a constitution otherwise criticised for excluding them. The franchise is the trap: it stayed limited to Lagos and Calabar throughout, which is one of the standing criticisms of Richards."
+      },
+      {
+        "q": "Under the Macpherson Constitution, who was Prime Minister in the Council of Ministers, and with how many ministers?",
+        "options": [
+          "A Nigerian premier, with three ministers",
+          "The Governor, with twelve ministers",
+          "The Colonial Secretary, with twelve ministers",
+          "The Governor, with three ministers"
+        ],
+        "answerIndex": 1,
+        "concept": "The Council of Ministers, 1951",
+        "why": "The Central Executive Council was renamed the Council of Ministers with the Governor holding the title of Prime Minister alongside twelve ministers. Premier is the neighbouring title and belongs to the regions under Lyttleton in 1954, not to the centre in 1951."
+      },
+      {
+        "q": "Which constitution removed Lagos Colony from the Western Region, and which later made Lagos the Federal Capital Territory?",
+        "options": [
+          "Clifford, then Richards",
+          "Richards, then Macpherson",
+          "Macpherson, then Lyttleton",
+          "Lyttleton, then Macpherson"
+        ],
+        "answerIndex": 2,
+        "concept": "Lagos under Macpherson and then Lyttleton",
+        "why": "Macpherson in 1951 detached Lagos and made it an independent area; Lyttleton in 1954 went on to make it the Federal Capital Territory. Reversing the order is easy to do, so anchor it on the fact that Lyttleton, in 1954, comes last."
+      },
+      {
+        "q": "The Lyttleton Constitution based revenue allocation on which principle?",
+        "options": [
+          "Population",
+          "Equality of the regions",
+          "Regional need",
+          "Derivation"
+        ],
+        "answerIndex": 3,
+        "concept": "Derivation as Lyttleton's revenue principle",
+        "why": "Under derivation a region kept a share tied to what was produced within it, which fitted the new federal structure he had created. Population and equality are plausible-sounding alternatives that the 1954 settlement did not use."
+      },
+      {
+        "q": "The Nigeria Youth Movement was formed in 1935 by:",
+        "options": [
+          "Ernest Ikoli and Samuel Akisanya",
+          "Herbert Macaulay and Nnamdi Azikiwe",
+          "Obafemi Awolowo and the Ooni",
+          "Ahmadu Bello and Tafawa Balewa"
+        ],
+        "answerIndex": 0,
+        "concept": "The founders of the NYM",
+        "why": "Ikoli and Akisanya are the NYM's famous leaders; Azikiwe, Awolowo and Abayomi joined later, which is when the Lagos Youth Movement became the NYM. Awolowo with the Ooni founded Egbe Omo Oduduwa in 1945, and Bello with Balewa belong to the NPC in 1951."
+      },
+      {
+        "q": "One stated aim of the NYM concerned Yaba Higher College. What was it?",
+        "options": [
+          "To move the college to Ibadan",
+          "To close the college and open a national one",
+          "To make the college admit only Nigerians",
+          "To have the college affiliated to a British university"
+        ],
+        "answerIndex": 3,
+        "concept": "The NYM's Yaba Higher College aim",
+        "why": "Affiliation to a British university would have raised the standing of its qualifications, and that specific demand sits beside the NYM's aims of independence and national unity. The other options sound nationalist but are not what the movement asked for."
+      },
+      {
+        "q": "In 1938 the NYM won all the elective seats. From which party did it take them?",
+        "options": [
+          "The NCNC",
+          "The Action Group",
+          "The NPC",
+          "The NNDP"
+        ],
+        "answerIndex": 3,
+        "concept": "The NYM's 1938 victory over the NNDP",
+        "why": "The NNDP had held all three Lagos seats in 1923, 1928 and 1933 before the NYM displaced it in 1938. The NCNC is the tempting answer but it was not formed until August 1944 — the year the NYM itself was destroyed by internal disputes."
+      },
+      {
+        "q": "The Action Group, formed in Ibadan in 1951, grew out of which body?",
+        "options": [
+          "Jam'iyyar Mutanen Arewa",
+          "The Lagos Youth Movement",
+          "Egbe Omo Oduduwa",
+          "The Nigerian Council"
+        ],
+        "answerIndex": 2,
+        "concept": "Cultural body to political party: Egbe Omo Oduduwa to the AG",
+        "why": "Egbe Omo Oduduwa, formed in 1945 by Awolowo, the Ooni and Ajasin, became the Action Group in 1951. The parallel case is the trap: Jam'iyyar Mutanen Arewa became the NPC, also in 1951, so both parties have a cultural parent from the same year."
+      },
+      {
+        "q": "Which newspaper was published by the Nigeria Youth Movement?",
+        "options": [
+          "Daily Service",
+          "Lagos Daily News",
+          "West African Pilot",
+          "Nigerian Tribune"
+        ],
+        "answerIndex": 0,
+        "concept": "Party and newspaper pairings",
+        "why": "The Daily Service was the NYM's paper. The Lagos Daily News belonged to Macaulay's NNDP and the West African Pilot to the NCNC, so all three pairings have to be held apart rather than guessed from the names."
+      },
+      {
+        "q": "Which is one of the four criticisms of Nigerian political parties named in the lecture?",
+        "options": [
+          "They refused to publish newspapers",
+          "They sacrificed national interest for ethnic interest",
+          "They were funded entirely by the colonial government",
+          "They rejected the call for independence"
+        ],
+        "answerIndex": 1,
+        "concept": "The four criticisms of the parties",
+        "why": "The list is the ethnocentric syndrome, lack of political ideology, weakening the central government, and sacrificing national interest for ethnic interest. The other options invert the record: newspapers and the call for independence are on the separate list of how the parties advanced independence."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "You are writing about a policy's advantages and its disadvantages. What does 'one idea at a time' require?",
+        "options": [
+          "Put the advantages and disadvantages in separate paragraphs",
+          "Alternate them sentence by sentence in one paragraph",
+          "Put all of them in one long paragraph",
+          "Leave the disadvantages out of the essay"
+        ],
+        "answerIndex": 0,
+        "concept": "One idea at a time as a paragraph component",
+        "why": "A point raised in a paragraph must be finished there, so the advantages close before the disadvantages open in a paragraph of their own. Alternating them looks balanced but carries a point across the break, which is the thing the rule forbids."
+      },
+      {
+        "q": "What does the source give as the fundamental purpose of a paragraph in an essay?",
+        "options": [
+          "To make the essay longer",
+          "To give the reader a place to pause",
+          "To uphold the structural integrity of the essay",
+          "To introduce a new topic each time"
+        ],
+        "answerIndex": 2,
+        "concept": "The purpose of the paragraph",
+        "why": "A paragraph is an independent unit of thought that still contributes to the whole, and that double role is what holds the essay's structure together. A resting place for the reader is a real effect, but it describes the white space, not the paragraph's function."
+      },
+      {
+        "q": "An essay has five paragraphs. How many topic sentences should it contain?",
+        "options": [
+          "One, in the introduction",
+          "Two: one to open, one to close",
+          "As many as the argument needs",
+          "Five, one per paragraph"
+        ],
+        "answerIndex": 3,
+        "concept": "Five paragraphs, five topic sentences",
+        "why": "Each paragraph carries exactly one main idea and states it, so the count of topic sentences follows the count of paragraphs. Putting a single one in the introduction confuses the topic sentence with the essay's thesis, which is a different job."
+      },
+      {
+        "q": "Where does the source say a topic sentence may appear?",
+        "options": [
+          "Only as the first sentence",
+          "Usually first, sometimes in the middle or at the end",
+          "Only at the end, as a conclusion",
+          "Anywhere, provided it is repeated"
+        ],
+        "answerIndex": 1,
+        "concept": "The position of the topic sentence",
+        "why": "It normally opens the paragraph so it can act as a roadmap, but it may also sit mid-paragraph or close it. Insisting it is always first is the common overstatement — position is the usual case, not the definition."
+      },
+      {
+        "q": "To which category do 'Therefore', 'Thus' and 'Accordingly' belong?",
+        "options": [
+          "Addition",
+          "Emphasis",
+          "Cause and Effect",
+          "Clarification"
+        ],
+        "answerIndex": 2,
+        "concept": "Transition words by category",
+        "why": "Each of these signals that what follows results from what came before, which is the cause-and-effect job. Emphasis words such as 'Indeed' and 'Above all' press a point harder instead of drawing a consequence from it."
+      },
+      {
+        "q": "Which category do 'For instance', 'Namely' and 'Such as' introduce?",
+        "options": [
+          "Illustration/Example",
+          "Contrast",
+          "Sequence/Order",
+          "Conclusion/Summary"
+        ],
+        "answerIndex": 0,
+        "concept": "Illustration and example transitions",
+        "why": "All three announce a case that shows the general claim in action. 'Namely' also turns up under Clarification, which is why the source tells you to decide by the job the word does in its sentence rather than by a memorised column."
+      },
+      {
+        "q": "'Meanwhile', 'Simultaneously' and 'Eventually' belong to which category?",
+        "options": [
+          "Comparison",
+          "Sequence/Order",
+          "Emphasis",
+          "Time"
+        ],
+        "answerIndex": 3,
+        "concept": "Time transitions",
+        "why": "These locate events in time relative to one another rather than ranking steps. Sequence/Order is the close neighbour — 'First', 'Next', 'Finally' — and 'Meanwhile' is listed under both, so read what the sentence is doing before you label it."
+      },
+      {
+        "q": "'We won the game!' beside 'We won the game.' illustrates which use of punctuation?",
+        "options": [
+          "Clarifying Ambiguity",
+          "Emphasising a Point",
+          "Changing the Meaning",
+          "Conveying Nuance"
+        ],
+        "answerIndex": 1,
+        "concept": "The four uses of punctuation",
+        "why": "The words are identical and the fact reported is identical; only the force changes, which is emphasis. Changing the Meaning is reserved for pairs where the sense itself flips, as in the 'Let's eat, Grandma' example."
+      },
+      {
+        "q": "'I like cooking, my family, and pets.' beside 'I like cooking my family and pets.' illustrates which use?",
+        "options": [
+          "Conveying Nuance",
+          "Emphasising a Point",
+          "Clarifying Ambiguity",
+          "Indicating an omission"
+        ],
+        "answerIndex": 2,
+        "concept": "Punctuation clarifying ambiguity",
+        "why": "The commas mark three separate things you like, and without them the sentence reads as one gruesome activity — the ambiguity is resolved by the marks. Nuance covers shifts of tone, as between 'I appreciate your help.' and the same words with an exclamation mark."
+      },
+      {
+        "q": "'The dog wagged it's tail.' What is wrong?",
+        "options": [
+          "'it's' means 'it is'; the possessive is 'its'",
+          "'its' always takes an apostrophe when possessive",
+          "The apostrophe should be after the s",
+          "Nothing; both forms are acceptable"
+        ],
+        "answerIndex": 0,
+        "concept": "Its versus it's",
+        "why": "The apostrophe marks the contraction of 'it is', so the sentence literally reads 'the dog wagged it is tail'. The possessive 'its' takes no apostrophe at all, which is the reverse of what possession usually looks like — that is exactly why it catches people."
+      },
+      {
+        "q": "Which is punctuated correctly?",
+        "options": [
+          "a well known author",
+          "a well-known author",
+          "a well—known author",
+          "a well/known author"
+        ],
+        "answerIndex": 1,
+        "concept": "The hyphen in a compound adjective before a noun",
+        "why": "A hyphen ties 'well' and 'known' into one modifier so the reader does not briefly take 'well' as modifying 'known author'. An em dash would interrupt the sentence instead of joining words, and a slash would offer the two as alternatives."
+      },
+      {
+        "q": "Which mark correctly spans a range, as in 'pages 10-15'?",
+        "options": [
+          "A hyphen",
+          "An em dash",
+          "An en dash",
+          "A slash"
+        ],
+        "answerIndex": 2,
+        "concept": "En dash for ranges",
+        "why": "The en dash is the middle-length mark and its job is to span a range of numbers or dates. The hyphen is shorter and joins words into one unit, and the em dash is longer and sets off an interruption in place of parentheses or commas."
+      },
+      {
+        "q": "Why are semicolons used in 'We visited Kano, Nigeria; Accra, Ghana; and Dakar, Senegal'?",
+        "options": [
+          "To join independent clauses without a conjunction",
+          "Because each item already contains a comma",
+          "To introduce the list that follows",
+          "To mark a dramatic pause between places"
+        ],
+        "answerIndex": 1,
+        "concept": "The semicolon separating list items that contain commas",
+        "why": "Commas alone would read as six places rather than three, so the semicolon marks the real divisions. Joining independent clauses is the semicolon's other named use, but none of these items is a clause — they are list entries."
+      },
+      {
+        "q": "'The World Health Organization (WHO) issued new guidelines.' The parentheses here:",
+        "options": [
+          "Signal an editorial insertion into a quotation",
+          "Mark words the original author did not write",
+          "Show that the acronym is uncertain",
+          "Clarify an acronym, as the writer's own aside"
+        ],
+        "answerIndex": 3,
+        "concept": "Parentheses versus brackets",
+        "why": "Parentheses enclose the writer's own supplementary information, including the expansion or clarification of an acronym. Square brackets are the mark that signals an insertion into someone else's quoted words, so swapping them would falsely claim the sentence is a quotation being edited."
+      },
+      {
+        "q": "The Summary strand likens writing strategies to what?",
+        "options": [
+          "Programming languages",
+          "Musical instruments",
+          "Architectural blueprints",
+          "Recipes in a cookbook"
+        ],
+        "answerIndex": 0,
+        "concept": "The analogy for the eleven writing strategies",
+        "why": "Each strategy is built for a specific purpose and outcome and comes with its own syntax, rules and best practices, exactly as a programming language does. The architect analogy belongs elsewhere in the course, to the planning stage of the writing process."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "A row of the results table reads I1 = 1.055 mA and I2 = −0.344 mA. What should I3 be?",
+        "options": [
+          "1.399 mA",
+          "0.711 mA",
+          "−0.711 mA",
+          "1.055 mA"
+        ],
+        "answerIndex": 1,
+        "concept": "Computing I3 = I1 + I2 with the sign of I2 kept",
+        "why": "You add the two readings algebraically: 1.055 + (−0.344) = 0.711 mA, which is what the third ammeter reads. Getting 1.399 mA means you dropped the minus sign and added magnitudes, and that is the single commonest mistake in this table."
+      },
+      {
+        "q": "At the highest emf setting I1 = 1.215 mA and I2 = −0.271 mA. What is I3 computed?",
+        "options": [
+          "1.486 mA",
+          "0.271 mA",
+          "0.944 mA",
+          "1.215 mA"
+        ],
+        "answerIndex": 2,
+        "concept": "Row-by-row verification arithmetic",
+        "why": "1.215 + (−0.271) = 0.944 mA, matching the measured I3 for that row. If you reached 1.486 mA you added the magnitudes; the negative reading has to be carried into the sum exactly as recorded."
+      },
+      {
+        "q": "In one row the meters give I1 = 0.895 mA and I3 = 0.479 mA. What must I2 be?",
+        "options": [
+          "+0.416 mA",
+          "−0.416 mA",
+          "+1.374 mA",
+          "−1.374 mA"
+        ],
+        "answerIndex": 1,
+        "concept": "Rearranging I1 + I2 = I3 to recover a branch current",
+        "why": "I2 = I3 − I1 = 0.479 − 0.895 = −0.416 mA, and the minus sign is part of the answer, not an error to be tidied away. Quoting +0.416 mA subtracts in the wrong order and hides the fact that this branch's current leaves the node."
+      },
+      {
+        "q": "As one supply is raised in steps from 9 V to 15 V, how does I1 behave?",
+        "options": [
+          "It rises, from 0.895 to 1.215 mA",
+          "It falls, from 1.215 to 0.895 mA",
+          "It stays fixed at 0.895 mA",
+          "It changes sign partway through"
+        ],
+        "answerIndex": 0,
+        "concept": "The trend in I1 across the three emf settings",
+        "why": "Raising the driving emf with the resistances held fixed pushes more current down that branch, so I1 climbs 0.895, 1.055, 1.215 mA. Nothing changes sign here: it is I2 that carries a minus throughout, and it keeps it in every row."
+      },
+      {
+        "q": "Across the three rows, what happens to I2 as the stepped emf rises?",
+        "options": [
+          "It grows more negative, −0.271 to −0.416",
+          "It stays constant at −0.416 mA",
+          "It becomes less negative, −0.416 to −0.271",
+          "It turns positive at 15 V"
+        ],
+        "answerIndex": 2,
+        "concept": "The trend in I2 across the three emf settings",
+        "why": "I2 runs −0.416, −0.344, −0.271 mA, so its magnitude shrinks while the sign stays negative — the branch still feeds current out of the node, just less of it. Reading the trend backwards is easy when every value is negative, so compare magnitudes deliberately."
+      },
+      {
+        "q": "In the procedure, what is the '50 V' setting?",
+        "options": [
+          "The emf applied to the circuit",
+          "The reading expected on the voltmeter",
+          "The breakdown limit of the breadboard",
+          "The maximum-output range of the supplies"
+        ],
+        "answerIndex": 3,
+        "concept": "Maximum-output range versus the emf set on the dial",
+        "why": "Pressing the 50 V button chooses the range the supply can deliver; the emf actually applied is then set on the dial at 9 V. These are two separate steps, and treating 50 V as the applied voltage skips the one that matters for the readings."
+      },
+      {
+        "q": "By what increment is the emf raised between recordings?",
+        "options": [
+          "3 V steps",
+          "1 V steps",
+          "5 V steps",
+          "9 V steps"
+        ],
+        "answerIndex": 0,
+        "concept": "The 3 V stepping of the emf",
+        "why": "The emf goes 9 V, 12 V, 15 V, which is three regular 3 V steps and gives the three rows of data. The 9 V figure is the starting emf rather than the increment, which is why it is a tempting misread."
+      },
+      {
+        "q": "Which is a source of error arising from the resistors themselves?",
+        "options": [
+          "The resistors are wired in parallel by mistake",
+          "Their resistance is unknown to the experimenter",
+          "They store charge at the junction",
+          "Their nominal values carry a tolerance"
+        ],
+        "answerIndex": 3,
+        "concept": "Resistor tolerance as a source of error",
+        "why": "The 10, 1, 2.5, 7 and 5 kΩ values are nominal, so the true resistances differ slightly and shift every computed current. Charge storage at the node is not a source of error at all — if it happened, KCL itself would fail rather than the measurement."
+      },
+      {
+        "q": "Why must R1 to R5 be left untouched while the emf is stepped?",
+        "options": [
+          "Because variable resistors break when readjusted",
+          "Because the ammeters are calibrated to those values",
+          "So that only one variable changes at a time",
+          "Because KCL only holds for fixed resistances"
+        ],
+        "answerIndex": 2,
+        "concept": "Changing one variable at a time",
+        "why": "The three rows are meant to differ in the emf alone, so that any change in the currents can be attributed to it. KCL holds at a junction whatever the resistances do, so the reason is experimental discipline, not a limit on the law."
+      },
+      {
+        "q": "The deck names 'Justa Kirchhoff, a Russian scientist'. What is the correct attribution?",
+        "options": [
+          "Gustav Kirchhoff, a German physicist, 1845",
+          "Gustav Kirchhoff, a Russian physicist, 1845",
+          "Justa Kirchhoff, a German physicist, 1854",
+          "Georg Kirchhoff, an Austrian physicist, 1845"
+        ],
+        "answerIndex": 0,
+        "concept": "Who formulated the two circuit laws, and when",
+        "why": "He was Gustav Kirchhoff, a German physicist, and the two laws date from 1845 — the deck gets the date and the laws right but the name and nationality wrong. Reversing the digits to 1854 is the other easy slip once you start doubting the slide."
+      },
+      {
+        "q": "The Data Analysis slide labels I1 + I2 = I3 as 'the KVL equation'. Which law is it really?",
+        "options": [
+          "Kirchhoff's Voltage Law, the Second Law",
+          "Ohm's law applied at a node",
+          "Kirchhoff's Current Law, the First Law",
+          "Neither: it is a definition, not a law"
+        ],
+        "answerIndex": 2,
+        "concept": "The deck's mislabelling of the node equation",
+        "why": "The equation relates currents meeting at a junction, which is the First Law, KCL; the Second Law concerns voltages around a closed loop. The slide's label is simply wrong, and quoting it in an answer would cost you the mark."
+      },
+      {
+        "q": "How should the three rows of data be treated when checking the law?",
+        "options": [
+          "Average I1, I2 and I3 across the rows and compare once",
+          "Compare computed and measured I3 row by row",
+          "Use only the row with the largest currents",
+          "Plot I3 against emf and take the gradient"
+        ],
+        "answerIndex": 1,
+        "concept": "Verification is a row-by-row comparison",
+        "why": "Each row is an independent test of the law at a different set of current magnitudes, and agreement in all three is what makes the verification convincing. Averaging first would blur exactly the variation the three emf settings were chosen to produce."
+      },
+      {
+        "q": "How can an ammeter's own internal resistance affect this experiment?",
+        "options": [
+          "It adds a fixed offset to every reading",
+          "It makes the meter read the voltage instead",
+          "It causes the readings to drift with time",
+          "It loads the branch, altering the current measured"
+        ],
+        "answerIndex": 3,
+        "concept": "Ammeter burden as a source of error",
+        "why": "The meter sits in series in the branch, so its resistance slightly reduces the very current it is there to report — this is why ammeters are built with a very low resistance. A fixed offset on every reading describes a zero error, which is a separate fault."
+      },
+      {
+        "q": "You record the middle ammeter as 0.416 mA. What is wrong with that entry?",
+        "options": [
+          "The sign has been dropped",
+          "The unit should be amperes",
+          "It should be rounded to 0.42",
+          "It should be entered as I3, not I2"
+        ],
+        "answerIndex": 0,
+        "concept": "Recording and keeping the sign of each reading",
+        "why": "The reading is −0.416 mA, and without the minus the sum I1 + I2 comes out far too large and the verification fails for no physical reason. The sign is data here: it says the branch's current runs against the assumed positive direction."
+      },
+      {
+        "q": "The procedure and the data table disagree about which supply is stepped. What is the exam-safe statement?",
+        "options": [
+          "Both supplies are raised together in 3 V steps",
+          "One supply is held at 9 V while the other is raised in 3 V steps",
+          "Both supplies are held at 9 V throughout",
+          "The supplies are stepped alternately, one row each"
+        ],
+        "answerIndex": 1,
+        "concept": "The discrepancy between the stated procedure and the recorded data",
+        "why": "The procedure says raise E2 while the table holds E2 at 9 V and steps E1, so the safe wording keeps one fixed and one stepped without naming which. Saying both were raised contradicts both versions and cannot be defended from the sheet."
+      }
+    ]
+  }
+}

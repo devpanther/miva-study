@@ -1,0 +1,1279 @@
+{
+  "week": 3,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "Evaluate lim x→3 (2x³ − 5x).",
+        "options": [
+          "39",
+          "12",
+          "69",
+          "54"
+        ],
+        "answerIndex": 0,
+        "concept": "Direct substitution",
+        "why": "Substitute 3 straight in: 2(27) − 5(3) = 54 − 15 = 39, and because that is a well-defined number you are finished. The tempting 12 drops the coefficient 2 and computes 27 − 15; 54 forgets the −5x altogether; 69 subtracts a negative and adds instead."
+      },
+      {
+        "q": "For which of these does direct substitution fail?",
+        "options": [
+          "lim x→5 (x² − 25)/(x + 5)",
+          "lim x→0 (x² − 25)/(x − 5)",
+          "lim x→5 (x² − 25)/(x − 5)",
+          "lim x→5 (x − 5)/(x² + 25)"
+        ],
+        "answerIndex": 2,
+        "concept": "Spotting 0/0",
+        "why": "Only the third gives 0/0: top and bottom both vanish at x = 5. The first has the same numerator but 10 downstairs, so it is 0/10 = 0 — a finished answer, not a problem. Zero on top alone never stops you; zero on both does."
+      },
+      {
+        "q": "Evaluate lim x→−1 (x² + 5x + 4)/(x + 1).",
+        "options": [
+          "4",
+          "3",
+          "5",
+          "0"
+        ],
+        "answerIndex": 1,
+        "concept": "Factorization",
+        "why": "Substitution gives 0/0, so factor the top: x² + 5x + 4 = (x + 1)(x + 4). Cancel the (x + 1) and evaluate x + 4 at x = −1, giving 3. The tempting 5 substitutes +1 instead of −1 — the point being approached is negative, and losing that sign is the commonest slip here. 0 is the 0/0-must-be-zero error."
+      },
+      {
+        "q": "Evaluate lim x→2 (x³ − 8)/(x − 2).",
+        "options": [
+          "0",
+          "4",
+          "12",
+          "8"
+        ],
+        "answerIndex": 2,
+        "concept": "Difference of cubes",
+        "why": "x³ − 8 = (x − 2)(x² + 2x + 4), so after cancelling you evaluate 4 + 4 + 4 = 12; L'Hôpital gives 3x² = 12 as a free check. The tempting 4 comes from cancelling down to x² alone and losing the 2x + 4, and 0 is reading 0/0 as an answer."
+      },
+      {
+        "q": "In lim x→5 (1/x − 1/5)/(x − 5), what do you multiply numerator and denominator by first?",
+        "options": [
+          "5x",
+          "x − 5",
+          "√x + √5",
+          "5"
+        ],
+        "answerIndex": 0,
+        "concept": "Clearing a complex fraction",
+        "why": "5x is the common denominator of 1/x and 1/5, and multiplying by it clears both small fractions in one stroke, leaving (5 − x)/[5x(x − 5)]. The conjugate √x + √5 is the move for a square root, and there is no root here; multiplying by 5 alone leaves the 1/x untouched."
+      },
+      {
+        "q": "Evaluate lim x→2 (1/(x + 1) − 1/3)/(x − 2).",
+        "options": [
+          "1/9",
+          "−1/9",
+          "−1/3",
+          "−1/6"
+        ],
+        "answerIndex": 1,
+        "concept": "Complex fraction with the −1 rewrite",
+        "why": "Multiply through by 3(x + 1): the top becomes 3 − (x + 1) = 2 − x, giving (2 − x)/[3(x + 1)(x − 2)]. Rewrite 2 − x as −1(x − 2), cancel, and substitute: −1/[3(3)] = −1/9. Cancelling 2 − x against x − 2 directly gives +1/9 and loses the question."
+      },
+      {
+        "q": "Evaluate lim x→4 (4 − x)/(x² − 16).",
+        "options": [
+          "1/8",
+          "−1/4",
+          "0",
+          "−1/8"
+        ],
+        "answerIndex": 3,
+        "concept": "Factoring out −1",
+        "why": "Write 4 − x = −1(x − 4) and factor the bottom as (x − 4)(x + 4); the (x − 4) cancels, leaving −1/(x + 4) = −1/8. The tempting +1/8 is exactly what you get by cancelling 4 − x against x − 4 as though they were the same bracket — they differ by a factor of −1."
+      },
+      {
+        "q": "Evaluate lim x→0 (3 − √(9 − x))/x.",
+        "options": [
+          "1/6",
+          "−1/6",
+          "1/3",
+          "0"
+        ],
+        "answerIndex": 0,
+        "concept": "Rationalizing the numerator",
+        "why": "Multiply top and bottom by the conjugate 3 + √(9 − x): the numerator becomes 9 − (9 − x) = x, which cancels the x downstairs and leaves 1/(3 + √9) = 1/6. The trap is the order 3 − √(9 − x); read it backwards and you report −1/6."
+      },
+      {
+        "q": "Evaluate lim x→0 (eˣ − 1)/x.",
+        "options": [
+          "0",
+          "1",
+          "e",
+          "∞"
+        ],
+        "answerIndex": 1,
+        "concept": "L'Hôpital's Rule, one application",
+        "why": "Substitution gives 0/0, so differentiate top and bottom separately: eˣ over 1, which at x = 0 is 1. The tempting 0 reads the 0/0 as the answer, and e comes from substituting x = 1 somewhere instead of x = 0."
+      },
+      {
+        "q": "A student evaluates lim x→2 (x² + 1)/(x + 3) by differentiating top and bottom to get 2x/1 = 4. What is wrong?",
+        "options": [
+          "Nothing at all — the value 4 is the correct limit",
+          "He should have applied the quotient rule to it",
+          "The form is not indeterminate, so the rule fails",
+          "He stopped too early and must differentiate again"
+        ],
+        "answerIndex": 2,
+        "concept": "When L'Hôpital may be used",
+        "why": "Substituting 2 gives 5/5 = 1, a perfectly well-defined number, so there is no indeterminate form and L'Hôpital's Rule has no business here — used on a quotient that is not 0/0 or ∞/∞ it simply produces a wrong answer. The quotient rule is not the fix either; no differentiating at all is called for."
+      },
+      {
+        "q": "If lim x→3 f(x) = 1/4, what is lim x→3 1/f(x)?",
+        "options": [
+          "1/4",
+          "−4",
+          "0",
+          "4"
+        ],
+        "answerIndex": 3,
+        "concept": "Limit of a Reciprocal",
+        "why": "The Reciprocal property gives lim 1/f = 1/[lim f] = 1/(1/4) = 4, and its proviso lim f ≠ 0 is satisfied. The tempting 1/4 is just handing back the limit you were given — the property inverts it. Note the proviso sits on f itself, not on some separate denominator g."
+      },
+      {
+        "q": "If lim x→c f(x) = 7, what is lim x→c 5f(x)?",
+        "options": [
+          "7/5",
+          "12",
+          "35",
+          "5"
+        ],
+        "answerIndex": 2,
+        "concept": "Constant Multiple Rule",
+        "why": "The rule pulls the 5 outside the limit: 5 · lim f = 5 × 7 = 35, and you never need to know what f actually is. The tempting 12 adds the constant instead of multiplying by it, which is the Sum property applied to something that is not a sum."
+      },
+      {
+        "q": "You know lim x→c f(x) = 6 and lim x→c g(x) = 0. What does the Quotient property tell you about lim x→c f(x)/g(x)?",
+        "options": [
+          "Nothing — the property needs lim g ≠ 0",
+          "It is 0, because the denominator's limit is 0",
+          "It is 6, the limit of the numerator alone",
+          "It is infinite, by the Reciprocal property"
+        ],
+        "answerIndex": 0,
+        "concept": "The Quotient property's proviso",
+        "why": "The property is stated with an explicit proviso, lim x→c g(x) ≠ 0, and here that proviso fails, so the law says nothing at all and you must go back to algebra. The tempting 0 treats a vanishing denominator as forcing a zero answer, which is backwards — that is the one case the law was written to exclude."
+      },
+      {
+        "q": "You are told 2 − x ≤ g(x) ≤ 4 + x for every x near 0. What does the Squeeze Theorem give for lim x→0 g(x)?",
+        "options": [
+          "3, the average of the two bounds",
+          "2, which the lower bound approaches",
+          "4, which the upper bound approaches",
+          "Nothing — the bounding limits differ"
+        ],
+        "answerIndex": 3,
+        "concept": "Squeeze Theorem hypotheses",
+        "why": "The theorem only bites when the two outer limits are equal; here they are 2 and 4, so g sits in a band that never closes and no value is forced. The tempting 3 averages the bounds, but this is not an averaging rule — the sandwich has to collapse to a single number, as 5 − x³ and 5 + x³ both do at x = 0."
+      },
+      {
+        "q": "What does lim x→−∞ f(x) describe?",
+        "options": [
+          "The approach to a point c from the left",
+          "The behaviour of f far out to the left of the graph",
+          "The approach to a point c from the right",
+          "The value that f takes at the point x = 0"
+        ],
+        "answerIndex": 1,
+        "concept": "Limits at infinity vs one-sided limits",
+        "why": "x → −∞ is end behaviour: it asks what the graph does as you travel indefinitely far left, with no finite point involved. The tempting 'from the left' is a one-sided limit at a finite c, written lim x→c⁻ f(x). The deck's SUMMARY slide confuses the two, and you should not repeat it."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "A cell of emf 1.5 V has internal resistance 0.5 Ω. What is its terminal p.d. with nothing connected across it?",
+        "options": [
+          "1.5 V",
+          "1.0 V",
+          "0.75 V",
+          "0 V"
+        ],
+        "answerIndex": 0,
+        "concept": "ε = V when I = 0",
+        "why": "With no circuit there is no current, so the lost volts Ir are zero and V = ε − Ir = ε = 1.5 V. The tempting 1.0 V subtracts something for r anyway; r only costs you volts when current is actually being driven through it."
+      },
+      {
+        "q": "A rod of length 0.20 m slides at 4.0 m/s perpendicular to a field of 0.50 T. What is the motional emf?",
+        "options": [
+          "0.10 V",
+          "0.40 V",
+          "2.5 V",
+          "4.0 V"
+        ],
+        "answerIndex": 1,
+        "concept": "ε = Bvl",
+        "why": "ε = Bvl = 0.50 × 4.0 × 0.20 = 0.40 V. The tempting 0.10 V is Bl with the speed left out; all three quantities multiply, and T × m × (m/s) is exactly a volt, which is a quick way to check you have not divided by one of them."
+      },
+      {
+        "q": "A 50-turn coil has its flux fall from 0.040 Wb to 0.010 Wb in 0.50 s. What is the magnitude of the induced emf?",
+        "options": [
+          "0.060 V",
+          "1.5 V",
+          "3.0 V",
+          "0.030 V"
+        ],
+        "answerIndex": 2,
+        "concept": "Faraday's law with N turns",
+        "why": "ε = N·ΔΦ/Δt = 50 × 0.030/0.50 = 3.0 V, and the minus sign in Faraday's law is Lenz's law, dropped whenever a magnitude is asked for. The tempting 1.5 V is 50 × 0.030 with the division by the time forgotten; 0.060 V forgets the 50 turns instead."
+      },
+      {
+        "q": "A 2.0 μF capacitor is charged to 100 V. How much energy does it store?",
+        "options": [
+          "2.0 × 10⁻⁴ J",
+          "2.0 × 10⁻² J",
+          "1.0 × 10⁻⁴ J",
+          "1.0 × 10⁻² J"
+        ],
+        "answerIndex": 3,
+        "concept": "U = ½CV²",
+        "why": "U = ½CV² = ½ × 2.0 × 10⁻⁶ × (100)² = 1.0 × 10⁻² J. The tempting 2.0 × 10⁻² J is the same sum with the ½ dropped — the p.d. climbs from 0 to V as charge goes on, so it is the average ½V that does the work. The 10⁻⁴ answers come from failing to square V."
+      },
+      {
+        "q": "Electromotive force is work per unit charge. Which is its dimensional formula?",
+        "options": [
+          "M¹L²T⁻³I⁻¹",
+          "M¹L²T⁻²I⁻¹",
+          "M¹L¹T⁻²",
+          "M¹L²T⁻³I¹"
+        ],
+        "answerIndex": 0,
+        "concept": "Dimensions of emf",
+        "why": "Work is ML²T⁻² and charge is IT, so dividing gives ML²T⁻³I⁻¹ — the extra T⁻¹ and the I⁻¹ both come from the charge downstairs. The tempting ML²T⁻²I⁻¹ divides by current but forgets that charge is current × time. MLT⁻² is a newton, which is precisely what an emf is not."
+      },
+      {
+        "q": "In vacuum, what is the energy density of an electric field of 1000 V/m? (ε₀ = 8.85 × 10⁻¹² F/m)",
+        "options": [
+          "8.9 × 10⁻⁶ J/m³",
+          "4.4 × 10⁻⁶ J/m³",
+          "4.4 × 10⁻⁶ J",
+          "4.4 × 10⁻⁹ J/m³"
+        ],
+        "answerIndex": 1,
+        "concept": "u = ½ε₀E²",
+        "why": "u = ½ε₀E² = ½ × 8.85 × 10⁻¹² × 10⁶ = 4.4 × 10⁻⁶ J/m³. The trap is the unit: this expression is energy per cubic metre, so the same number labelled J is wrong until you multiply by the volume Ad. 8.9 × 10⁻⁶ is the identical sum with the ½ left out."
+      },
+      {
+        "q": "A charged capacitor is disconnected from its battery, then a dielectric of K = 3 is slid in. The p.d. across it",
+        "options": [
+          "rises to 3V",
+          "stays at V",
+          "falls to V/3",
+          "falls to V/9"
+        ],
+        "answerIndex": 2,
+        "concept": "Dielectric at constant charge",
+        "why": "Disconnected means Q is fixed; C becomes 3C, so V = Q/C falls to a third. 'Stays at V' is the constant-voltage case, which is what happens if the battery is left connected — and then Q and U rise by K instead. Always ask first whether the battery is still there."
+      },
+      {
+        "q": "Two 4 μF capacitors are joined in series. What is the equivalent capacitance?",
+        "options": [
+          "8 μF",
+          "4 μF",
+          "16 μF",
+          "2 μF"
+        ],
+        "answerIndex": 3,
+        "concept": "Series vs parallel capacitance",
+        "why": "In series the reciprocals add: 1/C = 1/4 + 1/4, so C = 2 μF — always less than the smallest capacitor in the chain. The tempting 8 μF is the parallel answer, where capacitances add directly, and that is exactly why parallel is the arrangement that stores the most energy at a fixed V."
+      },
+      {
+        "q": "The plate separation d of a parallel-plate capacitor is doubled, everything else unchanged. The capacitance",
+        "options": [
+          "halves",
+          "doubles",
+          "quadruples",
+          "is unchanged"
+        ],
+        "answerIndex": 0,
+        "concept": "C = ε₀A/d",
+        "why": "C = ε₀A/d, so d sits underneath and doubling it halves C. The tempting 'doubles' reads d the way A reads — but area is on top and separation is on the bottom, so the two pull in opposite directions."
+      },
+      {
+        "q": "In electrostatic equilibrium, the electric field inside a conductor is",
+        "options": [
+          "equal to the field just outside it",
+          "zero everywhere inside",
+          "the outside field divided by K",
+          "large, since the electrons are free"
+        ],
+        "answerIndex": 1,
+        "concept": "Zero field inside a conductor",
+        "why": "A conductor's free electrons rearrange until they exactly cancel any field inside, so the interior field is zero. The tempting 'divided by K' is what a dielectric does — its charges are bound, so polarisation only weakens the field, never cancels it. That is the whole difference between an insulator and a conductor."
+      },
+      {
+        "q": "A defibrillator capacitor stores 200 J and releases it in 4.0 ms. What is the average power delivered?",
+        "options": [
+          "8.0 × 10² W",
+          "50 W",
+          "5.0 × 10⁴ W",
+          "5.0 × 10⁷ W"
+        ],
+        "answerIndex": 2,
+        "concept": "Power from stored energy",
+        "why": "P = U/t = 200/(4.0 × 10⁻³) = 5.0 × 10⁴ W. The tempting 50 W is 200 divided by 4 with the milli- ignored. The point of the device is precisely this: a slow charge-up at modest power becomes an enormous power on release."
+      },
+      {
+        "q": "A capacitor's breakdown potential and a material's dielectric strength differ how?",
+        "options": [
+          "Breakdown potential is a property of the material",
+          "They are the same quantity under two names",
+          "Dielectric strength is measured in volts",
+          "One is in volts, the other in volts per metre"
+        ],
+        "answerIndex": 3,
+        "concept": "Breakdown potential vs dielectric strength",
+        "why": "The units settle it: V_max is a number of volts belonging to that capacitor's geometry, while dielectric strength is a field limit in V/m belonging to the material. The same plastic gives a different V_max in a thinner capacitor, because V = Ed."
+      },
+      {
+        "q": "A V–I graph for a cell has intercept 2.0 V on the V axis and gradient −0.40 V/A. What is the internal resistance?",
+        "options": [
+          "0.40 Ω",
+          "−0.40 Ω",
+          "2.0 Ω",
+          "5.0 Ω"
+        ],
+        "answerIndex": 0,
+        "concept": "Reading r from a V–I graph",
+        "why": "V = ε − rI, so the gradient is −r and r is its magnitude, 0.40 Ω; the intercept 2.0 V is ε, not r. The tempting −0.40 Ω copies the sign of the slope into the answer, but a resistance is never negative — the minus only records that V falls as I rises."
+      },
+      {
+        "q": "A cell of emf 6.0 V and internal resistance 0.50 Ω delivers 1.2 A. What is the terminal p.d.?",
+        "options": [
+          "6.6 V",
+          "5.4 V",
+          "6.0 V",
+          "0.60 V"
+        ],
+        "answerIndex": 1,
+        "concept": "Lost volts",
+        "why": "V = ε − Ir = 6.0 − 1.2 × 0.50 = 5.4 V, and the 0.60 V of lost volts is dissipated inside the cell itself. The tempting 6.6 V adds the lost volts instead of subtracting them — on load the terminal p.d. is always below the emf, never above it."
+      },
+      {
+        "q": "Why can an electromagnetic (magflow) flowmeter measure flow with no moving parts?",
+        "options": [
+          "The liquid's pressure drop is read by electrodes",
+          "The coils heat the liquid and the rise is timed",
+          "The moving conductive liquid induces a voltage",
+          "The magnetic field is deflected by the liquid"
+        ],
+        "answerIndex": 2,
+        "concept": "Faraday's law in a flowmeter",
+        "why": "The conductive liquid is the moving conductor: the coils supply B, and the voltage induced across it, read by the electrodes, is proportional to the average flow velocity, which the pipe dimensions turn into a volumetric rate. That is also why the meter fails on hydrocarbons and distilled water — they do not conduct."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "Computational approaches express solutions in a form a computer can run, drawing on which advances in computing?",
+        "options": [
+          "Algorithms, models and simulations",
+          "Networks, protocols and servers",
+          "Databases, queries and indexes",
+          "Compilers, interpreters and linkers"
+        ],
+        "answerIndex": 0,
+        "concept": "Definition of a computational approach",
+        "why": "The definition names algorithms, models and simulations as the advances being used. The other three lists are real computing ideas, but they are infrastructure for running a solution rather than machinery for expressing one — which is the test to apply."
+      },
+      {
+        "q": "Which is NOT one of the three factors weighed before a computational approach can be used?",
+        "options": [
+          "The problem must be clearly defined",
+          "The problem must be computable",
+          "The data requirements must be examined",
+          "The solution must beat a manual one on cost"
+        ],
+        "answerIndex": 3,
+        "concept": "The three factors",
+        "why": "The three are: clearly defined, computable, and data requirements examined. Cost never appears, which is what makes it the trap — it sounds like good sense, but this list is about whether the problem can be handled computationally at all, not whether doing so is worth the money."
+      },
+      {
+        "q": "Which of these is NOT one of the six computational methods of Lesson I?",
+        "options": [
+          "Problem recognition",
+          "Data mining",
+          "Pipelining",
+          "Brute force"
+        ],
+        "answerIndex": 3,
+        "concept": "Which lesson a method belongs to",
+        "why": "Lesson I's six are problem recognition, backtracking, data mining, performance testing, pipelining and visualisation. Brute force sits in Lesson II with divide and conquer, greedy, dynamic programming and hypothesis testing. Knowing which list a method belongs to is a realistic exam ask."
+      },
+      {
+        "q": "Optimising the power-cable layout of a building is given as reducing to which general problem?",
+        "options": [
+          "Finding the minimum spanning tree of a graph",
+          "Finding the shortest path between two nodes",
+          "Sorting a list of edges by their weight",
+          "Searching a binary tree for a leaf"
+        ],
+        "answerIndex": 0,
+        "concept": "Problem recognition and generalisation",
+        "why": "That is the deck's own illustration of problem recognition — exploring whether a problem reduces to a more general case, here the minimum spanning tree. Shortest path is the Dijkstra example and belongs to visualisation; the two swap easily because both are graph problems."
+      },
+      {
+        "q": "Backtracking algorithms most often move from one problem state to another using",
+        "options": [
+          "iteration over a fixed list",
+          "recursion",
+          "a lookup table of saved results",
+          "a randomised search"
+        ],
+        "answerIndex": 1,
+        "concept": "Backtracking mechanics",
+        "why": "Recursion is what the lesson names: the algorithm recurses forward through the options and retreats to a previous state when one is rejected. The saved-results answer describes dynamic programming, whose whole identity is storing sub-problem solutions so they need not be recomputed."
+      },
+      {
+        "q": "Using Dijkstra's algorithm to show the shortest path between two cities is the deck's example of",
+        "options": [
+          "data mining",
+          "pipelining",
+          "visualisation",
+          "divide and conquer"
+        ],
+        "answerIndex": 2,
+        "concept": "Visualisation",
+        "why": "Visualisation uses diagrams, graphs and images so that a person grasps the problem — the beneficiary is the human, not the computer. Data mining is the near neighbour: it also works on structure in data, but its purpose is extracting patterns for decisions or predictions, as in the music-ratings example."
+      },
+      {
+        "q": "Feeding a program deliberately erroneous data before release, to see how it copes, is",
+        "options": [
+          "hypothesis testing",
+          "problem recognition",
+          "backtracking",
+          "performance testing"
+        ],
+        "answerIndex": 3,
+        "concept": "Performance testing",
+        "why": "Performance testing checks a program or system against test scenarios and success criteria before release; stress testing under simulated real conditions is its other named example. Hypothesis testing is the trap because both contain 'testing', but that one evaluates a statement of prediction using a null hypothesis, significance level and p-value."
+      },
+      {
+        "q": "Divide and conquer can only work if the smaller parts are",
+        "options": [
+          "identical to one another in size",
+          "genuinely simpler than the whole problem",
+          "solved in a strictly fixed order",
+          "stored so they are not recomputed"
+        ],
+        "answerIndex": 1,
+        "concept": "The condition on divide and conquer",
+        "why": "The stated condition is that each small part must really be easier than the complex whole, with the second condition that combining their solutions costs less than solving the original outright. The saved-results option describes dynamic programming; the fixed-order option describes a pipeline, where each stage feeds the next."
+      },
+      {
+        "q": "Which statement contrasts a greedy algorithm with brute force correctly?",
+        "options": [
+          "Greedy tries all paths; brute force tries only one",
+          "Both try all paths, but greedy stops earlier",
+          "Greedy walks one best-looking path and can be wrong",
+          "Greedy guarantees an optimum; brute force does not"
+        ],
+        "answerIndex": 2,
+        "concept": "Greedy vs brute force",
+        "why": "Greedy commits to the locally best option at each stage and never revisits it, so it is fast but carries no guarantee; brute force goes through every possibility, so it is very slow but cannot miss. The last option inverts the guarantee — it is dynamic programming, not greedy, that guarantees an optimal solution when one exists."
+      },
+      {
+        "q": "Dynamic programming is described as mostly used for which kind of problem?",
+        "options": [
+          "Optimization — finding a minimum or maximum",
+          "Search — finding whether an item is present",
+          "Sorting — arranging items into order",
+          "Classification — assigning items to groups"
+        ],
+        "answerIndex": 0,
+        "concept": "What dynamic programming is for",
+        "why": "The lesson ties dynamic programming to optimization, where the task is to find a minimum or a maximum, and adds that it guarantees an optimal solution provided one exists. Sorting is divide-and-conquer territory, the home of Merge sort, which splits and merges rather than saving and reusing sub-results."
+      },
+      {
+        "q": "Merge sort is the deck's worked example of which approach?",
+        "options": [
+          "Greedy algorithm",
+          "Divide and conquer",
+          "Dynamic programming",
+          "Backtracking"
+        ],
+        "answerIndex": 1,
+        "concept": "Placing Merge sort",
+        "why": "Merge sort splits the set into smaller, genuinely easier parts and then combines their solutions — the divide-and-conquer shape exactly. Dynamic programming is the near neighbour, with the Fibonacci series as its example; the difference is that Merge sort never meets the same sub-problem twice, so there is nothing worth saving."
+      },
+      {
+        "q": "In this lesson, a hypothesis is",
+        "options": [
+          "a conclusion drawn once the data is in",
+          "a rule for deciding when to stop searching",
+          "a specific statement of prediction, testable",
+          "a measure of how likely the null hypothesis is"
+        ],
+        "answerIndex": 2,
+        "concept": "Definition of a hypothesis",
+        "why": "A hypothesis is a tentative, intelligent guess — a specific statement of prediction describing in concrete terms what you expect to happen, and capable of being proved right or wrong. The last option is the p-value, a number between 0 and 1 produced by the data, not a statement made before it."
+      },
+      {
+        "q": "For the hypothesis 'the new drug shortens recovery time', the null hypothesis is that",
+        "options": [
+          "the new drug shortens recovery time greatly",
+          "recovery time cannot be measured reliably",
+          "the new drug lengthens recovery time",
+          "the new drug does not shorten recovery time"
+        ],
+        "answerIndex": 3,
+        "concept": "Forming the null hypothesis",
+        "why": "The null is always the assumption of no difference — here, that the drug makes no difference to recovery time, framed exactly as the deck's medicine-and-heart-arrest example is. The 'lengthens' option states the opposite claim rather than the absence of one, and testing it would be testing a different hypothesis altogether."
+      },
+      {
+        "q": "Which of these is fixed in advance rather than produced by the experiment?",
+        "options": [
+          "The p-value",
+          "The significance level",
+          "The sample outcome",
+          "The test statistic"
+        ],
+        "answerIndex": 1,
+        "concept": "Significance level vs p-value",
+        "why": "The significance level is chosen before the data arrives and states the risk you accept of rejecting a true null hypothesis — 0.05 means a 5% risk. The p-value is the one that comes out of the data, describing how likely it is that the null is true; if it emerged from the experiment, it is not the significance level."
+      },
+      {
+        "q": "A test at significance level 0.05 returns a p-value of 0.03. What follows?",
+        "options": [
+          "Accept the null hypothesis",
+          "The result is inconclusive",
+          "Reject the null hypothesis",
+          "The effect is proved to exist"
+        ],
+        "answerIndex": 2,
+        "concept": "The decision rule",
+        "why": "The rule is p ≤ significance level → reject the null, and 0.03 ≤ 0.05. The last option is the trap: rejecting only says the evidence against the null was strong enough at that level, never that the effect is proved — the 5% risk of a false rejection is built into the level you chose."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "What is the purpose of `<!DOCTYPE html>` on the first line of a page?",
+        "options": [
+          "It tells the browser which HTML version is used",
+          "It links the page to its stylesheet file",
+          "It marks the start of the visible content",
+          "It sets the character encoding of the page"
+        ],
+        "answerIndex": 0,
+        "concept": "The doctype declaration",
+        "why": "The doctype declares the HTML version so the browser renders the page correctly, and for HTML5 it is exactly `<!DOCTYPE html>`. Character encoding is the job of `<meta charset=\"UTF-8\">` inside `<head>`, and stylesheets are attached with `<link>` — both come after the doctype, not instead of it."
+      },
+      {
+        "q": "Which element is the root element that contains all the others?",
+        "options": [
+          "`<body>`",
+          "`<html>`",
+          "`<head>`",
+          "`<main>`"
+        ],
+        "answerIndex": 1,
+        "concept": "Document structure",
+        "why": "`<html>` wraps the whole document, with `<head>` and `<body>` as its two children. `<body>` is tempting because it holds everything you can see, but the head sits outside it — meta-information is still part of the document, and still under `<html>`."
+      },
+      {
+        "q": "Which of these is a visible semantic element placed inside `<body>`?",
+        "options": [
+          "`<meta>`",
+          "`<title>`",
+          "`<header>`",
+          "`<link>`"
+        ],
+        "answerIndex": 2,
+        "concept": "head vs header",
+        "why": "`<header>` is one of the semantic elements — with `<nav>`, `<main>`, `<article>`, `<section>` and `<footer>` — and it renders on the page. It is a letter away from `<head>`, which holds meta-information and shows nothing; `<title>` also lives in the head and appears only in the browser's title bar."
+      },
+      {
+        "q": "In `<a href=\"about.html\">Our team</a>`, which part is the anchor text?",
+        "options": [
+          "href",
+          "about.html",
+          "the whole `<a>` element",
+          "Our team"
+        ],
+        "answerIndex": 3,
+        "concept": "Anchor text",
+        "why": "Anchor text is the visible, clickable part that tells the reader where the link goes — here, 'Our team'. `about.html` is the URL, carried by the `href` attribute. Best practice is to make the anchor text describe the destination rather than say 'click here'."
+      },
+      {
+        "q": "What does `target=\"_blank\"` do on a link?",
+        "options": [
+          "Opens the link with no styling applied",
+          "Leaves the destination URL empty",
+          "Opens the link in a new tab or window",
+          "Loads the link after the page finishes"
+        ],
+        "answerIndex": 2,
+        "concept": "The target attribute",
+        "why": "`target=\"_blank\"` sends the destination to a new tab or window instead of replacing the current page. The 'empty' reading comes from the word blank, but the attribute names a browsing context to open in, not the content of the link."
+      },
+      {
+        "q": "A same-page link `<a href=\"#contact\">` needs what on the element it jumps to?",
+        "options": [
+          "A `name` attribute",
+          "An `id` attribute",
+          "A `href` attribute",
+          "A `target` attribute"
+        ],
+        "answerIndex": 1,
+        "concept": "Same-page anchors",
+        "why": "The fragment `#contact` matches an `id` on the target element, as in `<h2 id=\"contact\">`. `name` is what identifies a field's data when a form is submitted, a different job entirely; `href` belongs on the link itself, never on its destination."
+      },
+      {
+        "q": "What is the `alt` attribute of `<img>` for?",
+        "options": [
+          "It supplies alternative text for the image",
+          "It names the file the browser should load",
+          "It sets the width the image is drawn at",
+          "It gives the image a caption below it"
+        ],
+        "answerIndex": 0,
+        "concept": "img attributes",
+        "why": "`alt` provides alternative text, which is what a screen reader announces and what shows if the file fails to load — one of the accessibility practices named this week. The file itself is named by `src`; `alt` never points at anything on disk."
+      },
+      {
+        "q": "Which HTTP method appends form data to the URL as query parameters?",
+        "options": [
+          "POST",
+          "PUT",
+          "SEND",
+          "GET"
+        ],
+        "answerIndex": 3,
+        "concept": "GET vs POST",
+        "why": "GET puts the data in the URL, which is why it suits search forms and simple retrieval — if you can read the values in the address bar, it was a GET. POST sends the data in the request body instead, which is what you want for a password or for anything large."
+      },
+      {
+        "q": "Which input lets the user pick exactly one option from mutually exclusive choices?",
+        "options": [
+          "`<input type=\"radio\">`",
+          "`<input type=\"checkbox\">`",
+          "`<input type=\"text\">`",
+          "`<input type=\"file\">`"
+        ],
+        "answerIndex": 0,
+        "concept": "Radio vs checkbox",
+        "why": "Radio buttons are the mutually exclusive control: sharing one `name`, only one of them can be chosen. Checkboxes are the trap — they allow one or more, so they belong to the 'select all that apply' case rather than a single choice."
+      },
+      {
+        "q": "What is the difference between `maxlength` and `max`?",
+        "options": [
+          "`maxlength` caps a value, `max` caps characters",
+          "`maxlength` caps characters, `max` caps a value",
+          "They are the same attribute under two names",
+          "`maxlength` is for files, `max` for text"
+        ],
+        "answerIndex": 1,
+        "concept": "maxlength vs max",
+        "why": "`maxlength` limits how many characters may be typed into a text input; `max` limits the value a numeric input may hold. Getting them the wrong way round is the classic slip, and the giveaway is the word length — it counts characters, never their size."
+      },
+      {
+        "q": "What does `<input type=\"text\" pattern=\"[0-9]{5}\">` require?",
+        "options": [
+          "Any text at least five characters long",
+          "Between zero and nine characters",
+          "Exactly five digits",
+          "Five characters, digits or letters"
+        ],
+        "answerIndex": 2,
+        "concept": "The pattern attribute",
+        "why": "`pattern` takes a regular expression, and `[0-9]{5}` means five characters each drawn from the digits 0 to 9 — the deck's own five-digit example. The 'zero to nine characters' reading treats `[0-9]` as a length range, but it is the set of allowed characters and `{5}` is the count."
+      },
+      {
+        "q": "Inside a `<tr>`, which element is a header cell?",
+        "options": [
+          "`<td>`",
+          "`<table>`",
+          "`<dt>`",
+          "`<th>`"
+        ],
+        "answerIndex": 3,
+        "concept": "th vs td",
+        "why": "`<th>` is the table header cell and `<td>` the ordinary data cell, both sitting inside a `<tr>` row. `<dt>` is the near-miss from the other list — it is the term in a definition list `<dl>`, and has nothing to do with tables."
+      },
+      {
+        "q": "Which pair of elements produces a numbered list?",
+        "options": [
+          "`<ul>` with `<li>` items",
+          "`<ol>` with `<li>` items",
+          "`<dl>` with `<dd>` items",
+          "`<ol>` with `<dt>` items"
+        ],
+        "answerIndex": 1,
+        "concept": "ol vs ul",
+        "why": "`<ol>` is the ordered — numbered — list and `<ul>` the unordered, bulleted one; both take `<li>` items, so it is the container that decides the markers. Definition lists are a separate structure, pairing `<dt>` terms with `<dd>` definitions."
+      },
+      {
+        "q": "Which element is an inline container for styling a few words inside a line?",
+        "options": [
+          "`<span>`",
+          "`<div>`",
+          "`<section>`",
+          "`<p>`"
+        ],
+        "answerIndex": 0,
+        "concept": "div vs span",
+        "why": "`<span>` is the inline container, meant for a fragment inside a larger element. `<div>` is the block-level equivalent, for grouping a whole chunk of the page for layout — the test is whether you are wrapping part of a line or part of the page."
+      },
+      {
+        "q": "Which attribute identifies an input's value when the form is submitted?",
+        "options": [
+          "`id`",
+          "`value`",
+          "`name`",
+          "`placeholder`"
+        ],
+        "answerIndex": 2,
+        "concept": "name vs id",
+        "why": "`name` is the key the data is sent under; without it the field's value never reaches the server. `id` is a unique identifier used within the page, typically to tie a `<label for=\"...\">` to its control — useful, but not what travels with the submission."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "Which ship design is named as the Portuguese vessel of the 15th-century explorations?",
+        "options": [
+          "The galleon",
+          "The frigate",
+          "The clipper",
+          "The caravel"
+        ],
+        "answerIndex": 3,
+        "concept": "Portuguese seafaring technology",
+        "why": "The caravel is the vessel named, standing for the improved seafaring techniques and ship designs that made coastal exploration possible. The other three are real European ship types from later periods, which is what makes them tempting — only the caravel belongs to this 15th-century story."
+      },
+      {
+        "q": "For roughly how long is Portugal said to have dominated world trade?",
+        "options": [
+          "Nearly 200 years",
+          "Nearly 300 years",
+          "Nearly 100 years",
+          "Nearly 400 years"
+        ],
+        "answerIndex": 0,
+        "concept": "Portuguese dominance of world trade",
+        "why": "Nearly 200 years, on the strength of its seafaring advances and its access to fabrics, spices and gold. The 300-year figure is Curtin's, and it belongs to the span of the trans-Atlantic slave trade itself — two different spans describing two different things."
+      },
+      {
+        "q": "How many Africans are said to have been sold and transported to the Americas?",
+        "options": [
+          "Over 5 million",
+          "Over 15 million",
+          "Over 7 million",
+          "Over 25 million"
+        ],
+        "answerIndex": 1,
+        "concept": "15 million vs 7 million",
+        "why": "Over 15 million reached the Americas. The 7 million figure is Lovejoy's and counts those who died in transit, not those who arrived — the two numbers describe opposite ends of the same voyage and are constantly swapped."
+      },
+      {
+        "q": "Who called the trade 'the largest intercontinental migration in western History'?",
+        "options": [
+          "Walter Rodney",
+          "Paul Lovejoy",
+          "Phillip Curtin",
+          "Wole Soyinka"
+        ],
+        "answerIndex": 2,
+        "concept": "The named authorities",
+        "why": "Curtin, who adds that it spanned 300 years. Lovejoy is the deaths-in-transit and community-relocation authority; Soyinka, with Rodney, supplies the 'twin evils of slavery and colonialism' line about African underdevelopment."
+      },
+      {
+        "q": "In the triangular trade, what role is assigned to the Europeans?",
+        "options": [
+          "The source of the captives",
+          "The destination of the captives",
+          "The suppliers of the plantation crops",
+          "The organisers of the trade"
+        ],
+        "answerIndex": 3,
+        "concept": "The triangular trade",
+        "why": "The three roles are Africa as source, the Americas as destination and the Europeans as organisers, the sea leg being the Atlantic or Middle Passage. Reading Europe as the destination is the common slip — Europeans ran the route without being the endpoint of the human cargo."
+      },
+      {
+        "q": "The Asiento was whose system for granting the right to trade slaves in the New World?",
+        "options": [
+          "Spanish",
+          "Portuguese",
+          "Dutch",
+          "British"
+        ],
+        "answerIndex": 0,
+        "concept": "The Asiento",
+        "why": "It was the Spanish licence, which later became transferable so that other Europeans — the Portuguese included — could obtain it. Portugal is the trap, because the Portuguese were the chief slave traders in West Africa before 1600; but the licence they sometimes bought was Spain's to grant."
+      },
+      {
+        "q": "How did the Pope divide the Old World between the two crowns?",
+        "options": [
+          "Africa to Spain, the Americas to Portugal",
+          "Africa to Portugal, the Americas to Spain",
+          "West Africa to Portugal, East Africa to Spain",
+          "The Americas to both, Africa to neither"
+        ],
+        "answerIndex": 1,
+        "concept": "The papal division",
+        "why": "Africa was ceded to Portugal and the Americas to Spain. The reversed version is the one to guard against, and Columbus is the giveaway: the Americas he reached became the Spanish half, while the Portuguese were already working the African coast."
+      },
+      {
+        "q": "Which nation joined the Portuguese as a leading slave-trading power in the 17th century?",
+        "options": [
+          "The French",
+          "The British",
+          "The Dutch",
+          "The Spanish"
+        ],
+        "answerIndex": 2,
+        "concept": "Sequence of dominant slaving nations",
+        "why": "The Dutch in the 17th century; the British came next and were the biggest traders of the 18th. Portuguese → Dutch → British is the spine of this strand, and slotting the British in a century early is the usual error."
+      },
+      {
+        "q": "What share of all slaves taken from Africa did British ships carry in the 18th century?",
+        "options": [
+          "About a tenth",
+          "About a quarter",
+          "About a third",
+          "More than half"
+        ],
+        "answerIndex": 3,
+        "concept": "British share of the trade",
+        "why": "More than half, which is what makes the British the biggest traders of that century. Biggest is not first, though: the Portuguese hold the 'first European power to run a regular slave trade' claim, and the two superlatives are often welded into one wrong sentence."
+      },
+      {
+        "q": "How long did the Middle Passage take?",
+        "options": [
+          "5 to 8 weeks",
+          "2 to 3 weeks",
+          "3 to 6 months",
+          "8 to 12 weeks"
+        ],
+        "answerIndex": 0,
+        "concept": "The Middle Passage",
+        "why": "5 to 8 weeks, with each captive allotted a space of 6 ft × 1 ft × 4 inches on ships carrying between 451 and 600 people. The diseases named for the crossing are smallpox, dysentery and ophthalmia."
+      },
+      {
+        "q": "From what year did the British begin seizing slave ships, and where were those aboard taken?",
+        "options": [
+          "1833, to Liberia",
+          "1792, to Sierra Leone",
+          "1833, to Sierra Leone",
+          "1792, to Lagos"
+        ],
+        "answerIndex": 1,
+        "concept": "1792 vs 1833",
+        "why": "Seizures began in 1792 and the ships were taken to Sierra Leone. 1833 is the other date in this pair — the year Buxton sponsored the abolition bill — so the trap is to attach the earlier action to the later, better-known year."
+      },
+      {
+        "q": "Whose 1849 appointment 'for the purpose of control and supervision' begins Britain's direct influence in Nigeria?",
+        "options": [
+          "Consul Hewett",
+          "Sir Ralph Moor",
+          "Beecroft",
+          "Macgregor Laird"
+        ],
+        "answerIndex": 2,
+        "concept": "Beecroft, 1849",
+        "why": "Beecroft, in 1849. Hewett belongs to 1884 and his job was the treaty-making tour supporting the NAC; Moor became Consul of the Oil River Protectorate in 1891 and counts as a cause of the Royal Niger Company's decline — three men, three dates, three different functions."
+      },
+      {
+        "q": "In which year was Lagos annexed?",
+        "options": [
+          "1861",
+          "1851",
+          "1852",
+          "1884"
+        ],
+        "answerIndex": 0,
+        "concept": "1851 vs 1852 vs 1861",
+        "why": "1861 — the same year as Macgregor Laird's death. 1851 is the treaty offered to Kosoko, his refusal and the bombardment that restored Akitoye on 29 December; 1852 is the separate treaty on the protection of British traders, the right to trade, storage facilities and duties."
+      },
+      {
+        "q": "The Oil River Protectorate, set up in 1884 with seven districts, was renamed what, and when?",
+        "options": [
+          "The Southern Protectorate, in 1886",
+          "The Niger Coast Protectorate, in 1893",
+          "The Niger Coast Protectorate, in 1886",
+          "The Royal Niger Protectorate, in 1893"
+        ],
+        "answerIndex": 1,
+        "concept": "Oil River vs Niger Coast Protectorate",
+        "why": "Same body, renamed the Niger Coast Protectorate in 1893. 1886 belongs to a different event entirely — the Royal Charter that turned the National African Company into the Royal Niger Company — and mixing the dates merges two separate institutions."
+      },
+      {
+        "q": "Which raid led to the Kirk Commission of Enquiry and, eventually, the revocation of the RNC's charter?",
+        "options": [
+          "The raid on Opobo by the Bonny people",
+          "The raid on Onitsha by the Delta chiefs",
+          "The raid on Akassa by the Brass people",
+          "The raid on Epe by Kosoko's followers"
+        ],
+        "answerIndex": 2,
+        "concept": "Decline of the Royal Niger Company",
+        "why": "The Brass people's raid on Akassa, one of the two unrelated blows of 1895 — the other being Joseph Chamberlain's appointment as Colonial Secretary. Kosoko and Epe belong forty years earlier, to the Lagos succession feud, not to company rule."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "For a group of words to count as a sentence, it must contain",
+        "options": [
+          "a subject and a predicate",
+          "at least two clauses",
+          "a conjunction and a verb",
+          "a subject and an object"
+        ],
+        "answerIndex": 0,
+        "concept": "Definition of a sentence",
+        "why": "The definition asks for a complete thought carried by a noun or pronoun as subject and a verb as predicate — 'I danced at the party' has both. An object is optional; plenty of complete sentences have none, and a single clause is quite enough."
+      },
+      {
+        "q": "A sentence is described as an aspect of which part of language?",
+        "options": [
+          "Morphology",
+          "Syntax",
+          "Phonology",
+          "Semantics"
+        ],
+        "answerIndex": 1,
+        "concept": "Sentence and syntax",
+        "why": "Syntax — the arrangement of words into structures — and syntax is in turn an aspect of language. Semantics is the tempting neighbour because sentences carry meaning, but this definition is about how the parts are put together, not about what they mean."
+      },
+      {
+        "q": "'Adaeze and Femi washed the car.' What structural type is this?",
+        "options": [
+          "Compound",
+          "Complex",
+          "Simple",
+          "Compound-complex"
+        ],
+        "answerIndex": 2,
+        "concept": "Simple vs compound",
+        "why": "Two subjects sharing one verb is still a single independent clause, so it is simple. It looks compound because of the 'and', but a compound sentence needs two clauses that could each stand alone — 'Femi washed the car' can, 'Adaeze' cannot."
+      },
+      {
+        "q": "'Amaka missed the bus; she still arrived early.' What structural type is this?",
+        "options": [
+          "Simple",
+          "Complex",
+          "Compound-complex",
+          "Compound"
+        ],
+        "answerIndex": 3,
+        "concept": "The semicolon in a compound sentence",
+        "why": "Two independent clauses joined by a semicolon is compound — the semicolon does the same work as a coordinating conjunction. It is not complex, because neither half depends on the other; both could stand alone as sentences."
+      },
+      {
+        "q": "'Although it was raining, we went for a walk.' What structural type is this?",
+        "options": [
+          "Complex",
+          "Compound",
+          "Simple",
+          "Compound-complex"
+        ],
+        "answerIndex": 0,
+        "concept": "Compound vs complex",
+        "why": "'Although it was raining' cannot stand alone, so it is a dependent clause attached to one independent clause — complex. Compound is the trap because there are two clauses, but compound demands that both of them be independent."
+      },
+      {
+        "q": "Which conjunction makes the clause it introduces dependent?",
+        "options": [
+          "but",
+          "so",
+          "because",
+          "or"
+        ],
+        "answerIndex": 2,
+        "concept": "Coordinating vs subordinating conjunctions",
+        "why": "'Because' is a subordinating conjunction — with although, while and since — and the clause it opens can no longer stand alone, giving a complex sentence. But, so and or are coordinating: they join equals, and give a compound sentence instead."
+      },
+      {
+        "q": "Moving a subordinate clause from the end of a sentence to the front",
+        "options": [
+          "turns a complex sentence into a compound one",
+          "changes the function but not the structure",
+          "makes the sentence compound-complex",
+          "leaves the structural label unchanged"
+        ],
+        "answerIndex": 3,
+        "concept": "Clause position is free",
+        "why": "Clause position is free: 'Jane squeaked loudly, while the surgeon cracked her ankle' and the same clause moved to the front or wedged into the middle are all complex. The label is decided by counting the clauses and their independence, never by where they sit."
+      },
+      {
+        "q": "'Where did you keep the attendance sheet?' What functional type is this?",
+        "options": [
+          "Declarative",
+          "Imperative",
+          "Exclamatory",
+          "Interrogative"
+        ],
+        "answerIndex": 3,
+        "concept": "Functional types",
+        "why": "It asks for information and opens with a question word, so it is interrogative, and the question mark makes this one of the easy discriminations. The harder pair is imperative against declarative, where there is no punctuation to help you."
+      },
+      {
+        "q": "Beyond the four main functional types, which category does the lesson add?",
+        "options": [
+          "Conditional ('if') sentences",
+          "Rhetorical questions",
+          "Passive sentences",
+          "Reported speech"
+        ],
+        "answerIndex": 0,
+        "concept": "The fifth functional category",
+        "why": "Conditional sentences are named as a fifth, additional category: they state a condition and its likely result, and are used for hypothetical situations. They are easy to confuse with interrogatives, since both can sound tentative, but a conditional closes with a full stop rather than a question mark."
+      },
+      {
+        "q": "In 'She has been waiting under the shed', the word 'has' is",
+        "options": [
+          "a content word, because it is a verb",
+          "a function word, because it is an auxiliary",
+          "a content word, because it carries tense",
+          "a function word, because it is a preposition"
+        ],
+        "answerIndex": 1,
+        "concept": "Auxiliaries are function words",
+        "why": "Auxiliary or helping verbs are function words however verb-like they look; only main, lexical verbs count as content words. The same trap runs with pronouns — 'she' points at a person and is still a function word, because the work it does is grammatical."
+      },
+      {
+        "q": "Pennebaker's figure for function words is that they",
+        "options": [
+          "are a tenth of both vocabulary and use",
+          "are under 0.1% of vocabulary but 60% of use",
+          "are about 60% of vocabulary and 60% of use",
+          "are about 6% of vocabulary and 10% of use"
+        ],
+        "answerIndex": 1,
+        "concept": "Pennebaker's statistic",
+        "why": "Fewer than one-tenth of one percent of your vocabulary, yet almost 60 percent of the words you actually use — a tiny closed set doing enormous work. The point of the figure is the gap between the two percentages, so any option that makes them similar has missed it."
+      },
+      {
+        "q": "Concord is defined as",
+        "options": [
+          "the ordering of clauses within a sentence",
+          "the choice between formal and informal register",
+          "the rules governing agreement between elements",
+          "the pattern of stress across a spoken sentence"
+        ],
+        "answerIndex": 2,
+        "concept": "Definition of concord",
+        "why": "Concord is the set of rules governing agreement between the different elements of a sentence, ensuring coherence and building credibility. Its fundamental rule is subject-verb agreement; stress patterns are a separate matter, belonging to the content-versus-function word distinction."
+      },
+      {
+        "q": "'The invigilators ___ the register.' Which form does subject-verb agreement require?",
+        "options": [
+          "check",
+          "checks",
+          "is checking",
+          "has checked"
+        ],
+        "answerIndex": 0,
+        "concept": "Subject-verb agreement",
+        "why": "The subject is plural, so the verb takes its plural form — 'the invigilators check', against 'the invigilator checks'. The trap is that the English plural verb is the one without the -s, so the form that looks singular is the one you need."
+      },
+      {
+        "q": "Which is one of the five tips given for creating compound-complex sentences?",
+        "options": [
+          "Shortening every clause you write",
+          "Relative clauses",
+          "Avoiding subordination altogether",
+          "Using only full stops"
+        ],
+        "answerIndex": 1,
+        "concept": "The five tips",
+        "why": "The five are relative clauses, parenthesis, context clues, punctuation such as the semicolon and hyphen, and details and explanations — every one of them a way of adding clauses rather than stripping them out. Avoiding subordination would make a compound-complex sentence impossible, since it needs a dependent clause."
+      },
+      {
+        "q": "'Although it was raining, we went for a walk.' Which labels does this sentence carry?",
+        "options": [
+          "Complex only — function does not apply",
+          "Declarative in structure, complex in function",
+          "Complex in structure, declarative in function",
+          "Compound in structure, imperative in function"
+        ],
+        "answerIndex": 2,
+        "concept": "Structure label vs function label",
+        "why": "Every sentence carries a structural label and a functional label at once: this one is complex by structure and declarative by function. The reversed option is the trap — simple, compound, complex and compound-complex are structure names, declarative, imperative, interrogative and exclamatory are function names, so never answer one question with the other's vocabulary."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "Joule's law, as used in this experiment, states that",
+        "options": [
+          "P = I²R",
+          "P = IR²",
+          "P = I²/R",
+          "P = V²R"
+        ],
+        "answerIndex": 0,
+        "concept": "Joule's law",
+        "why": "P = I²R: the power dissipated as heat goes with the square of the current and with the resistance. P = IR² squares the wrong quantity, and that matters here, because it is the squaring of I that makes the P against I² plot a straight line at all."
+      },
+      {
+        "q": "Who formulated Ohm's law, and in what year?",
+        "options": [
+          "James Joule, in 1841",
+          "Georg Simon Ohm, in 1827",
+          "Georg Simon Ohm, in 1872",
+          "Michael Faraday, in 1827"
+        ],
+        "answerIndex": 1,
+        "concept": "Attribution of Ohm's law",
+        "why": "Georg Simon Ohm, a German physicist, in 1827. The 1872 option reverses the last two digits, and Joule belongs to the other law in this practical — the heating relation P = I²R that the straight-line graph is there to verify."
+      },
+      {
+        "q": "What is the stated aim of this experiment?",
+        "options": [
+          "To measure the resistivity of tungsten wire",
+          "To find the internal resistance of the supply",
+          "To compare tungsten and iron at a fixed voltage",
+          "To study the non-linear I–V relation of a non-ohmic resistor"
+        ],
+        "answerIndex": 3,
+        "concept": "Aim of the practical",
+        "why": "The aim is to study the non-linear relationship between current and voltage in a non-ohmic resistor — the bending of the curve is the result, not a nuisance. Resistivity is never computed here; what does come out of the analysis is R, from the gradient of P against I²."
+      },
+      {
+        "q": "Which two conductor materials can be selected in the simulation?",
+        "options": [
+          "Copper and tungsten",
+          "Tungsten and iron",
+          "Iron and nichrome",
+          "Copper and iron"
+        ],
+        "answerIndex": 1,
+        "concept": "Apparatus",
+        "why": "Tungsten and iron are the two entries on the drop-down list, alongside the voltmeter, ammeter and DC power supply. Copper is the tempting extra because it is the everyday conductor, but it is not in this apparatus list — and readings from the two materials must never be mixed on one graph."
+      },
+      {
+        "q": "How is the power P obtained from each recorded pair of readings?",
+        "options": [
+          "P = I²R, with R measured separately",
+          "P = V²/I",
+          "P = IV",
+          "P = V/I"
+        ],
+        "answerIndex": 2,
+        "concept": "P = IV vs P = I²R",
+        "why": "You record V and I, so P = IV is the computation, and I² is worked out alongside it. P = I²R is the relation being verified by the straight-line plot, not the route to the numbers — using it to compute P would assume the very thing the experiment sets out to test."
+      },
+      {
+        "q": "On the P against I² graph, what should the intercept be, and what does a clearly non-zero one mean?",
+        "options": [
+          "It should equal R; a non-zero one is expected",
+          "It should be zero; a non-zero one signals systematic error",
+          "It should be zero; a non-zero one proves it is ohmic",
+          "It should equal 1/R; a non-zero one means a bad scale"
+        ],
+        "answerIndex": 1,
+        "concept": "Intercept of the P–I² plot",
+        "why": "Comparing P = R·I² with y = mx + c gives c = 0, because zero current dissipates zero power, so a line missing the origin points at a systematic error. R is the gradient, not the intercept — that is the swap to guard against on this particular plot."
+      },
+      {
+        "q": "On the I against V curve, the slope at any point equals",
+        "options": [
+          "R at that point",
+          "P at that point",
+          "1/R at that point",
+          "I²R at that point"
+        ],
+        "answerIndex": 2,
+        "concept": "Slope of the I–V curve",
+        "why": "With I up the vertical axis and V along the horizontal, the slope is I/V, which is 1/R. The trap is that on a V against I graph the slope really is R — the same physical situation reads in opposite ways depending on which quantity you plotted where."
+      },
+      {
+        "q": "Why are thermistors used for temperature sensing in ovens and engine management?",
+        "options": [
+          "Their resistance is constant over a wide range",
+          "They dissipate almost no power as waste heat",
+          "They obey Ohm's law more exactly than metals",
+          "Their non-linear response measures change precisely"
+        ],
+        "answerIndex": 3,
+        "concept": "Uses of non-ohmic devices",
+        "why": "It is exactly the non-linearity that makes them useful: a strong, non-linear response to temperature gives precise measurement of temperature change across a range. A constant resistance would make the device useless as a sensor, because it would have nothing to report."
+      },
+      {
+        "q": "What happens once all the data have been recorded?",
+        "options": [
+          "The experiment ends and an Excel sheet downloads",
+          "The supply resets to 0.1 V for a second run",
+          "The graphs are drawn automatically on screen",
+          "The material selection switches to the other conductor"
+        ],
+        "answerIndex": 0,
+        "concept": "End of the procedure",
+        "why": "The run ends by itself and the saved data arrives as a downloaded Excel sheet, which is where you then compute I² and P = IV. The graphs are your own work afterwards, not something the simulation hands you finished."
+      },
+      {
+        "q": "In the procedure, what comes immediately before clicking Record for the first time?",
+        "options": [
+          "Plotting the first recorded point on a graph",
+          "Adjusting the supply to a low voltage, say 0.1 V",
+          "Selecting the conductor material from the list",
+          "Inspecting the circuit connections carefully"
+        ],
+        "answerIndex": 1,
+        "concept": "Order of the procedure",
+        "why": "The order is inspect the connections, select the material, set the voltage low, then Record. Inspecting and selecting are both earlier steps, so the one immediately before the first Record is setting the voltage — and Record is only ever clicked after the voltage has been adjusted."
+      },
+      {
+        "q": "Why should you let each reading settle after changing the voltage?",
+        "options": [
+          "The ammeter needs time to zero itself",
+          "The supply voltage drifts upward at first",
+          "The filament temperature, and so R, must stabilise",
+          "The Excel sheet writes one value per second"
+        ],
+        "answerIndex": 2,
+        "concept": "Precaution: settling time",
+        "why": "Self-heating is the effect under study: just after a change of voltage the filament's temperature is still moving, and R moves with it, so a reading taken too early belongs to no particular temperature. A drifting supply is a genuine separate source of error, but it is not what the settling time is for."
+      },
+      {
+        "q": "Which of these is a listed source of error in this experiment?",
+        "options": [
+          "Rounding values when transferring to the spreadsheet",
+          "Reading the meter scales squarely each time",
+          "Keeping one material for a complete data set",
+          "Starting at 0.1 V rather than at a high voltage"
+        ],
+        "answerIndex": 0,
+        "concept": "Sources of error vs precautions",
+        "why": "Rounding on transfer is listed with parallax and misreading of scales among the sources of error. The other three are precautions — things you do to protect the data — so this question turns on telling the two lists apart, and a precaution stated correctly can never itself be the error."
+      },
+      {
+        "q": "As a tungsten filament gets hotter, its resistance",
+        "options": [
+          "falls, as it does in metals generally",
+          "stays constant, since tungsten is ohmic",
+          "falls, in the same way a thermistor's does",
+          "rises, as it does in metals generally"
+        ],
+        "answerIndex": 3,
+        "concept": "Temperature coefficient of a metal",
+        "why": "Tungsten is a metal, so heating raises its resistance, and that is why a lamp filament's I–V curve bends over at high current. A thermistor or semiconductor typically behaves the opposite way, which is the confusion the third option is built on."
+      },
+      {
+        "q": "Saying a device is non-ohmic means that",
+        "options": [
+          "it has no measurable resistance",
+          "it dissipates no heat",
+          "its resistance is not constant",
+          "it conducts only above a threshold voltage"
+        ],
+        "answerIndex": 2,
+        "concept": "Ohmic vs non-ohmic",
+        "why": "Non-ohmic means R changes — with voltage, current, temperature or light — so V/I is not a fixed ratio and the I–V graph is a curve rather than a straight line through the origin. It emphatically does not mean the device has no resistance; a tungsten filament has plenty."
+      },
+      {
+        "q": "A reading gives I = 0.25 A through a resistor of 12 Ω. What power is dissipated?",
+        "options": [
+          "0.75 W",
+          "3.0 W",
+          "9.0 W",
+          "0.063 W"
+        ],
+        "answerIndex": 0,
+        "concept": "Applying P = I²R",
+        "why": "P = I²R = (0.25)² × 12 = 0.0625 × 12 = 0.75 W. The tempting 3.0 W is IR with the current not squared, and squaring is the whole content of Joule's law — which is exactly why the straight-line plot uses I² and not I."
+      }
+    ]
+  }
+}

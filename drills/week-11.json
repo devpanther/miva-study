@@ -1,0 +1,754 @@
+{
+  "week": 11,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "The region under y = x, above the x-axis, from x = 0 to x = 2 is revolved about the x-axis. By discs the volume is",
+        "options": ["8π/3 cubic units", "2π cubic units", "16π/3 cubic units", "4π/3 cubic units"],
+        "answerIndex": 0,
+        "concept": "disc method about the x-axis",
+        "why": "The radius is R(x) = x, so V = π∫₀² x²dx = π[x³/3]₀² = 8π/3. The tempting 2π comes from forgetting to square and integrating π∫x dx; 16π/3 is what you get if you reach for the shell formula 2π∫x·x dx on a setup that is plainly a disc."
+      },
+      {
+        "q": "The region bounded by x = y², the y-axis, and the lines y = 0 and y = 2 is revolved about the y-axis. The volume is",
+        "options": ["8π/3", "16π/5", "32π/5", "64π/5"],
+        "answerIndex": 2,
+        "concept": "disc method in y",
+        "why": "The axis is the y-axis, so you integrate dy with R(y) = y²: V = π∫₀² (y²)²dy = π[y⁵/5]₀² = 32π/5. The 8π/3 is the classic missed square, π∫₀² y²dy, which computes nothing."
+      },
+      {
+        "q": "By the shell method, the region under y = x from x = 0 to x = 3 revolved about the y-axis has volume",
+        "options": ["9π", "18π", "27π", "36π"],
+        "answerIndex": 1,
+        "concept": "shell method about the y-axis",
+        "why": "Radius x, height f(x) = x, so V = 2π∫₀³ x·x dx = 2π[x³/3]₀³ = 18π. If you drop the 2 and write π∫x²dx you land on 9π — that is the disc constant on a shell integral."
+      },
+      {
+        "q": "The region between the line y = 2 above and the line y = x below, from x = 0 to x = 2, is revolved about the x-axis. The volume is",
+        "options": ["4π/3", "8π/3", "32π/3", "16π/3"],
+        "answerIndex": 3,
+        "concept": "washer method, squares subtract",
+        "why": "R(x) = 2 and r(x) = x, so V = π∫₀² (4 − x²)dx = π(8 − 8/3) = 16π/3. The 8π/3 is exactly what π∫₀² (2 − x)²dx gives — the (R − r)² error, which is always the smaller number."
+      },
+      {
+        "q": "Which of the lecturer's three formulas has no square anywhere in its integrand?",
+        "options": ["The disc formula", "The washer formula", "All three, once the radius is expanded", "The shell formula"],
+        "answerIndex": 3,
+        "concept": "shell integrand is radius × height",
+        "why": "The shell integrand is 2π·x·f(x) — radius times height, both to the first power, because you are unrolling a cylinder of circumference 2πx. Disc and washer square their radii because πR² is the area of a circle; the pull to square in the shell formula is the commonest slip of the week."
+      },
+      {
+        "q": "The disc and washer integrals carry a factor π. The shell integral carries a factor of",
+        "options": ["π", "2π", "π/2", "4π"],
+        "answerIndex": 1,
+        "concept": "π versus 2π",
+        "why": "The π on the disc and washer is the area of a circle; the 2π on the shell is the circumference of the unrolled cylindrical shell. Losing the 2 turns Shell Example 1 from 16π/5 into 8π/5."
+      },
+      {
+        "q": "The region under y = x from x = 0 to x = 1 is revolved about the line y = −2. The outer radius R(x) is",
+        "options": ["x − 2", "x + 2", "2 − x", "x"],
+        "answerIndex": 1,
+        "concept": "radius when the axis has moved",
+        "why": "Every radius is a distance from the axis, so R(x) = x − (−2) = x + 2. Answering x is treating the axis as still the x-axis; subtract the axis first and square afterwards, never the other way round."
+      },
+      {
+        "q": "At one point of a washer the outer radius is 3 and the inner radius is 1. The correct factor R² − r², and the value the common error (R − r)² gives, are",
+        "options": ["8 and 4", "4 and 8", "8 and 2", "10 and 4"],
+        "answerIndex": 0,
+        "concept": "R² − r² is not (R − r)²",
+        "why": "R² − r² = 9 − 1 = 8, while (R − r)² = 2² = 4. The washer is an annulus, so its two circle areas subtract; the radii themselves never do, and squaring the difference always understates the volume."
+      },
+      {
+        "q": "Rotating about the y-axis the region between y = 2x and y = x², the height of the shell at position x is",
+        "options": ["x² − 2x", "x(2x − x²)", "2x + x²", "2x − x²"],
+        "answerIndex": 3,
+        "concept": "shell height as a difference of boundaries",
+        "why": "On the interval between the two intersections the line lies above the parabola, so the strip runs from x² up to 2x and its height is 2x − x². The option x(2x − x²) is the whole integrand, radius times height — height alone is what the question asks for."
+      },
+      {
+        "q": "The parabola x = y² + 4 meets the line x = 8 at",
+        "options": ["y = ±2", "y = ±4", "y = ±2√2", "y = 2 only"],
+        "answerIndex": 0,
+        "concept": "limits come from solving, not from looking",
+        "why": "Set y² + 4 = 8, so y² = 4 and y = ±2. Answering y = 2 only drops the branch below the axis, which is how a volume ends up exactly halved; y = ±2√2 comes from solving y² = 8 and forgetting to subtract the 4."
+      },
+      {
+        "q": "For a region described by x = f(y) and revolved about the y-axis, the disc formula reads",
+        "options": ["V = π∫ₐᵇ R(y) dy", "V = 2π∫ₐᵇ y f(y) dy", "V = π∫ₐᵇ [R(y)]² dy", "V = π∫ₐᵇ ([R(y)]² − [r(y)]²) dy"],
+        "answerIndex": 2,
+        "concept": "disc formula stated in y",
+        "why": "The disc formula in y is the mirror of the one in x: same π, same square, dy instead of dx. Option 3 is the washer, which you only reach for when the solid has a hollow spot; option 1 is the shell."
+      },
+      {
+        "q": "In the lecturer's four-step procedure, the boundaries of the solid are determined at",
+        "options": ["step 1, with the sketch and the axis", "step 2, with the cross-section", "step 3, after the formula is chosen", "step 4, while integrating"],
+        "answerIndex": 2,
+        "concept": "the four-step procedure",
+        "why": "Her order is: sketch and find the axis, sketch the cross-section and pick the formula, determine the boundaries, then set up and integrate. Step 1 is tempting because the sketch is where you see the boundaries — but the deck has you fix the formula before you fix the limits."
+      },
+      {
+        "q": "The region under y = 3 − x, above the x-axis, from x = 0 to x = 3 is revolved about the x-axis. The volume is",
+        "options": ["3π", "9π/2", "27π", "9π"],
+        "answerIndex": 3,
+        "concept": "disc method with a linear radius",
+        "why": "V = π∫₀³ (3 − x)²dx = π[−(3 − x)³/3]₀³ = 9π, the same reversed chain rule she uses in Disc Example 1. The 9π/2 is π∫₀³ (3 − x)dx — a plain area scaled by π, with the square left off."
+      },
+      {
+        "q": "A horizontal strip at height y runs from the curve x = y² across to the line x = 4. Rotating that region (0 ≤ y ≤ 2) about the x-axis by shells gives",
+        "options": ["4π", "8π", "16π", "32π/5"],
+        "answerIndex": 1,
+        "concept": "shells about the x-axis, integrating in y",
+        "why": "Horizontal strips: radius y, height 4 − y², y from 0 to 2, so V = 2π∫₀² (4y − y³)dy = 2π[2y² − y⁴/4]₀² = 8π. The 4π is the same integral with the 2 dropped."
+      },
+      {
+        "q": "For y = x² on [0, 1] revolved about the x-axis, a student writes π∫₀¹ x²dx. That gives",
+        "options": ["π/3 when the answer is π/5", "π/5 when the answer is π/3", "π/3 when the answer is π/4", "π/2 when the answer is π/5"],
+        "answerIndex": 0,
+        "concept": "forgetting to square the radius",
+        "why": "The disc integrand is [R(x)]² = (x²)² = x⁴, giving π/5; the student integrated the radius itself and got π/3. π∫f(x)dx is not the volume of anything — it is an area with a π stuck on the front."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "The weber, the unit of magnetic flux, is equivalent to",
+        "options": ["T/m²", "T·m", "V/s", "T·m²"],
+        "answerIndex": 3,
+        "concept": "units of flux",
+        "why": "Flux is field times area, so Wb = T·m², and since ε = dΦ/dt in volts, Wb is also V·s. V/s is the same relation written upside down — it is Wb per second that gives volts, not volts per second that gives webers."
+      },
+      {
+        "q": "The same total flux change is made to happen twice as slowly in the same circuit. The charge that circulates",
+        "options": ["halves", "doubles", "is unchanged", "falls to a quarter"],
+        "answerIndex": 2,
+        "concept": "charge depends only on ΔΦ and R",
+        "why": "q = N|ΔΦ|/R contains no time at all: the current halves but flows for twice as long, so the product is fixed. Halving is what you get if you think of q as following the current, which is the quantity that actually changed."
+      },
+      {
+        "q": "A generator coil turns at 20 revolutions per second. The value of ω to put into ε_peak = NBAω is about",
+        "options": ["20 rad/s", "126 rad/s", "40 rad/s", "3.2 rad/s"],
+        "answerIndex": 1,
+        "concept": "ω versus f",
+        "why": "ω = 2πf = 2π(20) = 126 rad/s. Using 20 directly costs you a factor of 6.28 in every emf you calculate; 3.2 is f/2π, the same mistake inverted."
+      },
+      {
+        "q": "The field through a 400-turn coil of area 2.5 × 10⁻³ m² changes at 0.50 T/s, the coil's normal lying along the field. The induced emf is",
+        "options": ["0.50 V", "0.20 V", "1.25 V", "5.0 V"],
+        "answerIndex": 0,
+        "concept": "emf from a changing B",
+        "why": "The normal lying along B means θ = 0 and cos θ = 1, so |ε| = NA(dB/dt) = 400 × 2.5 × 10⁻³ × 0.50 = 0.50 V. Read that clause carefully: normal along the field is the same situation as plane perpendicular to the field, and it is maximum flux, not zero."
+      },
+      {
+        "q": "A rod 0.40 m long slides at 5.0 m/s perpendicular to a 0.20 T field. The motional emf is",
+        "options": ["0.10 V", "2.5 V", "4.0 V", "0.40 V"],
+        "answerIndex": 3,
+        "concept": "motional emf ε = BLv",
+        "why": "ε = BLv = 0.20 × 0.40 × 5.0 = 0.40 V. The three quantities simply multiply — 2.5 and 4.0 come from dividing by one of them instead, which is the shape of the current formula BLv/R, not the emf."
+      },
+      {
+        "q": "A rod on rails is kept at the same steady speed, but the circuit resistance is doubled. The retarding force on the rod",
+        "options": ["doubles", "halves", "is unchanged", "falls to a quarter"],
+        "answerIndex": 1,
+        "concept": "retarding force F = B²L²v/R",
+        "why": "The emf is untouched by R, but the current it drives halves, and the force is BIL, so the force halves too. Answering unchanged treats the force as coming from the emf directly — it comes from the current, which is where R enters."
+      },
+      {
+        "q": "The north pole of a bar magnet is pushed towards a closed loop. The face of the loop nearer the magnet behaves as",
+        "options": ["a north pole, so it repels the magnet", "a south pole, so it attracts the magnet", "no pole at all, since flux is constant", "a south pole, so it repels the magnet"],
+        "answerIndex": 0,
+        "concept": "Lenz's law as a mechanical opposition",
+        "why": "Flux towards the loop is increasing, so the induced field inside must oppose the increase, which puts a north face towards the incoming north pole and pushes back. Choosing attraction is the energy-violating case: the magnet would accelerate itself and the current would come from nowhere."
+      },
+      {
+        "q": "A flat loop of area 0.050 m² sits in a 0.40 T uniform field with its normal at 60° to the field. The flux is",
+        "options": ["0.020 Wb", "0.010 Wb", "0.017 Wb", "0.0 Wb"],
+        "answerIndex": 1,
+        "concept": "Φ = BA cos θ with θ from the normal",
+        "why": "Φ = BA cos θ = 0.40 × 0.050 × cos 60° = 0.010 Wb. The 0.017 Wb is what you get from sin 60°, which is the answer to a different question — the one where 60° is the angle to the plane rather than to the normal."
+      },
+      {
+        "q": "Which change on its own induces no emf in a loop?",
+        "options": ["Rotating the loop about a diameter in a steady field", "Stretching the loop so its enclosed area grows", "Increasing the strength of the field through the loop", "Sliding the loop sideways within a large uniform field"],
+        "answerIndex": 3,
+        "concept": "the three ways flux can change",
+        "why": "Flux changes when B, A or θ changes; sliding a loop inside a uniform field alters none of the three, so dΦ/dt = 0. The other three options are exactly the three mechanisms, and each gives an emf on its own."
+      },
+      {
+        "q": "A generator's peak emf is 100 V. Its rms emf is about",
+        "options": ["141 V", "50 V", "100 V", "70.7 V"],
+        "answerIndex": 3,
+        "concept": "ε_rms = ε_peak/√2",
+        "why": "ε_rms = 100/√2 = 70.7 V. The 141 V is 100 × √2 — the same factor applied the wrong way; rms is always the smaller of the two, since it is an effective value averaged over the cycle."
+      },
+      {
+        "q": "In ε = NBAω sin(ωt), the emf first reaches its peak when ωt equals",
+        "options": ["0°", "45°", "90°", "180°"],
+        "answerIndex": 2,
+        "concept": "emf tracks the slope of the flux",
+        "why": "sin(ωt) is 1 at 90°, which is the instant the flux Φ = BA cos(ωt) passes through zero and is changing fastest. Picking 0° is picking the moment of maximum flux, where the cosine is flat and the emf is zero."
+      },
+      {
+        "q": "The flux through a single loop falls from 0.20 Wb to 0.05 Wb in 0.30 s. The average emf is",
+        "options": ["0.05 V", "0.15 V", "0.50 V", "0.83 V"],
+        "answerIndex": 2,
+        "concept": "average emf N|ΔΦ|/Δt",
+        "why": "|ε_av| = |ΔΦ|/Δt = 0.15/0.30 = 0.50 V. The 0.15 V is the flux change itself, not divided by the time; 0.83 V uses the final-to-initial difference of 0.25 that is not there."
+      },
+      {
+        "q": "A rod on rails moves at a steady 3.0 m/s while 0.36 W is dissipated in the circuit. The force the hand must supply is",
+        "options": ["0.12 N", "1.08 N", "0.36 N", "3.0 N"],
+        "answerIndex": 0,
+        "concept": "power balance in motional emf",
+        "why": "At constant speed the mechanical power in equals the electrical power out, so F = P/v = 0.36/3.0 = 0.12 N. The 1.08 N is P multiplied by v instead of divided — remember that P = Fv, so the speed sits underneath when you solve for force."
+      },
+      {
+        "q": "A loop of fixed area sits in a field of fixed magnitude but is being rotated. Which term of the expanded Faraday expression does the work?",
+        "options": ["A cos θ · dB/dt", "B cos θ · dA/dt", "−B A sin θ · dθ/dt", "N A B cos θ"],
+        "answerIndex": 2,
+        "concept": "which term of the expansion is alive",
+        "why": "With B and A both constant only the angle varies, so only the dθ/dt term survives — and it is the term that produces the sinusoidal generator output. The last option is the flux itself, not a rate of change, and a flux alone never induces anything."
+      },
+      {
+        "q": "The flux through a coil rises steadily, in a straight line, with time. The induced emf is",
+        "options": ["zero, because the flux does not oscillate", "constant and non-zero", "rising steadily with the flux", "largest at the moment the flux is largest"],
+        "answerIndex": 1,
+        "concept": "emf is the slope of the flux",
+        "why": "A straight-line flux has a constant slope, so dΦ/dt and the emf are constant. The last two options are the standard confusion of the flux with its rate of change: a big flux and a big emf are unrelated quantities."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "Cohesion, in the deck's definition, measures",
+        "options": ["how far a module depends on other modules before it can work", "how far the functions inside one module work towards the module's aim", "how many functions a module exposes to its callers", "how much of a module's data is hidden from other modules"],
+        "answerIndex": 1,
+        "concept": "cohesion",
+        "why": "Cohesion looks inside a single module and asks whether its functions serve one ultimate aim; you want it high. The first option is the definition of coupling — the two are stated in almost identical words in the deck, and swapping them is the most reliable way to lose the mark."
+      },
+      {
+        "q": "A good modular design is described as having",
+        "options": ["low cohesion and high coupling", "high cohesion and high coupling", "low cohesion and low coupling", "high cohesion and low coupling"],
+        "answerIndex": 3,
+        "concept": "the two measures of module independence",
+        "why": "High cohesion means each module has one clear job; low coupling means it can do that job without leaning on others. Both are measures of the same goal, module independence, which is why they always move in opposite directions in the answer."
+      },
+      {
+        "q": "Which change counts as refactoring under the deck's definition?",
+        "options": ["Splitting a four-job component into four cohesive ones, outputs unchanged", "Adding a caching layer so the same function returns in half the time", "Extending the function so it can also export to PDF", "Changing the value the function returns when the network times out"],
+        "answerIndex": 0,
+        "concept": "refactoring",
+        "why": "Refactoring improves the internal structure while leaving external behaviour untouched — the deck's own worked example is exactly the four-way split. The caching option is the tempting one because nothing visible changes except speed, but the definition covers structure, not performance, and speed is an external property."
+      },
+      {
+        "q": "A team says modularisation lets them share out the writing of a 20,000-line program. In the deck's lists, that claim sits under",
+        "options": ["the benefits of information hiding", "the disadvantages of modularisation", "the advantages of modularisation", "the benefits of structural partitioning"],
+        "answerIndex": 2,
+        "concept": "advantages of modularisation",
+        "why": "Writing a large program with several different people heads the advantages list, alongside easier management, understanding and reuse. Information hiding's benefits are about controlled interfaces and limiting the effects of change, and partitioning's are about testing, maintenance and extension — three separate lists that are easy to pool by mistake."
+      },
+      {
+        "q": "Structural partitioning, as the deck presents it, applies only when the architectural style is",
+        "options": ["hierarchical", "object-oriented", "event-driven", "layered"],
+        "answerIndex": 0,
+        "concept": "when partitioning applies",
+        "why": "Horizontal and vertical partitioning both assume a hierarchy — a top with control modules and a bottom with workers — so the deck restricts the idea to hierarchical architectures. Layered is the tempting near-miss, since a hierarchy does look like layers, but it is not the word the deck uses."
+      },
+      {
+        "q": "In bottom-up design, what increases as you move to each higher level?",
+        "options": ["the number of language-specific idioms", "the coupling between modules", "the amount of detail expressed", "the amount of abstraction"],
+        "answerIndex": 3,
+        "concept": "bottom-up design",
+        "why": "The deck's phrase is that with each higher level the amount of abstraction is increased — you compose primitives into larger components and say less about how each works. Detail is the mirror of abstraction and moves the other way, which is why it reads plausibly and is wrong."
+      },
+      {
+        "q": "Which of the three pattern levels is described as programming-language specific?",
+        "options": ["the architectural pattern", "the design pattern", "the idiom", "all three, once code is written"],
+        "answerIndex": 2,
+        "concept": "the three pattern levels",
+        "why": "The idiom is the low-level pattern, describing how a component is implemented and how components interact in one particular language — it is also called a coding pattern. Architectural and design patterns are language-independent, which is precisely why they sit above it."
+      },
+      {
+        "q": "The deck says a design pattern is often considered equivalent to",
+        "options": ["software architecture", "software components", "coding patterns", "the system's control modules"],
+        "answerIndex": 1,
+        "concept": "design pattern versus architectural pattern",
+        "why": "Design patterns refine the elements the architectural pattern defines and address component-to-component interaction, so the deck equates them with software components. Software architecture is the equivalent given for the architectural pattern, and coding patterns is the one given for idioms — all three pairings are stated, so learn them as a set."
+      },
+      {
+        "q": "Software architecture is defined as the structure of the system containing",
+        "options": ["its modules, its interfaces and its test plan", "its source files, its libraries and its build order", "its components, its language and its deployment target", "its components, their attributes and the relationships between them"],
+        "answerIndex": 3,
+        "concept": "definition of software architecture",
+        "why": "The definition has three parts: the components, the attributes or properties of those components, and the relationships between them. The attributes clause is the one students drop, and it is what lets engineers analyse the design rather than merely list its parts."
+      },
+      {
+        "q": "A student defines information hiding as putting data and the methods that act on it into one unit. By the deck's definition this is",
+        "options": ["the deck's own wording, so correct", "wrong — hiding is about inaccessibility, not bundling", "wrong — hiding is about how many modules exist", "correct, provided the module is also cohesive"],
+        "answerIndex": 1,
+        "concept": "information hiding is about access, not bundling",
+        "why": "Bundling data with its methods is encapsulation as most textbooks use the word, and the deck never says it — its definition is about what other modules may not reach. Answer inaccessibility and controlled interfaces, not togetherness."
+      },
+      {
+        "q": "Module Report cannot run until Auth, Cache and Format have each been called first. This reports",
+        "options": ["high cohesion, which is wanted", "low cohesion, which is not wanted", "high coupling, which is not wanted", "low coupling, which is wanted"],
+        "answerIndex": 2,
+        "concept": "diagnosing coupling",
+        "why": "Depending on other modules before you can perform your function is the deck's definition of coupling, and three such dependencies is a lot of it. Cohesion would be the diagnosis if Report were doing several unrelated jobs itself — here the trouble is entirely outside its own boundary."
+      },
+      {
+        "q": "In horizontal partitioning, the control modules exist to",
+        "options": ["make the decisions while worker modules do the computation", "communicate between the functions and execute them", "hide the data structures of each function from the others", "hold the constants that every function shares"],
+        "answerIndex": 1,
+        "concept": "horizontal partitioning",
+        "why": "Horizontal partitioning splits the system by function, with control modules communicating between those functions and executing them; the price is more data crossing the interfaces and a more complex control flow. The first option is vertical partitioning, where the split is top-down into deciders and workers."
+      },
+      {
+        "q": "The single responsibility principle, as the deck states it, says a module should",
+        "options": ["have one public function and any number of private ones", "belong to exactly one layer of the architecture", "have one responsibility and not depend on other modules", "be owned by one developer for its whole life"],
+        "answerIndex": 2,
+        "concept": "single responsibility principle",
+        "why": "The deck states both halves together: not more than a single responsibility, and no dependence on other modules — one clause about cohesion and one about coupling. Counting public functions is a different idea altogether; a module can have several functions and still hold one responsibility."
+      },
+      {
+        "q": "A 5,000-line program is split into fragments that still reach into each other's data. In the deck's terms this is",
+        "options": ["decomposition without real modularisation", "modularisation without decomposition", "refactoring, since behaviour is unchanged", "vertical partitioning of the program"],
+        "answerIndex": 0,
+        "concept": "decomposition versus modularisation",
+        "why": "You have broken the application apart, which is decomposition, but the pieces do not each have everything they need for their part, so they are not independent modules. Every modularisation involves decomposition; the converse fails exactly here, and the giveaway is the reaching into each other's data."
+      },
+      {
+        "q": "A software pattern is defined as a solution to a design problem that is",
+        "options": ["new, so no earlier solution can be reused", "language-specific, so it fits one compiler", "architectural, so it sits above the components", "recurring, so the solution can be used again and again"],
+        "answerIndex": 3,
+        "concept": "definition of a software pattern",
+        "why": "The whole point of a pattern is recurrence — the problem shows up repeatedly in some domain, so the solution can be applied again and again. Language-specificity belongs to one level of pattern, the idiom, and is not part of the general definition."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "Content Security Policy is named in the deck as a mitigation for",
+        "options": ["SQL injection", "cross-site scripting", "cross-site request forgery", "security misconfiguration"],
+        "answerIndex": 1,
+        "concept": "output encoding and CSP against XSS",
+        "why": "CSP sits under Output Encoding, and the vulnerability output encoding answers is XSS — a script injected into a page that other users then view. SQL injection is answered by input validation and parameterised queries, which is the pairing students most often slide CSP into."
+      },
+      {
+        "q": "Unique session tokens together with session expiration are given as the defence against",
+        "options": ["XSS", "SQLi", "CSRF", "command injection"],
+        "answerIndex": 2,
+        "concept": "session management against CSRF",
+        "why": "CSRF works by riding an existing authenticated session, so the fix is to make that session hard to ride: unique tokens and expiry. XSS is the neighbouring answer because both are browser-side attacks, but XSS is fixed by encoding what you output, not by managing sessions."
+      },
+      {
+        "q": "The deck's own example of security misconfiguration is",
+        "options": ["a login form that accepts OR 1=1 followed by a comment", "JavaScript pasted into a comment box", "database credentials stored in plaintext in a config file", "a link that silently changes a user's email"],
+        "answerIndex": 2,
+        "concept": "security misconfiguration",
+        "why": "Misconfiguration is an overlooked security setting that leaves data exposed, and the deck's example is plaintext database credentials in a config file. The other three are the examples for SQLi, XSS and CSRF respectively — each vulnerability in the deck carries exactly one example, so learn them paired."
+      },
+      {
+        "q": "Which pair are the security headers the deck names?",
+        "options": ["HSTS and X-Content-Type-Options", "CSP and CORS", "TLS and HSTS", "X-Frame-Options and CSP"],
+        "answerIndex": 0,
+        "concept": "security headers",
+        "why": "The Security Headers best practice names exactly HSTS and X-Content-Type-Options. CSP is real and does arrive by a header, but the deck files it under Output Encoding, not under Security Headers — the question is about which list it appears on."
+      },
+      {
+        "q": "Error handling, debugging tools and version control are grouped in the deck under which heading?",
+        "options": ["Monitoring", "Testing", "Continuous integration", "Debugging"],
+        "answerIndex": 3,
+        "concept": "debugging key concepts",
+        "why": "These three are the key concepts of debugging — fixing an identified defect, with Git there for rollback as well as collaboration. Monitoring is the neighbouring heading and owns a different trio, metrics, alerts and logging: it watches a live system rather than repairing a known fault."
+      },
+      {
+        "q": "A team moves its app onto a server with twice the CPU and twice the RAM, still running on one machine. This is",
+        "options": ["horizontal scaling", "load balancing", "caching", "vertical scaling"],
+        "answerIndex": 3,
+        "concept": "vertical scaling",
+        "why": "Vertical scaling, also called scaling up, makes the one server bigger; horizontal scaling would have added machines and put a load balancer in front. The still on one machine clause is what settles it — count the servers before you name the strategy."
+      },
+      {
+        "q": "Load balancing is credited with improving scalability and",
+        "options": ["fault tolerance", "encryption strength", "database indexing", "code quality"],
+        "answerIndex": 0,
+        "concept": "load balancing",
+        "why": "Spreading traffic means no single server is a bottleneck, and it also means one server failing does not take the site down — the deck names both benefits together. If you remember only the traffic-spreading half you will miss the fault-tolerance half, which is the part that gets asked."
+      },
+      {
+        "q": "Shared hosting's distinguishing trait, per the deck, is",
+        "options": ["complete control over the hardware", "the cheapest option, with limited performance and customisation", "one physical server partitioned into virtual servers with their own OS", "automatic scaling of resources"],
+        "answerIndex": 1,
+        "concept": "hosting options",
+        "why": "Many sites share one server's CPU and RAM, which makes it cheapest and caps both performance and customisation. Option 3 is the VPS — the difference is that a VPS gives each partition its own operating system, while shared hosting does not."
+      },
+      {
+        "q": "On-premises hosting is distinguished by",
+        "options": ["low cost and high elasticity", "many sites sharing one server's CPU and RAM", "resources billed by the hour", "complete control, with heavy infrastructure and maintenance"],
+        "answerIndex": 3,
+        "concept": "hosting options",
+        "why": "Keeping the servers in your own facility buys complete control and costs you the infrastructure and maintenance burden. Low cost and elasticity is the cloud's trait, and it is the one most often mis-assigned because both options are described as good in different ways."
+      },
+      {
+        "q": "Continuous integration is described as",
+        "options": ["building, testing and deploying automatically on each commit", "running penetration tests once at the end of each release cycle", "merging everyone's feature branches by hand every Friday", "distributing incoming traffic evenly across the servers"],
+        "answerIndex": 0,
+        "concept": "continuous integration",
+        "why": "CI hangs off the version-control commit: each change is built, tested and deployed automatically so problems surface early — Jenkins and Travis CI are the named tools. The Friday-merge option is the practice CI exists to replace, which is why it feels close."
+      },
+      {
+        "q": "Apache JMeter and Gatling are named as tools for",
+        "options": ["performance monitoring", "load testing", "continuous integration", "intrusion detection"],
+        "answerIndex": 1,
+        "concept": "tool categories",
+        "why": "The deck splits the tools three ways: New Relic and Datadog for performance monitoring, JMeter and Gatling for load testing, Jenkins and Travis CI for CI. Monitoring watches real traffic; load testing generates artificial traffic to see where the system breaks."
+      },
+      {
+        "q": "Database optimisation, in the deck, centres on",
+        "options": ["indexing the columns you query, to speed up SELECT", "storing the database on the CDN", "minifying the queries sent from the browser", "adding a second database server for redundancy"],
+        "answerIndex": 0,
+        "concept": "database optimisation",
+        "why": "The deck lists queries, indexing and data structures, with the concrete move being to index the columns you filter on so SELECT runs faster. Minifying belongs to front-end optimisation, where it applies to CSS and JavaScript, not to queries."
+      },
+      {
+        "q": "Deployment differs from hosting in that deployment is",
+        "options": ["providing the resources that make an app reachable", "monitoring the live system for anomalies", "setting up and configuring the servers themselves", "filtering HTTP requests before they reach the app"],
+        "answerIndex": 2,
+        "concept": "deployment versus hosting",
+        "why": "Deployment is the act of setting up and configuring hardware, software and network; hosting is providing the resources and infrastructure that make the application reachable on the internet. Option 1 is the definition of hosting, and the two are stated back to back in the deck for exactly this reason."
+      },
+      {
+        "q": "Encryption differs from hashing in that encryption is",
+        "options": ["one-way, and used for storing passwords", "reversible with a key, and protects data in transit", "only available over HTTP, not HTTPS", "applied to the database, never to the network"],
+        "answerIndex": 1,
+        "concept": "encryption versus hashing",
+        "why": "Encryption, as in SSL/TLS, can be undone by whoever holds the key, which is what makes it useful for data in transit; hashing is one-way and is what you store passwords with. Option 1 states the properties of hashing, so it is the exact swap."
+      },
+      {
+        "q": "DevSecOps, as the deck describes it, means",
+        "options": ["a separate security team auditing after release", "hard-coding credentials so deployments never fail", "scanning only the production servers for vulnerabilities", "security built into the DevOps pipeline rather than added afterwards"],
+        "answerIndex": 3,
+        "concept": "secure development practices",
+        "why": "The phrase the deck uses is that security belongs inside the DevOps pipeline, not as an afterthought. The post-release audit option is what DevSecOps is defined against, and hard-coded credentials are the specific thing Secure Coding forbids."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "Which figure is called the father of Nigerian nationalism?",
+        "options": ["Nnamdi Azikiwe", "Obafemi Awolowo", "Herbert Macaulay", "Gani Fawehinmi"],
+        "answerIndex": 2,
+        "concept": "Herbert Macaulay",
+        "why": "Macaulay (1864–1946) holds the title, on the strength of his 1920s protests and the first political party. Azikiwe is the trap because the deck calls him a leading figure of modern nationalism — leading figure of modern nationalism and father of nationalism are two different phrases attached to two different men."
+      },
+      {
+        "q": "The NNDP held sway until the late 1930s, when it joined which body to form the NCNC?",
+        "options": ["the Action Group", "the Nigerian Youth Movement", "the Zikist movement", "the People's Redemption Party"],
+        "answerIndex": 1,
+        "concept": "NNDP into NCNC",
+        "why": "The NNDP merged with the Nigerian Youth Movement to become the National Council of Nigeria and the Cameroons. The Action Group is Awolowo's party and belongs to the 1950s; the Zikist movement was inspired by Azikiwe but was a youth body, not a merger partner."
+      },
+      {
+        "q": "Obafemi Awolowo led which party?",
+        "options": ["the NCNC", "the NNDP", "the Northern People's Party", "the Action Group"],
+        "answerIndex": 3,
+        "concept": "Awolowo and the Action Group",
+        "why": "Awolowo led the Action Group and was leader of the opposition against the Balewa-led government, which the deck attributes to the Northern People's Party. That is why the Northern People's Party appears in his entry at all — as the party he opposed, not the one he led."
+      },
+      {
+        "q": "Awolowo's campaign for a federal constitution was realised in",
+        "options": ["the 1923 legislative council", "the 1954 Lyleton Constitution", "the 1960 independence settlement", "the 1963 republican constitution"],
+        "answerIndex": 1,
+        "concept": "the 1954 Lyleton Constitution",
+        "why": "1954 does double duty for Awolowo — the Lyleton Constitution and the start of his premiership of the Western Region. 1923 belongs to Macaulay and the NNDP, and 1963 is Azikiwe's hinge year, so neither can be attached to Awolowo."
+      },
+      {
+        "q": "Macaulay's protests of the 1920s were aimed at colonial policy on",
+        "options": ["water rates, land issues and railway finances", "school fees, tax collection and church land", "the police, the courts and the prisons", "import duties, port charges and shipping"],
+        "answerIndex": 0,
+        "concept": "Macaulay's 1920s protests",
+        "why": "The deck names exactly three grievances: water rates, land issues and the management of railway finances. The other lists are plausible colonial complaints but none of them appear, and this is a question where only the deck's own triple scores."
+      },
+      {
+        "q": "Funmilayo Ransome-Kuti is known by which title?",
+        "options": ["Mother of the Market", "Queen of Abeokuta", "Voice of the Women", "Lioness of Lisabi"],
+        "answerIndex": 3,
+        "concept": "Funmilayo Ransome-Kuti",
+        "why": "Lioness of Lisabi is the title the deck gives her. Mother of the Market is close to the truth of what she did — she mobilised market women — which is exactly what makes it the most tempting wrong answer, but it is not the name she is known by."
+      },
+      {
+        "q": "Which pairing of Funmilayo Ransome-Kuti's two dates is correct?",
+        "options": ["raid 13 Apr 1977, death 18 Feb 1978", "raid 18 Feb 1977, death 13 Apr 1978", "raid 18 Feb 1978, death 13 Apr 1978", "raid 13 Apr 1977, death 18 Feb 1977"],
+        "answerIndex": 1,
+        "concept": "the 1977 raid and the 1978 death",
+        "why": "The raid on Fela's Lagos residence was 18 February 1977; she died 13 April 1978, more than a year later. Her dates are 1900–1978, so the raid year is not the death year — swapping the two days between the two years is the standard trap."
+      },
+      {
+        "q": "Soyinka's 1967 imprisonment lasted",
+        "options": ["12 months", "18 months", "22 months", "33 months"],
+        "answerIndex": 2,
+        "concept": "Soyinka's imprisonment",
+        "why": "He was jailed in 1967 for 22 months for speaking out against the civil war. The 33 in the deck is his age at the time, not the length of the sentence, and it is placed close enough in the sentence to be misread as months."
+      },
+      {
+        "q": "Soyinka fled the country in 1994 after being charged with",
+        "options": ["sedition", "contempt of court", "fraud", "treason"],
+        "answerIndex": 3,
+        "concept": "Soyinka in 1994",
+        "why": "The military junta charged him with treason, and he fled. Keep his three dates apart: 1967 jailed, 1986 Nobel, 1994 fled — sedition is the softer charge that fits his 1967 outspokenness rather than the 1994 flight."
+      },
+      {
+        "q": "Things Fall Apart was published in",
+        "options": ["1948", "1958", "1968", "1978"],
+        "answerIndex": 1,
+        "concept": "Achebe",
+        "why": "1958, and the deck calls it the most widely read book in modern African literature. Achebe's other date is 1983, when he became deputy national vice president of the PRP — and note the deck credits no Nobel to him at all."
+      },
+      {
+        "q": "During the civil war Achebe headed",
+        "options": ["the Biafra Broadcasting Service", "the Nigerian Youth Movement", "the Federation of Nigerian Women's Societies", "the Zikist movement"],
+        "answerIndex": 0,
+        "concept": "Achebe and Biafra",
+        "why": "He supported the secessionist movement and headed the Biafra Broadcasting Service. The FNWS belongs to Funmilayo Ransome-Kuti and the 1953 Abeokuta conference, and the Zikist movement to Azikiwe — three organisations, three different owners."
+      },
+      {
+        "q": "In 1983 Achebe became deputy national vice president of",
+        "options": ["the NCNC", "the Action Group", "the People's Redemption Party", "the Northern People's Party"],
+        "answerIndex": 2,
+        "concept": "Achebe in politics",
+        "why": "He joined the left-leaning People's Redemption Party after the civil war and took that post in 1983. The NCNC and Action Group both belong to the earlier generation — Azikiwe and Awolowo — and by 1983 neither is the party in question."
+      },
+      {
+        "q": "Gani Fawehinmi pushed for the re-opening of the case of",
+        "options": ["Dele Giwa, killed by a parcel bomb in 1986", "Herbert Macaulay's railway finances inquiry", "the 1953 Abeokuta women's protest", "the 1994 treason charge against Soyinka"],
+        "answerIndex": 0,
+        "concept": "Gani Fawehinmi",
+        "why": "Dele Giwa was the magazine editor killed by a parcel bomb in 1986, and re-opening that case is what the deck credits to Gani. Keep his own dates straight: 1965 he began practising in Lagos, 1986 the Dele Giwa case, 2009 his death — and the 40 years of campaigning is a duration, not a date."
+      },
+      {
+        "q": "Fela Anikulapo-Kuti is credited with creating Afrobeat in",
+        "options": ["the late 1950s", "the mid 1960s", "the early 1970s", "the early 1980s"],
+        "answerIndex": 2,
+        "concept": "Fela and Afrobeat",
+        "why": "The deck says he created Afrobeat in the early 1970s and rose to prominence throughout that decade. His dates are 1938–1997, which he shares a birth year with Gani Fawehinmi — the two are separated by their deaths, 1997 and 2009."
+      },
+      {
+        "q": "The Zikist movement is described as",
+        "options": ["a coalition of northern emirs supporting the Balewa government", "a women's welfare federation founded in Abeokuta", "a group of writers who supported the Biafran cause", "a radical, multi-ethnic youth body against imperialism"],
+        "answerIndex": 3,
+        "concept": "the Zikist movement",
+        "why": "The deck describes it as radical, revolutionary, multi-ethnic and youth-based, ranged against imperialism, and inspired by Azikiwe. The Abeokuta option is the FNWS, which is genuinely a federation founded at a conference — but a women's welfare body, not a youth movement."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "The three techniques named in the learning objectives for enhancing active listening are",
+        "options": ["nodding, eye contact and verbal cues", "note-taking, minimising distractions and reflection", "empathy, patience and cultural awareness", "paraphrasing, summarising and asking clarifying questions"],
+        "answerIndex": 3,
+        "concept": "the three learning-objective techniques",
+        "why": "The objectives name paraphrasing, summarising and asking clarifying questions — three things you do with words. Nodding, eye contact and verbal cues are the behaviours listed under Active Listening in the case study, which is a different list serving a different purpose."
+      },
+      {
+        "q": "Which area of the importance of listening names trust and rapport?",
+        "options": ["Effective Communication", "Building Relationships", "Leadership Effectiveness", "Learning and Growth"],
+        "answerIndex": 1,
+        "concept": "Building Relationships",
+        "why": "Building Relationships is where feeling heard strengthens trust and rapport and demonstrates empathy. Leadership Effectiveness also mentions trust — trust and loyalty — but there it is an outcome for a leader, not the ordinary interpersonal effect."
+      },
+      {
+        "q": "Informed decisions, boosted morale and being seen as approachable belong to which area?",
+        "options": ["Building Relationships", "Conflict Resolution", "Leadership Effectiveness", "Effective Communication"],
+        "answerIndex": 2,
+        "concept": "Leadership Effectiveness",
+        "why": "These are the deck's stated outcomes for leaders who listen well. Effective Communication is the general mechanism — responding appropriately, asking relevant questions, giving thoughtful feedback — while this area lists what a leader specifically gains."
+      },
+      {
+        "q": "Absorbing information, gaining insights and acquiring new skills is the deck's account of",
+        "options": ["Effective Communication", "Avoiding Miscommunication", "Conflict Resolution", "Learning and Growth"],
+        "answerIndex": 3,
+        "concept": "Learning and Growth",
+        "why": "Learning and Growth is the area about gaining — knowledge, insight, skill — and it is the one the deck ties to collaborative environments and problem-solving. Avoiding Miscommunication is its mirror: that one is about preventing loss, not making gains."
+      },
+      {
+        "q": "Poor listening producing misunderstandings, misinterpretations and conflicts is the concern of",
+        "options": ["Conflict Resolution", "Avoiding Miscommunication", "Building Relationships", "Leadership Effectiveness"],
+        "answerIndex": 1,
+        "concept": "Avoiding Miscommunication",
+        "why": "This area is about what goes wrong when you do not listen, and the deck adds that miscommunication has serious personal and professional consequences. Conflict Resolution is tempting because conflict appears in both, but that area is about resolving conflict once it exists, through common ground and uninterrupted airing of concerns."
+      },
+      {
+        "q": "Responding appropriately, asking relevant questions and giving thoughtful feedback are listed under",
+        "options": ["Learning and Growth", "Building Relationships", "Effective Communication", "Leadership Effectiveness"],
+        "answerIndex": 2,
+        "concept": "Effective Communication",
+        "why": "Effective Communication is the first of the six areas and describes what good listeners are better equipped to do in the exchange itself. Building Relationships is about the emotional result — trust, rapport, empathy — rather than the mechanics of responding."
+      },
+      {
+        "q": "Paraphrasing and summarising differ in that paraphrasing",
+        "options": ["condenses the whole message into its main points", "restates a single point in your own words", "repeats the speaker's words exactly", "records the message in writing for later"],
+        "answerIndex": 1,
+        "concept": "paraphrasing versus summarising",
+        "why": "Paraphrasing restates a point in your own words; summarising condenses the whole. Repeating words exactly is neither — the point of paraphrasing is that the words change while the meaning survives, which is what shows you understood."
+      },
+      {
+        "q": "Full attention, eye contact, nodding and verbal cues describe which case-study heading?",
+        "options": ["Active Listening", "Nonverbal Communication", "Empathetic Listening", "Reflective Practice"],
+        "answerIndex": 0,
+        "concept": "Active Listening",
+        "why": "These four behaviours are the deck's description of Active Listening — demonstrating engagement to the speaker. Nonverbal Communication is the neighbouring heading and is about reading the speaker's body language, not about producing your own signals."
+      },
+      {
+        "q": "Attending to body language and facial expressions is the deck's",
+        "options": ["Cultural Awareness", "Empathetic Listening", "Nonverbal Communication", "Active Listening"],
+        "answerIndex": 2,
+        "concept": "Nonverbal Communication",
+        "why": "Nonverbal Communication is specifically about body language and facial expressions. Cultural Awareness is the heading for communication differences across cultures, so a scenario about a culture clash goes there even though the misread signals may well be nonverbal."
+      },
+      {
+        "q": "In the case study's practical strategies, which three replace active listening, nonverbal communication and empathetic listening?",
+        "options": ["note-taking, reflective practice and regular self-assessment", "clarifying questions, minimising distractions, avoiding prejudgment", "paraphrasing, summarising and systematic note-taking", "eye contact, nodding and encouraging verbal cues"],
+        "answerIndex": 1,
+        "concept": "two different lists of six",
+        "why": "Both lists have six items and both end in note-taking, which is why they blur. The practical-strategies list keeps paraphrasing, summarising and note-taking, and swaps in asking clarifying questions, minimising distractions and avoiding prejudgment."
+      },
+      {
+        "q": "Which is one of the six skills and competencies the lesson claims to build?",
+        "options": ["Conflict Resolution", "Public Speaking", "Selective Hearing", "Continuous Improvement"],
+        "answerIndex": 3,
+        "concept": "the six skills and competencies",
+        "why": "The six are Active Engagement, Critical Listening, Cultural Competence, Note-Taking Mastery, Empathetic Communication and Continuous Improvement. Conflict Resolution is on a different list of six — the importance-of-listening areas — which is what makes it the strongest distractor here."
+      },
+      {
+        "q": "Listening is called a foundational skill that underpins",
+        "options": ["grammar, vocabulary and correct pronunciation", "reading speed and fluency in writing", "communication, relationships and personal growth", "memory, attention span and accurate recall"],
+        "answerIndex": 2,
+        "concept": "listening as a foundational skill",
+        "why": "The deck's closing claim names communication, relationships and personal growth — three things, in that order. The language-skills options are plausible for a Communication in English course but belong to a different part of the syllabus entirely."
+      },
+      {
+        "q": "In academics, effective listening is said to be crucial for",
+        "options": ["choosing the right course of study at the outset", "reducing the number of lectures you need to attend", "memorising lecture definitions word for word", "understanding content, instructions and key concepts"],
+        "answerIndex": 3,
+        "concept": "listening in academics",
+        "why": "The three named uses are understanding content, following instructions and grasping complex or key concepts, which the deck links to better academic performance. Memorising word for word is the opposite of what is claimed — the emphasis is on comprehension of intricate detail, not recall of wording."
+      },
+      {
+        "q": "The recorded listening-practice passage is about",
+        "options": ["quantum entanglement", "climate modelling", "Nigerian oral tradition", "the history of radio"],
+        "answerIndex": 0,
+        "concept": "the listening-practice exercise",
+        "why": "The passage is on quantum entanglement and carries six comprehension questions, covering its challenge to classical physics, the experiments, the interpretation difficulty, applications, and why entanglement is hard to maintain. The topic is deliberately unfamiliar — the exercise is about listening, not about physics."
+      },
+      {
+        "q": "The Week 11 case study is titled",
+        "options": ["The Art of Effective Listening: A Path to Academic Success", "Listening for Leadership: A Workplace Guide", "Hearing and Listening: The Great Divide", "Listening Across Cultures"],
+        "answerIndex": 0,
+        "concept": "the case study",
+        "why": "That is the title, and its six methodology headings run Active Listening, Nonverbal Communication, Empathetic Listening, Practical Strategies, Cultural Awareness and Reflective Practice. The other titles each name a real theme of the week, which is why guessing by topic will not separate them."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "Far from the loop, where z is much greater than R, the axial field falls off as",
+        "options": ["1/z", "1/z²", "1/z³", "1/z⁴"],
+        "answerIndex": 2,
+        "concept": "far-field behaviour of the loop",
+        "why": "With z much larger than R the denominator 2(R² + z²)³ᐟ² tends to 2z³, so B falls as 1/z³. The 1/z² answer is the inverse-square law you carry over from point charges — but a current loop is a dipole, and dipole fields drop one power faster."
+      },
+      {
+        "q": "Which item is NOT part of the apparatus listed for this experiment?",
+        "options": ["a movable Hall probe", "a tesla meter", "a DC power supply", "a cathode-ray oscilloscope"],
+        "answerIndex": 3,
+        "concept": "the five apparatus items",
+        "why": "The five are the circular loop of radius R, a DC power supply, an ammeter, a movable magnetic (Hall) probe and a tesla meter. There is nothing oscillating here — the current is steady DC, so an oscilloscope has nothing to display."
+      },
+      {
+        "q": "For Coil 1 the deck fixes the radius and the current at",
+        "options": ["R = 0.10 m and I = 1 A", "R = 0.01 m and I = 1 A", "R = 0.10 m and I = 2 A", "R = 1.0 m and I = 0.1 A"],
+        "answerIndex": 0,
+        "concept": "the stated procedure values",
+        "why": "Coil 1 is R = 0.10 m with the current set to 1 A, and z then steps in 2 cm intervals. The 0.01 m option is the same figure read as centimetres — R is quoted in metres throughout while z is quoted in centimetres, and that mismatch is the whole unit trap of this practical."
+      },
+      {
+        "q": "The experiment is repeated with coils of different radii in order to show that",
+        "options": ["the field at the centre is independent of the current", "the probe reading drifts with temperature", "the tesla meter needs recalibration between runs", "μ₀ is a constant of free space, independent of R and I"],
+        "answerIndex": 3,
+        "concept": "why the repetition exists",
+        "why": "If μ₀ really is a property of free space, the gradient must come out the same whatever coil you use, so changing R (and optionally I) is a test of that claim as well as a way of getting independent values to average. The first option is false in any case: B at the centre is μ₀I/2R, which is proportional to I."
+      },
+      {
+        "q": "Why take twenty readings along the axis rather than one at the centre?",
+        "options": ["The field at the centre is too weak to read", "A single point gives no gradient, and the fit averages out scatter", "One reading would exceed the tesla meter's range", "The formula only holds away from the centre"],
+        "answerIndex": 1,
+        "concept": "why a spread of points is needed",
+        "why": "You are measuring a slope, and a slope needs at least two points — twenty give a line of best fit that damps down probe and reading scatter. The centre is in fact where the field is strongest, so weakness there is the reverse of the truth."
+      },
+      {
+        "q": "For a coil of N turns rather than a single turn, the working formula becomes",
+        "options": ["B = μ₀NIR²/[2(R² + z²)³ᐟ²]", "B = μ₀IR²/[2N(R² + z²)³ᐟ²]", "B = Nμ₀I/2R at every z", "B = μ₀IR²/[2(R² + z²)³ᐟ²], unchanged"],
+        "answerIndex": 0,
+        "concept": "the single-turn assumption",
+        "why": "Each turn contributes the same field, so N multiplies the numerator. The unchanged option is the one to watch: the formula you are given has no N in it precisely because the loop is a single turn, and that is an assumption, not a general law."
+      },
+      {
+        "q": "If the plotted factor is R²/[2(R² + z²)³ᐟ²], leaving the current out, the gradient equals",
+        "options": ["μ₀", "μ₀I", "μ₀/I", "I/μ₀"],
+        "answerIndex": 1,
+        "concept": "which version of the factor you plotted",
+        "why": "B = μ₀I times that reduced factor, so the slope is μ₀I and you must divide by I to recover μ₀. With I = 1 A the numbers come out identical either way, which is exactly why you have to say in the report which factor you used."
+      },
+      {
+        "q": "Plotting B directly against z gives",
+        "options": ["a straight line through the origin", "a straight line with a negative intercept", "a curve, from which no gradient can be read", "a straight line of gradient μ₀I"],
+        "answerIndex": 2,
+        "concept": "what to plot",
+        "why": "B depends on z through (R² + z²)³ᐟ², which is nowhere linear, so the plot curves and its slope means nothing. The straight line through the origin is what you get only when you plot B against the computed factor — that is the whole point of computing it."
+      },
+      {
+        "q": "A systematic error in locating z = 0 shows up on the graph as",
+        "options": ["a line that misses the origin", "a line with the wrong sign of gradient", "increased random scatter about the line", "no visible effect at all"],
+        "answerIndex": 0,
+        "concept": "z-origin error",
+        "why": "Every z is shifted by the same amount, so every point moves the same way and the fitted line no longer passes through (0, 0). Scatter is the signature of random error; a shifted origin is systematic, and systematic errors move the line rather than fatten it."
+      },
+      {
+        "q": "A Hall probe tilted off the axis will give a reading that is",
+        "options": ["too high", "unchanged", "alternating in sign", "too low"],
+        "answerIndex": 3,
+        "concept": "probe alignment",
+        "why": "The probe measures the component of B along its own sensitive direction, and any tilt or off-axis position samples less than the full axial field. The axis is where the field is strongest at a given z, so misalignment can only cost you signal, never add to it."
+      },
+      {
+        "q": "μ₀ and ε₀ are measured in, respectively",
+        "options": ["F/m and H/m", "H/m and F/m", "H/m and no units at all", "T·m/A and T·m²"],
+        "answerIndex": 1,
+        "concept": "permeability versus permittivity",
+        "why": "μ₀ is in henry per metre (equivalently T·m/A) and ε₀ is in farad per metre — H for the magnetic quantity, F for the electric one. The dimensionless option belongs to relative permeability μᵣ, where μ = μᵣμ₀."
+      },
+      {
+        "q": "A single-turn loop carrying 1.0 A reads 6.28 μT at its centre. Its radius is",
+        "options": ["0.20 m", "0.05 m", "0.10 m", "0.50 m"],
+        "answerIndex": 2,
+        "concept": "B(0) = μ₀I/2R rearranged",
+        "why": "Rearranging B(0) = μ₀I/2R gives R = μ₀I/2B = (1.257 × 10⁻⁶ × 1.0)/(2 × 6.28 × 10⁻⁶) = 0.10 m, which is Coil 1 of the practical. Getting 0.05 m means you solved μ₀I/B and forgot that the 2 is in the denominator with R, not with B."
+      },
+      {
+        "q": "A z-value of 4 cm must be entered into the factor as",
+        "options": ["4", "0.4", "0.04", "0.004"],
+        "answerIndex": 2,
+        "concept": "cm to m conversion",
+        "why": "R is in metres, so z must be too: 4 cm = 0.04 m. Leaving z in centimetres while R stays in metres wrecks the whole (R² + z²) term, and unlike the nanotesla error it does not even scale the answer by a clean power of ten."
+      },
+      {
+        "q": "Calibration errors in the ammeter and the tesla meter are",
+        "options": ["systematic, and tilt the gradient", "random, and are removed by the line of best fit", "random, and cancel over twenty readings", "systematic, but affect only the intercept"],
+        "answerIndex": 0,
+        "concept": "systematic versus random error",
+        "why": "A miscalibrated meter is wrong by the same proportion on every reading, so it scales the whole y or x axis and changes the slope — which is the quantity you are measuring. Reading scatter is the random part, and that is what the line of best fit deals with; averaging does nothing to a calibration offset."
+      },
+      {
+        "q": "A gradient of 1.30 × 10⁻⁶ H/m is obtained. The percentage error is about",
+        "options": ["1.3%", "3.5%", "4.3%", "13%"],
+        "answerIndex": 1,
+        "concept": "percentage error against the accepted μ₀",
+        "why": "The accepted value is 4π × 10⁻⁷ = 1.257 × 10⁻⁶, so the error is 0.043 × 10⁻⁶ over 1.257 × 10⁻⁶, about 3.5%. The 4.3% comes from dividing the difference by the measured value's leading digits rather than by the accepted value — always divide by the accepted value."
+      }
+    ]
+  }
+}

@@ -1,0 +1,1279 @@
+{
+  "week": 8,
+  "courses": {
+    "MTH_102": [
+      {
+        "q": "From her table of standard integrals, ∫cot(x)dx equals:",
+        "options": [
+          "−ln(cos(x)) + C",
+          "ln(sin(x)) + C",
+          "−ln(sin(x)) + C",
+          "ln(cos(x)) + C"
+        ],
+        "answerIndex": 1,
+        "concept": "Standard integral: cotangent",
+        "why": "Slide 6 gives ∫cot(x)dx = ln(sin(x)) + C — no minus sign. The option that tempts you is −ln(cos(x)) + C, which is the line directly above it on the same slide, ∫tan(x)dx. Tangent carries the minus and cosine; cotangent carries neither."
+      },
+      {
+        "q": "In integration by parts you set dv = e^(2x)dx. Then v is:",
+        "options": [
+          "2e^(2x)",
+          "e^(2x)",
+          "e^(2x)/2",
+          "e^(2x)ln(2)"
+        ],
+        "answerIndex": 2,
+        "concept": "v is the integral of dv",
+        "why": "v is obtained by integrating dv, and ∫e^(2x)dx = e^(2x)/2 because the chain rule puts a 2 in front when you differentiate back. If you picked e^(2x) you copied dv across unchanged, which is the same slip that makes students write v = sin(x) when dv = sin(x)dx instead of v = −cos(x)."
+      },
+      {
+        "q": "∫[1/(x√(x² − 1))]dx equals:",
+        "options": [
+          "sin⁻¹(x) + C",
+          "tan⁻¹(x) + C",
+          "ln(x√(x² − 1)) + C",
+          "sec⁻¹(x) + C"
+        ],
+        "answerIndex": 3,
+        "concept": "Standard integral: inverse secant",
+        "why": "Slide 5 pairs this integrand with sec⁻¹(x) + C — the giveaway is the lone x multiplying the root. sin⁻¹(x) belongs to 1/√(1 − x²) and tan⁻¹(x) to 1/(1 + x²); all three lines sit together on the slide, so learn them by the shape of the denominator, not by memorising the order."
+      },
+      {
+        "q": "You evaluate ∫₁³(x − 1)⁵dx by substituting u = x − 1. The integral in u runs:",
+        "options": [
+          "from 0 to 2",
+          "from 1 to 3",
+          "from 0 to 3",
+          "from −1 to 1"
+        ],
+        "answerIndex": 0,
+        "concept": "Changing the limits of a definite integral",
+        "why": "The limits are x-values, so they must be converted into u-values: x = 1 gives u = 0 and x = 3 gives u = 2. Leaving them as 1 and 3 is the standard error — it silently evaluates the u-integral over the wrong interval, and because the answer still looks like a number nothing warns you."
+      },
+      {
+        "q": "Writing 1/((x − 1)(x + 2)) = A/(x − 1) + B/(x + 2) and clearing the denominator gives 1 = A(x + 2) + B(x − 1). The value of A is:",
+        "options": [
+          "1/3",
+          "−1/3",
+          "3",
+          "1"
+        ],
+        "answerIndex": 0,
+        "concept": "Partial fractions: reading off A at a root",
+        "why": "Setting x = 1 kills the B term and leaves 1 = 3A, so A = 1/3. If you answered 3 you inverted the last step — the 3 is what A is multiplied by, not what A is. B = −1/3 comes from x = −2, so the minus belongs to B, not to A."
+      },
+      {
+        "q": "Her trigonometric substitution reduces the integral to ∫cos²(u)du. Which identity does she then use?",
+        "options": [
+          "cos²(u) + sin²(u) = 1",
+          "cos(2u) = cos²(u) − sin²(u)",
+          "cos²(u) = (1 + cos(2u))/2",
+          "sin²(u) = (1 − cos(2u))/2"
+        ],
+        "answerIndex": 2,
+        "concept": "Double-angle identity for cos²",
+        "why": "cos²(u) cannot be integrated as it stands, so she rewrites it as (1 + cos(2u))/2, which is a sum of two integrable terms. The tempting wrong pick is the sin² version, (1 − cos(2u))/2 — same shape, but the sign on the cosine is flipped and it is the wrong function. The Pythagorean identity is true but leaves you with a square still to integrate."
+      },
+      {
+        "q": "∫(1 + cos(2u))/2 du equals:",
+        "options": [
+          "u/2 + sin(2u)/4 + C",
+          "u/2 + sin(2u)/2 + C",
+          "u/2 − sin(2u)/4 + C",
+          "u/2 + 2sin(2u) + C"
+        ],
+        "answerIndex": 0,
+        "concept": "Integrating the double-angle form",
+        "why": "The 1/2 gives u/2, and ∫cos(2u)du = sin(2u)/2, which halved again gives sin(2u)/4. The answer with sin(2u)/2 is what you get by forgetting the extra division by 2 that the inner 2u forces — the chain rule working backwards is where this constant comes from."
+      },
+      {
+        "q": "Following her method, √(25 − 16x²) is first rewritten as:",
+        "options": [
+          "25√(1 − (4x/5)²)",
+          "5√(1 − (4x/5)²)",
+          "5√(1 − (16x/25)²)",
+          "4√(1 − (5x/4)²)"
+        ],
+        "answerIndex": 1,
+        "concept": "Normalising a root to 1 − (something)²",
+        "why": "Factor 25 out: 25 − 16x² = 25(1 − 16x²/25) = 25(1 − (4x/5)²), and √25 = 5 comes outside the root. Pulling out 25 instead of 5 forgets that the constant leaves the root as its square root. The bracket must be (4x/5)², not (16x/25)² — you square the whole bracket, you do not carry the squares in with you."
+      },
+      {
+        "q": "From her table, ∫ln(x)dx equals:",
+        "options": [
+          "1/x + C",
+          "x·ln(x) + x + C",
+          "x·ln(x) − x + C",
+          "ln(x)/x + C"
+        ],
+        "answerIndex": 2,
+        "concept": "Standard integral: natural logarithm",
+        "why": "Slide 6 gives x·ln(x) − x + C, and you can check it: differentiating gives ln(x) + 1 − 1 = ln(x). The version with + x is the same expression with the sign flipped, and it differentiates to ln(x) + 2 — the check is what catches it. 1/x is the derivative of ln(x), not its integral."
+      },
+      {
+        "q": "In ∫√(1 − x²)dx with x = sin(u), the term sin(2u) is rewritten in x as:",
+        "options": [
+          "x√(1 − x²)",
+          "2x√(1 − x²)",
+          "2x²",
+          "2√(1 − x²)"
+        ],
+        "answerIndex": 1,
+        "concept": "Unfolding sin(2u) when setting back",
+        "why": "sin(2u) = 2sin(u)cos(u), and with sin(u) = x you get cos(u) = √(1 − x²), so the product is 2x√(1 − x²). Dropping the 2 is the usual loss; it comes from the double-angle identity, not from the substitution. Note this is sin(2u) alone — after dividing by the 4 in sin(2u)/4 the final term is x√(1 − x²)/2."
+      },
+      {
+        "q": "Applying integration by parts to ∫x·sec²(x)dx with u = x and dv = sec²(x)dx, what is v?",
+        "options": [
+          "sec(x)",
+          "sec³(x)/3",
+          "tan(x)",
+          "sec(x)tan(x)"
+        ],
+        "answerIndex": 2,
+        "concept": "Choosing dv you can integrate",
+        "why": "v = ∫sec²(x)dx = tan(x), which is the first line of slide 5. sec(x)tan(x) is the derivative of sec(x), not an integral of sec²(x), and sec³(x)/3 applies the power rule to a function of x rather than to x itself — a rule that only works on powers of the variable."
+      },
+      {
+        "q": "You evaluate ∫3x²·cos(x³)dx with u = x³ and reach sin(u) + C. The complete answer is:",
+        "options": [
+          "sin(u) + C",
+          "sin(3x²) + C",
+          "cos(x³) + C",
+          "sin(x³) + C"
+        ],
+        "answerIndex": 3,
+        "concept": "Returning an indefinite integral to x",
+        "why": "There are no limits here, so u must be eliminated: u = x³ gives sin(x³) + C. Leaving sin(u) + C is exactly the incomplete answer flagged on her slide 8 — u was your own invention and appears nowhere in the question. sin(3x²) substitutes the du factor instead of u itself."
+      },
+      {
+        "q": "∫[(5x − 1)/((x − 2)(x + 1))]dx equals:",
+        "options": [
+          "2ln(x − 2) + 3ln(x + 1) + C",
+          "3ln(x − 2) + 2ln(x + 1) + C",
+          "3ln(x − 2) − 2ln(x + 1) + C",
+          "5ln(x − 2) − ln(x + 1) + C"
+        ],
+        "answerIndex": 1,
+        "concept": "Partial fractions with a linear numerator",
+        "why": "5x − 1 = A(x + 1) + B(x − 2); at x = 2 you get 9 = 3A so A = 3, and at x = −1 you get −6 = −3B so B = 2. Both coefficients are positive, because the two negatives at x = −1 cancel — the version with −2ln(x + 1) is what you get by dropping one of them. Swapping A and B is the other easy loss: A belongs to the factor whose root you used to find it."
+      },
+      {
+        "q": "Applying parts to ∫2x·sin(x)dx with u = 2x and dv = sin(x)dx, the first assembled line is:",
+        "options": [
+          "−2x·cos(x) + 2∫cos(x)dx",
+          "−2x·cos(x) − 2∫cos(x)dx",
+          "2x·cos(x) − 2∫cos(x)dx",
+          "−2x·cos(x) + 2∫sin(x)dx"
+        ],
+        "answerIndex": 0,
+        "concept": "The two minus signs in uv − ∫v du",
+        "why": "v = −cos(x), so uv = −2x·cos(x); then −∫v du = −∫(−cos(x))(2dx), and the two minus signs make it +2∫cos(x)dx. Option 2 is what you get by carrying only one of the two minus signs through — the commonest single error in this whole technique. The leftover integral is of cos, not sin: sin was dv, and it has already been integrated."
+      },
+      {
+        "q": "∫sec(x)tan(x)dx equals:",
+        "options": [
+          "tan(x) + C",
+          "sec²(x)/2 + C",
+          "ln(sec(x) + tan(x)) + C",
+          "sec(x) + C"
+        ],
+        "answerIndex": 3,
+        "concept": "Standard integral: sec·tan",
+        "why": "Slide 5 gives sec(x) + C, and it is just the derivative of sec(x) read backwards. tan(x) + C belongs to the neighbouring line ∫sec²(x)dx, and ln(sec(x) + tan(x)) + C belongs to ∫sec(x)dx on slide 6 — three consecutive-looking integrands with three different answers, which is precisely why they get confused."
+      }
+    ],
+    "PHY_102": [
+      {
+        "q": "A coil's dipole moment is μ = NIA. Which single change doubles it?",
+        "options": [
+          "doubling the current through it",
+          "halving the number of turns",
+          "doubling the external field B",
+          "halving the area of each turn"
+        ],
+        "answerIndex": 0,
+        "concept": "What μ = NIA depends on",
+        "why": "μ is linear in N, I and A, so doubling any one of the three doubles it — and the current is the only one of these options that is doubled. B does not appear in μ at all: the field is what you place the coil into, and it cannot change the coil's own moment. Halving N or A moves μ the wrong way. Remember too that A must be in m²: 1 cm² is 10⁻⁴ m²."
+      },
+      {
+        "q": "The unit A·m² is the same as:",
+        "options": [
+          "J·T",
+          "J/T",
+          "N/T",
+          "T/J"
+        ],
+        "answerIndex": 1,
+        "concept": "Units of magnetic moment",
+        "why": "Since U = −μB has units of joules and B is in tesla, μ must be in J/T, which is identical to A·m². Seeing both units in one question is not a hint that two different quantities are in play — the Bohr magneton is quoted in J/T and a coil's moment in A·m² purely by convention."
+      },
+      {
+        "q": "A dipole of moment 0.50 A·m² sits in a 0.20 T field with its normal at 60° to B. The torque on it is:",
+        "options": [
+          "0.050 N·m",
+          "0.10 N·m",
+          "0.087 N·m",
+          "0.058 N·m"
+        ],
+        "answerIndex": 2,
+        "concept": "τ = μB sin θ",
+        "why": "μB = 0.10 N·m, and τ = μB sin 60° = 0.10 × 0.866 = 0.087 N·m. 0.050 N·m is the answer you get from cos 60° — the cosine belongs to the energy, never to the torque. 0.10 N·m is the maximum torque, reached only at θ = 90°."
+      },
+      {
+        "q": "For that same dipole (μ = 0.50 A·m², B = 0.20 T, normal at 60°), the potential energy is:",
+        "options": [
+          "−0.087 J",
+          "+0.050 J",
+          "−0.10 J",
+          "−0.050 J"
+        ],
+        "answerIndex": 3,
+        "concept": "U = −μB cos θ",
+        "why": "U = −μB cos 60° = −0.10 × 0.500 = −0.050 J. The −0.087 J option uses sin 60° — that is the torque's trig function, not the energy's. The sign is negative because at 60° the dipole is nearer aligned than anti-aligned, and dropping the minus would make anti-alignment look like the low-energy state."
+      },
+      {
+        "q": "A solenoid has 900 turns wound over 30 cm. The value of n that enters B = μ₀nI is:",
+        "options": [
+          "900 turns in total",
+          "3000 turns per metre",
+          "30 turns per metre",
+          "270 turns per metre"
+        ],
+        "answerIndex": 1,
+        "concept": "n = N/L, in turns per metre",
+        "why": "n is turns per unit length, and the length must be in metres: 900/0.30 = 3000 per metre. Using N = 900 straight from the question is the standard error, and it leaves B wrong by the factor L. Dividing by 30 rather than 0.30 gives an answer a hundred times too small."
+      },
+      {
+        "q": "A flat circular coil of 20 turns and radius 5.0 cm carries 2.0 A. The field at its centre is:",
+        "options": [
+          "5.0×10⁻⁴ T",
+          "2.5×10⁻⁴ T",
+          "1.0×10⁻³ T",
+          "2.5×10⁻⁵ T"
+        ],
+        "answerIndex": 0,
+        "concept": "B = μ₀NI/2R at the centre of a coil",
+        "why": "B = (4π×10⁻⁷)(20)(2.0)/(2 × 0.050) = 5.0×10⁻⁴ T. Dividing by R instead of 2R doubles it to 1.0×10⁻³ T — the 2 in the denominator is part of the formula, not a stray factor. Note this expression is valid at the centre only; anywhere else on the axis the field is smaller."
+      },
+      {
+        "q": "At 5.0 cm from a long straight wire the field is 2.0 × 10⁻⁵ T. The current in the wire is:",
+        "options": [
+          "2.5 A",
+          "10 A",
+          "5.0 A",
+          "0.50 A"
+        ],
+        "answerIndex": 2,
+        "concept": "Rearranging B = μ₀I/2πr",
+        "why": "I = Br/(μ₀/2π) = (2.0 × 10⁻⁵)(0.050)/(2 × 10⁻⁷) = 5.0 A. The 0.50 A answer is what you get by leaving r as 5.0 cm instead of 0.050 m. Note that B falls as 1/r and not 1/r², so the radius enters to the first power only — treating it like an inverse-square law gives 10 A."
+      },
+      {
+        "q": "A long horizontal wire carries current due north. At a point directly above the wire, B points:",
+        "options": [
+          "due east",
+          "due west",
+          "due north",
+          "vertically upward"
+        ],
+        "answerIndex": 0,
+        "concept": "Right-hand grip rule",
+        "why": "Grip the wire with the right hand, thumb pointing north: above the wire the fingers point east. Due north is wrong because B is never along the current, and vertically upward is wrong because B is never radial — it is tangential, perpendicular to both the current and the line joining you to the wire."
+      },
+      {
+        "q": "On the axis of a small current loop, the far field falls off as:",
+        "options": [
+          "1/z",
+          "1/z²",
+          "1/z⁴",
+          "1/z³"
+        ],
+        "answerIndex": 3,
+        "concept": "Dipole far field vs wire field",
+        "why": "A loop is a dipole, and its axial far field is B = μ₀μ/2πz³. The 1/z option is the long straight wire's law, and mixing the two is the standard confusion: a wire is not a dipole, because its two 'ends' are infinitely far away and nothing cancels at large distance."
+      },
+      {
+        "q": "In M = g(−eL/2m), the value g ≈ 2 applies to:",
+        "options": [
+          "the orbital motion of an electron",
+          "the spin of an electron",
+          "the relative permeability of iron",
+          "a proton in a nucleus"
+        ],
+        "answerIndex": 1,
+        "concept": "The g-factor",
+        "why": "g ≈ 2.0023 for electron spin, while orbital angular momentum gives g ≈ 1 — the classical value the formula would predict on its own. Do not confuse g with μᵣ: g is a dimensionless number attached to a particle, μᵣ is a dimensionless property of a bulk material, and μ₀ is a constant of nature with units."
+      },
+      {
+        "q": "The magnetic flux through any closed surface is always zero because:",
+        "options": [
+          "magnetic forces do no work on a moving charge",
+          "a magnet's two poles are always equal in strength",
+          "every field line is a closed loop, so flux in equals out",
+          "a magnet's internal field cancels its external field"
+        ],
+        "answerIndex": 2,
+        "concept": "Gauss's law for magnetism",
+        "why": "There are no magnetic monopoles, so no field line can start or stop anywhere — every line closes on itself and any surface it crosses inward it must also cross outward. The 'equal poles' option is the right intuition attached to the wrong reason: the statement holds for a surface enclosing only one end of a magnet, where the poles are not balanced at all."
+      },
+      {
+        "q": "A compass needle near a bar magnet both swings round and is drawn bodily towards the magnet. The drawing-in requires:",
+        "options": [
+          "a larger dipole moment",
+          "a stronger uniform field",
+          "a non-uniform field",
+          "the needle to be anti-aligned"
+        ],
+        "answerIndex": 2,
+        "concept": "Force needs a field gradient",
+        "why": "In a uniform field the forces on opposite sides of a dipole are equal and opposite, so it turns but does not translate, however strong the field. Only where B varies from place to place do those forces stop cancelling — that gradient is the whole content of 'magnetic attraction'."
+      },
+      {
+        "q": "At the orientation where the torque on a dipole is greatest, its potential energy is:",
+        "options": [
+          "+μB",
+          "−μB",
+          "also greatest",
+          "zero"
+        ],
+        "answerIndex": 3,
+        "concept": "sin in the torque, cos in the energy",
+        "why": "Maximum torque is at θ = 90°, where cos θ = 0, so U = −μB cos 90° = 0. The two quantities peak in complementary places: ±μB are the energies at θ = 0 and 180°, and at both of those orientations the torque is exactly zero. 'Also greatest' is the trap of assuming the two follow each other."
+      },
+      {
+        "q": "Two like poles are brought face to face. Between them the field lines bend away from each other and at one point:",
+        "options": [
+          "the resultant field is zero",
+          "the resultant field is a maximum",
+          "the two sets of lines cross",
+          "the field points into both poles"
+        ],
+        "answerIndex": 0,
+        "concept": "Neutral point",
+        "why": "The two fields are equal and opposite there, so they cancel exactly — that is what a neutral point is. Lines crossing is never an option, because B has one definite direction at every point; where two fields would 'cross' they instead add as vectors, and here the sum happens to be zero."
+      },
+      {
+        "q": "The Earth's geographic north is, magnetically, a:",
+        "options": [
+          "north pole",
+          "south pole",
+          "neutral point",
+          "magnetic monopole"
+        ],
+        "answerIndex": 1,
+        "concept": "Naming of magnetic poles",
+        "why": "Poles are named for the direction they seek, and a compass needle's north-seeking end is attracted towards geographic north — unlike poles attract, so what it is attracted to must be a magnetic south pole. Calling it a north pole is the natural but wrong reading of the name, which describes the compass, not the Earth."
+      }
+    ],
+    "COS_102": [
+      {
+        "q": "Which of these is NOT one of the four benefits of abstraction the course lists?",
+        "options": [
+          "applications are more secure",
+          "code readability and reusability are enhanced",
+          "programmes run measurably faster",
+          "duplication of code is prevented"
+        ],
+        "answerIndex": 2,
+        "concept": "The four stated benefits of abstraction",
+        "why": "The four are: more secure, better readability and reusability, the implementation can change without breaking other code, and duplication is prevented. Speed is not among them — abstraction is about who may see and depend on what, and hiding a detail does not make the hidden code execute any quicker."
+      },
+      {
+        "q": "To make printf output a single literal backslash you must write:",
+        "options": [
+          "`\\\\`",
+          "`\\b`",
+          "`\\0`",
+          "`\\t`"
+        ],
+        "answerIndex": 0,
+        "concept": "Escaping the backslash",
+        "why": "Inside a string a backslash always begins an escape, so a lone one is never printed as itself — you double it. `\\b` is backspace and `\\t` is a tab, and both are the reason a path like C:\\temp printed carelessly comes out as C: followed by a tab and then emp."
+      },
+      {
+        "q": "The escape sequence `\\r` stands for:",
+        "options": [
+          "carriage return",
+          "form feed",
+          "vertical tab",
+          "newline"
+        ],
+        "answerIndex": 0,
+        "concept": "Escape sequences",
+        "why": "`\\r` is the carriage return; newline is `\\n`, form feed is `\\f` and vertical tab is `\\v`. Newline is the one that catches people, because on some systems a line break is carriage return plus newline together — but in C they are two separate escapes with two separate meanings."
+      },
+      {
+        "q": "What is printed?\n```c\nvoid grow(int n) { n = n * 10; }\nint main(void) { int k = 5; grow(k); printf(\"%d\\n\", k); return 0; }\n```",
+        "options": [
+          "50",
+          "5",
+          "10",
+          "0"
+        ],
+        "answerIndex": 1,
+        "concept": "Parameters are local copies",
+        "why": "`n` is a parameter, so it receives a copy of k's value; multiplying the copy by 10 leaves k itself untouched, and 5 is printed. If you answered 50 you assumed the parameter and the caller's variable are the same storage — they are not, which is exactly why a `void swap(int a, int b)` cannot swap anything."
+      },
+      {
+        "q": "With `int sq(int n) { return n * n; }` and `int half(int n) { return n / 2; }`, what does `printf(\"%d\", sq(half(5)));` print?",
+        "options": [
+          "12",
+          "4",
+          "6",
+          "25"
+        ],
+        "answerIndex": 1,
+        "concept": "Nested calls and integer division",
+        "why": "The inner call runs first: half(5) is integer division, so it gives 2, not 2.5, and sq(2) is 4. 12 is what you get by evaluating them the other way round — sq(5) = 25 then 25/2 = 12 — and 6 is what you get by keeping the 2.5 that C throws away."
+      },
+      {
+        "q": "Which of these lines is a function declaration?",
+        "options": [
+          "`int cube(int n) { return n * n * n; }`",
+          "`int cube(int n);`",
+          "`int n = cube(3);`",
+          "`int r = cube(3) + 1;`"
+        ],
+        "answerIndex": 1,
+        "concept": "Declaration vs definition vs call",
+        "why": "A declaration gives the compiler the name, the return type and the parameters, has no body, and ends in a semicolon. The first option is the definition, because it supplies the actual body; the last two are calls. One definition is allowed, but you may declare as many times as you like."
+      },
+      {
+        "q": "In the header `double area(double r)`, the leading `double` is:",
+        "options": [
+          "the function name",
+          "a parameter",
+          "the return type",
+          "the function body"
+        ],
+        "answerIndex": 2,
+        "concept": "The four parts of a function definition",
+        "why": "The return type is the data type of the value the function hands back, and it is written first. The second `double` — the one inside the brackets — is the parameter's type, and mixing up the two is easy when they happen to be the same word. The body is what sits between the braces, not part of the header at all."
+      },
+      {
+        "q": "`int max(int a, int b)` is called as `int m = max(4, 7);`. In that call, `7` is:",
+        "options": [
+          "a parameter",
+          "an argument",
+          "the return type",
+          "a local declaration"
+        ],
+        "answerIndex": 1,
+        "concept": "Parameter vs argument",
+        "why": "The argument is the actual value supplied at this particular call; the parameter is `b`, the placeholder written once in the header. A different call supplies different arguments to the same two parameters, which is the whole point of a parameter existing."
+      },
+      {
+        "q": "A function whose return type is `void`:",
+        "options": [
+          "returns the value 0 to its caller",
+          "cannot be given any parameters",
+          "returns no value, so its call cannot be assigned",
+          "prints its result instead of returning it"
+        ],
+        "answerIndex": 2,
+        "concept": "void as an absence of a value",
+        "why": "`void` means there is nothing at all to hand back, so writing `double t = tax(1000);` on a void `tax` is invalid. 'Returned nothing' and 'returned zero' are different states — `return 0;` hands back a perfectly good value. A void function may take as many parameters as it likes."
+      },
+      {
+        "q": "A function computes a figure, prints it with printf, and has no return statement. Its caller receives:",
+        "options": [
+          "the value 0",
+          "a compiler error at the call",
+          "the printed characters as a string",
+          "nothing it can store or reuse"
+        ],
+        "answerIndex": 3,
+        "concept": "Returning is not printing",
+        "why": "printf puts characters on the screen; only `return` hands a value back to the caller, and nothing can pick the printed text back up. The tempting answer is 0, because that is what main returns — but a function returns 0 only if you write `return 0;`, and this one does not."
+      },
+      {
+        "q": "What value is printed?\n```c\nint n = 5;\nvoid f(void) { n = n + 2; }\nint main(void) { f(); f(); printf(\"%d\\n\", n); return 0; }\n```",
+        "options": [
+          "5",
+          "7",
+          "9",
+          "2"
+        ],
+        "answerIndex": 2,
+        "concept": "Globals persist between calls",
+        "why": "`n` is declared outside all functions, so it is global: f sees the same n each time and the two calls take it 5 → 7 → 9. Answering 7 counts only one call; answering 5 assumes f works on a copy, which would be true of a parameter but is not true of a global it names directly."
+      },
+      {
+        "q": "After `from stats import mean`, which call is valid?",
+        "options": [
+          "`stats.mean(data)`",
+          "`import mean(data)`",
+          "`stats(mean, data)`",
+          "`mean(data)`"
+        ],
+        "answerIndex": 3,
+        "concept": "from … import brings in the name itself",
+        "why": "This form explicitly specifies one function and brings that name directly into your code, so you call it bare. `stats.mean(data)` is the form you use after plain `import stats` — the module name is not introduced by the from-form, so reaching through it fails."
+      },
+      {
+        "q": "Which of these is a comment in C?",
+        "options": [
+          "`/* a note */`",
+          "`# a note`",
+          "`<!-- a note -->`",
+          "`'' a note ''`"
+        ],
+        "answerIndex": 0,
+        "concept": "C comment syntax",
+        "why": "C comments start with `/*` and are terminated with `*/`, and the compiler ignores everything between. `#` begins a preprocessor directive in C, not a comment — that is Python's marker — and `<!-- -->` is HTML's."
+      },
+      {
+        "q": "Execution of a C programme begins:",
+        "options": [
+          "at the first function written in the file",
+          "at the `#include` line",
+          "at the last function written in the file",
+          "at `main()`, wherever it appears in the file"
+        ],
+        "answerIndex": 3,
+        "concept": "main() is the entry point",
+        "why": "Every C programme starts at main, and where main sits on the page makes no difference. The `#include` line is handled before compilation and executes nothing; and 'the first function in the file' is a plausible-sounding rule that would break the moment you moved a helper above main."
+      },
+      {
+        "q": "A class keeps its `balance` field private and offers a public `getBalance()`. On the course's definitions this is primarily:",
+        "options": [
+          "data abstraction",
+          "functional abstraction",
+          "no abstraction at all",
+          "both, in equal measure"
+        ],
+        "answerIndex": 0,
+        "concept": "Data vs functional abstraction",
+        "why": "What is being hidden here is the object's data — it is not directly exposed, and no other programme can alter it without going through a permitted route. Functional abstraction is the answer when what the outsider gets is a method's name plus its input and output formats while the body stays hidden; here the point is the value, not the implementation."
+      }
+    ],
+    "CSC_106": [
+      {
+        "q": "You must filter and sort 20 000 records already held in memory. The library for that job is:",
+        "options": [
+          "jQuery",
+          "Moment.js",
+          "Lodash",
+          "React"
+        ],
+        "answerIndex": 2,
+        "concept": "Choosing among the three libraries",
+        "why": "Lodash provides utility functions over arrays, objects and strings and is the one praised for performance on large datasets. jQuery also chains methods, but it chains over selected page elements — 'hide this div' is jQuery, 'sort these records' is Lodash."
+      },
+      {
+        "q": "In a Lodash chain, `.value()` at the end:",
+        "options": [
+          "starts a new chain",
+          "ends the chain and returns the result",
+          "converts the result to a string",
+          "extracts one named property"
+        ],
+        "answerIndex": 1,
+        "concept": "Lodash method chaining",
+        "why": "`_.chain(...)` builds up a sequence of operations lazily, and `.value()` is what closes it and hands back the finished data. If you thought it extracts a property you are thinking of `.map(\"name\")`, which pulls a named field out of each item partway through the chain."
+      },
+      {
+        "q": "`$(\"#panel\").fadeIn(400);` uses which of jQuery's five named features?",
+        "options": [
+          "AJAX requests",
+          "cross-browser compatibility",
+          "event handling",
+          "animation"
+        ],
+        "answerIndex": 3,
+        "concept": "jQuery's five features",
+        "why": "fadeIn changes the element's appearance over 400 milliseconds — that is animation. Event handling would be the `.on(\"click\", …)` that might trigger it, and AJAX is `$.get`, which fetches data without a page reload. The five are DOM manipulation, event handling, AJAX, animation and cross-browser compatibility."
+      },
+      {
+        "q": "In React, data flows:",
+        "options": [
+          "from child to parent",
+          "from parent to child only",
+          "in both directions automatically",
+          "directly between sibling components"
+        ],
+        "answerIndex": 1,
+        "concept": "Unidirectional data flow",
+        "why": "React passes data down as props, parent to child, which is what keeps state predictable and debugging simple. 'Both directions automatically' is Angular's two-way binding — if a question says a change in the input immediately updates the model with no extra code, it is describing Angular, not React."
+      },
+      {
+        "q": "Angular was created by:",
+        "options": [
+          "Facebook",
+          "Microsoft",
+          "Google",
+          "the Node.js foundation"
+        ],
+        "answerIndex": 2,
+        "concept": "Framework origins",
+        "why": "Angular is Google's; React is Facebook's. Microsoft is the answer for ASP.NET, which is the other origin worth keeping straight this week, and Node.js is the runtime Express.js is built on rather than the source of any of the three frontend frameworks."
+      },
+      {
+        "q": "Angular's dependency injection:",
+        "options": [
+          "manages the creation and sharing of services",
+          "diffs an in-memory tree against the real DOM",
+          "renders directives on HTML elements",
+          "synchronises the UI with the data model"
+        ],
+        "answerIndex": 0,
+        "concept": "Dependency injection",
+        "why": "DI hands components the services they need rather than making each build its own, which is what promotes modularity and testability. Diffing a tree is React's virtual DOM, directives are Vue's mechanism, and synchronising UI with model is Angular's other feature — two-way binding, not DI."
+      },
+      {
+        "q": "In Angular, a module is:",
+        "options": [
+          "a compiled JavaScript bundle",
+          "a mapping from a model to a database table",
+          "a container for components and services",
+          "a function in the request–response cycle"
+        ],
+        "answerIndex": 2,
+        "concept": "Angular building blocks",
+        "why": "Modules group components and services together, and they are the first of the four Angular concepts named alongside components, DI and two-way binding. A model-to-table mapping is Rails' Active Record, and a function in the request–response cycle is Express middleware."
+      },
+      {
+        "q": "Vue.js is called progressive, or incrementally adoptable, because:",
+        "options": [
+          "it updates itself to new versions automatically",
+          "you can use as much or as little of it as you need",
+          "it must be adopted for the whole application at once",
+          "it moves you from HTML through CSS to JavaScript"
+        ],
+        "answerIndex": 1,
+        "concept": "Progressive adoption",
+        "why": "Vue focuses on the view layer and can be dropped into a single page of an existing site, which is precisely what Angular — a complete solution expecting to own the whole application — cannot be. 'Progressive' here describes how much of the framework you take on, not how it updates itself."
+      },
+      {
+        "q": "Vue directives are:",
+        "options": [
+          "utility functions over arrays and objects",
+          "services injected into components at run time",
+          "middleware run before a route handler",
+          "markers on HTML elements that render dynamic content"
+        ],
+        "answerIndex": 3,
+        "concept": "Directives",
+        "why": "A directive such as `v-if` is written onto an ordinary HTML element and declaratively controls what is rendered. Utility functions over arrays are Lodash, injected services are Angular's DI, and middleware belongs to Express — three mechanisms from three different parts of the week, all easy to reach for here."
+      },
+      {
+        "q": "Django is chosen above all for:",
+        "options": [
+          "its middleware pipeline and its minimal configuration",
+          "its Active Record ORM and scaffolding generators",
+          "its generated admin interface and built-in authentication",
+          "its Razor Pages and its Visual Studio integration"
+        ],
+        "answerIndex": 2,
+        "concept": "Django's named features",
+        "why": "Django generates a customisable admin panel and ships authentication and authorization built in, so a great deal of standard work is already done before you start. Active Record and scaffolding are Rails, Razor Pages are ASP.NET, and a bare middleware pipeline is Express."
+      },
+      {
+        "q": "Active Record maps:",
+        "options": [
+          "model classes directly to database tables",
+          "URL patterns to their route handlers",
+          "components to the templates they render",
+          "incoming requests to outgoing responses"
+        ],
+        "answerIndex": 0,
+        "concept": "ORM vs the other framework mechanisms",
+        "why": "Active Record is Rails' object-relational mapper: each model class corresponds to a table, so you work in Ruby rather than SQL. Mapping URLs to handlers is routing, which every one of these frameworks does; do not confuse a data-access layer with Django's admin interface, which is a generated screen rather than a mapping."
+      },
+      {
+        "q": "Convention over Configuration means:",
+        "options": [
+          "each piece of knowledge is written exactly once",
+          "sensible defaults, so you write almost no configuration",
+          "the framework calls your code rather than the reverse",
+          "configuration files are preferred to naming conventions"
+        ],
+        "answerIndex": 1,
+        "concept": "CoC vs DRY",
+        "why": "CoC is Rails' hallmark: follow the expected names and layout and the framework wires things up for you. 'Each piece of knowledge written once' is DRY, a different principle Rails also follows and Django names explicitly — the two are routinely swapped in exams."
+      },
+      {
+        "q": "Express.js is described as minimal and flexible because:",
+        "options": [
+          "it generates a complete admin panel for you",
+          "it enforces the MVC pattern throughout",
+          "it ships with its own object-relational mapper",
+          "it gives you an empty middleware pipeline"
+        ],
+        "answerIndex": 3,
+        "concept": "Express's minimalism",
+        "why": "Express hands you almost no structure: you add middleware in the order you want and build the architecture yourself. Every other option describes a framework that hands you structure up front — Django's admin, ASP.NET's and Django's MVC, Rails' Active Record — which is the opposite trade."
+      },
+      {
+        "q": "ASP.NET Core matters because:",
+        "options": [
+          "it made ASP.NET cross-platform and high-performance",
+          "it added Angular's two-way data binding to ASP.NET",
+          "it replaced C# with JavaScript across the stack",
+          "it brought React's virtual DOM into the .NET world"
+        ],
+        "answerIndex": 0,
+        "concept": "ASP.NET Core",
+        "why": "ASP.NET was tied to the Microsoft stack; Core is the rewrite that made it run across platforms with high performance. Two-way binding is Angular's and the virtual DOM is React's — both frontend mechanisms, and neither is what Core changed."
+      },
+      {
+        "q": "In `app.get(\"/orders/:id\", handler)`, the `:id` is:",
+        "options": [
+          "a dynamic route parameter",
+          "a middleware function's name",
+          "a template-engine variable",
+          "a query-string key"
+        ],
+        "answerIndex": 0,
+        "concept": "Express routing with dynamic parameters",
+        "why": "`:id` matches whatever segment appears there and makes it available as `req.params.id` — that is Express's dynamic URL parameter feature. A query-string key would arrive after a `?` and be read from `req.query`, and a template variable belongs to EJS or Handlebars, not to the route path."
+      }
+    ],
+    "GST_112": [
+      {
+        "q": "The lesson defines citizenship as:",
+        "options": [
+          "the country in which a person happens to be born",
+          "being a citizen, plus the rights, obligations and advantages",
+          "permission to live and work in a country for a fixed period",
+          "membership of an ethnic nation living inside a state"
+        ],
+        "answerIndex": 1,
+        "concept": "Definition of citizenship",
+        "why": "The definition has two halves — the status itself and the rights, obligations and advantages attached — and an answer giving only one half is incomplete. Place of birth is how citizenship is usually granted, not what it is; and a fixed-term permission to live and work describes residency, which confers no such status."
+      },
+      {
+        "q": "Citizenship is commonly confused with a term of wider scope, namely:",
+        "options": [
+          "nationality",
+          "ethnicity",
+          "residency",
+          "domicile"
+        ],
+        "answerIndex": 0,
+        "concept": "Citizenship vs nationality",
+        "why": "The lesson is explicit that the two are confused and that nationality is of wider scope. If a question describes a term as the broader one that citizenship gets mistaken for, the answer is nationality every time. Domicile appears this week too, but only inside the registration conditions."
+      },
+      {
+        "q": "Citizenship is provided for extensively in which chapter of the 1999 Constitution?",
+        "options": [
+          "Chapter One",
+          "Chapter Two",
+          "Chapter Three",
+          "Chapter Four"
+        ],
+        "answerIndex": 2,
+        "concept": "Chapter Three",
+        "why": "Chapter Three deals with citizenship generally, on the principle that every country decides who its citizens are. Keep the four references of this week apart: Chapter Three is citizenship, Section 24 the duties of a citizen, Section 27 naturalisation, and the Seventh Schedule the Oath of Allegiance."
+      },
+      {
+        "q": "Which is NOT one of the three things a registration applicant must prove?",
+        "options": [
+          "that he or she is a person of good character",
+          "a clear intention to be domiciled in Nigeria",
+          "that the prescribed Oath of Allegiance has been taken",
+          "five years of continuous residence in Nigeria"
+        ],
+        "answerIndex": 3,
+        "concept": "The three registration conditions",
+        "why": "The three are good character, a clear intention to be domiciled or reside in Nigeria, and having taken the Oath of Allegiance in the Seventh Schedule. A long residence requirement sounds right because it belongs to the neighbouring route — naturalisation is the one for a foreigner who has lived a long time in Nigeria."
+      },
+      {
+        "q": "An applicant for citizenship by registration must prove those conditions to:",
+        "options": [
+          "the President",
+          "the National Assembly",
+          "the Minister of Interior",
+          "a High Court judge"
+        ],
+        "answerIndex": 0,
+        "concept": "Who the registration case is made to",
+        "why": "The lesson names the President as the person satisfied on all three conditions. The President is the office throughout this week: he registers, he may refuse to register a renunciation, and he may deprive an acquired citizen of citizenship — no court or ministry is named at any point."
+      },
+      {
+        "q": "On the lesson's account, Nigerian citizenship as a legal status begins:",
+        "options": [
+          "with the Nigeria Citizenship Act 1960, and nothing earlier",
+          "at independence; before that there were no Nigerian citizens",
+          "with the Constitution of 1979 and its citizenship chapter",
+          "with the 1999 Constitution as amended, and not before"
+        ],
+        "answerIndex": 1,
+        "concept": "The historical starting point",
+        "why": "The lesson states flatly that before independence there were no Nigerian citizens, and that the Constitution from independence onwards provides for types of citizenship. The 1979 and 1999 Constitutions are later changes to a status that already existed, not its origin."
+      },
+      {
+        "q": "Which of these is NOT one of the three instruments the lesson names for changes in citizenship law?",
+        "options": [
+          "the Constitution of the Federal Republic of Nigeria 1979",
+          "the Nigeria Citizenship Act 1960",
+          "the Nigerian Citizenship Act 1961",
+          "the Immigration Act 1963"
+        ],
+        "answerIndex": 3,
+        "concept": "The three named instruments",
+        "why": "The lesson names exactly the 1979 Constitution and the Citizenship Acts of 1960 and 1961, in that order, even though the Acts came first. An Immigration Act is a plausible-sounding fourth because immigration and citizenship sit close together, but it is not on the list."
+      },
+      {
+        "q": "A Nigerian by birth who takes up the citizenship of another country:",
+        "options": [
+          "loses Nigerian citizenship automatically",
+          "keeps it; no renunciation is required",
+          "must obtain the President's consent first",
+          "keeps it only for a further seven years"
+        ],
+        "answerIndex": 1,
+        "concept": "Dual citizenship",
+        "why": "The lesson allows dual citizenship expressly: a Nigerian by birth may acquire another citizenship without renouncing his own. Renunciation exists as a separate, voluntary act with its own declaration — it is something a citizen may choose, never something acquiring a second passport does to him."
+      },
+      {
+        "q": "The President's power to deprive a person of citizenship extends to:",
+        "options": [
+          "any Nigerian citizen, on the same grounds",
+          "citizens by birth, and no one else",
+          "citizens by registration or naturalisation only",
+          "citizens by naturalisation, and no others"
+        ],
+        "answerIndex": 2,
+        "concept": "Deprivation reaches acquired citizenship only",
+        "why": "Deprivation never touches citizenship by birth; the disloyalty and enemy-country grounds are applied to those who acquired citizenship by registration or by naturalisation. Restricting it to naturalisation alone is the near-miss — the imprisonment trigger is worded around naturalisation, but the four disloyalty grounds cover registration too."
+      },
+      {
+        "q": "Which is NOT one of the four grounds of disloyalty on which citizenship may be lost?",
+        "options": [
+          "being disloyal to Nigeria by act or speech",
+          "trading with an enemy country at war with Nigeria",
+          "assisting such an enemy country in any manner",
+          "failing to pay tax for three consecutive years"
+        ],
+        "answerIndex": 3,
+        "concept": "The four disloyalty grounds",
+        "why": "The four are disloyalty by act or speech, trading with an enemy at war with Nigeria, assisting such an enemy, and unlawfully communicating with it to Nigeria's detriment. Paying tax is a civic responsibility under Section 24(F), but failing at it is not among the grounds for losing citizenship."
+      },
+      {
+        "q": "Renunciation of Nigerian citizenship is initiated by:",
+        "options": [
+          "the President, acting on his own motion",
+          "the citizen himself, by prescribed declaration",
+          "the National Assembly, by resolution",
+          "a Federal High Court, on application"
+        ],
+        "answerIndex": 1,
+        "concept": "Renunciation vs deprivation",
+        "why": "Renunciation is the citizen's own act: a citizen of full age makes the prescribed declaration, and the President's role is only that he may refuse to register it, in war or where it is contrary to public policy. Deprivation is the mirror image — there the President initiates, and it reaches acquired citizenship only."
+      },
+      {
+        "q": "A grant of citizenship by naturalisation is evidenced by:",
+        "options": [
+          "a certificate of grant of citizenship by naturalisation",
+          "an entry in the national register of births and deaths",
+          "a residence permit renewable every five years thereafter",
+          "a signed copy of the Oath of Allegiance in the Schedule"
+        ],
+        "answerIndex": 0,
+        "concept": "The naturalisation certificate",
+        "why": "On fulfilling the Section 27 requirements the applicant is issued a certificate of grant of citizenship by naturalisation. The Oath of Allegiance is tempting because it is an actual document in this week's material, but it belongs to the registration conditions and is a step, not the outcome."
+      },
+      {
+        "q": "Civic responsibility is defined as:",
+        "options": [
+          "duties citizens fulfil for the betterment of their society",
+          "the rights the Constitution guarantees to every citizen",
+          "the laws the National Assembly makes in each session",
+          "the services the state owes to each of its citizens"
+        ],
+        "answerIndex": 0,
+        "concept": "Definition of civic responsibility",
+        "why": "The definition runs in the direction of citizen towards society — duties and obligations for the betterment of society and the functioning of the country. The rights option reverses the direction, and rights sit in a different part of the Constitution altogether from the duties of Section 24."
+      },
+      {
+        "q": "Section 24(F) makes it the duty of every citizen to:",
+        "options": [
+          "render assistance to lawful agencies keeping law and order",
+          "defend Nigeria and render such national service as may be required",
+          "declare his income honestly and pay his tax promptly",
+          "respect the dignity of other citizens"
+        ],
+        "answerIndex": 2,
+        "concept": "Section 24, duty F",
+        "why": "F is the tax duty, and it has two limbs — declaring income honestly and paying promptly. The other three options are genuine duties from the same list, at E, B and C respectively, which is what makes them worth knowing by letter rather than by rough sense."
+      },
+      {
+        "q": "The lesson concludes that civic responsibility is:",
+        "options": [
+          "a legal obligation enforceable only through the courts",
+          "a moral duty with no legal force",
+          "not only a legal obligation but also a moral duty",
+          "a matter left entirely to individual choice"
+        ],
+        "answerIndex": 2,
+        "concept": "The concluding claim",
+        "why": "The conclusion holds both halves together: civic responsibility is a legal obligation and a moral duty, and it is by fulfilling it that citizens promote active citizenship and contribute to Nigeria's development. Options that keep only one half are each half-right, which is exactly why they are offered."
+      }
+    ],
+    "GST_122": [
+      {
+        "q": "By which process was the word smog formed?",
+        "options": [
+          "compounding",
+          "blending",
+          "clipping",
+          "borrowing"
+        ],
+        "answerIndex": 1,
+        "concept": "Blending",
+        "why": "Smoke and fog contribute only parts of themselves — sm- and -og — and that fusing of parts is blending. Compounding is the trap: it would require both whole words to survive, as in raincoat. Clipping shortens just one word, so it cannot account for two sources."
+      },
+      {
+        "q": "Which of these words is a compound rather than a blend?",
+        "options": [
+          "motel",
+          "webinar",
+          "bookshop",
+          "sitcom"
+        ],
+        "answerIndex": 2,
+        "concept": "Compounding vs blending",
+        "why": "Bookshop keeps both source words whole — book and shop — and that is the test for a compound. Motel, webinar and sitcom each keep only parts: mo(tor) + (ho)tel, web + (sem)inar, sit(uation) + com(edy). If you can still see two complete words, it is compounding; if only fragments survive, it is a blend."
+      },
+      {
+        "q": "UNICEF counts as an acronym rather than an initialism because:",
+        "options": [
+          "it names an international organisation",
+          "it is pronounced as a word",
+          "it is written in capital letters",
+          "it has more than three letters"
+        ],
+        "answerIndex": 1,
+        "concept": "Acronym vs initialism",
+        "why": "Both are made from initial letters; the dividing line is pronunciation — an acronym is said as a word, an initialism is spelled out, as ATM and FBI are. Capital letters and length are shared by both categories, so neither can be the distinguishing feature."
+      },
+      {
+        "q": "Shortening laboratory to lab is an instance of:",
+        "options": [
+          "clipping",
+          "blending",
+          "conversion",
+          "acronym"
+        ],
+        "answerIndex": 0,
+        "concept": "Clipping",
+        "why": "One word has simply been shortened, with nothing fused to it — that is clipping, like advert from advertisement. Blending is the tempting neighbour, but a blend needs two source words; conversion requires the word class to change, and here lab is still a noun."
+      },
+      {
+        "q": "Forming happiness from happy is an instance of:",
+        "options": [
+          "inflection",
+          "conversion",
+          "compounding",
+          "derivation"
+        ],
+        "answerIndex": 3,
+        "concept": "Derivation",
+        "why": "The suffix -ness creates a new lexeme and shifts an adjective into a noun, which is derivation and would earn its own dictionary entry. An inflection such as plural -s or past -ed only marks grammar and makes no new word; conversion would have to change the class with no affix at all."
+      },
+      {
+        "q": "The ending -er appears in both teacher and taller. In taller it is:",
+        "options": [
+          "derivational, making a new noun",
+          "inflectional, marking the comparative",
+          "a borrowing from another language",
+          "a blend of two words"
+        ],
+        "answerIndex": 1,
+        "concept": "The ambiguity of -er",
+        "why": "Taller is still the adjective tall, merely marked for degree, so the -er is inflectional and produces no new dictionary word. In teacher the same two letters are derivational — they turn a verb into a noun meaning one who does the action. Identical spelling, opposite category."
+      },
+      {
+        "q": "The prefix inter- means:",
+        "options": [
+          "within",
+          "across",
+          "between",
+          "under"
+        ],
+        "answerIndex": 2,
+        "concept": "Prefix meanings",
+        "why": "Inter- is between, as in interdisciplinary. Within is intra- (intranet) and across is trans- (transcribe) — the three sit together in the table precisely because they are so easily swapped. Under is sub-, from a different row."
+      },
+      {
+        "q": "The prefix hyper- means:",
+        "options": [
+          "under",
+          "excessive",
+          "above",
+          "against"
+        ],
+        "answerIndex": 1,
+        "concept": "Prefix meanings",
+        "why": "Hyper- carries the sense of excess, as in hyperactive. Above is super- (supervise), which is the closest miss because both suggest going beyond a norm; under is sub- and against is anti-."
+      },
+      {
+        "q": "The suffix -ee forms a noun meaning:",
+        "options": [
+          "one who does the action",
+          "the quality of being something",
+          "the place where it happens",
+          "one who receives the action"
+        ],
+        "answerIndex": 3,
+        "concept": "Person suffixes",
+        "why": "An employee is one who is employed — the receiving end of the action. One who does the action is -er, -or or -ist, and the two live in the same row of the table, so the pair employer/employee is the way to keep them apart. A quality would be -ness or -ity."
+      },
+      {
+        "q": "The suffix -ify produces:",
+        "options": [
+          "a noun",
+          "an adjective",
+          "an adverb",
+          "a verb"
+        ],
+        "answerIndex": 3,
+        "concept": "Suffixes that change word class",
+        "why": "-ify makes verbs meaning to make or cause to become, as in simplify — it sits with -ise/-ize, -en and -ate. It is the resemblance to -ity, a noun-forming suffix, that catches people out: simplify against simplicity."
+      },
+      {
+        "q": "The expression déjà vu entered English by:",
+        "options": [
+          "coinage",
+          "blending",
+          "borrowing",
+          "compounding"
+        ],
+        "answerIndex": 2,
+        "concept": "Borrowing",
+        "why": "It is taken over from another language with its form intact, which is exactly what borrowing is. Coinage is the near neighbour and the opposite case — it invents a word that existed nowhere before, so a word with a traceable foreign source can never be a coinage."
+      },
+      {
+        "q": "The word byte is an example of:",
+        "options": [
+          "coinage",
+          "acronym",
+          "blending",
+          "borrowing"
+        ],
+        "answerIndex": 0,
+        "concept": "Coinage",
+        "why": "Byte was invented outright rather than assembled from existing material, and that is coinage. Borrowing is the pairing to keep it apart from: borrowing imports a word that already existed in another language, whereas a coinage has no earlier source anywhere."
+      },
+      {
+        "q": "Epistemology means:",
+        "options": [
+          "the branch of philosophy concerned with knowledge",
+          "the study of signs and symbols in communication",
+          "critical explanation or interpretation of a text",
+          "thinking about one's own thinking processes"
+        ],
+        "answerIndex": 0,
+        "concept": "Academic vocabulary",
+        "why": "Epistemology is the philosophy of knowledge itself — what it is, where it comes from, how far it reaches. The study of signs is semiotics, textual interpretation is exegesis, and thinking about thinking is metacognition; all four are on the same word list, which is why they must be learned by definition rather than by feel."
+      },
+      {
+        "q": "A syllogism is:",
+        "options": [
+          "reasoning that draws a conclusion from two given premises",
+          "a harsh, discordant mixture of sounds",
+          "the combining of ideas into a new integrated understanding",
+          "the vocabulary of a person, language or field"
+        ],
+        "answerIndex": 0,
+        "concept": "Academic vocabulary",
+        "why": "A syllogism is the classic deductive form: two premises, one conclusion. The harsh mixture of sounds is cacophony, the combining of ideas is synthesis, and the store of words is a lexicon — all from the same list, and all easy to attach to the wrong term under time pressure."
+      },
+      {
+        "q": "In which pair has the word class changed with no affix added?",
+        "options": [
+          "teach → teacher",
+          "happy → happiness",
+          "to run → a run",
+          "nation → nationalise"
+        ],
+        "answerIndex": 2,
+        "concept": "Conversion vs derivation",
+        "why": "The word class shifts from verb to noun with nothing added at all, which is the definition of conversion. Every other option attaches an affix — -er, -ness, -ise — and the moment an affix appears it cannot be conversion, however cleanly the class changes."
+      }
+    ],
+    "PHY_108": [
+      {
+        "q": "Mercury has ρ = 13 600 kg/m³ and g = 9.8 m/s². The extra pressure produced by a level difference of 200 mm is:",
+        "options": [
+          "26 656 Pa",
+          "2 665.6 Pa",
+          "133 280 Pa",
+          "266 560 Pa"
+        ],
+        "answerIndex": 0,
+        "concept": "Δp = ρgh",
+        "why": "h must be in metres: 13 600 × 9.8 × 0.200 = 26 656 Pa. Leaving h as 20 cm gives ten times too much and treating 200 mm as 0.020 m gives ten times too little — the mm-to-cm-to-m chain is where this calculation is normally lost. 133 280 Pa is ρg itself, the pressure per metre."
+      },
+      {
+        "q": "A fixed mass of gas at 100 kPa occupies 25 cm³. Compressed at constant temperature to 20 cm³, its pressure becomes:",
+        "options": [
+          "80 kPa",
+          "125 kPa",
+          "500 kPa",
+          "120 kPa"
+        ],
+        "answerIndex": 1,
+        "concept": "P₁V₁ = P₂V₂",
+        "why": "P₂ = P₁V₁/V₂ = 100 × 25/20 = 125 kPa. The 80 kPa option applies the ratio the wrong way up — squeezing a gas must raise its pressure, so any answer below 100 kPa is wrong before you check the arithmetic. 120 kPa comes from subtracting the volume change as a percentage instead of taking the ratio."
+      },
+      {
+        "q": "P₀V₀ is computed as 1.013 × 10⁵ Pa × 20 × 10⁻⁶ m³. The unit of the answer is:",
+        "options": [
+          "the pascal",
+          "the newton",
+          "the joule",
+          "the cubic metre"
+        ],
+        "answerIndex": 2,
+        "concept": "Pa × m³ = J",
+        "why": "A pascal is N/m², so Pa × m³ leaves N·m, which is the joule — the Boyle constant for this gas is 2.026 J. Answering pascal keeps the unit of only the first factor, and it also breaks the gradient work later, where the reciprocal constant has to come out in J⁻¹."
+      },
+      {
+        "q": "One atmosphere equals:",
+        "options": [
+          "76 cmHg",
+          "760 cmHg",
+          "76 mmHg",
+          "7.6 cmHg"
+        ],
+        "answerIndex": 0,
+        "concept": "Atmospheric pressure in mercury",
+        "why": "1 atm = 76 cmHg = 760 mmHg = 1.013 × 10⁵ Pa. The cm and mm forms differ by a factor of ten, so 760 cmHg and 76 mmHg are each that factor out — remember that 76 cm is about the height of a desk, which is the column atmospheric pressure actually supports."
+      },
+      {
+        "q": "On a plot of P against 1/V the gradient is 2.026 J. For the same gas, the gradient of 1/V against P is:",
+        "options": [
+          "0.494 J⁻¹",
+          "2.026 J⁻¹",
+          "4.052 J⁻¹",
+          "0.494 J"
+        ],
+        "answerIndex": 0,
+        "concept": "Reciprocal gradients",
+        "why": "Swapping the axes inverts the gradient: 1/2.026 = 0.494, and the unit inverts with it to J⁻¹. Keeping the number 2.026 and merely changing the unit is the half-done version of this step, and quoting 0.494 J keeps the right number with the wrong unit — always read which quantity is on the y-axis first."
+      },
+      {
+        "q": "A volume of 20 ml expressed in cubic metres is:",
+        "options": [
+          "2.0 × 10⁻³ m³",
+          "20 × 10⁻³ m³",
+          "2.0 × 10⁻⁶ m³",
+          "2.0 × 10⁻⁵ m³"
+        ],
+        "answerIndex": 3,
+        "concept": "ml to m³",
+        "why": "1 ml = 1 cm³ = 10⁻⁶ m³, so 20 ml = 20 × 10⁻⁶ = 2.0 × 10⁻⁵ m³. The 2.0 × 10⁻⁶ m³ option keeps the exponent of a single millilitre and loses the factor of 20; 2.0 × 10⁻³ m³ is the litre conversion applied to millilitres, a thousand times too big."
+      },
+      {
+        "q": "The law stating that V ∝ T at constant pressure is:",
+        "options": [
+          "Boyle's law",
+          "Gay-Lussac's law",
+          "Avogadro's law",
+          "Charles's law"
+        ],
+        "answerIndex": 3,
+        "concept": "Distinguishing the gas laws",
+        "why": "Charles's law holds pressure constant and links volume to temperature. Gay-Lussac's is the near miss — it also involves temperature, but holds volume constant and links P to T. Name the quantity held fixed first; it is never one of the two in the proportionality."
+      },
+      {
+        "q": "At constant temperature, halving the volume doubles the pressure because:",
+        "options": [
+          "the molecules move twice as fast",
+          "each collision carries twice the momentum",
+          "the walls are struck twice as often",
+          "compressing the gas warms it"
+        ],
+        "answerIndex": 2,
+        "concept": "The kinetic explanation",
+        "why": "At fixed temperature the mean molecular speed is unchanged, so each collision delivers the same momentum; halving the volume doubles the number density and therefore the collision rate. Pressure here is a rate effect, not a speed effect — speed is what changes when temperature changes, which is a different law."
+      },
+      {
+        "q": "In the J-tube, the fixed mass of air under test is trapped:",
+        "options": [
+          "in the closed limb, by mercury at the open end",
+          "in the open limb, sitting above the mercury",
+          "in both limbs, equally divided by the bend",
+          "in a side bulb sealed off by a glass tap"
+        ],
+        "answerIndex": 0,
+        "concept": "The J-tube arrangement",
+        "why": "The tube has one closed end and one open end; mercury poured in at the open end seals a column of air in the closed limb. Air in the open limb would simply escape to the atmosphere and could not be compressed, so the fixed-mass condition depends on which limb is which."
+      },
+      {
+        "q": "In P_f = P_a + ρgh, the quantity h must be taken as:",
+        "options": [
+          "the length of the trapped column of air",
+          "the vertical gap between the two mercury levels",
+          "the distance the open limb was dragged upward",
+          "the height of the closed limb above the bench"
+        ],
+        "answerIndex": 1,
+        "concept": "What h measures",
+        "why": "h is the level difference between the two mercury surfaces, read with the tube vertical and in metres. The distance you dragged the limb is the tempting substitute, and it is not the same number — mercury flows between the limbs as you lift, so the level difference is always less than the drag. The air-column length is ℓ, which gives V, not P."
+      },
+      {
+        "q": "If the trapped gas leaks slowly past the seal, the product P_f V_f down the table will:",
+        "options": [
+          "stay constant",
+          "rise steadily",
+          "fall steadily",
+          "scatter randomly about the mean"
+        ],
+        "answerIndex": 2,
+        "concept": "Leakage as a systematic error",
+        "why": "PV is proportional to the amount of gas, so losing gas makes the product drift downward run after run. A rising PV is the signature of the other systematic fault — reading the volume before the compressed gas has cooled. Random scatter would point to parallax or zero error, not to a leak."
+      },
+      {
+        "q": "Reading the volume before the compressed gas has cooled back to room temperature makes:",
+        "options": [
+          "V too small, so PV drifts downward",
+          "V too large, so PV drifts upward",
+          "the intercept negative",
+          "only random scatter about the line"
+        ],
+        "answerIndex": 1,
+        "concept": "Compression heating",
+        "why": "Compressing a gas warms it, and a warm gas occupies more volume than it will once it settles, so every high-pressure reading of V is too large and PV creeps up. This is the fault the precaution about working slowly exists to prevent, and the thermometer is there to tell you when the reading is safe."
+      },
+      {
+        "q": "Water vapour in the trapped air spoils the experiment because:",
+        "options": [
+          "it condenses on the mercury and lowers the volume",
+          "its saturated vapour pressure adds to P and is fixed",
+          "it dissolves into the mercury inside the tube",
+          "it makes the bore of the tube non-uniform"
+        ],
+        "answerIndex": 1,
+        "concept": "Why the trapped air must be dry",
+        "why": "A saturated vapour holds a pressure set by temperature alone, so it contributes a term to P that does not fall as the volume falls — what is in the tube is no longer a single ideal gas obeying Boyle's law. A non-uniform bore is a real fault too, but it corrupts V through V = ℓA, not P."
+      },
+      {
+        "q": "You read the top of the mercury meniscus because mercury in glass is:",
+        "options": [
+          "opaque",
+          "denser than water",
+          "convex",
+          "toxic"
+        ],
+        "answerIndex": 2,
+        "concept": "Reading a mercury meniscus",
+        "why": "Mercury does not wet glass, so its meniscus curves upward and the top is the true surface — with water, which is concave, you read the bottom instead. Its density and toxicity are both real facts about mercury this week, but neither has anything to do with where on the curve you take the reading."
+      },
+      {
+        "q": "Which of these is NOT listed among the apparatus for this experiment?",
+        "options": [
+          "a J-tube",
+          "a thermometer",
+          "a pressure sensor",
+          "a stopwatch"
+        ],
+        "answerIndex": 3,
+        "concept": "The apparatus list",
+        "why": "The list is the J-tube, thermometer, pressure sensor, the gas sample and the Praxilabs virtual laboratory. Nothing in Boyle's law is time-dependent, so no stopwatch is needed — you wait for the gas to settle, but you judge that by the thermometer, not by the clock."
+      }
+    ]
+  }
+}
