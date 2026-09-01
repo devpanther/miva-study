@@ -8,14 +8,35 @@ var BOARD = "https://claude.ai/code/artifact/8d0bff19-5549-4d2d-953c-b3c7a827420
    MTH 102 has no lecture video from week 8, PHY 102 has none in six weeks, and
    CSC 106 carries close to an hour of lecture in weeks 3 to 8 — which is not the
    "you know this already" course the original grid described. */
+/* The week.
+
+   Two hours a night, Monday to Friday. Saturday is review and catch-up, Sunday is the
+   weekend class. Classes do not run at the weekend any more.
+
+   `fastFull` marks a second hour that is a full working hour rather than an hour of
+   video at 1.5-1.75x. Two sessions carry it, and both for the same reason: credit
+   units. COS 102 and CSC 106 are three units each, the heaviest on the timetable, and
+   both are built rather than watched.
+
+   CSC 106 is the one that had been quietly starved. Its Tuesday hour was booked for
+   sixty minutes and averaged twenty minutes of video, so on paper it had an hour and in
+   practice it had a fifth of the attention per credit unit that MTH 102 had. Nothing
+   was taken from anywhere to fix it; the hour was already there and half of it was
+   going unused. */
 var GRID = [
   {day:"Mon", deep:"MTH_102", dn:"New topic",          fast:"GST_112", fn:"Whole week + forum post"},
-  {day:"Tue", deep:"PHY_102", dn:"New topic",          fast:"CSC_106", fn:"Whole week at 1.75×"},
+  {day:"Tue", deep:"PHY_102", dn:"New topic",          fast:"CSC_106", fn:"Watch it, then build it", fastFull:true},
   {day:"Wed", deep:"COS_102", dn:"Theory + algorithm", fast:"GST_122", fn:"Whole week + forum post"},
   {day:"Thu", deep:"MTH_102", dn:"Problems only",      fast:"PHY_108", fn:"Practical + report now"},
-  {day:"Fri", deep:"PHY_102", dn:"Derivations",        fast:"REVIEW",  fn:"Summaries + pick the weekend topics"},
-  {day:"Sat", deep:"COS_102", dn:"Write the code",     fast:"CATCHUP", fn:"Last week's questions"}
+  {day:"Fri", deep:"PHY_102", dn:"Derivations",        fast:"COS_102", fn:"Write the code", fastFull:true},
+  {day:"Sat", deep:"REVIEW",  dn:"The week's scores",  fast:"CATCHUP", fn:"Last week's questions"}
 ];
+/* REVIEW and CATCHUP are places in the week, not courses. Nothing that counts a course
+   may pick them up. */
+function isCourse(c){ return !!c && c !== "REVIEW" && c !== "CATCHUP"; }
+/* How many graded first hours a week actually has. Was hardcoded to six in three
+   places, which stopped being true the moment Saturday lost its class. */
+function deepSlots(){ return GRID.filter(function(d){ return isCourse(d.deep); }).length; }
 /* Credit units, straight off the course list. These decide how much a grade is worth,
    so they decide how much a night is worth, and the app says so out loud on every card.
    Without this the schedule gets built on which course FEELS hard, which is how a
@@ -334,7 +355,7 @@ function defaultWeek(){
   var start = (cal >= 1 && cal <= 12) ? cal : 1;
   if(!ME) return start;
   for(var w = start; w <= 12; w++){
-    if(deepDone(ME, w) < 6) return w;
+    if(deepDone(ME, w) < deepSlots()) return w;
   }
   return 12;
 }
@@ -411,8 +432,9 @@ function checkFor(wd, day, slot){
 function slotsFor(w){
   var wd = weekData(w), out = [];
   GRID.forEach(function(d){
-    out.push({day:d.day, slot:"deep", course:d.deep});
-    if(checkFor(wd, d.day, "fast")) out.push({day:d.day, slot:"fast", course:d.fast});
+    if(isCourse(d.deep)) out.push({day:d.day, slot:"deep", course:d.deep});
+    if(isCourse(d.fast) && checkFor(wd, d.day, "fast"))
+      out.push({day:d.day, slot:"fast", course:d.fast});
   });
   return out;
 }
@@ -626,7 +648,7 @@ function weekTally(person, w){
    fast-hour extras, so a skipped 3-minute quiz never traps you on a week. */
 function deepDone(person, w){
   var n = 0;
-  GRID.forEach(function(d){ if(getScore(person, w, d.day)) n++; });
+  GRID.forEach(function(d){ if(isCourse(d.deep) && getScore(person, w, d.day)) n++; });
   return n;
 }
 function lowestFor(person, w){
@@ -674,12 +696,12 @@ function masteryFor(person){
   /* Seed from the timetable, not from the weeks that happen to be loaded. A course you
      have never sat still has to appear — "not sat yet" is a thing worth being told. */
   GRID.forEach(function(d){
-    if(d.deep !== "REVIEW" && d.deep !== "CATCHUP") touch(d.deep);
-    if(d.fast !== "REVIEW" && d.fast !== "CATCHUP") touch(d.fast);
+    if(isCourse(d.deep)) touch(d.deep);
+    if(isCourse(d.fast)) touch(d.fast);
   });
   for(var w = 1; w <= 12; w++){
     slotsFor(w).forEach(function(x){
-      if(x.course === "REVIEW" || x.course === "CATCHUP") return;
+      if(!isCourse(x.course)) return;
       var m = touch(x.course);
       m.of++;
       var sc = getScore(person, w, x.day, x.slot);
@@ -1511,12 +1533,17 @@ function statsStrip(root){
   var pc = el("div","card");
   pc.appendChild(el("div","lbl","This week"));
   var hasFast = slotsFor(w).some(function(x){ return x.slot === "fast"; });
-  ["deep","fast"].forEach(function(slot){
+  /* Saturday holds no class in either hour, so it gets no pip in either row. A hollow
+     circle where a session used to be reads as one you skipped. */
+  [["deep","first hour"],["fast","second hour"]].forEach(function(pair){
+    var slot = pair[0];
     if(slot === "fast" && !hasFast) return;
     var line = el("div","piprow");
-    line.appendChild(el("span","piplbl", slot));
+    line.appendChild(el("span","piplbl", pair[1]));
     var pips = el("div","pips");
     GRID.forEach(function(d,i){
+      var course = slot === "deep" ? d.deep : d.fast;
+      if(!isCourse(course)) return;
       var sc = getScore(ME, w, d.day, slot);
       var has = slot === "deep" || checkFor(weekData(w), d.day, "fast");
       var cls = "pip " + (sc ? scoreClass(sc) : (has ? "" : "none")) + (i===di ? " today" : "");
@@ -2639,6 +2666,15 @@ function viewTonight(root){
 
   var c1 = el("div","card deepc");
   c1.appendChild(el("div","lbl","21:00 – 22:00 · first hour"));
+  if(!isCourse(g.deep)){
+    /* Saturday. No class in this hour any more — it is the week's review. */
+    c1.appendChild(el("h2",null,"Review the week"));
+    reviewPanel(c1, w);
+    root.appendChild(c1);
+    saturdaySecondHour(root, w);
+    gapCard(root);
+    return;
+  }
   c1.appendChild(el("h2",null,esc(NAMES[g.deep])));
   /* Facts first, then an order to follow. The brief that describes the session moves
      down behind "What this covers": useful on a Sunday, in the way at 21:00. */
@@ -2667,7 +2703,8 @@ function viewTonight(root){
 
   var fchk0 = checkFor(wd, g.day, "fast");
   var c2 = el("div","card fastc");
-  c2.appendChild(el("div","lbl","22:00 – 23:00 · second hour"));
+  c2.appendChild(el("div","lbl","22:00 – 23:00 · second hour"
+    + (g.fastFull ? " · a full hour, not a skim" : "")));
   c2.appendChild(el("h2",null, g.fast==="REVIEW" ? "Review the week"
                             : (g.fast==="CATCHUP" ? "Catch-up" : esc(NAMES[g.fast]))));
   if(g.fast === "REVIEW"){
@@ -2675,9 +2712,10 @@ function viewTonight(root){
   } else if(g.fast === "CATCHUP"){
     catchupPanel(c2, w);
   } else {
-    factRow(c2, g.fast, "fast", fchk0);
+    var full2 = !!g.fastFull;
+    factRow(c2, g.fast, full2 ? "deep" : "fast", fchk0);
     var mins2 = watchLine(c2, g.fast, w, false);
-    stepList(c2, doSteps(g.fast, "fast", fchk0, mins2));
+    stepList(c2, doSteps(g.fast, full2 ? "deep" : "fast", fchk0, mins2));
     coversBlock(c2, fastTopic || g.fn);
   }
 
@@ -2708,9 +2746,22 @@ function viewTonight(root){
   }
   root.appendChild(c2);
 
+  gapCard(root);
+}
+
+/* Saturday's second hour: catch-up, on its own card. */
+function saturdaySecondHour(root, w){
+  var c = el("div","card fastc");
+  c.appendChild(el("div","lbl","22:00 – 23:00 · second hour"));
+  c.appendChild(el("h2",null,"Catch-up"));
+  catchupPanel(c, w);
+  root.appendChild(c);
+}
+
+function gapCard(root){
   var c3 = el("div","card");
   c3.appendChild(el("div","lbl","If a gap opens this afternoon"));
-  c3.appendChild(el("p","muted","Watch tonight's intro videos at 1.75×. Ten to fifteen minutes, and it turns the deep hour into revision rather than first contact. Don't start new material in a burst."));
+  c3.appendChild(el("p","muted","Watch tonight's intro videos at 1.75×. Ten to fifteen minutes, and it turns the first hour into revision rather than first contact. Don't start new material in a burst."));
   root.appendChild(c3);
 }
 
@@ -2718,7 +2769,7 @@ function viewTonight(root){
 function viewWeek(root){
   var head = el("div","card");
   head.appendChild(el("div","lbl","The shape of every week"));
-  head.appendChild(el("p","muted","Deep hour first at normal speed, fast hour second at 1.5–1.75×. Six days. Sunday is the weekend class only."));
+  head.appendChild(el("p","muted","Two hours a night, Monday to Friday. The first at normal speed, the second at 1.5–1.75× unless it is a course you build rather than watch. Saturday is review and catch-up. Sunday is the weekend class."));
   root.appendChild(head);
   weekGrid(root);
 }
@@ -4845,11 +4896,11 @@ var GOALKINDS = {
   },
   week: {
     icon: function(){ return ICO_CAL; },
-    label: function(g){ return "Finish " + g.target + " of this week's six"; },
-    hint: "The deep hour each night, Monday to Saturday.",
+    label: function(g){ return "Finish " + g.target + " of this week's " + deepSlots(); },
+    hint: "The first hour each night, Monday to Friday.",
     unit: "nights", min: 2, max: 6, step: 1,
     now: function(){ return ME ? deepDone(ME, wk()) : 0; },
-    fmt: function(v){ return v + " of 6"; },
+    fmt: function(v){ return v + " of " + deepSlots(); },
     pick: function(v){ return v + " night" + (v === 1 ? "" : "s"); }
   },
   /* The only goal where a smaller number is the good one. Your weak list is whatever
@@ -4973,7 +5024,7 @@ function goalIdeas(){
     var pc = Math.round(worst.ratio * 100);
     offer("course", worst.course, Math.min(95, Math.max(60, Math.ceil((pc + 10) / 5) * 5)));
   }
-  if(ME && deepDone(ME, wk()) < 6 && !onRunway()) offer("week", null, 6);
+  if(ME && deepDone(ME, wk()) < deepSlots() && !onRunway()) offer("week", null, deepSlots());
 
   var r = drillRecent(7);
     /* Eight points above where you are, and never above 90: a target you cannot plausibly
@@ -5775,6 +5826,7 @@ document.addEventListener("visibilitychange", function(){
    there is no setter here. Nothing the app does depends on this object existing. */
 window.KAIZEN = {
   code: codeHtml,
+  deepSlots: deepSlots, slots: slotsFor,
   lane: myLane,
   laneOf: function(id, on){ return hash32(id + "|" + on) % 2; },
   /* Test hook: does a roster of this size partition at all? */

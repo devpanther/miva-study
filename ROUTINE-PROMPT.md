@@ -57,10 +57,20 @@ from today's date. Before 7 Sep, use Week 1. Past Week 12, revision mode. Check
 which packs/week-XX/ folders already exist and do not redo a completed week.
 
 HIS WEEK - the checks must match these sessions exactly
-Two hours every evening Mon-Sat: a deep hour at 1x, then a fast hour at 1.5-1.75x.
-  Mon deep MTH_102 / fast GST_112        Tue deep PHY_102 / fast CSC_106
-  Wed deep COS_102 / fast GST_122        Thu deep MTH_102 problems / fast PHY_108
-  Fri deep PHY_102 problems / fast Review   Sat deep COS_102 code / fast Catch-up
+Two hours every evening Mon-FRI. Saturday runs no classes: it is the week's review
+and the seven-day catch-up. Sunday is the weekend class.
+
+  Mon  1st MTH_102              2nd GST_112
+  Tue  1st PHY_102              2nd CSC_106  * FULL HOUR, 12 questions
+  Wed  1st COS_102              2nd GST_122
+  Thu  1st MTH_102 problems     2nd PHY_108
+  Fri  1st PHY_102 problems     2nd COS_102 code  * FULL HOUR, 12 questions
+  Sat  review + catch-up, no class
+
+The first hour runs at 1x. The second runs at 1.5-1.75x EXCEPT the two starred ones,
+which are full working hours at 1x with a twelve-question check. Both are three-unit
+courses that are built rather than watched, and CSC_106's hour had been booked for
+sixty minutes while averaging twenty minutes of video.
 Sunday 19:00-20:00 they teach each other one topic each, no notes. The topic is
 whichever check they scored lowest on.
 
@@ -87,7 +97,8 @@ WHAT TO PRODUCE, all under packs/week-XX/
    fully worked example per major technique.
 
 2. NIGHTLY CHECKS - checks/<Day>-<COURSE>.md, six files:
-   Mon-MTH_102, Tue-PHY_102, Wed-COS_102, Thu-MTH_102, Fri-PHY_102, Sat-COS_102
+   Mon-MTH_102, Tue-PHY_102, Wed-COS_102, Thu-MTH_102, Fri-PHY_102
+   (Saturday has no class. COS_102's code session is Friday's SECOND hour.)
    TWELVE questions each (8 MCQ, 4 short "explain why") on precisely what that
    session covers - not the whole week. Sat cold, notes closed, about 15 minutes.
    Twelve rather than six because the score decides which topic gets taught on
@@ -98,11 +109,13 @@ WHAT TO PRODUCE, all under packs/week-XX/
    recognises the vocabulary. No questions solvable by elimination. Every answer
    names the underlying concept, so a wrong answer says what to revisit.
 
-2c. FAST-HOUR CHECKS - checks/<Day>-<COURSE>-fast.md, four files
+2c. SECOND-HOUR CHECKS - checks/<Day>-<COURSE>-fast.md, five files
    (the deep checks have no suffix; only these carry -fast):
    Mon-GST_112, Tue-CSC_106, Wed-GST_122, Thu-PHY_108
-   FIVE MCQs each, no short answers. These are sat at the end of the fast hour,
-   around 23:00, and must take about three minutes. Friday and Saturday get none -
+   FIVE MCQs each for GST_112, GST_122 and PHY_108. TWELVE for CSC_106 (Tue) and
+   COS_102 (Fri), which are full hours. The five-question ones are sat at the end of
+   the second hour, around 23:00, and must take about three minutes. Saturday gets
+   none -
    those hours are review and catch-up, with nothing new to test.
    Pitch them at RECALL, not reasoning. GST_112 and GST_122 are examined almost
    entirely on named lists, definitions, dates and theories, and producing a list
@@ -113,14 +126,16 @@ WHAT TO PRODUCE, all under packs/week-XX/
    Keep them short: a question that takes more than twenty seconds to read does
    not belong in a three-minute check.
    Every question still carries "concept" and "why", same as the nightly checks.
-   In week-XX.json these entries carry "slot": "fast", "maxScore": 5, and the
-   fast-hour course code. The six deep checks carry "slot": "deep" (or omit it).
+   In week-XX.json these entries carry "slot": "fast" and the second-hour course
+   code. maxScore is 5 for GST_112, GST_122 and PHY_108; 12 for CSC_106 and COS_102,
+   which also carry "full": true. The five first-hour checks carry "slot": "deep".
 
 2b. ANSWER SPREAD - a hard check, not a judgement call
    Before writing week-XX.json, count how many correct answers fall on option a,
    b, c and d. Count the two sets SEPARATELY:
-     - the six deep checks: 48 MCQs, so each option should carry roughly 12
-     - the four fast checks: 20 MCQs, so each option should carry roughly 5
+     - the five first-hour checks: 40 MCQs, so each option carries roughly 10
+     - the two full second hours: 24 MCQs, so each option carries roughly 6
+     - the three short second hours: 15 MCQs, so each option carries roughly 4
    REQUIRED: in each set every option must hold at least 15% and at most 35% of
    the correct answers - between 8 and 16 of the 48, and between 3 and 7 of the
    20. If any option is outside its band, go back and rewrite questions - reorder
@@ -144,9 +159,12 @@ WHAT TO PRODUCE, all under packs/week-XX/
    other takes their next-lowest elsewhere.
 
 5. week-XX.json - follow data-schema.md in the repo root EXACTLY. All six days
-   Mon-Sat present. TEN entries in "checks":
-     - six deep, "slot": "deep", TWELVE questions each, "maxScore": 12
-     - four fast, "slot": "fast", FIVE questions each, "maxScore": 5
+   Mon-Fri present, plus a Sat row holding review and catch-up with no questions.
+   TEN entries in "checks":
+     - five first-hour, "slot": "deep", TWELVE questions each, "maxScore": 12
+     - two full second-hour (Tue CSC_106, Fri COS_102), "slot": "fast",
+       "full": true, TWELVE questions each, "maxScore": 12
+     - three short second-hour, "slot": "fast", FIVE questions each, "maxScore": 5
    Validate it parses before committing.
 
 CHECKPOINT WEEKS - additionally
@@ -162,3 +180,16 @@ FINALLY
 Reply with 2-3 sentences: which week, what you produced, the two fallback recap
 topics, and any course whose source text looked thin or garbled. Keep it brief -
 Gift prefers results over explanation and dislikes long write-ups.
+
+
+## THE BRIEFS (added after a readability audit)
+
+Session briefs were running to a median of 257 characters per sentence, worst 447, and
+they described what a session COVERED rather than what to DO. The app now computes the
+do-list itself from the facts it holds, so the brief's job has narrowed: it is the
+"What this covers" text behind a button.
+
+Write it accordingly. Short sentences. Under 140 characters each where you can. Break
+a list into a list rather than a semicolon chain. Do not write instructions like "watch
+the video then take the check" - the app already says that, from data, and saying it
+twice in different words is how the two drift apart.

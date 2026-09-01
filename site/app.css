@@ -457,7 +457,7 @@ body:has(.party) canvas.confetti{z-index:121}
 
 /* ---------- deep / fast pip rows ---------- */
 .piprow{display:flex;align-items:center;gap:9px;margin-top:8px}
-.piplbl{flex:0 0 34px;font-size:9.5px;font-weight:800;letter-spacing:.09em;
+.piplbl{flex:0 0 62px;font-size:9.5px;font-weight:800;letter-spacing:.09em;
         text-transform:uppercase;color:var(--ink3)}
 .piprow .pips{margin-top:0}
 .pip.none{opacity:.4;border-style:dashed}
