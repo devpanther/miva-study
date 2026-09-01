@@ -1,6 +1,12 @@
 # Friday, second hour — COS_102 check
 
-*Week 4 Algorithm Concepts taken as practice: tracing the lecture's own algorithms by hand and writing them out. You trace the sum-and-count flowchart to a printed value and a decision count, work the maximum-of-a-set problem through the five development steps, and write the refined pseudocode using sequence, selection and repetition correctly. You then apply the Big O loop rules to concrete code fragments — a decrementing loop, a halving loop, nested loops — and diagnose faulty or wasteful solutions: a maximum initialised to zero, selection used where repetition was needed, and an O(n squared) pairwise comparison where one pass would do.*
+*Week 4 Algorithm Concepts taken as practice: tracing the lecture's own algorithms by hand and writing them out.*
+
+*You trace the sum-and-count flowchart to a printed value and a decision count. You work the maximum-of-a-set problem through the five development steps. You write the refined pseudocode using sequence, selection and repetition correctly.*
+
+*You then apply the Big O loop rules to concrete code fragments: a decrementing loop, a halving loop, nested loops.*
+
+*Then you diagnose faulty or wasteful solutions: a maximum initialised to zero, selection used where repetition was needed, and an O(n squared) pairwise comparison where one pass would do.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Trace the lecture's flowchart: sum = 0; count = 0; then repeat { enter n; sum = sum + n; count = count + 1; is count < 5? if YES go back to 'enter n' }; print sum. The user enters 3, 1, 4, 1, 5. What is printed, and how many times is the decision box evaluated?

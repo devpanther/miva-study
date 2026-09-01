@@ -1,6 +1,16 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 7 integration exactly as the lecturer builds it: the definition ∫f(x)dx = F(x) + c with F′(x) = f(x); why the constant is forced, via her Example 1 line [G(x) + c]′ = 2x + 0 = 2x; the power rule ∫xⁿdx = x^(n+1)/(n+1) + c and the reason n ≠ −1; what splitting an integral does and does not license; and the Fundamental Theorem ∫ₐᵇf(x)dx = F(b) − F(a) = F(x)|ₐᵇ, why c cancels there, and why the result is a number.*
+*Conceptual session on Week 7 integration, exactly as she builds it.*
+
+*The definition ∫f(x)dx = F(x) + c, with F′(x) = f(x).*
+
+*Why the constant is forced, via her Example 1 line [G(x) + c]′ = 2x + 0 = 2x.*
+
+*The power rule ∫xⁿdx = x^(n+1)/(n+1) + c, and the reason n ≠ −1.*
+
+*What splitting an integral does and does not license.*
+
+*The Fundamental Theorem ∫ₐᵇf(x)dx = F(b) − F(a) = F(x)|ₐᵇ. Why c cancels there, and why the result is a number.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** The deck defines the indefinite integral of f as a function F such that a certain equation holds, plus the constant of integration c. Which equation?

@@ -1,6 +1,14 @@
 # Thursday — MTH_102 nightly check
 
-*Problems-only session on Week 7 integration. Apply ∫xⁿdx = x^(n+1)/(n+1) + c to polynomials, negative powers and fractions rewritten as powers; then evaluate definite integrals by the Fundamental Theorem, F(x)|ₐᵇ = F(b) − F(a). Includes both tasks the lecturer set — ∫(2x² − 6x − 3)dx and ∫₋₁²(7x − 5)dx — plus limits that are negative, antiderivatives that carry a minus sign, and one worked solution to diagnose.*
+*Problems-only session on Week 7 integration.*
+
+*Apply ∫xⁿdx = x^(n+1)/(n+1) + c to polynomials, negative powers, and fractions rewritten as powers.*
+
+*Then evaluate definite integrals by the Fundamental Theorem, F(x)|ₐᵇ = F(b) − F(a).*
+
+*Includes both tasks the lecturer set — ∫(2x² − 6x − 3)dx and ∫₋₁²(7x − 5)dx.*
+
+*Plus limits that are negative, antiderivatives that carry a minus sign, and one worked solution to diagnose.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Evaluate ∫(x³ + 1/x³)dx.

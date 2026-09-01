@@ -1,6 +1,14 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 10 area between curves exactly as the lecturer builds it: the two-case rule on slide 4 (∫ₐᵇf(x)dx when f(x) ≥ 0, |∫ₐᵇf(x)dx| when f(x) ≤ 0); finding limits by setting f(x) = 0 and testing an interior point; splitting at a root when the curve crosses the axis inside the interval; the two-curve rule A = ∫ₐᵇ(f(x) − g(x))dx with its condition f(x) ≥ g(x) and limits from f(x) = g(x); and slide 12's A = A₁ + A₂ when the curves intersect at c ∈ (a, b), including why one integral over the whole interval lets the pieces cancel.*
+*Conceptual session on Week 10 area between curves, exactly as the lecturer builds it.*
+
+*The two-case rule on slide 4: ∫ₐᵇf(x)dx when f(x) ≥ 0, and |∫ₐᵇf(x)dx| when f(x) ≤ 0.*
+
+*Finding limits by setting f(x) = 0 and testing an interior point. Splitting at a root when the curve crosses the axis inside the interval.*
+
+*The two-curve rule A = ∫ₐᵇ(f(x) − g(x))dx, with its condition f(x) ≥ g(x) and limits from f(x) = g(x).*
+
+*Slide 12's A = A₁ + A₂ when the curves intersect at c ∈ (a, b). Why one integral over the whole interval lets the pieces cancel.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Slide 4 gives two formulas for the area between y = f(x) and the x-axis over [a, b]. What decides which one you use?

@@ -1,6 +1,18 @@
 # Tuesday — PHY_102 nightly check
 
-*Conceptual session on Week 5 exactly as Dr Adeniji builds it: parallel splits current with one common voltage and 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N, series shares one current with R_eq = R₁ + R₂ + R₃ + ⋯ R_N; junction as a point where three or more conductors meet and loop as any closed conducting path; the junction rule ΣI = 0 as conservation of charge and the loop rule ΣV = 0 as conservation of energy; and her four traversal sign rules — − to + is +ε, + to − is −ε, with the current is −IR, against the current is +IR — plus what the sign of the answer means.*
+*Week 5, exactly as Dr Adeniji builds it.*
+
+*Parallel splits current with one common voltage: 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N.*
+
+*Series shares one current: R_eq = R₁ + R₂ + R₃ + ⋯ R_N.*
+
+*A junction is a point where three or more conductors meet. A loop is any closed conducting path.*
+
+*The junction rule ΣI = 0 as conservation of charge, and the loop rule ΣV = 0 as conservation of energy.*
+
+*Her four traversal sign rules: − to + is +ε, + to − is −ε, with the current is −IR, against the current is +IR.*
+
+*Plus what the sign of the answer means.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Slide 3 says a parallel connection 'splits the current in the resistors while the ... across each resistor is the same'. Which quantity is the same for every resistor in a parallel connection?

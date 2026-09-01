@@ -1,6 +1,16 @@
 # Friday — PHY_102 nightly check
 
-*Problems-only session on Week 6. Convert between peak and rms in both directions using V_rms = 0.7071 V_max and V_max = V_rms/0.7071 = 1.4142 V_rms; read I_max, ω, f and T straight off an equation of the form i = I_max sin ωt; apply Ohm's law consistently within one kind of value, I_rms = V_rms/R; and compute power with P_av = I²_rms R = V²_rms/R and P_max = V²_max/R = 2P_av. Includes all three of the lecturer's own practice questions with their arithmetic, the 120 V versus 250 V discrepancy between her Question 2 slides, and one wrong worked solution to diagnose.*
+*Problems-only session on Week 6.*
+
+*Convert between peak and rms in both directions, using V_rms = 0.7071 V_max and V_max = V_rms/0.7071 = 1.4142 V_rms.*
+
+*Read I_max, ω, f and T straight off an equation of the form i = I_max sin ωt.*
+
+*Apply Ohm's law consistently within one kind of value: I_rms = V_rms/R.*
+
+*Compute power with P_av = I²_rms R = V²_rms/R and P_max = V²_max/R = 2P_av.*
+
+*Includes all three of the lecturer's own practice questions with their arithmetic, the 120 V versus 250 V discrepancy between her Question 2 slides, and one wrong worked solution to diagnose.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** In SOLUTION TO QUESTION 3 (V_max = 24.0 V, f = 60.0 Hz, R = 265 Ω), what is the maximum power dissipated in the resistor?

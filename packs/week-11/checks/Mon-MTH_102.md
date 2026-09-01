@@ -1,6 +1,18 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 11 volumes of solids of revolution as the deck builds them: solid and axis of revolution and her four-step procedure; the disc formula V = π∫ₐᵇ[R(x)]²dx in x and in y; the washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx and why the squares subtract; the shell formula V = 2π∫ₐᵇ x f(x)dx and what x and f measure; how to tell which boundary is R; how the axis of revolution fixes the variable of integration; and the two labelling defects on the deck — slide 10's DISC heading over washer working, and slide 13's 'parallel' where her own examples show perpendicular.*
+*Conceptual session on Week 11 volumes of solids of revolution, as the deck builds them.*
+
+*Solid and axis of revolution, and her four-step procedure.*
+
+*The disc formula V = π∫ₐᵇ[R(x)]²dx, in x and in y.*
+
+*The washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx, and why the squares subtract.*
+
+*The shell formula V = 2π∫ₐᵇ x f(x)dx, and what x and f measure.*
+
+*How to tell which boundary is R. How the axis of revolution fixes the variable of integration.*
+
+*The two labelling defects on the deck: slide 10's DISC heading over washer working, and slide 13's 'parallel' where her own examples show perpendicular.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Step 1 of the deck's procedure is 'Sketch the area and determine the axis of revolution'. The slide says this step determines one thing in particular. What?

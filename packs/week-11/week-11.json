@@ -8,19 +8,19 @@
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Conceptual session on Week 11 volumes of solids of revolution as the deck builds them: solid and axis of revolution and her four-step procedure; the disc formula V = π∫ₐᵇ[R(x)]²dx in x and in y; the washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx and why the squares subtract; the shell formula V = 2π∫ₐᵇ x f(x)dx and what x and f measure; how to tell which boundary is R; how the axis of revolution fixes the variable of integration; and the two labelling defects on the deck — slide 10's DISC heading over washer working, and slide 13's 'parallel' where her own examples show perpendicular.",
+        "topic": "Conceptual session on Week 11 volumes of solids of revolution, as the deck builds them.\n\nSolid and axis of revolution, and her four-step procedure.\n\nThe disc formula V = π∫ₐᵇ[R(x)]²dx, in x and in y.\n\nThe washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx, and why the squares subtract.\n\nThe shell formula V = 2π∫ₐᵇ x f(x)dx, and what x and f measure.\n\nHow to tell which boundary is R. How the axis of revolution fixes the variable of integration.\n\nThe two labelling defects on the deck: slide 10's DISC heading over washer working, and slide 13's 'parallel' where her own examples show perpendicular.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Makers of Nigeria: nine named figures with their dates and credited contributions, from Herbert Macaulay (1864-1946), father of Nigerian nationalism and founder of the NNDP in 1923, Nigeria's first political party, which merged with the Nigerian Youth Movement in the late 1930s to form the NCNC, through Obafemi Awolowo (1909-1987), first premier of the western region 1954-1960, Action Group leader and federalist behind the 1954 Lyleton Constitution, and Nnamdi Azikiwe (1904-1996), last governor-general 1960-1963 and first elected president 1963-1966, NCNC co-founder and inspiration of the Zikist movement. It then covers Funmilayo Ransome-Kuti (1900-1978), the Lioness of Lisabi whose 1953 Abeokuta conference produced the FNWS and who died on 13 April 1978 from the 18 February 1977 raid on the Lagos home of her son Fela Anikulapo-Kuti (1938-1997), creator of Afrobeat in the early 1970s; Chinua Achebe (1930-2013) of Things Fall Apart (1958) and the PRP deputy national vice presidency in 1983; and Wole Soyinka (1934-Present), jailed 22 months in 1967, exiled in 1994 and the first African Nobel laureate in Literature in 1986. It closes with Gani Fawehinmi (1938-2009), the people's lawyer who practised in Lagos from 1965 and pursued the 1986 Dele Giwa case, and Nwankwo Kanu (1976-Present), whose contribution won Nigeria the 1996 Olympic Gold, alongside a summary strand on the Nigerian diaspora, remittances and GDP."
+        "topic": "Makers of Nigeria: nine named figures, with their dates and credited contributions.\n\nHerbert Macaulay (1864-1946), father of Nigerian nationalism. He founded the NNDP in 1923, Nigeria's first political party. It merged with the Nigerian Youth Movement in the late 1930s to form the NCNC.\n\nObafemi Awolowo (1909-1987), first premier of the western region 1954-1960. Action Group leader, and the federalist behind the 1954 Lyleton Constitution.\n\nNnamdi Azikiwe (1904-1996), last governor-general 1960-1963 and first elected president 1963-1966. NCNC co-founder, and the inspiration of the Zikist movement.\n\nIt then covers Funmilayo Ransome-Kuti (1900-1978), the Lioness of Lisabi. Her 1953 Abeokuta conference produced the FNWS. She died on 13 April 1978 from the 18 February 1977 raid on the Lagos home of her son.\n\nThat son is Fela Anikulapo-Kuti (1938-1997), creator of Afrobeat in the early 1970s.\n\nChinua Achebe (1930-2013), of Things Fall Apart (1958), and the PRP deputy national vice presidency in 1983.\n\nWole Soyinka (1934-Present), jailed 22 months in 1967, exiled in 1994, and the first African Nobel laureate in Literature in 1986.\n\nIt closes with Gani Fawehinmi (1938-2009), the people's lawyer, who practised in Lagos from 1965 and pursued the 1986 Dele Giwa case.\n\nNwankwo Kanu (1976-Present), whose contribution won Nigeria the 1996 Olympic Gold.\n\nAlongside them, a summary strand on the Nigerian diaspora, remittances and GDP."
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "Faraday's law and Lenz's law as concepts. Covers what the flux rule actually asserts — that only a changing magnetic flux Φ_B = BA cos θ induces an emf, never the flux itself — and the meaning of θ as the angle from the loop's normal. Covers the physical content of the minus sign: the induced current opposes the CHANGE in flux, not the external field, together with the deck's three working rules and the right-hand grip rule for getting the sense of the current. Ends on the energy argument, that Lenz's law is conservation of energy rather than a separate empirical law.",
+        "topic": "Faraday's law and Lenz's law as concepts.\n\nCovers what the flux rule actually asserts: only a changing magnetic flux Φ_B = BA cos θ induces an emf, never the flux itself. And the meaning of θ as the angle from the loop's normal.\n\nCovers the physical content of the minus sign: the induced current opposes the CHANGE in flux, not the external field.\n\nWith it, the deck's three working rules, and the right-hand grip rule for getting the sense of the current.\n\nEnds on the energy argument, that Lenz's law is conservation of energy rather than a separate empirical law.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
@@ -32,36 +32,36 @@
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "The concepts of both Week 11 decks. Decomposition versus modularisation, module independence measured by cohesion and coupling, the single responsibility principle, information hiding and its benefits, refactoring, and horizontal versus vertical structural partitioning. From the second deck: the definition and purpose of software architecture, the three levels of software pattern (architectural, design, idiom), and the two generic design approaches. Questions target the precise wording of the definitions and the mechanism behind each claim rather than recognition of the vocabulary.",
+        "topic": "The concepts of both Week 11 decks.\n\nDecomposition versus modularisation. Module independence measured by cohesion and coupling. The single responsibility principle. Information hiding and its benefits. Refactoring. Horizontal versus vertical structural partitioning.\n\nFrom the second deck: the definition and purpose of software architecture, the three levels of software pattern (architectural, design, idiom), and the two generic design approaches.\n\nQuestions target the precise wording of the definitions, and the mechanism behind each claim, rather than recognition of the vocabulary.",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Listening: hearing as passive and involuntary versus listening as an active, voluntary process requiring conscious effort to interpret and understand, and why effective listening drives academic success through understanding course content, following instructions and grasping complex concepts. The six areas under Importance of Listening are Effective Communication, Building Relationships, Conflict Resolution, Learning and Growth, Leadership Effectiveness and Avoiding Miscommunication. Six listening strategies are named — active listening, nonverbal communication, empathetic listening, paraphrasing, summarizing and note-taking — alongside the case study's six methodology headings (Active Listening, Nonverbal Communication, Empathetic Listening, Practical Strategies, Cultural Awareness, Reflective Practice) whose six practical strategies are paraphrasing, summarizing, asking clarifying questions, minimizing distractions, avoiding prejudgment and note-taking. The hour closes with a quantum-entanglement listening exercise of six comprehension questions and the six competencies claimed: Active Engagement, Critical Listening, Cultural Competence, Note-Taking Mastery, Empathetic Communication and Continuous Improvement."
+        "topic": "Listening.\n\nHearing is passive and involuntary. Listening is an active, voluntary process requiring conscious effort to interpret and understand.\n\nWhy effective listening drives academic success: understanding course content, following instructions, and grasping complex concepts.\n\nThe six areas under Importance of Listening are Effective Communication, Building Relationships, Conflict Resolution, Learning and Growth, Leadership Effectiveness and Avoiding Miscommunication.\n\nSix listening strategies are named: active listening, nonverbal communication, empathetic listening, paraphrasing, summarizing and note-taking.\n\nAlongside those, the case study's six methodology headings: Active Listening, Nonverbal Communication, Empathetic Listening, Practical Strategies, Cultural Awareness, Reflective Practice.\n\nIts six practical strategies are paraphrasing, summarizing, asking clarifying questions, minimizing distractions, avoiding prejudgment and note-taking.\n\nThe hour closes with a quantum-entanglement listening exercise of six comprehension questions.\n\nThen the six competencies claimed: Active Engagement, Critical Listening, Cultural Competence, Note-Taking Mastery, Empathetic Communication and Continuous Improvement."
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Problems-only session on Week 11 volumes of revolution. Set up and evaluate π∫ₐᵇ[R]²dx, π∫ₐᵇ([R]² − [r]²)dx and 2π∫ₐᵇ x f(x)dx on the deck's own numbers: her six worked examples, all three unanswered TASKs — √x from 1 to 4, y = x² over [0,2] about y = −1, and y = x against y = x² about the y-axis — plus irrational limits (√2, √3), a shifted axis, and one solid computed twice as a cross-check.",
+        "topic": "Problems-only session on Week 11 volumes of revolution.\n\nSet up and evaluate π∫ₐᵇ[R]²dx, π∫ₐᵇ([R]² − [r]²)dx and 2π∫ₐᵇ x f(x)dx on the deck's own numbers.\n\nHer six worked examples. Then all three unanswered TASKs: √x from 1 to 4; y = x² over [0,2] about y = −1; and y = x against y = x² about the y-axis.\n\nPlus irrational limits (√2, √3), a shifted axis, and one solid computed twice as a cross-check.",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Determining the permeability of free space from the axial field of a single-turn circular loop, B(z) = mu0*I*R^2 / [2(R^2 + z^2)^(3/2)], with B in tesla, I in amperes, and R and z in metres; apparatus is a circular loop, DC supply, ammeter, movable magnetic probe and tesla meter, set by default to Coil 1 with R = 0.10 m and I = 1 A. Readings: B at the centre (z = 0), then z increased in 2 cm steps to 38 cm for 20 readings in all, repeated for Coil 2 and Coil 3 so that mu0 can be shown independent of radius and current. Analysis: compute the factor x = I*R^2/[2(R^2 + z^2)^(3/2)] in A/m, plot B in tesla on the y-axis against x on the x-axis to get the line B = mu0*x through the origin, and read the gradient, which equals mu0 in T.m/A = H/m (if the factor omits I the gradient is mu0*I, so mu0 = gradient/I). Deck faults: the B(z) equation and the factor are dropped images, the slide heading is truncated at \"Magnetic-Permeability-of-\", the sample table skips from z = 10 cm to 26 cm, the logged data are in cm and nT and must be converted to m and T, and the summary sheet prints \"REPUTATION between like poles\" for REPULSION."
+        "topic": "Determining the permeability of free space from the axial field of a single-turn circular loop.\n\nThe field is B(z) = mu0*I*R^2 / [2(R^2 + z^2)^(3/2)], with B in tesla, I in amperes, and R and z in metres.\n\nApparatus is a circular loop, DC supply, ammeter, movable magnetic probe and tesla meter. It is set by default to Coil 1, with R = 0.10 m and I = 1 A.\n\nReadings: B at the centre (z = 0), then z increased in 2 cm steps to 38 cm, for 20 readings in all. Repeated for Coil 2 and Coil 3, so that mu0 can be shown independent of radius and current.\n\nAnalysis: compute the factor x = I*R^2/[2(R^2 + z^2)^(3/2)] in A/m. Plot B in tesla on the y-axis against x on the x-axis to get the line B = mu0*x through the origin.\n\nThen read the gradient, which equals mu0 in T.m/A = H/m. If the factor omits I, the gradient is mu0*I, so mu0 = gradient/I.\n\nDeck faults. The B(z) equation and the factor are dropped images. The slide heading is truncated at \"Magnetic-Permeability-of-\". The sample table skips from z = 10 cm to 26 cm. The logged data are in cm and nT and must be converted to m and T. And the summary sheet prints \"REPUTATION between like poles\" for REPULSION."
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "The same Faraday/Lenz material worked numerically. Computing induced emf from a rate of change of B in an N-turn coil, evaluating Φ = BA cos θ when the question specifies the angle to the loop's PLANE, and motional emf ε = BLv with its induced current I = ε/R and retarding force F = B²L²v/R. Also generator output, ε_peak = NBAω with ω = 2πf and ε_rms = ε_peak/√2, and the time-independent circulated charge q = N|ΔΦ|/R. Emphasis throughout on the unit, angle, 2π and current-sense traps.",
+        "topic": "The same Faraday/Lenz material worked numerically.\n\nComputing induced emf from a rate of change of B in an N-turn coil.\n\nEvaluating Φ = BA cos θ when the question specifies the angle to the loop's PLANE.\n\nMotional emf ε = BLv, with its induced current I = ε/R and retarding force F = B²L²v/R.\n\nAlso generator output: ε_peak = NBAω with ω = 2πf, and ε_rms = ε_peak/√2.\n\nAnd the time-independent circulated charge q = N|ΔΦ|/R.\n\nEmphasis throughout on the unit, angle, 2π and current-sense traps.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "COS_102",
-        "topic": "The same Week 11 material applied to concrete design judgements rather than recalled. Students read short module listings and pseudocode and decide whether a module is cohesive, what it is coupled to and why, which principle a design violates, and how to redraw the boundaries. Scenarios cover judging cohesion from a function list, spotting coupling through a shared data structure, evaluating what a proposed refactor buys and costs, checking a hierarchy against vertical partitioning, choosing top-down or bottom-up for a given project, and deciding whether a change qualifies as refactoring at all.",
+        "topic": "The same Week 11 material applied to concrete design judgements rather than recalled.\n\nStudents read short module listings and pseudocode. They decide whether a module is cohesive, what it is coupled to and why, which principle a design violates, and how to redraw the boundaries.\n\nScenarios cover judging cohesion from a function list, and spotting coupling through a shared data structure.\n\nThen evaluating what a proposed refactor buys and costs, and checking a hierarchy against vertical partitioning.\n\nThen choosing top-down or bottom-up for a given project, and deciding whether a change qualifies as refactoring at all.",
         "checkFile": "checks/Sat-COS_102.md"
       }
     },
@@ -217,7 +217,7 @@
       "day": "Mon",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 11 volumes of solids of revolution as the deck builds them: solid and axis of revolution and her four-step procedure; the disc formula V = π∫ₐᵇ[R(x)]²dx in x and in y; the washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx and why the squares subtract; the shell formula V = 2π∫ₐᵇ x f(x)dx and what x and f measure; how to tell which boundary is R; how the axis of revolution fixes the variable of integration; and the two labelling defects on the deck — slide 10's DISC heading over washer working, and slide 13's 'parallel' where her own examples show perpendicular.",
+      "topic": "Conceptual session on Week 11 volumes of solids of revolution, as the deck builds them.\n\nSolid and axis of revolution, and her four-step procedure.\n\nThe disc formula V = π∫ₐᵇ[R(x)]²dx, in x and in y.\n\nThe washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx, and why the squares subtract.\n\nThe shell formula V = 2π∫ₐᵇ x f(x)dx, and what x and f measure.\n\nHow to tell which boundary is R. How the axis of revolution fixes the variable of integration.\n\nThe two labelling defects on the deck: slide 10's DISC heading over washer working, and slide 13's 'parallel' where her own examples show perpendicular.",
       "maxScore": 12,
       "questions": [
         {
@@ -354,7 +354,7 @@
       "id": "tue-phy102",
       "day": "Tue",
       "course": "PHY_102",
-      "topic": "Faraday's law and Lenz's law as concepts. Covers what the flux rule actually asserts — that only a changing magnetic flux Φ_B = BA cos θ induces an emf, never the flux itself — and the meaning of θ as the angle from the loop's normal. Covers the physical content of the minus sign: the induced current opposes the CHANGE in flux, not the external field, together with the deck's three working rules and the right-hand grip rule for getting the sense of the current. Ends on the energy argument, that Lenz's law is conservation of energy rather than a separate empirical law.",
+      "topic": "Faraday's law and Lenz's law as concepts.\n\nCovers what the flux rule actually asserts: only a changing magnetic flux Φ_B = BA cos θ induces an emf, never the flux itself. And the meaning of θ as the angle from the loop's normal.\n\nCovers the physical content of the minus sign: the induced current opposes the CHANGE in flux, not the external field.\n\nWith it, the deck's three working rules, and the right-hand grip rule for getting the sense of the current.\n\nEnds on the energy argument, that Lenz's law is conservation of energy rather than a separate empirical law.",
       "maxScore": 12,
       "questions": [
         {
@@ -491,7 +491,7 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "The concepts of both Week 11 decks. Decomposition versus modularisation, module independence measured by cohesion and coupling, the single responsibility principle, information hiding and its benefits, refactoring, and horizontal versus vertical structural partitioning. From the second deck: the definition and purpose of software architecture, the three levels of software pattern (architectural, design, idiom), and the two generic design approaches. Questions target the precise wording of the definitions and the mechanism behind each claim rather than recognition of the vocabulary.",
+      "topic": "The concepts of both Week 11 decks.\n\nDecomposition versus modularisation. Module independence measured by cohesion and coupling. The single responsibility principle. Information hiding and its benefits. Refactoring. Horizontal versus vertical structural partitioning.\n\nFrom the second deck: the definition and purpose of software architecture, the three levels of software pattern (architectural, design, idiom), and the two generic design approaches.\n\nQuestions target the precise wording of the definitions, and the mechanism behind each claim, rather than recognition of the vocabulary.",
       "maxScore": 12,
       "questions": [
         {
@@ -629,7 +629,7 @@
       "day": "Thu",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Problems-only session on Week 11 volumes of revolution. Set up and evaluate π∫ₐᵇ[R]²dx, π∫ₐᵇ([R]² − [r]²)dx and 2π∫ₐᵇ x f(x)dx on the deck's own numbers: her six worked examples, all three unanswered TASKs — √x from 1 to 4, y = x² over [0,2] about y = −1, and y = x against y = x² about the y-axis — plus irrational limits (√2, √3), a shifted axis, and one solid computed twice as a cross-check.",
+      "topic": "Problems-only session on Week 11 volumes of revolution.\n\nSet up and evaluate π∫ₐᵇ[R]²dx, π∫ₐᵇ([R]² − [r]²)dx and 2π∫ₐᵇ x f(x)dx on the deck's own numbers.\n\nHer six worked examples. Then all three unanswered TASKs: √x from 1 to 4; y = x² over [0,2] about y = −1; and y = x against y = x² about the y-axis.\n\nPlus irrational limits (√2, √3), a shifted axis, and one solid computed twice as a cross-check.",
       "maxScore": 12,
       "questions": [
         {
@@ -766,7 +766,7 @@
       "id": "fri-phy102",
       "day": "Fri",
       "course": "PHY_102",
-      "topic": "The same Faraday/Lenz material worked numerically. Computing induced emf from a rate of change of B in an N-turn coil, evaluating Φ = BA cos θ when the question specifies the angle to the loop's PLANE, and motional emf ε = BLv with its induced current I = ε/R and retarding force F = B²L²v/R. Also generator output, ε_peak = NBAω with ω = 2πf and ε_rms = ε_peak/√2, and the time-independent circulated charge q = N|ΔΦ|/R. Emphasis throughout on the unit, angle, 2π and current-sense traps.",
+      "topic": "The same Faraday/Lenz material worked numerically.\n\nComputing induced emf from a rate of change of B in an N-turn coil.\n\nEvaluating Φ = BA cos θ when the question specifies the angle to the loop's PLANE.\n\nMotional emf ε = BLv, with its induced current I = ε/R and retarding force F = B²L²v/R.\n\nAlso generator output: ε_peak = NBAω with ω = 2πf, and ε_rms = ε_peak/√2.\n\nAnd the time-independent circulated charge q = N|ΔΦ|/R.\n\nEmphasis throughout on the unit, angle, 2π and current-sense traps.",
       "maxScore": 12,
       "questions": [
         {
@@ -903,7 +903,7 @@
       "id": "sat-cos102",
       "day": "Fri",
       "course": "COS_102",
-      "topic": "The same Week 11 material applied to concrete design judgements rather than recalled. You read short module listings and pseudocode and decide whether a module is cohesive, what it is coupled to and why, which principle a design violates, and how to redraw the boundaries. Scenarios cover judging cohesion from a function list, spotting coupling through a shared data structure, evaluating what a proposed refactor buys and costs, checking a hierarchy against vertical partitioning, choosing top-down or bottom-up for a given project, and deciding whether a change qualifies as refactoring at all.",
+      "topic": "The same Week 11 material applied to concrete design judgements rather than recalled.\n\nYou read short module listings and pseudocode. You decide whether a module is cohesive, what it is coupled to and why, which principle a design violates, and how to redraw the boundaries.\n\nScenarios cover judging cohesion from a function list, and spotting coupling through a shared data structure.\n\nThen evaluating what a proposed refactor buys and costs, and checking a hierarchy against vertical partitioning.\n\nThen choosing top-down or bottom-up for a given project, and deciding whether a change qualifies as refactoring at all.",
       "maxScore": 12,
       "questions": [
         {

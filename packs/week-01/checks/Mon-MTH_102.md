@@ -1,6 +1,16 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 1 exactly as the lecturer builds it: the SUMMARY definition of a function as a relation assigning exactly one output to each input; slide 9's nesting of functions inside relations; the three sets on slide 5 (domain, codomain, range) with f(x) = x² and the unreached values 17, 23, 19; what 'real-valued' adds on slide 8; the reasoning behind D = (−∞, ∞) for (3x + 1)/(x² + 5); which step of Range Example 3 reverses an inequality and why; what 'switch x with y' actually does; and why f ∘ g and g ∘ f sit on one slide. Includes the two slide errors — the table on slide 22 and the word 'exponentially' on slide 21.*
+*Week 1 functions, exactly as she builds it.*
+
+*The SUMMARY definition of a function: a relation assigning exactly one output to each input. Slide 9's nesting of functions inside relations.*
+
+*The three sets on slide 5 — domain, codomain, range — with f(x) = x² and the unreached values 17, 23, 19.*
+
+*What 'real-valued' adds on slide 8. The reasoning behind D = (−∞, ∞) for (3x + 1)/(x² + 5).*
+
+*Which step of Range Example 3 reverses an inequality, and why. What 'switch x with y' actually does. Why f ∘ g and g ∘ f sit on one slide.*
+
+*Includes the two slide errors: the table on slide 22, and the word 'exponentially' on slide 21.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** The deck's SUMMARY slide defines a function. Which phrase carries the whole definition?

@@ -8,19 +8,19 @@
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Conceptual session on Week 7 integration exactly as the lecturer builds it: the definition ∫f(x)dx = F(x) + c with F′(x) = f(x); why the constant is forced, via her Example 1 line [G(x) + c]′ = 2x + 0 = 2x; the power rule ∫xⁿdx = x^(n+1)/(n+1) + c and the reason n ≠ −1; what splitting an integral does and does not license; and the Fundamental Theorem ∫ₐᵇf(x)dx = F(b) − F(a) = F(x)|ₐᵇ, why c cancels there, and why the result is a number.",
+        "topic": "Conceptual session on Week 7 integration, exactly as she builds it.\n\nThe definition ∫f(x)dx = F(x) + c, with F′(x) = f(x).\n\nWhy the constant is forced, via her Example 1 line [G(x) + c]′ = 2x + 0 = 2x.\n\nThe power rule ∫xⁿdx = x^(n+1)/(n+1) + c, and the reason n ≠ −1.\n\nWhat splitting an integral does and does not license.\n\nThe Fundamental Theorem ∫ₐᵇf(x)dx = F(b) − F(a) = F(x)|ₐᵇ. Why c cancels there, and why the result is a number.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Human rights defined and located in Chapter IV of the 1999 Constitution (Sections 33-46) and the African Charter, and the five common human rights abuses in Nigeria - extra-judicial killing, rape, restriction of freedom of expression, child marriage and domestic violence - with the NHRC's 2020-2021 complaint figures and the VAPP Act 2015"
+        "topic": "Human rights: what they are and where they live.\n\nThey are defined and located in Chapter IV of the 1999 Constitution (Sections 33-46), and in the African Charter.\n\nThen the five common human rights abuses in Nigeria - extra-judicial killing, rape, restriction of freedom of expression, child marriage and domestic violence.\n\nWith the NHRC's 2020-2021 complaint figures and the VAPP Act 2015."
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "Power in an A.C. circuit as concepts: the instantaneous power p(t) = v(t)i(t) and its oscillation at twice the supply frequency, the derivation of P = Vrms*Irms*cos(phi), why a pure reactance dissipates no average power, and the distinction between real, reactive and apparent power with the power factor cos(phi) = R/Z = P/S",
+        "topic": "Power in an A.C. circuit, as concepts.\n\nThe instantaneous power p(t) = v(t)i(t), and why it oscillates at twice the supply frequency.\n\nThe derivation of P = Vrms*Irms*cos(phi).\n\nWhy a pure reactance dissipates no average power.\n\nThe distinction between real, reactive and apparent power, with the power factor cos(phi) = R/Z = P/S.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
@@ -32,36 +32,36 @@
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "Data types, variables and programme objects as concepts, exactly as the two decks give them: what a programme contains besides its instructions, what a data type is and the three basic types in C, the deck's rule for a variable definition and its sentence that a definition is also a declaration but not every declaration is a definition, why variable names are replaced by memory addresses, the six operator categories by name, and what a programme object is - state in variables, behaviour in methods, who may reach the state, and structure versus union versus class.",
+        "topic": "Data types, variables and programme objects, as concepts, exactly as the two decks give them.\n\nWhat a programme contains besides its instructions. What a data type is, and the three basic types in C.\n\nThe deck's rule for a variable definition, and its sentence that a definition is also a declaration but not every declaration is a definition.\n\nWhy variable names are replaced by memory addresses. The six operator categories by name.\n\nWhat a programme object is - state in variables, behaviour in methods, who may reach the state, and structure versus union versus class.",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Comprehension strategies and SQ3R: the five stages in order - Survey, Question, Read, Recite, Review - what each requires, why the reader generates their own questions, and the supporting strategies of context clues, fact vs opinion, inference, and explicit vs implicit meaning"
+        "topic": "Comprehension strategies and SQ3R.\n\nThe five stages in order - Survey, Question, Read, Recite, Review - and what each requires.\n\nWhy the reader generates their own questions.\n\nThen the supporting strategies of context clues, fact vs opinion, inference, and explicit vs implicit meaning."
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Problems-only session on Week 7 integration. Apply ∫xⁿdx = x^(n+1)/(n+1) + c to polynomials, negative powers and fractions rewritten as powers; then evaluate definite integrals by the Fundamental Theorem, F(x)|ₐᵇ = F(b) − F(a). Includes both tasks the lecturer set — ∫(2x² − 6x − 3)dx and ∫₋₁²(7x − 5)dx — plus limits that are negative, antiderivatives that carry a minus sign, and one worked solution to diagnose.",
+        "topic": "Problems-only session on Week 7 integration.\n\nApply ∫xⁿdx = x^(n+1)/(n+1) + c to polynomials, negative powers, and fractions rewritten as powers.\n\nThen evaluate definite integrals by the Fundamental Theorem, F(x)|ₐᵇ = F(b) − F(a).\n\nIncludes both tasks the lecturer set — ∫(2x² − 6x − 3)dx and ∫₋₁²(7x − 5)dx.\n\nPlus limits that are negative, antiderivatives that carry a minus sign, and one worked solution to diagnose.",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Experiment on discharging a capacitor: the decay law V(t) = V0 * e^(-t/tau) and its contrast with last week's charging law, the procedure order (charge to maximum, then open the switch and start timing), the V-against-t and ln V-against-t graphs with gradient -1/tau and intercept ln V0, and the finishing calculations C = tau/R and the percentage error"
+        "topic": "Experiment on discharging a capacitor.\n\nThe decay law V(t) = V0 * e^(-t/tau), and its contrast with last week's charging law.\n\nThe procedure order: charge to maximum, then open the switch and start timing.\n\nThe V-against-t and ln V-against-t graphs, with gradient -1/tau and intercept ln V0.\n\nThen the finishing calculations, C = tau/R and the percentage error."
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "Numerical work on power in an A.C. circuit: substituting into X_L = 2*pi*f*L and X_C = 1/(2*pi*f*C), computing Z, I and cos(phi), then P = Vrms*Irms*cos(phi) = Irms^2 R with Q and S, checking by S^2 = P^2 + Q^2, and doing power-factor correction, resonance and instantaneous-power calculations",
+        "topic": "Numerical work on power in an A.C. circuit.\n\nSubstituting into X_L = 2*pi*f*L and X_C = 1/(2*pi*f*C), then computing Z, I and cos(phi).\n\nThen P = Vrms*Irms*cos(phi) = Irms^2 R with Q and S, checking by S^2 = P^2 + Q^2.\n\nThen power-factor correction, resonance and instantaneous-power calculations.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "COS_102",
-        "topic": "Applied work on this week's material: writing a definition in the deck's required order, reaching a member with the dot syntax, reading struct, union and class code from the week's summary sheet, deciding what a union can hold at one time, separating an object's state from its behaviour on a new example, data encapsulation with public and private, and representing a problem as data.",
+        "topic": "Applied work on this week's material.\n\nWriting a definition in the deck's required order, and reaching a member with the dot syntax.\n\nReading struct, union and class code from the week's summary sheet, and deciding what a union can hold at one time.\n\nSeparating an object's state from its behaviour on a new example.\n\nThen data encapsulation with public and private, and representing a problem as data.",
         "checkFile": "checks/Sat-COS_102.md"
       }
     },
@@ -228,7 +228,7 @@
       "day": "Mon",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 7 integration exactly as the lecturer builds it: the definition ∫f(x)dx = F(x) + c with F′(x) = f(x); why the constant is forced, via her Example 1 line [G(x) + c]′ = 2x + 0 = 2x; the power rule ∫xⁿdx = x^(n+1)/(n+1) + c and the reason n ≠ −1; what splitting an integral does and does not license; and the Fundamental Theorem ∫ₐᵇf(x)dx = F(b) − F(a) = F(x)|ₐᵇ, why c cancels there, and why the result is a number.",
+      "topic": "Conceptual session on Week 7 integration, exactly as she builds it.\n\nThe definition ∫f(x)dx = F(x) + c, with F′(x) = f(x).\n\nWhy the constant is forced, via her Example 1 line [G(x) + c]′ = 2x + 0 = 2x.\n\nThe power rule ∫xⁿdx = x^(n+1)/(n+1) + c, and the reason n ≠ −1.\n\nWhat splitting an integral does and does not license.\n\nThe Fundamental Theorem ∫ₐᵇf(x)dx = F(b) − F(a) = F(x)|ₐᵇ. Why c cancels there, and why the result is a number.",
       "maxScore": 12,
       "questions": [
         {
@@ -365,7 +365,7 @@
       "id": "tue-phy102",
       "day": "Tue",
       "course": "PHY_102",
-      "topic": "Power in an A.C. circuit as concepts: the instantaneous power p(t) = v(t)i(t) and its oscillation at twice the supply frequency, the derivation of P = Vrms*Irms*cos(phi), why a pure reactance dissipates no average power, and the distinction between real, reactive and apparent power with the power factor cos(phi) = R/Z = P/S",
+      "topic": "Power in an A.C. circuit, as concepts.\n\nThe instantaneous power p(t) = v(t)i(t), and why it oscillates at twice the supply frequency.\n\nThe derivation of P = Vrms*Irms*cos(phi).\n\nWhy a pure reactance dissipates no average power.\n\nThe distinction between real, reactive and apparent power, with the power factor cos(phi) = R/Z = P/S.",
       "maxScore": 12,
       "questions": [
         {
@@ -502,7 +502,7 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "Data types, variables and programme objects as concepts, exactly as the two decks give them: what a programme contains besides its instructions, what a data type is and the three basic types in C, the deck's rule for a variable definition and its sentence that a definition is also a declaration but not every declaration is a definition, why variable names are replaced by memory addresses, the six operator categories by name, and what a programme object is - state in variables, behaviour in methods, who may reach the state, and structure versus union versus class.",
+      "topic": "Data types, variables and programme objects, as concepts, exactly as the two decks give them.\n\nWhat a programme contains besides its instructions. What a data type is, and the three basic types in C.\n\nThe deck's rule for a variable definition, and its sentence that a definition is also a declaration but not every declaration is a definition.\n\nWhy variable names are replaced by memory addresses. The six operator categories by name.\n\nWhat a programme object is - state in variables, behaviour in methods, who may reach the state, and structure versus union versus class.",
       "maxScore": 12,
       "questions": [
         {
@@ -640,7 +640,7 @@
       "day": "Thu",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Problems-only session on Week 7 integration. Apply ∫xⁿdx = x^(n+1)/(n+1) + c to polynomials, negative powers and fractions rewritten as powers; then evaluate definite integrals by the Fundamental Theorem, F(x)|ₐᵇ = F(b) − F(a). Includes both tasks the lecturer set — ∫(2x² − 6x − 3)dx and ∫₋₁²(7x − 5)dx — plus limits that are negative, antiderivatives that carry a minus sign, and one worked solution to diagnose.",
+      "topic": "Problems-only session on Week 7 integration.\n\nApply ∫xⁿdx = x^(n+1)/(n+1) + c to polynomials, negative powers, and fractions rewritten as powers.\n\nThen evaluate definite integrals by the Fundamental Theorem, F(x)|ₐᵇ = F(b) − F(a).\n\nIncludes both tasks the lecturer set — ∫(2x² − 6x − 3)dx and ∫₋₁²(7x − 5)dx.\n\nPlus limits that are negative, antiderivatives that carry a minus sign, and one worked solution to diagnose.",
       "maxScore": 12,
       "questions": [
         {
@@ -777,7 +777,7 @@
       "id": "fri-phy102",
       "day": "Fri",
       "course": "PHY_102",
-      "topic": "Numerical work on power in an A.C. circuit: substituting into X_L = 2*pi*f*L and X_C = 1/(2*pi*f*C), computing Z, I and cos(phi), then P = Vrms*Irms*cos(phi) = Irms^2 R with Q and S, checking by S^2 = P^2 + Q^2, and doing power-factor correction, resonance and instantaneous-power calculations",
+      "topic": "Numerical work on power in an A.C. circuit.\n\nSubstituting into X_L = 2*pi*f*L and X_C = 1/(2*pi*f*C), then computing Z, I and cos(phi).\n\nThen P = Vrms*Irms*cos(phi) = Irms^2 R with Q and S, checking by S^2 = P^2 + Q^2.\n\nThen power-factor correction, resonance and instantaneous-power calculations.",
       "maxScore": 12,
       "questions": [
         {
@@ -914,7 +914,7 @@
       "id": "sat-cos102",
       "day": "Fri",
       "course": "COS_102",
-      "topic": "Applied work on this week's material: writing a definition in the deck's required order, reaching a member with the dot syntax, reading struct, union and class code from the week's summary sheet, deciding what a union can hold at one time, separating an object's state from its behaviour on a new example, data encapsulation with public and private, and representing a problem as data.",
+      "topic": "Applied work on this week's material.\n\nWriting a definition in the deck's required order, and reaching a member with the dot syntax.\n\nReading struct, union and class code from the week's summary sheet, and deciding what a union can hold at one time.\n\nSeparating an object's state from its behaviour on a new example.\n\nThen data encapsulation with public and private, and representing a problem as data.",
       "maxScore": 12,
       "questions": [
         {

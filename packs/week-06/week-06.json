@@ -8,19 +8,19 @@
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Conceptual session on Week 6 higher-order derivatives exactly as the deck builds them: that f″ is obtained by differentiating f′ again and no new rule is introduced; the power rule f′ = nx^(n−1) and the NOTE that the derivative of a constant is 0; rewriting √(x³) as x^(3/2) before differentiating; the chain rule f′(x) = y′(u)·u′(x) and why sin(5x) keeps depositing a factor 5 while e^(3x) keeps depositing a 3 without ever changing sign; the quotient rule [v·u′ − u·v′]/v² and why ln(1 + x²) needs it at every order after the first; and the notation f⁽⁴⁾(x) = (f‴(x))′.",
+        "topic": "Week 6 higher-order derivatives, exactly as the deck builds them.\n\nThat f″ is obtained by differentiating f′ again, and no new rule is introduced.\n\nThe power rule f′ = nx^(n−1), and the NOTE that the derivative of a constant is 0.\n\nRewriting √(x³) as x^(3/2) before differentiating.\n\nThe chain rule f′(x) = y′(u)·u′(x), and why sin(5x) keeps depositing a factor 5 while e^(3x) keeps depositing a 3 without ever changing sign.\n\nThe quotient rule [v·u′ − u·v′]/v², and why ln(1 + x²) needs it at every order after the first.\n\nThe notation f⁽⁴⁾(x) = (f‴(x))′.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Nigeria's indigenous trade system c. 1500-1800 AD and its colonial disruption into the Western capitalist model, then Nigeria's economic development since 1960 - the oil boom, SAP, the democratic-era GDP and reserve figures, and the stated causes of and solutions to Nigeria's economic woes"
+        "topic": "Nigeria's indigenous trade system c. 1500-1800 AD, and its colonial disruption into the Western capitalist model.\n\nThen Nigeria's economic development since 1960 - the oil boom, SAP, the democratic-era GDP and reserve figures, and the stated causes of and solutions to Nigeria's economic woes"
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "Conceptual session on Week 6 exactly as Dr. Adeniji builds it: peak value as the maximum instantaneous value measured from zero; rms as the equivalent DC value that dissipates the same power in a resistive load; the source V = V_max sin ωt with ω = 2πf = 2π/T in rad s⁻¹; I = (V_max/R) sin ωt = I_max sin ωt so I_max = V_max/R; why a direct average of an alternating quantity is useless and why squaring fixes it, I² = I²_max sin²ωt with (I²)_av = ½I²_max; the two results I_rms = 0.7071 I_max and V_rms = 0.7071 V_max; why AC meters are calibrated in rms; and P_av = I²_rms R = V²_rms/R. Scope boundaries included: no reactance, impedance, phasors or resonance in this deck.",
+        "topic": "Week 6, exactly as Dr. Adeniji builds it.\n\nPeak value as the maximum instantaneous value measured from zero. Rms as the equivalent DC value that dissipates the same power in a resistive load.\n\nThe source V = V_max sin ωt, with ω = 2πf = 2π/T in rad s⁻¹.\n\nThen I = (V_max/R) sin ωt = I_max sin ωt, so I_max = V_max/R.\n\nWhy a direct average of an alternating quantity is useless, and why squaring fixes it: I² = I²_max sin²ωt with (I²)_av = ½I²_max.\n\nThe two results I_rms = 0.7071 I_max and V_rms = 0.7071 V_max.\n\nWhy AC meters are calibrated in rms. And P_av = I²_rms R = V²_rms/R.\n\nScope boundaries included: no reactance, impedance, phasors or resonance in this deck.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
@@ -32,36 +32,36 @@
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "Pseudocode concepts: what a pseudocode is and what it is for, the rules that govern it, the eight constructs and where each one tests its condition, the seven steps of writing one, its stated advantages and disadvantages, and how it relates to an algorithm and to a flowchart",
+        "topic": "Pseudocode concepts: what a pseudocode is and what it is for.\n\nThe rules that govern it. The eight constructs, and where each one tests its condition. The seven steps of writing one.\n\nIts stated advantages and disadvantages, and how it relates to an algorithm and to a flowchart",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Steps to writing a summary, a letter and a report - the ordered procedure for each, the five key parts of a letter, and the standard report sections from introduction and methodology through findings, conclusions and recommendations"
+        "topic": "Steps to writing a summary, a letter and a report - the ordered procedure for each.\n\nThe five key parts of a letter.\n\nThe standard report sections, from introduction and methodology through findings, conclusions and recommendations"
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Problems-only session on Week 6 higher-order derivatives. Compute repeated derivatives of her own functions and one order beyond them: x⁴ + 2x³ − 15x + 4, 3 tan x + 3, √(x³) = x^(3/2), ln x, sin(5x) + e^(3x), and the deck's four-order quotient-rule chain on ln(1 + x²); plus both TASKs she leaves unanswered — the second derivative of cos(3x) and the third derivative of xeˣ at x = 2 — and the arithmetic slip in her printed fourth derivative.",
+        "topic": "Problems-only session on Week 6 higher-order derivatives.\n\nCompute repeated derivatives of her own functions, and one order beyond them: x⁴ + 2x³ − 15x + 4, 3 tan x + 3, √(x³) = x^(3/2), ln x, and sin(5x) + e^(3x).\n\nThen the deck's four-order quotient-rule chain on ln(1 + x²).\n\nPlus both TASKs she leaves unanswered: the second derivative of cos(3x), and the third derivative of xeˣ at x = 2.\n\nAnd the arithmetic slip in her printed fourth derivative.",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Charging a capacitor: V(t) = V0(1 - e^(-t/tau)), reading the time constant off the 63.2% point of the V-t curve, obtaining C = tau/R and its percentage error, plus the apparatus, procedure, precautions and sources of error"
+        "topic": "Charging a capacitor: V(t) = V0(1 - e^(-t/tau)).\n\nReading the time constant off the 63.2% point of the V-t curve. Obtaining C = tau/R and its percentage error.\n\nPlus the apparatus, procedure, precautions and sources of error"
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "Problems-only session on Week 6. Convert between peak and rms in both directions using V_rms = 0.7071 V_max and V_max = V_rms/0.7071 = 1.4142 V_rms; read I_max, ω, f and T straight off an equation of the form i = I_max sin ωt; apply Ohm's law consistently within one kind of value, I_rms = V_rms/R; and compute power with P_av = I²_rms R = V²_rms/R and P_max = V²_max/R = 2P_av. Includes all three of the lecturer's own practice questions with their arithmetic, the 120 V versus 250 V discrepancy between her Question 2 slides, and one wrong worked solution to diagnose.",
+        "topic": "Problems-only session on Week 6.\n\nConvert between peak and rms in both directions, using V_rms = 0.7071 V_max and V_max = V_rms/0.7071 = 1.4142 V_rms.\n\nRead I_max, ω, f and T straight off an equation of the form i = I_max sin ωt.\n\nApply Ohm's law consistently within one kind of value: I_rms = V_rms/R.\n\nCompute power with P_av = I²_rms R = V²_rms/R and P_max = V²_max/R = 2P_av.\n\nIncludes all three of the lecturer's own practice questions with their arithmetic, the 120 V versus 250 V discrepancy between her Question 2 slides, and one wrong worked solution to diagnose.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "COS_102",
-        "topic": "Applied pseudocode: tracing a fragment line by line to what it prints, finding the bug in a fragment and naming the rule or condition it breaks, choosing the fragment that implements a stated task, and the off-by-one and loop-condition traps in FOR, WHILE and REPEAT-UNTIL",
+        "topic": "Applied pseudocode.\n\nTracing a fragment line by line to what it prints. Finding the bug in a fragment and naming the rule or condition it breaks. Choosing the fragment that implements a stated task.\n\nAnd the off-by-one and loop-condition traps in FOR, WHILE and REPEAT-UNTIL",
         "checkFile": "checks/Sat-COS_102.md"
       }
     },
@@ -226,7 +226,7 @@
       "day": "Mon",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 6 higher-order derivatives exactly as the deck builds them: that f″ is obtained by differentiating f′ again and no new rule is introduced; the power rule f′ = nx^(n−1) and the NOTE that the derivative of a constant is 0; rewriting √(x³) as x^(3/2) before differentiating; the chain rule f′(x) = y′(u)·u′(x) and why sin(5x) keeps depositing a factor 5 while e^(3x) keeps depositing a 3 without ever changing sign; the quotient rule [v·u′ − u·v′]/v² and why ln(1 + x²) needs it at every order after the first; and the notation f⁽⁴⁾(x) = (f‴(x))′.",
+      "topic": "Week 6 higher-order derivatives, exactly as the deck builds them.\n\nThat f″ is obtained by differentiating f′ again, and no new rule is introduced.\n\nThe power rule f′ = nx^(n−1), and the NOTE that the derivative of a constant is 0.\n\nRewriting √(x³) as x^(3/2) before differentiating.\n\nThe chain rule f′(x) = y′(u)·u′(x), and why sin(5x) keeps depositing a factor 5 while e^(3x) keeps depositing a 3 without ever changing sign.\n\nThe quotient rule [v·u′ − u·v′]/v², and why ln(1 + x²) needs it at every order after the first.\n\nThe notation f⁽⁴⁾(x) = (f‴(x))′.",
       "maxScore": 12,
       "questions": [
         {
@@ -364,7 +364,7 @@
       "day": "Tue",
       "course": "PHY_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 6 exactly as Dr. Adeniji builds it: peak value as the maximum instantaneous value measured from zero; rms as the equivalent DC value that dissipates the same power in a resistive load; the source V = V_max sin ωt with ω = 2πf = 2π/T in rad s⁻¹; I = (V_max/R) sin ωt = I_max sin ωt so I_max = V_max/R; why a direct average of an alternating quantity is useless and why squaring fixes it, I² = I²_max sin²ωt with (I²)_av = ½I²_max; the two results I_rms = 0.7071 I_max and V_rms = 0.7071 V_max; why AC meters are calibrated in rms; and P_av = I²_rms R = V²_rms/R. Scope boundaries included: no reactance, impedance, phasors or resonance in this deck.",
+      "topic": "Week 6, exactly as Dr. Adeniji builds it.\n\nPeak value as the maximum instantaneous value measured from zero. Rms as the equivalent DC value that dissipates the same power in a resistive load.\n\nThe source V = V_max sin ωt, with ω = 2πf = 2π/T in rad s⁻¹.\n\nThen I = (V_max/R) sin ωt = I_max sin ωt, so I_max = V_max/R.\n\nWhy a direct average of an alternating quantity is useless, and why squaring fixes it: I² = I²_max sin²ωt with (I²)_av = ½I²_max.\n\nThe two results I_rms = 0.7071 I_max and V_rms = 0.7071 V_max.\n\nWhy AC meters are calibrated in rms. And P_av = I²_rms R = V²_rms/R.\n\nScope boundaries included: no reactance, impedance, phasors or resonance in this deck.",
       "maxScore": 12,
       "questions": [
         {
@@ -501,7 +501,7 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "Pseudocode concepts: what a pseudocode is and what it is for, the rules that govern it, the eight constructs and where each one tests its condition, the seven steps of writing one, its stated advantages and disadvantages, and how it relates to an algorithm and to a flowchart",
+      "topic": "Pseudocode concepts: what a pseudocode is and what it is for.\n\nThe rules that govern it. The eight constructs, and where each one tests its condition. The seven steps of writing one.\n\nIts stated advantages and disadvantages, and how it relates to an algorithm and to a flowchart",
       "maxScore": 12,
       "questions": [
         {
@@ -639,7 +639,7 @@
       "day": "Thu",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Problems-only session on Week 6 higher-order derivatives. Compute repeated derivatives of her own functions and one order beyond them: x⁴ + 2x³ − 15x + 4, 3 tan x + 3, √(x³) = x^(3/2), ln x, sin(5x) + e^(3x), and the deck's four-order quotient-rule chain on ln(1 + x²); plus both TASKs she leaves unanswered — the second derivative of cos(3x) and the third derivative of xeˣ at x = 2 — and the arithmetic slip in her printed fourth derivative.",
+      "topic": "Problems-only session on Week 6 higher-order derivatives.\n\nCompute repeated derivatives of her own functions, and one order beyond them: x⁴ + 2x³ − 15x + 4, 3 tan x + 3, √(x³) = x^(3/2), ln x, and sin(5x) + e^(3x).\n\nThen the deck's four-order quotient-rule chain on ln(1 + x²).\n\nPlus both TASKs she leaves unanswered: the second derivative of cos(3x), and the third derivative of xeˣ at x = 2.\n\nAnd the arithmetic slip in her printed fourth derivative.",
       "maxScore": 12,
       "questions": [
         {
@@ -777,7 +777,7 @@
       "day": "Fri",
       "course": "PHY_102",
       "slot": "deep",
-      "topic": "Problems-only session on Week 6. Convert between peak and rms in both directions using V_rms = 0.7071 V_max and V_max = V_rms/0.7071 = 1.4142 V_rms; read I_max, ω, f and T straight off an equation of the form i = I_max sin ωt; apply Ohm's law consistently within one kind of value, I_rms = V_rms/R; and compute power with P_av = I²_rms R = V²_rms/R and P_max = V²_max/R = 2P_av. Includes all three of the lecturer's own practice questions with their arithmetic, the 120 V versus 250 V discrepancy between her Question 2 slides, and one wrong worked solution to diagnose.",
+      "topic": "Problems-only session on Week 6.\n\nConvert between peak and rms in both directions, using V_rms = 0.7071 V_max and V_max = V_rms/0.7071 = 1.4142 V_rms.\n\nRead I_max, ω, f and T straight off an equation of the form i = I_max sin ωt.\n\nApply Ohm's law consistently within one kind of value: I_rms = V_rms/R.\n\nCompute power with P_av = I²_rms R = V²_rms/R and P_max = V²_max/R = 2P_av.\n\nIncludes all three of the lecturer's own practice questions with their arithmetic, the 120 V versus 250 V discrepancy between her Question 2 slides, and one wrong worked solution to diagnose.",
       "maxScore": 12,
       "questions": [
         {
@@ -914,7 +914,7 @@
       "id": "sat-cos102",
       "day": "Fri",
       "course": "COS_102",
-      "topic": "Applied pseudocode: tracing a fragment line by line to what it prints, finding the bug in a fragment and naming the rule or condition it breaks, choosing the fragment that implements a stated task, and the off-by-one and loop-condition traps in FOR, WHILE and REPEAT-UNTIL",
+      "topic": "Applied pseudocode.\n\nTracing a fragment line by line to what it prints. Finding the bug in a fragment and naming the rule or condition it breaks. Choosing the fragment that implements a stated task.\n\nAnd the off-by-one and loop-condition traps in FOR, WHILE and REPEAT-UNTIL",
       "maxScore": 12,
       "questions": [
         {

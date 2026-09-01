@@ -1219,6 +1219,27 @@ function factRow(parent, course, slot, chk){
 function briefInto(parent, text, cls){
   var t = String(text || "").trim();
   if(!t){ parent.appendChild(el("p", cls||"muted", "No brief for this session.")); return; }
+
+  /* A brief that already has paragraph breaks was written by someone who decided where
+     they go. Use them.
+
+     Below this is a parser that infers structure from semicolons and gerund phrases. It
+     earned its place when every brief was one 570-character sentence and inferring was
+     the only option. Against properly punctuated prose it does harm: "Her orderings,
+     which matter: the product rule u(x)v′(x) + u′(x)v(x), and the quotient rule ..."
+     came out as three bullets beginning "Her orderings", "Which matter" and "And". So
+     it now only runs on text that gave it nothing to go on. */
+  if(t.indexOf("\n\n") >= 0){
+    var box = el("div","brief");
+    t.split(/\n{2,}/).forEach(function(para){
+      var p = para.trim();
+      if(p) box.appendChild(el("p", cls || "muted", codeHtml(p)));
+    });
+    parent.appendChild(box);
+    makeSelectable(box);
+    return;
+  }
+
   var blocks = briefParts(t), holder = el("div","brief"), ul = null;
   if(blocks){
     blocks.forEach(function(b){

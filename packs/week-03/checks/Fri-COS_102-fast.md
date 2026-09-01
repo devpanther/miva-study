@@ -1,6 +1,12 @@
 # Friday, second hour — COS_102 check
 
-*The same Week 3 computational approaches, treated as practice. This session applies them to the concrete problems the lessons name: counting the search space of the four-digit padlock under brute force, tracing Merge sort on a small set as a divide and conquer algorithm, running the greedy activity-selection example with start times 2, 4, 1, 6, 9, 6 and end times 3, 5, 7, 8, 10, 10, and converting a naive recursive Fibonacci into a dynamic programming solution. It also asks which named approach fits a described situation, how to lay out a pipelined calculation, and how to diagnose a solution that is wrong or wastefully slow, including the food-delivery routing case study. Definitions are assumed known from Wednesday; here they must be executed.*
+*The same Week 3 computational approaches, treated as practice.*
+
+*This session applies them to the concrete problems the lessons name. Counting the search space of the four-digit padlock under brute force. Tracing Merge sort on a small set as a divide and conquer algorithm. Running the greedy activity-selection example with start times 2, 4, 1, 6, 9, 6 and end times 3, 5, 7, 8, 10, 10. And converting a naive recursive Fibonacci into a dynamic programming solution.*
+
+*It also asks which named approach fits a described situation, how to lay out a pipelined calculation, and how to diagnose a solution that is wrong or wastefully slow. That includes the food-delivery routing case study.*
+
+*Definitions are assumed known from Wednesday; here they must be executed.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** A padlock has four digit wheels, each showing 0 to 9, and the combination has been forgotten. How many combinations must a brute force attack be prepared to try in the worst case?

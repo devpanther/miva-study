@@ -8,19 +8,19 @@
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.",
+        "topic": "Conceptual session on Week 9, exactly as the deck builds it.\n\nThe two triggers that make ∫ₐᵇ f(x)dx improper.\n\nThe Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists.\n\nWhy ∫₋∞^∞ must be split, and why one divergent half ends the question.\n\nThe three Type II clauses, and the one-sided limits c → b⁻ and c → a⁺.\n\nThe Comparison Test in her lettering 0 ≤ g(x) ≤ f(x): its two valid conclusions, and the two that prove nothing.\n\nThen Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Fast hour on Reorientation Strategies: fix the definition, then drill the six named efforts as a table of facts - NOA (Decree 100 of 1993, successor of the Directorate for Social Mobilisation/MAMSER), Operation Feed the Nation (1976-80, Obasanjo's military government) with its six dated sub-programmes, austerity measures (Buhari, Babangida's SAP, from 2015) with the three types and six examples, War Against Indiscipline (Buhari, ended September 1985) and its WAI Brigade criticism, War Against Indiscipline and Corruption, and MAMSER (1987, Public Bureau headed by Samuel Cookey), closing on the deck's list of why reorientation fails."
+        "topic": "Fast hour on Reorientation Strategies.\n\nFix the definition first, then drill the six named efforts as a table of facts.\n\nNOA - Decree 100 of 1993, successor of the Directorate for Social Mobilisation/MAMSER.\n\nOperation Feed the Nation - 1976-80, Obasanjo's military government, with its six dated sub-programmes.\n\nAusterity measures - Buhari, Babangida's SAP, from 2015 - with the three types and six examples.\n\nWar Against Indiscipline - Buhari, ended September 1985 - and its WAI Brigade criticism.\n\nThen War Against Indiscipline and Corruption.\n\nThen MAMSER - 1987, Public Bureau headed by Samuel Cookey.\n\nClose on the deck's list of why reorientation fails."
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "The Lorentz force as concepts: what each term in F = q(E + v cross B) means and the exact conditions under which each one vanishes, why the magnetic force is perpendicular to both v and B and therefore does no work, the RHR-1 direction rule and what reversing the sign of q changes, why the orbit in a uniform field is a circle or a helix and why its period is independent of speed, how the crossed-field velocity selector works, why F = I L cross B is the single-charge law summed over the moving charges in a wire, and the transverse geometry of an electromagnetic wave",
+        "topic": "The Lorentz force, as concepts.\n\nWhat each term in F = q(E + v cross B) means, and the exact conditions under which each one vanishes.\n\nWhy the magnetic force is perpendicular to both v and B, and therefore does no work.\n\nThe RHR-1 direction rule, and what reversing the sign of q changes.\n\nWhy the orbit in a uniform field is a circle or a helix, and why its period is independent of speed.\n\nHow the crossed-field velocity selector works.\n\nWhy F = I L cross B is the single-charge law summed over the moving charges in a wire.\n\nThen the transverse geometry of an electromagnetic wave.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
@@ -32,36 +32,36 @@
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "Boolean expressions, statements and control flow as concepts, exactly as the two decks give them: what makes a value true in C and what a comparison returns, the definitions of a simple statement and of a block and why a block counts as a single statement, why blocks exist and where they are used, programme control and branching with unconditional versus conditional, the deck's count of the decision making statements and the switch it teaches outside that count, and the entry condition of if, if-else, if-else-if, switch, while, do-while and for.",
+        "topic": "Boolean expressions, statements and control flow, as concepts, exactly as the two decks give them.\n\nWhat makes a value true in C, and what a comparison returns.\n\nThe definitions of a simple statement and of a block, and why a block counts as a single statement.\n\nWhy blocks exist, and where they are used.\n\nProgramme control and branching, with unconditional versus conditional.\n\nThe deck's count of the decision making statements, and the switch it teaches outside that count.\n\nThen the entry condition of if, if-else, if-else-if, switch, while, do-while and for.",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Fast hour on Responding to Speaking Prompts - fix the definition of a speaking prompt, drill the thirteen guidelines in the deck's order and the nine importance headings, then read the three worked samples for the shared introduction-balance-examples-solutions-conclusion shape, closing with the summary sheet's word-stress and sentence-stress material."
+        "topic": "Fast hour on Responding to Speaking Prompts.\n\nFix the definition of a speaking prompt.\n\nDrill the thirteen guidelines in the deck's order, and the nine importance headings.\n\nThen read the three worked samples for the shared introduction-balance-examples-solutions-conclusion shape.\n\nClose with the summary sheet's word-stress and sentence-stress material."
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Problems-only session on Week 9. Evaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ; split ∫₋∞^∞ and stop at the first divergent half; split ∫₋₁² dx/x⁴ at the interior discontinuity and get the signs right; and run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p — on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.",
+        "topic": "Problems-only session on Week 9.\n\nEvaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ.\n\nSplit ∫₋∞^∞ and stop at the first divergent half.\n\nSplit ∫₋₁² dx/x⁴ at the interior discontinuity, and get the signs right.\n\nThen run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p.\n\nRun it on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Fast hour on the specific-heat-of-a-solid practical: state the definition and SI unit of specific heat capacity and Q = m*c*(T_f - T_i), set out the apparatus (digital balance, hot plate, crucible tongs, glass beaker, thermometer, water reservoir, metal blocks, insulating jacket with cover, calorimeter) and the recording order of the procedure, derive c_s = (m_w*c_w + m_c*c_c)*(T_f - T_r) / [m_s*(T_s - T_f)] from heat lost = heat gained, work the deck's copper data through to c_s = 410 J/kgK, and drill the precautions and error directions (calorimeter term omitted, slow transfer, jacket losses, missed tare, tiny 0.9 degC rise)."
+        "topic": "Fast hour on the specific-heat-of-a-solid practical.\n\nState the definition and SI unit of specific heat capacity, and Q = m*c*(T_f - T_i).\n\nSet out the apparatus - digital balance, hot plate, crucible tongs, glass beaker, thermometer, water reservoir, metal blocks, insulating jacket with cover, calorimeter.\n\nThen the recording order of the procedure.\n\nDerive c_s = (m_w*c_w + m_c*c_c)*(T_f - T_r) / [m_s*(T_s - T_f)] from heat lost = heat gained.\n\nWork the deck's copper data through to c_s = 410 J/kgK.\n\nThen drill the precautions and error directions - calorimeter term omitted, slow transfer, jacket losses, missed tare, tiny 0.9 degC rise."
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "Numerical Lorentz-force work: computing q*v*B*sin(theta) and qE and combining them as vectors rather than as numbers, showing the magnetic force does zero work, evaluating the orbit radius r = mv/(qB) and period T = 2*pi*m/(qB) and the helical pitch, applying F = B*I*L*sin(theta) with the length converted to metres and the angle taken from the current, finding the selector speed v = E/B, converting gauss to tesla, and getting wavelength and photon energy from c = f*lambda and E = h*f, with the unit, angle, sign and direction traps at each step",
+        "topic": "Numerical Lorentz-force work.\n\nComputing q*v*B*sin(theta) and qE, and combining them as vectors rather than as numbers.\n\nShowing the magnetic force does zero work.\n\nEvaluating the orbit radius r = mv/(qB), the period T = 2*pi*m/(qB), and the helical pitch.\n\nApplying F = B*I*L*sin(theta), with the length converted to metres and the angle taken from the current.\n\nFinding the selector speed v = E/B, and converting gauss to tesla.\n\nGetting wavelength and photon energy from c = f*lambda and E = h*f.\n\nWith the unit, angle, sign and direction traps at each step.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "COS_102",
-        "topic": "Code work only: tracing if-else, if-else-if chains, switch, while, do-while, for and goto by hand to state exact output, counting loop passes and knowing what a control variable holds after a loop ends, counting statements on one line, and finding the two faults that compile in silence - '=' written for '==', and a construct given several statements with no curly brackets to make them into a block.",
+        "topic": "Code work only.\n\nTracing if-else, if-else-if chains, switch, while, do-while, for and goto by hand to state exact output.\n\nCounting loop passes, and knowing what a control variable holds after a loop ends.\n\nCounting statements on one line.\n\nThen finding the two faults that compile in silence - '=' written for '==', and a construct given several statements with no curly brackets to make them into a block.",
         "checkFile": "checks/Sat-COS_102.md"
       }
     },
@@ -209,7 +209,7 @@
       "day": "Mon",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.",
+      "topic": "Conceptual session on Week 9, exactly as the deck builds it.\n\nThe two triggers that make ∫ₐᵇ f(x)dx improper.\n\nThe Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists.\n\nWhy ∫₋∞^∞ must be split, and why one divergent half ends the question.\n\nThe three Type II clauses, and the one-sided limits c → b⁻ and c → a⁺.\n\nThe Comparison Test in her lettering 0 ≤ g(x) ≤ f(x): its two valid conclusions, and the two that prove nothing.\n\nThen Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.",
       "maxScore": 12,
       "questions": [
         {
@@ -346,7 +346,7 @@
       "id": "tue-phy102",
       "day": "Tue",
       "course": "PHY_102",
-      "topic": "The Lorentz force as concepts: what each term in F = q(E + v cross B) means and the exact conditions under which each one vanishes, why the magnetic force is perpendicular to both v and B and therefore does no work, the RHR-1 direction rule and what reversing the sign of q changes, why the orbit in a uniform field is a circle or a helix and why its period is independent of speed, how the crossed-field velocity selector works, why F = I L cross B is the single-charge law summed over the moving charges in a wire, and the transverse geometry of an electromagnetic wave",
+      "topic": "The Lorentz force, as concepts.\n\nWhat each term in F = q(E + v cross B) means, and the exact conditions under which each one vanishes.\n\nWhy the magnetic force is perpendicular to both v and B, and therefore does no work.\n\nThe RHR-1 direction rule, and what reversing the sign of q changes.\n\nWhy the orbit in a uniform field is a circle or a helix, and why its period is independent of speed.\n\nHow the crossed-field velocity selector works.\n\nWhy F = I L cross B is the single-charge law summed over the moving charges in a wire.\n\nThen the transverse geometry of an electromagnetic wave.",
       "maxScore": 12,
       "questions": [
         {
@@ -483,7 +483,7 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "Boolean expressions, statements and control flow as concepts, exactly as the two decks give them: what makes a value true in C and what a comparison returns, the definitions of a simple statement and of a block and why a block counts as a single statement, why blocks exist and where they are used, programme control and branching with unconditional versus conditional, the deck's count of the decision making statements and the switch it teaches outside that count, and the entry condition of if, if-else, if-else-if, switch, while, do-while and for.",
+      "topic": "Boolean expressions, statements and control flow, as concepts, exactly as the two decks give them.\n\nWhat makes a value true in C, and what a comparison returns.\n\nThe definitions of a simple statement and of a block, and why a block counts as a single statement.\n\nWhy blocks exist, and where they are used.\n\nProgramme control and branching, with unconditional versus conditional.\n\nThe deck's count of the decision making statements, and the switch it teaches outside that count.\n\nThen the entry condition of if, if-else, if-else-if, switch, while, do-while and for.",
       "maxScore": 12,
       "questions": [
         {
@@ -621,7 +621,7 @@
       "day": "Thu",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Problems-only session on Week 9. Evaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ; split ∫₋∞^∞ and stop at the first divergent half; split ∫₋₁² dx/x⁴ at the interior discontinuity and get the signs right; and run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p — on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.",
+      "topic": "Problems-only session on Week 9.\n\nEvaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ.\n\nSplit ∫₋∞^∞ and stop at the first divergent half.\n\nSplit ∫₋₁² dx/x⁴ at the interior discontinuity, and get the signs right.\n\nThen run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p.\n\nRun it on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.",
       "maxScore": 12,
       "questions": [
         {
@@ -758,7 +758,7 @@
       "id": "fri-phy102",
       "day": "Fri",
       "course": "PHY_102",
-      "topic": "Numerical Lorentz-force work: computing q*v*B*sin(theta) and qE and combining them as vectors rather than as numbers, showing the magnetic force does zero work, evaluating the orbit radius r = mv/(qB) and period T = 2*pi*m/(qB) and the helical pitch, applying F = B*I*L*sin(theta) with the length converted to metres and the angle taken from the current, finding the selector speed v = E/B, converting gauss to tesla, and getting wavelength and photon energy from c = f*lambda and E = h*f, with the unit, angle, sign and direction traps at each step",
+      "topic": "Numerical Lorentz-force work.\n\nComputing q*v*B*sin(theta) and qE, and combining them as vectors rather than as numbers.\n\nShowing the magnetic force does zero work.\n\nEvaluating the orbit radius r = mv/(qB), the period T = 2*pi*m/(qB), and the helical pitch.\n\nApplying F = B*I*L*sin(theta), with the length converted to metres and the angle taken from the current.\n\nFinding the selector speed v = E/B, and converting gauss to tesla.\n\nGetting wavelength and photon energy from c = f*lambda and E = h*f.\n\nWith the unit, angle, sign and direction traps at each step.",
       "maxScore": 12,
       "questions": [
         {
@@ -895,7 +895,7 @@
       "id": "sat-cos102",
       "day": "Fri",
       "course": "COS_102",
-      "topic": "Code work only: tracing if-else, if-else-if chains, switch, while, do-while, for and goto by hand to state exact output, counting loop passes and knowing what a control variable holds after a loop ends, counting statements on one line, and finding the two faults that compile in silence - '=' written for '==', and a construct given several statements with no curly brackets to make them into a block.",
+      "topic": "Code work only.\n\nTracing if-else, if-else-if chains, switch, while, do-while, for and goto by hand to state exact output.\n\nCounting loop passes, and knowing what a control variable holds after a loop ends.\n\nCounting statements on one line.\n\nThen finding the two faults that compile in silence - '=' written for '==', and a construct given several statements with no curly brackets to make them into a block.",
       "maxScore": 12,
       "questions": [
         {

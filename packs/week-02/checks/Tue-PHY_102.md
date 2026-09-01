@@ -1,6 +1,16 @@
 # Tuesday — PHY_102 nightly check
 
-*Conceptual session on Week 2 exactly as Dr Adeniji builds it: Coulomb's law F = k|q₁q₂|/r² as a magnitude-only law for a pair of point charges with k = 9.0 × 10⁹ N m²/C²; why a third charge forces the separate principle of superposition of forces, and what 'vector sum' means on a line; her subscript convention Fᵢⱼ; the definition E = F/q₀ in N/C with a positive unit test charge, and |E| = k|Q|/r² as Coulomb's law with the test charge divided out; radially outward from +Q and radially inward toward −Q; the field-line rules; and F = qE, so that the force on an electron is antiparallel to E.*
+*Conceptual session on Week 2, exactly as Dr Adeniji builds it.*
+
+*Coulomb's law F = k|q₁q₂|/r² as a magnitude-only law for a pair of point charges, with k = 9.0 × 10⁹ N m²/C².*
+
+*Why a third charge forces the separate principle of superposition of forces, and what 'vector sum' means on a line. Her subscript convention Fᵢⱼ.*
+
+*The definition E = F/q₀ in N/C with a positive unit test charge. Then |E| = k|Q|/r² as Coulomb's law with the test charge divided out.*
+
+*Radially outward from +Q, and radially inward toward −Q. The field-line rules.*
+
+*And F = qE, so that the force on an electron is antiparallel to E.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Slide 4 opens with 'Coulomb's law only describe the interaction of two point charges.' Why does the lecturer put that sentence before the superposition principle?

@@ -1,6 +1,12 @@
 # Friday — PHY_102 nightly check
 
-*Problems-only session on Week 12 transformers. Compute with the lecturer's three tools and nothing else: V₂/V₁ = N₂/N₁ for turns ratios and voltages, P_av = V₁I₁ together with I₁V₁ = I₂V₂ for currents, and V₁/I₁ = R/(N₂/N₁)² for resistances. Covers all six part-answers of her two worked examples — 2, 8.0 A, 60 Ω, 1/2, 6.67 A, 36 Ω — the line she leaves out of Example 2(c), fresh numbers on the same three formulas, and one wrong solution to diagnose.*
+*Problems-only session on Week 12 transformers.*
+
+*Compute with the lecturer's three tools and nothing else. V₂/V₁ = N₂/N₁ for turns ratios and voltages. P_av = V₁I₁ together with I₁V₁ = I₂V₂ for currents. And V₁/I₁ = R/(N₂/N₁)² for resistances.*
+
+*Covers all six part-answers of her two worked examples: 2, 8.0 A, 60 Ω, 1/2, 6.67 A, 36 Ω.*
+
+*Also the line she leaves out of Example 2(c), fresh numbers on the same three formulas, and one wrong solution to diagnose.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Example 1: a 960-W coffeemaker designed for a 240-V line is to run from the USA-standard 120-V line. What turns ratio N₂/N₁ does the lecturer obtain?

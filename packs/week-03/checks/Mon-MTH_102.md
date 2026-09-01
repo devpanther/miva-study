@@ -1,6 +1,16 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 3 exactly as the lecturer builds it: when direct substitution applies (a well-defined expression) and when it fails (0/0); what an indeterminate form does and does not tell you; why factoring and cancelling a common factor inside lim x→c is legitimate; clearing a complex fraction by the common denominator versus multiplying by the conjugate of the numerator; what L'Hôpital's Rule replaces f(x)/g(x) with and when it may be repeated; and the ten named properties of a limit, including the two non-zero provisos and the Squeeze Theorem in her lettering.*
+*Conceptual session on Week 3, exactly as the lecturer builds it.*
+
+*When direct substitution applies (a well-defined expression), and when it fails (0/0). What an indeterminate form does and does not tell you.*
+
+*Why factoring and cancelling a common factor inside lim x→c is legitimate.*
+
+*Clearing a complex fraction by the common denominator, versus multiplying by the conjugate of the numerator.*
+
+*What L'Hôpital's Rule replaces f(x)/g(x) with, and when it may be repeated.*
+
+*And the ten named properties of a limit, including the two non-zero provisos and the Squeeze Theorem in her lettering.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Slide 4 says direct substitution 'applies when substituting the value of c directly into the function results in a well-defined expression'. Which of these results means substitution has NOT worked?

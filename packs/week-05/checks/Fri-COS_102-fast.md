@@ -1,6 +1,14 @@
 # Friday, second hour — COS_102 check
 
-*Week 5 flowchart concepts treated as practice. Every chart is described in words and must be traced by hand: the sum-of-five-numbers loop from the lecture, a compare-two-numbers selection, and a fault-finding lamp chart. The session asks what a described chart prints for given inputs, which construct a fragment implements, how to lay out the opening steps of a chart for a stated problem, and how to diagnose a chart that loops forever, resets an accumulator, reads one item too many, or leaves a path with no route to Stop. It does not ask for symbol definitions in the abstract.*
+*Week 5 flowchart concepts treated as practice.*
+
+*Every chart is described in words and must be traced by hand: the sum-of-five-numbers loop from the lecture, a compare-two-numbers selection, and a fault-finding lamp chart.*
+
+*The session asks what a described chart prints for given inputs, which construct a fragment implements, and how to lay out the opening steps of a chart for a stated problem.*
+
+*It also asks how to diagnose a chart that loops forever, resets an accumulator, reads one item too many, or leaves a path with no route to Stop.*
+
+*It does not ask for symbol definitions in the abstract.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Trace this chart. Start; Sum = 0; Count = 0; then at point A, Enter n; Sum = Sum + n; Count = Count + 1; then a decision 'Is Count < 5?' whose Yes exit runs back to A and whose No exit runs to Print Sum; Stop. The numbers waiting to be entered are, in order, 3, 1, 4, 1, 5, 9. What is printed?

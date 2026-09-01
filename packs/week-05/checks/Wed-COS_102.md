@@ -1,6 +1,16 @@
 # Wednesday — COS_102 nightly check
 
-*Week 5 flowchart concepts treated conceptually: what each flowchart symbol means and why the notation gives it that role. Covers the process, decision, input/output, preparation, predefined process, merge, summing junction, comment and connector symbols; the rules governing how many flow lines may enter and leave each; why a flowchart needs one entry point and reachable exit points; and what breaks when those rules are ignored. Also covers why the four drawing principles are stated as principles rather than as correctness rules, and how the four flowchart types (process, workflow, swimlane, data) differ in what they are for. No hand-tracing of charts is required in this session.*
+*Week 5 flowchart concepts treated conceptually: what each flowchart symbol means, and why the notation gives it that role.*
+
+*The process, decision, input/output, preparation, predefined process, merge, summing junction, comment and connector symbols.*
+
+*The rules governing how many flow lines may enter and leave each. Why a flowchart needs one entry point and reachable exit points. What breaks when those rules are ignored.*
+
+*Also why the four drawing principles are stated as principles rather than as correctness rules.*
+
+*And how the four flowchart types (process, workflow, swimlane, data) differ in what they are for.*
+
+*No hand-tracing of charts is required in this session.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** A process rectangle and a decision diamond both sit on the flow path. Why does the notation allow the diamond exactly two outgoing flow lines but the rectangle only one?

@@ -1,6 +1,16 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 8 integration techniques exactly as the lecturer builds them: the standard-integral table of slides 4–6; her substitution formula ∫f′(g(x))·g′(x)dx = f(g(x)) + C and when an answer may be left in u; integration by parts ∫u dv = uv − ∫v du and why v is the integral of dv; trigonometric substitution driven by 1 − sin²(u) = cos²(u), including why √(4 − 9x²) is first normalised to 2√(1 − (3x/2)²); and the four steps of partial fractions with the roots substituted to find A and B.*
+*Conceptual session on Week 8 integration techniques, exactly as she builds them.*
+
+*The standard-integral table of slides 4–6.*
+
+*Her substitution formula ∫f′(g(x))·g′(x)dx = f(g(x)) + C, and when an answer may be left in u.*
+
+*Integration by parts ∫u dv = uv − ∫v du, and why v is the integral of dv.*
+
+*Trigonometric substitution driven by 1 − sin²(u) = cos²(u), including why √(4 − 9x²) is first normalised to 2√(1 − (3x/2)²).*
+
+*Then the four steps of partial fractions, with the roots substituted to find A and B.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** The deck states the general substitution formula and then says: 'It is just the Chain Rule, written in terms of integration via the Fundamental Theorem of Calculus.' Which formula is she describing?

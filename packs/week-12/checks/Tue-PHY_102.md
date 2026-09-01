@@ -1,6 +1,18 @@
 # Tuesday — PHY_102 nightly check
 
-*Conceptual session on Week 12 transformers exactly as the lecturer builds them: the shared core flux and her equation 1, ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt; why equal flux per turn gives equal emf per turn and hence equation 2, ε₂/ε₁ = N₂/N₁; the ideal-transformer assumption that upgrades it to equation 3, V₂/V₁ = N₂/N₁; step-up as N₂ > N₁ and step-down as N₂ < N₁; the energy statement I₁V₁ = I₂V₂; the squared turns ratio in V₁/I₁ = R/(N₂/N₁)²; and the hardware facts — iron core, lamination against eddy currents, unchanged frequency, impedance matching for maximum power transfer.*
+*Conceptual session on Week 12 transformers, exactly as the lecturer builds them.*
+
+*The shared core flux, and her equation 1: ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt.*
+
+*Why equal flux per turn gives equal emf per turn, and hence equation 2, ε₂/ε₁ = N₂/N₁.*
+
+*The ideal-transformer assumption that upgrades it to equation 3, V₂/V₁ = N₂/N₁.*
+
+*Step-up as N₂ > N₁, and step-down as N₂ < N₁.*
+
+*The energy statement I₁V₁ = I₂V₂. The squared turns ratio in V₁/I₁ = R/(N₂/N₁)².*
+
+*And the hardware facts: iron core, lamination against eddy currents, unchanged frequency, and impedance matching for maximum power transfer.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Slide 8 writes ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt with one and the same dΦ_B/dt. What does the lecturer conclude from that fact?

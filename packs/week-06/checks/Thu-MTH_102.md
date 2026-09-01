@@ -1,6 +1,14 @@
 # Thursday — MTH_102 nightly check
 
-*Problems-only session on Week 6 higher-order derivatives. Compute repeated derivatives of her own functions and one order beyond them: x⁴ + 2x³ − 15x + 4, 3 tan x + 3, √(x³) = x^(3/2), ln x, sin(5x) + e^(3x), and the deck's four-order quotient-rule chain on ln(1 + x²); plus both TASKs she leaves unanswered — the second derivative of cos(3x) and the third derivative of xeˣ at x = 2 — and the arithmetic slip in her printed fourth derivative.*
+*Problems-only session on Week 6 higher-order derivatives.*
+
+*Compute repeated derivatives of her own functions, and one order beyond them: x⁴ + 2x³ − 15x + 4, 3 tan x + 3, √(x³) = x^(3/2), ln x, and sin(5x) + e^(3x).*
+
+*Then the deck's four-order quotient-rule chain on ln(1 + x²).*
+
+*Plus both TASKs she leaves unanswered: the second derivative of cos(3x), and the third derivative of xeˣ at x = 2.*
+
+*And the arithmetic slip in her printed fourth derivative.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** For f(x) = x⁴ + 2x³ − 15x + 4, find f″(x).

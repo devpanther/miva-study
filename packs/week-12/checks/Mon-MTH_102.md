@@ -1,6 +1,20 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 12 applications of integration exactly as the deck builds them: integrating a rate over an interval to get an accumulated total; why an initial condition is needed for an indefinite integral and why the constant cancels in a definite one; the fluid-force formula F = ∫ₐᵇ w·h(x)·L(x)dx with w = ρg; why a varying force forces W = ∫ₐᵇ F(x)dx instead of force × distance; recovering TR from MR and K from I(t); why equilibrium must be found before CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ; and the cumulative-consumption model C(t) = 1000e^(0.035t) − 1000.*
+*Conceptual session on Week 12 applications of integration, exactly as the deck builds them.*
+
+*Integrating a rate over an interval to get an accumulated total.*
+
+*Why an initial condition is needed for an indefinite integral, and why the constant cancels in a definite one.*
+
+*The fluid-force formula F = ∫ₐᵇ w·h(x)·L(x)dx, with w = ρg.*
+
+*Why a varying force forces W = ∫ₐᵇ F(x)dx instead of force × distance.*
+
+*Recovering TR from MR, and K from I(t).*
+
+*Why equilibrium must be found before CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ.*
+
+*And the cumulative-consumption model C(t) = 1000e^(0.035t) − 1000.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** In her first kinematics example the car's velocity is v(t) = 2t² + 6t + 1 kmh⁻¹ and she computes ∫₀⁵ v(t)dt. What kind of quantity does that integral produce, and why?

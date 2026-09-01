@@ -8,19 +8,19 @@
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Conceptual session on Week 10 area between curves exactly as the lecturer builds it: the two-case rule on slide 4 (∫ₐᵇf(x)dx when f(x) ≥ 0, |∫ₐᵇf(x)dx| when f(x) ≤ 0); finding limits by setting f(x) = 0 and testing an interior point; splitting at a root when the curve crosses the axis inside the interval; the two-curve rule A = ∫ₐᵇ(f(x) − g(x))dx with its condition f(x) ≥ g(x) and limits from f(x) = g(x); and slide 12's A = A₁ + A₂ when the curves intersect at c ∈ (a, b), including why one integral over the whole interval lets the pieces cancel.",
+        "topic": "Conceptual session on Week 10 area between curves, exactly as the lecturer builds it.\n\nThe two-case rule on slide 4: ∫ₐᵇf(x)dx when f(x) ≥ 0, and |∫ₐᵇf(x)dx| when f(x) ≤ 0.\n\nFinding limits by setting f(x) = 0 and testing an interior point. Splitting at a root when the curve crosses the axis inside the interval.\n\nThe two-curve rule A = ∫ₐᵇ(f(x) − g(x))dx, with its condition f(x) ≥ g(x) and limits from f(x) = g(x).\n\nSlide 12's A = A₁ + A₂ when the curves intersect at c ∈ (a, b). Why one integral over the whole interval lets the pieces cancel.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Fast hour (1.5x) covering both Week 10 decks end to end: the definition, mid-19th-century coinage and Industrial Revolution origins of popular culture, then the four epochal waves of Nigerian popular music with their dates, genres and named artists, then police brutality and the Ochonu and Oyarinu explanations, the #EndSARS timeline from the 2017 hashtag to the Lekki toll gate on 20 October 2020, and the casualty, voter-registration and 29 percent turnout figures for the 2023 elections."
+        "topic": "Fast hour (1.5x) covering both Week 10 decks end to end.\n\nFirst, the definition, mid-19th-century coinage and Industrial Revolution origins of popular culture.\n\nThen the four epochal waves of Nigerian popular music, with their dates, genres and named artists.\n\nThen police brutality, and the Ochonu and Oyarinu explanations.\n\nThe #EndSARS timeline, from the 2017 hashtag to the Lekki toll gate on 20 October 2020.\n\nLast, the casualty, voter-registration and 29 percent turnout figures for the 2023 elections."
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "Electromagnetic induction as concepts: what magnetic flux is and which angle enters Phi = B*A*cos(theta), the three ways of changing it and why a changing flux - not motion - is the criterion, why an emf appears in an open circuit with no current, what the minus sign in emf = -N d(Phi)/dt means and what sign convention it belongs to, Lenz's law as opposition to the change rather than to the field, the energy argument that forces that direction, and what self-inductance actually opposes",
+        "topic": "Electromagnetic induction as concepts.\n\nWhat magnetic flux is, and which angle enters Phi = B*A*cos(theta).\n\nThe three ways of changing it, and why a changing flux - not motion - is the criterion.\n\nWhy an emf appears in an open circuit with no current.\n\nWhat the minus sign in emf = -N d(Phi)/dt means, and what sign convention it belongs to.\n\nLenz's law as opposition to the change rather than to the field, and the energy argument that forces that direction.\n\nWhat self-inductance actually opposes.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
@@ -32,36 +32,36 @@
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "Arrays and recursion as concepts: the course's definition of an array and what each of 'fixed-size', 'sequential collection' and 'elements of the same type' makes possible, the declaration syntax datatype arrayName[arraySize] and the one-sided initialiser rule, why an index is an offset so that the first is 0 and the largest for int a[10] is 9, what happens at compile time and at run time when an index falls outside that range, the two components a recursive function must have plus the implicit third condition that every call must make progress that actually lands on the base case, the call stack with one frame and one set of parameters per call and its pending operations, direct versus indirect and tail versus non-tail recursion as two independent classifications, and what the deck's iteration-versus-recursion table really trades away.",
+        "topic": "Arrays and recursion as concepts.\n\nThe course's definition of an array, and what each of 'fixed-size', 'sequential collection' and 'elements of the same type' makes possible.\n\nThe declaration syntax datatype arrayName[arraySize], and the one-sided initialiser rule.\n\nWhy an index is an offset, so that the first is 0 and the largest for int a[10] is 9. What happens at compile time and at run time when an index falls outside that range.\n\nThe two components a recursive function must have. Plus the implicit third condition: every call must make progress that actually lands on the base case.\n\nThe call stack, with one frame and one set of parameters per call, and its pending operations.\n\nDirect versus indirect, and tail versus non-tail recursion, as two independent classifications.\n\nWhat the deck's iteration-versus-recursion table really trades away.",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Wednesday's fast hour covers the whole Inductive and Deductive Reasoning deck at 1.5x: the two definitions, the three-stage swan model of induction and the mosquito-outbreak prediction case, the three named inductive types (generalisation, analogical reasoning, statistical reasoning), the deductive worked examples (categorical syllogism, modus ponens, mathematical proof) plus modus tollens, and the closing valid-versus-sound answer together with the four stated limitations of induction."
+        "topic": "Wednesday's fast hour covers the whole Inductive and Deductive Reasoning deck at 1.5x.\n\nThe two definitions. The three-stage swan model of induction, and the mosquito-outbreak prediction case.\n\nThe three named inductive types: generalisation, analogical reasoning, statistical reasoning.\n\nThe deductive worked examples — categorical syllogism, modus ponens, mathematical proof — plus modus tollens.\n\nThen the closing valid-versus-sound answer, together with the four stated limitations of induction."
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Problems-only session on Week 10. Compute areas: between a curve and the x-axis with limits found from f(x) = 0 (∫₀⁵(5x − x²)dx, and the split case for x² − 1 on [0, 2]); between two curves with limits from f(x) = g(x) (y = 3 − x with y = x² − 9, and 2 − x with 4 − x²); and across an interior crossing using A = A₁ + A₂. Includes all three TASKs the lecturer set and never answered — 6x − x² against the axis, y = x² with y = 2 − x² on [0, 2], and y = cos x with y = 2 − cos x on [0, 2π].",
+        "topic": "Problems-only session on Week 10.\n\nCompute areas between a curve and the x-axis, with limits found from f(x) = 0: ∫₀⁵(5x − x²)dx, and the split case for x² − 1 on [0, 2].\n\nCompute areas between two curves, with limits from f(x) = g(x): y = 3 − x with y = x² − 9, and 2 − x with 4 − x².\n\nThen across an interior crossing, using A = A₁ + A₂.\n\nIncludes all three TASKs the lecturer set and never answered: 6x − x² against the axis; y = x² with y = 2 − x² on [0, 2]; and y = cos x with y = 2 − cos x on [0, 2π].",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Fast hour on the magnetic-moment-of-a-bar-magnet practical: the tangent law B = B_H tan(theta) and why the metre stick must run east-west, the end-on field B = (mu_0/4pi) x 2Md/(d^2 - L^2)^2 with M = 2mL, the eight-angle recording routine at d = 50, 45, 40, 35 and 30 cm and why each repetition exists, and the tan(theta_AV) against d/(d^2 - L^2)^2 straight line whose gradient s gives M = 2 pi B_H s/mu_0 -> m = M/(2L), plus the deck's two misprints (the abscissa written as d^2/(d^2 - L^2)^2, and H_0 = 40 x 10^-6 quoted in A/m when the value is in tesla)."
+        "topic": "Fast hour on the magnetic-moment-of-a-bar-magnet practical.\n\nThe tangent law B = B_H tan(theta), and why the metre stick must run east-west.\n\nThe end-on field B = (mu_0/4pi) x 2Md/(d^2 - L^2)^2, with M = 2mL.\n\nThe eight-angle recording routine at d = 50, 45, 40, 35 and 30 cm, and why each repetition exists.\n\nThe tan(theta_AV) against d/(d^2 - L^2)^2 straight line, whose gradient s gives M = 2 pi B_H s/mu_0 -> m = M/(2L).\n\nPlus the deck's two misprints: the abscissa written as d^2/(d^2 - L^2)^2, and H_0 = 40 x 10^-6 quoted in A/m when the value is in tesla."
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "Numerical induction work: computing Phi = B*A*cos(theta) with areas and angles converted properly, emf = N*d(Phi)/dt and the induced charge q = N*d(Phi)/R, motional emf = B*L*v with the retarding force B^2*L^2*v/R and the mechanical-to-electrical power audit, the rotating-coil peak emf = N*B*A*omega with the 2*pi*f and rms traps, self-inductance L = mu_0*mu_r*N^2*A/l with back-emf L*dI/dt and stored energy 0.5*L*I^2, mutual inductance, and the ideal transformer's turns and current ratios",
+        "topic": "Numerical induction work.\n\nComputing Phi = B*A*cos(theta), with areas and angles converted properly.\n\nemf = N*d(Phi)/dt, and the induced charge q = N*d(Phi)/R.\n\nMotional emf = B*L*v, with the retarding force B^2*L^2*v/R and the mechanical-to-electrical power audit.\n\nThe rotating-coil peak emf = N*B*A*omega, with the 2*pi*f and rms traps.\n\nSelf-inductance L = mu_0*mu_r*N^2*A/l, with back-emf L*dI/dt and stored energy 0.5*L*I^2.\n\nThen mutual inductance, and the ideal transformer's turns and current ratios.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "COS_102",
-        "topic": "Code work on arrays and recursion: tracing a recursive call down to its base case and back up through its pending operations, predicting the return value of an array recursion and the output of one- and two-dimensional array loops, spotting a missing base case and a base case that is never reached, finding off-by-one and out-of-bounds faults in traversals and in recursive index expressions, distinguishing tail from non-tail recursion on a real listing, recognising that an array name cannot be assigned so a copy must be a loop, and diagnosing infinite recursion as a stack overflow rather than a hang.",
+        "topic": "Code work on arrays and recursion.\n\nTracing a recursive call down to its base case and back up through its pending operations.\n\nPredicting the return value of an array recursion, and the output of one- and two-dimensional array loops.\n\nSpotting a missing base case, and a base case that is never reached.\n\nFinding off-by-one and out-of-bounds faults in traversals and in recursive index expressions.\n\nDistinguishing tail from non-tail recursion on a real listing.\n\nRecognising that an array name cannot be assigned, so a copy must be a loop.\n\nDiagnosing infinite recursion as a stack overflow rather than a hang.",
         "checkFile": "checks/Sat-COS_102.md"
       }
     },
@@ -211,7 +211,7 @@
       "day": "Mon",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 10 area between curves exactly as the lecturer builds it: the two-case rule on slide 4 (∫ₐᵇf(x)dx when f(x) ≥ 0, |∫ₐᵇf(x)dx| when f(x) ≤ 0); finding limits by setting f(x) = 0 and testing an interior point; splitting at a root when the curve crosses the axis inside the interval; the two-curve rule A = ∫ₐᵇ(f(x) − g(x))dx with its condition f(x) ≥ g(x) and limits from f(x) = g(x); and slide 12's A = A₁ + A₂ when the curves intersect at c ∈ (a, b), including why one integral over the whole interval lets the pieces cancel.",
+      "topic": "Conceptual session on Week 10 area between curves, exactly as the lecturer builds it.\n\nThe two-case rule on slide 4: ∫ₐᵇf(x)dx when f(x) ≥ 0, and |∫ₐᵇf(x)dx| when f(x) ≤ 0.\n\nFinding limits by setting f(x) = 0 and testing an interior point. Splitting at a root when the curve crosses the axis inside the interval.\n\nThe two-curve rule A = ∫ₐᵇ(f(x) − g(x))dx, with its condition f(x) ≥ g(x) and limits from f(x) = g(x).\n\nSlide 12's A = A₁ + A₂ when the curves intersect at c ∈ (a, b). Why one integral over the whole interval lets the pieces cancel.",
       "maxScore": 12,
       "questions": [
         {
@@ -348,7 +348,7 @@
       "id": "tue-phy102",
       "day": "Tue",
       "course": "PHY_102",
-      "topic": "Electromagnetic induction as concepts: what magnetic flux is and which angle enters Phi = B*A*cos(theta), the three ways of changing it and why a changing flux - not motion - is the criterion, why an emf appears in an open circuit with no current, what the minus sign in emf = -N d(Phi)/dt means and what sign convention it belongs to, Lenz's law as opposition to the change rather than to the field, the energy argument that forces that direction, and what self-inductance actually opposes",
+      "topic": "Electromagnetic induction as concepts.\n\nWhat magnetic flux is, and which angle enters Phi = B*A*cos(theta).\n\nThe three ways of changing it, and why a changing flux - not motion - is the criterion.\n\nWhy an emf appears in an open circuit with no current.\n\nWhat the minus sign in emf = -N d(Phi)/dt means, and what sign convention it belongs to.\n\nLenz's law as opposition to the change rather than to the field, and the energy argument that forces that direction.\n\nWhat self-inductance actually opposes.",
       "maxScore": 12,
       "questions": [
         {
@@ -485,7 +485,7 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "Arrays and recursion as concepts: the course's definition of an array and what each of 'fixed-size', 'sequential collection' and 'elements of the same type' makes possible, the declaration syntax datatype arrayName[arraySize] and the one-sided initialiser rule, why an index is an offset so that the first is 0 and the largest for int a[10] is 9, what happens at compile time and at run time when an index falls outside that range, the two components a recursive function must have plus the implicit third condition that every call must make progress that actually lands on the base case, the call stack with one frame and one set of parameters per call and its pending operations, direct versus indirect and tail versus non-tail recursion as two independent classifications, and what the deck's iteration-versus-recursion table really trades away.",
+      "topic": "Arrays and recursion as concepts.\n\nThe course's definition of an array, and what each of 'fixed-size', 'sequential collection' and 'elements of the same type' makes possible.\n\nThe declaration syntax datatype arrayName[arraySize], and the one-sided initialiser rule.\n\nWhy an index is an offset, so that the first is 0 and the largest for int a[10] is 9. What happens at compile time and at run time when an index falls outside that range.\n\nThe two components a recursive function must have. Plus the implicit third condition: every call must make progress that actually lands on the base case.\n\nThe call stack, with one frame and one set of parameters per call, and its pending operations.\n\nDirect versus indirect, and tail versus non-tail recursion, as two independent classifications.\n\nWhat the deck's iteration-versus-recursion table really trades away.",
       "maxScore": 12,
       "questions": [
         {
@@ -623,7 +623,7 @@
       "day": "Thu",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Problems-only session on Week 10. Compute areas: between a curve and the x-axis with limits found from f(x) = 0 (∫₀⁵(5x − x²)dx, and the split case for x² − 1 on [0, 2]); between two curves with limits from f(x) = g(x) (y = 3 − x with y = x² − 9, and 2 − x with 4 − x²); and across an interior crossing using A = A₁ + A₂. Includes all three TASKs the lecturer set and never answered — 6x − x² against the axis, y = x² with y = 2 − x² on [0, 2], and y = cos x with y = 2 − cos x on [0, 2π].",
+      "topic": "Problems-only session on Week 10.\n\nCompute areas between a curve and the x-axis, with limits found from f(x) = 0: ∫₀⁵(5x − x²)dx, and the split case for x² − 1 on [0, 2].\n\nCompute areas between two curves, with limits from f(x) = g(x): y = 3 − x with y = x² − 9, and 2 − x with 4 − x².\n\nThen across an interior crossing, using A = A₁ + A₂.\n\nIncludes all three TASKs the lecturer set and never answered: 6x − x² against the axis; y = x² with y = 2 − x² on [0, 2]; and y = cos x with y = 2 − cos x on [0, 2π].",
       "maxScore": 12,
       "questions": [
         {
@@ -760,7 +760,7 @@
       "id": "fri-phy102",
       "day": "Fri",
       "course": "PHY_102",
-      "topic": "Numerical induction work: computing Phi = B*A*cos(theta) with areas and angles converted properly, emf = N*d(Phi)/dt and the induced charge q = N*d(Phi)/R, motional emf = B*L*v with the retarding force B^2*L^2*v/R and the mechanical-to-electrical power audit, the rotating-coil peak emf = N*B*A*omega with the 2*pi*f and rms traps, self-inductance L = mu_0*mu_r*N^2*A/l with back-emf L*dI/dt and stored energy 0.5*L*I^2, mutual inductance, and the ideal transformer's turns and current ratios",
+      "topic": "Numerical induction work.\n\nComputing Phi = B*A*cos(theta), with areas and angles converted properly.\n\nemf = N*d(Phi)/dt, and the induced charge q = N*d(Phi)/R.\n\nMotional emf = B*L*v, with the retarding force B^2*L^2*v/R and the mechanical-to-electrical power audit.\n\nThe rotating-coil peak emf = N*B*A*omega, with the 2*pi*f and rms traps.\n\nSelf-inductance L = mu_0*mu_r*N^2*A/l, with back-emf L*dI/dt and stored energy 0.5*L*I^2.\n\nThen mutual inductance, and the ideal transformer's turns and current ratios.",
       "maxScore": 12,
       "questions": [
         {
@@ -897,7 +897,7 @@
       "id": "sat-cos102",
       "day": "Fri",
       "course": "COS_102",
-      "topic": "Code work on arrays and recursion: tracing a recursive call down to its base case and back up through its pending operations, predicting the return value of an array recursion and the output of one- and two-dimensional array loops, spotting a missing base case and a base case that is never reached, finding off-by-one and out-of-bounds faults in traversals and in recursive index expressions, distinguishing tail from non-tail recursion on a real listing, recognising that an array name cannot be assigned so a copy must be a loop, and diagnosing infinite recursion as a stack overflow rather than a hang.",
+      "topic": "Code work on arrays and recursion.\n\nTracing a recursive call down to its base case and back up through its pending operations.\n\nPredicting the return value of an array recursion, and the output of one- and two-dimensional array loops.\n\nSpotting a missing base case, and a base case that is never reached.\n\nFinding off-by-one and out-of-bounds faults in traversals and in recursive index expressions.\n\nDistinguishing tail from non-tail recursion on a real listing.\n\nRecognising that an array name cannot be assigned, so a copy must be a loop.\n\nDiagnosing infinite recursion as a stack overflow rather than a hang.",
       "maxScore": 12,
       "questions": [
         {

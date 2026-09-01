@@ -1,6 +1,14 @@
 # Thursday — MTH_102 nightly check
 
-*Problems-only session on Week 10. Compute areas: between a curve and the x-axis with limits found from f(x) = 0 (∫₀⁵(5x − x²)dx, and the split case for x² − 1 on [0, 2]); between two curves with limits from f(x) = g(x) (y = 3 − x with y = x² − 9, and 2 − x with 4 − x²); and across an interior crossing using A = A₁ + A₂. Includes all three TASKs the lecturer set and never answered — 6x − x² against the axis, y = x² with y = 2 − x² on [0, 2], and y = cos x with y = 2 − cos x on [0, 2π].*
+*Problems-only session on Week 10.*
+
+*Compute areas between a curve and the x-axis, with limits found from f(x) = 0: ∫₀⁵(5x − x²)dx, and the split case for x² − 1 on [0, 2].*
+
+*Compute areas between two curves, with limits from f(x) = g(x): y = 3 − x with y = x² − 9, and 2 − x with 4 − x².*
+
+*Then across an interior crossing, using A = A₁ + A₂.*
+
+*Includes all three TASKs the lecturer set and never answered: 6x − x² against the axis; y = x² with y = 2 − x² on [0, 2]; and y = cos x with y = 2 − cos x on [0, 2π].*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Example 1: f(x) = 5x − x² cuts the x-axis at x = 0 and x = 5, and f(2) = 6 > 0. Evaluate ∫₀⁵(5x − x²)dx.

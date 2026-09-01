@@ -1,6 +1,14 @@
 # Wednesday — COS_102 nightly check
 
-*Computational approaches to problem solving, treated conceptually. This session covers what a computational approach is and the three factors (clear definition, computability, data requirements) that decide whether one can be used; the mechanism and cost of each of the eleven named approaches — problem recognition, backtracking, data mining, performance testing, pipelining, visualisation, brute force, divide and conquer, greedy algorithms, dynamic programming and hypothesis testing. The emphasis is on why each approach works, what it costs, and the conditions under which it fails: the divide-and-conquer recombination condition, the greedy algorithm's lack of an optimality guarantee against dynamic programming's guarantee, and the meaning of significance level and p-value in the accept/reject rule. It does not ask for traces or worked arithmetic; that is Saturday.*
+*Computational approaches to problem solving, treated conceptually.*
+
+*What a computational approach is, and the three factors (clear definition, computability, data requirements) that decide whether one can be used.*
+
+*Then the mechanism and cost of each of the eleven named approaches. They are problem recognition, backtracking, data mining, performance testing, pipelining and visualisation. Then brute force, divide and conquer, greedy algorithms, dynamic programming and hypothesis testing.*
+
+*The emphasis is on why each approach works, what it costs, and the conditions under which it fails. The divide-and-conquer recombination condition. The greedy algorithm's lack of an optimality guarantee, against dynamic programming's guarantee. And the meaning of significance level and p-value in the accept/reject rule.*
+
+*It does not ask for traces or worked arithmetic; that is Saturday.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** The lesson calls brute force 'simple and consistent, but very slow'. What makes it consistent?

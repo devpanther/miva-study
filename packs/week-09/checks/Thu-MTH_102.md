@@ -1,6 +1,16 @@
 # Thursday — MTH_102 nightly check
 
-*Problems-only session on Week 9. Evaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ; split ∫₋∞^∞ and stop at the first divergent half; split ∫₋₁² dx/x⁴ at the interior discontinuity and get the signs right; and run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p — on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.*
+*Problems-only session on Week 9.*
+
+*Evaluate Type I integrals by writing ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and finishing the limit, including the L'Hôpital step on −te⁻ᵗ.*
+
+*Split ∫₋∞^∞ and stop at the first divergent half.*
+
+*Split ∫₋₁² dx/x⁴ at the interior discontinuity, and get the signs right.*
+
+*Then run her four-step comparison template — drop the additive term, take the root, flip on reciprocals, read off p.*
+
+*Run it on ∫₁^∞ dx/√(x⁵ + 3), ∫₂^∞ cos²(x)/x^(3/2) dx, ∫₃^∞ dx/√(x⁴ + 9) and the TASK, ∫₁^∞ dx/√(x⁶ + 1), quoting Note 1 each time.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Evaluate ∫₀^∞ xe⁻ˣ dx.

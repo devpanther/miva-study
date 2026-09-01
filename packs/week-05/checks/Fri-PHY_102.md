@@ -1,6 +1,18 @@
 # Friday — PHY_102 nightly check
 
-*Computation on Week 5: evaluating 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N and inverting it, adding series resistances, and running Dr Adeniji's Example 1 end to end — the loop equation −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0 giving 8 V = I(16 Ω) and I = 0.5 A, the potential difference V_ab = (0.5)(7) + 4 + (0.5)(4) = 9.5 V checked by both paths, the emf powers P = εI of +6 W and −2 W, and the I²R energy balance — plus setting up the junction and loop equations for a bridge.*
+*Computation on Week 5.*
+
+*Evaluating 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N and inverting it. Adding series resistances.*
+
+*Then running Dr Adeniji's Example 1 end to end.*
+
+*The loop equation −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0, giving 8 V = I(16 Ω) and I = 0.5 A.*
+
+*The potential difference V_ab = (0.5)(7) + 4 + (0.5)(4) = 9.5 V, checked by both paths.*
+
+*The emf powers P = εI of +6 W and −2 W, and the I²R energy balance.*
+
+*Plus setting up the junction and loop equations for a bridge.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** R₁ = 4 Ω, R₂ = 6 Ω and R₃ = 10 Ω are connected in parallel. The equivalent resistance is

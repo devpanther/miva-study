@@ -1,6 +1,16 @@
 # Thursday — MTH_102 nightly check
 
-*Problems-only session on Week 8 integration techniques. Compute with substitution (including converting the limits of a definite integral), integration by parts once and twice, trigonometric substitution with the root normalised to 1 − (something)², and partial fractions found by substituting the roots — including all four TASK questions the lecturer set and never answered: ∫₀¹x·eˣdx, ∫x·ln(x)dx, ∫√(1 + x²)dx and ∫[(5x + 7)/((x − 1)(x + 3))]dx.*
+*Problems-only session on Week 8 integration techniques.*
+
+*Compute with substitution, including converting the limits of a definite integral.*
+
+*Integration by parts, once and twice.*
+
+*Trigonometric substitution, with the root normalised to 1 − (something)².*
+
+*Partial fractions found by substituting the roots.*
+
+*Includes all four TASK questions the lecturer set and never answered: ∫₀¹x·eˣdx, ∫x·ln(x)dx, ∫√(1 + x²)dx and ∫[(5x + 7)/((x − 1)(x + 3))]dx.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Evaluate ∫₀²(x + 2)³dx by the substitution u = x + 2.

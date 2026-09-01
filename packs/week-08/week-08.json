@@ -8,19 +8,19 @@
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Conceptual session on Week 8 integration techniques exactly as the lecturer builds them: the standard-integral table of slides 4–6; her substitution formula ∫f′(g(x))·g′(x)dx = f(g(x)) + C and when an answer may be left in u; integration by parts ∫u dv = uv − ∫v du and why v is the integral of dv; trigonometric substitution driven by 1 − sin²(u) = cos²(u), including why √(4 − 9x²) is first normalised to 2√(1 − (3x/2)²); and the four steps of partial fractions with the roots substituted to find A and B.",
+        "topic": "Conceptual session on Week 8 integration techniques, exactly as she builds them.\n\nThe standard-integral table of slides 4–6.\n\nHer substitution formula ∫f′(g(x))·g′(x)dx = f(g(x)) + C, and when an answer may be left in u.\n\nIntegration by parts ∫u dv = uv − ∫v du, and why v is the integral of dv.\n\nTrigonometric substitution driven by 1 − sin²(u) = cos²(u), including why √(4 − 9x²) is first normalised to 2√(1 − (3x/2)²).\n\nThen the four steps of partial fractions, with the roots substituted to find A and B.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Citizenship and civic responsibilities: the three routes to Nigerian citizenship under Chapter Three of the 1999 Constitution and their exact conditions, dual citizenship, renunciation and deprivation, and the Section 24 duties of every citizen"
+        "topic": "Citizenship and civic responsibilities.\n\nThe three routes to Nigerian citizenship under Chapter Three of the 1999 Constitution, and their exact conditions.\n\nThen dual citizenship, renunciation and deprivation.\n\nThen the Section 24 duties of every citizen."
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "Magnetic dipoles as concepts: what a dipole is and why a magnet cannot be split into poles, the current-loop and pole models, the definition and right-hand-rule direction of mu = NIA, the vector reasoning behind torque = mu x B and U = -mu.B, the electron's moment M = g(-eL/2m), and the geometry of the fields of a bar magnet, a wire and a solenoid",
+        "topic": "Magnetic dipoles, as concepts.\n\nWhat a dipole is, and why a magnet cannot be split into poles. The current-loop and pole models.\n\nThe definition and right-hand-rule direction of mu = NIA.\n\nThe vector reasoning behind torque = mu x B and U = -mu.B.\n\nThe electron's moment M = g(-eL/2m).\n\nThen the geometry of the fields of a bar magnet, a wire and a solenoid.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
@@ -32,36 +32,36 @@
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "Abstraction and the anatomy of functions and modules as concepts: what abstraction hides, data versus functional abstraction, access specifiers and header files, why a complex project is decomposed at all, declaration versus definition, the four parts of a function definition, parameters versus arguments, return type and void, local versus global scope, and what makes a module different from a function",
+        "topic": "Abstraction and the anatomy of functions and modules, as concepts.\n\nWhat abstraction hides. Data versus functional abstraction. Access specifiers and header files.\n\nWhy a complex project is decomposed at all.\n\nDeclaration versus definition, and the four parts of a function definition.\n\nParameters versus arguments. Return type and void. Local versus global scope.\n\nThen what makes a module different from a function.",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Vocabulary expansion and word formation: the seven named processes - affixation, compounding, conversion, derivation, blending, acronyms and borrowing - with the deck's own examples, prefix and suffix meanings and the word class each produces, derivational vs inflectional affixes, and the four named strategies for expanding vocabulary"
+        "topic": "Vocabulary expansion and word formation.\n\nThe seven named processes - affixation, compounding, conversion, derivation, blending, acronyms and borrowing - with the deck's own examples.\n\nPrefix and suffix meanings, and the word class each produces.\n\nDerivational vs inflectional affixes.\n\nThen the four named strategies for expanding vocabulary."
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Problems-only session on Week 8 integration techniques. Compute with substitution (including converting the limits of a definite integral), integration by parts once and twice, trigonometric substitution with the root normalised to 1 − (something)², and partial fractions found by substituting the roots — including all four TASK questions the lecturer set and never answered: ∫₀¹x·eˣdx, ∫x·ln(x)dx, ∫√(1 + x²)dx and ∫[(5x + 7)/((x − 1)(x + 3))]dx.",
+        "topic": "Problems-only session on Week 8 integration techniques.\n\nCompute with substitution, including converting the limits of a definite integral.\n\nIntegration by parts, once and twice.\n\nTrigonometric substitution, with the root normalised to 1 − (something)².\n\nPartial fractions found by substituting the roots.\n\nIncludes all four TASK questions the lecturer set and never answered: ∫₀¹x·eˣdx, ∫x·ln(x)dx, ∫√(1 + x²)dx and ∫[(5x + 7)/((x − 1)(x + 3))]dx.",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Verifying Boyle's law with a J-tube: P = P_a + rho*g*h and V = l*A for a fixed mass of gas at constant temperature, the P-against-V hyperbola versus the P-against-1/V straight line through the origin whose gradient is the constant PV, and the precautions and error sources that protect the isothermal and fixed-mass conditions"
+        "topic": "Verifying Boyle's law with a J-tube.\n\nP = P_a + rho*g*h and V = l*A, for a fixed mass of gas at constant temperature.\n\nThe P-against-V hyperbola versus the P-against-1/V straight line through the origin, whose gradient is the constant PV.\n\nThen the precautions and error sources that protect the isothermal and fixed-mass conditions."
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "Numerical magnetic-dipole work: computing mu = NIA with areas converted to m^2, torque mu*B*sin(theta) and its maximum, energy -mu*B*cos(theta) and the work to rotate or flip a dipole, B = mu_0*I/(2*pi*r) for a straight wire and B = mu*n*I for a solenoid with turns per unit length and a core, the electron's moment from its angular momentum, and the unit, angle and direction traps in each",
+        "topic": "Numerical magnetic-dipole work.\n\nComputing mu = NIA with areas converted to m^2.\n\nTorque mu*B*sin(theta) and its maximum. Energy -mu*B*cos(theta), and the work to rotate or flip a dipole.\n\nB = mu_0*I/(2*pi*r) for a straight wire, and B = mu*n*I for a solenoid with turns per unit length and a core.\n\nThe electron's moment from its angular momentum.\n\nThen the unit, angle and direction traps in each.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "COS_102",
-        "topic": "Code work on abstraction, functions and modules: tracing a call through its parameters to the value it returns and to what appears on the screen, predicting the return of a void function or one whose return sits in the wrong place, spotting the scope, shadowing or pass-by-value fault in a fragment, reading escape sequences in a printf string, and choosing the correct decomposition and import form for a stated task",
+        "topic": "Code work on abstraction, functions and modules.\n\nTracing a call through its parameters to the value it returns, and to what appears on the screen.\n\nPredicting the return of a void function, or one whose return sits in the wrong place.\n\nSpotting the scope, shadowing or pass-by-value fault in a fragment.\n\nReading escape sequences in a printf string.\n\nThen choosing the correct decomposition and import form for a stated task.",
         "checkFile": "checks/Sat-COS_102.md"
       }
     },
@@ -226,7 +226,7 @@
       "day": "Mon",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 8 integration techniques exactly as the lecturer builds them: the standard-integral table of slides 4–6; her substitution formula ∫f′(g(x))·g′(x)dx = f(g(x)) + C and when an answer may be left in u; integration by parts ∫u dv = uv − ∫v du and why v is the integral of dv; trigonometric substitution driven by 1 − sin²(u) = cos²(u), including why √(4 − 9x²) is first normalised to 2√(1 − (3x/2)²); and the four steps of partial fractions with the roots substituted to find A and B.",
+      "topic": "Conceptual session on Week 8 integration techniques, exactly as she builds them.\n\nThe standard-integral table of slides 4–6.\n\nHer substitution formula ∫f′(g(x))·g′(x)dx = f(g(x)) + C, and when an answer may be left in u.\n\nIntegration by parts ∫u dv = uv − ∫v du, and why v is the integral of dv.\n\nTrigonometric substitution driven by 1 − sin²(u) = cos²(u), including why √(4 − 9x²) is first normalised to 2√(1 − (3x/2)²).\n\nThen the four steps of partial fractions, with the roots substituted to find A and B.",
       "maxScore": 12,
       "questions": [
         {
@@ -363,7 +363,7 @@
       "id": "tue-phy102",
       "day": "Tue",
       "course": "PHY_102",
-      "topic": "Magnetic dipoles as concepts: what a dipole is and why a magnet cannot be split into poles, the current-loop and pole models, the definition and right-hand-rule direction of mu = NIA, the vector reasoning behind torque = mu x B and U = -mu.B, the electron's moment M = g(-eL/2m), and the geometry of the fields of a bar magnet, a wire and a solenoid",
+      "topic": "Magnetic dipoles, as concepts.\n\nWhat a dipole is, and why a magnet cannot be split into poles. The current-loop and pole models.\n\nThe definition and right-hand-rule direction of mu = NIA.\n\nThe vector reasoning behind torque = mu x B and U = -mu.B.\n\nThe electron's moment M = g(-eL/2m).\n\nThen the geometry of the fields of a bar magnet, a wire and a solenoid.",
       "maxScore": 12,
       "questions": [
         {
@@ -500,7 +500,7 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "Abstraction and the anatomy of functions and modules as concepts: what abstraction hides, data versus functional abstraction, access specifiers and header files, why a complex project is decomposed at all, declaration versus definition, the four parts of a function definition, parameters versus arguments, return type and void, local versus global scope, and what makes a module different from a function",
+      "topic": "Abstraction and the anatomy of functions and modules, as concepts.\n\nWhat abstraction hides. Data versus functional abstraction. Access specifiers and header files.\n\nWhy a complex project is decomposed at all.\n\nDeclaration versus definition, and the four parts of a function definition.\n\nParameters versus arguments. Return type and void. Local versus global scope.\n\nThen what makes a module different from a function.",
       "maxScore": 12,
       "questions": [
         {
@@ -638,7 +638,7 @@
       "day": "Thu",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Problems-only session on Week 8 integration techniques. Compute with substitution (including converting the limits of a definite integral), integration by parts once and twice, trigonometric substitution with the root normalised to 1 − (something)², and partial fractions found by substituting the roots — including all four TASK questions the lecturer set and never answered: ∫₀¹x·eˣdx, ∫x·ln(x)dx, ∫√(1 + x²)dx and ∫[(5x + 7)/((x − 1)(x + 3))]dx.",
+      "topic": "Problems-only session on Week 8 integration techniques.\n\nCompute with substitution, including converting the limits of a definite integral.\n\nIntegration by parts, once and twice.\n\nTrigonometric substitution, with the root normalised to 1 − (something)².\n\nPartial fractions found by substituting the roots.\n\nIncludes all four TASK questions the lecturer set and never answered: ∫₀¹x·eˣdx, ∫x·ln(x)dx, ∫√(1 + x²)dx and ∫[(5x + 7)/((x − 1)(x + 3))]dx.",
       "maxScore": 12,
       "questions": [
         {
@@ -775,7 +775,7 @@
       "id": "fri-phy102",
       "day": "Fri",
       "course": "PHY_102",
-      "topic": "Numerical magnetic-dipole work: computing mu = NIA with areas converted to m^2, torque mu*B*sin(theta) and its maximum, energy -mu*B*cos(theta) and the work to rotate or flip a dipole, B = mu_0*I/(2*pi*r) for a straight wire and B = mu*n*I for a solenoid with turns per unit length and a core, the electron's moment from its angular momentum, and the unit, angle and direction traps in each",
+      "topic": "Numerical magnetic-dipole work.\n\nComputing mu = NIA with areas converted to m^2.\n\nTorque mu*B*sin(theta) and its maximum. Energy -mu*B*cos(theta), and the work to rotate or flip a dipole.\n\nB = mu_0*I/(2*pi*r) for a straight wire, and B = mu*n*I for a solenoid with turns per unit length and a core.\n\nThe electron's moment from its angular momentum.\n\nThen the unit, angle and direction traps in each.",
       "maxScore": 12,
       "questions": [
         {
@@ -912,7 +912,7 @@
       "id": "sat-cos102",
       "day": "Fri",
       "course": "COS_102",
-      "topic": "Code work on abstraction, functions and modules: tracing a call through its parameters to the value it returns and to what appears on the screen, predicting the return of a void function or one whose return sits in the wrong place, spotting the scope, shadowing or pass-by-value fault in a fragment, reading escape sequences in a printf string, and choosing the correct decomposition and import form for a stated task",
+      "topic": "Code work on abstraction, functions and modules.\n\nTracing a call through its parameters to the value it returns, and to what appears on the screen.\n\nPredicting the return of a void function, or one whose return sits in the wrong place.\n\nSpotting the scope, shadowing or pass-by-value fault in a fragment.\n\nReading escape sequences in a printf string.\n\nThen choosing the correct decomposition and import form for a stated task.",
       "maxScore": 12,
       "questions": [
         {

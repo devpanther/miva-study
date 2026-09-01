@@ -1,6 +1,12 @@
 # Wednesday — COS_102 nightly check
 
-*Week 4 Algorithm Concepts taken conceptually: what an algorithm is as distinct from a computer program, why the five-step development process puts a high-level algorithm before stepwise refinement, and why representation must supply sequence, selection and repetition. Then the analysis side: what priori analysis can settle before any code exists and what only posterior analysis can report, what Big O actually measures and what it deliberately throws away, and why worst case rather than best case is the figure normally quoted. Finally the characteristics and design considerations as claims about cost and failure: what language independence buys, what robustness means beyond correctness, and why a better algorithm rather than more hardware is what delivers scalability in the e-commerce case study.*
+*Week 4 Algorithm Concepts, taken conceptually.*
+
+*What an algorithm is as distinct from a computer program. Why the five-step development process puts a high-level algorithm before stepwise refinement. Why representation must supply sequence, selection and repetition.*
+
+*Then the analysis side. What priori analysis can settle before any code exists, and what only posterior analysis can report. What Big O actually measures, and what it deliberately throws away. Why worst case rather than best case is the figure normally quoted.*
+
+*Finally the characteristics and design considerations, as claims about cost and failure. What language independence buys. What robustness means beyond correctness. Why a better algorithm rather than more hardware is what delivers scalability in the e-commerce case study.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** The lecture insists that an algorithm should not be dependent on any programming language. What does that independence actually buy you?

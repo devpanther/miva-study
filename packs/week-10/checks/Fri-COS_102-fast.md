@@ -1,6 +1,20 @@
 # Friday, second hour — COS_102 check
 
-*Code work on arrays and recursion: tracing a recursive call down to its base case and back up through its pending operations, predicting the return value of an array recursion and the output of one- and two-dimensional array loops, spotting a missing base case and a base case that is never reached, finding off-by-one and out-of-bounds faults in traversals and in recursive index expressions, distinguishing tail from non-tail recursion on a real listing, recognising that an array name cannot be assigned so a copy must be a loop, and diagnosing infinite recursion as a stack overflow rather than a hang.*
+*Code work on arrays and recursion.*
+
+*Tracing a recursive call down to its base case and back up through its pending operations.*
+
+*Predicting the return value of an array recursion, and the output of one- and two-dimensional array loops.*
+
+*Spotting a missing base case, and a base case that is never reached.*
+
+*Finding off-by-one and out-of-bounds faults in traversals and in recursive index expressions.*
+
+*Distinguishing tail from non-tail recursion on a real listing.*
+
+*Recognising that an array name cannot be assigned, so a copy must be a loop.*
+
+*Diagnosing infinite recursion as a stack overflow rather than a hang.*
 
 **1.** What does sumArray(a, 5) return?
 

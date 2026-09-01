@@ -1,6 +1,20 @@
 # Tuesday — PHY_102 nightly check
 
-*The Lorentz force as concepts: what each term in F = q(E + v cross B) means and the exact conditions under which each one vanishes, why the magnetic force is perpendicular to both v and B and therefore does no work, the RHR-1 direction rule and what reversing the sign of q changes, why the orbit in a uniform field is a circle or a helix and why its period is independent of speed, how the crossed-field velocity selector works, why F = I L cross B is the single-charge law summed over the moving charges in a wire, and the transverse geometry of an electromagnetic wave*
+*The Lorentz force, as concepts.*
+
+*What each term in F = q(E + v cross B) means, and the exact conditions under which each one vanishes.*
+
+*Why the magnetic force is perpendicular to both v and B, and therefore does no work.*
+
+*The RHR-1 direction rule, and what reversing the sign of q changes.*
+
+*Why the orbit in a uniform field is a circle or a helix, and why its period is independent of speed.*
+
+*How the crossed-field velocity selector works.*
+
+*Why F = I L cross B is the single-charge law summed over the moving charges in a wire.*
+
+*Then the transverse geometry of an electromagnetic wave.*
 
 **1.** The magnetic part of the Lorentz force on a charged particle is found to be zero, although the particle is inside a strong uniform magnetic field. The possible reasons are:
 

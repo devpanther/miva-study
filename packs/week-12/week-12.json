@@ -8,19 +8,19 @@
       "day": "Mon",
       "deep": {
         "course": "MTH_102",
-        "topic": "Conceptual session on Week 12 applications of integration exactly as the deck builds them: integrating a rate over an interval to get an accumulated total; why an initial condition is needed for an indefinite integral and why the constant cancels in a definite one; the fluid-force formula F = ∫ₐᵇ w·h(x)·L(x)dx with w = ρg; why a varying force forces W = ∫ₐᵇ F(x)dx instead of force × distance; recovering TR from MR and K from I(t); why equilibrium must be found before CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ; and the cumulative-consumption model C(t) = 1000e^(0.035t) − 1000.",
+        "topic": "Conceptual session on Week 12 applications of integration, exactly as the deck builds them.\n\nIntegrating a rate over an interval to get an accumulated total.\n\nWhy an initial condition is needed for an indefinite integral, and why the constant cancels in a definite one.\n\nThe fluid-force formula F = ∫ₐᵇ w·h(x)·L(x)dx, with w = ρg.\n\nWhy a varying force forces W = ∫ₐᵇ F(x)dx instead of force × distance.\n\nRecovering TR from MR, and K from I(t).\n\nWhy equilibrium must be found before CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ.\n\nAnd the cumulative-consumption model C(t) = 1000e^(0.035t) − 1000.",
         "checkFile": "checks/Mon-MTH_102.md"
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Monday's fast hour runs the whole Social Vices deck at 1.5-1.75x: the crime-versus-deviance split and the seven named theories of deviance and crime, the 1950s Pirates Confraternity origin of campus cultism and the 3-year and 21-year cultism penalties, then the kidnapping and armed robbery sections with their causes, effect lists and case figures (838 in 2018 to 4,600 in 2022; 11,858 in 2013 down to 10,249 in 2014), closing on the six geo-political zones' different versions of kidnapping and the EFCC."
+        "topic": "Monday's fast hour runs the whole Social Vices deck at 1.5-1.75x.\n\nThe crime-versus-deviance split, and the seven named theories of deviance and crime.\n\nThe 1950s Pirates Confraternity origin of campus cultism, and the 3-year and 21-year cultism penalties.\n\nThen the kidnapping and armed robbery sections, with their causes, effect lists and case figures: 838 in 2018 to 4,600 in 2022; 11,858 in 2013 down to 10,249 in 2014.\n\nClosing on the six geo-political zones' different versions of kidnapping, and the EFCC."
       }
     },
     {
       "day": "Tue",
       "deep": {
         "course": "PHY_102",
-        "topic": "Conceptual session on Week 12 transformers exactly as the lecturer builds them: the shared core flux and her equation 1, ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt; why equal flux per turn gives equal emf per turn and hence equation 2, ε₂/ε₁ = N₂/N₁; the ideal-transformer assumption that upgrades it to equation 3, V₂/V₁ = N₂/N₁; step-up as N₂ > N₁ and step-down as N₂ < N₁; the energy statement I₁V₁ = I₂V₂; the squared turns ratio in V₁/I₁ = R/(N₂/N₁)²; and the hardware facts — iron core, lamination against eddy currents, unchanged frequency, impedance matching for maximum power transfer.",
+        "topic": "Conceptual session on Week 12 transformers, exactly as the lecturer builds them.\n\nThe shared core flux, and her equation 1: ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt.\n\nWhy equal flux per turn gives equal emf per turn, and hence equation 2, ε₂/ε₁ = N₂/N₁.\n\nThe ideal-transformer assumption that upgrades it to equation 3, V₂/V₁ = N₂/N₁.\n\nStep-up as N₂ > N₁, and step-down as N₂ < N₁.\n\nThe energy statement I₁V₁ = I₂V₂. The squared turns ratio in V₁/I₁ = R/(N₂/N₁)².\n\nAnd the hardware facts: iron core, lamination against eddy currents, unchanged frequency, and impedance matching for maximum power transfer.",
         "checkFile": "checks/Tue-PHY_102.md"
       },
       "fast": {
@@ -32,36 +32,36 @@
       "day": "Wed",
       "deep": {
         "course": "COS_102",
-        "topic": "The Software Testing Life Cycle and Debugging deck: what software testing is and why a defined life cycle is needed at all, the six STLC phases in sequential order with the specific activities each phase owns, entry and exit points, the definition of a test case as inputs, process and expected outputs, and debugging as the process of identifying and resolving bugs together with its named methods (code inspection, monitoring, logging, unit, integration and system testing) and tool categories (debuggers, trace tools, profilers).",
+        "topic": "The Software Testing Life Cycle and Debugging deck.\n\nWhat software testing is, and why a defined life cycle is needed at all.\n\nThe six STLC phases in sequential order, with the specific activities each phase owns, and entry and exit points.\n\nThe definition of a test case as inputs, process and expected outputs.\n\nDebugging as the process of identifying and resolving bugs.\n\nIts named methods: code inspection, monitoring, logging, unit, integration and system testing.\n\nAnd its tool categories: debuggers, trace tools, profilers.",
         "checkFile": "checks/Wed-COS_102.md"
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Wednesday's fast hour drills the recall spine of the Active Listening and Note-Taking deck — the three benefits of active listening, the six active-listening techniques, and the note-taking tips culminating in the Cornell method's cue/notes/summary layout and mind mapping — plus a quick pass over the mismatched summary card's deductive-versus-inductive reasoning and its two named fallacies."
+        "topic": "Wednesday's fast hour drills the recall spine of the Active Listening and Note-Taking deck.\n\nThe three benefits of active listening. The six active-listening techniques.\n\nThen the note-taking tips, culminating in the Cornell method's cue/notes/summary layout, and mind mapping.\n\nPlus a quick pass over the mismatched summary card's deductive-versus-inductive reasoning, and its two named fallacies."
       }
     },
     {
       "day": "Thu",
       "deep": {
         "course": "MTH_102",
-        "topic": "Computation pass on Week 12: evaluating her seven worked examples and close variants of them — ∫₀⁵(2t² + 6t + 1)dt for the car, x(t) = 2t³ − 3t² − 12t − 4 and the 115 m net displacement, the dam force 2.94 × 10⁶[x²/2]₀¹⁰⁰, the rope work 0.6468[60x − x²/2]₀⁶⁰, TR from MR with TR(2) = 260, the capital growth 4t^(3/2)|₄⁹ that the slide mis-states, and the surplus pair CS = 5000 and PS ≈ 5333 for D(Q) = 1000 − 25Q against S(Q) = 100 + Q².",
+        "topic": "Computation pass on Week 12: evaluating her seven worked examples and close variants of them.\n\n∫₀⁵(2t² + 6t + 1)dt for the car.\n\nx(t) = 2t³ − 3t² − 12t − 4, and the 115 m net displacement.\n\nThe dam force 2.94 × 10⁶[x²/2]₀¹⁰⁰. The rope work 0.6468[60x − x²/2]₀⁶⁰.\n\nTR from MR, with TR(2) = 260.\n\nThe capital growth 4t^(3/2)|₄⁹ that the slide mis-states.\n\nAnd the surplus pair CS = 5000 and PS ≈ 5333, for D(Q) = 1000 − 25Q against S(Q) = 100 + Q².",
         "checkFile": "checks/Thu-MTH_102.md"
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Thursday's fast hour covers the Young modulus beam experiment: definitions of stress, strain and E = σ/ε in pascals, the central-depression formula Y = mgℓ³/(48EI) with I = bd³/12 collapsing to Y = mgℓ³/(4Ebd³), the dial-gauge/masses/2-mounts apparatus and the 50-500 g loading procedure, and the Y-against-m straight line through the origin whose gradient gives E = gℓ³/(4bd³s), plus the thickness-cubed error and the elastic-limit precautions."
+        "topic": "Thursday's fast hour covers the Young modulus beam experiment.\n\nDefinitions of stress, strain and E = σ/ε in pascals.\n\nThe central-depression formula Y = mgℓ³/(48EI), with I = bd³/12, collapsing to Y = mgℓ³/(4Ebd³).\n\nThe dial-gauge/masses/2-mounts apparatus, and the 50-500 g loading procedure.\n\nThe Y-against-m straight line through the origin, whose gradient gives E = gℓ³/(4bd³s).\n\nPlus the thickness-cubed error and the elastic-limit precautions."
       }
     },
     {
       "day": "Fri",
       "deep": {
         "course": "PHY_102",
-        "topic": "Problems-only session on Week 12 transformers. Compute with the lecturer's three tools and nothing else: V₂/V₁ = N₂/N₁ for turns ratios and voltages, P_av = V₁I₁ together with I₁V₁ = I₂V₂ for currents, and V₁/I₁ = R/(N₂/N₁)² for resistances. Covers all six part-answers of her two worked examples — 2, 8.0 A, 60 Ω, 1/2, 6.67 A, 36 Ω — the line she leaves out of Example 2(c), fresh numbers on the same three formulas, and one wrong solution to diagnose.",
+        "topic": "Problems-only session on Week 12 transformers.\n\nCompute with the lecturer's three tools and nothing else. V₂/V₁ = N₂/N₁ for turns ratios and voltages. P_av = V₁I₁ together with I₁V₁ = I₂V₂ for currents. And V₁/I₁ = R/(N₂/N₁)² for resistances.\n\nCovers all six part-answers of her two worked examples: 2, 8.0 A, 60 Ω, 1/2, 6.67 A, 36 Ω.\n\nAlso the line she leaves out of Example 2(c), fresh numbers on the same three formulas, and one wrong solution to diagnose.",
         "checkFile": "checks/Fri-PHY_102.md"
       },
       "fast": {
         "course": "COS_102",
-        "topic": "Applying the Software Testing Methods deck to real code: classifying a failure as functional or non-functional and choosing the method (unit, integration, system, acceptance versus usability, performance, security, compatibility), choosing the integration direction top-down or bottom-up, deciding between black, white and grey box for a given situation and knowing which levels each applies to, designing test data by equivalence partitioning and boundary value analysis, and reading a debugger's breakpoint and variable watch to name the defect class.",
+        "topic": "Applying the Software Testing Methods deck to real code.\n\nClassifying a failure as functional or non-functional, then choosing the method: unit, integration, system, acceptance versus usability, performance, security, compatibility.\n\nChoosing the integration direction, top-down or bottom-up.\n\nDeciding between black, white and grey box for a given situation, and knowing which levels each applies to.\n\nDesigning test data by equivalence partitioning and boundary value analysis.\n\nAnd reading a debugger's breakpoint and variable watch to name the defect class.",
         "checkFile": "checks/Sat-COS_102.md"
       }
     },
@@ -218,7 +218,7 @@
       "day": "Mon",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 12 applications of integration exactly as the deck builds them: integrating a rate over an interval to get an accumulated total; why an initial condition is needed for an indefinite integral and why the constant cancels in a definite one; the fluid-force formula F = ∫ₐᵇ w·h(x)·L(x)dx with w = ρg; why a varying force forces W = ∫ₐᵇ F(x)dx instead of force × distance; recovering TR from MR and K from I(t); why equilibrium must be found before CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ; and the cumulative-consumption model C(t) = 1000e^(0.035t) − 1000.",
+      "topic": "Conceptual session on Week 12 applications of integration, exactly as the deck builds them.\n\nIntegrating a rate over an interval to get an accumulated total.\n\nWhy an initial condition is needed for an indefinite integral, and why the constant cancels in a definite one.\n\nThe fluid-force formula F = ∫ₐᵇ w·h(x)·L(x)dx, with w = ρg.\n\nWhy a varying force forces W = ∫ₐᵇ F(x)dx instead of force × distance.\n\nRecovering TR from MR, and K from I(t).\n\nWhy equilibrium must be found before CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ.\n\nAnd the cumulative-consumption model C(t) = 1000e^(0.035t) − 1000.",
       "maxScore": 12,
       "questions": [
         {
@@ -356,7 +356,7 @@
       "day": "Tue",
       "course": "PHY_102",
       "slot": "deep",
-      "topic": "Conceptual session on Week 12 transformers exactly as the lecturer builds them: the shared core flux and her equation 1, ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt; why equal flux per turn gives equal emf per turn and hence equation 2, ε₂/ε₁ = N₂/N₁; the ideal-transformer assumption that upgrades it to equation 3, V₂/V₁ = N₂/N₁; step-up as N₂ > N₁ and step-down as N₂ < N₁; the energy statement I₁V₁ = I₂V₂; the squared turns ratio in V₁/I₁ = R/(N₂/N₁)²; and the hardware facts — iron core, lamination against eddy currents, unchanged frequency, impedance matching for maximum power transfer.",
+      "topic": "Conceptual session on Week 12 transformers, exactly as the lecturer builds them.\n\nThe shared core flux, and her equation 1: ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt.\n\nWhy equal flux per turn gives equal emf per turn, and hence equation 2, ε₂/ε₁ = N₂/N₁.\n\nThe ideal-transformer assumption that upgrades it to equation 3, V₂/V₁ = N₂/N₁.\n\nStep-up as N₂ > N₁, and step-down as N₂ < N₁.\n\nThe energy statement I₁V₁ = I₂V₂. The squared turns ratio in V₁/I₁ = R/(N₂/N₁)².\n\nAnd the hardware facts: iron core, lamination against eddy currents, unchanged frequency, and impedance matching for maximum power transfer.",
       "maxScore": 12,
       "questions": [
         {
@@ -493,7 +493,7 @@
       "id": "wed-cos102",
       "day": "Wed",
       "course": "COS_102",
-      "topic": "The Software Testing Life Cycle and Debugging deck: what software testing is and why a defined life cycle is needed at all, the six STLC phases in sequential order with the specific activities each phase owns, entry and exit points, the definition of a test case as inputs, process and expected outputs, and debugging as the process of identifying and resolving bugs together with its named methods (code inspection, monitoring, logging, unit, integration and system testing) and tool categories (debuggers, trace tools, profilers).",
+      "topic": "The Software Testing Life Cycle and Debugging deck.\n\nWhat software testing is, and why a defined life cycle is needed at all.\n\nThe six STLC phases in sequential order, with the specific activities each phase owns, and entry and exit points.\n\nThe definition of a test case as inputs, process and expected outputs.\n\nDebugging as the process of identifying and resolving bugs.\n\nIts named methods: code inspection, monitoring, logging, unit, integration and system testing.\n\nAnd its tool categories: debuggers, trace tools, profilers.",
       "maxScore": 12,
       "questions": [
         {
@@ -631,7 +631,7 @@
       "day": "Thu",
       "course": "MTH_102",
       "slot": "deep",
-      "topic": "Computation pass on Week 12: evaluating her seven worked examples and close variants of them — ∫₀⁵(2t² + 6t + 1)dt for the car, x(t) = 2t³ − 3t² − 12t − 4 and the 115 m net displacement, the dam force 2.94 × 10⁶[x²/2]₀¹⁰⁰, the rope work 0.6468[60x − x²/2]₀⁶⁰, TR from MR with TR(2) = 260, the capital growth 4t^(3/2)|₄⁹ that the slide mis-states, and the surplus pair CS = 5000 and PS ≈ 5333 for D(Q) = 1000 − 25Q against S(Q) = 100 + Q².",
+      "topic": "Computation pass on Week 12: evaluating her seven worked examples and close variants of them.\n\n∫₀⁵(2t² + 6t + 1)dt for the car.\n\nx(t) = 2t³ − 3t² − 12t − 4, and the 115 m net displacement.\n\nThe dam force 2.94 × 10⁶[x²/2]₀¹⁰⁰. The rope work 0.6468[60x − x²/2]₀⁶⁰.\n\nTR from MR, with TR(2) = 260.\n\nThe capital growth 4t^(3/2)|₄⁹ that the slide mis-states.\n\nAnd the surplus pair CS = 5000 and PS ≈ 5333, for D(Q) = 1000 − 25Q against S(Q) = 100 + Q².",
       "maxScore": 12,
       "questions": [
         {
@@ -769,7 +769,7 @@
       "day": "Fri",
       "course": "PHY_102",
       "slot": "deep",
-      "topic": "Problems-only session on Week 12 transformers. Compute with the lecturer's three tools and nothing else: V₂/V₁ = N₂/N₁ for turns ratios and voltages, P_av = V₁I₁ together with I₁V₁ = I₂V₂ for currents, and V₁/I₁ = R/(N₂/N₁)² for resistances. Covers all six part-answers of her two worked examples — 2, 8.0 A, 60 Ω, 1/2, 6.67 A, 36 Ω — the line she leaves out of Example 2(c), fresh numbers on the same three formulas, and one wrong solution to diagnose.",
+      "topic": "Problems-only session on Week 12 transformers.\n\nCompute with the lecturer's three tools and nothing else. V₂/V₁ = N₂/N₁ for turns ratios and voltages. P_av = V₁I₁ together with I₁V₁ = I₂V₂ for currents. And V₁/I₁ = R/(N₂/N₁)² for resistances.\n\nCovers all six part-answers of her two worked examples: 2, 8.0 A, 60 Ω, 1/2, 6.67 A, 36 Ω.\n\nAlso the line she leaves out of Example 2(c), fresh numbers on the same three formulas, and one wrong solution to diagnose.",
       "maxScore": 12,
       "questions": [
         {
@@ -906,7 +906,7 @@
       "id": "sat-cos102",
       "day": "Fri",
       "course": "COS_102",
-      "topic": "Applying the Software Testing Methods deck to real code: classifying a failure as functional or non-functional and choosing the method (unit, integration, system, acceptance versus usability, performance, security, compatibility), choosing the integration direction top-down or bottom-up, deciding between black, white and grey box for a given situation and knowing which levels each applies to, designing test data by equivalence partitioning and boundary value analysis, and reading a debugger's breakpoint and variable watch to name the defect class.",
+      "topic": "Applying the Software Testing Methods deck to real code.\n\nClassifying a failure as functional or non-functional, then choosing the method: unit, integration, system, acceptance versus usability, performance, security, compatibility.\n\nChoosing the integration direction, top-down or bottom-up.\n\nDeciding between black, white and grey box for a given situation, and knowing which levels each applies to.\n\nDesigning test data by equivalence partitioning and boundary value analysis.\n\nAnd reading a debugger's breakpoint and variable watch to name the defect class.",
       "maxScore": 12,
       "questions": [
         {

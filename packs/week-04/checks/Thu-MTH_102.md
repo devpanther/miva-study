@@ -1,6 +1,16 @@
 # Thursday — MTH_102 nightly check
 
-*Week 4 of Elementary Mathematics II worked as problems: taking numbers off graphs and out of formulas. Covers reading lim as x approaches c from the left, from the right, the two-sided limit and the value f(c) from a described graph, and classifying the point as removable, jump or infinite from the pair of one-sided limits. Covers the algebraic cases the deck uses — lim(x→3) of 2x+1 read off a line of slope 2 and intercept 1, lim(x→1) of (x²−1)/(x−1) by factoring and cancelling, and one-sided limits of |x| and |x|/x at 0 — plus choosing a constant that makes a piecewise function continuous at its joining point. Also covers diagnosing wrong routes, in particular treating the indeterminate form 0/0 as proof that a limit does not exist, and checking a classification against the graph before quoting it.*
+*Week 4 of Elementary Mathematics II worked as problems: taking numbers off graphs and out of formulas.*
+
+*Reading lim as x approaches c from the left, from the right, the two-sided limit, and the value f(c), from a described graph.*
+
+*Classifying the point as removable, jump or infinite from the pair of one-sided limits.*
+
+*The algebraic cases the deck uses: lim(x→3) of 2x+1 read off a line of slope 2 and intercept 1; lim(x→1) of (x²−1)/(x−1) by factoring and cancelling; and one-sided limits of |x| and |x|/x at 0.*
+
+*Then choosing a constant that makes a piecewise function continuous at its joining point.*
+
+*Also diagnosing wrong routes. In particular, treating the indeterminate form 0/0 as proof that a limit does not exist, and checking a classification against the graph before quoting it.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** A graph shows: for x < 2 the curve rises and ends in an open circle at (2, 3); for x > 2 the curve begins at an open circle at (2, −4) and falls; a shaded dot is plotted at (2, 1). What is lim(x→2) f(x)?

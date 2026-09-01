@@ -1,6 +1,16 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 5 differentiation exactly as the lecturer builds it: the power rule f′(x) = nx^(n−1) as 'the general rule of differentiation'; her orderings of the product rule u(x)v′(x) + u′(x)v(x) and the quotient rule [v(x)u′(x) − u(x)v′(x)]/(v(x))²; what the chain rule's second factor u′(x) is for; why implicit differentiation leaves dy/dx behind while partial differentiation annihilates the other variable; her constant rule; and the first principle as 'the limit definition of the derivative', including why the h must cancel before the limit is taken.*
+*Week 5 differentiation, exactly as she builds it.*
+
+*The power rule f′(x) = nx^(n−1), which she calls 'the general rule of differentiation'. Her constant rule.*
+
+*Her orderings, which matter: the product rule u(x)v′(x) + u′(x)v(x), and the quotient rule [v(x)u′(x) − u(x)v′(x)]/(v(x))².*
+
+*What the chain rule's second factor u′(x) is for.*
+
+*Why implicit differentiation leaves dy/dx behind, while partial differentiation annihilates the other variable.*
+
+*The first principle as 'the limit definition of the derivative', including why the h must cancel before the limit is taken.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** The chain rule slide writes f′(x) = y′(u)·u′(x). What work is the second factor, u′(x), doing?

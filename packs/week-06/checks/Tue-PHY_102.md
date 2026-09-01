@@ -1,6 +1,20 @@
 # Tuesday — PHY_102 nightly check
 
-*Conceptual session on Week 6 exactly as Dr. Adeniji builds it: peak value as the maximum instantaneous value measured from zero; rms as the equivalent DC value that dissipates the same power in a resistive load; the source V = V_max sin ωt with ω = 2πf = 2π/T in rad s⁻¹; I = (V_max/R) sin ωt = I_max sin ωt so I_max = V_max/R; why a direct average of an alternating quantity is useless and why squaring fixes it, I² = I²_max sin²ωt with (I²)_av = ½I²_max; the two results I_rms = 0.7071 I_max and V_rms = 0.7071 V_max; why AC meters are calibrated in rms; and P_av = I²_rms R = V²_rms/R. Scope boundaries included: no reactance, impedance, phasors or resonance in this deck.*
+*Week 6, exactly as Dr. Adeniji builds it.*
+
+*Peak value as the maximum instantaneous value measured from zero. Rms as the equivalent DC value that dissipates the same power in a resistive load.*
+
+*The source V = V_max sin ωt, with ω = 2πf = 2π/T in rad s⁻¹.*
+
+*Then I = (V_max/R) sin ωt = I_max sin ωt, so I_max = V_max/R.*
+
+*Why a direct average of an alternating quantity is useless, and why squaring fixes it: I² = I²_max sin²ωt with (I²)_av = ½I²_max.*
+
+*The two results I_rms = 0.7071 I_max and V_rms = 0.7071 V_max.*
+
+*Why AC meters are calibrated in rms. And P_av = I²_rms R = V²_rms/R.*
+
+*Scope boundaries included: no reactance, impedance, phasors or resonance in this deck.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Slide 4 defines the peak value of a waveform. Which statement is her definition?

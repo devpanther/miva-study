@@ -1,6 +1,20 @@
 # Thursday — MTH_102 nightly check
 
-*Computation pass on Week 5: applying the power rule to polynomials and fractional indices, the product rule f′ = u v′ + u′ v and the quotient rule [v u′ − u v′]/v² to new expressions, the chain rule on cos, sin and bracket powers, implicit differentiation with collection and factorisation of dy/dx, the parametric rule dy/dx = dy/dt ÷ dx/dt including her unanswered TASK on x(t) = t⁴ and y(t) = 7t² − 5t, partial derivatives holding the other variable constant, and a full first-principle calculation.*
+*Computation pass on Week 5.*
+
+*The power rule applied to polynomials and fractional indices.*
+
+*The product rule f′ = u v′ + u′ v and the quotient rule [v u′ − u v′]/v², applied to new expressions.*
+
+*The chain rule on cos, sin and bracket powers.*
+
+*Implicit differentiation, with collection and factorisation of dy/dx.*
+
+*The parametric rule dy/dx = dy/dt ÷ dx/dt, including her unanswered TASK on x(t) = t⁴ and y(t) = 7t² − 5t.*
+
+*Partial derivatives, holding the other variable constant.*
+
+*Then a full first-principle calculation.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Differentiate f(x) = 5x⁷ − 2x.

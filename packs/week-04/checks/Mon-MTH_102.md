@@ -1,6 +1,22 @@
 # Monday — MTH_102 nightly check
 
-*Week 4 of Elementary Mathematics II treated conceptually: what the objects in a limit statement actually are and why each continuity criterion is there. Covers the three-condition definition of continuity at a point c (f(c) defined, lim as x approaches c exists, and the two are equal), one-sided limits and the existence criterion that the left and right limits must agree on one finite real number, what an open circle and a shaded dot each encode on a graph, and why 'limit equals infinity' is a description of failure rather than a value. Covers the four types of discontinuity (removable, jump, infinite, essential) as names for which criterion fails and in what way, including why a removable one can be repaired by redefining a single point and a jump or infinite one cannot. No computation is required; every question asks what breaks without a given condition.*
+*Week 4 of Elementary Mathematics II, taken conceptually.*
+
+*What the objects in a limit statement actually are, and why each continuity criterion is there.*
+
+*The three-condition definition of continuity at a point c: f(c) defined, lim as x approaches c exists, and the two are equal.*
+
+*One-sided limits, and the existence criterion that the left and right limits must agree on one finite real number.*
+
+*What an open circle and a shaded dot each encode on a graph.*
+
+*Why 'limit equals infinity' is a description of failure rather than a value.*
+
+*The four types of discontinuity (removable, jump, infinite, essential) as names for which criterion fails and in what way.*
+
+*Why a removable one can be repaired by redefining a single point, and a jump or infinite one cannot.*
+
+*No computation is required. Every question asks what breaks without a given condition.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** The definition of continuity at c lists 'f(c) is defined' as a separate condition, even though the third condition already says lim(x→c) f(x) = f(c). Why is the first condition not redundant?

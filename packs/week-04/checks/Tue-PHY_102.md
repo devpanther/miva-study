@@ -1,6 +1,20 @@
 # Tuesday — PHY_102 nightly check
 
-*Conceptual hour on Week 4 of General Physics II: what the quantities in DC circuit analysis and electrostatic dipoles actually are, and why each rule holds. Covers ideal versus real voltage and current sources, the meaning of internal resistance and the emf/terminal-voltage distinction, why a zeroed voltage source becomes a short and a zeroed current source an open circuit, the linearity that superposition and the Thevenin and Norton theorems depend on, and why a reference node may be set to zero in nodal analysis. Also covers the electric dipole moment as a vector from minus q to plus q, why the dipole potential falls as one over r squared and vanishes on the equatorial plane, why the axial and equatorial fields differ in size and direction, and why a dipole feels torque but no net force in a uniform field. Finally, why polarisation of a dielectric lowers the field and raises the capacitance. No numerical work is required in this session.*
+*Conceptual hour on Week 4 of General Physics II.*
+
+*What the quantities in DC circuit analysis and electrostatic dipoles actually are, and why each rule holds.*
+
+*Ideal versus real voltage and current sources. The meaning of internal resistance, and the emf/terminal-voltage distinction.*
+
+*Why a zeroed voltage source becomes a short and a zeroed current source an open circuit.*
+
+*The linearity that superposition and the Thevenin and Norton theorems depend on. Why a reference node may be set to zero in nodal analysis.*
+
+*Then the electric dipole moment as a vector from minus q to plus q. Why the dipole potential falls as one over r squared and vanishes on the equatorial plane. Why the axial and equatorial fields differ in size and direction. Why a dipole feels torque but no net force in a uniform field.*
+
+*Finally, why polarisation of a dielectric lowers the field and raises the capacitance.*
+
+*No numerical work is required in this session.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** In a superposition analysis you must 'zero' each source in turn. What justifies replacing a zeroed ideal voltage source by a wire and a zeroed ideal current source by a gap?

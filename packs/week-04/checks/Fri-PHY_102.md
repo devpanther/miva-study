@@ -1,6 +1,16 @@
 # Friday — PHY_102 nightly check
 
-*Problem-solving hour on the same Week 4 material of General Physics II. Sets up and executes numerical work on real sources (finding current and terminal voltage from emf, internal resistance and load, with the power balance as a check), on multi-source resistive networks by superposition, by nodal analysis with a chosen reference node, and by reduction to a Thevenin or Norton equivalent. Then on electric dipoles: computing the dipole moment from charge and separation, the far-field potential k p cos theta over r squared, the axial and equatorial field magnitudes and directions, and the torque and potential energy of a dipole in a uniform field. Finally a parallel-plate capacitor problem with a dielectric inserted at fixed charge. Emphasis throughout is on choosing the right relation, carrying units, and diagnosing the specific wrong routes that give plausible but incorrect numbers.*
+*Problem-solving hour on the same Week 4 material of General Physics II.*
+
+*It sets up and executes numerical work on real sources: finding current and terminal voltage from emf, internal resistance and load, with the power balance as a check.*
+
+*Multi-source resistive networks three ways: by superposition, by nodal analysis with a chosen reference node, and by reduction to a Thevenin or Norton equivalent.*
+
+*Then electric dipoles. Computing the dipole moment from charge and separation. The far-field potential k p cos theta over r squared. The axial and equatorial field magnitudes and directions. The torque and potential energy of a dipole in a uniform field.*
+
+*Finally a parallel-plate capacitor problem with a dielectric inserted at fixed charge.*
+
+*Emphasis throughout is on choosing the right relation, carrying units, and diagnosing the specific wrong routes that give plausible but incorrect numbers.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** A cell of emf 12.0 V and internal resistance 0.50 ohm drives a 5.5 ohm load. What is the terminal voltage?

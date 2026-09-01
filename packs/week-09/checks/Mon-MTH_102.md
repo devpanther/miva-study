@@ -1,6 +1,18 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 9 exactly as the deck builds it: the two triggers that make ∫ₐᵇ f(x)dx improper; the Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists; why ∫₋∞^∞ must be split and why one divergent half ends the question; the three Type II clauses and the one-sided limits c → b⁻ and c → a⁺; the Comparison Test in her lettering 0 ≤ g(x) ≤ f(x), its two valid conclusions and the two that prove nothing; and Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.*
+*Conceptual session on Week 9, exactly as the deck builds it.*
+
+*The two triggers that make ∫ₐᵇ f(x)dx improper.*
+
+*The Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists.*
+
+*Why ∫₋∞^∞ must be split, and why one divergent half ends the question.*
+
+*The three Type II clauses, and the one-sided limits c → b⁻ and c → a⁺.*
+
+*The Comparison Test in her lettering 0 ≤ g(x) ≤ f(x): its two valid conclusions, and the two that prove nothing.*
+
+*Then Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Slide 4 lists exactly two conditions under which the definite integral ∫ₐᵇ f(x)dx is called improper. Which pair is it?

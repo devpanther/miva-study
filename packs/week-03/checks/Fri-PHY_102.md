@@ -1,6 +1,20 @@
 # Friday — PHY_102 nightly check
 
-*Week 3 of General Physics II worked as problems: setting up and solving circuit questions with internal resistance using epsilon = I(R + r) and V = epsilon - Ir, extracting emf and internal resistance from a V-I graph, computing motional emf from Bvl and the induced current, force and power that follow, and applying Faraday's law with N turns to a changing flux. It also covers capacitor numerical work: C = K epsilon-nought A/d, V = Ed, U = CV^2/2 = Q^2/2C, and energy density one-half epsilon E squared multiplied by the volume Ad. Several questions ask you to diagnose a wrong route rather than produce a number, and to check an answer by units or by a second independent relation. Take epsilon-nought = 8.85 x 10^-12 F/m.*
+*Week 3 of General Physics II worked as problems.*
+
+*Setting up and solving circuit questions with internal resistance, using epsilon = I(R + r) and V = epsilon - Ir.*
+
+*Extracting emf and internal resistance from a V-I graph.*
+
+*Computing motional emf from Bvl, and the induced current, force and power that follow.*
+
+*Applying Faraday's law with N turns to a changing flux.*
+
+*Then the capacitor numerical work: C = K epsilon-nought A/d, V = Ed, U = CV^2/2 = Q^2/2C, and energy density one-half epsilon E squared multiplied by the volume Ad.*
+
+*Several questions ask you to diagnose a wrong route rather than produce a number, and to check an answer by units or by a second independent relation.*
+
+*Take epsilon-nought = 8.85 x 10^-12 F/m.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** A cell of emf 9.0 V and internal resistance 1.5 ohm is connected to a 3.0 ohm resistor. What is the potential difference across the 3.0 ohm resistor?

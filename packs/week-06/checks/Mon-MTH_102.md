@@ -1,6 +1,18 @@
 # Monday — MTH_102 nightly check
 
-*Conceptual session on Week 6 higher-order derivatives exactly as the deck builds them: that f″ is obtained by differentiating f′ again and no new rule is introduced; the power rule f′ = nx^(n−1) and the NOTE that the derivative of a constant is 0; rewriting √(x³) as x^(3/2) before differentiating; the chain rule f′(x) = y′(u)·u′(x) and why sin(5x) keeps depositing a factor 5 while e^(3x) keeps depositing a 3 without ever changing sign; the quotient rule [v·u′ − u·v′]/v² and why ln(1 + x²) needs it at every order after the first; and the notation f⁽⁴⁾(x) = (f‴(x))′.*
+*Week 6 higher-order derivatives, exactly as the deck builds them.*
+
+*That f″ is obtained by differentiating f′ again, and no new rule is introduced.*
+
+*The power rule f′ = nx^(n−1), and the NOTE that the derivative of a constant is 0.*
+
+*Rewriting √(x³) as x^(3/2) before differentiating.*
+
+*The chain rule f′(x) = y′(u)·u′(x), and why sin(5x) keeps depositing a factor 5 while e^(3x) keeps depositing a 3 without ever changing sign.*
+
+*The quotient rule [v·u′ − u·v′]/v², and why ln(1 + x²) needs it at every order after the first.*
+
+*The notation f⁽⁴⁾(x) = (f‴(x))′.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** The SECOND-ORDER DERIVATIVE slide says how the second derivative is obtained. In her phrasing, it is obtained

@@ -1,6 +1,12 @@
 # Thursday — MTH_102 nightly check
 
-*Problems-only session on Week 11 volumes of revolution. Set up and evaluate π∫ₐᵇ[R]²dx, π∫ₐᵇ([R]² − [r]²)dx and 2π∫ₐᵇ x f(x)dx on the deck's own numbers: her six worked examples, all three unanswered TASKs — √x from 1 to 4, y = x² over [0,2] about y = −1, and y = x against y = x² about the y-axis — plus irrational limits (√2, √3), a shifted axis, and one solid computed twice as a cross-check.*
+*Problems-only session on Week 11 volumes of revolution.*
+
+*Set up and evaluate π∫ₐᵇ[R]²dx, π∫ₐᵇ([R]² − [r]²)dx and 2π∫ₐᵇ x f(x)dx on the deck's own numbers.*
+
+*Her six worked examples. Then all three unanswered TASKs: √x from 1 to 4; y = x² over [0,2] about y = −1; and y = x against y = x² about the y-axis.*
+
+*Plus irrational limits (√2, √3), a shifted axis, and one solid computed twice as a cross-check.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Disc Example 2: revolving the region between x = y² + 1 and x = 3 about the line x = 3, she gets R(y) = 2 − y² with limits −√2 to √2. Evaluate π∫₋√2^√2 (4 − 4y² + y⁴)dy.

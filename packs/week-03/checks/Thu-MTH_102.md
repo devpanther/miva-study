@@ -1,6 +1,18 @@
 # Thursday — MTH_102 nightly check
 
-*Problems-only session on Week 3. Evaluate limits by her four methods: direct substitution on polynomials and rational functions; factorization and cancellation for 0/0; clearing a complex fraction by its common denominator with the −1 rewrite; multiplying by the conjugate of the numerator for square roots; and L'Hôpital's Rule with the form re-checked after each application. Includes both TASKs the lecturer set — lim x→3 (x³ − 27)/(x − 3) and lim x→4 (1/√x − 1/2)/(x − 4) — plus one wrong solution to diagnose.*
+*Problems-only session on Week 3. Evaluate limits by her four methods.*
+
+*Direct substitution on polynomials and rational functions.*
+
+*Factorization and cancellation for 0/0.*
+
+*Clearing a complex fraction by its common denominator, with the −1 rewrite.*
+
+*Multiplying by the conjugate of the numerator for square roots.*
+
+*And L'Hôpital's Rule, with the form re-checked after each application.*
+
+*Includes both TASKs the lecturer set — lim x→3 (x³ − 27)/(x − 3) and lim x→4 (1/√x − 1/2)/(x − 4) — plus one wrong solution to diagnose.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Evaluate lim x→4 (x² + 3x − 5).

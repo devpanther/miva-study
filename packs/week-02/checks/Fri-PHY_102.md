@@ -1,6 +1,16 @@
 # Friday — PHY_102 nightly check
 
-*Problems-only session on Week 2. Compute with F = k|q₁q₂|/r² and k = 9.0 × 10⁹ N m²/C² as the lecturer does: Example 1's 16 × 10⁻¹¹ N and 4 × 10⁻¹¹ N and the total she never states; Solution 2b's 0.0194 N, 0.0152 N and ΣF = −0.0042 N; part f, the net force on Q₂, which the deck sets and never solves; then E = F/q₀ and |E| = k|Q|/r² on her three solved problems — 1250 N/C, 1100 N/C inward, and 450 + 125 = 575 N/C along +x — finishing with F = qE on an electron, the second half of her question that the slide leaves blank.*
+*Problems-only session on Week 2.*
+
+*Compute with F = k|q₁q₂|/r² and k = 9.0 × 10⁹ N m²/C², as the lecturer does.*
+
+*Example 1's 16 × 10⁻¹¹ N and 4 × 10⁻¹¹ N, and the total she never states.*
+
+*Solution 2b's 0.0194 N, 0.0152 N and ΣF = −0.0042 N. Then part f, the net force on Q₂, which the deck sets and never solves.*
+
+*Then E = F/q₀ and |E| = k|Q|/r² on her three solved problems — 1250 N/C, 1100 N/C inward, and 450 + 125 = 575 N/C along +x.*
+
+*Finish with F = qE on an electron, the second half of her question that the slide leaves blank.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Point charges of +5.0 μC and −3.0 μC are 0.30 m apart. What is the magnitude of the force between them?

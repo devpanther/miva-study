@@ -1,6 +1,18 @@
 # Thursday — MTH_102 nightly check
 
-*Computation pass on Week 12: evaluating her seven worked examples and close variants of them — ∫₀⁵(2t² + 6t + 1)dt for the car, x(t) = 2t³ − 3t² − 12t − 4 and the 115 m net displacement, the dam force 2.94 × 10⁶[x²/2]₀¹⁰⁰, the rope work 0.6468[60x − x²/2]₀⁶⁰, TR from MR with TR(2) = 260, the capital growth 4t^(3/2)|₄⁹ that the slide mis-states, and the surplus pair CS = 5000 and PS ≈ 5333 for D(Q) = 1000 − 25Q against S(Q) = 100 + Q².*
+*Computation pass on Week 12: evaluating her seven worked examples and close variants of them.*
+
+*∫₀⁵(2t² + 6t + 1)dt for the car.*
+
+*x(t) = 2t³ − 3t² − 12t − 4, and the 115 m net displacement.*
+
+*The dam force 2.94 × 10⁶[x²/2]₀¹⁰⁰. The rope work 0.6468[60x − x²/2]₀⁶⁰.*
+
+*TR from MR, with TR(2) = 260.*
+
+*The capital growth 4t^(3/2)|₄⁹ that the slide mis-states.*
+
+*And the surplus pair CS = 5000 and PS ≈ 5333, for D(Q) = 1000 − 25Q against S(Q) = 100 + Q².*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** Evaluate ∫₀⁵(2t² + 6t + 1)dt, the distance the car covers in the first 5 hours.

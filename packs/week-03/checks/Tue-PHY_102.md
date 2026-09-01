@@ -1,6 +1,18 @@
 # Tuesday — PHY_102 nightly check
 
-*Week 3 of General Physics II treated conceptually: what electromotive force actually is (energy delivered per coulomb, not a force), how it differs from terminal potential difference and why the difference is the lost volts Ir, and the microscopic origin of motional emf in the Lorentz force qvB on carriers in a moving rod. It also covers the meaning of the minus sign in Faraday's law, the idea that electrostatic energy is stored in the field itself with density one-half epsilon-nought E squared, why the factor of one half appears in the capacitor energy, and what a dielectric does to capacitance, field and breakdown. No lengthy calculation is required; every question asks what a quantity means, why a relation holds, or what would go wrong without it.*
+*Week 3 of General Physics II treated conceptually.*
+
+*What electromotive force actually is: energy delivered per coulomb, not a force. How it differs from terminal potential difference, and why the difference is the lost volts Ir.*
+
+*The microscopic origin of motional emf in the Lorentz force qvB on carriers in a moving rod.*
+
+*The meaning of the minus sign in Faraday's law.*
+
+*The idea that electrostatic energy is stored in the field itself, with density one-half epsilon-nought E squared. Why the factor of one half appears in the capacitor energy.*
+
+*And what a dielectric does to capacitance, field and breakdown.*
+
+*No lengthy calculation is required. Every question asks what a quantity means, why a relation holds, or what would go wrong without it.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** A torch cell reads 1.50 V on a voltmeter with nothing else connected, and 1.20 V when it is lighting a bulb. What has become of the missing 0.30 V?

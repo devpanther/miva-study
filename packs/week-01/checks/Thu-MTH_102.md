@@ -1,6 +1,18 @@
 # Thursday — MTH_102 nightly check
 
-*Problems-only session on Week 1. Evaluate f(x) = 2x + 3 and f(x) = x² − 4 at negative inputs; find domains by setting the denominator ≠ 0, including the case her rendered examples never reach, where the exclusion is real; find ranges by making x the subject and by building up from |·| ≥ 0; find inverses by let–switch–isolate; form and expand both composites of f(x) = 5x − 4 and g(x) = x²; and work her TASK, the domain and range of √(x + 2) − 8, plus the corrected table from slide 22.*
+*Problems-only session on Week 1.*
+
+*Evaluate f(x) = 2x + 3 and f(x) = x² − 4 at negative inputs.*
+
+*Find domains by setting the denominator ≠ 0, including the case her rendered examples never reach, where the exclusion is real.*
+
+*Find ranges by making x the subject, and by building up from |·| ≥ 0.*
+
+*Find inverses by let–switch–isolate.*
+
+*Form and expand both composites of f(x) = 5x − 4 and g(x) = x².*
+
+*Then work her TASK: the domain and range of √(x + 2) − 8, plus the corrected table from slide 22.*
 *Sit cold, notes closed, about 15 minutes. Score out of 12.*
 
 **1.** For f(x) = 2x + 3, evaluate f(−4).
