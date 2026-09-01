@@ -1031,3 +1031,6 @@ ul.misslist .linkish:hover{color:var(--deep);text-decoration:underline;
   font-weight:800;letter-spacing:.06em;text-transform:uppercase;
   background:var(--gold);color:#fff;border-radius:999px;padding:2px 7px;vertical-align:2px}
 .srow.unsat .sname,.srow.unsat .smeta{color:var(--ink3)}
+/* A question you got wrong last week, marked as such while you re-sit it. */
+.qeyebrow .qtag{margin-left:8px;background:var(--bad-bg);color:var(--bad);
+  border-radius:999px;padding:1px 8px;font-size:9.5px;letter-spacing:.05em}

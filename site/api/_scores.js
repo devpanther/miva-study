@@ -87,6 +87,14 @@ export function cleanScores(raw, id) {
       continue;
     }
 
+    /* A catch-up sat: "catchup|w3". Practice on a week already graded, so it records
+       only that you sat it and how it went. Nothing reads it as a mark. */
+    if (/^catchup\|w\d{1,2}$/.test(rest)) {
+      if (typeof v.n !== "number") continue;
+      out[k] = { n: num(v.n, 0, 200), of: num(v.of, 1, 200), at: str(v.at, 40) || new Date().toISOString() };
+      continue;
+    }
+
     /* A goal: "goal|streak", "goal|acc", "goal|week", "goal|topics", "goal|course:MTH_102".
        The target lives in the value, not the key, so nudging it up or down edits the
        goal you already have rather than leaving a graveyard of abandoned keys. Zero is a

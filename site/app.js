@@ -1068,13 +1068,31 @@ function sessionRows(parent, w, opts){
 function reviewPanel(parent, w){
   var slots = slotsFor(w), done = 0;
   slots.forEach(function(x){ if(getScore(ME, w, x.day, x.slot)) done++; });
-  parent.appendChild(el("p","muted","Every session of week " + w + ", worst first. The top two are what Sunday gets."));
-  factRow2(parent, [done + " of " + slots.length + " sat", "no new material", "nothing scored here"]);
-  stepList(parent, [
-    "Redo the ones in red. Same questions, cold",
-    "Read back the summaries for those two courses",
-    "Settle which two topics Sunday gets"
-  ]);
+  parent.appendChild(el("p","muted","Everything week " + w + " caught you on, in one sitting. Then the two topics for Sunday."));
+
+  ensureWeek(w);
+  var deck = weekDeck(w, {size: CATCHN});
+  if(deck === null){
+    factRow2(parent, ["loading week " + w]);
+  } else if(!deck.length){
+    factRow2(parent, [done + " of " + slots.length + " sat"]);
+    parent.appendChild(el("p","muted","Nothing scored in week " + w + " yet, so there is nothing to go back over."));
+  } else {
+    factRow2(parent, [deck.missedCount + " you got wrong",
+                      deck.heldCount + " to spot-check",
+                      deckMins(deck.length)]);
+    stepList(parent, [
+      "Sit them. You find out why on every one, straight away",
+      "Then read back the summaries for the two courses at the top",
+      "Settle which two topics Sunday gets"
+    ]);
+    var r = el("div","row");
+    r.appendChild(btn("act big", "Go over the week · " + deck.length + " questions", function(){
+      startDeck("review", deck, {week: w});
+    }));
+    parent.appendChild(r);
+  }
+  parent.appendChild(el("div","lbl2","The week, worst first"));
   sessionRows(parent, w, {mark: true});
 }
 
@@ -1094,23 +1112,43 @@ function catchupPanel(parent, w){
     sessionRows(parent, w);
     return;
   }
-  parent.appendChild(el("p","muted","Week " + prev + ", sat again seven days on. The gap is the point: if it survives a week, you have it."));
-  factRow2(parent, ["week " + prev, "seven days old", "does not change your score"]);
-  stepList(parent, [
-    "Sit them cold. No notes, no going back to the summary first",
-    "Anything that drops more than two marks goes on Sunday's list"
-  ]);
+  parent.appendChild(el("p","muted","Week " + prev + ", seven days on. Everything it caught you on, plus a few you got right, to see what stayed."));
+
   ensureWeek(prev);
-  if(!WEEKS[prev]){
-    parent.appendChild(el("p","muted","Loading week " + prev + "…"));
-    return;
+  var deck = weekDeck(prev, {size: CATCHN});
+  var sat = catchDone(prev);
+
+  if(deck === null){
+    factRow2(parent, ["loading week " + prev + "…"]);
+  } else if(!deck.length){
+    factRow2(parent, ["week " + prev, "nothing scored"]);
+    parent.appendChild(el("p","muted","You did not sit anything in week " + prev + ", so there is nothing seven days old to come back to."));
+  } else {
+    factRow2(parent, [deck.missedCount + " you got wrong",
+                      deck.heldCount + " to spot-check",
+                      deckMins(deck.length),
+                      "does not change your score"]);
+    stepList(parent, [
+      "Sit them cold. No notes, no going back to the summary first",
+      "Anything still catching you goes on Sunday's list"
+    ]);
+    var r = el("div","row");
+    r.appendChild(btn("act big", (sat ? "Go again · " : "Start the catch-up · ") + deck.length + " questions", function(){
+      startDeck("catchup", deck, {week: prev});
+    }));
+    if(sat) r.appendChild(el("span","sc " + (sat.n / sat.of >= 0.83 ? "g" : (sat.n / sat.of >= 0.5 ? "o" : "b")),
+                             "sat " + sat.n + "/" + sat.of));
+    parent.appendChild(r);
   }
+  parent.appendChild(el("div","lbl2","Week " + prev + ", session by session"));
   sessionRows(parent, prev, {verb: "Sit again"});
 }
 
 /* A row of plain facts with no course attached. */
 function factRow2(parent, bits){
   var r = el("div","facts");
+  /* "0 to spot-check" is not information, it is a slot that happened to be empty. */
+  bits = bits.filter(function(t){ return t && !/^0 /.test(t); });
   bits.forEach(function(t, i){
     if(i) r.appendChild(el("span","fdot","·"));
     r.appendChild(el("span","fact", esc(t)));
@@ -2626,6 +2664,15 @@ function dayNav(root){
 /* ---------- tonight ---------- */
 function viewTonight(root){
   var wi = weekInfo(), di = dayIdx();
+
+  /* A catch-up or a review takes over the tab while you are sitting it. Half a deck
+     with the rest of Saturday's page scrolling underneath is the same mistake as
+     burying the questions behind ten buttons. */
+  if(DRILL && (DRILL.kind === "catchup" || DRILL.kind === "review")){
+    if(DRILL.done) deckResult(root, DRILL.kind === "catchup" ? "Catch-up done" : "Week reviewed");
+    else drillRunner(root);
+    return;
+  }
 
   if(onRunway()){
     runwayCard(root, wi);
@@ -4798,10 +4845,111 @@ function drillDraw(n){
 }
 
 /* ---------- a sitting ---------- */
+/* ---------- everything you got wrong, brought to you ----------
+
+   The rule this follows: never point at work, hand it over.
+
+   Catch-up used to be a paragraph saying "sit last week's seven question sets", then a
+   list of ten rows you had to tap through one at a time. Both are the app telling you
+   to go and find something it is already holding. It knows which questions you missed,
+   because every score records the concepts it caught you on, so it can just build the
+   deck.
+
+   What goes in, in order:
+     1. Every question you got wrong. All of them, across every session of that week.
+     2. Then a spot-check of ones you got right, because the seven-day gap is testing
+        whether it STAYED learned, and only re-asking your misses would never find the
+        thing that quietly faded.
+   Capped, because a deck of forty at 22:00 is a deck nobody finishes. */
+var CATCHN = 15;
+
+function weekDeck(w, opts){
+  opts = opts || {};
+  var wd = WEEKS[w];
+  if(!wd) return null;                       /* caller decides what to say while loading */
+  var missed = [], held = [];
+
+  slotsFor(w).forEach(function(x){
+    var sc = getScore(ME, w, x.day, x.slot);
+    if(!sc) return;
+    var chk = checkFor(wd, x.day, x.slot);
+    if(!chk || !chk.questions) return;
+    var wrong = {};
+    (sc.wrong || []).forEach(function(c){ wrong[String(c).trim()] = true; });
+
+    chk.questions.forEach(function(q, i){
+      /* Short-answer questions are marked by the AI against your own words; they cannot
+         be re-sat as a tap. Only the multiple-choice ones can come back here. */
+      if(q.type !== "mcq" || !q.options) return;
+      var item = {id: w + ":" + x.day + ":" + x.slot + ":" + i, week: w, course: x.course, q: q};
+      if(wrong[String(q.concept || "").trim()]){ item.tag = "you missed this"; missed.push(item); }
+      else held.push(item);
+    });
+  });
+
+  if(!missed.length && !held.length) return [];
+
+  /* Your misses all go in. The spot-check is sampled, so two Saturdays running do not
+     ask the same "did it stay learned" questions. */
+  shuffle(held);
+  var room = Math.max(0, (opts.size || CATCHN) - missed.length);
+  var deck = missed.concat(held.slice(0, room));
+  shuffle(deck);
+  deck.missedCount = missed.length;
+  deck.heldCount = Math.min(room, held.length);
+  return deck;
+}
+
+/* Roughly forty seconds a question: read it, answer it, read why. A bad week can put
+   twenty-four in front of you and it is only fair to say so before you start. */
+function deckMins(n){
+  var m = Math.max(1, Math.round(n * 40 / 60));
+  return "about " + m + " min";
+}
+
+function shuffle(a){
+  for(var i = a.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t;
+  }
+  return a;
+}
+
+/* Did you already sit this week's catch-up? */
+function catchKey(w){ return ME + "|catchup|w" + w; }
+function catchDone(w){ return S.scores[catchKey(w)] || null; }
+
+/* ---------- a deck you sit, whatever fed it ----------
+
+   Three things now put questions in front of you: the morning drill, Saturday's
+   catch-up, and the Friday review. They differ in where the questions come from and in
+   what gets written down afterwards. They do not differ at all in how you sit them:
+   one question, tap, find out why, next.
+
+   So they share the runner and carry a `kind`. The alternative was three near-identical
+   loops that would drift apart the first time one of them was improved. */
+function startDeck(kind, picked, meta){
+  if(!picked || !picked.length){ toast("Nothing to sit here yet."); return; }
+  DRILL = {
+    kind: kind,
+    meta: meta || {},
+    items: picked.map(function(p){
+      var opts = p.q.options.map(function(t, i){ return {t: t, right: i === p.q.answerIndex}; });
+      for(var i = opts.length - 1; i > 0; i--){
+        var j = Math.floor(Math.random() * (i + 1)), t = opts[i]; opts[i] = opts[j]; opts[j] = t;
+      }
+      return {id: p.id, week: p.week, course: p.course, tag: p.tag || "", q: p.q, opts: opts, chose: null};
+    }),
+    i: 0, right: 0, done: false, at: new Date().toISOString()
+  };
+  QUIZ = null; MANUAL = null; BUDDY = null;
+  syncUrl(); render();
+}
+
 function startDrill(){
   var picked = drillDraw(DRILLN);
   if(!picked.length){ toast("The drill bank has not loaded yet."); return; }
   DRILL = {
+    kind: "drill",
     items: picked.map(function(p){
       /* Shuffle the options. The bank spreads its answer letters, but a bank sat over
          and over would still teach position, and this costs nothing. */
@@ -4837,6 +4985,20 @@ function nextDrill(){
    a count of days you turned up rather than of times you tapped Start. */
 function finishDrill(){
   DRILL.done = true;
+
+  /* A catch-up or a review is practice on work already graded. It records that you sat
+     it and how it went, and it touches nothing else: not the cold score from last week,
+     not the drill streak, not the mark total. */
+  if(DRILL.kind === "catchup" || DRILL.kind === "review"){
+    if(DRILL.kind === "catchup" && DRILL.meta.week){
+      S.scores[catchKey(DRILL.meta.week)] =
+        {n: DRILL.right, of: DRILL.items.length, at: DRILL.at};
+    }
+    save(false);
+    render();
+    return;
+  }
+
   var t = today(); t.setHours(0,0,0,0);
   var on = ymd(t), prev = drillDay(on), before = drillStreak();
 
@@ -5249,7 +5411,9 @@ function drillRunner(root){
   var answered = it.chose !== null;
 
   var head = el("div","drhead");
-  head.appendChild(el("span","drn", (DRILL.i + 1) + " of " + n));
+  head.appendChild(el("span","drn",
+    (DRILL.kind === "catchup" ? "catch-up " : (DRILL.kind === "review" ? "review " : ""))
+    + (DRILL.i + 1) + " of " + n));
   var bar = el("div","drbar");
   var fill = el("div","drfill");
   fill.style.width = Math.round(((DRILL.i + (answered ? 1 : 0)) / n) * 100) + "%";
@@ -5259,7 +5423,9 @@ function drillRunner(root){
   root.appendChild(head);
 
   var c = el("div","qcard");
-  c.appendChild(el("div","qeyebrow", esc((NAMES[it.course] || it.course) + " · week " + it.week)));
+  var eye = el("div","qeyebrow", esc((NAMES[it.course] || it.course) + " · week " + it.week));
+  if(it.tag) eye.appendChild(el("span","qtag", esc(it.tag)));
+  c.appendChild(eye);
   var qt = el("div","qt", codeHtml(it.q.q));
   c.appendChild(qt);
 
@@ -5306,6 +5472,51 @@ function drillRunner(root){
   root.appendChild(foot);
 }
 
+/* The end of a catch-up or a review. Same shape as a drill's, different words: nothing
+   here moved a grade, and what it found is a list for Sunday. */
+function deckResult(root, title){
+  var n = DRILL.items.length, got = DRILL.right, pc = Math.round((got / n) * 100);
+  var c = el("div","card " + (pc >= 83 ? "goodc" : (pc >= 50 ? "" : "badc")));
+  c.appendChild(el("div","lbl", esc(title)));
+  var big = el("div","drscore"); big.id = "deckscore";
+  big.innerHTML = got + '<span class="of">/' + n + '</span>';
+  c.appendChild(big);
+  var stuck = DRILL.items.filter(function(x){ return x.tag && (x.chose === null || x.chose === -1 || !x.opts[x.chose].right); });
+  var recovered = DRILL.items.filter(function(x){ return x.tag && x.chose !== null && x.chose !== -1 && x.opts[x.chose].right; });
+  c.appendChild(el("p","muted",
+    recovered.length
+      ? "You got " + recovered.length + " of the " + (recovered.length + stuck.length)
+        + " you had missed. " + (stuck.length ? stuck.length + " still catching you." : "None still catching you.")
+      : "Nothing here changed a grade. It changed what you know."));
+  var row = el("div","row");
+  row.appendChild(btn("act big","Done", function(){ DRILL = null; render(); }));
+  row.appendChild(btn("act ghost","Go again", function(){
+    startDeck(DRILL.kind, DRILL.items.map(function(x){ return {id:x.id, week:x.week, course:x.course, tag:x.tag, q:x.q}; }), DRILL.meta);
+  }));
+  c.appendChild(row);
+  root.appendChild(c);
+  missedList(root, DRILL.items);
+}
+
+/* Every one you got wrong, with the answer. Shared by the drill and the decks. */
+function missedList(root, items){
+  var missed = items.filter(function(x){ return x.chose === null || x.chose === -1 || !x.opts[x.chose].right; });
+  if(!missed.length) return;
+  var m = el("div","card");
+  m.appendChild(el("div","lbl", missed.length + " to look at"));
+  missed.forEach(function(x){
+    var b = el("div","drmiss");
+    b.appendChild(el("div","drc", esc((NAMES[x.course] || x.course) + " · ") + codeHtml(x.q.concept || "")));
+    b.appendChild(el("div","drq", codeHtml(x.q.q)));
+    var ans = x.opts.filter(function(o){ return o.right; })[0];
+    b.appendChild(el("div","dra", "<b>Answer</b> " + codeHtml(ans ? ans.t : "")));
+    whyInto(b, x.q.why);
+    makeSelectable(b);
+    m.appendChild(b);
+  });
+  root.appendChild(m);
+}
+
 function drillResult(root){
   var n = DRILL.items.length, got = DRILL.right, pc = Math.round((got / n) * 100);
   var c = el("div","card " + (pc >= 83 ? "goodc" : (pc >= 50 ? "" : "badc")));
@@ -5329,22 +5540,7 @@ function drillResult(root){
   c.appendChild(row);
   root.appendChild(c);
 
-  var missed = DRILL.items.filter(function(x){ return x.chose === null || x.chose === -1 || !x.opts[x.chose].right; });
-  if(missed.length){
-    var m = el("div","card");
-    m.appendChild(el("div","lbl", missed.length + (missed.length === 1 ? " to look at" : " to look at")));
-    missed.forEach(function(x){
-      var b = el("div","drmiss");
-      b.appendChild(el("div","drc", esc((NAMES[x.course] || x.course) + " · ") + codeHtml(x.q.concept || "")));
-      b.appendChild(el("div","drq", codeHtml(x.q.q)));
-      var ans = x.opts.filter(function(o){ return o.right; })[0];
-      b.appendChild(el("div","dra", "<b>Answer</b> " + codeHtml(ans ? ans.t : "")));
-      whyInto(b, x.q.why);
-      makeSelectable(b);
-      m.appendChild(b);
-    });
-    root.appendChild(m);
-  }
+  missedList(root, DRILL.items);
   goalsSection(root);
 }
 
