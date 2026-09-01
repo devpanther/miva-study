@@ -16,6 +16,17 @@ var GRID = [
   {day:"Fri", deep:"PHY_102", dn:"Derivations",        fast:"REVIEW",  fn:"Summaries + pick the weekend topics"},
   {day:"Sat", deep:"COS_102", dn:"Write the code",     fast:"CATCHUP", fn:"Last week's questions"}
 ];
+/* Credit units, straight off the course list. These decide how much a grade is worth,
+   so they decide how much a night is worth, and the app says so out loud on every card.
+   Without this the schedule gets built on which course FEELS hard, which is how a
+   3-unit course ended up with the least time on the timetable. */
+var UNITS = {
+  COS_102:3, CSC_106:3,
+  MTH_102:2, PHY_102:2, GST_112:2, GST_122:2,
+  PHY_108:1, MIVA_COS_111:1
+};
+function unitsOf(c){ return UNITS[c] || 0; }
+
 var NAMES = {
   MTH_102:"MTH 102", PHY_102:"PHY 102", COS_102:"COS 102", PHY_108:"PHY 108",
   GST_112:"GST 112", GST_122:"GST 122", CSC_106:"CSC 106", MIVA_COS_111:"MIVA-COS 111",
@@ -964,6 +975,187 @@ function briefParts(text){
 
 /* Every place the brief appears renders it through here. It used to be written out
    raw in three separate views, so fixing one left the others as walls. */
+/* The session brief, collapsed by default and labelled for what it is.
+
+   It used to be the first thing on the card, clamped to four lines of a 500-character
+   sentence. That is the "word salad" problem exactly: the most prominent text on the
+   screen was the least actionable thing on it. It is still here, because on a Sunday
+   you do want to know what a session covered. It is just no longer in the way. */
+function coversBlock(parent, text){
+  var t = String(text || "").trim();
+  if(!t) return;
+  var wrap = el("div","covers");
+  var open = false, body = null;
+  var b = btn("moreb","What this covers", function(){
+    open = !open;
+    if(open){ body = el("div"); briefInto(body, t, "muted"); wrap.appendChild(body); b.textContent = "Hide"; }
+    else { if(body) body.remove(); body = null; b.textContent = "What this covers"; }
+  });
+  wrap.appendChild(b);
+  parent.appendChild(wrap);
+}
+
+/* ---------- Friday: review the week ----------
+
+   The old Friday card told you to "look at your scores" and then showed you none of
+   them. This shows every session of the week with what you got, worst first, and puts
+   the redo button on the row. The two at the top are what Sunday is for. */
+function sessionRows(parent, w, opts){
+  opts = opts || {};
+  var rows = slotsFor(w).map(function(x){
+    var sc = getScore(ME, w, x.day, x.slot);
+    return {day:x.day, slot:x.slot, course:x.course, sc:sc,
+            ratio: sc ? sc.score / sc.max : null};
+  });
+  /* Unsat sessions last: you cannot revise something you have not met. */
+  rows.sort(function(a, b){
+    if(a.ratio === null && b.ratio === null) return 0;
+    if(a.ratio === null) return 1;
+    if(b.ratio === null) return -1;
+    return a.ratio - b.ratio;
+  });
+  var any = rows.some(function(r){ return r.sc; });
+  if(!any){
+    parent.appendChild(el("p","muted","Nothing scored in week " + w + " yet. Sit a check and it appears here."));
+    return 0;
+  }
+  var list = el("div","srows");
+  rows.forEach(function(r, i){
+    var row = el("div","srow" + (r.sc ? "" : " unsat")
+                 + (opts.mark && i < 2 && r.sc ? " worst" : ""));
+    var left = el("div","sleft");
+    left.appendChild(el("div","sname", esc(NAMES[r.course] || r.course)));
+    left.appendChild(el("div","smeta", r.day + " · " + (r.slot === "deep" ? "first hour" : "second hour")
+      + " · " + unitsOf(r.course) + "u"));
+    row.appendChild(left);
+    if(r.sc){
+      row.appendChild(el("span","sc " + scoreClass(r.sc), r.sc.score + "/" + r.sc.max));
+      row.appendChild(btn("act tiny ghost", opts.verb || "Redo", function(){
+        startQuiz(r.day, r.slot, true);
+      }));
+    } else {
+      row.appendChild(el("span","sc", "not sat"));
+      row.appendChild(btn("act tiny", "Sit it", function(){ startQuiz(r.day, r.slot); }));
+    }
+    list.appendChild(row);
+  });
+  parent.appendChild(list);
+  return rows.filter(function(r){ return r.sc; }).length;
+}
+
+function reviewPanel(parent, w){
+  var slots = slotsFor(w), done = 0;
+  slots.forEach(function(x){ if(getScore(ME, w, x.day, x.slot)) done++; });
+  parent.appendChild(el("p","muted","Every session of week " + w + ", worst first. The top two are what Sunday gets."));
+  factRow2(parent, [done + " of " + slots.length + " sat", "no new material", "nothing scored here"]);
+  stepList(parent, [
+    "Redo the ones in red. Same questions, cold",
+    "Read back the summaries for those two courses",
+    "Settle which two topics Sunday gets"
+  ]);
+  sessionRows(parent, w, {mark: true});
+}
+
+/* ---------- Saturday: catch-up ----------
+
+   This is the spaced-repetition hour, and until now it was a paragraph telling you to
+   sit seven question sets with no way to start any of them. Same rows, pointed at last
+   week, with the score you got the first time so you can see whether it stuck. */
+function catchupPanel(parent, w){
+  var prev = w - 1;
+  if(prev < 1){
+    parent.appendChild(el("p","muted","First week of the semester, so nothing is seven days old yet."));
+    stepList(parent, [
+      "Redo anything from this week you got wrong",
+      "GST 112 and CSC 106 are pure recall and cheapest to bank now"
+    ]);
+    sessionRows(parent, w);
+    return;
+  }
+  parent.appendChild(el("p","muted","Week " + prev + ", sat again seven days on. The gap is the point: if it survives a week, you have it."));
+  factRow2(parent, ["week " + prev, "seven days old", "does not change your score"]);
+  stepList(parent, [
+    "Sit them cold. No notes, no going back to the summary first",
+    "Anything that drops more than two marks goes on Sunday's list"
+  ]);
+  ensureWeek(prev);
+  if(!WEEKS[prev]){
+    parent.appendChild(el("p","muted","Loading week " + prev + "…"));
+    return;
+  }
+  sessionRows(parent, prev, {verb: "Sit again"});
+}
+
+/* A row of plain facts with no course attached. */
+function factRow2(parent, bits){
+  var r = el("div","facts");
+  bits.forEach(function(t, i){
+    if(i) r.appendChild(el("span","fdot","·"));
+    r.appendChild(el("span","fact", esc(t)));
+  });
+  parent.appendChild(r);
+}
+
+/* ---------- what to actually do tonight ----------
+
+   The brief says what a session COVERS. That is a different document from what you DO,
+   and reading 300 words of prose at 21:00 to work out "watch, read, then take the
+   check" is the app failing at its one job.
+
+   So the steps are computed, not written. They come from facts the app already holds:
+   which slot this is, whether there is a lecture video this week, whether a check
+   exists and how long it is, whether the course wants building rather than watching.
+   That means they are short, always true, and never go stale when a pack is
+   regenerated. The prose moves behind "What this covers", where it belongs. */
+
+function doSteps(course, slot, chk, minutes){
+  var n = chk && chk.questions ? chk.questions.length : 0;
+  var out = [];
+  var build = (course === "CSC_106" || course === "COS_102");
+
+  if(slot === "deep"){
+    if(minutes) out.push("Watch the lecture video at 1×, " + minutes + " minutes");
+    else out.push("No lecture video this week. The PDF is the lesson, so read it properly");
+    out.push("Read the PDF with a pen. Phone in another room");
+    if(build) out.push("Write the code yourself before you look at theirs");
+    else out.push("Work the examples on paper, not in your head");
+    if(n) out.push("Take the " + n + "-question check");
+  } else {
+    if(minutes) out.push("Watch at 1.5× to 1.75×, about " + Math.round(minutes / 1.6) + " minutes");
+    else out.push("No video. Read the PDF straight through");
+    if(build) out.push("Build the example as you go");
+    if(n) out.push("Take the " + n + "-question check");
+    out.push("Post in the forum, then close the laptop");
+  }
+  return out;
+}
+
+/* A numbered list, because at 21:00 you want an order, not a paragraph. */
+function stepList(parent, steps){
+  if(!steps || !steps.length) return;
+  var box = el("div","dolist");
+  box.appendChild(el("div","lbl2","Do this"));
+  var ol = el("ol");
+  steps.forEach(function(t){ ol.appendChild(el("li", null, esc(t))); });
+  box.appendChild(ol);
+  parent.appendChild(box);
+}
+
+/* The one line that says what this session is worth and how long it takes. */
+function factRow(parent, course, slot, chk){
+  var u = unitsOf(course), n = chk && chk.questions ? chk.questions.length : 0;
+  var bits = [];
+  if(u) bits.push(u + " unit" + (u === 1 ? "" : "s"));
+  bits.push(slot === "deep" ? "1 hour at 1×" : "1 hour at 1.5–1.75×");
+  if(n) bits.push(n + " questions");
+  var r = el("div","facts");
+  bits.forEach(function(t, i){
+    if(i) r.appendChild(el("span","fdot","·"));
+    r.appendChild(el("span", i === 0 && u >= 3 ? "fact heavy" : "fact", esc(t)));
+  });
+  parent.appendChild(r);
+}
+
 function briefInto(parent, text, cls){
   var t = String(text || "").trim();
   if(!t){ parent.appendChild(el("p", cls||"muted", "No brief for this session.")); return; }
@@ -2446,13 +2638,16 @@ function viewTonight(root){
   if(wd && wd.days){ var dd = wd.days.filter(function(x){ return x.day===g.day; })[0]; if(dd && dd.fast) fastTopic = dd.fast.topic; }
 
   var c1 = el("div","card deepc");
-  c1.appendChild(el("div","lbl","21:00 – 22:00 · deep hour · 1×"));
+  c1.appendChild(el("div","lbl","21:00 – 22:00 · first hour"));
   c1.appendChild(el("h2",null,esc(NAMES[g.deep])));
-  topicBlock(c1, topic || g.dn, "muted");
-  watchLine(c1, g.deep, w, true);
-  c1.appendChild(el("p","muted","Keep this open beside the LMS. Pen in hand, phone in another room. Where there is no lecture video the PDF is the lesson, not the reference — read it properly rather than skimming."));
+  /* Facts first, then an order to follow. The brief that describes the session moves
+     down behind "What this covers": useful on a Sunday, in the way at 21:00. */
+  factRow(c1, g.deep, "deep", chk);
+  var mins1 = watchLine(c1, g.deep, w, true);
+  stepList(c1, doSteps(g.deep, "deep", chk, mins1));
+  coversBlock(c1, topic || g.dn);
 
-  var gr1 = el("div","row"); gr1.style.marginTop = "6px";
+  var gr1 = el("div","row"); gr1.style.marginTop = "10px";
   gr1.appendChild(btn("act ghost","Study guide", function(){ openGuide(g.deep, w, "tonight"); }));
   c1.appendChild(gr1);
 
@@ -2470,15 +2665,20 @@ function viewTonight(root){
   c1.appendChild(row1);
   root.appendChild(c1);
 
+  var fchk0 = checkFor(wd, g.day, "fast");
   var c2 = el("div","card fastc");
-  c2.appendChild(el("div","lbl","22:00 – 23:00 · fast hour · 1.5–1.75×"));
-  c2.appendChild(el("h2",null,esc(NAMES[g.fast])));
-  topicBlock(c2, fastTopic || g.fn, "muted");
-  if(g.fast==="REVIEW") c2.appendChild(el("p","muted","Read back this week's summaries, then look at your scores. The lowest one is your weekend topic."));
-  else if(g.fast==="CATCHUP") c2.appendChild(el("p","muted","Last week's question set, sat cold. Or whatever you missed this week."));
-  else {
-    c2.appendChild(el("p","muted","Watch at speed, read the PDF, take the quiz, post in the forum, close the laptop."));
-    watchLine(c2, g.fast, w, false);
+  c2.appendChild(el("div","lbl","22:00 – 23:00 · second hour"));
+  c2.appendChild(el("h2",null, g.fast==="REVIEW" ? "Review the week"
+                            : (g.fast==="CATCHUP" ? "Catch-up" : esc(NAMES[g.fast]))));
+  if(g.fast === "REVIEW"){
+    reviewPanel(c2, w);
+  } else if(g.fast === "CATCHUP"){
+    catchupPanel(c2, w);
+  } else {
+    factRow(c2, g.fast, "fast", fchk0);
+    var mins2 = watchLine(c2, g.fast, w, false);
+    stepList(c2, doSteps(g.fast, "fast", fchk0, mins2));
+    coversBlock(c2, fastTopic || g.fn);
   }
 
   if(g.fast !== "REVIEW" && g.fast !== "CATCHUP"){
@@ -2499,11 +2699,8 @@ function viewTonight(root){
     row2.appendChild(el("span","muted","about three minutes"));
     c2.appendChild(row2);
   } else if(g.fast === "REVIEW" || g.fast === "CATCHUP"){
-    /* Friday and Saturday have nothing new to test, so they get no check. Say so —
-       a card that just stops reads like something failed to load. */
-    row2.appendChild(el("span","muted","No check tonight: this hour is "
-      + (g.fast === "REVIEW" ? "review" : "catch-up") + ", not new material."));
-    c2.appendChild(row2);
+    /* Nothing to add. The panel above is the whole hour: the rows ARE the work, and a
+       line saying "no check tonight" under a list of checks reads as a contradiction. */
   } else {
     row2.appendChild(btn("act ghost","Log a score manually", function(){ manualScore(g.day, "fast"); }));
     row2.appendChild(el("span","muted","No quick check generated for this session yet"));
@@ -3114,6 +3311,7 @@ function watchLine(parent, course, w, halve){
   add("chip", "Practice", id.practice ? base + "quiz/view.php?id=" + id.practice : null);
   add("chip", "Forum", id.forum ? base + "forum/view.php?id=" + id.forum : null);
   parent.appendChild(row2);
+  return mins;
 }
 
 function loadExamIndex(){

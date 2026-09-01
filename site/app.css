@@ -990,3 +990,44 @@ ul.misslist .linkish:hover{color:var(--deep);text-decoration:underline;
   font:.92em/1.4 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
   background:var(--surface);border-radius:5px;padding:1px 5px}
 .expl .qcode,.bw .qcode,.bq .qcode{margin:8px 0 2px;background:var(--surface)}
+
+/* ============================================================================
+   WHAT YOU DO TONIGHT
+   The brief used to be the biggest text on the card and the least useful thing on it.
+   Now the card leads with three facts and a numbered order, both computed from what
+   the app already knows, and the prose sits behind a button.
+   ============================================================================ */
+
+.facts{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:6px 0 2px;
+  font-size:12.5px;font-weight:700;color:var(--ink3)}
+.facts .fdot{color:var(--line)}
+.facts .fact.heavy{color:var(--deep);background:var(--deep-bg);border-radius:999px;
+  padding:1px 9px}
+
+.dolist{margin:13px 0 4px}
+.dolist ol{margin:6px 0 0;padding:0;list-style:none;counter-reset:step}
+.dolist li{counter-increment:step;position:relative;padding-left:28px;margin-bottom:8px;
+  font-size:14.5px;line-height:1.5;color:var(--ink)}
+.dolist li::before{content:counter(step);position:absolute;left:0;top:1px;
+  width:20px;height:20px;border-radius:7px;background:var(--deep-bg);color:var(--deep);
+  font-size:11px;font-weight:800;display:grid;place-items:center}
+.dolist li:last-child{margin-bottom:0}
+
+.covers{margin-top:12px}
+.covers .brief{margin-top:8px}
+
+/* ---------- the week's sessions, as rows you can act on ---------- */
+.srows{margin-top:12px}
+.srow{display:flex;align-items:center;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.srow:first-child{border-top:0}
+.srow .sleft{flex:1;min-width:0}
+.srow .sname{font-weight:800;font-size:14.5px;color:var(--ink);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.srow .smeta{font-size:11.5px;font-weight:700;color:var(--ink3);margin-top:1px}
+.srow .sc{flex:none}
+.srow .act{flex:none}
+/* The two worst are what the weekend is for, so they are marked as such. */
+.srow.worst .sname::after{content:"for Sunday";margin-left:7px;font-size:9.5px;
+  font-weight:800;letter-spacing:.06em;text-transform:uppercase;
+  background:var(--gold);color:#fff;border-radius:999px;padding:2px 7px;vertical-align:2px}
+.srow.unsat .sname,.srow.unsat .smeta{color:var(--ink3)}
