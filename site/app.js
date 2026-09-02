@@ -102,10 +102,10 @@ var RUNWAY = [
 
    Three things make it worth its own tab rather than a runway line:
 
-     It is a grade lever, not a pass. One certification is the MINIMUM. The course
-     handbook says extra ones "can uplift your grade to a B or A, depending on the
-     recognition of the certification", so on a one-unit course the count decides the
-     grade.
+     It is a grade lever, not a pass. The handbook's grading page is two lines long:
+     one certification is a "Pass grade (C)", additional ones are "Grade improvements
+     (B or A)". No number-to-letter table exists past that, so on a one-unit course the
+     count is the grade and more is simply better.
 
      The submission is one shot. "You have only one opportunity to submit. Once
      submitted, your response cannot be edited, modified, or replaced." Upload after one
@@ -141,11 +141,13 @@ var CERTS = [
    vendor:"Cisco NetAcad", note:"",
    href:"https://www.netacad.com/catalogs/learn"}
 ];
-/* Anything outside the recommended list still counts, and still lifts the grade. Two
-   slots, because the point is to be able to record them, not to plan them. */
+/* Anything outside the recommended list still counts, and still lifts the grade. The
+   handbook's FAQ: "Yes, as long as they're from approved vendor partners and you
+   provide evidence before grading. Discuss with your instructor first." Two slots,
+   because the point is to be able to record them, not to plan them. */
 var CERTEXTRA = [
-  {id:"extra1", name:"Another certification", vendor:"Any approved vendor", note:"", href:null},
-  {id:"extra2", name:"Another certification", vendor:"Any approved vendor", note:"", href:null}
+  {id:"extra1", name:"Another certification", vendor:"Approved vendor, cleared with the lecturer", note:"", href:null},
+  {id:"extra2", name:"Another certification", vendor:"Approved vendor, cleared with the lecturer", note:"", href:null}
 ];
 
 function certKey(id){ return ME + "|cert|" + id; }
@@ -160,14 +162,28 @@ function certCount(){
   CERTS.concat(CERTEXTRA).forEach(function(c){ if(certDone(c.id)) n++; });
   return n;
 }
-/* What the count buys you, in the handbook's own terms. */
+/* What the count buys you.
+   These are the handbook's own words, not a rule we worked out. Page 5, "Requirements
+   and Grading", says exactly two things:
+
+     "Minimum Completion (1 certification): Pass grade (C)"
+     "Additional Certifications: Grade improvements (B or A)"
+
+   and the FAQ on page 20 repeats it: "Completing minimum requirements earns a pass
+   grade. Additional certifications can improve your grade up to an A."
+
+   Nowhere does it say two is a B and three is an A. So neither do we. Past the first
+   one the honest answer is "B or A, and your lecturer decides", and the tab says that
+   rather than inventing a ladder. */
 function certGrade(n){
   /* Short labels: this sits in a stat box a third of a phone wide, and "above the
      minimum" wrapped to three lines there. The sentence underneath carries the detail. */
-  if(n === 0) return {label:"none", tone:"b", say:"One is the minimum. Without it this course is not passed."};
-  if(n === 1) return {label:"minimum", tone:"o", say:"Requirement met. More can lift the grade."};
-  if(n === 2) return {label:"above", tone:"g", say:"Two counts as extra effort. A third is worth it if you have the time."};
-  return {label:"well above", tone:"g", say:"This is the range the handbook describes as B or A territory."};
+  if(n === 0) return {label:"none yet", tone:"b",
+    say:"One certification is the minimum. Without one, this course is not passed."};
+  if(n === 1) return {label:"C", tone:"o",
+    say:"One is a pass. The handbook grades it C."};
+  return {label:"B or A", tone:"g",
+    say:"Past one, the handbook says extra certifications lift the grade to a B or an A. It never says how many make each, so more is better and the lecturer decides."};
 }
 
 var CERTSYNC = null;
@@ -5714,6 +5730,21 @@ function viewCerts(root){
   draw();
   c.appendChild(body);
   root.appendChild(c);
+
+  /* What the grade rules actually say. Quoted, because the obvious question is "is
+     three an A?" and the honest answer is that nobody published a number. */
+  var r = el("div","card");
+  r.appendChild(el("div","lbl","How it is graded"));
+  var rq = el("blockquote","certquote");
+  rq.appendChild(el("p", null, "Minimum Completion (1 certification): Pass grade (C). Additional Certifications: Grade improvements (B or A)."));
+  rq.appendChild(el("cite", null, "Micro-Credential Student Handbook, page 5"));
+  r.appendChild(rq);
+  stepList(r, [
+    "One certificate is a C. That is the whole minimum",
+    "Two or more is where B and A live. No page anywhere says which number is which",
+    "Off the recommended list is fine, as long as the vendor is an approved partner and you clear it with the lecturer first"
+  ]);
+  root.appendChild(r);
 
   /* the two things that are not a certificate */
   var w = el("div","card");
