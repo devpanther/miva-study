@@ -27,7 +27,19 @@ export default async function handler(req, res) {
   }
 
   const pad = String(n).padStart(2, "0");
-  const course = /^[A-Z]{3}_\d{3}$/.test(String(req.query.course || "")) ? req.query.course : "";
+  /* COS_102, CSC_106 — and MIVA_COS_111, which the old three-letter pattern rejected,
+     so its summary could never be served at all. */
+  const course = /^[A-Z]{3,4}(_[A-Z]{3})?_\d{3}$/.test(String(req.query.course || "")) ? req.query.course : "";
+
+  /* Asking for a summary and not naming a real course is a mistake, and it used to be
+     answered with the whole week pack: the request for `doc=summary` was quietly
+     dropped, the JSON branch ran, and the page that expected markdown printed a pack.
+     A request the server cannot honour now says so. */
+  if (req.query.doc === "summary" && !course) {
+    res.setHeader("Cache-Control", "no-store");
+    return res.status(404).json({ ok: false, error: "no summary for " + String(req.query.course || "(none)") });
+  }
+
   const wantSummary = req.query.doc === "summary" && course;
   const path = wantSummary
     ? "/packs/week-" + pad + "/" + course + "-Summary.md"

@@ -63,10 +63,15 @@ var GENERIC_WHY = [
 /* Before week 1 there is a runway, and it is not dead time — everything on this list
    buys back an evening later in the semester. Each line ticks off and the ticks sync
    like scores do, so the runway is a thing you finish rather than a thing you read. */
+/* The courses with a pre-semester diagnostic. MIVA-COS 111 is not one of them: it has
+   no test to sit, only certifications to earn, so a chip for it was a chip that led
+   nowhere. The count in the label is derived from this list so the two cannot drift. */
+var PRETESTS = ["MTH_102","PHY_102","COS_102","PHY_108","GST_112","GST_122","CSC_106"];
+
 var RUNWAY = [
-  {id:"tests", label:"Take the 8 pre-semester tests",
+  {id:"tests", label:"Take the " + PRETESTS.length + " pre-semester tests",
    detail:"Ungraded. They show where you are weak before you spend an hour anywhere.",
-   per:["MTH_102","PHY_102","COS_102","PHY_108","GST_112","GST_122","CSC_106","MIVA_COS_111"],
+   per: PRETESTS,
    /* Each course chip opens that course on the LMS, where its pre-semester test sits. */
    linkFor:function(c){ return lmsCourseLink(c); }},
   /* This used to read "Three activities, and then that course never asks for another
@@ -353,10 +358,38 @@ function pull(){
   }).catch(function(){ STORAGE = "error"; });
 }
 
-/* ---------- week packs ---------- */
-function ensureWeek(n){
+/* ---------- week packs ----------
+
+   A pack arrives over the network, which means "I don't have it" has two very different
+   causes: it is on its way, or it never came. The app used to collapse both into the
+   same thing — no pack, so no check — and then tell you "No check generated for this
+   session yet" and offer to let you type a score in by hand. On a good connection you
+   saw that for half a second. On a bad one you saw it forever, and it read as a missing
+   question set rather than a missing download.
+
+   The failure path was worse than the message. It set LOADING back to false and called
+   render(); render() asked for the week again; weekData() called ensureWeek(); and that
+   fired the same failing request. A tight, unbounded retry loop, on a phone, on the
+   connection that was already struggling.
+
+   So a failure is now remembered, backed off, and shown as itself. */
+var WKFAIL = {};                  /* n -> {tries, at} for packs that did not arrive */
+function failWait(tries){
+  /* 2s, 6s, 18s, 54s, then every minute. Long enough not to hammer a bad line, short
+     enough that walking back into signal fixes itself without a reload. */
+  return Math.min(60000, 2000 * Math.pow(3, Math.max(0, tries - 1)));
+}
+function weekState(n){
+  if(!n || n < 1 || n > 12) return "none";
+  if(WEEKS[n]) return "ok";
+  if(WKFAIL[n] && !LOADING[n]) return "failed";
+  return "loading";
+}
+function ensureWeek(n, force){
   if(!n || n<1 || n>12) return;
   if(WEEKS[n] || LOADING[n]) return;
+  var f = WKFAIL[n];
+  if(f && !force && Date.now() - f.at < failWait(f.tries)) return;   /* still cooling off */
   LOADING[n] = true;
   fetch("/api/week?n="+n)
     .then(function(r){
@@ -366,10 +399,38 @@ function ensureWeek(n){
     })
     .then(function(j){
       LOADING[n] = false;
-      if(j && j.week) WEEKS[n] = j;
+      if(j && j.week){ WEEKS[n] = j; delete WKFAIL[n]; }
+      else WKFAIL[n] = {tries: (f ? f.tries : 0) + 1, at: Date.now()};
       render();
     })
-    .catch(function(){ LOADING[n] = false; render(); });
+    .catch(function(){
+      LOADING[n] = false;
+      var t = (WKFAIL[n] ? WKFAIL[n].tries : 0) + 1;
+      WKFAIL[n] = {tries: t, at: Date.now()};
+      /* One scheduled retry, not a render loop. If the tab is closed by then, nothing
+         happens; if it is open, the page fixes itself without being touched. */
+      setTimeout(function(){ if(!WEEKS[n]){ ensureWeek(n, true); } }, failWait(t));
+      render();
+    });
+}
+/* The row that replaces a check while its pack is in the air, or after it failed to
+   arrive. Returns true when it drew something, meaning the caller must not draw the
+   "no check for this session" fallback on top of it. */
+function packRow(parent, n){
+  var st = weekState(n);
+  if(st === "ok" || st === "none") return false;
+  var r = el("div","row");
+  if(st === "loading"){
+    r.appendChild(el("span","muted","Fetching week " + n + "…"));
+  } else {
+    r.appendChild(el("span","sc b","Week " + n + " did not load"));
+    r.appendChild(btn("act tiny", "Try again", function(){
+      delete WKFAIL[n]; ensureWeek(n, true); render();
+    }));
+    r.appendChild(el("span","muted","Usually the connection. Your scores are safe."));
+  }
+  parent.appendChild(r);
+  return true;
 }
 function toast(t){
   TOAST=t; render();
@@ -887,13 +948,46 @@ function whyFor(pick, w){
 }
 
 /* ---------- helpers ---------- */
+/* Everything on screen goes through one of these two, so this is the one place that has
+   to refuse an object.
+
+   JavaScript will happily put "[object Object]" on the page: innerHTML coerces, String()
+   coerces, "a" + obj coerces. Every one of those is silent, and the result is a line of
+   the app that reads like a crash to the person using it while nothing anywhere is
+   thrown. A pack field that should be a string and is not, a marker that returns
+   {text:"…"} where a string was promised, a field renamed in one place and not another:
+   all of them land the same way.
+
+   So a value that is not text is dropped, and the drop is counted. The counter is on
+   the KAIZEN handle, which means a harness can assert it is zero rather than hunting
+   for the literal string in a screenshot. */
+var OBJLEAKS = [];
+function text(v, where){
+  if(v === null || v === undefined) return "";
+  var t = typeof v;
+  if(t === "string") return v;
+  if(t === "number" || t === "boolean") return String(v);
+  /* An object that plainly carries its own text is not a bug worth blanking. */
+  if(t === "object"){
+    var k = ["text","t","topic","teach","label","title"];
+    for(var i = 0; i < k.length; i++){
+      if(typeof v[k[i]] === "string"){
+        OBJLEAKS.push((where || "?") + " -> ." + k[i]);
+        return v[k[i]];
+      }
+    }
+  }
+  OBJLEAKS.push((where || "?") + " -> " + t);
+  if(window.console && console.warn) console.warn("kaizen: refused to render a " + t, where, v);
+  return "";
+}
 function el(tag, cls, html){
   var e = document.createElement(tag);
   if(cls) e.className = cls;
-  if(html !== undefined) e.innerHTML = html;
+  if(html !== undefined) e.innerHTML = text(html, "el(" + tag + (cls ? "." + cls : "") + ")");
   return e;
 }
-function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
+function esc(s){ return text(s, "esc").replace(/[&<>"]/g,function(c){ return {"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c]; }); }
 function btn(cls, label, fn){ var b = el("button", cls, label); b.onclick = fn; return b; }
 
 /* Code in a question should look like code.
@@ -917,8 +1011,8 @@ function btn(cls, label, fn){ var b = el("button", cls, label); b.onclick = fn; 
    So it is split at sentence boundaries. Deliberately not labelled: sometimes the
    explanation runs to two sentences and the trap to one, and a heading that guesses
    wrong is worse than no heading. Two or three short paragraphs need no headings. */
-function whyInto(parent, text, cls){
-  var t = String(text == null ? "" : text).trim();
+function whyInto(parent, src, cls){
+  var t = text(src, "whyInto").trim();
   if(!t) return;
   /* Split on sentence ends, keeping the punctuation. Decimals, "e.g." and initials do
      not qualify: a full stop only ends a sentence when whitespace and then a capital,
@@ -964,8 +1058,9 @@ function whyInto(parent, text, cls){
   final.forEach(function(p){ parent.appendChild(el("p", cls || null, codeHtml(p))); });
 }
 
-function codeHtml(t){
-  var out = esc(String(t == null ? "" : t));
+function codeHtml(v){
+  var t = text(v, "codeHtml");
+  var out = esc(t);
 
   /* Fenced blocks come out first and are held aside, because everything below rewrites
      newlines — and a <br> inside a white-space:pre block is a blank line the author
@@ -2011,6 +2106,13 @@ function openBuddy(view, concept, quote){
   render();
 }
 function loadSummary(w, course){
+  /* Only a real course code has a summary in the repo. Asking for one for REVIEW or
+     CATCHUP is a bug upstream of here, and the honest answer is "there isn't one"
+     rather than whatever the server decides to send instead. */
+  if(!/^[A-Z]{3,4}(_[A-Z]{3})?_\d{3}$/.test(String(course || ""))){
+    SUMCACHE[w+":"+course] = "__none__";
+    return;
+  }
   if(SUMCACHE[w+":"+course] !== undefined) return;
   SUMCACHE[w+":"+course] = null;
   fetch("/api/week?n="+w+"&doc=summary&course="+course)
@@ -2456,14 +2558,18 @@ function weekGrid(root){
     foot.appendChild(el("span","go", dreview ? "review →"
       : (mine ? "practise →"
       : (dprog ? "resume · "+dprog+"/"+chk.questions.length+" →"
-      : (hasCheck ? chk.questions.length+" questions →" : "log a score →")))));
+      : (hasCheck ? chk.questions.length+" questions →"
+      : (!isCourse(d.deep) ? "open it →"
+      : (weekState(w) === "ok" ? "log a score →" : "loading →")))))));
     dc.appendChild(foot);
     /* Tapping a topic used to launch the check cold. The card now opens the session —
        brief, videos, study guide — and the footer is the way into the questions. */
     dc.onclick = function(){ openSession(d.day, w); };
     foot.querySelector(".go").onclick = function(e){
       e.stopPropagation();
-      if(!hasCheck){ manualScore(d.day); return; }
+      /* Saturday has no check to sit and no score to log: it opens. */
+      if(!isCourse(d.deep)){ openSession(d.day, w); return; }
+      if(!hasCheck){ startQuiz(d.day, "deep"); return; }   /* it decides loading vs missing */
       /* Scored, with nothing left to reopen: the only thing left to do is practise. */
       startQuiz(d.day, "deep", !dreview && !!mine);
     };
@@ -2868,11 +2974,13 @@ function viewTonight(root){
     row1.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day); }));
   } else if(chk && chk.questions && chk.questions.length){
     row1.appendChild(btn("act big","Take tonight's check", function(){ startQuiz(g.day); }));
+  } else if(packRow(c1, w)){
+    row1 = null;                 /* the pack is missing, not the questions */
   } else {
     row1.appendChild(btn("act ghost","Log a score manually", function(){ manualScore(g.day); }));
     row1.appendChild(el("span","muted","No check generated for this session yet"));
   }
-  c1.appendChild(row1);
+  if(row1) c1.appendChild(row1);
   root.appendChild(c1);
 
   var fchk0 = checkFor(wd, g.day, "fast");
@@ -2913,6 +3021,8 @@ function viewTonight(root){
   } else if(g.fast === "REVIEW" || g.fast === "CATCHUP"){
     /* Nothing to add. The panel above is the whole hour: the rows ARE the work, and a
        line saying "no check tonight" under a list of checks reads as a contradiction. */
+  } else if(packRow(c2, w)){
+    /* Said once, on this card, by packRow. */
   } else {
     row2.appendChild(btn("act ghost","Log a score manually", function(){ manualScore(g.day, "fast"); }));
     row2.appendChild(el("span","muted","No quick check generated for this session yet"));
@@ -3637,6 +3747,22 @@ function viewSession(root){
   head.appendChild(el("h2",null, esc(NAMES[g.deep]) + "  then  " + esc(NAMES[g.fast])));
   root.appendChild(head);
 
+  /* Saturday is not a weekday with two courses in it.
+     This used to fall through to the layout below, which put a "Study guide" button
+     next to a course called "Review" — a course that does not exist. Tapping it asked
+     the server for the study guide of REVIEW, and the server, unable to make sense of
+     that, sent the whole week pack instead. The guide page then printed the pack.
+     Saturday gets the same two panels the Study tab gives it. */
+  if(!isCourse(g.deep)){
+    var sr = el("div","card deepc");
+    sr.appendChild(el("div","lbl","21:00 – 22:00 · first hour"));
+    sr.appendChild(el("h2",null,"Review the week"));
+    reviewPanel(sr, w);
+    root.appendChild(sr);
+    saturdaySecondHour(root, w);
+    return;
+  }
+
   /* the deep hour */
   var chk = checkFor(wd, g.day, "deep");
   var c1 = el("div","card deepc");
@@ -3655,10 +3781,12 @@ function viewSession(root){
     rw.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day); }));
   } else if(chk && chk.questions && chk.questions.length){
     rw.appendChild(btn("act big","Take the check · "+chk.questions.length+" questions", function(){ startQuiz(g.day); }));
+  } else if(packRow(c1, w)){
+    rw = null;
   } else {
     rw.appendChild(btn("act ghost","Log a score manually", function(){ manualScore(g.day); }));
   }
-  c1.appendChild(rw);
+  if(rw) c1.appendChild(rw);
   root.appendChild(c1);
 
   /* the fast hour */
@@ -4007,7 +4135,20 @@ function quizProgress(w, day, slot){
 function startQuiz(day, slot, fresh){
   slot = slot || "deep";
   var chk = checkFor(weekData(wk()), day, slot);
-  if(!chk || !chk.questions || !chk.questions.length){ manualScore(day, slot); return; }
+  if(!chk || !chk.questions || !chk.questions.length){
+    /* A pack still in the air is not a session without questions. Dropping someone into
+       "type your score in by hand" because the download had not finished is how you end
+       up entering marks manually all term for checks that were there the whole time. */
+    var st = weekState(wk());
+    if(st === "loading"){ toast("Week " + wk() + " is still loading."); return; }
+    if(st === "failed"){
+      toast("Week " + wk() + " did not load. Check your connection.");
+      ensureWeek(wk(), true);
+      return;
+    }
+    manualScore(day, slot);
+    return;
+  }
   var prev = quizRestore(wk(), day, slot);
   /* A finished attempt is kept so you can go back and read the explanations again —
      safe now that the score locked when you submitted, so re-reading cannot improve it.
@@ -6308,6 +6449,11 @@ document.addEventListener("visibilitychange", function(){
    Read-only in the sense that matters: these are the same functions the views call, and
    there is no setter here. Nothing the app does depends on this object existing. */
 window.KAIZEN = {
+  /* Every non-text value the renderer refused, so a harness can assert none happened
+     instead of grepping a screenshot for "[object Object]". */
+  leaks: function(){ return OBJLEAKS.slice(); },
+  weekState: weekState,
+  openSession: openSession, openGuide: openGuide,
   code: codeHtml,
   deepSlots: deepSlots, slots: slotsFor,
   lane: myLane,
