@@ -69,9 +69,14 @@ var RUNWAY = [
    per:["MTH_102","PHY_102","COS_102","PHY_108","GST_112","GST_122","CSC_106","MIVA_COS_111"],
    /* Each course chip opens that course on the LMS, where its pre-semester test sits. */
    linkFor:function(c){ return lmsCourseLink(c); }},
-  {id:"cos111", label:"Clear MIVA-COS 111 entirely",
-   detail:"Three activities, and then that course never asks for another evening.",
-   links:function(){ return [{label:"Find it on the LMS \u2197", href: LMS ? LMS.base + "/my/courses.php" : null}]; }},
+  /* This used to read "Three activities, and then that course never asks for another
+     evening", which was the LMS progress meter mistaken for the work. It counts three
+     pages; the actual requirement is a certification earned on someone else's platform.
+     It has its own tab now, and the runway just points at it. */
+  {id:"cos111", label:"Start the first MIVA-COS 111 certification",
+   detail:"Not three clicks. A real certification, on AWS or Google Cloud or Cisco, and it takes hours. Starting now is the whole point of the runway.",
+   links:function(){ return [{label:"Open the Certs tab", href:"?tab=certs"},
+                             {label:"The course \u2197", href: CERTLINKS.course}]; }},
   {id:"csc106", label:"Speed-run CSC 106 weeks 1\u20133 at 1.75\u00d7",
    detail:"Three weeks ahead on the lightest course is three Tuesdays of slack.",
    links:function(){
@@ -87,6 +92,91 @@ var RUNWAY = [
      });
    }}
 ];
+/* ---------- MIVA-COS 111, the certification course ----------
+
+   The app used to call this "three activities, and then that course never asks for
+   another evening", which came from reading the LMS progress meter. That meter counts
+   three PAGES: the orientation, the recommendations, the handbook. Ticking all three
+   completes nothing. The work is a real certification earned on someone else's
+   platform, and none of it is tracked there.
+
+   Three things make it worth its own tab rather than a runway line:
+
+     It is a grade lever, not a pass. One certification is the MINIMUM. The course
+     handbook says extra ones "can uplift your grade to a B or A, depending on the
+     recognition of the certification", so on a one-unit course the count decides the
+     grade.
+
+     The submission is one shot. "You have only one opportunity to submit. Once
+     submitted, your response cannot be edited, modified, or replaced." Upload after one
+     certificate and a second one earned later cannot be added.
+
+     It spans both semesters. You are told to work at your own pace across the session
+     and submit only once you are finished, which means the right move is usually not to
+     submit this semester at all.
+
+   So this is a term-long list, not runway work that disappears in September. */
+
+var CERTBASE = "https://lms.miva.university";
+var CERTLINKS = {
+  course:     CERTBASE + "/course/view.php?id=783",
+  orientation:CERTBASE + "/mod/page/view.php?id=82435",
+  list:       CERTBASE + "/mod/page/view.php?id=82458",
+  handbook:   CERTBASE + "/mod/url/view.php?id=101236",
+  walkthrough:CERTBASE + "/mod/url/view.php?id=101237",
+  upload:     CERTBASE + "/mod/url/view.php?id=99034"
+};
+
+/* The list MIVA recommends for BSc Computer Science. The hrefs are the platforms
+   themselves, because that is all the LMS page links to: you find the named course
+   once you are in. */
+var CERTS = [
+  {id:"gcloud", name:"Digital Transformation with Google Cloud",
+   vendor:"Google Cloud Skills Boost", note:"Intro GCP labs",
+   href:"https://www.cloudskillsboost.google/"},
+  {id:"aws", name:"Cloud Foundations",
+   vendor:"AWS Academy", note:"Fundamentals",
+   href:"https://www.awsacademy.com/login"},
+  {id:"cisco", name:"Networking Basics",
+   vendor:"Cisco NetAcad", note:"",
+   href:"https://www.netacad.com/catalogs/learn"}
+];
+/* Anything outside the recommended list still counts, and still lifts the grade. Two
+   slots, because the point is to be able to record them, not to plan them. */
+var CERTEXTRA = [
+  {id:"extra1", name:"Another certification", vendor:"Any approved vendor", note:"", href:null},
+  {id:"extra2", name:"Another certification", vendor:"Any approved vendor", note:"", href:null}
+];
+
+function certKey(id){ return ME + "|cert|" + id; }
+function certDone(id){ var v = S.scores[certKey(id)]; return !!(v && v.done); }
+function certSet(id, on){
+  if(on) S.scores[certKey(id)] = {done:true, on: ymd(today())};
+  else delete S.scores[certKey(id)];
+}
+function certOn(id){ var v = S.scores[certKey(id)]; return (v && v.on) || ""; }
+function certCount(){
+  var n = 0;
+  CERTS.concat(CERTEXTRA).forEach(function(c){ if(certDone(c.id)) n++; });
+  return n;
+}
+/* What the count buys you, in the handbook's own terms. */
+function certGrade(n){
+  /* Short labels: this sits in a stat box a third of a phone wide, and "above the
+     minimum" wrapped to three lines there. The sentence underneath carries the detail. */
+  if(n === 0) return {label:"none", tone:"b", say:"One is the minimum. Without it this course is not passed."};
+  if(n === 1) return {label:"minimum", tone:"o", say:"Requirement met. More can lift the grade."};
+  if(n === 2) return {label:"above", tone:"g", say:"Two counts as extra effort. A third is worth it if you have the time."};
+  return {label:"well above", tone:"g", say:"This is the range the handbook describes as B or A territory."};
+}
+
+var CERTSYNC = null;
+function certSave(){
+  clearTimeout(CERTSYNC);
+  CERTSYNC = setTimeout(function(){ CERTSYNC = null; push(false); }, 900);
+  mirror();
+}
+
 var LETTERS = ["A","B","C","D","E","F"];
 
 /* The standing plan. Lifted from the study board so the app is the single place
@@ -5565,6 +5655,150 @@ function drillResult(root){
   goalsSection(root);
 }
 
+/* ---------- the certifications page ---------- */
+function viewCerts(root){
+  var n = certCount(), g = certGrade(n);
+
+  var top = el("div","card deepc");
+  top.appendChild(el("div","lbl","MIVA-COS 111 · 1 unit"));
+  top.appendChild(el("h2",null,"Technical Certification"));
+  top.appendChild(el("p","muted","Earn real certifications on someone else's platform, then upload them all at once. The LMS progress bar counts three pages and none of them is the work."));
+
+  var stats = el("div","stats");
+  var mk = function(cls, icon, v, k){
+    var d = el("div","stat " + cls);
+    d.innerHTML = '<div class="si">'+icon+'</div><div class="v">'+v+'</div><div class="k">'+k+'</div>';
+    return d;
+  };
+  stats.appendChild(mk("marks", ICO_STAR, n, "earned"));
+  stats.appendChild(mk(n ? "week" : "flame", ICO_TARGET, n ? "yes" : "no", "minimum met"));
+  stats.appendChild(mk("drill", ICO_BOLT, esc(g.label), "grade effect"));
+  top.appendChild(stats);
+  top.appendChild(el("p","muted", esc(g.say)));
+  root.appendChild(top);
+
+  /* the list */
+  var c = el("div","card");
+  c.appendChild(el("div","lbl","Recommended for BSc Computer Science"));
+  c.appendChild(el("p","muted","Tick one when you hold the certificate. Anything outside this list still counts."));
+
+  var body = el("div");
+  var draw = function(){
+    body.innerHTML = "";
+    CERTS.concat(CERTEXTRA).forEach(function(x){
+      var on = certDone(x.id), extra = x.id.indexOf("extra") === 0;
+      var row = el("div","certrow" + (on ? " on" : "") + (extra ? " extra" : ""));
+      /* The whole row is the target, not the 21px box. A tick you have to aim at is a
+         tick you mis-tap, and the box on its own is well under a thumb. */
+      var hit = btn("certhit", "", function(){ certSet(x.id, !on); certSave(); draw(); });
+      hit.setAttribute("aria-pressed", on ? "true" : "false");
+      hit.setAttribute("aria-label", (on ? "Untick " : "Tick ") + x.name);
+      hit.appendChild(el("span","rwtick" + (on ? " on" : ""), on ? "\u2713" : ""));
+
+      var mid = el("div","certmid");
+      mid.appendChild(el("div","certn", esc(x.name)));
+      var sub = x.vendor + (x.note ? " · " + x.note : "") + (on && certOn(x.id) ? " · earned " + certOn(x.id) : "");
+      mid.appendChild(el("div","certv", esc(sub)));
+      hit.appendChild(mid);
+      row.appendChild(hit);
+
+      if(x.href){
+        var a = el("a","chip","Open \u2197");
+        a.href = x.href; a.target = "_blank"; a.rel = "noopener";
+        a.style.textDecoration = "none";
+        row.appendChild(a);
+      }
+      body.appendChild(row);
+    });
+  };
+  draw();
+  c.appendChild(body);
+  root.appendChild(c);
+
+  /* the two things that are not a certificate */
+  var w = el("div","card");
+  w.appendChild(el("div","lbl","Then, and only when you are finished"));
+  var steps = [
+    {id:"reflection", label:"Write the reflection",
+     detail:"300 to 500 words: what you learned and why it matters to your studies and career."},
+    {id:"merged", label:"Merge every certificate into one PDF",
+     detail:"They ask for a single file. Multiple uploads are allowed but must all go in the one submission."}
+  ];
+  var body2 = el("div");
+  var draw2 = function(){
+    body2.innerHTML = "";
+    steps.forEach(function(x){
+      var on = certDone(x.id);
+      var row = el("div","certrow" + (on ? " on" : ""));
+      var hit = btn("certhit", "", function(){ certSet(x.id, !on); certSave(); draw2(); });
+      hit.setAttribute("aria-pressed", on ? "true" : "false");
+      hit.setAttribute("aria-label", (on ? "Untick " : "Tick ") + x.label);
+      hit.appendChild(el("span","rwtick" + (on ? " on" : ""), on ? "\u2713" : ""));
+      var mid = el("div","certmid");
+      mid.appendChild(el("div","certn", esc(x.label)));
+      mid.appendChild(el("div","certv", esc(x.detail)));
+      hit.appendChild(mid);
+      row.appendChild(hit);
+      body2.appendChild(row);
+    });
+  };
+  draw2();
+  w.appendChild(body2);
+  root.appendChild(w);
+
+  /* the one-shot submission, and the warning it deserves */
+  var sub = el("div","card badc");
+  sub.appendChild(el("div","lbl","The submission"));
+  sub.appendChild(el("h2",null,"One shot, no edits"));
+  var quote = el("blockquote","certquote");
+  quote.appendChild(el("p", null, "You have only one opportunity to submit. Once submitted, your response cannot be edited, modified, or replaced."));
+  quote.appendChild(el("cite", null, "MIVA-COS 111 submission instructions"));
+  sub.appendChild(quote);
+  stepList(sub, [
+    "Do not submit until you have earned every certificate you intend to earn",
+    "You may work across both semesters. There is no deadline this session",
+    "Upload one merged PDF. The form carries an indemnity declaration",
+    "A copy is emailed to you automatically"
+  ]);
+
+  var sdone = certDone("submitted");
+  var row = el("div","row");
+  if(sdone){
+    row.appendChild(el("span","sc g","Submitted " + (certOn("submitted") || "")));
+    row.appendChild(btn("act ghost","Not submitted after all", function(){
+      certSet("submitted", false); certSave(); render();
+    }));
+  } else {
+    var a = el("a","act big","Open the upload form \u2197");
+    a.href = CERTLINKS.upload; a.target = "_blank"; a.rel = "noopener";
+    a.style.textDecoration = "none";
+    row.appendChild(a);
+    var mark = btn("act ghost","I have submitted", function(){
+      certSet("submitted", true); certSave(); render();
+    });
+    if(!n) mark.disabled = true;
+    row.appendChild(mark);
+  }
+  sub.appendChild(row);
+  if(!n && !sdone) sub.appendChild(el("p","muted","Nothing ticked above yet, so there is nothing to submit."));
+  root.appendChild(sub);
+
+  /* the course itself */
+  var l = el("div","card");
+  l.appendChild(el("div","lbl","On the LMS"));
+  var links = el("div","row gapa");
+  [["The course", CERTLINKS.course], ["Orientation", CERTLINKS.orientation],
+   ["Full recommended list", CERTLINKS.list], ["Student handbook", CERTLINKS.handbook],
+   ["Step-by-step walkthrough", CERTLINKS.walkthrough]].forEach(function(p){
+    var a = el("a","chip", esc(p[0]) + " \u2197");
+    a.href = p[1]; a.target = "_blank"; a.rel = "noopener";
+    a.style.textDecoration = "none";
+    links.appendChild(a);
+  });
+  l.appendChild(links);
+  root.appendChild(l);
+}
+
 /* ---------- the week picker ----------
    A native <select> could not say the two things that matter here: which week the
    calendar is actually on, and that the runway is over. So this is a real listbox.
@@ -5839,7 +6073,7 @@ function render(){
     var showExam = weekInfo().n >= 12 || TAB === "exam";
     /* The URL keys stay as they were, so old links and the home-screen shortcuts keep
        working; only what you read has changed. */
-    var TABSET = [["home","Home"],["tonight","Study"],["drill","Drills"],["sunday","Weekend class"],["progress","Stats"]];
+    var TABSET = [["home","Home"],["tonight","Study"],["drill","Drills"],["sunday","Weekend class"],["progress","Stats"],["certs","Certs"]];
     if(showExam) TABSET.push(["exam","Exam"]);
     TABSET.forEach(function(t){
       tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
@@ -5884,6 +6118,7 @@ function render(){
   else if(TAB==="session") viewSession(wrap);
   else if(TAB==="data") viewData(wrap);
   else if(TAB==="drill") viewDrill(wrap);
+  else if(TAB==="certs") viewCerts(wrap);
   else if(TAB==="quiz") viewQuiz(wrap);
   else if(TAB==="manual") viewManual(wrap);
   root.appendChild(wrap);
@@ -5924,7 +6159,7 @@ function render(){
    Transient states are deliberately NOT in the url: a quiz in progress restores from
    its own saved state, and a shared link should never drop someone into a half-finished
    paper. */
-var TABS_URL = {home:1, tonight:1, drill:1, sunday:1, progress:1, exam:1, data:1, week:1, guide:1, session:1};
+var TABS_URL = {home:1, tonight:1, drill:1, certs:1, sunday:1, progress:1, exam:1, data:1, week:1, guide:1, session:1};
 
 function readUrl(){
   var q;

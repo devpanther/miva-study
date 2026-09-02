@@ -95,6 +95,14 @@ export function cleanScores(raw, id) {
       continue;
     }
 
+    /* A certification earned, or a step of MIVA-COS 111 done: "cert|aws",
+       "cert|reflection", "cert|submitted". Same shape as a runway tick. */
+    if (/^cert\|[A-Za-z0-9_-]{1,40}$/.test(rest)) {
+      if (!v.done) continue;
+      out[k] = { done: true, on: str(v.on, 12) };
+      continue;
+    }
+
     /* A goal: "goal|streak", "goal|acc", "goal|week", "goal|topics", "goal|course:MTH_102".
        The target lives in the value, not the key, so nudging it up or down edits the
        goal you already have rather than leaving a graveyard of abandoned keys. Zero is a

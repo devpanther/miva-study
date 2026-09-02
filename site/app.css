@@ -1034,3 +1034,32 @@ ul.misslist .linkish:hover{color:var(--deep);text-decoration:underline;
 /* A question you got wrong last week, marked as such while you re-sit it. */
 .qeyebrow .qtag{margin-left:8px;background:var(--bad-bg);color:var(--bad);
   border-radius:999px;padding:1px 8px;font-size:9.5px;letter-spacing:.05em}
+
+/* ---------- MIVA-COS 111 ---------- */
+.certrow{display:flex;align-items:center;gap:11px;padding:11px 0;border-top:1px solid var(--line)}
+.certrow:first-child{border-top:0}
+.certrow .rwtick{cursor:pointer}
+.certmid{flex:1;min-width:0}
+.certn{font-weight:800;font-size:14.5px;color:var(--ink);line-height:1.3}
+.certv{font-size:12px;font-weight:700;color:var(--ink3);margin-top:2px}
+.certrow.on .certn{color:var(--good)}
+.certrow.extra .certn{color:var(--ink3);font-weight:700}
+.certrow.extra.on .certn{color:var(--good);font-weight:800}
+.certrow .chip{flex:none;text-decoration:none}
+/* Their words, not mine. This one is worth quoting exactly. */
+.certquote{margin:10px 0 4px;padding:11px 14px;border-left:3px solid var(--bad);
+  background:var(--bad-bg);border-radius:0 9px 9px 0}
+.certquote p{margin:0;font-size:14px;line-height:1.55;color:var(--ink)}
+.certquote cite{display:block;margin-top:6px;font-style:normal;font-size:11.5px;
+  font-weight:800;color:var(--ink3)}
+/* A ticked row has to LOOK ticked. .rwtick's filled state keys off .rwit.on, which is
+   the runway's row class, not this one. */
+.certrow .rwtick.on,.certrow.on .rwtick{background:var(--good);border-color:var(--good);
+  color:#fff;font-weight:900;font-size:12px;line-height:1}
+/* The row is the button. Full width, full height, so the target is the whole line. */
+.certhit{flex:1;min-width:0;display:flex;align-items:center;gap:11px;
+  border:0;background:none;padding:4px 0;text-align:left;font:inherit;cursor:pointer;
+  border-radius:9px;transition:background .12s}
+.certhit:hover{background:var(--surface2)}
+.certhit .rwtick{display:grid;place-items:center}
+.certhit:focus-visible{outline:2px solid var(--deep);outline-offset:2px}
