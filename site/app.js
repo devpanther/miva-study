@@ -2824,11 +2824,7 @@ function runwayCard(root, wi){
         var ls = item.links().filter(function(x){ return x && x.href; });
         if(ls.length){
           var lr = el("div","rwlinks");
-          ls.forEach(function(x){
-            var a = el("a","rwlink", esc(x.label));
-            a.href = x.href; a.target = "_blank"; a.rel = "noopener";
-            lr.appendChild(a);
-          });
+          ls.forEach(function(x){ lr.appendChild(alink("rwlink", x.label, x.href)); });
           row.appendChild(lr);
         }
       }
@@ -6245,10 +6241,11 @@ function render(){
     var showExam = weekInfo().n >= 12 || TAB === "exam";
     /* The URL keys stay as they were, so old links and the home-screen shortcuts keep
        working; only what you read has changed. */
-    var TABSET = [["home","Home"],["tonight","Study"],["drill","Drills"],["sunday","Weekend class"],["progress","Stats"],["certs","Certs"]];
+    var TABSET = TABBAR.slice();
     if(showExam) TABSET.push(["exam","Exam"]);
+    var lit = activeTab();
     TABSET.forEach(function(t){
-      tabs.appendChild(btn(TAB===t[0]?"on":"", t[1], function(){
+      tabs.appendChild(btn(lit===t[0]?"on":"", t[1], function(){
         QUIZ=null; MANUAL=null; if(t[0]!=="exam"){ EXVIEW=null; EXQUIZ=null; }
         /* Leaving the tab abandons a half-finished drill rather than freezing it —
            nothing was graded, and coming back to question 4 of a drill you walked away
@@ -6332,6 +6329,88 @@ function render(){
    its own saved state, and a shared link should never drop someone into a half-finished
    paper. */
 var TABS_URL = {home:1, tonight:1, drill:1, certs:1, sunday:1, progress:1, exam:1, data:1, week:1, guide:1, session:1};
+
+/* ---------- which tab owns the page you are on ----------
+
+   The bar used to light a tab only on that tab's own top-level page. Open a session, a
+   study guide, a check, the week grid — all reached from Study — and every tab went
+   dark. That is the app losing its place at the exact moment you have gone a level
+   deeper into it, and it makes Study feel like somewhere you left rather than somewhere
+   you are inside of.
+
+   A page belongs to a tab structurally, not by whatever route you took to it. A study
+   guide is Study whether you opened it from Home or from the week grid, so this is a
+   fixed map rather than a history trail: the same page always lights the same tab. */
+var TABBAR = [["home","Home"],["tonight","Study"],["drill","Drills"],
+              ["sunday","Weekend class"],["progress","Stats"],["certs","Certs"]];
+var TABPARENT = {
+  session:"tonight", guide:"tonight", quiz:"tonight", manual:"tonight", week:"tonight",
+  data:"home"
+};
+function activeTab(){
+  var t = TAB, seen = {};
+  while(t && !seen[t]){
+    seen[t] = 1;
+    for(var i = 0; i < TABBAR.length; i++) if(TABBAR[i][0] === t) return t;
+    if(t === "exam") return "exam";        /* only in the bar late in the term */
+    t = TABPARENT[t];
+  }
+  return "home";
+}
+
+/* ---------- links that stay inside the app ----------
+
+   "Open the Certs tab" was an <a target="_blank">, so it launched a second copy of the
+   app in a new window: new tab bar, cold load, your scroll position gone, and Back no
+   longer meaning anything. A link to somewhere in this app should move the tab, not
+   leave the app.
+
+   One delegated listener handles it, so this holds for links written in JavaScript and
+   for links inside rendered markdown, without either having to know about it. Anything
+   pointing off this origin — the LMS, YouTube, a certification platform — is untouched
+   and still opens in its own window, which is what you want for those. */
+function isInApp(href){
+  if(!href) return false;
+  var s = String(href);
+  if(s.charAt(0) === "#") return false;
+  try{
+    var u = new URL(s, window.location.href);
+    return u.origin === window.location.origin && u.pathname === window.location.pathname;
+  }catch(e){ return false; }
+}
+/* An anchor, with the target set only when the destination really is elsewhere. */
+function alink(cls, label, href){
+  var a = el("a", cls, esc(label));
+  a.href = href;
+  if(!isInApp(href)){ a.target = "_blank"; a.rel = "noopener"; }
+  a.style.textDecoration = "none";
+  return a;
+}
+function goTo(search){
+  /* The same reset Back does, so arriving by link and arriving by Back land identically
+     rather than one of them keeping a week or a half-open session in memory. */
+  QUIZ = null; MANUAL = null; BUDDY = null;
+  VIEWWEEK = null; VIEWDAY = null; DRILL = null;
+  SESSION = null; GUIDEVIEW = null;
+  var q = null;
+  try{
+    window.history.pushState({}, "", window.location.pathname + (search || ""));
+    q = new URLSearchParams(search || "");
+  }catch(e){}
+  if(q && !q.get("tab")) TAB = "home";     /* no tab named is Home, as syncUrl writes it */
+  readUrl();
+  if(VIEWWEEK) ensureWeek(VIEWWEEK);
+  render();
+}
+document.addEventListener("click", function(e){
+  if(e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  var a = e.target && e.target.closest && e.target.closest("a[href]");
+  if(!a) return;
+  var href = a.getAttribute("href");
+  if(!isInApp(href)) return;               /* off-site links keep their new window */
+  e.preventDefault();
+  try{ goTo(new URL(href, window.location.href).search); }catch(err){}
+});
 
 function readUrl(){
   var q;
@@ -6454,6 +6533,7 @@ window.KAIZEN = {
   leaks: function(){ return OBJLEAKS.slice(); },
   weekState: weekState,
   openSession: openSession, openGuide: openGuide,
+  tab: function(){ return TAB; }, activeTab: activeTab, go: goTo,
   code: codeHtml,
   deepSlots: deepSlots, slots: slotsFor,
   lane: myLane,
