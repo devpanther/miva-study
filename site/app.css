@@ -67,6 +67,10 @@ button{font:inherit;cursor:pointer}
 .barin{max-width:760px;margin:0 auto;
        padding:12px calc(16px + env(safe-area-inset-right, 0px)) 0 calc(16px + env(safe-area-inset-left, 0px))}
 .brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+/* Icon and wordmark travel together. The icon's left edge is the left edge of the
+   header, and the tab strip below lines up on it. */
+.brandmark{display:inline-flex;align-items:center;gap:9px;min-width:0}
+.brandmark .logo{display:block;width:24px;height:24px;border-radius:7px;flex:none}
 .brand h1{font-size:19px;font-weight:600;margin:0;letter-spacing:-.015em}
 .spacer{flex:1}
 .chip{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 11px;
@@ -138,13 +142,38 @@ button{font:inherit;cursor:pointer}
 .wkrow.off:hover{background:none}
 .wkrow.off .wkl b{text-decoration:line-through}
 
-.tabs{display:flex;gap:3px;margin:11px -4px 0;padding:0 4px 9px;overflow-x:auto;
-      scrollbar-width:none}
+/* The tab strip.
+
+   A pill marked the current tab by painting a shape around it, which meant switching
+   tabs was a shape vanishing here and appearing there — two events, no connection
+   between them, and no sense that one thing moved. An underline can travel, and a
+   travelling mark is what tells you these are one row of siblings rather than six
+   separate buttons.
+
+   No horizontal padding on the buttons, so the first label starts exactly where the
+   logo does. The gap does the spacing instead, which also makes the underline the
+   width of the word rather than the width of a box around it. */
+.tabs{position:relative;display:flex;gap:19px;margin:13px 0 0;padding:0;
+      overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none}
 .tabs::-webkit-scrollbar{display:none}
 .tabs button{border:0;background:none;color:var(--ink3);font-weight:700;font-size:13px;
-  padding:6px 9.5px;border-radius:var(--r-pill);white-space:nowrap;transition:.15s}
-.tabs button:hover{color:var(--ink2);background:var(--surface2)}
-.tabs button.on{background:var(--deep);color:#fff;box-shadow:var(--shadow)}
+  padding:0 0 11px;border-radius:0;white-space:nowrap;letter-spacing:.005em;
+  transition:color .18s ease}
+.tabs button:hover{color:var(--ink2)}
+.tabs button.on{color:var(--ink)}
+.tabs button:focus-visible{outline:2px solid var(--deep);outline-offset:-3px;border-radius:6px}
+
+/* The mark itself. Positioned in the strip's own scrolling coordinates, so it stays
+   under its tab when the strip is scrolled sideways.
+
+   The easing overshoots by a hair and settles. Width and position are given slightly
+   different curves on purpose: the mark stretches as it leaves and gathers itself as it
+   lands, which reads as one object crossing a distance rather than a rectangle being
+   re-drawn at 60fps. */
+.tabink{position:absolute;left:0;bottom:0;height:2.5px;width:0;
+  background:var(--deep);border-radius:3px 3px 0 0;pointer-events:none;
+  box-shadow:0 0 12px -2px var(--deep);
+  transition:opacity .2s ease}
 
 .wrap{max-width:760px;margin:0 auto;
       padding:16px calc(16px + env(safe-area-inset-right, 0px))

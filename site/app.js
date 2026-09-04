@@ -6188,7 +6188,16 @@ function render(){
   var bar = el("div","bar");
   var bin = el("div","barin");
   var brand = el("div","brand");
-  brand.appendChild(el("h1",null,"Kaizen"));
+  /* Icon and name are one object, so they never wrap apart from each other and the
+     left edge of the icon is the left edge of the whole header. The tabs below line
+     up on that same edge. */
+  var mark = el("div","brandmark");
+  var logo = el("img","logo");
+  logo.src = "icon.svg"; logo.alt = ""; logo.width = 24; logo.height = 24;
+  logo.setAttribute("aria-hidden","true");
+  mark.appendChild(logo);
+  mark.appendChild(el("h1",null,"Kaizen"));
+  brand.appendChild(mark);
 
   if(GATE === "open" && ME && findPerson(ME)){
     brand.appendChild(el("div","spacer"));
@@ -6254,6 +6263,10 @@ function render(){
         TAB=t[0]; syncUrl(); render();
       }));
     });
+    /* The moving underline. One element for the whole bar rather than a border on each
+       button, because what should read as one mark sliding across cannot be six marks
+       fading in and out of place. */
+    tabs.appendChild(el("span","tabink"));
     bin.appendChild(tabs);
   } else {
     bin.appendChild(el("div","tabs"));
@@ -6300,6 +6313,7 @@ function render(){
   if(TOAST) root.appendChild(el("div","toast", esc(TOAST)));
 
   applyScroll();
+  placeTabInk();
   armHello();
 
   /* The menu lives on <body>, but its anchor was just thrown away and rebuilt. Point it
@@ -6357,6 +6371,63 @@ function activeTab(){
   }
   return "home";
 }
+
+/* ---------- the underline that follows the tab ----------
+
+   render() rebuilds the whole bar, so the underline that exists after a tab change is
+   not the element that was under the old tab — it is a new one, born where it belongs.
+   A CSS transition has nothing to travel from and the mark simply appears in its new
+   place, which is the thing a pill already did.
+
+   So the last position is remembered across renders. The new element is put where the
+   old one was, that is forced to commit, and only then is it moved. From the outside it
+   is one mark sliding; underneath, the DOM was thrown away and rebuilt. */
+var TABINK = null;                       /* {x, w} in the tab strip's own coordinates */
+function placeTabInk(){
+  var tabs = document.querySelector(".bar .tabs");
+  if(!tabs){ TABINK = null; return; }
+  var ink = tabs.querySelector(".tabink");
+  var on = tabs.querySelector("button.on");
+  if(!ink) return;
+  if(!on){ ink.style.opacity = "0"; TABINK = null; return; }
+
+  var x = on.offsetLeft, w = on.offsetWidth, prev = TABINK;
+  /* Where it belongs, set immediately. This is the resting state, and it is what stays
+     on screen if nothing below runs. */
+  ink.style.transform = "translateX(" + x + "px)";
+  ink.style.width = w + "px";
+  ink.style.opacity = "1";
+  TABINK = {x: x, w: w};
+
+  if(!prev || (prev.x === x && prev.w === w)) return;   /* nothing to travel */
+  if(!ink.animate) return;                              /* old browser: it just moves */
+  try{ if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return; }catch(e){}
+
+  /* The animation is explicit rather than a CSS transition because the element it is
+     running on was created microseconds ago: a transition has no previous computed
+     style to move away from, so it lands with no journey. This is handed both ends.
+
+     The middle keyframe is why it feels like one object and not a rectangle being
+     redrawn. The mark stretches across most of the gap first, then gathers itself into
+     the new tab — the same thing a finger does dragging something to a stop. */
+  var a = Math.min(prev.x, x), z = Math.max(prev.x + prev.w, x + w);
+  ink.animate(
+    [{transform:"translateX(" + prev.x + "px)", width: prev.w + "px", offset:0},
+     {transform:"translateX(" + a + "px)", width: Math.round((z - a) * 0.72) + "px", offset:0.45},
+     {transform:"translateX(" + x + "px)", width: w + "px", offset:1}],
+    {duration:400, easing:"cubic-bezier(.33,.9,.28,1)"}
+  );
+
+  /* Certs sits off the right edge of a phone. Opening a tab you cannot see and leaving
+     it out of frame is the strip failing at its one job. */
+  var l = on.offsetLeft, r = l + w;
+  if(l < tabs.scrollLeft || r > tabs.scrollLeft + tabs.clientWidth){
+    var to = Math.max(0, l - Math.max(0, (tabs.clientWidth - w) / 2));
+    if(tabs.scrollTo) tabs.scrollTo({left: to, behavior: "smooth"});
+    else tabs.scrollLeft = to;
+  }
+}
+window.addEventListener("resize", function(){ TABINK = null; placeTabInk(); });
 
 /* ---------- links that stay inside the app ----------
 
@@ -6467,6 +6538,39 @@ window.addEventListener("popstate", function(){
   render();
 });
 
+/* ---------- the phone's own bar, painted to match ours ----------
+
+   Installed on Android, the strip above the app is drawn by the system in the colour
+   the app declares. Ours declared #5A46D6 in the manifest, which is the accent — the
+   colour of a primary button, not of anything at the top of the page. So the phone put
+   a bright purple band above a near-black header, and it read as a different app's
+   chrome sitting on top of this one.
+
+   The header is var(--ground). Rather than hard-coding that in a third place and
+   watching it drift, this reads the value the page is actually painted with and hands
+   the phone the same one. A meta with no media query wins over the two in the document
+   head, so this also follows a change of system theme without a reload — those two are
+   still there, and still right, for the moment before this runs. */
+function paintSystemBar(){
+  try{
+    var c = getComputedStyle(document.documentElement).getPropertyValue("--ground").trim();
+    if(!c) return;
+    var m = document.querySelector('meta[name="theme-color"][data-live]');
+    if(!m){
+      m = document.createElement("meta");
+      m.setAttribute("name", "theme-color");
+      m.setAttribute("data-live", "1");
+      document.head.appendChild(m);        /* last, so it is the one that applies */
+    }
+    if(m.getAttribute("content") !== c) m.setAttribute("content", c);
+  }catch(e){ /* an old browser keeps the static pair, which is not wrong, only static */ }
+}
+try{
+  var MQ = window.matchMedia("(prefers-color-scheme: dark)");
+  if(MQ.addEventListener) MQ.addEventListener("change", paintSystemBar);
+  else if(MQ.addListener) MQ.addListener(paintSystemBar);
+}catch(e){}
+
 function boot(){
   INDEX = {semesterStart:"2026-09-07", weeks:[1,2,3,4,5,6,7,8,9,10,11,12].map(function(n){ return {week:n}; })};
   readUrl();
@@ -6484,6 +6588,10 @@ function boot(){
     ensureWeek(wk());
   });
 }
+
+/* Before anything else, including the lock screen: the strip above the app is the
+   first thing on the page and should never be a colour the app does not use. */
+paintSystemBar();
 
 S = blankState();
 var cached = readMirror();
