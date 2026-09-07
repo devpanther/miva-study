@@ -1,1131 +1,1635 @@
 {
- "base": "https://lms.miva.university",
- "courses": {
-  "COS_102": {
-   "id": 362,
-   "weeks": {
-    "1": {
-     "section": 6,
-     "intro": {
-      "n": 4,
-      "secs": 732
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 5610
-     },
-     "ids": {
-      "pop": 23004,
-      "practice": 23049,
-      "forum": 23096,
-      "pdf": 15669,
-      "pdfMod": "page"
-     }
+  "base": "https://lms.miva.university",
+  "courses": {
+    "COS_102": {
+      "id": 362,
+      "weeks": {
+        "1": {
+          "section": 5,
+          "on": "Understanding the Problem",
+          "intro": {
+            "n": 4,
+            "secs": 732
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 5610
+          },
+          "ids": {
+            "pop": 23004,
+            "practice": 23049,
+            "forum": 23096,
+            "pdf": 15669
+          }
+        },
+        "2": {
+          "section": 6,
+          "on": "An Overview of Problem Solving",
+          "intro": {
+            "n": 2,
+            "secs": 309
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 5469
+          },
+          "ids": {
+            "pop": 23202,
+            "practice": 23279,
+            "forum": 23357,
+            "pdf": 15676
+          }
+        },
+        "3": {
+          "section": 7,
+          "on": "Divide and Conquer",
+          "intro": {
+            "n": 4,
+            "secs": 531
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 4831
+          },
+          "ids": {
+            "pop": 23489,
+            "practice": 23586,
+            "forum": 23568,
+            "pdf": 15684
+          }
+        },
+        "4": {
+          "section": 8,
+          "on": "Algorithm Concept",
+          "intro": {
+            "n": 3,
+            "secs": 345
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 5365
+          },
+          "ids": {
+            "pop": 23636,
+            "practice": 23688,
+            "forum": 23669,
+            "pdf": 15691
+          }
+        },
+        "5": {
+          "section": 11,
+          "on": "Flowchart Concepts",
+          "intro": {
+            "n": 3,
+            "secs": 345
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 3841
+          },
+          "ids": {
+            "pop": 23719,
+            "practice": 24030,
+            "forum": 24009,
+            "pdf": 15698
+          }
+        },
+        "6": {
+          "section": 12,
+          "on": "Pseudocode",
+          "intro": {
+            "n": 2,
+            "secs": 338
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 3795
+          },
+          "ids": {
+            "pop": 24120,
+            "practice": 24166,
+            "forum": 24152,
+            "pdf": 15705
+          }
+        },
+        "7": {
+          "section": 15,
+          "on": "Program Objects Concept",
+          "intro": {
+            "n": 6,
+            "secs": 706
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 5363
+          },
+          "ids": {
+            "pop": 24238,
+            "practice": 24539,
+            "forum": 24533,
+            "pdf": 28794,
+            "pdfMod": "url"
+          }
+        },
+        "8": {
+          "section": 16,
+          "on": "Abstraction Concepts",
+          "intro": {
+            "n": 6,
+            "secs": 706
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 3783
+          },
+          "ids": {
+            "pop": 24589,
+            "practice": 24689,
+            "forum": 24748,
+            "pdf": 28700,
+            "pdfMod": "url"
+          }
+        },
+        "9": {
+          "section": 17,
+          "on": "Statements and Blocks",
+          "intro": {
+            "n": 4,
+            "secs": 715
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 4696
+          },
+          "ids": {
+            "pop": 24780,
+            "forum": 24922,
+            "pdf": 28841,
+            "pdfMod": "url"
+          }
+        },
+        "10": {
+          "section": 19,
+          "on": "Recursion Concepts",
+          "intro": {
+            "n": 3,
+            "secs": 346
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 5422
+          },
+          "ids": {
+            "pop": 24959,
+            "practice": 25046,
+            "forum": 25036,
+            "pdf": 28865,
+            "pdfMod": "url"
+          }
+        },
+        "11": {
+          "section": 20,
+          "on": "Decomposition and Modularisati",
+          "intro": {
+            "n": 3,
+            "secs": 350
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 4055
+          },
+          "ids": {
+            "pop": 25099,
+            "practice": 25152,
+            "forum": 25131,
+            "pdf": 28894,
+            "pdfMod": "url"
+          }
+        },
+        "12": {
+          "section": 21,
+          "on": "Software Testing Life Cycle",
+          "intro": {
+            "n": 5,
+            "secs": 698
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 3496
+          },
+          "ids": {
+            "pop": 25190,
+            "practice": 25261,
+            "forum": 25254,
+            "pdf": 28958,
+            "pdfMod": "url"
+          }
+        }
+      },
+      "speed": 1.25,
+      "note": "Conceptual weeks run at 1.25×. Drop to 1× for the flowchart and pseudocode walkthroughs and for any code being written on screen."
     },
-    "2": {
-     "section": 7,
-     "intro": {
-      "n": 2,
-      "secs": 309
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 5469
-     },
-     "ids": {
-      "pop": 23202,
-      "practice": 23279,
-      "forum": 23357,
-      "pdf": 15676,
-      "pdfMod": "page"
-     }
+    "CSC_106": {
+      "id": 363,
+      "weeks": {
+        "1": {
+          "section": 5,
+          "on": "The Internet and the World Wid",
+          "intro": {
+            "n": 1,
+            "secs": 404
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 23060,
+            "practice": 23123,
+            "forum": 23242,
+            "pdf": 15712
+          }
+        },
+        "2": {
+          "section": 6,
+          "on": "HTTP and HTTPS, FTP and SFTP",
+          "intro": {
+            "n": 1,
+            "secs": 219
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 23333,
+            "practice": 23459,
+            "forum": 23519,
+            "pdf": 15716
+          }
+        },
+        "3": {
+          "section": 7,
+          "on": "HTML and its Role in Web Devel",
+          "intro": {
+            "n": 1,
+            "secs": 350
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 3185
+          },
+          "ids": {
+            "pop": 23679,
+            "practice": 23983,
+            "forum": 24011,
+            "pdf": 15724
+          }
+        },
+        "4": {
+          "section": 8,
+          "on": "Styling HTML Elements with CSS",
+          "intro": {
+            "n": 1,
+            "secs": 227
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 3410
+          },
+          "ids": {
+            "pop": 24173,
+            "practice": 24227,
+            "forum": 24296,
+            "pdf": 15732
+          }
+        },
+        "5": {
+          "section": 11,
+          "on": "JavaScript's Role as a Client-",
+          "intro": {
+            "n": 1,
+            "secs": 120
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 3234
+          },
+          "ids": {
+            "pop": 24349,
+            "practice": 24441,
+            "forum": 24470,
+            "pdf": 15739
+          }
+        },
+        "6": {
+          "section": 12,
+          "on": "Events and Event Handling",
+          "intro": {
+            "n": 1,
+            "secs": 141
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2918
+          },
+          "ids": {
+            "pop": 24517,
+            "practice": 24583,
+            "forum": 24609,
+            "pdf": 15746
+          }
+        },
+        "7": {
+          "section": 15,
+          "on": "Representing HTML/XML Document",
+          "intro": {
+            "n": 1,
+            "secs": 373
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 5048
+          },
+          "ids": {
+            "pop": 24931,
+            "practice": 24940,
+            "forum": 24941,
+            "pdf": 35974,
+            "pdfMod": "url"
+          }
+        },
+        "8": {
+          "section": 16,
+          "on": "Libraries and Frameworks in We",
+          "intro": {
+            "n": 2,
+            "secs": 462
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2766
+          },
+          "ids": {
+            "pop": 25052,
+            "practice": 25055,
+            "forum": 25056,
+            "pdf": 35550,
+            "pdfMod": "url"
+          }
+        },
+        "9": {
+          "section": 17,
+          "on": "Embedding PHP Code in HTML",
+          "intro": {
+            "n": 2,
+            "secs": 437
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25165,
+            "forum": 25169,
+            "pdf": 35541,
+            "pdfMod": "url"
+          }
+        },
+        "10": {
+          "section": 19,
+          "on": "Interactions Between Frontend ",
+          "intro": {
+            "n": 1,
+            "secs": 549
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25272,
+            "practice": 25274,
+            "forum": 25275,
+            "pdf": 35490,
+            "pdfMod": "url"
+          }
+        },
+        "11": {
+          "section": 20,
+          "on": "Security and Authentication",
+          "intro": {
+            "n": 2,
+            "secs": 513
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25383,
+            "practice": 25385,
+            "forum": 25386,
+            "pdf": 35477,
+            "pdfMod": "url"
+          }
+        },
+        "12": {
+          "section": 21,
+          "on": "Progressive Web Apps",
+          "intro": {
+            "n": 1,
+            "secs": 448
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25442,
+            "practice": 25444,
+            "forum": 25445,
+            "pdf": 35413,
+            "pdfMod": "url"
+          }
+        }
+      },
+      "speed": 1.75,
+      "note": "Orientation material you mostly know. 1.75× throughout."
     },
-    "3": {
-     "section": 8,
-     "intro": {
-      "n": 4,
-      "secs": 531
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 4831
-     },
-     "ids": {
-      "pop": 23489,
-      "practice": 23586,
-      "forum": 23568,
-      "pdf": 15684,
-      "pdfMod": "page"
-     }
+    "MTH_102": {
+      "id": 365,
+      "weeks": {
+        "1": {
+          "section": 4,
+          "on": "Introduction to Real-Valued Fu",
+          "intro": {
+            "n": 2,
+            "secs": 351
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 3434
+          },
+          "ids": {
+            "pop": 23184,
+            "practice": 23264,
+            "forum": 23323,
+            "pdf": 15770
+          }
+        },
+        "2": {
+          "section": 5,
+          "on": "Functions, Types and Graph",
+          "intro": {
+            "n": 2,
+            "secs": 375
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1463
+          },
+          "ids": {
+            "pdf": 15775,
+            "pop": 23378,
+            "practice": 23502,
+            "forum": 23598
+          }
+        },
+        "3": {
+          "section": 6,
+          "on": "Limits",
+          "intro": {
+            "n": 2,
+            "secs": 610
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2075
+          },
+          "ids": {
+            "pdf": 15780,
+            "pop": 23748,
+            "practice": 23973,
+            "forum": 24049
+          }
+        },
+        "4": {
+          "section": 7,
+          "on": "Limits and Continuity",
+          "intro": {
+            "n": 2,
+            "secs": 344
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 24092,
+            "practice": 24200,
+            "forum": 24228,
+            "pdf": 15784
+          }
+        },
+        "5": {
+          "section": 9,
+          "on": "Derivatives",
+          "intro": {
+            "n": 3,
+            "secs": 681
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2788
+          },
+          "ids": {
+            "pop": 24300,
+            "practice": 24393,
+            "forum": 24371,
+            "pdf": 15789
+          }
+        },
+        "6": {
+          "section": 10,
+          "on": "Higher-Order Derivatives",
+          "intro": {
+            "n": 2,
+            "secs": 309
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2035
+          },
+          "ids": {
+            "pop": 24667,
+            "practice": 24721,
+            "forum": 24738,
+            "pdf": 15794
+          }
+        },
+        "7": {
+          "section": 12,
+          "on": "Integration",
+          "intro": {
+            "n": 1,
+            "secs": 410
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2676
+          },
+          "ids": {
+            "pop": 24820,
+            "practice": 24890,
+            "forum": 24947,
+            "pdf": 30237,
+            "pdfMod": "url"
+          }
+        },
+        "8": {
+          "section": 13,
+          "on": "Integration Techniques",
+          "intro": {
+            "n": 1,
+            "secs": 350
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 24972,
+            "practice": 25016,
+            "forum": 25061,
+            "pdf": 30259,
+            "pdfMod": "url"
+          }
+        },
+        "9": {
+          "section": 14,
+          "on": "Integrals and their Convergenc",
+          "intro": {
+            "n": 1,
+            "secs": 482
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25076,
+            "forum": 25107,
+            "pdf": 30321,
+            "pdfMod": "url"
+          }
+        },
+        "10": {
+          "section": 16,
+          "on": "Application of Definite Integr",
+          "intro": {
+            "n": 1,
+            "secs": 420
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25122,
+            "practice": 25181,
+            "forum": 25202,
+            "pdf": 30334,
+            "pdfMod": "url"
+          }
+        },
+        "11": {
+          "section": 17,
+          "on": "Application of Definite Integr",
+          "intro": {
+            "n": 1,
+            "secs": 484
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25221,
+            "practice": 25266,
+            "forum": 25291,
+            "pdf": 30347,
+            "pdfMod": "url"
+          }
+        },
+        "12": {
+          "section": 18,
+          "on": "Application of Integration to ",
+          "intro": {
+            "n": 1,
+            "secs": 601
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25320,
+            "practice": 25398,
+            "forum": 25402,
+            "pdf": 30356,
+            "pdfMod": "url"
+          }
+        }
+      },
+      "speed": 1.0,
+      "note": "Normal speed, pen in hand. Copy the derivations rather than transcribing the talking."
     },
-    "4": {
-     "section": 9,
-     "intro": {
-      "n": 3,
-      "secs": 345
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 5365
-     },
-     "ids": {
-      "pop": 23636,
-      "practice": 23688,
-      "forum": 23669,
-      "pdf": 15691,
-      "pdfMod": "page"
-     }
+    "PHY_102": {
+      "id": 536,
+      "weeks": {
+        "1": {
+          "section": 4,
+          "on": "Methods of Charging",
+          "intro": {
+            "n": 1,
+            "secs": 469
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1194
+          },
+          "ids": {
+            "pop": 25043,
+            "practice": 25082,
+            "forum": 25223,
+            "pdf": 20665
+          }
+        },
+        "2": {
+          "section": 5,
+          "on": "Superposition of Forces & Elec",
+          "intro": {
+            "n": 2,
+            "secs": 340
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2141
+          },
+          "ids": {
+            "pop": 25115,
+            "practice": 25240,
+            "forum": 25324,
+            "pdf": 20670
+          }
+        },
+        "3": {
+          "section": 6,
+          "on": "Electromotive Force",
+          "intro": {
+            "n": 3,
+            "secs": 431
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25430,
+            "practice": 25449,
+            "forum": 25673,
+            "pdf": 20674
+          }
+        },
+        "4": {
+          "section": 7,
+          "on": "Electric Dipoles",
+          "intro": {
+            "n": 2,
+            "secs": 415
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25495,
+            "practice": 25517,
+            "forum": 25677,
+            "pdf": 20680
+          }
+        },
+        "5": {
+          "section": 9,
+          "on": "Kirchoff’s law",
+          "intro": {
+            "n": 2,
+            "secs": 500
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1733
+          },
+          "ids": {
+            "pop": 25552,
+            "practice": 25696,
+            "forum": 25725,
+            "pdf": 20687
+          }
+        },
+        "6": {
+          "section": 10,
+          "on": "Peak and RMS Values of Current",
+          "intro": {
+            "n": 2,
+            "secs": 442
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1095
+          },
+          "ids": {
+            "pop": 25710,
+            "practice": 25736,
+            "forum": 25778,
+            "pdf": 20692
+          }
+        },
+        "7": {
+          "section": 12,
+          "on": "Power in an AC Circuit",
+          "intro": {
+            "n": 3,
+            "secs": 643
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25748,
+            "practice": 25790,
+            "forum": 25884,
+            "pdf": 29797,
+            "pdfMod": "url"
+          }
+        },
+        "8": {
+          "section": 13,
+          "on": "Magnetic Dipoles",
+          "intro": {
+            "n": 3,
+            "secs": 606
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25844,
+            "practice": 25922,
+            "forum": 25934,
+            "pdf": 29799,
+            "pdfMod": "url"
+          }
+        },
+        "9": {
+          "section": 14,
+          "on": "Electromagnetism",
+          "intro": {
+            "n": 3,
+            "secs": 676
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25925,
+            "practice": 46794,
+            "forum": 26109,
+            "pdf": 29801,
+            "pdfMod": "url"
+          }
+        },
+        "10": {
+          "section": 16,
+          "on": "Electromagnetic Induction",
+          "intro": {
+            "n": 1,
+            "secs": 540
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25960,
+            "practice": 26123,
+            "forum": 26167,
+            "pdf": 29803,
+            "pdfMod": "url"
+          }
+        },
+        "11": {
+          "section": 17,
+          "on": "Faraday's Law and Lenz's Law",
+          "intro": {
+            "n": 2,
+            "secs": 605
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1507
+          },
+          "ids": {
+            "pop": 26153,
+            "practice": 26196,
+            "forum": 26245,
+            "pdf": 29805,
+            "pdfMod": "url"
+          }
+        },
+        "12": {
+          "section": 18,
+          "on": "Step Up and Step Down Transfor",
+          "intro": {
+            "n": 2,
+            "secs": 360
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1105
+          },
+          "ids": {
+            "pop": 26219,
+            "practice": 26260,
+            "forum": 26297,
+            "pdf": 29807,
+            "pdfMod": "url"
+          }
+        }
+      },
+      "speed": 1.0,
+      "note": "Normal speed for derivations and numericals."
     },
-    "5": {
-     "section": 12,
-     "intro": {
-      "n": 3,
-      "secs": 345
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 3841
-     },
-     "ids": {
-      "pop": 23719,
-      "practice": 24030,
-      "forum": 24009,
-      "pdf": 15698,
-      "pdfMod": "page"
-     }
+    "PHY_108": {
+      "id": 537,
+      "weeks": {
+        "1": {
+          "section": 4,
+          "on": "Introduction to General Practi",
+          "intro": {
+            "n": 2,
+            "secs": 285
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 25829,
+            "practice": 25905,
+            "forum": 26058,
+            "pdf": 20697
+          }
+        },
+        "2": {
+          "section": 5,
+          "on": "Introduction to Ohmic Resistan",
+          "intro": {
+            "n": 2,
+            "secs": 279
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1709
+          },
+          "ids": {
+            "pop": 26086,
+            "practice": 26220,
+            "forum": 26292,
+            "pdf": 20702
+          }
+        },
+        "3": {
+          "section": 6,
+          "on": "Introduction to Non-Ohmic Resi",
+          "intro": {
+            "n": 2,
+            "secs": 321
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 26473,
+            "practice": 26525,
+            "forum": 26597,
+            "pdf": 20707
+          }
+        },
+        "4": {
+          "section": 7,
+          "on": "Overview of Kirchhoff's Curren",
+          "intro": {
+            "n": 2,
+            "secs": 416
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 26624,
+            "practice": 26675,
+            "forum": 26708,
+            "pdf": 20711
+          }
+        },
+        "5": {
+          "section": 9,
+          "on": "Overview of Kirchoff's Voltage",
+          "intro": {
+            "n": 1,
+            "secs": 405
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1528
+          },
+          "ids": {
+            "pop": 26715,
+            "practice": 26753,
+            "forum": 26812,
+            "pdf": 20716
+          }
+        },
+        "6": {
+          "section": 10,
+          "on": "Overview of Capacitance",
+          "intro": {
+            "n": 2,
+            "secs": 317
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 26827,
+            "practice": 26883,
+            "forum": 26952,
+            "pdf": 20720
+          }
+        },
+        "7": {
+          "section": 12,
+          "on": "Overview of Discharging a Capa",
+          "intro": {
+            "n": 2,
+            "secs": 366
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1443
+          },
+          "ids": {
+            "pop": 26982,
+            "practice": 26986,
+            "forum": 26987,
+            "pdf": 29955,
+            "pdfMod": "url"
+          }
+        },
+        "8": {
+          "section": 13,
+          "on": "Overview of Boyle's Law",
+          "intro": {
+            "n": 2,
+            "secs": 420
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1020
+          },
+          "ids": {
+            "pop": 27105,
+            "practice": 27107,
+            "forum": 27108,
+            "pdf": 30018,
+            "pdfMod": "url"
+          }
+        },
+        "9": {
+          "section": 14,
+          "on": "Overview of Specific Heat",
+          "intro": {
+            "n": 2,
+            "secs": 387
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 27167,
+            "forum": 27170,
+            "pdf": 30048,
+            "pdfMod": "url"
+          }
+        },
+        "10": {
+          "section": 16,
+          "on": "Introduction to Magnetic Momen",
+          "intro": {
+            "n": 2,
+            "secs": 372
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pop": 27224,
+            "practice": 27228,
+            "forum": 27226,
+            "pdf": 30098,
+            "pdfMod": "url"
+          }
+        },
+        "11": {
+          "section": 17,
+          "on": "Introduction to Magnetic Field",
+          "intro": {
+            "n": 2,
+            "secs": 314
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 981
+          },
+          "ids": {
+            "pop": 27398,
+            "practice": 27400,
+            "forum": 27401,
+            "pdf": 30122,
+            "pdfMod": "url"
+          }
+        },
+        "12": {
+          "section": 18,
+          "on": "Overview of Young's Modulus",
+          "intro": {
+            "n": 2,
+            "secs": 497
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1227
+          },
+          "ids": {
+            "pop": 27495,
+            "practice": 27497,
+            "forum": 27498,
+            "pdf": 30181,
+            "pdfMod": "url"
+          }
+        }
+      },
+      "speed": 1.75,
+      "note": "Practical and procedure. 1.75×, then write the report immediately."
     },
-    "6": {
-     "section": 13,
-     "intro": {
-      "n": 2,
-      "secs": 338
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 3795
-     },
-     "ids": {
-      "pop": 24120,
-      "practice": 24166,
-      "forum": 24152,
-      "pdf": 15705,
-      "pdfMod": "page"
-     }
+    "GST_112": {
+      "id": 334,
+      "speed": 1.75,
+      "weeks": {
+        "1": {
+          "section": 4,
+          "on": "Conceptual Clarification",
+          "intro": {
+            "n": 6,
+            "secs": 994
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pdf": 21990,
+            "pop": 42976,
+            "practice": 42848,
+            "forum": 29280
+          }
+        },
+        "2": {
+          "section": 5,
+          "on": "Nigerian History, Culture and ",
+          "intro": {
+            "n": 2,
+            "secs": 531
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1195
+          },
+          "ids": {
+            "pdf": 21993,
+            "pop": 42981,
+            "practice": 42982,
+            "forum": 29310
+          }
+        },
+        "3": {
+          "section": 6,
+          "on": "Nigeria under Colonial Rule",
+          "intro": {
+            "n": 2,
+            "secs": 542
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 2952
+          },
+          "ids": {
+            "pdf": 21998,
+            "pop": 42983,
+            "practice": 42836,
+            "forum": 29339
+          }
+        },
+        "4": {
+          "section": 7,
+          "on": "Evolution of Nigeria as a Poli",
+          "intro": {
+            "n": 2,
+            "secs": 456
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 2479
+          },
+          "ids": {
+            "pdf": 22005,
+            "pop": 42984,
+            "practice": 42985,
+            "forum": 29356
+          }
+        },
+        "5": {
+          "section": 10,
+          "on": "Nigeria and the Challenges of ",
+          "intro": {
+            "n": 4,
+            "secs": 932
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 4267
+          },
+          "ids": {
+            "pdf": 22013,
+            "pop": 42986,
+            "practice": 42987,
+            "forum": 29385
+          }
+        },
+        "6": {
+          "section": 11,
+          "on": "Concept of Trade and Economic ",
+          "intro": {
+            "n": 4,
+            "secs": 812
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2468
+          },
+          "ids": {
+            "pdf": 22021,
+            "pop": 42988,
+            "practice": 42989,
+            "forum": 29410
+          }
+        },
+        "7": {
+          "section": 13,
+          "on": "Social Justices and National D",
+          "intro": {
+            "n": 3,
+            "secs": 361
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1082
+          },
+          "ids": {
+            "pdf": 49383,
+            "pdfMod": "url",
+            "pop": 42990,
+            "practice": 42991,
+            "forum": 29446
+          }
+        },
+        "8": {
+          "section": 14,
+          "on": "Judiciary and Fundamental Righ",
+          "intro": {
+            "n": 3,
+            "secs": 523
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1027
+          },
+          "ids": {
+            "pdf": 49394,
+            "pdfMod": "url",
+            "pop": 42992,
+            "practice": 42993,
+            "forum": 29476
+          }
+        },
+        "9": {
+          "section": 15,
+          "on": "Re-orientation, Moral and Nati",
+          "intro": {
+            "n": 2,
+            "secs": 836
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1576
+          },
+          "ids": {
+            "pdf": 49403,
+            "pdfMod": "url",
+            "pop": 42994,
+            "forum": 29544
+          }
+        },
+        "10": {
+          "section": 18,
+          "on": "Current Socio-Political and Cu",
+          "intro": {
+            "n": 2,
+            "secs": 469
+          },
+          "lecture": {
+            "n": 2,
+            "secs": 2950
+          },
+          "ids": {
+            "pdf": 49435,
+            "pdfMod": "url",
+            "pop": 42995,
+            "practice": 42996,
+            "forum": 29592
+          }
+        },
+        "11": {
+          "section": 19,
+          "on": "Individuals and National Devel",
+          "intro": {
+            "n": 2,
+            "secs": 451
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1045
+          },
+          "ids": {
+            "pdf": 49456,
+            "pdfMod": "url",
+            "pop": 42997,
+            "practice": 42998,
+            "forum": 29654
+          }
+        },
+        "12": {
+          "section": 20,
+          "on": "Negative Attitudes and Conduct",
+          "intro": {
+            "n": 2,
+            "secs": 351
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2433
+          },
+          "ids": {
+            "pdf": 49479,
+            "pdfMod": "url",
+            "pop": 42999,
+            "practice": 43000,
+            "forum": 29693
+          }
+        }
+      },
+      "note": "Recall, not reasoning. 1.75× throughout, then the forum post."
     },
-    "7": {
-     "section": 16,
-     "intro": {
-      "n": 6,
-      "secs": 706
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 5363
-     },
-     "ids": {
-      "pop": 24238,
-      "practice": 24539,
-      "forum": 24533,
-      "pdf": 28794,
-      "pdfMod": "url"
-     }
+    "GST_122": {
+      "id": 335,
+      "speed": 1.75,
+      "weeks": {
+        "1": {
+          "section": 5,
+          "on": "Language Skills I",
+          "intro": {
+            "n": 2,
+            "secs": 260
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2535
+          },
+          "ids": {
+            "pdf": 22027,
+            "pop": 43764,
+            "practice": 43269,
+            "forum": 47848
+          }
+        },
+        "2": {
+          "section": 6,
+          "on": "Language Skills II",
+          "intro": {
+            "n": 2,
+            "secs": 287
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pdf": 22032,
+            "pop": 43724,
+            "practice": 43424,
+            "forum": 47859
+          }
+        },
+        "3": {
+          "section": 7,
+          "on": "Grammar",
+          "intro": {
+            "n": 2,
+            "secs": 319
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2394
+          },
+          "ids": {
+            "pdf": 22038,
+            "pop": 43701,
+            "practice": 43551,
+            "forum": 47868
+          }
+        },
+        "4": {
+          "section": 8,
+          "on": "Writing Activities I",
+          "intro": {
+            "n": 2,
+            "secs": 313
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 2315
+          },
+          "ids": {
+            "pdf": 22044,
+            "pop": 43686,
+            "practice": 43787,
+            "forum": 47882
+          }
+        },
+        "5": {
+          "section": 10,
+          "on": "Writing Activities II",
+          "intro": {
+            "n": 1,
+            "secs": 269
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pdf": 22049,
+            "pop": 43785,
+            "practice": 43918,
+            "forum": 47915
+          }
+        },
+        "6": {
+          "section": 11,
+          "on": "Types of Writing",
+          "intro": {
+            "n": 2,
+            "secs": 276
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pdf": 22053,
+            "pop": 43938,
+            "practice": 43935,
+            "forum": 47926
+          }
+        },
+        "7": {
+          "section": 13,
+          "on": "Comprehension Strategies I",
+          "intro": {
+            "n": 3,
+            "secs": 480
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1368
+          },
+          "ids": {
+            "pdf": 51627,
+            "pdfMod": "url",
+            "pop": 46074,
+            "practice": 46091,
+            "forum": 47935
+          }
+        },
+        "8": {
+          "section": 14,
+          "on": "Comprehension Strategies II",
+          "intro": {
+            "n": 2,
+            "secs": 293
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pdf": 51634,
+            "pdfMod": "url",
+            "pop": 46264,
+            "practice": 46148,
+            "forum": 47952
+          }
+        },
+        "9": {
+          "section": 15,
+          "on": "Speaking I",
+          "intro": {
+            "n": 2,
+            "secs": 367
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pdf": 51642,
+            "pdfMod": "url",
+            "pop": 46130,
+            "forum": 47966
+          }
+        },
+        "10": {
+          "section": 17,
+          "on": "Speaking II",
+          "intro": {
+            "n": 2,
+            "secs": 384
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1698
+          },
+          "ids": {
+            "pdf": 51647,
+            "pdfMod": "url",
+            "pop": 46269,
+            "practice": 46180,
+            "forum": 48140
+          }
+        },
+        "11": {
+          "section": 18,
+          "on": "Listening I",
+          "intro": {
+            "n": 3,
+            "secs": 330
+          },
+          "lecture": {
+            "n": 0,
+            "secs": 0
+          },
+          "ids": {
+            "pdf": 51655,
+            "pdfMod": "url",
+            "pop": 46283,
+            "practice": 46300,
+            "forum": 48153
+          }
+        },
+        "12": {
+          "section": 19,
+          "on": "Listening II",
+          "intro": {
+            "n": 2,
+            "secs": 337
+          },
+          "lecture": {
+            "n": 1,
+            "secs": 1110
+          },
+          "ids": {
+            "pdf": 51657,
+            "pdfMod": "url",
+            "pop": 46339,
+            "practice": 46357,
+            "forum": 55869
+          }
+        }
+      },
+      "note": "Recall, not reasoning. 1.75× throughout, then the forum post."
     },
-    "8": {
-     "section": 17,
-     "intro": {
-      "n": 6,
-      "secs": 706
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 3783
-     },
-     "ids": {
-      "pop": 24589,
-      "practice": 24689,
-      "forum": 24748,
-      "pdf": 28700,
-      "pdfMod": "url"
-     }
-    },
-    "9": {
-     "section": 18,
-     "intro": {
-      "n": 4,
-      "secs": 715
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 4696
-     },
-     "ids": {
-      "pop": 24780,
-      "forum": 24922,
-      "pdf": 28841,
-      "pdfMod": "url"
-     }
-    },
-    "10": {
-     "section": 20,
-     "intro": {
-      "n": 3,
-      "secs": 346
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 5422
-     },
-     "ids": {
-      "pop": 24959,
-      "practice": 25046,
-      "forum": 25036,
-      "pdf": 28865,
-      "pdfMod": "url"
-     }
-    },
-    "11": {
-     "section": 21,
-     "intro": {
-      "n": 3,
-      "secs": 350
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 4055
-     },
-     "ids": {
-      "pop": 25099,
-      "practice": 25152,
-      "forum": 25131,
-      "pdf": 28894,
-      "pdfMod": "url"
-     }
-    },
-    "12": {
-     "section": 22,
-     "intro": {
-      "n": 5,
-      "secs": 698
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 3496
-     },
-     "ids": {
-      "pop": 25190,
-      "practice": 25261,
-      "forum": 25254,
-      "pdf": 28958,
-      "pdfMod": "url"
-     }
+    "MIVA_COS_111": {
+      "id": 783,
+      "speed": 1.0,
+      "note": "Certifications, not weekly material. The Certs tab is the plan.",
+      "weeks": {}
     }
-   },
-   "speed": 1.25,
-   "note": "Conceptual weeks run at 1.25×. Drop to 1× for the flowchart and pseudocode walkthroughs and for any code being written on screen."
   },
-  "CSC_106": {
-   "id": 363,
-   "weeks": {
-    "1": {
-     "section": 6,
-     "intro": {
-      "n": 1,
-      "secs": 404
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 23060,
-      "practice": 23123,
-      "forum": 23242,
-      "pdf": 15712,
-      "pdfMod": "page"
-     }
-    },
-    "2": {
-     "section": 7,
-     "intro": {
-      "n": 1,
-      "secs": 219
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 23333,
-      "practice": 23459,
-      "forum": 23519,
-      "pdf": 15716,
-      "pdfMod": "page"
-     }
-    },
-    "3": {
-     "section": 8,
-     "intro": {
-      "n": 1,
-      "secs": 350
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 3185
-     },
-     "ids": {
-      "pop": 23679,
-      "practice": 23983,
-      "forum": 24011,
-      "pdf": 15724,
-      "pdfMod": "page"
-     }
-    },
-    "4": {
-     "section": 9,
-     "intro": {
-      "n": 1,
-      "secs": 227
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 3410
-     },
-     "ids": {
-      "pop": 24173,
-      "practice": 24227,
-      "forum": 24296,
-      "pdf": 15732,
-      "pdfMod": "page"
-     }
-    },
-    "5": {
-     "section": 12,
-     "intro": {
-      "n": 1,
-      "secs": 120
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 3234
-     },
-     "ids": {
-      "pop": 24349,
-      "practice": 24441,
-      "forum": 24470,
-      "pdf": 15739,
-      "pdfMod": "page"
-     }
-    },
-    "6": {
-     "section": 13,
-     "intro": {
-      "n": 1,
-      "secs": 141
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 2918
-     },
-     "ids": {
-      "pop": 24517,
-      "practice": 24583,
-      "forum": 24609,
-      "pdf": 15746,
-      "pdfMod": "page"
-     }
-    },
-    "7": {
-     "section": 16,
-     "intro": {
-      "n": 1,
-      "secs": 373
-     },
-     "lecture": {
-      "n": 2,
-      "secs": 5048
-     },
-     "ids": {
-      "pop": 24931,
-      "practice": 24940,
-      "forum": 24941,
-      "pdf": 35974,
-      "pdfMod": "url"
-     }
-    },
-    "8": {
-     "section": 17,
-     "intro": {
-      "n": 2,
-      "secs": 462
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 2766
-     },
-     "ids": {
-      "pop": 25052,
-      "practice": 25055,
-      "forum": 25056,
-      "pdf": 35550,
-      "pdfMod": "url"
-     }
-    },
-    "9": {
-     "section": 18,
-     "intro": {
-      "n": 2,
-      "secs": 437
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25165,
-      "forum": 25169,
-      "pdf": 35541,
-      "pdfMod": "url"
-     }
-    },
-    "10": {
-     "section": 20,
-     "intro": {
-      "n": 1,
-      "secs": 549
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25272,
-      "practice": 25274,
-      "forum": 25275,
-      "pdf": 35490,
-      "pdfMod": "url"
-     }
-    },
-    "11": {
-     "section": 21,
-     "intro": {
-      "n": 2,
-      "secs": 513
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25383,
-      "practice": 25385,
-      "forum": 25386,
-      "pdf": 35477,
-      "pdfMod": "url"
-     }
-    },
-    "12": {
-     "section": 22,
-     "intro": {
-      "n": 1,
-      "secs": 448
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25442,
-      "practice": 25444,
-      "forum": 25445,
-      "pdf": 35413,
-      "pdfMod": "url"
-     }
-    }
-   },
-   "speed": 1.75,
-   "note": "Orientation material you mostly know. 1.75× throughout."
-  },
-  "MTH_102": {
-   "id": 365,
-   "weeks": {
-    "1": {
-     "section": 5,
-     "intro": {
-      "n": 2,
-      "secs": 351
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 3434
-     },
-     "ids": {
-      "pop": 23184,
-      "practice": 23264,
-      "forum": 23323
-     }
-    },
-    "2": {
-     "section": 6,
-     "intro": {
-      "n": 2,
-      "secs": 375
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1463
-     }
-    },
-    "3": {
-     "section": 7,
-     "intro": {
-      "n": 2,
-      "secs": 610
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 2075
-     }
-    },
-    "4": {
-     "section": 8,
-     "intro": {
-      "n": 2,
-      "secs": 344
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 24092,
-      "practice": 24200,
-      "forum": 24228,
-      "pdf": 15784,
-      "pdfMod": "page"
-     }
-    },
-    "5": {
-     "section": 10,
-     "intro": {
-      "n": 3,
-      "secs": 681
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 2788
-     },
-     "ids": {
-      "pop": 24300,
-      "practice": 24393,
-      "forum": 24371,
-      "pdf": 15789,
-      "pdfMod": "page"
-     }
-    },
-    "6": {
-     "section": 11,
-     "intro": {
-      "n": 2,
-      "secs": 309
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 2035
-     },
-     "ids": {
-      "pop": 24667,
-      "practice": 24721,
-      "forum": 24738,
-      "pdf": 15794,
-      "pdfMod": "page"
-     }
-    },
-    "7": {
-     "section": 13,
-     "intro": {
-      "n": 1,
-      "secs": 410
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 2676
-     },
-     "ids": {
-      "pop": 24820,
-      "practice": 24890,
-      "forum": 24947,
-      "pdf": 30237,
-      "pdfMod": "url"
-     }
-    },
-    "8": {
-     "section": 14,
-     "intro": {
-      "n": 1,
-      "secs": 350
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 24972,
-      "practice": 25016,
-      "forum": 25061,
-      "pdf": 30259,
-      "pdfMod": "url"
-     }
-    },
-    "9": {
-     "section": 15,
-     "intro": {
-      "n": 1,
-      "secs": 482
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25076,
-      "forum": 25107,
-      "pdf": 30321,
-      "pdfMod": "url"
-     }
-    },
-    "10": {
-     "section": 17,
-     "intro": {
-      "n": 1,
-      "secs": 420
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25122,
-      "practice": 25181,
-      "forum": 25202,
-      "pdf": 30334,
-      "pdfMod": "url"
-     }
-    },
-    "11": {
-     "section": 18,
-     "intro": {
-      "n": 1,
-      "secs": 484
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25221,
-      "practice": 25266,
-      "forum": 25291,
-      "pdf": 30347,
-      "pdfMod": "url"
-     }
-    },
-    "12": {
-     "section": 19,
-     "intro": {
-      "n": 1,
-      "secs": 601
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25320,
-      "practice": 25398,
-      "forum": 25402,
-      "pdf": 30356,
-      "pdfMod": "url"
-     }
-    }
-   },
-   "speed": 1.0,
-   "note": "Normal speed, pen in hand. Copy the derivations rather than transcribing the talking."
-  },
-  "PHY_102": {
-   "id": 536,
-   "weeks": {
-    "1": {
-     "section": 5,
-     "intro": {
-      "n": 1,
-      "secs": 469
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1194
-     },
-     "ids": {
-      "pop": 25043,
-      "practice": 25082,
-      "forum": 25223,
-      "pdf": 20665,
-      "pdfMod": "page"
-     }
-    },
-    "2": {
-     "section": 6,
-     "intro": {
-      "n": 2,
-      "secs": 340
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 2141
-     },
-     "ids": {
-      "pop": 25115,
-      "practice": 25240,
-      "forum": 25324,
-      "pdf": 20670,
-      "pdfMod": "page"
-     }
-    },
-    "3": {
-     "section": 7,
-     "intro": {
-      "n": 3,
-      "secs": 431
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25430,
-      "practice": 25449,
-      "forum": 25673,
-      "pdf": 20674,
-      "pdfMod": "page"
-     }
-    },
-    "4": {
-     "section": 8,
-     "intro": {
-      "n": 2,
-      "secs": 415
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25495,
-      "practice": 25517,
-      "forum": 25677,
-      "pdf": 20680,
-      "pdfMod": "page"
-     }
-    },
-    "5": {
-     "section": 10,
-     "intro": {
-      "n": 2,
-      "secs": 500
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1733
-     },
-     "ids": {
-      "pop": 25552,
-      "practice": 25696,
-      "forum": 25725,
-      "pdf": 20687,
-      "pdfMod": "page"
-     }
-    },
-    "6": {
-     "section": 11,
-     "intro": {
-      "n": 2,
-      "secs": 442
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1095
-     },
-     "ids": {
-      "pop": 25710,
-      "practice": 25736,
-      "forum": 25778,
-      "pdf": 20692,
-      "pdfMod": "page"
-     }
-    },
-    "7": {
-     "section": 13,
-     "intro": {
-      "n": 3,
-      "secs": 643
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25748,
-      "practice": 25790,
-      "forum": 25884,
-      "pdf": 29797,
-      "pdfMod": "url"
-     }
-    },
-    "8": {
-     "section": 14,
-     "intro": {
-      "n": 3,
-      "secs": 606
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25844,
-      "practice": 25922,
-      "forum": 25934,
-      "pdf": 29799,
-      "pdfMod": "url"
-     }
-    },
-    "9": {
-     "section": 15,
-     "intro": {
-      "n": 3,
-      "secs": 676
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25925,
-      "practice": 46794,
-      "forum": 26109,
-      "pdf": 29801,
-      "pdfMod": "url"
-     }
-    },
-    "10": {
-     "section": 17,
-     "intro": {
-      "n": 1,
-      "secs": 540
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25960,
-      "practice": 26123,
-      "forum": 26167,
-      "pdf": 29803,
-      "pdfMod": "url"
-     }
-    },
-    "11": {
-     "section": 18,
-     "intro": {
-      "n": 2,
-      "secs": 605
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1507
-     },
-     "ids": {
-      "pop": 26153,
-      "practice": 26196,
-      "forum": 26245,
-      "pdf": 29805,
-      "pdfMod": "url"
-     }
-    },
-    "12": {
-     "section": 19,
-     "intro": {
-      "n": 2,
-      "secs": 360
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1105
-     },
-     "ids": {
-      "pop": 26219,
-      "practice": 26260,
-      "forum": 26297,
-      "pdf": 29807,
-      "pdfMod": "url"
-     }
-    }
-   },
-   "speed": 1.0,
-   "note": "Normal speed for derivations and numericals."
-  },
-  "PHY_108": {
-   "id": 537,
-   "weeks": {
-    "1": {
-     "section": 5,
-     "intro": {
-      "n": 2,
-      "secs": 285
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 25829,
-      "practice": 25905,
-      "forum": 26058,
-      "pdf": 20697,
-      "pdfMod": "page"
-     }
-    },
-    "2": {
-     "section": 6,
-     "intro": {
-      "n": 2,
-      "secs": 279
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1709
-     },
-     "ids": {
-      "pop": 26086,
-      "practice": 26220,
-      "forum": 26292,
-      "pdf": 20702,
-      "pdfMod": "page"
-     }
-    },
-    "3": {
-     "section": 7,
-     "intro": {
-      "n": 2,
-      "secs": 321
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 26473,
-      "practice": 26525,
-      "forum": 26597,
-      "pdf": 20707,
-      "pdfMod": "page"
-     }
-    },
-    "4": {
-     "section": 8,
-     "intro": {
-      "n": 2,
-      "secs": 416
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 26624,
-      "practice": 26675,
-      "forum": 26708,
-      "pdf": 20711,
-      "pdfMod": "page"
-     }
-    },
-    "5": {
-     "section": 10,
-     "intro": {
-      "n": 1,
-      "secs": 405
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1528
-     },
-     "ids": {
-      "pop": 26715,
-      "practice": 26753,
-      "forum": 26812,
-      "pdf": 20716,
-      "pdfMod": "page"
-     }
-    },
-    "6": {
-     "section": 11,
-     "intro": {
-      "n": 2,
-      "secs": 317
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 26827,
-      "practice": 26883,
-      "forum": 26952,
-      "pdf": 20720,
-      "pdfMod": "page"
-     }
-    },
-    "7": {
-     "section": 13,
-     "intro": {
-      "n": 2,
-      "secs": 366
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1443
-     },
-     "ids": {
-      "pop": 26982,
-      "practice": 26986,
-      "forum": 26987,
-      "pdf": 29955,
-      "pdfMod": "url"
-     }
-    },
-    "8": {
-     "section": 14,
-     "intro": {
-      "n": 2,
-      "secs": 420
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1020
-     },
-     "ids": {
-      "pop": 27105,
-      "practice": 27107,
-      "forum": 27108,
-      "pdf": 30018,
-      "pdfMod": "url"
-     }
-    },
-    "9": {
-     "section": 15,
-     "intro": {
-      "n": 2,
-      "secs": 387
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 27167,
-      "forum": 27170,
-      "pdf": 30048,
-      "pdfMod": "url"
-     }
-    },
-    "10": {
-     "section": 17,
-     "intro": {
-      "n": 2,
-      "secs": 372
-     },
-     "lecture": {
-      "n": 0,
-      "secs": 0
-     },
-     "ids": {
-      "pop": 27224,
-      "practice": 27228,
-      "forum": 27226,
-      "pdf": 30098,
-      "pdfMod": "url"
-     }
-    },
-    "11": {
-     "section": 18,
-     "intro": {
-      "n": 2,
-      "secs": 314
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 981
-     },
-     "ids": {
-      "pop": 27398,
-      "practice": 27400,
-      "forum": 27401,
-      "pdf": 30122,
-      "pdfMod": "url"
-     }
-    },
-    "12": {
-     "section": 19,
-     "intro": {
-      "n": 2,
-      "secs": 497
-     },
-     "lecture": {
-      "n": 1,
-      "secs": 1227
-     },
-     "ids": {
-      "pop": 27495,
-      "practice": 27497,
-      "forum": 27498,
-      "pdf": 30181,
-      "pdfMod": "url"
-     }
-    }
-   },
-   "speed": 1.75,
-   "note": "Practical and procedure. 1.75×, then write the report immediately."
+  "absent": {},
+  "graded": {
+    "status": "January Cohort 2026 windows, already closed. This cohort's have not been published.",
+    "perCourse": [
+      {
+        "name": "Mid-Semester Assessment",
+        "type": "quiz",
+        "sits": "after week 4"
+      },
+      {
+        "name": "Lab Assessment",
+        "type": "assign",
+        "sits": "after week 4"
+      },
+      {
+        "name": "End of Semester Assessment",
+        "type": "quiz",
+        "sits": "after week 9"
+      }
+    ],
+    "alsoPerCourse": [
+      "Pre-semester Test (ungraded)",
+      "Post-semester Test",
+      "Mid-Course Evaluation",
+      "End-of-Course Evaluation"
+    ]
   }
- },
- "absent": {
-  "GST_112": "Not in your LMS course list yet.",
-  "GST_122": "Not in your LMS course list yet.",
-  "MIVA_COS_111": "Not in your LMS course list yet."
- },
- "graded": {
-  "status": "January Cohort 2026 windows, already closed. This cohort's have not been published.",
-  "perCourse": [
-   {
-    "name": "Mid-Semester Assessment",
-    "type": "quiz",
-    "sits": "after week 4"
-   },
-   {
-    "name": "Lab Assessment",
-    "type": "assign",
-    "sits": "after week 4"
-   },
-   {
-    "name": "End of Semester Assessment",
-    "type": "quiz",
-    "sits": "after week 9"
-   }
-  ],
-  "alsoPerCourse": [
-   "Pre-semester Test (ungraded)",
-   "Post-semester Test",
-   "Mid-Course Evaluation",
-   "End-of-Course Evaluation"
-  ]
- }
 }
