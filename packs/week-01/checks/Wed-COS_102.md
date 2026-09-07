@@ -1,69 +1,166 @@
 # Wednesday — COS_102 nightly check
 
-*This session took Week 1 conceptually: what problem-solving in computer science actually is and why it must be systematic; what makes a problem a computational problem; the four steps to problem-solving as a sequence of distinct jobs rather than a list to recite; the meaning of algorithm, pseudocode and flowchart and what each one buys you; the three required properties of an algorithm's steps and what breaks when each is missing; decomposition and its limits; the translator chain of interpreter, compiler and assembler; the difference between debugging and testing and between the three error types; the two kinds of program documentation and when documentation begins; and refactoring — what it must preserve, what it changes, and when it is not refactoring at all. No traces, no arithmetic.*
+*This session takes Week 1 conceptually.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**1.** A flowchart reads: START, then an input box "Input A, B", then a decision box "Is A > B?". The Yes branch goes to "Print A − B", the No branch to "Print B − A". Both branches go to STOP. The inputs are A = 4, B = 9. What is printed?
+A. 5
+B. −5
+C. 13
+D. 9
 
-**1.** The lesson insists that a programmer must first understand how a *human* would solve the problem before programming it. What is the reason?
+**2.** A student does four things while solving a problem. P: writes the pseudocode and draws the flowchart. Q: lists the inputs, the processing and the output. R: rewrites the working program to run faster with the same results. S: types the program in and runs it. Which order follows the four steps to problem-solving?
+A. Q, P, S, R
+B. P, Q, S, R
+C. Q, S, P, R
+D. Q, P, R, S
 
-a) A computer can only run a procedure that has already been proved correct by hand.
-b) The computer supplies volume and speed, not method; it executes a procedure someone has worked out.
-c) High-level languages cannot express a problem that has not been written out on paper first.
-d) The CPU processes inputs in reverse order, so the human solution must be inverted before coding.
+**3.** A translator takes a program written in Java and produces assembly language, which still has to be translated once more before the CPU can run it. Which translator is this?
+A. Interpreter
+B. Assembler
+C. Compiler
+D. The CPU itself
 
-**2.** What makes a problem a *computational* problem in the sense used in this course?
+**4.** A grade program is accepted by the compiler with no complaints, runs to the end without stopping, and prints an average of 36 for five grades that actually average 45. Which type of error is this?
+A. Syntax error
+B. Run time error
+C. Not an error, since the program ran
+D. Logical error
 
-a) It can be answered YES or NO, which is the form a computer works in.
-b) It is a real-world problem rather than an abstract one.
-c) It is large enough that a human could not finish it by hand in reasonable time.
-d) It has a step-by-step solution, and its inputs, limitations and output conditions are well defined.
+**5.** A plan reads: 1. Read the five grades. 2. Add them and divide by 5. 3. If the result is high enough, print PASS; otherwise print FAIL. 4. Stop. Which required property of an algorithm's steps does the plan break?
+A. Ordered
+B. Complete
+C. Unambiguous
+D. None; all three hold
 
-**3.** A plan contains the step "keep adding the grades until you have enough of them". Which requirement on an algorithm's steps does this violate, and why does it matter?
+**6.** How many grades does this pseudocode read?
 
-a) Unambiguity — "enough" reads two ways, so no one definite statement can replace it.
-b) Order — the step does not say whether the adding happens before or after the grades have been read into the program.
-c) Completeness — the algorithm names no stop condition anywhere, so no further step could ever be reached from it.
-d) None of them; the programmer supplies the missing detail during coding, which is exactly what the coding stage is for.
+```
+count = 1
+total = 0
+WHILE count < 5
+    READ g
+    total = total + g
+    count = count + 1
+ENDWHILE
+```
+A. 5
+B. 4
+C. 6
+D. 3
 
-**4.** Pseudocode "looks like the actual program" but cannot be compiled or executed. What follows from that?
+**7.** What does this print?
 
-a) Pseudocode must be rewritten as a flowchart before it can be turned into a program.
-b) Pseudocode is only useful for problems too small to need a compiler.
-c) Nothing checks it for you, so an error in the pseudocode survives untouched into the source code.
-d) Pseudocode is therefore not a representation of the algorithm, only an informal comment on it.
+```
+total = 0
+FOR i = 1 TO 4
+    IF i is even THEN
+        total = total + i
+    ELSE
+        total = total - i
+    ENDIF
+ENDFOR
+PRINT total
+```
+A. 10
+B. −2
+C. 4
+D. 2
 
-**5.** In the compilation and execution process described this week, what distinguishes an interpreter from a compiler?
+**8.** A grade program works correctly. Which of these changes to it is NOT a refactor?
+A. Replacing five separate additions with a loop that gives the same total
+B. Changing the pass mark in the decision from 45 to 50
+C. Renaming G1 to grade1 everywhere it appears
+D. Deleting a variable that is never read
 
-a) The interpreter catches logical as well as syntax errors, whereas the compiler can only ever report syntax errors.
-b) The interpreter goes straight to machine code; the compiler stops at assembly, which an assembler must still convert.
-c) The interpreter works on low-level languages, while the compiler is the tool that works on high-level languages.
-d) The interpreter produces the source code from the pseudocode, while the compiler produces the pseudocode itself.
+**9. (show your working)** Write pseudocode that reads a temperature T and prints HOT if T is above 30, WARM if T is from 20 to 30 inclusive, and COLD otherwise. Show your working.
 
-**6.** Debugging and testing are named as separate activities. What separates them?
+**10. (show your working)** Trace this pseudocode and give the value of total after each iteration, then the printed value. Show your working.
 
-a) Debugging finds errors so they can be removed; testing verifies that the program does what was expected.
-b) Debugging is done by the programmer, testing by the end user after the program is delivered.
-c) Debugging deals with syntax errors, testing with logical and run time errors.
-d) Debugging happens while coding, testing only after the program has been documented.
+```
+total = 1
+FOR i = 1 TO 4
+    total = total * 2 + i
+ENDFOR
+PRINT total
+```
 
-**7.** Which change to a working program is a *refactor* in the sense the week defines?
+**11. (show your working)** This pseudocode is meant to read N numbers and print their average, but for N = 3 it never finishes.
 
-a) Adding a check that rejects a negative grade, so wrong data no longer reaches the average.
-b) Making the program run faster by no longer printing the grade alongside PASS or FAIL.
-c) Correcting a division that used the wrong number of grades, so the average comes out right.
-d) Replacing five repeated addition statements with one loop that produces the same output.
+```
+READ N
+count = 0
+total = 0
+WHILE count < N
+    READ x
+    total = total + x
+ENDWHILE
+PRINT total / N
+```
 
-**8.** The lesson advises that, when parts of a problem cannot be solved, you ignore the difficult parts and do the easier ones first. What is the actual cost of this tactic?
+Say which line is missing and where it goes, then give what the fixed program prints for N = 3 and inputs 4, 7, 10. Show your working.
 
-a) It produces code that cannot later be refactored, because refactoring requires a complete solution.
-b) It reverses the four steps, since carrying out a partial plan comes before the plan is complete.
-c) The easy parts may be built on assumptions the hard part later overturns, forcing that work to be redone.
-d) None; the tactic is safe, because solving all the small problems automatically solves the main problem.
+**12. (show your working)** An algorithm's steps must be ordered, unambiguous and complete. For a plan that averages five grades and prints PASS or FAIL, give one example of a step that breaks each of the three properties, and say what goes wrong when that plan is turned into a program.
 
-**9. (explain why)** Pseudocode cannot be compiled or executed, so writing it costs time and returns nothing runnable. Explain why it is still worth writing — what does it give you that going straight to source code does not?
+---
 
-**10. (explain why)** Explain why a program can compile cleanly and run to completion without crashing and still be wrong. Name which of the three error types the week identifies is responsible, and say why the compiler is powerless against it.
+## Answers
 
-**11. (explain why)** Explain why decomposition works — why solving every small subproblem should solve the main problem — and state one condition under which breaking a problem into pieces does *not* deliver a solution to the whole.
+**1. A** — *Tracing a flowchart decision.* A = 4 and B = 9, so the test A > B is 4 > 9, which is false. The No branch runs: B − A = 9 − 4 = 5 is printed.
 
-**12. (explain why)** Program documentation is said to begin at the problem analysis stage rather than once the program works. Explain why that timing matters, and why user documentation and programmer documentation cannot sensibly be merged into one document.
+−5 takes the Yes branch and prints A − B; 13 adds the two inputs instead of subtracting; 9 prints the larger input rather than the difference.
+
+**2. A** — *Ordering the four problem-solving steps.* The four steps are: understand the problem (Q, inputs, processes, output), create a step-by-step plan (P, algorithm as pseudocode and flowchart), carry out the plan (S, code and run it), then evaluate and refactor (R). So Q, P, S, R.
+
+P, Q, S, R plans before understanding the problem; Q, S, P, R codes before any plan exists; Q, P, R, S refactors a program that has not yet been written.
+
+**3. C** — *Identifying the translator from its input and output.* High-level language in, assembly language out is the compiler. The assembly still needs an assembler to become machine code, which is why one more translation remains.
+
+An interpreter takes high-level language too, but goes straight to machine code with no second stage; an assembler takes assembly language as its input, not Java; the CPU runs machine code and translates nothing.
+
+**4. D** — *Classifying an error as syntax, logical or run time.* The program was built and ran to completion, yet the answer is wrong. An error that leaves the program running happily while producing the wrong result is a logical error.
+
+A syntax error would have stopped the compiler accepting the program; a run time error would have stopped the run part way through; a wrong answer is an error whether or not the program finished.
+
+**5. C** — *Identifying which algorithm property a step violates.* Step 3 says "high enough" without saying what that means, so two programmers would write two different tests. The steps are not unambiguous.
+
+The steps are in a workable order (read, compute, decide, stop), so ordered holds; both outcomes PASS and FAIL are handled, so complete holds; "none" ignores the vague condition in step 3.
+
+**6. B** — *Counting loop iterations.* count starts at 1 and the body runs while count < 5, so it runs for count = 1, 2, 3, 4. Four grades are read. When count becomes 5 the test fails and the loop ends.
+
+5 assumes the test is count ≤ 5 or that count starts at 0; 6 counts up to and including the failing test; 3 stops one iteration early by treating count = 4 as the exit.
+
+**7. D** — *Tracing a loop with a decision inside.* i = 1 is odd: total = 0 − 1 = −1. i = 2 is even: −1 + 2 = 1. i = 3 is odd: 1 − 3 = −2. i = 4 is even: −2 + 4 = 2. So 2 is printed.
+
+10 adds every i and ignores the ELSE branch; −2 swaps the two branches (add odd, subtract even); 4 is only the last i, forgetting that total accumulates.
+
+**8. B** — *Refactoring preserves function.* Refactoring improves the structure, design or efficiency of a working solution without changing what it does. Changing the pass mark changes which students pass, so the function changes: that is a change of specification, not a refactor.
+
+The loop, the rename and the deleted dead variable all leave every output exactly as it was, so each of those is a refactor.
+
+**9.** *Writing pseudocode with a three-way decision.* Model answer:
+
+```
+READ T
+IF T > 30 THEN
+    PRINT "HOT"
+ELSE IF T >= 20 THEN
+    PRINT "WARM"
+ELSE
+    PRINT "COLD"
+ENDIF
+```
+
+A correct answer must read T, test T > 30 first (or test the ranges in any order that does not overlap), use ≥ 20 rather than > 20 so that 20 counts as WARM, and give every value of T exactly one printed word. Three separate IF tests (T > 30; T ≥ 20 AND T ≤ 30; T < 20) are also accepted. Using T > 20 for WARM is wrong because 20 would then print COLD.
+
+**10.** *Tracing an accumulator step by step.* Start with total = 1. i = 1: 1 × 2 + 1 = 3. i = 2: 3 × 2 + 2 = 8. i = 3: 8 × 2 + 3 = 19. i = 4: 19 × 2 + 4 = 42. The program prints 42.
+
+A correct answer lists the four values 3, 8, 19, 42 in order and states the printed value 42. A trace that restarts total at 1 each time (giving 3, 4, 5, 6) or that doubles after adding, total = (total + i) × 2 (giving 4, 12, 30, 68), is wrong.
+
+**11.** *Spotting the missing loop update.* count is never changed inside the loop, so count < N stays true forever and the loop never ends. The missing line is count = count + 1, placed inside the loop after total = total + x (anywhere inside the body is accepted).
+
+Fixed run for N = 3: total = 4, then 11, then 21; count reaches 3 and the loop stops; 21 / 3 = 7 is printed. A correct answer names the missing count update, puts it inside the WHILE body, and gives 7. Putting the update after ENDWHILE does not fix the loop and is wrong.
+
+**12.** *Ordered, unambiguous and complete steps.* Ordered: putting "compute the average" before "read the five grades" uses values the program does not yet have, so it computes with nothing or with leftovers. Unambiguous: "if the average is good enough, print PASS" cannot be written as a test, because two programmers would choose two different numbers. Complete: giving a PASS step but no FAIL step leaves a student below the mark with no output at all.
+
+A correct answer gives one concrete broken step for each property (order, ambiguity, missing case) and names the consequence in the program: wrong or missing data, an untranslatable condition, an unhandled case. Any sensible examples are accepted as long as each matches the property it is meant to break.

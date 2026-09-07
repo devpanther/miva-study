@@ -1,68 +1,112 @@
-# Friday, second hour — COS_102 check
+# Friday — COS_102 fast-hour check
 
 *Week 5 flowchart concepts treated as practice.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Every chart is described in words and must be traced by hand: the sum-of-five-numbers loop from the lecture, a compare-two-numbers selection, and a fault-finding lamp chart.*
+**1.** A chart runs: Start; P = 1; C = 0; Enter n; P = P × n; C = C + 1; decision 'Is C < 3?'; Yes → back to Enter n; No → Print P; Stop. The user types 2, 5, 3, 4 in that order. What is printed?
+A. 10
+B. 30
+C. 120
+D. 3
 
-*The session asks what a described chart prints for given inputs, which construct a fragment implements, and how to lay out the opening steps of a chart for a stated problem.*
+**2.** A chart runs: Start; Read A and B; decision 'Is A > B?'; Yes → T = A; A = B; B = T; then on to the join; No → straight to the join; Print A, B; Stop. Inputs A = 9, B = 4. What is printed?
+A. 9 4
+B. 9 9
+C. 4 4
+D. 4 9
 
-*It also asks how to diagnose a chart that loops forever, resets an accumulator, reads one item too many, or leaves a path with no route to Stop.*
+**3.** A chart runs: Start; Count = 0; Sum = 0; Enter n; Sum = Sum + n; Count = Count + 1; decision 'Is Count < 3?'; Yes → back to Sum = 0 (not to Enter n); No → Print Sum; Stop. Inputs 2, 4, 6. What is printed?
+A. 6
+B. 12
+C. 0
+D. 2
 
-*It does not ask for symbol definitions in the abstract.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**4.** A chart runs: Start; Count = 0; Enter n; Print n; Count = Count + 1; decision 'Is Count ≤ 5?'; Yes → back to Enter n; No → Stop. How many numbers does the chart read before it stops?
+A. 5
+B. 4
+C. 6
+D. 7
 
-**1.** Trace this chart. Start; Sum = 0; Count = 0; then at point A, Enter n; Sum = Sum + n; Count = Count + 1; then a decision 'Is Count < 5?' whose Yes exit runs back to A and whose No exit runs to Print Sum; Stop. The numbers waiting to be entered are, in order, 3, 1, 4, 1, 5, 9. What is printed?
-a) 9
-b) 14
-c) 23
-d) Nothing - the chart never reaches Print Sum
+**5.** Which arrangement reads numbers until −1 is entered and then prints the sum of the numbers before the −1?
+A. Enter n → Sum = Sum + n → Is n = −1? Yes → Print Sum; No → back to Enter n
+B. Enter n → Is n = −1? Yes → back to Enter n; No → Sum = Sum + n → Print Sum
+C. Enter n → Is n = −1? No → Print Sum; Yes → Sum = Sum + n → back to Enter n
+D. Enter n → Is n = −1? Yes → Print Sum; No → Sum = Sum + n → back to Enter n
 
-**2.** Trace this chart. Start; Total = 0; K = 0; then at point A, Enter x; Total = Total + x; then a decision 'Is K < 3?' whose Yes exit runs back to A and whose No exit runs to K = K + 1, then Print Total, then Stop. What happens when the chart is executed?
-a) It reads three numbers and prints their total.
-b) It reads four numbers and prints their total, one number too many.
-c) It stops at once without reading any number, because K is still 0.
-d) It reads numbers forever, because K is only changed on the branch that is never taken.
+**6.** A fault chart: Start; 'Lamp plugged in?' No → Plug in lamp → Stop; Yes → 'Bulb burned out?' Yes → Replace bulb → Stop; No → Repair lamp → Stop. A lamp is plugged in and its bulb is fine. Which action is reached, and how many decisions are evaluated?
+A. Repair lamp; 2 decisions
+B. Replace bulb; 2 decisions
+C. Repair lamp; 1 decision
+D. Plug in lamp; 1 decision
 
-**3.** Trace this chart. Start; Read A and B; a decision 'Is A > B?' whose Yes exit leads to Print A and whose No exit leads to Print B; both then meet and go to Stop. The values entered are A = 7 and B = 7. Which path is taken, and what is printed?
-a) The No path is taken, and B is printed - the value 7.
-b) The Yes path is taken, and A is printed - the value 7.
-c) Neither path is taken; the chart cannot resolve A equal to B and halts at the diamond.
-d) Both paths are taken, so 7 is printed twice.
+**7.** A chart runs: Start; Read x; decision 'Is x > 0?'; Yes → Print x → Stop; No → Print 'negative', and no arrow leaves that box. Which change makes the chart valid?
+A. Add a second Start above 'Print negative'
+B. Add a flow line from 'Print negative' to Stop
+C. Replace 'Print negative' with a merge symbol
+D. Swap the Yes and No labels on the decision
 
-**4.** Take this chart. Start; Count = 0; Sum = 0; then at point A, Enter n; Sum = Sum + n; Count = Count + 1; decision 'Is Count < 5?' Yes exit back to A, No exit to Print Sum; Stop. Now the back arrow is redrawn so that it lands on the box Sum = 0 instead of on A. The numbers 2, 4, 6, 8, 10 are entered. What is printed?
-a) 30 - the same as before, since the numbers entered have not changed.
-b) Nothing; the chart now loops forever and never reaches Print Sum.
-c) 10, the last number entered.
-d) 0, because Sum is cleared immediately before it is printed.
+**8.** When you hand-trace a flowchart, where do you begin, and what decides which exit you take at a diamond?
+A. At the top-left symbol; the label on the next box
+B. At the first decision; the exit drawn on the right
+C. At Start; the answer to the diamond's question for the current values
+D. At Start; the exit that was drawn first
 
-**5.** You must lay out a flowchart that reads ten numbers, which may be positive or negative, and prints the largest of them. Which opening is correct?
-a) Set Max = 0 first, then read each of the ten numbers in turn and replace Max whenever the number read is larger.
-b) Read the first number into Max, then read the remaining nine and replace Max whenever a larger number arrives.
-c) Read all ten numbers first, then set Max to the last number read and print it.
-d) Set Max = 0 and Count = 10, decrease Count by one on every pass, and print Max once Count reaches 0.
+**9. (show your working)** A chart runs: Start; Read A, B, C; Max = A; decision 'Is B > Max?'; Yes → Max = B; join; decision 'Is C > Max?'; Yes → Max = C; join; Print Max; Stop. Inputs A = 7, B = 12, C = 9. Give the value of Max after each decision, the printed value, and how many decisions are evaluated. Show your working.
 
-**6.** A student hands in this chart. Start; Read mark; a decision 'Is mark 50 or more?' whose Yes exit leads to Print 'Pass' and then to Stop. The No exit is drawn leaving the diamond but its flow line ends in empty space. What exactly is wrong with the chart?
-a) Nothing is wrong; a branch on which there is nothing to do may be left blank.
-b) The diamond should have been a rectangle, since only one action follows it.
-c) One path can never reach a Stop symbol, so for a mark below 50 the chart specifies no behaviour at all.
-d) The chart is invalid because the box Print 'Pass' has two flow lines entering it.
+**10. (show your working)** A chart runs: Start; S = 0; K = 0; Enter n; decision 'Is n even?'; Yes → S = S + n; join; K = K + 1; decision 'Is K < 4?'; Yes → back to Enter n; No → Print S; Stop. Inputs 3, 8, 5, 6. Give S and K after each pass and the printed value. Show your working.
 
-**7.** Trace this fault-finding chart. Start 'Lamp does not work'; decision 'Lamp plugged in?' whose No exit leads to Plug in lamp and then Stop, and whose Yes exit leads to the decision 'Bulb burned out?'; that second decision's Yes exit leads to Replace bulb and then Stop, and its No exit leads to Repair lamp and then Stop. The lamp is plugged in and its bulb is sound. Which action boxes are executed?
-a) Plug in lamp, and then Repair lamp.
-b) Replace bulb, and nothing else.
-c) Plug in lamp, and nothing else.
-d) Repair lamp, and nothing else.
+**11. (show your working)** A chart runs: Start; Read N; F = 1; decision 'Is N > 1?'; Yes → F = F × N; N = N − 1; back to the decision; No → Print F; Stop. (a) How many flow lines does the chart contain? (b) For N = 4, how many times is the decision evaluated, and what is printed? Show your working.
 
-**8.** In the chart Start; Sum = 0; Count = 0; A: Enter n; Sum = Sum + n; Count = Count + 1; decision 'Is Count < 5?' Yes back to A, No to Print Sum; Stop - the test alone is changed to 'Is Count less than or equal to 5?'. Everything else is unchanged. What is the effect?
-a) Six numbers are read instead of five.
-b) Four numbers are read instead of five.
-c) Five numbers are still read, because the two tests agree at the boundary value.
-d) The chart loops forever, since Count can never exceed 5.
+**12. (show your working)** A student says every diamond in a flowchart is a loop. Explain the test that tells a selection diamond from a repetition diamond, and state what must be true of the symbols inside a repetition for the loop to end.
 
-**9. (explain why)** Explain why a loop whose control variable is updated only on the branch that is not taken runs forever, in terms of what the decision symbol re-evaluates on each pass.
+---
 
-**10. (explain why)** Explain why a largest-number chart that begins Max = 0 prints the wrong answer when every number read is negative, and why seeding Max with the first number read repairs it.
+## Answers
 
-**11. (explain why)** Explain why the point at which a loop's back arrow lands - and not the contents of the boxes - decides whether a running total survives from one pass to the next.
+**1. B** — *Tracing a counted product loop.* Pass 1: n = 2, P = 2, C = 1. Pass 2: n = 5, P = 10, C = 2. Pass 3: n = 3, P = 30, C = 3, and 3 < 3 is false, so the loop exits and 30 is printed. The fourth number is never read.
 
-**12. (explain why)** Explain why hand-tracing a chart with a table of variable values catches an off-by-one that simply reading the chart does not.
+120 multiplies in all four typed values; 10 stops after two, testing before the third product is formed; 3 prints C instead of P.
+
+**2. D** — *Tracing a swap through a selection.* 9 > 4 is true, so the Yes branch runs: T = 9, A = 4, B = 9. The join leads to the print: 4 9.
+
+9 4 follows the No branch, as if the test were false; 4 4 does A = B and then B = A with no temporary, losing the 9; 9 9 does B = A first and then A = B, losing the 4.
+
+**3. A** — *Back arrow landing on an initialisation.* Count still grows (0, 1, 2, 3), so the loop ends after three numbers. But every Yes exit lands on Sum = 0, wiping the total before the next number is added, so Sum holds only the latest value: 2, then 4, then 6. Printed: 6.
+
+12 assumes the back arrow lands on 'Enter n', the correct chart; 0 assumes the reset happens after the last addition as well; 2 assumes the first value is kept and the rest ignored.
+
+**4. C** — *Off-by-one in a loop condition.* After the k-th number Count = k. The test Count ≤ 5 is true for k = 1, 2, 3, 4, 5, so after the fifth number the chart goes back and reads a sixth; only then is Count = 6 and the test fails. 6 numbers are read. The intended condition was Count < 5.
+
+5 is what the designer meant; 4 is the off-by-one in the other direction; 7 counts the failing test as one more read.
+
+**5. D** — *Placing the sentinel test in a loop.* The sentinel must be tested immediately after it is read and before it is added, with the Yes exit leaving the loop and the No exit adding n and reading again. For inputs 4, 6, −1 this prints 10.
+
+The first arrangement adds the −1 before testing and prints 9; the second exits after the first ordinary number and prints 4; the third has the exits swapped, printing 0 as soon as a normal number arrives.
+
+**6. A** — *Tracing chained decisions.* 'Lamp plugged in?' is Yes, so the flow moves to 'Bulb burned out?', which is No, so the flow reaches Repair lamp. Two questions were answered on the way.
+
+Replace bulb would need the second answer to be Yes; '1 decision' forgets that the first diamond had to be passed to reach the second; Plug in lamp is the No exit of the first diamond, which was not taken.
+
+**7. B** — *Every path must reach Stop.* Every symbol except Stop must have an arrow leaving it, and every path must be able to reach a Stop. 'Print negative' is a dead end, so an arrow from it to Stop (the existing one or a new one) fixes the chart.
+
+A second Start breaks the one-entry rule instead; a merge needs several paths in and one out, and here there is nothing to merge; swapping the labels changes which numbers are called negative but leaves the dead end in place.
+
+**8. C** — *How a trace follows a chart.* A trace begins at the single Start terminator and follows the arrows. At a diamond you evaluate the question using the values the variables hold at that moment, and take the exit whose label matches the answer.
+
+Position on the page, which exit was drawn first, and the label on a later box are all drawing details with no effect on the logic.
+
+**9.** *Tracing a chart with two selections.* Max = 7 after Read. First decision: 12 > 7 is Yes, so Max = 12. Second decision: 9 > 12 is No, so Max stays 12. Printed: 12. Both decisions are evaluated, so 2, whichever way they answer.
+
+A correct answer shows Max = 7 → 12 → 12, states 12 is printed, and counts 2 decisions. Answering 9 takes the last value read rather than the largest; counting 3 decisions invents a test that is not in the chart.
+
+**10.** *Tracing a selection inside a repetition.* Pass 1: n = 3, odd, S stays 0, K = 1. Pass 2: n = 8, even, S = 8, K = 2. Pass 3: n = 5, odd, S = 8, K = 3. Pass 4: n = 6, even, S = 14, K = 4; 4 < 4 is No, so 14 is printed.
+
+A correct answer lists (S, K) as (0, 1), (8, 2), (8, 3), (14, 4) and the output 14. Note that K increases on every pass, odd or even, because K = K + 1 sits after the join. 22 adds every number and ignores the inner decision; 8 stops after two passes.
+
+**11.** *Counting flow lines and decision evaluations.* (a) Start→Read N, Read N→F = 1, F = 1→decision, Yes→F = F × N, →N = N − 1, back→decision, No→Print F, Print F→Stop: 8 flow lines. (b) N = 4: decision Yes, F = 4, N = 3; Yes, F = 12, N = 2; Yes, F = 24, N = 1; N > 1 is No, print 24. The decision is evaluated 4 times (three Yes, one No) and 24 is printed.
+
+A correct answer gives 8, 4 and 24. Answering 3 evaluations forgets the final failing test; 7 lines misses the back arrow; 12 stops one multiplication early.
+
+**12.** *Selection versus repetition on a chart.* Look at the direction of the two exits. If both exits go forward and later rejoin, the diamond is a selection: one of two alternatives runs once. If one exit runs backward to a symbol that has already been executed, the diamond is a repetition: the symbols between the landing point and the diamond are executed again. Both use the same symbol because both are decided by a yes/no test.
+
+For a repetition to end, at least one symbol inside the loop must change a value that the diamond's question depends on, so that the answer eventually flips and the forward exit is taken. A correct answer gives the backward-arrow test and the changing-value condition.

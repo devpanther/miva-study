@@ -13,7 +13,8 @@
       },
       "fast": {
         "course": "GST_112",
-        "topic": "This week covers Nigeria from independence on 1 October 1960, through the civil war, and across the whole span of military rule.\n\nThe first strand runs the coup sequence.\n\n15 January 1966: the five majors (Nzeogwu, Ifeajuna, Okafor, Anuforo, Ademoyega), under Major Chukwuma Kaduna Nzeogwu. They killed Prime Minister Abubakar Tafawa Balewa, the Sardauna of Sokoto, Festus Okotie-Eboh and Ladoke Akintola. Nwafor Orizu then devolved power to Major-General Aguiyi-Ironsi.\n\nThe northern countercoup of 29 July 1966 killed Ironsi at Ibadan and installed Yakubu Gowon, who repealed Decree No. 34.\n\nColonel Joseph Nanven Garba's bloodless coup of 29 July 1975 removed Gowon and made Murtala Muhammed Head of State, with Obasanjo as deputy.\n\nBuka Suka Dimka's failed 1976 coup killed Murtala.\n\nThen Buhari's 1983 coup against Shagari, and Babangida's 1985 coup.\n\nGideon Orkar's failed attempt of 20 April 1990 at Dodan Barracks.\n\nSani Abacha's takeover from Ernest Shonekan on 17 November 1993. It ends with Abacha's death in 1998, Abdulsalami Abubakar's transition, and Obasanjo's 1999 election win over Olu Falae.\n\nThe second strand covers the national question, the First National Development Plan of 1962 to 1968, and the Richards Constitution with the regional development corporations.\n\nThen the instability of the First Republic, from the 1959 election through the 1962-3 census crisis and the 1964 UPGA versus NNA crisis. Plus the literary contributions of Achebe, Tutuola and Soyinka.\n\nIt then traces Ironsi's gaffes and Decree No. 34 to the pogrom in which 80,000 to 100,000 easterners were massacred.\n\nThen the failure of the Aburi Accord, and Ojukwu's declaration of Biafra on 30 May 1967. The twelve-state creation, blockade and currency change.\n\nForeign involvement by the USSR, France, Portugal, and the OAU states that recognised Biafra in 1968.\n\nThe collapse of Biafra with Effiong's surrender to Gowon in Lagos on 12 January 1970, three million dead, the no victor no vanquished declaration, and the failed 3 Rs.\n\nThe third strand is the week summary on nation-building and state creation. It covers Nigeria's over 250 ethnic groups and the colonial legacy of arbitrary borders. Then the No Victor No Vanquished initiative and the NYSC scheme, and ethnicity as the recurring driver of state creation."
+        "topic": "This week covers Nigeria from independence on 1 October 1960, through the civil war, and across the whole span of military rule.\n\nThe first strand runs the coup sequence.\n\n15 January 1966: the five majors (Nzeogwu, Ifeajuna, Okafor, Anuforo, Ademoyega), under Major Chukwuma Kaduna Nzeogwu. They killed Prime Minister Abubakar Tafawa Balewa, the Sardauna of Sokoto, Festus Okotie-Eboh and Ladoke Akintola. Nwafor Orizu then devolved power to Major-General Aguiyi-Ironsi.\n\nThe northern countercoup of 29 July 1966 killed Ironsi at Ibadan and installed Yakubu Gowon, who repealed Decree No. 34.\n\nColonel Joseph Nanven Garba's bloodless coup of 29 July 1975 removed Gowon and made Murtala Muhammed Head of State, with Obasanjo as deputy.\n\nBuka Suka Dimka's failed 1976 coup killed Murtala.\n\nThen Buhari's 1983 coup against Shagari, and Babangida's 1985 coup.\n\nGideon Orkar's failed attempt of 20 April 1990 at Dodan Barracks.\n\nSani Abacha's takeover from Ernest Shonekan on 17 November 1993. It ends with Abacha's death in 1998, Abdulsalami Abubakar's transition, and Obasanjo's 1999 election win over Olu Falae.\n\nThe second strand covers the national question, the First National Development Plan of 1962 to 1968, and the Richards Constitution with the regional development corporations.\n\nThen the instability of the First Republic, from the 1959 election through the 1962-3 census crisis and the 1964 UPGA versus NNA crisis. Plus the literary contributions of Achebe, Tutuola and Soyinka.\n\nIt then traces Ironsi's gaffes and Decree No. 34 to the pogrom in which 80,000 to 100,000 easterners were massacred.\n\nThen the failure of the Aburi Accord, and Ojukwu's declaration of Biafra on 30 May 1967. The twelve-state creation, blockade and currency change.\n\nForeign involvement by the USSR, France, Portugal, and the OAU states that recognised Biafra in 1968.\n\nThe collapse of Biafra with Effiong's surrender to Gowon in Lagos on 12 January 1970, three million dead, the no victor no vanquished declaration, and the failed 3 Rs.\n\nThe third strand is the week summary on nation-building and state creation. It covers Nigeria's over 250 ethnic groups and the colonial legacy of arbitrary borders. Then the No Victor No Vanquished initiative and the NYSC scheme, and ethnicity as the recurring driver of state creation.",
+        "checkFile": "checks/Mon-GST_112-fast.md"
       }
     },
     {
@@ -25,7 +26,8 @@
       },
       "fast": {
         "course": "CSC_106",
-        "topic": "JavaScript basics: variables, control flow, arrays, objects and functions."
+        "topic": "JavaScript basics: variables, control flow, arrays, objects and functions.",
+        "checkFile": "checks/Tue-CSC_106-fast.md"
       }
     },
     {
@@ -37,7 +39,8 @@
       },
       "fast": {
         "course": "GST_122",
-        "topic": "This week covers the writing process in three stages: pre-writing, during-writing (drafting), and post-writing.\n\nPre-writing is defined as the phase before actual composition: generating and organizing ideas, establishing a purpose, and building a preliminary framework.\n\nIts named techniques are brainstorming, freewriting, research, mind mapping, outlining, identifying audience and purpose, storyboarding, drafting questions, clustering, and listing. Mind mapping, free-writing and concept clustering are singled out as divergent thinking methods.\n\nIn the drafting phase each paragraph carries a clear topic sentence on one aspect, supported by evidence.\n\nPost-writing is defined as everything after the initial draft. It covers revision, editing for grammar and style, peer review, and proofreading. Then seeking feedback from instructors or editors, checking citations and references, and polishing transitions. Then formatting and presentation, finalising conclusions, and publishing or submitting.\n\nThe key distinction to master is revising versus editing versus proofreading, performed in that order. Revising is content and paragraph order. Editing is grammar, sentence structure, style consistency. Proofreading is typos, misspellings, punctuation only.\n\nAlso examinable are the differences between brainstorming and freewriting, between mind mapping, clustering and listing, and between peer review and feedback from an instructor or editor.\n\nPublishing or submitting is the final post-writing step that ends the process and hands the work to its audience."
+        "topic": "This week covers the writing process in three stages: pre-writing, during-writing (drafting), and post-writing.\n\nPre-writing is defined as the phase before actual composition: generating and organizing ideas, establishing a purpose, and building a preliminary framework.\n\nIts named techniques are brainstorming, freewriting, research, mind mapping, outlining, identifying audience and purpose, storyboarding, drafting questions, clustering, and listing. Mind mapping, free-writing and concept clustering are singled out as divergent thinking methods.\n\nIn the drafting phase each paragraph carries a clear topic sentence on one aspect, supported by evidence.\n\nPost-writing is defined as everything after the initial draft. It covers revision, editing for grammar and style, peer review, and proofreading. Then seeking feedback from instructors or editors, checking citations and references, and polishing transitions. Then formatting and presentation, finalising conclusions, and publishing or submitting.\n\nThe key distinction to master is revising versus editing versus proofreading, performed in that order. Revising is content and paragraph order. Editing is grammar, sentence structure, style consistency. Proofreading is typos, misspellings, punctuation only.\n\nAlso examinable are the differences between brainstorming and freewriting, between mind mapping, clustering and listing, and between peer review and feedback from an instructor or editor.\n\nPublishing or submitting is the final post-writing step that ends the process and hands the work to its audience.",
+        "checkFile": "checks/Wed-GST_122-fast.md"
       }
     },
     {
@@ -49,7 +52,8 @@
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "This week's practical is the verification of Kirchhoff's Voltage Law.\n\nThe network is two-source and five-resistor, built on a breadboard, using two DC power supplies, five variable resistors, three ammeters and connection cables.\n\nKVL follows from conservation of energy. It states that around any closed loop the algebraic sum of the voltage drops is zero. Equivalently, the drops across the branches equal the sum of the emfs in that loop.\n\nA drop is positive when a resistance is traversed along the current through it. The deck's battery rule counts an emf as positive when the source is traversed from its positive terminal to its negative terminal.\n\nThe supplies are set to the 50 V range and both emfs are dialled to 9 V. The three ammeters are recorded. The emf is then stepped up in 3 V intervals, with a fresh recording at each step.\n\nWhat is measured is the three branch currents I1, I2 and I3, not voltages. The resistances and emfs are then substituted into one KCL node equation and two KVL loop equations, and solved analytically for the same three currents.\n\nVerification consists of comparing the computed currents, particularly I3, with the measured ones at every setting, and repeating for different resistances and emfs.\n\nThe readings confirm that I1 plus I2 equals I3, and that computed and measured values agree to within about one percent. A negative I2 simply means the assumed current direction on the diagram was reversed."
+        "topic": "This week's practical is the verification of Kirchhoff's Voltage Law.\n\nThe network is two-source and five-resistor, built on a breadboard, using two DC power supplies, five variable resistors, three ammeters and connection cables.\n\nKVL follows from conservation of energy. It states that around any closed loop the algebraic sum of the voltage drops is zero. Equivalently, the drops across the branches equal the sum of the emfs in that loop.\n\nA drop is positive when a resistance is traversed along the current through it. The deck's battery rule counts an emf as positive when the source is traversed from its positive terminal to its negative terminal.\n\nThe supplies are set to the 50 V range and both emfs are dialled to 9 V. The three ammeters are recorded. The emf is then stepped up in 3 V intervals, with a fresh recording at each step.\n\nWhat is measured is the three branch currents I1, I2 and I3, not voltages. The resistances and emfs are then substituted into one KCL node equation and two KVL loop equations, and solved analytically for the same three currents.\n\nVerification consists of comparing the computed currents, particularly I3, with the measured ones at every setting, and repeating for different resistances and emfs.\n\nThe readings confirm that I1 plus I2 equals I3, and that computed and measured values agree to within about one percent. A negative I2 simply means the assumed current direction on the diagram was reversed.",
+        "checkFile": "checks/Thu-PHY_108-fast.md"
       }
     },
     {
@@ -62,7 +66,7 @@
       "fast": {
         "course": "COS_102",
         "topic": "Week 5 flowchart concepts treated as practice.\n\nEvery chart is described in words and must be traced by hand: the sum-of-five-numbers loop from the lecture, a compare-two-numbers selection, and a fault-finding lamp chart.\n\nThe session asks what a described chart prints for given inputs, which construct a fragment implements, and how to lay out the opening steps of a chart for a stated problem.\n\nIt also asks how to diagnose a chart that loops forever, resets an accumulator, reads one item too many, or leaves a path with no route to Stop.\n\nIt does not ask for symbol definitions in the abstract.",
-        "checkFile": "checks/Sat-COS_102.md"
+        "checkFile": "checks/Fri-COS_102-fast.md"
       }
     },
     {
@@ -210,131 +214,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "The chain rule slide writes f′(x) = y′(u)·u′(x). What work is the second factor, u′(x), doing?",
+          "q": "Differentiate f(x) = 2x⁵ − 7x + 3.",
           "options": [
-            "It accounts for how fast the inside function changes, so the outer derivative is measured per unit of x rather than per unit of u",
-            "It converts the answer back from u into x, which is why u disappears from the final line",
-            "It is a correction only needed when the inside function is non-linear",
-            "It is the derivative of the whole composite, and y′(u) merely names the outer function"
-          ],
-          "answerIndex": 0,
-          "concept": "What the inner derivative in the chain rule is for",
-          "why": "y′(u) tells you the rate of change with respect to u, but the question asks for the rate with respect to x, and u itself changes at rate u′(x) — the two rates multiply. Option 2 confuses a rate with a substitution: putting x² back in place of u is a separate, later step and contributes no factor. Option 3 is false — for f(x) = (2x − 4)² the inside is linear and the factor 2 is exactly what turns 4x − 8 into 8x − 16, the whole point of TASK 1. Option 4 inverts the roles; y′(u) is the outer derivative, not a label."
-        },
-        {
-          "type": "mcq",
-          "q": "On slide 13 the lecturer differentiates y² -type terms and gets dy/dx factors; on slide 21 she differentiates y³ and gets 0. What is assumed differently in the two slides?",
-          "options": [
-            "On slide 13 the equation is not solved for y, and unsolved equations always need the chain rule",
-            "On slide 13 y is cubed rather than squared, and odd powers behave differently",
-            "On slide 13 y is an unknown function of x, so it varies with x; on slide 21 x and y are independent variables, so y is a genuine constant when differentiating by x",
-            "On slide 21 the function has two letters, so all its derivatives are zero unless both letters appear"
-          ],
-          "answerIndex": 2,
-          "concept": "Implicit versus partial: what the second letter is assumed to be",
-          "why": "Everything turns on dependence. Implicitly, y = y(x), so d/dx(y²) = 2y·dy/dx by the chain rule. Partially, x and y are independent inputs, so ∂/∂x(y³) = 0 by the constant rule. Option 1 mistakes a symptom for the cause — you can differentiate an unsolved equation partially too. Option 2 invents a rule about parity that does not exist. Option 4 is false: ∂f/∂x of 3x² + 2xy − y³ is 6x + 2y, and the 2xy term survives despite containing both letters."
-        },
-        {
-          "type": "mcq",
-          "q": "In her quotient rule f′(x) = [v(x)u′(x) − u(x)v′(x)]/(v(x))², which term carries the plus sign, and what happens if you swap the two?",
-          "options": [
-            "u(x)v′(x) carries the plus; swapping them changes nothing because subtraction is commutative",
-            "v(x)u′(x) carries the plus; swapping them gives exactly the negative of the correct answer",
-            "Both terms carry a plus and the minus belongs to v′(x) alone",
-            "Neither carries a sign until v² is computed, since v² is always positive"
+            "10x⁴ − 7x",
+            "10x⁴ − 7",
+            "2x⁴ − 7",
+            "10x⁴ − 4"
           ],
           "answerIndex": 1,
-          "concept": "Which term of the quotient rule is positive, and the cost of reversing them",
-          "why": "The positive term is the one where the denominator's function is left undifferentiated: v u′. Swapping produces u v′ − v u′ = −(v u′ − u v′), so the whole answer flips sign — on slide 9 that turns 6(1 − x)/5x³ into 6(x − 1)/5x³. Option 1 asserts subtraction is commutative, which it is not. Option 3 misreads the minus as attaching to a function rather than to a whole term. Option 4 is irrelevant: v² being positive is exactly why it cannot rescue a sign error in the numerator."
+          "concept": "Power rule on a polynomial",
+          "why": "Term by term with f′(x) = nx^(n−1): 2x⁵ → (2×5)x⁴ = 10x⁴; −7x = −7x¹ → −7x⁰ = −7; the constant 3 → 0. So f′(x) = 10x⁴ − 7.\n\n10x⁴ − 7x leaves the x on the second term instead of dropping its power to x⁰ = 1; 2x⁴ − 7 lowers the power but forgets to multiply by the old power 5; 10x⁴ − 4 keeps the constant 3 alive, when the derivative of a constant is zero."
         },
         {
           "type": "mcq",
-          "q": "Her SUMMARY slide names two things. Which pairing does it make?",
+          "q": "Differentiate y = ⁴√(x³) with respect to x.",
           "options": [
-            "The chain rule is the general rule of differentiation; the product rule is the limit definition",
-            "The first principle is the general rule of differentiation; the power rule is the limit definition",
-            "The power rule and the first principle are both limit definitions of the derivative",
-            "The power rule is the general rule of differentiation; the first principle is the limit definition of the derivative"
-          ],
-          "answerIndex": 3,
-          "concept": "The summary slide's two named descriptions",
-          "why": "Her words: the power rule 'can be considered as the general rule of differentiation while the first principle is called the limit definition of the derivative'. Option 2 has them exactly reversed, which is the trap. Option 1 substitutes rules she never describes that way. Option 3 collapses the distinction the slide exists to draw — only one of them involves a limit, and it is the one written with lim(h→0)."
-        },
-        {
-          "type": "mcq",
-          "q": "The CONSTANT RULE slide gives a one-line test in words for spotting a constant. What is it, and what does it settle on the implicit slide?",
-          "options": [
-            "If the function is a single number rather than an expression, it is a constant; this is why xy differentiates to y",
-            "If the expression has no variable in it, it is a constant and its derivative is zero; this is why the 25 in x² + y² = 25 contributes nothing",
-            "If the expression has no x in it, it is a constant; this is why y² contributes nothing on the implicit slide",
-            "If the derivative of an expression is zero, it is a constant; this is why dy/dx can be isolated"
-          ],
-          "answerIndex": 1,
-          "concept": "The lecturer's verbal test for a constant, and where it is used",
-          "why": "Her wording is 'Since the function has no variable, it is a constant', with the NOTE 'The derivative of a constant is zero'. Applied to slide 12, d/dx(25) = 0, which is why the whole right-hand side vanishes. Option 3 is the dangerous near-miss: y² has no x in it, but y is a variable and depends on x, so it gives 2y·dy/dx, not 0. Option 1 is too narrow — 3 + 2 is a constant too. Option 4 reverses the definition into a test you cannot apply before differentiating."
-        },
-        {
-          "type": "mcq",
-          "q": "Why is dy/dt on its own not the gradient of a parametrically defined curve?",
-          "options": [
-            "Because it measures how y changes per unit of t, not per unit of x, and the parameter t advances x at its own rate dx/dt",
-            "Because dy/dt is always positive whereas a gradient can be negative",
-            "Because t is not a real variable, so dy/dt has no geometric meaning at all",
-            "Because the curve must first be rewritten with t eliminated before any gradient exists"
+            "(3/4)x^(−1/4)",
+            "(3/4)x^(1/4)",
+            "(4/3)x^(1/3)",
+            "x^(−1/4)"
           ],
           "answerIndex": 0,
-          "concept": "Why the parametric rule divides by dx/dt",
-          "why": "A gradient is rise over run in the x–y plane. dy/dt gives the rise per unit of parameter; dividing by dx/dt, the run per unit of parameter, cancels the parameter and leaves rise per run. On slide 14 that is (2t − 1)/2. Option 2 is simply false — y′(t) = 2t − 1 is negative for t < 1/2. Option 3 denies t meaning it plainly has. Option 4 contradicts the slide, which never eliminates t and leaves the answer in terms of t."
+          "concept": "Power rule with a fractional index",
+          "why": "A root is a fractional power: ⁴√(x³) = x^(3/4). Then y′ = (3/4)x^(3/4 − 1) = (3/4)x^(−1/4), which can also be written 3/(4·⁴√x).\n\n(3/4)x^(1/4) adds 1 to the index instead of subtracting; (4/3)x^(1/3) reads the radical the wrong way round, as x^(4/3); x^(−1/4) subtracts 1 correctly but forgets to multiply by the old index 3/4."
         },
         {
           "type": "mcq",
-          "q": "In both first-principle examples the h in the denominator is cancelled before lim(h→0) is applied. Why can the limit not simply be taken first?",
+          "q": "Find f′(x) for f(x) = x³ sin x.",
           "options": [
-            "Because the limit of a quotient is only defined when the numerator is a polynomial",
-            "Because h → 0 is shorthand for h being small but never actually zero, so no substitution is ever legitimate",
-            "Because taking the limit changes the function, and the function must be fixed before any limit is applied",
-            "Because substituting h = 0 before cancelling gives 0/0, which is undefined; cancelling the h first removes the zero from the denominator"
+            "3x² cos x",
+            "x³ cos x − 3x² sin x",
+            "3x² sin x + x³ sin x",
+            "3x² sin x + x³ cos x"
           ],
           "answerIndex": 3,
-          "concept": "Why the h must cancel before the limit is taken",
-          "why": "Both numerator and denominator tend to 0, so premature substitution gives the meaningless 0/0. Cancelling first — 3h/h becomes 3, and h/[h(√(x+h) + √x)] becomes 1/(√(x+h) + √x) — leaves an expression that is perfectly well behaved at h = 0. Option 1 is false; the √x example has no polynomial numerator. Option 2 half-remembers the idea of a limit but then forbids the substitution she in fact performs in her last two lines. Option 3 is backwards: the limit is what defines the derivative, not a distortion of the function."
+          "concept": "Product rule with a trigonometric factor",
+          "why": "Set u = x³, v = sin x, so u′ = 3x², v′ = cos x. The product rule f′ = u v′ + u′ v gives x³ cos x + 3x² sin x.\n\n3x² cos x is u′v′, differentiating both factors at once, which is not a rule; x³ cos x − 3x² sin x uses a minus sign, which belongs to the quotient rule, not the product rule; 3x² sin x + x³ sin x leaves sin x undifferentiated in the second term."
         },
         {
           "type": "mcq",
-          "q": "What does multiplying by the conjugate accomplish in the √x first-principle example?",
+          "q": "Find f′(x) for f(x) = (2x + 1)/x².",
           "options": [
-            "It removes the square roots from the answer entirely, which is why the answer is a whole number",
-            "It rationalises the denominator so the fraction can be simplified",
-            "It turns the numerator into a difference of two squares, (x + h) − x = h, producing an h that cancels the h below",
-            "It is an optional tidying step; the same answer follows just as well without it"
+            "2(x + 1)/x³",
+            "1/x",
+            "−2(x + 1)/x³",
+            "(−2x² − 2x)/x²"
           ],
           "answerIndex": 2,
-          "concept": "What the conjugate multiplier actually does",
-          "why": "(√(x+h) − √x)(√(x+h) + √x) = (x + h) − x = h by difference of two squares, and that single h is what cancels the denominator's h. Option 2 gets the direction wrong: the surds start in the numerator and are deliberately moved to the denominator, which is the reverse of rationalising a denominator. Option 1 is false — the answer 1/(2√x) still contains a root. Option 4 is false: without it you are stuck at 0/0, so it is the step the whole example turns on."
+          "concept": "Quotient rule with a power in the denominator",
+          "why": "u = 2x + 1, v = x², u′ = 2, v′ = 2x. The quotient rule f′ = [v u′ − u v′]/v² gives [x²·2 − (2x + 1)·2x]/x⁴ = (2x² − 4x² − 2x)/x⁴ = (−2x² − 2x)/x⁴ = −2x(x + 1)/x⁴ = −2(x + 1)/x³.\n\n2(x + 1)/x³ has the two terms of the numerator the wrong way round, which negates the answer; 1/x differentiates top and bottom separately as 2/(2x); (−2x² − 2x)/x² forgets to square the denominator."
+        },
+        {
+          "type": "mcq",
+          "q": "Find f′(x) for f(x) = (3x + 1)⁴.",
+          "options": [
+            "12(3x + 1)³",
+            "4(3x + 1)³",
+            "12(3x + 1)⁴",
+            "3(3x + 1)³"
+          ],
+          "answerIndex": 0,
+          "concept": "Chain rule on a bracket raised to a power",
+          "why": "Let u = 3x + 1, so y = u⁴. Then y′(u) = 4u³ and u′(x) = 3, and the chain rule f′(x) = y′(u)·u′(x) gives 4u³·3 = 12(3x + 1)³.\n\n4(3x + 1)³ forgets the inner derivative u′(x) = 3; 12(3x + 1)⁴ multiplies by the old power but never lowers it; 3(3x + 1)³ keeps the inner derivative but drops the 4 from the outer power rule."
+        },
+        {
+          "type": "mcq",
+          "q": "Differentiate x³ + y² = 10 implicitly with respect to x and make dy/dx the subject.",
+          "options": [
+            "dy/dx = 3x²/(2y)",
+            "dy/dx = −3x²/(2y)",
+            "dy/dx = −2y/(3x²)",
+            "dy/dx = −3x²"
+          ],
+          "answerIndex": 1,
+          "concept": "Implicit differentiation of a two-term equation",
+          "why": "Differentiate both sides with respect to x: x³ → 3x²; y² → 2y·(dy/dx) by the chain rule, because y depends on x; 10 → 0. So 3x² + 2y(dy/dx) = 0, and dy/dx = −3x²/(2y).\n\n3x²/(2y) loses the minus sign when 3x² is moved across; −2y/(3x²) is the reciprocal, dividing the wrong way; −3x² treats d/dx(y²) as just dy/dx, forgetting the factor 2y."
+        },
+        {
+          "type": "mcq",
+          "q": "A curve is given by x = 3t + 2 and y = t² + 4t. Find dy/dx.",
+          "options": [
+            "2t + 4",
+            "3/(2t + 4)",
+            "3(2t + 4)",
+            "(2t + 4)/3"
+          ],
+          "answerIndex": 3,
+          "concept": "Parametric differentiation",
+          "why": "Differentiate each with respect to t: dx/dt = 3 and dy/dt = 2t + 4. The parametric rule dy/dx = dy/dt ÷ dx/dt gives (2t + 4)/3, left in terms of t.\n\n2t + 4 is dy/dt on its own, which is not the gradient of the curve; 3/(2t + 4) divides the wrong way round, giving dx/dy; 3(2t + 4) multiplies the two rates instead of dividing them."
+        },
+        {
+          "type": "mcq",
+          "q": "In f′(x) = lim(h→0) [f(x + h) − f(x)]/h, the h in the denominator must be cancelled before h → 0 is taken. Why?",
+          "options": [
+            "So that the final answer contains no x",
+            "h is a constant, and constants differentiate to 0",
+            "Substituting h = 0 before cancelling gives 0/0",
+            "f(x + h) has to equal f(x) at the end"
+          ],
+          "answerIndex": 2,
+          "concept": "Why the h must cancel in a first-principles limit",
+          "why": "At h = 0 the numerator f(x + h) − f(x) is f(x) − f(x) = 0 and the denominator is 0, so putting h = 0 straight in gives the indeterminate form 0/0 and decides nothing. Expanding, cancelling the common terms and dividing out the h leaves an expression that has a value at h = 0, and that value is the derivative.\n\nThe answer normally does contain x (f′(x) = 3 is the exception, not the rule); h is a variable tending to 0, not a constant; and f(x + h) equals f(x) only in the limit, which is exactly what the quotient is measuring."
         },
         {
           "type": "short",
-          "q": "State the product rule and the quotient rule exactly as the lecturer writes them. Then explain why the order of the two terms is harmless in one of them and fatal in the other.",
-          "concept": "Term order matters under subtraction, not under addition",
-          "why": "A good answer gives her forms first: product, f(x) = u(x)·v(x) gives f′(x) = u(x)v′(x) + u′(x)v(x); quotient, f(x) = u(x)/v(x) gives f′(x) = [v(x)u′(x) − u(x)v′(x)]/(v(x))². Then the reason: the product rule joins its two terms with addition, and addition is commutative, so u′v + uv′ is the same number as uv′ + u′v — writing them in either order is only a matter of layout. The quotient rule joins its two terms with subtraction, which is not commutative: reversing them gives u v′ − v u′ = −(v u′ − u v′), the exact negative of the right answer. A strong answer names the memory hook — the positive term is the one in which the denominator's function is left alone — and checks it on slide 9, where 5x²·6 (the v u′ term) is the one that stays positive."
+          "q": "f(x, y) = 4x³ − 5xy + 2y². Find ∂f/∂x and ∂f/∂y. Show your working.",
+          "concept": "Partial derivatives of a polynomial in two variables",
+          "why": "For ∂f/∂x treat y as a constant: 4x³ → 12x²; −5xy → −5y (y is a constant multiplier and x differentiates to 1); 2y² → 0 (no x in it). So ∂f/∂x = 12x² − 5y. For ∂f/∂y treat x as a constant: 4x³ → 0; −5xy → −5x; 2y² → 4y. So ∂f/∂y = −5x + 4y.\n\nFinal answer: ∂f/∂x = 12x² − 5y and ∂f/∂y = 4y − 5x (either order of the terms is accepted). A correct answer shows that terms without the differentiation variable vanish by the constant rule. Leaving 2y² alive in ∂f/∂x, or writing dy/dx factors anywhere, is wrong: in partial differentiation the other variable is a genuine constant."
         },
         {
           "type": "short",
-          "q": "The deck uses two trigonometric derivatives without ever stating them as rules. Name them, say on which slides each is used, and explain what the second one does to the sign of the answers on those slides.",
-          "concept": "The deck's unstated trigonometric derivatives and the minus on cosine",
-          "why": "A good answer names d/dx(sin x) = cos x and d/dx(cos x) = −sin x, and notes that neither is stated or derived anywhere in this deck — they are simply assumed. The sine derivative is used on slide 6, where v(x) = sin x gives v′(x) = cos x in f′(x) = x² cos x + 2x sin x. The cosine derivative is used twice: on slide 8, where v′(x) = −sin(x) for the quotient x/cos(x), and on slide 10, where y′(u) = −sin(u) for cos(x²). The sign consequences run opposite ways and that is the interesting part: on slide 10 the minus survives straight into the answer, −2x sin(x²); on slide 8 the minus meets the quotient rule's own subtraction, and −(x·(−sin x)) = +x sin x, so the answer comes out with a plus, (cos x + x sin x)/cos²x. A student who forgets the minus gets slide 10 positive and slide 8 negative — wrong on both, in opposite directions."
+          "q": "Differentiate y = 5x − 2 from first principles, using f′(x) = lim(h→0) [f(x + h) − f(x)]/h. Show every line of working.",
+          "concept": "First principles on a linear function",
+          "why": "f(x + h) = 5(x + h) − 2 = 5x + 5h − 2. Then f(x + h) − f(x) = (5x + 5h − 2) − (5x − 2) = 5h. Divide by h: 5h/h = 5. Take the limit: lim(h→0) 5 = 5. So f′(x) = 5.\n\nFinal answer: f′(x) = 5 (also accepted: dy/dx = 5, y′ = 5). A correct answer must substitute x + h into the whole function, cancel the 5x and −2 terms, divide out the h, and only then let h → 0. Substituting h = 0 before cancelling (giving 0/0) or leaving an h in the answer is wrong."
         },
         {
           "type": "short",
-          "q": "Explain what the letter u is doing in the chain rule as she uses it on slide 10, and why the final line must be written in x rather than in u.",
-          "concept": "u as a temporary name, and why the answer must return to the original variable",
-          "why": "A good answer says that u is a temporary name for the inside function, introduced so the composite can be split into two derivatives that are each easy: with u = x², cos(x²) becomes y = cos(u), whose derivative y′(u) = −sin(u) is a standard one, and u′(x) = 2x is a power-rule one. The chain rule then multiplies them. On why the answer must return to x: the original question asks for f′(x), a function of x, and u is not part of the question — it is scaffolding the student invented. Leaving −2x sin(u) on the page is an answer in terms of a letter the examiner never introduced and which has no defined value. A strong answer notes she does exactly this substitution on the second-to-last line, writing −sin(u)·2x = −sin(x²)·2x before stating the result."
+          "q": "Find the gradient of the curve y = x³ − 2x² at the point where x = 2, and state what this number represents geometrically. Show your working.",
+          "concept": "Derivative as the gradient of the tangent at a point",
+          "why": "Differentiate: dy/dx = 3x² − 4x. Substitute x = 2: 3(4) − 4(2) = 12 − 8 = 4. So the gradient is 4. Geometrically, 4 is the slope of the tangent line to the curve at the point (2, 0): the curve is rising there, 4 units up for every 1 unit across.\n\nFinal answer: gradient 4, the slope of the tangent at x = 2. A correct answer shows the derivative 3x² − 4x, the substitution, and the value 4, and says 'slope of the tangent' (or 'rate of change of y with respect to x' at that point). Substituting x = 2 into y itself, giving 0, is the height of the point, not the gradient."
         },
         {
           "type": "short",
-          "q": "Slide 20 is titled CONSTANT MULTIPLE RULE but its worked example contains no constant multiple. Say what the example actually demonstrates, and state where in the deck the constant multiple rule is genuinely being used even though it is never written down.",
-          "concept": "A misnamed slide, and the rule the deck uses silently",
-          "why": "A good answer identifies what slide 20 really shows: converting a root to a fractional power, ⁵√(x³) = x^(3/5), and then applying the power rule to a fractional index, giving (3/5)x^(3/5 − 1) = (3/5)x^(−2/5) = 3/(5·⁵√(x²)). There is no coefficient multiplying the function anywhere on the slide, so the title does not match the content. On where the rule is actually used: constants are pulled through derivatives repeatedly and silently — on slide 5, where 3x¹⁰⁰ differentiates to (3×100)x⁹⁹ = 300x⁹⁹ and 4x to 4; on slide 9, where the 5 in 5x² is carried through to v′ = 10x; and inside every product- and quotient-rule example whose factors carry coefficients. A strong answer states the rule that the deck never does, d/dx[c·f(x)] = c·f′(x), and flags that the exam may still name it."
+          "q": "When y depends on x, d/dx(y²) = 2y·dy/dx. In partial differentiation, ∂/∂x(y²) = 0. Explain why the same expression y² is treated so differently in the two settings.",
+          "concept": "Implicit versus partial treatment of the other variable",
+          "why": "The difference is what y is assumed to be. In implicit differentiation, y is an unknown function of x, so y² is a composite function of x and the chain rule applies: differentiate the outside (2y) and multiply by the inside derivative dy/dx. In partial differentiation, x and y are independent variables; when differentiating with respect to x, y is held fixed, so y² is a constant and its derivative is 0 by the constant rule.\n\nA correct answer says: implicit means y is a function of x (chain rule, dy/dx appears); partial means y is an independent variable held constant (constant rule, term vanishes). It should name the chain rule and the constant rule."
         }
       ]
     },
@@ -348,131 +352,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Slide 3 says a parallel connection 'splits the current in the resistors while the ... across each resistor is the same'. Which quantity is the same for every resistor in a parallel connection?",
+          "q": "Resistors of 3.0 Ω, 6.0 Ω and 12 Ω are connected in parallel. What is the equivalent resistance?",
           "options": [
-            "The current",
-            "The power dissipated",
-            "The resistance",
-            "The voltage"
-          ],
-          "answerIndex": 3,
-          "concept": "What parallel shares and what it splits",
-          "why": "In parallel every resistor is connected across the same two points, so the same potential difference V appears across each one; what divides is the current, which is why the reciprocals add. Option 1 is the series property — series elements sit on one path with no junction between them, so one current serves them all. Option 2 is false: with a common V, P = V²/R is largest in the smallest resistor. Option 3 is false in general; the resistors in her example are 4 Ω, 6 Ω and 10 Ω."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 8 gives the deck's definition of a junction. A junction is a point in a circuit where",
-          "options": [
-            "a battery is joined to the rest of the circuit",
-            "three or more conductors meet",
-            "the wire changes direction",
-            "the current changes value"
+            "21 Ω",
+            "1.7 Ω",
+            "0.58 Ω",
+            "2.0 Ω"
           ],
           "answerIndex": 1,
-          "concept": "Junction defined by conductor count, not by geometry",
-          "why": "Her words: 'A point in a circuit where three or more conductors meet is called a junction, while a loop is any closed conducting path.' Three or more is what makes a split possible, and a split is what ΣI = 0 constrains. Option 1 is wrong — Example 1 has two batteries and no junction anywhere. Option 3 is the trap her figure prints as 'Not a Junction' at points c and d: a corner joins only two conductors, so nothing divides. Option 4 confuses the definition with its consequence."
+          "concept": "Equivalent resistance of resistors in parallel",
+          "why": "1/R_eq = 1/3 + 1/6 + 1/12 = 4/12 + 2/12 + 1/12 = 7/12 Ω⁻¹, so R_eq = 12/7 = 1.7 Ω (1.71 to three figures). Check: it is below 3.0 Ω, the smallest branch, as a parallel result must be.\n\n21 Ω adds them as if in series; 0.58 Ω is 7/12 left un-inverted, a reciprocal resistance; 2.0 Ω drops the 12 Ω branch (1/3 + 1/6 = 1/2)."
         },
         {
           "type": "mcq",
-          "q": "Travelling round a loop you pass through a source of emf ε, crossing its − terminal first and its + terminal second. What term goes into the loop equation?",
+          "q": "Resistors of 2.5 Ω, 4.0 Ω, 7.5 Ω and 12 Ω are connected in series. What is the equivalent resistance?",
           "options": [
-            "+ε",
-            "−ε",
-            "Zero, since a source has no resistance",
-            "+ε only if you are travelling with the assumed current"
+            "26 Ω",
+            "1.2 Ω",
+            "6.5 Ω",
+            "0.87 Ω"
           ],
           "answerIndex": 0,
-          "concept": "The emf sign depends only on the order the terminals are crossed",
-          "why": "Slide 13: 'when we travel through a source in the direction from − to + the emf is considered to be positive.' Crossing − then + is a rise in potential, so the term is +ε. Option 2 reverses the rule. Option 3 confuses emf with internal resistance — the internal resistance is a separate IR term in the same branch. Option 4 is the error the deck is built to prevent: the current direction sets the sign of IR terms, never of emf terms, which is why the same 4 V battery contributes −4 V in Example 1(a) and +4 V in Example 1(b)."
+          "concept": "Equivalent resistance of resistors in series",
+          "why": "Series resistances add: R_eq = 2.5 + 4.0 + 7.5 + 12 = 26 Ω, larger than the largest single resistor, as series must be.\n\n1.2 Ω applies the parallel formula; 6.5 Ω is the average of the four, which no rule produces; 0.87 Ω is the parallel sum of reciprocals left un-inverted."
         },
         {
           "type": "mcq",
-          "q": "You travel through a resistor R in the direction opposite to the assumed current I. Slides 14 and 15 say the term is",
+          "q": "A 4.0 Ω resistor and a 12 Ω resistor are connected in parallel across a 12 V battery of negligible internal resistance. What total current does the battery supply?",
           "options": [
-            "−IR, because current always falls in potential",
-            "zero, because you are moving against the flow",
-            "+IR, because this represents a rise of potential",
-            "+IR or −IR, decided by whichever emf is nearer"
-          ],
-          "answerIndex": 2,
-          "concept": "IR sign is travel direction relative to the assumed current",
-          "why": "Her wording on slide 15: travelling opposite to the assumed current 'the IR term is positive because this represents a rise of potential' — you are walking uphill against the drop. Option 1 is slide 14's case, travelling with the current, and applying it here is the commonest sign error in the whole topic. Option 2 invents a rule; the potential change is real either way. Option 4 makes IR depend on emfs, which it never does."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 7 gives the reason Kirchhoff's rules are introduced at all. What is it?",
-          "options": [
-            "Some circuits cannot be categorized into series and/or parallel connection",
-            "Ohm's law stops working when several batteries are present",
-            "Real batteries have internal resistance, which series and parallel rules cannot handle",
-            "The parallel formula becomes too long for more than three resistors"
-          ],
-          "answerIndex": 0,
-          "concept": "Why the combination rules are not enough",
-          "why": "Her sentence: 'However, some circuits cannot be categorized into series and/or parallel connection. To find the currents in this network of resistors, we will apply the techniques developed by the German Physicist, Gustav Kirchhoff.' The bridge in Example 2 is exactly such a network: no two of its arms carry the same current and no two span the same pair of points. Option 2 is false and never claimed. Option 3 is tempting because Example 1 does have internal resistances, but they are handled as ordinary series resistors — that is not the obstacle. Option 4 confuses length with impossibility."
-        },
-        {
-          "type": "mcq",
-          "q": "The Summary slide pairs each rule with a conservation law. Which pairing does it give?",
-          "options": [
-            "ΣI = 0 with conservation of energy; ΣV = 0 with conservation of charge",
-            "Both rules with conservation of energy",
-            "ΣI = 0 with conservation of charge; ΣV = 0 with conservation of energy",
-            "Both rules with conservation of momentum in the charge carriers"
-          ],
-          "answerIndex": 2,
-          "concept": "Which conservation law sits behind which rule",
-          "why": "The junction rule counts charge per unit time in and out of a point, so it is conservation of charge — 'no charge can accumulate at a junction'. The loop rule adds up energy per unit charge gained and lost on a round trip, so it is conservation of energy. Option 1 swaps them, which is the answer a student gives from memory rather than meaning. Option 2 loses the distinction entirely. Option 4 imports a mechanics idea that plays no role in circuit analysis."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 17 ends 'Since I is positive, our assumed current direction is correct.' What follows if a current had instead come out negative?",
-          "options": [
-            "The loop equation must be rewritten with the arrow reversed",
-            "That branch actually carries no current",
-            "An arithmetic mistake has been made somewhere",
-            "The magnitude is correct and the true current runs opposite to the drawn arrow"
+            "0.75 A",
+            "3.0 A",
+            "1.0 A",
+            "4.0 A"
           ],
           "answerIndex": 3,
-          "concept": "Reading the sign of a solved current",
-          "why": "The arrow you drew is only a definition of which direction counts as positive in that branch; the algebra reports back with a sign. A negative value therefore means the size is right and the direction is the reverse of your guess, and nothing needs redoing. Option 1 wastes time and gives the identical answer with the sign flipped. Option 2 confuses a negative number with zero. Option 3 is the panic response — the equations are still satisfied, so there is no error to find."
+          "concept": "Currents in a parallel pair sharing one voltage",
+          "why": "In parallel each branch has the full 12 V across it: I₁ = 12/4.0 = 3.0 A and I₂ = 12/12 = 1.0 A. The battery supplies the sum, 4.0 A. Check: R_eq = 4 × 12/16 = 3.0 Ω and 12/3.0 = 4.0 A.\n\n0.75 A treats the pair as series, 12/(4 + 12); 3.0 A and 1.0 A are single branch currents, not the total."
         },
         {
           "type": "mcq",
-          "q": "In writing a loop equation you make two separate choices: the direction of each branch-current arrow, and the direction you walk the loop. What is the relationship between them?",
+          "q": "A 3.0 Ω resistor and a 9.0 Ω resistor are in series across a 24 V battery of negligible internal resistance. What is the potential difference across the 9.0 Ω resistor?",
           "options": [
-            "They must always agree, or the sign rules break down",
-            "They are independent; reversing the walk multiplies the whole loop equation by −1 and changes no answer",
-            "The walk direction fixes the current direction automatically",
-            "Reversing the walk direction changes the emf signs but not the IR signs"
+            "6.0 V",
+            "24 V",
+            "18 V",
+            "2.7 V"
+          ],
+          "answerIndex": 2,
+          "concept": "Voltage across one resistor in a series pair",
+          "why": "Series resistors share one current: I = 24/(3.0 + 9.0) = 2.0 A. Then V₉ = IR = 2.0 × 9.0 = 18 V. Check: V₃ = 6.0 V and 6.0 + 18 = 24 V.\n\n6.0 V is the drop across the 3.0 Ω; 24 V gives the whole battery voltage to one resistor, which is the parallel property, not series; 2.7 V divides 24 V by 9.0 Ω, mixing volts and ohms."
+        },
+        {
+          "type": "mcq",
+          "q": "Four wires meet at a junction. Currents of 3.0 A and 1.5 A flow in along two of them, and 2.0 A flows out along a third. What is the current in the fourth wire?",
+          "options": [
+            "2.5 A out",
+            "6.5 A out",
+            "2.5 A in",
+            "0.5 A in"
+          ],
+          "answerIndex": 0,
+          "concept": "Junction rule with several currents",
+          "why": "ΣI = 0 at the junction: total in = total out. In: 3.0 + 1.5 = 4.5 A. Out so far: 2.0 A. The fourth wire must carry the remaining 2.5 A out.\n\n6.5 A out adds all three as if every current entered; 2.5 A in has the right size but the wrong direction, which would pile charge up at the junction; 0.5 A in treats the 1.5 A as leaving instead of entering."
+        },
+        {
+          "type": "mcq",
+          "q": "In a circuit, point a is where three wires meet, point b is a corner where two wires meet, point c is where four wires meet, and point d is where a battery terminal joins one wire. How many junctions are there?",
+          "options": [
+            "4",
+            "2",
+            "1",
+            "3"
           ],
           "answerIndex": 1,
-          "concept": "Travel direction versus assumed current direction",
-          "why": "Both choices are free. Reversing the walk flips the sign of every term at once, so the equation is the same equation multiplied by −1 and the solution is untouched. Reversing a current arrow instead flips the sign of that one current in the answer. Option 1 is contradicted by any shared branch, which is walked one way in one loop and the other way in the neighbouring loop while keeping a single current arrow. Option 3 removes a choice that is genuinely yours. Option 4 is half right and therefore dangerous: reversing the walk flips both kinds of term, since you cross the terminals in the opposite order and travel through resistors the opposite way too."
+          "concept": "Identifying junctions",
+          "why": "A junction is a point where three or more conductors meet. Point a (three wires) and point c (four wires) qualify, so there are 2 junctions. At b and d only two conductors meet, so the current has nowhere to divide and there is nothing for the junction rule to say.\n\n4 counts every labelled point; 1 counts only c, as if four wires were needed; 3 wrongly counts d because a battery is attached there."
+        },
+        {
+          "type": "mcq",
+          "q": "A single loop contains a 12 V battery and a 4.0 V battery connected so that both drive current the same way round, plus resistances totalling 8.0 Ω (including internal resistances). What is the current?",
+          "options": [
+            "1.0 A",
+            "1.5 A",
+            "0.50 A",
+            "2.0 A"
+          ],
+          "answerIndex": 3,
+          "concept": "Two aiding emfs in a single loop",
+          "why": "Travelling with the current you cross both batteries from − to +, so both emfs enter positive: +12 + 4.0 − I(8.0) = 0, giving I = 16/8.0 = 2.0 A.\n\n1.0 A subtracts the emfs, which is the case where the batteries oppose; 1.5 A uses the 12 V battery alone; 0.50 A uses the 4.0 V battery alone."
+        },
+        {
+          "type": "mcq",
+          "q": "You draw the current arrow clockwise round a loop, write the loop equation and solve it to get I = −0.30 A. What is the actual current in the loop?",
+          "options": [
+            "0.30 A clockwise",
+            "No current flows",
+            "0.30 A anticlockwise",
+            "Unknown until the equation is set up again"
+          ],
+          "answerIndex": 2,
+          "concept": "Meaning of a negative current",
+          "why": "The current arrow is only a definition of which way counts as positive. A negative result means the magnitude is right and the true direction is opposite to the arrow: 0.30 A anticlockwise. Nothing needs to be redone.\n\n0.30 A clockwise ignores the sign; no current would need I = 0; re-solving is unnecessary because the equations are already satisfied."
         },
         {
           "type": "short",
-          "q": "State both of Kirchhoff's rules the way the deck states them, in symbols and in words, and name the conservation law each one rests on.",
-          "concept": "The two rules and their physical basis",
-          "why": "A good answer gives, first, the junction rule: the algebraic sum of the currents into any junction is zero, ΣI = 0 — equivalently, the total current entering a junction equals the total current leaving it, because no charge can accumulate at a point. That rests on conservation of charge. Second, the loop rule: the sum of the potential changes around any closed loop is zero, ΣV = 0. That rests on conservation of energy — a unit charge carried once round a closed path gains from the emfs exactly what it loses in the resistances. It is worth adding that 'algebraic' in the junction rule means signed: a current leaving is a negative current entering, so at a junction fed by I₁ and I₂ and drained by I₃, ΣI = 0 reads I₁ + I₂ − I₃ = 0."
+          "q": "Two resistors in parallel have an equivalent resistance of 2.4 Ω. One of them is 4.0 Ω. Calculate the other, then the equivalent resistance when the same two resistors are put in series. Show your working.",
+          "concept": "Finding an unknown resistor from a parallel equivalent",
+          "why": "1/R_eq = 1/R₁ + 1/R₂, so 1/R₂ = 1/2.4 − 1/4.0 = 0.4167 − 0.25 = 0.1667 Ω⁻¹, giving R₂ = 6.0 Ω. Check: 4.0 × 6.0/(4.0 + 6.0) = 2.4 Ω. In series: R = 4.0 + 6.0 = 10 Ω.\n\nA correct answer states R₂ = 6.0 Ω and the series value 10 Ω. Leaving 0.1667 un-inverted (0.17 Ω) or subtracting resistances directly (2.4 − 4.0) is wrong."
         },
         {
           "type": "short",
-          "q": "Example 1's circuit contains four resistors and two batteries, yet the solution never uses the junction rule. Explain why not, and say what feature of a circuit forces the junction rule to be used.",
-          "concept": "When the junction rule has nothing to say",
-          "why": "A good answer applies her own definition. Example 1 is a single closed rectangle: every point on it joins exactly two conductors, so by the slide-8 definition there is no junction anywhere in the circuit. With no junction there is nothing for ΣI = 0 to constrain, and one single current I passes through all four resistors and both batteries — which is why the loop equation has just one unknown. The junction rule becomes necessary as soon as a point joins three or more conductors, because the current must then split or merge and the branch currents become separate unknowns; Example 2's bridge, with five arms and two inner junctions, is exactly that case."
+          "q": "A single loop contains a 9.0 V battery of internal resistance 0.50 Ω and two resistors of 2.5 Ω and 1.5 Ω. Assume a current I and write the loop equation using the sign rules, then calculate I, the p.d. across each resistor and the terminal p.d. of the battery. Show your working.",
+          "concept": "Loop equation for a single-battery loop",
+          "why": "Travelling with the current, the battery is crossed − to + (+9.0 V) and each resistance is crossed with the current (−IR): 9.0 − 0.50I − 2.5I − 1.5I = 0, so 9.0 = 4.5I and I = 2.0 A. Across 2.5 Ω: 5.0 V; across 1.5 Ω: 3.0 V. Terminal p.d. = 9.0 − (2.0)(0.50) = 8.0 V, which equals 5.0 + 3.0 V.\n\nA correct answer shows the signed loop equation, I = 2.0 A, 5.0 V, 3.0 V and 8.0 V. Forgetting the internal resistance (I = 2.25 A) is wrong."
         },
         {
           "type": "short",
-          "q": "In Example 1 part (a) the 4 V battery contributes −4 V, but in part (b) the same battery contributes +4 V. Explain why, without appealing to any change in the circuit.",
-          "concept": "Why an emf term changes sign when the traversal reverses",
-          "why": "A good answer says nothing about the battery has changed — only the direction of travel. In part (a) she walks the bottom branch left to right, crossing that battery's + terminal first and its − terminal second, which by slide 13 makes the emf negative: −4 V. In part (b) she walks from b toward a, so the bottom branch is crossed right to left, entering at − and leaving at +, which makes the emf positive: +4 V. The rule depends only on the order in which the two terminals are crossed. A useful contrast to add: the IR terms also flip between the two parts, but for a different reason — there the sign turns on travel direction relative to the assumed current, which is why the 4 Ω term is −I(4) in part (a) and +(0.5)(4) in part (b)."
+          "q": "A 5.0 Ω resistor is in series with a parallel pair of 12 Ω and 4.0 Ω, all across a 16 V battery of negligible internal resistance. Calculate the equivalent resistance, the battery current, the p.d. across the parallel pair and the current in each of the two branches. Show your working.",
+          "concept": "Series-parallel circuit reduction",
+          "why": "Parallel pair: 1/R = 1/12 + 1/4.0 = 4/12, so R = 3.0 Ω. R_eq = 5.0 + 3.0 = 8.0 Ω. Battery current I = 16/8.0 = 2.0 A, the same current through the 5.0 Ω. P.d. across the pair = I × 3.0 = 6.0 V (check: 16 − 2.0 × 5.0 = 6.0 V). Branches: 6.0/12 = 0.50 A and 6.0/4.0 = 1.5 A, which add to 2.0 A.\n\nA correct answer states R_eq = 8.0 Ω, I = 2.0 A, V = 6.0 V, and branch currents 0.50 A and 1.5 A. Adding all three resistors in series (21 Ω) is wrong."
         },
         {
           "type": "short",
-          "q": "Explain why a parallel equivalent resistance is always smaller than the smallest resistor in the combination, and say what the single most common mistake with her parallel formula is.",
-          "concept": "Why parallel resistance comes down, and the missing inversion",
-          "why": "A good answer reasons physically: every extra branch is another path the current can take between the same two points, so adding a branch can only increase the total current for a fixed voltage, and by V = IR that means a lower equivalent resistance. Hence R_eq must sit below even the smallest branch — in her example, 1.94 Ω below 4 Ω. The standard mistake is stopping at 1/R_eq: the formula sums reciprocals, so 1/4 + 1/6 + 1/10 = 31/60 is a reciprocal resistance in Ω⁻¹, and the answer only becomes a resistance after inverting to 60/31 = 1.94 Ω. Quoting 0.52 Ω is that error. A good answer names the check too: if a parallel answer comes out larger than one of the branches, the inversion was skipped."
+          "q": "State Kirchhoff's junction rule and loop rule, name the conservation law that each rests on, and explain why a point where only two wires meet needs no junction equation.",
+          "concept": "Physical basis of Kirchhoff's rules",
+          "why": "Junction rule: the algebraic sum of the currents into any junction is zero, ΣI = 0, so current in equals current out. It rests on conservation of charge: charge cannot pile up at or vanish from a junction. Loop rule: the sum of the potential changes (emfs and IR terms) round any closed loop is zero, ΣV = 0. It rests on conservation of energy: a charge carried once round a loop returns to the same potential, so the net energy gained is zero. Where only two wires meet the current has no alternative path, so it simply continues and nothing divides; the equation would read I = I.\n\nA correct answer states both rules, names charge for the junction rule and energy for the loop rule, and says the two-wire point has no split of current."
         }
       ]
     },
@@ -485,131 +489,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "A process rectangle and a decision diamond both sit on the flow path. Why does the notation allow the diamond exactly two outgoing flow lines but the rectangle only one?",
+          "q": "A box in a flowchart is labelled 'Compute payroll' and stands for a whole routine that is drawn in full on a separate chart. Which symbol should it be drawn in?",
           "options": [
-            "A process has exactly one successor - the next step - while the diamond's two exits are the mutually exclusive answers to its question, so control must be able to continue either way.",
-            "The diamond is the wider shape, so it has room for a flow line at each of its two lower vertices.",
-            "A process step might fail, and failure is shown by returning to the previous symbol rather than by drawing a second exit.",
-            "Two exits from a rectangle would mean its two successors run at the same time, which is shown with a summing junction instead."
-          ],
-          "answerIndex": 0,
-          "concept": "Why branching is the exclusive property of the decision symbol: the number of exits encodes the number of possible continuations, not the shape's geometry.",
-          "why": "A rectangle states one action, after which there is one and only one next step. A diamond states a question whose yes/no answer selects between two continuations, so it needs one flow line per answer."
-        },
-        {
-          "type": "mcq",
-          "q": "Sum = 0 written before a loop and Sum = Sum + n written inside it are both assignments. Why does the notation give them different symbols?",
-          "options": [
-            "Because Sum = 0 executes only once, and any step that executes only once is drawn as a hexagon.",
-            "Because the hexagon is reserved for steps that set a variable to zero or to an empty starting value.",
-            "Because an assignment outside a loop counts as input/output, while an assignment inside a loop counts as a process.",
-            "Because the preparation symbol marks a step that sets things up for the work that follows, while the process symbol marks the work itself; the distinction is the step's role, not its arithmetic."
-          ],
-          "answerIndex": 3,
-          "concept": "The preparation symbol versus the process symbol - the deck defines preparation as the difference between steps preparing for work and steps that actually work.",
-          "why": "The two symbols encode a difference in purpose. Preparation sets the stage (clearing a total, setting a counter, arming a loop); process performs the computation the algorithm exists to do."
-        },
-        {
-          "type": "mcq",
-          "q": "A chart uses an on-page connector: a flow line enters a small circle labelled A, and elsewhere on the page a circle labelled A sends a flow line into Step 4. Why does the connector add nothing to the algorithm, yet a connector left without its matching partner makes the chart invalid?",
-          "options": [
-            "A connector holds the value most recently computed, so an unmatched one loses that value and the steps after it read undefined data.",
-            "A connector is only a flow line drawn in two pieces, so it adds no step; unmatched, the flow line has no destination and that path can never reach a Stop symbol.",
-            "A connector counts as one step of the algorithm, so an unmatched one leaves the step count wrong and the chart cannot be turned into code.",
-            "A connector fixes the order in which the pages are read, so an unmatched one makes the page order ambiguous although the logic is still complete."
-          ],
-          "answerIndex": 1,
-          "concept": "Connectors are pure navigation - a re-drawn flow line - and validity requires that every path still leads somewhere.",
-          "why": "The pair of circles is one arrow cut in half for tidiness, so it performs no operation. Cut the arrow and leave one end nowhere, and the preceding symbol has no successor, which breaks the rule that every path must be able to reach a stop."
-        },
-        {
-          "type": "mcq",
-          "q": "Why must a valid flowchart have exactly one Start terminator, while it is acceptable for it to have several Stop terminators?",
-          "options": [
-            "Because the Start symbol also declares the chart's variables, and declaring them twice would be an error.",
-            "Because Stop symbols are decoration, whereas Start marks the place where the reader begins reading.",
-            "Because execution can begin in only one place, so exactly one entry point is required; but different branches may legitimately finish, so several exit points are allowed.",
-            "Because a Start symbol has no incoming flow line, so a second Start would have nothing pointing at it and could never be reached."
+            "Process (plain rectangle)",
+            "Preparation (hexagon)",
+            "Predefined process (rectangle with a double line on each side)",
+            "Document (rectangle with a wavy bottom)"
           ],
           "answerIndex": 2,
-          "concept": "The asymmetry between entry and exit points, and what the principle 'a flowchart should have a start point and a stop point' actually constrains.",
-          "why": "An algorithm has a single definite beginning, so two Starts would leave it undefined which one runs. Ending is not like that: several branches may each finish the work, so each may carry its own Stop."
+          "concept": "Choosing the symbol for a step",
+          "why": "The box does not spell out the work; it names an operation that is defined elsewhere. That is exactly what the predefined process (declaration) symbol is for.\n\nA plain rectangle would claim the step itself is written in the box; the preparation hexagon is for set-up steps such as initialising a counter; the document symbol shows a document going in or out, not a routine."
         },
         {
           "type": "mcq",
-          "q": "Three flow lines converge. On one chart they meet at a downward-pointing triangle; on another they meet at a circle containing a cross. What is the difference in meaning?",
+          "q": "A chart is: Start; Read N1 and N2; R = N1 + N2; Print R; Stop, each step joined to the next. How many flow lines does it contain, and how many decision symbols?",
           "options": [
-            "The triangle joins paths that lie on a single page; the circled cross joins paths arriving from another page.",
-            "The triangle is used when the paths came from a decision; the circled cross when they came from separate Start symbols.",
-            "They mean the same thing; the circled cross is simply the older notation for a merge.",
-            "The triangle means the routes continue as one route; the circled cross means the values arriving on those routes are added together."
-          ],
-          "answerIndex": 3,
-          "concept": "Merge versus summing junction: joining control paths is not the same operation as summing the data those paths carry.",
-          "why": "The merge symbol combines various paths into a single path - a statement about control flow. The summing junction shows the addition of inputs from various paths - a statement about data."
-        },
-        {
-          "type": "mcq",
-          "q": "Why is the comment or note symbol attached by a dashed line and given no flow arrows of its own?",
-          "options": [
-            "Because it describes a part of the chart rather than being a step; putting it on the flow path would assert that control passes through a remark.",
-            "Because comments are added once the chart is finished, and a dashed line marks anything added afterwards.",
-            "Because a dashed line means the step is optional and may be skipped when the chart is executed.",
-            "Because comments belong to the programmer rather than to the program, and solid lines are reserved for symbols that survive into the finished code."
+            "4 flow lines, 0 decisions",
+            "5 flow lines, 0 decisions",
+            "4 flow lines, 1 decision",
+            "3 flow lines, 0 decisions"
           ],
           "answerIndex": 0,
-          "concept": "The distinction between symbols that carry control and annotations that carry none - and what a solid flow line commits you to.",
-          "why": "Every solid arrow says control moves from here to there. A comment is not something the machine does, so it is tied on with a dashed line, off the flow path entirely."
+          "concept": "Counting flow lines in a sequence chart",
+          "why": "Five symbols in a straight line need one arrow between each consecutive pair: Start→Read, Read→R, R→Print, Print→Stop, so 4 flow lines. No question is asked anywhere, so there is no diamond: the chart is pure sequence.\n\n5 counts one arrow per symbol, including one leaving Stop; 3 forgets the arrow into Stop; '1 decision' treats the assignment R = N1 + N2 as if it were a question."
         },
         {
           "type": "mcq",
-          "q": "One of the stated drawing principles is that flow lines should generally not cross, if possible. Why is it hedged with 'generally' and 'if possible' rather than stated flatly?",
+          "q": "A plain rectangle labelled 'Check balance' has one arrow in and two arrows out, labelled 'Enough' and 'Not enough'. Which single change makes the chart valid?",
           "options": [
-            "Because crossing flow lines silently reverse the order in which the crossed steps execute, and this must therefore be avoided in every case.",
-            "Because it is a readability rule rather than a correctness one: the arrows still mean exactly what they point at, but a crossed chart is harder to follow.",
-            "Because crossings are permitted only where a connector symbol is placed at the crossing point to disambiguate them.",
-            "Because whether lines cross depends on the drawing package used, so the principle cannot be enforced in practice."
+            "Add a merge symbol before the two arrows",
+            "Replace the rectangle with a diamond asking 'Balance ≥ amount?'",
+            "Replace the rectangle with a parallelogram",
+            "Add an on-page connector to each outgoing arrow"
           ],
           "answerIndex": 1,
-          "concept": "Which flowchart rules are semantic (they change what the chart means) and which are presentational (they change only how easily it is read).",
-          "why": "Meaning lives in the arrowheads, so a crossing does not alter the algorithm. It does damage the visual clarity that is the whole reason for drawing the chart, which is why it is a strong recommendation rather than a hard rule."
+          "concept": "Only a decision symbol may branch",
+          "why": "Two labelled exits mean a choice is being made, and only the decision symbol may branch; a process box has exactly one exit. Replacing the rectangle with a diamond that poses the yes/no question fixes it.\n\nA merge joins paths rather than splitting them; a parallelogram is for input or output and still has one exit; connectors only carry a flow line somewhere else and do not create a branch."
         },
         {
           "type": "mcq",
-          "q": "A bank wants a chart showing how a loan application moves between the customer, the branch officer and the credit department, with each party's steps kept in its own band across the page. Which of the four main flowchart types fits, and why?",
+          "q": "A chart runs: Start; K = 3; decision 'Is K > 0?'; Yes → Print K; K = K − 1; back to the decision; No → Stop. What is printed, and how many times is the decision evaluated?",
           "options": [
-            "A process flowchart, because it shows the process a product goes through along the production chain.",
-            "A data flowchart, because it shows the flow of information through the system.",
-            "A swimlane flowchart, because it allows multiple categories of activity to be shown side by side.",
-            "A workflow flowchart, because it describes the manner in which a business functions."
+            "3 2 1; 3 times",
+            "3 2 1 0; 4 times",
+            "2 1 0; 3 times",
+            "3 2 1; 4 times"
+          ],
+          "answerIndex": 3,
+          "concept": "Tracing a pre-tested loop",
+          "why": "The decision is tested before every print: K = 3 yes, print 3; K = 2 yes, print 2; K = 1 yes, print 1; K = 0 no, stop. Three prints, four evaluations, because the last evaluation is the one that fails.\n\n'3 times' forgets the final failing test; '3 2 1 0' reads K > 0 as if it were K ≥ 0; '2 1 0' subtracts before printing."
+        },
+        {
+          "type": "mcq",
+          "q": "A diamond 'Is x > 10?' sends Yes to 'Print big' and No to 'Print small'. Both arrows then meet at a downward triangle, and one arrow continues to Stop. Which construct does this chart implement?",
+          "options": [
+            "Sequence",
+            "Selection",
+            "Repetition",
+            "Predefined process"
+          ],
+          "answerIndex": 1,
+          "concept": "Identifying the construct from the arrows",
+          "why": "Both exits of the diamond move forward, one of the two prints happens once, and the paths rejoin at the merge triangle. That is selection.\n\nRepetition needs an exit that runs back to a symbol already executed; sequence has no diamond at all; predefined process is a symbol, not a construct."
+        },
+        {
+          "type": "mcq",
+          "q": "On page 1 a flow line ends in a small pentagon labelled 3. Page 2 opens with a pentagon labelled 3 whose arrow leads into 'Set timer'. Which symbol is this pair, and what does it change in the algorithm?",
+          "options": [
+            "Off-page (link) connector; nothing in the logic changes",
+            "On-page connector; nothing in the logic changes",
+            "Off-page (link) connector; the flow waits until page 2 is reached",
+            "Merge; the two pages' paths are combined into one"
+          ],
+          "answerIndex": 0,
+          "concept": "Connectors across pages",
+          "why": "A pentagon joining elements on different pages is the link, or off-page, connector. It is pure navigation: the flow continues at the matching label exactly as if one long arrow had been drawn, so the sequence of operations is unchanged.\n\nThe on-page connector is a circle and stays on one sheet; nothing 'waits' at a connector; a merge combines several paths into one, and here there is only one path."
+        },
+        {
+          "type": "mcq",
+          "q": "A chart has two Start terminators: one leads into 'Read A', the other into 'Read B', and both paths reach a single Stop. Which drawing rule is broken?",
+          "options": [
+            "Flow lines should not cross",
+            "Comparisons should be kept simple",
+            "A chart has exactly one start point",
+            "A chart may have only one stop point"
           ],
           "answerIndex": 2,
-          "concept": "Choosing among process, workflow, swimlane and data flowcharts by what the chart must make visible - here, who owns each step.",
-          "why": "The requirement is parallel bands, one per actor. That is exactly the swimlane chart's defining feature; a workflow chart describes how the business functions but does not partition activity into categories."
+          "concept": "Rules for a valid flowchart",
+          "why": "A flowchart has one entry point; with two Starts a reader cannot tell where execution begins. Several Stops are allowed, so the single Stop here is fine.\n\nNo crossing lines are described; there is no comparison in the chart; and the one-stop rule does not exist, a chart may end in more than one place."
+        },
+        {
+          "type": "mcq",
+          "q": "Three flow lines arrive at one symbol and a single line leaves it. The values on the three paths are not added; the routes simply rejoin. Which symbol is it?",
+          "options": [
+            "Summing junction",
+            "Decision",
+            "On-page connector",
+            "Merge"
+          ],
+          "answerIndex": 3,
+          "concept": "Merge versus summing junction",
+          "why": "Several paths in, one path out, and nothing is added: that is the merge symbol, the downward triangle that combines various paths into a single path.\n\nThe summing junction (circled ×) shows the addition of inputs from various paths; a decision has one arrow in and two out; an on-page connector carries one line to another spot on the same page."
         },
         {
           "type": "short",
-          "q": "Explain why a decision diamond whose two exits are left unlabelled makes a flowchart untraceable, even when a reader can guess which branch was intended.",
-          "concept": "The labels on a decision's exits are what bind the answers of the question to particular flow lines; without them the chart carries a question but no mapping from answer to path.",
-          "why": "A full answer says: the diamond contributes only a question; the labels Yes/No (or True/False) are what attach each possible answer to one of the two outgoing flow lines. Without them, a tracer who evaluates the condition still cannot determine which arrow to follow, so the chart defines no behaviour for either answer - the algorithm is ambiguous, not merely untidy. It must also note that guessing from the shape of the drawing (for example assuming the downward arrow is Yes) is a reader's convention, not information the chart supplies, and different readers would trace it differently, which is exactly the ambiguity a flowchart exists to remove."
+          "q": "A chart runs: Start; Total = 0; K = 0; Enter x; Total = Total + x; K = K + 1; decision 'Is K < 3?'; Yes → back to Enter x; No → Print Total; Stop. Name the symbol for each of the seven steps between Start and Stop, then state how many flow arrows enter 'Enter x' and how many leave the decision.",
+          "concept": "Assigning symbols and arrow counts on a chart",
+          "why": "Total = 0 and K = 0: process rectangles (the preparation hexagon is also accepted, since they are set-up steps). Enter x: input/output parallelogram. Total = Total + x and K = K + 1: process rectangles. Is K < 3?: decision diamond. Print Total: input/output parallelogram.\n\nTwo arrows enter 'Enter x': one from K = 0 and one back from the Yes exit of the decision. Two arrows leave the decision: Yes and No. A correct answer gives parallelograms for both data steps, a diamond for the test, rectangles (or hexagons for the two initialisations) for the assignments, and the counts 2 and 2. Giving 1 arrow into 'Enter x' misses the back arrow that makes this a loop."
         },
         {
           "type": "short",
-          "q": "Explain why the top-to-bottom, left-to-right direction of operation is a convention while the arrowheads on the flow lines are the actual rule.",
-          "concept": "Default reading direction versus explicit control flow - what actually determines the order of operations in a flowchart.",
-          "why": "A full answer says: the order in which a flowchart executes is defined by its flow lines and the direction of their arrowheads, symbol by symbol; the top-to-bottom, left-to-right habit only makes a chart easy to read when nothing unusual is happening, and is what lets a designer omit clutter. The moment an arrow points upwards or backwards - as every loop's back arrow does - the convention is contradicted and the arrowhead wins. It should note the consequence: you may never infer the next step from a symbol's position on the page, and a chart whose boxes sit in a neat column but whose arrows jump around means what the arrows say."
+          "q": "Describe, step by step and naming the symbol for each step, a flowchart that reads a temperature T and prints 'Hot' if T is above 30 and 'Fine' otherwise. Every path must reach Stop.",
+          "concept": "Laying out a selection chart",
+          "why": "Model answer: Start (terminator); Read T (input/output parallelogram); Is T > 30? (decision diamond); Yes → Print 'Hot' (parallelogram); No → Print 'Fine' (parallelogram); both arrows join (a merge is optional) and lead to Stop (terminator).\n\nA correct answer has exactly one Start, an input step before the decision, a diamond with both exits labelled, the two outputs on the two branches, and both branches reaching Stop. 'Is T ≤ 30?' with the branches swapped is accepted. Not accepted: two exits from a rectangle, a decision placed before T is read, or a branch left with no route to Stop."
         },
         {
           "type": "short",
-          "q": "Explain why flowcharts can be praised for simplifying and clarifying a program's logic and, in the same lecture, criticised for producing programs that are unnecessarily long and inefficient.",
-          "concept": "The advantages and disadvantages of flowcharts arise from the same property: the notation makes every step of control flow explicit and visible.",
-          "why": "A full answer says: the notation forces every step and every branch to be drawn as a separate symbol, which is precisely what makes the logic visible, checkable before coding, and communicable to other programmers and to non-technical stakeholders. The same forced explicitness means the chart offers no abstraction - no way to express a compact construct that a programming language provides in one line - so translating a chart symbol-by-symbol into code yields a longer, more roundabout program than a programmer would write directly. It should also mention the practical costs the deck lists: complex charts spilling across pages, and changes that force a redraw."
+          "q": "Three charts: (i) parallel lanes headed Sales, Warehouse and Accounts, with an order passing across the lanes; (ii) how a customer's details move from a web form into a database and out to a monthly report; (iii) a chart handed to new staff to teach the standard procedure for taking an order. Name the flowchart type of each and give the one feature that decides it.",
+          "concept": "Identifying flowchart types",
+          "why": "(i) Swimlane flowchart: the parallel lanes show multiple categories of activity side by side, one per department. (ii) Data flowchart: it shows the flow of information through the system, which is what reduces the gap between users and developers. (iii) Workflow chart: it describes how the business functions and is used for training employees on standard procedures.\n\nA correct answer names swimlane, data, workflow in that order, each with its deciding feature (lanes; information flow; how the business operates, used for training). Calling (iii) a process flowchart is the common slip: a process chart describes how a product or process moves along a chain rather than the standard operating routine used for training."
         },
         {
           "type": "short",
-          "q": "Explain why the rectangle, the diamond and the parallelogram are between them enough to express sequence, selection and repetition - what does each construct actually demand of the notation?",
-          "concept": "The three control constructs reduce to two requirements the symbols already meet: a step with one successor, and a test with two.",
-          "why": "A full answer says: sequence needs only symbols with a single entry and a single exit, which the rectangle and parallelogram provide - stack them and control passes down the chain. Selection needs a point at which control may continue in either of two ways depending on data, which is exactly the diamond with its two labelled exits; the branches then rejoin so the chart carries on as one path. Repetition needs the same two-way test, but with one exit's flow line running backwards to a symbol already executed, so a group of symbols runs again. The essential point: nothing new is needed for looping - repetition is selection plus a backward flow line, which is why the shape alone cannot tell you which construct you are looking at."
+          "q": "Explain why a decision symbol has exactly two exits that must both be labelled, while a process box has exactly one exit. Then say what goes wrong when you try to trace a chart whose diamond exits carry no labels.",
+          "concept": "Arrow rules for decision and process symbols",
+          "why": "A decision poses a yes/no (true/false) question, and the answer determines the path the flow takes, so there must be one exit for each possible answer, and each must be labelled so the reader knows which exit belongs to which answer. A process box performs one action with no question asked, so there is only one thing that can happen next: a single exit.\n\nWith unlabelled exits a trace stops at the diamond: you can evaluate the question with the current values but cannot tell which arrow to follow, so different readers would follow different paths and the chart no longer defines one algorithm. A correct answer gives the two-answers reason, the one-action reason, and says the trace becomes ambiguous or impossible at the diamond."
         }
       ]
     },
@@ -623,131 +627,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Differentiate f(x) = 5x⁷ − 2x.",
+          "q": "Find f′(x) for f(x) = (3x − 2)(x³ + 4x), giving the answer as an expanded polynomial.",
           "options": [
-            "35x⁶ − 2x⁰",
-            "35x⁶ − 2x",
-            "7x⁶ − 2",
-            "35x⁶ − 2"
-          ],
-          "answerIndex": 3,
-          "concept": "Power rule term by term, including the x⁰ = 1 step",
-          "why": "(5×7)x⁶ − (2×1)x⁰ = 35x⁶ − 2x⁰, and x⁰ = 1, so the answer is 35x⁶ − 2. Option 1 stops one line early and leaves x⁰ standing, exactly the line the lecturer resolves on slide 5. Option 2 leaves the second term undifferentiated. Option 3 forgets to multiply by the coefficient 5, giving 7 where 35 is needed."
-        },
-        {
-          "type": "mcq",
-          "q": "Use the product rule on f(x) = (3x + 1)(x² − 4).",
-          "options": [
-            "6x² + 2x",
-            "9x² + 2x − 12",
-            "6x",
-            "3x² + 2x − 12"
-          ],
-          "answerIndex": 1,
-          "concept": "Product rule with a coefficient in each factor",
-          "why": "u = 3x + 1, v = x² − 4, u′ = 3, v′ = 2x, so f′ = (3x + 1)(2x) + 3(x² − 4) = 6x² + 2x + 3x² − 12 = 9x² + 2x − 12. Expanding first gives 3x³ + x² − 12x − 4, which differentiates to the same thing. Option 1 computes only the first term, u v′, and forgets u′ v. Option 3 is u′ v′, the invented rule. Option 4 uses u′ = 1 instead of 3 in the second term."
-        },
-        {
-          "type": "mcq",
-          "q": "Use the quotient rule on f(x) = (4x − 1)/(2x²).",
-          "options": [
-            "(1 − 2x)/x³",
-            "(2x − 1)/x³",
-            "4/(4x)",
-            "(8x² + 4x)/4x⁴"
-          ],
-          "answerIndex": 0,
-          "concept": "Quotient rule with distribution of the minus, and reducing the result",
-          "why": "u = 4x − 1, v = 2x², u′ = 4, v′ = 4x, so f′ = [2x²·4 − (4x − 1)·4x]/(2x²)² = (8x² − 16x² + 4x)/4x⁴ = (−8x² + 4x)/4x⁴, and dividing top and bottom by 4x gives (1 − 2x)/x³. Option 2 is the sign-flipped version you get by writing u v′ − v u′. Option 3 differentiates top and bottom separately. Option 4 fails to distribute the minus across both terms of (4x − 1)(4x), turning −4x into +4x and leaving 8x² positive."
-        },
-        {
-          "type": "mcq",
-          "q": "Use the chain rule on f(x) = sin(x³).",
-          "options": [
-            "cos(x³)",
-            "cos(3x²)",
-            "3x² cos(x³)",
-            "−3x² cos(x³)"
+            "9x² + 12",
+            "3x³ + 12x",
+            "12x³ − 6x² + 24x − 8",
+            "6x³ − 6x² − 8"
           ],
           "answerIndex": 2,
-          "concept": "Chain rule on a sine with a cubic inside",
-          "why": "With u = x³, y′(u) = cos(u) and u′(x) = 3x², so f′(x) = cos(x³)·3x² = 3x² cos(x³). Option 1 applies the outer derivative but omits the inner derivative, the error TASK 1 is built to catch. Option 2 differentiates the inside and then puts the result inside the cosine, which the rule never licenses. Option 4 imports the minus sign that belongs to the derivative of cosine, not of sine."
+          "concept": "Product rule on two polynomials, checked by expanding",
+          "why": "u = 3x − 2, v = x³ + 4x, u′ = 3, v′ = 3x² + 4. f′ = u v′ + u′ v = (3x − 2)(3x² + 4) + 3(x³ + 4x) = 9x³ + 12x − 6x² − 8 + 3x³ + 12x = 12x³ − 6x² + 24x − 8. Check by expanding first: f(x) = 3x⁴ − 2x³ + 12x² − 8x, whose derivative is the same.\n\n9x² + 12 is u′v′, differentiating both factors at once; 3x³ + 12x is only the u′v term, with the u v′ term forgotten; 6x³ − 6x² − 8 subtracts the two terms instead of adding them."
         },
         {
           "type": "mcq",
-          "q": "Differentiate f(x) = (3x + 2)³.",
+          "q": "Find f′(x) for f(x) = (sin x)/x.",
           "options": [
-            "9(3x + 2)²",
-            "3(3x + 2)²",
-            "9(3x + 2)³",
-            "3(3x + 2)³"
+            "(x cos x − sin x)/x²",
+            "(sin x − x cos x)/x²",
+            "(x cos x + sin x)/x²",
+            "cos x"
           ],
           "answerIndex": 0,
-          "concept": "Chain rule on a bracket raised to a power",
-          "why": "With u = 3x + 2, y = u³ gives y′(u) = 3u² and u′(x) = 3, so f′ = 3(3x + 2)²·3 = 9(3x + 2)². Option 2 is the answer with the inner derivative 3 forgotten. Option 3 keeps the multiplier but never reduces the power. Option 4 makes both mistakes at once, which is what happens when the bracket is treated as if it were a bare x."
+          "concept": "Quotient rule with a trigonometric numerator",
+          "why": "u = sin x, v = x, u′ = cos x, v′ = 1. f′ = [v u′ − u v′]/v² = [x cos x − sin x·1]/x² = (x cos x − sin x)/x².\n\n(sin x − x cos x)/x² has the numerator terms reversed, which is the negative of the right answer; (x cos x + sin x)/x² uses a plus, the product rule's sign; cos x differentiates the top and bottom separately, as cos x/1."
         },
         {
           "type": "mcq",
-          "q": "Differentiate x² + y³ = 9 implicitly and make dy/dx the subject.",
+          "q": "Find f′(x) for f(x) = cos(2x³).",
           "options": [
-            "−2x",
-            "−x/y",
-            "2x/(3y²)",
-            "−2x/(3y²)"
+            "6x² sin(2x³)",
+            "−sin(2x³)",
+            "−sin(6x²)",
+            "−6x² sin(2x³)"
           ],
           "answerIndex": 3,
-          "concept": "Implicit differentiation with a cubic in y",
-          "why": "Differentiating both sides with respect to x gives 2x + 3y²(dy/dx) = 0, since d/dx(y³) = 3y²·dy/dx and d/dx(9) = 0 by the constant rule. Isolating gives dy/dx = −2x/(3y²). Option 1 forgets the y term entirely and just moves 2x across. Option 2 is the slide-12 answer for x² + y² = 25, imported without redoing the power on y — the cube gives 3y², not 2y. Option 3 loses the minus sign when moving 2x to the other side of the equals."
+          "concept": "Chain rule on cosine of a polynomial",
+          "why": "Let u = 2x³, so y = cos u. y′(u) = −sin u and u′(x) = 6x². The chain rule gives f′(x) = −sin u·6x² = −6x² sin(2x³), with u put back at the end.\n\n6x² sin(2x³) loses the minus sign that comes with differentiating cos; −sin(2x³) forgets the inner derivative 6x²; −sin(6x²) differentiates the inside and then puts it inside the sine, which is not what the chain rule says."
         },
         {
           "type": "mcq",
-          "q": "For the parametric equations x(t) = 3t² and y(t) = t³ − t, find dy/dx.",
+          "q": "f(x) = √(x² + 9). Find f′(3).",
           "options": [
-            "3t² − 1",
-            "6t/(3t² − 1)",
-            "(3t² − 1)/6t",
-            "(3t² − 1)/6t²"
-          ],
-          "answerIndex": 2,
-          "concept": "Parametric rule dy/dx = dy/dt ÷ dx/dt",
-          "why": "x′(t) = 6t and y′(t) = 3t² − 1, so dy/dx = (3t² − 1)/6t, left in terms of t as the lecturer leaves hers. Option 1 gives dy/dt alone, which is a rate with respect to the parameter, not a gradient. Option 2 inverts the division. Option 4 differentiates 3t² as 6t² rather than 6t, losing a power."
-        },
-        {
-          "type": "mcq",
-          "q": "For f(x, y) = 4x³y − 5y², find ∂f/∂x.",
-          "options": [
-            "12x²y − 10y",
-            "12x²y",
-            "12x² − 10y",
-            "4x³ − 10y"
+            "√2/12",
+            "√2/2",
+            "√2",
+            "3"
           ],
           "answerIndex": 1,
-          "concept": "Partial derivative with respect to x: the other variable is a constant",
-          "why": "Holding y constant, 4x³y differentiates to 12x²y (the y rides along as a coefficient), and −5y² contains no x at all, so by the constant rule it contributes 0. The answer is 12x²y. Option 1 differentiates the −5y² term as if y varied with x. Option 3 drops the y that multiplies the first term, forgetting it is a constant multiplier, not something to be removed. Option 4 is ∂f/∂y with the second term differentiated but the first left undifferentiated in x."
+          "concept": "Chain rule with a square root, evaluated at a point",
+          "why": "Write f(x) = (x² + 9)^(1/2). With u = x² + 9: f′(x) = (1/2)u^(−1/2)·2x = x/√(x² + 9). At x = 3: 3/√18 = 3/(3√2) = 1/√2 = √2/2.\n\n√2/12 forgets the inner derivative 2x, giving 1/(2√18); √2 forgets the 1/2 from the power rule, giving 6/√18; 3 drops the (x² + 9)^(−1/2) factor altogether and keeps only (1/2)(2x) = x."
+        },
+        {
+          "type": "mcq",
+          "q": "Find f′(x) for f(x) = 3/x² + 4√x.",
+          "options": [
+            "6/x³ + 2/√x",
+            "−6/x³ + 2/√x",
+            "−6/x³ + 4/√x",
+            "−3/x³ + 2/√x"
+          ],
+          "answerIndex": 1,
+          "concept": "Power rule with negative and fractional indices together",
+          "why": "Rewrite as powers: f(x) = 3x^(−2) + 4x^(1/2). Then 3x^(−2) → 3(−2)x^(−3) = −6x^(−3) = −6/x³, and 4x^(1/2) → 4(1/2)x^(−1/2) = 2x^(−1/2) = 2/√x. So f′(x) = −6/x³ + 2/√x.\n\n6/x³ + 2/√x loses the minus sign that comes from the index −2; −6/x³ + 4/√x forgets to multiply by the index 1/2; −3/x³ + 2/√x lowers the power but forgets to multiply by the old index −2."
+        },
+        {
+          "type": "mcq",
+          "q": "A curve is given by x = t³ + 1 and y = t² − 3t. Find the gradient dy/dx at the point where t = 2.",
+          "options": [
+            "1/12",
+            "12",
+            "1",
+            "1/6"
+          ],
+          "answerIndex": 0,
+          "concept": "Parametric gradient at a given parameter value",
+          "why": "dx/dt = 3t² and dy/dt = 2t − 3, so dy/dx = (2t − 3)/(3t²). At t = 2: (4 − 3)/(3·4) = 1/12.\n\n12 divides the wrong way round, dx/dt ÷ dy/dt; 1 is dy/dt at t = 2 on its own, which is not the gradient of the curve; 1/6 differentiates t³ as 3t instead of 3t², giving a denominator of 6."
+        },
+        {
+          "type": "mcq",
+          "q": "f(x, y) = x²y³ + 3x − 2y. Find ∂f/∂x and ∂f/∂y.",
+          "options": [
+            "∂f/∂x = 3x²y² − 2, ∂f/∂y = 2xy³ + 3",
+            "∂f/∂x = 2x + 3, ∂f/∂y = 3y² − 2",
+            "∂f/∂x = 2xy³ + 3 − 2y, ∂f/∂y = 3x²y² + 3x − 2",
+            "∂f/∂x = 2xy³ + 3, ∂f/∂y = 3x²y² − 2"
+          ],
+          "answerIndex": 3,
+          "concept": "Partial derivatives with a mixed product term",
+          "why": "For ∂f/∂x hold y constant: x²y³ → 2x·y³ (y³ is a constant multiplier); 3x → 3; −2y → 0. So ∂f/∂x = 2xy³ + 3. For ∂f/∂y hold x constant: x²y³ → x²·3y²; 3x → 0; −2y → −2. So ∂f/∂y = 3x²y² − 2.\n\nThe first option has the two answers swapped; the second throws the held-constant variable away instead of keeping it as a multiplier; the third forgets that a term without the differentiation variable is a constant and differentiates to 0."
+        },
+        {
+          "type": "mcq",
+          "q": "A student writes the quotient rule as f′ = [u v′ − v u′]/v² instead of [v u′ − u v′]/v². What does the student's formula produce?",
+          "options": [
+            "The correct derivative",
+            "The reciprocal of the correct derivative",
+            "The negative of the correct derivative",
+            "The derivative of v/u"
+          ],
+          "answerIndex": 2,
+          "concept": "Order of terms in the quotient rule",
+          "why": "u v′ − v u′ = −(v u′ − u v′), so the student's numerator is the negative of the correct one over the same v². Every answer comes out with the wrong sign, which is why the order of the two terms matters in the quotient rule but not in the product rule, where the terms are added.\n\nIt is not the correct derivative, because subtraction is not commutative; it is not the reciprocal, since the denominator v² is unchanged; the derivative of v/u would be [u v′ − v u′]/u², with u² underneath, not v²."
         },
         {
           "type": "short",
-          "q": "Reproduce the lecturer's QUOTIENT RULE second example, f(x) = (6x − 3)/(5x²), line by line as she writes it, and explain how the last line reduces to 6(1 − x)/5x³.",
-          "concept": "The deck's cleanest quotient example, including the final cancellation",
-          "why": "A good answer follows her layout. First the substitution line: u(x) = (6x − 3), v(x) = 5x², u′(x) = 6, v′(x) = 10x. Then f′(x) = [5x²·6 − (6x − 3)·10x]/(5x²)². Then the expansion: (30x² − 60x² + 30x)/25x⁴, noting that (6x − 3)(10x) = 60x² − 30x and that subtracting it flips both signs, which is why the +30x appears. Then the collection: (−30x² + 30x)/25x⁴. Finally the reduction: factor 30x out of the numerator to get 30x(1 − x)/25x⁴, cancel a common 5x from top and bottom, and 30/5 = 6 with x⁴ dropping to x³, giving 6(1 − x)/5x³. A strong answer also flags that the denominator is (5x²)² = 25x⁴, so the coefficient 5 is squared as well as the x², and that leaving it as 5x⁴ is the commonest error on this example."
+          "q": "Differentiate f(x) = x² − 4x from first principles, using f′(x) = lim(h→0) [f(x + h) − f(x)]/h. Show every line of working.",
+          "concept": "First principles on a quadratic",
+          "why": "f(x + h) = (x + h)² − 4(x + h) = x² + 2xh + h² − 4x − 4h. Subtract f(x): [x² + 2xh + h² − 4x − 4h] − [x² − 4x] = 2xh + h² − 4h. Divide by h: (2xh + h² − 4h)/h = 2x + h − 4. Let h → 0: f′(x) = 2x − 4.\n\nFinal answer: f′(x) = 2x − 4. A correct answer expands (x + h)², cancels the x² and −4x terms, shows the h dividing out to leave 2x + h − 4, and only then puts h = 0. Substituting h = 0 before cancelling (0/0), or leaving 2x + h − 4 as the answer, is wrong. The power rule gives the same 2x − 4 and may be quoted as a check but not as the working."
         },
         {
           "type": "short",
-          "q": "The PRODUCT RULE slide for f(x) = (4x + 6)(2x³ − 5x) prints its answer as 8x³ + 24x² − 32x − 30. Work the derivative correctly, verify it a second way, and identify the earlier line on that slide which is also misprinted.",
-          "concept": "Correcting the deck's product-rule example and checking it independently",
-          "why": "A good answer computes u = 4x + 6, v = 2x³ − 5x, u′ = 4, v′ = 6x² − 5, then f′ = (4x + 6)(6x² − 5) + 4(2x³ − 5x) = 24x³ + 36x² − 20x − 30 + 8x³ − 20x = 32x³ + 36x² − 40x − 30. The independent verification is to expand before differentiating: f(x) = 8x⁴ + 12x³ − 20x² − 30x, whose derivative is 32x³ + 36x² − 40x − 30 — the same, so the product rule and direct expansion agree and the printed answer is wrong in three of its four coefficients. The other misprinted line is the substitution line, which reads (4x + 6)(6x − 5): the square has been dropped from 6x², even though the line directly above correctly records v′(x) = 6x² − 5. A strong answer notes that even the misprinted bracket does not produce the printed answer — it would give 8x³ + 24x² − 4x − 30 — so the two errors are independent, and that the safe habit for any product of polynomials is to expand first as a check."
+          "q": "Differentiate y = x² cos(3x). Show your working, naming the rules you use.",
+          "concept": "Combining the product rule and the chain rule",
+          "why": "Product rule with u = x², v = cos(3x). u′ = 2x. For v′ use the chain rule: with w = 3x, cos w → −sin w, and w′ = 3, so v′ = −3 sin(3x). Then dy/dx = u v′ + u′ v = x²(−3 sin(3x)) + 2x cos(3x) = 2x cos(3x) − 3x² sin(3x).\n\nFinal answer: dy/dx = 2x cos(3x) − 3x² sin(3x); also accepted in the form x(2 cos(3x) − 3x sin(3x)). A correct answer names the product rule for the two factors and the chain rule for cos(3x), and has the factor 3 and the minus sign on the sine term. 2x cos(3x) − x² sin(3x) (inner derivative dropped) or 2x cos(3x) + 3x² sin(3x) (sign of cos′ lost) is wrong."
         },
         {
           "type": "short",
-          "q": "Differentiate y = 5x from the first principle, showing every line the lecturer shows. Then say what one extra step would be needed if the function were √x instead, and why.",
-          "concept": "The first-principle pattern, and where it needs an algebraic trick",
-          "why": "A good answer runs her template exactly: f′(x) = lim(h→0) [f(x + h) − f(x)]/h with f(x) = 5x; then lim(h→0) [5(x + h) − 5x]/h; then lim(h→0) [5x + 5h − 5x]/h; then lim(h→0) 5h/h; then lim(h→0) 5; therefore y′ = 5. The point to draw out is that the terms 5x and −5x cancel, leaving a numerator that is a multiple of h, so the h divides out of the denominator and the limit can then be taken by substitution. For √x the numerator is √(x + h) − √x, which has no h to factor out and cannot be simplified as it stands, so substituting h = 0 gives 0/0. The extra step is to multiply above and below by the conjugate (√(x + h) + √x): by difference of two squares the numerator becomes (x + h) − x = h, which then cancels the denominator's h, leaving 1/(√(x + h) + √x) and hence 1/(2√x). A strong answer names the general principle: the h must be made to cancel before the limit is taken, whatever algebra that takes."
+          "q": "The curve x² + xy + y² = 7 passes through (1, 2). Differentiate implicitly, collect the dy/dx terms and factorise, then find the gradient of the curve at (1, 2). Show your working.",
+          "concept": "Implicit differentiation with collection, evaluated at a point",
+          "why": "Differentiate each term with respect to x: x² → 2x; xy → y + x(dy/dx) by the product rule; y² → 2y(dy/dx) by the chain rule; 7 → 0. So 2x + y + x(dy/dx) + 2y(dy/dx) = 0. Collect: (dy/dx)(x + 2y) = −(2x + y), so dy/dx = −(2x + y)/(x + 2y). At (1, 2): −(2 + 2)/(1 + 4) = −4/5.\n\nFinal answer: dy/dx = −(2x + y)/(x + 2y) and the gradient at (1, 2) is −4/5 (also accepted: −0.8). A correct answer shows the product-rule split of xy into two terms, the factorisation of dy/dx, and the substitution. Forgetting the y from d/dx(xy), or giving 4/5, is wrong."
         },
         {
           "type": "short",
-          "q": "Answer the lecturer's TASK on slide 15 in full: for x(t) = t⁴ and y(t) = 7t² − 5t, find dy/dx. Then find both partial derivatives of f(x, y) = 5x³ + 4x²y² − 2y.",
-          "concept": "The unanswered parametric TASK, and partial differentiation term by term",
-          "why": "For the TASK: differentiate each with respect to t first, x′(t) = 4t³ and y′(t) = 14t − 5, then apply dy/dx = dy/dt ÷ dx/dt to get dy/dx = (14t − 5)/4t³. A strong answer adds the restriction t ≠ 0, since x′(t) = 0 there and the division is undefined; the deck does not state this, and it is the one place her parametric example (where x′ = 2, never zero) does not prepare you for. For the partials: ∂f/∂x holds y constant, so 5x³ gives 15x², 4x²y² gives 8xy² (the y² is a constant multiplier), and −2y contains no x so it gives 0 — total 15x² + 8xy². ∂f/∂y holds x constant, so 5x³ gives 0, 4x²y² gives 8x²y, and −2y gives −2 — total 8x²y − 2. The pattern worth saying out loud is that any term lacking the variable you are differentiating by is a constant and dies, which is why each partial has a term the other does not."
+          "q": "A student differentiates f(x) = (5x + 1)³ and writes f′(x) = 3(5x + 1)². Explain what has been left out and why the chain rule requires it, then give the correct derivative.",
+          "concept": "The inner derivative in the chain rule",
+          "why": "The student has treated the base as a bare x and applied the power rule only to the outside. But the base is u = 5x + 1, a function of x, so f is a composite y = u³ and the chain rule f′(x) = y′(u)·u′(x) applies: the outer derivative 3u² must be multiplied by the inner derivative u′(x) = 5. The factor 5 records how fast the inside changes with x; leaving it out under-counts the rate of change by that factor.\n\nCorrect derivative: f′(x) = 3(5x + 1)²·5 = 15(5x + 1)². A correct answer names the missing factor u′(x) = 5, says the base is a function of x rather than x itself, and gives 15(5x + 1)²."
         }
       ]
     },
@@ -761,131 +765,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "R₁ = 4 Ω, R₂ = 6 Ω and R₃ = 10 Ω are connected in parallel. The equivalent resistance is",
+          "q": "A single loop contains a 15 V battery (internal resistance 1.0 Ω) and a 5.0 V battery (internal resistance 2.0 Ω) connected so they oppose each other, plus external resistors of 4.0 Ω and 3.0 Ω. What current flows?",
           "options": [
-            "20 Ω",
-            "0.52 Ω",
-            "1.94 Ω",
-            "2.40 Ω"
-          ],
-          "answerIndex": 2,
-          "concept": "Evaluating and then inverting the parallel formula",
-          "why": "Over a common denominator of 60: 1/4 = 15/60, 1/6 = 10/60, 1/10 = 6/60, so 1/R_eq = 31/60 and R_eq = 60/31 = 1.94 Ω — below the smallest branch, as it must be. Option 1 adds the resistances as if they were in series. Option 2 is 31/60 left un-inverted; that number is a reciprocal resistance in Ω⁻¹, not a resistance, and it is the single most common lost mark on this slide. Option 4 drops the 1/10 term, since 1/4 + 1/6 = 5/12 inverts to 2.40 Ω."
-        },
-        {
-          "type": "mcq",
-          "q": "R₁ = 3 Ω, R₂ = 5 Ω, R₃ = 9 Ω and R₄ = 10 Ω are connected in series. The equivalent resistance is",
-          "options": [
-            "27 Ω",
-            "1.34 Ω",
-            "0.74 Ω",
-            "6.75 Ω"
-          ],
-          "answerIndex": 0,
-          "concept": "Series resistances add, and the total exceeds the largest",
-          "why": "R_eq = 3 + 5 + 9 + 10 = 27 Ω, which is larger than the biggest single resistor, 10 Ω — that comparison is the fastest sanity check there is. Option 2 applies the parallel formula (1/3 + 1/5 + 1/9 + 1/10 = 67/90, inverted to 1.34 Ω). Option 3 is that same parallel sum with the inversion forgotten. Option 4 is the arithmetic mean, which no rule in the deck produces."
-        },
-        {
-          "type": "mcq",
-          "q": "Example 1's loop equation is −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0. Solving it gives",
-          "options": [
-            "I = 1.0 A",
-            "I = 0.5 A",
-            "I = 0.25 A",
-            "I = 2.0 A"
+            "2.0 A",
+            "1.0 A",
+            "1.4 A",
+            "1.5 A"
           ],
           "answerIndex": 1,
-          "concept": "Collecting opposing emfs and total resistance in a single loop",
-          "why": "The emf terms give 12 V − 4 V = 8 V and the resistance terms give 4 + 7 + 2 + 3 = 16 Ω, so 8 V = I(16 Ω) and I = 8/16 = 0.5 A. Option 1 comes from adding the emfs, 12 + 4 = 16 V, instead of subtracting — but the batteries face each other, so only their difference drives the current. Option 3 halves the emf difference by keeping only the 4 V. Option 4 inverts the division, computing 16/8; the units expose it, since a current must come out as volts divided by ohms."
+          "concept": "Current in a loop with two opposing batteries",
+          "why": "Travel with the current (driven by the stronger battery): +15 − I(1.0) − 5.0 − I(2.0) − I(4.0) − I(3.0) = 0. The emfs give 15 − 5.0 = 10 V; the resistances total 1.0 + 2.0 + 4.0 + 3.0 = 10 Ω. So 10 V = I(10 Ω) and I = 1.0 A.\n\n2.0 A adds the emfs, which is the aiding case; 1.4 A uses 10 V over the external 7.0 Ω only, forgetting the internal resistances; 1.5 A uses the 15 V battery alone."
         },
         {
           "type": "mcq",
-          "q": "With I = 0.5 A, Example 1 part (b) computes V_ab = (0.5)(7) + 4 + (0.5)(4). The value is",
+          "q": "In a loop, a 15 V battery drives 1.0 A into the positive terminal of a 5.0 V battery. What is the power output of the 5.0 V battery's emf?",
           "options": [
-            "3.5 V",
-            "5.5 V",
-            "6.0 V",
-            "9.5 V"
-          ],
-          "answerIndex": 3,
-          "concept": "Adding potential changes along a chosen path from b to a",
-          "why": "3.5 + 4 + 2 = 9.5 V, so a sits 9.5 V above b. Option 1 keeps only the 7 Ω term and forgets that the walk continues along the bottom branch. Option 2 loses the 4 Ω term. Option 3 loses the 7 Ω term. The independent check settles it: walking the upper path instead gives 12 − (0.5)(2) − (0.5)(3) = 12 − 1.0 − 1.5 = 9.5 V, the same number by a completely different route."
-        },
-        {
-          "type": "mcq",
-          "q": "In Example 1, the power output of the emf of the 4 V battery, P = εI, comes out as",
-          "options": [
-            "6 W",
-            "2 W",
-            "−2 W",
-            "−8 W"
+            "+5 W",
+            "15 W",
+            "−5 W",
+            "10 W"
           ],
           "answerIndex": 2,
-          "concept": "Negative emf power means the source is being charged",
-          "why": "That battery is traversed from + to − in the direction of the current, so its emf enters as −4 V and P = (−4)(0.5) = −2 W. The negative sign says it is absorbing 2 W: the 12 V battery is driving current into its positive terminal, charging it. Option 1 is the 12 V battery's output, (12)(0.5) = 6 W. Option 2 has the right magnitude with the sign of a discharging battery. Option 4 multiplies by the wrong quantity, using the 16 Ω loop total rather than the 4 V emf."
+          "concept": "Power output of a battery being charged",
+          "why": "P = εI with the emf entered with the sign it takes in the loop equation. Travelling with the current you cross the 5.0 V battery + to −, so ε = −5.0 V and P = (−5.0)(1.0) = −5 W: the battery absorbs 5 W, it is being charged.\n\n+5 W has the right size but treats the battery as discharging; 15 W is the 15 V battery's output; 10 W is the net power of the two emfs together."
         },
         {
           "type": "mcq",
-          "q": "Three resistors of 3 Ω, 6 Ω and 9 Ω are connected in parallel. R_eq is",
+          "q": "In a bridge circuit the assumed currents are I₁ from a to b, I₂ from a to c, I₃ from b to d, I₄ from c to d and I₅ from c to b. Which is the junction-rule equation at b?",
           "options": [
-            "1.64 Ω",
-            "18 Ω",
-            "0.61 Ω",
-            "2.00 Ω"
-          ],
-          "answerIndex": 0,
-          "concept": "Common denominator then inversion, on new numbers",
-          "why": "Over a denominator of 18: 1/3 = 6/18, 1/6 = 3/18, 1/9 = 2/18, so 1/R_eq = 11/18 and R_eq = 18/11 = 1.64 Ω, comfortably below 3 Ω. Option 2 adds the resistances. Option 3 is 11/18 = 0.61 left un-inverted. Option 4 drops the 1/9 term, since 1/3 + 1/6 = 1/2 inverts to exactly 2 Ω — a suspiciously round answer, which is itself a warning sign."
-        },
-        {
-          "type": "mcq",
-          "q": "A single loop contains a 10 V battery and a 4 V battery connected so that they oppose each other, together with resistances of 2 Ω, 3 Ω, 4 Ω and 6 Ω. The current in the loop is",
-          "options": [
-            "0.93 A",
-            "2.5 A",
-            "0.67 A",
-            "0.4 A"
-          ],
-          "answerIndex": 3,
-          "concept": "Net driving emf over total series resistance",
-          "why": "Opposing emfs subtract: 10 V − 4 V = 6 V. The resistances are all in one loop, so they add: 2 + 3 + 4 + 6 = 15 Ω. Then 6 V = I(15 Ω) and I = 0.4 A, exactly the structure of Example 1. Option 1 adds the emfs to get 14 V. Option 2 divides the wrong way, 15/6. Option 3 ignores the opposing battery altogether and uses 10 V."
-        },
-        {
-          "type": "mcq",
-          "q": "In Example 1, I = 0.5 A and the four resistances total 16 Ω. The power dissipated in all the resistances together, I²R, is",
-          "options": [
-            "8 W",
-            "4 W",
-            "2 W",
-            "16 W"
+            "I₁ = I₃ + I₅",
+            "I₁ + I₅ = I₃",
+            "I₁ + I₃ = I₅",
+            "I₁ + I₃ + I₅ = 0"
           ],
           "answerIndex": 1,
-          "concept": "Checking the loop solution against the energy books",
-          "why": "I²R = (0.5)²(16) = 0.25 × 16 = 4 W, which matches the net emf output 6 W + (−2 W) = 4 W — the energy balance that conservation of energy demands. Option 1 uses IR rather than I²R, computing (0.5)(16). Option 3 forgets to square and instead halves. Option 4 uses I = 1 A. The habit worth keeping is doing this check every time: if emf power out and I²R do not agree, a sign in the loop equation is wrong."
+          "concept": "Junction equation at a bridge node",
+          "why": "At b, I₁ arrives from a and I₅ arrives from c; only I₃ leaves toward d. In = out gives I₁ + I₅ = I₃.\n\nI₁ = I₃ + I₅ treats I₅ as leaving b, which contradicts its c-to-b arrow; I₁ + I₃ = I₅ has I₃ entering and I₅ leaving, both reversed; I₁ + I₃ + I₅ = 0 gives every current the same sign, as if all three entered."
+        },
+        {
+          "type": "mcq",
+          "q": "In a bridge circuit R₁ sits between a and b, R₅ between b and c and R₂ between a and c. The assumed currents are I₁ from a to b, I₅ from c to b and I₂ from a to c. Travelling the loop a → b → c → a, which loop equation is correct?",
+          "options": [
+            "−I₁R₁ + I₅R₅ + I₂R₂ = 0",
+            "−I₁R₁ − I₅R₅ + I₂R₂ = 0",
+            "−I₁R₁ + I₅R₅ − I₂R₂ = 0",
+            "−I₁R₁ − I₅R₅ − I₂R₂ = 0"
+          ],
+          "answerIndex": 0,
+          "concept": "Loop equation round a bridge mesh",
+          "why": "a → b is with I₁, so −I₁R₁. b → c is against I₅ (its arrow runs c to b), so +I₅R₅. c → a is against I₂ (arrow a to c), so +I₂R₂. Sum to zero: −I₁R₁ + I₅R₅ + I₂R₂ = 0.\n\n−I₅R₅ ignores the c-to-b arrow and signs the middle term by the travel direction alone; −I₂R₂ treats c → a as travelling with I₂; all three negative signs every term by travel direction with no reference to the current arrows."
+        },
+        {
+          "type": "mcq",
+          "q": "Resistors of 2.0 Ω, 5.0 Ω and 10 Ω are in parallel, and that group is in series with 2.75 Ω across a 12 V battery of negligible internal resistance. What current does the battery supply?",
+          "options": [
+            "3.4 A",
+            "0.61 A",
+            "3.0 A",
+            "4.4 A"
+          ],
+          "answerIndex": 2,
+          "concept": "Reducing a three-branch parallel group in series with a resistor",
+          "why": "1/R_p = 1/2.0 + 1/5.0 + 1/10 = 0.50 + 0.20 + 0.10 = 0.80 Ω⁻¹, so R_p = 1.25 Ω. R_eq = 1.25 + 2.75 = 4.0 Ω, and I = 12/4.0 = 3.0 A.\n\n3.4 A adds the un-inverted 0.80 to 2.75 as if it were a resistance; 0.61 A adds all four resistors in series (19.75 Ω); 4.4 A ignores the parallel group and uses 12/2.75."
+        },
+        {
+          "type": "mcq",
+          "q": "A 4.0 V battery has internal resistance 2.0 Ω. Another battery in the same loop drives 0.50 A into its positive terminal. What is the potential difference between the 4.0 V battery's terminals?",
+          "options": [
+            "3.0 V",
+            "4.0 V",
+            "1.0 V",
+            "5.0 V"
+          ],
+          "answerIndex": 3,
+          "concept": "Terminal p.d. of a battery being charged",
+          "why": "Walk across the battery from − to + against the current: +4.0 (emf, crossed − to +) + (0.50)(2.0) (against the current, +IR) = 5.0 V. A battery being charged has a terminal p.d. above its emf.\n\n3.0 V subtracts Ir, which is the discharging case; 4.0 V ignores the internal resistance; 1.0 V is the Ir drop alone."
+        },
+        {
+          "type": "mcq",
+          "q": "Walking from point a to point b you pass through a 3.0 Ω resistor in the direction of its 2.0 A current, then through a 9.0 V battery from − to +, then through a 1.0 Ω resistor against its 2.0 A current. What is V_b − V_a?",
+          "options": [
+            "5 V",
+            "13 V",
+            "−13 V",
+            "17 V"
+          ],
+          "answerIndex": 0,
+          "concept": "Potential difference along a path with mixed elements",
+          "why": "Add the signed changes: with the current through 3.0 Ω gives −(2.0)(3.0) = −6.0 V; − to + through the battery gives +9.0 V; against the current through 1.0 Ω gives +(2.0)(1.0) = +2.0 V. V_b − V_a = −6.0 + 9.0 + 2.0 = 5 V, so b is 5 V above a.\n\n13 V flips both IR signs (+6 − 2); −13 V flips the emf sign; 17 V makes every term positive."
+        },
+        {
+          "type": "mcq",
+          "q": "You have written a correct loop equation travelling clockwise. A friend travels anticlockwise round the same loop with the same current arrows. How does the friend's equation compare with yours?",
+          "options": [
+            "Only the emf terms change sign",
+            "Only the IR terms change sign",
+            "The current comes out with the opposite sign",
+            "Every term changes sign; the same current results"
+          ],
+          "answerIndex": 3,
+          "concept": "Travel direction versus current arrow",
+          "why": "Reversing the travel direction reverses the order in which every battery's terminals are crossed and reverses whether each resistor is walked with or against its arrow, so every term changes sign. That multiplies the whole equation by −1, which has the same solution. Only reversing a current arrow would change the sign of that current.\n\nThe other options treat the emf and IR sign rules as if they responded differently to the travel direction, or confuse the travel direction with the current arrow."
         },
         {
           "type": "short",
-          "q": "Evaluate the equivalent resistance of 4 Ω, 6 Ω and 10 Ω in parallel, showing the common denominator explicitly, and state two checks on your answer.",
-          "concept": "Full working for the parallel example, plus verification",
-          "why": "Model answer: 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ = 1/4 + 1/6 + 1/10. The lowest common denominator of 4, 6 and 10 is 60, giving 15/60 + 10/60 + 6/60 = 31/60. Therefore 1/R_eq = 31/60 and, inverting, R_eq = 60/31 = 1.94 Ω. Check one: the answer is smaller than 4 Ω, the smallest branch, as every parallel combination must be. Check two: the units. Each term 1/R has units of Ω⁻¹, so 31/60 is a reciprocal resistance and only becomes a resistance after inversion — an answer of 0.52 Ω would have failed both checks at once."
+          "q": "Three branches join top node A to bottom node B. Branch 1: a 12 V battery (+ toward A) in series with 2.0 Ω. Branch 2: a 4.0 Ω resistor. Branch 3: a 6.0 V battery (+ toward A) in series with 2.0 Ω. Assume currents I₁ and I₃ upward toward A and I₂ downward through the 4.0 Ω. Calculate all three currents and interpret any negative one. Show your working.",
+          "concept": "Two-loop circuit by junction and loop rules",
+          "why": "Junction A: I₁ + I₃ = I₂. Loop through branch 1 and branch 2 (up branch 1, down branch 2): 12 − 2.0I₁ − 4.0I₂ = 0. Loop through branch 3 and branch 2: 6.0 − 2.0I₃ − 4.0I₂ = 0. From the loops I₁ = 6.0 − 2.0I₂ and I₃ = 3.0 − 2.0I₂; substitute into the junction: 9.0 − 4.0I₂ = I₂, so I₂ = 1.8 A, I₁ = 2.4 A, I₃ = −0.60 A. Check: V_A = 4.0 × 1.8 = 7.2 V = 12 − 2.0 × 2.4.\n\nA correct answer gives I₁ = 2.4 A, I₂ = 1.8 A, I₃ = −0.60 A and says the negative sign means 0.60 A flows downward in branch 3, into the 6.0 V battery's positive terminal, so it is being charged. Accept I₃ = 0.60 A stated with the reversed direction."
         },
         {
           "type": "short",
-          "q": "Write out Example 1's loop equation term by term, justify the sign of each of the six terms, and solve for I with units carried through.",
-          "concept": "Applying the four sign rules in sequence around one loop",
-          "why": "Model answer, starting at a and travelling counterclockwise with the current. −I(4 Ω): along the bottom, walking with the current through the 4 V battery's internal resistance, so by slide 14 the IR term is negative. −4 V: crossing that battery + terminal first, − second, so by slide 13 the emf is negative. −I(7 Ω): up the right side, with the current, negative. +12 V: crossing the 12 V battery − first, + second, so the emf is positive. −I(2 Ω): along the top, with the current, negative. −I(3 Ω): down the left side, with the current, negative, arriving back at a. The sum is zero: −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0. Collecting, the emfs give 12 V − 4 V = 8 V and the resistances give 4 + 7 + 2 + 3 = 16 Ω, so 8 V = I(16 Ω) and I = 8 V / 16 Ω = 0.5 A. Volts divided by ohms is amperes, confirming the units, and I is positive, so the assumed direction was correct."
+          "q": "Going clockwise from point a round a single loop: a 2.0 Ω resistor, a 4.0 V battery crossed + to −, its 1.0 Ω internal resistance, point b, a 4.0 Ω resistor, a 12 V battery crossed − to +, its 1.0 Ω internal resistance, back to a. Calculate the current, then V_ab = V_a − V_b by both paths from b to a. Show your working.",
+          "concept": "Potential difference between two points by two paths",
+          "why": "Loop clockwise with the current: −2.0I − 4.0 − 1.0I − 4.0I + 12 − 1.0I = 0, so 8.0 = 8.0I and I = 1.0 A clockwise (the 12 V battery wins). Path b → a clockwise (with the current): −(1.0)(4.0) + 12 − (1.0)(1.0) = 7.0 V. Path b → a anticlockwise (against the current): +(1.0)(1.0) + 4.0 + (1.0)(2.0) = 7.0 V. Both agree: V_ab = 7.0 V, a is 7.0 V above b.\n\nA correct answer states I = 1.0 A and V_ab = 7.0 V from both paths, with the signs shown. Getting different values from the two paths signals a sign error and is wrong."
         },
         {
           "type": "short",
-          "q": "Example 1 finds V_ab = 9.5 V by the lower path. Verify the same value by the upper path, and say what the agreement of the two routes demonstrates.",
-          "concept": "Path independence of potential difference as a check on signs",
-          "why": "Model answer: walk from b to a over the top. First the 12 V battery, crossed − then +, contributing +12 V. Then the 2 Ω resistor, travelled in the same direction as the current, contributing −I(2) = −(0.5)(2) = −1.0 V. Then down the left side through the 3 Ω, again with the current, contributing −I(3) = −(0.5)(3) = −1.5 V. Total V_ab = 12 − 1.0 − 1.5 = 9.5 V, matching the lower path's 3.5 + 4 + 2 = 9.5 V. What the agreement demonstrates is the loop rule itself: potential difference between two points does not depend on the route taken, which is the same statement as ΣV = 0 round the closed loop formed by the two paths. In an exam it is the quickest way to catch a dropped minus sign, because a single sign error makes the two routes disagree."
+          "q": "A bridge has arms a→b 1.0 Ω, a→c 1.0 Ω, b→d 1.0 Ω, c→d 2.0 Ω and b→c 1.0 Ω, with a battery from d to a. Solving gives I₁ (a→b) = 3.0 A and I₅ (b→c) = −0.50 A. Use the junction rule at b to find I₃ (b→d), the loop a→b→c→a to find I₂ (a→c), then find I₄ (c→d). State the true direction in arm b→c. Show your working.",
+          "concept": "Using junction and loop equations with a negative current",
+          "why": "Junction b: I₁ = I₃ + I₅, so I₃ = 3.0 − (−0.50) = 3.5 A. Loop a→b→c→a: −I₁(1.0) − I₅(1.0) + I₂(1.0) = 0, so I₂ = I₁ + I₅ = 3.0 − 0.50 = 2.5 A. Junction c: I₄ = I₂ + I₅ = 2.5 − 0.50 = 2.0 A. Check loop b→d→c→b: −I₃(1.0) + I₄(2.0) + I₅(1.0) = −3.5 + 4.0 − 0.50 = 0. I₅ negative means 0.50 A actually flows from c to b.\n\nA correct answer states I₃ = 3.5 A, I₂ = 2.5 A, I₄ = 2.0 A and that 0.50 A flows c → b. Using I₃ = 2.5 A (adding the negative current the wrong way) is wrong."
         },
         {
           "type": "short",
-          "q": "A bridge circuit has nodes a, b, c, d. A battery of emf 13 V sits between d and a with its + at a. The arms are a→b = 1 Ω, a→c = 1 Ω, b→c = 1 Ω, b→d = 1 Ω, c→d = 2 Ω. Assume currents I₁ (a→b), I₂ (a→c), I₃ (b→d), I₄ (c→d) and I₅ (b→c). Write the two junction equations and the loop equation for the loop a→b→c→a, and say what a solution I₅ = −1 A would mean.",
-          "concept": "Setting up a non-reducible network with the junction and loop rules",
-          "why": "Model answer. At junction b, I₁ arrives while I₃ and I₅ leave, so I₁ = I₃ + I₅. At junction c, I₂ and I₅ arrive while I₄ leaves, so I₄ = I₂ + I₅. The junction at d gives I₃ + I₄ = I₁ + I₂, which is just those two added and carries no new information. For the loop a→b→c→a: a to b travels with I₁ through 1 Ω, giving −I₁(1); b to c travels with I₅ through 1 Ω, giving −I₅(1); c to a travels against I₂ through 1 Ω, giving +I₂(1). Hence −I₁ − I₅ + I₂ = 0, that is I₂ = I₁ + I₅. A solution I₅ = −1 A does not signal an error: it means the bridge arm carries 1 A flowing from c to b, opposite to the assumed arrow, with the magnitude exactly as computed. It should also be noted why Kirchhoff is needed here at all — no two arms of a bridge carry the same current and no two span the same pair of points, so neither the series nor the parallel rule applies."
+          "q": "In one circuit a 4.0 V battery appears as −4.0 V in the loop equation but as +4.0 V when the potential difference between two points is computed along a path through it. Explain how the same battery can carry both signs, and state what the sign of an emf term depends on.",
+          "concept": "Sign of an emf term",
+          "why": "The sign of an emf term depends only on the order in which the battery's terminals are crossed during the traversal: − to + gives +ε, + to − gives −ε. It does not depend on which way the current flows through the battery or on whether the battery is charging or discharging. In the loop equation the battery was walked + to −, giving −4.0 V; on the second path it was walked in the opposite direction, − to +, giving +4.0 V. The battery itself is unchanged.\n\nA correct answer says the sign is fixed by traversal direction relative to the terminals, quotes − to + as positive and + to − as negative, and states that the current direction does not affect the emf sign."
         }
       ]
     },
@@ -898,131 +902,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Trace this chart. Start; Sum = 0; Count = 0; then at point A, Enter n; Sum = Sum + n; Count = Count + 1; then a decision 'Is Count < 5?' whose Yes exit runs back to A and whose No exit runs to Print Sum; Stop. The numbers waiting to be entered are, in order, 3, 1, 4, 1, 5, 9. What is printed?",
+          "q": "A chart runs: Start; P = 1; C = 0; Enter n; P = P × n; C = C + 1; decision 'Is C < 3?'; Yes → back to Enter n; No → Print P; Stop. The user types 2, 5, 3, 4 in that order. What is printed?",
           "options": [
-            "9",
-            "14",
-            "23",
-            "Nothing - the chart never reaches Print Sum"
+            "10",
+            "30",
+            "120",
+            "3"
           ],
           "answerIndex": 1,
-          "concept": "Hand-tracing a counted loop: how many passes the test Count < 5 permits, and which numbers are therefore consumed.",
-          "why": "The loop runs while Count is still below 5, so it makes five passes and consumes 3, 1, 4, 1 and 5. On the fifth pass Count becomes 5, the test fails, and the accumulated 14 is printed; the 9 is never read."
+          "concept": "Tracing a counted product loop",
+          "why": "Pass 1: n = 2, P = 2, C = 1. Pass 2: n = 5, P = 10, C = 2. Pass 3: n = 3, P = 30, C = 3, and 3 < 3 is false, so the loop exits and 30 is printed. The fourth number is never read.\n\n120 multiplies in all four typed values; 10 stops after two, testing before the third product is formed; 3 prints C instead of P."
         },
         {
           "type": "mcq",
-          "q": "Trace this chart. Start; Total = 0; K = 0; then at point A, Enter x; Total = Total + x; then a decision 'Is K < 3?' whose Yes exit runs back to A and whose No exit runs to K = K + 1, then Print Total, then Stop. What happens when the chart is executed?",
+          "q": "A chart runs: Start; Read A and B; decision 'Is A > B?'; Yes → T = A; A = B; B = T; then on to the join; No → straight to the join; Print A, B; Stop. Inputs A = 9, B = 4. What is printed?",
           "options": [
-            "It reads three numbers and prints their total.",
-            "It reads four numbers and prints their total, one number too many.",
-            "It stops at once without reading any number, because K is still 0.",
-            "It reads numbers forever, because K is only changed on the branch that is never taken."
+            "9 4",
+            "9 9",
+            "4 4",
+            "4 9"
           ],
           "answerIndex": 3,
-          "concept": "Diagnosing a non-terminating loop: the control variable must be updated on the path that is actually repeated.",
-          "why": "K is 0 when the decision is first reached, so the Yes exit is taken and control returns to A. Nothing on that circuit alters K, so the test yields the same answer on every pass and the K = K + 1 box on the No exit is never executed."
+          "concept": "Tracing a swap through a selection",
+          "why": "9 > 4 is true, so the Yes branch runs: T = 9, A = 4, B = 9. The join leads to the print: 4 9.\n\n9 4 follows the No branch, as if the test were false; 4 4 does A = B and then B = A with no temporary, losing the 9; 9 9 does B = A first and then A = B, losing the 4."
         },
         {
           "type": "mcq",
-          "q": "Trace this chart. Start; Read A and B; a decision 'Is A > B?' whose Yes exit leads to Print A and whose No exit leads to Print B; both then meet and go to Stop. The values entered are A = 7 and B = 7. Which path is taken, and what is printed?",
+          "q": "A chart runs: Start; Count = 0; Sum = 0; Enter n; Sum = Sum + n; Count = Count + 1; decision 'Is Count < 3?'; Yes → back to Sum = 0 (not to Enter n); No → Print Sum; Stop. Inputs 2, 4, 6. What is printed?",
           "options": [
-            "The No path is taken, and B is printed - the value 7.",
-            "The Yes path is taken, and A is printed - the value 7.",
-            "Neither path is taken; the chart cannot resolve A equal to B and halts at the diamond.",
-            "Both paths are taken, so 7 is printed twice."
+            "6",
+            "12",
+            "0",
+            "2"
           ],
           "answerIndex": 0,
-          "concept": "Evaluating a strict comparison at the boundary: 'greater than' is false when the two values are equal, so equality falls to the No branch.",
-          "why": "7 > 7 is false, so the decision answers No and control follows that single exit to Print B. The printed number happens to be the same either way, which is exactly why the path, not the value, is what must be traced."
+          "concept": "Back arrow landing on an initialisation",
+          "why": "Count still grows (0, 1, 2, 3), so the loop ends after three numbers. But every Yes exit lands on Sum = 0, wiping the total before the next number is added, so Sum holds only the latest value: 2, then 4, then 6. Printed: 6.\n\n12 assumes the back arrow lands on 'Enter n', the correct chart; 0 assumes the reset happens after the last addition as well; 2 assumes the first value is kept and the rest ignored."
         },
         {
           "type": "mcq",
-          "q": "Take this chart. Start; Count = 0; Sum = 0; then at point A, Enter n; Sum = Sum + n; Count = Count + 1; decision 'Is Count < 5?' Yes exit back to A, No exit to Print Sum; Stop. Now the back arrow is redrawn so that it lands on the box Sum = 0 instead of on A. The numbers 2, 4, 6, 8, 10 are entered. What is printed?",
+          "q": "A chart runs: Start; Count = 0; Enter n; Print n; Count = Count + 1; decision 'Is Count ≤ 5?'; Yes → back to Enter n; No → Stop. How many numbers does the chart read before it stops?",
           "options": [
-            "30 - the same as before, since the numbers entered have not changed.",
-            "Nothing; the chart now loops forever and never reaches Print Sum.",
-            "10, the last number entered.",
-            "0, because Sum is cleared immediately before it is printed."
+            "5",
+            "4",
+            "6",
+            "7"
           ],
           "answerIndex": 2,
-          "concept": "Where a loop's back arrow lands decides which boxes are inside the loop - here it drags the accumulator's initialisation inside, destroying the running total.",
-          "why": "Count = 0 stays outside the loop, so the counter still climbs 1, 2, 3, 4, 5 and the chart exits after five passes. Sum = 0 is now inside, so it is cleared at the top of every pass and holds only the number read on the final pass."
+          "concept": "Off-by-one in a loop condition",
+          "why": "After the k-th number Count = k. The test Count ≤ 5 is true for k = 1, 2, 3, 4, 5, so after the fifth number the chart goes back and reads a sixth; only then is Count = 6 and the test fails. 6 numbers are read. The intended condition was Count < 5.\n\n5 is what the designer meant; 4 is the off-by-one in the other direction; 7 counts the failing test as one more read."
         },
         {
           "type": "mcq",
-          "q": "You must lay out a flowchart that reads ten numbers, which may be positive or negative, and prints the largest of them. Which opening is correct?",
+          "q": "Which arrangement reads numbers until −1 is entered and then prints the sum of the numbers before the −1?",
           "options": [
-            "Set Max = 0 first, then read each of the ten numbers in turn and replace Max whenever the number read is larger.",
-            "Read the first number into Max, then read the remaining nine and replace Max whenever a larger number arrives.",
-            "Read all ten numbers first, then set Max to the last number read and print it.",
-            "Set Max = 0 and Count = 10, decrease Count by one on every pass, and print Max once Count reaches 0."
+            "Enter n → Sum = Sum + n → Is n = −1? Yes → Print Sum; No → back to Enter n",
+            "Enter n → Is n = −1? Yes → back to Enter n; No → Sum = Sum + n → Print Sum",
+            "Enter n → Is n = −1? No → Print Sum; Yes → Sum = Sum + n → back to Enter n",
+            "Enter n → Is n = −1? Yes → Print Sum; No → Sum = Sum + n → back to Enter n"
+          ],
+          "answerIndex": 3,
+          "concept": "Placing the sentinel test in a loop",
+          "why": "The sentinel must be tested immediately after it is read and before it is added, with the Yes exit leaving the loop and the No exit adding n and reading again. For inputs 4, 6, −1 this prints 10.\n\nThe first arrangement adds the −1 before testing and prints 9; the second exits after the first ordinary number and prints 4; the third has the exits swapped, printing 0 as soon as a normal number arrives."
+        },
+        {
+          "type": "mcq",
+          "q": "A fault chart: Start; 'Lamp plugged in?' No → Plug in lamp → Stop; Yes → 'Bulb burned out?' Yes → Replace bulb → Stop; No → Repair lamp → Stop. A lamp is plugged in and its bulb is fine. Which action is reached, and how many decisions are evaluated?",
+          "options": [
+            "Repair lamp; 2 decisions",
+            "Replace bulb; 2 decisions",
+            "Repair lamp; 1 decision",
+            "Plug in lamp; 1 decision"
+          ],
+          "answerIndex": 0,
+          "concept": "Tracing chained decisions",
+          "why": "'Lamp plugged in?' is Yes, so the flow moves to 'Bulb burned out?', which is No, so the flow reaches Repair lamp. Two questions were answered on the way.\n\nReplace bulb would need the second answer to be Yes; '1 decision' forgets that the first diamond had to be passed to reach the second; Plug in lamp is the No exit of the first diamond, which was not taken."
+        },
+        {
+          "type": "mcq",
+          "q": "A chart runs: Start; Read x; decision 'Is x > 0?'; Yes → Print x → Stop; No → Print 'negative', and no arrow leaves that box. Which change makes the chart valid?",
+          "options": [
+            "Add a second Start above 'Print negative'",
+            "Add a flow line from 'Print negative' to Stop",
+            "Replace 'Print negative' with a merge symbol",
+            "Swap the Yes and No labels on the decision"
           ],
           "answerIndex": 1,
-          "concept": "Converting a stated problem into flowchart steps: an extreme-value accumulator must be seeded with a member of the data, not with an arbitrary constant.",
-          "why": "Seeding Max with the first actual number guarantees it starts at a value the data really contains, so the comparisons can only move it upward to the true maximum. Any fixed seed such as 0 is simply a value that may be larger than every number in the list."
+          "concept": "Every path must reach Stop",
+          "why": "Every symbol except Stop must have an arrow leaving it, and every path must be able to reach a Stop. 'Print negative' is a dead end, so an arrow from it to Stop (the existing one or a new one) fixes the chart.\n\nA second Start breaks the one-entry rule instead; a merge needs several paths in and one out, and here there is nothing to merge; swapping the labels changes which numbers are called negative but leaves the dead end in place."
         },
         {
           "type": "mcq",
-          "q": "A student hands in this chart. Start; Read mark; a decision 'Is mark 50 or more?' whose Yes exit leads to Print 'Pass' and then to Stop. The No exit is drawn leaving the diamond but its flow line ends in empty space. What exactly is wrong with the chart?",
+          "q": "When you hand-trace a flowchart, where do you begin, and what decides which exit you take at a diamond?",
           "options": [
-            "Nothing is wrong; a branch on which there is nothing to do may be left blank.",
-            "The diamond should have been a rectangle, since only one action follows it.",
-            "One path can never reach a Stop symbol, so for a mark below 50 the chart specifies no behaviour at all.",
-            "The chart is invalid because the box Print 'Pass' has two flow lines entering it."
+            "At the top-left symbol; the label on the next box",
+            "At the first decision; the exit drawn on the right",
+            "At Start; the answer to the diamond's question for the current values",
+            "At Start; the exit that was drawn first"
           ],
           "answerIndex": 2,
-          "concept": "Validity checking: every path leaving a decision must eventually reach a Stop, so a dangling branch is an undefined case rather than an empty one.",
-          "why": "Tracing a mark of 40 leads out of the diamond and then nowhere, so the algorithm has no defined behaviour for that input. The fix is to run the No branch to a Stop, directly or after whatever it should do first."
-        },
-        {
-          "type": "mcq",
-          "q": "Trace this fault-finding chart. Start 'Lamp does not work'; decision 'Lamp plugged in?' whose No exit leads to Plug in lamp and then Stop, and whose Yes exit leads to the decision 'Bulb burned out?'; that second decision's Yes exit leads to Replace bulb and then Stop, and its No exit leads to Repair lamp and then Stop. The lamp is plugged in and its bulb is sound. Which action boxes are executed?",
-          "options": [
-            "Plug in lamp, and then Repair lamp.",
-            "Replace bulb, and nothing else.",
-            "Plug in lamp, and nothing else.",
-            "Repair lamp, and nothing else."
-          ],
-          "answerIndex": 3,
-          "concept": "Tracing a chain of selections: each decision's answer picks one exit, so exactly one action box on the chain is reached.",
-          "why": "Plugged in gives Yes at the first diamond, which skips Plug in lamp entirely; a sound bulb gives No at the second, which skips Replace bulb. Only Repair lamp lies on the traced path."
-        },
-        {
-          "type": "mcq",
-          "q": "In the chart Start; Sum = 0; Count = 0; A: Enter n; Sum = Sum + n; Count = Count + 1; decision 'Is Count < 5?' Yes back to A, No to Print Sum; Stop - the test alone is changed to 'Is Count less than or equal to 5?'. Everything else is unchanged. What is the effect?",
-          "options": [
-            "Six numbers are read instead of five.",
-            "Four numbers are read instead of five.",
-            "Five numbers are still read, because the two tests agree at the boundary value.",
-            "The chart loops forever, since Count can never exceed 5."
-          ],
-          "answerIndex": 0,
-          "concept": "Off-by-one at a loop's exit condition: the exit test is evaluated after the counter has been incremented, so relaxing it by one grants one extra pass.",
-          "why": "After the fifth pass Count is 5; the old test 5 < 5 fails and the loop ends, but 5 is less than or equal to 5 is true, so a sixth pass runs and Count reaches 6, at which point the loop ends."
+          "concept": "How a trace follows a chart",
+          "why": "A trace begins at the single Start terminator and follows the arrows. At a diamond you evaluate the question using the values the variables hold at that moment, and take the exit whose label matches the answer.\n\nPosition on the page, which exit was drawn first, and the label on a later box are all drawing details with no effect on the logic."
         },
         {
           "type": "short",
-          "q": "Explain why a loop whose control variable is updated only on the branch that is not taken runs forever, in terms of what the decision symbol re-evaluates on each pass.",
-          "concept": "Loop termination requires that some step on the repeated circuit changes a value the exit test depends on.",
-          "why": "A full answer says: the diamond does not remember anything between passes - it re-evaluates its condition from the current values of the variables every time control reaches it. Termination therefore depends entirely on some box on the repeated circuit changing a variable the condition reads. If the increment sits on the exit branch, it lies outside the circuit that repeats, so every pass presents the diamond with the identical data and it must return the identical answer, sending control round again. The answer should note the fix - the update must be placed between the loop's entry point and the diamond - and that this is a property of the arrows, not of the arithmetic in the box."
+          "q": "A chart runs: Start; Read A, B, C; Max = A; decision 'Is B > Max?'; Yes → Max = B; join; decision 'Is C > Max?'; Yes → Max = C; join; Print Max; Stop. Inputs A = 7, B = 12, C = 9. Give the value of Max after each decision, the printed value, and how many decisions are evaluated. Show your working.",
+          "concept": "Tracing a chart with two selections",
+          "why": "Max = 7 after Read. First decision: 12 > 7 is Yes, so Max = 12. Second decision: 9 > 12 is No, so Max stays 12. Printed: 12. Both decisions are evaluated, so 2, whichever way they answer.\n\nA correct answer shows Max = 7 → 12 → 12, states 12 is printed, and counts 2 decisions. Answering 9 takes the last value read rather than the largest; counting 3 decisions invents a test that is not in the chart."
         },
         {
           "type": "short",
-          "q": "Explain why a largest-number chart that begins Max = 0 prints the wrong answer when every number read is negative, and why seeding Max with the first number read repairs it.",
-          "concept": "An accumulator that must end up holding one of the data values has to be seeded from the data, not from a constant that may lie outside their range.",
-          "why": "A full answer says: the loop only ever replaces Max when a number read is larger than it, so Max can move upward but never downward from its seed. With Max = 0 and, say, the numbers -3, -9 and -12, no comparison ever succeeds, and the chart prints 0 - a value that was never in the list at all. Seeding Max with the first number read means Max already holds a genuine member of the data and is a legitimate answer if nothing beats it, so the remaining comparisons can only improve it. The answer should also note that the loop must then run over the remaining nine numbers, not all ten, or the counter is wrong by one."
+          "q": "A chart runs: Start; S = 0; K = 0; Enter n; decision 'Is n even?'; Yes → S = S + n; join; K = K + 1; decision 'Is K < 4?'; Yes → back to Enter n; No → Print S; Stop. Inputs 3, 8, 5, 6. Give S and K after each pass and the printed value. Show your working.",
+          "concept": "Tracing a selection inside a repetition",
+          "why": "Pass 1: n = 3, odd, S stays 0, K = 1. Pass 2: n = 8, even, S = 8, K = 2. Pass 3: n = 5, odd, S = 8, K = 3. Pass 4: n = 6, even, S = 14, K = 4; 4 < 4 is No, so 14 is printed.\n\nA correct answer lists (S, K) as (0, 1), (8, 2), (8, 3), (14, 4) and the output 14. Note that K increases on every pass, odd or even, because K = K + 1 sits after the join. 22 adds every number and ignores the inner decision; 8 stops after two passes."
         },
         {
           "type": "short",
-          "q": "Explain why the point at which a loop's back arrow lands - and not the contents of the boxes - decides whether a running total survives from one pass to the next.",
-          "concept": "The back arrow's landing point defines the loop body: any initialisation caught inside it is re-executed every pass.",
-          "why": "A full answer says: the flow lines, not the layout, define which symbols form the repeated circuit; everything between the arrow's landing point and the decision is executed again on every pass, and everything above the landing point runs once. Sum = Sum + n is unchanged in either version, so the boxes are not what differ. If the back arrow lands below Sum = 0, the accumulator keeps its total and the chart sums the whole series; if it lands on or above Sum = 0, the accumulator is cleared at the top of every pass and can only ever report the last item. It should note the same reasoning applied to the counter: dragging Count = 0 inside the loop resets the counter too and the loop never ends."
+          "q": "A chart runs: Start; Read N; F = 1; decision 'Is N > 1?'; Yes → F = F × N; N = N − 1; back to the decision; No → Print F; Stop. (a) How many flow lines does the chart contain? (b) For N = 4, how many times is the decision evaluated, and what is printed? Show your working.",
+          "concept": "Counting flow lines and decision evaluations",
+          "why": "(a) Start→Read N, Read N→F = 1, F = 1→decision, Yes→F = F × N, →N = N − 1, back→decision, No→Print F, Print F→Stop: 8 flow lines. (b) N = 4: decision Yes, F = 4, N = 3; Yes, F = 12, N = 2; Yes, F = 24, N = 1; N > 1 is No, print 24. The decision is evaluated 4 times (three Yes, one No) and 24 is printed.\n\nA correct answer gives 8, 4 and 24. Answering 3 evaluations forgets the final failing test; 7 lines misses the back arrow; 12 stops one multiplication early."
         },
         {
           "type": "short",
-          "q": "Explain why hand-tracing a chart with a table of variable values catches an off-by-one that simply reading the chart does not.",
-          "concept": "Boundary behaviour depends on the order of increment and test within a pass, which is visible in a trace of successive values but invisible in the wording of the condition.",
-          "why": "A full answer says: reading 'Is Count < 5?' invites you to translate the condition into an intention - five numbers - but whether five actually happens depends on where the counter starts, where it is incremented relative to the test, and whether the test is strict. A table with one row per pass, recording the value of every variable at the moment the diamond is reached, makes the boundary pass explicit: you can see that Count is already 5 when the test is applied for the fifth time, and that the fifth number was consumed before the test ran. It should note that the decisive rows are the first and the last, and that off-by-one errors are exactly the errors that look correct when read and only show up when counted."
+          "q": "A student says every diamond in a flowchart is a loop. Explain the test that tells a selection diamond from a repetition diamond, and state what must be true of the symbols inside a repetition for the loop to end.",
+          "concept": "Selection versus repetition on a chart",
+          "why": "Look at the direction of the two exits. If both exits go forward and later rejoin, the diamond is a selection: one of two alternatives runs once. If one exit runs backward to a symbol that has already been executed, the diamond is a repetition: the symbols between the landing point and the diamond are executed again. Both use the same symbol because both are decided by a yes/no test.\n\nFor a repetition to end, at least one symbol inside the loop must change a value that the diamond's question depends on, so that the answer eventually flips and the forward exit is taken. A correct answer gives the backward-arrow test and the changing-value condition."
         }
       ],
       "slot": "fast"
@@ -1037,68 +1041,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Who led the five majors in the coup of 15 January 1966?",
+          "q": "Put these events in the order they happened: (A) Ojukwu declares the East's independence; (B) the countercoup in which Ironsi is captured and killed in Ibadan; (C) the five majors' coup against Balewa's government; (D) Effiong surrenders to Gowon in Lagos.",
           "options": [
-            "Emmanuel Ifeajuna",
-            "Adewale Ademoyega",
-            "Chukwuma Kaduna Nzeogwu",
-            "Johnson Aguiyi-Ironsi"
-          ],
-          "answerIndex": 2,
-          "concept": "Who led the first Nigerian coup",
-          "why": "Major Chukwuma Kaduna Nzeogwu led the five majors. Ifeajuna and Ademoyega were two of the other majors; Ironsi did not plot the coup, he was the officer power devolved to afterwards."
-        },
-        {
-          "type": "mcq",
-          "q": "Which decree did Gowon repeal immediately after the July 1966 countercoup?",
-          "options": [
-            "Decree No. 34, the Unification Decree",
-            "The Richards Constitution",
-            "The Aburi Accord",
-            "The state creation decree"
+            "C, B, A, D",
+            "B, C, A, D",
+            "C, A, B, D",
+            "C, B, D, A"
           ],
           "answerIndex": 0,
-          "concept": "Decree No. 34 and who repealed it",
-          "why": "Ironsi's Decree No. 34, the Unification Decree, was one of the gaffes that provoked the north, and Gowon repealed it at once. The Richards Constitution introduced regionalism, Aburi was a failed negotiation, and state creation came later in 1967."
+          "concept": "Chronology from the first coup to the end of the civil war",
+          "why": "The five majors struck on 15 January 1966 (C); the northern countercoup followed on 29 July 1966 (B); Ojukwu declared the East's independence on 30 May 1967 (A); Effiong surrendered on 12 January 1970 (D). So the order is C, B, A, D. The second option puts the countercoup before the coup it was answering; the third has secession before the pogrom that caused it; the fourth has the surrender before the war had begun."
         },
         {
           "type": "mcq",
-          "q": "Who led the bloodless coup of 29 July 1975 that removed Gowon?",
+          "q": "A Head of State promised to end military rule on 1 October 1976, but in 1974 announced a postponement, and on 29 July 1975 he was removed in a bloodless coup. Who was removed, and who became Head of State?",
           "options": [
-            "Murtala Muhammed",
-            "Olusegun Obasanjo",
-            "Buka Suka Dimka",
-            "Joseph Nanven Garba"
-          ],
-          "answerIndex": 3,
-          "concept": "Garba led the 1975 coup; Murtala was installed by it",
-          "why": "Colonel Joseph Nanven Garba led it; the plotters then appointed Murtala Muhammed Head of State with Obasanjo as deputy. Dimka led the failed 1976 coup that killed Murtala."
-        },
-        {
-          "type": "mcq",
-          "q": "Who surrendered to Gowon in Lagos on 12 January 1970?",
-          "options": [
-            "Odumegwu Ojukwu",
-            "Philip Effiong",
-            "Nwafor Orizu",
-            "Ladoke Akintola"
+            "Ironsi removed; Gowon appointed",
+            "Gowon removed; Murtala Muhammed appointed",
+            "Gowon removed; Joseph Nanven Garba appointed",
+            "Murtala Muhammed removed; Obasanjo appointed"
           ],
           "answerIndex": 1,
-          "concept": "Effiong, not Ojukwu, made the Biafran surrender",
-          "why": "Ojukwu fled to Ivory Coast; Effiong surrendered in Lagos. Orizu was the acting Senate President who handed power to Ironsi in 1966, and Akintola was killed in the January coup."
+          "concept": "The 1975 coup",
+          "why": "Gowon made the 1976 promise, postponed it in 1974, and was overthrown on 29 July 1975 by officers led by Colonel Joseph Nanven Garba, who appointed Brigadier-General Murtala Muhammed Head of State with Obasanjo as deputy. Garba led the coup but was not made Head of State. Ironsi being replaced by Gowon was the 1966 countercoup, and Murtala being replaced by Obasanjo followed Dimka's failed coup of 1976."
         },
         {
           "type": "mcq",
-          "q": "Which power supplied the Federal Military Government with aircraft and advisers?",
+          "q": "Which of the following was NOT one of the reasons for the July 1966 countercoup?",
           "options": [
-            "France",
-            "Portugal",
-            "The USSR",
-            "The United Kingdom"
+            "Fear of Igbo domination in the north",
+            "Ironsi's compromising management of the first-coup plotters",
+            "Ironsi's policies such as the Unification Decree",
+            "The postponement of the transition to civilian rule"
+          ],
+          "answerIndex": 3,
+          "concept": "Reasons for the 1966 countercoup",
+          "why": "The four reasons for the countercoup were the fear of Igbo domination in the north, Ironsi's compromising management of the first-coup plotters, Ironsi's policies such as the Unification Decree, and the need to exact revenge for the first coup. A postponed transition to civilian rule was Gowon's mistake in 1974 and the trigger for the 1975 coup, not for 1966."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following statements about foreign involvement in the Nigerian civil war is correct?",
+          "options": [
+            "The US and UK supplied aircraft to the federal side",
+            "France and Portugal formally recognised Biafra in 1968",
+            "The USSR supported the Federal Military Government with aircraft and advisers",
+            "The OAU treated the war as an internal civil war"
           ],
           "answerIndex": 2,
-          "concept": "Who backed which side in the civil war",
-          "why": "The USSR backed the federal side with aircraft and advisers. France and Portugal supplied Biafra; the UK, like the US, chose neutrality."
+          "concept": "Foreign backing in the civil war",
+          "why": "The USSR supported the Federal Military Government and supplied aircraft and advisers. The US and UK chose to be neutral. France and Portugal gave Biafra supplies and logistics, but the states that formally recognised Biafra in 1968 were Tanzania, Gabon, Ivory Coast and Zambia. The OAU refused to treat the conflict as a civil war and treated it as a war between two independent nations."
+        },
+        {
+          "type": "mcq",
+          "q": "After the civil war Gowon launched the programme known as the 3 Rs. What were the 3 Rs?",
+          "options": [
+            "Reconstruction, reconciliation and rehabilitation",
+            "Reform, restitution and reintegration",
+            "Recognition, reparation and reconciliation",
+            "Reconstruction, reunification and resettlement"
+          ],
+          "answerIndex": 0,
+          "concept": "Definition of the 3 Rs",
+          "why": "The 3 Rs were reconstruction, reconciliation and rehabilitation, launched swiftly after Gowon's declaration of no winner, no vanquished. The other options mix in words that sound right but were not part of the programme; the 3 Rs are also said to have failed, which is why the Igbos have continued to suffer marginalisation."
         }
       ]
     },
@@ -1112,159 +1116,159 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "What does this log?\n```js\nfor (let i = 0; i < 3; i++) {\n  console.log(i);\n}\n```",
+          "q": "What does this log?\n\n```js\nlet a = 10, b = 3;\nconsole.log(a % b, a / b > 3);\n```",
           "options": [
-            "0, 1, 2",
-            "1, 2, 3",
-            "0, 1, 2, 3",
-            "1, 2"
-          ],
-          "answerIndex": 0,
-          "concept": "Reading a for loop's initial value and condition",
-          "why": "The counter starts at 0 and the condition stops it before 3, so it logs 0, 1 and 2. Expecting 1, 2, 3 comes from forgetting the initial value is 0 and the test is `<`, not `<=`."
-        },
-        {
-          "type": "mcq",
-          "q": "What does this log?\n```js\nlet n = 5;\ndo {\n  console.log(n);\n  n++;\n} while (n < 3);\n```",
-          "options": [
-            "Nothing",
-            "5",
-            "5, 6, 7",
-            "An error"
-          ],
-          "answerIndex": 1,
-          "concept": "do-while checks its condition after the body",
-          "why": "`do-while` tests the condition after running the body, so 5 is logged once before `5 < 3` fails. A plain `while` with the same condition would test first and log nothing at all."
-        },
-        {
-          "type": "mcq",
-          "q": "What happens on the last line?\n```js\nfunction greet() {\n  let message = 'Hi';\n}\ngreet();\nconsole.log(message);\n```",
-          "options": [
-            "It logs 'Hi'",
-            "It logs undefined",
-            "ReferenceError: message is not defined",
-            "It logs 'Hi' only if greet runs again"
+            "3 true",
+            "1 false",
+            "1 true",
+            "0.333 true"
           ],
           "answerIndex": 2,
-          "concept": "Local scope",
-          "why": "`message` is local to `greet`, so it does not exist outside the function and the reference fails. Logging `undefined` is what a declared-but-unassigned variable would give, which is not the case here."
+          "concept": "Modulus and division operators",
+          "why": "10 % 3 is the remainder of 10 ÷ 3, which is 1. 10 / 3 = 3.333..., and 3.333 > 3 is true, so the output is 1 true.\n\n3 true uses the quotient instead of the remainder; 1 false compares the wrong way round; 0.333 true prints the fractional part rather than the remainder."
         },
         {
           "type": "mcq",
-          "q": "What does `myFn()` log?\n```js\nfunction outer() {\n  let v = 'I am outer';\n  function inner() { console.log(v); }\n  return inner;\n}\nconst myFn = outer();\nmyFn();\n```",
+          "q": "What does this log?\n\n```js\nconsole.log(\"5\" == 5, \"5\" === 5, 0 == false);\n```",
           "options": [
-            "undefined",
-            "A ReferenceError, since outer has finished",
-            "The source text of the inner function",
-            "'I am outer'"
+            "true false true",
+            "true true true",
+            "false false true",
+            "true false false"
+          ],
+          "answerIndex": 0,
+          "concept": "Loose versus strict equality",
+          "why": "== compares values after converting types, so \"5\" == 5 is true and 0 == false is true. === also requires the same type, and a string is not a number, so \"5\" === 5 is false.\n\ntrue true true treats === like ==; false false true treats == like ===; true false false forgets that == converts false to 0."
+        },
+        {
+          "type": "mcq",
+          "q": "What happens when this runs?\n\n```js\nlet s = 0;\nfor (let i = 1; i <= 4; i++) {\n  s += i;\n}\nconsole.log(s, i);\n```",
+          "options": [
+            "10 5",
+            "10 4",
+            "10 undefined",
+            "ReferenceError: i is not defined"
           ],
           "answerIndex": 3,
-          "concept": "Closures keep access to the enclosing scope",
-          "why": "`inner` closes over `v`, so it still reads that variable after `outer` has returned. Expecting an error assumes the outer variables are thrown away the moment the function ends, which is precisely what a closure prevents."
+          "concept": "Block scope of a loop variable declared with let",
+          "why": "let inside the for header gives i block scope: it exists only within the loop. After the loop s is 10, but the console.log line reads i outside its block, so the whole line throws ReferenceError: i is not defined and nothing is printed.\n\n10 5 and 10 4 assume i survives the loop, which var would allow; 10 undefined assumes a missing variable reads as undefined rather than throwing."
         },
         {
           "type": "mcq",
-          "q": "What does `matrix[1][0]` give?\n```js\nlet matrix = [[1, 2], [3, 4]];\n```",
+          "q": "What does this log?\n\n```js\nlet n = 1, c = 0;\nwhile (n < 20) {\n  n *= 3;\n  c++;\n}\nconsole.log(n, c);\n```",
+          "options": [
+            "9 2",
+            "27 3",
+            "27 4",
+            "81 4"
+          ],
+          "answerIndex": 1,
+          "concept": "Tracing a while loop",
+          "why": "Trace: n = 1 → 3 → 9 → 27, incrementing c each time; the loop stops once n < 20 is false, at n = 27 after 3 passes.\n\n9 2 stops one pass early, as if the condition were n < 9; 27 4 counts one pass too many; 81 4 runs the body once more after the condition has already failed."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this log?\n\n```js\nlet d = 2;\nswitch (d) {\n  case 1: console.log(\"Mon\");\n  case 2: console.log(\"Tue\");\n  case 3: console.log(\"Wed\"); break;\n  default: console.log(\"Other\");\n}\n```",
+          "options": [
+            "Tue then Wed",
+            "Tue",
+            "Tue, Wed then Other",
+            "Mon, Tue then Wed"
+          ],
+          "answerIndex": 0,
+          "concept": "switch fall-through when break is missing",
+          "why": "d matches case 2, so Tue is printed. There is no break after it, so execution falls through into case 3 and prints Wed, where the break finally exits the switch.\n\nTue alone assumes each case stops by itself; Tue, Wed then Other keeps falling past the break; Mon, Tue then Wed starts from case 1, which does not match."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this log?\n\n```js\nlet a = [3, 8, 1];\na.push(5);\na.pop();\na.splice(1, 1, 9, 9);\nconsole.log(a, a.length);\n```",
+          "options": [
+            "[3, 9, 1] 3",
+            "[3, 9, 9, 1, 5] 5",
+            "[3, 9, 9, 1] 4",
+            "[3, 8, 9, 9, 1] 5"
+          ],
+          "answerIndex": 2,
+          "concept": "Array methods push, pop and splice",
+          "why": "push(5) gives [3, 8, 1, 5]; pop() removes the last, back to [3, 8, 1]; splice(1, 1, 9, 9) removes one element at index 1 (the 8) and inserts 9, 9 there: [3, 9, 9, 1], length 4.\n\n[3, 9, 1] 3 inserts only one 9; [3, 9, 9, 1, 5] 5 forgets that pop removed the 5; [3, 8, 9, 9, 1] 5 inserts without removing the 8."
+        },
+        {
+          "type": "mcq",
+          "q": "What is `out` after this runs?\n\n```js\nlet out = [4, 9, 12, 7].filter(function (n) { return n % 3 === 0; });\n```",
+          "options": [
+            "[4, 7]",
+            "[9, 12]",
+            "undefined",
+            "2"
+          ],
+          "answerIndex": 1,
+          "concept": "filter returns a new array of passing elements",
+          "why": "filter returns a new array of the elements for which the test is true: 9 % 3 and 12 % 3 are 0, so out is [9, 12].\n\n[4, 7] keeps the elements that fail the test; undefined is what forEach would return; 2 is the count of matches, not the array."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this log?\n\n```js\nlet s = { name: \"Ada\", scores: [70, 85], addr: { city: \"Jos\" } };\nconsole.log(s[\"scores\"][1] + s.addr.city.length);\n```",
+          "options": [
+            "853",
+            "85Jos",
+            "NaN",
+            "88"
+          ],
+          "answerIndex": 3,
+          "concept": "Accessing nested object and array values",
+          "why": "s[\"scores\"][1] is 85 (arrays are zero-indexed, so index 1 is the second score). s.addr.city is \"Jos\", whose length is 3. 85 + 3 = 88.\n\n853 treats the + as string joining; 85Jos adds the city itself instead of its length; NaN assumes a string cannot be involved, but length is a number."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this log?\n\n```js\nfunction makeCounter() {\n  let c = 0;\n  return function () { c++; return c; };\n}\nconst next = makeCounter();\nnext(); next();\nconsole.log(next());\n```",
           "options": [
             "3",
-            "2",
-            "4",
-            "[3, 4]"
-          ],
-          "answerIndex": 0,
-          "concept": "Indexing a nested array",
-          "why": "Arrays are zero-indexed, so `matrix[1]` is `[3, 4]` and `[0]` takes its first value, 3. Answering 2 comes from counting from one, which would read `matrix[1]` as `[1, 2]`."
-        },
-        {
-          "type": "mcq",
-          "q": "What does this print?\n```js\nlet person = { name: 'Ada', address: { city: 'Lagos' } };\nconsole.log(person['address'].city);\n```",
-          "options": [
+            "1",
             "undefined",
-            "Lagos",
-            "address.city",
-            "An error, since brackets and dots cannot be mixed"
-          ],
-          "answerIndex": 1,
-          "concept": "Dot and bracket notation on nested objects",
-          "why": "Brackets and dot notation both reach properties and can be chained, so this steps into `address` and reads `city`. Mixing the two is legal; only an unquoted key inside brackets would fail."
-        },
-        {
-          "type": "mcq",
-          "q": "What does `double(5)` return?\n```js\nconst double = (x) => x * 2;\n```",
-          "options": [
-            "undefined, because there is no return statement",
-            "A function",
-            "10",
-            "NaN"
-          ],
-          "answerIndex": 2,
-          "concept": "Concise arrow function bodies return their expression",
-          "why": "An arrow function with no braces returns its expression, so `x * 2` comes back and the call gives 10. The `undefined` answer assumes a `return` keyword is always required, which is only true when the body has braces."
-        },
-        {
-          "type": "mcq",
-          "q": "What is `out` here?\n```js\nlet nums = [1, 2, 3, 4, 5];\nlet out = nums.filter(function (n) { return n > 3; });\n```",
-          "options": [
-            "[1, 2, 3]",
-            "true",
-            "5",
-            "[4, 5]"
-          ],
-          "answerIndex": 3,
-          "concept": "filter returns a new array of the passing elements",
-          "why": "`filter` builds and returns a new array holding every element that passes the test, so the values above 3 are kept. It returns neither a boolean nor a count, and `nums` itself is left untouched."
-        },
-        {
-          "type": "mcq",
-          "q": "Which values make this block run?\n```js\nif (age >= 18 && hasID) { }\n```",
-          "options": [
-            "age 20 and hasID true",
-            "age 20 and hasID false",
-            "age 16 and hasID true",
-            "age 16 and hasID false"
+            "ReferenceError: c is not defined"
           ],
           "answerIndex": 0,
-          "concept": "The AND operator needs both sides true",
-          "why": "`&&` requires both conditions to be true, so only an adult who also has ID gets in. Any option with one side false fails, which is where `||` behaves differently, needing just one true."
+          "concept": "Closure keeping state between calls",
+          "why": "makeCounter returns an inner function that closes over c, so c survives between calls: the first two calls raise it to 2 and the third returns 3.\n\n1 assumes c resets on every call; undefined assumes the inner function returns nothing; a ReferenceError assumes c dies when makeCounter finishes, which is exactly what a closure prevents."
         },
         {
           "type": "mcq",
-          "q": "What happens here?\n```js\nconst PI = 3.14;\nPI = 3.15;\n```",
+          "q": "What does this log?\n\n```js\nfunction add(a, b) { return a + b; }\nconsole.log(add(2), add(\"2\", 3));\n```",
           "options": [
-            "It works; const only warns",
-            "TypeError: assignment to a constant variable",
-            "PI silently becomes 3.15",
-            "ReferenceError, since PI is out of scope"
+            "2 5",
+            "NaN 23",
+            "undefined 5",
+            "NaN 5"
           ],
           "answerIndex": 1,
-          "concept": "const is read-only",
-          "why": "`const` is read-only, so the second assignment throws a TypeError. Declaring a `const` with a value is perfectly fine; it is only reassigning it afterwards that fails."
+          "concept": "Missing arguments and string concatenation with +",
+          "why": "add(2) leaves b undefined, and 2 + undefined is NaN. add(\"2\", 3) has a string on the left, so + joins rather than adds: \"23\".\n\n2 5 assumes a missing argument defaults to 0 and that the string is converted to a number; undefined 5 assumes the whole result is undefined; NaN 5 gets the first right but converts the string."
         },
         {
           "type": "mcq",
-          "q": "Your JavaScript checks the password's strength in the browser. Why is that not enough on its own?",
+          "q": "What does it mean that JavaScript is a client-side scripting language?",
           "options": [
-            "JavaScript cannot read input values",
-            "Browsers block scripts that touch password fields",
-            "The user can read and disable the script, so the server must check too",
-            "Client-side code runs only after the server has stored the data"
-          ],
-          "answerIndex": 2,
-          "concept": "Client-side code cannot be trusted for security",
-          "why": "Client-side JavaScript is downloaded to the user's browser, so its source is visible and it can be altered or turned off. Security checks therefore belong on the server, where the source is never exposed."
-        },
-        {
-          "type": "mcq",
-          "q": "What does this log?\n```js\nlet day = 3;\nswitch (day) {\n  case 1: console.log('Monday'); break;\n  case 3: console.log('Wednesday'); break;\n  default: console.log('Other day');\n}\n```",
-          "options": [
-            "Monday",
-            "Other day",
-            "Wednesday and Other day",
-            "Wednesday"
+            "Its code runs on the server, which sends the browser only the result",
+            "It can only be run from the browser's developer tools",
+            "It runs in the browser but cannot change the page after it loads",
+            "Its code is sent to the browser with the page and executed there"
           ],
           "answerIndex": 3,
-          "concept": "Matching a case and breaking out of a switch",
-          "why": "The value matches `case 3`, so Wednesday is logged and `break` leaves the switch immediately. `default` runs only when no case matches at all, so it never fires here."
+          "concept": "Client-side versus server-side scripting",
+          "why": "JavaScript is client-side: the browser downloads the script with the page and runs it on the user's machine, which is why it can react instantly to clicks and validate forms before anything is sent. It also means the source is visible to the user and cannot be trusted for security.\n\nRunning on the server describes server-side scripting such as Node.js or PHP; the developer tools are only one place it can be run; changing the page after load is exactly what DOM manipulation does."
+        },
+        {
+          "type": "mcq",
+          "q": "What is the difference between a parameter and an argument?",
+          "options": [
+            "A parameter is the value passed; an argument is the placeholder",
+            "A parameter is the returned value; an argument is the input",
+            "A parameter is the placeholder named in the function definition; an argument is the value passed when it is called",
+            "They are two names for the same thing"
+          ],
+          "answerIndex": 2,
+          "concept": "Parameter versus argument",
+          "why": "In function add(a, b), a and b are parameters: placeholders for values the function will receive. In the call add(3, 4), 3 and 4 are arguments: the actual values passed in.\n\nThe first distractor swaps the two; the returned value is what return sends back, not a parameter; the words are not interchangeable."
         }
       ],
       "full": true
@@ -1279,68 +1283,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "What are the three stages of the writing process, in order?",
+          "q": "Before shooting a short film, Funke sketches each scene in order on a series of panels so that the narrative structure is organised before any writing begins. Which pre-writing technique is this?",
           "options": [
-            "Pre-writing, during-writing, post-writing",
-            "Drafting, pre-writing, publishing",
-            "Planning, proofreading, revising",
-            "Pre-writing, post-writing, during-writing"
+            "Storyboarding",
+            "Outlining",
+            "Mind mapping",
+            "Listing"
           ],
           "answerIndex": 0,
-          "concept": "The ordered three stages of the writing process",
-          "why": "The lecture names pre-writing, then during-writing or drafting, then post-writing. Option 4 has the last two reversed; the others mix single activities in as if they were stages."
+          "concept": "Naming a pre-writing technique from a scenario",
+          "why": "Storyboarding is a visual plan of the sequence of scenes, used by a filmmaker to organise narrative structure.\n\nOutlining sets out key points, evidence and logical flow in words; mind mapping draws branches of connected ideas around a topic; listing writes out items such as similarities and differences."
         },
         {
           "type": "mcq",
-          "q": "Which post-writing activity is limited to typos, misspellings and punctuation?",
+          "q": "Having finished a news article, Ada works through it removing grammatical errors, improving sentence structure and making the writing style consistent, without changing what the article says. Which post-writing activity is this?",
           "options": [
             "Revision",
             "Editing for grammar and style",
-            "Peer review",
-            "Proofreading"
-          ],
-          "answerIndex": 3,
-          "concept": "Proofreading is surface-level only",
-          "why": "Proofreading catches surface slips and comes last. Revision changes content and paragraph order, editing works at sentence and word level, and peer review is feedback from another writer."
-        },
-        {
-          "type": "mcq",
-          "q": "A poet associates words and images around a central theme. Which technique is that?",
-          "options": [
-            "Listing",
-            "Outlining",
-            "Clustering",
-            "Storyboarding"
-          ],
-          "answerIndex": 2,
-          "concept": "Clustering as association around a core idea",
-          "why": "Clustering radiates creative associations from one central theme, and the poet is the deck's own example. Listing is a linear enumeration, outlining fixes sequence and hierarchy, and storyboarding plans scenes visually."
-        },
-        {
-          "type": "mcq",
-          "q": "Which post-writing step marks the end of the writing process?",
-          "options": [
-            "Finalising conclusions",
-            "Publishing or submitting",
-            "Formatting and presentation",
-            "Checking citations and references"
+            "Proofreading",
+            "Peer review"
           ],
           "answerIndex": 1,
-          "concept": "Publishing or submitting ends the process",
-          "why": "Publishing or submitting hands the work to its intended audience and ends the process. The other three are earlier post-writing activities, not the closing step."
+          "concept": "Revising versus editing versus proofreading",
+          "why": "Editing for grammar and style works at the language level: eliminating grammatical errors, improving sentence structure and ensuring consistency of style.\n\nRevision reworks content and structure, such as the introduction or paragraph order; proofreading catches only surface errors such as typos, misspellings and punctuation; peer review is feedback from a fellow student."
         },
         {
           "type": "mcq",
-          "q": "Which pre-writing technique produces a roadmap of key points and logical flow?",
+          "q": "Put these activities in the order the writing process requires: (1) exchange drafts with a classmate for feedback; (2) list the similarities and differences between two historical figures; (3) compose the essay, giving each paragraph a topic sentence; (4) submit the final essay.",
           "options": [
+            "2, 3, 1, 4",
+            "2, 1, 3, 4",
+            "3, 2, 1, 4",
+            "2, 3, 4, 1"
+          ],
+          "answerIndex": 0,
+          "concept": "Ordering the three stages of the writing process",
+          "why": "The stages run pre-writing, during-writing, post-writing. Listing (2) is pre-writing, composing (3) is the writing phase, peer review (1) is post-writing, and publishing or submitting (4) is the final step that ends the process.\n\n'2, 1, 3, 4' puts peer review before a draft exists; '3, 2, 1, 4' writes before planning; '2, 3, 4, 1' submits before revising."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following is NOT one of the three divergent thinking methods named for pre-writing?",
+          "options": [
+            "Mind mapping",
             "Free-writing",
-            "Brainstorming",
-            "Research",
+            "Concept clustering",
             "Outlining"
           ],
           "answerIndex": 3,
-          "concept": "Outlining produces the roadmap",
-          "why": "Outlining sets out key points, supporting evidence and a logical flow, giving structure and direction. Free-writing is continuous unstructured prose, brainstorming yields an unfiltered pool of ideas, and research gathers facts and evidence."
+          "concept": "Divergent thinking methods in pre-writing",
+          "why": "The three divergent thinking methods are mind mapping, free-writing and concept clustering.\n\nOutlining is a pre-writing technique, which is why it is a tempting choice, but it is a structuring roadmap of key points rather than one of the three divergent thinking methods."
+        },
+        {
+          "type": "mcq",
+          "q": "Which stage of the writing process is defined as a series of strategic activities aimed at generating and organising ideas, establishing a purpose, and constructing a preliminary framework?",
+          "options": [
+            "During-writing",
+            "Post-writing",
+            "Pre-writing",
+            "Proofreading"
+          ],
+          "answerIndex": 2,
+          "concept": "Definition of pre-writing",
+          "why": "Pre-writing is the phase that precedes actual composition and involves generating and organising ideas, establishing a purpose and constructing a preliminary framework.\n\nDuring-writing is the composing phase; post-writing is the revising, editing and refining done after the initial draft; proofreading is one post-writing activity, not a stage."
         }
       ]
     },
@@ -1354,68 +1358,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Which conservation principle is Kirchhoff's Voltage Law based on?",
+          "q": "A single loop contains a 12 V supply, a 2 kΩ resistor, a 4 kΩ resistor and a 3 V supply connected so that it opposes the 12 V one. Use KVL to find the current in the loop.",
           "options": [
-            "Conservation of charge",
-            "Conservation of momentum",
-            "Conservation of energy",
-            "Conservation of current"
+            "2.5 mA",
+            "1.5 A",
+            "1.5 mA",
+            "4.5 mA"
           ],
           "answerIndex": 2,
-          "concept": "KVL rests on conservation of energy",
-          "why": "KVL says the algebraic sum of voltage drops around a closed loop is zero, which is conservation of energy around a path. Conservation of charge is what KCL, the node rule, expresses."
+          "concept": "Loop current from KVL with two emfs",
+          "why": "Going round the loop, the sum of emfs equals the sum of IR drops: 12 − 3 = I(2 + 4), so I = 9 V/6 kΩ = 1.5 mA. Volts divided by kilohms gives milliamps directly.\n\n2.5 mA adds the two emfs (15/6) instead of subtracting the opposing one; 1.5 A forgets that the resistances are in kΩ; 4.5 mA divides by only the 2 kΩ resistor and leaves the 4 kΩ out of the loop."
         },
         {
           "type": "mcq",
-          "q": "Which of these is the KCL node equation in this experiment?",
+          "q": "In the KVL circuit, loop 1 gives I3·R3 + I3·R4 + I1·R5 = E1. With R3 = 2.5 kΩ, R4 = 7 kΩ, R5 = 5 kΩ, E1 = 9 V and the measured I3 = 0.479 mA, compute I1.",
           "options": [
-            "I1 + I2 = I3",
-            "I3R3 + I3R4 + I1R5 = E1",
-            "I2R2 - I1R5 + I2R1 = -E2",
-            "E1 + E2 = I3R3"
+            "0.890 mA",
+            "1.80 mA",
+            "2.71 mA",
+            "0.468 mA"
           ],
           "answerIndex": 0,
-          "concept": "Telling a node equation from a loop equation",
-          "why": "A KCL equation is written at a node and contains currents only. The other three all contain IR products or emfs, so they have units of volts and are loop equations."
+          "concept": "Solving a KVL loop equation for a branch current",
+          "why": "Because kΩ × mA = V, substitute directly: 0.479(2.5 + 7) + 5·I1 = 9, so 4.55 + 5·I1 = 9 and I1 = (9 − 4.55)/5 = 0.890 mA. An ammeter in that branch reading about 0.89 to 0.90 mA would confirm the loop equation.\n\n1.80 mA is 9/5, ignoring the drop across R3 and R4 altogether; 2.71 mA adds the 4.55 V instead of subtracting it; 0.468 mA divides the remaining 4.45 V by R3 + R4 instead of by R5."
         },
         {
           "type": "mcq",
-          "q": "By the deck's rule, when is an emf counted as positive?",
+          "q": "Walking once round a loop you pass: a 6 V battery from + to −; a 2 kΩ resistor carrying 1.5 mA in your direction of travel; a 4 kΩ resistor carrying 1.5 mA against your direction; then a battery of emf E from − to +. Using the sign rules (resistor p.d. positive when traversed with the current, emf positive when traversed + to −, total zero), find E.",
           "options": [
-            "When the battery drives current in the assumed direction",
-            "When the battery is traversed from its positive to its negative terminal",
-            "When the battery is traversed from its negative to its positive terminal",
-            "When the loop is traversed clockwise"
-          ],
-          "answerIndex": 1,
-          "concept": "The deck's battery sign rule",
-          "why": "The deck counts an emf positive when the source is traversed from positive terminal to negative terminal. Option 3 is the opposite convention, and the sign does not depend on the current direction or on which way round the page you walk."
-        },
-        {
-          "type": "mcq",
-          "q": "The solution gives I2 as negative. What does that mean?",
-          "options": [
-            "A resistance value was substituted wrongly",
-            "The ammeter was connected with reversed polarity",
-            "The current in that branch is decreasing with time",
-            "The real current runs opposite to the direction assumed on the diagram"
+            "15 V",
+            "9 V",
+            "−3 V",
+            "3 V"
           ],
           "answerIndex": 3,
-          "concept": "A negative current means a reversed assumption, not an error",
-          "why": "The magnitude is still correct; only the assumed arrow was drawn the wrong way. It is not an arithmetic mistake, and the currents here are steady, not changing with time."
+          "concept": "Applying the KVL sign rules around a loop",
+          "why": "Term by term: the 6 V battery traversed + to − counts +6; the 2 kΩ resistor traversed with the current counts +(1.5)(2) = +3; the 4 kΩ resistor traversed against the current counts −(1.5)(4) = −6; the battery E traversed − to + counts −E. Sum to zero: 6 + 3 − 6 − E = 0, so E = 3 V.\n\n15 V counts both resistor terms as positive (6 + 3 + 6); 9 V has the resistor rule backwards (6 − 3 + 6); −3 V counts the unknown battery as +E because it forgets that − to + is the negative sense."
         },
         {
           "type": "mcq",
-          "q": "After the first recording, in what interval is the emf stepped up?",
+          "q": "A resistance is set to R = 2.5 kΩ (2 significant figures) and the ammeter in that branch reads I = 0.479 mA (3 significant figures). Give the p.d. across R to the correct number of significant figures.",
           "options": [
-            "1 V",
-            "3 V",
-            "9 V",
-            "50 V"
+            "1.1975 V",
+            "1.2 V",
+            "1.20 V",
+            "1.198 V"
           ],
           "answerIndex": 1,
-          "concept": "The 3 V step in the procedure",
-          "why": "The emf is increased at regular 3 V intervals, so the sample runs at 9, 12 and 15 V. 9 V is the starting emf and 50 V is the maximum output range set before dialling."
+          "concept": "Significant figures in a product of readings",
+          "why": "V = IR = 0.479 mA × 2.5 kΩ = 1.1975 V, and kΩ × mA gives volts directly. A product is quoted to the significant figures of the least precise factor, here 2.5 kΩ with 2 s.f., so V = 1.2 V.\n\n1.1975 V keeps every calculator digit, claiming 5 s.f. from a 2 s.f. resistance; 1.20 V and 1.198 V quote 3 and 4 s.f., matching the ammeter rather than the least precise reading."
+        },
+        {
+          "type": "mcq",
+          "q": "Resistor R5 carries I1 and lies on the branch shared by both loops. In loop 1 its term is +I1·R5, in loop 2 it is −I1·R5. Why do the signs differ?",
+          "options": [
+            "I1 reverses direction between the two loops",
+            "R5 has a negative resistance in loop 2",
+            "Loop 1 is a KCL equation and loop 2 a KVL equation",
+            "The two loops traverse R5 in opposite directions relative to I1"
+          ],
+          "answerIndex": 3,
+          "concept": "Sign of a shared branch in two loop equations",
+          "why": "The p.d. across a resistor is positive when it is traversed in the direction of its current and negative when traversed against it. Loop 1 runs through R5 along I1 and loop 2 runs through it the other way, so the same physical drop I1·R5 enters the two equations with opposite signs.\n\nI1 is one current with one direction and does not change between loops; a resistance is never negative; both equations contain IR products and emfs, so both are KVL loop equations."
         }
       ]
     }

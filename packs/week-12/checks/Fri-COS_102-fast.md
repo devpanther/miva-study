@@ -1,88 +1,145 @@
-# Friday, second hour — COS_102 check
+# Friday — COS_102 fast-hour check
 
-*Applying the "Software Testing Methods" deck to real code: choosing between functional and non-functional methods, choosing the level (unit, integration, system, acceptance) and the integration direction, choosing between black, white and grey box for a given situation, designing test data by equivalence partitioning and boundary value analysis, and reading a debugger session to name the defect.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Applying the Software Testing Methods deck to real code.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** A function is specified to accept a whole-number score from 0 to 100 and return a band:
+**1.** Name the functional testing method for each: (i) test data is fed into one function to check each of its execution paths; (ii) after every part is integrated, the whole app is checked against its technical and functional requirements; (iii) the finished app is checked against the expected requirements, including spelling errors and bugs that crash it.
+A. (i) unit, (ii) integration, (iii) system
+B. (i) integration, (ii) system, (iii) acceptance
+C. (i) unit, (ii) system, (iii) acceptance
+D. (i) unit, (ii) acceptance, (iii) system
 
+**2.** How many execution paths does band have, and which set of inputs exercises every one of them exactly once?
+
+```python
+def band(x):
+    if x < 0:
+        return "neg"
+    if x % 2 == 0:
+        return "even"
+    return "odd"
 ```
-def grade(score):
-    if score >= 70:  return "A"
-    elif score >= 60: return "B"
-    elif score >= 50: return "C"
-    else:             return "F"
+A. 3 paths: 2, 4, 6
+B. 2 paths: 4, 7
+C. 4 paths: −2, −1, 4, 7
+D. 3 paths: −1, 4, 7
+
+**3.** Main calls Report and Pay; Pay calls Tax. The team tests Main first, with placeholders standing in for the modules below it, then Report and Pay, and Tax last. Which integration approach is this?
+A. Bottom-up integration
+B. Top-down integration
+C. System testing
+D. Unit testing
+
+**4.** Three testers: (i) never sees the source and works the web pages in a browser, checking outputs against expected outcomes; (ii) reads the implementation and picks inputs to drive each path through the code; (iii) studies the code of two modules to design the cases, then runs them through the exposed interfaces. Classify each.
+A. (i) black box, (ii) white box, (iii) grey box
+B. (i) white box, (ii) black box, (iii) grey box
+C. (i) black box, (ii) grey box, (iii) white box
+D. (i) grey box, (ii) white box, (iii) black box
+
+**5.** A field accepts a whole-number score, valid from 0 to 100 inclusive. Which set takes exactly one value from each equivalence class of the input?
+A. {0, 50, 100}
+B. {−5, 50, 120}
+C. {10, 50, 90}
+D. {−5, −1, 120}
+
+**6.** fee(days) is specified as: the first day is free, then 50 per extra day, so fee(1) = 0 and fee(3) = 100. Four test cases: A fee(0) expects 0; B fee(1) expects 0; C fee(3) expects 100; D fee(−2) expects 0. Which cases fail against this implementation?
+
+```python
+def fee(days):
+    if days <= 0:
+        return 0
+    return 50 * days
+```
+A. B and C
+B. B only
+C. C only
+D. A and D
+
+**7.** A pass mark is 50 or more. For marks = [50, 70, 30] a watch on n shows it ending at 1 where 2 was expected. Which single change fixes the defect?
+
+```python
+def count_pass(marks):
+    n = 0
+    for m in marks:
+        if m > 50:
+            n = n + 1
+    return n
+```
+A. Move `n = 0` inside the loop
+B. Change `m > 50` to `m >= 50`
+C. Change `n = n + 1` to `n = 1`
+D. Change `for m in marks` to `for m in marks[1:]`
+
+**8.** What is the one thing that decides whether a test is black box or white box?
+A. Whether it is run by hand or by an automated tool
+B. Whether a tester or a developer runs it
+C. Whether it is a functional or a non-functional test
+D. Whether the internal structure of the item is known to the tester
+
+**9. (show your working)** quantity is specified as valid from 1 to 99 inclusive. The implementation reads `if qty >= 1 and qty < 99`. List the six boundary values that boundary value analysis tests for this range, state what the implementation returns for each, and name the value that exposes the fault. Show your working.
+
+**10. (show your working)** total([5, 8, 2]) returns 10 where 15 is expected. Set a breakpoint on the line `t = t + prices[i]`, and give the value of i and of t after each time it runs. Say where the state first goes wrong and name the defect. Show your working.
+
+```python
+def total(prices):
+    t = 0
+    for i in range(1, len(prices)):
+        t = t + prices[i]
+    return t
 ```
 
-Which set of inputs is the one chosen by equivalence partitioning together with boundary value analysis?
+**11. (show your working)** Four reports on a banking app: (a) balances are correct but each page takes 30 seconds when 2,000 customers are logged in; (b) customers watched using the app cannot find the transfer button; (c) a logged-in customer can open another customer's statement by editing the address bar; (d) the function that adds two amounts returns 30 for 10 + 25 where 35 is expected. Name the testing method for each and say which reports are functional failures. Show your working.
 
-a) 0, 25, 50, 75, 100 — five evenly spaced values across the whole permitted range
-b) 49, 50, 59, 60, 69, 70, together with 0 and 100 — the value on each side of every band edge, plus the two ends of the input domain
-c) 55, 65, 75, 85 — one representative taken from the middle of each band
-d) 70, 60 and 50 — the three thresholds alone, since a threshold that behaves correctly guarantees the rest of its band
+**12. (show your working)** Every function in a payment program has passed its unit tests, and the developer reports that the program is therefore free of defects. Explain why that conclusion does not follow: name the stated limitation of unit testing, and say what integration testing and system testing check that unit tests cannot.
 
-**2.** A registration form is specified to accept applicants aged 18 to 65 **inclusive**. The implementation reads `if age > 18 and age <= 65:`. Which single boundary value exposes the fault, and what class of defect is it?
+---
 
-a) 66, and it is a wrong branch order, because the upper test is evaluated after the lower one
-b) 17, and it is an uninitialised-variable defect, because nothing sets a default for under-age input
-c) 18, and it is an off-by-one produced by a wrong relational operator, `>` used where `>=` was required
-d) 65, and it is an integer-division defect, because the range is compared rather than divided
+## Answers
 
-**3.** A developer opens the source of `grade` above, counts the four execution paths through it, and picks one input to drive each path. Which method is she using, and which testing levels does the deck say it applies to?
+**1. C** — *Choosing the functional testing level.* Unit testing uses test data to check the execution paths in a function (i). System testing tests the system as a whole after all parts are integrated to confirm it meets the technical and functional requirements (ii). Acceptance testing confirms the software meets the expected requirements and also looks for spelling errors and for bugs that cause major errors and crashes (iii).
 
-a) White box testing; applicable to unit testing, integration testing and system testing
-b) Black box testing; applicable to integration testing, system testing and acceptance testing
-c) Grey box testing; primarily used in integration testing
-d) White box testing; applicable to acceptance testing only, since every execution path ends in an output the user sees
+The first option calls the whole-app check 'integration', but integration tests how parts work together, not the assembled whole; the second calls a single-function check 'integration'; the fourth swaps system and acceptance.
 
-**4.** A tester reads the source of the `cart` and `pricing` modules to work out which combinations of discount and stock level are interesting, then exercises those combinations only through the application's public checkout page. How should this be classified?
+**2. D** — *Choosing inputs to cover execution paths.* White box testing chooses inputs to exercise paths through the code. There are three ways out: the first if (x < 0), the second if (even, non-negative), and the final return (odd, non-negative). −1 takes the first, 4 the second, 7 the third: 3 paths, one input each.
 
-a) Black box testing, because every test was actually run through the exposed interface
-b) White box testing, because the source of both modules was studied before any test ran
-c) Unit testing, because two named modules are the target of the tests
-d) Grey box testing, in which internal data structures and algorithms are used to design the test cases while the testing is done at the user or black-box level, and which is primarily used in integration testing
+2, 4, 6 are all even and non-negative, so they all take the same path and two paths are never run; 2 paths forgets the negative branch; 4 paths counts −2 and −1 as different, but both leave at x < 0 and the parity test is never reached for either.
 
-**5.** A team tests the currency-conversion and date helper modules first, then the transaction module that calls them, then the reporting module above that. Which approach is this, and what would the alternative have done?
+**3. B** — *Integration testing direction.* Integration tests check how well different parts work together and can be top-down or bottom-up. With the top-down approach, higher-level modules are tested first before the lower-level modules: Main, then Report and Pay, then Tax.
 
-a) Top-down integration; the alternative would have started with the reporting module
-b) Bottom-up integration, in which lower-level modules are tested first; the top-down alternative would have tested the higher-level modules first
-c) Bottom-up design in the Week 11 sense, which concerns composition of components and says nothing about the order of integration tests
-d) System testing, because all three layers are included by the time the sequence ends
+Bottom-up would start with Tax and finish with Main; system testing tests the whole after everything is integrated, not module by module; unit testing tests one function on its own, not how modules connect.
 
-**6.** A loan page computes interest correctly to the last kobo. With five users it responds in under a second; with five hundred concurrent users it takes forty seconds. Which classification and method does this failure call for?
+**4. A** — *Black, white and grey box.* The distinction is what the tester knows of the internal structure. (i) knows nothing of it and tests from outside: black box. (ii) knows the implementation and chooses inputs to exercise paths through the code: white box. (iii) uses internal knowledge to design the cases but tests at the black-box level through the interfaces: grey box, the combination.
 
-a) Functional testing has failed, because a forty-second response is not the expected output of the program
-b) Usability testing, because the delay is discovered by observing users while they use the software
-c) Non-functional testing, specifically performance testing, which checks how the software will perform under different load conditions
-d) Compatibility testing, because the software behaves differently in one situation from another
+The second option swaps the first two; the third calls path-driven testing 'grey', but (ii) tests the code directly, not through interfaces; the fourth calls (iii) black box, but its cases were designed from the source.
 
-**7.** A tester writes twelve unit tests for a function containing two nested conditionals and a loop. All twelve pass, and she reports the function as proven correct. Assess the claim.
+**5. B** — *Equivalence partitioning.* The input splits into three classes the program should treat identically: below the range (score < 0), valid (0 to 100), above the range (score > 100). One representative per class: −5, 50, 120.
 
-a) Sound, provided the twelve cases were derived from the specification rather than from reading the code
-b) Sound, because unit testing operates on the functions in a program and this is a single function
-c) Unsound, because unit testing is a non-functional method and non-functional methods cannot establish correctness
-d) Unsound, because the deck states that it is practically impossible to test all the execution paths in a software and that the number and type of test data are limited, so passing tests show only that the paths exercised behaved as expected
+{0, 50, 100} takes three values from the valid class and none from the invalid ones; {10, 50, 90} likewise; {−5, −1, 120} takes two from the below-range class and none from the valid class.
 
-**8.** `average([10, 20, 30])` returns 10.0 where 20.0 is expected:
+**6. A** — *Running test cases against an implementation.* Run each case. fee(0) = 0 and fee(−2) = 0, so A and D pass. fee(1) = 50 × 1 = 50, expected 0: B fails. fee(3) = 50 × 3 = 150, expected 100: C fails. The implementation charges for the free day; the fix is 50 × (days − 1).
 
-```
-def average(scores):
-    total = 0
-    for i in range(len(scores) - 1):
-        total = total + scores[i]
-    return total / len(scores)
-```
+'B only' misses that the same defect overcharges every positive input; 'C only' misses the boundary case at 1; 'A and D' are the cases the implementation gets right.
 
-A breakpoint is set on the `return` line and `total` is watched on each pass through the loop. What does the watch show, and what is the defect?
+**7. B** — *Fixing a wrong relational operator.* Step through with the watch: m = 50 fails m > 50, so n stays 0; m = 70 passes, n = 1; m = 30 fails. The mark exactly at the boundary is excluded, so the defect is a wrong relational operator: > should be >=, giving n = 2.
 
-a) `total` ends at 30 rather than 60, because the loop stops one element early; the defect is an off-by-one in the bound given to `range`
-b) `total` ends at 60, and the division then truncates the result; the defect is integer division
-c) `total` is never initialised, so the first addition works on a stale value; the defect is an uninitialised accumulator
-d) `total` ends at 60, and the fault is in `len(scores)`, which yields 3 where 2 is required; the defect is a wrong operator
+Moving n = 0 inside the loop resets the accumulator and gives 1 for any list; n = 1 stops counting; marks[1:] skips the first element and gives 1 for this list too, since 70 is the only one counted.
 
-**9. (explain why)** A payment module has already passed unit tests for every one of its functions, yet the checkout fails as soon as it is wired to the inventory module. Explain why passing unit tests could not have prevented this, name the level of testing that would have caught it, and say which of the two integration directions you would choose here and why.
+**8. D** — *Basis of black box versus white box.* Black box testing is a method in which the internal structure, design and implementation of the item are not known to the tester; white box is one in which they are known. Nothing else is part of the definition.
 
-**10. (explain why)** Two testers produce identical sets of inputs for the same login form. One read the source first; the other never saw it. Explain why their tests are not the same kind of test, what each is called, and why the deck says grey box is "primarily used in integration testing".
+Either kind can be manual or automated; a developer usually does white box testing but that is a consequence, not the definition; black box tests are usually functional but can be non-functional, so functional versus non-functional does not decide it.
 
-**11. (explain why)** A function is specified to accept a discount percentage from 0 to 50 inclusive. Explain, using this spec, why equivalence partitioning alone would probably miss the most likely defect, which specific values boundary value analysis adds, and what the deck's stated limitation of unit testing implies about how much confidence a passing run of those values earns.
+**9.** *Boundary value analysis exposing a fault.* Boundary value analysis tests the values just below, at and just above each edge: 0, 1, 2 at the lower edge and 98, 99, 100 at the upper edge. The implementation: 0 invalid (correct), 1 valid (correct), 2 valid (correct), 98 valid (correct), 99 invalid, 100 invalid (correct). The specification says 99 is valid, so qty = 99 exposes the fault: qty < 99 should be qty <= 99.
 
-**12. (explain why)** A bank's mobile app returns correct balances, but the branch manager reports that customers on older Android phones cannot complete a transfer, and that new customers abandon the transfer screen halfway. Explain which non-functional method applies to each of the two complaints, why neither is a functional failure, and what a functional failure on the same screen would look like instead.
+Final answer: boundary values 0, 1, 2, 98, 99, 100; the failing value is 99. A correct answer lists all six, gives the implementation's verdict on each, and identifies 99 with the operator fix. Testing only 1 and 99 is accepted if 99 is found, but the full six is expected.
+
+**10.** *Watching a variable to locate the defect.* range(1, 3) gives i = 1, 2. Watch: after the first pass i = 1, t = 0 + 8 = 8; after the second pass i = 2, t = 8 + 2 = 10; the loop ends and 10 is returned. The state is wrong from the very first pass: t should be 5 after adding prices[0], but the loop started at index 1 and prices[0] = 5 is never added. The defect is an off-by-one in the loop range: range(1, ...) should be range(0, ...) or range(len(prices)).
+
+Final answer: (i, t) = (1, 8), (2, 10); first wrong at the first pass; defect: off-by-one, the loop skips index 0. Also accepted: describing the fix as `for p in prices`. Naming the defect as a wrong accumulator start or integer division is wrong.
+
+**11.** *Classifying failures by testing method.* (a) Performance testing: correct output but poor behaviour under load, which is a non-functional matter of network delays, database and client-side processing under different load conditions. (b) Usability testing: an issue discovered with the help of users who are observed while using the software. (c) Security testing: a confidentiality flaw, one customer reading another's data. (d) Unit testing: a single function does not perform as expected, which is a functional failure.
+
+A correct answer names performance, usability, security and unit, and says only (d) is functional, because the other three concern how well or how safely the app works rather than whether it does the right thing. Calling (a) system testing, or (d) acceptance testing, is not accepted.
+
+**12.** *Limits of unit testing.* Unit testing uses test data to check the execution paths in a function, and its stated limitation is that it is practically impossible to test all the execution paths, and the number and type of test data that can be used are limited. So a passing unit suite shows only that the paths exercised by the chosen data behaved; other paths and other data are untested. Integration testing checks how well the different parts work together, which no test of one part in isolation can show, such as a correct function being handed the wrong argument by its caller. System testing checks the system as a whole after all parts are integrated against the technical and functional requirements, which is the only level at which 'the program works' can be claimed.
+
+A correct answer states the limitation in terms of untested paths and limited test data, and gives the distinct purpose of integration and of system testing.

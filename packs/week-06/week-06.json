@@ -13,7 +13,8 @@
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Nigeria's indigenous trade system c. 1500-1800 AD, and its colonial disruption into the Western capitalist model.\n\nThen Nigeria's economic development since 1960 - the oil boom, SAP, the democratic-era GDP and reserve figures, and the stated causes of and solutions to Nigeria's economic woes"
+        "topic": "Nigeria's indigenous trade system c. 1500-1800 AD, and its colonial disruption into the Western capitalist model.\n\nThen Nigeria's economic development since 1960 - the oil boom, SAP, the democratic-era GDP and reserve figures, and the stated causes of and solutions to Nigeria's economic woes",
+        "checkFile": "checks/Mon-GST_112-fast.md"
       }
     },
     {
@@ -25,7 +26,8 @@
       },
       "fast": {
         "course": "CSC_106",
-        "topic": "Forms in JavaScript, events, promises and async/await, the event loop, ES6 and AJAX."
+        "topic": "Forms in JavaScript, events, promises and async/await, the event loop, ES6 and AJAX.",
+        "checkFile": "checks/Tue-CSC_106-fast.md"
       }
     },
     {
@@ -37,7 +39,8 @@
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Steps to writing a summary, a letter and a report - the ordered procedure for each.\n\nThe five key parts of a letter.\n\nThe standard report sections, from introduction and methodology through findings, conclusions and recommendations"
+        "topic": "Steps to writing a summary, a letter and a report - the ordered procedure for each.\n\nThe five key parts of a letter.\n\nThe standard report sections, from introduction and methodology through findings, conclusions and recommendations",
+        "checkFile": "checks/Wed-GST_122-fast.md"
       }
     },
     {
@@ -49,7 +52,8 @@
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Charging a capacitor: V(t) = V0(1 - e^(-t/tau)).\n\nReading the time constant off the 63.2% point of the V-t curve. Obtaining C = tau/R and its percentage error.\n\nPlus the apparatus, procedure, precautions and sources of error"
+        "topic": "Charging a capacitor: V(t) = V0(1 - e^(-t/tau)).\n\nReading the time constant off the 63.2% point of the V-t curve. Obtaining C = tau/R and its percentage error.\n\nPlus the apparatus, procedure, precautions and sources of error",
+        "checkFile": "checks/Thu-PHY_108-fast.md"
       }
     },
     {
@@ -62,7 +66,7 @@
       "fast": {
         "course": "COS_102",
         "topic": "Applied pseudocode.\n\nTracing a fragment line by line to what it prints. Finding the bug in a fragment and naming the rule or condition it breaks. Choosing the fragment that implements a stated task.\n\nAnd the off-by-one and loop-condition traps in FOR, WHILE and REPEAT-UNTIL",
-        "checkFile": "checks/Sat-COS_102.md"
+        "checkFile": "checks/Fri-COS_102-fast.md"
       }
     },
     {
@@ -231,131 +235,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "The SECOND-ORDER DERIVATIVE slide says how the second derivative is obtained. In her phrasing, it is obtained",
+          "q": "f(x) = x⁵ − 3x³ + 7x − 2. Find f″(x).",
           "options": [
-            "by differentiating the first derivative again",
-            "by squaring the first derivative",
-            "by differentiating the original function with respect to a second variable",
-            "by differentiating the original function and multiplying the result by 2"
-          ],
-          "answerIndex": 0,
-          "concept": "What 'higher-order' actually instructs you to do",
-          "why": "Her line is exactly 'The second derivative is gotten by differentiating y′ again' — you feed the answer you already have back into the same machinery. Option 2 reads the double prime as a power; f″ and (f′)² are different functions, as x^(3/2) shows immediately. Option 3 imports partial derivatives, which the deck never mentions and which need a function of two variables. Option 4 confuses the order counter with a multiplier — nothing is multiplied by 2 anywhere in her working."
-        },
-        {
-          "type": "mcq",
-          "q": "In her sin(5x) + e^(3x) example the coefficients of the trigonometric term run 5, then 25, then 125 across the first three derivatives. Why do they keep growing?",
-          "options": [
-            "Because the argument 5x is raised to a higher power at each order",
-            "Because the chain rule supplies the inner derivative 5 afresh at every differentiation",
-            "Because the notation d²y/dx² and d³y/dx³ squares and cubes the coefficient",
-            "Because sin(5x) has period 2π/5, and the period appears in the derivative"
-          ],
-          "answerIndex": 1,
-          "concept": "Why the chain factor reappears at every order",
-          "why": "The chain rule as she states it, f′(x) = y′(u)·u′(x), applies again every time you differentiate, and u = 5x always contributes u′ = 5 — so the coefficient is multiplied by 5 once per order: 5, 25, 125. Option 1 is false: the argument stays 5x throughout, it is the coefficient in front that changes. Option 3 treats the Leibniz superscript as an algebraic power; it is a counter. Option 4 is a true fact about the function that plays no part in differentiating it."
-        },
-        {
-          "type": "mcq",
-          "q": "For f(x) = ln(1 + x²), which rules does the deck use to reach the second derivative?",
-          "options": [
-            "The quotient rule for the first derivative, then the chain rule for the second",
-            "The chain rule for both",
-            "The chain rule for the first derivative, then the quotient rule for the second",
-            "The product rule for the first derivative, then the chain rule for the second"
+            "5x⁴ − 9x² + 7",
+            "20x³ − 9x",
+            "20x³ − 18x",
+            "20x³ − 18x + 7"
           ],
           "answerIndex": 2,
-          "concept": "The rule is chosen by the shape of what you are differentiating now",
-          "why": "ln(1 + x²) is a composite, so the chain rule gives f′(x) = 2x/(1 + x²). That answer is a quotient, so the second derivative needs the quotient rule — she says so explicitly: 'The first derivative is a quotient.' Option 1 swaps the order and would need a quotient to start with, which ln(1 + x²) is not. Option 2 misses that the chain rule has nothing to act on once the composite has been unwrapped. Option 4 misreads 2x/(1 + x²) — or the original — as a product."
+          "concept": "Second derivative of a polynomial",
+          "why": "Differentiate once: f′(x) = 5x⁴ − 9x² + 7 (the constant −2 goes to 0). Differentiate f′ again: 20x³ − 18x + 0, so f″(x) = 20x³ − 18x.\n\n5x⁴ − 9x² + 7 stops at the first derivative; 20x³ − 9x lowers the power of −9x² but forgets to multiply by the 2; 20x³ − 18x + 7 keeps the constant 7 from f′, when the derivative of a constant is zero."
         },
         {
           "type": "mcq",
-          "q": "The FOURTH DERIVATIVE slide ends with a note on notation. It says f⁽⁴⁾(x) can also be written as",
+          "q": "Differentiate y = 4 tan x − 1.",
           "options": [
-            "[f(x)]⁴",
-            "f(4)",
-            "4·f′(x)",
-            "(f‴(x))′"
-          ],
-          "answerIndex": 3,
-          "concept": "The bracketed superscript counts differentiations",
-          "why": "The fourth derivative is the derivative of the third, which is what (f‴(x))′ says; the brackets on the 4 exist precisely to stop it being read as a power. Option 1 is that misreading, and for f(x) = ln(1 + x²) the two are wildly different. Option 2 reads it as a value of f at 4 — the same confusion that produced the deck's own misprints 'f(2) = ln x' and 'f(2) = xeˣ'. Option 3 invents a constant multiple."
-        },
-        {
-          "type": "mcq",
-          "q": "Differentiating y = 3 tan x + 3 gives dy/dx = 3 sec²x. What has happened to each of the two threes?",
-          "options": [
-            "The multiplying 3 stays and multiplies sec²x; the added 3 differentiates to 0",
-            "Both threes stay, giving 3 sec²x + 3",
-            "Both threes vanish, giving sec²x",
-            "The multiplying 3 vanishes and the added 3 survives"
+            "4 sec²x",
+            "4 sec²x − 1",
+            "sec²x",
+            "4 sec x"
           ],
           "answerIndex": 0,
-          "concept": "Constant multiple survives, added constant dies",
-          "why": "A constant multiplier is pulled outside the derivative and stays — she writes 3·d(tan x)/dx — while an added constant differentiates to 0, which is the bold NOTE on the FIRST-ORDER DERIVATIVE slide, d(4)/dx = 0. She even writes the '+ 0' rather than dropping it silently. Option 2 keeps a constant that must vanish. Option 3 applies the constant rule to a multiplier, which it does not govern. Option 4 gets both backwards."
+          "concept": "Derivative of tan x with a constant multiple and a constant term",
+          "why": "Split the sum: dy/dx = d(4 tan x)/dx − d(1)/dx = 4·d(tan x)/dx − 0. Since d(tan x)/dx = sec²x, dy/dx = 4 sec²x.\n\n4 sec²x − 1 keeps the constant term, which should differentiate to 0; sec²x throws away the multiplier 4, confusing 'a constant differentiates to 0' with 'constants disappear from products'; 4 sec x forgets the square in the derivative of tan x."
         },
         {
           "type": "mcq",
-          "q": "Why does she rewrite f(x) = √(x³) as y = x^(3/2) before differentiating?",
+          "q": "y = √(x⁵). Find the second derivative d²y/dx².",
           "options": [
-            "Because the square root of a cube is undefined for negative x",
-            "Because the power rule f′ = nx^(n−1) can only be applied to something already written as a power of x",
-            "Because the second derivative of a square root would otherwise not exist",
-            "Because fractional exponents differentiate to zero"
-          ],
-          "answerIndex": 1,
-          "concept": "Rewriting as xⁿ is what makes the power rule applicable",
-          "why": "The only rule she has for this function is f′ = nx^(n−1), and it needs to see an exponent n. Once √(x³) is x^(3/2), n = 3/2 and the rule runs twice without any new machinery: (3/2)x^(1/2), then (3/4)x^(−1/2). Option 1 raises a domain point that is true but irrelevant to why the rewrite is done. Option 3 is false — existence is not the issue. Option 4 confuses a fractional exponent with a constant; only constants differentiate to 0."
-        },
-        {
-          "type": "mcq",
-          "q": "A student memorises the quotient rule as [u(x)v′(x) − v(x)u′(x)]/(v(x))². What does that do to the ln(1 + x²) working?",
-          "options": [
-            "Nothing, because subtraction of the two products is symmetric here",
-            "It squares every answer",
-            "It produces the negative of the correct derivative at every order",
-            "It leaves the second derivative correct but breaks the third"
-          ],
-          "answerIndex": 2,
-          "concept": "Why v·u′ must come first in the quotient rule",
-          "why": "Swapping the two products negates the numerator, so f″ would come out as (2x² − 2)/(1 + 2x² + x⁴) instead of (2 − 2x²)/(1 + 2x² + x⁴) — the right expression with the wrong sign — and the error then propagates through the third and fourth orders. Option 1 is false: a − b and b − a differ whenever a ≠ b. Option 2 confuses the numerator order with the squared denominator. Option 4 wrongly suggests the mistake is self-correcting at one order."
-        },
-        {
-          "type": "mcq",
-          "q": "On her APPLICATION TO THE REAL-WORLD slide, what do the second and third derivatives of a car's position represent?",
-          "options": [
-            "Velocity and acceleration",
-            "Acceleration and velocity",
-            "Displacement and velocity",
-            "Acceleration and jerk"
+            "(5/2)x^(3/2)",
+            "(15/4)x^(3/2)",
+            "(5/4)x^(1/2)",
+            "(15/4)x^(1/2)"
           ],
           "answerIndex": 3,
-          "concept": "Physical reading of the second and third derivatives",
-          "why": "Her words: the second derivative 'gives us the acceleration (how the car is speeding up or slowing down)' and the third 'tells us about jerk (how the acceleration is changing)'. Option 1 is off by one order — velocity is the first derivative. Option 2 has the right two words in the wrong order, so it makes jerk-free nonsense of the third derivative. Option 3 is off by two orders, since displacement is the position function itself."
+          "concept": "Second derivative with a fractional index",
+          "why": "Rewrite the root as a power: y = x^(5/2). First derivative: y′ = (5/2)x^(3/2). Differentiate y′ again: y″ = (5/2)·(3/2)x^(3/2 − 1) = (15/4)x^(1/2), which is (15/4)√x.\n\n(5/2)x^(3/2) is the first derivative only; (15/4)x^(3/2) multiplies the coefficients but forgets to lower the index a second time; (5/4)x^(1/2) uses 1/2 as the multiplier instead of the actual index 3/2."
+        },
+        {
+          "type": "mcq",
+          "q": "y = 3/x². Find y″.",
+          "options": [
+            "−18/x⁴",
+            "18/x⁴",
+            "−6/x³",
+            "6/x⁴"
+          ],
+          "answerIndex": 1,
+          "concept": "Second derivative with a negative index",
+          "why": "Rewrite as a power: y = 3x⁻². Then y′ = 3(−2)x⁻³ = −6x⁻³, and y″ = −6(−3)x⁻⁴ = 18x⁻⁴ = 18/x⁴. The sign flips at each step: negative, then back to positive.\n\n−18/x⁴ keeps the minus from the first derivative instead of flipping it again; −6/x³ is the first derivative; 6/x⁴ lowers the index twice but multiplies by −2 only once, missing the factor −3."
+        },
+        {
+          "type": "mcq",
+          "q": "y = sin(4x). Find y″.",
+          "options": [
+            "−16 sin(4x)",
+            "−4 sin(4x)",
+            "16 sin(4x)",
+            "−16 cos(4x)"
+          ],
+          "answerIndex": 0,
+          "concept": "Chain factor deposited at every order",
+          "why": "Chain rule with u = 4x: y′ = cos(4x)·4 = 4 cos(4x). Differentiate again, and the chain rule deposits another 4: y″ = 4·(−sin(4x))·4 = −16 sin(4x). Note y″ = −16y.\n\n−4 sin(4x) collects the factor 4 only once, when each differentiation supplies one; 16 sin(4x) loses the minus that comes from differentiating cos; −16 cos(4x) has the right coefficient but does not change cos back to sin."
+        },
+        {
+          "type": "mcq",
+          "q": "y = e^(2x). Find the third derivative d³y/dx³.",
+          "options": [
+            "e^(2x)",
+            "2e^(2x)",
+            "6e^(2x)",
+            "8e^(2x)"
+          ],
+          "answerIndex": 3,
+          "concept": "Repeated derivatives of e^(kx)",
+          "why": "Each differentiation of e^(2x) leaves e^(2x) unchanged and multiplies by the inner derivative 2: y′ = 2e^(2x), y″ = 4e^(2x), y‴ = 8e^(2x). The coefficient is 2³ = 8 and the exponent 2x never changes.\n\ne^(2x) treats e^(2x) like eˣ and ignores the chain factor; 2e^(2x) collects the factor 2 once instead of three times; 6e^(2x) adds the three factors (2 + 2 + 2) instead of multiplying them."
+        },
+        {
+          "type": "mcq",
+          "q": "y = (2x + 1)³. Find y″.",
+          "options": [
+            "6(2x + 1)²",
+            "24(2x + 1)",
+            "12(2x + 1)",
+            "24(2x + 1)²"
+          ],
+          "answerIndex": 1,
+          "concept": "Second derivative with the chain rule on a bracket",
+          "why": "Chain rule with u = 2x + 1: y′ = 3u²·2 = 6(2x + 1)². Differentiate y′ with the chain rule again: y″ = 6·2(2x + 1)·2 = 24(2x + 1), which expands to 48x + 24.\n\n6(2x + 1)² is the first derivative; 12(2x + 1) forgets the inner derivative 2 on the second pass; 24(2x + 1)² multiplies by the power but never lowers it."
+        },
+        {
+          "type": "mcq",
+          "q": "What does the notation f⁽⁴⁾(x) mean?",
+          "options": [
+            "f(x) evaluated at x = 4",
+            "[f(x)]⁴, the fourth power of f",
+            "(f‴(x))′, the derivative of the third derivative",
+            "4·f′(x)"
+          ],
+          "answerIndex": 2,
+          "concept": "Bracketed superscript notation for higher derivatives",
+          "why": "From the fourth order on, prime marks are replaced by a bracketed superscript that counts how many times f has been differentiated: f⁽⁴⁾(x) = (f‴(x))′. In Leibniz form it is d⁴y/dx⁴.\n\nf(4) with no superscript brackets would be the value at x = 4; [f(x)]⁴ reads the counter as a power, which is exactly what the brackets are there to prevent; 4·f′(x) invents a constant multiple."
         },
         {
           "type": "short",
-          "q": "Explain what makes a derivative 'higher-order', and why this week introduces no new differentiation rules at all.",
-          "concept": "Higher-order differentiation as iteration of Week 5 rules",
-          "why": "A good answer says: a higher-order derivative is any derivative beyond the first, obtained by differentiating the previous derivative again — f″ = (f′)′, f‴ = (f″)′, f⁽⁴⁾ = (f‴)′ — so the nth derivative is written f⁽ⁿ⁾(x). No new rule is needed because at every stage you are differentiating an ordinary function of x with the ordinary rules: power, chain, quotient, product. What changes from order to order is only which rule the current expression demands, and her SUMMARY slide puts it exactly that way — the rules are 'applied iteratively'. The ln(1 + x²) example is the demonstration: the chain rule once, then the quotient rule three times, because the shape of the expression changed after the first step."
+          "q": "y = ln x. Find y′, y″ and y‴, writing each answer both as a fraction and as a negative power of x. Show your working.",
+          "concept": "Successive derivatives of ln x",
+          "why": "From d(ln x)/dx = 1/x: y′ = 1/x = x⁻¹. Differentiate the power: y″ = (−1)x⁻² = −x⁻² = −1/x². Differentiate again: y‴ = −(−2)x⁻³ = 2x⁻³ = 2/x³.\n\nFinal answer: y′ = 1/x (x⁻¹), y″ = −1/x² (−x⁻²), y‴ = 2/x³ (2x⁻³). A correct answer shows each derivative obtained from the previous one by the power rule, with the sign going +, −, + and the coefficient 1, 1, 2. Writing y‴ = −2/x³ (carrying the minus through) or 1/x³ (dropping the factor 2) is wrong."
         },
         {
           "type": "short",
-          "q": "In her result d³y/dx³ = −125 cos(5x) + 27e^(3x), explain why the exponential term is positive while the trigonometric term carries a minus sign.",
-          "concept": "Sign behaviour of eᵘ versus sin and cos under repeated differentiation",
-          "why": "A good answer separates the two terms. For e^(3x): d(eˣ)/dx = eˣ, so the exponential reproduces itself exactly and the only thing each differentiation adds is a chain factor 3 — 3, 9, 27 — all positive, and no differentiation can ever introduce a minus. For sin(5x): the derivatives cycle sin → cos → −sin → −cos, so a sign appears at the second differentiation and is still there at the third; combined with the chain factors this gives 5 cos(5x), then −25 sin(5x), then −125 cos(5x). The answer should draw the moral: the minus belongs to the trigonometric term alone, and writing −125 cos(5x) − 27e^(3x) applies it to a term that can never be negative for real x."
+          "q": "A particle's position at time t is s(t) = t³ − 6t² + 9t. Find its velocity and its acceleration at t = 4, and state which derivative of s each one is. Show your working.",
+          "concept": "Second derivative as acceleration",
+          "why": "Velocity is the first derivative: v(t) = s′(t) = 3t² − 12t + 9, so v(4) = 48 − 48 + 9 = 9. Acceleration is the second derivative, the derivative of velocity: a(t) = s″(t) = 6t − 12, so a(4) = 24 − 12 = 12.\n\nFinal answer: velocity 9 (first derivative of s), acceleration 12 (second derivative of s). A correct answer shows both derivatives, substitutes t = 4, and identifies velocity as ds/dt and acceleration as d²s/dt². Substituting t = 4 into s itself (giving 4) is the position, not the velocity."
         },
         {
           "type": "short",
-          "q": "The THIRD-ORDER DERIVATIVE slide asks for 'the third derivative of f(2) = ln x'. Say what is wrong with that as printed, what she must have meant, and how you can tell.",
-          "concept": "Reading a misprinted question against the working that follows it",
-          "why": "A good answer says that f(2) is a number — the value of f at x = 2 — and a number has no derivative with respect to x, so 'the third derivative of f(2)' is meaningless as written. The intended question is: for f(x) = ln x, find f‴(2). The evidence is the slide's own last line, 'Thus, f‴(2) = 2/2³ = 2/8 = 1/4', which evaluates the third derivative at x = 2. The answer should note that the same misprint recurs on the TASK slide, 'f(2) = xeˣ', so it should be read the same way — find f‴(2) — and that flagging it matters because copying 'f(2) = ln x' into an exam script would be marked wrong even though the arithmetic that follows is right."
+          "q": "y = 2 sin x − 3 cos x. Find y″ and show that y″ = −y. Show your working.",
+          "concept": "Sign cycle of sin and cos under repeated differentiation",
+          "why": "y′ = 2 cos x − 3(−sin x) = 2 cos x + 3 sin x. Differentiate again: y″ = 2(−sin x) + 3 cos x = −2 sin x + 3 cos x. Compare with y: −y = −(2 sin x − 3 cos x) = −2 sin x + 3 cos x, which is exactly y″.\n\nFinal answer: y″ = −2 sin x + 3 cos x = −y. A correct answer has the minus appear when cos is differentiated (twice: once in y′, once in y″) and states the comparison with −y explicitly. y″ = 2 sin x − 3 cos x (no sign change) or y′ = 2 cos x − 3 sin x (minus on cos lost) is wrong."
         },
         {
           "type": "short",
-          "q": "Her SUMMARY slide lists the product rule among the rules used for higher-order derivatives, yet none of her six worked examples uses it. Where in the deck is it actually needed, and what does applying it there involve?",
-          "concept": "The one place the product rule is required, and why every order needs it again",
-          "why": "A good answer identifies the second TASK slide, f(x) = xeˣ, as the only place: it is a product of x and eˣ, and neither factor is constant, so (uv)′ = u′v + uv′ is unavoidable. It should then show that the rule is needed afresh at each order, because each result is still a product: f′ = 1·eˣ + x·eˣ = (x + 1)eˣ; f″ = 1·eˣ + (x + 1)eˣ = (x + 2)eˣ; f‴ = 1·eˣ + (x + 2)eˣ = (x + 3)eˣ. A strong answer adds that each differentiation simply adds 1 to the bracket, and that since the slide's 'f(2)' means evaluate at 2, the answer is 5e². It should also note the scope point: the SUMMARY lists rules the deck names, not only rules it demonstrates."
+          "q": "Explain what a higher-order derivative is and why finding one needs no new rule. Using y = x^(3/2), say which expression you differentiate to get y″, and why the coefficients multiply while the index falls by 1 each time.",
+          "concept": "Higher-order derivatives as repeated differentiation",
+          "why": "A higher-order derivative is the derivative of a derivative: y″ is the derivative of y′, y‴ the derivative of y″, and so on. No new rule is needed because at each order you simply apply the ordinary rules (power, chain, product, quotient) to whatever expression you have just written down. For y = x^(3/2), y′ = (3/2)x^(1/2), and y″ is found by differentiating that expression, not the original: the power rule multiplies by the current index 1/2 and lowers it by 1, giving (3/2)(1/2)x^(−1/2) = (3/4)x^(−1/2). The coefficient multiplies because each application brings down the current index; the index falls by 1 because that is what the power rule does every time, fractions and negatives included.\n\nA correct answer says 'derivative of the previous derivative', names the rules as the ordinary ones reused, differentiates y′ (not y) to get y″, and gives (3/4)x^(−1/2)."
         }
       ]
     },
@@ -369,131 +373,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Slide 4 defines the peak value of a waveform. Which statement is her definition?",
+          "q": "A sinusoidal supply has a peak voltage of 340 V. What is its rms voltage?",
           "options": [
-            "The maximum instantaneous value reached in one complete cycle, measured from the zero reference point",
-            "The full swing of the waveform from its trough to its crest",
-            "The value an AC voltmeter displays when connected to the supply",
-            "The value of the waveform averaged over one positive half-cycle"
-          ],
-          "answerIndex": 0,
-          "concept": "Peak value is measured from zero, not trough to crest",
-          "why": "Her wording is 'the maximum instantaneous value that a waveform reaches during one complete cycle… typically measured from the zero reference point', so the reference point is the axis. Option 2 is the trough-to-crest swing, which is twice the peak — a quantity this deck never names or uses. Option 3 is the rms value: slide 10 says AC ammeters and voltmeters are designed to read rms, so a meter never shows you the peak. Option 4 is the rectified half-cycle mean, 0.6366 I_max, which appears only as a diagram label and is never defined."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 9 opens by saying that a direct average of an alternating current 'gives no information (or useless)'. What exactly is wrong with it?",
-          "options": [
-            "The average is undefined because the current changes direction",
-            "Over a complete cycle the positive and negative half-cycles cancel, so the mean is zero for every amplitude",
-            "The average depends on where in the cycle you start measuring, so it is not unique",
-            "The average is correct but too small to measure with ordinary instruments"
-          ],
-          "answerIndex": 1,
-          "concept": "Why the full-cycle mean of an alternating quantity carries no information",
-          "why": "The instantaneous value is positive through one half-cycle and negative through the other, and the two halves are equal in area, so the mean is exactly zero — the same zero for a 1 A supply and a 1000 A supply, which is why it carries no information. Option 1 confuses 'the mean is zero' with 'the mean does not exist'; it exists and equals 0. Option 3 is false for a whole number of cycles: the mean is zero from any starting point. Option 4 invents an instrumental problem where the problem is mathematical — a zero mean would predict zero heating, which is plainly wrong."
-        },
-        {
-          "type": "mcq",
-          "q": "She fixes the problem by squaring: I² = I²_max sin²ωt. What does the squaring achieve, and what does it cost?",
-          "options": [
-            "It doubles the frequency, which makes the average easier to compute",
-            "It converts amperes to watts, so the result is already a power",
-            "It removes the sign, so the negative half-cycle no longer cancels the positive one — at the cost that the answer must be square-rooted at the end to return to amperes",
-            "It removes the time dependence entirely, leaving a constant"
+            "481 V",
+            "170 V",
+            "240 V",
+            "340 V"
           ],
           "answerIndex": 2,
-          "concept": "Squaring kills the sign, and the final root undoes the unit damage",
-          "why": "I² is never negative, so its graph (her slide-9 picture) sits wholly above the axis and has a genuine non-zero mean, I²_max/2. But I² is in A², so the square root at the end is not decoration — it is what returns the answer to amperes. Option 1 is a true side effect of squaring a sinusoid but not the reason she does it. Option 2 confuses I² with I²R; squaring a current does not by itself produce a power, since R is missing. Option 4 is false — I² still oscillates, as her diagram shows; only its average is constant."
+          "concept": "Rms value from peak value",
+          "why": "V_rms = 0.7071 V_max = 0.7071 × 340 = 240 V (240.4 V). Peak to rms always makes the number smaller.\n\n481 V multiplies by 1.4142 instead, giving an rms above the peak, which no waveform can have; 170 V halves the peak instead of dividing by √2; 340 V quotes the peak as if it were the rms."
         },
         {
           "type": "mcq",
-          "q": "Slide 7 gives ω = 2πf = 2π/T. Which statement about these three quantities is correct?",
+          "q": "A supply has frequency 60 Hz. What is its angular frequency ω?",
           "options": [
-            "ω and f are the same quantity written in different letters, both in hertz",
-            "T is measured in hertz and f in seconds",
-            "ω is in hertz, and multiplying by 2π converts it to radians",
-            "f is in Hz and T in s with f = 1/T, while ω is in rad s⁻¹ and is 2π times larger than f"
-          ],
-          "answerIndex": 3,
-          "concept": "Units of ω, f and T, and the factor 2π between ω and f",
-          "why": "f counts cycles per second (Hz), T is the seconds per cycle (s), and ω measures the angle swept per second, so ω = 2πf rad s⁻¹ because one cycle is 2π radians. At 50 Hz, ω = 314 rad s⁻¹ — the two numbers are not interchangeable, and putting f where ω belongs is out by 6.28. Option 1 collapses the distinction the slide exists to make. Option 2 swaps the units of T and f. Option 3 has the direction of the conversion right but attaches the wrong unit to ω itself."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 10 ends: 'rms values are used when discussing alternating currents and voltages because AC ammeters and voltmeters are designed to read rms values.' Taken with the slide-5 definition, what does a meter reading of 240 V on an AC supply tell you?",
-          "options": [
-            "The supply would heat a given resistor at the same average rate as a steady 240 V DC supply, and its instantaneous voltage reaches about 339 V",
-            "The instantaneous voltage never exceeds 240 V, that being the largest value the supply produces",
-            "The voltage averaged over a complete cycle is 240 V",
-            "The peak voltage is 170 V, since the rms is the larger of the two figures"
-          ],
-          "answerIndex": 0,
-          "concept": "Reading an rms figure back as a statement about heating and about the peak",
-          "why": "The rms value is defined by equal power dissipation in a resistive load, so 240 V rms and 240 V DC heat the same resistor identically; and V_max = 1.4142 × 240 = 339 V, so the instantaneous value does exceed the meter reading for part of every half-cycle. Option 2 confuses rms with peak. Option 3 confuses rms with the full-cycle mean, which is exactly zero. Option 4 uses the factor backwards and asserts a peak smaller than the rms, which no waveform can have."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 8 writes I = V/R = (V_max/R) sin ωt = I_max sin ωt. Which pair of conclusions does that chain establish?",
-          "options": [
-            "That the current lags the voltage by 90°, and that I_max = V_max/R",
-            "That the current and the voltage share the same sin ωt and so are in phase, and that I_max = V_max/R",
-            "That R changes with frequency, and that I_rms = V_max/R",
-            "That the current is constant while the voltage alternates, and that I_max = V_max R"
+            "60 rad/s",
+            "377 rad/s",
+            "9.55 rad/s",
+            "0.0167 rad/s"
           ],
           "answerIndex": 1,
-          "concept": "What Ohm's law applied to a resistor fixes: the phase and the amplitude relation",
-          "why": "Dividing V_max sin ωt by the constant R leaves the same sin ωt, so nothing is shifted in time — in a resistor voltage and current rise, fall and cross zero together — and matching the result to I_max sin ωt identifies I_max = V_max/R. Option 1 imports a 90° shift that belongs to inductors and capacitors, neither of which is in this deck. Option 3 crosses an rms value with a peak value, out by √2, and makes a constant depend on frequency. Option 4 multiplies where Ohm's law divides, and would give amperes as volt-ohms."
+          "concept": "Angular frequency from frequency",
+          "why": "ω = 2πf = 2π × 60 = 377 rad/s (376.99 to five figures).\n\n60 rad/s uses f where ω belongs, out by a factor of 2π; 9.55 rad/s divides by 2π instead of multiplying; 0.0167 is the period T = 1/f in seconds, not an angular frequency."
         },
         {
           "type": "mcq",
-          "q": "'Root mean square' names three operations. In what order are they applied to the instantaneous current?",
+          "q": "A source with V = 50 sin ωt (volts) is connected across a 20 Ω resistor. What is the peak current?",
           "options": [
-            "Take the root, then the mean, then square the result",
-            "Take the mean, then square it, then take the root",
-            "Square it, then take the mean of the squares, then take the root",
-            "Square it, then take the root, then average the result"
-          ],
-          "answerIndex": 2,
-          "concept": "Reading the name RMS backwards to get the order of operations",
-          "why": "The name is read from the outside in: the root of the mean of the square. Squaring first is what removes the sign; averaging second gives I²_max/2; rooting third returns the answer to amperes as 0.7071 I_max. Option 1 reverses the order completely. Option 2 averages the raw current first, which gives zero, so squaring and rooting a zero still leaves zero. Option 4 undoes the squaring before the average is taken — the root of I² is the magnitude of I, whose average is the rectified mean 0.6366 I_max, not the rms."
-        },
-        {
-          "type": "mcq",
-          "q": "Which of these does the Week 6 deck actually contain?",
-          "options": [
-            "The condition for series resonance, X_L = X_C",
-            "The impedance of a series RLC circuit, Z = √(R² + (X_L − X_C)²)",
-            "Kirchhoff's voltage law applied by vector addition of component voltages",
-            "The average power in a resistor, P_av = I²_rms R = V²_rms/R"
+            "1.8 A",
+            "3.5 A",
+            "0.40 A",
+            "2.5 A"
           ],
           "answerIndex": 3,
-          "concept": "The scope boundary of this deck",
-          "why": "P_av = I²_rms R and P_av = V²_rms/R are the two lines of slide 15, and P_av is computed in her Question 3. The other three belong to the week's separate summary sheet and to the Week 7 deck on phasor diagrams and power; reactance, impedance, phase angle and resonance appear nowhere in these 21 slides. Knowing the boundary matters: a Week 6 answer built on impedance is answering a question she has not yet asked, and it costs time that should go on the three practice questions."
+          "concept": "Peak current from peak voltage by Ohm's law",
+          "why": "I = V/R = (50/20) sin ωt = 2.5 sin ωt, so I_max = V_max/R = 2.5 A. Ohm's law links the two amplitudes directly.\n\n1.8 A divides the rms voltage (35.4 V) by R, mixing an rms with a peak; 3.5 A multiplies 2.5 A by √2, as if 50 V were an rms value; 0.40 A is R/V, the ratio upside down."
+        },
+        {
+          "type": "mcq",
+          "q": "An AC ammeter in series with a heater reads 4.0 A. What is the peak current through the heater?",
+          "options": [
+            "2.83 A",
+            "4.0 A",
+            "8.0 A",
+            "5.66 A"
+          ],
+          "answerIndex": 3,
+          "concept": "Peak value from an rms meter reading",
+          "why": "AC meters read rms, so I_rms = 4.0 A and I_max = I_rms/0.7071 = 4.0 × 1.4142 = 5.66 A.\n\n2.83 A multiplies by 0.7071 instead of dividing, giving a peak below the rms; 4.0 A treats the meter reading as the peak; 8.0 A doubles it, confusing the peak with the trough-to-crest swing."
+        },
+        {
+          "type": "mcq",
+          "q": "An alternating current has peak value 6.0 A. What is the average value of I² over one complete cycle?",
+          "options": [
+            "36 A²",
+            "18 A²",
+            "4.24 A²",
+            "0 A²"
+          ],
+          "answerIndex": 1,
+          "concept": "Mean of the squared current",
+          "why": "I² = I²_max sin²ωt, and the average of sin²ωt over a cycle is ½, so (I²)_av = ½I²_max = ½ × 36 = 18 A². Its square root, 4.24 A, is the rms current.\n\n36 A² is I²_max itself, forgetting the ½; 4.24 A² is the rms current wearing the wrong unit; 0 is the average of I, not of I², which is exactly why squaring is needed."
+        },
+        {
+          "type": "mcq",
+          "q": "A current is given by i = 3.0 sin(200πt) A. What is its period?",
+          "options": [
+            "0.010 s",
+            "0.0050 s",
+            "100 s",
+            "1.6 × 10⁻³ s"
+          ],
+          "answerIndex": 0,
+          "concept": "Period from the angular frequency in an equation",
+          "why": "Compare with i = I_max sin ωt: ω = 200π rad/s. Then f = ω/2π = 100 Hz and T = 1/f = 0.010 s (equivalently T = 2π/ω).\n\n0.0050 s takes 200 as the frequency and computes 1/200; 100 s reads the frequency as if it were the period; 1.6 × 10⁻³ s is 1/ω, forgetting the 2π."
+        },
+        {
+          "type": "mcq",
+          "q": "A source voltage is v = 60 sin(100πt) V, with t in seconds. What is the instantaneous voltage at t = 2.5 ms?",
+          "options": [
+            "60 V",
+            "42 V",
+            "15 V",
+            "0.82 V"
+          ],
+          "answerIndex": 1,
+          "concept": "Instantaneous value from the source equation",
+          "why": "ωt = 100π × 0.0025 = 0.25π rad = 45°, so v = 60 sin 45° = 60 × 0.7071 = 42 V (42.4 V).\n\n60 V is the peak, reached only when ωt = 90°; 15 V drops the π (sin 0.25 rad = 0.247); 0.82 V feeds 0.785 into a calculator set to degrees."
+        },
+        {
+          "type": "mcq",
+          "q": "An AC voltmeter connected across a socket reads 230 V. Which value of the sinusoidal waveform is the meter reporting?",
+          "options": [
+            "The rms value",
+            "The peak value",
+            "The trough-to-crest swing",
+            "The average over one cycle"
+          ],
+          "answerIndex": 0,
+          "concept": "What AC meters read",
+          "why": "AC ammeters and voltmeters are designed to read rms values, the equivalent DC value that would dissipate the same power in a resistor. A 230 V reading therefore implies a peak of 230 × 1.4142 = 325 V.\n\nThe peak is larger than any rms reading; the trough-to-crest swing is twice the peak and is never displayed; the average over a full cycle is zero, which is why meters cannot be built to read it."
         },
         {
           "type": "short",
-          "q": "State the deck's definition of the rms value, and explain what the word 'equivalent' is doing in it.",
-          "concept": "RMS is defined by equal power dissipation, not by the shape of the waveform",
-          "why": "A good answer quotes slide 5: the rms value is a measure of the magnitude of an alternating current or voltage, representing the equivalent direct current value that would produce the same amount of power dissipation in a resistive load. On 'equivalent': it does not mean the AC and the DC are the same current — the AC is changing direction continuously and the DC is steady — it means they are interchangeable for one specific purpose, heating a resistance. So a 240 V rms supply and a 240 V DC supply make the same lamp equally bright and deliver the same average watts to the same resistor, which is exactly her slide-10 picture of an AC waveform set beside a flat 240 V DC line. The answer should draw the consequence: because the definition is about power, and power goes as the square, the rms is a root-mean-square rather than any kind of plain average."
+          "q": "The mains supply is 230 V rms at 50 Hz. Calculate the peak voltage and the angular frequency, then write the equation for the instantaneous voltage in the form v = V_max sin ωt. Show your working.",
+          "concept": "Writing the source equation from rms voltage and frequency",
+          "why": "V_max = V_rms/0.7071 = 230 × 1.4142 = 325 V (325.3 V). ω = 2πf = 2π × 50 = 314 rad/s (314.2). So v = 325 sin(314t) volts, with t in seconds and 314t in radians.\n\nA correct answer states V_max = 325 V (accept 324 to 326), ω = 314 rad/s (accept 314 to 315) and v = 325 sin(314t). Writing v = 230 sin(314t) uses the rms as the amplitude, and v = 325 sin(50t) uses f in place of ω; both are wrong."
         },
         {
           "type": "short",
-          "q": "Reproduce her slide-9 argument in your own words: why a plain average fails and why squaring rescues it.",
-          "concept": "The argument from a zero mean to the mean square",
-          "why": "A good answer runs it as an argument in three steps. First the problem: an alternating current is positive through one half-cycle and negative through the other, and the two halves have equal area, so averaged over a complete cycle it is exactly zero — her words, 'Both alternating voltage and current have a zero value. So direct average gives no information (or useless).' Zero is the answer for every amplitude, so it distinguishes nothing, and it would falsely predict no heating. Second the fix: square the current, I² = I²_max sin²ωt. A square is never negative, so the negative half-cycle no longer cancels the positive one and the graph of I² sits wholly above the axis, oscillating between 0 and I²_max about a mean of I²_max/2. Third the correction: I² is in A², so take the square root at the end, giving I_rms = I_max/√2 = 0.7071 I_max in amperes. It is worth adding that squaring is not an arbitrary trick — power in a resistance goes as I², so the mean of I² is precisely the quantity that determines the heating."
+          "q": "Starting from i = I_max sin ωt and the fact that the average of sin²ωt over a complete cycle is ½, show that I_rms = I_max/√2. Then calculate I_rms for I_max = 4.0 A. Show your working.",
+          "concept": "Derivation of the rms current",
+          "why": "Square: i² = I²_max sin²ωt. Average over a cycle: (i²)_av = I²_max × (sin²ωt)_av = ½I²_max. Root: I_rms = √(½I²_max) = I_max/√2 = 0.7071 I_max. For I_max = 4.0 A: I_rms = 4.0/1.4142 = 2.83 A (2.828 A).\n\nA correct answer shows the three steps in order (square, average, square root), arrives at I_max/√2, and gives 2.83 A (accept 2.8 to 2.9). Averaging before squaring gives zero and is wrong; leaving the answer as 8.0 A² (the mean square) is incomplete."
         },
         {
           "type": "short",
-          "q": "Slide 15 says: 'Recall that the power, P = I²R. By replacing I with I_rms, we have the average value of power.' Explain why that substitution needs no correction factor, and state the two forms she ends with.",
-          "concept": "Why substituting I_rms into P = I²R gives the true average power",
-          "why": "A good answer says that the average of a product with a constant is the constant times the average, so the average of I²R is (I²)_av times R — and (I²)_av is by definition I²_rms, since I_rms is the square root of the mean square. The substitution is therefore an identity, not an approximation, and no factor is lost or gained. It should contrast this with the current itself: substituting the average current would give zero, and substituting I_max would give twice the true power, because (I²)_av = ½I²_max. The two forms are P_av = I²_rms R and, applying Ohm's law with V_rms = I_rms R, P_av = V²_rms/R, both in watts with I in amperes, V in volts and R in ohms. A good answer may close by noting that the same reasoning is why the maximum instantaneous power is V²_max/R, exactly twice P_av."
+          "q": "An AC ammeter reads 3.0 A for the current in a 40 Ω resistor. Calculate the average power dissipated, the peak current, and the maximum instantaneous power. State what steady DC current would heat the resistor at the same average rate. Show your working.",
+          "concept": "Average power from an rms current",
+          "why": "The meter reads rms, so P_av = I²_rms R = (3.0)²(40) = 360 W. Peak current I_max = 3.0 × 1.4142 = 4.24 A. Maximum instantaneous power P_max = I²_max R = (4.24)²(40) = 720 W, exactly 2P_av. A steady DC current of 3.0 A would dissipate the same 360 W, which is what the rms value means.\n\nA correct answer states 360 W, 4.24 A (accept 4.2 to 4.3), 720 W and a DC current of 3.0 A. Using the peak current in P_av (720 W) or quoting 4.24 A as the equivalent DC current is wrong."
         },
         {
           "type": "short",
-          "q": "Her waveform diagram carries three labels: Peak Value (I_m), Average Value (I_av) = 0.6371 I_m, and RMS Value (I_rms) = 0.707 I_m. Explain what the middle one is, why it is not the rms value, and why you should not build an answer on it this week.",
-          "concept": "Distinguishing the rectified half-cycle mean from the rms value",
-          "why": "A good answer identifies the middle label as the rectified mean — the average of the waveform over a single half-cycle, taken so that the full-cycle zero is avoided — and says plainly that it is a different average from the rms: the rms squares before averaging, the rectified mean does not, so 0.7071 I_max and 0.6366 I_max are answers to different questions. It should note two further things. First, the deck never defines, derives or uses this quantity anywhere — it exists only as a label on a picture, and every calculation in the deck uses 0.7071. Second, the printed figure 0.6371 is itself slightly wrong: the rectified mean of a sinusoid is 2/π = 0.6366 I_max. So the correct exam behaviour is to know what the label means, quote 0.6366 if ever asked, and use 0.7071 for every actual calculation in this week's material."
+          "q": "Explain why the plain average of a sinusoidal current over a complete cycle gives no useful information, and how squaring the current fixes the problem. State the three operations in 'root mean square' in the order they are carried out.",
+          "concept": "Why rms rather than the plain average",
+          "why": "A sinusoidal current is positive for one half-cycle and negative for the other, and the two halves are mirror images, so over a complete cycle they cancel and the average is zero. That would falsely suggest the current does no heating. Squaring removes the sign: i² = I²_max sin²ωt is never negative, so it has a genuine non-zero average, ½I²_max, and this mean square is also what fixes the heating because power goes as i². The operations, in order: square the instantaneous value, take the mean over a cycle, take the square root.\n\nA correct answer says the full-cycle mean is zero because positive and negative halves cancel, that squaring makes every value non-negative (and matches P = i²R), and lists square, mean, root in that order."
         }
       ]
     },
@@ -506,131 +510,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Last week's deck defined a flowchart as 'a graphical representation of the sequence of operations in a computer program'. How does this week's deck define a pseudocode?",
+          "q": "What is printed?\n\n```\nSET x TO 3\nREPEAT\n    SET x TO x * 2\nUNTIL x > 40\nPRINT x\n```",
           "options": [
-            "As a step-by-step procedure for solving a problem, which may be expressed in natural language, programming code or mathematical symbols",
-            "As a simplified programming language whose statements a compiler converts directly into a working program",
-            "As a textual representation of the sequence of operations in a computer program, or the textual representation of an algorithm",
-            "As a set of comments written into a source file to describe code that has already been written"
-          ],
-          "answerIndex": 2,
-          "concept": "the definition of a pseudocode, and the word that separates it from a flowchart",
-          "why": "The two definitions are the same sentence with 'textual' in place of 'graphical', which is exactly what the Pseudocodes I mid-lesson question tests ('A pseudocode is a graphical representation...' -> No). Option a is the definition of an ALGORITHM, and the giveaway is 'mathematical symbols', since pseudocode by definition uses natural and programming language elements. Option b is the 'pseudocode is nearly code' error: it is written in a form easily convertible into programming statements, which is not the same as being convertible by a compiler, and it is not meant to be executed as the actual code. Option d inverts the comments-first technique: the pseudocode becomes the comments, but it is written BEFORE the program, not as a description of code that already exists."
-        },
-        {
-          "type": "mcq",
-          "q": "A student's pseudocode contains the single line 'System.out.println(total);'. One rule is broken. Which, and why does that rule exist?",
-          "options": [
-            "The one-statement-per-line rule, because printing is really two tasks - fetching total and displaying it - and each task must sit on its own line",
-            "The language-independence rule: pseudocode statements must not be written in a particular programming language, because anyone should be able to read them and convert them into any language",
-            "The capital-letters rule, because println is the output keyword on this line and keywords must be written in capitals so they stand out from other words",
-            "No rule is broken: the line holds one statement, it is understandable, and it would convert into working code without any change at all"
+            "24",
+            "48",
+            "40",
+            "96"
           ],
           "answerIndex": 1,
-          "concept": "language independence, and the two properties it protects",
-          "why": "The line is Java. Pseudocode statements are required to be language independent, not in a particular programming language, for two reasons the course states elsewhere: anyone can understand pseudocode since the language is close to English, and it is written in a form that makes it easily convertible into programming statements - any language's statements. A Java line is readable only by Java programmers and is already committed to Java, so it does neither job; 'PRINT total' or 'DISPLAY total' is the pseudocode. Option a misapplies a real rule: one statement per line means one task per line, and displaying a value is one task. Option c also misapplies a real rule: capitals are for pseudocode keywords, and println is not one - capitalising it gives SYSTEM.OUT.PRINTLN, which is still Java. Option d is the reading of the rules as style advice, when 'it converts to code without any change' is precisely the fault."
+          "concept": "Tracing a REPEAT-UNTIL loop",
+          "why": "The body runs, then the condition is tested: x = 6 (6 > 40 false), 12, 24 (false), 48 (48 > 40 true, stop). Printed: 48.\n\n24 stops one pass early, testing before the doubling instead of after; 40 assumes the loop halts exactly at the threshold, which x can never equal since it only doubles from 3; 96 runs one pass too many."
         },
         {
           "type": "mcq",
-          "q": "One loop must keep reading results while a condition set at its top still holds, with further conditions inside the body deciding what happens on each pass. A second must run a number of times that is fixed entirely before it is entered. Which two constructs, in the course's own terms?",
+          "q": "What is printed?\n\n```\nSET c TO 0\nFOR k = 5 TO 12\n    SET c TO c + 1\nENDFOR\nPRINT c\n```",
           "options": [
-            "The first is FOR, since all its conditions are set at the beginning/top; the second is WHILE, since it runs a desired number of times",
-            "The first is REPEAT-UNTIL and the second is FOR, since only REPEAT-UNTIL is allowed to carry conditions in the body of its statements",
-            "The first is WHILE, which sets some condition at the beginning/top and other conditions in the body; the second is FOR, which sets all the necessary conditions at the beginning/top",
-            "Both are WHILE loops, because FOR is only a shorthand for a WHILE whose counter has been written out in full at the top"
-          ],
-          "answerIndex": 2,
-          "concept": "where each loop construct sets its conditions",
-          "why": "The course distinguishes the loops by the placement of the conditions: FOR executes statements a desired number of times based on setting ALL the necessary conditions at the beginning/top; WHILE does so based on setting SOME condition at the beginning/top and OTHER conditions in the body of the statements; REPEAT-UNTIL sets some condition at the ending/bottom and other conditions in the body. 'Some at the top, others in the body' is WHILE; 'all at the top' is FOR. Option a swaps the two, which is what a vague memory that both test at the top produces. Option b picks REPEAT-UNTIL on the strength of 'conditions in the body', which WHILE has too - the discriminator is the top/bottom placement. Option d is a true-sounding fact from programming practice that answers a different question: the course names them as separate constructs on exactly this distinction."
-        },
-        {
-          "type": "mcq",
-          "q": "In the CASE skeleton, what is OTHERS for, and what is CASE said to be?",
-          "options": [
-            "OTHERS lists the variables that the expression does not test; CASE is a more generalised form of the FOR loop",
-            "OTHERS is the default sequence, run when none of the listed conditions holds; CASE is a more generalised form of the conditional statement that IF-THEN-ELSE also provides",
-            "OTHERS is the handler for values the expression cannot take; CASE is the construct out of which EXCEPTION and WHEN are built",
-            "OTHERS repeats the whole CASE for any conditions still left over; CASE is a more generalised form of REPEAT-UNTIL"
-          ],
-          "answerIndex": 1,
-          "concept": "CASE as the generalised conditional, OTHERS as its default branch",
-          "why": "The course introduces CASE as also using conditional statements to change the normal flow of operation of an algorithm, but represented in a more generalised form - so its neighbour is IF-THEN-ELSE, not a loop. In the skeleton, condition 1 to condition n are the alternatives and 'OTHERS: default sequence' catches everything that matched none of them, which is what stops the construct doing nothing at all. Options a and d both attach CASE to a loop, the first reading 'generalised' as 'repeated for each condition' and the second making the same error with the other loop. Option c is the near-miss worth knowing: OTHERS handles a value the expression DID take that you did not list, whereas an exception handler deals with an event that occurs while the program runs - nothing in CASE is about failure."
-        },
-        {
-          "type": "mcq",
-          "q": "In 'CALL SquareRoot with orbitHeight RETURNING norminalOrbit', what do 'with' and 'RETURNING' each name?",
-          "options": [
-            "'with' names the routine that is called, and 'RETURNING' names the routine control comes back to when it finishes",
-            "'with' names the data type of the argument supplied, and 'RETURNING' names the data type of the result produced",
-            "'with' names the class in which the object is defined, and 'RETURNING' names the object that the call creates",
-            "'with' names the argument passed into the routine, and 'RETURNING' names the variable that receives the value handed back"
+            "7",
+            "12",
+            "5",
+            "8"
           ],
           "answerIndex": 3,
-          "concept": "reading a CALL - arguments in, result out",
-          "why": "The course's four examples make the pattern plain: CALL AvgAge with studentAges (argument only), CALL Swap with CurrentItem and TargetItem (two arguments), CALL getBalance RETURNING aBalance (result only), and CALL SquareRoot with orbitHeight RETURNING norminalOrbit (both). The name straight after CALL is the routine; 'with' introduces what is passed IN; RETURNING names the variable that receives what comes OUT. Option a misreads 'with' as naming the routine, which leaves SquareRoot unexplained, and treats RETURNING as a return of CONTROL rather than of a VALUE - control always resumes at the line after the CALL, so nothing would need naming. Option b invents data-type declarations, which belong to the 'using variables and data structures' step. Option c stretches the course's remark that CALL can be used for defining class objects over the whole line."
+          "concept": "Counting the passes of a FOR loop",
+          "why": "FOR k = a TO b runs the body b − a + 1 times because both bounds are included: k = 5, 6, 7, 8, 9, 10, 11, 12, so c reaches 8.\n\n7 is 12 − 5, forgetting that the loop includes both ends; 12 assumes the loop starts at 1; 5 prints the starting bound instead of the count."
         },
         {
           "type": "mcq",
-          "q": "Both CASE and EXCEPTION/WHEN pick one set of statements out of several. What distinguishes them?",
+          "q": "Which line breaks a rule of pseudocode?\n\n```\n1  SET s TO 0\n2  FOR i = 1 TO 5\n3      READ x\n4      SET s TO s + x\n5  ENDWHILE\n6  PRINT s\n```",
           "options": [
-            "Nothing structural: EXCEPTION/WHEN is simply CASE written for errors, and either may be used wherever the other one is",
-            "CASE may only test numeric expressions whereas WHEN may test any expression at all, which is why exceptions were given their own keyword",
-            "CASE chooses among expected values of one expression as part of the normal flow; WHEN clauses sit in the EXCEPTION part of a BEGIN...END block and run only when an unexpected or unwanted event occurs as the program runs",
-            "CASE is evaluated once before its block runs, while WHEN is re-evaluated after every statement in the block, which is what makes exception handling the slower of the two"
-          ],
-          "answerIndex": 2,
-          "concept": "selection among expected values vs handling an unexpected event",
-          "why": "CASE is part of the plan: you know the expression, you list its possible values, and one branch is taken every time the construct is reached. EXCEPTION/WHEN is the opposite arrangement - the statements between BEGIN and EXCEPTION are the ones meant to run, and the WHEN clauses run only when unexpected or unwanted events take place while the program is running, which the course names as exception handling. On a run where nothing goes wrong, no WHEN clause is entered at all, which no CASE can say of itself. Option a is the tempting summary 'EXCEPTION is CASE for errors', right about the shape and wrong about the trigger. Option b invents a restriction on CASE that the skeleton 'CASE expression OF' does not carry. Option d invents an execution model and reasons about speed, a question pseudocode cannot ask, since it is not executed."
-        },
-        {
-          "type": "mcq",
-          "q": "The course lists as a disadvantage that pseudocode 'takes a longer time to read and understand' than a flowchart, even though it is written in near-English. What is the mechanism behind that?",
-          "options": [
-            "Pseudocode is always longer than the flowchart of the same algorithm, because each symbol expands into several lines of text that must all be read",
-            "A flowchart shows its structure at a glance in shapes and arrows; a pseudocode reader must rebuild the control flow line by line, and must first decode the writer's own style, since no accepted standards exist",
-            "Pseudocode borrows its keywords from several programming languages at once, so a reader has to know all of those languages before following any of it",
-            "Pseudocode cannot show repetition directly, so a reader has to reconstruct every loop by hand from the statements that are being repeated"
-          ],
-          "answerIndex": 1,
-          "concept": "why a textual notation costs the reader more than a graphical one",
-          "why": "The course's contrast is that flowcharts are visual and easily understandable while pseudocodes are not visual, and the reading-time complaint follows from it. In a chart the control flow is drawn: a loop is an arrow you can see going back, a branch is a fork you can see splitting. In pseudocode the same structure is only implied by keywords and indentation, so the reader must simulate the flow mentally. The other stated disadvantage compounds it: since there are no generally accepted standards, anyone can write pseudocode in their own way, so the writer's conventions must be worked out before the logic can be read. Option a confuses length with difficulty and is not reliably true. Option c invents a mixed-language claim that the language-independence rule forbids. Option d is false - repetition is exactly what FOR, WHILE and REPEAT-UNTIL are for."
-        },
-        {
-          "type": "mcq",
-          "q": "Which statement about algorithms and pseudocode is correct on the course's account?",
-          "options": [
-            "An algorithm may be written in any notation or language while pseudocode is written in a combination of natural and programming language elements, and the algorithm is the precise, well-defined one",
-            "Pseudocode may be written in any notation or language while an algorithm must be written in a combination of natural and programming language elements, and the pseudocode is the precise one",
-            "An algorithm is a representation of a pseudocode, produced once the pseudocode has been coded in a specific programming language and tested",
-            "An algorithm and a pseudocode are two names for one thing, since both are step-by-step procedures and neither of them is executed by a machine"
+            "Line 5: a FOR must close with ENDFOR",
+            "Line 2: a FOR must state a condition, not bounds",
+            "Line 3: READ is not an input verb",
+            "Line 1: s may not be set before the loop"
           ],
           "answerIndex": 0,
-          "concept": "algorithm vs pseudocode - the four contrasts the course draws",
-          "why": "The course states them in a row: an algorithm is a step-by-step procedure for solving a problem and can be expressed in any language - natural language, programming code or mathematical symbol; pseudocode is a high-level representation of an algorithm using a combination of natural and programming language elements, without following any specific language's syntax strictly; algorithms are usually represented as pseudocode during early software development stages, before being coded; and algorithms have precise and well-defined procedures while pseudocode is more high level and informal. Option b is the mid-lesson question's own distractor, the two terms reversed, and it also reverses the precision claim, so remembering only 'one of them is the precise one' does not rescue you. Option c reverses the direction of representation and the order of work. Option d collapses a real distinction: both are unexecuted, but the algorithm is the method and the pseudocode is one way of writing it down."
+          "concept": "Closing keywords of constructs",
+          "why": "Each construct closes with its own keyword: FOR ... ENDFOR, WHILE ... ENDWHILE, REPEAT ... UNTIL. ENDWHILE on line 5 closes a loop that was never opened and leaves the FOR unclosed.\n\nA FOR sets its iteration bounds at the top, so line 2 is correct; READ is one of the input verbs (READ, OBTAIN, GET); initialising an accumulator before its loop is exactly where it belongs."
+        },
+        {
+          "type": "mcq",
+          "q": "A program reads marks until a negative mark is entered. The very first mark may itself be negative, in which case no mark should be processed at all. Which construct fits?",
+          "options": [
+            "FOR",
+            "REPEAT-UNTIL",
+            "WHILE",
+            "CASE"
+          ],
+          "answerIndex": 2,
+          "concept": "Choosing a loop by where its condition is tested",
+          "why": "WHILE tests its condition at the top, before the first pass, so if the first mark is negative the body runs zero times. That is the behaviour required.\n\nREPEAT-UNTIL tests at the bottom and always runs its body at least once, so it would process the negative mark; FOR needs the number of passes fixed at the top, and here it is unknown; CASE selects between alternatives and repeats nothing."
+        },
+        {
+          "type": "mcq",
+          "q": "The user enters 14. What is printed?\n\n```\nREAD n\nSET r TO n MOD 5\nCASE r OF\n    0: PRINT \"five\"\n    1: PRINT \"one over\"\n    OTHERS: PRINT r\nENDCASE\n```",
+          "options": [
+            "4",
+            "2",
+            "five",
+            "one over"
+          ],
+          "answerIndex": 0,
+          "concept": "Tracing a CASE construct",
+          "why": "14 MOD 5 is the remainder of 14 ÷ 5: 14 = 2 × 5 + 4, so r = 4. Neither listed condition matches 4, so the OTHERS branch runs and prints r, which is 4.\n\n2 is the quotient 14 DIV 5, not the remainder; 'five' assumes 14 is a multiple of 5; 'one over' would need a remainder of 1, as 11 or 16 would give."
+        },
+        {
+          "type": "mcq",
+          "q": "The nine results read are P P F P P P F P P. What is printed?\n\n```\nSET passes TO 0\nSET failures TO 0\nFOR i = 1 TO 9\n    READ result\n    IF result = \"P\" THEN INCREMENT passes ELSE INCREMENT failures ENDIF\nENDFOR\nPRINT passes, failures\nIF passes > 7 THEN PRINT \"increase tuition\" ENDIF\n```",
+          "options": [
+            "7 2 increase tuition",
+            "2 7",
+            "7 2",
+            "8 1 increase tuition"
+          ],
+          "answerIndex": 2,
+          "concept": "Tracing counters and a boundary condition",
+          "why": "Seven results are P and two are F, so the first line printed is 7 2. Then passes > 7 asks whether 7 > 7, which is false, so nothing else is printed.\n\n'7 2 increase tuition' reads the test as passes ≥ 7; '2 7' swaps the two counters; '8 1' miscounts one F as a P."
+        },
+        {
+          "type": "mcq",
+          "q": "What is printed?\n\n```\nSET i TO 1\nSET s TO 0\nWHILE s < 10\n    SET s TO s + i\n    SET i TO i + 1\nENDWHILE\nPRINT i\n```",
+          "options": [
+            "4",
+            "5",
+            "10",
+            "6"
+          ],
+          "answerIndex": 1,
+          "concept": "Tracing a WHILE loop with two variables",
+          "why": "Track (s, i) after each pass: (1, 2), (3, 3), (6, 4), (10, 5). Now s < 10 is false, the loop ends, and i = 5 is printed.\n\n4 forgets the increment of i on the last pass; 10 prints s instead of i; 6 runs one pass too many, as if the test were s ≤ 10."
+        },
+        {
+          "type": "mcq",
+          "q": "In `CALL SquareRoot with area RETURNING side`, what are `area` and `side`?",
+          "options": [
+            "area is the name of the function; side is its argument",
+            "Both are values passed into SquareRoot",
+            "area is printed; side is read from the user",
+            "area is the value passed in; side receives the result"
+          ],
+          "answerIndex": 3,
+          "concept": "The CALL construct",
+          "why": "In a CALL, `with` names what goes into the operation and `RETURNING` names the variable that receives what comes back. SquareRoot is given area and hands its result to side.\n\nSquareRoot, not area, is the function name; side is not an input; nothing in a CALL line prints or reads anything."
         },
         {
           "type": "short",
-          "q": "The course recommends writing the pseudocode into a file AS COMMENTS, then filling in the actual code between those comments. Explain what problem this solves, why the course describes it as 'writing the comments for our program before writing the program', and what specifically would go wrong with the technique if the pseudocode had been written in one language's syntax.",
-          "concept": "pseudocode as the scaffolding of the source file",
-          "why": "The problem it solves is the one the course names in its rule of thumb: if you want to develop a new computer program and you are struggling with how to start the development, write a pseudocode first. The difficulty at the start is not the syntax but deciding what the steps are and in what order; writing them as comments lets you settle the whole sequence - inputs, loop, branches, outputs - while nothing in the file has to compile. Once the sequence is right, each comment is a specification for the lines beneath it, and the job shrinks from 'write a program' to a series of small local translations. Because the pseudocode was written before any code and stays in the file, we are essentially writing the comments for our program before writing the program: the commentary is not a later gloss but the design that produced the code, which is also why the comments genuinely describe what the code does. If the pseudocode had been written in one language's syntax, three things break. It stops being a design, since you have committed to that language's constructs, types and library calls before deciding whether they suit the problem. The comments become useless as comments, restating the code below them line for line instead of saying what it is for. And it fails the language-independence rule and the reason behind it: it is no longer easily convertible into the statements of ANY language, and it can no longer be read by anyone who does not know the one you chose."
+          "q": "Rewrite this using WHILE so that it prints the same total for any list of inputs ending in 0. Give the WHILE condition and explain why READ has to appear twice in your version.\n\n```\nSET t TO 0\nREPEAT\n    READ n\n    SET t TO t + n\nUNTIL n = 0\nPRINT t\n```",
+          "concept": "Converting REPEAT-UNTIL to WHILE",
+          "why": "Model answer:\n\n```\nSET t TO 0\nREAD n\nWHILE n <> 0\n    SET t TO t + n\n    READ n\nENDWHILE\nPRINT t\n```\n\nUNTIL n = 0 stops when the condition becomes true, so the WHILE must continue while it is false: WHILE n <> 0 (also accepted: n ≠ 0, NOT n = 0). A WHILE tests before the first pass, so there must be a value of n to test: one READ before the loop, and one at the foot of the body so the test sees each new value. For 5, 8, 3, 0 both versions print 16. Not accepted: WHILE n = 0; a single READ inside the body with nothing read before the loop; READ placed at the top of the body so the test is made on a stale value."
         },
         {
           "type": "short",
-          "q": "State the rules that govern the writing of a pseudocode and, for EACH one, name the specific ambiguity or failure it prevents - not what the rule says, but what a reader would be unable to work out if the rule were ignored.",
-          "concept": "each rule removes one ambiguity from a notation with no grammar",
-          "why": "ONE STATEMENT PER LINE. Pseudocode gives the computer a list of tasks to implement in a sequential manner, so the line is what carries the order. Ignore it - 'SET total TO 0; READ n; SET total TO total + n' - and the reader can no longer tell how many tasks there are, cannot cite a step by position, and cannot see whether a step was left out; worse, once several tasks share a line, indentation applies to the group rather than the task, so it stops saying which construct they belong to. KEYWORDS IN CAPITAL LETTERS. Capitals are what differentiate keywords from other words. Without them, structure cannot be told from prose: does 'if the student passed' begin an IF construct or merely describe one, and is 'set total' an instruction or a variable named settotal? Since pseudocode is deliberately close to English, the capitals are the only marker that a word is doing structural work. LANGUAGE INDEPENDENCE. Without it the pseudocode is readable only by those who know the language it leaked from, and it is no longer convertible into any language - so both properties the course claims, that anyone can understand it and that it is easily convertible into programming statements, fail at once. INDENTATION OF EACH CONSTRUCT'S BODY. This is what says how far a loop or a branch extends. Without it a reader cannot tell whether a statement after an IF belongs to the THEN part or follows the whole construct, nor whether a counter is incremented inside the loop or once after it - and the deck's own solution shows the damage, with 'add one to student counter' left outside a WHILE that therefore never advances. (The rules slide is cut off after three rules while the week's Summary sheet says four should be followed; indentation is the fourth, and every worked example in the deck obeys it.)"
+          "q": "Trace this, giving the values of evens and odds after each pass, and the printed output. Show your working.\n\n```\nSET evens TO 0\nSET odds TO 0\nFOR k = 3 TO 9\n    IF k MOD 2 = 0 THEN\n        INCREMENT evens\n    ELSE\n        INCREMENT odds\n    ENDIF\nENDFOR\nPRINT evens, odds\n```",
+          "concept": "Tracing a selection inside a FOR loop",
+          "why": "k runs 3, 4, 5, 6, 7, 8, 9 (seven passes). After each pass (evens, odds): k = 3 → (0, 1); 4 → (1, 1); 5 → (1, 2); 6 → (2, 2); 7 → (2, 3); 8 → (3, 3); 9 → (3, 4). Printed: 3 4.\n\nA correct answer shows the seven pairs, or at least the final values, and the output 3 4. Answering 3 3 stops at k = 8, forgetting the inclusive upper bound; 4 3 swaps the two counters."
         },
         {
           "type": "short",
-          "q": "List the seven steps of writing a pseudocode in order. Then explain precisely what separates PROBLEM DEFINITION from IDENTIFICATION OF MAIN STEPS, and what separates USING CONSTRUCTS TO DESCRIBE LOGIC from USING CLEAR AND CONCISE LANGUAGE, since in each pair the second step looks like more of the first.",
-          "concept": "the seven steps, and the two pairs that are easily collapsed",
-          "why": "In order: problem definition; identification of main steps; header writing; using variables and data structures; using constructs to describe logic; using clear and concise language; testing and refining. PROBLEM DEFINITION VS MAIN STEPS. Problem definition is about the problem and is written entirely in terms of inputs, process, outputs and requirements - for the tuition example, the input is the number of students and their results, the process is accepting each result and determining pass or fail, the output is the number of passes, the number of failures and the tuition decision. Nothing in it says how anything will be done or in what order; it states what a correct solution would have to take in and produce. Identification of main steps is about the SOLUTION: it breaks the problem into its integral parts and puts them in sequence - initialise the storage, set up the counters, accept a result and classify it, increment the relevant counter, display the outputs. The test that separates them: change your mind about how to solve the problem and the main steps change, while the problem definition does not. Doing the second before the first produces solutions to the wrong problem. CONSTRUCTS VS CLEAR LANGUAGE. The constructs step decides the control structure - that a WHILE will iterate over the results and an IF-THEN-ELSE will pick which counter to increment - and it is right or wrong: choose an IF where a loop was needed and the algorithm fails. The clear-language step decides the wording inside that structure, and it is about ambiguity, not correctness: 'FOR each index of string / IF string(index) is equal to hash THEN' and 'FOR i = 0 to 20 / IF string[i] = #' describe the same logic, and the course prefers the first because the second imports one language's indexing syntax. So the fifth step can leave the algorithm wrong and the sixth can only leave it unclear - but unclear is enough to fail the requirement that the constructs describe the steps without ambiguity."
+          "q": "State three faults in this pseudocode, naming the rule or requirement each one breaks, then write a corrected version that also handles n = 0.\n\n```\nset total to 0\nREAD n\nFOR i = 1 TO n\n    READ mark; SET total TO total + mark\nPRINT total / n\n```",
+          "concept": "Applying the pseudocode rules to a fragment",
+          "why": "Faults (any three): line 1 has lowercase keywords, breaking the rule that keywords are written in capitals; line 4 puts two statements on one line, breaking one statement per line; the FOR is never closed with ENDFOR, so nothing marks where the body ends; and total / n is computed with no guard for n = 0, which testing and refining (handle all required cases) should have caught.\n\nCorrected model:\n\n```\nSET total TO 0\nREAD n\nIF n = 0 THEN\n    PRINT \"no data\"\nELSE\n    FOR i = 1 TO n\n        READ mark\n        SET total TO total + mark\n    ENDFOR\n    PRINT total / n\nENDIF\n```\n\nA correct answer names three faults with their rules and gives a version with capitals, one statement per line, ENDFOR, and an IF guarding the division."
         },
         {
           "type": "short",
-          "q": "The course claims that pseudocode needs no special software, that anyone can understand it, and that it is easily modified; and it complains that there are no generally accepted standards, and that pseudocode is not visual. Explain which of the advantages and which of the disadvantages are two sides of one single property, name that property, and say what this implies about when you would choose a flowchart over pseudocode.",
-          "concept": "the advantages and disadvantages follow from two properties: no fixed notation, and no picture",
-          "why": "PROPERTY ONE: IT HAS NO FIXED SYNTAX. From this come the advantages that no special software is needed - it can be written with any text editor - that it can easily be modified, and that anyone can understand it, since the words are near-English rather than a defined grammar; and from the very same fact comes the disadvantage that since there are no generally accepted standards for writing pseudocodes, anyone can write pseudocode in their own way, leading to various styles and possible complications, especially if the pseudocode is not well written. These are one property seen from two sides: the freedom that lets you write anything is the freedom that stops a reader relying on anything. It is also why the course states rules at all - they are a voluntary standard imposed on a notation that has none, which is why breaking them costs more here than in a real language, where a compiler would object. PROPERTY TWO: IT IS TEXT, NOT A PICTURE. From this comes the rest: compared to flowcharts, which are visual and easily understandable, pseudocodes are not visual, and it takes a longer time to read and understand them - while the same property is what makes them easy to edit, since inserting a line shifts the rest down by itself, where inserting a box into a flowchart may force a redraw. IMPLICATION. Use a flowchart when the audience must grasp the shape of the logic quickly, when the structure is branching or looping enough that seeing it matters, or when non-programmers have to follow it. Use pseudocode when the design will change repeatedly, when it must be handed to programmers to convert into a specific language, or when it is to live inside the source file as its comments - and then follow the rules strictly, because they are the only standard it has."
+          "q": "A student says pseudocode is just a program with the semicolons removed. Give two reasons this is wrong (language independence; pseudocode is not executed), and say how pseudocode is tested instead.",
+          "concept": "Pseudocode is not a program",
+          "why": "First, pseudocode statements must be language independent: they are written in a mix of natural language and programming elements that belongs to no particular language, so there is no language whose syntax it is a stripped-down form of. Second, pseudocode is not meant to be executed as actual code; it describes the flow and logic of the algorithm, and no compiler defines what its keywords mean. Its purpose is to be easily convertible into any programming language, which is why it is written before the language is chosen.\n\nIt is tested on paper or by scanning through: pick input values, walk the lines in order keeping a table of each variable, and check that the logic is right and every required case is handled. That is the testing and refining step. A correct answer gives both reasons and the paper trace."
         }
       ]
     },
@@ -644,131 +648,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "For f(x) = x⁴ + 2x³ − 15x + 4, find f″(x).",
+          "q": "f(x) = 2x⁵ − x⁴ + 3x − 7. Find f‴(x).",
           "options": [
-            "12x² + 12x",
-            "12x² + 12x − 15",
-            "4x³ + 6x² − 15",
-            "12x² + 6x"
-          ],
-          "answerIndex": 0,
-          "concept": "Applying the power rule twice, including to the term −15x",
-          "why": "f′(x) = 4x³ + 6x² − 15, and differentiating again: 4x³ → 12x², 6x² → 12x, and the constant −15 → 0. Option 2 keeps the −15, forgetting that after the first differentiation it has become a constant and must die at the second — the very point of her NOTE d(4)/dx = 0. Option 3 is only the first derivative. Option 4 differentiates 6x² as 6x, dropping the factor 2 that the power supplies."
-        },
-        {
-          "type": "mcq",
-          "q": "The first TASK slide asks for the second derivative of y = cos(3x). What is it?",
-          "options": [
-            "−3 sin(3x)",
-            "−9 cos(3x)",
-            "9 cos(3x)",
-            "−9 sin(3x)"
+            "40x³ − 12x²",
+            "120x² − 24x",
+            "120x² − 24x + 3",
+            "60x² − 24x"
           ],
           "answerIndex": 1,
-          "concept": "Two differentiations of a composite cosine, sign and chain factor together",
-          "why": "y′ = −3 sin(3x): cos differentiates to −sin and the chain rule supplies 3. Then y″ = −3·3 cos(3x) = −9 cos(3x): sin differentiates to +cos, so no second sign appears, and the chain supplies another 3. Option 1 stops after one differentiation. Option 3 loses the minus introduced at the first step. Option 4 has the right coefficient but leaves the function as sin, as though differentiating sin returned sin."
+          "concept": "Third derivative of a polynomial",
+          "why": "f′(x) = 10x⁴ − 4x³ + 3; f″(x) = 40x³ − 12x²; f‴(x) = 120x² − 24x. The constant −7 dies at the first step and the 3 dies at the second.\n\n40x³ − 12x² is f″, one order short; 120x² − 24x + 3 lets the constant 3 survive past the second derivative; 60x² − 24x drops the coefficient 2 on the leading term (2·5·4·3 = 120, not 60)."
         },
         {
           "type": "mcq",
-          "q": "She takes f(x) = √(x³) as far as y″ = (3/4)x^(−1/2). Continue one order: y‴ =",
+          "q": "y = sin(2x) + e^(4x). Find d⁴y/dx⁴.",
           "options": [
-            "(3/8)x^(−3/2)",
-            "−(3/8)x^(−1/2)",
-            "−(3/8)x^(−3/2)",
-            "(3/4)x^(−3/2)"
-          ],
-          "answerIndex": 2,
-          "concept": "Differentiating a negative fractional power",
-          "why": "The power rule on (3/4)x^(−1/2) multiplies by the exponent −1/2 and drops it by one: (3/4)(−1/2)x^(−1/2 − 1) = −(3/8)x^(−3/2). Option 1 gets the coefficient but loses the minus that the negative exponent supplies. Option 2 multiplies correctly but leaves the exponent at −1/2 instead of reducing it. Option 4 reduces the exponent but forgets to multiply by −1/2 at all, so both the sign and the magnitude are wrong."
-        },
-        {
-          "type": "mcq",
-          "q": "For y = ln x she reaches y‴ = 2x⁻³. What is y⁽⁴⁾?",
-          "options": [
-            "6x⁻⁴",
-            "−2x⁻⁴",
-            "3x⁻⁴",
-            "−6x⁻⁴"
-          ],
-          "answerIndex": 3,
-          "concept": "Continuing the ln x derivative chain past the third order",
-          "why": "Differentiating 2x⁻³ multiplies by the exponent −3 and lowers it by one: 2(−3)x⁻⁴ = −6x⁻⁴. Option 1 has the right magnitude but loses the minus that the negative exponent produces. Option 2 keeps only the sign change and forgets to multiply by 3. Option 3 uses the exponent's magnitude as the new coefficient while dropping both the existing 2 and the sign."
-        },
-        {
-          "type": "mcq",
-          "q": "She gives d³y/dx³ = −125 cos(5x) + 27e^(3x) for y = sin(5x) + e^(3x). Find d⁴y/dx⁴.",
-          "options": [
-            "625 sin(5x) + 81e^(3x)",
-            "−625 sin(5x) + 81e^(3x)",
-            "625 sin(5x) + 27e^(3x)",
-            "125 sin(5x) + 81e^(3x)"
+            "16 sin(2x) + 256e^(4x)",
+            "−16 sin(2x) + 256e^(4x)",
+            "16 cos(2x) + 256e^(4x)",
+            "−8 cos(2x) + 64e^(4x)"
           ],
           "answerIndex": 0,
-          "concept": "One more order on each term, tracking chain factors and signs separately",
-          "why": "d/dx[−125 cos(5x)] = −125·(−sin(5x))·5 = +625 sin(5x): cos gives −sin, and the two minus signs cancel. d/dx[27e^(3x)] = 27·3e^(3x) = 81e^(3x). Option 2 keeps the minus that has just been cancelled. Option 3 forgets the chain factor 3 on the exponential and leaves 27. Option 4 forgets the chain factor 5 on the trigonometric term and leaves 125."
+          "concept": "Fourth derivative of a sum of sin(kx) and e^(kx)",
+          "why": "Track each term. sin(2x): 2 cos(2x), −4 sin(2x), −8 cos(2x), 16 sin(2x); a factor 2 each time and the sign cycling +, −, −, +. e^(4x): 4e^(4x), 16e^(4x), 64e^(4x), 256e^(4x); a factor 4 each time and no sign change. So d⁴y/dx⁴ = 16 sin(2x) + 256e^(4x).\n\n−16 sin(2x) + 256e^(4x) carries the minus of the second and third derivatives one step too far; 16 cos(2x) does not return cos to sin on the fourth step; −8 cos(2x) + 64e^(4x) is the third derivative."
         },
         {
           "type": "mcq",
-          "q": "Using her f″(x) = (2 − 2x²)/(1 + 2x² + x⁴) for f(x) = ln(1 + x²), evaluate f″(2).",
+          "q": "f(x) = x/(x + 1). Find f″(x).",
           "options": [
-            "6/25",
-            "−6/25",
-            "−6/5",
-            "10/25"
-          ],
-          "answerIndex": 1,
-          "concept": "Substituting into her second derivative, denominator and sign included",
-          "why": "Numerator: 2 − 2(2²) = 2 − 8 = −6. Denominator: 1 + 2(4) + 2⁴ = 1 + 8 + 16 = 25. So f″(2) = −6/25. Option 1 comes from the reversed quotient-rule numerator (2x² − 2), which gives +6. Option 3 uses 1 + x² = 5 as the denominator, forgetting she squared it into 1 + 2x² + x⁴. Option 4 comes from never subtracting u·v′, leaving the numerator as 2 + 2x² = 10."
-        },
-        {
-          "type": "mcq",
-          "q": "Which of these is her third derivative of ln(1 + x²)?",
-          "options": [
-            "(4x⁵ − 8x³ − 12x)/(1 + 2x² + x⁴)",
-            "(−4x⁵ + 8x³ + 12x)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)",
-            "(4x⁵ − 8x³ − 12x)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)",
-            "(4x⁵ − 24x³ − 12x)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)"
-          ],
-          "answerIndex": 2,
-          "concept": "The third order of the quotient-rule chain, numerator and squared denominator",
-          "why": "With u = 2 − 2x² and v = 1 + 2x² + x⁴, the numerator collects to 4x⁵ − 8x³ − 12x and the denominator is v² = 1 + 4x² + 6x⁴ + 4x⁶ + x⁸. Option 1 forgets to square the denominator. Option 2 reverses the numerator order to u·v′ − v·u′, negating everything. Option 4 mis-collects the x³ terms as −8 − 8 − 8 instead of −8 − 8 + 8, which is exactly the slip the sign of the last product invites."
-        },
-        {
-          "type": "mcq",
-          "q": "The second TASK slide asks for the third derivative of f(x) = xeˣ, evaluated at x = 2. What is it?",
-          "options": [
-            "4e²",
-            "3e²",
-            "2e²",
-            "5e²"
+            "2/(x + 1)³",
+            "1/(x + 1)²",
+            "−2/(x + 1)²",
+            "−2/(x + 1)³"
           ],
           "answerIndex": 3,
-          "concept": "Repeated product rule on xeˣ, then substitution",
-          "why": "f′ = (x + 1)eˣ, f″ = (x + 2)eˣ, f‴ = (x + 3)eˣ, so f‴(2) = 5e² ≈ 36.95. Option 1 evaluates f″(2), one order short. Option 2 evaluates f′(2), two orders short. Option 3 comes from differentiating only the eˣ factor and leaving xeˣ unchanged, which ignores the product rule entirely."
+          "concept": "Second derivative by the quotient rule then the chain rule",
+          "why": "Quotient rule with u = x, v = x + 1: f′ = [(x + 1)·1 − x·1]/(x + 1)² = 1/(x + 1)² = (x + 1)⁻². Differentiate again with the power and chain rules: f″ = −2(x + 1)⁻³·1 = −2/(x + 1)³.\n\n2/(x + 1)³ loses the minus from the index −2; 1/(x + 1)² is the first derivative; −2/(x + 1)² multiplies by the index but forgets to lower it."
+        },
+        {
+          "type": "mcq",
+          "q": "y = 1/x. Find y⁽⁴⁾.",
+          "options": [
+            "−24/x⁵",
+            "6/x⁴",
+            "24/x⁵",
+            "4/x⁵"
+          ],
+          "answerIndex": 2,
+          "concept": "Fourth derivative of a reciprocal and its sign pattern",
+          "why": "y = x⁻¹. y′ = −x⁻², y″ = 2x⁻³, y‴ = −6x⁻⁴, y⁽⁴⁾ = 24x⁻⁵ = 24/x⁵. The coefficient is 1·2·3·4 = 24 and the sign alternates, ending positive on an even order.\n\n−24/x⁵ has the sign of an odd-order derivative; 6/x⁴ stops at the third derivative and drops its minus; 4/x⁵ lowers the index four times but multiplies by the index only once."
+        },
+        {
+          "type": "mcq",
+          "q": "y = cos(2x). Find y‴.",
+          "options": [
+            "8 sin(2x)",
+            "−8 sin(2x)",
+            "−8 cos(2x)",
+            "8 cos(2x)"
+          ],
+          "answerIndex": 0,
+          "concept": "Third derivative of cos(kx), tracking the sign",
+          "why": "y′ = −2 sin(2x); y″ = −2·2 cos(2x) = −4 cos(2x); y‴ = −4·(−2 sin(2x)) = 8 sin(2x). The chain factor 2 appears three times (2³ = 8) and the minus from cos appears twice, which cancels.\n\n−8 sin(2x) counts the minus once instead of twice; −8 cos(2x) does not change cos to sin on the third step; 8 cos(2x) makes both of those errors at once."
+        },
+        {
+          "type": "mcq",
+          "q": "y = √(x⁷). Find y‴.",
+          "options": [
+            "(35/4)x^(3/2)",
+            "(105/8)x^(3/2)",
+            "(105/8)x^(1/2)",
+            "(35/8)x^(1/2)"
+          ],
+          "answerIndex": 2,
+          "concept": "Third derivative with a fractional index",
+          "why": "y = x^(7/2). y′ = (7/2)x^(5/2); y″ = (7/2)(5/2)x^(3/2) = (35/4)x^(3/2); y‴ = (35/4)(3/2)x^(1/2) = (105/8)x^(1/2). Each step multiplies by the current index and lowers it by 1.\n\n(35/4)x^(3/2) is the second derivative; (105/8)x^(3/2) multiplies by 3/2 but forgets to lower the index; (35/8)x^(1/2) multiplies by 1/2 (the new index) instead of 3/2 (the index being differentiated)."
+        },
+        {
+          "type": "mcq",
+          "q": "y = 2x³ + 1/x. Find y″.",
+          "options": [
+            "12x − 2/x³",
+            "12x + 2/x³",
+            "6x² − 1/x²",
+            "12x + 2/x²"
+          ],
+          "answerIndex": 1,
+          "concept": "Second derivative of a mixed polynomial and reciprocal",
+          "why": "Rewrite: y = 2x³ + x⁻¹. y′ = 6x² − x⁻²; y″ = 12x + 2x⁻³ = 12x + 2/x³. The reciprocal term's sign flips at each differentiation: negative in y′, positive again in y″.\n\n12x − 2/x³ keeps the minus from y′ instead of flipping it; 6x² − 1/x² is the first derivative; 12x + 2/x² multiplies by the index −2 but forgets to lower it to −3."
+        },
+        {
+          "type": "mcq",
+          "q": "For f(x) = ln(1 + x²), f′(x) = 2x/(1 + x²). A student then writes f″(x) = (2 − 2x²)/(1 + x²). Which step has gone wrong?",
+          "options": [
+            "The chain rule was skipped in f′",
+            "u and v were swapped in the numerator",
+            "The 1 in 1 + x² should have differentiated to 1",
+            "The denominator was not squared"
+          ],
+          "answerIndex": 3,
+          "concept": "Quotient rule denominator at higher orders",
+          "why": "With u = 2x and v = 1 + x², the quotient rule gives f″ = [v u′ − u v′]/v² = [(1 + x²)·2 − 2x·2x]/(1 + x²)² = (2 − 2x²)/(1 + x²)². The student's numerator is right; the denominator must be v² = (1 + x²)², not v.\n\nThe chain rule was applied correctly in f′ (the 2x is the inner derivative); swapping u and v would give (2x² − 2), the negative numerator, which did not happen; the constant 1 differentiates to 0, and the student's numerator already reflects that."
         },
         {
           "type": "short",
-          "q": "Work the first TASK slide in full: find the second derivative of y = cos(3x), naming what supplies each factor and each sign.",
-          "concept": "Full solution to the cos(3x) task with every factor accounted for",
-          "why": "A good answer takes it one order at a time. First: cos differentiates to −sin, and the chain rule f′(x) = y′(u)·u′(x) with u = 3x supplies u′ = 3, so y′ = −3 sin(3x). Second: sin differentiates to +cos, contributing no new sign, and the chain supplies another 3, so y″ = −3·3 cos(3x) = −9 cos(3x). It should say explicitly that the single minus sign was introduced at the first step and survives, so the answer is −9 cos(3x) rather than +9 cos(3x), and that the argument stays 3x throughout — only the coefficient grows. A strong answer notes y″ = −9y, the same relationship her sin(5x) example shows with −25."
+          "q": "f(x) = xe^(−x). Find f′(x), f″(x) and f‴(x), then evaluate f‴(3). Show your working, naming the rule you use at each order.",
+          "concept": "Third derivative of a product with an exponential, evaluated",
+          "why": "Product rule at every order, with d(e^(−x))/dx = −e^(−x) by the chain rule. f′ = 1·e^(−x) + x·(−e^(−x)) = (1 − x)e^(−x). f″ = (−1)e^(−x) + (1 − x)(−e^(−x)) = (−1 − 1 + x)e^(−x) = (x − 2)e^(−x). f‴ = 1·e^(−x) + (x − 2)(−e^(−x)) = (1 − x + 2)e^(−x) = (3 − x)e^(−x). Then f‴(3) = (3 − 3)e^(−3) = 0.\n\nFinal answer: f′ = (1 − x)e^(−x), f″ = (x − 2)e^(−x), f‴ = (3 − x)e^(−x), and f‴(3) = 0. A correct answer applies the product rule three times, keeps the minus from e^(−x), factors e^(−x) out each time, and gets 0 at x = 3. Treating the derivative of xe^(−x) as e^(−x) alone, or of e^(−x) as e^(−x), is wrong."
         },
         {
           "type": "short",
-          "q": "Derive f″(x) for f(x) = ln(1 + x²) from scratch, showing the chain rule step and then the quotient rule step with u, v, u′ and v′ named, exactly as slides 10 and 11 do.",
-          "concept": "The deck's central derivation, first two orders",
-          "why": "A good answer starts with the chain rule: y = ln u with u = 1 + x², so y′(u) = 1/u and u′(x) = 2x, giving f′(x) = (1/u)·2x = 2x/(1 + x²). It then observes that this is a quotient and applies f′(x) = [v(x)u′(x) − u(x)v′(x)]/(v(x))² with u = 2x, v = 1 + x², u′ = 2, v′ = 2x: f″(x) = [(1 + x²)·2 − 2x(2x)]/(1 + x²)² = (2 + 2x² − 4x²)/[(1 + x²)(1 + x²)] = (2 − 2x²)/(1 + 2x² + x⁴). Credit naming u before v in the numerator and expanding the denominator to 1 + 2x² + x⁴, since that expansion is what she carries into the third order."
+          "q": "f(x) = ln(1 + 2x²). Find f′(x) by the chain rule, then f″(x) by the quotient rule, listing u, v, u′ and v′ on one line. Show your working.",
+          "concept": "Chain rule then quotient rule on a logarithm of a polynomial",
+          "why": "Chain rule: y = ln u with u = 1 + 2x², so y′(u) = 1/u and u′(x) = 4x, giving f′(x) = 4x/(1 + 2x²). This is a quotient, so use the quotient rule for f″: u = 4x, v = 1 + 2x², u′ = 4, v′ = 4x. f″ = [v u′ − u v′]/v² = [(1 + 2x²)·4 − 4x·4x]/(1 + 2x²)² = (4 + 8x² − 16x²)/(1 + 2x²)² = (4 − 8x²)/(1 + 2x²)².\n\nFinal answer: f′(x) = 4x/(1 + 2x²), f″(x) = (4 − 8x²)/(1 + 2x²)²; also accepted with the denominator expanded as 1 + 4x² + 4x⁴, or the numerator factored as 4(1 − 2x²). A correct answer shows the inner derivative 4x in f′ and the v u′ − u v′ order in f″. (8x² − 4)/(1 + 2x²)² has the numerator reversed and is wrong."
         },
         {
           "type": "short",
-          "q": "For f(x) = ln x, produce the first three derivatives in both the fraction and the negative-power form she uses, then evaluate f‴(2).",
-          "concept": "The ln x chain written both ways, and evaluation at a point",
-          "why": "A good answer gives d(ln x)/dx = 1/x, then: y′ = 1/x or x⁻¹; y″ = −1/x² or −x⁻²; y‴ = 2/x³ or 2x⁻³. It should show where each line comes from — x⁻¹ differentiates to (−1)x⁻², and −x⁻² differentiates to −(−2)x⁻³ = +2x⁻³, so the sign flips and flips back while the coefficient runs 1, −1, 2. Finally f‴(2) = 2/2³ = 2/8 = 1/4. Credit writing both forms: the negative-power form is the one that can be differentiated again, which is exactly why she supplies it at every line."
+          "q": "f(x) = x⁵ − 2x². Find f⁽⁴⁾(x), and find the smallest n for which f⁽ⁿ⁾(x) = 0 for all x. Show your working.",
+          "concept": "Order at which a polynomial's derivatives vanish",
+          "why": "f′ = 5x⁴ − 4x; f″ = 20x³ − 4; f‴ = 60x²; f⁽⁴⁾ = 120x; f⁽⁵⁾ = 120; f⁽⁶⁾ = 0. Each differentiation lowers the degree by 1, so a degree-5 polynomial becomes a constant at the fifth derivative and zero at the sixth.\n\nFinal answer: f⁽⁴⁾(x) = 120x and n = 6. A correct answer shows the chain of derivatives (or argues from the degree: degree 5, so the 6th derivative is the first to vanish). Answering n = 5 confuses 'constant' with 'zero': f⁽⁵⁾ = 120 is not zero."
         },
         {
           "type": "short",
-          "q": "The FOURTH DERIVATIVE slide prints the numerator of f⁽⁴⁾(x) as −12x¹² + 40x¹⁰ + 568x⁸ + 416x⁶ + 240x⁴ + 24x² − 12. Expand her own quotient-rule line and give the correct numerator, then say what remains trustworthy on that slide.",
-          "concept": "Checking a printed result by redoing the expansion",
-          "why": "A good answer expands both products. (1 + 4x² + 6x⁴ + 4x⁶ + x⁸)(20x⁴ − 24x² − 12) = 20x¹² + 56x¹⁰ + 12x⁸ − 112x⁶ − 148x⁴ − 72x² − 12. (8x + 24x³ + 24x⁵ + 8x⁷)(4x⁵ − 8x³ − 12x) = 32x¹² + 32x¹⁰ − 192x⁸ − 448x⁶ − 352x⁴ − 96x². Subtracting gives −12x¹² + 24x¹⁰ + 204x⁸ + 336x⁶ + 204x⁴ + 24x² − 12, so the printed 40, 568, 416 and 240 should be 24, 204, 336 and 204; only the x¹², x² and constant terms are right. What remains trustworthy is everything above that line: u = 4x⁵ − 8x³ − 12x, v = 1 + 4x² + 6x⁴ + 4x⁶ + x⁸, u′ = 20x⁴ − 24x² − 12, v′ = 8x + 24x³ + 24x⁵ + 8x⁷ and the quotient-rule expression are all correct — the failure is confined to the arithmetic of the expansion. A strong answer adds the check that the denominator is (1 + x²)⁴, so the correct numerator factors as −12(1 + x²)⁴(x⁴ − 6x² + 1) and f⁽⁴⁾(x) reduces to −12(x⁴ − 6x² + 1)/(1 + x²)⁴."
+          "q": "For y = e^(3x), every derivative is a positive multiple of y, but for y = sin(5x) the derivatives run through four different forms before repeating. Explain why, and state d⁴y/dx⁴ for each.",
+          "concept": "Why exponentials keep their sign and trig derivatives cycle",
+          "why": "e^(3x) differentiates to itself times the inner derivative 3, so each order multiplies by 3 and never changes the function or its sign: 3e^(3x), 9e^(3x), 27e^(3x), 81e^(3x). sin(5x) also picks up a factor 5 each time, but sin and cos swap at every step and the minus enters when cos is differentiated: 5 cos(5x), −25 sin(5x), −125 cos(5x), 625 sin(5x). It takes four steps to return to a positive multiple of sin(5x), because the pattern sin → cos → −sin → −cos → sin has period four.\n\nA correct answer says the exponential reproduces itself (only the chain factor 3 accumulates) while sin and cos alternate and the minus comes from d(cos)/dx = −sin, and gives d⁴y/dx⁴ = 81e^(3x) and 625 sin(5x)."
         }
       ]
     },
@@ -782,131 +786,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "In SOLUTION TO QUESTION 3 (V_max = 24.0 V, f = 60.0 Hz, R = 265 Ω), what is the maximum power dissipated in the resistor?",
+          "q": "A source v = 170 sin(377t) V is connected across a 34 Ω resistor. Which equation gives the current in amperes?",
           "options": [
-            "2.174 W",
-            "1.09 W",
-            "4.35 W",
-            "0.0642 W"
-          ],
-          "answerIndex": 0,
-          "concept": "Maximum power uses V_max, average power uses V_rms",
-          "why": "P_max = V²_max/R = 24²/265 = 576/265 = 2.174 W. Option 2 is the average power, V²_rms/R = 17²/265 = 1.09 W — the same formula with the rms voltage, and exactly half the answer. Option 3 doubles the maximum instead of the average, applying the factor 2 to the wrong quantity. Option 4 is the rms current in amperes wearing a watt label. Check any answer against P_max = 2P_av: 2.174 is twice 1.09, and if yours is not, one of the two used the wrong voltage."
-        },
-        {
-          "type": "mcq",
-          "q": "Solution to question 2 solves for the maximum voltage from an ac voltage of 250 V. What does she get?",
-          "options": [
-            "176.8 V",
-            "353.56 V",
-            "250 V",
-            "500 V"
+            "i = 3.5 sin(377t)",
+            "i = 5.0 sin(377t)",
+            "i = 5.0 sin(60t)",
+            "i = 7.1 sin(377t)"
           ],
           "answerIndex": 1,
-          "concept": "Rearranging V_rms = 0.7071 V_max to find the peak",
-          "why": "V_max = V_rms/0.7071 = 250/0.7071 = 353.56 V, which is the same as multiplying by 1.4142. Option 1 multiplies by 0.7071 instead of dividing, 250 × 0.7071 = 176.8 V — the factor used in the wrong direction, and it gives a peak smaller than the rms, which is impossible. Option 3 changes nothing. Option 4 doubles, confusing the peak with the trough-to-crest swing. Note that her question slide sets this problem with 120 V, not 250 V; with 120 V the answer would be 169.7 ≈ 170 V."
+          "concept": "Current equation from the voltage equation",
+          "why": "i = v/R = (170/34) sin(377t) = 5.0 sin(377t) A. In a resistor the current has the same sin ωt as the voltage and the amplitude I_max = V_max/R.\n\n3.5 sin(377t) uses the rms voltage 120 V for the amplitude; 5.0 sin(60t) replaces ω = 377 rad/s by the frequency 60 Hz; 7.1 sin(377t) multiplies the correct amplitude by √2."
         },
         {
           "type": "mcq",
-          "q": "An alternating voltage is v = 170 sin(377t) V. What are its rms value and its frequency?",
+          "q": "An AC voltmeter reads 48 V across a 12 Ω resistor. What does an AC ammeter in series with the resistor read?",
           "options": [
-            "120 V and 377 Hz",
-            "240 V and 60 Hz",
-            "120 V and 60 Hz",
-            "170 V and 60 Hz"
-          ],
-          "answerIndex": 2,
-          "concept": "Reading V_max and ω off v = V_max sin ωt, then converting each",
-          "why": "Matching to V = V_max sin ωt gives V_max = 170 V and ω = 377 rad s⁻¹, so V_rms = 0.7071 × 170 = 120 V and f = ω/2π = 377/6.283 = 60 Hz. Option 1 quotes ω as if it were the frequency — 377 is in rad s⁻¹, not Hz, and is 2π times too large. Option 2 multiplies 170 by 1.4142 instead of by 0.7071, making the rms larger than the peak. Option 4 reads the amplitude straight off as the rms value and never converts at all."
-        },
-        {
-          "type": "mcq",
-          "q": "An alternating current of peak value 3.0 A flows through a 20 Ω resistor. The average power dissipated is",
-          "options": [
-            "180 W",
-            "45 W",
-            "60 W",
-            "90 W"
-          ],
-          "answerIndex": 3,
-          "concept": "Putting I_rms, not I_max, into P = I²R",
-          "why": "I_rms = 0.7071 × 3.0 = 2.121 A, so P_av = I²_rms R = (2.121)² × 20 = 4.5 × 20 = 90 W. Equivalently ½I²_max R = ½(9)(20) = 90 W. Option 1 uses the peak current, I²_max R = 9 × 20 = 180 W, which is the maximum instantaneous power, twice the average. Option 2 applies 0.7071 a second time before squaring. Option 3 forgets the square altogether, computing I_max R = 3 × 20 = 60, which is a voltage in volts, not a power."
-        },
-        {
-          "type": "mcq",
-          "q": "A 4.0 Ω resistor is connected to an AC supply whose rms voltage is 12 V. The rms current and the average power are",
-          "options": [
-            "3.0 A and 36 W",
-            "2.12 A and 18 W",
-            "4.24 A and 72 W",
-            "3.0 A and 12 W"
+            "4.0 A",
+            "5.66 A",
+            "2.83 A",
+            "0.25 A"
           ],
           "answerIndex": 0,
-          "concept": "Ohm's law used with rms values on both sides",
-          "why": "I_rms = V_rms/R = 12/4.0 = 3.0 A, and P_av = I²_rms R = 9 × 4.0 = 36 W, which agrees with V²_rms/R = 144/4.0 = 36 W. Option 2 converts the 12 V a second time, as if it were a peak value. Option 3 converts it in the wrong direction, multiplying by 1.4142. Option 4 has the current right but computes I R instead of I²R, dropping the square that makes it a power."
+          "concept": "Ohm's law with rms values",
+          "why": "Both meters read rms, and Ohm's law holds within one kind of value: I_rms = V_rms/R = 48/12 = 4.0 A. No conversion factor is needed because the same 0.7071 divides out of both amplitudes.\n\n5.66 A converts the answer to a peak value, which the meter does not display; 2.83 A applies 0.7071 to a value that is already rms; 0.25 A is R/V."
         },
         {
           "type": "mcq",
-          "q": "A student answers part (b) of Question 3 by writing I = 24/265 = 0.0906 A. What has gone wrong, and what is the right answer?",
+          "q": "The instantaneous power in a resistor carrying a sinusoidal current rises to a maximum of 800 W. What is the average power?",
           "options": [
-            "Nothing has gone wrong; 0.0906 A is the rms current",
-            "The peak voltage was divided by R, which gives I_max, not I_rms; the rms current is 0.0642 A",
-            "The resistance should have been squared; the rms current is 0.000342 A",
-            "The 0.7071 factor must be applied twice; the rms current is 0.0454 A"
-          ],
-          "answerIndex": 1,
-          "concept": "Never cross a peak value with an rms value in Ohm's law",
-          "why": "24 V is V_max, so 24/265 = 0.0906 A is I_max. Her part (a) converts first, V_rms = 0.7071 × 24 = 17.0 V, and then I_rms = 17/265 = 0.0642 A. The student's number is not wrong as a peak current — it is simply an answer to a different question, and 0.7071 × 0.0906 = 0.0642 confirms the two are consistent. Option 3 invents a squared resistance that has no place in Ohm's law. Option 4 is the opposite error, converting an already-converted figure and halving the true answer."
-        },
-        {
-          "type": "mcq",
-          "q": "An AC source has a period of 0.02 s. Its frequency and angular frequency are",
-          "options": [
-            "0.02 Hz and 0.126 rad s⁻¹",
-            "50 Hz and 50 rad s⁻¹",
-            "50 Hz and 314 rad s⁻¹",
-            "314 Hz and 50 rad s⁻¹"
-          ],
-          "answerIndex": 2,
-          "concept": "Moving between T, f and ω with the right units on each",
-          "why": "f = 1/T = 1/0.02 = 50 Hz, and ω = 2π/T = 2πf = 2π(50) = 314 rad s⁻¹. Option 1 quotes the period itself as the frequency. Option 2 sets ω equal to f, the single commonest slip, out by a factor of 6.28. Option 4 swaps the two numbers and their units — 314 is an angular frequency in rad s⁻¹ and can never be a count of cycles per second here."
-        },
-        {
-          "type": "mcq",
-          "q": "A resistor on an AC supply dissipates an average power of 60 W. The maximum instantaneous power delivered to it is",
-          "options": [
-            "30 W",
-            "42.4 W",
-            "84.9 W",
-            "120 W"
+            "800 W",
+            "566 W",
+            "200 W",
+            "400 W"
           ],
           "answerIndex": 3,
-          "concept": "P_max = 2 P_av in a resistor, because power goes as the square of the voltage",
-          "why": "P_av = V²_rms/R and P_max = V²_max/R with the same R, so the ratio is (V_max/V_rms)² = (√2)² = 2, giving 120 W. Her Question 3 shows it numerically: 2.174 W against 1.09 W. Option 1 halves instead of doubling. Options 2 and 3 apply √2 once — multiplying or dividing by 1.4142 — forgetting that power depends on the voltage squared, so the factor gets squared too."
+          "concept": "Average power from maximum power",
+          "why": "P_max = I²_max R and P_av = I²_rms R with I_rms = I_max/√2, so P_av = P_max/2 = 400 W. Peak power in a resistor is always exactly twice the average.\n\n800 W equates average with maximum; 566 W divides by √2 once, forgetting that power goes as the square of the current; 200 W divides by 4."
+        },
+        {
+          "type": "mcq",
+          "q": "A supply has frequency 60 Hz. How many complete cycles does it make in 0.25 s?",
+          "options": [
+            "240",
+            "94",
+            "0.0042",
+            "15"
+          ],
+          "answerIndex": 3,
+          "concept": "Cycles from frequency and time",
+          "why": "Frequency is cycles per second, so cycles = f × t = 60 × 0.25 = 15. Equivalently T = 1/60 s and 0.25/(1/60) = 15.\n\n240 divides f by t instead of multiplying; 94 is ωt = 377 × 0.25, the angle in radians, not the number of cycles; 0.0042 is t/f, which has no meaning here."
+        },
+        {
+          "type": "mcq",
+          "q": "A lamp is rated 60 W at 120 V rms. What is the peak current through it when operating normally?",
+          "options": [
+            "0.50 A",
+            "0.35 A",
+            "0.71 A",
+            "1.0 A"
+          ],
+          "answerIndex": 2,
+          "concept": "Peak current from a power rating",
+          "why": "Ratings are rms: P_av = V_rms I_rms, so I_rms = 60/120 = 0.50 A. Then I_max = 0.50 × 1.4142 = 0.71 A (0.707 A).\n\n0.50 A stops at the rms current; 0.35 A multiplies by 0.7071 instead of dividing; 1.0 A doubles the rms value."
+        },
+        {
+          "type": "mcq",
+          "q": "A voltage is v = 100 sin(100πt) V, with t in seconds. Starting from t = 0, at what time does v first reach 50 V?",
+          "options": [
+            "5.0 ms",
+            "1.67 ms",
+            "8.3 ms",
+            "95 ms"
+          ],
+          "answerIndex": 1,
+          "concept": "Time at which the instantaneous value reaches a given level",
+          "why": "50 = 100 sin(100πt) means sin(100πt) = 0.5, so the first solution is 100πt = π/6 rad (30°). Then t = (π/6)/(100π) = 1/600 s = 1.67 ms.\n\n5.0 ms is the quarter period, when v first reaches the peak of 100 V; 8.3 ms is the second time v = 50 V, on the way back down (100πt = 5π/6); 95 ms puts 30 degrees directly into 100πt = 30 without converting to radians."
+        },
+        {
+          "type": "mcq",
+          "q": "A heater dissipates an average power of 800 W when connected to a sinusoidal supply. Its resistance is 32 Ω. What is the peak voltage of the supply?",
+          "options": [
+            "226 V",
+            "160 V",
+            "113 V",
+            "25 V"
+          ],
+          "answerIndex": 0,
+          "concept": "Peak voltage from average power and resistance",
+          "why": "P_av = V²_rms/R, so V_rms = √(P_av R) = √(800 × 32) = √25600 = 160 V. Then V_max = 160 × 1.4142 = 226 V.\n\n160 V stops at the rms value; 113 V multiplies the rms by 0.7071 instead of 1.4142; 25 V is P/R = 25 without taking the square root."
+        },
+        {
+          "type": "mcq",
+          "q": "A problem gives a generator's peak voltage, its frequency, and the resistance of the resistor it drives, and asks for the rms current and the average power. Which given quantity is not needed?",
+          "options": [
+            "The resistance",
+            "The peak voltage",
+            "The frequency",
+            "All three are needed"
+          ],
+          "answerIndex": 2,
+          "concept": "Redundant data in a resistive AC problem",
+          "why": "For a pure resistor, I_rms = V_rms/R = 0.7071 V_max/R and P_av = V²_rms/R contain no frequency: R is a constant of the component and the rms conversion factor is the same at every frequency. The frequency is a redundant given.\n\nThe peak voltage is needed to get V_rms, and R is needed for both the current and the power. Frequency would matter only for components (inductors, capacitors) that this circuit does not contain."
         },
         {
           "type": "short",
-          "q": "Work PRACTICE question 1 and PRACTICE question 2 in full, as the solution slides do. For Question 2, give the answer for both of the voltages the deck prints.",
-          "concept": "Rearranging the rms formula, and handling the deck's own inconsistent data",
-          "why": "Question 1: a household circuit at an rms voltage of 120 V. From V_rms = (1/√2)V_max, rearrange to V_max = V_rms √2, so V_max = 120√2 = 169.7 ≈ 170 V. Question 2: an ac current of 10 A and an ac voltage that the question slide gives as 120 V and the solution slide gives as 250 V. Current, unaffected by the discrepancy: I_rms = 0.7071 I_max, so I_max = I_rms/0.7071 = 10/0.7071 = 14.14 A. Voltage, both ways: with 250 V, V_max = 250/0.7071 = 353.56 V, which is what the solution slide prints; with 120 V, V_max = 120/0.7071 = 169.7 ≈ 170 V, the same answer as Question 1. A good answer names the inconsistency explicitly rather than silently choosing one figure, states the formula before substituting, and carries the unit V or A on every line."
+          "q": "An AC generator with a peak voltage of 36.0 V and a frequency of 50.0 Hz is connected to a 120 Ω resistor. Calculate the rms voltage, the rms current, the average power and the maximum power dissipated. State which given quantity is unused and check the ratio of the two powers. Show your working.",
+          "concept": "Full resistive AC calculation from peak voltage",
+          "why": "V_rms = 0.7071 × 36.0 = 25.5 V. I_rms = V_rms/R = 25.5/120 = 0.212 A. P_av = V²_rms/R = (25.5)²/120 = 648/120 = 5.4 W (check: I²_rms R = (0.212)²(120) = 5.4 W). P_max = V²_max/R = (36.0)²/120 = 1296/120 = 10.8 W. The 50.0 Hz is unused because nothing in a purely resistive circuit depends on frequency. P_max/P_av = 10.8/5.4 = 2, as it must be.\n\nA correct answer gives 25.5 V (accept 25.4 to 25.6), 0.212 A (accept 0.21 to 0.22), 5.4 W, 10.8 W, names the frequency as unused and shows the ratio 2. Using V_max in the average power (10.8 W) or applying 0.7071 twice (I = 0.15 A) is wrong."
         },
         {
           "type": "short",
-          "q": "Work PRACTICE QUESTION 3 in full — maximum voltage 24.0 V, frequency 60.0 Hz, R = 265 Ω — showing the arithmetic for all four parts, then check your answers to (c) and (d) against each other and say which given was never used.",
-          "concept": "The complete resistive AC calculation, with an internal check and a redundant given",
-          "why": "(a) V_rms = 0.7071 V_max = 0.7071 × 24 = 16.97 ≈ 17.0 V. (b) I_rms = V_rms/R = 17/265 = 0.06415 ≈ 0.0642 A, that is 64.2 mA. (c) P_av = V²_rms/R = 17²/265 = 289/265 = 1.0906 ≈ 1.09 W; the second route on slide 15 agrees, I²_rms R = (0.0642)² × 265 = 0.004122 × 265 = 1.09 W. (d) P_max = V²_max/R = 24²/265 = 576/265 = 2.1736 ≈ 2.174 W. Check: P_max/P_av = 2.174/1.09 = 1.995, which is 2 to within the rounding of 16.97 to 17.0, exactly as required since the ratio is (V_max/V_rms)² = 2. The unused given is the frequency, 60.0 Hz: the load is a pure resistor, R does not depend on frequency, and no formula in any of the four parts contains f. A good answer states that explicitly rather than quietly ignoring it."
+          "q": "A question sheet states a device's supply as 110 V rms in the question but 220 V rms in the answer key; both give the rms current as 5.0 A. Calculate the peak voltage for each figure and the peak current, and state which part of the answer is unaffected by the discrepancy. Show your working.",
+          "concept": "Converting rms to peak values",
+          "why": "V_max = V_rms/0.7071 = 1.4142 V_rms. For 110 V: V_max = 155.6 V (156 V). For 220 V: V_max = 311.1 V (311 V). The current is the same on both versions: I_max = 5.0/0.7071 = 7.07 A. The peak current is unaffected by the discrepancy; only the peak voltage changes, and it doubles because the rms figure doubled.\n\nA correct answer gives 156 V and 311 V (accept 155 to 157 and 310 to 312), 7.07 A (accept 7.0 to 7.1), and says the current part is unaffected. Multiplying by 0.7071 (77.8 V, 156 V, 3.5 A) converts in the wrong direction and is wrong."
         },
         {
           "type": "short",
-          "q": "An alternating current i = 8 sin(100πt) A flows through a 15 Ω resistor. Find I_max, ω, f, T, I_rms, the average power and the maximum instantaneous power, with units throughout.",
-          "concept": "Extracting every quantity from an equation in the form i = I_max sin ωt",
-          "why": "Match i = I_max sin ωt: I_max = 8 A and ω = 100π = 314.16 rad s⁻¹. Then f = ω/2π = 314.16/6.2832 = 50 Hz and T = 1/f = 0.02 s (equivalently T = 2π/ω). I_rms = 0.7071 I_max = 0.7071 × 8 = 5.66 A. Average power P_av = I²_rms R = (5.657)² × 15 = 32 × 15 = 480 W — note (I²)_av = ½I²_max = ½(64) = 32 A², so the 32 can be written down without rounding. Maximum instantaneous power P_max = I²_max R = 64 × 15 = 960 W, which is 2 × 480 W as it must be. A good answer keeps ω in rad s⁻¹ and f in Hz and does not interchange them, and notes that the angle 100πt is in radians."
+          "q": "A student's working for a 50 Ω heater on a 240 V rms supply reads: 'V_max = 240 × 0.7071 = 170 V; I_max = 170/50 = 3.4 A; P_av = (3.4)² × 50 = 578 W.' Identify each error and calculate the correct V_max, I_max, I_rms and P_av. Show your working.",
+          "concept": "Diagnosing a peak and rms calculation",
+          "why": "Error 1: rms to peak requires multiplying by 1.4142 (dividing by 0.7071), so V_max = 240 × 1.4142 = 339 V, not 170 V. Error 2: I_max = V_max/R = 339/50 = 6.79 A follows from the corrected peak; the student's 3.4 A is really I_rms/√2 in disguise. Error 3: P_av must use the rms current, not the peak: I_rms = V_rms/R = 240/50 = 4.8 A, so P_av = (4.8)²(50) = 1152 W = 1.15 kW (or V²_rms/R = 240²/50). The student's P_av used a peak-labelled current in an average-power formula, and the wrongly converted voltage.\n\nA correct answer names the wrong-direction conversion and the use of a peak current in P_av, and gives V_max = 339 V (accept 338 to 340), I_max = 6.79 A (accept 6.7 to 6.9), I_rms = 4.8 A and P_av = 1152 W (accept 1.15 kW). P_max = 2304 W may be mentioned but is not required."
         },
         {
           "type": "short",
-          "q": "An AC voltmeter across a resistor reads 110 V and an AC ammeter in series with it reads 2.5 A. Find the peak voltage, the peak current, the resistance, the average power and the maximum power. Say why the meter readings can be used directly in Ohm's law.",
-          "concept": "Working backwards from meter readings, which are rms by design",
-          "why": "Slide 10: AC ammeters and voltmeters are designed to read rms values, so V_rms = 110 V and I_rms = 2.5 A. Peaks: V_max = 110/0.7071 = 155.6 V and I_max = 2.5/0.7071 = 3.54 A. Resistance: R = V_rms/I_rms = 110/2.5 = 44 Ω — legitimate because both readings are the same kind of value, so the 0.7071 divides out; the same R follows from V_max/I_max = 155.6/3.54 = 44 Ω, which is a useful check. Average power: P_av = I²_rms R = (2.5)² × 44 = 6.25 × 44 = 275 W, agreeing with V²_rms/R = 12100/44 = 275 W. Maximum power: P_max = V²_max/R = (155.6)²/44 = 24211/44 = 550 W, which is 2 × 275 W. A good answer states the reason the readings are rms rather than assuming it, and never mixes a peak with an rms inside one application of Ohm's law."
+          "q": "Ohm's law v = iR holds at every instant for a resistor on a sinusoidal supply. Explain why it may also be written I_rms = V_rms/R, and why P_av = I²_rms R gives the true average power with no extra numerical factor.",
+          "concept": "Why rms values obey Ohm's law and the power formula",
+          "why": "Since R is constant, i = v/R at every instant means the current waveform is the voltage waveform scaled by 1/R: I_max = V_max/R. Both amplitudes are converted to rms by the same factor 0.7071, so the factor cancels and I_rms = V_rms/R as well; Ohm's law holds between any matching pair of values (peak with peak, rms with rms) but not across a mixed pair. For power, the instantaneous power is i²R, so the average power is (i²)_av R. The rms value is defined so that I²_rms is exactly (i²)_av, the mean of the squared current; substituting it into P = I²R therefore gives the true average with no further factor.\n\nA correct answer says R is constant so both amplitudes scale by the same factor, and that I²_rms equals the mean of i² by definition, which is precisely what P = i²R averages."
         }
       ]
     },
@@ -919,131 +923,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Trace this fragment. What is printed?\nSET total TO 0\nSET i TO 1\nWHILE i <= 4\n    SET total TO total + i\n    SET i TO i + 1\nENDWHILE\nPRINT total",
+          "q": "What is printed, in order?\n\n```\nFOR i = 1 TO 3\n    FOR j = 1 TO i\n        PRINT i * j\n    ENDFOR\nENDFOR\n```",
           "options": [
-            "6",
-            "10",
-            "15",
-            "5"
+            "1 2 3 4 6 9",
+            "1 4 9",
+            "1 2 4 3 6 9",
+            "1 2 3 2 4 6 3 6 9"
           ],
-          "answerIndex": 1,
-          "concept": "tracing a pre-tested counting loop, and the inclusive <= bound",
-          "why": "i = 1: total = 1, i = 2. i = 2: total = 3, i = 3. i = 3: total = 6, i = 4. i = 4: total = 10, i = 5. Now 5 <= 4 is false, so the loop ends and 10 is printed, the sum 1 + 2 + 3 + 4. Option a (6) is the off-by-one from reading 'i <= 4' as 'i < 4', which drops the last pass and always loses exactly the largest term. Option c (15) comes from letting the pass with i = 5 run, that is, from testing after the body instead of before it. Option d (5) is the final value of i, printed by a student who traced correctly and then read the wrong variable - i and total end the loop holding very different things."
+          "answerIndex": 2,
+          "concept": "Tracing nested FOR loops",
+          "why": "The inner loop runs i times. i = 1: j = 1, prints 1. i = 2: j = 1, 2, prints 2 4. i = 3: j = 1, 2, 3, prints 3 6 9. Output: 1 2 4 3 6 9.\n\n'1 2 3 4 6 9' lists the values sorted rather than in the order printed; '1 4 9' runs the inner loop once with j = i; the nine-value option runs the inner loop 1 TO 3 every time, ignoring the bound i."
         },
         {
           "type": "mcq",
-          "q": "Trace this fragment. Exactly what appears on the screen?\nSET n TO 10\nREPEAT\n    PRINT n\n    SET n TO n - 3\nUNTIL n < 0",
+          "q": "The user types 5, 8, 3, 0. Which line completes the loop so that 16 is printed?\n\n```\nSET t TO 0\nREAD n\nWHILE n <> 0\n    SET t TO t + n\n    ____\nENDWHILE\nPRINT t\n```",
           "options": [
-            "10, 7, 4, 1 and then the loop stops",
-            "10, 7, 4, 1, -2 and then the loop stops",
-            "7, 4, 1 and then the loop stops",
-            "Nothing at all, because n < 0 is false when the loop is reached"
+            "READ n",
+            "SET n TO n - 1",
+            "SET t TO 0",
+            "INCREMENT n"
           ],
           "answerIndex": 0,
-          "concept": "a post-tested loop prints before it tests, and UNTIL stops when its condition becomes true",
-          "why": "Pass 1 prints 10, then n = 7; 7 < 0 is false, so round again. Pass 2 prints 7, n = 4. Pass 3 prints 4, n = 1. Pass 4 prints 1, n = -2; now -2 < 0 is true and the loop stops. Four lines. Option b adds -2, which assumes another PRINT before the final test - but the decrement is the LAST statement of the body, so the value that finally satisfies the condition is never printed. Option c prints after decrementing, reading the two body lines in the wrong order. Option d is the important one: it reads UNTIL n < 0 as though it were WHILE n < 0 and, finding the condition false at the start, concludes the body is skipped. Both halves are wrong - REPEAT-UNTIL tests at the ending/bottom, so the body always runs at least once, and it stops when the condition turns true rather than running while it is true."
+          "concept": "Completing a read-ahead loop",
+          "why": "The value read before the loop is added, then the next value must be read at the foot of the body so the condition tests it: 5 + 8 + 3 = 16, and the 0 ends the loop without being added.\n\nSET n TO n − 1 ignores the typed values and counts 5 + 4 + 3 + 2 + 1 = 15; SET t TO 0 never changes n, so the loop never ends and the total is wiped anyway; INCREMENT n moves n away from 0 forever."
         },
         {
           "type": "mcq",
-          "q": "Which fragment reads the marks of five students, counts how many scored 50 OR MORE, and prints that count?",
+          "q": "This prints 1 2 3 4. Which single change makes it print 1 2 3 4 5?\n\n```\nSET k TO 1\nWHILE k < 5\n    PRINT k\n    SET k TO k + 1\nENDWHILE\n```",
           "options": [
-            "SET count TO 0; FOR i = 1 TO 5 { READ mark; IF mark > 50 THEN SET count TO count + 1 ENDIF } ENDFOR; PRINT count",
-            "FOR i = 1 TO 5 { SET count TO 0; READ mark; IF mark >= 50 THEN SET count TO count + 1 ENDIF } ENDFOR; PRINT count",
-            "SET count TO 0; READ mark; FOR i = 1 TO 5 { IF mark >= 50 THEN SET count TO count + 1 ENDIF } ENDFOR; PRINT count",
-            "SET count TO 0; FOR i = 1 TO 5 { READ mark; IF mark >= 50 THEN SET count TO count + 1 ENDIF } ENDFOR; PRINT count"
+            "Change SET k TO 1 to SET k TO 0",
+            "Move PRINT k below SET k TO k + 1",
+            "Change k < 5 to k > 5",
+            "Change k < 5 to k ≤ 5"
           ],
           "answerIndex": 3,
-          "concept": "where the accumulator is initialised, where the read happens, and which comparison '50 or more' names",
-          "why": "Option d initialises count once before the loop, reads a fresh mark on each of the five passes, tests mark >= 50, and prints after the loop. Each of the others breaks exactly one of those. Option a tests mark > 50, so a student scoring exactly 50 is not counted - '50 or more' is >=, and the boundary value is the only input that separates the two fragments, which is why it is the one to test on. Option b moves SET count TO 0 INSIDE the loop, so the counter is wiped at the start of every pass and the printed value can only be 0 or 1; the plausible-looking output is what makes this bug survive. Option c reads a single mark before the loop and never reads again, so the same mark is tested five times and the answer is either 0 or 5."
+          "concept": "Fixing an off-by-one loop condition",
+          "why": "The loop stops as soon as k reaches 5, so 5 is never printed. Allowing k = 5 through the test (k ≤ 5) gives 1 2 3 4 5.\n\nStarting at 0 prints 0 1 2 3 4; moving the print below the increment prints 2 3 4 5; k > 5 is false at once and prints nothing."
         },
         {
           "type": "mcq",
-          "q": "Trace this fragment. What is printed?\nSET s TO 0\nFOR k = 2 TO 8\n    SET s TO s + k\nENDFOR\nPRINT s",
+          "q": "What is printed?\n\n```\nSET n TO 10\nREPEAT\n    PRINT n\n    SET n TO n + 5\nUNTIL n > 5\n```",
           "options": [
+            "Nothing is printed",
+            "10",
+            "10 15",
+            "It never stops"
+          ],
+          "answerIndex": 1,
+          "concept": "REPEAT-UNTIL runs its body at least once",
+          "why": "REPEAT-UNTIL tests at the bottom, so the body runs before any test: 10 is printed, n becomes 15, and 15 > 5 is true, so the loop stops. Output: 10.\n\n'Nothing' treats the loop as pre-tested with a condition that is already true; '10 15' runs one pass too many; 'never stops' reads UNTIL as WHILE and keeps looping while n > 5."
+        },
+        {
+          "type": "mcq",
+          "q": "Which fragment prints 10, 8, 6, 4, 2 in that order?",
+          "options": [
+            "SET k TO 10 / WHILE k > 2 / PRINT k / SET k TO k − 2 / ENDWHILE",
+            "SET k TO 10 / WHILE k > 0 / PRINT k / SET k TO k − 2 / ENDWHILE",
+            "SET k TO 10 / REPEAT / SET k TO k − 2 / PRINT k / UNTIL k = 0",
+            "FOR k = 2 TO 10 / PRINT k / ENDFOR"
+          ],
+          "answerIndex": 1,
+          "concept": "Choosing the correct loop implementation",
+          "why": "Start at 10, print, subtract 2, and keep going while k is still positive: 10 8 6 4 2, and the loop stops when k = 0.\n\nk > 2 stops one value early and prints 10 8 6 4; the REPEAT version subtracts before printing and gives 8 6 4 2 0; the FOR counts upward by 1 and prints 2 3 4 5 6 7 8 9 10."
+        },
+        {
+          "type": "mcq",
+          "q": "What is printed?\n\n```\nSET n TO 4321\nSET c TO 0\nWHILE n > 0\n    SET n TO n DIV 10\n    INCREMENT c\nENDWHILE\nPRINT c\n```",
+          "options": [
+            "3",
+            "432",
+            "5",
+            "4"
+          ],
+          "answerIndex": 3,
+          "concept": "Tracing integer division in a loop",
+          "why": "DIV drops the last digit each pass: n = 432, 43, 4, 0, with c counted up on each of those four passes. When n = 0 the test fails and 4 is printed: the number of digits.\n\n3 stops when n drops below 10, missing the pass that takes 4 to 0; 432 prints n after one pass instead of c; 5 counts the failed test as a pass."
+        },
+        {
+          "type": "mcq",
+          "q": "What is printed?\n\n```\nSET p TO 1\nFOR i = 1 TO 4\n    SET p TO p * 3\nENDFOR\nPRINT p\n```",
+          "options": [
+            "81",
             "27",
-            "33",
-            "35",
-            "44"
+            "243",
+            "12"
+          ],
+          "answerIndex": 0,
+          "concept": "Tracing a product in a FOR loop",
+          "why": "Four passes, each multiplying by 3: 3, 9, 27, 81. Printed: 81.\n\n27 runs only three passes; 243 runs five; 12 adds 3 on each pass instead of multiplying."
+        },
+        {
+          "type": "mcq",
+          "q": "In pseudocode, what does indenting the lines between WHILE and ENDWHILE tell the reader?",
+          "options": [
+            "Marks keywords apart from ordinary words",
+            "Keeps each line to one statement",
+            "Shows which statements belong to which construct",
+            "Keeps the statements language independent"
           ],
           "answerIndex": 2,
-          "concept": "FOR bounds are inclusive at both ends",
-          "why": "k takes the values 2, 3, 4, 5, 6, 7, 8 - that is 8 - 2 + 1 = 7 passes - and 2 + 3 + 4 + 5 + 6 + 7 + 8 = 35. Option a (27) is the sum 2 to 7, from treating the upper bound as exclusive, as a for loop in C or Java would with <. Option b (33) is the sum 3 to 8, from treating the lower bound as the value BEFORE the first pass, so the loop is imagined to increment before its first use of k. Option d (44) is the sum 2 to 9, one pass too many. Only one of the four sums can come from a correct reading of FOR k = 2 TO 8, and the check is that the answer must be 7 terms wide."
-        },
-        {
-          "type": "mcq",
-          "q": "The week's problem states that the tuition fee is increased IF MORE THAN SEVEN students pass. The course's own solution ends with the lines 'if seven or more students passed' / 'print \"increase tuition\"'. What, if anything, is wrong?",
-          "options": [
-            "Nothing is wrong: 'seven or more students passed' and 'more than seven students pass' pick out exactly the same cases",
-            "The condition is one student too generous - it raises the fee when exactly seven passed, which the problem excludes; it should test that passes is greater than seven",
-            "The condition should count failures rather than passes, since a decision about raising fees depends on how many students did not pass",
-            "The condition should compare passes with the number of students rather than with a fixed number, since seven means nothing without the class size"
-          ],
-          "answerIndex": 1,
-          "concept": "an off-by-one in a boundary condition - fragment and specification disagree on exactly one case",
-          "why": "'More than seven passed' is passes > 7, first satisfied at eight. 'Seven or more passed' is passes >= 7, first satisfied at seven. They agree on every other value and differ on exactly one case, so the fault is invisible on any test data except a class in which precisely seven students pass - which is why the deck's own seventh step, testing and refining, must be done on boundary values rather than convenient ones. Option a treats the two English phrases as the same; they differ by one case. Option c redirects the test to failures, which is not equivalent - failures says nothing about passes unless the class size is known, and the requirement is stated in passes. Option d is a real design thought but not the fault: it changes the specification instead of implementing it, and the specification says seven."
-        },
-        {
-          "type": "mcq",
-          "q": "This fragment is faulty. What exactly is wrong with it?\nSET count TO 1\nSET total TO 0\nWHILE count <= 10\n    READ x\n    SET total TO total + x\nENDWHILE\nPRINT total",
-          "options": [
-            "total is never given a starting value, so the first addition has nothing to add to",
-            "The READ x belongs before the loop, so that the WHILE has a value of x to test on its first pass",
-            "The construct should have been REPEAT-UNTIL, because a loop that must read at least one value cannot be written as a WHILE",
-            "Nothing inside the loop ever changes count, so count <= 10 stays true, the loop never ends and PRINT is never reached"
-          ],
-          "answerIndex": 3,
-          "concept": "a loop whose condition is never affected by its body",
-          "why": "count is set to 1 before the loop and nothing between WHILE and ENDWHILE alters it, so count <= 10 is true on every test, the loop repeats for ever and PRINT total is unreachable; the missing line is SET count TO count + 1 as the last statement of the body. The general rule is that the body of a loop must change something the condition tests, or the loop cannot end - the same fault as last week's flowchart whose back-arrow was always taken. Option a is false: SET total TO 0 is the second line, and this distractor catches students hunting for the other bug they have been taught to look for. Option b describes a genuine pattern, the read-ahead a WHILE needs when it tests the value being read, but this loop's condition tests count, not x. Option c states a real difference between the constructs and draws a false conclusion: a WHILE can read values perfectly well, and swapping to REPEAT-UNTIL would leave the counter just as unchanged."
-        },
-        {
-          "type": "mcq",
-          "q": "A mark of 85 is entered. What does this fragment print, and is every branch of it usable?\nREAD mark\nIF mark >= 50 THEN\n    PRINT \"Pass\"\nELSE\n    IF mark >= 70 THEN\n        PRINT \"Distinction\"\n    ELSE\n        PRINT \"Fail\"\n    ENDIF\nENDIF",
-          "options": [
-            "\"Distinction\", and every branch of the fragment is reachable for some mark",
-            "\"Fail\", because the ELSE is taken whenever a more specific test appears further down the fragment",
-            "\"Pass\", and \"Distinction\" can never be printed for any mark, since anything of 70 or more is already 50 or more",
-            "\"Pass\" and then \"Distinction\", because after the first PRINT the flow carries on into the inner IF"
-          ],
-          "answerIndex": 2,
-          "concept": "ordering nested conditions - a broader test placed first makes the narrower one unreachable",
-          "why": "With mark = 85 the first test mark >= 50 is true, so 'Pass' is printed and the whole ELSE part, which contains the entire inner IF, is skipped. This is not special to 85: the inner IF is reached only when mark >= 50 is FALSE, that is when mark < 50, and no such mark can satisfy mark >= 70, so 'Distinction' is dead code for every possible input. The fix is to order the tests from the most restrictive downwards - 70 first, then 50, then Fail. Option a reasons about what the author meant rather than tracing what is written. Option b treats ELSE as chosen by looking ahead at the remaining tests, when ELSE is taken only when its own IF's condition is false. Option d has the flow continuing into the ELSE part after the THEN part, which would make every IF-THEN-ELSE run both sequences - exactly one runs, which is what THEN and ELSE mean."
-        },
-        {
-          "type": "mcq",
-          "q": "Which WHILE loop does exactly what this REPEAT-UNTIL does, for any sequence of numbers the user types?\nSET t TO 0\nREPEAT\n    READ n\n    SET t TO t + n\nUNTIL n = 0\nPRINT t",
-          "options": [
-            "SET t TO 0; WHILE n <> 0 { READ n; SET t TO t + n } ENDWHILE; PRINT t",
-            "SET t TO 0; READ n; WHILE n <> 0 { SET t TO t + n; READ n } ENDWHILE; PRINT t",
-            "SET t TO 0; READ n; WHILE n = 0 { SET t TO t + n; READ n } ENDWHILE; PRINT t",
-            "SET t TO 0; READ n; WHILE n <> 0 { READ n; SET t TO t + n } ENDWHILE; PRINT t"
-          ],
-          "answerIndex": 1,
-          "concept": "converting a post-tested loop to a pre-tested one - negate the condition and duplicate the read",
-          "why": "Two changes are needed together. UNTIL n = 0 stops when the condition is TRUE, so the WHILE that keeps going must test the negation, n <> 0. And WHILE tests before the first pass, so it needs a value to test: the READ must appear once before the loop and again as the LAST statement of the body, so every value read is tested before being used. On the input 5, 8, 3, 0 the REPEAT version accumulates 5, 13, 16, then reads 0, adds it harmlessly and stops, printing 16; option b reads 5, adds it, reads 8, adds it, reads 3, adds it, reads 0 and the test ends the loop, printing 16. Option a drops the read-ahead, so the WHILE tests an n that has never been given a value - the commonest form of the mistake, and invisible in languages that quietly default a variable to zero, where the loop would simply never run. Option c forgets the negation and writes WHILE n = 0, stopping on the first non-zero value: the direct translation of 'until' as 'while'. Option d keeps the read-ahead but puts the body's READ first, so the value read before the loop is overwritten and never added; the total silently loses the first number and the fragment still prints a plausible answer."
+          "concept": "The pseudocode layout rules",
+          "why": "Indentation shows which statements are inside the loop body and which come after it; without it a reader cannot tell whether a line is repeated or executed once.\n\nKeywords are set apart by writing them in capitals; one statement per line is a separate rule about what a line holds; language independence is about not using the syntax of a particular programming language."
         },
         {
           "type": "short",
-          "q": "Trace this fragment on the inputs 4, 7, 10, -1, showing the value of every variable after each pass, and give what is printed.\nSET sum TO 0\nSET count TO 0\nREAD x\nWHILE x <> -1\n    SET sum TO sum + x\n    SET count TO count + 1\n    READ x\nENDWHILE\nSET avg TO sum / count\nPRINT avg\nThen say what happens if the very first value typed is -1, explain why, and give the smallest change that fixes it. Finally, explain why -1 is not included in sum even though it is read.",
-          "concept": "sentinel-controlled input, and the guard a division by a counter always needs",
-          "why": "TRACE. sum = 0, count = 0. READ x gives x = 4; 4 <> -1 is true. Pass 1: sum = 4, count = 1, read x = 7. Pass 2: sum = 11, count = 2, read x = 10. Pass 3: sum = 21, count = 3, read x = -1. The test -1 <> -1 is FALSE, so the loop ends with sum = 21 and count = 3; avg = 21/3 = 7, and 7 is printed. FIRST VALUE -1. The test fails immediately, the body never runs, and sum and count both keep their initial 0. The next line computes 0/0 - a division by zero, which has no value; a real program crashes or errors here and on paper the pseudocode simply describes nothing. Note where the fault is: the loop is correct, and only the line AFTER it is wrong, because that line assumes the loop ran at least once. SMALLEST FIX: guard the division rather than change the loop - IF count > 0 THEN SET avg TO sum / count; PRINT avg ELSE PRINT 'no data' ENDIF. Changing the WHILE to a REPEAT-UNTIL would be the wrong fix, since forcing one pass would count the sentinel as data. WHY -1 IS NOT IN THE SUM. The order of the three body statements is the whole answer: the value that reaches SET sum TO sum + x is always the one read on the PREVIOUS trip - by the READ before the loop for the first pass, and by the READ at the foot of the body afterwards. The sentinel is read by that last READ, and control then goes to the test, which leaves the loop before any statement uses it. This is the standard read-ahead arrangement, and it is why the read appears twice: it lets every value be tested before it is used, which is exactly what a sentinel requires."
+          "q": "Write pseudocode that reads marks until −1 is entered and then prints the highest mark entered. If the very first entry is −1, print 'no marks' instead.",
+          "concept": "Writing a sentinel loop with a running maximum",
+          "why": "Model answer:\n\n```\nREAD mark\nIF mark = -1 THEN\n    PRINT \"no marks\"\nELSE\n    SET highest TO mark\n    WHILE mark <> -1\n        IF mark > highest THEN\n            SET highest TO mark\n        ENDIF\n        READ mark\n    ENDWHILE\n    PRINT highest\nENDIF\n```\n\nA correct answer reads a mark before the test, uses a WHILE (or an equivalent) whose condition is the sentinel, initialises highest from the first mark rather than from 0, compares each mark with highest and updates it, reads the next mark at the foot of the body, and prints after the loop. The 'no marks' case needs the IF before the loop. Not accepted: highest set to 0 (fails if all marks are 0 or the check is on negatives), no second READ, or the sentinel compared as if it were a mark."
         },
         {
           "type": "short",
-          "q": "Here is the course's own solution, as printed in the deck:\nInitialise passes to zero / Initialise failures to zero / initialise student to one / WHILE student counter is active / input the next exam result / IF the student passed THEN / add one to passes / ELSE / add one to failures / add one to student counter / print the number of passes / print the number of failures / if seven or more students passed / print \"increase tuition\". Name FOUR faults in it - one of logic, and three of the rules and constructs the week requires - saying for each what a reader or a programmer converting it would get wrong. Then rewrite it correctly.",
-          "concept": "reading a pseudocode as written rather than as intended",
-          "why": "(i) LOGIC - AN OFF-BY-ONE IN THE THRESHOLD. 'if seven or more students passed' raises the fee when exactly seven have passed, but the problem says the fee rises only if MORE THAN seven pass. A programmer converting it writes passes >= 7 and produces software that overcharges a class in which exactly seven passed; it should be passes > 7. (ii) THE COUNTER IS INCREMENTED OUTSIDE THE LOOP. 'add one to student counter' is written flush with the unindented lines, so by the indentation it runs after the WHILE, not inside it. Read literally, nothing in the body changes the student counter, so 'WHILE student counter is active' can never turn false and the loop never ends. (iii) NO ENDIF AND NO ENDWHILE. The deck's own skeletons are IF ... THEN / sequence 1 / ELSE / sequence 2 / ENDIF and WHILE condition / sequence / ENDWHILE. Without the closers nothing marks where the ELSE branch stops and where the loop body stops, so a reader cannot tell whether 'print the number of passes' is inside the loop, printing a running total on every pass, or after it. (iv) AMBIGUOUS CONDITION AND LOWERCASE KEYWORDS. 'student counter is active' is never defined - active until what? - and the sixth step requires the constructs to describe the steps without ambiguity; the counter must be tested against something the algorithm has, namely the number of students. 'initialise', 'if' and 'print' also break the capital-keywords rule, which is what tells a reader that IF is a construct and not the English word. CORRECT VERSION: SET passes TO 0 / SET failures TO 0 / SET student TO 1 / READ number_of_students / WHILE student <= number_of_students / (indented) READ result / IF result is a pass THEN / SET passes TO passes + 1 / ELSE / SET failures TO failures + 1 / ENDIF / SET student TO student + 1 / ENDWHILE / PRINT passes / PRINT failures / IF passes > 7 THEN / PRINT 'increase tuition' / ENDIF - with the header the course requires above it (name, description, inputs, outputs). Checked on ten students with results P F P P P F P P P P: the loop runs for student = 1 to 10 and ends when student becomes 11; passes = 8, failures = 2, and 8 + 2 = 10 confirms every result was counted exactly once; 8 > 7, so 'increase tuition' is printed, whereas with one pass fewer 7 > 7 is false and nothing is printed - the case the deck's version gets wrong."
+          "q": "Trace this, giving the values of a and b after each pass of the loop and the printed value. Show your working.\n\n```\nSET a TO 12\nSET b TO 18\nWHILE a <> b\n    IF a > b THEN\n        SET a TO a - b\n    ELSE\n        SET b TO b - a\n    ENDIF\nENDWHILE\nPRINT a\n```",
+          "concept": "Tracing a WHILE with a selection inside",
+          "why": "Pass 1: a = 12, b = 18, a > b is false, so b = 18 − 12 = 6; now (12, 6). Pass 2: 12 > 6 is true, so a = 12 − 6 = 6; now (6, 6). The test a <> b is now false, the loop ends, and 6 is printed (the greatest common divisor of 12 and 18).\n\nA correct answer shows (12, 6) then (6, 6) and the output 6. Subtracting the wrong way on pass 1 (a = 12 − 18 = −6) or stopping after one pass and printing 12 is not accepted."
         },
         {
           "type": "short",
-          "q": "Take this loop and the REPEAT-UNTIL written to do the same job. LEFT: SET i TO 5 / WHILE i < 5 / PRINT i / SET i TO i + 1 / ENDWHILE. RIGHT: SET i TO 5 / REPEAT / PRINT i / SET i TO i + 1 / UNTIL i >= 5. State exactly what each one prints, and explain the mechanism that makes them differ. Then change one line so that the two become identical in output, and state the general rule for when swapping WHILE for REPEAT-UNTIL is safe. Finally, say which construct you would choose for 'keep asking for the PIN until the right one is typed' and why.",
-          "concept": "pre-test versus post-test - the difference shows only on the pass that would not have happened",
-          "why": "WHAT EACH PRINTS. The WHILE prints NOTHING: i is 5 before the loop, 5 < 5 is false, and the test comes first, so the body is never entered. The REPEAT-UNTIL prints 5: the body runs before any test, printing 5 and setting i to 6, and only then tests 6 >= 5, which is true, so it stops. MECHANISM. WHILE puts the condition at the beginning/top, so the number of passes may be ZERO; REPEAT-UNTIL puts it at the ending/bottom, so the number of passes is AT LEAST ONE. The two also read their conditions in opposite senses - WHILE continues while its condition is true, REPEAT-UNTIL stops when its condition becomes true - which is why the pair carries i < 5 and i >= 5 rather than the same expression twice. MAKING THEM IDENTICAL. Change the first line of both to SET i TO 1. The WHILE then prints 1, 2, 3, 4 and the REPEAT prints 1, 2, 3, 4, and no input can separate them. GENERAL RULE: swapping WHILE for REPEAT-UNTIL is safe exactly when the loop's condition is guaranteed to permit the first pass before the loop is reached - that is, when the WHILE's condition is known to be true on entry. If it can be false on entry, the REPEAT-UNTIL executes the body once when the WHILE would not, and any read, print, increment or division in that body happens once too often. THE PIN: use REPEAT-UNTIL - REPEAT / DISPLAY 'Enter PIN' / READ pin / UNTIL pin = correct_pin. The prompt must be issued at least once, since there is nothing to test before a PIN has been typed, and REPEAT-UNTIL is the construct that guarantees exactly that; written as a WHILE it needs a read-ahead before the loop, so the prompt and the read appear twice."
+          "q": "A flowchart runs: Start; READ n; s = 0; decision 'Is n > 0?'; Yes → s = s + (n MOD 10); n = n DIV 10; back to the decision; No → PRINT s; Stop. Write it as pseudocode, using the loop construct that matches where the chart tests its condition, and show what it prints for n = 4321.",
+          "concept": "Converting a flowchart to pseudocode",
+          "why": "The decision comes before the body and the Yes exit runs back to it, so this is a pre-tested loop: WHILE.\n\n```\nREAD n\nSET s TO 0\nWHILE n > 0\n    SET s TO s + (n MOD 10)\n    SET n TO n DIV 10\nENDWHILE\nPRINT s\n```\n\nFor n = 4321: s = 1, n = 432; s = 3, n = 43; s = 6, n = 4; s = 10, n = 0; loop ends; prints 10 (the sum of the digits). A correct answer uses WHILE with ENDWHILE, keeps the two body lines in the chart's order, prints after the loop, and gives 10. A REPEAT-UNTIL is not the matching construct, because the chart tests before the first pass."
         },
         {
           "type": "short",
-          "q": "This fragment was written to print the FIRST TEN MULTIPLES OF 3.\nSET k TO 3\nWHILE k < 30\n    PRINT k\n    SET k TO k + 3\nENDWHILE\nSay exactly what it prints and how many values that is, explain where the missing one goes, and give TWO different corrections - one that changes the condition, one that uses a FOR loop instead. Then state the rule for counting the passes of FOR i = a TO b, and use it to say how many times FOR i = 3 TO 30 would run.",
-          "concept": "a strict inequality as the boundary of a counting loop, and the b - a + 1 rule",
-          "why": "WHAT IT PRINTS: 3, 6, 9, 12, 15, 18, 21, 24, 27 - NINE values. Trace the end: after printing 27, k becomes 30 and 30 < 30 is false, so the loop stops before printing 30. The tenth multiple of 3 is 30 itself, and it is lost to the strict < : the condition excludes the value that ought to have been the last one printed. CORRECTION 1 - CHANGE THE CONDITION to WHILE k <= 30, which lets the pass with k = 30 run and gives 3, 6, ..., 30, ten values. (WHILE k < 31 would work too, but it hides the boundary behind an arbitrary number, and the sixth step asks for clear, unambiguous writing.) CORRECTION 2 - COUNT THE MULTIPLES INSTEAD OF THE VALUE: FOR i = 1 TO 10 { PRINT 3 * i } ENDFOR. This is the better fragment when the count is what the specification states, because the 10 in the code is the 10 in the requirement and no arithmetic connects the two, so the off-by-one is impossible to write; it also shows the week's choice - FOR when the number of passes is known before entry, WHILE when it is not. THE COUNTING RULE: FOR i = a TO b runs the body b - a + 1 times, because both bounds are inclusive. So FOR i = 3 TO 30 runs 30 - 3 + 1 = 28 times, not 27 and not 30. The check that catches the error every time is to try the rule on a one-pass loop: FOR i = 3 TO 3 must run once, and 3 - 3 + 1 = 1."
+          "q": "Pseudocode cannot be run. Explain what the testing and refining step consists of, and name two input cases you would test for a fragment that reads a count, reads that many marks, and prints their average.",
+          "concept": "Testing pseudocode on paper",
+          "why": "Testing means working through the pseudocode on paper, or scanning it carefully, with specific inputs: keep a table of every variable, follow each line in order, and check that the flow and logic are what was intended and that all required cases are handled. Refining then corrects any errors found or improves the effectiveness of the algorithm.\n\nCases for the average fragment: a count of 0 (the division by the count has no value, so a guard is needed), a count of 1 (average equals the single mark), and an ordinary case such as three marks 50, 60, 70 giving 60. A correct answer describes the paper trace and names at least two cases, one of them the zero-count boundary."
         }
       ],
       "slot": "fast"
@@ -1058,68 +1062,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Which river was pivotal to the growth of the indigenous trade system?",
+          "q": "Put these four episodes of Nigeria's economy in the order they happened: (A) austerity measures under the Buhari regime; (B) an oil boom during which the government saved nothing; (C) the Structural Adjustment Programme adopted under IMF pressure; (D) India replaces the US as the major buyer of Nigeria's crude.",
           "options": [
-            "The Benue",
-            "The Niger",
-            "The Cross River",
-            "The Kaduna"
-          ],
-          "answerIndex": 1,
-          "concept": "The Niger as the main artery of indigenous trade",
-          "why": "The lesson names the Niger River as pivotal: it carried bulk goods cheaply and linked the interior to the coast. The others are Nigerian rivers but are not the artery the material names."
-        },
-        {
-          "type": "mcq",
-          "q": "How were craft and trading skills transmitted in the indigenous system?",
-          "options": [
-            "Mission schools",
-            "Guild examinations",
-            "Development corporations",
-            "The apprenticeship system"
-          ],
-          "answerIndex": 3,
-          "concept": "The apprenticeship system as skill transmission",
-          "why": "A young person served a master for a fixed term and was then established in the trade, reproducing the craft economy without formal schooling. Development corporations belong to the regional politics of the 1950s and 1960s."
-        },
-        {
-          "type": "mcq",
-          "q": "What share of the workforce did agriculture absorb in 1960?",
-          "options": [
-            "Over 25 per cent",
-            "Over 40 per cent",
-            "Over 75 per cent",
-            "Over 90 per cent"
-          ],
-          "answerIndex": 2,
-          "concept": "Over 75 per cent of the workforce, 1960",
-          "why": "Agriculture took over 75 per cent of the workforce in 1960. The over-fifty-per-cent figure is the neighbouring trap: that is agriculture's share of GDP before independence, which is output rather than employment."
-        },
-        {
-          "type": "mcq",
-          "q": "Under which regime were austerity measures adopted after the mid-1980s oil crunch?",
-          "options": [
-            "The Buhari regime",
-            "The Babangida regime",
-            "The Abacha regime",
-            "The Gowon regime"
+            "B, A, C, D",
+            "B, C, A, D",
+            "A, B, C, D",
+            "B, A, D, C"
           ],
           "answerIndex": 0,
-          "concept": "Austerity under Buhari came before SAP",
-          "why": "Austerity measures came first, under Buhari, as Nigeria's own response to the crunch; the Structural Adjustment Programme followed under IMF pressure. Abacha is remembered for looting the 1990s boom."
+          "concept": "Sequence of Nigeria's economic story since 1960",
+          "why": "The 1970s oil boom came first with no savings (B); the oil crunch of the mid-1980s brought austerity under Buhari (A); the IMF then pressed Nigeria into SAP (C); the loss of the American market to shale oil and India's rise as the main buyer came after 2014 (D). The second option puts SAP before austerity, the third puts austerity before the boom that made it necessary, and the fourth puts the loss of the US market before SAP."
         },
         {
           "type": "mcq",
-          "q": "Which country replaced the United States as the major buyer of Nigeria's crude?",
+          "q": "In a pre-colonial Nigerian town a boy is attached to a master weaver, works under him for years and is then set up as a weaver himself. Which feature of the indigenous trade system does this illustrate?",
           "options": [
-            "China",
-            "Brazil",
-            "India",
-            "Indonesia"
+            "Economic specialisation by region",
+            "Cultural diffusion",
+            "The apprenticeship system",
+            "Colonial intrusion"
           ],
           "answerIndex": 2,
-          "concept": "India replaced the US as the major crude buyer",
-          "why": "The US, the largest buyer, announced reduced purchases in 2014 because of its own shale oil, and India replaced it. China, Brazil and Indonesia appear in the lesson only in the list of countries more populated than Nigeria."
+          "concept": "The apprenticeship system",
+          "why": "The apprenticeship system is how skills and knowledge were passed down in the indigenous trade system: a learner worked under a master and was then established in the craft. Economic specialisation is about regions producing what their geography favoured, and cultural diffusion is the spread of ideas along trade routes; both are consequences of trade rather than the way skills were transmitted. Colonial intrusion is what later disrupted the system."
+        },
+        {
+          "type": "mcq",
+          "q": "In 2014 the largest buyer of Nigeria's crude oil announced that it would buy less. Which country was it, and why?",
+          "options": [
+            "India, because of its own shale oil production",
+            "The United States, because of its own shale oil production",
+            "The United States, because of oil pipeline vandalisation in Nigeria",
+            "The United Kingdom, because of a shift to renewable energy"
+          ],
+          "answerIndex": 1,
+          "concept": "Loss of the American market for Nigerian crude",
+          "why": "The United States was the largest buyer of Nigeria's crude, and in 2014, owing to shale oil production at home, it announced reduced purchases. India then replaced the US as the major buyer, so India is the successor, not the country that cut back. Pipeline vandalisation is one of the listed causes of Nigeria's economic woes but not the reason the US gave, and renewable energy is mentioned only as a future threat to demand for crude."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following statements about the Nigerian economy around independence is correct?",
+          "options": [
+            "Industry accounted for over fifty per cent of GDP before independence",
+            "GDP growth fell from 4.89% in 1960 to 1.89% in 1965",
+            "Nigeria was tipped to be one of the 20 largest economies by 1980, behind Malaysia",
+            "In 1960 agriculture absorbed over 75% of the workforce"
+          ],
+          "answerIndex": 3,
+          "concept": "The economy at independence",
+          "why": "In 1960 agriculture absorbed over 75% of the workforce, with industry and other sectors taking the rest. It was agriculture, not industry, that accounted for over fifty per cent of GDP before independence. GDP growth rose, not fell, from 1.89% in 1960 to 4.89% in 1965. Nigeria was tipped to be among the 20 largest economies by 1980 ahead of Malaysia, not behind it."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following best describes Nigeria's indigenous trade system between 1500 and 1800 AD?",
+          "options": [
+            "A crude-oil-dependent economy run through regional Development Corporations",
+            "Communities shaped by geography exchanged the goods they produced for the goods they needed",
+            "A Western capitalist economy based on the export of cash crops",
+            "A state-run economy directed by a national development plan"
+          ],
+          "answerIndex": 1,
+          "concept": "Definition of the indigenous trade system",
+          "why": "The indigenous economies were shaped by geographical factors, with regions specialising in agriculture, trade or craftsmanship, and communities traded the goods they produced for those they needed, forming a web of economic connections along the Niger River. The Western capitalist model is what colonial intrusion turned that system into. Oil dependence and Development Corporations belong to the post-1960 story, and a state-run planned economy was the early First Republic approach."
         }
       ]
     },
@@ -1133,159 +1137,159 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "The user types 5 into `#qty`. What does this log?\n```js\nconst n = document.getElementById('qty').value;\nconsole.log(n + 1);\n```",
+          "q": "The user types 5 into `<input id=\"qty\">`. What does this log?\n\n```js\nconst v = document.getElementById(\"qty\").value;\nconsole.log(v * 2, v + 2);\n```",
           "options": [
-            "51",
-            "6",
-            "NaN",
-            "5"
-          ],
-          "answerIndex": 0,
-          "concept": "input.value is always a string",
-          "why": "`input.value` hands back a string even for `type=\"number\"`, so `+` concatenates and gives '51'. Getting 6 assumes the browser converts it to a number for you, which it never does."
-        },
-        {
-          "type": "mcq",
-          "q": "Your submit handler shows an error message, then the page reloads and the message disappears. What is missing?",
-          "options": [
-            "`event.stopPropagation()` in the handler",
-            "`event.preventDefault()` in the handler",
-            "`form.reset()` after validating",
-            "An `enctype` on the form"
+            "10 7",
+            "10 52",
+            "52 52",
+            "NaN 52"
           ],
           "answerIndex": 1,
-          "concept": "preventDefault stops the default submission",
-          "why": "Without `preventDefault` the browser carries out its default action and submits, reloading the page over your message. `stopPropagation` only blocks the event reaching ancestor elements, and the default still happens."
+          "concept": "Form input values are strings",
+          "why": "An input's value is always a string, here \"5\". The * operator converts it to a number, so \"5\" * 2 is 10; the + operator with a string joins, so \"5\" + 2 is \"52\".\n\n10 7 assumes value is a number; 52 52 assumes * also joins; NaN 52 assumes * cannot convert a numeric string."
         },
         {
           "type": "mcq",
-          "q": "Why does this log `undefined`?\n```js\nfetch('/api/user').then(data => console.log(data.name));\n```",
+          "q": "In what order does this print?\n\n```js\nsetTimeout(() => console.log(\"T\"), 0);\nPromise.resolve()\n  .then(() => console.log(\"P1\"))\n  .then(() => console.log(\"P2\"));\nconsole.log(\"S\");\n```",
           "options": [
-            "`fetch` works only with `await`, not with `.then`",
-            "The request failed, and fetch rejects on any error",
-            "The first `.then` receives a Response, not the parsed body",
-            "`name` has to be read with `getAttribute`"
-          ],
-          "answerIndex": 2,
-          "concept": "Fetch gives a Response before the body is parsed",
-          "why": "The first `.then` receives the Response object, and the body still has to be parsed by `.json()`, which returns another promise. Blaming a failed request is wrong too, since fetch does not reject on 404 or 500."
-        },
-        {
-          "type": "mcq",
-          "q": "What is the order of output?\n```js\nasync function load() {\n  console.log('A');\n  await fetch('/x');\n  console.log('C');\n}\nload();\nconsole.log('B');\n```",
-          "options": [
-            "A, C, B",
-            "B, A, C",
-            "A only, until the fetch finishes",
-            "A, B, C"
-          ],
-          "answerIndex": 3,
-          "concept": "await pauses only its own async function",
-          "why": "`await` suspends just the enclosing async function, so `load` yields after A, the caller's B runs, and C follows when the promise settles. Expecting A, C, B assumes await blocks the whole page, which it never does."
-        },
-        {
-          "type": "mcq",
-          "q": "What does this log?\n```js\nfunction count(...args) { return args.length; }\nconsole.log(count(1, 2, 3));\n```",
-          "options": [
-            "3",
-            "1",
-            "undefined",
-            "An error: functions take fixed parameters"
+            "S, P1, P2, T",
+            "T, P1, P2, S",
+            "S, T, P1, P2",
+            "P1, P2, S, T"
           ],
           "answerIndex": 0,
-          "concept": "Rest gathers arguments into an array",
-          "why": "In a parameter list the three dots are rest, collecting every argument into one array, so `length` is 3. The identical syntax in a call or a literal would be spread, which expands a collection instead."
+          "concept": "Event loop: synchronous code, microtasks, then macrotasks",
+          "why": "Synchronous code runs first, so S. When the stack is empty the microtask queue is drained: P1, then the .then chained after it, P2. Only then does the event loop take the timer macrotask, T, even though its delay was 0.\n\nT first assumes a zero delay runs immediately; S, T, P1, P2 puts the timer ahead of the microtasks; P1, P2, S, T runs promise callbacks before synchronous code."
         },
         {
           "type": "mcq",
-          "q": "What does this log?\n```js\nconst addr = { city: 'Lagos', country: 'Nigeria' };\nconst { city } = addr;\nconsole.log(city);\n```",
+          "q": "What does this log?\n\n```js\nasync function total() {\n  return 2 + 3;\n}\nconst r = total();\nconsole.log(typeof r, r instanceof Promise);\n```",
           "options": [
-            "undefined",
-            "Lagos",
-            "{ city: 'Lagos' }",
-            "Nigeria"
-          ],
-          "answerIndex": 1,
-          "concept": "Object destructuring by key",
-          "why": "Destructuring pulls the value out by matching the key, so `city` holds the string 'Lagos'. It binds the value itself rather than a smaller object, which is the usual first guess."
-        },
-        {
-          "type": "mcq",
-          "q": "What does this log?\n```js\nclass Dog { constructor(n) { this.name = n; } }\nconst d = new Dog('Rex');\nconsole.log(d.name);\n```",
-          "options": [
-            "undefined",
-            "Dog",
-            "Rex",
-            "An error, since classes must declare properties first"
+            "number false",
+            "number true",
+            "object true",
+            "undefined false"
           ],
           "answerIndex": 2,
-          "concept": "Class constructors assign properties on new",
-          "why": "`new` runs the constructor, which assigns the argument to `this.name`, so `d.name` is 'Rex'. Class syntax is a wrapper over prototypes, and properties are created by the constructor rather than declared up front."
+          "concept": "An async function always returns a promise",
+          "why": "An async function always returns a promise, whatever it returns inside. r is a Promise object that will resolve to 5, so typeof r is \"object\" and r instanceof Promise is true. To see 5 you must await r or call r.then.\n\nnumber false treats the return value as if the function were ordinary; number true is contradictory, a number is not a Promise instance; undefined false assumes an async function returns nothing."
         },
         {
           "type": "mcq",
-          "q": "The new item never appears on the page. What is missing?\n```js\nconst li = document.createElement('li');\nli.textContent = 'Item';\n```",
+          "q": "What does this print?\n\n```js\nasync function load() {\n  try {\n    await Promise.reject(new Error(\"no net\"));\n    console.log(\"ok\");\n  } catch (e) {\n    console.log(\"caught \" + e.message);\n  }\n  console.log(\"done\");\n}\nload();\n```",
           "options": [
-            "A `document.write` call to flush it",
-            "`li.style.display = 'block'`",
-            "An `id` on the new element",
-            "An `appendChild` call to put it in the document"
+            "ok, then done",
+            "caught no net only",
+            "Uncaught Error: no net",
+            "caught no net, then done"
           ],
           "answerIndex": 3,
-          "concept": "createElement builds a node; appendChild inserts it",
-          "why": "`createElement` only builds the node in memory, and it shows up once it is appended to an element already in the page. Styling or naming it changes nothing while it still has no parent."
+          "concept": "Handling a rejected await with try/catch",
+          "why": "await on a rejected promise throws inside the async function, so ok is skipped and the catch block prints caught no net. The try/catch has handled the error, so execution continues to the line after it and prints done.\n\nok, then done ignores the rejection; caught no net only forgets that code after a handled try/catch still runs; an uncaught error would only happen without the try/catch."
         },
         {
           "type": "mcq",
-          "q": "In `el.addEventListener('click', e => console.log(e.target))`, what is `e`?",
+          "q": "Which line throws an error?\n\n```js\n1  const cart = [\"pen\"];\n2  cart.push(\"book\");\n3  cart[0] = \"ink\";\n4  cart = [];\n```",
           "options": [
-            "The event object, with information about the event",
-            "The event source, the element that was clicked",
-            "The event listener that was registered",
-            "The event type as a string"
+            "Line 2",
+            "Line 3",
+            "Line 4",
+            "None of them"
+          ],
+          "answerIndex": 2,
+          "concept": "const blocks reassignment, not mutation",
+          "why": "const freezes the binding, not the contents: pushing to the array (line 2) and replacing an element (line 3) change the array in place and are allowed. Line 4 tries to point cart at a new array, which is reassignment, and throws TypeError: Assignment to constant variable.\n\nLines 2 and 3 are mutation, not reassignment; None would be right only if cart had been declared with let."
+        },
+        {
+          "type": "mcq",
+          "q": "What does this log?\n\n```js\nconst base = { a: 1, b: 2 };\nconst ext = { ...base, b: 5, c: 9 };\nconst { b, ...rest } = ext;\nconsole.log(b, Object.keys(rest).length);\n```",
+          "options": [
+            "2 2",
+            "5 3",
+            "5 2",
+            "2 3"
+          ],
+          "answerIndex": 2,
+          "concept": "Object spread, override and rest destructuring",
+          "why": "The spread copies a: 1 and b: 2 into ext, then the later b: 5 overrides b and c: 9 is added, giving { a: 1, b: 5, c: 9 }. Destructuring pulls b out (5) and the rest gathers what is left, a and c, so rest has 2 keys.\n\n2 2 forgets that a later property overrides the spread copy; 5 3 counts b inside rest as well; 2 3 makes both mistakes."
+        },
+        {
+          "type": "mcq",
+          "q": "The server answers `/api/score` with the body `{\"points\": 42}`. What is logged?\n\n```js\nfetch(\"/api/score\")\n  .then(res => res.json())\n  .then(data => console.log(data.points))\n  .catch(err => console.log(\"failed\"));\n```",
+          "options": [
+            "42",
+            "undefined",
+            "{\"points\": 42}",
+            "failed"
           ],
           "answerIndex": 0,
-          "concept": "The four components of an event",
-          "why": "`e` is the event object handed to the listener, and `e.target` reads the source out of it. The source is the element itself, the listener is the arrow function, and the type is the string 'click'."
+          "concept": "Parsing a fetch response with .json()",
+          "why": "fetch resolves to a Response object; res.json() parses the body and returns another promise, which resolves to the object { points: 42 }. The second .then receives that object, so data.points is 42.\n\nundefined is what you get by reading .points on the Response itself, skipping .json(); the raw text would need JSON.parse and is never handed to .then in this chain; failed only runs if a promise rejects."
         },
         {
           "type": "mcq",
-          "q": "Which event fires when the user picks a different option in a `<select>`?",
+          "q": "```html\n<button id=\"pay\">Pay now</button>\n```\n```js\ndocument.getElementById(\"pay\").addEventListener(\"click\", e => {\n  console.log(e.type, e.target.id);\n});\n```\nThe user clicks the button. What is logged?",
           "options": [
-            "submit",
-            "change",
-            "focus",
-            "reset"
+            "click pay",
+            "pay click",
+            "click Pay now",
+            "undefined pay"
+          ],
+          "answerIndex": 0,
+          "concept": "Reading the event object: type and target",
+          "why": "The handler receives the event object e. Its type is the event name, click, and its target is the element that triggered the event, the button whose id is pay.\n\npay click reverses the two; Pay now is the button's text, not its id; undefined assumes the event object has no type property."
+        },
+        {
+          "type": "mcq",
+          "q": "`<ul id=\"list\">` already holds two items, Bread and Eggs.\n\n```js\nconst li = document.createElement(\"li\");\nli.textContent = \"Milk\";\ndocument.getElementById(\"list\").appendChild(li);\n```\nAfter this runs, what does the list show?",
+          "options": [
+            "Milk, Bread, Eggs",
+            "Bread, Eggs, Milk",
+            "Milk only",
+            "Bread, Eggs"
           ],
           "answerIndex": 1,
-          "concept": "The form events named in the lecture",
-          "why": "`change` fires when a control's value changes, which is what picking a new option does. `focus` fires only when the control is entered, while `submit` and `reset` belong to the form as a whole."
+          "concept": "Creating and appending DOM elements",
+          "why": "createElement makes a new li in memory, textContent fills it, and appendChild attaches it as the last child of the ul, so Milk appears after Bread and Eggs.\n\nMilk first would need insertBefore; Milk only would mean the existing items were replaced, which appendChild never does; Bread, Eggs would be the result if appendChild were forgotten."
         },
         {
           "type": "mcq",
-          "q": "A comment list gains new comments while the page itself stays put. What is happening?",
+          "q": "What does this log?\n\n```js\nclass Account {\n  constructor(owner, bal) { this.owner = owner; this.bal = bal; }\n  deposit(x) { this.bal += x; return this; }\n}\nconst a = new Account(\"Ada\", 100);\na.deposit(50).deposit(25);\nconsole.log(a.bal);\n```",
           "options": [
-            "The browser reloads the page from cache each time",
-            "A CSS media query is redrawing the list",
-            "AJAX: data is fetched and the DOM updated without a reload",
-            "The form is resubmitting itself with GET on a timer"
+            "150",
+            "175",
+            "100",
+            "TypeError: a.deposit(...).deposit is not a function"
           ],
-          "answerIndex": 2,
-          "concept": "AJAX updates the DOM without a full refresh",
-          "why": "AJAX loads data in the background and updates the DOM with it, so no full page refresh is needed. A reload, cached or not, would replace the entire document, which is the thing AJAX exists to avoid."
+          "answerIndex": 1,
+          "concept": "ES6 classes and method chaining with this",
+          "why": "new Account sets bal to 100. deposit adds to bal and returns this, the same object, so the second .deposit runs on it too: 100 + 50 + 25 = 175.\n\n150 counts only the first deposit; 100 assumes the method does not change the object; the TypeError would occur only if deposit returned nothing, since undefined has no deposit method."
         },
         {
           "type": "mcq",
-          "q": "Which handles a rejected `await fetch(...)` inside an async function?",
+          "q": "What does event.preventDefault() do, as distinct from event.stopPropagation()?",
           "options": [
-            "A `.catch()` on the async function's declaration",
-            "An `if (response.ok)` check before the fetch",
-            "Nothing; async functions cannot fail",
-            "A `try...catch` around the await"
+            "Stops the event reaching ancestor elements; stopPropagation cancels the default action",
+            "Removes the event listener; stopPropagation removes the element",
+            "Reloads the page; stopPropagation pauses the event loop",
+            "Cancels the browser's default action, such as submitting a form; stopPropagation stops the event reaching ancestor elements"
           ],
           "answerIndex": 3,
-          "concept": "Error handling with async/await",
-          "why": "With async/await, a rejection from an awaited promise is caught by a `try...catch` wrapped around it. Checking `response.ok` matters too, but it inspects a response that has already arrived, so it cannot run first."
+          "concept": "preventDefault versus stopPropagation",
+          "why": "preventDefault cancels what the browser would do on its own, such as submitting a form and reloading the page or following a link, which is why a validating submit handler calls it. stopPropagation stops the event travelling on to parent elements.\n\nThe first option swaps them; neither method removes listeners or elements; neither reloads the page or touches the event loop."
+        },
+        {
+          "type": "mcq",
+          "q": "Why is server-side validation still required when a form is already validated in JavaScript?",
+          "options": [
+            "JavaScript cannot check email formats",
+            "Browsers ignore JavaScript on forms",
+            "Server-side validation is faster for the user",
+            "Client-side checks run in the user's browser and can be bypassed, so only the server can enforce them"
+          ],
+          "answerIndex": 3,
+          "concept": "Client-side versus server-side validation",
+          "why": "Client-side validation is for user experience: instant feedback and fewer wasted requests. It runs in the user's browser, so a user can disable it or send a request straight to the server; the server must re-check everything for security.\n\nJavaScript can check email formats; browsers run form JavaScript normally; the server round-trip is slower, not faster, which is why the client check exists at all."
         }
       ],
       "full": true
@@ -1300,68 +1304,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "In summary writing, which step follows identifying the thesis?",
+          "q": "Bisi's summary of a long article is in her own words and follows the article's order, but it keeps every minor example and illustration the author used. Which step of summary writing has she skipped?",
           "options": [
-            "Condense information",
             "Maintain structure",
-            "Highlight key points",
+            "Eliminate unnecessary details",
+            "Identify the thesis or main idea",
             "Check for coherence"
           ],
-          "answerIndex": 2,
-          "concept": "Order of the eight summary-writing steps",
-          "why": "The order runs read carefully, identify the thesis, highlight key points, condense, maintain structure, eliminate details, check coherence, review. The other three options are all later steps in that same list."
+          "answerIndex": 1,
+          "concept": "Steps of summary writing applied to a fault",
+          "why": "'Eliminate unnecessary details' requires omitting minor details and examples unless they are crucial to the main idea. Keeping every example breaks exactly this step.\n\n'Maintain structure' is satisfied because she kept the original order; 'condense in your own words' is satisfied; nothing in the scenario says the main idea was missed or that the summary fails to flow."
         },
         {
           "type": "mcq",
-          "q": "What must a summary be written in?",
+          "q": "Put these letter-writing steps in the correct order: (1) choose the right format; (2) identify purpose and audience; (3) begin with a greeting; (4) introduction stating the reason for writing.",
           "options": [
-            "Your own words, with no new material or opinion",
-            "The original's own sentences, kept intact",
-            "Direct quotation with commentary added",
-            "Your own words, with your judgement of the argument"
+            "2, 1, 3, 4",
+            "1, 2, 3, 4",
+            "2, 3, 1, 4",
+            "1, 2, 4, 3"
           ],
           "answerIndex": 0,
-          "concept": "Summary conventions: own words, nothing added",
-          "why": "A summary restates the key points in your own words and carries no new material, no personal opinion and no direct quotation. Stitching the original's own sentences together fails the condensing step however short the result is."
+          "concept": "Ordering the steps of letter writing",
+          "why": "The steps run: identify purpose and audience, choose the right format, begin with a greeting, introduction, body, politeness and tone, closing, closing salutation, review and edit. The format is chosen on the basis of the purpose and audience, so it cannot come first.\n\n'1, 2, 3, 4' puts format before purpose; '2, 3, 1, 4' greets before choosing a format; '1, 2, 4, 3' also states the purpose before the salutation."
         },
         {
           "type": "mcq",
-          "q": "Which closing goes with a named recipient such as Dear Mr Azeez?",
+          "q": "A sentence in a report on poverty reads: 'The state should increase investment in education and healthcare infrastructure and introduce social safety nets.' In which section of the report does it belong?",
           "options": [
-            "Yours faithfully",
-            "Yours truly",
-            "Kind regards only",
-            "Yours sincerely"
+            "Findings",
+            "Conclusions",
+            "Recommendations",
+            "Methodology"
+          ],
+          "answerIndex": 2,
+          "concept": "Conclusion versus recommendation in a report",
+          "why": "Recommendations suggest actionable steps based on the conclusions; a sentence that says what should be done is a recommendation.\n\nA conclusion would interpret what the findings mean without prescribing action; findings present the data and evidence; methodology describes how the data were gathered."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following is NOT one of the sections in the structured format of a report?",
+          "options": [
+            "Methodology",
+            "Salutation",
+            "Findings",
+            "Recommendations"
+          ],
+          "answerIndex": 1,
+          "concept": "Sections of a report",
+          "why": "A report follows a structured format of introduction, methodology, findings, conclusions and recommendations.\n\nA salutation is the greeting that opens a letter, not a section of a report; the other three options are all genuine report sections."
+        },
+        {
+          "type": "mcq",
+          "q": "Which term is defined as a condensed and concise version of a larger text or document, highlighting the main ideas, key points and essential information?",
+          "options": [
+            "Report",
+            "Letter",
+            "Outline",
+            "Summary"
           ],
           "answerIndex": 3,
-          "concept": "Yours sincerely for a named recipient",
-          "why": "Yours sincerely pairs with a named salutation, and the sample letter closes that way. Yours faithfully belongs with the impersonal Dear Sir or Madam."
-        },
-        {
-          "type": "mcq",
-          "q": "Which report section states the methods used to gather the data?",
-          "options": [
-            "Introduction",
-            "Methodology",
-            "Findings",
-            "Conclusions"
-          ],
-          "answerIndex": 1,
-          "concept": "Methodology as the section on data-gathering methods",
-          "why": "Methodology presents the methods used, ensuring transparency and reliability. The introduction gives topic, purpose and scope, findings give the evidence, and conclusions interpret it."
-        },
-        {
-          "type": "mcq",
-          "q": "What step do summary, letter and report writing all end with?",
-          "options": [
-            "Adding references and appendices",
-            "A final review and edit",
-            "Writing a closing salutation",
-            "Making recommendations"
-          ],
-          "answerIndex": 1,
-          "concept": "The shared final step of all three procedures",
-          "why": "All three end with a review and revise or review and edit for clarity, coherence and accuracy that also checks the piece achieves its purpose. References and recommendations belong only to reports, and the closing salutation only to letters."
+          "concept": "Definition of a summary",
+          "why": "A summary is a condensed and concise version of a larger text that highlights the main ideas, key points and essential information, giving a brief overview without unnecessary details.\n\nA report is a formal document presenting detailed information, analysis, findings and conclusions; a letter is a written message addressed to a specific person or group; an outline is a planning tool written before drafting."
         }
       ]
     },
@@ -1375,68 +1379,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "At one time constant, what percentage of the maximum voltage has the capacitor reached?",
+          "q": "A capacitor charges through R = 22 kΩ from a 12 V supply. Voltmeter readings:\nt (s): 0, 10, 22, 30, 50, 80\nV (V): 0, 4.38, 7.59, 8.93, 10.76, 11.68\nFrom these readings find the time constant τ and the capacitance C.",
           "options": [
-            "36.8 per cent",
-            "63.2 per cent",
-            "86.5 per cent",
-            "99.3 per cent"
+            "τ = 10 s, C = 450 μF",
+            "τ = 22 s, C = 1000 μF",
+            "τ = 80 s, C = 3600 μF",
+            "τ = 22 s, C = 1.0 F"
           ],
           "answerIndex": 1,
-          "concept": "63.2 per cent charged at t equals one time constant",
-          "why": "Charging reaches 63.2 per cent of maximum in one time constant; 36.8 per cent is what remains while discharging. 86.5 per cent is two time constants and 99.3 per cent is five."
+          "concept": "Time constant from the 63.2 % point and C = τ/R",
+          "why": "τ is the time to reach 63.2 % of the maximum: 0.632 × 12 = 7.58 V, which the table reaches at t = 22 s, so τ = 22 s. Then C = τ/R with R in ohms: 22/22 000 = 1.0 × 10⁻³ F = 1000 μF.\n\nτ = 10 s uses 36.8 % (4.4 V), which is the discharging fraction; τ = 80 s takes the time to get near the maximum, but the capacitor only reaches 99 % at about 5τ; C = 1.0 F leaves R as 22 instead of converting kΩ to Ω, a factor of 1000 out."
         },
         {
           "type": "mcq",
-          "q": "With the experimental time constant read off the graph, how is the capacitance found?",
+          "q": "A capacitor charges from zero towards V₀ = 15 V with time constant τ = 8 s. Take e⁻² = 0.135. What does the voltmeter across it read at t = 16 s?",
           "options": [
-            "C = τR",
-            "C = R/τ",
-            "C = τ/R",
-            "C = τ + R"
-          ],
-          "answerIndex": 2,
-          "concept": "C = τ/R follows from τ = RC",
-          "why": "Since τ = RC, dividing the experimental τ by the known R gives C. Remember to put R in ohms, not kilohms, or the answer is out by a factor of a thousand."
-        },
-        {
-          "type": "mcq",
-          "q": "How is the voltmeter connected in the charging circuit?",
-          "options": [
-            "In series with the resistor",
-            "In series with the capacitor",
-            "In series with the switch key",
-            "In parallel across the capacitor"
+            "15 V",
+            "2.0 V",
+            "9.5 V",
+            "13.0 V"
           ],
           "answerIndex": 3,
-          "concept": "Voltmeter in parallel across the capacitor",
-          "why": "The voltmeter must read the potential difference across the capacitor, so it goes in parallel with it, which is why it is made of very high resistance. Resistor, capacitor, switch and supply are the parts in series."
+          "concept": "Capacitor voltage from the charging equation",
+          "why": "t = 16 s is 2τ, so V = V₀(1 − e^(−t/τ)) = 15(1 − e⁻²) = 15(1 − 0.135) = 15 × 0.865 = 13.0 V. After two time constants the capacitor is 86.5 % charged.\n\n15 V assumes the capacitor is already full, which takes about 5τ; 2.0 V is 15e⁻², the discharging equation applied to a charging capacitor; 9.5 V is the 63.2 % value at one time constant, not two."
         },
         {
           "type": "mcq",
-          "q": "What does a capacitor do to alternating and direct current?",
+          "q": "An RC charging circuit uses R = 10 kΩ and C = 470 μF. Find τ, then state what happens to the time taken to reach 63.2 % of the supply voltage when R is replaced by 47 kΩ with C unchanged.",
           "options": [
-            "Passes AC and blocks DC",
-            "Passes DC and blocks AC",
-            "Blocks both",
-            "Passes both equally"
+            "τ = 4.7 s; it rises to 22 s",
+            "τ = 0.0047 s; it rises to 0.022 s",
+            "τ = 4.7 s; it falls to 1.0 s",
+            "τ = 4.7 s; it is unchanged, since τ depends only on C"
           ],
           "answerIndex": 0,
-          "concept": "Capacitors pass AC and block DC",
-          "why": "This is why capacitors are used as filters in DC supplies. The reverse statement is the common slip."
+          "concept": "Effect of changing R on the time constant",
+          "why": "τ = RC = (10 × 10³)(470 × 10⁻⁶) = 4.7 s. The time to reach 63.2 % is τ itself, and τ is proportional to R, so with 47 kΩ it becomes 4.7 × 4.7 = 22 s: the capacitor charges more slowly because the larger R limits the charging current.\n\n0.0047 s uses 10 Ω instead of 10 kΩ; 1.0 s divides by the ratio of resistances instead of multiplying; 'unchanged' forgets that τ is the product RC and depends on both."
         },
         {
           "type": "mcq",
-          "q": "How often is the voltmeter read during the trial?",
+          "q": "For a charging capacitor, ln(V₀ − V) is plotted against t. The best-fit line passes through (0 s, 2.71) and (40 s, 1.11). Take e^2.71 ≈ 15. Find τ and V₀.",
           "options": [
-            "Once at the start and once at the end",
-            "Every second",
-            "Every 10 seconds, for at least 10 readings",
-            "Every 63 seconds"
+            "τ = 0.040 s, V₀ = 15 V",
+            "τ = 25 s, V₀ = 2.71 V",
+            "τ = 25 s, V₀ = 15 V",
+            "τ = −25 s, V₀ = 15 V"
           ],
           "answerIndex": 2,
-          "concept": "The 10-second reading interval and the minimum of 10 readings",
-          "why": "Readings are taken every 10 seconds until the voltage reaches its maximum, with at least ten points so the asymptote V0 is well established. That interval works because the time constant here is about 10 seconds, comfortably longer than reaction time."
+          "concept": "Time constant from a ln(V₀ − V) against t graph",
+          "why": "V₀ − V = V₀e^(−t/τ), so ln(V₀ − V) = −t/τ + ln V₀: a straight line of gradient −1/τ and intercept ln V₀. Gradient = (1.11 − 2.71)/(40 − 0) = −0.040 s⁻¹, so τ = −1/(−0.040) = 25 s. Intercept 2.71 = ln V₀, so V₀ = e^2.71 ≈ 15 V.\n\nτ = 0.040 s reads the magnitude of the gradient as τ instead of taking its reciprocal; V₀ = 2.71 V forgets to undo the logarithm at the intercept; τ = −25 s keeps the sign of the gradient, but the gradient is −1/τ so τ itself is positive."
+        },
+        {
+          "type": "mcq",
+          "q": "Before each charging trial the capacitor must be fully discharged. What error does this precaution prevent?",
+          "options": [
+            "The supply voltage V₀ being exceeded on the capacitor",
+            "A current surge damaging the voltmeter",
+            "The stopwatch running from a non-zero reading",
+            "V starting above zero, so 63.2 % of V₀ is reached too early and τ comes out too small"
+          ],
+          "answerIndex": 3,
+          "concept": "Precaution: discharging the capacitor before a trial",
+          "why": "The charging equation V = V₀(1 − e^(−t/τ)) assumes V = 0 at t = 0. If charge is left over from a previous trial, the curve starts part-way up, the 63.2 % level is crossed sooner than one true time constant, and the measured τ and the capacitance C = τ/R both come out too small.\n\nThe capacitor can never exceed V₀ whatever its starting charge; a voltmeter in parallel is not exposed to a surge; the stopwatch is a separate instrument that is reset by hand and has nothing to do with the charge on the capacitor."
         }
       ]
     }

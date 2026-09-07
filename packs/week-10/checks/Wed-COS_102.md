@@ -1,104 +1,152 @@
 # Wednesday — COS_102 nightly check
 
-*Arrays and recursion, as concepts: what an array is and what "fixed-size", "sequential" and "same type" each buy you, the declaration and initialisation rules, why indexing starts at zero and what an index actually is, what happens at and past the bounds, the two components a recursive function must have and the third condition the deck leaves implicit, the call stack and pending operations, direct versus indirect and tail versus non-tail recursion, and what the iteration/recursion trade really costs. No tracing, no predicting output, no bug-hunting in listings — those are Saturday.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Arrays and recursion as concepts.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** A student writes `int a[10];`, fills all ten slots, and then writes `a[14] = 7;` to "add a few more". What actually happens?
+**1.** `int a[10];` is stored as one block starting at address 1000, and each int occupies 4 bytes. At what address does `a[7]` start?
+A. 1024
+B. 1007
+C. 1028
+D. 1032
 
-a) The array grows to hold fifteen elements; the four slots in between are undefined until they are written to
-b) The compiler rejects `a[14]`, because it knows from the declaration that the array has ten elements
-c) The size was fixed by the declaration and cannot change; `a[14]` names a location outside the block, and because C stores no length and checks no bounds the write goes ahead into memory belonging to something else
-d) The write is silently discarded, since C ignores any index outside the declared range and leaves the array untouched
+**2.** After `int v[6] = {3, 8, 1};` the statement `int x = v[1] + v[3];` runs. What is x?
+A. 8
+B. 4
+C. 9
+D. Unpredictable, because v[3] was never given a value
 
-**2.** In `int a[10];` and in `a[7]`, the same square brackets hold two numbers that mean two different things. Which reading is correct?
+**3.** `int m[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};` What is the value of `m[2][0] + m[0][1]`?
+A. 7
+B. 9
+C. 11
+D. 5
 
-a) In the declaration the number is a **count of elements**; in an access it is an **offset from the first element** — so the count and the largest legal index differ by one, and the legal accesses are `a[0]` to `a[9]`
-b) Both are positions counted from the first element starting at 1, so the legal accesses are `a[1]` to `a[10]`
-c) Both are offsets, so `int a[10];` provides `a[0]` to `a[10]`, which is eleven elements
-d) In the declaration the number is the highest legal index and in an access it is the same index, so the two numbers always mean the same location
+**4.** Exactly one of these declarations is rejected by the compiler. Which?
+A. `int q[3] = {1};`
+B. `int r[] = {5, 6};`
+C. `int s[3] = {1, 2, 3};`
+D. `int p[3] = {1, 2, 3, 4};`
 
-**3.** Why is `a[i]` able to reach the *i*-th element immediately, without searching, and what does that have to do with the words "sequential" and "of the same type" in the course's definition of an array?
+**5.** How many frames of g are on the call stack at the deepest moment while `g(9)` is evaluated?
 
-a) Because the compiler builds a hidden lookup table of index-to-value pairs when the array is declared, and the table works whatever the element types are
-b) Because the elements sit in one contiguous block and every element has the same width, so the location of element *i* is the start of the array plus *i* times that width — a single multiplication and addition, which is exactly why both properties are in the definition
-c) Because arrays are stored in order of the values they hold, so an index can be found by a rapid search of the sorted block
-d) Because each element privately stores its own index alongside its value, and `a[i]` matches `i` against those stored indices
+```c
+int g(int n)
+{
+    if (n <= 1) return 1;
+    return g(n - 2) + 1;
+}
+```
+A. 9
+B. 5
+C. 4
+D. It never terminates
 
-**4.** Which pair of conditions must hold for a recursive function to terminate?
+**6.** For which of the calls h(9), h(10), h(12), h(7) does this function terminate?
 
-a) It must contain a base case that returns without recursing, and every recursive call must move the argument towards that base case; either one alone is not enough
-b) A base case is sufficient on its own: if the function contains a case that returns without recursion, execution must eventually arrive at it
-c) The recursive call must be the last statement in the function, so that nothing is left pending to hold the call open
-d) The function must call itself with a strictly smaller argument; a base case is then optional, since the argument cannot shrink forever
+```c
+int h(int n)
+{
+    if (n == 0) return 0;
+    return 1 + h(n - 3);
+}
+```
+A. h(9) and h(12) only
+B. All four
+C. h(9) only
+D. h(12) only
 
-**5.** A recursive function is three calls deep. What is true of the variable `n` in those three frames?
+**7.** What does `p(4, 1)` return?
 
-a) There is one `n` shared by all three calls, so a change made by the deepest call is what the shallowest one sees when control comes back to it
-b) Each call has its own frame with its own copy of the parameters and locals; the caller's frame is suspended with its own values intact and resumes at the point just after its call, seeing nothing the deeper calls did to their copies
-c) Each call replaces its caller's frame, so only one frame exists at a time and the shallower calls no longer exist by the time the base case is reached
-d) All three calls share a single frame, and a hidden depth counter records how many times the function has been entered
+```c
+int p(int n, int acc)
+{
+    if (n == 0) return acc;
+    return p(n - 1, acc * n);
+}
+```
+A. 10
+B. 0
+C. 1
+D. 24
 
-**6.** A recursion never reaches its base case. How does the failure differ from an ordinary infinite loop such as `while (1);`?
+**8.** `isEven(n)` returns 1 if n is 0 and otherwise returns `isOdd(n − 1)`; `isOdd(n)` returns 0 if n is 0 and otherwise returns `isEven(n − 1)`. Neither function names itself. How is this classified?
+A. Direct recursion
+B. Indirect recursion
+C. Not recursion, since neither function calls itself
+D. Iteration
 
-a) It does not differ: both simply run forever, occupying the processor and using a constant amount of memory
-b) The compiler detects the missing progress and refuses to build the programme, which an infinite loop is not checked for
-c) Each call consumes a fresh stack frame, so memory grows with every call until the stack space is exhausted and the programme is terminated — it fails on **space**, and quickly, whereas an infinite loop fails only on **time**
-d) The recursion stops itself at a safe depth set by the compiler and returns 0, whereas an infinite loop has no such limit
+**9. (show your working)** Trace `f(3)`. List the calls in the order they are made, state what operation is left pending in each frame, then give the value each call returns and the final result. Show your working.
 
-**7.** The deck says recursion "simplifies the function by making the computer do more work while we do less work", and its table records that the iterative factorial has **two** local variables while the recursive one has **none**. What does that table entry actually mean?
+```c
+int f(int n)
+{
+    if (n == 0) return 0;
+    return f(n - 1) + n * n;
+}
+```
 
-a) That recursion uses less memory than iteration, since a function with no local variables has nothing to store
-b) That the recursive version runs in fewer machine steps, which is what "the computer does more work" is contrasting it with
-c) That the count is of local variables **written in the source**: the counter and the accumulator disappear from what the programmer writes, while at run time each call gets its own frame holding its own parameters, so recursion uses **more** memory than the loop — that is precisely the work the computer has taken over
-d) That the recursive version has no variables at all, since its parameter is a value rather than a variable and is therefore not counted
+**10. (show your working)** `int a[4] = {7, 3, 9, 12};` State the largest legal index and the value of `a[3]`. Then say exactly what happens at compile time and at run time when the statement `a[4] = 0;` is executed, and why. Show your working.
 
-**8.** Function `f` contains a call to `g`, and `g` contains a call to `f`. Neither function mentions its own name anywhere in its body. Is this recursion?
+**11. (show your working)** This loop is meant to total the six elements of m. List the six accesses it actually makes, say which are out of range and which elements are never visited, then write the corrected loop. Show your working.
 
-a) No — the course defines recursion as a function calling itself, and neither of these contains a call to itself
-b) Yes: this is **indirect** recursion, where a function contains a call to another function which eventually calls the first — the course's definition explicitly covers a function that calls itself "indirectly and directly"
-c) Yes, and it is specifically **tail** recursion, since neither function has any pending work of its own to perform
-d) No — this is mutual iteration, which is why two functions are needed; recursion requires only one
+```c
+int m[2][3] = {{1, 2, 3}, {4, 5, 6}};
+int i, j, t = 0;
+for (i = 0; i < 3; i++)
+    for (j = 0; j < 2; j++)
+        t = t + m[i][j];
+```
 
-**9. (explain why)** State the course's definition of an array word for word, then take the three phrases **fixed-size**, **sequential collection** and **elements of the same type** in turn and say what each one makes possible. Use the last two together to explain why the first legal index is 0 rather than 1, and why `int a[10];` therefore has `a[9]` as its last legal element rather than `a[10]`.
-
-**10. (explain why)** State the two components the deck says a recursive function has, and what each is for. Then explain why having a base case is **necessary but not sufficient** for a recursive function to terminate, and name the third condition. Give a short example of a function that has a perfectly good base case and still never terminates for some inputs, and say precisely which inputs and why.
-
-**11. (explain why)** Four terms: **direct**, **indirect**, **tail** and **non-tail** recursion. Explain each, and say which two of the four answer one question and which two answer a different question. Then explain why "the recursive call is written on the last line of the function" is **not** a test for tail recursion, and give the test that is.
-
-**12. (explain why)** Set the iterative and the recursive factorial side by side using the deck's own three rows — local variables, number of statements, and how the result is produced. Then explain what the **call stack** is doing during a recursive factorial that the loop's `result` variable was doing during the iterative one, what "pending operations" means in that picture, and why the deck's sentence "recursion simplifies the function by making the computer do more work while we do less work" is a statement about a **trade**, not about recursion being better.
+**12. (show your working)** The recursive factorial declares no local variables and is a single return statement, yet at run time it uses more memory than the loop with its two variables i and result. Explain where that memory goes and what it means to say the computer does more work while the programmer does less.
 
 ---
 
 ## Answers
 
-**1. c.** *Concept: an array's size is fixed at the declaration, and C performs no bounds checking.* The course's definition says an array stores a **fixed-size** sequential collection. `int a[10];` reserves a block of exactly ten `int`-sized locations, and nothing that happens later changes that. `a[14]` is turned into an address by arithmetic — start of `a` plus 14 element widths — and that address is simply outside the block, so the write lands on whatever variable or bookkeeping happens to be there. It is **undefined behaviour**: the programme may print a wrong answer, behave differently on the next run, or crash. (a) is the Python-list belief that a collection grows to fit an index; it is the misconception the word **fixed-size** exists to rule out. (b) assumes the compiler checks; it knows the declared size, but the language does not require a diagnosis, and with a computed index it could not give one in general — this is exactly why array bugs survive compilation. (d) invents a protective mechanism: nothing inspects the index at run time, so there is nothing to discard the write.
+**1. C** — *Index as an offset.* An index is an offset from the first element: a[i] starts at start + i × width. So a[7] starts at 1000 + 7 × 4 = 1028.
 
-**2. a.** *Concept: the declaration holds a count, the access holds an offset; hence the off-by-one that defines the topic.* The deck's syntax is `datatype arrayName [ arraySize ]`, and it states that `int a[10];` **defines an array of size 10, that is, a block of 10** — a count. In an access the number is an **offset from the first element**, so element one sits at offset 0 and element ten at offset 9. (b) is the one-based reading, natural for anyone who has counted things in ordinary language, and it makes every loop start and end one place too high. (c) treats both numbers as offsets and quietly gains an element, which is the reasoning behind the classic `for (i = 0; i <= n; i++)` fault. (d) collapses the two meanings entirely and would make the declared size itself a legal index, which is precisely the location one past the end.
+1032 is 1000 + 8 × 4, counting a[7] as the eighth element and using 8 as the offset; 1007 adds the index without multiplying by the 4-byte width; 1024 is 1000 + 6 × 4, one element short.
 
-**3. b.** *Concept: why the definition names "sequential" and "same type" — indexing is address arithmetic, not searching.* Because the elements form one contiguous block and each is the same width, the machine finds element *i* with one multiplication and one addition, in the same time whatever *i* is. Drop either property and the arithmetic fails: a scattered collection has no start-plus-offset, and mixed widths make "*i* times the width" meaningless. This is also why the index is an **offset** — the first element is at start plus 0 — and why nothing is checked, since the arithmetic works just as well on an index that is out of range. (a) invents a lookup table, which would make indexing a search and would not require elements to share a type; the definition would then not need those words at all. (c) confuses the order of **storage** with an order of **values**; an array's elements are in no particular numerical order, and searching is what indexing avoids. (d) has each element storing its own index, which is circular — you would have to find the element before you could read the index that tells you where it is.
+**2. A** — *Partial initialiser and zero filling.* Fewer values than elements is legal, and the elements not listed become 0. So v[0] = 3, v[1] = 8, v[2] = 1, v[3] = v[4] = v[5] = 0. Indexing is zero-based, so x = v[1] + v[3] = 8 + 0 = 8.
 
-**4. a.** *Concept: termination needs a base case AND progress towards it.* The deck names the two components — a **base case** that handles the smallest input and a **recursive case** that produces **a smaller version of the original problem** — and the word doing the work is *smaller*. Both are needed: a function with no base case descends forever, and a function whose argument never approaches the base case descends forever past it. (b) is the sharpest distractor and the commonest half-understanding: `if (n == 0) return 0; return 1 + f(n - 2);` has a flawless base case and never terminates for odd `n`, because the argument steps straight over 0 into the negatives. (c) states the definition of **tail** recursion and confuses a classification with a requirement; `return n * f(n - 1);` has a pending multiplication, is non-tail, and terminates perfectly well. (d) drops the base case, which is what makes the descent stop at all — "the argument cannot shrink forever" is false: an `int` keeps going down through zero indefinitely as far as the recursion is concerned.
+4 reads the indices one-based (v[1] as 3, v[3] as 1); 9 takes v[1] = 8 but reads v[3] as the third value, 1; the last option treats an unlisted element as garbage, which is true only for an array with no initialiser at all.
 
-**5. b.** *Concept: each call has its own stack frame; nothing is shared between frames.* A call — recursive or not — creates a new frame holding its **own** copies of the parameters and its own locals, and suspends the caller's frame, which keeps every value it had and resumes at the point just after the call. Two frames of the same function have two separate `n`s that merely share a spelling. (a) is the single most destructive misconception in tracing: if frames shared variables, `factorial(4)` could not multiply by 4 on the way back up, because `n` would have been reduced to 1 by then. (c) describes a jump, not a call; if the caller's frame were destroyed there would be nowhere to return to and no pending work could ever be completed. (d) invents a depth counter in place of frames, which would give the function no way to remember four different values of `n` at once — and remembering them is the whole reason recursion costs memory.
+**3. B** — *Row and column subscripts.* The first subscript is the row and the second is the column, both counted from 0. m[2][0] is row 2, column 0, which is 7; m[0][1] is row 0, column 1, which is 2. Sum: 9.
 
-**6. c.** *Concept: infinite recursion fails on space (stack overflow), not merely on time.* Every call needs a frame, and the frames of a runaway recursion are never popped, so the stack region grows until it is exhausted and the operating system terminates the programme. This usually takes a fraction of a second, and the symptom — an abrupt crash — is quite different from a programme that hangs. (a) is the belief that recursion is just a loop written differently; it is what makes students look for the fault in the wrong place when a "hang" turns out to be a crash. (b) expects the compiler to prove termination, which it cannot in general: whether a recursion reaches its base case depends on values known only at run time. (d) invents a compiler-imposed safe depth returning a default value; there is no such rule, and a function that quietly returned 0 at depth *k* would give wrong answers rather than crashing, which is worse.
+7 transposes the subscripts, reading m[0][2] + m[1][0] = 3 + 4; 11 reads the columns one-based, m[2][1] + m[0][2] = 8 + 3; 5 reads the rows one-based, m[1][0] + m[0][0] = 4 + 1.
 
-**7. c.** *Concept: the deck's table counts source-level locals; run-time memory moves in the opposite direction.* The iterative factorial declares `i` and `result`; the recursive one declares nothing, because the counter is the parameter and the accumulation is done by the pending multiplications. But at run time each of the *n* calls has its **own frame** with its own `n` and its own return address, so the recursion holds *n* frames where the loop held one variable. That is exactly what the deck means by **the computer doing more work while we do less**. (a) is the reading the question exists to catch: "has none" is about what is written, and inferring lower memory use from it inverts the truth. (b) claims fewer machine steps, which is the opposite of what "the computer does more work" says, and is false — every call carries the cost of setting up and tearing down a frame. (d) declares a parameter not to be a variable; a parameter is a local, it lives in the frame, and it is the very thing the recursion is spending memory on.
+**4. D** — *One-sided initialiser rule.* The number of values between the braces cannot be larger than the number of elements declared between the square brackets. p declares 3 elements and is handed 4, so it is rejected.
 
-**8. b.** *Concept: indirect recursion — the definition covers a function that calls itself through another.* The course's wording is precise: recursion is a process in which a function **indirectly and directly** calls itself, and the deck names **indirect recursion** as the case where **a function contains a call to another function which eventually calls the function**. `f` reaches `f` again, so the frames stack up exactly as in direct recursion, and it needs a base case just as urgently. (a) reads the definition as covering only the direct case and drops the word "indirectly" from a sentence that contains it. (c) confuses the two independent classifications: direct/indirect is about **who calls whom**; tail/non-tail is about **what is left pending on return**, and nothing in the description says either function has no pending work. (d) invents a term; there is nothing iterative here, since neither function repeats anything itself — the repetition comes entirely from the calls.
+q is legal: fewer values is allowed and the rest become 0, giving {1, 0, 0}. r is legal: with the size omitted, an array just big enough for the initialiser is created, size 2. s matches exactly. Believing q is illegal reads the rule as two-sided; believing r is illegal forgets that the size may be inferred.
 
-**9.** *Concept: the array definition, and why its clauses force zero-based indexing and the n − 1 last index.* **The definition:** an array is **a type of data structure that can store a fixed-size sequential collection of elements of the same type.** **Fixed-size** — the number of elements is settled by the declaration `datatype arrayName[arraySize]` (or by counting the initialiser, when the size is omitted) and never changes while the programme runs. That is what makes the block reservable in one go, and it is also what makes indexing past the end meaningless rather than merely unusual: there is no more array to reach. **Sequential collection** — the elements occupy one contiguous block, laid out one after another, and one name covers all of them, which is what lets a single loop visit every element. **Elements of the same type** — every element has the same `datatype` and therefore the same width in memory. **Why the first index is 0.** Take the last two clauses together. Because the block is contiguous and every element is the same width, the machine can locate element *i* by arithmetic: *address of the start* + *i* × *width of one element*. No searching, no table — one multiplication and one addition, equally fast for any *i*. But that arithmetic makes the index a **distance from the start**, not a position in a queue. The first element is at the start itself, i.e. **zero elements along**, so its index is 0; the next is one width along, so its index is 1. Zero-basing is not a convention chosen for tidiness; it is what the index *is*. **Why `a[9]` is last.** If the first element is at offset 0, then ten elements occupy offsets 0 through 9. The number in the declaration is a **count**; the number in an access is an **offset**; a count and its largest offset always differ by one. `a[10]` therefore names the location exactly one element past the end of the block — real memory, belonging to something else — and since C stores no length and checks no bounds, reading it yields a junk value and writing it corrupts another variable, with no error reported at either compile time or run time.
+**5. B** — *Counting recursive calls.* Each call subtracts 2: g(9) calls g(7), which calls g(5), then g(3), then g(1). g(1) satisfies n <= 1 and returns without calling again. That is 5 calls, all alive at once because each is waiting for the one below it: 5 frames.
 
-**10.** *Concept: base case, recursive case, and the third condition — progress.* **The two components.** The deck states them directly for its array-sum example. **A base case**: "this handles the case where there are no numbers to add" — the smallest input, answered outright, with **no recursive call**. Its job is to stop the descent and supply the value the whole chain is built on. **A recursive case**: it "breaks the problem down into a smaller version of the original problem together with an addition" — that is, it does two things, hands a **strictly smaller sub-problem** to the same function, and specifies the work needed to turn the sub-problem's answer into this call's answer. **Why a base case is not sufficient.** A base case is a *test*, not a *guarantee*. It only fires if execution actually arrives at the value it tests for, and whether that happens depends entirely on how the recursive case changes the argument. If the argument moves in the wrong direction, or moves in steps that skip past the tested value, the base case sits there being checked and failing on every call while the frames pile up. So the third condition is **progress**: every recursive call must move the argument **towards** the base case, and must be able to land on it. **An example.**
-```c
-int f(int n)
-{
-    if (n == 0) return 0;        /* a perfectly good base case */
-    return 1 + f(n - 2);
-}
-```
-`f(6)` terminates: 6, 4, 2, 0, and the base case fires. `f(7)` never does: 7, 5, 3, 1, then **−1**, −3, −5, … — the argument passes 0 without ever equalling it, so `n == 0` is false forever, the recursion descends without limit, and the programme dies of stack overflow. The inputs that fail are precisely the **odd** ones, and they fail not for want of a base case but because the step of 2 is the wrong size to land on 0 from an odd start. The repair is to make the base case cover the whole region beyond the stopping point — `if (n <= 0) return 0;` — which is the general lesson: a base case must be reachable from **every** legal input, not merely from the convenient ones.
+4 counts only the recursive calls and forgets the original g(9) frame; 9 assumes the argument steps down by 1; 'never terminates' misreads n <= 1 as n == 0, which 9 would indeed step over.
 
-**11.** *Concept: two independent classifications of recursion — who calls whom, and what remains pending.* **Direct recursion**: the function **contains an explicit call to itself** — `factorial` calling `factorial`. **Indirect recursion**: the function **contains a call to another function which eventually calls the function** back — `isEven` calls `isOdd`, which calls `isEven`. Neither names itself, and it is still recursion, since the course's definition is that a function **indirectly and directly** calls itself. **Tail recursion**: **a recursive function without pending operations to be performed on return from a recursive call** — when the inner call produces its value, that value *is* the answer, and this call has nothing left to do. **Non-tail recursion**: **a recursive function with pending operation(s)** to be performed on return — the inner value has to be combined with something before this call can answer. **The two questions.** *Direct* and *indirect* answer **"by what route does the function reach itself?"** — one call or a chain of them. *Tail* and *non-tail* answer **"when the recursive call returns, is there any work left in this frame?"** The two are independent: an indirect recursion may be tail or non-tail, and a direct one likewise, so the four terms are not a list of four kinds but a pair of yes/no axes. **Why "on the last line" is not the test.** Consider `return sumNonTail(n - 1) + n;`. The recursive call is written on the last line of the function, and it is **non-tail**, because when the call returns its value there is still an addition of `n` waiting to be performed before this frame can return. Position on the page says nothing; a call can be the last thing *written* while its result is the first ingredient of an expression that has not yet been evaluated. **The test that works:** look at what happens to the value the recursive call returns. If it is returned unchanged — `return sumTail(n - 1, acc + n);` — nothing is pending and the recursion is **tail**. If anything is done to it first — added to, multiplied by, compared, stored, printed — that operation is pending, a frame must be kept alive to perform it, and the recursion is **non-tail**. Equivalently: could this frame be thrown away the instant the recursive call is made? If yes, tail; if it still holds unfinished business, non-tail.
+**6. A** — *Reachability of the base case.* The base case is n == 0 and each call subtracts 3, so the call lands exactly on 0 only when n is a multiple of 3. h(9): 9, 6, 3, 0 terminates. h(12): 12, 9, 6, 3, 0 terminates. h(10) goes 10, 7, 4, 1, −2, −5, ... and h(7) goes 7, 4, 1, −2, ... stepping straight over 0 and never stopping.
 
-**12.** *Concept: what the call stack does in place of the loop's accumulator, and what the iteration/recursion trade actually costs.* **The deck's three rows.** The **iterative** factorial has **two local variables** (a counter and an accumulator), **three statements**, and **saves the solution in an intermediate variable before it can be returned**. The **recursive** factorial has **no local variables**, **one statement**, and **calculates and returns its result as a single expression** — `return n * factorial(n - 1);`. **What the call stack is doing.** In the loop, the partial product lives in `result`: after each pass, everything computed so far is in that one variable, and the loop overwrites it. Nothing needs to be remembered except the current partial answer and the counter, so one frame with two variables is enough for any *n*. In the recursion there is no accumulator, so the partial results have nowhere to live — and they do not have to, because they have not been computed yet. `factorial(4)` cannot multiply by 4 until `factorial(3)` has produced its value, so the multiplication is **pending**: the frame for `factorial(4)` stays alive, holding its own `n = 4` and a note of where to resume, while `factorial(3)` runs, which does the same, and so on down to the base case. At the deepest moment four frames are alive and three multiplications are waiting. Then the values come back up — 1, then 2 × 1 = 2, then 3 × 2 = 6, then 4 × 6 = 24 — each frame completing its pending operation and disappearing. **"Pending operations"** are exactly that: the work written *around* the recursive call, which cannot be done until the call returns, and which is the reason the frame cannot be discarded when the call is made. They are the memory that the loop did not need. **Why it is a trade.** The programmer's side genuinely gets simpler: no counter to initialise, no loop condition to get one out at either end, no accumulator to forget to reset — the two commonest iterative bugs vanish, and the code reads like the mathematical definition it mirrors. The machine's side gets worse in exactly the same measure: *n* frames instead of one variable, each with the cost of being set up and torn down, and a hard ceiling where the loop had none — a recursion deep enough will exhaust the stack and crash, on inputs an iterative version would handle without noticing. So the deck's sentence is not a recommendation. **"The computer does more work while we do less"** names the price and the purchase in one line: clarity bought with memory and calls. Which side you should prefer depends on the problem — on whether the natural decomposition is into sub-problems similar in form to the original, which is what recursion is for, or into repeated passes over a sequence, which is what a loop is for.
+'All four' assumes having a base case is enough, without checking that the calls reach it; 'h(9) only' and 'h(12) only' each miss that the other is also a multiple of 3.
+
+**7. D** — *Tracing an accumulator parameter.* The product is carried down in acc: p(4, 1) calls p(3, 4), then p(2, 12), then p(1, 24), then p(0, 24). At n = 0 the base case returns acc = 24, and since nothing is pending in any frame, 24 is passed back unchanged.
+
+10 adds n to acc instead of multiplying (4 + 3 + 2 + 1); 0 multiplies by n before testing the base case, so the final step is 24 × 0; 1 returns the starting acc, forgetting that each call replaces it.
+
+**8. B** — *Direct versus indirect recursion.* Indirect recursion is when a function contains a call to another function which eventually calls the function back. isEven calls isOdd, which calls isEven again, so isEven does reach itself, just through a second function. Recursion covers a function that calls itself indirectly as well as directly.
+
+Direct recursion needs an explicit call to itself, which neither has; 'not recursion' drops the word indirectly from the definition; iteration would be a loop inside one call, with no new frame per step.
+
+**9.** *Call stack of a non-tail recursion.* Descending: f(3) needs f(2) and has + 9 pending; f(2) needs f(1) and has + 4 pending; f(1) needs f(0) and has + 1 pending; f(0) is the base case and returns 0 with nothing pending. Four frames are alive at the deepest point. Ascending: f(1) = 0 + 1 = 1; f(2) = 1 + 4 = 5; f(3) = 5 + 9 = 14.
+
+Final answer: 14. A correct answer lists the four calls f(3), f(2), f(1), f(0) in that order, names the pending addition of n² in each of the first three frames, and gives the returns 0, 1, 5, 14 in ascending order. Giving 9 (only the top frame's term) or 6 (forgetting the squares) is wrong.
+
+**10.** *Out-of-range index behaviour.* The declaration reserves a block of 4 ints at offsets 0, 1, 2, 3, so the largest legal index is 3 and a[3] is the fourth value, 12. a[4] names the location one past the end of the block. At compile time nothing happens: the statement is valid C and builds without a warning. At run time nothing is checked either, because no length is stored and a[4] is simply computed as start + 4 × width. The 0 is therefore written into memory belonging to something else, which is undefined behaviour: a neighbouring variable may be corrupted, the program may print a wrong answer, or it may crash, and the symptom can differ between runs.
+
+A correct answer states index 3, value 12, that the code compiles, that no run-time check exists, and that the write lands outside the array with unpredictable effect. Saying the compiler rejects it, or that the array grows to 5 elements, is wrong.
+
+**11.** *Bounds of a two-dimensional traversal.* m has 2 rows (i = 0, 1) and 3 columns (j = 0, 1, 2), but the loop limits are swapped. It accesses m[0][0], m[0][1], m[1][0], m[1][1], m[2][0], m[2][1]. The last two are out of range: there is no row 2, and nothing reports it, so junk is added to t. The elements m[0][2] and m[1][2] (values 3 and 6) are never visited. The corrected loop is `for (i = 0; i < 2; i++) for (j = 0; j < 3; j++) t = t + m[i][j];`, which gives t = 21.
+
+A correct answer lists the six accesses, names m[2][0] and m[2][1] as out of range, names m[0][2] and m[1][2] as missed, and puts the row count 2 on the outer loop and the column count 3 on the inner one. Also accepted: i <= 1 and j <= 2 as the conditions.
+
+**12.** *Iteration versus recursion.* Every call gets its own stack frame holding its own copy of n and a note of where to resume. factorial(n) cannot multiply until factorial(n − 1) returns, so its frame stays alive with a multiplication pending, and so on down: at the deepest point n frames exist and n − 1 multiplications are waiting. The loop keeps everything in one frame and overwrites result each pass, so its memory does not grow with n. The programmer does less because there is no counter to start, no accumulator to seed and no loop condition to get wrong; the computer does more because it creates and tears down n frames and holds them all at once, which is slower and can overflow the stack for large n.
+
+A correct answer mentions one frame per call with its own n, the pending operation kept in each frame, memory growing with n versus constant for the loop, and names what the programmer is spared.

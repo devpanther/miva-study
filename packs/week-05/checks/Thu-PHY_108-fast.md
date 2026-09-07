@@ -1,46 +1,58 @@
 # Thursday — PHY_108 fast-hour check
 
 *Verifying Kirchhoff's Voltage Law: its basis, the circuit equations, the sign rules, the procedure and a negative current.*
-*Five questions, straight after the fast hour. Recall only. Score out of 5.*
+*5 questions, straight after the hour. Score out of 5.*
 
-**1.** Which conservation principle is Kirchhoff's Voltage Law based on?
-A. Conservation of charge
-B. Conservation of momentum
-C. Conservation of energy
-D. Conservation of current
+**1.** A single loop contains a 12 V supply, a 2 kΩ resistor, a 4 kΩ resistor and a 3 V supply connected so that it opposes the 12 V one. Use KVL to find the current in the loop.
+A. 2.5 mA
+B. 1.5 A
+C. 1.5 mA
+D. 4.5 mA
 
-**2.** Which of these is the KCL node equation in this experiment?
-A. I1 + I2 = I3
-B. I3R3 + I3R4 + I1R5 = E1
-C. I2R2 - I1R5 + I2R1 = -E2
-D. E1 + E2 = I3R3
+**2.** In the KVL circuit, loop 1 gives I3·R3 + I3·R4 + I1·R5 = E1. With R3 = 2.5 kΩ, R4 = 7 kΩ, R5 = 5 kΩ, E1 = 9 V and the measured I3 = 0.479 mA, compute I1.
+A. 0.890 mA
+B. 1.80 mA
+C. 2.71 mA
+D. 0.468 mA
 
-**3.** By the deck's rule, when is an emf counted as positive?
-A. When the battery drives current in the assumed direction
-B. When the battery is traversed from its positive to its negative terminal
-C. When the battery is traversed from its negative to its positive terminal
-D. When the loop is traversed clockwise
+**3.** Walking once round a loop you pass: a 6 V battery from + to −; a 2 kΩ resistor carrying 1.5 mA in your direction of travel; a 4 kΩ resistor carrying 1.5 mA against your direction; then a battery of emf E from − to +. Using the sign rules (resistor p.d. positive when traversed with the current, emf positive when traversed + to −, total zero), find E.
+A. 15 V
+B. 9 V
+C. −3 V
+D. 3 V
 
-**4.** The solution gives I2 as negative. What does that mean?
-A. A resistance value was substituted wrongly
-B. The ammeter was connected with reversed polarity
-C. The current in that branch is decreasing with time
-D. The real current runs opposite to the direction assumed on the diagram
+**4.** A resistance is set to R = 2.5 kΩ (2 significant figures) and the ammeter in that branch reads I = 0.479 mA (3 significant figures). Give the p.d. across R to the correct number of significant figures.
+A. 1.1975 V
+B. 1.2 V
+C. 1.20 V
+D. 1.198 V
 
-**5.** After the first recording, in what interval is the emf stepped up?
-A. 1 V
-B. 3 V
-C. 9 V
-D. 50 V
+**5.** Resistor R5 carries I1 and lies on the branch shared by both loops. In loop 1 its term is +I1·R5, in loop 2 it is −I1·R5. Why do the signs differ?
+A. I1 reverses direction between the two loops
+B. R5 has a negative resistance in loop 2
+C. Loop 1 is a KCL equation and loop 2 a KVL equation
+D. The two loops traverse R5 in opposite directions relative to I1
+
+---
 
 ## Answers
 
-**1. C** — KVL says the algebraic sum of voltage drops around a closed loop is zero, which is conservation of energy around a path. Conservation of charge is what KCL, the node rule, expresses.
+**1. C** — *Loop current from KVL with two emfs.* Going round the loop, the sum of emfs equals the sum of IR drops: 12 − 3 = I(2 + 4), so I = 9 V/6 kΩ = 1.5 mA. Volts divided by kilohms gives milliamps directly.
 
-**2. A** — A KCL equation is written at a node and contains currents only. The other three all contain IR products or emfs, so they have units of volts and are loop equations.
+2.5 mA adds the two emfs (15/6) instead of subtracting the opposing one; 1.5 A forgets that the resistances are in kΩ; 4.5 mA divides by only the 2 kΩ resistor and leaves the 4 kΩ out of the loop.
 
-**3. B** — The deck counts an emf positive when the source is traversed from positive terminal to negative terminal. Option 3 is the opposite convention, and the sign does not depend on the current direction or on which way round the page you walk.
+**2. A** — *Solving a KVL loop equation for a branch current.* Because kΩ × mA = V, substitute directly: 0.479(2.5 + 7) + 5·I1 = 9, so 4.55 + 5·I1 = 9 and I1 = (9 − 4.55)/5 = 0.890 mA. An ammeter in that branch reading about 0.89 to 0.90 mA would confirm the loop equation.
 
-**4. D** — The magnitude is still correct; only the assumed arrow was drawn the wrong way. It is not an arithmetic mistake, and the currents here are steady, not changing with time.
+1.80 mA is 9/5, ignoring the drop across R3 and R4 altogether; 2.71 mA adds the 4.55 V instead of subtracting it; 0.468 mA divides the remaining 4.45 V by R3 + R4 instead of by R5.
 
-**5. B** — The emf is increased at regular 3 V intervals, so the sample runs at 9, 12 and 15 V. 9 V is the starting emf and 50 V is the maximum output range set before dialling.
+**3. D** — *Applying the KVL sign rules around a loop.* Term by term: the 6 V battery traversed + to − counts +6; the 2 kΩ resistor traversed with the current counts +(1.5)(2) = +3; the 4 kΩ resistor traversed against the current counts −(1.5)(4) = −6; the battery E traversed − to + counts −E. Sum to zero: 6 + 3 − 6 − E = 0, so E = 3 V.
+
+15 V counts both resistor terms as positive (6 + 3 + 6); 9 V has the resistor rule backwards (6 − 3 + 6); −3 V counts the unknown battery as +E because it forgets that − to + is the negative sense.
+
+**4. B** — *Significant figures in a product of readings.* V = IR = 0.479 mA × 2.5 kΩ = 1.1975 V, and kΩ × mA gives volts directly. A product is quoted to the significant figures of the least precise factor, here 2.5 kΩ with 2 s.f., so V = 1.2 V.
+
+1.1975 V keeps every calculator digit, claiming 5 s.f. from a 2 s.f. resistance; 1.20 V and 1.198 V quote 3 and 4 s.f., matching the ammeter rather than the least precise reading.
+
+**5. D** — *Sign of a shared branch in two loop equations.* The p.d. across a resistor is positive when it is traversed in the direction of its current and negative when traversed against it. Loop 1 runs through R5 along I1 and loop 2 runs through it the other way, so the same physical drop I1·R5 enters the two equations with opposite signs.
+
+I1 is one current with one direction and does not change between loops; a resistance is never negative; both equations contain IR products and emfs, so both are KVL loop equations.

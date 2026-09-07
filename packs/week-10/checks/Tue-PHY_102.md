@@ -1,88 +1,112 @@
 # Tuesday — PHY_102 nightly check
 
-*Electromagnetic induction as concepts: what magnetic flux is and which angle enters Φ = BA cos θ, the three ways of changing it and why a changing flux — not motion — is the criterion, why an emf appears in an open circuit with no current, what the minus sign in ε = −N dΦ/dt means and what sign convention it belongs to, Lenz's law as opposition to the change rather than to the field, the energy argument that forces that direction, and what self-inductance actually opposes.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Electromagnetic induction as concepts.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** The magnetic flux through a flat loop of area A in a uniform field B is Φ = BA cos θ, in which θ is:
-a) the angle between B and the plane of the loop, so that Φ is greatest when B lies in the plane
-b) the angle between B and the **normal** to the loop, so that Φ is greatest when the plane of the loop is perpendicular to B
-c) the angle through which the loop has been rotated from rest, whatever orientation it started in
-d) the angle between B and the direction of the induced current in the loop
+**1.** A flat coil of area 0.040 m² sits in a uniform field of 0.25 T. The plane of the coil makes an angle of 30° with the field. What is the magnetic flux through the coil?
+A. 8.7 × 10⁻³ Wb
+B. 1.0 × 10⁻² Wb
+C. 5.0 × 10⁻³ Wb
+D. 0.13 Wb
 
-**2.** A closed coil sits completely motionless inside a long solenoid whose current is being steadily increased. Faraday's law predicts:
-a) no emf, because Faraday's law requires relative motion between the conductor and the field
-b) no emf, because the coil is not cutting through any field lines
-c) an emf in the coil, because the flux linking it is changing even though nothing moves
-d) an emf only at the instant the solenoid is switched on, not while the current continues to climb
+**2.** The flux through each turn of a 40-turn coil rises uniformly from 3.0 mWb to 9.0 mWb in 0.20 s. What is the magnitude of the induced emf?
+A. 1.2 V
+B. 0.030 V
+C. 1.8 V
+D. 2.4 V
 
-**3.** A coil is cut so that its two ends are open, and a magnet is then moved past it. Compared with the same coil intact:
-a) no emf is induced at all, since an emf can exist only in a complete circuit
-b) the emf is unchanged, but no current flows; charge simply piles up at the two open ends
-c) both emf and current are unchanged, since the small air gap conducts a leakage current
-d) an emf is induced only in the portion of the coil nearest the magnet, the rest being inert
+**3.** The south pole of a bar magnet is pushed towards the face of a flat coil. Viewed from the magnet, which way does the induced current circulate, and what pole does the near face of the coil become?
+A. Anticlockwise; the near face becomes a north pole
+B. Clockwise; the near face becomes a south pole
+C. Clockwise; the near face becomes a north pole
+D. Anticlockwise; the near face becomes a south pole
 
-**4.** The minus sign in ε = −N dΦ/dt:
-a) shows that the induced emf is always a negative quantity, energy being removed from the circuit
-b) shows that the induced current's own field always points opposite to the applied field B
-c) records Lenz's law: the induced current's own flux opposes the **change** in the flux that produced it
-d) is pure bookkeeping from the choice of normal, and carries no physical statement whatever
+**4.** A straight rod 60 cm long moves at 5.0 m/s at right angles to both its own length and a uniform field of 0.20 T. What is the emf between the ends of the rod?
+A. 1.0 V
+B. 0.12 V
+C. 60 V
+D. 0.60 V
 
-**5.** A coil links a magnetic field directed **into the page** whose strength is **decreasing**. The induced current in the coil:
-a) produces flux **into** the page inside the coil, acting to maintain the flux that is being lost
-b) produces flux **out of** the page inside the coil, since an induced field always opposes the applied field
-c) is zero, since the field is only weakening and not reversing
-d) flows clockwise, as it always does, the sense being fixed by the field direction alone
+**5.** The current in an inductor of 0.80 H falls uniformly from 6.0 A to 2.0 A in 0.050 s. What is the magnitude of the self-induced emf?
+A. 64 V
+B. 96 V
+C. 32 V
+D. 3.2 V
 
-**6.** The reason the induced current must oppose the change that produced it is that:
-a) magnetic fields of any kind always repel one another
-b) if it aided the change, the motion producing it would be reinforced, and the system would deliver kinetic energy and heat from no source at all
-c) the induced current must always flow anticlockwise, and anticlockwise happens to be the opposing sense
-d) the resistance of the coil reverses the direction of any current driven through it
+**6.** An ideal transformer has 1200 primary turns and 60 secondary turns. The primary is connected to a 240 V a.c. supply. What is the secondary voltage?
+A. 4800 V
+B. 20 V
+C. 12 V
+D. 0.20 V
 
-**7.** A flat coil lies in a uniform field with its plane **perpendicular to B**. Which of these changes induces **no** emf in it?
-a) spinning the coil in its own plane, about an axis along its own normal
-b) rotating the coil about one of its diameters until it is edge-on to the field
-c) squeezing the coil into a narrower shape, so that the area it encloses falls
-d) increasing the strength of the field while the coil is held fixed
+**7.** A 400-turn coil carries a current of 2.0 A, and the flux through each turn is 5.0 × 10⁻⁵ Wb. What is the self-inductance of the coil?
+A. 2.5 × 10⁻⁵ H
+B. 0.010 H
+C. 0.040 H
+D. 0.020 H
 
-**8.** A coil of self-inductance 0.50 H carries a large, perfectly **steady** direct current of 6.0 A. The self-induced (back) emf across its inductance is:
-a) 3.0 V, being LI, the flux linkage
-b) 9.0 V, being ½LI², the stored energy
-c) large and in proportion to the current, since a bigger current means a bigger field to oppose
-d) zero, because the back-emf depends on dI/dt and not on I
+**8.** The magnetic flux through a closed loop is decreasing. Inside the loop, the field produced by the induced current points:
+A. Perpendicular to the applied field
+B. Opposite to the applied field
+C. Nowhere; no current is induced because the loop is not moving
+D. In the same direction as the applied field
 
-**9. (explain why)** Explain what magnetic flux is, why the angle in Φ = BA cos θ is measured from the **normal** to the loop and not from its plane, and what the flux linkage NΦ of a coil means. State the three independent ways in which the flux through a circuit can be changed, and explain why an emf is induced only while the flux is **changing** and not merely because flux is present.
+**9. (show your working)** An inductor of 0.60 H carries a steady current of 5.0 A. Calculate the energy stored in its magnetic field. The current is then reduced to 2.5 A. Calculate the new stored energy and state the factor by which it has fallen. Show your working.
 
-**10. (explain why)** The lecture deck states: *"For Faraday's law to hold true there must be movement between the coil and the magnetic field."* Explain why this is wrong, give a counter-example taken from the deck's **own** later material, and give the reverse case — a conductor that is moving and yet has no emf induced in it. State the correct criterion for induction in one sentence.
+**10. (show your working)** A 250-turn square coil of side 4.0 cm lies with its plane perpendicular to a uniform field of 0.30 T. The coil is pulled completely out of the field in 0.040 s. Calculate the average emf induced in the coil. Show your working.
 
-**11. (explain why)** Explain the sign convention behind ε = −N dΦ/dt: how the positive normal, the sign of the flux and the positive sense of circulation round the loop are tied together, and what the minus sign therefore asserts physically. Explain why "the induced field opposes the applied field" is a wrong statement of Lenz's law, using the case of a **decaying** flux to show it.
+**11. (show your working)** Two coils have a mutual inductance of 0.15 H. The current in the first coil falls uniformly from 6.0 A to zero in 0.030 s. Calculate the emf induced in the second coil during the change, and state the emf in the second coil while the 6.0 A was held steady. Show your working.
 
-**12. (explain why)** A magnet is dropped so that it falls through a copper ring. Explain, using Lenz's law and conservation of energy, why the magnet falls more slowly than it would in free fall, where the heat generated in the ring comes from, and what would happen if the induced current instead pulled the magnet in. Then explain why a bicycle dynamo makes the wheel harder to turn as soon as the lamp is switched on.
+**12. (show your working)** A hand-cranked generator turns freely when its output terminals are left open, but becomes noticeably harder to turn the moment a lamp is connected across them. Explain why, using Lenz's law and conservation of energy.
 
 ---
 
 ## Answers
 
-**1. b** — *Flux is measured with the angle taken from the normal.* Φ = **B·A**, and the area vector **A** points along the surface **normal**; hence Φ = BA cos θ with θ between B and that normal. Face-on (plane ⊥ B) means θ = 0 and Φ = BA, the maximum; edge-on (plane containing B) means θ = 90° and Φ = 0, because no field line threads the loop. (a) measures from the plane, which inverts the whole thing: it would make the flux greatest in the orientation where the field skims the loop and nothing goes through it. (c) makes θ depend on the history of the loop rather than on its present orientation; the flux of a loop sitting still is perfectly well defined and does not remember how it got there. (d) is circular and dimensionally empty — the induced current is a *consequence* of a changing flux, so it cannot appear in the definition of the flux.
+**1. C** — *Magnetic flux with the angle measured from the normal.* Φ = BA cos θ with θ the angle between B and the normal to the coil. The plane is at 30° to B, so the normal is at 90° − 30° = 60°. Φ = (0.25)(0.040) cos 60° = (0.010)(0.50) = 5.0 × 10⁻³ Wb.
 
-**2. c** — *Induction is caused by a changing flux; motion is only one way to produce one.* Raising the solenoid's current raises B inside it, so Φ = BA through the stationary coil rises, dΦ/dt ≠ 0, and an emf appears. This is exactly how a transformer works, with no moving part anywhere in it. (a) is the deck's own erroneous claim, and this question is the counter-example that kills it. (b) rests on the "cutting field lines" picture, which is a useful *mnemonic* for motional emf and simply does not cover the case where the field itself grows in place. (d) confuses the switch-on transient with the process: as long as the current keeps climbing, dΦ/dt is non-zero and the emf persists; it stops only when the current levels off.
+8.7 × 10⁻³ Wb uses cos 30°, taking the angle from the plane instead of the normal; 1.0 × 10⁻² Wb is BA with the angle ignored; 0.13 Wb is B cos 60° with the area left out, a field in teslas quoted as a flux.
 
-**3. b** — *An emf is energy per unit charge from a non-electrostatic source; current is a separate question.* The changing flux drives the free charges along the wire regardless of whether the path closes. In the open coil they accumulate at the ends until the electrostatic field they build up exactly cancels the driving effect; the potential difference between the ends then equals ε, and no steady current flows. With the coil intact, that same ε drives I = ε/R. (a) confuses cause with consequence — Faraday's law contains no resistance and says nothing about circuits being closed. (c) invents a conduction path; air at these voltages is an insulator, and even if it were not, that would change the current, not the emf. (d) misplaces the source: the emf is distributed round the whole loop, being the line integral of the induced electric field, not a local effect at the nearest turn.
+**2. A** — *Faraday's law from a flux change.* ε = N ΔΦ/Δt. ΔΦ = 9.0 − 3.0 = 6.0 mWb = 6.0 × 10⁻³ Wb, so ε = (40)(6.0 × 10⁻³)/(0.20) = 1.2 V.
 
-**4. c** — *The minus sign is Lenz's law, and it is about the **change**.* It states that the emf drives current whose own flux fights whatever the flux is doing — cancelling an increase, propping up a decrease. (a) reads it as an arithmetic sign on a number; ε is a scalar whose actual sign depends on which way you took the normal, and induced emfs are perfectly capable of coming out positive. (b) is the commonest half-right answer and fails whenever the flux is falling, since then the induced field points *along* B. (d) over-corrects into scepticism: it is true that the *sign* flips if you reverse the normal, but the physical content — that induction always opposes the change and therefore always extracts energy from whatever is causing it — is fixed by conservation of energy and survives every choice of convention.
+0.030 V drops N and is the emf of a single turn; 1.8 V uses the final flux 9.0 mWb instead of the change; 2.4 V adds the two fluxes (12 mWb) instead of subtracting them.
 
-**5. a** — *Oppose the change, not the field.* The into-page flux is being lost, so the induced current acts to **replace** it, producing flux **into** the page inside the loop, and it therefore circulates **clockwise** as seen from the front. (b) states Lenz's law in the corrupted form "opposes the field", which is right only when the flux is *growing*; here it gets the direction exactly backwards. (c) mistakes "no reversal" for "no change"; only the *rate* of change matters, and a steady decline is a perfectly good non-zero dΦ/dt. (d) fixes the sense from the field alone, but the sense reverses when the same field starts to grow instead of decay — which is precisely the deck's observation that the galvanometer needle swings the opposite way when the magnet is pulled out.
+**3. B** — *Lenz's law: direction of current for an approaching pole.* Lenz's law: the coil opposes the approach, so the near face must repel the incoming south pole by becoming a south pole itself. A face is a south pole when the current seen from that side runs clockwise (right-hand grip: clockwise current gives a field pointing away from the viewer, and field lines enter a south pole). So: clockwise, south face.
 
-**6. b** — *Lenz's law is conservation of energy applied to induction.* The heat I²R must be paid for by the agent causing the flux change, and it is the opposing force or torque that collects that payment. Reverse the direction and you have a system that accelerates itself while also generating heat — energy from nothing, a perpetual-motion machine of the first kind. (a) is false as stated: magnets attract as readily as they repel, and induced poles attract a *receding* magnet. (c) fixes an absolute sense of circulation, which cannot be right — the sense depends on which way the flux is changing, and even on which side of the coil you stand. (d) misunderstands resistance entirely: R dissipates energy and limits the current, and has no power to reverse the direction of anything.
+Anticlockwise with a north face is the answer for an approaching north pole, the poles swapped; clockwise with a north face pairs the right sense with the wrong pole; anticlockwise with a south face gets the grip rule backwards, and an anticlockwise current would in fact make a north face that pulls the magnet in.
 
-**7. a** — *Spinning about the normal changes nothing in Φ = BA cos θ.* B is unchanged, A is unchanged, and θ stays at 0° throughout, because the normal keeps pointing along B; the coil merely rotates within its own plane, so dΦ/dt = 0 and there is **no** emf — despite very obvious motion. (b) changes θ from 0° to 90°, sweeping the flux from BA to zero: a large emf, and this is the a.c. generator. (c) changes **A**, so Φ falls: an emf. (d) changes **B**: an emf, with nothing moving at all. Together (a)–(d) make the point that motion neither guarantees an emf nor is required for one.
+**4. D** — *Motional emf of a moving rod.* ε = BLv with L in metres: L = 60 cm = 0.60 m, so ε = (0.20)(0.60)(5.0) = 0.60 V. Unit check: T × m × m/s = V.
 
-**8. d** — *Self-inductance opposes the **change** in current, not the current.* ε = −L dI/dt, and dI/dt = 0 for a steady current, so the back-emf is exactly **zero**, however large I may be. (a) quotes LI = 3.0, which is the **flux linkage** in webers, not a voltage. (b) quotes ½LI² = 9.0, which is the stored **energy** in joules — real, and sitting in the field, but not an emf. (c) is the underlying misconception in words: it confuses the size of the field with the rate at which it changes, and it would mean that a coil carrying a steady current permanently opposed its own supply, which would be a source of free energy.
+1.0 V is Bv with the length dropped; 0.12 V is BL with the speed dropped; 60 V leaves the length in centimetres, a factor of 100 too large.
 
-**9.** *Concept: magnetic flux, its angle, flux linkage, and why only changes induce.* **Flux** is the amount of magnetic field threading a surface: Φ = **B·A** = **BA cos θ**, measured in **webers** (1 Wb = 1 T·m² = 1 V·s). Picture it as the number of field lines passing through the loop. **Why the angle is from the normal.** A surface has no single direction of its own; the only direction intrinsic to a flat loop is its **normal**, so that is what the area vector **A** must point along, and the dot product B·A therefore brings in the cosine of the angle between B and the normal. Physically, only the component of B **perpendicular to the plane** threads the loop; the component lying in the plane skims past and threads nothing. Hence face-on (plane ⊥ B, θ = 0) gives the maximum flux BA, and edge-on (plane containing B, θ = 90°) gives **zero**. Measuring the angle from the plane instead swaps sine for cosine everywhere afterwards and produces exactly the wrong extremes. **Flux linkage** is **NΦ** for a coil of N turns: each turn is threaded separately, and since the turns are joined in series their induced emfs add, so it is the *product* NΦ that determines the emf, ε = −d(NΦ)/dt. **The three ways to change Φ = BA cos θ** are to change **B** (bring a magnet nearer, or raise the current in a neighbouring coil), to change **A** (slide a rod along rails, or drag a loop across the boundary of a field region), or to change **θ** (rotate the coil, which is what a generator does). **Why only change induces.** Faraday's law contains a *derivative*: ε = −N dΦ/dt. A large steady flux has zero derivative and induces nothing, which is why a coil resting in the strongest permanent magnet available shows no emf, and why the deck's galvanometer needle falls back to zero the moment the magnet is held still. It is the *rate* of change that appears, so a small flux changing quickly can beat a large flux changing slowly.
+**5. A** — *Back-emf from a rate of change of current.* |ε| = L ΔI/Δt. ΔI = 6.0 − 2.0 = 4.0 A, so ΔI/Δt = 4.0/0.050 = 80 A/s and |ε| = (0.80)(80) = 64 V. Only the rate matters, not the size of the current.
 
-**10.** *Concept: the criterion for induction is a changing flux, not relative motion.* The deck's statement is **wrong**, and it is contradicted by the deck's own later material. **The counter-example from the deck itself is the transformer**: two coils wound on a common iron core, with **nothing moving anywhere in the device**. An alternating current in the primary produces an alternating flux in the core; that changing flux links the secondary and induces an emf in it. If movement were required, no transformer on Earth would work, and neither would the deck's own claim that "an alternating current in the primary generates a changing magnetic field which induces an alternating current in the secondary". Any stationary coil sitting inside a solenoid whose current is being raised does the same thing. **The reverse case** is just as damaging: take a rectangular loop and slide it at constant velocity while it remains **entirely inside** a large region of **uniform** field. There is obvious relative motion between conductor and field, yet B is the same everywhere, A is fixed and θ is fixed, so **Φ never changes and the emf is exactly zero**. A loop spun about an axis along its own normal is another: it moves continuously and induces nothing. **The correct criterion, in one sentence:** *an emf is induced in a circuit if and only if the magnetic flux linking that circuit is changing with time* — relative motion is merely one of the three ways (changing B, changing A, changing θ) of bringing that about, and is neither necessary nor sufficient. The deck's own quoted form of Faraday's law, "a voltage is induced whenever relative motion exists between a conductor and a magnetic field", should therefore be replaced by "whenever the flux linking the circuit changes"; the rest of its sentence — "the magnitude of this voltage is proportional to the rate of change of the flux" — is correct and is the part that matters.
+96 V uses the initial 6.0 A as the change (120 A/s); 32 V uses the final 2.0 A as the change (40 A/s); 3.2 V is L ΔI with the time forgotten, which has the units of webers, not volts.
 
-**11.** *Concept: the flux/circulation sign convention, and what Lenz's law actually forbids.* **Setting the convention.** For a given loop, first **choose a positive normal n̂** — either face will do. The flux is then Φ = ∫**B**·n̂ dA, positive when **B** has a component along n̂ and negative when it has one against. Now fix the positive **circulation** sense round the loop by the **right hand**: curl the fingers in the positive sense of travel round the loop and the thumb must point along **n̂**. With those two choices locked together, Faraday's law **ε = −N dΦ/dt** delivers an emf whose sign tells you which way it drives current: a **positive** ε drives current in the **positive circulation sense**, a negative ε the other way. Reverse your choice of n̂ and both Φ and the positive sense reverse, so ε reverses too — and the *physical* direction of the current in the wire is unchanged. That is why the sign by itself is a convention. **What the minus sign asserts** is not a convention: whatever normal you pick, the induced current turns out to circulate so that **its own flux through the loop opposes the change in Φ**. Growing flux is fought by an opposing induced flux; shrinking flux is propped up by a reinforcing one. Equivalently, the induced effects always act back on their own cause so as to resist it. **Why "opposes the applied field" is wrong.** Take a loop threaded by a field into the page that is **decaying**. The change is a *loss* of into-page flux. The induced current must oppose that loss, so its own field inside the loop points **into the page — the same way as B**, not opposite to it. A student holding the corrupted rule gets this case exactly backwards, and with it every "the magnet is being withdrawn" question, every "the current in the primary is falling" question, and the entire second half of the deck's galvanometer demonstration, in which the needle deflects the *opposite* way on withdrawal. The correct object of the opposition is always **dΦ/dt**, never **B**.
+**6. C** — *Transformer voltage from the turns ratio.* V_s/V_p = N_s/N_p, so V_s = 240 × (60/1200) = 240/20 = 12 V. Fewer secondary turns means a step-down.
 
-**12.** *Concept: Lenz's law as the mechanism that charges you for electrical energy.* **The falling magnet.** As the magnet approaches the copper ring, the flux through the ring **increases**, so an induced current flows whose field opposes that increase — the top face of the ring becomes the same pole as the magnet's approaching pole, and the ring **pushes the magnet upward**. Once the magnet has passed through and is receding, the flux through the ring **decreases**, the current reverses, the ring's near face becomes the opposite pole, and it now **pulls the magnet back**. In both halves of the fall the magnetic force on the magnet is **upward**, i.e. against its motion, so the net downward force is less than mg and the magnet's acceleration is less than g. **Where the heat comes from.** The ring dissipates I²R as heat, and the magnetic field itself supplies none of it: the energy comes out of the magnet's **gravitational potential energy**, which would otherwise all have become kinetic energy. Measure the magnet's speed at the bottom and the deficit ½mv²(free fall) − ½mv²(actual) is exactly the heat deposited in the copper. Nothing is created and nothing vanishes; the ring is a device for converting some of the fall into heat. **If the current pulled it in.** The magnet would be accelerated *downward*, so it would arrive faster than free fall, gaining kinetic energy the gravitational field never supplied, **while simultaneously** heating the ring. Both energy accounts would be in credit with no source — a perpetual-motion machine of the first kind. Conservation of energy therefore permits only one direction for the induced current, and Lenz's law is the statement of which one. **The dynamo.** With the lamp switched off the dynamo's circuit is open: an emf is induced but no current flows, so there is no current-carrying conductor in the magnet's field, no force on the armature, and the wheel turns against friction alone. Switch the lamp on and a current flows in the coil; that current sits in the dynamo's own magnetic field and feels a torque which, by Lenz's law, **opposes the rotation**. The cyclist must now supply extra mechanical power equal to the electrical power the lamp consumes, plus losses — which is why the pedals get heavier the instant the light comes on, and is the same physics as a power-station turbine labouring when demand rises.
+4800 V inverts the turns ratio and steps up with fewer turns; 20 V is the turns ratio 1200/60 itself quoted as a voltage; 0.20 V divides 240 V by the primary turns alone and never multiplies by the secondary turns.
+
+**7. B** — *Self-inductance from flux linkage.* L = NΦ/I. Flux linkage NΦ = (400)(5.0 × 10⁻⁵) = 0.020 Wb, so L = 0.020/2.0 = 0.010 H (10 mH). Unit check: Wb/A = H.
+
+2.5 × 10⁻⁵ H is Φ/I with N forgotten; 0.040 H multiplies NΦ by the current instead of dividing; 0.020 H is the flux linkage itself in webers, never divided by I.
+
+**8. D** — *Lenz's law opposes the change, not the field.* Lenz's law says the induced current opposes the change in flux. The flux is falling, so the induced current acts to keep it up: its own field points along the applied field, adding to it.
+
+'Opposite to the applied field' is right only when the flux is rising; it is the half-remembered rule 'the induced field opposes B', which is wrong half the time. A perpendicular field cannot change the flux at all. Motion is not needed: a changing flux is the only criterion, so a stationary loop in a falling field does carry a current.
+
+**9.** *Energy stored in an inductor.* U = ½LI². At 5.0 A: U = ½(0.60)(5.0)² = ½(0.60)(25) = 7.5 J. At 2.5 A: U = ½(0.60)(2.5)² = ½(0.60)(6.25) = 1.875 J, about 1.9 J. Halving the current divides the energy by 2² = 4, because U depends on I².
+
+Final answer: 7.5 J (accept 7.4 to 7.6) and 1.9 J (accept 1.8 to 2.0), the energy falling by a factor of 4. A correct answer shows both substitutions and states the factor 4, not 2. 15 J or 3.75 J means the ½ was dropped; 1.5 J and 0.75 J mean the current was not squared.
+
+**10.** *Emf from a coil removed from a field.* Area in SI: A = (0.040)² = 1.6 × 10⁻³ m². Plane perpendicular to B means the normal is along B, so θ = 0 and the initial flux per turn is Φ = BA = (0.30)(1.6 × 10⁻³) = 4.8 × 10⁻⁴ Wb; the final flux is zero, so ΔΦ = 4.8 × 10⁻⁴ Wb. ε = N ΔΦ/Δt = (250)(4.8 × 10⁻⁴)/(0.040) = 0.12/0.040 = 3.0 V.
+
+Final answer: 3.0 V (accept 2.9 to 3.1). A correct answer converts the side to metres, uses the full flux as the change (the coil leaves the field entirely), multiplies by N and divides by the time. 0.012 V forgot N; 3.0 × 10⁴ V left the side in centimetres; 0 V wrongly took 'plane perpendicular to B' to mean no flux.
+
+**11.** *Mutually induced emf from a current change.* ε₂ = M ΔI₁/Δt. ΔI₁/Δt = 6.0/0.030 = 200 A/s, so ε₂ = (0.15)(200) = 30 V. While the current was held steady, ΔI₁/Δt = 0, so the induced emf in the second coil was zero, however large the steady current.
+
+Final answer: 30 V (accept 29 to 31) during the change, and 0 V while steady. A correct answer computes the rate 200 A/s, multiplies by M, and states that a steady current induces nothing. 0.90 V is M × ΔI with the time forgotten; 200 V is the rate 200 A/s quoted as a voltage with M left out; both are wrong.
+
+**12.** *Lenz's law as conservation of energy.* With the terminals open an emf is induced in the rotating coil but no current flows, so the coil carries no current and feels no magnetic force; only friction resists the crank. Connect the lamp and a current flows in the coil, which sits in the machine's field, so there is a force (torque) on it. By Lenz's law that torque opposes the rotation producing it, so the crank fights back.
+
+Conservation of energy demands this: the lamp dissipates electrical energy, and the only source is the work done by the hand. If the induced current instead helped the rotation, the generator would speed up on its own while also lighting the lamp, energy from nothing. A correct answer states (1) no current so no force when open, (2) current in a field gives a torque that opposes the motion by Lenz's law, and (3) the extra effort is the mechanical work that becomes the lamp's electrical energy.

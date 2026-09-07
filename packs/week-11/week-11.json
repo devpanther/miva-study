@@ -13,7 +13,8 @@
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Makers of Nigeria: nine named figures, with their dates and credited contributions.\n\nHerbert Macaulay (1864-1946), father of Nigerian nationalism. He founded the NNDP in 1923, Nigeria's first political party. It merged with the Nigerian Youth Movement in the late 1930s to form the NCNC.\n\nObafemi Awolowo (1909-1987), first premier of the western region 1954-1960. Action Group leader, and the federalist behind the 1954 Lyleton Constitution.\n\nNnamdi Azikiwe (1904-1996), last governor-general 1960-1963 and first elected president 1963-1966. NCNC co-founder, and the inspiration of the Zikist movement.\n\nIt then covers Funmilayo Ransome-Kuti (1900-1978), the Lioness of Lisabi. Her 1953 Abeokuta conference produced the FNWS. She died on 13 April 1978 from the 18 February 1977 raid on the Lagos home of her son.\n\nThat son is Fela Anikulapo-Kuti (1938-1997), creator of Afrobeat in the early 1970s.\n\nChinua Achebe (1930-2013), of Things Fall Apart (1958), and the PRP deputy national vice presidency in 1983.\n\nWole Soyinka (1934-Present), jailed 22 months in 1967, exiled in 1994, and the first African Nobel laureate in Literature in 1986.\n\nIt closes with Gani Fawehinmi (1938-2009), the people's lawyer, who practised in Lagos from 1965 and pursued the 1986 Dele Giwa case.\n\nNwankwo Kanu (1976-Present), whose contribution won Nigeria the 1996 Olympic Gold.\n\nAlongside them, a summary strand on the Nigerian diaspora, remittances and GDP."
+        "topic": "Makers of Nigeria: nine named figures, with their dates and credited contributions.\n\nHerbert Macaulay (1864-1946), father of Nigerian nationalism. He founded the NNDP in 1923, Nigeria's first political party. It merged with the Nigerian Youth Movement in the late 1930s to form the NCNC.\n\nObafemi Awolowo (1909-1987), first premier of the western region 1954-1960. Action Group leader, and the federalist behind the 1954 Lyleton Constitution.\n\nNnamdi Azikiwe (1904-1996), last governor-general 1960-1963 and first elected president 1963-1966. NCNC co-founder, and the inspiration of the Zikist movement.\n\nIt then covers Funmilayo Ransome-Kuti (1900-1978), the Lioness of Lisabi. Her 1953 Abeokuta conference produced the FNWS. She died on 13 April 1978 from the 18 February 1977 raid on the Lagos home of her son.\n\nThat son is Fela Anikulapo-Kuti (1938-1997), creator of Afrobeat in the early 1970s.\n\nChinua Achebe (1930-2013), of Things Fall Apart (1958), and the PRP deputy national vice presidency in 1983.\n\nWole Soyinka (1934-Present), jailed 22 months in 1967, exiled in 1994, and the first African Nobel laureate in Literature in 1986.\n\nIt closes with Gani Fawehinmi (1938-2009), the people's lawyer, who practised in Lagos from 1965 and pursued the 1986 Dele Giwa case.\n\nNwankwo Kanu (1976-Present), whose contribution won Nigeria the 1996 Olympic Gold.\n\nAlongside them, a summary strand on the Nigerian diaspora, remittances and GDP.",
+        "checkFile": "checks/Mon-GST_112-fast.md"
       }
     },
     {
@@ -25,7 +26,8 @@
       },
       "fast": {
         "course": "CSC_106",
-        "topic": "Fixing insecure code, then hosting, scaling, performance and monitoring choices."
+        "topic": "Fixing insecure code, then hosting, scaling, performance and monitoring choices.",
+        "checkFile": "checks/Tue-CSC_106-fast.md"
       }
     },
     {
@@ -37,7 +39,8 @@
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Listening.\n\nHearing is passive and involuntary. Listening is an active, voluntary process requiring conscious effort to interpret and understand.\n\nWhy effective listening drives academic success: understanding course content, following instructions, and grasping complex concepts.\n\nThe six areas under Importance of Listening are Effective Communication, Building Relationships, Conflict Resolution, Learning and Growth, Leadership Effectiveness and Avoiding Miscommunication.\n\nSix listening strategies are named: active listening, nonverbal communication, empathetic listening, paraphrasing, summarizing and note-taking.\n\nAlongside those, the case study's six methodology headings: Active Listening, Nonverbal Communication, Empathetic Listening, Practical Strategies, Cultural Awareness, Reflective Practice.\n\nIts six practical strategies are paraphrasing, summarizing, asking clarifying questions, minimizing distractions, avoiding prejudgment and note-taking.\n\nThe hour closes with a quantum-entanglement listening exercise of six comprehension questions.\n\nThen the six competencies claimed: Active Engagement, Critical Listening, Cultural Competence, Note-Taking Mastery, Empathetic Communication and Continuous Improvement."
+        "topic": "Listening.\n\nHearing is passive and involuntary. Listening is an active, voluntary process requiring conscious effort to interpret and understand.\n\nWhy effective listening drives academic success: understanding course content, following instructions, and grasping complex concepts.\n\nThe six areas under Importance of Listening are Effective Communication, Building Relationships, Conflict Resolution, Learning and Growth, Leadership Effectiveness and Avoiding Miscommunication.\n\nSix listening strategies are named: active listening, nonverbal communication, empathetic listening, paraphrasing, summarizing and note-taking.\n\nAlongside those, the case study's six methodology headings: Active Listening, Nonverbal Communication, Empathetic Listening, Practical Strategies, Cultural Awareness, Reflective Practice.\n\nIts six practical strategies are paraphrasing, summarizing, asking clarifying questions, minimizing distractions, avoiding prejudgment and note-taking.\n\nThe hour closes with a quantum-entanglement listening exercise of six comprehension questions.\n\nThen the six competencies claimed: Active Engagement, Critical Listening, Cultural Competence, Note-Taking Mastery, Empathetic Communication and Continuous Improvement.",
+        "checkFile": "checks/Wed-GST_122-fast.md"
       }
     },
     {
@@ -49,7 +52,8 @@
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Determining the permeability of free space from the axial field of a single-turn circular loop.\n\nThe field is B(z) = mu0*I*R^2 / [2(R^2 + z^2)^(3/2)], with B in tesla, I in amperes, and R and z in metres.\n\nApparatus is a circular loop, DC supply, ammeter, movable magnetic probe and tesla meter. It is set by default to Coil 1, with R = 0.10 m and I = 1 A.\n\nReadings: B at the centre (z = 0), then z increased in 2 cm steps to 38 cm, for 20 readings in all. Repeated for Coil 2 and Coil 3, so that mu0 can be shown independent of radius and current.\n\nAnalysis: compute the factor x = I*R^2/[2(R^2 + z^2)^(3/2)] in A/m. Plot B in tesla on the y-axis against x on the x-axis to get the line B = mu0*x through the origin.\n\nThen read the gradient, which equals mu0 in T.m/A = H/m. If the factor omits I, the gradient is mu0*I, so mu0 = gradient/I.\n\nDeck faults. The B(z) equation and the factor are dropped images. The slide heading is truncated at \"Magnetic-Permeability-of-\". The sample table skips from z = 10 cm to 26 cm. The logged data are in cm and nT and must be converted to m and T. And the summary sheet prints \"REPUTATION between like poles\" for REPULSION."
+        "topic": "Determining the permeability of free space from the axial field of a single-turn circular loop.\n\nThe field is B(z) = mu0*I*R^2 / [2(R^2 + z^2)^(3/2)], with B in tesla, I in amperes, and R and z in metres.\n\nApparatus is a circular loop, DC supply, ammeter, movable magnetic probe and tesla meter. It is set by default to Coil 1, with R = 0.10 m and I = 1 A.\n\nReadings: B at the centre (z = 0), then z increased in 2 cm steps to 38 cm, for 20 readings in all. Repeated for Coil 2 and Coil 3, so that mu0 can be shown independent of radius and current.\n\nAnalysis: compute the factor x = I*R^2/[2(R^2 + z^2)^(3/2)] in A/m. Plot B in tesla on the y-axis against x on the x-axis to get the line B = mu0*x through the origin.\n\nThen read the gradient, which equals mu0 in T.m/A = H/m. If the factor omits I, the gradient is mu0*I, so mu0 = gradient/I.\n\nDeck faults. The B(z) equation and the factor are dropped images. The slide heading is truncated at \"Magnetic-Permeability-of-\". The sample table skips from z = 10 cm to 26 cm. The logged data are in cm and nT and must be converted to m and T. And the summary sheet prints \"REPUTATION between like poles\" for REPULSION.",
+        "checkFile": "checks/Thu-PHY_108-fast.md"
       }
     },
     {
@@ -62,7 +66,7 @@
       "fast": {
         "course": "COS_102",
         "topic": "The same Week 11 material applied to concrete design judgements rather than recalled.\n\nStudents read short module listings and pseudocode. They decide whether a module is cohesive, what it is coupled to and why, which principle a design violates, and how to redraw the boundaries.\n\nScenarios cover judging cohesion from a function list, and spotting coupling through a shared data structure.\n\nThen evaluating what a proposed refactor buys and costs, and checking a hierarchy against vertical partitioning.\n\nThen choosing top-down or bottom-up for a given project, and deciding whether a change qualifies as refactoring at all.",
-        "checkFile": "checks/Sat-COS_102.md"
+        "checkFile": "checks/Fri-COS_102-fast.md"
       }
     },
     {
@@ -222,131 +226,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Step 1 of the deck's procedure is 'Sketch the area and determine the axis of revolution'. The slide says this step determines one thing in particular. What?",
+          "q": "The region under y = 3x, above the x-axis, from x = 0 to x = 2 is revolved about the x-axis. Use the disc method to find the volume.",
           "options": [
-            "The variable of integration",
-            "Whether the answer will be positive",
-            "The constant of integration",
-            "Whether π or 2π appears"
-          ],
-          "answerIndex": 0,
-          "concept": "Why the axis of revolution is settled before anything else",
-          "why": "The slide's own parenthesis says '(this determines the variable of integration)'. Once you know the axis, you know whether slices are taken in x or in y, and therefore whether every boundary must be written as y = f(x) or as x = f(y) — which is why Disc Example 2 and Washer Example 2 are rewritten in y. Option 2 confuses this with a sign question; a volume is positive by construction. Option 3 belongs to indefinite integrals — a definite integral carries no + c. Option 4 is decided at step 2, when you pick the cross-section: π for a disc or washer, 2π for a shell."
-        },
-        {
-          "type": "mcq",
-          "q": "The disc slide says 'R(x) is the region bounded by y = f(x)'. In every one of her worked examples, what is R(x) actually?",
-          "options": [
-            "The area of the region being revolved",
-            "A length: the distance from the axis of revolution out to the curve",
-            "The antiderivative of f(x)",
-            "The volume of one thin disc"
+            "6π",
+            "24π",
+            "24",
+            "48π"
           ],
           "answerIndex": 1,
-          "concept": "R is a radius, not a region — reading the disc formula correctly",
-          "why": "In Example 1 she writes R(x) = (−x + 1), which is a function value, a distance from the x-axis up to the curve. The slide's wording 'the region' is loose; the formula squares R and multiplies by π, which only makes sense if R is a radius. Option 1 would make πR² a squared area, dimensionally wrong. Option 3 confuses the radius with the integration that comes later — R is the integrand's ingredient, not its result. Option 4 mistakes the radius for the whole slice; the disc's volume is π[R(x)]²dx, radius squared times thickness."
+          "concept": "Disc method about the x-axis",
+          "why": "The axis is the x-axis, so the radius of each disc is the y-value: R(x) = 3x. V = π∫₀²(3x)²dx = π∫₀²9x²dx = π[3x³]₀² = 24π cubic units.\n\n6π forgets to square the radius, π∫₀²3x dx; 24 drops the π; 48π uses the shell coefficient 2π in a disc formula."
         },
         {
           "type": "mcq",
-          "q": "The deck says to use the washer method rather than the disc method when what is true of the solid?",
+          "q": "A rectangle with corners (0, 0), (3, 0), (3, 2) and (0, 2) is revolved about the x-axis. Use the disc formula V = π∫ₐᵇ[R(x)]²dx to find the volume of the solid.",
           "options": [
-            "The axis of revolution is vertical",
-            "The region lies below the x-axis",
-            "The solid has hollow spots in it, so the cross-section is a washer of outer radius R and inner radius r",
-            "The boundary curve cannot be inverted"
-          ],
-          "answerIndex": 2,
-          "concept": "The one condition that separates washer from disc",
-          "why": "Slide 9 states it directly: 'If a solid of revolution has any hollow spots in it, we use the washer method.' The hole appears when the region does not reach the axis — as in the TASK about y = −1, where the nearest boundary sits a distance 1 away. Option 1 is about the variable of integration, not about holes; her Disc Example 2 revolves about a vertical line and still uses discs. Option 2 does not create a hole at all. Option 4 decides whether you can integrate in y, which is a separate question."
-        },
-        {
-          "type": "mcq",
-          "q": "Disc and washer formulas carry π; the shell formula carries 2π. Why the difference?",
-          "options": [
-            "The shell method is used twice, once for each boundary",
-            "2π is a correction factor for integrating in the wrong variable",
-            "The shell formula omits the square, so the 2 compensates for it",
-            "π turns a radius into the area of a circle or annulus; 2π·radius is the circumference of the shell once it is unrolled into a rectangle"
-          ],
-          "answerIndex": 3,
-          "concept": "Where π and 2π each come from geometrically",
-          "why": "A disc or washer slice is a flat circular face, so its area needs πR² (or πR² − πr²). A shell slice is a thin cylindrical wall; cut it and flatten it and you get a rectangle whose length is the circumference 2π·radius and whose height is f, hence 2π x f(x)dx. Option 1 invents a doubling that no example performs. Option 2 treats a geometric constant as a fudge factor. Option 3 is a real-sounding trap: the shell integrand genuinely has no square, but 2 does not compensate for a missing square — the two facts are unrelated, and squaring the shell integrand would be dimensionally wrong."
-        },
-        {
-          "type": "mcq",
-          "q": "Washer Example 1 revolves the region between y = x² and y = x⁵ on [0, 1] about the x-axis, and she takes R(x) = x². What is the general rule she is applying?",
-          "options": [
-            "R is the boundary farther from the axis of revolution; on [0, 1] the curve x² lies above x⁵",
-            "R is always the curve with the smaller exponent",
-            "R is always the upper curve in the sketch, whatever the axis",
-            "R is whichever curve is written first in the question"
+            "12π",
+            "6π",
+            "18π",
+            "24π"
           ],
           "answerIndex": 0,
-          "concept": "Identifying the outer radius by distance from the axis, not by position on the page",
-          "why": "The washer's outer radius is the distance from the axis to the far edge of the region, and its inner radius the distance to the near edge. Here the axis is the x-axis, so distance means the y-value, and on [0, 1] raising to a higher power shrinks the number, putting x² above x⁵. Option 2 happens to give the right answer here and is worthless anywhere else. Option 3 is the trap that breaks the moment the axis moves — rotate this same region about y = 2 and the lower curve becomes the farther one. Option 4 is not a rule at all."
+          "concept": "Disc with a constant radius",
+          "why": "Every point of the top edge y = 2 is at distance 2 from the axis, so R(x) = 2 is constant and the solid is a cylinder. V = π∫₀³2²dx = π∫₀³4dx = π[4x]₀³ = 12π cubic units, which agrees with πr²h = π(2)²(3).\n\n6π forgets to square the radius; 18π squares the length 3 instead of the radius 2 (π∫₀²9dy); 24π doubles the π."
         },
         {
           "type": "mcq",
-          "q": "The shell slide states: 'The shell method is used when integrating along an axis parallel to the axis of revolution.' Check it against her two shell examples. What do they show?",
+          "q": "The region bounded by x = 2y, the y-axis and the line y = 3 is revolved about the y-axis. Find the volume.",
           "options": [
-            "They confirm it: Example 1 revolves about the y-axis and integrates dy",
-            "They contradict it: Example 1 revolves about the y-axis and integrates dx, Example 2 revolves about the x-axis and integrates dy — perpendicular in both cases",
-            "They neither confirm nor contradict it, since the shell formula does not name a variable",
-            "They confirm it, because both examples happen to use the same variable"
-          ],
-          "answerIndex": 1,
-          "concept": "The shell integration variable runs perpendicular to the axis of revolution",
-          "why": "Example 1 rotates y = 2x² − x³ about the y-axis and integrates 2π∫₀² x(2x² − x³)dx — that is dx against a vertical axis. Example 2 rotates about the x-axis and integrates 2π∫₀¹ y(1 − y²)dy — dy against a horizontal axis. Both are perpendicular, so the printed sentence is wrong and should read 'perpendicular'. It is exactly the reverse of the disc and washer case, where the variable runs along the axis. Option 1 misreads Example 1's variable. Option 3 is false — both formulas name a variable, dx or dy. Option 4 is false: the two examples use different variables."
-        },
-        {
-          "type": "mcq",
-          "q": "Why does Disc Example 2 integrate dy and rewrite the radius as R(y) = 2 − y², rather than working in x?",
-          "options": [
-            "Because y is easier to square than x",
-            "Because the parabola is given as x = y² + 1, and any equation in y must be integrated in y",
-            "Because the axis of revolution is the vertical line x = 3, so slices perpendicular to it are stacked in y and each disc's radius is a horizontal distance",
-            "Because the limits −√2 and √2 are negative and positive, which requires dy"
+            "9π",
+            "72π",
+            "36π",
+            "18π"
           ],
           "answerIndex": 2,
-          "concept": "The axis of revolution dictates the slicing direction for discs",
-          "why": "Discs are cut perpendicular to the axis. With a vertical axis x = 3, the cuts are horizontal, indexed by height y, and each disc's radius is measured horizontally: 3 − (y² + 1) = 2 − y². That is why the integral is dy from −√2 to √2. Option 1 is not a mathematical reason. Option 2 confuses how an equation is written with what governs the choice — you may always rewrite a curve, and Shell Example 2 does exactly that in the opposite direction. Option 4 mistakes a property of the limits for the cause; limits can be negative in either variable."
+          "concept": "Disc method in y about the y-axis",
+          "why": "The axis is the y-axis, so integrate in y with the radius R(y) = 2y running from y = 0 to y = 3. V = π∫₀³(2y)²dy = π∫₀³4y²dy = π[4y³/3]₀³ = 36π cubic units (a cone of radius 6 and height 3).\n\n9π forgets to square the radius; 72π uses 2π; 18π squares the 2 but not the y, giving π∫₀³4y dy."
         },
         {
           "type": "mcq",
-          "q": "Slide 10 is headed 'VOLUMES BY INTEGRATION: DISC METHOD', but its working reads V = π∫₀¹([x²]² − [x⁵]²)dx. What should you conclude?",
+          "q": "The region between y = x³ and y = x for 0 ≤ x ≤ 1 is revolved about the x-axis. Which is the outer radius R(x) in the washer formula?",
           "options": [
-            "The disc formula subtracts an inner radius whenever two curves are given",
-            "The working is wrong, since a disc integral cannot contain a subtraction",
-            "The example is really about a hollow cylinder, which is neither disc nor washer",
-            "The heading is a misprint: the working uses R and r in the washer formula, and it sits between the washer formula slide and Washer Example 2"
+            "R(x) = x³",
+            "R(x) = 1",
+            "R(x) = x − x³",
+            "R(x) = x"
           ],
           "answerIndex": 3,
-          "concept": "Reading the method off the working, not off the slide heading",
-          "why": "The disc formula in her own summary is π∫[R(x)]²dx with a single radius; the moment an inner radius r appears and its square is subtracted, you are in the washer formula from slide 9. The slide's position, immediately after the washer formula and immediately before Washer Example 2, confirms the heading was pasted from the previous section. Option 1 corrupts the disc formula on the strength of a typo. Option 2 rejects arithmetic that is in fact correct — the answer 6π/55 is right. Option 3 invents a fourth method the deck does not have."
+          "concept": "Identifying the outer radius of a washer",
+          "why": "R is the boundary farther from the axis of revolution. On [0, 1], x ≥ x³ (test x = 1/2: 1/2 > 1/8), and distance from the x-axis is the y-value, so the line y = x is the outer boundary: R(x) = x, and r(x) = x³.\n\nx³ is the inner radius; 1 is the right-hand limit of integration, not a radius; x − x³ is the height of a strip, which belongs to the shell integrand, not to a washer."
+        },
+        {
+          "type": "mcq",
+          "q": "The region between y = x + 1 and y = 1 for 0 ≤ x ≤ 2 is revolved about the x-axis. Find the volume.",
+          "options": [
+            "8π/3",
+            "2π",
+            "20π/3",
+            "26π/3"
+          ],
+          "answerIndex": 2,
+          "concept": "Washer method about the x-axis",
+          "why": "The region does not touch the axis, so it is a washer with R(x) = x + 1 (the farther boundary) and r(x) = 1. V = π∫₀²[(x + 1)² − 1²]dx = π∫₀²(x² + 2x)dx = π[x³/3 + x²]₀² = π(8/3 + 4) = 20π/3 cubic units.\n\n8π/3 integrates (R − r)² = x², the difference squared instead of the squares subtracted; 2π forgets to square either radius; 26π/3 adds the squares instead of subtracting them."
+        },
+        {
+          "type": "mcq",
+          "q": "The region under y = 4 − x, above the x-axis, from x = 0 to x = 4 is revolved about the y-axis. Use the shell method to find the volume.",
+          "options": [
+            "128π/3",
+            "32π/3",
+            "16π",
+            "64π/3"
+          ],
+          "answerIndex": 3,
+          "concept": "Shell method about the y-axis",
+          "why": "For a shell the radius is x (distance from the y-axis) and the height is f(x) = 4 − x. V = 2π∫₀⁴x(4 − x)dx = 2π∫₀⁴(4x − x²)dx = 2π[2x² − x³/3]₀⁴ = 2π(32 − 64/3) = 2π(32/3) = 64π/3 cubic units.\n\n128π/3 squares the height, 2π∫x(4 − x)²dx; 32π/3 uses π instead of 2π; 16π leaves out the radius x and integrates 2π∫(4 − x)dx."
+        },
+        {
+          "type": "mcq",
+          "q": "The region under y = x, above the x-axis, from x = 0 to x = 1 is revolved about the line y = −2. What are the outer and inner radii?",
+          "options": [
+            "R = x + 2, r = 2",
+            "R = x, r = 0",
+            "R = x − 2, r = 2",
+            "R = x + 2, r = 0"
+          ],
+          "answerIndex": 0,
+          "concept": "Radii measured from a shifted axis",
+          "why": "Every radius is a distance from the line y = −2. The far boundary y = x is at distance x − (−2) = x + 2, so R = x + 2; the near boundary y = 0 is at distance 0 − (−2) = 2, so r = 2. The region does not reach the axis, so there is a hole and the inner radius is not zero.\n\nR = x, r = 0 ignores the shift entirely; R = x − 2 shifts in the wrong direction; R = x + 2, r = 0 shifts the outer radius but fills in a hole that is really there."
+        },
+        {
+          "type": "mcq",
+          "q": "A region is revolved about the y-axis and the disc or washer method is to be used. In which variable is the integral taken, and how must the boundary curves be written?",
+          "options": [
+            "dx, with the curves written as y = f(x)",
+            "dy, with the curves written as x = f(y)",
+            "dy, with the curves written as y = f(x)",
+            "dx, with the curves written as x = f(y)"
+          ],
+          "answerIndex": 1,
+          "concept": "The axis of revolution fixes the variable of integration",
+          "why": "For discs and washers the slices are perpendicular to the axis of revolution and the integral runs along it. Revolving about the y-axis means the discs are stacked in y, so the integral is dy and each radius must be a distance measured horizontally, which needs the curves in the form x = f(y). For example x = y² + 1 or x = 3.\n\ndx with y = f(x) is the set-up for the x-axis; the other two mix a variable of integration with curves written in the wrong form, so the radius would not be a function of the integration variable."
         },
         {
           "type": "short",
-          "q": "State the deck's four-step procedure for finding a volume of revolution, and explain what each step actually decides.",
-          "concept": "The four-step procedure and the decision each step makes",
-          "why": "A good answer lists the steps as slide 4 gives them and says what each settles. (1) Sketch the area and determine the axis of revolution — this fixes the variable of integration, and therefore whether every boundary must be expressed as y = f(x) or as x = f(y). (2) Sketch the cross-section (disc, shell or washer) and determine the appropriate formula — this decides whether π or 2π appears and whether a radius is squared. (3) Determine the boundaries of the solid — in practice, solve an equation: y² + 1 = 3, f(x) = 0, x = x²; never read the limits off the picture. (4) Set up the definite integral and integrate — from here it is the Week 7 power rule and F(b) − F(a). The point worth stressing is that steps 1 and 2 are the ones students skip, and every wrong answer in this topic traces back to one of them."
+          "q": "The region under y = √x, above the x-axis, from x = 1 to x = 3 is revolved about the x-axis. Find the volume. Show your working.",
+          "concept": "Disc method with a square-root radius",
+          "why": "The axis is the x-axis, so R(x) = √x with a = 1, b = 3. Squaring removes the root: [√x]² = x. V = π∫₁³(√x)²dx = π∫₁³x dx = π[x²/2]₁³ = π(9/2 − 1/2) = 4π.\n\nFinal answer: 4π cubic units (also accepted: 12.57). The working must show the radius squared to x and the bracket evaluated at both limits. Integrating √x without squaring gives (2/3)(3√3 − 1)π and is wrong; π(9/2) = 9π/2 forgets the lower limit."
         },
         {
           "type": "short",
-          "q": "Explain why the washer integrand is [R]² − [r]² and not (R − r)², and use Washer Example 1 to show that the two are genuinely different.",
-          "concept": "Why the squares subtract and the radii do not",
-          "why": "A good answer argues from the cross-section. Each slice is an annulus — a disc of radius R with a disc of radius r removed — so its area is πR² − πr², and integrating that gives π∫([R]² − [r]²)dx. (R − r) is the width of the ring, and π(R − r)² is the area of a small disc of that width, which is a different shape entirely. Example 1 makes the gap concrete: π∫₀¹(x⁴ − x¹⁰)dx = π(1/5 − 1/11) = 6π/55, whereas π∫₀¹(x² − x⁵)²dx = π(1/5 − 1/4 + 1/11) = 9π/220. Roughly 0.109 against 0.041 — not a rounding difference. It is also worth noting that the two agree only when r = 0, which is exactly the case where the washer formula collapses to the disc formula."
+          "q": "The region bounded by x = y², the line x = 1 and the x-axis (with y ≥ 0) is revolved about the y-axis. Find the volume. Show your working.",
+          "concept": "Washer method in y about the y-axis",
+          "why": "The axis is the y-axis, so integrate in y. At height y the region runs from the parabola x = y² out to the line x = 1, so the far boundary gives R(y) = 1 (constant) and the near boundary gives r(y) = y². The curves meet where y² = 1, so y runs from 0 to 1. V = π∫₀¹[1² − (y²)²]dy = π∫₀¹(1 − y⁴)dy = π[y − y⁵/5]₀¹ = π(1 − 1/5) = 4π/5.\n\nFinal answer: 4π/5 cubic units (also accepted: 0.8π or 2.51). A correct answer identifies R = 1, r = y², limits 0 to 1, and subtracts the squares. π∫(1 − y²)²dy = 8π/15 uses (R − r)² and is wrong; π∫₀¹(1 − y²)dy = 2π/3 forgets to square r."
         },
         {
           "type": "short",
-          "q": "In Shell Example 2 the lecturer writes f(y) = 1 − y². Explain where that expression comes from, and why the radius is y rather than x.",
-          "concept": "Reading the shell strip: radius from the axis, height across the region",
-          "why": "A good answer reconstructs the picture. The region lies under y = √x from x = 0 to x = 1, and the axis of revolution is the x-axis. Shells are taken with the strip parallel to the axis, so the strip is horizontal, sitting at height y with 0 ≤ y ≤ 1. Rotating it about the x-axis sweeps a cylinder whose radius is the strip's distance from that axis, namely y — which is why the formula reads 2π∫y f(y)dy. The height f(y) is the strip's own length: it starts on the curve, where y = √x inverts to x = y², and ends at the region's right-hand edge, the line x = 1, so its length is 1 − y². Two traps worth naming: inverting y = √x gives x = y², not x = √y; and f here is the length of the strip, not the original function, which is why her single-function formula still covers a region bounded by two edges."
+          "q": "The region under y = x³, above the x-axis, from x = 0 to x = 1 is revolved about the y-axis. Use the shell method to find the volume. Show your working.",
+          "concept": "Shell method for a region under a curve",
+          "why": "A vertical strip at position x has radius x (its distance from the y-axis) and height f(x) = x³. V = 2π∫₀¹x·x³dx = 2π∫₀¹x⁴dx = 2π[x⁵/5]₀¹ = 2π/5.\n\nFinal answer: 2π/5 cubic units (also accepted: 0.4π or 1.26). The working must show the integrand x·f(x) = x⁴, the coefficient 2π and the evaluation at 1. π/5 uses π instead of 2π; 2π∫₀¹x³dx = π/2 forgets the radius x; 2π∫₀¹x·x⁶dx squares the height, which the shell formula never does."
         },
         {
           "type": "short",
-          "q": "Suppose you are given a region and an axis of revolution and must choose between disc, washer and shell. Set out the reasoning using only what this deck contains.",
-          "concept": "Choosing the method from the cross-section, using the deck's own criteria",
-          "why": "A good answer works from her step 2, sketching the cross-section. First ask whether the region touches the axis of revolution along the whole interval. If it does, each slice perpendicular to the axis is a full circle and the disc formula π∫[R]² applies, with R the distance out to the single curve — Disc Examples 1 and 2. If it does not, there is a hollow spot, the slice is an annulus, and the washer formula π∫([R]² − [r]²) applies, with R the distance to the far boundary and r to the near one — Washer Examples 1 and 2 and the TASK about y = −1. For discs and washers the variable of integration runs along the axis of revolution. The shell alternative takes strips parallel to the axis instead, integrating perpendicular to it, and needs no case split into hollow and solid because the strip's own height carries the region's extent — Shell Examples 1 and 2. A strong answer adds the practical test the deck supplies: Shell Example 2 and the disc formula give π/2 for the same solid, so when a region can be done both ways the two answers must agree, and that is the only self-check available. It should stop there: the deck never discusses splitting a region or preferring one method for ease."
+          "q": "In the washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx and the shell formula V = 2π∫ₐᵇ x f(x)dx, state what each of R(x), r(x), x and f(x) measures, and explain why one formula carries π and the other 2π.",
+          "concept": "Meaning of the radii and heights in the volume formulas",
+          "why": "R(x) is the outer radius: the distance from the axis of revolution to the boundary farther from it. r(x) is the inner radius: the distance from the axis to the nearer boundary. In the shell formula x is the radius of the shell, its distance from the axis of revolution, and f(x) is the height of the vertical strip that sweeps out the shell. The π in the washer formula comes from the area of a circular cross-section, πR² − πr² for an annulus, which is then integrated along the axis. The 2π in the shell formula comes from unrolling the cylindrical shell into a rectangle of length 2π × radius (the circumference) and height f(x), so the integrand is circumference × height with no square anywhere.\n\nA correct answer names outer radius, inner radius, shell radius and strip height, and links π to the area of a circle and 2π to the circumference."
         }
       ]
     },
@@ -359,131 +363,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "A bar magnet is held at rest with its north pole deep inside a wire loop connected to a sensitive ammeter. The ammeter reads exactly zero. The best explanation is:",
+          "q": "An average emf of 6.0 V is induced in a 300-turn coil while the flux through each turn changes by 4.0 mWb. How long did the change take?",
           "options": [
-            "The flux through the loop is large but constant, and only its rate of change drives an emf.",
-            "The flux through the loop is zero, because the magnet's field lines all return outside the loop.",
-            "There is an induced emf, but the loop's resistance is too large for the current to register.",
-            "The north and south poles of the magnet contribute equal and opposite flux, which cancels."
-          ],
-          "answerIndex": 0,
-          "concept": "Faraday's law responds to dΦ/dt, not to Φ — a large steady flux gives no emf at all.",
-          "why": "The deck's Fig. c: with the magnet stationary the flux is large but unchanging, so dΦ_B/dt = 0 and ε = 0."
-        },
-        {
-          "type": "mcq",
-          "q": "In Φ_B = B*A*cos θ, the angle θ is measured between:",
-          "options": [
-            "B and the plane of the loop.",
-            "B and the direction of the induced current.",
-            "B and the normal to the plane of the loop.",
-            "the normal to the loop and the induced magnetic field."
-          ],
-          "answerIndex": 2,
-          "concept": "Definition of magnetic flux and the orientation angle; flux is maximum when the loop's plane is perpendicular to B.",
-          "why": "Flux is B·A with A the area vector along the outward normal, so θ is the angle between B and that normal."
-        },
-        {
-          "type": "mcq",
-          "q": "Which statement is the correct reading of the minus sign in ε = −N dΦ_B/dt?",
-          "options": [
-            "The induced magnetic field inside the loop always points opposite to the external magnetic field.",
-            "The induced emf acts so as to oppose the change in flux that produced it.",
-            "The induced emf is always a negative quantity.",
-            "The induced current always flows opposite in sense to the current producing the external field."
+            "5.0 s",
+            "0.20 s",
+            "6.7 × 10⁻⁴ s",
+            "7.2 s"
           ],
           "answerIndex": 1,
-          "concept": "Lenz's law is a statement about opposing the CHANGE, not about opposing the field.",
-          "why": "The induced effect opposes the change in flux; when the external flux is falling, the induced field actually points along the external field."
+          "concept": "Rearranging Faraday's law for the time",
+          "why": "ε = N ΔΦ/Δt, so Δt = N ΔΦ/ε = (300)(4.0 × 10⁻³)/6.0 = 1.2/6.0 = 0.20 s.\n\n5.0 s is ε/(N ΔΦ), the ratio upside down; 6.7 × 10⁻⁴ s is ΔΦ/ε with N forgotten; 7.2 s multiplies N ΔΦ by the emf instead of dividing by it."
         },
         {
           "type": "mcq",
-          "q": "A loop encloses a uniform field directed out of the page whose magnitude is steadily decreasing. The induced current is:",
+          "q": "A rectangular loop 20 cm by 15 cm lies in a uniform field of 0.40 T. The normal to the loop makes 60° with the field. What is the magnetic flux through the loop?",
           "options": [
-            "clockwise, since the induced field must be into the page — the induced field always opposes the external field.",
-            "zero, since a decreasing field cannot drive a current; only an increasing one can.",
-            "clockwise, from the right-hand grip rule applied with the thumb along the original external field.",
-            "counterclockwise, since the induced field is out of the page, replacing the flux that is being lost."
+            "1.2 × 10⁻² Wb",
+            "1.0 × 10⁻² Wb",
+            "60 Wb",
+            "6.0 × 10⁻³ Wb"
           ],
           "answerIndex": 3,
-          "concept": "Applying the deck's rule 2 (falling flux → induced field along the original field) plus the right-hand grip rule.",
-          "why": "Falling out-of-page flux means the induced field inside the loop is out of the page, which by the grip rule is a counterclockwise current."
+          "concept": "Flux through a rectangular loop with an inclined normal",
+          "why": "A = (0.20)(0.15) = 0.030 m². The angle is already given from the normal, so Φ = BA cos θ = (0.40)(0.030) cos 60° = (0.012)(0.50) = 6.0 × 10⁻³ Wb.\n\n1.2 × 10⁻² Wb is BA with the angle ignored; 1.0 × 10⁻² Wb uses cos 30°, treating 60° as the angle from the plane; 60 Wb leaves the sides in centimetres, giving an area 10⁴ times too big."
         },
         {
           "type": "mcq",
-          "q": "Suppose that in some hypothetical world the induced current instead produced a field that *reinforced* an increasing external flux. The immediate consequence would be:",
+          "q": "A flat loop lies in the page. A uniform field directed into the page is switched on, rising from zero. As seen by the reader, in which sense does the induced current flow, and which way does its own field point inside the loop?",
           "options": [
-            "The induced emf would simply be twice as large, and energy would still be conserved.",
-            "The loop would be pushed towards the magnet, violating Newton's third law.",
-            "The flux change would reinforce itself, and the loop would deliver electrical energy indefinitely with nothing doing work on it.",
-            "Nothing inconsistent: Faraday's law would still hold, showing that Lenz's law is a logically independent rule."
-          ],
-          "answerIndex": 2,
-          "concept": "The energy-conservation argument for the sign in Faraday's law.",
-          "why": "A reinforcing induced field is a runaway: the change feeds itself and energy appears from nowhere, which is why the sign must be negative."
-        },
-        {
-          "type": "mcq",
-          "q": "A magnet is pushed at a given speed towards a closed conducting loop, and then at the same speed towards an identical loop that has a small break cut in it. Comparing the force the hand must exert:",
-          "options": [
-            "larger for the closed loop, because a current flows and the resulting magnetic force opposes the approach.",
-            "the same in both cases, because the induced emf is the same in both.",
-            "larger for the broken loop, because charge piles up at the break and repels the magnet.",
-            "zero in both cases, because magnetic forces do no work."
+            "Anticlockwise; induced field out of the page",
+            "Clockwise; induced field into the page",
+            "Clockwise; induced field out of the page",
+            "Anticlockwise; induced field into the page"
           ],
           "answerIndex": 0,
-          "concept": "emf exists in both loops, but only a complete circuit carries current and therefore only it produces an opposing force; the work done is the source of the dissipated energy.",
-          "why": "The emf is the same, but current — and hence the Lenz opposing force and the work needed to push against it — requires the closed loop."
+          "concept": "Lenz's law with the right-hand grip rule",
+          "why": "Step 1: the external flux is into the page and increasing, so the induced field inside the loop must oppose the increase by pointing out of the page. Step 2: grip rule, thumb out of the page, fingers curl anticlockwise, so the current is anticlockwise.\n\n'Clockwise; into the page' makes the induced field aid the growing flux, which is the answer for a decreasing field; the other two pair a sense with the field it does not produce, the grip rule applied backwards."
         },
         {
           "type": "mcq",
-          "q": "A loop is positioned so that no field lines pass through the area it encloses, although the region just outside the loop contains a strong and rapidly changing field. The induced emf in the loop is:",
+          "q": "A 200-turn coil of area 1.0 × 10⁻² m² is placed so that its plane is parallel to a uniform field. The field rises at a steady 50 T/s. What is the induced emf?",
           "options": [
-            "large, because the field near the wire is strong and changing rapidly.",
-            "large, but confined to the sections of wire nearest the field region.",
-            "non-zero and constant in time, because the field outside contributes a fixed offset.",
-            "zero, because the emf depends only on the flux through the enclosed area."
+            "50 V",
+            "100 V",
+            "0 V",
+            "0.50 V"
+          ],
+          "answerIndex": 2,
+          "concept": "Changing field with zero flux",
+          "why": "Plane parallel to B means the normal is at 90° to B, so Φ = BA cos 90° = 0 at every instant. Since Φ never changes, dΦ/dt = 0 and ε = 0, however fast B rises. A changing field is not the same as a changing flux.\n\n100 V is NA dB/dt with cos θ = 1, treating the coil as face-on; 0.50 V is the same with N forgotten; 50 V quotes the rate of change of B as if it were a voltage."
+        },
+        {
+          "type": "mcq",
+          "q": "A rod of length 0.80 m moves at right angles to a uniform field of 0.50 T and to its own length. What speed is needed for an emf of 0.20 V between its ends?",
+          "options": [
+            "0.40 m/s",
+            "2.0 m/s",
+            "0.080 m/s",
+            "0.50 m/s"
           ],
           "answerIndex": 3,
-          "concept": "The deck's rule that only the magnetic field within the loop counts; field outside the enclosed area is irrelevant.",
-          "why": "Faraday's law involves Φ_B through the enclosed area only, so a field entirely outside that area induces nothing."
+          "concept": "Rearranging the motional emf formula",
+          "why": "ε = BLv, so v = ε/(BL) = 0.20/((0.50)(0.80)) = 0.20/0.40 = 0.50 m/s.\n\n0.40 m/s divides by B only and forgets L; 2.0 m/s is BL/ε, the ratio inverted; 0.080 m/s multiplies ε by BL instead of dividing."
         },
         {
           "type": "mcq",
-          "q": "A circular loop is oriented so that a uniform magnetic field lies entirely *in the plane* of the loop. The magnitude of that field is then increased very rapidly. The induced emf is:",
+          "q": "An a.c. generator delivers an rms emf of 120 V. What is its peak emf?",
           "options": [
-            "maximum, since dB/dt is large and the field lines lie as close to the wire as they can.",
-            "zero, since the flux through the loop is zero at every instant and so cannot change.",
-            "equal to A·dB/dt, since it is the magnitude of the field that changes, not the orientation.",
-            "zero, because the induced current would have nowhere to flow in this orientation."
+            "170 V",
+            "85 V",
+            "240 V",
+            "120 V"
+          ],
+          "answerIndex": 0,
+          "concept": "Peak emf from rms emf",
+          "why": "ε_rms = ε_peak/√2, so ε_peak = √2 × 120 = 1.414 × 120 = 170 V (169.7 V).\n\n85 V divides by √2 instead of multiplying; 240 V doubles instead of multiplying by √2; 120 V treats rms and peak as the same number."
+        },
+        {
+          "type": "mcq",
+          "q": "A 50-turn coil of area 2.0 × 10⁻² m² has its normal at 60° to a uniform field that rises at a steady 3.0 T/s. What is the induced emf?",
+          "options": [
+            "3.0 V",
+            "2.6 V",
+            "1.5 V",
+            "0.030 V"
+          ],
+          "answerIndex": 2,
+          "concept": "Faraday's law for an inclined coil",
+          "why": "Only B changes, so ε = N A cos θ dB/dt = (50)(2.0 × 10⁻²)(cos 60°)(3.0) = (50)(2.0 × 10⁻²)(0.50)(3.0) = 1.5 V.\n\n3.0 V ignores the angle; 2.6 V uses cos 30°, measuring the angle from the plane; 0.030 V forgets N."
+        },
+        {
+          "type": "mcq",
+          "q": "A bar magnet is held perfectly still with its north pole deep inside a closed coil. Which pair correctly describes the flux through the coil and the emf induced in it?",
+          "options": [
+            "Zero flux, large emf",
+            "Large flux, zero emf",
+            "Large flux, large emf",
+            "Zero flux, zero emf"
           ],
           "answerIndex": 1,
-          "concept": "A changing B does not by itself mean a changing flux — orientation can make the flux identically zero.",
-          "why": "With B in the plane of the loop, θ = 90° and Φ_B = BA cos90° = 0 at all times, so dΦ_B/dt = 0 however fast B changes."
+          "concept": "Flux versus rate of change of flux",
+          "why": "The magnet's field threads the coil, so the flux is large. But ε = −N dΦ/dt depends on the rate of change of flux, and a stationary magnet gives a constant flux, so the emf is zero. Faraday's conclusion: the existence of flux is not sufficient; the flux must be changing.\n\n'Large flux, large emf' mistakes flux for its rate of change; 'zero flux' is wrong because a magnet inside a coil certainly threads it with field lines; the zero emf is right but the reason offered is wrong."
         },
         {
           "type": "short",
-          "q": "A loop is dragged at constant velocity across a region of *uniform* magnetic field: it enters, is briefly wholly inside, then leaves. Explain why a current flows while it enters and while it leaves, but not while it is wholly inside — even though the loop is moving the whole time and the field is present throughout.",
-          "concept": "Flux, not motion or field strength, is what must change; inside a uniform field a moving loop links constant flux.",
-          "why": "While entering, the area of the loop inside the field grows, so Φ_B increases and an emf is induced; while leaving, it shrinks and the emf reverses. Wholly inside, every part of the loop links the same uniform B and the enclosed flux is constant, so dΦ_B/dt = 0 and no current flows despite the motion. Motion matters only insofar as it changes the flux."
+          "q": "A flexible loop of 5 turns lies with its normal parallel to a uniform field of 0.60 T. The loop is squeezed so that its area shrinks at a steady 0.020 m²/s. Calculate the induced emf. State the emf if instead the loop is held rigid while the field is kept steady at 1.2 T. Show your working.",
+          "concept": "Emf from a changing area",
+          "why": "With B and θ fixed, Φ = BA and dΦ/dt = B dA/dt. So ε = N B dA/dt = (5)(0.60)(0.020) = 0.060 V. If the loop is rigid and B is steady, nothing in Φ = BA cos θ changes, so ε = 0, however large the field.\n\nFinal answer: 0.060 V (accept 0.058 to 0.062), and 0 V for the rigid loop in a steady field. A correct answer uses the rate of change of area, multiplies by N and B, and says that a steady flux induces nothing. 0.012 V forgot N; 0.12 V for the second part treats the larger field as if it were a change."
         },
         {
           "type": "short",
-          "q": "In a rotating generator coil the emf is zero at the very instant the flux through the coil is maximum. Explain why, and say what the coil's orientation is at that instant.",
-          "concept": "emf tracks the slope of Φ(t), not its value: ε = NBAω sin(ωt) while Φ = BA cos(ωt).",
-          "why": "Φ = BA cos(ωt) is maximum when the coil's normal is parallel to B, i.e. the plane of the coil is perpendicular to the field. At the peak of a cosine the slope is zero, so dΦ/dt = 0 and ε = 0. The emf is instead greatest a quarter-turn later, when the flux passes through zero and is changing fastest."
+          "q": "The flux through each turn of a 20-turn coil varies with time as Φ = 0.30t² Wb, with t in seconds. Calculate the induced emf at t = 2.0 s, and find the time at which the emf is 6.0 V. Show your working.",
+          "concept": "Instantaneous emf from a time-dependent flux",
+          "why": "Differentiate: dΦ/dt = 0.60t Wb/s, so |ε| = N dΦ/dt = 20 × 0.60t = 12t volts. At t = 2.0 s: ε = 12 × 2.0 = 24 V. For ε = 6.0 V: 12t = 6.0, so t = 0.50 s.\n\nFinal answer: 24 V at t = 2.0 s (accept 23.5 to 24.5) and t = 0.50 s. A correct answer differentiates before substituting and multiplies by N. 1.2 V at t = 2.0 s is Φ itself (0.30 × 4) with no differentiation; 1.2 V or 2.4 V forgets N; substituting t = 6 gives nonsense."
         },
         {
           "type": "short",
-          "q": "Lenz's law is stated as \"the induced effect opposes the *change* that caused it,\" not \"opposes the external field.\" Using the case of a field out of the page that is decreasing, explain why those two statements are not the same, and which one is right.",
-          "concept": "Rule 2 of the deck: a falling flux induces a field in the SAME direction as the external field.",
-          "why": "With the external field out of the page and weakening, the induced current's field inside the loop is also out of the page — it reinforces the external field while opposing its decrease. The \"opposes the field\" version would wrongly predict a field into the page. Only the \"opposes the change\" version is correct; the two agree only when the flux is increasing."
+          "q": "An 80-turn coil of area 5.0 × 10⁻³ m² sits face-on to a uniform field of 0.25 T, so that its normal is along the field. It is turned through 90° in 0.10 s so that its plane now contains the field. Calculate the average emf induced. Show your working.",
+          "concept": "Average emf from turning a coil through a right angle",
+          "why": "Initial flux per turn: Φ₁ = BA cos 0° = (0.25)(5.0 × 10⁻³) = 1.25 × 10⁻³ Wb. Final flux: Φ₂ = BA cos 90° = 0. So |ΔΦ| = 1.25 × 10⁻³ Wb and ε_av = N |ΔΦ|/Δt = (80)(1.25 × 10⁻³)/(0.10) = 0.10/0.10 = 1.0 V.\n\nFinal answer: 1.0 V (accept 0.98 to 1.02). A correct answer states the initial flux BA, the final flux zero, and divides N ΔΦ by 0.10 s; it may note that this is an average, since the flux does not fall uniformly. 0.0125 V forgot N; 2.0 V used a flux change of 2BA, which is a full flip through 180°, not a quarter turn."
         },
         {
           "type": "short",
-          "q": "Explain, in terms of work and energy, why Lenz's law follows from conservation of energy rather than standing as an independent experimental rule of its own.",
-          "concept": "The minus sign as an energy statement: work must be done against the induced effect to sustain the flux change.",
-          "why": "Whatever causes the flux change — moving a magnet, sliding a rod — must work against the force exerted on the induced current, and that mechanical work is exactly what appears as I²R heating. If the induced current instead aided the change, the change would accelerate itself and both kinetic energy and heat would be produced with no source, which is impossible. Hence the sign is fixed by energy conservation, not by separate experiment."
+          "q": "A bar magnet is pushed north-pole-first into a coil connected to a centre-zero galvanometer, held still inside for a moment, then pulled out again. Describe what the galvanometer shows during each of the three stages and explain each reading using Faraday's law and Lenz's law.",
+          "concept": "Faraday's magnet-and-coil experiment explained",
+          "why": "Stage 1, pushing in: the flux through the coil increases, so by Faraday's law an emf is induced and the needle deflects, say to the left. By Lenz's law the current makes the near face a north pole, opposing the approach. Stage 2, held still: the flux is large but constant, so dΦ/dt = 0, the emf is zero and the needle returns to the centre, even though the magnet is inside the coil. Stage 3, pulling out: the flux decreases, so an emf is induced again but the current reverses, the near face becomes a south pole to hold the magnet back, and the needle deflects the other way.\n\nA correct answer gives deflection, zero, opposite deflection, ties each to the flux increasing, constant, decreasing, and names the pole on the near face or the reversal of current as Lenz's law."
         }
       ]
     },
@@ -496,131 +500,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "The deck's definition of modularisation says each independent module \"has everything it needs to implement only a part of the program's functionality.\" Which design does that clause rule out?",
+          "q": "Orders calls Payments.charge(), Stock.reserve() and Email.send(). Stock calls Email.send(). Payments and Email call nothing outside themselves. Measuring coupling as the number of other modules a module depends on, what are the counts for Orders and for Stock?",
           "options": [
-            "A module whose functions all serve a single aim but which is only 20 lines long",
-            "A module that is stored in its own file separate from the rest of the program",
-            "A module that is reused unchanged by a second, unrelated program",
-            "A module that implements one part of the functionality but must call into a sibling module's internals to obtain the data structures it works on"
-          ],
-          "answerIndex": 3,
-          "concept": "Definition of modularisation; independence clause",
-          "why": "\"Has everything it needs\" is the independence requirement: reaching into a sibling's internals means the module does not own what it needs, so it is not independent."
-        },
-        {
-          "type": "mcq",
-          "q": "Which of the following does the Decomposition and Modularisation deck list as a **disadvantage** of modularisation?",
-          "options": [
-            "The negative impacts of a fault spread slowly through the system",
-            "The effects of a change in one component on other components are restricted",
-            "Compilation and loading time may be longer",
-            "Understanding a small module or function is easier"
+            "Orders 3, Stock 0",
+            "Orders 2, Stock 1",
+            "Orders 3, Stock 1",
+            "Orders 4, Stock 2"
           ],
           "answerIndex": 2,
-          "concept": "Disadvantages of modularisation",
-          "why": "Longer compilation and loading time is one of the five listed disadvantages; a and b are benefits of structural partitioning and information hiding, and d is an advantage."
+          "concept": "Counting coupling from a call list",
+          "why": "Coupling is the extent to which a module depends on other modules before performing its function. Orders cannot place an order without Payments, Stock and Email: 3. Stock cannot reserve without Email: 1. Payments and Email depend on nothing: 0 each.\n\nOrders 3, Stock 0 misses the Stock to Email call; Orders 2, Stock 1 drops Email from Orders because Stock already uses it, but a shared dependency still counts for each module that has it; Orders 4, Stock 2 counts each module as depending on itself."
         },
         {
           "type": "mcq",
-          "q": "A developer changes the internal date format inside module `Billing`. Three other modules stop compiling and must be edited. Which property of the design does this observation most directly measure, and in which direction?",
+          "q": "Three notes from a design meeting: (i) 'the system is split into a client layer, a service layer and a database layer'; (ii) 'a component notifies each of its subscribers whenever its state changes'; (iii) 'in C, always test the value returned by malloc before using it'. Classify each as an architectural pattern, a design pattern or an idiom.",
           "options": [
-            "Coupling between `Billing` and those modules, and it is high",
-            "Cohesion of `Billing`, and it is low",
-            "Cohesion of `Billing`, and it is high, since one change touched one aim",
-            "Coupling between `Billing` and those modules, and it is low, since only three modules were affected"
+            "(i) architectural, (ii) design, (iii) idiom",
+            "(i) design, (ii) architectural, (iii) idiom",
+            "(i) architectural, (ii) idiom, (iii) design",
+            "(i) idiom, (ii) design, (iii) architectural"
           ],
           "answerIndex": 0,
-          "concept": "Coupling as a between-module measure",
-          "why": "Coupling is the extent to which modules depend on other modules before performing their function; a change rippling outward is a dependence on Billing's internals, so coupling is high."
+          "concept": "Classifying pattern levels",
+          "why": "Architectural patterns are high-level: the overall structure and its subsystems, so the three layers are (i). Design patterns are medium-level: component-to-component interaction mechanisms, so the subscriber notification is (ii). Idioms are low-level and programming-language specific, so the C rule about malloc is (iii).\n\nThe second option swaps the top two levels; the third calls a language-independent interaction rule an idiom and a C-specific rule a design pattern; the fourth reverses the whole scale."
         },
         {
           "type": "mcq",
-          "q": "According to the deck, information hiding requires that modules pass to each other",
+          "q": "Put the steps of top-down design in order. A: treat each sub-system as a system and decompose it further. B: take the whole software system as one entity. C: compose all the components so the whole system comes into existence. D: decompose it into sub-systems based on some characteristic. E: stop when the lowest level of the hierarchy is reached.",
           "options": [
-            "all of their data structures, but only through a documented public interface",
-            "only that much information which is required to accomplish the software functions",
-            "the processing details of any function whose result the other module consumes",
-            "nothing at all, since a truly independent module never communicates"
+            "B, A, D, E, C",
+            "C, B, D, A, E",
+            "B, D, E, A, C",
+            "B, D, A, E, C"
+          ],
+          "answerIndex": 3,
+          "concept": "Ordering the top-down design steps",
+          "why": "Top-down starts with the whole system as one entity (B), decomposes it into sub-systems (D), treats each sub-system as a system and decomposes further (A), keeps going until the lowest level is reached (E), and only then, when all components are composed, does the whole system come into existence (C).\n\nB, A, D, E, C tries to decompose a sub-system before any sub-system exists; C, B, D, A, E composes first, which is bottom-up thinking; B, D, E, A, C stops at the lowest level before the further decomposition that reaches it."
+        },
+        {
+          "type": "mcq",
+          "q": "Design P: the top module decides which of three reports to produce and does nothing else; the modules beneath it read the file, compute the totals and print. Design Q: a control module runs four functions in turn, handing the output of each to the next. Which partitioning is each?",
+          "options": [
+            "P vertical, Q horizontal",
+            "P horizontal, Q vertical",
+            "Both vertical",
+            "Both horizontal"
+          ],
+          "answerIndex": 0,
+          "concept": "Identifying horizontal versus vertical partitioning",
+          "why": "In vertical partitioning the top-level control modules do the decision-making and little processing, while the low-level worker modules do all the input, computation and output: that is P. In horizontal partitioning control modules are used to communicate between functions and execute them, passing data across the interfaces as it moves from one function to the next: that is Q.\n\nSwapping them mistakes 'passes data between functions' for decision-making; 'both vertical' misses that Q's controller is a data conduit, not a decider; 'both horizontal' misses that P's controller does nothing but choose."
+        },
+        {
+          "type": "mcq",
+          "q": "A reporting system is built bottom-up: file-reading and string primitives are composed into a Parser, the Parser and a database primitive into a ReportService, and the ReportService with a Scheduler into the complete system. Which level has the greatest abstraction and which the least?",
+          "options": [
+            "Greatest: the primitives; least: the complete system",
+            "Greatest: the complete system; least: the primitives",
+            "Greatest: the Parser; least: the ReportService",
+            "They are all at the same level of abstraction"
+          ],
+          "answerIndex": 1,
+          "concept": "Abstraction levels in bottom-up composition",
+          "why": "Bottom-up design starts with the most specific and basic components and composes higher-level components from them; with each higher level the amount of abstraction is increased. The primitives are the most specific, and the single component at the top, the complete system, is the most abstract.\n\nThe first option reverses the direction; the third picks two middle levels and puts the lower one above the higher; the fourth denies that abstraction changes with level, which is the rule this design relies on."
+        },
+        {
+          "type": "mcq",
+          "q": "A validate_email() function written for the registration module is later called, unchanged, by the password-reset module and by a separate marketing program. Which listed advantage of modularisation is this?",
+          "options": [
+            "Smaller modules are easier and faster to test",
+            "Large programs can be written by several people",
+            "Modules and functions can be used in other parts of the program or in another program",
+            "Understanding a small function is easier"
+          ],
+          "answerIndex": 2,
+          "concept": "Matching an outcome to an advantage of modularisation",
+          "why": "The function is being used both in another part of the same program (password reset) and in another program (marketing). That is exactly the reuse advantage: modules and functions can be used in other parts of the program or in another program.\n\nEasier testing and easier understanding are about the size of the unit, not about where it is used; several people writing a program is about dividing the work, and nothing in the case mentions who wrote what."
+        },
+        {
+          "type": "mcq",
+          "q": "Component X performs four functions that have a limited relationship with one another. Component Y performs three functions that all serve one aim. The refactoring prescribed for low cohesion is applied to this design. How many components exist afterwards?",
+          "options": [
+            "4",
+            "7",
+            "5",
+            "2"
+          ],
+          "answerIndex": 2,
+          "concept": "Applying the refactoring prescription",
+          "why": "The prescription is to refactor a low-cohesion component into as many components as it has unrelated functions, each exhibiting high cohesion. X becomes 4 components. Y is already highly cohesive, so it is left alone: 4 + 1 = 5.\n\n4 forgets Y; 7 splits Y as well, though its functions work together; 2 leaves X in one piece, which is the design the refactoring was meant to fix."
+        },
+        {
+          "type": "mcq",
+          "q": "Module Reports reads the internal list Orders.pending directly, instead of calling the function Orders.count_pending() that Orders provides. Which design rule does Reports break?",
+          "options": [
+            "Single responsibility principle",
+            "Information hiding",
+            "Vertical partitioning",
+            "Top-down design"
           ],
           "answerIndex": 1,
           "concept": "Information hiding",
-          "why": "The deck's wording is exactly \"they pass only that much information to each other, which is required to accomplish the software functions\"; a documented interface that still exposes all data structures is not information hiding."
-        },
-        {
-          "type": "mcq",
-          "q": "A design model yields a component that performs four functions having a limited relationship with one another. What is the deck's prescribed response, and its stated payoff?",
-          "options": [
-            "Leave the component whole, since keeping the four functions in one place minimises the coupling in the system",
-            "Hide the four functions behind a single controlled interface, so that information hiding compensates for the weak relationship between them",
-            "Refactor the component into four different components, each exhibiting high cohesion, which leads to easier integration, testing and maintenance",
-            "Merge the component into each of its callers, so that the weakly related functions become internal details of those callers"
-          ],
-          "answerIndex": 2,
-          "concept": "Refactoring worked example; low cohesion",
-          "why": "This is the deck's own example: split the low-cohesion component into four high-cohesion components, giving easier integration, testing and maintenance; hiding or merging leaves the cohesion defect intact."
-        },
-        {
-          "type": "mcq",
-          "q": "What does the deck give as the specific cost of **horizontal** partitioning?",
-          "options": [
-            "Decision-making sinks into the worker modules, so faults are hard to localise",
-            "Control modules end up performing input, computation and output as well as deciding",
-            "The hierarchy becomes so deep that compilation and loading time increase",
-            "More data must be passed across the module interface, making the control flow more complex, especially where data moves rapidly from one function to another"
-          ],
-          "answerIndex": 3,
-          "concept": "Horizontal structural partitioning",
-          "why": "The deck names exactly this cost; the other options describe failures of vertical partitioning or a disadvantage of modularisation generally."
-        },
-        {
-          "type": "mcq",
-          "q": "In vertical partitioning, which statement matches the deck's description of the division of labour?",
-          "options": [
-            "Control modules at the top perform the decision-making and do little processing; worker modules at the low level perform all input, computation and output",
-            "Control modules at the top perform input and computation; worker modules at the low level decide which functions to execute",
-            "Every module both decides and processes, so that no single module becomes a bottleneck",
-            "Control modules communicate between functions and execute those functions on their behalf"
-          ],
-          "answerIndex": 0,
-          "concept": "Vertical structural partitioning",
-          "why": "Decision at the top with little processing, all input/computation/output at the bottom; option d is the deck's description of horizontal partitioning."
-        },
-        {
-          "type": "mcq",
-          "q": "Which mapping of the three pattern levels matches the deck?",
-          "options": [
-            "Architectural = medium-level, often equivalent to software components; design = high-level; idiom = language-independent",
-            "Architectural = high-level, often considered equivalent to software architecture; design = medium-level, often considered equivalent to software components; idiom = low-level and programming-language specific",
-            "Architectural = high-level; design = low-level and language specific; idiom = medium-level coding conventions",
-            "All three are language-specific, differing only in how many components they govern"
-          ],
-          "answerIndex": 1,
-          "concept": "Architectural pattern, design pattern, idiom",
-          "why": "High/medium/low with architectural equated to software architecture, design equated to software components, and only the idiom being language-specific (\"coding patterns\")."
+          "why": "Information hiding requires that the data structures and processing details of one module are not accessible to other modules; they pass each other only the information required to accomplish the function. Reports is reaching into Orders' data structure instead of using the controlled interface.\n\nThe single responsibility principle is about a module doing one job, and Reports may well do only reporting; vertical partitioning is about who decides and who works in a hierarchy; top-down is a design approach, not a rule about access."
         },
         {
           "type": "short",
-          "q": "The deck says the meaning of decomposition is \"actually embedded in the definition of modularisation.\" Explain the relationship precisely, and describe a case that is decomposition but not successful modularisation.",
-          "concept": "Decomposition versus modularisation",
-          "why": "Modularisation is dividing a program's functionality into independent modules, each holding everything it needs for its part; the act of separating the code into different modules and functions is itself decomposition, so decomposition is the breaking-apart contained inside modularisation. A case that is decomposition but not modularisation: chopping a 5,000-line function into ten files that all read and write the same shared globals and must be changed together. The application has been broken up, but the pieces are not independent, so cohesion is low and coupling is high and none of the promised benefits follow."
+          "q": "An online exam application needs a 'submit attempt' feature. Decompose it into at least three subproblems. Then take those subproblems together with 'edit profile' and 'change password' and group them into modules: name each module, list what it holds, and state which of your two steps was decomposition and which was modularisation. Show your working.",
+          "concept": "Decomposing a feature into subproblems and modules",
+          "why": "Decomposition breaks the feature into smaller subproblems, for example: validate the submitted answers, save the attempt, compute the score, notify the student of the result. Modularisation groups related subproblems into independent modules, each with everything it needs for its part: an Attempt module (validate answers, save the attempt), a Grading module (compute the score), a Notification module (notify the student), and an Account module (edit profile, change password), since those two concern the user's account and not the exam.\n\nA correct answer lists three or more sensible subproblems of submitting an attempt, groups them so that each module has one aim and the account tasks sit apart from the exam tasks, and says that breaking the feature apart is decomposition and grouping into modules is modularisation. Any grouping that puts 'change password' inside the grading or attempt module is low cohesion and is not accepted."
         },
         {
           "type": "short",
-          "q": "Modularisation is meant to make change cheap, yet the deck lists \"demands more initial design time\" and \"inter-module communication problems may be increased\" as disadvantages. Explain the mechanism by which the same act of splitting produces both the benefit and these two costs.",
-          "concept": "Advantages versus disadvantages of modularisation",
-          "why": "Splitting works by creating boundaries: once functionality lives behind an interface, a change on one side stops at that boundary instead of propagating, which is the cheap-change benefit. But the boundaries have to be chosen before any code is written, and choosing them is the extra initial design effort, because a badly placed boundary must be cut through later. The same boundaries also convert what used to be free in-process access into explicit traffic across interfaces, so there are now more interfaces to define, agree, version and get wrong: that is the increase in inter-module communication problems, along with the longer execution and loading times the deck also lists."
+          "q": "A car carries passengers from one place to another. Using its brake, radiator, battery and steering wheel: give one example of high cohesion inside a single part, one example of low coupling between two parts, and one design change that would raise the coupling between two parts. Show your working.",
+          "concept": "Cohesion and coupling in the car analogy",
+          "why": "High cohesion: every element of the brake (pedal, lines, pads, discs) works towards the one aim of stopping the car, and nothing in it serves any other purpose. Low coupling: the radiator and the steering wheel do not depend on each other at all; the radiator meets the rest of the car only through its hoses, so it can be replaced without touching the steering. Raising coupling: wiring the brake so that it works only while the radiator fan is running would make braking depend on cooling, so a fault or change in the radiator would now affect the brake.\n\nA correct answer judges cohesion inside one part (all its elements serve one aim), judges coupling between two parts (one can be changed without the other), and proposes a change that makes one part depend on another. Naming the battery as the low-coupling example is fine only if it is the connection, not the battery's own parts, that is discussed."
         },
         {
           "type": "short",
-          "q": "Explain why information hiding is the mechanism that makes low coupling achievable, rather than a separate nicety. Refer to the deck's three stated benefits of information hiding in your reasoning.",
-          "concept": "Information hiding and coupling",
-          "why": "Coupling is the extent to which a module depends on other modules before it can do its work; a module can only depend on what it can see. Information hiding makes the data structures and processing details of a module inaccessible to others and lets only the required information cross, so it removes the very things another module could come to depend on. That is why its three benefits are the coupling story restated: communication through controlled interfaces means dependence is confined to a narrow agreed surface; a decreased probability of adverse effects follows because nobody is relying on internals that may change; and the effects of a change in one component on others are restricted because a change behind the interface is invisible outside it."
+          "q": "A library app has three components: Catalogue (stores the books), Loans (records who has borrowed what) and Notifier (sends reminders). Write out its software architecture using the three parts of the definition: the components, the attributes (properties) of each, and the relationships between them. Show your working.",
+          "concept": "Describing a software architecture",
+          "why": "Software architecture is the structure of the system: its components, the attributes of those components, and the relationships between them. Components: Catalogue, Loans, Notifier. Attributes: Catalogue holds the list of books and their availability; Loans holds the record of borrower, book and due date; Notifier holds the message templates and the sending channel. Relationships: Loans asks Catalogue whether a book is available and tells it when a book goes out or comes back; Loans asks Notifier to send a reminder when a due date passes; Notifier does not depend on Catalogue.\n\nA correct answer names the three components, gives at least one property for each, and states the direction of at least two dependencies between them. Listing components alone, with no attributes or relationships, is only one third of the definition and is not accepted."
         },
         {
           "type": "short",
-          "q": "The deck states that top-down and bottom-up design \"are not individually practicable\" and that in bottom-up design \"with each higher level, the amount of abstraction is increased.\" Explain why each approach alone fails, and why the abstraction remark explains which approach suits a system built from an existing system.",
-          "concept": "Top-down and bottom-up design approaches",
-          "why": "Pure top-down keeps decomposing a general model into more specific parts, but the decomposition is a guess about what the lowest level can actually provide; if the available primitives do not match, the whole hierarchy has to be redrawn. Pure bottom-up composes higher-level components from basic ones, but with no view of the whole system there is nothing to say which higher-level components are the right ones to build, so effort can be spent on parts that never fit together. Hence the deck's combination. The abstraction remark explains bottom-up's home ground: when a system is created from an existing system, the basic primitives already exist and each composition step raises the abstraction level over them, so the design grows upward from known material rather than downward into unknown detail, which is where top-down belongs."
+          "q": "Top-down and bottom-up design are described as not individually practicable, so that a combination is used. Explain what goes wrong if a team uses only top-down, what goes wrong if it uses only bottom-up, and what a combination looks like for a new inventory system built on an existing database library.",
+          "concept": "Combining top-down and bottom-up design",
+          "why": "Top-down alone decomposes the whole system into sub-systems on assumptions about what the lowest level will look like, and may arrive at a bottom level that does not match any component that can actually be built or reused. Bottom-up alone composes higher components from existing primitives with no guarantee that what they add up to is the system that was wanted. In the combination, the inventory system is decomposed top-down from the whole into stock, orders and reporting sub-systems because it is being designed from scratch with details unknown, while the data-access parts are built bottom-up from the existing database library because those primitives already exist and can be reused.\n\nA correct answer gives a failure for each approach used alone, and matches top-down to the new, unknown parts and bottom-up to the existing library in the example."
         }
       ]
     },
@@ -634,131 +638,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Disc Example 2: revolving the region between x = y² + 1 and x = 3 about the line x = 3, she gets R(y) = 2 − y² with limits −√2 to √2. Evaluate π∫₋√2^√2 (4 − 4y² + y⁴)dy.",
+          "q": "The region between the parabola x = y² + 1 and the line x = 4 is revolved about the line x = 4. Find the volume.",
           "options": [
-            "64√2π/15",
-            "32√2π/15",
-            "8√2π/3",
-            "94√2π/15"
-          ],
-          "answerIndex": 0,
-          "concept": "Evaluating a disc integral across a symmetric pair of irrational limits",
-          "why": "The antiderivative is 4y − 4y³/3 + y⁵/5. At y = √2, using (√2)³ = 2√2 and (√2)⁵ = 4√2, it is 4√2 − 8√2/3 + 4√2/5 = √2(60 − 40 + 12)/15 = 32√2/15. The integrand is even, so the value at −√2 is the negative of that and the subtraction doubles it: 64√2/15. Option 2 is the value at the upper limit alone — the lower limit was never subtracted. Option 3 forgets to square (2 − y²) and integrates it raw. Option 4 uses the curve's own x-value y² + 1 as the radius instead of the distance 3 − (y² + 1) to the axis."
-        },
-        {
-          "type": "mcq",
-          "q": "Washer Example 2: R(y) = 3, r(y) = y², about the y-axis. Evaluate π∫₀^√3 (9 − y⁴)dy.",
-          "options": [
-            "2√3π",
+            "48√3π/5",
+            "24√3π/5",
             "36√3π/5",
-            "−108π/5",
-            "−36√3π/5"
-          ],
-          "answerIndex": 1,
-          "concept": "Evaluating a washer integral with a constant outer radius and an irrational limit",
-          "why": "The antiderivative is 9y − y⁵/5. At y = √3, (√3)⁵ = 9√3, so it is 9√3 − 9√3/5 = (45√3 − 9√3)/5 = 36√3/5, and the lower limit contributes 0. Option 1 forgets to square both radii and integrates 3 − y² instead. Option 3 uses 3 as the upper limit — but 3 is an x-value, and the variable of integration is y, whose upper value is √3; the negative result is the tell that the limit is wrong. Option 4 swaps R and r, integrating y⁴ − 9, which reverses the sign; a negative volume is always a setup error, never an answer."
-        },
-        {
-          "type": "mcq",
-          "q": "TASK slide: revolve f(x) = √x, the x-axis, and the lines x = 1 and x = 4 about the x-axis. The volume is",
-          "options": [
-            "14π/3",
-            "8π",
-            "15π/2",
-            "17π/2"
-          ],
-          "answerIndex": 2,
-          "concept": "Squaring the radius collapses a root to a polynomial",
-          "why": "R(x) = √x, so [R(x)]² = x and V = π∫₁⁴ x dx = π[x²/2]₁⁴ = π(16/2 − 1/2) = 15π/2. Option 1 integrates √x without squaring it, giving π[2x^(3/2)/3]₁⁴ = 14π/3 — the commonest error on this task, and it never touches the disc formula at all. Option 2 substitutes only the upper limit, π(16/2), forgetting F(b) − F(a). Option 4 adds the two limit values instead of subtracting, π(8 + 1/2)."
-        },
-        {
-          "type": "mcq",
-          "q": "TASK slide: rotate about the y-axis the region between y = x and y = x². The volume is",
-          "options": [
-            "π/12",
-            "2π/15",
-            "π/3",
-            "π/6"
-          ],
-          "answerIndex": 3,
-          "concept": "Shell setup for a region between two curves about the y-axis",
-          "why": "Solve x = x² for the limits: x(1 − x) = 0, so 0 and 1. On (0,1) the line is above the parabola, so the strip height is x − x², the radius is x, and V = 2π∫₀¹ x(x − x²)dx = 2π∫₀¹(x² − x³)dx = 2π[x³/3 − x⁴/4]₀¹ = 2π(1/12) = π/6. Option 1 uses π instead of 2π. Option 3 forgets to multiply by the radius x, integrating the height alone: 2π(1/2 − 1/3) = π/3. Option 2 is the answer for the wrong axis — washers about the x-axis, π∫₀¹(x² − x⁴)dx = 2π/15."
-        },
-        {
-          "type": "mcq",
-          "q": "The region under y = 2x, above the x-axis, from x = 0 to x = 3, is revolved about the x-axis. The volume is",
-          "options": [
-            "36π",
-            "9π",
-            "18π",
-            "108π"
+            "4√3π"
           ],
           "answerIndex": 0,
-          "concept": "Disc method with a coefficient inside the radius",
-          "why": "R(x) = 2x, so [R(x)]² = 4x² and V = π∫₀³ 4x²dx = π[4x³/3]₀³ = π(4·27/3) = 36π. Option 2 forgets to square: π∫₀³2x dx = π[x²]₀³ = 9π. Option 3 squares only the x and not the coefficient, using 2x² instead of 4x². Option 4 loses the division by the new power, using 4x³ as the antiderivative of 4x². The check is the cone formula: radius 6, height 3, πr²h/3 = π·36·3/3 = 36π."
+          "concept": "Disc method in y about a vertical line",
+          "why": "The axis is x = 4, so the radius is the horizontal distance from the line to the parabola: R(y) = 4 − (y² + 1) = 3 − y². Limits: y² + 1 = 4 gives y = ±√3. V = π∫₋√₃^√₃(3 − y²)²dy = π∫₋√₃^√₃(9 − 6y² + y⁴)dy = π[9y − 2y³ + y⁵/5]₋√₃^√₃. Using (√3)³ = 3√3 and (√3)⁵ = 9√3, the bracket at √3 is 9√3 − 6√3 + 9√3/5 = 24√3/5; the integrand is even, so V = 2π(24√3/5) = 48√3π/5 cubic units (≈ 52.2).\n\n24√3π/5 evaluates at the upper limit only and forgets that the lower limit contributes the same again; 36√3π/5 takes (√3)⁵ as 3√3; 4√3π forgets to square the radius."
         },
         {
           "type": "mcq",
-          "q": "The region bounded by y = x and y = x² on [0, 1] is revolved about the x-axis. The volume is",
+          "q": "The region between y = x² and y = x³ for 0 ≤ x ≤ 1 is revolved about the x-axis. Find the volume.",
           "options": [
-            "π/6",
-            "2π/15",
-            "π/30",
-            "8π/15"
-          ],
-          "answerIndex": 1,
-          "concept": "Washer about the x-axis: which curve is outer, and the squares subtract",
-          "why": "On (0,1), x ≥ x², so R = x and r = x², giving V = π∫₀¹(x² − x⁴)dx = π[x³/3 − x⁵/5]₀¹ = π(1/3 − 1/5) = 2π/15. Option 1 forgets to square both radii: π∫₀¹(x − x²)dx = π/6 — which is an area times π, not a volume. Option 3 squares the difference instead of subtracting the squares: π∫₀¹(x − x²)²dx = π/30. Option 4 adds the two terms, π(1/3 + 1/5), rather than subtracting."
-        },
-        {
-          "type": "mcq",
-          "q": "Use the shell method: the region under y = x², above y = 0, from x = 0 to x = 2, revolved about the y-axis. The volume is",
-          "options": [
-            "4π",
-            "32π/5",
-            "8π",
-            "16π"
+            "π/105",
+            "12π/35",
+            "2π/35",
+            "π/12"
           ],
           "answerIndex": 2,
-          "concept": "Shell integrand is radius times height, with no square",
-          "why": "Radius x, height x², so V = 2π∫₀² x·x²dx = 2π∫₀² x³dx = 2π[x⁴/4]₀² = 2π(4) = 8π. Option 1 uses π in place of 2π. Option 2 is the disc answer about the wrong axis, π∫₀²(x²)²dx = 32π/5 — the right region, revolved the wrong way. Option 4 uses x⁴/2 as the antiderivative of x³, dividing by the old power rather than the new one."
+          "concept": "Washer with two curved boundaries",
+          "why": "On [0, 1], x² ≥ x³, so R(x) = x² and r(x) = x³. V = π∫₀¹[(x²)² − (x³)²]dx = π∫₀¹(x⁴ − x⁶)dx = π[x⁵/5 − x⁷/7]₀¹ = π(1/5 − 1/7) = π(7 − 5)/35 = 2π/35 cubic units.\n\nπ/105 integrates (x² − x³)², the difference squared; 12π/35 adds 1/5 and 1/7 instead of subtracting; π/12 forgets to square the radii, π∫(x² − x³)dx."
         },
         {
           "type": "mcq",
-          "q": "TASK slide: the region under y = x² over [0, 2] is rotated about the line y = −1. The volume is",
+          "q": "The region enclosed by the curve y = 4 − x² and the x-axis is revolved about the x-axis. Find the volume.",
           "options": [
-            "206π/15",
-            "22π/5",
-            "32π/5",
-            "176π/15"
+            "256π/15",
+            "32π/3",
+            "128π/15",
+            "512π/15"
           ],
           "answerIndex": 3,
-          "concept": "Shifting both radii before squaring when the axis is not a coordinate axis",
-          "why": "Distances from y = −1: R = x² + 1 and r = 0 − (−1) = 1. So V = π∫₀²([x² + 1]² − 1)dx = π∫₀²(x⁴ + 2x²)dx = π[x⁵/5 + 2x³/3]₀² = π(32/5 + 16/3) = 176π/15. Option 1 shifts the outer radius but leaves r = 0, filling in a hole that is really there: π∫₀²(x⁴ + 2x² + 1)dx = 206π/15. Option 2 shifts only the inner radius, using R = x² and r = 1. Option 3 ignores the shift altogether and computes the solid about the x-axis, π∫₀²x⁴dx = 32π/5."
+          "concept": "Disc method with limits from the roots",
+          "why": "Limits: 4 − x² = 0 gives x = −2 and x = 2. R(x) = 4 − x², so V = π∫₋₂²(4 − x²)²dx = π∫₋₂²(16 − 8x² + x⁴)dx = π[16x − 8x³/3 + x⁵/5]₋₂². At x = 2 the bracket is 32 − 64/3 + 32/5 = (480 − 320 + 96)/15 = 256/15, and the even integrand doubles it: V = 512π/15 cubic units (≈ 107.2).\n\n256π/15 integrates from 0 to 2 only; 32π/3 forgets to square the radius; 128π/15 has the sign of the x⁵/5 term wrong, 32 − 64/3 − 32/5."
+        },
+        {
+          "type": "mcq",
+          "q": "The region enclosed by y = 3x and y = x² is revolved about the y-axis. Use the shell method to find the volume.",
+          "options": [
+            "27π/4",
+            "27π/2",
+            "9π",
+            "−27π/2"
+          ],
+          "answerIndex": 1,
+          "concept": "Shell method for a region between two curves",
+          "why": "Limits: 3x = x² gives x(x − 3) = 0, so x = 0 and x = 3. On (0, 3) the line is on top (at x = 1: 3 > 1), so the strip height is 3x − x² and its radius is x. V = 2π∫₀³x(3x − x²)dx = 2π∫₀³(3x² − x³)dx = 2π[x³ − x⁴/4]₀³ = 2π(27 − 81/4) = 2π(27/4) = 27π/2 cubic units.\n\n27π/4 uses π instead of 2π; 9π leaves out the radius x, 2π∫(3x − x²)dx; −27π/2 takes the height as x² − 3x, bottom minus top."
+        },
+        {
+          "type": "mcq",
+          "q": "The region bounded by y = x³, the y-axis and the line y = 8 is revolved about the y-axis. Find the volume.",
+          "options": [
+            "12π",
+            "128π/7",
+            "32π",
+            "96π/5"
+          ],
+          "answerIndex": 3,
+          "concept": "Disc method in y after inverting the curve",
+          "why": "The axis is the y-axis, so write the curve as x = y^(1/3); the radius at height y is R(y) = y^(1/3) and y runs from 0 to 8. V = π∫₀⁸(y^(1/3))²dy = π∫₀⁸y^(2/3)dy = π[3y^(5/3)/5]₀⁸ = π(3/5)(8^(5/3)) = π(3/5)(32) = 96π/5 cubic units (≈ 60.3).\n\n12π integrates y^(1/3) without squaring it, π(3/4)(16); 128π/7 is π∫₀²(x³)²dx, the volume about the x-axis instead; 32π forgets the factor 3/5 from integrating y^(2/3)."
+        },
+        {
+          "type": "mcq",
+          "q": "The region under y = x², above the x-axis, from x = 0 to x = 1 is revolved about the line y = −1. Find the volume.",
+          "options": [
+            "13π/15",
+            "π/5",
+            "28π/15",
+            "−7π/15"
+          ],
+          "answerIndex": 0,
+          "concept": "Washer about a shifted horizontal axis",
+          "why": "Radii are distances from y = −1: R(x) = x² − (−1) = x² + 1 and r(x) = 0 − (−1) = 1. V = π∫₀¹[(x² + 1)² − 1²]dx = π∫₀¹(x⁴ + 2x² + 1 − 1)dx = π∫₀¹(x⁴ + 2x²)dx = π[x⁵/5 + 2x³/3]₀¹ = π(1/5 + 2/3) = 13π/15 cubic units.\n\nπ/5 ignores the shift and rotates about the x-axis; 28π/15 shifts the outer radius but leaves r = 0, filling a hole that is there; −7π/15 shifts the wrong way, using R = x² − 1."
+        },
+        {
+          "type": "mcq",
+          "q": "The region under y = x², above the x-axis, from x = 0 to x = 2 is revolved about the y-axis. Use the washer method, integrating in y, to find the volume.",
+          "options": [
+            "16π",
+            "8π/3",
+            "8π",
+            "−8π"
+          ],
+          "answerIndex": 2,
+          "concept": "Washer in y with the inner radius from the inverted curve",
+          "why": "At height y the region runs from the curve x = √y out to the line x = 2, so R(y) = 2 and r(y) = √y, with y from 0 to 4 (the curve reaches y = 2² = 4). V = π∫₀⁴[2² − (√y)²]dy = π∫₀⁴(4 − y)dy = π[4y − y²/2]₀⁴ = π(16 − 8) = 8π cubic units. The shell method gives the same: 2π∫₀²x·x²dx = 2π(4) = 8π.\n\n16π forgets to subtract the inner radius; 8π/3 integrates (2 − √y)², the difference squared; −8π swaps the two radii."
+        },
+        {
+          "type": "mcq",
+          "q": "The region between y = x² and y = 2x for 0 ≤ x ≤ 2 is revolved about the x-axis. A student writes V = π∫₀²(2x − x²)²dx. Which single error has been made?",
+          "options": [
+            "The limits should be −2 and 2",
+            "(R − r)² has been used in place of R² − r²",
+            "π should be 2π",
+            "R and r have been swapped"
+          ],
+          "answerIndex": 1,
+          "concept": "Why the washer subtracts squares",
+          "why": "The cross-section is an annulus of area πR² − πr², so the integrand must be R² − r² = (2x)² − (x²)² = 4x² − x⁴, giving 64π/15. Squaring the difference gives (2x − x²)² = 4x² − 4x³ + x⁴, a different and smaller integrand, giving 16π/15.\n\nThe limits 0 and 2 are right (the curves meet at x = 0 and x = 2); π is correct for a washer; 2x ≥ x² on [0, 2], so R = 2x and r = x² are in the right order."
         },
         {
           "type": "short",
-          "q": "Work Disc Example 2 in full: revolve the region between x = y² + 1 and x = 3 about the line x = 3. Find the limits, state the radius, and evaluate — showing the powers of √2 explicitly.",
-          "concept": "A disc integral in y, start to finish, with irrational limits",
-          "why": "A good answer follows her order. Limits first: set y² + 1 = 3, so y² = 2 and y = ±√2, giving a = −√2, b = √2. Radius next: the axis is the vertical line x = 3, so the radius at height y is the horizontal distance R(y) = 3 − (y² + 1) = 2 − y². Then V = π∫₋√2^√2 (2 − y²)²dy = π∫₋√2^√2 (4 − 4y² + y⁴)dy, and the antiderivative is 4y − 4y³/3 + y⁵/5. The powers must be shown: (√2)³ = 2√2 and (√2)⁵ = 4√2, so at y = √2 the bracket is 4√2 − 8√2/3 + 4√2/5 = √2(60 − 40 + 12)/15 = 32√2/15. Since every term is odd in y, the value at −√2 is −32√2/15, and subtracting doubles the total: V = 64√2π/15 cubic units. Two things to flag: the slide misprints the expanded integrand as [(4 − 4y² + y⁴)]², with a square that must be dropped once the bracket is expanded; and the problem statement stops at 'about the line' without naming it, which the radius 2 − y² settles as x = 3."
+          "q": "The region under y = x², above the x-axis, from x = 0 to x = 1 is revolved about the line y = 1. Find the volume. Show your working.",
+          "concept": "Washer about an axis above the region",
+          "why": "Radii are distances from the line y = 1. The boundary farther from that line is the x-axis, at distance 1 − 0 = 1, so R(x) = 1; the nearer boundary is the curve, at distance 1 − x², so r(x) = 1 − x². V = π∫₀¹[1² − (1 − x²)²]dx = π∫₀¹[1 − (1 − 2x² + x⁴)]dx = π∫₀¹(2x² − x⁴)dx = π[2x³/3 − x⁵/5]₀¹ = π(2/3 − 1/5) = 7π/15.\n\nFinal answer: 7π/15 cubic units (also accepted: 1.47). A correct answer identifies R = 1 and r = 1 − x² as distances from y = 1, subtracts the squares and evaluates. π∫₀¹(x² + 1)²dx − π = 13π/15 shifts the wrong way (that is the solid about y = −1); π∫x⁴dx = π/5 ignores the shift."
         },
         {
           "type": "short",
-          "q": "Work the shell TASK in full: rotate about the y-axis the region between y = x and y = x². Show how you get the limits and the strip height.",
-          "concept": "Shell method on a region bounded by two curves",
-          "why": "A good answer solves for the limits rather than reading them off: x = x² gives x(1 − x) = 0, so a = 0 and b = 1. It then identifies the strip: vertical, at distance x from the y-axis, so the radius is x; running from the lower boundary y = x² up to the upper boundary y = x, so the height is f(x) = x − x² — positive throughout (0,1), which confirms the ordering. Then V = 2π∫₀¹ x(x − x²)dx = 2π∫₀¹ (x² − x³)dx = 2π[x³/3 − x⁴/4]₀¹ = 2π(4 − 3)/12 = 2π/12 = π/6 cubic units. It should note that her formula 2π∫x f(x)dx is stated for a single f, but f is really the height of the strip — exactly as in her Shell Example 2, where f(y) = 1 − y² is also a difference of two boundaries. Common losses: multiplying by 2π but forgetting the radius x, which gives π/3; or squaring the height, which the shell formula never does."
+          "q": "The region under y = x, above the x-axis, from x = 0 to x = 1 is revolved about the x-axis. Find the volume by the shell method (integrating in y), then confirm it by the disc method. Show your working.",
+          "concept": "Cross-checking a volume by two methods",
+          "why": "Shells: the axis is the x-axis, so the strips are horizontal at height y, with radius y. The strip runs from the line x = y to the edge x = 1, so its length is f(y) = 1 − y, and y runs from 0 to 1. V = 2π∫₀¹y(1 − y)dy = 2π∫₀¹(y − y²)dy = 2π[y²/2 − y³/3]₀¹ = 2π(1/2 − 1/3) = 2π(1/6) = π/3. Discs: R(x) = x, so V = π∫₀¹x²dx = π[x³/3]₀¹ = π/3. The two agree, as they must, since they measure the same cone.\n\nFinal answer: π/3 cubic units by both methods (also accepted: 1.05). The working must show f(y) = 1 − y, the 2π, and the disc integral π∫x²dx. 2π∫₀¹y·y dy = 2π/3 takes the strip length as y instead of 1 − y and is wrong."
         },
         {
           "type": "short",
-          "q": "Evaluate π∫₀^√3 (9 − y⁴)dy by hand, showing the power of √3, and say where each of the 9 and the y⁴ came from in Washer Example 2.",
-          "concept": "Washer arithmetic with an irrational limit, traced back to the radii",
-          "why": "A good answer sources the integrand first: revolving about the y-axis, the far boundary is the vertical line x = 3, so R(y) = 3 and [R(y)]² = 9 — a constant, because a vertical line is the same distance from the y-axis at every height. The near boundary is the parabola x = y², so r(y) = y² and [r(y)]² = y⁴. Hence the integrand 9 − y⁴. The limit comes from y² = 3, so y = √3. Then the antiderivative is 9y − y⁵/5, and at y = √3 we need (√3)⁵ = (√3)⁴·√3 = 9√3, giving 9√3 − 9√3/5 = (45√3 − 9√3)/5 = 36√3/5; the lower limit gives 0. So V = 36√3π/5 cubic units. It is worth saying that a constant R is normal and not a sign of error, and that 3 must not be used as the upper limit — 3 is an x-value and the integration is in y."
+          "q": "The region enclosed by y = x² and y = x + 2 is revolved about the x-axis. Find the volume. Show your working.",
+          "concept": "Washer with limits from the intersection of two curves",
+          "why": "Boundaries: x² = x + 2 gives x² − x − 2 = (x − 2)(x + 1) = 0, so x = −1 and x = 2. On (−1, 2) the line is farther from the x-axis (at x = 0: 2 > 0), so R(x) = x + 2 and r(x) = x². V = π∫₋₁²[(x + 2)² − (x²)²]dx = π∫₋₁²(x² + 4x + 4 − x⁴)dx = π[x³/3 + 2x² + 4x − x⁵/5]₋₁². At x = 2 the bracket is 8/3 + 8 + 8 − 32/5 = 184/15; at x = −1 it is −1/3 + 2 − 4 + 1/5 = −32/15. V = π(184/15 + 32/15) = 216π/15 = 72π/5.\n\nFinal answer: 72π/5 cubic units (also accepted: 14.4π or 45.2). A correct answer finds the limits by solving x² = x + 2, identifies R = x + 2 and r = x², subtracts the squares and evaluates at both limits, remembering that subtracting −32/15 adds. π(184/15 − 32/15) = 152π/15 has that sign wrong; using (x + 2 − x²)² as the integrand squares the difference and is wrong."
         },
         {
           "type": "short",
-          "q": "Shell Example 2 finds the volume of the solid from rotating the region under y = √x on [0, 1] about the x-axis, and gets π/2. Compute the same volume by her disc formula instead, and say what the agreement proves.",
-          "concept": "Cross-checking one solid with two of the deck's three formulas",
-          "why": "A good answer does both. By shells: x = y² so the horizontal strip at height y runs from x = y² across to x = 1, giving f(y) = 1 − y², radius y, limits 0 to 1, and V = 2π∫₀¹ y(1 − y²)dy = 2π∫₀¹(y − y³)dy = 2π[y²/2 − y⁴/4]₀¹ = 2π(1/2 − 1/4) = π/2. By discs: the axis is the x-axis and the region touches it along the whole interval, so each vertical slice is a full circle of radius R(x) = √x, and V = π∫₀¹[√x]²dx = π∫₀¹ x dx = π[x²/2]₀¹ = π/2. The agreement proves the two formulas describe the same solid rather than two different ones — the disc slices it perpendicular to the axis, the shell slices it parallel, and both must total the same volume. Since the deck gives no answers to its TASKs, doing a solid both ways is the only self-check available; it catches a dropped 2π, a missing square, or a wrongly inverted boundary immediately."
+          "q": "The region under y = x (0 ≤ x ≤ 1, above the x-axis) is revolved about the y-axis. A student writes V = π∫₀¹x²dx = π/3. Explain what solid that integral really measures, and set up a correct integral.",
+          "concept": "Matching the formula to the axis of revolution",
+          "why": "π∫ₐᵇ[f(x)]²dx is the disc formula for revolution about the x-axis: it stacks discs of radius f(x) = x along the x-axis, so π/3 is the volume of the cone made by spinning the region about the x-axis, not the y-axis. For the y-axis, either integrate along that axis with washers in y, where at height y the region runs from x = y to x = 1, giving V = π∫₀¹(1² − y²)dy = 2π/3, or use shells in x with radius x and height x, giving V = 2π∫₀¹x·x dx = 2π/3. Both give 2π/3, which is not π/3.\n\nA correct answer says the student's integral is the disc formula about the x-axis, and gives either π∫₀¹(1 − y²)dy or 2π∫₀¹x²dx (value 2π/3) for the y-axis."
         }
       ]
     },
@@ -771,131 +775,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "A 50-turn coil of area 4.0×10⁻³ m² has its plane perpendicular to a uniform field that rises steadily from 0.20 T to 0.80 T in 0.30 s. The magnitude of the induced emf is:",
+          "q": "A 120-turn circular coil of diameter 6.0 cm and total resistance 1.5 Ω has its plane perpendicular to a uniform field that rises at a steady 2.5 T/s. What current flows in the coil?",
           "options": [
-            "8.0×10⁻³ V",
-            "0.12 V",
-            "0.40 V",
-            "0.53 V"
+            "0.85 A",
+            "2.3 A",
+            "0.57 A",
+            "4.7 × 10⁻³ A"
           ],
           "answerIndex": 2,
-          "concept": "ε = N·A·dB/dt — use the RATE of change of B, and do not drop the number of turns.",
-          "why": "dB/dt = 0.60/0.30 = 2.0 T/s, so ε = 50 × 4.0×10⁻³ × 2.0 = 0.40 V."
+          "concept": "Induced current from a rate of change of B",
+          "why": "Radius 3.0 cm = 0.030 m, so A = π(0.030)² = 2.83 × 10⁻³ m². Plane perpendicular to B means θ = 0. ε = NA dB/dt = (120)(2.83 × 10⁻³)(2.5) = 0.848 V, and I = ε/R = 0.848/1.5 = 0.57 A.\n\n0.85 A is the emf quoted as a current, R never used; 2.3 A uses the 6.0 cm diameter as the radius, four times the area; 4.7 × 10⁻³ A forgets N."
         },
         {
           "type": "mcq",
-          "q": "A flat loop of area 0.020 m² sits in a uniform 0.50 T field with the *plane of the loop* inclined at 30° to the field. The flux through the loop is:",
+          "q": "A 25-turn square coil of side 12 cm sits in a uniform field of 0.60 T with the plane of the coil at 40° to the field. What is the flux linkage NΦ?",
           "options": [
-            "5.0×10⁻³ Wb",
-            "8.7×10⁻³ Wb",
-            "1.0×10⁻² Wb",
-            "zero, because B is not perpendicular to the loop"
+            "0.14 Wb",
+            "0.17 Wb",
+            "0.22 Wb",
+            "5.6 × 10⁻³ Wb"
           ],
           "answerIndex": 0,
-          "concept": "θ in BA cos θ is measured from the normal, so a plane at 30° to B means θ = 60°.",
-          "why": "Φ = BA cos60° = 0.50 × 0.020 × 0.500 = 5.0×10⁻³ Wb; using cos30° gives the wrong 8.7×10⁻³ Wb."
+          "concept": "Flux linkage with the angle given to the plane",
+          "why": "The plane is at 40° to B, so the normal is at 90° − 40° = 50°. A = (0.12)² = 1.44 × 10⁻² m². Φ = BA cos 50° = (0.60)(1.44 × 10⁻²)(0.643) = 5.55 × 10⁻³ Wb per turn, and NΦ = 25 × 5.55 × 10⁻³ = 0.139 Wb, about 0.14 Wb.\n\n0.17 Wb uses cos 40°, the angle from the plane; 0.22 Wb is NBA with the angle ignored; 5.6 × 10⁻³ Wb is the flux through one turn, N forgotten."
         },
         {
           "type": "mcq",
-          "q": "A rod of length 0.50 m slides on rails at 4.0 m/s perpendicular to a 0.30 T field, the field being perpendicular to the plane of the circuit. The circuit's total resistance is 2.0 Ω. The induced current is:",
+          "q": "A rod sliding on rails in a uniform field needs an applied force of 0.30 N to keep it moving at a steady 2.0 m/s against the induced current's retarding force. If it is instead kept moving at 6.0 m/s, what force is needed and what mechanical power is supplied?",
           "options": [
-            "0.15 A",
-            "0.30 A",
-            "0.60 A",
-            "1.2 A"
-          ],
-          "answerIndex": 1,
-          "concept": "Motional emf ε = BLv followed by Ohm's law I = ε/R.",
-          "why": "ε = 0.30 × 0.50 × 4.0 = 0.60 V, so I = 0.60/2.0 = 0.30 A (0.60 is the emf in volts, not the current)."
-        },
-        {
-          "type": "mcq",
-          "q": "The rod in question 3 is now pulled at 8.0 m/s instead of 4.0 m/s, everything else unchanged. The retarding magnetic force on the rod and the power dissipated in the resistance, respectively:",
-          "options": [
-            "both double",
-            "the force doubles, the power quadruples",
-            "the force quadruples, the power doubles",
-            "both quadruple"
-          ],
-          "answerIndex": 1,
-          "concept": "Scaling of F = B²L²v/R (linear in v) against P = B²L²v²/R = Fv (quadratic in v).",
-          "why": "ε, I and hence F = BIL all scale as v, but the power P = Fv carries a second factor of v, so it goes as v²."
-        },
-        {
-          "type": "mcq",
-          "q": "A 200-turn coil of area 0.015 m² rotates at 60 revolutions per second in a uniform 0.40 T field, about an axis perpendicular to the field. The peak emf is about:",
-          "options": [
-            "72 V",
-            "320 V",
-            "452 V",
-            "2840 V"
-          ],
-          "answerIndex": 2,
-          "concept": "ε_peak = NBAω with ω = 2πf in rad/s — the commonest slip is using f in place of ω.",
-          "why": "ω = 2π(60) = 377 rad/s, so ε_peak = 200 × 0.40 × 0.015 × 377 = 4.5×10² V ≈ 452 V (72 V comes from using f directly)."
-        },
-        {
-          "type": "mcq",
-          "q": "For the generator of question 5, the rms emf is about:",
-          "options": [
-            "226 V",
-            "320 V",
-            "452 V",
-            "640 V"
-          ],
-          "answerIndex": 1,
-          "concept": "ε_rms = ε_peak/√2 for a sinusoidal output — not half the peak, and not √2 times it.",
-          "why": "452/√2 = 320 V; 226 V would be half the peak and 640 V would be √2 times it."
-        },
-        {
-          "type": "mcq",
-          "q": "The flux through each turn of a 100-turn coil of total resistance 20 Ω is changed by 0.040 Wb. The total charge that circulates round the coil is:",
-          "options": [
-            "0.20 C, but only if the change takes exactly 1.0 s; proportionally more if it is faster",
-            "2.0 C, whatever the duration of the change",
-            "0.20 C, whatever the duration of the change",
-            "indeterminate unless the time taken for the change is given"
-          ],
-          "answerIndex": 2,
-          "concept": "q = ∫I dt = N|ΔΦ|/R contains no time — a faster change gives a larger current for a shorter time.",
-          "why": "q = 100 × 0.040/20 = 0.20 C, independent of how long the flux change takes."
-        },
-        {
-          "type": "mcq",
-          "q": "A rod slides to the right along horizontal rails, so that the circuit's enclosed area is increasing; the uniform field is directed into the page. Which is correct?",
-          "options": [
-            "The induced current is clockwise, and the magnetic force on the rod points left, opposing the motion.",
-            "The induced current is counterclockwise, and the magnetic force on the rod points right, aiding the motion.",
-            "The induced current is clockwise, and the force on the rod is zero, since it carries current parallel to B.",
-            "The induced current is counterclockwise, and the magnetic force on the rod points left, opposing the motion."
+            "0.90 N and 1.8 W",
+            "2.7 N and 16 W",
+            "0.30 N and 1.8 W",
+            "0.90 N and 5.4 W"
           ],
           "answerIndex": 3,
-          "concept": "Fixing the sense of the induced current from Lenz's law, then checking that F = BIL comes out opposing the motion.",
-          "why": "Into-page flux is increasing, so the induced field inside the loop is out of the page — a counterclockwise current — and the resulting force on the rod necessarily retards it."
+          "concept": "Scaling of retarding force and power with speed",
+          "why": "F = B²L²v/R is proportional to v, so tripling the speed triples the force: F = 3 × 0.30 = 0.90 N. Power P = Fv = (0.90)(6.0) = 5.4 W, nine times the original 0.60 W, because P = B²L²v²/R goes as v².\n\n'0.90 N and 1.8 W' scales the power with v instead of v²; '2.7 N and 16 W' scales the force with v² instead of v; '0.30 N and 1.8 W' assumes the force does not depend on speed at all."
+        },
+        {
+          "type": "mcq",
+          "q": "A coil of 250 turns and area 0.012 m² rotates at 1200 revolutions per minute in a uniform field of 0.30 T, about an axis perpendicular to the field. What rms emf does it deliver?",
+          "options": [
+            "18 V",
+            "80 V",
+            "113 V",
+            "1.1 × 10³ V"
+          ],
+          "answerIndex": 1,
+          "concept": "Rms emf of a generator from its rotation rate",
+          "why": "f = 1200/60 = 20 Hz, so ω = 2πf = 125.7 rad/s. ε_peak = NBAω = (250)(0.30)(0.012)(125.7) = 113 V. ε_rms = ε_peak/√2 = 113/1.414 = 80 V.\n\n18 V uses f = 20 in place of ω, missing the 2π; 113 V is the peak, not the rms; 1.1 × 10³ V uses 1200 rev/min directly as ω."
+        },
+        {
+          "type": "mcq",
+          "q": "An 80-turn coil of area 3.0 × 10⁻³ m² and total resistance 4.0 Ω starts face-on to a uniform field of 0.50 T and is flipped right over (through 180°) in 0.10 s. How much charge circulates?",
+          "options": [
+            "0.060 C",
+            "0.030 C",
+            "0.60 C",
+            "7.5 × 10⁻⁴ C"
+          ],
+          "answerIndex": 0,
+          "concept": "Charge circulated when a coil is flipped",
+          "why": "Flipping reverses the flux from +BA to −BA, so |ΔΦ| = 2BA = 2(0.50)(3.0 × 10⁻³) = 3.0 × 10⁻³ Wb. q = N|ΔΦ|/R = (80)(3.0 × 10⁻³)/4.0 = 0.24/4.0 = 0.060 C. The 0.10 s plays no part.\n\n0.030 C uses ΔΦ = BA, forgetting that a flip doubles the change; 0.60 C is the average current (0.24/0.10/4.0) reported as a charge; 7.5 × 10⁻⁴ C forgets N."
+        },
+        {
+          "type": "mcq",
+          "q": "A generator coil has a peak emf of 60 V. What is the instantaneous emf at the moment when the normal to the coil makes 30° with the field?",
+          "options": [
+            "52 V",
+            "60 V",
+            "42 V",
+            "30 V"
+          ],
+          "answerIndex": 3,
+          "concept": "Instantaneous emf of a rotating coil",
+          "why": "Φ = BA cos ωt gives ε = ε_peak sin ωt, and ωt is the angle between the normal and B. So ε = 60 sin 30° = 60 × 0.50 = 30 V.\n\n52 V uses cos 30°, which is the flux's factor, not the emf's; 60 V assumes the emf is at its peak, which happens at 90°, when the flux is zero; 42 V is the rms value, which is not an instantaneous emf at all."
+        },
+        {
+          "type": "mcq",
+          "q": "A rod slides along horizontal rails so that the area enclosed by the circuit is decreasing. The uniform field is directed into the page. As seen by the reader, the induced current in the circuit is:",
+          "options": [
+            "Anticlockwise; the induced field points out of the page",
+            "Anticlockwise; the induced field points into the page",
+            "Clockwise; the induced field points into the page",
+            "Zero; the field itself is not changing"
+          ],
+          "answerIndex": 2,
+          "concept": "Current sense for a rod on rails",
+          "why": "The flux into the page is decreasing because the area is shrinking, so the induced field inside the loop must replace what is being lost: it points into the page. Grip rule, thumb into the page: the current is clockwise.\n\n'Anticlockwise; out of the page' is the answer for an increasing area, opposing the field rather than the change; 'anticlockwise; into the page' has the grip rule backwards; 'zero' forgets that changing area changes flux just as well as changing B does."
+        },
+        {
+          "type": "mcq",
+          "q": "A conducting rod moves at steady speed across a uniform field, but the rails it rests on are not connected to each other, so the circuit is open. Which of the following are non-zero?",
+          "options": [
+            "Emf only",
+            "Emf and current",
+            "Current and retarding force",
+            "None of them"
+          ],
+          "answerIndex": 0,
+          "concept": "Emf without a closed circuit",
+          "why": "The motional emf BLv exists across the rod's ends whether or not the circuit is closed: charges are pushed to the ends until their electric field balances the magnetic push. With no closed path there is no current, and with no current there is no magnetic force BIL on the rod, so it slides freely.\n\n'Emf and current' needs a closed circuit; 'current and retarding force' both need current; 'none' forgets that the emf is there regardless, and would light nothing only because nothing is connected."
         },
         {
           "type": "short",
-          "q": "The flux through a coil goes from 0 to 0.30 Wb in 0.20 s, but not at a uniform rate. State what N|ΔΦ|/Δt gives you here, what it cannot tell you, and describe one situation in which the instantaneous emf would be many times larger than that figure.",
-          "concept": "Average emf N|ΔΦ|/Δt versus instantaneous emf N dΦ/dt.",
-          "why": "N|ΔΦ|/Δt gives only the AVERAGE emf over the 0.20 s (1.5 V per turn here); it says nothing about the emf at any particular instant, nor about the peak. If almost all of the flux change is squeezed into a few milliseconds — a switch opened, or a magnet snatched away at the end of the interval — the instantaneous dΦ/dt over that short window, and hence ε, is many times the average."
+          "q": "A 120-turn coil of area 6.0 × 10⁻³ m², resistance 4.0 Ω, has its normal along a uniform field that falls steadily from 0.80 T to 0.20 T in 0.30 s. Calculate the emf, the current and the charge that circulates, and give the direction of the induced field inside the coil relative to the original field. Show your working.",
+          "concept": "Faraday's law chained to current, charge and direction",
+          "why": "|ΔΦ| = ΔB × A = (0.80 − 0.20)(6.0 × 10⁻³) = 3.6 × 10⁻³ Wb per turn; N|ΔΦ| = 120 × 3.6 × 10⁻³ = 0.432 Wb. ε = N|ΔΦ|/Δt = 0.432/0.30 = 1.44 V. I = ε/R = 1.44/4.0 = 0.36 A. q = N|ΔΦ|/R = 0.432/4.0 = 0.108 C (check: I × Δt = 0.36 × 0.30 = 0.108 C, equal because the rate is uniform). The flux is decreasing, so by Lenz's law the induced field inside the coil points in the same direction as the original field, to maintain the flux being lost.\n\nFinal answer: 1.4 V (accept 1.4 to 1.5), 0.36 A (accept 0.35 to 0.37), 0.11 C (accept 0.10 to 0.11), induced field along the original B. 'Opposite to B' is the answer for an increasing field and is wrong here; 0.012 V forgot N."
         },
         {
           "type": "short",
-          "q": "For the rod of question 3 (B = 0.30 T, L = 0.50 m, v = 4.0 m/s, R = 2.0 Ω), work out the retarding force and show numerically that the mechanical power supplied equals the electrical power dissipated. Explain why this equality would fail if the induced current ran the other way.",
-          "concept": "Energy bookkeeping in the sliding-rod circuit: P_mech = Fv = I²R.",
-          "why": "ε = BLv = 0.60 V, I = 0.30 A, F = BIL = 0.30 × 0.30 × 0.50 = 0.045 N. Mechanical power = Fv = 0.045 × 4.0 = 0.18 W; electrical power = I²R = (0.30)² × 2.0 = 0.18 W — equal. If the current ran the other way, the force would drive the rod forward instead of retarding it, so the rod would gain kinetic energy while ALSO dissipating 0.18 W of heat, with nothing supplying either."
+          "q": "A rod of length 0.60 m and mass 0.20 kg moves at 5.0 m/s on frictionless horizontal rails in a vertical 0.40 T field; circuit resistance 0.30 Ω. Calculate the emf, the current and the retarding force. The applied force is then removed; calculate the rod's initial deceleration. Show your working.",
+          "concept": "Retarding force and deceleration of a released rod",
+          "why": "ε = BLv = (0.40)(0.60)(5.0) = 1.2 V. I = ε/R = 1.2/0.30 = 4.0 A. F = BIL = (0.40)(4.0)(0.60) = 0.96 N, directed against the motion (equivalently F = B²L²v/R = (0.16)(0.36)(5.0)/0.30 = 0.96 N). With no applied force this is the only horizontal force, so a = F/m = 0.96/0.20 = 4.8 m/s², slowing the rod. As v falls, F falls with it, so the deceleration shrinks and the rod slows exponentially rather than stopping dead.\n\nFinal answer: 1.2 V, 4.0 A, 0.96 N (accept 0.94 to 0.98), deceleration 4.8 m/s² (accept 4.7 to 4.9). A correct answer states that the force opposes the motion. 0.24 N used the emf as the current; 2.4 m/s² or 9.6 m/s² has a factor of 2 slip in F/m."
         },
         {
           "type": "short",
-          "q": "A student doubles the number of turns on a coil in a given changing field, using the same wire, so that the coil's resistance doubles too. Explain what happens to the induced emf, to the induced current, and to the charge circulated by a given flux change, and why those three answers are not all the same.",
-          "concept": "How N enters ε = N dΦ/dt, I = ε/R and q = NΔΦ/R when R itself scales with N.",
-          "why": "The emf doubles, since ε = N dΦ_B/dt is proportional to N. The current does NOT change: I = ε/R has both numerator and denominator doubled. The charge q = N|ΔΦ|/R likewise stays the same, for the same reason. The emf depends on N alone, while the current and charge depend on the ratio N/R, which the extra turns leave untouched."
+          "q": "A generator coil of area 0.040 m² is to give a peak emf of 100 V at 50 Hz in a uniform field of 0.20 T. Calculate the number of turns needed, the rms emf it will deliver, and the instantaneous emf at the moment the plane of the coil is parallel to the field. Show your working.",
+          "concept": "Designing a generator coil",
+          "why": "ω = 2πf = 2π(50) = 314 rad/s. ε_peak = NBAω, so N = ε_peak/(BAω) = 100/((0.20)(0.040)(314)) = 100/2.51 = 39.8, so 40 turns. ε_rms = ε_peak/√2 = 100/1.414 = 70.7 V. When the plane of the coil is parallel to B the normal is at 90° to B, the flux is zero and passing through zero fastest, so ε = ε_peak sin 90° = 100 V.\n\nFinal answer: 40 turns (accept 39 to 40), 71 V (accept 70 to 71), 100 V. A correct answer converts f to ω with 2π, rounds N to a whole number, and recognises that plane parallel to B is the maximum-emf position, not zero. 250 turns used f in place of ω; 0 V for the last part confuses zero flux with zero emf."
         },
         {
           "type": "short",
-          "q": "A generator's rotation frequency is doubled, with the same coil and the same field. State what happens to ε_peak, to ε_rms, and to the average emf over one complete cycle, and explain why one of those three answers is different in kind from the other two.",
-          "concept": "ε_peak = NBAω ∝ f and ε_rms = ε_peak/√2 ∝ f, but the mean of a full sine cycle is identically zero.",
-          "why": "ε_peak = NBAω = 2πfNBA doubles, and ε_rms = ε_peak/√2 doubles with it. The average over one complete cycle is zero both before and after, because ε = ε_peak sin(ωt) spends equal time positive and negative and the two halves cancel exactly. That is why rms, not the plain average, is the useful measure of an a.c. output."
+          "q": "A generator produces a sinusoidal emf with a peak value of 100 V. A student writes that 'the average emf over one cycle is 70.7 V'. Explain what 70.7 V actually is, what the true average of the emf over a full cycle is, and why that average is useless for describing the output.",
+          "concept": "Peak, rms and average emf",
+          "why": "70.7 V is the rms (root mean square) value, ε_peak/√2: the steady d.c. voltage that would deliver the same power to a resistor, and what an a.c. meter reads. It is not an average of the emf. The emf ε = ε_peak sin ωt spends half of each cycle positive and half negative, so its true average over a full cycle is zero. Zero is useless because it says nothing about how much power the generator can deliver; power depends on ε², which is positive throughout the cycle, and the rms value is exactly the square root of the mean of ε².\n\nA correct answer identifies 70.7 V as rms, states the full-cycle average is zero because of the sign change, and says the rms is used because power depends on the square of the emf."
         }
       ]
     },
@@ -908,131 +912,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Consider this module:\n\n```\nmodule AccountUtils:\n    validate_email(address)\n    compute_payroll_tax(employee, year)\n    send_confirmation_email(user)\n    resize_avatar_image(file, width, height)\n```\n\nThe best diagnosis is:",
+          "q": "Which module has the lowest cohesion?\n\n```\nmodule Cart:     add_item, remove_item, cart_total\nmodule Auth:     login, logout, reset_password\nmodule Helpers:  format_date, send_sms, compute_tax, resize_image\nmodule Reports:  daily_sales, monthly_sales, export_csv\n```",
           "options": [
-            "High cohesion and high coupling, because all four functions concern users",
-            "Low coupling, therefore high cohesion, since the two always move together",
-            "Acceptable cohesion, because each individual function has a single responsibility",
-            "Low cohesion, because the functions do not work together towards one ultimate aim of the module, whatever their coupling to other modules"
-          ],
-          "answerIndex": 3,
-          "concept": "Judging cohesion from a module's function list",
-          "why": "Cohesion asks whether the functions in the module work together towards the module's ultimate aim; these four do not, and cohesion is judged independently of coupling. Option d confuses per-function responsibility with module cohesion."
-        },
-        {
-          "type": "mcq",
-          "q": "```\nmodule Inventory:\n    stock_level = { }          # sku -> integer\n\nmodule OrderProcessor:\n    place_order(sku, n):\n        Inventory.stock_level[sku] = Inventory.stock_level[sku] - n\n        ...\n```\n\nWhich judgement is correct?",
-          "options": [
-            "Coupling is low, because `OrderProcessor` calls no function of `Inventory`",
-            "Coupling is high, because `OrderProcessor` depends on `Inventory`'s internal data structure before it can perform its function, which is exactly what information hiding forbids",
-            "Cohesion of `Inventory` is low, because it stores data instead of performing functions",
-            "This is good vertical partitioning: `OrderProcessor` decides and `Inventory` merely holds data"
+            "Cart",
+            "Helpers",
+            "Auth",
+            "Reports"
           ],
           "answerIndex": 1,
-          "concept": "Coupling through a shared data structure; information hiding",
-          "why": "Calling no function is not independence: reaching into another module's data structure is the strongest form of dependence, and the deck forbids one module accessing another's data structures and processing details."
+          "concept": "Judging cohesion from a function list",
+          "why": "Cohesion is the extent to which the functions in a module work together towards one aim. Cart's three functions all manage the cart, Auth's all manage sign-in, Reports' all produce sales reports. Helpers' four functions (dates, SMS, tax, images) serve four unrelated aims, so it has the lowest cohesion.\n\nPicking Cart, Auth or Reports mistakes 'has several functions' for low cohesion; the test is whether the functions share an aim, not how many there are."
         },
         {
           "type": "mcq",
-          "q": "A component performing four weakly related functions is split into four high-cohesion components. Using only what the decks state, what does this buy and what does it cost?",
+          "q": "Which line couples Orders to the internal data structure of Stock?\n\n```\n1 module Stock:\n2     levels = {}                      # sku -> units\n3     reserve(sku, n): levels[sku] = levels[sku] - n\n4\n5 module Orders:\n6     place(sku, n):\n7         if Stock.levels[sku] >= n:\n8             Stock.reserve(sku, n)\n```",
           "options": [
-            "Buys easier integration, testing and maintenance; costs possible longer execution time, larger storage, longer compilation and loading, and more inter-module communication",
-            "Buys reduced execution time and smaller storage; costs a loss of information hiding",
-            "Buys lower coupling automatically; costs nothing, since external behaviour is unchanged",
-            "Buys easier testing; costs a violation of the single responsibility principle, since responsibility is now spread across four modules"
-          ],
-          "answerIndex": 0,
-          "concept": "Refactoring payoff weighed against the disadvantages of modularisation",
-          "why": "The payoff is the deck's refactoring example; the price is its list of modularisation disadvantages. Coupling is not automatically lowered by splitting, and four single-responsibility modules honour the principle rather than violating it."
-        },
-        {
-          "type": "mcq",
-          "q": "```\nmodule ReportRunner:                  # top of the hierarchy\n    run():\n        rows = read_csv(\"sales.csv\")\n        totals = sum_by_region(rows)\n        print_table(totals)\n\nmodule Constants:                     # bottom of the hierarchy\n    REGIONS = [...]\n```\n\nJudged against the deck's description of vertical partitioning, the defect is:",
-          "options": [
-            "None: the top module correctly communicates between functions and executes them",
-            "`Constants` should be at the top, since values are decided before they are used",
-            "The top-level control module is doing all the input, computation and output, which the deck assigns to low-level worker modules; the top should be deciding and processing little",
-            "The hierarchy is too shallow, so horizontal partitioning should be used instead"
+            "Line 8",
+            "Line 3",
+            "Line 7",
+            "Lines 7 and 8"
           ],
           "answerIndex": 2,
-          "concept": "Applying vertical partitioning to a hierarchy",
-          "why": "Vertical partitioning puts decision-making with little processing at the top and all input, computation and output in worker modules; here the control module does the work itself. Option a describes horizontal partitioning, which is a different scheme, not a defence of this one."
+          "concept": "Spotting coupling through a shared data structure",
+          "why": "Line 7 reads Stock.levels directly, so Orders now depends on Stock keeping its stock in a dictionary indexed by sku. If Stock changes that structure, Orders breaks. Line 8 calls the function Stock provides, which is the controlled interface: Orders depends on Stock's function, not on its internals, so that is acceptable coupling.\n\nLine 3 is Stock using its own data, which is normal; 'lines 7 and 8' treats every dependency as bad, but a module calling another's interface is how modules are meant to communicate."
         },
         {
           "type": "mcq",
-          "q": "A team must build a new analytics service on top of an existing, well-tested set of data-access and statistics primitives already in use elsewhere in the company. Which approach does the deck say is more suitable, and why?",
+          "q": "Four changes are proposed to a working compute_bill() function. Which one is a refactoring?",
           "options": [
-            "Bottom-up, because a system created from an existing system can compose higher-level components from basic primitives, with abstraction increasing at each higher level",
-            "Top-down, because the service is new and must first be seen as one whole entity",
-            "Top-down, because the specific details of the primitives are already known",
-            "Bottom-up, because bottom-up design avoids the extra initial design time that modularisation demands"
+            "Split compute_bill into three smaller functions; every input still gives the same output",
+            "Add a student discount to compute_bill",
+            "Change compute_bill to round totals to the nearest naira",
+            "Make compute_bill reject negative quantities it previously accepted"
           ],
           "answerIndex": 0,
-          "concept": "Choosing between top-down and bottom-up for a given project",
-          "why": "The deck assigns bottom-up to systems created from an existing system whose basic primitives can be reused; option c inverts the deck's rule, which puts top-down where specific details are unknown."
+          "concept": "Identifying a refactoring",
+          "why": "Refactoring is modifying a software system to improve the internal structure of the design without changing its external behaviour. Splitting the function while every input gives the same output changes only the internal structure.\n\nAdding a discount adds functionality; rounding changes the values returned; rejecting inputs that were accepted changes what the function does for some inputs. All three alter external behaviour, so none is refactoring."
         },
         {
           "type": "mcq",
-          "q": "A pull request titled \"refactor `charge_card`\" both extracts the retry logic into a helper and changes the function so that on a network timeout it now returns `PENDING` where it previously returned `FAILED`. Under the deck's definition, this is",
+          "q": "Main is the top of the hierarchy. Which line breaks vertical partitioning?\n\n```\n1 module Main:\n2     run():\n3         rows = Input.read_rows()\n4         total = 0\n5         for r in rows: total = total + r.amount\n6         Output.show(total)\n7 module Input:  read_rows()\n8 module Output: show(x)\n```",
           "options": [
-            "refactoring, because the internal structure was improved and the helper raised cohesion",
-            "refactoring, because the caller can be updated to handle the new value",
-            "not refactoring, because the external behaviour of the system has been changed",
-            "not refactoring, because refactoring may never introduce a new module or helper"
+            "Line 3: the control module calls Input",
+            "Line 5: the control module does the computation",
+            "Line 6: the control module calls Output",
+            "Nothing: Main only makes decisions"
+          ],
+          "answerIndex": 1,
+          "concept": "Checking a hierarchy against vertical partitioning",
+          "why": "In vertical partitioning the top-level control modules do the decision-making and little processing, while the worker modules perform all input, computation and output. Line 5 has Main summing the amounts itself: computation in the control module. The fix is a worker such as Totals.sum(rows).\n\nLines 3 and 6 are the control module directing workers to do input and output, which is exactly its job; 'nothing' misses that Main is doing the arithmetic."
+        },
+        {
+          "type": "mcq",
+          "q": "Project P: a payroll system to be built from scratch, with the detailed requirements still unknown. Project Q: a dashboard to be assembled from an existing, tested library of chart and query primitives. Which design approach suits each?",
+          "options": [
+            "P bottom-up, Q top-down",
+            "Both top-down",
+            "P top-down, Q bottom-up",
+            "Both bottom-up"
           ],
           "answerIndex": 2,
-          "concept": "The boundary of the definition of refactoring",
-          "why": "Refactoring improves internal structure without changing external behaviour; a changed return value is changed external behaviour, and improving structure at the same time does not rescue it."
+          "concept": "Choosing top-down or bottom-up design",
+          "why": "Top-down is more suitable when the solution needs to be designed from scratch and specific details are unknown: P. Bottom-up is more suitable when a system is created from an existing system whose basic primitives can be used in the newer one: Q.\n\nReversing them starts P from primitives it does not have and decomposes Q as if its library did not exist; 'both top-down' throws away Q's reusable primitives; 'both bottom-up' has nothing to compose P from."
         },
         {
           "type": "mcq",
-          "q": "Two candidate interfaces for the same feature:\n\n```\nA:  render_post_summary(db_connection, cursor, raw_row_dict, template_cache)\nB:  render_post_summary(post_id) -> string\n```\n\nWhich is preferred and on what stated grounds?",
+          "q": "Module Marks keeps every student's scores in a table. Module Transcript needs one student's average. Which interface obeys 'pass only the information required to accomplish the function'?",
           "options": [
-            "A, because passing the connection avoids a second lookup and so shortens execution time",
-            "A, because more parameters make the dependency explicit and therefore reduce coupling",
-            "B, but only if `render_post_summary` is the sole function in its module",
-            "B, because it passes only that much information as is required to accomplish the function and keeps the caller from touching internal data structures"
+            "`Marks.average(student_id, scores_table)`",
+            "`Marks.table`, read directly by Transcript",
+            "`Marks.average(student_id)`",
+            "`Marks.dump_all()`, returning a copy of every score"
+          ],
+          "answerIndex": 2,
+          "concept": "Choosing an interface that hides information",
+          "why": "Transcript needs one number for one student. Marks.average(student_id) takes only the identifier and returns only that number; the table stays inside Marks, so it can be reorganised without touching Transcript.\n\nPassing scores_table hands the internal structure across the interface, so Transcript must know its layout; reading Marks.table directly gives Transcript access to the data structure, which is what information hiding forbids; dump_all() returns far more than is required and exposes every score."
+        },
+        {
+          "type": "mcq",
+          "q": "Users changes its internal list to a dictionary. How many of the other modules must be edited?\n\n```\nmodule Users:   list = []  (internal);  count()\nmodule Login:   calls Users.count()\nmodule Admin:   reads Users.list directly\nmodule Report:  reads Users.list directly\nmodule Mailer:  calls Users.count()\n```",
+          "options": [
+            "4",
+            "1",
+            "0",
+            "2"
           ],
           "answerIndex": 3,
-          "concept": "Information hiding expressed in an interface",
-          "why": "Signature B passes only what the function needs; A forces the caller to hold connections, cursors and raw rows, which is dependence on internals. Making a dependency explicit documents coupling, it does not reduce it."
+          "concept": "Effect of information hiding on change",
+          "why": "Login and Mailer use only the interface count(), which Users can keep working however the data is stored, so they need no change. Admin and Report reach into the list directly, so when it becomes a dictionary their code breaks and must be edited: 2. This is the benefit of information hiding, restricting the effects of a change in one component on others.\n\n4 assumes every module that uses Users must change; 0 assumes the change is invisible to everyone, forgetting the two direct readers; 1 miscounts the direct readers."
         },
         {
           "type": "mcq",
-          "q": "A monolithic 5,000-line function is split into 30 modules stored in separate files. Which outcome is *not* predicted by the decks?",
+          "q": "Cohesion and coupling are the two measures of module independence. Where is each one judged?",
           "options": [
-            "Different people can now work on different parts of the program",
-            "Storage size may increase and loading time may lengthen",
-            "Every module is now independent, because separate files cannot depend on each other",
-            "A change to one part is less likely to affect the other parts"
+            "Cohesion between modules; coupling inside a module",
+            "Cohesion inside a module; coupling between modules",
+            "Both inside a module",
+            "Both between modules"
           ],
-          "answerIndex": 2,
-          "concept": "What file separation does and does not guarantee",
-          "why": "Separate files are a packaging fact, not independence; independence comes from each module owning what it needs and hiding its internals. The other three are stated advantages and disadvantages."
+          "answerIndex": 1,
+          "concept": "Where cohesion and coupling are judged",
+          "why": "Cohesion is the extent to which the functions in a module work together to achieve the aim of the module, so it is judged inside one module and should be high. Coupling is the extent to which modules depend on other modules before performing their function, so it is judged between modules and should be low.\n\nThe first option swaps them; the other two lose the distinction that one measure looks inward and the other outward."
         },
         {
           "type": "short",
-          "q": "You inherit this module:\n\n```\nmodule UserManager:\n    register(user)\n    login(email, password)\n    send_marketing_newsletter()\n    backup_database()\n```\n\nState whether it is cohesive, give the specific refactor you would perform, and explain what property of each resulting module the refactor is aimed at — not merely that it becomes \"cleaner\".",
-          "concept": "Diagnosing cohesion and prescribing the refactor",
-          "why": "It is not cohesive: register and login serve the module's aim of managing user identity, but sending marketing newsletters and backing up the database have only a limited relationship to that aim or to each other. Following the deck's refactoring example, split it into a user-management module holding register and login, a marketing or notification module, and an operations or backup module. The property aimed at is high cohesion in each resulting module, so that every function in a module works towards that module's single ultimate aim, and by the single responsibility principle no module carries more than one responsibility. The stated payoff is easier integration, testing and maintenance, since a change to the newsletter can no longer force retesting of login."
+          "q": "Regroup the functions of this module into high-cohesion modules. Name each new module, list its functions, and state how many modules you end with. Show your working.\n\n```\nmodule UserTools:\n    register, login, send_newsletter,\n    generate_sales_report, reset_password, export_sales_csv\n```",
+          "concept": "Redrawing module boundaries for cohesion",
+          "why": "Sort the functions by the aim each serves. register, login and reset_password all manage a user's account. send_newsletter is marketing communication. generate_sales_report and export_sales_csv both produce sales output. So: Accounts (register, login, reset_password), Marketing (send_newsletter), SalesReports (generate_sales_report, export_sales_csv). Three modules, each with one aim, and the external behaviour of every function unchanged.\n\nA correct answer produces three modules with those groupings, or a defensible variant such as merging the newsletter into a Communications module on its own; it must not leave sales reporting inside the account module. Names may differ. Two modules (accounts versus everything else) is not accepted, since 'everything else' still mixes marketing with reporting."
         },
         {
           "type": "short",
-          "q": "In question 2, suppose you replace the direct write with a call `Inventory.reduce_stock(sku, n)`. Explain why this genuinely lowers coupling rather than simply relocating the dependency, and name what `OrderProcessor` is now permitted to know about `Inventory`.",
-          "concept": "Reducing coupling by imposing an interface",
-          "why": "The dependency does not disappear, but it changes kind: OrderProcessor previously depended on a data structure, so any change to how stock is represented — a dictionary becoming a database table, or per-warehouse counts — broke it. It now depends only on a named operation whose meaning is stable, so Inventory can change its internals freely, which is precisely the information hiding benefit of restricting the effects of change in one component on others. What OrderProcessor is permitted to know is the interface alone: the operation's name, the sku and quantity it takes, and what it returns or signals when stock is insufficient. It is not permitted to know the representation of stock_level or how the reduction is carried out."
+          "q": "A team proposes splitting Utils, which holds four unrelated functions, into four separate modules with one function each. State whether the program's external behaviour changes, three things the split buys, and two costs it may bring, taken from the disadvantages of modularisation. Show your working.",
+          "concept": "Costs and benefits of a refactor",
+          "why": "External behaviour does not change: each function still takes the same inputs and produces the same outputs, so this is a refactoring. It buys easier integration, easier testing and easier maintenance of the components, because each module now has a single aim and can be changed or tested without dragging the other three along; it also makes each module easier to reuse elsewhere. The costs come from the disadvantages of modularisation: any two of longer execution time, larger storage size, longer compilation and loading time, more inter-module communication problems, and more initial design time.\n\nA correct answer says behaviour is unchanged, gives three benefits of the kind above, and names two of the five listed disadvantages. Claiming the split makes the program faster is wrong; longer execution time is a listed cost."
         },
         {
           "type": "short",
-          "q": "You are decomposing the user-registration feature of a social media platform into validating the user's input, creating a new user account, and sending a confirmation email. Explain the criterion you would use to group these and other subproblems into modules such as user management, post management and following management, and justify that criterion using cohesion and coupling rather than by appeal to tidiness.",
-          "concept": "Choosing module boundaries during decomposition",
-          "why": "The criterion is to group subproblems that operate on the same data and serve the same ultimate aim, so that user-account subproblems land in user management, post subproblems in post management and follow-graph subproblems in following management. This maximises cohesion, because every function inside a module then works towards that module's one aim, and it minimises coupling, because the data a group of subproblems shares stays inside one module instead of crossing interfaces. Grouping instead by technical similarity — putting every validation together, every email together — would scatter one feature across many modules, so a change to registration would touch several modules at once: low cohesion and high coupling in one move. Note that sending the confirmation email is a candidate for a shared notification module, since it serves every feature rather than user management alone."
+          "q": "This is a horizontal partition. Count how many times a value crosses a module interface, in or out, during one call of run(); list the crossings in order, then name the stated cost of horizontal partitioning that this shows. Show your working.\n\n```\nmodule Control:\n    run():\n        rows  = Reader.read()\n        clean = Validator.check(rows)\n        total = Summer.sum(clean)\n        Printer.show(total)\n```",
+          "concept": "Counting interface crossings in horizontal partitioning",
+          "why": "Follow the data. 1: rows returned from Reader to Control. 2: rows passed from Control into Validator. 3: clean returned from Validator to Control. 4: clean passed into Summer. 5: total returned from Summer to Control. 6: total passed into Printer. Six crossings, and every piece of data passes through Control twice on its way from one worker to the next. That is the stated cost: horizontal partitioning requires the passing of more data across the module interfaces, which makes the control flow more complex, especially where data moves rapidly from one function to another.\n\nFinal answer: 6 crossings. Also accepted: 3 if the student counts each worker call as one exchange, provided the list is consistent and the cost is named correctly. A correct answer lists the crossings in order and names the extra data passing across interfaces as the cost."
         },
         {
           "type": "short",
-          "q": "After splitting a working monolith into forty small modules, a team finds request latency has risen, the build takes three times as long, and two teams keep breaking each other's interfaces. Explain which of the deck's stated disadvantages of modularisation these are, and argue — using cohesion — whether the split was wrong in principle or wrong in where the boundaries were drawn.",
-          "concept": "Weighing the disadvantages of modularisation against boundary placement",
-          "why": "The three symptoms map onto three of the deck's five listed disadvantages: execution time may be longer, compilation and loading time may be longer, and inter-module communication problems may be increased. The split is not wrong in principle, since those costs are predicted for any modularisation and are paid for by understandability, parallel work and cheaper change. The diagnosis lies in cohesion: modules whose functions genuinely work together toward one aim keep their chatter internal, so a well-placed boundary carries little traffic and a stable interface. Constant interface breakage and heavy cross-module calls are evidence that closely related functions were separated, that is, that cohesion was cut through. The remedy is to merge the fragments that keep changing together back into one cohesive module rather than to abandon modularisation."
+          "q": "A team splits a 6,000-line program into forty files and reports that it is now modularised. Explain what is missing from that claim: what makes a module independent, and what test you would apply to each of the forty files to decide whether the program really has been modularised rather than merely decomposed.",
+          "concept": "Decomposition versus modularisation",
+          "why": "Cutting the code into files is decomposition: the application has been broken into parts. Modularisation requires that each part be an independent module with everything it needs to implement only its part of the functionality. Independence is measured by cohesion and coupling: the functions in each file should work together towards one aim (high cohesion), and each file should depend as little as possible on other files before it can do its job (low coupling), with its data structures hidden behind a controlled interface. The test for each file: do all its functions serve one aim, and can it be changed or tested without editing the other files? Forty files that reach into each other's data structures are decomposed but not modularised.\n\nA correct answer separates decomposition from modularisation, names independence with cohesion and coupling (information hiding is a bonus), and gives a concrete test per file."
         }
       ],
       "slot": "fast"
@@ -1047,68 +1051,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Which party did Herbert Macaulay found in 1923, Nigeria's first?",
+          "q": "A lawyer who began practising in Lagos in 1965 took on many cases for people who could not pay, was called the people's lawyer, and from his sick bed sought to reopen the Dele Giwa parcel-bomb case. Who was he?",
           "options": [
-            "The NCNC",
-            "The Action Group",
-            "The NNDP",
-            "The Nigerian Youth Movement"
-          ],
-          "answerIndex": 2,
-          "concept": "Macaulay founded the NNDP in 1923, Nigeria's first political party",
-          "why": "The NNDP was Macaulay's 1923 party and the first in Nigeria. The NCNC came later, when the NNDP merged with the Nigerian Youth Movement in the late 1930s; the Action Group was Awolowo's."
-        },
-        {
-          "type": "mcq",
-          "q": "Funmilayo Ransome-Kuti's 1953 Abeokuta conference produced which body?",
-          "options": [
-            "The FNWS",
-            "The NCNC",
-            "The Zikist movement",
-            "The NNDP"
-          ],
-          "answerIndex": 0,
-          "concept": "The 1953 Abeokuta conference produced the Federation of Nigerian Women's Societies",
-          "why": "The Abeokuta conference on women's welfare produced the FNWS. The Zikist movement was inspired by Azikiwe; the NCNC and NNDP are Macaulay-Azikiwe party history, not women's organising."
-        },
-        {
-          "type": "mcq",
-          "q": "What office did Nnamdi Azikiwe hold from 1960 to 1963?",
-          "options": [
-            "First elected president",
-            "Premier of the Western Region",
-            "Leader of the Action Group",
-            "Last governor-general"
-          ],
-          "answerIndex": 3,
-          "concept": "Azikiwe was last governor-general 1960-1963, then first elected president 1963-1966",
-          "why": "1963 is the hinge year: governor-general before it, president after. The Western Region premiership 1954-1960 and the Action Group both belong to Awolowo."
-        },
-        {
-          "type": "mcq",
-          "q": "Wole Soyinka dedicated his 1986 Nobel Prize to whom?",
-          "options": [
+            "Wole Soyinka",
+            "Gani Fawehinmi",
             "Herbert Macaulay",
-            "Nelson Mandela",
-            "Dele Giwa",
             "Chinua Achebe"
           ],
           "answerIndex": 1,
-          "concept": "Soyinka's 1986 Nobel, the first to an African, was dedicated to the imprisoned Nelson Mandela",
-          "why": "The deck names Mandela, then imprisoned, as the dedicatee. Dele Giwa is the editor killed by a parcel bomb in 1986 whose case Gani Fawehinmi pursued; Achebe is credited with Things Fall Apart, not a Nobel."
+          "concept": "Gani Fawehinmi's credited achievements",
+          "why": "Gani Fawehinmi started practising in Lagos in 1965, became known as the people's lawyer for his pro bono work, campaigned for human rights for 40 years, and pressed to reopen the still unsolved 1986 Dele Giwa case. Soyinka is the playwright and Nobel laureate; Macaulay the father of Nigerian nationalism and NNDP founder; Achebe the novelist of Things Fall Apart."
         },
         {
           "type": "mcq",
-          "q": "Which achievement does the deck credit to Nwankwo Kanu?",
+          "q": "Which of the following pairs a Maker of Nigeria with the achievement credited to him or her?",
           "options": [
-            "Nigeria's 1996 Olympic Gold",
-            "Creating Afrobeat in the early 1970s",
-            "Heading the Biafra Broadcasting Service",
-            "Founding the Zikist movement"
+            "Chinua Achebe: Nobel Prize for Literature, 1986",
+            "Obafemi Awolowo: last governor-general of Nigeria, 1960 to 1963",
+            "Funmilayo Ransome-Kuti: founder of the NNDP in 1923",
+            "Fela Anikulapo-Kuti: creator of Afrobeat in the early 1970s"
+          ],
+          "answerIndex": 3,
+          "concept": "Matching makers to credited achievements",
+          "why": "Fela Anikulapo-Kuti is credited as the creator of Afrobeat in the early 1970s, using words as protest and resistance. The 1986 Nobel Prize for Literature belongs to Wole Soyinka, the first African to win it. Azikiwe, not Awolowo, was the last governor-general from 1960 to 1963; Awolowo was first premier of the Western Region. The NNDP was founded by Herbert Macaulay in 1923; Funmilayo Ransome-Kuti's organisation was the Federation of Nigerian Women's Societies."
+        },
+        {
+          "type": "mcq",
+          "q": "Put these events in the order they happened: (A) Nnamdi Azikiwe becomes Nigeria's first elected president; (B) Herbert Macaulay founds the NNDP; (C) Wole Soyinka receives the Nobel Prize for Literature; (D) Obafemi Awolowo becomes first premier of the Western Region.",
+          "options": [
+            "B, D, A, C",
+            "B, A, D, C",
+            "D, B, A, C",
+            "B, D, C, A"
           ],
           "answerIndex": 0,
-          "concept": "Kanu won Nigeria the 1996 Olympic Gold, past Brazil and Argentina",
-          "why": "Kanu is the sportsman of the nine. Afrobeat in the early 1970s is Fela; the Biafra Broadcasting Service is Achebe; the Zikist movement traces to Azikiwe."
+          "concept": "Chronology of the makers' milestones",
+          "why": "The NNDP was founded in 1923 (B); Awolowo became first premier of the Western Region in 1954 (D); Azikiwe became first elected president in 1963 (A); Soyinka received the Nobel Prize in 1986 (C). The second option puts Azikiwe's presidency before Awolowo's premiership; the third puts Awolowo before Macaulay's 1923 party; the fourth puts Soyinka's Nobel before the First Republic."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following statements about Nnamdi Azikiwe is correct?",
+          "options": [
+            "He founded the NNDP, Nigeria's first political party, in 1923",
+            "He was the first premier of the Western Region from 1954 to 1960",
+            "He was the last governor-general from 1960 to 1963 and the first elected president from 1963 to 1966",
+            "He headed the Biafra Broadcasting Service during the civil war"
+          ],
+          "answerIndex": 2,
+          "concept": "Azikiwe's offices and dates",
+          "why": "Azikiwe served as the last governor-general of Nigeria from 1960 to 1963 and as the country's first elected president from 1963 to 1966 in the First Republic; he entered politics in 1944, co-founded the NCNC and inspired the Zikist movement. The NNDP of 1923 was Macaulay's; the Western Region premiership was Awolowo's; and it was Chinua Achebe who headed the Biafra Broadcasting Service."
+        },
+        {
+          "type": "mcq",
+          "q": "What does the term Makers of Nigeria refer to?",
+          "options": [
+            "Key historical figures who contributed to Nigeria's journey to independence and development",
+            "Members of the Nigerian diaspora who send remittances home",
+            "The founders of Nigeria's first political party",
+            "Musicians such as Burna Boy, Wizkid, Davido and Rema who draw positive attention to Nigeria"
+          ],
+          "answerIndex": 0,
+          "concept": "Definition of Makers of Nigeria",
+          "why": "Makers of Nigeria refers to key historical figures who played pivotal roles in the nation's journey to independence and development, drawn from politics, the economy and the creative industry: Macaulay, Awolowo, Azikiwe, Ransome-Kuti, Fela, Achebe, Soyinka, Fawehinmi and Kanu. The Nigerian diaspora and its remittances are a separate topic from the makers. The NNDP founders are only one of the nine, and Burna Boy, Wizkid, Davido and Rema are named as contemporary Nigerians who deserve a mention, not as the makers."
         }
       ]
     },
@@ -1122,159 +1126,159 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "```php\n$sql = \"SELECT * FROM users WHERE id = '$id'\";\n```\nWhich change stops SQL injection here?",
+          "q": "The table `users` has 3 rows.\n```php\n$sql = \"SELECT * FROM users WHERE name = '\" . $name . \"'\";\n```\nA visitor submits the name `x' OR '1'='1`. How many rows does the query return?",
           "options": [
-            "Serve the page over HTTPS instead of HTTP",
-            "Use a placeholder and bind $id as a parameter",
-            "Add a WAF rule and leave the query as it is",
-            "Rename the id column to something less guessable"
-          ],
-          "answerIndex": 1,
-          "concept": "Input validation with parameterised queries answers SQLi",
-          "why": "Parameterised queries are the named defence: the value can never be read as SQL, whatever the attacker types. A WAF helps, but the deck calls it an additional layer, not a replacement for fixing the query."
-        },
-        {
-          "type": "mcq",
-          "q": "```js\ncommentBox.innerHTML = userComment;\n```\nComments are shown to every visitor. Which best practice applies?",
-          "options": [
-            "Session Management, with token expiry",
-            "Regular Updates of the framework",
-            "Output Encoding, backed by a CSP",
-            "Security Headers such as HSTS"
+            "0",
+            "1",
+            "3",
+            "None; the query fails with a syntax error"
           ],
           "answerIndex": 2,
-          "concept": "Output encoding and CSP mitigate XSS",
-          "why": "Writing untrusted input as markup is the XSS case, answered by output encoding plus a Content Security Policy. Session management is the CSRF defence and does nothing about a script injected into the page."
+          "concept": "Tracing a SQL injection payload",
+          "why": "The string becomes SELECT * FROM users WHERE name = 'x' OR '1'='1'. The quote in the input closed the name value early, and OR '1'='1' is true for every row, so all 3 rows come back. This is SQL injection; a parameterised query would have treated the whole input as one literal name.\n\n0 assumes no user is called x; 1 assumes the input is compared as a plain name; a syntax error would need an unbalanced quote, but the payload is built so that the quotes balance."
         },
         {
           "type": "mcq",
-          "q": "A form field's value is passed straight into a shell command with no checks. Which vulnerability is that?",
+          "q": "A PHP page displays a comment `$c` typed by another user. Which line displays it without letting a `<script>` tag in the comment run?",
           "options": [
-            "Injection attack",
+            "`echo trim($c);`",
+            "`echo htmlspecialchars($c);`",
+            "`echo strtoupper($c);`",
+            "`echo $c;`"
+          ],
+          "answerIndex": 1,
+          "concept": "Output encoding against XSS",
+          "why": "htmlspecialchars converts <, >, & and quotes into entities such as &lt; and &gt;, so the browser shows the tag as text instead of executing it. That is output encoding, the named defence against cross-site scripting.\n\ntrim only removes surrounding whitespace; strtoupper changes the case but <SCRIPT> still runs; echo $c writes the raw markup into the page, which is the vulnerability itself."
+        },
+        {
+          "type": "mcq",
+          "q": "A forum post contains `<img src=\"https://bank.example/transfer?to=attacker&amount=5000\">`. A customer logged in to the bank views the post and the transfer goes through. Which best practice would have stopped this?",
+          "options": [
+            "Session management with unique per-request tokens",
+            "Output encoding with a Content Security Policy",
+            "Parameterised database queries",
+            "Regular updates of the framework"
+          ],
+          "answerIndex": 0,
+          "concept": "Recognising CSRF and its defence",
+          "why": "The customer's browser sent the request with her valid session cookie attached, without her intending it: cross-site request forgery. The defence is session management, in particular a unique token that the bank's own forms include and the forged request cannot know, plus session expiration.\n\nOutput encoding and CSP stop injected scripts (XSS), but no script was injected here; parameterised queries stop SQL injection; updates patch known library flaws, not a design that trusts any request carrying a cookie."
+        },
+        {
+          "type": "mcq",
+          "q": "A live site is running with debug mode switched on, so any error page shows the full stack trace, file paths and database connection string. Which vulnerability is this?",
+          "options": [
             "Cross-Site Scripting",
-            "Security Misconfiguration",
-            "Cross-Site Request Forgery"
-          ],
-          "answerIndex": 0,
-          "concept": "Injection attacks beyond SQL",
-          "why": "The deck groups command and XML injection as injection attacks: user data processed without proper validation. XSS differs because its payload is a script that runs in other users' browsers."
-        },
-        {
-          "type": "mcq",
-          "q": "A config file in the repo contains `$dbPass = \"letmein\";`. Which secure development practice is broken?",
-          "options": [
-            "DevSecOps",
-            "Code Review",
-            "Penetration Testing",
-            "Secure Coding"
+            "SQL Injection",
+            "Cross-Site Request Forgery",
+            "Security Misconfiguration"
           ],
           "answerIndex": 3,
-          "concept": "Secure coding forbids hard-coded credentials",
-          "why": "Secure coding is the practice named for avoiding hard-coded credentials. Plaintext database passwords are also the deck's own misconfiguration example. Code review is how you would catch it, not the rule it breaks."
+          "concept": "Identifying security misconfiguration",
+          "why": "Nothing was injected and no user was tricked; an overlooked setting is exposing sensitive information. That is security misconfiguration, the same family as leaving plaintext database credentials in a config file.\n\nXSS needs a script injected into a page others view; SQL injection needs SQL inserted through input; CSRF needs an authenticated user made to send a request."
         },
         {
           "type": "mcq",
-          "q": "Article pages load slowly because of images far below the fold. Which front-end fix?",
+          "q": "Which response header tells a browser to connect to the site only over HTTPS from now on?",
           "options": [
-            "Add a second application server",
-            "Lazy loading, so images load when needed",
-            "Index the images table in the database",
-            "Put a load balancer in front of the app"
-          ],
-          "answerIndex": 1,
-          "concept": "Lazy loading among the front-end optimisations",
-          "why": "Lazy loading is the named front-end optimisation for deferring content until it is actually needed. Extra servers and load balancers spread traffic, but every visitor still downloads the same heavy images."
-        },
-        {
-          "type": "mcq",
-          "q": "Which front-end optimisation cuts bytes without changing how the code behaves?",
-          "options": [
-            "Caching pages in a CDN",
-            "Adding database indexes",
-            "Minifying the CSS and JavaScript",
-            "Setting an alert on response time"
-          ],
-          "answerIndex": 2,
-          "concept": "Minification versus other performance fixes",
-          "why": "Minifying strips whitespace and shortens names, so the same code arrives in a smaller file. A CDN also speeds delivery, but it moves the same bytes closer rather than making them fewer."
-        },
-        {
-          "type": "mcq",
-          "q": "CPU above 90 percent for five minutes pages the on-call engineer. Which monitoring concepts are at work?",
-          "options": [
-            "Logging and debugging tools",
-            "Error handling and version control",
-            "Metrics and logging",
-            "Metrics and alerts"
-          ],
-          "answerIndex": 3,
-          "concept": "Metrics, alerts and logging in monitoring",
-          "why": "CPU utilisation is a metric, and a threshold that fires a notification is an alert. Logging is the third concept, the recorded history of events, but nothing here is being written to a log."
-        },
-        {
-          "type": "mcq",
-          "q": "A user reports a crash and you step through the code in Chrome DevTools. Monitoring or debugging?",
-          "options": [
-            "Debugging, using a debugging tool",
-            "Monitoring, because you observe behaviour",
-            "Monitoring, because DevTools reports metrics",
-            "Debugging, but only once a test has failed"
+            "Strict-Transport-Security",
+            "X-Content-Type-Options",
+            "Content-Security-Policy",
+            "Set-Cookie"
           ],
           "answerIndex": 0,
-          "concept": "Monitoring watches a live system; debugging fixes a defect",
-          "why": "Debugging is identifying and resolving a defect, and IDEs and DevTools are its named tools. Monitoring is the continuous, real-time watch over a live system, not the investigation of one known fault."
+          "concept": "Security headers and what each does",
+          "why": "Strict-Transport-Security is the HSTS header: once received, the browser refuses plain HTTP for that site and upgrades every request to HTTPS.\n\nX-Content-Type-Options stops the browser guessing a file's type from its content; Content-Security-Policy restricts where scripts and other resources may load from, which mitigates XSS; Set-Cookie creates a cookie and says nothing about the transport."
         },
         {
           "type": "mcq",
-          "q": "A team wants resources and scaling managed for them, as with AWS Elastic Beanstalk. Which hosting option?",
+          "q": "A small team needs root access and its own operating system on the server, but cannot afford a dedicated machine. Which hosting option fits?",
           "options": [
-            "On-premises hosting",
             "Shared hosting",
-            "Cloud hosting",
-            "VPS hosting"
-          ],
-          "answerIndex": 2,
-          "concept": "The four hosting options and their trade-offs",
-          "why": "Cloud hosting is named for scalability, flexibility and cost-efficiency, with Elastic Beanstalk as the example. On-premises is the opposite trade-off: complete control, but all the infrastructure work is yours."
-        },
-        {
-          "type": "mcq",
-          "q": "Your app sits behind a WAF. Is input validation still needed?",
-          "options": [
-            "No, the WAF inspects every request already",
-            "Yes, a WAF is an extra layer, not a replacement",
-            "No, provided the WAF logs are monitored",
-            "Yes, but only for forms that reach the database"
+            "VPS hosting",
+            "On-premises hosting",
+            "Cloud hosting with managed services"
           ],
           "answerIndex": 1,
-          "concept": "A WAF is an additional layer of defence",
-          "why": "A WAF filters and monitors HTTP traffic as an additional layer; it is never treated as a substitute for secure code. Relying on it alone leaves the vulnerability itself sitting in the application."
+          "concept": "Choosing a hosting option",
+          "why": "A VPS partitions one physical server into virtual servers that each run their own OS, giving root-level control at a fraction of the cost of a whole machine: the named balance of control and cost.\n\nShared hosting is cheaper still but gives no OS of your own and limited customisation; on-premises means buying and maintaining hardware; managed cloud services trade away control for automation."
         },
         {
           "type": "mcq",
-          "q": "Every commit to version control triggers an automatic build and test run. Which tools are named for this?",
+          "q": "One web server handles at most 500 requests per second. Traffic is forecast to peak at 1800 requests per second. Behind a load balancer, what is the minimum number of identical servers needed?",
           "options": [
-            "New Relic and Datadog",
-            "Apache JMeter and Gatling",
-            "NGINX and Elastic Load Balancing",
-            "Jenkins and Travis CI"
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "answerIndex": 2,
+          "concept": "Sizing horizontal scaling",
+          "why": "Capacity must be at least the peak: n × 500 ≥ 1800 gives n ≥ 3.6, and servers come whole, so round up to 4. Four servers give 2000 requests per second, enough for the peak.\n\n3 rounds down and would cap out at 1500; 2 gives only 1000; 5 works but is one more than the minimum asked for."
+        },
+        {
+          "type": "mcq",
+          "q": "The same product-list query hits the database 2000 times a minute, and its result changes only once an hour. Which fix removes most of that load?",
+          "options": [
+            "A load balancer in front of the web servers",
+            "Caching the query result in a temporary store",
+            "Serving the site through a CDN",
+            "Adding RAM to the database server"
+          ],
+          "answerIndex": 1,
+          "concept": "Caching versus other performance fixes",
+          "why": "The result is identical between hourly changes, so store it once in a cache and serve the copy; the database then answers once per hour instead of 2000 times a minute.\n\nA load balancer spreads web traffic but every server still runs the query; a CDN caches static content near users, not a database result behind the application; more RAM (vertical scaling) makes the same 2000 queries run faster rather than removing them."
+        },
+        {
+          "type": "mcq",
+          "q": "An engineer opens the recorded history of yesterday's failed login attempts, each with its timestamp and IP address. Which monitoring concept is being used?",
+          "options": [
+            "Metrics",
+            "Alerts",
+            "Logging",
+            "Error handling"
+          ],
+          "answerIndex": 2,
+          "concept": "Metrics, alerts and logging",
+          "why": "A stored record of events, actions and errors is a log; reading yesterday's entries is logging at work.\n\nMetrics are measured quantities such as response time or error rate; an alert is a notification that fires when a metric crosses a threshold; error handling is a debugging concept about catching exceptions in code, not a monitoring one."
+        },
+        {
+          "type": "mcq",
+          "q": "```js\ntry {\n  save(order);\n} catch (e) {\n  showMessage(\"Could not save. Try again.\");\n}\n```\nWhich debugging concept does this code apply?",
+          "options": [
+            "Version control",
+            "Debugging tools",
+            "Load testing",
+            "Error handling"
           ],
           "answerIndex": 3,
-          "concept": "Continuous integration tooling",
-          "why": "Jenkins and Travis CI are the continuous integration tools that build, test and deploy on each commit. JMeter and Gatling are load-testing tools, which answer a performance question instead."
+          "concept": "Error handling with try and catch",
+          "why": "try-catch is the named error-handling mechanism: the failure inside save is caught and the user gets an informative message instead of a crash.\n\nVersion control is Git, for rollback and collaboration; debugging tools are IDEs and Chrome DevTools used to step through code; load testing (JMeter, Gatling) simulates traffic and is a performance activity."
         },
         {
           "type": "mcq",
-          "q": "Adding a second login factor strengthens which, authentication or authorization?",
+          "q": "What is the difference between a vulnerability and a threat?",
           "options": [
-            "Authentication, which verifies identity",
-            "Authorization, which grants privileges",
-            "Both equally, since both check the user",
-            "Neither; 2FA is a session management control"
+            "A vulnerability is a weakness in a system; a threat is a potential danger that could exploit it",
+            "A vulnerability is an attack in progress; a threat is a weakness left after it",
+            "They are the same thing described from the attacker's and the defender's side",
+            "A vulnerability affects hardware; a threat affects software"
           ],
           "answerIndex": 0,
-          "concept": "Authentication versus authorization",
-          "why": "Authentication verifies who someone is, and a second factor makes that check harder to fake. Authorization is the separate step limiting what the identified user may do, by roles and permissions."
+          "concept": "Vulnerability versus threat",
+          "why": "A vulnerability is a weakness in design, implementation or configuration that exists whether or not anyone uses it. A threat is the potential harm, such as SQL injection, XSS or a DDoS attack, that could exploit such a weakness.\n\nThe second option reverses the two; the third collapses them; the last invents a hardware and software split that is not part of either definition."
+        },
+        {
+          "type": "mcq",
+          "q": "What is continuous integration (CI)?",
+          "options": [
+            "Running a load test against the site before every release",
+            "Watching a live system's metrics and raising alerts on thresholds",
+            "Automatically building, testing and deploying code changes as they are committed to version control",
+            "Reviewing every pull request by hand before it is merged"
+          ],
+          "answerIndex": 2,
+          "concept": "Definition of continuous integration",
+          "why": "CI means that each commit to version control automatically triggers a build, the test suite and, where configured, deployment, so problems surface as soon as they are introduced. Jenkins and Travis CI are the tools named for it.\n\nLoad testing is JMeter and Gatling's job; watching metrics and alerts is monitoring; manual review is code review, a secure development practice, not automation."
         }
       ],
       "full": true
@@ -1289,68 +1293,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "The deck describes hearing as which pair of qualities?",
+          "q": "On a crowded bus, Ifeoma can hear two passengers talking but pays them no attention. When one mentions her street, she begins consciously following what they say. What change has taken place?",
           "options": [
-            "Passive and involuntary",
-            "Active and voluntary",
-            "Conscious and interpretive",
-            "Empathetic and reflective"
-          ],
-          "answerIndex": 0,
-          "concept": "Hearing is passive and involuntary; listening is active and voluntary",
-          "why": "The headline contrast makes hearing passive and involuntary and listening active and voluntary, needing conscious effort to interpret. If a question says involuntary, the answer is hearing."
-        },
-        {
-          "type": "mcq",
-          "q": "Which importance-of-listening area names finding common ground without interruption?",
-          "options": [
-            "Building Relationships",
-            "Conflict Resolution",
-            "Effective Communication",
-            "Avoiding Miscommunication"
+            "From listening to hearing",
+            "From hearing to listening",
+            "From active listening to passive hearing",
+            "From listening to empathetic listening"
           ],
           "answerIndex": 1,
-          "concept": "Conflict Resolution is the area about airing concerns and finding common ground",
-          "why": "Conflict Resolution lets parties express concerns without interruption and identify common ground. Building Relationships is about trust and rapport, and Avoiding Miscommunication is about preventing misunderstanding."
+          "concept": "Hearing versus listening",
+          "why": "Hearing is passive and involuntary; listening is an active and voluntary process requiring a conscious effort to interpret and understand. The sound reached her all along, but only the deliberate effort turned hearing into listening.\n\nThe reverse order describes the opposite change; 'passive hearing' after 'active listening' is also backwards; nothing in the scenario involves understanding the speakers' emotions."
         },
         {
           "type": "mcq",
-          "q": "Which listed strategy means understanding the speaker's emotions?",
+          "q": "In a collaborative seminar, Chike absorbs new information from other students' contributions and gains insights that help the group solve a problem. Under which of the six areas of the importance of listening does this fall?",
           "options": [
-            "Active listening",
-            "Note-taking",
-            "Paraphrasing",
-            "Empathetic listening"
-          ],
-          "answerIndex": 3,
-          "concept": "Empathetic listening targets the speaker's emotions",
-          "why": "Empathetic listening is understanding the speaker's emotions and expressing empathy. Active listening is demonstrating engagement through eye contact and verbal cues; paraphrasing restates a point in your own words."
-        },
-        {
-          "type": "mcq",
-          "q": "Respecting communication differences across cultures is which named competency?",
-          "options": [
-            "Active Engagement",
-            "Critical Listening",
-            "Cultural Competence",
-            "Continuous Improvement"
+            "Effective Communication",
+            "Building Relationships",
+            "Learning and Growth",
+            "Leadership Effectiveness"
           ],
           "answerIndex": 2,
-          "concept": "Cultural Competence is the competency for cross-cultural communication differences",
-          "why": "The deck calls recognising and respecting cross-cultural differences cultural competence, an essential skill for effective listening. The other three are separate items on the same six-competency list."
+          "concept": "The six areas of the importance of listening",
+          "why": "Learning and Growth covers listening as a key component of the learning process: absorbing information, gaining insights and acquiring new knowledge and skills, especially in collaborative environments where diverse perspectives contribute to innovation and problem-solving.\n\nEffective Communication is about responding appropriately and giving feedback; Building Relationships is about trust and rapport; Leadership Effectiveness is about leaders making informed decisions and inspiring loyalty."
         },
         {
           "type": "mcq",
-          "q": "Which case-study methodology heading covers regular self-assessment?",
+          "q": "During a seminar, Bayo restates in his own words the point the speaker has just made, to check that he has understood it. Which listening strategy is he using?",
           "options": [
-            "Reflective Practice",
-            "Cultural Awareness",
-            "Practical Strategies",
-            "Nonverbal Communication"
+            "Summarising",
+            "Note-taking",
+            "Paraphrasing",
+            "Asking clarifying questions"
+          ],
+          "answerIndex": 2,
+          "concept": "Paraphrasing versus summarising",
+          "why": "Paraphrasing restates a point in your own words; it is one of the named strategies, along with summarising, asking clarifying questions and note-taking.\n\nSummarising condenses the whole of what was said into its main points rather than restating one point; note-taking records it in writing; asking clarifying questions puts a question back to the speaker."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following is NOT one of the six practical strategies for listening named in the case study on effective listening?",
+          "options": [
+            "Minimizing distractions",
+            "Avoiding prejudgment",
+            "Asking clarifying questions",
+            "Maintaining eye contact"
+          ],
+          "answerIndex": 3,
+          "concept": "The practical listening strategies list",
+          "why": "The six practical strategies are paraphrasing, summarizing, asking clarifying questions, minimizing distractions, avoiding prejudgment and note-taking.\n\nEye contact appears under the separate Active Listening heading (full attention, eye contact, nodding, verbal cues), which is why it is the tempting choice, but it is not one of the six practical strategies."
+        },
+        {
+          "type": "mcq",
+          "q": "Listening is defined as an active and voluntary process that requires what from the listener?",
+          "options": [
+            "A conscious effort to interpret and understand spoken messages",
+            "The passive reception of sound through the ears",
+            "Repeating the speaker's words aloud",
+            "Writing down everything that is said"
           ],
           "answerIndex": 0,
-          "concept": "Reflective Practice is the self-assessment heading in the case study",
-          "why": "Reflective Practice is regular self-assessment to identify areas for improvement. Cultural Awareness covers cross-cultural differences, Practical Strategies lists the six techniques, and Nonverbal Communication is body language and facial expressions."
+          "concept": "Definition of listening",
+          "why": "Listening is an active and voluntary process requiring a conscious effort to interpret and understand spoken messages.\n\nPassive reception of sound is hearing; repeating words aloud is not interpretation; writing everything down describes note-taking, one strategy, not the definition of listening."
         }
       ]
     },
@@ -1364,68 +1368,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Plotting B against the factor I R squared over 2(R squared + z squared) to the 3/2, the gradient equals what?",
+          "q": "A single-turn circular loop of radius 0.20 m carries 1.5 A. Taking μ₀ = 4π × 10⁻⁷ T·m/A, what flux density does the tesla meter read at the centre of the loop?",
           "options": [
-            "The loop current I",
-            "The loop radius R",
-            "The permeability of free space",
-            "The magnetic flux through the loop"
+            "1.50 μT",
+            "9.42 μT",
+            "4.71 μT",
+            "0.188 μT"
           ],
           "answerIndex": 2,
-          "concept": "The gradient of B against the computed factor is mu-nought directly",
-          "why": "The line is B = mu-nought times x through the origin, so the slope is mu-nought in T.m/A = H/m. If the factor is computed without I, the slope is mu-nought times I instead."
+          "concept": "Flux density at the centre of a current loop",
+          "why": "At the centre z = 0, so B(0) = μ₀I/(2R) = (4π × 10⁻⁷ × 1.5)/(2 × 0.20) = 1.885 × 10⁻⁶/0.40 = 4.71 × 10⁻⁶ T = 4.71 μT.\n\n1.50 μT is μ₀I/(2πR), the field of a long straight wire; 9.42 μT drops the factor 2 in the denominator; 0.188 μT is μ₀IR/2, putting R on top so that a bigger loop would give a bigger field."
         },
         {
           "type": "mcq",
-          "q": "At the centre of the loop, z = 0, the field reduces to which expression?",
+          "q": "For a loop of radius R = 0.10 m carrying I = 2.0 A, the probe sits at z = 10 cm on the axis. What is the value of the plotted factor I R²/[2(R² + z²)^(3/2)] at this point?",
           "options": [
-            "mu-nought I / 2R",
-            "mu-nought I / 2 pi r",
-            "mu-nought n I",
-            "mu-nought I R / 2"
+            "3.54 A/m",
+            "10.0 A/m",
+            "0.0707 A/m",
+            "1.00 × 10⁻⁵ A/m"
           ],
           "answerIndex": 0,
-          "concept": "The centre special case B(0) = mu-nought I / 2R, the maximum on the axis",
-          "why": "Setting z = 0 in the working formula gives mu-nought I over 2R, the largest value on the axis. The second option is the long straight wire and the third the solenoid; neither is this experiment."
+          "concept": "Evaluating the axial-field factor",
+          "why": "Convert z to metres: z = 0.10 m. R² + z² = 0.0100 + 0.0100 = 0.0200 m², and (0.0200)^(3/2) = 0.0200 × √0.0200 = 0.0200 × 0.1414 = 2.828 × 10⁻³ m³. Then x = (2.0 × 0.0100)/(2 × 2.828 × 10⁻³) = 0.0200/5.657 × 10⁻³ = 3.54 A/m.\n\n10.0 A/m ignores z and evaluates the centre value; 1.00 × 10⁻⁵ A/m leaves z as 10 (metres); 0.0707 A/m uses the power 1/2 instead of 3/2 on the bracket."
         },
         {
           "type": "mcq",
-          "q": "What value is quoted for the permeability of free space?",
+          "q": "B (y-axis, logged in nT) is plotted against the factor x = I R²/[2(R² + z²)^(3/2)] (x-axis, A/m). The best line passes through (1.00, 1450) and (5.00, 6450). What value of μ₀ does the gradient give?",
           "options": [
-            "8.85 x 10 to the -12 F/m",
-            "6.63 x 10 to the -34 J.s",
-            "9.8 m/s squared",
-            "4 pi x 10 to the -7 H/m"
+            "1.25 × 10³ T·m/A",
+            "1.45 × 10⁻⁶ T·m/A",
+            "1.29 × 10⁻⁶ T·m/A",
+            "1.25 × 10⁻⁶ T·m/A"
           ],
           "answerIndex": 3,
-          "concept": "mu-nought = 4 pi x 10 to the -7 T.m/A, equivalently H/m",
-          "why": "That is about 1.257 x 10 to the -6, quoted as T.m/A in the theory slide and H/m in the summary; the units are equivalent. The first option is the permittivity of free space, a different constant."
+          "concept": "Permeability of free space from the gradient of B against the factor",
+          "why": "B = μ₀x, so the gradient is μ₀. Gradient = (6450 − 1450)/(5.00 − 1.00) = 5000/4.00 = 1250 nT·m/A = 1.25 × 10⁻⁶ T·m/A, within 0.5% of 4π × 10⁻⁷. The line has intercept 1450 − 1250 × 1.00 = +200 nT, so it does not pass through the origin.\n\n1.25 × 10³ forgets to convert nT to T (× 10⁻⁹); 1.45 × 10⁻⁶ is B/x at the first point, which wrongly assumes the line goes through the origin; 1.29 × 10⁻⁶ is the same mistake at the second point."
         },
         {
           "type": "mcq",
-          "q": "Which listed item actually reads the flux density in the experiment?",
+          "q": "With R = 0.10 m the tesla meter reads 6285 nT at the centre of the loop. The probe is moved along the axis to z = 20 cm. What reading is expected there?",
           "options": [
-            "The ammeter",
-            "The tesla meter",
-            "The DC power supply",
-            "The circular loop"
+            "3143 nT",
+            "562 nT",
+            "1571 nT",
+            "786 nT"
           ],
           "answerIndex": 1,
-          "concept": "The tesla meter reads B; the Hall probe senses it and the ammeter reads I",
-          "why": "The movable magnetic probe sits on the axis and the tesla meter displays B, logged in nT. The ammeter reads the loop current I and the DC supply drives it."
+          "concept": "Fall-off of the axial field with distance",
+          "why": "B(z)/B(0) = R³/(R² + z²)^(3/2). With R = 0.10 m and z = 0.20 m: R² + z² = 0.0500 m², (0.0500)^(3/2) = 0.01118 m³, and R³ = 0.00100 m³, so the ratio is 0.0894 and B = 6285 × 0.0894 = 562 nT.\n\n786 nT applies the far-field 1/z³ law (ratio 1/8) at a point only two radii away, where it is not yet valid; 1571 nT uses an inverse-square ratio R²/z² = 1/4; 3143 nT halves the reading as if B fell linearly with z."
         },
         {
           "type": "mcq",
-          "q": "How many readings are taken per coil, and over what range of z?",
+          "q": "A student's graph of B against the factor I R²/[2(R² + z²)^(3/2)] is a good straight line, but it cuts the B-axis at +200 nT instead of passing through the origin. What is the most likely cause?",
           "options": [
-            "10 readings, z = 0 to 18 cm",
-            "38 readings, z = 0 to 38 cm",
-            "5 readings, z = 0 to 10 cm",
-            "20 readings, z = 0 to 38 cm"
+            "The coil has more than one turn",
+            "The current was set too high",
+            "A zero error on the tesla meter",
+            "z was recorded in centimetres"
           ],
-          "answerIndex": 3,
-          "concept": "Twenty readings per coil in 2 cm steps from the centre out to 38 cm",
-          "why": "Steps of 2 cm from z = 0 to z = 38 cm give 20 points, the spread needed for a straight-line fit that averages out scatter. The whole set is then repeated for coils of different radius."
+          "answerIndex": 2,
+          "concept": "Diagnosing a non-zero intercept on the B against factor graph",
+          "why": "B = μ₀x has no constant term, so an intercept means every reading carries the same fixed offset: a tesla meter that reads 200 nT with no current, or a stray field. Zeroing the meter before use removes it.\n\nExtra turns multiply every B by N and so change the gradient, not the intercept; a larger current changes the x-values, not the intercept; z in cm distorts the spacing of the x-values and bends the line, but does not lift it off the origin."
         }
       ]
     }

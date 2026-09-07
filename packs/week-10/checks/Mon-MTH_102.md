@@ -1,98 +1,112 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 10 area between curves, exactly as the lecturer builds it.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*The two-case rule on slide 4: ∫ₐᵇf(x)dx when f(x) ≥ 0, and |∫ₐᵇf(x)dx| when f(x) ≤ 0.*
+**1.** The area between y = 9 − x² and the x-axis is to be found, and no interval is given. Solve 9 − x² = 0 to find the limits of integration.
+A. x = 3 only
+B. x = −3 and x = 3
+C. x = 0 and x = 9
+D. x = −9 and x = 9
 
-*Finding limits by setting f(x) = 0 and testing an interior point. Splitting at a root when the curve crosses the axis inside the interval.*
+**2.** The curve y = x² + 1 lies above the x-axis. Find the area between the curve and the x-axis from x = 1 to x = 2.
+A. 10/3
+B. 14/3
+C. 7/3
+D. 3
 
-*The two-curve rule A = ∫ₐᵇ(f(x) − g(x))dx, with its condition f(x) ≥ g(x) and limits from f(x) = g(x).*
+**3.** f(x) = x² − 4 on [0, 1]. Evaluate f at the test point x = 1/2, and hence write the area between the curve and the x-axis on [0, 1] as an integral.
+A. f(1/2) = −15/4, so A = |∫₀¹(x² − 4)dx|
+B. f(1/2) = −15/4, so A = ∫₀¹(x² − 4)dx
+C. f(1/2) = 15/4, so A = ∫₀¹(x² − 4)dx
+D. f(1/2) = −3, so A = |∫₀¹(x² − 4)dx|
 
-*Slide 12's A = A₁ + A₂ when the curves intersect at c ∈ (a, b). Why one integral over the whole interval lets the pieces cancel.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**4.** The line y = x + 2 and the parabola y = x² enclose a region. Find the x-values where the two curves meet.
+A. x = 1 and x = −2
+B. x = 2 only
+C. x = −1 and x = 2
+D. x = −√2 and x = √2
 
-**1.** Slide 4 gives two formulas for the area between y = f(x) and the x-axis over [a, b]. What decides which one you use?
-A. The sign of f(x) on [a, b]: the plain integral ∫ₐᵇf(x)dx if f(x) ≥ 0, the modulus |∫ₐᵇf(x)dx| if f(x) ≤ 0
-B. Whether a and b are themselves positive numbers
-C. Whether the interval [a, b] is symmetric about the origin
-D. Whether f is increasing or decreasing on [a, b]
+**5.** y = 6 − x and y = x² meet at x = −3 and x = 2. Using the test point x = 1, write the integrand for the area between the curves on [−3, 2].
+A. (6 − x) + x²
+B. (6 − x) − x²
+C. x² − (6 − x)
+D. 6 − x
 
-**2.** In Example 1 she solves 5x − x² = 0 to get x = 0 and x = 5, and then writes 'Taking any point, say 2 in [0,5], we see that f(2) = 5(2) − 2² = 6 > 0.' What is that second step for?
-A. To find out whether f is positive or negative between the roots, and so which case of the slide 4 rule to apply
-B. To check that the two roots were computed correctly
-C. To find the maximum value of f on the interval
-D. To supply a third limit of integration
+**6.** On [0, 2] a curve y = f(x) runs below the x-axis, crosses it once at x = 1, then rises above it. ∫₀¹f(x)dx = −2/3 and ∫₁²f(x)dx = 4/3. Find the total area between the curve and the axis on [0, 2].
+A. 4/3
+B. −2/3
+C. 2/3
+D. 2
 
-**3.** Slide 8 states A = ∫ₐᵇ(f(x) − g(x))dx. What condition does the slide attach to this formula, and what does that condition do?
-A. f(x) ≥ 0 on [a, b], so that the region lies above the x-axis
-B. f(x) ≥ g(x) on [a, b], so that the subtraction is top minus bottom and every strip height is positive
-C. a ≥ 0 and b ≥ 0, so that the limits are non-negative
-D. Neither curve may cross the x-axis on [a, b]
+**7.** The graph of y = g(x) on [0, 4] is a straight line from the point (0, 4) down to the point (4, 0). Find the area between this line and the x-axis.
+A. 16
+B. 4
+C. −8
+D. 8
 
-**4.** Two curves enclose a region and the question gives no interval. Where do the limits a and b come from?
-A. From the roots of f(x) = 0
-B. From solving f(x) = g(x)
-C. From the turning points of f(x) − g(x)
-D. They are taken as 0 and 1 by convention
+**8.** f(x) ≥ g(x) on [a, b], and the whole region between the two curves lies below the x-axis. Which expression gives the area between the curves?
+A. |∫ₐᵇ f(x)dx| + |∫ₐᵇ g(x)dx|
+B. −∫ₐᵇ (f(x) − g(x))dx
+C. ∫ₐᵇ (f(x) − g(x))dx
+D. ∫ₐᵇ (g(x) − f(x))dx
 
-**5.** Slide 12 replaces one integral with A = A₁ + A₂ when f and g intersect at c strictly inside [a, b]. What goes wrong with a single integral ∫ₐᵇ(f(x) − g(x))dx there?
-A. The antiderivative is undefined at x = c
-B. Every interval must be halved before integrating
-C. f − g changes sign at c, so the piece where g is on top enters negatively and partly or wholly cancels the piece where f is on top
-D. A definite integral is only defined when the integrand keeps a constant sign
+**9. (show your working)** Find the area between the curve y = 3x − x² and the x-axis. Show your working.
 
-**6.** In Example 1 on slides 13–14 the total area between y = sin x and y = cos x on [0, π/2] is 2√2 − 2, but the single unsplit integral ∫₀^(π/2)(cos x − sin x)dx = [sin x + cos x]₀^(π/2) = (1 + 0) − (0 + 1) = 0. What does that show?
-A. That sin x and cos x never actually meet on [0, π/2]
-B. That the antiderivative [sin x + cos x] must be wrong
-C. That a single integral across an interior crossing measures the difference of the two lobes, not their total, and vanishes entirely when the lobes are congruent
-D. That the area between any two curves over a symmetric interval is zero
+**10. (show your working)** Find the area between the curves y = x² + 1 and y = x from x = 0 to x = 2. Show your working.
 
-**7.** The SUMMARY slide writes: 'The area bounded by the region of a function f(x) defined on [a, b] is given by ∫ₐᵇf(x)dx.' Compared with slide 4, what has been left out?
-A. The requirement that a < b
-B. The constant of integration c
-C. The requirement that f be differentiable on [a, b]
-D. The condition f(x) ≥ 0, and with it the whole second case, |∫ₐᵇf(x)dx| for f(x) ≤ 0
+**11. (show your working)** Find the area between y = sin x and the x-axis from x = 0 to x = π. Show your working.
 
-**8.** In Example 2 on slide 10 the lecturer names f(x) = 2 − x first and g(x) = 4 − x² second, then integrates (g(x) − f(x)). Why that order?
-A. Because g was defined second, and the second function is always the one subtracted from
-B. Because g is a quadratic and quadratics are always taken as the upper curve
-C. Because the region lies below the x-axis, which reverses the subtraction
-D. Because her test at x = 1 gives f(1) = 1 and g(1) = 3, so g is on top there, and slide 8 requires the upper function to be written first
+**12. (show your working)** f(x) ≤ 0 for every x in [a, b]. Explain why the area between y = f(x) and the x-axis on [a, b] is |∫ₐᵇf(x)dx| and not ∫ₐᵇf(x)dx, and why that modulus is not enough if f changes sign inside [a, b].
 
-**9.** State both cases of the slide 4 rule as the deck gives them, and explain why the second case needs a modulus while the first does not.
-*(short answer)*
-
-**10.** A question asks for the area enclosed by two curves and gives no interval. Set out, in order, the full procedure slide 8 prescribes, and say what each step prevents you getting wrong.
-*(short answer)*
-
-**11.** State slide 12's rule for curves that intersect at c ∈ (a, b), explain how you decide which function is written first in each of the two integrals, and say why no modulus appears anywhere in this rule.
-*(short answer)*
-
-**12.** Explain why 'take the modulus at the end', that is computing |∫ₐᵇ(f(x) − g(x))dx| across a crossing, is not a substitute for splitting. Use one of the deck's own examples as evidence.
-*(short answer)*
+---
 
 ## Answers
 
-**1. A** — Every strip below the axis contributes a negative amount to the integral, so on an interval where f ≤ 0 the integral is negative and the area is its magnitude; where f ≥ 0 the integral is already the area. Option 2 confuses the sign of the limits with the sign of the function — a and b are just x-values and never enter the choice. Option 3 imports a symmetry idea the deck never uses. Option 4 confuses monotonicity with sign: f(x) = x² − 1 on [0,1] is increasing and still negative, which is exactly the case in her Example 2.
+**1. B** — *Limits of integration from f(x) = 0.* The curve cuts the axis where 9 − x² = 0, so x² = 9 and x = −3 or x = 3. The region is enclosed between these two roots, so the limits are −3 and 3.
 
-**2. A** — The roots tell you where the region starts and ends; they say nothing about whether the region sits above or below the axis, and that is what selects between ∫ₐᵇf and |∫ₐᵇf|. Option 2 misreads it as verification — substituting an interior point cannot confirm a root. Option 3 would need f′(x) = 0, giving x = 5/2, not x = 2; and the maximum plays no part in the area formula. Option 4 invents an extra bound; splitting happens at roots or intersections, never at a test point.
+x = 3 only forgets the negative square root; x = 0 and x = 9 treats the expression as x(9 − x); x = −9 and x = 9 forgets to take the square root of 9.
 
-**3. B** — The slide's wording is 'If f(x) and g(x) are continuous with f(x) ≥ g(x) on [a, b]'. The height of a vertical strip is (upper y) − (lower y), so writing the lower function first would make every height negative and the answer the negative of the area. Option 1 attaches the wrong inequality — her Example 1 on slide 9 has g dipping to −9 and the formula still applies unchanged. Options 3 and 4 both put conditions on position relative to the axis, which is irrelevant: a difference of y-values does not know where the axis is.
+**2. A** — *Area under a curve above the x-axis.* f ≥ 0, so A = ∫₁²(x² + 1)dx = [x³/3 + x]₁² = (8/3 + 2) − (1/3 + 1) = 14/3 − 4/3 = 10/3 square units.
 
-**4. B** — Slide 8: 'If f(x) and g(x) are enclosed without a specific interval given, we let f(x) = g(x), such that x = a and x = b are the bounds of the integration.' An enclosed region is bounded by where the two curves meet. Option 1 is the Part 1 method for a single curve against the axis — a different equation giving different points; for y = 3 − x and y = x² − 9 it would give x = 3 and x = ±3 rather than x = −4 and x = 3. Option 3 finds where the gap between the curves is widest, not where it closes. Option 4 is invented.
+14/3 forgets to subtract the value at the lower limit; 7/3 integrates x² alone and drops the + 1; 3 substitutes the limits into x² + 1 itself instead of into its antiderivative.
 
-**5. C** — Past c the roles swap: f − g becomes negative, so the single integral reports the difference of the two lobes rather than their total. Option 1 is false — the antiderivatives here are polynomials and trig functions, defined everywhere. Option 2 is not a rule; TASK 3's curves meet only at the endpoints and need one integral. Option 4 is false: her own slide 6 evaluates ∫₀¹(x² − 1)dx, whose integrand is negative, without difficulty — the integral exists, it just is not the area.
+**3. A** — *Choosing the area formula by a sign test.* f(1/2) = (1/2)² − 4 = 1/4 − 4 = −15/4 < 0, and f has no root inside [0, 1] (its roots are ±2), so f ≤ 0 on the whole interval. Below the axis the integral is negative, so the area is its modulus: A = |∫₀¹(x² − 4)dx| = |1/3 − 4| = 11/3.
 
-**6. C** — The lobe on [0, π/4] and the lobe on [π/4, π/2] are mirror images, each of area 2/√2 − 1, so they cancel exactly in one integral and add to 2√2 − 2 when handled separately. Option 1 contradicts the slide, which finds the meeting point at tan x = 1, x = π/4. Option 2 is wrong — differentiating sin x + cos x returns cos x − sin x, the integrand. Option 4 over-generalises a coincidence into a rule; the cancellation comes from the crossing, not from the interval.
+The second option keeps the negative integral as the area; the third gets the sign of f(1/2) wrong and so picks the wrong case; the fourth evaluates 2x − 4 instead of x² − 4 at the test point.
 
-**7. D** — Slide 4 states two cases with a sign condition on each; the summary keeps only the first formula and drops the condition, so as written it would report a negative number as an area for any curve below the axis — contradicting her own Example 2 on slide 6. Option 1 is a convention the deck never raises. Option 2 belongs to indefinite integrals; definite ones carry no c. Option 3 names the wrong hypothesis — slide 8 asks for continuity, not differentiability, and slide 4 asks for neither. Revise from slides 4, 8 and 12; treat slide 16 as an index to them.
+**4. C** — *Intersection points of two curves.* Set the curves equal: x + 2 = x², so x² − x − 2 = 0, (x − 2)(x + 1) = 0, giving x = −1 and x = 2. These are the limits of integration for the enclosed region.
 
-**8. D** — The slide's own words are 'Taking x = 1, we see that, g(x) ≥ f(x)', and slide 8's condition is f(x) ≥ g(x) for the formula as written — so with g on top the roles are swapped and the integrand is g − f. Option 1 turns a coincidence of this one example into a rule; in Example 1 on slide 9 the first-named f is on top. Option 2 is false: in slide 9's example the parabola x² − 9 is the lower curve. Option 3 is the persistent 'shift it above the axis' superstition — the strip height is a difference of y-values and does not depend on where the axis is.
+x = 1 and x = −2 has the factor signs backwards; x = 2 only drops the negative root; x = ±√2 loses the x term and solves x² = 2.
 
-**9.** A good answer quotes both: if f(x) ≥ 0 on [a, b] the area under y = f(x) over [a, b] is ∫ₐᵇf(x)dx; if f(x) ≤ 0 on [a, b] it is |∫ₐᵇf(x)dx|. The explanation should be about sign, not about convention: the definite integral accumulates f(x) times a positive width, so where f is negative every contribution is negative and the integral comes out negative. An area is a non-negative quantity, so the magnitude is taken. In the first case the integral is already non-negative and the modulus would change nothing. Credit any answer that notes the modulus is applied per piece, as in Example 2, not to the whole interval at once.
+**5. B** — *Choosing top minus bottom by a test point.* At x = 1: 6 − 1 = 5 and 1² = 1, so the line is on top. The strip height is top minus bottom, (6 − x) − x² = 6 − x − x², which is what is integrated from −3 to 2.
 
-**10.** A good answer gives three steps in order. First, solve f(x) = g(x): 'If f(x) and g(x) are enclosed without a specific interval given, we let f(x) = g(x), such that x = a and x = b are the bounds of the integration' — this prevents integrating over an invented interval, which is how whole questions are lost. Second, take a convenient point strictly between the two solutions and evaluate both functions there, to see which is on top — this prevents subtracting in the wrong order and reporting the negative of the area, which is precisely why Example 2 on slide 10 integrates g − f. Third, integrate (upper − lower) between the two limits and report the answer in square units. It is worth adding that the condition in the rule is f(x) ≥ g(x), a comparison between the two curves, and has nothing to do with either curve's position relative to the x-axis.
+(6 − x) + x² adds the curves instead of subtracting; x² − (6 − x) subtracts in the wrong order and gives a negative result; 6 − x forgets to subtract the lower curve at all.
 
-**11.** A good answer states it: A₁ = ∫ₐᶜ(f(x) − g(x))dx where f(x) ≥ g(x), A₂ = ∫ᶜᵇ(g(x) − f(x))dx where f(x) ≤ g(x), and A = A₁ + A₂. On the decision: test one point inside each of the two sub-intervals and put whichever function is larger there first — the labels A₁ and A₂ on the slide assume f is on top first and g on top second, which is a labelling convention, not a fact about the curves; if the test says otherwise you swap the integrands. On the modulus: because the upper function is written first in each piece, each integrand is non-negative throughout its own interval, so each integral is already a positive area and they simply add. The modulus in Part 1 exists only because there the integrand is f itself, whose sign you do not control.
+**6. D** — *Adding areas across an axis crossing.* Split at the crossing and take the modulus of the piece below the axis: A = |−2/3| + 4/3 = 2/3 + 4/3 = 2 square units.
 
-**12.** A good answer makes the timing the point: the cancellation happens inside the integral, before the modulus is ever applied, so the modulus can only fix a sign, never restore a lost quantity. The strongest evidence in the deck is Example 1 on slides 13–14: ∫₀^(π/2)(cos x − sin x)dx = [sin x + cos x]₀^(π/2) = (1 + 0) − (0 + 1) = 0, and |0| = 0, while the true area is 2√2 − 2. TASK 2 gives a second case: ∫₀²[(2 − x²) − x²]dx = 4 − 16/3 = −4/3, whose magnitude 4/3 is nothing like the correct 4. The modulus is legitimate only where the integrand keeps one sign across the whole interval, which is exactly the situation slide 4 covers and slide 12 does not.
+4/3 counts only the piece above the axis; −2/3 is the piece below with no modulus; 2/3 is the single integral ∫₀²f(x)dx = −2/3 + 4/3, in which the two pieces partly cancel.
+
+**7. D** — *Setting up an area from a described graph.* The line has intercept 4 and gradient (0 − 4)/(4 − 0) = −1, so g(x) = 4 − x, which is ≥ 0 on [0, 4]. A = ∫₀⁴(4 − x)dx = [4x − x²/2]₀⁴ = 16 − 8 = 8 square units, which agrees with the triangle formula ½ × 4 × 4.
+
+16 integrates the constant 4 alone and forgets the −x; 4 halves the triangle a second time; −8 integrates x − 4, the line written upside down.
+
+**8. C** — *Area between curves below the x-axis.* The height of a vertical strip is the difference of the two y-values, f(x) − g(x), which is ≥ 0 wherever f is on top, whether or not the y-values themselves are negative. So A = ∫ₐᵇ(f(x) − g(x))dx with no modulus and no sign change. For example f(x) = −x² and g(x) = −4 on [−2, 2] give ∫(4 − x²)dx = 32/3 > 0.
+
+The first option adds two areas against the axis, which is not the region between the curves; the second flips a sign that is already correct and gives a negative number; the fourth subtracts bottom minus top and is also negative.
+
+**9.** *Area between a parabola and the x-axis.* No interval is given, so the limits are the roots: 3x − x² = x(3 − x) = 0 gives x = 0 and x = 3. Test an interior point: f(1) = 3 − 1 = 2 > 0, so the curve is above the axis on [0, 3] and no modulus is needed. A = ∫₀³(3x − x²)dx = [3x²/2 − x³/3]₀³ = (27/2 − 9) − 0 = 9/2.
+
+Final answer: 9/2 square units (also accepted: 4.5). The working must show the roots from f(x) = 0, a sign check, and the evaluated bracket. 27/2 alone forgets the cubic term; −9/2 has the integrand upside down.
+
+**10.** *Area between two curves on a given interval.* Decide which curve is on top with a test point: at x = 1, x² + 1 = 2 and x = 1, so y = x² + 1 is on top (in fact x² + 1 − x = (x − 1/2)² + 3/4 > 0 everywhere, so the curves never cross). A = ∫₀²[(x² + 1) − x]dx = ∫₀²(x² − x + 1)dx = [x³/3 − x²/2 + x]₀² = 8/3 − 2 + 2 = 8/3.
+
+Final answer: 8/3 square units (also accepted: 2.67 or 2⅔). A correct answer names the top curve, integrates top minus bottom over [0, 2] and evaluates at both limits. −8/3 comes from subtracting in the wrong order; 14/3 forgets to subtract the lower curve.
+
+**11.** *Area under a sine curve.* sin x ≥ 0 on [0, π] (test x = π/2: sin(π/2) = 1 > 0), so A = ∫₀^π sin x dx. The antiderivative of sin x is −cos x, so A = [−cos x]₀^π = −cos π − (−cos 0) = −(−1) + 1 = 2.
+
+Final answer: 2 square units. The working must use ∫sin x dx = −cos x, with cos π = −1 and cos 0 = 1. −2 comes from using cos x as the antiderivative, [cos x]₀^π = −1 − 1; 0 comes from taking cos π = 1 instead of −1. Neither is accepted.
+
+**12.** *Why the modulus in the area formula.* When f ≤ 0 every strip contributes a negative amount, so ∫ₐᵇf(x)dx comes out negative (or zero); an area cannot be negative, so the area is the magnitude of the integral, |∫ₐᵇf(x)dx|. If f changes sign at some c inside [a, b], the negative contribution from one side and the positive contribution from the other cancel inside the single integral before any modulus is applied, so |∫ₐᵇf(x)dx| is smaller than the true area (it can even be 0). The remedy is to split at c and add |∫ₐᶜf(x)dx| and |∫ᶜᵇf(x)dx| separately.
+
+A correct answer says the integral is negative below the axis, that the modulus restores a positive area, and that with a sign change the pieces cancel so the split must happen before taking magnitudes.

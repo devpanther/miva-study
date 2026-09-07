@@ -1,46 +1,58 @@
 # Wednesday — GST_122 fast-hour check
 
 *Semiotics, denotative versus connotative meaning, the two sources of confusion and the case study.*
-*Five questions, straight after the fast hour. Recall only. Score out of 5.*
+*5 questions, straight after the hour. Score out of 5.*
 
-**1.** What is the field concerned with signs and symbols in communication called?
-A. Contextual interpretation
-B. Semiotics
-C. Active listening
-D. Cultural sensitivity
+**1.** In a budget meeting Ada calls the new spending rules 'a straitjacket'. Nobody thinks she means an item of clothing. Which kind of meaning is she relying on?
+A. Denotative meaning
+B. Connotative meaning
+C. Homophonic meaning
+D. Semiotic meaning
 
-**2.** The literal, dictionary sense of a word is called its what?
-A. Connotative meaning
-B. Ambiguous meaning
-C. Denotative meaning
-D. Contextual meaning
-
-**3.** Which source of confusion disappears once the sentence is written down?
+**2.** A voice message says 'Leave the file by the stares.' The listener cannot tell whether 'stairs' or 'stares' was meant, but the confusion would vanish if the message were typed. Which source of confusion is this?
 A. Ambiguity
-B. Vagueness
-C. Connotation
-D. Hazardous homophones
+B. Connotation
+C. Semiotic confusion
+D. Hazardous homophone
 
-**4.** The Week 2 case study's ambiguous sentence concerned what?
-A. Task assignment in a project team
-B. A mispronounced client name
-C. A homophone in a written report
-D. An emoji misread by a colleague
+**3.** A project lead emails: 'Tola told Musa that his section is late.' Two team members disagree about whose section is late. Which source of confusion is this, and does writing it down remove it?
+A. Ambiguity; no
+B. Hazardous homophone; yes
+C. Ambiguity; yes
+D. Hazardous homophone; no
 
-**5.** Effective communication conveys meaning accurately while being mindful of what?
-A. Grammar and spelling rules
-B. The listener's vocabulary size
-C. Cultural and emotional associations of words
-D. The speaker's tone of voice
+**4.** Before anyone speaks, a new staff member reads the colour-coded badges and the warning icons on the office dashboard and understands what each stands for. Which competency is she showing?
+A. Clarity in Expression
+B. Conflict Resolution
+C. Semiotic Awareness
+D. Active Listening
+
+**5.** Because meaning is multifaceted, what does it require from the listener?
+A. Active interpretation, considering context and possible ambiguities
+B. Silent acceptance of the literal, dictionary meaning
+C. Repeating the speaker's words back exactly
+D. Translating every word into a sign or symbol
+
+---
 
 ## Answers
 
-**1. B** — Semiotics is the field of signs and symbols and the role they play in daily interaction. The other three are competencies named by the lesson, not fields of study.
+**1. B** — *Denotative versus connotative meaning.* Denotative meaning is the literal sense; connotative meaning is the implied or suggested sense carrying emotional and cultural associations. 'Straitjacket' is used for its suggestion of restriction, so it is connotative.
 
-**2. C** — Denotation is the literal dictionary sense. Connotation is the implied sense carrying cultural and emotional associations, and ambiguity is a sentence open to two readings.
+Denotative would be the literal garment; 'homophonic' concerns words that sound alike; semiotics is the field of signs and symbols, not a level of word meaning.
 
-**3. D** — Homophone confusion is sound-based, so writing fixes it. An ambiguous sentence stays readable two ways on the page; vagueness gives one fuzzy reading, not two.
+**2. D** — *Hazardous homophones versus ambiguity.* The two named sources of confusion are hazardous homophones and ambiguity. Here the confusion comes from identical sound with different meaning, and writing removes it, so it is a hazardous homophone.
 
-**4. A** — One ambiguous task-assignment sentence produced conflicting readings of tasks and responsibilities across the team. The case study is about ambiguity, not about homophones or non-verbal signs.
+Ambiguity survives being written down because the sentence itself allows two readings; connotation is a level of meaning, not a source of confusion; semiotics concerns signs and symbols.
 
-**5. C** — The definition pairs conveying intended meanings accurately with mindfulness of the broader cultural and emotional associations of words, which is connotation. The others are real concerns but not in the stated sentence.
+**3. A** — *Ambiguity in written communication.* 'His' can refer to Tola or to Musa, so one written sentence has two readings: that is ambiguity, and it remains on the page, exactly as in the case study where one ambiguous task-assignment sentence produced conflicting interpretations.
+
+A homophone is a sound-based confusion, which this is not; and ambiguity is not removed by writing, so 'Ambiguity; yes' is wrong.
+
+**4. C** — *Semiotics and the lesson competencies.* Semiotics is the field of signs and symbols, and Semiotic Awareness is sensitivity to the signs and symbols in a message. Badges and icons carry meaning without words.
+
+Clarity in Expression is about phrasing your own message; Conflict Resolution reconciles discrepancies in understanding; Active Listening concerns spoken input.
+
+**5. A** — *Meaning requires active interpretation.* The multifaceted nature of meaning requires active interpretation by the listener, considering context and recognising potential ambiguities.
+
+Accepting only the literal sense ignores connotation; repeating words is not interpretation; signs and symbols are one channel of meaning, not something every word is turned into.

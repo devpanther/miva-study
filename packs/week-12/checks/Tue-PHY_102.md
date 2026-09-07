@@ -1,102 +1,112 @@
 # Tuesday — PHY_102 nightly check
 
 *Conceptual session on Week 12 transformers, exactly as the lecturer builds them.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*The shared core flux, and her equation 1: ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt.*
+**1.** The primary of a transformer has 400 turns and an induced emf of 120 V. The secondary, on the same core, has 50 turns. What is the emf induced in the secondary?
+A. 960 V
+B. 15 V
+C. 120 V
+D. 0.30 V
 
-*Why equal flux per turn gives equal emf per turn, and hence equation 2, ε₂/ε₁ = N₂/N₁.*
+**2.** An ideal transformer must give 8.0 V from a 240 V supply. Its secondary has 40 turns. How many turns must the primary have?
+A. 1200
+B. 30
+C. 1.3
+D. 9600
 
-*The ideal-transformer assumption that upgrades it to equation 3, V₂/V₁ = N₂/N₁.*
+**3.** The secondary of an ideal transformer supplies 6.0 V across a 1.5 Ω lamp. The primary is fed from a 120 V supply. What power does the primary draw from the supply?
+A. 480 W
+B. 4.0 W
+C. 24 W
+D. 9.6 × 10³ W
 
-*Step-up as N₂ > N₁, and step-down as N₂ < N₁.*
+**4.** A real transformer takes 2.0 A at 240 V from the supply and delivers 18 A at 24 V to its load. What is its efficiency?
+A. 100%
+B. 111%
+C. 10%
+D. 90%
 
-*The energy statement I₁V₁ = I₂V₂. The squared turns ratio in V₁/I₁ = R/(N₂/N₁)².*
+**5.** A load of 8.0 Ω is connected across the secondary of an ideal transformer with N₂/N₁ = 1/5. What resistance does the supply connected to the primary see?
+A. 200 Ω
+B. 40 Ω
+C. 0.32 Ω
+D. 1.6 Ω
 
-*And the hardware facts: iron core, lamination against eddy currents, unchanged frequency, and impedance matching for maximum power transfer.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**6.** A transformer has 100 turns on coil A and 500 turns on coil B. A 250 V a.c. source is connected to coil B and a load to coil A. Treating it as ideal, what voltage appears across the load?
+A. 1250 V
+B. 250 V
+C. 50 V
+D. 10 V
 
-**1.** Slide 8 writes ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt with one and the same dΦ_B/dt. What does the lecturer conclude from that fact?
-A. The two windings carry the same current
-B. The primary emf is always the larger of the two
-C. The induced emf per turn is the same in the two coils
-D. The magnetic flux is twice as large in the secondary
+**7.** At some instant the flux in a transformer core is changing at 0.050 Wb/s. The primary has 200 turns. What is the magnitude of the emf induced in the primary at that instant?
+A. 0.050 V
+B. 10 V
+C. 4.0 × 10³ V
+D. 2.5 × 10⁻⁴ V
 
-**2.** In the deck's notation, which winding carries the subscript 1?
-A. The primary — the side connected to the input AC voltage source
-B. Whichever side has more turns
-C. The side connected to the resistor R
-D. Whichever side is at the higher voltage
+**8.** A 50 Hz supply feeds an ideal step-up transformer with N₂/N₁ = 20. Which quantity is the same on the secondary side as on the primary side?
+A. The voltage
+B. The frequency
+C. The current
+D. The resistance seen by the source
 
-**3.** How does the deck define a step-up transformer?
-A. One whose secondary current exceeds its primary current
-B. One for which N₂ > N₁
-C. One connected to the higher of the two available supply voltages
-D. One whose core has more laminations than a step-down transformer
+**9. (show your working)** A generator delivers 20 kW at 500 V. Before transmission the voltage is stepped up by an ideal transformer to 10 kV. Calculate the current in the line before and after stepping up, and the factor by which the I²R loss in the line falls. Show your working.
 
-**4.** Equation 2 is about emfs: ε₂/ε₁ = N₂/N₁. What does the lecturer add on the next slide before she is entitled to write equation 3, V₂/V₁ = N₂/N₁?
-A. That the core is laminated so no eddy currents flow
-B. That all voltages are rms rather than peak values
-C. That the frequency is unchanged from primary to secondary
-D. That in an ideal transformer the induced emfs equal the terminal voltages
+**10. (show your working)** A real transformer's secondary reads 12.0 V with nothing connected and 11.2 V when supplying 2.0 A. Calculate the resistance of the secondary winding and the percentage of the emf lost inside it at this load, and state what the ideal-transformer assumption says about this loss. Show your working.
 
-**5.** According to slide 4, what is the iron core for?
-A. To conduct the current from the primary winding into the secondary winding
-B. To increase the magnetic flux and provide a medium for it to pass from one coil to the other
-C. To store the energy that the secondary will later deliver to the load
-D. To hold the two windings apart so that they do not short together
+**11. (show your working)** An amplifier delivers maximum power to a 1600 Ω load, but the loudspeaker is 4.0 Ω. Find the turns ratio N₂/N₁ of the matching transformer and say whether it is step-up or step-down. With 40 V rms on the primary, calculate the speaker voltage and the power delivered to it. Show your working.
 
-**6.** The core is made of thin sheets of metal insulated from one another. According to slide 5, what does the insulation achieve?
-A. It raises the resistance of the secondary winding, reducing heating there
-B. It keeps the primary and secondary circuits electrically isolated
-C. It prevents eddy currents from flowing from one sheet of metal to the next
-D. It increases the flux per turn and so raises the secondary emf
+**12. (show your working)** A transformer core is made of iron rather than air, and that iron is built from thin sheets insulated from one another rather than from a solid block. Explain what each of these two design choices achieves.
 
-**7.** Slide 10 states I₁V₁ = I₂V₂. Read physically, this says that
-A. voltage can only be gained at the cost of current, since the power is the same on both sides
-B. the current is the same on both sides whenever the voltages match
-C. the secondary delivers more power than the primary receives, by the turns ratio
-D. the current and the voltage both rise together in a step-up transformer
-
-**8.** Slide 11 says a transformer may be used to match resistances between the primary circuit and the load. What is the stated purpose?
-A. To make the secondary current equal the primary current
-B. To keep the frequency of the load the same as that of the source
-C. To eliminate eddy current losses in the load
-D. To achieve maximum power transfer between the source and the load resistance
-
-**9.** Set out the lecturer's three numbered equations in order and say, for each step, what makes the next line follow. Be explicit about where the two minus signs go.
-*(short answer)*
-
-**10.** The deck says transformers 'can only be used with AC'. Justify that from her own equations rather than from memory.
-*(short answer)*
-
-**11.** Without doing any arithmetic beyond the ratio itself, say which of the lecturer's two examples is step-up and which is step-down, and identify the primary in each. Explain why the appliance's own rating never decides the answer.
-*(short answer)*
-
-**12.** Explain the formula V₁/I₁ = R/(N₂/N₁)² in words: what R is, what V₁/I₁ is, and why the turns ratio appears squared rather than to the first power.
-*(short answer)*
+---
 
 ## Answers
 
-**1. C** — Dividing each equation by its own N gives ε/N = −dΦ_B/dt, the same number for both coils — her exact words are 'the induced emf per turn is the same in the two coils', and that is what licenses equation 2. Option 1 is contradicted two slides later, where I₁ = 8.0 A and I₂ = 4.0 A in the same example. Option 2 assumes an ordering the equations never fix; which emf is larger depends entirely on which N is larger. Option 4 misreads the shared flux: she says explicitly 'the flux per turn Φ_B is the same in both the primary and secondary'.
+**1. B** — *Equal emf per turn in both windings.* One core, one flux, so both windings share the same dΦ/dt and the emf per turn is the same: 120/400 = 0.30 V per turn. Secondary: ε₂ = 50 × 0.30 = 15 V. Equivalently ε₂/ε₁ = N₂/N₁ = 50/400.
 
-**2. A** — Slide 4: 'The side connected to the input AC voltage source is called the primary and has N₁ turns. The other side, called the secondary, is connected to a resistor and has N₂ turns.' Option 2 confuses the label with the turns ratio; in Example 2 the primary has more turns, in Example 1 fewer. Option 3 names the secondary. Option 4 fails on Example 1, where the primary sits at 120 V and the secondary at 240 V. Getting this wrong inverts every ratio in both worked examples.
+960 V inverts the turns ratio, giving the secondary more emf with fewer turns; 120 V assumes the two emfs are equal, which would need equal turns; 0.30 V is the emf per turn, not the emf of the 50-turn winding.
 
-**3. B** — Slide 9 states it in turns: 'When N₂ > N₁, the transformer is referred to as a step-up transformer. When N₂ < N₁, the transformer is referred to as a step-down transformer.' Equation 3 makes that equivalent to V₂ > V₁, but the definition she gives is the one to quote. Option 1 has it backwards — stepping voltage up steps current down, by I₁V₁ = I₂V₂. Option 3 confuses the supply with the transformer. Option 4 invents a distinction; lamination is about eddy currents and is the same for both.
+**2. A** — *Turn count from the voltage ratio.* V₂/V₁ = N₂/N₁, so N₁ = N₂ (V₁/V₂) = 40 × (240/8.0) = 40 × 30 = 1200 turns. Fewer secondary turns than primary: step-down, as an 8.0 V output demands.
 
-**4. D** — Slide 9 opens with exactly that sentence: 'In an ideal transformer, the induced emfs ε₁ and ε₂ in the primary and secondary windings are equal to the terminal voltages, respectively.' The move from equation 2 to equation 3 is a physical assumption, not algebra — in a real transformer the terminal voltage differs from the induced emf. Option 1 is a construction detail from slide 5, not the licence for equation 3. Option 2 is a convention about how numbers are quoted; it changes no relationship. Option 3 is true (slide 7) but says nothing about emf versus terminal voltage.
+30 is the voltage ratio 240/8.0 quoted as a number of turns; 1.3 is 40 × (8.0/240), the ratio inverted; 9600 is 40 × 240 with the division by 8.0 V forgotten.
 
-**5. B** — Her words: 'The core is used to increase the magnetic flux and to provide a medium for the flux to pass from one coil to the other.' Option 1 describes the commonest misconception about transformers — the windings are never electrically connected; what crosses is flux, not charge. Option 3 turns the transformer into a battery; nothing in the deck stores energy, and slide 10 has power in equal to power out at every instant. Option 4 names an incidental mechanical fact, not the reason iron is used.
+**3. C** — *Power in equals power out.* Secondary current I₂ = V₂/R = 6.0/1.5 = 4.0 A, so the secondary power is I₂V₂ = 4.0 × 6.0 = 24 W. Ideal transformer: I₁V₁ = I₂V₂, so the primary draws 24 W (at I₁ = 0.20 A).
 
-**6. C** — Slide 5: the core is laminated 'to minimize eddy current losses ... The insulation prevents the eddy currents from flowing from one sheet of metal to the next.' Eddy currents are the only loss mechanism this deck names. Option 1 confuses the core with the windings; lamination changes nothing about winding resistance. Option 2 is true of a transformer in general and is mentioned on the summary slide, but it is not what lamination is for. Option 4 reverses the effect — lamination is a measure against a loss, not a way of boosting flux.
+480 W multiplies the secondary current by the primary voltage, mixing the two sides; 4.0 W is the secondary current 4.0 A written with the wrong unit; 9.6 × 10³ W is V₁²/R, the power the lamp would take if it were connected straight to 120 V.
 
-**7. A** — The equation says the power input into the primary equals the power output at the secondary, so any factor gained on V must be lost on I. Example 1 shows it: 8.0 A at 120 V and 4.0 A at 240 V are both 960 W. Option 2 states a special case as though it were the content of the equation. Option 3 would make the transformer a source of energy. Option 4 is the single most common exam error — a step-up in voltage is a step-down in current.
+**4. D** — *Efficiency of a real transformer.* Power in = I₁V₁ = 2.0 × 240 = 480 W. Power out = I₂V₂ = 18 × 24 = 432 W. Efficiency = 432/480 = 0.90 = 90%; the missing 48 W goes to eddy currents and heating in the windings and core.
 
-**8. D** — Her words: 'This way, maximum power transfer can be achieved between a given power source and the load resistance. In stereo terminology, this technique is called impedance matching.' She then adds that the transformer 'transforms not only voltages and currents, but resistances as well' — the resistance seen from the primary being R/(N₂/N₁)². Option 1 would require a 1 : 1 ratio and has nothing to do with matching. Option 2 happens anyway, at every turns ratio. Option 3 relocates a core loss into the load.
+100% assumes an ideal transformer, which the numbers contradict; 111% is 480/432, the ratio upside down, and no device delivers more than it takes; 10% is the fraction lost, not the fraction delivered.
 
-**9.** A good answer runs: equation 1 is Faraday's law applied to each winding using one shared flux, ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt. Dividing the second by the first cancels dΦ_B/dt and cancels the two identical minus signs, giving equation 2, ε₂/ε₁ = N₂/N₁, valid at any instant — the absence of a minus sign there is a cancellation, not an omission. Equation 3, V₂/V₁ = N₂/N₁, then follows only after slide 9's assumption that in an ideal transformer each induced emf equals its terminal voltage. It should name equation 3 as the one that carries an assumption, and note that N is a pure count of turns while ε and V are in volts, so both ratios are dimensionless.
+**5. A** — *Resistance seen from the primary via the turns ratio.* V₁/I₁ = R/(N₂/N₁)² = 8.0/(1/5)² = 8.0/(1/25) = 8.0 × 25 = 200 Ω. A step-down transformer makes a small load look large to the supply.
 
-**10.** A good answer points at the derivative in equation 1: the induced emf in each winding is proportional to dΦ_B/dt, not to Φ_B. A steady direct current in the primary sets up a steady flux in the core; a steady flux has dΦ_B/dt = 0, so ε₂ = −N₂ dΦ_B/dt = 0 and nothing is induced in the secondary, no matter how many turns it has or how large the DC is. Slide 7 makes the same point positively — it is the AC source that 'causes a changing magnetic field to be created in the core', and that changing field is what induces the secondary current. The answer should tie this back to slide 3's reason for preferring AC for distribution: only AC voltages can be stepped up for transmission and back down for homes and businesses.
+40 Ω divides by the ratio 1/5 without squaring it; 0.32 Ω multiplies by (1/5)² instead of dividing; 1.6 Ω multiplies by 1/5, the ratio the wrong way and unsquared.
 
-**11.** A good answer says the primary is always the winding connected to the input source. In Example 1 the source is the USA 120-V line, so V₁ = 120 V, and the coffeemaker is the load at V₂ = 240 V, giving N₂/N₁ = 2, which is N₂ > N₁, a step-up transformer. In Example 2 the source is the European 240-V outlet, so V₁ = 240 V, and the dryer is the load at V₂ = 120 V, giving N₂/N₁ = 1/2, which is N₂ < N₁, a step-down transformer. The appliance rating never decides which side is the primary: the coffeemaker is rated 240 V and the dryer 120 V, and each sits on the secondary regardless. It should note that reversing this assignment inverts every ratio, current and resistance in the rest of the example.
+**6. C** — *Identifying the primary from the source connection.* The primary is whichever coil the source is connected to: coil B, so N₁ = 500 and N₂ = 100. V₂ = V₁ (N₂/N₁) = 250 × (100/500) = 50 V. With N₂ < N₁ this is a step-down connection.
 
-**12.** A good answer identifies R as the load resistance connected across the secondary — the resistor of slide 5, across which V₂ appears — and V₁/I₁ as the equivalent or apparent resistance that the source sees when it looks into the primary, both in ohms. On the square: a resistance is a voltage divided by a current, the turns ratio scales the voltage by N₂/N₁ and scales the current the opposite way by N₁/N₂, so the quotient picks up the factor twice. It should read the consequence off the formula — for a step-up transformer N₂/N₁ is greater than 1, so the load looks smaller from the primary, exactly as Example 1's 60 Ω coffeemaker looks like 15 Ω to the 120 V line — and connect it to slide 11: choosing the turns ratio to make R look like the source's own resistance is impedance matching, done for maximum power transfer.
+1250 V takes coil A as the primary because it was named first; 250 V ignores the transformer; 10 V divides by the ratio squared, importing the square from the resistance formula into the voltage ratio.
+
+**7. B** — *Faraday's law for one winding of a transformer.* ε₁ = −N₁ dΦ/dt, so |ε₁| = 200 × 0.050 = 10 V. Wb/s is the same unit as the volt.
+
+0.050 V forgets N and quotes the rate of change of flux itself; 4.0 × 10³ V divides N by the rate instead of multiplying; 2.5 × 10⁻⁴ V divides the rate by N.
+
+**8. B** — *What a transformer leaves unchanged.* All currents and voltages in a transformer have the same frequency as the source: the secondary emf is driven by the same changing flux, cycle for cycle, so the output is still 50 Hz. The voltage is multiplied by 20, the current divided by 20, and a load R looks like R/400 to the source.
+
+Each wrong option names a quantity the turns ratio does change: voltage by N₂/N₁, current by N₁/N₂, resistance by (N₂/N₁)².
+
+**9.** *Why power is transmitted at high voltage.* At 500 V: I = P/V = 20 000/500 = 40 A. After the step-up, the power is unchanged (I₁V₁ = I₂V₂), so at 10 000 V: I = 20 000/10 000 = 2.0 A. The line loss I²R with the same R falls by (2.0/40)² = (1/20)² = 1/400. Stepping the voltage up 20 times cuts the current 20 times and the loss 400 times.
+
+Final answer: 40 A and 2.0 A, loss reduced by a factor of 400. A correct answer uses conservation of power to get the second current and squares the current ratio for the loss. A factor of 20 forgets the square in I²R; 800 A after step-up applies the ratio the wrong way.
+
+**10.** *Emf versus terminal voltage in a real secondary.* The open-circuit reading is the induced emf ε₂ = 12.0 V, since no current flows and nothing is dropped inside. Under load V₂ = ε₂ − I₂r, so the drop is 12.0 − 11.2 = 0.80 V and r = 0.80/2.0 = 0.40 Ω. Fraction lost = 0.80/12.0 = 0.067, about 6.7%. The ideal-transformer assumption is that the induced emf equals the terminal voltage in each winding, that is r = 0 and no such drop, which is what allows ε₂/ε₁ = N₂/N₁ to be written as V₂/V₁ = N₂/N₁.
+
+Final answer: 0.40 Ω (accept 0.39 to 0.41) and 6.7% (accept 6.5 to 7.0), with the statement that an ideal transformer has no internal drop so emf and terminal voltage coincide. 5.6 Ω (11.2/2.0) is the load resistance, not the winding's; 0.80 Ω forgets to divide by the current.
+
+**11.** *Impedance matching with a transformer.* The supply must see V₁/I₁ = R/(N₂/N₁)² = 1600 Ω with R = 4.0 Ω, so (N₂/N₁)² = 4.0/1600 = 1/400 and N₂/N₁ = 1/20: a step-down transformer, since N₂ < N₁. Speaker voltage V₂ = V₁(N₂/N₁) = 40 × (1/20) = 2.0 V. Power P = V₂²/R = (2.0)²/4.0 = 1.0 W. Check from the primary side: P = V₁²/1600 = 1600/1600 = 1.0 W, the same.
+
+Final answer: N₂/N₁ = 1/20 (accept 0.05), step-down, 2.0 V, 1.0 W. A correct answer takes the square root to get the turns ratio and gets the same power from both sides. 1/400 is the squared ratio left unrooted; 20 is the ratio inverted and would be a step-up giving 800 V.
+
+**12.** *Purpose of the iron core and its lamination.* The iron core does two things: it greatly increases the magnetic flux produced by the primary current (iron's high permeability), and it provides a path that carries that flux round to the secondary, so that almost all the flux threading the primary also threads the secondary and the emf per turn is the same in both. Laminating the core deals with eddy currents: the changing flux induces emfs in the core metal itself, and in a solid block these drive large circulating currents that heat the core and waste power. Cutting the core into thin sheets with insulation between them breaks the paths of those currents, since they cannot flow from one sheet to the next, so the eddy-current loss is greatly reduced while the flux still passes along the sheets.
+
+A correct answer gives both jobs of the iron (more flux, and a path linking the coils) and explains lamination as interrupting eddy currents to cut heating loss, not as anything to do with the turns ratio or the frequency.

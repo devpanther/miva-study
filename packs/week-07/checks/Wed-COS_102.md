@@ -1,96 +1,120 @@
 # Wednesday — COS_102 nightly check
 
-*Concepts only, and only what the two decks actually say: what a programme contains, what a data type is and the three basic types, the rule for writing a definition and the deck's sentence about definitions and declarations, why names become addresses, the six operator categories by name, and what a programme object is — state, behaviour, who may reach the state, and structure versus union versus class. No expression to evaluate and no fragment to debug — those are Saturday.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Data types, variables and programme objects, as concepts, exactly as the two decks give them.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** The slides state: "A variable definition is also a declaration, but not all variable declarations are definitions." Taken at face value, what does that sentence assert?
+**1.** Evaluate the C expression `30 - 8 / 4 * 2`, where every value is an int.
+A. 10
+B. 29
+C. 26
+D. 56
 
-A. A definition is a declaration that also gives the variable a starting value, so 'int x;' is a declaration and 'int x = 0;' is a definition
-B. A declaration is what you write inside a function body; a definition is what you write outside all functions, at the top of the file
-C. Every declaration is a definition, but not every definition is a declaration
-D. Every definition is also a declaration, so the definitions sit inside the declarations - and there can be declarations that stop short of defining
+**2.** `int a = 17 / 5, b = 17 % 5;` What does `printf("%d %d", a, b);` print?
+A. 3 2
+B. 3.4 2
+C. 4 2
+D. 2 3
 
-**2.** "Variable names are not stored inside the computer memory; the compiler replaces them with memory location addresses." Which conclusion follows from that?
+**3.** Which of these is a legal variable name in C?
+A. `2total`
+B. `total-2`
+C. `float`
+D. `total_2`
 
-A. A variable's name should be kept short, because every extra character in a name occupies extra memory while the program runs
-B. The name exists only while the program is being compiled; at run time the machine works from an address, so a consistent rename cannot change what the compiled program does
-C. Because the name is discarded, the value stored in a variable cannot be read back once something else has been assigned to it
-D. The compiler must build a table of names into the finished program, so that the running program can look each of its variables up by name at the moment it needs the value
+**4.** `int a = 4, b = 7;` What is the value of `(a < b) + (a == b) + (b > 2)`?
+A. 1
+B. 2
+C. 3
+D. 0
 
-**3.** What does specifying a data type actually accomplish, on the deck's own definition?
+**5.** What does `printf("%d %d", 1 && 2, 1 & 2);` print?
+A. 1 1
+B. 0 0
+C. 2 0
+D. 1 0
 
-A. It fixes the type and the size of the data associated with the variable
-B. It restricts what the variable may be called, since each of the types permits its own different set of names
-C. It fixes the variable's value for the rest of the program, so that later statements cannot change it
-D. It makes the program convert whatever the user types at the keyboard into the right form automatically
+**6.** `int a = 5; int b = a++ + 2;` What are a and b after these two lines?
+A. a = 6, b = 7
+B. a = 6, b = 8
+C. a = 5, b = 7
+D. a = 5, b = 8
 
-**4.** Which list gives the three basic types the deck names for the C language?
+**7.** `struct R { char name[16]; double value; };` and `union U { char name[16]; double value; };` With char 1 byte, double 8 bytes and no padding, what are `sizeof(struct R)` and `sizeof(union U)`?
+A. 24 and 24
+B. 24 and 16
+C. 16 and 16
+D. 24 and 8
 
-A. Integers, floating-point numbers and Booleans
-B. Characters, strings and integers
-C. Characters, integers and floating-point numbers
-D. Integers, structures and unions
+**8.** A BankAccount object has `owner`, `balance`, `deposit()` and `withdraw()`. Which two make up its state?
+A. deposit(), withdraw()
+B. balance, deposit()
+C. owner, balance
+D. owner, withdraw()
 
-**5.** "An operator is a symbol that tells the compiler to perform specific mathematical or logical functions." The deck lists six types of operator that C provides. Which list is the deck's?
+**9. (show your working)** Trace this fragment and give the values of a, b and c after each line. Show your working.
 
-A. Arithmetic, relational, logical, bitwise, assignment and misc
-B. Arithmetic, relational, logical, iterative, assignment and misc
-C. Arithmetic, comparison, Boolean, bitwise, storage and special
-D. Arithmetic, relational, logical, bitwise, conditional and recursive
+```c
+int a = 3, b = 10, c;
+c = a * b + 2;
+b -= a;
+a = c / b;
+c = c - a * b;
+```
 
-**6.** The deck says a computer program includes more than just instructions. What else does it say a program contains?
+**10. (show your working)** a = 25 and b = 14. Write both as 8-bit binary and compute `a & b`, `a | b` and `a ^ b`, giving each result in decimal. Show your working.
 
-A. Header files and the libraries that they import
-B. Comments and the programme's documentation
-C. Nothing else at all; a programme is only a series of instructions, and there is nothing besides them in it
-D. Data, and the various memory addresses in which the instructions work
+**11. (show your working)** Classify each of these operators into one of the six categories (arithmetic, relational, logical, bitwise, assignment, misc): `%`, `>=`, `&&`, `<<`, `+=`, `sizeof`. Then state the value of `9 % 4 >= 1`.
 
-**7.** In a programme object, where does the state live, where does the behaviour live, and who may reach the state?
-
-A. State lives in methods and behaviour in variables, and any part of the programme may reach either
-B. State and behaviour both live in variables, and the methods only display them
-C. The state of an object is stored in variables and its behaviour is described by methods, and only that object's own methods may reach its variables
-D. State lives in variables and behaviour in methods, but every object of a given kind shares one single set of variables with every other object of that same kind
-
-**8.** A 'struct Dog' and a 'union Dog' are written with the same three members - char name[20], char breed[20], char colour[20]. On the deck's definitions, what is the difference?
-
-A. The union may group members of different types while the structure requires every member to be of the same type, which is why this union is the more useful of the two here
-B. In the structure each member has its own storage, so all three hold values at once; in the union all members start at the same location, so only one member's value is represented at a time
-C. The structure is a user-defined data type while the union is one of C's built-in types, which is why the union needs no struct-style keyword before it
-D. The union is a structure that has been given methods as well as variables, which is what makes it the halfway step between a structure and a class
-
-**9. (explain why)** State what a data type is in the deck's own words, name the three basic types it gives for C, and quote the deck's rule for writing a variable definition. Then explain what "determine the type and size of data associated with variables" gives the programmer, and why the deck says to select the data type "according your programme logic and need" - use the deck's own three basic types to show the choice being made.
-
-**10. (explain why)** The deck says: "When we programme problems, we represent the problem as data (or variable) and the variable is stored and processed by the computer." Explain what that instruction asks a programmer to do, then answer the deck's own example - to find the average of the first five multiples of 9, what are the variables? - naming each variable, giving a definition for it in the deck's required form, and saying what value it would hold. Then do the same for a second problem: print the letter grade of a student from a single score.
-
-**11. (explain why)** Explain how a real-world object's state and behaviour become parts of a programme object, and what the deck means by "only the methods of a particular object have access to the variables of that object" and "different objects can only interact with each other through their own individual methods". Then explain the mechanism by which that single restriction produces the four benefits the deck claims - independent creation and maintenance, reuse in various parts of the programme, safe removal and replacement, and information hiding.
-
-**12. (explain why)** Explain the difference between a structure, a union and a class as the deck defines them, saying for each what it can hold and how its members sit in memory. Given the three members char name[20], char breed[20], char colour[20], state the size of the structure and the size of the union as the week's summary sheet gives them, and explain why they differ. Then say what a programmer gains by choosing a union, and what they must be careful about in return.
+**12. (show your working)** `int total;` and `extern int total;` both name the same variable and the same type. Explain why the first is a definition and the second is only a declaration, and say what a definition does that a declaration does not.
 
 ---
 
 ## Answers
 
-**1. D** — *Concept: The sentence asserts one implication and denies the other.* The sentence has a direction. Definition implies declaration is asserted ('a variable definition IS ALSO a declaration'); the converse is denied ('NOT ALL variable declarations are definitions'). So writing a definition always counts as declaring the name and its type, and there exist declarations that do less - the week's summary sheet glosses the shortfall as reserving the storage. Option (C) is that same sentence read backwards, which is the commonest error here. Option (A) confuses definition with initialisation: 'int x;' is a complete definition whose bytes simply hold whatever was there before. Option (B) invents a rule about where each is written; both may appear inside a function or outside one. Note what the deck does with the sentence: it poses it as a question - 'What does this mean?' - and the next slide changes the subject without answering, so the relationship is quotable but the explanation of it comes from the summary sheet.
+**1. C** — *Operator precedence and associativity.* `/` and `*` sit on the same level and associate left to right, and both outrank `-`: 8 / 4 = 2, then 2 * 2 = 4, then 30 − 4 = 26.
 
-**2. B** — *Concept: Names are compile-time; addresses are run-time.* Once compilation is finished every use of the name has become 'the bytes at such-and-such an address', so the identifier plays no further part - long names cost nothing at run time and a consistent rename produces the same machine code. Option (A) is the belief the deck's sentence exists to correct, and the usual excuse for cryptic one-letter names. Option (C) confuses discarding the NAME with discarding the VALUE; the bytes at the address stay where they are and may be read as often as you like. Option (D) describes a debug symbol table, which exists for the debugger, not so that a program can find its own variables - it is exactly the arrangement the quoted sentence says C does not use.
+10 works strictly left to right, (30 − 8) / 4 * 2 with integer division; 29 does the multiplication first, 8 / (4 * 2) = 1; 56 does the subtraction first, (30 − 2) * 2.
 
-**3. A** — *Concept: A data type fixes the type and the size of the data.* The deck's wording is that 'data type is used for specifying the type of a variable' and that data types 'determine the type and size of data associated with variables'. That is why the deck also tells you to 'select the data type according your programme logic and need' - the choice is about what kind of value the variable will hold and how much room it needs. Option (B) inverts the two halves of a definition; the naming rules do not change with the type. Option (C) describes a constant, not a type: a type says what kind of value may be stored, never that it may not be stored again. Option (D) confuses declaring a type with input conversion, which is a separate matter entirely.
+**2. A** — *Integer division and remainder.* Both operands are int, so `/` is integer division and the fractional part is thrown away: 17 / 5 = 3. `%` gives what is left over: 17 − 3 × 5 = 2. Output: 3 2.
 
-**4. C** — *Concept: The three basic types in C.* The deck says it twice: 'There are three basic types in the C language: characters, integer, and floating-point numbers.' Option (D) names two things the deck introduces in the other lesson of the same week, and introduces as USER-DEFINED data types built out of members - which is precisely what separates them from the basic types. Option (B) adds strings, which C builds out of characters rather than providing as a basic type. Option (A) adds Booleans, which belong to a later week and which C represents as integers in any case.
+3.4 2 performs real division although both operands are int; 4 2 rounds the quotient instead of truncating it; 2 3 swaps the quotient and the remainder.
 
-**5. A** — *Concept: The six operator categories, by name.* The deck lists exactly these six after its definition of an operator: arithmetic, relational, logical, bitwise, assignment and misc. Option (B) swaps bitwise for 'iterative', which is a control-flow idea belonging to a later week, not a kind of operator. Option (D) swaps assignment and misc for 'conditional' and 'recursive' - recursion is a Week 10 topic and is not an operator at all. Option (C) renames four of the six with plausible synonyms, which is the trap: the deck gives these names, and 'comparison' or 'Boolean' will not do in an answer that asks for the deck's list.
+**3. D** — *Rules for a legal identifier.* A name may use letters, digits and the underscore, must not begin with a digit, and must not be a keyword. `total_2` satisfies all three.
 
-**6. D** — *Concept: What a program contains besides its instructions.* The deck defines a programme as 'a series of instructions that causes a computer or a microcontroller to perform a particular task' and then immediately adds: 'A computer program includes more than just instructions. It also contains data and various memory addresses in which the instructions work to perform a specific task.' Those two additions are why the rest of the week exists - data is what needs types and variables, and addresses are what the variable names become. Option (C) is the definition with its second half removed. Options (A) and (B) name things that appear in the SOURCE FILE; neither is what the deck says the program contains.
+`2total` begins with a digit; `total-2` contains a hyphen, which C reads as the subtraction total − 2; `float` is a keyword and cannot be a name.
 
-**7. C** — *Concept: State in variables, behaviour in methods, and who may reach the variables.* The deck states all three parts. 'In programming, an object is defined by its state and behaviour. The state of an object is stored in variables and the behaviour of objects is described by methods.' 'This means that every object will have their own variables and methods.' And: 'Methods are central to how programme objects work because only the methods of a particular object have access to the variables or state of that object', with the companion sentence that 'different objects can only interact with each other through their own individual methods'. Option (A) swaps the two and then removes the restriction, which is the whole point. Option (D) gets the mapping right and then denies 'every object will have their own variables and methods'. Option (B) leaves the object with no behaviour at all.
+**4. B** — *Relational operators yield 1 or 0.* Each comparison yields an int, 1 for true and 0 for false: a < b is 1, a == b is 0, b > 2 is 1, and 1 + 0 + 1 = 2.
 
-**8. B** — *Concept: Structure vs union - same syntax, different memory layout.* The deck defines both with the same phrase about grouping items of possibly different types into a single type, so that wording cannot separate them; the difference it gives is that 'all of its members start at the same location in memory' and that 'a union variable can represent the value of only one of its members at a time'. On the summary sheet's three char[20] members that makes the struct 60 bytes with three independent strings and the union 20 bytes in which writing breed overwrites name. Option (A) is false of both - the deck says 'possibly different types' of each. Option (C) is false in both halves: both are user-defined and both need their keyword. Option (D) confuses union with class, which is the one that adds methods.
+3 counts a == b as true; 1 stops after the first comparison; 0 assumes a comparison has no numeric value and so cannot be added.
 
-**9.** *Concept: A data type as a size and a kind, and the definition rule.* THE DEFINITIONS. 'Data type is used for specifying the type of a variable. They determine the type and size of data associated with variables.' 'There are three basic types in the C language: characters, integer, and floating-point numbers.' THE RULE: 'Variable definition always includes "data type" followed by "variable name"' - so 'int count;', 'float average;', 'char grade;' - and the deck adds that 'before using a variable, you should always define it by using appropriate data type'. WHAT TYPE AND SIZE GIVE YOU. Two separate things. SIZE is how much room the definition sets aside, which is why the same programme can hold a single letter cheaply and a measurement expensively. TYPE is the kind of value those bytes stand for, which is what makes one of them a letter and the other a measurement, and which is why the deck pairs the words in one sentence rather than naming one of them. Together they settle what the variable can hold and therefore what can sensibly be done with it. WHY THE CHOICE IS MADE FROM THE PROBLEM. The deck's instruction is that you 'can select the data type according your programme logic and need', which is the same lesson as its slide on representing a problem as data: you look at the quantity in the problem and ask what kind of value it is. A letter grade is one character, so 'char grade;'. A count of students is a whole number, so 'int count;'. An average or a measurement is not a whole number, so 'float average;'. The three basic types are three answers to one question - what kind of value is this? - and the definition rule is how the answer is written down: data type first, variable name second.
+**5. D** — *Logical versus bitwise operators.* `&&` is logical: both operands are non-zero, so the result is 1. `&` is bitwise: 1 is 01 and 2 is 10, and no bit is set in both, so the result is 0. Output: 1 0.
 
-**10.** *Concept: Representing a problem as data, with the deck's own example.* WHAT THE INSTRUCTION ASKS. Before any code is written, the problem is read for the QUANTITIES it involves - the things whose values the computer will have to hold and work on - and each of those becomes a variable with a name and a data type. The deck's sentence puts it as representing the problem AS DATA, and the reason it matters is in the second half: the variable 'is stored and processed by the computer', so anything the machine has to remember or change must have been given a variable first. THE DECK'S EXAMPLE - the average of the first five multiples of 9. The multiples themselves are 9, 18, 27, 36 and 45. What varies as the programme runs is: the multiple currently being handled, the running total they are added into, how many there are, and the average that comes out. So, using the deck's rule of data type followed by variable name: 'int multiple;' holds 9, then 18, then 27, then 36, then 45 in turn; 'int sum;' ends holding 135; 'int count;' holds 5; 'float average;' holds 27. (The five multiples could equally be held in five variables, but one variable reused plus a running sum is the form the arithmetic actually needs.) Notice that 9 and 5 are not by themselves the variables - they are numbers mentioned in the wording of the problem, and mistaking those for the data is the usual first error. THE SECOND PROBLEM - a letter grade from a score. The quantities are the score that comes in and the grade that goes out: 'int score;' holds, say, 72, and 'char grade;' holds a single character such as 'A'. The types follow from the deck's instruction to select a data type according to the programme logic and need: a score is a whole number, and a grade is one character, which is exactly what the basic type 'characters' is for.
+1 1 treats `&` as if it were logical; 0 0 treats `&&` as if it were bitwise; 2 0 assumes `&&` returns one of its operands rather than 1.
 
-**11.** *Concept: State in variables, behaviour in methods, and encapsulation as the mechanism behind every benefit.* Real-world objects have two main characteristics, state and behaviour: the deck's dog has the state name, colour, breed, hungry and the behaviour barking, fetching, wagging its tail. In a programme object the mapping is exact - the state of an object is stored in variables and the behaviour is described by methods - and every object has its OWN variables and methods, so two dog objects have two separate name variables. The restriction is that the variables are not reachable from outside: the only doors into an object's state are the methods it publishes, which the summary sheet's access specifiers private and public control, and which data encapsulation names (hiding the implementation details so the user interacts only through public methods). Each benefit follows from that one fact. INDEPENDENT CREATION AND MAINTENANCE: since no outside code touches the variables, nothing outside can depend on how they are arranged, so the internals can be rewritten and every user still works, provided the methods keep their signatures. REUSE: the object carries its own state, so it does not depend on a surrounding context and needs no shared global set up before it will work. REMOVAL AND REPLACEMENT ('similar to how a car works'): the rest of the code only ever spoke to the object through its methods, so a replacement offering the same methods drops straight in. INFORMATION HIDING: because state is reachable only through methods, the author chooses which methods exist and therefore controls how much is shared - a get_name() with no matching setter makes the name readable and unchangeable, which no arrangement of loose variables can enforce.
+**6. A** — *Post-increment yields the old value.* `a++` yields the value a held before the increment, 5, and then makes a 6. So b = 5 + 2 = 7 and a = 6.
 
-**12.** *Concept: Structure, union and class - what each holds and how it is laid out.* A STRUCTURE is 'a user-defined data type that can be used to group items of possibly different types into a single type', defined with the struct keyword and accessed with the dot syntax; it holds variables only, and each member gets its own storage, so all members hold values at once and the size of the structure is the sum of its members. A UNION is 'defined in the same way' and also holds variables only, but 'all of its members start at the same location in memory', overlapping completely, so 'a union variable can represent the value of only one of its members at a time' and its size is the size of its LARGEST member. A CLASS is 'similar to structures but in addition to having variables, classes also usually have methods or functions' - the dog class has name, breed, colour and get_name() - and the summary sheet adds the access specifiers public and private that make encapsulation enforceable rather than conventional. SIZES: each member here is char[20], so sizeof(struct Dog) = 20 + 20 + 20 = 60 bytes because the three arrays sit at three different offsets, while sizeof(union Dog) = 20 bytes because all three start at the same location and share the same 20 bytes; a union must be big enough for its largest member and no bigger. WHAT THE UNION BUYS: memory. Where a value is known to be one of several alternatives and never more than one at a time, the union stores it in the space of the largest alternative rather than the sum of all of them, which matters in the small-memory settings C is used in. THE PRICE: nothing in the union records which alternative is live. Writing one member destroys the others, and reading a member that was not the last one written gives the previous member's bytes read as the wrong kind of value, which is meaningless rather than merely wrong. The programmer must carry that knowledge separately - conventionally by wrapping the union in a STRUCTURE together with a small tag variable recording which member is currently valid, and checking the tag before every read.
+a = 6, b = 8 uses the value after the increment, which is what `++a` would do; a = 5, b = 7 forgets that `a++` changes a; a = 5, b = 8 makes both mistakes at once.
+
+**7. B** — *Size of a structure versus a union.* In a struct every member has its own storage, so the size is the sum: 16 + 8 = 24. In a union all members start at the same location, so the size is that of the largest member: the 16-byte array. Answer: 24 and 16.
+
+24 and 24 gives the union separate storage for each member; 16 and 16 drops the double from the struct; 24 and 8 takes the double as the union's largest member, but the 16-byte array is bigger.
+
+**8. C** — *State versus behaviour of an object.* The state of an object is what it holds, stored in variables; its behaviour is what it does, described by methods. `owner` and `balance` are values the account holds, so they are its state. `deposit()` and `withdraw()` are actions, so they are behaviour.
+
+The other pairings mix a variable with a method or list only methods.
+
+**9.** *Tracing a sequence of assignments.* Line 2: c = 3 × 10 + 2 = 32 (a = 3, b = 10, c = 32). Line 3: b = 10 − 3 = 7 (a = 3, b = 7, c = 32). Line 4: a = 32 / 7, integer division, so 4 (a = 4, b = 7, c = 32). Line 5: c = 32 − 4 × 7 = 32 − 28 = 4 (a = 4, b = 7, c = 4).
+
+Final answer: a = 4, b = 7, c = 4. A correct answer shows the value after every line, treats `b -= a` as b = b − a, and truncates 32 / 7 to 4 rather than 4.57. a = 4.57 or c = 0 (from 32 − 4.57 × 7) is wrong.
+
+**10.** *Bitwise AND, OR and XOR.* 25 = 0001 1001 and 14 = 0000 1110. AND keeps a bit only where both are 1: 0000 1000 = 8. OR keeps a bit where either is 1: 0001 1111 = 31. XOR keeps a bit where exactly one is 1: 0001 0111 = 23.
+
+Final answer: a & b = 8, a | b = 31, a ^ b = 23. A correct answer shows both binary strings and the bit-by-bit result for each operator. Treating `&` and `|` as logical (giving 1 and 1) is wrong.
+
+**11.** *Operator categories.* `%` is arithmetic (remainder); `>=` is relational; `&&` is logical; `<<` is bitwise (left shift); `+=` is assignment; `sizeof` is misc. For the expression, `%` outranks `>=`: 9 % 4 = 1, and 1 >= 1 is true, so the value is 1.
+
+A correct answer names all six categories correctly and gives 1 (also accepted: true). Calling `<<` arithmetic or `sizeof` a function is wrong; the value 0 comes from grouping as 9 % (4 >= 1) = 9 % 1 = 0, which ignores precedence.
+
+**12.** *Declaration versus definition.* A declaration tells the compiler a name and its type. A definition does that and also reserves the storage: bytes are set aside for the variable. `int total;` sets aside an int's worth of memory, so it defines and, in doing so, also declares. `extern int total;` says the variable exists and is an int but that its storage is reserved elsewhere, so it declares without defining.
+
+A correct answer says every definition is also a declaration, that the difference is reserving storage (memory), and that `extern` marks a declaration that does not reserve any. Saying the difference is initialisation is wrong: `int total;` defines without initialising.

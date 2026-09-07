@@ -1,271 +1,199 @@
-# Friday, second hour — COS_102 check
+# Friday — COS_102 fast-hour check
 
 *Code work on arrays and recursion.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Tracing a recursive call down to its base case and back up through its pending operations.*
-
-*Predicting the return value of an array recursion, and the output of one- and two-dimensional array loops.*
-
-*Spotting a missing base case, and a base case that is never reached.*
-
-*Finding off-by-one and out-of-bounds faults in traversals and in recursive index expressions.*
-
-*Distinguishing tail from non-tail recursion on a real listing.*
-
-*Recognising that an array name cannot be assigned, so a copy must be a loop.*
-
-*Diagnosing infinite recursion as a stack overflow rather than a hang.*
-
-**1.** What does sumArray(a, 5) return?
+**1.** What does `show(3)` print?
 
 ```c
-int sumArray(int a[], int n)
-{
-    if (n == 0) return 0;
-    return sumArray(a, n - 1) + a[n - 1];
-}
-
-int a[5] = {2, 4, 6, 8, 10};
-```
-
-A. 30
-B. 20
-C. 28
-D. It never returns: n is not changed before the recursive call, so the descent has no end
-
-**2.** What does fact(3) do?
-
-```c
-int fact(int n)
-{
-    return n * fact(n - 1);
-}
-```
-
-A. Recurses without end. There is no base case, so nothing stops the descent - n goes 3, 2, 1, 0, -1, -2, ... and each call takes a new stack frame until the stack is exhausted and the programme is killed. The multiplication by 0 never happens, because it is pending on a call that never returns
-B. Returns 0: once n reaches 0 the expression becomes 0 * fact(-1), and zero times anything is zero, so the whole product collapses to zero and comes back up
-C. Returns 6, since the multiplications 3 x 2 x 1 are performed and 1 x 0 contributes nothing
-D. Fails to compile: a function that calls itself must contain an if
-
-**3.** What does this print?
-
-```c
-int a[5] = {1, 2, 3, 4, 5};
-int i, s = 0;
-
-for (i = 1; i <= 5; i++)
-    s = s + a[i];
-
-printf("%d\n", s);
-```
-
-A. 15
-B. 14
-C. Nothing: the compiler rejects a[5], since the index exceeds the declared size
-D. 2 + 3 + 4 + 5 plus whatever value happens to sit one element past the end of the array, because a[5] is outside the block of five and C neither checks nor prevents the read - so the printed number is not predictable and may differ between runs or machines
-
-**4.** What does f(3) print?
-
-```c
-void f(int n)
+void show(int n)
 {
     if (n == 0) return;
-    printf("%d ", n);
-    f(n - 1);
+    show(n - 1);
     printf("%d ", n);
 }
 ```
-
 A. 3 2 1
-B. 1 2 3 3 2 1
-C. 3 3 2 2 1 1
-D. 3 2 1 1 2 3
+B. 1 2 3
+C. 0 1 2 3
+D. 3 2 1 0
 
-**5.** Consider f(6) and f(7):
+**2.** `int a[6] = {7, 2, 9, 4, 5, 1};` What does `r(a, 6)` return?
 
 ```c
-int f(int n)
+int r(int a[], int n)
 {
     if (n == 0) return 0;
-    return 1 + f(n - 2);
+    return r(a, n - 1) + (a[n - 1] > 4);
 }
 ```
+A. 3
+B. 21
+C. 4
+D. 2
 
-A. Both return: f(6) gives 3 and f(7) gives 4
-B. f(6) returns 3; f(7) never reaches the base case, because n goes 7, 5, 3, 1, -1, -3, ... and steps straight over 0 without ever equalling it, so it recurses until the stack overflows
-C. Neither returns, because subtracting 2 is not a small enough step to guarantee arrival at the base case for any input
-D. f(6) returns 3 and f(7) returns 4, since the first negative value counts as having reached the base case
-
-**6.** What does this print?
+**3.** Complete the missing line so that `digits(n)` returns the number of decimal digits of a positive n, for example `digits(4725)` = 4.
 
 ```c
-int m[2][3] = { {1, 2, 3}, {4, 5, 6} };
-int i, j, s = 0;
-
-for (i = 0; i < 3; i++)
-    for (j = 0; j < 2; j++)
-        s = s + m[i][j];
-
-printf("%d\n", s);
+int digits(int n)
+{
+    if (n < 10) return 1;
+    return ____;
+}
 ```
+A. `1 + digits(n % 10)`
+B. `digits(n / 10)`
+C. `1 + digits(n - 10)`
+D. `1 + digits(n / 10)`
 
+**4.** `total(a, n)` is meant to return a[0] + a[1] + ... + a[n − 1]. Which single change fixes it?
+
+```c
+int total(int a[], int n)
+{
+    if (n == 0) return 0;
+    return total(a, n - 1) + a[n];
+}
+```
+A. Change `n == 0` to `n == 1`
+B. Change `a[n]` to `a[n - 1]`
+C. Change `n - 1` to `n`
+D. Change `return 0` to `return a[0]`
+
+**5.** `int a[n]` is filled and `int b[n]` is declared. Which statement correctly copies the contents of a into b?
+A. `for (i = 0; i < n; i++) b[i] = a[i];`
+B. `b = a;`
+C. `for (i = 1; i <= n; i++) b[i] = a[i];`
+D. `for (i = 0; i < n; i++) a[i] = b[i];`
+
+**6.** Which of these functions is tail recursive?
+A. `int f(int n) { if (n == 0) return 0; return f(n - 1) + 1; }`
+B. `int h(int n) { if (n == 0) return 1; return 2 * h(n - 1); }`
+C. `void k(int n) { if (n == 0) return; k(n - 1); printf("%d ", n); }`
+D. `int m(int n, int b) { if (n == 0) return b; return m(n - 1, b + 2); }`
+
+**7.** What does this print?
+
+```c
+int m[2][3] = {{1, 2, 3}, {4, 5, 6}};
+int i, j, t = 0;
+for (i = 0; i < 2; i++)
+    for (j = i; j < 3; j++)
+        t = t + m[i][j];
+printf("%d", t);
+```
 A. 21
-B. 12
-C. 1 + 2 + 4 + 5 = 12 plus two values read from beyond the array, because the loop bounds are the wrong way round: i is the row subscript and runs to 2 although there are only two rows, while j reaches only column 1 of the three
-D. 6, since the two loops together visit 3 x 2 = 6 positions and each m[i][j] is counted once
+B. 11
+C. 17
+D. 8
 
-**7.** Both of these compute 1 + 2 + ... + n. Which is tail recursive, and what does b(4, 0) return?
+**8.** `fact(n)` is written as `return n * fact(n - 1);` with no other line. Calling `fact(5)` ends within a second with a segmentation fault. Which diagnosis is right?
+A. Stack overflow: no base case, so a new frame is added on every call until the stack runs out
+B. Infinite loop: the program should have hung rather than stopped
+C. Integer overflow: n became too large for an int
+D. Compile error: the function was never built
+
+**9. (show your working)** Write a recursive C function `int pw(int b, int e)` that returns b raised to the power e for e >= 0. State the base case and its value and the recursive case, then trace `pw(3, 4)` showing what is pending in each frame. Show your working.
+
+**10. (show your working)** This is meant to print the elements of a in reverse order. State what is actually printed, which access is out of range, which element is never printed, and write the corrected loop. Show your working.
 
 ```c
-int a(int n)            { if (n == 0) return 0;   return a(n - 1) + n; }
-int b(int n, int acc)   { if (n == 0) return acc; return b(n - 1, acc + n); }
+int a[4] = {2, 4, 6, 8};
+int i;
+for (i = 4; i > 0; i--)
+    printf("%d ", a[i]);
 ```
 
-A. a is tail recursive and returns 10; b is not, because it carries an extra parameter
-B. b is tail recursive and b(4, 0) returns 10 - when b's recursive call returns, nothing remains to be done and its value is returned unchanged, whereas in a the + n is still pending on return, which makes a non-tail
-C. Both are tail recursive, since in both the recursive call is written on the last line of the function
-D. Neither is tail recursive, because a tail-recursive function must not return a value
-
-**8.** int a[3] = {1, 2, 3}; int b[3]; and then b = a;. What is that last line?
-
-A. A copy of all three elements, which is why the deck's copying exercise is a one-liner
-B. A binding, after which b and a name the same three elements, so writing b[0] = 9; changes a[0] too
-C. Not legal C: an array name is not a modifiable value and cannot appear on the left of an assignment, so a copy must be made element by element in a loop - which is exactly what the deck's "copy the elements into another array" exercise is asking for
-D. Legal, but it copies only the first element, since an array name stands for its first element
-
-**9.** *(short answer)* (explain why) Trace this programme and state exactly what it prints. Set out the descent and the return, and say what is alive on the stack at the deepest moment and which operations are pending there. Then say what the programme would print if the base case were changed to if (n == 1) return 0;, and what would happen if that changed version were called on an empty array as countTarget(a, 0, 42).
+**11. (show your working)** Rewrite `s` as an iterative function using a loop that returns the same value for every n >= 0, then state the value of `s(5)` for both versions. Show your working.
 
 ```c
-#include <stdio.h>
-
-int countTarget(int a[], int n, int target)
+int s(int n)
 {
     if (n == 0) return 0;
-    return countTarget(a, n - 1, target) + (a[n - 1] == target);
-}
-
-int main(void)
-{
-    int a[8] = {42, 7, 42, 3, 42, 42, 9, 1};
-    printf("%d\n", countTarget(a, 8, 42));
-    return 0;
+    return s(n - 1) + n;
 }
 ```
 
-**10.** *(short answer)* (explain why) State what halve(8) and halve(5) return, showing the chain of calls. Then say exactly what halve(0) does and why, name the failure mode precisely, and explain why the symptom is not the same as that of an infinite while loop. Give a one-line repair and say which other inputs it also rescues.
+**12. (show your working)** Every recursive function needs two components, plus one further condition on how they relate. Name all three, then apply them to this listing: say which are present, which fails, and what happens when `pw(2, 3)` is called.
 
 ```c
-int halve(int n)
+int pw(int b, int e)
 {
-    if (n == 1) return 0;
-    return 1 + halve(n / 2);
+    if (e == 0) return 1;
+    return b * pw(b, e);
 }
 ```
-
-**11.** *(short answer)* (explain why) This compiles and runs. Name every fault, say what it prints, repair it, and explain why each fault would survive being tested on this very data.
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    int src[5] = {1, 2, 3, 2, 5};
-    int dst[5];
-    int i, sum = 0;
-
-    for (i = 0; i <= 5; i++)
-        dst[i] = src[i];
-
-    for (i = 1; i < 5; i++)
-        sum = sum + dst[i];
-
-    printf("%d\n", sum);
-    return 0;
-}
-```
-
-**12.** *(short answer)* (explain why) The deck solves "count the occurrences of 42 in an array of n integers" twice, by two different decompositions. Write both functions in full, with their headers and their base cases. Explain why the second one's header cannot be the same as the first one's. Then trace the second on a = {42, 5, 42, 42} called as count42b(a, 0, 3), showing every call and every returned value, and state what both functions return for this array.
 
 ---
 
 ## Answers
 
-**1. A** — Key (a) 30: sumArray(a, 5) is sumArray(a, 4) + a[4], which is sumArray(a, 3) + a[3] + a[4], and so on down to sumArray(a, 0), which returns 0 by the base case; coming back up 0, +2, +4, +6, +8, +10 covers every element exactly once. (b) 20 is 2 + 4 + 6 + 8, dropping a[4] - what you get by reading the base case as consuming the last element, or by writing a[n - 2] 'to stay safely inside the array'. (c) 28 is 4 + 6 + 8 + 10, dropping a[0] - the error of someone who reads a[n - 1] as covering indices 1 to n and never notices that the final call, with n = 1, is the one that picks up a[0]. (d) misreads the argument: n - 1 is evaluated before the call and the callee receives 4, a value one smaller, while the caller's own n is untouched - which is exactly what makes the descent finite.
+**1. B** — *Output order around a recursive call.* The printf comes after the recursive call, so nothing is printed on the way down: show(3) calls show(2), which calls show(1), which calls show(0), which returns at once. Then control comes back to the point just after each call, so the prints run in reverse order of the calls: 1, then 2, then 3. Output: 1 2 3.
 
-**2. A** — Key (a): no branch returns without recursing, so every call makes another, each taking a fresh frame that is never popped, and the stack region fills until the programme is terminated - usually within a fraction of a second. (b) is the distractor this question exists for, and it is genuinely tempting: 0 * fact(-1) does look as though the zero should annihilate the product. It cannot, because C evaluates the operands before it multiplies - the call fact(-1) must return a value before the * can be performed, and it never returns. The multiplication is pending, and a pending operation on a call that does not return is never carried out. (c) supplies a base case that is not in the code. (d) invents a compilation rule; the function is well formed and compiles without complaint, which is precisely why the fault reaches run time.
+3 2 1 is what you get if the printf were before the call; 0 1 2 3 and 3 2 1 0 have the base case printing, but show(0) returns before reaching printf.
 
-**3. D** — Key (d): the idiom is for (i = 0; i < n; i++). This loop starts at 1 and uses <=, making both errors at once - it visits indices 1 to 5, skipping a[0] and reaching a[5], one element past the end of a five-element block. The in-range part contributes 2 + 3 + 4 + 5 = 14; a[5] contributes whatever is stored at that address, which is not part of the array. (a) 15 is the sum the programmer intended, the answer of anyone who reads the loop as 'all five elements'. (b) 14 is the sharpest distractor: it correctly notices that a[0] is skipped but silently assumes a[5] reads as 0 or is ignored - the belief that out-of-range access is harmless, when it is undefined and can return anything, including a value that makes the output look plausible. (c) expects a diagnosis; C stores no length and checks no bounds, so the programme compiles and runs.
+**2. A** — *Return value of an array recursion.* (a[n − 1] > 4) is 1 when the element is greater than 4 and 0 otherwise, so r counts the elements of a[0..n−1] that exceed 4. Unwinding: r(a, 6) adds a[5] = 1 (0), a[4] = 5 (1), a[3] = 4 (0), a[2] = 9 (1), a[1] = 2 (0), a[0] = 7 (1), on top of r(a, 0) = 0. Total 3.
 
-**4. D** — Key (d) 3 2 1 1 2 3: f(3) prints 3, calls f(2), and its second printf is pending; f(2) prints 2, calls f(1), pending; f(1) prints 1, calls f(0), pending; f(0) returns at once. The frames then unwind in reverse order, so f(1) resumes just after its call and prints 1, then f(2) prints 2, then f(3) prints 3 - descending output first, ascending output second. (a) 3 2 1 is what the function would print if the second printf were absent, the answer of someone who reads a recursive call as the end of the function. (b) reverses the two halves, which would require the base case to be reached before anything is printed. (c) 3 3 2 2 1 1 executes both printfs of a frame before descending, pairing each call's two prints together instead of separating them across the call.
+21 adds the qualifying values 7 + 9 + 5 instead of counting them; 4 counts 4 itself, reading > as >=; 2 forgets that the last call, r(a, 1), examines a[0].
 
-**5. B** — Key (b): f(6) goes 6, 4, 2, 0, the base case fires and returns 0, and the three pending '1 +' operations give 3. f(7) goes 7, 5, 3, 1, -1, -3, ...; the test n == 0 is evaluated on every call and is false on every call, because the argument passes 0 without equalling it, so the descent is unbounded and the programme dies of stack overflow. (a) assumes any decreasing argument must terminate; decreasing is not reaching, which is the exact misconception under test. (c) over-corrects into believing a step of 2 never works, when it works perfectly for every even input - the fault is the fit between step size and base case, not the step size alone. (d) invents a rule by which passing the base counts as reaching it; nothing tests for negativity, and n == 0 is an equality, not a threshold. The repair for both is if (n <= 0) return 0;.
+**3. D** — *Completing a recursive case.* The recursive case must count this digit and hand a smaller number of the same kind to the same function. n / 10 drops the last digit, so 1 + digits(n / 10) counts one digit per call: digits(4725) = 1 + digits(472) = 2 + digits(47) = 3 + digits(4) = 4.
 
-**6. C** — Key (c): m[2][3] has 2 rows and 3 columns, so the correct loops are i < 2 over rows and j < 3 over columns; here they are exchanged. The pairs actually visited are (0,0)=1, (0,1)=2, (1,0)=4, (1,1)=5, giving 12, and then (2,0) and (2,1), which lie outside the six-element block entirely and contribute two junk values, while column 2 (the values 3 and 6) is never visited at all. The loop simultaneously misses part of the array and reads outside it. (a) 21 is the correct total 1+2+3+4+5+6, the answer of someone who assumes the loops cover the array because the numbers 2 and 3 both appear somewhere in them. (b) 12 is the sharpest distractor: it identifies the four in-range elements correctly but assumes the two out-of-range reads contribute nothing - again the belief that going out of bounds is harmless. (d) counts positions instead of checking whether those positions exist, which is the reasoning that produced the bug.
+digits(n / 10) drops the last digit but never counts it, so it returns 1 for every n; 1 + digits(n % 10) passes the last digit, which is always below 10, so it returns 2 for every n >= 10; 1 + digits(n − 10) subtracts 10 each call and counts tens, giving 473 for 4725.
 
-**7. B** — Key (b): in b, return b(n - 1, acc + n); returns the inner call's value unchanged, so nothing is left in this frame to do and b is tail recursive; the trace is b(4,0), b(3,4), b(2,7), b(1,9), b(0,10), and the base case returns acc = 10. In a, return a(n - 1) + n; still has an addition waiting when the inner call returns, so the frame must be kept alive - non-tail. (a) inverts the two and offers the extra parameter as the reason, when the accumulator is precisely the device that makes b tail recursive, carrying the partial answer down instead of leaving it pending on the way up. (c) is the misconception the question is built on: in a the recursive call is on the last line and work is still pending on its result, so 'last line' is not the test. (d) invents a restriction; a tail-recursive function returns a value in the ordinary way, and b returns acc.
+**4. B** — *Off-by-one in a recursive index.* With n elements, the last one sits at offset n − 1, not n. As written, total(a, 4) adds a[4], a[3], a[2], a[1]: it reads one element past the end and never adds a[0]. Changing a[n] to a[n − 1] makes each call pick up the element at the end of its own prefix, and total(a, 1) adds a[0].
 
-**8. C** — Key (c): b = a; does not compile. In C an array name is not a modifiable value and cannot appear on the left of =, so there is no such thing as assigning one array to another; the copy must be written as for (i = 0; i < 3; i++) b[i] = a[i];. This is exactly why the deck sets 'copy the elements of the array above into another array' as a separate exercise from summing them - it is a traversal, not an assignment. (a) is the belief that arrays behave like the scalar int x = y;, which is what makes the exercise look trivial. (b) is the reference-semantics belief carried over from languages where a name refers to an object; even in the version of this that is possible in C - copying a pointer - the elements would not be duplicated, and here the line does not compile at all. (d) half-remembers that an array name decays to the address of its first element and turns that into a partial copy; the decay concerns reading the name in an expression, and it still leaves nothing assignable on the left.
+Changing the base case to n == 1 makes total(a, 0) recurse forever; changing n − 1 to n removes all progress toward the base case; changing return 0 to return a[0] adds a[0] to a sum that still reads a[n] out of range.
 
-**9.** It prints 4. The array is {42, 7, 42, 3, 42, 42, 9, 1}, and 42 appears at indices 0, 2, 4 and 5. The descent: countTarget(a, 8, 42) cannot answer until countTarget(a, 7, 42) has, so it makes that call with the comparison (a[7] == 42) pending; that call does the same with (a[6] == 42) pending, and so on, n = 8, 7, 6, 5, 4, 3, 2, 1, 0. At the deepest moment nine frames are alive - one for each n from 8 down to 0 - and eight comparisons are pending, one per frame, each waiting for the value from the frame below. Every frame has its own n; nothing is shared. The return:
-n=1: 0 + (a[0]==42 -> 1) = 1
-n=2: 1 + (a[1]== 7 -> 0) = 1
-n=3: 1 + (a[2]==42 -> 1) = 2
-n=4: 2 + (a[3]== 3 -> 0) = 2
-n=5: 2 + (a[4]==42 -> 1) = 3
-n=6: 3 + (a[5]==42 -> 1) = 4
-n=7: 4 + (a[6]== 9 -> 0) = 4
-n=8: 4 + (a[7]== 1 -> 0) = 4
-So main prints 4. In C a comparison yields 1 or 0, which is why + (a[n-1] == target) is a legal and idiomatic way to write 'add one if it matches'. With the base case changed to if (n == 1) return 0;, the recursion stops one call early: the frame with n = 1 returns 0 instead of examining a[0], so index 0 is never compared. That element is a 42, so the programme would print 3 - a wrong answer, quietly, on data that looks fine. This is the recursive equivalent of the loop's i <= n off-by-one: the base case must cover the empty case so that the n-th call is the one that handles the first element. On an empty array the changed version is far worse than wrong. With n = 0 the test n == 1 fails, so the function calls itself with n = -1, which fails too, then -2, -3, ...: the base case is unreachable from n = 0, the descent never ends, frames accumulate, and the programme dies of stack overflow - and on the way down every call also evaluates a[n - 1] at a[-1], a[-2], ..., reading memory before the start of the array. One misplaced base case has produced a silent wrong answer on ordinary input and a crash on the boundary input.
+**5. A** — *Copying an array.* An array name is not a modifiable value, so a copy must be made element by element with the standard traversal: start at 0, continue while i < n, step by 1, assigning each a[i] to b[i].
 
-**10.** halve(8) returns 3: halve(8) = 1 + halve(4) = 1 + 1 + halve(2) = 1 + 1 + 1 + halve(1), and halve(1) matches the base case and returns 0, so coming back up gives 0, 1, 2, 3. halve(5) returns 2: integer division truncates, so 5 / 2 = 2, giving halve(5) = 1 + halve(2) = 1 + 1 + halve(1) = 1 + 1 + 0 = 2. (The function counts how many halvings it takes to reach 1.) halve(0) never returns: n is 0, the test n == 1 is false, and the recursive call is halve(0 / 2) = halve(0) - the same argument. The function calls itself with the identical value forever; there is no progress at all, not merely progress in the wrong direction, which is the sharpest form of the fault because a reader checking 'does the argument get smaller?' sees a division and assumes it does. The failure mode is a stack overflow: each call allocates a fresh frame holding its own n and return address, no frame is ever popped, and the stack region grows until the operating system refuses more and terminates the process - typically in a fraction of a second, with a segmentation fault. That is not the symptom of an infinite while loop: while (1); runs forever in constant memory, so the process stays alive, consumes processor time and must be interrupted from outside, whereas infinite recursion consumes memory per call, dies on its own, quickly, and looks like a crash. Diagnosing the two the same way sends you to the wrong place - a hang means 'no exit condition', a fast crash after a recursive call means 'the base case is not being reached'. The repair, one line: if (n <= 1) return 0;. This rescues n = 0 immediately and also every negative input: halve(-4) currently goes -4, -2, -1, 0 (C truncates toward zero, so -1 / 2 is 0), then 0, 0, 0, ... - another endless run at a fixed value. With n <= 1 the base case covers the whole region at and below 1, which is the general rule the fault illustrates: a base case must be reachable from every legal input, so test a range rather than a single value whenever the argument can jump.
+b = a; does not compile, because arrays cannot be assigned as a whole; the loop from 1 to n skips a[0] and writes b[n], one past the end; the last loop copies in the wrong direction, overwriting a with the unset contents of b.
 
-**11.** It prints 12. Fault 1 - the copy loop runs one past the end, and it writes. for (i = 0; i <= 5; i++) gives i the values 0 to 5, but both arrays hold five elements at indices 0 to 4, so the last pass executes dst[5] = src[5];. That reads one element beyond src - a junk value - and, far worse, writes it one element beyond dst, into memory belonging to some other variable. Which variable depends on how the compiler laid out the frame; likely candidates here are i or sum, and if i were overwritten the loop could restart or run away. This is undefined behaviour: the programme may print the number below, print something else, or crash. Repair: for (i = 0; i < 5; i++). Fault 2 - the summing loop skips the first element. for (i = 1; i < 5; i++) visits indices 1 to 4 and never touches dst[0], which holds 1, so the sum is 2 + 3 + 2 + 5 = 12 instead of the correct 1 + 2 + 3 + 2 + 5 = 13. Repair: for (i = 0; i < 5; i++). The two faults are opposite errors in the same programme - one loop reaches one index too far, the other starts one index too late - which is why 'check the bounds' has to mean checking both ends of each loop separately against the idiom i = 0; i < n; i++. Repaired programme:
-#include <stdio.h>
+**6. D** — *Tail versus non-tail recursion.* Tail recursion means no pending operation when the recursive call returns. In m, the value of m(n − 1, b + 2) is returned unchanged; all the work was done in the argument before the call, so nothing waits. That is tail recursion.
 
-int main(void)
+f has + 1 waiting on the returned value; h has 2 × waiting; both have the call on the last line, which is not the test. k has a printf that runs after the call returns, so an operation is pending even though no value is combined.
+
+**7. C** — *Tracing nested array loops.* The inner loop starts at j = i. Row 0: j = 0, 1, 2 adds 1 + 2 + 3 = 6. Row 1: j = 1, 2 adds 5 + 6 = 11. t = 17.
+
+21 ignores the start j = i and adds every element; 11 starts j at i + 1 (2 + 3 + 6); 8 uses 2 as the inner bound instead of 3 (1 + 2 + 5).
+
+**8. A** — *Infinite recursion and the stack.* Without a base case, fact(5) calls fact(4), fact(3), ... and keeps going past 0 into negatives. Each call is a new stack frame with a pending multiplication, so memory grows by one frame per call until the stack space is exhausted and the program is killed: a stack overflow. It fails on space, and quickly.
+
+An infinite loop runs in constant memory and would hang, not crash; n is getting smaller, not larger, so int overflow is not the cause; the code is valid C and compiles without complaint.
+
+**9.** *Writing a recursive power function.* Base case: e == 0 returns 1, since anything to the power 0 is 1. Recursive case: b × pw(b, e − 1), a smaller version of the same problem with one multiplication pending.
+
+```c
+int pw(int b, int e)
 {
-    int src[5] = {1, 2, 3, 2, 5};
-    int dst[5];
-    int i, sum = 0;
-
-    for (i = 0; i < 5; i++)
-        dst[i] = src[i];
-
-    for (i = 0; i < 5; i++)
-        sum = sum + dst[i];
-
-    printf("%d\n", sum);   /* prints 13 */
-    return 0;
+    if (e == 0) return 1;
+    return b * pw(b, e - 1);
 }
-Why both faults survive testing on this data: Fault 1 produces no visible symptom here at all - the out-of-range write happens to land somewhere that does not disturb the printed result on this compiler on this run, so the programme completes normally and the bug is invisible; it may become visible only after an unrelated change moves the variables around, which is why out-of-bounds writes are found long after they are written, in code that has 'always worked'. Fault 2 is invisible for a different reason: it produces a number, not a symptom. 12 is a perfectly plausible total for five small values and nothing about it announces that an element was skipped; only checking the arithmetic by hand, 1 + 2 + 3 + 2 + 5 = 13, reveals it. Neither fault is caught by the compiler, since both loops are valid C, and neither is caught by running the programme, since a wrong answer and an undetected memory write both look exactly like success.
+```
 
-**12.** Decomposition 1 - the first n - 1 elements, plus the n-th. The deck's sub-problems are: count how often 42 appears in the first n - 1 elements; count how often it appears in the n-th element; add the two sums and return the result. The base case is n = 0, the empty array.
-int count42a(int a[], int n)
+Trace: pw(3, 4) waits for 3 × pw(3, 3); pw(3, 3) waits for 3 × pw(3, 2); pw(3, 2) waits for 3 × pw(3, 1); pw(3, 1) waits for 3 × pw(3, 0); pw(3, 0) returns 1. Unwinding: 3, 9, 27, 81. Final answer: pw(3, 4) = 81.
+
+A correct answer has a base case at e == 0 returning 1 with no recursive call, a recursive call with e − 1, the multiplication by b, and the value 81. A base case of e == 1 returning b is also accepted if the trace is consistent with it. A base case returning 0, or a call that passes e unchanged, is wrong.
+
+**10.** *Reverse traversal bounds.* The legal indices are 0 to 3, but the loop visits i = 4, 3, 2, 1. The first access, a[4], is one past the end: it compiles and runs, and prints whatever junk is stored there. Then a[3], a[2], a[1] print 8 6 4. The loop stops when i reaches 0, so a[0] (the value 2) is never printed. Output: junk 8 6 4. The corrected loop is `for (i = 3; i >= 0; i--) printf("%d ", a[i]);`, which prints 8 6 4 2.
+
+A correct answer says a[4] is out of range and prints an unpredictable value, that a[0] is missed, and starts the loop at 3 and continues while i >= 0. Starting at 3 with i > −1 is also accepted.
+
+**11.** *Rewriting recursion as a loop.* The recursion adds n, then n − 1, down to 1, on top of the base value 0. A loop does the same with an accumulator: start at 0 and add each i from 1 to n.
+
+```c
+int sIter(int n)
 {
-    if (n == 0)
-        return 0;
-    return count42a(a, n - 1) + (a[n - 1] == 42);
+    int i, total = 0;
+    for (i = 1; i <= n; i++)
+        total = total + i;
+    return total;
 }
-/* called as: count42a(a, 4); */
-Decomposition 2 - two halves. The deck describes it as breaking the array into two pieces of equal size, counting the number of 42s in each half and adding the two sums, and warns that the header will be different.
-int count42b(int a[], int lo, int hi)
-{
-    if (lo > hi)  return 0;                /* empty piece      */
-    if (lo == hi) return (a[lo] == 42);    /* a single element */
+```
 
-    int mid = (lo + hi) / 2;
-    return count42b(a, lo, mid) + count42b(a, mid + 1, hi);
-}
-/* called as: count42b(a, 0, n - 1); */
-Why the header must change: in decomposition 1 every sub-problem is a prefix of the array, always starting at index 0, so a single number - the length - describes it completely and (a[], n) suffices. In decomposition 2 the second sub-problem is the upper half, which does not start at index 0, and a length alone cannot say where a piece begins, so the function must be told both bounds. That is the deck's point in step 1 of its general approach, write the header which shows what the function will do and how it will be called, and its point in warning that the header will differ: the header is not chosen first and filled in later, it follows from how you cut the problem. Note also that the halving version needs two base cases, since halving can produce an empty piece as well as a single element. The trace of count42b(a, 0, 3) on a = {42, 5, 42, 42}:
-count42b(a, 0, 3)   lo != hi, mid = (0+3)/2 = 1
-  count42b(a, 0, 1)   lo != hi, mid = (0+1)/2 = 0
-    count42b(a, 0, 0)   lo == hi -> (a[0] == 42) -> 1
-    count42b(a, 1, 1)   lo == hi -> (a[1] ==  5) -> 0
-                        returns 1 + 0 = 1
-  count42b(a, 2, 3)   lo != hi, mid = (2+3)/2 = 2
-    count42b(a, 2, 2)   lo == hi -> (a[2] == 42) -> 1
-    count42b(a, 3, 3)   lo == hi -> (a[3] == 42) -> 1
-                        returns 1 + 1 = 2
-                    returns 1 + 2 = 3
-So count42b(a, 0, 3) returns 3, and count42a(a, 4) returns 3 as well - the array holds 42 at indices 0, 2 and 3. The two differ in the shape of the call tree: decomposition 1 makes a single unbranching chain of five calls, n = 4, 3, 2, 1, 0; decomposition 2 makes a branching tree of seven calls whose deepest point is three frames down. Both are correct, both terminate, and both satisfy the same two requirements - a base case, and recursive calls on strictly smaller pieces.
+s(5) = 5 + 4 + 3 + 2 + 1 + 0 = 15, and the loop gives 1 + 2 + 3 + 4 + 5 = 15. Final answer: 15 for both.
+
+A correct answer has an accumulator initialised to 0, a loop that visits 1 to n inclusive (i <= n, or 0 to n, or n down to 1), adds i each pass, returns the accumulator, and gives 15. A loop with i < n gives 10 and is wrong.
+
+**12.** *Components of a recursive function.* The two components are a base case, which answers the smallest input outright with no recursive call, and a recursive case, which calls the function on a smaller version of the same problem and combines the result. The further condition is progress: every recursive call must move its argument towards the base case. Here the base case (e == 0 returns 1) is present and the recursive case has the right combining work, b × ..., but the call passes e unchanged, so no progress is made. pw(2, 3) calls pw(2, 3) again, forever, each call adding a frame with a multiplication pending, until the stack overflows and the program crashes. The fix is pw(b, e − 1).
+
+A correct answer names base case, recursive case and progress towards the base case, identifies the unchanged e as the failure, and says the result is infinite recursion ending in a stack overflow, not a wrong number.

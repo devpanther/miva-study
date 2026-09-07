@@ -1,61 +1,112 @@
 # Monday — MTH_102 nightly check
 
-*This session took Week 2's function material conceptually rather than computationally: what a function actually is as a rule from a domain to a codomain, and why the definition insists that every input gets exactly one output; why the vertical line test detects a failure of that clause while the horizontal line test detects a different one; what the injective, surjective and bijective conditions each rule out, and why only a bijection can be inverted; why the logarithm carries the restrictions b > 0, b ≠ 1 and x > 0, and why exponential and logarithmic functions swap domain and range; why a piecewise function's conditions must not overlap and why its branches are not required to agree at a boundary; why the absolute value is defined in two cases rather than by "dropping the minus sign"; and why the degree and leading coefficient alone govern a polynomial's behaviour far from the origin. Almost no arithmetic — the questions ask what each object is and what would go wrong without each clause.*
+*This session takes Week 2's function material conceptually rather than computationally.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**1.** Which of these equations does NOT define y as a function of x?
+A. y = x² − 5
+B. x² + y² = 25
+C. y = 5 − |x|
+D. y = 2ˣ
 
-**1.** The definition of a function f: A → B says every element of A is assigned **exactly one** element of B. If "exactly one" were weakened to "at least one", what specifically breaks?
-a) The domain would no longer be the whole of A.
-b) The symbol f(x) would no longer name a definite value.
-c) The range could become larger than the codomain.
-d) The function could no longer be surjective.
+**2.** For the linear function f(x) = 5 − 3x, state the slope m and the y-intercept b.
+A. m = −3, b = 5
+B. m = 5, b = −3
+C. m = 3, b = 5
+D. m = −3, b = −5
 
-**2.** The vertical line test detects the failure of which clause?
-a) That the domain is an unbroken interval.
-b) That every element of the codomain is used.
-c) That no two inputs share an output.
-d) That each input has only one output.
+**3.** Find the vertex of f(x) = x² − 4x + 1.
+A. (−2, 13)
+B. (4, 1)
+C. (2, −3)
+D. (2, 1)
 
-**3.** A map f: A → B is described as surjective but not injective. Which must be true?
-a) Every element of B is reached, and some element of B twice.
-b) Every element of A is reached, and some element of A twice.
-c) The range is a proper subset of the codomain of f.
-d) f has a well-defined inverse on the whole of B.
+**4.** g(x) = 0.5ˣ. Evaluate g(−3).
+A. −1.5
+B. 1/8
+C. −8
+D. 8
 
-**4.** f: A → B is surjective but fails to be injective. What exactly goes wrong when you try to define f⁻¹?
-a) f⁻¹ would have a domain larger than B.
-b) f⁻¹ would be undefined at some elements of B.
-c) Some element of B would have to be sent to two different elements of A.
-d) f⁻¹ ∘ f would be the identity on B instead of on A.
+**5.** Evaluate log₄ 64.
+A. 3
+B. 16
+C. 2
+D. 8
 
-**5.** log_b(x) is defined only for b > 0 **and b ≠ 1**. What is the reason for excluding b = 1?
-a) A power of the number 1 has no defined value at all.
-b) log₁(x) would come out negative whenever x is below 1.
-c) The curve y = 1^x would fail to cross the y-axis anywhere.
-d) Every power of 1 equals 1, so nothing else is reachable.
+**6.** f(x) = x² + 1 if x < 2, and f(x) = 5 − x if x ≥ 2. Evaluate f(2).
+A. 5
+B. Undefined
+C. 3
+D. Both 3 and 5
 
-**6.** In f(x) = 2x + 1 for x ≤ 0 and f(x) = x² − 3 for x > 0, why is the second condition written x > 0 rather than x ≥ 0?
-a) Because x = 0 is already assigned by the first branch.
-b) Because the expression x² − 3 has no defined value when x is 0.
-c) Because the two branches are required to agree in value at x = 0.
-d) Because the graph of a function must be unbroken at a boundary.
+**7.** For f(x) = 7x − 4x⁵ + 2x² + 9, state the degree and the leading coefficient.
+A. Degree 5, leading coefficient 7
+B. Degree 4, leading coefficient 9
+C. Degree 5, leading coefficient 4
+D. Degree 5, leading coefficient −4
 
-**7.** Why is |x| defined by two cases (x if x ≥ 0, −x if x < 0) instead of the instruction "remove the minus sign"?
-a) Because −x is a positive number whatever the value of x.
-b) Because the graph of |x| has to be smooth at the origin.
-c) Because which case applies depends on x, not on a visible sign.
-d) Because absolute value is defined for real inputs only.
+**8.** f: ℝ → ℝ with f(x) = x². f(2) = f(−2) = 4, and no real x gives f(x) = −1. Which description is correct?
+A. Injective but not surjective
+B. Neither injective nor surjective
+C. Surjective but not injective
+D. Bijective
 
-**8.** For a polynomial of degree n with leading coefficient aₙ, why do those two numbers alone decide the shape of the graph far from the origin?
-a) Because the lower-degree terms become zero once |x| is large.
-b) Because every other term, divided by aₙxⁿ, tends to 0 as |x| grows.
-c) Because polynomials of equal degree have identical graphs.
-d) Because a₀ is only the y-intercept and never affects shape.
+**9. (show your working)** f(x) = 3 sin(2x). State the period and the range of f. Show your working.
 
-**9. (explain why)** Every function is a relation, but not every relation is a function. Explain the difference using the slide's set language — "A has many B" versus "B can have many A" — and say which of those two situations is allowed.
+**10. (show your working)** Find the domain of f(x) = log₂(x − 4). Show your working.
 
-**10. (explain why)** The vertical line test and the horizontal line test look almost identical but answer different questions. Explain what property each one is testing and why a graph can pass one and fail the other.
+**11. (show your working)** Use the discriminant to find how many real roots f(x) = x² − 6x + 2 has, and then find them. Show your working.
 
-**11. (explain why)** Explain why f(x) = b^x and g(x) = log_b(x) are called inverses, and why the domain of one is the range of the other. Use this to explain why log_b(x) is undefined for x ≤ 0.
+**12. (show your working)** The logarithm log_b(x) is defined only for b > 0 and b ≠ 1. Using the meaning y = log_b(x) means bʸ = x, explain why b = 1 is excluded and why a negative base is excluded.
 
-**12. (explain why)** A slide states that in f(x) = ax² + bx + c, "c is the y-coordinate of the vertex". Explain why this is false as written, what c genuinely is, and the one special case in which the slide's claim happens to be true.
+---
+
+## Answers
+
+**1. B** — *Vertical line test on an equation.* x² + y² = 25 gives, at x = 0, both y = 5 and y = −5: one input with two outputs, so the vertical line x = 0 meets the graph twice and it is not a function.
+
+y = x² − 5, y = 5 − |x| and y = 2ˣ each produce exactly one y for every x, so every vertical line meets them once; the repeated outputs of x² and |x| are harmless.
+
+**2. A** — *Reading slope and intercept from a linear rule.* Rewrite in the form mx + b: f(x) = −3x + 5, so m = −3 (the coefficient of x) and b = 5 (the value at x = 0, f(0) = 5).
+
+m = 5, b = −3 reads the numbers in the order written rather than by their role; m = 3 drops the sign of the x-coefficient; b = −5 attaches the minus sign to the wrong term.
+
+**3. C** — *Vertex of a parabola by the formula.* x_v = −b/(2a) = −(−4)/2 = 2, and f(2) = 4 − 8 + 1 = −3, so the vertex is (2, −3).
+
+(−2, 13) drops the minus in −b/2a; (4, 1) uses −b instead of −b/2a and then reads c as the height; (2, 1) has the right x but takes c = 1 to be the vertex height, when c is the y-intercept f(0).
+
+**4. D** — *Evaluating an exponential at a negative exponent.* A negative exponent means reciprocal: 0.5⁻³ = 1/0.5³ = 1/0.125 = 8. Equivalently 0.5 = 1/2, so (1/2)⁻³ = 2³ = 8.
+
+−1.5 multiplies 0.5 by −3 as if it were 0.5·x; 1/8 is 0.5³, ignoring the sign of the exponent; −8 attaches the minus to the result instead of to the exponent.
+
+**5. A** — *Evaluating a logarithm.* log₄ 64 asks: 4 to what power is 64? Since 4³ = 64, the answer is 3.
+
+16 divides 64 by 4 instead of asking for an exponent; 2 is the exponent for 16, one step short; 8 is √64, the square root rather than a base-4 exponent.
+
+**6. C** — *Evaluating a piecewise function at its boundary.* Decide which condition x = 2 satisfies: 2 < 2 is false, 2 ≥ 2 is true, so the second branch applies and f(2) = 5 − 2 = 3.
+
+5 uses the first branch, 2² + 1, which is only for x strictly less than 2; 'both' ignores that the conditions are disjoint, so exactly one branch applies; 'undefined' would need x = 2 to satisfy neither condition, but it satisfies x ≥ 2.
+
+**7. D** — *Degree and leading coefficient of a polynomial.* The highest power present is x⁵, so the degree is 5, and the coefficient of that term, sign included, is −4.
+
+7 is the coefficient of the term written first, not of the highest power; 4 drops the sign; 'degree 4' counts the number of terms instead of reading the highest exponent.
+
+**8. B** — *Injective versus surjective.* Injective means no output is hit twice; 4 is hit by both 2 and −2, so f is not injective. Surjective means every element of the codomain ℝ is hit; −1 is never hit, so f is not surjective either.
+
+'Injective' ignores the collision at 4; 'surjective' ignores the gap at −1; 'bijective' would need both to hold, and neither does.
+
+**9.** *Period and amplitude of a sine function.* sin(kx) has period 2π/k, so with k = 2 the period is 2π/2 = π. sin(2x) lies between −1 and 1, so 3 sin(2x) lies between −3 and 3.
+
+Final answer: period π, range [−3, 3]. Also accepted: −3 ≤ y ≤ 3. A period of 2π ignores the 2 inside; 4π multiplies instead of dividing; a range of [−1, 1] forgets the factor 3.
+
+**10.** *Domain of a logarithmic function.* A logarithm is defined only for a positive argument, so x − 4 > 0, giving x > 4. The endpoint is excluded because log₂ 0 is undefined.
+
+Final answer: D = (4, ∞). Also accepted: x > 4, {x : x > 4}. [4, ∞) or x ≥ 4 wrongly includes 4; (−4, ∞) has the sign of the boundary wrong; (−∞, ∞) forgets the log restriction altogether.
+
+**11.** *Discriminant and roots of a quadratic.* Δ = b² − 4ac = (−6)² − 4(1)(2) = 36 − 8 = 28 > 0, so there are two distinct real roots. Then x = (6 ± √28)/2 = (6 ± 2√7)/2 = 3 ± √7.
+
+Final answer: two real roots, x = 3 + √7 and x = 3 − √7 (about 5.65 and 0.35). Also accepted: (6 ± √28)/2. Δ = 36 + 8 = 44 has the sign of 4ac wrong; Δ = 36 − 2 = 34 forgets the factor 4.
+
+**12.** *Restrictions on the base of a logarithm.* y = log_b(x) is the exponent y with bʸ = x. If b = 1 then 1ʸ = 1 for every y, so 1ʸ = x has no solution unless x = 1, and then every y works: the exponent is not uniquely determined, so no function exists. If b is negative, bʸ is not a real number for many y (for example (−2)^(1/2) = √(−2)), so bʸ = x cannot be solved for general x > 0.
+
+A correct answer says b = 1 gives a constant power (1ʸ = 1) so the exponent cannot be recovered, and a negative base gives non-real powers for fractional exponents.

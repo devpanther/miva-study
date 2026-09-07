@@ -1,102 +1,112 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 9, exactly as the deck builds it.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*The two triggers that make ∫ₐᵇ f(x)dx improper.*
+**1.** Classify ∫₁⁵ 1/(x − 3) dx.
+A. Type I: a limit of integration is infinite
+B. Type II: 1/(x − 3) is discontinuous at x = 3, inside [1, 5]
+C. Not improper: both limits are finite
+D. Type II: 1/(x − 3) is discontinuous at x = 1
 
-*The Type I definitions ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx and ∫₋∞ᵇ f(x)dx = lim(t→−∞) ∫ₜᵇ f(x)dx, with convergent meaning the limit exists.*
+**2.** Evaluate ∫₂^∞ 1/x³ dx.
+A. 1/8
+B. −1/8
+C. 1/4
+D. divergent
 
-*Why ∫₋∞^∞ must be split, and why one divergent half ends the question.*
+**3.** By Note 1 (∫₁^∞ 1/xᵖ dx converges if p > 1, diverges if p ≤ 1), what happens to ∫₁^∞ 1/√x dx, and what is p?
+A. converges, p = 1/2
+B. converges, p = 2
+C. diverges, p = 1/2
+D. diverges, p = 2
 
-*The three Type II clauses, and the one-sided limits c → b⁻ and c → a⁺.*
+**4.** The curve y = 1/x² rises without bound as x → 0⁺. Evaluate ∫₀¹ 1/x² dx.
+A. −1
+B. divergent
+C. 1
+D. 0
 
-*The Comparison Test in her lettering 0 ≤ g(x) ≤ f(x): its two valid conclusions, and the two that prove nothing.*
+**5.** Where must ∫₀⁵ 1/(x − 2)² dx be split before any limit is taken?
+A. at x = 0
+B. no split is needed
+C. at x = 5/2, the midpoint
+D. at x = 2, into ∫₀² and ∫₂⁵
 
-*Then Note 1, ∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**6.** 0 ≤ g(x) ≤ f(x) for all x ≥ 1, and ∫₁^∞ f(x) dx = 4. What can be said about ∫₁^∞ g(x) dx?
+A. converges, and equals 4
+B. diverges
+C. nothing can be concluded
+D. converges, and is at most 4
 
-**1.** Slide 4 lists exactly two conditions under which the definite integral ∫ₐᵇ f(x)dx is called improper. Which pair is it?
-A. At least one limit of integration is infinite, or the integrand has one or more points of discontinuity on [a, b]
-B. The integrand is discontinuous, or the integrand takes negative values on [a, b]
-C. The interval is infinite, or the antiderivative cannot be written in closed form
-D. The integrand is not differentiable on [a, b], or the interval is unbounded
+**7.** Which inequality holds for all x ≥ 1?
+A. 1/√(x⁴ + 5) ≤ 1/x²
+B. 1/√(x⁴ + 5) ≥ 1/x²
+C. 1/√(x⁴ + 5) ≤ 1/x⁴
+D. 1/√(x⁴ + 5) ≥ 1/x⁴
 
-**2.** What does the symbol ∫ₐ^∞ f(x)dx actually mean, according to slide 5?
-A. The area under f from a onwards, computed directly by the Fundamental Theorem
-B. F(∞) − F(a), where F is any antiderivative of f
-C. lim(t→∞) ∫ₐᵗ f(x)dx, provided that limit exists
-D. The sum of ∫ₐ^b f(x)dx over every b greater than a
+**8.** ∫₋∞^∞ f(x) dx is split at 0. The right half lim(b→∞) ∫₀ᵇ f(x) dx is +∞ and the left half lim(a→−∞) ∫ₐ⁰ f(x) dx is −∞. What is ∫₋∞^∞ f(x) dx?
+A. 0
+B. +∞
+C. divergent
+D. −∞
 
-**3.** On slide 5 she says the improper integrals ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx are called convergent or divergent according to what test?
-A. Convergent if the integrand tends to 0, divergent otherwise
-B. Convergent if the corresponding limit exists, divergent if the limit does not exist
-C. Convergent if the region under the curve is bounded, divergent if it is unbounded
-D. Convergent if the integrand is positive throughout, divergent if it changes sign
+**9. (show your working)** Evaluate ∫₋∞⁰ eˣ dx. Write the integral as a limit first, then evaluate the limit. Show your working.
 
-**4.** Slide 5 clause 3 says: if ∫ₐ^∞ f(x)dx and ∫₋∞ᵇ f(x)dx are convergent, then ∫₋∞^∞ f(x)dx = ∫₋∞ᵃ f(x)dx + ∫ₐ^∞ f(x)dx. What is the role of the words 'are convergent'?
-A. They are the conclusion — splitting the integral is what proves each half converges
-B. They are a reminder that the split point must be chosen where f is continuous
-C. They are optional; the sum formula holds for any f
-D. They are a hypothesis — you may only add the two halves once both are known to converge, so a single divergent half makes the whole integral divergent
+**10. (show your working)** Evaluate ∫₀⁴ 1/√(4 − x) dx. Say where the integrand is discontinuous, write the one-sided limit, and evaluate it. Show your working.
 
-**5.** Slide 8 clause 1 covers f continuous on [a, b) with an infinite discontinuity at b, and gives ∫ₐᵇ f(x)dx = lim(c→b⁻) ∫ₐᶜ f(x)dx. Why is the limit one-sided, and from that side?
-A. Because the moving endpoint c must stay inside the interval [a, b) where f is continuous, so it can only approach b from below
-B. Because f is only defined for x less than b anywhere on the real line
-C. Because a two-sided limit would give an answer twice as large
-D. Because b⁻ is a notation for the value of b in the previous step of the calculation
+**11. (show your working)** Use the Comparison Test to decide whether ∫₁^∞ 1/(x² + 1) dx converges or diverges. Show each inequality step, name f and g with 0 ≤ g(x) ≤ f(x), and quote Note 1. Show your working.
 
-**6.** Slide 8 clause 3 deals with f continuous on [a, b] except at some c strictly inside (a, b) where it has an infinite discontinuity. What must you do, and what goes wrong if you do not?
-A. Shift the interval to avoid c; otherwise the answer is only approximate
-B. Split as ∫ₐᶜ f + ∫_c^b f and take a one-sided limit into c from each side; otherwise you apply the Fundamental Theorem across a point where the integrand is undefined and can get an impossible answer
-C. Take the limit as c approaches both a and b at once; otherwise you double-count the middle
-D. Nothing special — the single point c has zero width, so it cannot affect a definite integral
+**12. (show your working)** Explain what it means to say ∫ₐ^∞ f(x) dx is convergent, and why writing ∫ₐ^∞ f(x) dx = F(∞) − F(a) is not acceptable working.
 
-**7.** Note 1 on slide 11 states the p-test for ∫₁^∞ (1/xᵖ)dx. Where does the boundary case p = 1 fall, and how does Example 2 depend on that?
-A. p = 1 converges, and Example 2 uses it to prove ∫₃^∞ dx/√(x² − 1) converges
-B. p = 1 is not covered by Note 1, so Example 2 evaluates ∫₃^∞ dx/x directly instead
-C. p = 1 diverges — Note 1 says converges if p > 1 and diverges if p ≤ 1 — and Example 2 uses ∫₃^∞ dx/x as the divergent smaller function that drags 1/√(x² − 1) up with it
-D. p = 1 diverges, but Example 2 avoids it by comparing with 1/x² instead
-
-**8.** You have continuous functions with 0 ≤ g(x) ≤ f(x) for all x ≥ a, and you have established that ∫ₐ^∞ g(x)dx converges. What does the theorem on slide 10 let you conclude about ∫ₐ^∞ f(x)dx?
-A. That it converges as well
-B. That it diverges
-C. That it converges, and to a value at least as large
-D. Nothing at all — this is one of the two directions the theorem does not cover
-
-**9.** State the Comparison Test exactly as slide 10 states it, hypothesis included, and explain in your own words which of f and g is the larger function in her lettering and how you would remember the two conclusions.
-*(short answer)*
-
-**10.** Explain why ∫₋₁² dx/x⁴ is an improper integral at all, given that both its limits of integration are finite numbers, and say what the deck requires you to do about it.
-*(short answer)*
-
-**11.** The deck's introduction says: 'Sometimes it is difficult to find the exact value of an improper integral by antidifferentiation. However, it is still possible to determine whether an improper integral converges or diverges.' Explain what the Comparison Test does and does not give you, using her Example 1 on ∫₂^∞ cos²(x)/x² dx.
-*(short answer)*
-
-**12.** Type I Example 1 reaches lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1] and the lecturer pauses to apply L'Hôpital's Rule. Explain what needed resolving, how she resolves it, and what the common wrong answer is.
-*(short answer)*
+---
 
 ## Answers
 
-**1. A** — Her definition has one clause about the limits of integration and one about the integrand: infinite limit (Type I), or a discontinuity somewhere on [a, b] (Type II). Option 2 imports sign, which is irrelevant — plenty of proper integrals are negative. Option 3 confuses a reason to reach for the Comparison Test with the definition; ∫₀^∞ xe⁻ˣdx has a perfectly ordinary antiderivative and is still improper. Option 4 swaps continuity for differentiability; the definition only asks about discontinuity.
+**1. B** — *Identifying an improper integral and its type.* Check both triggers. The limits 1 and 5 are finite, so it is not Type I. The integrand 1/(x − 3) has a zero denominator at x = 3, and 3 lies strictly inside [1, 5], so the integrand has a point of discontinuity on the interval: Type II, and it must be split at x = 3.
 
-**2. C** — She defines it: if ∫ₐᵗ f(x)dx exists for every t ≥ a, then ∫ₐ^∞ f(x)dx = lim(t→∞) ∫ₐᵗ f(x)dx, provided this limit exists. You replace ∞ by a letter, do an ordinary definite integral, then take the limit — and the first line is worth marks on its own. Option 1 skips the definition and applies the Fundamental Theorem where it does not apply. Option 2 treats ∞ as a number you can substitute into F; it is not one. Option 4 invents an infinite sum, a different object altogether.
+Type I needs an infinite limit, and there is none; finite limits do not make an integral proper when the integrand blows up inside; x = 1 gives 1/(1 − 3) = −1/2, which is perfectly finite.
 
-**3. B** — Her wording is exact: convergent if the corresponding limit exists, divergent if it does not. Option 1 names a necessary-looking condition that is not sufficient — 1/x tends to 0 and ∫₁^∞ dx/x still diverges by Note 1 with p = 1. Option 3 is the intuition students carry in and it is wrong in both directions: the region under 1/x² from 1 onwards is unbounded in extent yet the integral converges. Option 4 has nothing to do with it; cos²(x)/x² is positive and convergent, 1/x is positive and divergent.
+**2. A** — *Type I integral evaluated by a limit.* Write the limit: ∫₂^∞ x⁻³ dx = lim(t→∞) ∫₂ᵗ x⁻³ dx = lim(t→∞) [−1/(2x²)]₂ᵗ = lim(t→∞) (−1/(2t²) + 1/8) = 0 + 1/8 = 1/8. The limit exists, so the integral converges to 1/8.
 
-**4. D** — Convergence of the halves is what licenses the sum, which is exactly why Type I Example 2 can stop the moment one half runs to ∞ and write 'diverges'. Option 1 reverses hypothesis and conclusion. Option 2 states something true of Type II splitting, not of this clause. Option 3 is the error that produces the illegal cancellation of +∞ against −∞; the definition forbids it precisely by making convergence a hypothesis.
+−1/8 uses +1/(2x²) as the antiderivative, losing the sign from dividing by −2; 1/4 uses −1/x² as the antiderivative, forgetting the 1/2; divergent is what you write if you assume an infinite interval always gives infinite area, but 1/x³ shrinks fast enough.
 
-**5. A** — Every ∫ₐᶜ in the limit has to be an ordinary proper integral, so c must sit where f is continuous — inside [a, b). That forces c → b⁻. The mirror clause has the interval (a, b] and the limit c → a⁺: the arrow always points into the interval. Option 2 confuses a local blow-up with a domain restriction; f is usually defined past b, it is just not integrable up to it. Option 3 invents an arithmetic effect limits do not have. Option 4 misreads the minus superscript as bookkeeping rather than as 'from below'.
+**3. C** — *Reading p from a root and applying the p-test.* 1/√x = 1/x^(1/2), so p = 1/2. Since 1/2 ≤ 1, Note 1 says the integral diverges. Directly: lim(t→∞) [2√x]₁ᵗ = lim(t→∞) (2√t − 2) = ∞.
 
-**6. B** — Her clause 3 splits at the bad point and each piece is then a Type II integral of clause 1 or clause 2 type. Type II Example 1 is built on it: ∫₋₁² dx/x⁴ ignores the split and the Fundamental Theorem returns −3/8, a negative number for a strictly positive integrand, which is impossible. Option 1 changes the question. Option 3 misreads which letter is moving. Option 4 is the seductive one — a single point does not matter for a bounded function, but here the function is unbounded near it, and that is the entire difference.
+converges, p = 1/2 has the right p but puts it on the wrong side of 1; p = 2 confuses the square root with a square, and 1/x² would converge; diverges, p = 2 gets the verdict right by accident with the wrong p.
 
-**7. C** — Note 1 is stated as converges if p > 1, diverges if p ≤ 1, so the boundary belongs to divergence — and Example 2 quotes exactly that, calling ∫₃^∞ dx/x divergent 'since p = 1'. Option 1 puts the boundary on the wrong side and would reverse the verdict. Option 2 is what many textbooks do, using a logarithm, but this deck never introduces ln x and simply quotes Note 1. Option 4 invents a different comparison; comparing 1/√(x² − 1) with the convergent 1/x² would in any case be the useless direction.
+**4. B** — *Type II integral that diverges at the lower limit.* The discontinuity is at the lower limit, so ∫₀¹ x⁻² dx = lim(c→0⁺) ∫_c¹ x⁻² dx = lim(c→0⁺) [−1/x]_c¹ = lim(c→0⁺) (−1 + 1/c). As c → 0⁺, 1/c → ∞, so the limit does not exist and the integral is divergent.
 
-**8. D** — Her theorem runs the other way: convergence travels DOWNWARDS from f to g, and divergence travels UPWARDS from g to f. A finite area underneath puts no ceiling on the function above it. One pair settles it: on [1, ∞) take g = 1/x² and f = 1/x, so 0 ≤ g ≤ f, and by Note 1 ∫g converges (p = 2) while ∫f diverges (p = 1) — a convergent smaller one sitting under a divergent bigger one. Option 1 is the false converse of clause 1. Option 2 is equally unfounded; f could just as easily converge, as it does with g = 1/x³ and f = 1/x². Option 3 adds an inequality on values to a conclusion the theorem never reaches, and the value inequality points the wrong way besides.
+−1 is −1/x at the upper limit alone, treating the lower-limit term 1/c as if it were 0; 1 makes the same error with the sign of the antiderivative wrong; 0 assumes a limit of integration at 0 contributes nothing.
 
-**9.** A good answer reproduces the hypothesis first — f and g continuous with 0 ≤ g(x) ≤ f(x) for all x ≥ a — then both clauses: if ∫ₐ^∞ f(x)dx is convergent then ∫ₐ^∞ g(x)dx is convergent; if ∫ₐ^∞ g(x)dx is divergent then ∫ₐ^∞ f(x)dx is divergent. It should say clearly that in this deck g is the SMALLER function and f is the LARGER one, which is the reverse of most textbooks, and offer a memory hook such as: the big one convergent drags the small one down with it, the small one divergent drags the big one up with it. It should also note that 0 ≤ g is part of the hypothesis, not decoration — without non-negativity the areas can cancel and the argument collapses.
+**5. D** — *Splitting at an interior discontinuity.* 1/(x − 2)² is undefined at x = 2, and 2 lies strictly between 0 and 5. An interior infinite discontinuity forces a split at that point: ∫₀⁵ = ∫₀² + ∫₂⁵, with lim(c→2⁻) on the first piece and lim(c→2⁺) on the second.
 
-**10.** A good answer goes back to slide 4: an integral is improper if a limit is infinite OR the integrand has a point of discontinuity on the interval. Here the limits −1 and 2 are finite, so trigger 1 does not apply — but 1/x⁴ is undefined at x = 0, and 0 lies strictly between −1 and 2, so trigger 2 does. That makes it Type II with an INTERIOR discontinuity, so slide 8 clause 3 applies: split as ∫₋₁⁰ + ∫₀², then take lim(c→0⁻) on the left piece and lim(b→0⁺) on the right. The answer should stress that the integral looks completely ordinary on the page and the only way to spot it is to check the zeros of the denominator against the interval before integrating, and can add the consequence of not doing so: the Fundamental Theorem applied straight through returns −3/8, a negative number for a strictly positive integrand.
+x = 0 is a limit of integration where the integrand is finite, 1/4; a split is needed because applying the Fundamental Theorem across x = 2 is invalid; the midpoint has no special role, the split must be at the discontinuity itself.
 
-**11.** A good answer separates the verdict from the number. In Example 1 she bounds 0 ≤ cos²(x) ≤ 1, divides by the positive x² to get 0 ≤ cos²(x)/x² ≤ 1/x², sets f = 1/x² and g = cos²(x)/x², evaluates ∫₂^∞ dx/x² = 1/2, and concludes by clause 1 that the original converges. The 1/2 is the value of the COMPARISON integral, not of the original — cos²x has no elementary antiderivative in this combination, which is why comparison was needed. All that follows about the original is that it converges and is at most 1/2. Writing ∫₂^∞ cos²(x)/x² dx = 1/2 is a genuine error. The answer should also note that squaring the cosine is what makes 0 ≤ g hold; with cos x itself the hypothesis fails.
+**6. D** — *Comparison Test: convergence passes down to the smaller function.* This is clause 1 of the Comparison Test: the larger function f has a convergent integral, so the smaller function g does too. Because g ≤ f everywhere on [1, ∞), the area under g cannot exceed the area under f, so ∫₁^∞ g(x) dx ≤ 4. The test gives a verdict and a bound, never the exact value.
 
-**12.** A good answer identifies the problem: as t → ∞ the factor −t tends to −∞ while e⁻ᵗ tends to 0, so −te⁻ᵗ is an indeterminate product. Rewriting e⁻ᵗ as 1/eᵗ turns it into −t/eᵗ, which the slide labels −∞/∞ — a quotient of two quantities both running to infinity, so L'Hôpital's Rule applies. Differentiating numerator and denominator gives −1/eᵗ, and since eᵗ → ∞ this tends to 0. Hence the whole bracket tends to 0 + 0 + 1 = 1 and the integral converges to 1. The common wrong answer is to read −t → −∞ off the front and declare the limit −∞ (hence divergence); the point is that the exponential in the denominator grows faster than any polynomial, so it wins. A good answer may also note that the +1 comes from subtracting the value of −xe⁻ˣ − e⁻ˣ at x = 0, which is −1.
+equals 4 claims the comparison integral's value for g, which the test never gives; diverges is impossible for a non-negative function trapped under a finite area; nothing can be concluded is the situation for the two invalid directions, but this is a valid one.
+
+**7. A** — *Building a comparison inequality with reciprocals.* Three steps. Drop the additive term: x⁴ + 5 ≥ x⁴. Take square roots, which preserves the inequality for non-negative quantities: √(x⁴ + 5) ≥ √(x⁴) = x². Take reciprocals of positive quantities, which reverses it: 1/√(x⁴ + 5) ≤ 1/x².
+
+≥ 1/x² carries the inequality through the reciprocal step without reversing it; the 1/x⁴ options forget to take the square root of x⁴, and neither holds for all x ≥ 1 (at x = 2, 1/√21 ≈ 0.22 is larger than 1/16, while at x = 1 it is smaller than 1).
+
+**8. C** — *One divergent half makes the whole integral divergent.* The definition only assigns a value to ∫₋∞^∞ when both halves converge on their own; then the value is their sum. Here neither half converges, so the integral is divergent. Nothing may be cancelled, because the two limits use independent letters a and b and are never taken together.
+
+0 cancels +∞ against −∞, which the definition forbids; +∞ and −∞ each look at only one half and ignore the other.
+
+**9.** *Type I integral with a lower limit of −∞.* By definition, ∫₋∞⁰ eˣ dx = lim(t→−∞) ∫ₜ⁰ eˣ dx = lim(t→−∞) [eˣ]ₜ⁰ = lim(t→−∞) (e⁰ − eᵗ) = lim(t→−∞) (1 − eᵗ). As t → −∞, eᵗ → 0, so the limit is 1 − 0 = 1. The limit exists, so the integral converges to 1.
+
+Final answer: 1 (converges to 1). The working must show the limit line with t → −∞, the antiderivative eˣ, and eᵗ → 0. Writing e⁻^∞ directly without the limit is not acceptable working; getting −1 (subtracting in the wrong order) or claiming divergence because the interval is infinite is wrong.
+
+**10.** *Type II integral with a discontinuity at the upper limit.* 1/√(4 − x) is undefined at x = 4, the upper limit, so ∫₀⁴ (4 − x)^(−1/2) dx = lim(c→4⁻) ∫₀ᶜ (4 − x)^(−1/2) dx. The antiderivative is −2√(4 − x) (check: its derivative is −2·(1/2)(4 − x)^(−1/2)·(−1) = (4 − x)^(−1/2)). So the limit is lim(c→4⁻) [−2√(4 − x)]₀ᶜ = lim(c→4⁻) (−2√(4 − c) + 2√4) = 0 + 4 = 4.
+
+Final answer: 4 (converges to 4). The working must name x = 4 as the discontinuity, use c → 4⁻, state the antiderivative −2√(4 − x), and show √(4 − c) → 0. Using +2√(4 − x) gives −4 and is wrong; claiming divergence because the integrand blows up is wrong, since the limit exists.
+
+**11.** *Comparison Test with a simple denominator bound.* For all x ≥ 1, x² + 1 ≥ x², so taking reciprocals of positive quantities reverses the inequality: 1/(x² + 1) ≤ 1/x². Let f(x) = 1/x² and g(x) = 1/(x² + 1); both are continuous and positive on [1, ∞), so 0 ≤ g(x) ≤ f(x). ∫₁^∞ 1/x² dx has p = 2 > 1, so by Note 1 it converges (its value is 1). By clause 1 of the Comparison Test, the larger function convergent forces the smaller one convergent, so ∫₁^∞ 1/(x² + 1) dx converges.
+
+Final answer: converges. A correct answer shows x² + 1 ≥ x², reverses to 1/(x² + 1) ≤ 1/x², names f = 1/x² and g = 1/(x² + 1), quotes p = 2 > 1, and concludes convergence. It may add that the value is at most 1, but must not claim the value is 1.
+
+**12.** *Definition of convergence of a Type I integral.* The symbol ∫ₐ^∞ f(x) dx is defined as lim(t→∞) ∫ₐᵗ f(x) dx: replace the infinite limit by a letter t, evaluate the ordinary definite integral F(t) − F(a), then let t → ∞. The integral is convergent if that limit exists as a finite number, and divergent if it does not. F(∞) is not acceptable because ∞ is not a number that can be substituted into a function; the only meaning available is the limit of F(t) as t grows, and that limit must be shown to exist.
+
+A correct answer states the limit definition with t → ∞, says convergent means the limit exists (finite) and divergent means it does not, and explains that ∞ cannot be substituted, so the limit line must be written.

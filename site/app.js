@@ -558,7 +558,9 @@ function findByName(n){
   return S.people.filter(function(p){ return p.name.toLowerCase()===t; })[0] || null;
 }
 function others(){ return S.people.filter(function(p){ return p.id!==ME; }); }
-function meName(){ var p=findPerson(ME); return p?p.name:"?"; }
+/* A name on screen starts with a capital, whatever case it was typed in. */
+function cap(n){ n = String(n || ""); return n ? n.charAt(0).toUpperCase() + n.slice(1) : n; }
+function meName(){ var p=findPerson(ME); return p?cap(p.name):"?"; }
 /* After signing in, always start on Home. Reload keeps your tab; a new sign-in
    should not drop the other person into whatever page you were last reading. */
 function goHome(){ TAB = "home"; QUIZ = null; MANUAL = null; BUDDY = null; try{ syncUrl(); }catch(e){} }
@@ -589,6 +591,42 @@ function claimSlot(name){
    The fast hour gets a "|f" suffix. */
 function key(person, w, day, slot){ return person+"|w"+w+"|"+day+(slot==="fast"?"|f":""); }
 function getScore(person, w, day, slot){ return S.scores[key(person,w,day,slot)] || null; }
+
+/* ---------- clearing a score to sit the check again as new ----------
+
+   A retake is practice: the cold score stays. That is right almost always, and wrong
+   in exactly one case: the questions changed under you. Every check in the bank was
+   rewritten in week 1, so a score sat against the old paper measures nothing and
+   blocks the new one. The same will be true whenever a check is regenerated.
+
+   So a score can be cleared, with two guards. Only in the calendar's current week,
+   because a past week's grade is history and a mis-tap should not be able to erase
+   history. And only on a second tap, because the button sits beside Retake. */
+var CLEARARM = null;         /* "w1|Mon|deep" while the first tap is waiting for the second */
+function clearScore(day, slot){
+  var w = wk();
+  delete S.scores[key(ME, w, day, slot)];
+  /* The course is no longer finished for the week, so finishing it again is allowed
+     to celebrate again. */
+  var g = GRID.filter(function(d){ return d.day === day; })[0];
+  var course = g && (slot === "fast" ? g.fast : g.deep);
+  if(course) delete S.scores[ME + "|party|w" + w + "|" + course];
+  quizClear(w, day, slot);
+  CLEARARM = null;
+  push("Cleared. Sit it fresh when you are ready.");
+}
+function clearBtn(row, day, slot){
+  if(weekInfo().n !== wk()) return;            /* only the week you are actually in */
+  var id = "w" + wk() + "|" + day + "|" + (slot || "deep");
+  var armed = CLEARARM === id;
+  var b = btn("act ghost" + (armed ? " danger" : ""), armed ? "Sure? Tap again to clear" : "Clear score", function(){
+    if(CLEARARM === id){ clearScore(day, slot); return; }
+    CLEARARM = id; render();
+    setTimeout(function(){ if(CLEARARM === id){ CLEARARM = null; render(); } }, 4000);
+  });
+  b.title = "Wipe this score and the saved attempt, so the check can be sat again as new";
+  row.appendChild(b);
+}
 function checkFor(wd, day, slot){
   if(!wd || !wd.checks) return null;
   return wd.checks.filter(function(c){
@@ -1022,7 +1060,13 @@ function whyInto(parent, src, cls){
      are numbered lists written inline — "…each applied to the book. (1) Since objects
      are not dependent… (2) …" — and without this they stayed one 800-character block,
      which is the exact shape of text this whole function exists to break up. */
-  var parts = t.split(/(?<=[.!?;:])\s+(?=["\u201c]?\(?[A-Z\u03b1-\u03c9\u0391-\u03a9\d]|\([a-z]\))/);
+  /* Maths explanations start sentences with a variable as often as with a capital:
+     "...so x = 4.  x = 25 is f(11), evaluating instead of solving." Requiring a capital
+     after the full stop left the working and the note on each wrong option fused into
+     one block. So a lowercase letter that is plainly a symbol (followed by =, (, ′, an
+     inequality, or a subscript digit) also opens a sentence, and two spaces after a
+     stop are always a boundary, since nobody types them by accident. */
+  var parts = t.split(/(?<=[.!?;:])(?:\s{2,}|\s+(?=["\u201c]?\(?[A-Z\u03b1-\u03c9\u0391-\u03a9\d]|\([a-z]\)|[a-z]\s*(?:[=(\u2032\u2264\u2265<>\u2260\u2192]|[\u2080-\u2089])|[a-z]\u207b|[a-z]\d\b))/);
   var out = [], buf = "";
   var flush = function(){ if(buf.trim()){ out.push(buf.trim()); buf = ""; } };
   for(var i = 0; i < parts.length; i++){
@@ -1739,7 +1783,7 @@ function viewSignIn(root){
   if(S.people.length){
     var r0 = el("div","row");
     S.people.forEach(function(p){
-      r0.appendChild(btn("act big","I'm "+esc(p.name), function(){ signIn(p.id); render(); }));
+      r0.appendChild(btn("act big","I'm "+esc(cap(p.name)), function(){ signIn(p.id); render(); }));
     });
     wrap.appendChild(r0);
   }
@@ -1819,7 +1863,7 @@ function statsStrip(root){
       var t = weekTally(p.id, w);
       var pctv = t.max ? Math.round(t.got/t.max*100) : 0;
       var row = el("div","duelrow");
-      row.appendChild(el("div","nm", esc(p.id===ME ? "You" : p.name)));
+      row.appendChild(el("div","nm", esc(p.id===ME ? "You" : cap(p.name))));
       var tr = el("div","track");
       var fl = el("div","fill"+(i?" two":""));
       fl.style.width = pctv+"%";
@@ -2547,11 +2591,15 @@ function weekGrid(root){
         foot.appendChild(el("span","sc best", "best "+mine.best+"/"+mine.max));
       if(mine.overrides)
         foot.appendChild(el("span","sc best", mine.overrides + " changed"));
+    } else {
+      /* Until you have sat it, the pill is your partner's: their name and their score,
+         so the cell says who has been here. Once you have your own, yours takes the
+         spot and theirs lives in Stats, where the comparison belongs. */
+      others().forEach(function(p){
+        var o = getScore(p.id,w,d.day);
+        if(o) foot.appendChild(el("span","sc "+scoreClass(o), esc(cap(p.name))+" "+o.score+"/"+o.max));
+      });
     }
-    others().forEach(function(p){
-      var o = getScore(p.id,w,d.day);
-      if(o) foot.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max));
-    });
     var dprog = hasCheck ? quizProgress(w, d.day, "deep") : 0;
     var dsaved = hasCheck ? quizRestore(w, d.day, "deep") : null;
     var dreview = !!(dsaved && dsaved.submitted);
@@ -2586,9 +2634,9 @@ function weekGrid(root){
     if(fchk && fchk.questions && fchk.questions.length){
       var ff = el("div","cf");
       if(fmine) ff.appendChild(el("span","sc "+scoreClass(fmine), "you "+fmine.score+"/"+fmine.max));
-      others().forEach(function(p){
+      else others().forEach(function(p){
         var o = getScore(p.id, w, d.day, "fast");
-        if(o) ff.appendChild(el("span","sc "+scoreClass(o), esc(p.name.toLowerCase())+" "+o.score+"/"+o.max));
+        if(o) ff.appendChild(el("span","sc "+scoreClass(o), esc(cap(p.name))+" "+o.score+"/"+o.max));
       });
       var fprog = quizProgress(w, d.day, "fast");
       ff.appendChild(el("span","go fast", fmine ? "retake →"
@@ -2968,6 +3016,7 @@ function viewTonight(root){
   if(sc){
     row1.appendChild(el("span","sc "+scoreClass(sc), "Scored "+sc.score+"/"+sc.max));
     row1.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day); }));
+    clearBtn(row1, g.day, "deep");
   } else if(chk && chk.questions && chk.questions.length){
     row1.appendChild(btn("act big","Take tonight's check", function(){ startQuiz(g.day); }));
   } else if(packRow(c1, w)){
@@ -3009,6 +3058,7 @@ function viewTonight(root){
   if(fsc){
     row2.appendChild(el("span","sc "+scoreClass(fsc), "Scored "+fsc.score+"/"+fsc.max));
     row2.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day, "fast"); }));
+    clearBtn(row2, g.day, "fast");
     c2.appendChild(row2);
   } else if(fchk && fchk.questions && fchk.questions.length){
     row2.appendChild(btn("act","Quick check · "+fchk.questions.length+" questions", function(){ startQuiz(g.day, "fast"); }));
@@ -3085,7 +3135,7 @@ function weakSection(root){
     g.who.forEach(function(x){
       if(x.ratio === null) return;
       pills.appendChild(el("span","sc " + (x.ratio >= SOLID ? "g" : x.ratio >= 0.5 ? "o" : "b"),
-        esc(x.name.toLowerCase()) + " " + Math.round(x.ratio * 100) + "%"));
+        esc(cap(x.name)) + " " + Math.round(x.ratio * 100) + "%"));
     });
     top.appendChild(pills);
     c.appendChild(top);
@@ -3397,7 +3447,7 @@ function viewProgress(root){
 
   var n = el("div","card");
   n.appendChild(el("div","lbl","Reading this"));
-  var legend = ppl.map(function(p){ return esc(p.name.charAt(0).toUpperCase())+" is "+esc(p.name); }).join(", ");
+  var legend = ppl.map(function(p){ return esc(p.name.charAt(0).toUpperCase())+" is "+esc(cap(p.name)); }).join(", ");
   n.appendChild(el("p","muted", legend+". Each cell holds that day's deep-hour score and, in the paler pill, the fast-hour one. A column that stays red across weeks is a course to raise with a tutor, not something another Sunday will fix."));
   root.appendChild(n);
 }
@@ -3775,6 +3825,7 @@ function viewSession(root){
   if(sc){
     rw.appendChild(el("span","sc "+scoreClass(sc), "Scored "+sc.score+"/"+sc.max));
     rw.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day); }));
+    clearBtn(rw, g.day, "deep");
   } else if(chk && chk.questions && chk.questions.length){
     rw.appendChild(btn("act big","Take the check · "+chk.questions.length+" questions", function(){ startQuiz(g.day); }));
   } else if(packRow(c1, w)){
@@ -3804,6 +3855,7 @@ function viewSession(root){
   if(fsc){
     rw2.appendChild(el("span","sc "+scoreClass(fsc), "Scored "+fsc.score+"/"+fsc.max));
     rw2.appendChild(btn("act ghost","Retake", function(){ startQuiz(g.day, "fast"); }));
+    clearBtn(rw2, g.day, "fast");
     c2.appendChild(rw2);
   } else if(fchk && fchk.questions && fchk.questions.length){
     rw2.appendChild(btn("act","Quick check · "+fchk.questions.length+" questions", function(){ startQuiz(g.day, "fast"); }));
@@ -3935,7 +3987,7 @@ function viewExam(root){
   qq.options.forEach(function(opt, oi){
     var on = q.answers[q.idx] === oi;
     var b = el("button","opt"+(on?" on":""));
-    b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span>'+esc(opt)+'</span>';
+    b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span class="ot">'+codeHtml(opt)+'</span>';
     b.onclick = function(){
       q.answers[q.idx] = oi; examSave();
       if(q.idx < n-1){ q.idx++; }
@@ -4076,14 +4128,14 @@ function viewExamResult(root){
     if(!missed && !q.showAll) return;
     var box = el("div","rev "+(missed?"miss":"hit"));
     box.appendChild(el("span","tag "+(missed?"miss":"hit"), missed ? "Missed" : "Got it"));
-    box.appendChild(el("div","rq", (i+1)+". "+esc(qq.q)));
+    box.appendChild(el("div","rq", (i+1)+". "+codeHtml(qq.q)));
     var opts = el("div","opts");
     qq.options.forEach(function(opt, oi){
       var c = "opt";
       if(oi === qq.answerIndex) c += " right";
       else if(q.answers[i] === oi) c += " wrong";
       var b = el("button", c); b.disabled = true;
-      b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span>'+esc(opt)+'</span>';
+      b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span class="ot">'+codeHtml(opt)+'</span>';
       opts.appendChild(b);
     });
     box.appendChild(opts);
@@ -4274,7 +4326,7 @@ function viewQuiz(root){
     qOptions(q, q.idx).forEach(function(opt, oi){
       var on = q.answers[q.idx] === oi;
       var b = el("button","opt"+(on?" on":""));
-      b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span>'+esc(opt)+'</span>';
+      b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span class="ot">'+codeHtml(opt)+'</span>';
       b.onclick = function(){
         q.answers[q.idx] = oi;
         if(q.idx < n-1) q.idx++;
@@ -4559,7 +4611,7 @@ function viewResult(root, q){
     var hush = r.unmarked;   /* nothing is revealed until the marking is settled */
     var box = el("div","rev "+((pending || hush) ? "" : (missed ? "miss" : "hit")));
     if(!pending && !hush) box.appendChild(el("span","tag "+(missed?"miss":"hit"), missed ? "Missed" : "Got it"));
-    box.appendChild(el("div","rq", (i+1)+". "+esc(qq.q)));
+    box.appendChild(el("div","rq", (i+1)+". "+codeHtml(qq.q)));
 
     if(isMcq){
       var opts = el("div","opts");
@@ -4573,7 +4625,7 @@ function viewResult(root, q){
         } else if(q.answers[i] === oi) cls += " chosen";
         var b = el("button", cls);
         b.disabled = true;
-        b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span>'+esc(opt)+'</span>';
+        b.innerHTML = '<span class="k">'+LETTERS[oi]+'</span><span class="ot">'+codeHtml(opt)+'</span>';
         opts.appendChild(b);
       });
       box.appendChild(opts);
@@ -6642,6 +6694,8 @@ window.KAIZEN = {
   weekState: weekState,
   openSession: openSession, openGuide: openGuide,
   tab: function(){ return TAB; }, activeTab: activeTab, go: goTo,
+  /* the explanation splitter, so a harness can test it on text without sitting a check */
+  paras: function(t){ var d = document.createElement('div'); whyInto(d, t); return Array.from(d.querySelectorAll('p')).map(function(x){ return x.innerText; }); },
   code: codeHtml,
   deepSlots: deepSlots, slots: slotsFor,
   lane: myLane,

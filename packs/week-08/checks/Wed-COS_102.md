@@ -1,96 +1,155 @@
 # Wednesday — COS_102 nightly check
 
-*Abstraction and the anatomy of functions and modules, as concepts: what abstraction hides, data versus functional abstraction, access specifiers and header files, why a complex project is decomposed at all, declaration versus definition, the four parts of a function definition, parameters versus arguments, return type and void, local versus global scope, and what makes a module different from a function. No tracing, no output, no bug-hunting in code — those are Saturday.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Abstraction and the anatomy of functions and modules, as concepts.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** A team publishes a routine to the rest of the company and tells them: here is its name, here is the format of the input, here is the format of the output, and we reserve the right to rewrite the body whenever we like. Which kind of abstraction is that, on the course's own definitions?
+**1.** ```c
+int f(int n) { n = n * 3; return n - 1; }
+int g(int n) { return f(n) + n; }
+```
+What does `printf("%d", g(4));` print?
+A. 23
+B. 15
+C. 11
+D. 16
 
-a) Data abstraction, because the values the routine works on have been kept out of everybody else's reach
-b) Functional abstraction, because what is not exposed is the implementation of the method, and a caller is given only the name and the input and output formats
-c) Data abstraction, because other programmes must obtain permission from the team before they may alter anything
-d) Neither: publishing a name with input and output formats is what a header file does, and a header file is a file, not a type of abstraction
+**2.** `area(double r) { return 3.14 * r * r; }` Which of the four parts of a function definition is missing?
+A. Parameters
+B. Function body
+C. Return type
+D. Function name
 
-**2.** What, exactly, do the `public` and `private` access specifiers do?
+**3.** In `int m = max(4, 7);` what are 4 and 7?
+A. Arguments
+B. Parameters
+C. Return values
+D. Declarations
 
-a) They restrict the access of other programmes to only some of the properties and functions of an object
-b) They state which of a function's parameters must be supplied with an argument at a call and which may be left out
-c) They mark which of an object's functions is the entry point, so that the compiler knows which function to run first
-d) They decide whether an object's data is stored in the programme itself or in a separate header file
+**4.** ```c
+int max(int a, int b);
+int main(void) {
+    int m = max(4, 7);
+    printf("%d\n", m);
+    return 0;
+}
+int max(int a, int b) { if (a > b) return a; return b; }
+```
+Which line, if deleted, makes the compiler reject the call `max(4, 7)` in main?
+A. `return 0;`
+B. `printf("%d\n", m);`
+C. `return b;`
+D. `int max(int a, int b);`
 
-**3.** The course presents the header file as a way of *implementing abstraction*, not merely as a convenience. Why?
+**5.** ```c
+int f(int n) {
+    if (n > 3) return n * 2;
+    return n + 100;
+}
+```
+What does `printf("%d %d", f(5), f(2));` print?
+A. 10 102
+B. 110 102
+C. 10 4
+D. 5 102
 
-a) Because including a header file removes the library's source code from the machine, so nobody can read the implementation at all
-b) Because a header file is processed before `main()` and therefore runs first, which keeps the implementation out of the way of your own code
-c) Because by including it you can use its functions without having any knowledge of how the function is implemented — you are given names and input and output formats and nothing more
-d) Because a header file is where an object's `public` and `private` specifiers must be written, and those specifiers are what does the actual hiding
+**6.** ```c
+int twice(int n) { return 2 * n; }
+int main(void) {
+    int a = 3;
+    int b = twice(twice(a) + 1);
+    printf("%d %d", a, b);
+    return 0;
+}
+```
+What is printed?
+A. 3 12
+B. 14 14
+C. 3 7
+D. 3 14
 
-**4.** A small programme is growing rapidly and more people are being put on it. What does the course say functions do about that, and why?
+**7.** `printf("C:\new\tx");` What appears on the screen?
+A. `C:\new` then a tab and `x`
+B. `C:new` then a tab and `x`
+C. `C:` then a new line, then `ew`, a tab and `x`
+D. `C:` then a new line, then `new`, a tab and `x`
 
-a) They shorten the programme, so that the growing code still fits on a page and stays readable to everyone on the team
-b) They let the project scale up, because a project that becomes complex only needs more functions added and the system remains stable, and different people can work on separate smaller functions at the same time
-c) They make the programme run faster, because a function that has already been called once does not have to be executed again the next time
-d) They remove the need for anybody to agree on names, because each function keeps its own copy of the data it needs and never consults another
+**8.** An object's `balance` can be read only through its `get_balance()` method and changed only through `deposit()`. Which type of abstraction is this?
+A. Functional abstraction
+B. Data abstraction
+C. Decomposition
+D. Module import
 
-**5.** `double area(double r);` appears near the top of a file. Further down the same file appears `double area(double r) { return 3.14159 * r * r; }`. What are these two things?
+**9. (show your working)** ```c
+int area(int w, int h) { return w * h; }
+int perim(int w, int h) { return 2 * (w + h); }
+int main(void) {
+    int w = 3, h = 5;
+    int d = area(w + 1, h) - perim(w, h);
+    printf("%d\n", d);
+    return 0;
+}
+```
+Trace this: give the arguments each call receives, the value each call returns, and the output. Show your working.
 
-a) Two definitions: the second repeats the first with the body filled in, and the compiler keeps whichever it meets last
-b) A function header and a function body, which together make up one declaration of `area`
-c) A call and a definition: the call must be written above the function it uses, which is what the first line does
-d) A declaration, which tells the compiler the name, return type and parameters, and a definition, which provides the actual body — the body being defined separately is exactly what a declaration permits
+**10. (show your working)** For `double bmi(double mass, double height) { return mass / (height * height); }` name the return type, the function name, the parameters and the function body. Then write a declaration for it, and a call that stores the result for mass 70 and height 1.75 in a variable `b`. Give the value of b to 2 decimal places.
 
-**6.** In `int total(int a, int b) { int s = a + b; return s; }`, which reading is correct?
+**11. (show your working)** A shop takes 15% off three prices, 100, 200 and 300, and prints the discounted total. Write two C functions, `withDiscount(price)` returning the price less 15% and `total3(a, b, c)` returning the sum of three values, and the statement in main that prints the total. State the number printed.
 
-a) `int total(int a, int b)` is the function header, `int` is the return type, `total` the name, `a` and `b` the parameters, and the braces enclose the function body
-b) `int` is the return type, `total(int a, int b)` is the function header, and `int s = a + b;` is the return type of `s`, since that is the line where the returned value is built
-c) `a` and `b` are the arguments, because an argument is what a function is given, and these are the two things this function is given
-d) `{ int s = a + b; return s; }` is the function header, because a header is what sits at the head of the braces, and `int total(int a, int b)` is the declaration
-
-**7.** The course says a parameter is "like a placeholder" and that "when a function is invoked, a value is passed to the parameter". Which statement follows from that?
-
-a) Parameter and argument are two words for the same thing, and which one is used is purely a matter of house style
-b) The argument is the name written in the function's header and the parameter is the value written at the call, since the parameter is what is actually being passed
-c) The parameter is the name written in the function's header, and the argument is the actual value supplied at a call — so one parameter takes a different argument every time the function is invoked
-d) A parameter keeps whatever value the first call gave it, which is why later calls of the same function may leave that argument out
-
-**8.** A variable declared inside a function's body cannot be seen by any other function. Why is that the *right* arrangement rather than an inconvenience to be worked around with globals?
-
-a) It is a limitation of the compiler, which keeps a single table of names and would otherwise report every repeated name as a clash
-b) It is what makes the body genuinely private: two functions may reuse the same names without interfering, and no caller can depend on or corrupt what a body keeps
-c) It is because local variables live in the header file while globals live in the source file, so the two are never visible in the same place at once
-d) It is because a local variable has no value until its function returns, so letting other functions see it early would let them read meaningless data
-
-**9. (explain why)** State the course's one-sentence definition of abstraction. Then name its two types and say precisely what each one hides and what it still lets the outside world have. Finally, explain why the benefit "we can change the implementation of a method without breaking other parts of the code" is a *consequence* of the second type rather than a separate feature that has to be added.
-
-**10. (explain why)** Explain the difference between a function **declaration** and a function **definition**, and between a function **header** and a function **body** — four terms, and two of them are parts of a third. Say what each of the four contains, which one the compiler needs in order to accept a call, and why a language would bother to let the two be separated at all.
-
-**11. (explain why)** Explain the difference between a **local** and a **global** variable, and say what happens when a function declares a local with the same name as an existing global. Then explain why a programmer who moves a variable out of a function and makes it global to "save passing it around" has weakened the functional abstraction of every function in the file, and name the specific thing that can now go wrong.
-
-**12. (explain why)** A module `special_functions` contains the functions `max` and `min`. Explain what a module is and how the course says it differs from a function, then explain the difference between `import special_functions` and `from special_functions import max` — what each makes usable, and what each does not. Finally, say why the course discusses C header files under *abstraction* and modules under *functions*, when the two are doing much the same job.
+**12. (show your working)** A tax formula is pasted twelve times in a program, once at each place it is needed, and then the tax rate changes. Using the two benefits of functions, explain what goes wrong with the pasted version and what the fix is.
 
 ---
 
 ## Answers
 
-**1. b — Functional abstraction.** *Concept: functional abstraction hides the implementation of a method; the interface is the name plus the input and output formats.* The course's wording is almost verbatim: the implementation of the methods of an object is not directly exposed, and "if other programmes need to use the method of an object, all they need to know is the method's name, the format of the input, and the format of the output". (a) and (c) both reach for **data abstraction**, which is about the object's **data** not being exposed and about no other programme altering that data **without obtaining the necessary permissions** — nothing in the scenario mentions data at all, only a body that may be rewritten. (d) confuses the **mechanism** with the **concept**: a header file is indeed one way to implement this, but the course lists header files as a means of *implementing* abstraction, and what has been described here is the abstraction itself.
+**1. B** — *Tracing a call through a parameter copy.* g's n is 4. f receives its own copy of 4, triples it to 12 and returns 11. Back in g, its n was never touched and is still 4, so g returns 11 + 4 = 15.
 
-**2. a.** *Concept: what access specifiers actually control.* The course says the `public` and `private` specifiers are applied to **the properties and functions of an object** and **restrict the access of other programmes to only some of them** — they control **who may name a thing**, and nothing else. (b) invents optional arguments, confusing an access specifier with a parameter list. (c) confuses `public` with the role of **`main()`**, which the course names separately as the entry-point function of every C programme. (d) confuses the access specifier with the **header file**, the *other* implementation mechanism in the same lesson; specifiers say nothing about where anything is stored.
+23 is 11 + 12, assuming f's tripling reached g's variable; 11 forgets the + n that g adds; 16 drops the − 1 inside f, giving 12 + 4.
 
-**3. c.** *Concept: a header file is functional abstraction delivered by the toolchain.* The course's own sentence: by including a header file we **can easily use functions from the header file without having any knowledge of how the function is implemented**. That is exactly the "name, input format, output format" interface of functional abstraction. (a) is the commonest misconception in the whole topic — reading *abstraction* as *secrecy*. Header files are ordinary readable text; what is withheld is the **implementation**, not the file. (b) invents an execution order; `#include` is handled before compilation but nothing in a header "runs", and `main()` remains the entry point. (d) fuses the two mechanisms into one, when the course lists them as separate ways of implementing the same idea.
+**2. C** — *The four parts of a function definition.* A definition has a return type, a function name, parameters and a body. Here the name is `area`, the parameter is `double r`, the body is in the braces, and nothing before the name says what type of value comes back. The return type is missing; it should read `double area(double r)`.
 
-**4. b.** *Concept: the course's stated reason for decomposition — people and stability, not brevity.* The lesson's argument runs: a complex project is impossible or time-wasting for one person, the more complex the task the more people are needed, so break it into smaller pieces that **different people can work on at the same time**; and the stated benefit is that **even if a small project rapidly becomes complex, we only need to add more functions and the system will remain stable**. (a) is true-sounding and is a real side effect, but readability is listed as a benefit of **abstraction**, not as the reason functions exist. (c) invents caching: a function called ten times executes ten times, and what functions avoid is duplicating the **code**, not the running. (d) inverts the point — decomposition needs *more* agreement about interfaces, not less, and a function that "never consults another" could not be called by one.
+The parameter list `(double r)` is present; the body `{ return ... }` is present; the name `area` is present.
 
-**5. d.** *Concept: declaration versus definition.* The first line is a **declaration**: it **tells the compiler about a function name, return type, and parameters**, ends in a semicolon and has no body. The second is the **definition**, which **provides the actual body**; the course explicitly says **the actual body of the function can be defined separately**. (a) misses that only one of them has a body, and invents a "last one wins" rule that no language has. (b) is the sharpest distractor and the commonest error: **header** and **body** are the two parts of the **definition** — the header is the line `double area(double r)` and the body is what sits between the braces — so neither of them is the declaration. (c) confuses a declaration with a **call**; a call passes actual values and appears inside another function's body.
+**3. A** — *Parameters versus arguments.* 4 and 7 are the actual values supplied at this call, which are the arguments. They are passed by position into the parameters `a` and `b` written once in the header of max.
 
-**6. a.** *Concept: naming the four parts of a function definition on a real line of code.* Return type `int`, name `total`, parameters `int a, int b` — together the **function header** — and the braces enclose the **function body**, the collection of statements that define what the function does. (b) gets the return type right and then invents a second one for the local variable; `int s` is a declaration of a local, not a return type. (c) is the **parameter/argument swap**: `a` and `b` are placeholders written in the header, so they are **parameters**; arguments are the actual values passed at a call, and no call appears here. (d) reverses header and body outright, on the plausible-sounding but wrong ground that the "head" is what the braces enclose.
+Parameters are the placeholders in the header, not the values; the return value is the single result, 7, that comes back; a declaration is the statement `int max(int a, int b);` that tells the compiler about the function.
 
-**7. c.** *Concept: parameter versus argument.* The parameter is written **once**, in the header, as a placeholder; the argument is the **actual value passed when the function is invoked**, and it may differ at every call — which is precisely why the placeholder is needed. (a) is the "the distinction is pedantry" answer; it is not, because the two live in different places and one is fixed while the other varies. (b) has the two terms the right way round in the sentence and the wrong way round in fact — the classic swap. (d) reads "placeholder" as "storage that holds on to its value", which quietly turns a parameter into a global; each call passes a value afresh, and a call that omits an argument the header requires is simply an error.
+**4. D** — *What a function declaration is for.* The definition of max sits below main, so when the compiler reaches the call it has not yet seen the body. The declaration on line 1 tells it the name, return type and parameters, which is all it needs to accept the call. Delete it and the call names an unknown function.
 
-**8. b.** *Concept: local scope is functional abstraction enforced by the language.* Because a local (and a parameter) exists only while that call runs and is invisible outside it, the body of a function is genuinely private: whatever names it uses for its working values are its own business, so two functions can both use `i` or `total`, and no caller can come to depend on an internal name — which is exactly what lets the body be rewritten without breaking anybody. (a) mistakes a design decision for a compiler restriction; compilers manage many names, and languages *chose* to scope them. (c) invents a storage rule from the header-file lesson; a header file holds declarations, not local variables. (d) confuses **scope** with **lifetime and initialisation** — a local has a perfectly good value while the function is running, which is precisely when it is used, and it ceases to exist when the function returns.
+Deleting `return 0;` only changes what main hands back; deleting the printf removes output, not the call; deleting `return b;` breaks max's body, not the compiler's knowledge of the call.
 
-**9.** *Concept: abstraction, its two types, and why one benefit follows from one of them.* **The definition:** abstraction is **the process of hiding the internal details of an application from the outer world** — the car-ignition analogy, where the driver twists the key and does not concern themselves with what happens in the engine in between. **Data abstraction** is writing the programme so that **the data of an object is not directly exposed** to the outside world or to other programmes; what the outside still has is access through permitted routes only, and the stated guarantee is that **no other programme can alter the object data without obtaining the necessary permissions**. **Functional abstraction** is writing it so that **the implementation of the methods of an object is not directly exposed**; what the outside still has is exactly three things — **the method's name, the format of the input, and the format of the output**. **Why the benefit follows.** If callers were only ever given the name and the input and output formats, then no caller's code can contain any reference to how the body works — there is nothing there for them to have relied on. So rewriting the body cannot break them, provided the name and the two formats are unchanged. That is not an extra feature bolted on; it is the *definition* restated from the caller's side. The converse makes it vivid: expose the implementation, let callers reach into it, and every one of them becomes a reason not to change it. This is also why the course pairs the benefit with **"it prevents the duplication of codes"** — one implementation, held behind one interface, is the only thing that *can* be changed in one place.
+**5. A** — *Return ends the function immediately.* f(5): 5 > 3 is true, so `return 10` runs and the function ends there; the second return is never reached. f(2): 2 > 3 is false, the first return is skipped, and 2 + 100 = 102 is returned. Output: 10 102.
 
-**10.** *Concept: declaration, definition, header, body — and why separation is worth having.* A **function declaration tells the compiler about a function name, return type, and parameters**; it has **no body** and ends with a semicolon, e.g. `int max(int a, int b);`. A **function definition provides the actual body** of the function. The definition is made of two parts: the **function header**, which is the line carrying the **return type, the function name and the parameters** — `int max(int a, int b)` — and the **function body**, the **collection of statements that define what the function does**, held between the braces. So the four terms are not four parallel things: header and body are the two parts of the **definition**, and the **declaration** is a separate statement that duplicates only the header's information. **What the compiler needs to accept a call** is the **declaration** — the name, the return type and the parameters are enough to check that the call passes the right number and kind of arguments and to know what type of value comes back. It does not need the body to accept the call; that is supplied later, by the definition. **Why allow the separation.** Three reasons, all of them this week's material. First, order: `main` can call a function defined below it, because the declaration above has already told the compiler what to expect. Second, it is the mechanism behind **header files** — the header carries declarations, the compiled library carries definitions, which is how you can call `printf` **without having any knowledge of how it is implemented**. Third, it is **functional abstraction** written into the language: the declaration *is* the name plus the input and output formats, i.e. exactly what the course says a caller is entitled to know, and the definition is exactly what the course says should be hidden.
+110 102 lets both returns run for n = 5 and adds them; 10 4 applies the doubling to n = 2 as well, ignoring the condition; 5 102 forgets to double.
 
-**11.** *Concept: local versus global scope, shadowing, and the cost of a global.* A **local** variable is declared inside a function's body — and a **parameter** is a local too. It comes into existence when the call starts, is invisible to every other function, and ceases to exist when the function returns. A **global** is declared outside all functions: it is visible to every function in the file and it persists between calls. **When a local has the same name as a global**, the local **shadows** the global inside that function: every use of the name there refers to the local, and assignments there leave the global untouched. So a function containing `int total;` that then does `total = a + b;` does not change a global called `total` at all — the two are simply different variables that happen to share a spelling, and the function's return value is the only thing that gets out. **Why making a variable global weakens abstraction.** A function whose behaviour depends on a global no longer has an honest interface: its name, its input format (the parameters) and its output format (the return type) no longer describe everything that governs it, because a value it never received can change what it does, and a value it never returned can be changed by it. Callers therefore *must* know about the internals — which is precisely the thing functional abstraction exists to prevent — and the benefit that the implementation can be changed without breaking other parts of the code is gone, because "other parts" now share state with the body. **The specific thing that goes wrong:** two functions writing to the same global at different times, so that one function's result silently depends on whether the other has already been called, and on how many times. That fault is invisible in either function read on its own, which is why it survives testing; a parameter and a return value would have made the dependency visible in the header.
+**6. D** — *Nested function calls.* Work from the inside out. twice(a) is twice(3) = 6. Add 1: the outer argument is 7. twice(7) = 14, so b = 14, and a is still 3 because twice only read a copy. Output: 3 14.
 
-**12.** *Concept: modules versus functions, the two import forms, and why headers and modules are the same idea.* **What a module is.** The course says **modules and functions are very similar; the main difference is that modules are used on a much larger scale**. A **function is a group of statements that perform a task** — one specific task, on a small scale. A **module** is larger because it **can contain various functions and classes**; it is a whole file's worth of capability rather than a single task. So the relationship is one of scale, not of kind: you **call** a function, you **import** a module, and after importing you still call the functions inside it. **The two forms.** `import special_functions` brings in **the module**, so everything in it is reachable through the module's name — `special_functions.max(4, 7)`, `special_functions.min(4, 7)` — and the bare name `max` is *not* introduced into your code. `from special_functions import max` **explicitly specifies the exact function we want to use**, so the name `max` becomes usable directly — `max(4, 7)` — and, as the course puts it, **we can only use the `max` function** from that module: `min` has not been brought in and `special_functions` itself is not available as a name either. Same module, different names made usable. **Why headers sit under abstraction and modules under functions.** They are the same mechanism seen from two sides. `#include <stdio.h>` and `import special_functions` both let you use somebody else's function while knowing only its **name, the format of its input and the format of its output** — the deck puts the header file under *abstraction* because that is the point it illustrates, namely using a function **without having any knowledge of how it is implemented**. It puts modules under *functions* because that is the point *they* illustrate, namely **breaking a large complex project into smaller pieces** so that different people can work on them at once, at the largest scale the course goes to. Decomposition and abstraction are two descriptions of the same act: you cut the problem into pieces, and each cut is only useful if the piece can be used from outside without being understood from inside.
+3 12 forgets the + 1 and computes twice(twice(3)); 14 14 assumes the call changed a; 3 7 stops after forming the outer argument and never applies the outer twice.
+
+**7. C** — *Reading escape sequences in a string.* A backslash inside a string always starts an escape. `\n` is a newline and `\t` is a horizontal tab, so the string is C, :, newline, e, w, tab, x. The screen shows `C:` on one line and `ew`, a tab gap, then `x` on the next.
+
+`C:\new` treats the backslash as an ordinary character; `C:new` drops the backslash but keeps the n; the last option prints the newline and then still prints the n, which was consumed by the escape.
+
+**8. B** — *Data versus functional abstraction.* What is hidden is the data of the object: no other programme can alter the balance without going through the permitted methods. That is data abstraction.
+
+Functional abstraction hides how a method is implemented, leaving callers only its name and input and output formats; decomposition is breaking a project into functions; importing a module makes its names available and hides nothing.
+
+**9.** *Tracing calls with arguments and return values.* The first argument to area is w + 1 = 4, the second is h = 5, so area(4, 5) returns 4 × 5 = 20. perim receives 3 and 5 and returns 2 × (3 + 5) = 16. Then d = 20 − 16 = 4 and the program prints 4.
+
+Final answer: 4. A correct answer states area(4, 5) = 20, perim(3, 5) = 16, and the output 4. Using area(3, 5) = 15 (forgetting the + 1 in the argument) gives −1 and is wrong; 2 × 3 + 5 = 11 for perim ignores the brackets and is wrong.
+
+**10.** *Naming the parts of a function and calling it.* Return type: `double`. Function name: `bmi`. Parameters: `double mass, double height`. Body: `{ return mass / (height * height); }`. Declaration: `double bmi(double mass, double height);` (parameter names may be omitted: `double bmi(double, double);`). Call: `double b = bmi(70, 1.75);`. Value: 1.75² = 3.0625 and 70 / 3.0625 = 22.857..., so b = 22.86.
+
+A correct answer names all four parts, writes the declaration with a semicolon and no body, passes the arguments in the order mass then height, and gives 22.86 (22.857 accepted). `bmi(1.75, 70)` binds the values to the wrong parameters and gives 0.000357, which is wrong.
+
+**11.** *Decomposing a task into functions.* ```c
+double withDiscount(double price) { return price * 0.85; }
+double total3(double a, double b, double c) { return a + b + c; }
+/* in main */
+printf("%.2f\n", total3(withDiscount(100), withDiscount(200), withDiscount(300)));
+```
+
+100 × 0.85 = 85, 200 × 0.85 = 170, 300 × 0.85 = 255, and 85 + 170 + 255 = 510, so the program prints 510.00. A correct answer has withDiscount return price × 0.85 (or price − price × 0.15), total3 return a + b + c, calls withDiscount once per price, and states 510 (510.00 accepted). Returning price × 0.15 gives 90 and is the discount, not the discounted price; that is wrong.
+
+**12.** *Why functions avoid duplicated code.* With twelve pasted copies the rate must be changed in twelve places, and any copy that is missed keeps the old rate, so the program silently gives two different answers. Functions avoid duplicating code: however many times a function is used, it is implemented only once. The fix is one function, say `double tax(double amount)`, called twelve times; the rate then lives on one line and one edit changes every use. The second benefit is scaling up: adding more places that need tax means adding calls, not copies, so the system stays stable as the program grows.
+
+A correct answer names duplication (implement once, call many times), says the rate is edited in one place, and mentions that callers only need the function's name and input and output formats, so changing the body breaks nothing else.

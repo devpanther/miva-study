@@ -13,7 +13,8 @@
       },
       "fast": {
         "course": "GST_112",
-        "topic": "The Monday fast hour covers Week 2 of Nigerian Peoples and Culture. It is Dr Abimbola Oyarinu's lecture on intergroup relations among pre-colonial Nigerian peoples.\n\nIt opens with the definition of inter-group relations: interaction between two or more distinct linguistic and cultural groups. Then the two identifiers of a group, culture and language. Then the scale of Nigerian diversity - over 348 language groups and 374 ethnic groups.\n\nThe bulk of the hour works through the four indicators used to reconstruct pre-colonial interaction.\n\nTraditions of origin. The shared Kanuri and Hausa myths tracing to Baghdad through Saif and Bayajidda, with Bayajidda settling among the Kanuri and marrying the Mai's daughter. The Kisra legend founding the Yoruba and Borgu kingdoms, with the Ooni of Ife as Kisra's brother. The Yoruba-Benin link through Oranmiyan and Eweka. The Umu-Ezechinma Igbo and Isoko ties to Edo.\n\nConflict. The Oyo-Nupe wars and the Bariba-Yoruba alliance. The Kano-Katsina wars over trade routes. Jukun conquest over the Kanuri, Hausa, Igala, Idoma and Ebira. Benin's expansion to Auchi, Idah, Itsekiri, Urhobo, Isoko, Okpe and Eko (Lagos), with the Benin-descended Lagos kings Ado and Asipa. And the Igala-Nsukka Igbo wars that left the Illah speaking Igbo while their masquerades speak Igala.\n\nTrade and commerce. The Jukun salt-for-Tiv-firewood exchange. Kanem-Bornu's role in the trans-Saharan trade as the channel for Yoruba and Nupe participation. Ibibio land as the corridor between hinterland Igbo and coastal Efik and Ijaw. And Nupe goods traded to the Yoruba.\n\nReligion. Shared indigenous practices, plus borrowed deities and cults. Yoruba Igunu from Nupe Ndakogbaya, and Ibibio-origin Ibini Ukpabi among the Igbo. Efik-origin Ekpe and Ekpo among Igbo subgroups, and the Bori cult across Hausaland.\n\nThe hour closes with Nigeria's six geo-political zones and their dominant ethnic groups, and Nigeria's history dating back to 39,000 BC."
+        "topic": "The Monday fast hour covers Week 2 of Nigerian Peoples and Culture. It is Dr Abimbola Oyarinu's lecture on intergroup relations among pre-colonial Nigerian peoples.\n\nIt opens with the definition of inter-group relations: interaction between two or more distinct linguistic and cultural groups. Then the two identifiers of a group, culture and language. Then the scale of Nigerian diversity - over 348 language groups and 374 ethnic groups.\n\nThe bulk of the hour works through the four indicators used to reconstruct pre-colonial interaction.\n\nTraditions of origin. The shared Kanuri and Hausa myths tracing to Baghdad through Saif and Bayajidda, with Bayajidda settling among the Kanuri and marrying the Mai's daughter. The Kisra legend founding the Yoruba and Borgu kingdoms, with the Ooni of Ife as Kisra's brother. The Yoruba-Benin link through Oranmiyan and Eweka. The Umu-Ezechinma Igbo and Isoko ties to Edo.\n\nConflict. The Oyo-Nupe wars and the Bariba-Yoruba alliance. The Kano-Katsina wars over trade routes. Jukun conquest over the Kanuri, Hausa, Igala, Idoma and Ebira. Benin's expansion to Auchi, Idah, Itsekiri, Urhobo, Isoko, Okpe and Eko (Lagos), with the Benin-descended Lagos kings Ado and Asipa. And the Igala-Nsukka Igbo wars that left the Illah speaking Igbo while their masquerades speak Igala.\n\nTrade and commerce. The Jukun salt-for-Tiv-firewood exchange. Kanem-Bornu's role in the trans-Saharan trade as the channel for Yoruba and Nupe participation. Ibibio land as the corridor between hinterland Igbo and coastal Efik and Ijaw. And Nupe goods traded to the Yoruba.\n\nReligion. Shared indigenous practices, plus borrowed deities and cults. Yoruba Igunu from Nupe Ndakogbaya, and Ibibio-origin Ibini Ukpabi among the Igbo. Efik-origin Ekpe and Ekpo among Igbo subgroups, and the Bori cult across Hausaland.\n\nThe hour closes with Nigeria's six geo-political zones and their dominant ethnic groups, and Nigeria's history dating back to 39,000 BC.",
+        "checkFile": "checks/Mon-GST_112-fast.md"
       }
     },
     {
@@ -25,7 +26,8 @@
       },
       "fast": {
         "course": "CSC_106",
-        "topic": "Web protocols, the five markup languages, DNS, and REST versus SOAP and WebSocket."
+        "topic": "Web protocols, the five markup languages, DNS, and REST versus SOAP and WebSocket.",
+        "checkFile": "checks/Tue-CSC_106-fast.md"
       }
     },
     {
@@ -37,7 +39,8 @@
       },
       "fast": {
         "course": "GST_122",
-        "topic": "The Wednesday fast hour covers GST_122 Week 2, \"Communication and Meaning\". Its organising claim is that the ultimate goal of communication is that meaning is conveyed accurately, and that communication is not solely about words.\n\nStart with semiotics - the field of signs and symbols and the role they play in everyday interaction - and the point that meaning travels through non-verbal signs as well as language.\n\nThen drill the central distinction the course examines on. Denotative meaning is the literal, dictionary sense. Connotative meaning is the implied or suggested sense, carrying cultural and emotional associations. Practise on example words rather than reciting the definitions.\n\nNext take the two named sources of confusion, hazardous homophones and ambiguity, and learn the discriminating test between them. Written down, a homophone problem disappears, while an ambiguous sentence is still readable two ways.\n\nWork through the week's case study, \"The Ambiguity Challenge in Project Coordination\". In it, a single ambiguous task-assignment sentence produced conflicting interpretations of tasks and responsibilities across a project team.\n\nClose by memorising the lesson's definition of effective communication - conveying intended meanings accurately while being mindful of the broader cultural and emotional associations of words. Then the six named competencies: Semiotic Awareness, Contextual Interpretation, Clarity in Expression, Active Listening, Conflict Resolution and Cultural Sensitivity.\n\nSince the course tests classification of examples, spend the last ten minutes labelling sample sentences as denotative, connotative, homophone or ambiguity."
+        "topic": "The Wednesday fast hour covers GST_122 Week 2, \"Communication and Meaning\". Its organising claim is that the ultimate goal of communication is that meaning is conveyed accurately, and that communication is not solely about words.\n\nStart with semiotics - the field of signs and symbols and the role they play in everyday interaction - and the point that meaning travels through non-verbal signs as well as language.\n\nThen drill the central distinction the course examines on. Denotative meaning is the literal, dictionary sense. Connotative meaning is the implied or suggested sense, carrying cultural and emotional associations. Practise on example words rather than reciting the definitions.\n\nNext take the two named sources of confusion, hazardous homophones and ambiguity, and learn the discriminating test between them. Written down, a homophone problem disappears, while an ambiguous sentence is still readable two ways.\n\nWork through the week's case study, \"The Ambiguity Challenge in Project Coordination\". In it, a single ambiguous task-assignment sentence produced conflicting interpretations of tasks and responsibilities across a project team.\n\nClose by memorising the lesson's definition of effective communication - conveying intended meanings accurately while being mindful of the broader cultural and emotional associations of words. Then the six named competencies: Semiotic Awareness, Contextual Interpretation, Clarity in Expression, Active Listening, Conflict Resolution and Cultural Sensitivity.\n\nSince the course tests classification of examples, spend the last ten minutes labelling sample sentences as denotative, connotative, homophone or ambiguity.",
+        "checkFile": "checks/Wed-GST_122-fast.md"
       }
     },
     {
@@ -49,7 +52,8 @@
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "The Thursday fast hour covers Week 2 of General Physics Practical II: Ohmic resistance, and the experiment to verify Ohm's law.\n\nStart with the statement of Ohm's law - current through a conductor is directly proportional to the potential difference across it at constant temperature. Then the equation V = IR, with each symbol and unit defined.\n\nThen the distinction between ohmic resistors (constant R, straight V-I line through the origin, reversible behaviour) and non-ohmic ones such as varistors, photoresistors and thermistors.\n\nThen drill the two combination rules. Series resistors carry the same current and add as R = R1 + R2 + ... + RN. Parallel resistors share the same potential difference and combine as 1/R = 1/R1 + 1/R2 + .... Check both against the worked values 10 ohm, 20 ohm and 30 ohm, giving 60 ohm in series and 5.45 ohm in parallel.\n\nNext walk the Praxilabs virtual Ohmic Resistor procedure in order. Wire the breadboard circuit. Connect the voltmeter in parallel and the ammeter in series. Connect the DC power supply. Set R1 between 1 and 20 kilohm. Apply a chosen voltage with the knob or slider. Press Record. Then repeat six more times for seven data points, before the Excel file downloads.\n\nFinish on the analysis that carries the marks. Plot V on the y-axis against I in mA on the x-axis. Map V = IR onto y = mx + c, so that the gradient is the resistance and a zero intercept confirms no systematic offset. Watch the unit trap: volts per milliamp gives kilohms. Then compute the percentage error against the 1 kilohm default value, which must fall within 5 per cent for the verification to pass."
+        "topic": "The Thursday fast hour covers Week 2 of General Physics Practical II: Ohmic resistance, and the experiment to verify Ohm's law.\n\nStart with the statement of Ohm's law - current through a conductor is directly proportional to the potential difference across it at constant temperature. Then the equation V = IR, with each symbol and unit defined.\n\nThen the distinction between ohmic resistors (constant R, straight V-I line through the origin, reversible behaviour) and non-ohmic ones such as varistors, photoresistors and thermistors.\n\nThen drill the two combination rules. Series resistors carry the same current and add as R = R1 + R2 + ... + RN. Parallel resistors share the same potential difference and combine as 1/R = 1/R1 + 1/R2 + .... Check both against the worked values 10 ohm, 20 ohm and 30 ohm, giving 60 ohm in series and 5.45 ohm in parallel.\n\nNext walk the Praxilabs virtual Ohmic Resistor procedure in order. Wire the breadboard circuit. Connect the voltmeter in parallel and the ammeter in series. Connect the DC power supply. Set R1 between 1 and 20 kilohm. Apply a chosen voltage with the knob or slider. Press Record. Then repeat six more times for seven data points, before the Excel file downloads.\n\nFinish on the analysis that carries the marks. Plot V on the y-axis against I in mA on the x-axis. Map V = IR onto y = mx + c, so that the gradient is the resistance and a zero intercept confirms no systematic offset. Watch the unit trap: volts per milliamp gives kilohms. Then compute the percentage error against the 1 kilohm default value, which must fall within 5 per cent for the verification to pass.",
+        "checkFile": "checks/Thu-PHY_108-fast.md"
       }
     },
     {
@@ -62,7 +66,7 @@
       "fast": {
         "course": "COS_102",
         "topic": "This session is COS_102 applied, working the week's method through on concrete cases rather than restating it.\n\nThe student is given stated problems and has to classify them by testing rather than by surface appearance. Bridget's 50-question exam-marks problem is non-routine despite using only arithmetic. The parking-space area is routine, because a known formula applies. And \"approximate the number of hairs on your head\" is non-routine rather than unsolvable.\n\nScenarios are then read and matched to the strategy actually in use, including cases designed to mislead. XYZ Corporation's $2bn turnover target decomposed into quarterly and regional targets is means-ends analysis. The doctor converging several weaker rays on a deep tumour after recalling an army dividing to take a fortress is analogy, not means-ends, despite the division into smaller parts.\n\nThe session runs the two ordered procedures of the week in sequence - the three analogy steps, and the three steps for attacking a non-routine problem.\n\nIt traces the substitution puzzle one replacement at a time, obtaining BOOOB from BOB via the rules OB->BOOB and BOB->O.\n\nFinally it diagnoses attempts that went wrong. A heuristic applied to a routine problem where an exact answer is required. A brainstorming session ruined by immediate criticism. And a premature conclusion that a substitution puzzle does not come out.\n\nThe halting problem is met applied, as a request to write a program that decides termination for any input.",
-        "checkFile": "checks/Sat-COS_102.md"
+        "checkFile": "checks/Fri-COS_102-fast.md"
       }
     },
     {
@@ -210,131 +214,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "The definition of a function f: A → B says every element of A is assigned **exactly one** element of B. If \"exactly one\" were weakened to \"at least one\", what specifically breaks?",
+          "q": "Which of these equations does NOT define y as a function of x?",
           "options": [
-            "The domain would no longer be the whole of A.",
-            "The symbol f(x) would no longer name a definite value.",
-            "The range could become larger than the codomain.",
-            "The function could no longer be surjective."
+            "y = x² − 5",
+            "x² + y² = 25",
+            "y = 5 − |x|",
+            "y = 2ˣ"
           ],
           "answerIndex": 1,
-          "concept": "The uniqueness clause in the definition of a function",
-          "why": "Weakening 'exactly one' to 'at least one' lets a single input carry two outputs, so the notation f(x) no longer denotes a single definite value."
+          "concept": "Vertical line test on an equation",
+          "why": "x² + y² = 25 gives, at x = 0, both y = 5 and y = −5: one input with two outputs, so the vertical line x = 0 meets the graph twice and it is not a function.\n\ny = x² − 5, y = 5 − |x| and y = 2ˣ each produce exactly one y for every x, so every vertical line meets them once; the repeated outputs of x² and |x| are harmless."
         },
         {
           "type": "mcq",
-          "q": "The vertical line test detects the failure of which clause?",
+          "q": "For the linear function f(x) = 5 − 3x, state the slope m and the y-intercept b.",
           "options": [
-            "That the domain is an unbroken interval.",
-            "That every element of the codomain is used.",
-            "That no two inputs share an output.",
-            "That each input has only one output."
-          ],
-          "answerIndex": 3,
-          "concept": "What the vertical line test actually tests",
-          "why": "A vertical line collects every point with the same first coordinate, so two intersections mean one input has two outputs - a failure of uniqueness of output, not of injectivity or surjectivity."
-        },
-        {
-          "type": "mcq",
-          "q": "A map f: A → B is described as surjective but not injective. Which must be true?",
-          "options": [
-            "Every element of B is reached, and some element of B twice.",
-            "Every element of A is reached, and some element of A twice.",
-            "The range is a proper subset of the codomain of f.",
-            "f has a well-defined inverse on the whole of B."
+            "m = −3, b = 5",
+            "m = 5, b = −3",
+            "m = 3, b = 5",
+            "m = −3, b = −5"
           ],
           "answerIndex": 0,
-          "concept": "Distinguishing surjective from injective",
-          "why": "Surjective means every element of the codomain is reached; not injective means some element of the codomain is reached by more than one input."
+          "concept": "Reading slope and intercept from a linear rule",
+          "why": "Rewrite in the form mx + b: f(x) = −3x + 5, so m = −3 (the coefficient of x) and b = 5 (the value at x = 0, f(0) = 5).\n\nm = 5, b = −3 reads the numbers in the order written rather than by their role; m = 3 drops the sign of the x-coefficient; b = −5 attaches the minus sign to the wrong term."
         },
         {
           "type": "mcq",
-          "q": "f: A → B is surjective but fails to be injective. What exactly goes wrong when you try to define f⁻¹?",
+          "q": "Find the vertex of f(x) = x² − 4x + 1.",
           "options": [
-            "f⁻¹ would have a domain larger than B.",
-            "f⁻¹ would be undefined at some elements of B.",
-            "Some element of B would have to be sent to two different elements of A.",
-            "f⁻¹ ∘ f would be the identity on B instead of on A."
+            "(−2, 13)",
+            "(4, 1)",
+            "(2, −3)",
+            "(2, 1)"
           ],
           "answerIndex": 2,
-          "concept": "Why invertibility requires injectivity",
-          "why": "If two inputs share an output, the proposed inverse would have to send that one output to two different inputs, which is not a function."
+          "concept": "Vertex of a parabola by the formula",
+          "why": "x_v = −b/(2a) = −(−4)/2 = 2, and f(2) = 4 − 8 + 1 = −3, so the vertex is (2, −3).\n\n(−2, 13) drops the minus in −b/2a; (4, 1) uses −b instead of −b/2a and then reads c as the height; (2, 1) has the right x but takes c = 1 to be the vertex height, when c is the y-intercept f(0)."
         },
         {
           "type": "mcq",
-          "q": "log_b(x) is defined only for b > 0 **and b ≠ 1**. What is the reason for excluding b = 1?",
+          "q": "g(x) = 0.5ˣ. Evaluate g(−3).",
           "options": [
-            "A power of the number 1 has no defined value at all.",
-            "log₁(x) would come out negative whenever x is below 1.",
-            "The curve y = 1^x would fail to cross the y-axis anywhere.",
-            "Every power of 1 equals 1, so nothing else is reachable."
+            "−1.5",
+            "1/8",
+            "−8",
+            "8"
           ],
           "answerIndex": 3,
-          "concept": "Why the logarithm base excludes b = 1",
-          "why": "Since 1^y = 1 for every y, the function 1^x is constant and hits no other value, so it has no inverse to serve as log base 1."
+          "concept": "Evaluating an exponential at a negative exponent",
+          "why": "A negative exponent means reciprocal: 0.5⁻³ = 1/0.5³ = 1/0.125 = 8. Equivalently 0.5 = 1/2, so (1/2)⁻³ = 2³ = 8.\n\n−1.5 multiplies 0.5 by −3 as if it were 0.5·x; 1/8 is 0.5³, ignoring the sign of the exponent; −8 attaches the minus to the result instead of to the exponent."
         },
         {
           "type": "mcq",
-          "q": "In f(x) = 2x + 1 for x ≤ 0 and f(x) = x² − 3 for x > 0, why is the second condition written x > 0 rather than x ≥ 0?",
+          "q": "Evaluate log₄ 64.",
           "options": [
-            "Because x = 0 is already assigned by the first branch.",
-            "Because the expression x² − 3 has no defined value when x is 0.",
-            "Because the two branches are required to agree in value at x = 0.",
-            "Because the graph of a function must be unbroken at a boundary."
+            "3",
+            "16",
+            "2",
+            "8"
           ],
           "answerIndex": 0,
-          "concept": "Why piecewise conditions must be disjoint",
-          "why": "x = 0 is already covered by x <= 0; using x >= 0 in the second branch would assign x = 0 both 1 and -3, destroying single-valuedness."
+          "concept": "Evaluating a logarithm",
+          "why": "log₄ 64 asks: 4 to what power is 64? Since 4³ = 64, the answer is 3.\n\n16 divides 64 by 4 instead of asking for an exponent; 2 is the exponent for 16, one step short; 8 is √64, the square root rather than a base-4 exponent."
         },
         {
           "type": "mcq",
-          "q": "Why is |x| defined by two cases (x if x ≥ 0, −x if x < 0) instead of the instruction \"remove the minus sign\"?",
+          "q": "f(x) = x² + 1 if x < 2, and f(x) = 5 − x if x ≥ 2. Evaluate f(2).",
           "options": [
-            "Because −x is a positive number whatever the value of x.",
-            "Because the graph of |x| has to be smooth at the origin.",
-            "Because which case applies depends on x, not on a visible sign.",
-            "Because absolute value is defined for real inputs only."
+            "5",
+            "Undefined",
+            "3",
+            "Both 3 and 5"
           ],
           "answerIndex": 2,
-          "concept": "Why absolute value is defined by cases",
-          "why": "The rule cannot be 'remove the minus sign' because in |x - 3| there is no visible sign - which case applies is determined by the value of x."
+          "concept": "Evaluating a piecewise function at its boundary",
+          "why": "Decide which condition x = 2 satisfies: 2 < 2 is false, 2 ≥ 2 is true, so the second branch applies and f(2) = 5 − 2 = 3.\n\n5 uses the first branch, 2² + 1, which is only for x strictly less than 2; 'both' ignores that the conditions are disjoint, so exactly one branch applies; 'undefined' would need x = 2 to satisfy neither condition, but it satisfies x ≥ 2."
         },
         {
           "type": "mcq",
-          "q": "For a polynomial of degree n with leading coefficient aₙ, why do those two numbers alone decide the shape of the graph far from the origin?",
+          "q": "For f(x) = 7x − 4x⁵ + 2x² + 9, state the degree and the leading coefficient.",
           "options": [
-            "Because the lower-degree terms become zero once |x| is large.",
-            "Because every other term, divided by aₙxⁿ, tends to 0 as |x| grows.",
-            "Because polynomials of equal degree have identical graphs.",
-            "Because a₀ is only the y-intercept and never affects shape."
+            "Degree 5, leading coefficient 7",
+            "Degree 4, leading coefficient 9",
+            "Degree 5, leading coefficient 4",
+            "Degree 5, leading coefficient −4"
+          ],
+          "answerIndex": 3,
+          "concept": "Degree and leading coefficient of a polynomial",
+          "why": "The highest power present is x⁵, so the degree is 5, and the coefficient of that term, sign included, is −4.\n\n7 is the coefficient of the term written first, not of the highest power; 4 drops the sign; 'degree 4' counts the number of terms instead of reading the highest exponent."
+        },
+        {
+          "type": "mcq",
+          "q": "f: ℝ → ℝ with f(x) = x². f(2) = f(−2) = 4, and no real x gives f(x) = −1. Which description is correct?",
+          "options": [
+            "Injective but not surjective",
+            "Neither injective nor surjective",
+            "Surjective but not injective",
+            "Bijective"
           ],
           "answerIndex": 1,
-          "concept": "Why degree and leading coefficient fix end behaviour",
-          "why": "Dividing any lower-degree term by the leading term gives a ratio tending to 0 as |x| grows, so the leading term dominates - the other terms become negligible relative to it, not zero in themselves."
+          "concept": "Injective versus surjective",
+          "why": "Injective means no output is hit twice; 4 is hit by both 2 and −2, so f is not injective. Surjective means every element of the codomain ℝ is hit; −1 is never hit, so f is not surjective either.\n\n'Injective' ignores the collision at 4; 'surjective' ignores the gap at −1; 'bijective' would need both to hold, and neither does."
         },
         {
           "type": "short",
-          "q": "Every function is a relation, but not every relation is a function. Explain the difference using the slide's set language — \"A has many B\" versus \"B can have many A\" — and say which of those two situations is allowed.",
-          "concept": "Every function is a relation; the converse fails on the uniqueness clause",
-          "why": "A relation is any pairing of elements of A with elements of B. A function is a relation with one extra restriction: each element of A is paired with exactly one element of B. In the slide's language, 'B can have many A' is allowed - several different inputs may share one output, which is just a many-to-one function. What is forbidden is 'A has many B': one input carrying several outputs. That is the situation the vertical line test detects, and it is precisely what stops a relation from being a function."
+          "q": "f(x) = 3 sin(2x). State the period and the range of f. Show your working.",
+          "concept": "Period and amplitude of a sine function",
+          "why": "sin(kx) has period 2π/k, so with k = 2 the period is 2π/2 = π. sin(2x) lies between −1 and 1, so 3 sin(2x) lies between −3 and 3.\n\nFinal answer: period π, range [−3, 3]. Also accepted: −3 ≤ y ≤ 3. A period of 2π ignores the 2 inside; 4π multiplies instead of dividing; a range of [−1, 1] forgets the factor 3."
         },
         {
           "type": "short",
-          "q": "The vertical line test and the horizontal line test look almost identical but answer different questions. Explain what property each one is testing and why a graph can pass one and fail the other.",
-          "concept": "The two line tests check different clauses of the pairing",
-          "why": "The vertical line test checks whether each input has only one output - that is, whether the relation is a function at all. The horizontal line test checks whether each output comes from only one input - that is, whether the function is injective and therefore invertible. A graph can pass the first and fail the second: y = x^2 is a perfectly good function, since every x gives exactly one y, but the line y = 4 meets it twice, so two inputs share an output and it has no inverse on R. The two tests scan in perpendicular directions because they interrogate opposite halves of the pairing."
+          "q": "Find the domain of f(x) = log₂(x − 4). Show your working.",
+          "concept": "Domain of a logarithmic function",
+          "why": "A logarithm is defined only for a positive argument, so x − 4 > 0, giving x > 4. The endpoint is excluded because log₂ 0 is undefined.\n\nFinal answer: D = (4, ∞). Also accepted: x > 4, {x : x > 4}. [4, ∞) or x ≥ 4 wrongly includes 4; (−4, ∞) has the sign of the boundary wrong; (−∞, ∞) forgets the log restriction altogether."
         },
         {
           "type": "short",
-          "q": "Explain why f(x) = b^x and g(x) = log_b(x) are called inverses, and why the domain of one is the range of the other. Use this to explain why log_b(x) is undefined for x ≤ 0.",
-          "concept": "Exponential and logarithm as mutual inverses, with domain and range exchanged",
-          "why": "log_b(x) is defined as the exponent to which b must be raised to give x, so b^(log_b x) = x and log_b(b^x) = x - each undoes the other, which is exactly what makes them inverses. Under inversion the domain and range swap: b^x has domain all reals and range (0, inf), so log_b(x) has domain (0, inf) and range all reals. That is why log_b(x) is undefined for x <= 0 - no real exponent applied to a positive base ever produces zero or a negative number, so there is nothing for the logarithm to return."
+          "q": "Use the discriminant to find how many real roots f(x) = x² − 6x + 2 has, and then find them. Show your working.",
+          "concept": "Discriminant and roots of a quadratic",
+          "why": "Δ = b² − 4ac = (−6)² − 4(1)(2) = 36 − 8 = 28 > 0, so there are two distinct real roots. Then x = (6 ± √28)/2 = (6 ± 2√7)/2 = 3 ± √7.\n\nFinal answer: two real roots, x = 3 + √7 and x = 3 − √7 (about 5.65 and 0.35). Also accepted: (6 ± √28)/2. Δ = 36 + 8 = 44 has the sign of 4ac wrong; Δ = 36 − 2 = 34 forgets the factor 4."
         },
         {
           "type": "short",
-          "q": "A slide states that in f(x) = ax² + bx + c, \"c is the y-coordinate of the vertex\". Explain why this is false as written, what c genuinely is, and the one special case in which the slide's claim happens to be true.",
-          "concept": "What c actually is in ax^2 + bx + c, and the single case where the slide is accidentally right",
-          "why": "c is the y-intercept: setting x = 0 gives f(0) = c, so c is the height at which the curve crosses the y-axis. The vertex sits at x = -b/(2a), and its y-coordinate is f(-b/(2a)) = c - b^2/(4a), which differs from c by b^2/(4a). The slide's claim is therefore false whenever b is not zero. The one special case in which it happens to be true is b = 0: the vertex then lies on the y-axis at x = 0, so the vertex's y-coordinate and the y-intercept are the same point, and both equal c."
+          "q": "The logarithm log_b(x) is defined only for b > 0 and b ≠ 1. Using the meaning y = log_b(x) means bʸ = x, explain why b = 1 is excluded and why a negative base is excluded.",
+          "concept": "Restrictions on the base of a logarithm",
+          "why": "y = log_b(x) is the exponent y with bʸ = x. If b = 1 then 1ʸ = 1 for every y, so 1ʸ = x has no solution unless x = 1, and then every y works: the exponent is not uniquely determined, so no function exists. If b is negative, bʸ is not a real number for many y (for example (−2)^(1/2) = √(−2)), so bʸ = x cannot be solved for general x > 0.\n\nA correct answer says b = 1 gives a constant power (1ʸ = 1) so the exponent cannot be recovered, and a negative base gives non-real powers for fractional exponents."
         }
       ]
     },
@@ -348,131 +352,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Slide 4 opens with 'Coulomb's law only describe the interaction of two point charges.' Why does the lecturer put that sentence before the superposition principle?",
+          "q": "Point charges of −3.0 μC and +4.0 μC are 2.0 m apart. Take k = 9.0 × 10⁹ N·m²/C². What is the force between them?",
           "options": [
-            "Because Coulomb's law is stated for a pair only, so a third charge needs a separate principle to handle it",
-            "Because Coulomb's law fails when the charges are close together",
-            "Because Coulomb's law works only for charges of the same sign",
-            "Because Coulomb's law gives a direction but not a magnitude"
+            "0.027 N, attractive",
+            "−0.027 N, repulsive",
+            "0.054 N, attractive",
+            "0.027 N, repulsive"
           ],
           "answerIndex": 0,
-          "concept": "Why superposition is a separate, experimental principle",
-          "why": "Coulomb's law is a two-body statement: it tells you the force between q₁ and q₂ and nothing else. Superposition is the extra, experimentally established claim that the pairwise forces simply add as vectors and that no charge disturbs any other pair. Option 2 invents a range restriction the deck never makes — point charges are idealised as sizeless, so 'close' is not the issue. Option 3 is false: the law covers attraction and repulsion equally, with the sign read off the picture. Option 4 has it exactly backwards — the law gives the magnitude, and the direction comes from the sketch."
+          "concept": "Coulomb's law as a magnitude with direction from the signs",
+          "why": "Use the magnitudes: F = k|q₁q₂|/r² = (9.0 × 10⁹)(3.0 × 10⁻⁶)(4.0 × 10⁻⁶)/(2.0)² = 0.108/4.0 = 0.027 N. The charges have unlike signs, so the force is attractive. The sign of a charge never enters the formula; it only decides the direction.\n\n−0.027 N substitutes the signed charge and then reads the spurious minus as a direction; 0.054 N forgets to square the 2.0 m; '0.027 N, repulsive' has the magnitude right but confuses unlike signs with repulsion."
         },
         {
           "type": "mcq",
-          "q": "The principle says the total force is the 'vector sum' of the individual forces. For three charges on a single straight line, what does that phrase reduce to in practice?",
+          "q": "A charge Q₁ = +2.0 μC exerts a force of 0.50 N on a charge Q₂ = +8.0 μC. What is the magnitude of the force that Q₂ exerts on Q₁?",
           "options": [
-            "Add the two magnitudes, since both are forces on the same charge",
-            "Add if the two force arrows point the same way, subtract if they oppose, and the answer points the way of the larger arrow",
-            "Take whichever force is larger and ignore the smaller one",
-            "Add the magnitudes and then divide by two to get the average"
-          ],
-          "answerIndex": 1,
-          "concept": "What vector addition means for collinear forces",
-          "why": "On a line there are only two possible directions, so the vector sum is a signed sum: same direction adds, opposite directions subtracts, and the resultant points along the bigger contribution. That single rule generates both of her answers — Example 1's 16 − 4 and part f's 0.0194 + 0.0720. Option 1 is what turns Example 1's correct 12 × 10⁻¹¹ N into 20 × 10⁻¹¹ N. Option 3 throws away a real force. Option 4 averages, which no principle in physics licenses."
-        },
-        {
-          "type": "mcq",
-          "q": "The deck writes |F₁₃| in Example 1 and F₂₁ in Solution 2b. What does the pair of subscripts mean in her notation?",
-          "options": [
-            "The two charges are listed alphabetically, so the order carries no meaning",
-            "The first subscript is the charge being acted on, the second is the source",
-            "The first subscript is the source charge, the second is the charge being acted on",
-            "The subscripts number the separations, not the charges"
+            "0.125 N",
+            "2.0 N",
+            "0.50 N",
+            "0.25 N"
           ],
           "answerIndex": 2,
-          "concept": "Reading her Fᵢⱼ subscript order",
-          "why": "In Example 1 the electron is q₃ and the two forces on it are written F₁₃ and F₂₃; in Solution 2b the charge under study is Q₁ and its two forces are F₂₁ and F₃₁. In both, the second subscript names the victim, so it tells you whose free-body diagram you are on. Option 2 reverses it, which will make you draw the wrong diagram. Option 1 ignores that F₁₃ and F₃₁ act on different bodies even though they have equal magnitude. Option 4 confuses the force labels with the distance labels r₁, r₂."
+          "concept": "Equal and opposite Coulomb forces on a pair",
+          "why": "Coulomb's law contains the product q₁q₂, which is the same whichever charge you call the source, so the two forces have the same magnitude, 0.50 N, and opposite directions. This is Newton's third law.\n\n0.125 N scales the force down by the charge ratio 2/8 and 2.0 N scales it up by 8/2, as if the bigger charge felt or exerted more; 0.25 N halves it for no reason. The force on each member of the pair is identical in size."
         },
         {
           "type": "mcq",
-          "q": "Coulomb's law is printed as F = k|q₁q₂|/r², with bars around the product. What follows from those bars?",
+          "q": "Two point charges a fixed distance apart repel with a force F. Each charge is then doubled, with the separation unchanged. What is the new force?",
           "options": [
-            "Negative charges must be entered as negative numbers so the force comes out negative",
-            "The bars mean the force is always repulsive",
-            "The bars are a rounding instruction and can be ignored",
-            "The law returns a magnitude only; whether the force attracts or repels is read off the diagram"
+            "2F",
+            "16F",
+            "F/4",
+            "4F"
           ],
           "answerIndex": 3,
-          "concept": "Coulomb's law gives a magnitude; direction comes from the sketch",
-          "why": "|q₁q₂| is a product of magnitudes, so the formula returns a positive number of newtons and nothing about direction. That is why she substitutes 18 × 10⁻⁶ for a charge she has declared to be −18 μC, and why the arrows on her diagrams do the directional work. Option 1 is the habit that produces spurious minus signs unrelated to any actual direction. Option 2 confuses 'positive number' with 'repulsive force'. Option 3 misreads absolute-value bars as something typographic."
+          "concept": "Dependence of the Coulomb force on the product of the charges",
+          "why": "F ∝ q₁q₂. Doubling both charges multiplies the product by 2 × 2 = 4, so the force becomes 4F.\n\n2F doubles only one charge; 16F squares the factor 4 as if the charges were squared as well; F/4 has the dependence upside down, as if charge sat in the denominator with the distance."
         },
         {
           "type": "mcq",
-          "q": "Slide 11 defines the electric field as 'the force a unit charge (q = +1 C) would experience if placed there', E = F/q₀. Which reading is right?",
+          "q": "A point charge of −5.0 μC is fixed in vacuum. Take k = 9.0 × 10⁹ N·m²/C². What is the electric field at a point 3.0 m from the charge?",
           "options": [
-            "E is a property of the source charges and the point, and exists whether or not a test charge is placed there",
-            "E exists only while a test charge is sitting at the point",
-            "E is the same thing as the force, just measured in different units",
-            "E depends on the size of the test charge you choose"
+            "5.0 × 10³ N/C, directed toward the charge",
+            "1.5 × 10⁴ N/C, directed toward the charge",
+            "5.0 × 10³ N/C, directed away from the charge",
+            "−5.0 × 10³ N/C"
           ],
           "answerIndex": 0,
-          "concept": "The electric field as a property of the source, not of the test charge",
-          "why": "Her own derivation on slide 13 makes this concrete: the test charge q appears in |F| = kQq/r² and then cancels when you divide, leaving |E| = kQ/r² with only the source charge and the distance in it. Option 2 confuses the field with the act of measuring it. Option 3 ignores that E is per unit charge, in N/C not N. Option 4 is refuted by that same cancellation — the field is unchanged whatever q₀ you imagine using."
+          "concept": "Field of a negative point charge",
+          "why": "|E| = k|Q|/r² = (9.0 × 10⁹)(5.0 × 10⁻⁶)/(3.0)² = 4.5 × 10⁴/9.0 = 5.0 × 10³ N/C. The magnitude formula is the same for either sign; the sign fixes the direction, and the field of a negative charge points radially inward, toward the charge.\n\n1.5 × 10⁴ N/C forgets to square the 3.0 m; 'away from the charge' is the direction for a positive charge; −5.0 × 10³ N/C feeds the sign into the magnitude, and a field strength cannot be negative."
         },
         {
           "type": "mcq",
-          "q": "One slide is headed 'ELECTRIC FIELD AROUND A POSITIVE CHARGE, − Q' and says the direction of the field is radially inward. What is going on?",
+          "q": "A uniform electric field of 2.0 × 10⁴ N/C points east. A proton and an electron are placed in it. Take e = 1.6 × 10⁻¹⁹ C. What forces act on them?",
           "options": [
-            "The heading is right and the body is wrong; the field around −Q points radially outward",
-            "The heading is a misprint for NEGATIVE charge; the body and diagram are correct, and E points radially inward toward −Q",
-            "Both are right, because the field around a negative charge points outward at short range and inward at long range",
-            "The heading refers to the test charge, which is positive, so nothing is wrong"
+            "Both 3.2 × 10⁻¹⁵ N, proton west, electron east",
+            "Both 3.2 × 10⁻¹⁵ N, proton east, electron west",
+            "Both 3.2 × 10⁻¹⁵ N, directed east",
+            "Both 1.25 × 10²³ N, proton east, electron west"
           ],
           "answerIndex": 1,
-          "concept": "The slide-14 heading misprint, and the direction of E around a negative charge",
-          "why": "The charge named in the heading is −Q and the arrows in the diagram point inward, so only the word POSITIVE is wrong; it should read NEGATIVE. Field lines end on negative charges, so E points toward −Q, and the magnitude formula k|Q|/r² is unchanged from the +Q case. Option 1 would contradict the field-line rule from slide 12. Option 3 invents a distance dependence of direction that does not exist. Option 4 is a plausible-sounding rescue, but the heading says 'AROUND A ... CHARGE, −Q', which names the source, not the test charge."
+          "concept": "Force on positive and negative charges in the same field",
+          "why": "F = qE. Both particles carry charge of magnitude e, so |F| = (1.6 × 10⁻¹⁹)(2.0 × 10⁴) = 3.2 × 10⁻¹⁵ N for each. The proton is positive, so its force is along E (east); the electron is negative, so its force is antiparallel to E (west).\n\n'Proton west, electron east' reverses both directions; 'both east' forgets that a negative charge feels a force opposite to E; 1.25 × 10²³ N divides E by e instead of multiplying."
         },
         {
           "type": "mcq",
-          "q": "Which statement about field lines is NOT one the deck makes?",
+          "q": "A +4.0 nC point charge sits on the x-axis at x = 0.80 m. Take k = 9.0 × 10⁹ N·m²/C². What is the electric field at the point x = 0.20 m?",
           "options": [
-            "Lines start on positive charges and end on negative charges, or at infinity for a single charge",
-            "The more closely spaced the field lines, the stronger the force",
-            "Field lines show the path a charged particle actually travels along",
-            "The direction of the lines shows how a positive charge would move; a negative charge would move the opposite way"
-          ],
-          "answerIndex": 2,
-          "concept": "What a field line does and does not tell you",
-          "why": "A field line gives the direction of the force at each point, which is the direction of the particle's acceleration, not of its motion — a particle launched sideways follows a curved path that crosses the lines. The other three are on slides 12, 15 and 16 word for word. This distinction is the one that separates a memorised list of rules from an understanding of what the picture represents."
-        },
-        {
-          "type": "mcq",
-          "q": "A uniform field E points along +x. An electron is released in it. What happens, and why?",
-          "options": [
-            "It feels no force, because the electron's charge is negative and E was defined with a positive test charge",
-            "It accelerates along +x, because field lines always point the way charges move",
-            "It stays still, because the field pushes and pulls it equally",
-            "It accelerates along −x, because F = qE and a negative q reverses the direction relative to E"
+            "100 N/C, in the +x direction",
+            "56 N/C, in the −x direction",
+            "900 N/C, in the −x direction",
+            "100 N/C, in the −x direction"
           ],
           "answerIndex": 3,
-          "concept": "F = qE and the sign of the charge",
-          "why": "The field is unchanged by what you place in it; the sign of the charge decides the direction of the force, so a negative q makes F antiparallel to E. This is slide 16's 'a negative charge would move the opposite way' in equation form. Option 1 confuses the definition's choice of a positive test charge with a restriction on what may be placed in the field. Option 2 states the rule for positive charges only. Option 3 has no mechanism behind it — there is only one force here."
+          "concept": "Distance from source to field point",
+          "why": "The distance that matters is from the charge to the field point: r = 0.80 − 0.20 = 0.60 m. E = kQ/r² = (9.0 × 10⁹)(4.0 × 10⁻⁹)/(0.60)² = 36/0.36 = 100 N/C. The charge is positive, so E points away from it; the field point is to the left of the charge, so E points in the −x direction.\n\n'+x' has the direction wrong (away from a charge on the right means leftward); 56 N/C uses the charge's coordinate 0.80 m as the distance; 900 N/C uses the field point's coordinate 0.20 m."
+        },
+        {
+          "type": "mcq",
+          "q": "A point charge of +2.0 μC is fixed in vacuum. Take k = 9.0 × 10⁹ N·m²/C². At what distance from it does the electric field have magnitude 2.0 × 10³ N/C?",
+          "options": [
+            "3.0 m",
+            "9.0 m",
+            "0.33 m",
+            "3.0 × 10⁻³ m"
+          ],
+          "answerIndex": 0,
+          "concept": "Distance at which a point charge gives a stated field",
+          "why": "E = kQ/r², so r² = kQ/E = (9.0 × 10⁹)(2.0 × 10⁻⁶)/(2.0 × 10³) = 1.8 × 10⁴/2.0 × 10³ = 9.0 m². Take the square root: r = 3.0 m.\n\n9.0 m stops at r² and forgets the square root (using 1/r instead of 1/r² lands on the same wrong number); 0.33 m inverts the fraction before rooting; 3.0 × 10⁻³ m reads μC as 10⁻⁹ C."
+        },
+        {
+          "type": "mcq",
+          "q": "Field lines are drawn around two charged spheres A and B. Every line leaves A and enters B, and the lines are much more closely spaced near A than near B. What can be concluded?",
+          "options": [
+            "A is negative, B is positive; the field is stronger near A",
+            "A is positive, B is negative; the field is stronger near B",
+            "A is positive, B is negative; the field is stronger near A",
+            "A and B are both positive; the field is stronger near A"
+          ],
+          "answerIndex": 2,
+          "concept": "Reading charge sign and field strength from field lines",
+          "why": "Field lines start on positive charges and end on negative ones, so A is positive and B is negative. Closer spacing means a stronger field, so the field is stronger near A.\n\nThe first option reverses the start/end rule; the second reads the spacing backwards; two positive charges would have lines leaving both spheres, not entering B."
         },
         {
           "type": "short",
-          "q": "State the principle of superposition of forces as the deck states it, and explain why it has to be asserted separately rather than derived from Coulomb's law.",
-          "concept": "The superposition principle and its status as an experimental result",
-          "why": "A good answer quotes the substance of slide 4: when two charges exert forces simultaneously on a third charge, the total force on that charge is the vector sum of the forces the two would exert individually. It then explains the need for it: Coulomb's law is a statement about a pair, so it has nothing to say about a third body, and the fact that the pairwise forces simply add — that no charge alters the force between the other two — is an experimental finding, which is why the slide begins 'Experiments have shown that'. Credit any answer that stresses vector sum over arithmetic sum, since that is what makes Example 1 a subtraction."
+          "q": "At a point P the electric field is 1.5 × 10³ N/C pointing east. A small charged object placed at P feels a force of 4.5 × 10⁻³ N pointing west. Calculate the charge on the object, including its sign. Show your working.",
+          "concept": "Finding a charge from the force in a known field",
+          "why": "F = qE, so |q| = F/E = 4.5 × 10⁻³ / 1.5 × 10³ = 3.0 × 10⁻⁶ C. The force is opposite to the field, and only a negative charge feels a force antiparallel to E, so q = −3.0 × 10⁻⁶ C = −3.0 μC.\n\nFinal answer: q = −3.0 μC (accept −3.0 × 10⁻⁶ C; 2.9 to 3.1 in magnitude). The sign must be negative and justified by the force being opposite to E. +3.0 μC is wrong on sign; 6.75 N or similar multiplies F by E instead of dividing; 3.3 × 10⁵ C inverts the fraction."
         },
         {
           "type": "short",
-          "q": "Slide 13 derives the field of a point charge in two lines. Reproduce the argument and say what the cancellation shows about the nature of the electric field.",
-          "concept": "Deriving |E| = k|Q|/r² by dividing out the test charge",
-          "why": "A good answer runs her two lines: a test charge +q at separation r from +Q experiences an outward force |F| = kQq/r²; dividing by q, |E| = |F|/q = kQ/r², directed radially outward. The point to draw out is that q has cancelled: the surviving expression contains only the source charge Q and the distance r, so the field is a property of the source and the location, not of whatever you place there. That is also why the same formula, with the magnitude |Q|, serves the negative case on slide 14, with only the direction changing to radially inward."
+          "q": "A test charge of −4.0 μC placed at a point feels a force of 6.0 mN directed east. Calculate the electric field at that point, magnitude and direction. Show your working.",
+          "concept": "Field from the force on a negative test charge",
+          "why": "Convert the prefixes: 6.0 mN = 6.0 × 10⁻³ N and 4.0 μC = 4.0 × 10⁻⁶ C. E = F/q₀ = 6.0 × 10⁻³ / 4.0 × 10⁻⁶ = 1.5 × 10³ N/C. The field direction is the direction of the force on a positive charge; this test charge is negative and is pushed east, so a positive charge would be pushed west. E = 1.5 × 10³ N/C pointing west.\n\nFinal answer: 1.5 × 10³ N/C (accept 1500 N/C or 1.5 kN/C) directed west. 'East' forgets the sign of the test charge; 1.5 N/C drops both prefixes; 6.7 × 10⁻⁴ N/C inverts the fraction; 1.5 × 10³ N has the unit of a force, not a field."
         },
         {
           "type": "short",
-          "q": "Give the field-line rules the deck states, and explain what is meant by 'the electric field cannot exert a net force on the charge that produces it'.",
-          "concept": "The field-line rules, and self-force",
-          "why": "A good answer lists the rules from slides 12, 15 and 16: lines start on positive charges and end on negative charges, or run to infinity for a single isolated charge; the more closely spaced the lines, the stronger the force; and the direction of the lines shows how a positive charge would move, a negative charge moving the opposite way. On the self-force sentence: a charge sets up a field around itself but that field exerts no net force on it, so when you compute the force on a charge you include contributions from every other charge and never its own. In Example 2 this is why Q₁ has exactly two forces on it, not three."
+          "q": "Two protons are 2.0 nm apart. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Calculate the electric force between them and state whether it is attractive or repulsive. Show your working, including the powers of ten.",
+          "concept": "Coulomb's law at the nanometre scale",
+          "why": "Each proton carries +e. F = ke²/r² = (9.0 × 10⁹)(1.6 × 10⁻¹⁹)²/(2.0 × 10⁻⁹)². Numerator: (9.0 × 10⁹)(2.56 × 10⁻³⁸) = 2.304 × 10⁻²⁸. Denominator: 4.0 × 10⁻¹⁸. F = 2.304 × 10⁻²⁸/4.0 × 10⁻¹⁸ = 5.76 × 10⁻¹¹ N. Two positive charges, so the force is repulsive.\n\nFinal answer: 5.8 × 10⁻¹¹ N, repulsive (accept 5.7 to 5.8 × 10⁻¹¹ N). The working must show e squared and the 2.0 nm converted to 2.0 × 10⁻⁹ m and squared. 1.2 × 10⁻¹⁹ N forgets to square r; 3.6 × 10⁸ N uses e once instead of e²."
         },
         {
           "type": "short",
-          "q": "Without doing any arithmetic, explain how you decide whether the two forces on a charge add or subtract, and use Q₁ and Q₂ of Example 2 to show the two outcomes.",
-          "concept": "Deciding add versus subtract from the free-body diagram",
-          "why": "A good answer says the decision is made by drawing the two arrows before any numbers appear: fix an axis, take each other charge in turn, use like-repels and unlike-attracts together with which side that charge sits on, and draw the arrow. Same direction means add, opposite means subtract. For Q₁ at x = −9 m: Q₂ is negative and to its right so it repels Q₁ leftward, while Q₃ is positive and to its right so it attracts Q₁ rightward — opposing arrows, hence a subtraction. For Q₂ at x = 1 m: Q₁ is negative and to its left so it repels Q₂ rightward, and Q₃ is positive and to its right so it attracts Q₂ rightward — both arrows +x, hence an addition. The signs of the charges alone settle nothing; it is signs plus geometry."
+          "q": "The field strength a distance r from a point charge is |E| = k|Q|/r² whether Q is positive or negative. Explain what does change between the two cases, and state which way an electron moves if released at rest near an isolated negative charge.",
+          "concept": "Field direction around positive and negative charges",
+          "why": "The magnitude depends only on |Q| and r. What changes is the direction: the field points radially outward from a positive charge and radially inward toward a negative charge, because E is defined by the force on a positive test charge, which is repelled by +Q and attracted by −Q. Near an isolated negative charge E points inward, but an electron is negative, so its force is opposite to E: it moves radially outward, away from the negative charge (like charges repel).\n\nA correct answer says the magnitude formula is unchanged, the direction reverses (outward for +Q, inward for −Q), and the electron moves away from the negative charge. Saying the electron follows the field lines inward is wrong."
         }
       ]
     },
@@ -485,131 +489,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Trial-and-error is described as time-consuming and inefficient in some cases but perfectly reasonable in others. What decides which?",
+          "q": "A padlock has three dials, each showing a digit from 0 to 9. A thief uses trial and error, testing each combination once and never repeating one. In the worst case, how many combinations must be tested before the lock opens?",
           "options": [
-            "Whether the problem is well-defined or ill-defined",
-            "How many candidate solutions have to be tried before one works",
-            "Whether the solver has met a similar problem before",
-            "Whether the answer eventually reached is optimal or merely acceptable"
-          ],
-          "answerIndex": 1,
-          "concept": "Trial-and-error's cost is driven by the size of the candidate set, not by difficulty",
-          "why": "The lesson ties its efficiency solely to whether the number of possible solutions is few; many candidates make it time-consuming and inefficient."
-        },
-        {
-          "type": "mcq",
-          "q": "Heuristics let a decision be made \"without stopping to think about the next course of action.\" In the lesson's terms, what is surrendered in exchange for that speed?",
-          "options": [
-            "The requirement that the problem first be broken down into smaller sub-problems",
-            "The possibility of applying the strategy jointly with a group of colleagues",
-            "The need for the required facts and numbers to be supplied with the problem",
-            "The guarantee that the result is rational, so only sub-optimal outcomes are safe"
-          ],
-          "answerIndex": 3,
-          "concept": "The heuristic trade-off: speed and energy saved against rationality of the result",
-          "why": "Heuristics solve fast but their solutions are not always rational, so they are only appropriate where a sub-optimal solution is acceptable."
-        },
-        {
-          "type": "mcq",
-          "q": "What exactly does abstraction do to a problem, and what is the thing it leaves behind called?",
-          "options": [
-            "Deletes the attributes that will not help reach a solution, leaving a model",
-            "Deletes the hardest parts of the problem so that the remaining easy part can be solved",
-            "Restates the problem in fewer words so that it is easier to memorise and communicate",
-            "Splits the problem into smaller sub-problems, each of which is then solved separately"
-          ],
-          "answerIndex": 0,
-          "concept": "Abstraction as deletion of non-contributing attributes, producing a model",
-          "why": "Abstraction filters out unneeded attributes and removes the patterns that will not help reach a solution; the essential idea left behind is called a model."
-        },
-        {
-          "type": "mcq",
-          "q": "Why does means-ends analysis reduce the work of a large problem in a way that simply attacking it head-on does not?",
-          "options": [
-            "It replaces the original problem with a smaller one whose answer is close enough to serve",
-            "It generates a large number of candidate ideas at once, so a workable one is likely to appear",
-            "It settles the intended solution in advance, then splits the problem and gives each part its best-suited approach",
-            "It strips out every part of the problem that does not contribute directly to reaching the goal"
+            "30",
+            "999",
+            "1000",
+            "27"
           ],
           "answerIndex": 2,
-          "concept": "Means-ends analysis as forward planning plus decomposition into best-suited sub-solutions",
-          "why": "It settles the intended solution beforehand, breaks the problem into smaller problems, and solves each with the best possible approach until the main problem is solved."
+          "concept": "Cost of trial and error grows with the candidates",
+          "why": "Each dial has 10 settings and the dials are independent, so there are 10 × 10 × 10 = 1000 candidate combinations. In the worst case the right one is tested last, so 1000 trials are needed. This is why trial and error is only sensible when the candidates are few.\n\n30 adds the three dials instead of multiplying; 999 forgets that 000 is a combination too; 27 uses 3³, confusing the number of dials with the number of settings."
         },
         {
           "type": "mcq",
-          "q": "Brainstorming forbids criticism of ideas while the session runs. What is the mechanism-level reason?",
+          "q": "A route planner stores, for each town on a route, five attributes: name, distance to the next town, population, name of the mayor, and year founded. The task is to print the towns in order with the total length of the route. Which attributes survive abstraction?",
           "options": [
-            "Criticism is unprofessional and damages the morale of the team taking part",
-            "Every idea offered in a brainstorming session is equally likely to be the correct one",
-            "The group is required to reach full consensus before any single idea may be judged",
-            "The method runs on volume of ideas and on fine-tuning others' ideas; criticism kills both"
-          ],
-          "answerIndex": 3,
-          "concept": "Why brainstorming defers criticism - the method runs on idea volume and on refining others' ideas",
-          "why": "Its two rules are to avoid criticism and to gather as many ideas as possible, and it works by fine-tuning other people's ideas; criticism suppresses both mechanisms."
-        },
-        {
-          "type": "mcq",
-          "q": "An analogy transfers understanding from a system you already know to a new one. Under what condition does that transfer remain valid?",
-          "options": [
-            "The two systems belong to the same industry or field of study",
-            "The underlying principles of the two systems are the same",
-            "The earlier system's solution was the optimal one available",
-            "Both systems are well-defined, with clear goals and solution paths"
-          ],
-          "answerIndex": 1,
-          "concept": "The validity condition on analogical transfer",
-          "why": "Analogy uses existing understanding of a similar system only as long as the underlying principles are the same - a shared field of study or an optimal earlier solution is irrelevant."
-        },
-        {
-          "type": "mcq",
-          "q": "What makes a problem non-routine?",
-          "options": [
-            "No standard method for solving it exists, so a novel method must be developed",
-            "Its solution cannot be reached by arithmetic operations, however involved",
-            "It has no single correct answer, only a range of acceptable approximations",
-            "It takes a long time to solve, even in the hands of an experienced solver"
+            "Name and distance to the next town",
+            "All five attributes",
+            "Distance to the next town only",
+            "Name, distance and population"
           ],
           "answerIndex": 0,
-          "concept": "Non-routine defined by absence of a standard method, not by absence of arithmetic",
-          "why": "A non-routine problem is one for which no standard method of solving exists, so a novel method must be developed by the solver."
+          "concept": "Applying abstraction to keep only relevant attributes",
+          "why": "Abstraction deletes every attribute that does not help reach the solution. Printing the towns needs the names; totalling the route needs the distances. Population, mayor and founding year play no part, so they go. The model that remains is a list of (name, distance) pairs.\n\nKeeping all five is no abstraction at all; distance alone cannot print the towns; population is not used by either part of the task."
         },
         {
           "type": "mcq",
-          "q": "In this lesson, calling a problem \"unsolvable\" is a claim about what?",
+          "q": "For which value of N does this loop run forever?\n\n```\nWHILE N != 0\n    N = N - 3\nENDWHILE\n```",
           "options": [
-            "The answer: no answer to the problem exists at all",
-            "The machine: the UTM's tape is finite, so it runs out of space",
-            "The method: no systematic method exists for deciding it, for every input value",
-            "The time: it runs longer than any computer could, though a faster machine would help"
+            "N = 9",
+            "N = 0",
+            "N = 10",
+            "N = 12"
           ],
           "answerIndex": 2,
-          "concept": "'Unsolvable' as a claim about decision procedures, not about the existence of answers",
-          "why": "The lesson states explicitly that unsolvable problems are not ones for which no solution can be found; there is no systematic method for deciding them for every input, hence 'unsolvable decision problems'."
+          "concept": "Finding an input on which a loop never halts",
+          "why": "N falls by 3 each pass, so the loop stops only if it lands exactly on 0, which needs N to be a non-negative multiple of 3. N = 10 goes 10, 7, 4, 1, −2, −5, ... and passes 0 without hitting it, so N != 0 stays true forever.\n\nN = 9 goes 9, 6, 3, 0 and stops; N = 0 fails the test at once and never enters the loop; N = 12 goes 12, 9, 6, 3, 0 and stops."
+        },
+        {
+          "type": "mcq",
+          "q": "A client's brief says only: \"Make the checkout page better.\" It gives no measure of better, no target, and no method. How is this problem classified?",
+          "options": [
+            "Well-defined and routine",
+            "Ill-defined",
+            "Well-defined and non-routine",
+            "Unsolvable"
+          ],
+          "answerIndex": 1,
+          "concept": "Well-defined versus ill-defined problems",
+          "why": "A well-defined problem has clear goals, expected solutions and solution paths. This brief has none of those: nobody can say when it is finished. That is an ill-defined problem.\n\nBoth well-defined options need a clear goal, which is missing; a non-routine problem may still have a clear goal, just no standard method; unsolvable is a claim about the absence of any systematic method, not about a vague goal."
+        },
+        {
+          "type": "mcq",
+          "q": "Three actions are taken on a problem with no standard method. P: choose a strategy and carry it out. Q: collect the facts and figures the problem depends on. R: read the problem closely and pick it apart. Which order follows the procedure for a non-routine problem?",
+          "options": [
+            "Q, R, P",
+            "R, P, Q",
+            "P, R, Q",
+            "R, Q, P"
+          ],
+          "answerIndex": 3,
+          "concept": "Ordering the steps for a non-routine problem",
+          "why": "The procedure is: study the problem critically (R), gather relevant information (Q), then identify and implement an effective strategy (P). So R, Q, P.\n\nQ, R, P gathers information before knowing what the problem needs; R, P, Q picks a strategy before the facts are in; P, R, Q starts by acting, which is the opposite of the procedure."
+        },
+        {
+          "type": "mcq",
+          "q": "An engineer models cars on a motorway as water in a pipe and predicts flow well at low traffic. At high traffic the prediction fails, because drivers brake when they see a jam ahead and water does nothing of the kind. Which condition for using analogy has broken?",
+          "options": [
+            "A needed attribute was deleted from the model",
+            "The number of candidate solutions is too large",
+            "Criticism of ideas was not deferred",
+            "The underlying principles are no longer the same"
+          ],
+          "answerIndex": 3,
+          "concept": "Validity condition of analogy",
+          "why": "Analogy transfers understanding from a known system only as long as the underlying principles are the same. Water does not react to what is ahead of it; drivers do. Once that principle differs, the analogy stops predicting.\n\nToo many candidates is the failure condition of trial and error; deferred criticism is a rule of brainstorming; deleting a needed attribute is a failure of abstraction, not of the analogy."
+        },
+        {
+          "type": "mcq",
+          "q": "How many times does the loop body run for n = 6?\n\n```\nWHILE n != 1\n    IF n is even THEN\n        n = n / 2\n    ELSE\n        n = 3 * n + 1\n    ENDIF\nENDWHILE\n```",
+          "options": [
+            "8",
+            "7",
+            "9",
+            "3"
+          ],
+          "answerIndex": 0,
+          "concept": "Counting iterations of a loop with a decision",
+          "why": "Trace n: 6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1. That is eight changes of n, so the body runs 8 times, and the loop halts because n reaches 1.\n\n7 stops counting at n = 2, before the final halving; 9 counts the failing test as an extra pass; 3 counts only the halvings of the first stretch and forgets that 3 is odd."
+        },
+        {
+          "type": "mcq",
+          "q": "A problem is described as unsolvable in the sense used for substitution puzzles. Which claim is being made?",
+          "options": [
+            "No answer exists for any instance of it",
+            "No systematic method decides it for every input",
+            "Any answer would take too long to compute",
+            "Its answer is unknown at present"
+          ],
+          "answerIndex": 1,
+          "concept": "What unsolvable means",
+          "why": "Unsolvable means that no algorithm can settle the question for every possible input. Individual instances may well have answers, and some can be found by hand; what is missing is one systematic method that works every time. Strictly, these are unsolvable decision problems.\n\nNo answer existing is a different and stronger claim; slow computation is still a systematic method; an answer being unknown today says nothing about whether a method exists."
         },
         {
           "type": "short",
-          "q": "The lesson says that after choosing a strategy, \"the rules and procedures of that strategy must be studied.\" Explain why choosing and studying a strategy first is treated as part of solving the problem, rather than as a delay before solving it.",
-          "concept": "Choosing and studying a strategy is part of the solving, not a preliminary to it",
-          "why": "The lesson's claim is that different problems require different strategies, so the choice of strategy determines what you actually do to the problem - and therefore determines the outcome, not merely the speed of reaching it. A strategy applied without knowing its rules and procedures is applied wrongly: a heuristic used where an exact answer is required, or a brainstorming session run with criticism allowed, produces a bad result rather than a slow one. Studying the strategy is what makes the subsequent steps correct, so it is doing the work rather than delaying it."
+          "q": "Write pseudocode that finds a secret three-digit code by trial and error: it tests 000, 001, 002 and so on in order, stops as soon as the tested value equals the secret, and prints the number of tests made. Then state how many tests it makes when the secret is 250. Show your working.",
+          "concept": "Writing a trial-and-error search loop",
+          "why": "Model answer:\n\n```\nREAD secret\ncode = 0\ntests = 1\nWHILE code != secret\n    code = code + 1\n    tests = tests + 1\nENDWHILE\nPRINT tests\n```\n\nFor secret = 250 the values 0 to 250 are each tested once, which is 251 tests. A correct answer has a loop that stops when code equals secret, a counter that goes up once per test, and the answer 251 (250 is accepted only if the answer says explicitly that the first test of 000 is not counted). A loop with no stopping condition, or one that prints the code instead of the count, is wrong."
         },
         {
           "type": "short",
-          "q": "Explain why the halting problem is called *undecidable* rather than merely *very difficult* — and why undecidable problems are described as a subset of unsolvable ones.",
-          "concept": "Undecidable means no algorithm exists, not that none has yet been found",
-          "why": "Difficulty is a statement about cost - a very difficult problem still has a method, and a faster machine or a cleverer programmer improves matters. Undecidability is a statement about existence: it has been proved that no algorithm whatsoever can return a correct true/false answer for every possible input, so no amount of time, memory or ingenuity will produce one. The halting problem is of this kind. Undecidable problems are a subset of unsolvable ones because 'unsolvable' in this lesson means there is no systematic method for deciding the problem for every input, and undecidable problems are exactly the decision problems for which that has been proved."
+          "q": "Consider the loop `WHILE x < 100: x = x + step` with whole-number inputs x and step. Write pseudocode that reads x and step and prints HALTS or LOOPS correctly for every pair of inputs, and explain why this particular halting question is decidable. Show your working.",
+          "concept": "Writing a decision procedure for one loop's halting",
+          "why": "The loop ends immediately if x ≥ 100. Otherwise it ends only if x grows, which needs step > 0; with step = 0 or step < 0, x never reaches 100. Model answer:\n\n```\nREAD x, step\nIF x >= 100 OR step > 0 THEN\n    PRINT \"HALTS\"\nELSE\n    PRINT \"LOOPS\"\nENDIF\n```\n\nIt is decidable because this one loop has a simple rule that answers every input without running it. The general halting problem asks for one method that works for every program, and no such method exists; that does not stop single programs from being analysed. A correct answer must handle both the x ≥ 100 case and the step > 0 case, print LOOPS for step ≤ 0 with x < 100, and say that one specific program can be analysed even though no universal method exists."
         },
         {
           "type": "short",
-          "q": "Abstraction and means-ends analysis both leave you with something smaller than the original problem. Explain why they are nevertheless different operations, and what each one does to the information in the problem.",
-          "concept": "Abstraction discards information; means-ends analysis preserves it and partitions it",
-          "why": "Abstraction removes attributes: it deletes the features of the problem that will not help reach a solution, and what remains is a model - smaller because information has been thrown away, and a genuine simplification of the original. Means-ends analysis removes nothing: it fixes the intended solution in advance and then divides the whole problem into smaller problems, each solved by its best-suited approach, so all the information is still present, merely distributed across the parts. One produces a single simpler problem; the other produces several complete smaller ones."
+          "q": "A shop sells ₦1.2 million a month and must reach ₦2.0 million a month in four months. Using means-ends analysis, set a monthly target for each of the four months with equal increases, then split each month's increase equally between the shop's two branches. Show your working.",
+          "concept": "Means-ends analysis with numeric sub-goals",
+          "why": "The gap is 2.0 − 1.2 = 0.8 million over four months, so each month must add 0.8 / 4 = 0.2 million. Monthly targets: 1.4, 1.6, 1.8, 2.0 million. Each month's 0.2 million increase shared equally by two branches is 0.1 million (₦100,000) extra per branch per month.\n\nA correct answer shows the 0.8 million gap, the 0.2 million monthly step, the four targets 1.4, 1.6, 1.8 and 2.0 million, and the 0.1 million per branch. Targets of 1.2, 1.4, 1.6, 1.8 (starting from the current figure and never reaching the goal) are wrong."
         },
         {
           "type": "short",
-          "q": "Explain why a heuristic is a sound choice for picking a brand of rice in a shop but an unsound one for deciding how much money Dan gave away, given the two things a heuristic trades against each other.",
-          "concept": "A heuristic trades rationality of outcome against speed of decision",
-          "why": "A heuristic buys a fast decision at the cost of any guarantee that the result is rational or optimal, so it is sound exactly where a sub-optimal answer is acceptable. Choosing a brand of rice is such a case: the cost of a slightly worse choice is trivial, and the time saved by not comparing every brand is worth more than the accuracy given up. How much money Dan gave away is not: an exact algorithm exists, the question demands the exact figure, and 'about 200' is simply wrong. The trade is only worth making when the loss on the accuracy side is one you can afford."
+          "q": "For heuristics and for trial and error, state what each strategy costs, the condition under which each fails, and give one situation for each where it would be the wrong choice.",
+          "concept": "Costs and failure conditions of heuristics and trial and error",
+          "why": "A heuristic buys speed by giving up on checking: the decision is made without stopping to think, so it costs rationality and the answer may be sub-optimal. It fails when a sub-optimal answer is not acceptable, for example computing the exact tax owed on an invoice by a rule of thumb. Trial and error costs time, one attempt per candidate, so its cost grows with the number of possible solutions. It fails when the candidates are many, for example finding a six-digit PIN by guessing.\n\nA correct answer names speed traded for rationality (heuristic) and time growing with candidates (trial and error), gives the matching failure condition for each, and one concrete misuse for each."
         }
       ]
     },
@@ -622,131 +626,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "With f(x) = 2x + 3 and g(x) = x² − 1, the value of (f ∘ g)(2) is",
+          "q": "f(x) = x² − 1 and g(x) = 2x + 3. Evaluate (f ∘ g)(2).",
           "options": [
             "48",
-            "21",
             "9",
+            "21",
             "10"
           ],
-          "answerIndex": 2,
-          "concept": "Order of composition",
-          "why": "(f o g)(2) means f(g(2)): g(2) = 3, then f(3) = 2(3) + 3 = 9; option a) is g o f, b) multiplies the values, d) composes in the wrong place."
-        },
-        {
-          "type": "mcq",
-          "q": "The largest set of real x for which f(x) = log₁₀(x − 2) + 1/(x − 5) is defined is",
-          "options": [
-            "x > 2 with x ≠ 5",
-            "x ≥ 2 with x ≠ 5",
-            "x > 2",
-            "all real x except x = 5"
-          ],
           "answerIndex": 0,
-          "concept": "Combining two separate domain restrictions",
-          "why": "log(x - 2) needs x - 2 > 0 strictly, and 1/(x - 5) needs x != 5, so both conditions apply simultaneously."
+          "concept": "Evaluating a composite in the correct order",
+          "why": "f ∘ g means g runs first: g(2) = 2(2) + 3 = 7, then f(7) = 7² − 1 = 48.\n\n9 is (g ∘ f)(2), the wrong order (f(2) = 3, g(3) = 9); 21 multiplies f(2) = 3 by g(2) = 7; 10 adds them."
         },
         {
           "type": "mcq",
-          "q": "The vertex of f(x) = 2x² − 12x + 7 is at",
+          "q": "Find the largest set of real x for which f(x) = log₂(x + 3) + 1/(x − 1) is defined.",
           "options": [
-            "(−3, −11)",
-            "(3, 7)",
-            "(6, −11)",
-            "(3, −11)"
+            "(−3, ∞)",
+            "ℝ \\ {1}",
+            "(−3, 1) ∪ (1, ∞)",
+            "[−3, 1) ∪ (1, ∞)"
+          ],
+          "answerIndex": 2,
+          "concept": "Domain combining a logarithm and a denominator",
+          "why": "Two restrictions, both required. The log needs x + 3 > 0, so x > −3. The fraction needs x − 1 ≠ 0, so x ≠ 1. Together: (−3, 1) ∪ (1, ∞).\n\n(−3, ∞) forgets the denominator; ℝ \\ {1} forgets the log; [−3, 1) ∪ (1, ∞) includes −3, where log₂ 0 is undefined."
+        },
+        {
+          "type": "mcq",
+          "q": "Write f(x) = 3x² + 12x − 5 in the form a(x − h)² + k by completing the square.",
+          "options": [
+            "3(x + 2)² − 5",
+            "3(x + 2)² − 17",
+            "3(x − 2)² − 17",
+            "3(x + 2)² + 7"
+          ],
+          "answerIndex": 1,
+          "concept": "Completing the square",
+          "why": "3x² + 12x − 5 = 3(x² + 4x) − 5 = 3(x² + 4x + 4 − 4) − 5 = 3(x + 2)² − 12 − 5 = 3(x + 2)² − 17. Vertex (−2, −17), a minimum since a = 3 > 0.\n\n3(x + 2)² − 5 forgets to subtract the 3 × 4 that completing the square added; 3(x − 2)² − 17 has the sign of h wrong (the vertex is at x = −2); 3(x + 2)² + 7 adds 12 instead of subtracting it."
+        },
+        {
+          "type": "mcq",
+          "q": "Solve |3x − 4| = 8.",
+          "options": [
+            "x = 4 only",
+            "x = 4 or x = −4",
+            "x = 4 or x = 4/3",
+            "x = 4 or x = −4/3"
           ],
           "answerIndex": 3,
-          "concept": "Completing the square to find a vertex",
-          "why": "2x^2 - 12x + 7 = 2(x - 3)^2 - 11, so the vertex is (3, -11); option b) is the slide's error of taking c as the vertex height."
+          "concept": "Solving an absolute value equation by cases",
+          "why": "Case 1: 3x − 4 = 8, so 3x = 12, x = 4. Case 2: 3x − 4 = −8, so 3x = −4, x = −4/3. Check: |−4 − 4| = 8.\n\n'x = 4 only' forgets the negative case; x = −4 negates x instead of the whole expression; x = 4/3 makes a sign slip moving the 4 across in case 2 (3x = 4 instead of 3x = −4)."
         },
         {
           "type": "mcq",
-          "q": "The solution set of |2x − 5| = 7 is",
+          "q": "Solve 5 · 3ˣ = 405.",
           "options": [
-            "x = 6 only",
-            "x = 6 or x = −1",
-            "x = 6 or x = 1",
-            "x = 1 or x = −6"
-          ],
-          "answerIndex": 1,
-          "concept": "Two-case method for absolute-value equations",
-          "why": "2x - 5 = 7 gives x = 6 and 2x - 5 = -7 gives x = -1; both branches must be taken."
-        },
-        {
-          "type": "mcq",
-          "q": "Solving 3·2^x = 96 gives x =",
-          "options": [
-            "5",
-            "16",
-            "32",
-            "log₂96 ≈ 6.6"
-          ],
-          "answerIndex": 0,
-          "concept": "Isolating the power before solving",
-          "why": "Divide first: 2^x = 32 = 2^5, so x = 5; option b) comes from reading 2^x as 2x and c) from stopping at 32."
-        },
-        {
-          "type": "mcq",
-          "q": "For f(x) = 3x + 4 when x ≤ 1 and f(x) = x² when x > 1, the value of f(1) + f(3) is",
-          "options": [
-            "10",
-            "20",
-            "16",
-            "14"
-          ],
-          "answerIndex": 2,
-          "concept": "Selecting the correct piecewise branch",
-          "why": "x = 1 satisfies x <= 1 so f(1) = 7, and x = 3 satisfies x > 1 so f(3) = 9, giving 16."
-        },
-        {
-          "type": "mcq",
-          "q": "The line through (−2, 5) and (4, −7) has equation",
-          "options": [
-            "y = 2x + 9",
-            "y = −2x + 1",
-            "y = −½x + 4",
-            "y = −2x + 9"
-          ],
-          "answerIndex": 1,
-          "concept": "Line through two points",
-          "why": "m = (-7 - 5)/(4 + 2) = -2, and y - 5 = -2(x + 2) gives y = -2x + 1; d) uses x = +2 when finding the intercept."
-        },
-        {
-          "type": "mcq",
-          "q": "The solution of log₁₀x + log₁₀(x − 3) = 1 is",
-          "options": [
-            "x = 10 or x = 13",
-            "x = 5 or x = −2",
-            "x = 6.5",
+            "x = 81",
+            "x = 27",
+            "x = 4",
             "x = 5"
           ],
+          "answerIndex": 2,
+          "concept": "Solving an exponential equation by isolating the power",
+          "why": "Isolate the power first: 3ˣ = 405/5 = 81. Then recognise 81 = 3⁴, so x = 4. (General route: x = log₃ 81 = 4.)\n\nx = 81 stops after isolating the power; x = 27 treats 3ˣ as 3x and computes 405/15; x = 5 is an off-by-one count of the powers of 3."
+        },
+        {
+          "type": "mcq",
+          "q": "Find the equation of the line through (−3, 1) and (1, 9).",
+          "options": [
+            "y = 2x + 7",
+            "y = 2x − 5",
+            "y = 2x + 1",
+            "y = x/2 + 5/2"
+          ],
+          "answerIndex": 0,
+          "concept": "Equation of a line from two points",
+          "why": "m = (9 − 1)/(1 − (−3)) = 8/4 = 2. Point-slope with (−3, 1): y − 1 = 2(x + 3) = 2x + 6, so y = 2x + 7. Check: at x = 1, y = 9.\n\ny = 2x − 5 uses (x − 3) instead of (x + 3) in point-slope; y = 2x + 1 takes the y-value of the first point as the intercept; y = x/2 + 5/2 uses the reciprocal Δx/Δy for the slope."
+        },
+        {
+          "type": "mcq",
+          "q": "Solve log₂ x + log₂(x − 2) = 3.",
+          "options": [
+            "x = 4 or x = −2",
+            "x = −2",
+            "x = 5",
+            "x = 4"
+          ],
           "answerIndex": 3,
-          "concept": "Domain check after solving a logarithmic equation",
-          "why": "Combining gives x^2 - 3x - 10 = 0 with roots 5 and -2, but x = -2 makes log x undefined, so only x = 5 survives."
+          "concept": "Solving a logarithmic equation and rejecting extraneous roots",
+          "why": "Domain first: x > 0 and x − 2 > 0, so x > 2. Combine: log₂[x(x − 2)] = 3, so x(x − 2) = 2³ = 8, x² − 2x − 8 = 0, (x − 4)(x + 2) = 0, x = 4 or x = −2. Reject −2 (fails x > 2). Answer x = 4; check: log₂ 4 + log₂ 2 = 2 + 1 = 3.\n\n'x = 4 or x = −2' keeps the root that violates the domain; x = −2 keeps the wrong one; x = 5 uses the false law log M + log N = log(M + N), giving 2x − 2 = 8."
+        },
+        {
+          "type": "mcq",
+          "q": "A student solves |x − 4| = −3 by squaring both sides: x² − 8x + 16 = 9, so x = 1 or x = 7. What is the actual solution set?",
+          "options": [
+            "x = 1 or x = 7",
+            "No solution",
+            "x = 7",
+            "x = 1"
+          ],
+          "answerIndex": 1,
+          "concept": "Absolute value equal to a negative number",
+          "why": "|x − 4| is a distance and is never negative, so it cannot equal −3: there is no solution. Squaring destroys the sign information, turning the impossible equation into |x − 4| = 3, whose solutions 1 and 7 are extraneous; substituting either back gives 3, not −3.\n\nx = 1, x = 7, and both together are the manufactured roots; none satisfies the original equation."
         },
         {
           "type": "short",
-          "q": "The equation |x − 4| = −3 has no solution, yet a student who squares both sides obtains x = 1 and x = 7. Say why there is no solution, and say precisely what the squaring step did to produce those two values.",
-          "concept": "Squaring is not a reversible step: it manufactures extraneous roots",
-          "why": "|x - 4| is an absolute value, so it is non-negative for every real x, while the right-hand side is -3; a non-negative quantity can never equal a negative one, so the equation has no solution and no algebra can produce one. Squaring both sides gives (x - 4)^2 = 9, which discards the sign information entirely, because the square of -3 and the square of +3 are the same number - so the squared equation is really solving |x - 4| = +3. Its roots x = 1 and x = 7 are the solutions of that different equation, and both fail when substituted back into the original. That is exactly why every root obtained after squaring must be checked in the original equation."
+          "q": "f(x) = 2x + 5 if x < −1; f(x) = x² if −1 ≤ x ≤ 2; f(x) = 7 − x if x > 2. Evaluate f(−4), f(−1), f(2) and f(3). Show your working.",
+          "concept": "Evaluating a piecewise function either side of its boundaries",
+          "why": "For each input, first decide which condition it satisfies. x = −4 < −1: first branch, f(−4) = 2(−4) + 5 = −3. x = −1 satisfies −1 ≤ x ≤ 2: middle branch, f(−1) = (−1)² = 1. x = 2 also satisfies −1 ≤ x ≤ 2: f(2) = 2² = 4. x = 3 > 2: third branch, f(3) = 7 − 3 = 4.\n\nFinal answer: f(−4) = −3, f(−1) = 1, f(2) = 4, f(3) = 4. A correct answer names the branch used for each input. Using 2x + 5 at x = −1 (giving 3) or 7 − x at x = 2 (giving 5) picks the branch whose condition is not satisfied and is wrong."
         },
         {
           "type": "short",
-          "q": "You have found the vertex of f(x) = 2x² − 12x + 7 to be (3, −11). Give two independent checks — not a repeat of the completing-the-square work — that confirm this is right.",
-          "concept": "Independent checks on a computed vertex",
-          "why": "Check one, the axis of symmetry: the vertex's x-coordinate must equal -b/(2a) = 12/4 = 3, which matches, and this uses a formula rather than a repeat of the completing-the-square algebra. Check two, symmetry of the function values: points equidistant either side of x = 3 must have equal f-values, and f(2) = 8 - 24 + 7 = -9 while f(4) = 32 - 48 + 7 = -9, confirming symmetry about x = 3, with f(3) = 18 - 36 + 7 = -11 confirming the height. Since a = 2 > 0 the parabola opens upward, so -11 must be a minimum, and both neighbouring values being larger confirms that too."
+          "q": "Solve the inequality |2x + 1| < 7. Give the answer as an interval. Show your working.",
+          "concept": "Solving an absolute value inequality",
+          "why": "|2x + 1| < 7 means −7 < 2x + 1 < 7. Subtract 1 throughout: −8 < 2x < 6. Divide by 2: −4 < x < 3.\n\nFinal answer: (−4, 3). Also accepted: −4 < x < 3. Round brackets because the inequality is strict. x < 3 alone forgets the left-hand case; x < −4 or x > 3 solves the 'greater than' inequality instead; [−4, 3] wrongly includes the endpoints."
         },
         {
           "type": "short",
-          "q": "A student solves 5^x = 40 by writing x = 40 ÷ 5 = 8. Explain what that student has misread about the expression 5^x, and give the correct one-line method together with roughly what x is.",
-          "concept": "An exponent is not a multiplier",
-          "why": "The student has read 5^x as 5 times x, and has therefore solved 5x = 40. In 5^x the x is the exponent - the number of times 5 is used as a factor - not a coefficient, so the operation that undoes it is a logarithm, not division. The correct one-line method is x = log base 5 of 40, that is log 40 / log 5. Since 5^2 = 25 and 5^3 = 125, x lies between 2 and 3, and is roughly 2.3."
+          "q": "f(x) = 2x³ − 7x² + 1. State the degree and leading coefficient, then say what f(x) does as x → +∞ and as x → −∞, with the reasoning. Show your working.",
+          "concept": "End behaviour of a polynomial",
+          "why": "Degree 3, leading coefficient 2. For large |x| the leading term 2x³ dominates every other term, so the tails follow 2x³. As x → +∞, 2x³ → +∞, so f(x) → +∞. As x → −∞, x³ is negative and large, so 2x³ → −∞ and f(x) → −∞. Odd degree with a positive leading coefficient: the tails go in opposite directions, down on the left, up on the right.\n\nFinal answer: degree 3, leading coefficient 2, f(x) → +∞ as x → +∞ and f(x) → −∞ as x → −∞. A correct answer must say the leading term dominates; reasoning from the −7x² term or from the constant 1 is wrong."
         },
         {
           "type": "short",
-          "q": "For f(x) = −x³ + 3x² − 2, state the degree and leading coefficient, then say what f(x) does as x → +∞ and as x → −∞. Show the reasoning that gets you there, not just the conclusion.",
-          "concept": "End behaviour read off the degree and leading coefficient",
-          "why": "f(x) = -x^3 + 3x^2 - 2 has degree 3 and leading coefficient -1. For large |x| the term -x^3 dominates, because dividing either lower-degree term by -x^3 gives 3x^2/(-x^3) = -3/x and -2/(-x^3) = 2/x^3, both of which tend to 0 - so the lower terms become negligible relative to the leading term, not zero in themselves. As x tends to +infinity, x^3 tends to +infinity so -x^3 tends to -infinity, hence f(x) tends to -infinity. As x tends to -infinity, x^3 tends to -infinity so -x^3 tends to +infinity, hence f(x) tends to +infinity. This is the standard odd-degree, negative-leading-coefficient shape: up on the left, down on the right."
+          "q": "A student solves 2ˣ = 40 by writing x = 40 ÷ 2 = 20. Explain what the student has misread about 2ˣ, give the correct method, and say roughly what x is.",
+          "concept": "Exponential versus multiplication",
+          "why": "2ˣ means 2 multiplied by itself x times, not 2 times x; dividing by 2 undoes multiplication, not exponentiation. The correct move is to take a logarithm: x = log₂ 40 = ln 40 / ln 2 ≈ 5.32. A quick check: 2⁵ = 32 < 40 < 64 = 2⁶, so x lies between 5 and 6, nowhere near 20.\n\nA correct answer identifies the confusion of a power with a product, states x = log₂ 40 (or ln 40/ln 2), and places x between 5 and 6 (about 5.3)."
         }
       ]
     },
@@ -760,131 +764,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Point charges of +5.0 μC and −3.0 μC are 0.30 m apart. What is the magnitude of the force between them?",
+          "q": "Charges lie on the x-axis: −4.0 μC at x = 0, −2.0 μC at x = 3.0 m and +6.0 μC at x = 5.0 m. Take k = 9.0 × 10⁹ N·m²/C². What is the net force on the −2.0 μC charge?",
           "options": [
-            "1.5 N",
-            "0.45 N",
-            "−1.5 N",
-            "0.135 N"
-          ],
-          "answerIndex": 0,
-          "concept": "Coulomb's law with magnitudes and a squared separation",
-          "why": "F = 9.0 × 10⁹ × (5.0 × 10⁻⁶)(3.0 × 10⁻⁶)/(0.30)² = 0.135/0.09 = 1.5 N, attractive. Option 2 divides by 0.30 instead of 0.30², treating the law as inverse distance. Option 3 substitutes the signed charge −3.0 μC and reports a negative magnitude; the law takes |q₁q₂|, and the attraction is stated in words, not by a minus sign. Option 4 forgets to divide by r² at all, leaving the numerator 0.135."
-        },
-        {
-          "type": "mcq",
-          "q": "Two fixed point charges are moved so that their separation is three times as large. The force between them becomes",
-          "options": [
-            "one third of its original value",
-            "one ninth of its original value",
-            "nine times its original value",
-            "three times its original value"
-          ],
-          "answerIndex": 1,
-          "concept": "Inverse-square scaling with separation",
-          "why": "F is proportional to 1/r², so tripling r divides the force by 3² = 9. This is the same arithmetic that turns Example 1's 16 × 10⁻¹¹ N into 4 × 10⁻¹¹ N when the distance doubles. Option 1 uses 1/r. Options 3 and 4 have the force growing with distance, which would make distant charges dominate every problem."
-        },
-        {
-          "type": "mcq",
-          "q": "Example 1 gives |F₁₃| = 16 × 10⁻¹¹ N and |F₂₃| = 4 × 10⁻¹¹ N. What is the total force on the electron?",
-          "options": [
-            "20 × 10⁻¹¹ N",
-            "16 × 10⁻¹¹ N",
-            "12 × 10⁻¹¹ N",
-            "4 × 10⁻¹¹ N"
+            "0.019 N in the +x direction",
+            "0.035 N in the −x direction",
+            "0.035 N in the +x direction",
+            "0.027 N in the +x direction"
           ],
           "answerIndex": 2,
-          "concept": "Completing Example 1, which the deck leaves unfinished",
-          "why": "The electron sits between the two protons and is attracted to both, so the two forces point in opposite directions along the line and the vector sum is 16 − 4 = 12 × 10⁻¹¹ N, directed toward the nearer proton. Option 1 adds two opposing arrows. Option 2 uses only the nearer proton, ignoring the far one entirely. Option 4 uses only the far one. The deck computes both magnitudes and stops, so this last step has to come from you."
+          "concept": "Net force on a charge when both forces point the same way",
+          "why": "From the −4.0 μC charge, 3.0 m to the left: F = (9.0 × 10⁹)(4.0 × 10⁻⁶)(2.0 × 10⁻⁶)/(3.0)² = 0.072/9.0 = 0.0080 N, repulsive, so it pushes the −2.0 μC charge to the right (+x). From the +6.0 μC charge, 2.0 m to the right: F = (9.0 × 10⁹)(6.0 × 10⁻⁶)(2.0 × 10⁻⁶)/(2.0)² = 0.108/4.0 = 0.027 N, attractive, pulling it to the right (+x). Same direction, so add: 0.035 N in the +x direction.\n\n0.019 N subtracts the two forces as if they opposed; the −x option has the direction backwards (a negative charge on the left repels, a positive one on the right attracts, both rightward); 0.027 N ignores the −4.0 μC charge."
         },
         {
           "type": "mcq",
-          "q": "In Solution 2b, F₃₁ = k|q₃q₁|/r² with q₃ = 24 μC, q₁ = 18 μC and the separation from x₁ = −9 m to x₃ = 7 m. What is F₃₁?",
+          "q": "On the x-axis: Q₁ = −8.0 μC at x = −3.0 m, Q₂ = −6.0 μC at x = 1.0 m and Q₃ = +16 μC at x = 5.0 m. Take k = 9.0 × 10⁹ N·m²/C². What is the net force on Q₁?",
           "options": [
-            "0.0194 N",
-            "0.243 N",
-            "0.972 N",
-            "0.0152 N"
-          ],
-          "answerIndex": 3,
-          "concept": "Getting the separation right, then squaring it",
-          "why": "The separation is 7 − (−9) = 16 m, so F₃₁ = 9.0 × 10⁹ × (24 × 10⁻⁶)(18 × 10⁻⁶)/16² = 3.888/256 = 0.0152 N. Option 1 is F₂₁, the other force on Q₁. Option 2 divides by 16 rather than 16², the inverse-distance slip. Option 3 comes from computing the separation as 7 − 9 = 2 m, dropping the minus sign on x₁ — the single commonest error in this problem, and it inflates the answer sixty-fold."
-        },
-        {
-          "type": "mcq",
-          "q": "Part f of Example 2 asks for the net electric force on Q₂ = −12 μC at x = 1 m, with Q₁ = −18 μC at x = −9 m and Q₃ = +24 μC at x = 7 m. It is",
-          "options": [
-            "0.0914 N in the +x direction",
-            "0.0526 N in the +x direction",
-            "0.0914 N in the −x direction",
-            "0.0720 N in the +x direction"
-          ],
-          "answerIndex": 0,
-          "concept": "Two forces that agree in direction, so they add",
-          "why": "Q₁ is negative and to the left, so it repels Q₂ rightward: 9.0 × 10⁹(18 × 10⁻⁶)(12 × 10⁻⁶)/10² = 0.0194 N along +x. Q₃ is positive and to the right, so it attracts Q₂ rightward: 9.0 × 10⁹(24 × 10⁻⁶)(12 × 10⁻⁶)/6² = 2.592/36 = 0.0720 N along +x. Both arrows agree, so the total is 0.0914 N along +x. Option 2 subtracts, copying part b's minus sign without redrawing the diagram. Option 3 reverses a correct magnitude. Option 4 drops the repulsion from Q₁."
-        },
-        {
-          "type": "mcq",
-          "q": "A charge of 5.0 μC experiences a force of 2.0 mN due to an electric field. The magnitude of the field is",
-          "options": [
-            "0.4 N/C",
-            "400 N/C",
-            "2.5 × 10⁻³ N/C",
-            "400 N"
+            "0.045 N in the −x direction",
+            "0.0090 N in the −x direction",
+            "0.0090 N in the +x direction",
+            "0.027 N in the −x direction"
           ],
           "answerIndex": 1,
-          "concept": "E = F/q₀ with metric prefixes converted first",
-          "why": "E = F/q₀ = 2.0 × 10⁻³/5.0 × 10⁻⁶ = 4.0 × 10² = 400 N/C, the same move as her solved problem 1. Option 1 divides 2.0 by 5.0 without converting the prefixes, losing a factor of a thousand. Option 3 inverts the fraction, computing q₀/F. Option 4 has the right number with the unit of force; a field is newtons per coulomb, never newtons."
+          "concept": "Net force on an end charge when the forces oppose",
+          "why": "Separations: Q₁ to Q₂ is 4.0 m, Q₁ to Q₃ is 8.0 m. F₂₁ = (9.0 × 10⁹)(8.0 × 10⁻⁶)(6.0 × 10⁻⁶)/(4.0)² = 0.432/16 = 0.027 N; both negative, so Q₂ pushes Q₁ away, to the left (−x). F₃₁ = (9.0 × 10⁹)(8.0 × 10⁻⁶)(16 × 10⁻⁶)/(8.0)² = 1.152/64 = 0.018 N; unlike signs, so Q₃ pulls Q₁ to the right (+x). They oppose: net = 0.027 − 0.018 = 0.0090 N in the −x direction. The nearer, smaller Q₂ wins because distance enters squared.\n\n0.045 N adds forces that point opposite ways; '+x' picks the direction of the larger charge instead of the larger force; 0.027 N ignores Q₃."
         },
         {
           "type": "mcq",
-          "q": "With +2.00 nC at x = 0 and −5.00 nC at x = 0.800 m, the field at x = 0.200 m due to the −5.00 nC charge alone is",
+          "q": "A +2.0 nC charge is at x = 0 and a +6.0 nC charge at x = 0.40 m. Take k = 9.0 × 10⁹ N·m²/C². What is the electric field at x = 0.60 m?",
           "options": [
-            "70.3 N/C",
-            "450 N/C",
-            "125 N/C",
-            "1125 N/C"
+            "1400 N/C in the +x direction",
+            "1300 N/C in the +x direction",
+            "200 N/C in the +x direction",
+            "1400 N/C in the −x direction"
           ],
-          "answerIndex": 2,
-          "concept": "The distance in |E| = k|Q|/r² runs from the source to the field point",
-          "why": "The separation is 0.800 − 0.200 = 0.600 m, so E₂ = 9.0 × 10⁹ × 5.0 × 10⁻⁹/(0.600)² = 45/0.360 = 125 N/C, pointing toward the negative charge, i.e. +x. Option 1 uses the charge's coordinate 0.800 m as if it were the distance. Option 4 uses the field point's coordinate 0.200 m instead. Option 2 is E₁, the contribution of the +2.00 nC charge. Adding E₁ and E₂ gives her 575 N/C."
+          "answerIndex": 0,
+          "concept": "Superposition of fields beyond two like charges",
+          "why": "Both charges are positive and both lie to the left of the field point, so both fields point away from them, in the +x direction. E₁ = (9.0 × 10⁹)(2.0 × 10⁻⁹)/(0.60)² = 18/0.36 = 50 N/C. For the second charge the distance is 0.60 − 0.40 = 0.20 m: E₂ = (9.0 × 10⁹)(6.0 × 10⁻⁹)/(0.20)² = 54/0.040 = 1350 N/C. Add: 1400 N/C in the +x direction.\n\n1300 N/C subtracts, as if the fields opposed; 200 N/C uses 0.60 m for both charges instead of the distance from each source to the point; the −x option has the direction of the field of a positive charge backwards."
         },
         {
           "type": "mcq",
-          "q": "A uniform electric field of 2.5 × 10³ N/C points along +x. The force on an electron placed in it is",
+          "q": "A +4.0 μC charge is at x = 0 and a −1.0 μC charge at x = 0.30 m. At which point on the x-axis is the resultant electric field zero?",
           "options": [
-            "4.0 × 10⁻¹⁶ N along +x",
-            "1.6 × 10²² N along −x",
-            "2.5 × 10³ N along −x",
-            "4.0 × 10⁻¹⁶ N along −x"
+            "x = 0.20 m",
+            "x = 0.10 m",
+            "x = −0.30 m",
+            "x = 0.60 m"
           ],
           "answerIndex": 3,
-          "concept": "F = qE, magnitude from |q|E and direction from the sign of q",
-          "why": "|F| = |q|E = 1.6 × 10⁻¹⁹ × 2.5 × 10³ = 4.0 × 10⁻¹⁶ N, and since the electron is negative the force is antiparallel to E, so along −x. Option 1 has the right size but keeps the field's direction, forgetting the sign of the charge. Option 2 divides E by the charge instead of multiplying. Option 3 quotes the field strength as if it were a force."
+          "concept": "Zero-field point for unlike charges",
+          "why": "Between unlike charges the two fields point the same way and cannot cancel. Beyond the smaller charge (x > 0.30 m) they oppose, so set the magnitudes equal there: 4.0/x² = 1.0/(x − 0.30)². Square-root: 2/x = 1/(x − 0.30), so 2x − 0.60 = x and x = 0.60 m. Check: 4.0/0.36 = 11.1 and 1.0/0.09 = 11.1.\n\nx = 0.20 m applies the like-charge method between the charges, where the fields actually add; x = 0.10 m and x = −0.30 m are on the side of the larger charge, where its field always dominates."
+        },
+        {
+          "type": "mcq",
+          "q": "Two point charges 2.0 cm apart repel with a force of 2.7 × 10⁻³ N. To what separation must they be moved so that the force is 3.0 × 10⁻⁴ N?",
+          "options": [
+            "6.0 cm",
+            "18 cm",
+            "4.0 cm",
+            "0.67 cm"
+          ],
+          "answerIndex": 0,
+          "concept": "Separation from a force ratio by inverse square",
+          "why": "F ∝ 1/r², so F₁/F₂ = (r₂/r₁)². The force must fall by 2.7 × 10⁻³/3.0 × 10⁻⁴ = 9, so (r₂/r₁)² = 9 and r₂/r₁ = 3. r₂ = 3 × 2.0 cm = 6.0 cm.\n\n18 cm uses the ratio 9 without taking the square root; 4.0 cm doubles the distance, which only quarters the force; 0.67 cm moves the charges closer, which would increase the force."
+        },
+        {
+          "type": "mcq",
+          "q": "Two small spheres carry equal charges q and repel each other with a force of 0.90 N when 3.0 cm apart. Take k = 9.0 × 10⁹ N·m²/C². What is q?",
+          "options": [
+            "9.0 × 10⁻¹⁴ C",
+            "3.0 × 10⁻⁵ C",
+            "1.7 × 10⁻⁶ C",
+            "3.0 × 10⁻⁷ C"
+          ],
+          "answerIndex": 3,
+          "concept": "Finding a charge from Coulomb's law",
+          "why": "F = kq²/r², so q² = Fr²/k = (0.90)(0.030)²/(9.0 × 10⁹) = (0.90)(9.0 × 10⁻⁴)/(9.0 × 10⁹) = 8.1 × 10⁻⁴/9.0 × 10⁹ = 9.0 × 10⁻¹⁴ C². Square root: q = 3.0 × 10⁻⁷ C = 0.30 μC.\n\n9.0 × 10⁻¹⁴ C stops at q² and forgets the root; 3.0 × 10⁻⁵ C leaves r in centimetres; 1.7 × 10⁻⁶ C forgets to square r."
+        },
+        {
+          "type": "mcq",
+          "q": "Charges of −4.0 nC are fixed at x = 0 and at x = 0.60 m. Take k = 9.0 × 10⁹ N·m²/C². What is the electric field at x = 0.20 m?",
+          "options": [
+            "1125 N/C in the −x direction",
+            "0",
+            "675 N/C in the −x direction",
+            "675 N/C in the +x direction"
+          ],
+          "answerIndex": 2,
+          "concept": "Superposition of fields between two like charges",
+          "why": "The field of a negative charge points toward it. From the charge at x = 0, 0.20 m away: E₁ = (9.0 × 10⁹)(4.0 × 10⁻⁹)/(0.20)² = 36/0.040 = 900 N/C toward x = 0, that is −x. From the charge at x = 0.60 m, 0.40 m away: E₂ = 36/0.16 = 225 N/C toward it, that is +x. They oppose: net = 900 − 225 = 675 N/C in the −x direction, toward the nearer charge.\n\n1125 N/C adds fields that point opposite ways; '+x' picks the direction of the weaker field; 0 assumes the equal charges cancel, which happens only at the midpoint."
+        },
+        {
+          "type": "mcq",
+          "q": "Three point charges are held at fixed positions. Which statement correctly gives the net electric force on one of them?",
+          "options": [
+            "The sum of the magnitudes of the two Coulomb forces, always",
+            "The vector sum of the Coulomb forces from each of the other two charges, worked out one pair at a time",
+            "Coulomb's law applied to the total charge of the other two, placed at their midpoint",
+            "The Coulomb force from the nearer charge only"
+          ],
+          "answerIndex": 1,
+          "concept": "Principle of superposition of forces",
+          "why": "Coulomb's law describes only a pair of point charges. For more than two, the principle of superposition (an experimental result) says the total force on a charge is the vector sum of the forces the other charges would exert individually. Along a line this means add when the arrows agree and subtract when they oppose.\n\nSumming magnitudes is only right when the forces are parallel; lumping the other charges at their midpoint ignores the 1/r² weighting of each; the nearer charge is not the only one acting, it is simply weighted more heavily."
         },
         {
           "type": "short",
-          "q": "Work Solution 2b from the data: Q₁ = −18 μC at x₁ = −9 m, Q₂ = −12 μC at x₂ = 1 m, Q₃ = +24 μC at x₃ = 7 m. Find the net electric force on Q₁, and state its direction.",
-          "concept": "The lecturer's worked Solution 2b, reproduced with the directions justified",
-          "why": "A good answer sets the separations first, r₁₂ = 1 − (−9) = 10 m and r₁₃ = 7 − (−9) = 16 m, then draws the arrows: Q₂ is negative and to the right so it repels Q₁ leftward; Q₃ is positive and to the right so it attracts Q₁ rightward. Then F₂₁ = 9.0 × 10⁹(18 × 10⁻⁶)(12 × 10⁻⁶)/10² = 1.944/100 = 0.0194 N and F₃₁ = 9.0 × 10⁹(24 × 10⁻⁶)(18 × 10⁻⁶)/16² = 3.888/256 = 0.0152 N. Taking +x as positive, ΣF = F₃₁ − F₂₁ = 0.0152 − 0.0194 = −0.0042 N, i.e. 4.2 × 10⁻³ N in the −x direction. Credit the reading of the minus sign as a direction rather than a negative magnitude, and the observation that the nearer 12 μC beats the larger 24 μC because distance enters squared."
+          "q": "A +5.0 nC charge is at x = 0 and a −4.0 nC charge at x = 0.90 m. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Find the electric field at x = 0.30 m, magnitude and direction, then the force on an electron placed at that point. Show your working.",
+          "concept": "Field between unlike charges then force on an electron",
+          "why": "E₁ from +5.0 nC at 0.30 m: (9.0 × 10⁹)(5.0 × 10⁻⁹)/(0.30)² = 45/0.090 = 500 N/C, away from the positive charge, so +x. E₂ from −4.0 nC at 0.90 − 0.30 = 0.60 m: (9.0 × 10⁹)(4.0 × 10⁻⁹)/(0.60)² = 36/0.36 = 100 N/C, toward the negative charge, so also +x. E = 500 + 100 = 600 N/C in the +x direction. Force on the electron: |F| = eE = (1.6 × 10⁻¹⁹)(600) = 9.6 × 10⁻¹⁷ N, and because the electron is negative the force is opposite to E: 9.6 × 10⁻¹⁷ N in the −x direction.\n\nFinal answer: E = 600 N/C along +x; F = 9.6 × 10⁻¹⁷ N along −x (accept 9.5 to 9.7 × 10⁻¹⁷ N). Using 0.90 m for the second distance gives 44 N/C and 544 N/C total, which is wrong; 400 N/C subtracts fields that point the same way; a force stated along +x forgets the electron's sign."
         },
         {
           "type": "short",
-          "q": "The deck sets part f of Example 2 and never solves it. Find the magnitude and direction of the net electric force on Q₂, showing both contributions.",
-          "concept": "Completing the task the lecturer set but did not answer",
-          "why": "A good answer draws Q₂'s free-body diagram first: Q₁ is negative and lies to the left of Q₂, so it repels Q₂ along +x; Q₃ is positive and lies to the right, so it attracts Q₂ along +x. Then F₁₂ = 9.0 × 10⁹(18 × 10⁻⁶)(12 × 10⁻⁶)/(10)² = 0.0194 N and F₃₂ = 9.0 × 10⁹(24 × 10⁻⁶)(12 × 10⁻⁶)/(6)² = 2.592/36 = 0.0720 N, both along +x, so ΣF = 0.0194 + 0.0720 = 0.0914 N in the +x direction. It should note that F₁₂ has the same magnitude as F₂₁ from part b — Newton's third law — but appears on the opposite free-body diagram pointing the opposite way."
+          "q": "Two protons are 4.0 nm apart. An electron lies on the line between them, 1.0 nm from one proton. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Calculate the total force on the electron, magnitude and direction. Show your working.",
+          "concept": "Net force on an electron between two protons",
+          "why": "The electron is attracted to both protons, and they lie on opposite sides of it, so the two pulls oppose. Nearer proton (r = 1.0 × 10⁻⁹ m): F₁ = ke²/r² = (9.0 × 10⁹)(1.6 × 10⁻¹⁹)²/(1.0 × 10⁻⁹)² = 2.304 × 10⁻²⁸/1.0 × 10⁻¹⁸ = 2.30 × 10⁻¹⁰ N. Farther proton (r = 4.0 − 1.0 = 3.0 nm): F₂ = 2.304 × 10⁻²⁸/(3.0 × 10⁻⁹)² = 2.304 × 10⁻²⁸/9.0 × 10⁻¹⁸ = 2.56 × 10⁻¹¹ N, one ninth of F₁. Net = 2.30 × 10⁻¹⁰ − 0.26 × 10⁻¹⁰ = 2.05 × 10⁻¹⁰ N, directed toward the nearer proton.\n\nFinal answer: 2.0 × 10⁻¹⁰ N toward the nearer proton (accept 2.0 to 2.1 × 10⁻¹⁰ N). The working must show both magnitudes and the subtraction. 2.6 × 10⁻¹⁰ N adds two pulls that point opposite ways; 2.3 × 10⁻¹⁰ N ignores the farther proton."
         },
         {
           "type": "short",
-          "q": "A +2.00 nC point charge is at the origin and a −5.00 nC point charge is at x = 0.800 m. Find the magnitude and direction of the electric field at x = 0.200 m, then find the force the two charges exert on an electron placed there.",
-          "concept": "Field superposition, then F = qE — including the half the slide omits",
-          "why": "A good answer gets the directions before the numbers: at x = 0.200 m the field of the positive charge points away from it, i.e. +x, and the field of the negative charge points toward it, also +x, so the two add. Then E₁ = 9.0 × 10⁹ × 2.0 × 10⁻⁹/(0.200)² = 18/0.0400 = 450 N/C and E₂ = 9.0 × 10⁹ × 5.0 × 10⁻⁹/(0.600)² = 45/0.360 = 125 N/C, giving E = 575 N/C along +x. For the electron, F = qE: |F| = 1.6 × 10⁻¹⁹ × 575 = 9.2 × 10⁻¹⁷ N, directed along −x because the charge is negative. The deck stops at 575 N/C even though its own question asks for the force, so the last two lines must come from you. Note also that the second distance is 0.800 − 0.200 = 0.600 m, not 0.800 m."
+          "q": "Starting from Coulomb's law and the definition E = F/q₀, derive the expression for the field of a point charge Q at distance r. Then evaluate it for Q = +3.0 nC at r = 0.30 m and give the direction. Take k = 9.0 × 10⁹ N·m²/C². Show your working.",
+          "concept": "Deriving the point-charge field from Coulomb's law",
+          "why": "Place a positive test charge q₀ at distance r from Q. Coulomb's law gives the force on it, |F| = kQq₀/r². By definition |E| = |F|/q₀ = kQq₀/(q₀r²) = kQ/r²: the test charge cancels, so the field depends only on the source Q and the distance r. For Q = +3.0 nC at 0.30 m: E = (9.0 × 10⁹)(3.0 × 10⁻⁹)/(0.30)² = 27/0.090 = 300 N/C, directed radially away from Q because Q is positive.\n\nA correct answer shows the force on a test charge, divides by q₀ so that q₀ cancels, states E = kQ/r², and gives 300 N/C outward (accept 3.0 × 10² N/C; 295 to 305). Leaving q₀ in the final expression, or giving 90 N/C by forgetting to square 0.30 m, is wrong."
         },
         {
           "type": "short",
-          "q": "Find the magnitude and direction of the electric field 7.4 m from a −6.8 μC point charge, then state what the magnitude becomes at 3.7 m and why.",
-          "concept": "Field of a negative point charge, and inverse-square scaling",
-          "why": "A good answer uses |E| = k|Q|/r² with the magnitude of the charge: 9.0 × 10⁹ × 6.8 × 10⁻⁶ = 6.12 × 10⁴, divided by 7.4² = 54.76, giving 1.1 × 10³ N/C — and it must supply the direction the slide omits, radially inward, toward the charge, because the source is negative and field lines end on negative charges. At 3.7 m the distance is halved, so r² is quartered and the field is four times as large, about 4.5 × 10³ N/C, still radially inward. Credit explicitly the point that the minus sign of the charge is expressed as the inward direction and never as a negative field strength."
+          "q": "A student substitutes q₁ = −6.0 μC and q₂ = +3.0 μC into F = kq₁q₂/r² with r = 2.0 m, gets F = −0.0405 N, and writes that the minus sign means the force is 0.0405 N to the left. Explain what is wrong with this reasoning and how the direction should be found.",
+          "concept": "Sign of a charge versus direction of the force",
+          "why": "Coulomb's law gives a magnitude, F = k|q₁q₂|/r² = 0.0405 N here; a force has no negative magnitude. A minus sign from multiplying signed charges only records that the signs are unlike, which means the force is attractive. It says nothing about left or right, because the formula does not know where the charges sit. The direction comes from the sketch: each charge is pulled toward the other along the line joining them, so the force on q₁ points toward q₂ and the force on q₂ points toward q₁.\n\nA correct answer states that magnitudes go into the formula, that the sign of the product means attraction (unlike) or repulsion (like), and that left or right is read from the positions of the charges, not from the sign of the number."
         }
       ]
     },
@@ -897,131 +901,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "\"An exam has 50 questions. 4 marks are awarded per correct response and 2 marks deducted per wrong one. Bridget scored 165. How many correct responses did she give?\" How should this be classified, and why?",
+          "q": "\"Give an approximate number of hairs on your head.\" There is no standard method, but sampling a small patch and scaling up gives an estimate. How is this problem classified?",
           "options": [
-            "Routine — it is settled entirely by arithmetic operations on the given numbers",
-            "Unsolvable — there are two unknowns and only one equation relating them",
-            "Non-routine — no standard method presents itself, so the solver must devise one",
-            "Undecidable — no algorithm returns a true/false answer for every such input"
+            "Undecidable",
+            "Routine",
+            "Non-routine",
+            "Unsolvable"
           ],
           "answerIndex": 2,
-          "concept": "Classifying an arithmetic-looking problem that has no standard method",
-          "why": "The exam-marks problem gives no immediately clear procedure, so the solver must devise one - the definition of non-routine - even though the arithmetic itself is elementary."
+          "concept": "Non-routine versus unsolvable",
+          "why": "No standard method exists, so a novel method has to be developed, which is the mark of a non-routine problem. A method can still be invented and gives an answer, so the problem is far from unsolvable.\n\nRoutine would need a known algorithm to apply; unsolvable and undecidable claim that no systematic method can exist for every input, which is not the case for an estimate that sampling can produce."
         },
         {
           "type": "mcq",
-          "q": "Starting from the string **BOB** and applying the rule \"replace `OB` with `BOOB`\" once, what do you get?",
+          "q": "A corporation wants a turnover of $2 billion this year. Management fixes that end in advance, then splits it into four quarterly targets and divides each quarter's target among its regions, each region choosing its own approach. Which strategy is in use?",
           "options": [
-            "BOOB",
-            "BBOOB",
-            "BOOBB",
-            "BOOOB"
+            "Abstraction",
+            "Analogy",
+            "Means-ends analysis",
+            "Trial and error"
           ],
-          "answerIndex": 1,
-          "concept": "Tracing one substitution step accurately, at the right position in the string",
-          "why": "BOB contains OB at positions 2-3; replacing that OB with BOOB leaves the leading B and yields BBOOB."
+          "answerIndex": 2,
+          "concept": "Means-ends analysis versus abstraction",
+          "why": "The intended solution is decided beforehand and the problem is broken into smaller problems, each solved by the approach that suits it best. Nothing is thrown away and nothing is imported from elsewhere: that is means-ends analysis.\n\nAbstraction would delete unneeded attributes and keep a model, but here every part is kept and solved; analogy would import a solution from a different, understood system; trial and error would test candidates one after another."
         },
         {
           "type": "mcq",
-          "q": "XYZ Corporation wants $2 billion turnover this year. The board fixes the annual figure, splits it into quarterly targets, splits each quarter by sales region, and lets each region choose the tactic that suits its own market. Which strategy is this?",
+          "q": "A doctor must destroy a deep tumour with rays strong enough to harm healthy tissue on the way in. Recalling a general who split his army into small groups that converged on a fortress from all sides, the doctor sends weak rays from many directions that meet at the tumour. Which strategy is this?",
           "options": [
             "Means-ends analysis",
             "Abstraction",
-            "Trial and error",
-            "Brainstorming"
-          ],
-          "answerIndex": 0,
-          "concept": "Recognising means-ends analysis in a decomposition scenario",
-          "why": "The goal is fixed in advance, then split into quarterly and regional sub-problems each solved by its best-suited approach - exactly means-ends analysis."
-        },
-        {
-          "type": "mcq",
-          "q": "A doctor must destroy a tumour deep inside a patient with a high-intensity ray without burning the healthy tissue the ray must pass through. She recalls an army that captured a fortress by dividing into small groups that converged from many roads, and fires several weaker rays from different directions at once. Which strategy is this?",
-          "options": [
-            "Means-ends analysis, because the single strong ray was broken up into several smaller rays",
-            "Abstraction, because the surrounding healthy tissue was filtered out of the model she used",
-            "Brainstorming, because a number of possible routes to the tumour were considered together",
-            "Analogy, because a previously understood system with the same principle was reused"
+            "Heuristics",
+            "Analogy"
           ],
           "answerIndex": 3,
-          "concept": "Distinguishing analogy from means-ends when the analogy itself involves division",
-          "why": "The solution is imported wholesale from a previously understood system - the army and the fortress - whose underlying principle matches; the division is a feature of the source system, not a decomposition of this problem."
+          "concept": "Analogy versus means-ends analysis",
+          "why": "The solution is imported from a different, already understood system (the army and the fortress) because the underlying principle, converging weak forces to make a strong one, is the same. That is analogy.\n\nMeans-ends analysis is tempting because the rays are divided, but the division was borrowed from the army story rather than built from this problem's own sub-problems; abstraction would delete attributes, not import a solution; a heuristic would be a quick rule of thumb with no reasoning about principles."
         },
         {
           "type": "mcq",
-          "q": "Dan had $500 and now has $287; a student is asked how much he gave away. The student does not subtract, but says \"about 200 — that feels right.\" Which diagnosis is correct?",
+          "q": "A substitution puzzle uses the rules OB → BOOB and BOB → O. The rule OB → BOOB is applied to the word BBOOB. What is the result?",
           "options": [
-            "He used trial and error where the number of possible answers was far too large",
-            "He used a heuristic on a routine problem, where a sub-optimal answer is not acceptable",
-            "He treated a non-routine problem as routine by reaching for a standard algorithm",
-            "He skipped the brainstorming stage, so no alternative candidate answers were raised"
+            "BBOBOOB",
+            "BBOOBOOB",
+            "BOOBOOB",
+            "BBBOOB"
+          ],
+          "answerIndex": 0,
+          "concept": "Applying one substitution rule",
+          "why": "BBOOB contains OB once, as its last two letters. Replacing that OB by BOOB gives BBO followed by BOOB, which is BBOBOOB.\n\nBBOOBOOB inserts BOOB after OB instead of replacing it; BOOBOOB replaces the first two letters BB, which do not match the rule; BBBOOB inserts an extra B and leaves the OB in place."
+        },
+        {
+          "type": "mcq",
+          "q": "The tax owed on an invoice has an exact formula. An accountant instead uses the rule of thumb \"about a fifth of the amount\" and files that figure. What went wrong?",
+          "options": [
+            "A heuristic was used where an exact routine method exists",
+            "Trial and error was used with too many candidates",
+            "Abstraction deleted an attribute the formula needed",
+            "Brainstorming was done without a group"
+          ],
+          "answerIndex": 0,
+          "concept": "Diagnosing a misapplied heuristic",
+          "why": "A heuristic is only appropriate where a sub-optimal answer is acceptable. Tax owed is a routine problem with a known formula and must be exact, so the rule of thumb was the wrong strategy.\n\nNo candidates were tried in turn, so trial and error is not involved; nothing was filtered out of a model; no group session took place."
+        },
+        {
+          "type": "mcq",
+          "q": "A team meets to find ways to cut delivery times. Each idea is judged the moment it is spoken, and most are shot down. After an hour the list holds four ideas. Which brainstorming rule was broken?",
+          "options": [
+            "Ideas of others were fine-tuned",
+            "Criticism of ideas was not deferred",
+            "Too many ideas were gathered",
+            "The problem was not defined first"
           ],
           "answerIndex": 1,
-          "concept": "Diagnosing a strategy applied outside its conditions of use",
-          "why": "Estimating instead of subtracting applies a heuristic to a routine problem that has an exact algorithm, and here a sub-optimal answer is not acceptable."
+          "concept": "Rules of brainstorming",
+          "why": "Brainstorming depends on gathering as many ideas as possible and on avoiding criticism while ideas are being produced. Judging each idea as it is spoken breaks the second rule, and the small list shows the first rule failing as a consequence.\n\nFine-tuning other people's ideas is allowed and encouraged; four ideas is too few, not too many; defining the problem is the first step of analogy, not a brainstorming rule."
         },
         {
           "type": "mcq",
-          "q": "Two problems: (i) \"Calculate the area of a 150 m × 2000 m parking space.\" (ii) \"Give an approximate number of hairs on your head.\" How are they classified?",
+          "q": "Three actions are taken when solving a problem by analogy. P: list the ways the two situations match and pick one analogy. Q: use the description and the matches to produce ideas. R: state the problem and think of similar situations. Which order is correct?",
           "options": [
-            "(i) routine, since a known formula applies; (ii) non-routine",
-            "(i) routine, (ii) unsolvable, since nobody can count them",
-            "(i) non-routine, since it is geometry and not plain arithmetic; (ii) non-routine",
-            "Both routine, since both end in a number produced by arithmetic"
-          ],
-          "answerIndex": 0,
-          "concept": "Applying the routine/non-routine test without over-reaching to 'unsolvable'",
-          "why": "The area has a known formula so it is routine; the hair count has no standard method but is not undecidable - no decision procedure is at stake."
-        },
-        {
-          "type": "mcq",
-          "q": "A lecturer asks the class to write one program that reads any other program plus its input and prints whether that program will finish or run forever. What is the correct response?",
-          "options": [
-            "It is possible, but only for programs short enough to be read through in reasonable time",
-            "It is possible on a UTM, whose tape is unbounded, but not on any real modern computer",
-            "It is possible, but so slow in practice that the answer arrives long after it is useful",
-            "It is impossible — this is the halting problem, undecidable for every input"
+            "P, R, Q",
+            "R, Q, P",
+            "Q, P, R",
+            "R, P, Q"
           ],
           "answerIndex": 3,
-          "concept": "Recognising the halting problem when it is posed as an engineering task",
-          "why": "No algorithm returns an accurate true/false answer for every input, so the program is impossible in principle; speed, program length and choice of machine are all irrelevant."
+          "concept": "Ordering the analogy steps",
+          "why": "The analogy procedure is: define the problem and generate analogies (R), find similarities and select an analogy (P), then use description and similarities to generate ideas (Q). So R, P, Q.\n\nP, R, Q compares situations before any problem is stated; R, Q, P produces ideas before an analogy has been chosen; Q, P, R starts with ideas and ends with the definition, the reverse of the procedure."
         },
         {
           "type": "mcq",
-          "q": "A design team decides to solve a new problem by analogy. In what order must they carry out the steps?",
+          "q": "A manager asks for a program H that reads any program P together with an input x and prints HALTS if P would eventually stop on x and LOOPS if it would run forever, correctly for every P and x. What can be delivered?",
           "options": [
-            "Find similarities → define the problem → generate ideas from the description",
-            "Generate ideas → define the problem → select an analogy that fits those ideas",
-            "Define the problem and generate analogies → find similarities and select one → generate ideas",
-            "Select an analogy → define the problem in its terms → check the underlying principles match"
+            "H can be written by running P and waiting",
+            "No such H exists; the request is undecidable",
+            "H can be written for every P but not for every x",
+            "H exists but needs a universal Turing machine to run"
           ],
-          "answerIndex": 2,
-          "concept": "Executing the analogy procedure in its stated order",
-          "why": "The lesson's steps run: define the problem and generate analogies, then find similarities and select one, then use the description and similarities to generate ideas."
+          "answerIndex": 1,
+          "concept": "The halting problem as an undecidable request",
+          "why": "This is the halting problem, an undecidable problem: no algorithm gives a correct true or false answer for every program and input. A program that decides single cases can exist, but the request asks for one method that works for all, and that cannot be built.\n\nRunning P and waiting never returns LOOPS, because you cannot know the wait is endless; restricting x does not remove the impossibility; a universal Turing machine can run anything with an instruction table, and H has none."
         },
         {
           "type": "short",
-          "q": "A classmate tries `OB`→`BOOB` once on **BOB**, does not reach **BOOOB**, and concludes the puzzle does not come out. Give a sequence of replacements that does reach **BOOOB**, and explain why his conclusion was premature.",
-          "concept": "Failing to reach a target in one step is not proof that no sequence exists",
-          "why": "A sequence that works is BOB -> (OB to BOOB) -> BBOOB -> (OB to BOOB on the trailing OB) -> BBOBOOB -> (BOB to O on the BOB at positions 2-4) -> BOOOB. His conclusion was premature because he tried a single application of a single rule and treated that one failure as covering every possibility. The puzzle has two rules that may be applied any number of times, in any order, and at any matching position in the string, so the search space is a tree of sequences rather than a list of single moves. Exhausting one branch says nothing about the others, and establishing that a target is unreachable requires an argument about all sequences, not one trial."
+          "q": "A substitution puzzle allows two replacements: OB → BOOB and BOB → O. Starting from BOB, obtain BOOOB. Write down the word after each replacement and name the rule you applied. Show your working.",
+          "concept": "Deriving a word in a substitution puzzle",
+          "why": "Start: BOB. Apply OB → BOOB to the OB at the end: B + BOOB = BBOOB. Apply OB → BOOB again to the OB at the end: BBO + BOOB = BBOBOOB. Now BBOBOOB contains BOB as its second, third and fourth letters; apply BOB → O: B + O + OOB = BOOOB.\n\nA correct answer shows the three words BBOOB, BBOBOOB, BOOOB in that order with the rule used at each step. Applying BOB → O first gives the single letter O, from which nothing can be made; an answer that stops there and says the puzzle does not come out is wrong."
         },
         {
           "type": "short",
-          "q": "Bridget's exam-marks problem is solved with nothing but addition, subtraction and multiplication, yet it is classified as non-routine while \"what is 500 − 287?\" is routine. Explain what the solver has to do in the first case that he does not have to do in the second.",
-          "concept": "Routine versus non-routine turns on whether a method presents itself",
-          "why": "For 500 - 287 the solver recognises the operation immediately: the problem states which quantities to combine and the standard subtraction algorithm applies directly, so no method has to be invented. Bridget's problem states no such operation. The solver must first introduce the unknowns, notice that correct and wrong responses together must total 50, express the score as 4c - 2(50 - c), and only then does an equation appear that can be solved routinely. That construction step - devising a representation and a method where none was given - is what makes it non-routine, and it is entirely independent of how elementary the arithmetic then turns out to be."
+          "q": "An exam has 50 questions, all answered. Each correct answer scores 4 marks and each wrong answer loses 2 marks. A student scores 170. How many answers were correct? Then say whether the problem is routine or non-routine and why. Show your working.",
+          "concept": "Solving an exam-marks problem and classifying it",
+          "why": "Let c be the number correct, so 50 − c are wrong. Score: 4c − 2(50 − c) = 170, so 4c − 100 + 2c = 170, 6c = 270, c = 45. Check: 45 × 4 = 180, 5 wrong lose 10, 180 − 10 = 170.\n\nFinal answer: 45 correct (5 wrong). The problem is non-routine in the sense of the week: it gives no standard method to apply, only arithmetic facts, so a method (setting up the equation, or guess and adjust) had to be devised first. A correct answer reaches 45 with a check, and classifies it as non-routine because no standard method is supplied, not because it lacks arithmetic. Routine is accepted only if the answer argues that setting up a linear equation is itself a standard algorithm."
         },
         {
           "type": "short",
-          "q": "At XYZ Corp's idea session on the falling product quality, the manager explains why each suggestion won't work as soon as it is offered, and the session ends with three surviving ideas. Explain why this session did not produce what brainstorming is designed to produce.",
-          "concept": "Criticism during the session destroys the two mechanisms brainstorming runs on",
-          "why": "Brainstorming is designed to produce a large volume of ideas, weak and half-formed ones included, on the expectation that participants will fine-tune and build on each other's contributions. Criticising each suggestion as it arrives defeats both mechanisms: people stop offering ideas they suspect are weak, so the volume collapses, and an idea shot down immediately is never available for anyone to improve or combine with another. Three surviving ideas is the symptom - the session produced a filtered shortlist, which is what the later evaluation stage is for, instead of the wide pool of raw material the session was supposed to generate. The judging was not wrong in itself, only done at the wrong time."
+          "q": "Name the strategy used in each case and give the test that decides it. (a) A commuter drives a different route each week for four weeks and keeps the fastest. (b) A subway map shows only the stations and the lines joining them, with no distances or streets. (c) A shopper picks the cereal with the most familiar box without reading any label. (d) Ten staff spend an hour calling out every idea for a new product, writing all of them down and judging none.",
+          "concept": "Distinguishing trial and error, abstraction, heuristics and brainstorming",
+          "why": "(a) Trial and error: candidates are tried one after another and the failures discarded until one is accepted; the test is successive trials with a few candidates. (b) Abstraction: everything not needed for finding a route is deleted, leaving a model; the test is that attributes were thrown away. (c) Heuristics: one quick rule of thumb is accepted without checking, trading rationality for speed; the test is a single unchecked shortcut. (d) Brainstorming: a group produces many ideas spontaneously with criticism deferred; the test is quantity plus no judging.\n\nA correct answer names all four correctly and gives a distinguishing test for each. Calling (c) trial and error is wrong because nothing was tried and rejected; calling (b) means-ends analysis is wrong because nothing was split into sub-problems."
         },
         {
           "type": "short",
-          "q": "Apply means-ends analysis to XYZ Corp's declining product quality: state the overall goal, name two sub-problems it breaks into, and explain why attacking the sub-problems separately is legitimate here rather than a way of dodging the real problem.",
-          "concept": "Means-ends analysis on a real goal, and when decomposition is legitimate",
-          "why": "The overall goal is fixed in advance: restore product quality to an agreed standard by a stated date. Two sub-problems it breaks into are, first, identifying where in the production line the defects are being introduced, by inspecting output at each stage; and second, establishing whether the cause is materials, machine condition or operator training, and correcting it. Each can be given the approach that suits it - sampling and measurement for the first, testing and comparison for the second. This is legitimate rather than evasive because the two sub-problems together account for the whole of the original goal and their solutions recombine into it: fixing the identified stage and its identified cause is what restoring quality consists of. It would be dodging only if a hard part were set aside and the easy parts solved on assumptions the hard part might later overturn."
+          "q": "A student tries four replacements on a substitution puzzle, does not reach the target word, and concludes that the puzzle does not come out. Explain why that conclusion is premature, and explain what it means to say that deciding whether substitution puzzles come out is unsolvable.",
+          "concept": "Premature conclusion versus genuine unsolvability",
+          "why": "Four failed attempts show only that those four paths do not work; other orders and other positions of the replacements remain untried, and a puzzle may need many more steps than four. Nothing has been proved about the puzzle, so the conclusion is premature.\n\nSaying the deciding problem is unsolvable means something quite different: no single systematic method exists that, for every substitution puzzle, correctly answers whether it comes out. Individual puzzles can still be settled, by finding a derivation or by an argument that none exists. A correct answer makes both points: a few failures prove nothing about one puzzle, and unsolvable is a claim about the absence of a universal method, not about any particular puzzle having no answer."
         }
       ],
       "slot": "fast"
@@ -1036,68 +1040,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Which four indicators show the nature of pre-colonial intergroup interaction?",
+          "q": "The Illah people speak Igbo, yet their masquerades speak Igala, a result of territorial wars between the Igala and the Nsukka Igbo. Which indicator of pre-colonial intergroup relations does this illustrate?",
           "options": [
-            "Traditions of origin, conflict, trade and commerce, religion",
-            "Language, culture, trade and commerce, religion",
-            "Traditions of origin, language, marriage, warfare",
-            "Conflict, trade and commerce, marriage, kingship"
-          ],
-          "answerIndex": 0,
-          "concept": "The four indicators of intergroup relations",
-          "why": "The four are traditions of origin, conflict, trade and commerce, and religion. Culture and language are the two identifiers of a group, a different list, and marriage and kingship are not indicators at all."
-        },
-        {
-          "type": "mcq",
-          "q": "Which ancestor do the Hausa trace their origin to?",
-          "options": [
-            "Saif",
-            "Kisra",
-            "Bayajidda",
-            "Eweka"
-          ],
-          "answerIndex": 2,
-          "concept": "Bayajidda as the Hausa ancestor",
-          "why": "Bayajidda is the Hausa ancestor, traced to Baghdad, who settled among the Kanuri and married the Mai's daughter. Saif is the Kanuri ancestor, Kisra founded the Yoruba and Borgu kingdoms, and Eweka belongs to the Yoruba-Benin link."
-        },
-        {
-          "type": "mcq",
-          "q": "Which two Hausa states fought wars over control of trade routes?",
-          "options": [
-            "Oyo and Nupe",
-            "Kano and Katsina",
-            "Bariba and Yoruba",
-            "Igala and Nsukka Igbo"
-          ],
-          "answerIndex": 1,
-          "concept": "The Kano-Katsina wars over trade routes",
-          "why": "Kano and Katsina were the Hausa states that fought over trade routes. Oyo fought Nupe with a Bariba-Yoruba alliance, and the Igala-Nsukka Igbo wars were territorial."
-        },
-        {
-          "type": "mcq",
-          "q": "The Jukun exchanged salt for which Tiv commodity?",
-          "options": [
-            "Potash",
-            "Shea butter",
-            "Brasswork",
-            "Firewood"
+            "Traditions of origin",
+            "Religion",
+            "Trade and commerce",
+            "Conflict"
           ],
           "answerIndex": 3,
-          "concept": "The Jukun-Tiv salt-for-firewood exchange",
-          "why": "The Jukun gave salt and received firewood from the Tiv. Potash, shea butter and brasswork are on the separate list of Nupe goods traded to the Yoruba."
+          "concept": "Four indicators of intergroup relations",
+          "why": "The Illah case is given under conflict: the Igala and Nsukka Igbo fought wars for territorial reasons, and those wars forged political ties and increased interaction. Religion is the tempting wrong answer because masquerades are mentioned, but the cause of the mixing was war. Traditions of origin would need a shared origin legend, and trade and commerce would need an exchange of goods."
         },
         {
           "type": "mcq",
-          "q": "The Yoruba deity Igunu is traced to which Nupe original?",
+          "q": "Two Nigerian peoples both trace their origin to Baghdad, one descending from Saif and the other from Bayajidda. Which two peoples are they?",
+          "options": [
+            "Kanuri and Hausa",
+            "Yoruba and Borgu",
+            "Yoruba and Benin",
+            "Igala and Nsukka Igbo"
+          ],
+          "answerIndex": 0,
+          "concept": "Traditions of origin as an indicator",
+          "why": "The Kanuri descended from Saif and the Hausa from Bayajidda, and both trace their origins to Baghdad. Yoruba and Borgu are the kingdoms founded by Kisra in a different legend; the Yoruba and Benin are linked through Oranmiyan and Eweka; the Igala and Nsukka Igbo are a conflict example, not an origin one."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following statements about pre-colonial trade is correct?",
+          "options": [
+            "The Jukun exchanged salt for firewood from the Tiv",
+            "The Yoruba and Nupe joined the trans-Saharan trade through the Efik",
+            "Ibibio land was a trade corridor between the Hausa and the Tuaregs",
+            "The Nupe bought shea butter and brasswork from the Yoruba"
+          ],
+          "answerIndex": 0,
+          "concept": "Trade and commerce as an indicator",
+          "why": "The Jukun exchanged salt for firewood from the Tiv. The Yoruba and Nupe entered the trans-Saharan trade through Kanem Bornu, not the Efik. Ibibio land linked the hinterland Igbo with the coastal Efik and Ijaw, not the Hausa and Tuaregs. The last option is reversed: it was the Nupe who supplied shea butter, bangles, brasswork, potash and straw hats to the Yoruba."
+        },
+        {
+          "type": "mcq",
+          "q": "A society and its masquerade originated among the Efik but are today popular among some Igbo subgroups. Which of the following is it?",
           "options": [
             "Ibini Ukpabi",
-            "Ekpe",
-            "Ndakogbaya",
-            "Bori"
+            "Ekpe and Ekpo",
+            "Bori cult",
+            "Igunu"
           ],
-          "answerIndex": 2,
-          "concept": "Igunu traced to the Nupe Ndakogbaya",
-          "why": "Igunu is the Yoruba name for the Nupe Ndakogbaya. Ibini Ukpabi is Ibibio in origin, Ekpe is Efik in origin, and Bori is the Hausaland spirit-possession cult."
+          "answerIndex": 1,
+          "concept": "Religion as an indicator",
+          "why": "Ekpe and Ekpo originated among the Efik and are now popular among some Igbo subgroups. Ibini Ukpabi also ended up with the Igbo but is of Ibibio origin, which is the usual mix-up. The Bori cult is common throughout Hausa land, and Igunu is a Yoruba deity traced to the Nupe Ndakogbaya."
+        },
+        {
+          "type": "mcq",
+          "q": "Inter-group relations is defined as the interaction between two or more distinct groups of which kind?",
+          "options": [
+            "Political and military groups",
+            "Linguistic and cultural groups",
+            "Religious and trading groups",
+            "Ethnic and geo-political zones"
+          ],
+          "answerIndex": 1,
+          "concept": "Definition of inter-group relations",
+          "why": "Inter-group relations is the interaction between two or more distinct linguistic and cultural groups, matching the two major factors for identifying a group: culture and language. The other options pick up themes from the indicators (conflict, religion, trade) or from the geo-political zones, but they are not the definition."
         }
       ]
     },
@@ -1111,159 +1115,159 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "This fragment is accepted as HTML but is not valid XHTML. Why?\n```html\n<ul>\n  <li>One\n  <li>Two\n</ul>\n```",
+          "q": "In the domain name `blog.shop.example.org`, which label is the second-level domain?",
           "options": [
-            "Nothing is wrong; XHTML tolerates omitted closing tags too",
-            "The tags would have to be uppercase to be well-formed",
-            "Every element must be closed, so each `<li>` needs its `</li>`",
-            "XHTML forbids `<ul>`; lists must use tags you define yourself"
-          ],
-          "answerIndex": 2,
-          "concept": "XHTML enforces XML well-formedness",
-          "why": "XHTML is HTML reformulated as an XML application, so every element must be closed and well-formed. XML rules also require lowercase tags, which is why the uppercase option has it backwards."
-        },
-        {
-          "type": "mcq",
-          "q": "What makes `<book><title>Things Fall Apart</title><price>2500</price></book>` XML rather than HTML?",
-          "options": [
-            "XML tags must be lowercase while HTML tags need not be",
-            "It uses angle brackets, which HTML does not",
-            "It carries no attributes, and every HTML tag needs one",
-            "The tags are author-defined and describe data, not presentation"
-          ],
-          "answerIndex": 3,
-          "concept": "XML's user-defined tags versus HTML's fixed set",
-          "why": "Those tags are invented by the author to describe what the data means, which is what XML exists for. HTML's tag set is fixed and describes how content is structured for display, so both languages use angle brackets."
-        },
-        {
-          "type": "mcq",
-          "q": "What does this draw, and what happens when it is zoomed in?\n```html\n<svg width=\"100\" height=\"100\">\n  <circle cx=\"50\" cy=\"50\" r=\"40\"/>\n</svg>\n```",
-          "options": [
-            "A centred circle that becomes blocky when enlarged",
-            "A centred circle that stays sharp at any zoom",
-            "A 40px square in the top-left corner",
-            "Nothing, because `<circle>` needs width and height"
+            "org",
+            "example",
+            "shop",
+            "blog"
           ],
           "answerIndex": 1,
-          "concept": "SVG is vector, so it scales without quality loss",
-          "why": "The circle is centred at (50,50) with radius 40, and SVG is vector markup, so it redraws sharply at any size. Becoming blocky is what happens to raster formats such as PNG, not to vector graphics."
+          "concept": "Levels of the DNS hierarchy in a domain name",
+          "why": "Read the name from the right: org is the top-level domain, example is the second-level domain created under it, and shop and blog are subdomains that divide example.org further.\n\norg is the TLD; shop and blog are subdomains, the labels to the left of the second-level domain."
         },
         {
           "type": "mcq",
-          "q": "What does `<math><mfrac><mi>a</mi><mi>b</mi></mfrac></math>` display?",
+          "q": "Which line is accepted as HTML but is not well-formed XHTML?\n\n```html\n1  <p>One</p>\n2  <img src=\"a.png\" alt=\"A\" />\n3  <p>Two<br>Three</p>\n4  <em>Four</em>\n```",
           "options": [
-            "The fraction a over b",
-            "a raised to the power b",
-            "a multiplied by b",
-            "The square root of ab"
+            "Line 3",
+            "Line 2",
+            "Line 1",
+            "Line 4"
           ],
           "answerIndex": 0,
-          "concept": "Reading MathML elements",
-          "why": "`mfrac` is the fraction element, so its two children become numerator and denominator. The `mi` tags only mark each letter as an identifier; they neither raise nor multiply anything."
+          "concept": "XHTML strictness versus HTML tolerance",
+          "why": "XHTML reformulates HTML as XML, so every element must be closed. The `<br>` on line 3 is never closed; XML needs `<br />`. HTML forgives the open tag because br is a void element.\n\nLine 2 closes the img with `/>`, exactly the XHTML form; lines 1 and 4 open and close their elements properly, so all three are well-formed."
         },
         {
           "type": "mcq",
-          "q": "Why must a REST request carry everything the server needs to fulfil it?",
+          "q": "An XML parser rejects this document. Which line causes the error?\n\n```xml\n1  <library>\n2    <book>\n3      <title>Purple Hibiscus</Title>\n4    </book>\n5  </library>\n```",
           "options": [
-            "Because HTTP allows only one request per connection",
-            "Because REST forbids using URLs to identify resources",
-            "Because REST messages must be XML, which cannot be split",
-            "Because REST is stateless, so the server remembers nothing"
-          ],
-          "answerIndex": 3,
-          "concept": "REST statelessness",
-          "why": "REST is a stateless, resource-based architectural style, so no request may rely on the server remembering an earlier one. Requiring XML is SOAP's rule, and REST identifies its resources precisely by URL."
-        },
-        {
-          "type": "mcq",
-          "q": "A live chat must push new messages to open browsers without the client polling. Which fits?",
-          "options": [
-            "REST, because it is stateless and lightweight",
-            "SOAP, because its XML messages are strictly defined",
-            "WebSocket, because it holds a persistent full-duplex connection",
-            "FTP, because it keeps a connection open for transfers"
+            "Line 1",
+            "Line 2",
+            "Line 3",
+            "Line 4"
           ],
           "answerIndex": 2,
-          "concept": "WebSocket for real-time push",
-          "why": "WebSocket keeps one TCP connection open in both directions, so the server can push the moment a message arrives. REST is request-response only, so the client would have to keep asking."
+          "concept": "Well-formed XML: matching case-sensitive tags",
+          "why": "XML tags are case-sensitive, so `<title>` and `</Title>` are two different names and the opening tag is left unclosed: the parser reports a mismatched tag on line 3.\n\nLines 1, 2 and 4 are properly paired user-defined tags; nothing in XML requires the names library or book to be predefined, because XML lets you define your own tags."
         },
         {
           "type": "mcq",
-          "q": "Which statement is true of REST but not of SOAP?",
+          "q": "```html\n<svg width=\"200\" height=\"100\" viewBox=\"0 0 200 100\">\n  <rect x=\"10\" y=\"10\" width=\"50\" height=\"30\"/>\n</svg>\n```\nThe drawing is displayed at 400 pixels wide instead of 200. How wide is the rectangle on screen, and how sharp is it?",
           "options": [
-            "Its messages must be XML",
-            "It keeps a persistent connection open",
-            "It is an architectural style, not a protocol",
-            "It can only run over raw TCP"
-          ],
-          "answerIndex": 2,
-          "concept": "REST versus SOAP",
-          "why": "REST is a set of architectural constraints riding on ordinary HTTP methods, while SOAP is a strict protocol. It is SOAP whose messages must be XML, and neither of them holds a connection open the way WebSocket does."
-        },
-        {
-          "type": "mcq",
-          "q": "Your client uploads a message with a PDF attached and the receiving server delivers it. Which protocol carried it out, and which shaped the attachment?",
-          "options": [
-            "IMAP carried it; SMTP shaped the attachment",
-            "SMTP carried it; MIME shaped the attachment",
-            "POP3 carried it; MIME shaped the attachment",
-            "SMTP carried it; DNS shaped the attachment"
-          ],
-          "answerIndex": 1,
-          "concept": "SMTP transports, MIME formats",
-          "why": "SMTP sends and relays outgoing mail, and MIME extends the message format for attachments and non-ASCII characters. IMAP and POP3 only retrieve mail, so neither can carry a message outward."
-        },
-        {
-          "type": "mcq",
-          "q": "A mail server needs to know which machine accepts mail for `miva.edu`. Which DNS record does it look up?",
-          "options": [
-            "The MX record",
-            "The TLD record",
-            "A reverse DNS entry",
-            "The DNSSEC signature"
-          ],
-          "answerIndex": 0,
-          "concept": "MX records name a domain's mail servers",
-          "why": "An MX (Mail Exchanger) record specifies the email servers for a domain, which is exactly this lookup. A reverse lookup runs the other way, from IP back to a name, and DNSSEC only signs the answers."
-        },
-        {
-          "type": "mcq",
-          "q": "Which server actually holds the records for `example.com` and gives the definitive answer?",
-          "options": [
-            "The client-side resolver",
-            "The authoritative server",
-            "A root server",
-            "A proxy server"
-          ],
-          "answerIndex": 1,
-          "concept": "Resolvers, root servers and authoritative servers",
-          "why": "Authoritative servers hold the records for specific domains and give the definitive answer. The resolver is client-side software that starts the query, and root servers only point down the hierarchy."
-        },
-        {
-          "type": "mcq",
-          "q": "An attacker feeds a resolver a forged answer so users land on their server. Which measure targets this?",
-          "options": [
-            "Switching the site to HTTPS",
-            "Rate limiting to absorb DDoS traffic",
-            "Publishing an MX record for the domain",
-            "DNSSEC, whose signatures expose forged answers"
+            "50 px, blurred",
+            "100 px, blurred",
+            "50 px, still sharp",
+            "100 px, still sharp"
           ],
           "answerIndex": 3,
-          "concept": "DNSSEC and cache poisoning",
-          "why": "DNSSEC adds digital signatures to DNS data, so a forged answer fails the integrity and authenticity check that cache poisoning depends on. HTTPS protects the connection after the wrong address has already been handed out."
+          "concept": "Scaling vector graphics in SVG",
+          "why": "SVG describes shapes, not pixels. Doubling the display width from 200 to 400 scales every coordinate by 400/200 = 2, so the 50-unit rectangle becomes 100 px wide, and because the shape is redrawn from its description it stays sharp at any size.\n\n50 px ignores the scaling; blurred is what happens to a raster image such as a PNG when it is enlarged, not to vector graphics."
         },
         {
           "type": "mcq",
-          "q": "A transfer's username, password and file contents can all be read by anyone capturing the traffic. Which protocol is in use, and what fixes it?",
+          "q": "You email a photo from your laptop. Later you delete the message on your phone and it vanishes from the laptop too. Name the sending protocol, the attachment standard and the retrieval protocol, in that order.",
           "options": [
-            "FTP; move to SFTP for encryption and strong authentication",
-            "SFTP; move to FTP, which adds the encryption",
-            "HTTP; move to SMTP for file transfer",
-            "FTP; move to POP3, which encrypts downloads"
+            "SMTP, MIME, POP3",
+            "SMTP, MIME, IMAP",
+            "IMAP, MIME, SMTP",
+            "POP3, SMTP, IMAP"
+          ],
+          "answerIndex": 1,
+          "concept": "Matching email protocols to sending, attachments and retrieval",
+          "why": "SMTP sends and relays outgoing mail; MIME extends the message format so non-text attachments such as a photo can be included; IMAP keeps messages on the server and synchronises actions across devices, which is why a delete on the phone shows on the laptop.\n\nPOP3 downloads mail to one device and typically removes it from the server, so the two devices would not stay in step; IMAP and POP3 retrieve mail and never send it, so the orders that start with them are backwards."
+        },
+        {
+          "type": "mcq",
+          "q": "Which is the correct order of SMTP commands when a mail client relays a message to a server?",
+          "options": [
+            "MAIL FROM → HELO → RCPT TO → message content",
+            "HELO → RCPT TO → MAIL FROM → message content",
+            "HELO → MAIL FROM → RCPT TO → message content",
+            "RCPT TO → MAIL FROM → HELO → message content"
+          ],
+          "answerIndex": 2,
+          "concept": "Order of the SMTP command sequence",
+          "why": "The client first greets the server with HELO, then names the sender with MAIL FROM, then the recipient with RCPT TO, and only then sends the message content.\n\nMAIL FROM before HELO skips the greeting that opens the session; RCPT TO before MAIL FROM names a recipient before there is a sender; RCPT TO first reverses the whole sequence."
+        },
+        {
+          "type": "mcq",
+          "q": "A REST API keeps users at /users. Which request changes the email address of the user whose id is 42?",
+          "options": [
+            "POST /users",
+            "GET /users/42",
+            "DELETE /users/42",
+            "PUT /users/42"
+          ],
+          "answerIndex": 3,
+          "concept": "REST methods mapped to CRUD operations",
+          "why": "REST maps HTTP methods onto CRUD: PUT updates an existing resource, so PUT /users/42 updates user 42.\n\nPOST /users creates a new user; GET /users/42 only reads user 42; DELETE /users/42 removes the user rather than changing a field."
+        },
+        {
+          "type": "mcq",
+          "q": "A resolver has nothing cached for www.miva.edu.ng. In which order does it ask the DNS servers?",
+          "options": [
+            "Root server → TLD server → authoritative server",
+            "Authoritative server → TLD server → root server",
+            "TLD server → root server → authoritative server",
+            "Root server → authoritative server → TLD server"
           ],
           "answerIndex": 0,
-          "concept": "FTP versus SFTP",
-          "why": "Plaintext credentials and contents mean FTP, which has no encryption. SFTP is its secure extension, adding encryption and strong authentication. SMTP and POP3 are mail protocols and do not transfer files this way."
+          "concept": "Order of a DNS lookup",
+          "why": "The resolver works down the hierarchy: the root server points it to the server for the top-level domain (ng), the TLD server points it to the authoritative server for the domain, and the authoritative server holds the actual record and answers with the IP address.\n\nStarting at the authoritative server assumes the resolver already knows where it is, which is what the lookup is finding out; the TLD server cannot be found before the root has been asked; the authoritative server is the last hop, not the middle one."
+        },
+        {
+          "type": "mcq",
+          "q": "A clinic must (a) serve its patient portal so pages cannot be read in transit and (b) copy record files to a backup server with encryption and strong authentication. Which protocol replaces the plain one in each case?",
+          "options": [
+            "(a) HTTPS, (b) FTP",
+            "(a) HTTP, (b) FTP",
+            "(a) HTTPS, (b) SFTP",
+            "(a) SFTP, (b) HTTPS"
+          ],
+          "answerIndex": 2,
+          "concept": "Choosing HTTPS over HTTP and SFTP over FTP",
+          "why": "HTTPS is HTTP with encryption, so the pages of the portal are confidential in transit. SFTP is the secure extension of FTP, adding encryption and strong authentication for file transfers.\n\nHTTP and FTP are the plaintext originals; HTTPS with FTP leaves the file copies readable to anyone capturing the traffic; SFTP and HTTPS are swapped, and a browser fetches pages over HTTP or HTTPS, not over a file transfer protocol."
+        },
+        {
+          "type": "mcq",
+          "q": "A stock ticker must push each price change to 2,000 open browsers the instant it happens, over one connection per browser that stays open. Which fits?",
+          "options": [
+            "REST",
+            "WebSocket",
+            "SOAP",
+            "SMTP"
+          ],
+          "answerIndex": 1,
+          "concept": "Choosing WebSocket for real-time push",
+          "why": "WebSocket gives a persistent, full-duplex channel over a single TCP connection, so the server can push updates the moment they happen without the browser asking again.\n\nREST is stateless request-response: the browser would have to keep polling; SOAP is a strict XML messaging protocol for web services, also request-response; SMTP sends email, not live page updates."
+        },
+        {
+          "type": "mcq",
+          "q": "What does HTTPS add to HTTP?",
+          "options": [
+            "Encryption, so the data is confidential in transit",
+            "Compression, so pages load faster",
+            "A file transfer mode for uploads",
+            "Digital signatures on DNS records"
+          ],
+          "answerIndex": 0,
+          "concept": "HTTP versus HTTPS",
+          "why": "HTTPS is the secure version of HTTP: it encrypts the data exchanged between browser and server so that it cannot be read in transit.\n\nCompression is not what the S stands for; file transfer is FTP's job; digital signatures on DNS records are DNSSEC."
+        },
+        {
+          "type": "mcq",
+          "q": "What is DNS?",
+          "options": [
+            "The protocol that transfers web pages between browser and server",
+            "The set of extensions that adds digital signatures to name records",
+            "The register of top-level domains such as .com and .ng",
+            "The system that maps human-readable domain names to IP addresses"
+          ],
+          "answerIndex": 3,
+          "concept": "Definition of the Domain Name System",
+          "why": "The Domain Name System converts a name such as www.example.com into the IP address, such as 192.0.2.1, that computers use to connect; it also supports reverse lookup from IP address to name.\n\nTransferring pages is HTTP; the extensions that add digital signatures are DNSSEC; the top-level domains are one level in the DNS hierarchy, not the system itself."
         }
       ],
       "full": true
@@ -1278,68 +1282,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "What is the field concerned with signs and symbols in communication called?",
+          "q": "In a budget meeting Ada calls the new spending rules 'a straitjacket'. Nobody thinks she means an item of clothing. Which kind of meaning is she relying on?",
           "options": [
-            "Contextual interpretation",
-            "Semiotics",
-            "Active listening",
-            "Cultural sensitivity"
+            "Denotative meaning",
+            "Connotative meaning",
+            "Homophonic meaning",
+            "Semiotic meaning"
           ],
           "answerIndex": 1,
-          "concept": "Semiotics as the study of signs and symbols",
-          "why": "Semiotics is the field of signs and symbols and the role they play in daily interaction. The other three are competencies named by the lesson, not fields of study."
+          "concept": "Denotative versus connotative meaning",
+          "why": "Denotative meaning is the literal sense; connotative meaning is the implied or suggested sense carrying emotional and cultural associations. 'Straitjacket' is used for its suggestion of restriction, so it is connotative.\n\nDenotative would be the literal garment; 'homophonic' concerns words that sound alike; semiotics is the field of signs and symbols, not a level of word meaning."
         },
         {
           "type": "mcq",
-          "q": "The literal, dictionary sense of a word is called its what?",
-          "options": [
-            "Connotative meaning",
-            "Ambiguous meaning",
-            "Denotative meaning",
-            "Contextual meaning"
-          ],
-          "answerIndex": 2,
-          "concept": "Denotative meaning",
-          "why": "Denotation is the literal dictionary sense. Connotation is the implied sense carrying cultural and emotional associations, and ambiguity is a sentence open to two readings."
-        },
-        {
-          "type": "mcq",
-          "q": "Which source of confusion disappears once the sentence is written down?",
+          "q": "A voice message says 'Leave the file by the stares.' The listener cannot tell whether 'stairs' or 'stares' was meant, but the confusion would vanish if the message were typed. Which source of confusion is this?",
           "options": [
             "Ambiguity",
-            "Vagueness",
             "Connotation",
-            "Hazardous homophones"
+            "Semiotic confusion",
+            "Hazardous homophone"
           ],
           "answerIndex": 3,
-          "concept": "The written-down test separating homophones from ambiguity",
-          "why": "Homophone confusion is sound-based, so writing fixes it. An ambiguous sentence stays readable two ways on the page; vagueness gives one fuzzy reading, not two."
+          "concept": "Hazardous homophones versus ambiguity",
+          "why": "The two named sources of confusion are hazardous homophones and ambiguity. Here the confusion comes from identical sound with different meaning, and writing removes it, so it is a hazardous homophone.\n\nAmbiguity survives being written down because the sentence itself allows two readings; connotation is a level of meaning, not a source of confusion; semiotics concerns signs and symbols."
         },
         {
           "type": "mcq",
-          "q": "The Week 2 case study's ambiguous sentence concerned what?",
+          "q": "A project lead emails: 'Tola told Musa that his section is late.' Two team members disagree about whose section is late. Which source of confusion is this, and does writing it down remove it?",
           "options": [
-            "Task assignment in a project team",
-            "A mispronounced client name",
-            "A homophone in a written report",
-            "An emoji misread by a colleague"
+            "Ambiguity; no",
+            "Hazardous homophone; yes",
+            "Ambiguity; yes",
+            "Hazardous homophone; no"
           ],
           "answerIndex": 0,
-          "concept": "The Ambiguity Challenge in Project Coordination",
-          "why": "One ambiguous task-assignment sentence produced conflicting readings of tasks and responsibilities across the team. The case study is about ambiguity, not about homophones or non-verbal signs."
+          "concept": "Ambiguity in written communication",
+          "why": "'His' can refer to Tola or to Musa, so one written sentence has two readings: that is ambiguity, and it remains on the page, exactly as in the case study where one ambiguous task-assignment sentence produced conflicting interpretations.\n\nA homophone is a sound-based confusion, which this is not; and ambiguity is not removed by writing, so 'Ambiguity; yes' is wrong."
         },
         {
           "type": "mcq",
-          "q": "Effective communication conveys meaning accurately while being mindful of what?",
+          "q": "Before anyone speaks, a new staff member reads the colour-coded badges and the warning icons on the office dashboard and understands what each stands for. Which competency is she showing?",
           "options": [
-            "Grammar and spelling rules",
-            "The listener's vocabulary size",
-            "Cultural and emotional associations of words",
-            "The speaker's tone of voice"
+            "Clarity in Expression",
+            "Conflict Resolution",
+            "Semiotic Awareness",
+            "Active Listening"
           ],
           "answerIndex": 2,
-          "concept": "The lesson's closing definition of effective communication",
-          "why": "The definition pairs conveying intended meanings accurately with mindfulness of the broader cultural and emotional associations of words, which is connotation. The others are real concerns but not in the stated sentence."
+          "concept": "Semiotics and the lesson competencies",
+          "why": "Semiotics is the field of signs and symbols, and Semiotic Awareness is sensitivity to the signs and symbols in a message. Badges and icons carry meaning without words.\n\nClarity in Expression is about phrasing your own message; Conflict Resolution reconciles discrepancies in understanding; Active Listening concerns spoken input."
+        },
+        {
+          "type": "mcq",
+          "q": "Because meaning is multifaceted, what does it require from the listener?",
+          "options": [
+            "Active interpretation, considering context and possible ambiguities",
+            "Silent acceptance of the literal, dictionary meaning",
+            "Repeating the speaker's words back exactly",
+            "Translating every word into a sign or symbol"
+          ],
+          "answerIndex": 0,
+          "concept": "Meaning requires active interpretation",
+          "why": "The multifaceted nature of meaning requires active interpretation by the listener, considering context and recognising potential ambiguities.\n\nAccepting only the literal sense ignores connotation; repeating words is not interpretation; signs and symbols are one channel of meaning, not something every word is turned into."
         }
       ]
     },
@@ -1353,68 +1357,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Ohm's law holds provided which quantity stays constant?",
+          "q": "Ohm's law readings for a nominal 1 kΩ resistor:\nV (V): 1.0, 2.0, 3.0, 4.0, 5.0\nI (mA): 0.96, 1.94, 2.88, 3.86, 4.80\nThe best-fit line of V against I passes through the first and last points. Find R in ohms and the percentage error.",
           "options": [
-            "Temperature",
-            "Current",
-            "Resistance",
-            "Potential difference"
-          ],
-          "answerIndex": 0,
-          "concept": "The temperature proviso in the statement of Ohm's law",
-          "why": "Current is proportional to potential difference provided temperature and other physical conditions stay constant; that clause earns the mark. Current and voltage are the two quantities being varied, and constant resistance is the consequence, not the condition."
-        },
-        {
-          "type": "mcq",
-          "q": "Which three devices does the week name as non-ohmic?",
-          "options": [
-            "Ammeter, voltmeter, breadboard",
-            "Varistor, photoresistor, thermistor",
-            "Resistor, capacitor, inductor",
-            "Varistor, rheostat, ammeter"
+            "1.04 Ω, 4.2 %",
+            "1040 Ω, 4.2 %",
+            "960 Ω, 4.0 %",
+            "1040 Ω, 0.042 %"
           ],
           "answerIndex": 1,
-          "concept": "The named non-ohmic devices",
-          "why": "Varistors, photoresistors and thermistors have a resistance that varies with voltage, light or temperature, giving a curved V-I graph. The other options list apparatus or components the slides never call non-ohmic."
+          "concept": "Resistance from the gradient of a V against I graph in milliamps",
+          "why": "Gradient = (5.0 − 1.0) V/(4.80 − 0.96) mA = 4.0/3.84 = 1.04 V/mA. Volts per milliamp are kilohms, so R = 1.04 kΩ = 1040 Ω. Percentage error = |1040 − 1000|/1000 × 100 = 4.2 %, inside the 5 % tolerance.\n\n1.04 Ω forgets that the current axis is in mA, so the gradient is 1000 times too small; 960 Ω uses ΔI/ΔV, the reciprocal of the gradient (that is the conductance in mS); 0.042 % leaves out the factor of 100 in the percentage."
         },
         {
           "type": "mcq",
-          "q": "In a parallel combination, what is the same across every resistor?",
+          "q": "V and I are recorded for a fixed resistor:\nV (V): 1.0, 2.0, 3.0, 4.0, 5.0, 6.0\nI (mA): 0.50, 1.01, 1.49, 2.40, 2.51, 3.00\nWhich reading is the outlier that should be re-taken?",
           "options": [
-            "The current",
-            "The resistance",
-            "The potential difference",
-            "The power dissipated"
-          ],
-          "answerIndex": 2,
-          "concept": "What is shared in parallel versus in series",
-          "why": "Parallel resistors share the same potential difference and split the current; series resistors share the same current and split the voltage."
-        },
-        {
-          "type": "mcq",
-          "q": "How is the ammeter connected in the Ohm's law circuit?",
-          "options": [
-            "In parallel with the resistor",
-            "Across the DC power supply",
-            "In parallel with the voltmeter",
-            "In series with the resistor"
+            "2.0 V, 1.01 mA",
+            "3.0 V, 1.49 mA",
+            "5.0 V, 2.51 mA",
+            "4.0 V, 2.40 mA"
           ],
           "answerIndex": 3,
-          "concept": "Meter placement in the circuit",
-          "why": "The ammeter must carry the current it measures, so it goes in series. The voltmeter is the one connected in parallel, straddling the resistor whose potential difference it reads."
+          "concept": "Spotting an outlier from the V/I ratio",
+          "why": "For a fixed resistor V/I should be the same for every pair. The ratios are 2.00, 1.98, 2.01, 1.67, 1.99 and 2.00 kΩ. Five agree at about 2.0 kΩ; the 4.0 V reading gives 1.67 kΩ, so 2.40 mA is the odd one out (a value of about 2.0 mA would fit) and it should be repeated.\n\n1.01 mA, 1.49 mA and 2.51 mA each differ from the trend by 0.01 mA, which is ordinary scatter, not an outlier."
         },
         {
           "type": "mcq",
-          "q": "Plotting volts against milliamps gives a gradient in which unit?",
+          "q": "A 12 V supply drives a single 12 Ω resistor and the ammeter in the supply line reads 1.0 A. A 6 Ω resistor is then connected in parallel with the 12 Ω one. What does the ammeter read now?",
           "options": [
-            "Ohms",
-            "Kilohms",
-            "Milliohms",
-            "Amperes"
+            "3.0 A",
+            "0.67 A",
+            "2.0 A",
+            "0.50 A"
+          ],
+          "answerIndex": 0,
+          "concept": "Change in supply current when a parallel branch is added",
+          "why": "In parallel both resistors sit across the full 12 V. Equivalent R = (12 × 6)/(12 + 6) = 4 Ω, so I = 12/4 = 3.0 A. Equivalently, the 12 Ω branch still carries 1.0 A and the new 6 Ω branch adds 12/6 = 2.0 A; the ammeter in the supply line reads the sum.\n\n0.67 A treats the pair as a series 18 Ω; 2.0 A counts only the new branch and forgets the original 1.0 A; 0.50 A assumes adding a resistor must halve the current, but a parallel branch lowers the total resistance and raises the current."
+        },
+        {
+          "type": "mcq",
+          "q": "A filament lamp gives:\nV (V): 1.0, 2.0, 4.0, 8.0\nI (A): 0.50, 0.80, 1.10, 1.40\nFind its resistance at 1.0 V and at 8.0 V, and classify the lamp.",
+          "options": [
+            "2.0 Ω and 5.7 Ω; ohmic",
+            "0.50 Ω and 0.18 Ω; non-ohmic",
+            "2.0 Ω and 5.7 Ω; non-ohmic",
+            "2.0 Ω and 2.0 Ω; ohmic"
+          ],
+          "answerIndex": 2,
+          "concept": "Resistance from V/I at two points and the ohmic test",
+          "why": "R = V/I at each point: 1.0/0.50 = 2.0 Ω and 8.0/1.40 = 5.7 Ω. The resistance rises with current because the filament heats up, so the temperature proviso of Ohm's law is not met and the V against I graph curves: the lamp is non-ohmic.\n\n0.50 Ω and 0.18 Ω are I/V, the reciprocal; 2.0 Ω and 5.7 Ω with 'ohmic' has the numbers but misses that a changing R is exactly what non-ohmic means; 2.0 Ω and 2.0 Ω assumes the first ratio holds for all readings instead of computing the second."
+        },
+        {
+          "type": "mcq",
+          "q": "A V against I graph for a fixed resistor is a good straight line of gradient 1.02 kΩ, but it cuts the V axis at +0.15 V instead of the origin. What does the intercept indicate?",
+          "options": [
+            "The resistor is non-ohmic",
+            "A systematic error such as a meter zero error",
+            "The resistance is really 0.15 kΩ",
+            "The temperature rose during the readings"
           ],
           "answerIndex": 1,
-          "concept": "The milliamp unit trap on the gradient",
-          "why": "Volts per milliamp is kilohms, so a gradient of 1 means 1 kilohm, not 1 ohm. Convert before comparing with the 1 kilohm default value and its 5 per cent tolerance."
+          "concept": "Meaning of a non-zero intercept on a V against I graph",
+          "why": "V = IR has no constant term: zero current must mean zero potential difference, so the line should pass through the origin. A constant offset of 0.15 V on every reading, with the gradient unaffected, is the signature of a systematic error, typically a voltmeter zero error or a stray emf in the leads.\n\nA non-ohmic resistor or a temperature rise would bend the line, not shift it while keeping it straight; the resistance is the gradient, 1.02 kΩ, and the intercept is not a resistance at all."
         }
       ]
     }

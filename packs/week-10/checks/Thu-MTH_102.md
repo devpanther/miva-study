@@ -1,98 +1,112 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 10.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Compute areas between a curve and the x-axis, with limits found from f(x) = 0: ∫₀⁵(5x − x²)dx, and the split case for x² − 1 on [0, 2].*
+**1.** Find the area between the curve y = x² − 3x and the x-axis from x = 0 to x = 4.
+A. 19/3
+B. 9/2
+C. 11/6
+D. 8/3
 
-*Compute areas between two curves, with limits from f(x) = g(x): y = 3 − x with y = x² − 9, and 2 − x with 4 − x².*
+**2.** Find the area of the region enclosed by the line y = x + 4 and the parabola y = x² − 2x.
+A. 56/3
+B. −125/6
+C. 125/6
+D. 33/2
 
-*Then across an interior crossing, using A = A₁ + A₂.*
+**3.** Find the area of the region enclosed by the parabolas y = x² and y = 8 − x².
+A. 32/3
+B. 64/3
+C. 80/3
+D. −64/3
 
-*Includes all three TASKs the lecturer set and never answered: 6x − x² against the axis; y = x² with y = 2 − x² on [0, 2]; and y = cos x with y = 2 − cos x on [0, 2π].*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
-
-**1.** Example 1: f(x) = 5x − x² cuts the x-axis at x = 0 and x = 5, and f(2) = 6 > 0. Evaluate ∫₀⁵(5x − x²)dx.
-A. 125/6
-B. 125/2
-C. 125/3
-D. −125/6
-
-**2.** TASK 1: find the area between the graph of f(x) = 6x − x² and the x-axis.
-A. 36
-B. 18
-C. 72
-D. 108
-
-**3.** Example 2: find the area bounded by f(x) = x² − 1, the x-axis and the lines x = 0 and x = 2.
-A. 2/3
+**4.** Find the total area between the curves y = x³ and y = x from x = 0 to x = 2.
+A. 9/4
 B. 2
-C. 4/3
-D. −2/3
+C. 1/4
+D. 5/2
 
-**4.** Find the area between the curve y = 4 − x² and the x-axis.
-A. 16/3
-B. 32/3
-C. 16
-D. −32/3
+**5.** Find the area between the curves y = cos x and y = 3 − cos x from x = 0 to x = π.
+A. 3π − 4
+B. 6π
+C. 3π
+D. −3π
 
-**5.** Example 1 of the two-curve section: find the area bounded by y = 3 − x and y = x² − 9.
-A. 45/2
-B. −73/6
-C. 343/6
-D. 104/3
+**6.** The area between the curve y = x² and the x-axis from x = 0 to x = a (with a > 0) is 9 square units. Find a.
+A. a = 3
+B. a = 27
+C. a = ∛9
+D. a = 3√2
 
-**6.** Example 2 of the two-curve section: find the area enclosed by f(x) = 2 − x and g(x) = 4 − x².
-A. 10/3
-B. 13/6
-C. 9/2
-D. −9/2
+**7.** Find the area between the curve y = x² − 2x − 8 and the x-axis from x = −1 to x = 3.
+A. 52/3
+B. 92/3
+C. −92/3
+D. 24
 
-**7.** TASK 2: find the area bounded by y = x² and y = 2 − x² for 0 ≤ x ≤ 2.
-A. 4/3
-B. −4/3
-C. 8/3
-D. 4
+**8.** Two curves y = f(x) and y = g(x) cross once at x = c inside [a, b]. A₁ = ∫ₐᶜ(f(x) − g(x))dx > 0 and A₂ = ∫ᶜᵇ(g(x) − f(x))dx > 0. What is the single integral ∫ₐᵇ(f(x) − g(x))dx equal to?
+A. A₁ + A₂
+B. 0
+C. |A₁ − A₂|
+D. A₁ − A₂
 
-**8.** TASK 3: find the area bounded by y = cos x and y = 2 − cos x for 0 ≤ x ≤ 2π.
-A. 0
-B. 2π
-C. 8π
-D. 4π
+**9. (show your working)** Find the total area between the curves y = sin x and y = cos x from x = 0 to x = π. Show your working.
 
-**9.** Work TASK 1 in full: find the area between f(x) = 6x − x² and the x-axis. Show where the limits come from, show the interior test, and say why no modulus is needed.
-*(short answer)*
+**10. (show your working)** Find the total area of the region enclosed by the curve y = x³ and the line y = 4x. Show your working.
 
-**10.** Work TASK 2 in full: find the area bounded by y = x² and y = 2 − x² for 0 ≤ x ≤ 2. Show both pieces, and state what a single integral over [0, 2] would have given.
-*(short answer)*
+**11. (show your working)** Find the area of the region enclosed by the curve y = x³ − 6x² + 9x and the x-axis. Show your working.
 
-**11.** Work TASK 3 in full: find the area bounded by y = cos x and y = 2 − cos x for 0 ≤ x ≤ 2π. Explain why this one does not need splitting even though it follows two slides that do.
-*(short answer)*
+**12. (show your working)** Both y = f(x) and y = g(x) cross the x-axis somewhere inside [a, b], but f(x) ≥ g(x) for every x in [a, b]. Explain whether the integral for the area between the two curves must be split into pieces, and why.
 
-**12.** Reproduce Example 1 of the two-curve section in full: y = 3 − x and y = x² − 9. Show the factorisation, the test point, the integrand, and both substitutions written out, including the value at x = −4.
-*(short answer)*
+---
 
 ## Answers
 
-**1. A** — [5x²/2 − x³/3]₀⁵ = (125/2 − 125/3) − 0 = (375 − 250)/6 = 125/6 ≈ 20.83 square units. Option 2 keeps 5x²/2 = 125/2 and drops the cubic term entirely. Option 3 keeps 125/3 and drops the first term. Option 4 evaluates lower limit minus upper limit; reversing the order negates the whole answer, and a negative number cannot be an area.
+**1. A** — *Area against the axis with a split at a root.* x² − 3x = x(x − 3) is zero at x = 3, inside [0, 4]; f ≤ 0 on [0, 3] and f ≥ 0 on [3, 4]. With F(x) = x³/3 − 3x²/2: |F(3) − F(0)| = |9 − 27/2| = 9/2 and F(4) − F(3) = (64/3 − 24) − (−9/2) = −8/3 + 9/2 = 11/6. A = 9/2 + 11/6 = 27/6 + 11/6 = 38/6 = 19/3 square units.
 
-**2. A** — 6x − x² = 0 gives x(6 − x) = 0, so x = 0 and x = 6; f(3) = 18 − 9 = 9 > 0, so no modulus. [3x² − x³/3]₀⁶ = 108 − 72 = 36 square units. Option 2 integrates only to x = 3, stopping at the turning point instead of the root. Option 3 is the 6³/3 = 72 term alone. Option 4 is 3(6)² = 108 alone, dropping the cubic term — notice that the correct answer is the difference of options 3 and 4.
+9/2 is the piece below the axis only; 11/6 is the piece above only; 8/3 is the magnitude of the unsplit integral ∫₀⁴(x² − 3x)dx = −8/3, in which the pieces cancel.
 
-**3. B** — x² − 1 = 0 gives x = ±1 and only x = 1 is in [0, 2]. On [0,1] f ≤ 0 and on [1,2] f ≥ 0, so A = |∫₀¹(x² − 1)dx| + ∫₁²(x² − 1)dx = |1/3 − 1| + ((8/3 − 2) − (1/3 − 1)) = 2/3 + 4/3 = 2. Option 1 is the unsplit integral ∫₀²(x² − 1)dx = 8/3 − 2 = 2/3, which is also numerically the first piece's magnitude — a wrong method landing on a familiar-looking number. Option 3 is the second piece only. Option 4 is the first piece with the modulus dropped.
+**2. C** — *Area enclosed by a line and a parabola.* Limits: x + 4 = x² − 2x gives x² − 3x − 4 = (x − 4)(x + 1) = 0, so x = −1 and x = 4. At x = 0 the line gives 4 and the parabola 0, so the line is on top. A = ∫₋₁⁴[(x + 4) − (x² − 2x)]dx = ∫₋₁⁴(3x + 4 − x²)dx = [3x²/2 + 4x − x³/3]₋₁⁴ = 56/3 − (−13/6) = 112/6 + 13/6 = 125/6 square units.
 
-**4. B** — 4 − x² = 0 gives x = ±2; f(0) = 4 > 0, so the plain integral applies. [4x − x³/3]₋₂² = (8 − 8/3) − (−8 + 8/3) = 16/3 + 16/3 = 32/3. Option 1 integrates only from 0 to 2, taking half the region — the shortcut is to double that, not to use it as the answer. Option 3 comes from dropping the −x³/3 term and computing 4x from −2 to 2. Option 4 has the limits reversed.
+56/3 is the value at the upper limit alone; −125/6 subtracts parabola minus line, the wrong order; 33/2 is 56/3 − 13/6, from failing to double the minus when subtracting the negative lower-limit value.
 
-**5. C** — 3 − x = x² − 9 gives (x + 4)(x − 3) = 0, so x = −4 and x = 3; at x = 2, f = 1 and g = −5, so f is on top. The integrand is 12 − x − x², giving [12x − x²/2 − x³/3]₋₄³. At x = 3: 36 − 4.5 − 9 = 45/2. At x = −4: −48 − 8 + 64/3 = −104/3. So A = 45/2 − (−104/3) = 45/2 + 104/3 = 343/6 ≈ 57.17 square units. Option 1 is the upper-limit value alone, from forgetting to subtract. Option 2 is 45/2 − 104/3, the error of not doubling the minus when subtracting a negative — the single most common slip in this example. Option 4 is the magnitude of the lower-limit value alone.
+**3. B** — *Area enclosed by two parabolas.* Limits: x² = 8 − x² gives x² = 4, so x = −2 and x = 2. At x = 0, 8 − x² = 8 is above x² = 0, so A = ∫₋₂²[(8 − x²) − x²]dx = ∫₋₂²(8 − 2x²)dx = [8x − 2x³/3]₋₂² = (16 − 16/3) − (−16 + 16/3) = 32 − 32/3 = 64/3 square units.
 
-**6. C** — 2 − x = 4 − x² gives x² − x − 2 = 0, (x − 2)(x + 1) = 0, so x = −1 and x = 2; at x = 1, f = 1 and g = 3, so g is on top and the integrand is (4 − x²) − (2 − x) = 2 + x − x². Then [2x + x²/2 − x³/3]₋₁² = 10/3 − (−7/6) = 27/6 = 9/2 = 4.5 square units. Option 1 is the upper-limit value 10/3 with the lower limit not subtracted. Option 2 is 10/3 − 7/6 = 13/6, from treating the lower value as +7/6 instead of −7/6. Option 4 subtracts in the order f − g, which the test point rules out, and returns a negative number.
+32/3 integrates from 0 to 2 only and forgets the left half; 80/3 is ∫₋₂²(8 − x²)dx, the area under the top curve with the lower curve never subtracted; −64/3 subtracts in the wrong order.
 
-**7. D** — x² = 2 − x² gives x² = 1, and only x = 1 lies in [0, 2], so the curves cross inside and slide 12 applies. On [0,1] the test x = 0 gives 0 against 2, so 2 − x² is on top: A₁ = ∫₀¹(2 − 2x²)dx = 2 − 2/3 = 4/3. On [1,2] the test x = 2 gives 4 against −2, so x² is on top: A₂ = ∫₁²(2x² − 2)dx = (16/3 − 4) − (2/3 − 2) = 8/3. A = 4/3 + 8/3 = 4 square units. Option 1 is A₁ only. Option 3 is A₂ only. Option 2 is the single unsplit integral ∫₀²(2 − 2x²)dx = 4 − 16/3 = −4/3 — negative, and even its magnitude is not the area, because the pieces cancelled before any modulus could be applied.
+**4. D** — *Area between curves that cross inside the interval.* x³ = x gives x(x² − 1) = 0, so the curves cross at x = 1 inside [0, 2]. On [0, 1] the line is on top (at x = 1/2: 1/2 > 1/8); on [1, 2] the cubic is on top (at x = 2: 8 > 2). A₁ = ∫₀¹(x − x³)dx = 1/2 − 1/4 = 1/4 and A₂ = ∫₁²(x³ − x)dx = (4 − 2) − (1/4 − 1/2) = 9/4. A = 1/4 + 9/4 = 10/4 = 5/2 square units.
 
-**8. D** — cos x = 2 − cos x gives 2cos x = 2, cos x = 1, so x = 0 and x = 2π — both are endpoints, so there is no interior crossing and one integral suffices. At x = π, cos π = −1 and 2 − cos π = 3, so 2 − cos x is on top: A = ∫₀^(2π)(2 − 2cos x)dx = [2x − 2sin x]₀^(2π) = (4π − 0) − (0 − 0) = 4π ≈ 12.57 square units. Option 1 assumes the cosine terms cancel over a full period, forgetting the constant 2 that survives. Option 2 integrates (1 − cos x) instead of (2 − 2cos x), losing the factor of 2 in the difference. Option 3 doubles the answer by splitting at x = π, where the curves do not in fact meet.
+9/4 is the second piece only; 2 is the magnitude of the single integral ∫₀²(x − x³)dx = 2 − 4 = −2, where the pieces cancel; 1/4 is the first piece only.
 
-**9.** A good answer follows her Example 1 exactly. Limits: no interval is given, so set f(x) = 0; 6x − x² = 0 factorises as x(6 − x) = 0, giving x = 0 and x = 6, the points at which the curve cuts the x-axis. Test: take a point inside, say x = 3; f(3) = 6(3) − 3² = 18 − 9 = 9 > 0, so f(x) ≥ 0 across [0, 6] and the first case of slide 4 applies — hence no modulus. Evaluate: A = ∫₀⁶(6x − x²)dx = [6x²/2 − x³/3]₀⁶ = [3x² − x³/3]₀⁶ = (3(36) − 216/3) − (0 − 0) = 108 − 72 = 36. Conclude with the units: the area is 36 square units. Credit the explicit lower-limit bracket even though it is zero; that is her habit and it is where the marks sit.
+**5. C** — *Area between trigonometric curves without a crossing.* Check for crossings: cos x = 3 − cos x gives cos x = 3/2, impossible, so the curves never meet and one integral suffices. At x = 0: 3 − cos 0 = 2 > cos 0 = 1, so y = 3 − cos x is on top throughout. A = ∫₀^π[(3 − cos x) − cos x]dx = ∫₀^π(3 − 2cos x)dx = [3x − 2sin x]₀^π = (3π − 0) − (0 − 0) = 3π square units.
 
-**10.** A good answer first checks for a crossing: x² = 2 − x² gives 2x² = 2, x² = 1, x = ±1, and only x = 1 lies in [0, 2], so c = 1 and slide 12's A = A₁ + A₂ applies rather than slide 8's single formula. Then it tests each sub-interval: at x = 0, x² = 0 and 2 − x² = 2, so 2 − x² is on top on [0,1]; at x = 2, x² = 4 and 2 − x² = −2, so x² is on top on [1,2]. A₁ = ∫₀¹[(2 − x²) − x²]dx = ∫₀¹(2 − 2x²)dx = [2x − 2x³/3]₀¹ = 2 − 2/3 = 4/3. A₂ = ∫₁²[x² − (2 − x²)]dx = ∫₁²(2x² − 2)dx = [2x³/3 − 2x]₁² = (16/3 − 4) − (2/3 − 2) = 4/3 + 4/3 = 8/3. A = 4/3 + 8/3 = 4 square units. Finally: a single integral ∫₀²(2 − 2x²)dx = 4 − 16/3 = −4/3, which is negative and whose magnitude 4/3 is also wrong, because the second lobe entered with the opposite sign and cancelled part of the first.
+3π − 4 integrates cos x to −cos x (the antiderivative of sin x), giving [3x + 2cos x]₀^π = (3π − 2) − 2; 6π integrates over [0, 2π] instead of the given [0, π]; −3π subtracts in the wrong order.
 
-**11.** A good answer solves for the intersections first: cos x = 2 − cos x gives 2cos x = 2, so cos x = 1, and on [0, 2π] that happens at x = 0 and x = 2π only. Both are endpoints, so there is no c strictly inside the interval and slide 12 does not apply — this is a slide 8 problem. Test x = π: cos π = −1 and 2 − cos π = 3, so 2 − cos x is on top throughout. A = ∫₀^(2π)[(2 − cos x) − cos x]dx = ∫₀^(2π)(2 − 2cos x)dx = [2x − 2sin x]₀^(2π) = (4π − 2sin 2π) − (0 − 2sin 0) = 4π − 0 = 4π square units, about 12.57. The point of the task is that splitting is triggered by an interior intersection, not by the presence of trigonometric functions or by a long interval; always solve f = g and look at where the solutions actually fall.
+**6. A** — *Finding a limit from a given area.* x² ≥ 0, so A = ∫₀ᵃx²dx = [x³/3]₀ᵃ = a³/3. Set a³/3 = 9, so a³ = 27 and a = 3. Check: ∫₀³x²dx = 27/3 = 9.
 
-**12.** A good answer sets 3 − x = x² − 9, rearranges to x² + x − 12 = 0 and factorises to (x + 4)(x − 3) = 0, giving x = −4 and x = 3. It then tests x = 2 in [−4, 3]: f(2) = 1 and g(2) = −5, so f(x) ≥ g(x) and the integrand is f − g = (3 − x) − (x² − 9) = 12 − x − x². The antiderivative is 12x − x²/2 − x³/3 (the slide writes the last two terms in the other order, which is the same function). At x = 3: 12(3) − 9/2 − 27/3 = 36 − 4.5 − 9 = 45/2. At x = −4: 12(−4) − 16/2 − (−64)/3 = −48 − 8 + 64/3 = −56 + 64/3 = −104/3. Then A = 45/2 − (−104/3) = 45/2 + 104/3 = (135 + 208)/6 = 343/6 ≈ 57.17 square units. The step to emphasise is the double minus: subtracting −104/3 adds it. Writing 45/2 − 104/3 gives −73/6, a negative number that cannot be an area — which is itself the check that something went wrong.
+a = 27 stops at a³ = 27 without taking the cube root; a = ∛9 forgets to multiply by 3 and solves a³ = 9; a = 3√2 integrates x instead of x², solving a²/2 = 9.
+
+**7. B** — *Area below the axis on an interval with a negative lower limit.* Roots: x² − 2x − 8 = (x − 4)(x + 2) = 0 gives x = −2 and x = 4, both outside [−1, 3], so f does not change sign there; f(0) = −8 < 0, so the curve is below the axis on the whole interval and A = |∫₋₁³(x² − 2x − 8)dx|. With F(x) = x³/3 − x² − 8x: F(3) = 9 − 9 − 24 = −24 and F(−1) = −1/3 − 1 + 8 = 20/3, so the integral is −24 − 20/3 = −92/3 and A = 92/3 square units.
+
+52/3 evaluates F(−1) with the wrong sign, giving −24 + 20/3; −92/3 forgets the modulus and reports a negative area; 24 is the upper-limit value alone.
+
+**8. D** — *What a single integral across a crossing computes.* Integrals add over adjacent intervals: ∫ₐᵇ(f − g)dx = ∫ₐᶜ(f − g)dx + ∫ᶜᵇ(f − g)dx = A₁ + (−A₂) = A₁ − A₂, because on [c, b] the integrand f − g is the negative of g − f. The true area is A₁ + A₂, so the single integral undercounts by 2A₂.
+
+A₁ + A₂ is the area, not the single integral; 0 happens only in the special case A₁ = A₂ (as for sin x and cos x on [0, π/2]); |A₁ − A₂| is the modulus of the single integral, which still is not the area.
+
+**9.** *Area between sine and cosine across a crossing.* Crossing: sin x = cos x gives tan x = 1, so x = π/4 in [0, π]. On [0, π/4] cos x is on top (at x = 0: 1 > 0); on [π/4, π] sin x is on top (at x = π/2: 1 > 0). A₁ = ∫₀^(π/4)(cos x − sin x)dx = [sin x + cos x]₀^(π/4) = (1/√2 + 1/√2) − (0 + 1) = √2 − 1. A₂ = ∫_(π/4)^π(sin x − cos x)dx = [−cos x − sin x]_(π/4)^π = (1 − 0) − (−1/√2 − 1/√2) = 1 + √2. A = A₁ + A₂ = 2√2.
+
+Final answer: 2√2 square units (also accepted: 4/√2, or 2.83 to two decimal places). The working must find the crossing at π/4, split there with the top function first in each piece, and add. A single integral ∫₀^π(cos x − sin x)dx = 2 − 2√2 is negative and is not accepted; √2 − 1 alone is only the first piece.
+
+**10.** *Area enclosed by a cubic and a line through the origin.* Intersections: x³ = 4x gives x(x² − 4) = 0, so x = −2, 0, 2. The region has two lobes and the curves cross at x = 0, so split there. On [−2, 0] the cubic is on top (at x = −1: −1 > −4); on [0, 2] the line is on top (at x = 1: 4 > 1). A₁ = ∫₋₂⁰(x³ − 4x)dx = [x⁴/4 − 2x²]₋₂⁰ = 0 − (4 − 8) = 4. A₂ = ∫₀²(4x − x³)dx = [2x² − x⁴/4]₀² = 8 − 4 = 4. A = 4 + 4 = 8.
+
+Final answer: 8 square units. Using the symmetry of the two lobes, A = 2 × 4 = 8, is also accepted, provided one lobe is integrated correctly. A single integral ∫₋₂²(4x − x³)dx = 0 is wrong because the lobes cancel; 4 alone is one lobe.
+
+**11.** *Area between a cubic and the x-axis with a repeated root.* Limits from f(x) = 0: x³ − 6x² + 9x = x(x² − 6x + 9) = x(x − 3)², so the curve meets the axis at x = 0 and x = 3 (a double root, where the curve touches without crossing). The enclosed region is on [0, 3]; test x = 1: 1 − 6 + 9 = 4 > 0, so the curve is above the axis there and no modulus is needed. A = ∫₀³(x³ − 6x² + 9x)dx = [x⁴/4 − 2x³ + 9x²/2]₀³ = 81/4 − 54 + 81/2 = (81 − 216 + 162)/4 = 27/4.
+
+Final answer: 27/4 square units (also accepted: 6.75). The working must factorise to find the roots 0 and 3, include a sign check, and evaluate the bracket at both limits. Splitting at x = 3 changes nothing because the curve does not cross there; −27/4 has a sign error in the evaluation.
+
+**12.** *When a split is needed for two curves.* No split is needed. The height of a vertical strip between the curves is f(x) − g(x), a difference of y-values, and it stays non-negative on the whole of [a, b] because f is on top throughout. Where either curve crosses the x-axis is irrelevant: the axis is not one of the boundaries of the region. So A = ∫ₐᵇ(f(x) − g(x))dx in one piece. Splitting is required only where the two curves cross each other, that is where f(x) = g(x) inside (a, b), because there the integrand changes sign and the pieces would cancel.
+
+A correct answer says one integral of f − g is enough, that the strip height ignores the x-axis, and that the split point for two curves is a solution of f(x) = g(x), not of f(x) = 0 or g(x) = 0.

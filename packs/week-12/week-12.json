@@ -13,7 +13,8 @@
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Monday's fast hour runs the whole Social Vices deck at 1.5-1.75x.\n\nThe crime-versus-deviance split, and the seven named theories of deviance and crime.\n\nThe 1950s Pirates Confraternity origin of campus cultism, and the 3-year and 21-year cultism penalties.\n\nThen the kidnapping and armed robbery sections, with their causes, effect lists and case figures: 838 in 2018 to 4,600 in 2022; 11,858 in 2013 down to 10,249 in 2014.\n\nClosing on the six geo-political zones' different versions of kidnapping, and the EFCC."
+        "topic": "Monday's fast hour runs the whole Social Vices deck at 1.5-1.75x.\n\nThe crime-versus-deviance split, and the seven named theories of deviance and crime.\n\nThe 1950s Pirates Confraternity origin of campus cultism, and the 3-year and 21-year cultism penalties.\n\nThen the kidnapping and armed robbery sections, with their causes, effect lists and case figures: 838 in 2018 to 4,600 in 2022; 11,858 in 2013 down to 10,249 in 2014.\n\nClosing on the six geo-political zones' different versions of kidnapping, and the EFCC.",
+        "checkFile": "checks/Mon-GST_112-fast.md"
       }
     },
     {
@@ -25,7 +26,8 @@
       },
       "fast": {
         "course": "CSC_106",
-        "topic": "Future trends applied: Wasm, serverless behaviour, ML types, accessible markup and PWAs."
+        "topic": "Future trends applied: Wasm, serverless behaviour, ML types, accessible markup and PWAs.",
+        "checkFile": "checks/Tue-CSC_106-fast.md"
       }
     },
     {
@@ -37,7 +39,8 @@
       },
       "fast": {
         "course": "GST_122",
-        "topic": "Wednesday's fast hour drills the recall spine of the Active Listening and Note-Taking deck.\n\nThe three benefits of active listening. The six active-listening techniques.\n\nThen the note-taking tips, culminating in the Cornell method's cue/notes/summary layout, and mind mapping.\n\nPlus a quick pass over the mismatched summary card's deductive-versus-inductive reasoning, and its two named fallacies."
+        "topic": "Wednesday's fast hour drills the recall spine of the Active Listening and Note-Taking deck.\n\nThe three benefits of active listening. The six active-listening techniques.\n\nThen the note-taking tips, culminating in the Cornell method's cue/notes/summary layout, and mind mapping.\n\nPlus a quick pass over the mismatched summary card's deductive-versus-inductive reasoning, and its two named fallacies.",
+        "checkFile": "checks/Wed-GST_122-fast.md"
       }
     },
     {
@@ -49,7 +52,8 @@
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "Thursday's fast hour covers the Young modulus beam experiment.\n\nDefinitions of stress, strain and E = σ/ε in pascals.\n\nThe central-depression formula Y = mgℓ³/(48EI), with I = bd³/12, collapsing to Y = mgℓ³/(4Ebd³).\n\nThe dial-gauge/masses/2-mounts apparatus, and the 50-500 g loading procedure.\n\nThe Y-against-m straight line through the origin, whose gradient gives E = gℓ³/(4bd³s).\n\nPlus the thickness-cubed error and the elastic-limit precautions."
+        "topic": "Thursday's fast hour covers the Young modulus beam experiment.\n\nDefinitions of stress, strain and E = σ/ε in pascals.\n\nThe central-depression formula Y = mgℓ³/(48EI), with I = bd³/12, collapsing to Y = mgℓ³/(4Ebd³).\n\nThe dial-gauge/masses/2-mounts apparatus, and the 50-500 g loading procedure.\n\nThe Y-against-m straight line through the origin, whose gradient gives E = gℓ³/(4bd³s).\n\nPlus the thickness-cubed error and the elastic-limit precautions.",
+        "checkFile": "checks/Thu-PHY_108-fast.md"
       }
     },
     {
@@ -62,7 +66,7 @@
       "fast": {
         "course": "COS_102",
         "topic": "Applying the Software Testing Methods deck to real code.\n\nClassifying a failure as functional or non-functional, then choosing the method: unit, integration, system, acceptance versus usability, performance, security, compatibility.\n\nChoosing the integration direction, top-down or bottom-up.\n\nDeciding between black, white and grey box for a given situation, and knowing which levels each applies to.\n\nDesigning test data by equivalence partitioning and boundary value analysis.\n\nAnd reading a debugger's breakpoint and variable watch to name the defect class.",
-        "checkFile": "checks/Sat-COS_102.md"
+        "checkFile": "checks/Fri-COS_102-fast.md"
       }
     },
     {
@@ -223,131 +227,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "In her first kinematics example the car's velocity is v(t) = 2t² + 6t + 1 kmh⁻¹ and she computes ∫₀⁵ v(t)dt. What kind of quantity does that integral produce, and why?",
+          "q": "A body moves with velocity v(t) = 3t² + 2 m/s. Find the distance it travels in the first 2 seconds.",
           "options": [
-            "A distance in km, because integrating a rate of change of position over an interval accumulates the total change over that interval",
-            "A speed in kmh⁻¹, because the integral of a velocity is still a velocity",
-            "An acceleration, because integration and differentiation both change the physical quantity by one step",
-            "A distance, but only because the interval happens to start at t = 0"
-          ],
-          "answerIndex": 0,
-          "concept": "Integrating a rate over an interval gives the accumulated total",
-          "why": "Velocity is the rate of change of position, so ∫ₐᵇ v dt is the accumulated change in position between a and b — the units multiply out as (km/h)(h) = km. Option 2 confuses the integrand with the integral; v(5) = 81 km/h is the speed at the end, and it is the most common wrong answer in this whole week. Option 3 has the direction of the operation backwards: differentiating position gives velocity, so integrating velocity returns to position, never to acceleration. Option 4 is a misreading — the accumulation argument works for any limits a and b; starting at 0 only makes the lower bracket vanish arithmetically."
-        },
-        {
-          "type": "mcq",
-          "q": "In Example 2 she writes x(t) = ∫(6t² − 6t − 12)dt = 2t³ − 3t² − 12t + C and only then uses the words 'initial displacement is −4 m'. Why does she need that sentence at all?",
-          "options": [
-            "Because the velocity function alone is not enough to integrate",
-            "Because the indefinite integral gives a whole family of displacement functions, and the datum picks the one member of the family that describes this body",
-            "Because the constant of integration is otherwise assumed to be zero by convention",
-            "Because displacement must always be measured from a negative starting point"
+            "14 m",
+            "12 m",
+            "28 m",
+            "10 m"
           ],
           "answerIndex": 1,
-          "concept": "What an initial condition does to an indefinite integral",
-          "why": "Every function 2t³ − 3t² − 12t + C has the same derivative, so the velocity alone cannot distinguish them; they differ only in where the origin sits. The datum x(0) = −4 selects C = −4 and so selects one curve. Option 1 is false — the integration is done before the datum is used. Option 3 states a convention where there is none: assuming C = 0 would put the body at the origin at t = 0, contradicting the question. Option 4 mistakes an arbitrary feature of this example for a rule."
+          "concept": "Distance as the integral of velocity",
+          "why": "Velocity is the rate of change of position, so the distance covered from t = 0 to t = 2 is the integral of v: ∫₀²(3t² + 2)dt = [t³ + 2t]₀² = (8 + 4) − 0 = 12 m. v > 0 throughout, so this is also the total distance.\n\n14 m is v(2), the speed at the end, not a distance; 28 m multiplies that final speed by 2 s as if the speed were constant; 10 m integrates the constant 2 as 2 instead of 2t."
         },
         {
           "type": "mcq",
-          "q": "Part (c) of Example 2 asks for the net displacement in the first 5 seconds, and the −4 does not appear anywhere in her working. What is the reason?",
+          "q": "A body has velocity v(t) = 4t − 1 m/s and its initial displacement is x(0) = 3 m. Find its displacement function x(t).",
           "options": [
-            "She dropped it by mistake; it should have been carried through",
-            "Net displacement is always measured from the origin, so any starting offset is ignored by definition",
-            "A definite integral is F(5) − F(0), so any constant added to F appears in both terms and cancels",
-            "The constant only matters for velocity functions, not for displacement functions"
-          ],
-          "answerIndex": 2,
-          "concept": "Why the constant of integration cancels in a definite integral",
-          "why": "With antiderivative F(t) + C, the theorem gives (F(5) + C) − (F(0) + C) = F(5) − F(0); the C cancels, which is why the bracket on her slide reads [2t³ − 3t² − 12t]₀⁵. Option 1 is wrong and worth being sure about — carrying the −4 in and subtracting once gives 111, which is the position x(5), not the change. Option 2 has it exactly backwards: net displacement ignores the offset because it is a change, not because it is measured from the origin. Option 4 invents a distinction the mathematics does not make."
-        },
-        {
-          "type": "mcq",
-          "q": "Why does the dam problem need an integral rather than a single multiplication of pressure by area?",
-          "options": [
-            "Because the dam face is not flat",
-            "Because the weight density of water is not constant over 100 m of depth",
-            "Because the width L(x) of the dam changes with depth",
-            "Because the pressure grows with depth, so no one pressure acts on the whole face; each thin strip is at essentially one depth and the integral adds the strips"
+            "x(t) = 2t² − t − 3",
+            "x(t) = 2t² − t",
+            "x(t) = 4t² − t + 3",
+            "x(t) = 2t² − t + 3"
           ],
           "answerIndex": 3,
-          "concept": "Why fluid force on a vertical face is an integral",
-          "why": "Pressure at depth h is w·h, so it runs from 0 at the surface to a maximum at the base; multiplying any single pressure by the whole area is therefore wrong, and slicing into horizontal strips of near-constant depth is what makes the multiplication legitimate on each piece. Option 1 is false — this dam face is a flat rectangle. Option 2 is false: w = ρg = 9800 is a constant and she pulls it straight out of the integral. Option 3 is false for this example specifically — L(x) = 300 everywhere, which is why 9800 × 300 comes out front as 2.94 × 10⁶; the varying factor is h(x) = x alone."
+          "concept": "Displacement function from velocity and an initial condition",
+          "why": "x(t) = ∫(4t − 1)dt = 2t² − t + C. Substituting t = 0 kills the first two terms, so x(0) = C = 3 and x(t) = 2t² − t + 3.\n\n2t² − t − 3 has the sign of the constant wrong; 2t² − t drops the constant and gives x(0) = 0, contradicting the data; 4t² − t + 3 forgets to divide 4t by the new power 2."
         },
         {
           "type": "mcq",
-          "q": "In the rope example she spends most of the slide constructing F(x) = 0.6468(60 − x) before integrating anything. What makes the '60 − x' the crux of the problem?",
+          "q": "A vertical rectangular gate 4 m wide and 3 m deep has its top edge level with the water surface. Water has density 1000 kg/m³ and g = 9.8 m/s². Which integral gives the fluid force on the gate?",
           "options": [
-            "Only the rope still hanging has to be lifted, so the force needed falls from 38.8 N to 0 as x runs from 0 to 60 — a varying force, which is exactly why the work is an integral",
-            "It is the distance the rope still has to travel upwards",
-            "It converts the mass per metre into a total mass",
-            "It is a change of variable that makes the integral easier to evaluate"
+            "∫₀³ 9800·x·4 dx",
+            "∫₀³ 9800·4 dx",
+            "∫₀⁴ 9800·x·3 dx",
+            "∫₀³ 1000·x·4 dx"
           ],
           "answerIndex": 0,
-          "concept": "Why work by a variable force is an integral",
-          "why": "The pull only has to support what is still over the edge, and that shrinks as you haul, so F is a function of x rather than a constant, and W = ∫F dx replaces force × distance. Option 2 misreads the variable: x is how much rope has been pulled up, and 60 − x is a length of rope, not a distance yet to be travelled. Option 3 confuses two separate steps — the conversion is 66 g/m to 0.066 kg/m, and it happens before the 60 − x appears. Option 4 treats a piece of physics as a piece of algebra; nothing here is a substitution."
+          "concept": "Setting up the fluid-force integral",
+          "why": "F = ∫ₐᵇ w·h(x)·L(x)dx with weight density w = ρg = 1000 × 9.8 = 9800 N/m³, depth h(x) = x measured down from the surface (0 to 3 m), and width L(x) = 4 m at every depth. So F = ∫₀³ 9800·x·4 dx (= 176 400 N).\n\n∫₀³ 9800·4 dx leaves out the depth, treating the pressure as the same at every level; ∫₀⁴ 9800·x·3 dx swaps the width and the depth; ∫₀³ 1000·x·4 dx uses ρ instead of ρg and is 9.8 times too small."
         },
         {
           "type": "mcq",
-          "q": "In F = ∫ₐᵇ w·h(x)·L(x)dx, what do the three factors stand for?",
+          "q": "A force F(x) = 6x newtons acts on an object as it moves along a line from x = 0 to x = 3 m. Find the work done.",
           "options": [
-            "w is the width of the dam, h(x) its height, L(x) its length",
-            "w is the weight density ρg of the fluid, h(x) the depth of the strip at position x, L(x) the width of the face at that strip",
-            "w is the work done, h(x) the head of water, L(x) the load",
-            "w is the mass of the water, h(x) the height above the base, L(x) the perimeter"
-          ],
-          "answerIndex": 1,
-          "concept": "Reading the three factors of the fluid-force formula",
-          "why": "w·h(x) is the pressure at depth h(x), and multiplying by the width L(x) and the thickness dx gives the force on one strip; adding the strips is the integral. Option 1 is the trap her own wording invites, since she calls h(x) 'the height of the dam at a point x' while using it as a depth measured down from the surface. Option 3 mixes symbols from different applications. Option 4 gets the direction wrong — measuring height upward from the base would put zero pressure at the bottom, which is the reverse of reality — and w is a density, not a mass."
-        },
-        {
-          "type": "mcq",
-          "q": "Why can neither CS = ∫₀^Q₀[D(Q) − P₀]dQ nor PS = ∫₀^Q₀[P₀ − S(Q)]dQ be started until the equilibrium has been found?",
-          "options": [
-            "Because the integrals are improper until a finite upper limit is supplied",
-            "Because D(Q) and S(Q) are only defined at the equilibrium point",
-            "Because both the upper limit Q₀ and the constant P₀ inside the bracket come from solving D(Q) = S(Q)",
-            "Because the surpluses are equal at equilibrium, so one determines the other"
+            "54 J",
+            "18 J",
+            "27 J",
+            "9 J"
           ],
           "answerIndex": 2,
-          "concept": "Equilibrium first, then the surplus integrals",
-          "why": "Q₀ is the positive root of 1000 − 25Q = 100 + Q², and P₀ = D(Q₀) = 500; without both numbers neither integrand nor either limit is known. Option 1 misuses 'improper', which describes infinite limits or unbounded integrands, not a missing symbol. Option 2 is false — both functions are defined for every Q; equilibrium is just where they agree. Option 4 is false in this very example, where CS = 5000 and PS ≈ 5333 are different numbers."
+          "concept": "Work done by a variable force",
+          "why": "The force changes with position, so W = ∫₀³F(x)dx = ∫₀³6x dx = [3x²]₀³ = 27 J.\n\n54 J is F(3) × 3, the final force times the distance, which is only valid for a constant force; 18 J integrates the constant 6 and forgets the x; 9 J integrates 6x to x² instead of 3x²."
         },
         {
           "type": "mcq",
-          "q": "In the copper example she integrates the consumption rate to get C(t) = 1000e^(0.035t) + c, then sets C(0) = 0. What does C(t) count, and what is the condition doing?",
+          "q": "A firm's marginal revenue is MR(Q) = 60 − 2Q. Find the extra revenue earned when sales rise from Q = 5 to Q = 10 units.",
           "options": [
-            "C(t) is the rate of consumption t years after 2005, and C(0) = 0 says nothing was being consumed in 2005",
-            "C(t) is the remaining stock of copper, and C(0) = 0 says the reserves start empty",
-            "C(t) is the average annual consumption, and C(0) = 0 fixes the units",
-            "C(t) is the cumulative amount consumed since 2005, and C(0) = 0 says nothing has yet been consumed at the moment the clock starts, which forces c = −1000"
+            "225",
+            "500",
+            "40",
+            "200"
+          ],
+          "answerIndex": 0,
+          "concept": "Integrating a marginal function over an interval",
+          "why": "Marginal revenue is the rate of change of total revenue, so the extra revenue is ∫₅¹⁰(60 − 2Q)dQ = [60Q − Q²]₅¹⁰ = (600 − 100) − (300 − 25) = 500 − 275 = 225.\n\n500 evaluates the antiderivative at Q = 10 only; 40 is MR(10), the rate at the end; 200 multiplies that rate by the 5 extra units as if MR were constant."
+        },
+        {
+          "type": "mcq",
+          "q": "A graph of a factory's discharge rate r(t), in tonnes per day, is a straight line rising from (0, 0) to (5, 10). Find the total amount discharged in the first 5 days.",
+          "options": [
+            "10 t",
+            "50 t",
+            "12.5 t",
+            "25 t"
           ],
           "answerIndex": 3,
-          "concept": "What the accumulated total counts, and how its initial condition is read",
-          "why": "The rate is C′(t) = 35e^(0.035t), so its integral C(t) is a running total of copper consumed since 2005; at t = 0 that total is necessarily zero, and since e⁰ = 1 the equation 0 = 1000 + c gives c = −1000, hence C(t) = 1000e^(0.035t) − 1000. Option 1 confuses C with C′ — the rate at t = 0 is 35, not 0. Option 2 reverses the direction: a stock that starts empty could never be exhausted, and part (b) sets C(t) equal to 750, the amount consumed, not what remains. Option 3 misnames an accumulation as an average and gives the condition no real work to do."
+          "concept": "Total from a rate read off a graph",
+          "why": "The line through (0, 0) and (5, 10) is r(t) = 2t. The total discharged is the integral of the rate, ∫₀⁵2t dt = [t²]₀⁵ = 25 tonnes, which is the area of the triangle under the line (½ × 5 × 10).\n\n10 t is the rate on day 5, not a total; 50 t is the rectangle 5 × 10, treating the final rate as if it had applied all along; 12.5 t halves the triangle a second time."
+        },
+        {
+          "type": "mcq",
+          "q": "A resource is consumed at the rate 20e^(0.05t) thousand tonnes per year, t years from now. Find the total consumed over the next 10 years.",
+          "options": [
+            "400e^0.5 ≈ 659.5",
+            "e^0.5 − 1 ≈ 0.65",
+            "400(e^0.5 − 1) ≈ 259.5",
+            "20e^0.5 ≈ 33.0"
+          ],
+          "answerIndex": 2,
+          "concept": "Total from an exponential rate",
+          "why": "Total = ∫₀¹⁰20e^(0.05t)dt. Since ∫e^(kt)dt = e^(kt)/k, this is [20e^(0.05t)/0.05]₀¹⁰ = [400e^(0.05t)]₀¹⁰ = 400e^0.5 − 400 = 400(e^0.5 − 1) ≈ 259.5 thousand tonnes.\n\n400e^0.5 forgets to subtract the value at the lower limit (e⁰ = 1, not 0); e^0.5 − 1 multiplies by 0.05 instead of dividing by it; 20e^0.5 is the rate at t = 10, not a total."
+        },
+        {
+          "type": "mcq",
+          "q": "A body's velocity has antiderivative F(t), so its position is x(t) = F(t) + C for some constant C. What is the net displacement of the body between t = 1 and t = 4?",
+          "options": [
+            "F(4) − F(1) + C",
+            "F(4) − F(1)",
+            "F(4) + C",
+            "F(4) − F(1) + 2C"
+          ],
+          "answerIndex": 1,
+          "concept": "The constant cancels in a definite integral",
+          "why": "Net displacement is the change in position: x(4) − x(1) = (F(4) + C) − (F(1) + C) = F(4) − F(1), which is exactly ∫₁⁴v(t)dt. The constant cancels, so a definite integral never needs an initial condition.\n\nF(4) − F(1) + C subtracts the constant only once; F(4) + C is the position at t = 4, not the change in position; F(4) − F(1) + 2C adds the constant at both ends instead of cancelling it."
         },
         {
           "type": "short",
-          "q": "Name the single idea that all five of this week's applications share, and show it running through three of her examples in three different sets of units.",
-          "concept": "One idea behind kinematics, fluid force, work, marginal analysis and accumulation",
-          "why": "A good answer states the idea: if a quantity varies, cut the range into pieces small enough that it is effectively constant on each, multiply on the piece, and integrate to add the pieces — equivalently, the integral of a rate over an interval is the total accumulated over that interval. It should then instantiate it: velocity varies with time, so ∫₀⁵ v dt gives (km/h)(h) = km, the 163.3 km of Example 1; the force on the rope varies with how much has been pulled, so ∫₀⁶⁰ F(x)dx gives (N)(m) = J, the 1164.24 J; marginal revenue varies with quantity, so ∫MR dQ gives (revenue per unit)(units) = revenue, the TR(Q) of the marginal-analysis example. Credit for noticing that the units of the answer are always the units of the integrand multiplied by the units of the variable of integration, which is the fastest check available."
+          "q": "Water flows into an empty tank at the rate 4t litres per minute, where t is in minutes. Find the time at which the tank holds 200 litres. Show your working.",
+          "concept": "Finding the time for an accumulated total",
+          "why": "The volume in the tank after t minutes is the integral of the rate from 0 to t: V(t) = ∫₀ᵗ4u du = [2u²]₀ᵗ = 2t². Set 2t² = 200, so t² = 100 and t = 10 (the negative root is meaningless for a time). Check: V(10) = 2(100) = 200 L.\n\nFinal answer: t = 10 minutes. The working must integrate the rate to get 2t² and then solve 2t² = 200. Setting the rate itself equal to 200, 4t = 200, gives t = 50 and is wrong; t² = 200 (forgetting the 2) gives 14.1 and is wrong."
         },
         {
           "type": "short",
-          "q": "Explain why the rope's work cannot be computed as force × distance, and say what number that shortcut would give and why it is wrong.",
-          "concept": "Why a varying force forbids force × distance",
-          "why": "A good answer says: force × distance is valid only when the force is the same throughout the motion. Here the pull only has to support the rope still hanging, which is (60 − x) m, so F(x) = 9.8(0.066)(60 − x) = 0.6468(60 − x) newtons — it starts at 0.6468(60) = 38.8 N when the whole rope is over the edge and falls to 0 as the last of it comes up. Multiplying the starting force by the full 60 m gives 38.8 × 60 = 2328.48 J, exactly twice the true answer, because it charges the maximum force for the whole haul. The correct calculation integrates: W = ∫₀⁶⁰ 0.6468(60 − x)dx = 0.6468(3600 − 1800) = 1164.24 J. It is worth adding that the factor of exactly 2 arises because F is linear in x, so the average force is half the maximum — the same reason the dam integral produces x²/2."
+          "q": "A resource is consumed at the rate C′(t) = 50e^(0.1t) thousand tonnes per year, t years after 2020, and nothing has been consumed at t = 0. Find the model C(t) for the total consumed after t years. Show your working.",
+          "concept": "Building an accumulation model from an exponential rate",
+          "why": "C(t) = ∫50e^(0.1t)dt = (50/0.1)e^(0.1t) + c = 500e^(0.1t) + c, because ∫e^(kt)dt = e^(kt)/k. The condition C(0) = 0 with e⁰ = 1 gives 0 = 500 + c, so c = −500.\n\nFinal answer: C(t) = 500e^(0.1t) − 500, also written 500(e^(0.1t) − 1). The working must show the division by 0.1 and the use of C(0) = 0 to find c. 5e^(0.1t) − 5 multiplies by 0.1 instead of dividing and is wrong; leaving c out gives C(0) = 500, which contradicts the condition."
         },
         {
           "type": "short",
-          "q": "Her Example 1 calls ∫₀⁵ v(t)dt 'the distance travelled', while Example 2 part (c) calls ∫₀⁵ v(t)dt 'the net displacement'. Explain why both labels are defensible on her own examples, and what a student must be careful about.",
-          "concept": "Distance versus net displacement, and when they coincide",
-          "why": "A good answer notices that ∫v dt is a signed quantity — it is always the net displacement — and that it equals the distance only when v does not change sign on the interval. In Example 1, v(t) = 2t² + 6t + 1 is positive for every t in [0, 5], since all three terms are positive, so the car never reverses and the two quantities coincide: 163.3 km is both. In Example 2, v(t) = 6t² − 6t − 12 = 6(t − 2)(t + 1) is negative on (0, 2) and positive on (2, 5), so the two do differ and she correctly says 'net displacement', not 'distance'. The care needed: never assume the two are the same without checking the sign of v, and note that the deck never asks for a total distance and never teaches splitting at the zeros of v, so that technique is background rather than syllabus here."
+          "q": "The rate of investment is I(t) = 3√t (thousand naira per year). Find the capital accumulated between the 1st and the 4th years. Show your working.",
+          "concept": "Capital growth as the integral of the rate of investment",
+          "why": "K = ∫₁⁴3√t dt = 3∫₁⁴t^(1/2)dt. Raise the power to 3/2 and divide by 3/2: 3 × (2/3)t^(3/2) = 2t^(3/2). So K = [2t^(3/2)]₁⁴ = 2(4^(3/2)) − 2(1^(3/2)) = 2(8) − 2(1) = 16 − 2 = 14, using 4^(3/2) = (√4)³ = 8.\n\nFinal answer: 14 thousand naira (also accepted: 14 000 naira, or 14 with units stated). The working must rewrite √t as t^(1/2), show 2t^(3/2), and substitute both limits into the antiderivative. 3√4 − 3√1 = 3 substitutes into I(t) instead of the antiderivative and is wrong; 16 forgets the lower limit."
         },
         {
           "type": "short",
-          "q": "Three of her examples supply an extra piece of data after the integration: x(0) = −4, TR(2) = 260, and C(0) = 0. Say what each is for, and explain what makes the middle one different from the other two.",
-          "concept": "Initial conditions as equations to be solved for the constant",
-          "why": "A good answer says all three do the same job — an indefinite integral produces a family of functions differing by a constant, and each datum is an equation that pins the constant down. x(0) = −4: substituting t = 0 into 2t³ − 3t² − 12t + C kills the first three terms, so C = −4 is read straight off. C(0) = 0: substituting t = 0 into 1000e^(0.035t) + c and using e⁰ = 1 gives 0 = 1000 + c, so c = −1000. What makes TR(2) = 260 different is that the condition is not given at zero, so nothing vanishes and it must be solved as a genuine equation: TR(2) = 200 + 40 + 8 + C = 248 + C, and 248 + C = 260 gives C = 12. The examinable warning is that C = 260 is wrong; the given value is the value of the whole function, not the value of the constant."
+          "q": "A dam face has its top at the water surface. Explain why the total fluid force on it cannot be found as one pressure times the area of the face, and say what w·h(x) in F = ∫ₐᵇ w·h(x)·L(x)dx represents.",
+          "concept": "Why fluid force needs an integral",
+          "why": "Water pressure grows with depth: at depth h it is w·h, where w = ρg is the weight density (9800 N/m³ for water). The face spans depths from 0 at the top to its full height at the base, so there is no single pressure that applies to the whole face; pressure × area would either use the base pressure (too big) or some other guess. The integral cuts the face into thin horizontal strips at depth x, each of width L(x) and essentially one pressure w·h(x) over the strip, so the strip's force is w·h(x)·L(x)dx, and integrating adds the strips from top to bottom. The quantity w·h(x) is the pressure at depth h(x).\n\nA correct answer says that pressure varies with depth, that each strip is at one depth, and that w·h(x) is pressure (weight density × depth)."
         }
       ]
     },
@@ -361,131 +365,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Slide 8 writes ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt with one and the same dΦ_B/dt. What does the lecturer conclude from that fact?",
+          "q": "The primary of a transformer has 400 turns and an induced emf of 120 V. The secondary, on the same core, has 50 turns. What is the emf induced in the secondary?",
           "options": [
-            "The two windings carry the same current",
-            "The primary emf is always the larger of the two",
-            "The induced emf per turn is the same in the two coils",
-            "The magnetic flux is twice as large in the secondary"
-          ],
-          "answerIndex": 2,
-          "concept": "Why one shared flux makes the emf per turn equal",
-          "why": "Dividing each equation by its own N gives ε/N = −dΦ_B/dt, the same number for both coils — her exact words are 'the induced emf per turn is the same in the two coils', and that is what licenses equation 2. Option 1 is contradicted two slides later, where I₁ = 8.0 A and I₂ = 4.0 A in the same example. Option 2 assumes an ordering the equations never fix; which emf is larger depends entirely on which N is larger. Option 4 misreads the shared flux: she says explicitly 'the flux per turn Φ_B is the same in both the primary and secondary'."
-        },
-        {
-          "type": "mcq",
-          "q": "In the deck's notation, which winding carries the subscript 1?",
-          "options": [
-            "The primary — the side connected to the input AC voltage source",
-            "Whichever side has more turns",
-            "The side connected to the resistor R",
-            "Whichever side is at the higher voltage"
-          ],
-          "answerIndex": 0,
-          "concept": "Which winding is the primary, independent of voltages and turns",
-          "why": "Slide 4: 'The side connected to the input AC voltage source is called the primary and has N₁ turns. The other side, called the secondary, is connected to a resistor and has N₂ turns.' Option 2 confuses the label with the turns ratio; in Example 2 the primary has more turns, in Example 1 fewer. Option 3 names the secondary. Option 4 fails on Example 1, where the primary sits at 120 V and the secondary at 240 V. Getting this wrong inverts every ratio in both worked examples."
-        },
-        {
-          "type": "mcq",
-          "q": "How does the deck define a step-up transformer?",
-          "options": [
-            "One whose secondary current exceeds its primary current",
-            "One for which N₂ > N₁",
-            "One connected to the higher of the two available supply voltages",
-            "One whose core has more laminations than a step-down transformer"
+            "960 V",
+            "15 V",
+            "120 V",
+            "0.30 V"
           ],
           "answerIndex": 1,
-          "concept": "Step-up and step-down are defined by turns, not by voltage",
-          "why": "Slide 9 states it in turns: 'When N₂ > N₁, the transformer is referred to as a step-up transformer. When N₂ < N₁, the transformer is referred to as a step-down transformer.' Equation 3 makes that equivalent to V₂ > V₁, but the definition she gives is the one to quote. Option 1 has it backwards — stepping voltage up steps current down, by I₁V₁ = I₂V₂. Option 3 confuses the supply with the transformer. Option 4 invents a distinction; lamination is about eddy currents and is the same for both."
+          "concept": "Equal emf per turn in both windings",
+          "why": "One core, one flux, so both windings share the same dΦ/dt and the emf per turn is the same: 120/400 = 0.30 V per turn. Secondary: ε₂ = 50 × 0.30 = 15 V. Equivalently ε₂/ε₁ = N₂/N₁ = 50/400.\n\n960 V inverts the turns ratio, giving the secondary more emf with fewer turns; 120 V assumes the two emfs are equal, which would need equal turns; 0.30 V is the emf per turn, not the emf of the 50-turn winding."
         },
         {
           "type": "mcq",
-          "q": "Equation 2 is about emfs: ε₂/ε₁ = N₂/N₁. What does the lecturer add on the next slide before she is entitled to write equation 3, V₂/V₁ = N₂/N₁?",
+          "q": "An ideal transformer must give 8.0 V from a 240 V supply. Its secondary has 40 turns. How many turns must the primary have?",
           "options": [
-            "That the core is laminated so no eddy currents flow",
-            "That all voltages are rms rather than peak values",
-            "That the frequency is unchanged from primary to secondary",
-            "That in an ideal transformer the induced emfs equal the terminal voltages"
-          ],
-          "answerIndex": 3,
-          "concept": "The ideal-transformer assumption that turns emfs into terminal voltages",
-          "why": "Slide 9 opens with exactly that sentence: 'In an ideal transformer, the induced emfs ε₁ and ε₂ in the primary and secondary windings are equal to the terminal voltages, respectively.' The move from equation 2 to equation 3 is a physical assumption, not algebra — in a real transformer the terminal voltage differs from the induced emf. Option 1 is a construction detail from slide 5, not the licence for equation 3. Option 2 is a convention about how numbers are quoted; it changes no relationship. Option 3 is true (slide 7) but says nothing about emf versus terminal voltage."
-        },
-        {
-          "type": "mcq",
-          "q": "According to slide 4, what is the iron core for?",
-          "options": [
-            "To conduct the current from the primary winding into the secondary winding",
-            "To increase the magnetic flux and provide a medium for it to pass from one coil to the other",
-            "To store the energy that the secondary will later deliver to the load",
-            "To hold the two windings apart so that they do not short together"
-          ],
-          "answerIndex": 1,
-          "concept": "What the core does, and what it does not do",
-          "why": "Her words: 'The core is used to increase the magnetic flux and to provide a medium for the flux to pass from one coil to the other.' Option 1 describes the commonest misconception about transformers — the windings are never electrically connected; what crosses is flux, not charge. Option 3 turns the transformer into a battery; nothing in the deck stores energy, and slide 10 has power in equal to power out at every instant. Option 4 names an incidental mechanical fact, not the reason iron is used."
-        },
-        {
-          "type": "mcq",
-          "q": "The core is made of thin sheets of metal insulated from one another. According to slide 5, what does the insulation achieve?",
-          "options": [
-            "It raises the resistance of the secondary winding, reducing heating there",
-            "It keeps the primary and secondary circuits electrically isolated",
-            "It prevents eddy currents from flowing from one sheet of metal to the next",
-            "It increases the flux per turn and so raises the secondary emf"
-          ],
-          "answerIndex": 2,
-          "concept": "Why the core is laminated",
-          "why": "Slide 5: the core is laminated 'to minimize eddy current losses ... The insulation prevents the eddy currents from flowing from one sheet of metal to the next.' Eddy currents are the only loss mechanism this deck names. Option 1 confuses the core with the windings; lamination changes nothing about winding resistance. Option 2 is true of a transformer in general and is mentioned on the summary slide, but it is not what lamination is for. Option 4 reverses the effect — lamination is a measure against a loss, not a way of boosting flux."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 10 states I₁V₁ = I₂V₂. Read physically, this says that",
-          "options": [
-            "voltage can only be gained at the cost of current, since the power is the same on both sides",
-            "the current is the same on both sides whenever the voltages match",
-            "the secondary delivers more power than the primary receives, by the turns ratio",
-            "the current and the voltage both rise together in a step-up transformer"
+            "1200",
+            "30",
+            "1.3",
+            "9600"
           ],
           "answerIndex": 0,
-          "concept": "Power conservation as the reason current moves opposite to voltage",
-          "why": "The equation says the power input into the primary equals the power output at the secondary, so any factor gained on V must be lost on I. Example 1 shows it: 8.0 A at 120 V and 4.0 A at 240 V are both 960 W. Option 2 states a special case as though it were the content of the equation. Option 3 would make the transformer a source of energy. Option 4 is the single most common exam error — a step-up in voltage is a step-down in current."
+          "concept": "Turn count from the voltage ratio",
+          "why": "V₂/V₁ = N₂/N₁, so N₁ = N₂ (V₁/V₂) = 40 × (240/8.0) = 40 × 30 = 1200 turns. Fewer secondary turns than primary: step-down, as an 8.0 V output demands.\n\n30 is the voltage ratio 240/8.0 quoted as a number of turns; 1.3 is 40 × (8.0/240), the ratio inverted; 9600 is 40 × 240 with the division by 8.0 V forgotten."
         },
         {
           "type": "mcq",
-          "q": "Slide 11 says a transformer may be used to match resistances between the primary circuit and the load. What is the stated purpose?",
+          "q": "The secondary of an ideal transformer supplies 6.0 V across a 1.5 Ω lamp. The primary is fed from a 120 V supply. What power does the primary draw from the supply?",
           "options": [
-            "To make the secondary current equal the primary current",
-            "To keep the frequency of the load the same as that of the source",
-            "To eliminate eddy current losses in the load",
-            "To achieve maximum power transfer between the source and the load resistance"
+            "480 W",
+            "4.0 W",
+            "24 W",
+            "9.6 × 10³ W"
+          ],
+          "answerIndex": 2,
+          "concept": "Power in equals power out",
+          "why": "Secondary current I₂ = V₂/R = 6.0/1.5 = 4.0 A, so the secondary power is I₂V₂ = 4.0 × 6.0 = 24 W. Ideal transformer: I₁V₁ = I₂V₂, so the primary draws 24 W (at I₁ = 0.20 A).\n\n480 W multiplies the secondary current by the primary voltage, mixing the two sides; 4.0 W is the secondary current 4.0 A written with the wrong unit; 9.6 × 10³ W is V₁²/R, the power the lamp would take if it were connected straight to 120 V."
+        },
+        {
+          "type": "mcq",
+          "q": "A real transformer takes 2.0 A at 240 V from the supply and delivers 18 A at 24 V to its load. What is its efficiency?",
+          "options": [
+            "100%",
+            "111%",
+            "10%",
+            "90%"
           ],
           "answerIndex": 3,
-          "concept": "What impedance matching is for",
-          "why": "Her words: 'This way, maximum power transfer can be achieved between a given power source and the load resistance. In stereo terminology, this technique is called impedance matching.' She then adds that the transformer 'transforms not only voltages and currents, but resistances as well' — the resistance seen from the primary being R/(N₂/N₁)². Option 1 would require a 1 : 1 ratio and has nothing to do with matching. Option 2 happens anyway, at every turns ratio. Option 3 relocates a core loss into the load."
+          "concept": "Efficiency of a real transformer",
+          "why": "Power in = I₁V₁ = 2.0 × 240 = 480 W. Power out = I₂V₂ = 18 × 24 = 432 W. Efficiency = 432/480 = 0.90 = 90%; the missing 48 W goes to eddy currents and heating in the windings and core.\n\n100% assumes an ideal transformer, which the numbers contradict; 111% is 480/432, the ratio upside down, and no device delivers more than it takes; 10% is the fraction lost, not the fraction delivered."
+        },
+        {
+          "type": "mcq",
+          "q": "A load of 8.0 Ω is connected across the secondary of an ideal transformer with N₂/N₁ = 1/5. What resistance does the supply connected to the primary see?",
+          "options": [
+            "200 Ω",
+            "40 Ω",
+            "0.32 Ω",
+            "1.6 Ω"
+          ],
+          "answerIndex": 0,
+          "concept": "Resistance seen from the primary via the turns ratio",
+          "why": "V₁/I₁ = R/(N₂/N₁)² = 8.0/(1/5)² = 8.0/(1/25) = 8.0 × 25 = 200 Ω. A step-down transformer makes a small load look large to the supply.\n\n40 Ω divides by the ratio 1/5 without squaring it; 0.32 Ω multiplies by (1/5)² instead of dividing; 1.6 Ω multiplies by 1/5, the ratio the wrong way and unsquared."
+        },
+        {
+          "type": "mcq",
+          "q": "A transformer has 100 turns on coil A and 500 turns on coil B. A 250 V a.c. source is connected to coil B and a load to coil A. Treating it as ideal, what voltage appears across the load?",
+          "options": [
+            "1250 V",
+            "250 V",
+            "50 V",
+            "10 V"
+          ],
+          "answerIndex": 2,
+          "concept": "Identifying the primary from the source connection",
+          "why": "The primary is whichever coil the source is connected to: coil B, so N₁ = 500 and N₂ = 100. V₂ = V₁ (N₂/N₁) = 250 × (100/500) = 50 V. With N₂ < N₁ this is a step-down connection.\n\n1250 V takes coil A as the primary because it was named first; 250 V ignores the transformer; 10 V divides by the ratio squared, importing the square from the resistance formula into the voltage ratio."
+        },
+        {
+          "type": "mcq",
+          "q": "At some instant the flux in a transformer core is changing at 0.050 Wb/s. The primary has 200 turns. What is the magnitude of the emf induced in the primary at that instant?",
+          "options": [
+            "0.050 V",
+            "10 V",
+            "4.0 × 10³ V",
+            "2.5 × 10⁻⁴ V"
+          ],
+          "answerIndex": 1,
+          "concept": "Faraday's law for one winding of a transformer",
+          "why": "ε₁ = −N₁ dΦ/dt, so |ε₁| = 200 × 0.050 = 10 V. Wb/s is the same unit as the volt.\n\n0.050 V forgets N and quotes the rate of change of flux itself; 4.0 × 10³ V divides N by the rate instead of multiplying; 2.5 × 10⁻⁴ V divides the rate by N."
+        },
+        {
+          "type": "mcq",
+          "q": "A 50 Hz supply feeds an ideal step-up transformer with N₂/N₁ = 20. Which quantity is the same on the secondary side as on the primary side?",
+          "options": [
+            "The voltage",
+            "The frequency",
+            "The current",
+            "The resistance seen by the source"
+          ],
+          "answerIndex": 1,
+          "concept": "What a transformer leaves unchanged",
+          "why": "All currents and voltages in a transformer have the same frequency as the source: the secondary emf is driven by the same changing flux, cycle for cycle, so the output is still 50 Hz. The voltage is multiplied by 20, the current divided by 20, and a load R looks like R/400 to the source.\n\nEach wrong option names a quantity the turns ratio does change: voltage by N₂/N₁, current by N₁/N₂, resistance by (N₂/N₁)²."
         },
         {
           "type": "short",
-          "q": "Set out the lecturer's three numbered equations in order and say, for each step, what makes the next line follow. Be explicit about where the two minus signs go.",
-          "concept": "The emf-to-voltage chain, minus signs included",
-          "why": "A good answer runs: equation 1 is Faraday's law applied to each winding using one shared flux, ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt. Dividing the second by the first cancels dΦ_B/dt and cancels the two identical minus signs, giving equation 2, ε₂/ε₁ = N₂/N₁, valid at any instant — the absence of a minus sign there is a cancellation, not an omission. Equation 3, V₂/V₁ = N₂/N₁, then follows only after slide 9's assumption that in an ideal transformer each induced emf equals its terminal voltage. It should name equation 3 as the one that carries an assumption, and note that N is a pure count of turns while ε and V are in volts, so both ratios are dimensionless."
+          "q": "A generator delivers 20 kW at 500 V. Before transmission the voltage is stepped up by an ideal transformer to 10 kV. Calculate the current in the line before and after stepping up, and the factor by which the I²R loss in the line falls. Show your working.",
+          "concept": "Why power is transmitted at high voltage",
+          "why": "At 500 V: I = P/V = 20 000/500 = 40 A. After the step-up, the power is unchanged (I₁V₁ = I₂V₂), so at 10 000 V: I = 20 000/10 000 = 2.0 A. The line loss I²R with the same R falls by (2.0/40)² = (1/20)² = 1/400. Stepping the voltage up 20 times cuts the current 20 times and the loss 400 times.\n\nFinal answer: 40 A and 2.0 A, loss reduced by a factor of 400. A correct answer uses conservation of power to get the second current and squares the current ratio for the loss. A factor of 20 forgets the square in I²R; 800 A after step-up applies the ratio the wrong way."
         },
         {
           "type": "short",
-          "q": "The deck says transformers 'can only be used with AC'. Justify that from her own equations rather than from memory.",
-          "concept": "Why a transformer needs a changing flux",
-          "why": "A good answer points at the derivative in equation 1: the induced emf in each winding is proportional to dΦ_B/dt, not to Φ_B. A steady direct current in the primary sets up a steady flux in the core; a steady flux has dΦ_B/dt = 0, so ε₂ = −N₂ dΦ_B/dt = 0 and nothing is induced in the secondary, no matter how many turns it has or how large the DC is. Slide 7 makes the same point positively — it is the AC source that 'causes a changing magnetic field to be created in the core', and that changing field is what induces the secondary current. The answer should tie this back to slide 3's reason for preferring AC for distribution: only AC voltages can be stepped up for transmission and back down for homes and businesses."
+          "q": "A real transformer's secondary reads 12.0 V with nothing connected and 11.2 V when supplying 2.0 A. Calculate the resistance of the secondary winding and the percentage of the emf lost inside it at this load, and state what the ideal-transformer assumption says about this loss. Show your working.",
+          "concept": "Emf versus terminal voltage in a real secondary",
+          "why": "The open-circuit reading is the induced emf ε₂ = 12.0 V, since no current flows and nothing is dropped inside. Under load V₂ = ε₂ − I₂r, so the drop is 12.0 − 11.2 = 0.80 V and r = 0.80/2.0 = 0.40 Ω. Fraction lost = 0.80/12.0 = 0.067, about 6.7%. The ideal-transformer assumption is that the induced emf equals the terminal voltage in each winding, that is r = 0 and no such drop, which is what allows ε₂/ε₁ = N₂/N₁ to be written as V₂/V₁ = N₂/N₁.\n\nFinal answer: 0.40 Ω (accept 0.39 to 0.41) and 6.7% (accept 6.5 to 7.0), with the statement that an ideal transformer has no internal drop so emf and terminal voltage coincide. 5.6 Ω (11.2/2.0) is the load resistance, not the winding's; 0.80 Ω forgets to divide by the current."
         },
         {
           "type": "short",
-          "q": "Without doing any arithmetic beyond the ratio itself, say which of the lecturer's two examples is step-up and which is step-down, and identify the primary in each. Explain why the appliance's own rating never decides the answer.",
-          "concept": "Assigning primary and secondary before touching any numbers",
-          "why": "A good answer says the primary is always the winding connected to the input source. In Example 1 the source is the USA 120-V line, so V₁ = 120 V, and the coffeemaker is the load at V₂ = 240 V, giving N₂/N₁ = 2, which is N₂ > N₁, a step-up transformer. In Example 2 the source is the European 240-V outlet, so V₁ = 240 V, and the dryer is the load at V₂ = 120 V, giving N₂/N₁ = 1/2, which is N₂ < N₁, a step-down transformer. The appliance rating never decides which side is the primary: the coffeemaker is rated 240 V and the dryer 120 V, and each sits on the secondary regardless. It should note that reversing this assignment inverts every ratio, current and resistance in the rest of the example."
+          "q": "An amplifier delivers maximum power to a 1600 Ω load, but the loudspeaker is 4.0 Ω. Find the turns ratio N₂/N₁ of the matching transformer and say whether it is step-up or step-down. With 40 V rms on the primary, calculate the speaker voltage and the power delivered to it. Show your working.",
+          "concept": "Impedance matching with a transformer",
+          "why": "The supply must see V₁/I₁ = R/(N₂/N₁)² = 1600 Ω with R = 4.0 Ω, so (N₂/N₁)² = 4.0/1600 = 1/400 and N₂/N₁ = 1/20: a step-down transformer, since N₂ < N₁. Speaker voltage V₂ = V₁(N₂/N₁) = 40 × (1/20) = 2.0 V. Power P = V₂²/R = (2.0)²/4.0 = 1.0 W. Check from the primary side: P = V₁²/1600 = 1600/1600 = 1.0 W, the same.\n\nFinal answer: N₂/N₁ = 1/20 (accept 0.05), step-down, 2.0 V, 1.0 W. A correct answer takes the square root to get the turns ratio and gets the same power from both sides. 1/400 is the squared ratio left unrooted; 20 is the ratio inverted and would be a step-up giving 800 V."
         },
         {
           "type": "short",
-          "q": "Explain the formula V₁/I₁ = R/(N₂/N₁)² in words: what R is, what V₁/I₁ is, and why the turns ratio appears squared rather than to the first power.",
-          "concept": "Apparent resistance versus load resistance, and why the ratio is squared",
-          "why": "A good answer identifies R as the load resistance connected across the secondary — the resistor of slide 5, across which V₂ appears — and V₁/I₁ as the equivalent or apparent resistance that the source sees when it looks into the primary, both in ohms. On the square: a resistance is a voltage divided by a current, the turns ratio scales the voltage by N₂/N₁ and scales the current the opposite way by N₁/N₂, so the quotient picks up the factor twice. It should read the consequence off the formula — for a step-up transformer N₂/N₁ is greater than 1, so the load looks smaller from the primary, exactly as Example 1's 60 Ω coffeemaker looks like 15 Ω to the 120 V line — and connect it to slide 11: choosing the turns ratio to make R look like the source's own resistance is impedance matching, done for maximum power transfer."
+          "q": "A transformer core is made of iron rather than air, and that iron is built from thin sheets insulated from one another rather than from a solid block. Explain what each of these two design choices achieves.",
+          "concept": "Purpose of the iron core and its lamination",
+          "why": "The iron core does two things: it greatly increases the magnetic flux produced by the primary current (iron's high permeability), and it provides a path that carries that flux round to the secondary, so that almost all the flux threading the primary also threads the secondary and the emf per turn is the same in both. Laminating the core deals with eddy currents: the changing flux induces emfs in the core metal itself, and in a solid block these drive large circulating currents that heat the core and waste power. Cutting the core into thin sheets with insulation between them breaks the paths of those currents, since they cannot flow from one sheet to the next, so the eddy-current loss is greatly reduced while the flux still passes along the sheets.\n\nA correct answer gives both jobs of the iron (more flux, and a path linking the coils) and explains lamination as interrupting eddy currents to cut heating loss, not as anything to do with the turns ratio or the frequency."
         }
       ]
     },
@@ -498,131 +502,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "A tester has finished reviewing the requirement document and the strategy, cost and duration have been signed off. She now writes documents that each list the inputs to supply, the process to follow, and the output that should result. Which phase is she in, and which phase must still be completed before the software can actually be exercised?",
+          "q": "Put the STLC phases in order. A: test execution. B: requirement analysis. C: test environment setup. D: test planning. E: test cycle closure. F: test case development.",
           "options": [
-            "Test planning; test case development must still be completed",
-            "Test environment setup; test execution must still be completed",
-            "Test case development; test environment setup must still be completed",
-            "Test execution; test cycle closure must still be completed"
-          ],
-          "answerIndex": 2,
-          "concept": "The order of the six STLC phases and the activities each owns",
-          "why": "Writing inputs, process and expected outputs is test case development; test environment setup, where the software and hardware are specified, still stands between it and test execution."
-        },
-        {
-          "type": "mcq",
-          "q": "A team declares the test case development phase closed and moves into test execution, although a third of the written test cases have not yet been reviewed. Which idea from the deck does this most directly violate?",
-          "options": [
-            "The exit point of a phase is reached only when all the objectives of that phase have been achieved, and review of test cases is an objective of test case development",
-            "The entry point of test execution is the writing of test cases, so execution cannot begin until every case exists",
-            "Test cases may only be reviewed during test cycle closure, so the review is out of sequence",
-            "A phase may not be closed until the defects found in it have been corrected, which happens in test execution"
+            "B, D, F, C, A, E",
+            "D, B, F, C, A, E",
+            "B, D, C, F, A, E",
+            "B, F, D, C, A, E"
           ],
           "answerIndex": 0,
-          "concept": "Entry and exit points, and the fact that an exit point requires the phase's objectives to have been achieved",
-          "why": "Identification, writing and review of test cases are the objectives of that phase, so its exit point has not been reached."
+          "concept": "Ordering the STLC phases",
+          "why": "The six phases in sequential order are requirement analysis (B), test planning (D), test case development (F), test environment setup (C), test execution (A) and test cycle closure (E). You must know what to test before you can plan, plan before you write cases, write cases before you set up the environment to run them, run them, then close.\n\nD, B, ... plans before deciding what is to be tested; B, D, C, F, ... sets up the environment before the cases that will run in it exist; B, F, D, ... writes test cases before the strategy, cost and duration are defined."
         },
         {
           "type": "mcq",
-          "q": "Which of the following activities belongs to the **test planning** phase rather than to any other phase?",
+          "q": "Assign each activity to its STLC phase: (i) interviewing stakeholders; (ii) assigning roles to team members; (iii) reviewing the written test cases; (iv) creating the summary report.",
           "options": [
-            "Setting up the test data and the hardware on which the tests will run",
-            "Assigning roles to the members of the testing team",
-            "Interviewing stakeholders about the software requirement document",
-            "Collecting feedback and creating the summary report"
+            "(i) test planning, (ii) requirement analysis, (iii) test case development, (iv) test execution",
+            "(i) requirement analysis, (ii) test planning, (iii) test case development, (iv) test cycle closure",
+            "(i) requirement analysis, (ii) test planning, (iii) test execution, (iv) test cycle closure",
+            "(i) requirement analysis, (ii) test case development, (iii) test execution, (iv) test cycle closure"
           ],
           "answerIndex": 1,
-          "concept": "Which activities belong to which STLC phase",
-          "why": "Assignment of roles to team members is listed under test planning; a is environment setup, c is requirement analysis, d is test cycle closure."
+          "concept": "Assigning activities to STLC phases",
+          "why": "Requirement analysis owns the requirement document review and the stakeholder interview (i). Test planning defines strategy, cost and duration and assigns roles (ii). Test case development is the identification, writing and review of test cases (iii). Test cycle closure creates the summary report and collects feedback (iv).\n\nThe first option swaps the first two phases and puts the summary report in execution, whose reporting is of test results, not the closing summary; the third moves case review into execution; the fourth puts role assignment into case development."
         },
         {
           "type": "mcq",
-          "q": "A tester interviewing stakeholders records that the payment provider's sandbox is scheduled to be offline for two of the four planned test weeks. Which phase does this activity belong to, and why does it belong there rather than to test environment setup?",
+          "q": "Test case development has three objectives: identify, write and review the test cases. A team has identified and written all its cases; the review has not been done, and the calendar date planned for the end of the phase has arrived. Which is true?",
           "options": [
-            "Test planning, because anything affecting duration is a planning concern by definition",
-            "Test environment setup, because a sandbox is part of the software requirements of the test",
-            "Test cycle closure, because an unavailable dependency is a defect that must be reported",
-            "Requirement analysis, whose activities include stakeholder interviews and the identification of possible issues that might affect the testing process, before any environment is specified"
-          ],
-          "answerIndex": 3,
-          "concept": "Requirement analysis: stakeholder interviews and identifying issues that might affect the testing process",
-          "why": "The deck places stakeholder interviews and identification of possible issues affecting the testing process in requirement analysis, the phase that decides what is to be tested."
-        },
-        {
-          "type": "mcq",
-          "q": "Both the test execution phase and the test cycle closure phase involve defects and reports. What separates them, as the deck describes their activities?",
-          "options": [
-            "Execution implements the tests, retests to fix defects, and analyses and reports the results; closure checks that the testing objectives have been achieved and the software is ready for use, and produces the summary report and feedback",
-            "Execution records defects only; closure is the only phase permitted to correct them",
-            "Execution produces the summary report; closure re-runs any test that produced a defect",
-            "Execution covers automated tests, closure covers the manual ones, since manual results need human summarising"
-          ],
-          "answerIndex": 0,
-          "concept": "Test execution versus test cycle closure, and the activities each lists",
-          "why": "Execution asks whether the tests pass; closure asks whether testing is finished and the software is ready for use, and produces the summary report and feedback."
-        },
-        {
-          "type": "mcq",
-          "q": "An automated suite reports that `total_due` came back as 4,300 where 4,500 was expected. What has the deck's definition of software testing delivered here, and what remains to be done?",
-          "options": [
-            "Testing has resolved the error; what remains is to confirm that no requirement is missing",
-            "Testing has found that the given output differs from the expected output and has located an error; debugging must still identify and resolve the bug that caused it",
-            "Testing has identified the bug; debugging will now re-run the suite to confirm the fix",
-            "Testing has proved that a requirement is missing, since a wrong total can only come from an unimplemented requirement"
-          ],
-          "answerIndex": 1,
-          "concept": "Testing versus debugging: detecting a mismatch versus identifying and resolving its cause",
-          "why": "Testing compares actual with expected output and locates errors; debugging is the separate process of identifying and resolving the bug."
-        },
-        {
-          "type": "mcq",
-          "q": "A deployed system never crashes and returns correct results, but between 4 p.m. and 6 p.m. its responses become very slow, and no test in the suite fails. Which debugging method from the deck is the natural first move, and on what grounds?",
-          "options": [
-            "Code inspection, because a fault invisible to the tests can only be found by reading the source",
-            "Unit testing, because slowness must originate inside a single function's execution paths",
-            "Monitoring, because it watches a running system for unusual behaviour or performance issues that indicate the presence of bugs, which is exactly what is observed here",
-            "Integration testing, because a symptom that appears only at certain hours must come from the interaction of components"
+            "The exit point is reached: the planned time is up",
+            "The exit point is reached: test cases exist",
+            "The exit point is not reached: an objective is still unmet",
+            "The entry point of test execution is reached"
           ],
           "answerIndex": 2,
-          "concept": "The debugging methods, in particular monitoring for unusual behaviour or performance issues in a running system",
-          "why": "Monitoring is defined as watching a software system for unusual behaviour or performance issues indicating bugs, which is precisely a load-dependent slowdown no test reproduces."
+          "concept": "Entry and exit points",
+          "why": "The exit point of a phase is where the phase ends and all the objectives of the phase have been achieved. Review is one of the three objectives and it is still owed, so the exit point has not been reached, whatever the calendar says.\n\n'Time is up' confuses a date with an objective; 'test cases exist' satisfies two objectives out of three; the next phase cannot be entered while this one has not exited."
         },
         {
           "type": "mcq",
-          "q": "A team can reproduce a fault but cannot see where the program's state first goes wrong, and separately wants to know which routine consumes most of the running time. Which of the deck's debugging tool categories serve these two needs?",
+          "q": "A test case reads: 'Inputs: 4 and 5. Process: call add(4, 5). Expected output: whatever the function returns.' Which of the three components of a test case is defective?",
           "options": [
-            "A profiler for the first, a trace tool for the second",
-            "Logging for the first, code inspection for the second",
-            "A trace tool for both, since both concern the order of execution",
-            "A debugger or trace tool for the first, a profiler for the second"
+            "The process",
+            "The expected output",
+            "The inputs",
+            "Nothing: it is a complete test case"
+          ],
+          "answerIndex": 1,
+          "concept": "Components of a test case",
+          "why": "A test case specifies the test inputs, the process and the expected outputs. Testing is finding out whether the output the computer gives is the same as the expected output, so the expected output must be fixed before the run: here it should say 9. 'Whatever the function returns' can never fail, so it tests nothing.\n\nThe inputs (4 and 5) and the process (call add(4, 5)) are both stated precisely; 'complete' misses that one of the three parts is empty in effect."
+        },
+        {
+          "type": "mcq",
+          "q": "Name each debugging method: (i) reading the source of a function line by line looking for a fault; (ii) writing every event and message the program produces to a file to be read afterwards; (iii) watching a running system's response times for unusual behaviour.",
+          "options": [
+            "(i) code inspection, (ii) logging, (iii) monitoring",
+            "(i) monitoring, (ii) logging, (iii) code inspection",
+            "(i) code inspection, (ii) monitoring, (iii) logging",
+            "(i) unit testing, (ii) logging, (iii) monitoring"
+          ],
+          "answerIndex": 0,
+          "concept": "Naming debugging methods from descriptions",
+          "why": "Code inspection is manually reviewing the source code to identify potential bugs (i). Logging is recording events and messages related to the system so they can be used to identify bugs (ii). Monitoring is watching a running system for unusual behaviour or performance issues that indicate bugs (iii).\n\nThe second option calls reading source 'monitoring', but monitoring watches a running system; the third swaps logging and monitoring, but recording to a file is logging; the fourth calls reading source 'unit testing', but unit testing runs the unit on test data rather than reading it."
+        },
+        {
+          "type": "mcq",
+          "q": "A program gives the correct output but takes 40 seconds. The team wants to know which function consumes most of that time. Which debugging tool category is the right one?",
+          "options": [
+            "Debugger",
+            "Trace tool",
+            "Profiler",
+            "Code inspection"
+          ],
+          "answerIndex": 2,
+          "concept": "Choosing a debugging tool",
+          "why": "The three tool categories are debuggers, trace tools and profilers. A profiler measures where a running program spends its time, function by function, which is exactly the question asked.\n\nA debugger stops at a breakpoint and shows variable values, which locates a wrong value rather than a slow function; a trace tool records the sequence of calls, not their cost; code inspection is a method, not a tool, and reading the source will not tell you which function is slow."
+        },
+        {
+          "type": "mcq",
+          "q": "The specification says the app must email a receipt after payment, and that total_due for a given order is 4500. A test run finds (i) no receipt is ever sent, because no code does it, and (ii) total_due comes back as 4300. Classify each finding by what testing revealed.",
+          "options": [
+            "(i) an error located, (ii) a missing requirement",
+            "(i) a missing requirement, (ii) an error located",
+            "Both are missing requirements",
+            "Both are errors located"
+          ],
+          "answerIndex": 1,
+          "concept": "What testing reveals",
+          "why": "Testing lets us locate errors in the program and also confirm whether there are any missing requirements. No code sends the receipt at all: a requirement in the specification is missing from the program (i). The total is computed, but the output differs from the expected output 4500: an error has been located (ii).\n\nThe first option swaps them; 'both missing' treats a wrong number as absent functionality; 'both errors' treats absent functionality as a wrong number."
+        },
+        {
+          "type": "mcq",
+          "q": "A test reports that balance() returned −50 where 0 was expected. A developer then reads the function, finds a < that should be <=, and changes it. Which activity is testing and which is debugging?",
+          "options": [
+            "Both are testing",
+            "The report is debugging; the fix is testing",
+            "Both are debugging",
+            "The report is testing; finding and fixing the < is debugging"
           ],
           "answerIndex": 3,
-          "concept": "The three debugging tool categories: debuggers, trace tools and profilers, and what each is for",
-          "why": "Debuggers and trace tools follow execution and state to locate where things go wrong; profilers measure where the time is spent."
+          "concept": "Testing versus debugging",
+          "why": "Software testing is the process of finding out whether the output the computer gives is the same as the expected output: the report of −50 against 0 is testing, and it hands over a symptom. Debugging is the process of identifying and resolving errors: finding the < and changing it supplies the cause and the fix.\n\nThe other options either merge the two processes or reverse them; the test finds that something is wrong, the debugging finds what and repairs it."
         },
         {
           "type": "short",
-          "q": "The deck justifies the STLC by saying that without a standard process which clearly defines the deliverables and objectives of each phase, \"we might not be sure that we are testing our software the right way.\" Explain what specifically goes wrong in a project that tests hard but has no defined phases, and name two phases whose omission would produce the clearest damage.",
-          "concept": "The rationale for having a software testing life cycle at all",
-          "why": "Without defined phases nothing states the deliverables and objectives of each stage, so no phase has an exit criterion and the team can never say whether testing is adequate, whether the software meets the set requirements, or whether it is free of defects; effort is spent without a definition of done, and the same ground is retested while other ground is never touched. Omitting requirement analysis is the clearest damage: nobody has decided what is to be tested, so the tests measure the testers' assumptions rather than the requirements. Omitting test case development is next: without written cases specifying inputs, process and expected outputs the results cannot be reproduced, reviewed or handed to anyone else. (Test planning or test cycle closure are also defensible second choices if argued on the same grounds — no roles, cost or duration; or no check that objectives were met and the software is ready for use.)"
+          "q": "pct(score, total) is specified to return the percentage score/total × 100 rounded to the nearest whole number, and to return 0 when total is 0. Write two test cases, one for pct(45, 60) and one for pct(3, 0), each with its inputs, its process and its expected output. Show your working.",
+          "concept": "Writing a test case",
+          "why": "A test case specifies the test inputs, the process and the expected outputs, with the expected output fixed from the specification before the run. Case 1: inputs 45 and 60; process: call pct(45, 60); expected output: 45/60 × 100 = 75. Case 2: inputs 3 and 0; process: call pct(3, 0); expected output: 0, from the rule for a zero total, not from any division.\n\nA correct answer states all three parts for both cases and gives 75 and 0. Writing 'expected: the returned value' or leaving the expected output to be discovered by running the code is not a test case. 0.75 for case 1 forgets the × 100; an error or 'undefined' for case 2 ignores the specified rule."
         },
         {
           "type": "short",
-          "q": "A test case specifies inputs, process and expected outputs. Explain why the *expected output* must be fixed during test case development rather than decided when the test is run, and what would be lost if a tester decided at run time whether the result looked reasonable.",
-          "concept": "The definition of a test case, and why test case development is a phase of its own",
-          "why": "Software testing is defined as finding out whether the output the computer gives is the same as the expected output, so the expected output is the standard against which the run is judged; it has to exist before the run or there is nothing to compare against. Fixing it during test case development means it is derived from the requirements and reviewed, which is exactly what that phase's activities — identification, writing and review — are for. If the tester decides at run time whether the result looks reasonable, the actual output silently becomes the expected output: a wrong result that is plausible is accepted, the test is not reproducible by anyone else, and retesting after a fix has no fixed baseline. The judgement also stops tracing back to a requirement, so missing requirements can no longer be detected."
+          "q": "A team finishes test case development and goes straight to test execution, skipping test environment setup. Describe two concrete problems that will appear during execution, and name the activities of the skipped phase that would have prevented each. Show your working.",
+          "concept": "Consequences of skipping an STLC phase",
+          "why": "Test environment setup is where the software and hardware requirements for the test are specified and the test data and environment are set up. Skipping it means, first, that the cases have no data to run on: a case such as 'log in as a customer with an overdue loan' cannot be executed because no such account exists, which test data setup would have created. Second, the tests run on whatever machine and software versions happen to be at hand, so a failure cannot be told apart from an environment mismatch (wrong database version, missing browser), which specifying the hardware and software requirements and setting up the environment would have fixed in advance.\n\nA correct answer gives two problems of this kind, each tied to test data setup or to environment setup and the specified requirements. Problems that belong to other phases, such as unwritten test cases or unassigned roles, are not accepted."
         },
         {
           "type": "short",
-          "q": "Testing and debugging are different processes but the deck lists unit, integration and system testing among the debugging methods. Explain how the same three activities can belong to both, and state what changes about the purpose when they are used for debugging.",
-          "concept": "Testing versus debugging, and why the same activities appear in both lists",
-          "why": "The activities are the same mechanically — run part or all of the software on chosen data and compare actual with expected output — but the purpose differs. As testing methods they are used before a bug is known, to find out whether output matches expectation and whether requirements are missing; they are a verification exercise driven by the requirements. As debugging methods they are used after a malfunction is already known, to narrow down where it lives: a unit test isolates a single function so the fault can be attributed to it or ruled out, an integration test decides whether the fault lies in the interaction between components rather than inside either one, and a system test decides whether the whole assembled system still misbehaves. Testing detects and locates that something is wrong; when the same runs are used for debugging they serve identifying and resolving the specific error already observed."
+          "q": "A program crashes about once a day at an unpredictable moment, and nobody has seen it happen. From code inspection, monitoring, logging, unit testing, integration testing and system testing, choose the two methods to apply first, say what each would produce, and say why two of the others fit less well here. Show your working.",
+          "concept": "Choosing debugging methods for a fault",
+          "why": "Logging and monitoring. Logging records the events and messages the program produces, so when the crash happens the file shows what the program was doing in the seconds before it, without anyone watching. Monitoring watches the running system for unusual behaviour or performance issues, such as memory climbing before the crash, and points to the conditions that trigger it. Unit testing fits less well because the crash is not tied to a known function and its inputs, and a once-a-day condition is unlikely to be reproduced by fixed test data; code inspection fits less well because there is no known place in the source to inspect until logging has narrowed it down.\n\nA correct answer picks logging and monitoring, says what each records, and gives a reason against two of the others. Picking code inspection first is accepted only with an argument for where to start reading."
         },
         {
           "type": "short",
-          "q": "Explain the difference between logging and monitoring as debugging techniques, and describe a fault for which logging succeeds where monitoring cannot, and a fault for which monitoring succeeds where logging cannot.",
-          "concept": "Logging versus monitoring in the deck's list of debugging methods",
-          "why": "Logging records events and messages related to the software system, so it produces a durable internal record of what the program did and with what values. Monitoring watches the running system for unusual behaviour or performance issues that indicate the presence of bugs, so it observes external symptoms as they happen. Logging succeeds where monitoring cannot on a fault that leaves no outward sign: a rounding error that quietly writes a wrong balance to the database, where the system stays fast and stable but the logged intermediate values show the wrong figure being computed and stored, and the record can be read hours later. Monitoring succeeds where logging cannot on a fault nobody thought to log: memory consumption creeping upward until the process is killed at 3 a.m., or responses degrading only under peak load — no log line was written because the code never anticipated the condition, but the running system's behaviour is visibly abnormal to something watching it."
+          "q": "A team tests without a defined life cycle: each tester runs whatever checks seem useful and stops when the release date arrives. Explain what a defined software testing life cycle would give them that this does not, using the idea of each phase having deliverables, objectives and an exit point.",
+          "concept": "Purpose of a defined testing life cycle",
+          "why": "A defined life cycle gives a standard process that clearly defines the deliverables and objectives of each testing phase, with an entry point where the phase begins and an exit point that is reached only when all the phase's objectives have been achieved. Without it the team cannot be sure it is testing the software the right way, that the software meets the set requirements, or that it is free of defects: stopping at the release date is stopping on time rather than on an exit point, and there is no statement of what would count as finished. With the life cycle, requirement analysis fixes what is to be tested, planning fixes strategy, cost and duration, development produces reviewed test cases with expected outputs, and closure checks that the objectives were achieved and the software is ready for use.\n\nA correct answer names deliverables and objectives per phase, explains that an exit point depends on objectives being met rather than on time, and states at least one thing the team cannot be sure of without the process."
         }
       ]
     },
@@ -636,131 +640,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Evaluate ∫₀⁵(2t² + 6t + 1)dt, the distance the car covers in the first 5 hours.",
+          "q": "A body has velocity v(t) = 3t² − 12 m/s. Find its net displacement over the first 3 seconds.",
           "options": [
-            "163.3 km",
-            "81 km",
-            "405 km",
-            "330 km"
-          ],
-          "answerIndex": 0,
-          "concept": "Definite integral of a quadratic velocity",
-          "why": "The antiderivative is 2t³/3 + 3t² + t, so at t = 5 it is 250/3 + 75 + 5 = 83.33 + 80 = 163.33, and the lower limit contributes 0. Option 2 is v(5) = 50 + 30 + 1 = 81, the speed at the end rather than the distance. Option 3 is that speed times 5 hours, which would only be right if the car held a constant 81 km/h. Option 4 antidifferentiates 2t² as 2t³ instead of 2t³/3, giving 250 + 75 + 5."
-        },
-        {
-          "type": "mcq",
-          "q": "Using the same car velocity v(t) = 2t² + 6t + 1, how far does it travel in the first 3 hours?",
-          "options": [
-            "37 km",
-            "48 km",
-            "84 km",
-            "111 km"
-          ],
-          "answerIndex": 1,
-          "concept": "Applying her method to a new upper limit",
-          "why": "[2t³/3 + 3t² + t]₀³ = 2(27)/3 + 3(9) + 3 = 18 + 27 + 3 = 48 km, and the lower limit again contributes 0. Option 1 is v(3) = 18 + 18 + 1 = 37, the speed at the end rather than the distance. Option 3 antidifferentiates 2t² as 2t³ without dividing by 3, giving 54 + 27 + 3. Option 4 is v(3) multiplied by 3 hours, which assumes a constant speed the car never has. The habit that protects you is hers: write the full bracket, substitute term by term, then add."
-        },
-        {
-          "type": "mcq",
-          "q": "A body has v(t) = 6t² − 6t − 12 m/s with initial displacement −4 m. Find x(3).",
-          "options": [
-            "24 m",
+            "9 m",
+            "15 m",
             "−9 m",
-            "−13 m",
-            "−5 m"
+            "23 m"
           ],
           "answerIndex": 2,
-          "concept": "Substituting into the displacement function, constant included",
-          "why": "x(t) = 2t³ − 3t² − 12t − 4, so x(3) = 2(27) − 3(9) − 12(3) − 4 = 54 − 27 − 36 − 4 = −13 m. Option 1 is v(3) = 54 − 18 − 12 = 24, substituting into the velocity instead of the displacement. Option 2 forgets the −4, i.e. never used the initial condition. Option 4 solves x(0) = −4 with the wrong sign and uses C = +4."
+          "concept": "Net displacement as a signed definite integral",
+          "why": "Net displacement = ∫₀³(3t² − 12)dt = [t³ − 12t]₀³ = 27 − 36 = −9 m. The body ends 9 m on the negative side of where it started: v < 0 on (0, 2) (it goes backwards 16 m) and v > 0 on (2, 3) (it comes forward 7 m).\n\n9 m drops the sign, which reverses the direction of the result; 15 m is v(3), the velocity at the end; 23 m is 16 + 7, the total distance travelled, but net displacement is the signed sum, −16 + 7."
         },
         {
           "type": "mcq",
-          "q": "For that same body, evaluate ∫₀⁵(6t² − 6t − 12)dt.",
+          "q": "A rectangular dam is 40 m high and 150 m wide, with its top level with the water surface. Take ρ = 1000 kg/m³ and g = 9.8 m/s². Find the total fluid force on the dam face.",
           "options": [
-            "111 m",
-            "155 m",
-            "108 m",
-            "115 m"
-          ],
-          "answerIndex": 3,
-          "concept": "Definite integral of velocity as net displacement",
-          "why": "[2t³ − 3t² − 12t]₀⁵ = 250 − 75 − 60 − 0 = 115 m. Option 1 is x(5) = 111: the −4 was carried in and subtracted only once, giving the position rather than the change. Option 2 is the total distance — the body goes back 20 m to t = 2 and then forward 135 m — which is not what a signed integral returns. Option 3 is v(5) = 150 − 30 − 12 = 108, the integrand at the upper limit."
-        },
-        {
-          "type": "mcq",
-          "q": "A 60 m rope of mass 66 g/m hangs over a cliff. Evaluate W = ∫₀⁶⁰ 0.6468(60 − x)dx.",
-          "options": [
-            "1164.24 J",
-            "2328.48 J",
-            "1800 J",
-            "3492.72 J"
-          ],
-          "answerIndex": 0,
-          "concept": "Evaluating the work integral for a linearly decreasing force",
-          "why": "0.6468[60x − x²/2]₀⁶⁰ = 0.6468(3600 − 1800) = 0.6468 × 1800 = 1164.24 J. Option 2 is the starting force 0.6468 × 60 = 38.8 N multiplied by the whole 60 m, valid only for a constant force and exactly double the truth because F is linear. Option 3 evaluates the bracket correctly but never multiplies by the coefficient 0.6468. Option 4 adds x²/2 instead of subtracting it, giving 0.6468(3600 + 1800)."
-        },
-        {
-          "type": "mcq",
-          "q": "For the 100 m by 300 m dam with its top at the water surface, evaluate F = ∫₀¹⁰⁰(9800)(x)(300)dx.",
-          "options": [
-            "2.94 × 10¹⁰ N",
-            "1.47 × 10¹⁰ N",
-            "2.94 × 10⁶ N",
-            "1.47 × 10⁸ N"
+            "2.352 × 10⁹ N",
+            "1.176 × 10⁹ N",
+            "1.2 × 10⁸ N",
+            "5.88 × 10⁷ N"
           ],
           "answerIndex": 1,
-          "concept": "Evaluating the fluid-force integral, including the factor of one half",
-          "why": "Pull the constants out: 9800 × 300 = 2.94 × 10⁶, then [x²/2]₀¹⁰⁰ = 10000/2 = 5000, so F = 2.94 × 10⁶ × 5000 = 1.47 × 10¹⁰ N. Option 1 omits the division by 2 — the same number you get by applying the deepest pressure to the whole face, which overcounts every strip above the base. Option 3 stops at the constant and never integrates. Option 4 uses [x/2] in place of [x²/2] and so loses a factor of 100."
+          "concept": "Fluid force on a rectangular dam",
+          "why": "w = ρg = 9800 N/m³, h(x) = x from 0 to 40, L(x) = 150. F = ∫₀⁴⁰9800·x·150 dx = 1 470 000∫₀⁴⁰x dx = 1 470 000[x²/2]₀⁴⁰ = 1 470 000 × 800 = 1.176 × 10⁹ N.\n\n2.352 × 10⁹ N forgets to divide by 2 in [x²/2], equivalent to applying the base pressure to the whole face; 1.2 × 10⁸ N uses ρ = 1000 instead of ρg = 9800; 5.88 × 10⁷ N integrates 1 instead of x, leaving the depth out."
         },
         {
           "type": "mcq",
-          "q": "MR = 100 + 20Q + 3Q² and TR(2) = 260. Find the constant in TR(Q).",
+          "q": "A 40 m rope of mass 80 g/m hangs over the edge of a cliff. Take g = 9.8 m/s². Find the work done in pulling the whole rope up to the top.",
           "options": [
-            "C = 260",
-            "C = 0",
-            "C = 12",
-            "C = 20"
+            "627.2 J",
+            "1254.4 J",
+            "627 200 J",
+            "800 J"
           ],
-          "answerIndex": 2,
-          "concept": "Solving for the constant from a value given away from zero",
-          "why": "TR(Q) = 100Q + 10Q² + Q³ + C, and TR(2) = 200 + 40 + 8 + C = 248 + C; setting 248 + C = 260 gives C = 12. Option 1 copies the given value straight into C, which is the standard error whenever the condition is given away from Q = 0. Option 2 ignores the condition altogether, which would make TR(2) = 248, not 260. Option 4 loses the Q³ term when substituting, getting 240 + C = 260 — a reminder to check that every term of the antiderivative is evaluated, not just the ones you wrote first."
+          "answerIndex": 0,
+          "concept": "Work done pulling up a hanging rope",
+          "why": "After x m has been pulled up, (40 − x) m still hangs, with mass 0.08(40 − x) kg (80 g/m = 0.08 kg/m), so the force is F(x) = 9.8 × 0.08 × (40 − x) = 0.784(40 − x) N. W = ∫₀⁴⁰0.784(40 − x)dx = 0.784[40x − x²/2]₀⁴⁰ = 0.784(1600 − 800) = 0.784 × 800 = 627.2 J.\n\n1254.4 J is the starting force 31.36 N times 40 m, valid only for a constant force; 627 200 J never converts grams to kilograms; 800 J integrates (40 − x) but drops the coefficient 0.784."
         },
         {
           "type": "mcq",
-          "q": "For D(Q) = 1000 − 25Q and S(Q) = 100 + Q², with Q₀ = 20 and P₀ = 500, evaluate the consumer surplus.",
+          "q": "A company's marginal revenue is MR(Q) = 200 − 4Q + 3Q², and its total revenue at Q = 1 is 210. Find the total revenue function TR(Q).",
           "options": [
-            "10 000",
-            "5333",
-            "2500",
-            "5000"
+            "TR(Q) = 200Q − 2Q² + Q³ + 210",
+            "TR(Q) = 200Q − 4Q² + 3Q³ + 11",
+            "TR(Q) = 200Q − 2Q² + Q³",
+            "TR(Q) = 200Q − 2Q² + Q³ + 11"
           ],
           "answerIndex": 3,
-          "concept": "Evaluating the consumer-surplus integral",
-          "why": "CS = ∫₀²⁰(1000 − 25Q − 500)dQ = ∫₀²⁰(500 − 25Q)dQ = [500Q − 25Q²/2]₀²⁰ = 10 000 − 5000 = 5000. Option 1 keeps only the first term, forgetting −25Q²/2. Option 2 is the producer surplus, 16000/3 ≈ 5333 — the two are close in size and easy to swap, so always check which bracket you formed. Option 3 halves the answer, typically by writing 25Q²/2 as 25Q²/4 or by using an upper limit of 10."
+          "concept": "Total revenue from marginal revenue with a data point",
+          "why": "TR(Q) = ∫(200 − 4Q + 3Q²)dQ = 200Q − 2Q² + Q³ + C. Then TR(1) = 200 − 2 + 1 + C = 199 + C = 210, so C = 11 and TR(Q) = 200Q − 2Q² + Q³ + 11.\n\n+ 210 copies the given revenue straight into C instead of solving 199 + C = 210; 200Q − 4Q² + 3Q³ + 11 fails to divide by the new powers; leaving the constant off gives TR(1) = 199, not 210."
+        },
+        {
+          "type": "mcq",
+          "q": "The rate of investment is I(t) = 6√t. The capital growth from the 1st year to the Tth year is 104. Find T.",
+          "options": [
+            "T = 27",
+            "T = 9",
+            "T = 3",
+            "T = 26"
+          ],
+          "answerIndex": 1,
+          "concept": "Finding the time from a given capital growth",
+          "why": "K = ∫₁ᵀ6t^(1/2)dt = [4t^(3/2)]₁ᵀ = 4T^(3/2) − 4. Set 4T^(3/2) − 4 = 104, so T^(3/2) = 27, and T = 27^(2/3) = (∛27)² = 9. Check: 4(9^(3/2)) − 4 = 4(27) − 4 = 104.\n\nT = 27 stops at T^(3/2) = 27 without undoing the power; T = 3 takes the cube root of 27 but forgets to square it; T = 26 treats t^(3/2) as t and solves 4T − 4 = 100."
+        },
+        {
+          "type": "mcq",
+          "q": "The demand function is D(Q) = 90 − 3Q and the market equilibrium is Q₀ = 10, P₀ = 60. Find the consumer surplus.",
+          "options": [
+            "300",
+            "750",
+            "150",
+            "600"
+          ],
+          "answerIndex": 2,
+          "concept": "Consumer surplus at a given equilibrium",
+          "why": "CS = ∫₀^Q₀[D(Q) − P₀]dQ = ∫₀¹⁰(90 − 3Q − 60)dQ = ∫₀¹⁰(30 − 3Q)dQ = [30Q − 3Q²/2]₀¹⁰ = 300 − 150 = 150.\n\n300 keeps only the 30Q term and drops the −3Q²/2; 750 is ∫₀¹⁰(90 − 3Q)dQ, the total willingness to pay, with the price P₀ never subtracted; 600 is P₀ × Q₀, the amount actually spent."
+        },
+        {
+          "type": "mcq",
+          "q": "For a product, the demand function is D(Q) = 200 − 12Q and the supply function is S(Q) = 40 + Q². Find the equilibrium quantity Q₀ and price P₀.",
+          "options": [
+            "Q₀ = 8, P₀ = 104",
+            "Q₀ = −20, P₀ = 440",
+            "Q₀ = 8, P₀ = 200",
+            "Q₀ = 8, P₀ = 136"
+          ],
+          "answerIndex": 0,
+          "concept": "Market equilibrium from demand equals supply",
+          "why": "Set D(Q) = S(Q): 200 − 12Q = 40 + Q², so Q² + 12Q − 160 = 0, (Q + 20)(Q − 8) = 0, giving Q = 8 or Q = −20. A negative quantity is meaningless, so Q₀ = 8. Then P₀ = D(8) = 200 − 96 = 104, and S(8) = 40 + 64 = 104 confirms it.\n\nQ₀ = −20 takes the negative root; P₀ = 200 is D(0), the price at zero quantity; P₀ = 136 evaluates 200 − 8·8, squaring Q in the demand function."
+        },
+        {
+          "type": "mcq",
+          "q": "A body has velocity v(t) and ∫₀⁴v(t)dt = 0. Which statement must be true?",
+          "options": [
+            "The velocity was zero throughout [0, 4]",
+            "The body did not move during [0, 4]",
+            "The total distance travelled was zero",
+            "The body finished where it started"
+          ],
+          "answerIndex": 3,
+          "concept": "Interpreting a zero net displacement",
+          "why": "∫₀⁴v(t)dt = x(4) − x(0) is the net displacement, the change in position. Zero net displacement means x(4) = x(0): the body is back at its starting point. For example, with v(t) = 2t − 4: ∫₀⁴(2t − 4)dt = 16 − 16 = 0, yet the body moves back 4 m and then forward 4 m.\n\nThe other three options confuse net displacement with motion: v need not be zero, the body can move, and the distance travelled (8 m in the example) is not zero; only the signed sum of the backward and forward parts is."
         },
         {
           "type": "short",
-          "q": "Evaluate the capital growth K = ∫₄⁹ 6√t dt in full. State what the slide prints as the answer and why that is wrong.",
-          "concept": "Integrating a square root, and the slide's incorrect final value",
-          "why": "A good answer rewrites first: 6√t = 6t^(1/2), so n = 1/2, the new power is 3/2, and dividing by 3/2 means multiplying by 2/3 — giving 6 × (2/3) t^(3/2) = 4t^(3/2). Then evaluate: K = 4t^(3/2)|₄⁹ = 4(9^(3/2)) − 4(4^(3/2)). Since 9^(3/2) = (√9)³ = 3³ = 27 and 4^(3/2) = (√4)³ = 2³ = 8, K = 4(27) − 4(8) = 108 − 32 = 76. The slide prints the final answer as 4, which is simply the coefficient of t^(3/2) left standing where the number should be; every earlier line of the slide is correct and those lines give 76. Quote 76 and say so plainly, because this misprint will otherwise be copied into an exam script. A student answering 6 has substituted into the integrand, I(9) − I(4) = 18 − 12, instead of into the antiderivative."
+          "q": "A resource is consumed at 40e^(0.02t) thousand tonnes per year, t years after 2010, with C(0) = 0. Find the model C(t) for the total consumed, then the year in which a reserve of 1000 thousand tonnes runs out. Show your working.",
+          "concept": "Exhaustion time from an exponential consumption model",
+          "why": "C(t) = ∫40e^(0.02t)dt = (40/0.02)e^(0.02t) + c = 2000e^(0.02t) + c, and C(0) = 0 gives 0 = 2000 + c, so c = −2000 and C(t) = 2000e^(0.02t) − 2000. Set C(t) = 1000: 2000e^(0.02t) = 3000, so e^(0.02t) = 1.5. Take natural logs: 0.02t = ln 1.5 = 0.4055, so t = 0.4055/0.02 = 20.27 years. Then 2010 + 20.27 gives the year 2030.\n\nFinal answer: C(t) = 2000e^(0.02t) − 2000, t ≈ 20.3 years, exhausted in 2030 (also accepted: t = 20.27, or 'about 20 years, in 2030'). The working must show the division by 0.02, the use of C(0) = 0, the isolation of the exponential and the log step. Dividing ln 1.5 by 0.002 gives 203 years and is wrong; solving 2000e^(0.02t) = 1000 (forgetting the −2000) gives a negative time and is wrong."
         },
         {
           "type": "short",
-          "q": "For D(Q) = 1000 − 25Q and S(Q) = 100 + Q², find the equilibrium quantity and price and then compute the producer surplus, showing the quadratic in full.",
-          "concept": "Equilibrium by quadratic, then the producer-surplus integral",
-          "why": "A good answer sets D(Q) = S(Q): 1000 − 25Q = 100 + Q², so Q² + 25Q − 900 = 0. By the formula, Q = (−25 ± √(625 + 3600))/2 = (−25 ± √4225)/2 = (−25 ± 65)/2, giving Q = 20 or Q = −45; a negative quantity is meaningless, so Q₀ = 20. Then P₀ = D(20) = 1000 − 500 = 500, checked against S(20) = 100 + 400 = 500. The producer surplus is PS = ∫₀²⁰[P₀ − S(Q)]dQ = ∫₀²⁰(500 − 100 − Q²)dQ = ∫₀²⁰(400 − Q²)dQ = [400Q − Q³/3]₀²⁰ = 8000 − 8000/3 = 16000/3 = 5333.33, which the slide rounds to 5333. Credit for keeping the bracket the right way round — P₀ minus S(Q) for producers, D(Q) minus P₀ for consumers — and for discarding the negative root explicitly rather than silently."
+          "q": "The demand function is D(Q) = 250 − 5Q and the supply function is S(Q) = 100 + Q². Find the equilibrium quantity and price, then compute the producer surplus. Show your working.",
+          "concept": "Producer surplus after finding equilibrium",
+          "why": "Equilibrium: 250 − 5Q = 100 + Q², so Q² + 5Q − 150 = 0, (Q + 15)(Q − 10) = 0; discard Q = −15, so Q₀ = 10 and P₀ = D(10) = 250 − 50 = 200 (check: S(10) = 100 + 100 = 200). Producer surplus: PS = ∫₀^Q₀[P₀ − S(Q)]dQ = ∫₀¹⁰(200 − 100 − Q²)dQ = ∫₀¹⁰(100 − Q²)dQ = [100Q − Q³/3]₀¹⁰ = 1000 − 1000/3 = 2000/3 ≈ 666.67.\n\nFinal answer: Q₀ = 10, P₀ = 200, PS = 2000/3 ≈ 666.7 (also accepted: 666.67 or 667). The working must show the quadratic, the rejection of the negative root, P₀ from either function, and the integrand P₀ − S(Q) from 0 to Q₀. ∫₀¹⁰(250 − 5Q − 200)dQ = 250 is the consumer surplus, not the producer surplus; 1000 alone forgets the −Q³/3 term."
         },
         {
           "type": "short",
-          "q": "Copper is consumed at the rate 35e^(0.035t) thousand metric tons per year, t years after 2005. Build the cumulative model and find the year in which 750 thousand metric tons have been consumed, showing the logarithm step. Identify the misprint on that slide.",
-          "concept": "Exponential accumulation model and solving for t with a natural log",
-          "why": "A good answer integrates the rate: C(t) = ∫35e^(0.035t)dt = (35/0.035)e^(0.035t) + c = 1000e^(0.035t) + c, noting that ∫e^(kt)dt = e^(kt)/k means dividing by k, and 35 ÷ 0.035 = 1000. Applying C(0) = 0 with e⁰ = 1 gives 0 = 1000 + c, so c = −1000 and C(t) = 1000e^(0.035t) − 1000. Then set C(t) = 750: 1000e^(0.035t) = 1750, so e^(0.035t) = 1.750; taking natural logs, 0.035t = ln(1.750) = 0.5596, so t = 0.5596/0.035 = 15.989 ≈ 16 years, and 2005 + 16 = 2021. The misprint is in the slide's last line, which writes the denominator as 0.0035 rather than 0.035; the denominator must be the coefficient in the exponent, because that is what taking logs leaves behind. The printed value 15.989 is right because it was computed with 0.035 — with 0.0035 it would read 159.89 years, i.e. the year 2165, which contradicts the slide's own conclusion."
+          "q": "A body has velocity v(t) = 3t² − 6t m/s and initial displacement x(0) = 5 m. Find (a) the displacement function x(t), (b) x(2), and (c) the displacement between t = 1 and t = 3. Show your working.",
+          "concept": "Position function, position at a time and change in position",
+          "why": "(a) x(t) = ∫(3t² − 6t)dt = t³ − 3t² + C, and x(0) = C = 5, so x(t) = t³ − 3t² + 5. (b) x(2) = 8 − 12 + 5 = 1 m. (c) Displacement from t = 1 to t = 3 is x(3) − x(1) = (27 − 27 + 5) − (1 − 3 + 5) = 5 − 3 = 2 m, or equivalently ∫₁³(3t² − 6t)dt = [t³ − 3t²]₁³ = 0 − (−2) = 2 m; the constant 5 cancels.\n\nFinal answer: x(t) = t³ − 3t² + 5, x(2) = 1 m, displacement 2 m. The working must find C from x(0) = 5 and either subtract positions or evaluate the definite integral without the constant. x(3) = 5 alone is a position, not a displacement; v(2) = 0 is not x(2)."
         },
         {
           "type": "short",
-          "q": "Using her rope set-up unchanged, how much work is done in pulling up only the first 30 m of the 60 m rope? Show the working and say why the answer is more than half of 1164.24 J.",
-          "concept": "Changing the limits on the work integral, and why the halves are unequal",
-          "why": "A good answer keeps F(x) = 0.6468(60 − x) and changes only the upper limit: W = ∫₀³⁰ 0.6468(60 − x)dx = 0.6468[60x − x²/2]₀³⁰ = 0.6468(1800 − 450) = 0.6468 × 1350 = 873.18 J. It should then explain the comparison: the force is largest at the start, 38.8 N, and falls linearly to 0.6468(30) = 19.4 N by the halfway point and to 0 at the end, so the first half of the haul is done against the heavier part of the load. Numerically the first 30 m takes 873.18 J and the last 30 m only 1164.24 − 873.18 = 291.06 J, a ratio of exactly 3 to 1 — which is what a linearly decreasing force always gives. The examinable point is that only the limits change; the force function is built once from the physics and then reused."
+          "q": "CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ. Explain why D(Q) − P₀ is a gain to consumers, why P₀ − S(Q) is a gain to producers, and why both integrals stop at Q₀.",
+          "concept": "Meaning of the surplus integrands and their limits",
+          "why": "D(Q) is the price a consumer would have been willing to pay for the Q-th unit, but every unit sells at the single market price P₀, so D(Q) − P₀ is the saving on that unit; adding those savings over all units sold, from 0 to Q₀, gives the consumer surplus. S(Q) is the lowest price at which a producer would supply the Q-th unit, but it is sold at P₀, so P₀ − S(Q) is the extra received on that unit; summing from 0 to Q₀ gives the producer surplus. Both stop at Q₀ because only Q₀ units are actually traded: beyond it D(Q) < P₀ (no consumer would buy at P₀) and S(Q) > P₀ (no producer would sell at P₀), so there are no further units and no further surplus.\n\nA correct answer identifies D(Q) as willingness to pay, S(Q) as the minimum acceptable price, P₀ as the common price actually paid, and Q₀ as the quantity actually traded."
         }
       ]
     },
@@ -774,131 +778,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Example 1: a 960-W coffeemaker designed for a 240-V line is to run from the USA-standard 120-V line. What turns ratio N₂/N₁ does the lecturer obtain?",
+          "q": "A 1200 W appliance designed for a 230 V supply is to be run from a 115 V line through an ideal transformer. What turns ratio N₂/N₁ is needed, and what kind of transformer is it?",
           "options": [
-            "1/2",
-            "2",
-            "240",
-            "1/4"
+            "N₂/N₁ = 1/2, step-down",
+            "N₂/N₁ = 2, step-down",
+            "N₂/N₁ = 4, step-up",
+            "N₂/N₁ = 2, step-up"
           ],
-          "answerIndex": 1,
-          "concept": "Assigning V₁ and V₂ before forming the turns ratio",
-          "why": "The 120-V line is the source, so V₁ = 120 V, and the coffeemaker is the load, so V₂ = 240 V: N₂/N₁ = V₂/V₁ = 240/120 = 2, twice as many turns on the secondary — a step-up transformer. Option 1 puts the appliance's rating in the primary, which is Example 2's answer, not this one. Option 3 quotes a voltage as if it were a ratio; the turns ratio is dimensionless. Option 4 squares an already inverted ratio, importing the square that belongs only in the resistance formula."
+          "answerIndex": 3,
+          "concept": "Turns ratio from the appliance rating and the line voltage",
+          "why": "The line is the primary (V₁ = 115 V) and the appliance is the load on the secondary (V₂ = 230 V). N₂/N₁ = V₂/V₁ = 230/115 = 2. Since N₂ > N₁ it is a step-up transformer.\n\n1/2 puts the appliance's rating on the primary, swapping the two sides; '2, step-down' has the ratio right but the definition wrong, since more secondary turns means step-up; 4 squares the ratio, a square that belongs only in the resistance formula."
         },
         {
           "type": "mcq",
-          "q": "Example 1(b): what current does the coffeemaker draw from the 120-V line?",
+          "q": "A 1000 W hair dryer rated for 120 V is run from a 240 V outlet through an ideal transformer. What current does it draw from the outlet?",
+          "options": [
+            "8.3 A",
+            "4.2 A",
+            "2.1 A",
+            "0.24 A"
+          ],
+          "answerIndex": 1,
+          "concept": "Line current from the average power",
+          "why": "The outlet is the primary, so P_av = V₁I₁ gives I₁ = 1000/240 = 4.17 A, about 4.2 A.\n\n8.3 A is I₂ = 1000/120, the current in the dryer's own element, not what the outlet supplies; 2.1 A halves the line current a second time, applying the 1/2 ratio to a current that was already the primary's; 0.24 A is V/P, the ratio inverted."
+        },
+        {
+          "type": "mcq",
+          "q": "A 120 V supply connected to the primary of an ideal transformer sees an effective resistance of 12 Ω. The turns ratio is N₂/N₁ = 3. What is the resistance of the load on the secondary?",
+          "options": [
+            "108 Ω",
+            "36 Ω",
+            "4.0 Ω",
+            "1.3 Ω"
+          ],
+          "answerIndex": 0,
+          "concept": "Load resistance from the resistance seen by the supply",
+          "why": "V₁/I₁ = R/(N₂/N₁)², so R = (V₁/I₁)(N₂/N₁)² = 12 × 3² = 12 × 9 = 108 Ω. Check: V₂ = 360 V, I₁ = 10 A so I₂ = 10/3 A, and 360/(10/3) = 108 Ω.\n\n36 Ω multiplies by the ratio 3 instead of by its square; 4.0 Ω divides by the ratio; 1.3 Ω divides by the square, the formula applied backwards."
+        },
+        {
+          "type": "mcq",
+          "q": "A 1000 W hair dryer rated for 120 V is run from a 240 V outlet through an ideal transformer. What resistance does the dryer appear to have to the 240 V outlet?",
+          "options": [
+            "14 Ω",
+            "29 Ω",
+            "58 Ω",
+            "115 Ω"
+          ],
+          "answerIndex": 2,
+          "concept": "Apparent resistance from the supply voltage and current",
+          "why": "The apparent resistance is what the supply sees: V₁/I₁ with I₁ = P/V₁ = 1000/240 = 4.17 A, so V₁/I₁ = 240/4.17 = 57.6 Ω, about 58 Ω. Equivalently V₁²/P = 57 600/1000 = 57.6 Ω.\n\n14 Ω is the dryer's own resistance, V₂²/P = 120²/1000 = 14.4 Ω, the answer to a different question; 29 Ω divides 57.6 by the ratio 2 instead of leaving it alone; 115 Ω multiplies it by 2."
+        },
+        {
+          "type": "mcq",
+          "q": "The secondary of an ideal transformer has 60 turns and gives 9.0 V. The primary has 1600 turns. What voltage is applied to the primary?",
+          "options": [
+            "9.0 V",
+            "0.34 V",
+            "27 V",
+            "240 V"
+          ],
+          "answerIndex": 3,
+          "concept": "Primary voltage from the turns ratio",
+          "why": "V₂/V₁ = N₂/N₁, so V₁ = V₂ (N₁/N₂) = 9.0 × (1600/60) = 9.0 × 26.7 = 240 V.\n\n9.0 V assumes the voltages are equal; 0.34 V is 9.0 × (60/1600), the ratio inverted, which would make the 1600-turn winding the low-voltage side; 27 V is the turns ratio 1600/60 quoted as a voltage."
+        },
+        {
+          "type": "mcq",
+          "q": "An ideal transformer has N₂/N₁ = 1/6 and its primary draws 0.50 A. What current flows in the secondary?",
+          "options": [
+            "0.083 A",
+            "3.0 A",
+            "0.50 A",
+            "18 A"
+          ],
+          "answerIndex": 1,
+          "concept": "Current ratio as the inverse of the turns ratio",
+          "why": "I₁V₁ = I₂V₂ and V₂/V₁ = N₂/N₁ = 1/6, so I₂ = I₁ (V₁/V₂) = I₁ (N₁/N₂) = 0.50 × 6 = 3.0 A. Stepping the voltage down 6 times steps the current up 6 times.\n\n0.083 A is 0.50/6, applying the turns ratio to the current the same way as to the voltage; 0.50 A assumes the currents are equal, which would lose five sixths of the power; 18 A multiplies by 6², a square that belongs in the resistance formula only."
+        },
+        {
+          "type": "mcq",
+          "q": "An ideal transformer draws 0.50 A from a 240 V supply. Its secondary feeds a heater of resistance 7.5 Ω. What current flows in the heater?",
           "options": [
             "4.0 A",
-            "2.0 A",
-            "0.125 A",
-            "8.0 A"
-          ],
-          "answerIndex": 3,
-          "concept": "Line current is the primary current, from P_av = V₁I₁",
-          "why": "P_av = V₁I₁ gives I₁ = P_av/V₁ = 960/120 = 8.0 A. Option 1 is the secondary current, I₂ = 960/240 = 4.0 A — the current in the coffeemaker itself, and the right answer to a question that was not asked. Option 2 halves that again, applying the turns ratio a second time. Option 3 inverts the formula, computing V₁/P_av. Always ask which side of the transformer the question is standing on."
-        },
-        {
-          "type": "mcq",
-          "q": "Example 1(c): with V₁ = 120 V, I₁ = 8.0 A and N₂/N₁ = 2, what is the resistance of the coffeemaker?",
-          "options": [
-            "60 Ω",
-            "15 Ω",
-            "30 Ω",
-            "7.5 Ω"
+            "16 A",
+            "0.50 A",
+            "32 A"
           ],
           "answerIndex": 0,
-          "concept": "Recovering the load resistance from the apparent resistance",
-          "why": "V₁/I₁ = 120/8 = 15 Ω, then V₁/I₁ = R/(N₂/N₁)² rearranges to R = (V₁/I₁)(N₂/N₁)² = 15(2)² = 15 × 4 = 60 Ω. Check: V₂/I₂ = 240/4.0 = 60 Ω. Option 2 stops at the apparent resistance and never applies the formula at all. Option 3 multiplies by the ratio instead of its square, the commonest slip in this calculation. Option 4 divides by the square instead of multiplying, running the formula backwards."
+          "concept": "Secondary current from power and load resistance",
+          "why": "Power in = I₁V₁ = 0.50 × 240 = 120 W, and for an ideal transformer this is the power in the heater: I₂²R = 120, so I₂ = √(120/7.5) = √16 = 4.0 A. Check: V₂ = 4.0 × 7.5 = 30 V, and 30 × 4.0 = 120 W.\n\n16 A is P/R without the square root, a current squared; 0.50 A assumes the secondary current equals the primary's; 32 A is V₁/R, connecting the heater straight to 240 V."
         },
         {
           "type": "mcq",
-          "q": "Example 2(b): the 1600-W dryer, rated 120 V, is run through a transformer from a 240-V European outlet. What current does it draw from that outlet?",
+          "q": "An ideal step-up transformer doubles the voltage. Compared with the primary, what are the secondary current and the secondary power?",
           "options": [
-            "13.3 A",
-            "3.33 A",
-            "6.67 A",
-            "1600 A"
-          ],
-          "answerIndex": 2,
-          "concept": "Primary current in the step-down case",
-          "why": "The outlet is the primary, so I₁ = P_av/V₁ = 1600/240 = 6.67 A (exactly 20/3 A). Option 1 is I₂ = 1600/120 = 13.3 A, the current in the dryer element on the secondary — the mirror of the trap in Example 1(b). Option 2 halves 6.67 A, applying the turns ratio to a current that already accounts for it. Option 3 divides by nothing. Sanity check: I₁V₁ = 6.67 × 240 ≈ 1600 W = I₂V₂ = 13.3 × 120."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 21 ends at V₁/I₁ = 240/6.67 = 36 Ω without using the ratio N₂/N₁ = 1/2 it lists. Finish the calculation: what is the dryer's own resistance?",
-          "options": [
-            "36 Ω",
-            "9 Ω",
-            "18 Ω",
-            "4.5 Ω"
-          ],
-          "answerIndex": 1,
-          "concept": "The line the deck leaves out of Example 2(c)",
-          "why": "R = (V₁/I₁)(N₂/N₁)² = 36 × (1/2)² = 36 × 1/4 = 9 Ω, confirmed independently by R = V₂/I₂ = 120/13.3 = 9 Ω and by V₂²/P_av = 14400/1600 = 9 Ω. Option 1 repeats the apparent resistance, which answers what the dryer appears to have at 240 V, not what it is. Option 2 multiplies by the ratio rather than its square. Option 4 applies the square once more on top of the correct answer. Note that Example 1(c) asked for the appliance's own resistance and Example 2(c) for the apparent one — the deck ends its two examples on different quantities."
-        },
-        {
-          "type": "mcq",
-          "q": "An ideal transformer has N₁ = 400 turns and N₂ = 100 turns, with 240 V rms applied to the primary. What is the secondary voltage?",
-          "options": [
-            "960 V",
-            "15 V",
-            "24 V",
-            "60 V"
-          ],
-          "answerIndex": 3,
-          "concept": "Applying V₂/V₁ = N₂/N₁ in the direction the question asks",
-          "why": "V₂ = V₁(N₂/N₁) = 240 × (100/400) = 240 × 1/4 = 60 V, and since N₂ < N₁ this is a step-down transformer, so a secondary voltage below 240 V is what you should expect. Option 1 inverts the ratio, multiplying by 4 instead of dividing — the answer a step-up transformer would give. Option 2 divides by the square of the ratio, 240/16, borrowing the square from the resistance formula where it does not belong. Option 3 divides by 10, a slip in the turns arithmetic."
-        },
-        {
-          "type": "mcq",
-          "q": "An ideal transformer draws 5.0 A from a 200-V rms supply, and its secondary is at 25 V rms. What is the secondary current?",
-          "options": [
-            "40 A",
-            "0.625 A",
-            "5.0 A",
-            "8.0 A"
+            "Half the current, same power",
+            "Double the current, same power",
+            "Same current, double the power",
+            "Half the current, half the power"
           ],
           "answerIndex": 0,
-          "concept": "Using I₁V₁ = I₂V₂ in the correct direction",
-          "why": "I₁V₁ = 5.0 × 200 = 1000 W, so I₂ = 1000/25 = 40 A: the voltage was stepped down by 8, so the current is stepped up by 8. Option 2 multiplies by 25/200 instead of dividing, treating current like voltage — the single most common error on this equation. Option 3 assumes the current is unchanged, which would violate the power equation. Option 4 quotes the ratio 200/25 itself as though a dimensionless number were an ampere reading."
-        },
-        {
-          "type": "mcq",
-          "q": "A load of resistance 8.0 Ω is connected across the secondary of an ideal transformer whose turns ratio is N₂/N₁ = 1/4. What resistance does the primary source appear to be driving?",
-          "options": [
-            "32 Ω",
-            "2.0 Ω",
-            "128 Ω",
-            "0.50 Ω"
-          ],
-          "answerIndex": 2,
-          "concept": "Resistance transformation with a fractional turns ratio",
-          "why": "V₁/I₁ = R/(N₂/N₁)² = 8.0/(1/4)² = 8.0/(1/16) = 8.0 × 16 = 128 Ω. Because this is a step-down transformer the load looks larger from the primary, the opposite of Example 1, where a step-up made 60 Ω look like 15 Ω. Option 1 uses the ratio to the first power, 8.0 × 4. Option 2 divides by 4 instead of multiplying. Option 4 divides by 16 rather than multiplying, running the formula in reverse. Dividing by a fraction is what makes this number grow."
+          "concept": "Voltage is bought with current",
+          "why": "I₁V₁ = I₂V₂ is the whole energy statement: if V₂ = 2V₁ then I₂ = I₁/2, and the power I₂V₂ is unchanged. A transformer redistributes voltage and current; it never adds watts.\n\n'Double the current' would give four times the power out of nothing; 'same current, double the power' likewise creates energy; 'half the power' would mean half the input vanished inside an ideal device, which by definition has no losses."
         },
         {
           "type": "short",
-          "q": "Work Example 1 in full, all three parts, in the lecturer's own steps, and finish with a check that power is conserved.",
-          "concept": "The coffeemaker example reproduced end to end",
-          "why": "A good answer sets V₁ = 120 V (the line, hence the primary) and V₂ = 240 V (the coffeemaker, hence the secondary). (a) N₂/N₁ = V₂/V₁ = 240/120 = 2, so the secondary needs twice as many turns as the primary — a step-up transformer. (b) P_av = V₁I₁ gives I₁ = 960/120 = 8.0 A from the line, and I₂ = P_av/V₂ = 960/240 = 4.0 A in the coffeemaker; the answer to (b) is 8.0 A. (c) V₁/I₁ = 120/8 = 15 Ω, then R = (V₁/I₁)(N₂/N₁)² = 15(2)² = 60 Ω. The check should be explicit: I₁V₁ = 8.0 × 120 = 960 W and I₂V₂ = 4.0 × 240 = 960 W, equal as slide 10 requires, and the current ratio 8.0/4.0 = 2 is the inverse of the voltage ratio. Credit naming which of the three equations each part used."
+          "q": "A 720 W appliance rated for 240 V is run from a 120 V line through an ideal transformer. Calculate (a) the turns ratio N₂/N₁ and whether it is step-up or step-down, (b) the current from the line and the current in the appliance, (c) the appliance's resistance, checked a second way. Show your working.",
+          "concept": "Full step-up appliance calculation",
+          "why": "(a) V₁ = 120 V (line, primary), V₂ = 240 V (appliance, secondary): N₂/N₁ = V₂/V₁ = 240/120 = 2; N₂ > N₁ so step-up. (b) P_av = V₁I₁ gives I₁ = 720/120 = 6.0 A from the line; I₂ = P_av/V₂ = 720/240 = 3.0 A in the appliance. Check I₁V₁ = 720 W = I₂V₂. (c) V₁/I₁ = 120/6.0 = 20 Ω is what the line sees; R = (V₁/I₁)(N₂/N₁)² = 20 × 2² = 80 Ω. Second route: R = V₂/I₂ = 240/3.0 = 80 Ω.\n\nFinal answer: 2, step-up; 6.0 A and 3.0 A; 80 Ω (accept 79 to 81). A correct answer identifies the 120 V line as the primary, gives both currents with the line current labelled, and squares the ratio in (c) with a check. 40 Ω is 20 × 2 with the ratio unsquared; 20 Ω is the apparent resistance, not the appliance's."
         },
         {
           "type": "short",
-          "q": "Work Example 2 parts (b) and (c) in full, then add the line slide 21 omits. Say what is exact and what is rounded in the numbers 6.67 A, 13.3 A and 36 Ω.",
-          "concept": "The hair-dryer example, completed and with its rounding accounted for",
-          "why": "A good answer sets V₁ = 240 V and V₂ = 120 V. (b) I₁ = P_av/V₁ = 1600/240 = 6.67 A from the outlet, and I₂ = P_av/V₂ = 1600/120 = 13.3 A in the dryer element. (c) V₁/I₁ = 240/6.67 = 36 Ω, the resistance the dryer appears to have at 240 V, which is what the question asked. The omitted line: R = (V₁/I₁)(N₂/N₁)² = 36 × (1/2)² = 9 Ω, the dryer's own resistance, confirmed by V₂/I₂ = 120/13.3 = 9 Ω. On rounding: 1600/240 = 20/3 = 6.666… A and 1600/120 = 40/3 = 13.33… A, so both currents are three-significant-figure roundings; 240 divided by the exact 20/3 is 36 Ω exactly, while 240/6.67 is 35.98, so her 36 Ω is the exact value rather than a rounding of the divided figure."
+          "q": "A 1200 W appliance rated for 110 V is run from a 220 V outlet through an ideal transformer. Calculate (a) the turns ratio and whether it is step-up or step-down, (b) the current from the outlet, (c) the resistance the appliance appears to have to the outlet, (d) its own resistance, checked a second way. Show your working.",
+          "concept": "Apparent versus actual resistance in a step-down",
+          "why": "(a) V₁ = 220 V (outlet), V₂ = 110 V (appliance): N₂/N₁ = 110/220 = 1/2; N₂ < N₁ so step-down. (b) I₁ = P_av/V₁ = 1200/220 = 5.45 A. (c) Apparent resistance V₁/I₁ = 220/5.45 = 40.3 Ω (exactly 220²/1200 = 40.3 Ω). (d) Own resistance R = (V₁/I₁)(N₂/N₁)² = 40.3 × (1/2)² = 40.3/4 = 10.1 Ω. Second route: I₂ = 1200/110 = 10.9 A, R = V₂/I₂ = 110/10.9 = 10.1 Ω, or V₂²/P = 12 100/1200 = 10.1 Ω.\n\nFinal answer: 1/2, step-down; 5.5 A (accept 5.4 to 5.5); 40 Ω (accept 40 to 41); 10 Ω (accept 10.0 to 10.2). A correct answer distinguishes the apparent 40 Ω from the actual 10 Ω and gets the actual value two ways. 20 Ω multiplies by 1/2 without squaring; 161 Ω divides by (1/2)² instead of multiplying."
         },
         {
           "type": "short",
-          "q": "A 25 Ω load is connected across the secondary of an ideal transformer with N₂/N₁ = 5, and 60 V rms is applied to the primary. Using only the deck's formulas, find the resistance seen at the primary, the primary current, the secondary voltage and the secondary current, and verify the power.",
-          "concept": "Chaining the three deck formulas through one unfamiliar problem",
-          "why": "A good answer works in the deck's own order. Resistance seen at the primary: V₁/I₁ = R/(N₂/N₁)² = 25/5² = 25/25 = 1.0 Ω. Primary current: I₁ = V₁ divided by that apparent resistance = 60/1.0 = 60 A. Secondary voltage from equation 3: V₂ = V₁(N₂/N₁) = 60 × 5 = 300 V. Secondary current from slide 10: I₂ = I₁V₁/V₂ = (60 × 60)/300 = 3600/300 = 12 A. Verification: I₁V₁ = 60 × 60 = 3600 W and I₂V₂ = 12 × 300 = 3600 W, equal; and as a second check the load itself takes V₂/R = 300/25 = 12 A, matching I₂. It should note that a step-up of 5 in voltage is a step-down of 5 in current, 60 A to 12 A, and that the 25 Ω load looks like only 1 Ω from the primary because the ratio enters squared."
+          "q": "An ideal transformer has N₂/N₁ = 4, a 30 V rms supply on the primary and a 60 Ω resistor across the secondary. Using only V₂/V₁ = N₂/N₁, I₁V₁ = I₂V₂ and V₁/I₁ = R/(N₂/N₁)², calculate the secondary voltage and current, the primary current, and the resistance the supply sees. Show your working.",
+          "concept": "Loaded step-up transformer from the supply side",
+          "why": "V₂ = V₁(N₂/N₁) = 30 × 4 = 120 V. I₂ = V₂/R = 120/60 = 2.0 A. From I₁V₁ = I₂V₂: I₁ = (2.0 × 120)/30 = 8.0 A. Resistance seen by the supply: V₁/I₁ = 30/8.0 = 3.75 Ω, and the formula agrees: R/(N₂/N₁)² = 60/16 = 3.75 Ω. Power check: 30 × 8.0 = 240 W = 120 × 2.0.\n\nFinal answer: 120 V, 2.0 A, 8.0 A, 3.75 Ω (accept 3.7 to 3.8). A correct answer shows the 3.75 Ω from both V₁/I₁ and the formula. 0.50 A for I₁ applies the turns ratio to the current the same way as to the voltage; 15 Ω for the seen resistance divides by 4 instead of 16."
         },
         {
           "type": "short",
-          "q": "A student answers Example 1(c) like this: 'V₁/I₁ = 120/8 = 15 Ω, and N₂/N₁ = 2, so R = 15 × 2 = 30 Ω.' Diagnose the error, give the correct answer, and describe a check that would have caught it in seconds.",
-          "concept": "Diagnosing a first-power slip in the resistance formula",
-          "why": "A good answer identifies the single defective step: the formula is V₁/I₁ = R/(N₂/N₁)², so rearranging gives R = (V₁/I₁)(N₂/N₁)², and the ratio must be squared — 15 × (2)² = 15 × 4 = 60 Ω, not 15 × 2 = 30 Ω. Everything before that line, including 120/8 = 15 Ω, is correct, so this is one arithmetic move rather than a misunderstanding of the setup. The check: the coffeemaker is a 960-W appliance running at 240 V, so its current is 960/240 = 4.0 A and its resistance is V₂/I₂ = 240/4.0 = 60 Ω, computed without the transformation formula at all; 30 Ω would imply 240/30 = 8 A through the coffeemaker and hence 1920 W, twice its rating. A good answer should say that recomputing the quantity a second way from the secondary side is the general habit worth having here."
+          "q": "A 500 W appliance designed for 250 V is run from a 125 V line through an ideal transformer. A student writes: 'I₁ = 500/125 = 4.0 A, so V₁/I₁ = 125/4.0 = 31.25 Ω. N₂/N₁ = 2, so the appliance's resistance is R = 31.25 × 2 = 62.5 Ω.' Diagnose the error, give the correct resistance, and check it by a second route.",
+          "concept": "Diagnosing an unsquared turns ratio",
+          "why": "The current, the apparent resistance 31.25 Ω and the ratio 2 are all correct. The error is in the last line: the resistance transformation is V₁/I₁ = R/(N₂/N₁)², so the turns ratio must be squared, not used to the first power. Correct: R = (V₁/I₁)(N₂/N₁)² = 31.25 × 2² = 31.25 × 4 = 125 Ω. Second route: I₂ = 500/250 = 2.0 A, so R = V₂/I₂ = 250/2.0 = 125 Ω, or R = V₂²/P = 250²/500 = 125 Ω.\n\nA correct answer names the missing square as the error, gives 125 Ω (accept 124 to 126), and confirms it from the secondary side. Saying the ratio should have been 1/2, or that I₁ is wrong, misdiagnoses a correct step."
         }
       ]
     },
@@ -911,131 +915,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "A function is specified to accept a whole-number score from 0 to 100 and return a band:\n\n```\ndef grade(score):\n    if score >= 70:  return \"A\"\n    elif score >= 60: return \"B\"\n    elif score >= 50: return \"C\"\n    else:             return \"F\"\n```\n\nWhich set of inputs is the one chosen by equivalence partitioning together with boundary value analysis?",
+          "q": "Name the functional testing method for each: (i) test data is fed into one function to check each of its execution paths; (ii) after every part is integrated, the whole app is checked against its technical and functional requirements; (iii) the finished app is checked against the expected requirements, including spelling errors and bugs that crash it.",
           "options": [
-            "0, 25, 50, 75, 100 — five evenly spaced values across the whole permitted range",
-            "49, 50, 59, 60, 69, 70, together with 0 and 100 — the value on each side of every band edge, plus the two ends of the input domain",
-            "55, 65, 75, 85 — one representative taken from the middle of each band",
-            "70, 60 and 50 — the three thresholds alone, since a threshold that behaves correctly guarantees the rest of its band"
-          ],
-          "answerIndex": 1,
-          "concept": "Equivalence partitioning combined with boundary value analysis when designing test data",
-          "why": "Partitioning identifies the four bands, and boundary analysis adds the values immediately below and at each edge, plus the ends of the domain — the places where a wrong relational operator shows up; c is partitioning without boundaries, and d is boundaries without the partitions."
-        },
-        {
-          "type": "mcq",
-          "q": "A registration form is specified to accept applicants aged 18 to 65 **inclusive**. The implementation reads `if age > 18 and age <= 65:`. Which single boundary value exposes the fault, and what class of defect is it?",
-          "options": [
-            "66, and it is a wrong branch order, because the upper test is evaluated after the lower one",
-            "17, and it is an uninitialised-variable defect, because nothing sets a default for under-age input",
-            "18, and it is an off-by-one produced by a wrong relational operator, `>` used where `>=` was required",
-            "65, and it is an integer-division defect, because the range is compared rather than divided"
+            "(i) unit, (ii) integration, (iii) system",
+            "(i) integration, (ii) system, (iii) acceptance",
+            "(i) unit, (ii) system, (iii) acceptance",
+            "(i) unit, (ii) acceptance, (iii) system"
           ],
           "answerIndex": 2,
-          "concept": "Boundary value analysis and naming the defect class it exposes",
-          "why": "Only age 18 distinguishes `>` from `>=`: the spec includes 18 but the code rejects it, an off-by-one at the lower boundary; 17, 65 and 66 all behave identically under both versions."
+          "concept": "Choosing the functional testing level",
+          "why": "Unit testing uses test data to check the execution paths in a function (i). System testing tests the system as a whole after all parts are integrated to confirm it meets the technical and functional requirements (ii). Acceptance testing confirms the software meets the expected requirements and also looks for spelling errors and for bugs that cause major errors and crashes (iii).\n\nThe first option calls the whole-app check 'integration', but integration tests how parts work together, not the assembled whole; the second calls a single-function check 'integration'; the fourth swaps system and acceptance."
         },
         {
           "type": "mcq",
-          "q": "A developer opens the source of `grade` above, counts the four execution paths through it, and picks one input to drive each path. Which method is she using, and which testing levels does the deck say it applies to?",
+          "q": "How many execution paths does band have, and which set of inputs exercises every one of them exactly once?\n\n```python\ndef band(x):\n    if x < 0:\n        return \"neg\"\n    if x % 2 == 0:\n        return \"even\"\n    return \"odd\"\n```",
           "options": [
-            "White box testing; applicable to unit testing, integration testing and system testing",
-            "Black box testing; applicable to integration testing, system testing and acceptance testing",
-            "Grey box testing; primarily used in integration testing",
-            "White box testing; applicable to acceptance testing only, since every execution path ends in an output the user sees"
-          ],
-          "answerIndex": 0,
-          "concept": "White box testing: internals known, inputs chosen to exercise paths, and the levels it applies to",
-          "why": "Choosing inputs to exercise paths through known code is white box, which the deck says applies to unit, integration and system testing — notably not acceptance."
-        },
-        {
-          "type": "mcq",
-          "q": "A tester reads the source of the `cart` and `pricing` modules to work out which combinations of discount and stock level are interesting, then exercises those combinations only through the application's public checkout page. How should this be classified?",
-          "options": [
-            "Black box testing, because every test was actually run through the exposed interface",
-            "White box testing, because the source of both modules was studied before any test ran",
-            "Unit testing, because two named modules are the target of the tests",
-            "Grey box testing, in which internal data structures and algorithms are used to design the test cases while the testing is done at the user or black-box level, and which is primarily used in integration testing"
+            "3 paths: 2, 4, 6",
+            "2 paths: 4, 7",
+            "4 paths: −2, −1, 4, 7",
+            "3 paths: −1, 4, 7"
           ],
           "answerIndex": 3,
-          "concept": "Grey box testing: internals used to design the cases, execution at the black-box level",
-          "why": "This is the deck's own grey box example — two modules' code studied to design the cases, the tests then conducted through the exposed interfaces."
+          "concept": "Choosing inputs to cover execution paths",
+          "why": "White box testing chooses inputs to exercise paths through the code. There are three ways out: the first if (x < 0), the second if (even, non-negative), and the final return (odd, non-negative). −1 takes the first, 4 the second, 7 the third: 3 paths, one input each.\n\n2, 4, 6 are all even and non-negative, so they all take the same path and two paths are never run; 2 paths forgets the negative branch; 4 paths counts −2 and −1 as different, but both leave at x < 0 and the parity test is never reached for either."
         },
         {
           "type": "mcq",
-          "q": "A team tests the currency-conversion and date helper modules first, then the transaction module that calls them, then the reporting module above that. Which approach is this, and what would the alternative have done?",
+          "q": "Main calls Report and Pay; Pay calls Tax. The team tests Main first, with placeholders standing in for the modules below it, then Report and Pay, and Tax last. Which integration approach is this?",
           "options": [
-            "Top-down integration; the alternative would have started with the reporting module",
-            "Bottom-up integration, in which lower-level modules are tested first; the top-down alternative would have tested the higher-level modules first",
-            "Bottom-up design in the Week 11 sense, which concerns composition of components and says nothing about the order of integration tests",
-            "System testing, because all three layers are included by the time the sequence ends"
+            "Bottom-up integration",
+            "Top-down integration",
+            "System testing",
+            "Unit testing"
           ],
           "answerIndex": 1,
-          "concept": "Top-down versus bottom-up integration testing",
-          "why": "Lower-level modules tested before higher-level ones is bottom-up integration; top-down reverses the order, testing higher-level modules first."
+          "concept": "Integration testing direction",
+          "why": "Integration tests check how well different parts work together and can be top-down or bottom-up. With the top-down approach, higher-level modules are tested first before the lower-level modules: Main, then Report and Pay, then Tax.\n\nBottom-up would start with Tax and finish with Main; system testing tests the whole after everything is integrated, not module by module; unit testing tests one function on its own, not how modules connect."
         },
         {
           "type": "mcq",
-          "q": "A loan page computes interest correctly to the last kobo. With five users it responds in under a second; with five hundred concurrent users it takes forty seconds. Which classification and method does this failure call for?",
+          "q": "Three testers: (i) never sees the source and works the web pages in a browser, checking outputs against expected outcomes; (ii) reads the implementation and picks inputs to drive each path through the code; (iii) studies the code of two modules to design the cases, then runs them through the exposed interfaces. Classify each.",
           "options": [
-            "Functional testing has failed, because a forty-second response is not the expected output of the program",
-            "Usability testing, because the delay is discovered by observing users while they use the software",
-            "Non-functional testing, specifically performance testing, which checks how the software will perform under different load conditions",
-            "Compatibility testing, because the software behaves differently in one situation from another"
-          ],
-          "answerIndex": 2,
-          "concept": "Functional versus non-functional methods, and performance testing under different load conditions",
-          "why": "The output is correct, so the function is right; what fails is how well it performs under load, which is performance testing — a non-functional method."
-        },
-        {
-          "type": "mcq",
-          "q": "A tester writes twelve unit tests for a function containing two nested conditionals and a loop. All twelve pass, and she reports the function as proven correct. Assess the claim.",
-          "options": [
-            "Sound, provided the twelve cases were derived from the specification rather than from reading the code",
-            "Sound, because unit testing operates on the functions in a program and this is a single function",
-            "Unsound, because unit testing is a non-functional method and non-functional methods cannot establish correctness",
-            "Unsound, because the deck states that it is practically impossible to test all the execution paths in a software and that the number and type of test data are limited, so passing tests show only that the paths exercised behaved as expected"
-          ],
-          "answerIndex": 3,
-          "concept": "The stated limitation of unit testing: untestable path coverage and limited test data",
-          "why": "The deck's limitation is explicit — all execution paths cannot practically be tested and the test data is limited in number and type, so passing tests never amount to proof."
-        },
-        {
-          "type": "mcq",
-          "q": "`average([10, 20, 30])` returns 10.0 where 20.0 is expected:\n\n```\ndef average(scores):\n    total = 0\n    for i in range(len(scores) - 1):\n        total = total + scores[i]\n    return total / len(scores)\n```\n\nA breakpoint is set on the `return` line and `total` is watched on each pass through the loop. What does the watch show, and what is the defect?",
-          "options": [
-            "`total` ends at 30 rather than 60, because the loop stops one element early; the defect is an off-by-one in the bound given to `range`",
-            "`total` ends at 60, and the division then truncates the result; the defect is integer division",
-            "`total` is never initialised, so the first addition works on a stale value; the defect is an uninitialised accumulator",
-            "`total` ends at 60, and the fault is in `len(scores)`, which yields 3 where 2 is required; the defect is a wrong operator"
+            "(i) black box, (ii) white box, (iii) grey box",
+            "(i) white box, (ii) black box, (iii) grey box",
+            "(i) black box, (ii) grey box, (iii) white box",
+            "(i) grey box, (ii) white box, (iii) black box"
           ],
           "answerIndex": 0,
-          "concept": "Reading a debugger's variable watch to locate where state first goes wrong, and naming the defect class",
-          "why": "`range(len(scores) - 1)` gives i = 0 and 1 only, so total reaches 30 and 30/3 = 10.0; the watch shows 10 then 30 and stops — a classic off-by-one in the loop bound."
+          "concept": "Black, white and grey box",
+          "why": "The distinction is what the tester knows of the internal structure. (i) knows nothing of it and tests from outside: black box. (ii) knows the implementation and chooses inputs to exercise paths through the code: white box. (iii) uses internal knowledge to design the cases but tests at the black-box level through the interfaces: grey box, the combination.\n\nThe second option swaps the first two; the third calls path-driven testing 'grey', but (ii) tests the code directly, not through interfaces; the fourth calls (iii) black box, but its cases were designed from the source."
+        },
+        {
+          "type": "mcq",
+          "q": "A field accepts a whole-number score, valid from 0 to 100 inclusive. Which set takes exactly one value from each equivalence class of the input?",
+          "options": [
+            "{0, 50, 100}",
+            "{−5, 50, 120}",
+            "{10, 50, 90}",
+            "{−5, −1, 120}"
+          ],
+          "answerIndex": 1,
+          "concept": "Equivalence partitioning",
+          "why": "The input splits into three classes the program should treat identically: below the range (score < 0), valid (0 to 100), above the range (score > 100). One representative per class: −5, 50, 120.\n\n{0, 50, 100} takes three values from the valid class and none from the invalid ones; {10, 50, 90} likewise; {−5, −1, 120} takes two from the below-range class and none from the valid class."
+        },
+        {
+          "type": "mcq",
+          "q": "fee(days) is specified as: the first day is free, then 50 per extra day, so fee(1) = 0 and fee(3) = 100. Four test cases: A fee(0) expects 0; B fee(1) expects 0; C fee(3) expects 100; D fee(−2) expects 0. Which cases fail against this implementation?\n\n```python\ndef fee(days):\n    if days <= 0:\n        return 0\n    return 50 * days\n```",
+          "options": [
+            "B and C",
+            "B only",
+            "C only",
+            "A and D"
+          ],
+          "answerIndex": 0,
+          "concept": "Running test cases against an implementation",
+          "why": "Run each case. fee(0) = 0 and fee(−2) = 0, so A and D pass. fee(1) = 50 × 1 = 50, expected 0: B fails. fee(3) = 50 × 3 = 150, expected 100: C fails. The implementation charges for the free day; the fix is 50 × (days − 1).\n\n'B only' misses that the same defect overcharges every positive input; 'C only' misses the boundary case at 1; 'A and D' are the cases the implementation gets right."
+        },
+        {
+          "type": "mcq",
+          "q": "A pass mark is 50 or more. For marks = [50, 70, 30] a watch on n shows it ending at 1 where 2 was expected. Which single change fixes the defect?\n\n```python\ndef count_pass(marks):\n    n = 0\n    for m in marks:\n        if m > 50:\n            n = n + 1\n    return n\n```",
+          "options": [
+            "Move `n = 0` inside the loop",
+            "Change `m > 50` to `m >= 50`",
+            "Change `n = n + 1` to `n = 1`",
+            "Change `for m in marks` to `for m in marks[1:]`"
+          ],
+          "answerIndex": 1,
+          "concept": "Fixing a wrong relational operator",
+          "why": "Step through with the watch: m = 50 fails m > 50, so n stays 0; m = 70 passes, n = 1; m = 30 fails. The mark exactly at the boundary is excluded, so the defect is a wrong relational operator: > should be >=, giving n = 2.\n\nMoving n = 0 inside the loop resets the accumulator and gives 1 for any list; n = 1 stops counting; marks[1:] skips the first element and gives 1 for this list too, since 70 is the only one counted."
+        },
+        {
+          "type": "mcq",
+          "q": "What is the one thing that decides whether a test is black box or white box?",
+          "options": [
+            "Whether it is run by hand or by an automated tool",
+            "Whether a tester or a developer runs it",
+            "Whether it is a functional or a non-functional test",
+            "Whether the internal structure of the item is known to the tester"
+          ],
+          "answerIndex": 3,
+          "concept": "Basis of black box versus white box",
+          "why": "Black box testing is a method in which the internal structure, design and implementation of the item are not known to the tester; white box is one in which they are known. Nothing else is part of the definition.\n\nEither kind can be manual or automated; a developer usually does white box testing but that is a consequence, not the definition; black box tests are usually functional but can be non-functional, so functional versus non-functional does not decide it."
         },
         {
           "type": "short",
-          "q": "A payment module has already passed unit tests for every one of its functions, yet the checkout fails as soon as it is wired to the inventory module. Explain why passing unit tests could not have prevented this, name the level of testing that would have caught it, and say which of the two integration directions you would choose here and why.",
-          "concept": "Unit versus integration testing, and choosing top-down or bottom-up integration",
-          "why": "Unit testing checks the execution paths within individual functions, mostly on the functions of one module in isolation; it says nothing about how different parts of the software work together, so a mismatch in what the two modules pass to each other — a differently shaped record, a different unit of currency, a different assumption about when stock is decremented — sits entirely outside what any unit test observes. Integration testing is the level that tests how well different parts of a software work together, and is what would have caught it. Either direction is defensible if justified: bottom-up, testing the lower-level payment and inventory modules together first before bringing in the checkout module above them, is the stronger choice here because both modules already exist and are individually tested, so the interface between them is the one unknown and should be exercised directly; top-down would exercise the checkout module first and rely on the lower modules being reached later, which delays the very interaction that is failing."
+          "q": "quantity is specified as valid from 1 to 99 inclusive. The implementation reads `if qty >= 1 and qty < 99`. List the six boundary values that boundary value analysis tests for this range, state what the implementation returns for each, and name the value that exposes the fault. Show your working.",
+          "concept": "Boundary value analysis exposing a fault",
+          "why": "Boundary value analysis tests the values just below, at and just above each edge: 0, 1, 2 at the lower edge and 98, 99, 100 at the upper edge. The implementation: 0 invalid (correct), 1 valid (correct), 2 valid (correct), 98 valid (correct), 99 invalid, 100 invalid (correct). The specification says 99 is valid, so qty = 99 exposes the fault: qty < 99 should be qty <= 99.\n\nFinal answer: boundary values 0, 1, 2, 98, 99, 100; the failing value is 99. A correct answer lists all six, gives the implementation's verdict on each, and identifies 99 with the operator fix. Testing only 1 and 99 is accepted if 99 is found, but the full six is expected."
         },
         {
           "type": "short",
-          "q": "Two testers produce identical sets of inputs for the same login form. One read the source first; the other never saw it. Explain why their tests are not the same kind of test, what each is called, and why the deck says grey box is \"primarily used in integration testing\".",
-          "concept": "Black, white and grey box classified by what the tester knows, not by what the run looks like",
-          "why": "The classification turns on whether the internal structure, design and implementation are known to the tester, not on the inputs that result. The tester who never saw the source is doing black box testing: she works from the outside, supplying inputs and verifying outputs against expected outcomes, and any coverage of the internal paths is incidental. The tester who read the source and used it to pick her inputs is not doing black box testing even though the run looks identical; because she designed the cases from internal knowledge but exercised them through the ordinary interface, she is doing grey box testing — internals partially known, cases designed from data structures and algorithms, testing conducted at the user or black-box level. (Had she also verified the outputs by reasoning about the implementation and driven the paths directly, that would be white box.) Grey box is primarily used in integration testing because that is where its combination pays: the interesting faults live in the interaction between modules, so you need to read both modules' code to know which combinations are worth trying, but you exercise them through the exposed interfaces, which is exactly how the modules meet in the real system."
+          "q": "total([5, 8, 2]) returns 10 where 15 is expected. Set a breakpoint on the line `t = t + prices[i]`, and give the value of i and of t after each time it runs. Say where the state first goes wrong and name the defect. Show your working.\n\n```python\ndef total(prices):\n    t = 0\n    for i in range(1, len(prices)):\n        t = t + prices[i]\n    return t\n```",
+          "concept": "Watching a variable to locate the defect",
+          "why": "range(1, 3) gives i = 1, 2. Watch: after the first pass i = 1, t = 0 + 8 = 8; after the second pass i = 2, t = 8 + 2 = 10; the loop ends and 10 is returned. The state is wrong from the very first pass: t should be 5 after adding prices[0], but the loop started at index 1 and prices[0] = 5 is never added. The defect is an off-by-one in the loop range: range(1, ...) should be range(0, ...) or range(len(prices)).\n\nFinal answer: (i, t) = (1, 8), (2, 10); first wrong at the first pass; defect: off-by-one, the loop skips index 0. Also accepted: describing the fix as `for p in prices`. Naming the defect as a wrong accumulator start or integer division is wrong."
         },
         {
           "type": "short",
-          "q": "A function is specified to accept a discount percentage from 0 to 50 inclusive. Explain, using this spec, why equivalence partitioning alone would probably miss the most likely defect, which specific values boundary value analysis adds, and what the deck's stated limitation of unit testing implies about how much confidence a passing run of those values earns.",
-          "concept": "Equivalence partitioning, boundary value analysis, and the limits of what passing unit tests prove",
-          "why": "Equivalence partitioning splits the input domain into classes the program should treat identically — below range, valid, above range — and takes one representative from each, say -10, 25 and 80. Those pass under a correct implementation and also under one that wrote `discount < 50` instead of `discount <= 50`, or `> 0` instead of `>= 0`, because 25 is nowhere near an edge; the most likely defect is exactly such an off-by-one at a boundary, and a mid-class representative cannot see it. Boundary value analysis adds the values just below, at and just above each edge: -1, 0, 1 at the lower edge and 49, 50, 51 at the upper. Even with all of these passing, the deck's limitation on unit testing still applies — it is practically impossible to test all the execution paths in a software, and the number and type of test data we can use is limited — so a passing run establishes only that the paths those inputs exercised behaved as expected. It raises confidence at the places defects cluster; it does not prove the function correct, and it says nothing about paths no chosen input reaches."
+          "q": "Four reports on a banking app: (a) balances are correct but each page takes 30 seconds when 2,000 customers are logged in; (b) customers watched using the app cannot find the transfer button; (c) a logged-in customer can open another customer's statement by editing the address bar; (d) the function that adds two amounts returns 30 for 10 + 25 where 35 is expected. Name the testing method for each and say which reports are functional failures. Show your working.",
+          "concept": "Classifying failures by testing method",
+          "why": "(a) Performance testing: correct output but poor behaviour under load, which is a non-functional matter of network delays, database and client-side processing under different load conditions. (b) Usability testing: an issue discovered with the help of users who are observed while using the software. (c) Security testing: a confidentiality flaw, one customer reading another's data. (d) Unit testing: a single function does not perform as expected, which is a functional failure.\n\nA correct answer names performance, usability, security and unit, and says only (d) is functional, because the other three concern how well or how safely the app works rather than whether it does the right thing. Calling (a) system testing, or (d) acceptance testing, is not accepted."
         },
         {
           "type": "short",
-          "q": "A bank's mobile app returns correct balances, but the branch manager reports that customers on older Android phones cannot complete a transfer, and that new customers abandon the transfer screen halfway. Explain which non-functional method applies to each of the two complaints, why neither is a functional failure, and what a functional failure on the same screen would look like instead.",
-          "concept": "Non-functional methods — compatibility and usability — against functional failure",
-          "why": "The older-Android complaint is for compatibility testing, which determines how compatible the software is with different environments such as different browsers, platforms and operating systems, and ensures it performs as expected across every environment the end users will actually use. The abandonment complaint is for usability testing, which discovers issues with the help of users: users are observed while using the software and the problems they face are identified and addressed. Neither is a functional failure because the program does perform its intended function — on a supported device, driven by someone who gets through the screen, the transfer is computed and the balance returned correctly; functional methods ask whether the program does what is expected of it, while these two ask in what environment it can do it and whether a real person can get it done. A functional failure on the same screen would be the transfer itself being wrong: 5,000 debited from the sender but 500 credited to the recipient, a transfer to a closed account accepted, or the balance not updating after a successful transfer — a case where the actual output differs from the expected output, which unit, integration, system or acceptance testing would catch."
+          "q": "Every function in a payment program has passed its unit tests, and the developer reports that the program is therefore free of defects. Explain why that conclusion does not follow: name the stated limitation of unit testing, and say what integration testing and system testing check that unit tests cannot.",
+          "concept": "Limits of unit testing",
+          "why": "Unit testing uses test data to check the execution paths in a function, and its stated limitation is that it is practically impossible to test all the execution paths, and the number and type of test data that can be used are limited. So a passing unit suite shows only that the paths exercised by the chosen data behaved; other paths and other data are untested. Integration testing checks how well the different parts work together, which no test of one part in isolation can show, such as a correct function being handed the wrong argument by its caller. System testing checks the system as a whole after all parts are integrated against the technical and functional requirements, which is the only level at which 'the program works' can be claimed.\n\nA correct answer states the limitation in terms of untested paths and limited test data, and gives the distinct purpose of integration and of system testing."
         }
       ],
       "slot": "fast"
@@ -1050,68 +1054,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "What separates crime from deviant behaviour in the deck?",
+          "q": "A boy is repeatedly called a thief by his teachers and neighbours although he has stolen nothing; over time he begins to steal. Which theory of deviance best explains this?",
           "options": [
-            "Crime is violent, deviance is not",
-            "Crime violates laws, deviance violates norms and rules",
-            "Crime is urban, deviance is rural",
-            "They are interchangeable with no difference"
-          ],
-          "answerIndex": 1,
-          "concept": "Crime breaks social laws; deviance breaks social norms and rules",
-          "why": "Crime carries legal consequences such as fines or imprisonment; deviance is the broader category of straying from norms. The deck's own mid-lesson question offers the interchangeable option as the wrong answer."
-        },
-        {
-          "type": "mcq",
-          "q": "Which theory holds that deviance is a consequence of material inequality?",
-          "options": [
-            "Labelling Theory",
+            "Conflict Theory",
             "Structural Functionalism",
-            "Social Strain Typology",
-            "Conflict Theory"
-          ],
-          "answerIndex": 3,
-          "concept": "Conflict Theory ties deviance to material inequality",
-          "why": "Conflict Theory blames material inequality. Labelling Theory blames a deviant label applied to the person, Structural Functionalism calls deviance constructive, and Social Strain Typology works from goals and beliefs about attaining them."
-        },
-        {
-          "type": "mcq",
-          "q": "Who founded the Pirates Confraternity at the University of Ibadan?",
-          "options": [
-            "Wole Soyinka",
-            "Ralph Opara",
-            "Olumuyiwa Awe",
-            "Pius Oleghe"
-          ],
-          "answerIndex": 0,
-          "concept": "Soyinka founded the Pirates Confraternity in the early 1950s as a social group",
-          "why": "Soyinka is named as the founder, with patriotic and philanthropic beliefs, not as a secret cult. Opara, Awe and Oleghe are among the friends listed as co-founders alongside him."
-        },
-        {
-          "type": "mcq",
-          "q": "What sentence does the deck give for membership of a cult group?",
-          "options": [
-            "3 years",
-            "10 years",
-            "21 years",
-            "Life imprisonment"
+            "Labelling Theory",
+            "Social Strain Typology"
           ],
           "answerIndex": 2,
-          "concept": "Membership or soliciting members carries 21 years; hosting a meeting carries 3",
-          "why": "Membership of a cult group, or soliciting members for an unlawful society, draws 21 years. The 3-year felony is for allowing a cult meeting in a residence or structure you own."
+          "concept": "Theories of deviance",
+          "why": "Labelling Theory holds that deviant behaviour is often a consequence of having a deviant-like label applied to a person, which is exactly what happens to the boy. Conflict Theory would explain his deviance by material inequality; Structural Functionalism says deviance plays a constructive role by helping society agree what is acceptable; Social Strain Typology classifies deviance by a person's adherence to cultural goals and belief in how to attain them."
         },
         {
           "type": "mcq",
-          "q": "How many kidnapping cases were reported in 2022?",
+          "q": "A man decides to rob a shop only after noting that it has no guard and judging that the likely gain outweighs the risk of arrest. Which theory of crime does this illustrate?",
           "options": [
-            "4,600",
-            "838",
-            "10,249",
-            "11,858"
+            "Rational Choice Theory",
+            "Strain Theory",
+            "Social Learning Theory",
+            "Labelling Theory"
           ],
           "answerIndex": 0,
-          "concept": "Kidnapping rose from 838 cases in 2018 to 4,600 in 2022",
-          "why": "Kidnapping quadrupled from 838 in 2018 to 4,600 in 2022. The other two numbers are the armed robbery prison records, which fell from 11,858 in 2013 to 10,249 in 2014."
+          "concept": "Theories of crime",
+          "why": "Rational Choice Theory argues that criminals weigh cost or risk against benefits when deciding whether to commit a crime, which is what the man does. Strain Theory would point to social structures pressuring him into crime; Social Learning Theory would require him to have observed and imitated others; Labelling Theory is a theory of deviance about labels applied to a person, not a weighing of risks."
+        },
+        {
+          "type": "mcq",
+          "q": "An action that violates social laws, as opposed to one that merely violates social norms and rules, is called:",
+          "options": [
+            "A social vice",
+            "A crime",
+            "Deviance",
+            "A felony"
+          ],
+          "answerIndex": 1,
+          "concept": "Crime versus deviance",
+          "why": "Social vices are classified into two: committing a crime violates social laws, while deviant behaviour violates social norms and rules. Social vice is the wider category covering both. Deviance is the norm-breaking half, not the law-breaking half. Felony is the label given to a particular offence (allowing cult meetings in your residence), not the general term for law-breaking."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following was NOT one of the original goals of the Pirates Confraternity founded at the University of Ibadan in the early 1950s?",
+          "options": [
+            "To resist foreign norms nonviolently but intellectually",
+            "To resurrect the period of chivalry",
+            "To find a lasting solution to tribalism and ethnicity",
+            "To protect members from boys of rival groups"
+          ],
+          "answerIndex": 3,
+          "concept": "Origins of campus cultism",
+          "why": "The Pirates Confraternity, founded by Wole Soyinka and his friends as a social group with patriotic and philanthropic beliefs, had three major goals: to resist foreign norms nonviolently but intellectually, to resurrect the period of chivalry, and to find a lasting solution to tribalism and ethnicity. Protection from boys of rival cult groups is one of the reasons people join cults today, after such organisations grew to deadly proportions; it was not a founding goal."
+        },
+        {
+          "type": "mcq",
+          "q": "Which of the following statements about the kidnapping figures in Nigeria is correct?",
+          "options": [
+            "Reported kidnap cases rose from 838 in 2018 to 4,600 in 2022, roughly quadrupling",
+            "Reported kidnap cases fell from 11,858 in 2013 to 10,249 in 2014",
+            "Reported kidnap cases rose from 838 in 2018 to 1,676 in 2022, doubling",
+            "There were 4,600 kidnap cases in 2018, falling to 838 by 2022"
+          ],
+          "answerIndex": 0,
+          "concept": "Kidnapping figures",
+          "why": "In 2018 there were 838 reported kidnap cases; by 2022 the figure had risen to 4,600, an indication that cases had quadrupled. The 11,858 to 10,249 fall from 2013 to 2014 is the prison record for armed robbery, not kidnapping. The 1,676 figure would be a doubling, which understates the rise, and the last option reverses the direction of the change."
         }
       ]
     },
@@ -1125,159 +1129,159 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "```html\n<div onclick=\"submitForm()\">Send</div>\n```\nWhich WCAG principle does this break?",
+          "q": "```html\n<img src=\"sales.png\">\n```\nA screen reader announces only \"image\". Which change makes the chart perceivable to that user?",
           "options": [
-            "Perceivable, the text cannot be read",
-            "Understandable, the label is unclear",
-            "Operable, it cannot be reached by keyboard",
-            "Robust, it uses an outdated attribute"
+            "`<img src=\"sales.png\" width=\"400\">`",
+            "`<img src=\"sales.png\" alt=\"Sales rose 20% in May\">`",
+            "`<img src=\"sales.png\" class=\"chart\">`",
+            "`<div><img src=\"sales.png\"></div>`"
+          ],
+          "answerIndex": 1,
+          "concept": "Alternative text and the Perceivable principle",
+          "why": "A screen reader cannot see the picture; it reads the alt attribute instead. Giving the image a meaningful alt text is the named example of the Perceivable principle: information presented so that every user can perceive it.\n\nwidth changes only the layout; class is a styling hook that assistive technology ignores; wrapping the image in a div adds structure but still gives the reader nothing to say."
+        },
+        {
+          "type": "mcq",
+          "q": "A screen reader is pronouncing an English page with French pronunciation rules. Which attribute on the `<html>` element fixes this?",
+          "options": [
+            "`dir=\"ltr\"`",
+            "`charset=\"utf-8\"`",
+            "`lang=\"en\"`",
+            "`title=\"English\"`"
           ],
           "answerIndex": 2,
-          "concept": "Operable: every interactive element must work from a keyboard",
-          "why": "Operable means interactive elements work from various inputs, keyboard included, and a plain div takes no keyboard focus. A real button fixes it; the visible text itself is perfectly perceivable."
+          "concept": "Declaring the page language for assistive technology",
+          "why": "Assistive technology picks its pronunciation rules from the document's language, declared with lang on the root element: `<html lang=\"en\">`. Without it the reader falls back to its own default language.\n\ndir sets the text direction, left-to-right or right-to-left; charset belongs to a meta tag and names the character encoding, not the language; title is a tooltip and does not affect speech rules."
         },
         {
           "type": "mcq",
-          "q": "A page is built entirely from `<div class=\"nav\">` and `<div class=\"header\">`. Which principle suffers?",
+          "q": "One compiled WebAssembly build of a game runs unchanged in Chrome on a Windows laptop and in Safari on an iPhone. Which Wasm advantage is this?",
           "options": [
-            "Perceivable, the colours may be too faint",
-            "Operable, the links cannot be clicked",
-            "Understandable, the wording is complex",
-            "Robust, assistive tech cannot tell the parts apart"
-          ],
-          "answerIndex": 3,
-          "concept": "Robust: semantic HTML for current and future technologies",
-          "why": "Robust is about working with current and future technologies, and semantic HTML is its named example. The links still click, so this is not an Operable failure; it is structure a screen reader cannot interpret."
-        },
-        {
-          "type": "mcq",
-          "q": "A serverless function keeps a visit counter in a variable and it keeps resetting. Why?",
-          "options": [
-            "Functions are stateless, so nothing survives a call",
-            "A cold start clears it on the first request only",
-            "The provider's database rejected each write",
-            "Event-driven functions cannot declare variables"
+            "Cross-platform compatibility",
+            "Speed and performance",
+            "Security through sandboxing",
+            "Statelessness"
           ],
           "answerIndex": 0,
-          "concept": "Stateless: no server-specific state between invocations",
-          "why": "Serverless functions keep no server-specific state between invocations, so values held in memory vanish. Blaming cold starts is close but wrong: those explain a slow first call, not data lost every time."
+          "concept": "The three advantages of WebAssembly",
+          "why": "All major browsers support WebAssembly, so a single binary runs on desktop and mobile alike. That is the cross-platform compatibility advantage, whose named example is one web app working on both.\n\nSpeed is the near-native execution advantage; sandboxing is the security advantage that lets untrusted code run safely; statelessness is a serverless concept, not a Wasm one."
         },
         {
           "type": "mcq",
-          "q": "The first call after an idle hour takes three seconds; later calls take 100ms. What is this?",
+          "q": "A serverless function runs automatically each time a photo is uploaded to cloud storage and produces a thumbnail. Which serverless concept describes what starts the function?",
           "options": [
-            "Vendor lock-in",
-            "A cold start",
-            "Rate limiting",
-            "Automatic scaling"
-          ],
-          "answerIndex": 1,
-          "concept": "Cold starts as a named serverless challenge",
-          "why": "A cold start is the delay while the provider spins up a function that has not run recently. Vendor lock-in is the other named challenge, but it is about being tied to one provider, not about latency."
-        },
-        {
-          "type": "mcq",
-          "q": "A browser photo editor needs near-native speed for filters written in C++. What do you reach for?",
-          "options": [
-            "A jQuery animation plugin",
-            "A service worker running the filters",
-            "WebAssembly, compiled from the C++",
-            "Deep learning in the browser"
+            "Stateless",
+            "Cold start",
+            "Event-driven",
+            "Vendor lock-in"
           ],
           "answerIndex": 2,
-          "concept": "Wasm for near-native speed from compiled languages",
-          "why": "Wasm is a binary instruction format compiled from C++, Rust or TypeScript, running at near-native speed. Service workers handle caching, offline access and push notifications, not heavy computation."
+          "concept": "Event-driven execution in serverless architecture",
+          "why": "The upload is an event, and the function runs in response to it. Event-driven is the concept covering what triggers a function: HTTP requests, database changes and file uploads.\n\nStateless describes what the function must not keep between runs; a cold start is the delay when a function has been idle; vendor lock-in is a challenge about being tied to one provider."
         },
         {
           "type": "mcq",
-          "q": "Does WebAssembly replace JavaScript in the browser?",
+          "q": "A serverless function runs 20,000 times in a month and each run takes 200 ms. Billing is ₦0.50 per second of compute used. What is the month's bill?",
           "options": [
-            "Yes, it compiles JavaScript into a binary",
-            "Yes, browsers now run Wasm in place of scripts",
-            "No, it only runs outside the browser sandbox",
-            "No, it complements JavaScript where speed matters"
-          ],
-          "answerIndex": 3,
-          "concept": "Wasm complements JavaScript rather than replacing it",
-          "why": "Wasm exists to fix JavaScript's performance limits for heavy work, and the two run alongside each other. It is not compiled from JavaScript, and it runs inside a sandbox, which is one of its advantages."
-        },
-        {
-          "type": "mcq",
-          "q": "A support chatbot interprets typed questions and answers them. Which field is that?",
-          "options": [
-            "Computer vision",
-            "Natural language processing",
-            "Unsupervised learning",
-            "Edge AI"
+            "₦10,000",
+            "₦2,000",
+            "₦200",
+            "₦4,000"
           ],
           "answerIndex": 1,
-          "concept": "NLP handles human language",
-          "why": "NLP covers computers understanding, interpreting and generating human language, with the chatbot as its example. Computer vision handles images and video, illustrated instead by facial recognition."
+          "concept": "Pay-per-use cost of serverless compute",
+          "why": "Total compute time is 20,000 × 0.2 s = 4,000 s. At ₦0.50 per second that is 4,000 × 0.5 = ₦2,000. Paying only for the seconds actually used is the cost-efficiency benefit.\n\n₦10,000 charges a full second per run; ₦4,000 is the number of seconds, with the rate forgotten; ₦200 treats 200 ms as 0.02 s."
         },
         {
           "type": "mcq",
-          "q": "A bank must show why its model refused a loan. Which trend does that call for?",
+          "q": "A start-up built its whole backend on one cloud provider's proprietary function triggers and storage APIs, and now finds that moving to another provider means rewriting most of it. Which serverless challenge is this?",
+          "options": [
+            "Cold starts",
+            "Vendor lock-in",
+            "Statelessness",
+            "Interoperability"
+          ],
+          "answerIndex": 1,
+          "concept": "Vendor lock-in as a serverless challenge",
+          "why": "Depending on one provider's proprietary services so that leaving means rewriting is vendor lock-in, one of the two named serverless challenges.\n\nCold starts are the other challenge, about latency after idleness; statelessness is a key concept, not a challenge; interoperability is listed among the challenges of ML and AI on the web, not of serverless."
+        },
+        {
+          "type": "mcq",
+          "q": "A model is trained on 10,000 emails, each already marked as spam or not spam, and then sorts new mail. Which type of machine learning is this?",
+          "options": [
+            "Unsupervised learning",
+            "Computer vision",
+            "Supervised learning",
+            "Natural language processing"
+          ],
+          "answerIndex": 2,
+          "concept": "Supervised versus unsupervised learning",
+          "why": "The training data carries labels (spam, not spam) and the model learns to predict the label for new items. Learning from labelled data to classify is supervised learning, and the spam filter is its standard example.\n\nUnsupervised learning uses unlabelled data to find groupings, such as clustering customers; computer vision interprets images and video; NLP is about understanding and generating language, and while emails are text, the defining feature here is the labels."
+        },
+        {
+          "type": "mcq",
+          "q": "A progressive web app rearranges its layout when the phone is turned from portrait to landscape. Which PWA feature is at work?",
+          "options": [
+            "Service workers",
+            "Push notifications",
+            "Progressive enhancement",
+            "Responsive design"
+          ],
+          "answerIndex": 3,
+          "concept": "Responsive design in a PWA",
+          "why": "Adapting the layout to the screen size and orientation is responsive design.\n\nService workers provide offline access, caching and push notifications; push notifications are messages delivered when the app is not open; progressive enhancement means the app works on basic browsers and gains features on capable ones."
+        },
+        {
+          "type": "mcq",
+          "q": "A blind student has each web page read aloud, or sent to a Braille display. Which assistive technology is this?",
+          "options": [
+            "Voice recognition software",
+            "A screen reader",
+            "A colour contrast tool",
+            "Keyboard navigation"
+          ],
+          "answerIndex": 1,
+          "concept": "Assistive tools and who each serves",
+          "why": "A screen reader converts the text and visual content of a page into speech or Braille output, which is exactly what a blind user needs.\n\nVoice recognition takes speech as input from the user; a colour contrast tool checks that text stands out from its background for low-vision users; keyboard navigation serves users who cannot use a mouse."
+        },
+        {
+          "type": "mcq",
+          "q": "A smart doorbell classifies motion on the device itself instead of sending video to the cloud, so that it reacts with almost no delay. Which AI trend is this?",
           "options": [
             "Explainable AI",
-            "Edge AI",
             "Quantum machine learning",
+            "Edge AI",
             "Deep learning"
           ],
-          "answerIndex": 0,
-          "concept": "Explainable AI among the future trends",
-          "why": "Explainable AI is the trend towards interpretable, transparent and trustworthy models. Edge AI is about running processing near where data is generated for low latency, which says nothing about reasons."
+          "answerIndex": 2,
+          "concept": "Edge AI among the future trends",
+          "why": "Running the model close to where the data is generated, on the device rather than in the cloud, for low latency is Edge AI.\n\nExplainable AI is about making a model's reasoning transparent; quantum machine learning is about using quantum computers for training; deep learning names the kind of model, not where it runs."
         },
         {
           "type": "mcq",
-          "q": "Netflix suggesting what to watch next is the example of which application?",
+          "q": "Of artificial intelligence, machine learning and deep learning, which is the broadest category that contains the other two?",
           "options": [
-            "Personalisation",
-            "Fraud detection",
-            "Content generation",
-            "Search engines"
-          ],
-          "answerIndex": 0,
-          "concept": "Personalisation among the ML applications",
-          "why": "Personalisation is the named application, with Netflix recommendations given as its example. Search engines is the neighbouring one, illustrated by Google's RankBrain instead."
-        },
-        {
-          "type": "mcq",
-          "q": "Closed captions on a course video are named for which group of users?",
-          "options": [
-            "Users with motor impairments",
-            "Users with cognitive impairments",
-            "Users on slow connections",
-            "Users who are deaf or hard of hearing"
+            "Machine learning",
+            "Deep learning",
+            "Natural language processing",
+            "Artificial intelligence"
           ],
           "answerIndex": 3,
-          "concept": "Accessibility tools and who each serves",
-          "why": "Captions and subtitles are the accessibility tool named for deaf and hard-of-hearing users. Keyboard navigation is the tool aimed at motor impairments, and plain language at cognitive load."
+          "concept": "AI, ML and deep learning as nested categories",
+          "why": "AI is the broad idea of machines doing tasks that need human intelligence. Machine learning is a subset of AI that learns from data, and deep learning is a subset of machine learning that uses many-layered neural networks. So AI contains both.\n\nML sits inside AI; deep learning is the narrowest of the three; NLP is a field within AI alongside computer vision, not the container of the others."
         },
         {
           "type": "mcq",
-          "q": "PWAs are built on progressive enhancement. What does that mean in practice?",
+          "q": "What is a Progressive Web App (PWA)?",
           "options": [
-            "The app installs itself on the first visit",
-            "Basic browsers work; capable ones get more features",
-            "Features load only after the user signs in",
-            "The app is rewritten natively for each platform"
+            "A web app that uses service workers and progressive enhancement to behave like an installed app, with offline access and push notifications",
+            "A mobile app compiled separately for Android and iOS from one code base",
+            "A website that upgrades itself to WebAssembly on capable browsers",
+            "A serverless function that renders web pages on demand"
           ],
-          "answerIndex": 1,
-          "concept": "Progressive enhancement behind PWAs",
-          "why": "Progressive enhancement means the app works for everyone, from basic browsers up to advanced devices. Rewriting natively per platform is exactly what a PWA avoids, which is where the cost saving comes from."
-        },
-        {
-          "type": "mcq",
-          "q": "How does inclusivity go beyond accessibility, in the deck's terms?",
-          "options": [
-            "It targets regulatory compliance such as the ADA",
-            "It replaces WCAG with a newer set of rules",
-            "It designs for all users, not only disabled ones",
-            "It applies to mobile devices rather than desktops"
-          ],
-          "answerIndex": 2,
-          "concept": "Accessibility versus inclusivity",
-          "why": "Accessibility makes content usable by people with disabilities; inclusivity designs for all users regardless of ability. Compliance with the ADA is listed as a challenge, not as the definition of inclusivity."
+          "answerIndex": 0,
+          "concept": "Definition of a Progressive Web App",
+          "why": "A PWA is a web application that combines the reach of the web with the feel of a mobile app: service workers give offline access, caching and push notifications, and progressive enhancement means it works for every browser and improves on advanced devices. Twitter Lite and Flipkart are named examples.\n\nSeparately compiled native apps are what a PWA avoids, which is where the cost saving comes from; WebAssembly is unrelated to PWAs; serverless functions run on the provider's servers, not in the user's browser."
         }
       ],
       "full": true
@@ -1292,68 +1296,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "The Cornell method divides your paper into which three sections?",
+          "q": "In a meeting, Yemi keeps cutting in with her reply before the speaker has finished his point, and he is left feeling unheard. Which technique for becoming a more active listener has she failed to apply?",
           "options": [
-            "Notes, cues and a summary",
-            "Headings, bullets and highlights",
-            "Ideas, subtopics and details",
-            "Thesis, evidence and conclusion"
+            "Avoid Interrupting",
+            "Minimise Distractions",
+            "Maintain Eye Contact",
+            "Paraphrase and Summarise"
           ],
           "answerIndex": 0,
-          "concept": "Cornell splits the page into a cue column, note-taking area and summaries",
-          "why": "Cornell's three zones are cues, notes and a summary written shortly after the lecture. Main ideas linked to subtopics and details is mind mapping; the last option belongs to the summary card on presentations."
+          "concept": "Techniques for active listening applied to a scenario",
+          "why": "Avoid Interrupting means letting the speaker finish their thoughts before responding, because interruptions hinder the flow of communication and make the speaker feel unheard.\n\nMinimise Distractions concerns the environment, not cutting in; Maintain Eye Contact is a non-verbal cue of attention; Paraphrase and Summarise is restating the message to check understanding."
         },
         {
           "type": "mcq",
-          "q": "Which named benefit of active listening is about grasping a problem's details?",
+          "q": "Ada tries to write down every word of a lecture, falls behind, and ends up with pages of notes she cannot use for revision. Which note-taking tip has she ignored?",
+          "options": [
+            "Use headings and subheadings to structure notes",
+            "Do not write verbatim; capture main ideas, key concepts and supporting evidence",
+            "Bring highlighters and sticky notes",
+            "Divide the page into cues, notes and a summary"
+          ],
+          "answerIndex": 1,
+          "concept": "Note-taking tips applied to a fault",
+          "why": "The tip is to listen attentively and not write what you hear verbatim, but to jot down main ideas, key concepts and supporting evidence in clear, simple sentences, which prevents information overload.\n\nHeadings and subheadings help you find information later; writing materials are a separate preparation tip; dividing the page is the Cornell method, which does not by itself stop transcription."
+        },
+        {
+          "type": "mcq",
+          "q": "Two roommates are in a dispute. A friend listens to each in turn until both acknowledge the other's perspective and they find common ground. Which named benefit of active listening is this?",
           "options": [
             "Enhanced Understanding",
             "Conflict Resolution",
             "Problem Solving",
-            "Continuous Improvement"
-          ],
-          "answerIndex": 2,
-          "concept": "Problem Solving is the benefit about fully comprehending a problem's details",
-          "why": "Fully comprehending the details equips the listener to give informed solutions. Enhanced Understanding is about words plus emotions, intentions and context; Conflict Resolution is acknowledging perspectives to find common ground."
-        },
-        {
-          "type": "mcq",
-          "q": "In the deck's note-taking examples, the arrow symbol stands for what?",
-          "options": [
-            "\"with\"",
-            "\"leads to\"",
-            "\"therefore\"",
-            "\"important\""
+            "Improved Retention"
           ],
           "answerIndex": 1,
-          "concept": "The deck's two abbreviation examples are w/ for with and the arrow for leads to",
-          "why": "The arrow is given as shorthand for leads to, and w/ for with. The deck warns that such abbreviations are for personal notes and may not be tolerated in formal writings."
+          "concept": "The three benefits of active listening",
+          "why": "Conflict Resolution is the benefit under which active listening lets individuals acknowledge each other's perspectives, a crucial step in finding common ground and resolving disputes.\n\nEnhanced Understanding is grasping the words plus the emotions, intentions and context; Problem Solving is giving informed solutions after comprehending a problem's details; improved retention is a payoff of note-taking, not one of the three headings."
         },
         {
           "type": "mcq",
-          "q": "Which tip creates a visual web linking main ideas to subtopics and details?",
+          "q": "Bola hands in a formal essay containing 'w/' for 'with' and an arrow for 'leads to'. Which caution about abbreviations and symbols has she ignored?",
           "options": [
-            "Highlighting or underlining",
-            "Bullet points",
-            "Headings and subheadings",
-            "Mind mapping"
+            "They must follow a standard list shared by all students",
+            "They should replace full sentences wherever possible",
+            "They belong in personal notes and may not be tolerated in formal writing",
+            "They may only be used in the cue column of Cornell notes"
+          ],
+          "answerIndex": 2,
+          "concept": "Abbreviations in notes versus formal writing",
+          "why": "A system of abbreviations and symbols is for personal notes that are not turned in or submitted; abbreviations and symbols may not be tolerated in formal writings.\n\nThe system is personal, not standardised; it is meant to speed up note-taking without sacrificing clarity, not to replace sentences in formal work; nothing restricts symbols to the cue column."
+        },
+        {
+          "type": "mcq",
+          "q": "Which form of reasoning starts with specific observations in order to make broader generalisations?",
+          "options": [
+            "Deductive reasoning",
+            "Strawman argument",
+            "Hasty generalisation",
+            "Inductive reasoning"
           ],
           "answerIndex": 3,
-          "concept": "Mind mapping is the visual representation connecting ideas to subtopics",
-          "why": "Mind mapping builds visual representations linking main ideas to subtopics and supporting details. Highlighting is a colour cue for key terms, bullets make notes scannable, and headings give structure for later retrieval."
-        },
-        {
-          "type": "mcq",
-          "q": "Deductive reasoning, on the summary card, moves in which direction?",
-          "options": [
-            "General premises to specific conclusions",
-            "Specific observations to broad generalizations",
-            "Evidence to counterargument",
-            "Audience analysis to thesis"
-          ],
-          "answerIndex": 0,
-          "concept": "Deductive is general to specific; inductive is specific to general",
-          "why": "Deductive reasoning draws specific conclusions from general premises; the reverse, specific observations to broader generalizations, is inductive. The two named fallacies to watch for are strawman and hasty generalization."
+          "concept": "Inductive versus deductive reasoning in presentations",
+          "why": "Inductive reasoning starts with specific observations to make broader generalisations; deductive reasoning draws specific conclusions from general premises.\n\nStrawman arguments and hasty generalisations are named logical fallacies to be avoided in a presentation, not forms of reasoning to be applied."
         }
       ]
     },
@@ -1367,68 +1371,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Plotting depression Y against mass m, the gradient s gives E how?",
+          "q": "A copper beam loaded at its centre gives these dial-gauge readings:\n\nm (g):   50    100   200   300   400   500\nY (mm):  0.04  0.08  0.16  0.25  0.33  0.41\n\nUsing the points at 100 g and 500 g, what is the gradient of the Y (m) against m (kg) graph in SI units?",
           "options": [
-            "E = 4 b d cubed s / (g l cubed)",
-            "E = g l cubed / (4 b d cubed s)",
-            "E = 48 s / (g l cubed)",
-            "E = g l cubed s / (4 b d cubed)"
-          ],
-          "answerIndex": 1,
-          "concept": "E = g l cubed / (4 b d cubed s), with the slope in the denominator",
-          "why": "Rearranging Y = m g l cubed / (4 E b d cubed) puts E and s both in the denominator, so a stiffer material gives a shallower line. The other options invert or misplace the slope."
-        },
-        {
-          "type": "mcq",
-          "q": "What is the unit of strain?",
-          "options": [
-            "Pascals",
-            "Newtons per metre",
-            "Metres per kilogram",
-            "It has no unit"
-          ],
-          "answerIndex": 3,
-          "concept": "Strain is a ratio of lengths and is dimensionless",
-          "why": "Strain is a relative change in dimension, so it is dimensionless. That is why E, being stress divided by strain, carries the same unit as stress: N/m squared, or pascals."
-        },
-        {
-          "type": "mcq",
-          "q": "For a rectangular cross-section, the moment of inertia I equals what?",
-          "options": [
-            "b d cubed / 12",
-            "d b cubed / 12",
-            "b d / 12",
-            "b cubed d cubed / 48"
-          ],
-          "answerIndex": 0,
-          "concept": "I = b d cubed / 12, with the cube on the thickness",
-          "why": "The cube goes on d, the dimension in the direction of bending, with b the breadth. Substituting this into Y = m g l cubed / (48 E I) turns the 48 into a 4."
-        },
-        {
-          "type": "mcq",
-          "q": "Which piece of apparatus reads the central depression?",
-          "options": [
-            "The set of masses",
-            "The mounts",
-            "The dial gauge",
-            "The beam"
+            "8.25 × 10⁻⁷ m/kg",
+            "0.825 m/kg",
+            "8.25 × 10⁻⁴ m/kg",
+            "1.21 × 10³ m/kg"
           ],
           "answerIndex": 2,
-          "concept": "The dial gauge reads the depression Y",
-          "why": "The four listed items are the dial gauge, beams of different materials, a set of masses and two mounts; only the dial gauge reads Y. The mounts are the supports and the masses supply the load."
+          "concept": "Gradient of depression against load in SI units",
+          "why": "Convert both axes: 0.41 mm = 0.41 × 10⁻³ m, 0.08 mm = 0.08 × 10⁻³ m, 500 g = 0.500 kg, 100 g = 0.100 kg. Gradient s = ΔY/Δm = (0.41 − 0.08) × 10⁻³/(0.500 − 0.100) = 0.33 × 10⁻³/0.400 = 8.25 × 10⁻⁴ m/kg.\n\n8.25 × 10⁻⁷ converts Y to metres but leaves m in grams; 0.825 converts m to kilograms but leaves Y in millimetres; 1.21 × 10³ is the reciprocal Δm/ΔY."
         },
         {
           "type": "mcq",
-          "q": "What is the first mass loaded at the beam's centre?",
+          "q": "A beam of length ℓ = 80.0 cm, thickness d = 0.80 cm and breadth b = 25.0 mm rests on two mounts. Its Y against m graph has gradient s = 8.25 × 10⁻⁴ m/kg. Take g = 9.8 m/s². What is the Young modulus of the material?",
           "options": [
-            "10 g",
-            "50 g",
-            "100 g",
-            "500 g"
+            "475 GPa",
+            "119 GPa",
+            "12.2 GPa",
+            "9.9 GPa"
           ],
           "answerIndex": 1,
-          "concept": "Loading starts at 50 g and runs to 500 g",
-          "why": "The procedure starts at 50 g, then 100 g, then 200, 300, 400 and 500 g, giving six points for the best-fit line. 500 g is the last load, not the first."
+          "concept": "Young modulus from the gradient and the beam dimensions",
+          "why": "In metres: ℓ = 0.800 m, d = 0.0080 m, b = 0.0250 m. From Y = mgℓ³/(4Ebd³) the gradient is s = gℓ³/(4Ebd³), so E = gℓ³/(4bd³s) = (9.8 × 0.512)/(4 × 0.0250 × 5.12 × 10⁻⁷ × 8.25 × 10⁻⁴) = 5.018/(4.224 × 10⁻¹¹) = 1.19 × 10¹¹ Pa = 119 GPa, close to copper's accepted 120 GPa.\n\n475 GPa drops the factor 4; 9.9 GPa keeps the 48 from Y = mgℓ³/(48EI) after already substituting I = bd³/12, so the 12 is counted twice; 12.2 GPa cubes b instead of d."
+        },
+        {
+          "type": "mcq",
+          "q": "A wire 2.0 m long with cross-sectional area 2.0 mm² extends by 0.50 mm under a tension of 40 N. What is the Young modulus of the wire?",
+          "options": [
+            "8.0 × 10¹⁰ Pa",
+            "2.0 × 10⁷ Pa",
+            "4.0 × 10¹⁰ Pa",
+            "8.0 × 10⁴ Pa"
+          ],
+          "answerIndex": 0,
+          "concept": "Young modulus from stress over strain",
+          "why": "Stress = F/A = 40/(2.0 × 10⁻⁶) = 2.0 × 10⁷ Pa. Strain = Δℓ/ℓ = 0.50 × 10⁻³/2.0 = 2.5 × 10⁻⁴, no unit. E = stress/strain = 2.0 × 10⁷/2.5 × 10⁻⁴ = 8.0 × 10¹⁰ Pa.\n\n2.0 × 10⁷ Pa is the stress alone; 4.0 × 10¹⁰ Pa divides the stress by the extension in metres instead of by the strain; 8.0 × 10⁴ Pa leaves the area as 2.0 instead of converting mm² to m²."
+        },
+        {
+          "type": "mcq",
+          "q": "A beam of thickness 0.50 cm shows a central depression of 0.48 mm under a 500 g load. It is replaced by a beam of the same material, length and breadth but thickness 1.00 cm. What depression does the same load produce?",
+          "options": [
+            "0.24 mm",
+            "0.12 mm",
+            "0.96 mm",
+            "0.06 mm"
+          ],
+          "answerIndex": 3,
+          "concept": "Effect of thickness on the depression",
+          "why": "Y = mgℓ³/(4Ebd³), so with everything else fixed Y ∝ 1/d³. Doubling d divides the depression by 2³ = 8: Y = 0.48/8 = 0.06 mm. This is why d is the measurement that matters most.\n\n0.24 mm halves Y as if it fell linearly with d; 0.12 mm divides by 4, treating d as squared; 0.96 mm doubles Y, as though a thicker beam sagged more."
+        },
+        {
+          "type": "mcq",
+          "q": "Before any mass is added the dial gauge already reads 0.03 mm, and the student does not zero it. What does this do to the graph of Y against m?",
+          "options": [
+            "Intercept of 0.03 mm, gradient unchanged",
+            "Gradient increased, line still through the origin",
+            "Line curves upward at large loads",
+            "Intercept of 0.03 mm, gradient reduced"
+          ],
+          "answerIndex": 0,
+          "concept": "Effect of a dial-gauge zero error on the graph",
+          "why": "A zero error adds the same 0.03 mm to every reading, so each point is lifted by the same amount: the line keeps its slope but no longer passes through the origin, cutting the Y-axis at 0.03 mm. Because E is taken from the gradient, the result is unaffected provided the gradient is measured from the best-fit line and not from a single (m, Y) pair.\n\nA constant offset cannot change the gradient in either direction; curvature at large loads is the sign of exceeding the proportional limit, not of a zero error."
         }
       ]
     }

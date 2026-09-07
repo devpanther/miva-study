@@ -1,88 +1,112 @@
 # Tuesday — PHY_102 nightly check
 
-*Magnetic dipoles as concepts: what a dipole is and why a magnet cannot be split into poles, the current-loop and pole models, the definition and right-hand-rule direction of μ = NIA, the vector reasoning behind τ = μ × B and U = −μ·B, the electron's moment M = g(−eL/2m), and the geometry of the fields of a bar magnet, a wire and a solenoid.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Magnetic dipoles, as concepts.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** A bar magnet is cut in half across its middle, and each half is found to be a complete magnet with a north and a south pole. The reason is that:
-a) the freshly cut faces acquire induced poles from the Earth's magnetic field, and this is what supplies the new N and S
-b) each half keeps half of the original north pole and half of the original south pole, the pole material dividing with the metal
-c) magnetic field lines are closed loops with no ends, so lines still leave one new face and enter the other
-d) the two halves attract each other after the cut, and attraction is possible only between opposite poles
+**1.** A flat coil of 120 turns, each of area 25 cm², carries 0.60 A. Calculate the magnitude of its magnetic dipole moment.
+A. 1800 A·m²
+B. 0.18 A·m²
+C. 1.5 × 10⁻³ A·m²
+D. 1.8 A·m²
 
-**2.** The field lines of a bar magnet:
-a) run from N to S outside the magnet and from S to N inside it, so that every line closes on itself
-b) run from N to S both outside and inside, beginning at the north pole and ending at the south
-c) run from S to N outside, since B must point towards the pole that attracts a compass's north end
-d) close on themselves only in a ring magnet; in a straight bar they terminate on the two pole faces
+**2.** A circular loop lies flat on a horizontal table and carries a current that runs anticlockwise when viewed from above. In which direction does its magnetic dipole moment point?
+A. Vertically upward, out of the table
+B. Vertically downward, into the table
+C. Horizontally, along the current at the near edge
+D. Horizontally, radially outward from the centre
 
-**3.** A flat coil of N turns, each of area A, carries current I. Its magnetic dipole moment has magnitude and direction:
-a) NIA, lying in the plane of the coil, parallel to the current where it crosses the top of the loop
-b) NIA, along the normal to the coil's plane, in the sense of the right thumb when the fingers curl along the current
-c) IA, along the normal to the plane; N does not enter, since every turn carries the same current
-d) NIA, along B, since a dipole moment is defined only once an external field has been applied
+**3.** Coil P has 80 turns each of area 3.0 cm². Coil Q has 20 turns each of area 6.0 cm². They carry the same current. Calculate the ratio μ_P/μ_Q of their dipole moments.
+A. 4
+B. 1/2
+C. 2
+D. 8
 
-**4.** A current loop lies in a uniform field with the plane of the loop containing **B**. In τ = μB sin θ, the angle θ is:
-a) 0°, because θ is the angle between B and the plane of the loop, and here the field lies wholly within that plane
-b) 0°, because the flux through the loop vanishes in this orientation, and sin θ tracks that flux
-c) undefined, since μ and B are perpendicular and a cross product vanishes for perpendicular vectors
-d) 90°, since θ is measured from the loop's normal — the direction of μ — which is here perpendicular to B
+**4.** On the axis of a small current loop, far from it, the field falls as 1/z³. At z = 10 cm the field is 8.0 μT. Calculate the field at z = 20 cm on the same axis.
+A. 4.0 μT
+B. 2.0 μT
+C. 0.50 μT
+D. 1.0 μT
 
-**5.** A magnetic dipole in a uniform field has U = −μ·B. Its position of **stable** equilibrium is:
-a) θ = 0°, where U = −μB is a minimum and the torque is zero
-b) θ = 90°, where the torque is greatest and the dipole is most strongly driven towards the field
-c) θ = 180°, where U = +μB is a maximum, and a body at rest sits at an extremum of the energy
-d) θ = 0° and θ = 180° alike, since the torque vanishes at both and U differs only by an additive constant
+**5.** A long straight vertical wire carries current upward. In which direction does the magnetic field point at a location due east of the wire?
+A. Due south
+B. Due north
+C. Due east, directly away from the wire
+D. Vertically upward, along the current
 
-**6.** The current-loop model and the two-pole model of a magnetic dipole:
-a) agree everywhere, so which one is used is purely a matter of convenience
-b) agree inside the source but diverge far from it, where only the pole model gives the right 1/r³ fall-off
-c) agree far from the source but give different predictions inside the source region
-d) disagree everywhere, the pole model being obsolete and making no correct prediction
+**6.** An air-cored solenoid produces 6.0 mT inside it. It is rewound with twice as many turns over the same length, and the current is halved. Calculate the new interior field.
+A. 6.0 mT
+B. 12 mT
+C. 3.0 mT
+D. 24 mT
 
-**7.** In M = g(−eL/2m) for an electron, the minus sign records that:
-a) the moment always opposes the applied field, by Lenz's law
-b) the electron's charge is negative, so its magnetic moment points opposite to its angular momentum
-c) the electron's energy in a field is negative when its moment is aligned with the field
-d) the g-factor is itself negative for an electron, and the sign shown merely displays that fact
+**7.** An electron has orbital angular momentum L = 1.055 × 10⁻³⁴ J·s. Taking g = 1, e = 1.6 × 10⁻¹⁹ C and m = 9.11 × 10⁻³¹ kg, calculate the magnitude of its orbital magnetic moment from μ = geL/2m.
+A. 1.85 × 10⁻²³ J/T
+B. 5.05 × 10⁻²⁷ J/T
+C. 9.27 × 10⁻²¹ J/T
+D. 9.27 × 10⁻²⁴ J/T
 
-**8.** A solenoid is rewound using twice as many turns of the same wire at the same pitch, so it becomes twice as long; the current is unchanged. The field on the axis at its middle:
-a) doubles, since B is proportional to the number of turns N
-b) halves, since the same total flux is now spread over twice the length
-c) doubles near the middle, the regions near the ends being unaffected
-d) is unchanged, since B = μ₀nI depends on turns per unit length, and n has not changed
+**8.** A flat current loop sits in a uniform magnetic field B. In which orientation is the torque on it greatest?
+A. Normal to the loop parallel to B
+B. Normal to the loop antiparallel to B
+C. Plane of the loop parallel to B
+D. Plane of the loop perpendicular to B
 
-**9. (explain why)** Explain why a magnet cannot be cut into a separate north pole and a separate south pole, whereas an electric dipole *can* be pulled apart into two isolated charges. State the property of magnetic field lines this implies, and the law that expresses it.
+**9. (show your working)** A bar magnet of moment 0.60 A·m² is in a uniform field of 0.25 T. Calculate the torque and the potential energy when the angle between μ and B is 0°, 90° and 180°, and state which of the zero-torque orientations is stable. Show your working.
 
-**10. (explain why)** For a rectangular current loop in a uniform field, explain — from the forces on the individual sides — why the **net force** is zero but the **net torque** is not, and why the resulting torque is μB sin θ with θ measured from the **normal** to the loop rather than from its plane.
+**10. (show your working)** A solenoid of 800 turns is wound over a length of 40 cm and carries 1.5 A. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the turns per metre and the field inside with an air core, and then the field with an iron core of relative permeability 400. Show your working.
 
-**11. (explain why)** Explain why the potential energy is U = −μ·B and not +μ·B, what distinguishes the stable from the unstable equilibrium given that the torque is zero at both, and why the work needed to flip a dipole end for end is 2μB rather than μB.
+**11. (show your working)** A rectangular loop with sides a and b carries current I in a uniform field B, and its normal makes angle θ with B. Starting from the force F = BIL on each of the two sides of length a, derive τ = μB sin θ with μ = IA. Show your working.
 
-**12. (explain why)** Compare the field of a long straight wire with the field inside a long solenoid: the geometry of each, and what each depends on. Explain in particular why the solenoid's interior field does not depend on the solenoid's radius, and why the wire's field is tangential rather than radial even though its strength falls as 1/r, like that of a line of charge.
+**12. (show your working)** A current loop placed in a uniform magnetic field turns but does not move as a whole. Explain, from the forces on its sides, why the net force is zero, and state what property a field must have to exert a net force on a dipole.
 
 ---
 
 ## Answers
 
-**1. c** — *No magnetic monopoles: every line of B is closed.* Because B has no sources or sinks, any fragment of a magnet is crossed by lines that must enter one face and leave the other, and those two faces are its south and north poles. Go all the way down to a single atom and you still have a current loop, never a lone pole. (a) invents an external cause — the halves are still complete magnets in a field-free box, and their poles are far too strong to be Earth-induced. (b) treats poles as a divisible *substance* sitting at the ends, which is exactly the picture that fails: a pole is the end of a line, not a lump of matter. (d) mistakes an observed consequence for the reason; the halves attract *because* each already has both poles.
+**1. B** — *Dipole moment μ = NIA with area in m².* Convert the area first: 25 cm² = 25 × 10⁻⁴ m² = 2.5 × 10⁻³ m². Then μ = NIA = (120)(0.60)(2.5 × 10⁻³) = 0.18 A·m² (equivalently 0.18 J/T).
 
-**2. a** — *Field lines are closed loops; N → S outside, S → N inside.* The external run from N to S is what a compass traces; the return path through the material is what makes each line closed and is why the flux out of any closed surface is zero. (b) leaves the lines open, beginning and ending on poles — that would require magnetic charges. (c) reverses the external direction; a compass's north-seeking end points *along* B, away from the magnet's N. (d) restricts closure to a special geometry; closure is universal, and a bar magnet's interior field is precisely the return path.
+1800 A·m² leaves the area in cm², a factor of 10⁴; 1.5 × 10⁻³ A·m² is the moment of a single turn, with N forgotten; 1.8 A·m² converts with 1 cm² = 10⁻³ m² instead of 10⁻⁴ m².
 
-**3. b** — *μ = NIA, directed along the normal by the right-hand rule.* The magnitude accumulates over the turns, and the only direction intrinsic to a flat loop is its normal — the current itself has no single direction, since it points every way round the loop. (a) picks the current's direction at one arbitrary point of the loop, which changes as you walk round it. (c) drops N: N turns each carrying I is N times the moment of one. (d) makes μ a property of the field rather than of the coil; a coil has a moment lying on a shelf with no field anywhere near it.
+**2. A** — *Direction of μ by the right-hand rule.* Curl the fingers of the right hand along the current; the thumb gives μ. Anticlockwise seen from above sends the thumb upward, so μ points vertically up, along the normal to the loop. That upper face is the loop's north pole.
 
-**4. d** — *θ is the angle between μ and B, and μ is the normal.* With the plane containing B, the normal is perpendicular to B, θ = 90°, sin θ = 1, and the torque is at its **maximum**. (a) is the central error of the topic — measuring the angle from the plane instead of the normal, which swaps sin and cos everywhere afterwards. (b) invents a definition from flux; flux is indeed zero here, but that is a consequence of θ = 90°, not a redefinition of θ. (c) has the cross product exactly backwards: **a × b vanishes when the vectors are parallel and is largest when they are perpendicular.**
+Downward is the clockwise answer, or the left hand used by mistake; the two horizontal options put μ in the plane of the loop, but the current changes direction all round the loop, so it cannot define a single in-plane direction, and μ is always along the normal.
 
-**5. a** — *Stable equilibrium is the energy minimum, not merely a point of zero torque.* U = −μB cos θ is least at θ = 0; displace the dipole and the torque μB sin θ acts to reduce θ again. (b) confuses maximum torque with equilibrium — at 90° the torque is at its largest, so it is the least equilibrium-like orientation there is. (c) inverts minimum and maximum: 180° is an energy *maximum*, so the slightest nudge drives the dipole away. (d) is the classic half-knowledge answer: it correctly spots that τ = 0 at both ends but omits the second derivative, and "differs by an additive constant" is false — the two differ by 2μB, which is a physical energy you can measure.
+**3. C** — *Comparing dipole moments through the product NA.* μ = NIA, and I is common, so μ_P/μ_Q = (N_P A_P)/(N_Q A_Q) = (80 × 3.0)/(20 × 6.0) = 240/120 = 2. The area units cancel, so no conversion is needed for a ratio.
 
-**6. c** — *The two models coincide in the far field and part company inside the source.* Far away both give the same 1/r³ dipole field, which is why the models are interchangeable for anything measured outside the magnet. Inside, the pole model has B running N → S in the gap — opposite to μ — while the loop model has B parallel to μ through the loop; the loop model is the physically correct one. (a) drops the qualifier that is the whole point of the statement. (b) reverses where the agreement lies. (d) over-corrects: the pole model is a valid effective description outside the source, which is exactly why it survives.
+4 is the ratio of turns alone, ignoring the areas; 1/2 is the ratio of areas alone, ignoring the turns; 8 multiplies the turns ratio by the inverse of the area ratio instead of by the area ratio.
 
-**7. b** — *The moment of a negative charge is antiparallel to its angular momentum.* The classical current is the flow of *positive* charge, so an electron circulating one way is a conventional current the other way; μ therefore points opposite to L = mvr. (a) imports Lenz's law, which is about induced currents opposing a *change* of flux, and would in any case be a statement about B, not about L. (c) confuses this minus sign with the entirely separate one in U = −μ·B. (d) double-counts: g is a positive number (≈1 orbital, ≈2 spin), and the sign is written explicitly precisely because it is not inside g.
+**4. D** — *Inverse-cube fall-off of a dipole field.* Doubling z multiplies 1/z³ by 1/2³ = 1/8, so B = 8.0/8 = 1.0 μT. A loop's far field has the shape of a bar magnet's, and both fall as the inverse cube, much faster than a wire's 1/r.
 
-**8. d** — *B = μ₀nI, and n is turns per unit length.* Doubling N while doubling L leaves n = N/L untouched, so the interior field is exactly what it was — this is the sharpest test that a student is using n and not N. (a) uses N, the commonest solenoid error; it would predict that a very long, loosely wound coil beats a short tight one. (b) treats flux as a fixed quantity being diluted, which confuses the source with the field it produces. (c) invents a position dependence: the ideal interior field is uniform, and near the ends it *falls* to about half, in both windings alike.
+4.0 μT uses 1/r, the fall-off of a long straight wire; 2.0 μT uses 1/r², the fall-off of a point charge's electric field; 0.50 μT uses 1/r⁴.
 
-**9.** *Concept: absence of magnetic monopoles, and the closure of field lines.* An electric dipole is literally two separate objects — a positive charge and a negative charge — held apart; separating them leaves two things that each exist perfectly well alone, and each is a genuine source of field, with lines beginning on one and ending on the other. A magnetic pole is not an object at all. Magnetism originates in **circulating currents and spins**, and a current loop has no ends; what we call the "north pole" of a magnet is simply the face out of which the field lines emerge. Cut the magnet and the lines that were passing through the cut plane now emerge from one new face and enter the other, so each fragment is immediately a complete dipole. Continue subdividing to a single atom and the source is still a loop. The implied property is that **magnetic field lines never begin or end: every line of B is a closed loop.** The law expressing it is **Gauss's law for magnetism** — the net magnetic flux through any closed surface is zero, ΦB = 0 (equivalently ∇·B = 0) — in contrast to Gauss's law for electricity, whose right-hand side is the enclosed charge and is what permits an isolated electric source.
+**5. B** — *Direction of the field of a straight wire by the right-hand grip rule.* Grip the wire with the right hand, thumb along the current (up): the fingers curl anticlockwise when viewed from above. The field lines are circles around the wire, and at a point on the east side an anticlockwise circle is heading north. So B points due north, horizontal and tangential.
 
-**10.** *Concept: the origin of τ = μ × B, and why the angle is measured from the normal.* Take a rectangular loop of sides a and b carrying current I, with the sides of length a parallel to the rotation axis. Each of those two sides feels **F = BIa** from F = IL × B, and because the current runs in **opposite** directions along them, the two forces are equal in magnitude and opposite in direction. Their vector sum is therefore **zero**: in a uniform field the loop cannot be translated, only turned. (The other pair of sides likewise cancels.) But the two forces do not act along the same line — they are separated, so they form a **couple**. The perpendicular distance between their lines of action is not b but **b sin θ**, where θ is the angle through which the loop has turned away from the orientation with its normal along B. Hence τ = (BIa)(b sin θ) = I(ab)B sin θ = **μB sin θ**, and vectorially **τ = μ × B**. The angle appears as the angle from the **normal** because that is what the geometry of the lever arm delivers: when the normal is along B the two forces are collinear, the arm is zero and the torque vanishes; when the normal is perpendicular to B (the plane of the loop containing B) the arm is the full b and the torque is maximum. Measuring from the plane instead reverses both of those statements.
+South is the clockwise (left-hand) answer; radially outward is the pattern of a line of charge's electric field, not of B, which is always tangential; along the current is impossible because B is perpendicular to the current.
 
-**11.** *Concept: the sign of U = −μ·B, stability as a second-order property, and the flip energy.* The torque always acts to reduce θ, i.e. to rotate μ towards B. A conservative torque that pushes a system towards θ = 0 must come from a potential energy that **decreases** towards θ = 0, since τ = −dU/dθ. With U = −μB cos θ, dU/dθ = +μB sin θ, so τ = −μB sin θ — a restoring torque, as required. Writing +μ·B instead would make the aligned position the maximum and the anti-aligned position the minimum, so compass needles would point south. The deck states the physical content directly: **lower energy aligned with the field, higher energy aligned against it.** The torque is zero at **both** θ = 0 and θ = 180°, so zero torque cannot distinguish them; what distinguishes them is the behaviour of U **either side** of the point. At θ = 0, U is a **minimum**, so any displacement raises the energy and the torque restores it — **stable**. At 180°, U is a **maximum**, so any displacement lowers the energy and the torque carries the dipole further away — **unstable**, like a pencil balanced on its point. The flip energy is **U(180°) − U(0°) = (+μB) − (−μB) = 2μB**, not μB: the two ends of the swing sit at ±μB, symmetrically about zero, so the gap between them is twice the depth of the well. Quoting μB is the error of computing only |U| at the final orientation and forgetting that the starting energy was not zero but −μB.
+**6. A** — *Scaling of B = μ₀nI with turns per metre and current.* B = μ₀nI with n = N/L. Doubling N over the same L doubles n; halving I halves the product. The two changes cancel and B stays at 6.0 mT.
 
-**12.** *Concept: the geometry of the two standard fields, and what each depends on.* **Straight wire**: B = μ₀I/2πr. The lines are **closed concentric circles** lying in planes **perpendicular to the wire**, centred on it, with the sense given by the right-hand grip rule (thumb along the current, fingers curling the way B points). It depends only on the current and on the perpendicular distance, falling as 1/r; there is no dependence on where along the wire you stand, for an ideal infinite wire. **Solenoid**: B = μnI inside, with n = N/L the number of turns **per metre**. The interior field is **uniform and axial**, and essentially zero outside; it depends on the permeability of the core, on n and on I — and **not on the radius**, and not on N alone. The radius drops out because each turn is a complete loop encircling the interior: making the coil wider increases the area each turn encloses but spreads that turn's field over exactly the same larger area, so the field per unit length of winding is unaltered. (Formally, Ampère's law applied to a rectangular path of length ℓ inside the solenoid encloses nℓ turns and gives Bℓ = μnℓI, in which no radius appears.) The wire's field is **tangential** rather than radial because its source is a *current*, a vector along the wire, and the force law is a **cross product**: B ∝ I × r̂, which is necessarily perpendicular to both the current and the radius. A line of charge has a **scalar** source, so its E has nowhere to point but along r̂. The two share the 1/r fall-off — that comes from the one-dimensional geometry of the source — but the directions have nothing to do with each other, and a field that pointed away from a wire would have open lines and so contradict ΦB = 0.
+12 mT counts the doubled turns but forgets that the current was halved; 3.0 mT counts the halved current but forgets the doubled turns; 24 mT treats B as proportional to n² or misreads the halving as a doubling.
+
+**7. D** — *Electron magnetic moment from angular momentum.* μ = eL/2m = (1.6 × 10⁻¹⁹)(1.055 × 10⁻³⁴)/(2 × 9.11 × 10⁻³¹) = (1.688 × 10⁻⁵³)/(1.822 × 10⁻³⁰) = 9.27 × 10⁻²⁴ J/T. This is one Bohr magneton, the natural unit of atomic magnetism; its direction is opposite to L because the charge is negative.
+
+1.85 × 10⁻²³ J/T drops the factor 2 in the denominator; 5.05 × 10⁻²⁷ J/T uses the proton mass 1.67 × 10⁻²⁷ kg instead of the electron mass; 9.27 × 10⁻²¹ J/T is a slip of three powers of ten.
+
+**8. C** — *Angle in τ = μB sin θ is measured from the normal.* τ = μB sin θ with θ the angle between μ (the normal to the loop) and B. The torque is largest when sin θ = 1, θ = 90°, which is when the normal is perpendicular to B, that is, when the plane of the loop contains B.
+
+Normal parallel (θ = 0°) and normal antiparallel (θ = 180°) both give sin θ = 0 and zero torque; plane perpendicular to B is the same as normal parallel to B, again zero torque. The common slip is to measure θ from the plane instead of from the normal, which swaps these answers.
+
+**9.** *Torque and energy at the special orientations, and stability.* μB = (0.60)(0.25) = 0.15 J, and every value below is this times sin θ or cos θ. τ = μB sin θ and U = −μB cos θ. At 0°: τ = 0, U = −0.15 J. At 90°: τ = 0.15 N·m (the maximum), U = 0. At 180°: τ = 0, U = +0.15 J. The torque vanishes at both 0° and 180°, but only 0° is stable, because U is a minimum there: a small displacement produces a torque that restores it. At 180° U is a maximum, so any nudge drives the magnet further away; it is unstable.
+
+Final answers: (0°) τ = 0, U = −0.15 J; (90°) τ = 0.15 N·m, U = 0; (180°) τ = 0, U = +0.15 J; stable at 0°. Accept values within 0.005. Signs matter: U = +0.15 J at 0° means the minus sign in U = −μB cos θ was dropped and is wrong.
+
+**10.** *Field inside a solenoid, air-cored and with a core.* n = N/L = 800/0.40 = 2000 turns per metre (the length must be in metres). Air core: B = μ₀nI = (4π × 10⁻⁷)(2000)(1.5) = 3.77 × 10⁻³ T = 3.8 mT. With the core the field is multiplied by μᵣ: B = μᵣμ₀nI = 400 × 3.77 × 10⁻³ = 1.51 T.
+
+Final answers: n = 2000 m⁻¹, B_air = 3.8 mT (accept 3.7 to 3.8 mT), B_iron = 1.5 T (accept 1.48 to 1.52 T). Using N = 800 in place of n gives 1.5 mT and is wrong; leaving the length as 40 gives n = 20 and is wrong by a factor of 100.
+
+**11.** *Deriving the torque on a current loop from the forces on its sides.* The two sides of length a carry current in opposite directions and are perpendicular to B, so each feels a force of magnitude F = BIa, the two forces being equal and opposite. They act along lines separated by the perpendicular distance b sin θ, where θ is the angle between the normal to the loop and B. A pair of equal and opposite forces with separation d produces a couple of moment Fd, so τ = (BIa)(b sin θ) = I(ab)B sin θ = IAB sin θ = μB sin θ, with μ = IA.
+
+A correct answer must state the force on each side (BIa), that they are equal and opposite so the net force is zero, identify the lever arm as b sin θ measured from the normal, and multiply to reach μB sin θ. Using b cos θ for the arm, which happens when θ is measured from the plane of the loop, is wrong.
+
+**12.** *Torque without net force in a uniform field.* In a uniform field each pair of opposite sides of the loop carries the same current in opposite directions through the same B, so the two forces F = IL × B on them are equal in magnitude and opposite in direction. Every such pair sums to zero, so the net force on the whole loop is zero. The forces do not act along the same line, however, so they form a couple and produce a torque that turns the loop towards alignment. To get a net force the field must be non-uniform: then the forces on opposite sides differ in size and no longer cancel, and the dipole is pulled towards the region of stronger field, which is what happens when a magnet attracts a nail.
+
+A correct answer says the opposite-side forces are equal and opposite (so ΣF = 0) but offset (so τ ≠ 0), and that a net force requires a field that varies from place to place.

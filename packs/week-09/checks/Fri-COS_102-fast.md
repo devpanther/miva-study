@@ -1,250 +1,176 @@
-# Friday, second hour — COS_102 check
+# Friday — COS_102 fast-hour check
 
-*Code work only, on this week's material: tracing `if-else`, `if-else-if`, `switch`, `while`, `do-while`, `for` and `goto` by hand and stating the exact output, counting loop passes and knowing what a control variable holds after the loop, counting statements on a line, and finding the two faults that compile in silence — `=` written for `==`, and several statements put under a construct with no curly brackets to make them a block. No definitions to recite — those were Wednesday.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Code work only.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** What is printed?
-
-```c
-int i, total = 0;
-for (i = 1; i < 5; i++)
-    total = total + i;
-printf("%d %d\n", total, i);
+**1.** ```c
+int x = 3;
+if (x = 0) printf("zero"); else printf("nonzero");
+printf(" %d", x);
 ```
+What is printed?
+A. nonzero 3
+B. zero 3
+C. nonzero 0
+D. zero 0
 
-A. 10 5
-B. 10 4
-C. 15 5
-D. 15 6
-
-**2.** What is printed?
-
-```c
-int x = 0;
-if (x = 2)
-    printf("A\n");
-else
-    printf("B\n");
-printf("%d\n", x);
+**2.** ```c
+int n = 2;
+if (n > 5)
+    printf("big ");
+    printf("done ");
+printf("%d", n);
 ```
+What is printed?
+A. done 2
+B. 2
+C. big done 2
+D. big 2
 
-A. A then 2
-B. B then 0
-C. B then 2
-D. A then 0
-
-**3.** What is printed?
-
-```c
-int age = 22;
-if (age >= 26)
-    printf("adult\n");
-else if (age >= 20)
-    printf("young adult\n");
-else if (age >= 13)
-    printf("teen\n");
-else
-    printf("child\n");
+**3.** ```c
+int g = 2;
+switch (g) {
+    case 1: printf("one ");
+    case 2: printf("two ");
+    case 3: printf("three "); break;
+    default: printf("other ");
+}
 ```
+What is printed?
+A. two
+B. one two three
+C. two three other
+D. two three
 
-A. teen
-B. young adult
-C. adult
-D. young adult and then teen, since 22 also satisfies age >= 13
-
-**4.** What is printed?
-
-```c
-int n = 10;
-do {
-    printf("%d ", n);
-    n = n - 3;
-} while (n > 10);
-printf("| %d\n", n);
-```
-
-A. | 10
-B. 10 7 4 1 | -2
-C. 10 | 7
-D. 10 | 10
-
-**5.** What is printed?
-
-```c
+**4.** ```c
 int i, s = 0;
-for (i = 0; i < 3; i++)
-    s = s + i;
-    printf("%d ", s);
-printf("\n");
+for (i = 1; i <= 4; i++) s = s + i * i;
+printf("%d %d", s, i);
 ```
+What is printed?
+A. 30 4
+B. 30 5
+C. 14 4
+D. 14 5
 
-A. 0 1 3 
-B. 0 1 2 
-C. 3 
-D. 6 
-
-**6.** What is printed?
-
-```c
-int day = 3;
-switch (day) {
-    case 1: printf("Mon"); break;
-    case 2: printf("Tue"); break;
-    case 3: printf("Wed"); break;
-    default: printf("Other"); break;
-}
+**5.** ```c
+int n = 20, c = 0;
+while (n > 1) { n = n / 2; c++; }
+printf("%d %d", n, c);
 ```
+What is printed?
+A. 0 5
+B. 1 5
+C. 2 3
+D. 1 4
 
-A. Mon Tue Wed
-B. Other
-C. Wed Other
-D. Wed
-
-**7.** The deck asks how many statements are in a piece of code, and whether more than one statement can be written on a single line. How many statements is this line, and what settles the count?
-
-```c
-int a = 5; int b = 7; printf("%d\n", a + b);
+**6.** ```c
+int k = 1;
+do { printf("%d ", k); k = k * 3; } while (k < 20);
 ```
+What is printed?
+A. 1 3 9
+B. 1 3 9 27
+C. 3 9 27
+D. 1 3
 
-A. One, because a statement is a line and this is a line
-B. Three, because a simple statement contains only one expression and ends with a semicolon, and there are three semicolons
-C. Two, because the two definitions together count as one statement and the printf is the other
-D. None, because C requires statements to be written one per line
+**7.** Which condition is true exactly when x lies between 10 and 20 inclusive?
+A. `10 <= x <= 20`
+B. `x >= 10 && x <= 20`
+C. `x >= 10 || x <= 20`
+D. `x > 10 && x < 20`
 
-**8.** What is printed?
+**8.** Conditional branching statements such as if and if-else are also known by which two names?
+A. Iterative or loop statements
+B. Unconditional or jump statements
+C. Decision making or selection statements
+D. Simple or compound statements
 
-```c
-int i = 0;
-again:
+**9. (show your working)** Write a C `if-else-if` chain that prints A for a score of 70 or more, B for 60 to 69, C for 50 to 59 and F otherwise, and state what it prints for a score of 65. Then say why the order of the branches matters.
+
+**10. (show your working)** ```c
+int i;
+for (i = 0; i != 10; i += 3)
     printf("%d ", i);
-    i = i + 1;
-    if (i < 3) goto again;
-printf("| %d\n", i);
 ```
+This loop never stops. Explain why, list the first four values printed, and change the condition so that the loop prints 0 3 6 9 and then ends. Show your working.
 
-A. 0 1 2 3 | 4
-B. 0 | 1
-C. Nothing, because a goto may only move program control forwards
-D. 0 1 2 | 3
+**11. (show your working)** Write a `while` loop in C that prints the multiples of 7 that are less than 40, each on its own line, and state the output. Your answer must show the starting value, the condition and the update.
 
-**9. (explain why)** State the EXACT output of this programme, line for line. Then say how many times the INNER loop body runs in total, state the values i and j hold on the last line and explain precisely why each holds that value, and say what the total number of inner passes becomes if  j = i  is changed to  j = 1.
-
+**12. (show your working)** ```c
+if (n > 0) printf("A");
+if (n > 5) printf("B");
+```
+and
 ```c
-#include <stdio.h>
-
-int main(void)
-{
-    int i, j;
-    for (i = 1; i <= 3; i++) {
-        for (j = i; j <= 3; j++)
-            printf("%d%d ", i, j);
-        printf("\n");
-    }
-    printf("i=%d j=%d\n", i, j);
-    return 0;
-}
+if (n > 0) printf("A");
+else if (n > 5) printf("B");
 ```
-
-**10. (explain why)** This is meant to classify an age as teen (13 to 19), young adult (20 to 25) or adult (26 and over). State exactly what it prints for age = 17, for age = 22 and for age = 10, name the fault, explain it using the deck's description of the if-else-if statement, and give a corrected version that is right for all three ages and says something sensible for a child.
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    int age = 10;
-
-    if (age >= 13)
-        printf("teen\n");
-    else if (age >= 20)
-        printf("young adult\n");
-    else
-        printf("adult\n");
-
-    return 0;
-}
-```
-
-**11. (explain why)** This is meant to print Pass and Well done together when the score is 50 or more, and Fail on its own otherwise. State exactly what it prints for score = 30 and for score = 60, name the fault, quote the sentence from the deck that explains it, and give a corrected version. Then say why the compiler reports nothing.
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    int score = 30;
-
-    if (score >= 50)
-        printf("Pass\n");
-        printf("Well done\n");
-    else
-        printf("Fail\n");
-
-    return 0;
-}
-```
-
-**12. (explain why)** Take this loop and answer four things. State exactly what it prints. State what a do-while with the same body and the same condition would print, and why. Rewrite the loop as a for, saying which part of the for header runs only once and when the condition is tested. Finally, say what each version prints if the initial value of n is changed to 7.
-
-```c
-int n = 1;
-while (n <= 3)
-{
-    printf("%d ", n);
-    n = n + 1;
-}
-printf("| %d\n", n);
-```
+For n = 8, say what each fragment prints and explain why two separate ifs and an if-else-if chain behave differently.
 
 ---
 
 ## Answers
 
-**1. A** — *Concept: A for with i < b runs b - a passes, and the control variable survives the loop holding the first value that FAILED the test.* The init step runs once, setting i to 1. The passes are i = 1, 2, 3 and 4, adding 1 + 2 + 3 + 4 = 10. After the pass with i = 4 the increment makes i 5, the condition 5 < 5 is false, so the body does not execute and control passes to the line after the loop with i still holding 5. Option (B) reports the last value USED in the body, forgetting that the loop only stops after an increment has produced a failing value. Option (C) adds 5 as well, which would need i <= 5.
+**1. C** — *Assignment written for comparison.* `x = 0` is an assignment, not a test: it stores 0 in x and its value is the value stored, 0. 0 is false, so the else branch prints nonzero. x is now 0, so the second printf prints 0. Output: nonzero 0.
 
-**2. A** — *Concept: '=' assigns and its value is the value assigned, so if (x = 2) is always true and destroys x.* The condition is x = 2, not x == 2. It stores 2 in x, and the value of the whole condition is the value stored, 2. By the deck's rule a condition is true whenever its value is not 0, so 2 is true, the if block runs and A prints - and x has been changed to 2 on the way, which the last line shows. Option (B) reads the condition as a comparison and gets both halves wrong. Option (C) spots the side effect and then takes the wrong branch. Nothing here is rejected by the compiler: an assignment is an expression with a value, which is exactly why this typo survives.
+nonzero 3 reads `=` as `==` and compares 3 with 0; zero 3 assumes the if branch runs and x is untouched; zero 0 sees the assignment but treats its value 0 as true.
 
-**3. B** — *Concept: An if-else-if chain stops at the first satisfied condition; the later ones are never tested.* The conditions are tested top to bottom. 22 >= 26 is false, so control moves to the next test; 22 >= 20 is true, so 'young adult' prints - and the whole of the rest of the chain, including the third test and the final else, is skipped. Option (D) is the trap and it is a true observation put to the wrong use: 22 does satisfy age >= 13, but that condition is never evaluated, because with if-else-if the else is reached only when the preceding if was not satisfied. Option (A) is what you get by testing the conditions in the wrong order or by using three separate ifs, which is precisely the difference between a chain and a list. The order of the branches is part of the logic: each condition may quietly assume that every earlier one failed.
+**2. A** — *An if without braces governs one statement.* With no braces the `if` governs only the next statement, `printf("big ")`. The condition 2 > 5 is false, so that one printf is skipped. `printf("done ")` is the next statement of the program, indented or not, and runs, then n is printed. Output: done 2.
 
-**4. C** — *Concept: A do-while tests AFTER the body, so it always runs at least once even when the condition is false from the outset.* The body runs before anything is tested: 10 is printed and n becomes 7. Only then is n > 10 evaluated, and 7 > 10 is false, so the loop ends with n holding 7. That is the deck's sentence in action - a do-while 'is guaranteed to execute at least one time'. Option (A) is what a while with the same condition would print, namely nothing, because a while tests first. Option (B) reads the condition as n > 0. Option (D) forgets that the body changed n before the test.
+2 treats both indented lines as belonging to the if; big done 2 takes the condition as true; big 2 runs the wrong one of the two.
 
-**5. C** — *Concept: A loop governs exactly one statement; without curly brackets the second line is not in the loop, and indentation is invisible to the compiler.* There are no curly brackets, so no block has been made, and the for governs the single statement that follows it - s = s + i. The loop therefore runs three times silently, accumulating 0 + 1 + 2 = 3. The printf is the next statement of the programme and runs once, after the loop has finished, printing 3. Option (A) is what the indentation suggests and what curly brackets would produce. Option (D) adds a fourth pass. This is the deck's block rule read the other way: 'the group of statements inside a block are treated like a single statement', so where there is no block there is only one statement under the loop.
+**3. D** — *Fall-through in a switch.* Control jumps to the matching label `case 2` and then runs on through the cases that follow until it meets a break: two is printed, then three, then the break leaves the switch. Output: two three.
 
-**6. D** — *Concept: With the switch statement we execute one code block among many alternatives.* The deck's one sentence on switch is that 'with the switch statement, we can execute one code block among many alternatives'. Here day is 3, so the alternative labelled case 3 is the one executed and Wed is printed; each alternative is closed by break, which is what keeps the statement to the one block the deck describes. Option (B) is the default, which is the alternative used when none of the labels matches - and one does. Option (C) adds the default on top of a matching case, treating it as a closing step rather than as one alternative among the others. Option (A) runs every alternative, which is not what a selection statement does.
+two assumes each case ends by itself, as in an if-else-if; one two three starts from the top instead of jumping to the match; two three other ignores the break and falls into default.
 
-**7. B** — *Concept: The semicolon terminates a statement, so the layout does not decide the count.* 'A simple statement contains only one expression and it ends with a semicolon.' The semicolon is what ends a statement, so counting statements means counting terminators, and there are three here: the definition of a, the definition of b, and the call to printf. This is the deck's own question - 'Can we have more than one statement on a single line?' - and the answer is yes, for exactly this reason. Option (A) and option (D) both make the line ending do the semicolon's job, which is true of some other languages and false of C; the same rule read the other way is what lets a single long statement be spread over several lines. Option (C) invents a grouping that only curly brackets could create, and a block would still be one construct rather than one statement out of two.
+**4. B** — *Tracing a for loop with an accumulator.* The body runs for i = 1, 2, 3, 4, adding 1, 4, 9, 16: s = 30. After the pass with i = 4 the increment makes i = 5, the test 5 <= 4 fails, and the loop ends, so i is 5 when printed. Output: 30 5.
 
-**8. D** — *Concept: goto is unconditional branching; the condition here belongs to the if, not to the goto.* Trace it. i = 0: prints 0, i becomes 1, 1 < 3 is true so control jumps back to the label. i = 1: prints 1, i becomes 2, 2 < 3 is true, jump. i = 2: prints 2, i becomes 3, 3 < 3 is false, so no jump and control falls through to the last line with i holding 3. Output: 0 1 2 | 3. The deck's point about goto is that 'the goto statement did not specify any condition before moving program control' - and that is still true here: the goto itself tests nothing, and the testing is done by the if that governs it. That is the difference between the two kinds of branching side by side in three lines. Option (A) prints one value too many and exits with i one too high. Option (B) treats the jump as never taken. Option (C) invents a direction rule; nothing in the deck restricts which way a branch may go, and jumping backwards is how a goto produces repetition.
+30 4 forgets the final increment that ended the loop; 14 4 treats `<=` as `<` and stops before i = 4; 14 5 mixes the two mistakes.
 
-**9.** *Concept: Tracing nested loops, counting passes, and knowing what both control variables hold after the loops end.* THE OUTPUT, line for line:
-11 12 13 
-22 23 
-33 
-i=4 j=4
-THE TRACE. The outer loop runs with i = 1, 2, 3. For each pass the inner loop starts at j = i and runs while j <= 3. With i = 1 the inner loop runs for j = 1, 2, 3, printing 11 12 13; then the printf("\n") inside the outer block ends the line. With i = 2 the inner loop starts at 2 and runs for j = 2, 3, printing 22 23. With i = 3 it runs once, for j = 3, printing 33. INNER PASSES IN TOTAL: 3 + 2 + 1 = 6. THE FINAL VALUES. i is 4 and j is 4. i is 4 because the outer loop ended when its condition first failed: after the pass with i = 3 the increment made i 4, and 4 <= 3 is false, so the loop stopped with i holding the first value that failed the test. j is 4 for the same reason, from its LAST run only: on the final outer pass the inner loop started at j = 3, ran once, and the increment made j 4, at which point 4 <= 3 failed. j is not reset afterwards, so it keeps the value it was left with, and it is visible on the last line because it was defined outside both loops. IF j = i BECOMES j = 1: every inner loop now runs for j = 1, 2, 3, so each of the three outer passes gives three inner passes and the total is 3 x 3 = 9 rather than 6. The output would become 11 12 13 / 21 22 23 / 31 32 33, and the final values would be unchanged at i = 4, j = 4, since neither loop's exit condition has been altered.
+**5. D** — *Tracing a while loop with integer division.* n goes 20, 10, 5, 2, 1 with integer division (5 / 2 is 2), and c counts each halving: 4 passes. Then 1 > 1 is false and the loop stops. Output: 1 4.
 
-**10.** *Concept: In an if-else-if chain the first satisfied condition wins, so the order of the branches is part of the logic.* WHAT IT PRINTS. age = 17: 17 >= 13 is true, so 'teen' prints - correct, but by luck rather than by design. age = 22: 22 >= 13 is ALSO true, so 'teen' prints again and the second and third branches are never reached - wrong, it should be 'young adult'. age = 10: 10 >= 13 is false, so control moves to the next test; 10 >= 20 is false too, so the final else runs and 'adult' prints - wrong twice over, since a ten-year-old is neither an adult nor anything the programme was asked to classify. THE FAULT. The branches are in the wrong order, and the final else has been given to the wrong case. The deck's if-else-if slide says that with it 'more that two choices are integrated into the decision making process', and its if-else slide says control moves into the if block when the condition is satisfied and 'otherwise' to the else - so the chain is tested top to bottom and stops at the first condition that is satisfied, every later branch being skipped. That is what makes the order load-bearing: age >= 13 is satisfied by 22 and by 40 as well as by 17, so putting it first swallows every age above 12, and no later test can ever rescue them. Each condition in a chain is written to be read in the context of all the earlier ones having failed. Note also that the final else catches everything left over, which here is the ages BELOW 13 - the opposite of what it prints. THE REPAIR. Test the narrowest or highest band first, so that each later condition is reached only by the ages the earlier ones have already excluded, and give the else the case that really is left over:
+0 5 keeps halving once more, but the test fails at n = 1; 1 5 counts the failed test as a pass; 2 3 stops one pass early, as if the condition were n > 2.
 
-    if (age >= 26)
-        printf("adult\n");
-    else if (age >= 20)
-        printf("young adult\n");
-    else if (age >= 13)
-        printf("teen\n");
-    else
-        printf("child\n");
+**6. A** — *Tracing a do-while loop.* The body runs before the first test. Pass 1 prints 1 and k becomes 3; 3 < 20 so pass 2 prints 3, k = 9; 9 < 20 so pass 3 prints 9, k = 27; 27 < 20 is false and the loop ends. Output: 1 3 9.
 
-Now 17 reaches the third test and prints teen; 22 fails the first, passes the second and prints young adult; 10 fails all three and prints child. Each condition needs only its own lower bound, because everything above it has already been taken by an earlier branch - which is the economy an if-else-if chain buys, and the reason it cannot be reordered freely.
+1 3 9 27 prints k after the test has already failed; 3 9 27 multiplies before printing, as if the two statements were swapped; 1 3 stops when k first reaches 9, testing against the new value one pass too early.
 
-**11.** *Concept: A construct governs exactly one statement; only curly brackets make several into one.* WHAT IT DOES. As written this programme does not even reach the question of what it prints, and that is the first thing to say: the if governs the single statement printf("Pass\n");, which ends at its semicolon, so the if statement is complete before printf("Well done\n"); is reached. The else that follows then belongs to nothing - there is no if immediately before it - and the compiler reports an error on the else. If the else and its printf are deleted, the fault becomes the silent one this question is really about: the if governs the first printf only, and printf("Well done\n"); is simply the next statement of the programme. With score = 30 nothing prints from the if and 'Well done' prints anyway; with score = 60, 'Pass' prints and then 'Well done' prints - right by accident. THE FAULT: two statements have been put under an if without being made into a block. THE DECK'S SENTENCE: 'The group of statements inside a block are treated like a single statement by the computer.' That is the property an if depends on, because an if governs exactly one statement; curly brackets are what turn several statements into one, and the deck adds that 'a block contains more than one statement contained inside curly brackets' and that 'the right curly bracket does not have a semicolon after it'. Indentation does none of this work - the compiler does not read it. THE REPAIR:
+**7. B** — *Writing a range test.* A range test needs two comparisons joined by `&&`: both must hold. `x >= 10 && x <= 20` is true for 10, 20 and everything between, and false elsewhere.
 
-    if (score >= 50) {
-        printf("Pass\n");
-        printf("Well done\n");
-    }
-    else
-        printf("Fail\n");
+`10 <= x <= 20` groups as `(10 <= x) <= 20`, which compares 1 or 0 with 20 and is always true; `||` is true for every x, since any number satisfies at least one side; `>` and `<` exclude the endpoints 10 and 20.
 
-Now score = 30 prints Fail alone and score = 60 prints Pass then Well done. WHY THE COMPILER IS SILENT - in the version without the else. Nothing there is ill-formed: an if with one statement under it is correct C, and a printf after it is correct C. The programme the compiler sees is exactly the programme it was given; what it cannot see is the programme that was INTENDED, and the indentation that expresses the intention is not part of the language. This is the reason for the habit of writing the curly brackets even when only one statement is under the if: the fault appears the day a second statement is added, and it is invisible on the page.
+**8. C** — *Names for conditional branching.* Conditional branching moves control depending on whether a condition is satisfied, and such statements are also called decision making or selection statements.
 
-**12.** *Concept: Where the test sits, and what the control variable holds when the loop ends.* WHAT THE WHILE PRINTS: 1 2 3 | 4. The condition is tested before each pass. n = 1: 1 <= 3 is true, prints 1, n becomes 2. n = 2: prints 2, n becomes 3. n = 3: prints 3, n becomes 4. Now 4 <= 3 is false, so - in the deck's words - 'the program control passes to the line immediately following the loop', which prints | 4. The loop variable is left holding the first value that failed the test, which is why it is 4 and not 3. THE DO-WHILE. Written as do { printf("%d ", n); n = n + 1; } while (n <= 3); with n starting at 1, the output is identical: 1 2 3 | 4. The reason it is identical is that the condition is true at the outset, so the one difference between the constructs never shows - the deck defines do-while entirely by its exception, that it 'is guaranteed to execute at least one time', and a guarantee of at least one pass changes nothing when a pass was going to happen anyway. AS A FOR: for (n = 1; n <= 3; n = n + 1) printf("%d ", n); The init step, n = 1, 'is executed first, and only once'. Then the condition is evaluated; if it is true the body executes, and if it is false 'the body of the loop does not execute'. After each pass the increment runs and the condition is tested again - so the test happens before every pass, exactly as in the while, which is why the two produce the same output and leave n at 4. WITH n STARTING AT 7. The while prints nothing at all and then | 7: 7 <= 3 is false at the very first test, so the body is never entered and n is never changed. The for behaves the same way, for the same reason - the init sets n to 7, the condition fails immediately, and the body does not execute. The do-while prints 7 | 8: its body runs before anything is tested, so 7 is printed and n becomes 8, and only then does the condition fail. That single case is the whole difference between the two loops, and it is why the deck's sentence about the guaranteed pass is the only thing it says to separate them.
+Iterative statements are the loops; unconditional branching is goto, which checks no condition; simple and compound describe the form of a statement, not what it decides.
+
+**9.** *Writing an if-else-if chain.* ```c
+if (score >= 70)
+    printf("A");
+else if (score >= 60)
+    printf("B");
+else if (score >= 50)
+    printf("C");
+else
+    printf("F");
+```
+
+For 65: 65 >= 70 is false, 65 >= 60 is true, so it prints B and the rest is skipped. The order matters because the first true condition wins: each `else if` is reached only when every earlier condition failed, so `score >= 60` can be written without an upper bound. Reversed, with `score >= 50` first, every score of 50 or more would print C. A correct answer has the three thresholds in descending order (or explicit ranges such as `score >= 60 && score <= 69`), a final bare else for F, gives B for 65, and explains first-true-wins. Four separate `if`s without else print several letters for one score and are wrong.
+
+**10.** *Fixing a loop condition that never becomes false.* i starts at 0 and steps by 3: 0, 3, 6, 9, 12, 15, and so on. It never equals 10, so `i != 10` is never false and the loop runs on. The first four values printed are 0 3 6 9. Fix: `for (i = 0; i < 10; i += 3)`. Now 0, 3, 6 and 9 are printed, then i becomes 12, 12 < 10 is false, and the loop ends.
+
+A correct answer says i skips over 10, lists 0 3 6 9, and replaces `!=` with `<` (also accepted: `i <= 9`). Changing the step to `i += 2` or the start to 1 changes which numbers print and does not answer the question.
+
+**11.** *Writing a while loop.* ```c
+int m = 7;
+while (m < 40) {
+    printf("%d\n", m);
+    m = m + 7;
+}
+```
+
+m goes 7, 14, 21, 28, 35, each printed; then m = 42, 42 < 40 is false, and the loop ends. Output: 7 14 21 28 35 on separate lines. A correct answer initialises a variable to 7 (or a counter to 1 and prints 7 * counter), tests `< 40`, prints inside the loop, and adds 7 (or 1 to the counter) inside the loop. A missing update gives an infinite loop; `<= 40` here prints the same values but `m <= 42` or starting at 0 prints an extra value and is wrong.
+
+**12.** *Separate ifs versus an if-else-if chain.* First fragment: the two ifs are independent, so both conditions are tested. 8 > 0 prints A and 8 > 5 prints B: output AB. Second fragment: an if-else-if runs at most one branch. 8 > 0 is true, A is printed, and the `else if` is never tested even though 8 > 5 is also true: output A.
+
+A correct answer gives AB and A and states that separate ifs can both fire while a chain stops at the first true condition. It may add that in the chain the B branch can never run for any n, since every n > 5 is also > 0, so the order of the branches is wrong for that purpose.

@@ -1,100 +1,112 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 7 integration, exactly as she builds it.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*The definition ∫f(x)dx = F(x) + c, with F′(x) = f(x).*
+**1.** Find ∫x⁶ dx.
+A. 7x⁷ + c
+B. 6x⁵ + c
+C. x⁷/7 + c
+D. x⁵/5 + c
 
-*Why the constant is forced, via her Example 1 line [G(x) + c]′ = 2x + 0 = 2x.*
+**2.** Which of these functions has derivative 8x³?
+A. 2x⁴ + 7
+B. 24x²
+C. 8x⁴
+D. 4x⁴
 
-*The power rule ∫xⁿdx = x^(n+1)/(n+1) + c, and the reason n ≠ −1.*
+**3.** Find ∫5 dx.
+A. 5 + c
+B. 0
+C. 5x²/2 + c
+D. 5x + c
 
-*What splitting an integral does and does not license.*
+**4.** Find ∫x⁻³ dx.
+A. −3x⁻⁴ + c
+B. −1/(2x²) + c
+C. 1/(2x²) + c
+D. −1/(4x⁴) + c
 
-*The Fundamental Theorem ∫ₐᵇf(x)dx = F(b) − F(a) = F(x)|ₐᵇ. Why c cancels there, and why the result is a number.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**5.** F′(x) = 3x² and F(1) = 5. Find F(x).
+A. x³ + 5
+B. x³
+C. x³ − 4
+D. x³ + 4
 
-**1.** The deck defines the indefinite integral of f as a function F such that a certain equation holds, plus the constant of integration c. Which equation?
-A. f′(x) = F(x)
-B. F(x) = f(x) + c
-C. F′(x) = f(x)
-D. F(x) = f(b) − f(a)
+**6.** Evaluate ∫₀² 3x² dx.
+A. 8
+B. 12
+C. 24
+D. 8 + c
 
-**2.** In Example 1 the lecturer says it is 'tempting to suppose' the antiderivative of g(x) = 2x is G(x) = x², then says the situation is not so simple. What exactly is her objection?
-A. G is one antiderivative but not the only one, since G(x) + c differentiates to 2x for every real c
-B. G(x) = x² is not actually an antiderivative of 2x; the correct one is x²/2
-C. The antiderivative exists only where 2x is positive
-D. 2x cannot be integrated by the power rule because its coefficient is not 1
+**7.** The graph of f(x) = 3 is a horizontal line at height 3. Evaluate ∫₁⁴ 3 dx, the area between the line and the x-axis from x = 1 to x = 4.
+A. 3
+B. 12
+C. 9
+D. 15
 
-**3.** The power rule ∫xⁿdx = x^(n+1)/(n+1) + c is stated with the restriction n ≠ −1. What breaks at n = −1?
-A. The numerator x^(n+1) becomes x⁰ = 1, so the answer would be a constant, which is uninformative
-B. x⁻¹ takes negative values, and the formula is only valid for non-negative integrands
-C. 1/x has a vertical asymptote at x = 0, so it has no antiderivative on any interval
-D. The denominator n + 1 becomes 0, so the formula divides by zero
+**8.** The power rule ∫xⁿ dx = x^(n+1)/(n+1) + c is stated with the restriction n ≠ −1. What goes wrong at n = −1?
+A. x⁻¹ is negative, so it cannot be integrated
+B. x⁰ = 1, so the answer would be a constant
+C. n + 1 = 0, so the formula divides by zero
+D. 1/x has no antiderivative at all
 
-**4.** Example 3 integrates 2/x⁷, which is positive for every x > 0, yet the answer −1/(3x⁶) + c is negative there. Which step of the lecturer's working introduces the minus sign?
-A. Rewriting 2/x⁷ as 2x⁻⁷, because the exponent becomes negative
-B. Dividing by the new power, which is −7 + 1 = −6
-C. Adding the constant of integration c
-D. Simplifying 2/6 to 1/3
+**9. (show your working)** Find ∫√x dx by first writing √x as a power of x. State the value of n you use. Show your working.
 
-**5.** What kind of object does each of ∫f(x)dx and ∫ₐᵇf(x)dx produce?
-A. The first a family of functions, the second a number
-B. Both are numbers, but the second one is signed
-C. The first a number, the second a function of a and b
-D. Both are functions of x; the limits only restrict the domain
+**10. (show your working)** Evaluate ∫₁² 2x dx twice: first using F(x) = x², then using F(x) = x² + 5. Show that both give the same number and say why. Show your working.
 
-**6.** The theorem says ∫ₐᵇf(x)dx = F(b) − F(a) where F is an antiderivative of f. Why does it not matter which antiderivative you choose?
-A. Because the theorem quietly assumes the antiderivative with c = 0
-B. Because F is unique once f is continuous on [a, b]
-C. Because a and b are constants, so any extra constant is absorbed into them
-D. Any two antiderivatives differ by a constant, and that constant cancels in the subtraction
+**11. (show your working)** A student writes ∫x⁵ dx = 5x⁴ + c. Differentiate the student's answer to show it is wrong, name the mistake, and give the correct integral. Show your working.
 
-**7.** The lecturer writes ∫ₐᵇf(x)dx = F(x)|ₐᵇ. What does the bar notation instruct you to do?
-A. Evaluate f at b and at a and subtract
-B. Evaluate F at b, evaluate F at a, and subtract the second from the first
-C. Restrict F to the interval [a, b]
-D. Evaluate F at a and at b and add the results
+**12. (show your working)** Explain, using differentiation, why ∫2x dx = x² is an incomplete answer and ∫2x dx = x² + c is the full answer.
 
-**8.** Example 4 rewrites ∫(11x¹⁰ − 4x⁹ + 1)dx as ∫11x¹⁰dx − ∫4x⁹dx + ∫1dx. Which of these moves is NOT justified by anything the deck does?
-A. ∫(x² + x³)dx = ∫x²dx + ∫x³dx
-B. ∫11x¹⁰dx = 11∫x¹⁰dx
-C. ∫(x²·x³)dx = (∫x²dx)(∫x³dx)
-D. ∫(x² − x³)dx = ∫x²dx − ∫x³dx
-
-**9.** State the deck's definition of the indefinite integral in your own words, and say precisely what role c plays in it.
-*(short answer)*
-
-**10.** Using the lecturer's own line [G(x) + c]′ = 2x + 0 = 2x = g(x), explain why writing ∫2x dx = x² is an incomplete answer rather than merely an untidy one.
-*(short answer)*
-
-**11.** Explain why a definite integral never carries + c, and show the cancellation explicitly.
-*(short answer)*
-
-**12.** The deck never gives an answer to either of its two TASK slides. Describe the method you would use to check your own answer to an indefinite integral, and explain why that check is guaranteed to work.
-*(short answer)*
+---
 
 ## Answers
 
-**1. C** — F is an antiderivative: differentiating F must return the integrand f, so F′(x) = f(x). Option 1 reverses the roles and describes f as the antiderivative of F. Option 2 confuses integration with adding a constant to the integrand — a vertical shift of f, which is not F at all. Option 4 is the Fundamental Theorem's evaluation formula for a definite integral, a number, not the defining property of F.
+**1. C** — *Power rule for integration.* Raise the power by one, then divide by the new power: n = 6, so ∫x⁶ dx = x⁷/7 + c. Check: d/dx (x⁷/7) = 7x⁶/7 = x⁶.
 
-**2. A** — Her line [G(x) + c]′ = 2x + 0 = 2x = g(x) shows every member of the family x² + c works, so no single function can be 'the' answer. Option 2 is a differentiation slip — d/dx(x²) = 2x, so x² is correct as far as it goes. Option 3 invents a domain restriction the slide never makes. Option 4 is false; constants are pulled straight out, as Example 4 does.
+7x⁷ multiplies by the new power instead of dividing; 6x⁵ differentiates instead of integrating; x⁵/5 lowers the power instead of raising it.
 
-**3. D** — n + 1 = 0 makes x^(n+1)/(n+1) an expression with zero in the denominator — undefined, so the rule simply says nothing there. Option 1 notices the numerator correctly but names the wrong failure; a constant numerator would be fine if the denominator were not 0. Option 2 is false — the rule handles n = −7 in Example 3. Option 3 confuses a problem at a single point with a problem on the whole line; 1/x does have antiderivatives on intervals avoiding 0, just not ones this formula produces.
+**2. A** — *Recognising an antiderivative by differentiating.* Differentiate each candidate. d/dx (2x⁴ + 7) = 8x³ + 0 = 8x³, so 2x⁴ + 7 is an antiderivative of 8x³; the constant 7 disappears on differentiating, which is exactly why any constant may be added.
 
-**4. B** — The rule divides by the new exponent, and 2 ÷ (−6) = −1/3. Option 1 confuses notation with arithmetic: rewriting a fraction as a negative power changes nothing about the value, and 2x⁻⁷ is still positive for x > 0. Option 3 is wrong because c is an unknown constant, not a sign. Option 4 describes only the reduction of the magnitude, which carries no sign of its own. This distinction is what separates students who apply the rule from those who have memorised the answer.
+24x² is the derivative of 8x³, not a function whose derivative is 8x³; 8x⁴ differentiates to 32x³, the result of raising the power without dividing by 4; 4x⁴ differentiates to 16x³, the result of dividing 8 by 2 instead of by the new power 4.
 
-**5. A** — The indefinite integral is F(x) + c — the collection of all antiderivatives, hence a family of functions. Slide 11 says of the definite integral that 'the result will usually be a number'. Option 2 misses that an indefinite answer still contains x and an unknown c. Option 3 swaps the two. Option 4 misreads the limits as a domain restriction rather than as inputs to F(b) − F(a); after the substitution no x survives at all.
+**3. D** — *Integrating a constant.* Write 5 as 5x⁰ and use the power rule with n = 0: 5·x¹/1 + c = 5x + c. Check: d/dx (5x) = 5.
 
-**6. D** — Using F(x) + c gives (F(b) + c) − (F(a) + c) = F(b) − F(a); the c disappears by subtraction, which is exactly why definite answers never show + c. Option 1 states a convention where the real reason is an identity — the result holds for every c, not only c = 0. Option 2 contradicts Example 1: antiderivatives are never unique. Option 3 is meaningless; c attaches to F, not to the limits.
+5 + c leaves the constant unchanged, which differentiates to 0, not 5; 0 is the derivative of a constant, not its integral; 5x²/2 treats the integrand as 5x instead of 5.
 
-**7. B** — F(x)|ₐᵇ is shorthand for F(b) − F(a), upper limit first. Option 1 substitutes into the integrand instead of the antiderivative — the single most common wrong answer, and the one that turns 18 into 12 in Example 1. Option 3 treats the bar as a domain restriction. Option 4 adds where the theorem subtracts, which would destroy the cancellation of c and give the wrong sign structure entirely.
+**4. B** — *Power rule with a negative exponent.* n = −3, so the new exponent is −3 + 1 = −2 and you divide by −2: x⁻²/(−2) + c = −1/(2x²) + c. The minus sign comes from dividing by the negative new power.
 
-**8. C** — Products do not split: ∫x⁵dx = x⁶/6, whereas (x³/3)(x⁴/4) = x⁷/12 — different functions, so the move is simply false. Options 1 and 4 are the term-by-term splitting the slide performs. Option 2 is the constant pulled out front, which the slide also does with 11 and 4. A student who has only memorised 'split the integral' will pick one of the legitimate ones.
+−3x⁻⁴ differentiates instead of integrating; 1/(2x²) forgets that dividing by −2 makes the answer negative; −1/(4x⁴) subtracts 1 from the exponent instead of adding it.
 
-**9.** A good answer says: for a continuous real-valued f of x, the indefinite integral is a function F whose derivative is the integrand, F′(x) = f(x), together with an added constant of integration c, written ∫f(x)dx = F(x) + c. On c: it is an arbitrary real number, not a placeholder or a unit — it is there because the derivative of any constant is 0, so every function of the form F(x) + c is an equally valid antiderivative, and the notation therefore names the whole family at once.
+**5. D** — *Fixing the constant of integration from a given value.* Integrate first: F(x) = ∫3x² dx = x³ + c. Then use the condition: F(1) = 1 + c = 5, so c = 4 and F(x) = x³ + 4. Check: F′(x) = 3x² and F(1) = 5.
 
-**10.** A good answer runs the line as an argument: differentiating x² + c gives 2x + 0 = 2x for every real c, so x² + 1, x² − 4 and x² all differentiate to the integrand. Since the question asks for the antiderivatives of 2x, and there are infinitely many, naming only x² names one member of an infinite family and omits the rest. It is incomplete in the way that answering 'x = 2' to x² = 4 is incomplete, not in the way that untidy handwriting is.
+x³ + 5 uses the given value 5 as c without evaluating x³ at x = 1; x³ drops the constant entirely, giving F(1) = 1; x³ − 4 has the sign of c wrong, from 1 + c = 5 solved as c = 1 − 5.
 
-**11.** A good answer performs the algebra rather than asserting the rule: take any antiderivative in the form F(x) + c; the theorem gives (F(b) + c) − (F(a) + c) = F(b) − F(a) + c − c = F(b) − F(a). It should then draw the consequence — every choice of c gives the same number, which is why the theorem can say 'if F(x) is an antiderivative' rather than 'the antiderivative', and why writing + c after a numerical answer is meaningless.
+**6. A** — *Definite integral by the Fundamental Theorem.* An antiderivative of 3x² is F(x) = x³. By the Fundamental Theorem, ∫₀² 3x² dx = F(2) − F(0) = 8 − 0 = 8.
 
-**12.** A good answer names the method — differentiate your result and see whether you recover the integrand — and then justifies it from the definition rather than from habit: ∫f(x)dx = F(x) + c is defined by the condition F′(x) = f(x), so the check is testing exactly the defining condition. It may add that the added c never disturbs the check, since its derivative is 0, and that the check catches the standard errors — multiplying instead of dividing by the new power, or losing a sign on a negative exponent — in a few seconds.
+12 substitutes x = 2 into the integrand 3x² instead of into F; 24 uses 3x³ as the antiderivative, forgetting to divide by 3; 8 + c adds a constant to a definite integral, which is a number and carries no c.
+
+**7. C** — *Definite integral as area under a horizontal line.* F(x) = 3x, so ∫₁⁴ 3 dx = 3x|₁⁴ = 3(4) − 3(1) = 12 − 3 = 9. This is the rectangle of width 4 − 1 = 3 and height 3.
+
+3 is the height of the line, not the area; 12 is F(4) alone, forgetting to subtract F(1); 15 adds F(1) instead of subtracting it.
+
+**8. C** — *Why the power rule excludes n = −1.* At n = −1 the new exponent is n + 1 = 0 and the formula asks for x⁰/0. Division by zero is undefined, so the formula has nothing to say there; that is the only reason for the restriction.
+
+x⁻¹ is not always negative and sign never blocks integration; x⁰ = 1 is true but the trouble is the denominator, not the numerator; 1/x does have an antiderivative, it is just not given by this formula.
+
+**9.** *Power rule with a fractional exponent.* √x = x^(1/2), so n = 1/2. The new exponent is 1/2 + 1 = 3/2 and you divide by 3/2, which is the same as multiplying by 2/3: ∫x^(1/2) dx = x^(3/2)/(3/2) + c = (2/3)x^(3/2) + c. Check: d/dx (2/3)x^(3/2) = (2/3)(3/2)x^(1/2) = √x.
+
+Final answer: (2/3)x^(3/2) + c. Also accepted: 2x^(3/2)/3 + c, (2/3)x√x + c, or 2√(x³)/3 + c. The working must show n = 1/2 and the division by 3/2. (3/2)x^(3/2) multiplies by the new power instead of dividing and is wrong; an answer without + c is incomplete.
+
+**10.** *Constant of integration cancels in a definite integral.* With F(x) = x²: F(2) − F(1) = 4 − 1 = 3. With F(x) = x² + 5: F(2) − F(1) = (4 + 5) − (1 + 5) = 9 − 6 = 3. The 5 is added at the upper limit and subtracted again at the lower limit, so it cancels: (F(b) + c) − (F(a) + c) = F(b) − F(a) for any c.
+
+Final answer: 3 both times. A correct answer shows both evaluations reaching 3 and states that the added constant cancels in F(b) − F(a), which is why a definite integral never carries + c. Getting 8 for the second evaluation (adding 5 only once) is wrong.
+
+**11.** *Checking an antiderivative by differentiating.* Differentiate the claimed answer: d/dx (5x⁴ + c) = 20x³, which is not x⁵, so the answer is wrong. The student differentiated instead of integrating (multiplied by the old power and lowered it). Integration goes the other way: raise the power to 6 and divide by 6.
+
+Final answer: ∫x⁵ dx = x⁶/6 + c. Also accepted: (1/6)x⁶ + c. A correct answer shows the derivative 20x³ (or at least that it is not x⁵), says the student differentiated rather than integrated, and gives x⁶/6 + c. Check: d/dx (x⁶/6) = x⁵.
+
+**12.** *Why the constant of integration is required.* The indefinite integral of 2x is every function whose derivative is 2x, not just one of them. Since the derivative of any constant is 0, [x² + c]′ = 2x + 0 = 2x for every real number c, so x² + 1, x² − 7 and x² + 100 are all antiderivatives of 2x. Writing x² alone names one member of the family and silently drops the rest; x² + c names them all.
+
+A correct answer states that differentiating a constant gives 0, so x² + c has derivative 2x for every c, and concludes that the integral is the whole family x² + c, with c any real number.

@@ -1,96 +1,112 @@
 # Friday — PHY_102 nightly check
 
-*Numerical magnetic-dipole work: computing μ = NIA with areas converted to m², torque μB sin θ and its maximum, energy −μB cos θ and the work to rotate or flip a dipole, B = μ₀I/2πr for a straight wire and B = μnI for a solenoid with turns per unit length and a core, the electron's moment from L, and the unit, angle and direction traps in each.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Numerical magnetic-dipole work.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Take μ₀ = 4π×10⁻⁷ T·m/A, e = 1.60×10⁻¹⁹ C, mₑ = 9.11×10⁻³¹ kg.*
+**1.** A coil of 100 turns, each of area 4.0 cm², is in a uniform field of 0.50 T. The maximum torque on it is measured as 0.020 N·m. Calculate the current in the coil.
+A. 1.0 × 10⁻⁴ A
+B. 100 A
+C. 1.0 A
+D. 2.0 A
 
-**Questions 1–3 refer to this coil.** A rectangular coil of **40 turns**, measuring **6.0 cm × 4.0 cm**, carries **2.5 A** and sits in a uniform field of **0.30 T**.
+**2.** A coil of dipole moment 0.24 A·m² is held with the plane of the coil at 30° to a uniform field of 0.50 T. Calculate the torque on it.
+A. 0.104 N·m
+B. 0.060 N·m
+C. 0.12 N·m
+D. 0.052 N·m
 
-**1.** The magnitude of its magnetic dipole moment is:
-a) 6.0×10⁻³ A·m²
-b) 0.24 A·m²
-c) 2.4×10³ A·m²
-d) 0.072 A·m²
+**3.** Two long parallel wires are 8.0 cm apart and carry 6.0 A each in opposite directions. Take μ₀/2π = 2 × 10⁻⁷ T·m/A. Calculate the magnitude of the field at the midpoint between them.
+A. 1.5 × 10⁻⁵ T
+B. 3.0 × 10⁻⁵ T
+C. 0 T
+D. 6.0 × 10⁻⁵ T
 
-**2.** The coil is held with its **normal at 30° to B**. The torque on it is:
-a) 0.072 N·m
-b) 0.062 N·m
-c) 0.036 N·m
-d) 0.018 N·m
+**4.** A flat circular coil of 50 turns and radius 5.0 cm carries 2.0 A. Using B = μ₀NI/2R at the centre with μ₀ = 4π × 10⁻⁷ T·m/A, calculate the field at its centre.
+A. 4.0 × 10⁻⁴ T
+B. 1.26 × 10⁻³ T
+C. 2.51 × 10⁻³ T
+D. 1.26 × 10⁻⁵ T
 
-**3.** The work that must be done to turn the coil from **fully aligned** (μ along B) to **fully anti-aligned** is:
-a) 0.144 J
-b) 0.072 J
-c) 0.226 J
-d) zero
+**5.** An electron moves in a circle of radius 1.0 × 10⁻¹⁰ m at 2.2 × 10⁶ m/s. Take e = 1.6 × 10⁻¹⁹ C. Calculate the magnitude of its orbital magnetic moment using μ = evr/2.
+A. 3.5 × 10⁻²³ J/T
+B. 2.0 × 10⁻³⁴ J/T
+C. 1.8 × 10⁻²⁵ J/T
+D. 1.8 × 10⁻²³ J/T
 
-**Questions 4–5 refer to this wire.** A very long straight vertical wire carries **6.0 A vertically upward**.
+**6.** A rectangular coil of 20 turns, 10 cm by 5.0 cm, carries 1.5 A in a uniform field of 0.40 T with its normal at 120° to B. Calculate its potential energy.
+A. +0.030 J
+B. −0.052 J
+C. −0.030 J
+D. +300 J
 
-**4.** The magnitude of B at a point **3.0 cm** from the wire is:
-a) 4.0×10⁻⁷ T
-b) 8.0×10⁻⁵ T
-c) 1.3×10⁻⁴ T
-d) 4.0×10⁻⁵ T
+**7.** An electron spin moment of 9.27 × 10⁻²⁴ J/T sits in a 2.0 T field. Take e = 1.6 × 10⁻¹⁹ C. Calculate, in electronvolts, the energy needed to flip it from aligned to anti-aligned.
+A. 3.7 × 10⁻²³ eV
+B. 1.2 × 10⁻⁴ eV
+C. 5.9 × 10⁻⁴² eV
+D. 2.3 × 10⁻⁴ eV
 
-**5.** At a point **due north** of the wire, the field points:
-a) horizontally, due west
-b) horizontally, due east
-c) vertically upward, parallel to the current
-d) horizontally, due north — directly away from the wire
+**8.** A dipole is turned from θ = 0 to θ = 90° in a uniform field. The work needed is μB, yet τ_max × (π/2) gives 1.57μB. Why is the second method wrong?
+A. The angle should be in degrees, not radians
+B. The torque varies as sin θ during the turn, so it must be integrated
+C. The torque is zero at θ = 90°, so no work is done at all
+D. The work to any new orientation is always 2μB
 
-**Questions 6–7 refer to this solenoid.** A solenoid of **600 turns** wound over a length of **30 cm** carries **2.0 A**.
+**9. (show your working)** A dipole of moment 0.50 A·m² is in a uniform field of 0.30 T. Calculate the work an external agent must do to turn it from θ = 0° to θ = 60°, and then from 60° to 180°, and check that the two add to 2μB. Show your working.
 
-**6.** With an air core, the field well inside it is:
-a) 1.5×10⁻³ T
-b) 5.0×10⁻⁵ T
-c) 5.0×10⁻³ T
-d) 2.5×10⁻³ T
+**10. (show your working)** An electromagnet is a solenoid of 1200 turns over 30 cm on an iron core of relative permeability 400. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the current needed for an interior field of 0.80 T, and the field the same current would give with no core. Show your working.
 
-**7.** An iron core of relative permeability **250** is now inserted, everything else unchanged. The interior field becomes:
-a) 5.0×10⁻³ T
-b) 1.3 T
-c) 3.1×10⁻⁴ T
-d) 2.0×10⁻⁵ T
+**11. (show your working)** A circular coil of 25 turns and diameter 8.0 cm carries 1.5 A in a uniform field of 0.60 T. Calculate its dipole moment, the maximum torque on it, and its potential energy when the normal is at 45° to B. Show your working.
 
-**8.** An electron has orbital angular momentum L = 1.05×10⁻³⁴ J·s. Taking g = 1, the **magnitude** of its orbital magnetic moment is:
-a) 1.8×10⁻²³ J/T
-b) 4.6×10⁻²⁴ J/T
-c) −9.2×10⁻²⁴ J/T
-d) 9.2×10⁻²⁴ J/T
-
-**9. (explain why)** A **circular** coil of 25 turns and radius 5.0 cm carries 1.2 A in a uniform field of 0.50 T. Find (i) its magnetic dipole moment, (ii) the maximum torque it can experience, (iii) its potential energy when the normal makes 60° with B, and (iv) the work done **by the field** as it turns from that orientation into alignment. Say what the sign of your answer to (iv) means.
-
-**10. (explain why)** Two long parallel straight wires, 10 cm apart, each carry 5.0 A. Find the magnitude of the field each produces at the midpoint between them, then find the **resultant** field at that midpoint when (i) the currents are in the **same** direction and (ii) they are in **opposite** directions. Explain the difference in terms of the direction of each field, not merely the arithmetic.
-
-**11. (explain why)** A solenoid 40 cm long is to produce an interior field of 12 mT with a current of 3.0 A and an air core. How many turns are needed? Then find the current that would give the same 12 mT if an iron core of relative permeability 200 were inserted and the winding left alone. Explain which quantity in B = μnI each step is solving for, and why the answer to the first part does not depend on the solenoid's diameter.
-
-**12. (explain why)** An electron with magnetic moment 9.3×10⁻²⁴ J/T sits in the 1.5 T field of an MRI magnet. Find its potential energy when aligned and when anti-aligned, and the energy needed to flip it. Convert that energy to electronvolts, and to the frequency of a photon that would supply it (h = 6.63×10⁻³⁴ J·s). Then explain why a real MRI scanner at 1.5 T operates at about **64 MHz** rather than the frequency you just computed.
+**12. (show your working)** The magnetic moment of an electron is written M = g(−eL/2m). Explain what the minus sign tells you about the direction of M relative to L, why it arises, and what the factor g represents.
 
 ---
 
 ## Answers
 
-**1. b** — *μ = NIA, with the area in m².* A = (0.060)(0.040) = 2.4×10⁻³ m², so μ = (40)(2.5)(2.4×10⁻³) = **0.24 A·m²**. (a) is 6.0×10⁻³, the moment of a **single** turn — N was dropped. (c) is 2.4×10³, the result of leaving the area as 24 cm²; the factor 10⁴ between cm² and m² makes this the most spectacular of the unit errors. (d) is 0.072, which is μB — the **torque** in N·m, computed instead of the moment, by multiplying in the field that has nothing to do with the coil's own moment.
+**1. C** — *Current from a measured maximum torque.* τ_max = μB = NIAB, so I = τ_max/(NAB) = 0.020/[(100)(4.0 × 10⁻⁴)(0.50)] = 0.020/0.020 = 1.0 A.
 
-**2. c** — *τ = μB sin θ, θ measured from the normal.* τ = (0.24)(0.30) sin 30° = (0.072)(0.500) = **0.036 N·m**. (a) is 0.072, the **maximum** torque μB, quoted without using the angle at all. (b) is 0.062 = μB cos 30° — the sin/cos swap, which is what you get by treating the given angle as though it were measured from the plane. (d) halves the correct answer, from a spurious ½ imported from formulas like ½LI² or from the "average" torque.
+1.0 × 10⁻⁴ A leaves the area as 4.0 cm² instead of 4.0 × 10⁻⁴ m²; 100 A forgets the number of turns; 2.0 A drops the factor B = 0.50, dividing by NA only.
 
-**3. a** — *Flip energy = 2μB.* U = −μB cos θ, so U(0°) = −0.072 J and U(180°) = +0.072 J; the work is the difference, (+0.072) − (−0.072) = **0.144 J**. (b) is 0.072, i.e. |U(180°)| alone — forgetting that the starting energy was not zero but −μB. (c) is 0.226 = τ_max × π, the error of treating the torque as constant over the turn; it varies as sin θ, so the work must come from ΔU, not from τ × angle. (d) reads "the two energies have equal magnitude" as "the change is zero", ignoring the sign that carries all the physics.
+**2. A** — *Torque with the angle given from the plane of the coil.* The angle in τ = μB sin θ is between the normal and B. If the plane is at 30° to B, the normal is at 90° − 30° = 60° to B. So τ = (0.24)(0.50) sin 60° = (0.12)(0.866) = 0.104 N·m.
 
-**4. d** — *B = μ₀I/2πr, with μ₀/2π = 2×10⁻⁷.* B = (2×10⁻⁷)(6.0)/(0.030) = 1.2×10⁻⁶/0.030 = **4.0×10⁻⁵ T**. (a) is 4.0×10⁻⁷, from leaving r as 3.0 cm — a factor of 100. (b) is 8.0×10⁻⁵, exactly twice the answer, from writing μ₀I/πr: the 2 in 2πr has been lost. (c) is 1.3×10⁻⁴, from μ₀I/2r — the **circular-loop centre** formula B = μ₀I/2R applied to a straight wire, dropping the π.
+0.060 N·m uses sin 30°, treating the plane angle as if it were the normal angle; 0.12 N·m is μB, the maximum, with the angle ignored; 0.052 N·m is μB sin 30° cos 30°, applying both factors.
 
-**5. a** — *Right-hand grip rule: the field is tangential, in circles round the wire.* Point the right thumb up, along the current; the fingers curl **anticlockwise as seen from above**. Standing due north of the wire and facing it, the tangent to that anticlockwise circle points **due west**. (b) is the same circle traversed the wrong way — the error of using the left hand, or of pointing the thumb along the field instead of the current. (c) makes B parallel to its own source; B is always perpendicular to the current, since B ∝ I × r̂. (d) imports the radial pattern of the electric field of a line charge, which has the same 1/r fall-off and a completely different direction.
+**3. D** — *Superposing the fields of two parallel wires.* The midpoint is r = 4.0 cm = 0.040 m from each wire, so each contributes B = (μ₀/2π)(I/r) = (2 × 10⁻⁷)(6.0)/0.040 = 3.0 × 10⁻⁵ T. By the grip rule, a wire on the left with current up gives a field pointing north at the midpoint, and a wire on the right with current down also gives north there, so for opposite currents the two fields add: B = 6.0 × 10⁻⁵ T.
 
-**6. c** — *B = μ₀nI with n = N/L in turns per metre.* n = 600/0.30 = 2000 m⁻¹, so B = (4π×10⁻⁷)(2000)(2.0) = **5.0×10⁻³ T**. (a) is 1.5×10⁻³, from using N = 600 in place of n — the standard solenoid error, and note it is *smaller* than the truth here only because 600 < 2000. (b) is 5.0×10⁻⁵, from n = 600/30 with the length left in centimetres. (d) halves the answer, applying the loop formula's factor of 2 to a solenoid.
+0 T is what you get for currents in the same direction, which cancel at the midpoint; 3.0 × 10⁻⁵ T is the field of one wire alone; 1.5 × 10⁻⁵ T uses the full 8.0 cm separation as the distance to one wire.
 
-**7. b** — *A core multiplies the field by μᵣ: B = μᵣμ₀nI.* B = (250)(5.0×10⁻³) = **1.3 T** (1.26 T). (a) assumes the core makes no difference, which would leave electromagnets pointless. (c) is 3.1×10⁻⁴ = μᵣμ₀, the permeability itself quoted as though it were the field — nI has been dropped, and the units are wrong (T·m/A, not T). (d) divides by 250 instead of multiplying: a ferromagnetic core concentrates flux, it does not dilute it.
+**4. B** — *Field at the centre of a flat circular coil.* B = μ₀NI/2R = (4π × 10⁻⁷)(50)(2.0)/(2 × 0.050) = (1.257 × 10⁻⁴)/0.100 = 1.26 × 10⁻³ T ≈ 1.3 mT, directed along the axis of the coil.
 
-**8. d** — *μ = geL/2m.* μ = (1.60×10⁻¹⁹)(1.05×10⁻³⁴)/(2 × 9.11×10⁻³¹) = 1.68×10⁻⁵³/1.82×10⁻³⁰ = **9.2×10⁻²⁴ J/T** — one Bohr magneton, as expected for L = ħ. (a) is 1.8×10⁻²³, exactly twice, from dividing by m instead of 2m. (b) is 4.6×10⁻²⁴, half the answer, from dividing by 4m — the 2 applied twice. (c) has the right number with a minus sign: the question asks for a **magnitude**, and the minus sign in M = g(−eL/2m) states a *direction* (μ antiparallel to L), never a negative size.
+2.51 × 10⁻³ T forgets the 2 in the denominator; 4.0 × 10⁻⁴ T uses the straight-wire form μ₀NI/2πR, dividing by an extra π; 1.26 × 10⁻⁵ T leaves the radius as 5.0 cm instead of 0.050 m.
 
-**9.** *Concept: μ = NIA for a circular coil, with τ_max = μB, U = −μB cos θ, and the sign of the work.* **(i)** A = πr² = π(0.050)² = 7.85×10⁻³ m²; μ = NIA = (25)(1.2)(7.85×10⁻³) = **0.236 A·m²**. (Radius, not diameter; and π r², not 2πr.) **(ii)** τ_max occurs at θ = 90°, i.e. with the plane of the coil containing B: τ_max = μB = (0.236)(0.50) = **0.118 N·m**. **(iii)** U(60°) = −μB cos 60° = −(0.118)(0.500) = **−5.89×10⁻² J**. It is negative because 60° is nearer the aligned orientation than the anti-aligned one. **(iv)** Turning to θ = 0 takes U from −0.0589 J to U(0°) = −μB = −0.118 J. The work done **by the field** is W = −ΔU = −[(−0.118) − (−0.0589)] = **+5.89×10⁻² J**. The positive sign means the field does the work: the dipole is falling into its energy minimum, exactly as a mass falls, and if nothing damps it, it will overshoot and oscillate about θ = 0. An **external** agent doing the same rotation would do −0.0589 J, i.e. would have to absorb that energy to bring the coil to rest at alignment.
+**5. D** — *Electron orbital moment from speed and radius.* The orbiting electron is a current I = e/T = ev/2πr round an area πr², so μ = IA = evr/2 = (1.6 × 10⁻¹⁹)(2.2 × 10⁶)(1.0 × 10⁻¹⁰)/2 = (3.52 × 10⁻²³)/2 = 1.76 × 10⁻²³ J/T ≈ 1.8 × 10⁻²³ J/T. Its direction is opposite to the angular momentum because the charge is negative.
 
-**10.** *Concept: superposition of two wire fields, decided by direction and not by magnitude.* Each wire is 5.0 cm = 0.050 m from the midpoint, so each contributes B = μ₀I/2πr = (2×10⁻⁷)(5.0)/(0.050) = **2.0×10⁻⁵ T**. **(i) Same direction**: take both currents out of the page. Each field circles its own wire anticlockwise. At the midpoint, the left wire's field points **up** the page and the right wire's field points **down** the page — the point lies on opposite sides of the two wires, so the two circulations run oppositely there. The fields **cancel**: the resultant is **zero**. **(ii) Opposite directions**: reversing one current reverses its whole circulation, so at the midpoint both fields now point the **same** way and they **add**: 2 × 2.0×10⁻⁵ = **4.0×10⁻⁵ T**, directed in the plane containing the two wires and perpendicular to the line joining them, in the sense given by the grip rule applied to either wire. The lesson is that "same direction" and "opposite direction" produce the *opposite* of what naive addition suggests: parallel currents give zero field between them (though they attract each other), antiparallel currents give the maximum field between them (though they repel). Magnitudes alone cannot tell you which; only the grip rule applied separately to each wire can.
+3.5 × 10⁻²³ J/T drops the factor 2; 2.0 × 10⁻³⁴ J/T is the angular momentum mvr, not the moment; 1.8 × 10⁻²⁵ J/T is a slip of two powers of ten.
 
-**11.** *Concept: rearranging B = μnI for whichever quantity is unknown.* **First part — solve for n, hence N.** n = B/(μ₀I) = 12×10⁻³ / [(4π×10⁻⁷)(3.0)] = 12×10⁻³/3.77×10⁻⁶ = **3.18×10³ turns per metre**. Over a length of 0.40 m this is N = nL = (3183)(0.40) ≈ **1.3×10³ turns** (1273). Check: (4π×10⁻⁷)(3183)(3.0) = 1.20×10⁻² T ✔. **Second part — solve for I with μᵣ = 200.** B = μᵣμ₀nI, so with n and B fixed the current must fall by the factor μᵣ: I = 3.0/200 = **0.015 A (15 mA)**. **Why the diameter does not enter**: B = μnI contains no radius. Ampère's law on a rectangular loop of length ℓ lying inside the solenoid, one long side on the axis and the other outside where B ≈ 0, gives Bℓ = μ(nℓ)I — the enclosed current is set by how many turns the path threads, which depends on ℓ and n only. Widening the coil enlarges the area each turn encloses but spreads the same current over a proportionally larger cross-section, leaving the field per unit length of winding untouched. A wider solenoid therefore needs the same n and the same I; what it does need is more wire per turn, and so more power for the same field.
+**6. A** — *Potential energy U = −μB cos θ for an obtuse angle.* A = (0.10)(0.050) = 5.0 × 10⁻³ m², so μ = NIA = (20)(1.5)(5.0 × 10⁻³) = 0.15 A·m². Then U = −μB cos θ = −(0.15)(0.40) cos 120° = −(0.060)(−0.500) = +0.030 J. It is positive because 120° is on the anti-aligned side of 90°.
 
-**12.** *Concept: dipole energies, the flip energy 2μB, and interpreting the number it gives.* **Energies**: U = −μ·B, so aligned U = −μB = −(9.3×10⁻²⁴)(1.5) = **−1.4×10⁻²³ J**, and anti-aligned U = **+1.4×10⁻²³ J**. **Flip energy**: ΔU = 2μB = **2.79×10⁻²³ J**. **In electronvolts**: 2.79×10⁻²³/1.60×10⁻¹⁹ = **1.7×10⁻⁴ eV** — five thousand times smaller than the ~1 eV of a visible photon, so this is a very weak splitting. **Photon frequency**: f = ΔU/h = 2.79×10⁻²³/6.63×10⁻³⁴ = **4.2×10¹⁰ Hz ≈ 42 GHz**, a microwave frequency. **Why an MRI scanner uses 64 MHz instead**: the number just computed is for an **electron** moment, and that is electron spin resonance, not MRI. Medical MRI flips the magnetic moments of **hydrogen nuclei — protons** — in the body's water. A proton's moment is smaller than an electron's by roughly the mass ratio mₚ/mₑ ≈ 1836, since the moment scales as e/2m: it is 1.41×10⁻²⁶ J/T. Repeating the same calculation, ΔU = 2μB = 2(1.41×10⁻²⁶)(1.5) = 4.2×10⁻²⁶ J, and f = 4.2×10⁻²⁶/6.63×10⁻³⁴ = **6.4×10⁷ Hz = 64 MHz**, in the radio band — which is exactly the operating frequency of a 1.5 T clinical scanner, and the reason MRI is non-ionising: a 10⁻⁷ eV photon cannot break anything. The physics is identical; only the mass in e/2m has changed, and the factor of ~2000 in the mass moves the answer from microwaves to radio.
+−0.030 J drops the sign of cos 120°, or drops the minus in the definition; −0.052 J uses sin 120° instead of cos; +300 J leaves the area in cm² (50 cm² instead of 5.0 × 10⁻³ m²).
+
+**7. D** — *Energy to flip a dipole, converted to electronvolts.* U goes from −μB to +μB, so ΔU = 2μB = 2(9.27 × 10⁻²⁴)(2.0) = 3.71 × 10⁻²³ J. Divide by e to convert: 3.71 × 10⁻²³/1.6 × 10⁻¹⁹ = 2.3 × 10⁻⁴ eV. This tiny splitting is what magnetic resonance detects.
+
+1.2 × 10⁻⁴ eV is μB, the energy from aligned to 90° only, not the full flip; 3.7 × 10⁻²³ eV is the joule value with the unit relabelled and no conversion; 5.9 × 10⁻⁴² eV multiplies by e instead of dividing.
+
+**8. B** — *Work as a change in potential energy, not torque times angle.* Work = ∫τ dθ, and τ = μB sin θ is not constant: it starts at zero and only reaches μB at the end. Integrating gives μB(1 − cos 90°) = μB, which is exactly ΔU = U(90°) − U(0°) = 0 − (−μB). Multiplying the maximum torque by the angle assumes the torque was at its peak throughout.
+
+Using degrees would make the error worse, not fix it; the torque being zero at 0° (not 90°) does not make the total work zero; 2μB is the work for a full flip to 180°, not for a quarter turn.
+
+**9.** *Work to rotate a dipole from the change in potential energy.* μB = (0.50)(0.30) = 0.15 J and U = −μB cos θ. W = ΔU = μB(cos θ₁ − cos θ₂). First stage: W₁ = 0.15(cos 0° − cos 60°) = 0.15(1 − 0.500) = 0.075 J. Second stage: W₂ = 0.15(cos 60° − cos 180°) = 0.15(0.500 + 1) = 0.225 J. Sum: 0.075 + 0.225 = 0.300 J = 2μB = 2(0.15) J, the work for a full flip.
+
+Final answers: W₁ = 0.075 J, W₂ = 0.225 J, total 0.30 J (accept each within 0.003 J). The working must use U = −μB cos θ at the two angles, not torque times angle. Getting W₂ = 0.075 J by symmetry is wrong: the second stage passes through the 90° position where the torque is largest and covers more energy.
+
+**10.** *Solenoid with a core rearranged for the current.* n = N/L = 1200/0.30 = 4000 turns per metre. With the core B = μᵣμ₀nI, so I = B/(μᵣμ₀n) = 0.80/[(400)(4π × 10⁻⁷)(4000)] = 0.80/2.01 = 0.40 A. Without the core the same current gives B = μ₀nI = (4π × 10⁻⁷)(4000)(0.40) = 2.0 × 10⁻³ T, that is, 400 times smaller, which is the whole point of the iron.
+
+Final answers: I = 0.40 A (accept 0.39 to 0.41 A), B_air = 2.0 mT (accept 1.9 to 2.1 mT). Forgetting μᵣ gives 159 A, an impossible current for the wire; using N = 1200 in place of n gives 1.3 A; leaving the length as 30 gives n = 40 and I = 40 A. All three are wrong.
+
+**11.** *Dipole moment, torque and energy of a circular coil.* The radius is half the diameter: r = 4.0 cm = 0.040 m, so A = πr² = π(0.040)² = 5.03 × 10⁻³ m². μ = NIA = (25)(1.5)(5.03 × 10⁻³) = 0.189 A·m². Maximum torque, with the plane of the coil containing B: τ_max = μB = (0.189)(0.60) = 0.113 N·m. At 45°: U = −μB cos 45° = −(0.113)(0.707) = −0.080 J.
+
+Final answers: μ = 0.19 A·m² (accept 0.185 to 0.192), τ_max = 0.11 N·m (accept 0.111 to 0.115), U = −0.080 J (accept −0.078 to −0.082). Using the diameter as the radius gives μ = 0.75 A·m², four times too big, and is wrong; a positive U at 45° has the sign dropped.
+
+**12.** *Meaning of the sign and g-factor in the electron moment.* The minus sign says M is antiparallel to L: the moment points opposite to the angular momentum. It arises because the electron's charge is negative, so the conventional current circulates the opposite way to the electron's motion, and μ = IA therefore points the opposite way to L = mvr. The factor g is the g-factor, a dimensionless number that scales the naive classical value eL/2m to the measured moment: g ≈ 1 for orbital motion and g ≈ 2 for electron spin.
+
+A correct answer states antiparallel, attributes it to the negative charge (not to g being negative and not to the minus in U = −μ·B), and describes g as a dimensionless correction of about 1 (orbital) or 2 (spin).

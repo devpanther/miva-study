@@ -1,102 +1,112 @@
 # Tuesday — PHY_102 nightly check
 
 *Week 5, exactly as Dr Adeniji builds it.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Parallel splits current with one common voltage: 1/R_eq = 1/R₁ + 1/R₂ + 1/R₃ + ⋯ 1/R_N.*
+**1.** Resistors of 3.0 Ω, 6.0 Ω and 12 Ω are connected in parallel. What is the equivalent resistance?
+A. 21 Ω
+B. 1.7 Ω
+C. 0.58 Ω
+D. 2.0 Ω
 
-*Series shares one current: R_eq = R₁ + R₂ + R₃ + ⋯ R_N.*
+**2.** Resistors of 2.5 Ω, 4.0 Ω, 7.5 Ω and 12 Ω are connected in series. What is the equivalent resistance?
+A. 26 Ω
+B. 1.2 Ω
+C. 6.5 Ω
+D. 0.87 Ω
 
-*A junction is a point where three or more conductors meet. A loop is any closed conducting path.*
+**3.** A 4.0 Ω resistor and a 12 Ω resistor are connected in parallel across a 12 V battery of negligible internal resistance. What total current does the battery supply?
+A. 0.75 A
+B. 3.0 A
+C. 1.0 A
+D. 4.0 A
 
-*The junction rule ΣI = 0 as conservation of charge, and the loop rule ΣV = 0 as conservation of energy.*
+**4.** A 3.0 Ω resistor and a 9.0 Ω resistor are in series across a 24 V battery of negligible internal resistance. What is the potential difference across the 9.0 Ω resistor?
+A. 6.0 V
+B. 24 V
+C. 18 V
+D. 2.7 V
 
-*Her four traversal sign rules: − to + is +ε, + to − is −ε, with the current is −IR, against the current is +IR.*
+**5.** Four wires meet at a junction. Currents of 3.0 A and 1.5 A flow in along two of them, and 2.0 A flows out along a third. What is the current in the fourth wire?
+A. 2.5 A out
+B. 6.5 A out
+C. 2.5 A in
+D. 0.5 A in
 
-*Plus what the sign of the answer means.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**6.** In a circuit, point a is where three wires meet, point b is a corner where two wires meet, point c is where four wires meet, and point d is where a battery terminal joins one wire. How many junctions are there?
+A. 4
+B. 2
+C. 1
+D. 3
 
-**1.** Slide 3 says a parallel connection 'splits the current in the resistors while the ... across each resistor is the same'. Which quantity is the same for every resistor in a parallel connection?
-A. The current
-B. The power dissipated
-C. The resistance
-D. The voltage
+**7.** A single loop contains a 12 V battery and a 4.0 V battery connected so that both drive current the same way round, plus resistances totalling 8.0 Ω (including internal resistances). What is the current?
+A. 1.0 A
+B. 1.5 A
+C. 0.50 A
+D. 2.0 A
 
-**2.** Slide 8 gives the deck's definition of a junction. A junction is a point in a circuit where
-A. a battery is joined to the rest of the circuit
-B. three or more conductors meet
-C. the wire changes direction
-D. the current changes value
+**8.** You draw the current arrow clockwise round a loop, write the loop equation and solve it to get I = −0.30 A. What is the actual current in the loop?
+A. 0.30 A clockwise
+B. No current flows
+C. 0.30 A anticlockwise
+D. Unknown until the equation is set up again
 
-**3.** Travelling round a loop you pass through a source of emf ε, crossing its − terminal first and its + terminal second. What term goes into the loop equation?
-A. +ε
-B. −ε
-C. Zero, since a source has no resistance
-D. +ε only if you are travelling with the assumed current
+**9. (show your working)** Two resistors in parallel have an equivalent resistance of 2.4 Ω. One of them is 4.0 Ω. Calculate the other, then the equivalent resistance when the same two resistors are put in series. Show your working.
 
-**4.** You travel through a resistor R in the direction opposite to the assumed current I. Slides 14 and 15 say the term is
-A. −IR, because current always falls in potential
-B. zero, because you are moving against the flow
-C. +IR, because this represents a rise of potential
-D. +IR or −IR, decided by whichever emf is nearer
+**10. (show your working)** A single loop contains a 9.0 V battery of internal resistance 0.50 Ω and two resistors of 2.5 Ω and 1.5 Ω. Assume a current I and write the loop equation using the sign rules, then calculate I, the p.d. across each resistor and the terminal p.d. of the battery. Show your working.
 
-**5.** Slide 7 gives the reason Kirchhoff's rules are introduced at all. What is it?
-A. Some circuits cannot be categorized into series and/or parallel connection
-B. Ohm's law stops working when several batteries are present
-C. Real batteries have internal resistance, which series and parallel rules cannot handle
-D. The parallel formula becomes too long for more than three resistors
+**11. (show your working)** A 5.0 Ω resistor is in series with a parallel pair of 12 Ω and 4.0 Ω, all across a 16 V battery of negligible internal resistance. Calculate the equivalent resistance, the battery current, the p.d. across the parallel pair and the current in each of the two branches. Show your working.
 
-**6.** The Summary slide pairs each rule with a conservation law. Which pairing does it give?
-A. ΣI = 0 with conservation of energy; ΣV = 0 with conservation of charge
-B. Both rules with conservation of energy
-C. ΣI = 0 with conservation of charge; ΣV = 0 with conservation of energy
-D. Both rules with conservation of momentum in the charge carriers
+**12. (show your working)** State Kirchhoff's junction rule and loop rule, name the conservation law that each rests on, and explain why a point where only two wires meet needs no junction equation.
 
-**7.** Slide 17 ends 'Since I is positive, our assumed current direction is correct.' What follows if a current had instead come out negative?
-A. The loop equation must be rewritten with the arrow reversed
-B. That branch actually carries no current
-C. An arithmetic mistake has been made somewhere
-D. The magnitude is correct and the true current runs opposite to the drawn arrow
-
-**8.** In writing a loop equation you make two separate choices: the direction of each branch-current arrow, and the direction you walk the loop. What is the relationship between them?
-A. They must always agree, or the sign rules break down
-B. They are independent; reversing the walk multiplies the whole loop equation by −1 and changes no answer
-C. The walk direction fixes the current direction automatically
-D. Reversing the walk direction changes the emf signs but not the IR signs
-
-**9.** State both of Kirchhoff's rules the way the deck states them, in symbols and in words, and name the conservation law each one rests on.
-*(short answer)*
-
-**10.** Example 1's circuit contains four resistors and two batteries, yet the solution never uses the junction rule. Explain why not, and say what feature of a circuit forces the junction rule to be used.
-*(short answer)*
-
-**11.** In Example 1 part (a) the 4 V battery contributes −4 V, but in part (b) the same battery contributes +4 V. Explain why, without appealing to any change in the circuit.
-*(short answer)*
-
-**12.** Explain why a parallel equivalent resistance is always smaller than the smallest resistor in the combination, and say what the single most common mistake with her parallel formula is.
-*(short answer)*
+---
 
 ## Answers
 
-**1. D** — In parallel every resistor is connected across the same two points, so the same potential difference V appears across each one; what divides is the current, which is why the reciprocals add. Option 1 is the series property — series elements sit on one path with no junction between them, so one current serves them all. Option 2 is false: with a common V, P = V²/R is largest in the smallest resistor. Option 3 is false in general; the resistors in her example are 4 Ω, 6 Ω and 10 Ω.
+**1. B** — *Equivalent resistance of resistors in parallel.* 1/R_eq = 1/3 + 1/6 + 1/12 = 4/12 + 2/12 + 1/12 = 7/12 Ω⁻¹, so R_eq = 12/7 = 1.7 Ω (1.71 to three figures). Check: it is below 3.0 Ω, the smallest branch, as a parallel result must be.
 
-**2. B** — Her words: 'A point in a circuit where three or more conductors meet is called a junction, while a loop is any closed conducting path.' Three or more is what makes a split possible, and a split is what ΣI = 0 constrains. Option 1 is wrong — Example 1 has two batteries and no junction anywhere. Option 3 is the trap her figure prints as 'Not a Junction' at points c and d: a corner joins only two conductors, so nothing divides. Option 4 confuses the definition with its consequence.
+21 Ω adds them as if in series; 0.58 Ω is 7/12 left un-inverted, a reciprocal resistance; 2.0 Ω drops the 12 Ω branch (1/3 + 1/6 = 1/2).
 
-**3. A** — Slide 13: 'when we travel through a source in the direction from − to + the emf is considered to be positive.' Crossing − then + is a rise in potential, so the term is +ε. Option 2 reverses the rule. Option 3 confuses emf with internal resistance — the internal resistance is a separate IR term in the same branch. Option 4 is the error the deck is built to prevent: the current direction sets the sign of IR terms, never of emf terms, which is why the same 4 V battery contributes −4 V in Example 1(a) and +4 V in Example 1(b).
+**2. A** — *Equivalent resistance of resistors in series.* Series resistances add: R_eq = 2.5 + 4.0 + 7.5 + 12 = 26 Ω, larger than the largest single resistor, as series must be.
 
-**4. C** — Her wording on slide 15: travelling opposite to the assumed current 'the IR term is positive because this represents a rise of potential' — you are walking uphill against the drop. Option 1 is slide 14's case, travelling with the current, and applying it here is the commonest sign error in the whole topic. Option 2 invents a rule; the potential change is real either way. Option 4 makes IR depend on emfs, which it never does.
+1.2 Ω applies the parallel formula; 6.5 Ω is the average of the four, which no rule produces; 0.87 Ω is the parallel sum of reciprocals left un-inverted.
 
-**5. A** — Her sentence: 'However, some circuits cannot be categorized into series and/or parallel connection. To find the currents in this network of resistors, we will apply the techniques developed by the German Physicist, Gustav Kirchhoff.' The bridge in Example 2 is exactly such a network: no two of its arms carry the same current and no two span the same pair of points. Option 2 is false and never claimed. Option 3 is tempting because Example 1 does have internal resistances, but they are handled as ordinary series resistors — that is not the obstacle. Option 4 confuses length with impossibility.
+**3. D** — *Currents in a parallel pair sharing one voltage.* In parallel each branch has the full 12 V across it: I₁ = 12/4.0 = 3.0 A and I₂ = 12/12 = 1.0 A. The battery supplies the sum, 4.0 A. Check: R_eq = 4 × 12/16 = 3.0 Ω and 12/3.0 = 4.0 A.
 
-**6. C** — The junction rule counts charge per unit time in and out of a point, so it is conservation of charge — 'no charge can accumulate at a junction'. The loop rule adds up energy per unit charge gained and lost on a round trip, so it is conservation of energy. Option 1 swaps them, which is the answer a student gives from memory rather than meaning. Option 2 loses the distinction entirely. Option 4 imports a mechanics idea that plays no role in circuit analysis.
+0.75 A treats the pair as series, 12/(4 + 12); 3.0 A and 1.0 A are single branch currents, not the total.
 
-**7. D** — The arrow you drew is only a definition of which direction counts as positive in that branch; the algebra reports back with a sign. A negative value therefore means the size is right and the direction is the reverse of your guess, and nothing needs redoing. Option 1 wastes time and gives the identical answer with the sign flipped. Option 2 confuses a negative number with zero. Option 3 is the panic response — the equations are still satisfied, so there is no error to find.
+**4. C** — *Voltage across one resistor in a series pair.* Series resistors share one current: I = 24/(3.0 + 9.0) = 2.0 A. Then V₉ = IR = 2.0 × 9.0 = 18 V. Check: V₃ = 6.0 V and 6.0 + 18 = 24 V.
 
-**8. B** — Both choices are free. Reversing the walk flips the sign of every term at once, so the equation is the same equation multiplied by −1 and the solution is untouched. Reversing a current arrow instead flips the sign of that one current in the answer. Option 1 is contradicted by any shared branch, which is walked one way in one loop and the other way in the neighbouring loop while keeping a single current arrow. Option 3 removes a choice that is genuinely yours. Option 4 is half right and therefore dangerous: reversing the walk flips both kinds of term, since you cross the terminals in the opposite order and travel through resistors the opposite way too.
+6.0 V is the drop across the 3.0 Ω; 24 V gives the whole battery voltage to one resistor, which is the parallel property, not series; 2.7 V divides 24 V by 9.0 Ω, mixing volts and ohms.
 
-**9.** A good answer gives, first, the junction rule: the algebraic sum of the currents into any junction is zero, ΣI = 0 — equivalently, the total current entering a junction equals the total current leaving it, because no charge can accumulate at a point. That rests on conservation of charge. Second, the loop rule: the sum of the potential changes around any closed loop is zero, ΣV = 0. That rests on conservation of energy — a unit charge carried once round a closed path gains from the emfs exactly what it loses in the resistances. It is worth adding that 'algebraic' in the junction rule means signed: a current leaving is a negative current entering, so at a junction fed by I₁ and I₂ and drained by I₃, ΣI = 0 reads I₁ + I₂ − I₃ = 0.
+**5. A** — *Junction rule with several currents.* ΣI = 0 at the junction: total in = total out. In: 3.0 + 1.5 = 4.5 A. Out so far: 2.0 A. The fourth wire must carry the remaining 2.5 A out.
 
-**10.** A good answer applies her own definition. Example 1 is a single closed rectangle: every point on it joins exactly two conductors, so by the slide-8 definition there is no junction anywhere in the circuit. With no junction there is nothing for ΣI = 0 to constrain, and one single current I passes through all four resistors and both batteries — which is why the loop equation has just one unknown. The junction rule becomes necessary as soon as a point joins three or more conductors, because the current must then split or merge and the branch currents become separate unknowns; Example 2's bridge, with five arms and two inner junctions, is exactly that case.
+6.5 A out adds all three as if every current entered; 2.5 A in has the right size but the wrong direction, which would pile charge up at the junction; 0.5 A in treats the 1.5 A as leaving instead of entering.
 
-**11.** A good answer says nothing about the battery has changed — only the direction of travel. In part (a) she walks the bottom branch left to right, crossing that battery's + terminal first and its − terminal second, which by slide 13 makes the emf negative: −4 V. In part (b) she walks from b toward a, so the bottom branch is crossed right to left, entering at − and leaving at +, which makes the emf positive: +4 V. The rule depends only on the order in which the two terminals are crossed. A useful contrast to add: the IR terms also flip between the two parts, but for a different reason — there the sign turns on travel direction relative to the assumed current, which is why the 4 Ω term is −I(4) in part (a) and +(0.5)(4) in part (b).
+**6. B** — *Identifying junctions.* A junction is a point where three or more conductors meet. Point a (three wires) and point c (four wires) qualify, so there are 2 junctions. At b and d only two conductors meet, so the current has nowhere to divide and there is nothing for the junction rule to say.
 
-**12.** A good answer reasons physically: every extra branch is another path the current can take between the same two points, so adding a branch can only increase the total current for a fixed voltage, and by V = IR that means a lower equivalent resistance. Hence R_eq must sit below even the smallest branch — in her example, 1.94 Ω below 4 Ω. The standard mistake is stopping at 1/R_eq: the formula sums reciprocals, so 1/4 + 1/6 + 1/10 = 31/60 is a reciprocal resistance in Ω⁻¹, and the answer only becomes a resistance after inverting to 60/31 = 1.94 Ω. Quoting 0.52 Ω is that error. A good answer names the check too: if a parallel answer comes out larger than one of the branches, the inversion was skipped.
+4 counts every labelled point; 1 counts only c, as if four wires were needed; 3 wrongly counts d because a battery is attached there.
+
+**7. D** — *Two aiding emfs in a single loop.* Travelling with the current you cross both batteries from − to +, so both emfs enter positive: +12 + 4.0 − I(8.0) = 0, giving I = 16/8.0 = 2.0 A.
+
+1.0 A subtracts the emfs, which is the case where the batteries oppose; 1.5 A uses the 12 V battery alone; 0.50 A uses the 4.0 V battery alone.
+
+**8. C** — *Meaning of a negative current.* The current arrow is only a definition of which way counts as positive. A negative result means the magnitude is right and the true direction is opposite to the arrow: 0.30 A anticlockwise. Nothing needs to be redone.
+
+0.30 A clockwise ignores the sign; no current would need I = 0; re-solving is unnecessary because the equations are already satisfied.
+
+**9.** *Finding an unknown resistor from a parallel equivalent.* 1/R_eq = 1/R₁ + 1/R₂, so 1/R₂ = 1/2.4 − 1/4.0 = 0.4167 − 0.25 = 0.1667 Ω⁻¹, giving R₂ = 6.0 Ω. Check: 4.0 × 6.0/(4.0 + 6.0) = 2.4 Ω. In series: R = 4.0 + 6.0 = 10 Ω.
+
+A correct answer states R₂ = 6.0 Ω and the series value 10 Ω. Leaving 0.1667 un-inverted (0.17 Ω) or subtracting resistances directly (2.4 − 4.0) is wrong.
+
+**10.** *Loop equation for a single-battery loop.* Travelling with the current, the battery is crossed − to + (+9.0 V) and each resistance is crossed with the current (−IR): 9.0 − 0.50I − 2.5I − 1.5I = 0, so 9.0 = 4.5I and I = 2.0 A. Across 2.5 Ω: 5.0 V; across 1.5 Ω: 3.0 V. Terminal p.d. = 9.0 − (2.0)(0.50) = 8.0 V, which equals 5.0 + 3.0 V.
+
+A correct answer shows the signed loop equation, I = 2.0 A, 5.0 V, 3.0 V and 8.0 V. Forgetting the internal resistance (I = 2.25 A) is wrong.
+
+**11.** *Series-parallel circuit reduction.* Parallel pair: 1/R = 1/12 + 1/4.0 = 4/12, so R = 3.0 Ω. R_eq = 5.0 + 3.0 = 8.0 Ω. Battery current I = 16/8.0 = 2.0 A, the same current through the 5.0 Ω. P.d. across the pair = I × 3.0 = 6.0 V (check: 16 − 2.0 × 5.0 = 6.0 V). Branches: 6.0/12 = 0.50 A and 6.0/4.0 = 1.5 A, which add to 2.0 A.
+
+A correct answer states R_eq = 8.0 Ω, I = 2.0 A, V = 6.0 V, and branch currents 0.50 A and 1.5 A. Adding all three resistors in series (21 Ω) is wrong.
+
+**12.** *Physical basis of Kirchhoff's rules.* Junction rule: the algebraic sum of the currents into any junction is zero, ΣI = 0, so current in equals current out. It rests on conservation of charge: charge cannot pile up at or vanish from a junction. Loop rule: the sum of the potential changes (emfs and IR terms) round any closed loop is zero, ΣV = 0. It rests on conservation of energy: a charge carried once round a loop returns to the same potential, so the net energy gained is zero. Where only two wires meet the current has no alternative path, so it simply continues and nothing divides; the equation would read I = I.
+
+A correct answer states both rules, names charge for the junction rule and energy for the loop rule, and says the two-wire point has no split of current.

@@ -1,100 +1,112 @@
 # Monday — MTH_102 nightly check
 
 *Week 1 functions, exactly as she builds it.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*The SUMMARY definition of a function: a relation assigning exactly one output to each input. Slide 9's nesting of functions inside relations.*
+**1.** f(x) = 2x + 3. For which input x is the output f(x) = 11?
+A. x = 4
+B. x = 25
+C. x = 7
+D. x = −4
 
-*The three sets on slide 5 — domain, codomain, range — with f(x) = x² and the unreached values 17, 23, 19.*
+**2.** f(x) = x² + 1 has domain {0, 1, 2, 3}. An arrow diagram sends each input into the codomain {1, 2, 5, 7, 10, 12}. What is the range of f?
+A. {0, 1, 2, 3}
+B. {1, 2, 5, 10}
+C. {7, 12}
+D. {1, 2, 5, 7, 10, 12}
 
-*What 'real-valued' adds on slide 8. The reasoning behind D = (−∞, ∞) for (3x + 1)/(x² + 5).*
+**3.** f(x) = x² − 4. Evaluate f(−3).
+A. −13
+B. 5
+C. 49
+D. −10
 
-*Which step of Range Example 3 reverses an inequality, and why. What 'switch x with y' actually does. Why f ∘ g and g ∘ f sit on one slide.*
+**4.** Find the domain of f(x) = (2x − 3)/(x² + 9).
+A. ℝ \ {−9}
+B. ℝ \ {3/2}
+C. (−∞, ∞)
+D. ℝ \ {−3, 3}
 
-*Includes the two slide errors: the table on slide 22, and the word 'exponentially' on slide 21.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**5.** Find the range of f(x) = 3 − |x + 1|.
+A. [3, ∞)
+B. (−∞, −1]
+C. [−3, ∞)
+D. (−∞, 3]
 
-**1.** The deck's SUMMARY slide defines a function. Which phrase carries the whole definition?
-A. A relation that assigns exactly one output value to each input value
-B. A relation that assigns at least one output value to each input value
-C. A relation that assigns exactly one input value to each output value
-D. Any set of ordered pairs of real numbers
+**6.** Find the inverse of f(x) = 2x + 5.
+A. f⁻¹(x) = (x + 5)/2
+B. f⁻¹(x) = (x − 5)/2
+C. f⁻¹(x) = 1/(2x + 5)
+D. f⁻¹(x) = 2x − 5
 
-**2.** Slide 9 draws 'functions' as a circle sitting inside a larger circle labelled 'relations'. What does that nesting assert?
-A. Relations are the special case: every relation is a function
-B. Functions are relations with an extra condition, so every function is a relation but not every relation is a function
-C. Functions and relations are two names for the same collection
-D. Neither contains the other; they merely overlap
+**7.** A straight-line graph passes through the points (0, 2), (1, 3) and (2, 4). Which rule does it represent?
+A. f(x) = 2 − x
+B. f(x) = 2x
+C. f(x) = x + 1
+D. f(x) = x + 2
 
-**3.** On slide 5, f(x) = x² is drawn from the domain {1, 2, 3, 4, 5}. The values 17, 23 and 19 also appear in the picture but no arrow reaches them. What are they?
-A. Part of the domain that f happens not to use
-B. Part of the range, since they appear in the diagram
-C. Part of the codomain but not the range — offered as possible outputs, never actually produced
-D. A misprint; nothing unreached should be drawn
+**8.** A rule sends A → K, B → 3, C → 9 and D → 3, where K is a letter, not a number. Which description is correct?
+A. A function, but not real-valued
+B. A real-valued function
+C. Not a function, because 3 is hit twice
+D. Not a function, because K is not a number
 
-**4.** Slide 8 asks 'IS THIS A REAL-VALUED FUNCTION?' over a diagram whose output set is {K, 3, 9, 8, 6}. What makes this a real-valued question rather than merely a function question?
-A. The domain has only four elements, which is too few for a real-valued function
-B. Some outputs are never reached, so the mapping fails to be onto
-C. The inputs are letters, and a function must always take numbers as inputs
-D. One of the outputs is the letter K, and real-valued means every output must be a real number
+**9. (show your working)** f(x) = 3x + 1 and g(x) = x². Find (f ∘ g)(x), then evaluate (f ∘ g)(2). Show your working.
 
-**5.** In Domain Example 2 she writes x² + 5 ≠ 0, then x² ≠ −5, then concludes D = (−∞, ∞). What licenses that conclusion?
-A. No real number squares to a negative, so x² = −5 has no real solution and nothing has to be excluded
-B. −5 lies outside the domain, so it is removed and everything else survives
-C. The numerator 3x + 1 is defined everywhere, and the numerator is what fixes the domain
-D. x² + 5 is always larger than 3x + 1, so the fraction never becomes undefined
+**10. (show your working)** Find the range of f(x) = 4x − 7 by making x the subject. Show your working.
 
-**6.** In Range Example 3 she goes from |x − 3| ≥ 0 to −|x − 3| ≤ 0. Why does the inequality turn round?
-A. Because an absolute value becomes negative once a minus sign is attached to it
-B. Because both sides were multiplied by −1, and multiplying an inequality by a negative number reverses its direction
-C. Because zero is its own negative, so the direction of the sign is arbitrary at that line
-D. Because the next step adds 2, and adding to both sides requires reversing first
+**11. (show your working)** f(x) = 3 − x. Make a table of values for x = 0, 1, 2, 3, list the four points to plot, and say whether y rises or falls as x increases. Show your working.
 
-**7.** Her inverse recipe reads: let y = f(x), switch x with y, then isolate the y variable. What does the switching step actually accomplish?
-A. It renames the letters so the algebra looks tidier, and carries no mathematical content
-B. It reflects the graph of f in the x-axis
-C. It swaps the roles of input and output, so isolating y afterwards expresses the original input in terms of the original output
-D. It converts f into 1/f, since swapping is another way of writing a reciprocal
+**12. (show your working)** One relation sends the input 4 to both 2 and −2. Another sends both 2 and −2 to the output 4. Using the definition of a function, explain which one is a function and which is not.
 
-**8.** Why does the deck compute both f ∘ g and g ∘ f for the same f(x) = 5x − 4 and g(x) = x², side by side on one slide?
-A. To show that the two agree once both are fully expanded
-B. To show that composition is only defined when the functions are taken in one particular order
-C. Because computing g ∘ f is a shortcut on the way to computing f ∘ g
-D. To show the answers differ — 5x² − 4 against 25x² − 40x + 16 — so composition depends on the order
-
-**9.** Slide 5 draws three sets around f(x) = x². Name all three, say which elements belong to each, and explain in one sentence how the range and the codomain differ.
-*(short answer)*
-
-**10.** Using Domain Example 2, explain why the numerator of a fraction never restricts the domain, and state what would have changed if the denominator had been x² − 5 instead of x² + 5.
-*(short answer)*
-
-**11.** Slide 22 asks for a table of f(x) = x + 2 at x = 0, 1, 2 and prints y = 2, 1, 0. Say what the printed table really belongs to, explain why the error is easy to overlook, and describe the habit that would have caught it.
-*(short answer)*
-
-**12.** Slide 21 says a graph is made of the points (x, f(x)), and then says that for f(x) = x² the value increases exponentially. Explain what the first statement means and say what is wrong with the second.
-*(short answer)*
+---
 
 ## Answers
 
-**1. A** — Both halves do work: 'each' means no input is left unassigned, and 'exactly one' means no input is sent to two different places. Option 2 drops the uniqueness clause, which is precisely the condition that separates a function from a general relation. Option 3 reverses input and output — outputs are allowed to repeat, and slide 5 shows nothing wrong with several inputs sharing an output. Option 4 is the definition of a relation, the outer circle on slide 9, with no condition at all.
+**1. A** — *Finding the input for a given output.* Set 2x + 3 = 11, so 2x = 8 and x = 4. Check: f(4) = 2(4) + 3 = 11.
 
-**2. B** — A relation is any set of ordered pairs; a function is a relation that additionally sends each input to only one output. Imposing an extra condition can only shrink a collection, so functions land inside relations. Option 1 reverses it — the pair set with (1, 2) and (1, 4) is a relation that fails the condition. Option 3 ignores the drawing, which would then be one circle. Option 4 would require a function that is not a relation, and there is none, because every function is by definition made of ordered pairs.
+x = 25 is f(11), evaluating instead of solving; x = 7 comes from adding 3 instead of subtracting it (2x = 14); x = −4 is a sign slip when the 3 is moved across (2x = −8).
 
-**3. C** — The codomain is the target set declared in advance; the range is the subset the rule genuinely produces, here {1, 4, 9, 16, 25}. Option 1 puts them on the wrong side of the arrows — the domain is the left-hand set of inputs. Option 2 is the standard confusion the slide exists to prevent: appearing in the picture is not the same as being an output. Option 4 misreads a deliberate teaching device as an error; the leftovers are the whole point of drawing a codomain at all.
+**2. B** — *Range versus codomain in an arrow diagram.* The range is the set of outputs actually produced: f(0) = 1, f(1) = 2, f(2) = 5, f(3) = 10, so R = {1, 2, 5, 10}.
 
-**4. D** — 'Function' constrains the arrows, one out of each input; 'real-valued' constrains the destination, the outputs must be real numbers. K is not a number, so whatever the arrows do, the mapping is not real-valued. Option 1 invents a size requirement the deck never states. Option 2 describes being onto, which the deck does not teach and which is irrelevant to the word 'real-valued'. Option 3 looks at the wrong end: it is the values, meaning the outputs, that must be real.
+{0, 1, 2, 3} is the domain; {7, 12} are the codomain values that no arrow reaches; the full six-element set is the codomain, which is what was offered, not what was hit.
 
-**5. A** — Her own NOTE says the square of a positive or a negative number is always positive. So the equation that would have created an exclusion has no real root, and the exclusion list is empty. Option 2 confuses a value of x² with a value of x — the −5 was never a candidate input. Option 3 states the rule backwards: the numerator places no restriction at all, only the denominator does. Option 4 compares the wrong things; a fraction is undefined when the denominator is zero, not when it is smaller than the numerator.
+**3. B** — *Evaluating a quadratic at a negative input.* Square first, then subtract: (−3)² − 4 = 9 − 4 = 5.
 
-**6. B** — Multiplication by a negative reverses; addition of a constant does not. That is why her next line, adding 2 to both sides, keeps the sign as ≤ and delivers y ≤ 2. Option 1 mislabels the fact — the absolute value is still non-negative, it is the negated expression that is non-positive. Option 3 draws a false general rule from the fact that this particular right-hand side happens to be 0. Option 4 inverts the truth: adding never reverses, and this is exactly the distinction that separates R = (−∞, 2] from the wrong answer [2, ∞).
+−13 treats (−3)² as −9; 49 subtracts before squaring, (−3 − 4)²; −10 uses 2x in place of x², giving 2(−3) − 4.
 
-**7. C** — An inverse answers the reversed question — given the output, what was the input? Swapping the letters installs the old output in the input slot, so the rearranged equation is the reversed rule, ready to be read as a function of x. Option 1 is how the step is usually memorised and why it is misapplied to solve for the wrong letter. Option 2 names the wrong reflection; inversion reflects in y = x, not in the x-axis. Option 4 confuses the inverse with the reciprocal — for f(x) = 3x − 7 the inverse is (x + 7)/3 while the reciprocal is 1/(3x − 7), which are different functions.
+**4. C** — *Domain when the denominator never vanishes.* The denominator must not be zero: x² + 9 ≠ 0 means x² ≠ −9, and no real number squares to a negative, so nothing is excluded and D = (−∞, ∞).
 
-**8. D** — Same two functions, two orders, two different polynomials — one quadratic with no linear term, one with −40x. That single comparison is the whole lesson of the slide. Option 1 is the belief the slide is written to destroy; test it at x = 1, where the values are 1 and 1, and at x = 2, where they are 16 and 36. Option 2 is false: both orders are perfectly well defined here. Option 3 invents a dependency; the two are computed independently, each by dropping one rule into the other's x-slot.
+ℝ \ {−9} solves x + 9 = 0 instead of x² + 9 = 0; ℝ \ {3/2} excludes the zero of the numerator, which never restricts a domain; ℝ \ {−3, 3} treats x² = −9 as if it were x² = 9.
 
-**9.** A good answer names the domain as the set of inputs, {1, 2, 3, 4, 5}; the range as the set of outputs the rule actually produces, {1, 4, 9, 16, 25}, which is the set she labels on the slide; and the codomain as the declared target set, containing those five outputs together with 17, 23 and 19, which no arrow reaches. The distinction to state: the codomain is announced in advance and may be generous, while the range is computed from the rule and consists only of values that genuinely occur. It should add that the range always sits inside the codomain and is often strictly smaller, which is exactly what the three unreached values on this slide are drawn to display.
+**5. D** — *Range of an absolute value function.* |x + 1| ≥ 0. Multiplying by −1 reverses the inequality: −|x + 1| ≤ 0. Adding 3 does not: 3 − |x + 1| ≤ 3, so y ≤ 3 and R = (−∞, 3]. The value 3 is attained at x = −1.
 
-**10.** A good answer says the numerator 3x + 1 is a polynomial, defined for every real x, so it can never fail; the only way a fraction becomes undefined is division by zero, which is a statement about the denominator alone. Her working confirms this: she writes down only x² + 5 ≠ 0 and never mentions 3x + 1 again. On the change: x² − 5 = 0 gives x² = 5 and hence x = √5 and x = −√5, both real, so those two values would have to be excluded and the domain would be every real number except ±√5 rather than (−∞, ∞). The point to draw out is that her method did not fail to find exclusions, it correctly found that there were none, and the same method finds them when they exist.
+[3, ∞) forgets that multiplying by −1 flips the sign; (−∞, −1] reads the −1 inside the absolute value as if it were an output bound; [−3, ∞) keeps the wrong direction and also loses the sign of the 3.
 
-**11.** A good answer identifies the printed values as the outputs of f(x) = 2 − x, not x + 2. It explains that the two functions agree at exactly one point, x = 0, where both give 2, so the first entry looks right and lends false confidence to the rest — and that both lines pass through (0, 2), so even a sketch would start out plausible. The habit: substitute each x into the printed rule independently rather than continuing a pattern, and sanity-check the direction — x + 2 has a positive coefficient on x, so y must increase as x increases, and a table that decreases contradicts the rule before any arithmetic is done. The correct table is 2, 3, 4.
+**6. B** — *Inverse of a linear function.* Let y = 2x + 5, switch to x = 2y + 5, isolate y: 2y = x − 5, so y = (x − 5)/2. Check: f(1) = 7 and f⁻¹(7) = (7 − 5)/2 = 1.
 
-**12.** A good answer explains the first claim as the definition of a graph: each point on the curve records one input and its output, the horizontal coordinate being the input and the vertical coordinate the value the rule assigns to it, so the curve is a picture of the whole function rather than a decoration. On the second: 'exponentially' is the wrong word. Exponential growth has the variable in the exponent, as in 2 to the power x; x² has the variable in the base and grows quadratically. The answer should note that the slide contradicts itself in the very next sentence by correctly calling the curve parabolic, and should say the right description out loud — x² increases quadratically, and its graph is a parabola opening upward.
+(x + 5)/2 loses the sign when the 5 is moved across; 1/(2x + 5) is the reciprocal, not the inverse; 2x − 5 undoes the addition but forgets to divide by 2.
+
+**7. D** — *Reading a rule from points on a graph.* Each point is (x, f(x)). Test the rule at all three: 0 + 2 = 2, 1 + 2 = 3, 2 + 2 = 4, so f(x) = x + 2.
+
+f(x) = 2 − x gives 2, 1, 0, a line falling instead of rising; f(x) = 2x gives 0, 2, 4 and fits only the last point; f(x) = x + 1 gives 1, 2, 3, the right slope but the wrong intercept.
+
+**8. A** — *Real-valued versus function.* Each input has exactly one output, so the rule is a function. 'Real-valued' adds a condition on the outputs: they must be real numbers. K is not, so the function is not real-valued.
+
+A repeated output (3 twice) never disqualifies a function; only an input with two arrows would. K breaks the real-valued condition, not the function condition.
+
+**9.** *Forming a composite function.* f ∘ g = f[g(x)]: drop x² into the x-slot of f, so f[x²] = 3(x²) + 1 = 3x² + 1. Then (f ∘ g)(2) = 3(2)² + 1 = 3(4) + 1 = 13. Equivalently g(2) = 4 first, then f(4) = 13.
+
+A correct answer states (f ∘ g)(x) = 3x² + 1 and the value 13. (3x + 1)² = 9x² + 6x + 1 is g ∘ f, the wrong order, and gives 49 at x = 2; that is not accepted.
+
+**10.** *Range of a linear function by making x the subject.* Let y = 4x − 7. Then 4x = y + 7 and x = (y + 7)/4. This gives a real x for every real y (no division by zero, no root of a negative), so every y is an output.
+
+Final answer: R = (−∞, ∞). Also accepted: all real numbers, ℝ, y ∈ ℝ. The working must show x = (y + 7)/4 and say why every y is attainable. [−7, ∞) or (−∞, −7] mistakes the constant for a bound and is wrong.
+
+**11.** *Tabulating a function for plotting.* Substitute each x: f(0) = 3, f(1) = 2, f(2) = 1, f(3) = 0. Points: (0, 3), (1, 2), (2, 1), (3, 0). The coefficient of x is −1, so y falls by 1 each time x increases by 1.
+
+A correct answer lists the values 3, 2, 1, 0, the four points, and states that y decreases (falls). The table 3, 4, 5, 6 belongs to x + 3 and is wrong.
+
+**12.** *Definition of a function applied to a relation.* A function assigns exactly one output to each input. The first relation gives the input 4 two different outputs, 2 and −2, so it breaks the 'exactly one' clause and is not a function. The second sends 2 → 4 and −2 → 4: each input still has exactly one output, and a repeated output is allowed (this is what f(x) = x² does).
+
+A correct answer quotes the one-output-per-input condition, says the first relation fails it and the second satisfies it, and notes that repeated outputs do not matter.

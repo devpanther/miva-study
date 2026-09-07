@@ -1,98 +1,112 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 7 integration.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Apply ∫xⁿdx = x^(n+1)/(n+1) + c to polynomials, negative powers, and fractions rewritten as powers.*
+**1.** Find ∫(2x + 1)² dx.
+A. (4/3)x³ + 2x² + x + c
+B. (2x + 1)³/3 + c
+C. 4x³ + 4x² + x + c
+D. (4/3)x³ + 4x² + x + c
 
-*Then evaluate definite integrals by the Fundamental Theorem, F(x)|ₐᵇ = F(b) − F(a).*
+**2.** Find ∫(x² + 1/x²) dx.
+A. x³/3 + 1/x + c
+B. 2x − 2/x³ + c
+C. x³/3 − 1/x + c
+D. x³/3 − 1/(3x³) + c
 
-*Includes both tasks the lecturer set — ∫(2x² − 6x − 3)dx and ∫₋₁²(7x − 5)dx.*
+**3.** Find ∫(6/x⁴) dx.
+A. 2/x³ + c
+B. −6/(5x⁵) + c
+C. −24/x⁵ + c
+D. −2/x³ + c
 
-*Plus limits that are negative, antiderivatives that carry a minus sign, and one worked solution to diagnose.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**4.** Evaluate ∫₋₁³ (2x − 4) dx.
+A. 0
+B. −8
+C. 8
+D. −3
 
-**1.** Evaluate ∫(x³ + 1/x³)dx.
-A. x⁴/4 + 1/(2x²) + c
-B. x⁴/4 − 1/(2x²) + c
-C. x⁴/4 − 1/(4x⁴) + c
-D. 3x² − 3/x⁴ + c
+**5.** Evaluate ∫₁³ (2/x²) dx.
+A. 4/3
+B. −4/3
+C. −8/3
+D. −16/9
 
-**2.** Evaluate ∫(3/x⁵)dx.
-A. 3/(4x⁴) + c
-B. −3/(6x⁶) + c
-C. −1/(2x⁴) + c
-D. −3/(4x⁴) + c
-
-**3.** The first TASK slide asks for ∫(2x² − 6x − 3)dx. What is it?
-A. (2/3)x³ − 3x² − 3x + c
-B. (2/3)x³ − 6x² − 3x + c
-C. 2x³ − 3x² − 3x + c
-D. (2/3)x³ − 3x² − 3 + c
-
-**4.** A student writes: ∫₂³(1/x²)dx = (1/x)|₂³ = 1/3 − 1/2 = −1/6. What is the actual value, and what went wrong?
-A. −1/6; the working is correct
-B. 1/6; the limits were taken in the wrong order
-C. 1/6; the antiderivative of x⁻² is −1/x, not 1/x
-D. −1/6; the sign is right but the constant of integration was dropped
-
-**5.** Evaluate ∫₀⁴ 6x dx.
-A. 24
-B. 96
-C. 16
-D. 48
-
-**6.** The second TASK slide asks for ∫₋₁²(7x − 5)dx. What is it?
-A. −9/2
-B. 9/2
-C. 5/2
-D. 4
-
-**7.** Evaluate ∫₋₁⁴(3x² − 6)dx.
-A. 33
-B. 95
-C. 35
+**6.** Find the number b > 0 for which ∫₀ᵇ 2x dx = 25.
+A. 25/2
+B. 5/√2
+C. 5
 D. 25
 
-**8.** Evaluate ∫₋₂¹ 3x² dx.
-A. −7
-B. 9
-C. 7
-D. −9
+**7.** Evaluate ∫₁⁴ (1/√x) dx.
+A. 1/2
+B. 4
+C. 1
+D. 2
 
-**9.** Work the first TASK slide in full: evaluate ∫(2x² − 6x − 3)dx, then verify your answer.
-*(short answer)*
+**8.** Which of these rewritings of an integral is NOT justified by splitting and constant multiples?
+A. ∫(x³ + x) dx = ∫x³ dx + ∫x dx
+B. ∫7x² dx = 7∫x² dx
+C. ∫(x³ · x) dx = (∫x³ dx)(∫x dx)
+D. ∫(x³ − x) dx = ∫x³ dx − ∫x dx
 
-**10.** Work the second TASK slide in full: evaluate ∫₋₁²(7x − 5)dx. Show the substitution at x = −1 explicitly, term by term.
-*(short answer)*
+**9. (show your working)** Find ∫(2x² + 3x − 4) dx and check your answer by differentiating. Show your working.
 
-**11.** Evaluate ∫₂³(1/x²)dx following the lecturer's Example 3: state f(x) as a power, state F(x), and factor the minus sign out of the evaluation.
-*(short answer)*
+**10. (show your working)** Evaluate ∫₋₂¹ (3x² − 2) dx. Show the substitution at x = −2 term by term. Show your working.
 
-**12.** Evaluate ∫(2/x⁷)dx. State the value of n you are using and show the division step.
-*(short answer)*
+**11. (show your working)** Evaluate ∫₁² (x² − 1)/x² dx by first dividing each term of the numerator by x². Show your working.
+
+**12. (show your working)** A student evaluates ∫₀³ 6x dx as 6x|₀³ = 18 − 0 = 18. Explain what the student substituted the limits into, why that is wrong, and give the correct value.
+
+---
 
 ## Answers
 
-**1. B** — The second term is x⁻³; the new power is −3 + 1 = −2 and you divide by −2, giving x⁻²/(−2) = −1/(2x²). Option 1 keeps the term positive, the classic slip of ignoring that the divisor is negative. Option 3 subtracts 1 from the exponent instead of adding, producing x⁻⁴. Option 4 differentiates both terms instead of integrating them.
+**1. A** — *Expanding before integrating.* Expand first: (2x + 1)² = 4x² + 4x + 1. Then integrate term by term: 4x³/3 + 4x²/2 + x + c = (4/3)x³ + 2x² + x + c. (The form (2x + 1)³/6 + c is the same family, since it expands to (4/3)x³ + 2x² + x + 1/6.)
 
-**2. D** — Rewrite as ∫3x⁻⁵dx; the new power is −4, so 3x⁻⁴/(−4) = −3/(4x⁴). Option 1 loses the sign that dividing by −4 produces. Option 2 goes the wrong way on the exponent, to −6, which is the differentiation direction. Option 3 divides the 3 away as well as using the wrong constant — it comes from mistakenly writing x⁻⁴/(−2).
+(2x + 1)³/3 applies the power rule to 2x + 1 as if it were x and ignores the factor 2 inside; 4x³ + 4x² + x raises each power but never divides; (4/3)x³ + 4x² + x divides the first term but forgets to divide 4x by 2.
 
-**3. A** — 2x³/3, then 6x²/2 = 3x², then 3x. Option 2 forgets to divide the 6 by the new power 2. Option 3 forgets to divide the 2 by the new power 3. Option 4 leaves the constant term −3 unintegrated; ∫3dx = 3x, by the power rule with n = 0, not 3. Differentiating option 1 returns 2x² − 6x − 3, which none of the others do.
+**2. C** — *Integrating positive and negative powers together.* Write 1/x² as x⁻². Then ∫x² dx = x³/3 and ∫x⁻² dx = x⁻¹/(−1) = −1/x, so the integral is x³/3 − 1/x + c. Check: d/dx (x³/3 − 1/x) = x² + 1/x².
 
-**4. C** — x⁻² integrates to x⁻¹/(−1) = −1/x, so the correct working is (−1/x)|₂³ = −(1/3 − 1/2) = 1/6. Option 1 accepts a wrong antiderivative — differentiating 1/x gives −1/x², not 1/x². Option 2 identifies the right answer for the wrong reason: the limits were in the correct order, upper minus lower, so reversing them would introduce a second error rather than fix this one. Option 4 is doubly wrong: the sign is not right, and a definite integral has no constant.
+x³/3 + 1/x loses the minus sign that comes from dividing by −1; 2x − 2/x³ differentiates instead of integrating; x³/3 − 1/(3x³) subtracts 1 from the exponent of x⁻² instead of adding it.
 
-**5. D** — F(x) = 3x², so 3x²|₀⁴ = 3(4² − 0²) = 3(16) = 48. Option 1 substitutes into the integrand 6x rather than into F. Option 2 uses 6x² as the antiderivative, forgetting to divide by the new power. Option 3 uses x² and drops the coefficient entirely.
+**3. D** — *Rewriting a fraction as a negative power.* Rewrite 6/x⁴ as 6x⁻⁴, so n = −4. The new exponent is −3 and you divide by −3: 6·x⁻³/(−3) + c = −2x⁻³ + c = −2/x³ + c. Check: d/dx (−2x⁻³) = 6x⁻⁴.
 
-**6. A** — F(x) = 7x²/2 − 5x. At x = 2: 14 − 10 = 4. At x = −1: 7/2 + 5 = 17/2, because −5(−1) = +5. So 4 − 17/2 = −9/2. Option 2 computes lower minus upper. Option 3 comes from writing −5(−1) as −5, giving 4 − 3/2. Option 4 evaluates the upper limit and forgets to subtract the lower one. A negative answer is legitimate here and should not prompt a hunt for a lost minus sign.
+2/x³ loses the minus sign from dividing by −3; −6/(5x⁵) lowers the exponent to −5 instead of raising it to −3; −24/x⁵ differentiates 6x⁻⁴ instead of integrating it.
 
-**7. C** — F(x) = x³ − 6x, so (4³ − 24) − ((−1)³ − 6(−1)) = (64 − 24) − (−1 + 6) = 40 − 5 = 35. Option 1 arises from taking (−1)³ = +1. Option 2 drops the −6x term altogether, leaving 64 + 1. Option 4 mishandles the sign of −6(−1) at the lower limit, using −6 − 1 instead of −1 + 6.
+**4. B** — *Definite integral with a negative lower limit.* F(x) = x² − 4x. F(3) = 9 − 12 = −3. F(−1) = (−1)² − 4(−1) = 1 + 4 = 5. So the integral is F(3) − F(−1) = −3 − 5 = −8. A negative answer is legitimate: 2x − 4 is below the axis for most of [−1, 3].
 
-**8. B** — F(x) = x³, so x³|₋₂¹ = 1³ − (−2)³ = 1 − (−8) = 9. Option 1 subtracts 8 instead of −8, i.e. treats (−2)³ as +8. Option 3 gets the magnitude of that slip but not its sign. Option 4 reverses the limits. The whole question turns on one fact — an odd power keeps the sign of a negative base — and no amount of vocabulary substitutes for it.
+0 comes from writing −4(−1) as −4, giving F(−1) = −3; 8 subtracts in the wrong order, F(−1) − F(3); −3 is F(3) alone, forgetting the lower limit.
 
-**9.** A good answer splits the integral term by term, applies ∫xⁿdx = x^(n+1)/(n+1) + c to each — 2x³/3, 6x²/2 = 3x², 3x from the constant with n = 0 — assembles (2/3)x³ − 3x² − 3x + c, keeps the constant of integration, and then differentiates the result to recover 2x² − 6x − 3. Credit the verification step explicitly: it is the deck's own justification for the whole method, and it is the only check available since the slide gives no answer.
+**5. A** — *Definite integral of a negative power.* Rewrite 2/x² as 2x⁻², so F(x) = 2x⁻¹/(−1) = −2/x. Then (−2/x)|₁³ = −2/3 − (−2) = −2/3 + 2 = 4/3. Factoring the minus out: −2(1/3 − 1) = −2(−2/3) = 4/3.
 
-**10.** A good answer states F(x) = 7x²/2 − 5x, then substitutes: at x = 2, 7(2)²/2 − 5(2) = 14 − 10 = 4; at x = −1, 7(−1)²/2 − 5(−1) = 7/2 + 5 = 17/2, spelling out that (−1)² = 1 and that subtracting a negative gives +5. It concludes 4 − 17/2 = −9/2 in the order F(b) − F(a), and should note that no + c appears and that a negative value is a legitimate answer rather than a sign error.
+−4/3 uses +2/x as the antiderivative, losing the sign from dividing by −1; −8/3 adds F(1) instead of subtracting it, −2/3 + (−2); −16/9 substitutes into the integrand 2/x² instead of into F.
 
-**11.** A good answer writes f(x) = 1/x² = x⁻², obtains F(x) = x⁻¹/(−1) = −1/x, and then evaluates as the slide does: (−1/x)|₂³ = −(1/3 − 1/2). It should carry out the bracket first, 1/3 − 1/2 = −1/6, and then negate to get +1/6, noting that the order inside the bracket is still upper minus lower — the minus that was factored out sits in front of the whole bracket and does not swap the limits.
+**6. C** — *Solving for an unknown limit of integration.* F(x) = x², so ∫₀ᵇ 2x dx = b² − 0 = b². Set b² = 25, and since b > 0, b = 5. Check: ∫₀⁵ 2x dx = 25 − 0 = 25.
 
-**12.** A good answer rewrites 2/x⁷ as 2x⁻⁷ and says explicitly that n = −7, computes the new exponent −7 + 1 = −6, divides by it — 2·x⁻⁶/(−6) — and simplifies 2/(−6) to −1/3, giving −1/(3x⁶) + c with the constant retained. It should identify the division by −6 as the source of the minus sign, and can verify by differentiating −(1/3)x⁻⁶ to get 2x⁻⁷.
+25/2 solves 2b = 25, substituting the limit into the integrand 2x instead of into F; 5/√2 uses 2x² as the antiderivative, solving 2b² = 25; 25 forgets to take the square root of b² = 25.
+
+**7. D** — *Definite integral with a root in the denominator.* Rewrite 1/√x as x^(−1/2). The new exponent is 1/2 and you divide by 1/2, which doubles: F(x) = 2x^(1/2) = 2√x. Then 2√x|₁⁴ = 2(2) − 2(1) = 4 − 2 = 2.
+
+1/2 multiplies by the new exponent 1/2 instead of dividing, using F = (1/2)√x; 4 is F(4) alone, forgetting the lower limit; 1 uses F = √x, forgetting to divide by 1/2.
+
+**8. C** — *What linearity of the integral licenses.* Splitting licenses sums, differences and constant multiples only. The integral of a product is not the product of the integrals: ∫x³·x dx = ∫x⁴ dx = x⁵/5 + c, while (x⁴/4)(x²/2) = x⁶/8, which is not even the right power of x.
+
+The sum, the difference and the constant multiple rewritings are all valid, because integration is linear.
+
+**9.** *Integrating a polynomial term by term.* Split the integral and apply the power rule to each term: ∫2x² dx = 2x³/3, ∫3x dx = 3x²/2, ∫4 dx = 4x. So ∫(2x² + 3x − 4) dx = (2/3)x³ + (3/2)x² − 4x + c. Check: d/dx [(2/3)x³ + (3/2)x² − 4x] = 2x² + 3x − 4.
+
+Final answer: (2/3)x³ + (3/2)x² − 4x + c. Also accepted: 2x³/3 + 3x²/2 − 4x + c. The working must show each term divided by its new power and the differentiation check. 2x³ + 3x² − 4x + c (no division) and (2/3)x³ + (3/2)x² − 4 + c (constant not integrated to 4x) are wrong; an answer without + c is incomplete.
+
+**10.** *Definite integral with a cubed negative limit.* F(x) = x³ − 2x. At x = 1: 1 − 2 = −1. At x = −2: (−2)³ − 2(−2) = −8 + 4 = −4. So ∫₋₂¹ (3x² − 2) dx = F(1) − F(−2) = −1 − (−4) = −1 + 4 = 3.
+
+Final answer: 3. A correct answer states F(x) = x³ − 2x, shows (−2)³ = −8 and −2(−2) = +4 at the lower limit, and subtracts F(−2) = −4 to get 3. Taking (−2)³ as +8 gives F(−2) = 12 and the wrong answer −13; writing −2(−2) = −4 gives F(−2) = −12 and the wrong answer 11.
+
+**11.** *Dividing before integrating a definite integral.* Divide: (x² − 1)/x² = x²/x² − 1/x² = 1 − x⁻². Integrate: F(x) = x − x⁻¹/(−1) = x + 1/x. Evaluate: F(2) = 2 + 1/2 = 5/2, F(1) = 1 + 1 = 2, so the integral is 5/2 − 2 = 1/2.
+
+Final answer: 1/2 (also accepted: 0.5). The working must show the rewrite to 1 − x⁻², the antiderivative x + 1/x with the plus sign (from dividing x⁻² by −1 and then subtracting), and F(2) − F(1). Using x − 1/x as F gives 3/2 − 0 = 3/2 and is wrong; integrating numerator and denominator separately is not a valid method.
+
+**12.** *Substituting limits into the antiderivative, not the integrand.* The Fundamental Theorem says ∫ₐᵇ f(x) dx = F(b) − F(a), where F is an antiderivative of f. The student substituted the limits into f(x) = 6x itself; the limits must go into F(x) = 3x². Correctly: 3x²|₀³ = 3(9) − 3(0) = 27.
+
+A correct answer says the limits were put into the integrand instead of the antiderivative, states F(x) = 3x² (from integrating 6x), and gives 27. Also accepted: 3(3² − 0²) = 27. An answer that only says the arithmetic is wrong, without naming F, is incomplete.

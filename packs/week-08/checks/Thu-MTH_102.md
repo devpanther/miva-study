@@ -1,100 +1,112 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 8 integration techniques.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Compute with substitution, including converting the limits of a definite integral.*
+**1.** Evaluate ∫₀² x·eˣ dx.
+A. e² − 1
+B. e² + 1
+C. e²
+D. 2e² + 1
 
-*Integration by parts, once and twice.*
+**2.** Find ∫x³·ln(x) dx.
+A. (x⁴/4)·ln(x) − x⁴/16 + C
+B. (x⁴/4)·ln(x) + x⁴/16 + C
+C. (x⁴/4)·ln(x) − x⁴/4 + C
+D. (x⁴/4)·(1/x) + C
 
-*Trigonometric substitution, with the root normalised to 1 − (something)².*
+**3.** Find ∫x²·cos(x) dx.
+A. x²·sin(x) − 2x·cos(x) + 2sin(x) + C
+B. x²·sin(x) + 2x·cos(x) + C
+C. x²·sin(x) + 2x·cos(x) − 2sin(x) + C
+D. (x³/3)·sin(x) + C
 
-*Partial fractions found by substituting the roots.*
+**4.** Evaluate ∫₀² x·(x² + 1)³ dx.
+A. 156
+B. 2
+C. 78
+D. 625/8
 
-*Includes all four TASK questions the lecturer set and never answered: ∫₀¹x·eˣdx, ∫x·ln(x)dx, ∫√(1 + x²)dx and ∫[(5x + 7)/((x − 1)(x + 3))]dx.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**5.** Find ∫(x + 7)/((x − 1)(x + 3)) dx by partial fractions.
+A. 2ln(x − 1) + ln(x + 3) + C
+B. −ln(x − 1) + 2ln(x + 3) + C
+C. ln(x − 1) + 7ln(x + 3) + C
+D. 2ln(x − 1) − ln(x + 3) + C
 
-**1.** Evaluate ∫₀²(x + 2)³dx by the substitution u = x + 2.
-A. 16
-B. 60
-C. 64
-D. 240
+**6.** Evaluate ∫₂³ 1/(x(x + 1)) dx.
+A. ln(3/4)
+B. ln(8/9)
+C. ln(1/2)
+D. ln(9/8)
 
-**2.** Evaluate ∫3x²·e^(x³)dx.
-A. 3x²·e^(x³) + C
-B. e^(x³)/(3x²) + C
-C. x³·e^(x³) + C
-D. e^(x³) + C
+**7.** For ∫√(25 − 4x²) dx you normalise to 5√(1 − (2x/5)²) and set 2x/5 = sin(u). The integral becomes k∫cos²(u) du. Find k.
+A. 25/2
+B. 2
+C. 25
+D. 5/2
 
-**3.** Following her method for √(9 − 25x²), you would first write it as 3√(1 − (5x/3)²) and then set 5x/3 = sin(u). What is dx?
-A. dx = (3/5)cos(u)du
-B. dx = (5/3)cos(u)du
-C. dx = cos(u)du
-D. dx = (3/5)sin(u)du
+**8.** Which choice of u and dv makes ∫x·sin(x) dx come out in one application of parts?
+A. u = sin(x), dv = x dx
+B. u = x, dv = sin(x) dx
+C. u = x·sin(x), dv = dx
+D. u = 1, dv = x·sin(x) dx
 
-**4.** Evaluate ∫[(7x − 6)/((x − 2)(x + 3))]dx.
-A. (27/5)ln(x − 2) + (8/5)ln(x + 3) + C
-B. (8/5)ln(x − 2) − (27/5)ln(x + 3) + C
-C. (8/5)ln(x − 2) + (27/5)ln(x + 3) + C
-D. 7ln(x − 2) − 6ln(x + 3) + C
+**9. (show your working)** Find ∫√(9 − 4x²) dx. Normalise the root to 3√(1 − (2x/3)²), substitute 2x/3 = sin(u), integrate cos²(u), and set back to x. Show your working.
 
-**5.** Evaluate ∫x²·ln(x)dx.
-A. (x³/3)ln(x) + x³/9 + C
-B. (x³/3)ln(x) − x³/3 + C
-C. (x³/3)·(1/x) + C
-D. (x³/3)ln(x) − x³/9 + C
+**10. (show your working)** Evaluate ∫₁ᵉ ln(x) dx. Show your working.
 
-**6.** Evaluate ∫x·sin(x)dx.
-A. −x·cos(x) + sin(x) + C
-B. x·cos(x) − sin(x) + C
-C. −x·cos(x) − sin(x) + C
-D. −(x²/2)cos(x) + C
+**11. (show your working)** Find ∫x·e^(−x²) dx by substitution. State u, du, and how the factor x dx is replaced. Show your working.
 
-**7.** Evaluate ∫[1/(x² − 4)]dx by partial fractions.
-A. (1/2)ln(x − 2) − (1/2)ln(x + 2) + C
-B. ln(x − 2) − ln(x + 2) + C
-C. (1/4)ln(x − 2) − (1/4)ln(x + 2) + C
-D. (1/4)ln(x − 2) + (1/4)ln(x + 2) + C
+**12. (show your working)** Explain why ∫x·eˣ dx cannot be done by substitution and needs integration by parts, and state the parts formula you would use.
 
-**8.** Evaluate ∫₀¹(x + 1)⁴dx.
-A. 1/5
-B. 31/5
-C. 32/5
-D. 33/5
-
-**9.** Work TASK 1 from slide 9 in full: evaluate ∫₀¹ x·eˣ dx. Say first which technique it needs and why.
-*(short answer)*
-
-**10.** Work TASK 2 from slide 13 in full: evaluate ∫x·ln(x)dx. Justify your choice of u and dv against the habit her two worked examples establish.
-*(short answer)*
-
-**11.** Evaluate ∫√(4 − 9x²)dx her way. Show the rewriting, the substitution, dx, the integration of cos²(u), and the setting back.
-*(short answer)*
-
-**12.** Work TASK 3 from slide 18: evaluate ∫√(1 + x²)dx. State which identity replaces 1 − sin²(u) = cos²(u) and why.
-*(short answer)*
+---
 
 ## Answers
 
-**1. B** — u = x + 2 and du = dx; the limits go from x = 0, 2 to u = 2, 4. So ∫₂⁴u³du = (1/4)u⁴|₂⁴ = (1/4)(256 − 16) = 60. Option 1 comes from leaving the old limits in place and computing (1/4)(2⁴ − 0⁴) = 4, then compounding a slip; it is the classic failure to convert. Option 3 evaluates (1/4)u⁴ at the upper limit only and forgets to subtract. Option 4 is 4⁴ − 2⁴ = 240 with the division by 4 omitted.
+**1. B** — *Definite integral by parts.* By parts with u = x, dv = eˣ dx: ∫x·eˣ dx = x·eˣ − eˣ. Evaluate: at x = 2, 2e² − e² = e²; at x = 0, 0 − 1 = −1. So the integral is e² − (−1) = e² + 1.
 
-**2. D** — The exponent is x³, so u = x³ and du = 3x²dx — which is exactly the rest of the integrand — giving ∫eᵘdu = eᵘ + C = e^(x³) + C. Option 1 differentiates rather than integrates. Option 2 divides by 3x² as though du were dx, a misunderstanding of what substitution consumes. Option 3 leaves the answer as u·eᵘ, multiplying by u instead of leaving eᵘ alone. Verify by differentiating: d/dx e^(x³) = e^(x³)·3x².
+e² − 1 adds the lower-limit value instead of subtracting it; e² forgets the lower limit entirely; 2e² + 1 forgets the −eˣ term at the upper limit.
 
-**3. A** — Differentiating 5x/3 = sin(u) gives (5/3)dx = cos(u)du, so dx = (3/5)cos(u)du — the coefficient appears reciprocated. Option 2 forgets to invert and is the standard way this question is lost; it is the same slip as writing dx = (3/2)cos(u)du in her ∫√(4 − 9x²) example, where the slide has (2/3). Option 3 is what you would get from x = sin(u) with no coefficient at all. Option 4 differentiates sin(u) to sin(u) instead of cos(u).
+**2. A** — *Integration by parts with a logarithm.* Take u = ln(x), dv = x³ dx, so du = (1/x) dx and v = x⁴/4. Then ∫x³·ln(x) dx = (x⁴/4)·ln(x) − ∫(x⁴/4)(1/x) dx = (x⁴/4)·ln(x) − (1/4)∫x³ dx = (x⁴/4)·ln(x) − x⁴/16 + C. ln(x) must be u because x³ is easy to integrate and ln(x) is not.
 
-**4. C** — 7x − 6 = A(x + 3) + B(x − 2). At x = 2: 8 = 5A so A = 8/5. At x = −3: −27 = −5B so B = 27/5, two negatives giving a positive. Option 1 swaps A and B, which happens if you substitute each root into the wrong bracket. Option 2 keeps B negative, forgetting that −27 divided by −5 is positive — the most common slip in this example. Option 4 reads the numerator's coefficients 7 and −6 straight off as the constants, which ignores the method entirely.
+The + x⁴/16 version has the sign of the ∫v du term wrong; − x⁴/4 forgets to divide by 4 again when integrating x³/4; (x⁴/4)·(1/x) multiplies v by du instead of integrating v du.
 
-**5. D** — Take u = ln(x), du = (1/x)dx, dv = x²dx, v = x³/3. Then (x³/3)ln(x) − ∫(x³/3)(1/x)dx = (x³/3)ln(x) − (1/3)∫x²dx = (x³/3)ln(x) − x³/9. Option 1 has the sign of the parts formula wrong; the formula subtracts. Option 2 forgets the extra division by 3 when integrating x²/3. Option 3 multiplies v by du instead of integrating v du. Check by differentiating option 4: x²ln(x) + x²/3 − x²/3 = x²ln(x).
+**3. C** — *Integration by parts applied twice.* First pass, u = x², dv = cos(x) dx: x²·sin(x) − ∫2x·sin(x) dx. Second pass on ∫2x·sin(x) dx, u = 2x, dv = sin(x) dx, v = −cos(x): −2x·cos(x) + ∫2cos(x) dx = −2x·cos(x) + 2sin(x). Combine: x²·sin(x) − (−2x·cos(x) + 2sin(x)) = x²·sin(x) + 2x·cos(x) − 2sin(x) + C.
 
-**6. A** — u = x, dv = sin(x)dx, so du = dx and v = −cos(x). Then x(−cos(x)) − ∫−cos(x)dx = −x·cos(x) + ∫cos(x)dx = −x·cos(x) + sin(x). Option 2 loses the minus that comes from v = −cos(x), i.e. treats v as sin(x)'s partner rather than its integral. Option 3 gets v right but then misses that −∫−cos(x)dx is a double negative. Option 4 integrates the two factors separately, which is never valid. Differentiating option 1 gives −cos(x) + x·sin(x) + cos(x) = x·sin(x).
+The − 2x·cos(x) + 2sin(x) version forgets the minus in front of the second-pass result; x²·sin(x) + 2x·cos(x) stops after the second uv term and drops the last integral; (x³/3)·sin(x) integrates the two factors separately.
 
-**7. C** — x² − 4 = (x − 2)(x + 2), so 1 = A(x + 2) + B(x − 2). At x = 2: 1 = 4A, A = 1/4. At x = −2: 1 = −4B, B = −1/4. Options 1 and 2 come from dividing by 2 or by nothing instead of by 4, that is, from mis-evaluating the bracket at the root. Option 4 loses the minus that comes from B(−4) = 1, and it is worth noticing that the two constants in a 1/((x − a)(x + a)) split are always equal and opposite.
+**4. C** — *Substitution in a definite integral with converted limits.* Let u = x² + 1, so du = 2x dx and x dx = du/2. Limits: x = 0 gives u = 1, x = 2 gives u = 5. The integral becomes (1/2)∫₁⁵ u³ du = (1/2)·(u⁴/4)|₁⁵ = (1/8)(625 − 1) = 624/8 = 78.
 
-**8. B** — u = x + 1, du = dx; x = 0 gives u = 1 and x = 1 gives u = 2. So ∫₁²u⁴du = (1/5)u⁵|₁² = (1/5)(32 − 1) = 31/5. Option 1 leaves the original limits 0 and 1 in place, giving (1/5)(1 − 0). Option 3 evaluates at the upper limit only and forgets to subtract (1/5)(1⁵). Option 4 subtracts in the wrong place, computing (32 + 1)/5. The lower limit becoming 1 rather than 0 is the whole point of the question.
+156 forgets the 1/2 from x dx = du/2; 2 keeps the old x-limits 0 and 2 after switching to u; 625/8 forgets the lower limit.
 
-**9.** A good answer notes that although the task closes the SUBSTITUTION section it cannot be done by substitution — neither factor is the derivative of the other's inner function — and that it is integration by parts, exactly her next slide's Example 1. Take u = x, du = dx, dv = eˣdx, v = eˣ, giving ∫x·eˣdx = x·eˣ − ∫eˣdx = x·eˣ − eˣ. Then evaluate: (x·eˣ − eˣ)|₀¹ = (1·e − e) − (0·1 − 1) = 0 − (−1) = 1. Credit spelling out that e⁰ = 1, that the upper limit contributes exactly nothing, and that the whole answer therefore comes from the lower limit. No constant C appears, because the integral is definite.
+**5. D** — *Partial fractions with a linear numerator.* Write (x + 7)/((x − 1)(x + 3)) = A/(x − 1) + B/(x + 3) and clear: x + 7 = A(x + 3) + B(x − 1). At x = 1: 8 = 4A, so A = 2. At x = −3: 4 = −4B, so B = −1. Hence the integral is 2ln(x − 1) − ln(x + 3) + C. Check: 2(x + 3) − (x − 1) = x + 7.
 
-**10.** A good answer takes u = ln(x), du = (1/x)dx, dv = x dx, v = x²/2, and computes (x²/2)ln(x) − ∫(x²/2)(1/x)dx = (x²/2)ln(x) − (1/2)∫x dx = (x²/2)ln(x) − x²/4 + C. On the justification: both of her examples put the algebraic factor as u, but the binding constraint is that dv must be integrable, and ln(x) is far harder to integrate than x — reversing the roles would require v = x·ln(x) − x before the method even starts, making the leftover integral worse. Verification by differentiating is worth credit: x·ln(x) + (x²/2)(1/x) − x/2 = x·ln(x) + x/2 − x/2 = x·ln(x).
+2ln(x − 1) + ln(x + 3) loses the sign of B from B(−4) = 4; −ln(x − 1) + 2ln(x + 3) has A and B swapped; ln(x − 1) + 7ln(x + 3) reads the numerator's coefficients off as A and B.
 
-**11.** A good answer runs: 4 − 9x² = 4(1 − (3x/2)²), so the integral is ∫2√(1 − (3x/2)²)dx. Set 3x/2 = sin(u); then (3/2)dx = cos(u)du, so dx = (2/3)cos(u)du. The root becomes cos(u), and the constants multiply: 2 × (2/3) = 4/3, giving (4/3)∫cos²(u)du. Using cos²(u) = (1 + cos(2u))/2 this is (4/3)(u/2 + sin(2u)/4) = 4u/6 + 4sin(2u)/12. Setting back, u = sin⁻¹(3x/2), the first term is 2sin⁻¹(3x/2)/3; for the second, sin(2u) = 2sin(u)cos(u) with sin(u) = 3x/2 and cos(u) = √(4 − 9x²)/2, giving x√(4 − 9x²)/2. Final answer 2sin⁻¹(3x/2)/3 + x√(4 − 9x²)/2 + C. The reciprocal in dx = (2/3)cos(u)du is the step most often lost.
+**6. D** — *Definite integral by partial fractions.* 1/(x(x + 1)) = A/x + B/(x + 1) gives 1 = A(x + 1) + Bx; x = 0 gives A = 1, x = −1 gives B = −1. So the antiderivative is ln(x) − ln(x + 1). Evaluate: (ln 3 − ln 4) − (ln 2 − ln 3) = 2ln 3 − ln 4 − ln 2 = ln(9/8).
 
-**12.** A good answer observes that the sign under the root is a plus, so 1 − sin² is useless and the identity needed is 1 + tan²(u) = sec²(u). Set x = tan(u), so dx = sec²(u)du and √(1 + x²) = sec(u), giving ∫sec³(u)du. Integrate by parts with the u-part sec(u) and dv = sec²(u)du, so v = tan(u): writing I = ∫sec³(u)du, I = sec(u)tan(u) − ∫sec(u)tan²(u)du = sec(u)tan(u) − ∫sec(u)(sec²(u) − 1)du = sec(u)tan(u) − I + ∫sec(u)du. Hence 2I = sec(u)tan(u) + ln(sec(u) + tan(u)), using ∫sec(x)dx = ln(sec(x) + tan(x)) + C from slide 6. Setting back with tan(u) = x and sec(u) = √(1 + x²): ∫√(1 + x²)dx = (1/2)[x√(1 + x²) + ln(x + √(1 + x²))] + C. It is fair to note that the deck never demonstrates solving algebraically for a repeated integral, so this task is harder than anything she works.
+ln(3/4) is the upper limit alone, forgetting to subtract the lower; ln(8/9) subtracts in the wrong order; ln(1/2) adds the lower-limit value instead of subtracting it, giving ln 2 − ln 4.
+
+**7. A** — *Constant factor produced by a trigonometric substitution.* From 2x/5 = sin(u), differentiate: (2/5) dx = cos(u) du, so dx = (5/2)cos(u) du. The root becomes 5√(1 − sin²(u)) = 5cos(u). So the integrand is 5cos(u)·(5/2)cos(u) du = (25/2)cos²(u) du, and k = 25/2.
+
+2 uses dx = (2/5)cos(u) du, forgetting to take the reciprocal of 2/5; 25 multiplies 5 by 5 and drops the 1/2 in dx; 5/2 is the dx factor alone, forgetting the 5 that came out of the root.
+
+**8. B** — *Choosing u and dv in integration by parts.* Choose u so that du is simpler and dv so that v is no worse: u = x gives du = dx, removing the x, and dv = sin(x) dx gives v = −cos(x). The leftover integral ∫−cos(x) dx is a table line, so one pass finishes it.
+
+u = sin(x), dv = x dx gives v = x²/2 and the leftover ∫(x²/2)cos(x) dx, where the power of x has gone up; u = x·sin(x), dv = dx leaves ∫x·(sin(x) + x·cos(x)) dx, worse than the start; u = 1, dv = x·sin(x) dx requires integrating the original problem to find v.
+
+**9.** *Trigonometric substitution with a normalised root.* √(9 − 4x²) = 3√(1 − (2x/3)²). Let 2x/3 = sin(u), so dx = (3/2)cos(u) du and the root becomes 3cos(u). The integral is 3·(3/2)∫cos²(u) du = (9/2)(u/2 + sin(2u)/4) + C = 9u/4 + (9/8)sin(2u) + C. Set back: u = sin⁻¹(2x/3), and sin(2u) = 2sin(u)cos(u) = 2·(2x/3)·(√(9 − 4x²)/3) = 4x√(9 − 4x²)/9, so (9/8)sin(2u) = x√(9 − 4x²)/2.
+
+Final answer: (9/4)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C. Also accepted: 9sin⁻¹(2x/3)/4 + x√(9 − 4x²)/2 + C, or the unsimplified 9u/4 + (9/8)sin(2u) + C with u = sin⁻¹(2x/3) stated. The working must show dx = (3/2)cos(u) du, the factor 9/2, and the double-angle identity. Using dx = (2/3)cos(u) du gives the wrong factor 2 and is wrong.
+
+**10.** *Definite integral of a logarithm.* From the table (or parts with u = ln(x), dv = dx), ∫ln(x) dx = x·ln(x) − x. Evaluate: at x = e, e·ln(e) − e = e − e = 0; at x = 1, 1·ln(1) − 1 = 0 − 1 = −1. So ∫₁ᵉ ln(x) dx = 0 − (−1) = 1.
+
+Final answer: 1. The working must state the antiderivative x·ln(x) − x, use ln(e) = 1 and ln(1) = 0, and subtract the lower-limit value −1. Getting −1 (forgetting to subtract) or e − 1 (using only x·ln(x)) is wrong.
+
+**11.** *Substitution when du needs a constant adjusted.* Let u = −x², so du = −2x dx and x dx = −du/2. Then ∫x·e^(−x²) dx = ∫eᵘ·(−1/2) du = −(1/2)eᵘ + C = −(1/2)e^(−x²) + C. Check: d/dx [−(1/2)e^(−x²)] = −(1/2)·e^(−x²)·(−2x) = x·e^(−x²).
+
+Final answer: −(1/2)e^(−x²) + C. Also accepted: −e^(−x²)/2 + C, or the same result reached with u = x² (du = 2x dx, giving −(1/2)e^(−u)). The working must name u, show du and the factor −1/2, and set back to x. Leaving the answer in u, or writing e^(−x²) + C without the −1/2, is wrong.
+
+**12.** *Recognising when substitution fails and parts is needed.* Substitution needs an inner function whose derivative is present as a factor: ∫f′(g(x))·g′(x) dx = f(g(x)) + C. In x·eˣ the only inner function is x itself, whose derivative is 1, and the factor x is not the derivative of anything inside the exponential, so no u makes the integral collapse to ∫f′(u) du. The integrand is a product of two unrelated factors, which is the signal for parts: ∫u dv = uv − ∫v du, with u = x and dv = eˣ dx, giving x·eˣ − eˣ + C.
+
+A correct answer says the derivative of the inner function is not present, states ∫u dv = uv − ∫v du, and chooses u = x, dv = eˣ dx. Contrast with 2x·e^(x²), where 2x is the derivative of the exponent and substitution works.

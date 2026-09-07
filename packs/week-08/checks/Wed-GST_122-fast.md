@@ -1,46 +1,58 @@
 # Wednesday — GST_122 fast-hour check
 
 *The seven word-formation processes and the derivational versus inflectional distinction.*
-*Five questions, straight after the fast hour. Recall only. Score out of 5.*
+*5 questions, straight after the hour. Score out of 5.*
 
-**1.** Which process formed the word brunch?
-A. Compounding
-B. Blending
-C. Clipping
-D. Borrowing
-
-**2.** Using the noun email as the verb to email is an example of:
-A. Conversion
-B. Derivation
-C. Affixation
-D. Compounding
-
-**3.** The word sushi entered English by which process?
-A. Coinage
-B. Blending
+**1.** The word 'UNICEF' was created from the initial letters of the organisation's full title and is pronounced as a single word. Which word-formation process produced it?
+A. Blending
+B. Compounding
 C. Acronym
 D. Borrowing
 
-**4.** Which of these affixes is inflectional rather than derivational?
-A. -ness in kindness
-B. -er in teacher
-C. -ed in walked
-D. -ify in simplify
+**2.** 'happiness' was formed by adding -ness to the adjective 'happy', producing a noun. Which word-formation process is this?
+A. Conversion
+B. Derivation
+C. Inflection
+D. Compounding
 
-**5.** The word raincoat was formed by:
-A. Blending
-B. Compounding
-C. Affixation
-D. Conversion
+**3.** In which of these words is the ending -er inflectional rather than derivational?
+A. teacher (from teach)
+B. taller (from tall)
+C. singer (from sing)
+D. writer (from write)
+
+**4.** Which of the following is NOT one of the four named strategies for vocabulary expansion?
+A. Reading widely and regularly
+B. Using dictionaries, thesauruses and language-learning apps
+C. Engaging in conversations, discussions and debates
+D. Memorising lists of words by rote
+
+**5.** Which term is defined as thinking about one's own thinking processes, including awareness of one's cognitive abilities?
+A. Metacognition
+B. Epistemology
+C. Pedagogy
+D. Exegesis
+
+---
 
 ## Answers
 
-**1. B** — Brunch fuses parts of breakfast and lunch, so it is a blend. Compounding would keep both words whole, as raincoat does, clipping shortens a single word such as lab, and borrowing imports a word from another language.
+**1. C** — *Identifying a word-formation process.* Acronyms take the initial letters of a phrase or title to create a new word, as in NASA.
 
-**2. A** — The word class changes from noun to verb without a single letter being added, which is exactly conversion. Derivation and affixation both attach an affix, and compounding would need a second whole word.
+Blending fuses parts of two words (brunch); compounding merges whole words (raincoat); borrowing takes a word from another language (sushi).
 
-**3. D** — Sushi is taken directly from Japanese, so it is borrowing. Coinage invents a word that existed nowhere before, blending fuses parts of two words, and an acronym is built from the initial letters of a phrase, as NASA is.
+**2. B** — *Derivation versus conversion.* Derivation adds a derivational affix to create a new word, usually of a new class, as in teach + -er giving teacher.
 
-**4. C** — Past-tense -ed only marks tense, so walked is still the verb walk and gets no dictionary entry of its own. The other three make new lexemes: a noun from an adjective, a person noun from a verb, and a verb from an adjective.
+Conversion changes the word class with no affix at all (email as a verb); an inflectional ending only marks grammar and makes no new word; compounding joins two whole words.
 
-**5. B** — Rain and coat both survive whole inside raincoat, which is the test for a compound. A blend would keep only parts of each, affixation attaches a bound prefix or suffix rather than a second word, and conversion adds nothing at all.
+**3. B** — *Derivational versus inflectional affixes.* An inflectional affix only marks grammar and makes no new word: the -er in 'taller' is the comparative of the same adjective 'tall'.
+
+In 'teacher', 'singer' and 'writer' the -er is derivational: it creates a new word, a noun meaning one who does the action, from a verb.
+
+**4. D** — *Strategies for vocabulary expansion.* The four strategies are reading widely and regularly, using vocabulary-building tools such as dictionaries, thesauruses and language-learning apps, engaging in conversations, discussions and debates, and playing word games and language-related activities.
+
+Rote memorisation of word lists is not among them; the other three options are the named strategies.
+
+**5. A** — *Academic vocabulary definitions.* Metacognition is thinking about one's own thinking processes, including awareness and understanding of one's cognitive abilities.
+
+Epistemology is the branch of philosophy concerned with the nature, origin and scope of knowledge; pedagogy is the method and practice of teaching; exegesis is critical explanation or interpretation of a text.

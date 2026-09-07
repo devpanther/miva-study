@@ -1,94 +1,112 @@
 # Friday — PHY_102 nightly check
 
-*Numerical Lorentz-force work: computing qvB sin θ and qE and combining them as vectors, the zero work done by the magnetic force, the orbit radius r = mv/qB and period T = 2πm/qB with the speed-doubling test, helical pitch, F = BIL sin θ with the length in metres and the angle taken from the current, the selector speed v = E/B, the tesla–gauss conversion, and wavelength and photon energy from c = fλ and E = hf.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Numerical Lorentz-force work.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Take e = 1.60×10⁻¹⁹ C, m_p = 1.67×10⁻²⁷ kg, m_e = 9.11×10⁻³¹ kg, c = 3.00×10⁸ m/s, h = 6.63×10⁻³⁴ J·s, g = 9.8 m/s².*
+**1.** A charge of 5.0 μC moves at 4.0 × 10⁵ m/s at 40° to a uniform magnetic field of 0.30 T. Calculate the magnitude of the magnetic force on it.
+A. 0.60 N
+B. 0.46 N
+C. 0.39 N
+D. 3.9 × 10⁵ N
 
-**Questions 1–3 refer to this charge.** A charge **q = +4.0 μC** moves at **v = 2.5×10⁵ m/s**, its velocity making **30°** with a uniform magnetic field **B = 0.60 T**. A uniform electric field of magnitude **E = 1.2×10³ V/m** is present in the same region.
+**2.** At one instant the electric force on a charge is 0.30 N and the magnetic force on it is 0.40 N, and the two forces are perpendicular. Calculate the magnitude of the total Lorentz force.
+A. 0.50 N
+B. 0.70 N
+C. 0.10 N
+D. 0.12 N
 
-**1.** The magnitude of the **magnetic** force on the charge is:
-a) 0.60 N
-b) 0.30 N
-c) 0.52 N
-d) 1.0 N
+**3.** A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) enters a uniform field of 0.40 T at 2.0 × 10⁶ m/s perpendicular to the field. Calculate the radius of its circular path.
+A. 33 cm
+B. 2.8 × 10⁻³ cm
+C. 5.2 × 10⁻⁴ cm
+D. 5.2 cm
 
-**2.** The magnitude of the **electric** force on the same charge is:
-a) 2.4×10⁻³ N
-b) 1.2×10³ N
-c) 4.8×10⁻³ N
-d) zero, since the electric force acts only on charges at rest
+**4.** An electron (m = 9.11 × 10⁻³¹ kg, q = 1.6 × 10⁻¹⁹ C) circles in a uniform field of 2.0 mT. Calculate the period of its orbit.
+A. 1.8 × 10⁻¹¹ s
+B. 1.8 × 10⁻⁸ s
+C. 2.8 × 10⁻⁹ s
+D. 3.3 × 10⁻⁵ s
 
-**3.** The work done **by the magnetic force** while the charge travels 5.0 cm along its path is:
-a) 1.5×10⁻² J
-b) 1.3×10⁻² J
-c) 2.4×10⁻⁴ J
-d) zero
+**5.** A straight wire 30 cm long carries 6.0 A and lies at 35° to a uniform field of 0.45 T. Calculate the force on the wire.
+A. 0.81 N
+B. 46 N
+C. 0.66 N
+D. 0.46 N
 
-**Questions 4–5 refer to this proton.** A proton enters a uniform field **B = 0.25 T** at **v = 3.0×10⁶ m/s**, moving **perpendicular** to the field.
+**6.** The Earth's field at a location is 0.60 gauss. A proton (q = 1.6 × 10⁻¹⁹ C) moves through it at 1.0 × 10⁶ m/s perpendicular to the field. Using 1 T = 10⁴ G, calculate the force on the proton.
+A. 9.6 × 10⁻¹⁸ N
+B. 9.6 × 10⁻¹⁷ N
+C. 9.6 × 10⁻¹⁴ N
+D. 9.6 × 10⁻¹⁹ N
 
-**4.** The radius of its circular path is:
-a) 0.13 m
-b) 7.98 m
-c) 6.8×10⁻⁵ m
-d) 0.063 m
+**7.** Orange light has a wavelength of 600 nm. Take h = 6.63 × 10⁻³⁴ J·s and c = 3.0 × 10⁸ m/s. Calculate the energy of one photon.
+A. 1.3 × 10⁻⁴⁸ J
+B. 2.0 × 10⁻²⁵ J
+C. 3.3 × 10⁻¹⁹ J
+D. 3.3 × 10⁻²² J
 
-**5.** The proton's speed is now **doubled**, everything else unchanged. Its radius and period become:
-a) radius 0.25 m, period unchanged at 2.6×10⁻⁷ s
-b) radius 0.25 m, period doubled to 5.2×10⁻⁷ s
-c) radius unchanged at 0.13 m, period halved to 1.3×10⁻⁷ s
-d) radius 0.063 m, period halved to 1.3×10⁻⁷ s
+**8.** Two particles carry the same charge and enter the same uniform magnetic field with the same velocity, but one has twice the mass of the other. Which quantity is the same for both?
+A. The orbit radius
+B. The magnetic force
+C. The orbital period
+D. The kinetic energy
 
-**6.** A straight wire of length **40 cm** carries **5.0 A** and lies at **60°** to a uniform field of **0.20 T**. The force on the wire is:
-a) 0.40 N
-b) 0.20 N
-c) 35 N
-d) 0.35 N
+**9. (show your working)** A charge of +3.0 μC moves at 2.0 × 10⁵ m/s along +x. B = 0.50 T points along +y and E = 6.0 × 10⁴ V/m points along +z. Calculate the magnetic force, the electric force and the net force, each with direction. Then find the E that would let the charge pass undeflected. Show your working.
 
-**7.** A beam passes undeflected through crossed fields **E = 4.8×10⁴ V/m** and **B = 0.12 T**. The selected speed is:
-a) 5.8×10³ m/s
-b) 4.0×10⁵ m/s
-c) 2.5×10⁻⁶ m/s
-d) 4.0×10⁵ m/s for a proton but 2.0×10⁵ m/s for an electron of half the momentum
+**10. (show your working)** A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) enters a uniform field of 0.20 T at 4.0 × 10⁶ m/s, its velocity at 30° to B. Calculate the velocity components along and across B, the radius of the helix, the period and the pitch. Show your working.
 
-**8.** A magnet is specified as producing **3.5×10⁴ gauss**. In SI units this is:
-a) 3.5 T
-b) 3.5×10⁸ T
-c) 0.35 T
-d) 3.5×10⁴ T
+**11. (show your working)** A mobile-phone mast radiates 20 W at 900 MHz. Take c = 3.0 × 10⁸ m/s and h = 6.63 × 10⁻³⁴ J·s. Calculate the wavelength, the energy of one photon, and the number of photons emitted per second. Show your working.
 
-**9. (explain why)** A charge **q = −2.0 μC** moves at **3.0×10⁵ m/s** along **+x**, in a region where **B = 0.50 T** lies along **+y** and **E = 4.0×10⁴ V/m** lies along **+z**. Find the magnitude and direction of the magnetic force, of the electric force, and of the **resultant**. Then state what the resultant becomes if the charge is made **positive** instead, and what it becomes if **E** is redirected along **+x** with everything else unchanged. Say at which step the sign of the charge actually mattered.
-
-**10. (explain why)** An electron enters a uniform field **B = 0.020 T** at **5.0×10⁶ m/s**, its velocity making **60°** with the field. Find the components of its velocity along and across **B**, the radius and period of the helix, and its pitch. Then state its kinetic energy on entry and after twenty turns, and justify that second answer.
-
-**11. (explain why)** A horizontal straight wire of mass per unit length **5.0×10⁻³ kg/m** is to be supported against gravity by a horizontal magnetic field of **0.40 T** perpendicular to it. Find the required current. Then find the current needed if the field is turned so that it makes **30°** with the wire, and explain why no current at all can levitate the wire if the field is turned **parallel** to it. Explain also how the direction of the current is fixed.
-
-**12. (explain why)** A radar transmitter operates at **9.4 GHz** and radiates **25 kW**. Find the wavelength, the energy of one photon in joules and in electronvolts, and the number of photons emitted per second. Compare that photon energy with the energy of an ultraviolet photon of wavelength **250 nm**, and explain what the ratio tells you about which of the two can ionise an atom.
+**12. (show your working)** A straight wire carrying current sits in a uniform magnetic field. Explain the direction of the force on it, what happens to that force if the current is reversed, and what happens if both the current and the field are reversed. Hence explain why a d.c. motor needs a commutator.
 
 ---
 
 ## Answers
 
-**1. b** — *F = qvB sin θ, with θ the angle between v and B.* qv = (4.0×10⁻⁶)(2.5×10⁵) = 1.0; × B = 0.60; × sin 30° = 0.500 gives **0.30 N**. (a) is 0.60 N, the answer with the angle ignored altogether — the value that applies only when v ⊥ B, and the commonest slip when a question supplies an angle in passing. (c) is 0.52 N = qvB cos 30°, the sin/cos swap: cos is what you would use if the angle were measured from the perpendicular, and it is never what F = qvB sin θ asks for. (d) is 1.0 N = qv, with B dropped entirely — check the units, since qv alone is a coulomb-metre per second and cannot be a newton.
+**1. C** — *Magnetic force qvB sin θ with unit conversion.* F = qvB sin θ = (5.0 × 10⁻⁶)(4.0 × 10⁵)(0.30) sin 40° = (0.60)(0.643) = 0.386 N ≈ 0.39 N.
 
-**2. c** — *F_E = qE, with no angle and no velocity in it.* (4.0×10⁻⁶)(1.2×10³) = **4.8×10⁻³ N**, directed along **E** because q is positive. (a) is 2.4×10⁻³ N, the result of applying the same sin 30° to the electric term; the angle belongs to the cross product only, and qE has no angular factor whatsoever. (b) is 1.2×10³ N, from multiplying qE by v — importing the v from the magnetic formula into the electric one, which also destroys the units. (d) inverts the correct condition: it is the **magnetic** force that vanishes for a charge at rest, while qE acts whether the charge moves or not.
+0.60 N is qvB with the angle ignored, the value only for v perpendicular to B; 0.46 N uses cos 40° instead of sin; 3.9 × 10⁵ N leaves the charge as 5.0 instead of 5.0 × 10⁻⁶ C.
 
-**3. d** — *The magnetic force is perpendicular to v, so it does no work — ever.* W = ∫F·dl with dl along v and F ⊥ v gives exactly zero, over 5.0 cm or over 5.0 km. The charge's speed and kinetic energy leave the region as they entered. (a) is 1.5×10⁻² J = (0.30)(0.050), the mechanical reflex of multiplying force by distance without checking the angle between them. (b) is 1.3×10⁻² J, the same product with a cos 30° inserted — the angle between **v** and **B**, which has nothing to do with the angle between **F** and **dl**; the latter is 90° and the cosine is 0. (c) is 2.4×10⁻⁴ J = (4.8×10⁻³)(0.050), the work done by the **electric** force (if E happened to lie along the path) — the right calculation applied to the wrong force, and the question asked specifically about the magnetic one.
+**2. A** — *Adding the electric and magnetic forces as vectors.* F = qE + qv × B is a vector sum. For perpendicular components the magnitude is √(0.30² + 0.40²) = √(0.09 + 0.16) = √0.25 = 0.50 N.
 
-**4. a** — *r = mv/(qB).* qB = (1.60×10⁻¹⁹)(0.25) = 4.00×10⁻²⁰; mv = (1.67×10⁻²⁷)(3.0×10⁶) = 5.01×10⁻²¹; r = 5.01×10⁻²¹/4.00×10⁻²⁰ = **0.125 m ≈ 0.13 m**. (b) is 7.98 m, the expression inverted — qB/mv — which is a reciprocal length, so the units alone condemn it. (c) is 6.8×10⁻⁵ m, obtained by using the **electron** mass for a proton, an error of a factor 1836 that still "looks like a radius". (d) is 0.063 m, exactly half, from confusing the radius with half the diameter, or from importing a spurious ½.
+0.70 N adds the magnitudes, which is right only when the two forces are parallel; 0.10 N subtracts them, right only when antiparallel; 0.12 N multiplies them, which has no meaning.
 
-**5. a** — *r ∝ v, but T = 2πm/(qB) contains no v.* Doubling the speed doubles the radius to **0.25 m**, while the period stays at T = 2π(1.67×10⁻²⁷)/(4.00×10⁻²⁰) = **2.6×10⁻⁷ s**: the particle covers a circle twice as large at twice the speed and takes exactly as long. (b) gets the radius right and then assumes a bigger circle must take longer, which forgets that the speed rose too. (c) fixes the radius and shortens the period — the picture of a particle confined to a fixed track and simply going round faster, which is not what the field does. (d) shrinks the radius, inverting the dependence on v altogether.
+**3. D** — *Orbit radius r = mv/(qB).* r = mv/(qB) = (1.67 × 10⁻²⁷)(2.0 × 10⁶)/[(1.6 × 10⁻¹⁹)(0.40)] = (3.34 × 10⁻²¹)/(6.4 × 10⁻²⁰) = 0.052 m = 5.2 cm.
 
-**6. d** — *F = BIL sin θ, θ from the current to B, L in metres.* L = 40 cm = 0.40 m; BIL = (0.20)(5.0)(0.40) = 0.40; × sin 60° = 0.866 gives **0.35 N**. (a) is 0.40 N, BIL with the angle ignored — the maximum, reached only at 90°. (b) is 0.20 N = BIL cos 60°, the sin/cos swap, and note how plausible it looks because cos 60° = 0.500 gives a tidy number. (c) is 35 N, from leaving L as 40 cm: a factor of 100, and a force of 35 N on a thin wire would be visible across the room.
+2.8 × 10⁻³ cm uses the electron mass 9.11 × 10⁻³¹ kg; 33 cm is 2πr, the circumference quoted as the radius; 5.2 × 10⁻⁴ cm is a slip of two powers of ten in dividing 10⁻²¹ by 10⁻²⁰.
 
-**7. b** — *v = E/B, and it contains neither q nor m.* v = (4.8×10⁴)/(0.12) = **4.0×10⁵ m/s**. (a) is 5.8×10³ = E × B, multiplying where the balance qE = qvB requires dividing. (c) is 2.5×10⁻⁶ = B/E, the ratio inverted — and 2.5 μm/s is not a beam speed. (d) is the misconception the selector exists to defeat: q cancels from both sides of qE = qvB and m never enters, so **every** species that passes does so at the same speed; momentum is irrelevant to the balance. Mass and charge only start to matter in the *second*, magnet-only stage, where r = mv/qB.
+**4. B** — *Orbit period T = 2πm/(qB).* T = 2πm/(qB) = 2π(9.11 × 10⁻³¹)/[(1.6 × 10⁻¹⁹)(2.0 × 10⁻³)] = (5.72 × 10⁻³⁰)/(3.2 × 10⁻²²) = 1.8 × 10⁻⁸ s, whatever the electron's speed.
 
-**8. a** — *1 T = 10⁴ G, so divide by 10⁴.* 3.5×10⁴ G ÷ 10⁴ = **3.5 T** — a strong laboratory or medical magnet, which is the sanity check. (b) multiplies by 10⁴ instead of dividing, giving 3.5×10⁸ T, a field found only around neutron stars. (c) uses 1 T = 10⁵ G, a one-digit slip in the exponent that leaves an answer still looking reasonable — which is exactly why it is dangerous. (d) does not convert at all, treating gauss and tesla as interchangeable; they differ by four orders of magnitude, the gauss being the small unit.
+2.8 × 10⁻⁹ s drops the 2π; 3.3 × 10⁻⁵ s uses the proton mass; 1.8 × 10⁻¹¹ s reads 2.0 mT as 2.0 T.
 
-**9.** *Concept: adding qE and qv × B as vectors, and where the sign of the charge enters.* **Magnetic force.** Magnitude |q|vB = (2.0×10⁻⁶)(3.0×10⁵)(0.50) = **0.30 N** (v ⊥ B here, so sin θ = 1). Direction: **v × B = x̂ × ŷ = +ẑ**, but q is **negative**, so **F_B = 0.30 N along −z**. **Electric force.** |q|E = (2.0×10⁻⁶)(4.0×10⁴) = **0.080 N**; **E** is along +z and the charge is negative, so **F_E = 0.080 N along −z**. **Resultant.** Both lie along −z, so here — and only here, because the geometry allows it — the magnitudes simply add: **F = 0.38 N along −z**. **If the charge is made positive:** both forces reverse together, so the resultant is **0.38 N along +z** — the same magnitude, the opposite direction. **If E is redirected along +x** (charge still negative): F_E becomes 0.080 N along **−x**, while F_B is unchanged at 0.30 N along **−z**. The two are now **perpendicular**, so they must be combined by Pythagoras: F = √(0.080² + 0.30²) = √(0.0064 + 0.0900) = √0.0964 = **0.31 N**, at arctan(0.080/0.30) = **15°** from the −z direction towards −x. **Where the sign mattered:** only in fixing the *directions* of the two forces, never their magnitudes — and because it reverses **both** together, it never changed the size of the resultant in any of the three cases. The step that genuinely changed the answer was the **geometry**: parallel forces add to 0.38 N, perpendicular ones to 0.31 N. That is why 0.38 N cannot be quoted until the directions are known.
+**5. D** — *Force on a current-carrying wire F = BIL sin θ.* L = 30 cm = 0.30 m. F = BIL sin θ = (0.45)(6.0)(0.30) sin 35° = (0.81)(0.574) = 0.465 N ≈ 0.46 N, directed perpendicular to both the wire and B.
 
-**10.** *Concept: resolving v about B, r = mv⊥/qB, T = 2πm/qB, pitch = v∥T, and the constancy of kinetic energy.* **Components.** v⊥ = v sin 60° = (5.0×10⁶)(0.866) = **4.33×10⁶ m/s** across the field; v∥ = v cos 60° = (5.0×10⁶)(0.500) = **2.5×10⁶ m/s** along it. (It is the **perpendicular** component that is bent, so it carries the sine — reversing sine and cosine here reverses both the radius and the pitch.) **Radius.** qB = (1.60×10⁻¹⁹)(0.020) = 3.2×10⁻²¹; r = m v⊥/(qB) = (9.11×10⁻³¹)(4.33×10⁶)/(3.2×10⁻²¹) = (3.945×10⁻²⁴)/(3.2×10⁻²¹) = **1.2×10⁻³ m ≈ 1.2 mm**. **Period.** T = 2πm/(qB) = 2π(9.11×10⁻³¹)/(3.2×10⁻²¹) = (5.72×10⁻³⁰)/(3.2×10⁻²¹) = **1.8×10⁻⁹ s (1.8 ns)** — note that the full speed does **not** appear here, and neither does v⊥: the period is the same for every electron in this field. **Pitch.** The distance advanced along **B** in one turn is p = v∥T = (2.5×10⁶)(1.79×10⁻⁹) = **4.5×10⁻³ m ≈ 4.5 mm**. So the path is a helix of radius 1.2 mm and pitch 4.5 mm. **Kinetic energy on entry.** KE = ½mv² = ½(9.11×10⁻³¹)(5.0×10⁶)² = ½(9.11×10⁻³¹)(2.5×10¹³) = **1.1×10⁻¹⁷ J ≈ 71 eV**, using the **full** speed, not a component. **After twenty turns: exactly the same, 1.1×10⁻¹⁷ J.** The only force acting is qv × B, which is perpendicular to v at every instant, so its power F·v is zero and it can do no work: v⊥ and v∥ are each individually unchanged in magnitude, so the radius, the period and the pitch are also the same on the twentieth turn as on the first. A helix in a uniform field neither tightens nor opens out.
+0.81 N is BIL with the angle ignored, the maximum for a wire perpendicular to B; 0.66 N uses cos 35°; 46 N leaves the length as 30 instead of 0.30 m.
 
-**11.** *Concept: F = BIL sin θ set against weight, the angle factor, and the direction rule.* **Perpendicular field.** For a length L of the wire, the magnetic force must balance the weight: **BIL = (m/L)Lg**, so the length cancels and **I = (m/L)g / B** = (5.0×10⁻³ × 9.8)/(0.40) = (4.9×10⁻²)/(0.40) = **0.12 A** (0.1225 A). Note the mass per unit length is what makes this possible: both sides are proportional to L, so the answer is independent of how long the wire is. **Field at 30° to the wire.** Now F = BIL sin 30° = ½BIL, so only half the force is produced per ampere and the current must **double**: I = 0.1225/0.500 = **0.245 A ≈ 0.25 A**. **Field parallel to the wire.** θ = 0, sin θ = 0, and **F = 0 for every current**: no current, however large, produces any force at all, so levitation is impossible. This is the same fact as "a charge moving along B feels nothing", counted per unit length of wire. **Direction of the current.** The force must point **vertically upward**, and F = I L × B is perpendicular to both the wire and the field. Given the horizontal field direction, RHR-1 fixes the sense of I uniquely: point the fingers along **B**, and choose the thumb direction (the current) such that the palm faces **up**. Reversing the current sends the force **downward**, and the wire is then pressed onto its supports with twice its weight rather than floating. There is exactly one correct sense, and it is not deducible from the magnitudes.
+**6. A** — *Gauss to tesla conversion inside a force calculation.* 0.60 G = 0.60 × 10⁻⁴ T = 6.0 × 10⁻⁵ T. F = qvB = (1.6 × 10⁻¹⁹)(1.0 × 10⁶)(6.0 × 10⁻⁵) = 9.6 × 10⁻¹⁸ N.
 
-**12.** *Concept: c = fλ, E = hf, photons per second from P/E, and why photon energy — not intensity — decides ionisation.* **Wavelength.** λ = c/f = (3.00×10⁸)/(9.4×10⁹) = **3.2×10⁻² m = 3.2 cm** — a centimetre wave, as the name X-band radar implies. **Photon energy.** E = hf = (6.63×10⁻³⁴)(9.4×10⁹) = **6.2×10⁻²⁴ J**; in electronvolts, (6.23×10⁻²⁴)/(1.60×10⁻¹⁹) = **3.9×10⁻⁵ eV**. **Photons per second.** n = P/E = (2.5×10⁴)/(6.23×10⁻²⁴) = **4.0×10²⁷ per second**. So enormous a rate that the emission is completely smooth, which is why radar is described classically as a wave and never as a stream of particles. **Ultraviolet comparison.** f = c/λ = (3.00×10⁸)/(2.50×10⁻⁷) = 1.2×10¹⁵ Hz, so E = hf = (6.63×10⁻³⁴)(1.2×10¹⁵) = **8.0×10⁻¹⁹ J = 5.0 eV**. The ratio is (8.0×10⁻¹⁹)/(6.23×10⁻²⁴) ≈ **1.3×10⁵**: a single ultraviolet photon carries over a hundred thousand times the energy of a radar photon. **What that means.** Ionising an atom requires one photon to deliver, in a single interaction, at least the ionisation energy — several electronvolts and upwards. The UV photon at 5.0 eV is in that range and can eject an electron from many molecules; the radar photon at 3.9×10⁻⁵ eV is not, and **no increase in transmitter power changes that**, because raising the power merely sends more photons, each still carrying 3.9×10⁻⁵ eV. Photon energy depends on **frequency alone** (E = hf), not on intensity. That single fact is the dividing line in the electromagnetic spectrum between the ionising radiations (ultraviolet, X-rays, gamma rays) and the non-ionising ones (visible and below), and it is why a 25 kW radar transmitter is a heating hazard rather than a radiological one.
+9.6 × 10⁻¹⁴ N uses 0.60 G as if it were 0.60 T; 9.6 × 10⁻¹⁷ N converts with 1 G = 10⁻³ T; 9.6 × 10⁻¹⁹ N converts with 1 G = 10⁻⁵ T.
+
+**7. C** — *Photon energy E = hc/λ.* λ = 600 nm = 6.00 × 10⁻⁷ m. E = hc/λ = (6.63 × 10⁻³⁴)(3.0 × 10⁸)/(6.00 × 10⁻⁷) = (1.99 × 10⁻²⁵)/(6.00 × 10⁻⁷) = 3.3 × 10⁻¹⁹ J, about 2.1 eV. Equivalently f = c/λ = 5.0 × 10¹⁴ Hz and E = hf.
+
+3.3 × 10⁻²² J takes 1 nm as 10⁻⁶ m; 2.0 × 10⁻²⁵ J is hc alone, never divided by the wavelength; 1.3 × 10⁻⁴⁸ J is hλ/c, the fraction upside down.
+
+**8. B** — *Which orbit quantities depend on mass.* F = qvB contains no mass, so with equal q, v and B the force is identical. Everything else differs: r = mv/qB and T = 2πm/qB both double with the mass, and ½mv² doubles too.
+
+Equal radius would need equal momentum, not equal velocity; equal period is the speed-independence result, which says nothing about mass; kinetic energy at the same speed is proportional to m.
+
+**9.** *Combining qE and qv × B as vectors in crossed fields.* Magnetic: F_B = qvB = (3.0 × 10⁻⁶)(2.0 × 10⁵)(0.50) = 0.30 N, direction x̂ × ŷ = +z. Electric: F_E = qE = (3.0 × 10⁻⁶)(6.0 × 10⁴) = 0.18 N, along +z for a positive charge. Both point along +z, so they add: F_net = 0.48 N along +z. For no deflection the electric force must cancel the magnetic one: E = vB = (2.0 × 10⁵)(0.50) = 1.0 × 10⁵ V/m, directed along −z.
+
+Final answers: F_B = 0.30 N (+z), F_E = 0.18 N (+z), F_net = 0.48 N (+z), E = 1.0 × 10⁵ V/m along −z (accept within 2%). A correct answer must show the cross product giving +z. Combining 0.30 and 0.18 in quadrature to give 0.35 N is wrong here because the forces are parallel.
+
+**10.** *Helical motion: radius, period and pitch.* v⊥ = v sin 30° = 2.0 × 10⁶ m/s and v∥ = v cos 30° = 3.46 × 10⁶ m/s. Only v⊥ is bent: r = mv⊥/(qB) = (1.67 × 10⁻²⁷)(2.0 × 10⁶)/[(1.6 × 10⁻¹⁹)(0.20)] = (3.34 × 10⁻²¹)/(3.2 × 10⁻²⁰) = 0.104 m. T = 2πm/(qB) = 2π(1.67 × 10⁻²⁷)/(3.2 × 10⁻²⁰) = 3.28 × 10⁻⁷ s, independent of speed. Pitch = v∥T = (3.46 × 10⁶)(3.28 × 10⁻⁷) = 1.14 m.
+
+Final answers: v⊥ = 2.0 × 10⁶ m/s, v∥ = 3.5 × 10⁶ m/s, r = 0.10 m (accept 0.102 to 0.106), T = 3.3 × 10⁻⁷ s (accept 3.2 to 3.4), pitch = 1.1 m (accept 1.10 to 1.17). Using the full 4.0 × 10⁶ m/s in the radius gives 0.21 m and is wrong; the period must not contain v.
+
+**11.** *Wavelength, photon energy and photon rate from frequency and power.* λ = c/f = (3.0 × 10⁸)/(9.0 × 10⁸) = 0.33 m. E = hf = (6.63 × 10⁻³⁴)(9.0 × 10⁸) = 5.97 × 10⁻²⁵ J (about 3.7 × 10⁻⁶ eV). Photons per second = P/E = 20/(5.97 × 10⁻²⁵) = 3.4 × 10²⁵ per second, so many that the radiation behaves as a smooth classical wave.
+
+Final answers: λ = 0.33 m (accept 0.33 to 0.34), E = 6.0 × 10⁻²⁵ J (accept 5.9 to 6.0 × 10⁻²⁵), n = 3.4 × 10²⁵ s⁻¹ (accept 3.3 to 3.4 × 10²⁵). λ = 2.7 × 10¹⁷ m comes from multiplying c by f and is wrong; MHz means 10⁶ Hz.
+
+**12.** *Direction and sign of the force on a current-carrying wire.* F = I L × B, so the force is perpendicular to both the wire and the field, never along either; its sense comes from right-hand rule 1 with the conventional current in place of v. Reversing the current reverses L and so reverses F. Reversing both I and B reverses F twice, leaving it unchanged. In a motor the coil's sides swap places every half turn, so the torque would reverse and the coil would only rock; the commutator reverses the current in the coil at the same moment, so the torque keeps one sense and the coil keeps turning.
+
+A correct answer states perpendicular to both wire and B, reversal with the current, no change when both reverse, and the commutator's job of reversing I each half turn to keep the torque one-directional.

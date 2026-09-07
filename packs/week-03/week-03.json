@@ -13,7 +13,8 @@
       },
       "fast": {
         "course": "GST_112",
-        "topic": "Week 3, taught by Abimbola Oyarinu. It runs in three strands, from first European contact to formal British occupation.\n\nThe first is the Portuguese incursion into the Niger Area. Sailors seeking new markets began exploring the West African coast in the early 15th century, improving seafaring techniques and ship design with the caravel. Portugal then dominated world trade for nearly 200 years on fabrics, spices and gold.\n\nThe incursion opened the area to the rest of the world and eventually led to colonialism and exploitation. It caused a series of wars to keep up the supply of slaves. It contributed to the abandonment of African cultures. It played a major role in the trans-Atlantic slave trade. And along the Nigerian coast it fed the growth of brass casting in Benin and the emergence of trading in the Lagos Lagoon.\n\nThe second strand is the slave trade itself. The triangular route the Portuguese developed: Africa the source, the Americas the destination, Europeans the organisers. Phillip Curtin on the largest intercontinental migration in western history, spanning 300 years. The Pope's division of the Old World, and the Spanish Asiento. The 1527 Puerto Rico uprising. The Dutch joining in the 17th century, and the British becoming biggest in the 18th.\n\nThen the Middle Passage: 5 to 8 weeks, with each slave allotted 6ft by 1ft by 4 inches on ships of 451 to 600. Smallpox, dysentery and ophthalmia. Over 15 million reaching the Americas, and Paul Lovejoy's over 7 million dying in transit. Then the verdicts of Wole Soyinka, Walter Rodney, Washington Alcott and Claude Ake.\n\nAbolition follows. British seizure of slave ships from 1792, with repatriation to Sierra Leone. Thomas Fowell Buxton's 1833 bill, arguing the trade had to be stopped from Africa itself.\n\nThe third strand opens with the Bight of Benin as the last slaving centre by 1840, and Lagos as the leading slave port. Beecroft's 1849 appointment is the start of direct British influence. Then the 1851 treaty with Kosoko, his refusal, and the bombardment. Akitoye's restoration on 29 December 1851, with Kosoko fleeing to Epe. Then the 1852 trade treaty, and the annexation of Lagos in 1861.\n\nIt then follows company rule. Macgregor Laird's 1857 expedition and the ports of Ado, Onitsha and Gbebe. His Central African Company of 1858, and his death in 1861. The River Niger Navigation and Trading Company of 1862. Then the amalgamation into the United African Company under Sir George Goldie-Taubman, renamed the National African Company after buying two rival French firms.\n\nIt closes with Consul Hewett's 1884 treaty-making tour and the Berlin Conference. The charter sequence of 1881, 1882 and 1886 that created the Royal Niger Company, and its control of the Niger basin by 1887. The critics Harry Johnston, Ajayi Crowther and Hoenigsberg, against the protection of Colonial Secretary Salisbury. The Oil River Protectorate of 1884 with its seven districts, renamed the Niger Coast Protectorate in 1893.\n\nThen the decline: Sir Ralph Moor's 1891 appointment, price wars, smuggling, Joseph Chamberlain's appointment, the Brass raid on Akassa, the Kirk Commission, and the revocation of the charter."
+        "topic": "Week 3, taught by Abimbola Oyarinu. It runs in three strands, from first European contact to formal British occupation.\n\nThe first is the Portuguese incursion into the Niger Area. Sailors seeking new markets began exploring the West African coast in the early 15th century, improving seafaring techniques and ship design with the caravel. Portugal then dominated world trade for nearly 200 years on fabrics, spices and gold.\n\nThe incursion opened the area to the rest of the world and eventually led to colonialism and exploitation. It caused a series of wars to keep up the supply of slaves. It contributed to the abandonment of African cultures. It played a major role in the trans-Atlantic slave trade. And along the Nigerian coast it fed the growth of brass casting in Benin and the emergence of trading in the Lagos Lagoon.\n\nThe second strand is the slave trade itself. The triangular route the Portuguese developed: Africa the source, the Americas the destination, Europeans the organisers. Phillip Curtin on the largest intercontinental migration in western history, spanning 300 years. The Pope's division of the Old World, and the Spanish Asiento. The 1527 Puerto Rico uprising. The Dutch joining in the 17th century, and the British becoming biggest in the 18th.\n\nThen the Middle Passage: 5 to 8 weeks, with each slave allotted 6ft by 1ft by 4 inches on ships of 451 to 600. Smallpox, dysentery and ophthalmia. Over 15 million reaching the Americas, and Paul Lovejoy's over 7 million dying in transit. Then the verdicts of Wole Soyinka, Walter Rodney, Washington Alcott and Claude Ake.\n\nAbolition follows. British seizure of slave ships from 1792, with repatriation to Sierra Leone. Thomas Fowell Buxton's 1833 bill, arguing the trade had to be stopped from Africa itself.\n\nThe third strand opens with the Bight of Benin as the last slaving centre by 1840, and Lagos as the leading slave port. Beecroft's 1849 appointment is the start of direct British influence. Then the 1851 treaty with Kosoko, his refusal, and the bombardment. Akitoye's restoration on 29 December 1851, with Kosoko fleeing to Epe. Then the 1852 trade treaty, and the annexation of Lagos in 1861.\n\nIt then follows company rule. Macgregor Laird's 1857 expedition and the ports of Ado, Onitsha and Gbebe. His Central African Company of 1858, and his death in 1861. The River Niger Navigation and Trading Company of 1862. Then the amalgamation into the United African Company under Sir George Goldie-Taubman, renamed the National African Company after buying two rival French firms.\n\nIt closes with Consul Hewett's 1884 treaty-making tour and the Berlin Conference. The charter sequence of 1881, 1882 and 1886 that created the Royal Niger Company, and its control of the Niger basin by 1887. The critics Harry Johnston, Ajayi Crowther and Hoenigsberg, against the protection of Colonial Secretary Salisbury. The Oil River Protectorate of 1884 with its seven districts, renamed the Niger Coast Protectorate in 1893.\n\nThen the decline: Sir Ralph Moor's 1891 appointment, price wars, smuggling, Joseph Chamberlain's appointment, the Brass raid on Akassa, the Kirk Commission, and the revocation of the charter.",
+        "checkFile": "checks/Mon-GST_112-fast.md"
       }
     },
     {
@@ -25,7 +26,8 @@
       },
       "fast": {
         "course": "CSC_106",
-        "topic": "Building a page: document structure, links, images, tables and working forms."
+        "topic": "Building a page: document structure, links, images, tables and working forms.",
+        "checkFile": "checks/Tue-CSC_106-fast.md"
       }
     },
     {
@@ -37,7 +39,8 @@
       },
       "fast": {
         "course": "GST_122",
-        "topic": "This week covers how sentences are analysed and how words are classed.\n\nA sentence is defined as a group of words expressing a complete thought. It requires a subject (noun or pronoun) and a predicate (verb). It is analysed in two ways: by function (its purpose), and by structure (how it is built from subjects, predicates, objects, nouns and verbs).\n\nThe four structural types. Simple is one independent clause. Compound is two or more independent clauses joined by a coordinating conjunction such as and, but, or, so, or by a semicolon. Complex is one independent clause plus at least one dependent or subordinate clause, usually introduced by although, because, while or since. Compound-complex is two or more independent clauses plus at least one dependent clause.\n\nThe lesson gives five tips for building compound-complex sentences: relative clauses, parenthesis, context clues, punctuation (semicolon, hyphen), and details and explanations. All are in service of writing a healthy paragraph.\n\nThe four functional types are declarative (statements), imperative (commands, instructions, requests), interrogative (questions) and exclamatory (strong emotion). Conditional 'if' sentences are given as an additional fifth category, expressing a condition and its likely result.\n\nThe second half divides words into function words and content words.\n\nFunction words - also called grammatical, structure, empty or form words - carry little meaning alone. They comprise conjunctions, auxiliary or helping verbs, prepositions, articles and pronouns, plus modals, qualifiers and question words.\n\nContent words, or lexical words, carry the main meaning. They comprise nouns, verbs, adjectives and adverbs.\n\nThe key discriminator to remember is stress: content words are emphasised in speech, while function words remain non-stressed. Pennebaker's figure is that function words are under one-tenth of one percent of vocabulary, but almost 60 percent of words actually used.\n\nThe third strand of the week is concord, the set of rules governing agreement between different elements in a sentence.\n\nSubject-verb agreement is the fundamental rule, requiring the number of the subject to match the number of the verb.\n\nThe Rule of Proximity Agreement is the harder case. It requires the verb or noun to align with the closest subject when a sentence has several subject elements.\n\nThe presence of 'or' (or 'nor') in the subject decides whether the verb is singular or plural. That contrasts with 'and', which normally makes the subject plural. So students must read sentence structure carefully before choosing the verb."
+        "topic": "This week covers how sentences are analysed and how words are classed.\n\nA sentence is defined as a group of words expressing a complete thought. It requires a subject (noun or pronoun) and a predicate (verb). It is analysed in two ways: by function (its purpose), and by structure (how it is built from subjects, predicates, objects, nouns and verbs).\n\nThe four structural types. Simple is one independent clause. Compound is two or more independent clauses joined by a coordinating conjunction such as and, but, or, so, or by a semicolon. Complex is one independent clause plus at least one dependent or subordinate clause, usually introduced by although, because, while or since. Compound-complex is two or more independent clauses plus at least one dependent clause.\n\nThe lesson gives five tips for building compound-complex sentences: relative clauses, parenthesis, context clues, punctuation (semicolon, hyphen), and details and explanations. All are in service of writing a healthy paragraph.\n\nThe four functional types are declarative (statements), imperative (commands, instructions, requests), interrogative (questions) and exclamatory (strong emotion). Conditional 'if' sentences are given as an additional fifth category, expressing a condition and its likely result.\n\nThe second half divides words into function words and content words.\n\nFunction words - also called grammatical, structure, empty or form words - carry little meaning alone. They comprise conjunctions, auxiliary or helping verbs, prepositions, articles and pronouns, plus modals, qualifiers and question words.\n\nContent words, or lexical words, carry the main meaning. They comprise nouns, verbs, adjectives and adverbs.\n\nThe key discriminator to remember is stress: content words are emphasised in speech, while function words remain non-stressed. Pennebaker's figure is that function words are under one-tenth of one percent of vocabulary, but almost 60 percent of words actually used.\n\nThe third strand of the week is concord, the set of rules governing agreement between different elements in a sentence.\n\nSubject-verb agreement is the fundamental rule, requiring the number of the subject to match the number of the verb.\n\nThe Rule of Proximity Agreement is the harder case. It requires the verb or noun to align with the closest subject when a sentence has several subject elements.\n\nThe presence of 'or' (or 'nor') in the subject decides whether the verb is singular or plural. That contrasts with 'and', which normally makes the subject plural. So students must read sentence structure carefully before choosing the verb.",
+        "checkFile": "checks/Wed-GST_122-fast.md"
       }
     },
     {
@@ -49,7 +52,8 @@
       },
       "fast": {
         "course": "PHY_108",
-        "topic": "This week's practical studies the non-linear relationship between current and voltage in a non-ohmic resistor.\n\nThe kit is a voltmeter, an ammeter, a DC power supply, and a resistor made of either tungsten or iron, selected from a drop-down list.\n\nAfter inspecting the circuit and choosing the material, the applied voltage is set from 0.1 V upwards. The Record button saves the voltmeter reading V and the current I at each step, covering the whole range up to 50 V. An Excel sheet of the data then downloads automatically.\n\nPlotting I against V gives a curve rather than a straight line, showing that V/I is not constant and the resistor does not obey Ohm's law.\n\nThe recorded values are then used to compute I squared and the power P = IV. Plotting P against I squared gives a straight line whose gradient is the resistance, verifying Joule's law P = I squared R.\n\nThe conclusion is that current flowing through the conductor generates heat, and the resulting temperature rise changes the resistance. This is why the current-voltage response of a tungsten filament becomes non-linear at higher currents."
+        "topic": "This week's practical studies the non-linear relationship between current and voltage in a non-ohmic resistor.\n\nThe kit is a voltmeter, an ammeter, a DC power supply, and a resistor made of either tungsten or iron, selected from a drop-down list.\n\nAfter inspecting the circuit and choosing the material, the applied voltage is set from 0.1 V upwards. The Record button saves the voltmeter reading V and the current I at each step, covering the whole range up to 50 V. An Excel sheet of the data then downloads automatically.\n\nPlotting I against V gives a curve rather than a straight line, showing that V/I is not constant and the resistor does not obey Ohm's law.\n\nThe recorded values are then used to compute I squared and the power P = IV. Plotting P against I squared gives a straight line whose gradient is the resistance, verifying Joule's law P = I squared R.\n\nThe conclusion is that current flowing through the conductor generates heat, and the resulting temperature rise changes the resistance. This is why the current-voltage response of a tungsten filament becomes non-linear at higher currents.",
+        "checkFile": "checks/Thu-PHY_108-fast.md"
       }
     },
     {
@@ -62,7 +66,7 @@
       "fast": {
         "course": "COS_102",
         "topic": "The same Week 3 computational approaches, treated as practice.\n\nThis session applies them to the concrete problems the lessons name. Counting the search space of the four-digit padlock under brute force. Tracing Merge sort on a small set as a divide and conquer algorithm. Running the greedy activity-selection example with start times 2, 4, 1, 6, 9, 6 and end times 3, 5, 7, 8, 10, 10. And converting a naive recursive Fibonacci into a dynamic programming solution.\n\nIt also asks which named approach fits a described situation, how to lay out a pipelined calculation, and how to diagnose a solution that is wrong or wastefully slow. That includes the food-delivery routing case study.\n\nDefinitions are assumed known from Wednesday; here they must be executed.",
-        "checkFile": "checks/Sat-COS_102.md"
+        "checkFile": "checks/Fri-COS_102-fast.md"
       }
     },
     {
@@ -214,131 +218,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Slide 4 says direct substitution 'applies when substituting the value of c directly into the function results in a well-defined expression'. Which of these results means substitution has NOT worked?",
+          "q": "Evaluate lim(x→−2) (x² + 3x − 1).",
           "options": [
-            "0/0",
-            "5/(−2)",
-            "−2.5",
-            "0/7"
+            "−3",
+            "−11",
+            "9",
+            "1"
           ],
           "answerIndex": 0,
-          "concept": "What 'well-defined expression' rules out",
-          "why": "0/0 is the one outcome that is not well defined — it is an indeterminate form and the whole of the factorization and rationalization work exists to deal with it. Option 2 is her own slide 5 answer: a negative denominator is fine, and 5/(−2) is a finished result. Option 3 is that same answer written as a decimal. Option 4 is zero divided by seven, which is simply 0 — a perfectly good number. The test is not 'is it ugly', it is 'is it defined'."
+          "concept": "Limit by direct substitution",
+          "why": "The expression is a polynomial, so substitute x = −2: (−2)² + 3(−2) − 1 = 4 − 6 − 1 = −3.\n\n−11 treats (−2)² as −4; 9 loses the sign of x in the 3x term (4 + 6 − 1); 1 adds the constant instead of subtracting it (4 − 6 + 1)."
         },
         {
           "type": "mcq",
-          "q": "On slide 6 direct substitution gives (2² − 4)/(2 − 2) = 0/0. What has that told you about lim x→2 (x² − 4)/(x − 2)?",
+          "q": "Which of these limits can be evaluated by direct substitution alone?",
           "options": [
-            "That the limit is 0",
-            "That the limit does not exist, since the function is undefined at x = 2",
-            "Nothing yet — the form is indeterminate, so more algebra is needed",
-            "That the limit equals 1"
+            "lim(x→2) (x² − 4)/(x − 2)",
+            "lim(x→1) (x³ + 2)/(x² − 4)",
+            "lim(x→0) (√(x + 9) − 3)/x",
+            "lim(x→0) (sin x)/x"
+          ],
+          "answerIndex": 1,
+          "concept": "Recognising when substitution applies",
+          "why": "Substitution works when it gives a well-defined expression. At x = 1, (x³ + 2)/(x² − 4) = 3/(−3) = −1: a negative denominator is a perfectly good non-zero number, so the limit is −1 by substitution.\n\nThe other three all give 0/0 at the point: (4 − 4)/(2 − 2), (3 − 3)/0 and (sin 0)/0. Each needs more work (factoring, the conjugate, L'Hôpital)."
+        },
+        {
+          "type": "mcq",
+          "q": "Evaluate lim(x→3) (x² − 9)/(x − 3).",
+          "options": [
+            "0",
+            "DNE",
+            "6",
+            "3"
           ],
           "answerIndex": 2,
-          "concept": "What an indeterminate form actually reports",
-          "why": "'Indeterminate' means the form alone decides nothing; she immediately factors and finds the limit is 4. Option 1 treats 0/0 as ordinary arithmetic. Option 2 is the single most common error in the topic: the function being undefined at the point is irrelevant, because a limit never inspects the point itself. Option 4 comes from assuming anything over itself is 1, which is exactly the assumption 'indeterminate' forbids."
+          "concept": "Limit by factoring and cancelling",
+          "why": "Substitution gives 0/0, so factor: x² − 9 = (x − 3)(x + 3). Cancel the common factor (legal because x never equals 3 inside the limit) to get lim(x→3) (x + 3) = 6.\n\n0 treats 0/0 as zero; DNE treats 0/0 as non-existence, but the form decides nothing; 3 substitutes into x alone after cancelling, forgetting the + 3."
         },
         {
           "type": "mcq",
-          "q": "On slide 6 she writes lim x→2 [(x − 2)(x + 2)]/(x − 2) and then cancels the (x − 2). Which statement describes what that cancellation is entitled to claim?",
+          "q": "lim(x→c) f(x) = 4 and lim(x→c) g(x) = −2. Find lim(x→c) [3f(x) − g(x)].",
           "options": [
-            "x + 2 agrees with the original function at every x except x = 2, and the limit never looks at x = 2",
-            "The original function is defined at x = 2 after all",
-            "Cancelling changes the value of the limit, which is why the answer is 4 and not 0/0",
-            "Dividing by zero is allowed inside a limit"
+            "10",
+            "6",
+            "−24",
+            "14"
+          ],
+          "answerIndex": 3,
+          "concept": "Sum, difference and constant multiple rules",
+          "why": "Split with the rules: lim [3f − g] = 3·lim f − lim g = 3(4) − (−2) = 12 + 2 = 14.\n\n10 subtracts 2 instead of subtracting −2; 6 forgets the constant multiple 3 (4 + 2); −24 multiplies 3, 4 and −2 as if the rule were a product."
+        },
+        {
+          "type": "mcq",
+          "q": "Evaluate lim(x→1) (2x + 1)³.",
+          "options": [
+            "27",
+            "9",
+            "3",
+            "8"
           ],
           "answerIndex": 0,
+          "concept": "Limit of a power",
+          "why": "Take the limit first, then the power: [lim(x→1) (2x + 1)]³ = (2 + 1)³ = 3³ = 27.\n\n9 multiplies 3 by the exponent instead of cubing; 3 takes the limit and forgets the cube; 8 cubes the 2x and drops the + 1."
+        },
+        {
+          "type": "mcq",
+          "q": "Evaluate lim(x→3) (2x²)/(5x).",
+          "options": [
+            "18/5",
+            "6/5",
+            "2/5",
+            "90"
+          ],
+          "answerIndex": 1,
+          "concept": "Limit of a quotient",
+          "why": "The limit of the denominator is 15 ≠ 0, so the quotient rule applies: [lim 2x²]/[lim 5x] = 2(9)/(5·3) = 18/15 = 6/5.\n\n18/5 forgets the x in the denominator; 2/5 cancels x² against x completely instead of leaving one x; 90 multiplies 18 by 5 instead of dividing."
+        },
+        {
+          "type": "mcq",
+          "q": "If 4 − x² ≤ f(x) ≤ 4 + x² for all x, find lim(x→0) f(x).",
+          "options": [
+            "0",
+            "8",
+            "4",
+            "Cannot be found without knowing f"
+          ],
+          "answerIndex": 2,
+          "concept": "Squeeze Theorem",
+          "why": "Both bounds have the same limit at 0: lim (4 − x²) = 4 and lim (4 + x²) = 4. f is trapped between them, so by the Squeeze Theorem lim(x→0) f(x) = 4.\n\n0 takes the limit of x² alone; 8 adds the two bounds; 'cannot be found' misses the point of the theorem, which gives the limit without a formula for f."
+        },
+        {
+          "type": "mcq",
+          "q": "Direct substitution in lim(x→5) (x² − 25)/(x − 5) gives 0/0. Which conclusion is correct?",
+          "options": [
+            "The limit is 0",
+            "The limit is 1",
+            "The limit does not exist",
+            "The limit may still exist; more algebra is needed"
+          ],
+          "answerIndex": 3,
+          "concept": "Meaning of the indeterminate form 0/0",
+          "why": "0/0 is indeterminate: the form itself decides nothing, so you must do more algebra. Here factoring gives lim (x + 5) = 10, a perfectly good limit.\n\n'The limit is 0' treats 0/0 as ordinary division into zero; 'the limit is 1' treats any number over itself as 1; 'does not exist' confuses the function being undefined at 5 with the limit failing."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate lim(x→0) (eˣ − 1)/x using L'Hôpital's Rule. Name f(x), g(x), f′(x) and g′(x) in your working.",
+          "concept": "L'Hôpital's Rule, first application",
+          "why": "Substitution gives (1 − 1)/0 = 0/0, an indeterminate form, so L'Hôpital applies. Set f(x) = eˣ − 1 and g(x) = x; then f′(x) = eˣ and g′(x) = 1. Replace the quotient by f′/g′: lim(x→0) eˣ/1 = e⁰ = 1.\n\nFinal answer: 1. A correct answer checks the 0/0 form, differentiates top and bottom separately (not the quotient rule), and evaluates eˣ at 0. Any working containing g² is the quotient rule and is wrong."
+        },
+        {
+          "type": "short",
+          "q": "Show that lim(x→5) 1/x² equals 1/[lim(x→5) x²] by evaluating each side separately. Show your working.",
+          "concept": "Verifying the reciprocal property",
+          "why": "Left-hand side: lim(x→5) 1/x² = 1/5² = 1/25 by substitution. Right-hand side: lim(x→5) x² = 25, so 1/[lim x²] = 1/25. Both sides are 1/25, so L.H.S = R.H.S.\n\nFinal answer: both sides equal 1/25 (0.04). A correct answer computes the two sides independently and notes that the reciprocal property is valid here because lim x² = 25 ≠ 0."
+        },
+        {
+          "type": "short",
+          "q": "Evaluate lim(x→0) (√(x + 1) − 1)/x. Show your working.",
+          "concept": "Limit by multiplying by the conjugate",
+          "why": "Substitution gives (1 − 1)/0 = 0/0. Multiply numerator and denominator by the conjugate of the numerator, √(x + 1) + 1: the numerator becomes (x + 1) − 1 = x, giving x/[x(√(x + 1) + 1)]. Cancel x: lim(x→0) 1/(√(x + 1) + 1) = 1/(1 + 1) = 1/2.\n\nFinal answer: 1/2 (0.5). A correct answer names the conjugate √(x + 1) + 1, shows the numerator collapsing to x, and cancels before substituting. 1 (forgetting the + 1 in the denominator) and 0 (reading 0/0 as 0) are wrong."
+        },
+        {
+          "type": "short",
+          "q": "In lim(x→2) (x² − 4)/(x − 2), the factor (x − 2) is cancelled even though x − 2 = 0 at x = 2. Explain why the cancellation is legitimate, and why the limit is 4 although the function is undefined at x = 2.",
           "concept": "Why cancelling a common factor inside a limit is legitimate",
-          "why": "Throughout the limit process x is close to 2 but never equal to 2, so x − 2 is never actually zero and the division is honest; the simplified function differs from the original at one point only, and that point is the one point a limit ignores. Option 2 is false — the original is still undefined at 2. Option 3 gets the outcome backwards: cancelling does not change the limit, it reveals it. Option 4 states something that is never allowed anywhere; the point is precisely that you are not dividing by zero."
-        },
-        {
-          "type": "mcq",
-          "q": "On slides 9 and 10 she multiplies by the conjugate. Which conjugate, and why that one?",
-          "options": [
-            "The conjugate of the denominator, because the denominator is what vanishes",
-            "The conjugate of the numerator, because the numerator is where the square root sits",
-            "The conjugate of whichever part is larger at the limit point",
-            "Both conjugates at once, to keep the fraction balanced"
-          ],
-          "answerIndex": 1,
-          "concept": "Choosing the conjugate: it follows the root, not the zero",
-          "why": "She says 'rationalize the numerator by multiplying both the numerator and denominator by the conjugate of the numerator'. The point of the move is that (√A − k)(√A + k) = A − k², which destroys the root — so it is aimed at whichever side carries the root, and in both her examples that is the top. Option 1 mistakes the goal for cancelling the zero rather than removing the radical. Option 3 invents a criterion the deck never uses. Option 4 would multiply by a factor that is not equal to 1, changing the function."
-        },
-        {
-          "type": "mcq",
-          "q": "You meet lim x→2 (1/x − 1/2)/(x − 2) — a small fraction inside a big one, with no square roots anywhere. Which of her methods handles it, and how?",
-          "options": [
-            "Rationalization: multiply by the conjugate of the numerator",
-            "Direct substitution: the expression is well defined at x = 2",
-            "L'Hôpital's Rule: it is the only method that reaches complex fractions",
-            "Factorization: multiply numerator and denominator by the common denominator 2x, then factor out −1"
-          ],
-          "answerIndex": 3,
-          "concept": "Matching a complex fraction to the right technique",
-          "why": "Slide 7 files this under FACTORIZATION and clears the small fractions by multiplying top and bottom by their common denominator 2x, then factors −1 out of 2 − x so the (x − 2) will cancel. Option 1 names a method that needs a radical to work on; there is none. Option 2 is false — substitution gives 0/0. Option 3 would in fact produce the right number, but the deck reserves L'Hôpital for slides 12 and 13 and this is not how she teaches this shape; more importantly, the claim that it is the only method reaching complex fractions is wrong."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 12 sets out f(x) = sin x, g(x) = x, then f′(x) = cos x, g′(x) = 1. What is the new expression she forms, and what is the trap in this layout?",
-          "options": [
-            "(f′g − fg′)/g², and the trap is forgetting to square the denominator",
-            "f′(x)/g′(x), and the trap is sliding into the quotient rule instead of differentiating the two separately",
-            "f′(x)·g′(x), and the trap is dividing when you should multiply",
-            "[f(x)/g(x)]′, and the trap is differentiating before substituting"
-          ],
-          "answerIndex": 1,
-          "concept": "L'Hôpital gives f′/g′, not the quotient rule",
-          "why": "The rule 'replaces the original function with its derivatives' — numerator and denominator differentiated independently, giving lim (cos x)/1 = 1. Option 1 is the quotient rule; if a g² turns up in your working you have used the wrong rule, and that is the trap, not a step you were supposed to take. Option 3 multiplies where the rule divides. Option 4 differentiates the quotient as a single object, which is the quotient rule again wearing a different hat. Writing f, g, f′, g′ on separate lines the way she does makes the mistake visually obvious."
-        },
-        {
-          "type": "mcq",
-          "q": "Slide 13 applies L'Hôpital twice to x²/eˣ. What decides that a second application is needed, and what would decide that a third is not?",
-          "options": [
-            "The degree of the numerator decides it: x² needs exactly two applications",
-            "Nothing decides it — the rule is always applied until the numerator becomes a constant",
-            "Substituting again: 2x/eˣ is still ∞/∞ so you repeat, while 2/eˣ is a constant over something unbounded, so you stop",
-            "The presence of eˣ decides it, because exponentials always require two differentiations"
-          ],
-          "answerIndex": 2,
-          "concept": "Re-checking the indeterminate form before each application",
-          "why": "Her own wording is 'since direct substitution results to an indeterminate form, so we differentiate again' — the test is re-substitution, every time, and you stop the moment the form is no longer 0/0 or ∞/∞. Option 1 happens to give the right count here by coincidence and would mislead you on any other problem. Option 2 states a rule the deck never gives and that would keep going past the answer. Option 4 invents a property of exponentials; eˣ differentiates to itself, so it never changes the form at all."
-        },
-        {
-          "type": "mcq",
-          "q": "Two of the ten properties on slide 14 carry an explicit non-zero condition. Which two, and on which function?",
-          "options": [
-            "Sum and Difference, on both f and g",
-            "Product and Power, on f",
-            "Quotient and Constant Multiple, on the constant k",
-            "Quotient, needing lim x→c g(x) ≠ 0, and Reciprocal, needing lim x→c f(x) ≠ 0"
-          ],
-          "answerIndex": 3,
-          "concept": "Which properties carry a non-zero proviso, and on which function",
-          "why": "Slide 20 states 'provided lim x→c g(x) ≠ 0' for the quotient, and slide 24 states 'provided lim x→c f(x) ≠ 0' for the reciprocal — in both cases the condition sits on whatever ends up downstairs. Option 1 names two properties that need no proviso at all. Option 2 does the same. Option 3 gets one property half-right but puts the condition on k; a constant multiple of zero is perfectly harmless. Knowing which function the condition attaches to is the examinable half."
-        },
-        {
-          "type": "short",
-          "q": "State the Squeeze Theorem exactly as slide 23 states it, using her letters, and explain what goes wrong if the two bounding limits are not equal.",
-          "concept": "The Squeeze Theorem in her lettering, and why its hypotheses cannot be relaxed",
-          "why": "A good answer reproduces her wording: if f(x) ≤ g(x) ≤ h(x) for all x in some interval containing c except possibly at c itself, and lim x→c f(x) = lim x→c h(x) = L, then lim x→c g(x) = L. It must use her letters — the squeezed function is g, the bounds are f below and h above, which is the reverse of the usual textbook lettering. On the hypotheses: if lim f and lim h are different numbers, all you have shown is that g is eventually trapped in an interval, and a function can wander inside an interval forever without settling on anything — so no conclusion follows. The theorem earns its answer only when the two bounds collapse onto the same value, which is exactly what happens in her example when both 5 − x³ and 5 + x³ go to 5."
-        },
-        {
-          "type": "short",
-          "q": "Slide 23's example prints its two working lines with 5 − x³ on BOTH sides of the inequality. Say what the lines should read, why the final answer of 5 is nevertheless correct, and why this particular typo is easy to miss.",
-          "concept": "Reading a misprinted slide without inheriting its mistake",
-          "why": "A good answer says the upper bound must be the one she stated a line earlier, 5 + x³: the lines should read lim x→0 (5 − x³) ≤ f(x) ≤ lim x→0 (5 + x³), then (5 − 0³) ≤ f(x) ≤ (5 + 0³), then 5 ≤ f(x) ≤ 5, therefore lim x→0 f(x) = 5. The answer survives because x³ → 0 as x → 0, so both the correct upper bound and the misprinted one evaluate to 5 at the limit point — the two branches only differ away from 0, which is precisely where the theorem stops looking. That is what makes it invisible: nothing downstream disagrees. It should still be corrected in any answer script, since as printed the inequality claims f is squeezed between one function and itself. Worth noting too that the example calls the squeezed function f while the theorem two lines above calls it g."
-        },
-        {
-          "type": "short",
-          "q": "List the ten properties of a limit named on slide 14, in her order. Then say which one the deck names but never actually works through.",
-          "concept": "The slide 14 inventory, and the gap in it",
-          "why": "A good answer gives all ten in order: Limit of a Sum, Limit of a Difference, Limit of a Constant, Constant Multiple Rule, Limit of a Product, Limit of a Quotient, Limit of a Power, Limit of a Composite Function, Squeeze Theorem, Limit of a Reciprocal. The gap is the Limit of a Composite Function: it is named on slide 14 and given a slide of its own, but that slide carries no recoverable statement or worked example — only the labels f(x), g(x) and lim g(f(x)). Everything else on the list gets a formula, a sentence of explanation and one small example. Being able to name all ten is a realistic exam ask on its own, and the composite one is the one to check against the live session or the slide itself rather than assume."
-        },
-        {
-          "type": "short",
-          "q": "Given a limit you have never seen before, describe the decision procedure the deck teaches for choosing a method, in the order she teaches them.",
-          "concept": "Choosing among her four methods from the shape of the problem",
-          "why": "A good answer runs the four methods in her order and ties each to a visible feature. First always substitute (slide 4): if the result is a well-defined expression, however negative or fractional, that is the answer and you stop — slide 5 exists to make that point. If substitution gives 0/0, look at what the expression is made of. Polynomials: factor, cancel the common factor, substitute again (slide 6). A small fraction inside the big one: multiply numerator and denominator by the common denominator, then factor out −1 if the cancelling bracket comes out reversed (slide 7). A square root: multiply by the conjugate of the numerator (slides 9, 10). And for 0/0 or ∞/∞ that these do not clear — including anything with sin x or eˣ in it — replace f/g by f′/g′ and re-check the form after each application (slides 12, 13). A strong answer adds that the slide 11 TASK needs two of these at once, and that agreement between two methods is a free check on the answer."
+          "why": "Inside a limit, x approaches 2 but never equals 2, so x − 2 is close to zero but never actually zero, and dividing by it is allowed. After cancelling, (x² − 4)/(x − 2) = x + 2 at every x except 2, and the limit only looks at values near 2, not at 2 itself, so lim(x→2) (x + 2) = 4.\n\nA correct answer says x ≠ 2 throughout the limit, that the simplified function agrees with the original everywhere except at the single point x = 2, and that a limit never inspects the point itself, so f(2) being undefined does not stop the limit being 4."
         }
       ]
     },
@@ -351,131 +355,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "A torch cell reads 1.50 V on a voltmeter with nothing else connected, and 1.20 V when it is lighting a bulb. What has become of the missing 0.30 V?",
+          "q": "A cell of emf 9.0 V and internal resistance 0.50 Ω delivers a current of 2.0 A to a circuit. What is the terminal potential difference?",
           "options": [
-            "The cell's emf has genuinely dropped to 1.20 V because chemical energy is being consumed",
-            "The voltmeter loads the circuit and under-reads by 0.30 V once current flows",
-            "It is the potential drop Ir across the cell's own internal resistance, dissipated inside the cell",
-            "It is stored in the magnetic field of the current-carrying wires and returns when the switch opens"
+            "10 V",
+            "9.0 V",
+            "8.0 V",
+            "1.0 V"
           ],
           "answerIndex": 2,
-          "concept": "Terminal p.d. versus emf: V = epsilon - Ir, and the physical meaning of the lost volts.",
-          "why": "The emf is fixed by the cell's chemistry; once current I flows, a p.d. Ir appears across the internal resistance r and is dissipated as heat inside the cell, so only epsilon - Ir is available at the terminals."
+          "concept": "Terminal p.d. from V = ε − Ir",
+          "why": "The lost volts inside the cell are Ir = 2.0 × 0.50 = 1.0 V, so V = ε − Ir = 9.0 − 1.0 = 8.0 V.\n\n10 V adds the lost volts instead of subtracting them; 9.0 V ignores the internal resistance, which is only right when no current flows; 1.0 V is the lost volts themselves, not the terminal p.d."
         },
         {
           "type": "mcq",
-          "q": "Why is it wrong to treat electromotive force as a kind of force acting on charges?",
+          "q": "A metal rod 0.40 m long moves at 5.0 m/s at right angles to a uniform magnetic field of 0.25 T, the field being perpendicular to the rod. What emf is induced across the rod?",
           "options": [
-            "Because emf is energy supplied per unit charge, measured in joules per coulomb, not in newtons",
-            "Because emf acts only on the ions inside the cell, whereas force acts on the electrons in the wire",
-            "Because emf is a rate of energy transfer, so it is a power and is measured in watts",
-            "Because emf is defined only for alternating sources, while force is defined for steady ones"
-          ],
-          "answerIndex": 0,
-          "concept": "Definition and unit of emf: work done per unit charge, unit volt = J/C, dimension M L^2 T^-3 I^-1.",
-          "why": "Emf is defined as W/Q, so its unit is the volt (one joule per coulomb) and its dimension is M L^2 T^-3 I^-1 — a quantity of energy per charge, which is not a force at all."
-        },
-        {
-          "type": "mcq",
-          "q": "In Faraday's law written as emf = -N dPhi/dt, what does the minus sign assert?",
-          "options": [
-            "That the induced emf is always smaller than the applied emf that produced the flux",
-            "That the induced emf is negative energy, so the coil absorbs rather than supplies power",
-            "That flux must be decreasing for an emf to be induced at all",
-            "That the induced emf drives a current whose own flux opposes the change that created it"
-          ],
-          "answerIndex": 3,
-          "concept": "The sign in Faraday's law is Lenz's law: it fixes direction, not magnitude.",
-          "why": "The minus sign encodes Lenz's law — the induced current is directed so that its magnetic effect opposes the change in flux, which is what makes induction consistent with energy conservation; it says nothing about the size of the emf."
-        },
-        {
-          "type": "mcq",
-          "q": "A conducting rod slides on frictionless rails through a field B perpendicular to the plane. Which statement describes what actually separates charge in the rod?",
-          "options": [
-            "The changing flux creates a static charge imbalance directly, without any force acting on carriers",
-            "Each free charge q moves with the rod at speed v, so it feels a magnetic force qvB along the rod that pushes carriers towards one end",
-            "Friction between the rod and the rails strips electrons and deposits them at one end",
-            "The magnetic field magnetises the metal, and the resulting poles attract electrons to one end"
+            "0.10 V",
+            "0.50 V",
+            "1.25 V",
+            "2.0 V"
           ],
           "answerIndex": 1,
-          "concept": "Microscopic origin of motional emf: the Lorentz force qvB on carriers carried along by the moving conductor.",
-          "why": "Because the carriers travel with the rod at v, each experiences F = qvB directed along the rod; the work per unit charge in moving a carrier the length l is Bvl, which is exactly the motional emf."
+          "concept": "Motional emf ε = Bvl",
+          "why": "ε = Bvl = 0.25 × 5.0 × 0.40 = 0.50 V.\n\n0.10 V is Bl and forgets the speed; 1.25 V is Bv and forgets the length; 2.0 V is vl and forgets the field."
         },
         {
           "type": "mcq",
-          "q": "The expression one-half epsilon-nought E squared is said to be the energy stored per unit volume in an electric field. What is the physical claim being made?",
+          "q": "The magnetic flux through each turn of a 100-turn coil changes by 6.0 × 10⁻³ Wb in 0.020 s. What is the magnitude of the induced emf?",
           "options": [
-            "That the energy is located in the field itself, so a region of empty space carrying a field holds energy",
-            "That energy resides only on the surfaces of the plates, and the expression is a bookkeeping convenience",
-            "That the energy belongs to the dielectric molecules, so the expression is zero in a vacuum",
-            "That the energy is carried by the moving electrons in the connecting wires while the capacitor charges"
+            "30 V",
+            "3.0 V",
+            "0.30 V",
+            "0.12 V"
           ],
           "answerIndex": 0,
-          "concept": "Energy density of the electric field: energy resides in the field, and persists in vacuum.",
-          "why": "The deck's point is that even in space devoid of matter the energy persists: the field itself is the store, with density one-half epsilon-nought E squared, and multiplying by the volume Ad recovers the capacitor's total energy."
+          "concept": "Faraday's law with N turns",
+          "why": "|ε| = N ΔΦ/Δt = 100 × 6.0 × 10⁻³/0.020 = 100 × 0.30 = 30 V.\n\n0.30 V is the emf per turn, forgetting N; 3.0 V is a power-of-ten slip in 6.0 × 10⁻³/0.020; 0.12 V multiplies by the time instead of dividing by it."
         },
         {
           "type": "mcq",
-          "q": "Why does the energy stored in a capacitor come out as one-half QV rather than QV?",
+          "q": "A 4.0 μF capacitor is charged to 50 V. How much energy does it store?",
           "options": [
-            "Because half the charge always leaks back through the dielectric while the capacitor is charging",
-            "Because only half of the plate area carries charge at any instant",
-            "Because the field between the plates occupies only half the volume Ad",
-            "Because the p.d. rises from zero to V as charge is added, so each element of charge is moved through an average p.d. of V/2"
-          ],
-          "answerIndex": 3,
-          "concept": "Why the factor of one half appears in U = QV/2 = CV^2/2: the p.d. is not constant during charging.",
-          "why": "Charging is progressive: the first charge crosses at almost no p.d. and the last at V, so the mean p.d. is V/2 and the work is QV/2. QV would be the work only if the p.d. were held at V throughout."
-        },
-        {
-          "type": "mcq",
-          "q": "Faraday found that filling the gap between capacitor plates with an insulator multiplies the capacitance by a factor K. What does a larger K mean physically for the capacitor?",
-          "options": [
-            "The insulator conducts a little, so charge leaks across and the plates hold more of it",
-            "The dielectric partly cancels the field of the plate charge, so the same charge produces a smaller p.d. and Q/V is larger",
-            "The dielectric increases the plate separation d, which raises C because C is proportional to d",
-            "The dielectric raises the emf of the source that charges it, so more charge is driven onto the plates"
-          ],
-          "answerIndex": 1,
-          "concept": "Dielectric constant K: the polarised dielectric reduces the net field for a given charge, so C = K epsilon-nought A/d.",
-          "why": "The dielectric polarises and its bound surface charge opposes the field of the free charge; the net field, and therefore V = Ed, is reduced for the same Q, so C = Q/V rises by the factor K. A dielectric that conducted would destroy the capacitor, not improve it."
-        },
-        {
-          "type": "mcq",
-          "q": "Two identical capacitors are to store the largest possible energy from one supply of fixed potential difference V. Why does the parallel arrangement win?",
-          "options": [
-            "Because in parallel each capacitor receives only half the voltage, and halving V doubles the stored energy",
-            "Because in series the same charge passes through both, and shared charge always means shared energy",
-            "Because the equivalent capacitance in parallel is the sum, which is larger than any series combination, and at fixed V the energy CV^2/2 grows with C",
-            "Because in parallel the plate separation is effectively halved, which raises the field between the plates"
+            "1.0 × 10⁻² J",
+            "5.0 × 10³ J",
+            "5.0 × 10⁻³ J",
+            "1.0 × 10⁻⁴ J"
           ],
           "answerIndex": 2,
-          "concept": "Series versus parallel combination and the dependence of stored energy on C at fixed V.",
-          "why": "Parallel capacitances add, giving the largest obtainable C_eq, and both capacitors sit at the full supply voltage; since U = CV^2/2 at fixed V, the largest C stores the most energy. In series C_eq is smaller than the smallest member and each capacitor gets only part of V."
+          "concept": "Energy stored in a capacitor, U = ½CV²",
+          "why": "U = ½CV² = ½ × 4.0 × 10⁻⁶ × (50)² = ½ × 4.0 × 10⁻⁶ × 2500 = 5.0 × 10⁻³ J.\n\n1.0 × 10⁻² J leaves out the ½ (that is QV, the work at constant voltage); 5.0 × 10³ J drops the μ prefix; 1.0 × 10⁻⁴ J uses V instead of V²."
+        },
+        {
+          "type": "mcq",
+          "q": "In vacuum the electric field in a region is 2.0 × 10⁴ N/C. Take ε₀ = 8.85 × 10⁻¹² F/m. What is the energy stored per unit volume in that region?",
+          "options": [
+            "8.85 × 10⁻⁸ J/m³",
+            "1.77 × 10⁻³ J/m³",
+            "3.54 × 10⁻³ J/m³",
+            "1.77 × 10⁻³ J"
+          ],
+          "answerIndex": 1,
+          "concept": "Energy density of an electric field",
+          "why": "u = ½ε₀E² = ½ × 8.85 × 10⁻¹² × (2.0 × 10⁴)² = ½ × 8.85 × 10⁻¹² × 4.0 × 10⁸ = 1.77 × 10⁻³ J/m³.\n\n8.85 × 10⁻⁸ uses E instead of E²; 3.54 × 10⁻³ leaves out the ½; '1.77 × 10⁻³ J' has the right number with the wrong unit, since ½ε₀E² is energy per cubic metre and must be multiplied by a volume to give joules."
+        },
+        {
+          "type": "mcq",
+          "q": "A parallel-plate capacitor in vacuum has plates of area 0.050 m² separated by 1.0 mm. Take ε₀ = 8.85 × 10⁻¹² F/m. What is its capacitance?",
+          "options": [
+            "4.4 × 10⁻¹³ F",
+            "1.8 × 10⁻¹³ F",
+            "4.4 × 10⁻⁷ F",
+            "4.4 × 10⁻¹⁰ F"
+          ],
+          "answerIndex": 3,
+          "concept": "Parallel-plate capacitance C = ε₀A/d",
+          "why": "Convert d = 1.0 mm = 1.0 × 10⁻³ m. C = ε₀A/d = 8.85 × 10⁻¹² × 0.050/1.0 × 10⁻³ = 4.4 × 10⁻¹⁰ F (0.44 nF).\n\n4.4 × 10⁻¹³ F leaves d as 1.0 (millimetres not converted); 1.8 × 10⁻¹³ F swaps A and d; 4.4 × 10⁻⁷ F treats mm as 10⁻⁶ m."
+        },
+        {
+          "type": "mcq",
+          "q": "A capacitor measures 20 pF with vacuum between its plates and 70 pF when the gap is completely filled with an insulating oil. What is the dielectric constant of the oil?",
+          "options": [
+            "50",
+            "0.29",
+            "90",
+            "3.5"
+          ],
+          "answerIndex": 3,
+          "concept": "Dielectric constant from the change in capacitance",
+          "why": "A dielectric multiplies the capacitance by K, so K = C/C₀ = 70/20 = 3.5. K has no unit and is always above 1 for a real material.\n\n50 subtracts the capacitances instead of dividing; 0.29 divides the wrong way round (a K below 1 is impossible); 90 adds them."
+        },
+        {
+          "type": "mcq",
+          "q": "A dry cell is marked '1.5 V'. Which statement says what this emf means?",
+          "options": [
+            "The cell gives 1.5 J of energy to each coulomb it drives round the circuit",
+            "The cell pushes each coulomb with a force of 1.5 N",
+            "The terminals are always 1.5 V apart, whatever current flows",
+            "The cell delivers 1.5 W to the circuit"
+          ],
+          "answerIndex": 0,
+          "concept": "Meaning of emf as energy per unit charge",
+          "why": "Emf is work done per unit charge, ε = W/Q, so 1 V = 1 J/C: the cell converts 1.5 J of chemical energy for every coulomb it drives round. It is not a force despite its name.\n\n'1.5 N' confuses the volt with the newton; 'always 1.5 V apart' describes the terminal p.d., which falls below ε by Ir as soon as current flows; watts measure power, not energy per charge."
         },
         {
           "type": "short",
-          "q": "Explain why the graph of terminal p.d. V against current I for a real cell is a straight line with a negative gradient, and why the intercept on the V axis is the emf.",
-          "concept": "The V-I characteristic of a source: V = epsilon - rI as the equation of a straight line, and what each feature of the line corresponds to physically.",
-          "why": "A full answer states that the loop equation epsilon = V + Ir rearranges to V = epsilon - rI, which has the form y = c + mx with V as y and I as x. Because r is a constant property of the cell, the line is straight; because the internal drop Ir grows with current, the gradient is -r (negative, and r is its magnitude). Extrapolating to I = 0 removes the internal drop entirely, so the V-axis intercept is the open-circuit terminal p.d., which equals the emf. It should add that in practice the cell drains as readings are taken, so the cell is disconnected between readings to keep the line straight."
+          "q": "A 15 μF capacitor carries a charge of 3.0 × 10⁻⁴ C. Calculate the potential difference across it and the energy it stores. Show your working.",
+          "concept": "Potential difference and energy from the charge on a capacitor",
+          "why": "V = Q/C = 3.0 × 10⁻⁴/15 × 10⁻⁶ = 20 V. Then U = ½QV = ½ × 3.0 × 10⁻⁴ × 20 = 3.0 × 10⁻³ J. The same result comes from U = Q²/2C = (3.0 × 10⁻⁴)²/(2 × 15 × 10⁻⁶) = 9.0 × 10⁻⁸/3.0 × 10⁻⁵ = 3.0 × 10⁻³ J.\n\nFinal answer: V = 20 V, U = 3.0 × 10⁻³ J (accept 3.0 mJ; 2.9 to 3.1 × 10⁻³). Any of ½QV, ½CV² or Q²/2C is accepted. 6.0 × 10⁻³ J leaves out the ½; a p.d. of 4.5 × 10⁻⁹ V comes from multiplying Q by C instead of dividing."
         },
         {
           "type": "short",
-          "q": "Explain why a rod sliding along the direction of the magnetic field lines produces no motional emf, while the same rod sliding perpendicular to them does.",
-          "concept": "The geometry of motional emf: the cross-product nature of qv x B and the requirement that the enclosed flux actually change.",
-          "why": "A full answer works from the Lorentz force: the force on a carrier is q v x B, which vanishes when v is parallel to B, so no carrier is pushed along the rod and no charge separates, giving zero emf. When v is perpendicular to B, the force qvB acts along the rod and drives carriers to one end until an electrostatic field balances it, giving emf = Bvl. Equivalently, in flux language Phi = Blx changes only when the motion sweeps out area across the field lines; motion along B sweeps out no additional flux, so dPhi/dt = 0."
+          "q": "Emf is defined as work done per unit charge. Starting from the dimensions of force, displacement, current and time, derive the dimensional formula of emf. Show your working.",
+          "concept": "Dimensional formula of emf",
+          "why": "Work = force × displacement = (mass × acceleration) × displacement = [M][L T⁻²][L] = [M L² T⁻²]. Charge = current × time = [I T]. Emf = work/charge = [M L² T⁻²][I T]⁻¹ = [M L² T⁻³ I⁻¹].\n\nFinal answer: [M¹ L² T⁻³ I⁻¹]. A correct answer must show work as M L² T⁻² and charge as I T before dividing. [M L² T⁻² I⁻¹] forgets the T from the charge; [M L T⁻³ I⁻¹] uses force instead of work."
         },
         {
           "type": "short",
-          "q": "Explain why the energy of a charged capacitor can legitimately be said to reside in the empty space between the plates rather than on the plates themselves.",
-          "concept": "Field energy and energy density: locating electrostatic energy in the field, and the consistency check between one-half epsilon-nought E squared times Ad and CV^2/2.",
-          "why": "A full answer notes that between parallel plates the field is essentially uniform and outside it is essentially zero, so assigning a uniform density u = one-half epsilon-nought E squared to the gap and zero elsewhere reproduces the total: u times the volume Ad equals one-half epsilon-nought E squared A d, and substituting E = V/d and C = epsilon-nought A/d turns this into CV^2/2, the energy the battery actually supplied. Because the two routes agree for any A, d and V, the field-energy description is not merely bookkeeping. It should add that this makes energy present in a vacuum, which is what allows electromagnetic energy to travel where no charges are."
+          "q": "The insulating film in a capacitor has a dielectric strength of 3.0 × 10⁶ V/m and a thickness of 0.20 mm. Calculate the largest potential difference the capacitor can hold before the dielectric breaks down. Show your working.",
+          "concept": "Breakdown potential from dielectric strength",
+          "why": "Between parallel plates V = Ed. The largest field the material tolerates is its dielectric strength, so V_max = E_max × d = 3.0 × 10⁶ × 0.20 × 10⁻³ = 6.0 × 10² V = 600 V.\n\nFinal answer: 600 V (accept 6.0 × 10² V). The working must convert 0.20 mm to 2.0 × 10⁻⁴ m. 6.0 × 10⁵ V leaves the thickness in millimetres; 1.5 × 10¹⁰ V/m divides instead of multiplying and also has the wrong unit."
         },
         {
           "type": "short",
-          "q": "Explain why a defibrillator can deliver a very high power to a patient even though the battery charging its capacitor supplies only a modest power.",
-          "concept": "Energy versus power in capacitor storage and discharge: the capacitor as a slow-fill, fast-empty energy reservoir.",
-          "why": "A full answer separates energy from power. The battery transfers energy slowly over seconds, storing U = CV^2/2 in the capacitor by separating charge, so the charging power U/t_charge is small. Closing the switch discharges part of that stored energy through the paddles in a few milliseconds, and power is energy divided by time, so the same joules delivered over a thousand times shorter interval give a thousand times larger power. Nothing creates energy: the capacitor only redistributes in time what the battery supplied, converting chemical energy to electrostatic potential energy and back."
+          "q": "A metal plate and a slab of glass are each placed in a steady external electric field. In equilibrium the field inside the metal is zero, while the field inside the glass is reduced but not zero. Explain both results in terms of the electrons in each material.",
+          "concept": "Field inside a conductor versus inside a dielectric",
+          "why": "In a conductor the electrons are free to move. The external field pushes them until the charge that piles up on the surfaces produces an internal field that exactly cancels the applied one; they keep moving until the net field inside is zero, because any remaining field would move more charge. In an insulator such as glass the electrons are bound to their atoms. They can only shift slightly, polarising the material, and that limited separation produces an opposing field that reduces the applied field by the factor K but cannot cancel it.\n\nA correct answer says: conductor has free electrons which redistribute until the internal field is zero; insulator has bound electrons, so polarisation only reduces the field (by the dielectric constant K), never to zero."
         }
       ]
     },
@@ -488,131 +492,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "The lesson calls brute force 'simple and consistent, but very slow'. What makes it consistent?",
+          "q": "A test is run at a significance level of 0.05 and the data give a p-value of exactly 0.05. What is the correct decision?",
           "options": [
-            "It goes through every possible choice, so any solution present in that space will be reached",
-            "It uses recursion to move systematically from one problem state to the next until the search is exhausted",
-            "It applies the best available option at each stage, so no stage can be worse than the last",
-            "It saves the result of each choice it has already evaluated, so no choice is tried twice"
+            "Reject the null hypothesis",
+            "Accept the null hypothesis",
+            "Lower the significance level and repeat the test",
+            "The null hypothesis is proved false"
           ],
           "answerIndex": 0,
-          "concept": "Brute force: exhaustive enumeration is the source of its reliability and simultaneously the source of its cost.",
-          "why": "Brute force relies solely on computing power, trying every possibility rather than improving efficiency with advanced techniques; because nothing is skipped, a solution present in the search space is certain to be found — and because nothing is skipped, the work grows with the size of that space."
+          "concept": "Accept/reject rule at the boundary p-value",
+          "why": "The rule is: p-value less than or equal to the significance level, reject the null hypothesis; p-value greater, accept it. 0.05 ≤ 0.05, so the null hypothesis is rejected.\n\nAccepting treats the rule as strictly less than; changing the level after seeing the data is not part of the rule; rejection means the evidence is strong enough at this level, never that anything is proved."
         },
         {
           "type": "mcq",
-          "q": "A student splits a scheduling problem into four sub-problems, solves each, and finds the combined solution takes longer to assemble than solving the original problem directly would have. What has gone wrong with the divide and conquer application?",
+          "q": "A researcher's hypothesis is: \"Drivers who use the new app deliver faster than drivers who do not.\" Which statement is the null hypothesis?",
           "options": [
-            "The four sub-problems were not of equal size, so their partial solutions cannot be merged into one schedule",
-            "The recombination step is not simpler than the original problem, so the split buys nothing",
-            "The sub-problems do not overlap, so no intermediate result could be reused",
-            "The sub-problems were solved in parallel rather than each feeding into the next"
-          ],
-          "answerIndex": 1,
-          "concept": "The condition for divide and conquer: the parts must be simpler than the whole AND recombining them must cost less than solving the original directly.",
-          "why": "Divide and conquer only works if the small easier parts are genuinely simpler than the complex part and the cost of combining their solutions is lower than solving the original outright; when assembly is the expensive step, the decomposition has added work instead of removing it."
-        },
-        {
-          "type": "mcq",
-          "q": "Both greedy algorithms and dynamic programming work stage by stage, yet only dynamic programming guarantees an optimal solution when one exists. Why?",
-          "options": [
-            "Dynamic programming examines every possible candidate exhaustively, whereas a greedy algorithm examines only a small sample of them",
-            "Greedy uses recursion and therefore loses information when the recursion unwinds",
-            "Greedy fixes its choice at each stage, while dynamic programming saves sub-problem solutions and compares combinations",
-            "Dynamic programming is applied only to problems that have exactly one solution, so optimality is automatic"
+            "Mean delivery time with the app is less than without it",
+            "Mean delivery time with the app is greater than without it",
+            "Mean delivery time with the app equals the mean without it",
+            "The app cuts delivery time by 5%"
           ],
           "answerIndex": 2,
-          "concept": "Greedy irrevocability vs dynamic programming's stored sub-problem solutions — the actual source of the optimality guarantee.",
-          "why": "The greedy algorithm applies the best possible solution at each stage and moves on, so a locally attractive choice can close off a better overall completion with no way back; dynamic programming breaks the problem into sub-problems and saves their solutions, so the combinations are available for comparison and, provided a solution exists, an optimal one can be found."
+          "concept": "Forming the null hypothesis",
+          "why": "The null hypothesis is the initial assumption of no difference: the two groups are equally good, so their mean delivery times are the same. The test then asks whether the data are strong enough to reject that.\n\nLess than is the researcher's own hypothesis, not its null; greater than reverses the claim instead of nullifying it; a 5% cut confuses the null hypothesis with a significance level."
         },
         {
           "type": "mcq",
-          "q": "What distinguishes pipelining from the other decomposition approaches covered this week?",
+          "q": "Roads: A to B costs 1, A to C costs 4, B to D costs 9, C to D costs 2. A greedy algorithm goes from A to D by always taking the cheapest road out of its current town. What does greedy pay, and what is the true cheapest cost?",
           "options": [
-            "The task is broken into sub-problems whose solutions are stored so they need not be recomputed",
-            "The task is broken into parts that are each solved independently and then combined into the whole",
-            "The task is broken into candidate solutions that are generated and tested one after another until one of them is accepted",
-            "The task is split into a series of subtasks run by different processes, each result feeding the next"
+            "Greedy 6, cheapest 6",
+            "Greedy 10, cheapest 10",
+            "Greedy 3, cheapest 6",
+            "Greedy 10, cheapest 6"
           ],
           "answerIndex": 3,
-          "concept": "Pipelining as a serial dependency chain, as opposed to independent decomposition (divide and conquer) or stored reuse (dynamic programming).",
-          "why": "Pipelining divides a task into a series of subtasks where each subtask leads to the next; each subtask runs in a different process and the result of one feeds the next, repeatedly, until the whole task is completed. The order is load-bearing, which is exactly what independent decomposition lacks."
+          "concept": "Greedy choice without an optimality guarantee",
+          "why": "From A the cheapest road is to B (1), and from B the only road on is to D (9), so greedy pays 1 + 9 = 10 and never revisits its choice. The route A, C, D costs 4 + 2 = 6, so greedy missed the optimum.\n\n6 and 6 assumes greedy always finds the optimum; 10 and 10 never checks the route through C; 3 adds the two cheapest roads on the map (1 and 2), which do not join up into a route."
         },
         {
           "type": "mcq",
-          "q": "In backtracking, what does the algorithm do when it reaches a final state?",
+          "q": "The naive recursive Fibonacci is `fib(n) = fib(n − 1) + fib(n − 2)` with `fib(0) = 0` and `fib(1) = 1`. When `fib(6)` is called, how many separate times is `fib(2)` computed?",
           "options": [
-            "It checks whether the state is accepted or rejected, then retreats to a previous state for untried options",
-            "It records the value reached at that state so that the same state need never be evaluated a second time later",
-            "It compares that state against all remaining states and keeps whichever scores highest",
-            "It abandons the current search entirely and begins again from a different starting state"
+            "5",
+            "1",
+            "8",
+            "3"
           ],
           "answerIndex": 0,
-          "concept": "The backtracking cycle: decide, reach a final state, accept or reject, retreat to the last decision point and take an unconsidered option.",
-          "why": "At every step possible options are considered and a decision made; on reaching a final state the algorithm checks acceptance or rejection and then backtracks to a previous state to try other unconsidered options. Recording values for reuse is dynamic programming, not backtracking."
+          "concept": "Repeated sub-problems in naive recursion",
+          "why": "fib(6) calls fib(5) and fib(4); each of those calls splits again, and fib(2) is reached along five different paths: once inside fib(4) via fib(3), once directly in fib(4), and three times inside fib(5). The count is 5, and this repetition is exactly what dynamic programming removes by saving each result.\n\n1 is what the dynamic-programming version does; 8 is fib(6) itself, the value, not the count; 3 counts only the calls inside fib(5)."
         },
         {
           "type": "mcq",
-          "q": "A test is run at a significance level of 0.05. What does that number mean?",
+          "q": "A maze is drawn as a tree. The start has a left path and a right path. The left path reaches a junction with two branches, both dead ends. The right path reaches a junction whose left branch is a dead end and whose right branch is the exit. Backtracking always tries left before right. How many dead ends does it reach before finding the exit?",
           "options": [
-            "There is a 5% probability that the null hypothesis is true",
-            "There is a 5% risk of concluding that something exists when it does not exist",
-            "At least 5% of the collected data must contradict the null hypothesis before it can be rejected",
-            "The p-value produced by the data will fall within 5% of its true value"
-          ],
-          "answerIndex": 1,
-          "concept": "Significance level as the probability of rejecting a true null hypothesis — a risk fixed in advance, not a statement about the data or about the null hypothesis being true.",
-          "why": "The significance level is the probability of rejecting the null hypothesis when it is in fact true, so 0.05 indicates a 5% risk of concluding that something exists when it does not. The probability of the null hypothesis being true is what the p-value speaks to, and that comes from the data, not from the chosen level."
-        },
-        {
-          "type": "mcq",
-          "q": "A team is deciding whether a problem can be tackled computationally at all. Which consideration belongs to the factor 'the problem needs to be computable'?",
-          "options": [
-            "Whether the current situation, the end goal, the route to it and the possible obstacles have been identified",
-            "Whether the problem can be grouped as a specific type of problem already understood",
-            "Whether the required calculations are possible, given processing times and capacity",
-            "Whether the data types the problem needs and the storage capacity for them are available"
+            "2",
+            "4",
+            "3",
+            "1"
           ],
           "answerIndex": 2,
-          "concept": "Separating the three pre-conditions: clearly defined (situation, goal, route, obstacles), computable (calculations feasible in time and capacity), data requirements (types and storage).",
-          "why": "Computability here is specifically about whether the required calculations can be performed at all given processing time and capacity. Identifying situation, goal and obstacles is the 'clearly defined' factor, data types and storage is the 'data requirements' factor, and grouping the problem by type belongs to problem recognition."
+          "concept": "Tracing backtracking through a decision tree",
+          "why": "Left path first: left branch is a dead end (1), backtrack, right branch is a dead end (2), backtrack to the start. Right path: left branch is a dead end (3), backtrack, right branch is the exit. Three dead ends are reached before the exit.\n\n2 forgets the dead end on the right path; 4 counts the exit as a dead end; 1 stops counting after the first backtrack."
         },
         {
           "type": "mcq",
-          "q": "Visualisation is listed as a computational approach even though the lesson says it helps humans rather than computers. On what does its usefulness rest?",
+          "q": "A program computes an order total in three stages. Stage 1 sums the product prices. Stage 2 takes that sum and adds VAT. Stage 3 takes that result and adds the delivery fee. Each stage runs as a separate process and cannot start until the previous one hands over its result. Which computational approach is this?",
           "options": [
-            "It lowers the number of calculations a machine has to perform to reach the same answer",
-            "It restates the problem in a graphical form, such as a graph or a tree, that a computer can then solve automatically",
-            "It provides a set of test scenarios against which a program's output can be measured",
-            "People retain information better as an image than as text, so the problem becomes easier to grasp"
+            "Divide and conquer",
+            "Pipelining",
+            "Dynamic programming",
+            "Backtracking"
+          ],
+          "answerIndex": 1,
+          "concept": "Pipelining versus divide and conquer",
+          "why": "The task is divided into a series of subtasks where the result of each process feeds the next, in a fixed order, until the whole task is done. That is pipelining; reordering the stages would break the calculation.\n\nDivide and conquer splits into independent parts solved separately and then combined; dynamic programming saves sub-problem results for reuse; backtracking retreats from rejected states."
+        },
+        {
+          "type": "mcq",
+          "q": "An estate has 30 houses joined by candidate pipe routes, each with a cost. The task is the cheapest set of pipes such that every house is connected to the water supply. Under problem recognition, which general problem is this reduced to?",
+          "options": [
+            "Shortest path between two nodes",
+            "Sorting a list",
+            "Binary search",
+            "Minimum spanning tree of a graph"
           ],
           "answerIndex": 3,
-          "concept": "Visualisation as a cognitive aid to the human solver, not a computational saving — which is why the beneficiary test separates it from data mining and performance testing.",
-          "why": "Visualisation uses diagrams, graphs and images to illustrate what a problem entails and how to approach its solution, and it works on the knowledge that people process and retain information better in image form than in text; the gain is in human understanding, not in machine work."
+          "concept": "Reducing a problem to a general case",
+          "why": "Houses are nodes, candidate pipes are edges with costs, and the requirement is a cheapest set of edges that leaves every node connected. That is the minimum spanning tree of the graph, so a known algorithm can be applied.\n\nShortest path connects only two chosen nodes, not all thirty; sorting orders a list and connects nothing; binary search finds one item in sorted data."
+        },
+        {
+          "type": "mcq",
+          "q": "A test is run at a significance level of 0.01. Which risk is being accepted by choosing that level?",
+          "options": [
+            "A 1% chance of accepting the null hypothesis when it is false",
+            "A 1% chance of rejecting the null hypothesis when it is true",
+            "A 99% chance that the hypothesis is true",
+            "A 1% chance that the collected data are wrong"
+          ],
+          "answerIndex": 1,
+          "concept": "Meaning of the significance level",
+          "why": "The significance level is the probability of rejecting the null hypothesis when it is in fact true. At 0.01 the researcher accepts a 1% risk of concluding that an effect exists when it does not.\n\nAccepting a false null hypothesis is a different error not measured by this level; 99% is not a probability that any hypothesis is true; the level says nothing about errors in the data."
         },
         {
           "type": "short",
-          "q": "Explain why a greedy algorithm can return a non-optimal answer even though it selects the best available option at every single stage.",
-          "concept": "Local optimality does not compose into global optimality when an early choice constrains what remains available.",
-          "why": "A full answer must say that the greedy algorithm applies the best possible solution at each stage and then moves on without revisiting that decision; the choice is evaluated only against what looks best at that moment, not against what it leaves possible afterwards. It must then give the mechanism: taking the locally best option can consume or block resources needed for a better overall completion, and because there is no backtracking or stored alternative the algorithm can never recover. It should close by noting that on problems where the local choice provably cannot block a better completion the greedy solution is optimal, and there it is simple and highly efficient."
+          "q": "Merge sort is applied to a list of 16 numbers. State how many rounds of splitting are needed before every part holds one number, how many single-number parts there are, how many merge operations happen in total, and how many rounds of merging. Show your working.",
+          "concept": "Counting splits and merges in divide and conquer",
+          "why": "Each round halves every part: 16 → 8 → 4 → 2 → 1, so 4 rounds of splitting, leaving 16 single-number parts. Merging reverses this: 16 parts merge in pairs to 8 (8 merges), then to 4 (4 merges), then to 2 (2 merges), then to 1 (1 merge): 8 + 4 + 2 + 1 = 15 merges in 4 rounds.\n\nA correct answer states 4 splitting rounds, 16 parts, 15 merges and 4 merging rounds, with the halving sequence shown. 16 merges (one per element) or 8 merges (only the first round) is wrong."
         },
         {
           "type": "short",
-          "q": "Explain why dynamic programming's saving of sub-problem solutions is what converts it from mere decomposition into an approach that guarantees an optimal solution.",
-          "concept": "Storage of sub-problem solutions is the mechanism behind both the efficiency and the optimality guarantee — decomposition alone gives neither.",
-          "why": "A full answer must state that dynamic programming breaks a problem into sub-problems and saves the solutions so the same result is never computed twice, and that this store is what makes exhaustive comparison of combinations affordable: without it, re-deriving the same sub-problem repeatedly makes the comparison too expensive to carry out. It should then say that because every sub-problem's best solution is available, the best combination for the whole can be identified, so provided a solution exists an optimal one can be found — and note that this is why dynamic programming is used mostly for optimization problems, where a minimum or maximum is required."
+          "q": "Name the computational approach at work in each case and give the test that decides it. (a) A music platform studies millions of song ratings to find which artists are gaining listeners. (b) A manager is shown the city's roads as a graph with coloured routes so she can see why one plan is faster. (c) A program is fed deliberately corrupted files before release to check that it copes. (d) A team assumes two payment methods are equally good, then collects data to see whether that assumption can be rejected.",
+          "concept": "Matching situations to computational approaches",
+          "why": "(a) Data mining: valuable patterns are extracted from a large data set to inform decisions; the test is a large data set searched for unnoticed relationships. (b) Visualisation: diagrams, graphs and images help a human understand the problem; the test is that the beneficiary is the person, not the computer. (c) Performance testing: the program is checked against test scenarios and success criteria before release, here with erroneous data; the test is evaluation before release. (d) Hypothesis testing: a null hypothesis of no difference is stated and data decide whether to reject it; the test is a null hypothesis with a p-value.\n\nA correct answer names all four and gives a distinguishing test for each. Calling (c) hypothesis testing is wrong because no statement of prediction is tested, only whether the program works."
         },
         {
           "type": "short",
-          "q": "Explain why a p-value higher than the significance level leads to accepting the null hypothesis, and why doing so does not establish that no effect exists.",
-          "concept": "The accept/reject rule as a comparison of computed evidence against a pre-set risk threshold, and the asymmetry between insufficient evidence and proof of absence.",
-          "why": "A full answer must define the p-value as a number between 0 and 1 describing how likely it is that the null hypothesis is true, with a smaller value giving stronger evidence to reject it, and the significance level as the probability of rejecting a true null hypothesis, fixed in advance. It must then give the rule: p less than or equal to the significance level means reject, p higher means accept — because a high p-value means the data are not unlikely under the null hypothesis, so the pre-agreed threshold of evidence has not been met. Finally it must say that failing to meet that threshold means the evidence is not enough, which is not the same as showing there is nothing to find; a larger or better-designed study could still reject the same null hypothesis."
+          "q": "Coins of value 1, 3 and 4 are available. Using dynamic programming, build a table giving the minimum number of coins for each amount from 0 to 6, where each entry is found from the saved entries for smaller amounts. State the minimum for amount 6 and which coins make it. Show your working.",
+          "concept": "Building a dynamic programming table",
+          "why": "Rule: best(a) = 1 + the smallest of best(a − 1), best(a − 3), best(a − 4) over the coins that fit, with best(0) = 0. best(1) = 1 (1). best(2) = 2 (1 + 1). best(3) = 1 (3). best(4) = 1 (4). best(5) = 1 + min(best(4), best(2), best(1)) = 2 (4 + 1). best(6) = 1 + min(best(5), best(3), best(2)) = 1 + 1 = 2 (3 + 3).\n\nFinal table: 0, 1, 2, 1, 1, 2, 2. Minimum for 6 is 2 coins, 3 + 3. A correct answer shows each entry derived from saved smaller entries and reaches 2 coins for amount 6. Giving 3 coins (4 + 1 + 1) is the greedy answer and is wrong."
         },
         {
           "type": "short",
-          "q": "Explain why backtracking is a cheaper way of examining more than one possible solution than brute force is, even though both may end up considering many candidates.",
-          "concept": "Backtracking abandons a partial candidate as soon as its state is rejected and resumes from the last decision point; brute force has no notion of a partial candidate.",
-          "why": "A full answer must say that brute force goes through all possible complete choices, relying solely on computing power, with no way to tell that a candidate is doomed before it is finished. It must then give the backtracking mechanism: options are considered step by step, and on reaching a state that is rejected the algorithm returns to a previous state and takes an option not yet considered, so every complete candidate sharing that rejected prefix is dropped in one move. The maze example makes it concrete — a dead end is recognised at the leaf and the search resumes from the last junction rather than re-walking whole routes. It should note the cost is not free: recursion carries the state needed to retreat, and in the worst case, where nothing can be rejected early, backtracking degenerates into the same exhaustive search as brute force."
+          "q": "State the two conditions under which divide and conquer is worth applying, and give one example of a task where splitting into halves buys nothing because one of the conditions fails. Explain why it fails.",
+          "concept": "Conditions for divide and conquer",
+          "why": "Condition 1: the smaller parts must be genuinely simpler than the whole. Condition 2: combining the solutions of the parts must be less complicated than solving the original problem directly; otherwise the split gains nothing. Example: finding the median of a list by splitting it in half. Each half's median is easy, but the medians of two halves do not combine into the median of the whole: the whole list must effectively be examined again, so the recombination is as hard as the original problem and condition 2 fails.\n\nA correct answer states both conditions and gives any example where recombining the partial answers costs as much as the original task (finding a median, summing a list that must then be re-read, or similar), with the reason that combination is not cheaper."
         }
       ]
     },
@@ -626,131 +630,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Evaluate lim x→4 (x² + 3x − 5).",
-          "options": [
-            "28",
-            "33",
-            "23",
-            "15"
-          ],
-          "answerIndex": 2,
-          "concept": "Direct substitution into a polynomial, arithmetic kept visible",
-          "why": "Substituting gives (4)² + 3(4) − 5 = 16 + 12 − 5 = 28 − 5 = 23. Option 1 stops at 16 + 12 and never subtracts the 5 — exactly the slip her slide 4 layout is designed to prevent by writing the 15 − 3 line out. Option 2 flips the sign of the constant and adds 5. Option 4 reads 4² as 4 × 2 = 8, giving 8 + 12 − 5. No method is needed here: substitution gives a well-defined expression, so it is the answer."
-        },
-        {
-          "type": "mcq",
-          "q": "Evaluate lim x→1 (x³ − 2)/(x² − 5).",
+          "q": "Evaluate lim(x→0) (√(x + 16) − 4)/x.",
           "options": [
             "1/4",
-            "−1/4",
-            "−4",
-            "Does not exist"
+            "0",
+            "1/8",
+            "DNE"
           ],
-          "answerIndex": 0,
-          "concept": "Substitution when both numerator and denominator come out negative",
-          "why": "(1³ − 2)/(1² − 5) = (1 − 2)/(1 − 5) = (−1)/(−4) = 1/4. Two negatives divide to a positive. Option 2 handles one minus and forgets the other, which is the commonest error on this shape. Option 3 inverts the fraction, reading −4/−1. Option 4 treats a negative denominator as a failure of substitution; it is not — only a zero denominator with a zero numerator stops you, as slide 5 shows with 5/(−2)."
+          "answerIndex": 2,
+          "concept": "Rationalising the numerator",
+          "why": "0/0, so multiply by the conjugate √(x + 16) + 4: the numerator becomes (x + 16) − 16 = x, cancel with the x below, leaving 1/(√(x + 16) + 4) → 1/(4 + 4) = 1/8.\n\n1/4 forgets the + 4 left in the denominator and uses 1/√16; 0 reads 0/0 as zero; DNE reads 0/0 as non-existence."
         },
         {
           "type": "mcq",
-          "q": "Evaluate lim x→3 (x² − 9)/(x − 3).",
+          "q": "Evaluate lim(x→4) (1/x − 1/4)/(x − 4).",
+          "options": [
+            "−1/16",
+            "1/16",
+            "−1/4",
+            "−1/8"
+          ],
+          "answerIndex": 0,
+          "concept": "Clearing a complex fraction inside a limit",
+          "why": "Multiply numerator and denominator by the common denominator 4x: (4 − x)/[4x(x − 4)]. Write 4 − x = −1(x − 4) and cancel: lim(x→4) −1/(4x) = −1/16.\n\n1/16 cancels 4 − x against x − 4 without the −1 and loses the sign; −1/4 forgets the factor 4 in the denominator; −1/8 evaluates 4x as 8."
+        },
+        {
+          "type": "mcq",
+          "q": "Evaluate lim(x→2) (x³ − 8)/(x − 2).",
           "options": [
             "0",
-            "3",
-            "Does not exist",
+            "12",
+            "8",
             "6"
           ],
-          "answerIndex": 3,
-          "concept": "Factorization on a difference of squares, her slide 6 pattern",
-          "why": "Substitution gives 0/0, so factor: x² − 9 = (x − 3)(x + 3), cancel the common factor and substitute again into x + 3 to get 3 + 3 = 6. Option 1 reads 0/0 as 0. Option 2 substitutes into the numerator's remaining factor without adding the 3, or stops at x. Option 3 mistakes 'undefined at the point' for 'the limit fails to exist' — the function is indeed undefined at 3, and the limit is still 6."
-        },
-        {
-          "type": "mcq",
-          "q": "Evaluate lim x→0 (√(x + 4) − 2)/x.",
-          "options": [
-            "1/2",
-            "1/4",
-            "0",
-            "Does not exist"
-          ],
           "answerIndex": 1,
-          "concept": "Conjugate of the numerator, then cancel the common x",
-          "why": "Multiply top and bottom by √(x + 4) + 2. The numerator becomes (x + 4) − 4 = x, so the x cancels and you are left with 1/(√(x + 4) + 2) → 1/(2 + 2) = 1/4. Option 1 forgets the '+ 2' still sitting in the denominator and evaluates 1/√4. Option 3 substitutes into the original numerator and stops at 0/0 read as 0. Option 4 repeats the 0/0-means-non-existence error."
+          "concept": "Limit with a difference of cubes",
+          "why": "0/0, so factor: x³ − 8 = (x − 2)(x² + 2x + 4). Cancel (x − 2): lim(x→2) (x² + 2x + 4) = 4 + 4 + 4 = 12. Check by L'Hôpital: 3x²/1 = 12.\n\n0 reads 0/0 as zero; 8 uses the wrong factor x² + 4 (drops the middle term 2x); 6 uses x² + 2, dropping both the 2x and half the constant."
         },
         {
           "type": "mcq",
-          "q": "Evaluate lim x→3 (1/x − 1/3)/(x − 3).",
+          "q": "Evaluate lim(x→0) (sin 5x)/(2x).",
           "options": [
-            "−1/9",
-            "1/9",
-            "−1/3",
-            "0"
+            "1",
+            "5",
+            "2/5",
+            "5/2"
+          ],
+          "answerIndex": 3,
+          "concept": "L'Hôpital's Rule with one application",
+          "why": "0/0, so differentiate top and bottom separately: f′(x) = 5 cos 5x, g′(x) = 2, giving lim(x→0) 5 cos(5x)/2 = 5(1)/2 = 5/2.\n\n1 assumes every (sin ·)/(·) limit is 1 without matching the arguments; 5 forgets the 2 in the denominator; 2/5 inverts the answer."
+        },
+        {
+          "type": "mcq",
+          "q": "Evaluate lim(x→2) (3x)/(x − 2).",
+          "options": [
+            "DNE",
+            "0",
+            "6",
+            "3"
           ],
           "answerIndex": 0,
-          "concept": "Clearing a complex fraction, with the −1 rewrite carrying the sign",
-          "why": "Multiply numerator and denominator by the common denominator 3x: the top becomes 3 − x, the bottom 3x(x − 3). Write 3 − x = −1(x − 3), cancel, and you have −1/(3x) = −1/(3(3)) = −1/9. Option 2 cancels 3 − x against x − 3 without the −1 and loses the sign, which is the error slide 7 is built to prevent. Option 3 cancels correctly but drops the x from 3x, substituting nothing. Option 4 is the 0/0-means-0 error again."
+          "concept": "Nonzero over zero is not indeterminate",
+          "why": "Substitution gives 6/0, not 0/0. A nonzero number over a quantity shrinking to zero grows without bound: just above 2 the fraction is large positive, just below 2 it is large negative. No single value is approached, so the limit does not exist (DNE).\n\n0 treats anything over 0 as 0; 6 ignores the denominator entirely; 3 applies L'Hôpital (3/1) to a form that is not indeterminate."
         },
         {
           "type": "mcq",
-          "q": "Evaluate lim x→0 (sin x)/(3x).",
+          "q": "Evaluate lim(x→1) (x² − 1)/(x² − 3x + 2).",
           "options": [
-            "3",
-            "0",
-            "1/3",
-            "1"
-          ],
-          "answerIndex": 2,
-          "concept": "L'Hôpital with a constant left in the denominator",
-          "why": "The form is 0/0. With f(x) = sin x and g(x) = 3x, f′(x) = cos x and g′(x) = 3, so the limit is cos(0)/3 = 1/3. Option 1 inverts the fraction. Option 2 substitutes into the original and reads 0/0 as 0. Option 4 recalls slide 12's answer of 1 and forgets that the denominator's derivative is 3, not 1 — the tell that a memorised answer was used instead of the rule."
-        },
-        {
-          "type": "mcq",
-          "q": "Evaluate lim x→1 (2x + 3)⁴.",
-          "options": [
-            "20",
-            "625",
-            "125",
-            "81"
+            "2",
+            "−2",
+            "2/3",
+            "0"
           ],
           "answerIndex": 1,
-          "concept": "Limit of a power: take the limit first, then raise",
-          "why": "By the power property, [lim x→1 (2x + 3)]⁴ = (2 + 3)⁴ = 5⁴ = 625. Option 1 multiplies by the exponent instead of raising to it, 4 × 5. Option 3 raises to the wrong power, 5³. Option 4 substitutes into the constant term only, 3⁴, dropping the 2x. Her slide 21 does exactly this in three lines — limit, then power, then arithmetic."
+          "concept": "Factoring both numerator and denominator",
+          "why": "0/0, so factor both: (x − 1)(x + 1)/[(x − 1)(x − 2)]. Cancel (x − 1): lim(x→1) (x + 1)/(x − 2) = 2/(−1) = −2.\n\n2 loses the sign of the denominator 1 − 2; 2/3 factors the denominator wrongly as (x − 1)(x + 2); 0 reads 0/0 as zero."
         },
         {
           "type": "mcq",
-          "q": "A student writes: lim x→2 (x² − 4)/(x − 2) = (4 − 4)/(2 − 2) = 0/0 = 0, so the limit is 0. What is wrong?",
+          "q": "Evaluate lim(x→4) (x − 4)/(√x − 2).",
           "options": [
-            "Nothing — 0/0 evaluates to 0",
-            "The answer 0 is right but the working should cite the quotient property",
-            "The limit does not exist, because the function is undefined at x = 2",
-            "0/0 is indeterminate, not 0; factoring and cancelling gives lim x→2 (x + 2) = 4"
+            "1/4",
+            "0",
+            "2",
+            "4"
           ],
           "answerIndex": 3,
-          "concept": "Diagnosing the 0/0-means-zero error",
-          "why": "0/0 is a signal to keep working, not a value. Factor the numerator as (x − 2)(x + 2), cancel the (x − 2) — legitimate because x is near 2 but never equal to 2 — and substitute to get 4. Option 1 states the error itself. Option 2 accepts a wrong number and compounds it by quoting the quotient property, which is unavailable here precisely because lim (x − 2) = 0 violates its proviso. Option 3 swaps one wrong conclusion for another: undefined at the point and no limit at the point are different claims, and this function has a perfectly good limit of 4."
+          "concept": "Rationalising the denominator",
+          "why": "0/0, and the root is in the denominator, so multiply by its conjugate √x + 2: the denominator becomes x − 4, which cancels with the numerator, leaving lim(x→4) (√x + 2) = 2 + 2 = 4.\n\n1/4 is the reciprocal limit (√x − 2)/(x − 4), the wrong way up; 0 reads 0/0 as zero; 2 forgets the + 2 after cancelling and evaluates √x alone."
+        },
+        {
+          "type": "mcq",
+          "q": "The reciprocal property lim(x→c) 1/f(x) = 1/[lim(x→c) f(x)] holds provided",
+          "options": [
+            "f(c) ≠ 0",
+            "lim(x→c) f(x) ≠ 1",
+            "lim(x→c) f(x) ≠ 0",
+            "f(x) ≠ 0 for every x"
+          ],
+          "answerIndex": 2,
+          "concept": "Proviso on the reciprocal property",
+          "why": "The right-hand side divides by lim f(x), so that limit must be nonzero; the property carries exactly this proviso.\n\nf(c) ≠ 0 is about the value at c, which a limit never inspects; lim f ≠ 1 is an invented condition; f(x) ≠ 0 for every x is not enough, since f(x) = x is never zero near 0 yet 1/x has no limit there because lim f = 0."
         },
         {
           "type": "short",
-          "q": "Work the slide 11 TASK in full: evaluate lim x→4 (1/√x − 1/2)/(x − 4). Show the common denominator, the factorization of x − 4, and the −1 rewrite.",
-          "concept": "The lecturer's second TASK, needing two techniques at once",
-          "why": "A good answer clears the complex fraction first: the common denominator of 1/√x and 1/2 is 2√x, so 1/√x − 1/2 = (2 − √x)/(2√x), and the whole expression is (2 − √x)/[2√x(x − 4)]. It then factors the denominator as a difference of squares in √x, x − 4 = (√x − 2)(√x + 2), and rewrites 2 − √x = −1(√x − 2) — the same move as slide 7 — so the (√x − 2) cancels, leaving −1/[2√x(√x + 2)]. Substituting x = 4: −1/[2(2)(2 + 2)] = −1/16. Credit naming where the minus comes from (the −1 rewrite, nothing else) and noting that the slide gives no answer, so the check is to substitute a value close to 4, say x = 4.1, and confirm the expression is small and negative."
+          "q": "Evaluate lim(x→9) (1/√x − 1/3)/(x − 9). Show the common denominator, the factorisation of x − 9, and the −1 rewrite in your working.",
+          "concept": "Complex fraction with a square root",
+          "why": "Common denominator of 1/√x and 1/3 is 3√x: 1/√x − 1/3 = (3 − √x)/(3√x), so the expression is (3 − √x)/[3√x(x − 9)]. Factor x − 9 = (√x − 3)(√x + 3) and write 3 − √x = −1(√x − 3). Cancel (√x − 3): lim(x→9) −1/[3√x(√x + 3)] = −1/[3(3)(3 + 3)] = −1/54.\n\nFinal answer: −1/54 (about −0.0185). A correct answer shows 3√x as the common denominator, the difference-of-squares factorisation of x − 9, and the −1 factored out; +1/54 (sign lost by cancelling 3 − √x against √x − 3 directly) is wrong."
         },
         {
           "type": "short",
-          "q": "Evaluate lim x→9 (√x − 3)/(x − 9) using her conjugate method. Show every line.",
-          "concept": "Rationalization transferred to a new limit point",
-          "why": "A good answer multiplies numerator and denominator by the conjugate of the numerator, √x + 3: lim x→9 [(√x − 3)/(x − 9)]·[(√x + 3)/(√x + 3)] = lim x→9 (x − 9)/[(x − 9)(√x + 3)], since (√x − 3)(√x + 3) = x − 9 exactly. Cancel the common (x − 9) to get lim x→9 1/(√x + 3) = 1/(√9 + 3) = 1/(3 + 3) = 1/6. It should state first that substitution gives (3 − 3)/(9 − 9) = 0/0, which is what licenses the method, and should keep the '+ 3' in the final denominator — dropping it and writing 1/√9 = 1/3 is the standard wrong answer here. Structurally this is her slide 10 example with 4 replaced by 9."
+          "q": "lim(x→c) f(x) = −3 and lim(x→c) g(x) = 2. Find lim(x→c) [f(x)²·g(x)], lim(x→c) f(x)/g(x) and lim(x→c) 1/f(x), naming the property used each time. Show your working.",
+          "concept": "Combining limit properties with given limits",
+          "why": "Power and product: lim [f²·g] = [lim f]²·lim g = (−3)²(2) = 18. Quotient (lim g = 2 ≠ 0): lim f/g = −3/2. Reciprocal (lim f = −3 ≠ 0): lim 1/f = 1/(−3) = −1/3.\n\nFinal answer: 18, −3/2, −1/3. A correct answer names the power, product, quotient and reciprocal properties and notes the nonzero provisos are satisfied. −18 (squaring −3 to −9), 3/2 (sign lost) and −3 (reciprocal confused with the value) are wrong."
         },
         {
           "type": "short",
-          "q": "Evaluate lim x→∞ x³/eˣ. State how many times you apply L'Hôpital's Rule and what tells you to stop.",
-          "concept": "Repeating L'Hôpital and knowing when the form is no longer indeterminate",
-          "why": "A good answer notes the form is ∞/∞ and applies the rule three times, re-checking after each: x³/eˣ → 3x²/eˣ (still ∞/∞) → 6x/eˣ (still ∞/∞) → 6/eˣ. At that point the numerator is the constant 6 and eˣ grows without bound, so the form is no longer indeterminate and the limit is 0. What tells you to stop is re-substitution, not the number of steps — her slide 13 wording is 'since direct substitution results to an indeterminate form, so we differentiate again', so the test is applied fresh each time. Note that eˣ differentiates to itself and so never changes, which is why the numerator is the only thing that can end the process, and why an exponential beats every power."
+          "q": "Evaluate lim(x→0) (1 − cos x)/x² using L'Hôpital's Rule. State how many times you apply it and what tells you to stop. Show your working.",
+          "concept": "L'Hôpital's Rule applied twice",
+          "why": "Substitution: (1 − 1)/0 = 0/0. First application: f′ = sin x, g′ = 2x, giving lim (sin x)/(2x), which at x = 0 is again 0/0, so apply the rule a second time: (cos x)/2, which at x = 0 is 1/2, a well-defined value, so stop.\n\nFinal answer: 1/2, after two applications. A correct answer re-checks the form after each application and stops the moment substitution gives a number. Applying the rule a third time (to −sin x/0) is wrong; stopping after one application and reading (sin 0)/0 = 0 is wrong."
         },
         {
           "type": "short",
-          "q": "Evaluate lim x→2 (x² + 3x − 10)/(x − 2) by factorization, then verify the answer by a second method from the deck.",
-          "concept": "Factorizing a quadratic that is not a difference of squares, then cross-checking",
-          "why": "A good answer substitutes first: (4 + 6 − 10)/(2 − 2) = 0/0, indeterminate, so factorize. The quadratic factors as (x + 5)(x − 2), giving lim x→2 [(x + 5)(x − 2)]/(x − 2) = lim x→2 (x + 5) = 7 after cancelling the common factor. The verification uses L'Hôpital, which the 0/0 form licenses: f(x) = x² + 3x − 10 and g(x) = x − 2 give f′(x) = 2x + 3 and g′(x) = 1, so the limit is (2(2) + 3)/1 = 7. Both methods give 7. Credit the habit itself — when two of her methods apply to the same problem, running both is a free check, and it is the only check available on the TASK slides, which give no answers."
+          "q": "A student evaluates lim(x→2) (x² + 1)/(x − 1) by L'Hôpital's Rule: differentiating top and bottom gives 2x/1, so the answer is 4. Identify the error and give the correct limit.",
+          "concept": "L'Hôpital's Rule needs an indeterminate form",
+          "why": "L'Hôpital's Rule may only be used when substitution gives an indeterminate form such as 0/0 or ∞/∞. Here substitution gives (4 + 1)/(2 − 1) = 5/1 = 5, which is well defined, so the rule does not apply and the answer 4 is wrong. The correct limit is 5, by direct substitution.\n\nA correct answer states that the form was not indeterminate, that the rule was therefore not allowed, and gives 5 as the limit."
         }
       ]
     },
@@ -763,131 +767,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "A cell of emf 9.0 V and internal resistance 1.5 ohm is connected to a 3.0 ohm resistor. What is the potential difference across the 3.0 ohm resistor?",
+          "q": "A cell of emf 6.0 V and internal resistance 0.50 Ω is connected across a 2.5 Ω resistor. What is the terminal potential difference of the cell?",
           "options": [
-            "9.0 V",
             "6.0 V",
-            "3.0 V",
-            "4.5 V"
-          ],
-          "answerIndex": 1,
-          "concept": "Setting up a single-loop circuit: I = epsilon/(R + r), then V = IR = epsilon - Ir.",
-          "why": "I = 9.0/(3.0 + 1.5) = 2.0 A, so the p.d. across the external resistor is IR = 2.0 x 3.0 = 6.0 V, which also equals epsilon - Ir = 9.0 - 3.0."
-        },
-        {
-          "type": "mcq",
-          "q": "Solving the same circuit, a student writes I = epsilon/R and ignores r entirely. What is the effect on the answers?",
-          "options": [
-            "The current is unchanged but the terminal p.d. comes out too small",
-            "Both the current and the terminal p.d. come out too small",
-            "The current comes out too small, and the terminal p.d. then exceeds the emf",
-            "The current comes out too large, and the terminal p.d. is wrongly reported as equal to the emf"
-          ],
-          "answerIndex": 3,
-          "concept": "Diagnosing the commonest circuit error: omitting internal resistance from the total resistance of the loop.",
-          "why": "Dividing by R alone rather than R + r gives a current larger than the true value, and since IR is then taken as the whole of epsilon there are no lost volts left, so the terminal p.d. is wrongly equal to the emf."
-        },
-        {
-          "type": "mcq",
-          "q": "A student cannot remember the motional-emf formula and wants to settle it by units. Which of these combinations has the units of volts?",
-          "options": [
-            "Bvl",
-            "Bv/l",
-            "Bl/v",
-            "Bv/l squared"
-          ],
-          "answerIndex": 0,
-          "concept": "Using dimensional checking to recover or verify a formula: 1 T = 1 V s / m^2.",
-          "why": "One tesla is one weber per square metre, i.e. one volt-second per square metre, so B v l has units (V s m^-2)(m s^-1)(m) = V. The other combinations are short by one or two powers of length and cannot be a potential difference."
-        },
-        {
-          "type": "mcq",
-          "q": "A dielectric of constant K = 2.5 fills the gap of a capacitor in which the field is 400 V/m. What is the energy stored per unit volume?",
-          "options": [
-            "7.08 x 10^-7 J/m^3",
-            "3.54 x 10^-6 J/m^3",
-            "1.77 x 10^-6 J/m^3",
-            "1.42 x 10^-6 J/m^3"
+            "4.8 V",
+            "5.0 V",
+            "1.0 V"
           ],
           "answerIndex": 2,
-          "concept": "Energy density with a dielectric present: u = one-half K epsilon-nought E squared, in joules per cubic metre.",
-          "why": "u = 0.5 x 2.5 x 8.85 x 10^-12 x (400)^2 = 0.5 x 2.5 x 8.85 x 10^-12 x 1.6 x 10^5 = 1.77 x 10^-6 J/m^3."
+          "concept": "Current and terminal p.d. from ε = I(R + r)",
+          "why": "Round the loop ε = I(R + r), so I = 6.0/(2.5 + 0.50) = 6.0/3.0 = 2.0 A. Then V = ε − Ir = 6.0 − 2.0 × 0.50 = 5.0 V. Check: V = IR = 2.0 × 2.5 = 5.0 V.\n\n6.0 V ignores the internal resistance; 4.8 V uses I = ε/R = 2.4 A, leaving r out of the loop; 1.0 V is the lost volts Ir, not the terminal p.d."
         },
         {
           "type": "mcq",
-          "q": "A 3.0 microfarad capacitor carries a charge of 6.0 microcoulombs. The energy stored is",
+          "q": "In an experiment the terminal p.d. of a cell is measured at two currents: V = 4.6 V when I = 0.40 A, and V = 3.6 V when I = 1.4 A. What are the emf and internal resistance of the cell?",
           "options": [
-            "1.8 x 10^-5 J",
-            "9.0 x 10^-6 J",
-            "1.2 x 10^-5 J",
-            "6.0 x 10^-6 J"
-          ],
-          "answerIndex": 3,
-          "concept": "Choosing the right form of the capacitor energy expression when Q and C are given rather than V.",
-          "why": "U = Q^2/2C = (6.0 x 10^-6)^2 / (2 x 3.0 x 10^-6) = 3.6 x 10^-11 / 6.0 x 10^-6 = 6.0 x 10^-6 J; the same follows from V = Q/C = 2.0 V and U = QV/2."
-        },
-        {
-          "type": "mcq",
-          "q": "A 100-turn coil of area 0.020 m^2 lies perpendicular to a magnetic field that is increasing steadily at 0.50 T/s. The magnitude of the induced emf is",
-          "options": [
-            "1.0 V",
-            "0.010 V",
-            "10 V",
-            "0.10 V"
+            "ε = 5.0 V, r = 1.0 Ω",
+            "ε = 4.6 V, r = 1.0 Ω",
+            "ε = 5.0 V, r = 2.6 Ω",
+            "ε = 3.6 V, r = −1.0 Ω"
           ],
           "answerIndex": 0,
-          "concept": "Applying Faraday's law when the area is fixed and B changes: emf = N A dB/dt.",
-          "why": "Phi = BA with A constant, so the magnitude of the emf is N A dB/dt = 100 x 0.020 x 0.50 = 1.0 V."
+          "concept": "Emf and internal resistance from a V-I graph",
+          "why": "V = ε − rI is a straight line with gradient −r and intercept ε. Gradient = (3.6 − 4.6)/(1.4 − 0.40) = −1.0/1.0 = −1.0 V/A, so r = 1.0 Ω. Intercept: ε = V + Ir = 4.6 + 0.40 × 1.0 = 5.0 V. Check with the other point: 3.6 + 1.4 × 1.0 = 5.0 V.\n\nε = 4.6 V takes the first reading as the emf instead of extrapolating to I = 0; r = 2.6 Ω is V/I at the second point, the external resistance, not r; the last option reads the negative gradient as a negative resistance and a reading as ε."
         },
         {
           "type": "mcq",
-          "q": "Asked for the energy stored in a 4.7 microfarad capacitor charged to 50 V, a student reports 1.2 x 10^-4 J instead of the correct 5.9 x 10^-3 J. What did the student do?",
+          "q": "A rod 0.40 m long slides on rails at 4.0 m/s across a 0.50 T field perpendicular to the plane of the rails. The circuit resistance is 0.80 Ω. What force is needed to keep the rod moving at constant speed?",
           "options": [
-            "Used Q^2/2C with the charge taken as CV^2 instead of CV",
-            "Divided by 2 twice, once in the formula and once when converting microfarads",
-            "Used CV/2 instead of CV^2/2, i.e. failed to square the voltage",
-            "Used the field-energy formula one-half epsilon-nought E squared instead of the capacitor formula"
+            "0.80 N",
+            "0.13 N",
+            "2.0 N",
+            "0.20 N"
           ],
-          "answerIndex": 2,
-          "concept": "Diagnosing a wrong route from the size of the answer: tracking which factor of V was dropped.",
-          "why": "0.5 x 4.7 x 10^-6 x 50 = 1.18 x 10^-4 J, exactly the reported figure, so the voltage was used to the first power; the ratio of wrong to right answer is 1/50, which is the missing factor of V."
+          "answerIndex": 3,
+          "concept": "Motional emf, induced current and the retarding force",
+          "why": "ε = Bvl = 0.50 × 4.0 × 0.40 = 0.80 V. I = ε/R = 0.80/0.80 = 1.0 A. The field pushes on that current with F = BIl = 0.50 × 1.0 × 0.40 = 0.20 N, opposing the motion, so an equal applied force of 0.20 N keeps the speed constant. Check: Fv = 0.80 W = I²R = (1.0)² × 0.80.\n\n0.80 N confuses the power εI (0.80 W) with the force; 0.13 N uses I = εR instead of ε/R; 2.0 N uses the speed in place of the length in F = BIl."
         },
         {
           "type": "mcq",
-          "q": "A rod of length 0.80 m slides at 5.0 m/s on rails in a field of 0.25 T perpendicular to the plane; the circuit has a total resistance of 0.50 ohm. What mechanical power must be supplied to keep the rod moving at constant speed?",
+          "q": "A 50-turn coil of area 2.0 × 10⁻³ m² lies with its plane perpendicular to a magnetic field. The field rises steadily from 0.10 T to 0.50 T in 0.20 s. What is the magnitude of the induced emf?",
           "options": [
-            "1.0 W",
-            "2.0 W",
-            "0.50 W",
-            "4.0 W"
+            "0.25 V",
+            "0.20 V",
+            "4.0 × 10⁻³ V",
+            "0.040 V"
           ],
           "answerIndex": 1,
-          "concept": "Chaining motional emf to current, force and power, and checking with the energy balance Fv = I^2 R.",
-          "why": "emf = Bvl = 0.25 x 5.0 x 0.80 = 1.0 V, so I = 1.0/0.50 = 2.0 A and the dissipated power is I^2 R = 4.0 x 0.50 = 2.0 W; the same follows from F = BIl = 0.40 N and P = Fv = 2.0 W."
+          "concept": "Faraday's law with flux from B and A",
+          "why": "The flux per turn is Φ = BA, so the change is ΔΦ = (0.50 − 0.10) × 2.0 × 10⁻³ = 8.0 × 10⁻⁴ Wb. |ε| = N ΔΦ/Δt = 50 × 8.0 × 10⁻⁴/0.20 = 0.20 V.\n\n0.25 V uses the final field 0.50 T instead of the change 0.40 T; 4.0 × 10⁻³ V forgets the 50 turns; 0.040 V is N ΔΦ without dividing by the time."
+        },
+        {
+          "type": "mcq",
+          "q": "A parallel-plate capacitor in vacuum has plate area 0.020 m² and separation 0.50 mm. It is connected to a 100 V supply. Take ε₀ = 8.85 × 10⁻¹² F/m. What charge does it hold?",
+          "options": [
+            "3.54 × 10⁻⁸ C",
+            "3.54 × 10⁻¹¹ C",
+            "1.77 × 10⁻⁸ C",
+            "3.54 × 10⁻¹⁰ C"
+          ],
+          "answerIndex": 0,
+          "concept": "Charge on a parallel-plate capacitor from its geometry",
+          "why": "C = ε₀A/d = 8.85 × 10⁻¹² × 0.020/0.50 × 10⁻³ = 3.54 × 10⁻¹⁰ F. Then Q = CV = 3.54 × 10⁻¹⁰ × 100 = 3.54 × 10⁻⁸ C.\n\n3.54 × 10⁻¹¹ C leaves the separation in millimetres; 1.77 × 10⁻⁸ C halves Q as if it were the energy formula; 3.54 × 10⁻¹⁰ C is the capacitance in farads, quoted as if it were the charge."
+        },
+        {
+          "type": "mcq",
+          "q": "A 20 pF capacitor is charged to 12 V and then disconnected from the supply. A dielectric of constant K = 3 is slid in to fill the gap. What are the new potential difference and stored energy?",
+          "options": [
+            "V = 4.0 V, U = 1.44 × 10⁻⁹ J",
+            "V = 36 V, U = 1.30 × 10⁻⁸ J",
+            "V = 4.0 V, U = 4.8 × 10⁻¹⁰ J",
+            "V = 12 V, U = 4.3 × 10⁻⁹ J"
+          ],
+          "answerIndex": 2,
+          "concept": "Inserting a dielectric at constant charge",
+          "why": "With the supply disconnected the charge is fixed: Q = C₀V₀ = 20 × 10⁻¹² × 12 = 2.4 × 10⁻¹⁰ C. The capacitance becomes C = KC₀ = 60 pF, so V = Q/C = 2.4 × 10⁻¹⁰/60 × 10⁻¹² = 4.0 V, that is V₀/K. Energy: U = ½QV = ½ × 2.4 × 10⁻¹⁰ × 4.0 = 4.8 × 10⁻¹⁰ J, down from 1.44 × 10⁻⁹ J by the factor K, because the field does work pulling the dielectric in.\n\nThe first option keeps the old energy as if it were conserved; V = 36 V multiplies V by K instead of dividing; V = 12 V is the case with the supply still connected, where V stays fixed and U rises to 4.3 × 10⁻⁹ J."
+        },
+        {
+          "type": "mcq",
+          "q": "Between the plates of a parallel-plate capacitor in vacuum the field is 1.0 × 10³ N/C. The plates have area 0.040 m² and are 2.0 mm apart. Take ε₀ = 8.85 × 10⁻¹² F/m. What total energy is stored in the field between the plates?",
+          "options": [
+            "3.5 × 10⁻⁷ J",
+            "4.4 × 10⁻⁶ J",
+            "7.1 × 10⁻¹⁰ J",
+            "3.5 × 10⁻¹⁰ J"
+          ],
+          "answerIndex": 3,
+          "concept": "Energy from energy density times volume",
+          "why": "Energy density u = ½ε₀E² = ½ × 8.85 × 10⁻¹² × (1.0 × 10³)² = 4.43 × 10⁻⁶ J/m³. Volume between the plates = Ad = 0.040 × 2.0 × 10⁻³ = 8.0 × 10⁻⁵ m³. U = u × Ad = 4.43 × 10⁻⁶ × 8.0 × 10⁻⁵ = 3.5 × 10⁻¹⁰ J. Check: C = ε₀A/d = 1.77 × 10⁻¹⁰ F, V = Ed = 2.0 V, ½CV² = 3.5 × 10⁻¹⁰ J.\n\n3.5 × 10⁻⁷ J leaves d in millimetres when finding the volume; 4.4 × 10⁻⁶ J reports the energy density as if it were an energy; 7.1 × 10⁻¹⁰ J leaves out the ½."
+        },
+        {
+          "type": "mcq",
+          "q": "The north pole of a bar magnet is pushed toward a coil, so the flux through the coil increases. What does the minus sign in ε = −N dΦ/dt tell you about the current induced in the coil?",
+          "options": [
+            "It is negative in value and so flows backwards through the meter",
+            "It flows so that its own magnetic field opposes the increase in flux",
+            "It makes the flux through the coil decrease to zero",
+            "It flows in the direction the magnet is moving"
+          ],
+          "answerIndex": 1,
+          "concept": "Meaning of the minus sign in Faraday's law",
+          "why": "The minus sign is Lenz's law: the induced emf drives a current whose field opposes the change that produced it. Here the flux is increasing, so the coil's own field points against the magnet's field and the coil face repels the approaching north pole. The sign fixes direction only; the magnitude is N dΦ/dt.\n\nA current is not 'negative in value' in any absolute sense; the induced field only opposes the change, it cannot cancel the flux; and the current circulates in the coil, it does not travel along the magnet's line of motion."
         },
         {
           "type": "short",
-          "q": "Explain why, in a problem giving emf, internal resistance and external resistance, you must add r to R before dividing into the emf, and show with a numerical illustration how large the error is if you do not.",
-          "concept": "Why the loop equation uses the total resistance: the internal resistance is part of the same series path the current must traverse.",
-          "why": "A full answer says the current is the same everywhere in a single loop, and the charge that passes through R must also pass through the cell's own resistance r, so the emf is shared between the two drops: epsilon = IR + Ir = I(R + r). Dividing by R alone treats the cell as ideal. It must supply a worked illustration, for example epsilon = 6.0 V, R = 2.0 ohm, r = 1.0 ohm: the correct I = 6.0/3.0 = 2.0 A with V = 4.0 V, whereas ignoring r gives I = 3.0 A and V = 6.0 V, a fifty per cent error in current. It should note that the error grows as R approaches r, and is negligible only when R is much larger than r."
+          "q": "A defibrillator capacitor of 200 μF is charged to 2.0 kV and then discharged through a patient in 4.0 ms. Calculate the energy delivered and the average power during the discharge. Show your working.",
+          "concept": "Capacitor energy and the power of a fast discharge",
+          "why": "U = ½CV² = ½ × 200 × 10⁻⁶ × (2.0 × 10³)² = ½ × 2.0 × 10⁻⁴ × 4.0 × 10⁶ = 400 J. Average power P = U/t = 400/4.0 × 10⁻³ = 1.0 × 10⁵ W. The battery fills the capacitor slowly at modest power; the release in milliseconds gives a power far above what the battery could supply directly.\n\nFinal answer: U = 400 J (accept 4.0 × 10² J), P = 1.0 × 10⁵ W (accept 100 kW). 800 J leaves out the ½; 0.20 J uses V instead of V²; 1.6 W multiplies by the time instead of dividing."
         },
         {
           "type": "short",
-          "q": "Explain why computing a capacitor's stored energy as one-half epsilon-nought E squared times Ad must give the same number as one-half CV squared, and why this makes a good check on a numerical answer.",
-          "concept": "Cross-checking a result by two independent relations, using V = Ed and C = epsilon-nought A/d to show the two routes are algebraically identical.",
-          "why": "A full answer substitutes: with V = Ed and C = epsilon-nought A/d, one-half CV^2 = one-half (epsilon-nought A/d)(Ed)^2 = one-half epsilon-nought E^2 (Ad), so the two expressions are the same quantity written with different variables. It should say that because the two routes use different given data (E, A, d in one case; C, V in the other), an arithmetic slip or a units slip in one route will almost never be repeated in the other, so agreement to two or three significant figures is strong evidence the answer is right. A worked check should be shown, for example A = 0.02 m^2, d = 0.005 m, E = 200 N/C giving C = 3.54 x 10^-11 F, V = 1.0 V and U = 1.77 x 10^-11 J by both routes."
+          "q": "A rod of length l moves at speed v perpendicular to a uniform field B. Starting from the magnetic force F = qvB on a free charge in the rod, derive ε = Bvl. Then, for B = 0.30 T, l = 0.50 m and v = 2.0 m/s, find the emf and check it by the rate of change of the flux Blx enclosed after the rod has moved for 2.0 s. Show your working.",
+          "concept": "Deriving motional emf from the Lorentz force",
+          "why": "A charge q carried along with the rod feels F = qvB directed along the rod. Moving it from one end to the other, a distance l, does work W = Fl = qvBl. Emf is work per unit charge, so ε = W/q = Bvl. Numerically ε = 0.30 × 2.0 × 0.50 = 0.30 V. Check: after 2.0 s the rod has moved x = vt = 4.0 m, enclosing flux Φ = Blx = 0.30 × 0.50 × 4.0 = 0.60 Wb; the flux grows at Φ/t = 0.60/2.0 = 0.30 Wb/s = 0.30 V, the same emf.\n\nA correct answer shows W = qvBl, divides by q, gives ε = 0.30 V, and shows the flux check giving 0.30 V (accept 0.30 Wb/s or dΦ/dt = Blv = 0.30 V). Leaving q in the final expression, or giving 0.60 V by reporting the flux as the emf, is wrong."
         },
         {
           "type": "short",
-          "q": "Explain why an answer of '1.77 x 10^-7 J' for the quantity one-half epsilon-nought E squared should be rejected on sight, and what the correct statement of that result is.",
-          "concept": "Distinguishing total energy from energy density by dimensions, and the discipline of carrying units through a calculation.",
-          "why": "A full answer performs the unit check: epsilon-nought is in farads per metre and E in volts per metre, so epsilon-nought E^2 has units F V^2 m^-3, and since a farad-volt-squared is a joule the result is joules per cubic metre, an energy density, not an energy. It must state that the correct answer is 1.77 x 10^-7 J/m^3 and that joules are obtained only after multiplying by the volume between the plates Ad; for A = 0.02 m^2 and d = 0.005 m that volume is 1.0 x 10^-4 m^3, giving U = 1.77 x 10^-11 J. It should note that this is exactly the slip on the lecture slide."
+          "q": "Two identical 10 μF capacitors are to store energy from a 12 V supply. Calculate the total energy stored when they are connected across the supply in series, and when in parallel, and state which arrangement stores more and by what factor. Show your working.",
+          "concept": "Stored energy for series versus parallel capacitors",
+          "why": "Parallel: C = 10 + 10 = 20 μF, U = ½CV² = ½ × 20 × 10⁻⁶ × 144 = 1.44 × 10⁻³ J. Series: 1/C = 1/10 + 1/10, so C = 5.0 μF, U = ½ × 5.0 × 10⁻⁶ × 144 = 3.6 × 10⁻⁴ J. Parallel stores more, by a factor 1.44 × 10⁻³/3.6 × 10⁻⁴ = 4, because at a fixed supply voltage U = ½CV² grows with C and the parallel combination has the larger capacitance.\n\nFinal answer: parallel 1.44 × 10⁻³ J, series 3.6 × 10⁻⁴ J, parallel is larger by a factor of 4 (accept 1.4 mJ and 0.36 mJ). Giving 20 μF for the series combination, or the same energy for both, is wrong."
         },
         {
           "type": "short",
-          "q": "Explain why, for a rod being pulled at constant speed along rails, the mechanical power you supply comes out equal to the electrical power I squared R dissipated in the circuit, and why this equality is a legitimate check on a motional-emf answer.",
-          "concept": "Energy conservation in motional emf: the retarding force BIl on the induced current is what the applied force must balance, so mechanical input equals electrical output.",
-          "why": "A full answer notes that the induced current I in the rod sits in the field B, so the rod experiences a force BIl opposing its motion (Lenz's law); at constant speed the applied force must equal this, so the mechanical power is Fv = BIlv. Substituting emf = Bvl gives Fv = I x emf = I x IR = I^2 R, the dissipated electrical power. Since no energy is stored in the rod at constant speed, the two must be equal, and computing both from separately derived quantities (F and v on one side, I and R on the other) catches an error in the emf, the current or the force. A numerical illustration such as B = 0.25 T, l = 0.80 m, v = 5.0 m/s, R = 0.50 ohm giving 2.0 W by both routes completes it."
+          "q": "A battery moves a total charge Q onto a capacitor, leaving a final potential difference V across it. Explain why the energy stored is ½QV and not QV, even though every coulomb ends up at the potential difference V.",
+          "concept": "Origin of the factor ½ in capacitor energy",
+          "why": "The p.d. across the capacitor is not V throughout the charging. It starts at zero and rises in proportion to the charge already there, v = q/C, reaching V only when the last of the charge arrives. Each small amount of charge dq is moved through the p.d. present at that moment, so the total work is the area under the straight-line graph of v against q: a triangle of area ½QV. Equivalently, the average p.d. during charging is ½V. QV would be the work if the whole charge were moved through the full p.d. V, which is what a battery holding a constant V supplies; the other half is lost as heat in the wires.\n\nA correct answer says the p.d. grows from 0 to V as charge is added, that the work is the area under the v-q line (a triangle) or uses the average p.d. ½V, and concludes ½QV = ½CV² = Q²/2C."
         }
       ]
     },
@@ -900,131 +904,131 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "A padlock has four digit wheels, each showing 0 to 9, and the combination has been forgotten. How many combinations must a brute force attack be prepared to try in the worst case?",
+          "q": "A padlock has 4 digits, each from 0 to 9, and the combination has been forgotten. Brute force tries every combination in order, and each attempt takes 3 seconds. What is the worst-case time to open it?",
           "options": [
-            "10,000",
-            "40",
-            "5,040",
-            "9,999"
+            "2 h 47 min",
+            "4 h 12 min",
+            "8 h 20 min",
+            "2 min"
           ],
-          "answerIndex": 0,
-          "concept": "Sizing the search space a brute force approach must enumerate: independent positions multiply, and repeated values are allowed.",
-          "why": "Each of the four wheels is set independently to one of ten values, so the space is 10 x 10 x 10 x 10 = 10,000. It is not 4 x 10 because the wheels combine rather than add, not 5,040 because digits may repeat so this is not a permutation of distinct digits, and not 9,999 because 0000 is itself a valid combination."
+          "answerIndex": 2,
+          "concept": "Time cost of a brute-force search",
+          "why": "There are 10 × 10 × 10 × 10 = 10 000 combinations, and in the worst case the right one comes last. 10 000 × 3 s = 30 000 s = 500 min = 8 h 20 min.\n\n2 h 47 min uses 1 second per try; 4 h 12 min uses 5040 combinations, forbidding repeated digits; 2 min uses 40 tries, adding the digit positions instead of multiplying."
         },
         {
           "type": "mcq",
-          "q": "Merge sort is used to arrange 2, 8, 4, 9, 3 in descending order. The list is split into [2, 8] and [4, 9, 3]. What are the two halves immediately before the final merge?",
+          "q": "In merge sort, two sorted lists are merged by repeatedly comparing their first elements and taking the smaller. Merging [2, 7, 11] with [3, 5, 12], which three elements are output first, in order?",
           "options": [
-            "[2, 8] and [3, 4, 9]",
-            "[8, 2] and [9, 4, 3]",
-            "[8, 2] and [9, 3, 4]",
-            "[9, 8, 4, 3, 2] and an empty list"
+            "2, 7, 11",
+            "2, 3, 5",
+            "2, 3, 7",
+            "3, 5, 12"
           ],
           "answerIndex": 1,
-          "concept": "Tracing Merge sort: each half is recursively sorted into the target order before the single final merge, and the target order here is descending.",
-          "why": "Each half is sorted in the order being asked for, which is descending, so [2, 8] becomes [8, 2] and [4, 9, 3] becomes [9, 4, 3]. Sorting the halves ascending would produce the wrong final order, and the fully sorted list is the output of the final merge, not its input."
+          "concept": "The merge step of merge sort",
+          "why": "Compare heads: 2 vs 3, take 2. Then 7 vs 3, take 3. Then 7 vs 5, take 5. The first three outputs are 2, 3, 5; the merge continues with 7, 11, 12.\n\n2, 7, 11 copies the whole first list before looking at the second; 2, 3, 7 takes alternately from each list instead of comparing; 3, 5, 12 starts with the second list."
         },
         {
           "type": "mcq",
-          "q": "Six activities have start times 2, 4, 1, 6, 9, 6 and end times 3, 5, 7, 8, 10, 10 respectively, and no two may be worked on at once. What is the maximum number of activities that can be performed?",
+          "q": "Six activities have start times 1, 3, 0, 5, 8, 5 and end times 2, 4, 6, 7, 9, 9 respectively. You can do only one activity at a time. Using the greedy rule that always picks the activity that finishes earliest among those that do not clash, how many activities can you do?",
           "options": [
-            "3",
+            "6",
+            "2",
             "5",
-            "4",
-            "6"
-          ],
-          "answerIndex": 2,
-          "concept": "Executing the greedy activity-selection procedure on the lesson's own data and checking each candidate for overlap.",
-          "why": "Taking the compatible activity that finishes earliest each time gives (2,3), then (4,5), then (6,8), then (9,10) — four activities. Activity (1,7) overlaps (2,3) and (4,5), and (6,10) overlaps (9,10), so neither can be added."
-        },
-        {
-          "type": "mcq",
-          "q": "For the activity-selection problem, which greedy selection rule can be relied on to produce the maximum number of activities?",
-          "options": [
-            "Repeatedly take the compatible activity that has the earliest start time among those remaining",
-            "Repeatedly take the compatible activity with the latest start time",
-            "Repeatedly take the compatible activity with the shortest duration",
-            "Repeatedly take the compatible activity with the earliest finishing time"
+            "4"
           ],
           "answerIndex": 3,
-          "concept": "Which local criterion is actually safe in a greedy algorithm — the criterion, not the greediness, is what makes the answer optimal.",
-          "why": "Finishing earliest leaves the largest possible remainder of the timeline free, so it can never rule out a better completion; on this data it yields four activities, whereas taking the earliest start first locks in (1,7) and yields only two. Shortest duration happens to give four here, but it is not reliable in general — a short activity sitting across a busy period can block two others."
+          "concept": "Greedy activity selection by earliest finish",
+          "why": "Sort by end time: (1, 2), (3, 4), (0, 6), (5, 7), (8, 9), (5, 9). Take (1, 2). (3, 4) starts after 2, take it. (0, 6) starts before 4, skip. (5, 7) starts after 4, take it. (8, 9) starts after 7, take it. (5, 9) clashes, skip. Four activities: (1, 2), (3, 4), (5, 7), (8, 9), and checking every subset confirms 4 is the maximum.\n\n6 ignores the clashes; 2 picks the earliest start (0, 6) first and is then left with only (8, 9); 5 drops only one of the two clashing activities."
         },
         {
           "type": "mcq",
-          "q": "A student writes a recursive function that returns F(n-1) + F(n-2) and finds it unusably slow for larger n. Which single change turns it into a dynamic programming solution?",
+          "q": "What does this print?\n\n```python\nn = 7\nf = [0, 1]\nfor i in range(2, n + 1):\n    f.append(f[i - 1] + f[i - 2])\nprint(f[n])\n```",
           "options": [
-            "Store each F(n) when first computed and return the stored value for any later call with the same n",
-            "Replace the recursion with a loop that computes F(n-1) + F(n-2) afresh on every pass through the sequence",
-            "Compute the first and second halves of the sequence separately and join them at the end",
-            "Generate candidate values in order and stop at the first one that satisfies the definition"
+            "13",
+            "21",
+            "8",
+            "7"
           ],
           "answerIndex": 0,
-          "concept": "Dynamic programming is the saving and reuse of sub-problem solutions, not the use of iteration and not decomposition on its own.",
-          "why": "Dynamic programming breaks a problem into sub-problems and saves their solutions so there is no need to compute a result again; storing each F(n) on first computation is exactly that. A loop that still recomputes each term from scratch changes the control structure without removing the repeated work, and Fibonacci does not split into independent halves."
+          "concept": "Tracing the dynamic-programming Fibonacci",
+          "why": "The loop runs for i = 2 to 7 and appends each sum of the previous two saved values: f becomes [0, 1, 1, 2, 3, 5, 8, 13]. f[7] is 13.\n\n21 is f[8], one iteration too many; 8 is f[6], stopping one short because range(2, n + 1) is read as ending before n; 7 prints n instead of f[n]."
         },
         {
           "type": "mcq",
-          "q": "A program must calculate the total cost of an order by adding up the cost of the products and then the VAT. Which arrangement is a pipeline in the sense used in the lesson?",
+          "q": "What does this brute-force program print?\n\n```python\ncount = 0\nfor a in range(1, 6):\n    for b in range(1, 6):\n        if a * b == 12:\n            count = count + 1\nprint(count)\n```",
           "options": [
-            "One process computes the product subtotal and a second computes the VAT from the original order, and their two outputs are added",
-            "One process computes the product subtotal and passes it to a VAT process, whose output goes to a total process",
-            "One process stores each product's cost the first time it is looked up so it is not fetched twice",
-            "One process tries each candidate total in turn until one matches the sum of the recorded line items"
-          ],
-          "answerIndex": 1,
-          "concept": "Recognising a pipeline by its serial data dependency — the output of one stage is the input of the next — rather than by the mere presence of several processes.",
-          "why": "Pipelining divides a task into a series of subtasks where the result of one process feeds into the next until the whole task is complete, which is what the subtotal-then-VAT-then-total chain does. Two processes working from the same original input and combined at the end are independent parts, not a pipeline; caching is dynamic programming and trial of candidates is brute force."
-        },
-        {
-          "type": "mcq",
-          "q": "A music-centric social network holds three years of five-star song ratings and playlist-sharing records, and wants to find out which of its platform features are used least so it can decide what to retire. Which approach fits?",
-          "options": [
-            "Performance testing, because the question is about how well the individual platform features are working",
-            "Hypothesis testing, because two groups of features are being compared",
-            "Data mining, because valuable information is extracted from a large data set by finding patterns",
-            "Visualisation, because usage figures are best presented as charts"
+            "1",
+            "3",
+            "2",
+            "4"
           ],
           "answerIndex": 2,
-          "concept": "Matching a described situation to the right named approach by what the work actually is, rather than by a surface word in the description.",
-          "why": "The task is extracting valuable information from a large accumulated data set by discovering patterns and relationships in order to inform a decision, which is the lesson's own definition of data mining and its own example. Performance testing evaluates a program against test scenarios before release, and no prediction is being stated and tested against a null hypothesis here."
+          "concept": "Tracing a brute-force double loop",
+          "why": "Every pair (a, b) with a and b from 1 to 5 is tried, 25 pairs in all. a × b = 12 only for (3, 4) and (4, 3), so count ends at 2.\n\n1 treats (3, 4) and (4, 3) as the same pair; 3 includes (2, 6), but 6 is outside range(1, 6); 4 also counts (1, 12) and (12, 1), which are outside the range too."
         },
         {
           "type": "mcq",
-          "q": "A student solving a maze generates every complete route from entrance to exit and then checks each one, and the program is far too slow. Which change addresses the actual waste?",
+          "q": "A delivery driver with five orders always drives next to whichever undelivered address is nearest to where she is now, and never changes a choice once made. Which computational approach is she using?",
           "options": [
-            "Divide and conquer: split the maze into quadrants, solve each quadrant, and then join the four partial routes",
-            "Greedy: at each junction take the corridor that heads most directly towards the exit and carry on from there",
-            "Dynamic programming: store every route already generated so that no route is ever generated a second time",
-            "Backtracking: extend a route step by step and, at a dead end, return to the last junction"
+            "Divide and conquer",
+            "Greedy algorithm",
+            "Dynamic programming",
+            "Brute force"
+          ],
+          "answerIndex": 1,
+          "concept": "Identifying the greedy approach in routing",
+          "why": "At each stage she takes the locally best option, the nearest address, and commits to it. Applying the best possible choice at every stage without revisiting it is the greedy algorithm. It is fast, and may or may not give the shortest total route.\n\nDivide and conquer would split the orders into groups solved separately; dynamic programming would save and compare sub-route results; brute force would try every order of the five addresses."
+        },
+        {
+          "type": "mcq",
+          "q": "A routing program is run once for each driver. Every run recomputes the shortest route from the kitchen to each of the 200 street corners from scratch, although the corners and roads never change between runs. Which change removes the waste?",
+          "options": [
+            "Compute the routes once, save them, and reuse the saved results on later runs",
+            "Try every possible order of visiting the corners instead",
+            "Split the city into zones and recompute every zone on every run",
+            "Drive to the nearest corner each time instead of computing routes"
+          ],
+          "answerIndex": 0,
+          "concept": "Diagnosing wasteful recomputation",
+          "why": "The same sub-problem, the route to each corner, is solved again on every run. Saving each solution so that it never has to be computed again is the dynamic-programming remedy, and it removes the waste without changing the answers.\n\nTrying every order is brute force and far slower; recomputing every zone on every run keeps the waste; driving to the nearest corner changes the routes to a greedy guess rather than removing repeated work."
+        },
+        {
+          "type": "mcq",
+          "q": "A sudoku solver fills one empty cell with a digit, moves to the next cell, and whenever it reaches a cell that no digit can fill, it erases the most recent digit and tries the next digit there instead. Which computational approach is this?",
+          "options": [
+            "Brute force",
+            "Greedy algorithm",
+            "Pipelining",
+            "Backtracking"
           ],
           "answerIndex": 3,
-          "concept": "Diagnosing wasted work: the fault is generating complete candidates that share an already-doomed prefix, which backtracking eliminates by rejecting partial states.",
-          "why": "Backtracking recognises failure at the dead end and resumes from the previous decision point, discarding in one move every complete route that would have shared that dead end. Storing generated routes does not help because the routes are all distinct, quadrant solutions do not join into valid routes since a corridor may cross a boundary anywhere, and the greedy heading rule can walk confidently into a dead end with no way back."
+          "concept": "Backtracking versus brute force",
+          "why": "The solver follows one option at each step, and when a state is rejected it returns to a previous state and tries the options not yet considered. That is backtracking, and it is what stops it from checking every complete grid.\n\nBrute force would write out every possible full grid and test each; greedy would never erase a choice; pipelining passes results between stages in a fixed series."
         },
         {
           "type": "short",
-          "q": "Explain why saving each Fibonacci value the first time it is computed makes such a large difference to the work done, when the arithmetic per term is identical either way.",
-          "concept": "Overlapping sub-problems: the naive recursion re-derives the same sub-problem many times over, and storage collapses that repetition, not the arithmetic.",
-          "why": "A full answer must show that the naive recursion for F(n) calls F(n-1) and F(n-2), and that these two calls both go on to require F(n-3), which is therefore computed twice, F(n-4) three times, and so on, so the number of calls grows roughly like the sequence itself. It must then say that dynamic programming saves each result the first time it is produced so that every later request is a lookup, leaving exactly one computation per value of n and one addition each. The point to land is that the saving comes from the sub-problems overlapping — the same F(k) is genuinely needed in many places — and that this is why the arithmetic per term being unchanged is irrelevant to the total cost."
+          "q": "Sort the numbers 6, 2, 9, 5, 1 into descending order using merge sort. Split the list into a first part of two numbers and a second part of three, keep splitting until every part holds one number, then merge, taking the larger head first. Write out every split and every merge. Show your working.",
+          "concept": "Tracing merge sort",
+          "why": "Split: [6, 2, 9, 5, 1] → [6, 2] and [9, 5, 1]. [6, 2] → [6] and [2]. [9, 5, 1] → [9] and [5, 1]; [5, 1] → [5] and [1]. Merge, larger head first: [6] + [2] → [6, 2]; [5] + [1] → [5, 1]; [9] + [5, 1] → [9, 5, 1]; finally [6, 2] + [9, 5, 1]: compare 6 and 9, take 9; 6 and 5, take 6; 2 and 5, take 5; 2 and 1, take 2; then 1 → [9, 6, 5, 2, 1].\n\nFinal answer: 9, 6, 5, 2, 1. A correct answer shows the splits down to single numbers and each merge by comparing heads; the final list alone is not enough. Merging in ascending order, 1, 2, 5, 6, 9, is the wrong direction."
         },
         {
           "type": "short",
-          "q": "Explain why the greedy choice is safe when finding the largest two-digit number from the set 5, 9, 1, 4, 2 and 6, but not when a delivery driver greedily drives to the nearest remaining customer.",
-          "concept": "A greedy rule is optimal only when the local choice cannot degrade the best completion available afterwards; place value guarantees this, geography does not.",
-          "why": "A full answer must work the first case: the tens digit is worth ten times the units digit, so any number starting with 9 beats every number starting with anything smaller no matter what follows, and picking 9 then the largest remaining, 6, gives 96. The mechanism is that the first choice is worth more than everything the remaining choices can add up to, so it can never be regretted. It must then contrast the delivery case: taking the nearest stop next can leave the driver at the wrong end of the city with the remaining customers scattered behind, so a small immediate saving buys a large later detour and the total distance is worse. The general statement to reach is that greedy is optimal exactly when the local best cannot rule out a better completion, and that this must be argued for each problem rather than assumed."
+          "q": "This naive recursive Fibonacci recomputes the same values many times.\n\n```python\ndef fib(n):\n    if n < 2:\n        return n\n    return fib(n - 1) + fib(n - 2)\n```\n\nRewrite it as a dynamic-programming version that saves each value in a list as it is computed. Then give fib(10) and state how many additions your version performs to reach it. Show your working.",
+          "concept": "Converting naive recursion to dynamic programming",
+          "why": "Model answer:\n\n```python\ndef fib(n):\n    f = [0, 1]\n    for i in range(2, n + 1):\n        f.append(f[i - 1] + f[i - 2])\n    return f[n]\n```\n\nThe list grows 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, so fib(10) = 55. Each loop pass does one addition, for i = 2 to 10, which is 9 additions; the naive version makes 177 calls for the same value. A correct answer stores results in a list or table, reads earlier entries instead of recursing, gives 55, and gives 9 additions (10 is accepted if the answer counts an addition for f[1] explicitly). A version that still calls fib(n − 1) and fib(n − 2) without saving results is not dynamic programming."
         },
         {
           "type": "short",
-          "q": "Explain why the splitting stage of Merge sort does no sorting at all, and where the ordering actually comes from.",
-          "concept": "In divide and conquer the decomposition only creates trivially solved base cases; the combine step is what produces the answer.",
-          "why": "A full answer must state that splitting only halves the list repeatedly until each part holds a single element, and that these single-element parts are chosen as the base case precisely because a one-element list is already in order by definition — no comparison has been made at any point during the splitting. It must then locate the work in the merge: two already-ordered lists are combined by repeatedly comparing their front elements and taking the one that belongs first in the target order, so every comparison in the algorithm happens on the way back up. It should draw the divide and conquer moral: the split reduces the problem to something trivially solvable, and the value of the strategy rests on the combine step being cheaper than sorting the original directly."
+          "q": "An order has products costing ₦2000 and ₦1500. VAT of 7.5% is charged on the product total, and a delivery fee of ₦500 is added after VAT. Lay this out as a pipeline of three stages, show what each stage passes to the next, and give the final total. Then state the total if the delivery fee were added before VAT instead. Show your working.",
+          "concept": "Laying out a pipelined calculation",
+          "why": "Stage 1, sum the products: 2000 + 1500 = 3500, passed to stage 2. Stage 2, add 7.5% VAT: 3500 × 1.075 = 3762.5, passed to stage 3. Stage 3, add delivery: 3762.5 + 500 = 4262.5. Final total ₦4262.50.\n\nIf delivery came before VAT the order of stages changes and so does the answer: (3500 + 500) × 1.075 = 4300. A correct answer shows the three stages in order with 3500 and 3762.5 handed on, gives ₦4262.50, and gives ₦4300 for the reordered pipeline. Adding VAT as 7.5 rather than 7.5% (3507.5) is wrong."
         },
         {
           "type": "short",
-          "q": "Explain why a food delivery company should not conclude that its new routing program is ready for release simply because it produced correct routes on last month's real orders.",
-          "concept": "Performance testing requires scenarios chosen against explicit success criteria, including erroneous input and stress conditions, not a single favourable replay.",
-          "why": "A full answer must say that performance testing means devising a set of test scenarios and success criteria and measuring the program against them before release, so one replay of ordinary historical data is a single scenario with no stated criterion beyond 'it looked right'. It must give the mechanism of the gap: last month's orders contain only the address formats, volumes and road conditions that happened to occur, so the run exercises none of the cases that break routing software. It must name the two kinds of test the lesson specifies — feeding erroneous data, such as malformed or unreachable addresses, to check errors are handled effectively, and simulating real-life extremes such as a peak-hour surge, which is stress testing — and conclude that without measurable success criteria such as maximum route time or fuel cost there is nothing for the result to be judged against."
+          "q": "A food delivery service in a busy city wants to cut delivery times and fuel costs. Explain how a greedy algorithm would plan a driver's route and how divide and conquer would organise the city's deliveries, and give one way each approach could produce a poor result.",
+          "concept": "Greedy and divide and conquer applied to routing",
+          "why": "Greedy: at each stop the driver goes to the nearest undelivered order, committing to the locally best choice every time. It is simple and fast, but it carries no optimality guarantee: chasing nearby orders can leave a far-off order for last and force a long return trip, so the total route can be much longer than the best one. Divide and conquer: split the city into zones, plan each zone's deliveries separately (a simpler problem), then combine the zone routes. It can fail when the combination step is hard, for example orders near a zone boundary that would be cheaper to serve from the neighbouring zone, so the combined plan is worse than a whole-city plan.\n\nA correct answer describes the nearest-next rule for greedy and the zone split plus recombination for divide and conquer, and gives a concrete failure for each: greedy's missing guarantee, and the cost of recombining the parts."
         }
       ],
       "slot": "fast"
@@ -1039,68 +1043,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Which European power first ran a regular slave trade from West Africa to the Americas?",
+          "q": "Put these four events in the order they happened: (A) Buxton's bill to abolish slavery; (B) the Royal Charter that created the Royal Niger Company; (C) Portuguese sailors begin exploring the West African coast; (D) the annexation of Lagos.",
           "options": [
-            "The Dutch",
-            "The British",
-            "The Portuguese",
-            "The Spanish"
+            "C, A, B, D",
+            "C, D, A, B",
+            "C, A, D, B",
+            "A, C, D, B"
           ],
           "answerIndex": 2,
-          "concept": "Portugal as the first slaving power and builder of the triangular route",
-          "why": "The Portuguese were first and developed the triangular route; the Dutch joined in the 17th century, the British were merely the biggest in the 18th, and Spain held the Americas under the Pope's division."
+          "concept": "Sequence from Portuguese incursion to company rule",
+          "why": "Portuguese exploration began in the early 15th century (C); Buxton's bill was 1833 (A); Lagos was annexed in 1861 (D); the Royal Charter came in 1886 (B). So the order is C, A, D, B. The first option puts the charter before the annexation, the second puts the annexation before abolition, and the last puts abolition before the Portuguese had even reached the coast."
         },
         {
           "type": "mcq",
-          "q": "Who is cited for the figure of over 7 million Africans dying in transit?",
+          "q": "A body operated as both a trading company and an administrator, paid dividends solely from trade profits, and by 1887 controlled all the territories in the basin of the Niger. Which body was it?",
           "options": [
-            "Phillip Curtin",
-            "Paul Lovejoy",
-            "Wole Soyinka",
-            "Claude Ake"
-          ],
-          "answerIndex": 1,
-          "concept": "Which authority gives which claim about the trade",
-          "why": "Lovejoy gives the deaths in transit; Curtin called it the largest intercontinental migration over 300 years, Soyinka named the twin evils of slavery and colonialism, and Ake blamed stagnant productive forces."
-        },
-        {
-          "type": "mcq",
-          "q": "Who sponsored the 1833 bill to abolish slavery?",
-          "options": [
-            "Thomas Fowell Buxton",
-            "Macgregor Laird",
-            "John Beecroft",
-            "George Goldie-Taubman"
+            "The Royal Niger Company",
+            "The Central African Company",
+            "The Oil River Protectorate",
+            "The Company of African Merchants"
           ],
           "answerIndex": 0,
-          "concept": "Buxton and the 1833 abolition bill",
-          "why": "Buxton, a British parliamentarian, argued the trade must be stopped from Africa itself. Laird ran the 1857 expedition, Beecroft was appointed in 1849, and Goldie-Taubman amalgamated the trading companies."
+          "concept": "Royal Niger Company as trader and administrator",
+          "why": "The Royal Niger Company (the chartered National African Company, 1886) traded and administered at once, paid dividends solely from trade profits, and by 1887 controlled all the territories in the Niger basin. The Central African Company was Laird's 1858 joint stock company; the Oil River Protectorate was a British protectorate of seven districts, not a company; the Company of African Merchants was one of the many rival firms of the 1860s."
         },
         {
           "type": "mcq",
-          "q": "After the bombardment of Lagos, who fled to Epe?",
+          "q": "Which of the following statements about the events leading to the annexation of Lagos is correct?",
           "options": [
-            "Akitoye",
-            "Beecroft",
-            "Consul Hewett",
-            "Kosoko"
+            "Lagos was annexed in 1851, immediately after the bombardment",
+            "Kosoko refused the 1851 treaty and, after the bombardment, fled to Epe",
+            "Akitoye refused the 1851 treaty and was driven out by the bombardment",
+            "Beecroft was appointed in 1861 to supervise the newly annexed Lagos"
           ],
-          "answerIndex": 3,
-          "concept": "Kosoko versus Akitoye in the 1851 Lagos succession",
-          "why": "Kosoko refused the 1851 treaty, was bombarded, and fled to Epe; Akitoye regained the seat on 29 December 1851. Beecroft and Hewett were British officials, not claimants."
+          "answerIndex": 1,
+          "concept": "Annexation of Lagos",
+          "why": "The British signed a treaty with Kosoko in 1851 to end the slave trade; he refused, Lagos was bombarded, and on 29 December 1851 Akitoye regained the seat as Kosoko fled to Epe. The annexation itself came ten years later, in 1861, so the first option has the wrong year. The third option swaps the two rivals. Beecroft was appointed in 1849, before all of this, marking the beginning of Britain's direct influence."
         },
         {
           "type": "mcq",
-          "q": "In which year was the Royal Charter finally granted, creating the Royal Niger Company?",
+          "q": "Which of the following is NOT one of the four named consequences of the Portuguese incursion into the Niger Area?",
           "options": [
-            "1881",
-            "1882",
-            "1884",
-            "1886"
+            "Opening up the area to the rest of the world",
+            "A series of wars to keep up the supply of slaves",
+            "The abandonment of African cultures",
+            "The decline of brass casting in Benin"
           ],
           "answerIndex": 3,
-          "concept": "The charter sequence 1881, 1882, 1886",
-          "why": "1881 the application was refused for lack of capacity, by 1882 capital reached one million pounds but French firms blocked it, and 1886 the charter was granted. 1884 is the Hewett tour and the Oil River Protectorate."
+          "concept": "Consequences of the Portuguese incursion",
+          "why": "The four named consequences are: opening up the area to the rest of the world (leading eventually to colonialism), a series of wars to continue the supply of slaves, the abandonment of African cultures, and a major role in the trans-Atlantic slave trade. Brass casting in Benin actually grew as a result of Portuguese trade relations, so its decline is the outsider."
+        },
+        {
+          "type": "mcq",
+          "q": "What was the Spanish Asiento?",
+          "options": [
+            "The right to trade in slaves in the New World",
+            "The Pope's division of the Old World between Portugal and Spain",
+            "The tax Nigerian chiefs charged on each slave sold",
+            "The sea crossing known as the Middle Passage"
+          ],
+          "answerIndex": 0,
+          "concept": "Definition of the Asiento",
+          "why": "The Asiento was the Spanish system granting the right to trade in slaves in the New World; it later became transferable to other Europeans, including the Portuguese. The Pope's division gave Africa to Portugal and the Americas to Spain, which is a different arrangement. The per-slave tax was imposed by Nigerian chiefs at the ports, and the Middle Passage is the Atlantic crossing itself."
         }
       ]
     },
@@ -1114,159 +1118,159 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "This link should reach another site but opens a missing page on your own domain. Why?\n```html\n<a href=\"example.com\">Example</a>\n```",
+          "q": "```html\n<table>\n  <tr><th>Item</th><th>Qty</th><th>Price</th></tr>\n  <tr><td>Pen</td><td>2</td><td>100</td></tr>\n  <tr><td>Book</td><td>1</td><td>900</td></tr>\n</table>\n```\nHow many rows does this render, and how many of its cells are header cells?",
           "options": [
-            "`<a>` needs a `src` attribute, not `href`",
-            "External links must carry `target=\"_blank\"`",
-            "The `href` has no protocol, so it reads as a relative path",
-            "The anchor text must match the domain name"
+            "2 rows, 3 header cells",
+            "3 rows, 9 header cells",
+            "3 rows, 3 header cells",
+            "9 rows, 3 header cells"
           ],
           "answerIndex": 2,
-          "concept": "External links need the full URL with the protocol",
-          "why": "An external link needs the complete URL including `https://`; without it the browser treats `example.com` as a file in the current folder. `target=\"_blank\"` only chooses where a link opens and would not fix the address."
+          "concept": "Reading table structure from tr, th and td",
+          "why": "Each `<tr>` is one row, so three rows. Header cells are `<th>`: the first row holds three of them; the other six cells are `<td>` data cells.\n\n2 rows forgets that the header row is a row; 9 header cells counts every cell as a header; 9 rows counts cells instead of rows."
         },
         {
           "type": "mcq",
-          "q": "Clicking the label does not focus the box. Why?\n```html\n<label for=\"mail\">Email</label>\n<input type=\"email\" id=\"email\" name=\"mail\">\n```",
+          "q": "Clicking the link on line 1 does not scroll the page. Which line has the bug, and what is the fix?\n\n```html\n1  <a href=\"#fees\">Jump to fees</a>\n2  <p>Lots of text here.</p>\n3  <h2 name=\"fees\">Fees</h2>\n```",
           "options": [
-            "`for` must match the input's `id`, and here it matches the `name`",
-            "`for` must match the input's `name`, and here it matches the `id`",
-            "`<label>` cannot be used with `type=\"email\"`",
-            "The input needs `required` before a label will bind to it"
-          ],
-          "answerIndex": 0,
-          "concept": "label for pairs with id, not name",
-          "why": "`for` pairs a label with the input whose `id` it names, so `for=\"mail\"` finds nothing on this page. The `name` attribute has a different job entirely: it labels the value when the form is submitted."
-        },
-        {
-          "type": "mcq",
-          "q": "A login form works, but after submitting, the password is sitting in the address bar. What should change?",
-          "options": [
-            "Change `action` to a different URL",
-            "Change `method` from GET to POST",
-            "Add `enctype=\"multipart/form-data\"`",
-            "Change the input's `type` to `password`"
+            "Line 1: href should be \"fees.html\"",
+            "Line 3: the target needs id=\"fees\"",
+            "Line 1: href should be \"#fees.html\"",
+            "Line 3: the heading should be an <a> element"
           ],
           "answerIndex": 1,
-          "concept": "GET exposes data in the URL; POST uses the body",
-          "why": "GET appends form data to the URL as query parameters, so POST, which sends it in the request body, is the method for sensitive data. `type=\"password\"` only hides the characters on screen and changes nothing about how they travel."
+          "concept": "Same-page links with href=\"#id\"",
+          "why": "A same-page link `href=\"#fees\"` jumps to the element whose id is fees. Line 3 uses name instead of id, so no element matches and nothing happens; changing it to `<h2 id=\"fees\">` fixes it.\n\nfees.html would load a separate file rather than a section; #fees.html looks for an id of fees.html, which does not exist; the target does not have to be an `<a>`, any element with the id will do."
         },
         {
           "type": "mcq",
-          "q": "How many header cells and how many data cells does this render?\n```html\n<table>\n  <tr><th>Name</th><th>Score</th></tr>\n  <tr><td>Ada</td><td>90</td></tr>\n</table>\n```",
+          "q": "index.html and team.html sit in the same folder at https://shop.ng/. On index.html, which href makes an internal link to team.html?",
           "options": [
-            "2 header cells and 4 data cells",
-            "4 header cells and 2 data cells",
-            "2 header cells and 2 data cells",
-            "0 header cells and 4 data cells"
+            "https://team.html",
+            "#team.html",
+            "www.shop.ng",
+            "team.html"
+          ],
+          "answerIndex": 3,
+          "concept": "Relative URLs for internal links",
+          "why": "An internal link within the same site uses a relative URL: from https://shop.ng/index.html, `href=\"team.html\"` resolves to https://shop.ng/team.html.\n\nhttps://team.html treats team.html as a host name, a different site that does not exist; #team.html is a same-page anchor looking for an id; www.shop.ng has no scheme, so it is read as a relative path to a file called www.shop.ng."
+        },
+        {
+          "type": "mcq",
+          "q": "```html\n<form action=\"/search\" method=\"GET\">\n  <input type=\"text\" name=\"q\" value=\"css\">\n  <input type=\"number\" name=\"page\" value=\"2\">\n  <button type=\"submit\">Go</button>\n</form>\n```\nThe user submits without changing anything. What does the address bar show?",
+          "options": [
+            "/search?q=css&page=2",
+            "/search/css/2",
+            "/search, with q and page in the request body",
+            "/search#q=css&page=2"
+          ],
+          "answerIndex": 0,
+          "concept": "GET form submission builds a query string",
+          "why": "With method GET the browser appends each control's name=value pair to the action URL as query parameters, after a ? and joined by &: /search?q=css&page=2.\n\n/search/css/2 turns the values into path segments, which GET never does; data in the request body is what POST does; a # begins a fragment, which the server never receives."
+        },
+        {
+          "type": "mcq",
+          "q": "```html\n<input type=\"radio\" name=\"size\" value=\"s\"> Small\n<input type=\"radio\" name=\"size\" value=\"m\"> Medium\n<input type=\"radio\" name=\"size\" value=\"l\"> Large\n<input type=\"radio\" name=\"colour\" value=\"red\"> Red\n<input type=\"radio\" name=\"colour\" value=\"blue\"> Blue\n```\nWhat is the largest number of these buttons that can be selected at the same time?",
+          "options": [
+            "1",
+            "2",
+            "5",
+            "3"
+          ],
+          "answerIndex": 1,
+          "concept": "Radio button groups share a name",
+          "why": "Radio buttons that share a name form one mutually exclusive group, so only one can be chosen per group. There are two groups, size and colour, so at most two buttons are selected at once.\n\n1 treats all five as one group; 5 treats them like checkboxes, which allow any number; 3 is the number of size options, not of groups."
+        },
+        {
+          "type": "mcq",
+          "q": "`<input type=\"text\" name=\"code\" pattern=\"[A-Z]{3}[0-9]{4}\" required>`\n\nWhich entry passes the browser's validation?",
+          "options": [
+            "AB12345",
+            "1234ABC",
+            "ABC1234",
+            "ABC123"
           ],
           "answerIndex": 2,
-          "concept": "th is a header cell, td is a data cell",
-          "why": "`<th>` makes a header cell and `<td>` a data cell, so these two rows give two of each. Counting all four cells as data ignores that the first row was written with `<th>`."
+          "concept": "Validation with the pattern attribute",
+          "why": "The pattern demands exactly three capital letters followed by exactly four digits, and it must match the whole value: ABC1234 does.\n\nAB12345 has two letters and five digits; 1234ABC has the digits before the letters, the wrong order; ABC123 has only three digits."
         },
         {
           "type": "mcq",
-          "q": "What does this render?\n```html\n<dl><dt>HTML</dt><dd>HyperText Markup Language</dd></dl>\n```",
+          "q": "`<input type=\"number\" name=\"age\" min=\"18\" max=\"60\">`\n\nWhich of these values does the browser refuse to submit?",
           "options": [
-            "A numbered list of two items",
-            "A table with one row and two columns",
-            "A heading followed by a paragraph",
-            "A term with its definition indented beneath it"
+            "18",
+            "60",
+            "45",
+            "17"
           ],
           "answerIndex": 3,
-          "concept": "Definition lists: dl, dt and dd",
-          "why": "`<dl>` is a definition list, `<dt>` holds the term and `<dd>` its definition, which browsers indent under the term. A numbered list would need `<ol>` with `<li>` items instead."
+          "concept": "Numeric limits with min and max",
+          "why": "min and max bound the value of a numeric input inclusively, so anything from 18 to 60 is accepted and 17 is refused.\n\n18 and 60 sit exactly on the limits, which are allowed; 45 is inside the range."
         },
         {
           "type": "mcq",
-          "q": "Which of these lines shows nothing on the page?",
+          "q": "```html\n<form action=\"/upload\" method=\"POST\">\n  <input type=\"file\" name=\"cv\">\n  <button type=\"submit\">Send</button>\n</form>\n```\nThe server receives the file's name but none of its contents. What is missing?",
           "options": [
-            "`<link rel=\"stylesheet\" href=\"styles.css\">`",
-            "`<header class=\"top\">Site name</header>`",
-            "`<h1>Welcome to the site</h1>`",
-            "`<p>Hello there</p>`"
+            "enctype=\"multipart/form-data\" on the <form>",
+            "method=\"GET\" instead of POST",
+            "multiple on the <input>",
+            "type=\"upload\" instead of file"
           ],
           "answerIndex": 0,
-          "concept": "head content versus body content",
-          "why": "`<link>` belongs in `<head>`, which carries meta-information and renders nothing visible. `<header>` reads like the same word but is a semantic element inside `<body>`, so it does show."
+          "concept": "File uploads need multipart/form-data",
+          "why": "File uploads need the form body encoded as multipart/form-data; without `enctype=\"multipart/form-data\"` the browser sends only the file name as text.\n\nGET puts data in the URL and cannot carry a file at all; multiple only lets the user pick several files; there is no input type upload, file is the correct type."
         },
         {
           "type": "mcq",
-          "q": "A form must let one user pick several toppings at once. Which control?",
+          "q": "```html\n<ol>\n  <li>Wake</li>\n  <li>Code</li>\n</ol>\n<ul>\n  <li>Sleep</li>\n</ul>\n```\nWhat does this render?",
           "options": [
-            "`<input type=\"radio\">`",
-            "`<input type=\"checkbox\">`",
-            "`<select>` without `multiple`",
-            "`<input type=\"text\">`"
+            "Bulleted Wake and Code, then 1. Sleep",
+            "1. Wake, 2. Code, then a bulleted Sleep",
+            "1. Wake, 2. Code, 3. Sleep",
+            "Bulleted Wake, Code and Sleep"
           ],
           "answerIndex": 1,
-          "concept": "Checkboxes allow several selections",
-          "why": "Checkboxes let the user tick one or more options from a list, which is what several toppings needs. Radio buttons are for picking one option from mutually exclusive choices, and a plain `<select>` also takes only one."
+          "concept": "Rendering ordered and unordered lists",
+          "why": "`<ol>` is an ordered list, so its items are numbered 1 and 2; `<ul>` is an unordered list, so Sleep gets a bullet. The numbering does not continue into the second list because it is a separate list.\n\nBullets then a number swaps ol and ul; 1, 2, 3 treats the two lists as one ordered list; all bullets ignores the ol."
         },
         {
           "type": "mcq",
-          "q": "Which best practice does this line miss?\n```html\n<img src=\"chart.png\">\n```",
+          "q": "`<img href=\"logo.png\" alt=\"Company logo\">`\n\nThe image does not appear; only the text Company logo shows. What is the fix?",
           "options": [
-            "It needs an `href` as well as a `src`",
-            "It has no `alt` text for screen readers or a failed load",
-            "Images must be wrapped in a `<figure>`",
-            "`<img>` needs a closing `</img>` tag"
-          ],
-          "answerIndex": 1,
-          "concept": "alt text on images",
-          "why": "`alt` supplies alternative text, which screen readers announce and browsers display when the file fails to load. `href` is a link attribute, so adding it to an image would do nothing at all."
-        },
-        {
-          "type": "mcq",
-          "q": "Which element should hold the site's main navigation menu?",
-          "options": [
-            "`<div>`",
-            "`<header>`",
-            "`<nav>`",
-            "`<section>`"
+            "Replace alt with title",
+            "Add target=\"_blank\"",
+            "Replace href with src",
+            "Wrap the tag in <a>"
           ],
           "answerIndex": 2,
-          "concept": "Semantic elements for navigation",
-          "why": "`<nav>` is the semantic element for navigation menus, which the week names as proper practice for links. A `<div>` would look identical on screen but tells screen readers and search engines nothing."
+          "concept": "src on img versus href on a",
+          "why": "`<img>` takes its file from the src attribute; href belongs to `<a>` and `<link>`. With no src the browser has nothing to load and falls back to the alt text.\n\ntitle would only add a tooltip; target and `<a>` affect where a link opens, and there is no link here."
         },
         {
           "type": "mcq",
-          "q": "What does this render?\n```html\n<p>Line one<br>Line two</p>\n```",
+          "q": "On a form input, what is the difference between the name and id attributes?",
           "options": [
-            "Two paragraphs with a blank line between them",
-            "One line, since `<br>` only adds a space",
-            "Two lines, both in bold",
-            "One paragraph broken onto two lines"
-          ],
-          "answerIndex": 3,
-          "concept": "br breaks a line inside a paragraph",
-          "why": "`<br>` forces the text onto a new line without ending the paragraph. Two separate `<p>` elements would be needed for two paragraphs, and they would also add the spacing between them."
-        },
-        {
-          "type": "mcq",
-          "q": "Which validation attribute stops the form submitting while a field is empty?",
-          "options": [
-            "`required`",
-            "`pattern`",
-            "`maxlength`",
-            "`placeholder`"
+            "name is sent with the form data; id uniquely identifies the element for labels and scripts",
+            "id is sent with the form data; name is only for styling",
+            "They are interchangeable; either one is submitted",
+            "name sets the default value; id sets the placeholder"
           ],
           "answerIndex": 0,
-          "concept": "HTML5 validation attributes",
-          "why": "`required` forces the field to be filled before the form will submit. `placeholder` only shows grey hint text, which is easy to mistake for a value already being present."
+          "concept": "name versus id on form controls",
+          "why": "When the form is submitted each control contributes name=value, so name is what the server sees. id is a unique identifier on the page, used by `<label for=\"...\">` and by JavaScript to find the element; it is not submitted.\n\nid is never sent as the field name; the two are not interchangeable; the default value is the value attribute and the hint text is placeholder."
         },
         {
           "type": "mcq",
-          "q": "Which pairing of attribute and element is correct?",
+          "q": "What is anchor text?",
           "options": [
-            "`action` on `<input>`",
-            "`src` on `<a>`",
-            "`href` on `<img>`",
-            "`method` on `<form>`"
+            "The URL held in the href attribute",
+            "The id of the element a link jumps to",
+            "The text shown in the browser's title bar",
+            "The visible, clickable part of a hyperlink"
           ],
           "answerIndex": 3,
-          "concept": "Which attribute belongs on which element",
-          "why": "`method` is a `<form>` attribute and chooses GET or POST. `action` also belongs to the form rather than an input, while `src` is for `<img>` and `<script>` and `href` for `<a>` and `<link>`."
+          "concept": "Definition of anchor text",
+          "why": "Anchor text is the content between `<a>` and `</a>`: the words the user sees and clicks, which should describe where the link leads.\n\nThe URL is the destination given by href; the id belongs to the target of a same-page link; the title bar text comes from `<title>` in the head."
         }
       ],
       "full": true
@@ -1281,68 +1285,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Two independent clauses plus at least one dependent clause makes which type?",
+          "q": "By structure, classify this sentence: 'Amaka and Bisi sang at the wedding.'",
           "options": [
             "Simple",
+            "Compound",
             "Complex",
-            "Compound-complex",
-            "Compound"
+            "Compound-complex"
           ],
-          "answerIndex": 2,
-          "concept": "The clause count that defines compound-complex",
-          "why": "Compound-complex needs two or more independent clauses and at least one dependent clause. Complex has only one independent clause, compound has no dependent clause, and simple has one clause in total."
+          "answerIndex": 0,
+          "concept": "Classifying a sentence by structure",
+          "why": "A simple sentence consists of one independent clause. Two subjects sharing one verb is still a single clause, so the sentence is simple.\n\n'Compound' is the trap: a compound sentence needs two or more independent clauses joined by a coordinating conjunction or a semicolon, not two nouns joined by 'and'. Complex needs a dependent clause; compound-complex needs both features."
         },
         {
           "type": "mcq",
-          "q": "Which functional type gives commands, instructions or requests?",
+          "q": "By function, classify this sentence: 'Hand in the attendance sheet before noon.'",
           "options": [
             "Declarative",
             "Imperative",
             "Interrogative",
-            "Exclamatory"
+            "Conditional"
           ],
           "answerIndex": 1,
-          "concept": "Imperative versus declarative",
-          "why": "An imperative commands, with its subject 'you' understood rather than written. Declarative states information, interrogative asks, and exclamatory expresses strong emotion."
+          "concept": "Classifying a sentence by function",
+          "why": "Imperative sentences give commands, instructions or requests and tell someone to do something; the subject 'you' is understood rather than written.\n\nA declarative would state information with an explicit subject ('You handed in the sheet'); an interrogative asks a question and ends in '?'; a conditional expresses an 'if' condition and its likely result."
         },
         {
           "type": "mcq",
-          "q": "Which word class listed below is a function word class?",
+          "q": "In the sentence 'They have been digging quietly under the mountain', which of these words is a function word?",
           "options": [
-            "Nouns",
-            "Verbs",
-            "Adjectives",
-            "Pronouns"
+            "digging",
+            "quietly",
+            "mountain",
+            "been"
           ],
           "answerIndex": 3,
-          "concept": "Function words include pronouns and auxiliaries",
-          "why": "Function words are conjunctions, auxiliary verbs, prepositions, articles and pronouns. Nouns, verbs, adjectives and adverbs are the content or lexical words that carry the meaning."
+          "concept": "Function words versus content words",
+          "why": "Function words are conjunctions, auxiliary or helping verbs, prepositions, articles and pronouns; 'been' is a helping verb, so it is a function word even though it looks like a verb.\n\n'digging' is a main verb, 'quietly' an adverb and 'mountain' a noun: all content words, which carry the main meaning and are stressed in speech."
         },
         {
           "type": "mcq",
-          "q": "Under the Rule of Proximity Agreement, the verb agrees with which subject?",
+          "q": "Choose the verb that satisfies concord: 'Either the lecturers or the registrar ___ the timetable each term.'",
           "options": [
-            "The first subject",
-            "The closest subject",
-            "The plural subject",
-            "The longer subject"
+            "sign",
+            "have signed",
+            "signs",
+            "are signing"
+          ],
+          "answerIndex": 2,
+          "concept": "Rule of Proximity Agreement with 'or'",
+          "why": "With 'or' in the subject, the Rule of Proximity Agreement makes the verb align with the closest subject. The nearest subject is 'the registrar', which is singular, so the verb is 'signs'.\n\n'sign', 'have signed' and 'are signing' all agree with the plural 'lecturers', the first subject, which is the common mistake of matching the first element rather than the nearest one."
+        },
+        {
+          "type": "mcq",
+          "q": "Which term names the set of rules governing the agreement between different elements in a sentence?",
+          "options": [
+            "Syntax",
+            "Concord",
+            "Structure",
+            "Function"
           ],
           "answerIndex": 1,
-          "concept": "Proximity agreement with multiple subject elements",
-          "why": "With several subject elements, especially joined by 'or' or 'nor', the verb aligns with the nearest subject. Plain subject-verb agreement matches the single subject's number instead."
-        },
-        {
-          "type": "mcq",
-          "q": "In spoken English, which words are stressed or emphasised?",
-          "options": [
-            "Content words",
-            "Function words",
-            "Articles and prepositions",
-            "Auxiliary verbs"
-          ],
-          "answerIndex": 0,
-          "concept": "The stress test for content versus function words",
-          "why": "Content words are accentuated while function words remain non-stressed, which is why the distinction aids comprehension and pronunciation. Articles, prepositions and auxiliaries are all function words."
+          "concept": "Definition of concord",
+          "why": "Concord, or grammatical agreement, is the set of rules governing agreement between different elements in a sentence; its fundamental rule is subject-verb agreement.\n\nSyntax is the branch of language that sentences belong to; structure describes how a sentence is built from parts; function describes a sentence's purpose."
         }
       ]
     },
@@ -1356,68 +1360,68 @@
       "questions": [
         {
           "type": "mcq",
-          "q": "Which plot comes out as a straight line in this experiment?",
+          "q": "One recorded row for a tungsten resistor is V = 12.0 V, I = 0.40 A. Before plotting P against I², complete the row: find I² and P.",
           "options": [
-            "I against V",
-            "V against I",
-            "P against I²",
-            "R against V"
+            "I² = 0.80 A², P = 4.80 W",
+            "I² = 0.160 A², P = 30.0 W",
+            "I² = 0.160 A², P = 4.80 W",
+            "I² = 0.160 A², P = 1.92 W"
           ],
           "answerIndex": 2,
-          "concept": "Which of the two graphs is straight",
-          "why": "P against I² is the straight line that verifies Joule's law. I against V is the curve that shows the resistor is non-ohmic, which is the whole point of the experiment."
+          "concept": "Computing I² and P = IV from a recorded row",
+          "why": "I² = 0.40 × 0.40 = 0.160 A². Power is computed from the recorded pair as P = IV = 0.40 × 12.0 = 4.80 W.\n\n0.80 A² doubles I instead of squaring it; 30.0 W is V/I, which is the resistance at that point (30 Ω), not the power; 1.92 W multiplies I² by V as if V were the resistance in P = I²R."
         },
         {
           "type": "mcq",
-          "q": "On the P against I² graph, what does the gradient equal?",
+          "q": "A graph of P (W) against I² (A²) for an iron resistor is a straight line through (0.040 A², 1.44 W) and (0.160 A², 5.76 W). What does the gradient represent, and what is its value?",
           "options": [
-            "The resistance R",
-            "The reciprocal of resistance, 1/R",
-            "The current I",
-            "The power P"
+            "The resistance, 36 Ω",
+            "The resistance, 21.6 Ω",
+            "The power dissipated, 36 W",
+            "The conductance, 0.028 Ω"
           ],
           "answerIndex": 0,
-          "concept": "Gradient of P against I² is R",
-          "why": "Comparing P = R·I² with y = mx + c makes the gradient R, with an intercept of zero. 1/R is the slope of an I against V graph, a different pair of axes."
+          "concept": "Gradient of a P against I² graph as the resistance",
+          "why": "Joule's law P = I²R compared with y = mx + c has y = P, x = I², so the gradient m = R. Gradient = (5.76 − 1.44)/(0.160 − 0.040) = 4.32/0.120 = 36 Ω.\n\n21.6 Ω divides by the change in I (0.40 − 0.20 = 0.20 A) instead of the change in I²; 36 W has the right number but the gradient of P against I² is a resistance, not a power; 0.028 Ω is 1/36, the reciprocal, and a conductance would be in siemens anyway."
         },
         {
           "type": "mcq",
-          "q": "Why is a tungsten filament non-ohmic?",
+          "q": "A tungsten filament has resistance 20 Ω when carrying 0.50 A. When the current is raised to 1.5 A the filament heats up and its resistance becomes 40 Ω. By what factor does the heat power dissipated increase?",
           "options": [
-            "Its resistance falls as the current rises",
-            "Heating raises its temperature and its resistance",
-            "It conducts in one direction only",
-            "Its voltage stays constant"
+            "3",
+            "9",
+            "6",
+            "18"
+          ],
+          "answerIndex": 3,
+          "concept": "Joule heating when both current and resistance change",
+          "why": "P = I²R at each state: P₁ = (0.50)² × 20 = 5.0 W and P₂ = (1.5)² × 40 = 90 W, so P₂/P₁ = 18. Tripling the current alone gives a factor of 9, and the doubled resistance gives another factor of 2.\n\n3 treats power as proportional to I rather than I²; 9 squares the current ratio but forgets that R has also doubled; 6 multiplies 3 by 2, using I instead of I²."
+        },
+        {
+          "type": "mcq",
+          "q": "A device is tested with both polarities:\n+2.0 V gives +0.10 A; +4.0 V gives +0.20 A\n−2.0 V gives −0.02 A; −4.0 V gives −0.04 A\nFind R in each direction and say whether the device obeys Ohm's law.",
+          "options": [
+            "20 Ω and 20 Ω; ohmic",
+            "20 Ω forward, 100 Ω reverse; non-ohmic",
+            "20 Ω forward, 100 Ω reverse; ohmic, as each branch is straight",
+            "0.05 Ω forward, 0.01 Ω reverse; non-ohmic"
           ],
           "answerIndex": 1,
-          "concept": "Self-heating as the cause of non-linearity",
-          "why": "Current dissipates heat by P = I²R, the temperature rises and so does R, so the current stops rising linearly. Falling resistance describes a thermistor, and one-way conduction describes a diode."
+          "concept": "Polarity test for Ohm's law",
+          "why": "Forward: R = 2.0/0.10 = 4.0/0.20 = 20 Ω. Reverse: R = 2.0/0.02 = 4.0/0.04 = 100 Ω. Ohm's law requires the resistance to be independent of both the magnitude and the polarity of the applied p.d.; here R depends on polarity, so the device is non-ohmic (it behaves like a diode).\n\n20 Ω and 20 Ω ignores the reverse readings; 'ohmic, as each branch is straight' forgets the polarity clause, since a straight segment in one direction is not enough; 0.05 Ω and 0.01 Ω are I/V, the reciprocals."
         },
         {
           "type": "mcq",
-          "q": "Over which voltage range are readings taken?",
+          "q": "In the tungsten resistor experiment, why should you wait a moment after changing the supply voltage before clicking Record?",
           "options": [
-            "0.1 V to 5 V",
-            "1 V to 50 V",
-            "0.1 V to 50 V",
-            "0 V to 100 V"
-          ],
-          "answerIndex": 2,
-          "concept": "The 0.1 V to 50 V recording range",
-          "why": "The procedure starts at about 0.1 V and covers the whole available range up to the 50 V limit of the supply, since the curvature only shows at the high-current end."
-        },
-        {
-          "type": "mcq",
-          "q": "Ohm's law requires the resistance to be independent of what?",
-          "options": [
-            "The magnitude and polarity of the applied p.d.",
-            "The room temperature",
-            "The length of the conductor",
-            "The meter used to read it"
+            "The filament temperature, and so its resistance, needs time to settle",
+            "The voltmeter needs time to charge up to the new voltage",
+            "The supply polarity reverses briefly after each adjustment",
+            "The ammeter zero error drifts until the needle rests"
           ],
           "answerIndex": 0,
-          "concept": "The lab statement of Ohm's law",
-          "why": "A device is ohmic if resistance between two points is independent of the magnitude and polarity of the potential difference, which is why a diode counts as non-ohmic even though each branch looks straight."
+          "concept": "Precaution: letting a self-heating conductor settle",
+          "why": "The resistance of the filament depends on its temperature, and the temperature is set by the Joule heating I²R. After the voltage changes the filament takes a moment to reach its new steady temperature; a reading taken too early records a current that is still drifting, so V and I do not belong to the same steady state.\n\nA voltmeter responds essentially instantly and does not 'charge'; a DC supply does not reverse polarity when adjusted; a zero error is a fixed offset and does not drift with time."
         }
       ]
     }

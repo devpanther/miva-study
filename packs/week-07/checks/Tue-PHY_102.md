@@ -1,88 +1,112 @@
 # Tuesday — PHY_102 nightly check
 
-*Power in an A.C. circuit, the concepts: the instantaneous power p(t) = v(t)i(t) and its oscillation at twice the supply frequency, the derivation of P = V_rms I_rms cos φ, why a pure reactance dissipates no average power, and the distinction between real, reactive and apparent power with the power factor cos φ = R/Z = P/S.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Power in an A.C. circuit, as concepts.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** For v = V₀ sin ωt and i = I₀ sin(ωt − φ), the instantaneous power p(t) = v i can be written as a constant plus a single oscillating term. That form is:
-a) (V₀I₀/2)[cos φ − cos(ωt − φ)]
-b) (V₀I₀/2)[sin φ − sin(2ωt − φ)]
-c) (V₀I₀/2)[cos φ − cos(2ωt − φ)]
-d) V₀I₀ cos φ · sin²(ωt)
+**1.** A 240 V rms supply drives 5.0 A rms through a load at power factor 0.80. Calculate the average (real) power consumed.
+A. 960 W
+B. 1200 W
+C. 720 W
+D. 1500 W
 
-**2.** The instantaneous power in an AC circuit oscillates at:
-a) the supply frequency f, in phase with the current
-b) twice the supply frequency, 2f
-c) half the supply frequency, f/2
-d) a frequency that depends on the power factor
+**2.** A single-phase load is metered at 1.8 kW real power while drawing 2.4 kVA apparent power. Calculate its power factor.
+A. 0.88
+B. 1.33
+C. 0.66
+D. 0.75
 
-**3.** An ideal inductor on an AC supply carries a large current and has a large voltage across it, yet its average power is zero. The reason is that:
-a) an ideal inductor carries no current, so p = vi is zero at every instant
-b) the current averages to zero over a cycle, and the average of a product is the product of the averages
-c) X_L is measured in ohms but is an imaginary quantity, so I²X_L cannot be a real power
-d) the stored magnetic energy is returned to the source in the quarter-cycle after it is taken
+**3.** A motor draws an apparent power of 2500 VA and consumes 1500 W of real power. Calculate the reactive power.
+A. 1000 var
+B. 4000 var
+C. 2915 var
+D. 2000 var
 
-**4.** For a series AC circuit, the power factor is:
-a) cos φ = R/Z, the ratio of real power to apparent power
-b) sin φ = X/Z, the ratio of reactive power to apparent power
-c) tan φ = X/R, the ratio of reactive power to real power
-d) cos φ = Z/R, so a circuit with reactance has a power factor above 1
+**4.** A load draws an apparent power of 500 VA at a power factor of 0.60. The instantaneous power p(t) oscillates about its average value with amplitude S. Calculate the minimum value of p(t).
+A. −200 W
+B. −500 W
+C. +300 W
+D. −400 W
 
-**5.** Two loads each draw the same rms current from the same supply; one has a power factor of 0.80 lagging, the other 0.80 leading. Comparing them:
-a) the lagging load consumes more, because inductive loads are the ones that do mechanical work
-b) the leading load consumes negative real power, since energy flows back to the source
-c) both consume the same real power, and differ only in the sign of their reactive power
-d) the leading load has the larger apparent power, because of its extra charging current
+**5.** A supply voltage is v(t) = 170 sin(377t) V, with t in seconds. Calculate the frequency at which the instantaneous power delivered to a load pulsates.
+A. 60 Hz
+B. 754 Hz
+C. 120 Hz
+D. 377 Hz
 
-**6.** A slide states that in a **purely reactive** AC circuit "the power can be calculated using P = V × I × sin(θ)". The correct reading of that expression is:
-a) it is right as written — a purely reactive circuit consumes VI sin θ watts
-b) it is the reactive power, measured in var; the real power consumed is zero
-c) it is the apparent power, which for a purely reactive circuit is equal to VI
-d) it is the real power for a capacitor only; for an inductor the sign is reversed
+**6.** An inductive load has a power factor of 0.50 lagging. Calculate the angle by which the current lags the supply voltage.
+A. 26.6°
+B. 60°
+C. 30°
+D. 28.6°
 
-**7.** Over part of every cycle p(t) is negative. This means that:
-a) the current has reversed direction, as it does twice in every AC cycle
-b) the circuit is generating energy, which is how reactance raises the power factor
-c) the measurement is faulty, since a wattmeter reading is always positive
-d) energy is flowing from the circuit back to the source at that instant
+**7.** A 2.0 kW heater (PF = 1) and a 2.0 kW motor (PF = 0.50) each run from a 240 V rms supply. Calculate how much more rms current the motor draws than the heater.
+A. 16.7 A
+B. 0 A
+C. 8.3 A
+D. 4.2 A
 
-**8.** Transformers and supply cables are rated in kVA rather than kW because:
-a) their winding heating and core flux are set by current and voltage, not by the load's phase angle
-b) the transformer itself consumes reactive power, which must be added to the load's watts
-c) the power factor of a transformer is always 1, so kVA and kW are numerically equal
-d) kVA is the larger number and so builds a safety margin into the nameplate
+**8.** A load's power factor is quoted as simply 0.80, with no further information. Which one of the following can you NOT deduce from that number?
+A. The ratio P/S
+B. Whether the current leads or lags the voltage
+C. The size of the phase angle between v and i
+D. The fraction of the volt-amperes that does work
 
-**9. (explain why)** Starting from p(t) = v(t)i(t), derive P_av = V_rms I_rms cos φ. Say precisely which term of your expression vanishes on averaging and why it vanishes, and explain what the surviving term represents physically.
+**9. (show your working)** A supply v(t) = 100 sin ωt V drives a current i(t) = 4.0 sin(ωt − 60°) A through a load. Calculate the average power and the apparent power. Show your working.
 
-**10. (explain why)** Explain why neither a pure inductor nor a pure capacitor dissipates any average power, although each carries current and has voltage across it. Then explain why this is the reason X_L and X_C enter the impedance at right angles to R rather than being added to it.
+**10. (show your working)** A pure capacitor of reactance 25 Ω is connected across a 100 V rms supply. Calculate the rms current, the average power consumed and the reactive power. Show your working.
 
-**11. (explain why)** Define real, reactive and apparent power, giving the unit of each, and explain why S² = P² + Q² rather than S = P + Q. Explain also why a power factor of 0.60 tells you the ratio of two of these quantities but not whether the current leads or lags.
+**11. (show your working)** With v = V₀ sin ωt and i = I₀ sin(ωt − φ), use the identity sin A sin B = ½[cos(A − B) − cos(A + B)] to write p(t) = vi as a constant plus one oscillating term. Hence show P = Vrms Irms cos φ. Show your working.
 
-**12. (explain why)** The lecture deck states both that "in a purely reactive AC circuit the power can be calculated using P = V·I·sin(θ)" and, two slides later, that "reactances do not dissipate energy". Explain why these cannot both be true as written, identify which one is right, and say what the other expression actually measures.
+**12. (show your working)** The instantaneous power p(t) drawn by a load is measured and found to dip below zero for part of every cycle. Explain what a negative instantaneous power means physically, and whether this could happen for a purely resistive load.
 
 ---
 
 ## Answers
 
-**1. c** — *Instantaneous power decomposed by the product-to-sum identity.* sin A sin B = ½[cos(A − B) − cos(A + B)] with A = ωt and B = ωt − φ gives (V₀I₀/2)[cos φ − cos(2ωt − φ)]: a constant term carrying the whole average, plus a double-frequency ripple. (a) keeps the ripple at ω, the classic slip of forgetting that A + B = 2ωt − φ. (b) applies the identity for cos A cos B or simply interchanges sine and cosine, which would make the average power zero for a resistor. (d) is the correct form only for φ = 0 and then multiplies it again by cos φ, double-counting the power factor.
+**1. A** — *Real power from P = Vrms Irms cos φ.* P = V_rms I_rms cos φ = (240)(5.0)(0.80) = 960 W.
 
-**2. b** — *The power ripple is at twice the supply frequency.* v and i each change sign twice per cycle and, in a resistor, do so together, so their product completes **two** cycles for every one of the supply — the 2ωt in the answer to question 1. (a) confuses the frequency of the current with that of its square. (c) inverts the relation. (d) confuses the ripple's **frequency**, which is always 2f, with its **offset**, which is what cos φ sets.
+1200 W is V I with the power factor left out, which is the apparent power S in VA, not watts; 720 W uses sin φ = 0.60 instead of cos φ and is the reactive power in var; 1500 W divides by the power factor instead of multiplying.
 
-**3. d** — *A reactance stores energy and gives it back; it does not convert it.* Over one quarter-cycle the source pours energy into the magnetic field (up to ½LI₀²); over the next it is returned, so p(t) is positive for two quarter-cycles and equally negative for the other two and the mean is exactly zero. (a) is simply false — the current is V/X_L, and is large at low frequency. (b) invokes a rule that does not exist: the average of a product is not the product of the averages, as a resistor proves, where i averages to zero yet p does not. (c) confuses the algebraic bookkeeping of complex impedance with the physics; I²X_L is a perfectly real number of var.
+**2. D** — *Power factor as the ratio P/S.* PF = P/S = 1.8/2.4 = 0.75. The power factor is the fraction of the volt-amperes drawn that does work, and it can never exceed 1.
 
-**4. a** — *Power factor is the resistive side over the hypotenuse.* PF = P/S = (VI cos φ)/(VI) = cos φ, and from the impedance triangle cos φ = R/Z. (b) is the *reactive* factor — a real quantity, but it gives Q/S, not P/S. (c) is tan φ, which is Q/P, not the power factor. (d) inverts the ratio and would give values greater than 1, which is impossible: no circuit can consume more watts than the volt-amperes it draws.
+1.33 is S/P, the ratio upside down, and is impossible because it is greater than 1; 0.66 is Q/S = sin φ, the reactive factor, with Q = √(2.4² − 1.8²) = 1.59 kvar; 0.88 is Q/P = tan φ.
 
-**5. c** — *cos φ is an even function; the sign of φ lives entirely in Q.* P = VI cos φ, and cos(+36.9°) = cos(−36.9°) = 0.80, so both loads consume the same watts. What differs is Q = VI sin φ, positive (lagging, inductive) for one and negative (leading, capacitive) for the other — which is exactly why one can be used to correct the other. (a) confuses a mechanical application with the mathematics. (b) confuses a **leading current** with **reverse power flow**; a capacitive load still consumes. (d) is wrong because S = VI depends only on the two magnitudes, which are equal by hypothesis.
+**3. D** — *Reactive power from the power triangle S² = P² + Q².* S² = P² + Q², so Q = √(S² − P²) = √(2500² − 1500²) = √(6 250 000 − 2 250 000) = √4 000 000 = 2000 var. It is a 3-4-5 triangle scaled by 500.
 
-**6. b** — *VI sin θ is reactive power, in var, not power consumed.* It measures the rate at which energy is borrowed from and returned to the source. In a purely reactive circuit θ = ±90°, so VI sin θ = ±VI: the **whole** apparent power is reactive and the real power is **zero**. (a) takes the slide literally and contradicts the deck's own correct statement that reactances do not dissipate energy. (c) confuses Q with S — they are equal in magnitude here only because P = 0, so it gives the right number for the wrong quantity and fails as soon as any resistance is present. (d) invents a distinction between L and C; both dissipate nothing, and the sign of Q reflects lead or lag, not consumption.
+1000 var is S − P, subtracting the powers arithmetically, which the triangle forbids; 4000 var is S + P; 2915 var is √(S² + P²), adding inside the root instead of subtracting.
 
-**7. d** — *Negative instantaneous power is a reverse flow of energy.* During those instants v and i have opposite signs, so the circuit is returning stored field energy to the source rather than taking it. (a) is true but irrelevant — in a resistor the current reverses too, yet v reverses with it and p stays positive throughout. (b) confuses returning borrowed energy with creating it, and reverses the effect of reactance on the power factor. (c) treats a real physical feature of p(t) as an instrument fault; a wattmeter reads the **average**, which is what stays positive for a passive load.
+**4. A** — *Minimum instantaneous power S(cos φ − 1).* p(t) = P − S cos(2ωt − φ) swings between P − S and P + S. The average is P = S cos φ = (500)(0.60) = 300 W, so the minimum is 300 − 500 = −200 W, that is, S(cos φ − 1). The negative part of the cycle is energy returning to the source.
 
-**8. a** — *Plant is limited by current and by voltage, neither of which knows the phase angle.* Copper loss is I²R and core flux is set by V, so a 100 kW load at PF 0.50 stresses the transformer exactly as hard as a 200 kW load at unity — hence a VA rating. (b) invents a load: the transformer's own magnetising vars are small and are not what the rating expresses. (c) is false — a transformer's power factor is whatever its load makes it. (d) mistakes a physical limit for marketing; the nameplate figure is the real ceiling, not padding.
+−500 W is −S, forgetting that the swing is centred on P rather than on zero; +300 W is the average power, not the minimum; −400 W is minus the reactive power S sin φ, which is not a value p(t) takes on this basis.
 
-**9.** *Concept: the average power is the constant term of p(t); the double-frequency term integrates to zero.* Write v = V₀ sin ωt and i = I₀ sin(ωt − φ), where φ is the angle by which the current lags the voltage. Then p(t) = V₀I₀ sin ωt sin(ωt − φ), and applying sin A sin B = ½[cos(A − B) − cos(A + B)] gives **p(t) = (V₀I₀/2)[cos φ − cos(2ωt − φ)]**. The second term is a pure sinusoid of angular frequency **2ω**; the integral of any sinusoid over a whole number of periods is zero, so it contributes **nothing** to the mean, however large its amplitude. Only the first term survives, and it is a constant, so it is its own average: **P_av = (V₀I₀/2) cos φ**. Since V_rms I_rms = (V₀/√2)(I₀/√2) = V₀I₀/2, this is **P_av = V_rms I_rms cos φ**. Physically, the constant term is the part of the energy flow that goes **one way only** — the irreversible conversion in the resistance — while the 2ω term is the reversible sloshing of energy into and out of the magnetic and electric fields, which transports energy back and forth but delivers none over a full cycle. Note that p(t) oscillates about P with amplitude V₀I₀/2 = S, so it dips below zero whenever cos φ < 1.
+**5. C** — *Instantaneous power ripples at twice the supply frequency.* ω = 377 rad/s, so the supply frequency is f = ω/2π = 377/6.283 = 60 Hz. The product v(t)i(t) contains cos(2ωt − φ), so the power completes two cycles for every one of the voltage: 2f = 120 Hz.
 
-**10.** *Concept: reactances store and return energy rather than converting it, which is why they act at 90° to R.* In an inductor the voltage leads the current by exactly 90°, so p = vi is positive while both have the same sign and negative while they have opposite signs — and because the offset is a quarter of a period, the positive and negative areas over one cycle are **exactly equal**. Energy taken from the source builds the magnetic field (peak store ½LI₀²) and is handed back intact in the following quarter-cycle. The same argument runs for a capacitor with the current leading by 90° and the store ½CV₀². Formally, cos(±90°) = 0, so P = V_rms I_rms cos φ = 0. **Why this makes them perpendicular in the impedance:** the average power delivered to an element is V_rms I_rms cos φ, i.e. it depends only on the component of the voltage that is **in phase** with the current. A resistor's voltage is entirely in phase (all of it does work); a reactance's voltage is entirely in quadrature (none of it does work). "In phase" and "in quadrature" are perpendicular directions in the phasor plane, so the resistive and reactive voltage drops — and hence R and X — must be combined by Pythagoras, Z = √(R² + X²), not by arithmetic addition. If they simply added, a reactance would raise the dissipation exactly as a resistance does, which the zero-average result forbids.
+60 Hz is the supply frequency, forgetting the doubling; 377 Hz reads ω as if it were f, skipping the 2π; 754 Hz doubles ω but still never divides by 2π.
 
-**11.** *Concept: the power triangle — three different quantities with three different units.* **Real (true, active) power P = V_rms I_rms cos φ = I²R**, in **watts (W)**: the rate of irreversible conversion to heat or work, and the only one that is "consumed". **Reactive power Q = V_rms I_rms sin φ = I²X**, in **volt-amperes reactive (var)**: the rate at which energy is exchanged with the magnetic and electric fields, averaging to zero net transfer. **Apparent power S = V_rms I_rms = I²Z**, in **volt-amperes (VA)**: the product of the two meter readings, which is what fixes the current the conductors must carry. **Why S² = P² + Q²**: P follows the component of the current in phase with the voltage and Q the component in quadrature with it. These are two perpendicular components of the same current, so multiplying each by V_rms gives two perpendicular sides of a right-angled triangle whose hypotenuse is S — the power triangle is just the impedance triangle scaled by I². Adding them arithmetically would count the same volt-amperes twice: 800 W with 600 var gives 1000 VA, not 1400 VA. **Why 0.60 does not fix lead or lag**: PF = cos φ, and cos is an **even** function, so φ = +53.1° and φ = −53.1° give the identical power factor. The two cases differ only in the sign of sin φ, i.e. of Q — inductive (current lagging, Q positive) or capacitive (current leading, Q negative). This is why a power factor must always be quoted as "0.60 lagging" or "0.60 leading".
+**6. B** — *Phase angle from the power factor.* PF = cos φ, so φ = cos⁻¹(0.50) = 60°. Lagging means the current reaches its peak 60° after the voltage does.
 
-**12.** *Concept: the deck's "P = VI sin θ" is reactive power, and its own later statement is the correct one.* The two statements are contradictory because the first assigns a **non-zero** consumption to a circuit that the second says consumes **nothing**: in a purely reactive circuit θ = ±90°, so VI sin θ = ±VI, the entire apparent power — the largest value the expression can take, in a circuit that by the second statement dissipates none of it. **The second statement is the correct one.** A reactance stores energy for a quarter-cycle and returns it in the next, so its average power is exactly zero; equivalently P = VI cos θ with θ = ±90° gives cos θ = 0. **What the first expression really is**: **Q = V_rms I_rms sin θ**, the **reactive power**, measured in **volt-amperes reactive (var)** — the amplitude of the energy shuttling back and forth, not a rate of consumption. The correct general statement of power in an AC circuit is P = V_rms I_rms cos θ = I_rms²R, which automatically returns zero for a pure reactance (R = 0) and V_rms I_rms for a pure resistance (θ = 0). A useful sanity check on any such formula: it must give zero for R = 0 and must never exceed V_rms I_rms.
+30° is sin⁻¹(0.50), using sin in place of cos; 26.6° is tan⁻¹(0.50); 28.6° reads 0.50 as an angle in radians and converts it to degrees.
+
+**7. C** — *Line current from real power and power factor.* The cable carries S = P/PF, and I = S/V. Heater: I = 2000/240 = 8.33 A. Motor: S = 2000/0.50 = 4000 VA, so I = 4000/240 = 16.67 A. The difference is 16.67 − 8.33 = 8.3 A.
+
+16.7 A is the motor's whole current, not the extra; 0 A assumes equal watts means equal amps, which holds only at equal power factor; 4.2 A multiplies by the power factor instead of dividing, so it makes the motor draw less than the heater.
+
+**8. B** — *Power factor is even in φ: lagging versus leading.* cos φ is an even function: cos(+36.9°) = cos(−36.9°) = 0.80. The number fixes P/S, the size of the angle (36.9°) and the fraction of S that is real power, but it cannot say whether φ is positive (inductive, current lags) or negative (capacitive, current leads). That is why a power factor is always written with the word lagging or leading attached.
+
+The other three options are all exactly what PF = P/S = cos φ tells you directly.
+
+**9.** *Average power from peak values and phase angle.* The amplitudes are peak values, so P = ½V₀I₀ cos φ = ½(100)(4.0)cos 60° = (200)(0.500) = 100 W. Equivalently V_rms = 70.7 V, I_rms = 2.83 A and P = (70.7)(2.83)(0.500) = 100 W. Apparent power S = ½V₀I₀ = V_rms I_rms = 200 VA.
+
+Final answers: P = 100 W (accept 99 to 101 W) and S = 200 VA (accept 199 to 201 VA). Q = 173 var may be given as well but is not required. P = 400 W comes from using peak values without the ½ and dropping cos φ; P = 200 W drops cos φ only, which is S quoted as watts; both are wrong.
+
+**10.** *Average and reactive power of a pure reactance.* I = V/X_C = 100/25 = 4.0 A. In a pure capacitor the current leads the voltage by 90°, so cos φ = cos 90° = 0 and the average power P = V I cos φ = 0 W: energy is stored in the electric field for a quarter cycle and returned in the next, and none is dissipated. The reactive power is Q = V I sin φ = (100)(4.0)(1) = 400 var, capacitive (leading), which may be written −400 var.
+
+Final answers: I = 4.0 A, P = 0 W, Q = 400 var (accept 400 var capacitive, 400 var leading or −400 var). Also accepted: Q = I²X_C = (16)(25) = 400 var or V²/X_C = 400 var. Writing P = 400 W confuses reactive with real power and is wrong.
+
+**11.** *Deriving average power from the instantaneous power.* p(t) = V₀I₀ sin ωt sin(ωt − φ). With A = ωt and B = ωt − φ, A − B = φ and A + B = 2ωt − φ, so p(t) = (V₀I₀/2)[cos φ − cos(2ωt − φ)]. The first term is a constant; the second is a sinusoid at 2ω whose average over any whole number of cycles is zero. So the average power is P = (V₀I₀/2) cos φ, and since V_rms = V₀/√2 and I_rms = I₀/√2, V_rms I_rms = V₀I₀/2, giving P = V_rms I_rms cos φ.
+
+A correct answer must show the product form (V₀I₀/2)[cos φ − cos(2ωt − φ)], state that the cos(2ωt − φ) term averages to zero because it is a sinusoid over whole cycles, and convert V₀I₀/2 to V_rms I_rms. Writing the second term as cos(2ωt) without the φ, or claiming the ripple is at ω rather than 2ω, loses the derivation.
+
+**12.** *Meaning of negative instantaneous power.* p(t) = v(t)i(t) is the rate at which energy flows from the source into the load. A negative value means that, at that instant, energy is flowing back from the load to the source: the load's reactance (inductor or capacitor) is returning energy it stored earlier in its magnetic or electric field. It cannot happen for a pure resistor, because v and i are in phase there, so they are always both positive or both negative and their product is never negative. The minimum of p(t) is S(cos φ − 1), which is zero only when φ = 0.
+
+A correct answer says negative p means energy returning to the source (not an error and not negative average power), attributes it to stored energy in a reactance, and states that a resistor's p(t) is never negative because v and i have the same sign at every instant.

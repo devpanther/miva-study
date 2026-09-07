@@ -1,98 +1,112 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 6 higher-order derivatives.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Compute repeated derivatives of her own functions, and one order beyond them: x⁴ + 2x³ − 15x + 4, 3 tan x + 3, √(x³) = x^(3/2), ln x, and sin(5x) + e^(3x).*
+**1.** f(x) = 2x⁵ − x⁴ + 3x − 7. Find f‴(x).
+A. 40x³ − 12x²
+B. 120x² − 24x
+C. 120x² − 24x + 3
+D. 60x² − 24x
 
-*Then the deck's four-order quotient-rule chain on ln(1 + x²).*
+**2.** y = sin(2x) + e^(4x). Find d⁴y/dx⁴.
+A. 16 sin(2x) + 256e^(4x)
+B. −16 sin(2x) + 256e^(4x)
+C. 16 cos(2x) + 256e^(4x)
+D. −8 cos(2x) + 64e^(4x)
 
-*Plus both TASKs she leaves unanswered: the second derivative of cos(3x), and the third derivative of xeˣ at x = 2.*
+**3.** f(x) = x/(x + 1). Find f″(x).
+A. 2/(x + 1)³
+B. 1/(x + 1)²
+C. −2/(x + 1)²
+D. −2/(x + 1)³
 
-*And the arithmetic slip in her printed fourth derivative.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**4.** y = 1/x. Find y⁽⁴⁾.
+A. −24/x⁵
+B. 6/x⁴
+C. 24/x⁵
+D. 4/x⁵
 
-**1.** For f(x) = x⁴ + 2x³ − 15x + 4, find f″(x).
-A. 12x² + 12x
-B. 12x² + 12x − 15
-C. 4x³ + 6x² − 15
-D. 12x² + 6x
+**5.** y = cos(2x). Find y‴.
+A. 8 sin(2x)
+B. −8 sin(2x)
+C. −8 cos(2x)
+D. 8 cos(2x)
 
-**2.** The first TASK slide asks for the second derivative of y = cos(3x). What is it?
-A. −3 sin(3x)
-B. −9 cos(3x)
-C. 9 cos(3x)
-D. −9 sin(3x)
+**6.** y = √(x⁷). Find y‴.
+A. (35/4)x^(3/2)
+B. (105/8)x^(3/2)
+C. (105/8)x^(1/2)
+D. (35/8)x^(1/2)
 
-**3.** She takes f(x) = √(x³) as far as y″ = (3/4)x^(−1/2). Continue one order: y‴ =
-A. (3/8)x^(−3/2)
-B. −(3/8)x^(−1/2)
-C. −(3/8)x^(−3/2)
-D. (3/4)x^(−3/2)
+**7.** y = 2x³ + 1/x. Find y″.
+A. 12x − 2/x³
+B. 12x + 2/x³
+C. 6x² − 1/x²
+D. 12x + 2/x²
 
-**4.** For y = ln x she reaches y‴ = 2x⁻³. What is y⁽⁴⁾?
-A. 6x⁻⁴
-B. −2x⁻⁴
-C. 3x⁻⁴
-D. −6x⁻⁴
+**8.** For f(x) = ln(1 + x²), f′(x) = 2x/(1 + x²). A student then writes f″(x) = (2 − 2x²)/(1 + x²). Which step has gone wrong?
+A. The chain rule was skipped in f′
+B. u and v were swapped in the numerator
+C. The 1 in 1 + x² should have differentiated to 1
+D. The denominator was not squared
 
-**5.** She gives d³y/dx³ = −125 cos(5x) + 27e^(3x) for y = sin(5x) + e^(3x). Find d⁴y/dx⁴.
-A. 625 sin(5x) + 81e^(3x)
-B. −625 sin(5x) + 81e^(3x)
-C. 625 sin(5x) + 27e^(3x)
-D. 125 sin(5x) + 81e^(3x)
+**9. (show your working)** f(x) = xe^(−x). Find f′(x), f″(x) and f‴(x), then evaluate f‴(3). Show your working, naming the rule you use at each order.
 
-**6.** Using her f″(x) = (2 − 2x²)/(1 + 2x² + x⁴) for f(x) = ln(1 + x²), evaluate f″(2).
-A. 6/25
-B. −6/25
-C. −6/5
-D. 10/25
+**10. (show your working)** f(x) = ln(1 + 2x²). Find f′(x) by the chain rule, then f″(x) by the quotient rule, listing u, v, u′ and v′ on one line. Show your working.
 
-**7.** Which of these is her third derivative of ln(1 + x²)?
-A. (4x⁵ − 8x³ − 12x)/(1 + 2x² + x⁴)
-B. (−4x⁵ + 8x³ + 12x)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)
-C. (4x⁵ − 8x³ − 12x)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)
-D. (4x⁵ − 24x³ − 12x)/(1 + 4x² + 6x⁴ + 4x⁶ + x⁸)
+**11. (show your working)** f(x) = x⁵ − 2x². Find f⁽⁴⁾(x), and find the smallest n for which f⁽ⁿ⁾(x) = 0 for all x. Show your working.
 
-**8.** The second TASK slide asks for the third derivative of f(x) = xeˣ, evaluated at x = 2. What is it?
-A. 4e²
-B. 3e²
-C. 2e²
-D. 5e²
+**12. (show your working)** For y = e^(3x), every derivative is a positive multiple of y, but for y = sin(5x) the derivatives run through four different forms before repeating. Explain why, and state d⁴y/dx⁴ for each.
 
-**9.** Work the first TASK slide in full: find the second derivative of y = cos(3x), naming what supplies each factor and each sign.
-*(short answer)*
-
-**10.** Derive f″(x) for f(x) = ln(1 + x²) from scratch, showing the chain rule step and then the quotient rule step with u, v, u′ and v′ named, exactly as slides 10 and 11 do.
-*(short answer)*
-
-**11.** For f(x) = ln x, produce the first three derivatives in both the fraction and the negative-power form she uses, then evaluate f‴(2).
-*(short answer)*
-
-**12.** The FOURTH DERIVATIVE slide prints the numerator of f⁽⁴⁾(x) as −12x¹² + 40x¹⁰ + 568x⁸ + 416x⁶ + 240x⁴ + 24x² − 12. Expand her own quotient-rule line and give the correct numerator, then say what remains trustworthy on that slide.
-*(short answer)*
+---
 
 ## Answers
 
-**1. A** — f′(x) = 4x³ + 6x² − 15, and differentiating again: 4x³ → 12x², 6x² → 12x, and the constant −15 → 0. Option 2 keeps the −15, forgetting that after the first differentiation it has become a constant and must die at the second — the very point of her NOTE d(4)/dx = 0. Option 3 is only the first derivative. Option 4 differentiates 6x² as 6x, dropping the factor 2 that the power supplies.
+**1. B** — *Third derivative of a polynomial.* f′(x) = 10x⁴ − 4x³ + 3; f″(x) = 40x³ − 12x²; f‴(x) = 120x² − 24x. The constant −7 dies at the first step and the 3 dies at the second.
 
-**2. B** — y′ = −3 sin(3x): cos differentiates to −sin and the chain rule supplies 3. Then y″ = −3·3 cos(3x) = −9 cos(3x): sin differentiates to +cos, so no second sign appears, and the chain supplies another 3. Option 1 stops after one differentiation. Option 3 loses the minus introduced at the first step. Option 4 has the right coefficient but leaves the function as sin, as though differentiating sin returned sin.
+40x³ − 12x² is f″, one order short; 120x² − 24x + 3 lets the constant 3 survive past the second derivative; 60x² − 24x drops the coefficient 2 on the leading term (2·5·4·3 = 120, not 60).
 
-**3. C** — The power rule on (3/4)x^(−1/2) multiplies by the exponent −1/2 and drops it by one: (3/4)(−1/2)x^(−1/2 − 1) = −(3/8)x^(−3/2). Option 1 gets the coefficient but loses the minus that the negative exponent supplies. Option 2 multiplies correctly but leaves the exponent at −1/2 instead of reducing it. Option 4 reduces the exponent but forgets to multiply by −1/2 at all, so both the sign and the magnitude are wrong.
+**2. A** — *Fourth derivative of a sum of sin(kx) and e^(kx).* Track each term. sin(2x): 2 cos(2x), −4 sin(2x), −8 cos(2x), 16 sin(2x); a factor 2 each time and the sign cycling +, −, −, +. e^(4x): 4e^(4x), 16e^(4x), 64e^(4x), 256e^(4x); a factor 4 each time and no sign change. So d⁴y/dx⁴ = 16 sin(2x) + 256e^(4x).
 
-**4. D** — Differentiating 2x⁻³ multiplies by the exponent −3 and lowers it by one: 2(−3)x⁻⁴ = −6x⁻⁴. Option 1 has the right magnitude but loses the minus that the negative exponent produces. Option 2 keeps only the sign change and forgets to multiply by 3. Option 3 uses the exponent's magnitude as the new coefficient while dropping both the existing 2 and the sign.
+−16 sin(2x) + 256e^(4x) carries the minus of the second and third derivatives one step too far; 16 cos(2x) does not return cos to sin on the fourth step; −8 cos(2x) + 64e^(4x) is the third derivative.
 
-**5. A** — d/dx[−125 cos(5x)] = −125·(−sin(5x))·5 = +625 sin(5x): cos gives −sin, and the two minus signs cancel. d/dx[27e^(3x)] = 27·3e^(3x) = 81e^(3x). Option 2 keeps the minus that has just been cancelled. Option 3 forgets the chain factor 3 on the exponential and leaves 27. Option 4 forgets the chain factor 5 on the trigonometric term and leaves 125.
+**3. D** — *Second derivative by the quotient rule then the chain rule.* Quotient rule with u = x, v = x + 1: f′ = [(x + 1)·1 − x·1]/(x + 1)² = 1/(x + 1)² = (x + 1)⁻². Differentiate again with the power and chain rules: f″ = −2(x + 1)⁻³·1 = −2/(x + 1)³.
 
-**6. B** — Numerator: 2 − 2(2²) = 2 − 8 = −6. Denominator: 1 + 2(4) + 2⁴ = 1 + 8 + 16 = 25. So f″(2) = −6/25. Option 1 comes from the reversed quotient-rule numerator (2x² − 2), which gives +6. Option 3 uses 1 + x² = 5 as the denominator, forgetting she squared it into 1 + 2x² + x⁴. Option 4 comes from never subtracting u·v′, leaving the numerator as 2 + 2x² = 10.
+2/(x + 1)³ loses the minus from the index −2; 1/(x + 1)² is the first derivative; −2/(x + 1)² multiplies by the index but forgets to lower it.
 
-**7. C** — With u = 2 − 2x² and v = 1 + 2x² + x⁴, the numerator collects to 4x⁵ − 8x³ − 12x and the denominator is v² = 1 + 4x² + 6x⁴ + 4x⁶ + x⁸. Option 1 forgets to square the denominator. Option 2 reverses the numerator order to u·v′ − v·u′, negating everything. Option 4 mis-collects the x³ terms as −8 − 8 − 8 instead of −8 − 8 + 8, which is exactly the slip the sign of the last product invites.
+**4. C** — *Fourth derivative of a reciprocal and its sign pattern.* y = x⁻¹. y′ = −x⁻², y″ = 2x⁻³, y‴ = −6x⁻⁴, y⁽⁴⁾ = 24x⁻⁵ = 24/x⁵. The coefficient is 1·2·3·4 = 24 and the sign alternates, ending positive on an even order.
 
-**8. D** — f′ = (x + 1)eˣ, f″ = (x + 2)eˣ, f‴ = (x + 3)eˣ, so f‴(2) = 5e² ≈ 36.95. Option 1 evaluates f″(2), one order short. Option 2 evaluates f′(2), two orders short. Option 3 comes from differentiating only the eˣ factor and leaving xeˣ unchanged, which ignores the product rule entirely.
+−24/x⁵ has the sign of an odd-order derivative; 6/x⁴ stops at the third derivative and drops its minus; 4/x⁵ lowers the index four times but multiplies by the index only once.
 
-**9.** A good answer takes it one order at a time. First: cos differentiates to −sin, and the chain rule f′(x) = y′(u)·u′(x) with u = 3x supplies u′ = 3, so y′ = −3 sin(3x). Second: sin differentiates to +cos, contributing no new sign, and the chain supplies another 3, so y″ = −3·3 cos(3x) = −9 cos(3x). It should say explicitly that the single minus sign was introduced at the first step and survives, so the answer is −9 cos(3x) rather than +9 cos(3x), and that the argument stays 3x throughout — only the coefficient grows. A strong answer notes y″ = −9y, the same relationship her sin(5x) example shows with −25.
+**5. A** — *Third derivative of cos(kx), tracking the sign.* y′ = −2 sin(2x); y″ = −2·2 cos(2x) = −4 cos(2x); y‴ = −4·(−2 sin(2x)) = 8 sin(2x). The chain factor 2 appears three times (2³ = 8) and the minus from cos appears twice, which cancels.
 
-**10.** A good answer starts with the chain rule: y = ln u with u = 1 + x², so y′(u) = 1/u and u′(x) = 2x, giving f′(x) = (1/u)·2x = 2x/(1 + x²). It then observes that this is a quotient and applies f′(x) = [v(x)u′(x) − u(x)v′(x)]/(v(x))² with u = 2x, v = 1 + x², u′ = 2, v′ = 2x: f″(x) = [(1 + x²)·2 − 2x(2x)]/(1 + x²)² = (2 + 2x² − 4x²)/[(1 + x²)(1 + x²)] = (2 − 2x²)/(1 + 2x² + x⁴). Credit naming u before v in the numerator and expanding the denominator to 1 + 2x² + x⁴, since that expansion is what she carries into the third order.
+−8 sin(2x) counts the minus once instead of twice; −8 cos(2x) does not change cos to sin on the third step; 8 cos(2x) makes both of those errors at once.
 
-**11.** A good answer gives d(ln x)/dx = 1/x, then: y′ = 1/x or x⁻¹; y″ = −1/x² or −x⁻²; y‴ = 2/x³ or 2x⁻³. It should show where each line comes from — x⁻¹ differentiates to (−1)x⁻², and −x⁻² differentiates to −(−2)x⁻³ = +2x⁻³, so the sign flips and flips back while the coefficient runs 1, −1, 2. Finally f‴(2) = 2/2³ = 2/8 = 1/4. Credit writing both forms: the negative-power form is the one that can be differentiated again, which is exactly why she supplies it at every line.
+**6. C** — *Third derivative with a fractional index.* y = x^(7/2). y′ = (7/2)x^(5/2); y″ = (7/2)(5/2)x^(3/2) = (35/4)x^(3/2); y‴ = (35/4)(3/2)x^(1/2) = (105/8)x^(1/2). Each step multiplies by the current index and lowers it by 1.
 
-**12.** A good answer expands both products. (1 + 4x² + 6x⁴ + 4x⁶ + x⁸)(20x⁴ − 24x² − 12) = 20x¹² + 56x¹⁰ + 12x⁸ − 112x⁶ − 148x⁴ − 72x² − 12. (8x + 24x³ + 24x⁵ + 8x⁷)(4x⁵ − 8x³ − 12x) = 32x¹² + 32x¹⁰ − 192x⁸ − 448x⁶ − 352x⁴ − 96x². Subtracting gives −12x¹² + 24x¹⁰ + 204x⁸ + 336x⁶ + 204x⁴ + 24x² − 12, so the printed 40, 568, 416 and 240 should be 24, 204, 336 and 204; only the x¹², x² and constant terms are right. What remains trustworthy is everything above that line: u = 4x⁵ − 8x³ − 12x, v = 1 + 4x² + 6x⁴ + 4x⁶ + x⁸, u′ = 20x⁴ − 24x² − 12, v′ = 8x + 24x³ + 24x⁵ + 8x⁷ and the quotient-rule expression are all correct — the failure is confined to the arithmetic of the expansion. A strong answer adds the check that the denominator is (1 + x²)⁴, so the correct numerator factors as −12(1 + x²)⁴(x⁴ − 6x² + 1) and f⁽⁴⁾(x) reduces to −12(x⁴ − 6x² + 1)/(1 + x²)⁴.
+(35/4)x^(3/2) is the second derivative; (105/8)x^(3/2) multiplies by 3/2 but forgets to lower the index; (35/8)x^(1/2) multiplies by 1/2 (the new index) instead of 3/2 (the index being differentiated).
+
+**7. B** — *Second derivative of a mixed polynomial and reciprocal.* Rewrite: y = 2x³ + x⁻¹. y′ = 6x² − x⁻²; y″ = 12x + 2x⁻³ = 12x + 2/x³. The reciprocal term's sign flips at each differentiation: negative in y′, positive again in y″.
+
+12x − 2/x³ keeps the minus from y′ instead of flipping it; 6x² − 1/x² is the first derivative; 12x + 2/x² multiplies by the index −2 but forgets to lower it to −3.
+
+**8. D** — *Quotient rule denominator at higher orders.* With u = 2x and v = 1 + x², the quotient rule gives f″ = [v u′ − u v′]/v² = [(1 + x²)·2 − 2x·2x]/(1 + x²)² = (2 − 2x²)/(1 + x²)². The student's numerator is right; the denominator must be v² = (1 + x²)², not v.
+
+The chain rule was applied correctly in f′ (the 2x is the inner derivative); swapping u and v would give (2x² − 2), the negative numerator, which did not happen; the constant 1 differentiates to 0, and the student's numerator already reflects that.
+
+**9.** *Third derivative of a product with an exponential, evaluated.* Product rule at every order, with d(e^(−x))/dx = −e^(−x) by the chain rule. f′ = 1·e^(−x) + x·(−e^(−x)) = (1 − x)e^(−x). f″ = (−1)e^(−x) + (1 − x)(−e^(−x)) = (−1 − 1 + x)e^(−x) = (x − 2)e^(−x). f‴ = 1·e^(−x) + (x − 2)(−e^(−x)) = (1 − x + 2)e^(−x) = (3 − x)e^(−x). Then f‴(3) = (3 − 3)e^(−3) = 0.
+
+Final answer: f′ = (1 − x)e^(−x), f″ = (x − 2)e^(−x), f‴ = (3 − x)e^(−x), and f‴(3) = 0. A correct answer applies the product rule three times, keeps the minus from e^(−x), factors e^(−x) out each time, and gets 0 at x = 3. Treating the derivative of xe^(−x) as e^(−x) alone, or of e^(−x) as e^(−x), is wrong.
+
+**10.** *Chain rule then quotient rule on a logarithm of a polynomial.* Chain rule: y = ln u with u = 1 + 2x², so y′(u) = 1/u and u′(x) = 4x, giving f′(x) = 4x/(1 + 2x²). This is a quotient, so use the quotient rule for f″: u = 4x, v = 1 + 2x², u′ = 4, v′ = 4x. f″ = [v u′ − u v′]/v² = [(1 + 2x²)·4 − 4x·4x]/(1 + 2x²)² = (4 + 8x² − 16x²)/(1 + 2x²)² = (4 − 8x²)/(1 + 2x²)².
+
+Final answer: f′(x) = 4x/(1 + 2x²), f″(x) = (4 − 8x²)/(1 + 2x²)²; also accepted with the denominator expanded as 1 + 4x² + 4x⁴, or the numerator factored as 4(1 − 2x²). A correct answer shows the inner derivative 4x in f′ and the v u′ − u v′ order in f″. (8x² − 4)/(1 + 2x²)² has the numerator reversed and is wrong.
+
+**11.** *Order at which a polynomial's derivatives vanish.* f′ = 5x⁴ − 4x; f″ = 20x³ − 4; f‴ = 60x²; f⁽⁴⁾ = 120x; f⁽⁵⁾ = 120; f⁽⁶⁾ = 0. Each differentiation lowers the degree by 1, so a degree-5 polynomial becomes a constant at the fifth derivative and zero at the sixth.
+
+Final answer: f⁽⁴⁾(x) = 120x and n = 6. A correct answer shows the chain of derivatives (or argues from the degree: degree 5, so the 6th derivative is the first to vanish). Answering n = 5 confuses 'constant' with 'zero': f⁽⁵⁾ = 120 is not zero.
+
+**12.** *Why exponentials keep their sign and trig derivatives cycle.* e^(3x) differentiates to itself times the inner derivative 3, so each order multiplies by 3 and never changes the function or its sign: 3e^(3x), 9e^(3x), 27e^(3x), 81e^(3x). sin(5x) also picks up a factor 5 each time, but sin and cos swap at every step and the minus enters when cos is differentiated: 5 cos(5x), −25 sin(5x), −125 cos(5x), 625 sin(5x). It takes four steps to return to a positive multiple of sin(5x), because the pattern sin → cos → −sin → −cos → sin has period four.
+
+A correct answer says the exponential reproduces itself (only the chain factor 3 accumulates) while sin and cos alternate and the minus comes from d(cos)/dx = −sin, and gives d⁴y/dx⁴ = 81e^(3x) and 625 sin(5x).

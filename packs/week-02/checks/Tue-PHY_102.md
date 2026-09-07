@@ -1,100 +1,112 @@
 # Tuesday — PHY_102 nightly check
 
 *Conceptual session on Week 2, exactly as Dr Adeniji builds it.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-*Coulomb's law F = k|q₁q₂|/r² as a magnitude-only law for a pair of point charges, with k = 9.0 × 10⁹ N m²/C².*
+**1.** Point charges of −3.0 μC and +4.0 μC are 2.0 m apart. Take k = 9.0 × 10⁹ N·m²/C². What is the force between them?
+A. 0.027 N, attractive
+B. −0.027 N, repulsive
+C. 0.054 N, attractive
+D. 0.027 N, repulsive
 
-*Why a third charge forces the separate principle of superposition of forces, and what 'vector sum' means on a line. Her subscript convention Fᵢⱼ.*
+**2.** A charge Q₁ = +2.0 μC exerts a force of 0.50 N on a charge Q₂ = +8.0 μC. What is the magnitude of the force that Q₂ exerts on Q₁?
+A. 0.125 N
+B. 2.0 N
+C. 0.50 N
+D. 0.25 N
 
-*The definition E = F/q₀ in N/C with a positive unit test charge. Then |E| = k|Q|/r² as Coulomb's law with the test charge divided out.*
+**3.** Two point charges a fixed distance apart repel with a force F. Each charge is then doubled, with the separation unchanged. What is the new force?
+A. 2F
+B. 16F
+C. F/4
+D. 4F
 
-*Radially outward from +Q, and radially inward toward −Q. The field-line rules.*
+**4.** A point charge of −5.0 μC is fixed in vacuum. Take k = 9.0 × 10⁹ N·m²/C². What is the electric field at a point 3.0 m from the charge?
+A. 5.0 × 10³ N/C, directed toward the charge
+B. 1.5 × 10⁴ N/C, directed toward the charge
+C. 5.0 × 10³ N/C, directed away from the charge
+D. −5.0 × 10³ N/C
 
-*And F = qE, so that the force on an electron is antiparallel to E.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+**5.** A uniform electric field of 2.0 × 10⁴ N/C points east. A proton and an electron are placed in it. Take e = 1.6 × 10⁻¹⁹ C. What forces act on them?
+A. Both 3.2 × 10⁻¹⁵ N, proton west, electron east
+B. Both 3.2 × 10⁻¹⁵ N, proton east, electron west
+C. Both 3.2 × 10⁻¹⁵ N, directed east
+D. Both 1.25 × 10²³ N, proton east, electron west
 
-**1.** Slide 4 opens with 'Coulomb's law only describe the interaction of two point charges.' Why does the lecturer put that sentence before the superposition principle?
-A. Because Coulomb's law is stated for a pair only, so a third charge needs a separate principle to handle it
-B. Because Coulomb's law fails when the charges are close together
-C. Because Coulomb's law works only for charges of the same sign
-D. Because Coulomb's law gives a direction but not a magnitude
+**6.** A +4.0 nC point charge sits on the x-axis at x = 0.80 m. Take k = 9.0 × 10⁹ N·m²/C². What is the electric field at the point x = 0.20 m?
+A. 100 N/C, in the +x direction
+B. 56 N/C, in the −x direction
+C. 900 N/C, in the −x direction
+D. 100 N/C, in the −x direction
 
-**2.** The principle says the total force is the 'vector sum' of the individual forces. For three charges on a single straight line, what does that phrase reduce to in practice?
-A. Add the two magnitudes, since both are forces on the same charge
-B. Add if the two force arrows point the same way, subtract if they oppose, and the answer points the way of the larger arrow
-C. Take whichever force is larger and ignore the smaller one
-D. Add the magnitudes and then divide by two to get the average
+**7.** A point charge of +2.0 μC is fixed in vacuum. Take k = 9.0 × 10⁹ N·m²/C². At what distance from it does the electric field have magnitude 2.0 × 10³ N/C?
+A. 3.0 m
+B. 9.0 m
+C. 0.33 m
+D. 3.0 × 10⁻³ m
 
-**3.** The deck writes |F₁₃| in Example 1 and F₂₁ in Solution 2b. What does the pair of subscripts mean in her notation?
-A. The two charges are listed alphabetically, so the order carries no meaning
-B. The first subscript is the charge being acted on, the second is the source
-C. The first subscript is the source charge, the second is the charge being acted on
-D. The subscripts number the separations, not the charges
+**8.** Field lines are drawn around two charged spheres A and B. Every line leaves A and enters B, and the lines are much more closely spaced near A than near B. What can be concluded?
+A. A is negative, B is positive; the field is stronger near A
+B. A is positive, B is negative; the field is stronger near B
+C. A is positive, B is negative; the field is stronger near A
+D. A and B are both positive; the field is stronger near A
 
-**4.** Coulomb's law is printed as F = k|q₁q₂|/r², with bars around the product. What follows from those bars?
-A. Negative charges must be entered as negative numbers so the force comes out negative
-B. The bars mean the force is always repulsive
-C. The bars are a rounding instruction and can be ignored
-D. The law returns a magnitude only; whether the force attracts or repels is read off the diagram
+**9. (show your working)** At a point P the electric field is 1.5 × 10³ N/C pointing east. A small charged object placed at P feels a force of 4.5 × 10⁻³ N pointing west. Calculate the charge on the object, including its sign. Show your working.
 
-**5.** Slide 11 defines the electric field as 'the force a unit charge (q = +1 C) would experience if placed there', E = F/q₀. Which reading is right?
-A. E is a property of the source charges and the point, and exists whether or not a test charge is placed there
-B. E exists only while a test charge is sitting at the point
-C. E is the same thing as the force, just measured in different units
-D. E depends on the size of the test charge you choose
+**10. (show your working)** A test charge of −4.0 μC placed at a point feels a force of 6.0 mN directed east. Calculate the electric field at that point, magnitude and direction. Show your working.
 
-**6.** One slide is headed 'ELECTRIC FIELD AROUND A POSITIVE CHARGE, − Q' and says the direction of the field is radially inward. What is going on?
-A. The heading is right and the body is wrong; the field around −Q points radially outward
-B. The heading is a misprint for NEGATIVE charge; the body and diagram are correct, and E points radially inward toward −Q
-C. Both are right, because the field around a negative charge points outward at short range and inward at long range
-D. The heading refers to the test charge, which is positive, so nothing is wrong
+**11. (show your working)** Two protons are 2.0 nm apart. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Calculate the electric force between them and state whether it is attractive or repulsive. Show your working, including the powers of ten.
 
-**7.** Which statement about field lines is NOT one the deck makes?
-A. Lines start on positive charges and end on negative charges, or at infinity for a single charge
-B. The more closely spaced the field lines, the stronger the force
-C. Field lines show the path a charged particle actually travels along
-D. The direction of the lines shows how a positive charge would move; a negative charge would move the opposite way
+**12. (show your working)** The field strength a distance r from a point charge is |E| = k|Q|/r² whether Q is positive or negative. Explain what does change between the two cases, and state which way an electron moves if released at rest near an isolated negative charge.
 
-**8.** A uniform field E points along +x. An electron is released in it. What happens, and why?
-A. It feels no force, because the electron's charge is negative and E was defined with a positive test charge
-B. It accelerates along +x, because field lines always point the way charges move
-C. It stays still, because the field pushes and pulls it equally
-D. It accelerates along −x, because F = qE and a negative q reverses the direction relative to E
-
-**9.** State the principle of superposition of forces as the deck states it, and explain why it has to be asserted separately rather than derived from Coulomb's law.
-*(short answer)*
-
-**10.** Slide 13 derives the field of a point charge in two lines. Reproduce the argument and say what the cancellation shows about the nature of the electric field.
-*(short answer)*
-
-**11.** Give the field-line rules the deck states, and explain what is meant by 'the electric field cannot exert a net force on the charge that produces it'.
-*(short answer)*
-
-**12.** Without doing any arithmetic, explain how you decide whether the two forces on a charge add or subtract, and use Q₁ and Q₂ of Example 2 to show the two outcomes.
-*(short answer)*
+---
 
 ## Answers
 
-**1. A** — Coulomb's law is a two-body statement: it tells you the force between q₁ and q₂ and nothing else. Superposition is the extra, experimentally established claim that the pairwise forces simply add as vectors and that no charge disturbs any other pair. Option 2 invents a range restriction the deck never makes — point charges are idealised as sizeless, so 'close' is not the issue. Option 3 is false: the law covers attraction and repulsion equally, with the sign read off the picture. Option 4 has it exactly backwards — the law gives the magnitude, and the direction comes from the sketch.
+**1. A** — *Coulomb's law as a magnitude with direction from the signs.* Use the magnitudes: F = k|q₁q₂|/r² = (9.0 × 10⁹)(3.0 × 10⁻⁶)(4.0 × 10⁻⁶)/(2.0)² = 0.108/4.0 = 0.027 N. The charges have unlike signs, so the force is attractive. The sign of a charge never enters the formula; it only decides the direction.
 
-**2. B** — On a line there are only two possible directions, so the vector sum is a signed sum: same direction adds, opposite directions subtracts, and the resultant points along the bigger contribution. That single rule generates both of her answers — Example 1's 16 − 4 and part f's 0.0194 + 0.0720. Option 1 is what turns Example 1's correct 12 × 10⁻¹¹ N into 20 × 10⁻¹¹ N. Option 3 throws away a real force. Option 4 averages, which no principle in physics licenses.
+−0.027 N substitutes the signed charge and then reads the spurious minus as a direction; 0.054 N forgets to square the 2.0 m; '0.027 N, repulsive' has the magnitude right but confuses unlike signs with repulsion.
 
-**3. C** — In Example 1 the electron is q₃ and the two forces on it are written F₁₃ and F₂₃; in Solution 2b the charge under study is Q₁ and its two forces are F₂₁ and F₃₁. In both, the second subscript names the victim, so it tells you whose free-body diagram you are on. Option 2 reverses it, which will make you draw the wrong diagram. Option 1 ignores that F₁₃ and F₃₁ act on different bodies even though they have equal magnitude. Option 4 confuses the force labels with the distance labels r₁, r₂.
+**2. C** — *Equal and opposite Coulomb forces on a pair.* Coulomb's law contains the product q₁q₂, which is the same whichever charge you call the source, so the two forces have the same magnitude, 0.50 N, and opposite directions. This is Newton's third law.
 
-**4. D** — |q₁q₂| is a product of magnitudes, so the formula returns a positive number of newtons and nothing about direction. That is why she substitutes 18 × 10⁻⁶ for a charge she has declared to be −18 μC, and why the arrows on her diagrams do the directional work. Option 1 is the habit that produces spurious minus signs unrelated to any actual direction. Option 2 confuses 'positive number' with 'repulsive force'. Option 3 misreads absolute-value bars as something typographic.
+0.125 N scales the force down by the charge ratio 2/8 and 2.0 N scales it up by 8/2, as if the bigger charge felt or exerted more; 0.25 N halves it for no reason. The force on each member of the pair is identical in size.
 
-**5. A** — Her own derivation on slide 13 makes this concrete: the test charge q appears in |F| = kQq/r² and then cancels when you divide, leaving |E| = kQ/r² with only the source charge and the distance in it. Option 2 confuses the field with the act of measuring it. Option 3 ignores that E is per unit charge, in N/C not N. Option 4 is refuted by that same cancellation — the field is unchanged whatever q₀ you imagine using.
+**3. D** — *Dependence of the Coulomb force on the product of the charges.* F ∝ q₁q₂. Doubling both charges multiplies the product by 2 × 2 = 4, so the force becomes 4F.
 
-**6. B** — The charge named in the heading is −Q and the arrows in the diagram point inward, so only the word POSITIVE is wrong; it should read NEGATIVE. Field lines end on negative charges, so E points toward −Q, and the magnitude formula k|Q|/r² is unchanged from the +Q case. Option 1 would contradict the field-line rule from slide 12. Option 3 invents a distance dependence of direction that does not exist. Option 4 is a plausible-sounding rescue, but the heading says 'AROUND A ... CHARGE, −Q', which names the source, not the test charge.
+2F doubles only one charge; 16F squares the factor 4 as if the charges were squared as well; F/4 has the dependence upside down, as if charge sat in the denominator with the distance.
 
-**7. C** — A field line gives the direction of the force at each point, which is the direction of the particle's acceleration, not of its motion — a particle launched sideways follows a curved path that crosses the lines. The other three are on slides 12, 15 and 16 word for word. This distinction is the one that separates a memorised list of rules from an understanding of what the picture represents.
+**4. A** — *Field of a negative point charge.* |E| = k|Q|/r² = (9.0 × 10⁹)(5.0 × 10⁻⁶)/(3.0)² = 4.5 × 10⁴/9.0 = 5.0 × 10³ N/C. The magnitude formula is the same for either sign; the sign fixes the direction, and the field of a negative charge points radially inward, toward the charge.
 
-**8. D** — The field is unchanged by what you place in it; the sign of the charge decides the direction of the force, so a negative q makes F antiparallel to E. This is slide 16's 'a negative charge would move the opposite way' in equation form. Option 1 confuses the definition's choice of a positive test charge with a restriction on what may be placed in the field. Option 2 states the rule for positive charges only. Option 3 has no mechanism behind it — there is only one force here.
+1.5 × 10⁴ N/C forgets to square the 3.0 m; 'away from the charge' is the direction for a positive charge; −5.0 × 10³ N/C feeds the sign into the magnitude, and a field strength cannot be negative.
 
-**9.** A good answer quotes the substance of slide 4: when two charges exert forces simultaneously on a third charge, the total force on that charge is the vector sum of the forces the two would exert individually. It then explains the need for it: Coulomb's law is a statement about a pair, so it has nothing to say about a third body, and the fact that the pairwise forces simply add — that no charge alters the force between the other two — is an experimental finding, which is why the slide begins 'Experiments have shown that'. Credit any answer that stresses vector sum over arithmetic sum, since that is what makes Example 1 a subtraction.
+**5. B** — *Force on positive and negative charges in the same field.* F = qE. Both particles carry charge of magnitude e, so |F| = (1.6 × 10⁻¹⁹)(2.0 × 10⁴) = 3.2 × 10⁻¹⁵ N for each. The proton is positive, so its force is along E (east); the electron is negative, so its force is antiparallel to E (west).
 
-**10.** A good answer runs her two lines: a test charge +q at separation r from +Q experiences an outward force |F| = kQq/r²; dividing by q, |E| = |F|/q = kQ/r², directed radially outward. The point to draw out is that q has cancelled: the surviving expression contains only the source charge Q and the distance r, so the field is a property of the source and the location, not of whatever you place there. That is also why the same formula, with the magnitude |Q|, serves the negative case on slide 14, with only the direction changing to radially inward.
+'Proton west, electron east' reverses both directions; 'both east' forgets that a negative charge feels a force opposite to E; 1.25 × 10²³ N divides E by e instead of multiplying.
 
-**11.** A good answer lists the rules from slides 12, 15 and 16: lines start on positive charges and end on negative charges, or run to infinity for a single isolated charge; the more closely spaced the lines, the stronger the force; and the direction of the lines shows how a positive charge would move, a negative charge moving the opposite way. On the self-force sentence: a charge sets up a field around itself but that field exerts no net force on it, so when you compute the force on a charge you include contributions from every other charge and never its own. In Example 2 this is why Q₁ has exactly two forces on it, not three.
+**6. D** — *Distance from source to field point.* The distance that matters is from the charge to the field point: r = 0.80 − 0.20 = 0.60 m. E = kQ/r² = (9.0 × 10⁹)(4.0 × 10⁻⁹)/(0.60)² = 36/0.36 = 100 N/C. The charge is positive, so E points away from it; the field point is to the left of the charge, so E points in the −x direction.
 
-**12.** A good answer says the decision is made by drawing the two arrows before any numbers appear: fix an axis, take each other charge in turn, use like-repels and unlike-attracts together with which side that charge sits on, and draw the arrow. Same direction means add, opposite means subtract. For Q₁ at x = −9 m: Q₂ is negative and to its right so it repels Q₁ leftward, while Q₃ is positive and to its right so it attracts Q₁ rightward — opposing arrows, hence a subtraction. For Q₂ at x = 1 m: Q₁ is negative and to its left so it repels Q₂ rightward, and Q₃ is positive and to its right so it attracts Q₂ rightward — both arrows +x, hence an addition. The signs of the charges alone settle nothing; it is signs plus geometry.
+'+x' has the direction wrong (away from a charge on the right means leftward); 56 N/C uses the charge's coordinate 0.80 m as the distance; 900 N/C uses the field point's coordinate 0.20 m.
+
+**7. A** — *Distance at which a point charge gives a stated field.* E = kQ/r², so r² = kQ/E = (9.0 × 10⁹)(2.0 × 10⁻⁶)/(2.0 × 10³) = 1.8 × 10⁴/2.0 × 10³ = 9.0 m². Take the square root: r = 3.0 m.
+
+9.0 m stops at r² and forgets the square root (using 1/r instead of 1/r² lands on the same wrong number); 0.33 m inverts the fraction before rooting; 3.0 × 10⁻³ m reads μC as 10⁻⁹ C.
+
+**8. C** — *Reading charge sign and field strength from field lines.* Field lines start on positive charges and end on negative ones, so A is positive and B is negative. Closer spacing means a stronger field, so the field is stronger near A.
+
+The first option reverses the start/end rule; the second reads the spacing backwards; two positive charges would have lines leaving both spheres, not entering B.
+
+**9.** *Finding a charge from the force in a known field.* F = qE, so |q| = F/E = 4.5 × 10⁻³ / 1.5 × 10³ = 3.0 × 10⁻⁶ C. The force is opposite to the field, and only a negative charge feels a force antiparallel to E, so q = −3.0 × 10⁻⁶ C = −3.0 μC.
+
+Final answer: q = −3.0 μC (accept −3.0 × 10⁻⁶ C; 2.9 to 3.1 in magnitude). The sign must be negative and justified by the force being opposite to E. +3.0 μC is wrong on sign; 6.75 N or similar multiplies F by E instead of dividing; 3.3 × 10⁵ C inverts the fraction.
+
+**10.** *Field from the force on a negative test charge.* Convert the prefixes: 6.0 mN = 6.0 × 10⁻³ N and 4.0 μC = 4.0 × 10⁻⁶ C. E = F/q₀ = 6.0 × 10⁻³ / 4.0 × 10⁻⁶ = 1.5 × 10³ N/C. The field direction is the direction of the force on a positive charge; this test charge is negative and is pushed east, so a positive charge would be pushed west. E = 1.5 × 10³ N/C pointing west.
+
+Final answer: 1.5 × 10³ N/C (accept 1500 N/C or 1.5 kN/C) directed west. 'East' forgets the sign of the test charge; 1.5 N/C drops both prefixes; 6.7 × 10⁻⁴ N/C inverts the fraction; 1.5 × 10³ N has the unit of a force, not a field.
+
+**11.** *Coulomb's law at the nanometre scale.* Each proton carries +e. F = ke²/r² = (9.0 × 10⁹)(1.6 × 10⁻¹⁹)²/(2.0 × 10⁻⁹)². Numerator: (9.0 × 10⁹)(2.56 × 10⁻³⁸) = 2.304 × 10⁻²⁸. Denominator: 4.0 × 10⁻¹⁸. F = 2.304 × 10⁻²⁸/4.0 × 10⁻¹⁸ = 5.76 × 10⁻¹¹ N. Two positive charges, so the force is repulsive.
+
+Final answer: 5.8 × 10⁻¹¹ N, repulsive (accept 5.7 to 5.8 × 10⁻¹¹ N). The working must show e squared and the 2.0 nm converted to 2.0 × 10⁻⁹ m and squared. 1.2 × 10⁻¹⁹ N forgets to square r; 3.6 × 10⁸ N uses e once instead of e².
+
+**12.** *Field direction around positive and negative charges.* The magnitude depends only on |Q| and r. What changes is the direction: the field points radially outward from a positive charge and radially inward toward a negative charge, because E is defined by the force on a positive test charge, which is repelled by +Q and attracted by −Q. Near an isolated negative charge E points inward, but an electron is negative, so its force is opposite to E: it moves radially outward, away from the negative charge (like charges repel).
+
+A correct answer says the magnitude formula is unchanged, the direction reverses (outward for +Q, inward for −Q), and the electron moves away from the negative charge. Saying the electron follows the field lines inward is wrong.

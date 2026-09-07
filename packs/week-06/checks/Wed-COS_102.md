@@ -1,88 +1,224 @@
 # Wednesday — COS_102 nightly check
 
-*Pseudocode concepts only: what a pseudocode is and what it is for, the rules that govern it, the eight constructs and where each one tests its condition, the seven steps of writing one, its stated advantages and disadvantages, and how it relates to an algorithm and to a flowchart. No tracing, no bug-hunting, no writing a fragment — those are Saturday.*
-*Sit cold, notes closed, about 15 minutes. Score out of 12.*
+*Pseudocode concepts: what a pseudocode is and what it is for.*
+*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
 
-**1.** Last week's deck defined a flowchart as "a graphical representation of the sequence of operations in a computer program". How does this week's deck define a pseudocode?
-a) As a step-by-step procedure for solving a problem, which may be expressed in natural language, programming code or mathematical symbols
-b) As a simplified programming language whose statements a compiler converts directly into a working program
-c) As a textual representation of the sequence of operations in a computer program, or the textual representation of an algorithm
-d) As a set of comments written into a source file to describe code that has already been written
+**1.** What is printed?
 
-**2.** A student's pseudocode contains the single line `System.out.println(total);`. One rule is broken. Which, and why does that rule exist?
-a) The one-statement-per-line rule, because printing is really two tasks — fetching total and displaying it — and each task must sit on its own line
-b) The language-independence rule: pseudocode statements must not be written in a particular programming language, because anyone should be able to read them and convert them into any language
-c) The capital-letters rule, because println is the output keyword on this line and keywords must be written in capitals so they stand out from other words
-d) No rule is broken: the line holds one statement, it is understandable, and it would convert into working code without any change at all
+```
+SET x TO 3
+REPEAT
+    SET x TO x * 2
+UNTIL x > 40
+PRINT x
+```
+A. 24
+B. 48
+C. 40
+D. 96
 
-**3.** One loop must keep reading results while a condition set at its top still holds, with further conditions inside the body deciding what happens on each pass. A second must run a number of times that is fixed entirely before it is entered. Which two constructs, in the course's own terms?
-a) The first is FOR, since all its conditions are set at the beginning/top; the second is WHILE, since it runs a desired number of times
-b) The first is REPEAT-UNTIL and the second is FOR, since only REPEAT-UNTIL is allowed to carry conditions in the body of its statements
-c) The first is WHILE, which sets some condition at the beginning/top and other conditions in the body; the second is FOR, which sets all the necessary conditions at the beginning/top
-d) Both are WHILE loops, because FOR is only a shorthand for a WHILE whose counter has been written out in full at the top
+**2.** What is printed?
 
-**4.** In the CASE skeleton, what is `OTHERS` for, and what is CASE said to be?
-a) OTHERS lists the variables that the expression does not test; CASE is a more generalised form of the FOR loop
-b) OTHERS is the default sequence, run when none of the listed conditions holds; CASE is a more generalised form of the conditional statement that IF-THEN-ELSE also provides
-c) OTHERS is the handler for values the expression cannot take; CASE is the construct out of which EXCEPTION and WHEN are built
-d) OTHERS repeats the whole CASE for any conditions still left over; CASE is a more generalised form of REPEAT-UNTIL
+```
+SET c TO 0
+FOR k = 5 TO 12
+    SET c TO c + 1
+ENDFOR
+PRINT c
+```
+A. 7
+B. 12
+C. 5
+D. 8
 
-**5.** In `CALL SquareRoot with orbitHeight RETURNING norminalOrbit`, what do `with` and `RETURNING` each name?
-a) `with` names the routine that is called, and `RETURNING` names the routine control comes back to when it finishes
-b) `with` names the data type of the argument supplied, and `RETURNING` names the data type of the result produced
-c) `with` names the class in which the object is defined, and `RETURNING` names the object that the call creates
-d) `with` names the argument passed into the routine, and `RETURNING` names the variable that receives the value handed back
+**3.** Which line breaks a rule of pseudocode?
 
-**6.** Both CASE and EXCEPTION/WHEN pick one set of statements out of several. What distinguishes them?
-a) Nothing structural: EXCEPTION/WHEN is simply CASE written for errors, and either may be used wherever the other one is
-b) CASE may only test numeric expressions whereas WHEN may test any expression at all, which is why exceptions were given their own keyword
-c) CASE chooses among expected values of one expression as part of the normal flow; WHEN clauses sit in the EXCEPTION part of a BEGIN…END block and run only when an unexpected or unwanted event occurs as the program runs
-d) CASE is evaluated once before its block runs, while WHEN is re-evaluated after every statement in the block, which is what makes exception handling the slower of the two
+```
+1  SET s TO 0
+2  FOR i = 1 TO 5
+3      READ x
+4      SET s TO s + x
+5  ENDWHILE
+6  PRINT s
+```
+A. Line 5: a FOR must close with ENDFOR
+B. Line 2: a FOR must state a condition, not bounds
+C. Line 3: READ is not an input verb
+D. Line 1: s may not be set before the loop
 
-**7.** The course lists as a disadvantage that pseudocode "takes a longer time to read and understand" than a flowchart, even though it is written in near-English. What is the mechanism behind that?
-a) Pseudocode is always longer than the flowchart of the same algorithm, because each symbol expands into several lines of text that must all be read
-b) A flowchart shows its structure at a glance in shapes and arrows; a pseudocode reader must rebuild the control flow line by line, and must first decode the writer's own style, since no accepted standards exist
-c) Pseudocode borrows its keywords from several programming languages at once, so a reader has to know all of those languages before following any of it
-d) Pseudocode cannot show repetition directly, so a reader has to reconstruct every loop by hand from the statements that are being repeated
+**4.** A program reads marks until a negative mark is entered. The very first mark may itself be negative, in which case no mark should be processed at all. Which construct fits?
+A. FOR
+B. REPEAT-UNTIL
+C. WHILE
+D. CASE
 
-**8.** Which statement about algorithms and pseudocode is correct on the course's account?
-a) An algorithm may be written in any notation or language while pseudocode is written in a combination of natural and programming language elements, and the algorithm is the precise, well-defined one
-b) Pseudocode may be written in any notation or language while an algorithm must be written in a combination of natural and programming language elements, and the pseudocode is the precise one
-c) An algorithm is a representation of a pseudocode, produced once the pseudocode has been coded in a specific programming language and tested
-d) An algorithm and a pseudocode are two names for one thing, since both are step-by-step procedures and neither of them is executed by a machine
+**5.** The user enters 14. What is printed?
 
-**9. (explain why)** The course recommends writing the pseudocode into a file **as comments**, then filling in the actual code between those comments. Explain what problem this solves, why the course describes it as "writing the comments for our program before writing the program", and what specifically would go wrong with the technique if the pseudocode had been written in one language's syntax.
+```
+READ n
+SET r TO n MOD 5
+CASE r OF
+    0: PRINT "five"
+    1: PRINT "one over"
+    OTHERS: PRINT r
+ENDCASE
+```
+A. 4
+B. 2
+C. five
+D. one over
 
-**10. (explain why)** State the rules that govern the writing of a pseudocode and, for **each** one, name the specific ambiguity or failure it prevents — not what the rule says, but what a reader would be unable to work out if the rule were ignored.
+**6.** The nine results read are P P F P P P F P P. What is printed?
 
-**11. (explain why)** List the seven steps of writing a pseudocode in order. Then explain precisely what separates **problem definition** from **identification of main steps**, and what separates **using constructs to describe logic** from **using clear and concise language**, since in each pair the second step looks like more of the first.
+```
+SET passes TO 0
+SET failures TO 0
+FOR i = 1 TO 9
+    READ result
+    IF result = "P" THEN INCREMENT passes ELSE INCREMENT failures ENDIF
+ENDFOR
+PRINT passes, failures
+IF passes > 7 THEN PRINT "increase tuition" ENDIF
+```
+A. 7 2 increase tuition
+B. 2 7
+C. 7 2
+D. 8 1 increase tuition
 
-**12. (explain why)** The course claims that pseudocode needs no special software, that anyone can understand it, and that it is easily modified; and it complains that there are no generally accepted standards, and that pseudocode is not visual. Explain which of the advantages and which of the disadvantages are two sides of one single property, name that property, and say what this implies about when you would choose a flowchart over pseudocode.
+**7.** What is printed?
+
+```
+SET i TO 1
+SET s TO 0
+WHILE s < 10
+    SET s TO s + i
+    SET i TO i + 1
+ENDWHILE
+PRINT i
+```
+A. 4
+B. 5
+C. 10
+D. 6
+
+**8.** In `CALL SquareRoot with area RETURNING side`, what are `area` and `side`?
+A. area is the name of the function; side is its argument
+B. Both are values passed into SquareRoot
+C. area is printed; side is read from the user
+D. area is the value passed in; side receives the result
+
+**9. (show your working)** Rewrite this using WHILE so that it prints the same total for any list of inputs ending in 0. Give the WHILE condition and explain why READ has to appear twice in your version.
+
+```
+SET t TO 0
+REPEAT
+    READ n
+    SET t TO t + n
+UNTIL n = 0
+PRINT t
+```
+
+**10. (show your working)** Trace this, giving the values of evens and odds after each pass, and the printed output. Show your working.
+
+```
+SET evens TO 0
+SET odds TO 0
+FOR k = 3 TO 9
+    IF k MOD 2 = 0 THEN
+        INCREMENT evens
+    ELSE
+        INCREMENT odds
+    ENDIF
+ENDFOR
+PRINT evens, odds
+```
+
+**11. (show your working)** State three faults in this pseudocode, naming the rule or requirement each one breaks, then write a corrected version that also handles n = 0.
+
+```
+set total to 0
+READ n
+FOR i = 1 TO n
+    READ mark; SET total TO total + mark
+PRINT total / n
+```
+
+**12. (show your working)** A student says pseudocode is just a program with the semicolons removed. Give two reasons this is wrong (language independence; pseudocode is not executed), and say how pseudocode is tested instead.
 
 ---
 
 ## Answers
 
-**1. c — a textual representation of the sequence of operations in a computer program, or the textual representation of an algorithm.** *Concept: the definition of a pseudocode, and the one word that separates it from a flowchart.* The two definitions are the same sentence with **textual** in place of **graphical**, which is exactly what Pseudocodes I's mid-lesson question tests ("A pseudocode is a *graphical* representation…" → **No**). (a) is the definition of an **algorithm**, and the giveaway is "may be expressed in mathematical symbols" — pseudocode by definition uses natural and programming language elements. (b) is the "pseudocode is nearly code" error: it is written in a form **easily convertible into programming statements**, which is not the same as being convertible by a compiler; it **is not meant to be executed as the actual code**. (d) inverts the comments-first technique — the pseudocode becomes the comments, but it is written **before** the program, not as a description of code that already exists.
+**1. B** — *Tracing a REPEAT-UNTIL loop.* The body runs, then the condition is tested: x = 6 (6 > 40 false), 12, 24 (false), 48 (48 > 40 true, stop). Printed: 48.
 
-**2. b.** *Concept: language independence, and why the rule is about the reader and the convertibility, not about tidiness.* The line is Java. Pseudocode statements are required to be **language independent, not in a particular programming language**, for two reasons the course states elsewhere: **anyone can understand pseudocode since the language is close to English**, and it is **written in a form that makes it easily convertible into programming statements** — plural, any language's statements. A Java line is readable only by Java programmers and is already committed to Java, so it does neither job. `PRINT total` or `DISPLAY total` is the pseudocode. (a) misapplies a real rule: one **statement** per line means one task per line, and displaying a value is one task, not two — the rule is about not stringing several tasks along a single line. (c) also misapplies a real rule: capitals are for **pseudocode keywords**, and `println` is not one; capitalising it would produce `SYSTEM.OUT.PRINTLN`, which is still Java. (d) is the answer of a student who has read the rules as style advice: "it converts to code without any change" is precisely the fault, since it means the design is already tied to one language.
+24 stops one pass early, testing before the doubling instead of after; 40 assumes the loop halts exactly at the threshold, which x can never equal since it only doubles from 3; 96 runs one pass too many.
 
-**3. c.** *Concept: where each loop construct sets its conditions, in the course's exact wording.* The course distinguishes them by the **placement of the conditions**, not by the shape of the loop: **FOR** executes statements a desired number of times **based on setting all the necessary conditions at the beginning/top**; **WHILE** does so **based on setting some condition at the beginning/top and other conditions in the body of the statements**; **REPEAT-UNTIL** sets **some condition at the ending/bottom and other conditions in the body**. "Some at the top, others in the body" is WHILE; "all at the top" is FOR. (a) is the answer with the two swapped, which is what a student produces from a vague memory that both test at the top. (b) picks REPEAT-UNTIL on the strength of "conditions in the body", which WHILE has too — the discriminator is the **top/bottom** placement, and this loop's condition is at the top. (d) is a true-sounding fact from programming practice, but it answers a different question: even if a FOR could be rewritten as a WHILE, the course names them as separate constructs precisely on the top/all-conditions distinction, and a question about which construct is being described is not a question about what is expressible.
+**2. D** — *Counting the passes of a FOR loop.* FOR k = a TO b runs the body b − a + 1 times because both bounds are included: k = 5, 6, 7, 8, 9, 10, 11, 12, so c reaches 8.
 
-**4. b.** *Concept: CASE as the generalised conditional, and OTHERS as its default branch.* The course introduces CASE as also using **conditional statements to change the normal flow of operation of an algorithm**, but **represented in a more generalised form** — so its neighbour is IF-THEN-ELSE, not a loop. In the skeleton, `condition 1 … condition n` are the alternatives and `OTHERS: default sequence` catches everything that matched none of them, which is what stops the construct falling through with nothing done. (a) and (d) both attach CASE to a loop, the first because "generalised" is misread as "repeated for each condition", the second the same error with the other loop. (c) is the near-miss worth knowing: OTHERS handles a value the expression **did** take that you did not list, whereas an exception handler deals with an **event** that occurs while the program runs. Nothing in CASE is about failure.
+7 is 12 − 5, forgetting that the loop includes both ends; 12 assumes the loop starts at 1; 5 prints the starting bound instead of the count.
 
-**5. d.** *Concept: reading a CALL — arguments in, result out.* The course's four examples make the pattern plain: `CALL AvgAge with studentAges` (argument only), `CALL Swap with CurrentItem and TargetItem` (two arguments), `CALL getBalance RETURNING aBalance` (result only), and `CALL SquareRoot with orbitHeight RETURNING norminalOrbit` (both). The name straight after CALL is the routine; **with** introduces what is passed **in**; **RETURNING** names the variable that receives what comes **out**. (a) misreads `with` as naming the routine, which would leave `SquareRoot` unexplained, and treats RETURNING as a return of **control** rather than of a **value** — control always comes back to the line after the CALL, so nothing would need naming. (b) invents data-type declarations; types are settled at the "using variables and data structures" step, not in the CALL. (c) is built out of the one other thing the course says about CALL — that it can be used for **defining class objects** — and stretches it over the whole line.
+**3. A** — *Closing keywords of constructs.* Each construct closes with its own keyword: FOR ... ENDFOR, WHILE ... ENDWHILE, REPEAT ... UNTIL. ENDWHILE on line 5 closes a loop that was never opened and leaves the FOR unclosed.
 
-**6. c.** *Concept: selection among expected values vs handling an event that was not expected.* CASE is part of the plan: you know the expression, you list its possible values, and one branch is taken every time the construct is reached. EXCEPTION/WHEN is the opposite arrangement — the statements between `BEGIN` and `EXCEPTION` are the ones meant to run, and the WHEN clauses run **only** when **unexpected or unwanted events take place while the program is running**, which the course names as **exception handling**. On a run where nothing goes wrong, no WHEN clause is entered at all, which no CASE can say of itself. (a) is the tempting summary "EXCEPTION is CASE for errors": it gets the surface shape right and the trigger wrong, and it would license writing your ordinary branching inside an EXCEPTION block. (b) invents a restriction on CASE that the course never states — its skeleton is `CASE expression OF`, with no restriction on the expression. (d) invents an execution model and then reasons about speed, which is a question pseudocode cannot even ask: it is not executed.
+A FOR sets its iteration bounds at the top, so line 2 is correct; READ is one of the input verbs (READ, OBTAIN, GET); initialising an accumulator before its loop is exactly where it belongs.
 
-**7. b.** *Concept: why a textual notation costs the reader more than a graphical one, and how the two disadvantages compound.* The course's own contrast is that flowcharts are **visual and easily understandable** while pseudocodes **are not visual**, from which the reading-time complaint follows. The mechanism is that in a chart the control flow is drawn: a loop is an arrow you can see going back, a branch is a fork you can see splitting. In pseudocode the same structure is only implied by keywords and indentation, so the reader has to simulate the flow in their head. The second stated disadvantage makes it worse: since **there are no generally accepted standards, anyone can write pseudocode in their own way**, so before reading the logic you must first work out this writer's conventions. (a) confuses length with difficulty, and is not even reliably true. (c) invents a claim about mixed languages that the language-independence rule specifically forbids. (d) is flatly false — repetition is what FOR, WHILE and REPEAT-UNTIL are for, and they are the constructs the course spends most of the deck on.
+**4. C** — *Choosing a loop by where its condition is tested.* WHILE tests its condition at the top, before the first pass, so if the first mark is negative the body runs zero times. That is the behaviour required.
 
-**8. a.** *Concept: algorithm vs pseudocode — the four contrasts the course draws.* The course states them in a row: an algorithm is a **step-by-step procedure for solving a problem** and **can be expressed in any language — natural language, programming code or mathematical symbol**; pseudocode is a **high-level representation of an algorithm** using **a combination of natural and programming language elements** without strictly following any specific language's syntax; algorithms are **usually represented as pseudocode during early software development stages, before being coded**; and algorithms have **precise and well-defined procedures** while pseudocode is **more high level and informal**. (b) is the mid-lesson question's own distractor — the two terms reversed — and it is worth noticing that it also reverses the precision claim, so a student who remembers only "one of them is the precise one" cannot use that to escape. (c) reverses the direction of representation and the order of work: the pseudocode represents the algorithm, and both precede the code. (d) collapses the distinction; the two do share "not executed", which is why the option is attractive, but the algorithm is the method and the pseudocode is one way of writing it down.
+REPEAT-UNTIL tests at the bottom and always runs its body at least once, so it would process the negative mark; FOR needs the number of passes fixed at the top, and here it is unknown; CASE selects between alternatives and repeats nothing.
 
-**9.** *Concept: pseudocode as the scaffolding of the source file — design first, then fill in, and only then in a chosen language.* The problem it solves is the one the course names in its rule of thumb: **if you want to develop a new computer program and you are struggling with how to start the development, write a pseudocode first.** The difficulty at the start of a program is not the syntax but deciding what the steps are and in what order; writing them as comments lets you settle the whole sequence — the inputs, the loop, the branches, the outputs — while nothing in the file yet has to compile. Once the sequence is right, each comment becomes a specification for the lines directly beneath it, and the job shrinks from "write a program" to a series of small, local translations. The course's phrasing follows: because the pseudocode was written **before** any code and stays in the file, **we are essentially writing the comments for our program before writing the program** — the commentary is not a later gloss on finished code but the design that produced it, which is also why the comments end up genuinely describing what the code does. If the pseudocode had been written in one language's syntax, three things break. First, it stops being a **design**: you have committed to that language's constructs, data types and library calls before deciding whether they suit the problem, so decisions are made by syntax rather than by the problem. Second, the comments become useless as comments — they restate the code below them line for line instead of saying what that code is for. Third, it fails the stated rule that pseudocode be **language independent** and the reason behind it: it is no longer **easily convertible into programming statements** of *any* language, and it can no longer be read by anyone who does not know the one you chose.
+**5. A** — *Tracing a CASE construct.* 14 MOD 5 is the remainder of 14 ÷ 5: 14 = 2 × 5 + 4, so r = 4. Neither listed condition matches 4, so the OTHERS branch runs and prints r, which is 4.
 
-**10.** *Concept: each rule exists to remove one particular ambiguity from a notation that has no grammar to fall back on.* **One statement per line.** Pseudocode gives the computer **a list of tasks to implement in a sequential manner**, so the line is what carries the order. Ignore the rule — `SET total TO 0; READ n; SET total TO total + n` — and the reader can no longer tell how many tasks there are, cannot cite a step by position, and cannot see whether a step was left out; worse, once several tasks share a line it is not clear whether they belong to the same loop body or the same branch, because indentation now applies to a group rather than a task. **Keywords in capital letters.** Capitals are what **differentiate keywords from other words**. Without them the reader cannot tell structure from prose: does "if the student passed" begin an `IF` construct or merely describe one? Is `set total` an instruction or a variable named `settotal`? Since pseudocode is deliberately close to English, the capitals are the only marker that a word is doing structural work. **Language independence.** Without it, the pseudocode is readable only by people who know the language it leaked from, and it is no longer convertible into **any** language — the two properties the course claims for pseudocode, that **anyone can understand it** and that it is **easily convertible into programming statements**, both fail at once. **Indentation of each construct's body.** This is what says how far a loop or a branch extends. Without it, a reader cannot tell whether a statement following an `IF` belongs to the THEN part or comes after the whole construct, nor whether a counter is incremented inside the loop or once after it — and the course's own printed solution shows the damage, with `add one to student counter` left unindented outside a WHILE that therefore never advances. *(The deck's rules slide is cut off after three rules and the week's Summary sheet says four should be followed; indentation is the fourth, and every worked example in the deck obeys it.)*
+2 is the quotient 14 DIV 5, not the remainder; 'five' assumes 14 is a multiple of 5; 'one over' would need a remainder of 1, as 11 or 16 would give.
 
-**11.** *Concept: the seven steps, and the two places where consecutive steps are easily collapsed.* In order: **problem definition; identification of main steps; header writing; using variables and data structures; using constructs to describe logic; using clear and concise language; testing and refining.** **Problem definition vs identification of main steps.** Problem definition is about the problem, and is written entirely in terms of **inputs, process, outputs and requirements** — for the tuition example: the input is the number of students and their results, the process is accepting each result and determining pass or fail, the output is the number of passes, the number of failures and the tuition decision. Nothing in it says how anything will be done or in what order; it is a statement of what a correct solution would have to take in and produce. Identification of main steps is about the **solution**: it **breaks the problem into its integral parts** and puts them in sequence — initialise the storage, set up the counters, accept a result and classify it, increment the relevant counter, display the outputs. The test that separates them: change your mind about how to solve the problem and the main steps change, while the problem definition does not. Doing the second before the first is what produces solutions to the wrong problem. **Using constructs vs using clear and concise language.** The constructs step decides the **control structure** — that a WHILE will iterate over the results one at a time and an IF-THEN-ELSE will pick which counter to increment. That is a choice about logic, and it is right or wrong: choose an IF where a loop was needed and the algorithm does not work. The clear-language step decides the **wording inside** that structure, and it is not about correctness but about ambiguity: `FOR each index of string / IF string(index) is equal to hash THEN` and `FOR i = 0 to 20 / IF string[i] = '#'` describe the same logic, and the course prefers the first because the second imports one language's indexing syntax. So: the fifth step can leave the algorithm wrong, the sixth can only leave it unclear — but unclear is enough to fail the requirement that the constructs describe the steps **without ambiguity**, which is why it is a step and not an afterthought.
+**6. C** — *Tracing counters and a boundary condition.* Seven results are P and two are F, so the first line printed is 7 2. Then passes > 7 asks whether 7 > 7, which is false, so nothing else is printed.
 
-**12.** *Concept: the advantages and disadvantages are consequences of one property — pseudocode has no fixed notation and no picture.* Two separate properties are doing all the work. **(i) It has no fixed syntax.** From this comes the advantage that **no special software is needed — it can be written with any text editor** — and that **it can easily be modified** and that **anyone can understand it**, since the words are near-English rather than a defined grammar; and from the very same fact comes the disadvantage that **there are no generally accepted standards, so anyone can write pseudocode in their own way, leading to various styles and possible complications, especially if the pseudocode is not well written.** These are one property seen from two sides: the freedom that lets you write anything is the freedom that stops a reader relying on anything. It is also why the course bothers to state rules at all — the rules are a voluntary standard imposed on a notation that has none, which is exactly why breaking them costs more here than it would in a real language, where a compiler would object. **(ii) It is text, not a picture.** From this comes the rest: **compared to flowcharts that are visual and easily understandable, pseudocodes are not visual**, and **it takes a longer time to read and understand pseudocodes** — while the same property is what makes them easy to edit, since inserting a line shifts the rest down by itself, where inserting a box into a flowchart may force the chart to be redrawn (last week's stated disadvantage). The implication for choosing: use a **flowchart** when the audience must grasp the shape of the logic quickly, when the structure is branching or looping enough that seeing it matters, or when non-programmers — the users on the other side of the communication gap — have to follow it; use **pseudocode** when the design is going to change repeatedly, when it must be handed to programmers to convert into a specific language, or when it is to live inside the source file as its comments. And when the pseudocode is the deliverable, follow the rules strictly, because they are the only standard it has.
+'7 2 increase tuition' reads the test as passes ≥ 7; '2 7' swaps the two counters; '8 1' miscounts one F as a P.
+
+**7. B** — *Tracing a WHILE loop with two variables.* Track (s, i) after each pass: (1, 2), (3, 3), (6, 4), (10, 5). Now s < 10 is false, the loop ends, and i = 5 is printed.
+
+4 forgets the increment of i on the last pass; 10 prints s instead of i; 6 runs one pass too many, as if the test were s ≤ 10.
+
+**8. D** — *The CALL construct.* In a CALL, `with` names what goes into the operation and `RETURNING` names the variable that receives what comes back. SquareRoot is given area and hands its result to side.
+
+SquareRoot, not area, is the function name; side is not an input; nothing in a CALL line prints or reads anything.
+
+**9.** *Converting REPEAT-UNTIL to WHILE.* Model answer:
+
+```
+SET t TO 0
+READ n
+WHILE n <> 0
+    SET t TO t + n
+    READ n
+ENDWHILE
+PRINT t
+```
+
+UNTIL n = 0 stops when the condition becomes true, so the WHILE must continue while it is false: WHILE n <> 0 (also accepted: n ≠ 0, NOT n = 0). A WHILE tests before the first pass, so there must be a value of n to test: one READ before the loop, and one at the foot of the body so the test sees each new value. For 5, 8, 3, 0 both versions print 16. Not accepted: WHILE n = 0; a single READ inside the body with nothing read before the loop; READ placed at the top of the body so the test is made on a stale value.
+
+**10.** *Tracing a selection inside a FOR loop.* k runs 3, 4, 5, 6, 7, 8, 9 (seven passes). After each pass (evens, odds): k = 3 → (0, 1); 4 → (1, 1); 5 → (1, 2); 6 → (2, 2); 7 → (2, 3); 8 → (3, 3); 9 → (3, 4). Printed: 3 4.
+
+A correct answer shows the seven pairs, or at least the final values, and the output 3 4. Answering 3 3 stops at k = 8, forgetting the inclusive upper bound; 4 3 swaps the two counters.
+
+**11.** *Applying the pseudocode rules to a fragment.* Faults (any three): line 1 has lowercase keywords, breaking the rule that keywords are written in capitals; line 4 puts two statements on one line, breaking one statement per line; the FOR is never closed with ENDFOR, so nothing marks where the body ends; and total / n is computed with no guard for n = 0, which testing and refining (handle all required cases) should have caught.
+
+Corrected model:
+
+```
+SET total TO 0
+READ n
+IF n = 0 THEN
+    PRINT "no data"
+ELSE
+    FOR i = 1 TO n
+        READ mark
+        SET total TO total + mark
+    ENDFOR
+    PRINT total / n
+ENDIF
+```
+
+A correct answer names three faults with their rules and gives a version with capitals, one statement per line, ENDFOR, and an IF guarding the division.
+
+**12.** *Pseudocode is not a program.* First, pseudocode statements must be language independent: they are written in a mix of natural language and programming elements that belongs to no particular language, so there is no language whose syntax it is a stripped-down form of. Second, pseudocode is not meant to be executed as actual code; it describes the flow and logic of the algorithm, and no compiler defines what its keywords mean. Its purpose is to be easily convertible into any programming language, which is why it is written before the language is chosen.
+
+It is tested on paper or by scanning through: pick input values, walk the lines in order keeping a table of each variable, and check that the logic is right and every required case is handled. That is the testing and refining step. A correct answer gives both reasons and the paper trace.

@@ -1,46 +1,58 @@
 # Wednesday — GST_122 fast-hour check
 
 *The five SQ3R stages, what each one requires, and the supporting comprehension strategies.*
-*Five questions, straight after the fast hour. Recall only. Score out of 5.*
+*5 questions, straight after the hour. Score out of 5.*
 
-**1.** The three R stages of SQ3R, in order, are:
-A. Read, Recall, Review
-B. Read, Recite, Review
-C. Recite, Record, Review
-D. Read, Reflect, Revise
-
-**2.** Which SQ3R stage produces summaries, outlines and notes?
+**1.** After working through a chapter, Ngozi closes the book and explains aloud, in her own words, the key points, terms and concepts she has just read. Which SQ3R stage is she performing?
 A. Survey
-B. Question
+B. Read
 C. Recite
 D. Review
 
-**3.** What is the Survey stage meant to yield?
-A. A sense of the text's structure and main ideas
-B. Answers to the questions printed in the chapter
-C. A spoken summary given without the text
-D. A written outline for long-term retention
+**2.** Emeka reads a passage only to tick off the questions he generated after surveying, and skips anything the questions did not anticipate. Which goal of the Read stage has he neglected?
+A. Reading to engage with the material for a fuller understanding
+B. Scanning headings and captions for an overview
+C. Creating summaries and outlines of the key information
+D. Verbally explaining the key points
 
-**4.** In SQ3R, the Question stage means:
-A. Answering the questions printed in the passage
-B. Writing questions for classmates to answer
-C. Asking your own questions before you read
-D. Testing yourself after the Review stage
+**3.** Put these SQ3R activities in the correct order: (1) turn what the headings suggest into your own questions; (2) skim the headings, subheadings and images; (3) read the text to answer your questions; (4) build an outline of the key information.
+A. 2, 1, 3, 4
+B. 1, 2, 3, 4
+C. 2, 3, 1, 4
+D. 2, 1, 4, 3
 
-**5.** Hints inside a text that reveal an unfamiliar word's meaning are called:
-A. Inferences
-B. Context clues
-C. Implicit meanings
-D. Opinions
+**4.** A notice says 'The library opens at 8 a.m.' A reader concludes that a student arriving at 7:30 a.m. will have to wait outside. This conclusion is an example of:
+A. Explicit meaning
+B. An inference
+C. A context clue
+D. An opinion
+
+**5.** Which term names a statement that is objective and can be verified, as distinct from a subjective view?
+A. Opinion
+B. Inference
+C. Implicit meaning
+D. Fact
+
+---
 
 ## Answers
 
-**1. B** — The acronym is one S, one Q and three R stages: Read, Recite, Review. Recall, Record, Reflect and Revise all sound plausible but none of them is a stage the lesson names.
+**1. C** — *Identifying an SQ3R stage from a scenario.* Recite means vocalising your thoughts: reciting or verbally explaining the key points, words and concepts from the text in your own words.
 
-**2. D** — Review means creating summaries, outlines or notes and revisiting them over time. Recite is closed-book spoken retrieval and produces no paper, Survey only skims for structure, and Question generates questions.
+Survey is the quick scan of headings and images before reading; Read is the actual reading to answer your questions; Review is creating summaries, outlines or notes to reinforce understanding over time.
 
-**3. A** — Surveying is a fast scan of the whole text for headings, subheadings, images and captions, giving an overview and nothing more. The other three describe Read, Recite and Review respectively.
+**2. A** — *The two goals of the Read stage.* The Read stage has two goals: read to answer the questions you generated, and read to engage with the material to gain a fuller understanding. Emeka met the first and dropped the second.
 
-**4. C** — The lesson is explicit that this is where you start asking questions, not answering them, and the questions come from what the survey revealed so that they guide the reading. The chapter's own printed questions are answered after reading and are not this stage.
+Scanning headings is the Survey stage; summaries and outlines belong to Review; verbally explaining is Recite.
 
-**5. B** — Context clues are in-text hints that let a reader work out an unfamiliar word without a dictionary. An inference is a conclusion about content drawn from stated details, implicit meaning is what is suggested rather than stated, and an opinion is subjective and needs no textual anchor.
+**3. A** — *Ordering the SQ3R stages.* SQ3R runs Survey, Question, Read, Recite, Review: skim (2), question (1), read (3), then outline and notes in Review (4).
+
+'1, 2, 3, 4' asks questions before surveying, but questions are generated from the survey; '2, 3, 1, 4' reads before questioning, losing the guiding purpose; '2, 1, 4, 3' builds notes before reading the text.
+
+**4. B** — *Inference versus explicit meaning.* An inference is a logical conclusion drawn from explicit details plus background knowledge; the waiting is not stated, it is deduced from the opening time.
+
+Explicit meaning is what the text directly states (the opening hour itself); a context clue is a hint used to work out an unfamiliar word; an opinion is a subjective view, whereas this conclusion follows logically from the facts.
+
+**5. D** — *Fact versus opinion.* Critical thinking involves separating objective, verifiable facts from subjective opinions; a fact is the objective, verifiable statement.
+
+An opinion is the subjective one; an inference is a conclusion the reader draws; implicit meaning is suggested information that has to be inferred.
