@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Computation pass on Week 5.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Find f′(x) for f(x) = (3x − 2)(x³ + 4x), giving the answer as an expanded polynomial.
 A. 9x² + 12
@@ -51,13 +51,29 @@ B. The reciprocal of the correct derivative
 C. The negative of the correct derivative
 D. The derivative of v/u
 
-**9. (show your working)** Differentiate f(x) = x² − 4x from first principles, using f′(x) = lim(h→0) [f(x + h) − f(x)]/h. Show every line of working.
+**9.** Differentiate f(x) = x² − 4x from first principles. Which expression is left after dividing by h, and what is f′(x)?
+A. 2xh + h² − 4h, so f′(x) = 0
+B. x + h − 4, so f′(x) = x − 4
+C. 2x + h, so f′(x) = 2x
+D. 2x + h − 4, so f′(x) = 2x − 4
 
-**10. (show your working)** Differentiate y = x² cos(3x). Show your working, naming the rules you use.
+**10.** Differentiate y = x² cos(3x).
+A. 2x cos(3x) + 3x² sin(3x)
+B. 2x cos(3x) − 3x² sin(3x)
+C. 2x cos(3x) − x² sin(3x)
+D. −6x² sin(3x)
 
-**11. (show your working)** The curve x² + xy + y² = 7 passes through (1, 2). Differentiate implicitly, collect the dy/dx terms and factorise, then find the gradient of the curve at (1, 2). Show your working.
+**11.** The curve x² + xy + y² = 7 passes through (1, 2). Differentiate implicitly and find the gradient of the curve at (1, 2).
+A. dy/dx = −2x/(2y), so the gradient is −1/2
+B. dy/dx = −(2x)/(x + 2y), so the gradient is −2/5
+C. dy/dx = −(2x + y)/(x + 2y), so the gradient is −4/5
+D. dy/dx = −(2x + y)/(x + 2y), so the gradient is 4/5
 
-**12. (show your working)** A student differentiates f(x) = (5x + 1)³ and writes f′(x) = 3(5x + 1)². Explain what has been left out and why the chain rule requires it, then give the correct derivative.
+**12.** A student differentiates f(x) = (5x + 1)³ and writes f′(x) = 3(5x + 1)². What has been left out, and what is the correct derivative?
+A. The inner derivative 5, so f′(x) = 15(5x + 1)²
+B. Nothing, since f′(x) = 3(5x + 1)² is already correct
+C. The inner derivative 5x, so f′(x) = 15x(5x + 1)²
+D. The product rule, so f′(x) = 3(5x + 1)² + 5(5x + 1)³
 
 ---
 
@@ -95,18 +111,18 @@ The first option has the two answers swapped; the second throws the held-constan
 
 It is not the correct derivative, because subtraction is not commutative; it is not the reciprocal, since the denominator v² is unchanged; the derivative of v/u would be [u v′ − v u′]/u², with u² underneath, not v².
 
-**9.** *First principles on a quadratic.* f(x + h) = (x + h)² − 4(x + h) = x² + 2xh + h² − 4x − 4h. Subtract f(x): [x² + 2xh + h² − 4x − 4h] − [x² − 4x] = 2xh + h² − 4h. Divide by h: (2xh + h² − 4h)/h = 2x + h − 4. Let h → 0: f′(x) = 2x − 4.
+**9. D** — *First principles on a quadratic.* f(x + h) = (x + h)² − 4(x + h) = x² + 2xh + h² − 4x − 4h, and subtracting f(x) = x² − 4x cancels the x² and −4x to leave 2xh + h² − 4h. Every term carries an h, so dividing by h gives 2x + h − 4, and only now is it safe to let h → 0, giving f′(x) = 2x − 4.
 
-Final answer: f′(x) = 2x − 4. A correct answer expands (x + h)², cancels the x² and −4x terms, shows the h dividing out to leave 2x + h − 4, and only then puts h = 0. Substituting h = 0 before cancelling (0/0), or leaving 2x + h − 4 as the answer, is wrong. The power rule gives the same 2x − 4 and may be quoted as a check but not as the working.
+2xh + h² − 4h is the numerator before dividing, 2x + h forgets the −4x term, and x + h − 4 divides only part of the expression.
 
-**10.** *Combining the product rule and the chain rule.* Product rule with u = x², v = cos(3x). u′ = 2x. For v′ use the chain rule: with w = 3x, cos w → −sin w, and w′ = 3, so v′ = −3 sin(3x). Then dy/dx = u v′ + u′ v = x²(−3 sin(3x)) + 2x cos(3x) = 2x cos(3x) − 3x² sin(3x).
+**10. B** — *Combining the product rule and the chain rule.* Use the product rule with u = x² and v = cos(3x), so u′ = 2x. For v′ the chain rule applies: the outer derivative of cos is −sin, and the inner derivative of 3x is 3, so v′ = −3 sin(3x). Then dy/dx = u′v + uv′ = 2x cos(3x) − 3x² sin(3x).
 
-Final answer: dy/dx = 2x cos(3x) − 3x² sin(3x); also accepted in the form x(2 cos(3x) − 3x sin(3x)). A correct answer names the product rule for the two factors and the chain rule for cos(3x), and has the factor 3 and the minus sign on the sine term. 2x cos(3x) − x² sin(3x) (inner derivative dropped) or 2x cos(3x) + 3x² sin(3x) (sign of cos′ lost) is wrong.
+Dropping the inner 3 gives −x² sin(3x), losing the minus on cos′ gives the + version, and −6x² sin(3x) differentiates only the cosine and never uses the product rule.
 
-**11.** *Implicit differentiation with collection, evaluated at a point.* Differentiate each term with respect to x: x² → 2x; xy → y + x(dy/dx) by the product rule; y² → 2y(dy/dx) by the chain rule; 7 → 0. So 2x + y + x(dy/dx) + 2y(dy/dx) = 0. Collect: (dy/dx)(x + 2y) = −(2x + y), so dy/dx = −(2x + y)/(x + 2y). At (1, 2): −(2 + 2)/(1 + 4) = −4/5.
+**11. C** — *Implicit differentiation with collection, evaluated at a point.* Term by term: x² gives 2x, xy needs the product rule and gives y + x(dy/dx), y² gives 2y(dy/dx) by the chain rule, and 7 gives 0. Collecting, (dy/dx)(x + 2y) = −(2x + y), so dy/dx = −(2x + y)/(x + 2y), and at (1, 2) that is −(2 + 2)/(1 + 4) = −4/5, or −0.8.
 
-Final answer: dy/dx = −(2x + y)/(x + 2y) and the gradient at (1, 2) is −4/5 (also accepted: −0.8). A correct answer shows the product-rule split of xy into two terms, the factorisation of dy/dx, and the substitution. Forgetting the y from d/dx(xy), or giving 4/5, is wrong.
++4/5 loses the overall minus, −2x/(2y) ignores the xy term entirely, and −2x/(x + 2y) forgets the y that the product rule contributes.
 
-**12.** *The inner derivative in the chain rule.* The student has treated the base as a bare x and applied the power rule only to the outside. But the base is u = 5x + 1, a function of x, so f is a composite y = u³ and the chain rule f′(x) = y′(u)·u′(x) applies: the outer derivative 3u² must be multiplied by the inner derivative u′(x) = 5. The factor 5 records how fast the inside changes with x; leaving it out under-counts the rate of change by that factor.
+**12. A** — *The inner derivative in the chain rule.* The base is not x but u = 5x + 1, a function of x, so f is the composite u³ and the chain rule requires the outer derivative 3u² to be multiplied by the inner derivative u′ = 5. That factor records how fast the inside moves as x moves, and leaving it out under-counts the rate of change fivefold. The correct derivative is 3(5x + 1)²·5 = 15(5x + 1)².
 
-Correct derivative: f′(x) = 3(5x + 1)²·5 = 15(5x + 1)². A correct answer names the missing factor u′(x) = 5, says the base is a function of x rather than x itself, and gives 15(5x + 1)².
+The inner derivative is 5, not 5x, and there is no product here for the product rule to act on.

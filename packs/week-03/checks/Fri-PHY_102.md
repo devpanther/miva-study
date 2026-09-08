@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Week 3 of General Physics II worked as problems.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A cell of emf 6.0 V and internal resistance 0.50 Ω is connected across a 2.5 Ω resistor. What is the terminal potential difference of the cell?
 A. 6.0 V
@@ -51,13 +51,29 @@ B. It flows so that its own magnetic field opposes the increase in flux
 C. It makes the flux through the coil decrease to zero
 D. It flows in the direction the magnet is moving
 
-**9. (show your working)** A defibrillator capacitor of 200 μF is charged to 2.0 kV and then discharged through a patient in 4.0 ms. Calculate the energy delivered and the average power during the discharge. Show your working.
+**9.** A defibrillator capacitor of 200 μF is charged to 2.0 kV and then discharged in 4.0 ms. What energy is delivered, and what is the average power during the discharge?
+A. 400 J; 1.0 × 10⁵ W
+B. 800 J; 2.0 × 10⁵ W
+C. 0.20 J; 50 W
+D. 400 J; 1.6 W
 
-**10. (show your working)** A rod of length l moves at speed v perpendicular to a uniform field B. Starting from the magnetic force F = qvB on a free charge in the rod, derive ε = Bvl. Then, for B = 0.30 T, l = 0.50 m and v = 2.0 m/s, find the emf and check it by the rate of change of the flux Blx enclosed after the rod has moved for 2.0 s. Show your working.
+**10.** A rod of length l moves at speed v perpendicular to a uniform field B, and a free charge q inside it feels a magnetic force qvB along the rod. Taking the work done per unit charge over the length l, what is the emf, and its value for B = 0.30 T, l = 0.50 m and v = 2.0 m/s?
+A. ε = qBvl; 0.30 V
+B. ε = Bvl; 0.30 V
+C. ε = Bv/l; 1.2 V
+D. ε = ½Bvl; 0.15 V
 
-**11. (show your working)** Two identical 10 μF capacitors are to store energy from a 12 V supply. Calculate the total energy stored when they are connected across the supply in series, and when in parallel, and state which arrangement stores more and by what factor. Show your working.
+**11.** Two identical 10 μF capacitors are connected across a 12 V supply, first in series and then in parallel. What are the total energies stored, and which arrangement stores more?
+A. Series 1.44 × 10⁻³ J, parallel 3.6 × 10⁻⁴ J; series is 4 times larger
+B. Series 7.2 × 10⁻⁴ J, parallel 1.44 × 10⁻³ J; parallel is 2 times larger
+C. Series 3.6 × 10⁻⁴ J, parallel 1.44 × 10⁻³ J; parallel is 4 times larger
+D. Both store 7.2 × 10⁻⁴ J; the arrangement makes no difference
 
-**12. (show your working)** A battery moves a total charge Q onto a capacitor, leaving a final potential difference V across it. Explain why the energy stored is ½QV and not QV, even though every coulomb ends up at the potential difference V.
+**12.** A battery moves a total charge Q onto a capacitor, leaving a final potential difference V across it. Why is the energy stored ½QV rather than QV, when every coulomb ends up at the potential difference V?
+A. Half the charge sits on each plate, so only half the work counts
+B. Half the energy is always lost as heat inside the capacitor
+C. The p.d. is V throughout, but only half of the charge actually crosses the gap
+D. The p.d. climbs from 0 to V as the charge arrives, so the work is the area under the v-q line, a triangle of area ½QV
 
 ---
 
@@ -95,18 +111,18 @@ The first option keeps the old energy as if it were conserved; V = 36 V multipli
 
 A current is not 'negative in value' in any absolute sense; the induced field only opposes the change, it cannot cancel the flux; and the current circulates in the coil, it does not travel along the magnet's line of motion.
 
-**9.** *Capacitor energy and the power of a fast discharge.* U = ½CV² = ½ × 200 × 10⁻⁶ × (2.0 × 10³)² = ½ × 2.0 × 10⁻⁴ × 4.0 × 10⁶ = 400 J. Average power P = U/t = 400/4.0 × 10⁻³ = 1.0 × 10⁵ W. The battery fills the capacitor slowly at modest power; the release in milliseconds gives a power far above what the battery could supply directly.
+**9. A** — *Capacitor energy and the power of a fast discharge.* U = ½CV² = ½(200 × 10⁻⁶)(2.0 × 10³)² = ½(2.0 × 10⁻⁴)(4.0 × 10⁶) = 400 J, and the average power is P = U/t = 400/4.0 × 10⁻³ = 1.0 × 10⁵ W. Releasing the same energy in milliseconds is what gives a power far above anything the charging battery supplies.
 
-Final answer: U = 400 J (accept 4.0 × 10² J), P = 1.0 × 10⁵ W (accept 100 kW). 800 J leaves out the ½; 0.20 J uses V instead of V²; 1.6 W multiplies by the time instead of dividing.
+800 J drops the factor ½; 0.20 J uses V rather than V²; 1.6 W multiplies the energy by the time instead of dividing.
 
-**10.** *Deriving motional emf from the Lorentz force.* A charge q carried along with the rod feels F = qvB directed along the rod. Moving it from one end to the other, a distance l, does work W = Fl = qvBl. Emf is work per unit charge, so ε = W/q = Bvl. Numerically ε = 0.30 × 2.0 × 0.50 = 0.30 V. Check: after 2.0 s the rod has moved x = vt = 4.0 m, enclosing flux Φ = Blx = 0.30 × 0.50 × 4.0 = 0.60 Wb; the flux grows at Φ/t = 0.60/2.0 = 0.30 Wb/s = 0.30 V, the same emf.
+**10. B** — *Deriving motional emf from the Lorentz force.* Carrying the charge the length of the rod does work W = (qvB)l, and emf is work per unit charge, so ε = W/q = Bvl: the q cancels. Numerically ε = (0.30)(2.0)(0.50) = 0.30 V, which also matches dΦ/dt = Blv for the growing enclosed area.
 
-A correct answer shows W = qvBl, divides by q, gives ε = 0.30 V, and shows the flux check giving 0.30 V (accept 0.30 Wb/s or dΦ/dt = Blv = 0.30 V). Leaving q in the final expression, or giving 0.60 V by reporting the flux as the emf, is wrong.
+Keeping q in the expression means the division by q was never done; dividing by l instead of multiplying gives 1.2 V; the spurious ½ halves a result that has no such factor.
 
-**11.** *Stored energy for series versus parallel capacitors.* Parallel: C = 10 + 10 = 20 μF, U = ½CV² = ½ × 20 × 10⁻⁶ × 144 = 1.44 × 10⁻³ J. Series: 1/C = 1/10 + 1/10, so C = 5.0 μF, U = ½ × 5.0 × 10⁻⁶ × 144 = 3.6 × 10⁻⁴ J. Parallel stores more, by a factor 1.44 × 10⁻³/3.6 × 10⁻⁴ = 4, because at a fixed supply voltage U = ½CV² grows with C and the parallel combination has the larger capacitance.
+**11. C** — *Stored energy for series versus parallel capacitors.* In parallel C = 10 + 10 = 20 μF, so U = ½CV² = ½(20 × 10⁻⁶)(144) = 1.44 × 10⁻³ J. In series 1/C = 1/10 + 1/10 gives C = 5.0 μF and U = ½(5.0 × 10⁻⁶)(144) = 3.6 × 10⁻⁴ J. At a fixed supply voltage U grows with C, so the parallel pair stores 4 times as much.
 
-Final answer: parallel 1.44 × 10⁻³ J, series 3.6 × 10⁻⁴ J, parallel is larger by a factor of 4 (accept 1.4 mJ and 0.36 mJ). Giving 20 μF for the series combination, or the same energy for both, is wrong.
+The first option swaps series and parallel; the second leaves the series capacitance at 10 μF; the last forgets that the combinations have different capacitances.
 
-**12.** *Origin of the factor ½ in capacitor energy.* The p.d. across the capacitor is not V throughout the charging. It starts at zero and rises in proportion to the charge already there, v = q/C, reaching V only when the last of the charge arrives. Each small amount of charge dq is moved through the p.d. present at that moment, so the total work is the area under the straight-line graph of v against q: a triangle of area ½QV. Equivalently, the average p.d. during charging is ½V. QV would be the work if the whole charge were moved through the full p.d. V, which is what a battery holding a constant V supplies; the other half is lost as heat in the wires.
+**12. D** — *Origin of the factor ½ in capacitor energy.* The capacitor is not at V for the whole of the charging: v = q/C starts at zero and rises in proportion to the charge already there, reaching V only as the last charge arrives. Each dq is moved through whatever p.d. is present at that moment, so the total work is the triangular area under the v against q line, ½QV, which is the same as saying the average p.d. was ½V.
 
-A correct answer says the p.d. grows from 0 to V as charge is added, that the work is the area under the v-q line (a triangle) or uses the average p.d. ½V, and concludes ½QV = ½CV² = Q²/2C.
+Both plates carry the full Q; the missing half is dissipated in the wires, not inside an ideal capacitor; and all of the charge does cross, just at a rising p.d.

@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Faraday's law and Lenz's law as concepts.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** An average emf of 6.0 V is induced in a 300-turn coil while the flux through each turn changes by 4.0 mWb. How long did the change take?
 A. 5.0 s
@@ -51,13 +51,29 @@ B. Large flux, zero emf
 C. Large flux, large emf
 D. Zero flux, zero emf
 
-**9. (show your working)** A flexible loop of 5 turns lies with its normal parallel to a uniform field of 0.60 T. The loop is squeezed so that its area shrinks at a steady 0.020 m²/s. Calculate the induced emf. State the emf if instead the loop is held rigid while the field is kept steady at 1.2 T. Show your working.
+**9.** A flexible loop of 5 turns lies with its normal parallel to a uniform field of 0.60 T and is squeezed so that its area shrinks steadily at 0.020 m²/s. Calculate the induced emf, and then the emf if the loop is instead held rigid in a steady field of 1.2 T.
+A. 0.012 V, then 0 V
+B. 0 V, then 0.12 V
+C. 0.060 V, then 0 V
+D. 0.060 V, then 0.12 V
 
-**10. (show your working)** The flux through each turn of a 20-turn coil varies with time as Φ = 0.30t² Wb, with t in seconds. Calculate the induced emf at t = 2.0 s, and find the time at which the emf is 6.0 V. Show your working.
+**10.** The flux through each turn of a 20-turn coil varies with time as Φ = 0.30t² Wb, with t in seconds. Calculate the induced emf at t = 2.0 s, and the time at which the emf is 6.0 V.
+A. 24 V; t = 0.50 s
+B. 24 V; t = 1.0 s
+C. 12 V; t = 1.0 s
+D. 1.2 V; t = 10 s
 
-**11. (show your working)** An 80-turn coil of area 5.0 × 10⁻³ m² sits face-on to a uniform field of 0.25 T, so that its normal is along the field. It is turned through 90° in 0.10 s so that its plane now contains the field. Calculate the average emf induced. Show your working.
+**11.** An 80-turn coil of area 5.0 × 10⁻³ m² sits with its normal along a uniform field of 0.25 T. It is turned through 90° in 0.10 s, so that its plane then contains the field. Calculate the average emf induced.
+A. 0.0125 V
+B. 1.0 V
+C. 2.0 V
+D. 0 V
 
-**12. (show your working)** A bar magnet is pushed north-pole-first into a coil connected to a centre-zero galvanometer, held still inside for a moment, then pulled out again. Describe what the galvanometer shows during each of the three stages and explain each reading using Faraday's law and Lenz's law.
+**12.** A bar magnet is pushed north-pole-first into a coil joined to a centre-zero galvanometer, held still inside for a moment, then pulled out again. What does the galvanometer show in the three stages?
+A. A deflection, then the same deflection held, then zero
+B. A deflection, then zero, then the same deflection again
+C. A steady deflection throughout, since flux threads the coil at all three stages
+D. A deflection one way, then zero, then a deflection the other way
 
 ---
 
@@ -95,18 +111,18 @@ D. Zero flux, zero emf
 
 'Large flux, large emf' mistakes flux for its rate of change; 'zero flux' is wrong because a magnet inside a coil certainly threads it with field lines; the zero emf is right but the reason offered is wrong.
 
-**9.** *Emf from a changing area.* With B and θ fixed, Φ = BA and dΦ/dt = B dA/dt. So ε = N B dA/dt = (5)(0.60)(0.020) = 0.060 V. If the loop is rigid and B is steady, nothing in Φ = BA cos θ changes, so ε = 0, however large the field.
+**9. C** — *Emf from a changing area.* With B and θ fixed, Φ = BA and dΦ/dt = B dA/dt, so ε = N B dA/dt = (5)(0.60)(0.020) = 0.060 V. A rigid loop in a steady field has nothing in Φ = BA cos θ changing, so ε = 0 however strong the field.
 
-Final answer: 0.060 V (accept 0.058 to 0.062), and 0 V for the rigid loop in a steady field. A correct answer uses the rate of change of area, multiplies by N and B, and says that a steady flux induces nothing. 0.012 V forgot N; 0.12 V for the second part treats the larger field as if it were a change.
+0.012 V leaves out the 5 turns; 0.12 V treats the steady 1.2 T as though it were a rate of change; and 0 V for the first part misses that a shrinking area changes the flux just as a changing field does.
 
-**10.** *Instantaneous emf from a time-dependent flux.* Differentiate: dΦ/dt = 0.60t Wb/s, so |ε| = N dΦ/dt = 20 × 0.60t = 12t volts. At t = 2.0 s: ε = 12 × 2.0 = 24 V. For ε = 6.0 V: 12t = 6.0, so t = 0.50 s.
+**10. A** — *Instantaneous emf from a time-dependent flux.* Differentiate before substituting: dΦ/dt = 0.60t, so |ε| = N dΦ/dt = 20(0.60t) = 12t volts. At t = 2.0 s that gives 24 V, and setting 12t = 6.0 gives t = 0.50 s.
 
-Final answer: 24 V at t = 2.0 s (accept 23.5 to 24.5) and t = 0.50 s. A correct answer differentiates before substituting and multiplies by N. 1.2 V at t = 2.0 s is Φ itself (0.30 × 4) with no differentiation; 1.2 V or 2.4 V forgets N; substituting t = 6 gives nonsense.
+t = 1.0 s alongside 24 V comes from solving N Φ = 6.0 without differentiating; 12 V with t = 1.0 s loses the factor 2 from the power rule; 1.2 V with t = 10 s leaves out the 20 turns.
 
-**11.** *Average emf from turning a coil through a right angle.* Initial flux per turn: Φ₁ = BA cos 0° = (0.25)(5.0 × 10⁻³) = 1.25 × 10⁻³ Wb. Final flux: Φ₂ = BA cos 90° = 0. So |ΔΦ| = 1.25 × 10⁻³ Wb and ε_av = N |ΔΦ|/Δt = (80)(1.25 × 10⁻³)/(0.10) = 0.10/0.10 = 1.0 V.
+**11. B** — *Average emf from turning a coil through a right angle.* Φ₁ = BA cos 0° = (0.25)(5.0 × 10⁻³) = 1.25 × 10⁻³ Wb per turn, and Φ₂ = BA cos 90° = 0, so ε = N|ΔΦ|/Δt = (80)(1.25 × 10⁻³)/0.10 = 1.0 V. This is an average, since the flux does not fall at a uniform rate.
 
-Final answer: 1.0 V (accept 0.98 to 1.02). A correct answer states the initial flux BA, the final flux zero, and divides N ΔΦ by 0.10 s; it may note that this is an average, since the flux does not fall uniformly. 0.0125 V forgot N; 2.0 V used a flux change of 2BA, which is a full flip through 180°, not a quarter turn.
+0.0125 V forgets the 80 turns; 2.0 V uses ΔΦ = 2BA, which belongs to a full 180° flip, not a quarter turn; 0 V writes the final flux as BA sin 90°, so that nothing appears to change.
 
-**12.** *Faraday's magnet-and-coil experiment explained.* Stage 1, pushing in: the flux through the coil increases, so by Faraday's law an emf is induced and the needle deflects, say to the left. By Lenz's law the current makes the near face a north pole, opposing the approach. Stage 2, held still: the flux is large but constant, so dΦ/dt = 0, the emf is zero and the needle returns to the centre, even though the magnet is inside the coil. Stage 3, pulling out: the flux decreases, so an emf is induced again but the current reverses, the near face becomes a south pole to hold the magnet back, and the needle deflects the other way.
+**12. D** — *Faraday's magnet-and-coil experiment explained.* Pushing in raises the flux, so an emf is induced and the needle swings; by Lenz's law the near face becomes a north pole opposing the approach. Held still, the flux is large but constant, dΦ/dt = 0, and the needle sits at zero. Pulling out lowers the flux, so the current reverses, the near face becomes a south pole holding the magnet back, and the needle swings the other way.
 
-A correct answer gives deflection, zero, opposite deflection, ties each to the flux increasing, constant, decreasing, and names the pole on the near face or the reversal of current as Lenz's law.
+The two moving stages cannot give the same sense, since one flux change is an increase and the other a decrease; and a constant flux, however large, induces nothing.

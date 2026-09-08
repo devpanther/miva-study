@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Week 6, exactly as Dr. Adeniji builds it.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A sinusoidal supply has a peak voltage of 340 V. What is its rms voltage?
 A. 481 V
@@ -51,13 +51,29 @@ B. The peak value
 C. The trough-to-crest swing
 D. The average over one cycle
 
-**9. (show your working)** The mains supply is 230 V rms at 50 Hz. Calculate the peak voltage and the angular frequency, then write the equation for the instantaneous voltage in the form v = V_max sin ωt. Show your working.
+**9.** A mains supply is 230 V rms at 50 Hz. Which equation gives the instantaneous voltage in volts, with t in seconds?
+A. v = 230 sin(314t)
+B. v = 325 sin(50t)
+C. v = 325 sin(314t)
+D. v = 163 sin(314t)
 
-**10. (show your working)** Starting from i = I_max sin ωt and the fact that the average of sin²ωt over a complete cycle is ½, show that I_rms = I_max/√2. Then calculate I_rms for I_max = 4.0 A. Show your working.
+**10.** For i = I_max sin ωt the average of sin²ωt over a complete cycle is ½. Carrying out the three root-mean-square steps in the right order, what is I_rms in terms of I_max, and its value for I_max = 4.0 A?
+A. I_max²/2; 8.0 A²
+B. 0; 0 A
+C. I_max/√2; 2.83 A
+D. I_max√2; 5.66 A
 
-**11. (show your working)** An AC ammeter reads 3.0 A for the current in a 40 Ω resistor. Calculate the average power dissipated, the peak current, and the maximum instantaneous power. State what steady DC current would heat the resistor at the same average rate. Show your working.
+**11.** An AC ammeter reads 3.0 A for the current in a 40 Ω resistor. What are the average power dissipated, the peak current, and the maximum instantaneous power?
+A. 360 W; 4.24 A; 720 W
+B. 720 W; 4.24 A; 1440 W
+C. 360 W; 2.12 A; 180 W
+D. 180 W; 4.24 A; 360 W
 
-**12. (show your working)** Explain why the plain average of a sinusoidal current over a complete cycle gives no useful information, and how squaring the current fixes the problem. State the three operations in 'root mean square' in the order they are carried out.
+**12.** Why does the plain average of a sinusoidal current over a complete cycle tell you nothing about its heating, and what do the three steps of 'root mean square' do, in order?
+A. The average is I_max/2, which is too small; the steps are root, then mean, then square
+B. The average is zero because the current stops twice a cycle; the steps are mean, then square, then root
+C. The average is I_max, which is too large; squaring corrects it, then the mean and root are taken
+D. The average is zero because the two half-cycles cancel; square to remove the sign, take the mean, then take the root
 
 ---
 
@@ -95,18 +111,18 @@ D. The average over one cycle
 
 The peak is larger than any rms reading; the trough-to-crest swing is twice the peak and is never displayed; the average over a full cycle is zero, which is why meters cannot be built to read it.
 
-**9.** *Writing the source equation from rms voltage and frequency.* V_max = V_rms/0.7071 = 230 × 1.4142 = 325 V (325.3 V). ω = 2πf = 2π × 50 = 314 rad/s (314.2). So v = 325 sin(314t) volts, with t in seconds and 314t in radians.
+**9. C** — *Writing the source equation from rms voltage and frequency.* The amplitude of v = V_max sin ωt is the peak value, V_max = V_rms√2 = 230 × 1.4142 = 325 V, and ω = 2πf = 2π(50) = 314 rad/s. So v = 325 sin(314t).
 
-A correct answer states V_max = 325 V (accept 324 to 326), ω = 314 rad/s (accept 314 to 315) and v = 325 sin(314t). Writing v = 230 sin(314t) uses the rms as the amplitude, and v = 325 sin(50t) uses f in place of ω; both are wrong.
+230 sin(314t) uses the rms value as the amplitude; 325 sin(50t) puts the frequency where the angular frequency belongs; 163 sin(314t) multiplies by 0.7071 when it should divide.
 
-**10.** *Derivation of the rms current.* Square: i² = I²_max sin²ωt. Average over a cycle: (i²)_av = I²_max × (sin²ωt)_av = ½I²_max. Root: I_rms = √(½I²_max) = I_max/√2 = 0.7071 I_max. For I_max = 4.0 A: I_rms = 4.0/1.4142 = 2.83 A (2.828 A).
+**10. C** — *Derivation of the rms current.* Square first: i² = I_max² sin²ωt. Take the mean over a cycle: (i²)_av = ½I_max². Then take the root: I_rms = √(½I_max²) = I_max/√2 = 0.7071 I_max, which for I_max = 4.0 A is 2.83 A.
 
-A correct answer shows the three steps in order (square, average, square root), arrives at I_max/√2, and gives 2.83 A (accept 2.8 to 2.9). Averaging before squaring gives zero and is wrong; leaving the answer as 8.0 A² (the mean square) is incomplete.
+I_max²/2 stops at the mean square and still has units of A²; zero is what averaging before squaring gives; multiplying by √2 instead of dividing converts the wrong way.
 
-**11.** *Average power from an rms current.* The meter reads rms, so P_av = I²_rms R = (3.0)²(40) = 360 W. Peak current I_max = 3.0 × 1.4142 = 4.24 A. Maximum instantaneous power P_max = I²_max R = (4.24)²(40) = 720 W, exactly 2P_av. A steady DC current of 3.0 A would dissipate the same 360 W, which is what the rms value means.
+**11. A** — *Average power from an rms current.* An AC ammeter reads rms, so P_av = I_rms²R = (3.0)²(40) = 360 W. The peak current is I_max = 3.0√2 = 4.24 A, and the maximum instantaneous power is I_max²R = (4.24)²(40) = 720 W, exactly twice the average, as it always is for a resistor.
 
-A correct answer states 360 W, 4.24 A (accept 4.2 to 4.3), 720 W and a DC current of 3.0 A. Using the peak current in P_av (720 W) or quoting 4.24 A as the equivalent DC current is wrong.
+720 W as the average uses the peak current in P_av; 2.12 A multiplies by 0.7071 instead of dividing; 180 W puts a spurious ½ into P = I²R, which already averages correctly with rms values.
 
-**12.** *Why rms rather than the plain average.* A sinusoidal current is positive for one half-cycle and negative for the other, and the two halves are mirror images, so over a complete cycle they cancel and the average is zero. That would falsely suggest the current does no heating. Squaring removes the sign: i² = I²_max sin²ωt is never negative, so it has a genuine non-zero average, ½I²_max, and this mean square is also what fixes the heating because power goes as i². The operations, in order: square the instantaneous value, take the mean over a cycle, take the square root.
+**12. D** — *Why rms rather than the plain average.* Over a full cycle the positive and negative half-cycles are mirror images, so they cancel and the mean is zero, which would wrongly suggest no heating at all. Squaring removes the sign, and it is also the right thing physically because power goes as i², so the mean square ½I_max² is genuine; the root then brings the answer back to amperes. Square, mean, root, in that order.
 
-A correct answer says the full-cycle mean is zero because positive and negative halves cancel, that squaring makes every value non-negative (and matches P = i²R), and lists square, mean, root in that order.
+The current does not stop twice a cycle, it reverses; and the average is neither I_max/2 nor I_max but zero.

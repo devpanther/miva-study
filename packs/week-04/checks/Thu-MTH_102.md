@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Week 4 of Elementary Mathematics II worked as problems: taking numbers off graphs and out of formulas.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** f(x) = (x² − 4)/(x² − 5x + 6). Classify the discontinuities at x = 2 and at x = 3.
 A. Infinite at 2, removable at 3
@@ -51,13 +51,29 @@ B. lim(x→c⁻) f(x) = 4, lim(x→c⁺) f(x) = 4, f(c) = 4
 C. lim(x→c⁻) f(x) = 4, lim(x→c⁺) f(x) = 4, f(c) = 1
 D. lim(x→c⁻) f(x) = +∞, lim(x→c⁺) f(x) = 4, f(c) = 4
 
-**9. (show your working)** A graph has a vertical dashed line at x = −1. To its left the curve climbs upward hugging the line; to its right it plunges downward hugging the line. There is no dot at x = −1. State lim(x→−1⁻) f(x), lim(x→−1⁺) f(x), lim(x→−1) f(x) and f(−1), classify the discontinuity, and say whether choosing a value for f(−1) could repair it. Show your working.
+**9.** A vertical dashed line sits at x = −1. To its left the curve climbs upward hugging the line; to its right it plunges downward hugging the line. There is no dot at x = −1. Give lim(x→−1⁻) f(x), lim(x→−1⁺) f(x), lim(x→−1) f(x), f(−1), the type of discontinuity, and whether choosing a value for f(−1) repairs it.
+A. +∞, −∞, DNE, undefined; infinite, not repairable
+B. +∞, −∞, ∞, f(−1) = ∞; infinite, repairable by setting f(−1) = ∞
+C. −∞, +∞, DNE, undefined; jump, not repairable
+D. +∞, −∞, DNE, undefined; removable, repairable by setting f(−1) = 0
 
-**10. (show your working)** f(x) = x² for x < 1; f(x) = ax + b for 1 ≤ x < 3; f(x) = 2x + 1 for x ≥ 3. Find a and b so that f is continuous at both x = 1 and x = 3. Show your working.
+**10.** f(x) = x² for x < 1; f(x) = ax + b for 1 ≤ x < 3; f(x) = 2x + 1 for x ≥ 3. Find a and b so that f is continuous at both x = 1 and x = 3.
+A. a = 2, b = −1
+B. a = 4, b = −3
+C. a = 3, b = −2
+D. a = 3, b = 2
 
-**11. (show your working)** f(x) = (x² − 4)/(x − 2) for x < 2, and f(x) = 3x − 2 for x ≥ 2. Decide whether f is continuous at x = 2 by checking the three conditions. Show your working.
+**11.** f(x) = (x² − 4)/(x − 2) for x < 2, and f(x) = 3x − 2 for x ≥ 2. Give f(2), the left limit and the right limit at x = 2, and say whether f is continuous there.
+A. f(2) = 4, left undefined because of 0/0, right 4; not continuous
+B. f(2) = 0, left 4, right 4; not continuous
+C. f(2) = 4, left 0, right 4; not continuous
+D. f(2) = 4, left 4, right 4; continuous
 
-**12. (show your working)** At x = 4 both branches of a graph run into an open circle at (4, 2), and a solid dot sits at (4, 7). A student writes 'jump discontinuity, because the graph jumps from 2 to 7'. Explain what the student has confused and give the correct classification.
+**12.** At x = 4 both branches of a graph run into an open circle at (4, 2), and a solid dot sits at (4, 7). A student calls this a jump discontinuity because the graph jumps from 2 to 7. What is the correct classification, and what was confused?
+A. Jump; the student is right, since the heights 2 and 7 differ
+B. Removable; a jump needs the two one-sided limits to differ, but here both are 2
+C. Infinite; a gap of 5 between the curve and the dot is a break of infinite type
+D. Removable; the limit is 7 and the value f(4) = 2
 
 ---
 
@@ -95,18 +111,18 @@ f(2) = 0 is what it already is, and it is off the curve; 1.5 averages the value 
 
 4, 1, 4 has unequal sides, so the limit itself does not exist; 4, 4, 4 satisfies all three conditions, so f is continuous; +∞, 4, 4 has an unbounded side, so the limit does not exist.
 
-**9.** *Reading an infinite discontinuity from a graph.* Left: the curve rises without bound as x → −1 from below, so lim(x→−1⁻) f(x) = +∞. Right: it falls without bound, so lim(x→−1⁺) f(x) = −∞. Neither is a real number (and they disagree), so lim(x→−1) f(x) = DNE. There is no solid dot, so f(−1) is undefined.
+**9. A** — *Reading an infinite discontinuity from a graph.* Climbing without bound on the left gives lim(x→−1⁻) f(x) = +∞ and plunging on the right gives lim(x→−1⁺) f(x) = −∞. Neither is a real number and they disagree, so lim(x→−1) f(x) is DNE, and with no dot drawn f(−1) is undefined. A vertical asymptote like this is an infinite discontinuity, and no choice of f(−1) can repair it, because repair requires a limit to match and there is none.
 
-This is an infinite discontinuity with a vertical asymptote at x = −1. It cannot be repaired: the limit does not exist, so no value assigned to f(−1) can equal it. A correct answer gives +∞, −∞, DNE, undefined (or DNE), 'infinite', and 'no, because the limit does not exist'. Writing lim(x→−1) f(x) = ∞ as if it were a value, or suggesting a very large f(−1), is wrong.
+Writing the limit as ∞ treats a failure as a value, swapping the signs misreads the two branches, and 'removable' would need both sides to run into the same finite height.
 
-**10.** *Two constants for continuity at two joins.* At x = 1: left limit 1² = 1; right limit and value a(1) + b = a + b. Continuity needs a + b = 1. At x = 3: left limit 3a + b; right limit and value 2(3) + 1 = 7. Continuity needs 3a + b = 7. Subtract the first equation from the second: 2a = 6, so a = 3, then b = 1 − 3 = −2.
+**10. C** — *Two constants for continuity at two joins.* Matching at x = 1: the left limit is 1² = 1 and the middle piece gives a + b, so a + b = 1. Matching at x = 3: the middle piece gives 3a + b and the right piece gives 2(3) + 1 = 7, so 3a + b = 7. Subtracting the first equation from the second gives 2a = 6, so a = 3 and b = 1 − 3 = −2, and the middle piece is 3x − 2, which checks out as 1 at x = 1 and 7 at x = 3.
 
-Final answer: a = 3, b = −2, so the middle piece is 3x − 2. Check: 3(1) − 2 = 1 and 3(3) − 2 = 7. A correct answer sets up both equations from matching one-sided limits and solves them; a = 3 with b = 2 (sign slip) or a + b = 1 alone (only one join checked) is wrong.
+b = 2 is a sign slip in the last step, and a = 2 or a = 4 comes from mismatching one of the two joins.
 
-**11.** *Continuity at a join where one piece needs factoring.* (i) x = 2 belongs to the second piece: f(2) = 3(2) − 2 = 4, defined. (ii) Left: for x < 2, (x² − 4)/(x − 2) = (x − 2)(x + 2)/(x − 2) = x + 2, so lim(x→2⁻) f(x) = 4; substituting 2 directly gives 0/0, which is why you factor. Right: lim(x→2⁺) (3x − 2) = 4. The sides agree, so lim(x→2) f(x) = 4. (iii) 4 = f(2).
+**11. D** — *Continuity at a join where one piece needs factoring.* x = 2 belongs to the second piece, so f(2) = 3(2) − 2 = 4 and the function is defined. On the left, substituting straight into (x² − 4)/(x − 2) gives 0/0, so factor: (x − 2)(x + 2)/(x − 2) = x + 2, and the left limit is 4. On the right, lim (3x − 2) = 4 as well, so the two-sided limit is 4 and equals f(2): f is continuous at x = 2.
 
-All three hold, so f is continuous at x = 2. A correct answer shows the factor-and-cancel step giving 4 on the left, 4 on the right, f(2) = 4, and concludes 'continuous'. Claiming the left limit is undefined because of 0/0, or evaluating f(2) with the first piece, is wrong.
+Calling the left limit undefined mistakes 0/0 for an answer, a left limit of 0 reads the numerator alone, and f(2) = 0 uses the first piece where its condition fails.
 
-**12.** *Removable versus jump classification from a graph.* The student compared the limit with the function value instead of comparing the two one-sided limits. A jump means the left and right branches run into different heights; here both branches run into the same height, 2, so lim(x→4) f(x) = 2 exists. The dot at (4, 7) is f(4), which is simply off the curve. That is the removable case: the limit exists but does not equal f(4), and redefining f(4) = 2 would repair it.
+**12. B** — *Removable versus jump classification from a graph.* The test for a jump compares the left limit with the right limit, not the limit with the value. Here both branches run into the same height, so lim(x→4) f(x) = 2 exists, and the dot at (4, 7) is simply f(4) sitting off the curve. A limit that exists but does not match the function value is the removable case, and redefining f(4) = 2 would close it up.
 
-A correct answer says the test for a jump is left limit versus right limit (not limit versus value), notes both sides give 2, and classifies the point as a removable discontinuity (a hole with a misplaced dot).
+The last option has the limit and the value swapped, and 'infinite' would need a branch running off without bound.

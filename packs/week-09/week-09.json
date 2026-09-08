@@ -321,28 +321,56 @@
           "why": "The definition only assigns a value to ∫₋∞^∞ when both halves converge on their own; then the value is their sum. Here neither half converges, so the integral is divergent. Nothing may be cancelled, because the two limits use independent letters a and b and are never taken together.\n\n0 cancels +∞ against −∞, which the definition forbids; +∞ and −∞ each look at only one half and ignore the other."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₋∞⁰ eˣ dx. Write the integral as a limit first, then evaluate the limit. Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₋∞⁰ eˣ dx, writing it as a limit first.",
+          "options": [
+            "0",
+            "−1",
+            "1",
+            "Divergent"
+          ],
+          "answerIndex": 2,
           "concept": "Type I integral with a lower limit of −∞",
-          "why": "By definition, ∫₋∞⁰ eˣ dx = lim(t→−∞) ∫ₜ⁰ eˣ dx = lim(t→−∞) [eˣ]ₜ⁰ = lim(t→−∞) (e⁰ − eᵗ) = lim(t→−∞) (1 − eᵗ). As t → −∞, eᵗ → 0, so the limit is 1 − 0 = 1. The limit exists, so the integral converges to 1.\n\nFinal answer: 1 (converges to 1). The working must show the limit line with t → −∞, the antiderivative eˣ, and eᵗ → 0. Writing e⁻^∞ directly without the limit is not acceptable working; getting −1 (subtracting in the wrong order) or claiming divergence because the interval is infinite is wrong."
+          "why": "By definition ∫₋∞⁰ eˣ dx = lim(t→−∞) ∫ₜ⁰ eˣ dx = lim(t→−∞) [eˣ]ₜ⁰ = lim(t→−∞) (1 − eᵗ). As t → −∞, eᵗ → 0, so the limit is 1 and the integral converges to 1.\n\n−1 subtracts the limits in the wrong order; 0 takes e⁰ as 0; calling it divergent assumes an infinite interval always diverges, when the test is whether the limit is finite."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₀⁴ 1/√(4 − x) dx. Say where the integrand is discontinuous, write the one-sided limit, and evaluate it. Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₀⁴ 1/√(4 − x) dx.",
+          "options": [
+            "2",
+            "−4",
+            "Divergent",
+            "4"
+          ],
+          "answerIndex": 3,
           "concept": "Type II integral with a discontinuity at the upper limit",
-          "why": "1/√(4 − x) is undefined at x = 4, the upper limit, so ∫₀⁴ (4 − x)^(−1/2) dx = lim(c→4⁻) ∫₀ᶜ (4 − x)^(−1/2) dx. The antiderivative is −2√(4 − x) (check: its derivative is −2·(1/2)(4 − x)^(−1/2)·(−1) = (4 − x)^(−1/2)). So the limit is lim(c→4⁻) [−2√(4 − x)]₀ᶜ = lim(c→4⁻) (−2√(4 − c) + 2√4) = 0 + 4 = 4.\n\nFinal answer: 4 (converges to 4). The working must name x = 4 as the discontinuity, use c → 4⁻, state the antiderivative −2√(4 − x), and show √(4 − c) → 0. Using +2√(4 − x) gives −4 and is wrong; claiming divergence because the integrand blows up is wrong, since the limit exists."
+          "why": "The integrand blows up at x = 4, the upper limit, so the integral means lim(c→4⁻) ∫₀ᶜ (4 − x)^(−1/2) dx. An antiderivative is −2√(4 − x), so the limit is lim(c→4⁻) (−2√(4 − c) + 2√4) = 0 + 4 = 4. The limit is finite, so the integral converges to 4.\n\n−4 uses +2√(4 − x) and reverses the sign; 2 forgets the factor 2 that comes from the chain rule; divergent assumes an infinite integrand always diverges, which the finite limit disproves."
         },
         {
-          "type": "short",
-          "q": "Use the Comparison Test to decide whether ∫₁^∞ 1/(x² + 1) dx converges or diverges. Show each inequality step, name f and g with 0 ≤ g(x) ≤ f(x), and quote Note 1. Show your working.",
+          "type": "mcq",
+          "q": "Apply the Comparison Test to ∫₁^∞ 1/(x² + 1) dx. Which line gives the correct comparison and verdict?",
+          "options": [
+            "1/(x² + 1) ≤ 1/x², and ∫₁^∞ 1/x² dx converges with p = 2, so the integral converges",
+            "1/(x² + 1) ≥ 1/x², and ∫₁^∞ 1/x² dx converges with p = 2, so the integral converges",
+            "1/(x² + 1) ≤ 1/x, and ∫₁^∞ 1/x dx diverges with p = 1, so the integral diverges",
+            "1/(x² + 1) ≤ 1/x², so the integral converges and its value is 1"
+          ],
+          "answerIndex": 0,
           "concept": "Comparison Test with a simple denominator bound",
-          "why": "For all x ≥ 1, x² + 1 ≥ x², so taking reciprocals of positive quantities reverses the inequality: 1/(x² + 1) ≤ 1/x². Let f(x) = 1/x² and g(x) = 1/(x² + 1); both are continuous and positive on [1, ∞), so 0 ≤ g(x) ≤ f(x). ∫₁^∞ 1/x² dx has p = 2 > 1, so by Note 1 it converges (its value is 1). By clause 1 of the Comparison Test, the larger function convergent forces the smaller one convergent, so ∫₁^∞ 1/(x² + 1) dx converges.\n\nFinal answer: converges. A correct answer shows x² + 1 ≥ x², reverses to 1/(x² + 1) ≤ 1/x², names f = 1/x² and g = 1/(x² + 1), quotes p = 2 > 1, and concludes convergence. It may add that the value is at most 1, but must not claim the value is 1."
+          "why": "For x ≥ 1, x² + 1 ≥ x², and taking reciprocals of positive quantities reverses the inequality, so 0 ≤ 1/(x² + 1) ≤ 1/x². The larger integral ∫₁^∞ 1/x² dx has p = 2 > 1 and converges by the p-test, so the smaller one converges too.\n\nThe second option forgets that reciprocals flip the inequality; the third compares upwards to a divergent integral, which settles nothing about the smaller function; the fourth confuses a bound with a value, since the true value is π/4, not 1."
         },
         {
-          "type": "short",
-          "q": "Explain what it means to say ∫ₐ^∞ f(x) dx is convergent, and why writing ∫ₐ^∞ f(x) dx = F(∞) − F(a) is not acceptable working.",
+          "type": "mcq",
+          "q": "What does the symbol ∫ₐ^∞ f(x) dx mean, and when is the integral called convergent?",
+          "options": [
+            "F(∞) − F(a); convergent whenever F(∞) can be worked out",
+            "lim(t→∞) ∫ₐᵗ f(x) dx; convergent when that limit is a finite number",
+            "lim(t→∞) ∫ₐᵗ f(x) dx; convergent when f(x) → 0 as x → ∞",
+            "The area under f beyond x = a; convergent when f is continuous on [a, ∞)"
+          ],
+          "answerIndex": 1,
           "concept": "Definition of convergence of a Type I integral",
-          "why": "The symbol ∫ₐ^∞ f(x) dx is defined as lim(t→∞) ∫ₐᵗ f(x) dx: replace the infinite limit by a letter t, evaluate the ordinary definite integral F(t) − F(a), then let t → ∞. The integral is convergent if that limit exists as a finite number, and divergent if it does not. F(∞) is not acceptable because ∞ is not a number that can be substituted into a function; the only meaning available is the limit of F(t) as t grows, and that limit must be shown to exist.\n\nA correct answer states the limit definition with t → ∞, says convergent means the limit exists (finite) and divergent means it does not, and explains that ∞ cannot be substituted, so the limit line must be written."
+          "why": "The infinite limit is replaced by a letter: ∫ₐ^∞ f(x) dx is defined as lim(t→∞) ∫ₐᵗ f(x) dx. Evaluate the ordinary definite integral F(t) − F(a), then let t → ∞. The integral is convergent when that limit exists as a finite number and divergent when it does not.\n\nF(∞) is not a substitution, since ∞ is not a number, which is why the limit line must be written. f(x) → 0 is not enough, as ∫₁^∞ 1/x dx shows. Continuity guarantees the truncated integrals exist but says nothing about the limit."
         }
       ]
     },
@@ -458,28 +486,56 @@
           "why": "An electromagnetic wave is transverse: E and B are perpendicular to each other and both are perpendicular to the direction of travel, which is the direction of E × B. With travel along x and E along y, B must be along ±z.\n\nAlong x would make the wave longitudinal, like sound, which an EM wave never is; parallel to E would leave no third direction for the wave to travel along; the two fields are rigidly locked in orientation and phase, so B has a definite direction."
         },
         {
-          "type": "short",
-          "q": "A wire carries free charge of linear density λ drifting at speed v, so that the current is I = λv. Starting from the force F = qv × B on a single charge, derive the force dF = I dl × B on an element dl of the wire. Show your working.",
+          "type": "mcq",
+          "q": "A wire carries free charge of linear density λ drifting at speed v, so the current is I = λv. Starting from F = qv × B for a single charge, what is the force on an element dl of the wire?",
+          "options": [
+            "dF = λ dl × B",
+            "dF = I dl × B",
+            "dF = λv² dl × B",
+            "dF = I B dl, with no dependence on the angle between dl and B"
+          ],
+          "answerIndex": 1,
           "concept": "Deriving the force on a current element from the single-charge law",
-          "why": "A length dl of the wire contains charge dq = λ dl, all moving with velocity v along the wire. The magnetic force on that packet is the single-charge law applied to dq: dF = (dq) v × B = (λ dl) v × B. Since λ and dl are scalars, this is dF = (λv) dl × B with the direction now carried by dl, and λv = I, so dF = I dl × B. For a straight wire of length L in a uniform field this integrates to F = I L × B, magnitude BIL sin θ.\n\nA correct answer must write dq = λ dl, substitute into qv × B, move the direction from v to dl, and use I = λv. Introducing a factor 1/c is the cgs form and is wrong in SI."
+          "why": "The element holds charge dq = λ dl, all of it moving at v along the wire, so dF = (dq)v × B = (λ dl)v × B. Since λ and dl are scalars the direction transfers onto dl, giving dF = (λv) dl × B = I dl × B, which integrates to F = I L × B for a straight wire.\n\nλ dl × B leaves out the drift speed and has the wrong units; λv² dl × B uses dq = λv dl, the current in place of the charge; and dropping the cross product loses sin θ, so it wrongly predicts a force even when the current runs along B."
         },
         {
-          "type": "short",
-          "q": "A charge q of mass m enters a uniform field B with speed v perpendicular to B. By equating the magnetic force to the centripetal force, derive r = mv/(qB) and T = 2πm/(qB), and explain why T does not depend on v. Show your working.",
+          "type": "mcq",
+          "q": "A charge q of mass m enters a uniform field B at speed v perpendicular to B. Equating the magnetic force to the centripetal force, what are the radius and the period of the orbit?",
+          "options": [
+            "r = mv/(qB), T = 2πm/(qB)",
+            "r = mv²/(qB), T = 2πmv/(qB)",
+            "r = qB/(mv), T = 2πqB/m",
+            "r = mv/(qB), T = 2πmv/(qB)"
+          ],
+          "answerIndex": 0,
           "concept": "Deriving the radius and period of the circular orbit",
-          "why": "The magnetic force qvB is perpendicular to v and of constant size, so it acts as a centripetal force: qvB = mv²/r. Cancel one v and rearrange: r = mv/(qB). The period is the circumference over the speed: T = 2πr/v = 2π(mv/qB)/v = 2πm/(qB). The v cancels because a faster particle sweeps a proportionally larger circle: the distance round grows exactly as fast as the speed, so the lap time is fixed by m, q and B alone.\n\nA correct answer must show qvB = mv²/r, obtain r = mv/qB, form T = 2πr/v and cancel v, and state the proportional-growth reason. Writing T = 2πr/v and stopping, without eliminating r, does not show independence from v."
+          "why": "qvB = mv²/r, and cancelling one v gives r = mv/(qB). The period is one circumference at speed v: T = 2πr/v = 2π(mv/qB)/v = 2πm/(qB), with v gone, which is why the lap time does not depend on how fast the particle moves.\n\nr = mv²/(qB) forgets to cancel the v; r = qB/(mv) is the rearrangement inverted; and T = 2πmv/(qB) is just 2πr, the circumference, never divided by the speed."
         },
         {
-          "type": "short",
-          "q": "An electron (q = −1.6 × 10⁻¹⁹ C) moves along +x at 2.0 × 10⁶ m/s through a uniform field B = 0.30 T pointing along +z. Calculate the magnitude of the magnetic force on it and give its direction. Show your working.",
+          "type": "mcq",
+          "q": "An electron (q = −1.6 × 10⁻¹⁹ C) moves along +x at 2.0 × 10⁶ m/s through a uniform field B = 0.30 T pointing along +z. Calculate the magnitude and direction of the magnetic force on it.",
+          "options": [
+            "9.6 × 10⁻¹⁴ N along −y",
+            "9.6 × 10⁻¹³ N along +y",
+            "9.6 × 10⁻¹⁴ N along +z",
+            "9.6 × 10⁻¹⁴ N along +y"
+          ],
+          "answerIndex": 3,
           "concept": "Magnetic force on a negative charge with direction",
-          "why": "v is perpendicular to B, so F = |q|vB = (1.6 × 10⁻¹⁹)(2.0 × 10⁶)(0.30) = 9.6 × 10⁻¹⁴ N. Direction: v × B = x̂ × ẑ = −ŷ, which is the force on a positive charge; the electron is negative, so its force is reversed, along +y.\n\nFinal answer: 9.6 × 10⁻¹⁴ N along +y (accept 9.5 to 9.7 × 10⁻¹⁴ N). The working must show the cross product x̂ × ẑ = −ŷ and then the reversal for the negative charge. Giving −y forgets the sign of the electron; giving a direction along z or x is impossible because F is perpendicular to both B and v."
+          "why": "v is perpendicular to B, so F = |q|vB = (1.6 × 10⁻¹⁹)(2.0 × 10⁶)(0.30) = 9.6 × 10⁻¹⁴ N. The direction of v × B is x̂ × ẑ = −ŷ, which is the force a positive charge would feel; the electron is negative, so its force reverses to +y.\n\nAlong −y forgets the sign of the electron; 9.6 × 10⁻¹³ N is a power-of-ten slip; and along +z is impossible, since the force must be perpendicular to B as well as to v."
         },
         {
-          "type": "short",
-          "q": "A charged particle in a uniform magnetic field moves in a circle at constant speed. Explain why the magnetic force can never change its kinetic energy, and why this does not mean the particle has no acceleration.",
+          "type": "mcq",
+          "q": "A charged particle moves in a circle at constant speed in a uniform magnetic field. Which statement is correct?",
+          "options": [
+            "The force does no work, so the acceleration is zero and the velocity is constant",
+            "The force does work as the particle goes round, but the total over one lap is zero",
+            "The force is perpendicular to v, so it does no work; the acceleration qvB/m only turns the velocity",
+            "The force is parallel to v, so it changes the speed but not the direction"
+          ],
+          "answerIndex": 2,
           "concept": "Zero work versus non-zero acceleration in a magnetic field",
-          "why": "The magnetic force F = qv × B is perpendicular to v at every instant, so its power F·v is zero and it does no work along any path; kinetic energy ½mv² therefore stays constant and the speed cannot change. But a force still produces an acceleration a = F/m = qvB/m; because it is perpendicular to v it changes the direction of the velocity, not its magnitude, which is exactly what keeps the particle on a circle. Momentum, a vector, changes continuously even though its magnitude does not.\n\nA correct answer states F ⊥ v so W = 0 and KE is constant, then distinguishes speed from velocity: there is a real centripetal acceleration qvB/m that only turns the velocity. Saying the force is too weak to do work, or that induced fields cancel the work, is wrong."
+          "why": "F = qv × B is perpendicular to v at every instant, so the power F·v is zero, no work is done and the kinetic energy ½mv² cannot change. There is still an acceleration a = qvB/m; being perpendicular to v it rotates the velocity instead of lengthening it, which is exactly circular motion.\n\nZero work does not mean zero force or zero acceleration; the work is zero at every instant, not merely over a whole lap; and a force parallel to v would change the speed, which a magnetic force never does."
         }
       ]
     },
@@ -595,28 +651,56 @@
           "why": "A do-while tests its condition after the body, so the body is guaranteed to execute at least one time; only then is the false condition seen and the loop left.\n\nwhile and for test before the body, so a false condition means zero passes; if is not a loop at all and its block is skipped when the condition is false."
         },
         {
-          "type": "short",
-          "q": "```c\nif (age >= 13 && age <= 19)\n    printf(\"teen\");\nelse if (age <= 25)\n    printf(\"young adult\");\nelse\n    printf(\"adult\");\n```\nTrace this for age = 17, age = 22 and age = 10, giving the output for each, and say what the age = 10 case shows about the order of the branches. Show your working.",
+          "type": "mcq",
+          "q": "What does this print for age = 17, for age = 22 and for age = 10?\n\n```c\nif (age >= 13 && age <= 19)\n    printf(\"teen\");\nelse if (age <= 25)\n    printf(\"young adult\");\nelse\n    printf(\"adult\");\n```",
+          "options": [
+            "teen, young adult, adult",
+            "teen, adult, adult",
+            "young adult, young adult, adult",
+            "teen, young adult, young adult"
+          ],
+          "answerIndex": 3,
           "concept": "Tracing an if-else-if chain",
-          "why": "age = 17: 17 >= 13 is 1 and 17 <= 19 is 1, so 1 && 1 is true and it prints teen; the remaining branches are skipped. age = 22: the first condition is false (22 <= 19 fails), 22 <= 25 is true, so it prints young adult. age = 10: the first condition is false (10 >= 13 fails), and 10 <= 25 is true, so it prints young adult.\n\nFinal answer: teen, young adult, young adult. The 10 case shows that each later condition is tested only after the earlier ones have failed and is read in that context: `age <= 25` was written assuming the first branch had already removed everything under 13, and it had not, so a child is labelled a young adult. A correct answer gives the three outputs and explains that the first true condition wins and the second condition does not check the lower bound. Saying age = 10 prints adult or teen is wrong."
+          "why": "age = 17: both parts of the first condition hold, so it prints teen and the rest is skipped. age = 22: the first fails at 22 <= 19, and 22 <= 25 holds, so young adult. age = 10: the first fails at 10 >= 13, and 10 <= 25 holds, so young adult again.\n\nThe branches are tested in order and the first true one wins, so the second condition never checks a lower bound and a child of 10 is labelled a young adult. teen for 22, or adult for 10, both assume a range that is not written."
         },
         {
-          "type": "short",
-          "q": "Rewrite `!(x > 5 && y <= 2)` as an equivalent expression that contains no `!`. Then evaluate both the original and your rewrite for x = 5, y = 2 to show that they agree. Show your working.",
+          "type": "mcq",
+          "q": "Which expression is equivalent to `!(x > 5 && y <= 2)`?",
+          "options": [
+            "`x <= 5 || y > 2`",
+            "`x <= 5 && y > 2`",
+            "`x < 5 || y > 2`",
+            "`x > 5 || y <= 2`"
+          ],
+          "answerIndex": 0,
           "concept": "Negating a compound condition",
-          "why": "Not (both) is the same as at least one is not: `!(A && B)` is `!A || !B`. The negation of `x > 5` is `x <= 5` (the boundary value 5 moves to the other side) and the negation of `y <= 2` is `y > 2`. Rewrite: `x <= 5 || y > 2`.\n\nCheck at x = 5, y = 2. Original: 5 > 5 is 0, 2 <= 2 is 1, 0 && 1 is 0, and !0 is 1. Rewrite: 5 <= 5 is 1, 2 > 2 is 0, 1 || 0 is 1. Both give 1. A correct answer flips && to ||, negates each comparison including the boundary (`<=` for `>`, `>` for `<=`), and shows both evaluate to 1. `x <= 5 && y > 2` keeps && and gives 0 at this point, which is wrong; `x < 5 || y > 2` loses the boundary and gives 0, also wrong."
+          "why": "Not both is the same as at least one is not, so `!(A && B)` becomes `!A || !B`. The negation of `x > 5` is `x <= 5` and the negation of `y <= 2` is `y > 2`, giving `x <= 5 || y > 2`.\n\nAt x = 5, y = 2 the original is 1 and only that option is 1 too: keeping `&&` gives 0, `x < 5` loses the boundary value and gives 0, and negating neither comparison gives 0."
         },
         {
-          "type": "short",
-          "q": "```c\nint n = 0, total = 40, hits = 0;\nif (n != 0 && total / n > 5) hits = 1;\nif (total > 10 || total / n > 5) hits = hits + 2;\nprintf(\"%d\", hits);\n```\nTrace this, saying for each `if` which operands are evaluated and why the program never divides by zero, and give the output. Show your working.",
+          "type": "mcq",
+          "q": "What does this print?\n\n```c\nint n = 0, total = 40, hits = 0;\nif (n != 0 && total / n > 5) hits = 1;\nif (total > 10 || total / n > 5) hits = hits + 2;\nprintf(\"%d\", hits);\n```",
+          "options": [
+            "3",
+            "2",
+            "0",
+            "Nothing: it stops with a division by zero."
+          ],
+          "answerIndex": 1,
           "concept": "Short-circuit evaluation",
-          "why": "First if: `n != 0` is false. `&&` with a false left operand is already false, so the right operand `total / n > 5` is never evaluated; no division happens and hits stays 0. Second if: `total > 10` is true. `||` with a true left operand is already true, so `total / n > 5` is again skipped; hits becomes 0 + 2 = 2. Output: 2.\n\nFinal answer: 2. A correct answer says the left operand decides in both cases, that the division by n is skipped both times (short-circuit), and gives 2. Answers of 3 (both ifs taken) or 'crashes with division by zero' are wrong; swapping the operands, `total / n > 5 && n != 0`, would divide first and crash."
+          "why": "`&&` stops as soon as its left operand is false: `n != 0` is false, so `total / n` is never evaluated and hits stays 0. `||` stops as soon as its left operand is true: `total > 10` is true, so the division is skipped again and hits becomes 0 + 2 = 2.\n\n3 takes both ifs, 0 takes neither, and the division by zero never happens because of short-circuit evaluation, although `total / n > 5 && n != 0` would divide first and crash."
         },
         {
-          "type": "short",
-          "q": "A student writes `if (x > 0);` and on the next line `{ printf(\"positive\"); }`. Explain what the semicolon straight after the condition does, and say what is printed when x = −3.",
+          "type": "mcq",
+          "q": "A student writes `if (x > 0);` and then, on the next line, `{ printf(\"positive\"); }`. What is printed when x = −3?",
+          "options": [
+            "Nothing.",
+            "The program does not compile.",
+            "positive",
+            "positive is printed twice."
+          ],
+          "answerIndex": 2,
           "concept": "The stray semicolon after a condition",
-          "why": "The semicolon is an empty statement, and the `if` governs exactly one statement, so the `if` is complete at the semicolon and controls nothing. The block on the next line is simply the next statement of the program and runs whatever x is. With x = −3 the condition is false, the empty statement is skipped, and then the block runs anyway: it prints positive.\n\nA correct answer says the semicolon is an empty statement that ends the if, that the block is no longer attached to it, and that positive is printed for x = −3. Saying nothing is printed, or that the compiler reports an error, is wrong: it compiles in silence."
+          "why": "The semicolon is an empty statement, and an `if` governs exactly one statement, so the `if` is complete at the semicolon and controls nothing. The block on the next line is simply the next statement of the program and runs whatever x is, so positive appears even for x = −3.\n\nNothing would be printed only if the block were still attached to the if; the fragment compiles in silence, which is what makes this fault easy to miss; and the block runs once, not twice."
         }
       ]
     },
@@ -733,28 +817,56 @@
           "why": "The Comparison Test with 0 ≤ g ≤ f says: f convergent forces g convergent, and g divergent forces f divergent. Here g = 1/x² is the smaller function, and knowing the smaller one converges says nothing about the larger one. In fact ∫₁^∞ 1/x dx diverges (p = 1), so the conclusion is false.\n\nThe inequality is correct for x ≥ 1, since x² ≥ x there; ∫₁^∞ 1/x² dx does converge, p = 2 > 1; the argument is not valid because it uses one of the two directions the theorem does not license."
         },
         {
-          "type": "short",
-          "q": "Determine whether ∫₁^∞ 1/√(x⁸ + 2) dx converges or diverges. Show each inequality step, name f and g with 0 ≤ g(x) ≤ f(x), read off p, and quote Note 1. Show your working.",
+          "type": "mcq",
+          "q": "Determine whether ∫₁^∞ 1/√(x⁸ + 2) dx converges or diverges, and say by which comparison.",
+          "options": [
+            "Diverges, since 1/√(x⁸ + 2) ≥ 1/x⁴ and p = 4 > 1",
+            "Converges, since 1/√(x⁸ + 2) ≤ 1/x⁴ and p = 4 > 1",
+            "Converges, since 1/√(x⁸ + 2) ≤ 1/x⁸ and p = 8 > 1",
+            "Converges to 1/3, by comparison with ∫₁^∞ 1/x⁴ dx"
+          ],
+          "answerIndex": 1,
           "concept": "Comparison template with a root in the denominator",
-          "why": "For all x ≥ 1: x⁸ + 2 ≥ x⁸; taking square roots, √(x⁸ + 2) ≥ √(x⁸) = x⁴ (valid since x > 0); taking reciprocals reverses it, 1/√(x⁸ + 2) ≤ 1/x⁴. Let f(x) = 1/x⁴ and g(x) = 1/√(x⁸ + 2), both continuous and positive on [1, ∞), so 0 ≤ g(x) ≤ f(x). ∫₁^∞ 1/x⁴ dx has p = 4 > 1, so by Note 1 it converges (to 1/3). By clause 1 of the Comparison Test, ∫₁^∞ 1/√(x⁸ + 2) dx converges.\n\nFinal answer: converges. A correct answer shows the three inequality steps in order (drop the 2, take the root, reverse on reciprocals), names f = 1/x⁴ and g = 1/√(x⁸ + 2), states p = 4 > 1, and concludes convergence. Writing the reciprocal step as ≥ reverses the verdict and is wrong; claiming the value is 1/3 is wrong, only 'at most 1/3' follows."
+          "why": "For x ≥ 1: x⁸ + 2 ≥ x⁸, so √(x⁸ + 2) ≥ x⁴, and taking reciprocals reverses it to 1/√(x⁸ + 2) ≤ 1/x⁴. The larger integral ∫₁^∞ 1/x⁴ dx has p = 4 > 1 and converges, so the smaller one converges as well.\n\nThe first option writes the reciprocal step with the inequality the wrong way round and flips the verdict; the third forgets the square root, which halves the exponent; the fourth turns the bound 1/3 into a value, when only 'at most 1/3' follows."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₋∞^∞ 1/(1 + x²) dx. Split it at 0, write each half as a limit with its own letter, and add the halves only if both converge. Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₋∞^∞ 1/(1 + x²) dx by splitting at 0 and taking each half as its own limit.",
+          "options": [
+            "π",
+            "π/2",
+            "0",
+            "Divergent"
+          ],
+          "answerIndex": 0,
           "concept": "Both limits infinite with both halves convergent",
-          "why": "Split: ∫₋∞^∞ 1/(1 + x²) dx = ∫₋∞⁰ + ∫₀^∞. The antiderivative is tan⁻¹(x). Right half: lim(b→∞) [tan⁻¹(x)]₀ᵇ = lim(b→∞) tan⁻¹(b) − 0 = π/2. Left half: lim(a→−∞) [tan⁻¹(x)]ₐ⁰ = 0 − lim(a→−∞) tan⁻¹(a) = 0 − (−π/2) = π/2. Both halves converge, so the integral is π/2 + π/2 = π.\n\nFinal answer: π (converges to π). The working must show the split, two independent limits with tan⁻¹(b) → π/2 and tan⁻¹(a) → −π/2, and the sum. Giving π/2 (one half only) or 0 (subtracting the halves) is wrong; using a single symmetric limit ∫₋ₜᵗ is not the definition, though it reaches the same number here."
+          "why": "The antiderivative is tan⁻¹(x). Right half: lim(b→∞) [tan⁻¹(x)]₀ᵇ = π/2 − 0 = π/2. Left half: lim(a→−∞) [tan⁻¹(x)]ₐ⁰ = 0 − (−π/2) = π/2. Both halves are finite, so the integral converges to π/2 + π/2 = π.\n\nπ/2 reports one half only; 0 subtracts the halves instead of adding them; divergent ignores that tan⁻¹ is bounded, so each half has a finite limit."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₁^∞ (x + 1)/x³ dx. Split the integrand into powers of x first, then write the limit. Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₁^∞ (x + 1)/x³ dx.",
+          "options": [
+            "1",
+            "1/2",
+            "−3/2",
+            "3/2"
+          ],
+          "answerIndex": 3,
           "concept": "Type I integral after splitting the integrand",
-          "why": "(x + 1)/x³ = x/x³ + 1/x³ = x⁻² + x⁻³. Antiderivative: −1/x − 1/(2x²). Then ∫₁^∞ = lim(t→∞) [−1/x − 1/(2x²)]₁ᵗ = lim(t→∞) (−1/t − 1/(2t²)) − (−1 − 1/2) = 0 − (−3/2) = 3/2. The limit exists, so the integral converges to 3/2.\n\nFinal answer: 3/2 (also accepted: 1.5). The working must show the split into x⁻² + x⁻³, the antiderivative with both minus signs, the limit line, and the subtraction of the lower-limit value −3/2. Getting 1 (forgetting the x⁻³ term) or −3/2 (subtracting in the wrong order) is wrong."
+          "why": "Split the integrand first: (x + 1)/x³ = x⁻² + x⁻³, with antiderivative −1/x − 1/(2x²). Then the integral is lim(t→∞) [−1/t − 1/(2t²)] − (−1 − 1/2) = 0 + 3/2 = 3/2, so it converges to 3/2.\n\n1 keeps only the x⁻² term; 1/2 keeps only the x⁻³ term; −3/2 subtracts the limits in the wrong order."
         },
         {
-          "type": "short",
-          "q": "A student writes ∫₋₁² 1/x⁴ dx = [−1/(3x³)]₋₁² = −1/24 − 1/3 = −3/8. Explain why this answer is impossible, what was overlooked, and what the correct verdict is.",
+          "type": "mcq",
+          "q": "A student writes ∫₋₁² 1/x⁴ dx = [−1/(3x³)]₋₁² = −1/24 − 1/3 = −3/8. What is wrong, and what is the correct verdict?",
+          "options": [
+            "The antiderivative should be −1/(4x³), which gives −1/32 − 1/4",
+            "Nothing is wrong; a definite integral is allowed to be negative",
+            "1/x⁴ is undefined at x = 0 inside [−1, 2], so the integral is improper and divergent",
+            "The limits were subtracted the wrong way round; the value is 3/8"
+          ],
+          "answerIndex": 2,
           "concept": "Why the Fundamental Theorem cannot be used across a discontinuity",
-          "why": "1/x⁴ is positive everywhere it is defined, so its integral over any interval cannot be negative; −3/8 is impossible on sight. What was overlooked is that 1/x⁴ is undefined at x = 0, which lies strictly inside [−1, 2], so the integral is improper (Type II) and the Fundamental Theorem may not be applied across the interval. It must be split at 0: ∫₋₁⁰ + ∫₀², with lim(c→0⁻) on the left and lim(b→0⁺) on the right. The left piece is −1/(3c³) − 1/3, which → +∞ as c → 0⁻ (c³ is a small negative number); the right piece is −1/24 + 1/(3b³), which → +∞ as b → 0⁺. Both halves diverge.\n\nA correct answer says a positive integrand cannot give a negative integral, identifies the discontinuity at x = 0 inside the interval, states that the integral must be split there with one-sided limits, and concludes that ∫₋₁² 1/x⁴ dx is divergent."
+          "why": "1/x⁴ is positive wherever it is defined, so a negative answer is impossible on sight. The cause is that 1/x⁴ is undefined at x = 0, which lies inside [−1, 2], so the Fundamental Theorem may not be applied straight across. Split at 0 and take one-sided limits: both ∫₋₁⁰ and ∫₀² give +∞, so the integral is divergent.\n\nThe antiderivative −1/(3x³) is in fact correct, so the first option is false; a positive integrand rules out the second; and reversing the limits only changes the sign of an answer that should never have been computed."
         }
       ]
     },
@@ -870,28 +982,56 @@
           "why": "F = qvB contains no mass, so with equal q, v and B the force is identical. Everything else differs: r = mv/qB and T = 2πm/qB both double with the mass, and ½mv² doubles too.\n\nEqual radius would need equal momentum, not equal velocity; equal period is the speed-independence result, which says nothing about mass; kinetic energy at the same speed is proportional to m."
         },
         {
-          "type": "short",
-          "q": "A charge of +3.0 μC moves at 2.0 × 10⁵ m/s along +x. B = 0.50 T points along +y and E = 6.0 × 10⁴ V/m points along +z. Calculate the magnetic force, the electric force and the net force, each with direction. Then find the E that would let the charge pass undeflected. Show your working.",
+          "type": "mcq",
+          "q": "A charge of +3.0 μC moves at 2.0 × 10⁵ m/s along +x. A uniform field B = 0.50 T points along +y and a uniform field E = 6.0 × 10⁴ V/m points along +z. Calculate the magnitude and direction of the net force on the charge.",
+          "options": [
+            "0.12 N along +z",
+            "0.35 N along +z",
+            "0.48 N along −z",
+            "0.48 N along +z"
+          ],
+          "answerIndex": 3,
           "concept": "Combining qE and qv × B as vectors in crossed fields",
-          "why": "Magnetic: F_B = qvB = (3.0 × 10⁻⁶)(2.0 × 10⁵)(0.50) = 0.30 N, direction x̂ × ŷ = +z. Electric: F_E = qE = (3.0 × 10⁻⁶)(6.0 × 10⁴) = 0.18 N, along +z for a positive charge. Both point along +z, so they add: F_net = 0.48 N along +z. For no deflection the electric force must cancel the magnetic one: E = vB = (2.0 × 10⁵)(0.50) = 1.0 × 10⁵ V/m, directed along −z.\n\nFinal answers: F_B = 0.30 N (+z), F_E = 0.18 N (+z), F_net = 0.48 N (+z), E = 1.0 × 10⁵ V/m along −z (accept within 2%). A correct answer must show the cross product giving +z. Combining 0.30 and 0.18 in quadrature to give 0.35 N is wrong here because the forces are parallel."
+          "why": "F_B = qvB = (3.0 × 10⁻⁶)(2.0 × 10⁵)(0.50) = 0.30 N along x̂ × ŷ = +z. F_E = qE = (3.0 × 10⁻⁶)(6.0 × 10⁴) = 0.18 N, also along +z for a positive charge. The two are parallel, so they add to 0.48 N along +z.\n\n0.12 N subtracts them, as if they opposed each other; 0.35 N combines them in quadrature, which applies only to perpendicular forces; along −z has the cross product the wrong way round."
         },
         {
-          "type": "short",
-          "q": "A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) enters a uniform field of 0.20 T at 4.0 × 10⁶ m/s, its velocity at 30° to B. Calculate the velocity components along and across B, the radius of the helix, the period and the pitch. Show your working.",
-          "concept": "Helical motion: radius, period and pitch",
-          "why": "v⊥ = v sin 30° = 2.0 × 10⁶ m/s and v∥ = v cos 30° = 3.46 × 10⁶ m/s. Only v⊥ is bent: r = mv⊥/(qB) = (1.67 × 10⁻²⁷)(2.0 × 10⁶)/[(1.6 × 10⁻¹⁹)(0.20)] = (3.34 × 10⁻²¹)/(3.2 × 10⁻²⁰) = 0.104 m. T = 2πm/(qB) = 2π(1.67 × 10⁻²⁷)/(3.2 × 10⁻²⁰) = 3.28 × 10⁻⁷ s, independent of speed. Pitch = v∥T = (3.46 × 10⁶)(3.28 × 10⁻⁷) = 1.14 m.\n\nFinal answers: v⊥ = 2.0 × 10⁶ m/s, v∥ = 3.5 × 10⁶ m/s, r = 0.10 m (accept 0.102 to 0.106), T = 3.3 × 10⁻⁷ s (accept 3.2 to 3.4), pitch = 1.1 m (accept 1.10 to 1.17). Using the full 4.0 × 10⁶ m/s in the radius gives 0.21 m and is wrong; the period must not contain v."
+          "type": "mcq",
+          "q": "A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) enters a uniform field of 0.20 T at 4.0 × 10⁶ m/s with its velocity at 30° to B. Calculate the radius and the pitch of its helical path.",
+          "options": [
+            "r = 0.209 m, pitch = 1.14 m",
+            "r = 0.181 m, pitch = 0.656 m",
+            "r = 0.104 m, pitch = 1.14 m",
+            "r = 0.104 m, pitch = 0.656 m"
+          ],
+          "answerIndex": 2,
+          "concept": "Radius and pitch of a helical path",
+          "why": "Split the velocity: v⊥ = v sin 30° = 2.0 × 10⁶ m/s is what bends, v∥ = v cos 30° = 3.46 × 10⁶ m/s carries the particle forward. Then r = mv⊥/(qB) = 0.104 m, T = 2πm/(qB) = 3.28 × 10⁻⁷ s with no v in it, and the pitch is v∥T = 1.14 m.\n\n0.209 m puts the full speed into the radius; the pair 0.181 m and 0.656 m swaps sin and cos; and 0.656 m on its own uses v⊥ instead of v∥ for the advance along B."
         },
         {
-          "type": "short",
-          "q": "A mobile-phone mast radiates 20 W at 900 MHz. Take c = 3.0 × 10⁸ m/s and h = 6.63 × 10⁻³⁴ J·s. Calculate the wavelength, the energy of one photon, and the number of photons emitted per second. Show your working.",
-          "concept": "Wavelength, photon energy and photon rate from frequency and power",
-          "why": "λ = c/f = (3.0 × 10⁸)/(9.0 × 10⁸) = 0.33 m. E = hf = (6.63 × 10⁻³⁴)(9.0 × 10⁸) = 5.97 × 10⁻²⁵ J (about 3.7 × 10⁻⁶ eV). Photons per second = P/E = 20/(5.97 × 10⁻²⁵) = 3.4 × 10²⁵ per second, so many that the radiation behaves as a smooth classical wave.\n\nFinal answers: λ = 0.33 m (accept 0.33 to 0.34), E = 6.0 × 10⁻²⁵ J (accept 5.9 to 6.0 × 10⁻²⁵), n = 3.4 × 10²⁵ s⁻¹ (accept 3.3 to 3.4 × 10²⁵). λ = 2.7 × 10¹⁷ m comes from multiplying c by f and is wrong; MHz means 10⁶ Hz."
+          "type": "mcq",
+          "q": "A mast radiates 20 W at 900 MHz. Take h = 6.63 × 10⁻³⁴ J·s and c = 3.0 × 10⁸ m/s. Calculate the number of photons it emits per second.",
+          "options": [
+            "3.4 × 10²⁵ s⁻¹",
+            "3.4 × 10³¹ s⁻¹",
+            "3.0 × 10⁻²⁶ s⁻¹",
+            "2.7 × 10⁴³ s⁻¹"
+          ],
+          "answerIndex": 0,
+          "concept": "Photon rate from radiated power and photon energy",
+          "why": "One photon carries E = hf = (6.63 × 10⁻³⁴)(9.0 × 10⁸) = 5.97 × 10⁻²⁵ J, so the rate is P/E = 20/(5.97 × 10⁻²⁵) = 3.4 × 10²⁵ photons per second, a number so large that the radiation behaves as a smooth classical wave.\n\n3.4 × 10³¹ leaves the frequency as 900 rather than 9.0 × 10⁸ Hz; 3.0 × 10⁻²⁶ divides E by P instead of P by E; 2.7 × 10⁴³ starts from λ = cf instead of λ = c/f."
         },
         {
-          "type": "short",
-          "q": "A straight wire carrying current sits in a uniform magnetic field. Explain the direction of the force on it, what happens to that force if the current is reversed, and what happens if both the current and the field are reversed. Hence explain why a d.c. motor needs a commutator.",
+          "type": "mcq",
+          "q": "A straight current-carrying wire sits in a uniform magnetic field. What happens to the force on it if both the current and the field are reversed, and why does a d.c. motor need a commutator?",
+          "options": [
+            "The force reverses; the commutator reverses it back once every turn",
+            "The force is unchanged; the commutator reverses the coil current each half turn so the torque keeps one sense",
+            "The force is unchanged; the commutator smooths the supply into steady d.c.",
+            "The force falls to zero; the commutator restarts the current after each dead point"
+          ],
+          "answerIndex": 1,
           "concept": "Direction and sign of the force on a current-carrying wire",
-          "why": "F = I L × B, so the force is perpendicular to both the wire and the field, never along either; its sense comes from right-hand rule 1 with the conventional current in place of v. Reversing the current reverses L and so reverses F. Reversing both I and B reverses F twice, leaving it unchanged. In a motor the coil's sides swap places every half turn, so the torque would reverse and the coil would only rock; the commutator reverses the current in the coil at the same moment, so the torque keeps one sense and the coil keeps turning.\n\nA correct answer states perpendicular to both wire and B, reversal with the current, no change when both reverse, and the commutator's job of reversing I each half turn to keep the torque one-directional."
+          "why": "F = I L × B reverses when either I or B reverses, so reversing both reverses it twice and leaves it unchanged. In a motor the coil's two sides swap places every half turn, so without help the torque would reverse and the coil would only rock; the commutator reverses the current in the coil at that same moment, keeping the torque in one sense.\n\nReversing both does not reverse the force; the commutator is not a smoothing device; and the force never falls to zero for a wire carrying current across B."
         }
       ]
     },
@@ -1007,28 +1147,56 @@
           "why": "Conditional branching moves control depending on whether a condition is satisfied, and such statements are also called decision making or selection statements.\n\nIterative statements are the loops; unconditional branching is goto, which checks no condition; simple and compound describe the form of a statement, not what it decides."
         },
         {
-          "type": "short",
-          "q": "Write a C `if-else-if` chain that prints A for a score of 70 or more, B for 60 to 69, C for 50 to 59 and F otherwise, and state what it prints for a score of 65. Then say why the order of the branches matters.",
-          "concept": "Writing an if-else-if chain",
-          "why": "```c\nif (score >= 70)\n    printf(\"A\");\nelse if (score >= 60)\n    printf(\"B\");\nelse if (score >= 50)\n    printf(\"C\");\nelse\n    printf(\"F\");\n```\n\nFor 65: 65 >= 70 is false, 65 >= 60 is true, so it prints B and the rest is skipped. The order matters because the first true condition wins: each `else if` is reached only when every earlier condition failed, so `score >= 60` can be written without an upper bound. Reversed, with `score >= 50` first, every score of 50 or more would print C. A correct answer has the three thresholds in descending order (or explicit ranges such as `score >= 60 && score <= 69`), a final bare else for F, gives B for 65, and explains first-true-wins. Four separate `if`s without else print several letters for one score and are wrong."
+          "type": "mcq",
+          "q": "A score of 85 must print A, 65 must print B and 55 must print C, but this prints C for all three. Which single change fixes it?\n\n```c\nif (score >= 50) printf(\"C\");\nelse if (score >= 60) printf(\"B\");\nelse if (score >= 70) printf(\"A\");\nelse printf(\"F\");\n```",
+          "options": [
+            "Change the first condition to `score >= 50 && score < 60`.",
+            "Replace every `else if` with a plain `if`.",
+            "Test the conditions in the order 70, then 60, then 50.",
+            "Change the final `else` to `else if (score < 50)`."
+          ],
+          "answerIndex": 2,
+          "concept": "Order of branches in an if-else-if chain",
+          "why": "In a chain the first true condition wins, so the widest test must come last. With `score >= 50` first, every score of 50 or more prints C and the later branches are never reached. Ordering the thresholds 70, then 60, then 50 makes each `else if` reachable only for the scores the earlier tests rejected.\n\nAdding an upper bound to the first test leaves 85 printing B; plain ifs make 85 print C, B and A one after another; changing the final else changes nothing at all."
         },
         {
-          "type": "short",
-          "q": "```c\nint i;\nfor (i = 0; i != 10; i += 3)\n    printf(\"%d \", i);\n```\nThis loop never stops. Explain why, list the first four values printed, and change the condition so that the loop prints 0 3 6 9 and then ends. Show your working.",
+          "type": "mcq",
+          "q": "```c\nint i;\nfor (i = 0; i != 10; i += 3)\n    printf(\"%d \", i);\n```\nThis never stops. Which change makes it print exactly `0 3 6 9` and then end?",
+          "options": [
+            "`for (i = 0; i > 10; i += 3)`",
+            "`for (i = 0; i < 10; i += 3)`",
+            "`for (i = 0; i != 9; i += 3)`",
+            "`for (i = 0; i != 10; i += 2)`"
+          ],
+          "answerIndex": 1,
           "concept": "Fixing a loop condition that never becomes false",
-          "why": "i starts at 0 and steps by 3: 0, 3, 6, 9, 12, 15, and so on. It never equals 10, so `i != 10` is never false and the loop runs on. The first four values printed are 0 3 6 9. Fix: `for (i = 0; i < 10; i += 3)`. Now 0, 3, 6 and 9 are printed, then i becomes 12, 12 < 10 is false, and the loop ends.\n\nA correct answer says i skips over 10, lists 0 3 6 9, and replaces `!=` with `<` (also accepted: `i <= 9`). Changing the step to `i += 2` or the start to 1 changes which numbers print and does not answer the question."
+          "why": "i takes 0, 3, 6, 9, 12 and so on, so it steps straight over 10 and `i != 10` is never false. Testing `i < 10` instead stops as soon as i passes 10: 0, 3, 6 and 9 are printed, then 12 < 10 fails.\n\n`i > 10` is false at once and prints nothing; `i != 9` stops when i reaches 9 and prints only 0 3 6; stepping by 2 prints 0 2 4 6 8 and then stops at 10."
         },
         {
-          "type": "short",
-          "q": "Write a `while` loop in C that prints the multiples of 7 that are less than 40, each on its own line, and state the output. Your answer must show the starting value, the condition and the update.",
+          "type": "mcq",
+          "q": "Which of these loops prints exactly `7 14 21 28 35` and nothing else?",
+          "options": [
+            "`int m = 0; while (m < 40) { printf(\"%d \", m); m = m + 7; }`",
+            "`int m = 7; while (m < 40) { m = m + 7; printf(\"%d \", m); }`",
+            "`int m = 7; while (m <= 42) { printf(\"%d \", m); m = m + 7; }`",
+            "`int m = 7; while (m < 40) { printf(\"%d \", m); m = m + 7; }`"
+          ],
+          "answerIndex": 3,
           "concept": "Writing a while loop",
-          "why": "```c\nint m = 7;\nwhile (m < 40) {\n    printf(\"%d\\n\", m);\n    m = m + 7;\n}\n```\n\nm goes 7, 14, 21, 28, 35, each printed; then m = 42, 42 < 40 is false, and the loop ends. Output: 7 14 21 28 35 on separate lines. A correct answer initialises a variable to 7 (or a counter to 1 and prints 7 * counter), tests `< 40`, prints inside the loop, and adds 7 (or 1 to the counter) inside the loop. A missing update gives an infinite loop; `<= 40` here prints the same values but `m <= 42` or starting at 0 prints an extra value and is wrong."
+          "why": "Start the variable at the first value wanted, 7, test that it is still under 40, print it, then add 7. The values printed are 7, 14, 21, 28 and 35, and the loop ends when m reaches 42.\n\nStarting at 0 prints an extra 0 at the front; updating before the print skips 7 and prints 42 at the end; testing `m <= 42` lets 42 through as well."
         },
         {
-          "type": "short",
-          "q": "```c\nif (n > 0) printf(\"A\");\nif (n > 5) printf(\"B\");\n```\nand\n```c\nif (n > 0) printf(\"A\");\nelse if (n > 5) printf(\"B\");\n```\nFor n = 8, say what each fragment prints and explain why two separate ifs and an if-else-if chain behave differently.",
+          "type": "mcq",
+          "q": "For n = 8, what does each of these fragments print?\n\n```c\nif (n > 0) printf(\"A\");\nif (n > 5) printf(\"B\");\n```\n\n```c\nif (n > 0) printf(\"A\");\nelse if (n > 5) printf(\"B\");\n```",
+          "options": [
+            "AB and A",
+            "AB and AB",
+            "A and A",
+            "AB and B"
+          ],
+          "answerIndex": 0,
           "concept": "Separate ifs versus an if-else-if chain",
-          "why": "First fragment: the two ifs are independent, so both conditions are tested. 8 > 0 prints A and 8 > 5 prints B: output AB. Second fragment: an if-else-if runs at most one branch. 8 > 0 is true, A is printed, and the `else if` is never tested even though 8 > 5 is also true: output A.\n\nA correct answer gives AB and A and states that separate ifs can both fire while a chain stops at the first true condition. It may add that in the chain the B branch can never run for any n, since every n > 5 is also > 0, so the order of the branches is wrong for that purpose."
+          "why": "Two separate ifs are independent, so both conditions are tested: 8 > 0 prints A and 8 > 5 prints B, giving AB. In the chain at most one branch runs, so once 8 > 0 has printed A the `else if` is never tested: output A.\n\nAB and AB assumes the chain runs both branches; A and A misses that the first fragment tests the second condition too; AB and B has the chain skipping the branch it actually takes. In that chain B can never print for any n, since every n > 5 is already greater than 0."
         }
       ],
       "slot": "fast"

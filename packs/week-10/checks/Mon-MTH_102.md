@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 10 area between curves, exactly as the lecturer builds it.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** The area between y = 9 − x² and the x-axis is to be found, and no interval is given. Solve 9 − x² = 0 to find the limits of integration.
 A. x = 3 only
@@ -51,13 +51,29 @@ B. −∫ₐᵇ (f(x) − g(x))dx
 C. ∫ₐᵇ (f(x) − g(x))dx
 D. ∫ₐᵇ (g(x) − f(x))dx
 
-**9. (show your working)** Find the area between the curve y = 3x − x² and the x-axis. Show your working.
+**9.** Find the area between the curve y = 3x − x² and the x-axis.
+A. 27/2
+B. 45/2
+C. −9/2
+D. 9/2
 
-**10. (show your working)** Find the area between the curves y = x² + 1 and y = x from x = 0 to x = 2. Show your working.
+**10.** Find the area between the curves y = x² + 1 and y = x from x = 0 to x = 2.
+A. 14/3
+B. 8/3
+C. 20/3
+D. −8/3
 
-**11. (show your working)** Find the area between y = sin x and the x-axis from x = 0 to x = π. Show your working.
+**11.** Find the area between y = sin x and the x-axis from x = 0 to x = π.
+A. 2
+B. −2
+C. 0
+D. 1
 
-**12. (show your working)** f(x) ≤ 0 for every x in [a, b]. Explain why the area between y = f(x) and the x-axis on [a, b] is |∫ₐᵇf(x)dx| and not ∫ₐᵇf(x)dx, and why that modulus is not enough if f changes sign inside [a, b].
+**12.** For f(x) ≤ 0 on [a, b] the area between y = f(x) and the x-axis is |∫ₐᵇf(x)dx|. If f instead changes sign at some c inside [a, b], why does |∫ₐᵇf(x)dx| no longer give the area?
+A. The positive and negative parts cancel inside the integral before the modulus is applied
+B. The modulus of a sum is never equal to the sum of the moduli, so the integral is undefined
+C. The integral is always zero when f changes sign, so no area can be recovered from it
+D. The Fundamental Theorem does not apply on an interval containing a root of f
 
 ---
 
@@ -95,18 +111,18 @@ x = 1 and x = −2 has the factor signs backwards; x = 2 only drops the negative
 
 The first option adds two areas against the axis, which is not the region between the curves; the second flips a sign that is already correct and gives a negative number; the fourth subtracts bottom minus top and is also negative.
 
-**9.** *Area between a parabola and the x-axis.* No interval is given, so the limits are the roots: 3x − x² = x(3 − x) = 0 gives x = 0 and x = 3. Test an interior point: f(1) = 3 − 1 = 2 > 0, so the curve is above the axis on [0, 3] and no modulus is needed. A = ∫₀³(3x − x²)dx = [3x²/2 − x³/3]₀³ = (27/2 − 9) − 0 = 9/2.
+**9. D** — *Area between a parabola and the x-axis.* No interval is given, so the limits come from the roots: 3x − x² = x(3 − x) = 0 gives x = 0 and x = 3. Test x = 1: f(1) = 2 > 0, so the curve is above the axis and no modulus is needed. A = ∫₀³(3x − x²)dx = [3x²/2 − x³/3]₀³ = 27/2 − 9 = 9/2 square units.
 
-Final answer: 9/2 square units (also accepted: 4.5). The working must show the roots from f(x) = 0, a sign check, and the evaluated bracket. 27/2 alone forgets the cubic term; −9/2 has the integrand upside down.
+27/2 drops the −x² term; 45/2 integrates 3x + x² with the sign flipped; −9/2 has the integrand upside down.
 
-**10.** *Area between two curves on a given interval.* Decide which curve is on top with a test point: at x = 1, x² + 1 = 2 and x = 1, so y = x² + 1 is on top (in fact x² + 1 − x = (x − 1/2)² + 3/4 > 0 everywhere, so the curves never cross). A = ∫₀²[(x² + 1) − x]dx = ∫₀²(x² − x + 1)dx = [x³/3 − x²/2 + x]₀² = 8/3 − 2 + 2 = 8/3.
+**10. B** — *Area between two curves on a given interval.* Test which curve is on top: at x = 1, x² + 1 = 2 and x = 1, so y = x² + 1 is above (indeed x² + 1 − x = (x − 1/2)² + 3/4 > 0 always, so they never cross). A = ∫₀²[(x² + 1) − x]dx = [x³/3 − x²/2 + x]₀² = 8/3 − 2 + 2 = 8/3 square units.
 
-Final answer: 8/3 square units (also accepted: 2.67 or 2⅔). A correct answer names the top curve, integrates top minus bottom over [0, 2] and evaluates at both limits. −8/3 comes from subtracting in the wrong order; 14/3 forgets to subtract the lower curve.
+14/3 integrates the top curve alone and forgets to subtract the bottom; 20/3 adds the two curves instead of subtracting; −8/3 subtracts in the wrong order.
 
-**11.** *Area under a sine curve.* sin x ≥ 0 on [0, π] (test x = π/2: sin(π/2) = 1 > 0), so A = ∫₀^π sin x dx. The antiderivative of sin x is −cos x, so A = [−cos x]₀^π = −cos π − (−cos 0) = −(−1) + 1 = 2.
+**11. A** — *Area under a sine curve.* sin x ≥ 0 on [0, π] (at x = π/2 it is 1), so the area is just ∫₀^π sin x dx. The antiderivative of sin x is −cos x, so A = [−cos x]₀^π = −cos π + cos 0 = 1 + 1 = 2 square units.
 
-Final answer: 2 square units. The working must use ∫sin x dx = −cos x, with cos π = −1 and cos 0 = 1. −2 comes from using cos x as the antiderivative, [cos x]₀^π = −1 − 1; 0 comes from taking cos π = 1 instead of −1. Neither is accepted.
+−2 uses cos x as the antiderivative; 0 takes cos π as 1 instead of −1; 1 evaluates at the upper limit only.
 
-**12.** *Why the modulus in the area formula.* When f ≤ 0 every strip contributes a negative amount, so ∫ₐᵇf(x)dx comes out negative (or zero); an area cannot be negative, so the area is the magnitude of the integral, |∫ₐᵇf(x)dx|. If f changes sign at some c inside [a, b], the negative contribution from one side and the positive contribution from the other cancel inside the single integral before any modulus is applied, so |∫ₐᵇf(x)dx| is smaller than the true area (it can even be 0). The remedy is to split at c and add |∫ₐᶜf(x)dx| and |∫ᶜᵇf(x)dx| separately.
+**12. A** — *Why the modulus in the area formula.* Below the axis every strip contributes a negative amount, so the integral comes out negative and the modulus restores a positive area. With a sign change at c, the negative piece and the positive piece cancel inside the single integral, and taking the modulus afterwards cannot undo a cancellation that has already happened. The fix is to split first: |∫ₐᶜf| + |∫ᶜᵇf|.
 
-A correct answer says the integral is negative below the axis, that the modulus restores a positive area, and that with a sign change the pieces cancel so the split must happen before taking magnitudes.
+The second option is a true statement about moduli but does not make the integral undefined; the third overstates it, since the pieces rarely cancel exactly; the fourth is false, as the theorem needs continuity, not the absence of roots.

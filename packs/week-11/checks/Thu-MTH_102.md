@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 11 volumes of revolution.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** The region between the parabola x = y² + 1 and the line x = 4 is revolved about the line x = 4. Find the volume.
 A. 48√3π/5
@@ -51,13 +51,29 @@ B. (R − r)² has been used in place of R² − r²
 C. π should be 2π
 D. R and r have been swapped
 
-**9. (show your working)** The region under y = x², above the x-axis, from x = 0 to x = 1 is revolved about the line y = 1. Find the volume. Show your working.
+**9.** The region under y = x², above the x-axis, from x = 0 to x = 1 is revolved about the line y = 1. Find the volume.
+A. 13π/15
+B. 7π/15
+C. 8π/15
+D. π/5
 
-**10. (show your working)** The region under y = x, above the x-axis, from x = 0 to x = 1 is revolved about the x-axis. Find the volume by the shell method (integrating in y), then confirm it by the disc method. Show your working.
+**10.** The region under y = x, above the x-axis, from x = 0 to x = 1 is revolved about the x-axis. Find the volume by the shell method, integrating in y.
+A. 2π/3
+B. π/6
+C. π/2
+D. π/3
 
-**11. (show your working)** The region enclosed by y = x² and y = x + 2 is revolved about the x-axis. Find the volume. Show your working.
+**11.** The region enclosed by y = x² and y = x + 2 is revolved about the x-axis. Find the volume.
+A. 72π/5
+B. 152π/15
+C. 81π/10
+D. 184π/15
 
-**12. (show your working)** The region under y = x (0 ≤ x ≤ 1, above the x-axis) is revolved about the y-axis. A student writes V = π∫₀¹x²dx = π/3. Explain what solid that integral really measures, and set up a correct integral.
+**12.** The region under y = x from x = 0 to x = 1, above the x-axis, is revolved about the y-axis. A student writes V = π∫₀¹x²dx = π/3. What does that integral actually measure, and what is the correct volume?
+A. The solid formed about the y-axis but with the wrong limits; the volume is π/3
+B. The solid formed about the x-axis; the volume about the y-axis is 2π/3
+C. The solid formed about the line x = 1; the volume about the y-axis is π/6
+D. Nothing is wrong; π/3 is the volume about the y-axis
 
 ---
 
@@ -95,18 +111,18 @@ D. R and r have been swapped
 
 The limits 0 and 2 are right (the curves meet at x = 0 and x = 2); π is correct for a washer; 2x ≥ x² on [0, 2], so R = 2x and r = x² are in the right order.
 
-**9.** *Washer about an axis above the region.* Radii are distances from the line y = 1. The boundary farther from that line is the x-axis, at distance 1 − 0 = 1, so R(x) = 1; the nearer boundary is the curve, at distance 1 − x², so r(x) = 1 − x². V = π∫₀¹[1² − (1 − x²)²]dx = π∫₀¹[1 − (1 − 2x² + x⁴)]dx = π∫₀¹(2x² − x⁴)dx = π[2x³/3 − x⁵/5]₀¹ = π(2/3 − 1/5) = 7π/15.
+**9. B** — *Washer about an axis above the region.* Radii are distances from the line y = 1. The far boundary is the x-axis at distance 1, so R(x) = 1; the near boundary is the curve at distance 1 − x², so r(x) = 1 − x². V = π∫₀¹[1 − (1 − x²)²]dx = π∫₀¹(2x² − x⁴)dx = π(2/3 − 1/5) = 7π/15 cubic units.
 
-Final answer: 7π/15 cubic units (also accepted: 1.47). A correct answer identifies R = 1 and r = 1 − x² as distances from y = 1, subtracts the squares and evaluates. π∫₀¹(x² + 1)²dx − π = 13π/15 shifts the wrong way (that is the solid about y = −1); π∫x⁴dx = π/5 ignores the shift.
+13π/15 measures the radii from y = −1; 8π/15 integrates (1 − x²)² alone; π/5 ignores the shift and uses R = x².
 
-**10.** *Cross-checking a volume by two methods.* Shells: the axis is the x-axis, so the strips are horizontal at height y, with radius y. The strip runs from the line x = y to the edge x = 1, so its length is f(y) = 1 − y, and y runs from 0 to 1. V = 2π∫₀¹y(1 − y)dy = 2π∫₀¹(y − y²)dy = 2π[y²/2 − y³/3]₀¹ = 2π(1/2 − 1/3) = 2π(1/6) = π/3. Discs: R(x) = x, so V = π∫₀¹x²dx = π[x³/3]₀¹ = π/3. The two agree, as they must, since they measure the same cone.
+**10. D** — *Shell method integrating in y.* For shells about the x-axis the strips are horizontal, so at height y the shell radius is y and the strip runs from the line x = y across to x = 1, giving length 1 − y, with y from 0 to 1. V = 2π∫₀¹y(1 − y)dy = 2π[y²/2 − y³/3]₀¹ = 2π/6 = π/3 cubic units, which the disc method confirms: π∫₀¹x²dx = π/3.
 
-Final answer: π/3 cubic units by both methods (also accepted: 1.05). The working must show f(y) = 1 − y, the 2π, and the disc integral π∫x²dx. 2π∫₀¹y·y dy = 2π/3 takes the strip length as y instead of 1 − y and is wrong.
+2π/3 takes the strip length as y instead of 1 − y; π/6 uses π rather than 2π; π/2 is the disc integral π∫₀¹x dx with the radius not squared.
 
-**11.** *Washer with limits from the intersection of two curves.* Boundaries: x² = x + 2 gives x² − x − 2 = (x − 2)(x + 1) = 0, so x = −1 and x = 2. On (−1, 2) the line is farther from the x-axis (at x = 0: 2 > 0), so R(x) = x + 2 and r(x) = x². V = π∫₋₁²[(x + 2)² − (x²)²]dx = π∫₋₁²(x² + 4x + 4 − x⁴)dx = π[x³/3 + 2x² + 4x − x⁵/5]₋₁². At x = 2 the bracket is 8/3 + 8 + 8 − 32/5 = 184/15; at x = −1 it is −1/3 + 2 − 4 + 1/5 = −32/15. V = π(184/15 + 32/15) = 216π/15 = 72π/5.
+**11. A** — *Washer with limits from the intersection of two curves.* Limits: x² = x + 2 gives (x − 2)(x + 1) = 0, so x = −1 and x = 2. On that interval the line is farther from the x-axis (at x = 0, 2 > 0), so R = x + 2 and r = x². V = π∫₋₁²[(x + 2)² − x⁴]dx = π[x³/3 + 2x² + 4x − x⁵/5]₋₁² = π(184/15 + 32/15) = 72π/5 cubic units.
 
-Final answer: 72π/5 cubic units (also accepted: 14.4π or 45.2). A correct answer finds the limits by solving x² = x + 2, identifies R = x + 2 and r = x², subtracts the squares and evaluates at both limits, remembering that subtracting −32/15 adds. π(184/15 − 32/15) = 152π/15 has that sign wrong; using (x + 2 − x²)² as the integrand squares the difference and is wrong.
+152π/15 subtracts −32/15 as if it were positive; 81π/10 uses (x + 2 − x²)², squaring the difference; 184π/15 forgets the lower limit.
 
-**12.** *Matching the formula to the axis of revolution.* π∫ₐᵇ[f(x)]²dx is the disc formula for revolution about the x-axis: it stacks discs of radius f(x) = x along the x-axis, so π/3 is the volume of the cone made by spinning the region about the x-axis, not the y-axis. For the y-axis, either integrate along that axis with washers in y, where at height y the region runs from x = y to x = 1, giving V = π∫₀¹(1² − y²)dy = 2π/3, or use shells in x with radius x and height x, giving V = 2π∫₀¹x·x dx = 2π/3. Both give 2π/3, which is not π/3.
+**12. B** — *Matching the formula to the axis of revolution.* π∫ₐᵇ[f(x)]²dx is the disc formula for revolution about the x-axis, stacking discs of radius f(x) = x, so π/3 is the cone made by spinning about the x-axis. For the y-axis use washers in y, where at height y the region runs from x = y to x = 1, giving π∫₀¹(1 − y²)dy = 2π/3, or shells in x, 2π∫₀¹x·x dx = 2π/3. The two agree.
 
-A correct answer says the student's integral is the disc formula about the x-axis, and gives either π∫₀¹(1 − y²)dy or 2π∫₀¹x²dx (value 2π/3) for the y-axis.
+The limits are not the problem, so the first option misdiagnoses it; the third names an axis that the integral does not describe; the fourth accepts the wrong answer.

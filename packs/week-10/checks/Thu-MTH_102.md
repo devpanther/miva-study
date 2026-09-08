@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 10.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Find the area between the curve y = x² − 3x and the x-axis from x = 0 to x = 4.
 A. 19/3
@@ -51,13 +51,29 @@ B. 0
 C. |A₁ − A₂|
 D. A₁ − A₂
 
-**9. (show your working)** Find the total area between the curves y = sin x and y = cos x from x = 0 to x = π. Show your working.
+**9.** Find the total area between the curves y = sin x and y = cos x from x = 0 to x = π.
+A. √2 − 1
+B. 1 + √2
+C. 2√2
+D. −2
 
-**10. (show your working)** Find the total area of the region enclosed by the curve y = x³ and the line y = 4x. Show your working.
+**10.** Find the total area of the region enclosed by the curve y = x³ and the line y = 4x.
+A. 4
+B. 0
+C. 16
+D. 8
 
-**11. (show your working)** Find the area of the region enclosed by the curve y = x³ − 6x² + 9x and the x-axis. Show your working.
+**11.** Find the area of the region enclosed by the curve y = x³ − 6x² + 9x and the x-axis.
+A. 189/4
+B. 27/4
+C. 243/4
+D. −27/4
 
-**12. (show your working)** Both y = f(x) and y = g(x) cross the x-axis somewhere inside [a, b], but f(x) ≥ g(x) for every x in [a, b]. Explain whether the integral for the area between the two curves must be split into pieces, and why.
+**12.** Both y = f(x) and y = g(x) cross the x-axis inside [a, b], but f(x) ≥ g(x) throughout [a, b]. Which expression gives the area between the two curves?
+A. ∫ₐᵇ(f(x) − g(x))dx, in one piece
+B. ∫ₐᵇ|f(x)|dx + ∫ₐᵇ|g(x)|dx
+C. The interval split at every root of f and of g, with the pieces added
+D. ∫(f(x) − g(x))dx over only the part of [a, b] where both curves are above the axis
 
 ---
 
@@ -95,18 +111,18 @@ a = 27 stops at a³ = 27 without taking the cube root; a = ∛9 forgets to multi
 
 A₁ + A₂ is the area, not the single integral; 0 happens only in the special case A₁ = A₂ (as for sin x and cos x on [0, π/2]); |A₁ − A₂| is the modulus of the single integral, which still is not the area.
 
-**9.** *Area between sine and cosine across a crossing.* Crossing: sin x = cos x gives tan x = 1, so x = π/4 in [0, π]. On [0, π/4] cos x is on top (at x = 0: 1 > 0); on [π/4, π] sin x is on top (at x = π/2: 1 > 0). A₁ = ∫₀^(π/4)(cos x − sin x)dx = [sin x + cos x]₀^(π/4) = (1/√2 + 1/√2) − (0 + 1) = √2 − 1. A₂ = ∫_(π/4)^π(sin x − cos x)dx = [−cos x − sin x]_(π/4)^π = (1 − 0) − (−1/√2 − 1/√2) = 1 + √2. A = A₁ + A₂ = 2√2.
+**9. C** — *Area between sine and cosine across a crossing.* They cross where tan x = 1, that is x = π/4. On [0, π/4] cosine is on top; on [π/4, π] sine is. A₁ = ∫₀^(π/4)(cos x − sin x)dx = √2 − 1 and A₂ = ∫_(π/4)^π(sin x − cos x)dx = 1 + √2, so the total area is 2√2 square units.
 
-Final answer: 2√2 square units (also accepted: 4/√2, or 2.83 to two decimal places). The working must find the crossing at π/4, split there with the top function first in each piece, and add. A single integral ∫₀^π(cos x − sin x)dx = 2 − 2√2 is negative and is not accepted; √2 − 1 alone is only the first piece.
+√2 − 1 and 1 + √2 are single pieces; −2 is the value of one integral ∫₀^π(cos x − sin x)dx taken straight across the crossing, and a negative number cannot be an area.
 
-**10.** *Area enclosed by a cubic and a line through the origin.* Intersections: x³ = 4x gives x(x² − 4) = 0, so x = −2, 0, 2. The region has two lobes and the curves cross at x = 0, so split there. On [−2, 0] the cubic is on top (at x = −1: −1 > −4); on [0, 2] the line is on top (at x = 1: 4 > 1). A₁ = ∫₋₂⁰(x³ − 4x)dx = [x⁴/4 − 2x²]₋₂⁰ = 0 − (4 − 8) = 4. A₂ = ∫₀²(4x − x³)dx = [2x² − x⁴/4]₀² = 8 − 4 = 4. A = 4 + 4 = 8.
+**10. D** — *Area enclosed by a cubic and a line through the origin.* Intersections: x³ = 4x gives x(x − 2)(x + 2) = 0, so x = −2, 0, 2, and the curves cross at 0, so split there. On [−2, 0] the cubic is on top: ∫₋₂⁰(x³ − 4x)dx = 4. On [0, 2] the line is on top: ∫₀²(4x − x³)dx = 4. Total 8 square units.
 
-Final answer: 8 square units. Using the symmetry of the two lobes, A = 2 × 4 = 8, is also accepted, provided one lobe is integrated correctly. A single integral ∫₋₂²(4x − x³)dx = 0 is wrong because the lobes cancel; 4 alone is one lobe.
+4 is one lobe; 0 comes from a single integral across the crossing, where the two lobes cancel; 16 doubles the total instead of the single lobe.
 
-**11.** *Area between a cubic and the x-axis with a repeated root.* Limits from f(x) = 0: x³ − 6x² + 9x = x(x² − 6x + 9) = x(x − 3)², so the curve meets the axis at x = 0 and x = 3 (a double root, where the curve touches without crossing). The enclosed region is on [0, 3]; test x = 1: 1 − 6 + 9 = 4 > 0, so the curve is above the axis there and no modulus is needed. A = ∫₀³(x³ − 6x² + 9x)dx = [x⁴/4 − 2x³ + 9x²/2]₀³ = 81/4 − 54 + 81/2 = (81 − 216 + 162)/4 = 27/4.
+**11. B** — *Area between a cubic and the x-axis with a repeated root.* Factorise: x³ − 6x² + 9x = x(x − 3)², so the curve meets the axis at x = 0 and at the double root x = 3, where it touches without crossing. Test x = 1: 4 > 0, so the region on [0, 3] is above the axis. A = [x⁴/4 − 2x³ + 9x²/2]₀³ = 81/4 − 54 + 81/2 = 27/4 square units.
 
-Final answer: 27/4 square units (also accepted: 6.75). The working must factorise to find the roots 0 and 3, include a sign check, and evaluate the bracket at both limits. Splitting at x = 3 changes nothing because the curve does not cross there; −27/4 has a sign error in the evaluation.
+189/4 writes ∫9x dx as 9x² without halving; 243/4 drops the −6x² term; −27/4 has a sign error in the evaluation, and an area cannot be negative.
 
-**12.** *When a split is needed for two curves.* No split is needed. The height of a vertical strip between the curves is f(x) − g(x), a difference of y-values, and it stays non-negative on the whole of [a, b] because f is on top throughout. Where either curve crosses the x-axis is irrelevant: the axis is not one of the boundaries of the region. So A = ∫ₐᵇ(f(x) − g(x))dx in one piece. Splitting is required only where the two curves cross each other, that is where f(x) = g(x) inside (a, b), because there the integrand changes sign and the pieces would cancel.
+**12. A** — *When a split is needed for two curves.* The height of a vertical strip between the curves is f(x) − g(x), a difference of y-values, and it stays non-negative across the whole interval because f is on top throughout. Where either curve meets the x-axis is irrelevant, since the axis is not a boundary of this region, so one integral does it. A split is needed only where f(x) = g(x) inside (a, b), because there the integrand changes sign.
 
-A correct answer says one integral of f − g is enough, that the strip height ignores the x-axis, and that the split point for two curves is a solution of f(x) = g(x), not of f(x) = 0 or g(x) = 0.
+The second option measures areas against the axis, not between the curves; the third splits at the wrong points; the fourth throws away part of the region.

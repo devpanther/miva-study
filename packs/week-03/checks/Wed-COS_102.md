@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *Computational approaches to problem solving, treated conceptually.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A test is run at a significance level of 0.05 and the data give a p-value of exactly 0.05. What is the correct decision?
 A. Reject the null hypothesis
@@ -51,13 +51,29 @@ B. A 1% chance of rejecting the null hypothesis when it is true
 C. A 99% chance that the hypothesis is true
 D. A 1% chance that the collected data are wrong
 
-**9. (show your working)** Merge sort is applied to a list of 16 numbers. State how many rounds of splitting are needed before every part holds one number, how many single-number parts there are, how many merge operations happen in total, and how many rounds of merging. Show your working.
+**9.** Merge sort is applied to a list of 16 numbers. How many rounds of splitting are needed before every part holds one number, how many single-number parts result, how many merge operations happen in total, and how many rounds of merging?
+A. 4 rounds of splitting, 16 parts, 16 merges, 4 rounds of merging
+B. 4 rounds of splitting, 16 parts, 15 merges, 4 rounds of merging
+C. 8 rounds of splitting, 16 parts, 15 merges, 8 rounds of merging
+D. 4 rounds of splitting, 16 parts, 8 merges, 4 rounds of merging
 
-**10. (show your working)** Name the computational approach at work in each case and give the test that decides it. (a) A music platform studies millions of song ratings to find which artists are gaining listeners. (b) A manager is shown the city's roads as a graph with coloured routes so she can see why one plan is faster. (c) A program is fed deliberately corrupted files before release to check that it copes. (d) A team assumes two payment methods are equally good, then collects data to see whether that assumption can be rejected.
+**10.** Name the computational approach at work in each case, in order. (a) A music platform studies millions of song ratings to find which artists are gaining listeners. (b) A manager is shown the city's roads as a graph with coloured routes to make clear why one plan is faster. (c) A program is fed deliberately corrupted files before release to check that it copes. (d) A team assumes two payment methods are equally good, then collects data to see whether that assumption can be rejected.
+A. Data mining, visualisation, performance testing, hypothesis testing
+B. Data mining, visualisation, hypothesis testing, performance testing
+C. Hypothesis testing, visualisation, performance testing, data mining
+D. Data mining, simulation, performance testing, hypothesis testing
 
-**11. (show your working)** Coins of value 1, 3 and 4 are available. Using dynamic programming, build a table giving the minimum number of coins for each amount from 0 to 6, where each entry is found from the saved entries for smaller amounts. State the minimum for amount 6 and which coins make it. Show your working.
+**11.** Coins of value 1, 3 and 4 are available. A dynamic programming table stores the least number of coins for each amount from 0 upwards, each entry found from the saved entries for smaller amounts. What is the least number of coins for the amount 6, and which coins make it?
+A. 3 coins: 4 + 1 + 1
+B. 2 coins: 4 + 2
+C. 6 coins: 1 + 1 + 1 + 1 + 1 + 1
+D. 2 coins: 3 + 3
 
-**12. (show your working)** State the two conditions under which divide and conquer is worth applying, and give one example of a task where splitting into halves buys nothing because one of the conditions fails. Explain why it fails.
+**12.** Divide and conquer is worth applying only when two conditions hold. Finding the median of a list by splitting it in half and taking each half's median gains nothing. Which condition fails, and why?
+A. The parts must be simpler than the whole; each half is just as hard to handle as the full list
+B. The parts must be equal in size; two halves of an odd-length list differ by one element
+C. Combining the parts must cost less than solving the whole; two half-medians do not give the whole list's median
+D. The parts must not share elements; the two halves overlap at the middle of the list
 
 ---
 
@@ -95,18 +111,18 @@ Shortest path connects only two chosen nodes, not all thirty; sorting orders a l
 
 Accepting a false null hypothesis is a different error not measured by this level; 99% is not a probability that any hypothesis is true; the level says nothing about errors in the data.
 
-**9.** *Counting splits and merges in divide and conquer.* Each round halves every part: 16 → 8 → 4 → 2 → 1, so 4 rounds of splitting, leaving 16 single-number parts. Merging reverses this: 16 parts merge in pairs to 8 (8 merges), then to 4 (4 merges), then to 2 (2 merges), then to 1 (1 merge): 8 + 4 + 2 + 1 = 15 merges in 4 rounds.
+**9. B** — *Counting splits and merges in divide and conquer.* Each round halves every part: 16 → 8 → 4 → 2 → 1, which is 4 rounds and leaves 16 parts of one number each. Merging reverses that: 16 parts pair into 8 (8 merges), then 4 (4 merges), then 2 (2 merges), then 1 (1 merge), so 8 + 4 + 2 + 1 = 15 merges over 4 rounds.
 
-A correct answer states 4 splitting rounds, 16 parts, 15 merges and 4 merging rounds, with the halving sequence shown. 16 merges (one per element) or 8 merges (only the first round) is wrong.
+16 merges counts one per element; 8 merges counts only the first round of merging; 8 rounds doubles the count by treating each pair of parts as its own round.
 
-**10.** *Matching situations to computational approaches.* (a) Data mining: valuable patterns are extracted from a large data set to inform decisions; the test is a large data set searched for unnoticed relationships. (b) Visualisation: diagrams, graphs and images help a human understand the problem; the test is that the beneficiary is the person, not the computer. (c) Performance testing: the program is checked against test scenarios and success criteria before release, here with erroneous data; the test is evaluation before release. (d) Hypothesis testing: a null hypothesis of no difference is stated and data decide whether to reject it; the test is a null hypothesis with a p-value.
+**10. A** — *Matching situations to computational approaches.* (a) is data mining: valuable patterns pulled from a large data set. (b) is visualisation: diagrams and graphs drawn so that a person understands the problem, the beneficiary being the human rather than the computer. (c) is performance testing: the program checked against test scenarios, here erroneous data, before release. (d) is hypothesis testing: a null hypothesis of no difference stated, with data deciding whether to reject it.
 
-A correct answer names all four and gives a distinguishing test for each. Calling (c) hypothesis testing is wrong because no statement of prediction is tested, only whether the program works.
+Swapping (c) and (d) confuses testing a program with testing a prediction. Putting hypothesis testing first ignores that (a) states no hypothesis. Simulation would mean modelling a system to watch its behaviour, which is not what (b) does.
 
-**11.** *Building a dynamic programming table.* Rule: best(a) = 1 + the smallest of best(a − 1), best(a − 3), best(a − 4) over the coins that fit, with best(0) = 0. best(1) = 1 (1). best(2) = 2 (1 + 1). best(3) = 1 (3). best(4) = 1 (4). best(5) = 1 + min(best(4), best(2), best(1)) = 2 (4 + 1). best(6) = 1 + min(best(5), best(3), best(2)) = 1 + 1 = 2 (3 + 3).
+**11. D** — *Building a dynamic programming table.* With best(0) = 0 and best(a) = 1 + the smallest of best(a − 1), best(a − 3) and best(a − 4), the table for amounts 0 to 6 reads 0, 1, 2, 1, 1, 2, 2. So best(6) = 1 + min(best(5), best(3), best(2)) = 1 + 1 = 2, taken as 3 + 3.
 
-Final table: 0, 1, 2, 1, 1, 2, 2. Minimum for 6 is 2 coins, 3 + 3. A correct answer shows each entry derived from saved smaller entries and reaches 2 coins for amount 6. Giving 3 coins (4 + 1 + 1) is the greedy answer and is wrong.
+4 + 1 + 1 is what a greedy rule gives by grabbing the largest coin first, and it costs 3 coins; 4 + 2 uses a 2 coin that does not exist; six 1 coins ignores the larger coins altogether.
 
-**12.** *Conditions for divide and conquer.* Condition 1: the smaller parts must be genuinely simpler than the whole. Condition 2: combining the solutions of the parts must be less complicated than solving the original problem directly; otherwise the split gains nothing. Example: finding the median of a list by splitting it in half. Each half's median is easy, but the medians of two halves do not combine into the median of the whole: the whole list must effectively be examined again, so the recombination is as hard as the original problem and condition 2 fails.
+**12. C** — *Conditions for divide and conquer.* The two conditions are that the smaller parts are genuinely simpler than the whole, and that combining their solutions costs less than solving the original directly. Each half's median is easy to find, so the first condition holds; but the two medians do not determine the median of the whole list, and recovering it means going back over the data, so the combination step is as costly as the original problem.
 
-A correct answer states both conditions and gives any example where recombining the partial answers costs as much as the original task (finding a median, summing a list that must then be re-read, or similar), with the reason that combination is not cheaper.
+The halves really are simpler, so the first option is false; equal sizes and disjoint parts are not conditions of the method at all, and the halves do not overlap.

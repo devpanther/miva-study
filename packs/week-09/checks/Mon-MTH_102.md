@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 9, exactly as the deck builds it.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Classify ∫₁⁵ 1/(x − 3) dx.
 A. Type I: a limit of integration is infinite
@@ -51,13 +51,29 @@ B. +∞
 C. divergent
 D. −∞
 
-**9. (show your working)** Evaluate ∫₋∞⁰ eˣ dx. Write the integral as a limit first, then evaluate the limit. Show your working.
+**9.** Evaluate ∫₋∞⁰ eˣ dx, writing it as a limit first.
+A. 0
+B. −1
+C. 1
+D. Divergent
 
-**10. (show your working)** Evaluate ∫₀⁴ 1/√(4 − x) dx. Say where the integrand is discontinuous, write the one-sided limit, and evaluate it. Show your working.
+**10.** Evaluate ∫₀⁴ 1/√(4 − x) dx.
+A. 2
+B. −4
+C. Divergent
+D. 4
 
-**11. (show your working)** Use the Comparison Test to decide whether ∫₁^∞ 1/(x² + 1) dx converges or diverges. Show each inequality step, name f and g with 0 ≤ g(x) ≤ f(x), and quote Note 1. Show your working.
+**11.** Apply the Comparison Test to ∫₁^∞ 1/(x² + 1) dx. Which line gives the correct comparison and verdict?
+A. 1/(x² + 1) ≤ 1/x², and ∫₁^∞ 1/x² dx converges with p = 2, so the integral converges
+B. 1/(x² + 1) ≥ 1/x², and ∫₁^∞ 1/x² dx converges with p = 2, so the integral converges
+C. 1/(x² + 1) ≤ 1/x, and ∫₁^∞ 1/x dx diverges with p = 1, so the integral diverges
+D. 1/(x² + 1) ≤ 1/x², so the integral converges and its value is 1
 
-**12. (show your working)** Explain what it means to say ∫ₐ^∞ f(x) dx is convergent, and why writing ∫ₐ^∞ f(x) dx = F(∞) − F(a) is not acceptable working.
+**12.** What does the symbol ∫ₐ^∞ f(x) dx mean, and when is the integral called convergent?
+A. F(∞) − F(a); convergent whenever F(∞) can be worked out
+B. lim(t→∞) ∫ₐᵗ f(x) dx; convergent when that limit is a finite number
+C. lim(t→∞) ∫ₐᵗ f(x) dx; convergent when f(x) → 0 as x → ∞
+D. The area under f beyond x = a; convergent when f is continuous on [a, ∞)
 
 ---
 
@@ -95,18 +111,18 @@ equals 4 claims the comparison integral's value for g, which the test never give
 
 0 cancels +∞ against −∞, which the definition forbids; +∞ and −∞ each look at only one half and ignore the other.
 
-**9.** *Type I integral with a lower limit of −∞.* By definition, ∫₋∞⁰ eˣ dx = lim(t→−∞) ∫ₜ⁰ eˣ dx = lim(t→−∞) [eˣ]ₜ⁰ = lim(t→−∞) (e⁰ − eᵗ) = lim(t→−∞) (1 − eᵗ). As t → −∞, eᵗ → 0, so the limit is 1 − 0 = 1. The limit exists, so the integral converges to 1.
+**9. C** — *Type I integral with a lower limit of −∞.* By definition ∫₋∞⁰ eˣ dx = lim(t→−∞) ∫ₜ⁰ eˣ dx = lim(t→−∞) [eˣ]ₜ⁰ = lim(t→−∞) (1 − eᵗ). As t → −∞, eᵗ → 0, so the limit is 1 and the integral converges to 1.
 
-Final answer: 1 (converges to 1). The working must show the limit line with t → −∞, the antiderivative eˣ, and eᵗ → 0. Writing e⁻^∞ directly without the limit is not acceptable working; getting −1 (subtracting in the wrong order) or claiming divergence because the interval is infinite is wrong.
+−1 subtracts the limits in the wrong order; 0 takes e⁰ as 0; calling it divergent assumes an infinite interval always diverges, when the test is whether the limit is finite.
 
-**10.** *Type II integral with a discontinuity at the upper limit.* 1/√(4 − x) is undefined at x = 4, the upper limit, so ∫₀⁴ (4 − x)^(−1/2) dx = lim(c→4⁻) ∫₀ᶜ (4 − x)^(−1/2) dx. The antiderivative is −2√(4 − x) (check: its derivative is −2·(1/2)(4 − x)^(−1/2)·(−1) = (4 − x)^(−1/2)). So the limit is lim(c→4⁻) [−2√(4 − x)]₀ᶜ = lim(c→4⁻) (−2√(4 − c) + 2√4) = 0 + 4 = 4.
+**10. D** — *Type II integral with a discontinuity at the upper limit.* The integrand blows up at x = 4, the upper limit, so the integral means lim(c→4⁻) ∫₀ᶜ (4 − x)^(−1/2) dx. An antiderivative is −2√(4 − x), so the limit is lim(c→4⁻) (−2√(4 − c) + 2√4) = 0 + 4 = 4. The limit is finite, so the integral converges to 4.
 
-Final answer: 4 (converges to 4). The working must name x = 4 as the discontinuity, use c → 4⁻, state the antiderivative −2√(4 − x), and show √(4 − c) → 0. Using +2√(4 − x) gives −4 and is wrong; claiming divergence because the integrand blows up is wrong, since the limit exists.
+−4 uses +2√(4 − x) and reverses the sign; 2 forgets the factor 2 that comes from the chain rule; divergent assumes an infinite integrand always diverges, which the finite limit disproves.
 
-**11.** *Comparison Test with a simple denominator bound.* For all x ≥ 1, x² + 1 ≥ x², so taking reciprocals of positive quantities reverses the inequality: 1/(x² + 1) ≤ 1/x². Let f(x) = 1/x² and g(x) = 1/(x² + 1); both are continuous and positive on [1, ∞), so 0 ≤ g(x) ≤ f(x). ∫₁^∞ 1/x² dx has p = 2 > 1, so by Note 1 it converges (its value is 1). By clause 1 of the Comparison Test, the larger function convergent forces the smaller one convergent, so ∫₁^∞ 1/(x² + 1) dx converges.
+**11. A** — *Comparison Test with a simple denominator bound.* For x ≥ 1, x² + 1 ≥ x², and taking reciprocals of positive quantities reverses the inequality, so 0 ≤ 1/(x² + 1) ≤ 1/x². The larger integral ∫₁^∞ 1/x² dx has p = 2 > 1 and converges by the p-test, so the smaller one converges too.
 
-Final answer: converges. A correct answer shows x² + 1 ≥ x², reverses to 1/(x² + 1) ≤ 1/x², names f = 1/x² and g = 1/(x² + 1), quotes p = 2 > 1, and concludes convergence. It may add that the value is at most 1, but must not claim the value is 1.
+The second option forgets that reciprocals flip the inequality; the third compares upwards to a divergent integral, which settles nothing about the smaller function; the fourth confuses a bound with a value, since the true value is π/4, not 1.
 
-**12.** *Definition of convergence of a Type I integral.* The symbol ∫ₐ^∞ f(x) dx is defined as lim(t→∞) ∫ₐᵗ f(x) dx: replace the infinite limit by a letter t, evaluate the ordinary definite integral F(t) − F(a), then let t → ∞. The integral is convergent if that limit exists as a finite number, and divergent if it does not. F(∞) is not acceptable because ∞ is not a number that can be substituted into a function; the only meaning available is the limit of F(t) as t grows, and that limit must be shown to exist.
+**12. B** — *Definition of convergence of a Type I integral.* The infinite limit is replaced by a letter: ∫ₐ^∞ f(x) dx is defined as lim(t→∞) ∫ₐᵗ f(x) dx. Evaluate the ordinary definite integral F(t) − F(a), then let t → ∞. The integral is convergent when that limit exists as a finite number and divergent when it does not.
 
-A correct answer states the limit definition with t → ∞, says convergent means the limit exists (finite) and divergent means it does not, and explains that ∞ cannot be substituted, so the limit line must be written.
+F(∞) is not a substitution, since ∞ is not a number, which is why the limit line must be written. f(x) → 0 is not enough, as ∫₁^∞ 1/x dx shows. Continuity guarantees the truncated integrals exist but says nothing about the limit.

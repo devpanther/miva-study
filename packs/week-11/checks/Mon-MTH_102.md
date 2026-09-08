@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 11 volumes of solids of revolution, as the deck builds them.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** The region under y = 3x, above the x-axis, from x = 0 to x = 2 is revolved about the x-axis. Use the disc method to find the volume.
 A. 6π
@@ -51,13 +51,29 @@ B. dy, with the curves written as x = f(y)
 C. dy, with the curves written as y = f(x)
 D. dx, with the curves written as x = f(y)
 
-**9. (show your working)** The region under y = √x, above the x-axis, from x = 1 to x = 3 is revolved about the x-axis. Find the volume. Show your working.
+**9.** The region under y = √x, above the x-axis, from x = 1 to x = 3 is revolved about the x-axis. Find the volume.
+A. 9π/2
+B. 8π
+C. (2/3)(3√3 − 1)π
+D. 4π
 
-**10. (show your working)** The region bounded by x = y², the line x = 1 and the x-axis (with y ≥ 0) is revolved about the y-axis. Find the volume. Show your working.
+**10.** The region bounded by x = y², the line x = 1 and the x-axis (with y ≥ 0) is revolved about the y-axis. Find the volume.
+A. 4π/5
+B. 8π/15
+C. 2π/3
+D. π/5
 
-**11. (show your working)** The region under y = x³, above the x-axis, from x = 0 to x = 1 is revolved about the y-axis. Use the shell method to find the volume. Show your working.
+**11.** The region under y = x³, above the x-axis, from x = 0 to x = 1 is revolved about the y-axis. Use the shell method to find the volume.
+A. π/5
+B. 2π/5
+C. π/2
+D. π/4
 
-**12. (show your working)** In the washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx and the shell formula V = 2π∫ₐᵇ x f(x)dx, state what each of R(x), r(x), x and f(x) measures, and explain why one formula carries π and the other 2π.
+**12.** The washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx carries π and the shell formula V = 2π∫ₐᵇ x·f(x)dx carries 2π. Where do those two factors come from?
+A. π from a half turn of the region, 2π from a full turn
+B. π because a washer squares its radii, 2π because a shell does not
+C. π from the area of a circular cross-section, 2π from the circumference of the unrolled shell
+D. π from the area of a circle, 2π because a shell has an inner and an outer surface
 
 ---
 
@@ -95,18 +111,18 @@ R = x, r = 0 ignores the shift entirely; R = x − 2 shifts in the wrong directi
 
 dx with y = f(x) is the set-up for the x-axis; the other two mix a variable of integration with curves written in the wrong form, so the radius would not be a function of the integration variable.
 
-**9.** *Disc method with a square-root radius.* The axis is the x-axis, so R(x) = √x with a = 1, b = 3. Squaring removes the root: [√x]² = x. V = π∫₁³(√x)²dx = π∫₁³x dx = π[x²/2]₁³ = π(9/2 − 1/2) = 4π.
+**9. D** — *Disc method with a square-root radius.* The axis is the x-axis, so R(x) = √x and V = π∫₁³(√x)²dx. Squaring removes the root: V = π∫₁³x dx = π[x²/2]₁³ = π(9/2 − 1/2) = 4π cubic units.
 
-Final answer: 4π cubic units (also accepted: 12.57). The working must show the radius squared to x and the bracket evaluated at both limits. Integrating √x without squaring gives (2/3)(3√3 − 1)π and is wrong; π(9/2) = 9π/2 forgets the lower limit.
+9π/2 evaluates at the upper limit only; 8π uses [x²] without dividing by 2; (2/3)(3√3 − 1)π integrates √x without squaring the radius first.
 
-**10.** *Washer method in y about the y-axis.* The axis is the y-axis, so integrate in y. At height y the region runs from the parabola x = y² out to the line x = 1, so the far boundary gives R(y) = 1 (constant) and the near boundary gives r(y) = y². The curves meet where y² = 1, so y runs from 0 to 1. V = π∫₀¹[1² − (y²)²]dy = π∫₀¹(1 − y⁴)dy = π[y − y⁵/5]₀¹ = π(1 − 1/5) = 4π/5.
+**10. A** — *Washer method in y about the y-axis.* Revolving about the y-axis means integrating in y. At height y the region runs from the parabola x = y² out to the line x = 1, so R(y) = 1 and r(y) = y², and y runs from 0 to 1. V = π∫₀¹[1² − (y²)²]dy = π[y − y⁵/5]₀¹ = 4π/5 cubic units.
 
-Final answer: 4π/5 cubic units (also accepted: 0.8π or 2.51). A correct answer identifies R = 1, r = y², limits 0 to 1, and subtracts the squares. π∫(1 − y²)²dy = 8π/15 uses (R − r)² and is wrong; π∫₀¹(1 − y²)dy = 2π/3 forgets to square r.
+8π/15 squares the difference, π∫(1 − y²)²dy, instead of subtracting squares; 2π/3 forgets to square the inner radius; π/5 keeps the inner radius only.
 
-**11.** *Shell method for a region under a curve.* A vertical strip at position x has radius x (its distance from the y-axis) and height f(x) = x³. V = 2π∫₀¹x·x³dx = 2π∫₀¹x⁴dx = 2π[x⁵/5]₀¹ = 2π/5.
+**11. B** — *Shell method for a region under a curve.* A vertical strip at position x has radius x, its distance from the y-axis, and height f(x) = x³. So V = 2π∫₀¹x·x³dx = 2π∫₀¹x⁴dx = 2π[x⁵/5]₀¹ = 2π/5 cubic units.
 
-Final answer: 2π/5 cubic units (also accepted: 0.4π or 1.26). The working must show the integrand x·f(x) = x⁴, the coefficient 2π and the evaluation at 1. π/5 uses π instead of 2π; 2π∫₀¹x³dx = π/2 forgets the radius x; 2π∫₀¹x·x⁶dx squares the height, which the shell formula never does.
+π/5 uses π instead of 2π; π/2 leaves out the radius factor x; π/4 squares the height, which the shell formula never does.
 
-**12.** *Meaning of the radii and heights in the volume formulas.* R(x) is the outer radius: the distance from the axis of revolution to the boundary farther from it. r(x) is the inner radius: the distance from the axis to the nearer boundary. In the shell formula x is the radius of the shell, its distance from the axis of revolution, and f(x) is the height of the vertical strip that sweeps out the shell. The π in the washer formula comes from the area of a circular cross-section, πR² − πr² for an annulus, which is then integrated along the axis. The 2π in the shell formula comes from unrolling the cylindrical shell into a rectangle of length 2π × radius (the circumference) and height f(x), so the integrand is circumference × height with no square anywhere.
+**12. C** — *Where π and 2π come from in the volume formulas.* A washer is a flat annular slice, and its area is πR² − πr², so the π is the π of the area of a circle and the slices are stacked along the axis. A shell is a thin cylinder that unrolls into a rectangle whose length is the circumference 2π times the radius x and whose height is f(x), so the integrand is circumference times height and no square appears.
 
-A correct answer names outer radius, inner radius, shell radius and strip height, and links π to the area of a circle and 2π to the circumference.
+Both solids are made by one full revolution, so the first option is false; the second describes the squares but not their source; the fourth invents a second surface that the formula never counts.

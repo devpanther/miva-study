@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 8 integration techniques.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Evaluate ∫₀² x·eˣ dx.
 A. e² − 1
@@ -51,13 +51,29 @@ B. u = x, dv = sin(x) dx
 C. u = x·sin(x), dv = dx
 D. u = 1, dv = x·sin(x) dx
 
-**9. (show your working)** Find ∫√(9 − 4x²) dx. Normalise the root to 3√(1 − (2x/3)²), substitute 2x/3 = sin(u), integrate cos²(u), and set back to x. Show your working.
+**9.** Find ∫√(9 − 4x²) dx by normalising the root to 3√(1 − (2x/3)²) and substituting 2x/3 = sin(u).
+A. (9/2)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C
+B. (9/4)sin⁻¹(3x/2) + (x/2)√(9 − 4x²) + C
+C. (9/4)sin⁻¹(2x/3) − (x/2)√(9 − 4x²) + C
+D. (9/4)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C
 
-**10. (show your working)** Evaluate ∫₁ᵉ ln(x) dx. Show your working.
+**10.** Evaluate ∫₁ᵉ ln(x) dx.
+A. e − 1
+B. 0
+C. 1
+D. −1
 
-**11. (show your working)** Find ∫x·e^(−x²) dx by substitution. State u, du, and how the factor x dx is replaced. Show your working.
+**11.** Find ∫x·e^(−x²) dx by substitution.
+A. (x²/2)e^(−x²) + C
+B. −(1/2)e^(−x²) + C
+C. (1/2)e^(−x²) + C
+D. −2e^(−x²) + C
 
-**12. (show your working)** Explain why ∫x·eˣ dx cannot be done by substitution and needs integration by parts, and state the parts formula you would use.
+**12.** The substitution u = x² works for ∫2x·e^(x²) dx but no substitution works for ∫x·eˣ dx. What is the reason?
+A. In x·eˣ the factor x is not the derivative of the exponent x, so no u collapses the integral
+B. eˣ has no elementary antiderivative, while e^(x²) does
+C. Only powers of x may be substituted, and x² is a power while x is not
+D. A product of two functions can never be integrated by substitution
 
 ---
 
@@ -95,18 +111,18 @@ ln(3/4) is the upper limit alone, forgetting to subtract the lower; ln(8/9) subt
 
 u = sin(x), dv = x dx gives v = x²/2 and the leftover ∫(x²/2)cos(x) dx, where the power of x has gone up; u = x·sin(x), dv = dx leaves ∫x·(sin(x) + x·cos(x)) dx, worse than the start; u = 1, dv = x·sin(x) dx requires integrating the original problem to find v.
 
-**9.** *Trigonometric substitution with a normalised root.* √(9 − 4x²) = 3√(1 − (2x/3)²). Let 2x/3 = sin(u), so dx = (3/2)cos(u) du and the root becomes 3cos(u). The integral is 3·(3/2)∫cos²(u) du = (9/2)(u/2 + sin(2u)/4) + C = 9u/4 + (9/8)sin(2u) + C. Set back: u = sin⁻¹(2x/3), and sin(2u) = 2sin(u)cos(u) = 2·(2x/3)·(√(9 − 4x²)/3) = 4x√(9 − 4x²)/9, so (9/8)sin(2u) = x√(9 − 4x²)/2.
+**9. D** — *Trigonometric substitution with a normalised root.* With 2x/3 = sin(u), dx = (3/2)cos(u) du and the root becomes 3cos(u), so the integral is (9/2)∫cos²(u) du = (9/2)(u/2 + sin(2u)/4) + C. Set back with u = sin⁻¹(2x/3) and sin(2u) = 2 sin(u) cos(u) = 4x√(9 − 4x²)/9, giving (9/4)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C.
 
-Final answer: (9/4)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C. Also accepted: 9sin⁻¹(2x/3)/4 + x√(9 − 4x²)/2 + C, or the unsimplified 9u/4 + (9/8)sin(2u) + C with u = sin⁻¹(2x/3) stated. The working must show dx = (3/2)cos(u) du, the factor 9/2, and the double-angle identity. Using dx = (2/3)cos(u) du gives the wrong factor 2 and is wrong.
+9/2 uses dx = 3cos(u) du and doubles the first term; sin⁻¹(3x/2) inverts the ratio inside the arcsine; the minus sign comes from mishandling the double-angle term.
 
-**10.** *Definite integral of a logarithm.* From the table (or parts with u = ln(x), dv = dx), ∫ln(x) dx = x·ln(x) − x. Evaluate: at x = e, e·ln(e) − e = e − e = 0; at x = 1, 1·ln(1) − 1 = 0 − 1 = −1. So ∫₁ᵉ ln(x) dx = 0 − (−1) = 1.
+**10. C** — *Definite integral of a logarithm.* An antiderivative is x·ln(x) − x. At x = e: e·ln(e) − e = e − e = 0. At x = 1: 1·ln(1) − 1 = 0 − 1 = −1. So the integral is 0 − (−1) = 1.
 
-Final answer: 1. The working must state the antiderivative x·ln(x) − x, use ln(e) = 1 and ln(1) = 0, and subtract the lower-limit value −1. Getting −1 (forgetting to subtract) or e − 1 (using only x·ln(x)) is wrong.
+e − 1 uses only x·ln(x) and drops the −x; 0 comes from taking ln(1) = 1 at the lower limit; −1 forgets to subtract the lower value and reports it instead.
 
-**11.** *Substitution when du needs a constant adjusted.* Let u = −x², so du = −2x dx and x dx = −du/2. Then ∫x·e^(−x²) dx = ∫eᵘ·(−1/2) du = −(1/2)eᵘ + C = −(1/2)e^(−x²) + C. Check: d/dx [−(1/2)e^(−x²)] = −(1/2)·e^(−x²)·(−2x) = x·e^(−x²).
+**11. B** — *Substitution when du needs a constant adjusted.* Let u = −x², so du = −2x dx and the factor x dx is replaced by −du/2. Then the integral is −(1/2)∫eᵘ du = −(1/2)e^(−x²) + C. Check: d/dx [−(1/2)e^(−x²)] = −(1/2)e^(−x²)(−2x) = x·e^(−x²).
 
-Final answer: −(1/2)e^(−x²) + C. Also accepted: −e^(−x²)/2 + C, or the same result reached with u = x² (du = 2x dx, giving −(1/2)e^(−u)). The working must name u, show du and the factor −1/2, and set back to x. Leaving the answer in u, or writing e^(−x²) + C without the −1/2, is wrong.
+(1/2)e^(−x²) + C loses the minus sign from du; −2e^(−x²) + C multiplies by −2 instead of dividing; (x²/2)e^(−x²) + C integrates the x factor on its own, which the product forbids.
 
-**12.** *Recognising when substitution fails and parts is needed.* Substitution needs an inner function whose derivative is present as a factor: ∫f′(g(x))·g′(x) dx = f(g(x)) + C. In x·eˣ the only inner function is x itself, whose derivative is 1, and the factor x is not the derivative of anything inside the exponential, so no u makes the integral collapse to ∫f′(u) du. The integrand is a product of two unrelated factors, which is the signal for parts: ∫u dv = uv − ∫v du, with u = x and dv = eˣ dx, giving x·eˣ − eˣ + C.
+**12. A** — *Recognising when substitution fails and parts is needed.* Substitution undoes the chain rule: it needs ∫f′(g(x))·g′(x) dx, so the derivative of the inner function must already sit there as a factor. In 2x·e^(x²) the exponent is x² and its derivative 2x is present. In x·eˣ the exponent is x, whose derivative is 1, and the spare x is not the derivative of anything inside, so parts is required: ∫u dv = uv − ∫v du with u = x and dv = eˣ dx gives x·eˣ − eˣ + C.
 
-A correct answer says the derivative of the inner function is not present, states ∫u dv = uv − ∫v du, and chooses u = x, dv = eˣ dx. Contrast with 2x·e^(x²), where 2x is the derivative of the exponent and substitution works.
+eˣ integrates to itself, so the second option is false; the third invents a rule about powers; the fourth is contradicted by 2x·e^(x²) itself.

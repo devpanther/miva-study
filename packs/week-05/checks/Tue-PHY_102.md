@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Week 5, exactly as Dr Adeniji builds it.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Resistors of 3.0 Ω, 6.0 Ω and 12 Ω are connected in parallel. What is the equivalent resistance?
 A. 21 Ω
@@ -51,13 +51,29 @@ B. No current flows
 C. 0.30 A anticlockwise
 D. Unknown until the equation is set up again
 
-**9. (show your working)** Two resistors in parallel have an equivalent resistance of 2.4 Ω. One of them is 4.0 Ω. Calculate the other, then the equivalent resistance when the same two resistors are put in series. Show your working.
+**9.** Two resistors in parallel have an equivalent resistance of 2.4 Ω, and one of them is 4.0 Ω. What is the other resistor, and what is their equivalent resistance in series?
+A. 6.0 Ω; 10 Ω in series
+B. 1.6 Ω; 5.6 Ω in series
+C. 0.17 Ω; 4.2 Ω in series
+D. 9.6 Ω; 13.6 Ω in series
 
-**10. (show your working)** A single loop contains a 9.0 V battery of internal resistance 0.50 Ω and two resistors of 2.5 Ω and 1.5 Ω. Assume a current I and write the loop equation using the sign rules, then calculate I, the p.d. across each resistor and the terminal p.d. of the battery. Show your working.
+**10.** A single loop contains a 9.0 V battery of internal resistance 0.50 Ω and resistors of 2.5 Ω and 1.5 Ω. What are the current in the loop and the terminal potential difference of the battery?
+A. 2.25 A; 9.0 V
+B. 2.0 A; 8.0 V
+C. 2.0 A; 9.0 V
+D. 2.25 A; 7.9 V
 
-**11. (show your working)** A 5.0 Ω resistor is in series with a parallel pair of 12 Ω and 4.0 Ω, all across a 16 V battery of negligible internal resistance. Calculate the equivalent resistance, the battery current, the p.d. across the parallel pair and the current in each of the two branches. Show your working.
+**11.** A 5.0 Ω resistor is in series with a parallel pair of 12 Ω and 4.0 Ω, all across a 16 V battery of negligible internal resistance. What is the battery current, and the current in each branch of the pair?
+A. 0.76 A; 0.19 A in the 12 Ω and 0.57 A in the 4.0 Ω
+B. 2.0 A; 1.5 A in the 12 Ω and 0.50 A in the 4.0 Ω
+C. 2.0 A; 0.50 A in the 12 Ω and 1.5 A in the 4.0 Ω
+D. 2.0 A; 1.33 A in the 12 Ω and 4.0 A in the 4.0 Ω
 
-**12. (show your working)** State Kirchhoff's junction rule and loop rule, name the conservation law that each rests on, and explain why a point where only two wires meet needs no junction equation.
+**12.** Which statement correctly pairs Kirchhoff's two circuit rules with the conservation law each one rests on?
+A. Junction rule from conservation of energy; loop rule from conservation of charge
+B. Both rules follow from conservation of charge, one at a point and one round a loop
+C. Junction rule from conservation of momentum; loop rule from conservation of energy
+D. Junction rule, ΣI = 0 at a point, from conservation of charge; loop rule, ΣV = 0 round a loop, from conservation of energy
 
 ---
 
@@ -95,18 +111,18 @@ D. Unknown until the equation is set up again
 
 0.30 A clockwise ignores the sign; no current would need I = 0; re-solving is unnecessary because the equations are already satisfied.
 
-**9.** *Finding an unknown resistor from a parallel equivalent.* 1/R_eq = 1/R₁ + 1/R₂, so 1/R₂ = 1/2.4 − 1/4.0 = 0.4167 − 0.25 = 0.1667 Ω⁻¹, giving R₂ = 6.0 Ω. Check: 4.0 × 6.0/(4.0 + 6.0) = 2.4 Ω. In series: R = 4.0 + 6.0 = 10 Ω.
+**9. A** — *Finding an unknown resistor from a parallel equivalent.* From 1/R_eq = 1/R₁ + 1/R₂, 1/R₂ = 1/2.4 − 1/4.0 = 0.4167 − 0.25 = 0.1667 Ω⁻¹, so R₂ = 6.0 Ω. Check: 4.0 × 6.0/10 = 2.4 Ω. In series the same two give 4.0 + 6.0 = 10 Ω.
 
-A correct answer states R₂ = 6.0 Ω and the series value 10 Ω. Leaving 0.1667 un-inverted (0.17 Ω) or subtracting resistances directly (2.4 − 4.0) is wrong.
+1.6 Ω subtracts the resistances directly; 0.17 Ω quotes 1/R₂ without inverting it; 9.6 Ω multiplies 2.4 by 4.0.
 
-**10.** *Loop equation for a single-battery loop.* Travelling with the current, the battery is crossed − to + (+9.0 V) and each resistance is crossed with the current (−IR): 9.0 − 0.50I − 2.5I − 1.5I = 0, so 9.0 = 4.5I and I = 2.0 A. Across 2.5 Ω: 5.0 V; across 1.5 Ω: 3.0 V. Terminal p.d. = 9.0 − (2.0)(0.50) = 8.0 V, which equals 5.0 + 3.0 V.
+**10. B** — *Loop equation for a single-battery loop.* Travelling with the current, the battery is crossed − to + and each resistance gives −IR: 9.0 − 0.50I − 2.5I − 1.5I = 0, so 9.0 = 4.5I and I = 2.0 A. The terminal p.d. is ε − Ir = 9.0 − 1.0 = 8.0 V, matching the 5.0 V and 3.0 V across the two external resistors.
 
-A correct answer shows the signed loop equation, I = 2.0 A, 5.0 V, 3.0 V and 8.0 V. Forgetting the internal resistance (I = 2.25 A) is wrong.
+2.25 A leaves the internal resistance out of the total; 9.0 V quotes the emf as the terminal p.d., which only holds at zero current; the last option mixes both slips.
 
-**11.** *Series-parallel circuit reduction.* Parallel pair: 1/R = 1/12 + 1/4.0 = 4/12, so R = 3.0 Ω. R_eq = 5.0 + 3.0 = 8.0 Ω. Battery current I = 16/8.0 = 2.0 A, the same current through the 5.0 Ω. P.d. across the pair = I × 3.0 = 6.0 V (check: 16 − 2.0 × 5.0 = 6.0 V). Branches: 6.0/12 = 0.50 A and 6.0/4.0 = 1.5 A, which add to 2.0 A.
+**11. C** — *Series-parallel circuit reduction.* The pair reduces to 1/R = 1/12 + 1/4.0 = 4/12, so R = 3.0 Ω and R_eq = 5.0 + 3.0 = 8.0 Ω. The battery therefore drives I = 16/8.0 = 2.0 A, which drops 10 V across the 5.0 Ω and leaves 6.0 V across the pair, giving 6.0/12 = 0.50 A and 6.0/4.0 = 1.5 A, and those add back to 2.0 A.
 
-A correct answer states R_eq = 8.0 Ω, I = 2.0 A, V = 6.0 V, and branch currents 0.50 A and 1.5 A. Adding all three resistors in series (21 Ω) is wrong.
+0.76 A puts all three resistors in series; the swapped pair gives the larger current to the larger resistor; 1.33 A and 4.0 A put the full 16 V across each branch.
 
-**12.** *Physical basis of Kirchhoff's rules.* Junction rule: the algebraic sum of the currents into any junction is zero, ΣI = 0, so current in equals current out. It rests on conservation of charge: charge cannot pile up at or vanish from a junction. Loop rule: the sum of the potential changes (emfs and IR terms) round any closed loop is zero, ΣV = 0. It rests on conservation of energy: a charge carried once round a loop returns to the same potential, so the net energy gained is zero. Where only two wires meet the current has no alternative path, so it simply continues and nothing divides; the equation would read I = I.
+**12. D** — *Physical basis of Kirchhoff's rules.* The junction rule says the currents into any junction sum to zero, which is conservation of charge: charge cannot pile up at or vanish from a point. The loop rule says the potential changes round any closed loop sum to zero, which is conservation of energy: a charge carried once round returns to the same potential, so it gains nothing overall.
 
-A correct answer states both rules, names charge for the junction rule and energy for the loop rule, and says the two-wire point has no split of current.
+The first option swaps the two laws; the second gives both rules to charge and leaves energy out; momentum plays no part in either rule.

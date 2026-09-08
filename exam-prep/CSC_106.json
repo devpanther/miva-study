@@ -1,1 +1,1307 @@
-{"course":"CSC_106","title":"CSC_106 — End of Semester Objective Exam","guideTitle":"CSC_106 — Introduction to Web Technologies","questions":[{"q":"According to the Week 1 material, the World Wide Web was introduced by:","options":["Vinton Cerf in 1974","Sir Tim Berners-Lee in 1989","Sir Tim Berners-Lee in 1991","Robert Kahn in 1969"],"answerIndex":1,"why":"— **[no deck]** (Week 1's deck is \"Introduction to Web Development\"; the history is Summary-only) Why B is right: the Week 1 Summary states \"In 1989, Sir Tim Berners-Lee introduced the World Wide Web\". Why the others are wrong: A names a co-author of TCP/IP and the year of the TCP specification — Internet infrastructure, not the Web · C is the year most outside sources give for the first public web page, and it is the trap for anyone answering from general knowledge instead of the course · D pairs the other TCP/IP co-author with ARPANET's first message, conflating the Internet's origin with the Web's."},{"q":"The course describes ARPANET as a network that was:","options":["built by CERN specifically to host the first web pages","commercial from the outset and later opened to universities","initially developed for military purposes and later expanded to academic use","designed for academic research and later taken over by the military"],"answerIndex":2,"why":"— **[no deck]** Why C is right: the Summary's exact words are \"The ARPANET, initially developed for military purposes, expanded to academic use.\" Why the others are wrong: A credits CERN, which is where Berners-Lee worked on the Web twenty years later, not where ARPANET began · B invents a commercial origin · D reverses the stated order, the single most common slip on this bullet."},{"q":"Which statement matches the distinction the Week 1 summary states twice?","options":["The Internet is the infrastructure and the World Wide Web is an application built upon it","The World Wide Web is the infrastructure and the Internet is the traffic carried over it","The Internet and the World Wide Web are interchangeable names for the same system","The Internet is the set of hyperlinked documents; the Web is the cabling that carries them"],"answerIndex":0,"why":"— **[no deck]** Why A is right: the Summary says it twice — \"distinguish between the Internet as an infrastructure and the World Wide Web as an application\". Why the others are wrong: B inverts infrastructure and application · C is the error the sheet explicitly names as the thing to avoid · D swaps the definitions, treating documents as the network and cabling as the Web."},{"q":"The deck states the browser–server interaction as a four-step sequence. Which order is correct?","options":["URL entered → server processes the request → browser sends an HTTP request → browser renders","Browser sends an HTTP request → URL entered → server sends a response → browser renders","URL entered → browser renders the page → browser sends an HTTP request → server responds","URL entered → browser sends an HTTP request → server processes and responds → browser renders"],"answerIndex":3,"why":"Why D is right: the deck's four steps are user enters a URL or clicks a link → browser sends an HTTP request → server processes it and returns an HTTP response → browser renders the content. Why the others are wrong: A has the server processing before a request has been sent · B starts with a request that no user action triggered · C renders before any content has arrived, the classic misreading of \"the browser displays the page then fetches it\"."},{"q":"The deck names three key components of web browsers and servers. They are:","options":["URL, DNS and TCP/IP","URL, HTTP and HTML/CSS/JavaScript","HTTP, FTP and SMTP","HTML, CSS and PHP"],"answerIndex":1,"why":"Why B is right: the deck's \"Key Components of Web Browsers and Servers\" slide names exactly three — Uniform Resource Locator, Hypertext Transfer Protocol, and HTML/CSS/JavaScript. Why the others are wrong: A substitutes DNS and TCP/IP, which are real infrastructure but are not on that slide · C lists three transfer protocols from Week 2, a different lesson · D swaps in PHP, a Week 9 server-side language, for JavaScript."},{"q":"In the deck's four-way taxonomy of servers, Node.js is given as an example of a:","options":["application server","web server","database server","proxy server"],"answerIndex":0,"why":"Why A is right: the four server types are web, database, application and proxy; Node.js is the only example the deck gives for **application server**. Why the others are wrong: B is where a working developer files Node.js, since it serves HTTP — but the deck's web-server examples are Apache, Nginx and IIS · C is where MySQL, PostgreSQL and MongoDB sit · D has no named example at all in the deck."},{"q":"In the Week 1 classification of development tools, Visual Studio Code is listed as:","options":["an integrated development environment, alongside WebStorm and Eclipse","a browser developer tool for inspecting and debugging pages","a text editor, alongside Sublime Text and Atom","a version control system, alongside Git and GitLab"],"answerIndex":2,"why":"Why C is right: the deck puts Visual Studio Code under **text editors** with Sublime Text and Atom, and Microsoft Visual Studio (a different product) under IDEs. Why the others are wrong: A is correct by any working definition and wrong for this exam — the confusion between Visual Studio Code and Visual Studio is exactly what the question tests · B and D name the other two tool categories, browser developer tools and version control systems."},{"q":"The deck states three advantages of client–server architecture. They are:","options":["scalability, low latency and cross-browser compatibility","centralised data management, fault tolerance and statelessness","separation of concerns, encryption and load balancing","scalability, centralised data management and separation of concerns"],"answerIndex":3,"why":"Why D is right: the deck names three advantages and only three — scalability, centralised data management, separation of concerns. Why the others are wrong: A imports low latency from the WebSocket slide and cross-browser compatibility from jQuery · B adds fault tolerance (a Week 11 load-balancing benefit) and statelessness (a REST constraint) · C adds encryption and load balancing, which are server functions rather than advantages of the architecture. --- ### Week 2 — Protocols, markup languages, email, DNS"},{"q":"The default port numbers for HTTP and HTTPS are:","options":["80 and 443","80 and 8080","8080 and 443","443 and 80"],"answerIndex":0,"why":"— **[no deck]** (no slide in the semester gives a port number) Why A is right: HTTP is port 80, HTTPS is port 443. Why the others are wrong: B gives 8080, the conventional *alternate* HTTP port used by development servers, not the default · C compounds that error · D reverses the pair, which is the answer of someone who has memorised the numbers but not which is which."},{"q":"HTTPS is best described as:","options":["a protocol unrelated to HTTP that replaces it entirely","HTTP carried inside an SSL/TLS encrypted channel","HTTP with form data moved from the URL into the request body","HTTP running over UDP rather than over TCP"],"answerIndex":1,"why":"— **[no deck]** (the Week 2 Summary gives four bullets; \"SSL/TLS encryption\" comes from the Week 11 Summary) Why B is right: HTTPS is HTTP carried inside a TLS tunnel — the same protocol, encrypted. Why the others are wrong: A treats HTTPS as a separate protocol, the commonest conceptual error · C describes the difference between GET and POST, not between HTTP and HTTPS · D describes HTTP/3 over QUIC, which is a real thing but not what HTTPS means."},{"q":"A logged-in user requests a page their account is not permitted to see. The server identifies them successfully but refuses to serve it. Which status code is correct?","options":["400 Bad Request","401 Unauthorized","403 Forbidden","404 Not Found"],"answerIndex":2,"why":"— **[no deck]** Why C is right: 403 Forbidden is the server saying \"I know who you are and you still may not have this.\" Why the others are wrong: A is for a malformed request the server cannot parse · B is the adjacent code and the trap: despite being spelled \"Unauthorized\", 401 means *unauthenticated* — no or bad credentials · D would deny the resource exists, which is sometimes used deliberately but is not what the question describes."},{"q":"Consider the following request.\n```http\nGET /chat HTTP/1.1\nHost: example.com\nUpgrade: websocket\nConnection: Upgrade\nSec-WebSocket-Key: dGhlIHNhbXBsZSBub25jZQ==\nSec-WebSocket-Version: 13\n```\nWhich status line does the server return when it accepts this?","options":["HTTP/1.1 101 Switching Protocols","HTTP/1.1 200 OK","HTTP/1.1 201 Created","HTTP/1.1 301 Moved Permanently"],"answerIndex":0,"why":"— **[no deck]** (WebSocket is in the deck; the handshake and its status code are not) Why A is right: the server completes a WebSocket upgrade with 101 Switching Protocols, after which the connection is no longer HTTP. Why the others are wrong: B would mean the server treated it as an ordinary GET and returned a body, i.e. the upgrade failed · C is for resource creation after a POST · D is a redirect and would abandon the handshake entirely."},{"q":"Consider the following session transcript.\n```\n220 ftp.example.com FTP server ready\nUSER ade\n331 Password required for ade\nPASS secret123\n230 User ade logged in\nPASV\n227 Entering Passive Mode (192,0,2,1,195,80)\nRETR report.pdf\n226 Transfer complete\n```\nWhat does this exchange demonstrate about the security weakness the course attributes to FTP?","options":["Passive mode lets the server open the data connection back to the client","The RETR command transfers the file without any integrity check","Port 21 is being used for data rather than for control commands","The user's password crosses the network in plaintext"],"answerIndex":3,"why":"— **[no deck]** (FTP has no lecture slides anywhere; the Week 2 Summary gives three bullets) Why D is right: `PASS secret123` travels in the clear. The course's phrase is that FTP \"lacks encryption, making data vulnerable\" — and it is the *credentials*, not only the file, that are exposed. Why the others are wrong: A describes active mode, not passive; this transcript shows PASV, where the client opens both connections · B is true but is not what the course means by vulnerable · C misreads the ports — 21 is the control channel, which is what this transcript shows, and the 227 reply is handing out a separate data port."},{"q":"Which statement about SFTP is accurate?","options":["It is FTP with a TLS layer added, on port 21 or port 990","It runs over SSH on port 22 as a single encrypted connection","It uses two encrypted connections, on ports 20 and 21","It is a secure form of HTTP designed for large file transfers"],"answerIndex":1,"why":"— **[no deck]** Why B is right: SFTP is the SSH File Transfer Protocol, a subsystem of SSH on port 22, one encrypted connection. Why the others are wrong: A describes **FTPS**, the protocol students most often confuse with SFTP — FTPS really is FTP with TLS bolted on · C keeps FTP's two-connection design, which SFTP does not share · D confuses it with HTTPS. Note the course calls SFTP \"a secure extension of FTP\"; write that phrase in a written paper, but know it shares no code, commands or port with FTP."},{"q":"Which pairing of markup language and primary use matches the deck?","options":["SVG — representing mathematical notation and equations","XML — describing two-dimensional vector graphics","MathML — storing and exchanging structured data","XHTML — HTML reformulated as an XML application"],"answerIndex":3,"why":"Why D is right: the deck says XHTML \"reformulates HTML as an XML application\". Why the others are wrong: A gives MathML's purpose to SVG · B gives SVG's purpose to XML · C gives XML's purpose to MathML. Each distractor is a real purpose from the same five-item list, attached to the wrong language — the standard way this list is examined."},{"q":"Consider the following document.\n```xml\n<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<library>\n  <book>\n    <title>JavaScript: The Good Parts</title>\n    <author>Douglas Crockford</author>\n    <price>19.50</price>\n  </book>\n</library>\n```\nWhich feature of XML, in the deck's own phrasing, does this illustrate?","options":["It uses a fixed vocabulary of tags defined by specification","It defines the layout and presentation of the data in a browser","It employs a user-defined set of tags to describe data","It requires a stylesheet before any of its tags can be parsed"],"answerIndex":2,"why":"Why C is right: `library`, `book`, `title`, `author` and `price` are invented by the document's author. The deck's discriminator is that XML \"employs a user-defined set of tags to describe data\". Why the others are wrong: A describes HTML, whose tag vocabulary is fixed by specification — this is the exact contrast the slide draws · B calls XML a presentation language, which it is not; XML says nothing about appearance · D confuses well-formedness with styling — an XML document parses without any stylesheet."},{"q":"According to the deck, SVG's principal advantage is that:","options":["it compresses photographs to smaller files than PNG","graphics can be scaled without losing image quality","it renders faster because the browser skips the layout stage","it stores images as binary data that the browser decodes natively"],"answerIndex":1,"why":"Why B is right: SVG describes graphics as shapes and coordinates, so they \"can be scaled without losing image quality\". Why the others are wrong: A is false for photographs, where raster formats win — vector markup suits logos, icons and diagrams · C invents a rendering shortcut · D describes a binary raster format; SVG is markup, which is why it appears in a markup-languages lecture at all."},{"q":"Consider the following session transcript.\n```\n220 smtp.example.com ESMTP ready\nHELO mail.miva.edu.ng\n250 Hello mail.miva.edu.ng\nMAIL FROM:<ade@miva.edu.ng>\n250 Sender OK\nRCPT TO:<lecturer@example.com>\n250 Recipient OK\n```\nWhich command identifies the intended recipient of the message?","options":["RCPT TO","MAIL FROM","HELO","DATA"],"answerIndex":0,"why":"Why A is right: `RCPT TO` names the recipient. The deck's ordered list is HELO, MAIL FROM, RCPT TO, then the message content. Why the others are wrong: B names the *sender*, and swapping the two is the single most common SMTP mistake · C is the greeting that opens the session and identifies the connecting host · D begins the message body and appears after all recipients are declared."},{"q":"A student wants their mail to remain on the server and stay in step across a phone and a laptop. Which protocol does the deck describe for this, and why?","options":["POP3, because messages are downloaded to the device and removed from the server","SMTP, because it relays messages between servers across different domains","IMAP, because messages stay on the server and actions on one device appear on others","MIME, because it handles character encoding consistently across devices"],"answerIndex":2,"why":"Why C is right: the deck's two IMAP key functions are email synchronisation (\"actions taken on one device are reflected on others\") and server-based storage. Why the others are wrong: A is POP3, and the reason given is precisely why it is wrong here — POP3 downloads and removes, so a second device finds nothing · B confuses sending with retrieval; SMTP never retrieves mail · D treats MIME as a protocol, when it is a standard governing message *format*."},{"q":"MIME is best described as:","options":["a retrieval protocol that downloads attachments separately from the message","a standard that extends the email message format beyond plain ASCII text","a protocol that relays messages between mail servers across domains","a DNS record type identifying the mail servers for a domain"],"answerIndex":1,"why":"Why B is right: MIME extends the message format to support non-ASCII character sets, attachments, and audio, video and images. Why the others are wrong: A makes MIME a retrieval protocol, confusing it with POP3/IMAP · C describes SMTP relaying · D describes the MX record, which is DNS and shares only the letter M."},{"q":"Consider the domain name below.\n```\nadmin.example.com\n```\nReading it as the deck does, which statement is correct?","options":["\"admin\" is the TLD, \"example\" a subdomain, \"com\" the second-level domain","\"com\" is the root domain, \"example\" the TLD, \"admin\" the second-level domain","\"admin\" is the second-level domain, \"example\" the TLD, \"com\" a subdomain","\"com\" is the TLD, \"example\" the second-level domain, \"admin\" a subdomain"],"answerIndex":3,"why":"Why D is right: read a domain right to left. The deck's own worked illustration of `admin.example.com` gives com as the TLD, example as the second-level domain, admin as a subdomain. Why the others are wrong: A reads left to right, the error the deck's illustration exists to prevent · B promotes \"com\" to the root domain — the root is the unnamed level *above* all TLDs · C shuffles all three labels."},{"q":"DNSSEC protects the Domain Name System by:","options":["adding digital signatures to DNS data to ensure integrity and authenticity","encrypting DNS queries so that they cannot be read in transit","routing queries through a proxy that conceals the client's IP address","restricting DNS responses to authoritative servers only"],"answerIndex":0,"why":"Why A is right: the deck says DNSSEC \"adds digital signatures to DNS data, ensuring data integrity and authenticity\", and helps prevent cache poisoning by verifying response authenticity. Why the others are wrong: B is the most tempting wrong answer — DNSSEC **signs**, it does not **encrypt**; queries stay readable · C describes an anonymising proxy or DNS-over-HTTPS, neither of which is DNSSEC · D invents a restriction and drags in port 53, which no slide mentions."},{"q":"The deck describes REST as:","options":["a protocol that replaces HTTP for building web services","an architectural style and set of constraints, stateless and resource-based","a message format built from XML envelopes and bodies","a full-duplex channel held open over a single TCP connection"],"answerIndex":1,"why":"Why B is right: the slide calls REST \"an architectural style and set of constraints for designing networked applications\", stateless and resource-based. Why the others are wrong: A is what the deck's *heading* implies — it files REST under \"Web Communication Protocols\" and contradicts itself; the slide body is what to answer from · C describes SOAP's XML envelope · D describes WebSocket. Every distractor here is a neighbouring item from the same three-protocol lesson. --- ### Week 3 — HTML structure, hyperlinks and forms"},{"q":"The four key components of an HTML document, as the deck lists them, are:","options":["`<html>`, `<head>`, `<title>`, `<body>`","`<!DOCTYPE>`, `<meta>`, `<head>`, `<body>`","`<!DOCTYPE>`, `<html>`, `<head>`, `<body>`","`<html>`, `<header>`, `<main>`, `<footer>`"],"answerIndex":2,"why":"Why C is right: the deck's four named components are the Document Type Declaration, the `<html>` root element, the head section and the body section. Why the others are wrong: A drops the DOCTYPE, which the deck calls \"the very first line\", and promotes `<title>`, a child of `<head>` · B replaces `<html>` with `<meta>`, another head child · D lists semantic sectioning elements, which belong to a different slide entirely."},{"q":"According to the deck, the `<head>` section:","options":["holds meta-information and is not visible to the user","holds the visible content, including headings and paragraphs","is optional whenever no external stylesheet is linked","must appear after `<body>` so that scripts load last"],"answerIndex":0,"why":"Why A is right: the deck states the head holds meta-information — title, character encoding, links to external resources — and \"it is not visible to the user\". Why the others are wrong: B describes `<body>` · C is false; the head is part of the document's required structure regardless of stylesheets · D inverts document order, a rationalisation from the real-world habit of putting scripts at the end of `<body>`."},{"q":"An external hyperlink must open in a new tab. Which line follows the deck's rules for external links?","options":["`<a href=\"www.mivastudents.com\" newtab=\"true\">Miva</a>`","`<a src=\"https://www.mivastudents.com\" target=\"_new\">Miva</a>`","`<a href=\"#mivastudents\" target=\"_blank\">Miva</a>`","`<a href=\"https://www.mivastudents.com\" target=\"_blank\">Miva</a>`"],"answerIndex":3,"why":"Why D is right: the deck requires external links to give the complete URL including the protocol, and names `target=\"_blank\"` as the way to open in a new tab or window. Why the others are wrong: A omits the protocol, making the href a relative path, and invents an attribute · B uses `src`, which belongs on `<img>`, not `<a>`, and `_new` is not a standard target · C is an in-page fragment link, so it goes nowhere external."},{"q":"The deck's mid-lesson answer names three elements used for text formatting. They are:","options":["`<b>`, `<i>`, `<u>`","`<strong>`, `<em>`, `<u>`","`<strong>`, `<em>`, `<mark>`","`<h1>`, `<p>`, `<span>`"],"answerIndex":1,"why":"Why B is right: the mid-lesson answer names `<strong>`, `<em>` and `<u>` with the purposes \"strong importance\", \"emphasise\" and \"underline for visual emphasis\". Why the others are wrong: A gives the presentational pair `<b>` and `<i>`, which is what a developer would name first and is not the deck's answer · C swaps `<u>` for `<mark>`, which the deck never mentions · D lists structural elements, not formatting ones."},{"q":"The deck distinguishes the `name` and `id` attributes on a form input as follows:","options":["`name` identifies the element in the page; `id` is submitted to the server","both are submitted, and `id` is used only when `name` is absent","`name` is submitted with the form data; `id` uniquely identifies the element","`name` is required by HTML5 validation; `id` is required by the `action` attribute"],"answerIndex":2,"why":"Why C is right: the deck states both roles — `name` is used when submitting form data; `id` is a unique identifier used with labels and scripting. Why the others are wrong: A reverses them, which is the whole point of the question · B invents a fallback rule that does not exist · D attaches `name` to validation and `id` to the `action` attribute, neither of which is true."},{"q":"Consider the following form.\n```html\n<form action=\"/upload.php\" method=\"post\">\n  <input type=\"file\" name=\"cv\">\n  <button type=\"submit\">Send</button>\n</form>\n```\nThe uploaded file never reaches the server script. Which named attribute is missing?","options":["`accept=\"*/*\"` on the `<input>` element","`multiple` on the `<input>` element","`method=\"get\"` in place of `method=\"post\"`","`enctype=\"multipart/form-data\"` on the `<form>` element"],"answerIndex":3,"why":"Why D is right: the deck names it explicitly — `enctype=\"multipart/form-data\"` is necessary on the form when handling file uploads on the server. Why the others are wrong: A only filters the file picker's dialogue and affects nothing on the server · B allows several files, but none of them would arrive either · C makes it worse: a GET form cannot carry a file body at all."},{"q":"The difference between GET and POST, as the deck presents it for forms, is that:","options":["GET appends data to the URL as query parameters; POST sends it in the request body","GET encrypts the data in transit, while POST leaves it readable","GET creates new records on the server; POST retrieves existing ones","GET can carry uploaded files; POST is restricted to plain text"],"answerIndex":0,"why":"Why A is right: the deck says GET appends form data to the URL as query parameters and POST sends it in the request body. Why the others are wrong: B is the course's own error restated — the Week 3 deck claims POST sends data \"securely\", but POST is not encrypted; only HTTPS encrypts · C describes the REST/CRUD mapping of POST and GET in Week 2, and reverses it besides · D is false; POST is not restricted to text and GET cannot carry a body of files."},{"q":"Consider the following input.\n```html\n<input type=\"text\" name=\"zip\" pattern=\"[0-9]{5}\" required>\n```\nWhat does the `pattern` attribute enforce here?","options":["a value of at most five characters of any kind","a value of exactly five digits","any number between 0 and 9999","five characters of which at least one is a digit"],"answerIndex":1,"why":"Why B is right: `[0-9]{5}` matches exactly five digit characters; the deck's own words are that the pattern \"ensures that the input value is a 5-digit number\". Why the others are wrong: A describes `maxlength=\"5\"`, a different attribute · C would accept \"42\", which has fewer than five digits · D would be a much looser pattern; `{5}` fixes the count and `[0-9]` fixes the character class, so every one of the five must be a digit. --- ### Week 4 — CSS selectors, the box model, layout and typography"},{"q":"The deck's definition of CSS emphasises that it:","options":["replaces HTML tags with styling rules at render time","converts an HTML document into a tree of styled nodes","compiles styling rules into JavaScript when the page loads","separates the content (HTML) from its presentation (styling)"],"answerIndex":3,"why":"Why D is right: the deck's definition ends \"CSS separates the content (HTML) from its presentation (styling)\" — the sentence to open any CSS answer with. Why the others are wrong: A has CSS replacing markup rather than styling it · B describes the DOM, a Week 7 topic · C invents a compilation step that does not exist."},{"q":"Consider the following rules.\n```css\n#header { font-size: 24px; }\n.button { background-color: #FF5733; }\narticle p { font-weight: bold; }\n```\nIn the deck's five-way classification, these three rules use, in order:","options":["class, ID, universal","type, class, descendant","ID, class, descendant","ID, type, universal"],"answerIndex":2,"why":"Why C is right: `#header` is an **ID** selector, `.button` a **class** selector, and `article p` a **descendant** selector. Why the others are wrong: A reverses the first two, which is the error of reading `#` as \"class\" · B calls `#header` a type selector — type selectors take a bare tag name, like `p` · D calls `.button` a type selector and `article p` universal; the universal selector is `*`."},{"q":"The four components of the CSS box model, from innermost outwards, are:","options":["content, padding, border, margin","content, border, padding, margin","margin, border, padding, content","padding, content, border, margin"],"answerIndex":0,"why":"Why A is right: the deck names four components and works inward-out: content, padding, border, margin. Why the others are wrong: B swaps padding and border — padding sits *inside* the border, not outside it · C runs the list backwards, outermost first · D puts padding inside the content box, which reverses their relationship."},{"q":"Consider the following rule.\n```css\n.Following the deck's own arithmetic, what is the total width of this element when content, padding, border and margin are all added together?","options":["244px","224px","264px","200px"],"answerIndex":2,"why":"Why C is right: the deck's arithmetic is 200 (content) + 40 (left and right padding) + 4 (left and right border) + 20 (left and right margin) = **264px**. Why the others are wrong: A stops at content + padding + border and forgets the margin · B counts padding and margin but drops the border · D is the declared `width` alone, which is what you get if you assume `box-sizing: border-box` — a habit from real work, and `box-sizing` appears nowhere in this course."},{"q":"The deck describes CSS Grid Layout, and only CSS Grid Layout, as:","options":["a one-dimensional model distributing space along a single axis","a two-dimensional grid system giving control over rows and columns","a technique for floating elements left or right within a container","a way of setting elements to `inline-block` so they sit side by side"],"answerIndex":1,"why":"Why B is right: the deck calls Grid \"a two-dimensional grid system enabling precise control over rows and columns\", and says this of Grid only. Why the others are wrong: A describes Flexbox, which is the discriminator being tested · C describes `float` · D describes `display: inline-block`. All three are real layout techniques from the same lesson."},{"q":"In Flexbox, `justify-content` and `align-items` operate as follows:","options":["`justify-content` on the main axis; `align-items` on the cross axis","`justify-content` on the cross axis; `align-items` on the main axis","both act on the main axis, in opposite directions","`justify-content` is always horizontal; `align-items` is always vertical"],"answerIndex":0,"why":"Why A is right: `justify-content` distributes along the **main** axis; `align-items` aligns along the **cross** axis. Why the others are wrong: B reverses them, the most frequent Flexbox error · C collapses the distinction into one axis · D is true only while `flex-direction: row`; set `column` and both axes rotate, which is exactly why the deck defines them by axis and not by direction."},{"q":"The default value of `align-items` is:","options":["`flex-start`","`center`","`baseline`","`stretch`"],"answerIndex":3,"why":"Why D is right: the deck lists `align-items` values as flex-start, flex-end, center, baseline and **stretch, the default**. Why the others are wrong: A is the default for `justify-content`, not `align-items`, and is what most students guess · B and C are valid values but not the default."},{"q":"The `flex` shorthand accepts its three values in this order:","options":["flex-basis, flex-grow, flex-shrink","flex-grow, flex-shrink, flex-basis","flex-shrink, flex-grow, flex-basis","flex-grow, flex-basis, flex-shrink"],"answerIndex":1,"why":"Why B is right: the deck states the shorthand accepts \"flex-grow, flex-shrink, and flex-basis in that order\". Why the others are wrong: A, C and D are the three plausible permutations. Grow before shrink before basis is the only order the deck gives, and it is a straight recall mark. --- ### Week 5 — JavaScript fundamentals"},{"q":"According to the Week 5 material, JavaScript:","options":["was developed by Douglas Crockford and runs only on the server","was developed by Brendan Eich as a server-side alternative to PHP","was developed by Brendan Eich and is a client-side scripting language","is a markup language, like HTML, used to describe page structure"],"answerIndex":2,"why":"Why C is right: the Week 5 Summary names **Brendan Eich** as JavaScript's developer and calls it a client-side scripting language running in the user's browser rather than on the server. Why the others are wrong: A names the author of *JavaScript: The Good Parts*, which is the course's key reference for this week — a genuinely tempting swap · B has the right person and the wrong side of the network · D contradicts the deck's insistence that \"unlike HTML and CSS, JavaScript is a full-fledged programming language\"."},{"q":"The deck's stated rule for `let` and `const` is that:","options":["`let` variables can be reassigned, while `const` variables are read-only","both may be reassigned, but `const` may not be redeclared","`const` variables are immutable, so their contents can never change","`let` is function-scoped while `const` is block-scoped"],"answerIndex":0,"why":"Why A is right: the deck's rule is that variables declared with `let` can be reassigned, while those declared with `const` are **read-only**. Why the others are wrong: B invents a redeclaration rule · C overstates it: `const` prevents reassignment of the binding, not mutation of the object it holds — claiming immutability says more than the course does and more than is true · D reverses the scoping; `var` is the function-scoped keyword, and block scope arrived *with* `let` and `const` together."},{"q":"Consider the following code.\n```javascript\nconsole.log(5 == \"5\");\nconsole.log(5 === \"5\");\n```\nWhat is printed?","options":["false then false","false then true","true then false","true then true"],"answerIndex":2,"why":"Why C is right: `==` compares values after type coercion, so `5 == \"5\"` is true; `===` is the **strict** operator and also checks the data type, so `5 === \"5\"` is false. Why the others are wrong: A treats `==` as strict too · B reverses both results · D is the answer of someone who knows the two operators differ but not which is the loose one."},{"q":"Of the five array methods named in the deck, which is described as creating a new array?","options":["`push()`","`pop()`","`splice()`","`filter()`"],"answerIndex":3,"why":"Why D is right: the deck says `filter()` \"creates a new array with all elements that pass a test\", and says \"creates a new array\" of no other method. Why the others are wrong: A appends to the end of the original array · B removes the last element from the original · C adds, removes or replaces at an index — all three mutate in place. The distinction between mutating and non-mutating methods is what this question tests."},{"q":"Consider the following code.\n```javascript\nfunction calculateRectangleArea(length, width) {\n  return length * width;\n}\nconsole.log(calculateRectangleArea(8, 4));\n```\nWhat is logged?","options":["12","32","24","84"],"answerIndex":1,"why":"Why B is right: 8 × 4 = **32**, and the deck states this result explicitly in its mid-lesson answer. Why the others are wrong: A is 8 + 4, from misreading `*` as `+` · C is 8 × 3 · D is the two arguments concatenated as strings, which is what would happen with `length + width` if either were a string."},{"q":"The three types of variable scope named in the JavaScript lesson are:","options":["global, local and static","public, private and protected","lexical, dynamic and global","global, local and block"],"answerIndex":3,"why":"Why D is right: the JavaScript lesson names **global, local and block** scope, and says block scope was \"introduced in modern JavaScript with `let` and `const`\". Why the others are wrong: A is the **PHP** answer from Week 9 — static is PHP's third scope and JavaScript has no equivalent in this course; mixing the two lists is the trap · B lists access modifiers from class-based languages · C names two real concepts that the course never uses."},{"q":"A closure is defined in the deck as a feature that allows a function to:","options":["keep access to variables from its enclosing function after that function has returned","run immediately after it is created, without being called explicitly","bind `this` to the context of the function that encloses it","be passed as an argument to another function and executed later"],"answerIndex":0,"why":"Why A is right: the deck defines a closure as a function that maintains access to variables from its enclosing function \"even after the outer function has finished executing\". Why the others are wrong: B defines an IIFE · C describes what an arrow function does with `this` · D describes a callback. All three appear on nearby slides in the same lesson."},{"q":"An IIFE is used principally to:","options":["delay execution until the event loop is idle","bind `this` lexically inside an event handler","create a private scope and keep variables out of the global scope","let a function call itself until a base case is reached"],"answerIndex":2,"why":"Why C is right: the deck says an IIFE creates \"a private scope for variables and prevent[s] them from polluting the global scope\", and helps avoid name collisions in large projects. Why the others are wrong: A describes `setTimeout` scheduling · B describes arrow functions' lexical `this` · D describes recursion. Note the IIFE's *immediate* execution is its mechanism; the private scope is its stated purpose. --- ### Week 6 — Asynchronous JavaScript, ES6, AJAX and events"},{"q":"The deck presents three approaches to asynchronous programming, in this order:","options":["promises, callbacks, async/await","callbacks, promises, async/await","async/await, promises, callbacks","callbacks, generators, promises"],"answerIndex":1,"why":"Why B is right: the deck presents callbacks first as \"a fundamental way of handling asynchronous operations\", then promises as \"a more structured way\", then async/await as \"more modern and concise\". Why the others are wrong: A and C invert the historical and pedagogical order the deck uses · D substitutes generators, which the course never names."},{"q":"ES6 is also known as:","options":["ECMAScript 2015, the sixth major version of the specification","ECMAScript 2016, the sixth major version of the specification","ECMAScript 6.0, the sixth release of JavaScript by Netscape","ECMAScript 2015, the sixth release of the Node.js runtime"],"answerIndex":0,"why":"Why A is right: the deck says ES6 \"also known as ECMAScript 2015, is the sixth major version of the ECMAScript language specification\". Both the year and \"sixth\" are examinable. Why the others are wrong: B gives 2016, which is ES7 · C attributes the specification to Netscape, confusing JavaScript's origin with ECMAScript's standardisation · D confuses the language specification with the Node.js runtime, which versions independently."},{"q":"Consider the following code.\n```javascript\nconst name = \"Ade\";\nconst greeting = `Hello, ${name}! You have ${2 + 3} messages.`;\n```\nWhich ES6 feature is used here?","options":["destructuring","the spread operator","arrow functions","template literals"],"answerIndex":3,"why":"Why D is right: backticks with `${}` interpolation are **template literals**, which the deck describes as giving multi-line strings and embedded expressions. Why the others are wrong: A extracts values out of arrays and objects · B copies or gathers with `...` · C is the shorter function syntax that binds `this` lexically. All four are on the deck's seven-feature ES6 list, which is why identifying the right one matters."},{"q":"AJAX stands for:","options":["Automatic JavaScript and XHTML","Asynchronous Java and XML","Asynchronous JavaScript and XML","Asynchronous JavaScript and JSON"],"answerIndex":2,"why":"Why C is right: AJAX is **Asynchronous JavaScript and XML**. Why the others are wrong: A and B corrupt one word each — \"Automatic\" for \"Asynchronous\", \"Java\" for \"JavaScript\"; Java and JavaScript are unrelated languages · D substitutes JSON, which is the format AJAX almost always carries in practice and is not what the acronym says. Expand it as XML, then add that JSON is the common format — the deck says so itself."},{"q":"The deck contrasts `XMLHttpRequest` with the Fetch API. The stated advantage of Fetch is that:","options":["it is not restricted by the same-origin policy","it returns promises, giving a more concise and readable syntax","it sends data without making an HTTP request at all","it parses JSON automatically, with no further call needed"],"answerIndex":1,"why":"Why B is right: the deck describes Fetch as \"a modern alternative... it returns promises for a more concise and readable syntax\". Why the others are wrong: A is false — Fetch is bound by the same-origin policy exactly as XMLHttpRequest is, and needs CORS to cross origins · C describes no real mechanism · D is a half-truth turned into a falsehood: `response.json()` is still an explicit call, and it returns a promise of its own."},{"q":"The same-origin policy and CORS relate to each other as follows:","options":["the same-origin policy is the restriction; CORS is the mechanism that relaxes it","CORS is the restriction; the same-origin policy is the mechanism that relaxes it","both are restrictions, one applied by the browser and one by the server","CORS replaced the same-origin policy in modern browsers"],"answerIndex":0,"why":"Why A is right: the deck names the same-origin policy as the restriction that limits requests to the same domain, and CORS as what you handle to make cross-domain requests possible. Why the others are wrong: B swaps restriction and relaxation, the standard confusion between the two names · C makes CORS a second restriction · D claims a replacement that never happened — the same-origin policy is still the default in every browser."},{"q":"The Week 6 material names four components of an event. They are:","options":["event source, event target, event handler, event queue","event type, event listener, event bubble, event capture","event trigger, event type, event callback, event object","event source, event type, event listener, event object"],"answerIndex":3,"why":"— **[no deck]** (events appear only on the Week 6 Summary; the deck covers async and ES6) Why D is right: the Summary names four components — event source, event type, event listener, event object. Why the others are wrong: A swaps in \"target\", \"handler\" and \"queue\", all plausible and none on the list · B replaces two components with propagation *phases* · C keeps the event object but renames the source and listener. The **event object** is the component students most often omit, so any option that keeps three and changes one is designed to catch a half-remembered list."},{"q":"Consider the following code, where `inner` is nested inside `outer`.\n```javascript\nouter.addEventListener(\"click\", () => console.log(\"outer\"));\ninner.addEventListener(\"click\", () => console.log(\"inner\"));\n```\nA user clicks `inner`. What is logged?","options":["outer, then inner","inner, then outer","inner only","outer only"],"answerIndex":1,"why":"— **[no deck]** Why B is right: `addEventListener` listens in the **bubbling** phase by default, so the event fires on the target first and then travels up: inner, then outer. Why the others are wrong: A is the capturing order, which you would only get by passing `true` as the third argument · C assumes propagation stops at the target, which is what `stopPropagation()` would do · D assumes the outer listener swallows the click. --- ### Week 7 — The Document Object Model"},{"q":"The DOM is defined in the deck as:","options":["a scripting language for manipulating HTML documents","a rendering engine that converts CSS into pixels on screen","a programming interface representing documents as a tree-like structure","a data format for exchanging structured documents between servers"],"answerIndex":2,"why":"Why C is right: the deck defines the DOM as \"a programming interface that represents web documents (HTML, XHTML, or XML) as a tree-like structure called the DOM tree\". Why the others are wrong: A calls it a language; the DOM is an interface that JavaScript uses, not a language itself · B describes the rendering engine, a different part of the browser · D describes a serialisation format like XML or JSON."},{"q":"In `<img src=\"logo.png\" alt=\"Company logo\">`, the deck classifies `src` and `alt` as:","options":["element nodes","text nodes","document nodes","attribute nodes"],"answerIndex":3,"why":"Why D is right: the deck is explicit that attributes are nodes, and gives `src` and `alt` on an `<img>` as its example of **attribute nodes**. Why the others are wrong: A is the `<img>` tag itself · B is the text inside an element, such as \"Hello, World!\" in a `<p>` · C is not one of the three node types the deck names. Remember the sentence that resolves this: every element is a node, but not every node is an element."},{"q":"Which statement about the DOM selection methods is correct?","options":["`querySelector()` returns the first matching element and takes a CSS selector","`querySelector()` returns every matching element, as `getElementById()` returns one","`getElementsByClassName()` takes a CSS selector and returns a single element","`querySelectorAll()` returns the first matching element, selected by tag name"],"answerIndex":0,"why":"Why A is right: `querySelector()` returns the **first** matching element and takes a **CSS selector**. Why the others are wrong: B gives `querySelectorAll()`'s behaviour to `querySelector()` · C confuses `getElementsByClassName()`, which takes a bare class name and returns a collection · D combines two errors — `querySelectorAll()` returns all matches, and it takes a CSS selector rather than a tag name."},{"q":"Consider the following code.\n```javascript\nconst btn = document.getElementById(\"#submitBtn\");\nbtn.addEventListener(\"click\", handleClick);\n```\nThe page contains `<button id=\"submitBtn\">Send</button>`, yet this code throws an error. Why?","options":["`addEventListener` cannot be called on a `<button>` element","the handler must be given as a string rather than a function reference","`getElementById` expects a bare id, not a CSS selector, so `btn` is null","the element must be selected after the listener has been attached"],"answerIndex":2,"why":"Why C is right: `getElementById` takes a bare id string. Passing `\"#submitBtn\"` matches nothing, `btn` is null, and calling `addEventListener` on null throws. Why the others are wrong: A is false; buttons take listeners normally · B describes the obsolete inline-attribute style, which is not what breaks here · D invents an ordering rule. The `#` prefix belongs to `querySelector`, and mixing the two APIs is the exact slip being tested."},{"q":"Consider the following code.\n```javascript\nconst comment = '<img src=x onerror=\"steal()\">';\ntarget.innerHTML = comment;\ntarget.textContent = comment;\n```\nWhich statement is correct?","options":["Both lines render the tag as markup, so both are equally unsafe","`innerHTML` parses the value as markup and may run injected code; `textContent` does not","Neither line renders markup, because the value is a string","`textContent` parses the value as markup, while `innerHTML` escapes it"],"answerIndex":1,"why":"Why B is right: assigning to `innerHTML` parses the string as markup, so the `onerror` handler in the injected `<img>` runs — the XSS vector the deck warns about twice without explaining. `textContent` writes the string as text and renders nothing. Why the others are wrong: A treats both as unsafe, which loses the whole distinction · C assumes a string is inert regardless of how it is assigned · D reverses the two properties."},{"q":"Custom data attributes on an element are, according to the deck, prefixed with:","options":["`x-`","`attr-`","`custom-`","`data-`"],"answerIndex":3,"why":"Why D is right: the deck says custom data attributes are \"prefixed with `data-`\". Why the others are wrong: A is the convention in Vue and Alpine templates, not the HTML standard · B and C are invented prefixes that read plausibly. --- ### Week 8 — Libraries and frameworks"},{"q":"The Week 8 material distinguishes libraries from frameworks as follows:","options":["libraries hold pre-written code for specific tasks; frameworks dictate the overall structure","libraries dictate the overall structure; frameworks hold code for specific tasks","libraries run in the browser, while frameworks run on the server","libraries are compiled ahead of time, while frameworks are interpreted"],"answerIndex":0,"why":"Why A is right: the Week 8 Summary's discriminator is that \"libraries consist of pre-written code for specific tasks, while frameworks dictate the overall application structure\". Why the others are wrong: B reverses it, which is the mark being tested · C splits them by client and server, but jQuery and Express are on the same side of that line as their opposites · D splits them by compilation, which is unrelated to either definition."},{"q":"Which set are the five features of jQuery named in the deck?","options":["DOM manipulation, routing, state management, animation, templating","utility functions, chaining, performance optimisation, animation, AJAX","DOM manipulation, event handling, AJAX requests, animation, cross-browser compatibility","date parsing, event handling, AJAX requests, animation, locale support"],"answerIndex":2,"why":"Why C is right: the deck gives jQuery five features on five slides — DOM manipulation, event handling, AJAX requests, animation, cross-browser compatibility. Why the others are wrong: A substitutes concerns from modern frameworks (routing, state management, templating) · B is **Lodash's** feature list with animation and AJAX added · D opens with Moment.js's date parsing and closes with its locale support."},{"q":"Lodash and Moment.js are described in the deck as, respectively:","options":["Lodash a date library, and Moment.js a utility library for arrays and objects","Lodash a utility library for arrays, objects and strings, and Moment.js a date library","two utility libraries, one intended for the client and one for the server","Lodash a DOM manipulation library, and Moment.js a testing library"],"answerIndex":1,"why":"Why B is right: Lodash is \"a modern JavaScript utility library... for arrays, objects, strings\"; Moment.js is \"a library for parsing, formatting, and manipulating dates and times\". Why the others are wrong: A swaps the two libraries' purposes · C erases the distinction entirely · D gives Lodash jQuery's job and invents a testing role for Moment.js."},{"q":"React's virtual DOM is described as working by:","options":["comparing the virtual DOM with the real DOM and updating only the necessary parts","re-rendering every component from scratch whenever any state changes","keeping a copy of the DOM on the server and syncing it over WebSocket","binding the UI to the data model so a change in one alters the other"],"answerIndex":0,"why":"Why A is right: the deck says React \"tracks the difference between the virtual DOM and the actual DOM and updates only the necessary parts\". Why the others are wrong: B describes what the virtual DOM exists to avoid · C invents a server-synchronised DOM · D describes **two-way data binding**, which is Angular's concept — React's stated concept is unidirectional data flow. Factual footnote: React actually diffs the new virtual DOM tree against the previous virtual DOM tree and commits only the resulting minimal patch to the real DOM; it does not read the real DOM to compare. The deck's phrasing is quoted here because the exam is set from the deck."},{"q":"Which pairing of framework and key concept matches the deck?","options":["Angular — incrementally adoptable","Vue.js — dependency injection","React — two-way data binding","Angular — two-way data binding"],"answerIndex":3,"why":"Why D is right: the deck names Angular's key concepts as modules and components, dependency injection, and **two-way data binding**. Why the others are wrong: A gives Angular Vue.js's defining property, \"incrementally adoptable\" · B gives Vue.js Angular's dependency injection · C gives React two-way binding, when React's flow is explicitly unidirectional. Every distractor moves one concept one framework sideways."},{"q":"Which pairing of backend framework and language is correct?","options":["Django — Ruby; Ruby on Rails — Python","Django — Python; ASP.NET — C#","Express.js — C#; ASP.NET — JavaScript","Ruby on Rails — JavaScript; Express.js — Ruby"],"answerIndex":1,"why":"Why B is right: Django is Python and ASP.NET is C#. The full mapping is Django/Python, Express.js/JavaScript on Node.js, Ruby on Rails/Ruby, ASP.NET/C#. Why the others are wrong: A swaps Django and Rails · C swaps Express.js and ASP.NET · D swaps Rails and Express.js. Each is one transposition away from correct."},{"q":"Consider the following Express application.\n```javascript\napp.use(function (req, res, next) {\n  console.log(req.method, req.url);\n  next();\n});\nfunction requireLogin(req, res, next) {\n  if (!req.session.user) return res.status(401).send(\"Please log in\");\n  next();\n}\napp.get(\"/dashboard\", requireLogin, function (req, res) {\n  res.send(\"Welcome to your dashboard\");\n});\n```\nA logged-out user requests `/dashboard`. What happens?","options":["The route handler runs first, and `requireLogin` then cancels the response","Neither middleware runs, since `app.use` applies only to POST requests","The logger runs, then `requireLogin` sends a 401 and the route handler never runs","The logger runs, `requireLogin` runs, and the dashboard is sent with a 401 status"],"answerIndex":2,"why":"Why C is right: middleware runs in the order it is declared. The logger registered with `app.use` runs first, then `requireLogin` finds no session user, returns a 401 and never calls `next()`, so the route handler is never reached. Why the others are wrong: A reverses the order, ignoring that `requireLogin` is listed before the handler · B is false — `app.use` applies to every method, not only POST · D has both the 401 and the dashboard body being sent, which cannot happen: `requireLogin` returns before calling `next()`. --- ### Week 9 — PHP"},{"q":"PHP stands for Hypertext Preprocessor and is described as:","options":["a client-side scripting language interpreted by the browser","a markup language for structuring dynamic web content","a compiled language that runs inside the web server's binary","a server-side scripting language whose output reaches the browser as HTML"],"answerIndex":3,"why":"Why D is right: the deck calls PHP \"a widely-used server-side scripting language\"; the week's topic is embedding it in HTML, and the browser receives only the resulting HTML. Why the others are wrong: A makes PHP client-side, confusing it with JavaScript — the browser never sees PHP at all · B calls it a markup language, though the expansion \"Hypertext Preprocessor\" encourages that mistake · C claims compilation, which the deck does not."},{"q":"Which set of data types does the PHP lesson name?","options":["String, Integer, Float, Boolean, Array, Object, NULL","String, Number, Boolean, Array, Object, NULL, Undefined","String, Integer, Float, Boolean, Array, Object, Resource","String, Integer, Double, Boolean, List, Map, NULL"],"answerIndex":0,"why":"Why A is right: the deck names seven — String, Integer, Float/Double, Boolean, Array, Object, NULL. Why the others are wrong: B is the **JavaScript** list with Undefined added, and collapses Integer and Float into \"Number\" · C swaps NULL for Resource, which is a real PHP type the deck does not list · D renames Array and Object as List and Map. PHP itself also has Resource and, in modern versions, callable and iterable; the lesson lists only these seven."},{"q":"Consider the following script.\n```php\n<?php\n$first = \"Web\";\n$second = \"Technologies\";\necho $first . \" \" . $second;\n?>\n```\nWhat is output, and which operator has been used?","options":["WebTechnologies, using the addition operator","Web Technologies, using the concatenation operator","Web + Technologies, using the concatenation operator","an error, because PHP joins strings with `+`"],"answerIndex":1,"why":"Why B is right: PHP concatenates with the **dot** operator, so `$first . \" \" . $second` produces `Web Technologies` including the space. Why the others are wrong: A names the addition operator and drops the space · C prints the dot as though it were a literal `+` · D asserts PHP uses `+` for strings — that is JavaScript's operator, and this is the likeliest one-mark discriminator between the PHP and JavaScript questions on the paper."},{"q":"The three types of variable scope named in the PHP lesson are:","options":["global, local and block","public, private and static","global, local and static","global, lexical and static"],"answerIndex":2,"why":"Why C is right: the PHP lesson names **local, global and static**, with static variables described as retaining their values across function calls. Why the others are wrong: A is the **JavaScript** list from Week 5 — block scope belongs there, static belongs here · B lists class access modifiers · D substitutes \"lexical\", a JavaScript term the PHP lesson never uses."},{"q":"Consider the following script.\n```php\n<?php\nfunction factorial($n) {\n    if ($n <= 1) { return 1; }\n    return $n * factorial($n - 1);\n}\necho factorial(5);\n?>\n```\nWhat is echoed, and what role does `$n <= 1` play?","options":["120, and it is the base case that stops the recursion","15, and it is the base case that stops the recursion","120, and it is the increment that advances the recursion","720, and it is the terminating condition of a loop"],"answerIndex":0,"why":"Why A is right: 5 × 4 × 3 × 2 × 1 = **120**, and the deck names `$n <= 1` explicitly as \"the base case [that] defines when the recursion should stop\". Why the others are wrong: B is 5 + 4 + 3 + 2 + 1, the sum rather than the product · C has the right value but calls the base case an increment, inverting its role — it terminates rather than advances · D gives factorial(6) and calls the condition a loop terminator, when there is no loop here."},{"q":"The loop constructs available in PHP are:","options":["for, while, repeat-until and foreach","for, forEach, while and do-while","for, while, do-while and for-in","for, while, do-while and foreach"],"answerIndex":3,"why":"— **[no deck]** (the deck names \"looping structures\" and then covers no loops at all; the summary lists them) Why D is right: PHP's four loop constructs are `for`, `while`, `do-while` and `foreach`. Why the others are wrong: A substitutes repeat-until, which is Pascal · B substitutes `forEach`, a JavaScript array *method*, not a PHP construct — and drops `foreach` · C gives `for-in`, a JavaScript statement. `foreach` is the construct that distinguishes PHP's loops from JavaScript's, so any option missing it is wrong."},{"q":"The lesson distinguishes parameters from arguments as follows:","options":["parameters are supplied at the call; arguments are declared in the definition","parameters must carry default values, while arguments must not","parameters are named when the function is defined; arguments are the values passed at the call","parameters are passed by reference, while arguments are passed by value"],"answerIndex":2,"why":"Why C is right: the deck states it word for word — \"when we define a function, we specify its parameters. When we call the function, we provide the actual values, called arguments.\" Why the others are wrong: A reverses the two terms, which is the whole question · B invents a rule about defaults; defaults are optional and sit on parameters · D describes a passing convention, which is a different distinction altogether. --- ### Week 10 — Backend programming, server environments, databases and APIs"},{"q":"The mid-lesson answer recommends Node.js for a real-time stock price feed because of:","options":["its compiled bytecode and static type system","its event-driven, non-blocking I/O model and many concurrent connections","its built-in object-relational mapping layer","its elegant syntax and convention-over-configuration defaults"],"answerIndex":1,"why":"Why B is right: the deck's own mid-lesson answer names Node.js for real-time stock prices \"due to its event-driven, non-blocking I/O model\" and its ability to handle many concurrent connections. Why the others are wrong: A describes Java, which the deck praises for reliability and scalability instead · C describes Rails' Active Record, an ORM · D quotes the deck's phrases for Ruby (\"elegant syntax\") and Rails (\"convention over configuration\")."},{"q":"LAMP stands for:","options":["Linux, Apache, MongoDB, Python","Linux, Nginx, MySQL, PHP","Linux, Apache, MariaDB, Perl","Linux, Apache, MySQL, PHP"],"answerIndex":3,"why":"Why D is right: LAMP is **Linux, Apache, MySQL, PHP** — the deck's named web-server environment stack. Why the others are wrong: A and C substitute a different database (MongoDB, MariaDB) and a different language (Python, Perl) — Perl is the historical alternative that makes the P ambiguous outside this course, but the deck says PHP · B swaps Apache for Nginx, which is a real web server named elsewhere in the same lesson but is not the A in LAMP."},{"q":"ACID stands for:","options":["Atomicity, Consistency, Isolation, Durability","Availability, Consistency, Isolation, Durability","Atomicity, Concurrency, Integrity, Durability","Atomicity, Consistency, Indexing, Distribution"],"answerIndex":0,"why":"Why A is right: **Atomicity, Consistency, Isolation, Durability**. Why the others are wrong: B replaces Atomicity with Availability, which is the single commonest ACID error and probably comes from confusing it with the CAP theorem · C replaces Isolation with Integrity and Consistency with Concurrency · D replaces the last two letters with database techniques from elsewhere in this lesson."},{"q":"In the deck's table of database systems, MongoDB and Redis are described as:","options":["MongoDB a relational database with fixed schemas, and Redis a document store","MongoDB a schema-less document-oriented store, and Redis an in-memory key-value store","MongoDB an in-memory key-value store, and Redis a document-oriented NoSQL database","both relational databases, ACID-compliant, open-source and SQL-driven"],"answerIndex":1,"why":"Why B is right: the deck's table calls MongoDB schema-less and document-oriented NoSQL, and Redis an in-memory NoSQL key-value store used for caching. Why the others are wrong: A calls MongoDB relational, which is the error the schema-less row exists to prevent · C swaps the two — the memorable pair is \"MongoDB stores documents, Redis stores keys in memory\" · D makes both relational, which would put them alongside MySQL, PostgreSQL and Oracle."},{"q":"Normalisation is defined in the deck as organising data to:","options":["speed retrieval by building additional lookup structures","spread a database across several physical servers","minimise redundancy and improve data integrity","convert relational tables into document collections"],"answerIndex":2,"why":"Why C is right: the deck defines normalisation as organising data to \"minimise redundancy and improve data integrity\". Why the others are wrong: A defines **indexing**, the adjacent term in the same eight-item glossary and the usual swap · B describes replication or horizontal scaling · D describes migrating to a document store, which is not a normalisation step at all."},{"q":"An API endpoint is defined in the deck as:","options":["a specific URL or URI that represents a resource or service","the server machine on which the API is hosted","the response returned to the client when a request succeeds","the authentication token supplied with every API request"],"answerIndex":0,"why":"Why A is right: the deck defines an endpoint as \"a specific URL or URI that represents a resource or service\". Note that URI, not just URL, is in the definition. Why the others are wrong: B is what \"endpoint\" means casually in ops conversation, and it is the mistake the deck's wording guards against — the endpoint is the address of a resource, not the machine · C describes the response · D describes the authentication token, listed as a separate key term."},{"q":"Rate limiting is described as a mechanism that:","options":["verifies the identity of a client using API keys or tokens","caps the size of the response body an endpoint may return","queues incoming requests until the database can serve them","restricts the number of requests within a specified time frame"],"answerIndex":3,"why":"Why D is right: rate limiting \"restricts the number of requests within a specified time frame to prevent abuse and ensure fair usage\". Why the others are wrong: A defines **authentication**, the key term immediately before it in the deck's list · B invents a payload cap · C describes queueing or backpressure, which is not what rate limiting does — over the limit, requests are refused, not held."},{"q":"Consider the following endpoints.\n```\nGET    /users\nPOST   /users\nPUT    /users/123\nDELETE /users/123\n```\nFollowing the deck's REST illustration, these four lines correspond, in order, to:","options":["create, read, update, delete","read, create, update, delete","read, update, create, delete","create, update, read, delete"],"answerIndex":1,"why":"Why B is right: the deck's REST illustration is GET → retrieve, POST → create, PUT → update, DELETE → remove. In the order shown, that is read, create, update, delete. Why the others are wrong: A gives the CRUD acronym's own order and so reverses the first two — the trap for anyone reciting \"create, read, update, delete\" without reading the fragment · C and D shuffle create and update, the pair most often confused, since POST creates and PUT updates."},{"q":"The Week 10 material says HTTP's lack of memory between requests is addressed by:","options":["holding one TCP connection open for the whole of a user's visit","placing the user's data in the URL query string on every request","cookies or session management technologies that maintain state across requests","issuing the client a fresh API key with each request it makes"],"answerIndex":2,"why":"Why C is right: the Week 10 Summary names \"cookies or session management technologies\" as what maintains user sessions and state across requests, answering HTTP's statelessness. Why the others are wrong: A confuses connection persistence with application state; keep-alive reuses a TCP connection but carries no memory of who you are · B is a real historical technique but not the course's named mechanism, and it exposes state in logs and history · D confuses API authentication with session state. --- ### Week 11 — Web application security, deployment and scaling"},{"q":"The deck distinguishes a vulnerability from a threat as follows:","options":["a vulnerability is a potential danger; a threat is a weakness in the application","both are weaknesses, one internal to the code and one external to it","a vulnerability is an attack that succeeded; a threat is one that failed","a vulnerability is a weakness in the application; a threat is a potential danger or harm"],"answerIndex":3,"why":"Why D is right: the deck defines a vulnerability as \"a weakness in a web application's design, implementation, or configuration\" and a threat as \"a potential danger or harm to a web application's security\". Why the others are wrong: A swaps the two definitions, which is the mark · B erases the distinction · C recasts both as attacks, when a threat need never have been acted on and a vulnerability need never have been exploited."},{"q":"Consider the following line of PHP.\n```php\n$sql = \"SELECT * FROM users WHERE username = '$user' AND password = '$pass'\";\n```\nThe attacker submits `admin' OR 1=1--` as the username. Why does the login succeed?","options":["`1=1` is always true and `--` comments out the rest, so the password test never runs","the single quote escapes the password field, so an empty password is accepted","`OR` makes the database return every row, and the application selects the last","PHP reads `--` as a decrement, reducing the stored user id to zero"],"answerIndex":0,"why":"Why A is right: the input closes the username string and appends `OR 1=1`, which is always true, then `--` comments out the rest of the query — so the password comparison never executes and the first row is returned. Why the others are wrong: B has the mechanism backwards; nothing about an empty password is accepted, the check is removed entirely · C misattributes the effect to row selection rather than to the always-true predicate · D reads `--` as PHP's decrement operator, when it is being interpreted by the **database** as a SQL comment."},{"q":"The distinction the deck draws between XSS and CSRF is that:","options":["XSS tricks a logged-in user's browser into sending an unwanted request; CSRF injects a script","XSS targets the database directly, while CSRF targets files on the server","XSS injects a script into pages others view; CSRF makes a logged-in browser send an unwanted request","XSS is a server-side attack, while CSRF is an attack at the network layer"],"answerIndex":2,"why":"Why C is right: XSS puts untrusted code on your page so it runs in another user's browser; CSRF uses a trusted browser's existing credentials to send a request the user never intended. Why the others are wrong: A reverses the two, the commonest confusion in Week 11 · B assigns them to the database and file system, which describes SQL injection and path traversal instead · D calls XSS server-side, when the script executes in the victim's browser."},{"q":"Which pairing of vulnerability and defence follows the deck?","options":["SQL injection — output encoding and Content Security Policy","XSS — output encoding and Content Security Policy","CSRF — parameterised queries in every database call","XSS — unique session tokens issued on each request"],"answerIndex":1,"why":"Why B is right: the deck pairs XSS with output encoding and names Content Security Policy as a tool that helps mitigate it. Why the others are wrong: A gives SQL injection XSS's defence — SQLi is countered with input validation and parameterised queries · C gives CSRF SQLi's defence; CSRF is countered with session management and unique tokens · D gives XSS CSRF's defence. Learn the three pairs as fixed: SQLi → parameterised queries, XSS → output encoding/CSP, CSRF → unique tokens."},{"q":"A Web Application Firewall is described as:","options":["a service that filters and monitors HTTP/HTTPS requests as a shield against attacks","a network firewall permitting traffic only on ports 80 and 443","a code-scanning tool that finds vulnerabilities before deployment","an encryption layer protecting data at rest inside the database"],"answerIndex":0,"why":"Why A is right: the deck describes a WAF as filtering and monitoring HTTP/HTTPS requests, acting as \"a shield\" and an \"additional layer of security\", inspecting traffic for malicious patterns and blocking them before they reach the application. Why the others are wrong: B describes a conventional network firewall, which works at the port level and cannot see request contents · C describes static analysis or vulnerability scanning, listed separately under security testing · D describes encryption at rest, a database concern."},{"q":"A VPS differs from cloud hosting in that a VPS:","options":["draws elastically on the whole of a provider's infrastructure","places several websites on one server, sharing its CPU and RAM","is always sited within the organisation's own premises","partitions one physical server into several virtual servers, each with its own OS"],"answerIndex":3,"why":"Why D is right: the deck defines a VPS as partitioning a physical server into multiple virtual servers, each with its own operating system, resources and configuration — \"a balance between control and cost\". Why the others are wrong: A is cloud hosting, which draws on a provider's whole infrastructure and scales elastically · B is **shared hosting**, where sites share one server's CPU and RAM without separate operating systems — the neighbouring option in the same four-way comparison · C is on-premises hosting."},{"q":"Horizontal scaling is:","options":["upgrading an existing server with more CPU cores, memory or storage","moving the database onto faster storage to shorten query times","adding more machines or instances to spread the workload, often by load balancing","caching frequently requested pages at the edge of the network"],"answerIndex":2,"why":"Why C is right: horizontal scaling adds more machines or instances and distributes the workload, \"often achieved by load balancing\". Why the others are wrong: A is **vertical** scaling, the reversal students make most often — the rule is horizontal means more boxes, vertical means a bigger box · B is a form of vertical scaling dressed as storage tuning · D describes a CDN, a performance technique rather than a scaling axis. If a load balancer is mentioned, it is horizontal."},{"q":"The deck's distinguishing point about a CDN, as against caching in general, is that:","options":["it stores cached data in memory rather than on disk","it caches only the dynamic content the application generates","it takes the place of the origin server once the cache is warm","it uses geographically distributed servers to deliver content closer to users"],"answerIndex":3,"why":"Why D is right: the deck defines a CDN as \"networks of geographically distributed servers that cache and deliver web content from locations closer to users\", reducing latency. The distance-to-user point is what earns the mark. Why the others are wrong: A describes in-memory caching, e.g. Redis · B is backwards; CDNs primarily cache **static** assets · C overstates it — the origin server still holds the authoritative content and serves cache misses."},{"q":"The three key concepts of monitoring named in the deck are:","options":["metrics, debugging and version control","error handling, debugging tools and version control","unit testing, integration testing and end-to-end testing","metrics, alerts and logging"],"answerIndex":3,"why":"Why D is right: the deck names three key concepts of monitoring — metrics, alerts and logging — each with a definition and an example. Why the others are wrong: A and B are the **debugging** list (error handling, debugging tools, version control), with A blending the two — answering a monitoring question with debugging content is the named trap here · C lists the three testing levels from the continuous-integration slide. Monitoring is continuous and pre-emptive; debugging is reactive. --- ### Week 12 — Future trends, PWAs and accessibility"},{"q":"WebAssembly is described as:","options":["a binary instruction format for browsers, compiled from languages such as C++ or Rust","a JavaScript library that speeds up numerical work in the browser","a browser plugin that runs native applications outside the sandbox","a text-based bytecode intended to replace JavaScript entirely"],"answerIndex":0,"why":"Why A is right: the deck calls WebAssembly \"a binary instruction format designed for web browsers\", compiled from other languages \"like C++, Rust, or TypeScript\" and executed directly by the browser. Why the others are wrong: B makes it a JavaScript library, when it is a compilation target and a distinct format · C claims it escapes the sandbox, when the deck names sandboxed execution as one of its three advantages · D calls it text-based and says it replaces JavaScript — it is binary, and the deck frames it as addressing JavaScript's performance limits, not superseding the language."},{"q":"In serverless architecture, Functions as a Service is described as:","options":["a hosting plan in which the provider supplies one virtual machine per function","the core of serverless architecture, where code executes in response to events","a library of ready-made functions supplied by the cloud provider","a billing model charging a flat monthly fee for each deployed function"],"answerIndex":1,"why":"Why B is right: the deck calls Functions as a Service \"the core of serverless architecture, where code is executed in response to events\". Why the others are wrong: A reintroduces per-function virtual machines, which is exactly what serverless removes from the developer's view · C confuses FaaS with a provider's SDK · D contradicts the deck's stated cost model, which is paying only for the compute actually used during execution."},{"q":"The two challenges of serverless architecture named in the mid-lesson answer are:","options":["cold starts and manual scaling","vendor lock-in and higher fixed costs","cold starts and vendor lock-in","network latency and the absence of encryption"],"answerIndex":2,"why":"Why C is right: the deck's mid-lesson answer names exactly two challenges — **cold starts** and **vendor lock-in**. Why the others are wrong: A attaches manual scaling to serverless, when automatic scaling is one of its four named benefits · B attaches higher fixed costs, when cost-efficiency is another named benefit · D invents two challenges from general cloud discussion."},{"q":"Supervised and unsupervised learning are distinguished by:","options":["whether the training data is labelled or unlabelled","the number of layers in the neural network used","whether the model runs in the browser or on the server","whether the output is a classification or an image"],"answerIndex":0,"why":"Why A is right: supervised learning trains on **labelled** data; unsupervised learning trains on **unlabelled** data to discover patterns or groupings. That one word is the whole distinction. Why the others are wrong: B distinguishes **deep learning**, defined by neural networks with many layers · C is a deployment question and applies to neither definition · D confuses the learning type with the task; supervised learning covers regression as well as classification."},{"q":"The Week 12 material names service workers as the technology that gives PWAs:","options":["responsive layouts that adapt to screen size and orientation","installation to the home screen through a JSON manifest file","encrypted transport between the application and the server","offline access, cached resources for faster loading, and push notifications"],"answerIndex":3,"why":"— **[no deck]** (PWAs appear only on the Week 12 Summary; the Week 12 deck never mentions them) Why D is right: the Summary says service workers \"enable offline access, caching resources for faster loading times, and providing push notifications to re-engage users even when the app is not open\". Why the others are wrong: A is delivered by **responsive design**, listed separately as a PWA characteristic · B is delivered by the web app manifest, which the course never names · C is HTTPS — a prerequisite for service workers, but not what they provide."},{"q":"Among the four accessibility principles, providing alternative text for images is the example given for which principle, and using semantic HTML for which?","options":["Operable, then Understandable","Perceivable, then Understandable","Perceivable, then Robust","Robust, then Perceivable"],"answerIndex":2,"why":"Why C is right: the deck's example for **Perceivable** is providing alternative text for images, and its example for **Robust** is using semantic HTML so the site works with current and future technologies. Why the others are wrong: A gives Operable's example (keyboard accessibility) and Understandable's (plain language) to the wrong prompts · B keeps Perceivable but pairs semantic HTML with Understandable · D reverses the two. The mnemonic is **POUR**: Perceivable, Operable, Understandable, Robust."},{"q":"A11Y is:","options":["the WCAG conformance level required of public sector websites","a numeronym for the word \"accessibility\"","the name of the European Web Accessibility Directive","an ARIA attribute that announces a region to screen readers"],"answerIndex":1,"why":"Why B is right: the deck defines A11Y as \"a numeronym for 'accessibility'\" — the letter a, eleven letters, then y. Why the others are wrong: A refers to WCAG conformance levels A, AA and AAA, which this course never mentions — do not build an answer on them · C names one of the two laws in the regulatory-compliance challenge, alongside the ADA · D describes ARIA, which is likewise absent from this course and is the answer a working developer reaches for first."}]}
+{
+  "course": "CSC_106",
+  "title": "CSC_106 — End of Semester Objective Exam",
+  "guideTitle": "CSC_106 — Introduction to Web Technologies",
+  "questions": [
+    {
+      "q": "A browser opens `https://shop.ng:8080/cart?item=7&qty=2`. What are the port and the query string?",
+      "options": [
+        "443; item=7&qty=2",
+        "8080; /cart",
+        "8080; item=7&qty=2",
+        "80; ?item=7"
+      ],
+      "answerIndex": 2,
+      "week": 1,
+      "concept": "Parts of a URL: port and query",
+      "why": "A URL reads scheme://host:port/path?query. After the host shop.ng comes :8080, so the port is 8080; after the ? comes the query string item=7&qty=2. The path is /cart.\n\n443 is the default port for https, but this URL states 8080 explicitly; /cart is the path, not the query; 80 is the default for plain http and ?item=7 drops the second parameter."
+    },
+    {
+      "q": "Which of these four is part of the Internet's infrastructure rather than an application running on top of it?",
+      "options": [
+        "A fibre link between two ISPs' routers",
+        "A web page linked to another by a hyperlink",
+        "An email message waiting on a mail server",
+        "A chat app pushing messages to a phone"
+      ],
+      "answerIndex": 0,
+      "week": 1,
+      "concept": "Internet versus World Wide Web",
+      "why": "The Internet is the global network of interconnected computers and devices: cables, routers and links. Everything that sends data across it, including the Web, email and chat, is an application built on top of that infrastructure.\n\nA hyperlinked web page is the World Wide Web, an application; an email message and a chat app are other applications carried by the Internet, not the wiring itself."
+    },
+    {
+      "q": "You want to pause your JavaScript on a line and inspect which CSS rule turned a heading blue, without leaving the page you are viewing. Which tool category does this?",
+      "options": [
+        "Integrated development environment",
+        "Browser developer tools",
+        "Version control system",
+        "Text editor"
+      ],
+      "answerIndex": 1,
+      "week": 1,
+      "concept": "Matching a job to a web development tool category",
+      "why": "Browser developer tools are built into the browser to inspect and manipulate page elements, debug JavaScript with breakpoints and analyse network traffic, all on the live page.\n\nAn IDE and a text editor edit code in files rather than inspecting the rendered page; a version control system tracks changes to code and has nothing to do with inspecting a running page."
+    },
+    {
+      "q": "MongoDB, Nginx and Node.js. What type of server is each, in that order?",
+      "options": [
+        "Web server, database server, application server",
+        "Database server, application server, web server",
+        "Database server, web server, application server",
+        "Application server, web server, database server"
+      ],
+      "answerIndex": 2,
+      "week": 1,
+      "concept": "Identifying server types from example software",
+      "why": "MongoDB stores and queries data, so it is a database server (with MySQL and PostgreSQL). Nginx serves web content and handles HTTP requests, so it is a web server (with Apache and Microsoft IIS). Node.js executes server-side application code, so it is an application server.\n\nThe other orders each swap two of the roles: Nginx is not a database, MongoDB is not a web server, and Node.js runs code rather than storing data."
+    },
+    {
+      "q": "A developer builds a login feature on a private copy of the code for a week, then folds the finished work into the shared main line. Which version control capability is this?",
+      "options": [
+        "Code backup",
+        "Version history and rollback",
+        "Branching and merging",
+        "Load balancing"
+      ],
+      "answerIndex": 2,
+      "week": 1,
+      "concept": "Roles of a version control system",
+      "why": "Working on a feature in isolation and then combining it with the main code line is branching (the isolated line of work) and merging (folding it back). Git is known for exactly this.\n\nCode backup is keeping a safe copy of the repository; version history is the record of past commits you can compare or roll back to; load balancing is a server job, not a version control feature."
+    },
+    {
+      "q": "A firm moves from every staff PC holding its own copy of the customer list to one server that holds the single list and answers every request for it. Which advantage of client-server architecture is this?",
+      "options": [
+        "Separation of concerns",
+        "Centralised data management",
+        "Scalability",
+        "Dynamic content generation"
+      ],
+      "answerIndex": 1,
+      "week": 1,
+      "concept": "Advantages of client-server architecture",
+      "why": "Holding the data in one place on the server, rather than scattered across clients, is centralised data management: one copy to update, secure and back up.\n\nSeparation of concerns is splitting interface work from server logic; scalability is adding servers to handle more clients; dynamic content generation is a server function, not one of the three architectural advantages."
+    },
+    {
+      "q": "What does a web server do?",
+      "options": [
+        "Stores web content and answers HTTP requests for it",
+        "Interprets HTML and draws the page on the screen",
+        "Translates domain names into IP addresses",
+        "Runs application code and manages user sessions"
+      ],
+      "answerIndex": 0,
+      "week": 1,
+      "concept": "Web browser versus web server",
+      "why": "A web server is software or hardware that stores, manages and serves web content: it receives incoming HTTP requests, processes them and responds with the requested resources. Apache, Nginx and IIS are examples.\n\nInterpreting HTML and drawing the page is the browser's job; translating names to IP addresses is DNS; running application code and managing sessions is an application server."
+    },
+    {
+      "q": "What is an IDE, as distinct from a text editor?",
+      "options": [
+        "A lightweight program for writing and editing code only",
+        "A browser panel for inspecting page elements",
+        "An environment bundling code editing with debugging and build tools",
+        "A system that tracks changes to code over time"
+      ],
+      "answerIndex": 2,
+      "week": 1,
+      "concept": "Text editor versus IDE",
+      "why": "An Integrated Development Environment such as WebStorm, Visual Studio or Eclipse provides code editing plus debugging, building and other development tooling in one place. A text editor such as VS Code, Sublime Text or Atom is lightweight and focused on editing.\n\nThe lightweight editing program is the text editor; the inspection panel is browser developer tools; tracking changes is a version control system."
+    },
+    {
+      "q": "In the domain name `mail.students.unilag.edu.ng`, which label is the top-level domain, and is it a gTLD or a ccTLD?",
+      "options": [
+        "ng; ccTLD",
+        "edu; gTLD",
+        "ng; gTLD",
+        "unilag; ccTLD"
+      ],
+      "answerIndex": 0,
+      "week": 2,
+      "concept": "DNS hierarchy: TLD, second-level domain, subdomain",
+      "why": "Read a domain name from the right. The rightmost label is the top-level domain, here ng. Two-letter country codes such as .ng and .uk are country-code TLDs (ccTLDs); generic TLDs (gTLDs) are the likes of .com, .org and .net.\n\nedu is the second-level domain under ng, not the TLD; ng is a country code so it is not generic; unilag is a subdomain of edu.ng, three labels from the right."
+    },
+    {
+      "q": "A REST API keeps orders at `/orders`. Which request creates a new order?",
+      "options": [
+        "PUT /orders",
+        "POST /orders",
+        "GET /orders/new",
+        "CREATE /orders"
+      ],
+      "answerIndex": 1,
+      "week": 2,
+      "concept": "REST verbs mapped to CRUD",
+      "why": "REST maps HTTP methods onto CRUD: POST creates, GET retrieves, PUT updates, DELETE removes. Creating a new order is a POST to the collection /orders, with the order's details in the request body.\n\nPUT updates an existing resource; GET only retrieves and never creates; CREATE is not an HTTP method."
+    },
+    {
+      "q": "A student downloads email to a phone before boarding a bus with no signal, reads it offline, and the messages are no longer held on the server afterwards. Which retrieval protocol is in use?",
+      "options": [
+        "IMAP",
+        "SMTP",
+        "MIME",
+        "POP3"
+      ],
+      "answerIndex": 3,
+      "week": 2,
+      "concept": "POP3 versus IMAP",
+      "why": "POP3 downloads messages to the client device for offline access and typically removes them from the server. IMAP keeps messages on the server and synchronises actions across devices.\n\nIMAP would have left the messages on the server; SMTP sends and relays outgoing mail, it does not retrieve; MIME is the message format standard for attachments and non-ASCII text, not a retrieval protocol."
+    },
+    {
+      "q": "A mail server at miva.edu.ng must deliver a message to ade@unilag.edu.ng. Which DNS lookup tells it where to send the message?",
+      "options": [
+        "The MX record for unilag.edu.ng",
+        "The A record for www.unilag.edu.ng",
+        "A reverse DNS lookup of the sender's IP address",
+        "The root domain record for .ng"
+      ],
+      "answerIndex": 0,
+      "week": 2,
+      "concept": "MX records in email delivery",
+      "why": "The Mail Exchanger (MX) record for a domain names the email servers that accept mail for it. The sending SMTP server looks up the MX record for unilag.edu.ng and connects to the server it names.\n\nThe A record for www gives the address of the website, not the mail server; a reverse lookup maps an IP address back to a name and says nothing about the recipient; the root and TLD servers only point down the hierarchy, they do not hold mail records."
+    },
+    {
+      "q": "An attacker feeds a resolver a forged answer that points bank.ng at the attacker's own IP address (cache poisoning). Which mechanism lets the resolver reject the forgery, and how?",
+      "options": [
+        "HTTPS; it encrypts the DNS query",
+        "DNSSEC; it adds digital signatures to DNS data",
+        "DNSSEC; it encrypts the DNS query",
+        "SFTP; it authenticates the resolver"
+      ],
+      "answerIndex": 1,
+      "week": 2,
+      "concept": "DNSSEC and cache poisoning",
+      "why": "DNSSEC (Domain Name System Security Extensions) adds digital signatures to DNS data so a resolver can verify that an answer is authentic and unaltered; a forged record fails the signature check, which prevents cache poisoning.\n\nHTTPS secures web traffic, not DNS answers; DNSSEC signs rather than encrypts, so answers are authenticated but not hidden; SFTP is a secure file transfer protocol and plays no part in name resolution."
+    },
+    {
+      "q": "A network capture of a login shows `POST /login` with `password=secret123` readable in plain text on port 80. Which protocol is in use, and what fixes the exposure?",
+      "options": [
+        "HTTP; use HTTPS",
+        "HTTPS; the TLS certificate has expired",
+        "FTP; use SFTP",
+        "HTTP; send the form with GET instead"
+      ],
+      "answerIndex": 0,
+      "week": 2,
+      "concept": "HTTP versus HTTPS",
+      "why": "Port 80 with readable request text is plain HTTP, which has no built-in security: data travels in plaintext and can be intercepted. HTTPS adds encryption, so the same POST body is unreadable in transit.\n\nHTTPS runs on port 443 and would not show readable text; FTP transfers files, not web forms; switching to GET would put the password in the URL as well, making things worse."
+    },
+    {
+      "q": "Which markup language fits each job: (a) a logo that must stay sharp at any size, (b) a settings file using your own tag names, (c) a fraction displayed on a web page?",
+      "options": [
+        "(a) SVG, (b) XML, (c) MathML",
+        "(a) XML, (b) XHTML, (c) SVG",
+        "(a) SVG, (b) HTML, (c) XML",
+        "(a) MathML, (b) XML, (c) SVG"
+      ],
+      "answerIndex": 0,
+      "week": 2,
+      "concept": "Choosing between HTML, XML, SVG, MathML and XHTML",
+      "why": "SVG describes two-dimensional vector graphics that scale without losing quality, so it suits logos and icons. XML stores and exchanges structured data with user-defined tags, so it suits configuration files. MathML is the XML-based language for mathematical notation such as fractions.\n\nXML does not draw graphics and XHTML is HTML made XML-strict, not a data format; HTML has a fixed tag set, so it cannot use your own tag names; MathML is for equations, not logos, and SVG does not typeset fractions."
+    },
+    {
+      "q": "What is REST?",
+      "options": [
+        "A protocol that exchanges strict XML messages between web services",
+        "A full-duplex channel kept open over a single TCP connection",
+        "A protocol for transferring files with encryption and authentication",
+        "An architectural style that is stateless and uses URLs with HTTP methods"
+      ],
+      "answerIndex": 3,
+      "week": 2,
+      "concept": "REST versus SOAP versus WebSocket",
+      "why": "REST (Representational State Transfer) is an architectural style and set of constraints, not a protocol: resources are modelled as URLs, manipulated with GET, POST, PUT and DELETE, and each request is stateless, carrying everything the server needs.\n\nStrict XML messages describe SOAP; a persistent full-duplex channel over one TCP connection is WebSocket; encrypted, authenticated file transfer is SFTP."
+    },
+    {
+      "q": "A glossary must show the term HTML followed by its definition. Which markup is correct?",
+      "options": [
+        "`<dl><dd>HTML</dd><dt>HyperText Markup Language</dt></dl>`",
+        "`<dl><dt>HTML</dt><dd>HyperText Markup Language</dd></dl>`",
+        "`<ul><dt>HTML</dt><dd>HyperText Markup Language</dd></ul>`",
+        "`<dl><li>HTML</li><li>HyperText Markup Language</li></dl>`"
+      ],
+      "answerIndex": 1,
+      "week": 3,
+      "concept": "Definition list elements dl, dt, dd",
+      "why": "A definition list is `<dl>` containing `<dt>` for each term and `<dd>` for its definition, in that order. So the term HTML goes in `<dt>` and the expansion in `<dd>`.\n\nThe first option swaps term and definition; `<ul>` is an unordered list and does not contain dt/dd; `<li>` is a list item for `<ol>` and `<ul>`, not for a definition list."
+    },
+    {
+      "q": "```html\n<form action=\"/login\" method=\"POST\">\n  <input type=\"text\" name=\"user\" value=\"ade\">\n  <input type=\"password\" name=\"pw\" value=\"x1\">\n  <button type=\"submit\">Log in</button>\n</form>\n```\nThe user submits. Where do the two values travel?",
+      "options": [
+        "In the body of a POST request to /login",
+        "Appended to the URL as /login?user=ade&pw=x1",
+        "In the HTTP request headers",
+        "Encrypted, because POST always encrypts"
+      ],
+      "answerIndex": 0,
+      "week": 3,
+      "concept": "GET versus POST form submission",
+      "why": "With method=\"POST\" the browser sends the form data in the request body of a POST to the action URL /login. Nothing appears in the address bar, which is why POST suits sensitive or large data.\n\nAppending user=ade&pw=x1 to the URL is what method=\"GET\" does; form data is never carried in the headers; POST moves data out of the URL but does not encrypt it, only HTTPS does that."
+    },
+    {
+      "q": "A username box must accept no more than 8 characters. Which attribute on `<input type=\"text\" name=\"user\">` enforces this?",
+      "options": [
+        "`max=\"8\"`",
+        "`minlength=\"8\"`",
+        "`pattern=\"8\"`",
+        "`maxlength=\"8\"`"
+      ],
+      "answerIndex": 3,
+      "week": 3,
+      "concept": "maxlength versus max",
+      "why": "`maxlength` limits the number of characters that can be typed into a text input, so `maxlength=\"8\"` is the attribute.\n\n`max` limits the numeric value of a number input, not its length; `minlength` sets the fewest characters allowed; `pattern` takes a regular expression, and the pattern 8 would only accept the single character 8."
+    },
+    {
+      "q": "A pizza form lists five toppings and the customer may pick any number of them, including none. Which input type is correct?",
+      "options": [
+        "`<input type=\"radio\">`",
+        "`<input type=\"checkbox\">`",
+        "`<select>` with one `<option>` per topping",
+        "`<input type=\"text\">`"
+      ],
+      "answerIndex": 1,
+      "week": 3,
+      "concept": "Radio buttons versus checkboxes",
+      "why": "Checkboxes let the user select one or more options from a list, and none at all, which is what any-number-of-toppings needs.\n\nRadio buttons in a group allow exactly one mutually exclusive choice; a plain `<select>` lets the user choose one option; a text input gives no list to pick from."
+    },
+    {
+      "q": "```html\n<p>Pay <strong>now</strong> or <em>later</em>.</p>\n```\nHow does this render?",
+      "options": [
+        "now in italics, later in bold",
+        "now underlined, later in bold",
+        "now in bold, later in italics",
+        "now and later both in bold"
+      ],
+      "answerIndex": 2,
+      "week": 3,
+      "concept": "strong versus em text formatting",
+      "why": "`<strong>` marks strong importance and is displayed bold by default; `<em>` marks emphasis and is displayed in italics. So now is bold and later is italic.\n\nSwapping them reverses the two elements; underlining comes from `<u>`, which is not used here; the two elements are different, so they do not both give bold."
+    },
+    {
+      "q": "A page has, top to bottom: a bar with the site logo, a list of links to other pages, the main article text, and a copyright line. Which semantic elements hold each part, in order?",
+      "options": [
+        "`<head>`, `<nav>`, `<body>`, `<footer>`",
+        "`<header>`, `<nav>`, `<main>`, `<footer>`",
+        "`<header>`, `<menu>`, `<section>`, `<bottom>`",
+        "`<head>`, `<ul>`, `<main>`, `<footer>`"
+      ],
+      "answerIndex": 1,
+      "week": 3,
+      "concept": "Semantic HTML elements",
+      "why": "Semantic elements name the role of each part of the page: `<header>` for the introductory bar, `<nav>` for the navigation links, `<main>` for the principal content, `<footer>` for the closing copyright line. All sit inside `<body>`.\n\n`<head>` holds invisible meta-information and is not the visible header; `<body>` is the container for everything visible, not one section; `<bottom>` and `<menu>`-as-navigation are not the semantic elements for these roles, and a bare `<ul>` carries no navigation meaning."
+    },
+    {
+      "q": "Only the word sale in the sentence Big sale today must be styled differently, and the sentence must stay on one line. Which markup is correct?",
+      "options": [
+        "`<p>Big <div class=\"hot\">sale</div> today</p>`",
+        "`<p>Big <span class=\"hot\">sale</span> today</p>`",
+        "`<span>Big <p class=\"hot\">sale</p> today</span>`",
+        "`<div>Big</div><div class=\"hot\">sale</div><div>today</div>`"
+      ],
+      "answerIndex": 1,
+      "week": 3,
+      "concept": "div versus span",
+      "why": "`<span>` is an inline container for styling part of the text inside a larger element, so wrapping just the word sale in a span keeps the sentence flowing on one line.\n\n`<div>` is a block container and would break the sentence onto separate lines; `<p>` inside `<span>` is invalid nesting and `<p>` is also block-level; three divs put each word on its own line."
+    },
+    {
+      "q": "What is the purpose of the line `<!DOCTYPE html>` at the top of a page?",
+      "options": [
+        "Tells the browser which HTML version to render with",
+        "Declares the document's character encoding",
+        "Acts as the root element containing all others",
+        "Loads the browser's default stylesheet"
+      ],
+      "answerIndex": 0,
+      "week": 3,
+      "concept": "Purpose of the DOCTYPE declaration",
+      "why": "The document type declaration is the first line of an HTML document and informs the browser which version of HTML is being used; for HTML5 it is exactly `<!DOCTYPE html>`, and it makes the browser render in standards mode.\n\nCharacter encoding is declared by `<meta charset=\"UTF-8\">`; the root element is `<html>`; the browser's default styles are built in and are not loaded by the DOCTYPE."
+    },
+    {
+      "q": "```css\n.box {\n  height: 120px;\n  padding: 15px 30px;\n  border: 3px solid;\n  margin: 20px 0;\n}\n```\nHow much vertical space does one .box take up, including its margin?",
+      "options": [
+        "156px",
+        "196px",
+        "226px",
+        "158px"
+      ],
+      "answerIndex": 1,
+      "week": 4,
+      "concept": "Box model total height calculation",
+      "why": "Total height = content + top/bottom padding + top/bottom border + top/bottom margin. `padding: 15px 30px` is 15px top and bottom (30px is left and right); `margin: 20px 0` is 20px top and bottom. So 120 + 15 + 15 + 3 + 3 + 20 + 20 = 196px.\n\n156px forgets the margin; 226px uses the 30px horizontal padding for the vertical sides; 158px counts padding, border and margin on one side only."
+    },
+    {
+      "q": "```html\n<p id=\"intro\" class=\"intro\">A</p>\n<p class=\"intro\">B</p>\n<div id=\"intro2\"><p>C</p></div>\n```\n```css\n#intro { color: red; }\n```\nWhich letters turn red?",
+      "options": [
+        "A only",
+        "A and B",
+        "A, B and C",
+        "B only"
+      ],
+      "answerIndex": 0,
+      "week": 4,
+      "concept": "ID selector versus class selector",
+      "why": "`#intro` is an ID selector: it matches the single element whose id attribute is exactly intro, which is the paragraph A.\n\nA and B would be the result of `.intro`, the class selector; A, B and C wrongly treats intro2 as a match, but an ID must be exact and C's paragraph has no id at all; B only has no id."
+    },
+    {
+      "q": "```html\n<nav>\n  <a href=\"#\">One</a>\n  <ul><li><a href=\"#\">Two</a></li></ul>\n</nav>\n<a href=\"#\">Three</a>\n```\n```css\nnav a { color: red; }\n```\nWhich links turn red?",
+      "options": [
+        "One only",
+        "Two only",
+        "One and Two",
+        "One, Two and Three"
+      ],
+      "answerIndex": 2,
+      "week": 4,
+      "concept": "Descendant selector",
+      "why": "`nav a` with a space is a descendant selector: it matches every `<a>` anywhere inside a `<nav>`, at any depth. One is a direct child and Two is nested inside ul and li, so both match.\n\nOne only would need a direct-child rule, which a space does not express; Two only ignores the direct child; Three is outside the nav, so it is not a descendant and stays unstyled."
+    },
+    {
+      "q": "```css\n.bar {\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n  height: 200px;\n}\n```\nThree short items sit in .bar with the default flex-direction. Where do they end up?",
+      "options": [
+        "Centred horizontally, sitting at the bottom",
+        "Centred vertically, pushed to the right",
+        "Centred horizontally, sitting at the top",
+        "Pushed to the left, centred vertically"
+      ],
+      "answerIndex": 0,
+      "week": 4,
+      "concept": "justify-content versus align-items",
+      "why": "With the default flex-direction: row the main axis is horizontal and the cross axis vertical. `justify-content: center` centres the items along the main axis (horizontally); `align-items: flex-end` places them at the end of the cross axis, the bottom of the 200px box.\n\nCentred vertically and pushed right swaps the two axes; the top would be align-items: flex-start; pushed left and centred vertically is justify-content: flex-start with align-items: center."
+    },
+    {
+      "q": "```css\n.row { display: flex; flex-direction: row-reverse; }\n```\nThe .row contains A, B and C in that source order. Reading the screen from left to right, what appears?",
+      "options": [
+        "A B C",
+        "C B A",
+        "A, B, C stacked top to bottom",
+        "C, B, A stacked top to bottom"
+      ],
+      "answerIndex": 1,
+      "week": 4,
+      "concept": "flex-direction values",
+      "why": "`row-reverse` keeps the main axis horizontal but runs it right to left, so the first item A is placed at the right edge and C ends up leftmost: the screen reads C B A.\n\nA B C is the default row; stacking top to bottom is column; stacked C, B, A from the top is column-reverse."
+    },
+    {
+      "q": "```css\nhtml { font-size: 2vw; }\n```\nWhat is the root font size on a viewport 640px wide, and on one 1200px wide?",
+      "options": [
+        "20px; 20px",
+        "6.4px; 12px",
+        "32px; 60px",
+        "12.8px; 24px"
+      ],
+      "answerIndex": 3,
+      "week": 4,
+      "concept": "Viewport units for fluid typography",
+      "why": "1vw is one hundredth of the viewport width, so 2vw is 2% of it: 0.02 × 640 = 12.8px and 0.02 × 1200 = 24px. The font scales with the screen, which is fluid typography.\n\n20px; 20px treats the value as fixed, which is what px would give; 6.4px; 12px uses 1vw instead of 2vw; 32px; 60px uses 5vw."
+    },
+    {
+      "q": "```html\n<p class=\"t\">web tech basics</p>\n```\n```css\n.t { text-transform: capitalize; text-decoration: line-through; }\n```\nHow does the text render?",
+      "options": [
+        "Every letter upper case, with a line through the text",
+        "First letter of each word capitalised, with a line through the text",
+        "First letter of each word capitalised, with the text underlined",
+        "Text left exactly as typed, with a line through it"
+      ],
+      "answerIndex": 1,
+      "week": 4,
+      "concept": "text-transform versus text-decoration",
+      "why": "`text-transform: capitalize` upper-cases the first letter of every word, turning web tech basics into Web Tech Basics; `text-decoration: line-through` draws a line through that text.\n\nEvery letter upper case is text-transform: uppercase; underlining is text-decoration: underline, not line-through; text left as typed would mean no text-transform at all, but capitalize does change it."
+    },
+    {
+      "q": "```html\n<span>A</span><span>B</span>\n<div>C</div><div>D</div>\n```\nWith default styles, how many lines does this occupy, and what is on each?",
+      "options": [
+        "One line: A B C D",
+        "Three lines: A B together, then C, then D",
+        "Four lines: A, B, C, D each on its own",
+        "Two lines: A on one, B C D on the other"
+      ],
+      "answerIndex": 1,
+      "week": 4,
+      "concept": "Block versus inline display",
+      "why": "`<span>` is inline: it takes only the width it needs and does not start a new line, so A and B share a line. `<div>` is block: each fills the parent's width and starts on a new line, so C and D each get their own. That is three lines.\n\nOne line would need every element inline; four lines treats spans as block; two lines gets the split backwards."
+    },
+    {
+      "q": "What is the difference between padding and margin?",
+      "options": [
+        "Padding is the space inside the border; margin is the space outside it",
+        "Padding is the space outside the border; margin is the space inside it",
+        "Padding sets the border's thickness; margin sets the content width",
+        "Both sit inside the border; margin is simply the larger of the two"
+      ],
+      "answerIndex": 0,
+      "week": 4,
+      "concept": "Padding versus margin in the box model",
+      "why": "In the box model the layers from the inside out are content, padding, border, margin. Padding is the space between the content and the border, and the element's background extends into it; margin is the space outside the border that separates the element from its neighbours.\n\nThe second option reverses the two; border thickness is border-width and content width is width; margin is never inside the border."
+    },
+    {
+      "q": "What does this log?\n\n```js\nif (true) {\n  var a = 1;\n  let b = 2;\n}\nconsole.log(typeof a, typeof b);\n```",
+      "options": [
+        "number number",
+        "undefined undefined",
+        "number undefined",
+        "ReferenceError"
+      ],
+      "answerIndex": 2,
+      "week": 5,
+      "concept": "Block scope of let versus var",
+      "why": "`var` is not block-scoped, so a is still visible after the if block and typeof a is number. `let` is block-scoped, so b does not exist outside the braces; typeof on an undeclared name does not throw, it returns undefined. Output: number undefined.\n\nnumber number would need both to escape the block; undefined undefined would need var to be block-scoped too; typeof never throws a ReferenceError for an undeclared name, though `console.log(b)` would."
+    },
+    {
+      "q": "What does this log?\n\n```js\nlet n = 7;\nlet r = n % 2 === 0 ? \"even\" : n > 5 ? \"big odd\" : \"small odd\";\nconsole.log(r);\n```",
+      "options": [
+        "even",
+        "big odd",
+        "small odd",
+        "true"
+      ],
+      "answerIndex": 1,
+      "week": 5,
+      "concept": "Ternary operator and modulus",
+      "why": "7 % 2 is 1, so `n % 2 === 0` is false and the first ternary takes its else branch, which is another ternary: 7 > 5 is true, giving \"big odd\".\n\neven would need 7 % 2 to be 0; small odd would need n ≤ 5; true is the value of the comparison, but the ternary returns one of the two strings, not the condition."
+    },
+    {
+      "q": "What does this log?\n\n```js\nlet i = 10, count = 0;\ndo {\n  count++;\n  i++;\n} while (i < 5);\nconsole.log(count, i);\n```",
+      "options": [
+        "0 10",
+        "1 11",
+        "5 15",
+        "1 10"
+      ],
+      "answerIndex": 1,
+      "week": 5,
+      "concept": "do-while runs at least once",
+      "why": "A do-while checks its condition after the body, so the body runs once: count becomes 1 and i becomes 11. Then 11 < 5 is false and the loop stops. Output: 1 11.\n\n0 10 is what a plain while loop would give, since 10 < 5 is false from the start; 5 15 assumes the loop ran until i reached 15; 1 10 forgets that i++ ran in the body."
+    },
+    {
+      "q": "What does this log?\n\n```js\nconst sq = x => x * x;\nconst f = function (a, b) { return sq(a) + b; };\nconsole.log(f(3, 4), typeof sq);\n```",
+      "options": [
+        "13 function",
+        "49 function",
+        "13 object",
+        "7 function"
+      ],
+      "answerIndex": 0,
+      "week": 5,
+      "concept": "Arrow functions and function expressions",
+      "why": "sq is an arrow function returning x squared; f is a function expression. f(3, 4) computes sq(3) + 4 = 9 + 4 = 13. A function's typeof is \"function\". Output: 13 function.\n\n49 squares a + b instead of a alone; object is wrong because functions report typeof function; 7 adds 3 and 4 without squaring."
+    },
+    {
+      "q": "What does this log?\n\n```js\nlet m = [[1, 2, 3], [4, 5]];\nconsole.log(m.length, m[1].length, m[0][2] + m[1][0]);\n```",
+      "options": [
+        "5 2 7",
+        "2 3 7",
+        "2 2 7",
+        "2 2 34"
+      ],
+      "answerIndex": 2,
+      "week": 5,
+      "concept": "Nested arrays and the length property",
+      "why": "m holds two inner arrays, so m.length is 2. m[1] is [4, 5], length 2. m[0][2] is 3 (zero-indexed third element of the first row) and m[1][0] is 4, so the sum is 7. Output: 2 2 7.\n\n5 2 7 counts every number instead of the two rows; 2 3 7 reads the length of the first row instead of the second; 2 2 34 concatenates as strings, but these are numbers so + adds."
+    },
+    {
+      "q": "What does this log?\n\n```js\nfunction Student(name, score) {\n  this.name = name;\n  this.score = score;\n}\nlet s = new Student(\"Ada\", 70);\ns.score += 15;\ns[\"level\"] = 200;\nconsole.log(Object.keys(s).length, s.score);\n```",
+      "options": [
+        "2 85",
+        "3 85",
+        "3 70",
+        "2 7015"
+      ],
+      "answerIndex": 1,
+      "week": 5,
+      "concept": "Object constructors and adding properties",
+      "why": "new Student creates an object with two properties, name and score. `s.score += 15` changes score to 85; `s[\"level\"] = 200` adds a third property using square-bracket notation. So there are 3 keys and score is 85.\n\n2 85 forgets that assigning to a new key adds a property; 3 70 forgets the += 15; 7015 would be string concatenation, but score is a number."
+    },
+    {
+      "q": "What does this log?\n\n```js\nlet box = {\n  w: 4,\n  h: 5,\n  area: function () { return this.w * this.h; }\n};\nbox.w = 6;\nconsole.log(box.area());\n```",
+      "options": [
+        "20",
+        "30",
+        "11",
+        "function"
+      ],
+      "answerIndex": 1,
+      "week": 5,
+      "concept": "Object methods and this",
+      "why": "area is a method; inside it `this` refers to box, so it reads the current values of w and h when called. w was changed to 6 before the call, so 6 × 5 = 30.\n\n20 uses the original w of 4; 11 adds instead of multiplies; function would be the result of logging box.area without the parentheses that call it."
+    },
+    {
+      "q": "What does this log?\n\n```js\nlet x = \"10\";\nlet y = 5;\nconsole.log(x + y, x - y, x * 2, typeof (x - y));\n```",
+      "options": [
+        "15 5 20 number",
+        "105 5 20 string",
+        "105 NaN NaN number",
+        "105 5 20 number"
+      ],
+      "answerIndex": 3,
+      "week": 5,
+      "concept": "String concatenation versus numeric coercion",
+      "why": "With a string operand, + concatenates: \"10\" + 5 is \"105\". The other arithmetic operators convert the string to a number: \"10\" - 5 is 5 and \"10\" * 2 is 20, and the result of subtraction is a number. Output: 105 5 20 number.\n\n15 treats + as numeric addition; string is wrong because - always produces a number; NaN would only arise if \"10\" could not be converted to a number."
+    },
+    {
+      "q": "What does `===` check that `==` does not?",
+      "options": [
+        "That the two values are equal after rounding",
+        "That the data types match as well as the values",
+        "That both operands are numbers",
+        "That both variables point to the same object"
+      ],
+      "answerIndex": 1,
+      "week": 5,
+      "concept": "Strict versus loose equality",
+      "why": "`==` compares values after converting types, so 5 == \"5\" is true. `===` is strict equality: the values must be equal and of the same data type, so 5 === \"5\" is false.\n\nNeither operator rounds; both work on any types, not only numbers; identity of objects is checked by both operators alike, the difference is type conversion."
+    },
+    {
+      "q": "What does this log?\n\n```js\nconst user = { name: \"Ada\", marks: [60, 80] };\nconst { name, marks: [first] } = user;\nconsole.log(`${name}: ${first + 5}`);\n```",
+      "options": [
+        "Ada: 65",
+        "${name}: ${first + 5}",
+        "Ada: 605",
+        "Ada: 60"
+      ],
+      "answerIndex": 0,
+      "week": 6,
+      "concept": "Destructuring and template literals",
+      "why": "Destructuring pulls name (\"Ada\") out of the object and, from the marks array, the first element into first (60). The template literal, written with backticks, evaluates each ${} expression: first + 5 is 65. Output: Ada: 65.\n\nThe literal ${...} text would appear only with ordinary quotes instead of backticks; 605 would need string concatenation, but first is a number; 60 forgets the + 5."
+    },
+    {
+      "q": "```js\nconst form = document.getElementById(\"reg\");\nform.addEventListener(\"submit\", function (e) {\n  if (document.getElementById(\"name\").value === \"\") {\n    e.preventDefault();\n    document.getElementById(\"msg\").textContent = \"Name required\";\n  }\n});\n```\nThe user clicks Submit with the name box empty. What happens?",
+      "options": [
+        "The message appears and the form is not sent",
+        "The form is sent and then the message appears",
+        "The page reloads and no message is shown",
+        "An error is thrown because value is undefined"
+      ],
+      "answerIndex": 0,
+      "week": 6,
+      "concept": "Intercepting form submission with preventDefault",
+      "why": "The submit listener runs first. An empty input has value \"\", so the condition is true, e.preventDefault() cancels the browser's default action of submitting the form, and the message text is written into the page. The form is not sent.\n\nOnce preventDefault runs the form is not submitted at all; a reload is what would happen without preventDefault; an input's value is always a string, never undefined, so no error is thrown."
+    },
+    {
+      "q": "In what order does this print?\n\n```js\nasync function run() {\n  console.log(\"1\");\n  await null;\n  console.log(\"2\");\n}\nrun();\nconsole.log(\"3\");\n```",
+      "options": [
+        "1 2 3",
+        "3 1 2",
+        "1 3 2",
+        "1 3"
+      ],
+      "answerIndex": 2,
+      "week": 6,
+      "concept": "await and the event loop",
+      "why": "Calling run() executes synchronously up to the first await, so 1 prints. await hands control back and the rest of run is queued as a microtask; the caller continues and prints 3. When the synchronous code finishes the microtask runs and prints 2. Order: 1 3 2.\n\n1 2 3 assumes await does not pause; 3 1 2 assumes an async function starts later, but its body runs immediately until the first await; 2 is not skipped, it is only deferred."
+    },
+    {
+      "q": "What does this print?\n\n```js\nPromise.reject(new Error(\"bad\"))\n  .then(() => console.log(\"A\"))\n  .catch(e => { console.log(\"B\"); return 1; })\n  .then(v => console.log(\"C\", v));\n```",
+      "options": [
+        "A B C 1",
+        "B C 1",
+        "B",
+        "A C 1"
+      ],
+      "answerIndex": 1,
+      "week": 6,
+      "concept": "Promise chaining with catch recovery",
+      "why": "The promise starts rejected, so the first .then is skipped and control jumps to .catch, which prints B and returns 1. Returning a value from catch produces a fulfilled promise, so the final .then runs with v = 1 and prints C 1.\n\nA never prints because a .then handler does not run on a rejected promise; B alone forgets that catch recovers the chain; A C 1 ignores the rejection."
+    },
+    {
+      "q": "What does this log?\n\n```js\nfunction count(first, ...rest) {\n  return rest.length;\n}\nconst arr = [1, 2, 3];\nconsole.log(count(...arr, 4), count(arr));\n```",
+      "options": [
+        "4 1",
+        "3 1",
+        "4 0",
+        "3 0"
+      ],
+      "answerIndex": 3,
+      "week": 6,
+      "concept": "Spread versus rest",
+      "why": "In the call, ...arr spreads the array into separate arguments, so count receives 1, 2, 3, 4: first is 1 and the rest parameter gathers [2, 3, 4], length 3. In count(arr) the whole array is one argument, so first is the array and rest is empty, length 0. Output: 3 0.\n\n4 counts first as well as the rest; 1 for the second call treats the single array argument as if it were spread into rest."
+    },
+    {
+      "q": "```html\n<p class=\"note\">Old</p>\n<p class=\"note\">Second</p>\n```\n```js\nconst el = document.querySelector(\".note\");\nel.textContent = \"<b>New</b>\";\nel.setAttribute(\"id\", \"first\");\n```\nAfter this runs, what does the page show?",
+      "options": [
+        "First paragraph shows New in bold type; second is unchanged",
+        "Both paragraphs show the text <b>New</b>",
+        "First paragraph shows the literal text <b>New</b>; second unchanged",
+        "Both paragraphs show New in bold"
+      ],
+      "answerIndex": 2,
+      "week": 6,
+      "concept": "querySelector and textContent",
+      "why": "querySelector returns only the first element matching the selector, so el is the paragraph Old. textContent sets plain text, not markup, so the tags are displayed literally as <b>New</b>. setAttribute adds id=\"first\" but changes nothing visible. The second paragraph is untouched.\n\nBold rendering would need innerHTML, which parses markup; both paragraphs would change only with querySelectorAll and a loop."
+    },
+    {
+      "q": "What is a promise in JavaScript?",
+      "options": [
+        "A function passed as an argument to run when a task finishes",
+        "An object standing for a value that will arrive later",
+        "A keyword that pauses a function until an operation completes",
+        "The queue the event loop empties before running timers"
+      ],
+      "answerIndex": 1,
+      "week": 6,
+      "concept": "Callbacks versus promises versus async/await",
+      "why": "A promise is an object representing the eventual result of an asynchronous operation; it is pending until it is either fulfilled with a value or rejected with a reason, and you attach handlers with .then() and .catch().\n\nA function passed in to run later is a callback; the keyword that pauses an async function is await; the queue drained before timers is the microtask queue, where promise callbacks wait."
+    },
+    {
+      "q": "What is the difference between XSS and CSRF?",
+      "options": [
+        "XSS injects script into your page; CSRF makes a logged-in user's browser send an unwanted request",
+        "XSS makes a logged-in user's browser send an unwanted request; CSRF injects script into your page",
+        "XSS steals passwords in transit; CSRF forges DNS answers",
+        "XSS is a client-side validation error; CSRF is a server-side validation error"
+      ],
+      "answerIndex": 0,
+      "week": 6,
+      "concept": "XSS versus CSRF",
+      "why": "Cross-Site Scripting (XSS) gets attacker-supplied code to run inside your page, which is why user input should be written with textContent rather than innerHTML. Cross-Site Request Forgery (CSRF) tricks a user's browser into sending a request to your site using their existing session, defended with anti-CSRF tokens.\n\nThe second option swaps the two; interception in transit is the HTTP-versus-HTTPS problem and forged DNS answers are cache poisoning; neither attack is a validation error."
+    },
+    {
+      "q": "```html\n<div id=\"box\">\n  <span class=\"tag\">A</span>\n  <span class=\"tag\">B</span>\n</div>\n```\n```js\nconst live = document.getElementsByClassName(\"tag\");\nconst snap = document.querySelectorAll(\".tag\");\nconst s = document.createElement(\"span\");\ns.className = \"tag\";\ndocument.getElementById(\"box\").appendChild(s);\nconsole.log(live.length, snap.length);\n```\nWhat is logged?",
+      "options": [
+        "3 2",
+        "2 2",
+        "3 3",
+        "2 3"
+      ],
+      "answerIndex": 0,
+      "why": "getElementsByClassName returns a live HTMLCollection that updates as the document changes, so after appendChild it holds 3 elements. querySelectorAll returns a static NodeList, a snapshot taken at the moment of the call, so it stays at 2. Logged: 3 2.\n\n2 2 treats both as snapshots; 3 3 treats both as live; 2 3 swaps the two results.",
+      "week": 7,
+      "concept": "Live HTMLCollection versus static NodeList"
+    },
+    {
+      "q": "```html\n<p id=\"one\"></p>\n<p id=\"two\"></p>\n```\n```js\ndocument.getElementById(\"one\").textContent = \"<i>Sale</i>\";\ndocument.getElementById(\"two\").innerHTML = \"<i>Sale</i>\";\n```\nWhat do the two paragraphs show on the page?",
+      "options": [
+        "Sale in italics, then the characters <i>Sale</i>",
+        "Sale in italics in both",
+        "The characters <i>Sale</i> in both",
+        "The characters <i>Sale</i>, then Sale in italics"
+      ],
+      "answerIndex": 3,
+      "why": "textContent writes plain text, so the tags are escaped and appear on screen as the characters <i>Sale</i>. innerHTML writes parsed markup, so the <i> tag becomes a real element and Sale is rendered in italics.\n\nThe second option swaps the two properties; the last two assume both behave alike. Only innerHTML parses what you assign, which is why assigning untrusted input to it is the cross site scripting risk.",
+      "week": 7,
+      "concept": "textContent versus innerHTML when writing"
+    },
+    {
+      "q": "```html\n<ul id=\"menu\">\n  <li class=\"item\">Home</li>\n  <li class=\"item\">About</li>\n</ul>\n```\nWhich expression evaluates to the second `<li>` element?",
+      "options": [
+        "`document.querySelectorAll(\".item\")[1]`",
+        "`document.querySelector(\".item\")[1]`",
+        "`document.getElementsByClassName(\".item\")[1]`",
+        "`document.getElementById(\"menu\")[1]`"
+      ],
+      "answerIndex": 0,
+      "why": "querySelectorAll takes a CSS selector and returns a NodeList of every match, so index 1 is the second list item.\n\nquerySelector returns a single element, and indexing an element gives undefined. getElementsByClassName takes a bare class name with no dot, so \".item\" matches nothing. getElementById returns one element rather than a collection, so indexing it also gives undefined.",
+      "week": 7,
+      "concept": "Choosing the right DOM selection method"
+    },
+    {
+      "q": "```html\n<div id=\"wrap\"><p>A</p><p>B</p><p>C</p></div>\n```\n```js\nconst w = document.getElementById(\"wrap\");\nw.removeChild(w.children[1]);\nw.firstElementChild.textContent = \"Z\";\nconsole.log(w.textContent);\n```\nWhat is logged?",
+      "options": [
+        "AC",
+        "ZB",
+        "ZC",
+        "ZBC"
+      ],
+      "answerIndex": 2,
+      "why": "w.children[1] is the paragraph holding B, and removeChild called on the parent takes it out, leaving A and C. firstElementChild is then the paragraph holding A, whose text is replaced with Z, so w.textContent is ZC.\n\nZBC forgets the removal; AC performs the removal but skips the rewrite; ZB removes the last child instead of the middle one.",
+      "week": 7,
+      "concept": "Removing a child and rewriting another"
+    },
+    {
+      "q": "```html\n<li id=\"t1\" data-task-id=\"42\" data-done=\"false\">Buy milk</li>\n```\n```js\nconst li = document.getElementById(\"t1\");\nconsole.log(typeof li.dataset.taskId, li.dataset.done === false);\n```\nWhat is logged?",
+      "options": [
+        "string true",
+        "boolean true",
+        "string false",
+        "number false"
+      ],
+      "answerIndex": 2,
+      "why": "A data- attribute is read through dataset with the hyphenated name turned into camelCase, so data-task-id is dataset.taskId. Every dataset value is a string, so typeof gives \"string\", and the string \"false\" is not strictly equal to the boolean false. Logged: string false.\n\nnumber false and boolean true assume the browser converts the value to a number or a boolean; string true assumes \"false\" equals false, which strict equality rejects because the types differ.",
+      "week": 7,
+      "concept": "Reading data- attributes through dataset"
+    },
+    {
+      "q": "```html\n<button id=\"go\">Go</button>\n```\n```js\nlet n = 0;\nfunction bump() { n = n + 2; }\ndocument.getElementById(\"go\").addEventListener(\"click\", bump());\n```\nThe user then clicks the button twice. What is the value of `n`?",
+      "options": [
+        "0",
+        "2",
+        "4",
+        "6"
+      ],
+      "answerIndex": 1,
+      "why": "bump() with parentheses runs the function immediately, so n becomes 2 while the listener is being registered, and what gets registered is bump's return value, undefined. The two clicks therefore do nothing and n stays 2.\n\n4 counts the two clicks but not the immediate call; 6 counts all three; 0 assumes nothing ran at all. The correct registration passes the name with no parentheses: addEventListener(\"click\", bump).",
+      "week": 7,
+      "concept": "Passing a handler function versus calling it"
+    },
+    {
+      "q": "```html\n<div id=\"d\">\n  <p>One</p>\n  <p>Two</p>\n</div>\n```\n```js\nconst d = document.getElementById(\"d\");\nconsole.log(d.children.length, d.childNodes.length);\n```\nWhat is logged?",
+      "options": [
+        "2 5",
+        "2 2",
+        "5 5",
+        "2 3"
+      ],
+      "answerIndex": 0,
+      "why": "children counts element nodes only, so it is 2. childNodes counts every node, and the line breaks and indentation between the tags are text nodes: text, element, text, element, text gives 5. Logged: 2 5.\n\n2 2 ignores whitespace text nodes; 5 5 counts them for both properties; 2 3 counts only the whitespace between the two paragraphs and misses the text before the first and after the last.",
+      "week": 7,
+      "concept": "Element nodes versus all child nodes"
+    },
+    {
+      "q": "```html\n<div id=\"cap\"></div>\n<img class=\"pic\" alt=\"Lagos\">\n<img class=\"pic\" alt=\"Abuja\">\n```\n```js\ndocument.querySelectorAll(\".pic\").forEach(function (img) {\n  img.addEventListener(\"click\", function () {\n    document.getElementById(\"cap\").textContent = img.alt;\n  });\n});\n```\nThe user clicks the second image, then the first. What does the caption div read?",
+      "options": [
+        "Abuja",
+        "AbujaLagos",
+        "LagosAbuja",
+        "Lagos"
+      ],
+      "answerIndex": 3,
+      "why": "Each image gets its own click listener, and the handler writes that image's alt text into the caption. Assigning to textContent replaces the whole content, so the second click writes Lagos over Abuja and the div reads Lagos.\n\nAbuja is the state after the first click only. The two joined answers assume textContent appends, which it never does.",
+      "week": 7,
+      "concept": "One handler attached to many elements"
+    },
+    {
+      "q": "What is the difference between an element node and a text node in a DOM tree?",
+      "options": [
+        "An element node is a tag; a text node is the value of an attribute",
+        "An element node holds only text; a text node holds child tags",
+        "An element node comes from the HTML; a text node is created only by JavaScript",
+        "An element node is a tag; a text node is the character data inside an element"
+      ],
+      "answerIndex": 3,
+      "why": "Everything in a DOM tree is a node. Element nodes are the tags such as <div>, <p> and <a>; text nodes are the character data inside an element, such as \"Read more\"; attribute nodes are the attributes on a tag, such as src or href.\n\nAn attribute value is an attribute node, not a text node. Elements contain text nodes rather than being made of text, and text nodes exist as soon as the browser parses the HTML, with or without any script.",
+      "week": 7,
+      "concept": "Element, attribute and text nodes"
+    },
+    {
+      "q": "jQuery is loaded and the page is:\n```html\n<p class=\"note\">A</p>\n<p>B</p>\n<p class=\"note\">C</p>\n```\n```js\n$(\"p.note\").css(\"color\", \"red\").text(\"Read this\");\n```\nWhat is the result?",
+      "options": [
+        "All three paragraphs turn red and read Read this",
+        "Nothing changes, because .text() cannot be chained after .css()",
+        "Both note paragraphs turn red and read Read this",
+        "Only the first note paragraph turns red and reads Read this"
+      ],
+      "answerIndex": 2,
+      "why": "A jQuery selector returns every element that matches, and a method called on that set applies to all of them, then returns the set again, which is what makes chaining work. Both paragraphs carrying class note turn red and have their text replaced.\n\nActing on the first match only is querySelector behaviour, not jQuery. The plain paragraph does not carry the class, so it is untouched. Chaining is a normal jQuery feature, so the last option is wrong.",
+      "week": 8,
+      "concept": "jQuery acts on every matched element"
+    },
+    {
+      "q": "```js\nconst r = _.chain([4, 1, 4, 3, 1]).uniq().sortBy().value();\n```\nLodash is loaded. What is `r`?",
+      "options": [
+        "[4, 3, 1]",
+        "[1, 3, 4]",
+        "[4, 1, 3]",
+        "[1, 1, 3, 4, 4]"
+      ],
+      "answerIndex": 1,
+      "why": "uniq drops repeated values, leaving [4, 1, 3]; sortBy then orders them ascending; value() ends the chain and returns the result, [1, 3, 4].\n\n[4, 1, 3] stops after uniq and forgets the sort; [1, 1, 3, 4, 4] sorts without removing duplicates; [4, 3, 1] sorts in the wrong direction.",
+      "week": 8,
+      "concept": "Lodash method chaining over an array"
+    },
+    {
+      "q": "A booking page must turn a stored date into \"Monday, 26 October 2026\", shift it to the user's timezone and print the month name in the user's language. Which library is built for this?",
+      "options": [
+        "jQuery",
+        "Express.js",
+        "Moment.js",
+        "Lodash"
+      ],
+      "answerIndex": 2,
+      "why": "Moment.js parses, formats and does arithmetic on dates and times, with timezone and locale support, which is exactly what is needed here.\n\nLodash works on arrays, objects and strings held in memory. jQuery works on the document: selection, events, AJAX and animation. Express.js is a Node.js backend framework, not a browser library.",
+      "week": 8,
+      "concept": "Matching a task to the right JavaScript library"
+    },
+    {
+      "q": "In one framework, typing in a text box updates the data model with no extra code written, and changing the model in code updates the text box. Which feature is this?",
+      "options": [
+        "Two way data binding",
+        "Unidirectional data flow",
+        "The virtual DOM",
+        "Dependency injection"
+      ],
+      "answerIndex": 0,
+      "why": "Two way data binding, the Angular feature, keeps the user interface and the data model synchronised in both directions, so a change to either affects the other.\n\nUnidirectional data flow is React's model, where data passes from parent to child only. The virtual DOM is React's in memory copy, diffed so that only changed parts of the page are updated. Dependency injection supplies service instances to a component, a different Angular feature.",
+      "week": 8,
+      "concept": "Two way data binding versus unidirectional data flow"
+    },
+    {
+      "q": "```js\napp.use((req, res, next) => { res.setHeader(\"X-A\", \"1\"); next(); });\napp.use((req, res, next) => { res.status(401).send(\"Denied\"); });\napp.get(\"/report\", (req, res) => { res.send(\"Report\"); });\n```\nA client sends `GET /report` to this Express application. What is the response body?",
+      "options": [
+        "An empty body with status 200",
+        "Denied",
+        "Report",
+        "DeniedReport"
+      ],
+      "answerIndex": 1,
+      "why": "Middleware runs in the order it is defined. The first sets a header and calls next(), so the chain continues. The second sends a 401 response and never calls next(), so the route handler is never reached and the body is Denied.\n\nReport assumes a route always wins over middleware. DeniedReport assumes both run, but one request gets one response. The last option ignores the status the answering middleware set.",
+      "week": 8,
+      "concept": "Middleware order in the request cycle"
+    },
+    {
+      "q": "A team must build an internal data entry site in Python and wants a generated admin panel plus user login and permissions without writing them. Which framework fits?",
+      "options": [
+        "Ruby on Rails",
+        "ASP.NET",
+        "Django",
+        "Express.js"
+      ],
+      "answerIndex": 2,
+      "why": "Django is the Python framework named for the admin interface it generates and for built in authentication and authorization, so both requirements are met out of the box.\n\nExpress.js is minimal and middleware based, so those features are assembled by hand, and it runs on Node.js rather than Python. Ruby on Rails is Ruby, known for convention over configuration and Active Record. ASP.NET is C# in the Microsoft ecosystem.",
+      "week": 8,
+      "concept": "Choosing a backend framework from its features"
+    },
+    {
+      "q": "What is middleware in Express.js?",
+      "options": [
+        "A layer that maps model classes onto database tables",
+        "Functions with access to the request and response objects that run in the order defined, before the route handler",
+        "The rule that decides which handler answers an incoming URL",
+        "A template engine that builds HTML on the server before it is sent"
+      ],
+      "answerIndex": 1,
+      "why": "Middleware functions sit inside the request and response cycle, have access to the request and response objects, and execute in the order they are defined, forming a pipeline used for authentication, logging and parsing before the route handler runs.\n\nDeciding which handler answers a URL is routing. Building HTML on the server is the job of a template engine such as EJS or Handlebars. Mapping model classes onto tables is an object relational mapper, for example Active Record.",
+      "week": 8,
+      "concept": "Definition of Express middleware"
+    },
+    {
+      "q": "Vue.js is described as a progressive framework. What does that mean?",
+      "options": [
+        "It replaces the browser DOM with a copy that it diffs on every change",
+        "It requires the whole application to be rewritten in its own module system",
+        "It can be adopted incrementally, from one part of a page up to a whole application",
+        "It compiles the application to a binary format before the browser runs it"
+      ],
+      "answerIndex": 2,
+      "why": "Vue focuses on the view layer and is incrementally adoptable: you use as much or as little of it as you need, dropping it into one page of an existing site or growing it into a full application. That, with its gentle learning curve, is why it is called progressive.\n\nCompiling to a binary describes WebAssembly. Diffing an in memory copy of the page describes React's virtual DOM. Expecting to own the whole application describes Angular.",
+      "week": 8,
+      "concept": "Vue as a progressive, incrementally adoptable framework"
+    },
+    {
+      "q": "```php\n$a = \"5\";\n$b = 3;\necho $a + $b;\necho \" \";\necho $a . $b;\n```\nWhat is printed?",
+      "options": [
+        "53 8",
+        "8 53",
+        "53 53",
+        "8 8"
+      ],
+      "answerIndex": 1,
+      "why": "In PHP the plus sign is arithmetic only, so the numeric string \"5\" is converted and \"5\" + 3 gives 8. The dot is the concatenation operator, so \"5\" . 3 joins them into the string 53. Printed: 8 53.\n\n53 53 treats plus as string joining, the habit carried over from JavaScript; 8 8 treats the dot as addition; 53 8 swaps the two operators.",
+      "week": 9,
+      "concept": "Concatenation operator versus addition"
+    },
+    {
+      "q": "```php\n$total = 20;\n$total += 7;\n$total %= 4;\necho $total;\n```\nWhat is printed?",
+      "options": [
+        "3",
+        "6",
+        "7",
+        "6.75"
+      ],
+      "answerIndex": 0,
+      "why": "+= adds and assigns, so $total becomes 27. %= takes the remainder and assigns, and 27 divided by 4 is 6 remainder 3, so $total ends at 3.\n\n6 gives the quotient rather than the remainder; 7 applies the modulus before the addition, 20 % 4 then plus 7; 6.75 uses division instead of modulus.",
+      "week": 9,
+      "concept": "Compound assignment and the modulus operator"
+    },
+    {
+      "q": "```php\n$out = \"\";\nfor ($i = 1; $i <= 6; $i++) {\n    if ($i % 2 == 0) { $out .= $i; }\n}\necho $out;\n```\nWhat is printed?",
+      "options": [
+        "123456",
+        "246",
+        "135",
+        "24"
+      ],
+      "answerIndex": 1,
+      "why": "The loop runs with i from 1 to 6 inclusive. The condition is true for the even values 2, 4 and 6, and .= appends each one to the string, giving 246.\n\n135 keeps the values whose remainder is 1, so it tests the wrong condition; 24 stops at 4, an off by one that ends the loop while i is under 6; 123456 appends every value and ignores the condition.",
+      "week": 9,
+      "concept": "Building a string in a for loop"
+    },
+    {
+      "q": "```php\n$age = 17;\n$fee = ($age >= 18) ? 500 : 250;\n$label = ($fee > 300) ? \"full\" : \"concession\";\necho $fee . \" \" . $label;\n```\nWhat is printed?",
+      "options": [
+        "500 concession",
+        "250 concession",
+        "500 full",
+        "250 full"
+      ],
+      "answerIndex": 1,
+      "why": "17 >= 18 is false, so the first ternary yields the value after the colon, 250. Then 250 > 300 is false, so the second yields concession. Printed: 250 concession.\n\n500 full takes the true branch of both tests. The two mixed answers take the true branch of one and the false branch of the other, which is what happens if the ternary is read as condition ? false value : true value.",
+      "week": 9,
+      "concept": "Ternary operator producing a value"
+    },
+    {
+      "q": "```php\n$rate = 5;\nfunction total($n) {\n    $rate = 2;\n    return $n * $rate;\n}\necho total(10) . \" \" . $rate;\n```\nWhat is printed?",
+      "options": [
+        "50 2",
+        "20 5",
+        "50 5",
+        "20 2"
+      ],
+      "answerIndex": 1,
+      "why": "The $rate written inside the function is a local variable, separate from the global one, so total(10) multiplies by 2 and returns 20. That assignment never touches the global $rate, which is still 5. Printed: 20 5.\n\n50 5 assumes the function can see the global value; 20 2 assumes the local assignment overwrote the global; 50 2 makes both mistakes together.",
+      "week": 9,
+      "concept": "Local variables versus global variables"
+    },
+    {
+      "q": "```php\nfunction twice($n) {\n    echo $n * 2;\n}\n$x = twice(4);\necho \"|\";\necho $x;\n```\nWhat is printed?",
+      "options": [
+        "8|8",
+        "8|0",
+        "8|",
+        "|8"
+      ],
+      "answerIndex": 2,
+      "why": "twice echoes 8 the moment it is called, before the bar is printed. It has no return statement, so it hands back NULL, and echoing NULL prints nothing. Printed: 8|.\n\n|8 assumes the value appears only at the end; 8|8 assumes the function both echoes and returns 8; 8|0 assumes a missing return gives 0, but the absent value is NULL, which prints as an empty string.",
+      "week": 9,
+      "concept": "Returning a value versus echoing it"
+    },
+    {
+      "q": "```php\nfunction countDown($n) {\n    if ($n == 0) { return \"\"; }\n    return $n . countDown($n - 1);\n}\necho countDown(4);\n```\nWhat is printed?",
+      "options": [
+        "1234",
+        "43210",
+        "432",
+        "4321"
+      ],
+      "answerIndex": 3,
+      "why": "Each call joins its own $n in front of the result of the call below it, so the digits come out from 4 downwards, and the base case at 0 contributes the empty string: 4321.\n\n1234 reverses the order, which is what you get by joining after the recursive call instead of before it; 43210 counts the base case as the character 0; 432 stops the recursion at 1 rather than 0.",
+      "week": 9,
+      "concept": "Tracing a recursive function"
+    },
+    {
+      "q": "```php\n<?php $stock = 0; ?>\n<p><?php if ($stock > 0) { echo \"In stock\"; } else { echo \"Sold out\"; } ?></p>\n```\nWhat does the browser receive?",
+      "options": [
+        "`<p></p>`",
+        "The `<p>` element with the PHP code still inside it",
+        "`<p>Sold out</p>`",
+        "`<p>In stock</p>`"
+      ],
+      "answerIndex": 2,
+      "why": "PHP runs on the server and only its output travels to the browser. $stock is 0, so the condition is false and the else branch echoes Sold out inside the paragraph, giving <p>Sold out</p>.\n\n<p>In stock</p> takes the true branch. <p></p> assumes the echo produces nothing. The last option assumes the source is sent, but a browser never receives PHP code, which is why viewing source shows only HTML.",
+      "week": 9,
+      "concept": "PHP executing on the server before HTML is sent"
+    },
+    {
+      "q": "In PHP, what is the difference between `=` and `==`?",
+      "options": [
+        "`=` assigns a value to a variable; `==` compares two values and gives a boolean",
+        "`=` compares two values; `==` assigns a value to a variable",
+        "`=` compares values only; `==` compares values and data types",
+        "`=` joins two strings; `==` adds two numbers"
+      ],
+      "answerIndex": 0,
+      "why": "The single equals sign is the assignment operator: it puts the value on its right into the variable on its left. The double equals sign is a comparison operator: it tests whether two values are equal and returns true or false.\n\nThe second option reverses them, which is the mistake behind writing if ($x = 5), a line that assigns rather than compares. The third describes the difference between == and ===. The fourth describes the dot and the plus.",
+      "week": 9,
+      "concept": "Assignment versus comparison operator"
+    },
+    {
+      "q": "A mobile app must fetch the profile of user 77 from an API that keeps users at `/api/users`, without changing anything. Which request does it send?",
+      "options": [
+        "`GET /api/users`",
+        "`PUT /api/users/77`",
+        "`GET /api/users/77`",
+        "`POST /api/users/77`"
+      ],
+      "answerIndex": 2,
+      "why": "GET is the method whose job is to retrieve data and change nothing, and a single user is one resource, addressed by adding its id to the collection path.\n\nPOST creates data, normally sent to the collection endpoint. GET /api/users returns the whole collection instead of the one profile. PUT updates the resource at that address, so it changes data the app was told to leave alone.",
+      "week": 10,
+      "concept": "Choosing an HTTP method and endpoint"
+    },
+    {
+      "q": "An API endpoint requires a token. A client calls it with no token at all. Which status code should the response carry?",
+      "options": [
+        "404",
+        "429",
+        "500",
+        "401"
+      ],
+      "answerIndex": 3,
+      "why": "401 is the client error code for a request that has not been authenticated, which is exactly what a missing token means.\n\n404 says the endpoint or resource was not found; 429 says the client has passed its rate limit; 500 says the server itself failed while processing an otherwise valid request. The status is the part of the response the client checks before reading the body.",
+      "week": 10,
+      "concept": "Matching an API failure to its status code"
+    },
+    {
+      "q": "A dashboard must hold about 20,000 open connections and push each price change out the moment it arrives. Which server side language is chosen for this, and for what reason?",
+      "options": [
+        "Node.js, for its event driven, non blocking I/O",
+        "Java, for its reliability and scalability",
+        "PHP, for its simplicity and embedding in HTML",
+        "Ruby, for its elegant syntax"
+      ],
+      "answerIndex": 0,
+      "why": "Node.js runs JavaScript on the server with an event driven, non blocking I/O model, so a slow operation does not stall the process and one server can hold a large number of concurrent connections. That is the stated reason it suits real time applications.\n\nThe other three name each language with the quality it is known for, but reliability, simplicity and elegant syntax are not what makes thousands of live connections cheap to keep open.",
+      "week": 10,
+      "concept": "Matching a server side language to a workload"
+    },
+    {
+      "q": "A web server environment is listed as Ubuntu Server, Apache, MySQL and PHP, managed with phpMyAdmin and Fail2ban. Which stack is this, and which component is the operating system?",
+      "options": [
+        "MEAN, and Ubuntu Server",
+        "LAMP, and Ubuntu Server",
+        "LAMP, and Apache",
+        "LAMP, and MySQL"
+      ],
+      "answerIndex": 1,
+      "why": "LAMP stands for Linux, Apache, MySQL and PHP, and Ubuntu Server is the Linux distribution, so it is the operating system component of the environment.\n\nApache is the web server and MySQL is the database server; both are server software sitting on top of the operating system. MEAN names a different stack altogether, built on MongoDB, Express, Angular and Node.js.",
+      "week": 10,
+      "concept": "Components of a LAMP stack"
+    },
+    {
+      "q": "A query that filters `orders` on `customer_id` reads every row and takes 4 seconds. The data is already split cleanly across related tables. Which technique fixes the speed?",
+      "options": [
+        "Add a second application server",
+        "Allow customer_id to hold NULL",
+        "Create an index on customer_id",
+        "Normalise the orders table further"
+      ],
+      "answerIndex": 2,
+      "why": "An index is a structure built on a frequently queried column so the database can find matching rows without scanning the whole table, which is the standard cure for a slow filter.\n\nNormalization splits data across related tables to cut redundancy and improve integrity, and the data is already normalised, so further splitting would not help and can slow reads. More application servers do not change how the database finds rows. Allowing NULL changes what may be stored, not how it is searched.",
+      "week": 10,
+      "concept": "Indexing versus normalization"
+    },
+    {
+      "q": "A catalogue holds millions of product records whose fields differ from one supplier to the next, with no fixed set of columns. Which database management system suits it?",
+      "options": [
+        "MongoDB",
+        "MySQL",
+        "Redis",
+        "Oracle Database"
+      ],
+      "answerIndex": 0,
+      "why": "MongoDB is the NoSQL, document oriented and schema less system meant for large volumes of unstructured or semi structured data with flexible data models, which is what records with varying fields are.\n\nMySQL and Oracle Database are relational systems with a fixed schema of tables and columns. Redis is NoSQL too, but it is an in memory key value store for caching, real time analytics and message brokering, not a store for millions of catalogue records.",
+      "week": 10,
+      "concept": "Choosing SQL or NoSQL for a data shape"
+    },
+    {
+      "q": "What is a database management system?",
+      "options": [
+        "Software that provides an interface for storing, retrieving, manipulating and securing data in databases",
+        "A structured collection of data organised for efficient storage and retrieval",
+        "The blueprint of the tables, fields, data types and relationships of one database",
+        "A domain specific language for querying and managing relational databases"
+      ],
+      "answerIndex": 0,
+      "why": "A database management system is the software layer you interact with: it manages storage, retrieval, manipulation, user access and security for the databases it holds. MySQL, PostgreSQL and MongoDB are examples.\n\nThe second option defines a database itself, the data rather than the software. The third defines a schema. The fourth defines SQL, the language you send to the system.",
+      "week": 10,
+      "concept": "Database, DBMS, schema and SQL distinguished"
+    },
+    {
+      "q": "What is the difference between a data model and a schema?",
+      "options": [
+        "A data model is an index on a column; a schema is a backup copy of the tables",
+        "A data model is the conceptual structure of data; a schema is one database's concrete blueprint",
+        "A data model is one database's concrete blueprint; a schema is the conceptual structure of data",
+        "A data model is the software that manages the data; a schema is the language used to query it"
+      ],
+      "answerIndex": 1,
+      "why": "A data model is the conceptual representation of how data is structured and related, and relational, document and graph are the three named models. A schema is the concrete blueprint of one database: its tables, fields, data types and relationships.\n\nThe second option swaps them. The third describes a database management system and SQL. MongoDB being schema less still has a data model, the document model, which shows the two terms are not interchangeable.",
+      "week": 10,
+      "concept": "Data model versus schema"
+    },
+    {
+      "q": "```php\n$sql = \"SELECT * FROM orders WHERE id = \" . $_GET[\"id\"];\n```\nWhich change removes the injection risk on this line?",
+      "options": [
+        "Encode the query result before printing it to the page",
+        "Send the id in a POST body instead of the query string",
+        "Use a prepared statement with a placeholder for the id",
+        "Wrap the value in double quotes before joining it"
+      ],
+      "answerIndex": 2,
+      "why": "The value from the request is pasted straight into the SQL text, so a crafted id changes what the query means. A prepared statement sends the query and the value separately, so the value can never be read as SQL. Input validation and parameterised queries are the named defence against SQL injection.\n\nQuoting can be broken by the attacker's own quote character. Encoding output defends against cross site scripting instead. Moving the value into a POST body changes only where it travels; it is still user input pasted into SQL.",
+      "week": 11,
+      "concept": "Preventing SQL injection with parameterised queries"
+    },
+    {
+      "q": "A site now encodes everything it prints from user input and adds a Content Security Policy that refuses to run inline scripts. Which vulnerability is being closed?",
+      "options": [
+        "SQL injection",
+        "Cross site request forgery",
+        "Security misconfiguration",
+        "Cross site scripting"
+      ],
+      "answerIndex": 3,
+      "why": "Cross site scripting is a malicious script injected into a page that other users then view. Output encoding and a Content Security Policy are its two named mitigations.\n\nSQL injection is closed by input validation and parameterised queries. Cross site request forgery is closed by unique session tokens and session expiration. Security misconfiguration is closed by correcting the settings themselves, such as turning off debug output on a live site.",
+      "week": 11,
+      "concept": "Matching a defence to the vulnerability it closes"
+    },
+    {
+      "q": "A login form now asks for a one time code from an authenticator app as well as the password. Which practice is this, and which property does it strengthen?",
+      "options": [
+        "Security headers, strengthening authorisation",
+        "Two factor authentication, strengthening authentication",
+        "Two factor authentication, strengthening authorisation",
+        "Session management, strengthening authentication"
+      ],
+      "answerIndex": 1,
+      "why": "Asking for a second proof of identity is two factor authentication, and authentication is the step that verifies who the user is.\n\nAuthorisation is the separate step that decides what an identified user may do, through roles and permissions, and a second factor changes none of those privileges. Session management means unique tokens and expiry; security headers are response headers such as HSTS and X-Content-Type-Options.",
+      "week": 11,
+      "concept": "Authentication versus authorisation"
+    },
+    {
+      "q": "Requests carrying `' OR 1=1--` in a form field are inspected and blocked before they reach the application code at all. Which component did that?",
+      "options": [
+        "A content delivery network",
+        "A version control system",
+        "A web application firewall",
+        "A load balancer"
+      ],
+      "answerIndex": 2,
+      "why": "A web application firewall filters and monitors HTTP and HTTPS requests, recognises malicious patterns and payloads, and blocks them before they reach the application. It is an additional layer rather than a replacement for secure coding.\n\nA load balancer spreads traffic across servers. A content delivery network caches content near users. A version control system keeps a history of code. None of the three inspects request payloads for attacks.",
+      "week": 11,
+      "concept": "What a web application firewall does"
+    },
+    {
+      "q": "Visitors in Nairobi wait about 900 ms for images served from a single server in London, while that server is barely loaded. Which fix cuts the wait most directly?",
+      "options": [
+        "Upgrade the London server's CPU and memory",
+        "Add an index to the products table",
+        "Move the site to shared hosting",
+        "Serve the images from a content delivery network"
+      ],
+      "answerIndex": 3,
+      "why": "The delay comes from the distance between the users and the single server. A content delivery network is a geographically distributed set of servers that cache content and deliver it from a location close to the user, which is what cuts latency here.\n\nUpgrading the server is vertical scaling and shortens no network path, and the server is not the bottleneck. A database index speeds up queries, not image delivery. Shared hosting is the cheapest option with limited performance, so it would make matters worse.",
+      "week": 11,
+      "concept": "Latency from distance and the CDN fix"
+    },
+    {
+      "q": "One application server handles at most 250 concurrent users. Peak demand is 1,100 concurrent users, and the team wants one spare identical server so peak is still met if one fails. How many servers do they run?",
+      "options": [
+        "6",
+        "5",
+        "4",
+        "7"
+      ],
+      "answerIndex": 0,
+      "why": "1,100 divided by 250 is 4.4, and a server cannot be a fraction, so 5 are needed to carry the peak. One spare for failover makes 6.\n\n5 meets peak with no spare left over; 4 rounds 4.4 down and falls 100 users short; 7 adds two spares rather than one. Adding machines behind a load balancer like this is horizontal scaling, as against vertical scaling, which upgrades a single machine.",
+      "week": 11,
+      "concept": "Sizing a horizontally scaled tier"
+    },
+    {
+      "q": "A rule sends the on call engineer a notification whenever CPU use stays above 90 percent for five minutes. Which monitoring concept is this?",
+      "options": [
+        "Alerts",
+        "Metrics",
+        "Logging",
+        "Error handling"
+      ],
+      "answerIndex": 0,
+      "why": "An alert fires when a monitored value crosses a threshold, which is precisely a notification triggered by CPU staying above 90 percent for five minutes.\n\nMetrics are the measurements themselves, such as response times, error rates and resource use; the CPU figure is the metric and the notification is the alert. Logging is the recorded history of events, actions and errors. Error handling, with try and catch, belongs to debugging rather than monitoring.",
+      "week": 11,
+      "concept": "Metrics, alerts and logging distinguished"
+    },
+    {
+      "q": "What is the difference between deployment and hosting?",
+      "options": [
+        "Deployment provides the infrastructure that makes a site reachable; hosting sets up and configures the servers",
+        "Deployment is writing the application code; hosting is testing it before release",
+        "Deployment means adding more servers; hosting means upgrading the existing one",
+        "Deployment sets up and configures the servers; hosting provides the infrastructure that makes the site reachable"
+      ],
+      "answerIndex": 3,
+      "why": "Deployment is the work of setting up and configuring servers, covering their hardware, software and network. Hosting is the service that provides the resources and infrastructure that make the application reachable over the internet.\n\nThe second option swaps the two. The third describes development and testing. The fourth describes horizontal and vertical scaling.",
+      "week": 11,
+      "concept": "Deployment versus hosting"
+    },
+    {
+      "q": "A physics engine written in C++ must run inside the browser at close to native speed. What is the C++ compiled to?",
+      "options": [
+        "A service worker that runs in the background",
+        "WebAssembly, a binary instruction format the browser executes",
+        "Minified JavaScript, which the browser interprets",
+        "A JSON bundle that the page loads and parses"
+      ],
+      "answerIndex": 1,
+      "why": "WebAssembly is a binary instruction format designed for web browsers. Code written in C++, Rust or TypeScript is compiled into it and the browser executes it directly at near native speed, which is why it suits gaming, simulations and video editing.\n\nJavaScript is interpreted, and its performance limits are what WebAssembly exists to address. JSON is a data format, not executable code. A service worker is the background script behind offline access and push notifications in a progressive web app.",
+      "week": 12,
+      "concept": "What WebAssembly is and where it comes from"
+    },
+    {
+      "q": "Untrusted third party code is run in the browser as WebAssembly and cannot reach the user's files or other pages. Which named advantage of WebAssembly is this?",
+      "options": [
+        "Progressive enhancement for older devices",
+        "Security, from running in a sandboxed environment",
+        "Speed and performance close to native code",
+        "Cross platform compatibility across major browsers"
+      ],
+      "answerIndex": 1,
+      "why": "WebAssembly executes in a sandboxed environment isolated from the rest of the system, and running untrusted code safely is the example given for its security advantage.\n\nSpeed and performance is the near native execution advantage. Cross platform compatibility is one build running in all major browsers, on desktop and mobile. Progressive enhancement is a progressive web app principle, not a WebAssembly advantage at all.",
+      "week": 12,
+      "concept": "The three advantages of WebAssembly"
+    },
+    {
+      "q": "The first call to a serverless function after an idle hour takes 2.5 seconds, while the calls that follow take about 40 ms each. Which serverless challenge is this?",
+      "options": [
+        "Vendor lock in",
+        "Statelessness",
+        "Rate limiting",
+        "Cold starts"
+      ],
+      "answerIndex": 3,
+      "why": "A cold start is the delay while the provider brings up a new instance for a function that has not run recently; once it is warm the following calls are quick. Cold starts and vendor lock in are the two named challenges of serverless architecture.\n\nVendor lock in is the difficulty of moving to another provider. Statelessness means no state is kept between invocations, which does not on its own make the first call slow. Rate limiting caps how many requests a client may send.",
+      "week": 12,
+      "concept": "The named challenges of serverless architecture"
+    },
+    {
+      "q": "A retailer feeds 50,000 unlabelled purchase histories to a model and it groups the shoppers into six segments that nobody defined in advance. Which type of machine learning is this?",
+      "options": [
+        "Supervised learning",
+        "Natural language processing",
+        "Computer vision",
+        "Unsupervised learning"
+      ],
+      "answerIndex": 3,
+      "why": "Unsupervised learning trains on unlabelled data to find patterns and groupings, and clustering customers into market segments is its named example. Clustering is always unsupervised.\n\nSupervised learning needs labelled data, as a spam filter trained on mail already marked spam or not spam does. Natural language processing works on human language and computer vision on images and video; neither names a learning style.",
+      "week": 12,
+      "concept": "Supervised versus unsupervised learning"
+    },
+    {
+      "q": "A support tool reads a customer's typed complaint, works out what is being asked and answers in plain English. Which field of artificial intelligence is this?",
+      "options": [
+        "Computer vision",
+        "Deep learning",
+        "Edge artificial intelligence",
+        "Natural language processing"
+      ],
+      "answerIndex": 3,
+      "why": "Natural language processing is computers understanding, interpreting and generating human language, and a chatbot answering user queries is its named example.\n\nComputer vision interprets visual information from images and video, such as facial recognition. Deep learning names a technique, neural networks with many layers, rather than the task. Edge artificial intelligence means running models close to where the data is generated, for low latency.",
+      "week": 12,
+      "concept": "Fields of artificial intelligence distinguished"
+    },
+    {
+      "q": "Every menu, button and form field on a site can be reached and activated with the keyboard alone. Which accessibility principle does this satisfy?",
+      "options": [
+        "Perceivable",
+        "Understandable",
+        "Robust",
+        "Operable"
+      ],
+      "answerIndex": 3,
+      "why": "Operable means the interface can be navigated and used through various inputs, and the named example is that all interactive elements are keyboard accessible.\n\nPerceivable is about users being able to sense the content, with alternative text for images as its example. Understandable is about clear content and plain language. Robust is about working with current and future technologies, with semantic HTML as its example.",
+      "week": 12,
+      "concept": "The four accessibility principles"
+    },
+    {
+      "q": "A news app opened from the phone's home screen still shows yesterday's articles in flight mode, and it can deliver push notifications. Which technology provides both?",
+      "options": [
+        "Service workers",
+        "Responsive design",
+        "Two way data binding",
+        "A load balancer"
+      ],
+      "answerIndex": 0,
+      "why": "Service workers are the scripts behind a progressive web app's offline access, caching of resources for faster loading, and push notifications, which covers both behaviours described.\n\nResponsive design adapts the layout to screen size and orientation. Two way data binding is an Angular feature for keeping a model and a form field in step. A load balancer distributes traffic between servers and has nothing to do with a device being offline.",
+      "week": 12,
+      "concept": "What service workers give a progressive web app"
+    },
+    {
+      "q": "What is the difference between web accessibility and inclusivity?",
+      "options": [
+        "Accessibility makes content usable by people with disabilities; inclusivity designs for all users regardless of ability",
+        "Accessibility designs for all users regardless of ability; inclusivity makes content usable by people with disabilities",
+        "Accessibility applies to mobile devices; inclusivity applies to desktop computers",
+        "Accessibility is a set of testing tools; inclusivity is a legal requirement"
+      ],
+      "answerIndex": 0,
+      "why": "Web accessibility is ensuring that sites, applications and content are usable by people with disabilities, covering visual, auditory, motor and cognitive needs. Inclusivity goes further, designing for all users regardless of ability.\n\nThe second option swaps the two. Neither term is about a class of device, and neither is only a toolset or only a legal duty, although regulations such as the Americans with Disabilities Act do apply to accessibility.",
+      "week": 12,
+      "concept": "Accessibility versus inclusivity"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 3, exactly as the lecturer builds it.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Evaluate lim(x→−2) (x² + 3x − 1).
 A. −3
@@ -51,13 +51,29 @@ B. The limit is 1
 C. The limit does not exist
 D. The limit may still exist; more algebra is needed
 
-**9. (show your working)** Evaluate lim(x→0) (eˣ − 1)/x using L'Hôpital's Rule. Name f(x), g(x), f′(x) and g′(x) in your working.
+**9.** Evaluate lim(x→0) (eˣ − 1)/x by L'Hôpital's Rule. Which quotient f′(x)/g′(x) do you evaluate, and what is the limit?
+A. eˣ/1, limit 1
+B. eˣ/1, limit 0
+C. eˣ/x, so the limit does not exist
+D. (xeˣ − eˣ + 1)/x², limit 0
 
-**10. (show your working)** Show that lim(x→5) 1/x² equals 1/[lim(x→5) x²] by evaluating each side separately. Show your working.
+**10.** Evaluate lim(x→5) 1/x² and 1/[lim(x→5) x²] separately. What is the value they share?
+A. 25
+B. 1/10
+C. 1/25
+D. 1/5
 
-**11. (show your working)** Evaluate lim(x→0) (√(x + 1) − 1)/x. Show your working.
+**11.** Evaluate lim(x→0) (√(x + 1) − 1)/x.
+A. 0
+B. 1/2
+C. 1
+D. 2
 
-**12. (show your working)** In lim(x→2) (x² − 4)/(x − 2), the factor (x − 2) is cancelled even though x − 2 = 0 at x = 2. Explain why the cancellation is legitimate, and why the limit is 4 although the function is undefined at x = 2.
+**12.** In lim(x→2) (x² − 4)/(x − 2) the factor (x − 2) is cancelled even though x − 2 = 0 at x = 2. Why is that cancellation legitimate?
+A. The form 0/0 equals 1, so the two copies of the factor cancel
+B. Cancelling a common factor is allowed in any fraction, zero or not
+C. After cancelling, the function is defined at x = 2, so the hole closes
+D. x only approaches 2 and never equals it, so x − 2 is close to zero but never zero
 
 ---
 
@@ -95,18 +111,18 @@ The other three all give 0/0 at the point: (4 − 4)/(2 − 2), (3 − 3)/0 and 
 
 'The limit is 0' treats 0/0 as ordinary division into zero; 'the limit is 1' treats any number over itself as 1; 'does not exist' confuses the function being undefined at 5 with the limit failing.
 
-**9.** *L'Hôpital's Rule, first application.* Substitution gives (1 − 1)/0 = 0/0, an indeterminate form, so L'Hôpital applies. Set f(x) = eˣ − 1 and g(x) = x; then f′(x) = eˣ and g′(x) = 1. Replace the quotient by f′/g′: lim(x→0) eˣ/1 = e⁰ = 1.
+**9. A** — *L'Hôpital's Rule, first application.* Substituting x = 0 gives (1 − 1)/0 = 0/0, an indeterminate form, so the rule is allowed. Take f(x) = eˣ − 1 and g(x) = x separately, so f′(x) = eˣ and g′(x) = 1, and the new quotient is eˣ/1, whose value at 0 is e⁰ = 1.
 
-Final answer: 1. A correct answer checks the 0/0 form, differentiates top and bottom separately (not the quotient rule), and evaluates eˣ at 0. Any working containing g² is the quotient rule and is wrong.
+eˣ/x differentiates only the numerator, (xeˣ − eˣ + 1)/x² applies the quotient rule instead of the rule itself, and reading e⁰ as 0 gives the limit 0.
 
-**10.** *Verifying the reciprocal property.* Left-hand side: lim(x→5) 1/x² = 1/5² = 1/25 by substitution. Right-hand side: lim(x→5) x² = 25, so 1/[lim x²] = 1/25. Both sides are 1/25, so L.H.S = R.H.S.
+**10. C** — *Verifying the reciprocal property.* Direct substitution on the left gives 1/5² = 1/25. On the right, lim(x→5) x² = 25 first, and then the reciprocal is 1/25. Both sides come to 1/25, or 0.04, which is what the reciprocal property predicts, and it is valid here because lim x² = 25 is not zero.
 
-Final answer: both sides equal 1/25 (0.04). A correct answer computes the two sides independently and notes that the reciprocal property is valid here because lim x² = 25 ≠ 0.
+25 forgets to take the reciprocal at all, 1/5 forgets to square, and 1/10 comes from differentiating x² instead of substituting into it.
 
-**11.** *Limit by multiplying by the conjugate.* Substitution gives (1 − 1)/0 = 0/0. Multiply numerator and denominator by the conjugate of the numerator, √(x + 1) + 1: the numerator becomes (x + 1) − 1 = x, giving x/[x(√(x + 1) + 1)]. Cancel x: lim(x→0) 1/(√(x + 1) + 1) = 1/(1 + 1) = 1/2.
+**11. B** — *Limit by multiplying by the conjugate.* Substitution gives (1 − 1)/0 = 0/0, so multiply top and bottom by the conjugate √(x + 1) + 1. The numerator collapses to (x + 1) − 1 = x, leaving x/[x(√(x + 1) + 1)], and cancelling x gives 1/(√(x + 1) + 1), which at x = 0 is 1/(1 + 1) = 1/2.
 
-Final answer: 1/2 (0.5). A correct answer names the conjugate √(x + 1) + 1, shows the numerator collapsing to x, and cancels before substituting. 1 (forgetting the + 1 in the denominator) and 0 (reading 0/0 as 0) are wrong.
+1 comes from forgetting the + 1 left in the denominator, 0 comes from reading 0/0 as zero, and 2 inverts the final fraction.
 
-**12.** *Why cancelling a common factor inside a limit is legitimate.* Inside a limit, x approaches 2 but never equals 2, so x − 2 is close to zero but never actually zero, and dividing by it is allowed. After cancelling, (x² − 4)/(x − 2) = x + 2 at every x except 2, and the limit only looks at values near 2, not at 2 itself, so lim(x→2) (x + 2) = 4.
+**12. D** — *Why cancelling a common factor inside a limit is legitimate.* Inside a limit x runs towards 2 without ever arriving, so x − 2 is a small nonzero number throughout and dividing by it is legal. Once cancelled, the expression equals x + 2 at every x except 2 itself, and a limit only inspects nearby values, so lim(x→2) (x + 2) = 4 even though f(2) is undefined.
 
-A correct answer says x ≠ 2 throughout the limit, that the simplified function agrees with the original everywhere except at the single point x = 2, and that a limit never inspects the point itself, so f(2) being undefined does not stop the limit being 4.
+0/0 is not 1, cancelling a genuinely zero factor is not allowed, and cancelling does not change the original function's domain.

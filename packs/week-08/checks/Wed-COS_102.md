@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *Abstraction and the anatomy of functions and modules, as concepts.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** ```c
 int f(int n) { n = n * 3; return n - 1; }
@@ -79,7 +79,9 @@ B. Data abstraction
 C. Decomposition
 D. Module import
 
-**9. (show your working)** ```c
+**9.** What does this program print?
+
+```c
 int area(int w, int h) { return w * h; }
 int perim(int w, int h) { return 2 * (w + h); }
 int main(void) {
@@ -89,13 +91,28 @@ int main(void) {
     return 0;
 }
 ```
-Trace this: give the arguments each call receives, the value each call returns, and the output. Show your working.
+A. −1
+B. 9
+C. 4
+D. 2
 
-**10. (show your working)** For `double bmi(double mass, double height) { return mass / (height * height); }` name the return type, the function name, the parameters and the function body. Then write a declaration for it, and a call that stores the result for mass 70 and height 1.75 in a variable `b`. Give the value of b to 2 decimal places.
+**10.** `double bmi(double mass, double height) { return mass / (height * height); }` What does `double b = bmi(70, 1.75);` store in b, to 2 decimal places?
+A. 22.86
+B. 40.00
+C. 122.50
+D. 0.00
 
-**11. (show your working)** A shop takes 15% off three prices, 100, 200 and 300, and prints the discounted total. Write two C functions, `withDiscount(price)` returning the price less 15% and `total3(a, b, c)` returning the sum of three values, and the statement in main that prints the total. State the number printed.
+**11.** `withDiscount(p)` returns a price less 15% and `total3(a, b, c)` returns the sum of three values. What does `printf("%.2f", total3(withDiscount(100), withDiscount(200), withDiscount(300)));` print?
+A. 600.00
+B. 555.00
+C. 90.00
+D. 510.00
 
-**12. (show your working)** A tax formula is pasted twelve times in a program, once at each place it is needed, and then the tax rate changes. Using the two benefits of functions, explain what goes wrong with the pasted version and what the fix is.
+**12.** A tax formula is pasted at twelve places in a program, and then the tax rate changes. Which statement names what a function would have given the team?
+A. The formula would run faster, because it is compiled only once.
+B. The formula is written once and called twelve times, so one edit changes every use.
+C. The rate would become a constant that no part of the program could change.
+D. The compiler would compare the twelve copies and warn about any difference.
 
 ---
 
@@ -133,23 +150,18 @@ Deleting `return 0;` only changes what main hands back; deleting the printf remo
 
 Functional abstraction hides how a method is implemented, leaving callers only its name and input and output formats; decomposition is breaking a project into functions; importing a module makes its names available and hides nothing.
 
-**9.** *Tracing calls with arguments and return values.* The first argument to area is w + 1 = 4, the second is h = 5, so area(4, 5) returns 4 × 5 = 20. perim receives 3 and 5 and returns 2 × (3 + 5) = 16. Then d = 20 − 16 = 4 and the program prints 4.
+**9. C** — *Tracing calls with arguments and return values.* The arguments are worked out before the call: area receives w + 1 = 4 and h = 5, so it returns 4 × 5 = 20; perim receives 3 and 5, so it returns 2 × 8 = 16. d = 20 − 16 = 4.
 
-Final answer: 4. A correct answer states area(4, 5) = 20, perim(3, 5) = 16, and the output 4. Using area(3, 5) = 15 (forgetting the + 1 in the argument) gives −1 and is wrong; 2 × 3 + 5 = 11 for perim ignores the brackets and is wrong.
+−1 forgets the + 1 and uses area(3, 5) = 15; 9 drops the brackets in perim and computes 2 × 3 + 5 = 11; 2 passes w + 1 to perim as well, giving 2 × 9 = 18.
 
-**10.** *Naming the parts of a function and calling it.* Return type: `double`. Function name: `bmi`. Parameters: `double mass, double height`. Body: `{ return mass / (height * height); }`. Declaration: `double bmi(double mass, double height);` (parameter names may be omitted: `double bmi(double, double);`). Call: `double b = bmi(70, 1.75);`. Value: 1.75² = 3.0625 and 70 / 3.0625 = 22.857..., so b = 22.86.
+**10. A** — *Calling a function with arguments in order.* Arguments bind to parameters by position, so mass is 70 and height is 1.75. height × height = 3.0625, and 70 / 3.0625 = 22.857..., which is 22.86 to two places.
 
-A correct answer names all four parts, writes the declaration with a semicolon and no body, passes the arguments in the order mass then height, and gives 22.86 (22.857 accepted). `bmi(1.75, 70)` binds the values to the wrong parameters and gives 0.000357, which is wrong.
+40.00 divides by the height once instead of squaring it; 122.50 multiplies by the height; 0.00 is bmi(1.75, 70), which binds the two values to the wrong parameters and gives 0.000357.
 
-**11.** *Decomposing a task into functions.* ```c
-double withDiscount(double price) { return price * 0.85; }
-double total3(double a, double b, double c) { return a + b + c; }
-/* in main */
-printf("%.2f\n", total3(withDiscount(100), withDiscount(200), withDiscount(300)));
-```
+**11. D** — *Reusing one function on several values.* withDiscount is applied to each price on its own: 100 × 0.85 = 85, 200 × 0.85 = 170 and 300 × 0.85 = 255. total3 adds the three results: 85 + 170 + 255 = 510, printed as 510.00.
 
-100 × 0.85 = 85, 200 × 0.85 = 170, 300 × 0.85 = 255, and 85 + 170 + 255 = 510, so the program prints 510.00. A correct answer has withDiscount return price × 0.85 (or price − price × 0.15), total3 return a + b + c, calls withDiscount once per price, and states 510 (510.00 accepted). Returning price × 0.15 gives 90 and is the discount, not the discounted price; that is wrong.
+600.00 is the total with no discount at all; 555.00 takes a flat 15 off each price instead of 15 per cent; 90.00 returns the discount itself, 0.15 × p, rather than the discounted price.
 
-**12.** *Why functions avoid duplicated code.* With twelve pasted copies the rate must be changed in twelve places, and any copy that is missed keeps the old rate, so the program silently gives two different answers. Functions avoid duplicating code: however many times a function is used, it is implemented only once. The fix is one function, say `double tax(double amount)`, called twelve times; the rate then lives on one line and one edit changes every use. The second benefit is scaling up: adding more places that need tax means adding calls, not copies, so the system stays stable as the program grows.
+**12. B** — *Why functions avoid duplicated code.* A function is implemented once however many times it is used, so the rate lives on one line: change it there and all twelve callers change with it. With pasted copies the same edit must be made twelve times, and any copy that is missed leaves the program quietly giving two different answers.
 
-A correct answer names duplication (implement once, call many times), says the rate is edited in one place, and mentions that callers only need the function's name and input and output formats, so changing the body breaks nothing else.
+Calling a function does not make the code faster, a function is not a constant, and a compiler never compares duplicated code for you.

@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *Code work on arrays and recursion.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** What does `show(3)` print?
 
@@ -93,18 +93,27 @@ B. Infinite loop: the program should have hung rather than stopped
 C. Integer overflow: n became too large for an int
 D. Compile error: the function was never built
 
-**9. (show your working)** Write a recursive C function `int pw(int b, int e)` that returns b raised to the power e for e >= 0. State the base case and its value and the recursive case, then trace `pw(3, 4)` showing what is pending in each frame. Show your working.
-
-**10. (show your working)** This is meant to print the elements of a in reverse order. State what is actually printed, which access is out of range, which element is never printed, and write the corrected loop. Show your working.
+**9.** What does `pw(3, 4)` return?
 
 ```c
-int a[4] = {2, 4, 6, 8};
-int i;
-for (i = 4; i > 0; i--)
-    printf("%d ", a[i]);
+int pw(int b, int e)
+{
+    if (e == 0) return 1;
+    return b * pw(b, e - 1);
+}
 ```
+A. 27
+B. 81
+C. 12
+D. 0
 
-**11. (show your working)** Rewrite `s` as an iterative function using a loop that returns the same value for every n >= 0, then state the value of `s(5)` for both versions. Show your working.
+**10.** `int a[4] = {2, 4, 6, 8};` Which loop prints `8 6 4 2`?
+A. `for (i = 4; i > 0; i--) printf("%d ", a[i]);`
+B. `for (i = 3; i > 0; i--) printf("%d ", a[i]);`
+C. `for (i = 3; i >= 0; i--) printf("%d ", a[i]);`
+D. `for (i = 4; i >= 0; i--) printf("%d ", a[i]);`
+
+**11.** Which loop returns the same value as `s` for every n >= 0, and what is s(5)?
 
 ```c
 int s(int n)
@@ -113,16 +122,16 @@ int s(int n)
     return s(n - 1) + n;
 }
 ```
+A. `total = 0; for (i = 1; i < n; i++) total = total + i;` and s(5) = 10
+B. `total = 1; for (i = 1; i <= n; i++) total = total + i;` and s(5) = 16
+C. `total = 0; for (i = 1; i <= n; i++) total = total * i;` and s(5) = 0
+D. `total = 0; for (i = 1; i <= n; i++) total = total + i;` and s(5) = 15
 
-**12. (show your working)** Every recursive function needs two components, plus one further condition on how they relate. Name all three, then apply them to this listing: say which are present, which fails, and what happens when `pw(2, 3)` is called.
-
-```c
-int pw(int b, int e)
-{
-    if (e == 0) return 1;
-    return b * pw(b, e);
-}
-```
+**12.** A recursive function needs a base case and a recursive case. What is the further condition on how those two relate?
+A. The base case must be written above the recursive case.
+B. The recursive call must be the last thing the function does.
+C. Each recursive call must move its argument towards the base case.
+D. The recursive case must return the same value as the base case.
 
 ---
 
@@ -160,40 +169,18 @@ f has + 1 waiting on the returned value; h has 2 × waiting; both have the call 
 
 An infinite loop runs in constant memory and would hang, not crash; n is getting smaller, not larger, so int overflow is not the cause; the code is valid C and compiles without complaint.
 
-**9.** *Writing a recursive power function.* Base case: e == 0 returns 1, since anything to the power 0 is 1. Recursive case: b × pw(b, e − 1), a smaller version of the same problem with one multiplication pending.
+**9. B** — *Evaluating a recursive power function.* The calls run down to the base case and the multiplications happen on the way back up: pw(3, 0) = 1, pw(3, 1) = 3, pw(3, 2) = 9, pw(3, 3) = 27 and pw(3, 4) = 81.
 
-```c
-int pw(int b, int e)
-{
-    if (e == 0) return 1;
-    return b * pw(b, e - 1);
-}
-```
+27 stops one call early and computes b to the power e − 1; 12 adds b each time instead of multiplying, 3 × 4; 0 comes from a base case that returns 0, which would drag every product down to zero.
 
-Trace: pw(3, 4) waits for 3 × pw(3, 3); pw(3, 3) waits for 3 × pw(3, 2); pw(3, 2) waits for 3 × pw(3, 1); pw(3, 1) waits for 3 × pw(3, 0); pw(3, 0) returns 1. Unwinding: 3, 9, 27, 81. Final answer: pw(3, 4) = 81.
+**10. C** — *Reverse traversal bounds.* The legal indices are 0 to 3, so a reverse walk starts at 3 and must still include 0: `i = 3; i >= 0; i--` prints a[3], a[2], a[1], a[0], that is 8 6 4 2.
 
-A correct answer has a base case at e == 0 returning 1 with no recursive call, a recursive call with e − 1, the multiplication by b, and the value 81. A base case of e == 1 returning b is also accepted if the trace is consistent with it. A base case returning 0, or a call that passes e unchanged, is wrong.
+Starting at 4 reads one place past the end and prints a junk value first; stopping at `i > 0` never reaches a[0] and loses the 2; the last option makes both mistakes at once.
 
-**10.** *Reverse traversal bounds.* The legal indices are 0 to 3, but the loop visits i = 4, 3, 2, 1. The first access, a[4], is one past the end: it compiles and runs, and prints whatever junk is stored there. Then a[3], a[2], a[1] print 8 6 4. The loop stops when i reaches 0, so a[0] (the value 2) is never printed. Output: junk 8 6 4. The corrected loop is `for (i = 3; i >= 0; i--) printf("%d ", a[i]);`, which prints 8 6 4 2.
+**11. D** — *Rewriting recursion as a loop.* The recursion adds n, then n − 1, down to 1, on top of the base value 0, so the loop needs an accumulator starting at 0 that adds every i from 1 to n inclusive. s(5) = 5 + 4 + 3 + 2 + 1 + 0 = 15, and the loop gives 1 + 2 + 3 + 4 + 5 = 15.
 
-A correct answer says a[4] is out of range and prints an unpredictable value, that a[0] is missed, and starts the loop at 3 and continues while i >= 0. Starting at 3 with i > −1 is also accepted.
+`i < n` stops at 4 and gives 10; starting the accumulator at 1 gives 16; multiplying into an accumulator that starts at 0 gives 0.
 
-**11.** *Rewriting recursion as a loop.* The recursion adds n, then n − 1, down to 1, on top of the base value 0. A loop does the same with an accumulator: start at 0 and add each i from 1 to n.
+**12. C** — *Components of a recursive function.* A base case answers the smallest input outright and a recursive case calls the function on a smaller version of the same problem, but having both is not enough: the argument must actually approach the base case or the calls never reach it. `return b * pw(b, e);` has both cases and still recurses for ever, because e never falls, and the stack overflows.
 
-```c
-int sIter(int n)
-{
-    int i, total = 0;
-    for (i = 1; i <= n; i++)
-        total = total + i;
-    return total;
-}
-```
-
-s(5) = 5 + 4 + 3 + 2 + 1 + 0 = 15, and the loop gives 1 + 2 + 3 + 4 + 5 = 15. Final answer: 15 for both.
-
-A correct answer has an accumulator initialised to 0, a loop that visits 1 to n inclusive (i <= n, or 0 to n, or n down to 1), adds i each pass, returns the accumulator, and gives 15. A loop with i < n gives 10 and is wrong.
-
-**12.** *Components of a recursive function.* The two components are a base case, which answers the smallest input outright with no recursive call, and a recursive case, which calls the function on a smaller version of the same problem and combines the result. The further condition is progress: every recursive call must move its argument towards the base case. Here the base case (e == 0 returns 1) is present and the recursive case has the right combining work, b × ..., but the call passes e unchanged, so no progress is made. pw(2, 3) calls pw(2, 3) again, forever, each call adding a frame with a multiplication pending, until the stack overflows and the program crashes. The fix is pw(b, e − 1).
-
-A correct answer names base case, recursive case and progress towards the base case, identifies the unchanged e as the failure, and says the result is infinite recursion ending in a stack overflow, not a wrong number.
+The order of the two cases in the source does not matter; a recursive call need not be last, that only decides whether the recursion is tail recursive; and the two cases return different values by design.

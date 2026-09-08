@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *Code work only.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** ```c
 int x = 3;
@@ -86,27 +86,51 @@ B. Unconditional or jump statements
 C. Decision making or selection statements
 D. Simple or compound statements
 
-**9. (show your working)** Write a C `if-else-if` chain that prints A for a score of 70 or more, B for 60 to 69, C for 50 to 59 and F otherwise, and state what it prints for a score of 65. Then say why the order of the branches matters.
+**9.** A score of 85 must print A, 65 must print B and 55 must print C, but this prints C for all three. Which single change fixes it?
 
-**10. (show your working)** ```c
+```c
+if (score >= 50) printf("C");
+else if (score >= 60) printf("B");
+else if (score >= 70) printf("A");
+else printf("F");
+```
+A. Change the first condition to `score >= 50 && score < 60`.
+B. Replace every `else if` with a plain `if`.
+C. Test the conditions in the order 70, then 60, then 50.
+D. Change the final `else` to `else if (score < 50)`.
+
+**10.** ```c
 int i;
 for (i = 0; i != 10; i += 3)
     printf("%d ", i);
 ```
-This loop never stops. Explain why, list the first four values printed, and change the condition so that the loop prints 0 3 6 9 and then ends. Show your working.
+This never stops. Which change makes it print exactly `0 3 6 9` and then end?
+A. `for (i = 0; i > 10; i += 3)`
+B. `for (i = 0; i < 10; i += 3)`
+C. `for (i = 0; i != 9; i += 3)`
+D. `for (i = 0; i != 10; i += 2)`
 
-**11. (show your working)** Write a `while` loop in C that prints the multiples of 7 that are less than 40, each on its own line, and state the output. Your answer must show the starting value, the condition and the update.
+**11.** Which of these loops prints exactly `7 14 21 28 35` and nothing else?
+A. `int m = 0; while (m < 40) { printf("%d ", m); m = m + 7; }`
+B. `int m = 7; while (m < 40) { m = m + 7; printf("%d ", m); }`
+C. `int m = 7; while (m <= 42) { printf("%d ", m); m = m + 7; }`
+D. `int m = 7; while (m < 40) { printf("%d ", m); m = m + 7; }`
 
-**12. (show your working)** ```c
+**12.** For n = 8, what does each of these fragments print?
+
+```c
 if (n > 0) printf("A");
 if (n > 5) printf("B");
 ```
-and
+
 ```c
 if (n > 0) printf("A");
 else if (n > 5) printf("B");
 ```
-For n = 8, say what each fragment prints and explain why two separate ifs and an if-else-if chain behave differently.
+A. AB and A
+B. AB and AB
+C. A and A
+D. AB and B
 
 ---
 
@@ -144,33 +168,18 @@ two assumes each case ends by itself, as in an if-else-if; one two three starts 
 
 Iterative statements are the loops; unconditional branching is goto, which checks no condition; simple and compound describe the form of a statement, not what it decides.
 
-**9.** *Writing an if-else-if chain.* ```c
-if (score >= 70)
-    printf("A");
-else if (score >= 60)
-    printf("B");
-else if (score >= 50)
-    printf("C");
-else
-    printf("F");
-```
+**9. C** — *Order of branches in an if-else-if chain.* In a chain the first true condition wins, so the widest test must come last. With `score >= 50` first, every score of 50 or more prints C and the later branches are never reached. Ordering the thresholds 70, then 60, then 50 makes each `else if` reachable only for the scores the earlier tests rejected.
 
-For 65: 65 >= 70 is false, 65 >= 60 is true, so it prints B and the rest is skipped. The order matters because the first true condition wins: each `else if` is reached only when every earlier condition failed, so `score >= 60` can be written without an upper bound. Reversed, with `score >= 50` first, every score of 50 or more would print C. A correct answer has the three thresholds in descending order (or explicit ranges such as `score >= 60 && score <= 69`), a final bare else for F, gives B for 65, and explains first-true-wins. Four separate `if`s without else print several letters for one score and are wrong.
+Adding an upper bound to the first test leaves 85 printing B; plain ifs make 85 print C, B and A one after another; changing the final else changes nothing at all.
 
-**10.** *Fixing a loop condition that never becomes false.* i starts at 0 and steps by 3: 0, 3, 6, 9, 12, 15, and so on. It never equals 10, so `i != 10` is never false and the loop runs on. The first four values printed are 0 3 6 9. Fix: `for (i = 0; i < 10; i += 3)`. Now 0, 3, 6 and 9 are printed, then i becomes 12, 12 < 10 is false, and the loop ends.
+**10. B** — *Fixing a loop condition that never becomes false.* i takes 0, 3, 6, 9, 12 and so on, so it steps straight over 10 and `i != 10` is never false. Testing `i < 10` instead stops as soon as i passes 10: 0, 3, 6 and 9 are printed, then 12 < 10 fails.
 
-A correct answer says i skips over 10, lists 0 3 6 9, and replaces `!=` with `<` (also accepted: `i <= 9`). Changing the step to `i += 2` or the start to 1 changes which numbers print and does not answer the question.
+`i > 10` is false at once and prints nothing; `i != 9` stops when i reaches 9 and prints only 0 3 6; stepping by 2 prints 0 2 4 6 8 and then stops at 10.
 
-**11.** *Writing a while loop.* ```c
-int m = 7;
-while (m < 40) {
-    printf("%d\n", m);
-    m = m + 7;
-}
-```
+**11. D** — *Writing a while loop.* Start the variable at the first value wanted, 7, test that it is still under 40, print it, then add 7. The values printed are 7, 14, 21, 28 and 35, and the loop ends when m reaches 42.
 
-m goes 7, 14, 21, 28, 35, each printed; then m = 42, 42 < 40 is false, and the loop ends. Output: 7 14 21 28 35 on separate lines. A correct answer initialises a variable to 7 (or a counter to 1 and prints 7 * counter), tests `< 40`, prints inside the loop, and adds 7 (or 1 to the counter) inside the loop. A missing update gives an infinite loop; `<= 40` here prints the same values but `m <= 42` or starting at 0 prints an extra value and is wrong.
+Starting at 0 prints an extra 0 at the front; updating before the print skips 7 and prints 42 at the end; testing `m <= 42` lets 42 through as well.
 
-**12.** *Separate ifs versus an if-else-if chain.* First fragment: the two ifs are independent, so both conditions are tested. 8 > 0 prints A and 8 > 5 prints B: output AB. Second fragment: an if-else-if runs at most one branch. 8 > 0 is true, A is printed, and the `else if` is never tested even though 8 > 5 is also true: output A.
+**12. A** — *Separate ifs versus an if-else-if chain.* Two separate ifs are independent, so both conditions are tested: 8 > 0 prints A and 8 > 5 prints B, giving AB. In the chain at most one branch runs, so once 8 > 0 has printed A the `else if` is never tested: output A.
 
-A correct answer gives AB and A and states that separate ifs can both fire while a chain stops at the first true condition. It may add that in the chain the B branch can never run for any n, since every n > 5 is also > 0, so the order of the branches is wrong for that purpose.
+AB and AB assumes the chain runs both branches; A and A misses that the first fragment tests the second condition too; AB and B has the chain skipping the branch it actually takes. In that chain B can never print for any n, since every n > 5 is already greater than 0.

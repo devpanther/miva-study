@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *This session takes week 1's material - electric charge and the three methods of charging - and works it conceptually rather than numerically.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** An object carries a net charge of −6.4 × 10⁻¹⁷ C. Take e = 1.6 × 10⁻¹⁹ C. How many excess electrons does it hold?
 A. 2.5 × 10⁻³ electrons
@@ -51,13 +51,29 @@ B. Positive, spread uniformly
 C. Negative, spread uniformly
 D. Positive on the near side, negative on the far side
 
-**9. (show your working)** A test charge of +2.0 nC placed at a point P feels a force of 6.0 × 10⁻⁵ N directed west. Calculate the electric field at P, magnitude and direction. State what E at P becomes if the test charge is replaced by +6.0 nC. Show your working.
+**9.** A test charge of +2.0 nC placed at a point P feels a force of 6.0 × 10⁻⁵ N directed west. What is the electric field at P, and what does it become if the test charge is replaced by +6.0 nC?
+A. 3.0 × 10⁴ N/C west; unchanged at 3.0 × 10⁴ N/C
+B. 3.0 × 10⁴ N/C east; unchanged at 3.0 × 10⁴ N/C
+C. 3.0 × 10⁴ N/C west; rises to 9.0 × 10⁴ N/C
+D. 3.3 × 10⁻⁵ N/C west; unchanged
 
-**10. (show your working)** Point charges of +3.0 μC and −3.0 μC attract each other with a force of 8.1 N in vacuum. Take k = 9.0 × 10⁹ N·m²/C². Calculate the separation between them. Show your working.
+**10.** Point charges of +3.0 μC and −3.0 μC attract each other with a force of 8.1 N in vacuum. Take k = 9.0 × 10⁹ N·m²/C². What is the separation between them?
+A. 0.010 m
+B. 0.10 m
+C. 10 m
+D. 1.0 × 10⁻⁴ m
 
-**11. (show your working)** At a point 5.0 cm from an isolated point charge Q the electric field is 7.2 × 10⁴ N/C, pointing toward Q. Take k = 9.0 × 10⁹ N·m²/C². Calculate Q, including its sign. Show your working.
+**11.** At a point 5.0 cm from an isolated point charge Q the electric field is 7.2 × 10⁴ N/C, pointing toward Q. Take k = 9.0 × 10⁹ N·m²/C². What is Q?
+A. −4.0 × 10⁻⁷ C
+B. +2.0 × 10⁻⁸ C
+C. −2.0 × 10⁻⁸ C
+D. −2.0 × 10⁻⁴ C
 
-**12. (show your working)** A negatively charged rod is brought close to a neutral metal sphere on an insulating stand. The sphere is not earthed. The rod is then taken away. Explain where the charges in the sphere sit while the rod is present, and what the sphere's net charge is at each stage.
+**12.** A negatively charged rod is held near a neutral metal sphere on an insulating stand. The sphere is never earthed. Which describes the sphere while the rod is near, and after the rod is taken away?
+A. Near side negative, far side positive; net charge zero throughout
+B. Near side positive, far side negative; the sphere is left positive after the rod goes
+C. The sphere gains a net negative charge while the rod is near, and keeps it
+D. Near side positive, far side negative; net charge zero throughout, and unpolarised after the rod goes
 
 ---
 
@@ -95,18 +111,18 @@ The 'north' option forgets the sign reversal; 2.5 × 10⁹ N divides E by q inst
 
 'Zero' is what happens if the rod is removed before the earth wire; 'positive' is the sign given by conduction (touching), not induction; the separated near/far pattern is polarisation while the rod is present, not the final state.
 
-**9.** *Field from the force on a test charge, E = F/q₀.* E = F/q₀ = 6.0 × 10⁻⁵ / 2.0 × 10⁻⁹ = 3.0 × 10⁴ N/C. The test charge is positive, so E points the same way as the force: west. With a +6.0 nC test charge the force triples to 1.8 × 10⁻⁴ N but E = F/q₀ is unchanged at 3.0 × 10⁴ N/C west, because the field is a property of the source charges, not of the test charge.
+**9. A** — *Field from the force on a test charge, E = F/q₀.* E = F/q₀ = 6.0 × 10⁻⁵ / 2.0 × 10⁻⁹ = 3.0 × 10⁴ N/C, and the test charge is positive, so E points the way the force does: west. Replacing it with +6.0 nC triples the force to 1.8 × 10⁻⁴ N, but E = F/q₀ is still 3.0 × 10⁴ N/C, because the field belongs to the source charges and not to whatever is placed in it.
 
-A correct answer gives 3.0 × 10⁴ N/C (accept 3.0 × 10⁴ N/C or 30 000 N/C, also written N·C⁻¹), states west, and says E is unchanged. Answering 9.0 × 10⁴ N/C for the second part confuses the force with the field and is wrong.
+East reverses the direction for a positive test charge; 9.0 × 10⁴ N/C makes the field follow the force; 3.3 × 10⁻⁵ N/C divides q₀ by F instead of F by q₀.
 
-**10.** *Finding the separation from Coulomb's law.* Rearrange F = kq₁q₂/r²: r² = kq₁q₂/F = (9.0 × 10⁹)(3.0 × 10⁻⁶)(3.0 × 10⁻⁶)/8.1 = 8.1 × 10⁻²/8.1 = 1.0 × 10⁻² m². Take the square root: r = 0.10 m.
+**10. B** — *Finding the separation from Coulomb's law.* Rearrange F = kq₁q₂/r² to r² = kq₁q₂/F = (9.0 × 10⁹)(3.0 × 10⁻⁶)(3.0 × 10⁻⁶)/8.1 = 8.1 × 10⁻²/8.1 = 1.0 × 10⁻² m², so r = 0.10 m, or 10 cm.
 
-Final answer: r = 0.10 m (accept 0.10 m or 10 cm; 0.099 to 0.101 m). The working must show r² = kq₁q₂/F and then the root. Stopping at 0.010 m forgets the square root (writing r instead of r² in the formula lands on the same wrong number), so the root step must be shown.
+0.010 m is r² reported as r, the square root step forgotten; 10 m comes from inverting the fraction to r² = F/kq₁q₂; 1.0 × 10⁻⁴ m reads the charges as nanocoulombs.
 
-**11.** *Finding a source charge from its field.* E = kQ/r², so |Q| = Er²/k = (7.2 × 10⁴)(0.050)²/(9.0 × 10⁹) = (7.2 × 10⁴)(2.5 × 10⁻³)/(9.0 × 10⁹) = 180/9.0 × 10⁹ = 2.0 × 10⁻⁸ C. The field points toward Q, and fields point toward negative charges, so Q = −2.0 × 10⁻⁸ C = −20 nC.
+**11. C** — *Finding a source charge from its field.* E = k|Q|/r², so |Q| = Er²/k = (7.2 × 10⁴)(0.050)²/(9.0 × 10⁹) = (7.2 × 10⁴)(2.5 × 10⁻³)/(9.0 × 10⁹) = 2.0 × 10⁻⁸ C. The field points toward Q, and field lines run into negative charges, so Q = −2.0 × 10⁻⁸ C, or −20 nC.
 
-Final answer: Q = −2.0 × 10⁻⁸ C (accept −20 nC; 1.9 to 2.1 × 10⁻⁸ in magnitude). The sign must be negative and the reason (field toward the charge) stated. +2.0 × 10⁻⁸ C is wrong on sign; 4.0 × 10⁻⁷ C forgets to square r; 2.0 × 10⁻⁴ C leaves r in centimetres.
+−4.0 × 10⁻⁷ C forgets to square r; −2.0 × 10⁻⁴ C leaves r in centimetres; +2.0 × 10⁻⁸ C has the right size but the wrong sign.
 
-**12.** *Polarisation of a conductor without earthing.* While the rod is present the sphere's free electrons are repelled to the far side, leaving the near side positive: the charge is separated (polarised) but nothing has entered or left, so the net charge is still zero. When the rod is removed the electrons spread back uniformly and the sphere is neutral and unpolarised again.
+**12. D** — *Polarisation of a conductor without earthing.* The rod is negative, so it repels the sphere's free electrons to the far side and leaves the near side positive. Nothing enters or leaves the sphere, because there is no path to earth, so the net charge stays zero at every stage; once the rod is removed the electrons spread back and the sphere is neutral and unpolarised again.
 
-A correct answer says: electrons move to the far side, near side positive; net charge zero at every stage because no path to earth was provided; the separation vanishes when the rod is removed. Saying the sphere becomes positive or negative confuses this with induction that includes earthing.
+The first option moves the electrons toward the rod instead of away; the second and third describe induction with earthing, which this sphere never had.

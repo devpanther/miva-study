@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *The Lorentz force, as concepts.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A charged particle moving through a uniform magnetic field feels a force F_max when its velocity is perpendicular to B. At what angle between v and B is the force exactly half of F_max?
 A. 30°
@@ -51,13 +51,29 @@ B. Along ±y, parallel to E
 C. Along ±z
 D. In no fixed direction
 
-**9. (show your working)** A wire carries free charge of linear density λ drifting at speed v, so that the current is I = λv. Starting from the force F = qv × B on a single charge, derive the force dF = I dl × B on an element dl of the wire. Show your working.
+**9.** A wire carries free charge of linear density λ drifting at speed v, so the current is I = λv. Starting from F = qv × B for a single charge, what is the force on an element dl of the wire?
+A. dF = λ dl × B
+B. dF = I dl × B
+C. dF = λv² dl × B
+D. dF = I B dl, with no dependence on the angle between dl and B
 
-**10. (show your working)** A charge q of mass m enters a uniform field B with speed v perpendicular to B. By equating the magnetic force to the centripetal force, derive r = mv/(qB) and T = 2πm/(qB), and explain why T does not depend on v. Show your working.
+**10.** A charge q of mass m enters a uniform field B at speed v perpendicular to B. Equating the magnetic force to the centripetal force, what are the radius and the period of the orbit?
+A. r = mv/(qB), T = 2πm/(qB)
+B. r = mv²/(qB), T = 2πmv/(qB)
+C. r = qB/(mv), T = 2πqB/m
+D. r = mv/(qB), T = 2πmv/(qB)
 
-**11. (show your working)** An electron (q = −1.6 × 10⁻¹⁹ C) moves along +x at 2.0 × 10⁶ m/s through a uniform field B = 0.30 T pointing along +z. Calculate the magnitude of the magnetic force on it and give its direction. Show your working.
+**11.** An electron (q = −1.6 × 10⁻¹⁹ C) moves along +x at 2.0 × 10⁶ m/s through a uniform field B = 0.30 T pointing along +z. Calculate the magnitude and direction of the magnetic force on it.
+A. 9.6 × 10⁻¹⁴ N along −y
+B. 9.6 × 10⁻¹³ N along +y
+C. 9.6 × 10⁻¹⁴ N along +z
+D. 9.6 × 10⁻¹⁴ N along +y
 
-**12. (show your working)** A charged particle in a uniform magnetic field moves in a circle at constant speed. Explain why the magnetic force can never change its kinetic energy, and why this does not mean the particle has no acceleration.
+**12.** A charged particle moves in a circle at constant speed in a uniform magnetic field. Which statement is correct?
+A. The force does no work, so the acceleration is zero and the velocity is constant
+B. The force does work as the particle goes round, but the total over one lap is zero
+C. The force is perpendicular to v, so it does no work; the acceleration qvB/m only turns the velocity
+D. The force is parallel to v, so it changes the speed but not the direction
 
 ---
 
@@ -95,18 +111,18 @@ Due north is the answer with the cross product taken in the wrong order, or for 
 
 Along x would make the wave longitudinal, like sound, which an EM wave never is; parallel to E would leave no third direction for the wave to travel along; the two fields are rigidly locked in orientation and phase, so B has a definite direction.
 
-**9.** *Deriving the force on a current element from the single-charge law.* A length dl of the wire contains charge dq = λ dl, all moving with velocity v along the wire. The magnetic force on that packet is the single-charge law applied to dq: dF = (dq) v × B = (λ dl) v × B. Since λ and dl are scalars, this is dF = (λv) dl × B with the direction now carried by dl, and λv = I, so dF = I dl × B. For a straight wire of length L in a uniform field this integrates to F = I L × B, magnitude BIL sin θ.
+**9. B** — *Deriving the force on a current element from the single-charge law.* The element holds charge dq = λ dl, all of it moving at v along the wire, so dF = (dq)v × B = (λ dl)v × B. Since λ and dl are scalars the direction transfers onto dl, giving dF = (λv) dl × B = I dl × B, which integrates to F = I L × B for a straight wire.
 
-A correct answer must write dq = λ dl, substitute into qv × B, move the direction from v to dl, and use I = λv. Introducing a factor 1/c is the cgs form and is wrong in SI.
+λ dl × B leaves out the drift speed and has the wrong units; λv² dl × B uses dq = λv dl, the current in place of the charge; and dropping the cross product loses sin θ, so it wrongly predicts a force even when the current runs along B.
 
-**10.** *Deriving the radius and period of the circular orbit.* The magnetic force qvB is perpendicular to v and of constant size, so it acts as a centripetal force: qvB = mv²/r. Cancel one v and rearrange: r = mv/(qB). The period is the circumference over the speed: T = 2πr/v = 2π(mv/qB)/v = 2πm/(qB). The v cancels because a faster particle sweeps a proportionally larger circle: the distance round grows exactly as fast as the speed, so the lap time is fixed by m, q and B alone.
+**10. A** — *Deriving the radius and period of the circular orbit.* qvB = mv²/r, and cancelling one v gives r = mv/(qB). The period is one circumference at speed v: T = 2πr/v = 2π(mv/qB)/v = 2πm/(qB), with v gone, which is why the lap time does not depend on how fast the particle moves.
 
-A correct answer must show qvB = mv²/r, obtain r = mv/qB, form T = 2πr/v and cancel v, and state the proportional-growth reason. Writing T = 2πr/v and stopping, without eliminating r, does not show independence from v.
+r = mv²/(qB) forgets to cancel the v; r = qB/(mv) is the rearrangement inverted; and T = 2πmv/(qB) is just 2πr, the circumference, never divided by the speed.
 
-**11.** *Magnetic force on a negative charge with direction.* v is perpendicular to B, so F = |q|vB = (1.6 × 10⁻¹⁹)(2.0 × 10⁶)(0.30) = 9.6 × 10⁻¹⁴ N. Direction: v × B = x̂ × ẑ = −ŷ, which is the force on a positive charge; the electron is negative, so its force is reversed, along +y.
+**11. D** — *Magnetic force on a negative charge with direction.* v is perpendicular to B, so F = |q|vB = (1.6 × 10⁻¹⁹)(2.0 × 10⁶)(0.30) = 9.6 × 10⁻¹⁴ N. The direction of v × B is x̂ × ẑ = −ŷ, which is the force a positive charge would feel; the electron is negative, so its force reverses to +y.
 
-Final answer: 9.6 × 10⁻¹⁴ N along +y (accept 9.5 to 9.7 × 10⁻¹⁴ N). The working must show the cross product x̂ × ẑ = −ŷ and then the reversal for the negative charge. Giving −y forgets the sign of the electron; giving a direction along z or x is impossible because F is perpendicular to both B and v.
+Along −y forgets the sign of the electron; 9.6 × 10⁻¹³ N is a power-of-ten slip; and along +z is impossible, since the force must be perpendicular to B as well as to v.
 
-**12.** *Zero work versus non-zero acceleration in a magnetic field.* The magnetic force F = qv × B is perpendicular to v at every instant, so its power F·v is zero and it does no work along any path; kinetic energy ½mv² therefore stays constant and the speed cannot change. But a force still produces an acceleration a = F/m = qvB/m; because it is perpendicular to v it changes the direction of the velocity, not its magnitude, which is exactly what keeps the particle on a circle. Momentum, a vector, changes continuously even though its magnitude does not.
+**12. C** — *Zero work versus non-zero acceleration in a magnetic field.* F = qv × B is perpendicular to v at every instant, so the power F·v is zero, no work is done and the kinetic energy ½mv² cannot change. There is still an acceleration a = qvB/m; being perpendicular to v it rotates the velocity instead of lengthening it, which is exactly circular motion.
 
-A correct answer states F ⊥ v so W = 0 and KE is constant, then distinguishes speed from velocity: there is a real centripetal acceleration qvB/m that only turns the velocity. Saying the force is too weak to do work, or that induced fields cancel the work, is wrong.
+Zero work does not mean zero force or zero acceleration; the work is zero at every instant, not merely over a whole lap; and a force parallel to v would change the speed, which a magnetic force never does.

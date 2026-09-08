@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *The same Faraday/Lenz material worked numerically.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A 120-turn circular coil of diameter 6.0 cm and total resistance 1.5 Ω has its plane perpendicular to a uniform field that rises at a steady 2.5 T/s. What current flows in the coil?
 A. 0.85 A
@@ -51,13 +51,29 @@ B. Emf and current
 C. Current and retarding force
 D. None of them
 
-**9. (show your working)** A 120-turn coil of area 6.0 × 10⁻³ m², resistance 4.0 Ω, has its normal along a uniform field that falls steadily from 0.80 T to 0.20 T in 0.30 s. Calculate the emf, the current and the charge that circulates, and give the direction of the induced field inside the coil relative to the original field. Show your working.
+**9.** A 120-turn coil of area 6.0 × 10⁻³ m² and resistance 4.0 Ω has its normal along a uniform field that falls steadily from 0.80 T to 0.20 T in 0.30 s. Calculate the emf, the current and the charge that circulates.
+A. 1.44 V, 0.36 A, 9.0 × 10⁻⁴ C
+B. 1.44 V, 0.36 A, 0.108 C
+C. 0.012 V, 0.0030 A, 9.0 × 10⁻⁴ C
+D. 1.44 V, 5.76 A, 0.108 C
 
-**10. (show your working)** A rod of length 0.60 m and mass 0.20 kg moves at 5.0 m/s on frictionless horizontal rails in a vertical 0.40 T field; circuit resistance 0.30 Ω. Calculate the emf, the current and the retarding force. The applied force is then removed; calculate the rod's initial deceleration. Show your working.
+**10.** A rod of length 0.60 m and mass 0.20 kg moves at 5.0 m/s on frictionless horizontal rails in a vertical 0.40 T field; the circuit resistance is 0.30 Ω. Calculate the retarding force, and the rod's initial deceleration once the applied force is removed.
+A. 0.29 N, 1.4 m/s²
+B. 1.6 N, 8.0 m/s²
+C. 0.96 N, 0.19 m/s²
+D. 0.96 N, 4.8 m/s²
 
-**11. (show your working)** A generator coil of area 0.040 m² is to give a peak emf of 100 V at 50 Hz in a uniform field of 0.20 T. Calculate the number of turns needed, the rms emf it will deliver, and the instantaneous emf at the moment the plane of the coil is parallel to the field. Show your working.
+**11.** A generator coil of area 0.040 m² is to give a peak emf of 100 V at 50 Hz in a uniform field of 0.20 T. Calculate the number of turns needed and the rms emf it will deliver.
+A. 250 turns, 71 V
+B. 40 turns, 71 V
+C. 40 turns, 141 V
+D. 40 turns, 100 V
 
-**12. (show your working)** A generator produces a sinusoidal emf with a peak value of 100 V. A student writes that 'the average emf over one cycle is 70.7 V'. Explain what 70.7 V actually is, what the true average of the emf over a full cycle is, and why that average is useless for describing the output.
+**12.** A generator produces a sinusoidal emf of peak value 100 V. A student says the average emf over one cycle is 70.7 V. What is wrong with that?
+A. 70.7 V is the average, and the rms value is 100 V
+B. The average over a cycle is 63.7 V, and 70.7 V is half the peak-to-peak value
+C. 70.7 V is the rms value; the true average over a full cycle is zero
+D. 70.7 V is the average of the positive half cycle, and the rms value is 50 V
 
 ---
 
@@ -95,18 +111,18 @@ D. None of them
 
 'Emf and current' needs a closed circuit; 'current and retarding force' both need current; 'none' forgets that the emf is there regardless, and would light nothing only because nothing is connected.
 
-**9.** *Faraday's law chained to current, charge and direction.* |ΔΦ| = ΔB × A = (0.80 − 0.20)(6.0 × 10⁻³) = 3.6 × 10⁻³ Wb per turn; N|ΔΦ| = 120 × 3.6 × 10⁻³ = 0.432 Wb. ε = N|ΔΦ|/Δt = 0.432/0.30 = 1.44 V. I = ε/R = 1.44/4.0 = 0.36 A. q = N|ΔΦ|/R = 0.432/4.0 = 0.108 C (check: I × Δt = 0.36 × 0.30 = 0.108 C, equal because the rate is uniform). The flux is decreasing, so by Lenz's law the induced field inside the coil points in the same direction as the original field, to maintain the flux being lost.
+**9. B** — *Faraday's law chained to current and circulated charge.* The flux change per turn is ΔB × A = (0.60)(6.0 × 10⁻³) = 3.6 × 10⁻³ Wb, so ε = N|ΔΦ|/Δt = (120)(3.6 × 10⁻³)/0.30 = 1.44 V and I = ε/R = 0.36 A. The charge is q = N|ΔΦ|/R = 0.432/4.0 = 0.108 C, matching I Δt = 0.108 C because the rate is uniform.
 
-Final answer: 1.4 V (accept 1.4 to 1.5), 0.36 A (accept 0.35 to 0.37), 0.11 C (accept 0.10 to 0.11), induced field along the original B. 'Opposite to B' is the answer for an increasing field and is wrong here; 0.012 V forgot N.
+9.0 × 10⁻⁴ C leaves the 120 turns out of the charge alone; the third option leaves them out everywhere; 5.76 A multiplies the emf by R instead of dividing.
 
-**10.** *Retarding force and deceleration of a released rod.* ε = BLv = (0.40)(0.60)(5.0) = 1.2 V. I = ε/R = 1.2/0.30 = 4.0 A. F = BIL = (0.40)(4.0)(0.60) = 0.96 N, directed against the motion (equivalently F = B²L²v/R = (0.16)(0.36)(5.0)/0.30 = 0.96 N). With no applied force this is the only horizontal force, so a = F/m = 0.96/0.20 = 4.8 m/s², slowing the rod. As v falls, F falls with it, so the deceleration shrinks and the rod slows exponentially rather than stopping dead.
+**10. D** — *Retarding force and deceleration of a released rod.* ε = BLv = (0.40)(0.60)(5.0) = 1.2 V, I = ε/R = 4.0 A and F = BIL = (0.40)(4.0)(0.60) = 0.96 N against the motion, equally B²L²v/R. With nothing else pushing, a = F/m = 0.96/0.20 = 4.8 m/s², and it shrinks as the rod slows.
 
-Final answer: 1.2 V, 4.0 A, 0.96 N (accept 0.94 to 0.98), deceleration 4.8 m/s² (accept 4.7 to 4.9). A correct answer states that the force opposes the motion. 0.24 N used the emf as the current; 2.4 m/s² or 9.6 m/s² has a factor of 2 slip in F/m.
+0.29 N uses the emf 1.2 as if it were the current; 1.6 N drops one factor of L from B²L²v/R; 0.19 m/s² multiplies F by m instead of dividing by it.
 
-**11.** *Designing a generator coil.* ω = 2πf = 2π(50) = 314 rad/s. ε_peak = NBAω, so N = ε_peak/(BAω) = 100/((0.20)(0.040)(314)) = 100/2.51 = 39.8, so 40 turns. ε_rms = ε_peak/√2 = 100/1.414 = 70.7 V. When the plane of the coil is parallel to B the normal is at 90° to B, the flux is zero and passing through zero fastest, so ε = ε_peak sin 90° = 100 V.
+**11. B** — *Designing a generator coil.* ω = 2πf = 2π(50) = 314 rad/s, and ε_peak = NBAω, so N = 100/[(0.20)(0.040)(314)] = 39.8, that is 40 turns. The rms value is ε_peak/√2 = 100/1.414 = 71 V.
 
-Final answer: 40 turns (accept 39 to 40), 71 V (accept 70 to 71), 100 V. A correct answer converts f to ω with 2π, rounds N to a whole number, and recognises that plane parallel to B is the maximum-emf position, not zero. 250 turns used f in place of ω; 0 V for the last part confuses zero flux with zero emf.
+250 turns uses f = 50 where ω = 314 belongs; 141 V multiplies by √2 instead of dividing; 100 V quotes the peak value as though it were the rms.
 
-**12.** *Peak, rms and average emf.* 70.7 V is the rms (root mean square) value, ε_peak/√2: the steady d.c. voltage that would deliver the same power to a resistor, and what an a.c. meter reads. It is not an average of the emf. The emf ε = ε_peak sin ωt spends half of each cycle positive and half negative, so its true average over a full cycle is zero. Zero is useless because it says nothing about how much power the generator can deliver; power depends on ε², which is positive throughout the cycle, and the rms value is exactly the square root of the mean of ε².
+**12. C** — *Peak, rms and average emf.* 70.7 V is ε_peak/√2, the root-mean-square value: the steady d.c. voltage that would heat a resistor at the same rate, and what an a.c. meter reads. The emf ε = ε_peak sin ωt is positive for half of each cycle and negative for the other half, so its true mean over a whole cycle is zero, which is why that mean is never quoted; power depends on ε², which stays positive.
 
-A correct answer identifies 70.7 V as rms, states the full-cycle average is zero because of the sign change, and says the rms is used because power depends on the square of the emf.
+63.7 V (2/π of the peak) is the mean of one half cycle, not of a full cycle; half the peak-to-peak value is 100 V; and 70.7 V is not any kind of average.

@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 6 higher-order derivatives.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** f(x) = 2x⁵ − x⁴ + 3x − 7. Find f‴(x).
 A. 40x³ − 12x²
@@ -51,13 +51,29 @@ B. u and v were swapped in the numerator
 C. The 1 in 1 + x² should have differentiated to 1
 D. The denominator was not squared
 
-**9. (show your working)** f(x) = xe^(−x). Find f′(x), f″(x) and f‴(x), then evaluate f‴(3). Show your working, naming the rule you use at each order.
+**9.** f(x) = xe^(−x). Find f‴(x) and evaluate f‴(3).
+A. f‴(x) = (1 − x)e^(−x), f‴(3) = −2e⁻³
+B. f‴(x) = (3 − x)e^(−x), f‴(3) = 0
+C. f‴(x) = (x − 2)e^(−x), f‴(3) = e⁻³
+D. f‴(x) = −xe^(−x), f‴(3) = −3e⁻³
 
-**10. (show your working)** f(x) = ln(1 + 2x²). Find f′(x) by the chain rule, then f″(x) by the quotient rule, listing u, v, u′ and v′ on one line. Show your working.
+**10.** f(x) = ln(1 + 2x²). Find f′(x) by the chain rule and f″(x) by the quotient rule.
+A. f′ = 1/(1 + 2x²), f″ = −4x/(1 + 2x²)²
+B. f′ = 4x/(1 + 2x²), f″ = (8x² − 4)/(1 + 2x²)²
+C. f′ = 4x/(1 + 2x²), f″ = 4/(1 + 2x²)²
+D. f′ = 4x/(1 + 2x²), f″ = (4 − 8x²)/(1 + 2x²)²
 
-**11. (show your working)** f(x) = x⁵ − 2x². Find f⁽⁴⁾(x), and find the smallest n for which f⁽ⁿ⁾(x) = 0 for all x. Show your working.
+**11.** f(x) = x⁵ − 2x². Find f⁽⁴⁾(x), and find the smallest n for which f⁽ⁿ⁾(x) = 0 for all x.
+A. f⁽⁴⁾(x) = 120x, n = 5
+B. f⁽⁴⁾(x) = 120, n = 5
+C. f⁽⁴⁾(x) = 120x, n = 6
+D. f⁽⁴⁾(x) = 120x − 2, n = 6
 
-**12. (show your working)** For y = e^(3x), every derivative is a positive multiple of y, but for y = sin(5x) the derivatives run through four different forms before repeating. Explain why, and state d⁴y/dx⁴ for each.
+**12.** For y = e^(3x) every derivative is a positive multiple of y, but the derivatives of y = sin(5x) run through four forms before repeating. Give d⁴y/dx⁴ for each, with the reason.
+A. 81e^(3x) and 625 sin(5x); the exponential reproduces itself while sin and cos alternate over a cycle of four
+B. 12e^(3x) and 20 sin(5x); each order simply adds the chain factor
+C. 81e^(3x) and −625 sin(5x); the minus sign survives all four steps
+D. e^(3x) and sin(5x); the chain factors cancel over four steps
 
 ---
 
@@ -95,18 +111,18 @@ D. The denominator was not squared
 
 The chain rule was applied correctly in f′ (the 2x is the inner derivative); swapping u and v would give (2x² − 2), the negative numerator, which did not happen; the constant 1 differentiates to 0, and the student's numerator already reflects that.
 
-**9.** *Third derivative of a product with an exponential, evaluated.* Product rule at every order, with d(e^(−x))/dx = −e^(−x) by the chain rule. f′ = 1·e^(−x) + x·(−e^(−x)) = (1 − x)e^(−x). f″ = (−1)e^(−x) + (1 − x)(−e^(−x)) = (−1 − 1 + x)e^(−x) = (x − 2)e^(−x). f‴ = 1·e^(−x) + (x − 2)(−e^(−x)) = (1 − x + 2)e^(−x) = (3 − x)e^(−x). Then f‴(3) = (3 − 3)e^(−3) = 0.
+**9. B** — *Third derivative of a product with an exponential, evaluated.* Apply the product rule at each order, with d(e^(−x))/dx = −e^(−x) from the chain rule. f′ = e^(−x) − xe^(−x) = (1 − x)e^(−x); f″ = −e^(−x) − (1 − x)e^(−x) = (x − 2)e^(−x); f‴ = e^(−x) − (x − 2)e^(−x) = (3 − x)e^(−x). At x = 3 the bracket is zero, so f‴(3) = 0.
 
-Final answer: f′ = (1 − x)e^(−x), f″ = (x − 2)e^(−x), f‴ = (3 − x)e^(−x), and f‴(3) = 0. A correct answer applies the product rule three times, keeps the minus from e^(−x), factors e^(−x) out each time, and gets 0 at x = 3. Treating the derivative of xe^(−x) as e^(−x) alone, or of e^(−x) as e^(−x), is wrong.
+(1 − x)e^(−x) and (x − 2)e^(−x) are f′ and f″, stopping one or two orders early, and −xe^(−x) drops the term the product rule contributes.
 
-**10.** *Chain rule then quotient rule on a logarithm of a polynomial.* Chain rule: y = ln u with u = 1 + 2x², so y′(u) = 1/u and u′(x) = 4x, giving f′(x) = 4x/(1 + 2x²). This is a quotient, so use the quotient rule for f″: u = 4x, v = 1 + 2x², u′ = 4, v′ = 4x. f″ = [v u′ − u v′]/v² = [(1 + 2x²)·4 − 4x·4x]/(1 + 2x²)² = (4 + 8x² − 16x²)/(1 + 2x²)² = (4 − 8x²)/(1 + 2x²)².
+**10. D** — *Chain rule then quotient rule on a logarithm of a polynomial.* With u = 1 + 2x², ln u differentiates to u′/u, and u′ = 4x, so f′(x) = 4x/(1 + 2x²). That is a quotient, so take u = 4x, v = 1 + 2x², u′ = 4, v′ = 4x and apply [vu′ − uv′]/v²: [(1 + 2x²)4 − 4x·4x]/(1 + 2x²)² = (4 + 8x² − 16x²)/(1 + 2x²)² = (4 − 8x²)/(1 + 2x²)².
 
-Final answer: f′(x) = 4x/(1 + 2x²), f″(x) = (4 − 8x²)/(1 + 2x²)²; also accepted with the denominator expanded as 1 + 4x² + 4x⁴, or the numerator factored as 4(1 − 2x²). A correct answer shows the inner derivative 4x in f′ and the v u′ − u v′ order in f″. (8x² − 4)/(1 + 2x²)² has the numerator reversed and is wrong.
+(8x² − 4) has the numerator subtracted the wrong way round, f′ = 1/(1 + 2x²) forgets the inner derivative, and 4/(1 + 2x²)² drops the uv′ term.
 
-**11.** *Order at which a polynomial's derivatives vanish.* f′ = 5x⁴ − 4x; f″ = 20x³ − 4; f‴ = 60x²; f⁽⁴⁾ = 120x; f⁽⁵⁾ = 120; f⁽⁶⁾ = 0. Each differentiation lowers the degree by 1, so a degree-5 polynomial becomes a constant at the fifth derivative and zero at the sixth.
+**11. C** — *Order at which a polynomial's derivatives vanish.* Differentiating repeatedly: f′ = 5x⁴ − 4x, f″ = 20x³ − 4, f‴ = 60x², f⁽⁴⁾ = 120x, f⁽⁵⁾ = 120, f⁽⁶⁾ = 0. Each step lowers the degree by 1, so a degree-5 polynomial reaches a constant at the fifth derivative and only vanishes at the sixth, giving n = 6.
 
-Final answer: f⁽⁴⁾(x) = 120x and n = 6. A correct answer shows the chain of derivatives (or argues from the degree: degree 5, so the 6th derivative is the first to vanish). Answering n = 5 confuses 'constant' with 'zero': f⁽⁵⁾ = 120 is not zero.
+n = 5 confuses 'constant' with 'zero', since f⁽⁵⁾ = 120 is not zero, and the −2 in the last option survives a differentiation it should not.
 
-**12.** *Why exponentials keep their sign and trig derivatives cycle.* e^(3x) differentiates to itself times the inner derivative 3, so each order multiplies by 3 and never changes the function or its sign: 3e^(3x), 9e^(3x), 27e^(3x), 81e^(3x). sin(5x) also picks up a factor 5 each time, but sin and cos swap at every step and the minus enters when cos is differentiated: 5 cos(5x), −25 sin(5x), −125 cos(5x), 625 sin(5x). It takes four steps to return to a positive multiple of sin(5x), because the pattern sin → cos → −sin → −cos → sin has period four.
+**12. A** — *Why exponentials keep their sign and trig derivatives cycle.* e^(3x) differentiates to itself times the inner derivative 3, so each order only multiplies by 3 and the function never changes shape or sign: 3, 9, 27, 81 give d⁴y/dx⁴ = 81e^(3x). sin(5x) also gains a factor 5 each time, but sin and cos swap at every step and a minus enters when cos is differentiated: 5 cos(5x), −25 sin(5x), −125 cos(5x), 625 sin(5x). The pattern sin → cos → −sin → −cos → sin has period four, so the fourth derivative is back to a positive multiple of sin(5x).
 
-A correct answer says the exponential reproduces itself (only the chain factor 3 accumulates) while sin and cos alternate and the minus comes from d(cos)/dx = −sin, and gives d⁴y/dx⁴ = 81e^(3x) and 625 sin(5x).
+12 and 20 multiply the factor in instead of raising it to the fourth power, −625 keeps a minus that the fourth step cancels, and the last option forgets the chain factor entirely.

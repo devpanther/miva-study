@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Electromagnetic induction as concepts.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A flat coil of area 0.040 m² sits in a uniform field of 0.25 T. The plane of the coil makes an angle of 30° with the field. What is the magnetic flux through the coil?
 A. 8.7 × 10⁻³ Wb
@@ -51,13 +51,29 @@ B. Opposite to the applied field
 C. Nowhere; no current is induced because the loop is not moving
 D. In the same direction as the applied field
 
-**9. (show your working)** An inductor of 0.60 H carries a steady current of 5.0 A. Calculate the energy stored in its magnetic field. The current is then reduced to 2.5 A. Calculate the new stored energy and state the factor by which it has fallen. Show your working.
+**9.** An inductor of 0.60 H carries a steady current of 5.0 A. Calculate the energy stored in its magnetic field, and the factor by which that energy falls when the current is reduced to 2.5 A.
+A. 7.5 J, falling by a factor of 4
+B. 7.5 J, falling by a factor of 2
+C. 15 J, falling by a factor of 4
+D. 1.5 J, falling by a factor of 2
 
-**10. (show your working)** A 250-turn square coil of side 4.0 cm lies with its plane perpendicular to a uniform field of 0.30 T. The coil is pulled completely out of the field in 0.040 s. Calculate the average emf induced in the coil. Show your working.
+**10.** A 250-turn square coil of side 4.0 cm lies with its plane perpendicular to a uniform field of 0.30 T. The coil is pulled completely out of the field in 0.040 s. Calculate the average emf induced in it.
+A. 0.012 V
+B. 3.0 V
+C. 3.0 × 10⁴ V
+D. 0 V
 
-**11. (show your working)** Two coils have a mutual inductance of 0.15 H. The current in the first coil falls uniformly from 6.0 A to zero in 0.030 s. Calculate the emf induced in the second coil during the change, and state the emf in the second coil while the 6.0 A was held steady. Show your working.
+**11.** Two coils have a mutual inductance of 0.15 H. The current in the first falls uniformly from 6.0 A to zero in 0.030 s. Calculate the emf induced in the second coil during the change, and the emf while the 6.0 A was held steady beforehand.
+A. 30 V during the change, 30 V while steady
+B. 0.90 V during the change, 0 V while steady
+C. 200 V during the change, 0 V while steady
+D. 30 V during the change, 0 V while steady
 
-**12. (show your working)** A hand-cranked generator turns freely when its output terminals are left open, but becomes noticeably harder to turn the moment a lamp is connected across them. Explain why, using Lenz's law and conservation of energy.
+**12.** A hand-cranked generator turns freely with its output terminals open, but becomes noticeably harder to turn the moment a lamp is connected across them. Why?
+A. The open terminals allow no emf to be induced, so nothing resists the crank until the circuit is closed
+B. The lamp adds resistance to the circuit, and resistance opposes the motion of the coil
+C. Current now flows in the coil, and the field exerts a torque on it that opposes the rotation
+D. Connecting the lamp raises the induced emf, and a larger emf pushes back harder on the coil
 
 ---
 
@@ -95,18 +111,18 @@ Anticlockwise with a north face is the answer for an approaching north pole, the
 
 'Opposite to the applied field' is right only when the flux is rising; it is the half-remembered rule 'the induced field opposes B', which is wrong half the time. A perpendicular field cannot change the flux at all. Motion is not needed: a changing flux is the only criterion, so a stationary loop in a falling field does carry a current.
 
-**9.** *Energy stored in an inductor.* U = ½LI². At 5.0 A: U = ½(0.60)(5.0)² = ½(0.60)(25) = 7.5 J. At 2.5 A: U = ½(0.60)(2.5)² = ½(0.60)(6.25) = 1.875 J, about 1.9 J. Halving the current divides the energy by 2² = 4, because U depends on I².
+**9. A** — *Energy stored in an inductor.* U = ½LI² = ½(0.60)(5.0)² = 7.5 J. At 2.5 A, U = ½(0.60)(6.25) = 1.875 J, so halving the current divides the energy by 2² = 4, because U goes as I².
 
-Final answer: 7.5 J (accept 7.4 to 7.6) and 1.9 J (accept 1.8 to 2.0), the energy falling by a factor of 4. A correct answer shows both substitutions and states the factor 4, not 2. 15 J or 3.75 J means the ½ was dropped; 1.5 J and 0.75 J mean the current was not squared.
+A factor of 2 treats the energy as proportional to the current; 15 J drops the ½; 1.5 J never squares the current at all.
 
-**10.** *Emf from a coil removed from a field.* Area in SI: A = (0.040)² = 1.6 × 10⁻³ m². Plane perpendicular to B means the normal is along B, so θ = 0 and the initial flux per turn is Φ = BA = (0.30)(1.6 × 10⁻³) = 4.8 × 10⁻⁴ Wb; the final flux is zero, so ΔΦ = 4.8 × 10⁻⁴ Wb. ε = N ΔΦ/Δt = (250)(4.8 × 10⁻⁴)/(0.040) = 0.12/0.040 = 3.0 V.
+**10. B** — *Emf from a coil removed from a field.* A = (0.040)² = 1.6 × 10⁻³ m². The plane is perpendicular to B, so the normal lies along B and Φ = BA = 4.8 × 10⁻⁴ Wb per turn, falling to zero. Then ε = N ΔΦ/Δt = (250)(4.8 × 10⁻⁴)/0.040 = 3.0 V.
 
-Final answer: 3.0 V (accept 2.9 to 3.1). A correct answer converts the side to metres, uses the full flux as the change (the coil leaves the field entirely), multiplies by N and divides by the time. 0.012 V forgot N; 3.0 × 10⁴ V left the side in centimetres; 0 V wrongly took 'plane perpendicular to B' to mean no flux.
+0.012 V leaves out the 250 turns; 3.0 × 10⁴ V keeps the side in centimetres; 0 V reads 'plane perpendicular to B' as no flux, when it is in fact the maximum-flux orientation.
 
-**11.** *Mutually induced emf from a current change.* ε₂ = M ΔI₁/Δt. ΔI₁/Δt = 6.0/0.030 = 200 A/s, so ε₂ = (0.15)(200) = 30 V. While the current was held steady, ΔI₁/Δt = 0, so the induced emf in the second coil was zero, however large the steady current.
+**11. D** — *Mutually induced emf from a current change.* ε₂ = M ΔI₁/Δt, and ΔI₁/Δt = 6.0/0.030 = 200 A/s, so ε₂ = (0.15)(200) = 30 V. A steady current, however large, has ΔI₁/Δt = 0 and induces nothing, so the earlier reading is 0 V.
 
-Final answer: 30 V (accept 29 to 31) during the change, and 0 V while steady. A correct answer computes the rate 200 A/s, multiplies by M, and states that a steady current induces nothing. 0.90 V is M × ΔI with the time forgotten; 200 V is the rate 200 A/s quoted as a voltage with M left out; both are wrong.
+30 V while steady mistakes current for rate of change; 0.90 V is M ΔI with the time forgotten; 200 V quotes the rate 200 A/s as a voltage, leaving M out altogether.
 
-**12.** *Lenz's law as conservation of energy.* With the terminals open an emf is induced in the rotating coil but no current flows, so the coil carries no current and feels no magnetic force; only friction resists the crank. Connect the lamp and a current flows in the coil, which sits in the machine's field, so there is a force (torque) on it. By Lenz's law that torque opposes the rotation producing it, so the crank fights back.
+**12. C** — *Lenz's law as conservation of energy.* With the terminals open an emf is induced but no current flows, so the coil feels no magnetic force and only friction resists. Close the circuit and the coil carries current in the machine's field, so there is a torque, and by Lenz's law it opposes the rotation producing it. Conservation of energy demands this: the lamp's energy has to come from the hand, and the extra effort is exactly that work.
 
-Conservation of energy demands this: the lamp dissipates electrical energy, and the only source is the work done by the hand. If the induced current instead helped the rotation, the generator would speed up on its own while also lighting the lamp, energy from nothing. A correct answer states (1) no current so no force when open, (2) current in a field gives a torque that opposes the motion by Lenz's law, and (3) the extra effort is the mechanical work that becomes the lamp's electrical energy.
+An emf appears whether or not the circuit is closed; resistance by itself exerts no mechanical force; and the emf depends on the rotation and the flux, not on what is connected.

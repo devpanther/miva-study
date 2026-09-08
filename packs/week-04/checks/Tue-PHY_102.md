@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Conceptual hour on Week 4 of General Physics II.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A cell of emf 9.0 V and internal resistance 0.40 Ω delivers a current of 2.5 A to a load. What is the terminal voltage of the cell?
 A. 10.0 V
@@ -51,13 +51,29 @@ B. A 9 Ω resistor
 C. A wire (short circuit)
 D. The same battery reversed
 
-**9. (show your working)** A cell of emf 6.0 V and internal resistance 0.30 Ω is connected to a 2.7 Ω resistor. Calculate the current, the terminal voltage, and the power wasted inside the cell. Show your working.
+**9.** A cell of emf 6.0 V and internal resistance 0.30 Ω is connected to a 2.7 Ω resistor. What are the current, the terminal voltage and the power wasted inside the cell?
+A. 2.2 A; 6.0 V; 1.5 W
+B. 2.0 A; 0.60 V; 1.2 W
+C. 2.0 A; 5.4 V; 10.8 W
+D. 2.0 A; 5.4 V; 1.2 W
 
-**10. (show your working)** A dipole has moment 6.0 × 10⁻¹² C·m. Taking k = 9.0 × 10⁹ N·m²/C², calculate the field at a point 3.0 cm from the centre on the equatorial plane, give its direction relative to p, and state the axial field at the same distance. Show your working.
+**10.** A dipole has moment 6.0 × 10⁻¹² C·m. Take k = 9.0 × 10⁹ N·m²/C². What is the field 3.0 cm from its centre on the equatorial plane, and the axial field at the same distance?
+A. 2.0 × 10³ N/C antiparallel to p; axial 4.0 × 10³ N/C
+B. 2.0 × 10³ N/C parallel to p; axial 4.0 × 10³ N/C
+C. 4.0 × 10³ N/C antiparallel to p; axial 2.0 × 10³ N/C
+D. 60 N/C antiparallel to p; axial 120 N/C
 
-**11. (show your working)** A 50 pF air capacitor is charged to 200 V and then disconnected from the battery. A slab of dielectric constant κ = 4.0 is slid in to fill the gap. Calculate the charge on the plates, the new capacitance and the new voltage. Show your working.
+**11.** A 50 pF air capacitor is charged to 200 V and then disconnected from the battery. A slab of dielectric constant κ = 4.0 is slid in to fill the gap. What are the charge, the new capacitance and the new voltage?
+A. 10 nC; 200 pF; 200 V
+B. 10 nC; 200 pF; 50 V
+C. 40 nC; 200 pF; 200 V
+D. 10 nC; 12.5 pF; 800 V
 
-**12. (show your working)** An electric dipole is placed in a uniform electric field at some angle to the field. Explain why the net force on the dipole is zero but the torque is generally not, and state the orientation at which the torque vanishes.
+**12.** An electric dipole is placed in a uniform electric field at some angle to the field. Why is the net force on it zero while the torque generally is not, and at what orientations does the torque vanish?
+A. The two forces differ in size but act along one line; the torque vanishes at 90°
+B. The field acts only on the positive charge, giving one force and one torque; it vanishes at 90°
+C. The forces are equal and opposite along the same line, so force and torque are both zero at every angle
+D. The forces are equal and opposite but act along different lines, forming a couple τ = pE sin θ; it vanishes at 0° and 180°
 
 ---
 
@@ -95,18 +111,18 @@ D. The same battery reversed
 
 An open circuit is what replaces a zeroed current source (it passes 0 A at any voltage), the commonest mix-up; a 9 Ω resistor confuses the emf with a resistance; reversing the battery leaves it active, and superposition needs it switched off.
 
-**9.** *Current and terminal voltage of a cell driving a load.* Single loop: I = ε/(R + r) = 6.0/(2.7 + 0.30) = 6.0/3.0 = 2.0 A. Terminal voltage V = ε − Ir = 6.0 − (2.0)(0.30) = 5.4 V; check V = IR = 2.0 × 2.7 = 5.4 V. Power wasted inside the cell P = I²r = (2.0)²(0.30) = 1.2 W.
+**9. D** — *Current and terminal voltage of a cell driving a load.* One loop, so I = ε/(R + r) = 6.0/3.0 = 2.0 A. The terminal voltage is V = ε − Ir = 6.0 − 0.60 = 5.4 V, which checks against IR = 5.4 V. The power wasted inside is P = I²r = (2.0)²(0.30) = 1.2 W.
 
-A correct answer states I = 2.0 A, V = 5.4 V and P = 1.2 W with units. Accept 5.4 V reached either as ε − Ir or as IR. I = 6.0/2.7 = 2.2 A (r forgotten) or V = 6.0 V (I = 0 assumed) are wrong.
+2.2 A leaves r out of the current; 0.60 V quotes the lost volts Ir as the terminal voltage; 10.8 W is I²R, the power in the load rather than in the cell.
 
-**10.** *Equatorial and axial field of a dipole.* Equatorial: E = kp/r³ = (9.0 × 10⁹)(6.0 × 10⁻¹²)/(0.030)³ = 0.054/(2.7 × 10⁻⁵) = 2.0 × 10³ N/C, directed antiparallel to p (from +q toward −q). Axial at the same r: E = 2kp/r³ = 4.0 × 10³ N/C, parallel to p.
+**10. A** — *Equatorial and axial field of a dipole.* On the equatorial plane E = kp/r³ = (9.0 × 10⁹)(6.0 × 10⁻¹²)/(0.030)³ = 0.054/2.7 × 10⁻⁵ = 2.0 × 10³ N/C, pointing antiparallel to p, from +q back toward −q. On the axis at the same distance E = 2kp/r³ = 4.0 × 10³ N/C, parallel to p.
 
-A correct answer gives 2.0 × 10³ N/C (accept 1.9 × 10³ to 2.1 × 10³), says antiparallel or opposite to p, and gives 4.0 × 10³ N/C for the axial value, exactly twice. Dividing by r² (giving 60 N/C) or stating the equatorial field is parallel to p is wrong.
+'Parallel' is the axial direction, not the equatorial one; the third option swaps axial and equatorial; 60 N/C divides by r², the point-charge power, instead of r³.
 
-**11.** *Dielectric inserted at constant charge.* Q = C₀V₀ = (50 × 10⁻¹²)(200) = 1.0 × 10⁻⁸ C. With the battery disconnected this charge cannot change. New capacitance C = κC₀ = 4.0 × 50 pF = 200 pF. New voltage V = Q/C = 1.0 × 10⁻⁸/2.0 × 10⁻¹⁰ = 50 V, which is V₀/κ.
+**11. B** — *Dielectric inserted at constant charge.* Before insertion Q = C₀V₀ = (50 × 10⁻¹²)(200) = 1.0 × 10⁻⁸ C, and with the battery disconnected that charge has nowhere to go, so it is fixed. The capacitance rises to C = κC₀ = 200 pF, so V = Q/C = 1.0 × 10⁻⁸/2.0 × 10⁻¹⁰ = 50 V, which is V₀/κ.
 
-A correct answer states Q = 1.0 × 10⁻⁸ C (10 nC), C = 200 pF and V = 50 V, and keeps Q fixed. Saying V stays at 200 V while Q rises to 4.0 × 10⁻⁸ C describes the battery-still-connected case and is wrong here.
+Holding V at 200 V and letting Q rise to 40 nC is the battery-still-connected case; 12.5 pF divides by κ instead of multiplying.
 
-**12.** *Force and torque on a dipole in a uniform field.* In a uniform field the two charges feel forces of equal magnitude qE in opposite directions (+q along E, −q against E), so the forces cancel and the net force is zero. But the two forces act along different lines, separated by the dipole's length, so they form a couple with moment τ = pE sin θ, which is non-zero unless sin θ = 0. The torque vanishes when p is parallel to E (θ = 0°, stable) or antiparallel (θ = 180°, unstable).
+**12. D** — *Force and torque on a dipole in a uniform field.* In a uniform field the two charges feel qE along E and qE against it, equal in size and opposite in direction, so the net force is zero. Their lines of action are separated by the dipole's length, however, so they form a couple of moment τ = pE sin θ, which is zero only when sin θ = 0, that is at θ = 0° (stable) or 180° (unstable).
 
-A correct answer mentions equal and opposite forces qE and −qE, the different lines of action giving a couple, τ = pE sin θ, and θ = 0° (accept 180° as well) for zero torque.
+Unequal forces would need a non-uniform field; the field acts on both charges; and θ = 90° is where the torque is largest, not zero.

@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *Boolean expressions, statements and control flow, as concepts, exactly as the two decks give them.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** ```c
 int a = -7;
@@ -71,7 +71,9 @@ B. for
 C. if
 D. do-while
 
-**9. (show your working)** ```c
+**9.** What does this print for age = 17, for age = 22 and for age = 10?
+
+```c
 if (age >= 13 && age <= 19)
     printf("teen");
 else if (age <= 25)
@@ -79,19 +81,35 @@ else if (age <= 25)
 else
     printf("adult");
 ```
-Trace this for age = 17, age = 22 and age = 10, giving the output for each, and say what the age = 10 case shows about the order of the branches. Show your working.
+A. teen, young adult, adult
+B. teen, adult, adult
+C. young adult, young adult, adult
+D. teen, young adult, young adult
 
-**10. (show your working)** Rewrite `!(x > 5 && y <= 2)` as an equivalent expression that contains no `!`. Then evaluate both the original and your rewrite for x = 5, y = 2 to show that they agree. Show your working.
+**10.** Which expression is equivalent to `!(x > 5 && y <= 2)`?
+A. `x <= 5 || y > 2`
+B. `x <= 5 && y > 2`
+C. `x < 5 || y > 2`
+D. `x > 5 || y <= 2`
 
-**11. (show your working)** ```c
+**11.** What does this print?
+
+```c
 int n = 0, total = 40, hits = 0;
 if (n != 0 && total / n > 5) hits = 1;
 if (total > 10 || total / n > 5) hits = hits + 2;
 printf("%d", hits);
 ```
-Trace this, saying for each `if` which operands are evaluated and why the program never divides by zero, and give the output. Show your working.
+A. 3
+B. 2
+C. 0
+D. Nothing: it stops with a division by zero.
 
-**12. (show your working)** A student writes `if (x > 0);` and on the next line `{ printf("positive"); }`. Explain what the semicolon straight after the condition does, and say what is printed when x = −3.
+**12.** A student writes `if (x > 0);` and then, on the next line, `{ printf("positive"); }`. What is printed when x = −3?
+A. Nothing.
+B. The program does not compile.
+C. positive
+D. positive is printed twice.
 
 ---
 
@@ -129,18 +147,18 @@ X needs b > 0, which is false; Nothing would be right if the else belonged to th
 
 while and for test before the body, so a false condition means zero passes; if is not a loop at all and its block is skipped when the condition is false.
 
-**9.** *Tracing an if-else-if chain.* age = 17: 17 >= 13 is 1 and 17 <= 19 is 1, so 1 && 1 is true and it prints teen; the remaining branches are skipped. age = 22: the first condition is false (22 <= 19 fails), 22 <= 25 is true, so it prints young adult. age = 10: the first condition is false (10 >= 13 fails), and 10 <= 25 is true, so it prints young adult.
+**9. D** — *Tracing an if-else-if chain.* age = 17: both parts of the first condition hold, so it prints teen and the rest is skipped. age = 22: the first fails at 22 <= 19, and 22 <= 25 holds, so young adult. age = 10: the first fails at 10 >= 13, and 10 <= 25 holds, so young adult again.
 
-Final answer: teen, young adult, young adult. The 10 case shows that each later condition is tested only after the earlier ones have failed and is read in that context: `age <= 25` was written assuming the first branch had already removed everything under 13, and it had not, so a child is labelled a young adult. A correct answer gives the three outputs and explains that the first true condition wins and the second condition does not check the lower bound. Saying age = 10 prints adult or teen is wrong.
+The branches are tested in order and the first true one wins, so the second condition never checks a lower bound and a child of 10 is labelled a young adult. teen for 22, or adult for 10, both assume a range that is not written.
 
-**10.** *Negating a compound condition.* Not (both) is the same as at least one is not: `!(A && B)` is `!A || !B`. The negation of `x > 5` is `x <= 5` (the boundary value 5 moves to the other side) and the negation of `y <= 2` is `y > 2`. Rewrite: `x <= 5 || y > 2`.
+**10. A** — *Negating a compound condition.* Not both is the same as at least one is not, so `!(A && B)` becomes `!A || !B`. The negation of `x > 5` is `x <= 5` and the negation of `y <= 2` is `y > 2`, giving `x <= 5 || y > 2`.
 
-Check at x = 5, y = 2. Original: 5 > 5 is 0, 2 <= 2 is 1, 0 && 1 is 0, and !0 is 1. Rewrite: 5 <= 5 is 1, 2 > 2 is 0, 1 || 0 is 1. Both give 1. A correct answer flips && to ||, negates each comparison including the boundary (`<=` for `>`, `>` for `<=`), and shows both evaluate to 1. `x <= 5 && y > 2` keeps && and gives 0 at this point, which is wrong; `x < 5 || y > 2` loses the boundary and gives 0, also wrong.
+At x = 5, y = 2 the original is 1 and only that option is 1 too: keeping `&&` gives 0, `x < 5` loses the boundary value and gives 0, and negating neither comparison gives 0.
 
-**11.** *Short-circuit evaluation.* First if: `n != 0` is false. `&&` with a false left operand is already false, so the right operand `total / n > 5` is never evaluated; no division happens and hits stays 0. Second if: `total > 10` is true. `||` with a true left operand is already true, so `total / n > 5` is again skipped; hits becomes 0 + 2 = 2. Output: 2.
+**11. B** — *Short-circuit evaluation.* `&&` stops as soon as its left operand is false: `n != 0` is false, so `total / n` is never evaluated and hits stays 0. `||` stops as soon as its left operand is true: `total > 10` is true, so the division is skipped again and hits becomes 0 + 2 = 2.
 
-Final answer: 2. A correct answer says the left operand decides in both cases, that the division by n is skipped both times (short-circuit), and gives 2. Answers of 3 (both ifs taken) or 'crashes with division by zero' are wrong; swapping the operands, `total / n > 5 && n != 0`, would divide first and crash.
+3 takes both ifs, 0 takes neither, and the division by zero never happens because of short-circuit evaluation, although `total / n > 5 && n != 0` would divide first and crash.
 
-**12.** *The stray semicolon after a condition.* The semicolon is an empty statement, and the `if` governs exactly one statement, so the `if` is complete at the semicolon and controls nothing. The block on the next line is simply the next statement of the program and runs whatever x is. With x = −3 the condition is false, the empty statement is skipped, and then the block runs anyway: it prints positive.
+**12. C** — *The stray semicolon after a condition.* The semicolon is an empty statement, and an `if` governs exactly one statement, so the `if` is complete at the semicolon and controls nothing. The block on the next line is simply the next statement of the program and runs whatever x is, so positive appears even for x = −3.
 
-A correct answer says the semicolon is an empty statement that ends the if, that the block is no longer attached to it, and that positive is printed for x = −3. Saying nothing is printed, or that the compiler reports an error, is wrong: it compiles in silence.
+Nothing would be printed only if the block were still attached to the if; the fragment compiles in silence, which is what makes this fault easy to miss; and the block runs once, not twice.

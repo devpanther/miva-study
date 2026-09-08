@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *The same Week 3 computational approaches, treated as practice.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A padlock has 4 digits, each from 0 to 9, and the combination has been forgotten. Brute force tries every combination in order, and each attempt takes 3 seconds. What is the worst-case time to open it?
 A. 2 h 47 min
@@ -68,22 +68,29 @@ B. Greedy algorithm
 C. Pipelining
 D. Backtracking
 
-**9. (show your working)** Sort the numbers 6, 2, 9, 5, 1 into descending order using merge sort. Split the list into a first part of two numbers and a second part of three, keep splitting until every part holds one number, then merge, taking the larger head first. Write out every split and every merge. Show your working.
+**9.** Merge sort puts 6, 2, 9, 5, 1 into descending order, splitting into a first part of two numbers and a second part of three. Immediately before the final merge the two sorted parts are 6, 2 and 9, 5, 1. How many head-to-head comparisons does that final merge make, and what list does it produce?
+A. 5 comparisons; 9, 6, 5, 2, 1
+B. 4 comparisons; 1, 2, 5, 6, 9
+C. 4 comparisons; 9, 6, 5, 2, 1
+D. 3 comparisons; 9, 6, 5, 2, 1
 
-**10. (show your working)** This naive recursive Fibonacci recomputes the same values many times.
+**10.** A dynamic programming version of Fibonacci starts the list f as 0, 1 and appends f[i − 1] + f[i − 2] for i = 2 up to n. For n = 10, what is f[10] and how many additions does the loop perform?
+A. 55, and 10 additions
+B. 89, and 9 additions
+C. 34, and 8 additions
+D. 55, and 9 additions
 
-```python
-def fib(n):
-    if n < 2:
-        return n
-    return fib(n - 1) + fib(n - 2)
-```
+**11.** An order holds products costing ₦2000 and ₦1500. A pipeline sums the products, then adds VAT of 7.5%, then adds a delivery fee of ₦500. What is the final total, and what would it be if the delivery fee were added before the VAT instead?
+A. ₦4262.50, and ₦4300.00
+B. ₦4300.00, and ₦4262.50
+C. ₦4262.50, and ₦4262.50
+D. ₦4007.50, and ₦4300.00
 
-Rewrite it as a dynamic-programming version that saves each value in a list as it is computed. Then give fib(10) and state how many additions your version performs to reach it. Show your working.
-
-**11. (show your working)** An order has products costing ₦2000 and ₦1500. VAT of 7.5% is charged on the product total, and a delivery fee of ₦500 is added after VAT. Lay this out as a pipeline of three stages, show what each stage passes to the next, and give the final total. Then state the total if the delivery fee were added before VAT instead. Show your working.
-
-**12. (show your working)** A food delivery service in a busy city wants to cut delivery times and fuel costs. Explain how a greedy algorithm would plan a driver's route and how divide and conquer would organise the city's deliveries, and give one way each approach could produce a poor result.
+**12.** A delivery service plans routes. A greedy planner sends the driver to the nearest undelivered order at every stop. A divide and conquer planner splits the city into zones, plans each zone separately, then combines the zone routes. Which pair of weaknesses is correct?
+A. Greedy: it always produces the longest possible route. Divide and conquer: it cannot be applied to a map
+B. Greedy: no guarantee the whole route is shortest. Divide and conquer: a boundary order is served from the costlier zone
+C. Greedy: it needs the whole route known in advance. Divide and conquer: no zone route is ever the best one
+D. Greedy: it cannot handle more than one driver. Divide and conquer: the zones must be sorted before planning
 
 ---
 
@@ -121,26 +128,18 @@ Trying every order is brute force and far slower; recomputing every zone on ever
 
 Brute force would write out every possible full grid and test each; greedy would never erase a choice; pipelining passes results between stages in a fixed series.
 
-**9.** *Tracing merge sort.* Split: [6, 2, 9, 5, 1] → [6, 2] and [9, 5, 1]. [6, 2] → [6] and [2]. [9, 5, 1] → [9] and [5, 1]; [5, 1] → [5] and [1]. Merge, larger head first: [6] + [2] → [6, 2]; [5] + [1] → [5, 1]; [9] + [5, 1] → [9, 5, 1]; finally [6, 2] + [9, 5, 1]: compare 6 and 9, take 9; 6 and 5, take 6; 2 and 5, take 5; 2 and 1, take 2; then 1 → [9, 6, 5, 2, 1].
+**9. C** — *Tracing the final merge of merge sort.* Compare the two heads and take the larger each time: 6 against 9 takes 9; 6 against 5 takes 6; 2 against 5 takes 5; 2 against 1 takes 2. The first part is then empty, so the remaining 1 is appended with no comparison. That is 4 comparisons and the list 9, 6, 5, 2, 1.
 
-Final answer: 9, 6, 5, 2, 1. A correct answer shows the splits down to single numbers and each merge by comparing heads; the final list alone is not enough. Merging in ascending order, 1, 2, 5, 6, 9, is the wrong direction.
+5 comparisons counts one for the last element even though nothing is left to compare it against; 3 stops one comparison early; the ascending list comes from taking the smaller head instead of the larger.
 
-**10.** *Converting naive recursion to dynamic programming.* Model answer:
+**10. D** — *Dynamic programming Fibonacci: value and work.* The list grows 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, so f[10] = 55. The loop runs for i = 2, 3, up to 10, which is 9 passes, and each pass does exactly one addition: 9 additions. The naive recursion reaches the same value only after 177 calls.
 
-```python
-def fib(n):
-    f = [0, 1]
-    for i in range(2, n + 1):
-        f.append(f[i - 1] + f[i - 2])
-    return f[n]
-```
+10 additions counts a pass for i = 1, which is already in the starting list; 89 is f[11], one term too far; 34 is f[9], one term short.
 
-The list grows 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, so fib(10) = 55. Each loop pass does one addition, for i = 2 to 10, which is 9 additions; the naive version makes 177 calls for the same value. A correct answer stores results in a list or table, reads earlier entries instead of recursing, gives 55, and gives 9 additions (10 is accepted if the answer counts an addition for f[1] explicitly). A version that still calls fib(n − 1) and fib(n − 2) without saving results is not dynamic programming.
+**11. A** — *Laying out a pipelined calculation.* Stage 1 sums the products: 2000 + 1500 = 3500. Stage 2 adds VAT: 3500 × 1.075 = 3762.50. Stage 3 adds delivery: 3762.50 + 500 = ₦4262.50. Moving delivery in front of VAT changes what stage 2 receives: (3500 + 500) × 1.075 = ₦4300.00.
 
-**11.** *Laying out a pipelined calculation.* Stage 1, sum the products: 2000 + 1500 = 3500, passed to stage 2. Stage 2, add 7.5% VAT: 3500 × 1.075 = 3762.5, passed to stage 3. Stage 3, add delivery: 3762.5 + 500 = 4262.5. Final total ₦4262.50.
+The reversed pair puts the two answers the wrong way round; the same figure twice assumes the order of stages does not matter, but VAT is then charged on the fee as well; ₦4007.50 adds 7.5 naira instead of 7.5 per cent.
 
-If delivery came before VAT the order of stages changes and so does the answer: (3500 + 500) × 1.075 = 4300. A correct answer shows the three stages in order with 3500 and 3762.5 handed on, gives ₦4262.50, and gives ₦4300 for the reordered pipeline. Adding VAT as 7.5 rather than 7.5% (3507.5) is wrong.
+**12. B** — *Greedy and divide and conquer applied to routing.* Greedy takes the locally best choice at every stop and never revises it, so it is fast but carries no optimality guarantee: chasing near orders can strand a far one until last and force a long return leg. Divide and conquer makes each zone a simpler problem, but the combination step is where it fails: an order just inside one boundary may be far cheaper to serve from the neighbouring zone, and the combined plan cannot see that.
 
-**12.** *Greedy and divide and conquer applied to routing.* Greedy: at each stop the driver goes to the nearest undelivered order, committing to the locally best choice every time. It is simple and fast, but it carries no optimality guarantee: chasing nearby orders can leave a far-off order for last and force a long return trip, so the total route can be much longer than the best one. Divide and conquer: split the city into zones, plan each zone's deliveries separately (a simpler problem), then combine the zone routes. It can fail when the combination step is hard, for example orders near a zone boundary that would be cheaper to serve from the neighbouring zone, so the combined plan is worse than a whole-city plan.
-
-A correct answer describes the nearest-next rule for greedy and the zone split plus recombination for divide and conquer, and gives a concrete failure for each: greedy's missing guarantee, and the cost of recombining the parts.
+Greedy is not always the worst route, needs no advance knowledge and copes with several drivers; a zone route can be the best one for its zone, and no sorting is required.

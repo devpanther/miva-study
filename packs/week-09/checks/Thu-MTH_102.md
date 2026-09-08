@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 9.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Evaluate ∫₀^∞ x·e^(−2x) dx.
 A. 1/2
@@ -51,13 +51,29 @@ B. The conclusion: convergence passes down to the smaller function, not up to th
 C. The claim that ∫₁^∞ 1/x² dx converges
 D. Nothing; the argument is valid
 
-**9. (show your working)** Determine whether ∫₁^∞ 1/√(x⁸ + 2) dx converges or diverges. Show each inequality step, name f and g with 0 ≤ g(x) ≤ f(x), read off p, and quote Note 1. Show your working.
+**9.** Determine whether ∫₁^∞ 1/√(x⁸ + 2) dx converges or diverges, and say by which comparison.
+A. Diverges, since 1/√(x⁸ + 2) ≥ 1/x⁴ and p = 4 > 1
+B. Converges, since 1/√(x⁸ + 2) ≤ 1/x⁴ and p = 4 > 1
+C. Converges, since 1/√(x⁸ + 2) ≤ 1/x⁸ and p = 8 > 1
+D. Converges to 1/3, by comparison with ∫₁^∞ 1/x⁴ dx
 
-**10. (show your working)** Evaluate ∫₋∞^∞ 1/(1 + x²) dx. Split it at 0, write each half as a limit with its own letter, and add the halves only if both converge. Show your working.
+**10.** Evaluate ∫₋∞^∞ 1/(1 + x²) dx by splitting at 0 and taking each half as its own limit.
+A. π
+B. π/2
+C. 0
+D. Divergent
 
-**11. (show your working)** Evaluate ∫₁^∞ (x + 1)/x³ dx. Split the integrand into powers of x first, then write the limit. Show your working.
+**11.** Evaluate ∫₁^∞ (x + 1)/x³ dx.
+A. 1
+B. 1/2
+C. −3/2
+D. 3/2
 
-**12. (show your working)** A student writes ∫₋₁² 1/x⁴ dx = [−1/(3x³)]₋₁² = −1/24 − 1/3 = −3/8. Explain why this answer is impossible, what was overlooked, and what the correct verdict is.
+**12.** A student writes ∫₋₁² 1/x⁴ dx = [−1/(3x³)]₋₁² = −1/24 − 1/3 = −3/8. What is wrong, and what is the correct verdict?
+A. The antiderivative should be −1/(4x³), which gives −1/32 − 1/4
+B. Nothing is wrong; a definite integral is allowed to be negative
+C. 1/x⁴ is undefined at x = 0 inside [−1, 2], so the integral is improper and divergent
+D. The limits were subtracted the wrong way round; the value is 3/8
 
 ---
 
@@ -95,18 +111,18 @@ Oscillation is harmless here because cos² is never negative and is bounded by 1
 
 The inequality is correct for x ≥ 1, since x² ≥ x there; ∫₁^∞ 1/x² dx does converge, p = 2 > 1; the argument is not valid because it uses one of the two directions the theorem does not license.
 
-**9.** *Comparison template with a root in the denominator.* For all x ≥ 1: x⁸ + 2 ≥ x⁸; taking square roots, √(x⁸ + 2) ≥ √(x⁸) = x⁴ (valid since x > 0); taking reciprocals reverses it, 1/√(x⁸ + 2) ≤ 1/x⁴. Let f(x) = 1/x⁴ and g(x) = 1/√(x⁸ + 2), both continuous and positive on [1, ∞), so 0 ≤ g(x) ≤ f(x). ∫₁^∞ 1/x⁴ dx has p = 4 > 1, so by Note 1 it converges (to 1/3). By clause 1 of the Comparison Test, ∫₁^∞ 1/√(x⁸ + 2) dx converges.
+**9. B** — *Comparison template with a root in the denominator.* For x ≥ 1: x⁸ + 2 ≥ x⁸, so √(x⁸ + 2) ≥ x⁴, and taking reciprocals reverses it to 1/√(x⁸ + 2) ≤ 1/x⁴. The larger integral ∫₁^∞ 1/x⁴ dx has p = 4 > 1 and converges, so the smaller one converges as well.
 
-Final answer: converges. A correct answer shows the three inequality steps in order (drop the 2, take the root, reverse on reciprocals), names f = 1/x⁴ and g = 1/√(x⁸ + 2), states p = 4 > 1, and concludes convergence. Writing the reciprocal step as ≥ reverses the verdict and is wrong; claiming the value is 1/3 is wrong, only 'at most 1/3' follows.
+The first option writes the reciprocal step with the inequality the wrong way round and flips the verdict; the third forgets the square root, which halves the exponent; the fourth turns the bound 1/3 into a value, when only 'at most 1/3' follows.
 
-**10.** *Both limits infinite with both halves convergent.* Split: ∫₋∞^∞ 1/(1 + x²) dx = ∫₋∞⁰ + ∫₀^∞. The antiderivative is tan⁻¹(x). Right half: lim(b→∞) [tan⁻¹(x)]₀ᵇ = lim(b→∞) tan⁻¹(b) − 0 = π/2. Left half: lim(a→−∞) [tan⁻¹(x)]ₐ⁰ = 0 − lim(a→−∞) tan⁻¹(a) = 0 − (−π/2) = π/2. Both halves converge, so the integral is π/2 + π/2 = π.
+**10. A** — *Both limits infinite with both halves convergent.* The antiderivative is tan⁻¹(x). Right half: lim(b→∞) [tan⁻¹(x)]₀ᵇ = π/2 − 0 = π/2. Left half: lim(a→−∞) [tan⁻¹(x)]ₐ⁰ = 0 − (−π/2) = π/2. Both halves are finite, so the integral converges to π/2 + π/2 = π.
 
-Final answer: π (converges to π). The working must show the split, two independent limits with tan⁻¹(b) → π/2 and tan⁻¹(a) → −π/2, and the sum. Giving π/2 (one half only) or 0 (subtracting the halves) is wrong; using a single symmetric limit ∫₋ₜᵗ is not the definition, though it reaches the same number here.
+π/2 reports one half only; 0 subtracts the halves instead of adding them; divergent ignores that tan⁻¹ is bounded, so each half has a finite limit.
 
-**11.** *Type I integral after splitting the integrand.* (x + 1)/x³ = x/x³ + 1/x³ = x⁻² + x⁻³. Antiderivative: −1/x − 1/(2x²). Then ∫₁^∞ = lim(t→∞) [−1/x − 1/(2x²)]₁ᵗ = lim(t→∞) (−1/t − 1/(2t²)) − (−1 − 1/2) = 0 − (−3/2) = 3/2. The limit exists, so the integral converges to 3/2.
+**11. D** — *Type I integral after splitting the integrand.* Split the integrand first: (x + 1)/x³ = x⁻² + x⁻³, with antiderivative −1/x − 1/(2x²). Then the integral is lim(t→∞) [−1/t − 1/(2t²)] − (−1 − 1/2) = 0 + 3/2 = 3/2, so it converges to 3/2.
 
-Final answer: 3/2 (also accepted: 1.5). The working must show the split into x⁻² + x⁻³, the antiderivative with both minus signs, the limit line, and the subtraction of the lower-limit value −3/2. Getting 1 (forgetting the x⁻³ term) or −3/2 (subtracting in the wrong order) is wrong.
+1 keeps only the x⁻² term; 1/2 keeps only the x⁻³ term; −3/2 subtracts the limits in the wrong order.
 
-**12.** *Why the Fundamental Theorem cannot be used across a discontinuity.* 1/x⁴ is positive everywhere it is defined, so its integral over any interval cannot be negative; −3/8 is impossible on sight. What was overlooked is that 1/x⁴ is undefined at x = 0, which lies strictly inside [−1, 2], so the integral is improper (Type II) and the Fundamental Theorem may not be applied across the interval. It must be split at 0: ∫₋₁⁰ + ∫₀², with lim(c→0⁻) on the left and lim(b→0⁺) on the right. The left piece is −1/(3c³) − 1/3, which → +∞ as c → 0⁻ (c³ is a small negative number); the right piece is −1/24 + 1/(3b³), which → +∞ as b → 0⁺. Both halves diverge.
+**12. C** — *Why the Fundamental Theorem cannot be used across a discontinuity.* 1/x⁴ is positive wherever it is defined, so a negative answer is impossible on sight. The cause is that 1/x⁴ is undefined at x = 0, which lies inside [−1, 2], so the Fundamental Theorem may not be applied straight across. Split at 0 and take one-sided limits: both ∫₋₁⁰ and ∫₀² give +∞, so the integral is divergent.
 
-A correct answer says a positive integrand cannot give a negative integral, identifies the discontinuity at x = 0 inside the interval, states that the integral must be split there with one-sided limits, and concludes that ∫₋₁² 1/x⁴ dx is divergent.
+The antiderivative −1/(3x³) is in fact correct, so the first option is false; a positive integrand rules out the second; and reversing the limits only changes the sign of an answer that should never have been computed.

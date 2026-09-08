@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *Week 5 flowchart concepts treated conceptually: what each flowchart symbol means, and why the notation gives it that role.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A box in a flowchart is labelled 'Compute payroll' and stands for a whole routine that is drawn in full on a separate chart. Which symbol should it be drawn in?
 A. Process (plain rectangle)
@@ -51,13 +51,29 @@ B. Decision
 C. On-page connector
 D. Merge
 
-**9. (show your working)** A chart runs: Start; Total = 0; K = 0; Enter x; Total = Total + x; K = K + 1; decision 'Is K < 3?'; Yes → back to Enter x; No → Print Total; Stop. Name the symbol for each of the seven steps between Start and Stop, then state how many flow arrows enter 'Enter x' and how many leave the decision.
+**9.** A chart runs: Start; Total = 0; K = 0; Enter x; Total = Total + x; K = K + 1; decision 'Is K < 3?'; Yes back to Enter x; No to Print Total; Stop. How many flow arrows enter 'Enter x', how many leave the decision, and which symbol is used for 'Print Total'?
+A. 1 enters, 2 leave, input/output parallelogram
+B. 2 enter, 2 leave, input/output parallelogram
+C. 2 enter, 2 leave, process rectangle
+D. 1 enters, 1 leaves, input/output parallelogram
 
-**10. (show your working)** Describe, step by step and naming the symbol for each step, a flowchart that reads a temperature T and prints 'Hot' if T is above 30 and 'Fine' otherwise. Every path must reach Stop.
+**10.** A flowchart must read a temperature T and print 'Hot' if T is above 30 and 'Fine' otherwise, with every path reaching Stop. Which layout is correct?
+A. Start; 'Is T > 30?' diamond, Yes to Read T, No to Print 'Fine'; both arrows to Stop
+B. Start; Read T parallelogram; 'T > 30' rectangle with two exits, to Print 'Hot' and to Print 'Fine'; both to Stop
+C. Start; Read T parallelogram; 'Is T > 30?' diamond, Yes to Print 'Hot', No to Print 'Fine'; both to Stop
+D. Start; Read T parallelogram; 'Is T > 30?' diamond, Yes to Print 'Hot' to Stop; the No exit left unconnected
 
-**11. (show your working)** Three charts: (i) parallel lanes headed Sales, Warehouse and Accounts, with an order passing across the lanes; (ii) how a customer's details move from a web form into a database and out to a monthly report; (iii) a chart handed to new staff to teach the standard procedure for taking an order. Name the flowchart type of each and give the one feature that decides it.
+**11.** Three charts: (i) parallel lanes headed Sales, Warehouse and Accounts, with an order passing across the lanes; (ii) how a customer's details move from a web form into a database and out to a monthly report; (iii) a chart handed to new staff to teach the standard procedure for taking an order. What is the flowchart type of each, in order?
+A. Swimlane, data, workflow
+B. Swimlane, workflow, data
+C. Data, swimlane, process
+D. Swimlane, data, process
 
-**12. (show your working)** Explain why a decision symbol has exactly two exits that must both be labelled, while a process box has exactly one exit. Then say what goes wrong when you try to trace a chart whose diamond exits carry no labels.
+**12.** Why does a decision symbol have exactly two exits that must both be labelled, while a process box has exactly one, and what goes wrong when a diamond's exits carry no labels?
+A. Two inputs against one output; without labels the trace simply takes the left exit
+B. Two actions against one answer; without labels the chart gains too many flow lines
+C. Two answers against one action; without labels the chart runs both exits at once
+D. Two answers against one action; without labels a trace cannot tell which arrow belongs to which answer
 
 ---
 
@@ -95,18 +111,18 @@ No crossing lines are described; there is no comparison in the chart; and the on
 
 The summing junction (circled ×) shows the addition of inputs from various paths; a decision has one arrow in and two out; an on-page connector carries one line to another spot on the same page.
 
-**9.** *Assigning symbols and arrow counts on a chart.* Total = 0 and K = 0: process rectangles (the preparation hexagon is also accepted, since they are set-up steps). Enter x: input/output parallelogram. Total = Total + x and K = K + 1: process rectangles. Is K < 3?: decision diamond. Print Total: input/output parallelogram.
+**9. B** — *Assigning symbols and arrow counts on a chart.* Two arrows reach 'Enter x': one forward from K = 0 and one back from the Yes exit of the decision, and it is that back arrow that makes the chart a loop. A decision has one exit per answer, so two leave it. 'Print Total' moves data out of the algorithm, so it is drawn as an input/output parallelogram.
 
-Two arrows enter 'Enter x': one from K = 0 and one back from the Yes exit of the decision. Two arrows leave the decision: Yes and No. A correct answer gives parallelograms for both data steps, a diamond for the test, rectangles (or hexagons for the two initialisations) for the assignments, and the counts 2 and 2. Giving 1 arrow into 'Enter x' misses the back arrow that makes this a loop.
+Counting one arrow into 'Enter x' misses the back arrow; a process rectangle is for an action such as Total = Total + x, not for printing; a decision with a single exit could not branch at all.
 
-**10.** *Laying out a selection chart.* Model answer: Start (terminator); Read T (input/output parallelogram); Is T > 30? (decision diamond); Yes → Print 'Hot' (parallelogram); No → Print 'Fine' (parallelogram); both arrows join (a merge is optional) and lead to Stop (terminator).
+**10. C** — *Laying out a selection chart.* T must be read before any test uses it, the test belongs in a diamond with both exits labelled, each branch does its own printing, and both branches must reach Stop. That is the layout with Read T first, a labelled diamond, and both branches ending at Stop; 'Is T ≤ 30?' with the two branches swapped would serve just as well.
 
-A correct answer has exactly one Start, an input step before the decision, a diamond with both exits labelled, the two outputs on the two branches, and both branches reaching Stop. 'Is T ≤ 30?' with the branches swapped is accepted. Not accepted: two exits from a rectangle, a decision placed before T is read, or a branch left with no route to Stop.
+Testing before Read T uses a value that does not exist yet; a rectangle may have only one exit, so it cannot branch; leaving the No exit unconnected creates a path with no route to Stop.
 
-**11.** *Identifying flowchart types.* (i) Swimlane flowchart: the parallel lanes show multiple categories of activity side by side, one per department. (ii) Data flowchart: it shows the flow of information through the system, which is what reduces the gap between users and developers. (iii) Workflow chart: it describes how the business functions and is used for training employees on standard procedures.
+**11. A** — *Identifying flowchart types.* Parallel lanes, one per department, are the defining feature of a swimlane chart. A chart of how information moves through a system is a data flowchart. A chart of how the business operates, used to train staff on a standard procedure, is a workflow chart.
 
-A correct answer names swimlane, data, workflow in that order, each with its deciding feature (lanes; information flow; how the business operates, used for training). Calling (iii) a process flowchart is the common slip: a process chart describes how a product or process moves along a chain rather than the standard operating routine used for training.
+Calling (iii) a process flowchart is the usual slip: a process chart follows a product or process along a chain rather than the standard routine taught to new staff. The other orderings swap the data and workflow charts around.
 
-**12.** *Arrow rules for decision and process symbols.* A decision poses a yes/no (true/false) question, and the answer determines the path the flow takes, so there must be one exit for each possible answer, and each must be labelled so the reader knows which exit belongs to which answer. A process box performs one action with no question asked, so there is only one thing that can happen next: a single exit.
+**12. D** — *Arrow rules for decision and process symbols.* A decision asks a yes/no question, so there must be one exit for each possible answer, and each must be labelled so the reader knows which is which. A process box performs one action and asks nothing, so only one thing can happen next: a single exit.
 
-With unlabelled exits a trace stops at the diamond: you can evaluate the question with the current values but cannot tell which arrow to follow, so different readers would follow different paths and the chart no longer defines one algorithm. A correct answer gives the two-answers reason, the one-action reason, and says the trace becomes ambiguous or impossible at the diamond.
+With unlabelled exits the trace stops dead at the diamond: the question can be evaluated but neither arrow can be chosen, so different readers take different paths and the chart no longer defines one algorithm. It does not run both exits, take a default exit, or acquire extra flow lines.

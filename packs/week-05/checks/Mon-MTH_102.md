@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Week 5 differentiation, exactly as she builds it.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Differentiate f(x) = 2x⁵ − 7x + 3.
 A. 10x⁴ − 7x
@@ -51,13 +51,29 @@ B. h is a constant, and constants differentiate to 0
 C. Substituting h = 0 before cancelling gives 0/0
 D. f(x + h) has to equal f(x) at the end
 
-**9. (show your working)** f(x, y) = 4x³ − 5xy + 2y². Find ∂f/∂x and ∂f/∂y. Show your working.
+**9.** f(x, y) = 4x³ − 5xy + 2y². Find ∂f/∂x and ∂f/∂y.
+A. ∂f/∂x = 12x² − 5y, ∂f/∂y = −5x + 4y
+B. ∂f/∂x = 12x² − 5y + 4y, ∂f/∂y = −5x + 4y
+C. ∂f/∂x = 12x² − 5, ∂f/∂y = −5x + 4y
+D. ∂f/∂x = 12x² − 5y, ∂f/∂y = −5 + 4y
 
-**10. (show your working)** Differentiate y = 5x − 2 from first principles, using f′(x) = lim(h→0) [f(x + h) − f(x)]/h. Show every line of working.
+**10.** Differentiate y = 5x − 2 from first principles with f′(x) = lim(h→0) [f(x + h) − f(x)]/h. Which line is [f(x + h) − f(x)]/h, and what is f′(x)?
+A. (5x + 5h − 2)/h, so f′(x) = 5x − 2
+B. (5h − 4)/h, so f′(x) does not exist
+C. 0/0, so f′(x) = 0
+D. 5h/h = 5, so f′(x) = 5
 
-**11. (show your working)** Find the gradient of the curve y = x³ − 2x² at the point where x = 2, and state what this number represents geometrically. Show your working.
+**11.** Find the gradient of the curve y = x³ − 2x² at x = 2, and say what that number represents geometrically.
+A. 8, the slope of the tangent at (2, 0)
+B. 0, the slope of the tangent at (2, 0)
+C. 4, the slope of the tangent at (2, 0)
+D. 4, the height of the curve at x = 2
 
-**12. (show your working)** When y depends on x, d/dx(y²) = 2y·dy/dx. In partial differentiation, ∂/∂x(y²) = 0. Explain why the same expression y² is treated so differently in the two settings.
+**12.** When y is a function of x, d/dx(y²) = 2y·dy/dx, but in partial differentiation ∂/∂x(y²) = 0. Which statement explains the difference?
+A. Implicit differentiation always attaches dy/dx to every term, partial differentiation never does
+B. In the implicit setting y is a function of x so the chain rule applies; in the partial setting y is independent and held constant, so the constant rule applies
+C. y² is a constant in both settings, but implicit notation keeps a dy/dx for tidiness
+D. Partial differentiation ignores squared terms, implicit differentiation does not
 
 ---
 
@@ -95,18 +111,18 @@ D. f(x + h) has to equal f(x) at the end
 
 The answer normally does contain x (f′(x) = 3 is the exception, not the rule); h is a variable tending to 0, not a constant; and f(x + h) equals f(x) only in the limit, which is exactly what the quotient is measuring.
 
-**9.** *Partial derivatives of a polynomial in two variables.* For ∂f/∂x treat y as a constant: 4x³ → 12x²; −5xy → −5y (y is a constant multiplier and x differentiates to 1); 2y² → 0 (no x in it). So ∂f/∂x = 12x² − 5y. For ∂f/∂y treat x as a constant: 4x³ → 0; −5xy → −5x; 2y² → 4y. So ∂f/∂y = −5x + 4y.
+**9. A** — *Partial derivatives of a polynomial in two variables.* For ∂f/∂x hold y fixed: 4x³ gives 12x², −5xy gives −5y since y is only a constant multiplier, and 2y² gives 0 because it contains no x. For ∂f/∂y hold x fixed: 4x³ gives 0, −5xy gives −5x, and 2y² gives 4y. So ∂f/∂x = 12x² − 5y and ∂f/∂y = 4y − 5x.
 
-Final answer: ∂f/∂x = 12x² − 5y and ∂f/∂y = 4y − 5x (either order of the terms is accepted). A correct answer shows that terms without the differentiation variable vanish by the constant rule. Leaving 2y² alive in ∂f/∂x, or writing dy/dx factors anywhere, is wrong: in partial differentiation the other variable is a genuine constant.
+Keeping 4y alive in ∂f/∂x forgets that 2y² is a constant there, while −5 in place of −5y or −5x drops the surviving variable from the product term.
 
-**10.** *First principles on a linear function.* f(x + h) = 5(x + h) − 2 = 5x + 5h − 2. Then f(x + h) − f(x) = (5x + 5h − 2) − (5x − 2) = 5h. Divide by h: 5h/h = 5. Take the limit: lim(h→0) 5 = 5. So f′(x) = 5.
+**10. D** — *First principles on a linear function.* f(x + h) = 5(x + h) − 2 = 5x + 5h − 2, so f(x + h) − f(x) = (5x + 5h − 2) − (5x − 2) = 5h, since the 5x and the −2 cancel. Dividing by h gives 5h/h = 5, a constant, and lim(h→0) 5 = 5, so f′(x) = 5.
 
-Final answer: f′(x) = 5 (also accepted: dy/dx = 5, y′ = 5). A correct answer must substitute x + h into the whole function, cancel the 5x and −2 terms, divide out the h, and only then let h → 0. Substituting h = 0 before cancelling (giving 0/0) or leaving an h in the answer is wrong.
+(5x + 5h − 2)/h forgets to subtract f(x), (5h − 4)/h subtracts the −2 twice, and 0/0 comes from putting h = 0 before the h is cancelled.
 
-**11.** *Derivative as the gradient of the tangent at a point.* Differentiate: dy/dx = 3x² − 4x. Substitute x = 2: 3(4) − 4(2) = 12 − 8 = 4. So the gradient is 4. Geometrically, 4 is the slope of the tangent line to the curve at the point (2, 0): the curve is rising there, 4 units up for every 1 unit across.
+**11. C** — *Derivative as the gradient of the tangent at a point.* Differentiating gives dy/dx = 3x² − 4x, and at x = 2 that is 3(4) − 4(2) = 12 − 8 = 4. Geometrically 4 is the slope of the tangent line to the curve at the point (2, 0): the curve is rising there at 4 units up per unit across.
 
-Final answer: gradient 4, the slope of the tangent at x = 2. A correct answer shows the derivative 3x² − 4x, the substitution, and the value 4, and says 'slope of the tangent' (or 'rate of change of y with respect to x' at that point). Substituting x = 2 into y itself, giving 0, is the height of the point, not the gradient.
+0 is y itself at x = 2, the height rather than the gradient; 8 comes from evaluating 3x² − 4 instead of 3x² − 4x; and calling 4 a height confuses the derivative with the function value.
 
-**12.** *Implicit versus partial treatment of the other variable.* The difference is what y is assumed to be. In implicit differentiation, y is an unknown function of x, so y² is a composite function of x and the chain rule applies: differentiate the outside (2y) and multiply by the inside derivative dy/dx. In partial differentiation, x and y are independent variables; when differentiating with respect to x, y is held fixed, so y² is a constant and its derivative is 0 by the constant rule.
+**12. B** — *Implicit versus partial treatment of the other variable.* Everything turns on what y is assumed to be. Implicitly y is an unknown function of x, so y² is a composite and the chain rule gives the outer derivative 2y times the inner derivative dy/dx. In partial differentiation x and y are independent, so holding x's partner fixed makes y² a genuine constant and the constant rule sends it to 0.
 
-A correct answer says: implicit means y is a function of x (chain rule, dy/dx appears); partial means y is an independent variable held constant (constant rule, term vanishes). It should name the chain rule and the constant rule.
+The other options treat dy/dx as decoration, or invent a rule about squares, when the real distinction is chain rule versus constant rule.

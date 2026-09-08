@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *This session is Week 1 applied - the method worked through on concrete problems.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Trace this pseudocode with the inputs 50, 42, 46, 38, 49. Give the value of Grade and what is printed.
 
@@ -80,9 +80,13 @@ B. Create a step-by-step plan
 C. Carry out the solution plan
 D. Evaluate and refactor
 
-**9. (show your working)** Write pseudocode that reads five grades, computes their average as Grade, prints the average, then prints PASS if the average is 45 or more and FAIL otherwise. Show your working.
+**9.** Five grades are read into G1, G2, G3, G4 and G5. Which pair of lines sets Grade to the average of all five and prints PASS exactly when that average is 45 or more?
+A. `Grade = G1 + G2 + G3 + G4 + G5 / 5` then `IF Grade >= 45 THEN PRINT PASS ELSE PRINT FAIL`
+B. `Grade = (G1 + G2 + G3 + G4) / 5` then `IF Grade >= 45 THEN PRINT PASS ELSE PRINT FAIL`
+C. `Grade = (G1 + G2 + G3 + G4 + G5) / 5` then `IF Grade >= 45 THEN PRINT PASS ELSE PRINT FAIL`
+D. `Grade = (G1 + G2 + G3 + G4 + G5) / 5` then `IF Grade > 45 THEN PRINT PASS ELSE PRINT FAIL`
 
-**10. (show your working)** This pseudocode has a fault.
+**10.** This pseudocode has a fault: the sum leaves out G5 while the divisor stays 5.
 
 ```
 READ G1, G2, G3, G4, G5
@@ -90,9 +94,13 @@ Grade = (G1 + G2 + G3 + G4) / 5
 IF Grade > 44 THEN PRINT "PASS" ELSE PRINT "FAIL"
 ```
 
-State the fault and write the corrected line. Then give one set of five grades on which the faulty and corrected programs print different words, and one set on which they print the same word, showing both Grade values each time.
+On which set of five grades do the faulty version and the corrected version print different words?
+A. 50, 50, 50, 50, 50
+B. 60, 60, 60, 60, 0
+C. 30, 30, 30, 30, 30
+D. 80, 80, 80, 80, 10
 
-**11. (show your working)** Trace this pseudocode with N = 4 and the pairs (stock, point) = (3, 5), (12, 5), (5, 5), (7, 10) and write down everything it prints, in order. Show your working.
+**11.** Trace this with N = 4 and the pairs (stock, point) = (3, 5), (12, 5), (5, 5), (7, 10). What does it print, in order?
 
 ```
 READ N
@@ -106,8 +114,16 @@ FOR i = 1 TO N
 ENDFOR
 PRINT low
 ```
+A. Reorder 1, Reorder 4, 2
+B. Reorder 2, Reorder 3, 2
+C. Reorder 1, Reorder 2, Reorder 3, Reorder 4, 4
+D. Reorder 1, Reorder 3, Reorder 4, 3
 
-**12. (show your working)** Three proposals are made for the shop's reorder problem. (a) Split it into: read the stock and sales figures; work out each product's reorder point; compare stock with the reorder point; print the order list. (b) Handle the fast-selling products this month and the slow-selling ones next month. (c) Write the whole program first, then cut the finished code into three files. Which proposal is a genuine decomposition of the problem, and why are the other two not?
+**12.** A shop's reorder problem is to be broken down before any code is written. Which of these proposals is a genuine decomposition of the problem?
+A. Handle the fast-selling products this month and the slow-selling ones next month
+B. Read the stock and sales figures; work out each product's reorder point; compare stock with that point; print the order list
+C. Write the whole program first, then cut the finished code into three files
+D. Give the stock counting to one member of staff and the ordering to another
 
 ---
 
@@ -145,29 +161,18 @@ A search problem would accept any quantity with the property (within budget); a 
 
 The plan and the code faithfully carried out her misunderstanding, so steps 2 and 3 did their jobs; refactoring cannot fix a program that solves the wrong problem.
 
-**9.** *Writing the grade-average pseudocode.* Model answer:
+**9. C** — *Correct pseudocode for a grade average and decision.* All five grades must be added inside brackets before the division, and the pass test must include the boundary, so it is Grade = (G1 + G2 + G3 + G4 + G5) / 5 with IF Grade >= 45. For 50, 42, 46, 38, 49 that gives 225 / 5 = 45 and prints PASS.
 
-```
-READ G1, G2, G3, G4, G5
-Grade = (G1 + G2 + G3 + G4 + G5) / 5
-PRINT Grade
-IF Grade >= 45 THEN
-    PRINT "PASS"
-ELSE
-    PRINT "FAIL"
-ENDIF
-```
+Without the brackets only G5 is divided by 5, giving 185.8 for the same grades; dropping G5 from the sum divides 176 by 5 and gives 35.2; Grade > 45 fails a student whose average is exactly 45.
 
-A correct answer must read five values, add all five inside brackets before dividing by 5, print the average, and have a decision with both a PASS branch and a FAIL branch. A loop that reads five grades into a running total is also accepted, as is the test Grade > 44 when the grades are whole numbers. G1 + G2 + G3 + G4 + G5 / 5 without brackets divides only G5 and is wrong.
+**10. A** — *Choosing test inputs that expose a fault.* The faulty Grade is short by G5 / 5. For 50, 50, 50, 50, 50 it is 200 / 5 = 40, which prints FAIL, while the corrected value 250 / 5 = 50 prints PASS, so the words differ.
 
-**10.** *Fixing a wrong-divisor fault and choosing test inputs.* The sum leaves out G5 while still dividing by 5, so Grade is too small by G5/5. Corrected line: Grade = (G1 + G2 + G3 + G4 + G5) / 5. The program still runs, so this is a logical error.
+For 60, 60, 60, 60, 0 both give 48 and print PASS, because G5 is 0 and the fault costs nothing. For 30, 30, 30, 30, 30 the values 24 and 30 are both at or below 44, so both print FAIL. For 80, 80, 80, 80, 10 the values 64 and 66 are both above 44, so both print PASS.
 
-Exposing input: 50, 50, 50, 50, 50 gives corrected Grade 50 (PASS) but faulty Grade 200 / 5 = 40 (FAIL). Non-exposing input: 60, 60, 60, 60, 0 gives 48 both ways (PASS), or 30, 30, 30, 30, 30 gives 30 corrected and 24 faulty, both FAIL. A correct answer names the missing G5, gives the corrected line, and gives two inputs with their Grade values: one where the words differ and one where they agree. Any inputs that actually produce those results are accepted; an exposing input must have G5 > 0 and the corrected Grade above 44 with the faulty one at or below 44.
+**11. D** — *Tracing a loop with a decision and a boundary case.* i = 1: 3 ≤ 5 is true, so Reorder 1 and low = 1. i = 2: 12 ≤ 5 is false, nothing printed. i = 3: 5 ≤ 5 is true because the test is ≤ and not <, so Reorder 3 and low = 2. i = 4: 7 ≤ 10 is true, so Reorder 4 and low = 3. The last line prints 3.
 
-**11.** *Tracing a loop with a decision and a boundary case.* i = 1: 3 ≤ 5 true, prints Reorder 1, low = 1. i = 2: 12 ≤ 5 false, nothing printed. i = 3: 5 ≤ 5 true because the test is ≤ not <, prints Reorder 3, low = 2. i = 4: 7 ≤ 10 true, prints Reorder 4, low = 3. After the loop it prints 3.
+Dropping product 3 reads the test as stock < point; Reorder 2 with Reorder 3 comes from reversing it to stock >= point; printing all four ignores the decision entirely.
 
-A correct answer lists exactly four lines: Reorder 1, Reorder 3, Reorder 4, then 3. Leaving out product 3 (treating the test as stock < point) gives Reorder 1, Reorder 4, 2 and is wrong.
+**12. B** — *Decomposition versus phasing and file-splitting.* Decomposition breaks a problem into smaller problems, each solvable on its own, whose solutions combine into the whole. Reading the figures, computing reorder points, comparing, and printing are four such subproblems.
 
-**12.** *Decomposition versus phasing and file-splitting.* Only (a) is decomposition: the problem is broken into smaller problems, each of which can be solved on its own, and solving all of them solves the whole. (b) does not divide the problem at all; it schedules the same undivided problem in two time periods, so each period still faces the full difficulty. (c) divides the finished code, not the problem; the thinking was done in one piece and the split happens after the solution already exists.
-
-A correct answer picks (a), explains that its parts are separately solvable subproblems whose solutions combine, and says that (b) is phasing in time and (c) is splitting the product rather than the problem.
+Splitting the work across two months is phasing in time: each month still faces the whole undivided problem. Cutting finished code into files divides the product rather than the problem, and happens after the thinking is done. Handing parts to two people is delegation, which shares the work without making any part simpler.

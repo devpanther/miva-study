@@ -330,28 +330,56 @@
           "why": "Net displacement is the change in position: x(4) − x(1) = (F(4) + C) − (F(1) + C) = F(4) − F(1), which is exactly ∫₁⁴v(t)dt. The constant cancels, so a definite integral never needs an initial condition.\n\nF(4) − F(1) + C subtracts the constant only once; F(4) + C is the position at t = 4, not the change in position; F(4) − F(1) + 2C adds the constant at both ends instead of cancelling it."
         },
         {
-          "type": "short",
-          "q": "Water flows into an empty tank at the rate 4t litres per minute, where t is in minutes. Find the time at which the tank holds 200 litres. Show your working.",
+          "type": "mcq",
+          "q": "Water flows into an empty tank at the rate 4t litres per minute, where t is in minutes. Find the time at which the tank holds 200 litres.",
+          "options": [
+            "t = 50 minutes",
+            "t ≈ 14.1 minutes",
+            "t = 10 minutes",
+            "t ≈ 7.1 minutes"
+          ],
+          "answerIndex": 2,
           "concept": "Finding the time for an accumulated total",
-          "why": "The volume in the tank after t minutes is the integral of the rate from 0 to t: V(t) = ∫₀ᵗ4u du = [2u²]₀ᵗ = 2t². Set 2t² = 200, so t² = 100 and t = 10 (the negative root is meaningless for a time). Check: V(10) = 2(100) = 200 L.\n\nFinal answer: t = 10 minutes. The working must integrate the rate to get 2t² and then solve 2t² = 200. Setting the rate itself equal to 200, 4t = 200, gives t = 50 and is wrong; t² = 200 (forgetting the 2) gives 14.1 and is wrong."
+          "why": "The volume held after t minutes is the integral of the rate: V(t) = ∫₀ᵗ4u du = [2u²]₀ᵗ = 2t². Set 2t² = 200, so t² = 100 and t = 10 minutes, discarding the negative root. Check: V(10) = 2(100) = 200 L.\n\nt = 50 sets the rate itself equal to 200; t ≈ 14.1 solves t² = 200 and loses the factor 2; t ≈ 7.1 uses V(t) = 4t², raising the power without dividing by it."
         },
         {
-          "type": "short",
-          "q": "A resource is consumed at the rate C′(t) = 50e^(0.1t) thousand tonnes per year, t years after 2020, and nothing has been consumed at t = 0. Find the model C(t) for the total consumed after t years. Show your working.",
+          "type": "mcq",
+          "q": "A resource is consumed at the rate C′(t) = 50e^(0.1t) thousand tonnes per year, t years after 2020, and nothing has been consumed at t = 0. Find the model C(t).",
+          "options": [
+            "C(t) = 50e^(0.1t) − 50",
+            "C(t) = 500e^(0.1t) − 500",
+            "C(t) = 5e^(0.1t) − 5",
+            "C(t) = 500e^(0.1t)"
+          ],
+          "answerIndex": 1,
           "concept": "Building an accumulation model from an exponential rate",
-          "why": "C(t) = ∫50e^(0.1t)dt = (50/0.1)e^(0.1t) + c = 500e^(0.1t) + c, because ∫e^(kt)dt = e^(kt)/k. The condition C(0) = 0 with e⁰ = 1 gives 0 = 500 + c, so c = −500.\n\nFinal answer: C(t) = 500e^(0.1t) − 500, also written 500(e^(0.1t) − 1). The working must show the division by 0.1 and the use of C(0) = 0 to find c. 5e^(0.1t) − 5 multiplies by 0.1 instead of dividing and is wrong; leaving c out gives C(0) = 500, which contradicts the condition."
+          "why": "Since ∫e^(kt)dt = e^(kt)/k, C(t) = ∫50e^(0.1t)dt = (50/0.1)e^(0.1t) + c = 500e^(0.1t) + c. The condition C(0) = 0 with e⁰ = 1 gives 0 = 500 + c, so c = −500 and C(t) = 500e^(0.1t) − 500, also written 500(e^(0.1t) − 1).\n\n5e^(0.1t) − 5 multiplies by 0.1 instead of dividing; 50e^(0.1t) − 50 never divides at all; 500e^(0.1t) omits c and gives C(0) = 500, contradicting the condition."
         },
         {
-          "type": "short",
-          "q": "The rate of investment is I(t) = 3√t (thousand naira per year). Find the capital accumulated between the 1st and the 4th years. Show your working.",
+          "type": "mcq",
+          "q": "The rate of investment is I(t) = 3√t thousand naira per year. Find the capital accumulated between the 1st and the 4th years.",
+          "options": [
+            "3 thousand naira",
+            "16 thousand naira",
+            "31.5 thousand naira",
+            "14 thousand naira"
+          ],
+          "answerIndex": 3,
           "concept": "Capital growth as the integral of the rate of investment",
-          "why": "K = ∫₁⁴3√t dt = 3∫₁⁴t^(1/2)dt. Raise the power to 3/2 and divide by 3/2: 3 × (2/3)t^(3/2) = 2t^(3/2). So K = [2t^(3/2)]₁⁴ = 2(4^(3/2)) − 2(1^(3/2)) = 2(8) − 2(1) = 16 − 2 = 14, using 4^(3/2) = (√4)³ = 8.\n\nFinal answer: 14 thousand naira (also accepted: 14 000 naira, or 14 with units stated). The working must rewrite √t as t^(1/2), show 2t^(3/2), and substitute both limits into the antiderivative. 3√4 − 3√1 = 3 substitutes into I(t) instead of the antiderivative and is wrong; 16 forgets the lower limit."
+          "why": "K = ∫₁⁴3t^(1/2)dt. Raise the power to 3/2 and divide by 3/2: 3 × (2/3)t^(3/2) = 2t^(3/2). So K = [2t^(3/2)]₁⁴ = 2(8) − 2(1) = 14 thousand naira, using 4^(3/2) = (√4)³ = 8.\n\n3 substitutes the limits into I(t) rather than the antiderivative; 16 forgets the lower limit; 31.5 multiplies by 3/2 instead of dividing."
         },
         {
-          "type": "short",
-          "q": "A dam face has its top at the water surface. Explain why the total fluid force on it cannot be found as one pressure times the area of the face, and say what w·h(x) in F = ∫ₐᵇ w·h(x)·L(x)dx represents.",
+          "type": "mcq",
+          "q": "A dam face has its top edge at the water surface. In F = ∫ₐᵇ w·h(x)·L(x)dx, what does w·h(x) stand for, and why is an integral needed at all?",
+          "options": [
+            "The pressure at depth h(x); pressure grows with depth, so no single pressure covers the whole face",
+            "The weight of the water sitting above the strip; that weight changes along the face",
+            "The force on the strip; the strips have different widths L(x)",
+            "The pressure at the base of the dam; only the width L(x) varies with depth"
+          ],
+          "answerIndex": 0,
           "concept": "Why fluid force needs an integral",
-          "why": "Water pressure grows with depth: at depth h it is w·h, where w = ρg is the weight density (9800 N/m³ for water). The face spans depths from 0 at the top to its full height at the base, so there is no single pressure that applies to the whole face; pressure × area would either use the base pressure (too big) or some other guess. The integral cuts the face into thin horizontal strips at depth x, each of width L(x) and essentially one pressure w·h(x) over the strip, so the strip's force is w·h(x)·L(x)dx, and integrating adds the strips from top to bottom. The quantity w·h(x) is the pressure at depth h(x).\n\nA correct answer says that pressure varies with depth, that each strip is at one depth, and that w·h(x) is pressure (weight density × depth)."
+          "why": "Water pressure at depth h is w·h, where w = ρg is the weight density (about 9800 N/m³ for water). The face spans every depth from 0 at the surface to its full height, so there is no one pressure to multiply by the area. Cutting the face into thin horizontal strips of width L(x) at depth h(x) makes the pressure essentially constant on each strip, so its force is w·h(x)·L(x)dx and the integral adds them up.\n\nThe force on the strip is the whole integrand, not w·h(x), so the third option is off by the factor L(x)dx; the second confuses pressure with weight; the fourth freezes the pressure at one depth, which is exactly what the integral avoids."
         }
       ]
     },
@@ -468,28 +496,56 @@
           "why": "All currents and voltages in a transformer have the same frequency as the source: the secondary emf is driven by the same changing flux, cycle for cycle, so the output is still 50 Hz. The voltage is multiplied by 20, the current divided by 20, and a load R looks like R/400 to the source.\n\nEach wrong option names a quantity the turns ratio does change: voltage by N₂/N₁, current by N₁/N₂, resistance by (N₂/N₁)²."
         },
         {
-          "type": "short",
-          "q": "A generator delivers 20 kW at 500 V. Before transmission the voltage is stepped up by an ideal transformer to 10 kV. Calculate the current in the line before and after stepping up, and the factor by which the I²R loss in the line falls. Show your working.",
+          "type": "mcq",
+          "q": "A generator delivers 20 kW at 500 V. An ideal transformer steps the voltage up to 10 kV for transmission. Calculate the line current before and after, and the factor by which the I²R loss in the line falls.",
+          "options": [
+            "40 A and 2.0 A, loss unchanged",
+            "40 A and 800 A, loss up by 400",
+            "40 A and 2.0 A, loss down by 20",
+            "40 A and 2.0 A, loss down by 400"
+          ],
+          "answerIndex": 3,
           "concept": "Why power is transmitted at high voltage",
-          "why": "At 500 V: I = P/V = 20 000/500 = 40 A. After the step-up, the power is unchanged (I₁V₁ = I₂V₂), so at 10 000 V: I = 20 000/10 000 = 2.0 A. The line loss I²R with the same R falls by (2.0/40)² = (1/20)² = 1/400. Stepping the voltage up 20 times cuts the current 20 times and the loss 400 times.\n\nFinal answer: 40 A and 2.0 A, loss reduced by a factor of 400. A correct answer uses conservation of power to get the second current and squares the current ratio for the loss. A factor of 20 forgets the square in I²R; 800 A after step-up applies the ratio the wrong way."
+          "why": "I = P/V gives 20 000/500 = 40 A before the transformer. An ideal transformer conserves power, I₁V₁ = I₂V₂, so at 10 000 V the current is 20 000/10 000 = 2.0 A. With the same line resistance the loss I²R falls by (2.0/40)² = 1/400.\n\nA factor of 20 forgets the square in I²R; 800 A applies the ratio the wrong way round and would make matters worse; and the loss cannot be unchanged, because it depends on the current, not on the power carried."
         },
         {
-          "type": "short",
-          "q": "A real transformer's secondary reads 12.0 V with nothing connected and 11.2 V when supplying 2.0 A. Calculate the resistance of the secondary winding and the percentage of the emf lost inside it at this load, and state what the ideal-transformer assumption says about this loss. Show your working.",
+          "type": "mcq",
+          "q": "A real transformer's secondary reads 12.0 V with nothing connected and 11.2 V while supplying 2.0 A. Calculate the resistance of the secondary winding and the percentage of the induced emf lost inside it at this load.",
+          "options": [
+            "0.40 Ω, 6.7%",
+            "5.6 Ω, 6.7%",
+            "0.80 Ω, 6.7%",
+            "0.40 Ω, 7.1%"
+          ],
+          "answerIndex": 0,
           "concept": "Emf versus terminal voltage in a real secondary",
-          "why": "The open-circuit reading is the induced emf ε₂ = 12.0 V, since no current flows and nothing is dropped inside. Under load V₂ = ε₂ − I₂r, so the drop is 12.0 − 11.2 = 0.80 V and r = 0.80/2.0 = 0.40 Ω. Fraction lost = 0.80/12.0 = 0.067, about 6.7%. The ideal-transformer assumption is that the induced emf equals the terminal voltage in each winding, that is r = 0 and no such drop, which is what allows ε₂/ε₁ = N₂/N₁ to be written as V₂/V₁ = N₂/N₁.\n\nFinal answer: 0.40 Ω (accept 0.39 to 0.41) and 6.7% (accept 6.5 to 7.0), with the statement that an ideal transformer has no internal drop so emf and terminal voltage coincide. 5.6 Ω (11.2/2.0) is the load resistance, not the winding's; 0.80 Ω forgets to divide by the current."
+          "why": "With nothing connected no current flows and nothing is dropped inside, so the open-circuit reading is the induced emf, ε₂ = 12.0 V. Under load V₂ = ε₂ − I₂r, so the internal drop is 12.0 − 11.2 = 0.80 V and r = 0.80/2.0 = 0.40 Ω. The fraction lost is 0.80/12.0 = 6.7%, and an ideal transformer would have r = 0 and no drop at all.\n\n5.6 Ω is 11.2/2.0, the load's resistance rather than the winding's; 0.80 Ω forgets to divide the drop by the current; 7.1% divides the drop by the terminal voltage instead of by the emf."
         },
         {
-          "type": "short",
-          "q": "An amplifier delivers maximum power to a 1600 Ω load, but the loudspeaker is 4.0 Ω. Find the turns ratio N₂/N₁ of the matching transformer and say whether it is step-up or step-down. With 40 V rms on the primary, calculate the speaker voltage and the power delivered to it. Show your working.",
+          "type": "mcq",
+          "q": "An amplifier delivers maximum power into 1600 Ω, but the loudspeaker is 4.0 Ω. Using V₁/I₁ = R/(N₂/N₁)², find the turns ratio N₂/N₁ of the matching transformer and the power delivered to the speaker when 40 V rms is applied to the primary.",
+          "options": [
+            "1/400, 0.0025 W",
+            "20, 1.6 × 10⁵ W",
+            "1/20, 1.0 W",
+            "1/20, 400 W"
+          ],
+          "answerIndex": 2,
           "concept": "Impedance matching with a transformer",
-          "why": "The supply must see V₁/I₁ = R/(N₂/N₁)² = 1600 Ω with R = 4.0 Ω, so (N₂/N₁)² = 4.0/1600 = 1/400 and N₂/N₁ = 1/20: a step-down transformer, since N₂ < N₁. Speaker voltage V₂ = V₁(N₂/N₁) = 40 × (1/20) = 2.0 V. Power P = V₂²/R = (2.0)²/4.0 = 1.0 W. Check from the primary side: P = V₁²/1600 = 1600/1600 = 1.0 W, the same.\n\nFinal answer: N₂/N₁ = 1/20 (accept 0.05), step-down, 2.0 V, 1.0 W. A correct answer takes the square root to get the turns ratio and gets the same power from both sides. 1/400 is the squared ratio left unrooted; 20 is the ratio inverted and would be a step-up giving 800 V."
+          "why": "The primary must present 1600 Ω, so (N₂/N₁)² = R/1600 = 4.0/1600 = 1/400 and N₂/N₁ = 1/20, a step-down. Then V₂ = 40 × (1/20) = 2.0 V and P = V₂²/R = 4.0/4.0 = 1.0 W, which the primary side confirms as V₁²/1600 = 1.0 W.\n\n1/400 is the squared ratio left unrooted; 20 inverts the ratio and would put 800 V across the speaker; 400 W applies V₁²/R with the primary voltage across the 4.0 Ω speaker."
         },
         {
-          "type": "short",
-          "q": "A transformer core is made of iron rather than air, and that iron is built from thin sheets insulated from one another rather than from a solid block. Explain what each of these two design choices achieves.",
+          "type": "mcq",
+          "q": "A transformer core is made of iron rather than air, and that iron is built from thin insulated sheets rather than a solid block. What do these two design choices achieve?",
+          "options": [
+            "The iron stores the magnetic energy; the sheets let heat escape from inside the core",
+            "The iron lowers the resistance of the windings; the sheets hold the frequency steady",
+            "The iron raises the flux; the sheets increase the effective turns ratio",
+            "The iron raises the flux and guides it from one winding to the other; the sheets break up eddy currents"
+          ],
+          "answerIndex": 3,
           "concept": "Purpose of the iron core and its lamination",
-          "why": "The iron core does two things: it greatly increases the magnetic flux produced by the primary current (iron's high permeability), and it provides a path that carries that flux round to the secondary, so that almost all the flux threading the primary also threads the secondary and the emf per turn is the same in both. Laminating the core deals with eddy currents: the changing flux induces emfs in the core metal itself, and in a solid block these drive large circulating currents that heat the core and waste power. Cutting the core into thin sheets with insulation between them breaks the paths of those currents, since they cannot flow from one sheet to the next, so the eddy-current loss is greatly reduced while the flux still passes along the sheets.\n\nA correct answer gives both jobs of the iron (more flux, and a path linking the coils) and explains lamination as interrupting eddy currents to cut heating loss, not as anything to do with the turns ratio or the frequency."
+          "why": "Iron's high permeability greatly increases the flux the primary current produces, and it gives that flux a closed path so almost all of it also threads the secondary, which is what makes the emf per turn equal in both windings. The changing flux also induces emfs in the core metal itself, and in a solid block these drive large circulating eddy currents that heat it and waste power, so cutting the core into insulated sheets breaks those paths while the flux still runs along them.\n\nLamination has nothing to do with the turns ratio, the frequency or cooling, and the iron does not change the resistance of the windings."
         }
       ]
     },
@@ -605,28 +661,56 @@
           "why": "Software testing is the process of finding out whether the output the computer gives is the same as the expected output: the report of −50 against 0 is testing, and it hands over a symptom. Debugging is the process of identifying and resolving errors: finding the < and changing it supplies the cause and the fix.\n\nThe other options either merge the two processes or reverse them; the test finds that something is wrong, the debugging finds what and repairs it."
         },
         {
-          "type": "short",
-          "q": "pct(score, total) is specified to return the percentage score/total × 100 rounded to the nearest whole number, and to return 0 when total is 0. Write two test cases, one for pct(45, 60) and one for pct(3, 0), each with its inputs, its process and its expected output. Show your working.",
+          "type": "mcq",
+          "q": "pct(score, total) must return score/total × 100 rounded to the nearest whole number, and must return 0 when total is 0. What are the expected outputs of test cases for pct(45, 60) and for pct(3, 0)?",
+          "options": [
+            "0.75 and 0",
+            "75 and an error",
+            "0.75 and an error",
+            "75 and 0"
+          ],
+          "answerIndex": 3,
           "concept": "Writing a test case",
-          "why": "A test case specifies the test inputs, the process and the expected outputs, with the expected output fixed from the specification before the run. Case 1: inputs 45 and 60; process: call pct(45, 60); expected output: 45/60 × 100 = 75. Case 2: inputs 3 and 0; process: call pct(3, 0); expected output: 0, from the rule for a zero total, not from any division.\n\nA correct answer states all three parts for both cases and gives 75 and 0. Writing 'expected: the returned value' or leaving the expected output to be discovered by running the code is not a test case. 0.75 for case 1 forgets the × 100; an error or 'undefined' for case 2 ignores the specified rule."
+          "why": "The expected output of a test case is fixed from the specification before anything is run. 45 / 60 = 0.75, and × 100 gives 75. For a zero total the specification gives the answer outright: 0, with no division attempted.\n\n0.75 forgets the × 100; expecting an error for pct(3, 0) predicts what the code will probably do instead of what the specification requires, which is the one thing a test case must not do."
         },
         {
-          "type": "short",
-          "q": "A team finishes test case development and goes straight to test execution, skipping test environment setup. Describe two concrete problems that will appear during execution, and name the activities of the skipped phase that would have prevented each. Show your working.",
+          "type": "mcq",
+          "q": "A team finishes test case development and goes straight to test execution, skipping test environment setup. Which problem does that skip cause?",
+          "options": [
+            "A case needing a customer with an overdue loan cannot run, because no such test data exists.",
+            "There are no test cases to run, because none have been written.",
+            "Nobody knows who runs which test, because roles were never assigned.",
+            "There is no summary report at the end, because nothing was recorded."
+          ],
+          "answerIndex": 0,
           "concept": "Consequences of skipping an STLC phase",
-          "why": "Test environment setup is where the software and hardware requirements for the test are specified and the test data and environment are set up. Skipping it means, first, that the cases have no data to run on: a case such as 'log in as a customer with an overdue loan' cannot be executed because no such account exists, which test data setup would have created. Second, the tests run on whatever machine and software versions happen to be at hand, so a failure cannot be told apart from an environment mismatch (wrong database version, missing browser), which specifying the hardware and software requirements and setting up the environment would have fixed in advance.\n\nA correct answer gives two problems of this kind, each tied to test data setup or to environment setup and the specified requirements. Problems that belong to other phases, such as unwritten test cases or unassigned roles, are not accepted."
+          "why": "Test environment setup is where the software and hardware requirements are specified and the test data and the environment are prepared. Skipping it leaves the cases with nothing to run against: the accounts, loans and records they assume do not exist, and any failure cannot be told apart from a version mismatch in the environment.\n\nWriting the cases belongs to test case development, assigning roles to test planning and the summary report to test cycle closure, so none of those three follows from this skip."
         },
         {
-          "type": "short",
-          "q": "A program crashes about once a day at an unpredictable moment, and nobody has seen it happen. From code inspection, monitoring, logging, unit testing, integration testing and system testing, choose the two methods to apply first, say what each would produce, and say why two of the others fit less well here. Show your working.",
+          "type": "mcq",
+          "q": "A program crashes about once a day at an unpredictable moment and nobody has ever seen it happen. Which two debugging methods should be applied first?",
+          "options": [
+            "Unit testing and code inspection",
+            "Integration testing and system testing",
+            "Logging and monitoring",
+            "System testing and code inspection"
+          ],
+          "answerIndex": 2,
           "concept": "Choosing debugging methods for a fault",
-          "why": "Logging and monitoring. Logging records the events and messages the program produces, so when the crash happens the file shows what the program was doing in the seconds before it, without anyone watching. Monitoring watches the running system for unusual behaviour or performance issues, such as memory climbing before the crash, and points to the conditions that trigger it. Unit testing fits less well because the crash is not tied to a known function and its inputs, and a once-a-day condition is unlikely to be reproduced by fixed test data; code inspection fits less well because there is no known place in the source to inspect until logging has narrowed it down.\n\nA correct answer picks logging and monitoring, says what each records, and gives a reason against two of the others. Picking code inspection first is accepted only with an argument for where to start reading."
+          "why": "Nobody is watching when it happens, so the first job is to record what the program was doing. Logging writes the events and messages to a file that can be read after the crash, and monitoring watches the running system for unusual behaviour, such as memory climbing towards the moment of failure.\n\nUnit testing needs a known function and fixed inputs, which a once-a-day condition is unlikely to reproduce; code inspection needs a place in the source to start reading, which only the log can point to; and the integration and system levels test a build, not a rare run-time event."
         },
         {
-          "type": "short",
-          "q": "A team tests without a defined life cycle: each tester runs whatever checks seem useful and stops when the release date arrives. Explain what a defined software testing life cycle would give them that this does not, using the idea of each phase having deliverables, objectives and an exit point.",
+          "type": "mcq",
+          "q": "A team tests with no defined life cycle: each tester runs whatever checks seem useful and everyone stops on the release date. What does a defined testing life cycle give them that this does not?",
+          "options": [
+            "A guarantee that the software contains no defects at all.",
+            "A way of testing without writing test cases in advance.",
+            "Fewer testers, because the phases all run at the same time.",
+            "Deliverables and objectives for each phase, and an exit point reached only when those objectives are met."
+          ],
+          "answerIndex": 3,
           "concept": "Purpose of a defined testing life cycle",
-          "why": "A defined life cycle gives a standard process that clearly defines the deliverables and objectives of each testing phase, with an entry point where the phase begins and an exit point that is reached only when all the phase's objectives have been achieved. Without it the team cannot be sure it is testing the software the right way, that the software meets the set requirements, or that it is free of defects: stopping at the release date is stopping on time rather than on an exit point, and there is no statement of what would count as finished. With the life cycle, requirement analysis fixes what is to be tested, planning fixes strategy, cost and duration, development produces reviewed test cases with expected outputs, and closure checks that the objectives were achieved and the software is ready for use.\n\nA correct answer names deliverables and objectives per phase, explains that an exit point depends on objectives being met rather than on time, and states at least one thing the team cannot be sure of without the process."
+          "why": "A defined life cycle states the deliverables and objectives of every phase and gives each one an entry point and an exit point, and that exit point is reached when the objectives have been achieved, not when the calendar says so. Stopping on the release date is stopping on time, with no statement of what would have counted as finished.\n\nNo process guarantees a defect-free program; the life cycle adds test case development rather than removing it; and its phases run in sequence, so it saves nobody."
         }
       ]
     },
@@ -743,28 +827,56 @@
           "why": "∫₀⁴v(t)dt = x(4) − x(0) is the net displacement, the change in position. Zero net displacement means x(4) = x(0): the body is back at its starting point. For example, with v(t) = 2t − 4: ∫₀⁴(2t − 4)dt = 16 − 16 = 0, yet the body moves back 4 m and then forward 4 m.\n\nThe other three options confuse net displacement with motion: v need not be zero, the body can move, and the distance travelled (8 m in the example) is not zero; only the signed sum of the backward and forward parts is."
         },
         {
-          "type": "short",
-          "q": "A resource is consumed at 40e^(0.02t) thousand tonnes per year, t years after 2010, with C(0) = 0. Find the model C(t) for the total consumed, then the year in which a reserve of 1000 thousand tonnes runs out. Show your working.",
+          "type": "mcq",
+          "q": "A resource is consumed at 40e^(0.02t) thousand tonnes per year, t years after 2010, with C(0) = 0. In which year is a reserve of 1000 thousand tonnes exhausted?",
+          "options": [
+            "2213 (t ≈ 203 years)",
+            "2065 (t ≈ 54.9 years)",
+            "2045 (t ≈ 34.7 years)",
+            "2030 (t ≈ 20.3 years)"
+          ],
+          "answerIndex": 3,
           "concept": "Exhaustion time from an exponential consumption model",
-          "why": "C(t) = ∫40e^(0.02t)dt = (40/0.02)e^(0.02t) + c = 2000e^(0.02t) + c, and C(0) = 0 gives 0 = 2000 + c, so c = −2000 and C(t) = 2000e^(0.02t) − 2000. Set C(t) = 1000: 2000e^(0.02t) = 3000, so e^(0.02t) = 1.5. Take natural logs: 0.02t = ln 1.5 = 0.4055, so t = 0.4055/0.02 = 20.27 years. Then 2010 + 20.27 gives the year 2030.\n\nFinal answer: C(t) = 2000e^(0.02t) − 2000, t ≈ 20.3 years, exhausted in 2030 (also accepted: t = 20.27, or 'about 20 years, in 2030'). The working must show the division by 0.02, the use of C(0) = 0, the isolation of the exponential and the log step. Dividing ln 1.5 by 0.002 gives 203 years and is wrong; solving 2000e^(0.02t) = 1000 (forgetting the −2000) gives a negative time and is wrong."
+          "why": "C(t) = ∫40e^(0.02t)dt = (40/0.02)e^(0.02t) + c = 2000e^(0.02t) + c, and C(0) = 0 gives c = −2000. Set 2000e^(0.02t) − 2000 = 1000, so e^(0.02t) = 1.5 and 0.02t = ln 1.5 = 0.4055, giving t = 20.27 years, that is the year 2030.\n\n2213 divides ln 1.5 by 0.002; 2065 solves e^(0.02t) = 3 by dividing 3000 by 1000 instead of 2000; 2045 solves e^(0.02t) = 2, taking the reserve as the coefficient 2000."
         },
         {
-          "type": "short",
-          "q": "The demand function is D(Q) = 250 − 5Q and the supply function is S(Q) = 100 + Q². Find the equilibrium quantity and price, then compute the producer surplus. Show your working.",
+          "type": "mcq",
+          "q": "The demand function is D(Q) = 250 − 5Q and the supply function is S(Q) = 100 + Q². Find the producer surplus at equilibrium.",
+          "options": [
+            "2000/3 ≈ 666.7",
+            "250",
+            "1000",
+            "2750/3 ≈ 916.7"
+          ],
+          "answerIndex": 0,
           "concept": "Producer surplus after finding equilibrium",
-          "why": "Equilibrium: 250 − 5Q = 100 + Q², so Q² + 5Q − 150 = 0, (Q + 15)(Q − 10) = 0; discard Q = −15, so Q₀ = 10 and P₀ = D(10) = 250 − 50 = 200 (check: S(10) = 100 + 100 = 200). Producer surplus: PS = ∫₀^Q₀[P₀ − S(Q)]dQ = ∫₀¹⁰(200 − 100 − Q²)dQ = ∫₀¹⁰(100 − Q²)dQ = [100Q − Q³/3]₀¹⁰ = 1000 − 1000/3 = 2000/3 ≈ 666.67.\n\nFinal answer: Q₀ = 10, P₀ = 200, PS = 2000/3 ≈ 666.7 (also accepted: 666.67 or 667). The working must show the quadratic, the rejection of the negative root, P₀ from either function, and the integrand P₀ − S(Q) from 0 to Q₀. ∫₀¹⁰(250 − 5Q − 200)dQ = 250 is the consumer surplus, not the producer surplus; 1000 alone forgets the −Q³/3 term."
+          "why": "Equilibrium: 250 − 5Q = 100 + Q² gives Q² + 5Q − 150 = (Q + 15)(Q − 10) = 0, so Q₀ = 10 after discarding Q = −15, and P₀ = 250 − 50 = 200 (check S(10) = 200). Then PS = ∫₀¹⁰[P₀ − S(Q)]dQ = ∫₀¹⁰(100 − Q²)dQ = [100Q − Q³/3]₀¹⁰ = 1000 − 1000/3 = 2000/3.\n\n250 is the consumer surplus ∫₀¹⁰[D(Q) − P₀]dQ; 1000 drops the −Q³/3 term; 2750/3 integrates D(Q) − S(Q) instead of P₀ − S(Q)."
         },
         {
-          "type": "short",
-          "q": "A body has velocity v(t) = 3t² − 6t m/s and initial displacement x(0) = 5 m. Find (a) the displacement function x(t), (b) x(2), and (c) the displacement between t = 1 and t = 3. Show your working.",
-          "concept": "Position function, position at a time and change in position",
-          "why": "(a) x(t) = ∫(3t² − 6t)dt = t³ − 3t² + C, and x(0) = C = 5, so x(t) = t³ − 3t² + 5. (b) x(2) = 8 − 12 + 5 = 1 m. (c) Displacement from t = 1 to t = 3 is x(3) − x(1) = (27 − 27 + 5) − (1 − 3 + 5) = 5 − 3 = 2 m, or equivalently ∫₁³(3t² − 6t)dt = [t³ − 3t²]₁³ = 0 − (−2) = 2 m; the constant 5 cancels.\n\nFinal answer: x(t) = t³ − 3t² + 5, x(2) = 1 m, displacement 2 m. The working must find C from x(0) = 5 and either subtract positions or evaluate the definite integral without the constant. x(3) = 5 alone is a position, not a displacement; v(2) = 0 is not x(2)."
+          "type": "mcq",
+          "q": "A body has velocity v(t) = 3t² − 6t m/s and initial displacement x(0) = 5 m. Find x(t) and the displacement between t = 1 and t = 3.",
+          "options": [
+            "x(t) = t³ − 3t² + 5, displacement 5 m",
+            "x(t) = t³ − 3t², displacement 2 m",
+            "x(t) = t³ − 3t² + 5, displacement 2 m",
+            "x(t) = t³ − 3t² + 5, displacement 8 m"
+          ],
+          "answerIndex": 2,
+          "concept": "Position function from velocity and displacement over an interval",
+          "why": "x(t) = ∫(3t² − 6t)dt = t³ − 3t² + C, and x(0) = C = 5, so x(t) = t³ − 3t² + 5. The displacement from t = 1 to t = 3 is x(3) − x(1) = 5 − 3 = 2 m, the same as ∫₁³(3t² − 6t)dt = [t³ − 3t²]₁³ = 0 − (−2) = 2 m, since the constant cancels.\n\nThe second option never uses x(0) = 5 to fix C; 5 m reports the position x(3) rather than a change; 8 m adds x(3) and x(1) instead of subtracting."
         },
         {
-          "type": "short",
-          "q": "CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ. Explain why D(Q) − P₀ is a gain to consumers, why P₀ − S(Q) is a gain to producers, and why both integrals stop at Q₀.",
-          "concept": "Meaning of the surplus integrands and their limits",
-          "why": "D(Q) is the price a consumer would have been willing to pay for the Q-th unit, but every unit sells at the single market price P₀, so D(Q) − P₀ is the saving on that unit; adding those savings over all units sold, from 0 to Q₀, gives the consumer surplus. S(Q) is the lowest price at which a producer would supply the Q-th unit, but it is sold at P₀, so P₀ − S(Q) is the extra received on that unit; summing from 0 to Q₀ gives the producer surplus. Both stop at Q₀ because only Q₀ units are actually traded: beyond it D(Q) < P₀ (no consumer would buy at P₀) and S(Q) > P₀ (no producer would sell at P₀), so there are no further units and no further surplus.\n\nA correct answer identifies D(Q) as willingness to pay, S(Q) as the minimum acceptable price, P₀ as the common price actually paid, and Q₀ as the quantity actually traded."
+          "type": "mcq",
+          "q": "In CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ, why do both integrals stop at Q₀?",
+          "options": [
+            "Beyond Q₀ the demand and supply curves cross, so the two integrands would cancel",
+            "Only Q₀ units are traded: past it no consumer would buy and no producer would sell at P₀",
+            "Q₀ is where D(Q) reaches zero, so there is nothing further to add",
+            "The integrals converge up to Q₀ and diverge beyond it"
+          ],
+          "answerIndex": 1,
+          "concept": "Why the surplus integrals stop at the equilibrium quantity",
+          "why": "D(Q) is what a consumer would have paid for the Q-th unit and S(Q) is the least a producer would accept for it, while every unit actually changes hands at the single price P₀. So D(Q) − P₀ is the saving on a unit and P₀ − S(Q) is the extra received on it. Only Q₀ units are traded, because beyond Q₀ demand has fallen below P₀ and supply costs more than P₀, so there is no further surplus to add.\n\nThe curves cross at Q₀ itself, not beyond it; D(Q₀) = P₀, not 0; and these are ordinary definite integrals, so convergence is not the issue."
         }
       ]
     },
@@ -881,28 +993,56 @@
           "why": "I₁V₁ = I₂V₂ is the whole energy statement: if V₂ = 2V₁ then I₂ = I₁/2, and the power I₂V₂ is unchanged. A transformer redistributes voltage and current; it never adds watts.\n\n'Double the current' would give four times the power out of nothing; 'same current, double the power' likewise creates energy; 'half the power' would mean half the input vanished inside an ideal device, which by definition has no losses."
         },
         {
-          "type": "short",
-          "q": "A 720 W appliance rated for 240 V is run from a 120 V line through an ideal transformer. Calculate (a) the turns ratio N₂/N₁ and whether it is step-up or step-down, (b) the current from the line and the current in the appliance, (c) the appliance's resistance, checked a second way. Show your working.",
-          "concept": "Full step-up appliance calculation",
-          "why": "(a) V₁ = 120 V (line, primary), V₂ = 240 V (appliance, secondary): N₂/N₁ = V₂/V₁ = 240/120 = 2; N₂ > N₁ so step-up. (b) P_av = V₁I₁ gives I₁ = 720/120 = 6.0 A from the line; I₂ = P_av/V₂ = 720/240 = 3.0 A in the appliance. Check I₁V₁ = 720 W = I₂V₂. (c) V₁/I₁ = 120/6.0 = 20 Ω is what the line sees; R = (V₁/I₁)(N₂/N₁)² = 20 × 2² = 80 Ω. Second route: R = V₂/I₂ = 240/3.0 = 80 Ω.\n\nFinal answer: 2, step-up; 6.0 A and 3.0 A; 80 Ω (accept 79 to 81). A correct answer identifies the 120 V line as the primary, gives both currents with the line current labelled, and squares the ratio in (c) with a check. 40 Ω is 20 × 2 with the ratio unsquared; 20 Ω is the apparent resistance, not the appliance's."
+          "type": "mcq",
+          "q": "A 720 W appliance rated for 240 V is run from a 120 V line through an ideal transformer. Calculate the current drawn from the line and the appliance's own resistance.",
+          "options": [
+            "3.0 A, 80 Ω",
+            "6.0 A, 40 Ω",
+            "6.0 A, 80 Ω",
+            "6.0 A, 20 Ω"
+          ],
+          "answerIndex": 2,
+          "concept": "Line current and load resistance in a step-up transformer",
+          "why": "The 120 V line feeds the primary, so P = V₁I₁ gives I₁ = 720/120 = 6.0 A. The line sees V₁/I₁ = 20 Ω, and R = (V₁/I₁)(N₂/N₁)² with N₂/N₁ = 240/120 = 2, so R = 20 × 4 = 80 Ω. The secondary side agrees: I₂ = 720/240 = 3.0 A and R = 240/3.0 = 80 Ω.\n\n3.0 A is the current in the appliance, not in the line; 40 Ω leaves the turns ratio unsquared; 20 Ω is the resistance the line sees, not the appliance's own."
         },
         {
-          "type": "short",
-          "q": "A 1200 W appliance rated for 110 V is run from a 220 V outlet through an ideal transformer. Calculate (a) the turns ratio and whether it is step-up or step-down, (b) the current from the outlet, (c) the resistance the appliance appears to have to the outlet, (d) its own resistance, checked a second way. Show your working.",
+          "type": "mcq",
+          "q": "A 1200 W appliance rated for 110 V is run from a 220 V outlet through an ideal transformer. Calculate the resistance the appliance appears to have to the outlet, and its own resistance.",
+          "options": [
+            "10 Ω apparent, 40 Ω own",
+            "40 Ω apparent, 20 Ω own",
+            "40 Ω apparent, 10 Ω own",
+            "40 Ω apparent, 161 Ω own"
+          ],
+          "answerIndex": 2,
           "concept": "Apparent versus actual resistance in a step-down",
-          "why": "(a) V₁ = 220 V (outlet), V₂ = 110 V (appliance): N₂/N₁ = 110/220 = 1/2; N₂ < N₁ so step-down. (b) I₁ = P_av/V₁ = 1200/220 = 5.45 A. (c) Apparent resistance V₁/I₁ = 220/5.45 = 40.3 Ω (exactly 220²/1200 = 40.3 Ω). (d) Own resistance R = (V₁/I₁)(N₂/N₁)² = 40.3 × (1/2)² = 40.3/4 = 10.1 Ω. Second route: I₂ = 1200/110 = 10.9 A, R = V₂/I₂ = 110/10.9 = 10.1 Ω, or V₂²/P = 12 100/1200 = 10.1 Ω.\n\nFinal answer: 1/2, step-down; 5.5 A (accept 5.4 to 5.5); 40 Ω (accept 40 to 41); 10 Ω (accept 10.0 to 10.2). A correct answer distinguishes the apparent 40 Ω from the actual 10 Ω and gets the actual value two ways. 20 Ω multiplies by 1/2 without squaring; 161 Ω divides by (1/2)² instead of multiplying."
+          "why": "I₁ = P/V₁ = 1200/220 = 5.45 A, so the outlet sees V₁/I₁ = 220/5.45 = 40 Ω. The turns ratio is N₂/N₁ = 110/220 = 1/2, and R = (V₁/I₁)(N₂/N₁)² = 40 × 1/4 = 10 Ω. Check from the other side: I₂ = 1200/110 = 10.9 A and R = 110/10.9 = 10 Ω.\n\n20 Ω uses the ratio without squaring it; 161 Ω divides by (1/2)² instead of multiplying; and swapping the two confuses what the outlet sees with what the appliance is."
         },
         {
-          "type": "short",
-          "q": "An ideal transformer has N₂/N₁ = 4, a 30 V rms supply on the primary and a 60 Ω resistor across the secondary. Using only V₂/V₁ = N₂/N₁, I₁V₁ = I₂V₂ and V₁/I₁ = R/(N₂/N₁)², calculate the secondary voltage and current, the primary current, and the resistance the supply sees. Show your working.",
+          "type": "mcq",
+          "q": "An ideal transformer has N₂/N₁ = 4, a 30 V rms supply on the primary and a 60 Ω resistor across the secondary. Calculate the primary current and the resistance the supply sees.",
+          "options": [
+            "2.0 A, 3.75 Ω",
+            "8.0 A, 3.75 Ω",
+            "0.50 A, 3.75 Ω",
+            "8.0 A, 15 Ω"
+          ],
+          "answerIndex": 1,
           "concept": "Loaded step-up transformer from the supply side",
-          "why": "V₂ = V₁(N₂/N₁) = 30 × 4 = 120 V. I₂ = V₂/R = 120/60 = 2.0 A. From I₁V₁ = I₂V₂: I₁ = (2.0 × 120)/30 = 8.0 A. Resistance seen by the supply: V₁/I₁ = 30/8.0 = 3.75 Ω, and the formula agrees: R/(N₂/N₁)² = 60/16 = 3.75 Ω. Power check: 30 × 8.0 = 240 W = 120 × 2.0.\n\nFinal answer: 120 V, 2.0 A, 8.0 A, 3.75 Ω (accept 3.7 to 3.8). A correct answer shows the 3.75 Ω from both V₁/I₁ and the formula. 0.50 A for I₁ applies the turns ratio to the current the same way as to the voltage; 15 Ω for the seen resistance divides by 4 instead of 16."
+          "why": "V₂ = V₁(N₂/N₁) = 30 × 4 = 120 V, so I₂ = V₂/R = 120/60 = 2.0 A. Power is conserved, I₁V₁ = I₂V₂, giving I₁ = (2.0)(120)/30 = 8.0 A. The supply therefore sees V₁/I₁ = 30/8.0 = 3.75 Ω, which agrees with R/(N₂/N₁)² = 60/16 = 3.75 Ω.\n\n2.0 A takes the primary current to equal the secondary current; 0.50 A applies the turns ratio to the current the same way as to the voltage; 15 Ω divides R by 4 rather than by 4²."
         },
         {
-          "type": "short",
-          "q": "A 500 W appliance designed for 250 V is run from a 125 V line through an ideal transformer. A student writes: 'I₁ = 500/125 = 4.0 A, so V₁/I₁ = 125/4.0 = 31.25 Ω. N₂/N₁ = 2, so the appliance's resistance is R = 31.25 × 2 = 62.5 Ω.' Diagnose the error, give the correct resistance, and check it by a second route.",
+          "type": "mcq",
+          "q": "A 500 W appliance rated for 250 V runs from a 125 V line through an ideal transformer. A student writes: I₁ = 500/125 = 4.0 A, so V₁/I₁ = 125/4.0 = 31.25 Ω; N₂/N₁ = 2, so the appliance's resistance is 31.25 × 2 = 62.5 Ω. What is the appliance's resistance?",
+          "options": [
+            "62.5 Ω, and the working is right",
+            "31.25 Ω, which is what the line sees",
+            "15.6 Ω, the ratio being 1/2 rather than 2",
+            "125 Ω, the turns ratio having to be squared"
+          ],
+          "answerIndex": 3,
           "concept": "Diagnosing an unsquared turns ratio",
-          "why": "The current, the apparent resistance 31.25 Ω and the ratio 2 are all correct. The error is in the last line: the resistance transformation is V₁/I₁ = R/(N₂/N₁)², so the turns ratio must be squared, not used to the first power. Correct: R = (V₁/I₁)(N₂/N₁)² = 31.25 × 2² = 31.25 × 4 = 125 Ω. Second route: I₂ = 500/250 = 2.0 A, so R = V₂/I₂ = 250/2.0 = 125 Ω, or R = V₂²/P = 250²/500 = 125 Ω.\n\nA correct answer names the missing square as the error, gives 125 Ω (accept 124 to 126), and confirms it from the secondary side. Saying the ratio should have been 1/2, or that I₁ is wrong, misdiagnoses a correct step."
+          "why": "The current, the apparent resistance 31.25 Ω and the ratio 2 are all correct; the error is in the last line, because V₁/I₁ = R/(N₂/N₁)² means R = (V₁/I₁)(N₂/N₁)² = 31.25 × 2² = 125 Ω. The secondary side confirms it: I₂ = 500/250 = 2.0 A and R = V₂/I₂ = 250/2.0 = 125 Ω, or V₂²/P = 125 Ω.\n\n62.5 Ω keeps the unsquared ratio; 31.25 Ω is what the line sees, not the appliance; and 1/2 inverts the ratio, since the appliance sits on the higher-voltage side."
         }
       ]
     },
@@ -1018,28 +1158,56 @@
           "why": "Black box testing is a method in which the internal structure, design and implementation of the item are not known to the tester; white box is one in which they are known. Nothing else is part of the definition.\n\nEither kind can be manual or automated; a developer usually does white box testing but that is a consequence, not the definition; black box tests are usually functional but can be non-functional, so functional versus non-functional does not decide it."
         },
         {
-          "type": "short",
-          "q": "quantity is specified as valid from 1 to 99 inclusive. The implementation reads `if qty >= 1 and qty < 99`. List the six boundary values that boundary value analysis tests for this range, state what the implementation returns for each, and name the value that exposes the fault. Show your working.",
+          "type": "mcq",
+          "q": "A quantity is valid from 1 to 99 inclusive, but the implementation reads `if qty >= 1 and qty < 99`. Boundary value analysis tests 0, 1, 2, 98, 99 and 100. Which of those six does the implementation get wrong?",
+          "options": [
+            "0 and 100",
+            "1 and 99",
+            "99 only",
+            "100 only"
+          ],
+          "answerIndex": 2,
           "concept": "Boundary value analysis exposing a fault",
-          "why": "Boundary value analysis tests the values just below, at and just above each edge: 0, 1, 2 at the lower edge and 98, 99, 100 at the upper edge. The implementation: 0 invalid (correct), 1 valid (correct), 2 valid (correct), 98 valid (correct), 99 invalid, 100 invalid (correct). The specification says 99 is valid, so qty = 99 exposes the fault: qty < 99 should be qty <= 99.\n\nFinal answer: boundary values 0, 1, 2, 98, 99, 100; the failing value is 99. A correct answer lists all six, gives the implementation's verdict on each, and identifies 99 with the operator fix. Testing only 1 and 99 is accepted if 99 is found, but the full six is expected."
+          "why": "Boundary value analysis tests just below, at and just above each edge. The implementation calls 0 invalid, 1 valid, 2 valid, 98 valid, 99 invalid and 100 invalid. The specification makes 99 valid, so 99 is the single value where the two disagree, and the fix is `qty <= 99`.\n\n0 and 100 lie outside the range and are correctly rejected; 1 is the lower edge and is correctly accepted; and rejecting 100 is right, not a fault."
         },
         {
-          "type": "short",
-          "q": "total([5, 8, 2]) returns 10 where 15 is expected. Set a breakpoint on the line `t = t + prices[i]`, and give the value of i and of t after each time it runs. Say where the state first goes wrong and name the defect. Show your working.\n\n```python\ndef total(prices):\n    t = 0\n    for i in range(1, len(prices)):\n        t = t + prices[i]\n    return t\n```",
+          "type": "mcq",
+          "q": "total([5, 8, 2]) returns 10 where 15 is expected. A watch is set on the line `t = t + prices[i]`. What does it show, and where does the state first go wrong?\n\n```python\ndef total(prices):\n    t = 0\n    for i in range(1, len(prices)):\n        t = t + prices[i]\n    return t\n```",
+          "options": [
+            "(i, t) = (1, 8) then (2, 10); wrong from the first pass, because index 0 is never added",
+            "(i, t) = (0, 5), (1, 13), (2, 15); nothing is wrong with the loop",
+            "(i, t) = (1, 8) then (2, 10); wrong only at the last pass, because the loop ends too early",
+            "(i, t) = (1, 5) then (2, 13); wrong from the first pass, because t starts at 5"
+          ],
+          "answerIndex": 0,
           "concept": "Watching a variable to locate the defect",
-          "why": "range(1, 3) gives i = 1, 2. Watch: after the first pass i = 1, t = 0 + 8 = 8; after the second pass i = 2, t = 8 + 2 = 10; the loop ends and 10 is returned. The state is wrong from the very first pass: t should be 5 after adding prices[0], but the loop started at index 1 and prices[0] = 5 is never added. The defect is an off-by-one in the loop range: range(1, ...) should be range(0, ...) or range(len(prices)).\n\nFinal answer: (i, t) = (1, 8), (2, 10); first wrong at the first pass; defect: off-by-one, the loop skips index 0. Also accepted: describing the fix as `for p in prices`. Naming the defect as a wrong accumulator start or integer division is wrong."
+          "why": "range(1, 3) gives i = 1 then 2, so the watch shows t = 0 + 8 = 8 and then t = 8 + 2 = 10. The state is already wrong on the first pass: t should be 5 there, from prices[0], and that element is never added at all. The defect is the off-by-one start, `range(1, ...)` where `range(len(prices))` was meant.\n\nThe second option is the corrected loop's trace; the third blames the end of the loop, which is right; the fourth blames the accumulator's starting value, which is 0 and correct."
         },
         {
-          "type": "short",
-          "q": "Four reports on a banking app: (a) balances are correct but each page takes 30 seconds when 2,000 customers are logged in; (b) customers watched using the app cannot find the transfer button; (c) a logged-in customer can open another customer's statement by editing the address bar; (d) the function that adds two amounts returns 30 for 10 + 25 where 35 is expected. Name the testing method for each and say which reports are functional failures. Show your working.",
+          "type": "mcq",
+          "q": "Four reports on a banking app: (a) balances are right but a page takes 30 seconds when 2,000 customers are logged in; (b) customers who are watched using the app cannot find the transfer button; (c) a logged-in customer opens another customer's statement by editing the address bar; (d) the function that adds two amounts returns 30 for 10 + 25. Which testing method finds each?",
+          "options": [
+            "(a) system, (b) usability, (c) security, (d) unit",
+            "(a) performance, (b) acceptance, (c) security, (d) unit",
+            "(a) performance, (b) usability, (c) security, (d) unit",
+            "(a) performance, (b) usability, (c) compatibility, (d) integration"
+          ],
+          "answerIndex": 2,
           "concept": "Classifying failures by testing method",
-          "why": "(a) Performance testing: correct output but poor behaviour under load, which is a non-functional matter of network delays, database and client-side processing under different load conditions. (b) Usability testing: an issue discovered with the help of users who are observed while using the software. (c) Security testing: a confidentiality flaw, one customer reading another's data. (d) Unit testing: a single function does not perform as expected, which is a functional failure.\n\nA correct answer names performance, usability, security and unit, and says only (d) is functional, because the other three concern how well or how safely the app works rather than whether it does the right thing. Calling (a) system testing, or (d) acceptance testing, is not accepted."
+          "why": "Correct output but slow under load is performance testing; a fault found by observing real users at work is usability testing; one customer reading another's data is a confidentiality flaw, so security testing; and a single function returning the wrong value is unit testing, the only functional failure of the four.\n\nSystem testing checks a whole build against its requirements rather than its behaviour under load; acceptance testing is the customer's final check, not an observed-user study; compatibility testing concerns different devices and browsers; and (d) is one function, not two parts being joined."
         },
         {
-          "type": "short",
-          "q": "Every function in a payment program has passed its unit tests, and the developer reports that the program is therefore free of defects. Explain why that conclusion does not follow: name the stated limitation of unit testing, and say what integration testing and system testing check that unit tests cannot.",
+          "type": "mcq",
+          "q": "Every function in a payment program has passed its unit tests, and the developer concludes that the program is free of defects. Which limitation of unit testing breaks that conclusion?",
+          "options": [
+            "Unit tests check the user interface rather than the code.",
+            "Unit tests are written by developers, so they are never impartial.",
+            "Unit tests run before the code is compiled, so they see an older version.",
+            "Not all execution paths can be tested, and the amount and type of test data is limited."
+          ],
+          "answerIndex": 3,
           "concept": "Limits of unit testing",
-          "why": "Unit testing uses test data to check the execution paths in a function, and its stated limitation is that it is practically impossible to test all the execution paths, and the number and type of test data that can be used are limited. So a passing unit suite shows only that the paths exercised by the chosen data behaved; other paths and other data are untested. Integration testing checks how well the different parts work together, which no test of one part in isolation can show, such as a correct function being handed the wrong argument by its caller. System testing checks the system as a whole after all parts are integrated against the technical and functional requirements, which is the only level at which 'the program works' can be claimed.\n\nA correct answer states the limitation in terms of untested paths and limited test data, and gives the distinct purpose of integration and of system testing."
+          "why": "Unit testing feeds test data through a function's execution paths, and it is practically impossible to cover them all with the limited data available, so a passing suite shows only that the paths the data exercised behaved. It also says nothing about the parts working together: integration testing checks that, and system testing checks the whole build against the technical and functional requirements.\n\nUnit tests do read the code, they run after compilation, and their authorship is not the limitation at issue."
         }
       ],
       "slot": "fast"

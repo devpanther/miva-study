@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Problem-solving hour on the same Week 4 material of General Physics II.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A battery of emf 12 V and internal resistance 0.50 Ω drives a 3.5 Ω load. What power is dissipated in the load?
 A. 36 W
@@ -51,13 +51,29 @@ B. Power dissipated in the 5 Ω resistor
 C. Voltage across the 5 Ω resistor
 D. Voltage at the node between two resistors
 
-**9. (show your working)** An 18 V source with negligible internal resistance is in series with 6.0 Ω; a 3.0 Ω resistor runs from that junction to ground, and the output terminals are across the 3.0 Ω. Calculate V_Th, R_Th and the Norton current, then the current in a 4.0 Ω load connected across the terminals. Show your working.
+**9.** An 18 V source of negligible internal resistance is in series with 6.0 Ω, a 3.0 Ω resistor runs from that junction to ground, and the output terminals are across the 3.0 Ω. What are V_Th, R_Th and the current in a 4.0 Ω load placed across the terminals?
+A. V_Th = 6.0 V, R_Th = 2.0 Ω, I_L = 1.0 A
+B. V_Th = 18 V, R_Th = 2.0 Ω, I_L = 3.0 A
+C. V_Th = 6.0 V, R_Th = 9.0 Ω, I_L = 0.46 A
+D. V_Th = 12 V, R_Th = 2.0 Ω, I_L = 2.0 A
 
-**10. (show your working)** A dipole made of charges ±4.0 nC experiences a maximum torque of 6.0 × 10⁻⁷ N·m when placed in a uniform field of 3.0 × 10⁵ N/C. Calculate the dipole moment and the separation of the charges, then the torque when p is at 30° to E. Show your working.
+**10.** A dipole made of charges ±4.0 nC feels a maximum torque of 6.0 × 10⁻⁷ N·m in a uniform field of 3.0 × 10⁵ N/C. What are the dipole moment, the charge separation, and the torque when p is at 30° to E?
+A. 2.0 × 10⁻¹² C·m; 0.25 mm; 3.0 × 10⁻⁷ N·m
+B. 2.0 × 10⁻¹² C·m; 0.50 mm; 5.2 × 10⁻⁷ N·m
+C. 2.0 × 10⁻¹² C·m; 0.50 mm; 6.0 × 10⁻⁷ N·m
+D. 2.0 × 10⁻¹² C·m; 0.50 mm; 3.0 × 10⁻⁷ N·m
 
-**11. (show your working)** A 200 pF capacitor is charged to 50 V and disconnected from the supply. A slab with κ = 2.5 is then inserted to fill the gap. Calculate the charge, the stored energy before and after insertion, and the energy lost. Show your working.
+**11.** A 200 pF capacitor is charged to 50 V and disconnected from the supply. A slab with κ = 2.5 is then inserted to fill the gap. What are the stored energies before and after insertion, and the energy lost?
+A. 2.5 × 10⁻⁷ J before; 1.0 × 10⁻⁷ J after; 1.5 × 10⁻⁷ J lost
+B. 2.5 × 10⁻⁷ J before; 6.3 × 10⁻⁷ J after; 3.8 × 10⁻⁷ J gained
+C. 5.0 × 10⁻⁷ J before; 2.0 × 10⁻⁷ J after; 3.0 × 10⁻⁷ J lost
+D. 2.5 × 10⁻⁷ J before; 1.0 × 10⁻⁷ J after; nothing is lost, it is stored in the slab
 
-**12. (show your working)** A charged parallel-plate capacitor is disconnected from its battery and a dielectric slab is inserted between the plates. Explain, in terms of what happens inside the dielectric, why the field between the plates falls and why the capacitance rises.
+**12.** A charged parallel-plate capacitor is disconnected from its battery and a dielectric slab is inserted between the plates. Why does the field between the plates fall and the capacitance rise?
+A. The slab conducts charge away from the plates, so Q falls and C = Q/V rises
+B. The slab pushes the plates further apart, so E = V/d falls and C rises
+C. The slab absorbs the field energy, so E falls, and C rises because the energy now sits in the slab
+D. Polarisation puts bound charge on the slab's faces; the opposing field cuts E to E₀/κ, so V falls while Q holds, and C = Q/V rises
 
 ---
 
@@ -95,18 +111,18 @@ D. Voltage at the node between two resistors
 
 The current, the voltage across a resistor and a node voltage are all linear in the sources and superpose correctly.
 
-**9.** *Thevenin equivalent and load current.* V_Th = open-circuit voltage = voltage across the 3.0 Ω by the divider rule = 18 × 3.0/(6.0 + 3.0) = 6.0 V. R_Th: short the 18 V source, then 6.0 and 3.0 are in parallel at the terminals, R_Th = 6.0 × 3.0/9.0 = 2.0 Ω. I_N = V_Th/R_Th = 3.0 A. Load: I = V_Th/(R_Th + R_L) = 6.0/(2.0 + 4.0) = 1.0 A. Check directly: 3.0 ∥ 4.0 = 1.71 Ω, I_source = 18/7.71 = 2.33 A, V_A = 4.0 V, I_L = 4.0/4.0 = 1.0 A.
+**9. A** — *Thevenin equivalent and load current.* With the load off, the divider gives V_Th = 18 × 3.0/(6.0 + 3.0) = 6.0 V. Shorting the ideal source puts 6.0 Ω and 3.0 Ω in parallel at the terminals, so R_Th = 18/9.0 = 2.0 Ω (and I_N = 6.0/2.0 = 3.0 A). The load then carries I = V_Th/(R_Th + R_L) = 6.0/6.0 = 1.0 A.
 
-A correct answer states V_Th = 6.0 V, R_Th = 2.0 Ω, I_N = 3.0 A and I_L = 1.0 A. V_Th = 18 V (no divider) or R_Th = 9.0 Ω (series instead of parallel) is wrong.
+18 V skips the divider; 9.0 Ω adds the two resistors in series instead of in parallel; 12 V takes the divider across the 6.0 Ω rather than the output resistor.
 
-**10.** *Dipole moment and separation from maximum torque.* τ = pE sin θ is a maximum when sin θ = 1, so p = τ_max/E = 6.0 × 10⁻⁷/3.0 × 10⁵ = 2.0 × 10⁻¹² C·m. Then d = p/q = 2.0 × 10⁻¹²/4.0 × 10⁻⁹ = 5.0 × 10⁻⁴ m = 0.50 mm. At 30°: τ = pE sin 30° = (6.0 × 10⁻⁷)(0.50) = 3.0 × 10⁻⁷ N·m.
+**10. D** — *Dipole moment and separation from maximum torque.* τ = pE sin θ peaks at sin θ = 1, so p = τ_max/E = 6.0 × 10⁻⁷/3.0 × 10⁵ = 2.0 × 10⁻¹² C·m. Since p = qd, d = 2.0 × 10⁻¹²/4.0 × 10⁻⁹ = 5.0 × 10⁻⁴ m = 0.50 mm. At 30°, τ = pE sin 30° = (6.0 × 10⁻⁷)(0.50) = 3.0 × 10⁻⁷ N·m.
 
-A correct answer states p = 2.0 × 10⁻¹² C·m, d = 0.50 mm (5.0 × 10⁻⁴ m) and τ = 3.0 × 10⁻⁷ N·m. Using 2q for the charge (d = 0.25 mm) or cos 30° for the torque (5.2 × 10⁻⁷ N·m) is wrong.
+0.25 mm divides p by 2q instead of q; 5.2 × 10⁻⁷ N·m uses cos 30°; 6.0 × 10⁻⁷ N·m treats the torque as independent of the angle.
 
-**11.** *Energy change when a dielectric is inserted at constant charge.* Q = C₀V₀ = (200 × 10⁻¹²)(50) = 1.0 × 10⁻⁸ C, fixed once the supply is removed. Before: U₀ = ½C₀V₀² = ½(200 × 10⁻¹²)(50)² = 2.5 × 10⁻⁷ J. After: C = κC₀ = 500 pF, V = Q/C = 20 V, U = ½QV = ½(1.0 × 10⁻⁸)(20) = 1.0 × 10⁻⁷ J, equal to U₀/κ. Energy lost = 2.5 × 10⁻⁷ − 1.0 × 10⁻⁷ = 1.5 × 10⁻⁷ J, the work done by the field pulling the slab in.
+**11. A** — *Energy change when a dielectric is inserted at constant charge.* Q = C₀V₀ = (200 × 10⁻¹²)(50) = 1.0 × 10⁻⁸ C and is fixed once the supply is off, so U₀ = ½C₀V₀² = 2.5 × 10⁻⁷ J. Afterwards C = κC₀ = 500 pF and V = Q/C = 20 V, giving U = ½QV = 1.0 × 10⁻⁷ J, exactly U₀/κ. The difference, 1.5 × 10⁻⁷ J, is the work the field does pulling the slab in.
 
-A correct answer states Q = 1.0 × 10⁻⁸ C, U₀ = 2.5 × 10⁻⁷ J, U = 1.0 × 10⁻⁷ J and a loss of 1.5 × 10⁻⁷ J; also accepted U = Q²/2C. An energy that rises by κ describes the supply-still-connected case and is wrong.
+An energy that rises by κ is the supply-still-connected case; 5.0 × 10⁻⁷ J drops the ½; and the energy really does leave the capacitor rather than sit in the slab.
 
-**12.** *Polarisation of a dielectric.* The field of the plates polarises the dielectric: in each molecule the positive and negative charge centres are pulled slightly apart (or permanent dipoles line up), so a layer of bound negative charge appears on the face next to the positive plate and bound positive charge on the other face. These bound charges produce a field that opposes the applied field, so the net field inside falls to E₀/κ. With Q fixed, V = Ed falls by the same factor, and C = Q/V rises by κ.
+**12. D** — *Polarisation of a dielectric.* The plates' field polarises the slab: charge centres inside each molecule separate slightly (or permanent dipoles line up), leaving bound negative charge on the face next to the positive plate and bound positive charge opposite. That bound charge produces a field opposing the applied one, so the net field falls to E₀/κ, and with Q fixed V = Ed falls by the same factor while C = Q/V rises by κ.
 
-A correct answer mentions polarisation (charge shifting within molecules), bound surface charge, an opposing internal field giving E = E₀/κ, then V = Ed falling and C = Q/V rising.
+A dielectric is an insulator and carries no charge away; the plate separation does not change; and absorbing energy is not what changes the capacitance.

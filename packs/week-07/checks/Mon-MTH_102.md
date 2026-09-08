@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 7 integration, exactly as she builds it.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Find ∫x⁶ dx.
 A. 7x⁷ + c
@@ -51,13 +51,29 @@ B. x⁰ = 1, so the answer would be a constant
 C. n + 1 = 0, so the formula divides by zero
 D. 1/x has no antiderivative at all
 
-**9. (show your working)** Find ∫√x dx by first writing √x as a power of x. State the value of n you use. Show your working.
+**9.** Find ∫√x dx by first writing √x as a power of x.
+A. (3/2)x^(3/2) + c
+B. (2/3)x^(3/2) + c
+C. (1/2)x^(−1/2) + c
+D. (2/3)x^(1/2) + c
 
-**10. (show your working)** Evaluate ∫₁² 2x dx twice: first using F(x) = x², then using F(x) = x² + 5. Show that both give the same number and say why. Show your working.
+**10.** Evaluate ∫₁² 2x dx using F(x) = x², then again using F(x) = x² + 5. What pair of values do you get?
+A. 3 and 8
+B. 4 and 9
+C. 3 and 9
+D. 3 and 3
 
-**11. (show your working)** A student writes ∫x⁵ dx = 5x⁴ + c. Differentiate the student's answer to show it is wrong, name the mistake, and give the correct integral. Show your working.
+**11.** A student writes ∫x⁵ dx = 5x⁴ + c. Differentiate the student's answer, then give the correct integral.
+A. 20x³, and ∫x⁵ dx = x⁶/6 + c
+B. 20x³, and ∫x⁵ dx = x⁶ + c
+C. 20x⁴, and ∫x⁵ dx = x⁶/6 + c
+D. 5x⁵, and ∫x⁵ dx = 6x⁶ + c
 
-**12. (show your working)** Explain, using differentiation, why ∫2x dx = x² is an incomplete answer and ∫2x dx = x² + c is the full answer.
+**12.** The derivative of x² + c is 2x for every real number c. What does that make the answer ∫2x dx = x²?
+A. Complete, since c matters only in definite integrals
+B. Incomplete: it names one antiderivative instead of the whole family x² + c
+C. Wrong: the derivative of x² is 2, not 2x
+D. Incomplete: the answer should be x² + 2x + c
 
 ---
 
@@ -95,18 +111,18 @@ x³ + 5 uses the given value 5 as c without evaluating x³ at x = 1; x³ drops t
 
 x⁻¹ is not always negative and sign never blocks integration; x⁰ = 1 is true but the trouble is the denominator, not the numerator; 1/x does have an antiderivative, it is just not given by this formula.
 
-**9.** *Power rule with a fractional exponent.* √x = x^(1/2), so n = 1/2. The new exponent is 1/2 + 1 = 3/2 and you divide by 3/2, which is the same as multiplying by 2/3: ∫x^(1/2) dx = x^(3/2)/(3/2) + c = (2/3)x^(3/2) + c. Check: d/dx (2/3)x^(3/2) = (2/3)(3/2)x^(1/2) = √x.
+**9. B** — *Power rule with a fractional exponent.* Write √x = x^(1/2), so n = 1/2. Raise the power to 3/2 and divide by 3/2, which is the same as multiplying by 2/3: ∫x^(1/2) dx = x^(3/2)/(3/2) + c = (2/3)x^(3/2) + c.
 
-Final answer: (2/3)x^(3/2) + c. Also accepted: 2x^(3/2)/3 + c, (2/3)x√x + c, or 2√(x³)/3 + c. The working must show n = 1/2 and the division by 3/2. (3/2)x^(3/2) multiplies by the new power instead of dividing and is wrong; an answer without + c is incomplete.
+Check by differentiating: d/dx (2/3)x^(3/2) = (2/3)(3/2)x^(1/2) = √x. (3/2)x^(3/2) + c multiplies by the new power instead of dividing; (1/2)x^(−1/2) + c differentiates √x instead of integrating it; (2/3)x^(1/2) + c divides correctly but never raises the power.
 
-**10.** *Constant of integration cancels in a definite integral.* With F(x) = x²: F(2) − F(1) = 4 − 1 = 3. With F(x) = x² + 5: F(2) − F(1) = (4 + 5) − (1 + 5) = 9 − 6 = 3. The 5 is added at the upper limit and subtracted again at the lower limit, so it cancels: (F(b) + c) − (F(a) + c) = F(b) − F(a) for any c.
+**10. D** — *Constant of integration cancels in a definite integral.* With F(x) = x²: F(2) − F(1) = 4 − 1 = 3. With F(x) = x² + 5: F(2) − F(1) = (4 + 5) − (1 + 5) = 9 − 6 = 3. The 5 is added at the upper limit and subtracted again at the lower one, so (F(b) + c) − (F(a) + c) = F(b) − F(a) for every c. That is why a definite integral never carries + c.
 
-Final answer: 3 both times. A correct answer shows both evaluations reaching 3 and states that the added constant cancels in F(b) − F(a), which is why a definite integral never carries + c. Getting 8 for the second evaluation (adding 5 only once) is wrong.
+3 and 8 adds the 5 at the upper limit only; 3 and 9 evaluates the second version at x = 2 alone; 4 and 9 forgets the lower limit both times.
 
-**11.** *Checking an antiderivative by differentiating.* Differentiate the claimed answer: d/dx (5x⁴ + c) = 20x³, which is not x⁵, so the answer is wrong. The student differentiated instead of integrating (multiplied by the old power and lowered it). Integration goes the other way: raise the power to 6 and divide by 6.
+**11. A** — *Checking an antiderivative by differentiating.* d/dx (5x⁴ + c) = 20x³, which is not x⁵, so the claim fails its own check. The student differentiated instead of integrating: multiplied by the old power and lowered it. Integration goes the other way, raise the power to 6 and divide by 6, giving ∫x⁵ dx = x⁶/6 + c, and d/dx (x⁶/6) = x⁵ confirms it.
 
-Final answer: ∫x⁵ dx = x⁶/6 + c. Also accepted: (1/6)x⁶ + c. A correct answer shows the derivative 20x³ (or at least that it is not x⁵), says the student differentiated rather than integrated, and gives x⁶/6 + c. Check: d/dx (x⁶/6) = x⁵.
+x⁶ + c raises the power but forgets to divide; 20x⁴ mishandles the power drop in the derivative; 6x⁶ + c multiplies by the new power instead of dividing.
 
-**12.** *Why the constant of integration is required.* The indefinite integral of 2x is every function whose derivative is 2x, not just one of them. Since the derivative of any constant is 0, [x² + c]′ = 2x + 0 = 2x for every real number c, so x² + 1, x² − 7 and x² + 100 are all antiderivatives of 2x. Writing x² alone names one member of the family and silently drops the rest; x² + c names them all.
+**12. B** — *Why the constant of integration is required.* The indefinite integral of 2x is every function whose derivative is 2x. Differentiating a constant gives 0, so x², x² + 1 and x² − 7 all have derivative 2x. Writing x² alone picks one member of that family and drops the rest, so the full answer is x² + c with c any real number.
 
-A correct answer states that differentiating a constant gives 0, so x² + c has derivative 2x for every c, and concludes that the integral is the whole family x² + c, with c any real number.
+The first option has the roles reversed: it is the definite integral where c cancels and is not needed. The third misreads d/dx x² = 2x. The fourth invents an extra 2x that has no source.

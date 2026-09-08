@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Problems-only session on Week 2.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Charges lie on the x-axis: −4.0 μC at x = 0, −2.0 μC at x = 3.0 m and +6.0 μC at x = 5.0 m. Take k = 9.0 × 10⁹ N·m²/C². What is the net force on the −2.0 μC charge?
 A. 0.019 N in the +x direction
@@ -51,13 +51,29 @@ B. The vector sum of the Coulomb forces from each of the other two charges, work
 C. Coulomb's law applied to the total charge of the other two, placed at their midpoint
 D. The Coulomb force from the nearer charge only
 
-**9. (show your working)** A +5.0 nC charge is at x = 0 and a −4.0 nC charge at x = 0.90 m. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Find the electric field at x = 0.30 m, magnitude and direction, then the force on an electron placed at that point. Show your working.
+**9.** A +5.0 nC charge is at x = 0 and a −4.0 nC charge at x = 0.90 m. Take k = 9.0 × 10⁹ N·m²/C² and e = 1.6 × 10⁻¹⁹ C. What is the field at x = 0.30 m, and the force on an electron placed there?
+A. 600 N/C along +x; 9.6 × 10⁻¹⁷ N along −x
+B. 600 N/C along +x; 9.6 × 10⁻¹⁷ N along +x
+C. 400 N/C along +x; 6.4 × 10⁻¹⁷ N along −x
+D. 544 N/C along +x; 8.7 × 10⁻¹⁷ N along −x
 
-**10. (show your working)** Two protons are 4.0 nm apart. An electron lies on the line between them, 1.0 nm from one proton. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Calculate the total force on the electron, magnitude and direction. Show your working.
+**10.** Two protons are 4.0 nm apart. An electron lies on the line between them, 1.0 nm from one proton. Take k = 9.0 × 10⁹ N·m²/C² and e = 1.6 × 10⁻¹⁹ C. What is the net force on the electron?
+A. 2.6 × 10⁻¹⁰ N toward the nearer proton
+B. 2.0 × 10⁻¹⁰ N toward the nearer proton
+C. 2.3 × 10⁻¹⁰ N toward the nearer proton
+D. 2.0 × 10⁻¹⁰ N toward the farther proton
 
-**11. (show your working)** Starting from Coulomb's law and the definition E = F/q₀, derive the expression for the field of a point charge Q at distance r. Then evaluate it for Q = +3.0 nC at r = 0.30 m and give the direction. Take k = 9.0 × 10⁹ N·m²/C². Show your working.
+**11.** A positive test charge q₀ a distance r from a point charge Q feels a force of magnitude kQq₀/r². Using E = F/q₀, what is the field of Q, and its value for Q = +3.0 nC at r = 0.30 m with k = 9.0 × 10⁹ N·m²/C²?
+A. E = kQq₀/r²; 300 N/C directed away from Q
+B. E = kQ/r²; 90 N/C directed away from Q
+C. E = kQ/r²; 300 N/C directed away from Q
+D. E = kQ/r²; 300 N/C directed toward Q
 
-**12. (show your working)** A student substitutes q₁ = −6.0 μC and q₂ = +3.0 μC into F = kq₁q₂/r² with r = 2.0 m, gets F = −0.0405 N, and writes that the minus sign means the force is 0.0405 N to the left. Explain what is wrong with this reasoning and how the direction should be found.
+**12.** A student puts q₁ = −6.0 μC and q₂ = +3.0 μC into F = kq₁q₂/r² with r = 2.0 m, gets −0.0405 N, and reads the minus sign as meaning the force is 0.0405 N to the left. What does that minus sign actually mean?
+A. It marks the force as repulsive, the product of the charges being negative
+B. It means the force points to the left, as the student read it
+C. It means a force of −0.0405 N, force being a signed quantity in one dimension
+D. It marks the force as attractive; the magnitude is 0.0405 N and the direction comes from where the charges sit
 
 ---
 
@@ -95,18 +111,18 @@ x = 0.20 m applies the like-charge method between the charges, where the fields 
 
 Summing magnitudes is only right when the forces are parallel; lumping the other charges at their midpoint ignores the 1/r² weighting of each; the nearer charge is not the only one acting, it is simply weighted more heavily.
 
-**9.** *Field between unlike charges then force on an electron.* E₁ from +5.0 nC at 0.30 m: (9.0 × 10⁹)(5.0 × 10⁻⁹)/(0.30)² = 45/0.090 = 500 N/C, away from the positive charge, so +x. E₂ from −4.0 nC at 0.90 − 0.30 = 0.60 m: (9.0 × 10⁹)(4.0 × 10⁻⁹)/(0.60)² = 36/0.36 = 100 N/C, toward the negative charge, so also +x. E = 500 + 100 = 600 N/C in the +x direction. Force on the electron: |F| = eE = (1.6 × 10⁻¹⁹)(600) = 9.6 × 10⁻¹⁷ N, and because the electron is negative the force is opposite to E: 9.6 × 10⁻¹⁷ N in the −x direction.
+**9. A** — *Field between unlike charges then force on an electron.* The +5.0 nC charge is 0.30 m away: E₁ = 45/0.090 = 500 N/C pointing away from it, so along +x. The −4.0 nC charge is 0.90 − 0.30 = 0.60 m away: E₂ = 36/0.36 = 100 N/C pointing toward it, also along +x. They add: E = 600 N/C along +x. On the electron, |F| = eE = 9.6 × 10⁻¹⁷ N, directed along −x because the electron is negative.
 
-Final answer: E = 600 N/C along +x; F = 9.6 × 10⁻¹⁷ N along −x (accept 9.5 to 9.7 × 10⁻¹⁷ N). Using 0.90 m for the second distance gives 44 N/C and 544 N/C total, which is wrong; 400 N/C subtracts fields that point the same way; a force stated along +x forgets the electron's sign.
+A force along +x forgets that sign; 400 N/C subtracts two fields that point the same way; 544 N/C uses 0.90 m as the distance to the second charge.
 
-**10.** *Net force on an electron between two protons.* The electron is attracted to both protons, and they lie on opposite sides of it, so the two pulls oppose. Nearer proton (r = 1.0 × 10⁻⁹ m): F₁ = ke²/r² = (9.0 × 10⁹)(1.6 × 10⁻¹⁹)²/(1.0 × 10⁻⁹)² = 2.304 × 10⁻²⁸/1.0 × 10⁻¹⁸ = 2.30 × 10⁻¹⁰ N. Farther proton (r = 4.0 − 1.0 = 3.0 nm): F₂ = 2.304 × 10⁻²⁸/(3.0 × 10⁻⁹)² = 2.304 × 10⁻²⁸/9.0 × 10⁻¹⁸ = 2.56 × 10⁻¹¹ N, one ninth of F₁. Net = 2.30 × 10⁻¹⁰ − 0.26 × 10⁻¹⁰ = 2.05 × 10⁻¹⁰ N, directed toward the nearer proton.
+**10. B** — *Net force on an electron between two protons.* The electron is pulled toward both protons, which sit on opposite sides of it, so the two pulls subtract. Nearer proton at 1.0 nm: F₁ = ke²/r² = 2.304 × 10⁻²⁸/1.0 × 10⁻¹⁸ = 2.30 × 10⁻¹⁰ N. Farther proton at 3.0 nm: F₂ = 2.304 × 10⁻²⁸/9.0 × 10⁻¹⁸ = 2.56 × 10⁻¹¹ N, a ninth of F₁. Net = 2.05 × 10⁻¹⁰ N toward the nearer proton.
 
-Final answer: 2.0 × 10⁻¹⁰ N toward the nearer proton (accept 2.0 to 2.1 × 10⁻¹⁰ N). The working must show both magnitudes and the subtraction. 2.6 × 10⁻¹⁰ N adds two pulls that point opposite ways; 2.3 × 10⁻¹⁰ N ignores the farther proton.
+2.6 × 10⁻¹⁰ N adds two pulls that point opposite ways; 2.3 × 10⁻¹⁰ N ignores the farther proton; the last option has the direction backwards, since the nearer pull is the bigger one.
 
-**11.** *Deriving the point-charge field from Coulomb's law.* Place a positive test charge q₀ at distance r from Q. Coulomb's law gives the force on it, |F| = kQq₀/r². By definition |E| = |F|/q₀ = kQq₀/(q₀r²) = kQ/r²: the test charge cancels, so the field depends only on the source Q and the distance r. For Q = +3.0 nC at 0.30 m: E = (9.0 × 10⁹)(3.0 × 10⁻⁹)/(0.30)² = 27/0.090 = 300 N/C, directed radially away from Q because Q is positive.
+**11. C** — *Deriving the point-charge field from Coulomb's law.* Dividing the force by q₀ cancels the test charge: E = (kQq₀/r²)/q₀ = kQ/r², which is why the field depends only on the source and the distance. Numerically E = (9.0 × 10⁹)(3.0 × 10⁻⁹)/(0.30)² = 27/0.090 = 300 N/C, directed radially away from Q because Q is positive.
 
-A correct answer shows the force on a test charge, divides by q₀ so that q₀ cancels, states E = kQ/r², and gives 300 N/C outward (accept 3.0 × 10² N/C; 295 to 305). Leaving q₀ in the final expression, or giving 90 N/C by forgetting to square 0.30 m, is wrong.
+Leaving q₀ in the expression means the division was not done; 90 N/C forgets to square 0.30 m; 'toward Q' is the direction for a negative source.
 
-**12.** *Sign of a charge versus direction of the force.* Coulomb's law gives a magnitude, F = k|q₁q₂|/r² = 0.0405 N here; a force has no negative magnitude. A minus sign from multiplying signed charges only records that the signs are unlike, which means the force is attractive. It says nothing about left or right, because the formula does not know where the charges sit. The direction comes from the sketch: each charge is pulled toward the other along the line joining them, so the force on q₁ points toward q₂ and the force on q₂ points toward q₁.
+**12. D** — *Sign of a charge versus direction of the force.* Coulomb's law returns a magnitude, F = k|q₁q₂|/r² = 0.0405 N, and a magnitude is never negative. A minus sign from multiplying signed charges records only that the signs are unlike, so the force is attractive; the formula has no idea where the charges sit, so it cannot say left or right. The direction is read off the positions: each charge is pulled along the line toward the other.
 
-A correct answer states that magnitudes go into the formula, that the sign of the product means attraction (unlike) or repulsion (like), and that left or right is read from the positions of the charges, not from the sign of the number.
+Unlike charges attract, not repel; 'to the left' reads a position out of a formula that contains none; treating F as signed confuses the sign of the charge product with a direction in space.

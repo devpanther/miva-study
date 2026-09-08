@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 12 applications of integration, exactly as the deck builds them.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A body moves with velocity v(t) = 3t² + 2 m/s. Find the distance it travels in the first 2 seconds.
 A. 14 m
@@ -51,13 +51,29 @@ B. F(4) − F(1)
 C. F(4) + C
 D. F(4) − F(1) + 2C
 
-**9. (show your working)** Water flows into an empty tank at the rate 4t litres per minute, where t is in minutes. Find the time at which the tank holds 200 litres. Show your working.
+**9.** Water flows into an empty tank at the rate 4t litres per minute, where t is in minutes. Find the time at which the tank holds 200 litres.
+A. t = 50 minutes
+B. t ≈ 14.1 minutes
+C. t = 10 minutes
+D. t ≈ 7.1 minutes
 
-**10. (show your working)** A resource is consumed at the rate C′(t) = 50e^(0.1t) thousand tonnes per year, t years after 2020, and nothing has been consumed at t = 0. Find the model C(t) for the total consumed after t years. Show your working.
+**10.** A resource is consumed at the rate C′(t) = 50e^(0.1t) thousand tonnes per year, t years after 2020, and nothing has been consumed at t = 0. Find the model C(t).
+A. C(t) = 50e^(0.1t) − 50
+B. C(t) = 500e^(0.1t) − 500
+C. C(t) = 5e^(0.1t) − 5
+D. C(t) = 500e^(0.1t)
 
-**11. (show your working)** The rate of investment is I(t) = 3√t (thousand naira per year). Find the capital accumulated between the 1st and the 4th years. Show your working.
+**11.** The rate of investment is I(t) = 3√t thousand naira per year. Find the capital accumulated between the 1st and the 4th years.
+A. 3 thousand naira
+B. 16 thousand naira
+C. 31.5 thousand naira
+D. 14 thousand naira
 
-**12. (show your working)** A dam face has its top at the water surface. Explain why the total fluid force on it cannot be found as one pressure times the area of the face, and say what w·h(x) in F = ∫ₐᵇ w·h(x)·L(x)dx represents.
+**12.** A dam face has its top edge at the water surface. In F = ∫ₐᵇ w·h(x)·L(x)dx, what does w·h(x) stand for, and why is an integral needed at all?
+A. The pressure at depth h(x); pressure grows with depth, so no single pressure covers the whole face
+B. The weight of the water sitting above the strip; that weight changes along the face
+C. The force on the strip; the strips have different widths L(x)
+D. The pressure at the base of the dam; only the width L(x) varies with depth
 
 ---
 
@@ -95,18 +111,18 @@ D. F(4) − F(1) + 2C
 
 F(4) − F(1) + C subtracts the constant only once; F(4) + C is the position at t = 4, not the change in position; F(4) − F(1) + 2C adds the constant at both ends instead of cancelling it.
 
-**9.** *Finding the time for an accumulated total.* The volume in the tank after t minutes is the integral of the rate from 0 to t: V(t) = ∫₀ᵗ4u du = [2u²]₀ᵗ = 2t². Set 2t² = 200, so t² = 100 and t = 10 (the negative root is meaningless for a time). Check: V(10) = 2(100) = 200 L.
+**9. C** — *Finding the time for an accumulated total.* The volume held after t minutes is the integral of the rate: V(t) = ∫₀ᵗ4u du = [2u²]₀ᵗ = 2t². Set 2t² = 200, so t² = 100 and t = 10 minutes, discarding the negative root. Check: V(10) = 2(100) = 200 L.
 
-Final answer: t = 10 minutes. The working must integrate the rate to get 2t² and then solve 2t² = 200. Setting the rate itself equal to 200, 4t = 200, gives t = 50 and is wrong; t² = 200 (forgetting the 2) gives 14.1 and is wrong.
+t = 50 sets the rate itself equal to 200; t ≈ 14.1 solves t² = 200 and loses the factor 2; t ≈ 7.1 uses V(t) = 4t², raising the power without dividing by it.
 
-**10.** *Building an accumulation model from an exponential rate.* C(t) = ∫50e^(0.1t)dt = (50/0.1)e^(0.1t) + c = 500e^(0.1t) + c, because ∫e^(kt)dt = e^(kt)/k. The condition C(0) = 0 with e⁰ = 1 gives 0 = 500 + c, so c = −500.
+**10. B** — *Building an accumulation model from an exponential rate.* Since ∫e^(kt)dt = e^(kt)/k, C(t) = ∫50e^(0.1t)dt = (50/0.1)e^(0.1t) + c = 500e^(0.1t) + c. The condition C(0) = 0 with e⁰ = 1 gives 0 = 500 + c, so c = −500 and C(t) = 500e^(0.1t) − 500, also written 500(e^(0.1t) − 1).
 
-Final answer: C(t) = 500e^(0.1t) − 500, also written 500(e^(0.1t) − 1). The working must show the division by 0.1 and the use of C(0) = 0 to find c. 5e^(0.1t) − 5 multiplies by 0.1 instead of dividing and is wrong; leaving c out gives C(0) = 500, which contradicts the condition.
+5e^(0.1t) − 5 multiplies by 0.1 instead of dividing; 50e^(0.1t) − 50 never divides at all; 500e^(0.1t) omits c and gives C(0) = 500, contradicting the condition.
 
-**11.** *Capital growth as the integral of the rate of investment.* K = ∫₁⁴3√t dt = 3∫₁⁴t^(1/2)dt. Raise the power to 3/2 and divide by 3/2: 3 × (2/3)t^(3/2) = 2t^(3/2). So K = [2t^(3/2)]₁⁴ = 2(4^(3/2)) − 2(1^(3/2)) = 2(8) − 2(1) = 16 − 2 = 14, using 4^(3/2) = (√4)³ = 8.
+**11. D** — *Capital growth as the integral of the rate of investment.* K = ∫₁⁴3t^(1/2)dt. Raise the power to 3/2 and divide by 3/2: 3 × (2/3)t^(3/2) = 2t^(3/2). So K = [2t^(3/2)]₁⁴ = 2(8) − 2(1) = 14 thousand naira, using 4^(3/2) = (√4)³ = 8.
 
-Final answer: 14 thousand naira (also accepted: 14 000 naira, or 14 with units stated). The working must rewrite √t as t^(1/2), show 2t^(3/2), and substitute both limits into the antiderivative. 3√4 − 3√1 = 3 substitutes into I(t) instead of the antiderivative and is wrong; 16 forgets the lower limit.
+3 substitutes the limits into I(t) rather than the antiderivative; 16 forgets the lower limit; 31.5 multiplies by 3/2 instead of dividing.
 
-**12.** *Why fluid force needs an integral.* Water pressure grows with depth: at depth h it is w·h, where w = ρg is the weight density (9800 N/m³ for water). The face spans depths from 0 at the top to its full height at the base, so there is no single pressure that applies to the whole face; pressure × area would either use the base pressure (too big) or some other guess. The integral cuts the face into thin horizontal strips at depth x, each of width L(x) and essentially one pressure w·h(x) over the strip, so the strip's force is w·h(x)·L(x)dx, and integrating adds the strips from top to bottom. The quantity w·h(x) is the pressure at depth h(x).
+**12. A** — *Why fluid force needs an integral.* Water pressure at depth h is w·h, where w = ρg is the weight density (about 9800 N/m³ for water). The face spans every depth from 0 at the surface to its full height, so there is no one pressure to multiply by the area. Cutting the face into thin horizontal strips of width L(x) at depth h(x) makes the pressure essentially constant on each strip, so its force is w·h(x)·L(x)dx and the integral adds them up.
 
-A correct answer says that pressure varies with depth, that each strip is at one depth, and that w·h(x) is pressure (weight density × depth).
+The force on the strip is the whole integrand, not w·h(x), so the third option is off by the factor L(x)dx; the second confuses pressure with weight; the fourth freezes the pressure at one depth, which is exactly what the integral avoids.

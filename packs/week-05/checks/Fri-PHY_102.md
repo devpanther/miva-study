@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Computation on Week 5.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A single loop contains a 15 V battery (internal resistance 1.0 Ω) and a 5.0 V battery (internal resistance 2.0 Ω) connected so they oppose each other, plus external resistors of 4.0 Ω and 3.0 Ω. What current flows?
 A. 2.0 A
@@ -51,13 +51,29 @@ B. Only the IR terms change sign
 C. The current comes out with the opposite sign
 D. Every term changes sign; the same current results
 
-**9. (show your working)** Three branches join top node A to bottom node B. Branch 1: a 12 V battery (+ toward A) in series with 2.0 Ω. Branch 2: a 4.0 Ω resistor. Branch 3: a 6.0 V battery (+ toward A) in series with 2.0 Ω. Assume currents I₁ and I₃ upward toward A and I₂ downward through the 4.0 Ω. Calculate all three currents and interpret any negative one. Show your working.
+**9.** Three branches join node A to node B. Branch 1: a 12 V battery, + toward A, in series with 2.0 Ω. Branch 2: a 4.0 Ω resistor. Branch 3: a 6.0 V battery, + toward A, in series with 2.0 Ω. Take I₁ and I₃ upward toward A and I₂ downward through the 4.0 Ω. What are the three currents?
+A. I₁ = 2.4 A, I₂ = 1.8 A, I₃ = −0.60 A
+B. I₁ = 2.4 A, I₂ = 1.8 A, I₃ = +0.60 A
+C. I₁ = 0 A, I₂ = 3.0 A, I₃ = −3.0 A
+D. I₁ = 3.6 A, I₂ = 1.2 A, I₃ = −2.4 A
 
-**10. (show your working)** Going clockwise from point a round a single loop: a 2.0 Ω resistor, a 4.0 V battery crossed + to −, its 1.0 Ω internal resistance, point b, a 4.0 Ω resistor, a 12 V battery crossed − to +, its 1.0 Ω internal resistance, back to a. Calculate the current, then V_ab = V_a − V_b by both paths from b to a. Show your working.
+**10.** Going clockwise from point a round a single loop: a 2.0 Ω resistor, a 4.0 V battery crossed + to −, its 1.0 Ω internal resistance, point b, a 4.0 Ω resistor, a 12 V battery crossed − to +, its 1.0 Ω internal resistance, back to a. What are the current and V_a − V_b?
+A. 1.0 A clockwise; V_a − V_b = −7.0 V
+B. 1.0 A clockwise; V_a − V_b = 7.0 V
+C. 2.0 A clockwise; V_a − V_b = 7.0 V
+D. 1.0 A clockwise; V_a − V_b = 6.0 V
 
-**11. (show your working)** A bridge has arms a→b 1.0 Ω, a→c 1.0 Ω, b→d 1.0 Ω, c→d 2.0 Ω and b→c 1.0 Ω, with a battery from d to a. Solving gives I₁ (a→b) = 3.0 A and I₅ (b→c) = −0.50 A. Use the junction rule at b to find I₃ (b→d), the loop a→b→c→a to find I₂ (a→c), then find I₄ (c→d). State the true direction in arm b→c. Show your working.
+**11.** A bridge has arms a→b 1.0 Ω, a→c 1.0 Ω, b→d 1.0 Ω, c→d 2.0 Ω and b→c 1.0 Ω, with a battery from d to a. Solving gives I₁ (a→b) = 3.0 A and I₅ (b→c) = −0.50 A. What are I₃ (b→d), I₂ (a→c) and I₄ (c→d)?
+A. I₃ = 2.5 A, I₂ = 3.5 A, I₄ = 4.0 A
+B. I₃ = 3.5 A, I₂ = 3.5 A, I₄ = 3.0 A
+C. I₃ = 3.5 A, I₂ = 2.5 A, I₄ = 2.0 A
+D. I₃ = 2.5 A, I₂ = 2.5 A, I₄ = 2.0 A
 
-**12. (show your working)** In one circuit a 4.0 V battery appears as −4.0 V in the loop equation but as +4.0 V when the potential difference between two points is computed along a path through it. Explain how the same battery can carry both signs, and state what the sign of an emf term depends on.
+**12.** In one circuit a 4.0 V battery appears as −4.0 V in the loop equation but as +4.0 V when the potential difference between two points is computed along a path through it. What decides the sign of an emf term?
+A. Whether the battery is discharging, giving +ε, or being charged, giving −ε
+B. Whether the current runs through the battery with the traversal, giving +ε, or against it, giving −ε
+C. Whether the battery is the larger or the smaller emf in the loop
+D. Only the order in which the terminals are crossed: − to + gives +ε, + to − gives −ε
 
 ---
 
@@ -95,18 +111,18 @@ I₁ = I₃ + I₅ treats I₅ as leaving b, which contradicts its c-to-b arrow;
 
 The other options treat the emf and IR sign rules as if they responded differently to the travel direction, or confuse the travel direction with the current arrow.
 
-**9.** *Two-loop circuit by junction and loop rules.* Junction A: I₁ + I₃ = I₂. Loop through branch 1 and branch 2 (up branch 1, down branch 2): 12 − 2.0I₁ − 4.0I₂ = 0. Loop through branch 3 and branch 2: 6.0 − 2.0I₃ − 4.0I₂ = 0. From the loops I₁ = 6.0 − 2.0I₂ and I₃ = 3.0 − 2.0I₂; substitute into the junction: 9.0 − 4.0I₂ = I₂, so I₂ = 1.8 A, I₁ = 2.4 A, I₃ = −0.60 A. Check: V_A = 4.0 × 1.8 = 7.2 V = 12 − 2.0 × 2.4.
+**9. A** — *Two-loop circuit by junction and loop rules.* Junction A gives I₁ + I₃ = I₂. The loop through branches 1 and 2 gives 12 − 2.0I₁ − 4.0I₂ = 0 and the loop through branches 3 and 2 gives 6.0 − 2.0I₃ − 4.0I₂ = 0, so I₁ = 6.0 − 2.0I₂ and I₃ = 3.0 − 2.0I₂. Substituting, 9.0 − 4.0I₂ = I₂, so I₂ = 1.8 A, I₁ = 2.4 A and I₃ = −0.60 A, the minus meaning 0.60 A runs downward into the 6.0 V battery, charging it.
 
-A correct answer gives I₁ = 2.4 A, I₂ = 1.8 A, I₃ = −0.60 A and says the negative sign means 0.60 A flows downward in branch 3, into the 6.0 V battery's positive terminal, so it is being charged. Accept I₃ = 0.60 A stated with the reversed direction.
++0.60 A simply drops that sign; the other two options come from writing the junction as I₁ = I₂ + I₃, and from leaving the 6.0 V emf out of its loop.
 
-**10.** *Potential difference between two points by two paths.* Loop clockwise with the current: −2.0I − 4.0 − 1.0I − 4.0I + 12 − 1.0I = 0, so 8.0 = 8.0I and I = 1.0 A clockwise (the 12 V battery wins). Path b → a clockwise (with the current): −(1.0)(4.0) + 12 − (1.0)(1.0) = 7.0 V. Path b → a anticlockwise (against the current): +(1.0)(1.0) + 4.0 + (1.0)(2.0) = 7.0 V. Both agree: V_ab = 7.0 V, a is 7.0 V above b.
+**10. B** — *Potential difference between two points by two paths.* The loop equation clockwise reads −2.0I − 4.0 − 1.0I − 4.0I + 12 − 1.0I = 0, so 8.0 = 8.0I and I = 1.0 A clockwise: the 12 V battery wins and drives the 4.0 V one backwards. Walking b to a with the current, V_a − V_b = −4.0 + 12 − 1.0 = 7.0 V, and walking the other way round gives +1.0 + 4.0 + 2.0 = 7.0 V as well.
 
-A correct answer states I = 1.0 A and V_ab = 7.0 V from both paths, with the signs shown. Getting different values from the two paths signals a sign error and is wrong.
+−7.0 V reverses the path; 2.0 A adds the two emfs instead of subtracting them; 6.0 V leaves the internal resistance terms out of the path.
 
-**11.** *Using junction and loop equations with a negative current.* Junction b: I₁ = I₃ + I₅, so I₃ = 3.0 − (−0.50) = 3.5 A. Loop a→b→c→a: −I₁(1.0) − I₅(1.0) + I₂(1.0) = 0, so I₂ = I₁ + I₅ = 3.0 − 0.50 = 2.5 A. Junction c: I₄ = I₂ + I₅ = 2.5 − 0.50 = 2.0 A. Check loop b→d→c→b: −I₃(1.0) + I₄(2.0) + I₅(1.0) = −3.5 + 4.0 − 0.50 = 0. I₅ negative means 0.50 A actually flows from c to b.
+**11. C** — *Using junction and loop equations with a negative current.* At b the junction rule reads I₁ = I₃ + I₅, so I₃ = 3.0 − (−0.50) = 3.5 A. The loop a→b→c→a gives −I₁(1.0) − I₅(1.0) + I₂(1.0) = 0, so I₂ = I₁ + I₅ = 2.5 A, and at c, I₄ = I₂ + I₅ = 2.0 A. The loop b→d→c→b checks out: −3.5 + 4.0 − 0.50 = 0. The negative I₅ means 0.50 A really flows from c to b.
 
-A correct answer states I₃ = 3.5 A, I₂ = 2.5 A, I₄ = 2.0 A and that 0.50 A flows c → b. Using I₃ = 2.5 A (adding the negative current the wrong way) is wrong.
+The first option ignores the sign of I₅ throughout; the second carries the wrong sign into the loop equation; the last subtracts at the junction where it should add.
 
-**12.** *Sign of an emf term.* The sign of an emf term depends only on the order in which the battery's terminals are crossed during the traversal: − to + gives +ε, + to − gives −ε. It does not depend on which way the current flows through the battery or on whether the battery is charging or discharging. In the loop equation the battery was walked + to −, giving −4.0 V; on the second path it was walked in the opposite direction, − to +, giving +4.0 V. The battery itself is unchanged.
+**12. D** — *Sign of an emf term.* An emf term's sign is fixed by the direction of travel through the battery and nothing else: crossing from − to + is a rise, +ε, and crossing from + to − is a fall, −ε. In the loop equation the battery was walked + to −, so it entered as −4.0 V; on the other path it was walked the opposite way and entered as +4.0 V. The battery itself never changed.
 
-A correct answer says the sign is fixed by traversal direction relative to the terminals, quotes − to + as positive and + to − as negative, and states that the current direction does not affect the emf sign.
+Whether it is charging or discharging, which way the current runs, and how big the other emf is all leave the sign of the emf term alone.

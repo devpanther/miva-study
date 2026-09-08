@@ -323,28 +323,56 @@
           "why": "The height of a vertical strip is the difference of the two y-values, f(x) − g(x), which is ≥ 0 wherever f is on top, whether or not the y-values themselves are negative. So A = ∫ₐᵇ(f(x) − g(x))dx with no modulus and no sign change. For example f(x) = −x² and g(x) = −4 on [−2, 2] give ∫(4 − x²)dx = 32/3 > 0.\n\nThe first option adds two areas against the axis, which is not the region between the curves; the second flips a sign that is already correct and gives a negative number; the fourth subtracts bottom minus top and is also negative."
         },
         {
-          "type": "short",
-          "q": "Find the area between the curve y = 3x − x² and the x-axis. Show your working.",
+          "type": "mcq",
+          "q": "Find the area between the curve y = 3x − x² and the x-axis.",
+          "options": [
+            "27/2",
+            "45/2",
+            "−9/2",
+            "9/2"
+          ],
+          "answerIndex": 3,
           "concept": "Area between a parabola and the x-axis",
-          "why": "No interval is given, so the limits are the roots: 3x − x² = x(3 − x) = 0 gives x = 0 and x = 3. Test an interior point: f(1) = 3 − 1 = 2 > 0, so the curve is above the axis on [0, 3] and no modulus is needed. A = ∫₀³(3x − x²)dx = [3x²/2 − x³/3]₀³ = (27/2 − 9) − 0 = 9/2.\n\nFinal answer: 9/2 square units (also accepted: 4.5). The working must show the roots from f(x) = 0, a sign check, and the evaluated bracket. 27/2 alone forgets the cubic term; −9/2 has the integrand upside down."
+          "why": "No interval is given, so the limits come from the roots: 3x − x² = x(3 − x) = 0 gives x = 0 and x = 3. Test x = 1: f(1) = 2 > 0, so the curve is above the axis and no modulus is needed. A = ∫₀³(3x − x²)dx = [3x²/2 − x³/3]₀³ = 27/2 − 9 = 9/2 square units.\n\n27/2 drops the −x² term; 45/2 integrates 3x + x² with the sign flipped; −9/2 has the integrand upside down."
         },
         {
-          "type": "short",
-          "q": "Find the area between the curves y = x² + 1 and y = x from x = 0 to x = 2. Show your working.",
+          "type": "mcq",
+          "q": "Find the area between the curves y = x² + 1 and y = x from x = 0 to x = 2.",
+          "options": [
+            "14/3",
+            "8/3",
+            "20/3",
+            "−8/3"
+          ],
+          "answerIndex": 1,
           "concept": "Area between two curves on a given interval",
-          "why": "Decide which curve is on top with a test point: at x = 1, x² + 1 = 2 and x = 1, so y = x² + 1 is on top (in fact x² + 1 − x = (x − 1/2)² + 3/4 > 0 everywhere, so the curves never cross). A = ∫₀²[(x² + 1) − x]dx = ∫₀²(x² − x + 1)dx = [x³/3 − x²/2 + x]₀² = 8/3 − 2 + 2 = 8/3.\n\nFinal answer: 8/3 square units (also accepted: 2.67 or 2⅔). A correct answer names the top curve, integrates top minus bottom over [0, 2] and evaluates at both limits. −8/3 comes from subtracting in the wrong order; 14/3 forgets to subtract the lower curve."
+          "why": "Test which curve is on top: at x = 1, x² + 1 = 2 and x = 1, so y = x² + 1 is above (indeed x² + 1 − x = (x − 1/2)² + 3/4 > 0 always, so they never cross). A = ∫₀²[(x² + 1) − x]dx = [x³/3 − x²/2 + x]₀² = 8/3 − 2 + 2 = 8/3 square units.\n\n14/3 integrates the top curve alone and forgets to subtract the bottom; 20/3 adds the two curves instead of subtracting; −8/3 subtracts in the wrong order."
         },
         {
-          "type": "short",
-          "q": "Find the area between y = sin x and the x-axis from x = 0 to x = π. Show your working.",
+          "type": "mcq",
+          "q": "Find the area between y = sin x and the x-axis from x = 0 to x = π.",
+          "options": [
+            "2",
+            "−2",
+            "0",
+            "1"
+          ],
+          "answerIndex": 0,
           "concept": "Area under a sine curve",
-          "why": "sin x ≥ 0 on [0, π] (test x = π/2: sin(π/2) = 1 > 0), so A = ∫₀^π sin x dx. The antiderivative of sin x is −cos x, so A = [−cos x]₀^π = −cos π − (−cos 0) = −(−1) + 1 = 2.\n\nFinal answer: 2 square units. The working must use ∫sin x dx = −cos x, with cos π = −1 and cos 0 = 1. −2 comes from using cos x as the antiderivative, [cos x]₀^π = −1 − 1; 0 comes from taking cos π = 1 instead of −1. Neither is accepted."
+          "why": "sin x ≥ 0 on [0, π] (at x = π/2 it is 1), so the area is just ∫₀^π sin x dx. The antiderivative of sin x is −cos x, so A = [−cos x]₀^π = −cos π + cos 0 = 1 + 1 = 2 square units.\n\n−2 uses cos x as the antiderivative; 0 takes cos π as 1 instead of −1; 1 evaluates at the upper limit only."
         },
         {
-          "type": "short",
-          "q": "f(x) ≤ 0 for every x in [a, b]. Explain why the area between y = f(x) and the x-axis on [a, b] is |∫ₐᵇf(x)dx| and not ∫ₐᵇf(x)dx, and why that modulus is not enough if f changes sign inside [a, b].",
+          "type": "mcq",
+          "q": "For f(x) ≤ 0 on [a, b] the area between y = f(x) and the x-axis is |∫ₐᵇf(x)dx|. If f instead changes sign at some c inside [a, b], why does |∫ₐᵇf(x)dx| no longer give the area?",
+          "options": [
+            "The positive and negative parts cancel inside the integral before the modulus is applied",
+            "The modulus of a sum is never equal to the sum of the moduli, so the integral is undefined",
+            "The integral is always zero when f changes sign, so no area can be recovered from it",
+            "The Fundamental Theorem does not apply on an interval containing a root of f"
+          ],
+          "answerIndex": 0,
           "concept": "Why the modulus in the area formula",
-          "why": "When f ≤ 0 every strip contributes a negative amount, so ∫ₐᵇf(x)dx comes out negative (or zero); an area cannot be negative, so the area is the magnitude of the integral, |∫ₐᵇf(x)dx|. If f changes sign at some c inside [a, b], the negative contribution from one side and the positive contribution from the other cancel inside the single integral before any modulus is applied, so |∫ₐᵇf(x)dx| is smaller than the true area (it can even be 0). The remedy is to split at c and add |∫ₐᶜf(x)dx| and |∫ᶜᵇf(x)dx| separately.\n\nA correct answer says the integral is negative below the axis, that the modulus restores a positive area, and that with a sign change the pieces cancel so the split must happen before taking magnitudes."
+          "why": "Below the axis every strip contributes a negative amount, so the integral comes out negative and the modulus restores a positive area. With a sign change at c, the negative piece and the positive piece cancel inside the single integral, and taking the modulus afterwards cannot undo a cancellation that has already happened. The fix is to split first: |∫ₐᶜf| + |∫ᶜᵇf|.\n\nThe second option is a true statement about moduli but does not make the integral undefined; the third overstates it, since the pieces rarely cancel exactly; the fourth is false, as the theorem needs continuity, not the absence of roots."
         }
       ]
     },
@@ -460,28 +488,56 @@
           "why": "Lenz's law says the induced current opposes the change in flux. The flux is falling, so the induced current acts to keep it up: its own field points along the applied field, adding to it.\n\n'Opposite to the applied field' is right only when the flux is rising; it is the half-remembered rule 'the induced field opposes B', which is wrong half the time. A perpendicular field cannot change the flux at all. Motion is not needed: a changing flux is the only criterion, so a stationary loop in a falling field does carry a current."
         },
         {
-          "type": "short",
-          "q": "An inductor of 0.60 H carries a steady current of 5.0 A. Calculate the energy stored in its magnetic field. The current is then reduced to 2.5 A. Calculate the new stored energy and state the factor by which it has fallen. Show your working.",
+          "type": "mcq",
+          "q": "An inductor of 0.60 H carries a steady current of 5.0 A. Calculate the energy stored in its magnetic field, and the factor by which that energy falls when the current is reduced to 2.5 A.",
+          "options": [
+            "7.5 J, falling by a factor of 4",
+            "7.5 J, falling by a factor of 2",
+            "15 J, falling by a factor of 4",
+            "1.5 J, falling by a factor of 2"
+          ],
+          "answerIndex": 0,
           "concept": "Energy stored in an inductor",
-          "why": "U = ½LI². At 5.0 A: U = ½(0.60)(5.0)² = ½(0.60)(25) = 7.5 J. At 2.5 A: U = ½(0.60)(2.5)² = ½(0.60)(6.25) = 1.875 J, about 1.9 J. Halving the current divides the energy by 2² = 4, because U depends on I².\n\nFinal answer: 7.5 J (accept 7.4 to 7.6) and 1.9 J (accept 1.8 to 2.0), the energy falling by a factor of 4. A correct answer shows both substitutions and states the factor 4, not 2. 15 J or 3.75 J means the ½ was dropped; 1.5 J and 0.75 J mean the current was not squared."
+          "why": "U = ½LI² = ½(0.60)(5.0)² = 7.5 J. At 2.5 A, U = ½(0.60)(6.25) = 1.875 J, so halving the current divides the energy by 2² = 4, because U goes as I².\n\nA factor of 2 treats the energy as proportional to the current; 15 J drops the ½; 1.5 J never squares the current at all."
         },
         {
-          "type": "short",
-          "q": "A 250-turn square coil of side 4.0 cm lies with its plane perpendicular to a uniform field of 0.30 T. The coil is pulled completely out of the field in 0.040 s. Calculate the average emf induced in the coil. Show your working.",
+          "type": "mcq",
+          "q": "A 250-turn square coil of side 4.0 cm lies with its plane perpendicular to a uniform field of 0.30 T. The coil is pulled completely out of the field in 0.040 s. Calculate the average emf induced in it.",
+          "options": [
+            "0.012 V",
+            "3.0 V",
+            "3.0 × 10⁴ V",
+            "0 V"
+          ],
+          "answerIndex": 1,
           "concept": "Emf from a coil removed from a field",
-          "why": "Area in SI: A = (0.040)² = 1.6 × 10⁻³ m². Plane perpendicular to B means the normal is along B, so θ = 0 and the initial flux per turn is Φ = BA = (0.30)(1.6 × 10⁻³) = 4.8 × 10⁻⁴ Wb; the final flux is zero, so ΔΦ = 4.8 × 10⁻⁴ Wb. ε = N ΔΦ/Δt = (250)(4.8 × 10⁻⁴)/(0.040) = 0.12/0.040 = 3.0 V.\n\nFinal answer: 3.0 V (accept 2.9 to 3.1). A correct answer converts the side to metres, uses the full flux as the change (the coil leaves the field entirely), multiplies by N and divides by the time. 0.012 V forgot N; 3.0 × 10⁴ V left the side in centimetres; 0 V wrongly took 'plane perpendicular to B' to mean no flux."
+          "why": "A = (0.040)² = 1.6 × 10⁻³ m². The plane is perpendicular to B, so the normal lies along B and Φ = BA = 4.8 × 10⁻⁴ Wb per turn, falling to zero. Then ε = N ΔΦ/Δt = (250)(4.8 × 10⁻⁴)/0.040 = 3.0 V.\n\n0.012 V leaves out the 250 turns; 3.0 × 10⁴ V keeps the side in centimetres; 0 V reads 'plane perpendicular to B' as no flux, when it is in fact the maximum-flux orientation."
         },
         {
-          "type": "short",
-          "q": "Two coils have a mutual inductance of 0.15 H. The current in the first coil falls uniformly from 6.0 A to zero in 0.030 s. Calculate the emf induced in the second coil during the change, and state the emf in the second coil while the 6.0 A was held steady. Show your working.",
+          "type": "mcq",
+          "q": "Two coils have a mutual inductance of 0.15 H. The current in the first falls uniformly from 6.0 A to zero in 0.030 s. Calculate the emf induced in the second coil during the change, and the emf while the 6.0 A was held steady beforehand.",
+          "options": [
+            "30 V during the change, 30 V while steady",
+            "0.90 V during the change, 0 V while steady",
+            "200 V during the change, 0 V while steady",
+            "30 V during the change, 0 V while steady"
+          ],
+          "answerIndex": 3,
           "concept": "Mutually induced emf from a current change",
-          "why": "ε₂ = M ΔI₁/Δt. ΔI₁/Δt = 6.0/0.030 = 200 A/s, so ε₂ = (0.15)(200) = 30 V. While the current was held steady, ΔI₁/Δt = 0, so the induced emf in the second coil was zero, however large the steady current.\n\nFinal answer: 30 V (accept 29 to 31) during the change, and 0 V while steady. A correct answer computes the rate 200 A/s, multiplies by M, and states that a steady current induces nothing. 0.90 V is M × ΔI with the time forgotten; 200 V is the rate 200 A/s quoted as a voltage with M left out; both are wrong."
+          "why": "ε₂ = M ΔI₁/Δt, and ΔI₁/Δt = 6.0/0.030 = 200 A/s, so ε₂ = (0.15)(200) = 30 V. A steady current, however large, has ΔI₁/Δt = 0 and induces nothing, so the earlier reading is 0 V.\n\n30 V while steady mistakes current for rate of change; 0.90 V is M ΔI with the time forgotten; 200 V quotes the rate 200 A/s as a voltage, leaving M out altogether."
         },
         {
-          "type": "short",
-          "q": "A hand-cranked generator turns freely when its output terminals are left open, but becomes noticeably harder to turn the moment a lamp is connected across them. Explain why, using Lenz's law and conservation of energy.",
+          "type": "mcq",
+          "q": "A hand-cranked generator turns freely with its output terminals open, but becomes noticeably harder to turn the moment a lamp is connected across them. Why?",
+          "options": [
+            "The open terminals allow no emf to be induced, so nothing resists the crank until the circuit is closed",
+            "The lamp adds resistance to the circuit, and resistance opposes the motion of the coil",
+            "Current now flows in the coil, and the field exerts a torque on it that opposes the rotation",
+            "Connecting the lamp raises the induced emf, and a larger emf pushes back harder on the coil"
+          ],
+          "answerIndex": 2,
           "concept": "Lenz's law as conservation of energy",
-          "why": "With the terminals open an emf is induced in the rotating coil but no current flows, so the coil carries no current and feels no magnetic force; only friction resists the crank. Connect the lamp and a current flows in the coil, which sits in the machine's field, so there is a force (torque) on it. By Lenz's law that torque opposes the rotation producing it, so the crank fights back.\n\nConservation of energy demands this: the lamp dissipates electrical energy, and the only source is the work done by the hand. If the induced current instead helped the rotation, the generator would speed up on its own while also lighting the lamp, energy from nothing. A correct answer states (1) no current so no force when open, (2) current in a field gives a torque that opposes the motion by Lenz's law, and (3) the extra effort is the mechanical work that becomes the lamp's electrical energy."
+          "why": "With the terminals open an emf is induced but no current flows, so the coil feels no magnetic force and only friction resists. Close the circuit and the coil carries current in the machine's field, so there is a torque, and by Lenz's law it opposes the rotation producing it. Conservation of energy demands this: the lamp's energy has to come from the hand, and the extra effort is exactly that work.\n\nAn emf appears whether or not the circuit is closed; resistance by itself exerts no mechanical force; and the emf depends on the rotation and the flux, not on what is connected."
         }
       ]
     },
@@ -597,28 +653,56 @@
           "why": "Indirect recursion is when a function contains a call to another function which eventually calls the function back. isEven calls isOdd, which calls isEven again, so isEven does reach itself, just through a second function. Recursion covers a function that calls itself indirectly as well as directly.\n\nDirect recursion needs an explicit call to itself, which neither has; 'not recursion' drops the word indirectly from the definition; iteration would be a loop inside one call, with no new frame per step."
         },
         {
-          "type": "short",
-          "q": "Trace `f(3)`. List the calls in the order they are made, state what operation is left pending in each frame, then give the value each call returns and the final result. Show your working.\n\n```c\nint f(int n)\n{\n    if (n == 0) return 0;\n    return f(n - 1) + n * n;\n}\n```",
+          "type": "mcq",
+          "q": "While `f(3)` runs, what is left pending in the frame of f(2) at the moment f(0) returns, and what does f(3) finally return?\n\n```c\nint f(int n)\n{\n    if (n == 0) return 0;\n    return f(n - 1) + n * n;\n}\n```",
+          "options": [
+            "Adding 9; f(3) returns 14",
+            "Adding 4; f(3) returns 15",
+            "Adding 4; f(3) returns 14",
+            "Nothing, f(2) has already returned; f(3) returns 14"
+          ],
+          "answerIndex": 2,
           "concept": "Call stack of a non-tail recursion",
-          "why": "Descending: f(3) needs f(2) and has + 9 pending; f(2) needs f(1) and has + 4 pending; f(1) needs f(0) and has + 1 pending; f(0) is the base case and returns 0 with nothing pending. Four frames are alive at the deepest point. Ascending: f(1) = 0 + 1 = 1; f(2) = 1 + 4 = 5; f(3) = 5 + 9 = 14.\n\nFinal answer: 14. A correct answer lists the four calls f(3), f(2), f(1), f(0) in that order, names the pending addition of n² in each of the first three frames, and gives the returns 0, 1, 5, 14 in ascending order. Giving 9 (only the top frame's term) or 6 (forgetting the squares) is wrong."
+          "why": "Every frame keeps its own n and cannot finish until the call it made returns. The frame of f(2) is waiting to add n × n with n = 2, that is 4. Unwinding from the base case: f(1) = 0 + 1 = 1, f(2) = 1 + 4 = 5, f(3) = 5 + 9 = 14.\n\nAdding 9 is f(3)'s own pending work, not f(2)'s; 15 comes from a base case that returns 1 instead of 0; and no frame has returned yet when f(0) returns, since each one is waiting on the call below it."
         },
         {
-          "type": "short",
-          "q": "`int a[4] = {7, 3, 9, 12};` State the largest legal index and the value of `a[3]`. Then say exactly what happens at compile time and at run time when the statement `a[4] = 0;` is executed, and why. Show your working.",
+          "type": "mcq",
+          "q": "`int a[4] = {7, 3, 9, 12};` What happens when the statement `a[4] = 0;` is reached?",
+          "options": [
+            "It compiles and runs, writing 0 outside the array: undefined behaviour.",
+            "The compiler rejects it, because 4 is not a legal index.",
+            "It runs and is ignored, because C checks the index at run time.",
+            "It compiles, and the array grows to five elements."
+          ],
+          "answerIndex": 0,
           "concept": "Out-of-range index behaviour",
-          "why": "The declaration reserves a block of 4 ints at offsets 0, 1, 2, 3, so the largest legal index is 3 and a[3] is the fourth value, 12. a[4] names the location one past the end of the block. At compile time nothing happens: the statement is valid C and builds without a warning. At run time nothing is checked either, because no length is stored and a[4] is simply computed as start + 4 × width. The 0 is therefore written into memory belonging to something else, which is undefined behaviour: a neighbouring variable may be corrupted, the program may print a wrong answer, or it may crash, and the symptom can differ between runs.\n\nA correct answer states index 3, value 12, that the code compiles, that no run-time check exists, and that the write lands outside the array with unpredictable effect. Saying the compiler rejects it, or that the array grows to 5 elements, is wrong."
+          "why": "The declaration reserves four ints at offsets 0 to 3, so the largest legal index is 3. a[4] is worked out as start + 4 × width, one place past the block. Nothing is checked when the program is built and nothing is checked while it runs, so the 0 lands in memory belonging to something else: a neighbouring variable may be corrupted, or the program may crash, and the symptom can change from run to run.\n\nC stores no length with an array, so it can neither reject the index nor ignore the write, and an array never grows."
         },
         {
-          "type": "short",
-          "q": "This loop is meant to total the six elements of m. List the six accesses it actually makes, say which are out of range and which elements are never visited, then write the corrected loop. Show your working.\n\n```c\nint m[2][3] = {{1, 2, 3}, {4, 5, 6}};\nint i, j, t = 0;\nfor (i = 0; i < 3; i++)\n    for (j = 0; j < 2; j++)\n        t = t + m[i][j];\n```",
+          "type": "mcq",
+          "q": "This loop is meant to total the six elements of m. What actually happens?\n\n```c\nint m[2][3] = {{1, 2, 3}, {4, 5, 6}};\nint i, j, t = 0;\nfor (i = 0; i < 3; i++)\n    for (j = 0; j < 2; j++)\n        t = t + m[i][j];\n```",
+          "options": [
+            "It misses m[2][0] and m[2][1], and no access is out of range.",
+            "It misses m[1][2] only, and reads out of range at m[2][2].",
+            "It visits all six elements and leaves t = 21.",
+            "It misses m[0][2] and m[1][2], and reads out of range at m[2][0] and m[2][1]."
+          ],
+          "answerIndex": 3,
           "concept": "Bounds of a two-dimensional traversal",
-          "why": "m has 2 rows (i = 0, 1) and 3 columns (j = 0, 1, 2), but the loop limits are swapped. It accesses m[0][0], m[0][1], m[1][0], m[1][1], m[2][0], m[2][1]. The last two are out of range: there is no row 2, and nothing reports it, so junk is added to t. The elements m[0][2] and m[1][2] (values 3 and 6) are never visited. The corrected loop is `for (i = 0; i < 2; i++) for (j = 0; j < 3; j++) t = t + m[i][j];`, which gives t = 21.\n\nA correct answer lists the six accesses, names m[2][0] and m[2][1] as out of range, names m[0][2] and m[1][2] as missed, and puts the row count 2 on the outer loop and the column count 3 on the inner one. Also accepted: i <= 1 and j <= 2 as the conditions."
+          "why": "m has 2 rows and 3 columns, but the limits are swapped: i runs 0, 1, 2 and j runs 0, 1. The accesses are m[0][0], m[0][1], m[1][0], m[1][1], m[2][0], m[2][1]. There is no row 2, so the last two are out of range and add junk to t, while m[0][2] and m[1][2], the values 3 and 6, are never visited.\n\nPutting the row count 2 on the outer loop and the column count 3 on the inner one visits all six and gives t = 21."
         },
         {
-          "type": "short",
-          "q": "The recursive factorial declares no local variables and is a single return statement, yet at run time it uses more memory than the loop with its two variables i and result. Explain where that memory goes and what it means to say the computer does more work while the programmer does less.",
+          "type": "mcq",
+          "q": "A recursive factorial declares no local variables and is a single return statement, yet at run time it uses more memory than a loop with two variables. Where does that memory go?",
+          "options": [
+            "The compiler keeps a separate copy of the function's code for each call.",
+            "Each call allocates an array to hold the partial products.",
+            "Each call gets its own stack frame, holding its own n and a pending multiplication.",
+            "The return values are queued in a buffer until the last call finishes."
+          ],
+          "answerIndex": 2,
           "concept": "Iteration versus recursion",
-          "why": "Every call gets its own stack frame holding its own copy of n and a note of where to resume. factorial(n) cannot multiply until factorial(n − 1) returns, so its frame stays alive with a multiplication pending, and so on down: at the deepest point n frames exist and n − 1 multiplications are waiting. The loop keeps everything in one frame and overwrites result each pass, so its memory does not grow with n. The programmer does less because there is no counter to start, no accumulator to seed and no loop condition to get wrong; the computer does more because it creates and tears down n frames and holds them all at once, which is slower and can overflow the stack for large n.\n\nA correct answer mentions one frame per call with its own n, the pending operation kept in each frame, memory growing with n versus constant for the loop, and names what the programmer is spared."
+          "why": "Every call gets a stack frame with its own copy of n and a note of where to resume. factorial(n) cannot multiply until factorial(n − 1) returns, so its frame stays alive with the multiplication pending, and at the deepest point n frames exist at once. The loop keeps everything in one frame and overwrites its accumulator each pass, so its memory does not grow with n.\n\nThe code itself is stored once however many calls are made, and nothing allocates arrays or queues up the returns."
         }
       ]
     },
@@ -735,28 +819,56 @@
           "why": "Integrals add over adjacent intervals: ∫ₐᵇ(f − g)dx = ∫ₐᶜ(f − g)dx + ∫ᶜᵇ(f − g)dx = A₁ + (−A₂) = A₁ − A₂, because on [c, b] the integrand f − g is the negative of g − f. The true area is A₁ + A₂, so the single integral undercounts by 2A₂.\n\nA₁ + A₂ is the area, not the single integral; 0 happens only in the special case A₁ = A₂ (as for sin x and cos x on [0, π/2]); |A₁ − A₂| is the modulus of the single integral, which still is not the area."
         },
         {
-          "type": "short",
-          "q": "Find the total area between the curves y = sin x and y = cos x from x = 0 to x = π. Show your working.",
+          "type": "mcq",
+          "q": "Find the total area between the curves y = sin x and y = cos x from x = 0 to x = π.",
+          "options": [
+            "√2 − 1",
+            "1 + √2",
+            "2√2",
+            "−2"
+          ],
+          "answerIndex": 2,
           "concept": "Area between sine and cosine across a crossing",
-          "why": "Crossing: sin x = cos x gives tan x = 1, so x = π/4 in [0, π]. On [0, π/4] cos x is on top (at x = 0: 1 > 0); on [π/4, π] sin x is on top (at x = π/2: 1 > 0). A₁ = ∫₀^(π/4)(cos x − sin x)dx = [sin x + cos x]₀^(π/4) = (1/√2 + 1/√2) − (0 + 1) = √2 − 1. A₂ = ∫_(π/4)^π(sin x − cos x)dx = [−cos x − sin x]_(π/4)^π = (1 − 0) − (−1/√2 − 1/√2) = 1 + √2. A = A₁ + A₂ = 2√2.\n\nFinal answer: 2√2 square units (also accepted: 4/√2, or 2.83 to two decimal places). The working must find the crossing at π/4, split there with the top function first in each piece, and add. A single integral ∫₀^π(cos x − sin x)dx = 2 − 2√2 is negative and is not accepted; √2 − 1 alone is only the first piece."
+          "why": "They cross where tan x = 1, that is x = π/4. On [0, π/4] cosine is on top; on [π/4, π] sine is. A₁ = ∫₀^(π/4)(cos x − sin x)dx = √2 − 1 and A₂ = ∫_(π/4)^π(sin x − cos x)dx = 1 + √2, so the total area is 2√2 square units.\n\n√2 − 1 and 1 + √2 are single pieces; −2 is the value of one integral ∫₀^π(cos x − sin x)dx taken straight across the crossing, and a negative number cannot be an area."
         },
         {
-          "type": "short",
-          "q": "Find the total area of the region enclosed by the curve y = x³ and the line y = 4x. Show your working.",
+          "type": "mcq",
+          "q": "Find the total area of the region enclosed by the curve y = x³ and the line y = 4x.",
+          "options": [
+            "4",
+            "0",
+            "16",
+            "8"
+          ],
+          "answerIndex": 3,
           "concept": "Area enclosed by a cubic and a line through the origin",
-          "why": "Intersections: x³ = 4x gives x(x² − 4) = 0, so x = −2, 0, 2. The region has two lobes and the curves cross at x = 0, so split there. On [−2, 0] the cubic is on top (at x = −1: −1 > −4); on [0, 2] the line is on top (at x = 1: 4 > 1). A₁ = ∫₋₂⁰(x³ − 4x)dx = [x⁴/4 − 2x²]₋₂⁰ = 0 − (4 − 8) = 4. A₂ = ∫₀²(4x − x³)dx = [2x² − x⁴/4]₀² = 8 − 4 = 4. A = 4 + 4 = 8.\n\nFinal answer: 8 square units. Using the symmetry of the two lobes, A = 2 × 4 = 8, is also accepted, provided one lobe is integrated correctly. A single integral ∫₋₂²(4x − x³)dx = 0 is wrong because the lobes cancel; 4 alone is one lobe."
+          "why": "Intersections: x³ = 4x gives x(x − 2)(x + 2) = 0, so x = −2, 0, 2, and the curves cross at 0, so split there. On [−2, 0] the cubic is on top: ∫₋₂⁰(x³ − 4x)dx = 4. On [0, 2] the line is on top: ∫₀²(4x − x³)dx = 4. Total 8 square units.\n\n4 is one lobe; 0 comes from a single integral across the crossing, where the two lobes cancel; 16 doubles the total instead of the single lobe."
         },
         {
-          "type": "short",
-          "q": "Find the area of the region enclosed by the curve y = x³ − 6x² + 9x and the x-axis. Show your working.",
+          "type": "mcq",
+          "q": "Find the area of the region enclosed by the curve y = x³ − 6x² + 9x and the x-axis.",
+          "options": [
+            "189/4",
+            "27/4",
+            "243/4",
+            "−27/4"
+          ],
+          "answerIndex": 1,
           "concept": "Area between a cubic and the x-axis with a repeated root",
-          "why": "Limits from f(x) = 0: x³ − 6x² + 9x = x(x² − 6x + 9) = x(x − 3)², so the curve meets the axis at x = 0 and x = 3 (a double root, where the curve touches without crossing). The enclosed region is on [0, 3]; test x = 1: 1 − 6 + 9 = 4 > 0, so the curve is above the axis there and no modulus is needed. A = ∫₀³(x³ − 6x² + 9x)dx = [x⁴/4 − 2x³ + 9x²/2]₀³ = 81/4 − 54 + 81/2 = (81 − 216 + 162)/4 = 27/4.\n\nFinal answer: 27/4 square units (also accepted: 6.75). The working must factorise to find the roots 0 and 3, include a sign check, and evaluate the bracket at both limits. Splitting at x = 3 changes nothing because the curve does not cross there; −27/4 has a sign error in the evaluation."
+          "why": "Factorise: x³ − 6x² + 9x = x(x − 3)², so the curve meets the axis at x = 0 and at the double root x = 3, where it touches without crossing. Test x = 1: 4 > 0, so the region on [0, 3] is above the axis. A = [x⁴/4 − 2x³ + 9x²/2]₀³ = 81/4 − 54 + 81/2 = 27/4 square units.\n\n189/4 writes ∫9x dx as 9x² without halving; 243/4 drops the −6x² term; −27/4 has a sign error in the evaluation, and an area cannot be negative."
         },
         {
-          "type": "short",
-          "q": "Both y = f(x) and y = g(x) cross the x-axis somewhere inside [a, b], but f(x) ≥ g(x) for every x in [a, b]. Explain whether the integral for the area between the two curves must be split into pieces, and why.",
+          "type": "mcq",
+          "q": "Both y = f(x) and y = g(x) cross the x-axis inside [a, b], but f(x) ≥ g(x) throughout [a, b]. Which expression gives the area between the two curves?",
+          "options": [
+            "∫ₐᵇ(f(x) − g(x))dx, in one piece",
+            "∫ₐᵇ|f(x)|dx + ∫ₐᵇ|g(x)|dx",
+            "The interval split at every root of f and of g, with the pieces added",
+            "∫(f(x) − g(x))dx over only the part of [a, b] where both curves are above the axis"
+          ],
+          "answerIndex": 0,
           "concept": "When a split is needed for two curves",
-          "why": "No split is needed. The height of a vertical strip between the curves is f(x) − g(x), a difference of y-values, and it stays non-negative on the whole of [a, b] because f is on top throughout. Where either curve crosses the x-axis is irrelevant: the axis is not one of the boundaries of the region. So A = ∫ₐᵇ(f(x) − g(x))dx in one piece. Splitting is required only where the two curves cross each other, that is where f(x) = g(x) inside (a, b), because there the integrand changes sign and the pieces would cancel.\n\nA correct answer says one integral of f − g is enough, that the strip height ignores the x-axis, and that the split point for two curves is a solution of f(x) = g(x), not of f(x) = 0 or g(x) = 0."
+          "why": "The height of a vertical strip between the curves is f(x) − g(x), a difference of y-values, and it stays non-negative across the whole interval because f is on top throughout. Where either curve meets the x-axis is irrelevant, since the axis is not a boundary of this region, so one integral does it. A split is needed only where f(x) = g(x) inside (a, b), because there the integrand changes sign.\n\nThe second option measures areas against the axis, not between the curves; the third splits at the wrong points; the fourth throws away part of the region."
         }
       ]
     },
@@ -872,28 +984,56 @@
           "why": "ε₀ = NBAω and f = ω/2π. Doubling the rotation rate doubles ω, so the peak emf doubles and the output frequency doubles, one cycle per revolution.\n\n'Frequency unchanged' forgets that each revolution is one cycle; 'both quadruple' squares a linear dependence; 'peak emf quadruples' confuses the emf with the power into a fixed resistor, which does go up four-fold since P ∝ ε₀²."
         },
         {
-          "type": "short",
-          "q": "A 60-turn circular coil, radius 5.0 cm, resistance 3.0 Ω, lies face-on to a uniform field into the page that rises uniformly from zero to 0.90 T in 0.30 s. Calculate the emf and the current, and state whether the current is clockwise or anticlockwise as seen by the reader. Show your working.",
+          "type": "mcq",
+          "q": "A 60-turn circular coil of radius 5.0 cm and resistance 3.0 Ω lies face-on to a uniform field into the page that rises steadily from zero to 0.90 T in 0.30 s. Calculate the emf, the current, and the sense of the current as seen by the reader.",
+          "options": [
+            "1.4 V, 0.47 A, clockwise",
+            "1.4 V, 0.47 A, anticlockwise",
+            "0.024 V, 0.0079 A, anticlockwise",
+            "5.7 V, 1.9 A, anticlockwise"
+          ],
+          "answerIndex": 1,
           "concept": "Faraday's law chained with Ohm's law and Lenz's law",
-          "why": "A = πr² = π(0.050)² = 7.85 × 10⁻³ m². ΔΦ = ΔB × A = (0.90)(7.85 × 10⁻³) = 7.07 × 10⁻³ Wb per turn; N ΔΦ = 60 × 7.07 × 10⁻³ = 0.424 Wb. ε = N ΔΦ/Δt = 0.424/0.30 = 1.41 V. I = ε/R = 1.41/3.0 = 0.47 A. Direction: the into-page flux is increasing, so the induced current must make an out-of-page field inside the loop; by the right-hand grip rule that is an anticlockwise current as seen by the reader.\n\nFinal answer: ε = 1.4 V (accept 1.3 to 1.5), I = 0.47 A (accept 0.45 to 0.49), anticlockwise. A correct answer converts the radius to metres, multiplies by N, divides by the time, applies Ohm's law, and gives anticlockwise with the reason that the induced field opposes the growth of into-page flux. Clockwise is the answer for a decreasing field and is wrong here; 0.024 V forgot N."
+          "why": "A = πr² = π(0.050)² = 7.85 × 10⁻³ m², so ε = N A ΔB/Δt = (60)(7.85 × 10⁻³)(0.90)/0.30 = 1.4 V and I = ε/R = 0.47 A. The into-page flux is growing, so the induced current must make an out-of-page field inside the loop, which by the right-hand grip rule is anticlockwise to the reader.\n\nClockwise is the answer for a falling field; 0.024 V leaves out the 60 turns; 5.7 V uses the diameter as the radius, four times the area."
         },
         {
-          "type": "short",
-          "q": "A 0.50 m rod slides at a steady 8.0 m/s on frictionless rails in a 0.30 T field perpendicular to the circuit; total resistance 0.60 Ω. Calculate the emf, the current and the mechanical power needed to keep the rod moving, and show that it equals the electrical power dissipated. Show your working.",
+          "type": "mcq",
+          "q": "A 0.50 m rod slides at a steady 8.0 m/s on frictionless rails in a 0.30 T field perpendicular to the circuit; the total resistance is 0.60 Ω. Calculate the mechanical power needed to keep the rod moving.",
+          "options": [
+            "0.30 W",
+            "9.6 W",
+            "4.8 W",
+            "2.4 W"
+          ],
+          "answerIndex": 3,
           "concept": "Power audit of a moving rod",
-          "why": "ε = BLv = (0.30)(0.50)(8.0) = 1.2 V. I = ε/R = 1.2/0.60 = 2.0 A. The retarding force is F = BIL = (0.30)(2.0)(0.50) = 0.30 N, so the mechanical power needed is P = Fv = (0.30)(8.0) = 2.4 W. Electrical power dissipated: I²R = (2.0)²(0.60) = 2.4 W, and εI = (1.2)(2.0) = 2.4 W. The two agree: the hand's work is what heats the resistor.\n\nFinal answer: 1.2 V, 2.0 A, 2.4 W mechanical = 2.4 W electrical (accept 2.3 to 2.5 W). A correct answer must compute the force (or use P = εI) and show the two powers equal. 0.30 W is the force quoted as a power; 4.8 W or 9.6 W has an extra factor of v or of I."
+          "why": "ε = BLv = (0.30)(0.50)(8.0) = 1.2 V, I = ε/R = 2.0 A, and the retarding force is F = BIL = (0.30)(2.0)(0.50) = 0.30 N, so P = Fv = 2.4 W. The electrical side agrees: I²R = (4.0)(0.60) = 2.4 W, so the hand's work is what heats the resistor.\n\n0.30 W quotes the force in watts; 9.6 W multiplies the emf by v as though 1.2 V were a force; 4.8 W uses B²Lv/R, with only one factor of L in the force."
         },
         {
-          "type": "short",
-          "q": "An air-cored solenoid has 800 turns, length 0.20 m and area 3.0 cm²; μ₀ = 4π × 10⁻⁷ T·m/A. Calculate (a) its self-inductance, (b) the back-emf when the current rises uniformly from zero to 3.0 A in 15 ms, (c) the energy stored at 3.0 A. Show your working.",
-          "concept": "Solenoid inductance, back-emf and stored energy",
-          "why": "(a) L = μ₀N²A/ℓ = (4π × 10⁻⁷)(800)²(3.0 × 10⁻⁴)/(0.20) = (1.257 × 10⁻⁶)(6.4 × 10⁵)(1.5 × 10⁻³) = 1.21 × 10⁻³ H, about 1.2 mH. (b) ΔI/Δt = 3.0/0.015 = 200 A/s, so |ε| = L ΔI/Δt = (1.21 × 10⁻³)(200) = 0.24 V. (c) U = ½LI² = ½(1.21 × 10⁻³)(3.0)² = 5.4 × 10⁻³ J, about 5.4 mJ.\n\nFinal answer: L = 1.2 mH (accept 1.15 to 1.25 mH), ε = 0.24 V (accept 0.23 to 0.25), U = 5.4 mJ (accept 5.2 to 5.6). A correct answer converts cm² to 3.0 × 10⁻⁴ m², squares N, and uses the rate 200 A/s rather than the current 3.0 A in (b). 1.5 × 10⁻⁶ H used N instead of N²; 0.12 H converted the area with 10⁻²; 3.6 mJ is LI, with the ½ and the square both dropped."
+          "type": "mcq",
+          "q": "An air-cored solenoid has 800 turns, a length of 0.20 m and a cross-sectional area of 3.0 cm²; μ₀ = 4π × 10⁻⁷ T·m/A. Calculate its self-inductance and the back-emf while the current rises uniformly from zero to 3.0 A in 15 ms.",
+          "options": [
+            "1.5 μH, 0.30 mV",
+            "0.12 H, 24 V",
+            "1.2 mH, 0.24 V",
+            "1.2 mH, 3.6 mV"
+          ],
+          "answerIndex": 2,
+          "concept": "Solenoid self-inductance and back-emf",
+          "why": "L = μ₀N²A/ℓ = (4π × 10⁻⁷)(800²)(3.0 × 10⁻⁴)/0.20 = 1.2 × 10⁻³ H. The current rises at ΔI/Δt = 3.0/0.015 = 200 A/s, so |ε| = L ΔI/Δt = (1.2 × 10⁻³)(200) = 0.24 V.\n\n1.5 μH uses N instead of N²; 0.12 H converts 3.0 cm² as 3.0 × 10⁻² m² instead of 3.0 × 10⁻⁴ m²; 3.6 mV multiplies L by the current 3.0 A rather than by the rate 200 A/s."
         },
         {
-          "type": "short",
-          "q": "A transformer is connected by mistake to a 12 V d.c. supply instead of 12 V a.c. Explain why the secondary gives no steady output, and why the primary winding is likely to overheat.",
+          "type": "mcq",
+          "q": "A transformer is connected by mistake to a 12 V d.c. supply instead of a 12 V a.c. supply. What happens?",
+          "options": [
+            "The secondary reads zero once the switch-on transient has passed, and the primary overheats",
+            "The secondary reads 12 V d.c., and the primary behaves normally",
+            "The secondary reads zero, and the primary draws no current at all",
+            "The secondary reads 12 V times the turns ratio, and the core saturates"
+          ],
+          "answerIndex": 0,
           "concept": "Why a transformer needs alternating current",
-          "why": "The secondary emf is ε = −N_s dΦ/dt: it needs a changing flux in the core. A steady direct current gives a steady core flux, so after the brief switch-on transient dΦ/dt = 0 and the secondary voltage is zero. A d.c. current still makes a perfectly good field; it simply makes a constant one, and constant flux induces nothing.\n\nThe primary overheats because on a.c. the current is limited mainly by the back-emf L dI/dt of the winding; on d.c. there is no changing current and hence no back-emf, so the current is limited only by the winding's small resistance, I = V/R, which is far larger than the design current and dissipates I²R as heat. A correct answer says (1) no changing flux so no induced emf, and (2) no back-emf so a large resistive current in the primary."
+          "why": "The secondary emf is ε = −N_s dΦ/dt, and a steady current makes a steady core flux, so once the switch-on transient has passed dΦ/dt = 0 and the secondary gives nothing. On a.c. the primary current is limited mainly by the back-emf L dI/dt of the winding; with d.c. there is no back-emf, so the current is set by the winding's small resistance alone, I = V/R, and the I²R heating is far above the design value.\n\nThe secondary cannot deliver any steady voltage, and the primary certainly does draw current, far too much of it."
         }
       ]
     },
@@ -1009,28 +1149,56 @@
           "why": "Without a base case, fact(5) calls fact(4), fact(3), ... and keeps going past 0 into negatives. Each call is a new stack frame with a pending multiplication, so memory grows by one frame per call until the stack space is exhausted and the program is killed: a stack overflow. It fails on space, and quickly.\n\nAn infinite loop runs in constant memory and would hang, not crash; n is getting smaller, not larger, so int overflow is not the cause; the code is valid C and compiles without complaint."
         },
         {
-          "type": "short",
-          "q": "Write a recursive C function `int pw(int b, int e)` that returns b raised to the power e for e >= 0. State the base case and its value and the recursive case, then trace `pw(3, 4)` showing what is pending in each frame. Show your working.",
-          "concept": "Writing a recursive power function",
-          "why": "Base case: e == 0 returns 1, since anything to the power 0 is 1. Recursive case: b × pw(b, e − 1), a smaller version of the same problem with one multiplication pending.\n\n```c\nint pw(int b, int e)\n{\n    if (e == 0) return 1;\n    return b * pw(b, e - 1);\n}\n```\n\nTrace: pw(3, 4) waits for 3 × pw(3, 3); pw(3, 3) waits for 3 × pw(3, 2); pw(3, 2) waits for 3 × pw(3, 1); pw(3, 1) waits for 3 × pw(3, 0); pw(3, 0) returns 1. Unwinding: 3, 9, 27, 81. Final answer: pw(3, 4) = 81.\n\nA correct answer has a base case at e == 0 returning 1 with no recursive call, a recursive call with e − 1, the multiplication by b, and the value 81. A base case of e == 1 returning b is also accepted if the trace is consistent with it. A base case returning 0, or a call that passes e unchanged, is wrong."
+          "type": "mcq",
+          "q": "What does `pw(3, 4)` return?\n\n```c\nint pw(int b, int e)\n{\n    if (e == 0) return 1;\n    return b * pw(b, e - 1);\n}\n```",
+          "options": [
+            "27",
+            "81",
+            "12",
+            "0"
+          ],
+          "answerIndex": 1,
+          "concept": "Evaluating a recursive power function",
+          "why": "The calls run down to the base case and the multiplications happen on the way back up: pw(3, 0) = 1, pw(3, 1) = 3, pw(3, 2) = 9, pw(3, 3) = 27 and pw(3, 4) = 81.\n\n27 stops one call early and computes b to the power e − 1; 12 adds b each time instead of multiplying, 3 × 4; 0 comes from a base case that returns 0, which would drag every product down to zero."
         },
         {
-          "type": "short",
-          "q": "This is meant to print the elements of a in reverse order. State what is actually printed, which access is out of range, which element is never printed, and write the corrected loop. Show your working.\n\n```c\nint a[4] = {2, 4, 6, 8};\nint i;\nfor (i = 4; i > 0; i--)\n    printf(\"%d \", a[i]);\n```",
+          "type": "mcq",
+          "q": "`int a[4] = {2, 4, 6, 8};` Which loop prints `8 6 4 2`?",
+          "options": [
+            "`for (i = 4; i > 0; i--) printf(\"%d \", a[i]);`",
+            "`for (i = 3; i > 0; i--) printf(\"%d \", a[i]);`",
+            "`for (i = 3; i >= 0; i--) printf(\"%d \", a[i]);`",
+            "`for (i = 4; i >= 0; i--) printf(\"%d \", a[i]);`"
+          ],
+          "answerIndex": 2,
           "concept": "Reverse traversal bounds",
-          "why": "The legal indices are 0 to 3, but the loop visits i = 4, 3, 2, 1. The first access, a[4], is one past the end: it compiles and runs, and prints whatever junk is stored there. Then a[3], a[2], a[1] print 8 6 4. The loop stops when i reaches 0, so a[0] (the value 2) is never printed. Output: junk 8 6 4. The corrected loop is `for (i = 3; i >= 0; i--) printf(\"%d \", a[i]);`, which prints 8 6 4 2.\n\nA correct answer says a[4] is out of range and prints an unpredictable value, that a[0] is missed, and starts the loop at 3 and continues while i >= 0. Starting at 3 with i > −1 is also accepted."
+          "why": "The legal indices are 0 to 3, so a reverse walk starts at 3 and must still include 0: `i = 3; i >= 0; i--` prints a[3], a[2], a[1], a[0], that is 8 6 4 2.\n\nStarting at 4 reads one place past the end and prints a junk value first; stopping at `i > 0` never reaches a[0] and loses the 2; the last option makes both mistakes at once."
         },
         {
-          "type": "short",
-          "q": "Rewrite `s` as an iterative function using a loop that returns the same value for every n >= 0, then state the value of `s(5)` for both versions. Show your working.\n\n```c\nint s(int n)\n{\n    if (n == 0) return 0;\n    return s(n - 1) + n;\n}\n```",
+          "type": "mcq",
+          "q": "Which loop returns the same value as `s` for every n >= 0, and what is s(5)?\n\n```c\nint s(int n)\n{\n    if (n == 0) return 0;\n    return s(n - 1) + n;\n}\n```",
+          "options": [
+            "`total = 0; for (i = 1; i < n; i++) total = total + i;` and s(5) = 10",
+            "`total = 1; for (i = 1; i <= n; i++) total = total + i;` and s(5) = 16",
+            "`total = 0; for (i = 1; i <= n; i++) total = total * i;` and s(5) = 0",
+            "`total = 0; for (i = 1; i <= n; i++) total = total + i;` and s(5) = 15"
+          ],
+          "answerIndex": 3,
           "concept": "Rewriting recursion as a loop",
-          "why": "The recursion adds n, then n − 1, down to 1, on top of the base value 0. A loop does the same with an accumulator: start at 0 and add each i from 1 to n.\n\n```c\nint sIter(int n)\n{\n    int i, total = 0;\n    for (i = 1; i <= n; i++)\n        total = total + i;\n    return total;\n}\n```\n\ns(5) = 5 + 4 + 3 + 2 + 1 + 0 = 15, and the loop gives 1 + 2 + 3 + 4 + 5 = 15. Final answer: 15 for both.\n\nA correct answer has an accumulator initialised to 0, a loop that visits 1 to n inclusive (i <= n, or 0 to n, or n down to 1), adds i each pass, returns the accumulator, and gives 15. A loop with i < n gives 10 and is wrong."
+          "why": "The recursion adds n, then n − 1, down to 1, on top of the base value 0, so the loop needs an accumulator starting at 0 that adds every i from 1 to n inclusive. s(5) = 5 + 4 + 3 + 2 + 1 + 0 = 15, and the loop gives 1 + 2 + 3 + 4 + 5 = 15.\n\n`i < n` stops at 4 and gives 10; starting the accumulator at 1 gives 16; multiplying into an accumulator that starts at 0 gives 0."
         },
         {
-          "type": "short",
-          "q": "Every recursive function needs two components, plus one further condition on how they relate. Name all three, then apply them to this listing: say which are present, which fails, and what happens when `pw(2, 3)` is called.\n\n```c\nint pw(int b, int e)\n{\n    if (e == 0) return 1;\n    return b * pw(b, e);\n}\n```",
+          "type": "mcq",
+          "q": "A recursive function needs a base case and a recursive case. What is the further condition on how those two relate?",
+          "options": [
+            "The base case must be written above the recursive case.",
+            "The recursive call must be the last thing the function does.",
+            "Each recursive call must move its argument towards the base case.",
+            "The recursive case must return the same value as the base case."
+          ],
+          "answerIndex": 2,
           "concept": "Components of a recursive function",
-          "why": "The two components are a base case, which answers the smallest input outright with no recursive call, and a recursive case, which calls the function on a smaller version of the same problem and combines the result. The further condition is progress: every recursive call must move its argument towards the base case. Here the base case (e == 0 returns 1) is present and the recursive case has the right combining work, b × ..., but the call passes e unchanged, so no progress is made. pw(2, 3) calls pw(2, 3) again, forever, each call adding a frame with a multiplication pending, until the stack overflows and the program crashes. The fix is pw(b, e − 1).\n\nA correct answer names base case, recursive case and progress towards the base case, identifies the unchanged e as the failure, and says the result is infinite recursion ending in a stack overflow, not a wrong number."
+          "why": "A base case answers the smallest input outright and a recursive case calls the function on a smaller version of the same problem, but having both is not enough: the argument must actually approach the base case or the calls never reach it. `return b * pw(b, e);` has both cases and still recurses for ever, because e never falls, and the stack overflows.\n\nThe order of the two cases in the source does not matter; a recursive call need not be last, that only decides whether the recursion is tail recursive; and the two cases return different values by design."
         }
       ],
       "slot": "fast"

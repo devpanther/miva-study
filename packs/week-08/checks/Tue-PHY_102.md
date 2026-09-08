@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Magnetic dipoles, as concepts.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A flat coil of 120 turns, each of area 25 cm², carries 0.60 A. Calculate the magnitude of its magnetic dipole moment.
 A. 1800 A·m²
@@ -51,13 +51,29 @@ B. Normal to the loop antiparallel to B
 C. Plane of the loop parallel to B
 D. Plane of the loop perpendicular to B
 
-**9. (show your working)** A bar magnet of moment 0.60 A·m² is in a uniform field of 0.25 T. Calculate the torque and the potential energy when the angle between μ and B is 0°, 90° and 180°, and state which of the zero-torque orientations is stable. Show your working.
+**9.** A bar magnet of moment 0.60 A·m² sits in a uniform field of 0.25 T with its moment antiparallel to the field, so θ = 180°. Calculate the torque and the potential energy, and say whether the orientation is stable.
+A. τ = 0, U = −0.15 J, stable
+B. τ = 0.15 N·m, U = 0, unstable
+C. τ = 0, U = +0.15 J, stable
+D. τ = 0, U = +0.15 J, unstable
 
-**10. (show your working)** A solenoid of 800 turns is wound over a length of 40 cm and carries 1.5 A. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the turns per metre and the field inside with an air core, and then the field with an iron core of relative permeability 400. Show your working.
+**10.** A solenoid of 800 turns is wound over a length of 40 cm and carries 1.5 A. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the field inside it with an air core, and then with an iron core of relative permeability 400.
+A. 1.5 mT and 0.60 T
+B. 3.8 mT and 1.5 T
+C. 3.8 mT and 3.8 mT
+D. 0.038 mT and 15 mT
 
-**11. (show your working)** A rectangular loop with sides a and b carries current I in a uniform field B, and its normal makes angle θ with B. Starting from the force F = BIL on each of the two sides of length a, derive τ = μB sin θ with μ = IA. Show your working.
+**11.** A rectangular loop of sides a and b carries current I in a uniform field B, with the normal to the loop at angle θ to B. The two sides of length a are perpendicular to B and each feels a force BIa. What is the moment of the couple they form?
+A. (BIa)(b sin θ)
+B. (BIa)(b cos θ)
+C. (BIa)(b)
+D. (BIa)(b sin θ)/2
 
-**12. (show your working)** A current loop placed in a uniform magnetic field turns but does not move as a whole. Explain, from the forces on its sides, why the net force is zero, and state what property a field must have to exert a net force on a dipole.
+**12.** A current loop placed in a uniform magnetic field turns but does not move as a whole. Which statement about the forces on its sides is correct?
+A. Every side feels zero force, so both the net force and the torque vanish
+B. Opposite sides feel equal forces in the same direction, which cancels the torque
+C. Opposite sides feel equal and opposite forces on different lines of action, so ΣF = 0 but τ ≠ 0
+D. The forces cancel only when the normal lies along B, and otherwise there is a net force
 
 ---
 
@@ -95,18 +111,18 @@ South is the clockwise (left-hand) answer; radially outward is the pattern of a 
 
 Normal parallel (θ = 0°) and normal antiparallel (θ = 180°) both give sin θ = 0 and zero torque; plane perpendicular to B is the same as normal parallel to B, again zero torque. The common slip is to measure θ from the plane instead of from the normal, which swaps these answers.
 
-**9.** *Torque and energy at the special orientations, and stability.* μB = (0.60)(0.25) = 0.15 J, and every value below is this times sin θ or cos θ. τ = μB sin θ and U = −μB cos θ. At 0°: τ = 0, U = −0.15 J. At 90°: τ = 0.15 N·m (the maximum), U = 0. At 180°: τ = 0, U = +0.15 J. The torque vanishes at both 0° and 180°, but only 0° is stable, because U is a minimum there: a small displacement produces a torque that restores it. At 180° U is a maximum, so any nudge drives the magnet further away; it is unstable.
+**9. D** — *Torque and energy at the special orientations, and stability.* μB = (0.60)(0.25) = 0.15 J. Then τ = μB sin 180° = 0 and U = −μB cos 180° = +0.15 J, which is the maximum of U, so any small displacement produces a torque that drives the magnet further away: the equilibrium is unstable.
 
-Final answers: (0°) τ = 0, U = −0.15 J; (90°) τ = 0.15 N·m, U = 0; (180°) τ = 0, U = +0.15 J; stable at 0°. Accept values within 0.005. Signs matter: U = +0.15 J at 0° means the minus sign in U = −μB cos θ was dropped and is wrong.
+U = −0.15 J with 'stable' is the θ = 0° answer, where U is a minimum; τ = 0.15 N·m with U = 0 belongs to θ = 90°; and calling zero torque 'stable' confuses equilibrium with stability.
 
-**10.** *Field inside a solenoid, air-cored and with a core.* n = N/L = 800/0.40 = 2000 turns per metre (the length must be in metres). Air core: B = μ₀nI = (4π × 10⁻⁷)(2000)(1.5) = 3.77 × 10⁻³ T = 3.8 mT. With the core the field is multiplied by μᵣ: B = μᵣμ₀nI = 400 × 3.77 × 10⁻³ = 1.51 T.
+**10. B** — *Field inside a solenoid, air-cored and with a core.* n = N/L = 800/0.40 = 2000 turns per metre, with the length in metres. Air core: B = μ₀nI = (4π × 10⁻⁷)(2000)(1.5) = 3.8 × 10⁻³ T. The core multiplies this by μᵣ: B = 400 × 3.77 × 10⁻³ = 1.5 T.
 
-Final answers: n = 2000 m⁻¹, B_air = 3.8 mT (accept 3.7 to 3.8 mT), B_iron = 1.5 T (accept 1.48 to 1.52 T). Using N = 800 in place of n gives 1.5 mT and is wrong; leaving the length as 40 gives n = 20 and is wrong by a factor of 100.
+1.5 mT and 0.60 T put N = 800 into the formula in place of n; 3.8 mT twice forgets that μᵣ multiplies the field; 0.038 mT and 15 mT leave the length as 40, making n a hundred times too small.
 
-**11.** *Deriving the torque on a current loop from the forces on its sides.* The two sides of length a carry current in opposite directions and are perpendicular to B, so each feels a force of magnitude F = BIa, the two forces being equal and opposite. They act along lines separated by the perpendicular distance b sin θ, where θ is the angle between the normal to the loop and B. A pair of equal and opposite forces with separation d produces a couple of moment Fd, so τ = (BIa)(b sin θ) = I(ab)B sin θ = IAB sin θ = μB sin θ, with μ = IA.
+**11. A** — *Deriving the torque on a current loop from the forces on its sides.* The two forces are equal and opposite, so they form a couple, and the moment of a couple is the force times the perpendicular distance between the lines of action. With θ measured from the normal that distance is b sin θ, giving τ = (BIa)(b sin θ) = I(ab)B sin θ = μB sin θ with μ = IA.
 
-A correct answer must state the force on each side (BIa), that they are equal and opposite so the net force is zero, identify the lever arm as b sin θ measured from the normal, and multiply to reach μB sin θ. Using b cos θ for the arm, which happens when θ is measured from the plane of the loop, is wrong.
+b cos θ measures the angle from the plane of the loop instead of from the normal; b alone is the separation only at θ = 90°; halving takes the moment of one force about the centre and forgets the other.
 
-**12.** *Torque without net force in a uniform field.* In a uniform field each pair of opposite sides of the loop carries the same current in opposite directions through the same B, so the two forces F = IL × B on them are equal in magnitude and opposite in direction. Every such pair sums to zero, so the net force on the whole loop is zero. The forces do not act along the same line, however, so they form a couple and produce a torque that turns the loop towards alignment. To get a net force the field must be non-uniform: then the forces on opposite sides differ in size and no longer cancel, and the dipole is pulled towards the region of stronger field, which is what happens when a magnet attracts a nail.
+**12. C** — *Torque without net force in a uniform field.* Opposite sides carry current in opposite directions through the same B, so their forces I L × B are equal and opposite and every pair sums to zero. The pair does not act along one line, so it forms a couple and still turns the loop. A net force needs a non-uniform field, where the forces on the two sides differ in size, which is how a magnet pulls a nail.
 
-A correct answer says the opposite-side forces are equal and opposite (so ΣF = 0) but offset (so τ ≠ 0), and that a net force requires a field that varies from place to place.
+The sides do feel forces, so zero force everywhere is wrong; forces in the same direction would give a net force and no torque; and the cancellation holds at every orientation, not only when the normal lies along B.

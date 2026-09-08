@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *Applying the Software Testing Methods deck to real code.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Name the functional testing method for each: (i) test data is fed into one function to check each of its execution paths; (ii) after every part is integrated, the whole app is checked against its technical and functional requirements; (iii) the finished app is checked against the expected requirements, including spelling errors and bugs that crash it.
 A. (i) unit, (ii) integration, (iii) system
@@ -76,9 +76,13 @@ B. Whether a tester or a developer runs it
 C. Whether it is a functional or a non-functional test
 D. Whether the internal structure of the item is known to the tester
 
-**9. (show your working)** quantity is specified as valid from 1 to 99 inclusive. The implementation reads `if qty >= 1 and qty < 99`. List the six boundary values that boundary value analysis tests for this range, state what the implementation returns for each, and name the value that exposes the fault. Show your working.
+**9.** A quantity is valid from 1 to 99 inclusive, but the implementation reads `if qty >= 1 and qty < 99`. Boundary value analysis tests 0, 1, 2, 98, 99 and 100. Which of those six does the implementation get wrong?
+A. 0 and 100
+B. 1 and 99
+C. 99 only
+D. 100 only
 
-**10. (show your working)** total([5, 8, 2]) returns 10 where 15 is expected. Set a breakpoint on the line `t = t + prices[i]`, and give the value of i and of t after each time it runs. Say where the state first goes wrong and name the defect. Show your working.
+**10.** total([5, 8, 2]) returns 10 where 15 is expected. A watch is set on the line `t = t + prices[i]`. What does it show, and where does the state first go wrong?
 
 ```python
 def total(prices):
@@ -87,10 +91,22 @@ def total(prices):
         t = t + prices[i]
     return t
 ```
+A. (i, t) = (1, 8) then (2, 10); wrong from the first pass, because index 0 is never added
+B. (i, t) = (0, 5), (1, 13), (2, 15); nothing is wrong with the loop
+C. (i, t) = (1, 8) then (2, 10); wrong only at the last pass, because the loop ends too early
+D. (i, t) = (1, 5) then (2, 13); wrong from the first pass, because t starts at 5
 
-**11. (show your working)** Four reports on a banking app: (a) balances are correct but each page takes 30 seconds when 2,000 customers are logged in; (b) customers watched using the app cannot find the transfer button; (c) a logged-in customer can open another customer's statement by editing the address bar; (d) the function that adds two amounts returns 30 for 10 + 25 where 35 is expected. Name the testing method for each and say which reports are functional failures. Show your working.
+**11.** Four reports on a banking app: (a) balances are right but a page takes 30 seconds when 2,000 customers are logged in; (b) customers who are watched using the app cannot find the transfer button; (c) a logged-in customer opens another customer's statement by editing the address bar; (d) the function that adds two amounts returns 30 for 10 + 25. Which testing method finds each?
+A. (a) system, (b) usability, (c) security, (d) unit
+B. (a) performance, (b) acceptance, (c) security, (d) unit
+C. (a) performance, (b) usability, (c) security, (d) unit
+D. (a) performance, (b) usability, (c) compatibility, (d) integration
 
-**12. (show your working)** Every function in a payment program has passed its unit tests, and the developer reports that the program is therefore free of defects. Explain why that conclusion does not follow: name the stated limitation of unit testing, and say what integration testing and system testing check that unit tests cannot.
+**12.** Every function in a payment program has passed its unit tests, and the developer concludes that the program is free of defects. Which limitation of unit testing breaks that conclusion?
+A. Unit tests check the user interface rather than the code.
+B. Unit tests are written by developers, so they are never impartial.
+C. Unit tests run before the code is compiled, so they see an older version.
+D. Not all execution paths can be tested, and the amount and type of test data is limited.
 
 ---
 
@@ -128,18 +144,18 @@ Moving n = 0 inside the loop resets the accumulator and gives 1 for any list; n 
 
 Either kind can be manual or automated; a developer usually does white box testing but that is a consequence, not the definition; black box tests are usually functional but can be non-functional, so functional versus non-functional does not decide it.
 
-**9.** *Boundary value analysis exposing a fault.* Boundary value analysis tests the values just below, at and just above each edge: 0, 1, 2 at the lower edge and 98, 99, 100 at the upper edge. The implementation: 0 invalid (correct), 1 valid (correct), 2 valid (correct), 98 valid (correct), 99 invalid, 100 invalid (correct). The specification says 99 is valid, so qty = 99 exposes the fault: qty < 99 should be qty <= 99.
+**9. C** — *Boundary value analysis exposing a fault.* Boundary value analysis tests just below, at and just above each edge. The implementation calls 0 invalid, 1 valid, 2 valid, 98 valid, 99 invalid and 100 invalid. The specification makes 99 valid, so 99 is the single value where the two disagree, and the fix is `qty <= 99`.
 
-Final answer: boundary values 0, 1, 2, 98, 99, 100; the failing value is 99. A correct answer lists all six, gives the implementation's verdict on each, and identifies 99 with the operator fix. Testing only 1 and 99 is accepted if 99 is found, but the full six is expected.
+0 and 100 lie outside the range and are correctly rejected; 1 is the lower edge and is correctly accepted; and rejecting 100 is right, not a fault.
 
-**10.** *Watching a variable to locate the defect.* range(1, 3) gives i = 1, 2. Watch: after the first pass i = 1, t = 0 + 8 = 8; after the second pass i = 2, t = 8 + 2 = 10; the loop ends and 10 is returned. The state is wrong from the very first pass: t should be 5 after adding prices[0], but the loop started at index 1 and prices[0] = 5 is never added. The defect is an off-by-one in the loop range: range(1, ...) should be range(0, ...) or range(len(prices)).
+**10. A** — *Watching a variable to locate the defect.* range(1, 3) gives i = 1 then 2, so the watch shows t = 0 + 8 = 8 and then t = 8 + 2 = 10. The state is already wrong on the first pass: t should be 5 there, from prices[0], and that element is never added at all. The defect is the off-by-one start, `range(1, ...)` where `range(len(prices))` was meant.
 
-Final answer: (i, t) = (1, 8), (2, 10); first wrong at the first pass; defect: off-by-one, the loop skips index 0. Also accepted: describing the fix as `for p in prices`. Naming the defect as a wrong accumulator start or integer division is wrong.
+The second option is the corrected loop's trace; the third blames the end of the loop, which is right; the fourth blames the accumulator's starting value, which is 0 and correct.
 
-**11.** *Classifying failures by testing method.* (a) Performance testing: correct output but poor behaviour under load, which is a non-functional matter of network delays, database and client-side processing under different load conditions. (b) Usability testing: an issue discovered with the help of users who are observed while using the software. (c) Security testing: a confidentiality flaw, one customer reading another's data. (d) Unit testing: a single function does not perform as expected, which is a functional failure.
+**11. C** — *Classifying failures by testing method.* Correct output but slow under load is performance testing; a fault found by observing real users at work is usability testing; one customer reading another's data is a confidentiality flaw, so security testing; and a single function returning the wrong value is unit testing, the only functional failure of the four.
 
-A correct answer names performance, usability, security and unit, and says only (d) is functional, because the other three concern how well or how safely the app works rather than whether it does the right thing. Calling (a) system testing, or (d) acceptance testing, is not accepted.
+System testing checks a whole build against its requirements rather than its behaviour under load; acceptance testing is the customer's final check, not an observed-user study; compatibility testing concerns different devices and browsers; and (d) is one function, not two parts being joined.
 
-**12.** *Limits of unit testing.* Unit testing uses test data to check the execution paths in a function, and its stated limitation is that it is practically impossible to test all the execution paths, and the number and type of test data that can be used are limited. So a passing unit suite shows only that the paths exercised by the chosen data behaved; other paths and other data are untested. Integration testing checks how well the different parts work together, which no test of one part in isolation can show, such as a correct function being handed the wrong argument by its caller. System testing checks the system as a whole after all parts are integrated against the technical and functional requirements, which is the only level at which 'the program works' can be claimed.
+**12. D** — *Limits of unit testing.* Unit testing feeds test data through a function's execution paths, and it is practically impossible to cover them all with the limited data available, so a passing suite shows only that the paths the data exercised behaved. It also says nothing about the parts working together: integration testing checks that, and system testing checks the whole build against the technical and functional requirements.
 
-A correct answer states the limitation in terms of untested paths and limited test data, and gives the distinct purpose of integration and of system testing.
+Unit tests do read the code, they run after compilation, and their authorship is not the limitation at issue.

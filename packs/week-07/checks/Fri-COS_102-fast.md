@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *Applied work on this week's material.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** ```c
 int sum = 90, count = 4;
@@ -69,13 +69,29 @@ B. class
 C. union
 D. array
 
-**9. (show your working)** Write a `struct Book` with members for a title (up to 40 characters), an author (up to 40 characters), the number of copies (a whole number) and the price (a decimal). Then define a variable `b` of that type and write two statements that set copies to 3 and price to 12.5 using the dot syntax.
+**9.** Which fragment declares a `struct Book` with a title and an author of up to 40 characters, a whole-number copy count and a decimal price, then sets the copies of a variable `b` to 3?
+A. `struct Book { char title[41]; char author[41]; int copies; float price; }; struct Book b; b.copies = 3;`
+B. `struct Book { char title[41]; char author[41]; int copies; float price; } struct Book b; b.copies = 3;`
+C. `struct Book { char title[41]; char author[41]; float copies; int price; }; struct Book b; b.copies = 3;`
+D. `struct Book { char title[41]; char author[41]; int copies; float price; }; struct Book b; Book.copies = 3;`
 
-**10. (show your working)** Write a class `Account` whose balance cannot be set directly from outside it: a private `balance`, a public `deposit(amount)` that adds to it, and a public `get_balance()` that returns it. Then say what happens to the line `a.balance = 1000;` written outside the class for an Account `a`.
+**10.** A class `Account` has a private `balance` and public `deposit(amount)` and `get_balance()`. For an Account `a`, what happens to the line `a.balance = 1000;` written outside the class?
+A. It compiles and sets balance to 1000.
+B. The compiler rejects it, because balance is private.
+C. It compiles and calls deposit(1000) instead.
+D. It compiles, but get_balance() still returns the old balance.
 
-**11. (show your working)** A program must find the average of the first five multiples of 9. List the variables the problem needs, write a C definition for each (type then name, with its starting value where there is one), and write the one statement that computes the average so that the decimal part is not lost. State the value printed with `%.1f`.
+**11.** A program must print the average of the first five multiples of 9. Which fragment prints the correct value?
+A. `int sum = 0+9+18+27+36; printf("%.1f", (float) sum / 5);`
+B. `int sum = 9+18+27+36+45; printf("%.1f", (float) sum / 4);`
+C. `int sum = 9+18+27+36+45; printf("%.1f", (float) sum / 5);`
+D. `int sum = 9*5; printf("%.1f", (float) sum / 5);`
 
-**12. (show your working)** A `struct Dog` and a `union Dog` are both written with the same three members `char name[20]`, `char breed[20]` and `char colour[20]`. Explain, in terms of where the members sit in memory, why setting `breed` destroys `name` in one of them and not the other, and what it means that a union represents only one member at a time.
+**12.** A `struct Dog` and a `union Dog` are both written with the members `char name[20]`, `char breed[20]` and `char colour[20]`. Which statement about where those members sit in memory is correct?
+A. Both give each member its own 20-byte block, but the union hides two of them.
+B. The struct starts all three at the same address; the union stores them one after another.
+C. The union gives each member its own block and adds a tag naming the member in use.
+D. The struct gives each member its own 20-byte block; the union starts all three at the same address.
 
 ---
 
@@ -113,42 +129,18 @@ a = 4, b = 4 ignores the + 2; a = 6, b = 6 gives b the outer result as well; a =
 
 A struct gives both members their own storage and lets them hold values at once, which is more than is needed; a class adds methods, which the reading does not need; an array holds several items of the same type.
 
-**9.** *Writing a structure and setting its members.* ```c
-struct Book {
-    char title[41];
-    char author[41];
-    int copies;
-    float price;
-};
-struct Book b;
-b.copies = 3;
-b.price = 12.5;
-```
+**9. A** — *Writing a structure and setting its members.* Each member is written inside the braces as a type then a name: a char array holds a string, `int` a count and `float` a price. The closing brace of a structure needs a semicolon, and a member is reached as variable, dot, member name.
 
-A correct answer uses the `struct` keyword, a char array for each string, `int` for copies, `float` or `double` for price, a semicolon after the closing brace, and the dot syntax `b.copies` and `b.price`. Arrays of size 40 or 41 are both accepted. `float copies` for a count, `b->copies`, `Book.copies`, or a missing semicolon after the closing brace is wrong.
+The second option drops that semicolon, so the compiler reads on into `struct Book b;` as part of the declaration; the third swaps the types of copies and price; the fourth names the type instead of the variable, and a type owns no storage.
 
-**10.** *Encapsulation with public and private.* ```
-class Account {
-private:
-    double balance;
-public:
-    void deposit(double amount) { balance = balance + amount; }
-    double get_balance() { return balance; }
-};
-```
+**10. B** — *Encapsulation with public and private.* A private member may be reached only by the class's own methods, so a line outside the class that names `a.balance` is refused when the program is compiled. The way in is `a.deposit(1000)`, which is public and is the only route to the balance.
 
-`a.balance = 1000;` outside the class is rejected by the compiler, because `balance` is private and only the class's own methods may reach it; the only way in is `a.deposit(1000)`. A correct answer marks the variable private, the two methods public, has deposit add to balance and get_balance return it, and states that direct access from outside is refused (does not compile). Making balance public, or saying the line works, is wrong.
+The other three all assume the line builds: private access is not silently redirected to a method, and it does not run and quietly fail; it never compiles at all.
 
-**11.** *Representing a problem as data.* The problem needs the sum of the multiples (or the multiples themselves), how many there are, and the result:
+**11. C** — *Representing a problem as data.* The first five multiples of 9 are 9, 18, 27, 36 and 45. They sum to 135 and there are five of them, so the average is 135 / 5 = 27.0.
 
-```c
-int sum = 9 + 18 + 27 + 36 + 45;   /* 135 */
-int count = 5;
-float average = (float) sum / count;
-```
+The first option counts 0 as the first multiple and prints 18.0; the second divides by the number of plus signs and prints 33.8; the last takes 9 × 5 as the sum of the multiples and prints 9.0. All four cast before dividing, so the fault is in the data, not the division.
 
-Printed with `%.1f` this gives 27.0. A correct answer defines an int sum (or five int multiples), an int count, a float or double average, and casts one operand to float before the division (`(float) sum / count`, `sum / (float) count` or `sum / 5.0` are all accepted). `float average = sum / count;` happens to give 27.0 here because 135 / 5 is exact, but it loses the decimal part in general and is marked wrong; `(float)(sum / count)` is also wrong.
+**12. D** — *Structure versus union in memory.* In a structure every member has its own storage, so name, breed and colour occupy three separate 20-byte blocks and writing one leaves the others untouched. In a union all members start at the same address and share one 20-byte block, so writing breed overwrites the bytes that held name.
 
-**12.** *Structure versus union in memory.* In the struct each member has its own location: name, breed and colour occupy three separate 20-byte blocks (60 bytes in all), so writing breed leaves name untouched and all three can hold values at once. In the union all members start at the same location: there is one 20-byte block and name, breed and colour are three names for it, so writing breed overwrites the bytes that held name.
-
-'One member at a time' means the union's storage holds whichever member was written last; the others are not preserved, and the union does not record which member is current. A correct answer says the struct members have separate storage, the union members share one starting address, and that this is why the union's earlier member is lost. Saying the union stores all three but hides two of them is wrong.
+A union does not keep the other members hidden away, it does not lay them out one after another, and it stores no tag saying which member is current; the programmer must track that.

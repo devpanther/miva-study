@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *This session takes the same week-1 material and works it as problems.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Sphere X carries −16 nC. It is touched to an identical neutral sphere Y and separated. Y is then touched to an identical neutral sphere Z and separated. What charge does Z carry?
 A. −8.0 nC
@@ -51,13 +51,29 @@ B. Force tripled, field unchanged
 C. Force tripled, field tripled
 D. Force unchanged, field tripled
 
-**9. (show your working)** An electron is placed 2.0 cm from a fixed point charge of +5.0 nC in vacuum. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Calculate the electric field at the electron's position, then the force on the electron, and state the direction of that force. Show your working.
+**9.** An electron is placed 2.0 cm from a fixed point charge of +5.0 nC in vacuum. Take k = 9.0 × 10⁹ N·m²/C² and e = 1.6 × 10⁻¹⁹ C. What is the field at the electron's position, and the force on the electron?
+A. 1.1 × 10⁵ N/C; 1.8 × 10⁻¹⁴ N directed away from the charge
+B. 2.3 × 10³ N/C; 3.6 × 10⁻¹⁶ N directed toward the charge
+C. 1.1 × 10⁵ N/C; 1.8 × 10⁻¹⁴ N directed toward the charge
+D. 11 N/C; 1.8 × 10⁻¹⁸ N directed toward the charge
 
-**10. (show your working)** A +1.0 μC charge is fixed at x = 0 and a +9.0 μC charge at x = 0.40 m. Derive the position on the x-axis between them where the resultant electric field is zero. Show your working.
+**10.** A +1.0 μC charge is fixed at x = 0 and a +9.0 μC charge at x = 0.40 m. At which point between them is the resultant electric field zero?
+A. x = 0.040 m
+B. x = 0.20 m
+C. x = 0.30 m
+D. x = 0.10 m
 
-**11. (show your working)** Identical conducting spheres carrying +10 nC and −2.0 nC are touched together, separated, and placed with their centres 4.0 cm apart. Take k = 9.0 × 10⁹ N·m²/C². Calculate the force between them and state whether it is attractive or repulsive. Show your working.
+**11.** Identical conducting spheres carrying +10 nC and −2.0 nC are touched together, separated, and placed with their centres 4.0 cm apart. Take k = 9.0 × 10⁹ N·m²/C². What is the force between them?
+A. 9.0 × 10⁻⁵ N, repulsive
+B. 1.1 × 10⁻⁴ N, attractive
+C. 2.0 × 10⁻⁴ N, repulsive
+D. 3.6 × 10⁻⁶ N, repulsive
 
-**12. (show your working)** Two identical metal spheres, one carrying +6.0 nC and one neutral, are touched together and separated. A student writes that both now carry +6.0 nC because the charge spreads onto the second sphere. Explain which property of electric charge this breaks and give the correct charges.
+**12.** Two identical metal spheres, one carrying +6.0 nC and one neutral, are touched together and separated. A student says both now carry +6.0 nC, since the charge spreads onto the second sphere. What is wrong, and what are the true charges?
+A. It breaks quantisation of charge; each sphere carries +3.0 nC
+B. Nothing is wrong; each sphere carries +6.0 nC
+C. It breaks conservation of charge; each sphere carries +3.0 nC
+D. It breaks conservation of charge; the first keeps +6.0 nC and the second stays neutral
 
 ---
 
@@ -95,18 +111,18 @@ E₀ treats the distance dependence as 1/r, so the two factors of 3 cancel; 3E�
 
 'Field tripled' confuses E with F; 'force unchanged' forgets that F scales with q; 'field one third' divides the same force by a larger charge, but the force is not the same.
 
-**9.** *Field of a point charge then force on an electron.* E = kQ/r² = (9.0 × 10⁹)(5.0 × 10⁻⁹)/(0.020)² = 45/4.0 × 10⁻⁴ = 1.125 × 10⁵ N/C, pointing away from the +5.0 nC charge. F = eE = (1.6 × 10⁻¹⁹)(1.125 × 10⁵) = 1.8 × 10⁻¹⁴ N. The electron is negative, so the force is opposite to E: toward the +5.0 nC charge. The same result comes from Coulomb's law directly, F = k(5.0 × 10⁻⁹)(1.6 × 10⁻¹⁹)/(0.020)².
+**9. C** — *Field of a point charge then force on an electron.* E = kQ/r² = (9.0 × 10⁹)(5.0 × 10⁻⁹)/(0.020)² = 45/4.0 × 10⁻⁴ = 1.125 × 10⁵ N/C, pointing away from the positive charge. Then F = eE = (1.6 × 10⁻¹⁹)(1.125 × 10⁵) = 1.8 × 10⁻¹⁴ N, and the electron is negative, so the force is opposite to E: toward the +5.0 nC charge.
 
-Final answer: E = 1.1 × 10⁵ N/C (accept 1.1 to 1.13 × 10⁵), F = 1.8 × 10⁻¹⁴ N (accept 1.7 to 1.9 × 10⁻¹⁴), directed toward the positive charge. Saying 'away' gets the sign of the electron wrong; 3.6 × 10⁻¹⁶ N forgets to square r.
+'Away' forgets the electron's sign; 2.3 × 10³ N/C leaves r unsquared; 11 N/C keeps r in centimetres.
 
-**10.** *Locating the point where two fields cancel.* Between two positive charges the fields point in opposite directions, so they cancel where the magnitudes are equal. Let the point be x from the 1.0 μC charge: k(1.0 × 10⁻⁶)/x² = k(9.0 × 10⁻⁶)/(0.40 − x)². Cancel k and take square roots: (0.40 − x)/x = √9 = 3, so 0.40 − x = 3x, 4x = 0.40, x = 0.10 m.
+**10. D** — *Locating the point where two fields cancel.* Between two positive charges the two fields oppose, so they cancel where the magnitudes match: k(1.0 × 10⁻⁶)/x² = k(9.0 × 10⁻⁶)/(0.40 − x)². Cancel k and take square roots: (0.40 − x)/x = √9 = 3, so 0.40 = 4x and x = 0.10 m, that is 0.10 m from the smaller charge.
 
-Final answer: 0.10 m from the +1.0 μC charge (accept 10 cm, or 0.30 m from the +9.0 μC charge). The working must set the two magnitudes equal and take the square root of the charge ratio. x = 0.040 m comes from using the ratio 9 without the root; 0.30 m from the 1.0 μC charge puts the point nearer the larger charge, which cannot be right.
+x = 0.040 m uses the ratio 9 without taking its root; x = 0.30 m puts the null nearer the larger charge; x = 0.20 m is the midpoint, which would only work for equal charges.
 
-**11.** *Charge sharing followed by Coulomb's law.* After contact each sphere carries q′ = (+10 + (−2.0))/2 = +4.0 nC. Then F = kq′²/r² = (9.0 × 10⁹)(4.0 × 10⁻⁹)²/(0.040)² = (9.0 × 10⁹)(1.6 × 10⁻¹⁷)/(1.6 × 10⁻³) = 1.44 × 10⁻⁷/1.6 × 10⁻³ = 9.0 × 10⁻⁵ N. Both spheres are now positive, so the force is repulsive.
+**11. A** — *Charge sharing followed by Coulomb's law.* Identical spheres share the total charge equally, so each ends with q′ = (+10 − 2.0)/2 = +4.0 nC. Then F = kq′²/r² = (9.0 × 10⁹)(4.0 × 10⁻⁹)²/(0.040)² = 1.44 × 10⁻⁷/1.6 × 10⁻³ = 9.0 × 10⁻⁵ N, and both spheres are now positive, so it is repulsive.
 
-Final answer: 9.0 × 10⁻⁵ N, repulsive (accept 8.8 to 9.2 × 10⁻⁵ N). The working must show the shared charge +4.0 nC first. Using the original +10 nC and −2.0 nC gives 1.1 × 10⁻⁴ N attractive and is wrong; 3.6 × 10⁻⁶ N forgets to square r.
+1.1 × 10⁻⁴ N attractive uses the original charges and skips the contact; 2.0 × 10⁻⁴ N averages +10 and +2.0, dropping the minus sign; 3.6 × 10⁻⁶ N forgets to square r.
 
-**12.** *Conservation of charge applied to a contact.* The student's answer makes the total +12 nC where it was +6.0 nC before, so charge would have been created. That breaks conservation of charge: the total charge of an isolated system cannot change. Charge is shared, not copied. Identical spheres split it equally, so each ends with (+6.0 + 0)/2 = +3.0 nC, and the total is still +6.0 nC.
+**12. C** — *Conservation of charge applied to a contact.* The student's answer makes the total +12 nC where it was +6.0 nC, so charge would have been created. Conservation of charge forbids that: the charge is shared, not copied, and identical spheres split it equally, giving (+6.0 + 0)/2 = +3.0 nC each with the total still +6.0 nC.
 
-A correct answer names conservation of charge, points out that the total must stay +6.0 nC, and gives +3.0 nC on each sphere. Naming quantisation (charge comes in multiples of e) or additivity (net charge is the algebraic sum) does not identify the error.
+Quantisation is about charge coming in multiples of e and is not broken here; +6.0 nC each is the student's own error; leaving the second sphere neutral ignores that contact between conductors does share charge.

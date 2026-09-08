@@ -318,28 +318,56 @@
           "why": "Each input has exactly one output, so the rule is a function. 'Real-valued' adds a condition on the outputs: they must be real numbers. K is not, so the function is not real-valued.\n\nA repeated output (3 twice) never disqualifies a function; only an input with two arrows would. K breaks the real-valued condition, not the function condition."
         },
         {
-          "type": "short",
-          "q": "f(x) = 3x + 1 and g(x) = x². Find (f ∘ g)(x), then evaluate (f ∘ g)(2). Show your working.",
+          "type": "mcq",
+          "q": "f(x) = 3x + 1 and g(x) = x². Find (f ∘ g)(x) and the value of (f ∘ g)(2).",
+          "options": [
+            "x² + 3x + 1, and 11",
+            "3x² + 1, and 13",
+            "9x² + 6x + 1, and 49",
+            "3x³ + x², and 28"
+          ],
+          "answerIndex": 1,
           "concept": "Forming a composite function",
-          "why": "f ∘ g = f[g(x)]: drop x² into the x-slot of f, so f[x²] = 3(x²) + 1 = 3x² + 1. Then (f ∘ g)(2) = 3(2)² + 1 = 3(4) + 1 = 13. Equivalently g(2) = 4 first, then f(4) = 13.\n\nA correct answer states (f ∘ g)(x) = 3x² + 1 and the value 13. (3x + 1)² = 9x² + 6x + 1 is g ∘ f, the wrong order, and gives 49 at x = 2; that is not accepted."
+          "why": "f ∘ g means f[g(x)]: drop x² into the x-slot of f, so f[x²] = 3(x²) + 1 = 3x² + 1. Then (f ∘ g)(2) = 3(2)² + 1 = 12 + 1 = 13, which you can also get as g(2) = 4 then f(4) = 13.\n\n9x² + 6x + 1 is g ∘ f, the composition done in the wrong order. 3x³ + x² multiplies the two functions instead of substituting one into the other, and x² + 3x + 1 adds them."
         },
         {
-          "type": "short",
-          "q": "Find the range of f(x) = 4x − 7 by making x the subject. Show your working.",
+          "type": "mcq",
+          "q": "Find the range of f(x) = 4x − 7 by making x the subject.",
+          "options": [
+            "[−7, ∞)",
+            "(−∞, −7]",
+            "[7/4, ∞)",
+            "(−∞, ∞)"
+          ],
+          "answerIndex": 3,
           "concept": "Range of a linear function by making x the subject",
-          "why": "Let y = 4x − 7. Then 4x = y + 7 and x = (y + 7)/4. This gives a real x for every real y (no division by zero, no root of a negative), so every y is an output.\n\nFinal answer: R = (−∞, ∞). Also accepted: all real numbers, ℝ, y ∈ ℝ. The working must show x = (y + 7)/4 and say why every y is attainable. [−7, ∞) or (−∞, −7] mistakes the constant for a bound and is wrong."
+          "why": "Let y = 4x − 7. Then 4x = y + 7 and x = (y + 7)/4. That formula returns a real x for every real y, with no division by zero and no root of a negative, so every y is an output and the range is (−∞, ∞), all of ℝ.\n\n[−7, ∞) and (−∞, −7] mistake the constant term for a bound, and [7/4, ∞) treats the root x = 7/4 of f as if it limited the outputs."
         },
         {
-          "type": "short",
-          "q": "f(x) = 3 − x. Make a table of values for x = 0, 1, 2, 3, list the four points to plot, and say whether y rises or falls as x increases. Show your working.",
+          "type": "mcq",
+          "q": "f(x) = 3 − x. List the points (x, f(x)) for x = 0, 1, 2, 3 and say whether y rises or falls as x increases.",
+          "options": [
+            "(0, 3), (1, 2), (2, 1), (3, 0); y rises",
+            "(0, −3), (1, −2), (2, −1), (3, 0); y rises",
+            "(0, 3), (1, 2), (2, 1), (3, 0); y falls",
+            "(0, 3), (1, 4), (2, 5), (3, 6); y rises"
+          ],
+          "answerIndex": 2,
           "concept": "Tabulating a function for plotting",
-          "why": "Substitute each x: f(0) = 3, f(1) = 2, f(2) = 1, f(3) = 0. Points: (0, 3), (1, 2), (2, 1), (3, 0). The coefficient of x is −1, so y falls by 1 each time x increases by 1.\n\nA correct answer lists the values 3, 2, 1, 0, the four points, and states that y decreases (falls). The table 3, 4, 5, 6 belongs to x + 3 and is wrong."
+          "why": "Substitute each input: f(0) = 3, f(1) = 2, f(2) = 1, f(3) = 0, so the points are (0, 3), (1, 2), (2, 1), (3, 0). The coefficient of x is −1, so y drops by 1 for every 1 that x gains: y falls.\n\nThe values 3, 4, 5, 6 come from x + 3 instead of 3 − x, and −3, −2, −1, 0 come from x − 3. Keeping the right values but saying y rises reads the sign of the gradient backwards."
         },
         {
-          "type": "short",
-          "q": "One relation sends the input 4 to both 2 and −2. Another sends both 2 and −2 to the output 4. Using the definition of a function, explain which one is a function and which is not.",
+          "type": "mcq",
+          "q": "One relation sends the input 4 to both 2 and −2. A second relation sends 2 to 4 and −2 to 4. Which of these is a function?",
+          "options": [
+            "Only the second, because an input may not have two outputs but an output may be repeated",
+            "Only the first, because an output may not come from two different inputs",
+            "Both, because every pair listed is allowed",
+            "Neither, because each one repeats a number"
+          ],
+          "answerIndex": 0,
           "concept": "Definition of a function applied to a relation",
-          "why": "A function assigns exactly one output to each input. The first relation gives the input 4 two different outputs, 2 and −2, so it breaks the 'exactly one' clause and is not a function. The second sends 2 → 4 and −2 → 4: each input still has exactly one output, and a repeated output is allowed (this is what f(x) = x² does).\n\nA correct answer quotes the one-output-per-input condition, says the first relation fails it and the second satisfies it, and notes that repeated outputs do not matter."
+          "why": "A function assigns exactly one output to each input. The first relation gives the single input 4 two outputs, 2 and −2, so it breaks that condition and is not a function. The second gives 2 → 4 and −2 → 4: each input still has exactly one output, and nothing forbids two inputs sharing an output, which is exactly what f(x) = x² does.\n\nThe other options invert the rule (restricting outputs instead of inputs) or treat a repeated output as a fault."
         }
       ]
     },
@@ -455,28 +483,56 @@
           "why": "The positive rod pulls the sphere's free electrons to the near side and leaves the far side positive. Earthing lets electrons flow up from the earth to cancel that positive far side, so the sphere now has extra electrons. Removing the earth wire first traps them; when the rod goes, they spread out. The sphere is negative, opposite to the rod.\n\n'Zero' is what happens if the rod is removed before the earth wire; 'positive' is the sign given by conduction (touching), not induction; the separated near/far pattern is polarisation while the rod is present, not the final state."
         },
         {
-          "type": "short",
-          "q": "A test charge of +2.0 nC placed at a point P feels a force of 6.0 × 10⁻⁵ N directed west. Calculate the electric field at P, magnitude and direction. State what E at P becomes if the test charge is replaced by +6.0 nC. Show your working.",
+          "type": "mcq",
+          "q": "A test charge of +2.0 nC placed at a point P feels a force of 6.0 × 10⁻⁵ N directed west. What is the electric field at P, and what does it become if the test charge is replaced by +6.0 nC?",
+          "options": [
+            "3.0 × 10⁴ N/C west; unchanged at 3.0 × 10⁴ N/C",
+            "3.0 × 10⁴ N/C east; unchanged at 3.0 × 10⁴ N/C",
+            "3.0 × 10⁴ N/C west; rises to 9.0 × 10⁴ N/C",
+            "3.3 × 10⁻⁵ N/C west; unchanged"
+          ],
+          "answerIndex": 0,
           "concept": "Field from the force on a test charge, E = F/q₀",
-          "why": "E = F/q₀ = 6.0 × 10⁻⁵ / 2.0 × 10⁻⁹ = 3.0 × 10⁴ N/C. The test charge is positive, so E points the same way as the force: west. With a +6.0 nC test charge the force triples to 1.8 × 10⁻⁴ N but E = F/q₀ is unchanged at 3.0 × 10⁴ N/C west, because the field is a property of the source charges, not of the test charge.\n\nA correct answer gives 3.0 × 10⁴ N/C (accept 3.0 × 10⁴ N/C or 30 000 N/C, also written N·C⁻¹), states west, and says E is unchanged. Answering 9.0 × 10⁴ N/C for the second part confuses the force with the field and is wrong."
+          "why": "E = F/q₀ = 6.0 × 10⁻⁵ / 2.0 × 10⁻⁹ = 3.0 × 10⁴ N/C, and the test charge is positive, so E points the way the force does: west. Replacing it with +6.0 nC triples the force to 1.8 × 10⁻⁴ N, but E = F/q₀ is still 3.0 × 10⁴ N/C, because the field belongs to the source charges and not to whatever is placed in it.\n\nEast reverses the direction for a positive test charge; 9.0 × 10⁴ N/C makes the field follow the force; 3.3 × 10⁻⁵ N/C divides q₀ by F instead of F by q₀."
         },
         {
-          "type": "short",
-          "q": "Point charges of +3.0 μC and −3.0 μC attract each other with a force of 8.1 N in vacuum. Take k = 9.0 × 10⁹ N·m²/C². Calculate the separation between them. Show your working.",
+          "type": "mcq",
+          "q": "Point charges of +3.0 μC and −3.0 μC attract each other with a force of 8.1 N in vacuum. Take k = 9.0 × 10⁹ N·m²/C². What is the separation between them?",
+          "options": [
+            "0.010 m",
+            "0.10 m",
+            "10 m",
+            "1.0 × 10⁻⁴ m"
+          ],
+          "answerIndex": 1,
           "concept": "Finding the separation from Coulomb's law",
-          "why": "Rearrange F = kq₁q₂/r²: r² = kq₁q₂/F = (9.0 × 10⁹)(3.0 × 10⁻⁶)(3.0 × 10⁻⁶)/8.1 = 8.1 × 10⁻²/8.1 = 1.0 × 10⁻² m². Take the square root: r = 0.10 m.\n\nFinal answer: r = 0.10 m (accept 0.10 m or 10 cm; 0.099 to 0.101 m). The working must show r² = kq₁q₂/F and then the root. Stopping at 0.010 m forgets the square root (writing r instead of r² in the formula lands on the same wrong number), so the root step must be shown."
+          "why": "Rearrange F = kq₁q₂/r² to r² = kq₁q₂/F = (9.0 × 10⁹)(3.0 × 10⁻⁶)(3.0 × 10⁻⁶)/8.1 = 8.1 × 10⁻²/8.1 = 1.0 × 10⁻² m², so r = 0.10 m, or 10 cm.\n\n0.010 m is r² reported as r, the square root step forgotten; 10 m comes from inverting the fraction to r² = F/kq₁q₂; 1.0 × 10⁻⁴ m reads the charges as nanocoulombs."
         },
         {
-          "type": "short",
-          "q": "At a point 5.0 cm from an isolated point charge Q the electric field is 7.2 × 10⁴ N/C, pointing toward Q. Take k = 9.0 × 10⁹ N·m²/C². Calculate Q, including its sign. Show your working.",
+          "type": "mcq",
+          "q": "At a point 5.0 cm from an isolated point charge Q the electric field is 7.2 × 10⁴ N/C, pointing toward Q. Take k = 9.0 × 10⁹ N·m²/C². What is Q?",
+          "options": [
+            "−4.0 × 10⁻⁷ C",
+            "+2.0 × 10⁻⁸ C",
+            "−2.0 × 10⁻⁸ C",
+            "−2.0 × 10⁻⁴ C"
+          ],
+          "answerIndex": 2,
           "concept": "Finding a source charge from its field",
-          "why": "E = kQ/r², so |Q| = Er²/k = (7.2 × 10⁴)(0.050)²/(9.0 × 10⁹) = (7.2 × 10⁴)(2.5 × 10⁻³)/(9.0 × 10⁹) = 180/9.0 × 10⁹ = 2.0 × 10⁻⁸ C. The field points toward Q, and fields point toward negative charges, so Q = −2.0 × 10⁻⁸ C = −20 nC.\n\nFinal answer: Q = −2.0 × 10⁻⁸ C (accept −20 nC; 1.9 to 2.1 × 10⁻⁸ in magnitude). The sign must be negative and the reason (field toward the charge) stated. +2.0 × 10⁻⁸ C is wrong on sign; 4.0 × 10⁻⁷ C forgets to square r; 2.0 × 10⁻⁴ C leaves r in centimetres."
+          "why": "E = k|Q|/r², so |Q| = Er²/k = (7.2 × 10⁴)(0.050)²/(9.0 × 10⁹) = (7.2 × 10⁴)(2.5 × 10⁻³)/(9.0 × 10⁹) = 2.0 × 10⁻⁸ C. The field points toward Q, and field lines run into negative charges, so Q = −2.0 × 10⁻⁸ C, or −20 nC.\n\n−4.0 × 10⁻⁷ C forgets to square r; −2.0 × 10⁻⁴ C leaves r in centimetres; +2.0 × 10⁻⁸ C has the right size but the wrong sign."
         },
         {
-          "type": "short",
-          "q": "A negatively charged rod is brought close to a neutral metal sphere on an insulating stand. The sphere is not earthed. The rod is then taken away. Explain where the charges in the sphere sit while the rod is present, and what the sphere's net charge is at each stage.",
+          "type": "mcq",
+          "q": "A negatively charged rod is held near a neutral metal sphere on an insulating stand. The sphere is never earthed. Which describes the sphere while the rod is near, and after the rod is taken away?",
+          "options": [
+            "Near side negative, far side positive; net charge zero throughout",
+            "Near side positive, far side negative; the sphere is left positive after the rod goes",
+            "The sphere gains a net negative charge while the rod is near, and keeps it",
+            "Near side positive, far side negative; net charge zero throughout, and unpolarised after the rod goes"
+          ],
+          "answerIndex": 3,
           "concept": "Polarisation of a conductor without earthing",
-          "why": "While the rod is present the sphere's free electrons are repelled to the far side, leaving the near side positive: the charge is separated (polarised) but nothing has entered or left, so the net charge is still zero. When the rod is removed the electrons spread back uniformly and the sphere is neutral and unpolarised again.\n\nA correct answer says: electrons move to the far side, near side positive; net charge zero at every stage because no path to earth was provided; the separation vanishes when the rod is removed. Saying the sphere becomes positive or negative confuses this with induction that includes earthing."
+          "why": "The rod is negative, so it repels the sphere's free electrons to the far side and leaves the near side positive. Nothing enters or leaves the sphere, because there is no path to earth, so the net charge stays zero at every stage; once the rod is removed the electrons spread back and the sphere is neutral and unpolarised again.\n\nThe first option moves the electrons toward the rod instead of away; the second and third describe induction with earthing, which this sphere never had."
         }
       ]
     },
@@ -592,28 +648,56 @@
           "why": "Refactoring improves the structure, design or efficiency of a working solution without changing what it does. Changing the pass mark changes which students pass, so the function changes: that is a change of specification, not a refactor.\n\nThe loop, the rename and the deleted dead variable all leave every output exactly as it was, so each of those is a refactor."
         },
         {
-          "type": "short",
-          "q": "Write pseudocode that reads a temperature T and prints HOT if T is above 30, WARM if T is from 20 to 30 inclusive, and COLD otherwise. Show your working.",
+          "type": "mcq",
+          "q": "Which pseudocode prints HOT when T is above 30, WARM when T is from 20 to 30 inclusive, and COLD otherwise?",
+          "options": [
+            "IF T > 20 THEN PRINT WARM; ELSE IF T > 30 THEN PRINT HOT; ELSE PRINT COLD",
+            "IF T > 30 THEN PRINT HOT; ELSE IF T >= 20 THEN PRINT WARM; ELSE PRINT COLD",
+            "IF T > 30 THEN PRINT HOT; ELSE IF T > 20 THEN PRINT WARM; ELSE PRINT COLD",
+            "IF T >= 30 THEN PRINT HOT; ELSE IF T >= 20 THEN PRINT WARM; ELSE PRINT COLD"
+          ],
+          "answerIndex": 1,
           "concept": "Writing pseudocode with a three-way decision",
-          "why": "Model answer:\n\n```\nREAD T\nIF T > 30 THEN\n    PRINT \"HOT\"\nELSE IF T >= 20 THEN\n    PRINT \"WARM\"\nELSE\n    PRINT \"COLD\"\nENDIF\n```\n\nA correct answer must read T, test T > 30 first (or test the ranges in any order that does not overlap), use ≥ 20 rather than > 20 so that 20 counts as WARM, and give every value of T exactly one printed word. Three separate IF tests (T > 30; T ≥ 20 AND T ≤ 30; T < 20) are also accepted. Using T > 20 for WARM is wrong because 20 would then print COLD."
+          "why": "The tests run in order, so T > 30 takes everything above 30 to HOT, and whatever is left meets T >= 20, which catches 20 up to 30 inclusive; the rest is COLD. Check the boundaries: T = 20 gives WARM, T = 30 gives WARM, T = 31 gives HOT.\n\nUsing T > 20 for the second test sends T = 20 to COLD. Using T >= 30 for the first test sends T = 30 to HOT instead of WARM. Testing T > 20 first sends T = 35 to WARM, because the HOT test below it is never reached."
         },
         {
-          "type": "short",
-          "q": "Trace this pseudocode and give the value of total after each iteration, then the printed value. Show your working.\n\n```\ntotal = 1\nFOR i = 1 TO 4\n    total = total * 2 + i\nENDFOR\nPRINT total\n```",
+          "type": "mcq",
+          "q": "What does this print?\n\n```\ntotal = 1\nFOR i = 1 TO 4\n    total = total * 2 + i\nENDFOR\nPRINT total\n```",
+          "options": [
+            "68",
+            "19",
+            "16",
+            "42"
+          ],
+          "answerIndex": 3,
           "concept": "Tracing an accumulator step by step",
-          "why": "Start with total = 1. i = 1: 1 × 2 + 1 = 3. i = 2: 3 × 2 + 2 = 8. i = 3: 8 × 2 + 3 = 19. i = 4: 19 × 2 + 4 = 42. The program prints 42.\n\nA correct answer lists the four values 3, 8, 19, 42 in order and states the printed value 42. A trace that restarts total at 1 each time (giving 3, 4, 5, 6) or that doubles after adding, total = (total + i) × 2 (giving 4, 12, 30, 68), is wrong."
+          "why": "total starts at 1. i = 1: 1 × 2 + 1 = 3. i = 2: 3 × 2 + 2 = 8. i = 3: 8 × 2 + 3 = 19. i = 4: 19 × 2 + 4 = 42. So 42 is printed.\n\n68 adds i before doubling, (total + i) × 2; 19 stops one pass early at i = 3; 16 doubles four times and never adds i."
         },
         {
-          "type": "short",
-          "q": "This pseudocode is meant to read N numbers and print their average, but for N = 3 it never finishes.\n\n```\nREAD N\ncount = 0\ntotal = 0\nWHILE count < N\n    READ x\n    total = total + x\nENDWHILE\nPRINT total / N\n```\n\nSay which line is missing and where it goes, then give what the fixed program prints for N = 3 and inputs 4, 7, 10. Show your working.",
+          "type": "mcq",
+          "q": "This is meant to read N numbers and print their average, but for N = 3 it never finishes.\n\n```\nREAD N\ncount = 0\ntotal = 0\nWHILE count < N\n    READ x\n    total = total + x\nENDWHILE\nPRINT total / N\n```\n\nWhich repair is correct, and what does the repaired program print for N = 3 with inputs 4, 7, 10?",
+          "options": [
+            "Add `count = count + 1` inside the loop body; it prints 7",
+            "Add `count = count + 1` after ENDWHILE; it prints 7",
+            "Add `count = count + 1` inside the loop body; it prints 21",
+            "Add `N = N + 1` inside the loop body; it prints 7"
+          ],
+          "answerIndex": 0,
           "concept": "Spotting the missing loop update",
-          "why": "count is never changed inside the loop, so count < N stays true forever and the loop never ends. The missing line is count = count + 1, placed inside the loop after total = total + x (anywhere inside the body is accepted).\n\nFixed run for N = 3: total = 4, then 11, then 21; count reaches 3 and the loop stops; 21 / 3 = 7 is printed. A correct answer names the missing count update, puts it inside the WHILE body, and gives 7. Putting the update after ENDWHILE does not fix the loop and is wrong."
+          "why": "count never changes inside the loop, so count < N stays true forever. Putting count = count + 1 in the body lets count reach 3 and stop the loop; total is 4 + 7 + 10 = 21 and 21 / 3 = 7 is printed.\n\nAn update placed after ENDWHILE leaves the loop untouched, so it still never ends; 21 forgets the division by N; raising N inside the loop pushes the target further away every pass, so the loop still never ends."
         },
         {
-          "type": "short",
-          "q": "An algorithm's steps must be ordered, unambiguous and complete. For a plan that averages five grades and prints PASS or FAIL, give one example of a step that breaks each of the three properties, and say what goes wrong when that plan is turned into a program.",
+          "type": "mcq",
+          "q": "Three faulty steps appear in a plan that averages five grades and prints PASS or FAIL. (i) \"Compute the average of the five grades\" is placed before \"Read the five grades\". (ii) \"If the average is good enough, print PASS\". (iii) There is a PASS step but no FAIL step. Which required property of an algorithm's steps does each one break, taken in the order (i), (ii), (iii)?",
+          "options": [
+            "Complete, ordered, unambiguous",
+            "Unambiguous, complete, ordered",
+            "Ordered, unambiguous, complete",
+            "Ordered, complete, unambiguous"
+          ],
+          "answerIndex": 2,
           "concept": "Ordered, unambiguous and complete steps",
-          "why": "Ordered: putting \"compute the average\" before \"read the five grades\" uses values the program does not yet have, so it computes with nothing or with leftovers. Unambiguous: \"if the average is good enough, print PASS\" cannot be written as a test, because two programmers would choose two different numbers. Complete: giving a PASS step but no FAIL step leaves a student below the mark with no output at all.\n\nA correct answer gives one concrete broken step for each property (order, ambiguity, missing case) and names the consequence in the program: wrong or missing data, an untranslatable condition, an unhandled case. Any sensible examples are accepted as long as each matches the property it is meant to break."
+          "why": "(i) computes with values that have not been read yet, so the steps are out of order. (ii) says \"good enough\" without a number, so two programmers would write two different tests: it is ambiguous. (iii) leaves a grade below the mark with no output at all, so a case is missing and the plan is not complete.\n\nEvery other ordering pairs the vague condition or the missing FAIL branch with the wrong property; only ordered, unambiguous, complete matches each fault to what it actually breaks."
         }
       ]
     },
@@ -730,28 +814,56 @@
           "why": "The domain is decided by the function as given, before any cancelling: the denominator x − 3 is zero at x = 3, so f(3) is undefined and D = ℝ \\ {3}. Cancelling produces x + 3, which agrees with f everywhere except at that one missing point.\n\nℝ ignores the division by zero; ℝ \\ {−3} excludes a zero of the numerator instead; ℝ \\ {−3, 3} excludes both roots of the numerator, which never restrict a domain."
         },
         {
-          "type": "short",
-          "q": "Find the domain and the range of h(x) = √(x + 6) − 4, showing the inequality at each step. Show your working.",
+          "type": "mcq",
+          "q": "Find the domain and the range of h(x) = √(x + 6) − 4.",
+          "options": [
+            "D = [6, ∞), R = [−4, ∞)",
+            "D = [−6, ∞), R = [0, ∞)",
+            "D = (−6, ∞), R = (−4, ∞)",
+            "D = [−6, ∞), R = [−4, ∞)"
+          ],
+          "answerIndex": 3,
           "concept": "Domain and range of a square root function",
-          "why": "Domain: the quantity under the root cannot be negative, so x + 6 ≥ 0, x ≥ −6, D = [−6, ∞). Range: √(x + 6) ≥ 0, so √(x + 6) − 4 ≥ −4, y ≥ −4, R = [−4, ∞). Subtracting 4 does not reverse the inequality because nothing was multiplied by a negative.\n\nFinal answer: D = [−6, ∞), R = [−4, ∞). Also accepted: x ≥ −6 and y ≥ −4. Both brackets are square because x = −6 is a legal input and h(−6) = −4 is attained. [0, ∞) for the range forgets the −4; [6, ∞) for the domain has the sign wrong."
+          "why": "The quantity under the root cannot be negative, so x + 6 ≥ 0 and x ≥ −6, giving D = [−6, ∞). Since √(x + 6) ≥ 0, subtracting 4 gives h(x) ≥ −4, so R = [−4, ∞); nothing was multiplied by a negative, so no inequality reverses.\n\nBoth brackets are square because x = −6 is a legal input and h(−6) = −4 is actually reached. [6, ∞) has the sign of the boundary wrong, [0, ∞) forgets the −4, and the round brackets wrongly exclude endpoints that are attained."
         },
         {
-          "type": "short",
-          "q": "Find the inverse of f(x) = (3x − 2)/4 using let, switch, isolate, then verify by showing f(f⁻¹(x)) = x. Show your working.",
+          "type": "mcq",
+          "q": "Find the inverse of f(x) = (3x − 2)/4.",
+          "options": [
+            "f⁻¹(x) = (4x + 2)/3",
+            "f⁻¹(x) = (4x − 2)/3",
+            "f⁻¹(x) = 4/(3x − 2)",
+            "f⁻¹(x) = (3x + 2)/4"
+          ],
+          "answerIndex": 0,
           "concept": "Finding and verifying an inverse",
-          "why": "Let y = (3x − 2)/4. Switch: x = (3y − 2)/4. Isolate y: 4x = 3y − 2, 3y = 4x + 2, y = (4x + 2)/3. So f⁻¹(x) = (4x + 2)/3. Verify: f(f⁻¹(x)) = (3·(4x + 2)/3 − 2)/4 = (4x + 2 − 2)/4 = 4x/4 = x.\n\nFinal answer: f⁻¹(x) = (4x + 2)/3; also accepted 4x/3 + 2/3 or (2/3)(2x + 1). A numeric check such as f(2) = 1 and f⁻¹(1) = 2 is accepted in place of the algebraic one. (4x − 2)/3 is a sign slip and 4/(3x − 2) is the reciprocal; both are wrong."
+          "why": "Let y = (3x − 2)/4, switch the letters to get x = (3y − 2)/4, then isolate y: 4x = 3y − 2, 3y = 4x + 2, y = (4x + 2)/3. Checking, f(f⁻¹(x)) = (3·(4x + 2)/3 − 2)/4 = 4x/4 = x, so f⁻¹(x) = (4x + 2)/3 is right.\n\n(4x − 2)/3 loses the sign when the −2 is moved across, 4/(3x − 2) is the reciprocal rather than the inverse, and (3x + 2)/4 never switches x and y at all."
         },
         {
-          "type": "short",
-          "q": "Find the domain of f(x) = √(x − 1)/(x − 4). Show your working.",
+          "type": "mcq",
+          "q": "Find the domain of f(x) = √(x − 1)/(x − 4).",
+          "options": [
+            "[1, ∞)",
+            "ℝ \\ {4}",
+            "[1, 4) ∪ (4, ∞)",
+            "(1, 4) ∪ (4, ∞)"
+          ],
+          "answerIndex": 2,
           "concept": "Domain with a root and a denominator",
-          "why": "Two restrictions, and both must hold. The root needs x − 1 ≥ 0, so x ≥ 1. The denominator needs x − 4 ≠ 0, so x ≠ 4. Combine: x ≥ 1 with x = 4 removed.\n\nFinal answer: D = [1, 4) ∪ (4, ∞). Also accepted: x ≥ 1, x ≠ 4, or [1, ∞) \\ {4}. Giving only [1, ∞) forgets the denominator; giving only ℝ \\ {4} forgets the root; (1, 4) ∪ (4, ∞) wrongly excludes x = 1, where f(1) = 0 is defined."
+          "why": "Two restrictions apply at once. The root needs x − 1 ≥ 0, so x ≥ 1, and the denominator needs x − 4 ≠ 0, so x ≠ 4. Putting them together gives [1, 4) ∪ (4, ∞), also writeable as x ≥ 1 with x ≠ 4.\n\n[1, ∞) forgets the denominator, ℝ \\ {4} forgets the root, and (1, 4) ∪ (4, ∞) wrongly throws out x = 1, where f(1) = 0/(−3) is perfectly defined."
         },
         {
-          "type": "short",
-          "q": "The range of h(x) = 2 − |x − 3| is (−∞, 2]. Explain why the bracket at 2 is square while the bracket at −∞ is round, and state the input x at which y = 2 occurs.",
+          "type": "mcq",
+          "q": "The range of h(x) = 2 − |x − 3| is (−∞, 2]. Why is the bracket at 2 square while the bracket at −∞ is round?",
+          "options": [
+            "A square bracket always marks a maximum and a round bracket always marks a minimum",
+            "y = 2 is attained, at x = 3, while −∞ is not a number and is never attained",
+            "h is defined at x = 2 but is undefined at x = −∞",
+            "y = 2 is never quite reached, while the values run all the way down to −∞"
+          ],
+          "answerIndex": 1,
           "concept": "Square versus round brackets in interval notation",
-          "why": "A square bracket means the endpoint is actually attained; a round bracket means it is not. y = 2 is attained: at x = 3, |x − 3| = 0 and h(3) = 2 − 0 = 2, so 2 belongs to the range and gets a square bracket. −∞ is not a number and is never reached; h(x) only becomes as negative as you like, so the bracket there is round.\n\nA correct answer says 2 is attained (at x = 3), that ∞ is never attained, and states x = 3."
+          "why": "A square bracket says the endpoint is actually attained, a round bracket says it is not. At x = 3 the absolute value is 0, so h(3) = 2 and the output 2 really is reached, which earns the square bracket. On the other side −∞ is not a number at all: h just keeps falling without ever landing on it, so that end stays round.\n\nThe maximum-versus-minimum option invents a rule that does not exist, and the option about h being defined at x = 2 confuses an input with an output."
         }
       ]
     },
@@ -867,28 +979,56 @@
           "why": "F = qE. The field at the point is set by the source charges alone, so E is the same; the force on a three-times-larger test charge is three times larger. Dividing the tripled force by the tripled charge returns the same E.\n\n'Field tripled' confuses E with F; 'force unchanged' forgets that F scales with q; 'field one third' divides the same force by a larger charge, but the force is not the same."
         },
         {
-          "type": "short",
-          "q": "An electron is placed 2.0 cm from a fixed point charge of +5.0 nC in vacuum. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Calculate the electric field at the electron's position, then the force on the electron, and state the direction of that force. Show your working.",
+          "type": "mcq",
+          "q": "An electron is placed 2.0 cm from a fixed point charge of +5.0 nC in vacuum. Take k = 9.0 × 10⁹ N·m²/C² and e = 1.6 × 10⁻¹⁹ C. What is the field at the electron's position, and the force on the electron?",
+          "options": [
+            "1.1 × 10⁵ N/C; 1.8 × 10⁻¹⁴ N directed away from the charge",
+            "2.3 × 10³ N/C; 3.6 × 10⁻¹⁶ N directed toward the charge",
+            "1.1 × 10⁵ N/C; 1.8 × 10⁻¹⁴ N directed toward the charge",
+            "11 N/C; 1.8 × 10⁻¹⁸ N directed toward the charge"
+          ],
+          "answerIndex": 2,
           "concept": "Field of a point charge then force on an electron",
-          "why": "E = kQ/r² = (9.0 × 10⁹)(5.0 × 10⁻⁹)/(0.020)² = 45/4.0 × 10⁻⁴ = 1.125 × 10⁵ N/C, pointing away from the +5.0 nC charge. F = eE = (1.6 × 10⁻¹⁹)(1.125 × 10⁵) = 1.8 × 10⁻¹⁴ N. The electron is negative, so the force is opposite to E: toward the +5.0 nC charge. The same result comes from Coulomb's law directly, F = k(5.0 × 10⁻⁹)(1.6 × 10⁻¹⁹)/(0.020)².\n\nFinal answer: E = 1.1 × 10⁵ N/C (accept 1.1 to 1.13 × 10⁵), F = 1.8 × 10⁻¹⁴ N (accept 1.7 to 1.9 × 10⁻¹⁴), directed toward the positive charge. Saying 'away' gets the sign of the electron wrong; 3.6 × 10⁻¹⁶ N forgets to square r."
+          "why": "E = kQ/r² = (9.0 × 10⁹)(5.0 × 10⁻⁹)/(0.020)² = 45/4.0 × 10⁻⁴ = 1.125 × 10⁵ N/C, pointing away from the positive charge. Then F = eE = (1.6 × 10⁻¹⁹)(1.125 × 10⁵) = 1.8 × 10⁻¹⁴ N, and the electron is negative, so the force is opposite to E: toward the +5.0 nC charge.\n\n'Away' forgets the electron's sign; 2.3 × 10³ N/C leaves r unsquared; 11 N/C keeps r in centimetres."
         },
         {
-          "type": "short",
-          "q": "A +1.0 μC charge is fixed at x = 0 and a +9.0 μC charge at x = 0.40 m. Derive the position on the x-axis between them where the resultant electric field is zero. Show your working.",
+          "type": "mcq",
+          "q": "A +1.0 μC charge is fixed at x = 0 and a +9.0 μC charge at x = 0.40 m. At which point between them is the resultant electric field zero?",
+          "options": [
+            "x = 0.040 m",
+            "x = 0.20 m",
+            "x = 0.30 m",
+            "x = 0.10 m"
+          ],
+          "answerIndex": 3,
           "concept": "Locating the point where two fields cancel",
-          "why": "Between two positive charges the fields point in opposite directions, so they cancel where the magnitudes are equal. Let the point be x from the 1.0 μC charge: k(1.0 × 10⁻⁶)/x² = k(9.0 × 10⁻⁶)/(0.40 − x)². Cancel k and take square roots: (0.40 − x)/x = √9 = 3, so 0.40 − x = 3x, 4x = 0.40, x = 0.10 m.\n\nFinal answer: 0.10 m from the +1.0 μC charge (accept 10 cm, or 0.30 m from the +9.0 μC charge). The working must set the two magnitudes equal and take the square root of the charge ratio. x = 0.040 m comes from using the ratio 9 without the root; 0.30 m from the 1.0 μC charge puts the point nearer the larger charge, which cannot be right."
+          "why": "Between two positive charges the two fields oppose, so they cancel where the magnitudes match: k(1.0 × 10⁻⁶)/x² = k(9.0 × 10⁻⁶)/(0.40 − x)². Cancel k and take square roots: (0.40 − x)/x = √9 = 3, so 0.40 = 4x and x = 0.10 m, that is 0.10 m from the smaller charge.\n\nx = 0.040 m uses the ratio 9 without taking its root; x = 0.30 m puts the null nearer the larger charge; x = 0.20 m is the midpoint, which would only work for equal charges."
         },
         {
-          "type": "short",
-          "q": "Identical conducting spheres carrying +10 nC and −2.0 nC are touched together, separated, and placed with their centres 4.0 cm apart. Take k = 9.0 × 10⁹ N·m²/C². Calculate the force between them and state whether it is attractive or repulsive. Show your working.",
+          "type": "mcq",
+          "q": "Identical conducting spheres carrying +10 nC and −2.0 nC are touched together, separated, and placed with their centres 4.0 cm apart. Take k = 9.0 × 10⁹ N·m²/C². What is the force between them?",
+          "options": [
+            "9.0 × 10⁻⁵ N, repulsive",
+            "1.1 × 10⁻⁴ N, attractive",
+            "2.0 × 10⁻⁴ N, repulsive",
+            "3.6 × 10⁻⁶ N, repulsive"
+          ],
+          "answerIndex": 0,
           "concept": "Charge sharing followed by Coulomb's law",
-          "why": "After contact each sphere carries q′ = (+10 + (−2.0))/2 = +4.0 nC. Then F = kq′²/r² = (9.0 × 10⁹)(4.0 × 10⁻⁹)²/(0.040)² = (9.0 × 10⁹)(1.6 × 10⁻¹⁷)/(1.6 × 10⁻³) = 1.44 × 10⁻⁷/1.6 × 10⁻³ = 9.0 × 10⁻⁵ N. Both spheres are now positive, so the force is repulsive.\n\nFinal answer: 9.0 × 10⁻⁵ N, repulsive (accept 8.8 to 9.2 × 10⁻⁵ N). The working must show the shared charge +4.0 nC first. Using the original +10 nC and −2.0 nC gives 1.1 × 10⁻⁴ N attractive and is wrong; 3.6 × 10⁻⁶ N forgets to square r."
+          "why": "Identical spheres share the total charge equally, so each ends with q′ = (+10 − 2.0)/2 = +4.0 nC. Then F = kq′²/r² = (9.0 × 10⁹)(4.0 × 10⁻⁹)²/(0.040)² = 1.44 × 10⁻⁷/1.6 × 10⁻³ = 9.0 × 10⁻⁵ N, and both spheres are now positive, so it is repulsive.\n\n1.1 × 10⁻⁴ N attractive uses the original charges and skips the contact; 2.0 × 10⁻⁴ N averages +10 and +2.0, dropping the minus sign; 3.6 × 10⁻⁶ N forgets to square r."
         },
         {
-          "type": "short",
-          "q": "Two identical metal spheres, one carrying +6.0 nC and one neutral, are touched together and separated. A student writes that both now carry +6.0 nC because the charge spreads onto the second sphere. Explain which property of electric charge this breaks and give the correct charges.",
+          "type": "mcq",
+          "q": "Two identical metal spheres, one carrying +6.0 nC and one neutral, are touched together and separated. A student says both now carry +6.0 nC, since the charge spreads onto the second sphere. What is wrong, and what are the true charges?",
+          "options": [
+            "It breaks quantisation of charge; each sphere carries +3.0 nC",
+            "Nothing is wrong; each sphere carries +6.0 nC",
+            "It breaks conservation of charge; each sphere carries +3.0 nC",
+            "It breaks conservation of charge; the first keeps +6.0 nC and the second stays neutral"
+          ],
+          "answerIndex": 2,
           "concept": "Conservation of charge applied to a contact",
-          "why": "The student's answer makes the total +12 nC where it was +6.0 nC before, so charge would have been created. That breaks conservation of charge: the total charge of an isolated system cannot change. Charge is shared, not copied. Identical spheres split it equally, so each ends with (+6.0 + 0)/2 = +3.0 nC, and the total is still +6.0 nC.\n\nA correct answer names conservation of charge, points out that the total must stay +6.0 nC, and gives +3.0 nC on each sphere. Naming quantisation (charge comes in multiples of e) or additivity (net charge is the algebraic sum) does not identify the error."
+          "why": "The student's answer makes the total +12 nC where it was +6.0 nC, so charge would have been created. Conservation of charge forbids that: the charge is shared, not copied, and identical spheres split it equally, giving (+6.0 + 0)/2 = +3.0 nC each with the total still +6.0 nC.\n\nQuantisation is about charge coming in multiples of e and is not broken here; +6.0 nC each is the student's own error; leaving the second sphere neutral ignores that contact between conductors does share charge."
         }
       ]
     },
@@ -1004,28 +1144,56 @@
           "why": "The program does exactly what she planned and coded; the trouble is that the plan was built on an undefined idea of \"low stock\". The inputs, limits and output conditions were never pinned down, which is the job of the first step, understanding the problem.\n\nThe plan and the code faithfully carried out her misunderstanding, so steps 2 and 3 did their jobs; refactoring cannot fix a program that solves the wrong problem."
         },
         {
-          "type": "short",
-          "q": "Write pseudocode that reads five grades, computes their average as Grade, prints the average, then prints PASS if the average is 45 or more and FAIL otherwise. Show your working.",
-          "concept": "Writing the grade-average pseudocode",
-          "why": "Model answer:\n\n```\nREAD G1, G2, G3, G4, G5\nGrade = (G1 + G2 + G3 + G4 + G5) / 5\nPRINT Grade\nIF Grade >= 45 THEN\n    PRINT \"PASS\"\nELSE\n    PRINT \"FAIL\"\nENDIF\n```\n\nA correct answer must read five values, add all five inside brackets before dividing by 5, print the average, and have a decision with both a PASS branch and a FAIL branch. A loop that reads five grades into a running total is also accepted, as is the test Grade > 44 when the grades are whole numbers. G1 + G2 + G3 + G4 + G5 / 5 without brackets divides only G5 and is wrong."
+          "type": "mcq",
+          "q": "Five grades are read into G1, G2, G3, G4 and G5. Which pair of lines sets Grade to the average of all five and prints PASS exactly when that average is 45 or more?",
+          "options": [
+            "`Grade = G1 + G2 + G3 + G4 + G5 / 5` then `IF Grade >= 45 THEN PRINT PASS ELSE PRINT FAIL`",
+            "`Grade = (G1 + G2 + G3 + G4) / 5` then `IF Grade >= 45 THEN PRINT PASS ELSE PRINT FAIL`",
+            "`Grade = (G1 + G2 + G3 + G4 + G5) / 5` then `IF Grade >= 45 THEN PRINT PASS ELSE PRINT FAIL`",
+            "`Grade = (G1 + G2 + G3 + G4 + G5) / 5` then `IF Grade > 45 THEN PRINT PASS ELSE PRINT FAIL`"
+          ],
+          "answerIndex": 2,
+          "concept": "Correct pseudocode for a grade average and decision",
+          "why": "All five grades must be added inside brackets before the division, and the pass test must include the boundary, so it is Grade = (G1 + G2 + G3 + G4 + G5) / 5 with IF Grade >= 45. For 50, 42, 46, 38, 49 that gives 225 / 5 = 45 and prints PASS.\n\nWithout the brackets only G5 is divided by 5, giving 185.8 for the same grades; dropping G5 from the sum divides 176 by 5 and gives 35.2; Grade > 45 fails a student whose average is exactly 45."
         },
         {
-          "type": "short",
-          "q": "This pseudocode has a fault.\n\n```\nREAD G1, G2, G3, G4, G5\nGrade = (G1 + G2 + G3 + G4) / 5\nIF Grade > 44 THEN PRINT \"PASS\" ELSE PRINT \"FAIL\"\n```\n\nState the fault and write the corrected line. Then give one set of five grades on which the faulty and corrected programs print different words, and one set on which they print the same word, showing both Grade values each time.",
-          "concept": "Fixing a wrong-divisor fault and choosing test inputs",
-          "why": "The sum leaves out G5 while still dividing by 5, so Grade is too small by G5/5. Corrected line: Grade = (G1 + G2 + G3 + G4 + G5) / 5. The program still runs, so this is a logical error.\n\nExposing input: 50, 50, 50, 50, 50 gives corrected Grade 50 (PASS) but faulty Grade 200 / 5 = 40 (FAIL). Non-exposing input: 60, 60, 60, 60, 0 gives 48 both ways (PASS), or 30, 30, 30, 30, 30 gives 30 corrected and 24 faulty, both FAIL. A correct answer names the missing G5, gives the corrected line, and gives two inputs with their Grade values: one where the words differ and one where they agree. Any inputs that actually produce those results are accepted; an exposing input must have G5 > 0 and the corrected Grade above 44 with the faulty one at or below 44."
+          "type": "mcq",
+          "q": "This pseudocode has a fault: the sum leaves out G5 while the divisor stays 5.\n\n```\nREAD G1, G2, G3, G4, G5\nGrade = (G1 + G2 + G3 + G4) / 5\nIF Grade > 44 THEN PRINT \"PASS\" ELSE PRINT \"FAIL\"\n```\n\nOn which set of five grades do the faulty version and the corrected version print different words?",
+          "options": [
+            "50, 50, 50, 50, 50",
+            "60, 60, 60, 60, 0",
+            "30, 30, 30, 30, 30",
+            "80, 80, 80, 80, 10"
+          ],
+          "answerIndex": 0,
+          "concept": "Choosing test inputs that expose a fault",
+          "why": "The faulty Grade is short by G5 / 5. For 50, 50, 50, 50, 50 it is 200 / 5 = 40, which prints FAIL, while the corrected value 250 / 5 = 50 prints PASS, so the words differ.\n\nFor 60, 60, 60, 60, 0 both give 48 and print PASS, because G5 is 0 and the fault costs nothing. For 30, 30, 30, 30, 30 the values 24 and 30 are both at or below 44, so both print FAIL. For 80, 80, 80, 80, 10 the values 64 and 66 are both above 44, so both print PASS."
         },
         {
-          "type": "short",
-          "q": "Trace this pseudocode with N = 4 and the pairs (stock, point) = (3, 5), (12, 5), (5, 5), (7, 10) and write down everything it prints, in order. Show your working.\n\n```\nREAD N\nlow = 0\nFOR i = 1 TO N\n    READ stock, point\n    IF stock <= point THEN\n        PRINT \"Reorder\", i\n        low = low + 1\n    ENDIF\nENDFOR\nPRINT low\n```",
+          "type": "mcq",
+          "q": "Trace this with N = 4 and the pairs (stock, point) = (3, 5), (12, 5), (5, 5), (7, 10). What does it print, in order?\n\n```\nREAD N\nlow = 0\nFOR i = 1 TO N\n    READ stock, point\n    IF stock <= point THEN\n        PRINT \"Reorder\", i\n        low = low + 1\n    ENDIF\nENDFOR\nPRINT low\n```",
+          "options": [
+            "Reorder 1, Reorder 4, 2",
+            "Reorder 2, Reorder 3, 2",
+            "Reorder 1, Reorder 2, Reorder 3, Reorder 4, 4",
+            "Reorder 1, Reorder 3, Reorder 4, 3"
+          ],
+          "answerIndex": 3,
           "concept": "Tracing a loop with a decision and a boundary case",
-          "why": "i = 1: 3 ≤ 5 true, prints Reorder 1, low = 1. i = 2: 12 ≤ 5 false, nothing printed. i = 3: 5 ≤ 5 true because the test is ≤ not <, prints Reorder 3, low = 2. i = 4: 7 ≤ 10 true, prints Reorder 4, low = 3. After the loop it prints 3.\n\nA correct answer lists exactly four lines: Reorder 1, Reorder 3, Reorder 4, then 3. Leaving out product 3 (treating the test as stock < point) gives Reorder 1, Reorder 4, 2 and is wrong."
+          "why": "i = 1: 3 ≤ 5 is true, so Reorder 1 and low = 1. i = 2: 12 ≤ 5 is false, nothing printed. i = 3: 5 ≤ 5 is true because the test is ≤ and not <, so Reorder 3 and low = 2. i = 4: 7 ≤ 10 is true, so Reorder 4 and low = 3. The last line prints 3.\n\nDropping product 3 reads the test as stock < point; Reorder 2 with Reorder 3 comes from reversing it to stock >= point; printing all four ignores the decision entirely."
         },
         {
-          "type": "short",
-          "q": "Three proposals are made for the shop's reorder problem. (a) Split it into: read the stock and sales figures; work out each product's reorder point; compare stock with the reorder point; print the order list. (b) Handle the fast-selling products this month and the slow-selling ones next month. (c) Write the whole program first, then cut the finished code into three files. Which proposal is a genuine decomposition of the problem, and why are the other two not?",
+          "type": "mcq",
+          "q": "A shop's reorder problem is to be broken down before any code is written. Which of these proposals is a genuine decomposition of the problem?",
+          "options": [
+            "Handle the fast-selling products this month and the slow-selling ones next month",
+            "Read the stock and sales figures; work out each product's reorder point; compare stock with that point; print the order list",
+            "Write the whole program first, then cut the finished code into three files",
+            "Give the stock counting to one member of staff and the ordering to another"
+          ],
+          "answerIndex": 1,
           "concept": "Decomposition versus phasing and file-splitting",
-          "why": "Only (a) is decomposition: the problem is broken into smaller problems, each of which can be solved on its own, and solving all of them solves the whole. (b) does not divide the problem at all; it schedules the same undivided problem in two time periods, so each period still faces the full difficulty. (c) divides the finished code, not the problem; the thinking was done in one piece and the split happens after the solution already exists.\n\nA correct answer picks (a), explains that its parts are separately solvable subproblems whose solutions combine, and says that (b) is phasing in time and (c) is splitting the product rather than the problem."
+          "why": "Decomposition breaks a problem into smaller problems, each solvable on its own, whose solutions combine into the whole. Reading the figures, computing reorder points, comparing, and printing are four such subproblems.\n\nSplitting the work across two months is phasing in time: each month still faces the whole undivided problem. Cutting finished code into files divides the product rather than the problem, and happens after the thinking is done. Handing parts to two people is delegation, which shares the work without making any part simpler."
         }
       ],
       "slot": "fast"

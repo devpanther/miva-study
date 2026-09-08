@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Numerical Lorentz-force work.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A charge of 5.0 μC moves at 4.0 × 10⁵ m/s at 40° to a uniform magnetic field of 0.30 T. Calculate the magnitude of the magnetic force on it.
 A. 0.60 N
@@ -51,13 +51,29 @@ B. The magnetic force
 C. The orbital period
 D. The kinetic energy
 
-**9. (show your working)** A charge of +3.0 μC moves at 2.0 × 10⁵ m/s along +x. B = 0.50 T points along +y and E = 6.0 × 10⁴ V/m points along +z. Calculate the magnetic force, the electric force and the net force, each with direction. Then find the E that would let the charge pass undeflected. Show your working.
+**9.** A charge of +3.0 μC moves at 2.0 × 10⁵ m/s along +x. A uniform field B = 0.50 T points along +y and a uniform field E = 6.0 × 10⁴ V/m points along +z. Calculate the magnitude and direction of the net force on the charge.
+A. 0.12 N along +z
+B. 0.35 N along +z
+C. 0.48 N along −z
+D. 0.48 N along +z
 
-**10. (show your working)** A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) enters a uniform field of 0.20 T at 4.0 × 10⁶ m/s, its velocity at 30° to B. Calculate the velocity components along and across B, the radius of the helix, the period and the pitch. Show your working.
+**10.** A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) enters a uniform field of 0.20 T at 4.0 × 10⁶ m/s with its velocity at 30° to B. Calculate the radius and the pitch of its helical path.
+A. r = 0.209 m, pitch = 1.14 m
+B. r = 0.181 m, pitch = 0.656 m
+C. r = 0.104 m, pitch = 1.14 m
+D. r = 0.104 m, pitch = 0.656 m
 
-**11. (show your working)** A mobile-phone mast radiates 20 W at 900 MHz. Take c = 3.0 × 10⁸ m/s and h = 6.63 × 10⁻³⁴ J·s. Calculate the wavelength, the energy of one photon, and the number of photons emitted per second. Show your working.
+**11.** A mast radiates 20 W at 900 MHz. Take h = 6.63 × 10⁻³⁴ J·s and c = 3.0 × 10⁸ m/s. Calculate the number of photons it emits per second.
+A. 3.4 × 10²⁵ s⁻¹
+B. 3.4 × 10³¹ s⁻¹
+C. 3.0 × 10⁻²⁶ s⁻¹
+D. 2.7 × 10⁴³ s⁻¹
 
-**12. (show your working)** A straight wire carrying current sits in a uniform magnetic field. Explain the direction of the force on it, what happens to that force if the current is reversed, and what happens if both the current and the field are reversed. Hence explain why a d.c. motor needs a commutator.
+**12.** A straight current-carrying wire sits in a uniform magnetic field. What happens to the force on it if both the current and the field are reversed, and why does a d.c. motor need a commutator?
+A. The force reverses; the commutator reverses it back once every turn
+B. The force is unchanged; the commutator reverses the coil current each half turn so the torque keeps one sense
+C. The force is unchanged; the commutator smooths the supply into steady d.c.
+D. The force falls to zero; the commutator restarts the current after each dead point
 
 ---
 
@@ -95,18 +111,18 @@ D. The kinetic energy
 
 Equal radius would need equal momentum, not equal velocity; equal period is the speed-independence result, which says nothing about mass; kinetic energy at the same speed is proportional to m.
 
-**9.** *Combining qE and qv × B as vectors in crossed fields.* Magnetic: F_B = qvB = (3.0 × 10⁻⁶)(2.0 × 10⁵)(0.50) = 0.30 N, direction x̂ × ŷ = +z. Electric: F_E = qE = (3.0 × 10⁻⁶)(6.0 × 10⁴) = 0.18 N, along +z for a positive charge. Both point along +z, so they add: F_net = 0.48 N along +z. For no deflection the electric force must cancel the magnetic one: E = vB = (2.0 × 10⁵)(0.50) = 1.0 × 10⁵ V/m, directed along −z.
+**9. D** — *Combining qE and qv × B as vectors in crossed fields.* F_B = qvB = (3.0 × 10⁻⁶)(2.0 × 10⁵)(0.50) = 0.30 N along x̂ × ŷ = +z. F_E = qE = (3.0 × 10⁻⁶)(6.0 × 10⁴) = 0.18 N, also along +z for a positive charge. The two are parallel, so they add to 0.48 N along +z.
 
-Final answers: F_B = 0.30 N (+z), F_E = 0.18 N (+z), F_net = 0.48 N (+z), E = 1.0 × 10⁵ V/m along −z (accept within 2%). A correct answer must show the cross product giving +z. Combining 0.30 and 0.18 in quadrature to give 0.35 N is wrong here because the forces are parallel.
+0.12 N subtracts them, as if they opposed each other; 0.35 N combines them in quadrature, which applies only to perpendicular forces; along −z has the cross product the wrong way round.
 
-**10.** *Helical motion: radius, period and pitch.* v⊥ = v sin 30° = 2.0 × 10⁶ m/s and v∥ = v cos 30° = 3.46 × 10⁶ m/s. Only v⊥ is bent: r = mv⊥/(qB) = (1.67 × 10⁻²⁷)(2.0 × 10⁶)/[(1.6 × 10⁻¹⁹)(0.20)] = (3.34 × 10⁻²¹)/(3.2 × 10⁻²⁰) = 0.104 m. T = 2πm/(qB) = 2π(1.67 × 10⁻²⁷)/(3.2 × 10⁻²⁰) = 3.28 × 10⁻⁷ s, independent of speed. Pitch = v∥T = (3.46 × 10⁶)(3.28 × 10⁻⁷) = 1.14 m.
+**10. C** — *Radius and pitch of a helical path.* Split the velocity: v⊥ = v sin 30° = 2.0 × 10⁶ m/s is what bends, v∥ = v cos 30° = 3.46 × 10⁶ m/s carries the particle forward. Then r = mv⊥/(qB) = 0.104 m, T = 2πm/(qB) = 3.28 × 10⁻⁷ s with no v in it, and the pitch is v∥T = 1.14 m.
 
-Final answers: v⊥ = 2.0 × 10⁶ m/s, v∥ = 3.5 × 10⁶ m/s, r = 0.10 m (accept 0.102 to 0.106), T = 3.3 × 10⁻⁷ s (accept 3.2 to 3.4), pitch = 1.1 m (accept 1.10 to 1.17). Using the full 4.0 × 10⁶ m/s in the radius gives 0.21 m and is wrong; the period must not contain v.
+0.209 m puts the full speed into the radius; the pair 0.181 m and 0.656 m swaps sin and cos; and 0.656 m on its own uses v⊥ instead of v∥ for the advance along B.
 
-**11.** *Wavelength, photon energy and photon rate from frequency and power.* λ = c/f = (3.0 × 10⁸)/(9.0 × 10⁸) = 0.33 m. E = hf = (6.63 × 10⁻³⁴)(9.0 × 10⁸) = 5.97 × 10⁻²⁵ J (about 3.7 × 10⁻⁶ eV). Photons per second = P/E = 20/(5.97 × 10⁻²⁵) = 3.4 × 10²⁵ per second, so many that the radiation behaves as a smooth classical wave.
+**11. A** — *Photon rate from radiated power and photon energy.* One photon carries E = hf = (6.63 × 10⁻³⁴)(9.0 × 10⁸) = 5.97 × 10⁻²⁵ J, so the rate is P/E = 20/(5.97 × 10⁻²⁵) = 3.4 × 10²⁵ photons per second, a number so large that the radiation behaves as a smooth classical wave.
 
-Final answers: λ = 0.33 m (accept 0.33 to 0.34), E = 6.0 × 10⁻²⁵ J (accept 5.9 to 6.0 × 10⁻²⁵), n = 3.4 × 10²⁵ s⁻¹ (accept 3.3 to 3.4 × 10²⁵). λ = 2.7 × 10¹⁷ m comes from multiplying c by f and is wrong; MHz means 10⁶ Hz.
+3.4 × 10³¹ leaves the frequency as 900 rather than 9.0 × 10⁸ Hz; 3.0 × 10⁻²⁶ divides E by P instead of P by E; 2.7 × 10⁴³ starts from λ = cf instead of λ = c/f.
 
-**12.** *Direction and sign of the force on a current-carrying wire.* F = I L × B, so the force is perpendicular to both the wire and the field, never along either; its sense comes from right-hand rule 1 with the conventional current in place of v. Reversing the current reverses L and so reverses F. Reversing both I and B reverses F twice, leaving it unchanged. In a motor the coil's sides swap places every half turn, so the torque would reverse and the coil would only rock; the commutator reverses the current in the coil at the same moment, so the torque keeps one sense and the coil keeps turning.
+**12. B** — *Direction and sign of the force on a current-carrying wire.* F = I L × B reverses when either I or B reverses, so reversing both reverses it twice and leaves it unchanged. In a motor the coil's two sides swap places every half turn, so without help the torque would reverse and the coil would only rock; the commutator reverses the current in the coil at that same moment, keeping the torque in one sense.
 
-A correct answer states perpendicular to both wire and B, reversal with the current, no change when both reverse, and the commutator's job of reversing I each half turn to keep the torque one-directional.
+Reversing both does not reverse the force; the commutator is not a smoothing device; and the force never falls to zero for a wire carrying current across B.

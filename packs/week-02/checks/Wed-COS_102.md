@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *The Wednesday deep hour takes Week 2's material conceptually, without traces or arithmetic.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A padlock has three dials, each showing a digit from 0 to 9. A thief uses trial and error, testing each combination once and never repeating one. In the worst case, how many combinations must be tested before the lock opens?
 A. 30
@@ -67,13 +67,29 @@ B. No systematic method decides it for every input
 C. Any answer would take too long to compute
 D. Its answer is unknown at present
 
-**9. (show your working)** Write pseudocode that finds a secret three-digit code by trial and error: it tests 000, 001, 002 and so on in order, stops as soon as the tested value equals the secret, and prints the number of tests made. Then state how many tests it makes when the secret is 250. Show your working.
+**9.** A program looks for a secret three-digit code by trial and error. It tests 000, then 001, then 002 and so on in order, and stops as soon as the tested value equals the secret. Counting every value it tests, how many tests does it make when the secret is 250?
+A. 250
+B. 249
+C. 1000
+D. 251
 
-**10. (show your working)** Consider the loop `WHILE x < 100: x = x + step` with whole-number inputs x and step. Write pseudocode that reads x and step and prints HALTS or LOOPS correctly for every pair of inputs, and explain why this particular halting question is decidable. Show your working.
+**10.** The loop `WHILE x < 100: x = x + step` is run with whole-number values of x and step. Which condition is true exactly when this loop terminates?
+A. step > 0
+B. x >= 100 OR step > 0
+C. x >= 100 AND step > 0
+D. x < 100 AND step > 0
 
-**11. (show your working)** A shop sells ₦1.2 million a month and must reach ₦2.0 million a month in four months. Using means-ends analysis, set a monthly target for each of the four months with equal increases, then split each month's increase equally between the shop's two branches. Show your working.
+**11.** A shop sells ₦1.2 million a month and must reach ₦2.0 million a month in four months, with equal monthly increases. Each month's increase is shared equally between the shop's two branches. What are the four monthly targets and the extra each branch must add per month?
+A. 1.2, 1.4, 1.6, 1.8 million; ₦100,000 per branch
+B. 1.4, 1.6, 1.8, 2.0 million; ₦200,000 per branch
+C. 1.4, 1.6, 1.8, 2.0 million; ₦100,000 per branch
+D. 2.0, 2.0, 2.0, 2.0 million; ₦400,000 per branch
 
-**12. (show your working)** For heuristics and for trial and error, state what each strategy costs, the condition under which each fails, and give one situation for each where it would be the wrong choice.
+**12.** A heuristic and a trial-and-error search each carry a cost that limits where they can be used. Which pairing of strategy with its cost is correct?
+A. Heuristic: rationality given up for speed. Trial and error: time growing with the number of candidates
+B. Heuristic: time growing with the number of candidates. Trial and error: rationality given up for speed
+C. Heuristic: memory for storing candidates. Trial and error: accuracy of the final answer
+D. Heuristic: optimality given up for memory. Trial and error: rationality given up for speed
 
 ---
 
@@ -111,38 +127,18 @@ Too many candidates is the failure condition of trial and error; deferred critic
 
 No answer existing is a different and stronger claim; slow computation is still a systematic method; an answer being unknown today says nothing about whether a method exists.
 
-**9.** *Writing a trial-and-error search loop.* Model answer:
+**9. D** — *Counting the tests a trial-and-error search makes.* The values tested are 000, 001, up to 250, which is every whole number from 0 to 250 inclusive: 250 − 0 + 1 = 251 tests, the last of them the successful one.
 
-```
-READ secret
-code = 0
-tests = 1
-WHILE code != secret
-    code = code + 1
-    tests = tests + 1
-ENDWHILE
-PRINT tests
-```
+250 forgets that 000 is itself a test; 249 drops both ends; 1000 is the size of the whole search space, the cost of testing every three-digit code, not of stopping at 250.
 
-For secret = 250 the values 0 to 250 are each tested once, which is 251 tests. A correct answer has a loop that stops when code equals secret, a counter that goes up once per test, and the answer 251 (250 is accepted only if the answer says explicitly that the first test of 000 is not counted). A loop with no stopping condition, or one that prints the code instead of the count, is wrong.
+**10. B** — *Deciding whether one specific loop halts.* If x is already 100 or more the test fails at once and the body never runs, so the loop ends whatever step is. Otherwise x must grow to reach 100, which needs step > 0; with step = 0 or step negative it never gets there. So it terminates exactly when x >= 100 OR step > 0, and this one loop can be decided without running it even though no method decides every program.
 
-**10.** *Writing a decision procedure for one loop's halting.* The loop ends immediately if x ≥ 100. Otherwise it ends only if x grows, which needs step > 0; with step = 0 or step < 0, x never reaches 100. Model answer:
+step > 0 alone wrongly says x = 150 with step = 0 runs forever. Both AND versions demand a positive step even when the loop is never entered, and x < 100 AND step > 0 also refuses x = 150 with step = 3.
 
-```
-READ x, step
-IF x >= 100 OR step > 0 THEN
-    PRINT "HALTS"
-ELSE
-    PRINT "LOOPS"
-ENDIF
-```
+**11. C** — *Means-ends analysis with numeric sub-goals.* The gap between the current state and the goal is 2.0 − 1.2 = 0.8 million, spread over four months, so each month must add 0.8 / 4 = 0.2 million. The targets are 1.4, 1.6, 1.8 and 2.0 million, and 0.2 million split between two branches is ₦100,000 each per month.
 
-It is decidable because this one loop has a simple rule that answers every input without running it. The general halting problem asks for one method that works for every program, and no such method exists; that does not stop single programs from being analysed. A correct answer must handle both the x ≥ 100 case and the step > 0 case, print LOOPS for step ≤ 0 with x < 100, and say that one specific program can be analysed even though no universal method exists.
+Starting the list at 1.2 never reaches the goal inside four months; ₦200,000 per branch gives each branch the whole monthly increase instead of half; the flat 2.0 list sets no sub-goals at all, which is the one thing means-ends analysis exists to do.
 
-**11.** *Means-ends analysis with numeric sub-goals.* The gap is 2.0 − 1.2 = 0.8 million over four months, so each month must add 0.8 / 4 = 0.2 million. Monthly targets: 1.4, 1.6, 1.8, 2.0 million. Each month's 0.2 million increase shared equally by two branches is 0.1 million (₦100,000) extra per branch per month.
+**12. A** — *Cost of a heuristic versus trial and error.* A heuristic is a rule of thumb applied without stopping to check, so it buys speed by giving up rationality and may return a sub-optimal answer; it is the wrong choice where an exact figure is demanded, such as the tax owed on an invoice. Trial and error tries one candidate at a time, so its cost is time and grows with the number of candidates; it is the wrong choice for a six-digit PIN, where there are a million of them.
 
-A correct answer shows the 0.8 million gap, the 0.2 million monthly step, the four targets 1.4, 1.6, 1.8 and 2.0 million, and the 0.1 million per branch. Targets of 1.2, 1.4, 1.6, 1.8 (starting from the current figure and never reaching the goal) are wrong.
-
-**12.** *Costs and failure conditions of heuristics and trial and error.* A heuristic buys speed by giving up on checking: the decision is made without stopping to think, so it costs rationality and the answer may be sub-optimal. It fails when a sub-optimal answer is not acceptable, for example computing the exact tax owed on an invoice by a rule of thumb. Trial and error costs time, one attempt per candidate, so its cost grows with the number of possible solutions. It fails when the candidates are many, for example finding a six-digit PIN by guessing.
-
-A correct answer names speed traded for rationality (heuristic) and time growing with candidates (trial and error), gives the matching failure condition for each, and one concrete misuse for each.
+The other pairings swap the two costs, or invent costs of memory and accuracy that neither strategy is defined by.

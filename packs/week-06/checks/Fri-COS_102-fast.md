@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *Applied pseudocode.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** What is printed, in order?
 
@@ -103,9 +103,13 @@ B. Keeps each line to one statement
 C. Shows which statements belong to which construct
 D. Keeps the statements language independent
 
-**9. (show your working)** Write pseudocode that reads marks until −1 is entered and then prints the highest mark entered. If the very first entry is −1, print 'no marks' instead.
+**9.** Marks are read until −1 is entered, and then the highest mark entered is printed. If the very first entry is −1, 'no marks' is printed instead. Which design does that correctly?
+A. Set highest to 0; loop reading marks until −1, updating highest; print 'no marks' if highest is still 0
+B. Loop reading marks until −1, setting highest to each mark read; print highest after the loop
+C. Read one mark first; set highest to −1; loop while mark <> −1, reading at the top of the body; print highest
+D. Read one mark first; if it is −1 print 'no marks'; otherwise set highest to it and loop until −1, reading at the foot
 
-**10. (show your working)** Trace this, giving the values of a and b after each pass of the loop and the printed value. Show your working.
+**10.** What are the values of a and b after each pass, and what is printed?
 
 ```
 SET a TO 12
@@ -119,10 +123,22 @@ WHILE a <> b
 ENDWHILE
 PRINT a
 ```
+A. (12, 6) then (6, 6); prints 6
+B. (12, 6); prints 12
+C. (12, 6) then (6, 6) then (0, 6); prints 0
+D. (−6, 18), and the loop never ends
 
-**11. (show your working)** A flowchart runs: Start; READ n; s = 0; decision 'Is n > 0?'; Yes → s = s + (n MOD 10); n = n DIV 10; back to the decision; No → PRINT s; Stop. Write it as pseudocode, using the loop construct that matches where the chart tests its condition, and show what it prints for n = 4321.
+**11.** A flowchart runs: Start; READ n; s = 0; decision 'Is n > 0?'; Yes to s = s + (n MOD 10); then n = n DIV 10; back to the decision; No to PRINT s; Stop. Which pseudocode matches the chart, and what does it print for n = 5083?
+A. REPEAT the two body lines UNTIL n = 0, then PRINT s; prints 16
+B. WHILE n > 0 with the two body lines, then PRINT s; prints 5083
+C. WHILE n > 0 with the two body lines, then PRINT s; prints 16
+D. WHILE n > 0 with PRINT s inside the loop; prints 3 11 11 16
 
-**12. (show your working)** Pseudocode cannot be run. Explain what the testing and refining step consists of, and name two input cases you would test for a fragment that reads a count, reads that many marks, and prints their average.
+**12.** Pseudocode cannot be run. A fragment reads a count, reads that many marks and prints their average. What does the testing and refining step consist of, and which input case must be tested first?
+A. Compile it and run the test inputs; a count of 0, which would divide by zero
+B. Trace it on paper with chosen inputs, keeping a table of every variable; a count of 0, which would divide by zero
+C. Trace it on paper with chosen inputs, keeping a table of every variable; a count of 100, the largest allowed
+D. Read it aloud line by line; three ordinary marks such as 50, 60 and 70
 
 ---
 
@@ -160,44 +176,18 @@ k > 2 stops one value early and prints 10 8 6 4; the REPEAT version subtracts be
 
 Keywords are set apart by writing them in capitals; one statement per line is a separate rule about what a line holds; language independence is about not using the syntax of a particular programming language.
 
-**9.** *Writing a sentinel loop with a running maximum.* Model answer:
+**9. D** — *Writing a sentinel loop with a running maximum.* The first mark has to be read before anything else so the 'no marks' case can be caught, and that first mark is the only safe starting value for highest. Inside the loop each mark is compared with highest and replaces it when larger, and the next mark is read at the foot so the condition sees a fresh value. For 40, 72, 55, −1 it prints 72.
 
-```
-READ mark
-IF mark = -1 THEN
-    PRINT "no marks"
-ELSE
-    SET highest TO mark
-    WHILE mark <> -1
-        IF mark > highest THEN
-            SET highest TO mark
-        ENDIF
-        READ mark
-    ENDWHILE
-    PRINT highest
-ENDIF
-```
+Starting highest at 0 breaks when every mark is 0 and confuses 'no marks' with a genuine highest of 0. Setting highest to each mark read keeps the last mark, not the largest. Reading at the top of the body skips the first mark and lets the sentinel −1 be treated as a mark.
 
-A correct answer reads a mark before the test, uses a WHILE (or an equivalent) whose condition is the sentinel, initialises highest from the first mark rather than from 0, compares each mark with highest and updates it, reads the next mark at the foot of the body, and prints after the loop. The 'no marks' case needs the IF before the loop. Not accepted: highest set to 0 (fails if all marks are 0 or the check is on negatives), no second READ, or the sentinel compared as if it were a mark.
+**10. A** — *Tracing a WHILE with a selection inside.* Pass 1: a = 12 is not greater than b = 18, so the ELSE runs and b = 18 − 12 = 6, giving (12, 6). Pass 2: 12 > 6 is true, so a = 12 − 6 = 6, giving (6, 6). Now a <> b is false, the loop ends, and 6 is printed, which is the greatest common divisor of 12 and 18.
 
-**10.** *Tracing a WHILE with a selection inside.* Pass 1: a = 12, b = 18, a > b is false, so b = 18 − 12 = 6; now (12, 6). Pass 2: 12 > 6 is true, so a = 12 − 6 = 6; now (6, 6). The test a <> b is now false, the loop ends, and 6 is printed (the greatest common divisor of 12 and 18).
+Stopping after one pass ignores that a <> b is still true then; running a third pass ignores the test that has already failed; a = 12 − 18 = −6 takes the IF branch on pass 1 when the test is false.
 
-A correct answer shows (12, 6) then (6, 6) and the output 6. Subtracting the wrong way on pass 1 (a = 12 − 18 = −6) or stopping after one pass and printing 12 is not accepted.
+**11. C** — *Converting a flowchart to pseudocode.* The decision comes before the body and the Yes exit runs back to it, so the condition is tested before every pass: that is a pre-tested loop, WHILE n > 0 with ENDWHILE and PRINT s after it. For n = 5083 the digits come off the right: s = 3 with n = 508, s = 11 with n = 50, s = 11 with n = 5, s = 16 with n = 0, then the loop ends and 16 is printed.
 
-**11.** *Converting a flowchart to pseudocode.* The decision comes before the body and the Yes exit runs back to it, so this is a pre-tested loop: WHILE.
+REPEAT-UNTIL tests after the body, so it would run once even for n = 0, which the chart does not. Printing 5083 gives the input back instead of the digit sum. Printing inside the loop produces four lines rather than one total.
 
-```
-READ n
-SET s TO 0
-WHILE n > 0
-    SET s TO s + (n MOD 10)
-    SET n TO n DIV 10
-ENDWHILE
-PRINT s
-```
+**12. B** — *Testing pseudocode on paper.* Testing pseudocode means walking the lines in order with chosen input values, keeping a table of every variable, and checking that the logic is what was intended and that every required case is handled; refining then corrects whatever the trace exposes. The case that must be covered is a count of 0, because the average divides by the count and there is nothing to divide by.
 
-For n = 4321: s = 1, n = 432; s = 3, n = 43; s = 6, n = 4; s = 10, n = 0; loop ends; prints 10 (the sum of the digits). A correct answer uses WHILE with ENDWHILE, keeps the two body lines in the chart's order, prints after the loop, and gives 10. A REPEAT-UNTIL is not the matching construct, because the chart tests before the first pass.
-
-**12.** *Testing pseudocode on paper.* Testing means working through the pseudocode on paper, or scanning it carefully, with specific inputs: keep a table of every variable, follow each line in order, and check that the flow and logic are what was intended and that all required cases are handled. Refining then corrects any errors found or improves the effectiveness of the algorithm.
-
-Cases for the average fragment: a count of 0 (the division by the count has no value, so a guard is needed), a count of 1 (average equals the single mark), and an ordinary case such as three marks 50, 60, 70 giving 60. A correct answer describes the paper trace and names at least two cases, one of them the zero-count boundary.
+There is no compiler for pseudocode, so it cannot be run. A count of 100 is an ordinary case with no boundary in it, and no maximum is stated anywhere. Reading aloud is not a trace and would not expose a division by zero.

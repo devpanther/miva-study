@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *This session works the same Week 2 function material as problems: reading a question, choosing a method, executing it accurately and checking the result.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** f(x) = x² − 1 and g(x) = 2x + 3. Evaluate (f ∘ g)(2).
 A. 48
@@ -51,13 +51,29 @@ B. No solution
 C. x = 7
 D. x = 1
 
-**9. (show your working)** f(x) = 2x + 5 if x < −1; f(x) = x² if −1 ≤ x ≤ 2; f(x) = 7 − x if x > 2. Evaluate f(−4), f(−1), f(2) and f(3). Show your working.
+**9.** f(x) = 2x + 5 if x < −1; f(x) = x² if −1 ≤ x ≤ 2; f(x) = 7 − x if x > 2. Find f(−4), f(−1), f(2) and f(3), in that order.
+A. −3, 3, 5, 4
+B. −3, 1, 5, 4
+C. −3, 1, 4, 11
+D. −3, 1, 4, 4
 
-**10. (show your working)** Solve the inequality |2x + 1| < 7. Give the answer as an interval. Show your working.
+**10.** Solve the inequality |2x + 1| < 7 and give the answer as an interval.
+A. (−∞, −4) ∪ (3, ∞)
+B. (−4, 3)
+C. [−4, 3]
+D. (−3, 4)
 
-**11. (show your working)** f(x) = 2x³ − 7x² + 1. State the degree and leading coefficient, then say what f(x) does as x → +∞ and as x → −∞, with the reasoning. Show your working.
+**11.** For f(x) = 2x³ − 7x² + 1, state the degree and leading coefficient and say what f(x) does as x → +∞ and as x → −∞.
+A. Degree 3, leading coefficient 2; f → +∞ as x → +∞ and f → −∞ as x → −∞
+B. Degree 3, leading coefficient 2; f → +∞ at both ends
+C. Degree 3, leading coefficient −7; f → −∞ as x → +∞ and f → +∞ as x → −∞
+D. Degree 2, leading coefficient −7; f → −∞ at both ends
 
-**12. (show your working)** A student solves 2ˣ = 40 by writing x = 40 ÷ 2 = 20. Explain what the student has misread about 2ˣ, give the correct method, and say roughly what x is.
+**12.** A student solves 2ˣ = 40 by writing x = 40 ÷ 2 = 20. What is the correct value of x, and what did the student misread?
+A. x = log₁₀ 40 ≈ 1.60; the base was read as 10
+B. x = √40 ≈ 6.32; an exponent is undone by taking a root
+C. x = log₂ 40 ≈ 5.32; a power was treated as a product
+D. x = 20; dividing by 2 really does undo 2ˣ
 
 ---
 
@@ -95,18 +111,18 @@ y = 2x − 5 uses (x − 3) instead of (x + 3) in point-slope; y = 2x + 1 takes 
 
 x = 1, x = 7, and both together are the manufactured roots; none satisfies the original equation.
 
-**9.** *Evaluating a piecewise function either side of its boundaries.* For each input, first decide which condition it satisfies. x = −4 < −1: first branch, f(−4) = 2(−4) + 5 = −3. x = −1 satisfies −1 ≤ x ≤ 2: middle branch, f(−1) = (−1)² = 1. x = 2 also satisfies −1 ≤ x ≤ 2: f(2) = 2² = 4. x = 3 > 2: third branch, f(3) = 7 − 3 = 4.
+**9. D** — *Evaluating a piecewise function either side of its boundaries.* For each input decide first which condition it satisfies. x = −4 < −1 uses the first branch: 2(−4) + 5 = −3. Both x = −1 and x = 2 satisfy −1 ≤ x ≤ 2, so both use the middle branch: (−1)² = 1 and 2² = 4. x = 3 > 2 uses the third: 7 − 3 = 4.
 
-Final answer: f(−4) = −3, f(−1) = 1, f(2) = 4, f(3) = 4. A correct answer names the branch used for each input. Using 2x + 5 at x = −1 (giving 3) or 7 − x at x = 2 (giving 5) picks the branch whose condition is not satisfied and is wrong.
+The value 3 at x = −1 and 5 at x = 2 come from using branches whose conditions those inputs do not satisfy, and 11 at x = 3 uses 2x + 5 far outside its range.
 
-**10.** *Solving an absolute value inequality.* |2x + 1| < 7 means −7 < 2x + 1 < 7. Subtract 1 throughout: −8 < 2x < 6. Divide by 2: −4 < x < 3.
+**10. B** — *Solving an absolute value inequality.* A 'less than' absolute value becomes a double inequality: |2x + 1| < 7 means −7 < 2x + 1 < 7. Subtract 1 throughout to get −8 < 2x < 6, then divide by 2 to get −4 < x < 3, that is (−4, 3), with round brackets because the inequality is strict.
 
-Final answer: (−4, 3). Also accepted: −4 < x < 3. Round brackets because the inequality is strict. x < 3 alone forgets the left-hand case; x < −4 or x > 3 solves the 'greater than' inequality instead; [−4, 3] wrongly includes the endpoints.
+(−∞, −4) ∪ (3, ∞) solves the 'greater than' version, [−4, 3] wrongly includes endpoints where the expression equals 7, and (−3, 4) swaps the signs of the bounds.
 
-**11.** *End behaviour of a polynomial.* Degree 3, leading coefficient 2. For large |x| the leading term 2x³ dominates every other term, so the tails follow 2x³. As x → +∞, 2x³ → +∞, so f(x) → +∞. As x → −∞, x³ is negative and large, so 2x³ → −∞ and f(x) → −∞. Odd degree with a positive leading coefficient: the tails go in opposite directions, down on the left, up on the right.
+**11. A** — *End behaviour of a polynomial.* The highest power is x³, so the degree is 3 and the leading coefficient is the 2 in front of it. For large |x| the term 2x³ swamps every other term, so the tails follow 2x³: as x → +∞, 2x³ → +∞, and as x → −∞, x³ is large and negative so f → −∞. Odd degree with a positive lead means the two tails go opposite ways, down on the left and up on the right.
 
-Final answer: degree 3, leading coefficient 2, f(x) → +∞ as x → +∞ and f(x) → −∞ as x → −∞. A correct answer must say the leading term dominates; reasoning from the −7x² term or from the constant 1 is wrong.
+The other options read the leading term off the −7x² term, or treat an odd degree as if both tails matched.
 
-**12.** *Exponential versus multiplication.* 2ˣ means 2 multiplied by itself x times, not 2 times x; dividing by 2 undoes multiplication, not exponentiation. The correct move is to take a logarithm: x = log₂ 40 = ln 40 / ln 2 ≈ 5.32. A quick check: 2⁵ = 32 < 40 < 64 = 2⁶, so x lies between 5 and 6, nowhere near 20.
+**12. C** — *Exponential versus multiplication.* 2ˣ means 2 multiplied by itself x times, not 2 times x, and division undoes multiplication, not exponentiation. The operation that undoes a power is a logarithm: x = log₂ 40 = ln 40 / ln 2 ≈ 5.32. A quick sanity check confirms it, since 2⁵ = 32 and 2⁶ = 64 bracket 40, so x lies between 5 and 6, nowhere near 20.
 
-A correct answer identifies the confusion of a power with a product, states x = log₂ 40 (or ln 40/ln 2), and places x between 5 and 6 (about 5.3).
+log₁₀ 40 uses the wrong base, √40 undoes a square rather than an unknown exponent, and 20 repeats the original mistake.

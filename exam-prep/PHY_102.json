@@ -4,1104 +4,1304 @@
   "guideTitle": "PHY_102 — General Physics II",
   "questions": [
     {
-      "q": "A body carries a net charge of −4.8 × 10⁻⁷ C. How many excess electrons does it hold?",
+      "q": "A metal sphere is left with a net charge of +3.2 × 10⁻⁹ C. Take e = 1.6 × 10⁻¹⁹ C. How many electrons were removed from it?",
       "options": [
-        "3.0 × 10¹²",
-        "3.0 × 10⁻²⁶",
-        "7.7 × 10⁻²⁶",
-        "4.8 × 10¹²"
-      ],
-      "answerIndex": 0,
-      "why": "Quantisation: n = |q|/e = 4.8 × 10⁻⁷ / 1.6 × 10⁻¹⁹. The mantissa gives 4.8/1.6 = 3.0 and the powers give 10⁻⁷⁻⁽⁻¹⁹⁾ = 10¹², so n = 3.0 × 10¹² — a pure count, no units. This is her worked example. 3.0 × 10⁻²⁶ subtracts the exponents the wrong way round; 7.7 × 10⁻²⁶ multiplies the charge by e instead of dividing; 4.8 × 10¹² keeps the mantissa 4.8 without dividing by 1.6."
-    },
-    {
-      "q": "A negatively charged rod is touched briefly to a neutral insulated metal sphere and then taken away. The sphere is left",
-      "options": [
-        "positively charged, the opposite sign to the rod.",
-        "neutral overall, with the negative charge gathered on the near side.",
-        "negatively charged, the same sign as the rod.",
-        "neutral, because charge cannot cross a single point of contact."
-      ],
-      "answerIndex": 2,
-      "why": "Touching is charging by conduction: charge flows across and is shared, so both bodies end with the SAME sign — negative. Opposite sign is the outcome of induction with grounding, not conduction; charge gathered on one side with no net charge is polarisation, which needs the rod held near and NOT touching; and charge does cross at contact, which is exactly what conduction means."
-    },
-    {
-      "q": "A negatively charged rod is held near an insulated metal sphere, and the sphere is then earthed. To leave the sphere permanently charged you must",
-      "options": [
-        "withdraw the rod first, then disconnect the earth wire.",
-        "withdraw the rod and disconnect the earth wire at the same instant.",
-        "earth the sphere only after the rod has been withdrawn.",
-        "disconnect the earth wire while the rod is still near, then withdraw the rod."
-      ],
-      "answerIndex": 3,
-      "why": "With the rod still near, the repelled electrons have already escaped to earth. Breaking the earth connection first traps that deficit, and only then may the rod be withdrawn, leaving a net positive sphere. Withdrawing the rod first lets the electrons flow straight back up the earth wire and the sphere ends neutral; doing both at once is the same failure with better timing; and earthing after the rod has gone does nothing at all, because there is no longer a field to displace the free electrons."
-    },
-    {
-      "q": "A body that acquires a positive charge by friction has",
-      "options": [
-        "gained protons from the other body.",
-        "lost some of its protons to the other body.",
-        "lost some of its electrons to the other body.",
-        "had some of its neutrons converted into protons."
-      ],
-      "answerIndex": 2,
-      "why": "Only electrons move in solids; protons are locked in nuclei. Positive means a deficit of electrons. Gaining or losing protons never happens in friction, and converting neutrons into protons invents a nuclear reaction to explain a rubbing. Both bodies end equal and opposite, because charge is transferred, never created."
-    },
-    {
-      "q": "Identical metal spheres carrying +12 nC and −4 nC are brought into contact and then separated. Each sphere now carries",
-      "options": [
-        "+4.0 nC.",
-        "+8.0 nC.",
-        "+4.0 nC on one and −4.0 nC on the other.",
-        "+12 nC and −4 nC, unchanged."
-      ],
-      "answerIndex": 0,
-      "why": "Charge is conserved, so the total is (+12) + (−4) = +8 nC; the spheres are identical, so they share it equally: q' = (q₁ + q₂)/2 = +4.0 nC each. +8.0 nC is the correct total but not halved; +4.0 and −4.0 halves the two charges separately instead of sharing the total; and 'unchanged' ignores that contact between conductors shares charge."
-    },
-    {
-      "q": "A charged rod attracts a small piece of neutral aluminium foil. This happens because the foil",
-      "options": [
-        "has acquired a net charge of the opposite sign to the rod.",
-        "has acquired a net charge of the same sign as the rod.",
-        "has lost protons to the surrounding air.",
-        "is polarised, its near side acquiring the opposite charge, while its net charge stays zero."
-      ],
-      "answerIndex": 3,
-      "why": "Bringing a charged rod near a conductor rearranges the free electrons: the near face takes the opposite sign and the far face the same sign, and because the near face is closer, attraction wins. The net charge is still exactly zero — this is polarisation, not charging, which is why the foil is attracted whichever sign the rod carries. Acquiring a net opposite charge would require earthing; acquiring the same sign would require contact and would give repulsion; and protons never leave a solid."
-    },
-    {
-      "q": "Rubbing glass with silk transfers 2.5 × 10¹⁰ electrons from the glass to the silk. The resulting charges are",
-      "options": [
-        "glass −4.0 nC, silk +4.0 nC.",
-        "glass +4.0 nC, silk +4.0 nC.",
-        "glass +4.0 nC, silk −4.0 nC.",
-        "glass +4.0 nC, silk neutral."
-      ],
-      "answerIndex": 2,
-      "why": "q = ne = (2.5 × 10¹⁰)(1.6 × 10⁻¹⁹) = 4.0 × 10⁻⁹ C. The glass LOST electrons, so it is positive; the silk gained them, so it is negative, and (+4.0) + (−4.0) = 0 as conservation demands. Reversing the signs gets the direction of electron flow backwards; two positives and a positive-plus-neutral pair both create net charge out of nothing."
-    },
-    {
-      "q": "Induction becomes more effective as the charged rod is brought closer to the conductor because",
-      "options": [
-        "electrons begin to jump across the gap from the rod.",
-        "the conductor's own charge increases as the rod approaches.",
-        "the conductor's protons are pulled towards the near face.",
-        "the rod's field at the conductor is stronger, so more free electrons are displaced."
-      ],
-      "answerIndex": 3,
-      "why": "Induction works by the rod's field pushing the conductor's free electrons; a stronger field at the conductor displaces more of them, and the field grows as the separation shrinks. Nothing crosses the gap — the moment charge jumps across it is conduction, not induction. Until the conductor is earthed its net charge stays zero, and protons never move."
-    },
-    {
-      "q": "She writes Coulomb's law as F = k|q₁q₂|/r². The absolute-value bars are there because",
-      "options": [
-        "charge is always a positive quantity.",
-        "the law as she states it gives a magnitude only; the direction comes from the diagram.",
-        "the force is always repulsive.",
-        "the bars indicate that the two charges must be equal in size."
+        "5.0 × 10⁻¹¹",
+        "2.0 × 10¹⁰",
+        "5.1 × 10⁻²⁸",
+        "2.0 × 10¹¹"
       ],
       "answerIndex": 1,
-      "why": "Her wording is 'the MAGNITUDE of the electric force … is directly proportional to the product of the charges and inversely proportional to the square of the distance'. Magnitudes go into the formula, the answer comes out positive, and repulsion or attraction is read off the sketch — she never substitutes a signed charge. Charge is not always positive; the force is attractive for unlike signs; and the bars say nothing about the charges being equal."
+      "week": 1,
+      "concept": "Counting electrons with q = ne",
+      "why": "Charge is quantised, q = ne, so n = |q|/e = 3.2 × 10⁻⁹ / 1.6 × 10⁻¹⁹. The mantissas give 3.2/1.6 = 2.0 and the powers give 10⁻⁹⁻⁽⁻¹⁹⁾ = 10¹⁰, so n = 2.0 × 10¹⁰ electrons. The sphere is positive, so those electrons were removed.\n\n5.0 × 10⁻¹¹ divides the wrong way round (e/q); 5.1 × 10⁻²⁸ multiplies q by e instead of dividing; 2.0 × 10¹¹ is a power-of-ten slip in subtracting the exponents."
     },
     {
-      "q": "Which value of the electrostatic constant does she use throughout her deck, and in what role?",
+      "q": "Identical metal spheres P, Q and R stand on insulating stands. P carries +12 nC, Q is neutral and R carries −4.0 nC. P is touched to Q and separated, then P is touched to R and separated. What charge does P carry at the end?",
       "options": [
-        "k = 9.0 × 10⁹ N m²/C², the multiplier in F = k|q₁q₂|/r².",
-        "ε₀ = 8.85 × 10⁻¹² C²/N m², the multiplier in F = ε₀|q₁q₂|/r².",
-        "μ₀ = 4π × 10⁻⁷ T m/A, the multiplier in F = μ₀|q₁q₂|/r².",
-        "k = 1.6 × 10⁻¹⁹ N m²/C², the multiplier in F = k|q₁q₂|/r²."
-      ],
-      "answerIndex": 0,
-      "why": "Every number on her slides follows from k = 1/4πε₀ = 9.0 × 10⁹ N m²/C². Match it and your arithmetic matches hers; use a more precise value and you will get 574 N/C where her slide reads 575 and think you have erred. ε₀ appears only inside the definition of k and is never used numerically; μ₀ belongs to magnetism, weeks 8 to 12; and 1.6 × 10⁻¹⁹ C is the elementary charge, not a constant of the force law."
-    },
-    {
-      "q": "Two protons are 3.6 nm apart. She computes the two forces on an electron that lies on the line between them, 1.2 nm from one of the protons, as |F13| = 16 × 10⁻¹¹ N and |F23| = 4 × 10⁻¹¹ N. The total force on the electron is",
-      "options": [
-        "20 × 10⁻¹¹ N, toward the nearer proton.",
-        "16 × 10⁻¹¹ N, toward the nearer proton.",
-        "12 × 10⁻¹¹ N, toward the nearer proton.",
-        "12 × 10⁻¹¹ N, toward the farther proton."
+        "+6.0 nC",
+        "+4.0 nC",
+        "+1.0 nC",
+        "+2.7 nC"
       ],
       "answerIndex": 2,
-      "why": "The electron is negative, so it is attracted to BOTH protons — and because they sit on opposite sides, the two attractions oppose. The vector sum is the difference, 16 − 4 = 12 × 10⁻¹¹ N, pointing toward the stronger pull, which is the nearer proton. (Her deck stops after the two magnitudes and never states this.) 20 × 10⁻¹¹ N adds two arrows that point opposite ways; 16 × 10⁻¹¹ N forgets the second proton entirely; and the direction toward the farther proton contradicts the fact that the nearer force is four times larger."
+      "week": 1,
+      "concept": "Charge sharing through successive contacts",
+      "why": "Identical conductors in contact share the total equally. First contact: P and Q each get (+12 + 0)/2 = +6.0 nC. Second contact: P and R each get (+6.0 + (−4.0))/2 = +1.0 nC. So P ends with +1.0 nC.\n\n+6.0 nC stops after the first contact; +4.0 nC averages +12 and −4 and forgets that Q took half of P's charge first; +2.7 nC shares the total +8 nC between all three spheres at once, which never happens because they touch in pairs."
     },
     {
-      "q": "In that same example she labels the distances r₁ = 1.2 nm = r and r₂ = 2.4 nm = 2r. The point of the labelling is that",
+      "q": "Point charges of −5.0 μC and −2.0 μC are held 6.0 cm apart in vacuum. Take k = 9.0 × 10⁹ N·m²/C². What is the force between them?",
       "options": [
-        "doubling the separation halves the force, so |F₂₃| = |F₁₃|/2.",
-        "the force depends only on the ratio of the distances, not on their size.",
-        "doubling the separation quarters the force, so |F₂₃| = |F₁₃|/4.",
-        "the two forces must be equal because the two protons are identical."
+        "25 N, repulsive",
+        "1.5 N, repulsive",
+        "2.5 × 10⁻³ N, repulsive",
+        "25 N, attractive"
+      ],
+      "answerIndex": 0,
+      "week": 1,
+      "concept": "Coulomb's law with two charges",
+      "why": "Convert first: r = 0.060 m, so r² = 3.6 × 10⁻³ m². F = k|q₁q₂|/r² = (9.0 × 10⁹)(5.0 × 10⁻⁶)(2.0 × 10⁻⁶)/(3.6 × 10⁻³) = 9.0 × 10⁻²/3.6 × 10⁻³ = 25 N. Both charges are negative, so the force is repulsive.\n\n1.5 N divides by r instead of r²; 2.5 × 10⁻³ N leaves r in centimetres, which costs a factor of 10⁴; the attractive option treats two like charges as unlike."
+    },
+    {
+      "q": "A point charge Q = −8.0 nC is fixed in vacuum. Take k = 9.0 × 10⁹ N·m²/C². What is the electric field at a point 3.0 cm from Q?",
+      "options": [
+        "2.4 × 10³ N/C, directed toward Q",
+        "8.0 N/C, directed toward Q",
+        "8.0 × 10⁴ N/C, directed away from Q",
+        "8.0 × 10⁴ N/C, directed toward Q"
+      ],
+      "answerIndex": 3,
+      "week": 1,
+      "concept": "Field of a point charge",
+      "why": "E = k|Q|/r² with r = 0.030 m, r² = 9.0 × 10⁻⁴ m²: E = (9.0 × 10⁹)(8.0 × 10⁻⁹)/(9.0 × 10⁻⁴) = 72/9.0 × 10⁻⁴ = 8.0 × 10⁴ N/C. The source is negative, so the field points toward it.\n\n2.4 × 10³ N/C forgets to square r; 8.0 N/C leaves r in centimetres; the 'away from Q' option has the right size but the direction of a negative charge's field wrong."
+    },
+    {
+      "q": "A small sphere of mass 2.0 × 10⁻⁶ kg hangs at rest in a uniform electric field of 5.0 × 10⁴ N/C directed vertically upward. Take g = 9.8 m/s². What charge does the sphere carry?",
+      "options": [
+        "+3.9 × 10⁻¹⁰ C",
+        "−3.9 × 10⁻¹⁰ C",
+        "+4.0 × 10⁻¹¹ C",
+        "+9.8 × 10⁻¹ C"
+      ],
+      "answerIndex": 0,
+      "week": 1,
+      "concept": "Charge in equilibrium under gravity and a field",
+      "why": "At rest the electric force balances the weight: qE = mg, so q = mg/E = (2.0 × 10⁻⁶)(9.8)/(5.0 × 10⁴) = 1.96 × 10⁻⁵/5.0 × 10⁴ = 3.9 × 10⁻¹⁰ C. The field is upward and the force must be upward, so the charge is positive. Accept 3.9 to 4.0 × 10⁻¹⁰ C.\n\nThe negative option would be pushed downward by an upward field; 4.0 × 10⁻¹¹ C leaves out g; 9.8 × 10⁻¹ C multiplies by E instead of dividing."
+    },
+    {
+      "q": "Two point charges of +6.0 nC each are fixed on the x-axis at x = 0 and x = 0.30 m. Take k = 9.0 × 10⁹ N·m²/C². What is the resultant electric field at x = 0.15 m?",
+      "options": [
+        "4.8 × 10³ N/C in the +x direction",
+        "Zero",
+        "2.4 × 10³ N/C in the +x direction",
+        "6.0 × 10² N/C in the +x direction"
+      ],
+      "answerIndex": 1,
+      "week": 1,
+      "concept": "Cancellation of fields from equal charges",
+      "why": "Each charge is 0.15 m from the point, and each contributes k(6.0 × 10⁻⁹)/(0.15)² = 54/2.25 × 10⁻² = 2.4 × 10³ N/C. The left charge pushes in the +x direction and the right charge pushes in the −x direction, equal sizes in opposite directions, so the resultant is zero.\n\n2.4 × 10³ N/C is one contribution alone; 4.8 × 10³ N/C adds the two magnitudes as if they pointed the same way; 6.0 × 10² N/C uses the full 0.30 m separation instead of the 0.15 m to the field point."
+    },
+    {
+      "q": "Two point charges attract each other with a force F when their centres are 4.0 cm apart. At what separation is the force between them F/9?",
+      "options": [
+        "36 cm",
+        "1.3 cm",
+        "12 cm",
+        "0.44 cm"
       ],
       "answerIndex": 2,
-      "why": "Coulomb's law is an inverse SQUARE law: the second denominator is (2r)² = 4r², so the second force is exactly a quarter of the first — 16 × 10⁻¹¹ becomes 4 × 10⁻¹¹, and you can write it down without recomputing. Halving is the inverse-first-power answer; the absolute distance matters as much as the ratio; and identical sources at different distances do not give equal forces."
+      "week": 1,
+      "concept": "Inverse-square dependence of the Coulomb force",
+      "why": "F ∝ 1/r², so dividing the force by 9 means multiplying r² by 9, that is multiplying r by √9 = 3. The new separation is 3 × 4.0 = 12 cm.\n\n36 cm multiplies the distance by 9 instead of by its square root; 1.3 cm and 0.44 cm move the charges closer, which increases the force rather than reducing it."
     },
     {
-      "q": "Her Example 2 has Q₁ = −18 μC at x = −9 m, Q₂ = −12 μC at x = +1 m and Q₃ = +24 μC at x = +7 m. She finds F₂₁ = 0.0194 N and F₃₁ = 0.0152 N. The net force on Q₁ is",
+      "q": "Take e = 1.6 × 10⁻¹⁹ C. Which of these measured net charges is impossible for an isolated object?",
       "options": [
-        "4.2 × 10⁻³ N in the −x direction.",
-        "3.46 × 10⁻² N in the −x direction.",
-        "4.2 × 10⁻³ N in the +x direction.",
-        "1.94 × 10⁻² N in the −x direction."
-      ],
-      "answerIndex": 0,
-      "why": "Q₂ is negative and lies to the right, so it repels Q₁ leftward; Q₃ is positive and lies to the right, so it attracts Q₁ rightward. Taking +x as positive, her sum is ΣF = F₃₁ − F₂₁ = 0.0152 − 0.0194 = −0.0042 N, and the minus is a DIRECTION: 4.2 × 10⁻³ N along −x. Adding the two magnitudes gives 3.46 × 10⁻² N and ignores the free-body diagram; +x reverses the answer, since the nearer 12 μC beats the farther 24 μC once distance is squared; and 1.94 × 10⁻² N uses only one of the two forces."
-    },
-    {
-      "q": "For the same three charges, the net electric force on Q₂ is",
-      "options": [
-        "5.26 × 10⁻² N in the +x direction.",
-        "9.14 × 10⁻² N in the −x direction.",
-        "1.94 × 10⁻² N in the +x direction.",
-        "9.14 × 10⁻² N in the +x direction."
-      ],
-      "answerIndex": 3,
-      "why": "Q₁ is negative and lies to the left, so it repels Q₂ to the right; Q₃ is positive and lies to the right, so it attracts Q₂ to the right. Both arrows point +x, so the two forces ADD: F₁₂ = 0.0194 N and F₃₂ = 2.592/36 = 0.0720 N give 0.0914 N along +x. (Her slide sets this part and never solves it.) 5.26 × 10⁻² N subtracts them, which the diagram forbids; the −x direction reverses both contributions; and 1.94 × 10⁻² N leaves out the pull from Q₃."
-    },
-    {
-      "q": "A 2.40 μC charge experiences a 3.00 mN force in an electric field. The magnitude of the field there is",
-      "options": [
-        "1250 N",
-        "8.00 × 10⁻⁴ N/C",
-        "1250 N/C",
-        "7.20 × 10⁻⁹ N/C"
+        "−3.2 × 10⁻¹⁹ C",
+        "+8.0 × 10⁻¹⁹ C",
+        "−4.0 × 10⁻¹⁹ C",
+        "+1.6 × 10⁻¹⁸ C"
       ],
       "answerIndex": 2,
-      "why": "This is the defining equation, not the point-charge formula: E = F/q₀ = (3.00 × 10⁻³)/(2.40 × 10⁻⁶) = 1.25 × 10³ N/C. No value of k appears anywhere; the whole problem is the prefix conversion m = 10⁻³ and μ = 10⁻⁶. 1250 N is the right number with the wrong unit — a field is newtons per coulomb, not newtons; 8.00 × 10⁻⁴ divides the charge by the force; and 7.20 × 10⁻⁹ multiplies them."
+      "week": 1,
+      "concept": "Quantisation of charge",
+      "why": "Charge is quantised: every net charge is a whole-number multiple of e. Divide each by 1.6 × 10⁻¹⁹: 3.2/1.6 = 2, 8.0/1.6 = 5, 16/1.6 = 10, but 4.0/1.6 = 2.5, which is not a whole number. So −4.0 × 10⁻¹⁹ C cannot exist as a net charge.\n\nThe other three are 2e, 5e and 10e in size, all permitted. Note that this is quantisation, not conservation: conservation limits how a total may change, quantisation limits which values it may take."
     },
     {
-      "q": "What are the magnitude and direction of the electric field due to a −6.8 μC point charge at a distance of 7.4 m?",
+      "q": "Charges of +2.0 nC are fixed on the x-axis at x = 0 and at x = 0.30 m. A +1.0 nC charge is placed at x = 0.10 m. Take k = 9.0 × 10⁹ N·m²/C². What is the net force on it?",
       "options": [
-        "1.1 × 10³ N/C, directed radially outward from the charge.",
-        "1.1 × 10³ N/C, directed radially inward toward the charge.",
-        "8.3 × 10³ N/C, directed radially inward toward the charge.",
-        "−1.1 × 10³ N/C, directed radially outward from the charge."
+        "1.35 × 10⁻⁶ N in the +x direction",
+        "2.25 × 10⁻⁶ N in the +x direction",
+        "1.35 × 10⁻⁶ N in the −x direction",
+        "1.8 × 10⁻⁶ N in the +x direction"
+      ],
+      "answerIndex": 0,
+      "week": 2,
+      "concept": "Net force from two collinear charges",
+      "why": "From the charge at x = 0, distance 0.10 m: F₁ = (9.0 × 10⁹)(2.0 × 10⁻⁹)(1.0 × 10⁻⁹)/(0.10)² = 1.8 × 10⁻⁸/1.0 × 10⁻² = 1.8 × 10⁻⁶ N, repulsive, so +x. From the charge at x = 0.30 m, distance 0.20 m: F₂ = 1.8 × 10⁻⁸/4.0 × 10⁻² = 4.5 × 10⁻⁷ N, repulsive, so −x. The arrows oppose, so subtract: 1.8 × 10⁻⁶ − 4.5 × 10⁻⁷ = 1.35 × 10⁻⁶ N in the +x direction, toward the further charge.\n\n2.25 × 10⁻⁶ N adds two arrows that point opposite ways; the −x option keeps the size but sends it toward the nearer charge; 1.8 × 10⁻⁶ N ignores the second charge entirely."
+    },
+    {
+      "q": "A +2.0 nC charge sits at x = 0 and a −8.0 nC charge at x = 0.60 m. Take k = 9.0 × 10⁹ N·m²/C². What is the electric field at x = 0.20 m?",
+      "options": [
+        "900 N/C in the +x direction",
+        "Zero",
+        "900 N/C in the −x direction",
+        "650 N/C in the +x direction"
+      ],
+      "answerIndex": 0,
+      "week": 2,
+      "concept": "Superposition of fields on a line",
+      "why": "Distances from the field point are 0.20 m and 0.40 m. E₁ = (9.0 × 10⁹)(2.0 × 10⁻⁹)/(0.20)² = 18/4.0 × 10⁻² = 450 N/C, pointing away from the positive charge, so +x. E₂ = (9.0 × 10⁹)(8.0 × 10⁻⁹)/(0.40)² = 72/0.16 = 450 N/C, pointing toward the negative charge, so also +x. Same direction, so add: 900 N/C in the +x direction.\n\nZero subtracts two fields that in fact agree in direction; the −x option reverses both arrows; 650 N/C uses 0.60 m rather than the 0.40 m from the second charge to the field point."
+    },
+    {
+      "q": "Two point charges of equal magnitude q, one positive and one negative, are fixed 0.20 m apart. The electric field at the midpoint of the line joining them has magnitude 3.6 × 10⁴ N/C. Take k = 9.0 × 10⁹ N·m²/C². What is q?",
+      "options": [
+        "4.0 × 10⁻⁸ C",
+        "2.0 × 10⁻⁸ C",
+        "8.0 × 10⁻⁸ C",
+        "2.0 × 10⁻⁶ C"
       ],
       "answerIndex": 1,
-      "why": "|E| = k|Q|/r² = 9.0 × 10⁹ × 6.8 × 10⁻⁶ / 7.4² = 6.12 × 10⁴ / 54.76 = 1.1 × 10³ N/C, and the source is negative, so the field points radially INWARD. Note she declares Q = −6.8 × 10⁻⁶ C and then substitutes the magnitude, because |E| is a magnitude. Outward is the field of a positive charge; 8.3 × 10³ N/C divides by 7.4 instead of 7.4²; and a negative magnitude comes from feeding the signed charge into a formula whose left-hand side is |E|. (Her slide gives the number but omits the direction the question asks for.)"
+      "week": 2,
+      "concept": "Finding a charge from a superposed field",
+      "why": "At the midpoint each charge is 0.10 m away, and both fields point from the positive charge toward the negative one, so the magnitudes add: E = 2kq/r² . Rearranging, q = Er²/(2k) = (3.6 × 10⁴)(1.0 × 10⁻²)/(1.8 × 10¹⁰) = 360/1.8 × 10¹⁰ = 2.0 × 10⁻⁸ C, that is 20 nC.\n\n4.0 × 10⁻⁸ C forgets that two charges contribute; 8.0 × 10⁻⁸ C uses the full 0.20 m instead of the 0.10 m to the midpoint; 2.0 × 10⁻⁶ C is a power-of-ten slip."
     },
     {
-      "q": "A +2.00 nC charge sits at the origin and a −5.00 nC charge at x = 0.800 m. The electric field at x = 0.200 m is",
+      "q": "In a region the electric field lines are straight, parallel and evenly spaced, all pointing due west. An electron is released from rest in this region. How does it move?",
       "options": [
-        "450 N/C in the +x direction.",
-        "325 N/C in the +x direction.",
-        "575 N/C in the +x direction.",
-        "520 N/C in the +x direction."
+        "Due east, with constant acceleration",
+        "Due west, with constant acceleration",
+        "Due east, at constant speed",
+        "It remains at rest, because evenly spaced lines mean no net force"
+      ],
+      "answerIndex": 0,
+      "week": 2,
+      "concept": "Motion of a charge in a uniform field",
+      "why": "Field lines show the direction of the force on a positive charge, so an electron, being negative, feels a force opposite to the lines: due east. Evenly spaced parallel lines mean the field is uniform, so the force F = qE is constant and the acceleration is constant, not the speed.\n\nDue west follows the lines and ignores the electron's sign; constant speed would need zero net force; the last option confuses uniform spacing with zero field."
+    },
+    {
+      "q": "At a point the electric field is 2.5 × 10⁴ N/C directed due east. Take e = 1.6 × 10⁻¹⁹ C. What force acts on an electron placed at that point?",
+      "options": [
+        "4.0 × 10⁻¹⁵ N, due east",
+        "6.3 × 10²² N, due west",
+        "4.0 × 10⁻¹⁵ N, due west",
+        "4.0 × 10⁻¹⁴ N, due west"
       ],
       "answerIndex": 2,
-      "why": "E₁ points away from the positive charge, so rightward; E₂ points toward the negative charge, which lies further right, so rightward too — same direction, so the magnitudes add. E₁ = 9.0 × 10⁹ × 2 × 10⁻⁹/(0.200)² = 450 N/C and E₂ = 9.0 × 10⁹ × 5 × 10⁻⁹/(0.600)² = 125 N/C, giving 575 N/C along +x. 450 N/C is E₁ alone; 325 N/C subtracts the two although both arrows agree; and 520 N/C uses 0.800 m for the second distance instead of the source-to-field-point distance 0.600 m — the single commonest way to lose this problem."
+      "week": 2,
+      "concept": "Force on a charge in a field, F = qE",
+      "why": "F = |q|E = (1.6 × 10⁻¹⁹)(2.5 × 10⁴) = 4.0 × 10⁻¹⁵ N. The electron is negative, so the force is antiparallel to E: due west.\n\nThe 'due east' option forgets the sign reversal; 6.3 × 10²² N divides E by e instead of multiplying; 4.0 × 10⁻¹⁴ N is a power-of-ten slip in adding the exponents."
     },
     {
-      "q": "An electron is then placed at that point, where E = 575 N/C along +x. The force on it is",
+      "q": "Charges are fixed on the x-axis: −4.0 μC at x = 0, +3.0 μC at x = 0.30 m and +6.0 μC at x = 0.60 m. Take k = 9.0 × 10⁹ N·m²/C². What is the net force on the +3.0 μC charge?",
       "options": [
-        "9.2 × 10⁻¹⁷ N in the +x direction.",
-        "9.2 × 10⁻¹⁷ N in the −x direction.",
-        "5.75 × 10² N in the −x direction.",
-        "3.6 × 10²¹ N in the −x direction."
-      ],
-      "answerIndex": 1,
-      "why": "F = |q|E = (1.60 × 10⁻¹⁹)(575) = 9.2 × 10⁻¹⁷ N, and because the electron's charge is negative the force is ANTIPARALLEL to E, so along −x. Nothing about the field changed; only the sign of q. The +x direction is the force on a positive charge; 5.75 × 10² N quotes the field's number as a force; and 3.6 × 10²¹ N divides by e instead of multiplying. (Her deck sets this and never answers it.)"
-    },
-    {
-      "q": "One of her slides is headed 'ELECTRIC FIELD AROUND A POSITIVE CHARGE, − Q' and its body reads 'the direction of the electric field is radially inward'. The correct reading is",
-      "options": [
-        "the body text is wrong; the field around a positive charge is radially outward.",
-        "both are right, because the field around any charge is radially inward.",
-        "the magnitude formula must change sign for a negative charge.",
-        "the heading is a misprint for NEGATIVE charge; the field around −Q is radially inward."
+        "0.60 N in the −x direction",
+        "1.8 N in the −x direction",
+        "3.0 N in the +x direction",
+        "3.0 N in the −x direction"
       ],
       "answerIndex": 3,
-      "why": "The body text and the diagram — arrows pointing in toward a minus sphere — are both correct; only the word POSITIVE in the heading is wrong. Do not copy it into a script. The body text is not the error; the field around a positive charge is outward, so 'always inward' is false; and the magnitude formula |E| = k|Q|/r² is identical for both signs — only the arrow changes."
+      "week": 2,
+      "concept": "Net force from two collinear charges",
+      "why": "Both neighbours are 0.30 m away, so r² = 9.0 × 10⁻² m² each time. From the −4.0 μC on the left: F₁ = (9.0 × 10⁹)(4.0 × 10⁻⁶)(3.0 × 10⁻⁶)/(9.0 × 10⁻²) = 0.108/0.09 = 1.2 N, attractive, so −x. From the +6.0 μC on the right: F₂ = 0.162/0.09 = 1.8 N, repulsive, so also −x. The arrows agree, so add: 3.0 N in the −x direction.\n\n0.60 N subtracts them as if they opposed; 1.8 N leaves out the −4.0 μC charge; the +x option gets both directions backwards."
     },
     {
-      "q": "A cell of emf 1.5 V and internal resistance 0.5 Ω drives an external resistor of 2.5 Ω. The current is",
+      "q": "Charges A and B both exert electric forces on a third charge C. A fourth charge D is now brought close to C. What happens to the force that A alone exerts on C?",
       "options": [
-        "0.60 A",
-        "0.75 A",
-        "0.50 A",
-        "2.0 A"
+        "Unchanged",
+        "Reduced, because D shields C from A",
+        "Doubled",
+        "Reversed in direction if D is negative"
+      ],
+      "answerIndex": 0,
+      "week": 2,
+      "concept": "Superposition of electric forces",
+      "why": "By the principle of superposition the total force on C is the vector sum of the separate pairwise forces, and each pairwise force is given by Coulomb's law for that pair alone. Nothing in kq_Aq_C/r² refers to any other charge, so the force from A on C is unchanged; what changes is the total, which now has D's contribution added in.\n\nShielding is not an electrostatic effect between point charges; doubling or reversing would require A's charge or its distance to change, and neither does."
+    },
+    {
+      "q": "A +9.0 nC charge is at x = 0 and a +4.0 nC charge at x = 0.50 m. At which point between them is the resultant electric field zero?",
+      "options": [
+        "0.20 m from the +9.0 nC charge",
+        "0.35 m from the +9.0 nC charge",
+        "0.30 m from the +9.0 nC charge",
+        "0.25 m from the +9.0 nC charge"
       ],
       "answerIndex": 2,
-      "why": "Round the whole loop, ε = I(R + r), so I = 1.5/(2.5 + 0.5) = 0.50 A. 0.60 A is ε/R, leaving the internal resistance out of the sum — the standard error, and it always gives too large a current; 0.75 A subtracts r instead of adding it; 2.0 A inverts the fraction, dividing (R + r) by ε, which would give ohms per volt."
+      "week": 2,
+      "concept": "Locating the point where two fields cancel",
+      "why": "Between two positive charges the two fields point in opposite directions, so they cancel where the magnitudes match: k(9.0)/x² = k(4.0)/(0.50 − x)² in nanocoulombs. Take square roots: (0.50 − x)/x = √(4/9) = 2/3, so 1.5(0.50 − x) = x, 0.75 = 2.5x, x = 0.30 m from the +9.0 nC charge.\n\n0.35 m uses the ratio 9:4 without taking the square root; 0.25 m is the midpoint, which would only be right for equal charges; 0.20 m puts the null nearer the larger charge, which cannot happen."
     },
     {
-      "q": "For that same cell and load, the terminal potential difference is",
+      "q": "A cell of emf 12 V and internal resistance 1.5 Ω is connected across a 4.5 Ω resistor. What current flows?",
       "options": [
-        "1.5 V",
-        "1.25 V",
-        "1.75 V",
-        "0.25 V"
+        "2.7 A",
+        "2.0 A",
+        "8.0 A",
+        "4.0 A"
       ],
       "answerIndex": 1,
-      "why": "V = ε − Ir = 1.5 − (0.50)(0.5) = 1.25 V, and the check V = IR = (0.50)(2.5) = 1.25 V agrees. 1.5 V is the emf, which equals the terminal p.d. only when no current flows; 1.75 V adds the lost volts instead of subtracting them, which is the charging case; and 0.25 V is the lost volts Ir themselves, dissipated inside the cell."
+      "week": 3,
+      "concept": "Current in a single loop with internal resistance",
+      "why": "Round the loop the emf drives current through both resistances: ε = I(R + r), so I = ε/(R + r) = 12/(4.5 + 1.5) = 12/6.0 = 2.0 A.\n\n2.7 A leaves the internal resistance out (12/4.5); 8.0 A divides by r alone; 4.0 A subtracts r from R instead of adding it."
     },
     {
-      "q": "A cell on varying load gives (I, V) readings of (0.20 A, 1.40 V) and (0.80 A, 1.10 V). Its emf and internal resistance are",
+      "q": "The terminal p.d. V of a cell is measured at several currents I, and the points lie on a straight line through (0.50 A, 5.70 V) and (2.00 A, 5.10 V). What are the emf and the internal resistance of the cell?",
       "options": [
-        "ε = 1.40 V, r = 0.50 Ω",
-        "ε = 1.50 V, r = 2.0 Ω",
-        "ε = 1.50 V, r = −0.50 Ω",
-        "ε = 1.50 V, r = 0.50 Ω"
-      ],
-      "answerIndex": 3,
-      "why": "V = ε − rI is a straight line: the gradient is (1.10 − 1.40)/(0.80 − 0.20) = −0.50 V/A, so r = 0.50 Ω, and extrapolating to I = 0 gives ε = 1.40 + (0.20)(0.50) = 1.50 V. Taking 1.40 V as the intercept reads off a measured point rather than the extrapolation; 2.0 Ω is the negative RECIPROCAL of the slope, which has units of siemens, not ohms; and a negative resistance confuses the sign of the gradient with the value of r."
-    },
-    {
-      "q": "A rod of length 0.50 m slides at 3.0 m/s across a field of 0.40 T perpendicular to the circuit, whose total resistance is 2.0 Ω. The emf and current are",
-      "options": [
-        "0.60 V and 0.30 A",
-        "0.60 V and 1.2 A",
-        "0.20 V and 0.10 A",
-        "6.0 V and 3.0 A"
+        "ε = 5.90 V, r = 0.40 Ω",
+        "ε = 5.70 V, r = 0.40 Ω",
+        "ε = 5.90 V, r = 2.5 Ω",
+        "ε = 5.50 V, r = 0.40 Ω"
       ],
       "answerIndex": 0,
-      "why": "Motional emf ε = Bvl = (0.40)(3.0)(0.50) = 0.60 V, and Ohm's law gives I = ε/R = 0.60/2.0 = 0.30 A. Check the energy: F = BIl = 0.060 N, mechanical power Fv = 0.18 W, electrical power I²R = 0.18 W. 1.2 A multiplies by R instead of dividing; 0.20 V leaves the speed out of Bvl; and 6.0 V is a power-of-ten slip carried straight through into the current."
+      "week": 3,
+      "concept": "Getting emf and internal resistance from a V-I line",
+      "why": "The line is V = ε − rI. Gradient = (5.10 − 5.70)/(2.00 − 0.50) = −0.60/1.50 = −0.40 V/A, so r = 0.40 Ω. Then ε = V + Ir = 5.70 + (0.50)(0.40) = 5.90 V, which is the value extrapolated back to I = 0.\n\n5.70 V takes a measured terminal p.d. as the emf; 2.5 Ω uses the negative reciprocal of the gradient, which has the wrong units; 5.50 V subtracts Ir where it should be added, because V is already the reduced value."
     },
     {
-      "q": "A defibrillator capacitor of 100 μF is charged to 5.0 kV. The energy stored is",
+      "q": "A straight rod 0.25 m long moves at 8.0 m/s perpendicular to a uniform magnetic field of 0.60 T, the field being perpendicular to the rod. What emf is induced between its ends?",
       "options": [
-        "2500 J",
-        "0.25 J",
-        "1.25 J",
-        "1250 J"
-      ],
-      "answerIndex": 3,
-      "why": "U = ½CV² = ½(100 × 10⁻⁶)(5.0 × 10³)² = ½(10⁻⁴)(2.5 × 10⁷) = 1250 J. Delivered in 2.0 ms that is 6.25 × 10⁵ W — huge power from a modest battery, because the fill is slow and the release fast. 2500 J is QV without the factor of a half, which is the work when the p.d. is held constant, not while it rises from zero; 0.25 J forgets to square the voltage; and 1.25 J loses three powers of ten in the microfarads."
-    },
-    {
-      "q": "A parallel-plate capacitor in vacuum has A = 0.02 m² and d = 0.005 m. Its capacitance is",
-      "options": [
-        "3.54 × 10⁻¹² F",
-        "3.54 × 10⁻¹⁰ F",
-        "3.54 × 10⁻¹¹ F",
-        "1.77 × 10⁻¹¹ F"
+        "0.15 V",
+        "4.8 V",
+        "1.2 V",
+        "2.0 V"
       ],
       "answerIndex": 2,
-      "why": "C = ε₀A/d = (8.85 × 10⁻¹² × 0.02)/0.005 = 1.77 × 10⁻¹³/0.005 = 3.54 × 10⁻¹¹ F. The deck prints 3.54 × 10⁻¹² F for exactly this data — one power of ten low, and it is a misprint, not a rounding, so use 3.54 × 10⁻¹¹ F. 3.54 × 10⁻¹⁰ F is a power of ten the other way; 1.77 × 10⁻¹¹ F halves the answer, mixing in the ½ that belongs to the energy formula."
+      "week": 3,
+      "concept": "Motional emf, e = Bvl",
+      "why": "The rod sweeps out area at a rate lv, so the flux linked changes at Blv and ε = Bvl = (0.60)(8.0)(0.25) = 1.2 V.\n\n0.15 V leaves out the speed; 4.8 V leaves out the length; 2.0 V leaves out the flux density. Checking units settles it: T × m/s × m = V."
     },
     {
-      "q": "For that capacitor with E = 200 N/C between the plates, the deck reports 1.77 × 10⁻⁷ J. That figure is really",
+      "q": "A coil of 250 turns has area 4.0 × 10⁻³ m² with its plane perpendicular to a uniform magnetic field. The field rises steadily from 0.20 T to 0.60 T in 0.50 s. What is the magnitude of the induced emf?",
       "options": [
-        "the total stored energy in joules, and the deck is correct.",
-        "the energy density in J/m³; the total energy is 1.77 × 10⁻³ J.",
-        "the capacitance in farads, mislabelled.",
-        "the energy density in J/m³; the total energy is 1.77 × 10⁻¹¹ J."
+        "0.80 V",
+        "1.2 V",
+        "0.40 V",
+        "3.2 × 10⁻³ V"
+      ],
+      "answerIndex": 0,
+      "week": 3,
+      "concept": "Faraday's law with N turns",
+      "why": "Φ = BA, so ΔΦ = AΔB = (4.0 × 10⁻³)(0.60 − 0.20) = 1.6 × 10⁻³ Wb per turn. Then |ε| = N ΔΦ/Δt = 250 × 1.6 × 10⁻³/0.50 = 0.80 V. The minus sign in Faraday's law gives direction only, so it is dropped for a magnitude.\n\n1.2 V uses the final field 0.60 T instead of the change; 0.40 V forgets to divide by the time; 3.2 × 10⁻³ V leaves out the 250 turns."
+    },
+    {
+      "q": "A 25 μF capacitor is charged to a potential difference of 400 V. How much energy does it store?",
+      "options": [
+        "4.0 J",
+        "5.0 × 10⁻³ J",
+        "1.0 × 10⁻² J",
+        "2.0 J"
       ],
       "answerIndex": 3,
-      "why": "u_E = ½ε₀E² = ½(8.85 × 10⁻¹²)(200)² = 1.77 × 10⁻⁷, and that expression is an energy DENSITY, so the unit is J/m³. Multiply by the volume Ad = 0.02 × 0.005 = 1.0 × 10⁻⁴ m³ to get the total, U = 1.77 × 10⁻¹¹ J — which the other route, ½CV² with C = 3.54 × 10⁻¹¹ F and V = Ed = 1.0 V, confirms. The deck's 'J' is wrong; 1.77 × 10⁻³ J multiplies by the volume the wrong way; and the number is not a capacitance."
+      "week": 3,
+      "concept": "Energy stored in a capacitor",
+      "why": "U = ½CV² = ½(25 × 10⁻⁶)(400)² = ½(25 × 10⁻⁶)(1.6 × 10⁵) = 2.0 J.\n\n4.0 J forgets the factor ½, which is there because the p.d. rises from 0 to V as the charge is added; 5.0 × 10⁻³ J uses V instead of V²; 1.0 × 10⁻² J is the charge Q = CV in coulombs, not an energy."
     },
     {
-      "q": "Which pair of statements correctly distinguishes a conductor from an insulator?",
+      "q": "In vacuum the electric field in a region has magnitude 5.0 × 10⁵ V/m. Take ε₀ = 8.85 × 10⁻¹² F/m. What is the energy stored per unit volume?",
       "options": [
-        "A conductor has free electrons and a high resistivity; an insulator has bound electrons and zero internal field.",
-        "A conductor has free electrons and zero internal field in electrostatic equilibrium; an insulator has bound electrons and a high resistivity.",
-        "A conductor has zero internal field because it has no electrons; an insulator has a field because it has many.",
-        "An insulator is a conductor that simply needs a larger voltage before it conducts normally."
+        "1.1 J/m³",
+        "2.2 J/m³",
+        "2.2 × 10⁻⁶ J/m³",
+        "4.4 × 10⁻⁶ J/m³"
+      ],
+      "answerIndex": 0,
+      "week": 3,
+      "concept": "Energy density of an electric field",
+      "why": "u = ½ε₀E² = ½(8.85 × 10⁻¹²)(5.0 × 10⁵)² = ½(8.85 × 10⁻¹²)(2.5 × 10¹¹) = 1.1 J/m³, accepting 1.10 to 1.11.\n\n2.2 J/m³ omits the ½; 2.2 × 10⁻⁶ J/m³ uses E instead of E²; 4.4 × 10⁻⁶ J/m³ makes both slips at once. The unit J/m³ marks this as a density: multiply by the volume to get joules."
+    },
+    {
+      "q": "A parallel-plate capacitor in vacuum has plates of area 0.020 m² separated by 2.0 mm, and is connected across a 300 V supply. Take ε₀ = 8.85 × 10⁻¹² F/m. How much energy is stored?",
+      "options": [
+        "8.0 × 10⁻⁶ J",
+        "4.0 × 10⁻⁶ J",
+        "1.3 × 10⁻⁸ J",
+        "4.0 × 10⁻⁹ J"
       ],
       "answerIndex": 1,
-      "why": "The three differences named in the course are exactly these: whether electrons are free to move, whether a field can exist inside the material, and whether it facilitates or resists the flow of electricity. A conductor's free charges rearrange until the internal field is exactly zero, and its resistivity is low. Swapping resistivity and internal field describes neither material; a conductor is full of electrons, not empty of them; and pushed far enough an insulator breaks down rather than conducting normally, so it is not just a conductor with a higher threshold."
+      "week": 3,
+      "concept": "Capacitance and energy of parallel plates",
+      "why": "First the capacitance: C = ε₀A/d = (8.85 × 10⁻¹²)(0.020)/(2.0 × 10⁻³) = 8.85 × 10⁻¹¹ F. Then U = ½CV² = ½(8.85 × 10⁻¹¹)(9.0 × 10⁴) = 3.98 × 10⁻⁶ J, so 4.0 × 10⁻⁶ J, accepting 3.9 to 4.0 × 10⁻⁶ J.\n\n8.0 × 10⁻⁶ J forgets the ½; 1.3 × 10⁻⁸ J uses V instead of V²; 4.0 × 10⁻⁹ J leaves the separation in millimetres, making C a thousand times too small."
     },
     {
-      "q": "A slide says the internal resistance of a cell is 'the negative reciprocal of the slope' of the V–I graph. This is wrong because",
+      "q": "A solid copper block is placed in a steady external electric field and left to reach electrostatic equilibrium. What is the electric field deep inside the metal?",
       "options": [
-        "the slope is positive, so no minus sign belongs there at all.",
-        "the internal resistance is read from the intercept, not the slope.",
-        "the graph of V against I is not a straight line.",
-        "the slope of V against I is already in volts per ampere, i.e. ohms, so r = −(slope)."
-      ],
-      "answerIndex": 3,
-      "why": "Check the units, which is the fastest test available: V/A is the ohm, so minus the slope IS the resistance and a reciprocal would give siemens. The slope really is negative, since V falls as I rises, so the minus sign is needed; the intercept gives the emf, not r; and for a source of constant emf and constant internal resistance the line is straight, which is why the method works."
-    },
-    {
-      "q": "When a linear circuit is analysed by superposition, the sources that are not currently acting are replaced as follows:",
-      "options": [
-        "an ideal voltage source by an open circuit, an ideal current source by a short circuit.",
-        "both by short circuits.",
-        "an ideal voltage source by a short circuit, an ideal current source by an open circuit.",
-        "both by open circuits."
+        "Equal to the external field",
+        "The external field divided by the dielectric constant of copper",
+        "Zero",
+        "Equal in size to the external field but reversed in direction"
       ],
       "answerIndex": 2,
-      "why": "Ask what a dead element forces. A zeroed voltage source holds 0 V across itself at any current — that is a wire, a short. A zeroed current source passes 0 A at any voltage — that is a break, an open circuit. Swapping the two is the commonest superposition error; treating both alike destroys the distinction between the two source types altogether."
+      "week": 3,
+      "concept": "Field inside a conductor in equilibrium",
+      "why": "A conductor has free electrons. They keep moving until the field they create inside exactly cancels the applied field, and once the interior field is zero there is nothing left to drive them, which is what equilibrium means. So E = 0 inside the metal.\n\n'Divided by the dielectric constant' is what happens inside an insulator, whose bound charges only reduce the field; the field is not simply passed through unchanged, and a reversed field of equal size would keep pushing charge the other way and could not be a resting state."
     },
     {
-      "q": "In a network, two sources acting separately each drive 0.75 A through a 4.0 Ω branch in the same direction. With both sources present, the current and the power in that branch are",
+      "q": "A battery of emf 9.0 V and internal resistance 0.60 Ω supplies a current of 1.5 A. What are its terminal p.d. and the power dissipated inside the battery?",
       "options": [
-        "1.50 A and 4.5 W",
-        "0.75 A and 2.25 W",
-        "1.50 A and 2.25 W",
-        "1.50 A and 9.0 W"
+        "9.9 V and 1.35 W",
+        "8.1 V and 0.90 W",
+        "8.1 V and 12.2 W",
+        "8.1 V and 1.35 W"
       ],
       "answerIndex": 3,
-      "why": "Currents and voltages superpose, so 0.75 + 0.75 = 1.50 A. Powers do NOT, because P = I²R is quadratic: the true power is (1.50)²(4.0) = 9.0 W. 4.5 W adds the two single-source powers, 2 × (0.75)²(4.0), which is the error the rule exists to forbid; 0.75 A ignores the second source; and 2.25 W is one source's power quoted alongside the combined current."
+      "week": 3,
+      "concept": "Terminal p.d. and power lost inside a source",
+      "why": "On discharge V = ε − Ir = 9.0 − (1.5)(0.60) = 9.0 − 0.90 = 8.1 V. The power wasted inside is P = I²r = (1.5)²(0.60) = 1.35 W.\n\n9.9 V adds the lost volts instead of subtracting them, which is the charging case; 0.90 W quotes the lost volts as if they were a power; 12.2 W is VI, the power delivered to the external circuit, not the power lost inside."
     },
     {
-      "q": "A load is removed from a network and the voltage across the open terminals measured as 8.00 V; with the load in place the same node sat at 6.00 V. The Thévenin voltage of the network is",
+      "q": "Charges of +5.0 nC and −5.0 nC are held 4.0 mm apart. What is the magnitude of the electric dipole moment of the pair?",
       "options": [
-        "6.00 V, the voltage measured with the load in place.",
-        "2.00 V, the difference between the two readings.",
-        "14.00 V, the sum of the two readings.",
-        "8.00 V, the open-circuit voltage."
+        "4.0 × 10⁻¹¹ C·m",
+        "2.0 × 10⁻¹¹ C·m",
+        "2.0 × 10⁻⁸ C·m",
+        "1.3 × 10⁻⁶ C·m"
       ],
-      "answerIndex": 3,
-      "why": "V_Th is defined as the OPEN-circuit voltage: delete the load first, then measure. Here that is 8.00 V, and reconnecting a 4.0 Ω load in series with R_Th = 1.333 Ω duly gives 8.00/5.333 = 1.50 A, matching the direct solution. The 6.00 V reading is the loaded node voltage, which is what V_Th plus R_Th is designed to predict, not what it equals; and neither the difference nor the sum of the two readings is a defined quantity."
+      "answerIndex": 1,
+      "week": 4,
+      "concept": "Electric dipole moment p = qd",
+      "why": "p = qd uses the magnitude of either charge, not the sum: p = (5.0 × 10⁻⁹)(4.0 × 10⁻³) = 2.0 × 10⁻¹¹ C·m, directed from the negative charge toward the positive one.\n\n4.0 × 10⁻¹¹ C·m adds the two charges first, but the pair is neutral overall so that sum is meaningless; 2.0 × 10⁻⁸ C·m leaves the separation in millimetres; 1.3 × 10⁻⁶ C·m divides q by d instead of multiplying."
     },
     {
-      "q": "Charges of +2.0 nC and −2.0 nC are held 1.0 mm apart. The electric dipole moment of the pair is",
+      "q": "A dipole of moment 6.0 × 10⁻¹² C·m is placed in a uniform electric field with its axis at 30° to the field, and feels a torque of 9.0 × 10⁻⁷ N·m. What is the field strength?",
       "options": [
-        "4.0 × 10⁻¹² C·m, directed from −q toward +q.",
-        "2.0 × 10⁻⁹ C·m, directed from +q toward −q.",
-        "2.0 × 10⁻¹² C·m, directed from −q toward +q.",
-        "zero, because the two charges cancel."
+        "1.5 × 10⁵ N/C",
+        "7.5 × 10⁴ N/C",
+        "3.0 × 10⁵ N/C",
+        "1.7 × 10⁵ N/C"
       ],
       "answerIndex": 2,
-      "why": "p = qd uses the magnitude of ONE charge times the separation: (2.0 × 10⁻⁹)(1.0 × 10⁻³) = 2.0 × 10⁻¹² C·m, and in physics convention it points from the negative charge to the positive one. 4.0 × 10⁻¹² C·m adds the two charges, which is meaningless for an object that is neutral overall; 2.0 × 10⁻⁹ C·m leaves the separation in millimetres and also reverses the direction (that is the chemistry convention); and the moment is not zero — the net CHARGE cancels, which is precisely why the dipole moment is the quantity that survives."
+      "week": 4,
+      "concept": "Torque on a dipole in a uniform field",
+      "why": "τ = pE sin θ, so E = τ/(p sin θ) = 9.0 × 10⁻⁷/[(6.0 × 10⁻¹²)(sin 30°)] = 9.0 × 10⁻⁷/(3.0 × 10⁻¹²) = 3.0 × 10⁵ N/C.\n\n1.5 × 10⁵ N/C leaves out sin θ; 7.5 × 10⁴ N/C multiplies by sin 30° instead of dividing; 1.7 × 10⁵ N/C uses cos 30° in place of sin 30°."
     },
     {
-      "q": "For a short dipole, the field on the axis and the field on the perpendicular bisector, at the same distance r, are related by",
+      "q": "A dipole of moment 2.5 × 10⁻¹² C·m sits in a uniform field of 4.0 × 10⁵ N/C, aligned with the field. How much work must be done on it to turn its axis until it is perpendicular to the field?",
       "options": [
-        "axial = 2 × equatorial, axial parallel to p and equatorial antiparallel to p.",
-        "axial = ½ × equatorial, axial parallel to p and equatorial antiparallel to p.",
-        "they are equal in magnitude and both parallel to p.",
-        "axial = 2 × equatorial, and both are parallel to p."
+        "1.0 × 10⁻⁶ J",
+        "−1.0 × 10⁻⁶ J",
+        "2.0 × 10⁻⁶ J",
+        "Zero"
       ],
       "answerIndex": 0,
-      "why": "Axial E = 2kp/r³ and equatorial E = kp/r³ — same 1/r³ law, factor of two apart. On the axis you are nearer one charge, so the field runs the way p does; on the bisector the components along p survive and point from +q toward −q, i.e. ANTIPARALLEL to p. Halving inverts the ratio; equal magnitudes ignore the factor of two; and making both parallel loses the sign reversal on the bisector."
+      "week": 4,
+      "concept": "Potential energy of a dipole in a field",
+      "why": "U = −pE cos θ. Aligned: U₀ = −pE = −(2.5 × 10⁻¹²)(4.0 × 10⁵) = −1.0 × 10⁻⁶ J. Perpendicular: U₉₀ = 0. The work needed is the increase in energy, W = U₉₀ − U₀ = +1.0 × 10⁻⁶ J.\n\nThe negative value is ΔU with the subtraction the wrong way round; 2.0 × 10⁻⁶ J is the work to turn all the way to 180°; zero would mean the two orientations were equally stable, but the aligned position is the stable one."
     },
     {
-      "q": "A dipole of moment 2.0 × 10⁻¹² C·m sits in a uniform field of 3.0 × 10⁵ N/C with p at 30° to the field. The torque on it and the net force on it are",
+      "q": "A point lies on the perpendicular bisector of a short dipole, at a distance much larger than the charge separation. Which statement describes the potential and the field there?",
       "options": [
-        "5.2 × 10⁻⁷ N·m and zero.",
-        "3.0 × 10⁻⁷ N·m and zero.",
-        "3.0 × 10⁻⁷ N·m and 6.0 × 10⁻⁷ N.",
-        "zero and zero."
-      ],
-      "answerIndex": 1,
-      "why": "τ = pE sin θ = (2.0 × 10⁻¹²)(3.0 × 10⁵)(0.500) = 3.0 × 10⁻⁷ N·m, and in a UNIFORM field the forces qE and −qE on the two ends are equal and opposite, so the net force is exactly zero — the dipole turns but does not translate. 5.2 × 10⁻⁷ uses cos 30°, which belongs to the energy U = −pE cos θ, not the torque; a non-zero net force needs a non-uniform field; and the torque vanishes only at θ = 0° or 180°."
-    },
-    {
-      "q": "A charged parallel-plate capacitor is disconnected from its battery and a dielectric of constant κ = 5.0 is then slid between the plates. Compared with before,",
-      "options": [
-        "Q is unchanged, C is 5 times larger, and V and E are 5 times smaller.",
-        "V is unchanged, C is 5 times larger, and Q is 5 times larger.",
-        "Q is unchanged, C is 5 times smaller, and V is 5 times larger.",
-        "Q, C, V and E are all unchanged, because the dielectric is an insulator."
+        "V = 0, and E is antiparallel to p",
+        "V = 0, and E = 0 as well",
+        "V is a maximum, and E = 0",
+        "V = 0, and E is parallel to p"
       ],
       "answerIndex": 0,
-      "why": "The test is whether the source is still connected. Disconnected means the charge is trapped: Q is fixed, C = κC₀ rises by 5, so V = Q/C and E = V/d both fall by 5 — a 177 pF capacitor at 100 V becomes 885 pF at 20 V. Holding V fixed while Q rises fivefold is the constant-VOLTAGE case, which needs the battery left attached; capacitance never falls when a dielectric is inserted; and 'nothing changes' ignores the polarisation of the slab, which is exactly what reduces the internal field."
+      "week": 4,
+      "concept": "Dipole potential and field on the equatorial plane",
+      "why": "V = kp cos θ/r², and on the bisector θ = 90°, so cos θ = 0 and V = 0 everywhere on that plane. The field does not vanish: the two contributions have equal magnitudes, their components along the bisector cancel and the components parallel to the axis survive, giving E = kp/r³ directed from the positive charge toward the negative one, that is antiparallel to p.\n\nA potential of zero on a surface does not mean the field is zero, because E measures how fast V changes across the surface, not its value; the 'parallel to p' option has that direction reversed, and the maximum of V is on the axis, not here."
     },
     {
-      "q": "Resistors of 4 Ω, 6 Ω and 10 Ω are connected in parallel. The equivalent resistance is",
+      "q": "A battery of emf 12.0 V and internal resistance 0.40 Ω is being charged by an external supply that drives a current of 3.0 A into its positive terminal. What is the potential difference across its terminals?",
       "options": [
-        "0.52 Ω",
-        "1.94 Ω",
-        "20 Ω",
-        "6.67 Ω"
-      ],
-      "answerIndex": 1,
-      "why": "1/R_eq = 1/4 + 1/6 + 1/10 = 15/60 + 10/60 + 6/60 = 31/60, and then INVERT: R_eq = 60/31 = 1.94 Ω. Check it against the rule that a parallel equivalent is always below the smallest branch, and 1.94 < 4. 0.52 Ω is 31/60 left uninverted, the single commonest lost mark here; 20 Ω applies the series rule; and 6.67 Ω is the average of the three, which is not a rule at all."
-    },
-    {
-      "q": "Resistors of 3 Ω, 5 Ω, 9 Ω and 10 Ω are connected in series. The equivalent resistance is",
-      "options": [
-        "1.30 Ω",
-        "10 Ω",
-        "27 Ω",
-        "0.77 Ω"
+        "10.8 V",
+        "12.0 V",
+        "13.2 V",
+        "1.2 V"
       ],
       "answerIndex": 2,
-      "why": "R_eq = R₁ + R₂ + R₃ + R₄ = 3 + 5 + 9 + 10 = 27 Ω, and it must land ABOVE the largest single resistor, which 27 > 10 confirms. 1.30 Ω applies the parallel formula and inverts; 10 Ω quotes the largest resistor alone; and 0.77 Ω is the sum of reciprocals left uninverted. Series adds and goes up; parallel adds reciprocals and comes down."
+      "week": 4,
+      "concept": "Terminal voltage of a source on charge",
+      "why": "On charge the driving supply must push current through the internal resistance as well as against the emf, so V = ε + Ir = 12.0 + (3.0)(0.40) = 12.0 + 1.2 = 13.2 V.\n\n10.8 V uses the discharge formula V = ε − Ir; 12.0 V ignores the internal resistance, which is only right at zero current; 1.2 V is the Ir term alone."
     },
     {
-      "q": "In her definitions, a junction is a point where",
+      "q": "A 10 V source through a 5.0 Ω resistor and a 20 V source through a 10 Ω resistor both feed node A, and A returns to ground through a 10 Ω resistor. Both sources have their negative terminals grounded and have negligible internal resistance. What is the voltage at A?",
       "options": [
-        "two or more conductors meet; a loop is any path between two points.",
-        "the current changes direction; a loop is any circuit containing a battery.",
-        "a resistor meets a battery; a loop is any mesh with no junction in it.",
-        "three or more conductors meet; a loop is any closed conducting path."
-      ],
-      "answerIndex": 3,
-      "why": "Her slide is explicit — three or more conductors for a junction, and any closed conducting path for a loop — and her figure prints 'Not a Junction' on two corners where only two conductors meet. At a two-conductor point the current has nowhere to divide, so the junction rule has nothing to say. The other options loosen the definition until every corner counts as a junction, which is exactly the mistake the labelled figure is there to prevent."
-    },
-    {
-      "q": "Kirchhoff's two rules rest on which conservation laws?",
-      "options": [
-        "ΣI = 0 expresses conservation of energy; ΣV = 0 expresses conservation of charge.",
-        "ΣI = 0 at a junction expresses conservation of charge; ΣV = 0 round a loop expresses conservation of energy.",
-        "Both express conservation of charge.",
-        "Both express conservation of energy."
-      ],
-      "answerIndex": 1,
-      "why": "Her Summary slide states it in those words: no charge can accumulate at a junction, so what enters per second leaves per second; and the potential changes round a closed loop must sum to zero, because a charge returned to its starting point has gained no energy. Swapping the two, or attaching both to one law, loses the reason each rule is true and the reason there are two of them rather than one."
-    },
-    {
-      "q": "Travelling round a loop, you cross a battery from its − terminal to its + terminal, and you pass through a resistor in the same direction as the assumed current. The two terms enter the loop equation as",
-      "options": [
-        "−ε and −IR",
-        "+ε and +IR",
-        "+ε and −IR",
-        "−ε and +IR"
+        "13.3 V",
+        "15 V",
+        "10 V",
+        "30 V"
       ],
       "answerIndex": 2,
-      "why": "Her four sign rules: crossing a source from − to + is +ε and from + to − is −ε; walking through a resistor WITH the assumed current is −IR, because the current runs downhill in potential, and against it is +IR, a rise. The emf sign depends only on the order in which you cross the terminals, never on which way the current runs, and the IR sign depends only on the travel direction relative to the current arrow. Each of the other combinations flips one of those two independent rules."
+      "week": 4,
+      "concept": "Nodal analysis at a single node",
+      "why": "Take ground as the reference and apply the junction rule at A, writing each branch current as (far-end voltage − V_A)/R: (10 − V)/5 + (20 − V)/10 = V/10. Multiply by 10: 2(10 − V) + (20 − V) = V, so 40 − 3V = V, giving V = 10 V. As a check, the branch currents are 0 A, 1.0 A and 1.0 A, which balance.\n\n13.3 V leaves out the 10 Ω path to ground; 15 V is the plain average of the two source voltages, which ignores the resistors; 30 V adds the sources as if they were in series."
     },
     {
-      "q": "Her Example 1 loop is −I(4 Ω) − 4 V − I(7 Ω) + 12 V − I(2 Ω) − I(3 Ω) = 0. The current is",
+      "q": "A 24 V source of negligible internal resistance is in series with an 8.0 Ω resistor, a 4.0 Ω resistor runs from the far end of the 8.0 Ω resistor to ground, and the output terminals are taken across the 4.0 Ω resistor. What are the Thevenin voltage and Thevenin resistance at those terminals?",
       "options": [
-        "1.0 A",
-        "0.5 A",
-        "0.8 A",
-        "2.0 A"
+        "8.0 V and 12 Ω",
+        "8.0 V and 2.7 Ω",
+        "24 V and 2.7 Ω",
+        "16 V and 2.7 Ω"
       ],
       "answerIndex": 1,
-      "why": "Collect the emfs, 12 − 4 = 8 V, and the resistances, 4 + 7 + 2 + 3 = 16 Ω, so 8 V = I(16 Ω) and I = 0.5 A. Since I comes out positive, the assumed direction was right. 1.0 A adds the two emfs as 16 V instead of subtracting the opposing 4 V; 0.8 A uses only the two external resistors, 3 + 7 = 10 Ω, and drops the batteries' internal 2 Ω and 4 Ω; 2.0 A inverts the final division."
+      "week": 4,
+      "concept": "Thevenin equivalent of a divider",
+      "why": "With nothing connected across the terminals the two resistors form a divider, so V_Th = V_oc = 24 × 4.0/(8.0 + 4.0) = 8.0 V. For R_Th, zero the source, which turns the ideal voltage source into a wire, leaving 8.0 Ω in parallel with 4.0 Ω: R_Th = (8 × 4)/12 = 2.7 Ω, accepting 2.67 Ω.\n\n12 Ω adds the resistors in series, which is what the source sees, not what the terminals see; 24 V ignores the divider; 16 V uses the wrong resistor on top of the divider fraction."
     },
     {
-      "q": "In that circuit, with I = 0.5 A, the potential difference V_ab found by the lower path is (0.5)(7) + 4 + (0.5)(4). Its value, and the check by the upper path, are",
+      "q": "In a superposition analysis of a linear circuit, one of the independent sources is an ideal current source that is not acting. What must replace it in the diagram?",
       "options": [
-        "9.5 V, confirmed by 12 + (0.5)(2) + (0.5)(3) = 14.5 V.",
-        "5.5 V, confirmed by 12 − (0.5)(7) − (0.5)(4) = 6.5 V.",
-        "9.5 V, confirmed by 12 − (0.5)(2) − (0.5)(3) = 9.5 V.",
-        "1.5 V, confirmed by 4 − (0.5)(2) − (0.5)(3) = 1.5 V."
+        "A short circuit",
+        "An open circuit",
+        "A resistor equal to its internal resistance",
+        "An ideal voltage source of the same numerical value"
+      ],
+      "answerIndex": 1,
+      "week": 4,
+      "concept": "Zeroing sources for superposition",
+      "why": "Zeroing a source means forcing the quantity it fixes to zero. A dead current source passes zero amperes at any voltage, and the element that does that is a break in the circuit, so it becomes an open circuit. A dead voltage source holds zero volts at any current, so that one becomes a wire, a short circuit.\n\nSwapping the two is the commonest superposition error; an ideal current source has infinite internal resistance, so replacing it by a finite resistor is wrong; replacing it by a voltage source leaves it acting."
+    },
+    {
+      "q": "A 40 pF air capacitor is connected to a 50 V battery. With the battery still connected, a slab of dielectric constant κ = 4.0 is slid in to fill the gap. What are the new charge and the new stored energy?",
+      "options": [
+        "8.0 nC and 5.0 × 10⁻⁸ J",
+        "2.0 nC and 5.0 × 10⁻⁸ J",
+        "0.50 nC and 1.3 × 10⁻⁸ J",
+        "8.0 nC and 2.0 × 10⁻⁷ J"
+      ],
+      "answerIndex": 3,
+      "week": 4,
+      "concept": "Dielectric inserted at constant voltage",
+      "why": "The battery stays connected, so V is held at 50 V while the capacitance rises: C = κC₀ = 4.0 × 40 pF = 160 pF. Then Q = CV = (1.6 × 10⁻¹⁰)(50) = 8.0 × 10⁻⁹ C = 8.0 nC, and U = ½CV² = ½(1.6 × 10⁻¹⁰)(2500) = 2.0 × 10⁻⁷ J. The battery supplies the extra charge, so both Q and U rise by the factor κ.\n\n2.0 nC and 5.0 × 10⁻⁸ J are the values before insertion; the mixed option keeps the old energy with the new charge; 0.50 nC and 1.3 × 10⁻⁸ J divide by κ, which is the disconnected case where Q is fixed and V falls."
+    },
+    {
+      "q": "Resistors of 4.0 Ω, 6.0 Ω and 12 Ω are connected in parallel. What is the equivalent resistance?",
+      "options": [
+        "0.50 Ω",
+        "22 Ω",
+        "2.0 Ω",
+        "7.3 Ω"
       ],
       "answerIndex": 2,
-      "why": "The lower path gives 3.5 + 4 + 2 = 9.5 V, and walking b to a over the top gives +12 for the battery crossed − to +, then −1.0 and −1.5 for the two resistors crossed with the current: 9.5 V again. Two independent routes agreeing IS the loop rule, and it is the fastest way to catch a sign error. Adding the two upper IR terms instead of subtracting them walks those resistors against the current although the travel is with it, and the routes ending at 5.5 V or 1.5 V mix resistors from the wrong branches into the sum."
+      "week": 5,
+      "concept": "Resistors in parallel",
+      "why": "1/R_eq = 1/4 + 1/6 + 1/12. Over the common denominator 12 that is 3/12 + 2/12 + 1/12 = 6/12 = 0.50 per ohm, so R_eq = 1/0.50 = 2.0 Ω. Check it against the rule that a parallel equivalent is always below the smallest branch: 2.0 Ω < 4.0 Ω.\n\n0.50 Ω is 1/R_eq left uninverted; 22 Ω adds them as if in series; 7.3 Ω is their average, which is not how either combination works."
     },
     {
-      "q": "In the same circuit the power output of each emf is P₁₂ᵥ = (12)(0.5) = 6 W and P₄ᵥ = (−4)(0.5) = −2 W. The negative value means",
+      "q": "A 6.0 Ω resistor is in series with two 8.0 Ω resistors that are in parallel with each other, and the whole combination is across a 20 V battery of negligible internal resistance. What current does the battery supply?",
       "options": [
-        "an arithmetic error has been made, since power cannot be negative.",
-        "the 4 V battery delivers 2 W in the opposite direction round the loop.",
-        "the assumed current direction must be reversed and the problem redone.",
-        "the 4 V battery is being charged, absorbing 2 W rather than delivering it."
+        "0.91 A",
+        "2.0 A",
+        "1.4 A",
+        "5.0 A"
       ],
-      "answerIndex": 3,
-      "why": "The stronger battery drives current INTO the 4 V battery's + terminal, so it is being charged and its power output is negative — it absorbs 2 W. The books balance: 6 − 2 = 4 W delivered, and I²R = (0.5)²(16) = 4 W dissipated. A negative power output is a legitimate answer, not an error; power is not a direction, so 'delivers in the opposite direction' is meaningless; and the current came out positive, so nothing needs reversing."
+      "answerIndex": 1,
+      "week": 5,
+      "concept": "Series and parallel combination in a circuit",
+      "why": "Two equal resistors in parallel give half of one: 8.0/2 = 4.0 Ω. That sits in series with the 6.0 Ω, so R_eq = 6.0 + 4.0 = 10 Ω, and I = V/R_eq = 20/10 = 2.0 A.\n\n0.91 A adds all three in series (22 Ω); 1.4 A uses only one of the parallel pair (14 Ω); 5.0 A uses the parallel pair alone and forgets the 6.0 Ω in series."
     },
     {
-      "q": "Solving a network gives one branch current as −0.67 A. The correct response is",
+      "q": "Five wires meet at a junction. Currents of 4.0 A and 2.5 A flow into it, and currents of 3.0 A and 1.5 A flow out along two of the others. What is the current in the fifth wire?",
       "options": [
-        "accept it: the magnitude is 0.67 A and the true direction is opposite to the assumed arrow.",
-        "redraw the arrow and solve the whole network again.",
-        "take the magnitude and keep the assumed direction.",
-        "treat it as an impossible result and check for an arithmetic error."
+        "2.0 A, out of the junction",
+        "2.0 A, into the junction",
+        "11 A, out of the junction",
+        "1.0 A, out of the junction"
       ],
       "answerIndex": 0,
-      "why": "Her remark after Example 1 is 'since I is positive, our assumed current direction is correct', and the corollary is that a negative current has the right size with the arrow reversed. Nothing is redone — the algebra has corrected your guess for you, which is why you are allowed to guess. Re-solving wastes exam time and gives the same number; keeping the assumed direction discards the information the minus sign carries; and a negative current is not an error at all."
+      "week": 5,
+      "concept": "Kirchhoff's junction rule",
+      "why": "Charge cannot pile up at a junction, so the current in equals the current out. In: 4.0 + 2.5 = 6.5 A. Out so far: 3.0 + 1.5 = 4.5 A. The fifth wire must carry the remaining 6.5 − 4.5 = 2.0 A out of the junction.\n\n'Into the junction' would make the total in 8.5 A against 4.5 A out; 11 A adds every current in the problem; 1.0 A comes from subtracting the two outgoing currents from each other."
     },
     {
-      "q": "The rms value of an alternating current is defined as",
+      "q": "A single loop contains a 20 V battery of internal resistance 1.0 Ω and an 8.0 V battery of internal resistance 0.50 Ω connected so that they oppose each other, together with external resistors of 4.5 Ω and 2.0 Ω. What current flows?",
       "options": [
-        "the average of the current over one complete cycle.",
-        "the average of the current over one half-cycle.",
-        "the maximum instantaneous current reached during a cycle.",
-        "the steady direct current that would dissipate the same power in the same resistive load."
-      ],
-      "answerIndex": 3,
-      "why": "Her slide defines it by equal heating: 'the equivalent direct current (DC) value that would produce the same amount of power dissipation in a resistive load'. That, not the shape of the curve, is what fixes it. The full-cycle average is zero, which is precisely why the rms was needed; the half-cycle mean is a different quantity (2/π of the peak) that she labels on a diagram and never uses; and the maximum instantaneous value is the PEAK."
-    },
-    {
-      "q": "The peak value of a waveform is",
-      "options": [
-        "the full swing from the trough to the crest.",
-        "the rms value multiplied by 2.",
-        "the maximum instantaneous value in a cycle, measured from the zero reference point.",
-        "the average of the positive half-cycle."
+        "3.5 A",
+        "2.5 A",
+        "1.5 A",
+        "1.8 A"
       ],
       "answerIndex": 2,
-      "why": "Her wording: 'the highest point of the waveform … typically measured from the zero reference point'. The trough-to-crest swing is twice the peak and the deck never names or uses it; the rms-to-peak factor is √2 = 1.4142, not 2; and the half-cycle average is a different quantity again."
+      "week": 5,
+      "concept": "Loop rule with two opposing emfs",
+      "why": "Walking round the loop with the assumed current, the emfs enter with opposite signs because the batteries face each other, so only their difference drives the current: 20 − 8.0 = 12 V. Every resistance in the loop counts, internal ones included: 1.0 + 0.50 + 4.5 + 2.0 = 8.0 Ω. Then 12 = I(8.0), so I = 1.5 A.\n\n3.5 A adds the emfs, which would be right only if both drove the current the same way; 1.8 A leaves out the two internal resistances; 2.5 A uses the 20 V battery alone."
     },
     {
-      "q": "A source has a frequency of 60.0 Hz. Its angular frequency is",
+      "q": "Travelling round a loop you pass through a resistor in the direction opposite to the assumed current, and then through a battery, entering at its + terminal and leaving at its − terminal. What signs do these two terms carry in the loop equation?",
       "options": [
-        "60.0 rad/s",
-        "9.55 rad/s",
-        "377 rad/s",
-        "0.0167 rad/s"
+        "+IR and −ε",
+        "−IR and +ε",
+        "+IR and +ε",
+        "−IR and −ε"
+      ],
+      "answerIndex": 0,
+      "week": 5,
+      "concept": "Sign rules for the loop equation",
+      "why": "Walking against the assumed current through a resistor means walking from the low-potential end to the high-potential end, a rise, so the term is +IR. Crossing a source from + to − is a fall in potential, so the emf enters as −ε.\n\nThe emf sign depends only on the order in which the terminals are crossed, never on which way the current runs, and the IR sign depends only on the travel direction relative to the current arrow. Reversing the direction of travel would flip both signs together and leave the solution unchanged."
+    },
+    {
+      "q": "In a bridge circuit the assumed current I₁ = 4.0 A arrives at junction b, while the assumed currents I₃ (from b to d) and I₅ (from b to c) leave it. Solving the network gives I₅ = −1.5 A. What is I₃?",
+      "options": [
+        "2.5 A",
+        "5.5 A",
+        "−5.5 A",
+        "1.5 A"
+      ],
+      "answerIndex": 1,
+      "week": 5,
+      "concept": "Junction rule with a negative branch current",
+      "why": "The junction rule at b reads I₁ = I₃ + I₅. Substituting the signed value, 4.0 = I₃ + (−1.5), so I₃ = 4.0 + 1.5 = 5.5 A, in the assumed direction from b to d. The negative I₅ simply means 1.5 A actually flows from c to b, so it arrives at b along with I₁ and the arm b to d has to carry both.\n\n2.5 A treats I₅ as 1.5 A leaving b, ignoring its sign; −5.5 A carries the minus sign into the wrong branch; 1.5 A confuses the two arms."
+    },
+    {
+      "q": "A 12 V battery of negligible internal resistance is connected across a 6.0 Ω resistor and a 12 Ω resistor joined in parallel. What total power does the battery deliver?",
+      "options": [
+        "8.0 W",
+        "24 W",
+        "12 W",
+        "36 W"
+      ],
+      "answerIndex": 3,
+      "week": 5,
+      "concept": "Power in parallel branches",
+      "why": "In parallel each resistor has the full 12 V across it, so P = V²/R branch by branch: 144/6.0 = 24 W and 144/12 = 12 W, giving 36 W in total. The same follows from R_eq = 4.0 Ω and P = V²/R_eq = 144/4.0 = 36 W.\n\n8.0 W treats the resistors as being in series (18 Ω); 24 W and 12 W are the two branches taken singly, and the smaller resistance is the one taking the larger share."
+    },
+    {
+      "q": "Walking from point a to point b you pass through a 5.0 Ω resistor against the direction of its 1.2 A current, then through a 6.0 V battery from its + terminal to its − terminal, then through a 2.0 Ω resistor in the direction of the same 1.2 A current. What is V_b − V_a?",
+      "options": [
+        "−2.4 V",
+        "+2.4 V",
+        "−14.4 V",
+        "+9.6 V"
+      ],
+      "answerIndex": 0,
+      "week": 5,
+      "concept": "Potential difference along a path",
+      "why": "Add the potential changes in order. Against the current through 5.0 Ω is a rise: +(1.2)(5.0) = +6.0 V. Crossing the battery from + to − is a fall: −6.0 V. With the current through 2.0 Ω is a fall: −(1.2)(2.0) = −2.4 V. Total: 6.0 − 6.0 − 2.4 = −2.4 V, so b sits 2.4 V below a.\n\n+2.4 V has every sign reversed, which is what you get by walking from b to a; −14.4 V makes both IR terms negative by using the travel direction alone; +9.6 V crosses the battery with the wrong sign."
+    },
+    {
+      "q": "An alternating supply has an rms voltage of 110 V. What is its peak voltage?",
+      "options": [
+        "77.8 V",
+        "220 V",
+        "156 V",
+        "110 V"
       ],
       "answerIndex": 2,
-      "why": "ω = 2πf = 2π(60.0) = 377 rad s⁻¹, and the ωt inside sin ωt is an angle in RADIANS. Writing sin(60t) uses f where ω belongs and is out by a factor of 6.28; 9.55 divides by 2π instead of multiplying; and 0.0167 s is the period T, not an angular frequency."
+      "week": 6,
+      "concept": "Converting between rms and peak values",
+      "why": "V_rms = V_max/√2, so V_max = √2 V_rms = 1.4142 × 110 = 155.6 V, that is about 156 V. Accept 155 to 156 V. The peak of a sinusoid is always larger than its rms value, which is the quick check on the direction of the conversion.\n\n77.8 V multiplies by 0.7071 instead of dividing, giving a peak smaller than the rms value; 220 V doubles; 110 V confuses the two values."
     },
     {
-      "q": "Why does she square the current before averaging it?",
+      "q": "An alternating supply has a period of 20 ms. What are its frequency and its angular frequency?",
       "options": [
-        "Squaring converts the current into power directly, which is what a meter reads.",
-        "Squaring removes the frequency from the problem.",
-        "Because the average of I² equals the square of the average of I.",
-        "The full-cycle average of I is zero, but I² is never negative, and its average is ½I²_max."
+        "50 Hz and 50 rad/s",
+        "50 Hz and 314 rad/s",
+        "20 Hz and 126 rad/s",
+        "0.020 Hz and 0.13 rad/s"
+      ],
+      "answerIndex": 1,
+      "week": 6,
+      "concept": "Period, frequency and angular frequency",
+      "why": "f = 1/T = 1/0.020 = 50 Hz, and ω = 2πf = 2π(50) = 314 rad/s, equivalently ω = 2π/T. Accept 314 to 315 rad/s.\n\n'50 rad/s' uses f where ω belongs and is out by the factor 2π; 20 Hz reads the period in milliseconds as a frequency; the last option keeps the period in seconds without inverting it."
+    },
+    {
+      "q": "A source v = 80 sin(120πt) V, with t in seconds, is connected across a 25 Ω resistor. What is the rms current?",
+      "options": [
+        "3.2 A",
+        "4.5 A",
+        "1.6 A",
+        "2.3 A"
       ],
       "answerIndex": 3,
-      "why": "Her argument in three moves: the plain average carries no information because the positive and negative half-cycles cancel; squaring destroys the sign so the negative half stops cancelling the positive; and the squared wave oscillates between 0 and I²_max with its mean line at exactly half, giving (I²)_av = ½I²_max and hence I_rms = 0.7071 I_max. Read the name backwards — root of the mean of the square, in that order. Squaring gives I², not power, until you multiply by R; the frequency was never in the calculation; and the average of a square is emphatically not the square of the average, which is the whole point."
+      "week": 6,
+      "concept": "Peak and rms current in a resistor",
+      "why": "Read the amplitude off the equation: V_max = 80 V. Then I_max = V_max/R = 80/25 = 3.2 A, and I_rms = 0.7071 I_max = 2.26 A, so 2.3 A. Accept 2.2 to 2.3 A. Equally, V_rms = 56.6 V and I_rms = 56.6/25 = 2.3 A.\n\n3.2 A is the peak current, not the rms; 4.5 A multiplies by √2 instead of dividing; 1.6 A halves the peak instead of dividing by √2."
     },
     {
-      "q": "A household circuit operates at an rms voltage of 120 V. The peak voltage is",
+      "q": "A 40 Ω resistor carries an alternating current i = 2.4 sin(ωt) A. What average power does it dissipate?",
       "options": [
-        "84.9 V",
-        "240 V",
-        "170 V",
-        "120 V"
+        "115 W",
+        "230 W",
+        "58 W",
+        "96 W"
+      ],
+      "answerIndex": 0,
+      "week": 6,
+      "concept": "Average power from a peak current",
+      "why": "The average power uses the rms current: I_rms = 2.4/√2 = 1.697 A, so P_av = I²_rms R = (1.697)²(40) = 2.88 × 40 = 115 W. Accept 115 to 116 W. The same thing in one step is P_av = ½I²_max R.\n\n230 W uses the peak current in P = I²R and so doubles the answer; 58 W applies the factor 0.7071 twice; 96 W multiplies the peak current by 40 as if it were a voltage."
+    },
+    {
+      "q": "An AC ammeter in series with a heating element reads 5.0 A. What does that reading tell you about the current?",
+      "options": [
+        "A steady direct current of 5.0 A would heat the element at the same average rate",
+        "The current reaches 5.0 A at the peak of each cycle",
+        "The average of the current over one complete cycle is 5.0 A",
+        "The current has the value 5.0 A at every instant"
+      ],
+      "answerIndex": 0,
+      "week": 6,
+      "concept": "Meaning of an rms value",
+      "why": "AC meters are calibrated to read rms values, and the rms value is defined as the steady direct current that would dissipate the same average power in a resistive load. So 5.0 A rms and 5.0 A DC heat the element equally.\n\nThe peak is larger, 5.0 × √2 = 7.1 A; the plain average over a complete cycle is zero, since the two half-cycles cancel, which is exactly why rms values are used instead; and an alternating current is not constant at any value."
+    },
+    {
+      "q": "A voltage is given by v = 150 sin(100πt) V, with t in seconds. What is the instantaneous voltage at t = 2.0 ms?",
+      "options": [
+        "150 V",
+        "88 V",
+        "1.6 V",
+        "106 V"
+      ],
+      "answerIndex": 1,
+      "week": 6,
+      "concept": "Instantaneous value of a sinusoidal voltage",
+      "why": "The angle is ωt = 100π × 2.0 × 10⁻³ = 0.2π rad = 36°, and sin 36° = 0.588. So v = 150 × 0.588 = 88 V. Accept 88 to 89 V.\n\n150 V is the peak, reached only when ωt = 90°; 1.6 V comes from treating the angle 0.628 as degrees rather than radians; 106 V is the rms value, which is not what an instantaneous value asks for."
+    },
+    {
+      "q": "A heater is rated 1.5 kW when connected to a 250 V rms supply. What peak current does it draw?",
+      "options": [
+        "6.0 A",
+        "4.2 A",
+        "8.5 A",
+        "12 A"
       ],
       "answerIndex": 2,
-      "why": "V_max = V_rms √2 = 120 × 1.4142 = 169.7, which she rounds to 170 V. Going rms to peak the answer must get BIGGER, because the rms value of a sinusoid is always less than its peak. 84.9 V multiplies by 0.7071 instead, the factor used the wrong way; 240 V doubles rather than multiplying by √2; and 120 V is the value you started with."
+      "week": 6,
+      "concept": "Peak current from a power rating",
+      "why": "A power rating uses rms values: I_rms = P/V_rms = 1500/250 = 6.0 A. The peak is larger by √2: I_max = 1.4142 × 6.0 = 8.5 A. Accept 8.4 to 8.5 A.\n\n6.0 A is the rms current, which is what the meter would read but not the peak; 4.2 A multiplies by 0.7071 instead of dividing; 12 A doubles the rms value instead of using √2."
     },
     {
-      "q": "Her practice question 2 is set with a house ac voltage of 120 V but solved with 250 V, and an ac current of 10 A. The defensible position in an exam is",
+      "q": "An AC generator of peak voltage 60.0 V and frequency 50.0 Hz is connected to a 40.0 Ω resistor. What are the average and the maximum power dissipated in the resistor?",
       "options": [
-        "the deck misprints the voltage; be able to give 170 V from 120 V and 353.56 V from 250 V, with 14.14 A either way.",
-        "only 353.56 V and 14.14 A, since the solution slide is the authoritative one.",
-        "only 170 V and 7.07 A, since the question slide is the authoritative one.",
-        "the question cannot be answered, because the two slides contradict each other."
-      ],
-      "answerIndex": 0,
-      "why": "Slide 13 sets 120 V and slide 14 solves 250 V, and the deck never reconciles them; the likely reason for the change is that 120 V would repeat the answer to question 1. The method is identical whichever figure appears, so carry both: 120/0.7071 = 170 V and 250/0.7071 = 353.56 V. The current part is unaffected — 10/0.7071 = 14.14 A, so 7.07 A has the factor upside down — and refusing to answer throws away marks for a misprint that costs nothing to name."
-    },
-    {
-      "q": "An AC generator of maximum voltage 24.0 V and frequency 60.0 Hz feeds a 265 Ω resistor. The rms voltage and rms current are",
-      "options": [
-        "17.0 V and 0.0906 A",
-        "24.0 V and 0.0906 A",
-        "17.0 V and 0.0454 A",
-        "17.0 V and 0.0640 A"
+        "90.0 W and 180 W",
+        "22.5 W and 45.0 W",
+        "45.0 W and 45.0 W",
+        "45.0 W and 90.0 W"
       ],
       "answerIndex": 3,
-      "why": "V_rms = 24.0/√2 = 16.97 V, which is 17.0 V to three figures, and then Ohm's law with rms on BOTH sides: I_rms = V_rms/R = 16.97/265 = 0.0640 A. Divide the rounded 17.0 rather than the exact 16.97 and you get 0.0642 A, which is why the answer is quoted to three figures. V_rms = 0.7071 × 24 = 17.0 V, and then Ohm's law with rms on BOTH sides: I_rms = V_rms/R = 17/265 = 0.0642 A. 0.0906 A is V_max/R, which gives the peak current, not the rms one; the pair 24.0 V and 0.0906 A never converts to rms at all; and 0.0454 A applies the 0.7071 a second time to an already-converted figure, the standard way to halve your own answer."
+      "week": 6,
+      "concept": "Average and maximum power in a resistor",
+      "why": "V_rms = 0.7071 × 60.0 = 42.4 V, so P_av = V²_rms/R = 1800/40.0 = 45.0 W. The maximum power uses the peak voltage: P_max = V²_max/R = 3600/40.0 = 90.0 W, exactly twice the average, as it always is for a sinusoid across a resistor. The frequency is not needed anywhere, because nothing about a pure resistor depends on it.\n\n90.0 W and 180 W use the peak voltage for the average as well; 22.5 W and 45.0 W apply the factor 0.7071 one time too many; equal powers would require a steady current."
     },
     {
-      "q": "For that same circuit the average and maximum powers dissipated in the resistor are",
+      "q": "A 40 Ω resistor is in series with a 95.5 mH inductor across a 240 V rms, 50 Hz supply. Calculate the real power dissipated.",
       "options": [
-        "1.09 W and 2.174 W",
-        "2.174 W and 1.09 W",
-        "1.09 W and 1.09 W",
-        "0.0642 W and 24.0 W"
+        "922 W",
+        "1152 W",
+        "1440 W",
+        "691 W"
       ],
       "answerIndex": 0,
-      "why": "P_av = V²_rms/R = 17²/265 = 1.09 W and P_max = V²_max/R = 24²/265 = 2.174 W. The ratio is fixed at (V_max/V_rms)² = 2, so peak power in a resistor is exactly twice the average, always. Reversing the two makes the peak smaller than the mean; equal values would require the waveform to be flat; and the pair 0.0642 W and 24.0 W simply quotes the current and the peak voltage as powers."
+      "week": 7,
+      "concept": "Real power in a series RL circuit",
+      "why": "X_L = 2πfL = 2π(50)(0.0955) = 30.0 Ω, so Z = √(40² + 30²) = 50.0 Ω and I = 240/50.0 = 4.80 A. Only the resistance dissipates, so P = I²R = (4.80)²(40) = 922 W (accept 915 to 925 W).\n\n1152 W is the apparent power VI, with cos φ left out; 1440 W uses V²/R with the whole supply voltage, but only 192 V sits across the resistor; 691 W uses sin φ = 0.80 and is the reactive power in var, not watts."
     },
     {
-      "q": "In that problem the given frequency of 60.0 Hz is",
+      "q": "A load draws 4.8 kW of real power and 3.6 kvar of reactive power. Calculate its power factor.",
       "options": [
-        "not needed, because none of V_rms, I_rms, P_av or P_max depends on frequency in a pure resistor.",
-        "needed, to convert the peak voltage to the rms voltage.",
-        "needed, to find the reactance of the circuit.",
-        "needed, because average power depends on how many cycles occur per second."
-      ],
-      "answerIndex": 0,
-      "why": "The load is a pure resistor: current and voltage stay in step, the conversion factor 0.7071 has no frequency in it, and P = V²/R has none either. Recognising a redundant given is itself an exam skill. The rms conversion is a fixed number; reactance requires an inductor or capacitor, which this circuit does not have and which belongs to the following week; and the average power is an average per cycle, so the number of cycles cancels out."
-    },
-    {
-      "q": "For a supply v = V₀ sin ωt driving a current i = I₀ sin(ωt − φ), the average power over a complete cycle is",
-      "options": [
-        "V_rms I_rms",
-        "V_rms I_rms cos φ",
-        "V_rms I_rms sin φ",
-        "V₀ I₀ cos φ"
-      ],
-      "answerIndex": 1,
-      "why": "The instantaneous product splits into a constant term (V₀I₀/2) cos φ and a ripple at twice the supply frequency whose average over a cycle is zero. All of the average power therefore sits in the constant term: P = ½V₀I₀ cos φ = V_rms I_rms cos φ. V_rms I_rms alone is the APPARENT power S in volt-amperes, right only when the power factor is 1; V_rms I_rms sin φ is the REACTIVE power Q in var; and V₀I₀ cos φ uses peak values and is twice too large, because AC power formulae take rms values throughout."
-    },
-    {
-      "q": "The Week 7 deck states that 'in a purely reactive AC circuit the power can be calculated using P = V × I × sin θ'. The correct position is",
-      "options": [
-        "the expression is correct, and gives the power in watts.",
-        "the expression is correct but should use cos θ instead of sin θ.",
-        "the expression gives the apparent power in volt-amperes.",
-        "that expression is the reactive power Q in var; the average real power in a pure reactance is zero."
-      ],
-      "answerIndex": 3,
-      "why": "VI sin φ is the rate at which energy is borrowed and returned, measured in volt-amperes reactive, not consumed. In a purely reactive circuit φ = ±90°, so the whole of the apparent power is reactive and the real power is exactly zero — which is what the same deck says two slides later when it states that reactances do not dissipate energy. Calling it watts contradicts that; replacing sin by cos would give zero in a pure reactance and so cannot be what the slide meant to say; and the apparent power is VI with no trigonometric factor at all."
-    },
-    {
-      "q": "A 30 Ω resistor in series with a 127 mH inductor is connected to a 200 V rms, 50 Hz supply. The impedance and current are",
-      "options": [
-        "50.0 Ω and 4.00 A",
-        "70.0 Ω and 2.86 A",
-        "40.0 Ω and 5.00 A",
-        "50.0 Ω and 6.67 A"
-      ],
-      "answerIndex": 0,
-      "why": "X_L = 2πfL = 2π(50)(0.127) = 40.0 Ω, and R and X combine in QUADRATURE: Z = √(30² + 40²) = √2500 = 50.0 Ω, so I = V/Z = 200/50.0 = 4.00 A. 70.0 Ω adds R and X_L arithmetically, which is the standard wrong answer; 40.0 Ω uses the reactance alone and forgets the resistor; and 6.67 A divides the supply by R alone."
-    },
-    {
-      "q": "For that same RL circuit, the real power consumed is",
-      "options": [
-        "800 W",
-        "1333 W",
-        "480 W",
-        "640 W"
+        "0.60",
+        "0.75",
+        "0.80",
+        "0.57"
       ],
       "answerIndex": 2,
-      "why": "P = VI cos φ with cos φ = R/Z = 30/50 = 0.600 lagging, so P = (200)(4.00)(0.600) = 480 W, confirmed by I²R = (16.0)(30) = 480 W. 800 W is the apparent power VI in volt-amperes, not watts; 1333 W is V²/R with the SUPPLY voltage, which is legal only when the whole supply sits across R — here only 120 V does, and 120²/30 = 480 W; 640 W is the reactive power VI sin φ in var."
+      "week": 7,
+      "concept": "Power factor from the power triangle",
+      "why": "The three powers form a right-angled triangle, S² = P² + Q², so S = √(4.8² + 3.6²) = √(23.04 + 12.96) = 6.0 kVA. Then PF = P/S = 4.8/6.0 = 0.80 (accept 0.79 to 0.81).\n\n0.60 is Q/S, the reactive factor, not the power factor; 0.75 is Q/P, which is tan φ; 0.57 comes from adding P and Q arithmetically to get 8.4, but the two do not add that way."
     },
     {
-      "q": "A series circuit has R = 12 Ω, X_L = 5 Ω and X_C = 21 Ω. Its impedance is",
+      "q": "A workshop draws 5.0 kW at 250 V rms, 50 Hz, at a power factor of 0.60 lagging. Calculate the capacitance that must be connected in parallel with it to raise the power factor to unity.",
       "options": [
-        "28.6 Ω, and the current leads the voltage.",
-        "20.0 Ω, and the current leads the voltage.",
-        "20.0 Ω, and the current lags the voltage.",
-        "38.0 Ω, and the current lags the voltage."
+        "255 μF",
+        "340 μF",
+        "2130 μF",
+        "424 μF"
       ],
       "answerIndex": 1,
-      "why": "The reactances are 180° apart, so they SUBTRACT before anything is squared: X = X_L − X_C = 5 − 21 = −16 Ω. Then Z = √(12² + 16²) = √400 = 20.0 Ω, and because the net reactance is capacitive the current LEADS. 28.6 Ω comes from √(144 + 676), adding the two reactances instead of subtracting them; lagging is the inductive case, which requires X_L to win; and 38.0 Ω adds all three quantities arithmetically."
+      "week": 7,
+      "concept": "Power factor correction with a parallel capacitor",
+      "why": "S = P/PF = 5000/0.60 = 8333 VA, and sin φ = 0.80, so Q_load = S sin φ = 6667 var lagging. For unity power factor the capacitor must supply all of it, Q_C = 6667 var. Then C = Q_C/(ωV²) = 6667/[(314.16)(250²)] = 3.40 × 10⁻⁴ F = 340 μF (accept 335 to 345 μF).\n\n255 μF puts the real power 5000 W in place of Q_C; 2130 μF uses f = 50 where ω = 2πf belongs; 424 μF uses the apparent power 8333 VA instead of the reactive power."
     },
     {
-      "q": "A load draws 480 W of real power and 640 var of reactive power. Its apparent power is",
+      "q": "A 15 Ω resistor, a 0.12 H inductor and a 30 μF capacitor are connected in series. Calculate the frequency at which the current in the circuit is a maximum.",
       "options": [
-        "800 VA",
-        "1120 VA",
-        "160 VA",
-        "800 W"
-      ],
-      "answerIndex": 0,
-      "why": "The three powers form a right-angled triangle, S² = P² + Q²: √(480² + 640²) = √640000 = 800 VA. They never add arithmetically, so 1120 VA is wrong; 160 VA subtracts them; and the unit matters — apparent power is measured in volt-amperes, because only the real component is watts and only the watts are billed."
-    },
-    {
-      "q": "A workshop draws 4.4 kW at 220 V rms with a power factor of 0.80 lagging. Its line current, and the line current after correction to unity power factor, are",
-      "options": [
-        "20.0 A, falling to 16.0 A.",
-        "25.0 A, falling to 31.3 A.",
-        "20.0 A, rising to 25.0 A.",
-        "25.0 A, falling to 20.0 A."
+        "527 Hz",
+        "13.4 Hz",
+        "44 200 Hz",
+        "83.9 Hz"
       ],
       "answerIndex": 3,
-      "why": "S = P/PF = 4400/0.80 = 5500 VA, so I = S/V = 5500/220 = 25.0 A. Correction leaves the real power untouched, so afterwards I = P/V = 4400/220 = 20.0 A — the same 4.4 kW delivered by 20 A instead of 25, cutting the cable's I²R loss by 36 %. 20.0 A as the starting current forgets to divide by the power factor; the current cannot rise, since that would mean more volt-amperes for the same watts; and a rise from 20.0 A to 25.0 A runs the correction backwards."
+      "week": 7,
+      "concept": "Resonant frequency of a series RLC circuit",
+      "why": "The current peaks at resonance, where X_L = X_C and Z falls to R. ω₀ = 1/√(LC) = 1/√[(0.12)(30 × 10⁻⁶)] = 1/√(3.6 × 10⁻⁶) = 527 rad/s, so f₀ = ω₀/2π = 527/6.283 = 83.9 Hz (accept 83 to 85 Hz). The resistance does not enter.\n\n527 Hz quotes the angular frequency in rad/s as though it were a frequency in Hz; 13.4 Hz divides by 2π a second time; 44 200 Hz forgets the square root of LC."
     },
     {
-      "q": "A series circuit of R = 10 Ω, L = 0.20 H and C = 20 μF is driven at its resonant frequency by a 100 V rms supply. At resonance",
+      "q": "A resistor connected to a 60 Hz supply dissipates an average power of 480 W. What are the peak instantaneous power and the frequency at which the instantaneous power pulsates?",
       "options": [
-        "Z = 0 and the power factor is undefined.",
-        "Z is a maximum and the current is a minimum.",
-        "Z = 10 Ω, the power factor is 1 and P = 1000 W.",
-        "the power factor is 1 but no power is consumed, because L and C cancel."
+        "960 W and 120 Hz",
+        "480 W and 60 Hz",
+        "960 W and 60 Hz",
+        "240 W and 120 Hz"
+      ],
+      "answerIndex": 0,
+      "week": 7,
+      "concept": "Peak and average power in a resistor",
+      "why": "For a resistor v and i are in phase, so p = V₀I₀ sin²ωt = P(1 − cos 2ωt). That swings from 0 to 2P, giving a peak of 2 × 480 = 960 W, and it oscillates at 2f = 120 Hz because v and i reverse sign together and their product completes two cycles per supply cycle.\n\n480 W and 60 Hz confuses the average with the peak and the ripple rate with the supply rate; 960 W and 60 Hz has the peak right but keeps the supply frequency; 240 W halves the average instead of doubling it."
+    },
+    {
+      "q": "Two loads on the same 240 V rms supply each draw 5.0 A rms at a power factor of 0.70. One load is inductive and the other is capacitive. Which quantity differs between the two loads?",
+      "options": [
+        "The real power in watts",
+        "The apparent power in volt-amperes",
+        "The sign of the reactive power",
+        "The rms current drawn"
       ],
       "answerIndex": 2,
-      "why": "At ω₀ = 1/√(LC) = 500 rad/s (f₀ = 79.6 Hz), X_L = X_C = 100 Ω and they cancel, leaving Z = R = 10 Ω, φ = 0 and PF = 1. The current is then a maximum, 10.0 A, and P = V²/R = 1000 W. Z falls to R, not to zero — the resistance is still there; a series circuit at resonance has minimum impedance and maximum current, not the reverse; and the power is maximum, not zero: what cancels is the reactance, not the dissipation."
+      "week": 7,
+      "concept": "Leading and lagging at the same power factor",
+      "why": "P = VI cos φ and cos φ is an even function, so cos(+45.6°) and cos(−45.6°) are the same number: both loads consume the same 840 W, draw the same 1200 VA and the same 5.0 A. What differs is Q = VI sin φ, which is positive for the inductive load (current lagging) and negative for the capacitive one (current leading). That is exactly why a power factor must always be written as leading or lagging.\n\nReal power, apparent power and current are all fixed once V, I and cos φ are fixed, so none of them can distinguish the two."
     },
     {
-      "q": "A bar magnet is cut in half across its middle. The result is",
+      "q": "A series circuit has R = 30 Ω, X_L = 80 Ω and X_C = 40 Ω across a 100 V rms supply. Calculate the rms current and state whether it leads or lags the supply voltage.",
       "options": [
-        "one isolated north pole and one isolated south pole.",
-        "two shorter magnets, each with a full north and a full south pole.",
-        "two pieces that are no longer magnetic.",
-        "two magnets, each with two north poles."
+        "0.81 A, lagging",
+        "2.0 A, lagging",
+        "2.0 A, leading",
+        "1.1 A, lagging"
       ],
       "answerIndex": 1,
-      "why": "There are no magnetic monopoles: every line of B is a closed loop, so cutting a magnet simply makes two dipoles, and this continues down to the single atom, where the moment is a circulating or spinning charge. This is the one structural difference from electrostatics, where pulling a dipole apart really does leave two isolated charges. The remaining options would all require a lone pole to exist."
+      "week": 7,
+      "concept": "Impedance and current in a series RLC circuit",
+      "why": "The reactances are 180° apart, so they subtract: X = X_L − X_C = 80 − 40 = 40 Ω. Then Z = √(30² + 40²) = 50 Ω and I = 100/50 = 2.0 A (accept 1.9 to 2.1 A). X is positive, so the circuit is net inductive and the current lags.\n\n0.81 A adds the reactances to get 120 Ω before combining with R; 'leading' gets the sign of the net reactance backwards, since X_L is the larger; 1.1 A squares all three of R, X_L and X_C and adds them, instead of subtracting the reactances first."
     },
     {
-      "q": "A flat coil of 50 turns measuring 8.0 cm by 5.0 cm carries 2.0 A. Its magnetic dipole moment is",
+      "q": "A supply v(t) = 150 sin(314t) V drives a current i(t) = 6.0 sin(314t + 40°) A through a load, with t in seconds. Calculate the average power delivered to the load.",
       "options": [
-        "0.40 A·m²",
-        "4.0 × 10³ A·m²",
-        "8.0 × 10⁻³ A·m²",
-        "0.40 A·m"
+        "450 W",
+        "689 W",
+        "289 W",
+        "345 W"
       ],
-      "answerIndex": 0,
-      "why": "μ = NIA with the area in SI: A = (0.080)(0.050) = 4.0 × 10⁻³ m², so μ = (50)(2.0)(4.0 × 10⁻³) = 0.40 A·m², directed along the normal by the right-hand rule. 4.0 × 10³ leaves the area in cm², which is wrong by 10⁴; 8.0 × 10⁻³ drops the factor N, the commonest omission; and A·m is not the unit — A·m², equivalently J/T, is."
+      "answerIndex": 3,
+      "week": 7,
+      "concept": "Average power from v(t) and i(t)",
+      "why": "The phase angle between v and i is 40°, so P = ½V₀I₀ cos φ = ½(150)(6.0)(cos 40°) = 450 × 0.766 = 345 W (accept 340 to 350 W). Equivalently V_rms = 106 V, I_rms = 4.24 A and P = (106)(4.24)(0.766).\n\n450 W drops cos φ and is the apparent power in VA; 689 W uses the peak values in P = VI cos φ instead of rms values, doubling the answer; 289 W uses sin 40° and gives the reactive power in var."
     },
     {
-      "q": "A current loop sits in a uniform field with the plane of the loop containing B. The torque on it is",
+      "q": "A flat circular coil of 40 turns and radius 6.0 cm carries a current of 2.5 A. Calculate the magnitude of its magnetic dipole moment.",
       "options": [
-        "zero, because the angle between the plane and B is 0°.",
-        "maximum, μB, because the angle between the normal and B is 90°.",
-        "maximum, μB, because the angle between the normal and B is 0°.",
-        "zero, because the net force on the loop is zero."
-      ],
-      "answerIndex": 1,
-      "why": "In τ = μB sin θ, θ is the angle between the MOMENT (the normal to the loop) and B, never between the loop's plane and B. A plane containing B means a normal perpendicular to B, θ = 90°, sin θ = 1, and the torque is at its maximum. Reading the angle off the plane gives the answer exactly backwards; θ = 0 is the aligned position, where the torque vanishes; and the net force being zero says nothing about the couple — that is precisely the point of a uniform field."
-    },
-    {
-      "q": "For a dipole of moment 0.40 A·m² in a field of 0.40 T, the work needed to turn it from aligned to anti-aligned is",
-      "options": [
-        "0.16 J",
-        "0.32 J",
-        "zero",
-        "0.64 J"
-      ],
-      "answerIndex": 1,
-      "why": "U = −μB cos θ, so U(0°) = −μB = −0.16 J and U(180°) = +μB = +0.16 J, and the work is the difference, ΔU = 2μB = 0.32 J. 0.16 J is μB, the value of one end point rather than the gap between them; zero would follow if the torque were zero throughout, but the torque only vanishes AT the two ends; and 0.64 J doubles the answer again."
-    },
-    {
-      "q": "A dipole placed in a uniform magnetic field experiences",
-      "options": [
-        "a net force but no torque, so it translates without turning.",
-        "both a torque and a net force.",
-        "a torque but no net force, so it turns without translating.",
-        "neither, because the field is uniform."
+        "0.0283 A·m²",
+        "4.52 A·m²",
+        "1.13 A·m²",
+        "1.13 × 10⁴ A·m²"
       ],
       "answerIndex": 2,
-      "why": "The forces on opposite sides of the loop are equal and opposite, so they sum to zero while still forming a couple. That is why a compass needle swings but does not fly across the room, and why a magnet attracted to a nail is a NON-uniform-field phenomenon: a net force needs a field gradient. A torque with no force is the uniform-field case; no torque at all would require the moment to be already aligned."
+      "week": 8,
+      "concept": "Magnetic dipole moment of a coil",
+      "why": "A = πr² = π(0.060)² = 1.131 × 10⁻² m², so μ = NIA = (40)(2.5)(1.131 × 10⁻²) = 1.13 A·m² (accept 1.12 to 1.14 A·m²), directed along the normal to the coil.\n\n0.0283 A·m² forgets the 40 turns; 4.52 A·m² uses 12 cm as the radius, that is the diameter, which multiplies the area by four; 1.13 × 10⁴ A·m² leaves the radius in centimetres."
     },
     {
-      "q": "A long straight wire carries 8.0 A. The magnetic flux density 4.0 cm from it is",
+      "q": "A coil of 60 turns, each of area 15 cm², carries 3.0 A. It sits in a uniform field of 0.25 T with the plane of the coil at 30° to the field. Calculate the torque on the coil.",
       "options": [
-        "4.0 × 10⁻⁵ T, directed radially away from the wire.",
-        "4.0 × 10⁻⁵ T, tangential to a circle round the wire.",
-        "1.6 × 10⁻³ T, tangential to a circle round the wire.",
-        "4.0 × 10⁻⁵ T, directed along the wire."
-      ],
-      "answerIndex": 1,
-      "why": "B = μ₀I/2πr = (2 × 10⁻⁷)(8.0)/(0.040) = 4.0 × 10⁻⁵ T, and the field lines are closed CIRCLES in planes perpendicular to the wire, with the sense given by the right-hand grip rule. Radially outward is the pattern of a line of charge, whose field also falls as 1/r but points somewhere completely different; 1.6 × 10⁻³ T leaves the distance in centimetres; and B is never along the current that produces it."
-    },
-    {
-      "q": "A solenoid of 500 turns wound over 25 cm carries 3.0 A. The flux density inside it is",
-      "options": [
-        "7.5 × 10⁻³ T",
-        "1.9 T",
-        "3.0 × 10⁻⁶ T",
-        "7.5 × 10⁻³ T only if the radius is also known."
+        "0.0584 N·m",
+        "0.0338 N·m",
+        "0.0675 N·m",
+        "9.7 × 10⁻⁴ N·m"
       ],
       "answerIndex": 0,
-      "why": "B = μ₀nI with n = N/L = 500/0.25 = 2000 turns per metre: B = (4π × 10⁻⁷)(2000)(3.0) = 7.5 × 10⁻³ T, uniform and axial inside, essentially zero outside. 1.9 T uses N = 500 in place of n and is wrong by the factor L; 3.0 × 10⁻⁶ T loses the turns entirely; and the radius does not enter — B inside a long solenoid depends only on the core, the turns per metre and the current."
+      "week": 8,
+      "concept": "Torque on a current loop in a field",
+      "why": "μ = NIA = (60)(3.0)(15 × 10⁻⁴) = 0.27 A·m². The angle in τ = μB sin θ is measured from the normal, and the plane is at 30° to B, so the normal is at 60°. τ = (0.27)(0.25)(sin 60°) = 0.0675 × 0.866 = 0.0584 N·m (accept 0.057 to 0.060 N·m).\n\n0.0338 N·m puts the 30° straight into the sine, reading the angle from the plane instead of the normal; 0.0675 N·m is the maximum torque μB, which needs the normal at 90°; 9.7 × 10⁻⁴ N·m leaves out the 60 turns."
     },
     {
-      "q": "The electron's magnetic moment is written M = g(−eL/2m). The minus sign means",
+      "q": "A magnetic dipole of moment 0.80 A·m² sits in a uniform field of 0.35 T. Calculate the work an external agent must do to turn it from 30° to 120°, both angles measured from the field direction.",
       "options": [
-        "the moment has a negative magnitude.",
-        "the moment is antiparallel to the angular momentum, because the electron's charge is negative.",
-        "the moment lowers the electron's energy in any field.",
-        "the g-factor itself is negative."
-      ],
-      "answerIndex": 1,
-      "why": "The sign is a statement about DIRECTION: the conventional current circulates opposite to the electron's motion, so μ points against L. It is a different minus sign from the one in U = −μ·B, which is what makes alignment the low-energy state, and the two are unrelated. Magnitudes are never negative; the energy depends on the orientation, not on this sign; and g is a positive dimensionless number, about 1 for orbital motion and about 2 for spin (the deck calls it the 'correlation factor'; it is the g-factor)."
-    },
-    {
-      "q": "A charge of 2.5 C moves at 1.5 m/s where E = 5 N/C and B = 7.25 T. The deck answers 12.5 + 27.19 = 39.68 N. That answer is valid only if",
-      "options": [
-        "the charge is positive, which is all that is required.",
-        "E and B are parallel to each other.",
-        "the speed is small enough for the magnetic term to be neglected.",
-        "v is perpendicular to B and the electric and magnetic forces happen to point the same way."
+        "0.242 J",
+        "0.560 J",
+        "0.140 J",
+        "0.383 J"
       ],
       "answerIndex": 3,
-      "why": "F = q(E + v × B) is a VECTOR sum. Adding the two magnitudes needs both that sin θ = 1, so that the magnetic part really is 27.19 N, and that the two forces are parallel. Neither is given in the question. If E is parallel to B, the two forces are perpendicular and F = √(12.5² + 27.19²) = 29.9 N; if v is parallel to B the magnetic force vanishes and only the 12.5 N remains. The sign of the charge does not make two vectors collinear; parallel E and B is the case that breaks the arithmetic rather than justifying it; and the magnetic term here is the larger of the two."
+      "week": 8,
+      "concept": "Work done rotating a magnetic dipole",
+      "why": "U = −μB cos θ, so W = U(120°) − U(30°) = μB(cos 30° − cos 120°) = (0.80)(0.35)(0.866 − (−0.500)) = 0.28 × 1.366 = 0.383 J (accept 0.375 to 0.390 J). It is positive, so energy must be supplied.\n\n0.242 J keeps only the starting term, treating U(120°) as zero; 0.560 J is 2μB, the work for a complete flip from 0° to 180°; 0.140 J uses sines in place of cosines, which is the torque formula, not the energy one."
     },
     {
-      "q": "The magnetic force on a charge moving through a field is F = qvB sin θ. It is zero when",
+      "q": "A long straight wire carries a current of 12 A. Take μ₀/2π = 2 × 10⁻⁷ T·m/A. At what distance from the wire is the magnetic flux density 3.0 × 10⁻⁵ T?",
       "options": [
-        "the velocity is perpendicular to B.",
-        "the velocity is parallel to B, or the charge is at rest.",
-        "the charge is negative.",
-        "the field is uniform."
+        "28 cm",
+        "8.0 cm",
+        "0.80 cm",
+        "50 cm"
       ],
       "answerIndex": 1,
-      "why": "θ is the angle between v and B, so sin θ = 0 whenever the motion is along the field line, and a charge at rest has no magnetic force at all. This is why charged particles spiral ALONG field lines rather than crossing them. Perpendicular motion gives the MAXIMUM force, qvB; a negative charge feels the same size of force in the opposite direction; and uniformity has nothing to do with it — the electric term qE, by contrast, acts on a charge whether it moves or not."
+      "week": 8,
+      "concept": "Field of a long straight wire",
+      "why": "B = μ₀I/2πr, so r = (μ₀/2π)(I/B) = (2 × 10⁻⁷)(12)/(3.0 × 10⁻⁵) = 2.4 × 10⁻⁶/3.0 × 10⁻⁵ = 0.080 m = 8.0 cm (accept 7.8 to 8.2 cm). The field is tangential, in circles round the wire.\n\n28 cm takes a square root, treating the wire's field as an inverse-square law when it falls as 1/r; 0.80 cm is a power-of-ten slip in the division; 50 cm uses μ₀ = 4π × 10⁻⁷ where μ₀/2π belongs, leaving out the factor 2π."
     },
     {
-      "q": "A slide states that 'work is done on moving charges when in a magnetic field'. The correct statement is",
+      "q": "A solenoid 40 cm long has 1000 turns and carries 2.5 A. It is wound on an iron core of relative permeability 250. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the flux density inside it.",
       "options": [
-        "the magnetic force does work equal to qvB times the distance travelled.",
-        "the magnetic force is perpendicular to v, so it does no work and cannot change the particle's speed.",
-        "the magnetic force does work only when the charge moves parallel to the field.",
-        "the magnetic force does no work because it is always zero."
-      ],
-      "answerIndex": 1,
-      "why": "Since F is perpendicular to v at every instant, the power F·v is exactly zero: the magnetic force changes the DIRECTION of the velocity and never its magnitude, so kinetic energy is constant after one lap or a million. Only the electric term does work. Work equal to qvB times the distance travelled ignores the perpendicularity; motion parallel to B gives zero force, not work; and the force is certainly not always zero — it is what bends the path."
-    },
-    {
-      "q": "A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.60 × 10⁻¹⁹ C) enters a 0.25 T field at 3.0 × 10⁶ m/s perpendicular to it. The radius of its path, and what happens to the period if the speed is doubled, are",
-      "options": [
-        "0.125 m; the period doubles.",
-        "0.125 m; the period is unchanged.",
-        "0.250 m; the period is unchanged.",
-        "0.0625 m; the period halves."
-      ],
-      "answerIndex": 1,
-      "why": "Setting the magnetic force equal to the centripetal force, qvB = mv²/r gives r = mv/qB = (1.67 × 10⁻²⁷)(3.0 × 10⁶)/(4.00 × 10⁻²⁰) = 0.125 m. The period T = 2πm/qB contains no v at all: speed the proton up and the radius grows in exact proportion, so the lap time is identical — which is the whole basis of the cyclotron. The options that scale the period with speed have cancelled the velocity incorrectly, and 0.250 m and 0.0625 m mis-scale the radius."
-    },
-    {
-      "q": "In a velocity selector, a charge passes straight through undeflected when",
-      "options": [
-        "v = E/B, a condition that contains neither the charge nor the mass.",
-        "v = B/E, so that heavier particles are selected.",
-        "v = qE/B, so that the selected speed depends on the charge.",
-        "v = E/B, but only for positively charged particles."
-      ],
-      "answerIndex": 0,
-      "why": "Balancing qE against qvB cancels q completely, leaving v = E/B — the same selected speed for electrons and for heavy positive ions, because both forces reverse together when the sign of the charge flips. That is what makes it a SPEED filter rather than a mass filter; mass only enters in a second, magnet-only stage, where r = mv/qB turns the device into a mass spectrometer. B/E has the ratio upside down, qE/B keeps a charge that must cancel, and the condition is not restricted to one sign."
-    },
-    {
-      "q": "A straight wire of length 25 cm carries 8.0 A at 40° to a uniform field of 0.30 T. The force on it is",
-      "options": [
-        "0.60 N",
-        "0.46 N",
-        "0.39 N",
-        "39 N"
+        "7.85 × 10⁻³ T",
+        "0.785 T",
+        "1.96 T",
+        "1.96 × 10⁻² T"
       ],
       "answerIndex": 2,
-      "why": "F = BIL sin θ = (0.30)(8.0)(0.25)(sin 40°) = (0.60)(0.643) = 0.386 N, with θ measured between the CURRENT and B, and the force perpendicular to the plane containing them. 0.60 N is the maximum, which applies only when the wire is perpendicular to the field; 0.46 N uses cos 40°, inverting the two limiting cases — a wire laid along the field feels nothing, however large the current; and 39 N leaves the length in centimetres."
+      "week": 8,
+      "concept": "Field inside a solenoid with a core",
+      "why": "n = N/ℓ = 1000/0.40 = 2500 turns per metre. B = μᵣμ₀nI = (250)(4π × 10⁻⁷)(2500)(2.5) = 250 × 7.854 × 10⁻³ = 1.96 T (accept 1.93 to 1.99 T). The radius of the solenoid does not enter.\n\n7.85 × 10⁻³ T is the air-cored value, with the factor 250 left out; 0.785 T uses N = 1000 in place of n = N/ℓ; 1.96 × 10⁻² T leaves the length in centimetres, so n comes out 100 times too small."
     },
     {
-      "q": "The deck writes the force on a current element as dF = (I/c) dl × B. In the SI units used in every Miva calculation,",
+      "q": "A flat circular coil of 200 turns and radius 10 cm is to produce a flux density of 5.0 mT at its centre, where B = μ₀NI/2R. Take μ₀ = 4π × 10⁻⁷ T·m/A. What current is needed?",
       "options": [
-        "the factor should be 1/c², not 1/c.",
-        "the factor is correct and must be included.",
-        "the factor applies only when the wire is moving.",
-        "there is no factor of 1/c: dF = I dl × B."
+        "3.98 A",
+        "1.99 A",
+        "7.96 A",
+        "398 A"
+      ],
+      "answerIndex": 0,
+      "week": 8,
+      "concept": "Field at the centre of a circular coil",
+      "why": "Rearranging, I = 2RB/(μ₀N) = 2(0.10)(5.0 × 10⁻³)/[(4π × 10⁻⁷)(200)] = 1.0 × 10⁻³/2.513 × 10⁻⁴ = 3.98 A (accept 3.9 to 4.1 A).\n\n1.99 A drops the factor 2 in the numerator; 7.96 A uses 0.20 m, the diameter, in place of the radius; 398 A leaves the radius in centimetres."
+    },
+    {
+      "q": "A closed surface is drawn so that it encloses the north pole of a bar magnet but not its south pole. What is the net magnetic flux through that surface?",
+      "options": [
+        "Proportional to the strength of the enclosed pole",
+        "Zero",
+        "Equal to μ₀ times the enclosed pole strength",
+        "Equal to BA, where A is the area of the surface"
+      ],
+      "answerIndex": 1,
+      "week": 8,
+      "concept": "Gauss's law for magnetism",
+      "why": "There are no magnetic monopoles, so every line of B is a closed loop. Every line that enters the surface must leave it again, and the net flux through any closed surface is exactly zero. This holds no matter which part of the magnet is enclosed, and it is the structural difference from electrostatics, where enclosing a single charge does give a non-zero flux.\n\nThe other three options all assume an isolated pole acts as a source of flux the way a charge does; no such source exists."
+    },
+    {
+      "q": "A current-carrying loop is placed in a uniform magnetic field with its normal at 40° to the field. What does the loop experience?",
+      "options": [
+        "A net force but no torque",
+        "Both a net force and a torque",
+        "Neither a net force nor a torque",
+        "A torque but no net force"
       ],
       "answerIndex": 3,
-      "why": "The 1/c belongs to the Gaussian (cgs) system. In SI the laws are F = qv × B and dF = I dl × B with no c anywhere, so dividing an answer by 3 × 10⁸ is a guaranteed loss of marks. A factor of 1/c² is not a form of the law in any system; retaining the c gives an answer 300 million times too small; and the motion of the wire is irrelevant to the units it is written in."
+      "week": 8,
+      "concept": "Force and torque on a dipole in a uniform field",
+      "why": "The forces on opposite sides of the loop are equal in size and opposite in direction, so they cancel and the net force is zero: the loop turns but its centre does not move. They are not in line, however, so they form a couple, giving τ = μB sin 40°, which is not zero. A net force on a dipole requires a non-uniform field, which is why a magnet is pulled towards a nail while a compass needle only swings.\n\nAny option giving a net force ignores the cancellation; 'neither' would require the normal to lie along B."
     },
     {
-      "q": "Which statement about an electromagnetic wave in vacuum is correct?",
+      "q": "An electron travels in a circle of radius 2.0 × 10⁻¹⁰ m with a period of 1.5 × 10⁻¹⁶ s. Take e = 1.6 × 10⁻¹⁹ C. Calculate the magnitude of its orbital magnetic moment.",
       "options": [
-        "E lies along the direction of propagation while B is perpendicular to it.",
-        "E and B are parallel to each other and perpendicular to the direction of travel.",
-        "E and B are perpendicular to each other and both perpendicular to the direction of travel, and c = fλ.",
-        "Longer wavelengths travel faster, which is why radio outruns light."
+        "1.34 × 10⁻²² A·m²",
+        "5.36 × 10⁻²² A·m²",
+        "1.34 × 10⁻¹² A·m²",
+        "3.02 × 10⁻⁵⁴ A·m²"
+      ],
+      "answerIndex": 0,
+      "week": 8,
+      "concept": "Orbital magnetic moment of an electron",
+      "why": "The circulating electron is a current I = e/T = 1.6 × 10⁻¹⁹/1.5 × 10⁻¹⁶ = 1.067 × 10⁻³ A round an area A = πr² = π(2.0 × 10⁻¹⁰)² = 1.257 × 10⁻¹⁹ m². So μ = IA = 1.34 × 10⁻²² A·m² (accept 1.3 to 1.4 × 10⁻²²), directed opposite to the angular momentum because the charge is negative.\n\n5.36 × 10⁻²² uses the diameter as the radius; 1.34 × 10⁻¹² uses the circumference 2πr in place of the area πr²; 3.02 × 10⁻⁵⁴ multiplies the charge by the period instead of dividing."
+    },
+    {
+      "q": "A charge of 4.0 μC moves at 3.0 × 10⁵ m/s through a uniform magnetic field of 0.60 T, its velocity making 25° with the field. Calculate the magnitude of the magnetic force on it.",
+      "options": [
+        "0.653 N",
+        "0.304 N",
+        "0.720 N",
+        "3.04 × 10⁻⁴ N"
+      ],
+      "answerIndex": 1,
+      "week": 9,
+      "concept": "Magnetic force on a moving charge",
+      "why": "F = qvB sin θ with θ the angle between v and B: F = (4.0 × 10⁻⁶)(3.0 × 10⁵)(0.60)(sin 25°) = 0.720 × 0.4226 = 0.304 N (accept 0.30 to 0.31 N). The force is perpendicular to both v and B.\n\n0.653 N uses cos 25°, which would make the force greatest when v lies along B and zero when it is perpendicular, the opposite of the truth; 0.720 N assumes v is perpendicular to B and drops the sine; 3.04 × 10⁻⁴ N reads μC as 10⁻⁹ C."
+    },
+    {
+      "q": "An electron (m = 9.11 × 10⁻³¹ kg, q = 1.6 × 10⁻¹⁹ C) enters a uniform field of 4.0 mT at 5.0 × 10⁶ m/s, perpendicular to the field. Calculate the radius of its circular path.",
+      "options": [
+        "7.1 μm",
+        "3.6 × 10⁴ m",
+        "1.4 × 10² m",
+        "7.1 mm"
+      ],
+      "answerIndex": 3,
+      "week": 9,
+      "concept": "Radius of a charged particle's circular path",
+      "why": "The magnetic force supplies the centripetal force, qvB = mv²/r, so r = mv/(qB) = (9.11 × 10⁻³¹)(5.0 × 10⁶)/[(1.6 × 10⁻¹⁹)(4.0 × 10⁻³)] = 4.555 × 10⁻²⁴/6.4 × 10⁻²² = 7.1 × 10⁻³ m = 7.1 mm (accept 7.0 to 7.2 mm).\n\n7.1 μm leaves the field as 4.0 T instead of 4.0 mT; 3.6 × 10⁴ m keeps mv² in the numerator and never cancels the extra factor of v; 1.4 × 10² m inverts the formula and computes qB/mv."
+    },
+    {
+      "q": "A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) moves in a circle in a uniform field of 0.60 T. Calculate the frequency of its circular motion.",
+      "options": [
+        "9.15 MHz",
+        "57.5 MHz",
+        "1.46 MHz",
+        "18.3 MHz"
+      ],
+      "answerIndex": 0,
+      "week": 9,
+      "concept": "Cyclotron frequency",
+      "why": "T = 2πm/(qB), so f = qB/(2πm) = (1.6 × 10⁻¹⁹)(0.60)/[2π(1.67 × 10⁻²⁷)] = 9.6 × 10⁻²⁰/1.049 × 10⁻²⁶ = 9.15 × 10⁶ Hz = 9.15 MHz (accept 9.0 to 9.3 MHz). The speed does not appear, so the frequency is the same whatever the radius.\n\n57.5 MHz leaves out the 2π; 1.46 MHz divides by 2π a second time; 18.3 MHz uses T = πm/qB, dropping the factor 2 and so doubling f."
+    },
+    {
+      "q": "In a velocity selector a uniform field E = 2.4 × 10⁵ V/m is perpendicular to a uniform field B = 0.30 T. A beam contains protons and doubly charged helium ions with a wide range of speeds. Which particles cross the region undeflected?",
+      "options": [
+        "Only the protons, at 8.0 × 10⁵ m/s",
+        "Any particle in the beam, at 7.2 × 10⁴ m/s",
+        "Any particle in the beam, at 8.0 × 10⁵ m/s",
+        "Only the helium ions, at 4.0 × 10⁵ m/s"
       ],
       "answerIndex": 2,
-      "why": "The wave is transverse: an oscillating E generates an oscillating B and vice versa, with the two at right angles to each other and to the propagation direction, which is the direction of E × B. All frequencies travel at the same c = 3.00 × 10⁸ m/s in vacuum, so f and λ are inversely related — a 100 MHz FM signal has λ = 3.00 m, and gamma rays have the highest frequency and the shortest wavelength. A longitudinal E component is the standard wrong answer; parallel E and B is not a solution of the wave equations; and speed in vacuum does not depend on wavelength."
+      "week": 9,
+      "concept": "Velocity selector condition",
+      "why": "Undeflected means the electric and magnetic forces cancel: qE = qvB, so v = E/B = 2.4 × 10⁵/0.30 = 8.0 × 10⁵ m/s (accept 7.9 to 8.1 × 10⁵). The charge cancels out and the mass never appears, so every particle at that one speed passes, whatever its charge or mass, and every particle at any other speed is deflected.\n\nThe two options that pick one species assume q or m survives the cancellation; 7.2 × 10⁴ m/s multiplies E by B instead of dividing."
     },
     {
-      "q": "A flat coil lies with its plane perpendicular to a uniform field B. The flux through it is",
+      "q": "A straight wire 0.35 m long carries 6.0 A and lies at 30° to a uniform field of 0.80 T. Calculate the force on the wire.",
       "options": [
-        "zero, because the plane is perpendicular to B.",
-        "BA, the maximum, because the normal is parallel to B.",
-        "BA sin θ, which cannot be evaluated without θ.",
-        "BA/2, the average of the maximum and zero."
+        "1.45 N",
+        "0.84 N",
+        "1.68 N",
+        "84 N"
       ],
       "answerIndex": 1,
-      "why": "Φ = BA cos θ with θ measured from the NORMAL to the surface, never from the plane. A plane perpendicular to B means a normal parallel to B, θ = 0, cos θ = 1 and the flux is at its maximum. The sentence 'plane perpendicular to B' is the one students most often convert into θ = 90°, which is the edge-on orientation where the flux is zero. There is no unknown angle here, and there is no averaging rule."
+      "week": 9,
+      "concept": "Force on a current-carrying wire",
+      "why": "F = BIL sin θ with θ between the current and B: F = (0.80)(6.0)(0.35)(sin 30°) = 1.68 × 0.500 = 0.84 N (accept 0.83 to 0.85 N), directed perpendicular to the plane holding the wire and the field.\n\n1.45 N uses cos 30°, which would make a wire laid along the field feel the greatest force instead of none; 1.68 N is the maximum BIL, for a wire at right angles to B; 84 N leaves the length in centimetres."
     },
     {
-      "q": "The emf induced in a coil depends on",
+      "q": "A charged particle is released from rest in a region containing a uniform magnetic field and no electric field. What happens to it?",
       "options": [
-        "the rate of change of the flux linkage, N dΦ/dt.",
-        "the flux linking the coil, NΦ.",
-        "the strength of the field, B, alone.",
-        "the number of turns and the area, but not on time."
+        "It moves in a circle at constant speed",
+        "It accelerates along the field lines",
+        "It follows a helical path",
+        "It stays at rest"
+      ],
+      "answerIndex": 3,
+      "week": 9,
+      "concept": "Magnetic force on a stationary charge",
+      "why": "The magnetic force is F = qvB sin θ, which is zero when v = 0. With no electric field there is nothing else to push the charge, so it feels no force at all and stays where it is, indefinitely. A magnetic field can bend the path of a charge that is already moving, but it can never start one moving, and it can never change a particle's kinetic energy because the force it exerts is always perpendicular to the velocity.\n\nCircular and helical motion both require the particle to be launched with a speed; acceleration along the field lines is what an electric field would produce."
+    },
+    {
+      "q": "An X-ray has a wavelength of 0.10 nm. Take h = 6.63 × 10⁻³⁴ J·s and c = 3.0 × 10⁸ m/s. Calculate the energy of one X-ray photon.",
+      "options": [
+        "1.99 × 10⁻¹⁵ J",
+        "1.99 × 10⁻²⁴ J",
+        "6.63 × 10⁻²⁴ J",
+        "1.99 × 10⁻³⁵ J"
       ],
       "answerIndex": 0,
-      "why": "Faraday's law is ε = −N dΦ/dt: a coil sitting in the strongest steady field in the world has exactly zero emf, and a coil in a weak but rapidly changing field can have a large one. This is the single most common error in the whole topic. The flux itself, the field itself, and the coil's geometry all enter only through the RATE at which the flux linkage changes."
+      "week": 9,
+      "concept": "Photon energy from wavelength",
+      "why": "In vacuum c = fλ, so f = c/λ = 3.0 × 10⁸/1.0 × 10⁻¹⁰ = 3.0 × 10¹⁸ Hz, and E = hf = hc/λ = (6.63 × 10⁻³⁴)(3.0 × 10¹⁸) = 1.99 × 10⁻¹⁵ J (accept 1.9 to 2.0 × 10⁻¹⁵). That is about 12 keV, which is why X-rays ionise and radio waves do not.\n\n1.99 × 10⁻²⁴ J leaves the wavelength in nanometres; 6.63 × 10⁻²⁴ J uses h/λ and omits c; 1.99 × 10⁻³⁵ J multiplies by λ instead of dividing by it."
     },
     {
-      "q": "A slide states that 'for Faraday's law to hold true there must be movement between the coil and the magnetic field'. The correct criterion is",
+      "q": "A charge of +5.0 μC moves along +x at 2.0 × 10⁵ m/s. A field B = 0.50 T points along +y and a field E = 8.0 × 10⁴ V/m also points along +y. Calculate the magnitude of the total force on the charge.",
       "options": [
-        "relative motion, exactly as the slide says.",
-        "a changing current in the coil itself.",
-        "a changing flux, of which relative motion is only one cause — B, A or θ may change.",
-        "a change in the coil's resistance."
+        "0.90 N",
+        "0.10 N",
+        "0.64 N",
+        "0.41 N"
       ],
       "answerIndex": 2,
-      "why": "Φ = BA cos θ can change in three independent ways: the field can change, the enclosed area can change, or the orientation can change. The deck contradicts its own sentence two slides later with the transformer, in which nothing moves at all and the emf comes entirely from a changing B. A changing current in the SAME coil is self-inductance, a special case rather than the criterion; and resistance affects the resulting current, never the emf."
+      "week": 9,
+      "concept": "Adding the electric and magnetic parts of the Lorentz force",
+      "why": "F_B = qvB = (5.0 × 10⁻⁶)(2.0 × 10⁵)(0.50) = 0.50 N, and since x̂ × ŷ = ẑ it points along +z. F_E = qE = (5.0 × 10⁻⁶)(8.0 × 10⁴) = 0.40 N along +y. The two are perpendicular, so they add as vectors: F = √(0.50² + 0.40²) = √0.41 = 0.64 N (accept 0.63 to 0.65 N).\n\n0.90 N adds the magnitudes, which is only valid when the two forces are parallel; 0.10 N subtracts them as if they opposed; 0.41 N is the sum of the squares with the square root forgotten."
     },
     {
-      "q": "A 120-turn coil of radius 4.0 cm lies with its plane perpendicular to a field that falls steadily from 0.60 T to 0.10 T in 0.20 s. The induced emf is",
+      "q": "A proton (m = 1.67 × 10⁻²⁷ kg, q = 1.6 × 10⁻¹⁹ C) enters a uniform field of 0.30 T at 5.0 × 10⁶ m/s, its velocity at 60° to the field. Calculate the pitch of its helical path, the distance it advances along the field per turn.",
       "options": [
-        "0.30 V",
-        "1.5 V",
-        "2.1 V",
-        "150 V"
+        "0.947 m",
+        "0.547 m",
+        "1.09 m",
+        "0.151 m"
       ],
       "answerIndex": 1,
-      "why": "A = πr² = π(0.040)² = 5.03 × 10⁻³ m², ΔΦ = (0.50)(5.03 × 10⁻³) = 2.51 × 10⁻³ Wb, and ε = N ΔΦ/Δt = (120)(2.51 × 10⁻³)/0.20 = 1.5 V. All the physics is in the CHANGE, 0.50 T. 0.30 V substitutes the final field 0.10 T; 2.1 V uses the sum 0.70 T; and 150 V leaves the radius in centimetres, which multiplies the area by 10⁴."
+      "week": 9,
+      "concept": "Pitch of a helical path",
+      "why": "The component along B is untouched by the magnetic force: v∥ = v cos 60° = 2.5 × 10⁶ m/s. The period is T = 2πm/(qB) = 2π(1.67 × 10⁻²⁷)/[(1.6 × 10⁻¹⁹)(0.30)] = 2.19 × 10⁻⁷ s, and it does not contain v. Pitch = v∥T = (2.5 × 10⁶)(2.19 × 10⁻⁷) = 0.547 m (accept 0.53 to 0.56 m).\n\n0.947 m uses v sin 60°, the component that goes round the circle rather than along the axis; 1.09 m uses the full speed; 0.151 m is the radius of the helix, mv⊥/qB, not the pitch."
     },
     {
-      "q": "In that experiment the circuit resistance is 8.0 Ω and 38 mC circulates. If the same field change is made over 2.0 s instead of 0.20 s, the charge that circulates is",
+      "q": "A square coil of 30 turns and side 12 cm sits in a uniform field of 0.45 T with the plane of the coil at 55° to the field. Calculate the flux linkage NΦ of the coil.",
       "options": [
-        "3.8 mC, ten times smaller.",
-        "38 mC, unchanged.",
-        "380 mC, ten times larger.",
-        "zero, because the change is now too slow."
-      ],
-      "answerIndex": 1,
-      "why": "q = N ΔΦ/R depends only on the TOTAL flux change and the resistance, not on how fast the change happens: slowing it down by ten divides the emf and the current by ten and multiplies the duration by ten, and the product is identical. This is the principle of the ballistic galvanometer and a favourite examiner's trap. The two scaled answers apply the time to the charge instead of to the current; and a slow change still induces an emf, merely a smaller one."
-    },
-    {
-      "q": "A rod of length 0.25 m slides at 4.0 m/s on rails in a 0.35 T field, total circuit resistance 0.50 Ω. The retarding force on the rod is",
-      "options": [
-        "0.061 N, opposing the motion.",
-        "0.061 N, in the direction of motion.",
-        "0.35 N, opposing the motion.",
-        "zero, because the field is uniform."
-      ],
-      "answerIndex": 0,
-      "why": "ε = BLv = 0.35 V, I = ε/R = 0.70 A and F = BIL = (0.35)(0.70)(0.25) = 0.061 N, equivalently B²L²v/R, and by Lenz's law it always opposes the motion. The power audit closes: Fv = 0.245 W and I²R = 0.245 W. A forward force would let the rod accelerate for ever while generating power, which is the perpetual-motion machine Lenz's law exists to forbid; 0.35 N quotes the emf as a force; and the force is not zero — a uniform field is exactly the condition assumed here."
-    },
-    {
-      "q": "A coil of 200 turns and area 150 cm² rotates at 50 revolutions per second in a field of 0.080 T. Its peak emf is",
-      "options": [
-        "12 V",
-        "0.075 V",
-        "53 V",
-        "75 V"
+        "0.112 Wb",
+        "0.194 Wb",
+        "5.31 × 10⁻³ Wb",
+        "0.159 Wb"
       ],
       "answerIndex": 3,
-      "why": "Convert first: A = 150 cm² = 1.50 × 10⁻² m², and ω = 2πf = 2π(50) = 314 rad/s. Then ε₀ = NBAω = (200)(0.080)(1.50 × 10⁻²)(314) = 75 V. 12 V uses f = 50 in place of ω and is short by the factor 2π, the commonest generator error; 0.075 V also leaves the area in cm²; and 53 V is the RMS value, ε₀/√2, which is what a meter would read but not what was asked."
+      "week": 10,
+      "concept": "Magnetic flux linkage of a coil",
+      "why": "A = (0.12)² = 1.44 × 10⁻² m². The angle in Φ = BA cos θ is measured from the normal, and the plane is at 55° to B, so the normal is at 35°. NΦ = (30)(0.45)(1.44 × 10⁻²)(cos 35°) = 0.1944 × 0.8192 = 0.159 Wb (accept 0.157 to 0.161 Wb).\n\n0.112 Wb reads the 55° as the angle from the normal; 0.194 Wb assumes the maximum-flux orientation with the normal along B; 5.31 × 10⁻³ Wb gives the flux through one turn and leaves out the 30 turns."
     },
     {
-      "q": "A solenoid has its number of turns doubled at the same length, area and current. Its self-inductance",
+      "q": "Two coils have self-inductances of 40 mH and 90 mH, and a mutual inductance of 36 mH. Calculate their coupling coefficient.",
       "options": [
-        "doubles, because L is proportional to N.",
-        "quadruples, because L = μ₀N²A/ℓ.",
-        "is unchanged, because L depends only on the geometry.",
-        "halves, because the current is unchanged."
-      ],
-      "answerIndex": 1,
-      "why": "Doubling the turns doubles the field (through n = N/ℓ) AND doubles the number of turns that the flux links, so L rises by a factor of four — N², not N, is the standard slip here. L does depend on geometry and core material only, never on the current in it, but the number of turns is part of that geometry, so 'unchanged' is wrong; and nothing here halves."
-    },
-    {
-      "q": "Two coils have a mutual inductance M. Driving the 800-turn coil at 250 A/s induces 63 mV in the 150-turn coil. Driving the 150-turn coil at 250 A/s induces",
-      "options": [
-        "63 mV in the 800-turn coil, because M₁₂ = M₂₁.",
-        "336 mV in the 800-turn coil, in the ratio of the turns.",
-        "12 mV in the 800-turn coil, in the inverse ratio of the turns.",
-        "nothing, because mutual induction only works from the larger coil to the smaller."
+        "0.60",
+        "0.90",
+        "0.36",
+        "0.28"
       ],
       "answerIndex": 0,
-      "why": "The reciprocity theorem says the mutual inductance is one number for the PAIR: it does not matter which coil you call the primary, so the same 0.251 mH at the same 250 A/s gives the same 63 mV. It is not obvious and it is examinable. The two scaled answers apply a turns ratio that reciprocity forbids, and induction is perfectly symmetric — a small coil driving a large one induces exactly as much as the reverse."
+      "week": 10,
+      "concept": "Coupling coefficient of two coils",
+      "why": "M = k√(L₁L₂), so k = M/√(L₁L₂) = 36/√(40 × 90) = 36/√3600 = 36/60 = 0.60 (accept 0.59 to 0.61). It is dimensionless, the millihenries cancel, and it must lie between 0 and 1.\n\n0.90 divides M by L₁ alone; 0.36 squares M as well, using M²/(L₁L₂); 0.28 divides M by the sum L₁ + L₂ instead of by the square root of their product."
     },
     {
-      "q": "The deck's own conclusion is that 'the actual existence of the magnetic flux is not sufficient to produce the induced emf; the flux must be changing'. Consequently a bar magnet held motionless deep inside a coil gives",
+      "q": "A coil of 150 turns and area 2.5 × 10⁻³ m² has a total circuit resistance of 6.0 Ω and lies with its normal along a uniform field. The field falls steadily from 0.90 T to 0.30 T. Calculate the charge that circulates.",
       "options": [
-        "no emf and no current, however strong the magnet.",
-        "a large steady emf, because the flux through the coil is large.",
-        "a small steady emf, proportional to the flux.",
-        "an alternating emf at the natural frequency of the coil."
-      ],
-      "answerIndex": 0,
-      "why": "The emf is the RATE of change of flux, so a stationary magnet — large flux, zero rate — induces nothing at all. This is the same statement as ε = −N dΦ/dt with dΦ/dt = 0. A large steady emf and a small steady emf both confuse Φ with dΦ/dt, the defining error of the topic; and a coil has no natural frequency that could generate an alternating emf on its own."
-    },
-    {
-      "q": "A loop lies in a uniform field directed out of the page, and the field is increasing. The induced current is",
-      "options": [
-        "clockwise, so that its own field inside the loop points into the page.",
-        "anticlockwise, so that its own field inside the loop points out of the page.",
-        "clockwise, so that its own field inside the loop points out of the page.",
-        "zero, because the loop is not moving."
-      ],
-      "answerIndex": 0,
-      "why": "Lenz's law opposes the CHANGE: the outward flux is growing, so the induced field inside the loop must point into the page to fight the increase, and by the right-hand grip rule that means a clockwise current. Anticlockwise would reinforce the increase and generate energy from nothing. Pairing a clockwise current with an out-of-the-page induced field contradicts the grip rule; and motion is not required — a changing field alone is enough."
-    },
-    {
-      "q": "If instead the same outward field were DECREASING, the induced current would be",
-      "options": [
-        "clockwise, its own field pointing into the page, since the induced field always opposes B.",
-        "anticlockwise, its own field pointing into the page.",
-        "anticlockwise, its own field pointing out of the page to replace the flux being lost.",
-        "zero, since a decreasing field cannot drive a current."
+        "0.225 C",
+        "2.5 × 10⁻⁴ C",
+        "0.0375 C",
+        "0.0563 C"
       ],
       "answerIndex": 2,
-      "why": "The induced field opposes the CHANGE, not the field: falling flux is opposed by a current whose field points the SAME way as B, trying to maintain it, which the grip rule turns into an anticlockwise current. 'The induced field is always opposite to B' is wrong half the time, and this is the half. Pairing an anticlockwise current with an into-the-page induced field contradicts the grip rule; and a decreasing field is a changing field, so it certainly drives a current."
+      "week": 10,
+      "concept": "Charge circulated during a flux change",
+      "why": "Integrating I = ε/R over the change gives q = NΔΦ/R, with no time in it. ΔΦ per turn = AΔB = (2.5 × 10⁻³)(0.60) = 1.5 × 10⁻³ Wb, so q = (150)(1.5 × 10⁻³)/6.0 = 0.0375 C (accept 0.037 to 0.038 C). Making the same change ten times more slowly gives the same charge.\n\n0.225 C forgets to divide by the resistance; 2.5 × 10⁻⁴ C leaves out the 150 turns; 0.0563 C uses the starting field 0.90 T instead of the change 0.60 T."
     },
     {
-      "q": "A 200-turn coil of radius 5.0 cm lies with its plane perpendicular to a field that rises uniformly from 0.100 T to 0.500 T in 0.200 s. The induced emf is",
+      "q": "A coil of 300 turns and area 0.025 m² rotates at 1800 revolutions per minute in a uniform field of 0.18 T, about an axis perpendicular to the field. Calculate the rms emf it delivers.",
       "options": [
-        "3.14 V",
-        "12.6 V",
-        "3.93 V",
-        "1.57 V"
+        "255 V",
+        "180 V",
+        "28.6 V",
+        "1720 V"
       ],
-      "answerIndex": 0,
-      "why": "A = πr² = π(0.050)² = 7.854 × 10⁻³ m², dB/dt = 0.400/0.200 = 2.00 T/s, and ε = N A (dB/dt) = (200)(7.854 × 10⁻³)(2.00) = 3.14 V. 12.6 V uses the diameter where the radius belongs, quadrupling the area; 3.93 V substitutes the final field 0.500 T in place of the change 0.400 T; and 1.57 V takes dB/dt as 1.00 T/s, dividing the 0.400 T change by 0.400 s instead of by 0.200 s."
+      "answerIndex": 1,
+      "week": 10,
+      "concept": "Rms emf of an a.c. generator",
+      "why": "f = 1800/60 = 30 Hz, so ω = 2πf = 188.5 rad/s. Peak emf ε₀ = NBAω = (300)(0.18)(0.025)(188.5) = 254.5 V, and ε_rms = ε₀/√2 = 180 V (accept 178 to 182 V).\n\n255 V quotes the peak instead of the rms; 28.6 V uses f = 30 in place of ω = 2πf; 1720 V feeds 1800 rev/min straight in as though it were an angular speed in rad/s."
     },
     {
-      "q": "For that coil, with a total circuit resistance of 8.0 Ω, the current and the charge circulated are",
+      "q": "An air-cored solenoid has 500 turns wound over a length of 20 cm, with a cross-sectional area of 8.0 cm². Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate its self-inductance.",
       "options": [
-        "0.393 A and 0.393 C",
-        "25.1 A and 5.03 C",
-        "0.393 A and 3.93 × 10⁻⁴ C",
-        "0.393 A and 0.0785 C"
+        "12.6 μH",
+        "2.51 μH",
+        "12.6 H",
+        "1.26 mH"
       ],
       "answerIndex": 3,
-      "why": "I = ε/R = 3.14/8.0 = 0.393 A, and q = N|ΔΦ|/R = 200 × (7.854 × 10⁻³ × 0.400)/8.0 = 0.0785 C, which the independent check q = IΔt = 0.393 × 0.200 confirms. Quoting the current's number as a charge ignores the 0.200 s altogether; 25.1 A and 5.03 C multiply by R instead of dividing; and 3.93 × 10⁻⁴ C leaves the 200 turns out of the flux linkage."
+      "week": 10,
+      "concept": "Self-inductance of a solenoid",
+      "why": "L = μ₀N²A/ℓ = (4π × 10⁻⁷)(500²)(8.0 × 10⁻⁴)/(0.20) = (1.2566 × 10⁻⁶)(2.5 × 10⁵)(8.0 × 10⁻⁴)/0.20 = 1.26 × 10⁻³ H = 1.26 mH (accept 1.24 to 1.28 mH). The current in the coil does not enter: L depends on geometry and core only.\n\n12.6 μH leaves the length in centimetres; 2.51 μH uses N in place of N², missing that doubling the turns both doubles the field and doubles the linkage; 12.6 H leaves the area in cm²."
     },
     {
-      "q": "A 100-turn coil of area 0.020 m² rotates at 50 Hz in a field of 0.25 T. Its peak and rms emfs are",
+      "q": "A flat coil of 80 turns and area 0.015 m² lies with its plane perpendicular to a uniform field of 0.40 T. The coil is turned right over, through 180°, in 0.25 s. Calculate the average emf induced.",
       "options": [
-        "25.0 V and 17.7 V",
-        "157.1 V and 222.2 V",
-        "157.1 V and 111.1 V",
-        "111.1 V and 157.1 V"
+        "3.84 V",
+        "1.92 V",
+        "0.048 V",
+        "7.68 V"
+      ],
+      "answerIndex": 0,
+      "week": 10,
+      "concept": "Average emf when a coil is reversed",
+      "why": "Flux per turn starts at BA = (0.40)(0.015) = 6.0 × 10⁻³ Wb and ends at −6.0 × 10⁻³ Wb, because cos 180° = −1. The change is therefore 2BA = 1.2 × 10⁻² Wb, not BA. ε = NΔΦ/Δt = (80)(1.2 × 10⁻²)/0.25 = 3.84 V (accept 3.8 to 3.9 V).\n\n1.92 V uses ΔΦ = BA and misses that reversing the coil doubles the change; 0.048 V omits the 80 turns; 7.68 V doubles the change a second time."
+    },
+    {
+      "q": "The current in a 45 mH inductor rises steadily from 0.50 A to 3.5 A in 12 ms. Calculate the magnitude of the self-induced emf during the change.",
+      "options": [
+        "13.1 V",
+        "0.135 V",
+        "11.3 V",
+        "1.13 × 10⁻² V"
       ],
       "answerIndex": 2,
-      "why": "ω = 2πf = 314.16 rad/s — the trap is that ω is not 50 — so ε_peak = NBAω = (100)(0.25)(0.020)(314.16) = 157.1 V, and ε_rms = 157.1/√2 = 111.1 V. 25.0 V uses f instead of ω and is short by 2π; the pair 157.1 V and 222.2 V multiplies by √2 rather than dividing, which would make the rms value exceed the peak; and the pair 111.1 V and 157.1 V swaps the two."
+      "week": 10,
+      "concept": "Back emf from a changing current",
+      "why": "ε = L dI/dt. Here dI/dt = (3.5 − 0.50)/0.012 = 250 A/s, so ε = (0.045)(250) = 11.3 V (accept 11.0 to 11.5 V). The emf is set by the rate of change, not by how large the current is.\n\n13.1 V uses the final current 3.5 A instead of the change 3.0 A; 0.135 V multiplies L by ΔI and never divides by the time; 1.13 × 10⁻² V leaves the 12 ms as 12 s."
     },
     {
-      "q": "A flat loop is described as 'inclined at 30° to a uniform field B'. The flux through it is",
+      "q": "A closed conducting coil is placed in a magnetic field. Which of the following produces no induced emf in it at all?",
       "options": [
-        "BA cos 30°, because the loop is at 30° to the field.",
-        "BA sin 60°, because the angle is measured in the plane.",
-        "zero, because the loop is not perpendicular to the field.",
-        "BA cos 60°, because the normal is at 60° to the field."
-      ],
-      "answerIndex": 3,
-      "why": "The wording describes the PLANE, and θ in Φ = BA cos θ is measured from the normal, which is therefore at 90° − 30° = 60°: Φ = BA cos 60° = 0.5BA. Read the wording, then draw the normal. Using 30° directly reads the angle off the plane; BA sin 60° happens to equal BA cos 30° and makes the same error; and the flux is only zero when the plane actually contains B."
-    },
-    {
-      "q": "She writes ε₁ = −N₁ dΦ_B/dt and ε₂ = −N₂ dΦ_B/dt, then divides to get ε₂/ε₁ = N₂/N₁. The ratio carries no minus sign because",
-      "options": [
-        "a minus sign has been dropped, and it should be ε₂/ε₁ = −N₂/N₁.",
-        "the two minus signs and the shared dΦ_B/dt all cancel in the division.",
-        "the flux through the secondary is opposite in sense to that through the primary.",
-        "the emfs are magnitudes, so signs never appear in them."
+        "Rotating it steadily about an axis at right angles to the field",
+        "Moving it at constant velocity while it stays entirely inside a uniform field",
+        "Pulling it out of the field region",
+        "Holding it still while the field strength is steadily increased"
       ],
       "answerIndex": 1,
-      "why": "One flux threads both coils, so dΦ_B/dt is the same in both equations and divides out, and the two minus signs divide out with it. That is why the induced emf per turn is the same in the two coils and why equation 2 is sign-free — nothing was lost. The flux is shared, not reversed; and emf is a signed quantity, which is exactly why the cancellation is worth noticing."
+      "week": 10,
+      "concept": "What changes the flux through a coil",
+      "why": "An emf appears only when the flux Φ = BA cos θ through the coil changes. A coil moving inside a uniform field keeps the same B, the same enclosed area and the same orientation, so Φ is constant and the emf is zero however fast it travels. Motion is not the criterion; a changing flux is.\n\nRotating changes θ, and is how a generator works; pulling the coil out changes the effective area; increasing the field changes B, and needs no motion at all, which is how a transformer works."
     },
     {
-      "q": "The step from ε₂/ε₁ = N₂/N₁ to V₂/V₁ = N₂/N₁ is justified by",
+      "q": "A long solenoid has 1500 turns per metre and its current rises steadily at 40 A/s. A search coil of 60 turns and area 3.0 cm² is wound round its middle, on the same axis. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the emf induced in the search coil.",
       "options": [
-        "the ideal-transformer assumption that each winding's induced emf equals its terminal voltage.",
-        "simple algebra, since emf and terminal voltage are the same quantity.",
-        "the conservation of energy, I₁V₁ = I₂V₂.",
-        "the fact that the two windings have the same resistance."
-      ],
-      "answerIndex": 0,
-      "why": "Her slide 9 supplies the assumption explicitly: 'in an ideal transformer, the induced emfs ε₁ and ε₂ … are equal to the terminal voltages'. Only then does equation 3 follow, so it is a physical idealisation and not a manipulation. Emf and terminal voltage are different quantities in general — a real winding has resistance, and that is where the 90 % to 99 % efficiency goes; the power equation is a separate statement about currents; and equal winding resistances are neither assumed nor true."
-    },
-    {
-      "q": "A 960 W coffeemaker designed for a 240 V line is to be run from a 120 V supply. The transformer needed has",
-      "options": [
-        "N₂/N₁ = 1/2, a step-down transformer.",
-        "N₂/N₁ = 2, a step-down transformer.",
-        "N₂/N₁ = 4, a step-up transformer.",
-        "N₂/N₁ = 2, a step-up transformer."
+        "22.6 μV",
+        "33.9 mV",
+        "13.6 V",
+        "1.36 mV"
       ],
       "answerIndex": 3,
-      "why": "The primary is always the side connected to the input source, so V₁ = 120 V from the line and V₂ = 240 V at the appliance: N₂/N₁ = V₂/V₁ = 240/120 = 2, and since N₂ > N₁ this is by definition a step-up transformer. Getting the primary and secondary the wrong way round inverts every part of the problem; step-up and step-down are defined by the TURNS, N₂ > N₁ and N₂ < N₁; and the ratio is 2, not its square."
+      "week": 11,
+      "concept": "Emf induced by a changing solenoid current",
+      "why": "Inside the solenoid B = μ₀nI, so dB/dt = μ₀n(dI/dt) = (4π × 10⁻⁷)(1500)(40) = 7.54 × 10⁻² T/s. The search coil links that changing field: ε = NA(dB/dt) = (60)(3.0 × 10⁻⁴)(7.54 × 10⁻²) = 1.36 × 10⁻³ V = 1.36 mV (accept 1.32 to 1.40 mV). Nothing moves anywhere in this arrangement.\n\n22.6 μV omits the search coil's 60 turns; 33.9 mV uses the solenoid's 1500 in place of the search coil's 60; 13.6 V leaves the area in cm²."
     },
     {
-      "q": "The same coffeemaker draws, from the 120 V line,",
+      "q": "A single circular loop lies with its plane perpendicular to a uniform field of 0.50 T. The loop is squeezed so that its radius shrinks at a steady 3.0 cm/s. Calculate the induced emf at the instant the radius is 20 cm.",
       "options": [
-        "8.0 A, while 4.0 A flows in the coffeemaker itself.",
-        "4.0 A, while 8.0 A flows in the coffeemaker itself.",
-        "8.0 A on both sides, since the current is the same throughout.",
-        "4.0 A on both sides, since power is conserved."
-      ],
-      "answerIndex": 0,
-      "why": "P_av = V₁I₁ gives the line current I₁ = 960/120 = 8.0 A, and the secondary carries I₂ = 960/240 = 4.0 A. Check with I₁V₁ = I₂V₂: 8.0 × 120 = 4.0 × 240 = 960 W. Stepping the voltage UP by two steps the current DOWN by two, so the appliance side carries the smaller current — swapping them is the standard error. The current is not the same on both sides, and conservation of power is precisely what makes them different."
-    },
-    {
-      "q": "The coffeemaker's own resistance, from V₁/I₁ = 120/8 = 15 Ω, is",
-      "options": [
-        "30 Ω, because R = (V₁/I₁)(N₂/N₁) = 15 × 2.",
-        "15 Ω, the value already computed.",
-        "7.5 Ω, because R = (V₁/I₁)/(N₂/N₁).",
-        "60 Ω, because R = (V₁/I₁)(N₂/N₁)² = 15 × 4."
-      ],
-      "answerIndex": 3,
-      "why": "Her formula is V₁/I₁ = R/(N₂/N₁)², with the turns ratio SQUARED, so R = 15 × 2² = 60 Ω — confirmed independently by V₂/I₂ = 240/4.0 = 60 Ω. Applying the ratio to the first power gives 30 Ω and is the single commonest error with this formula; 15 Ω is what the line APPEARS to be driving, not what the appliance is; and dividing instead of multiplying goes the wrong way for a step-up transformer."
-    },
-    {
-      "q": "A 1600 W, 120 V hair dryer is run from a 240 V outlet through an ideal transformer. Its apparent resistance seen from the 240 V side, and its own actual resistance, are",
-      "options": [
-        "36 Ω and 9 Ω.",
-        "36 Ω and 144 Ω.",
-        "9 Ω and 36 Ω.",
-        "36 Ω and 18 Ω."
-      ],
-      "answerIndex": 0,
-      "why": "I₁ = 1600/240 = 6.67 A, so V₁/I₁ = 36 Ω — which is where her slide stops, and it is the correct answer to the question 'what resistance will your dryer APPEAR to have'. The dryer's own resistance needs the missing line, R = (V₁/I₁)(N₂/N₁)² = 36 × (1/2)² = 9 Ω, confirmed by V₂/I₂ = 120/13.3 = 9 Ω. 144 Ω multiplies by the ratio squared the wrong way round; the pair 9 Ω and 36 Ω swaps apparent and actual; and 18 Ω uses the ratio to the first power."
-    },
-    {
-      "q": "The core of a transformer is laminated, and a transformer produces no output on a steady DC supply. The reasons are",
-      "options": [
-        "lamination reduces hysteresis loss; DC gives no changing flux, so no emf is induced.",
-        "lamination interrupts eddy currents in the core; DC gives no changing flux, so no emf is induced.",
-        "lamination increases the flux; DC is blocked by the insulation between the laminations.",
-        "lamination reduces copper loss in the windings; DC changes the frequency of the output."
+        "9.4 mV",
+        "18.8 mV",
+        "37.7 mV",
+        "1.88 V"
       ],
       "answerIndex": 1,
-      "why": "Her slides say the core is 'made up of thin sheets of metal that are insulated from each other' specifically 'to minimize eddy current losses', and the whole of equation 1 is a d/dt, which is why a transformer 'can only be used with AC'. Hysteresis is never mentioned in the deck and is not what lamination cures; lamination does not increase the flux, and the insulation blocks currents in the core rather than blocking DC in the windings; copper loss lives in the windings, not the core, and the frequency of a transformer's output always equals that of the source."
+      "week": 11,
+      "concept": "Emf from a changing loop area",
+      "why": "Here B and θ are fixed and only the area changes, so ε = B dA/dt. With A = πr², dA/dt = 2πr(dr/dt) = 2π(0.20)(0.030) = 3.77 × 10⁻² m²/s. Then ε = (0.50)(3.77 × 10⁻²) = 1.88 × 10⁻² V = 18.8 mV (accept 18.5 to 19.1 mV).\n\n9.4 mV uses πr in place of 2πr; 37.7 mV uses the diameter 0.40 m as the radius; 1.88 V leaves the shrink rate in centimetres per second."
+    },
+    {
+      "q": "A generator coil of 150 turns and area 0.020 m² spins in a uniform field of 0.40 T about an axis perpendicular to the field, and delivers a peak emf of 60 V. Calculate its rotation rate in revolutions per second.",
+      "options": [
+        "7.96 rev/s",
+        "50 rev/s",
+        "1.27 rev/s",
+        "11.3 rev/s"
+      ],
+      "answerIndex": 0,
+      "week": 11,
+      "concept": "Rotation rate from the peak emf",
+      "why": "ε₀ = NBAω, so ω = ε₀/(NBA) = 60/[(150)(0.40)(0.020)] = 60/1.20 = 50.0 rad/s. Then f = ω/2π = 50.0/6.283 = 7.96 rev/s (accept 7.9 to 8.0 rev/s), which is 478 rev/min.\n\n50 rev/s quotes the angular speed in rad/s as a rotation rate; 1.27 rev/s divides by 2π twice; 11.3 rev/s treats the 60 V as an rms value and multiplies it by √2 before dividing."
+    },
+    {
+      "q": "A copper ring is dropped from just above the north pole of a strong vertical bar magnet, so that it falls towards the magnet. While it approaches, how does its downward acceleration compare with g?",
+      "options": [
+        "Equal to g, because the ring carries no current of its own",
+        "Greater than g",
+        "Less than g",
+        "Zero"
+      ],
+      "answerIndex": 2,
+      "week": 11,
+      "concept": "Lenz's law and the motion that causes it",
+      "why": "As the ring approaches, the flux through it grows, so a current is induced. By Lenz's law that current opposes the change, making the ring's lower face a north pole, which the magnet's north pole repels. The ring therefore feels an upward magnetic force on top of its weight, and its acceleration is less than g. The energy for the heat dissipated in the ring comes out of the kinetic energy it fails to gain.\n\nAn acceleration equal to g ignores the induced current; greater than g would mean the induced current speeds up the very change that creates it, which would manufacture energy from nothing; zero would need the two forces to balance exactly, which is not required here."
+    },
+    {
+      "q": "A coil of 200 turns and area 8.0 × 10⁻³ m² has a total resistance of 5.0 Ω. Its normal lies along a uniform field whose strength changes at a steady 1.5 T/s. Calculate the power dissipated in the coil.",
+      "options": [
+        "5.76 W",
+        "28.8 W",
+        "2.9 × 10⁻⁵ W",
+        "1.15 W"
+      ],
+      "answerIndex": 3,
+      "week": 11,
+      "concept": "Power dissipated by an induced current",
+      "why": "ε = NA(dB/dt) = (200)(8.0 × 10⁻³)(1.5) = 2.40 V, so I = ε/R = 2.40/5.0 = 0.48 A and P = I²R = (0.48)²(5.0) = 1.15 W (accept 1.13 to 1.17 W). Checking with ε²/R = 5.76/5.0 gives the same 1.15 W.\n\n5.76 W is ε² with the division by R forgotten; 28.8 W multiplies by R instead of dividing, using ε²R; 2.9 × 10⁻⁵ W leaves out the 200 turns."
+    },
+    {
+      "q": "An aircraft of wingspan 32 m flies horizontally at 250 m/s where the vertical component of the Earth's magnetic field is 4.5 × 10⁻⁵ T. Calculate the emf induced between its wingtips.",
+      "options": [
+        "1.44 × 10⁻³ V",
+        "0.36 V",
+        "8.0 × 10³ V",
+        "3.6 V"
+      ],
+      "answerIndex": 1,
+      "week": 11,
+      "concept": "Motional emf across a moving conductor",
+      "why": "The wings act as a conductor of length L moving at right angles both to their own length and to the vertical field component, so ε = BLv = (4.5 × 10⁻⁵)(32)(250) = 0.36 V (accept 0.35 to 0.37 V). The wingtips are not joined by a circuit, so there is an emf but no current and no retarding force.\n\n1.44 × 10⁻³ V multiplies B by L and leaves out the speed; 8.0 × 10³ V multiplies L by v and leaves out the field; 3.6 V is a power-of-ten slip in the field."
+    },
+    {
+      "q": "A rod of length 0.50 m slides at a steady 3.0 m/s on frictionless rails in a field of 0.40 T perpendicular to the plane of the circuit. The total resistance is 0.25 Ω. Calculate the applied force needed and the mechanical power supplied.",
+      "options": [
+        "0.48 N and 1.44 W",
+        "0.12 N and 0.36 W",
+        "0.96 N and 2.88 W",
+        "0.48 N and 0.48 W"
+      ],
+      "answerIndex": 0,
+      "week": 11,
+      "concept": "Retarding force and mechanical power on a sliding rod",
+      "why": "ε = BLv = (0.40)(0.50)(3.0) = 0.60 V, so I = ε/R = 0.60/0.25 = 2.4 A. The current in the field gives a retarding force F = BIL = (0.40)(2.4)(0.50) = 0.48 N, which the applied force must match for steady speed. Then P = Fv = (0.48)(3.0) = 1.44 W (accept 1.42 to 1.46 W), and the check I²R = (2.4)²(0.25) = 1.44 W agrees exactly.\n\n0.12 N and 0.36 W use the emf in place of the current, forgetting to divide by R; 0.96 N and 2.88 W use B²Lv/R with only one factor of L; 0.48 N and 0.48 W quote the force as the power and leave out the speed."
+    },
+    {
+      "q": "A conducting loop lies flat in the plane of the page. A uniform magnetic field points out of the page through the loop and is being steadily switched off. As seen by the reader, which way does the induced current flow, and which way does its own field point inside the loop?",
+      "options": [
+        "Clockwise, with its own field into the page",
+        "Clockwise, with its own field out of the page",
+        "Anticlockwise, with its own field out of the page",
+        "Anticlockwise, with its own field into the page"
+      ],
+      "answerIndex": 2,
+      "week": 11,
+      "concept": "Direction of an induced current",
+      "why": "Lenz's law opposes the change, not the field. The outward flux is shrinking, so the induced current must act to maintain it, setting up a field inside the loop that also points out of the page. By the right-hand grip rule, a field out of the page needs an anticlockwise current as seen by the reader.\n\nThe two 'into the page' options oppose the field itself rather than its loss, which is the answer for a field that is growing; the clockwise-and-out-of-the-page option pairs the correct field with the wrong circulation sense."
+    },
+    {
+      "q": "An appliance rated at 2.0 kW, 110 V is to be run from a 330 V line through an ideal transformer. What is the turns ratio N₂/N₁, and what type of transformer is it?",
+      "options": [
+        "3, step-up",
+        "1/3, step-up",
+        "3, step-down",
+        "1/3, step-down"
+      ],
+      "answerIndex": 3,
+      "week": 12,
+      "concept": "Turns ratio for a step-up or step-down transformer",
+      "why": "The primary is always the side fed by the source, so V₁ = 330 V, and the appliance is the load on the secondary, so V₂ = 110 V. Then N₂/N₁ = V₂/V₁ = 110/330 = 1/3. Since N₂ is less than N₁ this is a step-down transformer.\n\nThe options giving 3 take the appliance as the primary and invert the ratio; calling a ratio of 1/3 step-up misreads the definition, which is fixed by N₂ against N₁, not by which number looks bigger. The 2.0 kW rating is not needed for this part."
+    },
+    {
+      "q": "A 1500 W appliance rated for 100 V is run from a 250 V outlet through an ideal transformer. What current does it draw from the outlet?",
+      "options": [
+        "6.0 A",
+        "15 A",
+        "2.4 A",
+        "37.5 A"
+      ],
+      "answerIndex": 0,
+      "week": 12,
+      "concept": "Primary and secondary currents in a transformer",
+      "why": "The outlet feeds the primary, so the current drawn from it is I₁ = P/V₁ = 1500/250 = 6.0 A (accept 5.9 to 6.1 A). Check with power in equals power out: the appliance itself carries I₂ = 1500/100 = 15 A, and I₁V₁ = 6.0 × 250 = 1500 W = 15 × 100 ✓.\n\n15 A is the current in the appliance, not the one drawn from the outlet; 2.4 A multiplies the answer by the turns ratio a second time; 37.5 A uses I₁/I₂ = N₂/N₁ upside down, so the voltage and the current are both stepped the same way."
+    },
+    {
+      "q": "An ideal transformer has a turns ratio N₂/N₁ = 5 and a 300 Ω resistor connected across its secondary. What resistance does the source connected to the primary see?",
+      "options": [
+        "60 Ω",
+        "12 Ω",
+        "1500 Ω",
+        "7500 Ω"
+      ],
+      "answerIndex": 1,
+      "week": 12,
+      "concept": "Resistance seen through a transformer",
+      "why": "The load seen from the primary is V₁/I₁ = R/(N₂/N₁)² = 300/5² = 300/25 = 12 Ω (accept 11.8 to 12.2 Ω). The turns ratio enters squared, because the voltage is divided by 5 while the current is multiplied by 5.\n\n60 Ω divides by the ratio instead of by its square; 1500 Ω and 7500 Ω multiply rather than divide, which would make a step-up transformer present a larger load than the resistor itself."
+    },
+    {
+      "q": "A signal source that delivers maximum power into 800 Ω is to drive an 8.0 Ω load through an ideal matching transformer. What turns ratio N₂/N₁ is required?",
+      "options": [
+        "1/100",
+        "10",
+        "1/10",
+        "100"
+      ],
+      "answerIndex": 2,
+      "week": 12,
+      "concept": "Impedance matching with a transformer",
+      "why": "Matching means the primary must see 800 Ω when 8.0 Ω is on the secondary: 800 = 8.0/(N₂/N₁)², so (N₂/N₁)² = 8.0/800 = 0.010 and N₂/N₁ = √0.010 = 1/10. The secondary has one tenth as many turns, a step-down transformer.\n\n1/100 stops at the resistance ratio and forgets the square root; 10 and 100 invert the ratio, which would make the source see 80 kΩ instead of 800 Ω."
+    },
+    {
+      "q": "In a transformer the flux in the core is changing at 0.045 Wb/s at a certain instant. The primary has 800 turns and the secondary has 200 turns. Calculate the emf induced in the secondary at that instant.",
+      "options": [
+        "36 V",
+        "45 V",
+        "0.045 V",
+        "9.0 V"
+      ],
+      "answerIndex": 3,
+      "week": 12,
+      "concept": "Induced emf from the rate of change of core flux",
+      "why": "The same flux threads both windings, and Faraday's law applied to the secondary gives ε₂ = N₂ dΦ/dt = (200)(0.045) = 9.0 V (accept 8.9 to 9.1 V). Applied to the primary it gives 36 V, and the ratio 9.0/36 = 200/800 as expected.\n\n36 V uses the primary turns; 45 V uses the total 1000 turns of both windings, but each coil links the flux separately; 0.045 V leaves out the turns count altogether."
+    },
+    {
+      "q": "A generator delivers 30 kW at 400 V. An ideal transformer steps this up to 12 kV before it is sent along a transmission line of total resistance 8.0 Ω. Calculate the power lost as heat in the line.",
+      "options": [
+        "50 W",
+        "45 kW",
+        "20 W",
+        "2.0 × 10⁴ W"
+      ],
+      "answerIndex": 0,
+      "week": 12,
+      "concept": "Power loss in a transmission line",
+      "why": "The line carries I = P/V = 30 000/12 000 = 2.5 A, so the loss is I²R = (2.5)²(8.0) = 50 W (accept 49 to 51 W), about 0.17 per cent of what is sent.\n\n45 kW is what the same line would lose at 400 V, where the current is 75 A, more than the power being transmitted, which is the whole reason for stepping up; 20 W forgets to square the current; 2.0 × 10⁴ W uses V²/R with the supply voltage, but the 400 V is not the voltage dropped across the line."
+    },
+    {
+      "q": "A transformer core is built from thin sheets of metal insulated from one another rather than from one solid block. What does this construction reduce?",
+      "options": [
+        "The heating caused by eddy currents in the core",
+        "The I²R heating in the copper windings",
+        "The frequency of the secondary output",
+        "The current drawn by the load"
+      ],
+      "answerIndex": 0,
+      "week": 12,
+      "concept": "Why a transformer core is laminated",
+      "why": "The changing flux induces currents in the conducting core itself, just as it does in the windings. Those eddy currents circulate in loops and waste energy as heat. Insulating thin laminations from each other breaks up the paths those loops would take, so far less current can circulate, while the useful flux through the core is unaffected.\n\nWinding losses depend on the resistance of the copper and are unchanged by the core; the frequency is the same on both sides whatever the core is made of; the load current is fixed by the load and the secondary voltage."
+    },
+    {
+      "q": "A transformer designed for a 50 Hz a.c. supply is connected by mistake to a 12 V battery. Once any switch-on transient has died away, what voltage appears across the secondary terminals?",
+      "options": [
+        "12 V, the same as the primary",
+        "12 V multiplied by the turns ratio",
+        "Zero",
+        "A voltage that rises steadily with time"
+      ],
+      "answerIndex": 2,
+      "week": 12,
+      "concept": "Why a transformer needs alternating current",
+      "why": "A transformer works through Faraday's law, ε = −N dΦ/dt. A battery drives a steady current, so once the transient is over the core flux is constant, dΦ/dt = 0, and the secondary emf is exactly zero. Meanwhile the primary has no back emf to limit it and draws a current set only by its own small winding resistance, so it is likely to overheat.\n\nThe two options giving a voltage assume the turns ratio acts on any voltage at all, but the ratio only follows from a shared changing flux; a steadily rising output would require a flux that accelerates without limit."
     }
   ]
 }

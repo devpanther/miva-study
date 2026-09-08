@@ -317,28 +317,56 @@
           "why": "Injective means no output is hit twice; 4 is hit by both 2 and −2, so f is not injective. Surjective means every element of the codomain ℝ is hit; −1 is never hit, so f is not surjective either.\n\n'Injective' ignores the collision at 4; 'surjective' ignores the gap at −1; 'bijective' would need both to hold, and neither does."
         },
         {
-          "type": "short",
-          "q": "f(x) = 3 sin(2x). State the period and the range of f. Show your working.",
+          "type": "mcq",
+          "q": "f(x) = 3 sin(2x). State the period and the range of f.",
+          "options": [
+            "Period π, range [−1, 1]",
+            "Period 4π, range [−3, 3]",
+            "Period π, range [−3, 3]",
+            "Period 2π, range [−3, 3]"
+          ],
+          "answerIndex": 2,
           "concept": "Period and amplitude of a sine function",
-          "why": "sin(kx) has period 2π/k, so with k = 2 the period is 2π/2 = π. sin(2x) lies between −1 and 1, so 3 sin(2x) lies between −3 and 3.\n\nFinal answer: period π, range [−3, 3]. Also accepted: −3 ≤ y ≤ 3. A period of 2π ignores the 2 inside; 4π multiplies instead of dividing; a range of [−1, 1] forgets the factor 3."
+          "why": "sin(kx) repeats every 2π/k, so with k = 2 the period is 2π/2 = π. The factor 3 outside stretches the outputs: sin(2x) runs over [−1, 1], so 3 sin(2x) runs over [−3, 3].\n\nA period of 2π ignores the 2 inside the sine, 4π multiplies by 2 instead of dividing, and a range of [−1, 1] forgets the factor 3."
         },
         {
-          "type": "short",
-          "q": "Find the domain of f(x) = log₂(x − 4). Show your working.",
+          "type": "mcq",
+          "q": "Find the domain of f(x) = log₂(x − 4).",
+          "options": [
+            "(4, ∞)",
+            "[4, ∞)",
+            "(−4, ∞)",
+            "(−∞, 4)"
+          ],
+          "answerIndex": 0,
           "concept": "Domain of a logarithmic function",
-          "why": "A logarithm is defined only for a positive argument, so x − 4 > 0, giving x > 4. The endpoint is excluded because log₂ 0 is undefined.\n\nFinal answer: D = (4, ∞). Also accepted: x > 4, {x : x > 4}. [4, ∞) or x ≥ 4 wrongly includes 4; (−4, ∞) has the sign of the boundary wrong; (−∞, ∞) forgets the log restriction altogether."
+          "why": "A logarithm accepts only a strictly positive argument, so x − 4 > 0 and x > 4, giving D = (4, ∞). The endpoint is excluded because log₂ 0 is undefined, not merely awkward.\n\n[4, ∞) wrongly admits x = 4, (−4, ∞) solves x + 4 > 0 instead, and (−∞, 4) reverses the inequality."
         },
         {
-          "type": "short",
-          "q": "Use the discriminant to find how many real roots f(x) = x² − 6x + 2 has, and then find them. Show your working.",
+          "type": "mcq",
+          "q": "Use the discriminant to say how many real roots f(x) = x² − 6x + 2 has, then find them.",
+          "options": [
+            "Δ = 44, two real roots: x = 3 ± √11",
+            "Δ = 28, two real roots: x = 6 ± 2√7",
+            "Δ = −28, no real roots",
+            "Δ = 28, two real roots: x = 3 ± √7"
+          ],
+          "answerIndex": 3,
           "concept": "Discriminant and roots of a quadratic",
-          "why": "Δ = b² − 4ac = (−6)² − 4(1)(2) = 36 − 8 = 28 > 0, so there are two distinct real roots. Then x = (6 ± √28)/2 = (6 ± 2√7)/2 = 3 ± √7.\n\nFinal answer: two real roots, x = 3 + √7 and x = 3 − √7 (about 5.65 and 0.35). Also accepted: (6 ± √28)/2. Δ = 36 + 8 = 44 has the sign of 4ac wrong; Δ = 36 − 2 = 34 forgets the factor 4."
+          "why": "Δ = b² − 4ac = (−6)² − 4(1)(2) = 36 − 8 = 28, which is positive, so there are two distinct real roots. The formula gives x = (6 ± √28)/2 = (6 ± 2√7)/2 = 3 ± √7, about 5.65 and 0.35.\n\nΔ = 44 takes 36 + 8 and gets the sign of 4ac wrong, x = 6 ± 2√7 forgets to divide the whole numerator by 2a, and Δ = −28 has the subtraction the wrong way round."
         },
         {
-          "type": "short",
-          "q": "The logarithm log_b(x) is defined only for b > 0 and b ≠ 1. Using the meaning y = log_b(x) means bʸ = x, explain why b = 1 is excluded and why a negative base is excluded.",
+          "type": "mcq",
+          "q": "y = log_b(x) means bʸ = x. Which statement explains why the base b = 1 and any negative base are excluded?",
+          "options": [
+            "b = 1 gives division by zero, and a negative base gives a negative logarithm",
+            "1ʸ = 1 for every y so the exponent is not determined, and a negative base gives non-real values for fractional y",
+            "1ʸ is undefined, and a negative base makes bʸ negative for every y",
+            "Both choices make bʸ = x unsolvable because bʸ is always 0"
+          ],
+          "answerIndex": 1,
           "concept": "Restrictions on the base of a logarithm",
-          "why": "y = log_b(x) is the exponent y with bʸ = x. If b = 1 then 1ʸ = 1 for every y, so 1ʸ = x has no solution unless x = 1, and then every y works: the exponent is not uniquely determined, so no function exists. If b is negative, bʸ is not a real number for many y (for example (−2)^(1/2) = √(−2)), so bʸ = x cannot be solved for general x > 0.\n\nA correct answer says b = 1 gives a constant power (1ʸ = 1) so the exponent cannot be recovered, and a negative base gives non-real powers for fractional exponents."
+          "why": "log_b(x) is the exponent y that satisfies bʸ = x. With b = 1, 1ʸ = 1 whatever y is, so the equation has no solution unless x = 1 and then every y works: the exponent cannot be pinned down, so there is no function. With b negative, powers such as (−2)^(1/2) = √(−2) are not real, so bʸ = x cannot be solved across x > 0.\n\nThe other options invent a division by zero, claim 1ʸ is undefined when it is simply 1, or claim bʸ = 0."
         }
       ]
     },
@@ -455,28 +483,56 @@
           "why": "Field lines start on positive charges and end on negative ones, so A is positive and B is negative. Closer spacing means a stronger field, so the field is stronger near A.\n\nThe first option reverses the start/end rule; the second reads the spacing backwards; two positive charges would have lines leaving both spheres, not entering B."
         },
         {
-          "type": "short",
-          "q": "At a point P the electric field is 1.5 × 10³ N/C pointing east. A small charged object placed at P feels a force of 4.5 × 10⁻³ N pointing west. Calculate the charge on the object, including its sign. Show your working.",
+          "type": "mcq",
+          "q": "At a point P the electric field is 1.5 × 10³ N/C pointing east. A small charged object placed at P feels a force of 4.5 × 10⁻³ N pointing west. What is the charge on the object?",
+          "options": [
+            "+3.0 μC",
+            "−3.0 μC",
+            "−3.3 × 10⁵ C",
+            "−6.8 C"
+          ],
+          "answerIndex": 1,
           "concept": "Finding a charge from the force in a known field",
-          "why": "F = qE, so |q| = F/E = 4.5 × 10⁻³ / 1.5 × 10³ = 3.0 × 10⁻⁶ C. The force is opposite to the field, and only a negative charge feels a force antiparallel to E, so q = −3.0 × 10⁻⁶ C = −3.0 μC.\n\nFinal answer: q = −3.0 μC (accept −3.0 × 10⁻⁶ C; 2.9 to 3.1 in magnitude). The sign must be negative and justified by the force being opposite to E. +3.0 μC is wrong on sign; 6.75 N or similar multiplies F by E instead of dividing; 3.3 × 10⁵ C inverts the fraction."
+          "why": "F = qE gives |q| = F/E = 4.5 × 10⁻³ / 1.5 × 10³ = 3.0 × 10⁻⁶ C. Only a negative charge is pushed opposite to E, and the force here is west while the field is east, so q = −3.0 μC.\n\n+3.0 μC has the right size but would be pushed east; −3.3 × 10⁵ C inverts the fraction to E/F; −6.8 C multiplies F by E instead of dividing."
         },
         {
-          "type": "short",
-          "q": "A test charge of −4.0 μC placed at a point feels a force of 6.0 mN directed east. Calculate the electric field at that point, magnitude and direction. Show your working.",
+          "type": "mcq",
+          "q": "A test charge of −4.0 μC placed at a point feels a force of 6.0 mN directed east. What is the electric field at that point?",
+          "options": [
+            "1.5 × 10³ N/C, east",
+            "1.5 × 10³ N/C, west",
+            "1.5 N/C, west",
+            "6.7 × 10⁻⁴ N/C, west"
+          ],
+          "answerIndex": 1,
           "concept": "Field from the force on a negative test charge",
-          "why": "Convert the prefixes: 6.0 mN = 6.0 × 10⁻³ N and 4.0 μC = 4.0 × 10⁻⁶ C. E = F/q₀ = 6.0 × 10⁻³ / 4.0 × 10⁻⁶ = 1.5 × 10³ N/C. The field direction is the direction of the force on a positive charge; this test charge is negative and is pushed east, so a positive charge would be pushed west. E = 1.5 × 10³ N/C pointing west.\n\nFinal answer: 1.5 × 10³ N/C (accept 1500 N/C or 1.5 kN/C) directed west. 'East' forgets the sign of the test charge; 1.5 N/C drops both prefixes; 6.7 × 10⁻⁴ N/C inverts the fraction; 1.5 × 10³ N has the unit of a force, not a field."
+          "why": "Convert first: 6.0 mN = 6.0 × 10⁻³ N and 4.0 μC = 4.0 × 10⁻⁶ C, so |E| = F/|q₀| = 1.5 × 10³ N/C. The field is defined by the force on a positive charge; this test charge is negative and is pushed east, so a positive charge would be pushed west. E = 1.5 × 10³ N/C west.\n\nEast ignores the sign of the test charge; 1.5 N/C drops both prefixes; 6.7 × 10⁻⁴ N/C inverts the fraction."
         },
         {
-          "type": "short",
-          "q": "Two protons are 2.0 nm apart. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Calculate the electric force between them and state whether it is attractive or repulsive. Show your working, including the powers of ten.",
+          "type": "mcq",
+          "q": "Two protons are 2.0 nm apart. Take k = 9.0 × 10⁹ N·m²/C² and e = 1.6 × 10⁻¹⁹ C. What is the electric force between them?",
+          "options": [
+            "1.2 × 10⁻¹⁹ N, repulsive",
+            "3.6 × 10⁸ N, repulsive",
+            "5.8 × 10⁻¹¹ N, attractive",
+            "5.8 × 10⁻¹¹ N, repulsive"
+          ],
+          "answerIndex": 3,
           "concept": "Coulomb's law at the nanometre scale",
-          "why": "Each proton carries +e. F = ke²/r² = (9.0 × 10⁹)(1.6 × 10⁻¹⁹)²/(2.0 × 10⁻⁹)². Numerator: (9.0 × 10⁹)(2.56 × 10⁻³⁸) = 2.304 × 10⁻²⁸. Denominator: 4.0 × 10⁻¹⁸. F = 2.304 × 10⁻²⁸/4.0 × 10⁻¹⁸ = 5.76 × 10⁻¹¹ N. Two positive charges, so the force is repulsive.\n\nFinal answer: 5.8 × 10⁻¹¹ N, repulsive (accept 5.7 to 5.8 × 10⁻¹¹ N). The working must show e squared and the 2.0 nm converted to 2.0 × 10⁻⁹ m and squared. 1.2 × 10⁻¹⁹ N forgets to square r; 3.6 × 10⁸ N uses e once instead of e²."
+          "why": "Each proton carries +e, so F = ke²/r² = (9.0 × 10⁹)(1.6 × 10⁻¹⁹)²/(2.0 × 10⁻⁹)² = 2.304 × 10⁻²⁸/4.0 × 10⁻¹⁸ = 5.76 × 10⁻¹¹ N. Two like charges, so the force is repulsive.\n\n1.2 × 10⁻¹⁹ N forgets to square the separation; 3.6 × 10⁸ N uses e once instead of e²; the attractive option has the arithmetic right but two positive charges cannot attract."
         },
         {
-          "type": "short",
-          "q": "The field strength a distance r from a point charge is |E| = k|Q|/r² whether Q is positive or negative. Explain what does change between the two cases, and state which way an electron moves if released at rest near an isolated negative charge.",
+          "type": "mcq",
+          "q": "The field a distance r from a point charge has magnitude k|Q|/r² whether Q is positive or negative. What changes between the two cases, and which way does an electron released at rest near an isolated negative charge move?",
+          "options": [
+            "The direction reverses, outward for +Q and inward for −Q; the electron moves toward the charge",
+            "Nothing changes but the sign of the magnitude; the electron moves toward the charge",
+            "The direction reverses, outward for +Q and inward for −Q; the electron moves away from the charge",
+            "The direction reverses, inward for +Q and outward for −Q; the electron moves away from the charge"
+          ],
+          "answerIndex": 2,
           "concept": "Field direction around positive and negative charges",
-          "why": "The magnitude depends only on |Q| and r. What changes is the direction: the field points radially outward from a positive charge and radially inward toward a negative charge, because E is defined by the force on a positive test charge, which is repelled by +Q and attracted by −Q. Near an isolated negative charge E points inward, but an electron is negative, so its force is opposite to E: it moves radially outward, away from the negative charge (like charges repel).\n\nA correct answer says the magnitude formula is unchanged, the direction reverses (outward for +Q, inward for −Q), and the electron moves away from the negative charge. Saying the electron follows the field lines inward is wrong."
+          "why": "The magnitude depends only on |Q| and r, so what changes is the direction: E is defined by the force on a positive test charge, which is pushed away from +Q and pulled toward −Q, so the field points outward from a positive charge and inward toward a negative one. Near an isolated negative charge E points inward, but the electron is itself negative, so its force is opposite to E and it moves outward, away from the charge.\n\nMoving toward the charge follows the field lines and ignores the electron's sign; the reversed pair has the field directions swapped; a magnitude does not carry a sign."
         }
       ]
     },
@@ -592,28 +648,56 @@
           "why": "Unsolvable means that no algorithm can settle the question for every possible input. Individual instances may well have answers, and some can be found by hand; what is missing is one systematic method that works every time. Strictly, these are unsolvable decision problems.\n\nNo answer existing is a different and stronger claim; slow computation is still a systematic method; an answer being unknown today says nothing about whether a method exists."
         },
         {
-          "type": "short",
-          "q": "Write pseudocode that finds a secret three-digit code by trial and error: it tests 000, 001, 002 and so on in order, stops as soon as the tested value equals the secret, and prints the number of tests made. Then state how many tests it makes when the secret is 250. Show your working.",
-          "concept": "Writing a trial-and-error search loop",
-          "why": "Model answer:\n\n```\nREAD secret\ncode = 0\ntests = 1\nWHILE code != secret\n    code = code + 1\n    tests = tests + 1\nENDWHILE\nPRINT tests\n```\n\nFor secret = 250 the values 0 to 250 are each tested once, which is 251 tests. A correct answer has a loop that stops when code equals secret, a counter that goes up once per test, and the answer 251 (250 is accepted only if the answer says explicitly that the first test of 000 is not counted). A loop with no stopping condition, or one that prints the code instead of the count, is wrong."
+          "type": "mcq",
+          "q": "A program looks for a secret three-digit code by trial and error. It tests 000, then 001, then 002 and so on in order, and stops as soon as the tested value equals the secret. Counting every value it tests, how many tests does it make when the secret is 250?",
+          "options": [
+            "250",
+            "249",
+            "1000",
+            "251"
+          ],
+          "answerIndex": 3,
+          "concept": "Counting the tests a trial-and-error search makes",
+          "why": "The values tested are 000, 001, up to 250, which is every whole number from 0 to 250 inclusive: 250 − 0 + 1 = 251 tests, the last of them the successful one.\n\n250 forgets that 000 is itself a test; 249 drops both ends; 1000 is the size of the whole search space, the cost of testing every three-digit code, not of stopping at 250."
         },
         {
-          "type": "short",
-          "q": "Consider the loop `WHILE x < 100: x = x + step` with whole-number inputs x and step. Write pseudocode that reads x and step and prints HALTS or LOOPS correctly for every pair of inputs, and explain why this particular halting question is decidable. Show your working.",
-          "concept": "Writing a decision procedure for one loop's halting",
-          "why": "The loop ends immediately if x ≥ 100. Otherwise it ends only if x grows, which needs step > 0; with step = 0 or step < 0, x never reaches 100. Model answer:\n\n```\nREAD x, step\nIF x >= 100 OR step > 0 THEN\n    PRINT \"HALTS\"\nELSE\n    PRINT \"LOOPS\"\nENDIF\n```\n\nIt is decidable because this one loop has a simple rule that answers every input without running it. The general halting problem asks for one method that works for every program, and no such method exists; that does not stop single programs from being analysed. A correct answer must handle both the x ≥ 100 case and the step > 0 case, print LOOPS for step ≤ 0 with x < 100, and say that one specific program can be analysed even though no universal method exists."
+          "type": "mcq",
+          "q": "The loop `WHILE x < 100: x = x + step` is run with whole-number values of x and step. Which condition is true exactly when this loop terminates?",
+          "options": [
+            "step > 0",
+            "x >= 100 OR step > 0",
+            "x >= 100 AND step > 0",
+            "x < 100 AND step > 0"
+          ],
+          "answerIndex": 1,
+          "concept": "Deciding whether one specific loop halts",
+          "why": "If x is already 100 or more the test fails at once and the body never runs, so the loop ends whatever step is. Otherwise x must grow to reach 100, which needs step > 0; with step = 0 or step negative it never gets there. So it terminates exactly when x >= 100 OR step > 0, and this one loop can be decided without running it even though no method decides every program.\n\nstep > 0 alone wrongly says x = 150 with step = 0 runs forever. Both AND versions demand a positive step even when the loop is never entered, and x < 100 AND step > 0 also refuses x = 150 with step = 3."
         },
         {
-          "type": "short",
-          "q": "A shop sells ₦1.2 million a month and must reach ₦2.0 million a month in four months. Using means-ends analysis, set a monthly target for each of the four months with equal increases, then split each month's increase equally between the shop's two branches. Show your working.",
+          "type": "mcq",
+          "q": "A shop sells ₦1.2 million a month and must reach ₦2.0 million a month in four months, with equal monthly increases. Each month's increase is shared equally between the shop's two branches. What are the four monthly targets and the extra each branch must add per month?",
+          "options": [
+            "1.2, 1.4, 1.6, 1.8 million; ₦100,000 per branch",
+            "1.4, 1.6, 1.8, 2.0 million; ₦200,000 per branch",
+            "1.4, 1.6, 1.8, 2.0 million; ₦100,000 per branch",
+            "2.0, 2.0, 2.0, 2.0 million; ₦400,000 per branch"
+          ],
+          "answerIndex": 2,
           "concept": "Means-ends analysis with numeric sub-goals",
-          "why": "The gap is 2.0 − 1.2 = 0.8 million over four months, so each month must add 0.8 / 4 = 0.2 million. Monthly targets: 1.4, 1.6, 1.8, 2.0 million. Each month's 0.2 million increase shared equally by two branches is 0.1 million (₦100,000) extra per branch per month.\n\nA correct answer shows the 0.8 million gap, the 0.2 million monthly step, the four targets 1.4, 1.6, 1.8 and 2.0 million, and the 0.1 million per branch. Targets of 1.2, 1.4, 1.6, 1.8 (starting from the current figure and never reaching the goal) are wrong."
+          "why": "The gap between the current state and the goal is 2.0 − 1.2 = 0.8 million, spread over four months, so each month must add 0.8 / 4 = 0.2 million. The targets are 1.4, 1.6, 1.8 and 2.0 million, and 0.2 million split between two branches is ₦100,000 each per month.\n\nStarting the list at 1.2 never reaches the goal inside four months; ₦200,000 per branch gives each branch the whole monthly increase instead of half; the flat 2.0 list sets no sub-goals at all, which is the one thing means-ends analysis exists to do."
         },
         {
-          "type": "short",
-          "q": "For heuristics and for trial and error, state what each strategy costs, the condition under which each fails, and give one situation for each where it would be the wrong choice.",
-          "concept": "Costs and failure conditions of heuristics and trial and error",
-          "why": "A heuristic buys speed by giving up on checking: the decision is made without stopping to think, so it costs rationality and the answer may be sub-optimal. It fails when a sub-optimal answer is not acceptable, for example computing the exact tax owed on an invoice by a rule of thumb. Trial and error costs time, one attempt per candidate, so its cost grows with the number of possible solutions. It fails when the candidates are many, for example finding a six-digit PIN by guessing.\n\nA correct answer names speed traded for rationality (heuristic) and time growing with candidates (trial and error), gives the matching failure condition for each, and one concrete misuse for each."
+          "type": "mcq",
+          "q": "A heuristic and a trial-and-error search each carry a cost that limits where they can be used. Which pairing of strategy with its cost is correct?",
+          "options": [
+            "Heuristic: rationality given up for speed. Trial and error: time growing with the number of candidates",
+            "Heuristic: time growing with the number of candidates. Trial and error: rationality given up for speed",
+            "Heuristic: memory for storing candidates. Trial and error: accuracy of the final answer",
+            "Heuristic: optimality given up for memory. Trial and error: rationality given up for speed"
+          ],
+          "answerIndex": 0,
+          "concept": "Cost of a heuristic versus trial and error",
+          "why": "A heuristic is a rule of thumb applied without stopping to check, so it buys speed by giving up rationality and may return a sub-optimal answer; it is the wrong choice where an exact figure is demanded, such as the tax owed on an invoice. Trial and error tries one candidate at a time, so its cost is time and grows with the number of candidates; it is the wrong choice for a six-digit PIN, where there are a million of them.\n\nThe other pairings swap the two costs, or invent costs of memory and accuracy that neither strategy is defined by."
         }
       ]
     },
@@ -729,28 +813,56 @@
           "why": "|x − 4| is a distance and is never negative, so it cannot equal −3: there is no solution. Squaring destroys the sign information, turning the impossible equation into |x − 4| = 3, whose solutions 1 and 7 are extraneous; substituting either back gives 3, not −3.\n\nx = 1, x = 7, and both together are the manufactured roots; none satisfies the original equation."
         },
         {
-          "type": "short",
-          "q": "f(x) = 2x + 5 if x < −1; f(x) = x² if −1 ≤ x ≤ 2; f(x) = 7 − x if x > 2. Evaluate f(−4), f(−1), f(2) and f(3). Show your working.",
+          "type": "mcq",
+          "q": "f(x) = 2x + 5 if x < −1; f(x) = x² if −1 ≤ x ≤ 2; f(x) = 7 − x if x > 2. Find f(−4), f(−1), f(2) and f(3), in that order.",
+          "options": [
+            "−3, 3, 5, 4",
+            "−3, 1, 5, 4",
+            "−3, 1, 4, 11",
+            "−3, 1, 4, 4"
+          ],
+          "answerIndex": 3,
           "concept": "Evaluating a piecewise function either side of its boundaries",
-          "why": "For each input, first decide which condition it satisfies. x = −4 < −1: first branch, f(−4) = 2(−4) + 5 = −3. x = −1 satisfies −1 ≤ x ≤ 2: middle branch, f(−1) = (−1)² = 1. x = 2 also satisfies −1 ≤ x ≤ 2: f(2) = 2² = 4. x = 3 > 2: third branch, f(3) = 7 − 3 = 4.\n\nFinal answer: f(−4) = −3, f(−1) = 1, f(2) = 4, f(3) = 4. A correct answer names the branch used for each input. Using 2x + 5 at x = −1 (giving 3) or 7 − x at x = 2 (giving 5) picks the branch whose condition is not satisfied and is wrong."
+          "why": "For each input decide first which condition it satisfies. x = −4 < −1 uses the first branch: 2(−4) + 5 = −3. Both x = −1 and x = 2 satisfy −1 ≤ x ≤ 2, so both use the middle branch: (−1)² = 1 and 2² = 4. x = 3 > 2 uses the third: 7 − 3 = 4.\n\nThe value 3 at x = −1 and 5 at x = 2 come from using branches whose conditions those inputs do not satisfy, and 11 at x = 3 uses 2x + 5 far outside its range."
         },
         {
-          "type": "short",
-          "q": "Solve the inequality |2x + 1| < 7. Give the answer as an interval. Show your working.",
+          "type": "mcq",
+          "q": "Solve the inequality |2x + 1| < 7 and give the answer as an interval.",
+          "options": [
+            "(−∞, −4) ∪ (3, ∞)",
+            "(−4, 3)",
+            "[−4, 3]",
+            "(−3, 4)"
+          ],
+          "answerIndex": 1,
           "concept": "Solving an absolute value inequality",
-          "why": "|2x + 1| < 7 means −7 < 2x + 1 < 7. Subtract 1 throughout: −8 < 2x < 6. Divide by 2: −4 < x < 3.\n\nFinal answer: (−4, 3). Also accepted: −4 < x < 3. Round brackets because the inequality is strict. x < 3 alone forgets the left-hand case; x < −4 or x > 3 solves the 'greater than' inequality instead; [−4, 3] wrongly includes the endpoints."
+          "why": "A 'less than' absolute value becomes a double inequality: |2x + 1| < 7 means −7 < 2x + 1 < 7. Subtract 1 throughout to get −8 < 2x < 6, then divide by 2 to get −4 < x < 3, that is (−4, 3), with round brackets because the inequality is strict.\n\n(−∞, −4) ∪ (3, ∞) solves the 'greater than' version, [−4, 3] wrongly includes endpoints where the expression equals 7, and (−3, 4) swaps the signs of the bounds."
         },
         {
-          "type": "short",
-          "q": "f(x) = 2x³ − 7x² + 1. State the degree and leading coefficient, then say what f(x) does as x → +∞ and as x → −∞, with the reasoning. Show your working.",
+          "type": "mcq",
+          "q": "For f(x) = 2x³ − 7x² + 1, state the degree and leading coefficient and say what f(x) does as x → +∞ and as x → −∞.",
+          "options": [
+            "Degree 3, leading coefficient 2; f → +∞ as x → +∞ and f → −∞ as x → −∞",
+            "Degree 3, leading coefficient 2; f → +∞ at both ends",
+            "Degree 3, leading coefficient −7; f → −∞ as x → +∞ and f → +∞ as x → −∞",
+            "Degree 2, leading coefficient −7; f → −∞ at both ends"
+          ],
+          "answerIndex": 0,
           "concept": "End behaviour of a polynomial",
-          "why": "Degree 3, leading coefficient 2. For large |x| the leading term 2x³ dominates every other term, so the tails follow 2x³. As x → +∞, 2x³ → +∞, so f(x) → +∞. As x → −∞, x³ is negative and large, so 2x³ → −∞ and f(x) → −∞. Odd degree with a positive leading coefficient: the tails go in opposite directions, down on the left, up on the right.\n\nFinal answer: degree 3, leading coefficient 2, f(x) → +∞ as x → +∞ and f(x) → −∞ as x → −∞. A correct answer must say the leading term dominates; reasoning from the −7x² term or from the constant 1 is wrong."
+          "why": "The highest power is x³, so the degree is 3 and the leading coefficient is the 2 in front of it. For large |x| the term 2x³ swamps every other term, so the tails follow 2x³: as x → +∞, 2x³ → +∞, and as x → −∞, x³ is large and negative so f → −∞. Odd degree with a positive lead means the two tails go opposite ways, down on the left and up on the right.\n\nThe other options read the leading term off the −7x² term, or treat an odd degree as if both tails matched."
         },
         {
-          "type": "short",
-          "q": "A student solves 2ˣ = 40 by writing x = 40 ÷ 2 = 20. Explain what the student has misread about 2ˣ, give the correct method, and say roughly what x is.",
+          "type": "mcq",
+          "q": "A student solves 2ˣ = 40 by writing x = 40 ÷ 2 = 20. What is the correct value of x, and what did the student misread?",
+          "options": [
+            "x = log₁₀ 40 ≈ 1.60; the base was read as 10",
+            "x = √40 ≈ 6.32; an exponent is undone by taking a root",
+            "x = log₂ 40 ≈ 5.32; a power was treated as a product",
+            "x = 20; dividing by 2 really does undo 2ˣ"
+          ],
+          "answerIndex": 2,
           "concept": "Exponential versus multiplication",
-          "why": "2ˣ means 2 multiplied by itself x times, not 2 times x; dividing by 2 undoes multiplication, not exponentiation. The correct move is to take a logarithm: x = log₂ 40 = ln 40 / ln 2 ≈ 5.32. A quick check: 2⁵ = 32 < 40 < 64 = 2⁶, so x lies between 5 and 6, nowhere near 20.\n\nA correct answer identifies the confusion of a power with a product, states x = log₂ 40 (or ln 40/ln 2), and places x between 5 and 6 (about 5.3)."
+          "why": "2ˣ means 2 multiplied by itself x times, not 2 times x, and division undoes multiplication, not exponentiation. The operation that undoes a power is a logarithm: x = log₂ 40 = ln 40 / ln 2 ≈ 5.32. A quick sanity check confirms it, since 2⁵ = 32 and 2⁶ = 64 bracket 40, so x lies between 5 and 6, nowhere near 20.\n\nlog₁₀ 40 uses the wrong base, √40 undoes a square rather than an unknown exponent, and 20 repeats the original mistake."
         }
       ]
     },
@@ -867,28 +979,56 @@
           "why": "Coulomb's law describes only a pair of point charges. For more than two, the principle of superposition (an experimental result) says the total force on a charge is the vector sum of the forces the other charges would exert individually. Along a line this means add when the arrows agree and subtract when they oppose.\n\nSumming magnitudes is only right when the forces are parallel; lumping the other charges at their midpoint ignores the 1/r² weighting of each; the nearer charge is not the only one acting, it is simply weighted more heavily."
         },
         {
-          "type": "short",
-          "q": "A +5.0 nC charge is at x = 0 and a −4.0 nC charge at x = 0.90 m. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Find the electric field at x = 0.30 m, magnitude and direction, then the force on an electron placed at that point. Show your working.",
+          "type": "mcq",
+          "q": "A +5.0 nC charge is at x = 0 and a −4.0 nC charge at x = 0.90 m. Take k = 9.0 × 10⁹ N·m²/C² and e = 1.6 × 10⁻¹⁹ C. What is the field at x = 0.30 m, and the force on an electron placed there?",
+          "options": [
+            "600 N/C along +x; 9.6 × 10⁻¹⁷ N along −x",
+            "600 N/C along +x; 9.6 × 10⁻¹⁷ N along +x",
+            "400 N/C along +x; 6.4 × 10⁻¹⁷ N along −x",
+            "544 N/C along +x; 8.7 × 10⁻¹⁷ N along −x"
+          ],
+          "answerIndex": 0,
           "concept": "Field between unlike charges then force on an electron",
-          "why": "E₁ from +5.0 nC at 0.30 m: (9.0 × 10⁹)(5.0 × 10⁻⁹)/(0.30)² = 45/0.090 = 500 N/C, away from the positive charge, so +x. E₂ from −4.0 nC at 0.90 − 0.30 = 0.60 m: (9.0 × 10⁹)(4.0 × 10⁻⁹)/(0.60)² = 36/0.36 = 100 N/C, toward the negative charge, so also +x. E = 500 + 100 = 600 N/C in the +x direction. Force on the electron: |F| = eE = (1.6 × 10⁻¹⁹)(600) = 9.6 × 10⁻¹⁷ N, and because the electron is negative the force is opposite to E: 9.6 × 10⁻¹⁷ N in the −x direction.\n\nFinal answer: E = 600 N/C along +x; F = 9.6 × 10⁻¹⁷ N along −x (accept 9.5 to 9.7 × 10⁻¹⁷ N). Using 0.90 m for the second distance gives 44 N/C and 544 N/C total, which is wrong; 400 N/C subtracts fields that point the same way; a force stated along +x forgets the electron's sign."
+          "why": "The +5.0 nC charge is 0.30 m away: E₁ = 45/0.090 = 500 N/C pointing away from it, so along +x. The −4.0 nC charge is 0.90 − 0.30 = 0.60 m away: E₂ = 36/0.36 = 100 N/C pointing toward it, also along +x. They add: E = 600 N/C along +x. On the electron, |F| = eE = 9.6 × 10⁻¹⁷ N, directed along −x because the electron is negative.\n\nA force along +x forgets that sign; 400 N/C subtracts two fields that point the same way; 544 N/C uses 0.90 m as the distance to the second charge."
         },
         {
-          "type": "short",
-          "q": "Two protons are 4.0 nm apart. An electron lies on the line between them, 1.0 nm from one proton. Take k = 9.0 × 10⁹ N·m²/C². Take e = 1.6 × 10⁻¹⁹ C. Calculate the total force on the electron, magnitude and direction. Show your working.",
+          "type": "mcq",
+          "q": "Two protons are 4.0 nm apart. An electron lies on the line between them, 1.0 nm from one proton. Take k = 9.0 × 10⁹ N·m²/C² and e = 1.6 × 10⁻¹⁹ C. What is the net force on the electron?",
+          "options": [
+            "2.6 × 10⁻¹⁰ N toward the nearer proton",
+            "2.0 × 10⁻¹⁰ N toward the nearer proton",
+            "2.3 × 10⁻¹⁰ N toward the nearer proton",
+            "2.0 × 10⁻¹⁰ N toward the farther proton"
+          ],
+          "answerIndex": 1,
           "concept": "Net force on an electron between two protons",
-          "why": "The electron is attracted to both protons, and they lie on opposite sides of it, so the two pulls oppose. Nearer proton (r = 1.0 × 10⁻⁹ m): F₁ = ke²/r² = (9.0 × 10⁹)(1.6 × 10⁻¹⁹)²/(1.0 × 10⁻⁹)² = 2.304 × 10⁻²⁸/1.0 × 10⁻¹⁸ = 2.30 × 10⁻¹⁰ N. Farther proton (r = 4.0 − 1.0 = 3.0 nm): F₂ = 2.304 × 10⁻²⁸/(3.0 × 10⁻⁹)² = 2.304 × 10⁻²⁸/9.0 × 10⁻¹⁸ = 2.56 × 10⁻¹¹ N, one ninth of F₁. Net = 2.30 × 10⁻¹⁰ − 0.26 × 10⁻¹⁰ = 2.05 × 10⁻¹⁰ N, directed toward the nearer proton.\n\nFinal answer: 2.0 × 10⁻¹⁰ N toward the nearer proton (accept 2.0 to 2.1 × 10⁻¹⁰ N). The working must show both magnitudes and the subtraction. 2.6 × 10⁻¹⁰ N adds two pulls that point opposite ways; 2.3 × 10⁻¹⁰ N ignores the farther proton."
+          "why": "The electron is pulled toward both protons, which sit on opposite sides of it, so the two pulls subtract. Nearer proton at 1.0 nm: F₁ = ke²/r² = 2.304 × 10⁻²⁸/1.0 × 10⁻¹⁸ = 2.30 × 10⁻¹⁰ N. Farther proton at 3.0 nm: F₂ = 2.304 × 10⁻²⁸/9.0 × 10⁻¹⁸ = 2.56 × 10⁻¹¹ N, a ninth of F₁. Net = 2.05 × 10⁻¹⁰ N toward the nearer proton.\n\n2.6 × 10⁻¹⁰ N adds two pulls that point opposite ways; 2.3 × 10⁻¹⁰ N ignores the farther proton; the last option has the direction backwards, since the nearer pull is the bigger one."
         },
         {
-          "type": "short",
-          "q": "Starting from Coulomb's law and the definition E = F/q₀, derive the expression for the field of a point charge Q at distance r. Then evaluate it for Q = +3.0 nC at r = 0.30 m and give the direction. Take k = 9.0 × 10⁹ N·m²/C². Show your working.",
+          "type": "mcq",
+          "q": "A positive test charge q₀ a distance r from a point charge Q feels a force of magnitude kQq₀/r². Using E = F/q₀, what is the field of Q, and its value for Q = +3.0 nC at r = 0.30 m with k = 9.0 × 10⁹ N·m²/C²?",
+          "options": [
+            "E = kQq₀/r²; 300 N/C directed away from Q",
+            "E = kQ/r²; 90 N/C directed away from Q",
+            "E = kQ/r²; 300 N/C directed away from Q",
+            "E = kQ/r²; 300 N/C directed toward Q"
+          ],
+          "answerIndex": 2,
           "concept": "Deriving the point-charge field from Coulomb's law",
-          "why": "Place a positive test charge q₀ at distance r from Q. Coulomb's law gives the force on it, |F| = kQq₀/r². By definition |E| = |F|/q₀ = kQq₀/(q₀r²) = kQ/r²: the test charge cancels, so the field depends only on the source Q and the distance r. For Q = +3.0 nC at 0.30 m: E = (9.0 × 10⁹)(3.0 × 10⁻⁹)/(0.30)² = 27/0.090 = 300 N/C, directed radially away from Q because Q is positive.\n\nA correct answer shows the force on a test charge, divides by q₀ so that q₀ cancels, states E = kQ/r², and gives 300 N/C outward (accept 3.0 × 10² N/C; 295 to 305). Leaving q₀ in the final expression, or giving 90 N/C by forgetting to square 0.30 m, is wrong."
+          "why": "Dividing the force by q₀ cancels the test charge: E = (kQq₀/r²)/q₀ = kQ/r², which is why the field depends only on the source and the distance. Numerically E = (9.0 × 10⁹)(3.0 × 10⁻⁹)/(0.30)² = 27/0.090 = 300 N/C, directed radially away from Q because Q is positive.\n\nLeaving q₀ in the expression means the division was not done; 90 N/C forgets to square 0.30 m; 'toward Q' is the direction for a negative source."
         },
         {
-          "type": "short",
-          "q": "A student substitutes q₁ = −6.0 μC and q₂ = +3.0 μC into F = kq₁q₂/r² with r = 2.0 m, gets F = −0.0405 N, and writes that the minus sign means the force is 0.0405 N to the left. Explain what is wrong with this reasoning and how the direction should be found.",
+          "type": "mcq",
+          "q": "A student puts q₁ = −6.0 μC and q₂ = +3.0 μC into F = kq₁q₂/r² with r = 2.0 m, gets −0.0405 N, and reads the minus sign as meaning the force is 0.0405 N to the left. What does that minus sign actually mean?",
+          "options": [
+            "It marks the force as repulsive, the product of the charges being negative",
+            "It means the force points to the left, as the student read it",
+            "It means a force of −0.0405 N, force being a signed quantity in one dimension",
+            "It marks the force as attractive; the magnitude is 0.0405 N and the direction comes from where the charges sit"
+          ],
+          "answerIndex": 3,
           "concept": "Sign of a charge versus direction of the force",
-          "why": "Coulomb's law gives a magnitude, F = k|q₁q₂|/r² = 0.0405 N here; a force has no negative magnitude. A minus sign from multiplying signed charges only records that the signs are unlike, which means the force is attractive. It says nothing about left or right, because the formula does not know where the charges sit. The direction comes from the sketch: each charge is pulled toward the other along the line joining them, so the force on q₁ points toward q₂ and the force on q₂ points toward q₁.\n\nA correct answer states that magnitudes go into the formula, that the sign of the product means attraction (unlike) or repulsion (like), and that left or right is read from the positions of the charges, not from the sign of the number."
+          "why": "Coulomb's law returns a magnitude, F = k|q₁q₂|/r² = 0.0405 N, and a magnitude is never negative. A minus sign from multiplying signed charges records only that the signs are unlike, so the force is attractive; the formula has no idea where the charges sit, so it cannot say left or right. The direction is read off the positions: each charge is pulled along the line toward the other.\n\nUnlike charges attract, not repel; 'to the left' reads a position out of a formula that contains none; treating F as signed confuses the sign of the charge product with a direction in space."
         }
       ]
     },
@@ -1004,28 +1144,56 @@
           "why": "This is the halting problem, an undecidable problem: no algorithm gives a correct true or false answer for every program and input. A program that decides single cases can exist, but the request asks for one method that works for all, and that cannot be built.\n\nRunning P and waiting never returns LOOPS, because you cannot know the wait is endless; restricting x does not remove the impossibility; a universal Turing machine can run anything with an instruction table, and H has none."
         },
         {
-          "type": "short",
-          "q": "A substitution puzzle allows two replacements: OB → BOOB and BOB → O. Starting from BOB, obtain BOOOB. Write down the word after each replacement and name the rule you applied. Show your working.",
+          "type": "mcq",
+          "q": "A substitution puzzle allows two replacements: OB → BOOB and BOB → O. Starting from BOB, which sequence of words reaches BOOOB?",
+          "options": [
+            "BOB, BBOOB, BBOBOOB, BOOOB",
+            "BOB, BBOOB, BOOOB",
+            "BOB, O, BOOOB",
+            "BOB, BOOBB, BOOOB"
+          ],
+          "answerIndex": 0,
           "concept": "Deriving a word in a substitution puzzle",
-          "why": "Start: BOB. Apply OB → BOOB to the OB at the end: B + BOOB = BBOOB. Apply OB → BOOB again to the OB at the end: BBO + BOOB = BBOBOOB. Now BBOBOOB contains BOB as its second, third and fourth letters; apply BOB → O: B + O + OOB = BOOOB.\n\nA correct answer shows the three words BBOOB, BBOBOOB, BOOOB in that order with the rule used at each step. Applying BOB → O first gives the single letter O, from which nothing can be made; an answer that stops there and says the puzzle does not come out is wrong."
+          "why": "BOB ends in OB, so OB → BOOB gives B + BOOB = BBOOB. BBOOB again ends in OB, so the same rule gives BBO + BOOB = BBOBOOB. BBOBOOB holds BOB in its second, third and fourth letters, so BOB → O gives B + O + OOB = BOOOB.\n\nBBOOB contains no BOB, and its only legal move lengthens it, so it cannot reach BOOOB in one step. Applying BOB → O first leaves the single letter O, to which neither rule applies. BOOBB is not produced by either rule from BOB."
         },
         {
-          "type": "short",
-          "q": "An exam has 50 questions, all answered. Each correct answer scores 4 marks and each wrong answer loses 2 marks. A student scores 170. How many answers were correct? Then say whether the problem is routine or non-routine and why. Show your working.",
-          "concept": "Solving an exam-marks problem and classifying it",
-          "why": "Let c be the number correct, so 50 − c are wrong. Score: 4c − 2(50 − c) = 170, so 4c − 100 + 2c = 170, 6c = 270, c = 45. Check: 45 × 4 = 180, 5 wrong lose 10, 180 − 10 = 170.\n\nFinal answer: 45 correct (5 wrong). The problem is non-routine in the sense of the week: it gives no standard method to apply, only arithmetic facts, so a method (setting up the equation, or guess and adjust) had to be devised first. A correct answer reaches 45 with a check, and classifies it as non-routine because no standard method is supplied, not because it lacks arithmetic. Routine is accepted only if the answer argues that setting up a linear equation is itself a standard algorithm."
+          "type": "mcq",
+          "q": "An exam has 50 questions and all of them are answered. Each correct answer scores 4 marks and each wrong answer loses 2 marks. A student scores 170. How many answers were correct?",
+          "options": [
+            "42",
+            "35",
+            "45",
+            "5"
+          ],
+          "answerIndex": 2,
+          "concept": "Solving a marks-and-penalty problem",
+          "why": "Let c be the number correct, so 50 − c are wrong. Then 4c − 2(50 − c) = 170, which is 6c − 100 = 170, so 6c = 270 and c = 45. Check: 45 correct score 180 and 5 wrong lose 10, giving 170.\n\n42 ignores the penalty and just divides 170 by 4; 35 adds the penalty instead of subtracting it, solving 4c + 2(50 − c) = 170; 5 is the number of wrong answers, not the number correct."
         },
         {
-          "type": "short",
-          "q": "Name the strategy used in each case and give the test that decides it. (a) A commuter drives a different route each week for four weeks and keeps the fastest. (b) A subway map shows only the stations and the lines joining them, with no distances or streets. (c) A shopper picks the cereal with the most familiar box without reading any label. (d) Ten staff spend an hour calling out every idea for a new product, writing all of them down and judging none.",
+          "type": "mcq",
+          "q": "Name the problem-solving strategy in each case, in order. (a) A commuter drives a different route each week for four weeks and keeps the fastest. (b) A subway map shows only the stations and the lines joining them, with no distances or streets. (c) A shopper picks the cereal with the most familiar box without reading any label. (d) Ten staff spend an hour calling out every idea for a new product, writing all of them down and judging none.",
+          "options": [
+            "Trial and error, abstraction, brainstorming, heuristics",
+            "Trial and error, abstraction, heuristics, brainstorming",
+            "Heuristics, abstraction, trial and error, brainstorming",
+            "Trial and error, means-ends analysis, heuristics, brainstorming"
+          ],
+          "answerIndex": 1,
           "concept": "Distinguishing trial and error, abstraction, heuristics and brainstorming",
-          "why": "(a) Trial and error: candidates are tried one after another and the failures discarded until one is accepted; the test is successive trials with a few candidates. (b) Abstraction: everything not needed for finding a route is deleted, leaving a model; the test is that attributes were thrown away. (c) Heuristics: one quick rule of thumb is accepted without checking, trading rationality for speed; the test is a single unchecked shortcut. (d) Brainstorming: a group produces many ideas spontaneously with criticism deferred; the test is quantity plus no judging.\n\nA correct answer names all four correctly and gives a distinguishing test for each. Calling (c) trial and error is wrong because nothing was tried and rejected; calling (b) means-ends analysis is wrong because nothing was split into sub-problems."
+          "why": "(a) is trial and error: candidates are tried one after another and the losers discarded. (b) is abstraction: every attribute not needed for finding a route has been thrown away, leaving a model. (c) is a heuristic: one unchecked rule of thumb, speed in place of rationality. (d) is brainstorming: many ideas produced quickly by a group with judgement deferred.\n\nSwapping (c) and (d) misses that nothing in (d) is a shortcut and nothing in (c) is a group. Calling (a) a heuristic ignores the four trials. Calling (b) means-ends analysis is wrong because nothing is split into sub-goals."
         },
         {
-          "type": "short",
-          "q": "A student tries four replacements on a substitution puzzle, does not reach the target word, and concludes that the puzzle does not come out. Explain why that conclusion is premature, and explain what it means to say that deciding whether substitution puzzles come out is unsolvable.",
+          "type": "mcq",
+          "q": "A student tries four sequences of replacements on a substitution puzzle, fails to reach the target word, and concludes that the puzzle does not come out. Deciding whether substitution puzzles come out is known to be unsolvable. Which statement is correct?",
+          "options": [
+            "The conclusion is sound, because four failed attempts show that no derivation exists",
+            "The conclusion is sound, because unsolvable means no such puzzle can ever be settled",
+            "The conclusion is premature, and unsolvable means every such puzzle has no derivation",
+            "The conclusion is premature, and unsolvable means no single method settles every puzzle"
+          ],
+          "answerIndex": 3,
           "concept": "Premature conclusion versus genuine unsolvability",
-          "why": "Four failed attempts show only that those four paths do not work; other orders and other positions of the replacements remain untried, and a puzzle may need many more steps than four. Nothing has been proved about the puzzle, so the conclusion is premature.\n\nSaying the deciding problem is unsolvable means something quite different: no single systematic method exists that, for every substitution puzzle, correctly answers whether it comes out. Individual puzzles can still be settled, by finding a derivation or by an argument that none exists. A correct answer makes both points: a few failures prove nothing about one puzzle, and unsolvable is a claim about the absence of a universal method, not about any particular puzzle having no answer."
+          "why": "Four failed attempts rule out four paths and nothing more: other orders and other positions for the replacements are untried, and a derivation may need far more than four steps. So the conclusion is premature.\n\nUnsolvable is a claim about methods, not about puzzles: no single systematic method answers the question for every puzzle. Individual puzzles are still settled all the time, by exhibiting a derivation or by an argument that none exists, which is why the other three readings are wrong."
         }
       ],
       "slot": "fast"

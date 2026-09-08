@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Problems-only session on Week 1.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** f(x) = x² − 4. Find and simplify f(a + 1).
 A. a² − 3
@@ -51,13 +51,29 @@ B. ℝ
 C. ℝ \ {−3}
 D. ℝ \ {−3, 3}
 
-**9. (show your working)** Find the domain and the range of h(x) = √(x + 6) − 4, showing the inequality at each step. Show your working.
+**9.** Find the domain and the range of h(x) = √(x + 6) − 4.
+A. D = [6, ∞), R = [−4, ∞)
+B. D = [−6, ∞), R = [0, ∞)
+C. D = (−6, ∞), R = (−4, ∞)
+D. D = [−6, ∞), R = [−4, ∞)
 
-**10. (show your working)** Find the inverse of f(x) = (3x − 2)/4 using let, switch, isolate, then verify by showing f(f⁻¹(x)) = x. Show your working.
+**10.** Find the inverse of f(x) = (3x − 2)/4.
+A. f⁻¹(x) = (4x + 2)/3
+B. f⁻¹(x) = (4x − 2)/3
+C. f⁻¹(x) = 4/(3x − 2)
+D. f⁻¹(x) = (3x + 2)/4
 
-**11. (show your working)** Find the domain of f(x) = √(x − 1)/(x − 4). Show your working.
+**11.** Find the domain of f(x) = √(x − 1)/(x − 4).
+A. [1, ∞)
+B. ℝ \ {4}
+C. [1, 4) ∪ (4, ∞)
+D. (1, 4) ∪ (4, ∞)
 
-**12. (show your working)** The range of h(x) = 2 − |x − 3| is (−∞, 2]. Explain why the bracket at 2 is square while the bracket at −∞ is round, and state the input x at which y = 2 occurs.
+**12.** The range of h(x) = 2 − |x − 3| is (−∞, 2]. Why is the bracket at 2 square while the bracket at −∞ is round?
+A. A square bracket always marks a maximum and a round bracket always marks a minimum
+B. y = 2 is attained, at x = 3, while −∞ is not a number and is never attained
+C. h is defined at x = 2 but is undefined at x = −∞
+D. y = 2 is never quite reached, while the values run all the way down to −∞
 
 ---
 
@@ -95,18 +111,18 @@ a² − 3 squares term by term and drops the 2a cross term; a² + 2a + 1 expands
 
 ℝ ignores the division by zero; ℝ \ {−3} excludes a zero of the numerator instead; ℝ \ {−3, 3} excludes both roots of the numerator, which never restrict a domain.
 
-**9.** *Domain and range of a square root function.* Domain: the quantity under the root cannot be negative, so x + 6 ≥ 0, x ≥ −6, D = [−6, ∞). Range: √(x + 6) ≥ 0, so √(x + 6) − 4 ≥ −4, y ≥ −4, R = [−4, ∞). Subtracting 4 does not reverse the inequality because nothing was multiplied by a negative.
+**9. D** — *Domain and range of a square root function.* The quantity under the root cannot be negative, so x + 6 ≥ 0 and x ≥ −6, giving D = [−6, ∞). Since √(x + 6) ≥ 0, subtracting 4 gives h(x) ≥ −4, so R = [−4, ∞); nothing was multiplied by a negative, so no inequality reverses.
 
-Final answer: D = [−6, ∞), R = [−4, ∞). Also accepted: x ≥ −6 and y ≥ −4. Both brackets are square because x = −6 is a legal input and h(−6) = −4 is attained. [0, ∞) for the range forgets the −4; [6, ∞) for the domain has the sign wrong.
+Both brackets are square because x = −6 is a legal input and h(−6) = −4 is actually reached. [6, ∞) has the sign of the boundary wrong, [0, ∞) forgets the −4, and the round brackets wrongly exclude endpoints that are attained.
 
-**10.** *Finding and verifying an inverse.* Let y = (3x − 2)/4. Switch: x = (3y − 2)/4. Isolate y: 4x = 3y − 2, 3y = 4x + 2, y = (4x + 2)/3. So f⁻¹(x) = (4x + 2)/3. Verify: f(f⁻¹(x)) = (3·(4x + 2)/3 − 2)/4 = (4x + 2 − 2)/4 = 4x/4 = x.
+**10. A** — *Finding and verifying an inverse.* Let y = (3x − 2)/4, switch the letters to get x = (3y − 2)/4, then isolate y: 4x = 3y − 2, 3y = 4x + 2, y = (4x + 2)/3. Checking, f(f⁻¹(x)) = (3·(4x + 2)/3 − 2)/4 = 4x/4 = x, so f⁻¹(x) = (4x + 2)/3 is right.
 
-Final answer: f⁻¹(x) = (4x + 2)/3; also accepted 4x/3 + 2/3 or (2/3)(2x + 1). A numeric check such as f(2) = 1 and f⁻¹(1) = 2 is accepted in place of the algebraic one. (4x − 2)/3 is a sign slip and 4/(3x − 2) is the reciprocal; both are wrong.
+(4x − 2)/3 loses the sign when the −2 is moved across, 4/(3x − 2) is the reciprocal rather than the inverse, and (3x + 2)/4 never switches x and y at all.
 
-**11.** *Domain with a root and a denominator.* Two restrictions, and both must hold. The root needs x − 1 ≥ 0, so x ≥ 1. The denominator needs x − 4 ≠ 0, so x ≠ 4. Combine: x ≥ 1 with x = 4 removed.
+**11. C** — *Domain with a root and a denominator.* Two restrictions apply at once. The root needs x − 1 ≥ 0, so x ≥ 1, and the denominator needs x − 4 ≠ 0, so x ≠ 4. Putting them together gives [1, 4) ∪ (4, ∞), also writeable as x ≥ 1 with x ≠ 4.
 
-Final answer: D = [1, 4) ∪ (4, ∞). Also accepted: x ≥ 1, x ≠ 4, or [1, ∞) \ {4}. Giving only [1, ∞) forgets the denominator; giving only ℝ \ {4} forgets the root; (1, 4) ∪ (4, ∞) wrongly excludes x = 1, where f(1) = 0 is defined.
+[1, ∞) forgets the denominator, ℝ \ {4} forgets the root, and (1, 4) ∪ (4, ∞) wrongly throws out x = 1, where f(1) = 0/(−3) is perfectly defined.
 
-**12.** *Square versus round brackets in interval notation.* A square bracket means the endpoint is actually attained; a round bracket means it is not. y = 2 is attained: at x = 3, |x − 3| = 0 and h(3) = 2 − 0 = 2, so 2 belongs to the range and gets a square bracket. −∞ is not a number and is never reached; h(x) only becomes as negative as you like, so the bracket there is round.
+**12. B** — *Square versus round brackets in interval notation.* A square bracket says the endpoint is actually attained, a round bracket says it is not. At x = 3 the absolute value is 0, so h(3) = 2 and the output 2 really is reached, which earns the square bracket. On the other side −∞ is not a number at all: h just keeps falling without ever landing on it, so that end stays round.
 
-A correct answer says 2 is attained (at x = 3), that ∞ is never attained, and states x = 3.
+The maximum-versus-minimum option invents a rule that does not exist, and the option about h being defined at x = 2 confuses an input with an output.

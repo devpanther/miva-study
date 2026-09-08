@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Week 3 of General Physics II treated conceptually.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A cell of emf 9.0 V and internal resistance 0.50 Ω delivers a current of 2.0 A to a circuit. What is the terminal potential difference?
 A. 10 V
@@ -51,13 +51,29 @@ B. The cell pushes each coulomb with a force of 1.5 N
 C. The terminals are always 1.5 V apart, whatever current flows
 D. The cell delivers 1.5 W to the circuit
 
-**9. (show your working)** A 15 μF capacitor carries a charge of 3.0 × 10⁻⁴ C. Calculate the potential difference across it and the energy it stores. Show your working.
+**9.** A 15 μF capacitor carries a charge of 3.0 × 10⁻⁴ C. What are the potential difference across it and the energy it stores?
+A. 20 V; 3.0 × 10⁻³ J
+B. 20 V; 6.0 × 10⁻³ J
+C. 20 V; 1.5 × 10⁻⁴ J
+D. 4.5 × 10⁻⁹ V; 6.8 × 10⁻¹³ J
 
-**10. (show your working)** Emf is defined as work done per unit charge. Starting from the dimensions of force, displacement, current and time, derive the dimensional formula of emf. Show your working.
+**10.** Emf is defined as work done per unit charge. What is its dimensional formula?
+A. [M L² T⁻² I⁻¹]
+B. [M L² T⁻³ I⁻¹]
+C. [M L T⁻³ I⁻¹]
+D. [M L² T⁻¹ I]
 
-**11. (show your working)** The insulating film in a capacitor has a dielectric strength of 3.0 × 10⁶ V/m and a thickness of 0.20 mm. Calculate the largest potential difference the capacitor can hold before the dielectric breaks down. Show your working.
+**11.** The insulating film in a capacitor has a dielectric strength of 3.0 × 10⁶ V/m and a thickness of 0.20 mm. What is the largest potential difference it can hold before the dielectric breaks down?
+A. 6.0 × 10⁵ V
+B. 1.5 × 10¹⁰ V
+C. 600 V
+D. 6.0 × 10⁴ V
 
-**12. (show your working)** A metal plate and a slab of glass are each placed in a steady external electric field. In equilibrium the field inside the metal is zero, while the field inside the glass is reduced but not zero. Explain both results in terms of the electrons in each material.
+**12.** A metal plate and a slab of glass are each placed in a steady external electric field. Why is the field inside the metal zero at equilibrium while the field inside the glass is reduced but not zero?
+A. The metal has no electrons free to make a field inside it, while glass has electrons that make one
+B. The metal's free electrons are used up cancelling the field; glass holds fewer electrons, so less is cancelled
+C. The metal reflects the field at its surface, while glass transmits part of it and absorbs the rest
+D. Free electrons in the metal redistribute until they cancel the field; glass has bound electrons that only polarise, cutting it by K
 
 ---
 
@@ -95,18 +111,18 @@ D. The cell delivers 1.5 W to the circuit
 
 '1.5 N' confuses the volt with the newton; 'always 1.5 V apart' describes the terminal p.d., which falls below ε by Ir as soon as current flows; watts measure power, not energy per charge.
 
-**9.** *Potential difference and energy from the charge on a capacitor.* V = Q/C = 3.0 × 10⁻⁴/15 × 10⁻⁶ = 20 V. Then U = ½QV = ½ × 3.0 × 10⁻⁴ × 20 = 3.0 × 10⁻³ J. The same result comes from U = Q²/2C = (3.0 × 10⁻⁴)²/(2 × 15 × 10⁻⁶) = 9.0 × 10⁻⁸/3.0 × 10⁻⁵ = 3.0 × 10⁻³ J.
+**9. A** — *Potential difference and energy from the charge on a capacitor.* V = Q/C = 3.0 × 10⁻⁴/15 × 10⁻⁶ = 20 V. Then U = ½QV = ½(3.0 × 10⁻⁴)(20) = 3.0 × 10⁻³ J, the same as Q²/2C = 9.0 × 10⁻⁸/3.0 × 10⁻⁵.
 
-Final answer: V = 20 V, U = 3.0 × 10⁻³ J (accept 3.0 mJ; 2.9 to 3.1 × 10⁻³). Any of ½QV, ½CV² or Q²/2C is accepted. 6.0 × 10⁻³ J leaves out the ½; a p.d. of 4.5 × 10⁻⁹ V comes from multiplying Q by C instead of dividing.
+6.0 × 10⁻³ J leaves out the factor ½; 1.5 × 10⁻⁴ J uses ½CV instead of ½CV²; the last option multiplies Q by C instead of dividing.
 
-**10.** *Dimensional formula of emf.* Work = force × displacement = (mass × acceleration) × displacement = [M][L T⁻²][L] = [M L² T⁻²]. Charge = current × time = [I T]. Emf = work/charge = [M L² T⁻²][I T]⁻¹ = [M L² T⁻³ I⁻¹].
+**10. B** — *Dimensional formula of emf.* Work = force × displacement = [M][L T⁻²][L] = [M L² T⁻²], and charge = current × time = [I T]. Dividing, emf = [M L² T⁻²]/[I T] = [M L² T⁻³ I⁻¹].
 
-Final answer: [M¹ L² T⁻³ I⁻¹]. A correct answer must show work as M L² T⁻² and charge as I T before dividing. [M L² T⁻² I⁻¹] forgets the T from the charge; [M L T⁻³ I⁻¹] uses force instead of work.
+[M L² T⁻² I⁻¹] forgets the T that comes with the charge; [M L T⁻³ I⁻¹] uses force in place of work; [M L² T⁻¹ I] multiplies by the charge instead of dividing.
 
-**11.** *Breakdown potential from dielectric strength.* Between parallel plates V = Ed. The largest field the material tolerates is its dielectric strength, so V_max = E_max × d = 3.0 × 10⁶ × 0.20 × 10⁻³ = 6.0 × 10² V = 600 V.
+**11. C** — *Breakdown potential from dielectric strength.* Between parallel plates V = Ed, and the largest field the film tolerates is its dielectric strength, so V_max = (3.0 × 10⁶)(0.20 × 10⁻³) = 6.0 × 10² V = 600 V.
 
-Final answer: 600 V (accept 6.0 × 10² V). The working must convert 0.20 mm to 2.0 × 10⁻⁴ m. 6.0 × 10⁵ V leaves the thickness in millimetres; 1.5 × 10¹⁰ V/m divides instead of multiplying and also has the wrong unit.
+6.0 × 10⁵ V leaves the thickness in millimetres; 6.0 × 10⁴ V reads 0.20 mm as 0.020 m; 1.5 × 10¹⁰ divides by the thickness instead of multiplying.
 
-**12.** *Field inside a conductor versus inside a dielectric.* In a conductor the electrons are free to move. The external field pushes them until the charge that piles up on the surfaces produces an internal field that exactly cancels the applied one; they keep moving until the net field inside is zero, because any remaining field would move more charge. In an insulator such as glass the electrons are bound to their atoms. They can only shift slightly, polarising the material, and that limited separation produces an opposing field that reduces the applied field by the factor K but cannot cancel it.
+**12. D** — *Field inside a conductor versus inside a dielectric.* In a conductor the electrons are free, so they keep moving until the surface charge they build up produces a field that exactly cancels the applied one; any leftover field would move more charge, so equilibrium means zero field inside. In glass the electrons are bound to their atoms and can only shift slightly, so the polarisation produces an opposing field that reduces the applied field by the factor K but can never cancel it.
 
-A correct answer says: conductor has free electrons which redistribute until the internal field is zero; insulator has bound electrons, so polarisation only reduces the field (by the dielectric constant K), never to zero.
+The other options either deny the metal its free electrons, treat electrons as a supply that runs out, or describe optics rather than electrostatics.

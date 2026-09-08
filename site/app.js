@@ -4508,6 +4508,13 @@ function viewResult(root, q){
 
   var r = grade(q);
 
+  /* A check is all multiple choice now, so the score is arithmetic and needs no marker
+     and no waiting screen. A missed question still earns a word on why the option you
+     chose was tempting, and that does come from the marker, so it is fetched once the
+     score is already on screen rather than in front of it. */
+  if(!q.grading && !q.gradeError && !q.debrief && !needsMarking(q) && r.wrong.length)
+    askGrader(q, function(){ if(TAB === "quiz" && QUIZ === q) render(); });
+
   /* Locked here, not at a button. Nothing below this line has been seen yet. */
   if(!r.unmarked && !q.logged){
     q.logged = logScore(q, r);
@@ -4539,7 +4546,7 @@ function viewResult(root, q){
       ? " You have changed " + q.overrides + " mark" + (q.overrides === 1 ? "" : "s") + " yourself, which is recorded."
       : "";
     lg.innerHTML = q.logged.cold
-      ? "<b>Logged " + r.score + "/" + r.max + ".</b> It went in when the marking landed, before any answer below was shown." + ov
+      ? "<b>Logged " + r.score + "/" + r.max + ".</b> It went in the moment you submitted, before a single answer below was shown." + ov
       : "<b>Practice run.</b> Your logged score for this check is still " + q.logged.kept + "/" + q.logged.max
         + ", and that is the one Sunday reads. This attempt counts towards your best." + ov;
     root.appendChild(lg);
@@ -6694,6 +6701,8 @@ window.KAIZEN = {
   weekState: weekState,
   openSession: openSession, openGuide: openGuide,
   tab: function(){ return TAB; }, activeTab: activeTab, go: goTo,
+  /* which displayed option is the right one on the question now on screen */
+  rightHere: function(){ return QUIZ ? qCorrect(QUIZ, QUIZ.idx) : -1; },
   /* the explanation splitter, so a harness can test it on text without sitting a check */
   paras: function(t){ var d = document.createElement('div'); whyInto(d, t); return Array.from(d.querySelectorAll('p')).map(function(x){ return x.innerText; }); },
   code: codeHtml,

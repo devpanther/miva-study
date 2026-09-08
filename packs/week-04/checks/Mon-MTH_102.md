@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Week 4 of Elementary Mathematics II, taken conceptually.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** For x < 1 a curve rises and ends in an open circle at (1, 5). For x > 1 the curve begins at a solid dot at (1, 2) and continues to the right. Find lim(x→1⁻) f(x).
 A. 2
@@ -51,13 +51,29 @@ B. f(a) should be 2.5, the average of 1 and 4
 C. lim(x→a) f(x) still does not exist
 D. It does not fail; f is now continuous at a
 
-**9. (show your working)** For x < −1 a curve falls and ends in an open circle at (−1, 2). For x > −1 the curve starts at a solid dot at (−1, 5) and continues. State lim(x→−1⁻) f(x), lim(x→−1⁺) f(x), lim(x→−1) f(x) and f(−1), and name the type of discontinuity. Show your working.
+**9.** For x < −1 a curve falls and ends in an open circle at (−1, 2). For x > −1 the curve starts at a solid dot at (−1, 5) and continues upward. Give lim(x→−1⁻) f(x), lim(x→−1⁺) f(x), lim(x→−1) f(x), f(−1) and the type of discontinuity.
+A. 2, 5, DNE, 2; jump
+B. 2, 5, DNE, 5; jump
+C. 2, 5, 5, 5; removable
+D. 2, 5, DNE, 5; removable
 
-**10. (show your working)** f(x) = (x² − x − 6)/(x − 3). Find lim(x→3) f(x), state whether f(3) is defined, and name the type of discontinuity at x = 3. Show your working.
+**10.** f(x) = (x² − x − 6)/(x − 3). Find lim(x→3) f(x), say whether f(3) is defined, and name the type of discontinuity at x = 3.
+A. 0, f(3) undefined, removable
+B. DNE, f(3) undefined, infinite
+C. 5, f(3) undefined, removable
+D. 5, f(3) = 5, so f is continuous there
 
-**11. (show your working)** f(x) = x² for x ≤ 1 and f(x) = 2 − x for x > 1. Check the three continuity conditions at x = 1 and state whether f is continuous there. Show your working.
+**11.** f(x) = x² for x ≤ 1 and f(x) = 2 − x for x > 1. Give f(1), the left limit and the right limit at x = 1, and say whether f is continuous there.
+A. f(1) = 1, left 1, right 1; continuous
+B. f(1) = 1, left 1, right 2; not continuous
+C. f(1) = 2, left 2, right 1; not continuous
+D. f(1) = 1, left 1, right 1; not continuous, since the two rules differ
 
-**12. (show your working)** Explain why lim(x→c) f(x) exists only when lim(x→c⁻) f(x) and lim(x→c⁺) f(x) agree on the same finite real number. Describe both ways the criterion can fail and say what each looks like on a graph.
+**12.** lim(x→c) f(x) exists only when the two one-sided limits agree on the same finite real number. Which pair names the two ways that can fail?
+A. f(c) is undefined, or f(c) differs from the limit
+B. The curve has a corner at c, or f is not differentiable at c
+C. The one-sided limits agree but f(c) is undefined, or f(c) is infinite
+D. The one-sided limits are different finite numbers, or one side is unbounded
 
 ---
 
@@ -95,18 +111,18 @@ D. It does not fail; f is now continuous at a
 
 Choosing 1 or 2.5 for f(a) still leaves the one-sided limits at 1 and 4; 'now continuous' matches f(a) to one side only, but the other side still disagrees.
 
-**9.** *Reading all four quantities from a graph.* Left branch: the curve runs into height 2 as x → −1 from below, so lim(x→−1⁻) f(x) = 2 (the open circle still shows the approach height). Right branch: it starts at height 5, so lim(x→−1⁺) f(x) = 5. Since 2 ≠ 5, lim(x→−1) f(x) = DNE. The solid dot gives the value: f(−1) = 5.
+**9. B** — *Reading all four quantities from a graph.* The left branch runs into height 2, so lim(x→−1⁻) f(x) = 2; an open circle still records the height being approached. The right branch starts at height 5, so lim(x→−1⁺) f(x) = 5. The two sides disagree, so lim(x→−1) f(x) is DNE, while the solid dot fixes the value f(−1) = 5. Two finite but unequal one-sided limits is exactly a jump discontinuity.
 
-Both one-sided limits are finite but unequal, so this is a jump discontinuity. A correct answer states 2, 5, DNE, 5 and 'jump'; 'does not exist' or 'no limit' is accepted for DNE. Writing f(−1) = 2 (reading the open circle) or lim(x→−1) f(x) = 5 (taking one side as the two-sided limit) is wrong.
+Reading f(−1) off the open circle gives 2, calling the two-sided limit 5 takes one side for both, and 'removable' would need the two sides to agree.
 
-**10.** *Removable discontinuity of a rational function.* Substituting x = 3 gives (9 − 3 − 6)/(3 − 3) = 0/0, which is indeterminate and only tells you to factor. x² − x − 6 = (x − 3)(x + 2), so for x ≠ 3, f(x) = x + 2, and lim(x→3) f(x) = 3 + 2 = 5 from both sides. At x = 3 itself the denominator is 0, so f(3) is undefined.
+**10. C** — *Removable discontinuity of a rational function.* Substituting 3 gives (9 − 3 − 6)/0 = 0/0, which is a signal to factor rather than an answer. Since x² − x − 6 = (x − 3)(x + 2), for every x ≠ 3 the function equals x + 2, so lim(x→3) f(x) = 5 from both sides, while f(3) itself is undefined because the denominator vanishes. A limit that exists at a point where the function does not is the removable case: the line y = x + 2 with a hole at (3, 5).
 
-The limit exists and is finite but f(3) is undefined, so this is a removable discontinuity: the line y = x + 2 with a hole at (3, 5). A correct answer shows the factorisation, gives the limit 5, says f(3) is undefined (or 'does not exist'), and says 'removable' (or 'a hole'). Writing 'limit DNE because 0/0' is wrong.
+'DNE because 0/0' misreads the indeterminate form, 0 reads the numerator alone, and f(3) = 5 forgets that cancelling does not restore the point.
 
-**11.** *Continuity of a piecewise function at its join.* (i) f(1) uses the first piece because 1 ≤ 1: f(1) = 1² = 1, so f is defined at 1. (ii) Left: lim(x→1⁻) x² = 1. Right: lim(x→1⁺) (2 − x) = 2 − 1 = 1. They agree, so lim(x→1) f(x) = 1 exists. (iii) lim(x→1) f(x) = 1 = f(1).
+**11. A** — *Continuity of a piecewise function at its join.* Because 1 ≤ 1, the value comes from the first piece: f(1) = 1² = 1, so f is defined there. From the left, lim x² = 1; from the right, lim (2 − x) = 2 − 1 = 1, so the two sides agree and lim(x→1) f(x) = 1 exists. That limit equals f(1), so all three conditions hold and f is continuous at x = 1.
 
-All three conditions hold, so f is continuous at x = 1. A correct answer shows f(1) = 1, both one-sided limits equal to 1, the comparison with f(1), and the conclusion 'continuous'. Using the wrong piece for f(1) (giving 2 − 1 = 1 by luck here) should still be marked down if the reasoning says x = 1 belongs to the second piece.
+A right limit of 2 substitutes into 2 − x carelessly, f(1) = 2 uses the wrong piece, and the last option confuses different formulas with a genuine break.
 
-**12.** *Existence criterion for a two-sided limit.* A two-sided limit is a single number that f gets close to no matter which side x comes from. If the left and right approaches give different finite heights (say 3 from the left and −4 from the right) there is no single number, so the limit does not exist; on the graph the curve breaks and restarts at a different height, a jump. If one side runs off to +∞ or −∞ the heights never settle on any real number, so again the limit does not exist; the graph hugs a vertical asymptote and rises or falls without bound.
+**12. D** — *Existence criterion for a two-sided limit.* A two-sided limit is a single finite number that f approaches from either side. It fails if the sides settle on different heights, which on a graph is a break where the curve restarts at a new level, a jump. It also fails if a side runs off to +∞ or −∞, since the heights never settle on any real number, and the graph then hugs a vertical asymptote. Note that 'limit = ∞' describes a failure, not a value.
 
-A correct answer says the limit must be one finite real number, names the two failures (sides disagree; a side is unbounded), and describes the jump and the vertical asymptote. It should be clear that 'limit = ∞' is a description of failure, not a value.
+The options about f(c) describe continuity failing, not the limit failing, and a corner has a perfectly good limit.

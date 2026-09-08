@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Conceptual session on Week 12 transformers, exactly as the lecturer builds them.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** The primary of a transformer has 400 turns and an induced emf of 120 V. The secondary, on the same core, has 50 turns. What is the emf induced in the secondary?
 A. 960 V
@@ -51,13 +51,29 @@ B. The frequency
 C. The current
 D. The resistance seen by the source
 
-**9. (show your working)** A generator delivers 20 kW at 500 V. Before transmission the voltage is stepped up by an ideal transformer to 10 kV. Calculate the current in the line before and after stepping up, and the factor by which the I²R loss in the line falls. Show your working.
+**9.** A generator delivers 20 kW at 500 V. An ideal transformer steps the voltage up to 10 kV for transmission. Calculate the line current before and after, and the factor by which the I²R loss in the line falls.
+A. 40 A and 2.0 A, loss unchanged
+B. 40 A and 800 A, loss up by 400
+C. 40 A and 2.0 A, loss down by 20
+D. 40 A and 2.0 A, loss down by 400
 
-**10. (show your working)** A real transformer's secondary reads 12.0 V with nothing connected and 11.2 V when supplying 2.0 A. Calculate the resistance of the secondary winding and the percentage of the emf lost inside it at this load, and state what the ideal-transformer assumption says about this loss. Show your working.
+**10.** A real transformer's secondary reads 12.0 V with nothing connected and 11.2 V while supplying 2.0 A. Calculate the resistance of the secondary winding and the percentage of the induced emf lost inside it at this load.
+A. 0.40 Ω, 6.7%
+B. 5.6 Ω, 6.7%
+C. 0.80 Ω, 6.7%
+D. 0.40 Ω, 7.1%
 
-**11. (show your working)** An amplifier delivers maximum power to a 1600 Ω load, but the loudspeaker is 4.0 Ω. Find the turns ratio N₂/N₁ of the matching transformer and say whether it is step-up or step-down. With 40 V rms on the primary, calculate the speaker voltage and the power delivered to it. Show your working.
+**11.** An amplifier delivers maximum power into 1600 Ω, but the loudspeaker is 4.0 Ω. Using V₁/I₁ = R/(N₂/N₁)², find the turns ratio N₂/N₁ of the matching transformer and the power delivered to the speaker when 40 V rms is applied to the primary.
+A. 1/400, 0.0025 W
+B. 20, 1.6 × 10⁵ W
+C. 1/20, 1.0 W
+D. 1/20, 400 W
 
-**12. (show your working)** A transformer core is made of iron rather than air, and that iron is built from thin sheets insulated from one another rather than from a solid block. Explain what each of these two design choices achieves.
+**12.** A transformer core is made of iron rather than air, and that iron is built from thin insulated sheets rather than a solid block. What do these two design choices achieve?
+A. The iron stores the magnetic energy; the sheets let heat escape from inside the core
+B. The iron lowers the resistance of the windings; the sheets hold the frequency steady
+C. The iron raises the flux; the sheets increase the effective turns ratio
+D. The iron raises the flux and guides it from one winding to the other; the sheets break up eddy currents
 
 ---
 
@@ -95,18 +111,18 @@ D. The resistance seen by the source
 
 Each wrong option names a quantity the turns ratio does change: voltage by N₂/N₁, current by N₁/N₂, resistance by (N₂/N₁)².
 
-**9.** *Why power is transmitted at high voltage.* At 500 V: I = P/V = 20 000/500 = 40 A. After the step-up, the power is unchanged (I₁V₁ = I₂V₂), so at 10 000 V: I = 20 000/10 000 = 2.0 A. The line loss I²R with the same R falls by (2.0/40)² = (1/20)² = 1/400. Stepping the voltage up 20 times cuts the current 20 times and the loss 400 times.
+**9. D** — *Why power is transmitted at high voltage.* I = P/V gives 20 000/500 = 40 A before the transformer. An ideal transformer conserves power, I₁V₁ = I₂V₂, so at 10 000 V the current is 20 000/10 000 = 2.0 A. With the same line resistance the loss I²R falls by (2.0/40)² = 1/400.
 
-Final answer: 40 A and 2.0 A, loss reduced by a factor of 400. A correct answer uses conservation of power to get the second current and squares the current ratio for the loss. A factor of 20 forgets the square in I²R; 800 A after step-up applies the ratio the wrong way.
+A factor of 20 forgets the square in I²R; 800 A applies the ratio the wrong way round and would make matters worse; and the loss cannot be unchanged, because it depends on the current, not on the power carried.
 
-**10.** *Emf versus terminal voltage in a real secondary.* The open-circuit reading is the induced emf ε₂ = 12.0 V, since no current flows and nothing is dropped inside. Under load V₂ = ε₂ − I₂r, so the drop is 12.0 − 11.2 = 0.80 V and r = 0.80/2.0 = 0.40 Ω. Fraction lost = 0.80/12.0 = 0.067, about 6.7%. The ideal-transformer assumption is that the induced emf equals the terminal voltage in each winding, that is r = 0 and no such drop, which is what allows ε₂/ε₁ = N₂/N₁ to be written as V₂/V₁ = N₂/N₁.
+**10. A** — *Emf versus terminal voltage in a real secondary.* With nothing connected no current flows and nothing is dropped inside, so the open-circuit reading is the induced emf, ε₂ = 12.0 V. Under load V₂ = ε₂ − I₂r, so the internal drop is 12.0 − 11.2 = 0.80 V and r = 0.80/2.0 = 0.40 Ω. The fraction lost is 0.80/12.0 = 6.7%, and an ideal transformer would have r = 0 and no drop at all.
 
-Final answer: 0.40 Ω (accept 0.39 to 0.41) and 6.7% (accept 6.5 to 7.0), with the statement that an ideal transformer has no internal drop so emf and terminal voltage coincide. 5.6 Ω (11.2/2.0) is the load resistance, not the winding's; 0.80 Ω forgets to divide by the current.
+5.6 Ω is 11.2/2.0, the load's resistance rather than the winding's; 0.80 Ω forgets to divide the drop by the current; 7.1% divides the drop by the terminal voltage instead of by the emf.
 
-**11.** *Impedance matching with a transformer.* The supply must see V₁/I₁ = R/(N₂/N₁)² = 1600 Ω with R = 4.0 Ω, so (N₂/N₁)² = 4.0/1600 = 1/400 and N₂/N₁ = 1/20: a step-down transformer, since N₂ < N₁. Speaker voltage V₂ = V₁(N₂/N₁) = 40 × (1/20) = 2.0 V. Power P = V₂²/R = (2.0)²/4.0 = 1.0 W. Check from the primary side: P = V₁²/1600 = 1600/1600 = 1.0 W, the same.
+**11. C** — *Impedance matching with a transformer.* The primary must present 1600 Ω, so (N₂/N₁)² = R/1600 = 4.0/1600 = 1/400 and N₂/N₁ = 1/20, a step-down. Then V₂ = 40 × (1/20) = 2.0 V and P = V₂²/R = 4.0/4.0 = 1.0 W, which the primary side confirms as V₁²/1600 = 1.0 W.
 
-Final answer: N₂/N₁ = 1/20 (accept 0.05), step-down, 2.0 V, 1.0 W. A correct answer takes the square root to get the turns ratio and gets the same power from both sides. 1/400 is the squared ratio left unrooted; 20 is the ratio inverted and would be a step-up giving 800 V.
+1/400 is the squared ratio left unrooted; 20 inverts the ratio and would put 800 V across the speaker; 400 W applies V₁²/R with the primary voltage across the 4.0 Ω speaker.
 
-**12.** *Purpose of the iron core and its lamination.* The iron core does two things: it greatly increases the magnetic flux produced by the primary current (iron's high permeability), and it provides a path that carries that flux round to the secondary, so that almost all the flux threading the primary also threads the secondary and the emf per turn is the same in both. Laminating the core deals with eddy currents: the changing flux induces emfs in the core metal itself, and in a solid block these drive large circulating currents that heat the core and waste power. Cutting the core into thin sheets with insulation between them breaks the paths of those currents, since they cannot flow from one sheet to the next, so the eddy-current loss is greatly reduced while the flux still passes along the sheets.
+**12. D** — *Purpose of the iron core and its lamination.* Iron's high permeability greatly increases the flux the primary current produces, and it gives that flux a closed path so almost all of it also threads the secondary, which is what makes the emf per turn equal in both windings. The changing flux also induces emfs in the core metal itself, and in a solid block these drive large circulating eddy currents that heat it and waste power, so cutting the core into insulated sheets breaks those paths while the flux still runs along them.
 
-A correct answer gives both jobs of the iron (more flux, and a path linking the coils) and explains lamination as interrupting eddy currents to cut heating loss, not as anything to do with the turns ratio or the frequency.
+Lamination has nothing to do with the turns ratio, the frequency or cooling, and the iron does not change the resistance of the windings.

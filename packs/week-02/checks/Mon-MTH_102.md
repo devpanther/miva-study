@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *This session takes Week 2's function material conceptually rather than computationally.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Which of these equations does NOT define y as a function of x?
 A. y = x² − 5
@@ -51,13 +51,29 @@ B. Neither injective nor surjective
 C. Surjective but not injective
 D. Bijective
 
-**9. (show your working)** f(x) = 3 sin(2x). State the period and the range of f. Show your working.
+**9.** f(x) = 3 sin(2x). State the period and the range of f.
+A. Period π, range [−1, 1]
+B. Period 4π, range [−3, 3]
+C. Period π, range [−3, 3]
+D. Period 2π, range [−3, 3]
 
-**10. (show your working)** Find the domain of f(x) = log₂(x − 4). Show your working.
+**10.** Find the domain of f(x) = log₂(x − 4).
+A. (4, ∞)
+B. [4, ∞)
+C. (−4, ∞)
+D. (−∞, 4)
 
-**11. (show your working)** Use the discriminant to find how many real roots f(x) = x² − 6x + 2 has, and then find them. Show your working.
+**11.** Use the discriminant to say how many real roots f(x) = x² − 6x + 2 has, then find them.
+A. Δ = 44, two real roots: x = 3 ± √11
+B. Δ = 28, two real roots: x = 6 ± 2√7
+C. Δ = −28, no real roots
+D. Δ = 28, two real roots: x = 3 ± √7
 
-**12. (show your working)** The logarithm log_b(x) is defined only for b > 0 and b ≠ 1. Using the meaning y = log_b(x) means bʸ = x, explain why b = 1 is excluded and why a negative base is excluded.
+**12.** y = log_b(x) means bʸ = x. Which statement explains why the base b = 1 and any negative base are excluded?
+A. b = 1 gives division by zero, and a negative base gives a negative logarithm
+B. 1ʸ = 1 for every y so the exponent is not determined, and a negative base gives non-real values for fractional y
+C. 1ʸ is undefined, and a negative base makes bʸ negative for every y
+D. Both choices make bʸ = x unsolvable because bʸ is always 0
 
 ---
 
@@ -95,18 +111,18 @@ m = 5, b = −3 reads the numbers in the order written rather than by their role
 
 'Injective' ignores the collision at 4; 'surjective' ignores the gap at −1; 'bijective' would need both to hold, and neither does.
 
-**9.** *Period and amplitude of a sine function.* sin(kx) has period 2π/k, so with k = 2 the period is 2π/2 = π. sin(2x) lies between −1 and 1, so 3 sin(2x) lies between −3 and 3.
+**9. C** — *Period and amplitude of a sine function.* sin(kx) repeats every 2π/k, so with k = 2 the period is 2π/2 = π. The factor 3 outside stretches the outputs: sin(2x) runs over [−1, 1], so 3 sin(2x) runs over [−3, 3].
 
-Final answer: period π, range [−3, 3]. Also accepted: −3 ≤ y ≤ 3. A period of 2π ignores the 2 inside; 4π multiplies instead of dividing; a range of [−1, 1] forgets the factor 3.
+A period of 2π ignores the 2 inside the sine, 4π multiplies by 2 instead of dividing, and a range of [−1, 1] forgets the factor 3.
 
-**10.** *Domain of a logarithmic function.* A logarithm is defined only for a positive argument, so x − 4 > 0, giving x > 4. The endpoint is excluded because log₂ 0 is undefined.
+**10. A** — *Domain of a logarithmic function.* A logarithm accepts only a strictly positive argument, so x − 4 > 0 and x > 4, giving D = (4, ∞). The endpoint is excluded because log₂ 0 is undefined, not merely awkward.
 
-Final answer: D = (4, ∞). Also accepted: x > 4, {x : x > 4}. [4, ∞) or x ≥ 4 wrongly includes 4; (−4, ∞) has the sign of the boundary wrong; (−∞, ∞) forgets the log restriction altogether.
+[4, ∞) wrongly admits x = 4, (−4, ∞) solves x + 4 > 0 instead, and (−∞, 4) reverses the inequality.
 
-**11.** *Discriminant and roots of a quadratic.* Δ = b² − 4ac = (−6)² − 4(1)(2) = 36 − 8 = 28 > 0, so there are two distinct real roots. Then x = (6 ± √28)/2 = (6 ± 2√7)/2 = 3 ± √7.
+**11. D** — *Discriminant and roots of a quadratic.* Δ = b² − 4ac = (−6)² − 4(1)(2) = 36 − 8 = 28, which is positive, so there are two distinct real roots. The formula gives x = (6 ± √28)/2 = (6 ± 2√7)/2 = 3 ± √7, about 5.65 and 0.35.
 
-Final answer: two real roots, x = 3 + √7 and x = 3 − √7 (about 5.65 and 0.35). Also accepted: (6 ± √28)/2. Δ = 36 + 8 = 44 has the sign of 4ac wrong; Δ = 36 − 2 = 34 forgets the factor 4.
+Δ = 44 takes 36 + 8 and gets the sign of 4ac wrong, x = 6 ± 2√7 forgets to divide the whole numerator by 2a, and Δ = −28 has the subtraction the wrong way round.
 
-**12.** *Restrictions on the base of a logarithm.* y = log_b(x) is the exponent y with bʸ = x. If b = 1 then 1ʸ = 1 for every y, so 1ʸ = x has no solution unless x = 1, and then every y works: the exponent is not uniquely determined, so no function exists. If b is negative, bʸ is not a real number for many y (for example (−2)^(1/2) = √(−2)), so bʸ = x cannot be solved for general x > 0.
+**12. B** — *Restrictions on the base of a logarithm.* log_b(x) is the exponent y that satisfies bʸ = x. With b = 1, 1ʸ = 1 whatever y is, so the equation has no solution unless x = 1 and then every y works: the exponent cannot be pinned down, so there is no function. With b negative, powers such as (−2)^(1/2) = √(−2) are not real, so bʸ = x cannot be solved across x > 0.
 
-A correct answer says b = 1 gives a constant power (1ʸ = 1) so the exponent cannot be recovered, and a negative base gives non-real powers for fractional exponents.
+The other options invent a division by zero, claim 1ʸ is undefined when it is simply 1, or claim bʸ = 0.

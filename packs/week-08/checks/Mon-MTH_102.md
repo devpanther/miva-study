@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Conceptual session on Week 8 integration techniques, exactly as she builds them.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Using the table of standard integrals, find ∫(sec²(x) + 1/x) dx.
 A. tan(x) − 1/x² + C
@@ -51,13 +51,29 @@ B. √(1 − x²)
 C. (3x + 1)/((x − 1)(x + 2))
 D. 2x·e^(x²)
 
-**9. (show your working)** Write 1/((x − 1)(x + 2)) as A/(x − 1) + B/(x + 2), find A and B by substituting the roots, then find ∫1/((x − 1)(x + 2)) dx. Show your working.
+**9.** Write 1/((x − 1)(x + 2)) as A/(x − 1) + B/(x + 2), and hence find ∫1/((x − 1)(x + 2)) dx.
+A. (1/3)ln|x − 1| − (1/3)ln|x + 2| + C
+B. (1/3)ln|x − 1| + (1/3)ln|x + 2| + C
+C. 3ln|x − 1| − 3ln|x + 2| + C
+D. ln|x − 1| − ln|x + 2| + C
 
-**10. (show your working)** Evaluate ∫₀¹ (x + 1)⁵ dx using the substitution u = x + 1. Convert the limits to u and finish in u. Show your working.
+**10.** Evaluate ∫₀¹ (x + 1)⁵ dx using the substitution u = x + 1, converting the limits to u.
+A. 1/6
+B. 21/2
+C. 32/3
+D. 63/5
 
-**11. (show your working)** The table gives ∫ln(x) dx = x·ln(x) − x + C. Verify this line by differentiating x·ln(x) − x. Show your working.
+**11.** The table of standard integrals gives ∫ln(x) dx = x·ln(x) − x + C. Differentiate x·ln(x) − x to check that line.
+A. ln(x) + 1
+B. 1/x − 1
+C. ln(x)
+D. ln(x) − 1
 
-**12. (show your working)** With u = x + 2, ∫₀² (x + 2)³ dx can be finished as (1/4)u⁴|₂⁴ = 60 without ever returning to x, but ∫2x·e^(x²) dx with u = x² must not be left as eᵘ + C. Explain the difference.
+**12.** With u = x + 2, ∫₀² (x + 2)³ dx can be finished as (1/4)u⁴|₂⁴ = 60, but ∫2x·e^(x²) dx with u = x² must not be left as eᵘ + C. What is the difference?
+A. The limits were converted to u, so the definite integral is a number; the indefinite one must return to x
+B. Definite integrals never need the substitution undone, while indefinite ones only need + C added
+C. u = x + 2 is linear, so it may be left; u = x² is not linear and may not
+D. Both may be left in u; the second is written back only for tidiness
 
 ---
 
@@ -95,18 +111,18 @@ x·sin(x) − cos(x) forgets that ∫sin(x) dx = −cos(x), so the two minus sig
 
 x·eˣ is a product of an algebraic and an exponential factor, which is integration by parts; √(1 − x²) needs the trigonometric substitution x = sin(u); 2x·e^(x²) has the derivative of the exponent sitting beside it, which is plain substitution.
 
-**9.** *Partial fractions with a constant numerator.* Clear the denominator: 1 = A(x + 2) + B(x − 1). At x = 1: 1 = 3A, so A = 1/3. At x = −2: 1 = −3B, so B = −1/3. Then ∫1/((x − 1)(x + 2)) dx = ∫(1/3 · 1/(x − 1) − 1/3 · 1/(x + 2)) dx = (1/3)ln(x − 1) − (1/3)ln(x + 2) + C.
+**9. A** — *Partial fractions with a constant numerator.* Clear the denominator: 1 = A(x + 2) + B(x − 1). Put x = 1: 1 = 3A, so A = 1/3. Put x = −2: 1 = −3B, so B = −1/3. Integrating term by term gives (1/3)ln|x − 1| − (1/3)ln|x + 2| + C, which may also be written (1/3)ln|(x − 1)/(x + 2)| + C.
 
-Final answer: (1/3)ln(x − 1) − (1/3)ln(x + 2) + C. Also accepted: (1/3)ln((x − 1)/(x + 2)) + C, or with ln|x − 1| and ln|x + 2|. The working must show the cleared equation, the two substitutions x = 1 and x = −2, and A = 1/3, B = −1/3. B = +1/3 (losing the sign from B(−3) = 1) or A = 3 (reading 3A = 1 upside down) is wrong.
+The second option loses the sign in B(−3) = 1; the third reads 3A = 1 upside down as A = 3; the fourth ignores the factor 3 in both substitutions.
 
-**10.** *Definite integral by substitution with converted limits.* u = x + 1 gives du = dx. Convert the limits: x = 0 gives u = 1, x = 1 gives u = 2. So ∫₀¹ (x + 1)⁵ dx = ∫₁² u⁵ du = (1/6)u⁶|₁² = (1/6)(64 − 1) = 63/6 = 21/2. Because the limits were converted, the answer is a number and no return to x is needed.
+**10. B** — *Definite integral by substitution with converted limits.* u = x + 1 gives du = dx, and the limits convert: x = 0 gives u = 1, x = 1 gives u = 2. So the integral is ∫₁² u⁵ du = (1/6)u⁶|₁² = (1/6)(64 − 1) = 63/6 = 21/2. Because the limits moved with the variable, the answer is a number and no return to x is needed.
 
-Final answer: 21/2 (also accepted: 10.5 or 63/6). The working must show the new limits 1 and 2 and the evaluation (1/6)(2⁶ − 1⁶). Keeping the old limits 0 and 1 in u gives (1/6)(1 − 0) = 1/6 and is wrong; expanding (x + 1)⁵ and integrating is accepted if it reaches 21/2.
+1/6 keeps the old limits 0 and 1 in u; 32/3 evaluates at the upper limit only; 63/5 divides by the old power 5 instead of the new power 6.
 
-**11.** *Checking a standard integral by differentiating.* Use the product rule on x·ln(x): d/dx [x·ln(x)] = 1·ln(x) + x·(1/x) = ln(x) + 1. Then d/dx [x·ln(x) − x] = ln(x) + 1 − 1 = ln(x), which is the integrand, so the table line is correct.
+**11. C** — *Checking a standard integral by differentiating.* Use the product rule on x·ln(x): d/dx [x·ln(x)] = 1·ln(x) + x·(1/x) = ln(x) + 1. Subtracting the derivative of x gives ln(x) + 1 − 1 = ln(x), which is the integrand, so the table line is correct.
 
-A correct answer shows the product rule giving ln(x) + 1, subtracts the derivative of x, and states that the result ln(x) matches the integrand. Getting ln(x) + 1 and stopping (forgetting to differentiate the −x) does not verify the line; writing d/dx ln(x) = 1/x alone is not the check.
+ln(x) + 1 stops before differentiating the −x; 1/x − 1 skips the product rule and differentiates ln(x) alone; ln(x) − 1 subtracts the 1 that the product rule produced instead of adding it.
 
-**12.** *When an answer may be left in u.* In the definite integral the limits were converted along with the variable (x = 0 gives u = 2, x = 2 gives u = 4), so evaluating the antiderivative between the u-limits produces a number, 60. No variable survives, so there is nothing to convert back. The indefinite integral has no limits to absorb the substitution: u was introduced by you and does not appear in the question, so the answer must be set back to x, giving e^(x²) + C.
+**12. A** — *When an answer may be left in u.* Converting the limits (x = 0 gives u = 2, x = 2 gives u = 4) turns the definite integral into a number, 60, with no variable left to convert back. An indefinite integral has no limits to absorb the substitution, and u was your own invention, so the answer must be expressed in the original variable: e^(x²) + C.
 
-A correct answer says that converted limits turn a definite integral into a number, that an indefinite integral must be expressed in the original variable, and states e^(x²) + C as the complete answer.
+The second option confuses + C with the return to x; the third invents a rule about linearity; the fourth treats an answer in an undefined letter as acceptable.

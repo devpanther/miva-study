@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *This session takes Week 1 conceptually.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A flowchart reads: START, then an input box "Input A, B", then a decision box "Is A > B?". The Yes branch goes to "Print A − B", the No branch to "Print B − A". Both branches go to STOP. The inputs are A = 4, B = 9. What is printed?
 A. 5
@@ -73,9 +73,13 @@ B. Changing the pass mark in the decision from 45 to 50
 C. Renaming G1 to grade1 everywhere it appears
 D. Deleting a variable that is never read
 
-**9. (show your working)** Write pseudocode that reads a temperature T and prints HOT if T is above 30, WARM if T is from 20 to 30 inclusive, and COLD otherwise. Show your working.
+**9.** Which pseudocode prints HOT when T is above 30, WARM when T is from 20 to 30 inclusive, and COLD otherwise?
+A. IF T > 20 THEN PRINT WARM; ELSE IF T > 30 THEN PRINT HOT; ELSE PRINT COLD
+B. IF T > 30 THEN PRINT HOT; ELSE IF T >= 20 THEN PRINT WARM; ELSE PRINT COLD
+C. IF T > 30 THEN PRINT HOT; ELSE IF T > 20 THEN PRINT WARM; ELSE PRINT COLD
+D. IF T >= 30 THEN PRINT HOT; ELSE IF T >= 20 THEN PRINT WARM; ELSE PRINT COLD
 
-**10. (show your working)** Trace this pseudocode and give the value of total after each iteration, then the printed value. Show your working.
+**10.** What does this print?
 
 ```
 total = 1
@@ -84,8 +88,12 @@ FOR i = 1 TO 4
 ENDFOR
 PRINT total
 ```
+A. 68
+B. 19
+C. 16
+D. 42
 
-**11. (show your working)** This pseudocode is meant to read N numbers and print their average, but for N = 3 it never finishes.
+**11.** This is meant to read N numbers and print their average, but for N = 3 it never finishes.
 
 ```
 READ N
@@ -98,9 +106,17 @@ ENDWHILE
 PRINT total / N
 ```
 
-Say which line is missing and where it goes, then give what the fixed program prints for N = 3 and inputs 4, 7, 10. Show your working.
+Which repair is correct, and what does the repaired program print for N = 3 with inputs 4, 7, 10?
+A. Add `count = count + 1` inside the loop body; it prints 7
+B. Add `count = count + 1` after ENDWHILE; it prints 7
+C. Add `count = count + 1` inside the loop body; it prints 21
+D. Add `N = N + 1` inside the loop body; it prints 7
 
-**12. (show your working)** An algorithm's steps must be ordered, unambiguous and complete. For a plan that averages five grades and prints PASS or FAIL, give one example of a step that breaks each of the three properties, and say what goes wrong when that plan is turned into a program.
+**12.** Three faulty steps appear in a plan that averages five grades and prints PASS or FAIL. (i) "Compute the average of the five grades" is placed before "Read the five grades". (ii) "If the average is good enough, print PASS". (iii) There is a PASS step but no FAIL step. Which required property of an algorithm's steps does each one break, taken in the order (i), (ii), (iii)?
+A. Complete, ordered, unambiguous
+B. Unambiguous, complete, ordered
+C. Ordered, unambiguous, complete
+D. Ordered, complete, unambiguous
 
 ---
 
@@ -138,29 +154,18 @@ The steps are in a workable order (read, compute, decide, stop), so ordered hold
 
 The loop, the rename and the deleted dead variable all leave every output exactly as it was, so each of those is a refactor.
 
-**9.** *Writing pseudocode with a three-way decision.* Model answer:
+**9. B** — *Writing pseudocode with a three-way decision.* The tests run in order, so T > 30 takes everything above 30 to HOT, and whatever is left meets T >= 20, which catches 20 up to 30 inclusive; the rest is COLD. Check the boundaries: T = 20 gives WARM, T = 30 gives WARM, T = 31 gives HOT.
 
-```
-READ T
-IF T > 30 THEN
-    PRINT "HOT"
-ELSE IF T >= 20 THEN
-    PRINT "WARM"
-ELSE
-    PRINT "COLD"
-ENDIF
-```
+Using T > 20 for the second test sends T = 20 to COLD. Using T >= 30 for the first test sends T = 30 to HOT instead of WARM. Testing T > 20 first sends T = 35 to WARM, because the HOT test below it is never reached.
 
-A correct answer must read T, test T > 30 first (or test the ranges in any order that does not overlap), use ≥ 20 rather than > 20 so that 20 counts as WARM, and give every value of T exactly one printed word. Three separate IF tests (T > 30; T ≥ 20 AND T ≤ 30; T < 20) are also accepted. Using T > 20 for WARM is wrong because 20 would then print COLD.
+**10. D** — *Tracing an accumulator step by step.* total starts at 1. i = 1: 1 × 2 + 1 = 3. i = 2: 3 × 2 + 2 = 8. i = 3: 8 × 2 + 3 = 19. i = 4: 19 × 2 + 4 = 42. So 42 is printed.
 
-**10.** *Tracing an accumulator step by step.* Start with total = 1. i = 1: 1 × 2 + 1 = 3. i = 2: 3 × 2 + 2 = 8. i = 3: 8 × 2 + 3 = 19. i = 4: 19 × 2 + 4 = 42. The program prints 42.
+68 adds i before doubling, (total + i) × 2; 19 stops one pass early at i = 3; 16 doubles four times and never adds i.
 
-A correct answer lists the four values 3, 8, 19, 42 in order and states the printed value 42. A trace that restarts total at 1 each time (giving 3, 4, 5, 6) or that doubles after adding, total = (total + i) × 2 (giving 4, 12, 30, 68), is wrong.
+**11. A** — *Spotting the missing loop update.* count never changes inside the loop, so count < N stays true forever. Putting count = count + 1 in the body lets count reach 3 and stop the loop; total is 4 + 7 + 10 = 21 and 21 / 3 = 7 is printed.
 
-**11.** *Spotting the missing loop update.* count is never changed inside the loop, so count < N stays true forever and the loop never ends. The missing line is count = count + 1, placed inside the loop after total = total + x (anywhere inside the body is accepted).
+An update placed after ENDWHILE leaves the loop untouched, so it still never ends; 21 forgets the division by N; raising N inside the loop pushes the target further away every pass, so the loop still never ends.
 
-Fixed run for N = 3: total = 4, then 11, then 21; count reaches 3 and the loop stops; 21 / 3 = 7 is printed. A correct answer names the missing count update, puts it inside the WHILE body, and gives 7. Putting the update after ENDWHILE does not fix the loop and is wrong.
+**12. C** — *Ordered, unambiguous and complete steps.* (i) computes with values that have not been read yet, so the steps are out of order. (ii) says "good enough" without a number, so two programmers would write two different tests: it is ambiguous. (iii) leaves a grade below the mark with no output at all, so a case is missing and the plan is not complete.
 
-**12.** *Ordered, unambiguous and complete steps.* Ordered: putting "compute the average" before "read the five grades" uses values the program does not yet have, so it computes with nothing or with leftovers. Unambiguous: "if the average is good enough, print PASS" cannot be written as a test, because two programmers would choose two different numbers. Complete: giving a PASS step but no FAIL step leaves a student below the mark with no output at all.
-
-A correct answer gives one concrete broken step for each property (order, ambiguity, missing case) and names the consequence in the program: wrong or missing data, an untranslatable condition, an unhandled case. Any sensible examples are accepted as long as each matches the property it is meant to break.
+Every other ordering pairs the vague condition or the missing FAIL branch with the wrong property; only ordered, unambiguous, complete matches each fault to what it actually breaks.

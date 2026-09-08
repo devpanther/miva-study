@@ -317,28 +317,56 @@
           "why": "At h = 0 the numerator f(x + h) − f(x) is f(x) − f(x) = 0 and the denominator is 0, so putting h = 0 straight in gives the indeterminate form 0/0 and decides nothing. Expanding, cancelling the common terms and dividing out the h leaves an expression that has a value at h = 0, and that value is the derivative.\n\nThe answer normally does contain x (f′(x) = 3 is the exception, not the rule); h is a variable tending to 0, not a constant; and f(x + h) equals f(x) only in the limit, which is exactly what the quotient is measuring."
         },
         {
-          "type": "short",
-          "q": "f(x, y) = 4x³ − 5xy + 2y². Find ∂f/∂x and ∂f/∂y. Show your working.",
+          "type": "mcq",
+          "q": "f(x, y) = 4x³ − 5xy + 2y². Find ∂f/∂x and ∂f/∂y.",
+          "options": [
+            "∂f/∂x = 12x² − 5y, ∂f/∂y = −5x + 4y",
+            "∂f/∂x = 12x² − 5y + 4y, ∂f/∂y = −5x + 4y",
+            "∂f/∂x = 12x² − 5, ∂f/∂y = −5x + 4y",
+            "∂f/∂x = 12x² − 5y, ∂f/∂y = −5 + 4y"
+          ],
+          "answerIndex": 0,
           "concept": "Partial derivatives of a polynomial in two variables",
-          "why": "For ∂f/∂x treat y as a constant: 4x³ → 12x²; −5xy → −5y (y is a constant multiplier and x differentiates to 1); 2y² → 0 (no x in it). So ∂f/∂x = 12x² − 5y. For ∂f/∂y treat x as a constant: 4x³ → 0; −5xy → −5x; 2y² → 4y. So ∂f/∂y = −5x + 4y.\n\nFinal answer: ∂f/∂x = 12x² − 5y and ∂f/∂y = 4y − 5x (either order of the terms is accepted). A correct answer shows that terms without the differentiation variable vanish by the constant rule. Leaving 2y² alive in ∂f/∂x, or writing dy/dx factors anywhere, is wrong: in partial differentiation the other variable is a genuine constant."
+          "why": "For ∂f/∂x hold y fixed: 4x³ gives 12x², −5xy gives −5y since y is only a constant multiplier, and 2y² gives 0 because it contains no x. For ∂f/∂y hold x fixed: 4x³ gives 0, −5xy gives −5x, and 2y² gives 4y. So ∂f/∂x = 12x² − 5y and ∂f/∂y = 4y − 5x.\n\nKeeping 4y alive in ∂f/∂x forgets that 2y² is a constant there, while −5 in place of −5y or −5x drops the surviving variable from the product term."
         },
         {
-          "type": "short",
-          "q": "Differentiate y = 5x − 2 from first principles, using f′(x) = lim(h→0) [f(x + h) − f(x)]/h. Show every line of working.",
+          "type": "mcq",
+          "q": "Differentiate y = 5x − 2 from first principles with f′(x) = lim(h→0) [f(x + h) − f(x)]/h. Which line is [f(x + h) − f(x)]/h, and what is f′(x)?",
+          "options": [
+            "(5x + 5h − 2)/h, so f′(x) = 5x − 2",
+            "(5h − 4)/h, so f′(x) does not exist",
+            "0/0, so f′(x) = 0",
+            "5h/h = 5, so f′(x) = 5"
+          ],
+          "answerIndex": 3,
           "concept": "First principles on a linear function",
-          "why": "f(x + h) = 5(x + h) − 2 = 5x + 5h − 2. Then f(x + h) − f(x) = (5x + 5h − 2) − (5x − 2) = 5h. Divide by h: 5h/h = 5. Take the limit: lim(h→0) 5 = 5. So f′(x) = 5.\n\nFinal answer: f′(x) = 5 (also accepted: dy/dx = 5, y′ = 5). A correct answer must substitute x + h into the whole function, cancel the 5x and −2 terms, divide out the h, and only then let h → 0. Substituting h = 0 before cancelling (giving 0/0) or leaving an h in the answer is wrong."
+          "why": "f(x + h) = 5(x + h) − 2 = 5x + 5h − 2, so f(x + h) − f(x) = (5x + 5h − 2) − (5x − 2) = 5h, since the 5x and the −2 cancel. Dividing by h gives 5h/h = 5, a constant, and lim(h→0) 5 = 5, so f′(x) = 5.\n\n(5x + 5h − 2)/h forgets to subtract f(x), (5h − 4)/h subtracts the −2 twice, and 0/0 comes from putting h = 0 before the h is cancelled."
         },
         {
-          "type": "short",
-          "q": "Find the gradient of the curve y = x³ − 2x² at the point where x = 2, and state what this number represents geometrically. Show your working.",
+          "type": "mcq",
+          "q": "Find the gradient of the curve y = x³ − 2x² at x = 2, and say what that number represents geometrically.",
+          "options": [
+            "8, the slope of the tangent at (2, 0)",
+            "0, the slope of the tangent at (2, 0)",
+            "4, the slope of the tangent at (2, 0)",
+            "4, the height of the curve at x = 2"
+          ],
+          "answerIndex": 2,
           "concept": "Derivative as the gradient of the tangent at a point",
-          "why": "Differentiate: dy/dx = 3x² − 4x. Substitute x = 2: 3(4) − 4(2) = 12 − 8 = 4. So the gradient is 4. Geometrically, 4 is the slope of the tangent line to the curve at the point (2, 0): the curve is rising there, 4 units up for every 1 unit across.\n\nFinal answer: gradient 4, the slope of the tangent at x = 2. A correct answer shows the derivative 3x² − 4x, the substitution, and the value 4, and says 'slope of the tangent' (or 'rate of change of y with respect to x' at that point). Substituting x = 2 into y itself, giving 0, is the height of the point, not the gradient."
+          "why": "Differentiating gives dy/dx = 3x² − 4x, and at x = 2 that is 3(4) − 4(2) = 12 − 8 = 4. Geometrically 4 is the slope of the tangent line to the curve at the point (2, 0): the curve is rising there at 4 units up per unit across.\n\n0 is y itself at x = 2, the height rather than the gradient; 8 comes from evaluating 3x² − 4 instead of 3x² − 4x; and calling 4 a height confuses the derivative with the function value."
         },
         {
-          "type": "short",
-          "q": "When y depends on x, d/dx(y²) = 2y·dy/dx. In partial differentiation, ∂/∂x(y²) = 0. Explain why the same expression y² is treated so differently in the two settings.",
+          "type": "mcq",
+          "q": "When y is a function of x, d/dx(y²) = 2y·dy/dx, but in partial differentiation ∂/∂x(y²) = 0. Which statement explains the difference?",
+          "options": [
+            "Implicit differentiation always attaches dy/dx to every term, partial differentiation never does",
+            "In the implicit setting y is a function of x so the chain rule applies; in the partial setting y is independent and held constant, so the constant rule applies",
+            "y² is a constant in both settings, but implicit notation keeps a dy/dx for tidiness",
+            "Partial differentiation ignores squared terms, implicit differentiation does not"
+          ],
+          "answerIndex": 1,
           "concept": "Implicit versus partial treatment of the other variable",
-          "why": "The difference is what y is assumed to be. In implicit differentiation, y is an unknown function of x, so y² is a composite function of x and the chain rule applies: differentiate the outside (2y) and multiply by the inside derivative dy/dx. In partial differentiation, x and y are independent variables; when differentiating with respect to x, y is held fixed, so y² is a constant and its derivative is 0 by the constant rule.\n\nA correct answer says: implicit means y is a function of x (chain rule, dy/dx appears); partial means y is an independent variable held constant (constant rule, term vanishes). It should name the chain rule and the constant rule."
+          "why": "Everything turns on what y is assumed to be. Implicitly y is an unknown function of x, so y² is a composite and the chain rule gives the outer derivative 2y times the inner derivative dy/dx. In partial differentiation x and y are independent, so holding x's partner fixed makes y² a genuine constant and the constant rule sends it to 0.\n\nThe other options treat dy/dx as decoration, or invent a rule about squares, when the real distinction is chain rule versus constant rule."
         }
       ]
     },
@@ -455,28 +483,56 @@
           "why": "The current arrow is only a definition of which way counts as positive. A negative result means the magnitude is right and the true direction is opposite to the arrow: 0.30 A anticlockwise. Nothing needs to be redone.\n\n0.30 A clockwise ignores the sign; no current would need I = 0; re-solving is unnecessary because the equations are already satisfied."
         },
         {
-          "type": "short",
-          "q": "Two resistors in parallel have an equivalent resistance of 2.4 Ω. One of them is 4.0 Ω. Calculate the other, then the equivalent resistance when the same two resistors are put in series. Show your working.",
+          "type": "mcq",
+          "q": "Two resistors in parallel have an equivalent resistance of 2.4 Ω, and one of them is 4.0 Ω. What is the other resistor, and what is their equivalent resistance in series?",
+          "options": [
+            "6.0 Ω; 10 Ω in series",
+            "1.6 Ω; 5.6 Ω in series",
+            "0.17 Ω; 4.2 Ω in series",
+            "9.6 Ω; 13.6 Ω in series"
+          ],
+          "answerIndex": 0,
           "concept": "Finding an unknown resistor from a parallel equivalent",
-          "why": "1/R_eq = 1/R₁ + 1/R₂, so 1/R₂ = 1/2.4 − 1/4.0 = 0.4167 − 0.25 = 0.1667 Ω⁻¹, giving R₂ = 6.0 Ω. Check: 4.0 × 6.0/(4.0 + 6.0) = 2.4 Ω. In series: R = 4.0 + 6.0 = 10 Ω.\n\nA correct answer states R₂ = 6.0 Ω and the series value 10 Ω. Leaving 0.1667 un-inverted (0.17 Ω) or subtracting resistances directly (2.4 − 4.0) is wrong."
+          "why": "From 1/R_eq = 1/R₁ + 1/R₂, 1/R₂ = 1/2.4 − 1/4.0 = 0.4167 − 0.25 = 0.1667 Ω⁻¹, so R₂ = 6.0 Ω. Check: 4.0 × 6.0/10 = 2.4 Ω. In series the same two give 4.0 + 6.0 = 10 Ω.\n\n1.6 Ω subtracts the resistances directly; 0.17 Ω quotes 1/R₂ without inverting it; 9.6 Ω multiplies 2.4 by 4.0."
         },
         {
-          "type": "short",
-          "q": "A single loop contains a 9.0 V battery of internal resistance 0.50 Ω and two resistors of 2.5 Ω and 1.5 Ω. Assume a current I and write the loop equation using the sign rules, then calculate I, the p.d. across each resistor and the terminal p.d. of the battery. Show your working.",
+          "type": "mcq",
+          "q": "A single loop contains a 9.0 V battery of internal resistance 0.50 Ω and resistors of 2.5 Ω and 1.5 Ω. What are the current in the loop and the terminal potential difference of the battery?",
+          "options": [
+            "2.25 A; 9.0 V",
+            "2.0 A; 8.0 V",
+            "2.0 A; 9.0 V",
+            "2.25 A; 7.9 V"
+          ],
+          "answerIndex": 1,
           "concept": "Loop equation for a single-battery loop",
-          "why": "Travelling with the current, the battery is crossed − to + (+9.0 V) and each resistance is crossed with the current (−IR): 9.0 − 0.50I − 2.5I − 1.5I = 0, so 9.0 = 4.5I and I = 2.0 A. Across 2.5 Ω: 5.0 V; across 1.5 Ω: 3.0 V. Terminal p.d. = 9.0 − (2.0)(0.50) = 8.0 V, which equals 5.0 + 3.0 V.\n\nA correct answer shows the signed loop equation, I = 2.0 A, 5.0 V, 3.0 V and 8.0 V. Forgetting the internal resistance (I = 2.25 A) is wrong."
+          "why": "Travelling with the current, the battery is crossed − to + and each resistance gives −IR: 9.0 − 0.50I − 2.5I − 1.5I = 0, so 9.0 = 4.5I and I = 2.0 A. The terminal p.d. is ε − Ir = 9.0 − 1.0 = 8.0 V, matching the 5.0 V and 3.0 V across the two external resistors.\n\n2.25 A leaves the internal resistance out of the total; 9.0 V quotes the emf as the terminal p.d., which only holds at zero current; the last option mixes both slips."
         },
         {
-          "type": "short",
-          "q": "A 5.0 Ω resistor is in series with a parallel pair of 12 Ω and 4.0 Ω, all across a 16 V battery of negligible internal resistance. Calculate the equivalent resistance, the battery current, the p.d. across the parallel pair and the current in each of the two branches. Show your working.",
+          "type": "mcq",
+          "q": "A 5.0 Ω resistor is in series with a parallel pair of 12 Ω and 4.0 Ω, all across a 16 V battery of negligible internal resistance. What is the battery current, and the current in each branch of the pair?",
+          "options": [
+            "0.76 A; 0.19 A in the 12 Ω and 0.57 A in the 4.0 Ω",
+            "2.0 A; 1.5 A in the 12 Ω and 0.50 A in the 4.0 Ω",
+            "2.0 A; 0.50 A in the 12 Ω and 1.5 A in the 4.0 Ω",
+            "2.0 A; 1.33 A in the 12 Ω and 4.0 A in the 4.0 Ω"
+          ],
+          "answerIndex": 2,
           "concept": "Series-parallel circuit reduction",
-          "why": "Parallel pair: 1/R = 1/12 + 1/4.0 = 4/12, so R = 3.0 Ω. R_eq = 5.0 + 3.0 = 8.0 Ω. Battery current I = 16/8.0 = 2.0 A, the same current through the 5.0 Ω. P.d. across the pair = I × 3.0 = 6.0 V (check: 16 − 2.0 × 5.0 = 6.0 V). Branches: 6.0/12 = 0.50 A and 6.0/4.0 = 1.5 A, which add to 2.0 A.\n\nA correct answer states R_eq = 8.0 Ω, I = 2.0 A, V = 6.0 V, and branch currents 0.50 A and 1.5 A. Adding all three resistors in series (21 Ω) is wrong."
+          "why": "The pair reduces to 1/R = 1/12 + 1/4.0 = 4/12, so R = 3.0 Ω and R_eq = 5.0 + 3.0 = 8.0 Ω. The battery therefore drives I = 16/8.0 = 2.0 A, which drops 10 V across the 5.0 Ω and leaves 6.0 V across the pair, giving 6.0/12 = 0.50 A and 6.0/4.0 = 1.5 A, and those add back to 2.0 A.\n\n0.76 A puts all three resistors in series; the swapped pair gives the larger current to the larger resistor; 1.33 A and 4.0 A put the full 16 V across each branch."
         },
         {
-          "type": "short",
-          "q": "State Kirchhoff's junction rule and loop rule, name the conservation law that each rests on, and explain why a point where only two wires meet needs no junction equation.",
+          "type": "mcq",
+          "q": "Which statement correctly pairs Kirchhoff's two circuit rules with the conservation law each one rests on?",
+          "options": [
+            "Junction rule from conservation of energy; loop rule from conservation of charge",
+            "Both rules follow from conservation of charge, one at a point and one round a loop",
+            "Junction rule from conservation of momentum; loop rule from conservation of energy",
+            "Junction rule, ΣI = 0 at a point, from conservation of charge; loop rule, ΣV = 0 round a loop, from conservation of energy"
+          ],
+          "answerIndex": 3,
           "concept": "Physical basis of Kirchhoff's rules",
-          "why": "Junction rule: the algebraic sum of the currents into any junction is zero, ΣI = 0, so current in equals current out. It rests on conservation of charge: charge cannot pile up at or vanish from a junction. Loop rule: the sum of the potential changes (emfs and IR terms) round any closed loop is zero, ΣV = 0. It rests on conservation of energy: a charge carried once round a loop returns to the same potential, so the net energy gained is zero. Where only two wires meet the current has no alternative path, so it simply continues and nothing divides; the equation would read I = I.\n\nA correct answer states both rules, names charge for the junction rule and energy for the loop rule, and says the two-wire point has no split of current."
+          "why": "The junction rule says the currents into any junction sum to zero, which is conservation of charge: charge cannot pile up at or vanish from a point. The loop rule says the potential changes round any closed loop sum to zero, which is conservation of energy: a charge carried once round returns to the same potential, so it gains nothing overall.\n\nThe first option swaps the two laws; the second gives both rules to charge and leaves energy out; momentum plays no part in either rule."
         }
       ]
     },
@@ -592,28 +648,56 @@
           "why": "Several paths in, one path out, and nothing is added: that is the merge symbol, the downward triangle that combines various paths into a single path.\n\nThe summing junction (circled ×) shows the addition of inputs from various paths; a decision has one arrow in and two out; an on-page connector carries one line to another spot on the same page."
         },
         {
-          "type": "short",
-          "q": "A chart runs: Start; Total = 0; K = 0; Enter x; Total = Total + x; K = K + 1; decision 'Is K < 3?'; Yes → back to Enter x; No → Print Total; Stop. Name the symbol for each of the seven steps between Start and Stop, then state how many flow arrows enter 'Enter x' and how many leave the decision.",
+          "type": "mcq",
+          "q": "A chart runs: Start; Total = 0; K = 0; Enter x; Total = Total + x; K = K + 1; decision 'Is K < 3?'; Yes back to Enter x; No to Print Total; Stop. How many flow arrows enter 'Enter x', how many leave the decision, and which symbol is used for 'Print Total'?",
+          "options": [
+            "1 enters, 2 leave, input/output parallelogram",
+            "2 enter, 2 leave, input/output parallelogram",
+            "2 enter, 2 leave, process rectangle",
+            "1 enters, 1 leaves, input/output parallelogram"
+          ],
+          "answerIndex": 1,
           "concept": "Assigning symbols and arrow counts on a chart",
-          "why": "Total = 0 and K = 0: process rectangles (the preparation hexagon is also accepted, since they are set-up steps). Enter x: input/output parallelogram. Total = Total + x and K = K + 1: process rectangles. Is K < 3?: decision diamond. Print Total: input/output parallelogram.\n\nTwo arrows enter 'Enter x': one from K = 0 and one back from the Yes exit of the decision. Two arrows leave the decision: Yes and No. A correct answer gives parallelograms for both data steps, a diamond for the test, rectangles (or hexagons for the two initialisations) for the assignments, and the counts 2 and 2. Giving 1 arrow into 'Enter x' misses the back arrow that makes this a loop."
+          "why": "Two arrows reach 'Enter x': one forward from K = 0 and one back from the Yes exit of the decision, and it is that back arrow that makes the chart a loop. A decision has one exit per answer, so two leave it. 'Print Total' moves data out of the algorithm, so it is drawn as an input/output parallelogram.\n\nCounting one arrow into 'Enter x' misses the back arrow; a process rectangle is for an action such as Total = Total + x, not for printing; a decision with a single exit could not branch at all."
         },
         {
-          "type": "short",
-          "q": "Describe, step by step and naming the symbol for each step, a flowchart that reads a temperature T and prints 'Hot' if T is above 30 and 'Fine' otherwise. Every path must reach Stop.",
+          "type": "mcq",
+          "q": "A flowchart must read a temperature T and print 'Hot' if T is above 30 and 'Fine' otherwise, with every path reaching Stop. Which layout is correct?",
+          "options": [
+            "Start; 'Is T > 30?' diamond, Yes to Read T, No to Print 'Fine'; both arrows to Stop",
+            "Start; Read T parallelogram; 'T > 30' rectangle with two exits, to Print 'Hot' and to Print 'Fine'; both to Stop",
+            "Start; Read T parallelogram; 'Is T > 30?' diamond, Yes to Print 'Hot', No to Print 'Fine'; both to Stop",
+            "Start; Read T parallelogram; 'Is T > 30?' diamond, Yes to Print 'Hot' to Stop; the No exit left unconnected"
+          ],
+          "answerIndex": 2,
           "concept": "Laying out a selection chart",
-          "why": "Model answer: Start (terminator); Read T (input/output parallelogram); Is T > 30? (decision diamond); Yes → Print 'Hot' (parallelogram); No → Print 'Fine' (parallelogram); both arrows join (a merge is optional) and lead to Stop (terminator).\n\nA correct answer has exactly one Start, an input step before the decision, a diamond with both exits labelled, the two outputs on the two branches, and both branches reaching Stop. 'Is T ≤ 30?' with the branches swapped is accepted. Not accepted: two exits from a rectangle, a decision placed before T is read, or a branch left with no route to Stop."
+          "why": "T must be read before any test uses it, the test belongs in a diamond with both exits labelled, each branch does its own printing, and both branches must reach Stop. That is the layout with Read T first, a labelled diamond, and both branches ending at Stop; 'Is T ≤ 30?' with the two branches swapped would serve just as well.\n\nTesting before Read T uses a value that does not exist yet; a rectangle may have only one exit, so it cannot branch; leaving the No exit unconnected creates a path with no route to Stop."
         },
         {
-          "type": "short",
-          "q": "Three charts: (i) parallel lanes headed Sales, Warehouse and Accounts, with an order passing across the lanes; (ii) how a customer's details move from a web form into a database and out to a monthly report; (iii) a chart handed to new staff to teach the standard procedure for taking an order. Name the flowchart type of each and give the one feature that decides it.",
+          "type": "mcq",
+          "q": "Three charts: (i) parallel lanes headed Sales, Warehouse and Accounts, with an order passing across the lanes; (ii) how a customer's details move from a web form into a database and out to a monthly report; (iii) a chart handed to new staff to teach the standard procedure for taking an order. What is the flowchart type of each, in order?",
+          "options": [
+            "Swimlane, data, workflow",
+            "Swimlane, workflow, data",
+            "Data, swimlane, process",
+            "Swimlane, data, process"
+          ],
+          "answerIndex": 0,
           "concept": "Identifying flowchart types",
-          "why": "(i) Swimlane flowchart: the parallel lanes show multiple categories of activity side by side, one per department. (ii) Data flowchart: it shows the flow of information through the system, which is what reduces the gap between users and developers. (iii) Workflow chart: it describes how the business functions and is used for training employees on standard procedures.\n\nA correct answer names swimlane, data, workflow in that order, each with its deciding feature (lanes; information flow; how the business operates, used for training). Calling (iii) a process flowchart is the common slip: a process chart describes how a product or process moves along a chain rather than the standard operating routine used for training."
+          "why": "Parallel lanes, one per department, are the defining feature of a swimlane chart. A chart of how information moves through a system is a data flowchart. A chart of how the business operates, used to train staff on a standard procedure, is a workflow chart.\n\nCalling (iii) a process flowchart is the usual slip: a process chart follows a product or process along a chain rather than the standard routine taught to new staff. The other orderings swap the data and workflow charts around."
         },
         {
-          "type": "short",
-          "q": "Explain why a decision symbol has exactly two exits that must both be labelled, while a process box has exactly one exit. Then say what goes wrong when you try to trace a chart whose diamond exits carry no labels.",
+          "type": "mcq",
+          "q": "Why does a decision symbol have exactly two exits that must both be labelled, while a process box has exactly one, and what goes wrong when a diamond's exits carry no labels?",
+          "options": [
+            "Two inputs against one output; without labels the trace simply takes the left exit",
+            "Two actions against one answer; without labels the chart gains too many flow lines",
+            "Two answers against one action; without labels the chart runs both exits at once",
+            "Two answers against one action; without labels a trace cannot tell which arrow belongs to which answer"
+          ],
+          "answerIndex": 3,
           "concept": "Arrow rules for decision and process symbols",
-          "why": "A decision poses a yes/no (true/false) question, and the answer determines the path the flow takes, so there must be one exit for each possible answer, and each must be labelled so the reader knows which exit belongs to which answer. A process box performs one action with no question asked, so there is only one thing that can happen next: a single exit.\n\nWith unlabelled exits a trace stops at the diamond: you can evaluate the question with the current values but cannot tell which arrow to follow, so different readers would follow different paths and the chart no longer defines one algorithm. A correct answer gives the two-answers reason, the one-action reason, and says the trace becomes ambiguous or impossible at the diamond."
+          "why": "A decision asks a yes/no question, so there must be one exit for each possible answer, and each must be labelled so the reader knows which is which. A process box performs one action and asks nothing, so only one thing can happen next: a single exit.\n\nWith unlabelled exits the trace stops dead at the diamond: the question can be evaluated but neither arrow can be chosen, so different readers take different paths and the chart no longer defines one algorithm. It does not run both exits, take a default exit, or acquire extra flow lines."
         }
       ]
     },
@@ -730,28 +814,56 @@
           "why": "u v′ − v u′ = −(v u′ − u v′), so the student's numerator is the negative of the correct one over the same v². Every answer comes out with the wrong sign, which is why the order of the two terms matters in the quotient rule but not in the product rule, where the terms are added.\n\nIt is not the correct derivative, because subtraction is not commutative; it is not the reciprocal, since the denominator v² is unchanged; the derivative of v/u would be [u v′ − v u′]/u², with u² underneath, not v²."
         },
         {
-          "type": "short",
-          "q": "Differentiate f(x) = x² − 4x from first principles, using f′(x) = lim(h→0) [f(x + h) − f(x)]/h. Show every line of working.",
+          "type": "mcq",
+          "q": "Differentiate f(x) = x² − 4x from first principles. Which expression is left after dividing by h, and what is f′(x)?",
+          "options": [
+            "2xh + h² − 4h, so f′(x) = 0",
+            "x + h − 4, so f′(x) = x − 4",
+            "2x + h, so f′(x) = 2x",
+            "2x + h − 4, so f′(x) = 2x − 4"
+          ],
+          "answerIndex": 3,
           "concept": "First principles on a quadratic",
-          "why": "f(x + h) = (x + h)² − 4(x + h) = x² + 2xh + h² − 4x − 4h. Subtract f(x): [x² + 2xh + h² − 4x − 4h] − [x² − 4x] = 2xh + h² − 4h. Divide by h: (2xh + h² − 4h)/h = 2x + h − 4. Let h → 0: f′(x) = 2x − 4.\n\nFinal answer: f′(x) = 2x − 4. A correct answer expands (x + h)², cancels the x² and −4x terms, shows the h dividing out to leave 2x + h − 4, and only then puts h = 0. Substituting h = 0 before cancelling (0/0), or leaving 2x + h − 4 as the answer, is wrong. The power rule gives the same 2x − 4 and may be quoted as a check but not as the working."
+          "why": "f(x + h) = (x + h)² − 4(x + h) = x² + 2xh + h² − 4x − 4h, and subtracting f(x) = x² − 4x cancels the x² and −4x to leave 2xh + h² − 4h. Every term carries an h, so dividing by h gives 2x + h − 4, and only now is it safe to let h → 0, giving f′(x) = 2x − 4.\n\n2xh + h² − 4h is the numerator before dividing, 2x + h forgets the −4x term, and x + h − 4 divides only part of the expression."
         },
         {
-          "type": "short",
-          "q": "Differentiate y = x² cos(3x). Show your working, naming the rules you use.",
+          "type": "mcq",
+          "q": "Differentiate y = x² cos(3x).",
+          "options": [
+            "2x cos(3x) + 3x² sin(3x)",
+            "2x cos(3x) − 3x² sin(3x)",
+            "2x cos(3x) − x² sin(3x)",
+            "−6x² sin(3x)"
+          ],
+          "answerIndex": 1,
           "concept": "Combining the product rule and the chain rule",
-          "why": "Product rule with u = x², v = cos(3x). u′ = 2x. For v′ use the chain rule: with w = 3x, cos w → −sin w, and w′ = 3, so v′ = −3 sin(3x). Then dy/dx = u v′ + u′ v = x²(−3 sin(3x)) + 2x cos(3x) = 2x cos(3x) − 3x² sin(3x).\n\nFinal answer: dy/dx = 2x cos(3x) − 3x² sin(3x); also accepted in the form x(2 cos(3x) − 3x sin(3x)). A correct answer names the product rule for the two factors and the chain rule for cos(3x), and has the factor 3 and the minus sign on the sine term. 2x cos(3x) − x² sin(3x) (inner derivative dropped) or 2x cos(3x) + 3x² sin(3x) (sign of cos′ lost) is wrong."
+          "why": "Use the product rule with u = x² and v = cos(3x), so u′ = 2x. For v′ the chain rule applies: the outer derivative of cos is −sin, and the inner derivative of 3x is 3, so v′ = −3 sin(3x). Then dy/dx = u′v + uv′ = 2x cos(3x) − 3x² sin(3x).\n\nDropping the inner 3 gives −x² sin(3x), losing the minus on cos′ gives the + version, and −6x² sin(3x) differentiates only the cosine and never uses the product rule."
         },
         {
-          "type": "short",
-          "q": "The curve x² + xy + y² = 7 passes through (1, 2). Differentiate implicitly, collect the dy/dx terms and factorise, then find the gradient of the curve at (1, 2). Show your working.",
+          "type": "mcq",
+          "q": "The curve x² + xy + y² = 7 passes through (1, 2). Differentiate implicitly and find the gradient of the curve at (1, 2).",
+          "options": [
+            "dy/dx = −2x/(2y), so the gradient is −1/2",
+            "dy/dx = −(2x)/(x + 2y), so the gradient is −2/5",
+            "dy/dx = −(2x + y)/(x + 2y), so the gradient is −4/5",
+            "dy/dx = −(2x + y)/(x + 2y), so the gradient is 4/5"
+          ],
+          "answerIndex": 2,
           "concept": "Implicit differentiation with collection, evaluated at a point",
-          "why": "Differentiate each term with respect to x: x² → 2x; xy → y + x(dy/dx) by the product rule; y² → 2y(dy/dx) by the chain rule; 7 → 0. So 2x + y + x(dy/dx) + 2y(dy/dx) = 0. Collect: (dy/dx)(x + 2y) = −(2x + y), so dy/dx = −(2x + y)/(x + 2y). At (1, 2): −(2 + 2)/(1 + 4) = −4/5.\n\nFinal answer: dy/dx = −(2x + y)/(x + 2y) and the gradient at (1, 2) is −4/5 (also accepted: −0.8). A correct answer shows the product-rule split of xy into two terms, the factorisation of dy/dx, and the substitution. Forgetting the y from d/dx(xy), or giving 4/5, is wrong."
+          "why": "Term by term: x² gives 2x, xy needs the product rule and gives y + x(dy/dx), y² gives 2y(dy/dx) by the chain rule, and 7 gives 0. Collecting, (dy/dx)(x + 2y) = −(2x + y), so dy/dx = −(2x + y)/(x + 2y), and at (1, 2) that is −(2 + 2)/(1 + 4) = −4/5, or −0.8.\n\n+4/5 loses the overall minus, −2x/(2y) ignores the xy term entirely, and −2x/(x + 2y) forgets the y that the product rule contributes."
         },
         {
-          "type": "short",
-          "q": "A student differentiates f(x) = (5x + 1)³ and writes f′(x) = 3(5x + 1)². Explain what has been left out and why the chain rule requires it, then give the correct derivative.",
+          "type": "mcq",
+          "q": "A student differentiates f(x) = (5x + 1)³ and writes f′(x) = 3(5x + 1)². What has been left out, and what is the correct derivative?",
+          "options": [
+            "The inner derivative 5, so f′(x) = 15(5x + 1)²",
+            "Nothing, since f′(x) = 3(5x + 1)² is already correct",
+            "The inner derivative 5x, so f′(x) = 15x(5x + 1)²",
+            "The product rule, so f′(x) = 3(5x + 1)² + 5(5x + 1)³"
+          ],
+          "answerIndex": 0,
           "concept": "The inner derivative in the chain rule",
-          "why": "The student has treated the base as a bare x and applied the power rule only to the outside. But the base is u = 5x + 1, a function of x, so f is a composite y = u³ and the chain rule f′(x) = y′(u)·u′(x) applies: the outer derivative 3u² must be multiplied by the inner derivative u′(x) = 5. The factor 5 records how fast the inside changes with x; leaving it out under-counts the rate of change by that factor.\n\nCorrect derivative: f′(x) = 3(5x + 1)²·5 = 15(5x + 1)². A correct answer names the missing factor u′(x) = 5, says the base is a function of x rather than x itself, and gives 15(5x + 1)²."
+          "why": "The base is not x but u = 5x + 1, a function of x, so f is the composite u³ and the chain rule requires the outer derivative 3u² to be multiplied by the inner derivative u′ = 5. That factor records how fast the inside moves as x moves, and leaving it out under-counts the rate of change fivefold. The correct derivative is 3(5x + 1)²·5 = 15(5x + 1)².\n\nThe inner derivative is 5, not 5x, and there is no product here for the product rule to act on."
         }
       ]
     },
@@ -868,28 +980,56 @@
           "why": "Reversing the travel direction reverses the order in which every battery's terminals are crossed and reverses whether each resistor is walked with or against its arrow, so every term changes sign. That multiplies the whole equation by −1, which has the same solution. Only reversing a current arrow would change the sign of that current.\n\nThe other options treat the emf and IR sign rules as if they responded differently to the travel direction, or confuse the travel direction with the current arrow."
         },
         {
-          "type": "short",
-          "q": "Three branches join top node A to bottom node B. Branch 1: a 12 V battery (+ toward A) in series with 2.0 Ω. Branch 2: a 4.0 Ω resistor. Branch 3: a 6.0 V battery (+ toward A) in series with 2.0 Ω. Assume currents I₁ and I₃ upward toward A and I₂ downward through the 4.0 Ω. Calculate all three currents and interpret any negative one. Show your working.",
+          "type": "mcq",
+          "q": "Three branches join node A to node B. Branch 1: a 12 V battery, + toward A, in series with 2.0 Ω. Branch 2: a 4.0 Ω resistor. Branch 3: a 6.0 V battery, + toward A, in series with 2.0 Ω. Take I₁ and I₃ upward toward A and I₂ downward through the 4.0 Ω. What are the three currents?",
+          "options": [
+            "I₁ = 2.4 A, I₂ = 1.8 A, I₃ = −0.60 A",
+            "I₁ = 2.4 A, I₂ = 1.8 A, I₃ = +0.60 A",
+            "I₁ = 0 A, I₂ = 3.0 A, I₃ = −3.0 A",
+            "I₁ = 3.6 A, I₂ = 1.2 A, I₃ = −2.4 A"
+          ],
+          "answerIndex": 0,
           "concept": "Two-loop circuit by junction and loop rules",
-          "why": "Junction A: I₁ + I₃ = I₂. Loop through branch 1 and branch 2 (up branch 1, down branch 2): 12 − 2.0I₁ − 4.0I₂ = 0. Loop through branch 3 and branch 2: 6.0 − 2.0I₃ − 4.0I₂ = 0. From the loops I₁ = 6.0 − 2.0I₂ and I₃ = 3.0 − 2.0I₂; substitute into the junction: 9.0 − 4.0I₂ = I₂, so I₂ = 1.8 A, I₁ = 2.4 A, I₃ = −0.60 A. Check: V_A = 4.0 × 1.8 = 7.2 V = 12 − 2.0 × 2.4.\n\nA correct answer gives I₁ = 2.4 A, I₂ = 1.8 A, I₃ = −0.60 A and says the negative sign means 0.60 A flows downward in branch 3, into the 6.0 V battery's positive terminal, so it is being charged. Accept I₃ = 0.60 A stated with the reversed direction."
+          "why": "Junction A gives I₁ + I₃ = I₂. The loop through branches 1 and 2 gives 12 − 2.0I₁ − 4.0I₂ = 0 and the loop through branches 3 and 2 gives 6.0 − 2.0I₃ − 4.0I₂ = 0, so I₁ = 6.0 − 2.0I₂ and I₃ = 3.0 − 2.0I₂. Substituting, 9.0 − 4.0I₂ = I₂, so I₂ = 1.8 A, I₁ = 2.4 A and I₃ = −0.60 A, the minus meaning 0.60 A runs downward into the 6.0 V battery, charging it.\n\n+0.60 A simply drops that sign; the other two options come from writing the junction as I₁ = I₂ + I₃, and from leaving the 6.0 V emf out of its loop."
         },
         {
-          "type": "short",
-          "q": "Going clockwise from point a round a single loop: a 2.0 Ω resistor, a 4.0 V battery crossed + to −, its 1.0 Ω internal resistance, point b, a 4.0 Ω resistor, a 12 V battery crossed − to +, its 1.0 Ω internal resistance, back to a. Calculate the current, then V_ab = V_a − V_b by both paths from b to a. Show your working.",
+          "type": "mcq",
+          "q": "Going clockwise from point a round a single loop: a 2.0 Ω resistor, a 4.0 V battery crossed + to −, its 1.0 Ω internal resistance, point b, a 4.0 Ω resistor, a 12 V battery crossed − to +, its 1.0 Ω internal resistance, back to a. What are the current and V_a − V_b?",
+          "options": [
+            "1.0 A clockwise; V_a − V_b = −7.0 V",
+            "1.0 A clockwise; V_a − V_b = 7.0 V",
+            "2.0 A clockwise; V_a − V_b = 7.0 V",
+            "1.0 A clockwise; V_a − V_b = 6.0 V"
+          ],
+          "answerIndex": 1,
           "concept": "Potential difference between two points by two paths",
-          "why": "Loop clockwise with the current: −2.0I − 4.0 − 1.0I − 4.0I + 12 − 1.0I = 0, so 8.0 = 8.0I and I = 1.0 A clockwise (the 12 V battery wins). Path b → a clockwise (with the current): −(1.0)(4.0) + 12 − (1.0)(1.0) = 7.0 V. Path b → a anticlockwise (against the current): +(1.0)(1.0) + 4.0 + (1.0)(2.0) = 7.0 V. Both agree: V_ab = 7.0 V, a is 7.0 V above b.\n\nA correct answer states I = 1.0 A and V_ab = 7.0 V from both paths, with the signs shown. Getting different values from the two paths signals a sign error and is wrong."
+          "why": "The loop equation clockwise reads −2.0I − 4.0 − 1.0I − 4.0I + 12 − 1.0I = 0, so 8.0 = 8.0I and I = 1.0 A clockwise: the 12 V battery wins and drives the 4.0 V one backwards. Walking b to a with the current, V_a − V_b = −4.0 + 12 − 1.0 = 7.0 V, and walking the other way round gives +1.0 + 4.0 + 2.0 = 7.0 V as well.\n\n−7.0 V reverses the path; 2.0 A adds the two emfs instead of subtracting them; 6.0 V leaves the internal resistance terms out of the path."
         },
         {
-          "type": "short",
-          "q": "A bridge has arms a→b 1.0 Ω, a→c 1.0 Ω, b→d 1.0 Ω, c→d 2.0 Ω and b→c 1.0 Ω, with a battery from d to a. Solving gives I₁ (a→b) = 3.0 A and I₅ (b→c) = −0.50 A. Use the junction rule at b to find I₃ (b→d), the loop a→b→c→a to find I₂ (a→c), then find I₄ (c→d). State the true direction in arm b→c. Show your working.",
+          "type": "mcq",
+          "q": "A bridge has arms a→b 1.0 Ω, a→c 1.0 Ω, b→d 1.0 Ω, c→d 2.0 Ω and b→c 1.0 Ω, with a battery from d to a. Solving gives I₁ (a→b) = 3.0 A and I₅ (b→c) = −0.50 A. What are I₃ (b→d), I₂ (a→c) and I₄ (c→d)?",
+          "options": [
+            "I₃ = 2.5 A, I₂ = 3.5 A, I₄ = 4.0 A",
+            "I₃ = 3.5 A, I₂ = 3.5 A, I₄ = 3.0 A",
+            "I₃ = 3.5 A, I₂ = 2.5 A, I₄ = 2.0 A",
+            "I₃ = 2.5 A, I₂ = 2.5 A, I₄ = 2.0 A"
+          ],
+          "answerIndex": 2,
           "concept": "Using junction and loop equations with a negative current",
-          "why": "Junction b: I₁ = I₃ + I₅, so I₃ = 3.0 − (−0.50) = 3.5 A. Loop a→b→c→a: −I₁(1.0) − I₅(1.0) + I₂(1.0) = 0, so I₂ = I₁ + I₅ = 3.0 − 0.50 = 2.5 A. Junction c: I₄ = I₂ + I₅ = 2.5 − 0.50 = 2.0 A. Check loop b→d→c→b: −I₃(1.0) + I₄(2.0) + I₅(1.0) = −3.5 + 4.0 − 0.50 = 0. I₅ negative means 0.50 A actually flows from c to b.\n\nA correct answer states I₃ = 3.5 A, I₂ = 2.5 A, I₄ = 2.0 A and that 0.50 A flows c → b. Using I₃ = 2.5 A (adding the negative current the wrong way) is wrong."
+          "why": "At b the junction rule reads I₁ = I₃ + I₅, so I₃ = 3.0 − (−0.50) = 3.5 A. The loop a→b→c→a gives −I₁(1.0) − I₅(1.0) + I₂(1.0) = 0, so I₂ = I₁ + I₅ = 2.5 A, and at c, I₄ = I₂ + I₅ = 2.0 A. The loop b→d→c→b checks out: −3.5 + 4.0 − 0.50 = 0. The negative I₅ means 0.50 A really flows from c to b.\n\nThe first option ignores the sign of I₅ throughout; the second carries the wrong sign into the loop equation; the last subtracts at the junction where it should add."
         },
         {
-          "type": "short",
-          "q": "In one circuit a 4.0 V battery appears as −4.0 V in the loop equation but as +4.0 V when the potential difference between two points is computed along a path through it. Explain how the same battery can carry both signs, and state what the sign of an emf term depends on.",
+          "type": "mcq",
+          "q": "In one circuit a 4.0 V battery appears as −4.0 V in the loop equation but as +4.0 V when the potential difference between two points is computed along a path through it. What decides the sign of an emf term?",
+          "options": [
+            "Whether the battery is discharging, giving +ε, or being charged, giving −ε",
+            "Whether the current runs through the battery with the traversal, giving +ε, or against it, giving −ε",
+            "Whether the battery is the larger or the smaller emf in the loop",
+            "Only the order in which the terminals are crossed: − to + gives +ε, + to − gives −ε"
+          ],
+          "answerIndex": 3,
           "concept": "Sign of an emf term",
-          "why": "The sign of an emf term depends only on the order in which the battery's terminals are crossed during the traversal: − to + gives +ε, + to − gives −ε. It does not depend on which way the current flows through the battery or on whether the battery is charging or discharging. In the loop equation the battery was walked + to −, giving −4.0 V; on the second path it was walked in the opposite direction, − to +, giving +4.0 V. The battery itself is unchanged.\n\nA correct answer says the sign is fixed by traversal direction relative to the terminals, quotes − to + as positive and + to − as negative, and states that the current direction does not affect the emf sign."
+          "why": "An emf term's sign is fixed by the direction of travel through the battery and nothing else: crossing from − to + is a rise, +ε, and crossing from + to − is a fall, −ε. In the loop equation the battery was walked + to −, so it entered as −4.0 V; on the other path it was walked the opposite way and entered as +4.0 V. The battery itself never changed.\n\nWhether it is charging or discharging, which way the current runs, and how big the other emf is all leave the sign of the emf term alone."
         }
       ]
     },
@@ -1005,28 +1145,56 @@
           "why": "A trace begins at the single Start terminator and follows the arrows. At a diamond you evaluate the question using the values the variables hold at that moment, and take the exit whose label matches the answer.\n\nPosition on the page, which exit was drawn first, and the label on a later box are all drawing details with no effect on the logic."
         },
         {
-          "type": "short",
-          "q": "A chart runs: Start; Read A, B, C; Max = A; decision 'Is B > Max?'; Yes → Max = B; join; decision 'Is C > Max?'; Yes → Max = C; join; Print Max; Stop. Inputs A = 7, B = 12, C = 9. Give the value of Max after each decision, the printed value, and how many decisions are evaluated. Show your working.",
+          "type": "mcq",
+          "q": "A chart runs: Start; Read A, B, C; Max = A; decision 'Is B > Max?'; Yes to Max = B; join; decision 'Is C > Max?'; Yes to Max = C; join; Print Max; Stop. The inputs are A = 7, B = 12, C = 9. Give the value of Max after each decision, the printed value, and how many decisions are evaluated.",
+          "options": [
+            "Max goes 12 then 12; prints 12; 2 decisions evaluated",
+            "Max goes 12 then 9; prints 9; 2 decisions evaluated",
+            "Max goes 12 then 12; prints 12; 1 decision evaluated",
+            "Max goes 12 then 12; prints 12; 3 decisions evaluated"
+          ],
+          "answerIndex": 0,
           "concept": "Tracing a chart with two selections",
-          "why": "Max = 7 after Read. First decision: 12 > 7 is Yes, so Max = 12. Second decision: 9 > 12 is No, so Max stays 12. Printed: 12. Both decisions are evaluated, so 2, whichever way they answer.\n\nA correct answer shows Max = 7 → 12 → 12, states 12 is printed, and counts 2 decisions. Answering 9 takes the last value read rather than the largest; counting 3 decisions invents a test that is not in the chart."
+          "why": "Max starts at A = 7. The first decision, 12 > 7, is Yes, so Max = 12. The second, 9 > 12, is No, so Max stays 12 and 12 is printed. Both decisions are evaluated whatever their answers, so the count is 2.\n\nPrinting 9 takes the last value read rather than the largest; counting 1 decision assumes a Yes answer skips the second test, but the chart reaches it either way; counting 3 invents a test the chart does not contain."
         },
         {
-          "type": "short",
-          "q": "A chart runs: Start; S = 0; K = 0; Enter n; decision 'Is n even?'; Yes → S = S + n; join; K = K + 1; decision 'Is K < 4?'; Yes → back to Enter n; No → Print S; Stop. Inputs 3, 8, 5, 6. Give S and K after each pass and the printed value. Show your working.",
+          "type": "mcq",
+          "q": "A chart runs: Start; S = 0; K = 0; Enter n; decision 'Is n even?'; Yes to S = S + n; join; K = K + 1; decision 'Is K < 4?'; Yes back to Enter n; No to Print S; Stop. The inputs are 3, 8, 5, 6. Give (S, K) after each pass and the printed value.",
+          "options": [
+            "(0, 0), (8, 1), (8, 1), (14, 2); prints 14",
+            "(3, 1), (11, 2), (16, 3), (22, 4); prints 22",
+            "(0, 1), (8, 2), (8, 3), (8, 4); prints 8",
+            "(0, 1), (8, 2), (8, 3), (14, 4); prints 14"
+          ],
+          "answerIndex": 3,
           "concept": "Tracing a selection inside a repetition",
-          "why": "Pass 1: n = 3, odd, S stays 0, K = 1. Pass 2: n = 8, even, S = 8, K = 2. Pass 3: n = 5, odd, S = 8, K = 3. Pass 4: n = 6, even, S = 14, K = 4; 4 < 4 is No, so 14 is printed.\n\nA correct answer lists (S, K) as (0, 1), (8, 2), (8, 3), (14, 4) and the output 14. Note that K increases on every pass, odd or even, because K = K + 1 sits after the join. 22 adds every number and ignores the inner decision; 8 stops after two passes."
+          "why": "K = K + 1 sits after the join, so K rises on every pass, odd or even. Pass 1: n = 3 is odd, S stays 0, K = 1. Pass 2: n = 8 is even, S = 8, K = 2. Pass 3: n = 5 is odd, S = 8, K = 3. Pass 4: n = 6 is even, S = 14, K = 4; 4 < 4 is No, so 14 is printed.\n\nThe version where K rises only on the even passes puts the increment inside the Yes branch, which the chart does not do; (3, 1), (11, 2), (16, 3), (22, 4) adds every number and ignores the decision; ending at (8, 4) treats 6 as odd and never adds it."
         },
         {
-          "type": "short",
-          "q": "A chart runs: Start; Read N; F = 1; decision 'Is N > 1?'; Yes → F = F × N; N = N − 1; back to the decision; No → Print F; Stop. (a) How many flow lines does the chart contain? (b) For N = 4, how many times is the decision evaluated, and what is printed? Show your working.",
+          "type": "mcq",
+          "q": "A chart runs: Start; Read N; F = 1; decision 'Is N > 1?'; Yes to F = F × N; then N = N − 1; back to the decision; No to Print F; Stop. How many flow lines does the chart contain, and for N = 4 how many times is the decision evaluated and what is printed?",
+          "options": [
+            "7 flow lines; 4 evaluations; prints 24",
+            "8 flow lines; 4 evaluations; prints 24",
+            "8 flow lines; 3 evaluations; prints 24",
+            "8 flow lines; 4 evaluations; prints 12"
+          ],
+          "answerIndex": 1,
           "concept": "Counting flow lines and decision evaluations",
-          "why": "(a) Start→Read N, Read N→F = 1, F = 1→decision, Yes→F = F × N, →N = N − 1, back→decision, No→Print F, Print F→Stop: 8 flow lines. (b) N = 4: decision Yes, F = 4, N = 3; Yes, F = 12, N = 2; Yes, F = 24, N = 1; N > 1 is No, print 24. The decision is evaluated 4 times (three Yes, one No) and 24 is printed.\n\nA correct answer gives 8, 4 and 24. Answering 3 evaluations forgets the final failing test; 7 lines misses the back arrow; 12 stops one multiplication early."
+          "why": "The flow lines are Start to Read N, Read N to F = 1, F = 1 to the decision, Yes to F = F × N, on to N = N − 1, back to the decision, No to Print F, and Print F to Stop: 8 in all. For N = 4 the decision answers Yes three times, with F going 4, 12, 24 as N falls 3, 2, 1, and No once, so it is evaluated 4 times and 24 is printed.\n\n7 lines misses the back arrow that makes the loop; 3 evaluations forgets the final failing test; 12 stops one multiplication early."
         },
         {
-          "type": "short",
-          "q": "A student says every diamond in a flowchart is a loop. Explain the test that tells a selection diamond from a repetition diamond, and state what must be true of the symbols inside a repetition for the loop to end.",
+          "type": "mcq",
+          "q": "Both selection and repetition are drawn with a diamond. What test tells them apart on a chart, and what must be true of the symbols inside a repetition for the loop to end?",
+          "options": [
+            "Two labelled exits mean repetition and one exit means selection; the test must be false on the first pass",
+            "A diamond drawn below the loop body means repetition; the loop must contain a counter starting at zero",
+            "An exit running back to an already executed symbol means repetition; a symbol inside must change a value the test depends on",
+            "An exit running back to an already executed symbol means repetition; the test must use < rather than ="
+          ],
+          "answerIndex": 2,
           "concept": "Selection versus repetition on a chart",
-          "why": "Look at the direction of the two exits. If both exits go forward and later rejoin, the diamond is a selection: one of two alternatives runs once. If one exit runs backward to a symbol that has already been executed, the diamond is a repetition: the symbols between the landing point and the diamond are executed again. Both use the same symbol because both are decided by a yes/no test.\n\nFor a repetition to end, at least one symbol inside the loop must change a value that the diamond's question depends on, so that the answer eventually flips and the forward exit is taken. A correct answer gives the backward-arrow test and the changing-value condition."
+          "why": "Look at where the exits go. If both go forward and later rejoin, one of two alternatives runs once and the diamond is a selection. If one exit runs back to a symbol already executed, everything between the landing point and the diamond runs again, so it is a repetition. For the loop to end, some symbol inside it must change a value the diamond's question depends on, so the answer eventually flips and the forward exit is taken.\n\nBoth kinds of diamond have two labelled exits, so counting exits decides nothing; the diamond may be drawn above or below the body; the comparison operator and a counter are common but neither is required."
         }
       ],
       "slot": "fast"

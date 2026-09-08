@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *Pseudocode concepts: what a pseudocode is and what it is for.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** What is printed?
 
@@ -107,7 +107,7 @@ B. Both are values passed into SquareRoot
 C. area is printed; side is read from the user
 D. area is the value passed in; side receives the result
 
-**9. (show your working)** Rewrite this using WHILE so that it prints the same total for any list of inputs ending in 0. Give the WHILE condition and explain why READ has to appear twice in your version.
+**9.** Rewrite this with WHILE so that it prints the same total for any list of inputs ending in 0. Which version does that?
 
 ```
 SET t TO 0
@@ -117,8 +117,12 @@ REPEAT
 UNTIL n = 0
 PRINT t
 ```
+A. WHILE n <> 0 with READ n then SET t TO t + n in the body, and no READ before the loop
+B. READ n before the loop, WHILE n = 0 with SET t TO t + n then READ n in the body
+C. READ n before the loop, WHILE n <> 0 with SET t TO t + n then READ n in the body
+D. READ n before the loop, WHILE n <> 0 with READ n then SET t TO t + n in the body
 
-**10. (show your working)** Trace this, giving the values of evens and odds after each pass, and the printed output. Show your working.
+**10.** What is printed?
 
 ```
 SET evens TO 0
@@ -132,8 +136,12 @@ FOR k = 3 TO 9
 ENDFOR
 PRINT evens, odds
 ```
+A. 3 3
+B. 3 4
+C. 4 3
+D. 4 4
 
-**11. (show your working)** State three faults in this pseudocode, naming the rule or requirement each one breaks, then write a corrected version that also handles n = 0.
+**11.** Which three rules of pseudocode does this fragment break?
 
 ```
 set total to 0
@@ -142,8 +150,16 @@ FOR i = 1 TO n
     READ mark; SET total TO total + mark
 PRINT total / n
 ```
+A. Lowercase keywords; two statements on one line; the loop counter is never initialised
+B. Missing ENDFOR; no comment lines; the variable total is never printed
+C. Two statements on one line; missing ENDFOR; READ is used where INPUT is required
+D. Lowercase keywords; two statements on one line; the FOR is never closed with ENDFOR
 
-**12. (show your working)** A student says pseudocode is just a program with the semicolons removed. Give two reasons this is wrong (language independence; pseudocode is not executed), and say how pseudocode is tested instead.
+**12.** A student says pseudocode is just a program with the semicolons removed. Which answer gives two correct reasons this is wrong and says how pseudocode is tested instead?
+A. Language independent and never executed; tested by tracing it on paper with chosen inputs
+B. Language independent and never executed; tested by running it through a pseudocode compiler
+C. Fewer keywords and slower to run; tested by running it and comparing the outputs
+D. Written after the program and never executed; tested by reading it aloud to the team
 
 ---
 
@@ -181,44 +197,18 @@ REPEAT-UNTIL tests at the bottom and always runs its body at least once, so it w
 
 SquareRoot, not area, is the function name; side is not an input; nothing in a CALL line prints or reads anything.
 
-**9.** *Converting REPEAT-UNTIL to WHILE.* Model answer:
+**9. C** — *Converting REPEAT-UNTIL to WHILE.* UNTIL n = 0 stops when its condition becomes true, so the WHILE must keep going while that condition is false: WHILE n <> 0. A WHILE tests before the first pass, so n must already hold a value: one READ before the loop and one at the foot of the body, so the test always sees the newest value. For 5, 8, 3, 0 both versions print 16.
 
-```
-SET t TO 0
-READ n
-WHILE n <> 0
-    SET t TO t + n
-    READ n
-ENDWHILE
-PRINT t
-```
+With no READ before the loop the first test has no value to work on. WHILE n = 0 inverts the condition, so the loop never runs. Putting READ at the top of the body skips the first number and prints 11 instead of 16.
 
-UNTIL n = 0 stops when the condition becomes true, so the WHILE must continue while it is false: WHILE n <> 0 (also accepted: n ≠ 0, NOT n = 0). A WHILE tests before the first pass, so there must be a value of n to test: one READ before the loop, and one at the foot of the body so the test sees each new value. For 5, 8, 3, 0 both versions print 16. Not accepted: WHILE n = 0; a single READ inside the body with nothing read before the loop; READ placed at the top of the body so the test is made on a stale value.
+**10. B** — *Tracing a selection inside a FOR loop.* k takes 3, 4, 5, 6, 7, 8 and 9, seven passes in all, because the upper bound is inclusive. The even values are 4, 6 and 8, so evens = 3; the odd values are 3, 5, 7 and 9, so odds = 4. It prints 3 4.
 
-**10.** *Tracing a selection inside a FOR loop.* k runs 3, 4, 5, 6, 7, 8, 9 (seven passes). After each pass (evens, odds): k = 3 → (0, 1); 4 → (1, 1); 5 → (1, 2); 6 → (2, 2); 7 → (2, 3); 8 → (3, 3); 9 → (3, 4). Printed: 3 4.
+3 3 stops at k = 8 and loses the last odd value; 4 3 swaps the two counters; 4 4 starts the loop at k = 2, which adds one more even value.
 
-A correct answer shows the seven pairs, or at least the final values, and the output 3 4. Answering 3 3 stops at k = 8, forgetting the inclusive upper bound; 4 3 swaps the two counters.
+**11. D** — *Applying the pseudocode rules to a fragment.* Line 1 writes its keywords in lowercase, breaking the rule that keywords are capitalised. Line 4 puts READ mark and SET total TO total + mark together, breaking one statement per line. The FOR has no ENDFOR, so nothing marks where its body ends. A corrected version capitalises line 1, splits line 4 in two, closes the loop with ENDFOR, and guards total / n against n = 0.
 
-**11.** *Applying the pseudocode rules to a fragment.* Faults (any three): line 1 has lowercase keywords, breaking the rule that keywords are written in capitals; line 4 puts two statements on one line, breaking one statement per line; the FOR is never closed with ENDFOR, so nothing marks where the body ends; and total / n is computed with no guard for n = 0, which testing and refining (handle all required cases) should have caught.
+A FOR sets its own counter, so nothing is missing there; comments are optional; total is printed as part of the average; and READ is itself a proper pseudocode keyword.
 
-Corrected model:
+**12. A** — *Pseudocode is not a program.* Pseudocode statements mix natural language with programming elements and belong to no particular language, so there is no language whose syntax it could be a stripped-down form of. It is also never executed: it sets out the flow and logic, and no compiler defines what its keywords mean. Testing is done on paper, walking the lines in order with chosen inputs and a table of every variable, checking the logic and that every required case is handled.
 
-```
-SET total TO 0
-READ n
-IF n = 0 THEN
-    PRINT "no data"
-ELSE
-    FOR i = 1 TO n
-        READ mark
-        SET total TO total + mark
-    ENDFOR
-    PRINT total / n
-ENDIF
-```
-
-A correct answer names three faults with their rules and gives a version with capitals, one statement per line, ENDFOR, and an IF guarding the division.
-
-**12.** *Pseudocode is not a program.* First, pseudocode statements must be language independent: they are written in a mix of natural language and programming elements that belongs to no particular language, so there is no language whose syntax it is a stripped-down form of. Second, pseudocode is not meant to be executed as actual code; it describes the flow and logic of the algorithm, and no compiler defines what its keywords mean. Its purpose is to be easily convertible into any programming language, which is why it is written before the language is chosen.
-
-It is tested on paper or by scanning through: pick input values, walk the lines in order keeping a table of each variable, and check that the logic is right and every required case is handled. That is the testing and refining step. A correct answer gives both reasons and the paper trace.
+No pseudocode compiler exists, which is the whole point; pseudocode has no run time to be slow at; and it is written before the program, not after.

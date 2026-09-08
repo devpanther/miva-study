@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *Data types, variables and programme objects, as concepts, exactly as the two decks give them.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Evaluate the C expression `30 - 8 / 4 * 2`, where every value is an int.
 A. 10
@@ -51,7 +51,7 @@ B. balance, deposit()
 C. owner, balance
 D. owner, withdraw()
 
-**9. (show your working)** Trace this fragment and give the values of a, b and c after each line. Show your working.
+**9.** Trace this fragment and give the values of a, b and c after the last line.
 
 ```c
 int a = 3, b = 10, c;
@@ -60,12 +60,28 @@ b -= a;
 a = c / b;
 c = c - a * b;
 ```
+A. a = 5, b = 7, c = 1
+B. a = 4, b = 7, c = 4
+C. a = 3, b = 7, c = 11
+D. a = 4, b = 7, c = 0
 
-**10. (show your working)** a = 25 and b = 14. Write both as 8-bit binary and compute `a & b`, `a | b` and `a ^ b`, giving each result in decimal. Show your working.
+**10.** a = 25 and b = 14, both held in 8 bits. What are `a & b`, `a | b` and `a ^ b` in decimal?
+A. 8, 31, 23
+B. 8, 23, 31
+C. 8, 29, 21
+D. 1, 1, 0
 
-**11. (show your working)** Classify each of these operators into one of the six categories (arithmetic, relational, logical, bitwise, assignment, misc): `%`, `>=`, `&&`, `<<`, `+=`, `sizeof`. Then state the value of `9 % 4 >= 1`.
+**11.** Classify `%`, `>=`, `&&`, `<<`, `+=` and `sizeof` into the six operator categories, in that order.
+A. arithmetic, logical, logical, bitwise, assignment, misc
+B. arithmetic, relational, bitwise, bitwise, assignment, misc
+C. arithmetic, relational, logical, arithmetic, assignment, misc
+D. arithmetic, relational, logical, bitwise, assignment, misc
 
-**12. (show your working)** `int total;` and `extern int total;` both name the same variable and the same type. Explain why the first is a definition and the second is only a declaration, and say what a definition does that a declaration does not.
+**12.** `int total;` and `extern int total;` name the same variable and the same type. What does the first do that the second does not?
+A. It gives the variable its type.
+B. It gives the variable a starting value.
+C. It reserves storage for the variable.
+D. It makes the name visible to other files.
 
 ---
 
@@ -103,18 +119,18 @@ a = 6, b = 8 uses the value after the increment, which is what `++a` would do; a
 
 The other pairings mix a variable with a method or list only methods.
 
-**9.** *Tracing a sequence of assignments.* Line 2: c = 3 × 10 + 2 = 32 (a = 3, b = 10, c = 32). Line 3: b = 10 − 3 = 7 (a = 3, b = 7, c = 32). Line 4: a = 32 / 7, integer division, so 4 (a = 4, b = 7, c = 32). Line 5: c = 32 − 4 × 7 = 32 − 28 = 4 (a = 4, b = 7, c = 4).
+**9. B** — *Tracing a sequence of assignments.* c = 3 × 10 + 2 = 32. Then `b -= a` means b = 10 − 3 = 7. Then a = 32 / 7 in int arithmetic, which truncates to 4. Finally c = 32 − 4 × 7 = 4, so a = 4, b = 7, c = 4.
 
-Final answer: a = 4, b = 7, c = 4. A correct answer shows the value after every line, treats `b -= a` as b = b − a, and truncates 32 / 7 to 4 rather than 4.57. a = 4.57 or c = 0 (from 32 − 4.57 × 7) is wrong.
+a = 5, b = 7, c = 1 reads line 2 as a × (b + 2) = 36; a = 3, b = 7, c = 11 divides before `b -= a` runs, 32 / 10 = 3; a = 4, b = 7, c = 0 keeps 32 / 7 as 4.57 and computes 32 − 4.57 × 7.
 
-**10.** *Bitwise AND, OR and XOR.* 25 = 0001 1001 and 14 = 0000 1110. AND keeps a bit only where both are 1: 0000 1000 = 8. OR keeps a bit where either is 1: 0001 1111 = 31. XOR keeps a bit where exactly one is 1: 0001 0111 = 23.
+**10. A** — *Bitwise AND, OR and XOR.* 25 = 0001 1001 and 14 = 0000 1110. AND keeps a bit only where both have 1: 0000 1000 = 8. OR keeps a bit where either has 1: 0001 1111 = 31. XOR keeps a bit where exactly one has 1: 0001 0111 = 23.
 
-Final answer: a & b = 8, a | b = 31, a ^ b = 23. A correct answer shows both binary strings and the bit-by-bit result for each operator. Treating `&` and `|` as logical (giving 1 and 1) is wrong.
+8, 23, 31 swaps the OR and XOR results; 8, 29, 21 comes from writing 14 as 0000 1100; 1, 1, 0 treats the three as the logical operators &&, || and !=.
 
-**11.** *Operator categories.* `%` is arithmetic (remainder); `>=` is relational; `&&` is logical; `<<` is bitwise (left shift); `+=` is assignment; `sizeof` is misc. For the expression, `%` outranks `>=`: 9 % 4 = 1, and 1 >= 1 is true, so the value is 1.
+**11. D** — *Operator categories.* `%` gives a remainder, so arithmetic; `>=` compares two values, so relational; `&&` combines truth values, so logical; `<<` shifts bits, so bitwise; `+=` stores into its left operand, so assignment; `sizeof` fits none of the five and sits with the misc operators.
 
-A correct answer names all six categories correctly and gives 1 (also accepted: true). Calling `<<` arithmetic or `sizeof` a function is wrong; the value 0 comes from grouping as 9 % (4 >= 1) = 9 % 1 = 0, which ignores precedence.
+Each wrong option gets exactly one of them wrong: `>=` called logical, `&&` called bitwise, or `<<` called arithmetic because shifting left doubles a number.
 
-**12.** *Declaration versus definition.* A declaration tells the compiler a name and its type. A definition does that and also reserves the storage: bytes are set aside for the variable. `int total;` sets aside an int's worth of memory, so it defines and, in doing so, also declares. `extern int total;` says the variable exists and is an int but that its storage is reserved elsewhere, so it declares without defining.
+**12. C** — *Declaration versus definition.* A declaration tells the compiler a name and its type. A definition does that and also reserves the storage, which is why every definition is a declaration but not every declaration is a definition. `int total;` sets aside an int's worth of memory; `extern int total;` says the storage is reserved elsewhere.
 
-A correct answer says every definition is also a declaration, that the difference is reserving storage (memory), and that `extern` marks a declaration that does not reserve any. Saying the difference is initialisation is wrong: `int total;` defines without initialising.
+Both lines give the type, so that is not the difference; neither line initialises anything; and `extern` is the line that concerns other files, not the definition.

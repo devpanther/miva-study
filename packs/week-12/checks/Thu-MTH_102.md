@@ -1,7 +1,7 @@
 # Thursday — MTH_102 nightly check
 
 *Computation pass on Week 12: evaluating her seven worked examples and close variants of them.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A body has velocity v(t) = 3t² − 12 m/s. Find its net displacement over the first 3 seconds.
 A. 9 m
@@ -51,13 +51,29 @@ B. The body did not move during [0, 4]
 C. The total distance travelled was zero
 D. The body finished where it started
 
-**9. (show your working)** A resource is consumed at 40e^(0.02t) thousand tonnes per year, t years after 2010, with C(0) = 0. Find the model C(t) for the total consumed, then the year in which a reserve of 1000 thousand tonnes runs out. Show your working.
+**9.** A resource is consumed at 40e^(0.02t) thousand tonnes per year, t years after 2010, with C(0) = 0. In which year is a reserve of 1000 thousand tonnes exhausted?
+A. 2213 (t ≈ 203 years)
+B. 2065 (t ≈ 54.9 years)
+C. 2045 (t ≈ 34.7 years)
+D. 2030 (t ≈ 20.3 years)
 
-**10. (show your working)** The demand function is D(Q) = 250 − 5Q and the supply function is S(Q) = 100 + Q². Find the equilibrium quantity and price, then compute the producer surplus. Show your working.
+**10.** The demand function is D(Q) = 250 − 5Q and the supply function is S(Q) = 100 + Q². Find the producer surplus at equilibrium.
+A. 2000/3 ≈ 666.7
+B. 250
+C. 1000
+D. 2750/3 ≈ 916.7
 
-**11. (show your working)** A body has velocity v(t) = 3t² − 6t m/s and initial displacement x(0) = 5 m. Find (a) the displacement function x(t), (b) x(2), and (c) the displacement between t = 1 and t = 3. Show your working.
+**11.** A body has velocity v(t) = 3t² − 6t m/s and initial displacement x(0) = 5 m. Find x(t) and the displacement between t = 1 and t = 3.
+A. x(t) = t³ − 3t² + 5, displacement 5 m
+B. x(t) = t³ − 3t², displacement 2 m
+C. x(t) = t³ − 3t² + 5, displacement 2 m
+D. x(t) = t³ − 3t² + 5, displacement 8 m
 
-**12. (show your working)** CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ. Explain why D(Q) − P₀ is a gain to consumers, why P₀ − S(Q) is a gain to producers, and why both integrals stop at Q₀.
+**12.** In CS = ∫₀^Q₀[D(Q) − P₀]dQ and PS = ∫₀^Q₀[P₀ − S(Q)]dQ, why do both integrals stop at Q₀?
+A. Beyond Q₀ the demand and supply curves cross, so the two integrands would cancel
+B. Only Q₀ units are traded: past it no consumer would buy and no producer would sell at P₀
+C. Q₀ is where D(Q) reaches zero, so there is nothing further to add
+D. The integrals converge up to Q₀ and diverge beyond it
 
 ---
 
@@ -95,18 +111,18 @@ Q₀ = −20 takes the negative root; P₀ = 200 is D(0), the price at zero quan
 
 The other three options confuse net displacement with motion: v need not be zero, the body can move, and the distance travelled (8 m in the example) is not zero; only the signed sum of the backward and forward parts is.
 
-**9.** *Exhaustion time from an exponential consumption model.* C(t) = ∫40e^(0.02t)dt = (40/0.02)e^(0.02t) + c = 2000e^(0.02t) + c, and C(0) = 0 gives 0 = 2000 + c, so c = −2000 and C(t) = 2000e^(0.02t) − 2000. Set C(t) = 1000: 2000e^(0.02t) = 3000, so e^(0.02t) = 1.5. Take natural logs: 0.02t = ln 1.5 = 0.4055, so t = 0.4055/0.02 = 20.27 years. Then 2010 + 20.27 gives the year 2030.
+**9. D** — *Exhaustion time from an exponential consumption model.* C(t) = ∫40e^(0.02t)dt = (40/0.02)e^(0.02t) + c = 2000e^(0.02t) + c, and C(0) = 0 gives c = −2000. Set 2000e^(0.02t) − 2000 = 1000, so e^(0.02t) = 1.5 and 0.02t = ln 1.5 = 0.4055, giving t = 20.27 years, that is the year 2030.
 
-Final answer: C(t) = 2000e^(0.02t) − 2000, t ≈ 20.3 years, exhausted in 2030 (also accepted: t = 20.27, or 'about 20 years, in 2030'). The working must show the division by 0.02, the use of C(0) = 0, the isolation of the exponential and the log step. Dividing ln 1.5 by 0.002 gives 203 years and is wrong; solving 2000e^(0.02t) = 1000 (forgetting the −2000) gives a negative time and is wrong.
+2213 divides ln 1.5 by 0.002; 2065 solves e^(0.02t) = 3 by dividing 3000 by 1000 instead of 2000; 2045 solves e^(0.02t) = 2, taking the reserve as the coefficient 2000.
 
-**10.** *Producer surplus after finding equilibrium.* Equilibrium: 250 − 5Q = 100 + Q², so Q² + 5Q − 150 = 0, (Q + 15)(Q − 10) = 0; discard Q = −15, so Q₀ = 10 and P₀ = D(10) = 250 − 50 = 200 (check: S(10) = 100 + 100 = 200). Producer surplus: PS = ∫₀^Q₀[P₀ − S(Q)]dQ = ∫₀¹⁰(200 − 100 − Q²)dQ = ∫₀¹⁰(100 − Q²)dQ = [100Q − Q³/3]₀¹⁰ = 1000 − 1000/3 = 2000/3 ≈ 666.67.
+**10. A** — *Producer surplus after finding equilibrium.* Equilibrium: 250 − 5Q = 100 + Q² gives Q² + 5Q − 150 = (Q + 15)(Q − 10) = 0, so Q₀ = 10 after discarding Q = −15, and P₀ = 250 − 50 = 200 (check S(10) = 200). Then PS = ∫₀¹⁰[P₀ − S(Q)]dQ = ∫₀¹⁰(100 − Q²)dQ = [100Q − Q³/3]₀¹⁰ = 1000 − 1000/3 = 2000/3.
 
-Final answer: Q₀ = 10, P₀ = 200, PS = 2000/3 ≈ 666.7 (also accepted: 666.67 or 667). The working must show the quadratic, the rejection of the negative root, P₀ from either function, and the integrand P₀ − S(Q) from 0 to Q₀. ∫₀¹⁰(250 − 5Q − 200)dQ = 250 is the consumer surplus, not the producer surplus; 1000 alone forgets the −Q³/3 term.
+250 is the consumer surplus ∫₀¹⁰[D(Q) − P₀]dQ; 1000 drops the −Q³/3 term; 2750/3 integrates D(Q) − S(Q) instead of P₀ − S(Q).
 
-**11.** *Position function, position at a time and change in position.* (a) x(t) = ∫(3t² − 6t)dt = t³ − 3t² + C, and x(0) = C = 5, so x(t) = t³ − 3t² + 5. (b) x(2) = 8 − 12 + 5 = 1 m. (c) Displacement from t = 1 to t = 3 is x(3) − x(1) = (27 − 27 + 5) − (1 − 3 + 5) = 5 − 3 = 2 m, or equivalently ∫₁³(3t² − 6t)dt = [t³ − 3t²]₁³ = 0 − (−2) = 2 m; the constant 5 cancels.
+**11. C** — *Position function from velocity and displacement over an interval.* x(t) = ∫(3t² − 6t)dt = t³ − 3t² + C, and x(0) = C = 5, so x(t) = t³ − 3t² + 5. The displacement from t = 1 to t = 3 is x(3) − x(1) = 5 − 3 = 2 m, the same as ∫₁³(3t² − 6t)dt = [t³ − 3t²]₁³ = 0 − (−2) = 2 m, since the constant cancels.
 
-Final answer: x(t) = t³ − 3t² + 5, x(2) = 1 m, displacement 2 m. The working must find C from x(0) = 5 and either subtract positions or evaluate the definite integral without the constant. x(3) = 5 alone is a position, not a displacement; v(2) = 0 is not x(2).
+The second option never uses x(0) = 5 to fix C; 5 m reports the position x(3) rather than a change; 8 m adds x(3) and x(1) instead of subtracting.
 
-**12.** *Meaning of the surplus integrands and their limits.* D(Q) is the price a consumer would have been willing to pay for the Q-th unit, but every unit sells at the single market price P₀, so D(Q) − P₀ is the saving on that unit; adding those savings over all units sold, from 0 to Q₀, gives the consumer surplus. S(Q) is the lowest price at which a producer would supply the Q-th unit, but it is sold at P₀, so P₀ − S(Q) is the extra received on that unit; summing from 0 to Q₀ gives the producer surplus. Both stop at Q₀ because only Q₀ units are actually traded: beyond it D(Q) < P₀ (no consumer would buy at P₀) and S(Q) > P₀ (no producer would sell at P₀), so there are no further units and no further surplus.
+**12. B** — *Why the surplus integrals stop at the equilibrium quantity.* D(Q) is what a consumer would have paid for the Q-th unit and S(Q) is the least a producer would accept for it, while every unit actually changes hands at the single price P₀. So D(Q) − P₀ is the saving on a unit and P₀ − S(Q) is the extra received on it. Only Q₀ units are traded, because beyond Q₀ demand has fallen below P₀ and supply costs more than P₀, so there is no further surplus to add.
 
-A correct answer identifies D(Q) as willingness to pay, S(Q) as the minimum acceptable price, P₀ as the common price actually paid, and Q₀ as the quantity actually traded.
+The curves cross at Q₀ itself, not beyond it; D(Q₀) = P₀, not 0; and these are ordinary definite integrals, so convergence is not the issue.

@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Problems-only session on Week 12 transformers.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A 1200 W appliance designed for a 230 V supply is to be run from a 115 V line through an ideal transformer. What turns ratio N₂/N₁ is needed, and what kind of transformer is it?
 A. N₂/N₁ = 1/2, step-down
@@ -51,13 +51,29 @@ B. Double the current, same power
 C. Same current, double the power
 D. Half the current, half the power
 
-**9. (show your working)** A 720 W appliance rated for 240 V is run from a 120 V line through an ideal transformer. Calculate (a) the turns ratio N₂/N₁ and whether it is step-up or step-down, (b) the current from the line and the current in the appliance, (c) the appliance's resistance, checked a second way. Show your working.
+**9.** A 720 W appliance rated for 240 V is run from a 120 V line through an ideal transformer. Calculate the current drawn from the line and the appliance's own resistance.
+A. 3.0 A, 80 Ω
+B. 6.0 A, 40 Ω
+C. 6.0 A, 80 Ω
+D. 6.0 A, 20 Ω
 
-**10. (show your working)** A 1200 W appliance rated for 110 V is run from a 220 V outlet through an ideal transformer. Calculate (a) the turns ratio and whether it is step-up or step-down, (b) the current from the outlet, (c) the resistance the appliance appears to have to the outlet, (d) its own resistance, checked a second way. Show your working.
+**10.** A 1200 W appliance rated for 110 V is run from a 220 V outlet through an ideal transformer. Calculate the resistance the appliance appears to have to the outlet, and its own resistance.
+A. 10 Ω apparent, 40 Ω own
+B. 40 Ω apparent, 20 Ω own
+C. 40 Ω apparent, 10 Ω own
+D. 40 Ω apparent, 161 Ω own
 
-**11. (show your working)** An ideal transformer has N₂/N₁ = 4, a 30 V rms supply on the primary and a 60 Ω resistor across the secondary. Using only V₂/V₁ = N₂/N₁, I₁V₁ = I₂V₂ and V₁/I₁ = R/(N₂/N₁)², calculate the secondary voltage and current, the primary current, and the resistance the supply sees. Show your working.
+**11.** An ideal transformer has N₂/N₁ = 4, a 30 V rms supply on the primary and a 60 Ω resistor across the secondary. Calculate the primary current and the resistance the supply sees.
+A. 2.0 A, 3.75 Ω
+B. 8.0 A, 3.75 Ω
+C. 0.50 A, 3.75 Ω
+D. 8.0 A, 15 Ω
 
-**12. (show your working)** A 500 W appliance designed for 250 V is run from a 125 V line through an ideal transformer. A student writes: 'I₁ = 500/125 = 4.0 A, so V₁/I₁ = 125/4.0 = 31.25 Ω. N₂/N₁ = 2, so the appliance's resistance is R = 31.25 × 2 = 62.5 Ω.' Diagnose the error, give the correct resistance, and check it by a second route.
+**12.** A 500 W appliance rated for 250 V runs from a 125 V line through an ideal transformer. A student writes: I₁ = 500/125 = 4.0 A, so V₁/I₁ = 125/4.0 = 31.25 Ω; N₂/N₁ = 2, so the appliance's resistance is 31.25 × 2 = 62.5 Ω. What is the appliance's resistance?
+A. 62.5 Ω, and the working is right
+B. 31.25 Ω, which is what the line sees
+C. 15.6 Ω, the ratio being 1/2 rather than 2
+D. 125 Ω, the turns ratio having to be squared
 
 ---
 
@@ -95,18 +111,18 @@ D. Half the current, half the power
 
 'Double the current' would give four times the power out of nothing; 'same current, double the power' likewise creates energy; 'half the power' would mean half the input vanished inside an ideal device, which by definition has no losses.
 
-**9.** *Full step-up appliance calculation.* (a) V₁ = 120 V (line, primary), V₂ = 240 V (appliance, secondary): N₂/N₁ = V₂/V₁ = 240/120 = 2; N₂ > N₁ so step-up. (b) P_av = V₁I₁ gives I₁ = 720/120 = 6.0 A from the line; I₂ = P_av/V₂ = 720/240 = 3.0 A in the appliance. Check I₁V₁ = 720 W = I₂V₂. (c) V₁/I₁ = 120/6.0 = 20 Ω is what the line sees; R = (V₁/I₁)(N₂/N₁)² = 20 × 2² = 80 Ω. Second route: R = V₂/I₂ = 240/3.0 = 80 Ω.
+**9. C** — *Line current and load resistance in a step-up transformer.* The 120 V line feeds the primary, so P = V₁I₁ gives I₁ = 720/120 = 6.0 A. The line sees V₁/I₁ = 20 Ω, and R = (V₁/I₁)(N₂/N₁)² with N₂/N₁ = 240/120 = 2, so R = 20 × 4 = 80 Ω. The secondary side agrees: I₂ = 720/240 = 3.0 A and R = 240/3.0 = 80 Ω.
 
-Final answer: 2, step-up; 6.0 A and 3.0 A; 80 Ω (accept 79 to 81). A correct answer identifies the 120 V line as the primary, gives both currents with the line current labelled, and squares the ratio in (c) with a check. 40 Ω is 20 × 2 with the ratio unsquared; 20 Ω is the apparent resistance, not the appliance's.
+3.0 A is the current in the appliance, not in the line; 40 Ω leaves the turns ratio unsquared; 20 Ω is the resistance the line sees, not the appliance's own.
 
-**10.** *Apparent versus actual resistance in a step-down.* (a) V₁ = 220 V (outlet), V₂ = 110 V (appliance): N₂/N₁ = 110/220 = 1/2; N₂ < N₁ so step-down. (b) I₁ = P_av/V₁ = 1200/220 = 5.45 A. (c) Apparent resistance V₁/I₁ = 220/5.45 = 40.3 Ω (exactly 220²/1200 = 40.3 Ω). (d) Own resistance R = (V₁/I₁)(N₂/N₁)² = 40.3 × (1/2)² = 40.3/4 = 10.1 Ω. Second route: I₂ = 1200/110 = 10.9 A, R = V₂/I₂ = 110/10.9 = 10.1 Ω, or V₂²/P = 12 100/1200 = 10.1 Ω.
+**10. C** — *Apparent versus actual resistance in a step-down.* I₁ = P/V₁ = 1200/220 = 5.45 A, so the outlet sees V₁/I₁ = 220/5.45 = 40 Ω. The turns ratio is N₂/N₁ = 110/220 = 1/2, and R = (V₁/I₁)(N₂/N₁)² = 40 × 1/4 = 10 Ω. Check from the other side: I₂ = 1200/110 = 10.9 A and R = 110/10.9 = 10 Ω.
 
-Final answer: 1/2, step-down; 5.5 A (accept 5.4 to 5.5); 40 Ω (accept 40 to 41); 10 Ω (accept 10.0 to 10.2). A correct answer distinguishes the apparent 40 Ω from the actual 10 Ω and gets the actual value two ways. 20 Ω multiplies by 1/2 without squaring; 161 Ω divides by (1/2)² instead of multiplying.
+20 Ω uses the ratio without squaring it; 161 Ω divides by (1/2)² instead of multiplying; and swapping the two confuses what the outlet sees with what the appliance is.
 
-**11.** *Loaded step-up transformer from the supply side.* V₂ = V₁(N₂/N₁) = 30 × 4 = 120 V. I₂ = V₂/R = 120/60 = 2.0 A. From I₁V₁ = I₂V₂: I₁ = (2.0 × 120)/30 = 8.0 A. Resistance seen by the supply: V₁/I₁ = 30/8.0 = 3.75 Ω, and the formula agrees: R/(N₂/N₁)² = 60/16 = 3.75 Ω. Power check: 30 × 8.0 = 240 W = 120 × 2.0.
+**11. B** — *Loaded step-up transformer from the supply side.* V₂ = V₁(N₂/N₁) = 30 × 4 = 120 V, so I₂ = V₂/R = 120/60 = 2.0 A. Power is conserved, I₁V₁ = I₂V₂, giving I₁ = (2.0)(120)/30 = 8.0 A. The supply therefore sees V₁/I₁ = 30/8.0 = 3.75 Ω, which agrees with R/(N₂/N₁)² = 60/16 = 3.75 Ω.
 
-Final answer: 120 V, 2.0 A, 8.0 A, 3.75 Ω (accept 3.7 to 3.8). A correct answer shows the 3.75 Ω from both V₁/I₁ and the formula. 0.50 A for I₁ applies the turns ratio to the current the same way as to the voltage; 15 Ω for the seen resistance divides by 4 instead of 16.
+2.0 A takes the primary current to equal the secondary current; 0.50 A applies the turns ratio to the current the same way as to the voltage; 15 Ω divides R by 4 rather than by 4².
 
-**12.** *Diagnosing an unsquared turns ratio.* The current, the apparent resistance 31.25 Ω and the ratio 2 are all correct. The error is in the last line: the resistance transformation is V₁/I₁ = R/(N₂/N₁)², so the turns ratio must be squared, not used to the first power. Correct: R = (V₁/I₁)(N₂/N₁)² = 31.25 × 2² = 31.25 × 4 = 125 Ω. Second route: I₂ = 500/250 = 2.0 A, so R = V₂/I₂ = 250/2.0 = 125 Ω, or R = V₂²/P = 250²/500 = 125 Ω.
+**12. D** — *Diagnosing an unsquared turns ratio.* The current, the apparent resistance 31.25 Ω and the ratio 2 are all correct; the error is in the last line, because V₁/I₁ = R/(N₂/N₁)² means R = (V₁/I₁)(N₂/N₁)² = 31.25 × 2² = 125 Ω. The secondary side confirms it: I₂ = 500/250 = 2.0 A and R = V₂/I₂ = 250/2.0 = 125 Ω, or V₂²/P = 125 Ω.
 
-A correct answer names the missing square as the error, gives 125 Ω (accept 124 to 126), and confirms it from the secondary side. Saying the ratio should have been 1/2, or that I₁ is wrong, misdiagnoses a correct step.
+62.5 Ω keeps the unsquared ratio; 31.25 Ω is what the line sees, not the appliance; and 1/2 inverts the ratio, since the appliance sits on the higher-voltage side.

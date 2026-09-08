@@ -1,7 +1,7 @@
 # Monday — MTH_102 nightly check
 
 *Week 6 higher-order derivatives, exactly as the deck builds them.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** f(x) = x⁵ − 3x³ + 7x − 2. Find f″(x).
 A. 5x⁴ − 9x² + 7
@@ -51,13 +51,29 @@ B. [f(x)]⁴, the fourth power of f
 C. (f‴(x))′, the derivative of the third derivative
 D. 4·f′(x)
 
-**9. (show your working)** y = ln x. Find y′, y″ and y‴, writing each answer both as a fraction and as a negative power of x. Show your working.
+**9.** y = ln x. Find y′, y″ and y‴.
+A. 1/x, 1/x², 1/x³
+B. 1/x, −1/x², 6/x⁴
+C. 1/x, −1/x², 2/x³
+D. 1/x, −1/x², −2/x³
 
-**10. (show your working)** A particle's position at time t is s(t) = t³ − 6t² + 9t. Find its velocity and its acceleration at t = 4, and state which derivative of s each one is. Show your working.
+**10.** A particle's position at time t is s(t) = t³ − 6t² + 9t. Find its velocity and its acceleration at t = 4.
+A. v = 4, a = 9
+B. v = 9, a = 12
+C. v = 12, a = 9
+D. v = 9, a = 24
 
-**11. (show your working)** y = 2 sin x − 3 cos x. Find y″ and show that y″ = −y. Show your working.
+**11.** y = 2 sin x − 3 cos x. Find y″ and say how it relates to y.
+A. y″ = 2 sin x − 3 cos x, which equals y
+B. y″ = −2 cos x − 3 sin x, which equals −y′
+C. y″ = 2 cos x + 3 sin x, which equals y′
+D. y″ = −2 sin x + 3 cos x, which equals −y
 
-**12. (show your working)** Explain what a higher-order derivative is and why finding one needs no new rule. Using y = x^(3/2), say which expression you differentiate to get y″, and why the coefficients multiply while the index falls by 1 each time.
+**12.** For y = x^(3/2), which expression do you differentiate to obtain y″, and what is y″?
+A. Differentiate y′ = (3/2)x^(1/2), giving y″ = (3/4)x^(−1/2)
+B. Differentiate y = x^(3/2) a second time, giving y″ = (3/2)x^(1/2)
+C. Differentiate y′ = (3/2)x^(1/2), giving y″ = (3/2)x^(−1/2)
+D. Differentiate y′ = (3/2)x^(1/2), giving y″ = (1/2)x^(−1/2)
 
 ---
 
@@ -95,18 +111,18 @@ e^(2x) treats e^(2x) like eˣ and ignores the chain factor; 2e^(2x) collects the
 
 f(4) with no superscript brackets would be the value at x = 4; [f(x)]⁴ reads the counter as a power, which is exactly what the brackets are there to prevent; 4·f′(x) invents a constant multiple.
 
-**9.** *Successive derivatives of ln x.* From d(ln x)/dx = 1/x: y′ = 1/x = x⁻¹. Differentiate the power: y″ = (−1)x⁻² = −x⁻² = −1/x². Differentiate again: y‴ = −(−2)x⁻³ = 2x⁻³ = 2/x³.
+**9. C** — *Successive derivatives of ln x.* Start from d(ln x)/dx = 1/x, which is x⁻¹. The power rule then gives y″ = (−1)x⁻² = −1/x², and differentiating again gives y‴ = (−1)(−2)x⁻³ = 2x⁻³ = 2/x³. The signs run plus, minus, plus and the coefficients run 1, 1, 2.
 
-Final answer: y′ = 1/x (x⁻¹), y″ = −1/x² (−x⁻²), y‴ = 2/x³ (2x⁻³). A correct answer shows each derivative obtained from the previous one by the power rule, with the sign going +, −, + and the coefficient 1, 1, 2. Writing y‴ = −2/x³ (carrying the minus through) or 1/x³ (dropping the factor 2) is wrong.
+−2/x³ carries the minus through instead of letting the two negatives cancel, 1/x² and 1/x³ never pick up a sign at all, and 6/x⁴ is the fourth derivative's magnitude rather than the third.
 
-**10.** *Second derivative as acceleration.* Velocity is the first derivative: v(t) = s′(t) = 3t² − 12t + 9, so v(4) = 48 − 48 + 9 = 9. Acceleration is the second derivative, the derivative of velocity: a(t) = s″(t) = 6t − 12, so a(4) = 24 − 12 = 12.
+**10. B** — *Second derivative as acceleration.* Velocity is the first derivative: v(t) = 3t² − 12t + 9, so v(4) = 48 − 48 + 9 = 9. Acceleration is the derivative of velocity, the second derivative of s: a(t) = 6t − 12, so a(4) = 24 − 12 = 12.
 
-Final answer: velocity 9 (first derivative of s), acceleration 12 (second derivative of s). A correct answer shows both derivatives, substitutes t = 4, and identifies velocity as ds/dt and acceleration as d²s/dt². Substituting t = 4 into s itself (giving 4) is the position, not the velocity.
+v = 4 substitutes t = 4 into s itself and gives the position, not the velocity; swapping 12 and 9 mixes up which derivative is which; and a = 24 forgets the −12 in 6t − 12.
 
-**11.** *Sign cycle of sin and cos under repeated differentiation.* y′ = 2 cos x − 3(−sin x) = 2 cos x + 3 sin x. Differentiate again: y″ = 2(−sin x) + 3 cos x = −2 sin x + 3 cos x. Compare with y: −y = −(2 sin x − 3 cos x) = −2 sin x + 3 cos x, which is exactly y″.
+**11. D** — *Sign cycle of sin and cos under repeated differentiation.* First, y′ = 2 cos x − 3(−sin x) = 2 cos x + 3 sin x, the minus appearing because cos differentiates to −sin. Differentiating again, y″ = 2(−sin x) + 3 cos x = −2 sin x + 3 cos x. Comparing, −y = −(2 sin x − 3 cos x) = −2 sin x + 3 cos x, which is exactly y″, so y″ = −y.
 
-Final answer: y″ = −2 sin x + 3 cos x = −y. A correct answer has the minus appear when cos is differentiated (twice: once in y′, once in y″) and states the comparison with −y explicitly. y″ = 2 sin x − 3 cos x (no sign change) or y′ = 2 cos x − 3 sin x (minus on cos lost) is wrong.
+The option with no sign change never applies d(cos)/dx = −sin, and the other two quote y′ rather than y″.
 
-**12.** *Higher-order derivatives as repeated differentiation.* A higher-order derivative is the derivative of a derivative: y″ is the derivative of y′, y‴ the derivative of y″, and so on. No new rule is needed because at each order you simply apply the ordinary rules (power, chain, product, quotient) to whatever expression you have just written down. For y = x^(3/2), y′ = (3/2)x^(1/2), and y″ is found by differentiating that expression, not the original: the power rule multiplies by the current index 1/2 and lowers it by 1, giving (3/2)(1/2)x^(−1/2) = (3/4)x^(−1/2). The coefficient multiplies because each application brings down the current index; the index falls by 1 because that is what the power rule does every time, fractions and negatives included.
+**12. A** — *Higher-order derivatives as repeated differentiation.* A higher-order derivative is just the derivative of the previous derivative, so no new rule is needed: you apply the ordinary rules to whatever you last wrote down. Here y′ = (3/2)x^(1/2), and y″ comes from differentiating that expression, not the original y: the power rule brings down the current index 1/2 and lowers it by 1, giving (3/2)(1/2)x^(−1/2) = (3/4)x^(−1/2).
 
-A correct answer says 'derivative of the previous derivative', names the rules as the ordinary ones reused, differentiates y′ (not y) to get y″, and gives (3/4)x^(−1/2).
+Differentiating y again returns y′, and the other two forget to multiply the coefficients or drop the 3/2 entirely.

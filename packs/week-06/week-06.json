@@ -338,28 +338,56 @@
           "why": "From the fourth order on, prime marks are replaced by a bracketed superscript that counts how many times f has been differentiated: f⁽⁴⁾(x) = (f‴(x))′. In Leibniz form it is d⁴y/dx⁴.\n\nf(4) with no superscript brackets would be the value at x = 4; [f(x)]⁴ reads the counter as a power, which is exactly what the brackets are there to prevent; 4·f′(x) invents a constant multiple."
         },
         {
-          "type": "short",
-          "q": "y = ln x. Find y′, y″ and y‴, writing each answer both as a fraction and as a negative power of x. Show your working.",
+          "type": "mcq",
+          "q": "y = ln x. Find y′, y″ and y‴.",
+          "options": [
+            "1/x, 1/x², 1/x³",
+            "1/x, −1/x², 6/x⁴",
+            "1/x, −1/x², 2/x³",
+            "1/x, −1/x², −2/x³"
+          ],
+          "answerIndex": 2,
           "concept": "Successive derivatives of ln x",
-          "why": "From d(ln x)/dx = 1/x: y′ = 1/x = x⁻¹. Differentiate the power: y″ = (−1)x⁻² = −x⁻² = −1/x². Differentiate again: y‴ = −(−2)x⁻³ = 2x⁻³ = 2/x³.\n\nFinal answer: y′ = 1/x (x⁻¹), y″ = −1/x² (−x⁻²), y‴ = 2/x³ (2x⁻³). A correct answer shows each derivative obtained from the previous one by the power rule, with the sign going +, −, + and the coefficient 1, 1, 2. Writing y‴ = −2/x³ (carrying the minus through) or 1/x³ (dropping the factor 2) is wrong."
+          "why": "Start from d(ln x)/dx = 1/x, which is x⁻¹. The power rule then gives y″ = (−1)x⁻² = −1/x², and differentiating again gives y‴ = (−1)(−2)x⁻³ = 2x⁻³ = 2/x³. The signs run plus, minus, plus and the coefficients run 1, 1, 2.\n\n−2/x³ carries the minus through instead of letting the two negatives cancel, 1/x² and 1/x³ never pick up a sign at all, and 6/x⁴ is the fourth derivative's magnitude rather than the third."
         },
         {
-          "type": "short",
-          "q": "A particle's position at time t is s(t) = t³ − 6t² + 9t. Find its velocity and its acceleration at t = 4, and state which derivative of s each one is. Show your working.",
+          "type": "mcq",
+          "q": "A particle's position at time t is s(t) = t³ − 6t² + 9t. Find its velocity and its acceleration at t = 4.",
+          "options": [
+            "v = 4, a = 9",
+            "v = 9, a = 12",
+            "v = 12, a = 9",
+            "v = 9, a = 24"
+          ],
+          "answerIndex": 1,
           "concept": "Second derivative as acceleration",
-          "why": "Velocity is the first derivative: v(t) = s′(t) = 3t² − 12t + 9, so v(4) = 48 − 48 + 9 = 9. Acceleration is the second derivative, the derivative of velocity: a(t) = s″(t) = 6t − 12, so a(4) = 24 − 12 = 12.\n\nFinal answer: velocity 9 (first derivative of s), acceleration 12 (second derivative of s). A correct answer shows both derivatives, substitutes t = 4, and identifies velocity as ds/dt and acceleration as d²s/dt². Substituting t = 4 into s itself (giving 4) is the position, not the velocity."
+          "why": "Velocity is the first derivative: v(t) = 3t² − 12t + 9, so v(4) = 48 − 48 + 9 = 9. Acceleration is the derivative of velocity, the second derivative of s: a(t) = 6t − 12, so a(4) = 24 − 12 = 12.\n\nv = 4 substitutes t = 4 into s itself and gives the position, not the velocity; swapping 12 and 9 mixes up which derivative is which; and a = 24 forgets the −12 in 6t − 12."
         },
         {
-          "type": "short",
-          "q": "y = 2 sin x − 3 cos x. Find y″ and show that y″ = −y. Show your working.",
+          "type": "mcq",
+          "q": "y = 2 sin x − 3 cos x. Find y″ and say how it relates to y.",
+          "options": [
+            "y″ = 2 sin x − 3 cos x, which equals y",
+            "y″ = −2 cos x − 3 sin x, which equals −y′",
+            "y″ = 2 cos x + 3 sin x, which equals y′",
+            "y″ = −2 sin x + 3 cos x, which equals −y"
+          ],
+          "answerIndex": 3,
           "concept": "Sign cycle of sin and cos under repeated differentiation",
-          "why": "y′ = 2 cos x − 3(−sin x) = 2 cos x + 3 sin x. Differentiate again: y″ = 2(−sin x) + 3 cos x = −2 sin x + 3 cos x. Compare with y: −y = −(2 sin x − 3 cos x) = −2 sin x + 3 cos x, which is exactly y″.\n\nFinal answer: y″ = −2 sin x + 3 cos x = −y. A correct answer has the minus appear when cos is differentiated (twice: once in y′, once in y″) and states the comparison with −y explicitly. y″ = 2 sin x − 3 cos x (no sign change) or y′ = 2 cos x − 3 sin x (minus on cos lost) is wrong."
+          "why": "First, y′ = 2 cos x − 3(−sin x) = 2 cos x + 3 sin x, the minus appearing because cos differentiates to −sin. Differentiating again, y″ = 2(−sin x) + 3 cos x = −2 sin x + 3 cos x. Comparing, −y = −(2 sin x − 3 cos x) = −2 sin x + 3 cos x, which is exactly y″, so y″ = −y.\n\nThe option with no sign change never applies d(cos)/dx = −sin, and the other two quote y′ rather than y″."
         },
         {
-          "type": "short",
-          "q": "Explain what a higher-order derivative is and why finding one needs no new rule. Using y = x^(3/2), say which expression you differentiate to get y″, and why the coefficients multiply while the index falls by 1 each time.",
+          "type": "mcq",
+          "q": "For y = x^(3/2), which expression do you differentiate to obtain y″, and what is y″?",
+          "options": [
+            "Differentiate y′ = (3/2)x^(1/2), giving y″ = (3/4)x^(−1/2)",
+            "Differentiate y = x^(3/2) a second time, giving y″ = (3/2)x^(1/2)",
+            "Differentiate y′ = (3/2)x^(1/2), giving y″ = (3/2)x^(−1/2)",
+            "Differentiate y′ = (3/2)x^(1/2), giving y″ = (1/2)x^(−1/2)"
+          ],
+          "answerIndex": 0,
           "concept": "Higher-order derivatives as repeated differentiation",
-          "why": "A higher-order derivative is the derivative of a derivative: y″ is the derivative of y′, y‴ the derivative of y″, and so on. No new rule is needed because at each order you simply apply the ordinary rules (power, chain, product, quotient) to whatever expression you have just written down. For y = x^(3/2), y′ = (3/2)x^(1/2), and y″ is found by differentiating that expression, not the original: the power rule multiplies by the current index 1/2 and lowers it by 1, giving (3/2)(1/2)x^(−1/2) = (3/4)x^(−1/2). The coefficient multiplies because each application brings down the current index; the index falls by 1 because that is what the power rule does every time, fractions and negatives included.\n\nA correct answer says 'derivative of the previous derivative', names the rules as the ordinary ones reused, differentiates y′ (not y) to get y″, and gives (3/4)x^(−1/2)."
+          "why": "A higher-order derivative is just the derivative of the previous derivative, so no new rule is needed: you apply the ordinary rules to whatever you last wrote down. Here y′ = (3/2)x^(1/2), and y″ comes from differentiating that expression, not the original y: the power rule brings down the current index 1/2 and lowers it by 1, giving (3/2)(1/2)x^(−1/2) = (3/4)x^(−1/2).\n\nDifferentiating y again returns y′, and the other two forget to multiply the coefficients or drop the 3/2 entirely."
         }
       ]
     },
@@ -476,28 +504,56 @@
           "why": "AC ammeters and voltmeters are designed to read rms values, the equivalent DC value that would dissipate the same power in a resistor. A 230 V reading therefore implies a peak of 230 × 1.4142 = 325 V.\n\nThe peak is larger than any rms reading; the trough-to-crest swing is twice the peak and is never displayed; the average over a full cycle is zero, which is why meters cannot be built to read it."
         },
         {
-          "type": "short",
-          "q": "The mains supply is 230 V rms at 50 Hz. Calculate the peak voltage and the angular frequency, then write the equation for the instantaneous voltage in the form v = V_max sin ωt. Show your working.",
+          "type": "mcq",
+          "q": "A mains supply is 230 V rms at 50 Hz. Which equation gives the instantaneous voltage in volts, with t in seconds?",
+          "options": [
+            "v = 230 sin(314t)",
+            "v = 325 sin(50t)",
+            "v = 325 sin(314t)",
+            "v = 163 sin(314t)"
+          ],
+          "answerIndex": 2,
           "concept": "Writing the source equation from rms voltage and frequency",
-          "why": "V_max = V_rms/0.7071 = 230 × 1.4142 = 325 V (325.3 V). ω = 2πf = 2π × 50 = 314 rad/s (314.2). So v = 325 sin(314t) volts, with t in seconds and 314t in radians.\n\nA correct answer states V_max = 325 V (accept 324 to 326), ω = 314 rad/s (accept 314 to 315) and v = 325 sin(314t). Writing v = 230 sin(314t) uses the rms as the amplitude, and v = 325 sin(50t) uses f in place of ω; both are wrong."
+          "why": "The amplitude of v = V_max sin ωt is the peak value, V_max = V_rms√2 = 230 × 1.4142 = 325 V, and ω = 2πf = 2π(50) = 314 rad/s. So v = 325 sin(314t).\n\n230 sin(314t) uses the rms value as the amplitude; 325 sin(50t) puts the frequency where the angular frequency belongs; 163 sin(314t) multiplies by 0.7071 when it should divide."
         },
         {
-          "type": "short",
-          "q": "Starting from i = I_max sin ωt and the fact that the average of sin²ωt over a complete cycle is ½, show that I_rms = I_max/√2. Then calculate I_rms for I_max = 4.0 A. Show your working.",
+          "type": "mcq",
+          "q": "For i = I_max sin ωt the average of sin²ωt over a complete cycle is ½. Carrying out the three root-mean-square steps in the right order, what is I_rms in terms of I_max, and its value for I_max = 4.0 A?",
+          "options": [
+            "I_max²/2; 8.0 A²",
+            "0; 0 A",
+            "I_max/√2; 2.83 A",
+            "I_max√2; 5.66 A"
+          ],
+          "answerIndex": 2,
           "concept": "Derivation of the rms current",
-          "why": "Square: i² = I²_max sin²ωt. Average over a cycle: (i²)_av = I²_max × (sin²ωt)_av = ½I²_max. Root: I_rms = √(½I²_max) = I_max/√2 = 0.7071 I_max. For I_max = 4.0 A: I_rms = 4.0/1.4142 = 2.83 A (2.828 A).\n\nA correct answer shows the three steps in order (square, average, square root), arrives at I_max/√2, and gives 2.83 A (accept 2.8 to 2.9). Averaging before squaring gives zero and is wrong; leaving the answer as 8.0 A² (the mean square) is incomplete."
+          "why": "Square first: i² = I_max² sin²ωt. Take the mean over a cycle: (i²)_av = ½I_max². Then take the root: I_rms = √(½I_max²) = I_max/√2 = 0.7071 I_max, which for I_max = 4.0 A is 2.83 A.\n\nI_max²/2 stops at the mean square and still has units of A²; zero is what averaging before squaring gives; multiplying by √2 instead of dividing converts the wrong way."
         },
         {
-          "type": "short",
-          "q": "An AC ammeter reads 3.0 A for the current in a 40 Ω resistor. Calculate the average power dissipated, the peak current, and the maximum instantaneous power. State what steady DC current would heat the resistor at the same average rate. Show your working.",
+          "type": "mcq",
+          "q": "An AC ammeter reads 3.0 A for the current in a 40 Ω resistor. What are the average power dissipated, the peak current, and the maximum instantaneous power?",
+          "options": [
+            "360 W; 4.24 A; 720 W",
+            "720 W; 4.24 A; 1440 W",
+            "360 W; 2.12 A; 180 W",
+            "180 W; 4.24 A; 360 W"
+          ],
+          "answerIndex": 0,
           "concept": "Average power from an rms current",
-          "why": "The meter reads rms, so P_av = I²_rms R = (3.0)²(40) = 360 W. Peak current I_max = 3.0 × 1.4142 = 4.24 A. Maximum instantaneous power P_max = I²_max R = (4.24)²(40) = 720 W, exactly 2P_av. A steady DC current of 3.0 A would dissipate the same 360 W, which is what the rms value means.\n\nA correct answer states 360 W, 4.24 A (accept 4.2 to 4.3), 720 W and a DC current of 3.0 A. Using the peak current in P_av (720 W) or quoting 4.24 A as the equivalent DC current is wrong."
+          "why": "An AC ammeter reads rms, so P_av = I_rms²R = (3.0)²(40) = 360 W. The peak current is I_max = 3.0√2 = 4.24 A, and the maximum instantaneous power is I_max²R = (4.24)²(40) = 720 W, exactly twice the average, as it always is for a resistor.\n\n720 W as the average uses the peak current in P_av; 2.12 A multiplies by 0.7071 instead of dividing; 180 W puts a spurious ½ into P = I²R, which already averages correctly with rms values."
         },
         {
-          "type": "short",
-          "q": "Explain why the plain average of a sinusoidal current over a complete cycle gives no useful information, and how squaring the current fixes the problem. State the three operations in 'root mean square' in the order they are carried out.",
+          "type": "mcq",
+          "q": "Why does the plain average of a sinusoidal current over a complete cycle tell you nothing about its heating, and what do the three steps of 'root mean square' do, in order?",
+          "options": [
+            "The average is I_max/2, which is too small; the steps are root, then mean, then square",
+            "The average is zero because the current stops twice a cycle; the steps are mean, then square, then root",
+            "The average is I_max, which is too large; squaring corrects it, then the mean and root are taken",
+            "The average is zero because the two half-cycles cancel; square to remove the sign, take the mean, then take the root"
+          ],
+          "answerIndex": 3,
           "concept": "Why rms rather than the plain average",
-          "why": "A sinusoidal current is positive for one half-cycle and negative for the other, and the two halves are mirror images, so over a complete cycle they cancel and the average is zero. That would falsely suggest the current does no heating. Squaring removes the sign: i² = I²_max sin²ωt is never negative, so it has a genuine non-zero average, ½I²_max, and this mean square is also what fixes the heating because power goes as i². The operations, in order: square the instantaneous value, take the mean over a cycle, take the square root.\n\nA correct answer says the full-cycle mean is zero because positive and negative halves cancel, that squaring makes every value non-negative (and matches P = i²R), and lists square, mean, root in that order."
+          "why": "Over a full cycle the positive and negative half-cycles are mirror images, so they cancel and the mean is zero, which would wrongly suggest no heating at all. Squaring removes the sign, and it is also the right thing physically because power goes as i², so the mean square ½I_max² is genuine; the root then brings the answer back to amperes. Square, mean, root, in that order.\n\nThe current does not stop twice a cycle, it reverses; and the average is neither I_max/2 nor I_max but zero."
         }
       ]
     },
@@ -613,28 +669,56 @@
           "why": "In a CALL, `with` names what goes into the operation and `RETURNING` names the variable that receives what comes back. SquareRoot is given area and hands its result to side.\n\nSquareRoot, not area, is the function name; side is not an input; nothing in a CALL line prints or reads anything."
         },
         {
-          "type": "short",
-          "q": "Rewrite this using WHILE so that it prints the same total for any list of inputs ending in 0. Give the WHILE condition and explain why READ has to appear twice in your version.\n\n```\nSET t TO 0\nREPEAT\n    READ n\n    SET t TO t + n\nUNTIL n = 0\nPRINT t\n```",
+          "type": "mcq",
+          "q": "Rewrite this with WHILE so that it prints the same total for any list of inputs ending in 0. Which version does that?\n\n```\nSET t TO 0\nREPEAT\n    READ n\n    SET t TO t + n\nUNTIL n = 0\nPRINT t\n```",
+          "options": [
+            "WHILE n <> 0 with READ n then SET t TO t + n in the body, and no READ before the loop",
+            "READ n before the loop, WHILE n = 0 with SET t TO t + n then READ n in the body",
+            "READ n before the loop, WHILE n <> 0 with SET t TO t + n then READ n in the body",
+            "READ n before the loop, WHILE n <> 0 with READ n then SET t TO t + n in the body"
+          ],
+          "answerIndex": 2,
           "concept": "Converting REPEAT-UNTIL to WHILE",
-          "why": "Model answer:\n\n```\nSET t TO 0\nREAD n\nWHILE n <> 0\n    SET t TO t + n\n    READ n\nENDWHILE\nPRINT t\n```\n\nUNTIL n = 0 stops when the condition becomes true, so the WHILE must continue while it is false: WHILE n <> 0 (also accepted: n ≠ 0, NOT n = 0). A WHILE tests before the first pass, so there must be a value of n to test: one READ before the loop, and one at the foot of the body so the test sees each new value. For 5, 8, 3, 0 both versions print 16. Not accepted: WHILE n = 0; a single READ inside the body with nothing read before the loop; READ placed at the top of the body so the test is made on a stale value."
+          "why": "UNTIL n = 0 stops when its condition becomes true, so the WHILE must keep going while that condition is false: WHILE n <> 0. A WHILE tests before the first pass, so n must already hold a value: one READ before the loop and one at the foot of the body, so the test always sees the newest value. For 5, 8, 3, 0 both versions print 16.\n\nWith no READ before the loop the first test has no value to work on. WHILE n = 0 inverts the condition, so the loop never runs. Putting READ at the top of the body skips the first number and prints 11 instead of 16."
         },
         {
-          "type": "short",
-          "q": "Trace this, giving the values of evens and odds after each pass, and the printed output. Show your working.\n\n```\nSET evens TO 0\nSET odds TO 0\nFOR k = 3 TO 9\n    IF k MOD 2 = 0 THEN\n        INCREMENT evens\n    ELSE\n        INCREMENT odds\n    ENDIF\nENDFOR\nPRINT evens, odds\n```",
+          "type": "mcq",
+          "q": "What is printed?\n\n```\nSET evens TO 0\nSET odds TO 0\nFOR k = 3 TO 9\n    IF k MOD 2 = 0 THEN\n        INCREMENT evens\n    ELSE\n        INCREMENT odds\n    ENDIF\nENDFOR\nPRINT evens, odds\n```",
+          "options": [
+            "3 3",
+            "3 4",
+            "4 3",
+            "4 4"
+          ],
+          "answerIndex": 1,
           "concept": "Tracing a selection inside a FOR loop",
-          "why": "k runs 3, 4, 5, 6, 7, 8, 9 (seven passes). After each pass (evens, odds): k = 3 → (0, 1); 4 → (1, 1); 5 → (1, 2); 6 → (2, 2); 7 → (2, 3); 8 → (3, 3); 9 → (3, 4). Printed: 3 4.\n\nA correct answer shows the seven pairs, or at least the final values, and the output 3 4. Answering 3 3 stops at k = 8, forgetting the inclusive upper bound; 4 3 swaps the two counters."
+          "why": "k takes 3, 4, 5, 6, 7, 8 and 9, seven passes in all, because the upper bound is inclusive. The even values are 4, 6 and 8, so evens = 3; the odd values are 3, 5, 7 and 9, so odds = 4. It prints 3 4.\n\n3 3 stops at k = 8 and loses the last odd value; 4 3 swaps the two counters; 4 4 starts the loop at k = 2, which adds one more even value."
         },
         {
-          "type": "short",
-          "q": "State three faults in this pseudocode, naming the rule or requirement each one breaks, then write a corrected version that also handles n = 0.\n\n```\nset total to 0\nREAD n\nFOR i = 1 TO n\n    READ mark; SET total TO total + mark\nPRINT total / n\n```",
+          "type": "mcq",
+          "q": "Which three rules of pseudocode does this fragment break?\n\n```\nset total to 0\nREAD n\nFOR i = 1 TO n\n    READ mark; SET total TO total + mark\nPRINT total / n\n```",
+          "options": [
+            "Lowercase keywords; two statements on one line; the loop counter is never initialised",
+            "Missing ENDFOR; no comment lines; the variable total is never printed",
+            "Two statements on one line; missing ENDFOR; READ is used where INPUT is required",
+            "Lowercase keywords; two statements on one line; the FOR is never closed with ENDFOR"
+          ],
+          "answerIndex": 3,
           "concept": "Applying the pseudocode rules to a fragment",
-          "why": "Faults (any three): line 1 has lowercase keywords, breaking the rule that keywords are written in capitals; line 4 puts two statements on one line, breaking one statement per line; the FOR is never closed with ENDFOR, so nothing marks where the body ends; and total / n is computed with no guard for n = 0, which testing and refining (handle all required cases) should have caught.\n\nCorrected model:\n\n```\nSET total TO 0\nREAD n\nIF n = 0 THEN\n    PRINT \"no data\"\nELSE\n    FOR i = 1 TO n\n        READ mark\n        SET total TO total + mark\n    ENDFOR\n    PRINT total / n\nENDIF\n```\n\nA correct answer names three faults with their rules and gives a version with capitals, one statement per line, ENDFOR, and an IF guarding the division."
+          "why": "Line 1 writes its keywords in lowercase, breaking the rule that keywords are capitalised. Line 4 puts READ mark and SET total TO total + mark together, breaking one statement per line. The FOR has no ENDFOR, so nothing marks where its body ends. A corrected version capitalises line 1, splits line 4 in two, closes the loop with ENDFOR, and guards total / n against n = 0.\n\nA FOR sets its own counter, so nothing is missing there; comments are optional; total is printed as part of the average; and READ is itself a proper pseudocode keyword."
         },
         {
-          "type": "short",
-          "q": "A student says pseudocode is just a program with the semicolons removed. Give two reasons this is wrong (language independence; pseudocode is not executed), and say how pseudocode is tested instead.",
+          "type": "mcq",
+          "q": "A student says pseudocode is just a program with the semicolons removed. Which answer gives two correct reasons this is wrong and says how pseudocode is tested instead?",
+          "options": [
+            "Language independent and never executed; tested by tracing it on paper with chosen inputs",
+            "Language independent and never executed; tested by running it through a pseudocode compiler",
+            "Fewer keywords and slower to run; tested by running it and comparing the outputs",
+            "Written after the program and never executed; tested by reading it aloud to the team"
+          ],
+          "answerIndex": 0,
           "concept": "Pseudocode is not a program",
-          "why": "First, pseudocode statements must be language independent: they are written in a mix of natural language and programming elements that belongs to no particular language, so there is no language whose syntax it is a stripped-down form of. Second, pseudocode is not meant to be executed as actual code; it describes the flow and logic of the algorithm, and no compiler defines what its keywords mean. Its purpose is to be easily convertible into any programming language, which is why it is written before the language is chosen.\n\nIt is tested on paper or by scanning through: pick input values, walk the lines in order keeping a table of each variable, and check that the logic is right and every required case is handled. That is the testing and refining step. A correct answer gives both reasons and the paper trace."
+          "why": "Pseudocode statements mix natural language with programming elements and belong to no particular language, so there is no language whose syntax it could be a stripped-down form of. It is also never executed: it sets out the flow and logic, and no compiler defines what its keywords mean. Testing is done on paper, walking the lines in order with chosen inputs and a table of every variable, checking the logic and that every required case is handled.\n\nNo pseudocode compiler exists, which is the whole point; pseudocode has no run time to be slow at; and it is written before the program, not after."
         }
       ]
     },
@@ -751,28 +835,56 @@
           "why": "With u = 2x and v = 1 + x², the quotient rule gives f″ = [v u′ − u v′]/v² = [(1 + x²)·2 − 2x·2x]/(1 + x²)² = (2 − 2x²)/(1 + x²)². The student's numerator is right; the denominator must be v² = (1 + x²)², not v.\n\nThe chain rule was applied correctly in f′ (the 2x is the inner derivative); swapping u and v would give (2x² − 2), the negative numerator, which did not happen; the constant 1 differentiates to 0, and the student's numerator already reflects that."
         },
         {
-          "type": "short",
-          "q": "f(x) = xe^(−x). Find f′(x), f″(x) and f‴(x), then evaluate f‴(3). Show your working, naming the rule you use at each order.",
+          "type": "mcq",
+          "q": "f(x) = xe^(−x). Find f‴(x) and evaluate f‴(3).",
+          "options": [
+            "f‴(x) = (1 − x)e^(−x), f‴(3) = −2e⁻³",
+            "f‴(x) = (3 − x)e^(−x), f‴(3) = 0",
+            "f‴(x) = (x − 2)e^(−x), f‴(3) = e⁻³",
+            "f‴(x) = −xe^(−x), f‴(3) = −3e⁻³"
+          ],
+          "answerIndex": 1,
           "concept": "Third derivative of a product with an exponential, evaluated",
-          "why": "Product rule at every order, with d(e^(−x))/dx = −e^(−x) by the chain rule. f′ = 1·e^(−x) + x·(−e^(−x)) = (1 − x)e^(−x). f″ = (−1)e^(−x) + (1 − x)(−e^(−x)) = (−1 − 1 + x)e^(−x) = (x − 2)e^(−x). f‴ = 1·e^(−x) + (x − 2)(−e^(−x)) = (1 − x + 2)e^(−x) = (3 − x)e^(−x). Then f‴(3) = (3 − 3)e^(−3) = 0.\n\nFinal answer: f′ = (1 − x)e^(−x), f″ = (x − 2)e^(−x), f‴ = (3 − x)e^(−x), and f‴(3) = 0. A correct answer applies the product rule three times, keeps the minus from e^(−x), factors e^(−x) out each time, and gets 0 at x = 3. Treating the derivative of xe^(−x) as e^(−x) alone, or of e^(−x) as e^(−x), is wrong."
+          "why": "Apply the product rule at each order, with d(e^(−x))/dx = −e^(−x) from the chain rule. f′ = e^(−x) − xe^(−x) = (1 − x)e^(−x); f″ = −e^(−x) − (1 − x)e^(−x) = (x − 2)e^(−x); f‴ = e^(−x) − (x − 2)e^(−x) = (3 − x)e^(−x). At x = 3 the bracket is zero, so f‴(3) = 0.\n\n(1 − x)e^(−x) and (x − 2)e^(−x) are f′ and f″, stopping one or two orders early, and −xe^(−x) drops the term the product rule contributes."
         },
         {
-          "type": "short",
-          "q": "f(x) = ln(1 + 2x²). Find f′(x) by the chain rule, then f″(x) by the quotient rule, listing u, v, u′ and v′ on one line. Show your working.",
+          "type": "mcq",
+          "q": "f(x) = ln(1 + 2x²). Find f′(x) by the chain rule and f″(x) by the quotient rule.",
+          "options": [
+            "f′ = 1/(1 + 2x²), f″ = −4x/(1 + 2x²)²",
+            "f′ = 4x/(1 + 2x²), f″ = (8x² − 4)/(1 + 2x²)²",
+            "f′ = 4x/(1 + 2x²), f″ = 4/(1 + 2x²)²",
+            "f′ = 4x/(1 + 2x²), f″ = (4 − 8x²)/(1 + 2x²)²"
+          ],
+          "answerIndex": 3,
           "concept": "Chain rule then quotient rule on a logarithm of a polynomial",
-          "why": "Chain rule: y = ln u with u = 1 + 2x², so y′(u) = 1/u and u′(x) = 4x, giving f′(x) = 4x/(1 + 2x²). This is a quotient, so use the quotient rule for f″: u = 4x, v = 1 + 2x², u′ = 4, v′ = 4x. f″ = [v u′ − u v′]/v² = [(1 + 2x²)·4 − 4x·4x]/(1 + 2x²)² = (4 + 8x² − 16x²)/(1 + 2x²)² = (4 − 8x²)/(1 + 2x²)².\n\nFinal answer: f′(x) = 4x/(1 + 2x²), f″(x) = (4 − 8x²)/(1 + 2x²)²; also accepted with the denominator expanded as 1 + 4x² + 4x⁴, or the numerator factored as 4(1 − 2x²). A correct answer shows the inner derivative 4x in f′ and the v u′ − u v′ order in f″. (8x² − 4)/(1 + 2x²)² has the numerator reversed and is wrong."
+          "why": "With u = 1 + 2x², ln u differentiates to u′/u, and u′ = 4x, so f′(x) = 4x/(1 + 2x²). That is a quotient, so take u = 4x, v = 1 + 2x², u′ = 4, v′ = 4x and apply [vu′ − uv′]/v²: [(1 + 2x²)4 − 4x·4x]/(1 + 2x²)² = (4 + 8x² − 16x²)/(1 + 2x²)² = (4 − 8x²)/(1 + 2x²)².\n\n(8x² − 4) has the numerator subtracted the wrong way round, f′ = 1/(1 + 2x²) forgets the inner derivative, and 4/(1 + 2x²)² drops the uv′ term."
         },
         {
-          "type": "short",
-          "q": "f(x) = x⁵ − 2x². Find f⁽⁴⁾(x), and find the smallest n for which f⁽ⁿ⁾(x) = 0 for all x. Show your working.",
+          "type": "mcq",
+          "q": "f(x) = x⁵ − 2x². Find f⁽⁴⁾(x), and find the smallest n for which f⁽ⁿ⁾(x) = 0 for all x.",
+          "options": [
+            "f⁽⁴⁾(x) = 120x, n = 5",
+            "f⁽⁴⁾(x) = 120, n = 5",
+            "f⁽⁴⁾(x) = 120x, n = 6",
+            "f⁽⁴⁾(x) = 120x − 2, n = 6"
+          ],
+          "answerIndex": 2,
           "concept": "Order at which a polynomial's derivatives vanish",
-          "why": "f′ = 5x⁴ − 4x; f″ = 20x³ − 4; f‴ = 60x²; f⁽⁴⁾ = 120x; f⁽⁵⁾ = 120; f⁽⁶⁾ = 0. Each differentiation lowers the degree by 1, so a degree-5 polynomial becomes a constant at the fifth derivative and zero at the sixth.\n\nFinal answer: f⁽⁴⁾(x) = 120x and n = 6. A correct answer shows the chain of derivatives (or argues from the degree: degree 5, so the 6th derivative is the first to vanish). Answering n = 5 confuses 'constant' with 'zero': f⁽⁵⁾ = 120 is not zero."
+          "why": "Differentiating repeatedly: f′ = 5x⁴ − 4x, f″ = 20x³ − 4, f‴ = 60x², f⁽⁴⁾ = 120x, f⁽⁵⁾ = 120, f⁽⁶⁾ = 0. Each step lowers the degree by 1, so a degree-5 polynomial reaches a constant at the fifth derivative and only vanishes at the sixth, giving n = 6.\n\nn = 5 confuses 'constant' with 'zero', since f⁽⁵⁾ = 120 is not zero, and the −2 in the last option survives a differentiation it should not."
         },
         {
-          "type": "short",
-          "q": "For y = e^(3x), every derivative is a positive multiple of y, but for y = sin(5x) the derivatives run through four different forms before repeating. Explain why, and state d⁴y/dx⁴ for each.",
+          "type": "mcq",
+          "q": "For y = e^(3x) every derivative is a positive multiple of y, but the derivatives of y = sin(5x) run through four forms before repeating. Give d⁴y/dx⁴ for each, with the reason.",
+          "options": [
+            "81e^(3x) and 625 sin(5x); the exponential reproduces itself while sin and cos alternate over a cycle of four",
+            "12e^(3x) and 20 sin(5x); each order simply adds the chain factor",
+            "81e^(3x) and −625 sin(5x); the minus sign survives all four steps",
+            "e^(3x) and sin(5x); the chain factors cancel over four steps"
+          ],
+          "answerIndex": 0,
           "concept": "Why exponentials keep their sign and trig derivatives cycle",
-          "why": "e^(3x) differentiates to itself times the inner derivative 3, so each order multiplies by 3 and never changes the function or its sign: 3e^(3x), 9e^(3x), 27e^(3x), 81e^(3x). sin(5x) also picks up a factor 5 each time, but sin and cos swap at every step and the minus enters when cos is differentiated: 5 cos(5x), −25 sin(5x), −125 cos(5x), 625 sin(5x). It takes four steps to return to a positive multiple of sin(5x), because the pattern sin → cos → −sin → −cos → sin has period four.\n\nA correct answer says the exponential reproduces itself (only the chain factor 3 accumulates) while sin and cos alternate and the minus comes from d(cos)/dx = −sin, and gives d⁴y/dx⁴ = 81e^(3x) and 625 sin(5x)."
+          "why": "e^(3x) differentiates to itself times the inner derivative 3, so each order only multiplies by 3 and the function never changes shape or sign: 3, 9, 27, 81 give d⁴y/dx⁴ = 81e^(3x). sin(5x) also gains a factor 5 each time, but sin and cos swap at every step and a minus enters when cos is differentiated: 5 cos(5x), −25 sin(5x), −125 cos(5x), 625 sin(5x). The pattern sin → cos → −sin → −cos → sin has period four, so the fourth derivative is back to a positive multiple of sin(5x).\n\n12 and 20 multiply the factor in instead of raising it to the fourth power, −625 keeps a minus that the fourth step cancels, and the last option forgets the chain factor entirely."
         }
       ]
     },
@@ -889,28 +1001,56 @@
           "why": "For a pure resistor, I_rms = V_rms/R = 0.7071 V_max/R and P_av = V²_rms/R contain no frequency: R is a constant of the component and the rms conversion factor is the same at every frequency. The frequency is a redundant given.\n\nThe peak voltage is needed to get V_rms, and R is needed for both the current and the power. Frequency would matter only for components (inductors, capacitors) that this circuit does not contain."
         },
         {
-          "type": "short",
-          "q": "An AC generator with a peak voltage of 36.0 V and a frequency of 50.0 Hz is connected to a 120 Ω resistor. Calculate the rms voltage, the rms current, the average power and the maximum power dissipated. State which given quantity is unused and check the ratio of the two powers. Show your working.",
+          "type": "mcq",
+          "q": "An AC generator with a peak voltage of 36.0 V and a frequency of 50.0 Hz is connected to a 120 Ω resistor. What are the rms voltage, the rms current, the average power and the maximum power?",
+          "options": [
+            "25.5 V; 0.212 A; 5.40 W; 10.8 W",
+            "25.5 V; 0.212 A; 10.8 W; 21.6 W",
+            "50.9 V; 0.424 A; 21.6 W; 43.2 W",
+            "25.5 V; 0.150 A; 2.70 W; 5.40 W"
+          ],
+          "answerIndex": 0,
           "concept": "Full resistive AC calculation from peak voltage",
-          "why": "V_rms = 0.7071 × 36.0 = 25.5 V. I_rms = V_rms/R = 25.5/120 = 0.212 A. P_av = V²_rms/R = (25.5)²/120 = 648/120 = 5.4 W (check: I²_rms R = (0.212)²(120) = 5.4 W). P_max = V²_max/R = (36.0)²/120 = 1296/120 = 10.8 W. The 50.0 Hz is unused because nothing in a purely resistive circuit depends on frequency. P_max/P_av = 10.8/5.4 = 2, as it must be.\n\nA correct answer gives 25.5 V (accept 25.4 to 25.6), 0.212 A (accept 0.21 to 0.22), 5.4 W, 10.8 W, names the frequency as unused and shows the ratio 2. Using V_max in the average power (10.8 W) or applying 0.7071 twice (I = 0.15 A) is wrong."
+          "why": "V_rms = 0.7071 × 36.0 = 25.5 V, so I_rms = 25.5/120 = 0.212 A and P_av = V_rms²/R = 648/120 = 5.40 W. The maximum power is V_max²/R = 1296/120 = 10.8 W, twice the average. The 50.0 Hz is never used, since nothing in a purely resistive circuit depends on frequency.\n\n10.8 W as the average uses the peak voltage in P_av; the third option converts the wrong way with √2; the fourth applies 0.7071 a second time to the current."
         },
         {
-          "type": "short",
-          "q": "A question sheet states a device's supply as 110 V rms in the question but 220 V rms in the answer key; both give the rms current as 5.0 A. Calculate the peak voltage for each figure and the peak current, and state which part of the answer is unaffected by the discrepancy. Show your working.",
+          "type": "mcq",
+          "q": "A device draws 5.0 A rms. What is the peak current, and what is the peak voltage if the supply is 110 V rms, and if it is 220 V rms?",
+          "options": [
+            "3.54 A; 77.8 V; 156 V",
+            "7.07 A; 156 V; 311 V",
+            "7.07 A; 311 V; 156 V",
+            "10 A; 220 V; 440 V"
+          ],
+          "answerIndex": 1,
           "concept": "Converting rms to peak values",
-          "why": "V_max = V_rms/0.7071 = 1.4142 V_rms. For 110 V: V_max = 155.6 V (156 V). For 220 V: V_max = 311.1 V (311 V). The current is the same on both versions: I_max = 5.0/0.7071 = 7.07 A. The peak current is unaffected by the discrepancy; only the peak voltage changes, and it doubles because the rms figure doubled.\n\nA correct answer gives 156 V and 311 V (accept 155 to 157 and 310 to 312), 7.07 A (accept 7.0 to 7.1), and says the current part is unaffected. Multiplying by 0.7071 (77.8 V, 156 V, 3.5 A) converts in the wrong direction and is wrong."
+          "why": "Peak is rms times √2: I_max = 5.0 × 1.4142 = 7.07 A. For the 110 V supply V_max = 110 × 1.4142 = 156 V, and for 220 V it is 311 V, double the first because the rms figure doubled. The current is the same whichever supply voltage is quoted.\n\nThe first option multiplies by 0.7071 and so converts in the wrong direction; the third swaps the two voltages; the last doubles instead of using √2."
         },
         {
-          "type": "short",
-          "q": "A student's working for a 50 Ω heater on a 240 V rms supply reads: 'V_max = 240 × 0.7071 = 170 V; I_max = 170/50 = 3.4 A; P_av = (3.4)² × 50 = 578 W.' Identify each error and calculate the correct V_max, I_max, I_rms and P_av. Show your working.",
+          "type": "mcq",
+          "q": "A student writes, for a 50 Ω heater on a 240 V rms supply: V_max = 240 × 0.7071 = 170 V, then I_max = 170/50 = 3.4 A, then P_av = (3.4)² × 50 = 578 W. What are the correct V_max, I_rms and P_av?",
+          "options": [
+            "170 V; 3.4 A; 578 W",
+            "339 V; 6.79 A; 2304 W",
+            "339 V; 4.8 A; 1152 W",
+            "339 V; 4.8 A; 576 W"
+          ],
+          "answerIndex": 2,
           "concept": "Diagnosing a peak and rms calculation",
-          "why": "Error 1: rms to peak requires multiplying by 1.4142 (dividing by 0.7071), so V_max = 240 × 1.4142 = 339 V, not 170 V. Error 2: I_max = V_max/R = 339/50 = 6.79 A follows from the corrected peak; the student's 3.4 A is really I_rms/√2 in disguise. Error 3: P_av must use the rms current, not the peak: I_rms = V_rms/R = 240/50 = 4.8 A, so P_av = (4.8)²(50) = 1152 W = 1.15 kW (or V²_rms/R = 240²/50). The student's P_av used a peak-labelled current in an average-power formula, and the wrongly converted voltage.\n\nA correct answer names the wrong-direction conversion and the use of a peak current in P_av, and gives V_max = 339 V (accept 338 to 340), I_max = 6.79 A (accept 6.7 to 6.9), I_rms = 4.8 A and P_av = 1152 W (accept 1.15 kW). P_max = 2304 W may be mentioned but is not required."
+          "why": "Going from rms to peak means multiplying by √2, not by 0.7071, so V_max = 240 × 1.4142 = 339 V and I_max = 339/50 = 6.79 A. Average power must be built from rms values: I_rms = 240/50 = 4.8 A, so P_av = (4.8)²(50) = 1152 W, the same as V_rms²/R.\n\n170 V and 578 W are the student's two errors left uncorrected; 2304 W puts the peak current into an average-power formula (it is P_max); 576 W halves a formula that needs no extra factor."
         },
         {
-          "type": "short",
-          "q": "Ohm's law v = iR holds at every instant for a resistor on a sinusoidal supply. Explain why it may also be written I_rms = V_rms/R, and why P_av = I²_rms R gives the true average power with no extra numerical factor.",
+          "type": "mcq",
+          "q": "Ohm's law v = iR holds at every instant for a resistor on a sinusoidal supply. Why may it also be written I_rms = V_rms/R, and why does P_av = I_rms²R need no extra numerical factor?",
+          "options": [
+            "R is constant, so peak and rms values are equal, and P = I²R holds for any current at all",
+            "Rms values are averages, and the average of a product equals the product of the averages",
+            "The two 0.7071 factors multiply to ½, which is exactly the factor P_av = ½P_max needs",
+            "Both waveforms scale by the same 0.7071, so it cancels; and I_rms² is by definition the mean of i², which is what P = i²R averages"
+          ],
+          "answerIndex": 3,
           "concept": "Why rms values obey Ohm's law and the power formula",
-          "why": "Since R is constant, i = v/R at every instant means the current waveform is the voltage waveform scaled by 1/R: I_max = V_max/R. Both amplitudes are converted to rms by the same factor 0.7071, so the factor cancels and I_rms = V_rms/R as well; Ohm's law holds between any matching pair of values (peak with peak, rms with rms) but not across a mixed pair. For power, the instantaneous power is i²R, so the average power is (i²)_av R. The rms value is defined so that I²_rms is exactly (i²)_av, the mean of the squared current; substituting it into P = I²R therefore gives the true average with no further factor.\n\nA correct answer says R is constant so both amplitudes scale by the same factor, and that I²_rms equals the mean of i² by definition, which is precisely what P = i²R averages."
+          "why": "Because R is constant, the current waveform is just the voltage waveform scaled by 1/R, so I_max = V_max/R; converting both amplitudes to rms multiplies each by the same 0.7071, which cancels and leaves I_rms = V_rms/R. For power, the instantaneous value is i²R, so the average is (i²)_av R, and the rms current is defined precisely so that I_rms² equals (i²)_av. No extra factor is needed.\n\nPeak and rms are not equal; averages of products are not products of averages; and the ½ of P_av = ½P_max is already inside the rms definition, not applied twice."
         }
       ]
     },
@@ -1026,28 +1166,56 @@
           "why": "Indentation shows which statements are inside the loop body and which come after it; without it a reader cannot tell whether a line is repeated or executed once.\n\nKeywords are set apart by writing them in capitals; one statement per line is a separate rule about what a line holds; language independence is about not using the syntax of a particular programming language."
         },
         {
-          "type": "short",
-          "q": "Write pseudocode that reads marks until −1 is entered and then prints the highest mark entered. If the very first entry is −1, print 'no marks' instead.",
+          "type": "mcq",
+          "q": "Marks are read until −1 is entered, and then the highest mark entered is printed. If the very first entry is −1, 'no marks' is printed instead. Which design does that correctly?",
+          "options": [
+            "Set highest to 0; loop reading marks until −1, updating highest; print 'no marks' if highest is still 0",
+            "Loop reading marks until −1, setting highest to each mark read; print highest after the loop",
+            "Read one mark first; set highest to −1; loop while mark <> −1, reading at the top of the body; print highest",
+            "Read one mark first; if it is −1 print 'no marks'; otherwise set highest to it and loop until −1, reading at the foot"
+          ],
+          "answerIndex": 3,
           "concept": "Writing a sentinel loop with a running maximum",
-          "why": "Model answer:\n\n```\nREAD mark\nIF mark = -1 THEN\n    PRINT \"no marks\"\nELSE\n    SET highest TO mark\n    WHILE mark <> -1\n        IF mark > highest THEN\n            SET highest TO mark\n        ENDIF\n        READ mark\n    ENDWHILE\n    PRINT highest\nENDIF\n```\n\nA correct answer reads a mark before the test, uses a WHILE (or an equivalent) whose condition is the sentinel, initialises highest from the first mark rather than from 0, compares each mark with highest and updates it, reads the next mark at the foot of the body, and prints after the loop. The 'no marks' case needs the IF before the loop. Not accepted: highest set to 0 (fails if all marks are 0 or the check is on negatives), no second READ, or the sentinel compared as if it were a mark."
+          "why": "The first mark has to be read before anything else so the 'no marks' case can be caught, and that first mark is the only safe starting value for highest. Inside the loop each mark is compared with highest and replaces it when larger, and the next mark is read at the foot so the condition sees a fresh value. For 40, 72, 55, −1 it prints 72.\n\nStarting highest at 0 breaks when every mark is 0 and confuses 'no marks' with a genuine highest of 0. Setting highest to each mark read keeps the last mark, not the largest. Reading at the top of the body skips the first mark and lets the sentinel −1 be treated as a mark."
         },
         {
-          "type": "short",
-          "q": "Trace this, giving the values of a and b after each pass of the loop and the printed value. Show your working.\n\n```\nSET a TO 12\nSET b TO 18\nWHILE a <> b\n    IF a > b THEN\n        SET a TO a - b\n    ELSE\n        SET b TO b - a\n    ENDIF\nENDWHILE\nPRINT a\n```",
+          "type": "mcq",
+          "q": "What are the values of a and b after each pass, and what is printed?\n\n```\nSET a TO 12\nSET b TO 18\nWHILE a <> b\n    IF a > b THEN\n        SET a TO a - b\n    ELSE\n        SET b TO b - a\n    ENDIF\nENDWHILE\nPRINT a\n```",
+          "options": [
+            "(12, 6) then (6, 6); prints 6",
+            "(12, 6); prints 12",
+            "(12, 6) then (6, 6) then (0, 6); prints 0",
+            "(−6, 18), and the loop never ends"
+          ],
+          "answerIndex": 0,
           "concept": "Tracing a WHILE with a selection inside",
-          "why": "Pass 1: a = 12, b = 18, a > b is false, so b = 18 − 12 = 6; now (12, 6). Pass 2: 12 > 6 is true, so a = 12 − 6 = 6; now (6, 6). The test a <> b is now false, the loop ends, and 6 is printed (the greatest common divisor of 12 and 18).\n\nA correct answer shows (12, 6) then (6, 6) and the output 6. Subtracting the wrong way on pass 1 (a = 12 − 18 = −6) or stopping after one pass and printing 12 is not accepted."
+          "why": "Pass 1: a = 12 is not greater than b = 18, so the ELSE runs and b = 18 − 12 = 6, giving (12, 6). Pass 2: 12 > 6 is true, so a = 12 − 6 = 6, giving (6, 6). Now a <> b is false, the loop ends, and 6 is printed, which is the greatest common divisor of 12 and 18.\n\nStopping after one pass ignores that a <> b is still true then; running a third pass ignores the test that has already failed; a = 12 − 18 = −6 takes the IF branch on pass 1 when the test is false."
         },
         {
-          "type": "short",
-          "q": "A flowchart runs: Start; READ n; s = 0; decision 'Is n > 0?'; Yes → s = s + (n MOD 10); n = n DIV 10; back to the decision; No → PRINT s; Stop. Write it as pseudocode, using the loop construct that matches where the chart tests its condition, and show what it prints for n = 4321.",
+          "type": "mcq",
+          "q": "A flowchart runs: Start; READ n; s = 0; decision 'Is n > 0?'; Yes to s = s + (n MOD 10); then n = n DIV 10; back to the decision; No to PRINT s; Stop. Which pseudocode matches the chart, and what does it print for n = 5083?",
+          "options": [
+            "REPEAT the two body lines UNTIL n = 0, then PRINT s; prints 16",
+            "WHILE n > 0 with the two body lines, then PRINT s; prints 5083",
+            "WHILE n > 0 with the two body lines, then PRINT s; prints 16",
+            "WHILE n > 0 with PRINT s inside the loop; prints 3 11 11 16"
+          ],
+          "answerIndex": 2,
           "concept": "Converting a flowchart to pseudocode",
-          "why": "The decision comes before the body and the Yes exit runs back to it, so this is a pre-tested loop: WHILE.\n\n```\nREAD n\nSET s TO 0\nWHILE n > 0\n    SET s TO s + (n MOD 10)\n    SET n TO n DIV 10\nENDWHILE\nPRINT s\n```\n\nFor n = 4321: s = 1, n = 432; s = 3, n = 43; s = 6, n = 4; s = 10, n = 0; loop ends; prints 10 (the sum of the digits). A correct answer uses WHILE with ENDWHILE, keeps the two body lines in the chart's order, prints after the loop, and gives 10. A REPEAT-UNTIL is not the matching construct, because the chart tests before the first pass."
+          "why": "The decision comes before the body and the Yes exit runs back to it, so the condition is tested before every pass: that is a pre-tested loop, WHILE n > 0 with ENDWHILE and PRINT s after it. For n = 5083 the digits come off the right: s = 3 with n = 508, s = 11 with n = 50, s = 11 with n = 5, s = 16 with n = 0, then the loop ends and 16 is printed.\n\nREPEAT-UNTIL tests after the body, so it would run once even for n = 0, which the chart does not. Printing 5083 gives the input back instead of the digit sum. Printing inside the loop produces four lines rather than one total."
         },
         {
-          "type": "short",
-          "q": "Pseudocode cannot be run. Explain what the testing and refining step consists of, and name two input cases you would test for a fragment that reads a count, reads that many marks, and prints their average.",
+          "type": "mcq",
+          "q": "Pseudocode cannot be run. A fragment reads a count, reads that many marks and prints their average. What does the testing and refining step consist of, and which input case must be tested first?",
+          "options": [
+            "Compile it and run the test inputs; a count of 0, which would divide by zero",
+            "Trace it on paper with chosen inputs, keeping a table of every variable; a count of 0, which would divide by zero",
+            "Trace it on paper with chosen inputs, keeping a table of every variable; a count of 100, the largest allowed",
+            "Read it aloud line by line; three ordinary marks such as 50, 60 and 70"
+          ],
+          "answerIndex": 1,
           "concept": "Testing pseudocode on paper",
-          "why": "Testing means working through the pseudocode on paper, or scanning it carefully, with specific inputs: keep a table of every variable, follow each line in order, and check that the flow and logic are what was intended and that all required cases are handled. Refining then corrects any errors found or improves the effectiveness of the algorithm.\n\nCases for the average fragment: a count of 0 (the division by the count has no value, so a guard is needed), a count of 1 (average equals the single mark), and an ordinary case such as three marks 50, 60, 70 giving 60. A correct answer describes the paper trace and names at least two cases, one of them the zero-count boundary."
+          "why": "Testing pseudocode means walking the lines in order with chosen input values, keeping a table of every variable, and checking that the logic is what was intended and that every required case is handled; refining then corrects whatever the trace exposes. The case that must be covered is a count of 0, because the average divides by the count and there is nothing to divide by.\n\nThere is no compiler for pseudocode, so it cannot be run. A count of 100 is an ordinary case with no boundary in it, and no maximum is stated anywhere. Reading aloud is not a trace and would not expose a division by zero."
         }
       ],
       "slot": "fast"

@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Problems-only session on Week 6.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A source v = 170 sin(377t) V is connected across a 34 Ω resistor. Which equation gives the current in amperes?
 A. i = 3.5 sin(377t)
@@ -51,13 +51,29 @@ B. The peak voltage
 C. The frequency
 D. All three are needed
 
-**9. (show your working)** An AC generator with a peak voltage of 36.0 V and a frequency of 50.0 Hz is connected to a 120 Ω resistor. Calculate the rms voltage, the rms current, the average power and the maximum power dissipated. State which given quantity is unused and check the ratio of the two powers. Show your working.
+**9.** An AC generator with a peak voltage of 36.0 V and a frequency of 50.0 Hz is connected to a 120 Ω resistor. What are the rms voltage, the rms current, the average power and the maximum power?
+A. 25.5 V; 0.212 A; 5.40 W; 10.8 W
+B. 25.5 V; 0.212 A; 10.8 W; 21.6 W
+C. 50.9 V; 0.424 A; 21.6 W; 43.2 W
+D. 25.5 V; 0.150 A; 2.70 W; 5.40 W
 
-**10. (show your working)** A question sheet states a device's supply as 110 V rms in the question but 220 V rms in the answer key; both give the rms current as 5.0 A. Calculate the peak voltage for each figure and the peak current, and state which part of the answer is unaffected by the discrepancy. Show your working.
+**10.** A device draws 5.0 A rms. What is the peak current, and what is the peak voltage if the supply is 110 V rms, and if it is 220 V rms?
+A. 3.54 A; 77.8 V; 156 V
+B. 7.07 A; 156 V; 311 V
+C. 7.07 A; 311 V; 156 V
+D. 10 A; 220 V; 440 V
 
-**11. (show your working)** A student's working for a 50 Ω heater on a 240 V rms supply reads: 'V_max = 240 × 0.7071 = 170 V; I_max = 170/50 = 3.4 A; P_av = (3.4)² × 50 = 578 W.' Identify each error and calculate the correct V_max, I_max, I_rms and P_av. Show your working.
+**11.** A student writes, for a 50 Ω heater on a 240 V rms supply: V_max = 240 × 0.7071 = 170 V, then I_max = 170/50 = 3.4 A, then P_av = (3.4)² × 50 = 578 W. What are the correct V_max, I_rms and P_av?
+A. 170 V; 3.4 A; 578 W
+B. 339 V; 6.79 A; 2304 W
+C. 339 V; 4.8 A; 1152 W
+D. 339 V; 4.8 A; 576 W
 
-**12. (show your working)** Ohm's law v = iR holds at every instant for a resistor on a sinusoidal supply. Explain why it may also be written I_rms = V_rms/R, and why P_av = I²_rms R gives the true average power with no extra numerical factor.
+**12.** Ohm's law v = iR holds at every instant for a resistor on a sinusoidal supply. Why may it also be written I_rms = V_rms/R, and why does P_av = I_rms²R need no extra numerical factor?
+A. R is constant, so peak and rms values are equal, and P = I²R holds for any current at all
+B. Rms values are averages, and the average of a product equals the product of the averages
+C. The two 0.7071 factors multiply to ½, which is exactly the factor P_av = ½P_max needs
+D. Both waveforms scale by the same 0.7071, so it cancels; and I_rms² is by definition the mean of i², which is what P = i²R averages
 
 ---
 
@@ -95,18 +111,18 @@ D. All three are needed
 
 The peak voltage is needed to get V_rms, and R is needed for both the current and the power. Frequency would matter only for components (inductors, capacitors) that this circuit does not contain.
 
-**9.** *Full resistive AC calculation from peak voltage.* V_rms = 0.7071 × 36.0 = 25.5 V. I_rms = V_rms/R = 25.5/120 = 0.212 A. P_av = V²_rms/R = (25.5)²/120 = 648/120 = 5.4 W (check: I²_rms R = (0.212)²(120) = 5.4 W). P_max = V²_max/R = (36.0)²/120 = 1296/120 = 10.8 W. The 50.0 Hz is unused because nothing in a purely resistive circuit depends on frequency. P_max/P_av = 10.8/5.4 = 2, as it must be.
+**9. A** — *Full resistive AC calculation from peak voltage.* V_rms = 0.7071 × 36.0 = 25.5 V, so I_rms = 25.5/120 = 0.212 A and P_av = V_rms²/R = 648/120 = 5.40 W. The maximum power is V_max²/R = 1296/120 = 10.8 W, twice the average. The 50.0 Hz is never used, since nothing in a purely resistive circuit depends on frequency.
 
-A correct answer gives 25.5 V (accept 25.4 to 25.6), 0.212 A (accept 0.21 to 0.22), 5.4 W, 10.8 W, names the frequency as unused and shows the ratio 2. Using V_max in the average power (10.8 W) or applying 0.7071 twice (I = 0.15 A) is wrong.
+10.8 W as the average uses the peak voltage in P_av; the third option converts the wrong way with √2; the fourth applies 0.7071 a second time to the current.
 
-**10.** *Converting rms to peak values.* V_max = V_rms/0.7071 = 1.4142 V_rms. For 110 V: V_max = 155.6 V (156 V). For 220 V: V_max = 311.1 V (311 V). The current is the same on both versions: I_max = 5.0/0.7071 = 7.07 A. The peak current is unaffected by the discrepancy; only the peak voltage changes, and it doubles because the rms figure doubled.
+**10. B** — *Converting rms to peak values.* Peak is rms times √2: I_max = 5.0 × 1.4142 = 7.07 A. For the 110 V supply V_max = 110 × 1.4142 = 156 V, and for 220 V it is 311 V, double the first because the rms figure doubled. The current is the same whichever supply voltage is quoted.
 
-A correct answer gives 156 V and 311 V (accept 155 to 157 and 310 to 312), 7.07 A (accept 7.0 to 7.1), and says the current part is unaffected. Multiplying by 0.7071 (77.8 V, 156 V, 3.5 A) converts in the wrong direction and is wrong.
+The first option multiplies by 0.7071 and so converts in the wrong direction; the third swaps the two voltages; the last doubles instead of using √2.
 
-**11.** *Diagnosing a peak and rms calculation.* Error 1: rms to peak requires multiplying by 1.4142 (dividing by 0.7071), so V_max = 240 × 1.4142 = 339 V, not 170 V. Error 2: I_max = V_max/R = 339/50 = 6.79 A follows from the corrected peak; the student's 3.4 A is really I_rms/√2 in disguise. Error 3: P_av must use the rms current, not the peak: I_rms = V_rms/R = 240/50 = 4.8 A, so P_av = (4.8)²(50) = 1152 W = 1.15 kW (or V²_rms/R = 240²/50). The student's P_av used a peak-labelled current in an average-power formula, and the wrongly converted voltage.
+**11. C** — *Diagnosing a peak and rms calculation.* Going from rms to peak means multiplying by √2, not by 0.7071, so V_max = 240 × 1.4142 = 339 V and I_max = 339/50 = 6.79 A. Average power must be built from rms values: I_rms = 240/50 = 4.8 A, so P_av = (4.8)²(50) = 1152 W, the same as V_rms²/R.
 
-A correct answer names the wrong-direction conversion and the use of a peak current in P_av, and gives V_max = 339 V (accept 338 to 340), I_max = 6.79 A (accept 6.7 to 6.9), I_rms = 4.8 A and P_av = 1152 W (accept 1.15 kW). P_max = 2304 W may be mentioned but is not required.
+170 V and 578 W are the student's two errors left uncorrected; 2304 W puts the peak current into an average-power formula (it is P_max); 576 W halves a formula that needs no extra factor.
 
-**12.** *Why rms values obey Ohm's law and the power formula.* Since R is constant, i = v/R at every instant means the current waveform is the voltage waveform scaled by 1/R: I_max = V_max/R. Both amplitudes are converted to rms by the same factor 0.7071, so the factor cancels and I_rms = V_rms/R as well; Ohm's law holds between any matching pair of values (peak with peak, rms with rms) but not across a mixed pair. For power, the instantaneous power is i²R, so the average power is (i²)_av R. The rms value is defined so that I²_rms is exactly (i²)_av, the mean of the squared current; substituting it into P = I²R therefore gives the true average with no further factor.
+**12. D** — *Why rms values obey Ohm's law and the power formula.* Because R is constant, the current waveform is just the voltage waveform scaled by 1/R, so I_max = V_max/R; converting both amplitudes to rms multiplies each by the same 0.7071, which cancels and leaves I_rms = V_rms/R. For power, the instantaneous value is i²R, so the average is (i²)_av R, and the rms current is defined precisely so that I_rms² equals (i²)_av. No extra factor is needed.
 
-A correct answer says R is constant so both amplitudes scale by the same factor, and that I²_rms equals the mean of i² by definition, which is precisely what P = i²R averages.
+Peak and rms are not equal; averages of products are not products of averages; and the ½ of P_av = ½P_max is already inside the rms definition, not applied twice.

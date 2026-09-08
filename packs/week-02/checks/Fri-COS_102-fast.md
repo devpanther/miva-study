@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *This session is COS_102 applied, working the week's method through on concrete cases rather than restating it.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** "Give an approximate number of hairs on your head." There is no standard method, but sampling a small patch and scaling up gives an estimate. How is this problem classified?
 A. Undecidable
@@ -51,13 +51,29 @@ B. No such H exists; the request is undecidable
 C. H can be written for every P but not for every x
 D. H exists but needs a universal Turing machine to run
 
-**9. (show your working)** A substitution puzzle allows two replacements: OB → BOOB and BOB → O. Starting from BOB, obtain BOOOB. Write down the word after each replacement and name the rule you applied. Show your working.
+**9.** A substitution puzzle allows two replacements: OB → BOOB and BOB → O. Starting from BOB, which sequence of words reaches BOOOB?
+A. BOB, BBOOB, BBOBOOB, BOOOB
+B. BOB, BBOOB, BOOOB
+C. BOB, O, BOOOB
+D. BOB, BOOBB, BOOOB
 
-**10. (show your working)** An exam has 50 questions, all answered. Each correct answer scores 4 marks and each wrong answer loses 2 marks. A student scores 170. How many answers were correct? Then say whether the problem is routine or non-routine and why. Show your working.
+**10.** An exam has 50 questions and all of them are answered. Each correct answer scores 4 marks and each wrong answer loses 2 marks. A student scores 170. How many answers were correct?
+A. 42
+B. 35
+C. 45
+D. 5
 
-**11. (show your working)** Name the strategy used in each case and give the test that decides it. (a) A commuter drives a different route each week for four weeks and keeps the fastest. (b) A subway map shows only the stations and the lines joining them, with no distances or streets. (c) A shopper picks the cereal with the most familiar box without reading any label. (d) Ten staff spend an hour calling out every idea for a new product, writing all of them down and judging none.
+**11.** Name the problem-solving strategy in each case, in order. (a) A commuter drives a different route each week for four weeks and keeps the fastest. (b) A subway map shows only the stations and the lines joining them, with no distances or streets. (c) A shopper picks the cereal with the most familiar box without reading any label. (d) Ten staff spend an hour calling out every idea for a new product, writing all of them down and judging none.
+A. Trial and error, abstraction, brainstorming, heuristics
+B. Trial and error, abstraction, heuristics, brainstorming
+C. Heuristics, abstraction, trial and error, brainstorming
+D. Trial and error, means-ends analysis, heuristics, brainstorming
 
-**12. (show your working)** A student tries four replacements on a substitution puzzle, does not reach the target word, and concludes that the puzzle does not come out. Explain why that conclusion is premature, and explain what it means to say that deciding whether substitution puzzles come out is unsolvable.
+**12.** A student tries four sequences of replacements on a substitution puzzle, fails to reach the target word, and concludes that the puzzle does not come out. Deciding whether substitution puzzles come out is known to be unsolvable. Which statement is correct?
+A. The conclusion is sound, because four failed attempts show that no derivation exists
+B. The conclusion is sound, because unsolvable means no such puzzle can ever be settled
+C. The conclusion is premature, and unsolvable means every such puzzle has no derivation
+D. The conclusion is premature, and unsolvable means no single method settles every puzzle
 
 ---
 
@@ -95,18 +111,18 @@ P, R, Q compares situations before any problem is stated; R, Q, P produces ideas
 
 Running P and waiting never returns LOOPS, because you cannot know the wait is endless; restricting x does not remove the impossibility; a universal Turing machine can run anything with an instruction table, and H has none.
 
-**9.** *Deriving a word in a substitution puzzle.* Start: BOB. Apply OB → BOOB to the OB at the end: B + BOOB = BBOOB. Apply OB → BOOB again to the OB at the end: BBO + BOOB = BBOBOOB. Now BBOBOOB contains BOB as its second, third and fourth letters; apply BOB → O: B + O + OOB = BOOOB.
+**9. A** — *Deriving a word in a substitution puzzle.* BOB ends in OB, so OB → BOOB gives B + BOOB = BBOOB. BBOOB again ends in OB, so the same rule gives BBO + BOOB = BBOBOOB. BBOBOOB holds BOB in its second, third and fourth letters, so BOB → O gives B + O + OOB = BOOOB.
 
-A correct answer shows the three words BBOOB, BBOBOOB, BOOOB in that order with the rule used at each step. Applying BOB → O first gives the single letter O, from which nothing can be made; an answer that stops there and says the puzzle does not come out is wrong.
+BBOOB contains no BOB, and its only legal move lengthens it, so it cannot reach BOOOB in one step. Applying BOB → O first leaves the single letter O, to which neither rule applies. BOOBB is not produced by either rule from BOB.
 
-**10.** *Solving an exam-marks problem and classifying it.* Let c be the number correct, so 50 − c are wrong. Score: 4c − 2(50 − c) = 170, so 4c − 100 + 2c = 170, 6c = 270, c = 45. Check: 45 × 4 = 180, 5 wrong lose 10, 180 − 10 = 170.
+**10. C** — *Solving a marks-and-penalty problem.* Let c be the number correct, so 50 − c are wrong. Then 4c − 2(50 − c) = 170, which is 6c − 100 = 170, so 6c = 270 and c = 45. Check: 45 correct score 180 and 5 wrong lose 10, giving 170.
 
-Final answer: 45 correct (5 wrong). The problem is non-routine in the sense of the week: it gives no standard method to apply, only arithmetic facts, so a method (setting up the equation, or guess and adjust) had to be devised first. A correct answer reaches 45 with a check, and classifies it as non-routine because no standard method is supplied, not because it lacks arithmetic. Routine is accepted only if the answer argues that setting up a linear equation is itself a standard algorithm.
+42 ignores the penalty and just divides 170 by 4; 35 adds the penalty instead of subtracting it, solving 4c + 2(50 − c) = 170; 5 is the number of wrong answers, not the number correct.
 
-**11.** *Distinguishing trial and error, abstraction, heuristics and brainstorming.* (a) Trial and error: candidates are tried one after another and the failures discarded until one is accepted; the test is successive trials with a few candidates. (b) Abstraction: everything not needed for finding a route is deleted, leaving a model; the test is that attributes were thrown away. (c) Heuristics: one quick rule of thumb is accepted without checking, trading rationality for speed; the test is a single unchecked shortcut. (d) Brainstorming: a group produces many ideas spontaneously with criticism deferred; the test is quantity plus no judging.
+**11. B** — *Distinguishing trial and error, abstraction, heuristics and brainstorming.* (a) is trial and error: candidates are tried one after another and the losers discarded. (b) is abstraction: every attribute not needed for finding a route has been thrown away, leaving a model. (c) is a heuristic: one unchecked rule of thumb, speed in place of rationality. (d) is brainstorming: many ideas produced quickly by a group with judgement deferred.
 
-A correct answer names all four correctly and gives a distinguishing test for each. Calling (c) trial and error is wrong because nothing was tried and rejected; calling (b) means-ends analysis is wrong because nothing was split into sub-problems.
+Swapping (c) and (d) misses that nothing in (d) is a shortcut and nothing in (c) is a group. Calling (a) a heuristic ignores the four trials. Calling (b) means-ends analysis is wrong because nothing is split into sub-goals.
 
-**12.** *Premature conclusion versus genuine unsolvability.* Four failed attempts show only that those four paths do not work; other orders and other positions of the replacements remain untried, and a puzzle may need many more steps than four. Nothing has been proved about the puzzle, so the conclusion is premature.
+**12. D** — *Premature conclusion versus genuine unsolvability.* Four failed attempts rule out four paths and nothing more: other orders and other positions for the replacements are untried, and a derivation may need far more than four steps. So the conclusion is premature.
 
-Saying the deciding problem is unsolvable means something quite different: no single systematic method exists that, for every substitution puzzle, correctly answers whether it comes out. Individual puzzles can still be settled, by finding a derivation or by an argument that none exists. A correct answer makes both points: a few failures prove nothing about one puzzle, and unsolvable is a claim about the absence of a universal method, not about any particular puzzle having no answer.
+Unsolvable is a claim about methods, not about puzzles: no single systematic method answers the question for every puzzle. Individual puzzles are still settled all the time, by exhibiting a derivation or by an argument that none exists, which is why the other three readings are wrong.

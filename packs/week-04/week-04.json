@@ -319,28 +319,56 @@
           "why": "Continuity needs lim(x→a) f(x) to exist and to equal f(a). The two-sided limit fails because the sides disagree (1 ≠ 4), and no choice of f(a) changes what the sides approach. A jump is a failure of the second condition, so redefining one point cannot fix it.\n\nChoosing 1 or 2.5 for f(a) still leaves the one-sided limits at 1 and 4; 'now continuous' matches f(a) to one side only, but the other side still disagrees."
         },
         {
-          "type": "short",
-          "q": "For x < −1 a curve falls and ends in an open circle at (−1, 2). For x > −1 the curve starts at a solid dot at (−1, 5) and continues. State lim(x→−1⁻) f(x), lim(x→−1⁺) f(x), lim(x→−1) f(x) and f(−1), and name the type of discontinuity. Show your working.",
+          "type": "mcq",
+          "q": "For x < −1 a curve falls and ends in an open circle at (−1, 2). For x > −1 the curve starts at a solid dot at (−1, 5) and continues upward. Give lim(x→−1⁻) f(x), lim(x→−1⁺) f(x), lim(x→−1) f(x), f(−1) and the type of discontinuity.",
+          "options": [
+            "2, 5, DNE, 2; jump",
+            "2, 5, DNE, 5; jump",
+            "2, 5, 5, 5; removable",
+            "2, 5, DNE, 5; removable"
+          ],
+          "answerIndex": 1,
           "concept": "Reading all four quantities from a graph",
-          "why": "Left branch: the curve runs into height 2 as x → −1 from below, so lim(x→−1⁻) f(x) = 2 (the open circle still shows the approach height). Right branch: it starts at height 5, so lim(x→−1⁺) f(x) = 5. Since 2 ≠ 5, lim(x→−1) f(x) = DNE. The solid dot gives the value: f(−1) = 5.\n\nBoth one-sided limits are finite but unequal, so this is a jump discontinuity. A correct answer states 2, 5, DNE, 5 and 'jump'; 'does not exist' or 'no limit' is accepted for DNE. Writing f(−1) = 2 (reading the open circle) or lim(x→−1) f(x) = 5 (taking one side as the two-sided limit) is wrong."
+          "why": "The left branch runs into height 2, so lim(x→−1⁻) f(x) = 2; an open circle still records the height being approached. The right branch starts at height 5, so lim(x→−1⁺) f(x) = 5. The two sides disagree, so lim(x→−1) f(x) is DNE, while the solid dot fixes the value f(−1) = 5. Two finite but unequal one-sided limits is exactly a jump discontinuity.\n\nReading f(−1) off the open circle gives 2, calling the two-sided limit 5 takes one side for both, and 'removable' would need the two sides to agree."
         },
         {
-          "type": "short",
-          "q": "f(x) = (x² − x − 6)/(x − 3). Find lim(x→3) f(x), state whether f(3) is defined, and name the type of discontinuity at x = 3. Show your working.",
+          "type": "mcq",
+          "q": "f(x) = (x² − x − 6)/(x − 3). Find lim(x→3) f(x), say whether f(3) is defined, and name the type of discontinuity at x = 3.",
+          "options": [
+            "0, f(3) undefined, removable",
+            "DNE, f(3) undefined, infinite",
+            "5, f(3) undefined, removable",
+            "5, f(3) = 5, so f is continuous there"
+          ],
+          "answerIndex": 2,
           "concept": "Removable discontinuity of a rational function",
-          "why": "Substituting x = 3 gives (9 − 3 − 6)/(3 − 3) = 0/0, which is indeterminate and only tells you to factor. x² − x − 6 = (x − 3)(x + 2), so for x ≠ 3, f(x) = x + 2, and lim(x→3) f(x) = 3 + 2 = 5 from both sides. At x = 3 itself the denominator is 0, so f(3) is undefined.\n\nThe limit exists and is finite but f(3) is undefined, so this is a removable discontinuity: the line y = x + 2 with a hole at (3, 5). A correct answer shows the factorisation, gives the limit 5, says f(3) is undefined (or 'does not exist'), and says 'removable' (or 'a hole'). Writing 'limit DNE because 0/0' is wrong."
+          "why": "Substituting 3 gives (9 − 3 − 6)/0 = 0/0, which is a signal to factor rather than an answer. Since x² − x − 6 = (x − 3)(x + 2), for every x ≠ 3 the function equals x + 2, so lim(x→3) f(x) = 5 from both sides, while f(3) itself is undefined because the denominator vanishes. A limit that exists at a point where the function does not is the removable case: the line y = x + 2 with a hole at (3, 5).\n\n'DNE because 0/0' misreads the indeterminate form, 0 reads the numerator alone, and f(3) = 5 forgets that cancelling does not restore the point."
         },
         {
-          "type": "short",
-          "q": "f(x) = x² for x ≤ 1 and f(x) = 2 − x for x > 1. Check the three continuity conditions at x = 1 and state whether f is continuous there. Show your working.",
+          "type": "mcq",
+          "q": "f(x) = x² for x ≤ 1 and f(x) = 2 − x for x > 1. Give f(1), the left limit and the right limit at x = 1, and say whether f is continuous there.",
+          "options": [
+            "f(1) = 1, left 1, right 1; continuous",
+            "f(1) = 1, left 1, right 2; not continuous",
+            "f(1) = 2, left 2, right 1; not continuous",
+            "f(1) = 1, left 1, right 1; not continuous, since the two rules differ"
+          ],
+          "answerIndex": 0,
           "concept": "Continuity of a piecewise function at its join",
-          "why": "(i) f(1) uses the first piece because 1 ≤ 1: f(1) = 1² = 1, so f is defined at 1. (ii) Left: lim(x→1⁻) x² = 1. Right: lim(x→1⁺) (2 − x) = 2 − 1 = 1. They agree, so lim(x→1) f(x) = 1 exists. (iii) lim(x→1) f(x) = 1 = f(1).\n\nAll three conditions hold, so f is continuous at x = 1. A correct answer shows f(1) = 1, both one-sided limits equal to 1, the comparison with f(1), and the conclusion 'continuous'. Using the wrong piece for f(1) (giving 2 − 1 = 1 by luck here) should still be marked down if the reasoning says x = 1 belongs to the second piece."
+          "why": "Because 1 ≤ 1, the value comes from the first piece: f(1) = 1² = 1, so f is defined there. From the left, lim x² = 1; from the right, lim (2 − x) = 2 − 1 = 1, so the two sides agree and lim(x→1) f(x) = 1 exists. That limit equals f(1), so all three conditions hold and f is continuous at x = 1.\n\nA right limit of 2 substitutes into 2 − x carelessly, f(1) = 2 uses the wrong piece, and the last option confuses different formulas with a genuine break."
         },
         {
-          "type": "short",
-          "q": "Explain why lim(x→c) f(x) exists only when lim(x→c⁻) f(x) and lim(x→c⁺) f(x) agree on the same finite real number. Describe both ways the criterion can fail and say what each looks like on a graph.",
+          "type": "mcq",
+          "q": "lim(x→c) f(x) exists only when the two one-sided limits agree on the same finite real number. Which pair names the two ways that can fail?",
+          "options": [
+            "f(c) is undefined, or f(c) differs from the limit",
+            "The curve has a corner at c, or f is not differentiable at c",
+            "The one-sided limits agree but f(c) is undefined, or f(c) is infinite",
+            "The one-sided limits are different finite numbers, or one side is unbounded"
+          ],
+          "answerIndex": 3,
           "concept": "Existence criterion for a two-sided limit",
-          "why": "A two-sided limit is a single number that f gets close to no matter which side x comes from. If the left and right approaches give different finite heights (say 3 from the left and −4 from the right) there is no single number, so the limit does not exist; on the graph the curve breaks and restarts at a different height, a jump. If one side runs off to +∞ or −∞ the heights never settle on any real number, so again the limit does not exist; the graph hugs a vertical asymptote and rises or falls without bound.\n\nA correct answer says the limit must be one finite real number, names the two failures (sides disagree; a side is unbounded), and describes the jump and the vertical asymptote. It should be clear that 'limit = ∞' is a description of failure, not a value."
+          "why": "A two-sided limit is a single finite number that f approaches from either side. It fails if the sides settle on different heights, which on a graph is a break where the curve restarts at a new level, a jump. It also fails if a side runs off to +∞ or −∞, since the heights never settle on any real number, and the graph then hugs a vertical asymptote. Note that 'limit = ∞' describes a failure, not a value.\n\nThe options about f(c) describe continuity failing, not the limit failing, and a corner has a perfectly good limit."
         }
       ]
     },
@@ -456,28 +484,56 @@
           "why": "A zeroed ideal voltage source holds 0 V across itself whatever current flows, which is exactly what a wire does, so it is replaced by a short circuit.\n\nAn open circuit is what replaces a zeroed current source (it passes 0 A at any voltage), the commonest mix-up; a 9 Ω resistor confuses the emf with a resistance; reversing the battery leaves it active, and superposition needs it switched off."
         },
         {
-          "type": "short",
-          "q": "A cell of emf 6.0 V and internal resistance 0.30 Ω is connected to a 2.7 Ω resistor. Calculate the current, the terminal voltage, and the power wasted inside the cell. Show your working.",
+          "type": "mcq",
+          "q": "A cell of emf 6.0 V and internal resistance 0.30 Ω is connected to a 2.7 Ω resistor. What are the current, the terminal voltage and the power wasted inside the cell?",
+          "options": [
+            "2.2 A; 6.0 V; 1.5 W",
+            "2.0 A; 0.60 V; 1.2 W",
+            "2.0 A; 5.4 V; 10.8 W",
+            "2.0 A; 5.4 V; 1.2 W"
+          ],
+          "answerIndex": 3,
           "concept": "Current and terminal voltage of a cell driving a load",
-          "why": "Single loop: I = ε/(R + r) = 6.0/(2.7 + 0.30) = 6.0/3.0 = 2.0 A. Terminal voltage V = ε − Ir = 6.0 − (2.0)(0.30) = 5.4 V; check V = IR = 2.0 × 2.7 = 5.4 V. Power wasted inside the cell P = I²r = (2.0)²(0.30) = 1.2 W.\n\nA correct answer states I = 2.0 A, V = 5.4 V and P = 1.2 W with units. Accept 5.4 V reached either as ε − Ir or as IR. I = 6.0/2.7 = 2.2 A (r forgotten) or V = 6.0 V (I = 0 assumed) are wrong."
+          "why": "One loop, so I = ε/(R + r) = 6.0/3.0 = 2.0 A. The terminal voltage is V = ε − Ir = 6.0 − 0.60 = 5.4 V, which checks against IR = 5.4 V. The power wasted inside is P = I²r = (2.0)²(0.30) = 1.2 W.\n\n2.2 A leaves r out of the current; 0.60 V quotes the lost volts Ir as the terminal voltage; 10.8 W is I²R, the power in the load rather than in the cell."
         },
         {
-          "type": "short",
-          "q": "A dipole has moment 6.0 × 10⁻¹² C·m. Taking k = 9.0 × 10⁹ N·m²/C², calculate the field at a point 3.0 cm from the centre on the equatorial plane, give its direction relative to p, and state the axial field at the same distance. Show your working.",
+          "type": "mcq",
+          "q": "A dipole has moment 6.0 × 10⁻¹² C·m. Take k = 9.0 × 10⁹ N·m²/C². What is the field 3.0 cm from its centre on the equatorial plane, and the axial field at the same distance?",
+          "options": [
+            "2.0 × 10³ N/C antiparallel to p; axial 4.0 × 10³ N/C",
+            "2.0 × 10³ N/C parallel to p; axial 4.0 × 10³ N/C",
+            "4.0 × 10³ N/C antiparallel to p; axial 2.0 × 10³ N/C",
+            "60 N/C antiparallel to p; axial 120 N/C"
+          ],
+          "answerIndex": 0,
           "concept": "Equatorial and axial field of a dipole",
-          "why": "Equatorial: E = kp/r³ = (9.0 × 10⁹)(6.0 × 10⁻¹²)/(0.030)³ = 0.054/(2.7 × 10⁻⁵) = 2.0 × 10³ N/C, directed antiparallel to p (from +q toward −q). Axial at the same r: E = 2kp/r³ = 4.0 × 10³ N/C, parallel to p.\n\nA correct answer gives 2.0 × 10³ N/C (accept 1.9 × 10³ to 2.1 × 10³), says antiparallel or opposite to p, and gives 4.0 × 10³ N/C for the axial value, exactly twice. Dividing by r² (giving 60 N/C) or stating the equatorial field is parallel to p is wrong."
+          "why": "On the equatorial plane E = kp/r³ = (9.0 × 10⁹)(6.0 × 10⁻¹²)/(0.030)³ = 0.054/2.7 × 10⁻⁵ = 2.0 × 10³ N/C, pointing antiparallel to p, from +q back toward −q. On the axis at the same distance E = 2kp/r³ = 4.0 × 10³ N/C, parallel to p.\n\n'Parallel' is the axial direction, not the equatorial one; the third option swaps axial and equatorial; 60 N/C divides by r², the point-charge power, instead of r³."
         },
         {
-          "type": "short",
-          "q": "A 50 pF air capacitor is charged to 200 V and then disconnected from the battery. A slab of dielectric constant κ = 4.0 is slid in to fill the gap. Calculate the charge on the plates, the new capacitance and the new voltage. Show your working.",
+          "type": "mcq",
+          "q": "A 50 pF air capacitor is charged to 200 V and then disconnected from the battery. A slab of dielectric constant κ = 4.0 is slid in to fill the gap. What are the charge, the new capacitance and the new voltage?",
+          "options": [
+            "10 nC; 200 pF; 200 V",
+            "10 nC; 200 pF; 50 V",
+            "40 nC; 200 pF; 200 V",
+            "10 nC; 12.5 pF; 800 V"
+          ],
+          "answerIndex": 1,
           "concept": "Dielectric inserted at constant charge",
-          "why": "Q = C₀V₀ = (50 × 10⁻¹²)(200) = 1.0 × 10⁻⁸ C. With the battery disconnected this charge cannot change. New capacitance C = κC₀ = 4.0 × 50 pF = 200 pF. New voltage V = Q/C = 1.0 × 10⁻⁸/2.0 × 10⁻¹⁰ = 50 V, which is V₀/κ.\n\nA correct answer states Q = 1.0 × 10⁻⁸ C (10 nC), C = 200 pF and V = 50 V, and keeps Q fixed. Saying V stays at 200 V while Q rises to 4.0 × 10⁻⁸ C describes the battery-still-connected case and is wrong here."
+          "why": "Before insertion Q = C₀V₀ = (50 × 10⁻¹²)(200) = 1.0 × 10⁻⁸ C, and with the battery disconnected that charge has nowhere to go, so it is fixed. The capacitance rises to C = κC₀ = 200 pF, so V = Q/C = 1.0 × 10⁻⁸/2.0 × 10⁻¹⁰ = 50 V, which is V₀/κ.\n\nHolding V at 200 V and letting Q rise to 40 nC is the battery-still-connected case; 12.5 pF divides by κ instead of multiplying."
         },
         {
-          "type": "short",
-          "q": "An electric dipole is placed in a uniform electric field at some angle to the field. Explain why the net force on the dipole is zero but the torque is generally not, and state the orientation at which the torque vanishes.",
+          "type": "mcq",
+          "q": "An electric dipole is placed in a uniform electric field at some angle to the field. Why is the net force on it zero while the torque generally is not, and at what orientations does the torque vanish?",
+          "options": [
+            "The two forces differ in size but act along one line; the torque vanishes at 90°",
+            "The field acts only on the positive charge, giving one force and one torque; it vanishes at 90°",
+            "The forces are equal and opposite along the same line, so force and torque are both zero at every angle",
+            "The forces are equal and opposite but act along different lines, forming a couple τ = pE sin θ; it vanishes at 0° and 180°"
+          ],
+          "answerIndex": 3,
           "concept": "Force and torque on a dipole in a uniform field",
-          "why": "In a uniform field the two charges feel forces of equal magnitude qE in opposite directions (+q along E, −q against E), so the forces cancel and the net force is zero. But the two forces act along different lines, separated by the dipole's length, so they form a couple with moment τ = pE sin θ, which is non-zero unless sin θ = 0. The torque vanishes when p is parallel to E (θ = 0°, stable) or antiparallel (θ = 180°, unstable).\n\nA correct answer mentions equal and opposite forces qE and −qE, the different lines of action giving a couple, τ = pE sin θ, and θ = 0° (accept 180° as well) for zero torque."
+          "why": "In a uniform field the two charges feel qE along E and qE against it, equal in size and opposite in direction, so the net force is zero. Their lines of action are separated by the dipole's length, however, so they form a couple of moment τ = pE sin θ, which is zero only when sin θ = 0, that is at θ = 0° (stable) or 180° (unstable).\n\nUnequal forces would need a non-uniform field; the field acts on both charges; and θ = 90° is where the torque is largest, not zero."
         }
       ]
     },
@@ -593,28 +649,56 @@
           "why": "The reasoning happens before the algorithm is implemented in any programming language and is independent of the language, which is priori analysis.\n\nPosterior analysis is carried out after implementation and measures the space and running time the program actually uses; space complexity concerns memory, not statement counts; average case is a category of time complexity, not a type of analysis."
         },
         {
-          "type": "short",
-          "q": "Trace this and give the value of total after each iteration, then the printed value. Show your working.\n\n```\ntotal = 0\nk = 1\nwhile k <= 4:\n    total = total + k * k\n    k = k + 1\nprint(total)\n```",
+          "type": "mcq",
+          "q": "What does this print?\n\n```python\ntotal = 0\nk = 1\nwhile k <= 4:\n    total = total + k * k\n    k = k + 1\nprint(total)\n```",
+          "options": [
+            "30",
+            "55",
+            "10",
+            "16"
+          ],
+          "answerIndex": 0,
           "concept": "Tracing an accumulator step by step",
-          "why": "k = 1: total = 0 + 1 = 1. k = 2: total = 1 + 4 = 5. k = 3: total = 5 + 9 = 14. k = 4: total = 14 + 16 = 30. Then k = 5, the test k ≤ 4 fails, and 30 is printed.\n\nA correct answer lists the running totals 1, 5, 14, 30 in order and states that 30 is printed. Listing 1, 4, 9, 16 gives the squares rather than the totals and is not accepted; 10 comes from adding k instead of k × k; 55 continues to k = 5 and is wrong."
+          "why": "The running totals are 0 + 1 = 1, 1 + 4 = 5, 5 + 9 = 14 and 14 + 16 = 30. At k = 5 the test k ≤ 4 fails and 30 is printed.\n\n55 runs one pass too many and adds 25; 10 adds k rather than k × k; 16 keeps only the last square instead of accumulating."
         },
         {
-          "type": "short",
-          "q": "Write pseudocode that reads numbers from the user until 0 is entered, then prints how many of the numbers entered were negative. The 0 itself is not counted.",
+          "type": "mcq",
+          "q": "Numbers are entered one at a time until 0 is entered, and the 0 itself is not counted. Which design prints how many of the entered numbers were negative?",
+          "options": [
+            "Set the counter to 0, read n, then loop while n ≠ 0 testing n < 0, with no further read inside the loop",
+            "Read n, then loop while n ≠ 0 setting the counter to 0, testing n < 0 and reading the next n",
+            "Set the counter to 0, read n, then loop while n ≠ 0 testing n < 0 and reading the next n at the foot",
+            "Set the counter to 0, read n, then loop while n ≥ 0 testing n < 0 and reading the next n at the foot"
+          ],
+          "answerIndex": 2,
           "concept": "Writing a sentinel-controlled counting loop",
-          "why": "Model answer:\n\n```\nnegatives = 0\nenter n\nwhile n ≠ 0\n    if n < 0 then negatives = negatives + 1\n    enter n\nprint negatives\n```\n\nA correct answer must have a counter set to 0 before the loop, a loop whose condition tests for the sentinel 0, a selection (n < 0) that adds 1 to the counter, a fresh read of n inside the loop so the condition can change, and the print after the loop. A repeat-until form, a Python while True with break, or reading once before the loop and again at the end of the body are all accepted. Not accepted: the counter reset inside the loop, no second read (the loop never ends), or a condition that also counts the 0."
+          "why": "The counter is set once before the loop; the condition tests the sentinel, n ≠ 0; the body adds 1 when n < 0 and then reads the next n so the condition sees a fresh value; the count is printed after the loop. For 4, −3, −7, 8, 0 it prints 2.\n\nWith no read inside the body the condition never changes and the loop runs forever. Setting the counter to 0 inside the loop throws the count away on every pass. The condition n ≥ 0 stops at the first negative number, which is exactly the case being counted."
         },
         {
-          "type": "short",
-          "q": "Five actions from a project to find the largest of a set of numbers entered by a user:\n(a) Ask whether the same algorithm could also find the smallest number.\n(b) Write the three lines: declare and initialise variables; input numbers; determine the maximum and output it.\n(c) Ask what type of data the user will enter and what result is expected.\n(d) Notice that the request never says how many numbers will be entered.\n(e) Replace 'input numbers' with a loop that prompts, reads, compares with the current maximum and counts, until a sentinel is entered.\nPut them in the order of the five algorithm development steps and name each step.",
+          "type": "mcq",
+          "q": "Five actions come from a project to find the largest of a set of numbers entered by a user. (a) Ask whether the same algorithm could also find the smallest number. (b) Write three lines: declare and initialise variables; input numbers; determine the maximum and output it. (c) Ask what type of data the user will enter and what result is expected. (d) Notice that the request never fixes how many numbers will be entered. (e) Replace 'input numbers' with a loop that prompts, reads, compares with the current maximum and counts, until a sentinel is entered. In what order do these match the five algorithm development steps?",
+          "options": [
+            "c, d, b, e, a",
+            "d, c, b, e, a",
+            "d, c, e, b, a",
+            "a, d, c, b, e"
+          ],
+          "answerIndex": 1,
           "concept": "Ordering the algorithm development steps",
-          "why": "Order: d, c, b, e, a. (d) is Step 1, problem description, because it spots an incomplete description; (c) is Step 2, problem analysis, fixing the starting and ending points; (b) is Step 3, high-level algorithm development, main parts only; (e) is Step 4, algorithm refinement, adding detail to one high-level line; (a) is Step 5, algorithm review, asking whether the algorithm solves more general problems.\n\nA correct answer gives the order d c b e a and the five step names in that order. Swapping (b) and (e) confuses the high-level algorithm with its refinement; placing (a) first confuses review with description."
+          "why": "Step 1 is the problem description, and (d) is where the description is found to be incomplete. Step 2 is problem analysis, and (c) fixes the starting and ending points. Step 3 is the high-level algorithm, the three main parts in (b). Step 4 is refinement, and (e) adds detail to one of those parts. Step 5 is review, and (a) asks whether the algorithm solves a more general problem.\n\nPutting (c) first analyses a description not yet known to be incomplete; swapping (b) and (e) puts the refined detail before the plan it refines; starting with (a) reviews an algorithm that does not exist."
         },
         {
-          "type": "short",
-          "q": "A linear search checks n items one at a time for a target value. State the number of comparisons in the best case and in the worst case, and explain why the worst case is the figure usually quoted for an algorithm.",
+          "type": "mcq",
+          "q": "A linear search checks n items one at a time for a target value. How many comparisons does it make in the best case and in the worst case, and why is the worst case the figure usually quoted?",
+          "options": [
+            "1 and n; the worst case is the most likely input",
+            "1 and n/2; the worst case is the average over all inputs",
+            "n and n²; the worst case guarantees an upper bound for any input of size n",
+            "1 and n; the worst case guarantees an upper bound for any input of size n"
+          ],
+          "answerIndex": 3,
           "concept": "Best case versus worst case time complexity",
-          "why": "Best case: the target is the first item, 1 comparison. Worst case: the target is last or absent, n comparisons. The worst case is quoted because it is a guarantee: whatever input of size n arrives, the algorithm needs at most that much time, so it can be relied on for planning and for comparing algorithms. The best case describes only the luckiest input and says nothing about the others.\n\nA correct answer states 1 and n, and gives the guarantee (upper bound for any input of size n) as the reason. Mentioning that the average case describes a typical input is a bonus, not required."
+          "why": "The best case is the target sitting first: 1 comparison. The worst case is the target last or absent: n comparisons. The worst case is the figure quoted because it is a promise that holds for every input of size n, so it can be relied on for planning and for comparing two algorithms.\n\nThe worst case is neither the most likely input nor the average; n/2 is the average when the target sits at a random position; n and n² belong to a method that compares every pair rather than scanning once."
         }
       ]
     },
@@ -730,28 +814,56 @@
           "why": "The limit exists when both one-sided limits are the same finite number, and continuity then needs that number to equal f(c). Readings 4, 4 with f(c) = 1 give a limit of 4 that does not match the value: the limit exists, continuity fails (removable).\n\n4, 1, 4 has unequal sides, so the limit itself does not exist; 4, 4, 4 satisfies all three conditions, so f is continuous; +∞, 4, 4 has an unbounded side, so the limit does not exist."
         },
         {
-          "type": "short",
-          "q": "A graph has a vertical dashed line at x = −1. To its left the curve climbs upward hugging the line; to its right it plunges downward hugging the line. There is no dot at x = −1. State lim(x→−1⁻) f(x), lim(x→−1⁺) f(x), lim(x→−1) f(x) and f(−1), classify the discontinuity, and say whether choosing a value for f(−1) could repair it. Show your working.",
+          "type": "mcq",
+          "q": "A vertical dashed line sits at x = −1. To its left the curve climbs upward hugging the line; to its right it plunges downward hugging the line. There is no dot at x = −1. Give lim(x→−1⁻) f(x), lim(x→−1⁺) f(x), lim(x→−1) f(x), f(−1), the type of discontinuity, and whether choosing a value for f(−1) repairs it.",
+          "options": [
+            "+∞, −∞, DNE, undefined; infinite, not repairable",
+            "+∞, −∞, ∞, f(−1) = ∞; infinite, repairable by setting f(−1) = ∞",
+            "−∞, +∞, DNE, undefined; jump, not repairable",
+            "+∞, −∞, DNE, undefined; removable, repairable by setting f(−1) = 0"
+          ],
+          "answerIndex": 0,
           "concept": "Reading an infinite discontinuity from a graph",
-          "why": "Left: the curve rises without bound as x → −1 from below, so lim(x→−1⁻) f(x) = +∞. Right: it falls without bound, so lim(x→−1⁺) f(x) = −∞. Neither is a real number (and they disagree), so lim(x→−1) f(x) = DNE. There is no solid dot, so f(−1) is undefined.\n\nThis is an infinite discontinuity with a vertical asymptote at x = −1. It cannot be repaired: the limit does not exist, so no value assigned to f(−1) can equal it. A correct answer gives +∞, −∞, DNE, undefined (or DNE), 'infinite', and 'no, because the limit does not exist'. Writing lim(x→−1) f(x) = ∞ as if it were a value, or suggesting a very large f(−1), is wrong."
+          "why": "Climbing without bound on the left gives lim(x→−1⁻) f(x) = +∞ and plunging on the right gives lim(x→−1⁺) f(x) = −∞. Neither is a real number and they disagree, so lim(x→−1) f(x) is DNE, and with no dot drawn f(−1) is undefined. A vertical asymptote like this is an infinite discontinuity, and no choice of f(−1) can repair it, because repair requires a limit to match and there is none.\n\nWriting the limit as ∞ treats a failure as a value, swapping the signs misreads the two branches, and 'removable' would need both sides to run into the same finite height."
         },
         {
-          "type": "short",
-          "q": "f(x) = x² for x < 1; f(x) = ax + b for 1 ≤ x < 3; f(x) = 2x + 1 for x ≥ 3. Find a and b so that f is continuous at both x = 1 and x = 3. Show your working.",
+          "type": "mcq",
+          "q": "f(x) = x² for x < 1; f(x) = ax + b for 1 ≤ x < 3; f(x) = 2x + 1 for x ≥ 3. Find a and b so that f is continuous at both x = 1 and x = 3.",
+          "options": [
+            "a = 2, b = −1",
+            "a = 4, b = −3",
+            "a = 3, b = −2",
+            "a = 3, b = 2"
+          ],
+          "answerIndex": 2,
           "concept": "Two constants for continuity at two joins",
-          "why": "At x = 1: left limit 1² = 1; right limit and value a(1) + b = a + b. Continuity needs a + b = 1. At x = 3: left limit 3a + b; right limit and value 2(3) + 1 = 7. Continuity needs 3a + b = 7. Subtract the first equation from the second: 2a = 6, so a = 3, then b = 1 − 3 = −2.\n\nFinal answer: a = 3, b = −2, so the middle piece is 3x − 2. Check: 3(1) − 2 = 1 and 3(3) − 2 = 7. A correct answer sets up both equations from matching one-sided limits and solves them; a = 3 with b = 2 (sign slip) or a + b = 1 alone (only one join checked) is wrong."
+          "why": "Matching at x = 1: the left limit is 1² = 1 and the middle piece gives a + b, so a + b = 1. Matching at x = 3: the middle piece gives 3a + b and the right piece gives 2(3) + 1 = 7, so 3a + b = 7. Subtracting the first equation from the second gives 2a = 6, so a = 3 and b = 1 − 3 = −2, and the middle piece is 3x − 2, which checks out as 1 at x = 1 and 7 at x = 3.\n\nb = 2 is a sign slip in the last step, and a = 2 or a = 4 comes from mismatching one of the two joins."
         },
         {
-          "type": "short",
-          "q": "f(x) = (x² − 4)/(x − 2) for x < 2, and f(x) = 3x − 2 for x ≥ 2. Decide whether f is continuous at x = 2 by checking the three conditions. Show your working.",
+          "type": "mcq",
+          "q": "f(x) = (x² − 4)/(x − 2) for x < 2, and f(x) = 3x − 2 for x ≥ 2. Give f(2), the left limit and the right limit at x = 2, and say whether f is continuous there.",
+          "options": [
+            "f(2) = 4, left undefined because of 0/0, right 4; not continuous",
+            "f(2) = 0, left 4, right 4; not continuous",
+            "f(2) = 4, left 0, right 4; not continuous",
+            "f(2) = 4, left 4, right 4; continuous"
+          ],
+          "answerIndex": 3,
           "concept": "Continuity at a join where one piece needs factoring",
-          "why": "(i) x = 2 belongs to the second piece: f(2) = 3(2) − 2 = 4, defined. (ii) Left: for x < 2, (x² − 4)/(x − 2) = (x − 2)(x + 2)/(x − 2) = x + 2, so lim(x→2⁻) f(x) = 4; substituting 2 directly gives 0/0, which is why you factor. Right: lim(x→2⁺) (3x − 2) = 4. The sides agree, so lim(x→2) f(x) = 4. (iii) 4 = f(2).\n\nAll three hold, so f is continuous at x = 2. A correct answer shows the factor-and-cancel step giving 4 on the left, 4 on the right, f(2) = 4, and concludes 'continuous'. Claiming the left limit is undefined because of 0/0, or evaluating f(2) with the first piece, is wrong."
+          "why": "x = 2 belongs to the second piece, so f(2) = 3(2) − 2 = 4 and the function is defined. On the left, substituting straight into (x² − 4)/(x − 2) gives 0/0, so factor: (x − 2)(x + 2)/(x − 2) = x + 2, and the left limit is 4. On the right, lim (3x − 2) = 4 as well, so the two-sided limit is 4 and equals f(2): f is continuous at x = 2.\n\nCalling the left limit undefined mistakes 0/0 for an answer, a left limit of 0 reads the numerator alone, and f(2) = 0 uses the first piece where its condition fails."
         },
         {
-          "type": "short",
-          "q": "At x = 4 both branches of a graph run into an open circle at (4, 2), and a solid dot sits at (4, 7). A student writes 'jump discontinuity, because the graph jumps from 2 to 7'. Explain what the student has confused and give the correct classification.",
+          "type": "mcq",
+          "q": "At x = 4 both branches of a graph run into an open circle at (4, 2), and a solid dot sits at (4, 7). A student calls this a jump discontinuity because the graph jumps from 2 to 7. What is the correct classification, and what was confused?",
+          "options": [
+            "Jump; the student is right, since the heights 2 and 7 differ",
+            "Removable; a jump needs the two one-sided limits to differ, but here both are 2",
+            "Infinite; a gap of 5 between the curve and the dot is a break of infinite type",
+            "Removable; the limit is 7 and the value f(4) = 2"
+          ],
+          "answerIndex": 1,
           "concept": "Removable versus jump classification from a graph",
-          "why": "The student compared the limit with the function value instead of comparing the two one-sided limits. A jump means the left and right branches run into different heights; here both branches run into the same height, 2, so lim(x→4) f(x) = 2 exists. The dot at (4, 7) is f(4), which is simply off the curve. That is the removable case: the limit exists but does not equal f(4), and redefining f(4) = 2 would repair it.\n\nA correct answer says the test for a jump is left limit versus right limit (not limit versus value), notes both sides give 2, and classifies the point as a removable discontinuity (a hole with a misplaced dot)."
+          "why": "The test for a jump compares the left limit with the right limit, not the limit with the value. Here both branches run into the same height, so lim(x→4) f(x) = 2 exists, and the dot at (4, 7) is simply f(4) sitting off the curve. A limit that exists but does not match the function value is the removable case, and redefining f(4) = 2 would close it up.\n\nThe last option has the limit and the value swapped, and 'infinite' would need a branch running off without bound."
         }
       ]
     },
@@ -867,28 +979,56 @@
           "why": "Superposition holds for quantities that are linear in the source strengths: branch currents and voltages add. Power P = I²R is quadratic, so (I₁ + I₂)²R ≠ I₁²R + I₂²R; the cross term 2I₁I₂R is lost. Power must be computed from the total current.\n\nThe current, the voltage across a resistor and a node voltage are all linear in the sources and superpose correctly."
         },
         {
-          "type": "short",
-          "q": "An 18 V source with negligible internal resistance is in series with 6.0 Ω; a 3.0 Ω resistor runs from that junction to ground, and the output terminals are across the 3.0 Ω. Calculate V_Th, R_Th and the Norton current, then the current in a 4.0 Ω load connected across the terminals. Show your working.",
+          "type": "mcq",
+          "q": "An 18 V source of negligible internal resistance is in series with 6.0 Ω, a 3.0 Ω resistor runs from that junction to ground, and the output terminals are across the 3.0 Ω. What are V_Th, R_Th and the current in a 4.0 Ω load placed across the terminals?",
+          "options": [
+            "V_Th = 6.0 V, R_Th = 2.0 Ω, I_L = 1.0 A",
+            "V_Th = 18 V, R_Th = 2.0 Ω, I_L = 3.0 A",
+            "V_Th = 6.0 V, R_Th = 9.0 Ω, I_L = 0.46 A",
+            "V_Th = 12 V, R_Th = 2.0 Ω, I_L = 2.0 A"
+          ],
+          "answerIndex": 0,
           "concept": "Thevenin equivalent and load current",
-          "why": "V_Th = open-circuit voltage = voltage across the 3.0 Ω by the divider rule = 18 × 3.0/(6.0 + 3.0) = 6.0 V. R_Th: short the 18 V source, then 6.0 and 3.0 are in parallel at the terminals, R_Th = 6.0 × 3.0/9.0 = 2.0 Ω. I_N = V_Th/R_Th = 3.0 A. Load: I = V_Th/(R_Th + R_L) = 6.0/(2.0 + 4.0) = 1.0 A. Check directly: 3.0 ∥ 4.0 = 1.71 Ω, I_source = 18/7.71 = 2.33 A, V_A = 4.0 V, I_L = 4.0/4.0 = 1.0 A.\n\nA correct answer states V_Th = 6.0 V, R_Th = 2.0 Ω, I_N = 3.0 A and I_L = 1.0 A. V_Th = 18 V (no divider) or R_Th = 9.0 Ω (series instead of parallel) is wrong."
+          "why": "With the load off, the divider gives V_Th = 18 × 3.0/(6.0 + 3.0) = 6.0 V. Shorting the ideal source puts 6.0 Ω and 3.0 Ω in parallel at the terminals, so R_Th = 18/9.0 = 2.0 Ω (and I_N = 6.0/2.0 = 3.0 A). The load then carries I = V_Th/(R_Th + R_L) = 6.0/6.0 = 1.0 A.\n\n18 V skips the divider; 9.0 Ω adds the two resistors in series instead of in parallel; 12 V takes the divider across the 6.0 Ω rather than the output resistor."
         },
         {
-          "type": "short",
-          "q": "A dipole made of charges ±4.0 nC experiences a maximum torque of 6.0 × 10⁻⁷ N·m when placed in a uniform field of 3.0 × 10⁵ N/C. Calculate the dipole moment and the separation of the charges, then the torque when p is at 30° to E. Show your working.",
+          "type": "mcq",
+          "q": "A dipole made of charges ±4.0 nC feels a maximum torque of 6.0 × 10⁻⁷ N·m in a uniform field of 3.0 × 10⁵ N/C. What are the dipole moment, the charge separation, and the torque when p is at 30° to E?",
+          "options": [
+            "2.0 × 10⁻¹² C·m; 0.25 mm; 3.0 × 10⁻⁷ N·m",
+            "2.0 × 10⁻¹² C·m; 0.50 mm; 5.2 × 10⁻⁷ N·m",
+            "2.0 × 10⁻¹² C·m; 0.50 mm; 6.0 × 10⁻⁷ N·m",
+            "2.0 × 10⁻¹² C·m; 0.50 mm; 3.0 × 10⁻⁷ N·m"
+          ],
+          "answerIndex": 3,
           "concept": "Dipole moment and separation from maximum torque",
-          "why": "τ = pE sin θ is a maximum when sin θ = 1, so p = τ_max/E = 6.0 × 10⁻⁷/3.0 × 10⁵ = 2.0 × 10⁻¹² C·m. Then d = p/q = 2.0 × 10⁻¹²/4.0 × 10⁻⁹ = 5.0 × 10⁻⁴ m = 0.50 mm. At 30°: τ = pE sin 30° = (6.0 × 10⁻⁷)(0.50) = 3.0 × 10⁻⁷ N·m.\n\nA correct answer states p = 2.0 × 10⁻¹² C·m, d = 0.50 mm (5.0 × 10⁻⁴ m) and τ = 3.0 × 10⁻⁷ N·m. Using 2q for the charge (d = 0.25 mm) or cos 30° for the torque (5.2 × 10⁻⁷ N·m) is wrong."
+          "why": "τ = pE sin θ peaks at sin θ = 1, so p = τ_max/E = 6.0 × 10⁻⁷/3.0 × 10⁵ = 2.0 × 10⁻¹² C·m. Since p = qd, d = 2.0 × 10⁻¹²/4.0 × 10⁻⁹ = 5.0 × 10⁻⁴ m = 0.50 mm. At 30°, τ = pE sin 30° = (6.0 × 10⁻⁷)(0.50) = 3.0 × 10⁻⁷ N·m.\n\n0.25 mm divides p by 2q instead of q; 5.2 × 10⁻⁷ N·m uses cos 30°; 6.0 × 10⁻⁷ N·m treats the torque as independent of the angle."
         },
         {
-          "type": "short",
-          "q": "A 200 pF capacitor is charged to 50 V and disconnected from the supply. A slab with κ = 2.5 is then inserted to fill the gap. Calculate the charge, the stored energy before and after insertion, and the energy lost. Show your working.",
+          "type": "mcq",
+          "q": "A 200 pF capacitor is charged to 50 V and disconnected from the supply. A slab with κ = 2.5 is then inserted to fill the gap. What are the stored energies before and after insertion, and the energy lost?",
+          "options": [
+            "2.5 × 10⁻⁷ J before; 1.0 × 10⁻⁷ J after; 1.5 × 10⁻⁷ J lost",
+            "2.5 × 10⁻⁷ J before; 6.3 × 10⁻⁷ J after; 3.8 × 10⁻⁷ J gained",
+            "5.0 × 10⁻⁷ J before; 2.0 × 10⁻⁷ J after; 3.0 × 10⁻⁷ J lost",
+            "2.5 × 10⁻⁷ J before; 1.0 × 10⁻⁷ J after; nothing is lost, it is stored in the slab"
+          ],
+          "answerIndex": 0,
           "concept": "Energy change when a dielectric is inserted at constant charge",
-          "why": "Q = C₀V₀ = (200 × 10⁻¹²)(50) = 1.0 × 10⁻⁸ C, fixed once the supply is removed. Before: U₀ = ½C₀V₀² = ½(200 × 10⁻¹²)(50)² = 2.5 × 10⁻⁷ J. After: C = κC₀ = 500 pF, V = Q/C = 20 V, U = ½QV = ½(1.0 × 10⁻⁸)(20) = 1.0 × 10⁻⁷ J, equal to U₀/κ. Energy lost = 2.5 × 10⁻⁷ − 1.0 × 10⁻⁷ = 1.5 × 10⁻⁷ J, the work done by the field pulling the slab in.\n\nA correct answer states Q = 1.0 × 10⁻⁸ C, U₀ = 2.5 × 10⁻⁷ J, U = 1.0 × 10⁻⁷ J and a loss of 1.5 × 10⁻⁷ J; also accepted U = Q²/2C. An energy that rises by κ describes the supply-still-connected case and is wrong."
+          "why": "Q = C₀V₀ = (200 × 10⁻¹²)(50) = 1.0 × 10⁻⁸ C and is fixed once the supply is off, so U₀ = ½C₀V₀² = 2.5 × 10⁻⁷ J. Afterwards C = κC₀ = 500 pF and V = Q/C = 20 V, giving U = ½QV = 1.0 × 10⁻⁷ J, exactly U₀/κ. The difference, 1.5 × 10⁻⁷ J, is the work the field does pulling the slab in.\n\nAn energy that rises by κ is the supply-still-connected case; 5.0 × 10⁻⁷ J drops the ½; and the energy really does leave the capacitor rather than sit in the slab."
         },
         {
-          "type": "short",
-          "q": "A charged parallel-plate capacitor is disconnected from its battery and a dielectric slab is inserted between the plates. Explain, in terms of what happens inside the dielectric, why the field between the plates falls and why the capacitance rises.",
+          "type": "mcq",
+          "q": "A charged parallel-plate capacitor is disconnected from its battery and a dielectric slab is inserted between the plates. Why does the field between the plates fall and the capacitance rise?",
+          "options": [
+            "The slab conducts charge away from the plates, so Q falls and C = Q/V rises",
+            "The slab pushes the plates further apart, so E = V/d falls and C rises",
+            "The slab absorbs the field energy, so E falls, and C rises because the energy now sits in the slab",
+            "Polarisation puts bound charge on the slab's faces; the opposing field cuts E to E₀/κ, so V falls while Q holds, and C = Q/V rises"
+          ],
+          "answerIndex": 3,
           "concept": "Polarisation of a dielectric",
-          "why": "The field of the plates polarises the dielectric: in each molecule the positive and negative charge centres are pulled slightly apart (or permanent dipoles line up), so a layer of bound negative charge appears on the face next to the positive plate and bound positive charge on the other face. These bound charges produce a field that opposes the applied field, so the net field inside falls to E₀/κ. With Q fixed, V = Ed falls by the same factor, and C = Q/V rises by κ.\n\nA correct answer mentions polarisation (charge shifting within molecules), bound surface charge, an opposing internal field giving E = E₀/κ, then V = Ed falling and C = Q/V rising."
+          "why": "The plates' field polarises the slab: charge centres inside each molecule separate slightly (or permanent dipoles line up), leaving bound negative charge on the face next to the positive plate and bound positive charge opposite. That bound charge produces a field opposing the applied one, so the net field falls to E₀/κ, and with Q fixed V = Ed falls by the same factor while C = Q/V rises by κ.\n\nA dielectric is an insulator and carries no charge away; the plate separation does not change; and absorbing energy is not what changes the capacitance."
         }
       ]
     },
@@ -1004,28 +1144,56 @@
           "why": "The same step is executed several times, and writing it out on separate lines is not sustainable, so a loop (while condition is true, do perform activity) is the right form: repetition.\n\nSelection executes a step only if a condition holds; sequence is the plain step-by-step order the five lines already have; stepwise refinement is a development step, not a representation form."
         },
         {
-          "type": "short",
-          "q": "Write Python or pseudocode that reads exactly 5 numbers from the user and prints their average. Use a loop, not five separate reads.",
+          "type": "mcq",
+          "q": "A fragment must read exactly 5 numbers from the user with a loop and print their average. Starting from count = 0 and total = 0, which combination of loop header and print line does that?",
+          "options": [
+            "`while count <= 5:` with `count = count + 1` in the body, and `print(total / 5)` after the loop",
+            "`while count < 5:` with `count = count + 1` in the body, and `print(total / 5)` inside the loop",
+            "`while count < 4:` with `count = count + 1` in the body, and `print(total / 5)` after the loop",
+            "`while count < 5:` with `count = count + 1` in the body, and `print(total / 5)` after the loop"
+          ],
+          "answerIndex": 3,
           "concept": "Writing a counted accumulator loop",
-          "why": "Model answer:\n\n```\ntotal = 0\ncount = 0\nwhile count < 5:\n    n = float(input())\n    total = total + n\n    count = count + 1\nprint(total / 5)\n```\n\nA correct answer must set the accumulator to 0 before the loop, run the loop exactly 5 times (a counter from 0 to 4, or for i in range(5)), read and add inside the loop, and divide by 5 once after the loop. Pseudocode such as 'enter n / total = total + n' inside a counted loop is accepted. Not accepted: a loop running 4 or 6 times, total set to 0 inside the loop, or dividing and printing inside the loop on every pass."
+          "why": "With count starting at 0, the test count < 5 lets the body run for count = 0, 1, 2, 3 and 4, which is exactly 5 reads, and the division happens once after the loop. For 4, 6, 10, 8, 2 the total is 30 and 6.0 is printed.\n\ncount <= 5 runs the body 6 times and asks for a sixth number; count < 4 reads only 4 numbers but still divides by 5, printing 5.6 for the same input; printing inside the loop prints five running averages instead of one final figure."
         },
         {
-          "type": "short",
-          "q": "Trace this and give the values of a, b and c at the end of each iteration, then the printed output. Show your working.\n\n```\na = 1\nb = 1\nfor k in range(4):\n    c = a + b\n    a = b\n    b = c\n    print(c, end=\" \")\n```",
+          "type": "mcq",
+          "q": "What does this print?\n\n```python\na = 1\nb = 1\nfor k in range(4):\n    c = a + b\n    a = b\n    b = c\n    print(c, end=\" \")\n```",
+          "options": [
+            "1 2 3 5",
+            "2 3 5 8",
+            "2 4 8 16",
+            "2 3 5 8 13"
+          ],
+          "answerIndex": 1,
           "concept": "Tracing variable updates in a loop",
-          "why": "Iteration 1: c = 1 + 1 = 2, a = 1, b = 2. Iteration 2: c = 1 + 2 = 3, a = 2, b = 3. Iteration 3: c = 2 + 3 = 5, a = 3, b = 5. Iteration 4: c = 3 + 5 = 8, a = 5, b = 8. Printed: 2 3 5 8.\n\nA correct answer shows the four (a, b, c) triples (1, 2, 2), (2, 3, 3), (3, 5, 5), (5, 8, 8) or an equivalent table, and the output 2 3 5 8. The trap is updating b before a, which gives c = 2, 4, 8, 16; that is not accepted."
+          "why": "Pass 1: c = 1 + 1 = 2, then a = 1 and b = 2. Pass 2: c = 1 + 2 = 3, a = 2, b = 3. Pass 3: c = 2 + 3 = 5, a = 3, b = 5. Pass 4: c = 3 + 5 = 8, a = 5, b = 8. The output is 2 3 5 8.\n\n2 4 8 16 comes from updating b before a, so both hold the new value and c doubles each pass; 1 2 3 5 prints the old b instead of c; the five-number list runs one pass too many, since range(4) gives four."
         },
         {
-          "type": "short",
-          "q": "Give the Big O time complexity of each fragment and name the loop rule that decides it. Then say how many times each loop body runs when n = 16.\n\n```\n(i)   i = n\n      while i > 0: i = i - 1\n(ii)  i = n\n      while i > 1: i = i // 2\n(iii) for i in range(n):\n          for j in range(n): s = s + 1\n```",
+          "type": "mcq",
+          "q": "Give the Big O time complexity of each fragment and how many times each loop body runs when n = 16.\n\n```\n(i)   i = n\n      while i > 0: i = i - 1\n(ii)  i = n\n      while i > 1: i = i // 2\n(iii) for i in range(n):\n          for j in range(n): s = s + 1\n```",
+          "options": [
+            "O(n), O(n), O(n²); 16, 16 and 256 runs",
+            "O(log n), O(n), O(n²); 4, 16 and 256 runs",
+            "O(n), O(log n), O(n²); 16, 4 and 256 runs",
+            "O(n), O(log n), O(n²); 16, 4 and 32 runs"
+          ],
+          "answerIndex": 2,
           "concept": "Big O of loops by the update rule",
-          "why": "(i) i decreases by a constant, so O(n); for n = 16 the body runs 16 times. (ii) i is divided by a constant, so O(log n); 16 → 8 → 4 → 2 → 1, the body runs 4 times. (iii) nested loops, complexity equals the number of times the innermost statement runs, n × n, so O(n²); for n = 16 that is 256 times.\n\nA correct answer gives O(n), O(log n), O(n²) with the rules (constant step; divide or multiply by a constant; nested loops count the innermost statement) and the counts 16, 4, 256. Giving O(n) for (ii) or 32 for (iii) is wrong."
+          "why": "(i) changes i by a constant step, so the body runs n times: O(n), and 16 runs at n = 16. (ii) divides i by a constant, so the count is log₂ n: 16 → 8 → 4 → 2 → 1 is 4 runs, giving O(log n). (iii) nests two loops of n, so the innermost statement runs n × n times: O(n²), and 16 × 16 = 256.\n\nCalling (ii) O(n) ignores the halving; 32 runs for (iii) adds the two loops instead of multiplying them; the remaining option swaps the first two complexities."
         },
         {
-          "type": "short",
-          "q": "To find the largest of n numbers, one student compares every number with every other number, about n² comparisons. Explain why a single pass over the list is enough, and state how many comparisons that single pass needs.",
+          "type": "mcq",
+          "q": "To find the largest of n numbers, one student compares every number with every other, about n² comparisons. A single pass that keeps the largest value seen so far also works. How many comparisons does that single pass need, and why is one pass enough?",
+          "options": [
+            "n − 1; each number is compared once with the largest of all the numbers before it",
+            "n; each number is compared once with the first number in the list",
+            "n − 1; each number is compared once with its immediate neighbour",
+            "n²/2; every pair is still compared, but only in one direction"
+          ],
+          "answerIndex": 0,
           "concept": "One-pass maximum versus pairwise comparison",
-          "why": "Keep one variable holding the largest value seen so far, starting from the first number. Each remaining number is compared with it once; if the number is bigger it replaces the current maximum. After the last number the variable holds the maximum, because every number was compared against the largest of those before it. That is n − 1 comparisons, O(n), instead of about n².\n\nA correct answer describes the running-maximum variable, the one comparison per number, and gives n − 1 (accept 'about n' or O(n)). Saying the maximum must be initialised from the first item rather than 0 is a bonus."
+          "why": "Set the running maximum to the first number, then compare each of the remaining n − 1 numbers with it and replace it whenever the new number is larger. The running maximum always holds the largest of everything seen so far, so after the last comparison it holds the largest of all n. That is n − 1 comparisons, which is O(n) rather than O(n²).\n\nComparing against the fixed first number never updates the reference and fails as soon as the first number is not the largest; neighbour comparisons find local order, not the maximum; n²/2 is the pairwise method the single pass replaces."
         }
       ],
       "slot": "fast"

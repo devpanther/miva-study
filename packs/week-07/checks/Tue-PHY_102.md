@@ -1,7 +1,7 @@
 # Tuesday — PHY_102 nightly check
 
 *Power in an A.C. circuit, as concepts.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A 240 V rms supply drives 5.0 A rms through a load at power factor 0.80. Calculate the average (real) power consumed.
 A. 960 W
@@ -51,13 +51,29 @@ B. Whether the current leads or lags the voltage
 C. The size of the phase angle between v and i
 D. The fraction of the volt-amperes that does work
 
-**9. (show your working)** A supply v(t) = 100 sin ωt V drives a current i(t) = 4.0 sin(ωt − 60°) A through a load. Calculate the average power and the apparent power. Show your working.
+**9.** A supply v(t) = 100 sin ωt V drives a current i(t) = 4.0 sin(ωt − 60°) A through a load. Calculate the average power and the apparent power.
+A. P = 200 W, S = 200 VA
+B. P = 173 W, S = 200 VA
+C. P = 100 W, S = 200 VA
+D. P = 200 W, S = 400 VA
 
-**10. (show your working)** A pure capacitor of reactance 25 Ω is connected across a 100 V rms supply. Calculate the rms current, the average power consumed and the reactive power. Show your working.
+**10.** A pure capacitor of reactance 25 Ω is connected across a 100 V rms supply. Calculate the rms current, the average power consumed and the reactive power.
+A. 4.0 A, 0 W, 400 var
+B. 4.0 A, 400 W, 0 var
+C. 4.0 A, 400 W, 400 var
+D. 4.0 A, 0 W, 100 var
 
-**11. (show your working)** With v = V₀ sin ωt and i = I₀ sin(ωt − φ), use the identity sin A sin B = ½[cos(A − B) − cos(A + B)] to write p(t) = vi as a constant plus one oscillating term. Hence show P = Vrms Irms cos φ. Show your working.
+**11.** With v = V₀ sin ωt and i = I₀ sin(ωt − φ), and using sin A sin B = ½[cos(A − B) − cos(A + B)], which expression equals p(t) = vi?
+A. (V₀I₀/2)[cos φ + cos(2ωt − φ)]
+B. V₀I₀[cos φ − cos(2ωt − φ)]
+C. (V₀I₀/2)[cos φ − cos(ωt − φ)]
+D. (V₀I₀/2)[cos φ − cos(2ωt − φ)]
 
-**12. (show your working)** The instantaneous power p(t) drawn by a load is measured and found to dip below zero for part of every cycle. Explain what a negative instantaneous power means physically, and whether this could happen for a purely resistive load.
+**12.** The instantaneous power p(t) drawn by a load dips below zero for part of every cycle. What does that tell you about the load?
+A. A pure resistor behaves the same way whenever v and i are both negative
+B. Energy flows back to the source at those instants, so the load must contain reactance
+C. The average power over a full cycle is negative
+D. The power factor of the load is greater than 1
 
 ---
 
@@ -95,18 +111,18 @@ D. The fraction of the volt-amperes that does work
 
 The other three options are all exactly what PF = P/S = cos φ tells you directly.
 
-**9.** *Average power from peak values and phase angle.* The amplitudes are peak values, so P = ½V₀I₀ cos φ = ½(100)(4.0)cos 60° = (200)(0.500) = 100 W. Equivalently V_rms = 70.7 V, I_rms = 2.83 A and P = (70.7)(2.83)(0.500) = 100 W. Apparent power S = ½V₀I₀ = V_rms I_rms = 200 VA.
+**9. C** — *Average power from peak values and phase angle.* The amplitudes given are peak values, so P = ½V₀I₀ cos φ = ½(100)(4.0)(cos 60°) = 100 W, and S = V_rms I_rms = ½V₀I₀ = 200 VA.
 
-Final answers: P = 100 W (accept 99 to 101 W) and S = 200 VA (accept 199 to 201 VA). Q = 173 var may be given as well but is not required. P = 400 W comes from using peak values without the ½ and dropping cos φ; P = 200 W drops cos φ only, which is S quoted as watts; both are wrong.
+P = 200 W drops cos φ and so quotes the apparent power in watts; P = 173 W uses sin φ, which is the reactive power in var; the pair 200 W and 400 VA treats the peak values as rms and loses the ½ throughout.
 
-**10.** *Average and reactive power of a pure reactance.* I = V/X_C = 100/25 = 4.0 A. In a pure capacitor the current leads the voltage by 90°, so cos φ = cos 90° = 0 and the average power P = V I cos φ = 0 W: energy is stored in the electric field for a quarter cycle and returned in the next, and none is dissipated. The reactive power is Q = V I sin φ = (100)(4.0)(1) = 400 var, capacitive (leading), which may be written −400 var.
+**10. A** — *Average and reactive power of a pure reactance.* I = V/X_C = 100/25 = 4.0 A. The current leads the voltage by 90° in a pure capacitor, so cos φ = 0 and P = V I cos φ = 0 W: energy stored in the electric field each quarter cycle is returned in the next. The reactive power is Q = V I sin φ = 400 var, equally I²X_C = (16)(25) = 400 var.
 
-Final answers: I = 4.0 A, P = 0 W, Q = 400 var (accept 400 var capacitive, 400 var leading or −400 var). Also accepted: Q = I²X_C = (16)(25) = 400 var or V²/X_C = 400 var. Writing P = 400 W confuses reactive with real power and is wrong.
+400 W as the real power calls stored energy dissipated energy; 400 W together with 400 var counts the same energy twice; 100 var is I X_C with the current not squared.
 
-**11.** *Deriving average power from the instantaneous power.* p(t) = V₀I₀ sin ωt sin(ωt − φ). With A = ωt and B = ωt − φ, A − B = φ and A + B = 2ωt − φ, so p(t) = (V₀I₀/2)[cos φ − cos(2ωt − φ)]. The first term is a constant; the second is a sinusoid at 2ω whose average over any whole number of cycles is zero. So the average power is P = (V₀I₀/2) cos φ, and since V_rms = V₀/√2 and I_rms = I₀/√2, V_rms I_rms = V₀I₀/2, giving P = V_rms I_rms cos φ.
+**11. D** — *Deriving average power from the instantaneous power.* With A = ωt and B = ωt − φ, A − B = φ and A + B = 2ωt − φ, so p(t) = V₀I₀ sin ωt sin(ωt − φ) = (V₀I₀/2)[cos φ − cos(2ωt − φ)]. The constant term is the average power (V₀I₀/2)cos φ = V_rms I_rms cos φ, and the 2ω term averages to zero over whole cycles.
 
-A correct answer must show the product form (V₀I₀/2)[cos φ − cos(2ωt − φ)], state that the cos(2ωt − φ) term averages to zero because it is a sinusoid over whole cycles, and convert V₀I₀/2 to V_rms I_rms. Writing the second term as cos(2ωt) without the φ, or claiming the ripple is at ω rather than 2ω, loses the derivation.
+The + version has the sign of the identity wrong; the version without the ½ drops the factor the identity carries; cos(ωt − φ) puts the ripple at the supply frequency instead of twice it.
 
-**12.** *Meaning of negative instantaneous power.* p(t) = v(t)i(t) is the rate at which energy flows from the source into the load. A negative value means that, at that instant, energy is flowing back from the load to the source: the load's reactance (inductor or capacitor) is returning energy it stored earlier in its magnetic or electric field. It cannot happen for a pure resistor, because v and i are in phase there, so they are always both positive or both negative and their product is never negative. The minimum of p(t) is S(cos φ − 1), which is zero only when φ = 0.
+**12. B** — *Meaning of negative instantaneous power.* p(t) = v(t)i(t) is the rate at which energy flows from the source into the load, so p < 0 means energy is returning to the source: a reactance is giving back what it stored in its magnetic or electric field. The swing is p = P − S cos(2ωt − φ), whose minimum P − S = S(cos φ − 1) is negative for any φ ≠ 0.
 
-A correct answer says negative p means energy returning to the source (not an error and not negative average power), attributes it to stored energy in a reactance, and states that a resistor's p(t) is never negative because v and i have the same sign at every instant.
+A pure resistor never does this, because v and i share a sign at every instant so their product is never negative; the full-cycle average stays positive at P = S cos φ; and no power factor can exceed 1.

@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *Week 5 flowchart concepts treated as practice.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A chart runs: Start; P = 1; C = 0; Enter n; P = P × n; C = C + 1; decision 'Is C < 3?'; Yes → back to Enter n; No → Print P; Stop. The user types 2, 5, 3, 4 in that order. What is printed?
 A. 10
@@ -51,13 +51,29 @@ B. At the first decision; the exit drawn on the right
 C. At Start; the answer to the diamond's question for the current values
 D. At Start; the exit that was drawn first
 
-**9. (show your working)** A chart runs: Start; Read A, B, C; Max = A; decision 'Is B > Max?'; Yes → Max = B; join; decision 'Is C > Max?'; Yes → Max = C; join; Print Max; Stop. Inputs A = 7, B = 12, C = 9. Give the value of Max after each decision, the printed value, and how many decisions are evaluated. Show your working.
+**9.** A chart runs: Start; Read A, B, C; Max = A; decision 'Is B > Max?'; Yes to Max = B; join; decision 'Is C > Max?'; Yes to Max = C; join; Print Max; Stop. The inputs are A = 7, B = 12, C = 9. Give the value of Max after each decision, the printed value, and how many decisions are evaluated.
+A. Max goes 12 then 12; prints 12; 2 decisions evaluated
+B. Max goes 12 then 9; prints 9; 2 decisions evaluated
+C. Max goes 12 then 12; prints 12; 1 decision evaluated
+D. Max goes 12 then 12; prints 12; 3 decisions evaluated
 
-**10. (show your working)** A chart runs: Start; S = 0; K = 0; Enter n; decision 'Is n even?'; Yes → S = S + n; join; K = K + 1; decision 'Is K < 4?'; Yes → back to Enter n; No → Print S; Stop. Inputs 3, 8, 5, 6. Give S and K after each pass and the printed value. Show your working.
+**10.** A chart runs: Start; S = 0; K = 0; Enter n; decision 'Is n even?'; Yes to S = S + n; join; K = K + 1; decision 'Is K < 4?'; Yes back to Enter n; No to Print S; Stop. The inputs are 3, 8, 5, 6. Give (S, K) after each pass and the printed value.
+A. (0, 0), (8, 1), (8, 1), (14, 2); prints 14
+B. (3, 1), (11, 2), (16, 3), (22, 4); prints 22
+C. (0, 1), (8, 2), (8, 3), (8, 4); prints 8
+D. (0, 1), (8, 2), (8, 3), (14, 4); prints 14
 
-**11. (show your working)** A chart runs: Start; Read N; F = 1; decision 'Is N > 1?'; Yes → F = F × N; N = N − 1; back to the decision; No → Print F; Stop. (a) How many flow lines does the chart contain? (b) For N = 4, how many times is the decision evaluated, and what is printed? Show your working.
+**11.** A chart runs: Start; Read N; F = 1; decision 'Is N > 1?'; Yes to F = F × N; then N = N − 1; back to the decision; No to Print F; Stop. How many flow lines does the chart contain, and for N = 4 how many times is the decision evaluated and what is printed?
+A. 7 flow lines; 4 evaluations; prints 24
+B. 8 flow lines; 4 evaluations; prints 24
+C. 8 flow lines; 3 evaluations; prints 24
+D. 8 flow lines; 4 evaluations; prints 12
 
-**12. (show your working)** A student says every diamond in a flowchart is a loop. Explain the test that tells a selection diamond from a repetition diamond, and state what must be true of the symbols inside a repetition for the loop to end.
+**12.** Both selection and repetition are drawn with a diamond. What test tells them apart on a chart, and what must be true of the symbols inside a repetition for the loop to end?
+A. Two labelled exits mean repetition and one exit means selection; the test must be false on the first pass
+B. A diamond drawn below the loop body means repetition; the loop must contain a counter starting at zero
+C. An exit running back to an already executed symbol means repetition; a symbol inside must change a value the test depends on
+D. An exit running back to an already executed symbol means repetition; the test must use < rather than =
 
 ---
 
@@ -95,18 +111,18 @@ A second Start breaks the one-entry rule instead; a merge needs several paths in
 
 Position on the page, which exit was drawn first, and the label on a later box are all drawing details with no effect on the logic.
 
-**9.** *Tracing a chart with two selections.* Max = 7 after Read. First decision: 12 > 7 is Yes, so Max = 12. Second decision: 9 > 12 is No, so Max stays 12. Printed: 12. Both decisions are evaluated, so 2, whichever way they answer.
+**9. A** — *Tracing a chart with two selections.* Max starts at A = 7. The first decision, 12 > 7, is Yes, so Max = 12. The second, 9 > 12, is No, so Max stays 12 and 12 is printed. Both decisions are evaluated whatever their answers, so the count is 2.
 
-A correct answer shows Max = 7 → 12 → 12, states 12 is printed, and counts 2 decisions. Answering 9 takes the last value read rather than the largest; counting 3 decisions invents a test that is not in the chart.
+Printing 9 takes the last value read rather than the largest; counting 1 decision assumes a Yes answer skips the second test, but the chart reaches it either way; counting 3 invents a test the chart does not contain.
 
-**10.** *Tracing a selection inside a repetition.* Pass 1: n = 3, odd, S stays 0, K = 1. Pass 2: n = 8, even, S = 8, K = 2. Pass 3: n = 5, odd, S = 8, K = 3. Pass 4: n = 6, even, S = 14, K = 4; 4 < 4 is No, so 14 is printed.
+**10. D** — *Tracing a selection inside a repetition.* K = K + 1 sits after the join, so K rises on every pass, odd or even. Pass 1: n = 3 is odd, S stays 0, K = 1. Pass 2: n = 8 is even, S = 8, K = 2. Pass 3: n = 5 is odd, S = 8, K = 3. Pass 4: n = 6 is even, S = 14, K = 4; 4 < 4 is No, so 14 is printed.
 
-A correct answer lists (S, K) as (0, 1), (8, 2), (8, 3), (14, 4) and the output 14. Note that K increases on every pass, odd or even, because K = K + 1 sits after the join. 22 adds every number and ignores the inner decision; 8 stops after two passes.
+The version where K rises only on the even passes puts the increment inside the Yes branch, which the chart does not do; (3, 1), (11, 2), (16, 3), (22, 4) adds every number and ignores the decision; ending at (8, 4) treats 6 as odd and never adds it.
 
-**11.** *Counting flow lines and decision evaluations.* (a) Start→Read N, Read N→F = 1, F = 1→decision, Yes→F = F × N, →N = N − 1, back→decision, No→Print F, Print F→Stop: 8 flow lines. (b) N = 4: decision Yes, F = 4, N = 3; Yes, F = 12, N = 2; Yes, F = 24, N = 1; N > 1 is No, print 24. The decision is evaluated 4 times (three Yes, one No) and 24 is printed.
+**11. B** — *Counting flow lines and decision evaluations.* The flow lines are Start to Read N, Read N to F = 1, F = 1 to the decision, Yes to F = F × N, on to N = N − 1, back to the decision, No to Print F, and Print F to Stop: 8 in all. For N = 4 the decision answers Yes three times, with F going 4, 12, 24 as N falls 3, 2, 1, and No once, so it is evaluated 4 times and 24 is printed.
 
-A correct answer gives 8, 4 and 24. Answering 3 evaluations forgets the final failing test; 7 lines misses the back arrow; 12 stops one multiplication early.
+7 lines misses the back arrow that makes the loop; 3 evaluations forgets the final failing test; 12 stops one multiplication early.
 
-**12.** *Selection versus repetition on a chart.* Look at the direction of the two exits. If both exits go forward and later rejoin, the diamond is a selection: one of two alternatives runs once. If one exit runs backward to a symbol that has already been executed, the diamond is a repetition: the symbols between the landing point and the diamond are executed again. Both use the same symbol because both are decided by a yes/no test.
+**12. C** — *Selection versus repetition on a chart.* Look at where the exits go. If both go forward and later rejoin, one of two alternatives runs once and the diamond is a selection. If one exit runs back to a symbol already executed, everything between the landing point and the diamond runs again, so it is a repetition. For the loop to end, some symbol inside it must change a value the diamond's question depends on, so the answer eventually flips and the forward exit is taken.
 
-For a repetition to end, at least one symbol inside the loop must change a value that the diamond's question depends on, so that the answer eventually flips and the forward exit is taken. A correct answer gives the backward-arrow test and the changing-value condition.
+Both kinds of diamond have two labelled exits, so counting exits decides nothing; the diamond may be drawn above or below the body; the comparison operator and a counter are common but neither is required.

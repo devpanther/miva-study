@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Numerical induction work.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A circular coil of 150 turns has a diameter of 8.0 cm. Its plane is perpendicular to a uniform field of 0.50 T. What is the flux linkage NΦ of the coil?
 A. 1.5 Wb
@@ -51,13 +51,29 @@ B. Both quadruple
 C. Both double
 D. Peak emf quadruples; frequency doubles
 
-**9. (show your working)** A 60-turn circular coil, radius 5.0 cm, resistance 3.0 Ω, lies face-on to a uniform field into the page that rises uniformly from zero to 0.90 T in 0.30 s. Calculate the emf and the current, and state whether the current is clockwise or anticlockwise as seen by the reader. Show your working.
+**9.** A 60-turn circular coil of radius 5.0 cm and resistance 3.0 Ω lies face-on to a uniform field into the page that rises steadily from zero to 0.90 T in 0.30 s. Calculate the emf, the current, and the sense of the current as seen by the reader.
+A. 1.4 V, 0.47 A, clockwise
+B. 1.4 V, 0.47 A, anticlockwise
+C. 0.024 V, 0.0079 A, anticlockwise
+D. 5.7 V, 1.9 A, anticlockwise
 
-**10. (show your working)** A 0.50 m rod slides at a steady 8.0 m/s on frictionless rails in a 0.30 T field perpendicular to the circuit; total resistance 0.60 Ω. Calculate the emf, the current and the mechanical power needed to keep the rod moving, and show that it equals the electrical power dissipated. Show your working.
+**10.** A 0.50 m rod slides at a steady 8.0 m/s on frictionless rails in a 0.30 T field perpendicular to the circuit; the total resistance is 0.60 Ω. Calculate the mechanical power needed to keep the rod moving.
+A. 0.30 W
+B. 9.6 W
+C. 4.8 W
+D. 2.4 W
 
-**11. (show your working)** An air-cored solenoid has 800 turns, length 0.20 m and area 3.0 cm²; μ₀ = 4π × 10⁻⁷ T·m/A. Calculate (a) its self-inductance, (b) the back-emf when the current rises uniformly from zero to 3.0 A in 15 ms, (c) the energy stored at 3.0 A. Show your working.
+**11.** An air-cored solenoid has 800 turns, a length of 0.20 m and a cross-sectional area of 3.0 cm²; μ₀ = 4π × 10⁻⁷ T·m/A. Calculate its self-inductance and the back-emf while the current rises uniformly from zero to 3.0 A in 15 ms.
+A. 1.5 μH, 0.30 mV
+B. 0.12 H, 24 V
+C. 1.2 mH, 0.24 V
+D. 1.2 mH, 3.6 mV
 
-**12. (show your working)** A transformer is connected by mistake to a 12 V d.c. supply instead of 12 V a.c. Explain why the secondary gives no steady output, and why the primary winding is likely to overheat.
+**12.** A transformer is connected by mistake to a 12 V d.c. supply instead of a 12 V a.c. supply. What happens?
+A. The secondary reads zero once the switch-on transient has passed, and the primary overheats
+B. The secondary reads 12 V d.c., and the primary behaves normally
+C. The secondary reads zero, and the primary draws no current at all
+D. The secondary reads 12 V times the turns ratio, and the core saturates
 
 ---
 
@@ -95,18 +111,18 @@ D. Peak emf quadruples; frequency doubles
 
 'Frequency unchanged' forgets that each revolution is one cycle; 'both quadruple' squares a linear dependence; 'peak emf quadruples' confuses the emf with the power into a fixed resistor, which does go up four-fold since P ∝ ε₀².
 
-**9.** *Faraday's law chained with Ohm's law and Lenz's law.* A = πr² = π(0.050)² = 7.85 × 10⁻³ m². ΔΦ = ΔB × A = (0.90)(7.85 × 10⁻³) = 7.07 × 10⁻³ Wb per turn; N ΔΦ = 60 × 7.07 × 10⁻³ = 0.424 Wb. ε = N ΔΦ/Δt = 0.424/0.30 = 1.41 V. I = ε/R = 1.41/3.0 = 0.47 A. Direction: the into-page flux is increasing, so the induced current must make an out-of-page field inside the loop; by the right-hand grip rule that is an anticlockwise current as seen by the reader.
+**9. B** — *Faraday's law chained with Ohm's law and Lenz's law.* A = πr² = π(0.050)² = 7.85 × 10⁻³ m², so ε = N A ΔB/Δt = (60)(7.85 × 10⁻³)(0.90)/0.30 = 1.4 V and I = ε/R = 0.47 A. The into-page flux is growing, so the induced current must make an out-of-page field inside the loop, which by the right-hand grip rule is anticlockwise to the reader.
 
-Final answer: ε = 1.4 V (accept 1.3 to 1.5), I = 0.47 A (accept 0.45 to 0.49), anticlockwise. A correct answer converts the radius to metres, multiplies by N, divides by the time, applies Ohm's law, and gives anticlockwise with the reason that the induced field opposes the growth of into-page flux. Clockwise is the answer for a decreasing field and is wrong here; 0.024 V forgot N.
+Clockwise is the answer for a falling field; 0.024 V leaves out the 60 turns; 5.7 V uses the diameter as the radius, four times the area.
 
-**10.** *Power audit of a moving rod.* ε = BLv = (0.30)(0.50)(8.0) = 1.2 V. I = ε/R = 1.2/0.60 = 2.0 A. The retarding force is F = BIL = (0.30)(2.0)(0.50) = 0.30 N, so the mechanical power needed is P = Fv = (0.30)(8.0) = 2.4 W. Electrical power dissipated: I²R = (2.0)²(0.60) = 2.4 W, and εI = (1.2)(2.0) = 2.4 W. The two agree: the hand's work is what heats the resistor.
+**10. D** — *Power audit of a moving rod.* ε = BLv = (0.30)(0.50)(8.0) = 1.2 V, I = ε/R = 2.0 A, and the retarding force is F = BIL = (0.30)(2.0)(0.50) = 0.30 N, so P = Fv = 2.4 W. The electrical side agrees: I²R = (4.0)(0.60) = 2.4 W, so the hand's work is what heats the resistor.
 
-Final answer: 1.2 V, 2.0 A, 2.4 W mechanical = 2.4 W electrical (accept 2.3 to 2.5 W). A correct answer must compute the force (or use P = εI) and show the two powers equal. 0.30 W is the force quoted as a power; 4.8 W or 9.6 W has an extra factor of v or of I.
+0.30 W quotes the force in watts; 9.6 W multiplies the emf by v as though 1.2 V were a force; 4.8 W uses B²Lv/R, with only one factor of L in the force.
 
-**11.** *Solenoid inductance, back-emf and stored energy.* (a) L = μ₀N²A/ℓ = (4π × 10⁻⁷)(800)²(3.0 × 10⁻⁴)/(0.20) = (1.257 × 10⁻⁶)(6.4 × 10⁵)(1.5 × 10⁻³) = 1.21 × 10⁻³ H, about 1.2 mH. (b) ΔI/Δt = 3.0/0.015 = 200 A/s, so |ε| = L ΔI/Δt = (1.21 × 10⁻³)(200) = 0.24 V. (c) U = ½LI² = ½(1.21 × 10⁻³)(3.0)² = 5.4 × 10⁻³ J, about 5.4 mJ.
+**11. C** — *Solenoid self-inductance and back-emf.* L = μ₀N²A/ℓ = (4π × 10⁻⁷)(800²)(3.0 × 10⁻⁴)/0.20 = 1.2 × 10⁻³ H. The current rises at ΔI/Δt = 3.0/0.015 = 200 A/s, so |ε| = L ΔI/Δt = (1.2 × 10⁻³)(200) = 0.24 V.
 
-Final answer: L = 1.2 mH (accept 1.15 to 1.25 mH), ε = 0.24 V (accept 0.23 to 0.25), U = 5.4 mJ (accept 5.2 to 5.6). A correct answer converts cm² to 3.0 × 10⁻⁴ m², squares N, and uses the rate 200 A/s rather than the current 3.0 A in (b). 1.5 × 10⁻⁶ H used N instead of N²; 0.12 H converted the area with 10⁻²; 3.6 mJ is LI, with the ½ and the square both dropped.
+1.5 μH uses N instead of N²; 0.12 H converts 3.0 cm² as 3.0 × 10⁻² m² instead of 3.0 × 10⁻⁴ m²; 3.6 mV multiplies L by the current 3.0 A rather than by the rate 200 A/s.
 
-**12.** *Why a transformer needs alternating current.* The secondary emf is ε = −N_s dΦ/dt: it needs a changing flux in the core. A steady direct current gives a steady core flux, so after the brief switch-on transient dΦ/dt = 0 and the secondary voltage is zero. A d.c. current still makes a perfectly good field; it simply makes a constant one, and constant flux induces nothing.
+**12. A** — *Why a transformer needs alternating current.* The secondary emf is ε = −N_s dΦ/dt, and a steady current makes a steady core flux, so once the switch-on transient has passed dΦ/dt = 0 and the secondary gives nothing. On a.c. the primary current is limited mainly by the back-emf L dI/dt of the winding; with d.c. there is no back-emf, so the current is set by the winding's small resistance alone, I = V/R, and the I²R heating is far above the design value.
 
-The primary overheats because on a.c. the current is limited mainly by the back-emf L dI/dt of the winding; on d.c. there is no changing current and hence no back-emf, so the current is limited only by the winding's small resistance, I = V/R, which is far larger than the design current and dissipates I²R as heat. A correct answer says (1) no changing flux so no induced emf, and (2) no back-emf so a large resistive current in the primary.
+The secondary cannot deliver any steady voltage, and the primary certainly does draw current, far too much of it.

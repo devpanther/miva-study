@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *Code work on abstraction, functions and modules.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** `int sq(int n) { return n * n; }` What does `printf("%d", sq(sq(2)) - sq(3));` print?
 A. 1
@@ -73,9 +73,13 @@ B. The first function in the file
 C. `main()`
 D. `#include`
 
-**9. (show your working)** Write a C function `average3` that takes three `double` values and returns their mean, a declaration for it that could sit above main, and a main that prints the average of 70, 85 and 90 with `%.2f`. State what is printed.
+**9.** `printf("%.2f", average3(70, 85, 90));` must print 81.67. Which body for `double average3(double a, double b, double c)` does that?
+A. `return a + b + c / 3;`
+B. `return (a + b + c) / 3;`
+C. `return a + (b + c) / 3;`
+D. `return a + b + c;`
 
-**10. (show your working)** ```c
+**10.** ```c
 void dbl(int n) { n = n * 2; }
 int main(void) {
     int x = 4;
@@ -84,9 +88,15 @@ int main(void) {
     return 0;
 }
 ```
-This prints 4. Explain why x is unchanged, then rewrite dbl and its call so that main prints 8. Show your working.
+This prints 4. Which change makes it print 8?
+A. Rename the parameter: `void dbl(int x) { x = x * 2; }`
+B. Call it twice: `dbl(x); dbl(x);`
+C. Make x a global variable and leave dbl as it is.
+D. `int dbl(int n) { return n * 2; }` with the call `x = dbl(x);`
 
-**11. (show your working)** ```c
+**11.** What does this print?
+
+```c
 int calls = 0;
 int step(int n) { calls = calls + 1; return n + calls; }
 int main(void) {
@@ -97,9 +107,16 @@ int main(void) {
     return 0;
 }
 ```
-Trace this, giving the value of `calls` and the value returned at each call, and the output. Show your working.
+A. 16 3
+B. 13 3
+C. 16 1
+D. 13 1
 
-**12. (show your working)** `#include <stdio.h>` lets a program call `printf` although the program contains none of the code for it. Explain what the header file supplies, what the caller needs to know to use printf, and which type of abstraction this is.
+**12.** `#include <stdio.h>` lets a program call `printf` although the program contains none of printf's code. What does the header file supply?
+A. The full source code of printf.
+B. The compiled machine code of printf.
+C. Declarations: printf's name, return type and parameters.
+D. A copy of printf renamed for this program.
 
 ---
 
@@ -137,27 +154,18 @@ Moving the printf into add prints the local, 5 then 7, never 12; `+=` is the sam
 
 `printf()` is a library function that main may call; the first function in the file is often a helper defined above main so that main can call it; `#include` is a directive that brings in a header file, not a function.
 
-**9.** *Writing a function that returns a value.* ```c
-double average3(double a, double b, double c);   /* declaration */
+**9. B** — *Writing a function that returns a value.* The three values must be added before the division, which needs brackets: (70 + 85 + 90) / 3 = 245 / 3 = 81.666..., printed as 81.67.
 
-int main(void) {
-    printf("%.2f\n", average3(70, 85, 90));
-    return 0;
-}
+Without brackets `/` binds tighter than `+`, so `a + b + c / 3` divides only c and prints 185.00; `a + (b + c) / 3` divides only the last two and prints 128.33; `a + b + c` never divides and prints 245.00.
 
-double average3(double a, double b, double c) { return (a + b + c) / 3; }
-```
+**10. D** — *Fixing a pass-by-value fault with a return value.* A parameter holds a copy of the argument, so `n = n * 2` doubles the copy and main's x is never touched. The fix is to hand the new value back: give dbl a return type with `return n * 2;` and store what it returns, `x = dbl(x);`.
 
-(70 + 85 + 90) / 3 = 245 / 3 = 81.666..., printed as 81.67. A correct answer has return type double, three double parameters, a return of the sum divided by 3, a declaration ending in a semicolon with no body, a call with the three arguments, and the output 81.67. A void function that prints inside itself does not return the mean and is wrong; `a + b + c / 3` divides only c and gives 185.00, which is wrong.
+Renaming the parameter changes nothing, since it is still a copy; calling a void function twice doubles nothing twice; and a global x is still not what dbl assigns to, because it assigns to its own parameter.
 
-**10.** *Fixing a pass-by-value fault with a return value.* A parameter receives a copy of the argument. Inside dbl, n is a local copy of 4; `n = n * 2` makes that copy 8, and when dbl returns the copy is discarded. x in main was never touched, and dbl is void, so it hands nothing back either.
+**11. A** — *Tracing a function that changes a global.* `calls` is global, so all three calls see and change the same variable. step(10): calls becomes 1 and it returns 11. step(11): calls becomes 2 and it returns 13. step(13): calls becomes 3 and it returns 16. Output: 16 3.
 
-Fix: `int dbl(int n) { return n * 2; }` and in main `x = dbl(x);` (or `printf("%d\n", dbl(x));`). Now dbl(4) returns 8 and main prints 8. A correct answer says the parameter is a copy, gives dbl a non-void return type with `return n * 2;`, and stores or prints the returned value. Keeping the function void and calling it twice, or renaming n to x, changes nothing and is wrong.
+13 3 adds a fixed 1 each time instead of the growing `calls`; 16 1 has the right value but treats calls as if it restarted at 0 in every call; 13 1 makes both mistakes.
 
-**11.** *Tracing a function that changes a global.* `calls` is global, so every call sees and changes the same variable. First call, step(10): calls becomes 1, returns 10 + 1 = 11, so v = 11. Second call, step(11): calls becomes 2, returns 11 + 2 = 13, v = 13. Third call, step(13): calls becomes 3, returns 13 + 3 = 16, v = 16. The program prints 16 3.
+**12. C** — *What a header file supplies.* A header carries declarations, not bodies: the name, the return type and the parameters of each library function. That is all the compiler needs to check a call and all the caller needs to know, while printf's body is compiled elsewhere and joined on afterwards.
 
-Final answer: 16 3. A correct answer shows calls going 1, 2, 3 and the returns 11, 13, 16. Treating calls as a local that restarts at 0 gives 13 (11, 12, 13) and calls = 1, which is wrong; 33 1 (adding 1 each time to a fixed 10) is also wrong.
-
-**12.** *Header files as abstraction.* The header file supplies the declarations of the library's functions: for printf, its name, its return type and its parameters. The body of printf is compiled elsewhere and is never seen. To use it the caller needs only the method's name, the format of the input and the format of the output, which is exactly what a declaration gives. Hiding how a method is implemented while exposing its name and input and output formats is functional abstraction.
-
-A correct answer says the header carries declarations (not bodies), lists name, input format and output format as all the caller needs, and names functional abstraction. Calling it data abstraction is wrong: nothing about printf's data is being protected, its implementation is being hidden.
+Neither the source nor the machine code of printf is pulled in by the header, and nothing is copied or renamed for the program.

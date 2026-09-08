@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Numerical work on power in an A.C. circuit.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A 15 Ω resistor is in series with a 159 μF capacitor across a 150 V rms, 50 Hz supply. Calculate the rms current.
 A. 10 A
@@ -51,13 +51,29 @@ B. Less than 1, current leading
 C. Equal to 1, current in phase
 D. Greater than 1, current leading
 
-**9. (show your working)** A coil of resistance 24 Ω and inductance 57.3 mH is connected across a 120 V rms, 50 Hz supply. Calculate X_L, Z, the rms current, the power factor, and P, Q and S, then check that S² = P² + Q². Show your working.
+**9.** A coil of resistance 24 Ω and inductance 57.3 mH is connected across a 120 V rms, 50 Hz supply. Calculate the rms current, the power factor and the real power.
+A. 5.00 A, 1.00, 600 W
+B. 4.00 A, 0.60 lagging, 288 W
+C. 4.00 A, 0.80 lagging, 384 W
+D. 4.00 A, 0.80 lagging, 480 W
 
-**10. (show your working)** A workshop draws 6.0 kW from a 240 V rms, 50 Hz supply at a power factor of 0.75 lagging. Calculate the apparent power, the line current and the reactive power. Then calculate the parallel capacitance that raises the power factor to unity, and the new line current. Show your working.
+**10.** A workshop draws 6.0 kW from a 240 V rms, 50 Hz supply at a power factor of 0.75 lagging. Calculate the capacitance that must be connected in parallel to raise the power factor to unity.
+A. 1840 μF
+B. 442 μF
+C. 332 μF
+D. 292 μF
 
-**11. (show your working)** R = 25 Ω, L = 0.50 H and C = 8.0 μF are in series across a 100 V rms, 50 Hz supply. Calculate X_L, X_C, Z, the rms current, the power factor and the real power. State whether the current leads or lags and whether 50 Hz is above or below resonance. Show your working.
+**11.** R = 25 Ω, L = 0.50 H and C = 8.0 μF are in series across a 100 V rms, 50 Hz supply. Calculate the impedance and the real power dissipated.
+A. 242 Ω, 4.3 W
+B. 556 Ω, 0.81 W
+C. 242 Ω, 400 W
+D. 266 Ω, 3.5 W
 
-**12. (show your working)** For a series RL circuit on a 200 V rms supply, one student calculates the real power as V²/R using 200 V, and another as I²R. Explain why the two answers differ, which one is correct, and what voltage would make the V²/R form correct.
+**12.** For a series RL circuit on a 200 V rms supply, one student computes the real power as V²/R using 200 V, and another as I²R. Which statement is correct?
+A. V²/R is correct, because the supply voltage is what drives the resistor
+B. Both are correct, since P = V²/R = I²R in any circuit
+C. I²R is correct, because only IR of the 200 V sits across the resistance
+D. Neither is correct, because the real power of an RL circuit is V I
 
 ---
 
@@ -95,18 +111,18 @@ D. Greater than 1, current leading
 
 Lagging would need X_L greater than X_C, which happens above resonance; PF = 1 with the current in phase is the resonance condition itself; a power factor greater than 1 is impossible because R can never exceed Z.
 
-**9.** *Complete power set for a series RL circuit with cross-check.* X_L = 2πfL = 2π(50)(0.0573) = 18.0 Ω. Z = √(24² + 18²) = √900 = 30.0 Ω. I = V/Z = 120/30 = 4.00 A. PF = cos φ = R/Z = 24/30 = 0.800 lagging (φ = 36.9°, inductive, so the current lags). P = V I cos φ = (120)(4.00)(0.800) = 384 W, and by the second route I²R = (16)(24) = 384 W. Q = V I sin φ = (120)(4.00)(0.600) = 288 var inductive, and I²X_L = (16)(18) = 288 var. S = V I = 480 VA. Check: 384² + 288² = 147 456 + 82 944 = 230 400 = 480².
+**9. C** — *Current, power factor and real power of a series RL circuit.* X_L = 2πfL = 2π(50)(0.0573) = 18.0 Ω, so Z = √(24² + 18²) = 30.0 Ω, I = 120/30.0 = 4.00 A, PF = R/Z = 0.800 lagging and P = I²R = (16)(24) = 384 W, the same as V I cos φ.
 
-Final answers: X_L = 18.0 Ω, Z = 30.0 Ω, I = 4.00 A, PF = 0.80 lagging, P = 384 W, Q = 288 var, S = 480 VA (accept each within 1%). V²/R = 600 W is not the real power, because only V_R = IR = 96 V sits across the resistance; a student who writes 600 W has used the wrong voltage.
+5.00 A with 600 W ignores the reactance and uses V/R and V²/R; 288 W uses sin φ = 0.600, which gives the reactive power in var; 480 W is V I = S, the apparent power, with the power factor left out.
 
-**10.** *Power factor correction with a parallel capacitor.* S = P/PF = 6000/0.75 = 8000 VA, and I = S/V = 8000/240 = 33.3 A. Q = √(S² − P²) = √(8000² − 6000²) = √(28 × 10⁶) = 5292 var lagging (equivalently S sin φ with sin φ = 0.661). For unity power factor the capacitor must supply all of it: Q_C = 5292 var, so C = Q_C/(ωV²) = 5292/[(314.2)(240²)] = 5292/(1.81 × 10⁷) = 2.92 × 10⁻⁴ F = 292 μF. The real power is unchanged, so the new line current is I = P/V = 6000/240 = 25.0 A.
+**10. D** — *Power factor correction with a parallel capacitor.* S = P/PF = 6000/0.75 = 8000 VA and Q = √(S² − P²) = 5292 var lagging. The capacitor must supply all of that, so C = Q/(ωV²) = 5292/[(314.2)(240²)] = 2.92 × 10⁻⁴ F = 292 μF. The real power is unchanged, so the line current drops from 33.3 A to 25.0 A.
 
-Final answers: S = 8.0 kVA, I = 33.3 A, Q = 5.29 kvar (accept 5.25 to 5.35), C = 292 μF (accept 285 to 300 μF), new I = 25.0 A. A correct answer must show that P stays at 6.0 kW while the current falls from 33.3 A to 25.0 A. Using f = 50 instead of ω = 314 in C = Q/(ωV²) gives 1840 μF and is wrong.
+1840 μF uses f = 50 in place of ω = 314; 442 μF puts the apparent power S into the formula instead of Q; 332 μF puts the real power P there, which a capacitor never has to supply.
 
-**11.** *Series RLC power off resonance.* X_L = 2πfL = (314.2)(0.50) = 157 Ω. X_C = 1/(2πfC) = 1/[(314.2)(8.0 × 10⁻⁶)] = 398 Ω. Net X = 157 − 398 = −241 Ω (capacitive), so Z = √(25² + 241²) = √(625 + 57 990) = 242 Ω. I = 100/242 = 0.413 A. PF = R/Z = 25/242 = 0.103 leading. P = I²R = (0.413)²(25) = 4.27 W. Since X_C exceeds X_L the current leads and 50 Hz is below the resonant frequency (f₀ = 1/(2π√(LC)) = 79.6 Hz).
+**11. A** — *Series RLC power off resonance.* X_L = 2πfL = 157 Ω and X_C = 1/(2πfC) = 398 Ω, so the net reactance is 157 − 398 = −241 Ω, capacitive, and Z = √(25² + 241²) = 242 Ω. Then I = 100/242 = 0.413 A and P = I²R = (0.413)²(25) = 4.3 W.
 
-Final answers: X_L = 157 Ω, X_C = 398 Ω, Z = 242 Ω, I = 0.41 A (accept 0.40 to 0.42), PF = 0.10 leading, P = 4.3 W (accept 4.1 to 4.4 W), current leading, below resonance. Adding the reactances to get X = 555 Ω, or using V²/R = 400 W for the power, is wrong; 400 W is what the circuit would consume only at resonance.
+556 Ω adds the two reactances instead of subtracting them; 400 W is V²/R, which would need all 100 V across R when in fact only 10.3 V is; 266 Ω adds R and X arithmetically rather than in quadrature.
 
-**12.** *Why P = I²R is safe and V²/R with the supply voltage is not.* P = V²/R assumes that the whole voltage V sits across the resistance. In a series RL circuit the supply voltage is shared between R and X_L in quadrature, so the resistor only has V_R = IR across it, which is less than 200 V. Using 200 V in V²/R therefore overestimates the power by the factor (Z/R)². P = I²R is always correct because the same current flows through every series element and only the resistance dissipates energy.
+**12. C** — *Why P = I²R is safe and V²/R with the supply voltage is not.* In a series circuit the same current flows through every element and only R dissipates energy, so P = I²R is always right. The supply voltage divides between R and X_L in quadrature, so the resistor carries only V_R = IR, and putting 200 V into V²/R overstates the power by the factor (Z/R)².
 
-A correct answer says the supply voltage is not the voltage across R, that I²R is right, and that V²/R would be right only with V_R = IR (the resistor's own drop, or the supply voltage in a purely resistive circuit or at resonance). Saying that both formulas are always equivalent because they are in DC is wrong.
+V²/R is right only with V_R, or with the supply voltage when the circuit is purely resistive or at resonance; the two forms agree only when Z = R; and V I is the apparent power S, not the real power.

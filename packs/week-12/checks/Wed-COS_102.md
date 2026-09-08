@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *The Software Testing Life Cycle and Debugging deck.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Put the STLC phases in order. A: test execution. B: requirement analysis. C: test environment setup. D: test planning. E: test cycle closure. F: test case development.
 A. B, D, F, C, A, E
@@ -51,13 +51,29 @@ B. The report is debugging; the fix is testing
 C. Both are debugging
 D. The report is testing; finding and fixing the < is debugging
 
-**9. (show your working)** pct(score, total) is specified to return the percentage score/total × 100 rounded to the nearest whole number, and to return 0 when total is 0. Write two test cases, one for pct(45, 60) and one for pct(3, 0), each with its inputs, its process and its expected output. Show your working.
+**9.** pct(score, total) must return score/total × 100 rounded to the nearest whole number, and must return 0 when total is 0. What are the expected outputs of test cases for pct(45, 60) and for pct(3, 0)?
+A. 0.75 and 0
+B. 75 and an error
+C. 0.75 and an error
+D. 75 and 0
 
-**10. (show your working)** A team finishes test case development and goes straight to test execution, skipping test environment setup. Describe two concrete problems that will appear during execution, and name the activities of the skipped phase that would have prevented each. Show your working.
+**10.** A team finishes test case development and goes straight to test execution, skipping test environment setup. Which problem does that skip cause?
+A. A case needing a customer with an overdue loan cannot run, because no such test data exists.
+B. There are no test cases to run, because none have been written.
+C. Nobody knows who runs which test, because roles were never assigned.
+D. There is no summary report at the end, because nothing was recorded.
 
-**11. (show your working)** A program crashes about once a day at an unpredictable moment, and nobody has seen it happen. From code inspection, monitoring, logging, unit testing, integration testing and system testing, choose the two methods to apply first, say what each would produce, and say why two of the others fit less well here. Show your working.
+**11.** A program crashes about once a day at an unpredictable moment and nobody has ever seen it happen. Which two debugging methods should be applied first?
+A. Unit testing and code inspection
+B. Integration testing and system testing
+C. Logging and monitoring
+D. System testing and code inspection
 
-**12. (show your working)** A team tests without a defined life cycle: each tester runs whatever checks seem useful and stops when the release date arrives. Explain what a defined software testing life cycle would give them that this does not, using the idea of each phase having deliverables, objectives and an exit point.
+**12.** A team tests with no defined life cycle: each tester runs whatever checks seem useful and everyone stops on the release date. What does a defined testing life cycle give them that this does not?
+A. A guarantee that the software contains no defects at all.
+B. A way of testing without writing test cases in advance.
+C. Fewer testers, because the phases all run at the same time.
+D. Deliverables and objectives for each phase, and an exit point reached only when those objectives are met.
 
 ---
 
@@ -95,18 +111,18 @@ The first option swaps them; 'both missing' treats a wrong number as absent func
 
 The other options either merge the two processes or reverse them; the test finds that something is wrong, the debugging finds what and repairs it.
 
-**9.** *Writing a test case.* A test case specifies the test inputs, the process and the expected outputs, with the expected output fixed from the specification before the run. Case 1: inputs 45 and 60; process: call pct(45, 60); expected output: 45/60 × 100 = 75. Case 2: inputs 3 and 0; process: call pct(3, 0); expected output: 0, from the rule for a zero total, not from any division.
+**9. D** — *Writing a test case.* The expected output of a test case is fixed from the specification before anything is run. 45 / 60 = 0.75, and × 100 gives 75. For a zero total the specification gives the answer outright: 0, with no division attempted.
 
-A correct answer states all three parts for both cases and gives 75 and 0. Writing 'expected: the returned value' or leaving the expected output to be discovered by running the code is not a test case. 0.75 for case 1 forgets the × 100; an error or 'undefined' for case 2 ignores the specified rule.
+0.75 forgets the × 100; expecting an error for pct(3, 0) predicts what the code will probably do instead of what the specification requires, which is the one thing a test case must not do.
 
-**10.** *Consequences of skipping an STLC phase.* Test environment setup is where the software and hardware requirements for the test are specified and the test data and environment are set up. Skipping it means, first, that the cases have no data to run on: a case such as 'log in as a customer with an overdue loan' cannot be executed because no such account exists, which test data setup would have created. Second, the tests run on whatever machine and software versions happen to be at hand, so a failure cannot be told apart from an environment mismatch (wrong database version, missing browser), which specifying the hardware and software requirements and setting up the environment would have fixed in advance.
+**10. A** — *Consequences of skipping an STLC phase.* Test environment setup is where the software and hardware requirements are specified and the test data and the environment are prepared. Skipping it leaves the cases with nothing to run against: the accounts, loans and records they assume do not exist, and any failure cannot be told apart from a version mismatch in the environment.
 
-A correct answer gives two problems of this kind, each tied to test data setup or to environment setup and the specified requirements. Problems that belong to other phases, such as unwritten test cases or unassigned roles, are not accepted.
+Writing the cases belongs to test case development, assigning roles to test planning and the summary report to test cycle closure, so none of those three follows from this skip.
 
-**11.** *Choosing debugging methods for a fault.* Logging and monitoring. Logging records the events and messages the program produces, so when the crash happens the file shows what the program was doing in the seconds before it, without anyone watching. Monitoring watches the running system for unusual behaviour or performance issues, such as memory climbing before the crash, and points to the conditions that trigger it. Unit testing fits less well because the crash is not tied to a known function and its inputs, and a once-a-day condition is unlikely to be reproduced by fixed test data; code inspection fits less well because there is no known place in the source to inspect until logging has narrowed it down.
+**11. C** — *Choosing debugging methods for a fault.* Nobody is watching when it happens, so the first job is to record what the program was doing. Logging writes the events and messages to a file that can be read after the crash, and monitoring watches the running system for unusual behaviour, such as memory climbing towards the moment of failure.
 
-A correct answer picks logging and monitoring, says what each records, and gives a reason against two of the others. Picking code inspection first is accepted only with an argument for where to start reading.
+Unit testing needs a known function and fixed inputs, which a once-a-day condition is unlikely to reproduce; code inspection needs a place in the source to start reading, which only the log can point to; and the integration and system levels test a build, not a rare run-time event.
 
-**12.** *Purpose of a defined testing life cycle.* A defined life cycle gives a standard process that clearly defines the deliverables and objectives of each testing phase, with an entry point where the phase begins and an exit point that is reached only when all the phase's objectives have been achieved. Without it the team cannot be sure it is testing the software the right way, that the software meets the set requirements, or that it is free of defects: stopping at the release date is stopping on time rather than on an exit point, and there is no statement of what would count as finished. With the life cycle, requirement analysis fixes what is to be tested, planning fixes strategy, cost and duration, development produces reviewed test cases with expected outputs, and closure checks that the objectives were achieved and the software is ready for use.
+**12. D** — *Purpose of a defined testing life cycle.* A defined life cycle states the deliverables and objectives of every phase and gives each one an entry point and an exit point, and that exit point is reached when the objectives have been achieved, not when the calendar says so. Stopping on the release date is stopping on time, with no statement of what would have counted as finished.
 
-A correct answer names deliverables and objectives per phase, explains that an exit point depends on objectives being met rather than on time, and states at least one thing the team cannot be sure of without the process.
+No process guarantees a defect-free program; the life cycle adds test case development rather than removing it; and its phases run in sequence, so it saves nobody.

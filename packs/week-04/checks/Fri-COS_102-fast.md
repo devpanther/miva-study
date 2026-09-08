@@ -1,7 +1,7 @@
 # Friday — COS_102 fast-hour check
 
 *Week 4 Algorithm Concepts taken as practice: tracing the lecture's own algorithms by hand and writing them out.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** What does this print?
 
@@ -103,11 +103,15 @@ B. Repetition
 C. Sequence
 D. Stepwise refinement
 
-**9. (show your working)** Write Python or pseudocode that reads exactly 5 numbers from the user and prints their average. Use a loop, not five separate reads.
+**9.** A fragment must read exactly 5 numbers from the user with a loop and print their average. Starting from count = 0 and total = 0, which combination of loop header and print line does that?
+A. `while count <= 5:` with `count = count + 1` in the body, and `print(total / 5)` after the loop
+B. `while count < 5:` with `count = count + 1` in the body, and `print(total / 5)` inside the loop
+C. `while count < 4:` with `count = count + 1` in the body, and `print(total / 5)` after the loop
+D. `while count < 5:` with `count = count + 1` in the body, and `print(total / 5)` after the loop
 
-**10. (show your working)** Trace this and give the values of a, b and c at the end of each iteration, then the printed output. Show your working.
+**10.** What does this print?
 
-```
+```python
 a = 1
 b = 1
 for k in range(4):
@@ -116,8 +120,12 @@ for k in range(4):
     b = c
     print(c, end=" ")
 ```
+A. 1 2 3 5
+B. 2 3 5 8
+C. 2 4 8 16
+D. 2 3 5 8 13
 
-**11. (show your working)** Give the Big O time complexity of each fragment and name the loop rule that decides it. Then say how many times each loop body runs when n = 16.
+**11.** Give the Big O time complexity of each fragment and how many times each loop body runs when n = 16.
 
 ```
 (i)   i = n
@@ -127,8 +135,16 @@ for k in range(4):
 (iii) for i in range(n):
           for j in range(n): s = s + 1
 ```
+A. O(n), O(n), O(n²); 16, 16 and 256 runs
+B. O(log n), O(n), O(n²); 4, 16 and 256 runs
+C. O(n), O(log n), O(n²); 16, 4 and 256 runs
+D. O(n), O(log n), O(n²); 16, 4 and 32 runs
 
-**12. (show your working)** To find the largest of n numbers, one student compares every number with every other number, about n² comparisons. Explain why a single pass over the list is enough, and state how many comparisons that single pass needs.
+**12.** To find the largest of n numbers, one student compares every number with every other, about n² comparisons. A single pass that keeps the largest value seen so far also works. How many comparisons does that single pass need, and why is one pass enough?
+A. n − 1; each number is compared once with the largest of all the numbers before it
+B. n; each number is compared once with the first number in the list
+C. n − 1; each number is compared once with its immediate neighbour
+D. n²/2; every pair is still compared, but only in one direction
 
 ---
 
@@ -166,28 +182,18 @@ The i < n version stops before n and prints 6 for n = 4; the version with no i =
 
 Selection executes a step only if a condition holds; sequence is the plain step-by-step order the five lines already have; stepwise refinement is a development step, not a representation form.
 
-**9.** *Writing a counted accumulator loop.* Model answer:
+**9. D** — *Writing a counted accumulator loop.* With count starting at 0, the test count < 5 lets the body run for count = 0, 1, 2, 3 and 4, which is exactly 5 reads, and the division happens once after the loop. For 4, 6, 10, 8, 2 the total is 30 and 6.0 is printed.
 
-```
-total = 0
-count = 0
-while count < 5:
-    n = float(input())
-    total = total + n
-    count = count + 1
-print(total / 5)
-```
+count <= 5 runs the body 6 times and asks for a sixth number; count < 4 reads only 4 numbers but still divides by 5, printing 5.6 for the same input; printing inside the loop prints five running averages instead of one final figure.
 
-A correct answer must set the accumulator to 0 before the loop, run the loop exactly 5 times (a counter from 0 to 4, or for i in range(5)), read and add inside the loop, and divide by 5 once after the loop. Pseudocode such as 'enter n / total = total + n' inside a counted loop is accepted. Not accepted: a loop running 4 or 6 times, total set to 0 inside the loop, or dividing and printing inside the loop on every pass.
+**10. B** — *Tracing variable updates in a loop.* Pass 1: c = 1 + 1 = 2, then a = 1 and b = 2. Pass 2: c = 1 + 2 = 3, a = 2, b = 3. Pass 3: c = 2 + 3 = 5, a = 3, b = 5. Pass 4: c = 3 + 5 = 8, a = 5, b = 8. The output is 2 3 5 8.
 
-**10.** *Tracing variable updates in a loop.* Iteration 1: c = 1 + 1 = 2, a = 1, b = 2. Iteration 2: c = 1 + 2 = 3, a = 2, b = 3. Iteration 3: c = 2 + 3 = 5, a = 3, b = 5. Iteration 4: c = 3 + 5 = 8, a = 5, b = 8. Printed: 2 3 5 8.
+2 4 8 16 comes from updating b before a, so both hold the new value and c doubles each pass; 1 2 3 5 prints the old b instead of c; the five-number list runs one pass too many, since range(4) gives four.
 
-A correct answer shows the four (a, b, c) triples (1, 2, 2), (2, 3, 3), (3, 5, 5), (5, 8, 8) or an equivalent table, and the output 2 3 5 8. The trap is updating b before a, which gives c = 2, 4, 8, 16; that is not accepted.
+**11. C** — *Big O of loops by the update rule.* (i) changes i by a constant step, so the body runs n times: O(n), and 16 runs at n = 16. (ii) divides i by a constant, so the count is log₂ n: 16 → 8 → 4 → 2 → 1 is 4 runs, giving O(log n). (iii) nests two loops of n, so the innermost statement runs n × n times: O(n²), and 16 × 16 = 256.
 
-**11.** *Big O of loops by the update rule.* (i) i decreases by a constant, so O(n); for n = 16 the body runs 16 times. (ii) i is divided by a constant, so O(log n); 16 → 8 → 4 → 2 → 1, the body runs 4 times. (iii) nested loops, complexity equals the number of times the innermost statement runs, n × n, so O(n²); for n = 16 that is 256 times.
+Calling (ii) O(n) ignores the halving; 32 runs for (iii) adds the two loops instead of multiplying them; the remaining option swaps the first two complexities.
 
-A correct answer gives O(n), O(log n), O(n²) with the rules (constant step; divide or multiply by a constant; nested loops count the innermost statement) and the counts 16, 4, 256. Giving O(n) for (ii) or 32 for (iii) is wrong.
+**12. A** — *One-pass maximum versus pairwise comparison.* Set the running maximum to the first number, then compare each of the remaining n − 1 numbers with it and replace it whenever the new number is larger. The running maximum always holds the largest of everything seen so far, so after the last comparison it holds the largest of all n. That is n − 1 comparisons, which is O(n) rather than O(n²).
 
-**12.** *One-pass maximum versus pairwise comparison.* Keep one variable holding the largest value seen so far, starting from the first number. Each remaining number is compared with it once; if the number is bigger it replaces the current maximum. After the last number the variable holds the maximum, because every number was compared against the largest of those before it. That is n − 1 comparisons, O(n), instead of about n².
-
-A correct answer describes the running-maximum variable, the one comparison per number, and gives n − 1 (accept 'about n' or O(n)). Saying the maximum must be initialised from the first item rather than 0 is a bonus.
+Comparing against the fixed first number never updates the reference and fails as soon as the first number is not the largest; neighbour comparisons find local order, not the maximum; n²/2 is the pairwise method the single pass replaces.

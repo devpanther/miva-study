@@ -340,28 +340,56 @@
           "why": "At n = −1 the new exponent is n + 1 = 0 and the formula asks for x⁰/0. Division by zero is undefined, so the formula has nothing to say there; that is the only reason for the restriction.\n\nx⁻¹ is not always negative and sign never blocks integration; x⁰ = 1 is true but the trouble is the denominator, not the numerator; 1/x does have an antiderivative, it is just not given by this formula."
         },
         {
-          "type": "short",
-          "q": "Find ∫√x dx by first writing √x as a power of x. State the value of n you use. Show your working.",
+          "type": "mcq",
+          "q": "Find ∫√x dx by first writing √x as a power of x.",
+          "options": [
+            "(3/2)x^(3/2) + c",
+            "(2/3)x^(3/2) + c",
+            "(1/2)x^(−1/2) + c",
+            "(2/3)x^(1/2) + c"
+          ],
+          "answerIndex": 1,
           "concept": "Power rule with a fractional exponent",
-          "why": "√x = x^(1/2), so n = 1/2. The new exponent is 1/2 + 1 = 3/2 and you divide by 3/2, which is the same as multiplying by 2/3: ∫x^(1/2) dx = x^(3/2)/(3/2) + c = (2/3)x^(3/2) + c. Check: d/dx (2/3)x^(3/2) = (2/3)(3/2)x^(1/2) = √x.\n\nFinal answer: (2/3)x^(3/2) + c. Also accepted: 2x^(3/2)/3 + c, (2/3)x√x + c, or 2√(x³)/3 + c. The working must show n = 1/2 and the division by 3/2. (3/2)x^(3/2) multiplies by the new power instead of dividing and is wrong; an answer without + c is incomplete."
+          "why": "Write √x = x^(1/2), so n = 1/2. Raise the power to 3/2 and divide by 3/2, which is the same as multiplying by 2/3: ∫x^(1/2) dx = x^(3/2)/(3/2) + c = (2/3)x^(3/2) + c.\n\nCheck by differentiating: d/dx (2/3)x^(3/2) = (2/3)(3/2)x^(1/2) = √x. (3/2)x^(3/2) + c multiplies by the new power instead of dividing; (1/2)x^(−1/2) + c differentiates √x instead of integrating it; (2/3)x^(1/2) + c divides correctly but never raises the power."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₁² 2x dx twice: first using F(x) = x², then using F(x) = x² + 5. Show that both give the same number and say why. Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₁² 2x dx using F(x) = x², then again using F(x) = x² + 5. What pair of values do you get?",
+          "options": [
+            "3 and 8",
+            "4 and 9",
+            "3 and 9",
+            "3 and 3"
+          ],
+          "answerIndex": 3,
           "concept": "Constant of integration cancels in a definite integral",
-          "why": "With F(x) = x²: F(2) − F(1) = 4 − 1 = 3. With F(x) = x² + 5: F(2) − F(1) = (4 + 5) − (1 + 5) = 9 − 6 = 3. The 5 is added at the upper limit and subtracted again at the lower limit, so it cancels: (F(b) + c) − (F(a) + c) = F(b) − F(a) for any c.\n\nFinal answer: 3 both times. A correct answer shows both evaluations reaching 3 and states that the added constant cancels in F(b) − F(a), which is why a definite integral never carries + c. Getting 8 for the second evaluation (adding 5 only once) is wrong."
+          "why": "With F(x) = x²: F(2) − F(1) = 4 − 1 = 3. With F(x) = x² + 5: F(2) − F(1) = (4 + 5) − (1 + 5) = 9 − 6 = 3. The 5 is added at the upper limit and subtracted again at the lower one, so (F(b) + c) − (F(a) + c) = F(b) − F(a) for every c. That is why a definite integral never carries + c.\n\n3 and 8 adds the 5 at the upper limit only; 3 and 9 evaluates the second version at x = 2 alone; 4 and 9 forgets the lower limit both times."
         },
         {
-          "type": "short",
-          "q": "A student writes ∫x⁵ dx = 5x⁴ + c. Differentiate the student's answer to show it is wrong, name the mistake, and give the correct integral. Show your working.",
+          "type": "mcq",
+          "q": "A student writes ∫x⁵ dx = 5x⁴ + c. Differentiate the student's answer, then give the correct integral.",
+          "options": [
+            "20x³, and ∫x⁵ dx = x⁶/6 + c",
+            "20x³, and ∫x⁵ dx = x⁶ + c",
+            "20x⁴, and ∫x⁵ dx = x⁶/6 + c",
+            "5x⁵, and ∫x⁵ dx = 6x⁶ + c"
+          ],
+          "answerIndex": 0,
           "concept": "Checking an antiderivative by differentiating",
-          "why": "Differentiate the claimed answer: d/dx (5x⁴ + c) = 20x³, which is not x⁵, so the answer is wrong. The student differentiated instead of integrating (multiplied by the old power and lowered it). Integration goes the other way: raise the power to 6 and divide by 6.\n\nFinal answer: ∫x⁵ dx = x⁶/6 + c. Also accepted: (1/6)x⁶ + c. A correct answer shows the derivative 20x³ (or at least that it is not x⁵), says the student differentiated rather than integrated, and gives x⁶/6 + c. Check: d/dx (x⁶/6) = x⁵."
+          "why": "d/dx (5x⁴ + c) = 20x³, which is not x⁵, so the claim fails its own check. The student differentiated instead of integrating: multiplied by the old power and lowered it. Integration goes the other way, raise the power to 6 and divide by 6, giving ∫x⁵ dx = x⁶/6 + c, and d/dx (x⁶/6) = x⁵ confirms it.\n\nx⁶ + c raises the power but forgets to divide; 20x⁴ mishandles the power drop in the derivative; 6x⁶ + c multiplies by the new power instead of dividing."
         },
         {
-          "type": "short",
-          "q": "Explain, using differentiation, why ∫2x dx = x² is an incomplete answer and ∫2x dx = x² + c is the full answer.",
+          "type": "mcq",
+          "q": "The derivative of x² + c is 2x for every real number c. What does that make the answer ∫2x dx = x²?",
+          "options": [
+            "Complete, since c matters only in definite integrals",
+            "Incomplete: it names one antiderivative instead of the whole family x² + c",
+            "Wrong: the derivative of x² is 2, not 2x",
+            "Incomplete: the answer should be x² + 2x + c"
+          ],
+          "answerIndex": 1,
           "concept": "Why the constant of integration is required",
-          "why": "The indefinite integral of 2x is every function whose derivative is 2x, not just one of them. Since the derivative of any constant is 0, [x² + c]′ = 2x + 0 = 2x for every real number c, so x² + 1, x² − 7 and x² + 100 are all antiderivatives of 2x. Writing x² alone names one member of the family and silently drops the rest; x² + c names them all.\n\nA correct answer states that differentiating a constant gives 0, so x² + c has derivative 2x for every c, and concludes that the integral is the whole family x² + c, with c any real number."
+          "why": "The indefinite integral of 2x is every function whose derivative is 2x. Differentiating a constant gives 0, so x², x² + 1 and x² − 7 all have derivative 2x. Writing x² alone picks one member of that family and drops the rest, so the full answer is x² + c with c any real number.\n\nThe first option has the roles reversed: it is the definite integral where c cancels and is not needed. The third misreads d/dx x² = 2x. The fourth invents an extra 2x that has no source."
         }
       ]
     },
@@ -477,28 +505,56 @@
           "why": "cos φ is an even function: cos(+36.9°) = cos(−36.9°) = 0.80. The number fixes P/S, the size of the angle (36.9°) and the fraction of S that is real power, but it cannot say whether φ is positive (inductive, current lags) or negative (capacitive, current leads). That is why a power factor is always written with the word lagging or leading attached.\n\nThe other three options are all exactly what PF = P/S = cos φ tells you directly."
         },
         {
-          "type": "short",
-          "q": "A supply v(t) = 100 sin ωt V drives a current i(t) = 4.0 sin(ωt − 60°) A through a load. Calculate the average power and the apparent power. Show your working.",
+          "type": "mcq",
+          "q": "A supply v(t) = 100 sin ωt V drives a current i(t) = 4.0 sin(ωt − 60°) A through a load. Calculate the average power and the apparent power.",
+          "options": [
+            "P = 200 W, S = 200 VA",
+            "P = 173 W, S = 200 VA",
+            "P = 100 W, S = 200 VA",
+            "P = 200 W, S = 400 VA"
+          ],
+          "answerIndex": 2,
           "concept": "Average power from peak values and phase angle",
-          "why": "The amplitudes are peak values, so P = ½V₀I₀ cos φ = ½(100)(4.0)cos 60° = (200)(0.500) = 100 W. Equivalently V_rms = 70.7 V, I_rms = 2.83 A and P = (70.7)(2.83)(0.500) = 100 W. Apparent power S = ½V₀I₀ = V_rms I_rms = 200 VA.\n\nFinal answers: P = 100 W (accept 99 to 101 W) and S = 200 VA (accept 199 to 201 VA). Q = 173 var may be given as well but is not required. P = 400 W comes from using peak values without the ½ and dropping cos φ; P = 200 W drops cos φ only, which is S quoted as watts; both are wrong."
+          "why": "The amplitudes given are peak values, so P = ½V₀I₀ cos φ = ½(100)(4.0)(cos 60°) = 100 W, and S = V_rms I_rms = ½V₀I₀ = 200 VA.\n\nP = 200 W drops cos φ and so quotes the apparent power in watts; P = 173 W uses sin φ, which is the reactive power in var; the pair 200 W and 400 VA treats the peak values as rms and loses the ½ throughout."
         },
         {
-          "type": "short",
-          "q": "A pure capacitor of reactance 25 Ω is connected across a 100 V rms supply. Calculate the rms current, the average power consumed and the reactive power. Show your working.",
+          "type": "mcq",
+          "q": "A pure capacitor of reactance 25 Ω is connected across a 100 V rms supply. Calculate the rms current, the average power consumed and the reactive power.",
+          "options": [
+            "4.0 A, 0 W, 400 var",
+            "4.0 A, 400 W, 0 var",
+            "4.0 A, 400 W, 400 var",
+            "4.0 A, 0 W, 100 var"
+          ],
+          "answerIndex": 0,
           "concept": "Average and reactive power of a pure reactance",
-          "why": "I = V/X_C = 100/25 = 4.0 A. In a pure capacitor the current leads the voltage by 90°, so cos φ = cos 90° = 0 and the average power P = V I cos φ = 0 W: energy is stored in the electric field for a quarter cycle and returned in the next, and none is dissipated. The reactive power is Q = V I sin φ = (100)(4.0)(1) = 400 var, capacitive (leading), which may be written −400 var.\n\nFinal answers: I = 4.0 A, P = 0 W, Q = 400 var (accept 400 var capacitive, 400 var leading or −400 var). Also accepted: Q = I²X_C = (16)(25) = 400 var or V²/X_C = 400 var. Writing P = 400 W confuses reactive with real power and is wrong."
+          "why": "I = V/X_C = 100/25 = 4.0 A. The current leads the voltage by 90° in a pure capacitor, so cos φ = 0 and P = V I cos φ = 0 W: energy stored in the electric field each quarter cycle is returned in the next. The reactive power is Q = V I sin φ = 400 var, equally I²X_C = (16)(25) = 400 var.\n\n400 W as the real power calls stored energy dissipated energy; 400 W together with 400 var counts the same energy twice; 100 var is I X_C with the current not squared."
         },
         {
-          "type": "short",
-          "q": "With v = V₀ sin ωt and i = I₀ sin(ωt − φ), use the identity sin A sin B = ½[cos(A − B) − cos(A + B)] to write p(t) = vi as a constant plus one oscillating term. Hence show P = Vrms Irms cos φ. Show your working.",
+          "type": "mcq",
+          "q": "With v = V₀ sin ωt and i = I₀ sin(ωt − φ), and using sin A sin B = ½[cos(A − B) − cos(A + B)], which expression equals p(t) = vi?",
+          "options": [
+            "(V₀I₀/2)[cos φ + cos(2ωt − φ)]",
+            "V₀I₀[cos φ − cos(2ωt − φ)]",
+            "(V₀I₀/2)[cos φ − cos(ωt − φ)]",
+            "(V₀I₀/2)[cos φ − cos(2ωt − φ)]"
+          ],
+          "answerIndex": 3,
           "concept": "Deriving average power from the instantaneous power",
-          "why": "p(t) = V₀I₀ sin ωt sin(ωt − φ). With A = ωt and B = ωt − φ, A − B = φ and A + B = 2ωt − φ, so p(t) = (V₀I₀/2)[cos φ − cos(2ωt − φ)]. The first term is a constant; the second is a sinusoid at 2ω whose average over any whole number of cycles is zero. So the average power is P = (V₀I₀/2) cos φ, and since V_rms = V₀/√2 and I_rms = I₀/√2, V_rms I_rms = V₀I₀/2, giving P = V_rms I_rms cos φ.\n\nA correct answer must show the product form (V₀I₀/2)[cos φ − cos(2ωt − φ)], state that the cos(2ωt − φ) term averages to zero because it is a sinusoid over whole cycles, and convert V₀I₀/2 to V_rms I_rms. Writing the second term as cos(2ωt) without the φ, or claiming the ripple is at ω rather than 2ω, loses the derivation."
+          "why": "With A = ωt and B = ωt − φ, A − B = φ and A + B = 2ωt − φ, so p(t) = V₀I₀ sin ωt sin(ωt − φ) = (V₀I₀/2)[cos φ − cos(2ωt − φ)]. The constant term is the average power (V₀I₀/2)cos φ = V_rms I_rms cos φ, and the 2ω term averages to zero over whole cycles.\n\nThe + version has the sign of the identity wrong; the version without the ½ drops the factor the identity carries; cos(ωt − φ) puts the ripple at the supply frequency instead of twice it."
         },
         {
-          "type": "short",
-          "q": "The instantaneous power p(t) drawn by a load is measured and found to dip below zero for part of every cycle. Explain what a negative instantaneous power means physically, and whether this could happen for a purely resistive load.",
+          "type": "mcq",
+          "q": "The instantaneous power p(t) drawn by a load dips below zero for part of every cycle. What does that tell you about the load?",
+          "options": [
+            "A pure resistor behaves the same way whenever v and i are both negative",
+            "Energy flows back to the source at those instants, so the load must contain reactance",
+            "The average power over a full cycle is negative",
+            "The power factor of the load is greater than 1"
+          ],
+          "answerIndex": 1,
           "concept": "Meaning of negative instantaneous power",
-          "why": "p(t) = v(t)i(t) is the rate at which energy flows from the source into the load. A negative value means that, at that instant, energy is flowing back from the load to the source: the load's reactance (inductor or capacitor) is returning energy it stored earlier in its magnetic or electric field. It cannot happen for a pure resistor, because v and i are in phase there, so they are always both positive or both negative and their product is never negative. The minimum of p(t) is S(cos φ − 1), which is zero only when φ = 0.\n\nA correct answer says negative p means energy returning to the source (not an error and not negative average power), attributes it to stored energy in a reactance, and states that a resistor's p(t) is never negative because v and i have the same sign at every instant."
+          "why": "p(t) = v(t)i(t) is the rate at which energy flows from the source into the load, so p < 0 means energy is returning to the source: a reactance is giving back what it stored in its magnetic or electric field. The swing is p = P − S cos(2ωt − φ), whose minimum P − S = S(cos φ − 1) is negative for any φ ≠ 0.\n\nA pure resistor never does this, because v and i share a sign at every instant so their product is never negative; the full-cycle average stays positive at P = S cos φ; and no power factor can exceed 1."
         }
       ]
     },
@@ -614,28 +670,56 @@
           "why": "The state of an object is what it holds, stored in variables; its behaviour is what it does, described by methods. `owner` and `balance` are values the account holds, so they are its state. `deposit()` and `withdraw()` are actions, so they are behaviour.\n\nThe other pairings mix a variable with a method or list only methods."
         },
         {
-          "type": "short",
-          "q": "Trace this fragment and give the values of a, b and c after each line. Show your working.\n\n```c\nint a = 3, b = 10, c;\nc = a * b + 2;\nb -= a;\na = c / b;\nc = c - a * b;\n```",
+          "type": "mcq",
+          "q": "Trace this fragment and give the values of a, b and c after the last line.\n\n```c\nint a = 3, b = 10, c;\nc = a * b + 2;\nb -= a;\na = c / b;\nc = c - a * b;\n```",
+          "options": [
+            "a = 5, b = 7, c = 1",
+            "a = 4, b = 7, c = 4",
+            "a = 3, b = 7, c = 11",
+            "a = 4, b = 7, c = 0"
+          ],
+          "answerIndex": 1,
           "concept": "Tracing a sequence of assignments",
-          "why": "Line 2: c = 3 × 10 + 2 = 32 (a = 3, b = 10, c = 32). Line 3: b = 10 − 3 = 7 (a = 3, b = 7, c = 32). Line 4: a = 32 / 7, integer division, so 4 (a = 4, b = 7, c = 32). Line 5: c = 32 − 4 × 7 = 32 − 28 = 4 (a = 4, b = 7, c = 4).\n\nFinal answer: a = 4, b = 7, c = 4. A correct answer shows the value after every line, treats `b -= a` as b = b − a, and truncates 32 / 7 to 4 rather than 4.57. a = 4.57 or c = 0 (from 32 − 4.57 × 7) is wrong."
+          "why": "c = 3 × 10 + 2 = 32. Then `b -= a` means b = 10 − 3 = 7. Then a = 32 / 7 in int arithmetic, which truncates to 4. Finally c = 32 − 4 × 7 = 4, so a = 4, b = 7, c = 4.\n\na = 5, b = 7, c = 1 reads line 2 as a × (b + 2) = 36; a = 3, b = 7, c = 11 divides before `b -= a` runs, 32 / 10 = 3; a = 4, b = 7, c = 0 keeps 32 / 7 as 4.57 and computes 32 − 4.57 × 7."
         },
         {
-          "type": "short",
-          "q": "a = 25 and b = 14. Write both as 8-bit binary and compute `a & b`, `a | b` and `a ^ b`, giving each result in decimal. Show your working.",
+          "type": "mcq",
+          "q": "a = 25 and b = 14, both held in 8 bits. What are `a & b`, `a | b` and `a ^ b` in decimal?",
+          "options": [
+            "8, 31, 23",
+            "8, 23, 31",
+            "8, 29, 21",
+            "1, 1, 0"
+          ],
+          "answerIndex": 0,
           "concept": "Bitwise AND, OR and XOR",
-          "why": "25 = 0001 1001 and 14 = 0000 1110. AND keeps a bit only where both are 1: 0000 1000 = 8. OR keeps a bit where either is 1: 0001 1111 = 31. XOR keeps a bit where exactly one is 1: 0001 0111 = 23.\n\nFinal answer: a & b = 8, a | b = 31, a ^ b = 23. A correct answer shows both binary strings and the bit-by-bit result for each operator. Treating `&` and `|` as logical (giving 1 and 1) is wrong."
+          "why": "25 = 0001 1001 and 14 = 0000 1110. AND keeps a bit only where both have 1: 0000 1000 = 8. OR keeps a bit where either has 1: 0001 1111 = 31. XOR keeps a bit where exactly one has 1: 0001 0111 = 23.\n\n8, 23, 31 swaps the OR and XOR results; 8, 29, 21 comes from writing 14 as 0000 1100; 1, 1, 0 treats the three as the logical operators &&, || and !=."
         },
         {
-          "type": "short",
-          "q": "Classify each of these operators into one of the six categories (arithmetic, relational, logical, bitwise, assignment, misc): `%`, `>=`, `&&`, `<<`, `+=`, `sizeof`. Then state the value of `9 % 4 >= 1`.",
+          "type": "mcq",
+          "q": "Classify `%`, `>=`, `&&`, `<<`, `+=` and `sizeof` into the six operator categories, in that order.",
+          "options": [
+            "arithmetic, logical, logical, bitwise, assignment, misc",
+            "arithmetic, relational, bitwise, bitwise, assignment, misc",
+            "arithmetic, relational, logical, arithmetic, assignment, misc",
+            "arithmetic, relational, logical, bitwise, assignment, misc"
+          ],
+          "answerIndex": 3,
           "concept": "Operator categories",
-          "why": "`%` is arithmetic (remainder); `>=` is relational; `&&` is logical; `<<` is bitwise (left shift); `+=` is assignment; `sizeof` is misc. For the expression, `%` outranks `>=`: 9 % 4 = 1, and 1 >= 1 is true, so the value is 1.\n\nA correct answer names all six categories correctly and gives 1 (also accepted: true). Calling `<<` arithmetic or `sizeof` a function is wrong; the value 0 comes from grouping as 9 % (4 >= 1) = 9 % 1 = 0, which ignores precedence."
+          "why": "`%` gives a remainder, so arithmetic; `>=` compares two values, so relational; `&&` combines truth values, so logical; `<<` shifts bits, so bitwise; `+=` stores into its left operand, so assignment; `sizeof` fits none of the five and sits with the misc operators.\n\nEach wrong option gets exactly one of them wrong: `>=` called logical, `&&` called bitwise, or `<<` called arithmetic because shifting left doubles a number."
         },
         {
-          "type": "short",
-          "q": "`int total;` and `extern int total;` both name the same variable and the same type. Explain why the first is a definition and the second is only a declaration, and say what a definition does that a declaration does not.",
+          "type": "mcq",
+          "q": "`int total;` and `extern int total;` name the same variable and the same type. What does the first do that the second does not?",
+          "options": [
+            "It gives the variable its type.",
+            "It gives the variable a starting value.",
+            "It reserves storage for the variable.",
+            "It makes the name visible to other files."
+          ],
+          "answerIndex": 2,
           "concept": "Declaration versus definition",
-          "why": "A declaration tells the compiler a name and its type. A definition does that and also reserves the storage: bytes are set aside for the variable. `int total;` sets aside an int's worth of memory, so it defines and, in doing so, also declares. `extern int total;` says the variable exists and is an int but that its storage is reserved elsewhere, so it declares without defining.\n\nA correct answer says every definition is also a declaration, that the difference is reserving storage (memory), and that `extern` marks a declaration that does not reserve any. Saying the difference is initialisation is wrong: `int total;` defines without initialising."
+          "why": "A declaration tells the compiler a name and its type. A definition does that and also reserves the storage, which is why every definition is a declaration but not every declaration is a definition. `int total;` sets aside an int's worth of memory; `extern int total;` says the storage is reserved elsewhere.\n\nBoth lines give the type, so that is not the difference; neither line initialises anything; and `extern` is the line that concerns other files, not the definition."
         }
       ]
     },
@@ -752,28 +836,56 @@
           "why": "Splitting licenses sums, differences and constant multiples only. The integral of a product is not the product of the integrals: ∫x³·x dx = ∫x⁴ dx = x⁵/5 + c, while (x⁴/4)(x²/2) = x⁶/8, which is not even the right power of x.\n\nThe sum, the difference and the constant multiple rewritings are all valid, because integration is linear."
         },
         {
-          "type": "short",
-          "q": "Find ∫(2x² + 3x − 4) dx and check your answer by differentiating. Show your working.",
+          "type": "mcq",
+          "q": "Find ∫(2x² + 3x − 4) dx.",
+          "options": [
+            "2x³ + 3x² − 4x + c",
+            "(2/3)x³ + (3/2)x² − 4x + c",
+            "(2/3)x³ + (3/2)x² − 4 + c",
+            "(1/3)x³ + (1/2)x² − 4x + c"
+          ],
+          "answerIndex": 1,
           "concept": "Integrating a polynomial term by term",
-          "why": "Split the integral and apply the power rule to each term: ∫2x² dx = 2x³/3, ∫3x dx = 3x²/2, ∫4 dx = 4x. So ∫(2x² + 3x − 4) dx = (2/3)x³ + (3/2)x² − 4x + c. Check: d/dx [(2/3)x³ + (3/2)x² − 4x] = 2x² + 3x − 4.\n\nFinal answer: (2/3)x³ + (3/2)x² − 4x + c. Also accepted: 2x³/3 + 3x²/2 − 4x + c. The working must show each term divided by its new power and the differentiation check. 2x³ + 3x² − 4x + c (no division) and (2/3)x³ + (3/2)x² − 4 + c (constant not integrated to 4x) are wrong; an answer without + c is incomplete."
+          "why": "Split and apply the power rule to each term: ∫2x² dx = 2x³/3, ∫3x dx = 3x²/2, ∫4 dx = 4x. So the integral is (2/3)x³ + (3/2)x² − 4x + c, and differentiating gives back 2x² + 3x − 4.\n\n2x³ + 3x² − 4x + c raises each power but never divides by it; (2/3)x³ + (3/2)x² − 4 + c leaves the constant term unintegrated; (1/3)x³ + (1/2)x² − 4x + c divides correctly but drops the coefficients 2 and 3."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₋₂¹ (3x² − 2) dx. Show the substitution at x = −2 term by term. Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₋₂¹ (3x² − 2) dx.",
+          "options": [
+            "3",
+            "−13",
+            "11",
+            "−5"
+          ],
+          "answerIndex": 0,
           "concept": "Definite integral with a cubed negative limit",
-          "why": "F(x) = x³ − 2x. At x = 1: 1 − 2 = −1. At x = −2: (−2)³ − 2(−2) = −8 + 4 = −4. So ∫₋₂¹ (3x² − 2) dx = F(1) − F(−2) = −1 − (−4) = −1 + 4 = 3.\n\nFinal answer: 3. A correct answer states F(x) = x³ − 2x, shows (−2)³ = −8 and −2(−2) = +4 at the lower limit, and subtracts F(−2) = −4 to get 3. Taking (−2)³ as +8 gives F(−2) = 12 and the wrong answer −13; writing −2(−2) = −4 gives F(−2) = −12 and the wrong answer 11."
+          "why": "An antiderivative is F(x) = x³ − 2x. At x = 1: 1 − 2 = −1. At x = −2: (−2)³ − 2(−2) = −8 + 4 = −4. So the integral is F(1) − F(−2) = −1 − (−4) = 3.\n\n−13 comes from taking (−2)³ as +8, giving F(−2) = 12; 11 comes from writing −2(−2) = −4, giving F(−2) = −12; −5 adds F(1) and F(−2) instead of subtracting."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₁² (x² − 1)/x² dx by first dividing each term of the numerator by x². Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₁² (x² − 1)/x² dx.",
+          "options": [
+            "3/2",
+            "4/3",
+            "−1/2",
+            "1/2"
+          ],
+          "answerIndex": 3,
           "concept": "Dividing before integrating a definite integral",
-          "why": "Divide: (x² − 1)/x² = x²/x² − 1/x² = 1 − x⁻². Integrate: F(x) = x − x⁻¹/(−1) = x + 1/x. Evaluate: F(2) = 2 + 1/2 = 5/2, F(1) = 1 + 1 = 2, so the integral is 5/2 − 2 = 1/2.\n\nFinal answer: 1/2 (also accepted: 0.5). The working must show the rewrite to 1 − x⁻², the antiderivative x + 1/x with the plus sign (from dividing x⁻² by −1 and then subtracting), and F(2) − F(1). Using x − 1/x as F gives 3/2 − 0 = 3/2 and is wrong; integrating numerator and denominator separately is not a valid method."
+          "why": "Divide each term by x² first: (x² − 1)/x² = 1 − x⁻². An antiderivative is F(x) = x + 1/x, since ∫x⁻² dx = x⁻¹/(−1) = −1/x and subtracting it gives +1/x. Then F(2) − F(1) = 5/2 − 2 = 1/2.\n\n3/2 uses x − 1/x, losing that sign; 4/3 integrates x² − 1 without dividing by x²; −1/2 subtracts the limits in the wrong order."
         },
         {
-          "type": "short",
-          "q": "A student evaluates ∫₀³ 6x dx as 6x|₀³ = 18 − 0 = 18. Explain what the student substituted the limits into, why that is wrong, and give the correct value.",
+          "type": "mcq",
+          "q": "A student evaluates ∫₀³ 6x dx as 6x|₀³ = 18 − 0 = 18. What went wrong, and what is the correct value?",
+          "options": [
+            "The constant of integration was dropped; the value is 18 + c",
+            "The limits went into the integrand rather than the antiderivative 3x²; the value is 27",
+            "The limits went into the integrand rather than the antiderivative 6x²; the value is 54",
+            "Nothing went wrong; the value is 18"
+          ],
+          "answerIndex": 1,
           "concept": "Substituting limits into the antiderivative, not the integrand",
-          "why": "The Fundamental Theorem says ∫ₐᵇ f(x) dx = F(b) − F(a), where F is an antiderivative of f. The student substituted the limits into f(x) = 6x itself; the limits must go into F(x) = 3x². Correctly: 3x²|₀³ = 3(9) − 3(0) = 27.\n\nA correct answer says the limits were put into the integrand instead of the antiderivative, states F(x) = 3x² (from integrating 6x), and gives 27. Also accepted: 3(3² − 0²) = 27. An answer that only says the arithmetic is wrong, without naming F, is incomplete."
+          "why": "The Fundamental Theorem reads ∫ₐᵇ f(x) dx = F(b) − F(a), where F is an antiderivative of f. The student substituted into f(x) = 6x itself. Integrating first gives F(x) = 3x², so the value is 3(3²) − 3(0²) = 27.\n\n6x² is what you get by raising the power without dividing by 2, and gives 54; a definite integral never carries + c, since the constant cancels; and 18 is the value of the integrand at the limits, not of the integral."
         }
       ]
     },
@@ -889,28 +1001,56 @@
           "why": "Below resonance ω is small, so X_L = ωL is small and X_C = 1/ωC is large: the net reactance is capacitive, Z exceeds R, PF = R/Z drops below 1, and the current leads the voltage.\n\nLagging would need X_L greater than X_C, which happens above resonance; PF = 1 with the current in phase is the resonance condition itself; a power factor greater than 1 is impossible because R can never exceed Z."
         },
         {
-          "type": "short",
-          "q": "A coil of resistance 24 Ω and inductance 57.3 mH is connected across a 120 V rms, 50 Hz supply. Calculate X_L, Z, the rms current, the power factor, and P, Q and S, then check that S² = P² + Q². Show your working.",
-          "concept": "Complete power set for a series RL circuit with cross-check",
-          "why": "X_L = 2πfL = 2π(50)(0.0573) = 18.0 Ω. Z = √(24² + 18²) = √900 = 30.0 Ω. I = V/Z = 120/30 = 4.00 A. PF = cos φ = R/Z = 24/30 = 0.800 lagging (φ = 36.9°, inductive, so the current lags). P = V I cos φ = (120)(4.00)(0.800) = 384 W, and by the second route I²R = (16)(24) = 384 W. Q = V I sin φ = (120)(4.00)(0.600) = 288 var inductive, and I²X_L = (16)(18) = 288 var. S = V I = 480 VA. Check: 384² + 288² = 147 456 + 82 944 = 230 400 = 480².\n\nFinal answers: X_L = 18.0 Ω, Z = 30.0 Ω, I = 4.00 A, PF = 0.80 lagging, P = 384 W, Q = 288 var, S = 480 VA (accept each within 1%). V²/R = 600 W is not the real power, because only V_R = IR = 96 V sits across the resistance; a student who writes 600 W has used the wrong voltage."
+          "type": "mcq",
+          "q": "A coil of resistance 24 Ω and inductance 57.3 mH is connected across a 120 V rms, 50 Hz supply. Calculate the rms current, the power factor and the real power.",
+          "options": [
+            "5.00 A, 1.00, 600 W",
+            "4.00 A, 0.60 lagging, 288 W",
+            "4.00 A, 0.80 lagging, 384 W",
+            "4.00 A, 0.80 lagging, 480 W"
+          ],
+          "answerIndex": 2,
+          "concept": "Current, power factor and real power of a series RL circuit",
+          "why": "X_L = 2πfL = 2π(50)(0.0573) = 18.0 Ω, so Z = √(24² + 18²) = 30.0 Ω, I = 120/30.0 = 4.00 A, PF = R/Z = 0.800 lagging and P = I²R = (16)(24) = 384 W, the same as V I cos φ.\n\n5.00 A with 600 W ignores the reactance and uses V/R and V²/R; 288 W uses sin φ = 0.600, which gives the reactive power in var; 480 W is V I = S, the apparent power, with the power factor left out."
         },
         {
-          "type": "short",
-          "q": "A workshop draws 6.0 kW from a 240 V rms, 50 Hz supply at a power factor of 0.75 lagging. Calculate the apparent power, the line current and the reactive power. Then calculate the parallel capacitance that raises the power factor to unity, and the new line current. Show your working.",
+          "type": "mcq",
+          "q": "A workshop draws 6.0 kW from a 240 V rms, 50 Hz supply at a power factor of 0.75 lagging. Calculate the capacitance that must be connected in parallel to raise the power factor to unity.",
+          "options": [
+            "1840 μF",
+            "442 μF",
+            "332 μF",
+            "292 μF"
+          ],
+          "answerIndex": 3,
           "concept": "Power factor correction with a parallel capacitor",
-          "why": "S = P/PF = 6000/0.75 = 8000 VA, and I = S/V = 8000/240 = 33.3 A. Q = √(S² − P²) = √(8000² − 6000²) = √(28 × 10⁶) = 5292 var lagging (equivalently S sin φ with sin φ = 0.661). For unity power factor the capacitor must supply all of it: Q_C = 5292 var, so C = Q_C/(ωV²) = 5292/[(314.2)(240²)] = 5292/(1.81 × 10⁷) = 2.92 × 10⁻⁴ F = 292 μF. The real power is unchanged, so the new line current is I = P/V = 6000/240 = 25.0 A.\n\nFinal answers: S = 8.0 kVA, I = 33.3 A, Q = 5.29 kvar (accept 5.25 to 5.35), C = 292 μF (accept 285 to 300 μF), new I = 25.0 A. A correct answer must show that P stays at 6.0 kW while the current falls from 33.3 A to 25.0 A. Using f = 50 instead of ω = 314 in C = Q/(ωV²) gives 1840 μF and is wrong."
+          "why": "S = P/PF = 6000/0.75 = 8000 VA and Q = √(S² − P²) = 5292 var lagging. The capacitor must supply all of that, so C = Q/(ωV²) = 5292/[(314.2)(240²)] = 2.92 × 10⁻⁴ F = 292 μF. The real power is unchanged, so the line current drops from 33.3 A to 25.0 A.\n\n1840 μF uses f = 50 in place of ω = 314; 442 μF puts the apparent power S into the formula instead of Q; 332 μF puts the real power P there, which a capacitor never has to supply."
         },
         {
-          "type": "short",
-          "q": "R = 25 Ω, L = 0.50 H and C = 8.0 μF are in series across a 100 V rms, 50 Hz supply. Calculate X_L, X_C, Z, the rms current, the power factor and the real power. State whether the current leads or lags and whether 50 Hz is above or below resonance. Show your working.",
+          "type": "mcq",
+          "q": "R = 25 Ω, L = 0.50 H and C = 8.0 μF are in series across a 100 V rms, 50 Hz supply. Calculate the impedance and the real power dissipated.",
+          "options": [
+            "242 Ω, 4.3 W",
+            "556 Ω, 0.81 W",
+            "242 Ω, 400 W",
+            "266 Ω, 3.5 W"
+          ],
+          "answerIndex": 0,
           "concept": "Series RLC power off resonance",
-          "why": "X_L = 2πfL = (314.2)(0.50) = 157 Ω. X_C = 1/(2πfC) = 1/[(314.2)(8.0 × 10⁻⁶)] = 398 Ω. Net X = 157 − 398 = −241 Ω (capacitive), so Z = √(25² + 241²) = √(625 + 57 990) = 242 Ω. I = 100/242 = 0.413 A. PF = R/Z = 25/242 = 0.103 leading. P = I²R = (0.413)²(25) = 4.27 W. Since X_C exceeds X_L the current leads and 50 Hz is below the resonant frequency (f₀ = 1/(2π√(LC)) = 79.6 Hz).\n\nFinal answers: X_L = 157 Ω, X_C = 398 Ω, Z = 242 Ω, I = 0.41 A (accept 0.40 to 0.42), PF = 0.10 leading, P = 4.3 W (accept 4.1 to 4.4 W), current leading, below resonance. Adding the reactances to get X = 555 Ω, or using V²/R = 400 W for the power, is wrong; 400 W is what the circuit would consume only at resonance."
+          "why": "X_L = 2πfL = 157 Ω and X_C = 1/(2πfC) = 398 Ω, so the net reactance is 157 − 398 = −241 Ω, capacitive, and Z = √(25² + 241²) = 242 Ω. Then I = 100/242 = 0.413 A and P = I²R = (0.413)²(25) = 4.3 W.\n\n556 Ω adds the two reactances instead of subtracting them; 400 W is V²/R, which would need all 100 V across R when in fact only 10.3 V is; 266 Ω adds R and X arithmetically rather than in quadrature."
         },
         {
-          "type": "short",
-          "q": "For a series RL circuit on a 200 V rms supply, one student calculates the real power as V²/R using 200 V, and another as I²R. Explain why the two answers differ, which one is correct, and what voltage would make the V²/R form correct.",
+          "type": "mcq",
+          "q": "For a series RL circuit on a 200 V rms supply, one student computes the real power as V²/R using 200 V, and another as I²R. Which statement is correct?",
+          "options": [
+            "V²/R is correct, because the supply voltage is what drives the resistor",
+            "Both are correct, since P = V²/R = I²R in any circuit",
+            "I²R is correct, because only IR of the 200 V sits across the resistance",
+            "Neither is correct, because the real power of an RL circuit is V I"
+          ],
+          "answerIndex": 2,
           "concept": "Why P = I²R is safe and V²/R with the supply voltage is not",
-          "why": "P = V²/R assumes that the whole voltage V sits across the resistance. In a series RL circuit the supply voltage is shared between R and X_L in quadrature, so the resistor only has V_R = IR across it, which is less than 200 V. Using 200 V in V²/R therefore overestimates the power by the factor (Z/R)². P = I²R is always correct because the same current flows through every series element and only the resistance dissipates energy.\n\nA correct answer says the supply voltage is not the voltage across R, that I²R is right, and that V²/R would be right only with V_R = IR (the resistor's own drop, or the supply voltage in a purely resistive circuit or at resonance). Saying that both formulas are always equivalent because they are in DC is wrong."
+          "why": "In a series circuit the same current flows through every element and only R dissipates energy, so P = I²R is always right. The supply voltage divides between R and X_L in quadrature, so the resistor carries only V_R = IR, and putting 200 V into V²/R overstates the power by the factor (Z/R)².\n\nV²/R is right only with V_R, or with the supply voltage when the circuit is purely resistive or at resonance; the two forms agree only when Z = R; and V I is the apparent power S, not the real power."
         }
       ]
     },
@@ -1026,28 +1166,56 @@
           "why": "A union's members all start at the same location, so it represents only one member at a time and wastes no space on the other. That is exactly a value that is one thing or the other, never both.\n\nA struct gives both members their own storage and lets them hold values at once, which is more than is needed; a class adds methods, which the reading does not need; an array holds several items of the same type."
         },
         {
-          "type": "short",
-          "q": "Write a `struct Book` with members for a title (up to 40 characters), an author (up to 40 characters), the number of copies (a whole number) and the price (a decimal). Then define a variable `b` of that type and write two statements that set copies to 3 and price to 12.5 using the dot syntax.",
+          "type": "mcq",
+          "q": "Which fragment declares a `struct Book` with a title and an author of up to 40 characters, a whole-number copy count and a decimal price, then sets the copies of a variable `b` to 3?",
+          "options": [
+            "`struct Book { char title[41]; char author[41]; int copies; float price; }; struct Book b; b.copies = 3;`",
+            "`struct Book { char title[41]; char author[41]; int copies; float price; } struct Book b; b.copies = 3;`",
+            "`struct Book { char title[41]; char author[41]; float copies; int price; }; struct Book b; b.copies = 3;`",
+            "`struct Book { char title[41]; char author[41]; int copies; float price; }; struct Book b; Book.copies = 3;`"
+          ],
+          "answerIndex": 0,
           "concept": "Writing a structure and setting its members",
-          "why": "```c\nstruct Book {\n    char title[41];\n    char author[41];\n    int copies;\n    float price;\n};\nstruct Book b;\nb.copies = 3;\nb.price = 12.5;\n```\n\nA correct answer uses the `struct` keyword, a char array for each string, `int` for copies, `float` or `double` for price, a semicolon after the closing brace, and the dot syntax `b.copies` and `b.price`. Arrays of size 40 or 41 are both accepted. `float copies` for a count, `b->copies`, `Book.copies`, or a missing semicolon after the closing brace is wrong."
+          "why": "Each member is written inside the braces as a type then a name: a char array holds a string, `int` a count and `float` a price. The closing brace of a structure needs a semicolon, and a member is reached as variable, dot, member name.\n\nThe second option drops that semicolon, so the compiler reads on into `struct Book b;` as part of the declaration; the third swaps the types of copies and price; the fourth names the type instead of the variable, and a type owns no storage."
         },
         {
-          "type": "short",
-          "q": "Write a class `Account` whose balance cannot be set directly from outside it: a private `balance`, a public `deposit(amount)` that adds to it, and a public `get_balance()` that returns it. Then say what happens to the line `a.balance = 1000;` written outside the class for an Account `a`.",
+          "type": "mcq",
+          "q": "A class `Account` has a private `balance` and public `deposit(amount)` and `get_balance()`. For an Account `a`, what happens to the line `a.balance = 1000;` written outside the class?",
+          "options": [
+            "It compiles and sets balance to 1000.",
+            "The compiler rejects it, because balance is private.",
+            "It compiles and calls deposit(1000) instead.",
+            "It compiles, but get_balance() still returns the old balance."
+          ],
+          "answerIndex": 1,
           "concept": "Encapsulation with public and private",
-          "why": "```\nclass Account {\nprivate:\n    double balance;\npublic:\n    void deposit(double amount) { balance = balance + amount; }\n    double get_balance() { return balance; }\n};\n```\n\n`a.balance = 1000;` outside the class is rejected by the compiler, because `balance` is private and only the class's own methods may reach it; the only way in is `a.deposit(1000)`. A correct answer marks the variable private, the two methods public, has deposit add to balance and get_balance return it, and states that direct access from outside is refused (does not compile). Making balance public, or saying the line works, is wrong."
+          "why": "A private member may be reached only by the class's own methods, so a line outside the class that names `a.balance` is refused when the program is compiled. The way in is `a.deposit(1000)`, which is public and is the only route to the balance.\n\nThe other three all assume the line builds: private access is not silently redirected to a method, and it does not run and quietly fail; it never compiles at all."
         },
         {
-          "type": "short",
-          "q": "A program must find the average of the first five multiples of 9. List the variables the problem needs, write a C definition for each (type then name, with its starting value where there is one), and write the one statement that computes the average so that the decimal part is not lost. State the value printed with `%.1f`.",
+          "type": "mcq",
+          "q": "A program must print the average of the first five multiples of 9. Which fragment prints the correct value?",
+          "options": [
+            "`int sum = 0+9+18+27+36; printf(\"%.1f\", (float) sum / 5);`",
+            "`int sum = 9+18+27+36+45; printf(\"%.1f\", (float) sum / 4);`",
+            "`int sum = 9+18+27+36+45; printf(\"%.1f\", (float) sum / 5);`",
+            "`int sum = 9*5; printf(\"%.1f\", (float) sum / 5);`"
+          ],
+          "answerIndex": 2,
           "concept": "Representing a problem as data",
-          "why": "The problem needs the sum of the multiples (or the multiples themselves), how many there are, and the result:\n\n```c\nint sum = 9 + 18 + 27 + 36 + 45;   /* 135 */\nint count = 5;\nfloat average = (float) sum / count;\n```\n\nPrinted with `%.1f` this gives 27.0. A correct answer defines an int sum (or five int multiples), an int count, a float or double average, and casts one operand to float before the division (`(float) sum / count`, `sum / (float) count` or `sum / 5.0` are all accepted). `float average = sum / count;` happens to give 27.0 here because 135 / 5 is exact, but it loses the decimal part in general and is marked wrong; `(float)(sum / count)` is also wrong."
+          "why": "The first five multiples of 9 are 9, 18, 27, 36 and 45. They sum to 135 and there are five of them, so the average is 135 / 5 = 27.0.\n\nThe first option counts 0 as the first multiple and prints 18.0; the second divides by the number of plus signs and prints 33.8; the last takes 9 × 5 as the sum of the multiples and prints 9.0. All four cast before dividing, so the fault is in the data, not the division."
         },
         {
-          "type": "short",
-          "q": "A `struct Dog` and a `union Dog` are both written with the same three members `char name[20]`, `char breed[20]` and `char colour[20]`. Explain, in terms of where the members sit in memory, why setting `breed` destroys `name` in one of them and not the other, and what it means that a union represents only one member at a time.",
+          "type": "mcq",
+          "q": "A `struct Dog` and a `union Dog` are both written with the members `char name[20]`, `char breed[20]` and `char colour[20]`. Which statement about where those members sit in memory is correct?",
+          "options": [
+            "Both give each member its own 20-byte block, but the union hides two of them.",
+            "The struct starts all three at the same address; the union stores them one after another.",
+            "The union gives each member its own block and adds a tag naming the member in use.",
+            "The struct gives each member its own 20-byte block; the union starts all three at the same address."
+          ],
+          "answerIndex": 3,
           "concept": "Structure versus union in memory",
-          "why": "In the struct each member has its own location: name, breed and colour occupy three separate 20-byte blocks (60 bytes in all), so writing breed leaves name untouched and all three can hold values at once. In the union all members start at the same location: there is one 20-byte block and name, breed and colour are three names for it, so writing breed overwrites the bytes that held name.\n\n'One member at a time' means the union's storage holds whichever member was written last; the others are not preserved, and the union does not record which member is current. A correct answer says the struct members have separate storage, the union members share one starting address, and that this is why the union's earlier member is lost. Saying the union stores all three but hides two of them is wrong."
+          "why": "In a structure every member has its own storage, so name, breed and colour occupy three separate 20-byte blocks and writing one leaves the others untouched. In a union all members start at the same address and share one 20-byte block, so writing breed overwrites the bytes that held name.\n\nA union does not keep the other members hidden away, it does not lay them out one after another, and it stores no tag saying which member is current; the programmer must track that."
         }
       ],
       "slot": "fast"

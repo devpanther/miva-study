@@ -1,7 +1,7 @@
 # Friday — PHY_102 nightly check
 
 *Numerical magnetic-dipole work.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A coil of 100 turns, each of area 4.0 cm², is in a uniform field of 0.50 T. The maximum torque on it is measured as 0.020 N·m. Calculate the current in the coil.
 A. 1.0 × 10⁻⁴ A
@@ -51,13 +51,29 @@ B. The torque varies as sin θ during the turn, so it must be integrated
 C. The torque is zero at θ = 90°, so no work is done at all
 D. The work to any new orientation is always 2μB
 
-**9. (show your working)** A dipole of moment 0.50 A·m² is in a uniform field of 0.30 T. Calculate the work an external agent must do to turn it from θ = 0° to θ = 60°, and then from 60° to 180°, and check that the two add to 2μB. Show your working.
+**9.** A dipole of moment 0.50 A·m² sits in a uniform field of 0.30 T. Calculate the work an external agent must do to turn it from θ = 60° to θ = 180°.
+A. 0.075 J
+B. 0.300 J
+C. 0.225 J
+D. 0.314 J
 
-**10. (show your working)** An electromagnet is a solenoid of 1200 turns over 30 cm on an iron core of relative permeability 400. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the current needed for an interior field of 0.80 T, and the field the same current would give with no core. Show your working.
+**10.** An electromagnet is a solenoid of 1200 turns over 30 cm on an iron core of relative permeability 400. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the current needed for an interior field of 0.80 T.
+A. 1.3 A
+B. 0.40 A
+C. 159 A
+D. 40 A
 
-**11. (show your working)** A circular coil of 25 turns and diameter 8.0 cm carries 1.5 A in a uniform field of 0.60 T. Calculate its dipole moment, the maximum torque on it, and its potential energy when the normal is at 45° to B. Show your working.
+**11.** A circular coil of 25 turns and diameter 8.0 cm carries 1.5 A in a uniform field of 0.60 T. Calculate its magnetic dipole moment and its potential energy when the normal is at 45° to B.
+A. 0.19 A·m², −0.080 J
+B. 0.75 A·m², −0.32 J
+C. 0.19 A·m², +0.080 J
+D. 0.19 A·m², −0.11 J
 
-**12. (show your working)** The magnetic moment of an electron is written M = g(−eL/2m). Explain what the minus sign tells you about the direction of M relative to L, why it arises, and what the factor g represents.
+**12.** The magnetic moment of an electron is written M = g(−eL/2m), where L is its angular momentum. What do the minus sign and the factor g mean?
+A. M is parallel to L, and the minus sign comes from U = −μ·B; g is measured in rad/s per tesla
+B. M is antiparallel to L because g is negative; g carries units of A·m² per J·s
+C. M is antiparallel to L because the electron's charge is negative; g is dimensionless, near 1 for orbit and 2 for spin
+D. M is antiparallel to L because the electron orbits clockwise; g is the ratio of spin moment to orbital moment
 
 ---
 
@@ -95,18 +111,18 @@ D. The work to any new orientation is always 2μB
 
 Using degrees would make the error worse, not fix it; the torque being zero at 0° (not 90°) does not make the total work zero; 2μB is the work for a full flip to 180°, not for a quarter turn.
 
-**9.** *Work to rotate a dipole from the change in potential energy.* μB = (0.50)(0.30) = 0.15 J and U = −μB cos θ. W = ΔU = μB(cos θ₁ − cos θ₂). First stage: W₁ = 0.15(cos 0° − cos 60°) = 0.15(1 − 0.500) = 0.075 J. Second stage: W₂ = 0.15(cos 60° − cos 180°) = 0.15(0.500 + 1) = 0.225 J. Sum: 0.075 + 0.225 = 0.300 J = 2μB = 2(0.15) J, the work for a full flip.
+**9. C** — *Work to rotate a dipole from the change in potential energy.* The work is the change in potential energy, with U = −μB cos θ: W = μB(cos θ₁ − cos θ₂) = (0.50)(0.30)(cos 60° − cos 180°) = 0.15(0.500 + 1) = 0.225 J.
 
-Final answers: W₁ = 0.075 J, W₂ = 0.225 J, total 0.30 J (accept each within 0.003 J). The working must use U = −μB cos θ at the two angles, not torque times angle. Getting W₂ = 0.075 J by symmetry is wrong: the second stage passes through the 90° position where the torque is largest and covers more energy.
+0.075 J is the work for the earlier stage 0° to 60° and assumes a symmetry that does not exist; 0.300 J = 2μB is the whole flip from 0° to 180°; 0.314 J is τ_max times the angle 2π/3 in radians, which fails because the torque varies through the turn.
 
-**10.** *Solenoid with a core rearranged for the current.* n = N/L = 1200/0.30 = 4000 turns per metre. With the core B = μᵣμ₀nI, so I = B/(μᵣμ₀n) = 0.80/[(400)(4π × 10⁻⁷)(4000)] = 0.80/2.01 = 0.40 A. Without the core the same current gives B = μ₀nI = (4π × 10⁻⁷)(4000)(0.40) = 2.0 × 10⁻³ T, that is, 400 times smaller, which is the whole point of the iron.
+**10. B** — *Solenoid with a core rearranged for the current.* n = N/L = 1200/0.30 = 4000 turns per metre, and B = μᵣμ₀nI, so I = B/(μᵣμ₀n) = 0.80/[(400)(4π × 10⁻⁷)(4000)] = 0.80/2.01 = 0.40 A. Without the core the same current would give only 2.0 mT, which is the point of the iron.
 
-Final answers: I = 0.40 A (accept 0.39 to 0.41 A), B_air = 2.0 mT (accept 1.9 to 2.1 mT). Forgetting μᵣ gives 159 A, an impossible current for the wire; using N = 1200 in place of n gives 1.3 A; leaving the length as 30 gives n = 40 and I = 40 A. All three are wrong.
+159 A leaves μᵣ out, and no ordinary winding would carry it; 1.3 A puts N = 1200 into the formula in place of n; 40 A leaves the length as 30 instead of 0.30 m.
 
-**11.** *Dipole moment, torque and energy of a circular coil.* The radius is half the diameter: r = 4.0 cm = 0.040 m, so A = πr² = π(0.040)² = 5.03 × 10⁻³ m². μ = NIA = (25)(1.5)(5.03 × 10⁻³) = 0.189 A·m². Maximum torque, with the plane of the coil containing B: τ_max = μB = (0.189)(0.60) = 0.113 N·m. At 45°: U = −μB cos 45° = −(0.113)(0.707) = −0.080 J.
+**11. A** — *Dipole moment and potential energy of a circular coil.* The radius is half the diameter: r = 0.040 m, so A = πr² = 5.03 × 10⁻³ m² and μ = NIA = (25)(1.5)(5.03 × 10⁻³) = 0.19 A·m². Then U = −μB cos 45° = −(0.19)(0.60)(0.707) = −0.080 J.
 
-Final answers: μ = 0.19 A·m² (accept 0.185 to 0.192), τ_max = 0.11 N·m (accept 0.111 to 0.115), U = −0.080 J (accept −0.078 to −0.082). Using the diameter as the radius gives μ = 0.75 A·m², four times too big, and is wrong; a positive U at 45° has the sign dropped.
+0.75 A·m² uses the diameter as the radius, four times too much area; +0.080 J drops the minus sign in U = −μB cos θ; −0.11 J is −μB with cos 45° forgotten, which is the energy at θ = 0°.
 
-**12.** *Meaning of the sign and g-factor in the electron moment.* The minus sign says M is antiparallel to L: the moment points opposite to the angular momentum. It arises because the electron's charge is negative, so the conventional current circulates the opposite way to the electron's motion, and μ = IA therefore points the opposite way to L = mvr. The factor g is the g-factor, a dimensionless number that scales the naive classical value eL/2m to the measured moment: g ≈ 1 for orbital motion and g ≈ 2 for electron spin.
+**12. C** — *Meaning of the sign and g-factor in the electron moment.* A negative charge circulating one way is a conventional current going the other way, so μ = IA points opposite to L = mvr: M is antiparallel to L, and that is what the minus sign records. The factor g is a dimensionless number scaling the classical value eL/2m to the measured moment, close to 1 for orbital motion and close to 2 for electron spin.
 
-A correct answer states antiparallel, attributes it to the negative charge (not to g being negative and not to the minus in U = −μ·B), and describes g as a dimensionless correction of about 1 (orbital) or 2 (spin).
+The minus sign has nothing to do with U = −μ·B, g is neither negative nor carries units, and g is not a ratio of the spin moment to the orbital one.

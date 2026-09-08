@@ -1,1 +1,1307 @@
-{"course":"COS_102","title":"COS_102 — End of Semester Objective Exam","guideTitle":"COS_102 — Introduction to Problem Solving","questions":[{"q":"Which sequence gives the four steps to problem-solving in the correct order?","options":["Understand the problem; carry out the solution plan; create a solution step-by-step plan; evaluate and refactor the solution","Create a solution step-by-step plan; understand the problem; carry out the solution plan; evaluate and refactor the solution","Understand the problem; create a solution step-by-step plan; carry out the solution plan; evaluate and refactor the solution","Understand the problem; create a solution step-by-step plan; evaluate and refactor the solution; carry out the solution plan"],"answerIndex":2,"why":"Why C is right: the four steps are, in order, understand the problem; create a solution step-by-step plan; carry out the solution plan; evaluate and refactor the solution. Why the others are wrong: A swaps steps 2 and 3, so the plan is carried out before it exists · B puts planning before understanding, the single commonest reversal · D moves evaluation before execution, although there is nothing to evaluate until the plan has been carried out."},{"q":"Which three questions must be answered while understanding a problem?","options":["What are the inputs? What are the processes involved? What is the output?","What data do we have? Where is the data? What formulas are related to the problem?","Can we derive the result differently? Can we improve the performance? How have other people solved it?","Who will implement the algorithm? How much knowledge does that person have? What are the computer specifications?"],"answerIndex":0,"why":"Why A is right: understanding the problem means answering what the inputs are, what processes are involved, and what the output is — the input–process–output triple. Why the others are wrong: B is the *starting point* list from step 2 of the week 4 algorithm development process · C is the list of refactoring questions from step 4 · D is the stepwise-refinement list from step 4 of algorithm development."},{"q":"Which statement about translators is correct?","options":["An interpreter converts assembly language into machine code","A compiler converts assembly language into machine code","An assembler converts a high-level language into machine code directly","A compiler converts a high-level language into assembly language"],"answerIndex":3,"why":"Why D is right: in this course a compiler converts a high-level language into assembly language. Why the others are wrong: A gives the interpreter the assembler's job — the interpreter converts high-level language into machine code directly · B gives the compiler the assembler's job · C gives the assembler the interpreter's job; the assembler works only from assembly language."},{"q":"Carrying out the solution plan entails four activities. Which list is correct?","options":["Coding; problem analysis; debugging and testing; program documentation","Coding; compilation and execution; debugging and testing; program documentation","Coding; compilation and execution; debugging and testing; refactoring","Problem description; coding; algorithm review; program documentation"],"answerIndex":1,"why":"Why B is right: carrying out the solution plan entails coding, compilation and execution, debugging and testing, and program documentation. Why the others are wrong: A imports problem analysis, which belongs to algorithm development, not to step 3 · C replaces documentation with refactoring, which is step 4, not step 3 · D mixes in problem description and algorithm review, both from the week 4 development process."},{"q":"How does debugging differ from testing?","options":["Debugging verifies that the program works as expected, while testing finds errors so that they can be removed","Debugging finds errors so that they can be removed to avoid program failure, while testing verifies that the program works as expected","Debugging and testing are two names for the same activity, carried out after documentation","Debugging removes syntax errors only, while testing removes logical and run-time errors"],"answerIndex":1,"why":"Why B is right: debugging finds errors so they can be removed to avoid program failure; testing verifies that the program works as expected. Why the others are wrong: A reverses the two definitions, the standard swap · C denies the distinction the course draws and misplaces both after documentation · D invents a split by error type; neither activity is restricted to one of the three error types."},{"q":"Which statement about refactoring a solution is correct?","options":["It changes the function of the solution so that the program produces better results","It adds new features to the solution while keeping the original structure","It is carried out before the solution works, to prevent errors from appearing","It leaves the function of the solution unchanged while improving its structure, design and efficiency"],"answerIndex":3,"why":"Why D is right: refactoring does not change the function of the solution; it makes it more efficient while improving structure and design. Why the others are wrong: A says the function changes, which is exactly what refactoring never does · B confuses refactoring with adding features · C confuses refactoring with debugging; refactoring happens once a solution is already working."},{"q":"When does program documentation begin and end?","options":["It starts at the problem analysis stage and continues to the testing stage","It starts at the coding stage and continues to the testing stage","It starts after testing is complete, so that the finished program is described","It starts at the problem analysis stage and ends when coding begins"],"answerIndex":0,"why":"Why A is right: program documentation starts at the problem analysis stage and continues to the testing stage. Why the others are wrong: B starts it too late, at coding · C treats documentation as something written afterwards rather than a process running alongside development · D ends it too early, at coding, ignoring that it runs through testing."},{"q":"A lecturer asks a computer how many of 200 students scored above 70. This is an example of which type of computational problem?","options":["A decision problem","A search problem","A counting problem","An optimization problem"],"answerIndex":2,"why":"Why C is right: determining the number of values with a particular property is a counting problem. Why the others are wrong: A would fit \"is there any student above 70?\", whose answer is yes or no · B would fit \"find a student who scored above 70\", whose answer is a value with the property · D would fit \"who scored highest?\", where the best possible solution is wanted."},{"q":"The final-grade algorithm takes five grades, computes their average as the final grade, and prints \"PASS\" if the final grade reaches the pass mark of 45, otherwise \"FAIL\". The grades 40, 45, 50, 38 and 49 are entered. What is the final grade, and what is printed?","options":["44.4, and \"PASS\" is printed","55.5, and \"PASS\" is printed","222, and \"PASS\" is printed","44.4, and \"FAIL\" is printed"],"answerIndex":3,"why":"Why D is right: 40 + 45 + 50 + 38 + 49 = 222, and 222 ÷ 5 = 44.4. The pass mark is 45, and 44.4 is below it, so \"FAIL\" is printed. *(The week 1 slide's flowchart tests `Is Grade > 44`, under which 44.4 would wrongly print \"PASS\". Write `Is Grade >= 45`.)* Why the others are wrong: A is what you get from the slide's faulty `Grade > 44` test · B divides the total by four instead of five · C compares the total 222 with the pass mark instead of the average."},{"q":"Which of the following is NOT an attribute of routine problems?","options":["It provides a question that needs an answer, in addition to some required facts or numbers","It can be solved with algorithms","It can usually be solved using various unconventional approaches","It is solely about identifying the most appropriate algorithm to apply"],"answerIndex":2,"why":"Why C is right: unconventional approaches based on originality and creativity are an attribute of **non-routine** problems, so it is the odd one out here. Why the others are wrong: A, B and D are all listed attributes of routine problems — a question plus the required facts, solvability with algorithms, and the task being solely to pick the right algorithm."},{"q":"To solve a non-routine problem a novel method must be developed. What does that method involve?","options":["Defining the problem and generating analogies; finding similarities and selecting one; using the description and similarities to generate ideas","Studying the problem critically; gathering relevant information; identifying and implementing an effective strategy","Identifying the nature and parameters of the problem; specifying the criteria for success; determining whether it can be grouped as a specific type","Checking the description for unstated assumptions; checking it for ambiguity; checking it for incompleteness"],"answerIndex":1,"why":"Why B is right: the novel method is study the problem critically; gather relevant information; identify and implement an effective strategy. Why the others are wrong: A is the three steps of the **analogy** strategy · C is the three considerations of **problem recognition** from week 3 · D is the three issues that arise in **problem description** from week 4."},{"q":"Which of the following is a non-routine problem?","options":["Give an approximate number of hairs on your head","Calculate the area of a 150 m by 2000 m parking space","Dan had $500 and now has $287; how much did he give his friend?","Find the average of five grades and decide whether the student passed"],"answerIndex":0,"why":"Why A is right: there is no standard method for counting the hairs on a head, so it is non-routine — the lecture's own example. Why the others are wrong: B is an area calculation, solvable with one arithmetic operation, so routine · C is a subtraction, routine · D is an average and a comparison, routine. Difficulty is not the test; the existence of a standard method is."},{"q":"What does it mean to call a problem unsolvable?","options":["No systematic method exists for deciding the general case, even though particular instances may still be worked out","No solution can possibly be found for any instance of the problem","A solution exists, but present-day computers are not fast enough to find it","The answer to the problem is always false, whatever the input"],"answerIndex":0,"why":"Why A is right: \"unsolvable\" means no systematic method exists for the general case, not that solutions can never be found. Why the others are wrong: B is the everyday reading the lecture explicitly rejects — the substitution puzzle does come out, in three moves · C confuses unsolvability with slowness, which is a complexity issue, not a computability one · D confuses an unsolvable problem with a decision problem whose answer happens to be no."},{"q":"How are undecidable and unsolvable problems related?","options":["Unsolvable problems are a subset of undecidable problems","Undecidable problems are a subset of unsolvable problems, restricted to those needing an accurate true or false answer for every input","The two terms mean exactly the same thing","Undecidable problems can be solved by the universal Turing machine, but only very slowly"],"answerIndex":1,"why":"Why B is right: undecidable problems are a subset of unsolvable problems, restricted to those requiring an accurate true/false answer for every input. Why the others are wrong: A inverts the containment · C treats the two as synonyms, the most frequent error · D contradicts the definition; if the UTM could solve them, they would not be unsolvable."},{"q":"What were Turing's two most significant contributions to the advent of the modern computer?","options":["Inventing the compiler, and showing that machine code can be generated from assembly language","Storing encoded instructions on punched tape, and proving that every mathematical problem is decidable","Storing encoded instructions in the computer's memory, and showing that a single machine of fixed structure can carry out every computation the UTM can carry out","Designing the central processing unit, and proving that the halting problem can be solved for finite programs"],"answerIndex":2,"why":"Why C is right: the two contributions are storing encoded instructions in the computer's memory, and showing that a single machine of fixed structure can carry out every computation the UTM can. Why the others are wrong: A credits Turing with the compiler, which belongs to the week 1 translator material · B keeps instructions on tape rather than in memory — the tape is how the UTM reads a program, not the contribution — and claims universal decidability, which Turing disproved · D attributes hardware design to him and reverses the halting-problem result."},{"q":"Which of the following is NOT one of the problem-solving strategies taught in this course?","options":["Means–ends analysis","Analogy","Heuristics","Brute force"],"answerIndex":3,"why":"Why D is right: brute force is one of the five **sophisticated computational approaches** of week 3, not one of the problem-solving strategies of week 2. Why the others are wrong: A, B and C are all among the six strategies (brainstorming, heuristics, trial and error, means–ends analysis, abstraction, analogy). *(The week 2 summary names only the first four; if an item asks how many strategies there are, the examiner may key four.)*"},{"q":"A restaurant owner has three possible suppliers and can afford to trial each one for a month before deciding. Which strategy does the course describe as suitable here, and why?","options":["Heuristics, because a sub-optimal solution is acceptable","Brainstorming, because the ideas of other people can be fine-tuned","Trial and error, because the number of possible solutions is few","Means–ends analysis, because the problem is broken into smaller problems"],"answerIndex":2,"why":"Why C is right: trial and error is recommended where the number of possible solutions is few, and three suppliers each trialled in turn is exactly that. Why the others are wrong: A describes heuristics, where a decision is made without stopping to evaluate; here each supplier *is* evaluated · B describes brainstorming, which generates ideas rather than testing candidates that already exist · D describes means–ends analysis, which breaks a problem into sub-problems; nothing is being decomposed here."},{"q":"The London Underground map illustrates one strategy. Which one, and what is the product of applying it called?","options":["Analogy, and the product is called an analogue","Heuristics, and the product is called a rule of thumb","Means–ends analysis, and the product is called a sub-problem","Abstraction, and the product is called a model"],"answerIndex":3,"why":"Why D is right: the map filters out the unneeded attribute — geographic accuracy — so abstraction is the strategy, and the essential idea it forms is called a model. Why the others are wrong: A confuses abstraction with analogy, which reuses understanding of a *different* system · B confuses it with heuristics; a map is not a rule of thumb · C confuses it with means–ends analysis and calls the result a sub-problem, which is the product of decomposition, not of abstraction."},{"q":"An examination has 50 questions. Four marks are awarded for each correct response and two marks are deducted for each wrong one. Bridget is said to have scored 165. Taking *c* as the number of correct responses, which conclusion is right?","options":["The score must equal 6*c* − 100, which is always even, so 165 is impossible and the data are inconsistent","*c* = 44.17, so Bridget gave about 44 correct responses","*c* = 44, because 6*c* − 100 comes closest to 165 when *c* = 44","*c* = 41.25, because 165 divided by 4 gives the number of correct responses"],"answerIndex":0,"why":"Why A is right: with *c* correct, wrong = 50 − *c*, so the score is 4*c* − 2(50 − *c*) = 6*c* − 100. That is always even, and 165 is odd, so no whole number of correct responses gives 165. The data are inconsistent. *(The achievable scores nearest 165 are 164 at c = 44 and 170 at c = 45. With a 1-mark penalty the answer would be exactly 43, almost certainly what was intended. Never write 44.17.)* Why the others are wrong: B is 265/6, the arithmetic the slide invites, and a number of correct answers cannot be fractional · C rounds a fractional answer to an integer and calls the mismatch acceptable · D ignores the two-mark penalty entirely and divides the score by 4."},{"q":"Before a problem can be solved with a computational approach, three factors must be considered. They are:","options":["The problem must be routine; it must be well defined; and an algorithm must already exist","The problem must be clearly defined; it must be computable; and its data requirements must be examined","The problem must be decidable; it must be solvable; and it must be a decision problem","The inputs must be known; the process must be known; and the output must be known"],"answerIndex":1,"why":"Why B is right: the three factors are that the problem be clearly defined, that it be computable, and that its data requirements be examined. Why the others are wrong: A imports \"routine\", which is a week 2 problem type, and demands an algorithm already exist, which is what the approach is meant to produce · C substitutes the computability vocabulary of week 2 for the three factors · D is the input–process–output triple from understanding a problem in week 1."},{"q":"Which of the following is NOT one of the six basic computational methods?","options":["Pipelining","Divide and conquer","Visualisation","Backtracking"],"answerIndex":1,"why":"Why B is right: divide and conquer is one of the five **sophisticated** approaches, not one of the six basic computational methods. Why the others are wrong: A, C and D are all basic methods, alongside problem recognition, data mining and performance testing."},{"q":"In the Week 3 list of computational methods, _______ deals with evaluating whether a program works as expected or not before it is released, and using that knowledge to make it more effective.","options":["Performance testing","Data mining","Pipelining","Backtracking"],"answerIndex":0,"why":"Why A is right: performance testing evaluates whether a system or program works as expected before release and uses that to make it more effective. Why the others are wrong: B extracts patterns from large data sets, not from a program's behaviour · C divides a task into subtasks whose results feed forward · D examines more than one possible solution and reverses to earlier states. Note that Week 12 uses the same name for a non-functional software-testing method concerned with load and network delay; that sense is not what is being defined here."},{"q":"Which approach breaks a problem into sub-problems and saves the solutions of the sub-problems so that they need not be computed again?","options":["Divide and conquer","Backtracking","Dynamic programming","The greedy algorithm"],"answerIndex":2,"why":"Why C is right: saving the sub-problem solutions so they need not be recomputed is the defining feature of dynamic programming; \"saved\" is the marker word. Why the others are wrong: A splits and recombines but never stores results for reuse — that is the whole difference between the two · B examines options and backtracks, without storing anything for reuse · D makes the best choice at each stage and never reconsiders, so there is nothing to save."},{"q":"Hypothesis: a new teaching method improves student pass rates. What is the corresponding null hypothesis?","options":["The new teaching method reduces student pass rates","The new teaching method improves student pass rates more than any other method","Student pass rates cannot be measured reliably","The new teaching method does not improve student pass rates"],"answerIndex":3,"why":"Why D is right: the null hypothesis is the no-effect version. Take the hypothesis and negate the effect. Why the others are wrong: A states the *opposite* effect rather than no effect, the commonest mistake · B strengthens the original hypothesis instead of negating it · C is a statement about measurement, not a hypothesis about the effect at all."},{"q":"Which pair of conditions must hold for divide and conquer to be effective?","options":["The smaller parts must all be of equal size, and each must be solved by recursion","Solving the original problem directly must be less complicated than combining the solutions of the smaller easier parts","The solutions of the smaller parts must be saved so that they are never recomputed","The smaller parts must be simpler than the original problem, and combining their solutions must be less complicated than solving the original directly"],"answerIndex":3,"why":"Why D is right: the smaller parts must be simpler than the original, **and** combining their solutions must be less complicated than solving the original directly. If combining were harder, dividing would never pay. Why the others are wrong: A adds an equal-size requirement and a recursion requirement that the course does not state · B is the slide's own wording, which is backwards — if it were true you would never divide at all · C is the dynamic programming condition, not the divide-and-conquer one."},{"q":"The numbers 2, 8, 4, 9 and 3 are sorted into descending order using merge sort. What is the final list?","options":["9, 8, 4, 3, 2","2, 3, 4, 8, 9","8, 2, 9, 4, 3","9, 8, 4, 2, 3"],"answerIndex":0,"why":"Why A is right: dividing gives [2],[8] and [4],[9],[3]; merging by repeatedly taking the larger front element gives [9,3], then [9,4,3], then [8,2], and finally 9, 8, 4, 3, 2. Why the others are wrong: B sorts ascending, ignoring \"descending order\" · C is the two halves concatenated without merging at all · D merges the tail wrongly, leaving 2 before 3 in a descending list."},{"q":"Six activities have start times 2, 4, 1, 6, 9 and 6 and finish times 3, 5, 7, 8, 10 and 10 respectively. Only one activity can be worked on at a time. Applying the greedy rule of always taking the available activity that finishes earliest, how many activities can be performed?","options":["3","4","5","6"],"answerIndex":1,"why":"Why B is right: sorted by finish time the activities are A(2,3), B(4,5), C(1,7), D(6,8), E(9,10), F(6,10). Take A (time 3), take B (time 5), skip C because it starts at 1, take D (time 8), take E (time 10), skip F. That is four: A, B, D and E. Why the others are wrong: A drops one of the four, usually E, by mistakenly treating a start time of 9 as clashing with a finish time of 8 · C admits C or F, both of which overlap an activity already taken · D ignores the one-at-a-time constraint altogether."},{"q":"A padlock has four positions, each holding a digit from 0 to 9. A brute-force attack tries every combination in turn. What are the worst-case and average numbers of attempts?","options":["40 and 20","5,040 and 2,520","10,000 and 5,000","100,000 and 50,000"],"answerIndex":2,"why":"Why C is right: four positions with ten digits each give 10⁴ = 10,000 combinations. The worst case is 10,000 attempts and the average is half of that, 5,000. Why the others are wrong: A multiplies 4 by 10 instead of raising 10 to the fourth power · B counts permutations of distinct digits (10 × 9 × 8 × 7), although digits may repeat · D is the five-digit lock, 10⁵."},{"q":"A test is carried out at a significance level of 0.05 and returns a p-value of 0.03. According to the decision rule taught in this course, what follows?","options":["The null hypothesis is rejected, because the p-value is less than the significance level","The null hypothesis is accepted, because the p-value is small","The null hypothesis is rejected, and it is now proved that the effect exists","The null hypothesis is accepted, because a 5% risk of error still remains"],"answerIndex":0,"why":"Why A is right: when the p-value is less than or equal to the significance level, the null hypothesis is rejected. Here 0.03 ≤ 0.05. *(In a written answer add that we strictly \"fail to reject\" rather than \"accept\" when the p-value is high.)* Why the others are wrong: B applies the rule backwards, accepting on a small p-value · C draws the right conclusion for the wrong reason: rejecting is never a proof, only evidence · D confuses the significance level with a reason to accept."},{"q":"Which sequence gives the algorithm development steps in the correct order?","options":["Problem analysis; problem description; high-level algorithm development; algorithm refinement; algorithm review","Problem description; problem analysis; algorithm refinement; high-level algorithm development; algorithm review","Problem description; problem analysis; high-level algorithm development; algorithm refinement; algorithm review","Problem description; high-level algorithm development; problem analysis; algorithm review; algorithm refinement"],"answerIndex":2,"why":"Why C is right: the five steps are problem description, problem analysis, high-level algorithm development, algorithm refinement, algorithm review. Why the others are wrong: A analyses before describing, so there is nothing to analyse · B refines before there is a high-level algorithm to refine · D pushes analysis behind development and puts review before refinement."},{"q":"Three issues can arise while obtaining a problem description. They are:","options":["Syntax errors, logical errors and run-time errors","Best case, worst case and average case","Sequence, selection and repetition","Unstated assumptions, ambiguity and incompleteness"],"answerIndex":3,"why":"Why D is right: the three issues in obtaining a problem description are unstated assumptions, ambiguity and incompleteness. Why the others are wrong: A is the three error types from week 1 · B is the three complexity cases · C is the three representation structures."},{"q":"The refined algorithm for finding a maximum loops until the user enters a sentinel value; on each pass it prompts for a number, allows the user to type it in, compares it with the current maximum, and adds 1 to a counter. The user enters 12, 47, 9, 63 and 30, then the sentinel −1. What are the final maximum and the final counter value?","options":["Maximum 63, counter 6","Maximum 63, counter 5","Maximum 47, counter 5","Maximum 30, counter 6"],"answerIndex":1,"why":"Why B is right: 12 becomes the maximum; 47 replaces it; 9 does not; 63 replaces it; 30 does not; then −1 is the sentinel and the loop ends. Maximum 63, and the counter, incremented once per number actually processed, is 5. Why the others are wrong: A counts the sentinel as a sixth number, but the sentinel signals the end and is not processed · C stops at 47, missing the later replacement by 63 · D reports the last value entered instead of the largest, and counts the sentinel."},{"q":"How do priori and posterior analysis differ?","options":["Priori analysis is carried out after implementation and deals with space and running time; posterior analysis is carried out before implementation","Priori analysis is carried out before implementation and does not directly affect it; posterior analysis is carried out after implementation and deals with actual space and running time requirements","Priori analysis deals with space requirements while posterior analysis deals with time requirements","Both are carried out after implementation, priori on the algorithm and posterior on the finished program"],"answerIndex":1,"why":"Why B is right: priori analysis is carried out before implementation and does not directly affect it; posterior analysis is carried out after and deals with actual space and running time. Why the others are wrong: A swaps before and after · C swaps *space* and *time* onto the two analyses; both belong to posterior analysis · D places both after implementation, which erases the distinction."},{"q":"What is best case time complexity?","options":["The time the algorithm requires for the smallest input it can accept","The time the algorithm requires for a typical input of size n","The minimum time that the algorithm will require for an input of size n","The time required by the fastest available algorithm for that problem"],"answerIndex":2,"why":"Why C is right: best case time complexity is the minimum time the algorithm will require for an input of size n. Why the others are wrong: A reads \"best case\" as \"smallest input\", the classic misreading; the input size is fixed at n · B is the average case definition · D compares algorithms rather than inputs, which is not what the three cases measure."},{"q":"Which sequence lists the growth rates in the order given in the course, from slowest-growing to fastest-growing?","options":["C, Log N, (Log N)², N, N Log N, N², N³, 2ⁿ","C, Log N, N, (Log N)², N Log N, N², 2ⁿ, N³","C, N, Log N, (Log N)², N Log N, N², N³, 2ⁿ","C, Log N, (Log N)², N, N², N Log N, N³, 2ⁿ"],"answerIndex":0,"why":"Why A is right: the order taught is C, Log N, (Log N)², N, N Log N, N², N³, 2ⁿ. *(The PDF lost superscripts: \"Log2 N\" is (Log N)² and \"2N\" is 2ⁿ.)* Why the others are wrong: B puts N before (Log N)² and lets 2ⁿ overtake N³ too early · C puts N ahead of Log N, reversing the two slowest-growing non-constant terms · D puts N² before N Log N, the pairing students most often invert."},{"q":"What is the time complexity of the loop below?\n```\ni = n\nWHILE i > 1\n    i = i / 2\nENDWHILE\n```","options":["O(1)","O(n)","O(log log n)","O(log n)"],"answerIndex":3,"why":"Why D is right: the loop variable is divided by a constant amount on each pass, which the course gives as O(log n). Why the others are wrong: A would need no loop at all · B applies when the loop variable is incremented or decremented by a constant amount, not divided · C applies when the loop variable is reduced or increased *exponentially*, a step beyond halving."},{"q":"Which of the following is NOT one of the characteristics of a good algorithm?","options":["Finiteness","Unambiguity","Modularity","Language independence"],"answerIndex":2,"why":"Why C is right: modularity is one of the **design considerations**, not one of the characteristics. The characteristics are input, unambiguity, finiteness, effectiveness and language independence. *(The slides list only four, omitting effectiveness; the summary lists five. This key uses the summary's five.)* Why the others are wrong: A, B and D are all characteristics — limited and countable instructions, clear instructions, and independence of any programming language."},{"q":"In algorithm representation, which structure covers steps that are executed only when a condition is satisfied?","options":["Sequence","Selection","Repetition","Recursion"],"answerIndex":1,"why":"Why B is right: selection covers steps executed only when a condition is satisfied, with one or more alternatives. Why the others are wrong: A is the ordered step-by-step structure with nothing skipped · C is the repeated execution of the same steps · D is not one of the three representation structures at all; it belongs to week 10."},{"q":"A flowchart reads two numbers, adds them, prints the result and stops. In order, which symbols does it use?","options":["Oval, rectangle, parallelogram, rectangle, oval","Oval, parallelogram, diamond, parallelogram, oval","Parallelogram, rectangle, diamond, parallelogram, oval","Oval, parallelogram, rectangle, parallelogram, oval"],"answerIndex":3,"why":"Why D is right: START is an oval, reading two numbers is a parallelogram (input/output), adding them is a rectangle (process), printing the result is a parallelogram, and STOP is an oval. Why the others are wrong: A uses a rectangle for input and output, the commonest shape error · B uses a diamond for the addition, although no yes/no question is asked · C omits the start oval, breaking the principle that a flowchart must have a start point."},{"q":"The _______ symbol is used in complex flowcharts to connect independent elements across multiple pages.","options":["Link connector","On-page connector","Declaration","Flow line"],"answerIndex":0,"why":"Why A is right: the link (off-page) connector, drawn as a pentagon, connects independent elements across multiple pages. Why the others are wrong: B works across a **single** page only — the exact pairing this question tests · C, the declaration or predefined process symbol, shows a complex or well-known operation · D simply shows the direction of flow."},{"q":"Which pairing of flowchart symbol and purpose is correct?","options":["A cylinder shows the combining of various paths into a single path","A pentagon connects independent elements across a single page","A rectangle with a wavy bottom edge shows a complex or well-known operation","An elongated hexagon shows the difference between steps that prepare for work and steps that actually work"],"answerIndex":3,"why":"Why D is right: the elongated hexagon is the preparation symbol, distinguishing steps that prepare for work from steps that do the work. Why the others are wrong: A gives the cylinder the merge symbol's job; the cylinder is the database, and merging is a downward triangle · B gives the pentagon the on-page connector's job; the pentagon crosses pages · C gives the wavy-bottom rectangle the predefined-process job; the wavy-bottom rectangle is a document, and predefined process is a rectangle with double side bars."},{"q":"A _______ flowchart ensures that the communication gap between the users and the developers of a system is reduced.","options":["Process","Data","Workflow","Swimlane"],"answerIndex":1,"why":"Why B is right: the data flowchart shows the flow of information and reduces the communication gap between users and developers. Why the others are wrong: A describes how a process is completed in an organisation · C describes the manner in which businesses function · D shows multiple information flows side by side."},{"q":"What distinguishes a swimlane flowchart from a workflow flowchart?","options":["It allows the creation of multiple categories of activities shown side by side","It shows the flow of information in the data-processing aspect of system design","It describes the manner in which businesses function","It can be applied to almost anything and quickly describes how a process is completed"],"answerIndex":0,"why":"Why A is right: the swimlane's distinguishing feature is that it allows multiple categories of activities to be shown side by side. Why the others are wrong: B describes the data flowchart · C describes the workflow flowchart, the one swimlane is most often confused with · D describes the process flowchart."},{"q":"Which of the following is a disadvantage of flowcharts?","options":["They ensure that the logic of a process or program is simplified","They are added to program specification documents so that other programmers can follow the logic","Their logic can make a program unnecessarily longer than normal","They are used to ascertain whether the logic of a program works"],"answerIndex":2,"why":"Why C is right: flowchart logic is hardly the most efficient basis for writing a program because it can make the program unnecessarily longer than normal. Why the others are wrong: A, B and D are the three listed **advantages** — simplified logic, inclusion in specification documents, and confirming that the logic works."},{"q":"Which of the following is NOT one of the principles for drawing a flowchart?","options":["Every flowchart should fit on a single page","The flowchart should have a start point and a stop point","Flow lines should generally not cross if possible","Instructions for comparisons should be made as simple as possible"],"answerIndex":0,"why":"Why A is right: nothing in the principles requires a single page. Indeed a listed *disadvantage* is that complex processes may need a flowchart spanning multiple pages, which is why the off-page connector exists. Why the others are wrong: B, C and D are three of the four principles; the fourth is that the flowchart be easy to follow, neat and clear."},{"q":"In the sum-of-numbers flowchart, Sum and Count are both set to 0; on each pass a number *n* is entered, Sum becomes Sum + *n*, Count becomes Count + 1, and the decision returns the flow to the input step while its condition is true. The decision is changed from `Is Count < 5` to `Is Count <= 5`, and the numbers 4, 7, 2, 9, 6 and 8 are entered in that order. What is printed?","options":["22","24","28","36"],"answerIndex":3,"why":"Why D is right: with `Is Count <= 5` the loop returns to the input step while Count is 5 or less, so it exits only after Count reaches 6. Six numbers are read: 4 + 7 + 2 + 9 + 6 + 8 = 36. Why the others are wrong: A stops after four numbers (4 + 7 + 2 + 9), an off-by-one in the other direction · B skips the first input, treating `Sum = 0` as consuming a number (7 + 2 + 9 + 6) · C is the total for the *original* `Count < 5` test, five numbers — the answer given by anyone who does not notice the change."},{"q":"Which statement about pseudocode is correct?","options":["It is the graphical representation of the sequence of operations in a computer program","It must follow the syntax of a specific programming language so that it can be compiled","It is the textual representation of an algorithm and cannot be compiled or executed","It is derived from a flowchart, so the flowchart must always be drawn first"],"answerIndex":2,"why":"Why C is right: pseudocode is the textual representation of an algorithm; it looks like a program but cannot be compiled or executed. Why the others are wrong: A gives pseudocode the flowchart's definition — the week 6 mid-lesson question turns on exactly this, and the answer there is \"No\" · B contradicts the rule that pseudocode be language independent · D reproduces the summary's claim that pseudocode is \"a transition from flowcharts\"; the two are independent representations of the same algorithm, and neither derives from the other."},{"q":"Which of the following is NOT one of the pseudocode rules given in the lecture slides?","options":["Each line should contain only one statement","Every construct must be indented to show where its body begins and ends","Keywords should be written in capital letters","Statements should be language independent"],"answerIndex":1,"why":"Why B is right: the slides give three rules only — one statement per line, keywords in capitals, and language independence. Indentation is a convention from the wider literature, not a rule stated in this course. *(The week 6 summary says there are four rules but never names a fourth. If a question demands a number, the examiner may key four.)* Why the others are wrong: A, C and D are the three stated rules."},{"q":"Which of the following is NOT one of the eight pseudocode constructs?","options":["EXCEPTION and WHEN","GOTO","REPEAT-UNTIL","CALL"],"answerIndex":1,"why":"Why B is right: `goto` is a C statement from week 9, the example of unconditional branching. It is not one of the eight pseudocode constructs. Why the others are wrong: A, C and D are all constructs, along with SEQUENCE, CASE, WHILE, FOR and IF-THEN-ELSE."},{"q":"Which line correctly closes a REPEAT construct?","options":["UNTIL condition","ENDFOR condition","ENDREPEAT","ENDWHILE condition"],"answerIndex":0,"why":"Why A is right: REPEAT is closed by `UNTIL condition`, with the condition set at the ending or bottom of the construct. Why the others are wrong: B is the slide's own typo, borrowing FOR's closing keyword for a REPEAT loop — the single most copied error in week 6 · C invents a keyword by analogy with ENDFOR and ENDWHILE · D closes it with WHILE's keyword, which belongs to a loop testing its condition at the top."},{"q":"In the seven steps to writing a pseudocode, which step comes immediately after the identification of main steps?","options":["Problem definition","Using constructs to describe logic","Using variables and data structures","Header writing"],"answerIndex":3,"why":"Why D is right: the seven steps run problem definition, identification of main steps, **header writing**, using variables and data structures, using constructs to describe logic, using clear and concise language, testing and refining. Why the others are wrong: A comes *before* identification of main steps, not after · B is step 5, two steps too late · C is step 4, one step too late — the step most often mistaken for third, because writing a header feels like documentation rather than development."},{"q":"What must a pseudocode header include?","options":["The inputs, the process and the expected outputs of a test","The variables to be used and their data types","The name of the algorithm, a short description of its purpose, and a list of the required inputs and outputs","The name of the algorithm, the name of its author and the date it was written"],"answerIndex":2,"why":"Why C is right: the header must contain the algorithm's name, a short description of its purpose, and a list of the required inputs and outputs. Why the others are wrong: A is what a **test case** specifies, from week 12 · B is step 4 of writing a pseudocode, not the header · D is ordinary file metadata; the course requires the purpose and the input/output list, not the author and the date."},{"q":"_______ can be written in any notation or language, while _______ are written in a combination of natural and programming language elements.","options":["Pseudocode … Algorithms","Flowcharts … Algorithms","Algorithms … Pseudocode","Algorithms … Flowcharts"],"answerIndex":2,"why":"Why C is right: algorithms can be written in any notation or language; pseudocode is written in a combination of natural and programming language elements. Why the others are wrong: A reverses the pair, the error the week 6 mid-lesson question is designed to catch · B substitutes flowcharts for algorithms in the first blank · D substitutes flowcharts for pseudocode in the second, although flowcharts are graphical, not textual."},{"q":"What is printed by the pseudocode below?\n```\nSET total = 0\nSET k = 1\nWHILE k <= 4\n    COMPUTE total = total + (k * k)\n    INCREMENT k\nENDWHILE\nPRINT total\n```","options":["16","20","55","30"],"answerIndex":3,"why":"Why D is right: k = 1 gives total 1; k = 2 gives 5; k = 3 gives 14; k = 4 gives 30; k becomes 5 and the condition `k <= 4` fails. 1 + 4 + 9 + 16 = 30. Why the others are wrong: A reports only the last term added, 4 × 4 · B computes k × 2 instead of k × k (2 + 4 + 6 + 8) · C runs the loop one pass too far, to k = 5, adding 25."},{"q":"The examination pseudocode initialises passes and failures to zero, reads each result in turn, adds one to passes for a pass and one to failures for a fail, prints both counts, and then prints \"increase tuition\" if seven or more students passed. The ten results, in order, are P F F P P F P P F P. What is the output?","options":["passes 6, failures 4, and \"increase tuition\" is printed","passes 6, failures 4, and \"increase tuition\" is not printed","passes 4, failures 6, and \"increase tuition\" is not printed","passes 7, failures 3, and \"increase tuition\" is printed"],"answerIndex":1,"why":"Why B is right: the sequence P F F P P F P P F P holds six passes (positions 1, 4, 5, 7, 8, 10) and four failures (positions 2, 3, 6, 9). Six is fewer than seven, so \"increase tuition\" is not printed. *(The lecture's problem statement says \"more than seven\" while its pseudocode tests \"seven or more\"; at six passes both readings agree.)* Why the others are wrong: A gets the counts right but applies the tuition test backwards · C swaps the pass and fail counts · D miscounts the passes as seven, and then prints on a condition six does not meet."},{"q":"Which of the following is a disadvantage of pseudocode?","options":["There are no generally accepted standards, so everyone can write it in their own way","Special software is needed in order to write and store it","Once it has been written it cannot easily be modified","It is more visual than a flowchart, which makes the logic harder to follow"],"answerIndex":0,"why":"Why A is right: pseudocode has no generally accepted standards, so everyone writes it their own way, leading to varied styles and possible complications. Why the others are wrong: B reverses the listed advantage that no special software is needed — any text editor will do · C reverses the listed advantage that pseudocode can easily be modified · D reverses the actual disadvantage: pseudocode is *less* visual than a flowchart, which is why it takes longer to read."},{"q":"Besides instructions, what does a computer program contain?","options":["Data and the various memory addresses in which the instructions work","Header files and the libraries that they import","Comments and the program documentation","Nothing else; a program is only a series of instructions"],"answerIndex":0,"why":"Why A is right: a program includes more than instructions — it also contains data and the various memory addresses in which the instructions work. Why the others are wrong: B names files used to build the program, not what the program itself contains · C names documentation, which is a separate deliverable and, in the case of comments, is stripped before execution · D denies the \"more than just instructions\" sentence the course states outright."},{"q":"What are the three basic data types in the C language?","options":["Integers, floating-point numbers and Booleans","Characters, integers and floating-point numbers","Characters, strings and integers","Integers, arrays and structures"],"answerIndex":1,"why":"Why B is right: the three basic types in C are characters, integers and floating-point numbers. Why the others are wrong: A imports Booleans; `bool` exists in C, but the three *basic* types do not include it, and Boolean values are returned as integers anyway · C imports strings, which C represents with character arrays rather than a basic type · D lists two composite structures, arrays and structures, alongside one basic type."},{"q":"Which of the following is NOT one of the six types of operator provided by C?","options":["Bitwise","Assignment","Misc","Iterative"],"answerIndex":3,"why":"Why D is right: there is no \"iterative\" operator category. The six are arithmetic, relational, logical, bitwise, assignment and misc. Why the others are wrong: A, B and C are three of the six. Bitwise and misc are the two most often forgotten, which is why they appear here as tempting answers."},{"q":"To which categories do the operators `&& || !` and `& | ^` belong, in that order?","options":["Bitwise and logical","Relational and logical","Logical and bitwise","Logical and assignment"],"answerIndex":2,"why":"Why C is right: `&& || !` are the logical operators (AND, OR, NOT) and `& | ^` are the bitwise operators (bitwise AND, OR, XOR). Why the others are wrong: A reverses the two, the single commonest operator confusion in C · B calls `&&` relational; the relational operators are `== != > < >= <=` · D calls `&` an assignment operator; the assignment set is `= += -= *= /= %=`."},{"q":"Which statement about variable names and computer memory is correct?","options":["Variable names are stored in memory next to the values that they hold","Variable names are stored in a CPU register for as long as the program runs","Variable names are stored in memory, and the compiler discards the memory addresses","Variable names are not stored inside the computer memory; the compiler replaces them with memory location addresses"],"answerIndex":3,"why":"Why D is right: variable names are not stored inside the computer memory; the compiler replaces them with memory location addresses. This is the week 7 sentence to reproduce verbatim. Why the others are wrong: A keeps the names in memory, which is exactly what the course denies · B relocates them to a register, still storing them · C keeps the names and discards the addresses, an exact inversion of what happens."},{"q":"How are a variable definition and a variable declaration related?","options":["Every declaration is a definition, but not every definition is a declaration","A declaration sets aside the storage, while a definition only states that a name exists","Every definition is also a declaration, but not every declaration is a definition","A definition and a declaration are two names for exactly the same statement"],"answerIndex":2,"why":"Why C is right: a variable definition is also a declaration, but not all declarations are definitions — a declaration says a name exists with a given type; a definition also sets aside the storage. Why the others are wrong: A inverts the containment · B swaps the two roles, giving storage allocation to the declaration · D erases the distinction the course draws explicitly."},{"q":"In programming, the state of an object is stored in _______ and the behaviour of an object is described by _______.","options":["variables … methods","methods … variables","classes … structures","unions … functions"],"answerIndex":0,"why":"Why A is right: the state of an object is stored in variables and the behaviour of an object is described by methods. Why the others are wrong: B swaps them, the error the course warns about directly · C names two ways of grouping data, neither of which is where state or behaviour lives · D names a C construct and a code unit rather than the object's two components."},{"q":"What distinguishes a union from a structure in C?","options":["A union can group items of only one type, while a structure can group items of different types","All the members of a union start at the same location in memory, and a union variable can represent the value of only one of its members at a time","Each member of a union has its own memory location, while the members of a structure all share one","The members of a union are reached with the dot syntax, while those of a structure are not"],"answerIndex":1,"why":"Why B is right: all the members of a union start at the same location in memory, and a union variable can represent the value of only one of its members at a time. Why the others are wrong: A invents a same-type restriction; a union, like a structure, groups items of possibly different types · C swaps the memory behaviour of the two — separate locations belong to the structure · D is false of both: members of a structure and of a union are alike reached with the dot syntax."},{"q":"Data encapsulation is best described as:","options":["grouping items of possibly different types into a single user-defined type","storing all the members of an object at the same memory address","hiding the implementation details of an object from the user, who interacts with it only through a set of public methods","replacing variable names with memory location addresses when the program is compiled"],"answerIndex":2,"why":"Why C is right: data encapsulation is hiding the implementation details of an object from the user, so the user interacts only through public methods while the internals stay hidden. Access is controlled by the specifiers `public` and `private`. *(The slides show this with a `class Dog`, written as though `class` were a C construct. C has no classes; they belong to C++.)* Why the others are wrong: A is the definition of a **structure** · B is the memory behaviour of a **union** · D is the week 7 sentence about variable names and memory addresses, which concerns the compiler, not encapsulation."},{"q":"What is abstraction?","options":["The process of hiding the internal details of an application from the outer world","The process of dividing a program's functionality into independent modules","The process of modifying a system to improve its internal structure without changing its external behaviour","The process of grouping items of possibly different types into a single type"],"answerIndex":0,"why":"Why A is right: abstraction is the process of hiding the internal details of an application from the outer world. Why the others are wrong: B defines modularisation from week 11 · C defines refactoring · D defines a structure. All three are near neighbours of abstraction, which is why they are offered."},{"q":"A team publishes only a method's name, the format of its input and the format of its output; the code inside is never shown. Which has been implemented?","options":["Data abstraction","Functional abstraction","Modularisation","Pipelining"],"answerIndex":1,"why":"Why B is right: functional abstraction hides the implementation of an object's methods; other programs need to know only the method's name, the format of the input and the format of the output — the exact three items published here. Why the others are wrong: A hides the **data** of an object, not the implementation of its methods · C divides a program into independent modules, which is about structure, not about what is exposed · D chains subtask results together and has nothing to do with hiding anything."},{"q":"What are the two ways of implementing abstraction given in the lecture?","options":["Comments and program documentation","Compilers and interpreters","Arrays and unions","Access specifiers and header files"],"answerIndex":3,"why":"Why D is right: abstraction is implemented with access specifiers (`public` and `private`) and with header files, which let us use functions without knowing how they are implemented. Why the others are wrong: A names documentation, which describes a program rather than restricting access to it · B names translators, which convert code between languages · C names two data groupings, neither of which controls access."},{"q":"Which escape sequence represents a horizontal tab?","options":["`\\v`","`\\t`","`\\b`","`\\r`"],"answerIndex":1,"why":"Why B is right: `\\t` is the horizontal tab. Why the others are wrong: A is the **vertical** tab, the neighbouring entry in the table and the one most often confused with it · C is backspace · D is carriage return, which is often mistaken for a whitespace-advancing sequence but returns to the start of the line."},{"q":"Which of the following is NOT one of the parts of a function definition?","options":["The return type","The parameters","The function body","The header file in which the function is declared"],"answerIndex":3,"why":"Why D is right: a function definition consists of a return type, a function name, parameters and a function body. Where the function is declared is not one of its parts. Why the others are wrong: A, B and C are three of the four parts; the fourth is the function name."},{"q":"What value does `result` hold after the code below runs?\n```c\n#include <stdio.h>\n\nint max(int a, int b)\n{\n    if (a > b) return a;\n    else       return b;\n}\n\nint main(void)\n{\n    int result = max(3, 9) + max(7, 2);\n    printf(\"%d\\n\", result);\n    return 0;\n}\n```","options":["10","11","16","21"],"answerIndex":2,"why":"Why C is right: `max(3, 9)` tests `3 > 9`, which is false, so it returns 9; `max(7, 2)` tests `7 > 2`, which is true, so it returns 7. 9 + 7 = 16. Why the others are wrong: A takes the first argument each time (3 + 7), ignoring the comparison · B takes the second argument each time (9 + 2), the same error mirrored · D adds all four arguments, treating `max` as a sum. (The listing is shown inside main; written at file scope, as the deck prints it, int result = max(3, 9) + max(7, 2); will not compile — C requires a constant initialiser for an object with static storage duration.)"},{"q":"How do modules differ from functions?","options":["They differ in scale: a module is larger and can contain various functions and classes","A function returns a value while a module cannot return anything","A module is simply a function that has been written without any parameters","Functions are written by programmers while modules are generated by the compiler"],"answerIndex":0,"why":"Why A is right: modules and functions are very similar; the main difference is scale — a module is used on a much larger scale and can contain various functions and classes. Why the others are wrong: B invents a return-value rule the course does not state · C confuses a module with a function that has no parameters; a function may indeed contain no parameters, but that does not make it a module · D invents an authorship distinction; both are written by programmers."},{"q":"Which statement about a compound statement (a block) is correct?","options":["It contains more than one statement inside curly brackets, and the right curly bracket has no semicolon after it","It contains more than one statement inside curly brackets, and the right curly bracket must be followed by a semicolon","Simple statements are made from compound statements, which is why blocks are needed","It is used only when writing functions, never in decision-making or iterative statements"],"answerIndex":0,"why":"Why A is right: a block contains more than one statement inside curly brackets, and the right curly bracket does not have a semicolon after it. Why the others are wrong: B adds the semicolon the course explicitly says is absent · C is the week 9 summary's own reversed sentence — a compound statement is made from simple statements, not the other way round · D leaves out two of the three places blocks are used; blocks appear in functions, decision-making statements and iterative statements."},{"q":"What is printed by the code below?\n```c\nint a = 4, b = 4;\nif (a = b + 1)\n    printf(\"EQUAL\");\nelse\n    printf(\"NOT EQUAL\");\n```","options":["NOT EQUAL, because 4 is not equal to 5","Nothing, because the condition is not a comparison and so nothing is evaluated","EQUAL, because the assignment gives `a` the value 5, and any nonzero value counts as true","EQUAL, because `a` and `b` both still hold 4"],"answerIndex":2,"why":"Why C is right: `a = b + 1` is an assignment, not a comparison. It stores 5 in `a` and the expression evaluates to 5. Since any number that is not 0 counts as true, the `if` branch runs and EQUAL is printed. Why the others are wrong: A reads `=` as `==`, the commonest C error, and then evaluates the comparison it wishes had been written · B assumes a non-comparison condition cannot be evaluated, although any expression may serve as a condition · D gets the printed word right for the wrong reason: `a` no longer holds 4 once the assignment has run."},{"q":"In C, which values are treated as true?","options":["Only the literal `true`","Any number that is not 0","Only the value 1","Any positive number, but not negative numbers"],"answerIndex":1,"why":"Why B is right: Boolean values are returned as integers, with 1 or any other number that is not 0 representing true and 0 representing false. Why the others are wrong: A restricts truth to the literal, ignoring the integer rule · C restricts it to 1 alone, dropping every other nonzero value · D excludes negative numbers, although any nonzero value — negative included — is true."},{"q":"Which statement about branching is correct?","options":["`goto` is an example of conditional branching, because control moves only when a label is reached","`if-else` is an example of unconditional branching, because one of the two blocks always runs","`switch` is an example of unconditional branching, because it executes one code block among many","`goto` is an example of unconditional branching, because it moves program control without checking any condition"],"answerIndex":3,"why":"Why D is right: `goto` is the lecture's example of unconditional branching precisely because it specifies no condition before moving program control. Why the others are wrong: A calls `goto` conditional; reaching a label is not a condition being tested · B calls `if-else` unconditional, although where control moves depends entirely on whether the condition is satisfied · C calls `switch` unconditional, although it selects a block by testing an expression."},{"q":"The lecture's summary slide states that there are exactly three types of decision-making statement. Which of the following is NOT one of the three it names?","options":["`if`","`if-else`","`if-else-if`","`switch`"],"answerIndex":3,"why":"Why D is right: the lecture names exactly three decision-making statements — `if`, `if-else` and `if-else-if` — and introduces `switch` separately as a statement that executes one code block among many alternatives. *(Some marking schemes count `switch` as a fourth decision-making statement, so note the wording of the question you are given.)* Why the others are wrong: A, B and C are the three types the lecture names."},{"q":"What does each of the two loops below print?\n```c\nint i = 9;\nwhile (i <= 5) { printf(\"%d \", i); i++; }\nint j = 9;\ndo { printf(\"%d \", j); j++; } while (j <= 5);\n```","options":["Both print nothing","The `while` loop prints nothing; the `do-while` loop prints 9","Both print 9","The `while` loop prints 9; the `do-while` loop prints nothing"],"answerIndex":1,"why":"Why B is right: the `while` loop tests `9 <= 5` before its first pass, which is false, so nothing is printed. The `do-while` loop executes its body first and tests afterwards, so it prints 9 before finding `10 <= 5` false. Why the others are wrong: A forgets that a `do-while` loop is guaranteed to execute at least once · C treats both loops as bottom-tested · D swaps the two loops, giving the top-tested behaviour to `do-while`."},{"q":"What is printed by the code below?\n```c\nint total = 0, i;\nfor (i = 1; i <= 5; i++)\n    total = total + i * 2;\nprintf(\"%d\", total);\n```","options":["15","20","30","42"],"answerIndex":2,"why":"Why C is right: `i` runs 1, 2, 3, 4, 5 and `total` accumulates 2, 6, 12, 20, 30. The printed value is 30. Why the others are wrong: A sums `i` itself and forgets the multiplication by 2 · B stops at `i = 4`, reading `i <= 5` as `i < 5` · D runs a sixth pass at `i = 6`, adding 12 — the mirror-image off-by-one."},{"q":"Which statement about an array is correct?","options":["It stores a fixed-size sequential collection of elements of the same type","It groups items of possibly different types into a single user-defined type","All of its elements start at the same location in memory","Its size grows automatically as more elements are added to it"],"answerIndex":0,"why":"Why A is right: an array stores a fixed-size sequential collection of elements of the same type. The three marked words are fixed-size, sequential and same type. Why the others are wrong: B is the definition of a **structure**, whose members may be of different types · C is the memory behaviour of a **union** · D contradicts \"fixed-size\"; an array's size is set at declaration."},{"q":"What is the value of `salary` after the code below runs?\n```c\ndouble salaries[5] = {1000.0, 2.0, 3.4, 7.0, 50.0};\ndouble salary = salaries[2];\n```","options":["1000.0","2.0","3.4","7.0"],"answerIndex":2,"why":"Why C is right: indexing starts at 0, so `salaries[0]` is 1000.0, `salaries[1]` is 2.0 and `salaries[2]` is 3.4. Why the others are wrong: A takes index 2 as the second item counted from 1 in the wrong direction, landing on the first · B counts from 1 rather than 0, the standard off-by-one · D counts from 1 in the other direction, landing one past the answer."},{"q":"What is the value of `value` after the code below runs?\n```c\nint grid[2][3] = { {1, 2, 3}, {4, 5, 6} };\nint value = grid[1][2];\n```","options":["3","6","5","Nothing, because the element must be written as `grid[1,2]`"],"answerIndex":1,"why":"Why B is right: `grid[1]` is the second row, `{4, 5, 6}`, and `[2]` selects its third element, 6. Why the others are wrong: A reads `grid[1][2]` as row 0, taking the first row's third element · C counts within the row from 1 rather than 0 · D claims the comma form is required, when in fact each subscript must be enclosed in its own pair of square brackets and `grid[1,2]` is what is wrong."},{"q":"What is printed by the code below?\n```c\nint arr[6] = {4, 9, 2, 7, 5, 3};\nint i, sum = 0;\nfor (i = 1; i < 5; i++)\n    sum = sum + arr[i];\nprintf(\"%d\", sum);\n```","options":["23","26","27","30"],"answerIndex":0,"why":"Why A is right: `i` runs 1, 2, 3, 4 — it stops before 5 — so the sum is `arr[1] + arr[2] + arr[3] + arr[4]` = 9 + 2 + 7 + 5 = 23. Why the others are wrong: B runs `i` to 5 inclusive, adding `arr[5]` = 3 · C starts at `i = 0`, adding `arr[0]` = 4 · D does both, summing the whole array."},{"q":"Every recursive function has two components. They are:","options":["A function header and a function body","A declaration and a definition","A direct call and an indirect call","A base case and a recursive case"],"answerIndex":3,"why":"Why D is right: every recursive function has a base case, which handles the situation where there is nothing left to do, and a recursive case, which breaks the problem into a smaller version of itself. Why the others are wrong: A names the two parts of a **function definition**, which every function has, recursive or not · B names the two ways a function is introduced to the compiler · C names two of the four **types** of recursion, not its two components."},{"q":"What does `f(7)` return?\n```c\nint f(int n)\n{\n    if (n <= 1) return 1;\n    return n * f(n - 2);\n}\n```","options":["105","35","210","5040"],"answerIndex":0,"why":"Why A is right: `f(7)` = 7 × `f(5)`; `f(5)` = 5 × `f(3)`; `f(3)` = 3 × `f(1)`; `f(1)` hits the base case and returns 1. Unwinding gives 3, then 15, then 105. Why the others are wrong: B stops one level early at 7 × 5 · C continues past the base case to include a factor of 2, as though the base were `n <= 0` · D computes 7!, subtracting 1 rather than 2 at each call."},{"q":"A recursive function ends with the line `return n * fact(n - 1);`. How is this recursion classified, and why?","options":["Tail recursion, because the recursive call is the last thing written on the line","Direct recursion, because a multiplication is still pending when the call returns","Indirect recursion, because the multiplication is carried out outside the function","Non-tail recursion, because a multiplication is still pending when the recursive call returns"],"answerIndex":3,"why":"Why D is right: tail and non-tail turn on whether operations remain pending on return. The multiplication by `n` cannot be carried out until the recursive call returns, so it is non-tail. Why the others are wrong: A judges by where the call is written rather than by what is still waiting to happen · B gives the right *reason* but the wrong classification: direct and indirect describe **who makes the call**, not what is pending · C misapplies \"indirect\", which requires a second function that eventually calls back."},{"q":"In the general approach to writing recursive programs, which of the five steps comes last?","options":["Writing the recursive calls that solve the subproblems","Writing the base case or cases","Decomposing the problem into subproblems","Writing code to combine, augment or modify the results of the recursive calls"],"answerIndex":1,"why":"Why B is right: the five steps run header, decompose into subproblems, write recursive calls, combine or modify results, and finally write base case(s) for situations the recursive portion does not handle properly. Why the others are wrong: A is step 3 · C is step 2 · D is step 4. The trap in this question is the intuition that a base case must be written first because it executes last; in the course's method it is written last, once you know what the recursive portion leaves unhandled."},{"q":"What is modularisation?","options":["Hiding the internal details of an application from the outer world","Modifying a software system to improve the internal structure of its design without changing its external behaviour","Dividing a program's functionality into independent modules, such that each module has everything it needs to implement only a part of that functionality","Grouping items of possibly different types into a single user-defined type"],"answerIndex":2,"why":"Why C is right: modularisation is dividing a program's functionality into independent modules, such that each independent module has everything it needs to implement only a part of the program's functionality. Why the others are wrong: A defines abstraction · B defines refactoring · D defines a structure."},{"q":"What does good module independence require?","options":["Low cohesion within a module and high coupling between modules","High cohesion within a module and low coupling between modules","High cohesion within a module and high coupling between modules","Low cohesion within a module and low coupling between modules"],"answerIndex":1,"why":"Why B is right: cohesion measures how far the functions inside a module work together, and we want it high; coupling measures how far modules depend on one another, and we want it low. Why the others are wrong: A inverts both, the standard swap · C wants high coupling, which destroys module independence · D wants low cohesion, which means a module doing several unrelated jobs."},{"q":"Which of the following is a disadvantage of modularisation?","options":["Smaller modules and functions are easier to understand","Modules and functions can be reused in another program","Compilation and loading time may be longer","Large programs can be written by several different people"],"answerIndex":2,"why":"Why C is right: longer compilation and loading time is one of the five listed disadvantages, alongside longer execution time, increased storage, more inter-module communication problems and more initial design time. Why the others are wrong: A, B and D are all listed **advantages**. Every disadvantage of modularisation is a cost; every advantage is a gain in manageability or reuse."},{"q":"Which statement about structural partitioning is correct?","options":["In horizontal partitioning, control modules at the top do the decision-making while worker modules below do all input, computation and output","In vertical partitioning, more data must be passed across the module interface, which makes the control flow more complex","In horizontal partitioning, the functionality is distributed among the modules in a top-down manner","In vertical partitioning, control modules at the top do the decision-making and little processing, while worker modules at the low level perform all input, computation and output"],"answerIndex":3,"why":"Why D is right: vertical partitioning distributes functionality top-down, with control modules at the top making decisions and doing little processing while worker modules at the low level perform all input, computation and output. Why the others are wrong: A gives the control/worker split to horizontal partitioning · B gives horizontal partitioning's cost — more data across the module interface — to vertical · C describes top-down distribution but attaches it to horizontal partitioning."},{"q":"Which description of a software pattern is correct?","options":["An idiom is a low-level, programming-language-specific pattern, often termed a coding pattern","An architectural pattern is a medium-level pattern, often considered equivalent to software components","A design pattern is a high-level pattern, often considered equivalent to software architecture","An idiom is a high-level pattern that defines subsystems, components and classes"],"answerIndex":0,"why":"Why A is right: idioms are low-level, programming-language-specific patterns, often termed coding patterns. Why the others are wrong: B demotes the architectural pattern to medium level and gives it the design pattern's equivalence to software components · C promotes the design pattern to high level and gives it the architectural pattern's equivalence to software architecture · D promotes the idiom to high level and hands it the architectural pattern's job of defining subsystems, components and classes."},{"q":"When is bottom-up design described as more suitable?","options":["When the software solution must be designed from scratch and the specific details are unknown","When the whole system is taken as one entity and decomposed repeatedly until the lowest level is reached","When the design starts with a generalised model and keeps defining the more specific parts of it","When a system is created from an existing system whose basic primitives can be reused"],"answerIndex":3,"why":"Why D is right: bottom-up design starts with the most specific and basic components, so it suits a system created from an existing one whose basic primitives can be reused. Why the others are wrong: A is the condition under which **top-down** is more suitable · B describes top-down decomposition · C describes top-down design, which starts from a generalised model."},{"q":"Which of the following is NOT a benefit of information hiding?","options":["It reduces the program's execution time","It emphasises communication through controlled interfaces","It decreases the probability of adverse effects","It restricts the effects of changes in one component on others"],"answerIndex":0,"why":"Why A is right: information hiding costs execution time rather than saving it — longer execution time is a listed **disadvantage of modularisation**, not a benefit of hiding. Why the others are wrong: B, C and D are the three listed benefits: controlled interfaces, a decreased probability of adverse effects, and restricted effects of change."},{"q":"In the software testing life cycle, which phase comes immediately after test case development?","options":["Test planning","Test execution","Test environment setup","Test cycle closure"],"answerIndex":2,"why":"Why C is right: the six phases in order are requirement analysis, test planning, test case development, **test environment setup**, test execution and test cycle closure. Why the others are wrong: A is phase 2, one before test case development, not after · B is phase 5, skipping the environment setup — the phase people forget most often · D is phase 6, the last of all."},{"q":"What does a test case specify?","options":["The testing strategy, the cost and the duration","The test inputs, the process and the expected outputs","The software and hardware requirements for the test","The entry point and the exit point of each testing phase"],"answerIndex":1,"why":"Why B is right: a test case gives detailed step-by-step instructions on how a test should be performed, specifying the test inputs, the process and the expected outputs. Why the others are wrong: A is what the **test planning** phase defines · C is what the **test environment setup** phase specifies · D describes the entry and exit points that every phase has, not what a test case contains."},{"q":"A tester who has never seen the source code enters a 200-character password into a login form to check that the page does not crash. How is this test classified?","options":["Functional, and white box","Non-functional, and white box","Non-functional, and black box","Functional, and black box"],"answerIndex":2,"why":"Why C is right: a 200-character password checks robustness and resistance to crashing rather than whether a stated function computes correctly, so it is non-functional. Because the tester has never seen the source code, the internal structure is not known and the test is black box. Why the others are wrong: A and B both call the test white box, which requires the internal structure to be known to the tester · D calls it functional, which would fit \"does a valid email and password admit the user?\" but not a crash check."},{"q":"Which statement about testing methods is correct?","options":["In white box testing the internal structure is known to the tester, who chooses inputs to exercise paths through the code","In black box testing the internal structure is known to the tester, who nevertheless tests only through the user interface","In grey box testing the internal structure is fully known, and the tests are conducted at the code level","In white box testing the internal structure is not known, which is why programming know-how is not needed"],"answerIndex":0,"why":"Why A is right: in white box testing the internal structure, design and implementation are known to the tester, who chooses inputs to exercise paths through the code and determines the appropriate outputs. Why the others are wrong: B gives black box the white box definition; in black box testing the internal structure is **not** known · C makes grey box fully transparent, when it is partially known — internals for designing test cases, testing at the user level · D gives white box the black box definition and then denies the programming know-how the course calls essential."},{"q":"Grey box testing is primarily used in which type of testing?","options":["Unit testing","Acceptance testing","System testing","Integration testing"],"answerIndex":3,"why":"Why D is right: grey box testing is primarily used in integration testing. Why the others are wrong: A is where **white box** applies, along with integration and system testing · B is where **black box** applies, along with integration and system testing · C is applicable to both black and white box, but grey box is named as *primarily* integration."},{"q":"Which option names three widely used debuggers?","options":["Debuggers, trace tools and profilers","Radare2, WinDbg and Valgrind","GCC, Clang and MSVC","Unit testing, integration testing and system testing"],"answerIndex":1,"why":"Why B is right: Radare2, WinDbg and Valgrind are the three widely used debuggers named in the lecture. Why the others are wrong: A lists the three **types of debugging tool** — debuggers, trace tools and profilers — not three debuggers, and is the answer of anyone who memorised the neighbouring sentence · C names C compilers, which build programs rather than debug them · D names three functional testing methods. --- ## Answer distribution | Letter | Count | |---|---| | A | 25 | | B | 25 | | C | 25 | | D | 25 | **A (25):** 2, 7, 12, 13, 19, 22, 26, 29, 35, 40, 43, 45, 50, 56, 57, 63, 66, 72, 73, 80, 83, 85, 92, 94, 98 **B (25):** 4, 5, 11, 14, 20, 21, 27, 32, 33, 38, 42, 48, 49, 55, 58, 64, 67, 69, 75, 78, 82, 87, 89, 96, 100 **C (25):** 1, 8, 10, 15, 17, 23, 28, 30, 34, 37, 44, 47, 52, 53, 60, 62, 65, 71, 74, 79, 81, 88, 90, 95, 97 **D (25):** 3, 6, 9, 16, 18, 24, 25, 31, 36, 39, 41, 46, 51, 54, 59, 61, 68, 70, 76, 77, 84, 86, 91, 93, 99"}]}
+{
+  "course": "COS_102",
+  "title": "COS_102 — End of Semester Objective Exam",
+  "guideTitle": "COS_102 — Introduction to Problem Solving",
+  "questions": [
+    {
+      "q": "A flowchart reads: START, an input box \"Input X\", a process box \"Y = 2 × X + 1\", then a decision box \"Is Y > 10?\". The Yes branch goes to \"Print Y − 10\" and the No branch goes to \"Print Y\". Both branches reach STOP. The input is X = 4. What is printed?",
+      "options": [
+        "9",
+        "−1",
+        "8",
+        "4"
+      ],
+      "answerIndex": 0,
+      "why": "The process box runs first: Y = 2 × 4 + 1 = 9. The test 9 > 10 is false, so the No branch runs and 9 is printed.\n\n−1 takes the Yes branch and prints Y − 10; 8 drops the + 1 and computes only 2 × 4; 4 prints the input X instead of the value the process box produced.",
+      "week": 1,
+      "concept": "Tracing a flowchart with a process and a decision"
+    },
+    {
+      "q": "How many times does the loop body run?\n\n```\nn = 20\nWHILE n > 3\n    n = n − 4\nENDWHILE\n```",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "17"
+      ],
+      "answerIndex": 1,
+      "why": "n takes the values 20, 16, 12, 8, 4 at the top of each pass, and each of those is greater than 3, so the body runs 5 times. It leaves n at 0, and 0 > 3 is false, so the loop ends.\n\n4 stops when n reaches 4 and forgets that 4 > 3 is still true; 6 counts the failing test as a pass of the body; 17 is 20 − 3 and counts single steps rather than steps of 4.",
+      "week": 1,
+      "concept": "Counting iterations of a subtracting WHILE loop"
+    },
+    {
+      "q": "\"Is there a delivery route from the depot to the market that costs less than ₦5,000?\" Which type of computational problem is this?",
+      "options": [
+        "Search problem",
+        "Decision problem",
+        "Optimization problem",
+        "Counting problem"
+      ],
+      "answerIndex": 1,
+      "why": "The only thing asked for is YES or NO: either such a route exists or it does not. A problem whose solution is YES or NO is a decision problem.\n\nA search problem would ask for the route itself; an optimization problem would ask for the cheapest route of all; a counting problem would ask how many routes cost less than ₦5,000.",
+      "week": 1,
+      "concept": "Classifying a computational problem type"
+    },
+    {
+      "q": "A program reads two whole numbers and prints the first divided by the second. The compiler accepts it without complaint. It works on most runs, but when the user types 0 as the second number the program stops part way through with a division error. Which type of error is this?",
+      "options": [
+        "Syntax error",
+        "Logical error",
+        "Run time error",
+        "Not an error, since most runs work"
+      ],
+      "answerIndex": 2,
+      "why": "The program was built successfully and only fails while it is running, and only for one input. An error that appears during execution and stops the run is a run time error.\n\nA syntax error would have stopped the compiler accepting the program at all; a logical error would let the run finish and give a wrong answer; a program that crashes on a legal input is faulty however many other runs succeed.",
+      "week": 1,
+      "concept": "Classifying an error as syntax, logical or run time"
+    },
+    {
+      "q": "A plan reads: 1. Divide total by count and print the result. 2. Read count. 3. Read count numbers, adding each one to total. 4. Stop. Which required property of an algorithm's steps does this plan break?",
+      "options": [
+        "Ordered",
+        "Unambiguous",
+        "Complete",
+        "None; all three hold"
+      ],
+      "answerIndex": 0,
+      "why": "Step 1 uses total and count before either of them has been read, so the steps are in the wrong order: the division happens on values that do not yet exist. The steps are not ordered.\n\nEvery step says exactly what to do, so unambiguous holds; nothing needed is missing, so complete holds; \"none\" ignores that the first step depends on results produced by the two steps after it.",
+      "week": 1,
+      "concept": "Identifying which algorithm property a plan violates"
+    },
+    {
+      "q": "What does this print?\n\n```\nn = 6\nr = 1\nWHILE n > 1\n    r = r × n\n    n = n − 2\nENDWHILE\nPRINT r\n```",
+      "options": [
+        "720",
+        "24",
+        "48",
+        "6"
+      ],
+      "answerIndex": 2,
+      "why": "Pass 1: r = 1 × 6 = 6, n = 4. Pass 2: r = 6 × 4 = 24, n = 2. Pass 3: r = 24 × 2 = 48, n = 0. Now 0 > 1 is false, so 48 is printed.\n\n720 subtracts 1 from n instead of 2 and gives 6 × 5 × 4 × 3 × 2; 24 stops one pass early at n = 2; 6 keeps only the first multiplication and forgets that r accumulates.",
+      "week": 1,
+      "concept": "Tracing a WHILE loop that builds a product"
+    },
+    {
+      "q": "A program prints payslips. Which of these is a process the program carries out, rather than an input, an output or a device?",
+      "options": [
+        "Multiplying hours worked by the hourly rate to get gross pay",
+        "The hours worked by each employee",
+        "The printed payslip",
+        "The printer the payslips come out on"
+      ],
+      "answerIndex": 0,
+      "why": "A process is work the program does on the data it was given. Multiplying hours by rate turns input data into a result, so it is a process.\n\nThe hours worked exist before the program runs and are given to it, so they are input; the printed payslip is what the program produces, so it is output; the printer is a device the output goes to, not part of the program at all.",
+      "week": 1,
+      "concept": "Separating inputs, processes and outputs"
+    },
+    {
+      "q": "A program has been in use for two years. A new programmer joins the team and must change the way tax is worked out inside it. Which kind of documentation does that programmer need?",
+      "options": [
+        "User documentation",
+        "Programmer documentation",
+        "The installation instructions",
+        "The list of known bugs"
+      ],
+      "answerIndex": 1,
+      "why": "Programmer documentation carries the technical detail needed to upgrade and maintain a program, which is exactly what someone changing the tax calculation must have.\n\nUser documentation tells an end user how to install and use the program, not how it works inside; installation instructions are one part of that user documentation; a bug list records faults but does not explain the design.",
+      "week": 1,
+      "concept": "User versus programmer documentation"
+    },
+    {
+      "q": "Which fragment prints the larger of two numbers A and B, and prints EQUAL when the two are the same?",
+      "options": [
+        "IF A > B THEN PRINT A ELSE IF B > A THEN PRINT B ELSE PRINT \"EQUAL\"",
+        "IF A > B THEN PRINT A ELSE PRINT B",
+        "IF A > B THEN PRINT A; IF B > A THEN PRINT B; PRINT \"EQUAL\"",
+        "IF A ≥ B THEN PRINT A ELSE PRINT \"EQUAL\""
+      ],
+      "answerIndex": 0,
+      "why": "Three outcomes need three branches: A larger, B larger, and the two equal. Only the chain IF A > B ... ELSE IF B > A ... ELSE prints exactly one of the three, and prints EQUAL only when neither is larger.\n\nThe two-branch version prints B when the numbers are equal instead of EQUAL; the version with separate IFs prints EQUAL on every run, because that line is never guarded; the last one prints EQUAL whenever B is larger, which is wrong.",
+      "week": 1,
+      "concept": "Choosing the correct implementation of a three-way test"
+    },
+    {
+      "q": "A machine has two switches, each with three positions, and one dial with four positions. An engineer finds the one working configuration by trial and error, testing each configuration once and never repeating one. How many tests does the worst case need?",
+      "options": [
+        "10",
+        "12",
+        "36",
+        "24"
+      ],
+      "answerIndex": 2,
+      "why": "Each configuration is one choice per control, so the count is 3 × 3 × 4 = 36. In the worst case the working one is tested last, so 36 tests are needed.\n\n10 adds the positions, 3 + 3 + 4, instead of multiplying them; 12 uses only one switch and the dial, 3 × 4; 24 counts the pair of switches as a single factor of 2, giving 2 × 3 × 4.",
+      "week": 2,
+      "concept": "Counting the trials a trial-and-error search needs"
+    },
+    {
+      "q": "A substitution puzzle allows the replacements AB → BBA and BB → A. Starting from AAB, apply AB → BBA once, then apply BB → A once to the word you get. Which word do you reach?",
+      "options": [
+        "ABBA",
+        "AAA",
+        "AA",
+        "BBAA"
+      ],
+      "answerIndex": 1,
+      "why": "AAB contains AB in its last two letters, so AB → BBA turns it into ABBA. ABBA contains BB in the middle, so BB → A turns it into AAA.\n\nABBA is the word after only the first replacement; AA comes from deleting BB rather than replacing it with A; BBAA applies the first rule to the wrong place, treating the leading letters as the AB.",
+      "week": 2,
+      "concept": "Applying substitution rules in order"
+    },
+    {
+      "q": "A university must place 900 students in hostel rooms so that students who apply together stay together. The goal and the constraints are stated exactly, but no standard procedure for doing it exists anywhere in the university. How is this problem classified?",
+      "options": [
+        "Routine and well defined",
+        "Non-routine and ill defined",
+        "Routine and ill defined",
+        "Non-routine and well defined"
+      ],
+      "answerIndex": 3,
+      "why": "The goal and the constraints are stated exactly, so the problem is well defined. No standard method exists, so a new method must be invented, which makes it non-routine.\n\nRoutine would mean the only work is picking a known algorithm, which is not the case here; the two ill-defined options are wrong because nothing about the goal or the constraints is left vague.",
+      "week": 2,
+      "concept": "Routine versus non-routine and well versus ill defined"
+    },
+    {
+      "q": "A library must digitise 12,000 books in five months. In the first month only 800 can be done while staff are trained. Means-ends analysis splits the remainder into four equal monthly targets. What is each of those four targets?",
+      "options": [
+        "2,800 books",
+        "2,400 books",
+        "3,000 books",
+        "2,240 books"
+      ],
+      "answerIndex": 0,
+      "why": "After the first month 12,000 − 800 = 11,200 books remain, and four equal months share them: 11,200 / 4 = 2,800 books per month.\n\n2,400 divides the whole 12,000 by 5 and ignores the reduced first month; 3,000 divides the whole 12,000 by 4 and forgets the 800 already done; 2,240 divides the correct remainder by 5 months instead of the 4 that are left.",
+      "week": 2,
+      "concept": "Setting sub-goals with means-ends analysis"
+    },
+    {
+      "q": "A driver leaving a car park must reach the airport and has no map. Without pausing to weigh the options, she takes the road carrying the heaviest traffic, on the rule of thumb that at this hour most traffic is airport bound, and does not reconsider the choice. Which problem-solving strategy is this?",
+      "options": [
+        "Trial and error",
+        "Means-ends analysis",
+        "Brainstorming",
+        "Heuristics"
+      ],
+      "answerIndex": 3,
+      "why": "One shortcut is taken without stopping to think about the next course of action, and it is accepted without checking. That is a heuristic: fast, energy saving, and not guaranteed to be rational.\n\nTrial and error would test one road, reject it and try another; means-ends analysis would fix the end and split the journey into sub-goals planned in advance; brainstorming needs a group producing many ideas.",
+      "week": 2,
+      "concept": "Identifying the strategy from a described case"
+    },
+    {
+      "q": "In Alan Turing's universal machine, where is the program that describes the task to be carried out?",
+      "options": [
+        "In the fixed table of instructions built into the machine",
+        "On the tape, written as a string of letters",
+        "In the read head that scans the tape",
+        "In a second machine built for that one task"
+      ],
+      "answerIndex": 1,
+      "why": "The universal machine has one fixed instruction table and reads the particular task from its tape, where the program sits as a string of letters. That is the idea behind storing encoded instructions in a computer's memory.\n\nThe fixed table is the machine's own unchanging structure, not the task; the read head only scans; a separate machine per task is precisely what the universal machine removes the need for.",
+      "week": 2,
+      "concept": "How the universal Turing machine holds a program"
+    },
+    {
+      "q": "Which of these questions has no algorithm that answers it correctly for every possible input?",
+      "options": [
+        "Is this whole number divisible by 3?",
+        "Does this list of 500 names contain \"Ada\"?",
+        "Which of these 40 routes is the shortest?",
+        "Will this program eventually stop when it is run on this input?"
+      ],
+      "answerIndex": 3,
+      "why": "Asking whether an arbitrary program halts on an arbitrary input is the halting problem, and no algorithm decides it correctly for every program and input.\n\nTesting divisibility by 3 is a short calculation; scanning 500 names for a match is a straightforward search; comparing 40 route lengths is finite work, so all three of those have algorithms.",
+      "week": 2,
+      "concept": "Recognising an undecidable question"
+    },
+    {
+      "q": "Solvable problems are grouped as data-structure based or algorithm based. Which of these is data-structure based?",
+      "options": [
+        "Sorting a list of names into alphabetical order",
+        "Holding a queue of print jobs so the earliest is served first",
+        "Searching a sorted list by repeated halving",
+        "Splitting a task in two and combining the two results"
+      ],
+      "answerIndex": 1,
+      "why": "The print jobs problem is solved by choosing the right way to store the items, a queue, so it belongs to the group based on data structures such as stacks, queues, arrays and trees.\n\nSorting, searching and divide and conquer are all named methods of doing work, so each of those is algorithm based rather than data-structure based.",
+      "week": 2,
+      "concept": "Data-structure based versus algorithm based problems"
+    },
+    {
+      "q": "A password is exactly 3 characters long and every character is one of the 26 lowercase letters. A brute force attack tries the possible passwords one after another, and each attempt takes 0.002 seconds. How long does it take on average?",
+      "options": [
+        "35.152 seconds",
+        "31.2 seconds",
+        "17.576 seconds",
+        "0.156 seconds"
+      ],
+      "answerIndex": 2,
+      "why": "There are 26 × 26 × 26 = 17,576 passwords, so trying them all takes 17,576 × 0.002 = 35.152 seconds. On average the right one is found half way through, which is 35.152 / 2 = 17.576 seconds.\n\n35.152 seconds is the worst case, not the average; 31.2 seconds uses 26 × 25 × 24 and wrongly forbids repeated letters; 0.156 seconds counts only 26 × 3 attempts, adding the positions instead of multiplying.",
+      "week": 3,
+      "concept": "Average and worst case cost of a brute force search"
+    },
+    {
+      "q": "Coins of value 1, 6 and 10 are available in unlimited numbers. A greedy algorithm makes up an amount by repeatedly taking the largest coin that still fits. For the amount 12, how many coins does greedy use, and what is the smallest number of coins possible?",
+      "options": [
+        "Greedy uses 2, the smallest is 2",
+        "Greedy uses 3, the smallest is 3",
+        "Greedy uses 3, the smallest is 2",
+        "Greedy uses 4, the smallest is 2"
+      ],
+      "answerIndex": 2,
+      "why": "Greedy takes 10, leaving 2, which only the 1 coins can fill: 10 + 1 + 1, so 3 coins. But 6 + 6 makes 12 with 2 coins, so the greedy answer is not the best one.\n\nGreedy cannot reach 2 coins here because its first choice of 10 is never revisited; the smallest is not 3, since 6 + 6 exists; greedy does not need 4 coins, as 10 + 1 + 1 already works.",
+      "week": 3,
+      "concept": "Showing that a greedy choice need not be optimal"
+    },
+    {
+      "q": "Before a payroll program is released, a team writes a list of test scenarios with success criteria, feeds the program a negative number of hours worked, and checks that it rejects the entry instead of paying a negative wage. Which computational method is this?",
+      "options": [
+        "Hypothesis testing",
+        "Data mining",
+        "Performance testing",
+        "Backtracking"
+      ],
+      "answerIndex": 2,
+      "why": "Evaluating whether a program works as expected before it is released, by measuring it against a set of test scenarios and success criteria, is performance testing. Feeding it erroneous data is one of its standard forms.\n\nHypothesis testing evaluates a prediction using a null hypothesis, a significance level and a p-value; data mining extracts patterns from large data sets; backtracking retreats from rejected states while searching.",
+      "week": 3,
+      "concept": "Identifying performance testing from a described case"
+    },
+    {
+      "q": "A trial is run at a significance level of 0.10 and the data give a p-value of 0.12. What is the decision, and what does it establish?",
+      "options": [
+        "Reject the null hypothesis; the evidence against it is strong enough",
+        "Accept the null hypothesis; the null hypothesis is now proved true",
+        "Reject the null hypothesis; the significance level should be raised to 0.12",
+        "Accept the null hypothesis; the evidence against it was not strong enough"
+      ],
+      "answerIndex": 3,
+      "why": "The rule is to reject the null hypothesis when the p-value is less than or equal to the significance level. Here 0.12 is greater than 0.10, so the null hypothesis is accepted, meaning only that the evidence against it was not strong enough.\n\nThe two reject options apply the rule backwards; accepting never proves the null hypothesis true; and the significance level is fixed in advance, not adjusted to match the p-value that came out.",
+      "week": 3,
+      "concept": "Applying the p-value decision rule"
+    },
+    {
+      "q": "A staircase of n steps is climbed 1 or 2 steps at a time. The number of ways w(n) satisfies w(n) = w(n − 1) + w(n − 2), with w(1) = 1 and w(2) = 2, and each value is worked out once and stored in a table. What is w(6)?",
+      "options": [
+        "8",
+        "13",
+        "21",
+        "12"
+      ],
+      "answerIndex": 1,
+      "why": "Filling the table upwards: w(3) = 2 + 1 = 3, w(4) = 3 + 2 = 5, w(5) = 5 + 3 = 8, w(6) = 8 + 5 = 13.\n\n8 is w(5) and stops one row early; 21 is w(7) and runs one row too far; 12 comes from starting the table at w(1) = 1 and w(2) = 1 instead of w(2) = 2.",
+      "week": 3,
+      "concept": "Building a dynamic programming table from a recurrence"
+    },
+    {
+      "q": "A supermarket chain examines two years of till receipts, finds that customers who buy nappies on a Friday evening often buy beer in the same basket, and moves the two shelves closer together. Which computational method is this?",
+      "options": [
+        "Data mining",
+        "Visualisation",
+        "Pipelining",
+        "Problem recognition"
+      ],
+      "answerIndex": 0,
+      "why": "A large data set is searched for a pattern nobody had noticed, and the relationship found is used to make a decision. That is data mining.\n\nVisualisation would draw the figures so a person could see them; pipelining would pass the output of one stage into the next; problem recognition would be about making sure the solution attacks the root cause.",
+      "week": 3,
+      "concept": "Identifying data mining from a described case"
+    },
+    {
+      "q": "A study is designed so that there is at most a 1% chance of concluding that a new drug works when in fact it does not. Which significance level does that require?",
+      "options": [
+        "0.05",
+        "0.10",
+        "0.99",
+        "0.01"
+      ],
+      "answerIndex": 3,
+      "why": "The significance level is the probability of rejecting the null hypothesis when it is true, which here is the chance of announcing an effect that does not exist. A 1% risk is a significance level of 0.01.\n\n0.05 allows a 5% risk and 0.10 a 10% risk, both larger than the study permits; 0.99 would allow a 99% risk, which is the complement of a level, not a level.",
+      "week": 3,
+      "concept": "Choosing a significance level from the risk allowed"
+    },
+    {
+      "q": "A routine finds the largest of 8 numbers by splitting the list into two halves, finding the largest in each half in the same way, and returning the larger of the two results. A list of one number is returned unchanged. How many comparisons of two numbers does the whole routine make?",
+      "options": [
+        "7",
+        "8",
+        "3",
+        "4"
+      ],
+      "answerIndex": 0,
+      "why": "Comparisons happen only when two results are combined. Eight numbers give 4 comparisons of pairs, then 2 comparisons of those 4 results, then 1 final comparison: 4 + 2 + 1 = 7.\n\n8 counts one comparison per number and forgets that single numbers are returned without any comparison; 3 counts the levels of splitting rather than the comparisons; 4 counts only the first round of pairs.",
+      "week": 3,
+      "concept": "Counting the combine steps in a divide and conquer routine"
+    },
+    {
+      "q": "Which of these does dynamic programming guarantee, where a greedy algorithm does not?",
+      "options": [
+        "A shorter running time on every input",
+        "An optimal solution whenever a solution exists",
+        "Less memory use than any other method",
+        "That the first choice made is never changed later"
+      ],
+      "answerIndex": 1,
+      "why": "Provided a solution to the problem exists, dynamic programming guarantees that an optimal one can be found, because sub-problem results are saved and compared rather than committed to. Greedy carries no such guarantee.\n\nDynamic programming is often slower and uses more memory than greedy, since it stores a table of results; never changing an early choice describes greedy, and is exactly why greedy can miss the optimum.",
+      "week": 3,
+      "concept": "What dynamic programming guarantees"
+    },
+    {
+      "q": "What is the time complexity of this fragment in terms of n?\n\n```\ni = 1\nWHILE i ≤ n\n    j = n\n    WHILE j > 1\n        j = j / 2\n    ENDWHILE\n    i = i + 1\nENDWHILE\n```",
+      "options": [
+        "O(n²)",
+        "O(log n)",
+        "O(n log n)",
+        "O(n)"
+      ],
+      "answerIndex": 2,
+      "why": "The outer loop adds a constant to i, so it runs about n times, which is the O(n) rule. The inner loop divides j by a constant each pass, so it runs about log n times, which is the O(log n) rule. One inside the other gives O(n log n).\n\nO(n²) would need the inner loop to step by a constant too; O(log n) counts only the inner loop; O(n) counts only the outer loop.",
+      "week": 4,
+      "concept": "Big O of a loop nested inside a loop"
+    },
+    {
+      "q": "An algorithm solves a problem of size n by calling itself twice on problems of size n − 1 and doing a fixed amount of extra work. Which growth rate does it have?",
+      "options": [
+        "O(2ⁿ)",
+        "O(n²)",
+        "O(n log n)",
+        "O(log log n)"
+      ],
+      "answerIndex": 0,
+      "why": "Each call spawns two calls one size smaller, so the number of calls doubles at every level down to size 1, giving roughly 2ⁿ calls: O(2ⁿ).\n\nO(n²) belongs to nested loops stepping by a constant; O(n log n) to a linear loop containing a halving loop; O(log log n) to a loop whose variable is changed exponentially each pass.",
+      "week": 4,
+      "concept": "Big O of a doubly recursive algorithm"
+    },
+    {
+      "q": "What does this print?\n\n```\nc = 0\nFOR i = 1 TO 4\n    FOR j = i TO 4\n        c = c + 1\n    ENDFOR\nENDFOR\nPRINT c\n```",
+      "options": [
+        "16",
+        "10",
+        "12",
+        "6"
+      ],
+      "answerIndex": 1,
+      "why": "The inner loop runs from i to 4, so it runs 4 times when i = 1, 3 times when i = 2, 2 times when i = 3 and once when i = 4: 4 + 3 + 2 + 1 = 10.\n\n16 assumes the inner loop always runs 4 times, as if it started at 1; 12 uses 4 + 3 + 2 + 1 but drops the last pass and adds an extra outer round; 6 is 3 + 2 + 1 and forgets the pass where i = 1.",
+      "week": 4,
+      "concept": "Counting executions of an inner loop with a moving bound"
+    },
+    {
+      "q": "A designer holds a finished algorithm and asks two questions about it: can it solve only this one problem or more general ones as well, and can its complexity be reduced? Which step of algorithm development is this?",
+      "options": [
+        "Algorithm review",
+        "Problem analysis",
+        "High-level algorithm development",
+        "Algorithm refinement"
+      ],
+      "answerIndex": 0,
+      "why": "Confirming that a finished algorithm solves the problem, asking whether it generalises and whether its complexity can be cut, is the review step, the last of the five.\n\nProblem analysis fixes the starting and ending points before anything is written; high-level development produces the main outline; refinement adds detail to the outline, guided by who will implement it.",
+      "week": 4,
+      "concept": "Identifying the algorithm development step"
+    },
+    {
+      "q": "A client's description states what the program must print when a mark is 50 or more, and what it must print when a mark is below 40, but says nothing at all about marks from 40 to 49. Which problem-description issue is this?",
+      "options": [
+        "Ambiguous description",
+        "Incomplete description",
+        "A description resting on unstated assumptions",
+        "Posterior analysis"
+      ],
+      "answerIndex": 1,
+      "why": "A whole range of inputs has no stated behaviour, so a case is missing rather than unclear. That is an incomplete description.\n\nAn ambiguous description would state something that could be read two ways; an unstated assumption would be a rule the client took for granted but never said; posterior analysis is measurement of a finished program, not a description fault at all.",
+      "week": 4,
+      "concept": "Naming the fault in a problem description"
+    },
+    {
+      "q": "A sorted list holds 1,000 items. A search repeatedly halves the range still to be examined, checking one item each time. At most how many items does it check?",
+      "options": [
+        "9",
+        "500",
+        "1000",
+        "10"
+      ],
+      "answerIndex": 3,
+      "why": "Each check halves the range, so k checks cover up to 2^k items. 2⁹ = 512 is not enough for 1,000 but 2¹⁰ = 1,024 is, so at most 10 items are checked.\n\n9 uses 2⁹ = 512 and does not cover 1,000; 500 counts one halving only; 1,000 is the worst case of checking every item one at a time, which is what halving avoids.",
+      "week": 4,
+      "concept": "Worst case of a halving search"
+    },
+    {
+      "q": "A team runs a finished Java program on real data and records that it takes 3 seconds and uses 40 MB of memory. Which pair of terms describes what they did?",
+      "options": [
+        "Priori analysis, measuring time and space complexity",
+        "Posterior analysis, measuring best and worst case",
+        "Priori analysis, measuring the growth rate",
+        "Posterior analysis, measuring time and space complexity"
+      ],
+      "answerIndex": 3,
+      "why": "The work was done after the algorithm had been implemented in a particular language and run, which is posterior analysis, and the two quantities recorded are running time and space.\n\nPriori analysis happens before implementation and is language independent; best and worst case describe how time varies with the input, not the two figures measured here; growth rate is what Big O describes, and it is not read off a single run.",
+      "week": 4,
+      "concept": "Priori versus posterior analysis"
+    },
+    {
+      "q": "A program is built so that another designer can add new kinds of report to it later without rewriting what is already there. Which algorithm design factor is this?",
+      "options": [
+        "Modularity",
+        "Robustness",
+        "Correctness",
+        "Extensibility"
+      ],
+      "answerIndex": 3,
+      "why": "Extensibility is the factor about another programmer or designer being able to update and upgrade the solution later, which is exactly what adding new report types means.\n\nModularity is breaking this solution into smaller steps; robustness is having the problem and its solution clearly defined so it holds up beyond the neat case; correctness is producing the right result.",
+      "week": 4,
+      "concept": "Naming an algorithm design factor"
+    },
+    {
+      "q": "A flowchart runs: Start; \"T = 0\"; \"K = 1\"; decision \"Is K ≤ 6?\"; its No branch goes to \"Print T\" then Stop; its Yes branch goes to a second decision \"Is K a multiple of 3?\", whose Yes branch goes to \"T = T + K\" and whose No branch goes straight on; both then reach \"K = K + 1\", which flows back to the first decision. What is printed?",
+      "options": [
+        "21",
+        "6",
+        "9",
+        "3"
+      ],
+      "answerIndex": 2,
+      "why": "K runs from 1 to 6. Only K = 3 and K = 6 pass the multiple-of-3 test, so T = 3 then T = 3 + 6 = 9. When K becomes 7 the first test fails and 9 is printed.\n\n21 adds every K and ignores the inner decision; 6 keeps only the last multiple of 3 and forgets that T accumulates; 3 leaves the loop at the first match.",
+      "week": 5,
+      "concept": "Tracing a flowchart loop containing a decision"
+    },
+    {
+      "q": "A flowchart runs: Start; \"Read A\"; decision \"Is A < 0?\"; the Yes branch goes to \"Print NEGATIVE\" and the No branch to \"Print A\"; both arrows then meet at a merge, which flows to Stop. How many input/output symbols does the chart contain?",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "answerIndex": 2,
+      "why": "Input/output symbols are the parallelograms: Read A, Print NEGATIVE and Print A. That is 3.\n\n2 counts only the two prints and forgets the read; 4 counts the decision diamond as well, but a diamond is a decision symbol; 1 counts only the read and treats printing as something other than output.",
+      "week": 5,
+      "concept": "Counting flowchart symbols by type"
+    },
+    {
+      "q": "A flowchart has one Start and one Stop. One diamond, \"Is x > 5?\", has a single arrow entering it and a single arrow labelled Yes leaving it, with nothing drawn for the other outcome. Which rule does the chart break?",
+      "options": [
+        "A decision must have exactly two exits, both labelled",
+        "A chart must have exactly one start terminator",
+        "Flow lines should not cross one another",
+        "Every chart must contain at least one loop"
+      ],
+      "answerIndex": 0,
+      "why": "A decision symbol asks a yes/no question, so both answers must lead somewhere and both exits must be labelled. With only the Yes exit drawn, an input with x ≤ 5 has nowhere to go and the chart cannot be traced.\n\nThe chart already has exactly one start, so that rule is kept; no lines cross here; and loops are not required in a valid chart at all.",
+      "week": 5,
+      "concept": "Spotting an invalid flowchart"
+    },
+    {
+      "q": "A chart sets Count to 0 and Total to 0 before its loop begins, and the person drawing it wants those steps drawn differently from the steps that do the actual work. Which symbol should they use for them?",
+      "options": [
+        "A plain rectangle",
+        "A parallelogram",
+        "A hexagon, pointed at both ends",
+        "A rectangle with a wavy bottom edge"
+      ],
+      "answerIndex": 2,
+      "why": "The preparation symbol, a hexagon pointed at both ends, is the one that separates steps preparing for work, such as initialising a total or setting a counter, from steps that do the work.\n\nA plain rectangle is the ordinary process symbol used for the working steps; a parallelogram is input or output; a wavy-bottomed rectangle means a document.",
+      "week": 5,
+      "concept": "Choosing the flowchart symbol for a setting-up step"
+    },
+    {
+      "q": "A step in a chart must show that customer records are being kept in and fetched from permanent storage. Which symbol shows that?",
+      "options": [
+        "A rectangle with a wavy bottom edge",
+        "A parallelogram",
+        "A cylinder",
+        "A rectangle with a double line down each vertical side"
+      ],
+      "answerIndex": 2,
+      "why": "The cylinder, drawn as a drum on its side, is the database symbol and shows where data is stored.\n\nThe wavy-bottomed rectangle is a document; the parallelogram is data moving in or out at that step rather than the store itself; the rectangle with double vertical lines is a predefined process, an operation defined elsewhere.",
+      "week": 5,
+      "concept": "Matching a flowchart symbol to its purpose"
+    },
+    {
+      "q": "A flowchart runs: Start; \"Read M\"; decision \"Is M ≥ 70?\"; Yes goes to \"Print A\" then Stop; No goes to decision \"Is M ≥ 50?\"; Yes goes to \"Print B\" then Stop; No goes to \"Print F\" then Stop. The chart is run three times, with M = 70, then M = 69, then M = 50. What is printed on the three runs, in order?",
+      "options": [
+        "A, A, B",
+        "A, B, B",
+        "A, B, F",
+        "B, B, F"
+      ],
+      "answerIndex": 1,
+      "why": "M = 70 passes 70 ≥ 70 and prints A. M = 69 fails the first test but passes 69 ≥ 50 and prints B. M = 50 fails the first test and passes 50 ≥ 50, so it prints B too.\n\nA, A, B reads the first test as M > 65 or similar and sends 69 to A; A, B, F reads the second test as M > 50, so 50 falls through to F; B, B, F reads the first test as M > 70, so 70 misses A.",
+      "week": 5,
+      "concept": "Tracing nested decisions on boundary values"
+    },
+    {
+      "q": "One step in the middle of a large flowchart has to be changed. Why is that more troublesome than changing the same step written as pseudocode?",
+      "options": [
+        "A flowchart cannot show a loop at all",
+        "The chart may have to be redrawn, and a complex chart can already run over several pages",
+        "A flowchart has to be compiled again after every change",
+        "A flowchart has no start or stop point to work from"
+      ],
+      "answerIndex": 1,
+      "why": "Two of the stated disadvantages of flowcharts are that complex processes may span several pages and that adjustments are complicated and may require a redraw. Pseudocode is edited as text with no drawing at all.\n\nFlowcharts do show loops, using a backward flow line from a decision; nothing in the three representations is ever compiled; and a valid chart always has a start and a stop point.",
+      "week": 5,
+      "concept": "Advantages and disadvantages of flowcharts"
+    },
+    {
+      "q": "A designer wants to attach the remark \"rate fixed by the finance office\" beside the box that computes tax, without changing the flow of the chart. How is that drawn?",
+      "options": [
+        "As a note in an open bracket joined by a dashed line, with no flow arrows",
+        "As a parallelogram joined to the tax box by a flow arrow",
+        "As a hexagon placed just before the tax box",
+        "As a merge triangle placed just after the tax box"
+      ],
+      "answerIndex": 0,
+      "why": "A comment is drawn as an open square bracket attached by a dashed line. It sits off the flow path and takes no flow arrows, so it adds a remark without changing what the chart does.\n\nA parallelogram on a flow arrow would make the remark an input or output step; a hexagon would make it a preparation step; a merge triangle would join paths that were never split.",
+      "week": 5,
+      "concept": "The comment symbol and the flow path"
+    },
+    {
+      "q": "What is printed?\n\n```\nSET n TO 12\nSET c TO 0\nREPEAT\n    SET n TO n − 5\n    INCREMENT c\nUNTIL n < 0\nPRINT n, c\n```",
+      "options": [
+        "2 and 2",
+        "−3 and 4",
+        "12 and 0",
+        "−3 and 3"
+      ],
+      "answerIndex": 3,
+      "why": "Pass 1: n = 7, c = 1, and 7 < 0 is false. Pass 2: n = 2, c = 2, and 2 < 0 is false. Pass 3: n = −3, c = 3, and −3 < 0 is true, so the loop stops and −3 and 3 are printed.\n\n2 and 2 stops as soon as n can no longer lose a full 5, treating UNTIL as n < 5; −3 and 4 counts the final test as another pass; 12 and 0 assumes the test is made before the first pass, which is what WHILE does, not REPEAT.",
+      "week": 6,
+      "concept": "Tracing a REPEAT-UNTIL loop"
+    },
+    {
+      "q": "Which of these runs its body exactly 6 times?",
+      "options": [
+        "FOR i = 1 TO 5",
+        "FOR i = 0 TO 6",
+        "FOR i = 6 TO 0",
+        "FOR i = 0 TO 5"
+      ],
+      "answerIndex": 3,
+      "why": "FOR bounds are inclusive at both ends, so FOR i = a TO b runs b − a + 1 times. FOR i = 0 TO 5 runs 5 − 0 + 1 = 6 times.\n\nFOR i = 1 TO 5 runs 5 times; FOR i = 0 TO 6 runs 7 times; FOR i = 6 TO 0 has its bounds the wrong way round, so the body never runs at all.",
+      "week": 6,
+      "concept": "Counting the passes of a FOR loop"
+    },
+    {
+      "q": "The user enters 69. What is printed?\n\n```\nREAD g\nCASE g DIV 10 OF\n    9: PRINT \"A\"\n    8: PRINT \"B\"\n    7: PRINT \"C\"\n    OTHERS: PRINT \"D\"\nENDCASE\n```",
+      "options": [
+        "C",
+        "B",
+        "D",
+        "Nothing at all"
+      ],
+      "answerIndex": 2,
+      "why": "g DIV 10 is integer division, so 69 DIV 10 = 6. No listed condition matches 6, so the OTHERS branch runs and D is printed.\n\nC would need the expression to be 7, which would come from rounding 6.9 up instead of taking the whole part; B would need 8; \"nothing at all\" forgets that OTHERS is exactly the default for unmatched values.",
+      "week": 6,
+      "concept": "Tracing a CASE construct with an OTHERS branch"
+    },
+    {
+      "q": "The first value the user enters is −4. What is printed?\n\n```\nSET t TO 0\nREAD n\nWHILE n > 0\n    SET t TO t + n\n    READ n\nENDWHILE\nPRINT t\n```",
+      "options": [
+        "0",
+        "−4",
+        "Nothing, since the loop never ends",
+        "4"
+      ],
+      "answerIndex": 0,
+      "why": "WHILE tests its condition before the first pass. −4 > 0 is false at once, so the body never runs, t keeps its initial value and 0 is printed.\n\n−4 assumes the body runs once and adds n, which is what a REPEAT-UNTIL loop would do; the loop does end, immediately; 4 takes the size of the input and ignores its sign.",
+      "week": 6,
+      "concept": "A WHILE body that runs zero times"
+    },
+    {
+      "q": "This is meant to print the largest of the four values entered, but for the inputs −7, −2, −9 and −5 it prints 0.\n\n```\nSET big TO 0\nFOR i = 1 TO 4\n    READ x\n    IF x > big THEN\n        SET big TO x\n    ENDIF\nENDFOR\nPRINT big\n```\n\nWhich change makes it correct for any four values?",
+      "options": [
+        "Change IF x > big to IF x < big",
+        "Read the first value before the loop, set big to it, and loop over the other three",
+        "Move SET big TO 0 inside the loop, before READ x",
+        "Change FOR i = 1 TO 4 to FOR i = 0 TO 4"
+      ],
+      "answerIndex": 1,
+      "why": "big starts at 0, and no negative input is ever greater than 0, so nothing replaces it. Seeding big with the first value actually entered removes the assumption that some input beats 0, and the remaining three are then compared against it. For −7, −2, −9, −5 the fixed version prints −2.\n\nReversing the test makes it find the smallest; resetting big inside the loop throws away the running best every pass; extending the loop bound reads a fifth value that does not exist and still starts from 0.",
+      "week": 6,
+      "concept": "Fixing a maximum search with a bad starting value"
+    },
+    {
+      "q": "Which line breaks a rule of pseudocode, and which rule does it break?\n\n```\n1  SET total TO 0\n2  FOR i = 1 TO 3\n3      READ mark\n4      System.out.println(mark)\n5      SET total TO total + mark\n6  ENDFOR\n7  PRINT total\n```",
+      "options": [
+        "Line 2; keywords must be written in capital letters",
+        "Line 5; only one statement is allowed on a line",
+        "Line 6; a FOR construct is closed with ENDWHILE",
+        "Line 4; statements must be language independent"
+      ],
+      "answerIndex": 3,
+      "why": "Line 4 is a Java statement. Pseudocode statements must be language independent, so that anyone can read them and they can be converted into any language; DISPLAY mark or PRINT mark is what belongs there.\n\nLine 2 already has FOR in capitals; line 5 holds one statement, not several; and ENDFOR on line 6 is the correct closing keyword for FOR, so nothing is wrong there.",
+      "week": 6,
+      "concept": "Applying the rules that govern pseudocode"
+    },
+    {
+      "q": "A loop ends with `UNTIL x > 100`. Which WHILE loop repeats the same body on the same values?",
+      "options": [
+        "WHILE x > 100",
+        "WHILE x ≥ 100",
+        "WHILE x ≠ 100",
+        "WHILE x ≤ 100, with one copy of the body also placed before the loop"
+      ],
+      "answerIndex": 3,
+      "why": "REPEAT continues while its UNTIL condition is false, so UNTIL x > 100 corresponds to WHILE x ≤ 100. REPEAT also always runs its body once before testing, so the body has to appear once before the WHILE as well, otherwise a first value above 100 skips it entirely.\n\nWHILE x > 100 keeps the condition instead of inverting it and runs exactly when the REPEAT would stop; WHILE x ≥ 100 inverts it wrongly and misses x = 100; WHILE x ≠ 100 loops on every value except 100.",
+      "week": 6,
+      "concept": "Converting REPEAT-UNTIL into WHILE"
+    },
+    {
+      "q": "A routine named Discount takes a price and hands back the reduced price. Which line calls it so that the reduced price ends up in newPrice?",
+      "options": [
+        "CALL Discount with price RETURNING newPrice",
+        "CALL Discount with newPrice RETURNING price",
+        "CALL Discount RETURNING price with newPrice",
+        "CALL newPrice with price RETURNING Discount"
+      ],
+      "answerIndex": 0,
+      "why": "In a CALL line, `with` names what is passed in and `RETURNING` names the variable that receives what comes back. The price goes in and the reduced price comes back into newPrice.\n\nThe second option passes the empty result in and writes the answer back over the original price; the third returns into price and passes newPrice in, the same swap in a different order; the fourth treats the routine's own name as the variable being filled.",
+      "week": 6,
+      "concept": "Reading a CALL with arguments and a return value"
+    },
+    {
+      "q": "Every value here is an int. What is the value of the expression?\n\n```c\n40 - 12 / 3 * 2\n```",
+      "options": [
+        "18",
+        "38",
+        "32",
+        "72"
+      ],
+      "answerIndex": 2,
+      "why": "`/` and `*` sit at the same precedence level and associate left to right, so 12 / 3 = 4 first, then 4 * 2 = 8, and finally 40 - 8 = 32.\n\n18 works straight left to right, (40 - 12) / 3 * 2; 38 treats `*` as outranking `/`, giving 12 / (3 * 2) = 2; 72 does the subtraction before the multiplication, (40 - 4) * 2.",
+      "week": 7,
+      "concept": "Operator precedence and associativity in C"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint a = 9, b = 4;\nfloat x = a / b;\nfloat y = (float) a / b;\nfloat z = (float) (a / b);\nprintf(\"%.2f %.2f %.2f\", x, y, z);\n```",
+      "options": [
+        "2.25 2.25 2.25",
+        "2.00 2.25 2.00",
+        "2.00 2.25 2.25",
+        "2.25 2.25 2.00"
+      ],
+      "answerIndex": 1,
+      "why": "The operand types choose the operation, and the variable it is stored in has no say. In x both operands are int, so 9 / 4 is integer division giving 2, widened to 2.00. In y the cast makes the left operand a float before the division, so the division is a real one and gives 2.25. In z the division has already been done in int, so the cast only widens 2 to 2.00.\n\n2.25 for x assumes a float target forces real division; 2.25 for z casts after the damage is done; 2.00 for y misses that the cast is applied before the division.",
+      "week": 7,
+      "concept": "Integer division and where the cast goes"
+    },
+    {
+      "q": "`int a = 45, b = 26;` What are the values of `a & b`, `a | b` and `a ^ b`, in that order?",
+      "options": [
+        "8, 63, 55",
+        "63, 8, 55",
+        "8, 71, 55",
+        "8, 55, 63"
+      ],
+      "answerIndex": 0,
+      "why": "45 is 101101 and 26 is 011010. AND keeps a bit only where both have it: 001000 = 8. OR keeps a bit where either has it: 111111 = 63. XOR keeps a bit where exactly one has it: 110111 = 55.\n\n63, 8, 55 swaps the roles of `&` and `|`; 8, 71, 55 adds the two numbers instead of ORing them, since 45 + 26 = 71; 8, 55, 63 swaps `|` and `^`.",
+      "week": 7,
+      "concept": "Bitwise AND, OR and XOR on two integers"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint i = 0, j = 0;\nint r = (i++ > 0) && (j++ > 0);\nprintf(\"%d %d %d\", r, i, j);\n```",
+      "options": [
+        "0 1 1",
+        "1 1 1",
+        "0 0 0",
+        "0 1 0"
+      ],
+      "answerIndex": 3,
+      "why": "`i++` yields the value before the increment, 0, so 0 > 0 is false and i becomes 1. Because the left operand of `&&` is false the whole expression is already 0, so the right operand is never evaluated and `j++` never runs. That gives r = 0, i = 1, j = 0.\n\n0 1 1 evaluates both operands, which is what `&` would do; 1 1 1 reads `i++` as `++i`, so that 1 > 0 is true; 0 0 0 forgets that `i++` still increments i even though it yields 0.",
+      "week": 7,
+      "concept": "Short-circuit evaluation and side effects"
+    },
+    {
+      "q": "What is x after these lines?\n\n```c\nint x = 20;\nx -= 6;\nx *= 2;\nx %= 9;\nx += 5;\n```",
+      "options": [
+        "12",
+        "6",
+        "14",
+        "8"
+      ],
+      "answerIndex": 1,
+      "why": "Each compound assignment is the plain operation applied to x: 20 - 6 = 14, then 14 * 2 = 28, then 28 % 9 = 1, then 1 + 5 = 6.\n\n12 does the multiplication before the subtraction, 20 * 2 - 6 = 34, then 34 % 9 = 7 and 7 + 5 = 12; 14 reads `x %= 9` backwards as x = 9 % x, giving 9 % 28 = 9 and then 14; 8 reads `%=` as division, taking 28 / 9 = 3 and then 3 + 5 = 8.",
+      "week": 7,
+      "concept": "Tracing compound assignment operators"
+    },
+    {
+      "q": "A record must hold a product name of up to 24 characters, a price as a double and a stock count as an int, and all three must be readable at the same time. Taking char as 1 byte, int as 4 bytes, double as 8 bytes and no padding, which construct is needed and how many bytes does one record occupy?",
+      "options": [
+        "A union, 24 bytes",
+        "A union, 36 bytes",
+        "A structure, 36 bytes",
+        "A structure, 24 bytes"
+      ],
+      "answerIndex": 2,
+      "why": "All three values must exist at once, so every member needs its own storage. That is a structure, and its size is the sum of its members: 24 + 8 + 4 = 36 bytes.\n\nA union gives every member the same starting address, so it can represent only one member at a time and its size is that of the largest member, 24 bytes, which is why both union answers are wrong here. A union of 36 bytes adds members that share storage; a structure of 24 bytes applies the union size rule to a structure.",
+      "week": 7,
+      "concept": "Choosing between a structure and a union"
+    },
+    {
+      "q": "Every occurrence of the variable `n` in a working C program is renamed `itemCount`, and nothing else is changed. What happens when the program is recompiled and run?",
+      "options": [
+        "It behaves exactly as before, because names are replaced by memory addresses",
+        "It runs more slowly, because a longer name takes more memory at run time",
+        "It fails, because the address bound to n is lost",
+        "Its stored values change, because the name is kept in memory beside the value"
+      ],
+      "answerIndex": 0,
+      "why": "Variable names are not stored inside memory while the program runs. The compiler replaces each name with the address of the location it stands for, so a consistent rename produces the same addresses and the same instructions and the program behaves identically.\n\nName length costs nothing at run time, so no slowdown; nothing is bound to a name at run time for the rename to lose; and the bytes at an address hold the value only, never the name.",
+      "week": 7,
+      "concept": "Variable names versus memory addresses"
+    },
+    {
+      "q": "What does this print?\n\n```c\nchar c = 'D';\nprintf(\"%d %c %d\", c - 'A', c + 1, 'Z' - c);\n```",
+      "options": [
+        "4 E 23",
+        "68 E 22",
+        "3 E 21",
+        "3 E 22"
+      ],
+      "answerIndex": 3,
+      "why": "A char holds a character's numeric code, so `c - 'A'` is 68 - 65 = 3. `c + 1` is 69, which `%c` prints as the character E. `'Z' - c` is 90 - 68 = 22.\n\n4 E 23 counts the letters inclusively instead of subtracting the codes; 68 E 22 prints the code of 'D' itself rather than the difference; 3 E 21 is one short at the end, as if 'Z' were 89.",
+      "week": 7,
+      "concept": "Character codes and arithmetic on char"
+    },
+    {
+      "q": "What does `printf(\"%d\", g(4));` print?\n\n```c\nint f(int n) { return n * n - 1; }\nint g(int n) { return f(n) + f(n - 1); }\n```",
+      "options": [
+        "30",
+        "23",
+        "15",
+        "24"
+      ],
+      "answerIndex": 1,
+      "why": "f(4) = 16 - 1 = 15 and f(3) = 9 - 1 = 8, so g(4) = 15 + 8 = 23.\n\n30 calls f(4) twice instead of f(4) and f(3); 15 keeps only the first term; 24 forgets the -1 in the second call, adding 15 + 9.",
+      "week": 8,
+      "concept": "Evaluating a function that calls another function"
+    },
+    {
+      "q": "What does `printf(\"%d\", count(7));` print?\n\n```c\nint count(int n) {\n    int c = 0, i;\n    for (i = 1; i <= n; i++) {\n        if (i % 3 == 0) return c;\n        c = c + 1;\n    }\n    return c;\n}\n```",
+      "options": [
+        "5",
+        "7",
+        "2",
+        "3"
+      ],
+      "answerIndex": 2,
+      "why": "`return` supplies a value and ends the function immediately, loop and all. i = 1 and i = 2 each add one, so c = 2; at i = 3 the test 3 % 3 == 0 is true and 2 is returned there and then.\n\n5 treats `return` as skipping only that one pass, counting 1, 2, 4, 5, 7; 7 ignores the return and counts every value; 3 returns i rather than c.",
+      "week": 8,
+      "concept": "return ends a function immediately"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint n = 5;\nint twice(int n) { n = n * 2; return n; }\nint main(void) {\n    int r = twice(n);\n    printf(\"%d %d\", r, n);\n    return 0;\n}\n```",
+      "options": [
+        "10 5",
+        "10 10",
+        "5 5",
+        "20 5"
+      ],
+      "answerIndex": 0,
+      "why": "The parameter n is a local copy, and inside twice it shadows the global n. Doubling the copy gives the returned value 10, while the global n was never assigned to and is still 5.\n\n10 10 treats the parameter and the global as one variable; 5 5 assumes a call cannot change anything at all, including its own result; 20 5 doubles once inside the function and again on the way out.",
+      "week": 8,
+      "concept": "Parameters are local copies that shadow globals"
+    },
+    {
+      "q": "Both functions below are in the same file. Which line does the compiler reject?\n\n```c\nvoid   show(double p) { printf(\"%.2f\\n\", p * 1.1); }\ndouble grow(double p) { return p * 1.1; }\n```",
+      "options": [
+        "`show(grow(100));`",
+        "`double b = grow(100);`",
+        "`show(100);`",
+        "`double a = show(100);`"
+      ],
+      "answerIndex": 3,
+      "why": "`show` is declared `void`, which means it returns no value at all, so its call has nothing that can be stored and cannot appear on the right of an `=`.\n\nThe other three are legal: `grow` returns a double, so it can be stored in b or handed to `show`, and a void call is a perfectly good statement on its own. Note that `show` does print a number, but printing is not returning.",
+      "week": 8,
+      "concept": "void functions have no value to assign"
+    },
+    {
+      "q": "How many characters appear on the screen when this line runs?\n\n```c\nprintf(\"a\\\\b\\\"c\");\n```",
+      "options": [
+        "7",
+        "5",
+        "3",
+        "4"
+      ],
+      "answerIndex": 1,
+      "why": "Inside a string literal a backslash always begins an escape. `\\\\` stands for one backslash and `\\\"` stands for one double quote, so the characters printed are a, backslash, b, double quote, c: five in all.\n\n7 counts every escape as the two characters typed; 3 counts only the letters, treating the escapes as invisible; 4 reads the `\\\"` as ending the string, losing the quote and the c.",
+      "week": 8,
+      "concept": "Escape sequences in a string literal"
+    },
+    {
+      "q": "A class keeps `balance` private and offers a public `deposit(amount)`. The body of `deposit` is later rewritten to record every deposit in a log before adding it, while its name, its one input and its return type stay the same. What happens to the programs that call `deposit`?",
+      "options": [
+        "They break, because a public method's body is part of what callers depend on",
+        "They must have the new body copied into them before they will compile",
+        "They keep working, because they used only the name and the input and output formats",
+        "They can now reach balance directly, since deposit was changed"
+      ],
+      "answerIndex": 2,
+      "why": "Functional abstraction means the implementation of a method is not exposed: all a caller needs is the method's name, the format of the input and the format of the output. Changing the body while leaving those three the same cannot break a caller, which is exactly why the implementation of a method can be changed without breaking other parts of the code.\n\nThe body was never something callers could depend on, so it neither breaks them nor has to be copied into them; and rewriting a method does nothing to the access specifier on the data, so balance stays private.",
+      "week": 8,
+      "concept": "Functional abstraction and changing an implementation"
+    },
+    {
+      "q": "What does this print?\n\n```c\ndouble vat(double p)   { return p * 0.075; }\ndouble gross(double p) { return p + vat(p); }\nint main(void) {\n    printf(\"%.2f\", gross(200) + gross(400));\n    return 0;\n}\n```",
+      "options": [
+        "645.00",
+        "600.00",
+        "45.00",
+        "615.00"
+      ],
+      "answerIndex": 0,
+      "why": "vat(200) = 15.00 and vat(400) = 30.00, so gross returns 215.00 and 430.00 and their sum is 645.00.\n\n600.00 forgets to add the VAT at all; 45.00 adds only the two VAT amounts; 615.00 adds the VAT of the first price only.",
+      "week": 8,
+      "concept": "Tracing a function that calls another function"
+    },
+    {
+      "q": "What does `printf(\"%d\", total(1, 4));` print?\n\n```c\nint fee(int days) {\n    if (days <= 1) return 0;\n    return 50 * (days - 1);\n}\nint total(int a, int b) { return fee(a) + fee(b); }\n```",
+      "options": [
+        "200",
+        "250",
+        "100",
+        "150"
+      ],
+      "answerIndex": 3,
+      "why": "fee(1) meets the guard days <= 1 and returns 0. fee(4) returns 50 * (4 - 1) = 150. total is 0 + 150 = 150.\n\n200 charges every day, 50 * 4; 250 charges 50 * (1 + 4), ignoring the free first day of each stay; 100 subtracts a day twice over, 50 * (4 - 2).",
+      "week": 8,
+      "concept": "Tracing a guarded function called twice"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint i, j, c = 0;\nfor (i = 1; i <= 3; i++)\n    for (j = i; j <= 3; j++)\n        c = c + 1;\nprintf(\"%d\", c);\n```",
+      "options": [
+        "9",
+        "3",
+        "6",
+        "12"
+      ],
+      "answerIndex": 2,
+      "why": "The inner loop starts at j = i, so it runs 3 times when i = 1, twice when i = 2 and once when i = 3. The body runs 3 + 2 + 1 = 6 times.\n\n9 assumes the inner loop always makes three passes; 3 counts the outer loop only; 12 counts four inner passes each time, as `j <= 3` from j = 0 would give.",
+      "week": 9,
+      "concept": "Counting passes of a nested loop"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint n = 27, s = 0;\nwhile (n > 0 && s < 10) {\n    s = s + n % 10;\n    n = n / 10;\n}\nprintf(\"%d %d\", n, s);\n```",
+      "options": [
+        "2 7",
+        "0 9",
+        "9 0",
+        "2 27"
+      ],
+      "answerIndex": 1,
+      "why": "First pass: 27 % 10 = 7 so s = 7, and 27 / 10 = 2 so n = 2. Second pass: n > 0 and s < 10 both hold, 2 % 10 = 2 so s = 9, and 2 / 10 = 0 so n = 0. The test n > 0 now fails, and 0 9 is printed.\n\n2 7 stops after one pass; 9 0 prints the two values the wrong way round; 2 27 adds n itself instead of its last digit, so s reaches 27 and the s < 10 guard ends the loop early.",
+      "week": 9,
+      "concept": "Tracing a while loop with a compound condition"
+    },
+    {
+      "q": "The rule is that 70 or more is a distinction, 50 to 69 is a pass and below 50 is a fail. For which of these marks does the fragment below print the wrong word?\n\n```c\nif (m >= 50) printf(\"pass\");\nelse if (m >= 70) printf(\"distinction\");\nelse printf(\"fail\");\n```",
+      "options": [
+        "45",
+        "50",
+        "69",
+        "85"
+      ],
+      "answerIndex": 3,
+      "why": "An if-else-if chain stops at the first true condition and skips every later one. For m = 85 the first test 85 >= 50 is already true, so pass is printed and the distinction branch is never reached.\n\n45 falls through both tests to the final else and correctly prints fail; 50 and 69 are passes and are printed as passes. Every mark of 70 or more is misclassified, and 85 is the only such mark offered.",
+      "week": 9,
+      "concept": "Branch order in an if-else-if chain"
+    },
+    {
+      "q": "Which expression has the same value as `!(a >= 5 || b < 2)` for every a and b?",
+      "options": [
+        "`a < 5 && b >= 2`",
+        "`a < 5 || b >= 2`",
+        "`a > 5 && b <= 2`",
+        "`a <= 5 && b > 2`"
+      ],
+      "answerIndex": 0,
+      "why": "De Morgan's law turns the negation of an OR into the AND of the two negations: !(P || Q) is !P && !Q. The negation of a >= 5 is a < 5, and the negation of b < 2 is b >= 2, so the equivalent expression is a < 5 && b >= 2.\n\n`a < 5 || b >= 2` negates both operands but forgets that the operator flips too; `a > 5 && b <= 2` merely reverses the two signs instead of negating them; `a <= 5 && b > 2` puts both boundary values on the wrong side, and disagrees at a = 5 or b = 2.",
+      "week": 9,
+      "concept": "De Morgan's laws on a compound condition"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint i = 7, c = 0;\ndo {\n    c = c + 1;\n    i = i - 2;\n} while (i > 7);\nprintf(\"%d %d\", c, i);\n```",
+      "options": [
+        "0 7",
+        "1 7",
+        "1 5",
+        "3 1"
+      ],
+      "answerIndex": 2,
+      "why": "A do-while tests after the body, so the body is guaranteed to run at least once whatever the condition says. That one pass makes c = 1 and i = 5, and the test 5 > 7 is then false, so the loop ends.\n\n0 7 is what a while loop with the same condition would give, since 7 > 7 is false before the first pass; 1 7 runs the body but forgets that it changed i; 3 1 keeps looping while i is merely positive.",
+      "week": 9,
+      "concept": "do-while runs its body at least once"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint i, s = 0;\nfor (i = 1; i <= 4; i++)\n    s = s + i;\n    printf(\"%d \", s);\nprintf(\"%d\", i);\n```",
+      "options": [
+        "1 3 6 10 5",
+        "10 5",
+        "10 4",
+        "15 5"
+      ],
+      "answerIndex": 1,
+      "why": "Without braces a for statement governs exactly one statement, and indentation is invisible to the compiler, so only `s = s + i;` is repeated. The loop makes s = 1 + 2 + 3 + 4 = 10 and leaves i = 5, then each printf runs once, giving 10 5.\n\n1 3 6 10 5 treats the indented printf as part of the loop body; 10 4 forgets that i is incremented once more before the failing test; 15 5 adds the final i = 5 into the total as well.",
+      "week": 9,
+      "concept": "Indentation does not make a block"
+    },
+    {
+      "q": "A statement moves program control to another line without testing anything at all. Which kind of branching is that, and which statement performs it?",
+      "options": [
+        "Conditional branching, by switch",
+        "Unconditional branching, by if-else",
+        "Conditional branching, by goto",
+        "Unconditional branching, by goto"
+      ],
+      "answerIndex": 3,
+      "why": "Branching is any move of control away from the next line. When the move happens with no condition checked at all it is unconditional branching, and goto is the statement that does it.\n\nif, if-else, if-else-if and switch move control only when a predetermined condition is satisfied, so all four are conditional branching, also called decision making or selection. That rules out if-else as unconditional and goto as conditional.",
+      "week": 9,
+      "concept": "Unconditional versus conditional branching"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint i, c = 0;\nfor (i = 0; i < 12; i++) {\n    c = c + 1;\n    i = i + 2;\n}\nprintf(\"%d %d\", c, i);\n```",
+      "options": [
+        "4 12",
+        "12 12",
+        "4 11",
+        "3 12"
+      ],
+      "answerIndex": 0,
+      "why": "Each pass raises i by 3 in total: 2 in the body and 1 in the increment step. At the top of the loop i is 0, 3, 6 and 9, so the body runs four times; after the fourth pass i is 12 and the test 12 < 12 fails.\n\n12 12 ignores the `i = i + 2` inside the body; 4 11 forgets the increment step that runs after the last pass; 3 12 stops counting before the pass that starts at i = 9.",
+      "week": 9,
+      "concept": "Tracing a for loop whose counter changes in the body"
+    },
+    {
+      "q": "Curly brackets are put around three statements inside a function. How does the computer then treat that group, and what follows the closing bracket?",
+      "options": [
+        "As three separate statements, and a semicolon follows the closing bracket",
+        "As a single statement, and a semicolon follows the closing bracket",
+        "As a single statement, and no semicolon follows the closing bracket",
+        "As a nameless function, and no semicolon follows the closing bracket"
+      ],
+      "answerIndex": 2,
+      "why": "A block is more than one statement inside curly brackets, and the group of statements inside it is treated like a single statement by the computer. That is precisely what lets a block stand wherever one statement is expected, which is why if, while and for each govern either one statement or one block. The right curly bracket does not have a semicolon after it.\n\nTreating the group as three separate statements is what happens when the brackets are left off; and a block is not a function, so nothing is called and nothing is returned.",
+      "week": 9,
+      "concept": "A block is treated as one statement"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint a[8] = {4, 1, 7, 3, 9, 2, 6, 5};\nint i, s = 0;\nfor (i = 1; i < 8; i = i + 2)\n    s = s + a[i];\nprintf(\"%d\", s);\n```",
+      "options": [
+        "26",
+        "11",
+        "37",
+        "6"
+      ],
+      "answerIndex": 1,
+      "why": "The index takes the values 1, 3, 5 and 7, so the elements added are a[1] = 1, a[3] = 3, a[5] = 2 and a[7] = 5, giving 11.\n\n26 starts at i = 0 and adds 4 + 7 + 9 + 6; 37 adds all eight elements; 6 stops one step early, after i = 5.",
+      "week": 10,
+      "concept": "Traversing an array with a stride"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint a[] = {2, 4, 6, 8};\nint b[6] = {5, 5};\nprintf(\"%d %d\", a[3] + b[2], b[5]);\n```",
+      "options": [
+        "13 0",
+        "6 0",
+        "8 5",
+        "8 0"
+      ],
+      "answerIndex": 3,
+      "why": "a takes its size from its initialiser, so it holds 4 elements and a[3], the element at offset 3, is 8. b is declared with 6 elements but given only 2 values, and too few initialisers is legal: the rest become 0. So b[2] and b[5] are both 0 and the line prints 8 0.\n\n13 0 assumes b[2] is 5; 6 0 reads a[3] as the third value, forgetting that indexing is an offset from the first element; 8 5 assumes the last initialiser is repeated to fill the remaining slots.",
+      "week": 10,
+      "concept": "Array initialisation and the zero-base index"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint m[3][2] = {{2, 5}, {7, 1}, {4, 8}};\nint i, s = 0;\nfor (i = 0; i < 3; i++)\n    s = s + m[i][1];\nprintf(\"%d\", s);\n```",
+      "options": [
+        "14",
+        "13",
+        "27",
+        "8"
+      ],
+      "answerIndex": 0,
+      "why": "The first subscript selects the row and the second selects the column, so m[i][1] walks down column 1 and picks up 5, 1 and 8, which total 14.\n\n13 sums column 0, 2 + 7 + 4; 27 sums every element of the array; 8 keeps only the last value read instead of accumulating.",
+      "week": 10,
+      "concept": "Reading one column of a two-dimensional array"
+    },
+    {
+      "q": "What does `t(7)` return?\n\n```c\nint t(int n) {\n    if (n <= 0) return 0;\n    return n + t(n - 2);\n}\n```",
+      "options": [
+        "28",
+        "15",
+        "16",
+        "12"
+      ],
+      "answerIndex": 2,
+      "why": "The argument drops by 2 each call, so the calls are t(7), t(5), t(3), t(1), t(-1). The last meets the base case n <= 0 and returns 0, and the pending additions give 7 + 5 + 3 + 1 = 16.\n\n28 steps down by 1 instead of 2, adding 7 + 6 + 5 + 4 + 3 + 2 + 1; 15 drops the final 1, as a base case of n <= 1 would; 12 adds only the first two terms.",
+      "week": 10,
+      "concept": "Tracing a recursive function with a step of two"
+    },
+    {
+      "q": "What does `p(3)` print?\n\n```c\nvoid p(int n) {\n    if (n == 0) return;\n    printf(\"%d\", n);\n    p(n - 1);\n    printf(\"%d\", n);\n}\n```",
+      "options": [
+        "321",
+        "321123",
+        "123321",
+        "333222"
+      ],
+      "answerIndex": 1,
+      "why": "The printf before the recursive call runs on the way down, printing 3, then 2, then 1. Control returns to the point just after each call, so the second printf runs on the way back up, in the reverse order, printing 1, then 2, then 3. The output is 321123.\n\n321 assumes nothing written after a recursive call ever runs; 123321 puts the two printf lines the other way round; 333222 assumes each frame prints its own n twice before recursing.",
+      "week": 10,
+      "concept": "Code after a recursive call runs on the way back up"
+    },
+    {
+      "q": "What does `q(48)` return?\n\n```c\nint q(int n) {\n    if (n == 1) return 0;\n    return 1 + q(n / 2);\n}\n```",
+      "options": [
+        "6",
+        "4",
+        "48",
+        "5"
+      ],
+      "answerIndex": 3,
+      "why": "Integer division halves the argument and throws away any fraction: 48, 24, 12, 6, 3, then 3 / 2 = 1. Five calls each add 1 before the base case n == 1 returns 0, so the result is 5.\n\n6 counts the base case as a step as well, or treats 3 / 2 as 2 and inserts an extra halving; 4 stops at 3, assuming halving cannot reach 1 from there; 48 returns the argument instead of the number of halvings.",
+      "week": 10,
+      "concept": "Tracing a recursive halving function"
+    },
+    {
+      "q": "`maxA(a, n)` must return the largest of the first n elements of a. Which line completes it?\n\n```c\nint maxA(int a[], int n) {\n    if (n == 1) return a[0];\n    int m = maxA(a, n - 1);\n    return ______;\n}\n```",
+      "options": [
+        "`a[n - 1] > m ? a[n - 1] : m`",
+        "`a[n] > m ? a[n] : m`",
+        "`m`",
+        "`a[n - 1] + m`"
+      ],
+      "answerIndex": 0,
+      "why": "The recursive call already returns the largest of the first n - 1 elements, so the only work left is to compare it with the one element not yet considered. With n elements that element sits at offset n - 1, and returning the larger of the two gives the largest of all n. For {4, 9, 2} it returns 9.\n\n`a[n]` reads one place past the last element, which is out of range and not diagnosed; returning m alone never examines the last element, so maxA({4, 9, 2}, 3) would give 9 but maxA({4, 2, 9}, 3) would give 4; adding them returns a total, not a maximum.",
+      "week": 10,
+      "concept": "Completing the recursive case of a maximum"
+    },
+    {
+      "q": "A program declares `double t[6];`, fills all six elements, and then needs somewhere to put a seventh reading. Which is true?",
+      "options": [
+        "Writing t[6] extends the array to seven elements",
+        "The compiler rejects any line that writes to t[6]",
+        "The size was fixed at the declaration, so there is no seventh element",
+        "The array grows by itself, since every element has the same type"
+      ],
+      "answerIndex": 2,
+      "why": "An array stores a fixed-size sequential collection of elements of the same type, and the size is settled at the declaration and never changes while the program runs. The legal indices are t[0] to t[5].\n\nt[6] is not a new slot: it names the memory just past the end of the block, so writing there quietly overwrites whatever else lives at that address. Nothing in C stores or checks a length at run time, so the compiler does not reject it and no error is reported; the program may finish and print a confident wrong answer.",
+      "week": 10,
+      "concept": "Arrays are fixed-size and bounds are not checked"
+    },
+    {
+      "q": "What does this print?\n\n```c\nint a[5] = {3, 6, 9, 12, 15};\nint i, tmp;\nfor (i = 0; i < 2; i++) {\n    tmp = a[i];\n    a[i] = a[4 - i];\n    a[4 - i] = tmp;\n}\nprintf(\"%d %d %d\", a[0], a[2], a[4]);\n```",
+      "options": [
+        "3 9 15",
+        "15 9 3",
+        "15 6 3",
+        "15 12 3"
+      ],
+      "answerIndex": 1,
+      "why": "The first pass swaps a[0] with a[4] and the second swaps a[1] with a[3], so the array ends as 15, 12, 9, 6, 3. The middle element a[2] is never touched, and the line prints 15 9 3.\n\n3 9 15 is the array left unchanged; 15 6 3 reads a[1] before its swap; 15 12 3 reads a[1] after its swap instead of a[2].",
+      "week": 10,
+      "concept": "Tracing an in-place array swap"
+    },
+    {
+      "q": "A 5,000-line program is divided into twelve modules. Which of these effects is a disadvantage of dividing it?",
+      "options": [
+        "Compilation and loading time may be longer",
+        "Smaller units are faster to design, develop and test",
+        "A small module is easier to understand",
+        "Modules can be reused in another program"
+      ],
+      "answerIndex": 0,
+      "why": "The costs of modularisation are that execution time may be longer, storage size may be increased, compilation and loading time may be longer, inter-module communication problems may be increased, and more initial design time is demanded. Longer compilation and loading is one of those five.\n\nThe other three options are advantages: smaller units are easier and faster to design, develop, test and publish; a small module is easier to understand; and modules can be reused elsewhere in the program or in another program.",
+      "week": 11,
+      "concept": "Advantages versus disadvantages of modularisation"
+    },
+    {
+      "q": "In a hierarchical design the top module decides which of three reports to produce and does no arithmetic, while the three modules below it read the file, compute the totals and print the report. Which partitioning is this, and what does the top module own?",
+      "options": [
+        "Horizontal, the decision-making with little processing",
+        "Vertical, all the input, computation and output",
+        "Horizontal, communication between the functions and executing them",
+        "Vertical, the decision-making with little processing"
+      ],
+      "answerIndex": 3,
+      "why": "In vertical partitioning functionality is distributed top-down: control modules at the top do the decision-making and little processing, while worker modules at the bottom perform all the input, computation and output. That is exactly the arrangement described.\n\nHorizontal partitioning is the other one, where control modules communicate between the functions and execute them, so both horizontal answers name the wrong partition. Giving the top module all the input, computation and output describes the worker modules at the bottom instead.",
+      "week": 11,
+      "concept": "Horizontal versus vertical structural partitioning"
+    },
+    {
+      "q": "A module holds four functions.\n\n```\nmodule Payroll:\n    compute_gross, compute_tax, compute_net, resize_logo\n```\n\nWhich function should be moved out to another module, and which measure of module independence does moving it improve?",
+      "options": [
+        "compute_tax, cohesion",
+        "resize_logo, coupling",
+        "resize_logo, cohesion",
+        "compute_net, coupling"
+      ],
+      "answerIndex": 2,
+      "why": "Cohesion is the extent to which the functions in a module work together to achieve the module's aim, and we want it high. Three of these functions serve the single aim of working out pay; resize_logo serves a different aim entirely, so it drags the module's cohesion down and belongs in a module of its own.\n\nMoving compute_tax or compute_net would remove a function that does serve the module's aim, lowering cohesion further. Coupling is measured between modules, not inside one, so it is not the measure that this change improves.",
+      "week": 11,
+      "concept": "Raising cohesion by moving an unrelated function"
+    },
+    {
+      "q": "A hierarchical design is partitioned horizontally, so that control modules communicate between the functions and execute them. What is the stated cost of that arrangement?",
+      "options": [
+        "Worker modules can no longer perform input or output",
+        "More data must be passed across the module interface, making control flow more complex",
+        "Negative impacts spread through the design more quickly",
+        "The software becomes harder to extend with new functions"
+      ],
+      "answerIndex": 1,
+      "why": "Horizontal partitioning requires passing more data across the module interface, which makes control flow more complex, especially where data moves rapidly from one function to another. That is the price paid for it.\n\nEasier testing and maintenance, slowly spreading negative impacts and easy extension are the benefits of structural partitioning, so two of these options state the opposite of what partitioning buys. Worker modules doing all the input, computation and output belongs to vertical partitioning and is not something horizontal partitioning forbids.",
+      "week": 11,
+      "concept": "The cost of horizontal partitioning"
+    },
+    {
+      "q": "Coupling is counted as the number of other modules a module must call before it can do its work.\n\n```\nmodule Accounts: calls nothing outside itself\nmodule Ledger:   calls Accounts.balance()\nmodule Tax:      calls Accounts.balance()\nmodule Invoice:  calls Ledger.post(), Accounts.balance(), Tax.rate()\n```\n\nWhich module has the highest coupling and which has the lowest?",
+      "options": [
+        "Accounts highest, Invoice lowest",
+        "Invoice highest, Tax lowest",
+        "Ledger highest, Accounts lowest",
+        "Invoice highest, Accounts lowest"
+      ],
+      "answerIndex": 3,
+      "why": "Count the other modules each one depends on: Accounts 0, Ledger 1, Tax 1, Invoice 3. Invoice has the highest coupling and Accounts the lowest, and low coupling is what we want, so Accounts is in the healthiest position.\n\nAccounts highest counts how many modules call Accounts, which measures the opposite direction; Tax is not the lowest because Accounts depends on nothing at all; Ledger depends on one module only, so it cannot be the highest.",
+      "week": 11,
+      "concept": "Measuring coupling between modules"
+    },
+    {
+      "q": "Module Stock stops exposing its internal table and offers only a `units(sku)` function, and the three modules that read the table are changed to call it. Stock later replaces the table with a different data structure. What does that replacement now cost?",
+      "options": [
+        "Nothing outside Stock, since no other module can reach its data structures",
+        "Edits in all three modules, since each still depends on how Stock stores its data",
+        "Edits in the two modules that call units(sku) most often",
+        "Nothing anywhere, since changing a data structure is never a change at all"
+      ],
+      "answerIndex": 0,
+      "why": "Information hiding means one module's data structures and processing details are not accessible to other modules, which are passed only as much information as they need. Once the three modules go through units(sku) they depend on that function, not on the table behind it, so replacing the table changes nothing outside Stock. That is the stated benefit: it restricts the effects of changes in one component on others.\n\nThe three modules no longer depend on the storage, so none of them needs editing, and how often a module calls the function has nothing to do with it. Stock itself certainly changes, so it is not true that nothing changes anywhere.",
+      "week": 11,
+      "concept": "Information hiding restricts the effect of a change"
+    },
+    {
+      "q": "Design R has five modules, each doing one job and each calling only its own functions. Design S has five modules, each doing one job but each needing three of the others before it can run. Which measure separates the two designs, and which design is better on it?",
+      "options": [
+        "Cohesion, and R is better because its cohesion is higher",
+        "Coupling, and S is better because its coupling is higher",
+        "Coupling, and R is better because its coupling is lower",
+        "Cohesion, and S is better because its cohesion is lower"
+      ],
+      "answerIndex": 2,
+      "why": "Cohesion is judged inside a module, and both designs have modules that each do one job, so cohesion is high in both and cannot tell them apart. What differs is how far each module depends on other modules before it can perform its function, which is coupling, judged between modules. R depends on nothing and S on three others each, and low coupling is the goal, so R is better.\n\nThe two cohesion answers pick the measure that is the same in both designs, and high coupling or low cohesion is never the thing to aim for.",
+      "week": 11,
+      "concept": "Cohesion inside a module, coupling between modules"
+    },
+    {
+      "q": "In one of the two generic design approaches the amount of abstraction increases with each higher level. Which approach is it, and where does it start?",
+      "options": [
+        "Top-down, starting from the whole system as one entity",
+        "Bottom-up, starting from the most specific and basic components",
+        "Bottom-up, starting from the whole system as one entity",
+        "Top-down, starting from the most specific and basic components"
+      ],
+      "answerIndex": 1,
+      "why": "Bottom-up design starts with the most specific and basic components and composes higher-level components from lower-level ones until the system evolves as one single component, and with each higher level the amount of abstraction is increased. It suits a system built from an existing set of primitives that can be reused.\n\nTop-down works the other way: it takes the whole system as one entity and decomposes it into sub-systems, treating each as a system and decomposing again until the lowest level is reached, and it suits a design made from scratch when the specific details are unknown. That rules out both top-down answers, and bottom-up cannot start from the whole system.",
+      "week": 11,
+      "concept": "Top-down versus bottom-up design"
+    },
+    {
+      "q": "A quantity field is specified as valid from 5 to 50 inclusive. Which set is exactly the six values that boundary value analysis tests for that range?",
+      "options": [
+        "4, 5, 6, 49, 50, 51",
+        "5, 6, 7, 48, 49, 50",
+        "0, 4, 5, 50, 51, 99",
+        "4, 5, 49, 50, 51, 52"
+      ],
+      "answerIndex": 0,
+      "why": "Defects cluster at the edges of a partition, so boundary value analysis takes the value just below, at, and just above each edge. The lower edge 5 gives 4, 5, 6 and the upper edge 50 gives 49, 50, 51.\n\n5, 6, 7, 48, 49, 50 never leaves the valid range, so it cannot catch an implementation written as qty < 50; 0, 4, 5, 50, 51, 99 mixes in two values that are nowhere near an edge and drops 6 and 49; 4, 5, 49, 50, 51, 52 drops 6 and takes 52, which is two past the upper edge rather than one.",
+      "week": 12,
+      "concept": "Boundary value analysis"
+    },
+    {
+      "q": "One unchanged build of an app is run on Chrome, Safari, Windows and Android, and the results are compared. Which method is this, and which of the two families does it belong to?",
+      "options": [
+        "System testing, functional",
+        "Compatibility testing, functional",
+        "Acceptance testing, non-functional",
+        "Compatibility testing, non-functional"
+      ],
+      "answerIndex": 3,
+      "why": "Compatibility testing determines whether the software works with different browsers, platforms and operating systems, that is every environment the end users will use. It is one of the four non-functional methods, alongside usability, performance and security.\n\nSystem testing keeps the environment fixed and checks the integrated whole against the technical and functional requirements; acceptance testing confirms the software meets the expected requirements and is functional. Calling compatibility testing functional puts it in the family that asks whether the program does the right thing rather than how well it does it.",
+      "week": 12,
+      "concept": "Classifying a non-functional testing method"
+    },
+    {
+      "q": "A tester is given the source of one function and chooses inputs so that each branch of its two if statements is executed at least once. Name the visibility class and the functional level.",
+      "options": [
+        "Black box, acceptance testing",
+        "Grey box, integration testing",
+        "White box, unit testing",
+        "White box, acceptance testing"
+      ],
+      "answerIndex": 2,
+      "why": "The internal structure is known and the inputs were chosen to exercise paths through the code, which is white box testing. The target is a single function and its execution paths, which is unit testing.\n\nBlack box means the internals are not known to the tester; grey box uses partial internal knowledge only to design the cases, which are then run through the exposed interfaces; and acceptance testing is one of the levels black box applies to, not white box.",
+      "week": 12,
+      "concept": "White box testing at the unit level"
+    },
+    {
+      "q": "What does `biggest([3, 9, 2, 12])` return, and what is the defect?\n\n```python\ndef biggest(v):\n    m = v[0]\n    for i in range(len(v) - 1):\n        if v[i] > m:\n            m = v[i]\n    return m\n```",
+      "options": [
+        "12, and there is no defect",
+        "9, and the last element is never examined",
+        "3, and m is never updated",
+        "9, and m is reset on every pass"
+      ],
+      "answerIndex": 1,
+      "why": "len(v) - 1 is 3, so i takes the values 0, 1 and 2 and the elements compared are 3, 9 and 2. m ends at 9 and the last element, 12, is never looked at. The fix is to loop over range(len(v)).\n\n12 assumes the loop reaches the end; 3 ignores the update that does happen at i = 1; and m is set once before the loop, not on every pass, which is a different defect that would return 12 here only by accident.",
+      "week": 12,
+      "concept": "Finding an off-by-one defect from a wrong result"
+    },
+    {
+      "q": "During which phase of the software testing life cycle are the software and hardware requirements for the test specified?",
+      "options": [
+        "Test planning",
+        "Requirement analysis",
+        "Test case development",
+        "Test environment setup"
+      ],
+      "answerIndex": 3,
+      "why": "Test environment setup is the phase in which the software and hardware requirements for the test are specified, and its activities are test data setup and environment setup.\n\nTest planning defines the testing strategy, cost and duration and identifies the testing environment without specifying its requirements; requirement analysis decides what is to be tested; test case development identifies, writes and reviews the test cases. Environment setup is the phase most often left out of the list of six.",
+      "week": 12,
+      "concept": "Matching an activity to its STLC phase"
+    },
+    {
+      "q": "A test case reads: Inputs, an order of three items at 2,500 each. Expected output, a total of 7,500. Which of the three required parts of a test case is missing?",
+      "options": [
+        "The process, that is what is done with the inputs",
+        "The inputs",
+        "The expected output",
+        "None, since all three parts are present"
+      ],
+      "answerIndex": 0,
+      "why": "A test case gives detailed step-by-step instructions on how a test should be performed, specifying the test inputs, the process and the expected outputs. The inputs and the expected output are both given here, but nothing says what is to be done with them, so the tester does not know which function or screen to exercise.\n\nThe inputs are stated as three items at 2,500 each and the expected output as 7,500, so neither of those is missing, and a case with only two of the three parts is not complete.",
+      "week": 12,
+      "concept": "The three parts of a test case"
+    },
+    {
+      "q": "A payment page returns the correct receipt every time, but each page takes 45 seconds to appear. Which is true of it?",
+      "options": [
+        "It fails a functional test, because a result that slow is not the expected output",
+        "It passes a functional test and fails a non-functional one",
+        "It passes both, because the output produced is correct",
+        "It fails both, because a delay that long makes every result unusable"
+      ],
+      "answerIndex": 1,
+      "why": "Functional testing asks whether the program performs as expected, that is whether the output it gives is the same as the expected output. The receipt is correct every time, so the functional test passes. Non-functional testing asks how well the software behaves, and response time under load is performance testing, which this page fails.\n\nA correct answer delivered slowly is not a wrong answer, so the functional test cannot fail; and a passing functional test does not excuse the performance one.",
+      "week": 12,
+      "concept": "Functional versus non-functional testing"
+    },
+    {
+      "q": "After every part is integrated, one run confirms that the whole product meets its technical and functional requirements. A later run by the customer's own staff confirms it meets their expected requirements and hunts for spelling mistakes and for bugs that cause crashes. Name the two methods in that order.",
+      "options": [
+        "Acceptance testing, then system testing",
+        "Integration testing, then system testing",
+        "System testing, then acceptance testing",
+        "System testing, then usability testing"
+      ],
+      "answerIndex": 2,
+      "why": "System testing tests the system as a whole after all the parts are integrated and confirms that it meets the technical and functional requirements. Acceptance testing confirms the software meets the expected requirements and, beyond issues such as spelling errors, identifies bugs that can cause major errors and software crashes.\n\nIntegration testing checks how well different parts work together and happens before the whole is assembled, so it cannot be the first run described; usability testing finds issues with the help of users who are observed while using the software, which is not what the second run does.",
+      "week": 12,
+      "concept": "System testing versus acceptance testing"
+    }
+  ]
+}

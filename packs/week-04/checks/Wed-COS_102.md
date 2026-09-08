@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *Week 4 Algorithm Concepts, taken conceptually.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** A flowchart runs: Start; sum = 0; count = 0; then a loop: enter n; sum = sum + n; count = count + 1; decision 'Is count < 5?' with YES back to 'enter n' and NO on to 'Print sum'; Stop. The user types 6, 2, 9, 3, 5, 8 in that order. What is printed?
 A. 20
@@ -73,9 +73,9 @@ B. Space complexity analysis
 C. Priori analysis
 D. Average case analysis
 
-**9. (show your working)** Trace this and give the value of total after each iteration, then the printed value. Show your working.
+**9.** What does this print?
 
-```
+```python
 total = 0
 k = 1
 while k <= 4:
@@ -83,18 +83,28 @@ while k <= 4:
     k = k + 1
 print(total)
 ```
+A. 30
+B. 55
+C. 10
+D. 16
 
-**10. (show your working)** Write pseudocode that reads numbers from the user until 0 is entered, then prints how many of the numbers entered were negative. The 0 itself is not counted.
+**10.** Numbers are entered one at a time until 0 is entered, and the 0 itself is not counted. Which design prints how many of the entered numbers were negative?
+A. Set the counter to 0, read n, then loop while n ≠ 0 testing n < 0, with no further read inside the loop
+B. Read n, then loop while n ≠ 0 setting the counter to 0, testing n < 0 and reading the next n
+C. Set the counter to 0, read n, then loop while n ≠ 0 testing n < 0 and reading the next n at the foot
+D. Set the counter to 0, read n, then loop while n ≥ 0 testing n < 0 and reading the next n at the foot
 
-**11. (show your working)** Five actions from a project to find the largest of a set of numbers entered by a user:
-(a) Ask whether the same algorithm could also find the smallest number.
-(b) Write the three lines: declare and initialise variables; input numbers; determine the maximum and output it.
-(c) Ask what type of data the user will enter and what result is expected.
-(d) Notice that the request never says how many numbers will be entered.
-(e) Replace 'input numbers' with a loop that prompts, reads, compares with the current maximum and counts, until a sentinel is entered.
-Put them in the order of the five algorithm development steps and name each step.
+**11.** Five actions come from a project to find the largest of a set of numbers entered by a user. (a) Ask whether the same algorithm could also find the smallest number. (b) Write three lines: declare and initialise variables; input numbers; determine the maximum and output it. (c) Ask what type of data the user will enter and what result is expected. (d) Notice that the request never fixes how many numbers will be entered. (e) Replace 'input numbers' with a loop that prompts, reads, compares with the current maximum and counts, until a sentinel is entered. In what order do these match the five algorithm development steps?
+A. c, d, b, e, a
+B. d, c, b, e, a
+C. d, c, e, b, a
+D. a, d, c, b, e
 
-**12. (show your working)** A linear search checks n items one at a time for a target value. State the number of comparisons in the best case and in the worst case, and explain why the worst case is the figure usually quoted for an algorithm.
+**12.** A linear search checks n items one at a time for a target value. How many comparisons does it make in the best case and in the worst case, and why is the worst case the figure usually quoted?
+A. 1 and n; the worst case is the most likely input
+B. 1 and n/2; the worst case is the average over all inputs
+C. n and n²; the worst case guarantees an upper bound for any input of size n
+D. 1 and n; the worst case guarantees an upper bound for any input of size n
 
 ---
 
@@ -132,27 +142,18 @@ Finiteness concerns the number of steps being limited and countable, which one v
 
 Posterior analysis is carried out after implementation and measures the space and running time the program actually uses; space complexity concerns memory, not statement counts; average case is a category of time complexity, not a type of analysis.
 
-**9.** *Tracing an accumulator step by step.* k = 1: total = 0 + 1 = 1. k = 2: total = 1 + 4 = 5. k = 3: total = 5 + 9 = 14. k = 4: total = 14 + 16 = 30. Then k = 5, the test k ≤ 4 fails, and 30 is printed.
+**9. A** — *Tracing an accumulator step by step.* The running totals are 0 + 1 = 1, 1 + 4 = 5, 5 + 9 = 14 and 14 + 16 = 30. At k = 5 the test k ≤ 4 fails and 30 is printed.
 
-A correct answer lists the running totals 1, 5, 14, 30 in order and states that 30 is printed. Listing 1, 4, 9, 16 gives the squares rather than the totals and is not accepted; 10 comes from adding k instead of k × k; 55 continues to k = 5 and is wrong.
+55 runs one pass too many and adds 25; 10 adds k rather than k × k; 16 keeps only the last square instead of accumulating.
 
-**10.** *Writing a sentinel-controlled counting loop.* Model answer:
+**10. C** — *Writing a sentinel-controlled counting loop.* The counter is set once before the loop; the condition tests the sentinel, n ≠ 0; the body adds 1 when n < 0 and then reads the next n so the condition sees a fresh value; the count is printed after the loop. For 4, −3, −7, 8, 0 it prints 2.
 
-```
-negatives = 0
-enter n
-while n ≠ 0
-    if n < 0 then negatives = negatives + 1
-    enter n
-print negatives
-```
+With no read inside the body the condition never changes and the loop runs forever. Setting the counter to 0 inside the loop throws the count away on every pass. The condition n ≥ 0 stops at the first negative number, which is exactly the case being counted.
 
-A correct answer must have a counter set to 0 before the loop, a loop whose condition tests for the sentinel 0, a selection (n < 0) that adds 1 to the counter, a fresh read of n inside the loop so the condition can change, and the print after the loop. A repeat-until form, a Python while True with break, or reading once before the loop and again at the end of the body are all accepted. Not accepted: the counter reset inside the loop, no second read (the loop never ends), or a condition that also counts the 0.
+**11. B** — *Ordering the algorithm development steps.* Step 1 is the problem description, and (d) is where the description is found to be incomplete. Step 2 is problem analysis, and (c) fixes the starting and ending points. Step 3 is the high-level algorithm, the three main parts in (b). Step 4 is refinement, and (e) adds detail to one of those parts. Step 5 is review, and (a) asks whether the algorithm solves a more general problem.
 
-**11.** *Ordering the algorithm development steps.* Order: d, c, b, e, a. (d) is Step 1, problem description, because it spots an incomplete description; (c) is Step 2, problem analysis, fixing the starting and ending points; (b) is Step 3, high-level algorithm development, main parts only; (e) is Step 4, algorithm refinement, adding detail to one high-level line; (a) is Step 5, algorithm review, asking whether the algorithm solves more general problems.
+Putting (c) first analyses a description not yet known to be incomplete; swapping (b) and (e) puts the refined detail before the plan it refines; starting with (a) reviews an algorithm that does not exist.
 
-A correct answer gives the order d c b e a and the five step names in that order. Swapping (b) and (e) confuses the high-level algorithm with its refinement; placing (a) first confuses review with description.
+**12. D** — *Best case versus worst case time complexity.* The best case is the target sitting first: 1 comparison. The worst case is the target last or absent: n comparisons. The worst case is the figure quoted because it is a promise that holds for every input of size n, so it can be relied on for planning and for comparing two algorithms.
 
-**12.** *Best case versus worst case time complexity.* Best case: the target is the first item, 1 comparison. Worst case: the target is last or absent, n comparisons. The worst case is quoted because it is a guarantee: whatever input of size n arrives, the algorithm needs at most that much time, so it can be relied on for planning and for comparing algorithms. The best case describes only the luckiest input and says nothing about the others.
-
-A correct answer states 1 and n, and gives the guarantee (upper bound for any input of size n) as the reason. Mentioning that the average case describes a typical input is a bonus, not required.
+The worst case is neither the most likely input nor the average; n/2 is the average when the target sits at a random position; n and n² belong to a method that compares every pair rather than scanning once.

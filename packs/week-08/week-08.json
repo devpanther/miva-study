@@ -338,28 +338,56 @@
           "why": "Partial fractions is for a fraction whose denominator factors into linear pieces: (3x + 1)/((x − 1)(x + 2)) splits into A/(x − 1) + B/(x + 2), and each piece integrates to a logarithm.\n\nx·eˣ is a product of an algebraic and an exponential factor, which is integration by parts; √(1 − x²) needs the trigonometric substitution x = sin(u); 2x·e^(x²) has the derivative of the exponent sitting beside it, which is plain substitution."
         },
         {
-          "type": "short",
-          "q": "Write 1/((x − 1)(x + 2)) as A/(x − 1) + B/(x + 2), find A and B by substituting the roots, then find ∫1/((x − 1)(x + 2)) dx. Show your working.",
+          "type": "mcq",
+          "q": "Write 1/((x − 1)(x + 2)) as A/(x − 1) + B/(x + 2), and hence find ∫1/((x − 1)(x + 2)) dx.",
+          "options": [
+            "(1/3)ln|x − 1| − (1/3)ln|x + 2| + C",
+            "(1/3)ln|x − 1| + (1/3)ln|x + 2| + C",
+            "3ln|x − 1| − 3ln|x + 2| + C",
+            "ln|x − 1| − ln|x + 2| + C"
+          ],
+          "answerIndex": 0,
           "concept": "Partial fractions with a constant numerator",
-          "why": "Clear the denominator: 1 = A(x + 2) + B(x − 1). At x = 1: 1 = 3A, so A = 1/3. At x = −2: 1 = −3B, so B = −1/3. Then ∫1/((x − 1)(x + 2)) dx = ∫(1/3 · 1/(x − 1) − 1/3 · 1/(x + 2)) dx = (1/3)ln(x − 1) − (1/3)ln(x + 2) + C.\n\nFinal answer: (1/3)ln(x − 1) − (1/3)ln(x + 2) + C. Also accepted: (1/3)ln((x − 1)/(x + 2)) + C, or with ln|x − 1| and ln|x + 2|. The working must show the cleared equation, the two substitutions x = 1 and x = −2, and A = 1/3, B = −1/3. B = +1/3 (losing the sign from B(−3) = 1) or A = 3 (reading 3A = 1 upside down) is wrong."
+          "why": "Clear the denominator: 1 = A(x + 2) + B(x − 1). Put x = 1: 1 = 3A, so A = 1/3. Put x = −2: 1 = −3B, so B = −1/3. Integrating term by term gives (1/3)ln|x − 1| − (1/3)ln|x + 2| + C, which may also be written (1/3)ln|(x − 1)/(x + 2)| + C.\n\nThe second option loses the sign in B(−3) = 1; the third reads 3A = 1 upside down as A = 3; the fourth ignores the factor 3 in both substitutions."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₀¹ (x + 1)⁵ dx using the substitution u = x + 1. Convert the limits to u and finish in u. Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₀¹ (x + 1)⁵ dx using the substitution u = x + 1, converting the limits to u.",
+          "options": [
+            "1/6",
+            "21/2",
+            "32/3",
+            "63/5"
+          ],
+          "answerIndex": 1,
           "concept": "Definite integral by substitution with converted limits",
-          "why": "u = x + 1 gives du = dx. Convert the limits: x = 0 gives u = 1, x = 1 gives u = 2. So ∫₀¹ (x + 1)⁵ dx = ∫₁² u⁵ du = (1/6)u⁶|₁² = (1/6)(64 − 1) = 63/6 = 21/2. Because the limits were converted, the answer is a number and no return to x is needed.\n\nFinal answer: 21/2 (also accepted: 10.5 or 63/6). The working must show the new limits 1 and 2 and the evaluation (1/6)(2⁶ − 1⁶). Keeping the old limits 0 and 1 in u gives (1/6)(1 − 0) = 1/6 and is wrong; expanding (x + 1)⁵ and integrating is accepted if it reaches 21/2."
+          "why": "u = x + 1 gives du = dx, and the limits convert: x = 0 gives u = 1, x = 1 gives u = 2. So the integral is ∫₁² u⁵ du = (1/6)u⁶|₁² = (1/6)(64 − 1) = 63/6 = 21/2. Because the limits moved with the variable, the answer is a number and no return to x is needed.\n\n1/6 keeps the old limits 0 and 1 in u; 32/3 evaluates at the upper limit only; 63/5 divides by the old power 5 instead of the new power 6."
         },
         {
-          "type": "short",
-          "q": "The table gives ∫ln(x) dx = x·ln(x) − x + C. Verify this line by differentiating x·ln(x) − x. Show your working.",
+          "type": "mcq",
+          "q": "The table of standard integrals gives ∫ln(x) dx = x·ln(x) − x + C. Differentiate x·ln(x) − x to check that line.",
+          "options": [
+            "ln(x) + 1",
+            "1/x − 1",
+            "ln(x)",
+            "ln(x) − 1"
+          ],
+          "answerIndex": 2,
           "concept": "Checking a standard integral by differentiating",
-          "why": "Use the product rule on x·ln(x): d/dx [x·ln(x)] = 1·ln(x) + x·(1/x) = ln(x) + 1. Then d/dx [x·ln(x) − x] = ln(x) + 1 − 1 = ln(x), which is the integrand, so the table line is correct.\n\nA correct answer shows the product rule giving ln(x) + 1, subtracts the derivative of x, and states that the result ln(x) matches the integrand. Getting ln(x) + 1 and stopping (forgetting to differentiate the −x) does not verify the line; writing d/dx ln(x) = 1/x alone is not the check."
+          "why": "Use the product rule on x·ln(x): d/dx [x·ln(x)] = 1·ln(x) + x·(1/x) = ln(x) + 1. Subtracting the derivative of x gives ln(x) + 1 − 1 = ln(x), which is the integrand, so the table line is correct.\n\nln(x) + 1 stops before differentiating the −x; 1/x − 1 skips the product rule and differentiates ln(x) alone; ln(x) − 1 subtracts the 1 that the product rule produced instead of adding it."
         },
         {
-          "type": "short",
-          "q": "With u = x + 2, ∫₀² (x + 2)³ dx can be finished as (1/4)u⁴|₂⁴ = 60 without ever returning to x, but ∫2x·e^(x²) dx with u = x² must not be left as eᵘ + C. Explain the difference.",
+          "type": "mcq",
+          "q": "With u = x + 2, ∫₀² (x + 2)³ dx can be finished as (1/4)u⁴|₂⁴ = 60, but ∫2x·e^(x²) dx with u = x² must not be left as eᵘ + C. What is the difference?",
+          "options": [
+            "The limits were converted to u, so the definite integral is a number; the indefinite one must return to x",
+            "Definite integrals never need the substitution undone, while indefinite ones only need + C added",
+            "u = x + 2 is linear, so it may be left; u = x² is not linear and may not",
+            "Both may be left in u; the second is written back only for tidiness"
+          ],
+          "answerIndex": 0,
           "concept": "When an answer may be left in u",
-          "why": "In the definite integral the limits were converted along with the variable (x = 0 gives u = 2, x = 2 gives u = 4), so evaluating the antiderivative between the u-limits produces a number, 60. No variable survives, so there is nothing to convert back. The indefinite integral has no limits to absorb the substitution: u was introduced by you and does not appear in the question, so the answer must be set back to x, giving e^(x²) + C.\n\nA correct answer says that converted limits turn a definite integral into a number, that an indefinite integral must be expressed in the original variable, and states e^(x²) + C as the complete answer."
+          "why": "Converting the limits (x = 0 gives u = 2, x = 2 gives u = 4) turns the definite integral into a number, 60, with no variable left to convert back. An indefinite integral has no limits to absorb the substitution, and u was your own invention, so the answer must be expressed in the original variable: e^(x²) + C.\n\nThe second option confuses + C with the return to x; the third invents a rule about linearity; the fourth treats an answer in an undefined letter as acceptable."
         }
       ]
     },
@@ -475,28 +503,56 @@
           "why": "τ = μB sin θ with θ the angle between μ (the normal to the loop) and B. The torque is largest when sin θ = 1, θ = 90°, which is when the normal is perpendicular to B, that is, when the plane of the loop contains B.\n\nNormal parallel (θ = 0°) and normal antiparallel (θ = 180°) both give sin θ = 0 and zero torque; plane perpendicular to B is the same as normal parallel to B, again zero torque. The common slip is to measure θ from the plane instead of from the normal, which swaps these answers."
         },
         {
-          "type": "short",
-          "q": "A bar magnet of moment 0.60 A·m² is in a uniform field of 0.25 T. Calculate the torque and the potential energy when the angle between μ and B is 0°, 90° and 180°, and state which of the zero-torque orientations is stable. Show your working.",
+          "type": "mcq",
+          "q": "A bar magnet of moment 0.60 A·m² sits in a uniform field of 0.25 T with its moment antiparallel to the field, so θ = 180°. Calculate the torque and the potential energy, and say whether the orientation is stable.",
+          "options": [
+            "τ = 0, U = −0.15 J, stable",
+            "τ = 0.15 N·m, U = 0, unstable",
+            "τ = 0, U = +0.15 J, stable",
+            "τ = 0, U = +0.15 J, unstable"
+          ],
+          "answerIndex": 3,
           "concept": "Torque and energy at the special orientations, and stability",
-          "why": "μB = (0.60)(0.25) = 0.15 J, and every value below is this times sin θ or cos θ. τ = μB sin θ and U = −μB cos θ. At 0°: τ = 0, U = −0.15 J. At 90°: τ = 0.15 N·m (the maximum), U = 0. At 180°: τ = 0, U = +0.15 J. The torque vanishes at both 0° and 180°, but only 0° is stable, because U is a minimum there: a small displacement produces a torque that restores it. At 180° U is a maximum, so any nudge drives the magnet further away; it is unstable.\n\nFinal answers: (0°) τ = 0, U = −0.15 J; (90°) τ = 0.15 N·m, U = 0; (180°) τ = 0, U = +0.15 J; stable at 0°. Accept values within 0.005. Signs matter: U = +0.15 J at 0° means the minus sign in U = −μB cos θ was dropped and is wrong."
+          "why": "μB = (0.60)(0.25) = 0.15 J. Then τ = μB sin 180° = 0 and U = −μB cos 180° = +0.15 J, which is the maximum of U, so any small displacement produces a torque that drives the magnet further away: the equilibrium is unstable.\n\nU = −0.15 J with 'stable' is the θ = 0° answer, where U is a minimum; τ = 0.15 N·m with U = 0 belongs to θ = 90°; and calling zero torque 'stable' confuses equilibrium with stability."
         },
         {
-          "type": "short",
-          "q": "A solenoid of 800 turns is wound over a length of 40 cm and carries 1.5 A. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the turns per metre and the field inside with an air core, and then the field with an iron core of relative permeability 400. Show your working.",
+          "type": "mcq",
+          "q": "A solenoid of 800 turns is wound over a length of 40 cm and carries 1.5 A. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the field inside it with an air core, and then with an iron core of relative permeability 400.",
+          "options": [
+            "1.5 mT and 0.60 T",
+            "3.8 mT and 1.5 T",
+            "3.8 mT and 3.8 mT",
+            "0.038 mT and 15 mT"
+          ],
+          "answerIndex": 1,
           "concept": "Field inside a solenoid, air-cored and with a core",
-          "why": "n = N/L = 800/0.40 = 2000 turns per metre (the length must be in metres). Air core: B = μ₀nI = (4π × 10⁻⁷)(2000)(1.5) = 3.77 × 10⁻³ T = 3.8 mT. With the core the field is multiplied by μᵣ: B = μᵣμ₀nI = 400 × 3.77 × 10⁻³ = 1.51 T.\n\nFinal answers: n = 2000 m⁻¹, B_air = 3.8 mT (accept 3.7 to 3.8 mT), B_iron = 1.5 T (accept 1.48 to 1.52 T). Using N = 800 in place of n gives 1.5 mT and is wrong; leaving the length as 40 gives n = 20 and is wrong by a factor of 100."
+          "why": "n = N/L = 800/0.40 = 2000 turns per metre, with the length in metres. Air core: B = μ₀nI = (4π × 10⁻⁷)(2000)(1.5) = 3.8 × 10⁻³ T. The core multiplies this by μᵣ: B = 400 × 3.77 × 10⁻³ = 1.5 T.\n\n1.5 mT and 0.60 T put N = 800 into the formula in place of n; 3.8 mT twice forgets that μᵣ multiplies the field; 0.038 mT and 15 mT leave the length as 40, making n a hundred times too small."
         },
         {
-          "type": "short",
-          "q": "A rectangular loop with sides a and b carries current I in a uniform field B, and its normal makes angle θ with B. Starting from the force F = BIL on each of the two sides of length a, derive τ = μB sin θ with μ = IA. Show your working.",
+          "type": "mcq",
+          "q": "A rectangular loop of sides a and b carries current I in a uniform field B, with the normal to the loop at angle θ to B. The two sides of length a are perpendicular to B and each feels a force BIa. What is the moment of the couple they form?",
+          "options": [
+            "(BIa)(b sin θ)",
+            "(BIa)(b cos θ)",
+            "(BIa)(b)",
+            "(BIa)(b sin θ)/2"
+          ],
+          "answerIndex": 0,
           "concept": "Deriving the torque on a current loop from the forces on its sides",
-          "why": "The two sides of length a carry current in opposite directions and are perpendicular to B, so each feels a force of magnitude F = BIa, the two forces being equal and opposite. They act along lines separated by the perpendicular distance b sin θ, where θ is the angle between the normal to the loop and B. A pair of equal and opposite forces with separation d produces a couple of moment Fd, so τ = (BIa)(b sin θ) = I(ab)B sin θ = IAB sin θ = μB sin θ, with μ = IA.\n\nA correct answer must state the force on each side (BIa), that they are equal and opposite so the net force is zero, identify the lever arm as b sin θ measured from the normal, and multiply to reach μB sin θ. Using b cos θ for the arm, which happens when θ is measured from the plane of the loop, is wrong."
+          "why": "The two forces are equal and opposite, so they form a couple, and the moment of a couple is the force times the perpendicular distance between the lines of action. With θ measured from the normal that distance is b sin θ, giving τ = (BIa)(b sin θ) = I(ab)B sin θ = μB sin θ with μ = IA.\n\nb cos θ measures the angle from the plane of the loop instead of from the normal; b alone is the separation only at θ = 90°; halving takes the moment of one force about the centre and forgets the other."
         },
         {
-          "type": "short",
-          "q": "A current loop placed in a uniform magnetic field turns but does not move as a whole. Explain, from the forces on its sides, why the net force is zero, and state what property a field must have to exert a net force on a dipole.",
+          "type": "mcq",
+          "q": "A current loop placed in a uniform magnetic field turns but does not move as a whole. Which statement about the forces on its sides is correct?",
+          "options": [
+            "Every side feels zero force, so both the net force and the torque vanish",
+            "Opposite sides feel equal forces in the same direction, which cancels the torque",
+            "Opposite sides feel equal and opposite forces on different lines of action, so ΣF = 0 but τ ≠ 0",
+            "The forces cancel only when the normal lies along B, and otherwise there is a net force"
+          ],
+          "answerIndex": 2,
           "concept": "Torque without net force in a uniform field",
-          "why": "In a uniform field each pair of opposite sides of the loop carries the same current in opposite directions through the same B, so the two forces F = IL × B on them are equal in magnitude and opposite in direction. Every such pair sums to zero, so the net force on the whole loop is zero. The forces do not act along the same line, however, so they form a couple and produce a torque that turns the loop towards alignment. To get a net force the field must be non-uniform: then the forces on opposite sides differ in size and no longer cancel, and the dipole is pulled towards the region of stronger field, which is what happens when a magnet attracts a nail.\n\nA correct answer says the opposite-side forces are equal and opposite (so ΣF = 0) but offset (so τ ≠ 0), and that a net force requires a field that varies from place to place."
+          "why": "Opposite sides carry current in opposite directions through the same B, so their forces I L × B are equal and opposite and every pair sums to zero. The pair does not act along one line, so it forms a couple and still turns the loop. A net force needs a non-uniform field, where the forces on the two sides differ in size, which is how a magnet pulls a nail.\n\nThe sides do feel forces, so zero force everywhere is wrong; forces in the same direction would give a net force and no torque; and the cancellation holds at every orientation, not only when the normal lies along B."
         }
       ]
     },
@@ -612,28 +668,56 @@
           "why": "What is hidden is the data of the object: no other programme can alter the balance without going through the permitted methods. That is data abstraction.\n\nFunctional abstraction hides how a method is implemented, leaving callers only its name and input and output formats; decomposition is breaking a project into functions; importing a module makes its names available and hides nothing."
         },
         {
-          "type": "short",
-          "q": "```c\nint area(int w, int h) { return w * h; }\nint perim(int w, int h) { return 2 * (w + h); }\nint main(void) {\n    int w = 3, h = 5;\n    int d = area(w + 1, h) - perim(w, h);\n    printf(\"%d\\n\", d);\n    return 0;\n}\n```\nTrace this: give the arguments each call receives, the value each call returns, and the output. Show your working.",
+          "type": "mcq",
+          "q": "What does this program print?\n\n```c\nint area(int w, int h) { return w * h; }\nint perim(int w, int h) { return 2 * (w + h); }\nint main(void) {\n    int w = 3, h = 5;\n    int d = area(w + 1, h) - perim(w, h);\n    printf(\"%d\\n\", d);\n    return 0;\n}\n```",
+          "options": [
+            "−1",
+            "9",
+            "4",
+            "2"
+          ],
+          "answerIndex": 2,
           "concept": "Tracing calls with arguments and return values",
-          "why": "The first argument to area is w + 1 = 4, the second is h = 5, so area(4, 5) returns 4 × 5 = 20. perim receives 3 and 5 and returns 2 × (3 + 5) = 16. Then d = 20 − 16 = 4 and the program prints 4.\n\nFinal answer: 4. A correct answer states area(4, 5) = 20, perim(3, 5) = 16, and the output 4. Using area(3, 5) = 15 (forgetting the + 1 in the argument) gives −1 and is wrong; 2 × 3 + 5 = 11 for perim ignores the brackets and is wrong."
+          "why": "The arguments are worked out before the call: area receives w + 1 = 4 and h = 5, so it returns 4 × 5 = 20; perim receives 3 and 5, so it returns 2 × 8 = 16. d = 20 − 16 = 4.\n\n−1 forgets the + 1 and uses area(3, 5) = 15; 9 drops the brackets in perim and computes 2 × 3 + 5 = 11; 2 passes w + 1 to perim as well, giving 2 × 9 = 18."
         },
         {
-          "type": "short",
-          "q": "For `double bmi(double mass, double height) { return mass / (height * height); }` name the return type, the function name, the parameters and the function body. Then write a declaration for it, and a call that stores the result for mass 70 and height 1.75 in a variable `b`. Give the value of b to 2 decimal places.",
-          "concept": "Naming the parts of a function and calling it",
-          "why": "Return type: `double`. Function name: `bmi`. Parameters: `double mass, double height`. Body: `{ return mass / (height * height); }`. Declaration: `double bmi(double mass, double height);` (parameter names may be omitted: `double bmi(double, double);`). Call: `double b = bmi(70, 1.75);`. Value: 1.75² = 3.0625 and 70 / 3.0625 = 22.857..., so b = 22.86.\n\nA correct answer names all four parts, writes the declaration with a semicolon and no body, passes the arguments in the order mass then height, and gives 22.86 (22.857 accepted). `bmi(1.75, 70)` binds the values to the wrong parameters and gives 0.000357, which is wrong."
+          "type": "mcq",
+          "q": "`double bmi(double mass, double height) { return mass / (height * height); }` What does `double b = bmi(70, 1.75);` store in b, to 2 decimal places?",
+          "options": [
+            "22.86",
+            "40.00",
+            "122.50",
+            "0.00"
+          ],
+          "answerIndex": 0,
+          "concept": "Calling a function with arguments in order",
+          "why": "Arguments bind to parameters by position, so mass is 70 and height is 1.75. height × height = 3.0625, and 70 / 3.0625 = 22.857..., which is 22.86 to two places.\n\n40.00 divides by the height once instead of squaring it; 122.50 multiplies by the height; 0.00 is bmi(1.75, 70), which binds the two values to the wrong parameters and gives 0.000357."
         },
         {
-          "type": "short",
-          "q": "A shop takes 15% off three prices, 100, 200 and 300, and prints the discounted total. Write two C functions, `withDiscount(price)` returning the price less 15% and `total3(a, b, c)` returning the sum of three values, and the statement in main that prints the total. State the number printed.",
-          "concept": "Decomposing a task into functions",
-          "why": "```c\ndouble withDiscount(double price) { return price * 0.85; }\ndouble total3(double a, double b, double c) { return a + b + c; }\n/* in main */\nprintf(\"%.2f\\n\", total3(withDiscount(100), withDiscount(200), withDiscount(300)));\n```\n\n100 × 0.85 = 85, 200 × 0.85 = 170, 300 × 0.85 = 255, and 85 + 170 + 255 = 510, so the program prints 510.00. A correct answer has withDiscount return price × 0.85 (or price − price × 0.15), total3 return a + b + c, calls withDiscount once per price, and states 510 (510.00 accepted). Returning price × 0.15 gives 90 and is the discount, not the discounted price; that is wrong."
+          "type": "mcq",
+          "q": "`withDiscount(p)` returns a price less 15% and `total3(a, b, c)` returns the sum of three values. What does `printf(\"%.2f\", total3(withDiscount(100), withDiscount(200), withDiscount(300)));` print?",
+          "options": [
+            "600.00",
+            "555.00",
+            "90.00",
+            "510.00"
+          ],
+          "answerIndex": 3,
+          "concept": "Reusing one function on several values",
+          "why": "withDiscount is applied to each price on its own: 100 × 0.85 = 85, 200 × 0.85 = 170 and 300 × 0.85 = 255. total3 adds the three results: 85 + 170 + 255 = 510, printed as 510.00.\n\n600.00 is the total with no discount at all; 555.00 takes a flat 15 off each price instead of 15 per cent; 90.00 returns the discount itself, 0.15 × p, rather than the discounted price."
         },
         {
-          "type": "short",
-          "q": "A tax formula is pasted twelve times in a program, once at each place it is needed, and then the tax rate changes. Using the two benefits of functions, explain what goes wrong with the pasted version and what the fix is.",
+          "type": "mcq",
+          "q": "A tax formula is pasted at twelve places in a program, and then the tax rate changes. Which statement names what a function would have given the team?",
+          "options": [
+            "The formula would run faster, because it is compiled only once.",
+            "The formula is written once and called twelve times, so one edit changes every use.",
+            "The rate would become a constant that no part of the program could change.",
+            "The compiler would compare the twelve copies and warn about any difference."
+          ],
+          "answerIndex": 1,
           "concept": "Why functions avoid duplicated code",
-          "why": "With twelve pasted copies the rate must be changed in twelve places, and any copy that is missed keeps the old rate, so the program silently gives two different answers. Functions avoid duplicating code: however many times a function is used, it is implemented only once. The fix is one function, say `double tax(double amount)`, called twelve times; the rate then lives on one line and one edit changes every use. The second benefit is scaling up: adding more places that need tax means adding calls, not copies, so the system stays stable as the program grows.\n\nA correct answer names duplication (implement once, call many times), says the rate is edited in one place, and mentions that callers only need the function's name and input and output formats, so changing the body breaks nothing else."
+          "why": "A function is implemented once however many times it is used, so the rate lives on one line: change it there and all twelve callers change with it. With pasted copies the same edit must be made twelve times, and any copy that is missed leaves the program quietly giving two different answers.\n\nCalling a function does not make the code faster, a function is not a constant, and a compiler never compares duplicated code for you."
         }
       ]
     },
@@ -750,28 +834,56 @@
           "why": "Choose u so that du is simpler and dv so that v is no worse: u = x gives du = dx, removing the x, and dv = sin(x) dx gives v = −cos(x). The leftover integral ∫−cos(x) dx is a table line, so one pass finishes it.\n\nu = sin(x), dv = x dx gives v = x²/2 and the leftover ∫(x²/2)cos(x) dx, where the power of x has gone up; u = x·sin(x), dv = dx leaves ∫x·(sin(x) + x·cos(x)) dx, worse than the start; u = 1, dv = x·sin(x) dx requires integrating the original problem to find v."
         },
         {
-          "type": "short",
-          "q": "Find ∫√(9 − 4x²) dx. Normalise the root to 3√(1 − (2x/3)²), substitute 2x/3 = sin(u), integrate cos²(u), and set back to x. Show your working.",
+          "type": "mcq",
+          "q": "Find ∫√(9 − 4x²) dx by normalising the root to 3√(1 − (2x/3)²) and substituting 2x/3 = sin(u).",
+          "options": [
+            "(9/2)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C",
+            "(9/4)sin⁻¹(3x/2) + (x/2)√(9 − 4x²) + C",
+            "(9/4)sin⁻¹(2x/3) − (x/2)√(9 − 4x²) + C",
+            "(9/4)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C"
+          ],
+          "answerIndex": 3,
           "concept": "Trigonometric substitution with a normalised root",
-          "why": "√(9 − 4x²) = 3√(1 − (2x/3)²). Let 2x/3 = sin(u), so dx = (3/2)cos(u) du and the root becomes 3cos(u). The integral is 3·(3/2)∫cos²(u) du = (9/2)(u/2 + sin(2u)/4) + C = 9u/4 + (9/8)sin(2u) + C. Set back: u = sin⁻¹(2x/3), and sin(2u) = 2sin(u)cos(u) = 2·(2x/3)·(√(9 − 4x²)/3) = 4x√(9 − 4x²)/9, so (9/8)sin(2u) = x√(9 − 4x²)/2.\n\nFinal answer: (9/4)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C. Also accepted: 9sin⁻¹(2x/3)/4 + x√(9 − 4x²)/2 + C, or the unsimplified 9u/4 + (9/8)sin(2u) + C with u = sin⁻¹(2x/3) stated. The working must show dx = (3/2)cos(u) du, the factor 9/2, and the double-angle identity. Using dx = (2/3)cos(u) du gives the wrong factor 2 and is wrong."
+          "why": "With 2x/3 = sin(u), dx = (3/2)cos(u) du and the root becomes 3cos(u), so the integral is (9/2)∫cos²(u) du = (9/2)(u/2 + sin(2u)/4) + C. Set back with u = sin⁻¹(2x/3) and sin(2u) = 2 sin(u) cos(u) = 4x√(9 − 4x²)/9, giving (9/4)sin⁻¹(2x/3) + (x/2)√(9 − 4x²) + C.\n\n9/2 uses dx = 3cos(u) du and doubles the first term; sin⁻¹(3x/2) inverts the ratio inside the arcsine; the minus sign comes from mishandling the double-angle term."
         },
         {
-          "type": "short",
-          "q": "Evaluate ∫₁ᵉ ln(x) dx. Show your working.",
+          "type": "mcq",
+          "q": "Evaluate ∫₁ᵉ ln(x) dx.",
+          "options": [
+            "e − 1",
+            "0",
+            "1",
+            "−1"
+          ],
+          "answerIndex": 2,
           "concept": "Definite integral of a logarithm",
-          "why": "From the table (or parts with u = ln(x), dv = dx), ∫ln(x) dx = x·ln(x) − x. Evaluate: at x = e, e·ln(e) − e = e − e = 0; at x = 1, 1·ln(1) − 1 = 0 − 1 = −1. So ∫₁ᵉ ln(x) dx = 0 − (−1) = 1.\n\nFinal answer: 1. The working must state the antiderivative x·ln(x) − x, use ln(e) = 1 and ln(1) = 0, and subtract the lower-limit value −1. Getting −1 (forgetting to subtract) or e − 1 (using only x·ln(x)) is wrong."
+          "why": "An antiderivative is x·ln(x) − x. At x = e: e·ln(e) − e = e − e = 0. At x = 1: 1·ln(1) − 1 = 0 − 1 = −1. So the integral is 0 − (−1) = 1.\n\ne − 1 uses only x·ln(x) and drops the −x; 0 comes from taking ln(1) = 1 at the lower limit; −1 forgets to subtract the lower value and reports it instead."
         },
         {
-          "type": "short",
-          "q": "Find ∫x·e^(−x²) dx by substitution. State u, du, and how the factor x dx is replaced. Show your working.",
+          "type": "mcq",
+          "q": "Find ∫x·e^(−x²) dx by substitution.",
+          "options": [
+            "(x²/2)e^(−x²) + C",
+            "−(1/2)e^(−x²) + C",
+            "(1/2)e^(−x²) + C",
+            "−2e^(−x²) + C"
+          ],
+          "answerIndex": 1,
           "concept": "Substitution when du needs a constant adjusted",
-          "why": "Let u = −x², so du = −2x dx and x dx = −du/2. Then ∫x·e^(−x²) dx = ∫eᵘ·(−1/2) du = −(1/2)eᵘ + C = −(1/2)e^(−x²) + C. Check: d/dx [−(1/2)e^(−x²)] = −(1/2)·e^(−x²)·(−2x) = x·e^(−x²).\n\nFinal answer: −(1/2)e^(−x²) + C. Also accepted: −e^(−x²)/2 + C, or the same result reached with u = x² (du = 2x dx, giving −(1/2)e^(−u)). The working must name u, show du and the factor −1/2, and set back to x. Leaving the answer in u, or writing e^(−x²) + C without the −1/2, is wrong."
+          "why": "Let u = −x², so du = −2x dx and the factor x dx is replaced by −du/2. Then the integral is −(1/2)∫eᵘ du = −(1/2)e^(−x²) + C. Check: d/dx [−(1/2)e^(−x²)] = −(1/2)e^(−x²)(−2x) = x·e^(−x²).\n\n(1/2)e^(−x²) + C loses the minus sign from du; −2e^(−x²) + C multiplies by −2 instead of dividing; (x²/2)e^(−x²) + C integrates the x factor on its own, which the product forbids."
         },
         {
-          "type": "short",
-          "q": "Explain why ∫x·eˣ dx cannot be done by substitution and needs integration by parts, and state the parts formula you would use.",
+          "type": "mcq",
+          "q": "The substitution u = x² works for ∫2x·e^(x²) dx but no substitution works for ∫x·eˣ dx. What is the reason?",
+          "options": [
+            "In x·eˣ the factor x is not the derivative of the exponent x, so no u collapses the integral",
+            "eˣ has no elementary antiderivative, while e^(x²) does",
+            "Only powers of x may be substituted, and x² is a power while x is not",
+            "A product of two functions can never be integrated by substitution"
+          ],
+          "answerIndex": 0,
           "concept": "Recognising when substitution fails and parts is needed",
-          "why": "Substitution needs an inner function whose derivative is present as a factor: ∫f′(g(x))·g′(x) dx = f(g(x)) + C. In x·eˣ the only inner function is x itself, whose derivative is 1, and the factor x is not the derivative of anything inside the exponential, so no u makes the integral collapse to ∫f′(u) du. The integrand is a product of two unrelated factors, which is the signal for parts: ∫u dv = uv − ∫v du, with u = x and dv = eˣ dx, giving x·eˣ − eˣ + C.\n\nA correct answer says the derivative of the inner function is not present, states ∫u dv = uv − ∫v du, and chooses u = x, dv = eˣ dx. Contrast with 2x·e^(x²), where 2x is the derivative of the exponent and substitution works."
+          "why": "Substitution undoes the chain rule: it needs ∫f′(g(x))·g′(x) dx, so the derivative of the inner function must already sit there as a factor. In 2x·e^(x²) the exponent is x² and its derivative 2x is present. In x·eˣ the exponent is x, whose derivative is 1, and the spare x is not the derivative of anything inside, so parts is required: ∫u dv = uv − ∫v du with u = x and dv = eˣ dx gives x·eˣ − eˣ + C.\n\neˣ integrates to itself, so the second option is false; the third invents a rule about powers; the fourth is contradicted by 2x·e^(x²) itself."
         }
       ]
     },
@@ -887,28 +999,56 @@
           "why": "Work = ∫τ dθ, and τ = μB sin θ is not constant: it starts at zero and only reaches μB at the end. Integrating gives μB(1 − cos 90°) = μB, which is exactly ΔU = U(90°) − U(0°) = 0 − (−μB). Multiplying the maximum torque by the angle assumes the torque was at its peak throughout.\n\nUsing degrees would make the error worse, not fix it; the torque being zero at 0° (not 90°) does not make the total work zero; 2μB is the work for a full flip to 180°, not for a quarter turn."
         },
         {
-          "type": "short",
-          "q": "A dipole of moment 0.50 A·m² is in a uniform field of 0.30 T. Calculate the work an external agent must do to turn it from θ = 0° to θ = 60°, and then from 60° to 180°, and check that the two add to 2μB. Show your working.",
+          "type": "mcq",
+          "q": "A dipole of moment 0.50 A·m² sits in a uniform field of 0.30 T. Calculate the work an external agent must do to turn it from θ = 60° to θ = 180°.",
+          "options": [
+            "0.075 J",
+            "0.300 J",
+            "0.225 J",
+            "0.314 J"
+          ],
+          "answerIndex": 2,
           "concept": "Work to rotate a dipole from the change in potential energy",
-          "why": "μB = (0.50)(0.30) = 0.15 J and U = −μB cos θ. W = ΔU = μB(cos θ₁ − cos θ₂). First stage: W₁ = 0.15(cos 0° − cos 60°) = 0.15(1 − 0.500) = 0.075 J. Second stage: W₂ = 0.15(cos 60° − cos 180°) = 0.15(0.500 + 1) = 0.225 J. Sum: 0.075 + 0.225 = 0.300 J = 2μB = 2(0.15) J, the work for a full flip.\n\nFinal answers: W₁ = 0.075 J, W₂ = 0.225 J, total 0.30 J (accept each within 0.003 J). The working must use U = −μB cos θ at the two angles, not torque times angle. Getting W₂ = 0.075 J by symmetry is wrong: the second stage passes through the 90° position where the torque is largest and covers more energy."
+          "why": "The work is the change in potential energy, with U = −μB cos θ: W = μB(cos θ₁ − cos θ₂) = (0.50)(0.30)(cos 60° − cos 180°) = 0.15(0.500 + 1) = 0.225 J.\n\n0.075 J is the work for the earlier stage 0° to 60° and assumes a symmetry that does not exist; 0.300 J = 2μB is the whole flip from 0° to 180°; 0.314 J is τ_max times the angle 2π/3 in radians, which fails because the torque varies through the turn."
         },
         {
-          "type": "short",
-          "q": "An electromagnet is a solenoid of 1200 turns over 30 cm on an iron core of relative permeability 400. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the current needed for an interior field of 0.80 T, and the field the same current would give with no core. Show your working.",
+          "type": "mcq",
+          "q": "An electromagnet is a solenoid of 1200 turns over 30 cm on an iron core of relative permeability 400. Take μ₀ = 4π × 10⁻⁷ T·m/A. Calculate the current needed for an interior field of 0.80 T.",
+          "options": [
+            "1.3 A",
+            "0.40 A",
+            "159 A",
+            "40 A"
+          ],
+          "answerIndex": 1,
           "concept": "Solenoid with a core rearranged for the current",
-          "why": "n = N/L = 1200/0.30 = 4000 turns per metre. With the core B = μᵣμ₀nI, so I = B/(μᵣμ₀n) = 0.80/[(400)(4π × 10⁻⁷)(4000)] = 0.80/2.01 = 0.40 A. Without the core the same current gives B = μ₀nI = (4π × 10⁻⁷)(4000)(0.40) = 2.0 × 10⁻³ T, that is, 400 times smaller, which is the whole point of the iron.\n\nFinal answers: I = 0.40 A (accept 0.39 to 0.41 A), B_air = 2.0 mT (accept 1.9 to 2.1 mT). Forgetting μᵣ gives 159 A, an impossible current for the wire; using N = 1200 in place of n gives 1.3 A; leaving the length as 30 gives n = 40 and I = 40 A. All three are wrong."
+          "why": "n = N/L = 1200/0.30 = 4000 turns per metre, and B = μᵣμ₀nI, so I = B/(μᵣμ₀n) = 0.80/[(400)(4π × 10⁻⁷)(4000)] = 0.80/2.01 = 0.40 A. Without the core the same current would give only 2.0 mT, which is the point of the iron.\n\n159 A leaves μᵣ out, and no ordinary winding would carry it; 1.3 A puts N = 1200 into the formula in place of n; 40 A leaves the length as 30 instead of 0.30 m."
         },
         {
-          "type": "short",
-          "q": "A circular coil of 25 turns and diameter 8.0 cm carries 1.5 A in a uniform field of 0.60 T. Calculate its dipole moment, the maximum torque on it, and its potential energy when the normal is at 45° to B. Show your working.",
-          "concept": "Dipole moment, torque and energy of a circular coil",
-          "why": "The radius is half the diameter: r = 4.0 cm = 0.040 m, so A = πr² = π(0.040)² = 5.03 × 10⁻³ m². μ = NIA = (25)(1.5)(5.03 × 10⁻³) = 0.189 A·m². Maximum torque, with the plane of the coil containing B: τ_max = μB = (0.189)(0.60) = 0.113 N·m. At 45°: U = −μB cos 45° = −(0.113)(0.707) = −0.080 J.\n\nFinal answers: μ = 0.19 A·m² (accept 0.185 to 0.192), τ_max = 0.11 N·m (accept 0.111 to 0.115), U = −0.080 J (accept −0.078 to −0.082). Using the diameter as the radius gives μ = 0.75 A·m², four times too big, and is wrong; a positive U at 45° has the sign dropped."
+          "type": "mcq",
+          "q": "A circular coil of 25 turns and diameter 8.0 cm carries 1.5 A in a uniform field of 0.60 T. Calculate its magnetic dipole moment and its potential energy when the normal is at 45° to B.",
+          "options": [
+            "0.19 A·m², −0.080 J",
+            "0.75 A·m², −0.32 J",
+            "0.19 A·m², +0.080 J",
+            "0.19 A·m², −0.11 J"
+          ],
+          "answerIndex": 0,
+          "concept": "Dipole moment and potential energy of a circular coil",
+          "why": "The radius is half the diameter: r = 0.040 m, so A = πr² = 5.03 × 10⁻³ m² and μ = NIA = (25)(1.5)(5.03 × 10⁻³) = 0.19 A·m². Then U = −μB cos 45° = −(0.19)(0.60)(0.707) = −0.080 J.\n\n0.75 A·m² uses the diameter as the radius, four times too much area; +0.080 J drops the minus sign in U = −μB cos θ; −0.11 J is −μB with cos 45° forgotten, which is the energy at θ = 0°."
         },
         {
-          "type": "short",
-          "q": "The magnetic moment of an electron is written M = g(−eL/2m). Explain what the minus sign tells you about the direction of M relative to L, why it arises, and what the factor g represents.",
+          "type": "mcq",
+          "q": "The magnetic moment of an electron is written M = g(−eL/2m), where L is its angular momentum. What do the minus sign and the factor g mean?",
+          "options": [
+            "M is parallel to L, and the minus sign comes from U = −μ·B; g is measured in rad/s per tesla",
+            "M is antiparallel to L because g is negative; g carries units of A·m² per J·s",
+            "M is antiparallel to L because the electron's charge is negative; g is dimensionless, near 1 for orbit and 2 for spin",
+            "M is antiparallel to L because the electron orbits clockwise; g is the ratio of spin moment to orbital moment"
+          ],
+          "answerIndex": 2,
           "concept": "Meaning of the sign and g-factor in the electron moment",
-          "why": "The minus sign says M is antiparallel to L: the moment points opposite to the angular momentum. It arises because the electron's charge is negative, so the conventional current circulates the opposite way to the electron's motion, and μ = IA therefore points the opposite way to L = mvr. The factor g is the g-factor, a dimensionless number that scales the naive classical value eL/2m to the measured moment: g ≈ 1 for orbital motion and g ≈ 2 for electron spin.\n\nA correct answer states antiparallel, attributes it to the negative charge (not to g being negative and not to the minus in U = −μ·B), and describes g as a dimensionless correction of about 1 (orbital) or 2 (spin)."
+          "why": "A negative charge circulating one way is a conventional current going the other way, so μ = IA points opposite to L = mvr: M is antiparallel to L, and that is what the minus sign records. The factor g is a dimensionless number scaling the classical value eL/2m to the measured moment, close to 1 for orbital motion and close to 2 for electron spin.\n\nThe minus sign has nothing to do with U = −μ·B, g is neither negative nor carries units, and g is not a ratio of the spin moment to the orbital one."
         }
       ]
     },
@@ -1024,28 +1164,56 @@
           "why": "All C programmes have `main()` as the entry-point function; execution starts there regardless of where it appears on the page.\n\n`printf()` is a library function that main may call; the first function in the file is often a helper defined above main so that main can call it; `#include` is a directive that brings in a header file, not a function."
         },
         {
-          "type": "short",
-          "q": "Write a C function `average3` that takes three `double` values and returns their mean, a declaration for it that could sit above main, and a main that prints the average of 70, 85 and 90 with `%.2f`. State what is printed.",
+          "type": "mcq",
+          "q": "`printf(\"%.2f\", average3(70, 85, 90));` must print 81.67. Which body for `double average3(double a, double b, double c)` does that?",
+          "options": [
+            "`return a + b + c / 3;`",
+            "`return (a + b + c) / 3;`",
+            "`return a + (b + c) / 3;`",
+            "`return a + b + c;`"
+          ],
+          "answerIndex": 1,
           "concept": "Writing a function that returns a value",
-          "why": "```c\ndouble average3(double a, double b, double c);   /* declaration */\n\nint main(void) {\n    printf(\"%.2f\\n\", average3(70, 85, 90));\n    return 0;\n}\n\ndouble average3(double a, double b, double c) { return (a + b + c) / 3; }\n```\n\n(70 + 85 + 90) / 3 = 245 / 3 = 81.666..., printed as 81.67. A correct answer has return type double, three double parameters, a return of the sum divided by 3, a declaration ending in a semicolon with no body, a call with the three arguments, and the output 81.67. A void function that prints inside itself does not return the mean and is wrong; `a + b + c / 3` divides only c and gives 185.00, which is wrong."
+          "why": "The three values must be added before the division, which needs brackets: (70 + 85 + 90) / 3 = 245 / 3 = 81.666..., printed as 81.67.\n\nWithout brackets `/` binds tighter than `+`, so `a + b + c / 3` divides only c and prints 185.00; `a + (b + c) / 3` divides only the last two and prints 128.33; `a + b + c` never divides and prints 245.00."
         },
         {
-          "type": "short",
-          "q": "```c\nvoid dbl(int n) { n = n * 2; }\nint main(void) {\n    int x = 4;\n    dbl(x);\n    printf(\"%d\\n\", x);\n    return 0;\n}\n```\nThis prints 4. Explain why x is unchanged, then rewrite dbl and its call so that main prints 8. Show your working.",
+          "type": "mcq",
+          "q": "```c\nvoid dbl(int n) { n = n * 2; }\nint main(void) {\n    int x = 4;\n    dbl(x);\n    printf(\"%d\\n\", x);\n    return 0;\n}\n```\nThis prints 4. Which change makes it print 8?",
+          "options": [
+            "Rename the parameter: `void dbl(int x) { x = x * 2; }`",
+            "Call it twice: `dbl(x); dbl(x);`",
+            "Make x a global variable and leave dbl as it is.",
+            "`int dbl(int n) { return n * 2; }` with the call `x = dbl(x);`"
+          ],
+          "answerIndex": 3,
           "concept": "Fixing a pass-by-value fault with a return value",
-          "why": "A parameter receives a copy of the argument. Inside dbl, n is a local copy of 4; `n = n * 2` makes that copy 8, and when dbl returns the copy is discarded. x in main was never touched, and dbl is void, so it hands nothing back either.\n\nFix: `int dbl(int n) { return n * 2; }` and in main `x = dbl(x);` (or `printf(\"%d\\n\", dbl(x));`). Now dbl(4) returns 8 and main prints 8. A correct answer says the parameter is a copy, gives dbl a non-void return type with `return n * 2;`, and stores or prints the returned value. Keeping the function void and calling it twice, or renaming n to x, changes nothing and is wrong."
+          "why": "A parameter holds a copy of the argument, so `n = n * 2` doubles the copy and main's x is never touched. The fix is to hand the new value back: give dbl a return type with `return n * 2;` and store what it returns, `x = dbl(x);`.\n\nRenaming the parameter changes nothing, since it is still a copy; calling a void function twice doubles nothing twice; and a global x is still not what dbl assigns to, because it assigns to its own parameter."
         },
         {
-          "type": "short",
-          "q": "```c\nint calls = 0;\nint step(int n) { calls = calls + 1; return n + calls; }\nint main(void) {\n    int v = step(10);\n    v = step(v);\n    v = step(v);\n    printf(\"%d %d\\n\", v, calls);\n    return 0;\n}\n```\nTrace this, giving the value of `calls` and the value returned at each call, and the output. Show your working.",
+          "type": "mcq",
+          "q": "What does this print?\n\n```c\nint calls = 0;\nint step(int n) { calls = calls + 1; return n + calls; }\nint main(void) {\n    int v = step(10);\n    v = step(v);\n    v = step(v);\n    printf(\"%d %d\\n\", v, calls);\n    return 0;\n}\n```",
+          "options": [
+            "16 3",
+            "13 3",
+            "16 1",
+            "13 1"
+          ],
+          "answerIndex": 0,
           "concept": "Tracing a function that changes a global",
-          "why": "`calls` is global, so every call sees and changes the same variable. First call, step(10): calls becomes 1, returns 10 + 1 = 11, so v = 11. Second call, step(11): calls becomes 2, returns 11 + 2 = 13, v = 13. Third call, step(13): calls becomes 3, returns 13 + 3 = 16, v = 16. The program prints 16 3.\n\nFinal answer: 16 3. A correct answer shows calls going 1, 2, 3 and the returns 11, 13, 16. Treating calls as a local that restarts at 0 gives 13 (11, 12, 13) and calls = 1, which is wrong; 33 1 (adding 1 each time to a fixed 10) is also wrong."
+          "why": "`calls` is global, so all three calls see and change the same variable. step(10): calls becomes 1 and it returns 11. step(11): calls becomes 2 and it returns 13. step(13): calls becomes 3 and it returns 16. Output: 16 3.\n\n13 3 adds a fixed 1 each time instead of the growing `calls`; 16 1 has the right value but treats calls as if it restarted at 0 in every call; 13 1 makes both mistakes."
         },
         {
-          "type": "short",
-          "q": "`#include <stdio.h>` lets a program call `printf` although the program contains none of the code for it. Explain what the header file supplies, what the caller needs to know to use printf, and which type of abstraction this is.",
-          "concept": "Header files as abstraction",
-          "why": "The header file supplies the declarations of the library's functions: for printf, its name, its return type and its parameters. The body of printf is compiled elsewhere and is never seen. To use it the caller needs only the method's name, the format of the input and the format of the output, which is exactly what a declaration gives. Hiding how a method is implemented while exposing its name and input and output formats is functional abstraction.\n\nA correct answer says the header carries declarations (not bodies), lists name, input format and output format as all the caller needs, and names functional abstraction. Calling it data abstraction is wrong: nothing about printf's data is being protected, its implementation is being hidden."
+          "type": "mcq",
+          "q": "`#include <stdio.h>` lets a program call `printf` although the program contains none of printf's code. What does the header file supply?",
+          "options": [
+            "The full source code of printf.",
+            "The compiled machine code of printf.",
+            "Declarations: printf's name, return type and parameters.",
+            "A copy of printf renamed for this program."
+          ],
+          "answerIndex": 2,
+          "concept": "What a header file supplies",
+          "why": "A header carries declarations, not bodies: the name, the return type and the parameters of each library function. That is all the compiler needs to check a call and all the caller needs to know, while printf's body is compiled elsewhere and joined on afterwards.\n\nNeither the source nor the machine code of printf is pulled in by the header, and nothing is copied or renamed for the program."
         }
       ],
       "slot": "fast"

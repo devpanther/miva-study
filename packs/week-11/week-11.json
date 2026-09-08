@@ -329,28 +329,56 @@
           "why": "For discs and washers the slices are perpendicular to the axis of revolution and the integral runs along it. Revolving about the y-axis means the discs are stacked in y, so the integral is dy and each radius must be a distance measured horizontally, which needs the curves in the form x = f(y). For example x = y² + 1 or x = 3.\n\ndx with y = f(x) is the set-up for the x-axis; the other two mix a variable of integration with curves written in the wrong form, so the radius would not be a function of the integration variable."
         },
         {
-          "type": "short",
-          "q": "The region under y = √x, above the x-axis, from x = 1 to x = 3 is revolved about the x-axis. Find the volume. Show your working.",
+          "type": "mcq",
+          "q": "The region under y = √x, above the x-axis, from x = 1 to x = 3 is revolved about the x-axis. Find the volume.",
+          "options": [
+            "9π/2",
+            "8π",
+            "(2/3)(3√3 − 1)π",
+            "4π"
+          ],
+          "answerIndex": 3,
           "concept": "Disc method with a square-root radius",
-          "why": "The axis is the x-axis, so R(x) = √x with a = 1, b = 3. Squaring removes the root: [√x]² = x. V = π∫₁³(√x)²dx = π∫₁³x dx = π[x²/2]₁³ = π(9/2 − 1/2) = 4π.\n\nFinal answer: 4π cubic units (also accepted: 12.57). The working must show the radius squared to x and the bracket evaluated at both limits. Integrating √x without squaring gives (2/3)(3√3 − 1)π and is wrong; π(9/2) = 9π/2 forgets the lower limit."
+          "why": "The axis is the x-axis, so R(x) = √x and V = π∫₁³(√x)²dx. Squaring removes the root: V = π∫₁³x dx = π[x²/2]₁³ = π(9/2 − 1/2) = 4π cubic units.\n\n9π/2 evaluates at the upper limit only; 8π uses [x²] without dividing by 2; (2/3)(3√3 − 1)π integrates √x without squaring the radius first."
         },
         {
-          "type": "short",
-          "q": "The region bounded by x = y², the line x = 1 and the x-axis (with y ≥ 0) is revolved about the y-axis. Find the volume. Show your working.",
+          "type": "mcq",
+          "q": "The region bounded by x = y², the line x = 1 and the x-axis (with y ≥ 0) is revolved about the y-axis. Find the volume.",
+          "options": [
+            "4π/5",
+            "8π/15",
+            "2π/3",
+            "π/5"
+          ],
+          "answerIndex": 0,
           "concept": "Washer method in y about the y-axis",
-          "why": "The axis is the y-axis, so integrate in y. At height y the region runs from the parabola x = y² out to the line x = 1, so the far boundary gives R(y) = 1 (constant) and the near boundary gives r(y) = y². The curves meet where y² = 1, so y runs from 0 to 1. V = π∫₀¹[1² − (y²)²]dy = π∫₀¹(1 − y⁴)dy = π[y − y⁵/5]₀¹ = π(1 − 1/5) = 4π/5.\n\nFinal answer: 4π/5 cubic units (also accepted: 0.8π or 2.51). A correct answer identifies R = 1, r = y², limits 0 to 1, and subtracts the squares. π∫(1 − y²)²dy = 8π/15 uses (R − r)² and is wrong; π∫₀¹(1 − y²)dy = 2π/3 forgets to square r."
+          "why": "Revolving about the y-axis means integrating in y. At height y the region runs from the parabola x = y² out to the line x = 1, so R(y) = 1 and r(y) = y², and y runs from 0 to 1. V = π∫₀¹[1² − (y²)²]dy = π[y − y⁵/5]₀¹ = 4π/5 cubic units.\n\n8π/15 squares the difference, π∫(1 − y²)²dy, instead of subtracting squares; 2π/3 forgets to square the inner radius; π/5 keeps the inner radius only."
         },
         {
-          "type": "short",
-          "q": "The region under y = x³, above the x-axis, from x = 0 to x = 1 is revolved about the y-axis. Use the shell method to find the volume. Show your working.",
+          "type": "mcq",
+          "q": "The region under y = x³, above the x-axis, from x = 0 to x = 1 is revolved about the y-axis. Use the shell method to find the volume.",
+          "options": [
+            "π/5",
+            "2π/5",
+            "π/2",
+            "π/4"
+          ],
+          "answerIndex": 1,
           "concept": "Shell method for a region under a curve",
-          "why": "A vertical strip at position x has radius x (its distance from the y-axis) and height f(x) = x³. V = 2π∫₀¹x·x³dx = 2π∫₀¹x⁴dx = 2π[x⁵/5]₀¹ = 2π/5.\n\nFinal answer: 2π/5 cubic units (also accepted: 0.4π or 1.26). The working must show the integrand x·f(x) = x⁴, the coefficient 2π and the evaluation at 1. π/5 uses π instead of 2π; 2π∫₀¹x³dx = π/2 forgets the radius x; 2π∫₀¹x·x⁶dx squares the height, which the shell formula never does."
+          "why": "A vertical strip at position x has radius x, its distance from the y-axis, and height f(x) = x³. So V = 2π∫₀¹x·x³dx = 2π∫₀¹x⁴dx = 2π[x⁵/5]₀¹ = 2π/5 cubic units.\n\nπ/5 uses π instead of 2π; π/2 leaves out the radius factor x; π/4 squares the height, which the shell formula never does."
         },
         {
-          "type": "short",
-          "q": "In the washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx and the shell formula V = 2π∫ₐᵇ x f(x)dx, state what each of R(x), r(x), x and f(x) measures, and explain why one formula carries π and the other 2π.",
-          "concept": "Meaning of the radii and heights in the volume formulas",
-          "why": "R(x) is the outer radius: the distance from the axis of revolution to the boundary farther from it. r(x) is the inner radius: the distance from the axis to the nearer boundary. In the shell formula x is the radius of the shell, its distance from the axis of revolution, and f(x) is the height of the vertical strip that sweeps out the shell. The π in the washer formula comes from the area of a circular cross-section, πR² − πr² for an annulus, which is then integrated along the axis. The 2π in the shell formula comes from unrolling the cylindrical shell into a rectangle of length 2π × radius (the circumference) and height f(x), so the integrand is circumference × height with no square anywhere.\n\nA correct answer names outer radius, inner radius, shell radius and strip height, and links π to the area of a circle and 2π to the circumference."
+          "type": "mcq",
+          "q": "The washer formula V = π∫ₐᵇ([R(x)]² − [r(x)]²)dx carries π and the shell formula V = 2π∫ₐᵇ x·f(x)dx carries 2π. Where do those two factors come from?",
+          "options": [
+            "π from a half turn of the region, 2π from a full turn",
+            "π because a washer squares its radii, 2π because a shell does not",
+            "π from the area of a circular cross-section, 2π from the circumference of the unrolled shell",
+            "π from the area of a circle, 2π because a shell has an inner and an outer surface"
+          ],
+          "answerIndex": 2,
+          "concept": "Where π and 2π come from in the volume formulas",
+          "why": "A washer is a flat annular slice, and its area is πR² − πr², so the π is the π of the area of a circle and the slices are stacked along the axis. A shell is a thin cylinder that unrolls into a rectangle whose length is the circumference 2π times the radius x and whose height is f(x), so the integrand is circumference times height and no square appears.\n\nBoth solids are made by one full revolution, so the first option is false; the second describes the squares but not their source; the fourth invents a second surface that the formula never counts."
         }
       ]
     },
@@ -466,28 +494,56 @@
           "why": "The magnet's field threads the coil, so the flux is large. But ε = −N dΦ/dt depends on the rate of change of flux, and a stationary magnet gives a constant flux, so the emf is zero. Faraday's conclusion: the existence of flux is not sufficient; the flux must be changing.\n\n'Large flux, large emf' mistakes flux for its rate of change; 'zero flux' is wrong because a magnet inside a coil certainly threads it with field lines; the zero emf is right but the reason offered is wrong."
         },
         {
-          "type": "short",
-          "q": "A flexible loop of 5 turns lies with its normal parallel to a uniform field of 0.60 T. The loop is squeezed so that its area shrinks at a steady 0.020 m²/s. Calculate the induced emf. State the emf if instead the loop is held rigid while the field is kept steady at 1.2 T. Show your working.",
+          "type": "mcq",
+          "q": "A flexible loop of 5 turns lies with its normal parallel to a uniform field of 0.60 T and is squeezed so that its area shrinks steadily at 0.020 m²/s. Calculate the induced emf, and then the emf if the loop is instead held rigid in a steady field of 1.2 T.",
+          "options": [
+            "0.012 V, then 0 V",
+            "0 V, then 0.12 V",
+            "0.060 V, then 0 V",
+            "0.060 V, then 0.12 V"
+          ],
+          "answerIndex": 2,
           "concept": "Emf from a changing area",
-          "why": "With B and θ fixed, Φ = BA and dΦ/dt = B dA/dt. So ε = N B dA/dt = (5)(0.60)(0.020) = 0.060 V. If the loop is rigid and B is steady, nothing in Φ = BA cos θ changes, so ε = 0, however large the field.\n\nFinal answer: 0.060 V (accept 0.058 to 0.062), and 0 V for the rigid loop in a steady field. A correct answer uses the rate of change of area, multiplies by N and B, and says that a steady flux induces nothing. 0.012 V forgot N; 0.12 V for the second part treats the larger field as if it were a change."
+          "why": "With B and θ fixed, Φ = BA and dΦ/dt = B dA/dt, so ε = N B dA/dt = (5)(0.60)(0.020) = 0.060 V. A rigid loop in a steady field has nothing in Φ = BA cos θ changing, so ε = 0 however strong the field.\n\n0.012 V leaves out the 5 turns; 0.12 V treats the steady 1.2 T as though it were a rate of change; and 0 V for the first part misses that a shrinking area changes the flux just as a changing field does."
         },
         {
-          "type": "short",
-          "q": "The flux through each turn of a 20-turn coil varies with time as Φ = 0.30t² Wb, with t in seconds. Calculate the induced emf at t = 2.0 s, and find the time at which the emf is 6.0 V. Show your working.",
+          "type": "mcq",
+          "q": "The flux through each turn of a 20-turn coil varies with time as Φ = 0.30t² Wb, with t in seconds. Calculate the induced emf at t = 2.0 s, and the time at which the emf is 6.0 V.",
+          "options": [
+            "24 V; t = 0.50 s",
+            "24 V; t = 1.0 s",
+            "12 V; t = 1.0 s",
+            "1.2 V; t = 10 s"
+          ],
+          "answerIndex": 0,
           "concept": "Instantaneous emf from a time-dependent flux",
-          "why": "Differentiate: dΦ/dt = 0.60t Wb/s, so |ε| = N dΦ/dt = 20 × 0.60t = 12t volts. At t = 2.0 s: ε = 12 × 2.0 = 24 V. For ε = 6.0 V: 12t = 6.0, so t = 0.50 s.\n\nFinal answer: 24 V at t = 2.0 s (accept 23.5 to 24.5) and t = 0.50 s. A correct answer differentiates before substituting and multiplies by N. 1.2 V at t = 2.0 s is Φ itself (0.30 × 4) with no differentiation; 1.2 V or 2.4 V forgets N; substituting t = 6 gives nonsense."
+          "why": "Differentiate before substituting: dΦ/dt = 0.60t, so |ε| = N dΦ/dt = 20(0.60t) = 12t volts. At t = 2.0 s that gives 24 V, and setting 12t = 6.0 gives t = 0.50 s.\n\nt = 1.0 s alongside 24 V comes from solving N Φ = 6.0 without differentiating; 12 V with t = 1.0 s loses the factor 2 from the power rule; 1.2 V with t = 10 s leaves out the 20 turns."
         },
         {
-          "type": "short",
-          "q": "An 80-turn coil of area 5.0 × 10⁻³ m² sits face-on to a uniform field of 0.25 T, so that its normal is along the field. It is turned through 90° in 0.10 s so that its plane now contains the field. Calculate the average emf induced. Show your working.",
+          "type": "mcq",
+          "q": "An 80-turn coil of area 5.0 × 10⁻³ m² sits with its normal along a uniform field of 0.25 T. It is turned through 90° in 0.10 s, so that its plane then contains the field. Calculate the average emf induced.",
+          "options": [
+            "0.0125 V",
+            "1.0 V",
+            "2.0 V",
+            "0 V"
+          ],
+          "answerIndex": 1,
           "concept": "Average emf from turning a coil through a right angle",
-          "why": "Initial flux per turn: Φ₁ = BA cos 0° = (0.25)(5.0 × 10⁻³) = 1.25 × 10⁻³ Wb. Final flux: Φ₂ = BA cos 90° = 0. So |ΔΦ| = 1.25 × 10⁻³ Wb and ε_av = N |ΔΦ|/Δt = (80)(1.25 × 10⁻³)/(0.10) = 0.10/0.10 = 1.0 V.\n\nFinal answer: 1.0 V (accept 0.98 to 1.02). A correct answer states the initial flux BA, the final flux zero, and divides N ΔΦ by 0.10 s; it may note that this is an average, since the flux does not fall uniformly. 0.0125 V forgot N; 2.0 V used a flux change of 2BA, which is a full flip through 180°, not a quarter turn."
+          "why": "Φ₁ = BA cos 0° = (0.25)(5.0 × 10⁻³) = 1.25 × 10⁻³ Wb per turn, and Φ₂ = BA cos 90° = 0, so ε = N|ΔΦ|/Δt = (80)(1.25 × 10⁻³)/0.10 = 1.0 V. This is an average, since the flux does not fall at a uniform rate.\n\n0.0125 V forgets the 80 turns; 2.0 V uses ΔΦ = 2BA, which belongs to a full 180° flip, not a quarter turn; 0 V writes the final flux as BA sin 90°, so that nothing appears to change."
         },
         {
-          "type": "short",
-          "q": "A bar magnet is pushed north-pole-first into a coil connected to a centre-zero galvanometer, held still inside for a moment, then pulled out again. Describe what the galvanometer shows during each of the three stages and explain each reading using Faraday's law and Lenz's law.",
+          "type": "mcq",
+          "q": "A bar magnet is pushed north-pole-first into a coil joined to a centre-zero galvanometer, held still inside for a moment, then pulled out again. What does the galvanometer show in the three stages?",
+          "options": [
+            "A deflection, then the same deflection held, then zero",
+            "A deflection, then zero, then the same deflection again",
+            "A steady deflection throughout, since flux threads the coil at all three stages",
+            "A deflection one way, then zero, then a deflection the other way"
+          ],
+          "answerIndex": 3,
           "concept": "Faraday's magnet-and-coil experiment explained",
-          "why": "Stage 1, pushing in: the flux through the coil increases, so by Faraday's law an emf is induced and the needle deflects, say to the left. By Lenz's law the current makes the near face a north pole, opposing the approach. Stage 2, held still: the flux is large but constant, so dΦ/dt = 0, the emf is zero and the needle returns to the centre, even though the magnet is inside the coil. Stage 3, pulling out: the flux decreases, so an emf is induced again but the current reverses, the near face becomes a south pole to hold the magnet back, and the needle deflects the other way.\n\nA correct answer gives deflection, zero, opposite deflection, ties each to the flux increasing, constant, decreasing, and names the pole on the near face or the reversal of current as Lenz's law."
+          "why": "Pushing in raises the flux, so an emf is induced and the needle swings; by Lenz's law the near face becomes a north pole opposing the approach. Held still, the flux is large but constant, dΦ/dt = 0, and the needle sits at zero. Pulling out lowers the flux, so the current reverses, the near face becomes a south pole holding the magnet back, and the needle swings the other way.\n\nThe two moving stages cannot give the same sense, since one flux change is an increase and the other a decrease; and a constant flux, however large, induces nothing."
         }
       ]
     },
@@ -603,28 +659,56 @@
           "why": "Information hiding requires that the data structures and processing details of one module are not accessible to other modules; they pass each other only the information required to accomplish the function. Reports is reaching into Orders' data structure instead of using the controlled interface.\n\nThe single responsibility principle is about a module doing one job, and Reports may well do only reporting; vertical partitioning is about who decides and who works in a hierarchy; top-down is a design approach, not a rule about access."
         },
         {
-          "type": "short",
-          "q": "An online exam application needs a 'submit attempt' feature. Decompose it into at least three subproblems. Then take those subproblems together with 'edit profile' and 'change password' and group them into modules: name each module, list what it holds, and state which of your two steps was decomposition and which was modularisation. Show your working.",
-          "concept": "Decomposing a feature into subproblems and modules",
-          "why": "Decomposition breaks the feature into smaller subproblems, for example: validate the submitted answers, save the attempt, compute the score, notify the student of the result. Modularisation groups related subproblems into independent modules, each with everything it needs for its part: an Attempt module (validate answers, save the attempt), a Grading module (compute the score), a Notification module (notify the student), and an Account module (edit profile, change password), since those two concern the user's account and not the exam.\n\nA correct answer lists three or more sensible subproblems of submitting an attempt, groups them so that each module has one aim and the account tasks sit apart from the exam tasks, and says that breaking the feature apart is decomposition and grouping into modules is modularisation. Any grouping that puts 'change password' inside the grading or attempt module is low cohesion and is not accepted."
+          "type": "mcq",
+          "q": "The feature 'submit attempt' in an exam app breaks into: validate the answers, save the attempt, compute the score, notify the student. Those four, together with 'edit profile' and 'change password', are to be grouped into modules. Which grouping is the most cohesive?",
+          "options": [
+            "Attempt (validate answers, save attempt, edit profile, change password), Grading (compute score), Notification (notify student)",
+            "Exam (validate answers, save attempt, compute score, notify student, edit profile, change password)",
+            "Account (validate answers, edit profile, change password), Attempt (save attempt, compute score, notify student)",
+            "Attempt (validate answers, save attempt), Grading (compute score), Notification (notify student), Account (edit profile, change password)"
+          ],
+          "answerIndex": 3,
+          "concept": "Grouping subproblems into modules",
+          "why": "Modularisation groups the subproblems so that everything inside a module serves one aim and the module holds what it needs for its own part. Handling the attempt, scoring it, telling the student and managing the account are four separate aims, so they belong in four modules.\n\nThe first grouping drops account work into the attempt module; the second is one module doing everything, the lowest cohesion of all; the third puts validating answers, which is exam work, inside the account module."
         },
         {
-          "type": "short",
-          "q": "A car carries passengers from one place to another. Using its brake, radiator, battery and steering wheel: give one example of high cohesion inside a single part, one example of low coupling between two parts, and one design change that would raise the coupling between two parts. Show your working.",
+          "type": "mcq",
+          "q": "A car's parts include the brake, the radiator, the battery and the steering wheel. Which design change would raise the coupling between two of them?",
+          "options": [
+            "Fitting thicker pads and discs to the brake.",
+            "Wiring the brake so that it works only while the radiator fan is running.",
+            "Moving the steering wheel to the other side of the car.",
+            "Replacing the battery with one of a larger capacity."
+          ],
+          "answerIndex": 1,
           "concept": "Cohesion and coupling in the car analogy",
-          "why": "High cohesion: every element of the brake (pedal, lines, pads, discs) works towards the one aim of stopping the car, and nothing in it serves any other purpose. Low coupling: the radiator and the steering wheel do not depend on each other at all; the radiator meets the rest of the car only through its hoses, so it can be replaced without touching the steering. Raising coupling: wiring the brake so that it works only while the radiator fan is running would make braking depend on cooling, so a fault or change in the radiator would now affect the brake.\n\nA correct answer judges cohesion inside one part (all its elements serve one aim), judges coupling between two parts (one can be changed without the other), and proposes a change that makes one part depend on another. Naming the battery as the low-coupling example is fine only if it is the connection, not the battery's own parts, that is discussed."
+          "why": "Coupling is the degree to which one part depends on another. Making the brake refuse to work unless the radiator fan is running creates a dependency where there was none, so a fault or a change in the cooling system now reaches the brakes.\n\nThe other three change one part on its own: better pads, a different wheel position and a bigger battery all leave every other part's dependencies exactly as they were, which is low coupling preserved."
         },
         {
-          "type": "short",
-          "q": "A library app has three components: Catalogue (stores the books), Loans (records who has borrowed what) and Notifier (sends reminders). Write out its software architecture using the three parts of the definition: the components, the attributes (properties) of each, and the relationships between them. Show your working.",
-          "concept": "Describing a software architecture",
-          "why": "Software architecture is the structure of the system: its components, the attributes of those components, and the relationships between them. Components: Catalogue, Loans, Notifier. Attributes: Catalogue holds the list of books and their availability; Loans holds the record of borrower, book and due date; Notifier holds the message templates and the sending channel. Relationships: Loans asks Catalogue whether a book is available and tells it when a book goes out or comes back; Loans asks Notifier to send a reminder when a due date passes; Notifier does not depend on Catalogue.\n\nA correct answer names the three components, gives at least one property for each, and states the direction of at least two dependencies between them. Listing components alone, with no attributes or relationships, is only one third of the definition and is not accepted."
+          "type": "mcq",
+          "q": "A design document for a library app lists Catalogue, Loans and Notifier and says what each one holds, but says nothing about how they interact. Which part of the definition of a software architecture is missing?",
+          "options": [
+            "The relationships between the components",
+            "The attributes of the components",
+            "The components themselves",
+            "The programming language of each component"
+          ],
+          "answerIndex": 0,
+          "concept": "The three parts of a software architecture",
+          "why": "A software architecture is the structure of the system: its components, the attributes of those components, and the relationships between them. The document names the three components and gives their attributes, so what is left out is the relationships, such as Loans asking Catalogue whether a book is available and asking Notifier to send a reminder.\n\nThe components and their attributes are already there, and the implementation language is no part of the definition."
         },
         {
-          "type": "short",
-          "q": "Top-down and bottom-up design are described as not individually practicable, so that a combination is used. Explain what goes wrong if a team uses only top-down, what goes wrong if it uses only bottom-up, and what a combination looks like for a new inventory system built on an existing database library.",
+          "type": "mcq",
+          "q": "A new inventory system, whose detailed requirements are still unknown, is to be built on an existing and well tested database library. Which use of top-down and bottom-up design fits?",
+          "options": [
+            "Top-down throughout, treating the library as if it were not there.",
+            "Bottom-up throughout, composing everything from the library's primitives.",
+            "Bottom-up for the new sub-systems, top-down for the data-access parts.",
+            "Top-down for the new stock, orders and reporting sub-systems, bottom-up for the data-access parts on the library."
+          ],
+          "answerIndex": 3,
           "concept": "Combining top-down and bottom-up design",
-          "why": "Top-down alone decomposes the whole system into sub-systems on assumptions about what the lowest level will look like, and may arrive at a bottom level that does not match any component that can actually be built or reused. Bottom-up alone composes higher components from existing primitives with no guarantee that what they add up to is the system that was wanted. In the combination, the inventory system is decomposed top-down from the whole into stock, orders and reporting sub-systems because it is being designed from scratch with details unknown, while the data-access parts are built bottom-up from the existing database library because those primitives already exist and can be reused.\n\nA correct answer gives a failure for each approach used alone, and matches top-down to the new, unknown parts and bottom-up to the existing library in the example."
+          "why": "Neither approach is practicable alone. Top-down decomposes the whole into sub-systems but has to assume what the lowest level will look like; bottom-up composes existing primitives but cannot guarantee that what they add up to is the system that was wanted. So the parts being designed from scratch are decomposed top-down, and the parts that already exist as tested primitives are composed bottom-up.\n\nThe reversed pairing builds the unknown parts from primitives that do not exist for them, and going one way throughout either wastes the library or lets it dictate the system."
         }
       ]
     },
@@ -741,28 +825,56 @@
           "why": "The cross-section is an annulus of area πR² − πr², so the integrand must be R² − r² = (2x)² − (x²)² = 4x² − x⁴, giving 64π/15. Squaring the difference gives (2x − x²)² = 4x² − 4x³ + x⁴, a different and smaller integrand, giving 16π/15.\n\nThe limits 0 and 2 are right (the curves meet at x = 0 and x = 2); π is correct for a washer; 2x ≥ x² on [0, 2], so R = 2x and r = x² are in the right order."
         },
         {
-          "type": "short",
-          "q": "The region under y = x², above the x-axis, from x = 0 to x = 1 is revolved about the line y = 1. Find the volume. Show your working.",
+          "type": "mcq",
+          "q": "The region under y = x², above the x-axis, from x = 0 to x = 1 is revolved about the line y = 1. Find the volume.",
+          "options": [
+            "13π/15",
+            "7π/15",
+            "8π/15",
+            "π/5"
+          ],
+          "answerIndex": 1,
           "concept": "Washer about an axis above the region",
-          "why": "Radii are distances from the line y = 1. The boundary farther from that line is the x-axis, at distance 1 − 0 = 1, so R(x) = 1; the nearer boundary is the curve, at distance 1 − x², so r(x) = 1 − x². V = π∫₀¹[1² − (1 − x²)²]dx = π∫₀¹[1 − (1 − 2x² + x⁴)]dx = π∫₀¹(2x² − x⁴)dx = π[2x³/3 − x⁵/5]₀¹ = π(2/3 − 1/5) = 7π/15.\n\nFinal answer: 7π/15 cubic units (also accepted: 1.47). A correct answer identifies R = 1 and r = 1 − x² as distances from y = 1, subtracts the squares and evaluates. π∫₀¹(x² + 1)²dx − π = 13π/15 shifts the wrong way (that is the solid about y = −1); π∫x⁴dx = π/5 ignores the shift."
+          "why": "Radii are distances from the line y = 1. The far boundary is the x-axis at distance 1, so R(x) = 1; the near boundary is the curve at distance 1 − x², so r(x) = 1 − x². V = π∫₀¹[1 − (1 − x²)²]dx = π∫₀¹(2x² − x⁴)dx = π(2/3 − 1/5) = 7π/15 cubic units.\n\n13π/15 measures the radii from y = −1; 8π/15 integrates (1 − x²)² alone; π/5 ignores the shift and uses R = x²."
         },
         {
-          "type": "short",
-          "q": "The region under y = x, above the x-axis, from x = 0 to x = 1 is revolved about the x-axis. Find the volume by the shell method (integrating in y), then confirm it by the disc method. Show your working.",
-          "concept": "Cross-checking a volume by two methods",
-          "why": "Shells: the axis is the x-axis, so the strips are horizontal at height y, with radius y. The strip runs from the line x = y to the edge x = 1, so its length is f(y) = 1 − y, and y runs from 0 to 1. V = 2π∫₀¹y(1 − y)dy = 2π∫₀¹(y − y²)dy = 2π[y²/2 − y³/3]₀¹ = 2π(1/2 − 1/3) = 2π(1/6) = π/3. Discs: R(x) = x, so V = π∫₀¹x²dx = π[x³/3]₀¹ = π/3. The two agree, as they must, since they measure the same cone.\n\nFinal answer: π/3 cubic units by both methods (also accepted: 1.05). The working must show f(y) = 1 − y, the 2π, and the disc integral π∫x²dx. 2π∫₀¹y·y dy = 2π/3 takes the strip length as y instead of 1 − y and is wrong."
+          "type": "mcq",
+          "q": "The region under y = x, above the x-axis, from x = 0 to x = 1 is revolved about the x-axis. Find the volume by the shell method, integrating in y.",
+          "options": [
+            "2π/3",
+            "π/6",
+            "π/2",
+            "π/3"
+          ],
+          "answerIndex": 3,
+          "concept": "Shell method integrating in y",
+          "why": "For shells about the x-axis the strips are horizontal, so at height y the shell radius is y and the strip runs from the line x = y across to x = 1, giving length 1 − y, with y from 0 to 1. V = 2π∫₀¹y(1 − y)dy = 2π[y²/2 − y³/3]₀¹ = 2π/6 = π/3 cubic units, which the disc method confirms: π∫₀¹x²dx = π/3.\n\n2π/3 takes the strip length as y instead of 1 − y; π/6 uses π rather than 2π; π/2 is the disc integral π∫₀¹x dx with the radius not squared."
         },
         {
-          "type": "short",
-          "q": "The region enclosed by y = x² and y = x + 2 is revolved about the x-axis. Find the volume. Show your working.",
+          "type": "mcq",
+          "q": "The region enclosed by y = x² and y = x + 2 is revolved about the x-axis. Find the volume.",
+          "options": [
+            "72π/5",
+            "152π/15",
+            "81π/10",
+            "184π/15"
+          ],
+          "answerIndex": 0,
           "concept": "Washer with limits from the intersection of two curves",
-          "why": "Boundaries: x² = x + 2 gives x² − x − 2 = (x − 2)(x + 1) = 0, so x = −1 and x = 2. On (−1, 2) the line is farther from the x-axis (at x = 0: 2 > 0), so R(x) = x + 2 and r(x) = x². V = π∫₋₁²[(x + 2)² − (x²)²]dx = π∫₋₁²(x² + 4x + 4 − x⁴)dx = π[x³/3 + 2x² + 4x − x⁵/5]₋₁². At x = 2 the bracket is 8/3 + 8 + 8 − 32/5 = 184/15; at x = −1 it is −1/3 + 2 − 4 + 1/5 = −32/15. V = π(184/15 + 32/15) = 216π/15 = 72π/5.\n\nFinal answer: 72π/5 cubic units (also accepted: 14.4π or 45.2). A correct answer finds the limits by solving x² = x + 2, identifies R = x + 2 and r = x², subtracts the squares and evaluates at both limits, remembering that subtracting −32/15 adds. π(184/15 − 32/15) = 152π/15 has that sign wrong; using (x + 2 − x²)² as the integrand squares the difference and is wrong."
+          "why": "Limits: x² = x + 2 gives (x − 2)(x + 1) = 0, so x = −1 and x = 2. On that interval the line is farther from the x-axis (at x = 0, 2 > 0), so R = x + 2 and r = x². V = π∫₋₁²[(x + 2)² − x⁴]dx = π[x³/3 + 2x² + 4x − x⁵/5]₋₁² = π(184/15 + 32/15) = 72π/5 cubic units.\n\n152π/15 subtracts −32/15 as if it were positive; 81π/10 uses (x + 2 − x²)², squaring the difference; 184π/15 forgets the lower limit."
         },
         {
-          "type": "short",
-          "q": "The region under y = x (0 ≤ x ≤ 1, above the x-axis) is revolved about the y-axis. A student writes V = π∫₀¹x²dx = π/3. Explain what solid that integral really measures, and set up a correct integral.",
+          "type": "mcq",
+          "q": "The region under y = x from x = 0 to x = 1, above the x-axis, is revolved about the y-axis. A student writes V = π∫₀¹x²dx = π/3. What does that integral actually measure, and what is the correct volume?",
+          "options": [
+            "The solid formed about the y-axis but with the wrong limits; the volume is π/3",
+            "The solid formed about the x-axis; the volume about the y-axis is 2π/3",
+            "The solid formed about the line x = 1; the volume about the y-axis is π/6",
+            "Nothing is wrong; π/3 is the volume about the y-axis"
+          ],
+          "answerIndex": 1,
           "concept": "Matching the formula to the axis of revolution",
-          "why": "π∫ₐᵇ[f(x)]²dx is the disc formula for revolution about the x-axis: it stacks discs of radius f(x) = x along the x-axis, so π/3 is the volume of the cone made by spinning the region about the x-axis, not the y-axis. For the y-axis, either integrate along that axis with washers in y, where at height y the region runs from x = y to x = 1, giving V = π∫₀¹(1² − y²)dy = 2π/3, or use shells in x with radius x and height x, giving V = 2π∫₀¹x·x dx = 2π/3. Both give 2π/3, which is not π/3.\n\nA correct answer says the student's integral is the disc formula about the x-axis, and gives either π∫₀¹(1 − y²)dy or 2π∫₀¹x²dx (value 2π/3) for the y-axis."
+          "why": "π∫ₐᵇ[f(x)]²dx is the disc formula for revolution about the x-axis, stacking discs of radius f(x) = x, so π/3 is the cone made by spinning about the x-axis. For the y-axis use washers in y, where at height y the region runs from x = y to x = 1, giving π∫₀¹(1 − y²)dy = 2π/3, or shells in x, 2π∫₀¹x·x dx = 2π/3. The two agree.\n\nThe limits are not the problem, so the first option misdiagnoses it; the third names an axis that the integral does not describe; the fourth accepts the wrong answer."
         }
       ]
     },
@@ -878,28 +990,56 @@
           "why": "The motional emf BLv exists across the rod's ends whether or not the circuit is closed: charges are pushed to the ends until their electric field balances the magnetic push. With no closed path there is no current, and with no current there is no magnetic force BIL on the rod, so it slides freely.\n\n'Emf and current' needs a closed circuit; 'current and retarding force' both need current; 'none' forgets that the emf is there regardless, and would light nothing only because nothing is connected."
         },
         {
-          "type": "short",
-          "q": "A 120-turn coil of area 6.0 × 10⁻³ m², resistance 4.0 Ω, has its normal along a uniform field that falls steadily from 0.80 T to 0.20 T in 0.30 s. Calculate the emf, the current and the charge that circulates, and give the direction of the induced field inside the coil relative to the original field. Show your working.",
-          "concept": "Faraday's law chained to current, charge and direction",
-          "why": "|ΔΦ| = ΔB × A = (0.80 − 0.20)(6.0 × 10⁻³) = 3.6 × 10⁻³ Wb per turn; N|ΔΦ| = 120 × 3.6 × 10⁻³ = 0.432 Wb. ε = N|ΔΦ|/Δt = 0.432/0.30 = 1.44 V. I = ε/R = 1.44/4.0 = 0.36 A. q = N|ΔΦ|/R = 0.432/4.0 = 0.108 C (check: I × Δt = 0.36 × 0.30 = 0.108 C, equal because the rate is uniform). The flux is decreasing, so by Lenz's law the induced field inside the coil points in the same direction as the original field, to maintain the flux being lost.\n\nFinal answer: 1.4 V (accept 1.4 to 1.5), 0.36 A (accept 0.35 to 0.37), 0.11 C (accept 0.10 to 0.11), induced field along the original B. 'Opposite to B' is the answer for an increasing field and is wrong here; 0.012 V forgot N."
+          "type": "mcq",
+          "q": "A 120-turn coil of area 6.0 × 10⁻³ m² and resistance 4.0 Ω has its normal along a uniform field that falls steadily from 0.80 T to 0.20 T in 0.30 s. Calculate the emf, the current and the charge that circulates.",
+          "options": [
+            "1.44 V, 0.36 A, 9.0 × 10⁻⁴ C",
+            "1.44 V, 0.36 A, 0.108 C",
+            "0.012 V, 0.0030 A, 9.0 × 10⁻⁴ C",
+            "1.44 V, 5.76 A, 0.108 C"
+          ],
+          "answerIndex": 1,
+          "concept": "Faraday's law chained to current and circulated charge",
+          "why": "The flux change per turn is ΔB × A = (0.60)(6.0 × 10⁻³) = 3.6 × 10⁻³ Wb, so ε = N|ΔΦ|/Δt = (120)(3.6 × 10⁻³)/0.30 = 1.44 V and I = ε/R = 0.36 A. The charge is q = N|ΔΦ|/R = 0.432/4.0 = 0.108 C, matching I Δt = 0.108 C because the rate is uniform.\n\n9.0 × 10⁻⁴ C leaves the 120 turns out of the charge alone; the third option leaves them out everywhere; 5.76 A multiplies the emf by R instead of dividing."
         },
         {
-          "type": "short",
-          "q": "A rod of length 0.60 m and mass 0.20 kg moves at 5.0 m/s on frictionless horizontal rails in a vertical 0.40 T field; circuit resistance 0.30 Ω. Calculate the emf, the current and the retarding force. The applied force is then removed; calculate the rod's initial deceleration. Show your working.",
+          "type": "mcq",
+          "q": "A rod of length 0.60 m and mass 0.20 kg moves at 5.0 m/s on frictionless horizontal rails in a vertical 0.40 T field; the circuit resistance is 0.30 Ω. Calculate the retarding force, and the rod's initial deceleration once the applied force is removed.",
+          "options": [
+            "0.29 N, 1.4 m/s²",
+            "1.6 N, 8.0 m/s²",
+            "0.96 N, 0.19 m/s²",
+            "0.96 N, 4.8 m/s²"
+          ],
+          "answerIndex": 3,
           "concept": "Retarding force and deceleration of a released rod",
-          "why": "ε = BLv = (0.40)(0.60)(5.0) = 1.2 V. I = ε/R = 1.2/0.30 = 4.0 A. F = BIL = (0.40)(4.0)(0.60) = 0.96 N, directed against the motion (equivalently F = B²L²v/R = (0.16)(0.36)(5.0)/0.30 = 0.96 N). With no applied force this is the only horizontal force, so a = F/m = 0.96/0.20 = 4.8 m/s², slowing the rod. As v falls, F falls with it, so the deceleration shrinks and the rod slows exponentially rather than stopping dead.\n\nFinal answer: 1.2 V, 4.0 A, 0.96 N (accept 0.94 to 0.98), deceleration 4.8 m/s² (accept 4.7 to 4.9). A correct answer states that the force opposes the motion. 0.24 N used the emf as the current; 2.4 m/s² or 9.6 m/s² has a factor of 2 slip in F/m."
+          "why": "ε = BLv = (0.40)(0.60)(5.0) = 1.2 V, I = ε/R = 4.0 A and F = BIL = (0.40)(4.0)(0.60) = 0.96 N against the motion, equally B²L²v/R. With nothing else pushing, a = F/m = 0.96/0.20 = 4.8 m/s², and it shrinks as the rod slows.\n\n0.29 N uses the emf 1.2 as if it were the current; 1.6 N drops one factor of L from B²L²v/R; 0.19 m/s² multiplies F by m instead of dividing by it."
         },
         {
-          "type": "short",
-          "q": "A generator coil of area 0.040 m² is to give a peak emf of 100 V at 50 Hz in a uniform field of 0.20 T. Calculate the number of turns needed, the rms emf it will deliver, and the instantaneous emf at the moment the plane of the coil is parallel to the field. Show your working.",
+          "type": "mcq",
+          "q": "A generator coil of area 0.040 m² is to give a peak emf of 100 V at 50 Hz in a uniform field of 0.20 T. Calculate the number of turns needed and the rms emf it will deliver.",
+          "options": [
+            "250 turns, 71 V",
+            "40 turns, 71 V",
+            "40 turns, 141 V",
+            "40 turns, 100 V"
+          ],
+          "answerIndex": 1,
           "concept": "Designing a generator coil",
-          "why": "ω = 2πf = 2π(50) = 314 rad/s. ε_peak = NBAω, so N = ε_peak/(BAω) = 100/((0.20)(0.040)(314)) = 100/2.51 = 39.8, so 40 turns. ε_rms = ε_peak/√2 = 100/1.414 = 70.7 V. When the plane of the coil is parallel to B the normal is at 90° to B, the flux is zero and passing through zero fastest, so ε = ε_peak sin 90° = 100 V.\n\nFinal answer: 40 turns (accept 39 to 40), 71 V (accept 70 to 71), 100 V. A correct answer converts f to ω with 2π, rounds N to a whole number, and recognises that plane parallel to B is the maximum-emf position, not zero. 250 turns used f in place of ω; 0 V for the last part confuses zero flux with zero emf."
+          "why": "ω = 2πf = 2π(50) = 314 rad/s, and ε_peak = NBAω, so N = 100/[(0.20)(0.040)(314)] = 39.8, that is 40 turns. The rms value is ε_peak/√2 = 100/1.414 = 71 V.\n\n250 turns uses f = 50 where ω = 314 belongs; 141 V multiplies by √2 instead of dividing; 100 V quotes the peak value as though it were the rms."
         },
         {
-          "type": "short",
-          "q": "A generator produces a sinusoidal emf with a peak value of 100 V. A student writes that 'the average emf over one cycle is 70.7 V'. Explain what 70.7 V actually is, what the true average of the emf over a full cycle is, and why that average is useless for describing the output.",
+          "type": "mcq",
+          "q": "A generator produces a sinusoidal emf of peak value 100 V. A student says the average emf over one cycle is 70.7 V. What is wrong with that?",
+          "options": [
+            "70.7 V is the average, and the rms value is 100 V",
+            "The average over a cycle is 63.7 V, and 70.7 V is half the peak-to-peak value",
+            "70.7 V is the rms value; the true average over a full cycle is zero",
+            "70.7 V is the average of the positive half cycle, and the rms value is 50 V"
+          ],
+          "answerIndex": 2,
           "concept": "Peak, rms and average emf",
-          "why": "70.7 V is the rms (root mean square) value, ε_peak/√2: the steady d.c. voltage that would deliver the same power to a resistor, and what an a.c. meter reads. It is not an average of the emf. The emf ε = ε_peak sin ωt spends half of each cycle positive and half negative, so its true average over a full cycle is zero. Zero is useless because it says nothing about how much power the generator can deliver; power depends on ε², which is positive throughout the cycle, and the rms value is exactly the square root of the mean of ε².\n\nA correct answer identifies 70.7 V as rms, states the full-cycle average is zero because of the sign change, and says the rms is used because power depends on the square of the emf."
+          "why": "70.7 V is ε_peak/√2, the root-mean-square value: the steady d.c. voltage that would heat a resistor at the same rate, and what an a.c. meter reads. The emf ε = ε_peak sin ωt is positive for half of each cycle and negative for the other half, so its true mean over a whole cycle is zero, which is why that mean is never quoted; power depends on ε², which stays positive.\n\n63.7 V (2/π of the peak) is the mean of one half cycle, not of a full cycle; half the peak-to-peak value is 100 V; and 70.7 V is not any kind of average."
         }
       ]
     },
@@ -1015,28 +1155,56 @@
           "why": "Cohesion is the extent to which the functions in a module work together to achieve the aim of the module, so it is judged inside one module and should be high. Coupling is the extent to which modules depend on other modules before performing their function, so it is judged between modules and should be low.\n\nThe first option swaps them; the other two lose the distinction that one measure looks inward and the other outward."
         },
         {
-          "type": "short",
-          "q": "Regroup the functions of this module into high-cohesion modules. Name each new module, list its functions, and state how many modules you end with. Show your working.\n\n```\nmodule UserTools:\n    register, login, send_newsletter,\n    generate_sales_report, reset_password, export_sales_csv\n```",
+          "type": "mcq",
+          "q": "Regroup these functions into high-cohesion modules. Which grouping results?\n\n```\nmodule UserTools:\n    register, login, send_newsletter,\n    generate_sales_report, reset_password, export_sales_csv\n```",
+          "options": [
+            "Accounts (register, login, reset_password), Marketing (send_newsletter), SalesReports (generate_sales_report, export_sales_csv)",
+            "Accounts (register, login, reset_password) and Other (send_newsletter, generate_sales_report, export_sales_csv)",
+            "Accounts (register, login), Reports (send_newsletter, generate_sales_report, export_sales_csv), Security (reset_password)",
+            "Six modules, one for each function, since no two of them share an aim"
+          ],
+          "answerIndex": 0,
           "concept": "Redrawing module boundaries for cohesion",
-          "why": "Sort the functions by the aim each serves. register, login and reset_password all manage a user's account. send_newsletter is marketing communication. generate_sales_report and export_sales_csv both produce sales output. So: Accounts (register, login, reset_password), Marketing (send_newsletter), SalesReports (generate_sales_report, export_sales_csv). Three modules, each with one aim, and the external behaviour of every function unchanged.\n\nA correct answer produces three modules with those groupings, or a defensible variant such as merging the newsletter into a Communications module on its own; it must not leave sales reporting inside the account module. Names may differ. Two modules (accounts versus everything else) is not accepted, since 'everything else' still mixes marketing with reporting."
+          "why": "Sort the functions by the aim each one serves: register, login and reset_password all manage an account; send_newsletter is marketing; generate_sales_report and export_sales_csv both produce sales output. That gives three modules, each with a single aim, and no function's behaviour changes.\n\nThe 'Other' module still mixes marketing with reporting, so it is no more cohesive than before; splitting reset_password away from login breaks up one aim and calling a newsletter a report mixes two; and one module per function ignores that three of them do share an aim."
         },
         {
-          "type": "short",
-          "q": "A team proposes splitting Utils, which holds four unrelated functions, into four separate modules with one function each. State whether the program's external behaviour changes, three things the split buys, and two costs it may bring, taken from the disadvantages of modularisation. Show your working.",
-          "concept": "Costs and benefits of a refactor",
-          "why": "External behaviour does not change: each function still takes the same inputs and produces the same outputs, so this is a refactoring. It buys easier integration, easier testing and easier maintenance of the components, because each module now has a single aim and can be changed or tested without dragging the other three along; it also makes each module easier to reuse elsewhere. The costs come from the disadvantages of modularisation: any two of longer execution time, larger storage size, longer compilation and loading time, more inter-module communication problems, and more initial design time.\n\nA correct answer says behaviour is unchanged, gives three benefits of the kind above, and names two of the five listed disadvantages. Claiming the split makes the program faster is wrong; longer execution time is a listed cost."
+          "type": "mcq",
+          "q": "Utils holds four unrelated functions and is split into four one-function modules, leaving the program's behaviour unchanged. Which of these is a real disadvantage of modularisation that the split may bring?",
+          "options": [
+            "Lower cohesion in each of the four modules",
+            "Harder testing of each function on its own",
+            "A change in the program's output",
+            "Longer compilation and loading time"
+          ],
+          "answerIndex": 3,
+          "concept": "Costs of modularisation",
+          "why": "Splitting the code raises the number of modules, and the costs of modularisation are longer execution time, larger storage, longer compilation and loading time, more inter-module communication problems and more time spent on the initial design. Longer compilation and loading is one of them.\n\nCohesion rises rather than falls, since each module now has one aim; testing gets easier for the same reason; and a refactoring leaves the external behaviour exactly as it was, which is what makes it a refactoring rather than a rewrite."
         },
         {
-          "type": "short",
-          "q": "This is a horizontal partition. Count how many times a value crosses a module interface, in or out, during one call of run(); list the crossings in order, then name the stated cost of horizontal partitioning that this shows. Show your working.\n\n```\nmodule Control:\n    run():\n        rows  = Reader.read()\n        clean = Validator.check(rows)\n        total = Summer.sum(clean)\n        Printer.show(total)\n```",
+          "type": "mcq",
+          "q": "Counting each value passed into a module and each value returned from one, how many times does a value cross a module interface during one call of run()?\n\n```\nmodule Control:\n    run():\n        rows  = Reader.read()\n        clean = Validator.check(rows)\n        total = Summer.sum(clean)\n        Printer.show(total)\n```",
+          "options": [
+            "6",
+            "4",
+            "3",
+            "8"
+          ],
+          "answerIndex": 0,
           "concept": "Counting interface crossings in horizontal partitioning",
-          "why": "Follow the data. 1: rows returned from Reader to Control. 2: rows passed from Control into Validator. 3: clean returned from Validator to Control. 4: clean passed into Summer. 5: total returned from Summer to Control. 6: total passed into Printer. Six crossings, and every piece of data passes through Control twice on its way from one worker to the next. That is the stated cost: horizontal partitioning requires the passing of more data across the module interfaces, which makes the control flow more complex, especially where data moves rapidly from one function to another.\n\nFinal answer: 6 crossings. Also accepted: 3 if the student counts each worker call as one exchange, provided the list is consistent and the cost is named correctly. A correct answer lists the crossings in order and names the extra data passing across interfaces as the cost."
+          "why": "Follow the data: rows returned from Reader, rows passed into Validator, clean returned from Validator, clean passed into Summer, total returned from Summer, total passed into Printer. That is six crossings, and every value goes through Control on its way from one worker to the next.\n\n3 counts only the values returned; 4 counts one crossing per module called; 8 counts two crossings for Reader, which is passed nothing, and for Printer, which returns nothing. This extra data passing is the cost of horizontal partitioning."
         },
         {
-          "type": "short",
-          "q": "A team splits a 6,000-line program into forty files and reports that it is now modularised. Explain what is missing from that claim: what makes a module independent, and what test you would apply to each of the forty files to decide whether the program really has been modularised rather than merely decomposed.",
+          "type": "mcq",
+          "q": "A team splits a 6,000-line program into forty files and reports that the program is now modularised. What is missing from that claim?",
+          "options": [
+            "Nothing: a program split into separate files is modularised.",
+            "Each file must also be compiled separately before the claim holds.",
+            "Each file must hold exactly one function before the claim holds.",
+            "Splitting is decomposition; modularisation also needs each file to be cohesive and loosely coupled."
+          ],
+          "answerIndex": 3,
           "concept": "Decomposition versus modularisation",
-          "why": "Cutting the code into files is decomposition: the application has been broken into parts. Modularisation requires that each part be an independent module with everything it needs to implement only its part of the functionality. Independence is measured by cohesion and coupling: the functions in each file should work together towards one aim (high cohesion), and each file should depend as little as possible on other files before it can do its job (low coupling), with its data structures hidden behind a controlled interface. The test for each file: do all its functions serve one aim, and can it be changed or tested without editing the other files? Forty files that reach into each other's data structures are decomposed but not modularised.\n\nA correct answer separates decomposition from modularisation, names independence with cohesion and coupling (information hiding is a bonus), and gives a concrete test per file."
+          "why": "Cutting an application into parts is decomposition. Modularisation goes further: each part must be an independent module holding everything it needs for its own part of the functionality, which is measured by high cohesion inside the file and low coupling to the others. Forty files that reach into each other's data structures are decomposed and not modularised.\n\nSeparate compilation and one function per file are neither necessary nor sufficient, and the bare split is exactly the claim being questioned."
         }
       ],
       "slot": "fast"

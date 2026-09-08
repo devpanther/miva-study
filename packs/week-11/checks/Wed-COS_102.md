@@ -1,7 +1,7 @@
 # Wednesday — COS_102 nightly check
 
 *The concepts of both Week 11 decks.*
-*Sit cold, notes closed, 15 minutes. 8 multiple choice, 4 written. Score out of 12.*
+*12 questions, straight after the hour. Score out of 12.*
 
 **1.** Orders calls Payments.charge(), Stock.reserve() and Email.send(). Stock calls Email.send(). Payments and Email call nothing outside themselves. Measuring coupling as the number of other modules a module depends on, what are the counts for Orders and for Stock?
 A. Orders 3, Stock 0
@@ -51,13 +51,29 @@ B. Information hiding
 C. Vertical partitioning
 D. Top-down design
 
-**9. (show your working)** An online exam application needs a 'submit attempt' feature. Decompose it into at least three subproblems. Then take those subproblems together with 'edit profile' and 'change password' and group them into modules: name each module, list what it holds, and state which of your two steps was decomposition and which was modularisation. Show your working.
+**9.** The feature 'submit attempt' in an exam app breaks into: validate the answers, save the attempt, compute the score, notify the student. Those four, together with 'edit profile' and 'change password', are to be grouped into modules. Which grouping is the most cohesive?
+A. Attempt (validate answers, save attempt, edit profile, change password), Grading (compute score), Notification (notify student)
+B. Exam (validate answers, save attempt, compute score, notify student, edit profile, change password)
+C. Account (validate answers, edit profile, change password), Attempt (save attempt, compute score, notify student)
+D. Attempt (validate answers, save attempt), Grading (compute score), Notification (notify student), Account (edit profile, change password)
 
-**10. (show your working)** A car carries passengers from one place to another. Using its brake, radiator, battery and steering wheel: give one example of high cohesion inside a single part, one example of low coupling between two parts, and one design change that would raise the coupling between two parts. Show your working.
+**10.** A car's parts include the brake, the radiator, the battery and the steering wheel. Which design change would raise the coupling between two of them?
+A. Fitting thicker pads and discs to the brake.
+B. Wiring the brake so that it works only while the radiator fan is running.
+C. Moving the steering wheel to the other side of the car.
+D. Replacing the battery with one of a larger capacity.
 
-**11. (show your working)** A library app has three components: Catalogue (stores the books), Loans (records who has borrowed what) and Notifier (sends reminders). Write out its software architecture using the three parts of the definition: the components, the attributes (properties) of each, and the relationships between them. Show your working.
+**11.** A design document for a library app lists Catalogue, Loans and Notifier and says what each one holds, but says nothing about how they interact. Which part of the definition of a software architecture is missing?
+A. The relationships between the components
+B. The attributes of the components
+C. The components themselves
+D. The programming language of each component
 
-**12. (show your working)** Top-down and bottom-up design are described as not individually practicable, so that a combination is used. Explain what goes wrong if a team uses only top-down, what goes wrong if it uses only bottom-up, and what a combination looks like for a new inventory system built on an existing database library.
+**12.** A new inventory system, whose detailed requirements are still unknown, is to be built on an existing and well tested database library. Which use of top-down and bottom-up design fits?
+A. Top-down throughout, treating the library as if it were not there.
+B. Bottom-up throughout, composing everything from the library's primitives.
+C. Bottom-up for the new sub-systems, top-down for the data-access parts.
+D. Top-down for the new stock, orders and reporting sub-systems, bottom-up for the data-access parts on the library.
 
 ---
 
@@ -95,18 +111,18 @@ Easier testing and easier understanding are about the size of the unit, not abou
 
 The single responsibility principle is about a module doing one job, and Reports may well do only reporting; vertical partitioning is about who decides and who works in a hierarchy; top-down is a design approach, not a rule about access.
 
-**9.** *Decomposing a feature into subproblems and modules.* Decomposition breaks the feature into smaller subproblems, for example: validate the submitted answers, save the attempt, compute the score, notify the student of the result. Modularisation groups related subproblems into independent modules, each with everything it needs for its part: an Attempt module (validate answers, save the attempt), a Grading module (compute the score), a Notification module (notify the student), and an Account module (edit profile, change password), since those two concern the user's account and not the exam.
+**9. D** — *Grouping subproblems into modules.* Modularisation groups the subproblems so that everything inside a module serves one aim and the module holds what it needs for its own part. Handling the attempt, scoring it, telling the student and managing the account are four separate aims, so they belong in four modules.
 
-A correct answer lists three or more sensible subproblems of submitting an attempt, groups them so that each module has one aim and the account tasks sit apart from the exam tasks, and says that breaking the feature apart is decomposition and grouping into modules is modularisation. Any grouping that puts 'change password' inside the grading or attempt module is low cohesion and is not accepted.
+The first grouping drops account work into the attempt module; the second is one module doing everything, the lowest cohesion of all; the third puts validating answers, which is exam work, inside the account module.
 
-**10.** *Cohesion and coupling in the car analogy.* High cohesion: every element of the brake (pedal, lines, pads, discs) works towards the one aim of stopping the car, and nothing in it serves any other purpose. Low coupling: the radiator and the steering wheel do not depend on each other at all; the radiator meets the rest of the car only through its hoses, so it can be replaced without touching the steering. Raising coupling: wiring the brake so that it works only while the radiator fan is running would make braking depend on cooling, so a fault or change in the radiator would now affect the brake.
+**10. B** — *Cohesion and coupling in the car analogy.* Coupling is the degree to which one part depends on another. Making the brake refuse to work unless the radiator fan is running creates a dependency where there was none, so a fault or a change in the cooling system now reaches the brakes.
 
-A correct answer judges cohesion inside one part (all its elements serve one aim), judges coupling between two parts (one can be changed without the other), and proposes a change that makes one part depend on another. Naming the battery as the low-coupling example is fine only if it is the connection, not the battery's own parts, that is discussed.
+The other three change one part on its own: better pads, a different wheel position and a bigger battery all leave every other part's dependencies exactly as they were, which is low coupling preserved.
 
-**11.** *Describing a software architecture.* Software architecture is the structure of the system: its components, the attributes of those components, and the relationships between them. Components: Catalogue, Loans, Notifier. Attributes: Catalogue holds the list of books and their availability; Loans holds the record of borrower, book and due date; Notifier holds the message templates and the sending channel. Relationships: Loans asks Catalogue whether a book is available and tells it when a book goes out or comes back; Loans asks Notifier to send a reminder when a due date passes; Notifier does not depend on Catalogue.
+**11. A** — *The three parts of a software architecture.* A software architecture is the structure of the system: its components, the attributes of those components, and the relationships between them. The document names the three components and gives their attributes, so what is left out is the relationships, such as Loans asking Catalogue whether a book is available and asking Notifier to send a reminder.
 
-A correct answer names the three components, gives at least one property for each, and states the direction of at least two dependencies between them. Listing components alone, with no attributes or relationships, is only one third of the definition and is not accepted.
+The components and their attributes are already there, and the implementation language is no part of the definition.
 
-**12.** *Combining top-down and bottom-up design.* Top-down alone decomposes the whole system into sub-systems on assumptions about what the lowest level will look like, and may arrive at a bottom level that does not match any component that can actually be built or reused. Bottom-up alone composes higher components from existing primitives with no guarantee that what they add up to is the system that was wanted. In the combination, the inventory system is decomposed top-down from the whole into stock, orders and reporting sub-systems because it is being designed from scratch with details unknown, while the data-access parts are built bottom-up from the existing database library because those primitives already exist and can be reused.
+**12. D** — *Combining top-down and bottom-up design.* Neither approach is practicable alone. Top-down decomposes the whole into sub-systems but has to assume what the lowest level will look like; bottom-up composes existing primitives but cannot guarantee that what they add up to is the system that was wanted. So the parts being designed from scratch are decomposed top-down, and the parts that already exist as tested primitives are composed bottom-up.
 
-A correct answer gives a failure for each approach used alone, and matches top-down to the new, unknown parts and bottom-up to the existing library in the example.
+The reversed pairing builds the unknown parts from primitives that do not exist for them, and going one way throughout either wastes the library or lets it dictate the system.
