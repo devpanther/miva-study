@@ -6262,9 +6262,13 @@ function render(){
     brand.appendChild(el("div","spacer"));
     var st = streak();
     if(st > 0) brand.appendChild(el("span","chip flame", FLAME+"<span>"+st+"</span>"));
-    if(aheadOfCalendar()) brand.appendChild(el("span","chip","ahead"));
-    if(SYNCING) brand.appendChild(el("span","chip","saving…"));
-    else if(STORAGE === "none" || STORAGE === "error") brand.appendChild(el("span","chip","local"));
+    /* "ahead" is redundant with the week selector, which drops its "now" badge for
+       exactly the same reason. On a narrow bar it is the first thing dropped. */
+    if(aheadOfCalendar()) brand.appendChild(el("span","chip ahead","ahead"));
+    /* "saving…" is a flicker; "local" is a warning that your scores are not reaching the
+       other phone. The narrow bar keeps the second and drops the first. */
+    if(SYNCING) brand.appendChild(el("span","chip sync","saving…"));
+    else if(STORAGE === "none" || STORAGE === "error") brand.appendChild(el("span","chip sync warn","local"));
 
     /* The trigger. It says where you are and, when that is not where the calendar is,
        nothing else — the "now" badge only appears when the two agree, so its absence is

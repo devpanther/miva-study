@@ -66,11 +66,32 @@ button{font:inherit;cursor:pointer}
      padding-top:env(safe-area-inset-top, 0px)}
 .barin{max-width:760px;margin:0 auto;
        padding:12px calc(16px + env(safe-area-inset-right, 0px)) 0 calc(16px + env(safe-area-inset-left, 0px))}
-.brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+/* The header row never wraps.
+
+   It used to. `flex-wrap:wrap` meant that the moment the wordmark, the streak, the week
+   selector and the cog did not fit on one line, the whole right-hand group dropped to a
+   second line and the bar grew from 88px to 128px. Below about 400px, which is most
+   phones held in one hand, the app opened with a two-storey header.
+
+   So it is one line, always, and the space is found by giving things up in order of how
+   little they are missed. The spacer collapses first, which slides the controls left
+   until they sit beside the wordmark. Then the gaps and paddings tighten. Then the
+   streak chip goes, because the streak is already the first thing on the Home strip.
+   Last, below 344px, the word "Kaizen" goes and the icon carries the identity on its
+   own, which is what an icon is for. */
+.brand{display:flex;align-items:center;gap:10px;flex-wrap:nowrap;min-width:0}
+.brand > *{flex:none}
+/* Grows to push the controls right when there is room, and is the first thing to give
+   that room back when there is not. */
+.brand .spacer{flex:1 1 0;min-width:0}
 /* Icon and wordmark travel together. The icon's left edge is the left edge of the
    header, and the tab strip below lines up on it. */
 .brandmark{display:inline-flex;align-items:center;gap:9px;min-width:0}
 .brandmark .logo{display:block;width:24px;height:24px;border-radius:7px;flex:none}
+/* The safety valve. The ladder below covers the states the bar actually reaches, but a
+   warning chip can appear at any width, and when one does the word gives up its space
+   rather than the row breaking. It is the only thing here allowed to shrink. */
+.brandmark h1{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .brand h1{font-size:19px;font-weight:600;margin:0;letter-spacing:-.015em}
 .spacer{flex:1}
 .chip{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 11px;
@@ -622,6 +643,33 @@ body:has(.party) canvas.confetti{z-index:121}
 .chip.cog:hover{color:var(--ink);border-color:var(--ink3)}
 .chip.cog.on{color:var(--deep);border-color:var(--deep)}
 .chip.cog svg{display:block}
+
+/* ---------- the header at a phone's width ---------- */
+@media (max-width:460px){
+  /* The week selector already says this: it shows its "now" badge only when the week
+     you are reading is the week the calendar is on, so the badge's absence is the
+     signal. A chip repeating it costs 70px and tells you nothing new. */
+  .brand .chip.ahead{display:none}
+  /* A flicker while a score syncs. "local", which says the sync is not working at all,
+     carries the class `warn` and stays. */
+  .brand .chip.sync:not(.warn){display:none}
+}
+@media (max-width:420px){
+  .brand{gap:8px}
+  .brandmark{gap:8px}
+  .wksel{padding:0 26px 0 11px}
+  .wkwrap::after{right:11px}
+  .brand .chip{padding:0 9px}
+  .chip.cog{padding:0 8px}
+}
+@media (max-width:400px){
+  /* The streak is the first number on the Home strip, so the bar does not need it. */
+  .brand .chip.flame{display:none}
+}
+@media (max-width:336px){
+  /* The icon is the identity. The word is a nicety, and it is the last thing to go. */
+  .brandmark h1{display:none}
+}
 
 /* ---------- video suggestions ---------- */
 .vids{display:flex;flex-direction:column;gap:7px;margin:2px 0 10px}
