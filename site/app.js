@@ -1413,20 +1413,39 @@ function factRow2(parent, bits){
    That means they are short, always true, and never go stale when a pack is
    regenerated. The prose moves behind "What this covers", where it belongs. */
 
-function doSteps(course, slot, chk, minutes){
+function doSteps(course, slot, chk, plan, first){
   var n = chk && chk.questions ? chk.questions.length : 0;
   var out = [];
   var build = (course === "CSC_106" || course === "COS_102");
+  var minutes = plan ? plan.mins : 0;
+  var lec = plan ? plan.lectures : 0;
+  var problems = plan && plan.of > 1 && !plan.first && plan.anyLecture && !lec;
+  var missed = first && first.score ? first.missed.length : -1;   /* -1: first night not sat */
 
   if(slot === "deep"){
-    if(minutes) out.push("Watch the lecture video at 1×, " + minutes + " minutes");
+    if(lec) out.push("Watch the lecture video at " + (plan.speed || 1) + "×, " + minutes + " minutes. Pen in hand, pause to write");
+    else if(problems){
+      /* No video, so the first step is the aim, and the aim comes from the first
+         night's check. */
+      if(missed > 0) out.push("No video tonight. Start with the " + missed + " concept" + (missed > 1 ? "s" : "") + " above: the PDF's examples on those, on paper");
+      else if(missed === 0) out.push("No video tonight. The first night was clean, so take the hardest examples in the PDF");
+      else out.push("No video tonight. Sit the first night's check now, so tonight knows where to aim");
+    }
+    else if(minutes) out.push("Watch the short clips, " + minutes + " minutes");
     else out.push("No lecture video this week. The PDF is the lesson, so read it properly");
-    out.push("Read the PDF with a pen. Phone in another room");
-    if(build) out.push("Write the code yourself before you look at theirs");
-    else out.push("Work the examples on paper, not in your head");
+    if(problems){
+      out.push("Then every other example on paper before reading its solution");
+      out.push("Stuck on one? Scrub the lecture to that minute, not the whole thing");
+    } else {
+      out.push("Read the PDF with a pen. Phone in another room");
+      if(build) out.push("Write the code yourself before you look at theirs");
+      else out.push("Work the examples on paper, not in your head");
+    }
     if(n) out.push("Take the " + n + "-question check");
   } else {
-    if(minutes) out.push("Watch at 1.5× to 1.75×, about " + Math.round(minutes / 1.6) + " minutes");
+    if(lec) out.push("Watch at 1.5× to 1.75×, about " + Math.round(minutes / 1.6) + " minutes");
+    else if(problems) out.push("No video tonight. This is the build night");
+    else if(minutes) out.push("Watch the short clips at 1.75×, about " + Math.round(minutes / 1.6) + " minutes");
     else out.push("No video. Read the PDF straight through");
     if(build) out.push("Build the example as you go");
     if(n) out.push("Take the " + n + "-question check");
@@ -2728,7 +2747,7 @@ function viewHome(root){
     hero.appendChild(el("div","lbl","Tonight · "+g.day+" · week "+w));
     hero.appendChild(el("h2",null, esc(NAMES[g.deep]) + "  then  " + esc(NAMES[g.fast])));
     hero.appendChild(el("p","muted", chk && chk.topic ? esc(chk.topic).slice(0,150)+"…" : esc(g.dn)));
-    watchLine(hero, g.deep, w, true);
+    watchLine(hero, g.deep, w, g.day, "deep");
     var r = el("div","row");
     if(sc){
       r.appendChild(el("span","sc "+scoreClass(sc), "Scored "+sc.score+"/"+sc.max));
@@ -3003,8 +3022,9 @@ function viewTonight(root){
   /* Facts first, then an order to follow. The brief that describes the session moves
      down behind "What this covers": useful on a Sunday, in the way at 21:00. */
   factRow(c1, g.deep, "deep", chk);
-  var mins1 = watchLine(c1, g.deep, w, true);
-  stepList(c1, doSteps(g.deep, "deep", chk, mins1));
+  watchLine(c1, g.deep, w, g.day, "deep");
+  firstNightBlock(c1, g.deep, w, g.day, "deep");
+  stepList(c1, doSteps(g.deep, "deep", chk, videoPlan(g.deep, w, g.day, "deep"), firstNight(g.deep, w, g.day, "deep")));
   coversBlock(c1, topic || g.dn);
 
   var gr1 = el("div","row"); gr1.style.marginTop = "10px";
@@ -3041,8 +3061,9 @@ function viewTonight(root){
   } else {
     var full2 = !!g.fastFull;
     factRow(c2, g.fast, full2 ? "deep" : "fast", fchk0);
-    var mins2 = watchLine(c2, g.fast, w, false);
-    stepList(c2, doSteps(g.fast, full2 ? "deep" : "fast", fchk0, mins2));
+    watchLine(c2, g.fast, w, g.day, "fast");
+    firstNightBlock(c2, g.fast, w, g.day, "fast");
+    stepList(c2, doSteps(g.fast, full2 ? "deep" : "fast", fchk0, videoPlan(g.fast, w, g.day, "fast"), firstNight(g.fast, w, g.day, "fast")));
     coversBlock(c2, fastTopic || g.fn);
   }
 
@@ -3617,15 +3638,105 @@ function lmsAbsent(course){
    twice as long as it is, and made COS 102 look impossible. Intro clips are always
    orientation, so they always run at 1.75x. A course gets two deep hours a week, so its
    lectures are split across them. */
-function sessionMinutes(info, halve, speed){
+/* ---------- which of the week's videos belong to tonight ----------
+
+   This used to halve the week's video across the course's two evenings, which for a
+   course with ONE lecture video meant watching half of it on Monday and the other half
+   on Thursday. Three days apart. Monday ended in the middle of a derivation and
+   Thursday started in the middle of one, and because both cards printed the same line,
+   nothing on screen said that was what was happening.
+
+   A lecture is one continuous argument. It is watched whole or not at all. So the
+   videos are dealt out rather than cut in half:
+
+     one lecture     the first evening takes it; the second has no video and is the
+                     problems night, which is what that evening was always for
+     two lectures    one each, which is what COS 102 has every week
+     no lecture      neither evening has one; the PDF is the lesson
+
+   The short intro clips all go to the first evening, because their whole job is to be
+   the first thing you meet.
+
+   It does not always fit. MTH 102's week 1 lecture is 57 minutes and the hour also has
+   a check in it. That is said out loud rather than hidden by a division: watch what the
+   hour holds, note where you stopped, finish it at the start of the second evening. */
+function courseNights(course){
+  var out = [];
+  GRID.forEach(function(d){
+    if(d.deep === course) out.push({day:d.day, slot:"deep"});
+    if(d.fast === course) out.push({day:d.day, slot:"fast"});
+  });
+  return out;
+}
+/* What the first night's check said, for the second night to aim at.
+
+   The second evening of a course is the problems night, and the first evening's check
+   already recorded which concepts went wrong. So instead of "work the examples", the
+   second night opens with the two or three things you actually missed, and the lecture
+   becomes something you scrub to, not something you re-watch. */
+function firstNight(course, w, day, slot){
+  var nights = courseNights(course);
+  if(nights.length < 2) return null;
+  var f = nights[0];
+  if(f.day === day && f.slot === (slot || "deep")) return null;   /* this IS the first night */
+  var sc = getScore(ME, w, f.day, f.slot);
+  return {day: f.day, slot: f.slot, score: sc, missed: sc ? (sc.wrong || []).slice() : []};
+}
+function firstNightBlock(parent, course, w, day, slot){
+  var f = firstNight(course, w, day, slot);
+  if(!f) return;
+  var box = el("div","fromfirst");
+  var name = FULLDAY[f.day] || f.day;
+  if(!f.score){
+    box.appendChild(el("div","lbl2","From " + name));
+    box.appendChild(el("p","muted tight", name + "'s check is not sat yet. Sit it first: tonight's problems aim at whatever it catches."));
+    parent.appendChild(box);
+    return;
+  }
+  box.appendChild(el("div","lbl2", name + " · " + f.score.score + "/" + f.score.max));
+  if(!f.missed.length){
+    box.appendChild(el("p","muted tight","Nothing missed. Go straight to the hardest examples in the PDF, and the ones you have not seen before."));
+  } else {
+    box.appendChild(el("p","muted tight","Start with what " + name + " caught:"));
+    var ul = el("ul","missedlist");
+    f.missed.forEach(function(c){ ul.appendChild(el("li", null, esc(c))); });
+    box.appendChild(ul);
+  }
+  parent.appendChild(box);
+}
+
+function videoPlan(course, w, day, slot){
+  var info = lmsFor(course, w);
   if(!info) return null;
-  var d = halve ? 2 : 1, sp = speed || info.speed || 1;
-  return Math.round((info.intro.secs / 1.75 + info.lecture.secs / sp) / 60 / d);
+  var nights = courseNights(course);
+  var of = Math.max(1, nights.length);
+  var i = 0;
+  for(var k = 0; k < nights.length; k++){
+    if(nights[k].day === day && nights[k].slot === (slot || "deep")) i = k;
+  }
+  var first = i === 0;
+
+  var nL = info.lecture.n, nI = info.intro.n, sp = info.speed || 1;
+  /* Lectures are dealt one per evening, the earlier evenings first. */
+  var mine = 0;
+  if(of === 1) mine = nL;
+  else if(nL >= of) mine = Math.floor(nL / of) + (i < nL % of ? 1 : 0);
+  else mine = i < nL ? 1 : 0;
+
+  var lecSecs = nL ? info.lecture.secs * (mine / nL) : 0;
+  var clips = first ? nI : 0;
+  var clipSecs = first ? info.intro.secs : 0;
+
+  var mins = Math.round((clipSecs / 1.75 + lecSecs / sp) / 60);
+  return {info: info, first: first, of: of, lectures: mine, clips: clips,
+          mins: mins, lecMins: Math.round(lecSecs / sp / 60), speed: sp,
+          anyLecture: nL > 0};
 }
 
 /* The line that tells you what tonight actually is. */
-function watchLine(parent, course, w, halve){
-  var info = lmsFor(course, w);
+function watchLine(parent, course, w, day, slot){
+  var plan = videoPlan(course, w, day, slot);
+  var info = plan && plan.info;
 
   if(!info){
     /* A course on the timetable that the LMS has no enrolment for. Saying nothing
@@ -3640,33 +3751,45 @@ function watchLine(parent, course, w, halve){
     return;
   }
 
-  var mins = sessionMinutes(info, halve);
-  var nL = info.lecture.n, nI = info.intro.n;
+  var mins = plan.mins;
+  var nL = plan.lectures, nI = plan.clips;
   var row = el("div","watch");
 
   var what;
-  if(nL === 0 && nI === 0) what = "No video this week — the PDF is the whole lesson.";
-  else if(nL === 0)        what = "No lecture video this week. " + nI + " short clip" + (nI>1?"s":"") + ", then the PDF is the lesson.";
+  if(!plan.anyLecture && nI === 0) what = (plan.of > 1 && !plan.first && plan.info.intro.n)
+                                     ? "No video tonight. The PDF is the lesson."
+                                     : "No video this week. The PDF is the whole lesson.";
+  else if(!plan.anyLecture)        what = "No lecture video this week. " + nI + " short clip" + (nI>1?"s":"") + ", then the PDF is the lesson.";
+  else if(nL === 0)                what = "No video tonight. The lecture was " + (plan.of > 1 ? "the first night's" : "earlier") + ". Tonight is problems.";
   else {
-    var shown = halve ? Math.max(1, Math.round(nL / 2)) : nL;
-    what = shown + " lecture video" + (shown > 1 ? "s" : "")
+    what = (plan.of > 1 && plan.info.lecture.n === 1 ? "The lecture video, whole" : nL + " lecture video" + (nL > 1 ? "s" : ""))
          + (nI ? " + " + nI + " short clip" + (nI > 1 ? "s" : "") : "")
-         + (info.speed !== 1 ? " at " + info.speed + "×" : "");
+         + (plan.speed !== 1 ? " at " + plan.speed + "×" : "");
   }
 
   row.appendChild(el("span","wmin", mins ? "~" + mins + " min" : "—"));
   row.appendChild(el("span","wtxt", esc(what)));
   parent.appendChild(row);
 
+  var deep = (slot || "deep") === "deep";
+  var checkMins = deep ? 15 : 5;
+
+  /* The honest overflow. A 57-minute lecture and a check do not share an hour, and
+     halving the lecture was how that used to be hidden. Say it, and say what to do. */
+  if(nL && mins + checkMins > 60 && plan.of > 1 && plan.first){
+    parent.appendChild(el("p","muted tight",
+      "This is over the hour before the check. Watch what the hour holds, note the minute you stopped at, and finish it in the first quarter of the next " + NAMES[course] + " night before the problems. Tonight's check moves there too."));
+    return mins;
+  }
+
   /* Where the speed is what makes the evening fit, say so — otherwise the number
      looks like a fact rather than a choice. */
-  var checkMins = halve ? 15 : 5;
-  if(nL && info.speed > 1){
-    var atOne = sessionMinutes(info, halve, 1);
+  if(nL && plan.speed > 1){
+    var atOne = Math.round((plan.lecMins * plan.speed) + (plan.clips ? plan.info.intro.secs / 1.75 / 60 : 0));
     if(atOne + checkMins > 60 && mins + checkMins <= 60){
       parent.appendChild(el("p","muted tight",
         "At 1× this is " + atOne + " min, which leaves no room for the check. The "
-        + info.speed + "× is what makes the hour work — drop to 1× only where code or a derivation is on screen."));
+        + plan.speed + "× is what makes the hour work. Drop to 1× only where code or a derivation is on screen."));
     }
   }
   if(mins && mins + checkMins > 60){
@@ -3815,7 +3938,8 @@ function viewSession(root){
   c1.appendChild(el("div","lbl","21:00 – 22:00 · deep hour · 1×"));
   c1.appendChild(el("h2",null, esc(NAMES[g.deep])));
   topicBlock(c1, (chk && chk.topic) || g.dn, "muted");
-  watchLine(c1, g.deep, w, true);
+  watchLine(c1, g.deep, w, g.day, "deep");
+  firstNightBlock(c1, g.deep, w, g.day, "deep");
   var gr = el("div","row");
   gr.appendChild(btn("act ghost","Study guide", function(){ openGuide(g.deep, w, "session"); }));
   c1.appendChild(gr);
@@ -3845,7 +3969,8 @@ function viewSession(root){
   c2.appendChild(el("h2",null, esc(NAMES[g.fast])));
   topicBlock(c2, (fchk && fchk.topic) || ftopic || g.fn, "muted");
   if(g.fast !== "REVIEW" && g.fast !== "CATCHUP"){
-    watchLine(c2, g.fast, w, false);
+    watchLine(c2, g.fast, w, g.day, "fast");
+    firstNightBlock(c2, g.fast, w, g.day, "fast");
     var gr2 = el("div","row");
     gr2.appendChild(btn("act ghost","Study guide", function(){ openGuide(g.fast, w, "session"); }));
     c2.appendChild(gr2);

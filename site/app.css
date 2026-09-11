@@ -225,6 +225,14 @@ button{font:inherit;cursor:pointer}
        padding:34px 20px;text-align:center;color:var(--ink2)}
 .empty b{display:block;font-family:Fredoka;font-size:17px;color:var(--ink);margin-bottom:5px}
 
+/* The first night's misses, on the second night's card. */
+.fromfirst{margin:10px 0 2px;padding:10px 12px;border-radius:var(--r-sm);
+  background:var(--surface2);border-left:3px solid var(--fast)}
+.fromfirst .lbl2{margin-bottom:4px}
+.fromfirst p{margin:0}
+.missedlist{margin:6px 0 0;padding-left:18px;font-size:14px;color:var(--ink)}
+.missedlist li{margin:3px 0}
+
 /* ---------- buttons ---------- */
 .act{border:0;background:var(--deep);color:#fff;font-weight:700;font-size:14.5px;
      padding:10px 17px;border-radius:var(--r-pill);box-shadow:var(--shadow);
