@@ -2221,8 +2221,211 @@ function openBuddy(view, concept, quote){
   var c = buddyContext();
   var qs = concept ? whyFor_concept(c.chk, concept) : [];
   BUDDY = {view: view || "home", concept: concept || null, qs: qs, quote: quote || null,
-           asking:false, searches:null, err:null, text:"", thread:[], jump:null};
+           asking:false, searches:null, err:null, text:"", thread:[], jump:null, where:null};
   render();
+}
+
+/* ---------- where it is solved ----------
+   A maths or physics question is a method before it is an answer. Sat in front of
+   "find the domain of (x + 1)/(x² − 5x + 6)", the useful thing is not the answer, it is
+   the page of the study guide where the lecturer does one of these. So a question in a
+   course that needs solving carries a small "Where to look" button, and it opens the
+   sheet on the section of this week's guide that matches the question best. The
+   match is plain word overlap between the question (concept counted twice) and each
+   section, with the heading weighted over the body. */
+var SOLVE = {MTH_102:1, PHY_102:1, PHY_108:1};
+
+var WSTOP = {};
+(STOP.join(" ") + " find evaluate given take state which following value values let where using use show"
+ + " then that this these those into also both each after before same than number answer correct them two one").split(" ")
+ .forEach(function(w){ WSTOP[w] = 1; });
+
+function wkeys(s){
+  var out = {}, m = String(s || "").toLowerCase().replace(/[^a-z0-9À-ɏ ]+/g, " ").split(/\s+/);
+  m.forEach(function(w){
+    if(w.length < 3 || WSTOP[w]) return;
+    /* a rough stem, so charges, charge and charging all land on "charg" */
+    w = w.replace(/z/g, "s");                    /* rationalization, rationalisation */
+    if(w.length >= 8) w = w.replace(/ations?$/, "");
+    if(w.length >= 5 && /s$/.test(w) && !/ss$/.test(w)) w = w.slice(0, -1);
+    if(w.length >= 6 && /ing$/.test(w)) w = w.slice(0, -3);
+    else if(w.length >= 5 && /ed$/.test(w)) w = w.slice(0, -2);
+    if(w.length >= 5 && /e$/.test(w)) w = w.slice(0, -1);
+    out[w] = 1;
+  });
+  return out;
+}
+
+/* Sections of a summary, ## and ### alike. A ## section's body runs to the next ##,
+   so it contains its own examples; a ### is just that example. Both are candidates,
+   and the more specific one wins when the words say so. */
+function guideSections(md){
+  var lines = String(md || "").split("\n"), secs = [], cur = null, top = null;
+  lines.forEach(function(ln){
+    var m = /^(#{2,3})\s+(.+?)\s*#*\s*$/.exec(ln);
+    if(m){
+      var level = m[1].length, title = m[2].trim();
+      cur = {level:level, title:title, parent: level === 3 && top ? top.title : "", body:[]};
+      secs.push(cur);
+      if(level === 2) top = cur;
+      /* the ### heading line belongs to its ## section's body too */
+      else if(top) top.body.push("### " + title);
+      return;
+    }
+    if(!cur) return;
+    cur.body.push(ln);
+    if(cur.level === 3 && top) top.body.push(ln);
+  });
+  secs.forEach(function(s){ s.md = s.body.join("\n").trim(); });
+  return secs;
+}
+
+/* The sections that are about the week rather than about a method. Only used when
+   nothing else matches. */
+var WMETA = /examinable|commonly confused|say out loud|closing|most likely|scope|what this week|to have understood/i;
+
+/* Does a set of stems contain this one? Exact, or sharing a stem of five letters or
+   more, so "factor" finds "factoris" and "rationalis" finds "rationalisation". */
+function hasKey(set, k){
+  if(set[k]) return true;
+  if(k.length < 5) return false;
+  var ws = set.__w || (set.__w = Object.keys(set));
+  for(var i = 0; i < ws.length; i++){
+    var w = ws[i];
+    if(w.length >= 5 && (w.indexOf(k) === 0 || k.indexOf(w) === 0)) return true;
+  }
+  return false;
+}
+
+function findWhere(md, q){
+  var kq = wkeys(String(q.concept || "") + " " + String(q.concept || "") + " " + String(q.q || ""));
+  var keys = Object.keys(kq);
+  if(!keys.length) return [];
+  return guideSections(md).map(function(s){
+    var kt = wkeys(s.title), kb = wkeys(s.md), score = 0, hitT = 0;
+    keys.forEach(function(k){
+      if(hasKey(kt, k)){ score += 3; hitT++; }
+      else if(hasKey(kb, k)) score += 1;
+    });
+    /* an example under a matching method is the best of both: it inherits some of
+       its parent's heading */
+    if(s.parent){ var kp = wkeys(s.parent); keys.forEach(function(k){ if(hasKey(kp, k)) score += 1.5; }); }
+    if(WMETA.test(s.title)) score *= 0.35;
+    if(!s.md) score = 0;
+    return {sec:s, score:score, hitT:hitT};
+  }).filter(function(h){ return h.score > 0; })
+    .sort(function(a, b){ return b.score - a.score; })
+    .slice(0, 3);
+}
+
+/* Cut a section down to what a sheet can hold. Some summaries have one big "Worked
+   examples" section, and the start of it is rarely the example that matters, so the
+   window opens on the paragraph that shares the most words with the question and
+   runs forward from there, pulling in the label line above it ("**Example 3**",
+   "### Solved problem 2") so the example arrives with its name. */
+function excerpt(md, keys, max){
+  /* short enough to read whole; longer than that and the window opens on the match */
+  if(md.length <= 1000) return {md:md, before:false, after:false};
+  var blocks = md.split(/\n\n+/), best = 0, bestScore = -1;
+  blocks.forEach(function(b, i){
+    var kb = wkeys(b), s = 0;
+    keys.forEach(function(k){ if(hasKey(kb, k)) s++; });
+    /* a label line matches nothing on its own; a block that is code or a formula
+       run is worth less than the prose that introduces it */
+    if(s > bestScore){ bestScore = s; best = i; }
+  });
+  var start = best;
+  var labelish = function(b){ return /^(#{1,6}\s|\*\*[^*]+\*\*:?\s*$)/.test(b.trim()) || b.trim().length < 160; };
+  /* step back over short label lines, and one short lead-in paragraph */
+  while(start > 0 && labelish(blocks[start - 1]) && (best - start) < 2) start--;
+  var out = [], len = 0, i = start;
+  for(; i < blocks.length; i++){
+    if(len + blocks[i].length > max && i > best) break;
+    out.push(blocks[i]); len += blocks[i].length + 2;
+  }
+  return {md:out.join("\n\n").trim(), before:start > 0, after:i < blocks.length};
+}
+
+function openWhere(course, w, q){
+  BUDDY = {view:"where", concept:null, qs:[], quote:null, asking:false, searches:null,
+           err:null, text:"", thread:[], jump:null, where:{course:course, w:w, q:q}};
+  loadSummary(w, course);
+  render();
+}
+
+var BOOK = '<svg width="13" height="13" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5.2C8.6 3.9 6.4 3.4 3 3.6v11.8c3.4-.2 5.6.3 7 1.6 1.4-1.3 3.6-1.8 7-1.6V3.6c-3.4-.2-5.6.3-7 1.6zM10 5.2V17"/></svg>';
+
+function whereBtn(eye, course, w, q){
+  if(!SOLVE[course] || !q) return;
+  var b = el("button","whereb");
+  b.innerHTML = BOOK + '<span>Where to look</span>';
+  b.title = "Where this kind of question is solved in the study guide";
+  b.onclick = function(){ openWhere(course, w, q); };
+  eye.appendChild(b);
+}
+
+function whereView(body){
+  var wv = BUDDY.where, key = wv.w + ":" + wv.course, md = SUMCACHE[key];
+  var name = NAMES[wv.course] || wv.course;
+  body.appendChild(el("div","lbl","Where this is solved"));
+  var qb = el("div","wq");
+  qb.innerHTML = codeHtml(wv.q.q);
+  body.appendChild(qb);
+
+  var hint = function(){
+    var r = el("div","row");
+    r.appendChild(btn("act ghost","Ask for a hint", function(){
+      BUDDY.view = "ask"; BUDDY.quote = wv.q.q;
+      askBuddy("Give me a hint for this question only: which method to use and what the first step is. Do not solve it and do not give the answer.");
+    }));
+    return r;
+  };
+
+  if(md === undefined || md === null){
+    body.appendChild(el("p","muted","Reading the week " + wv.w + " study guide…"));
+    return;
+  }
+  var hits = md === "__none__" ? [] : findWhere(md, wv.q);
+  /* a hit on the body alone is weak; ask for at least one heading word, or a strong body */
+  if(hits.length && hits[0].hitT === 0 && hits[0].score < 4) hits = [];
+
+  if(!hits.length){
+    body.appendChild(el("p","muted", md === "__none__"
+      ? "There is no study guide for " + esc(name) + " week " + wv.w + " yet."
+      : "Nothing in the week " + wv.w
+        + " guide matches this closely. It tests <b>" + esc(wv.q.concept || "") + "</b>."));
+    var r0 = el("div","row");
+    if(md !== "__none__") r0.appendChild(btn("act","Open the study guide", function(){ openGuide(wv.course, wv.w, TAB); }));
+    body.appendChild(r0);
+    if(wv.q.concept) videoRow(body, wv.course, wv.q.concept);
+    body.appendChild(hint());
+    return;
+  }
+
+  var best = hits[0].sec;
+  body.appendChild(el("div","lbl", esc(name) + " · week " + wv.w + (best.parent ? " · " + esc(best.parent) : "")));
+  body.appendChild(el("h3","wh", esc(best.title)));
+  var ex = excerpt(best.md, Object.keys(wkeys(String(wv.q.concept || "") + " " + String(wv.q.q || ""))), 2400);
+  if(ex.before) body.appendChild(el("p","muted","From partway through the section: this is the part that matches your question."));
+  var pr = el("div","bcard prose");
+  pr.innerHTML = mdToHtml(ex.md);
+  body.appendChild(pr);
+  makeSelectable(pr);
+  if(ex.after) body.appendChild(el("p","muted","It continues in the study guide."));
+
+  var r1 = el("div","row");
+  r1.appendChild(btn("act","Open there in the guide", function(){ openGuide(wv.course, wv.w, TAB, best.title); }));
+  body.appendChild(r1);
+
+  if(hits.length > 1){
+    body.appendChild(el("div","lbl","Also see"));
+    var r2 = el("div","row");
+    hits.slice(1).forEach(function(h){
+      r2.appendChild(btn("chip", esc(h.sec.title), function(){ openGuide(wv.course, wv.w, TAB, h.sec.title); }));
+    });
+    body.appendChild(r2);
+  }
+  body.appendChild(hint());
 }
 /* The thread: user and model turns, oldest first. A follow-up goes out with the whole
    thread so "why is that step allowed?" lands on the step it means. */
@@ -2271,8 +2474,8 @@ function sendBuddy(){
       question: last.text,
       history: thread.slice(0, -1).slice(-8).map(function(t){ return {role:t.role, text:t.text}; }),
       /* Reading a guide means the question is about THAT course, not tonight's. */
-      course: (EXVIEW && EXVIEW.course) ? EXVIEW.course : c.course,
-      week: c.w,
+      course: BUDDY.where ? BUDDY.where.course : ((EXVIEW && EXVIEW.course) ? EXVIEW.course : c.course),
+      week: BUDDY.where ? BUDDY.where.w : c.w,
       topic: c.chk ? c.chk.topic : "",
       who: meName(),
       selection: BUDDY.quote || "",
@@ -2512,7 +2715,9 @@ function askView(body, c){
   var started = th.length > 0;
 
   var top = el("div","row askrow");
-  top.appendChild(btn("chip","← Back", function(){ openBuddy("home"); }));
+  top.appendChild(btn("chip","← Back", function(){
+    if(BUDDY.where){ BUDDY.view = "where"; render(); } else openBuddy("home");
+  }));
   if(started) top.appendChild(btn("chip","New question", newBuddyThread));
   body.appendChild(top);
 
@@ -2655,7 +2860,10 @@ function buddyPanel(root){
   var p = el("div","sheet");
   p.appendChild(el("div","grab"));
   var head = el("div","sheeth");
-  head.innerHTML = '<div><div class="lbl" style="margin:0">'+esc(c.day)+' · '+esc(NAMES[c.course]||c.course)+' · week '+c.w+'</div>'
+  var hl = BUDDY.where
+    ? esc(NAMES[BUDDY.where.course] || BUDDY.where.course) + ' · week ' + BUDDY.where.w
+    : esc(c.day)+' · '+esc(NAMES[c.course]||c.course)+' · week '+c.w;
+  head.innerHTML = '<div><div class="lbl" style="margin:0">' + hl + '</div>'
                  + '<h2 style="margin:2px 0 0;font-size:18px">Kizito</h2></div>';
   var x = btn("chip","Close", function(){ BUDDY = null; render(); });
   head.appendChild(x);
@@ -2686,6 +2894,9 @@ function buddyPanel(root){
   }
   else if(BUDDY.view === "ask"){
     askView(body, c);
+  }
+  else if(BUDDY.view === "where" && BUDDY.where){
+    whereView(body);
   }
   else {
     if(c.missed.length){
@@ -4234,11 +4445,34 @@ function viewGuide(root){
   body.innerHTML = mdToHtml(SUMCACHE[key]);
   root.appendChild(body);
   makeSelectable(body);
+
+  /* Sent here to a particular section: land on its heading, and light it for a moment
+     so the eye finds it. Once, then the person owns the scroll. */
+  if(g.jump){
+    var want = String(g.jump).replace(/[*`]/g, "").replace(/\u2060/g, "").replace(/\s+/g, " ").trim().toLowerCase();
+    g.jump = null;
+    var hs = body.querySelectorAll("h2, h3"), hit = null;
+    for(var i = 0; i < hs.length; i++){
+      if(hs[i].textContent.replace(/\u2060/g, "").replace(/\s+/g, " ").trim().toLowerCase() === want){ hit = hs[i]; break; }
+    }
+    if(hit){
+      setTimeout(function(){
+        var y = hit.getBoundingClientRect().top + window.scrollY - 96;
+        try { window.scrollTo({top: Math.max(0, y), behavior: "smooth"}); } catch(e){ window.scrollTo(0, Math.max(0, y)); }
+        hit.classList.add("lit");
+        setTimeout(function(){ hit.classList.remove("lit"); }, 2600);
+      }, 40);
+    }
+  }
 }
 
-function openGuide(course, w, from){
-  GUIDEVIEW = {course: course, week: w, from: from || TAB};
-  QUIZ = null; MANUAL = null; BUDDY = null;
+function openGuide(course, w, from, jump){
+  from = from || TAB;
+  GUIDEVIEW = {course: course, week: w, from: from, jump: jump || null};
+  /* Opened from inside a question, the question is still there when you come back.
+     Opened from anywhere else, a half-done quiz would be a stale thing to return to. */
+  if(from !== "quiz" && from !== "exam" && from !== "drill"){ QUIZ = null; MANUAL = null; }
+  BUDDY = null;
   TAB = "guide"; syncUrl(); render();
 }
 
@@ -4310,7 +4544,9 @@ function viewExam(root){
 
   var qq = exQ(q.idx);
   var card = el("div","qcard");
-  card.appendChild(el("div","qeyebrow","Question "+(q.idx+1)+" of "+n));
+  var eye = el("div","qeyebrow","Question "+(q.idx+1)+" of "+n);
+  whereBtn(eye, EXVIEW.course, qq.week || wk(), qq);
+  card.appendChild(eye);
   card.appendChild(el("div","qt", codeHtml(qq.q)));
   var opts = el("div","opts");
   qq.options.forEach(function(opt, oi){
@@ -4647,7 +4883,9 @@ function viewQuiz(root){
 
   var qq = q.chk.questions[q.idx];
   var card = el("div","qcard");
-  card.appendChild(el("div","qeyebrow","Question "+(q.idx+1)+" of "+n));
+  var eye = el("div","qeyebrow","Question "+(q.idx+1)+" of "+n);
+  whereBtn(eye, q.chk.course || (q.slot==="fast" ? gg.fast : gg.deep), wk(), qq);
+  card.appendChild(eye);
   card.appendChild(el("div","qt", codeHtml(qq.q)));
 
   if(qq.type === "mcq" && qq.options){
@@ -6077,6 +6315,7 @@ function drillRunner(root){
   var c = el("div","qcard");
   var eye = el("div","qeyebrow", esc((NAMES[it.course] || it.course) + " · week " + it.week));
   if(it.tag) eye.appendChild(el("span","qtag", esc(it.tag)));
+  if(!answered) whereBtn(eye, it.course, it.week, it.q);
   c.appendChild(eye);
   var qt = el("div","qt", codeHtml(it.q.q));
   c.appendChild(qt);
@@ -7043,6 +7282,7 @@ window.KAIZEN = {
   /* the explanation splitter, so a harness can test it on text without sitting a check */
   paras: function(t){ var d = document.createElement('div'); whyInto(d, t); return Array.from(d.querySelectorAll('p')).map(function(x){ return x.innerText; }); },
   code: codeHtml,
+  findWhere: findWhere,
   deepSlots: deepSlots, slots: slotsFor,
   lane: myLane,
   laneOf: function(id, on){ return hash32(id + "|" + on) % 2; },

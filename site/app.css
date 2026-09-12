@@ -384,7 +384,20 @@ button{font:inherit;cursor:pointer}
        padding:20px 19px;box-shadow:var(--shadow-lift);animation:dealin .28s cubic-bezier(.2,.9,.3,1)}
 @keyframes dealin{from{opacity:0;transform:translateY(9px) scale(.985)}to{opacity:1;transform:none}}
 .qcard .qeyebrow{font-size:10.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
-                 color:var(--deep);margin-bottom:9px}
+                 color:var(--deep);margin-bottom:9px;display:flex;align-items:center;gap:8px;min-height:26px}
+/* "Where to look": the section of the study guide this kind of question is solved in.
+   Only on courses that need solving. */
+.whereb{margin-left:auto;display:inline-flex;align-items:center;gap:5px;height:26px;
+  padding:0 10px 0 8px;border-radius:999px;border:1px solid var(--line);background:var(--surface2);
+  color:var(--deep);font:800 10.5px/1 Nunito,sans-serif;letter-spacing:.06em;text-transform:uppercase;
+  cursor:pointer;white-space:nowrap;transition:.13s}
+.whereb:hover{background:var(--deep-bg);border-color:var(--deep)}
+.whereb:active{transform:scale(.97)}
+.wq{font-family:Fredoka;font-weight:500;font-size:15.5px;line-height:1.45;color:var(--ink2);
+  padding:10px 13px;border-left:3px solid var(--line);background:var(--surface2);border-radius:var(--r-sm)}
+.wh{font:600 18px/1.3 Fredoka;margin:0}
+.prose h2.lit,.prose h3.lit{background:var(--deep-bg);box-shadow:0 0 0 6px var(--deep-bg);border-radius:4px;
+  transition:background 1.2s,box-shadow 1.2s}
 .qcard .qt{font-family:Fredoka;font-weight:500;font-size:18px;line-height:1.42;
            margin:0 0 15px;text-wrap:pretty}
 
