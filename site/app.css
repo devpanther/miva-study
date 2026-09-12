@@ -555,6 +555,12 @@ body:has(.party) canvas.confetti{z-index:121}
   transition:box-shadow .18s,transform .18s,background .18s}
 .buddybtn:hover{transform:scale(1.05)}
 .buddybtn:active{box-shadow:var(--shadow);transform:scale(.97)}
+/* The count of tonight's misses: a red badge on the button's shoulder, not a number
+   inside it. The ring in the page colour lifts it off the button. */
+.buddybtn .dot{position:absolute;top:-4px;right:-4px;min-width:22px;height:22px;padding:0 6px;
+  box-sizing:border-box;border-radius:999px;background:var(--bad);color:#fff;
+  border:2.5px solid var(--ground);font:800 12px/17px Nunito,sans-serif;text-align:center;
+  box-shadow:0 2px 6px rgba(0,0,0,.25);pointer-events:none}
 
 /* ---------- Kizito ----------
    Fur takes its colour from the theme so he sits on the button rather than on top of
