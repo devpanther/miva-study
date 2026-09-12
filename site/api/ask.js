@@ -140,6 +140,29 @@ export default async function handler(req, res) {
   /* A passage they highlighted in a summary or a guide. When present it is the subject
      of the question, and the question is usually "explain this". */
   const selection = String(body.selection || "").slice(0, 2000).trim();
+  /* The turns before this one, oldest first, so a follow-up ("why is step 2 allowed?")
+     lands on the answer it is about. The page keeps the thread; the server is stateless.
+     Capped so a long evening of questions cannot push the material out of the window:
+     the last eight turns, each trimmed, and the whole history under 12k characters. */
+  let history = Array.isArray(body.history) ? body.history.slice(-8) : [];
+  history = history
+    .map((t) => ({
+      role: t && t.role === "model" ? "model" : "user",
+      text: String((t && t.text) || "").slice(0, 3000).trim()
+    }))
+    .filter((t) => t.text);
+  /* Gemini wants strict alternation ending on the model's side before the new user
+     turn. Drop a leading model turn and a trailing user turn (an unanswered question
+     from a failed call) rather than send a shape the API refuses. */
+  while (history.length && history[0].role === "model") history.shift();
+  while (history.length && history[history.length - 1].role === "user") history.pop();
+  let total = 0;
+  for (let i = history.length - 1; i >= 0; i--) {
+    total += history[i].text.length;
+    if (total > 12000) { history = history.slice(i + 1); break; }
+  }
+  while (history.length && history[0].role === "model") history.shift();
+  const followUp = history.length > 0;
 
   const summary = course ? await courseSummary(week, course) : "";
 
@@ -164,12 +187,15 @@ export default async function handler(req, res) {
     "You are Kizito, the study partner inside Kaizen, helping " + (who || "a student") + " — a 100-level student at Miva Open University in Nigeria studying eight courses around full-time work. It is late and they are tired. Never introduce yourself or mention your name unless they ask; just answer.",
     "Address them directly as \"you\". Never refer to them in the third person, and never assume their gender.",
     "",
-    "THE USER TURN IS THEIR QUESTION. Answer exactly that. Everything under CONTEXT is background about tonight's session: use it to ground the answer in their course, never as a substitute for what they asked. If the question has nothing to do with the context, ignore the context entirely.",
+    "THE LAST USER TURN IS THEIR QUESTION. Answer exactly that. Everything under CONTEXT is background about tonight's session: use it to ground the answer in their course, never as a substitute for what they asked. If the question has nothing to do with the context, ignore the context entirely.",
+    followUp
+      ? "THIS IS A FOLLOW-UP. The earlier turns are the conversation so far. Answer in the light of what has already been said: build on your earlier answer, refer back to it where that helps (\"the second step above\"), and do not repeat it. If they say they still do not get it, explain it a DIFFERENT way — a smaller example, a picture in words, one step split into two — never the same words again. If the follow-up changes the subject, follow them."
+      : "",
     "",
     "\"answer\" — how to write it:",
     "1. Open with the answer. Never open with agreement, praise, or a verdict on their approach: no \"Yes, your approach is correct\", no \"Great question\", no \"You are likely confusing...\". You cannot see their working, so you cannot assess it.",
     "2. Ground it in THEIR material. Use the lecturer's wording, notation and worked examples wherever the material below covers the point. Where it does not, say so in a few words and then teach the standard treatment.",
-    "3. Be short. Four to eight sentences for a concept. Longer only when working through an example, and then the extra length is the working, not the prose.",
+    "3. Be clear before being short. Explain WHY, not only what: every step in a working carries a few words on why that step is allowed, and a rule comes with the reason it holds. Define a term the first time you use it if a first-year student might not know it. Four to eight sentences is usually enough for a concept; when it needs more, the extra length is the working and the reasons, not the prose. Never leave a step out because it seems obvious.",
     "4. No filler. No \"Remember,\" no \"ask yourself\", no restating the question, no summarising what you just said, no encouragement.",
     "",
     "FORMAT — this is read on a phone, so structure it. Markdown is rendered.",
@@ -198,7 +224,9 @@ export default async function handler(req, res) {
 
   const payload = {
     system_instruction: { parts: [{ text: system }] },
-    contents: [{ role: "user", parts: [{ text: question }] }],
+    contents: history
+      .map((t) => ({ role: t.role, parts: [{ text: t.text }] }))
+      .concat([{ role: "user", parts: [{ text: question }] }]),
     generationConfig: {
       maxOutputTokens: MAX_TOKENS,
       temperature: 0.3,

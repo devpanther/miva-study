@@ -640,7 +640,8 @@ body:has(.party) canvas.confetti{z-index:121}
   touch-action:none}          /* the header is a handle, so the browser must not pan it */
 .sheetb{overscroll-behavior:contain}
 .sheeth .chip{cursor:pointer}
-.sheetb{overflow-y:auto;padding:14px 17px 26px;display:flex;flex-direction:column;gap:9px}
+.sheetb{overflow-y:auto;padding:14px 17px 26px;display:flex;flex-direction:column;gap:9px;
+  flex:1 1 auto;min-height:0}
 .sheetb .lbl{margin:6px 0 0}
 .sheetb .row{margin-top:6px}
 .sheetb textarea{min-height:80px}
@@ -656,6 +657,43 @@ body:has(.party) canvas.confetti{z-index:121}
 .bcard .ba{font-size:14px;color:var(--good);margin-bottom:7px}
 .bcard .bw{font-size:14px;color:var(--ink2);line-height:1.6}
 .bcard.prose{background:var(--surface2)}
+
+/* ---------- asking, as a thread ---------- */
+.askrow{margin-top:0 !important}
+.thread{display:flex;flex-direction:column;gap:14px;margin-top:2px}
+.turn{display:flex;flex-direction:column;min-width:0}
+.turn .who{font:800 11px Nunito,sans-serif;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink3);margin:0 6px 4px}
+.turn .say{font-size:15px;line-height:1.55;color:var(--ink);box-sizing:border-box}
+.turn.you{align-items:flex-end}
+.turn.you .who{color:var(--deep)}
+.turn.you .say{background:var(--buddy);color:var(--buddy-ink);border-radius:16px 16px 4px 16px;padding:10px 14px;
+  max-width:88%;white-space:pre-wrap;overflow-wrap:anywhere}
+.turn.kiz{align-items:flex-start}
+.turn.kiz .say{background:var(--surface2);border-radius:16px 16px 16px 4px;padding:12px 14px;
+  width:100%}
+.turn.thinking .say{color:var(--ink2);display:flex;align-items:center;gap:8px;width:auto}
+.dots{display:inline-flex;gap:3px;align-items:center}
+.dots i{width:6px;height:6px;border-radius:50%;background:var(--ink2);animation:dot 1.2s infinite}
+.dots i:nth-child(2){animation-delay:.2s}
+.dots i:nth-child(3){animation-delay:.4s}
+@keyframes dot{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-2px)}}
+.turn.failed .say{border-left:3px solid var(--fast);width:100%;background:var(--surface2);
+  border-radius:4px 16px 16px 4px;padding:12px 14px}
+.turn.failed .row{margin-top:8px}
+@media (prefers-reduced-motion:reduce){ .dots i{animation:none;opacity:.6} }
+
+/* The composer, pinned under the thread. */
+.sheetf{flex:none;display:flex;align-items:flex-end;gap:8px;
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom, 0px));
+  border-top:1px solid var(--line);background:var(--surface)}
+.sheetf textarea{flex:1 1 0;width:auto;min-width:0;min-height:44px;max-height:150px;height:44px;padding:11px 14px;
+  border-radius:22px;resize:none;line-height:1.4;font-size:15px;overflow-y:auto}
+.send{flex:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--deep);
+  color:#fff;display:grid;place-items:center;cursor:pointer;transition:.13s}
+.send:hover{filter:brightness(1.08)}
+.send:active{transform:scale(.94)}
+.send:disabled{opacity:.4;cursor:default;transform:none}
 .linkish{background:none;border:0;padding:0;color:var(--deep);font:inherit;
   text-align:left;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
 

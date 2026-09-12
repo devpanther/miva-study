@@ -2221,7 +2221,28 @@ function openBuddy(view, concept, quote){
   var c = buddyContext();
   var qs = concept ? whyFor_concept(c.chk, concept) : [];
   BUDDY = {view: view || "home", concept: concept || null, qs: qs, quote: quote || null,
-           asking:false, answer:null, searches:null, err:null, text:""};
+           asking:false, searches:null, err:null, text:"", thread:[], jump:null};
+  render();
+}
+/* The thread: user and model turns, oldest first. A follow-up goes out with the whole
+   thread so "why is that step allowed?" lands on the step it means. */
+function askBuddy(text){
+  var q = String(text !== undefined ? text : BUDDY.text || "").trim();
+  if(!q){ toast("Type a question first"); return; }
+  BUDDY.thread.push({role:"user", text:q});
+  BUDDY.text = "";
+  BUDDY.jump = BUDDY.thread.length - 1;
+  sendBuddy();
+}
+function retryBuddy(){
+  var last = BUDDY.thread[BUDDY.thread.length - 1];
+  if(!last || last.role !== "user") return;
+  BUDDY.jump = BUDDY.thread.length - 1;
+  sendBuddy();
+}
+function newBuddyThread(){
+  BUDDY.thread = []; BUDDY.err = null; BUDDY.searches = null; BUDDY.text = "";
+  BUDDY.asking = false; BUDDY.jump = null;
   render();
 }
 function loadSummary(w, course){
@@ -2239,13 +2260,16 @@ function loadSummary(w, course){
     .then(function(t){ SUMCACHE[w+":"+course] = t || "__none__"; render(); })
     .catch(function(){ SUMCACHE[w+":"+course] = "__none__"; render(); });
 }
-function askBuddy(){
+function sendBuddy(){
   var c = buddyContext();
-  BUDDY.asking = true; BUDDY.err = null; BUDDY.answer = null; render();
+  var thread = BUDDY.thread;
+  var last = thread[thread.length - 1];
+  BUDDY.asking = true; BUDDY.err = null; render();
   fetch("/api/ask", {
     method:"POST", headers:{"Content-Type":"application/json"},
     body: JSON.stringify({
-      question: BUDDY.text,
+      question: last.text,
+      history: thread.slice(0, -1).slice(-8).map(function(t){ return {role:t.role, text:t.text}; }),
       /* Reading a guide means the question is about THAT course, not tonight's. */
       course: (EXVIEW && EXVIEW.course) ? EXVIEW.course : c.course,
       week: c.w,
@@ -2262,16 +2286,23 @@ function askBuddy(){
     })
   }).then(function(r){ return r.json().then(function(d){ return {s:r.status, d:d}; }); })
     .then(function(x){
+      if(!BUDDY || BUDDY.thread !== thread) return;      /* sheet closed meanwhile */
       BUDDY.asking = false;
       if(x.d && x.d.ok){
-        BUDDY.answer = x.d.answer;
+        var s = (x.d.searches && x.d.searches.length) ? x.d.searches : null;
+        thread.push({role:"model", text:x.d.answer, searches:s});
         /* the model just read the week's material, so its searches beat any rule */
-        BUDDY.searches = (x.d.searches && x.d.searches.length) ? x.d.searches : null;
+        BUDDY.searches = s;
+        /* the question stays at the top of the sheet and the answer reads down from it */
+        BUDDY.jump = thread.length - 2;
       }
       else BUDDY.err = (x.d && (x.d.reason || x.d.error)) || "Couldn't get an answer.";
       render();
     })
-    .catch(function(){ BUDDY.asking = false; BUDDY.err = "Couldn't reach the server."; render(); });
+    .catch(function(){
+      if(!BUDDY || BUDDY.thread !== thread) return;
+      BUDDY.asking = false; BUDDY.err = "Couldn't reach the server."; render();
+    });
 }
 /* Kizito. Drawn rather than imported so he inherits the theme, stays a few hundred
    bytes, and can be animated a piece at a time — the ears tilt, the head bobs, the eyes
@@ -2449,6 +2480,172 @@ function dismissable(sheet, scroller, close){
   sheet.addEventListener("touchcancel", end, {passive:true});
 }
 
+/* ---------- the ask view: a thread, not a form ----------
+   The first version was a box, a button and one answer. Reading an answer is when the
+   next question arrives ("why is step 2 allowed?", "do it again with a number"), and
+   that question makes no sense without the answer above it, so this is a conversation:
+   your turns on the right, Kizito's on the left, and a composer pinned under the
+   thread that always asks the follow-up in the light of everything said so far. */
+var COARSE = !!(window.matchMedia && window.matchMedia("(hover:none)").matches);
+var SHEETSCROLL = 0, SHEETVIEW = null;   /* the sheet's scroll position across a re-render */
+
+/* One-tap questions. Typing on a phone at 23:00 is the thing to avoid. */
+var QUICK_QUOTE = [
+  ["Explain this", "Explain this passage."],
+  ["Why is it true?", "Why is this true? Show me the reasoning."],
+  ["Give an example", "Give me one worked example of this."]
+];
+var QUICK_FREE = [
+  ["Explain tonight's topic", "Explain tonight's topic to me simply, from the start."],
+  ["Walk me through an example", "Walk me through one worked example of tonight's topic, one step at a time, saying why each step is allowed."],
+  ["What must I be able to do?", "What must I be able to do with tonight's topic, in the exam? List the skills, each with a one-line example."]
+];
+var QUICK_FOLLOW = [
+  ["Simpler", "I still don't get it. Explain it a simpler way, with a smaller example."],
+  ["Show an example", "Show me a worked example of that, one step per line."],
+  ["Why that step?", "Why is that step allowed? Explain the rule behind it."],
+  ["Go deeper", "Go one level deeper on that."]
+];
+
+function askView(body, c){
+  var th = BUDDY.thread, i;
+  var started = th.length > 0;
+
+  var top = el("div","row askrow");
+  top.appendChild(btn("chip","← Back", function(){ openBuddy("home"); }));
+  if(started) top.appendChild(btn("chip","New question", newBuddyThread));
+  body.appendChild(top);
+
+  body.appendChild(el("div","lbl", BUDDY.quote ? "About the highlighted passage" : "Ask Kizito"));
+
+  if(BUDDY.quote){
+    var qb = el("div","quote");
+    qb.appendChild(el("div","qtext", esc(BUDDY.quote.slice(0, 420) + (BUDDY.quote.length > 420 ? "…" : ""))));
+    if(!started) qb.appendChild(btn("qdrop","Drop it", function(){ BUDDY.quote = null; render(); }));
+    body.appendChild(qb);
+  }
+
+  if(!started){
+    if(!BUDDY.quote){
+      body.appendChild(el("p","muted", BUDDY.concept
+        ? "Ask about <b>" + esc(BUDDY.concept) + "</b>. Your question goes out with the question you missed and your lecturer's own summary, so the answer is about this course, not the subject in general."
+        : (c.chk
+          ? "Your question goes out with tonight's topic and your lecturer's own summary, so the answer is about this course, not the subject in general. Once you have an answer, ask a follow-up under it: Kizito keeps the thread."
+          : "Ask anything from this week's courses. Once you have an answer, ask a follow-up under it: Kizito keeps the thread.")));
+    }
+    /* The one-tap starters only make sense when tonight has a topic; a review night
+       has nothing for "explain tonight's topic" to point at. */
+    var starters = BUDDY.quote ? QUICK_QUOTE : (c.chk ? QUICK_FREE : []);
+    if(starters.length){
+      var quick = el("div","row qrow");
+      starters.forEach(function(q){
+        quick.appendChild(btn("chip qchip", q[0], function(){ askBuddy(q[1]); }));
+      });
+      body.appendChild(quick);
+    }
+    return;
+  }
+
+  var thread = el("div","thread");
+  var lastModel = -1;
+  for(i = 0; i < th.length; i++) if(th[i].role === "model") lastModel = i;
+  th.forEach(function(t, k){
+    var turn = el("div","turn " + (t.role === "user" ? "you" : "kiz"));
+    turn.setAttribute("data-i", String(k));
+    if(t.role === "user"){
+      turn.appendChild(el("div","who","You"));
+      turn.appendChild(el("div","say", esc(t.text)));
+    } else {
+      turn.appendChild(el("div","who","Kizito"));
+      var say = el("div","say prose");
+      say.innerHTML = mdToHtml(t.text);
+      makeSelectable(say);
+      turn.appendChild(say);
+    }
+    thread.appendChild(turn);
+  });
+
+  if(BUDDY.asking){
+    var tk = el("div","turn kiz thinking");
+    tk.appendChild(el("div","who","Kizito"));
+    tk.appendChild(el("div","say","<span class=\"dots\"><i></i><i></i><i></i></span> thinking"));
+    thread.appendChild(tk);
+  }
+  if(BUDDY.err){
+    var e1 = el("div","turn kiz failed");
+    e1.appendChild(el("div","who","Kizito"));
+    var es = el("div","say");
+    es.appendChild(el("div",null, esc(BUDDY.err)));
+    var er = el("div","row");
+    er.appendChild(btn("chip","Try again", retryBuddy));
+    es.appendChild(er);
+    e1.appendChild(es);
+    thread.appendChild(e1);
+  }
+  body.appendChild(thread);
+
+  /* After the latest answer: where to watch it, and the follow-ups worth one tap. */
+  if(!BUDDY.asking && !BUDDY.err && lastModel === th.length - 1){
+    videoRow(body, c.course, BUDDY.concept);
+    body.appendChild(el("div","lbl","Follow up"));
+    var fr = el("div","row qrow");
+    QUICK_FOLLOW.forEach(function(q){
+      fr.appendChild(btn("chip qchip", q[0], function(){ askBuddy(q[1]); }));
+    });
+    body.appendChild(fr);
+  }
+
+  /* Bring the question just asked to the top of the sheet, so it and the answer that
+     follows are what you see. Done once per question, then the person owns the scroll. */
+  if(BUDDY.jump !== null && BUDDY.jump !== undefined){
+    var want = BUDDY.jump; BUDDY.jump = null;
+    setTimeout(function(){
+      var sb = body, node = body.querySelector('.turn[data-i="' + want + '"]');
+      if(!node || !sb) return;
+      var y = node.offsetTop - sb.offsetTop - 8;
+      try { sb.scrollTo({top: Math.max(0, y), behavior: "smooth"}); } catch(e){ sb.scrollTop = Math.max(0, y); }
+    }, 30);
+  }
+}
+
+/* The composer sits under the thread, not inside it, so it is there whatever you have
+   scrolled to. Enter sends on a keyboard; on a phone Enter is a new line and the arrow
+   sends, because a thumb hits Enter mid-sentence. */
+function askComposer(sheet){
+  var started = BUDDY.thread.length > 0;
+  var f = el("div","sheetf");
+  var ta = el("textarea");
+  ta.rows = 1;
+  ta.placeholder = started ? "Ask a follow-up…"
+                 : (BUDDY.quote ? "…or ask your own question about it"
+                 : (BUDDY.concept ? "Why is " + BUDDY.concept + " actually true?" : "Ask anything about tonight's session…"));
+  ta.value = BUDDY.text || "";
+  ta.setAttribute("aria-label", started ? "Follow-up question" : "Your question");
+  var grow = function(){
+    ta.style.height = "auto";
+    ta.style.height = Math.min(150, Math.max(44, ta.scrollHeight)) + "px";
+  };
+  ta.oninput = function(){ BUDDY.text = ta.value; grow(); };
+  ta.onkeydown = function(e){
+    if(e.key === "Enter" && !e.shiftKey && !COARSE && !e.isComposing){
+      e.preventDefault();
+      if(!BUDDY.asking) askBuddy(ta.value);
+    }
+  };
+  f.appendChild(ta);
+  var go = el("button","send");
+  go.setAttribute("aria-label", "Send");
+  go.innerHTML = '<svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 16V4M4.5 9.5 10 4l5.5 5.5"/></svg>';
+  if(BUDDY.asking) go.setAttribute("disabled","");
+  go.onclick = function(){ if(!BUDDY.asking) askBuddy(ta.value); };
+  f.appendChild(go);
+  sheet.appendChild(f);
+  setTimeout(grow, 0);
+  /* A keyboard user has just opened a place to type; a phone gets no keyboard popping
+     over the chips they were about to tap. */
+  if(!COARSE && !BUDDY.asking) setTimeout(function(){ try { ta.focus({preventScroll:true}); } catch(e){} }, 60);
+}
+
 function buddyPanel(root){
   var c = buddyContext();
   var back = el("div","scrim");
@@ -2488,59 +2685,7 @@ function buddyPanel(root){
     body.appendChild(br);
   }
   else if(BUDDY.view === "ask"){
-    body.appendChild(el("div","lbl", BUDDY.quote ? "About the highlighted passage" : "Ask"));
-
-    if(BUDDY.quote){
-      var qb = el("div","quote");
-      qb.appendChild(el("div","qtext", esc(BUDDY.quote.slice(0, 420) + (BUDDY.quote.length > 420 ? "…" : ""))));
-      var qx = btn("qdrop","Drop it", function(){ BUDDY.quote = null; render(); });
-      qb.appendChild(qx);
-      body.appendChild(qb);
-
-      /* The three questions worth asking about a passage, so it is one tap rather
-         than a typing job on a phone at 23:00. */
-      var quick = el("div","row qrow");
-      [["Explain this", "Explain this passage."],
-       ["Why is it true?", "Why is this true? Show me the reasoning."],
-       ["Give an example", "Give me one worked example of this."]
-      ].forEach(function(q){
-        quick.appendChild(btn("chip qchip", q[0], function(){ BUDDY.text = q[1]; askBuddy(); }));
-      });
-      body.appendChild(quick);
-    } else {
-      body.appendChild(el("p","muted","Your question goes out with tonight's topic, your lecturer's own summary, and what you got wrong — so the answer is about this course, not the subject in general."));
-    }
-
-    var ta = el("textarea");
-    ta.placeholder = BUDDY.quote ? "…or ask your own question about it"
-                   : (BUDDY.concept ? "Why is " + BUDDY.concept + " actually true?" : "Ask anything about tonight's session…");
-    ta.value = BUDDY.text || "";
-    ta.oninput = function(){ BUDDY.text = ta.value; };
-    body.appendChild(ta);
-    var ar = el("div","row");
-    var go = btn("act", BUDDY.asking ? "Thinking…" : "Ask", function(){
-      if(!(BUDDY.text||"").trim()){ toast("Type a question first"); return; }
-      askBuddy();
-    });
-    if(BUDDY.asking) go.setAttribute("disabled","");
-    ar.appendChild(go);
-    body.appendChild(ar);
-
-    if(BUDDY.err){
-      var e1 = el("div","bcard");
-      e1.style.borderLeft = "3px solid var(--fast)";
-      e1.appendChild(el("div","bw", esc(BUDDY.err)));
-      e1.appendChild(el("p","muted","<br>The concepts and video searches below still work — they need no key at all."));
-      body.appendChild(e1);
-    }
-    if(BUDDY.answer){
-      var an = el("div","bcard prose");
-      an.innerHTML = mdToHtml(BUDDY.answer);
-      body.appendChild(an);
-      makeSelectable(an);
-      videoRow(body, c.course, BUDDY.concept);
-    }
-    body.appendChild(btn("act ghost","← Back", function(){ openBuddy("home"); }));
+    askView(body, c);
   }
   else {
     if(c.missed.length){
@@ -2589,7 +2734,10 @@ function buddyPanel(root){
   }
 
   p.appendChild(body);
+  if(BUDDY.view === "ask") askComposer(p);
   root.appendChild(p);
+  if(SHEETSCROLL && BUDDY.view === SHEETVIEW) body.scrollTop = SHEETSCROLL;
+  SHEETVIEW = BUDDY.view;
   dismissable(p, body, function(){ BUDDY = null; render(); });
 }
 
@@ -6422,6 +6570,10 @@ function render(){
   var root = document.getElementById("root");
   SCROLLKEY = null;          /* stop recording while the DOM is swapped out */
   clearSelPill();
+  /* The sheet is rebuilt with everything else, which would throw its scroll position
+     away each time an answer arrives. Remember it, and hand it back to the new sheet. */
+  var oldSheet = document.querySelector(".sheetb");
+  SHEETSCROLL = oldSheet ? oldSheet.scrollTop : 0;
   root.innerHTML = "";
 
   var wi = weekInfo();
