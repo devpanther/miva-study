@@ -49,7 +49,7 @@ Read the chain as an argument, because that is how she writes it. Equation 1 is 
 
 Given that: **V₁ = 120 V and V₂ = 240 V.**
 Using, **N₂/N₁ = V₂/V₁ = 240/120 = 2.**
-"This means the secondary coil (connected to the coffeemaker) should have **twice as many turns** as the primary coil."
+This means the secondary coil (connected to the coffeemaker) should have **twice as many turns** as the primary coil.
 
 Since N₂ > N₁, this is a **step-up** transformer. Note she assigns V₁ = 120 V from the *line*, not from the appliance's rating — the appliance is the load, and the load is always on the secondary.
 
@@ -57,7 +57,7 @@ Since N₂ > N₁, this is a **step-up** transformer. Note she assigns V₁ = 12
 
 **∴ I₁ = P_av/V₁ = 960/120 = 8.0 A**
 
-"Therefore, the secondary current is"
+Therefore, the secondary current is
 
 **I₂ = P_av/V₂ = 960/240 = 4.0 A**
 
@@ -85,7 +85,7 @@ The 15 Ω is what the 120 V line **appears** to be driving; the 60 Ω is the cof
 
 Given that: **V₁ = 240 V and V₂ = 120 V.**
 Using, **N₂/N₁ = V₂/V₁ = 120/240 = 1/2.**
-"This means the secondary coil should have **half as many turns** as the primary coil."
+This means the secondary coil should have **half as many turns** as the primary coil.
 
 Since N₂ < N₁, this is a **step-down** transformer — the mirror image of Example 1, with the same two numbers swapped between primary and secondary.
 
@@ -93,7 +93,7 @@ Since N₂ < N₁, this is a **step-down** transformer — the mirror image of E
 
 **∴ I₁ = P_av/V₁ = 1600/240 = 6.67 A**
 
-"Therefore, the secondary current is"
+Therefore, the secondary current is
 
 **I₂ = P_av/V₂ = 1600/120 = 13.3 A**
 
@@ -117,7 +117,7 @@ and independently R = V₂/I₂ = 120/13.3 = 9 Ω ✓ (or 120²/1600 = 14400/160
 
 ### Her closing SUMMARY slide (22)
 
-"Transformers are used to change the voltage of AC electricity. This is useful because it allows electricity to be transmitted over long distances at high voltages, and then the voltage can be reduced to a safe level for homes and businesses. Transformers are also used to **isolate electrical circuits from each other**. This is useful for safety reasons, and it can also improve the performance of electrical devices."
+Transformers are used to change the voltage of AC electricity. This is useful because it allows electricity to be transmitted over long distances at high voltages, and then the voltage can be reduced to a safe level for homes and businesses. Transformers are also used to **isolate electrical circuits from each other**. This is useful for safety reasons, and it can also improve the performance of electrical devices.
 
 *(The isolation claim appears here for the first and only time; nothing earlier in the deck develops it. Know the sentence, do not expect to calculate with it.)*
 

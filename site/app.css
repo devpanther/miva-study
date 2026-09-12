@@ -233,6 +233,26 @@ button{font:inherit;cursor:pointer}
 .missedlist{margin:6px 0 0;padding-left:18px;font-size:14px;color:var(--ink)}
 .missedlist li{margin:3px 0}
 
+/* A block of working inside a study guide: the lines of a derivation or a calculation,
+   set in from the prose with a rule beside it, so it reads as steps rather than as a
+   sentence that happens to contain symbols. */
+.prose p.math{margin:10px 0 12px 4px;padding:6px 0 6px 14px;border-left:3px solid var(--deep-bg);
+  line-height:1.75;font-variant-numeric:tabular-nums;letter-spacing:.005em}
+.prose p.math b{font-weight:600}
+/* A long paragraph broken at sentence ends: the pieces sit closer than separate
+   paragraphs would, so it still reads as one thought. */
+.prose p.cont{margin-top:-4px}
+/* The editorial preamble, closed until asked for. */
+.prose details.scope{margin:0 0 14px;padding:8px 12px;border-radius:var(--r-sm);
+  background:var(--surface2);border:1px solid var(--line)}
+.prose details.scope summary{cursor:pointer;font-weight:700;font-size:13px;color:var(--ink2);
+  list-style:none;display:flex;align-items:center;gap:6px}
+.prose details.scope summary::before{content:"";width:0;height:0;border:5px solid transparent;
+  border-left:6px solid var(--ink3);margin-right:2px;transition:transform .15s}
+.prose details.scope[open] summary::before{transform:rotate(90deg)}
+.prose details.scope summary::-webkit-details-marker{display:none}
+.prose details.scope p{margin:8px 0 2px;font-size:14px;color:var(--ink2)}
+
 /* ---------- buttons ---------- */
 .act{border:0;background:var(--deep);color:#fff;font-weight:700;font-size:14.5px;
      padding:10px 17px;border-radius:var(--r-pill);box-shadow:var(--shadow);

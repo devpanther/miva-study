@@ -51,12 +51,12 @@ Read the nesting. Relations impose no condition at all; functions are the relati
 
 **Given f(x) = 2x + 3.**
 
-"In this linear function, for each input x, we multiply it by 2 and then add 3 to get the output f(x)."
+In this linear function, for each input x, we multiply it by 2 and then add 3 to get the output f(x).
 
 If you plug in x = 2, you'll get
 **f(2) = 2(2) + 3 = 4 + 3 = 7.**
 
-"So, for an input of 2, the output is 7."
+So, for an input of 2, the output is 7.
 
 The slide carries a graph of f(x) = 2x + 3: a straight line rising left to right, crossing the y-axis at 3.
 
@@ -66,12 +66,12 @@ Note the order she spells out: **multiply first, then add**. Computing 2 + 3 fir
 
 **Given f(x) = x² − 4.**
 
-"This quadratic function takes the square of the input x and subtracts 4."
+This quadratic function takes the square of the input x and subtracts 4.
 
 If you input x = 3, you'll calculate
 **f(3) = (3)² − 4 = 9 − 4 = 5.**
 
-"So, for an input of 3, the output is 5."
+So, for an input of 3, the output is 5.
 
 The slide carries the graph: a parabola opening upward with its lowest point at (0, −4), crossing the x-axis at −2 and 2.
 
@@ -124,11 +124,11 @@ Her method in one line: **make x the subject, then ask which y produce a legal x
 
 **y = 2 − |x − 3|**
 
-"For an absolute function, if **|x − 3| ≥ 0**"
+For an absolute function, if **|x − 3| ≥ 0**
 
-"Then, **−|x − 3| ≤ 0**"
+Then, **−|x − 3| ≤ 0**
 
-"Add 2 to both sides"
+Add 2 to both sides
 
 **2 − |x − 3| ≤ 0 + 2**
 **2 − |x − 3| ≤ 2**
@@ -173,16 +173,16 @@ Note that here, unlike Example 3, **subtracting 8 does not reverse the inequalit
 
 **y = 3x − 7**
 
-"Switch x with y"
+Switch x with y
 
 **x = 3y − 7**
 
-"Then, isolate the y variable"
+Then, isolate the y variable
 
 **3y = x + 7**
 **y = (x + 7)/3**
 
-"Thus,"
+Thus,
 
 **f⁻¹ = (x + 7)/3**
 

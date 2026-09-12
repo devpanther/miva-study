@@ -111,7 +111,7 @@ Why this choice works: differentiating x turns it into 1 and makes it vanish fro
 ∫3x²sin(x)dx = 3x²(−cos(x)) − ∫ −cos(x)(6x dx)
 = −3x²cos(x) + 6∫x·cos(x)dx
 
-"To again evaluate ∫x·cos(x)dx, let u = x and dv = cos(x)dx. Then du = dx, v = sin(x), so that"
+To again evaluate ∫x·cos(x)dx, let u = x and dv = cos(x)dx. Then du = dx, v = sin(x), so that
 
 ∫x·cos(x)dx = x·sin(x) − ∫sin(x)dx = x·sin(x) + cos(x)
 
@@ -153,7 +153,7 @@ Note also that she leaves the 6 outside and only multiplies it in on the final l
 
 ∫cos²(u)du = u/2 + sin(2u)/4 + C
 
-"Setting back u = sin⁻¹(x), we obtain"
+Setting back u = sin⁻¹(x), we obtain
 
 ∫√(1 − x²)dx = sin⁻¹(x)/2 + sin(2·sin⁻¹(x))/4 + C
 
@@ -177,7 +177,7 @@ Four separate ideas in one example:
 
 ∫√(4 − 9x²)dx = ∫√(4(1 − (3x/2)²))dx = ∫2√(1 − (3x/2)²)dx
 
-"Now, let 3x/2 = sin(u), so that dx = (2/3)cos(u)du. Hence, our integral becomes"
+Now, let 3x/2 = sin(u), so that dx = (2/3)cos(u)du. Hence, our integral becomes
 
 ∫2√(1 − (3x/2)²)dx = ∫2√(1 − sin²(u))·(2/3)cos(u)du
 = (4/3)∫cos²(u)du = 4u/6 + 4sin(2u)/12 + C

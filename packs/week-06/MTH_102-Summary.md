@@ -147,7 +147,7 @@ She expands the denominator (1 + x²)² into 1 + 2x² + x⁴ rather than leaving
 
 **Step 3 — the third derivative, quotient rule again (slide 12).**
 
-"Differentiating the second derivative, we get"
+Differentiating the second derivative, we get
 
 u(x) = 2 − 2x²,  v(x) = 1 + 2x² + x⁴
 u′(x) = −4x,   v′(x) = 4x + 4x³
@@ -162,7 +162,7 @@ Check the collection of terms yourself, it is where marks are lost: x terms −4
 
 **Step 4 — the fourth derivative, quotient rule a third time (slides 13–14).**
 
-"Lastly, differentiating the third derivative, we obtain"
+Lastly, differentiating the third derivative, we obtain
 
 u(x) = 4x⁵ − 8x³ − 12x,   v(x) = 1 + 4x² + 6x⁴ + 4x⁶ + x⁸
 u′(x) = 20x⁴ − 24x² − 12,  v′(x) = 8x + 24x³ + 24x⁵ + 8x⁷

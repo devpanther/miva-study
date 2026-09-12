@@ -41,13 +41,13 @@ Solution, exactly as she writes it:
 ∫₀^∞ xe⁻ˣdx = lim(t→∞) ∫₀ᵗ xe⁻ˣdx = lim(t→∞) [−xe⁻ˣ − e⁻ˣ]|₀ᵗ
 = lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 0 + e⁻⁰] = lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1]
 
-"Notice that lim(t→∞)[−te⁻ᵗ] → −∞/∞. Therefore, applying **L'Hôpital's Rule**, we have"
+Notice that lim(t→∞)[−te⁻ᵗ] → −∞/∞. Therefore, applying **L'Hôpital's Rule**, we have
 
 lim(t→∞)[−te⁻ᵗ] = lim(t→∞)[−t/eᵗ] = lim(t→∞)[−1/eᵗ] = 0, so that
 
 ∫₀^∞ xe⁻ˣdx = lim(t→∞)[−te⁻ᵗ − e⁻ᵗ + 1] = (0 + 0 + 1) = **1**.
 
-"Therefore, ∫₀^∞ xe⁻ˣdx **converges to 1**."
+Therefore, ∫₀^∞ xe⁻ˣdx **converges to 1**.
 
 Four moves worth naming, because each is a separate mark:
 - **Replace ∞ by t first.** Everything after that is an ordinary definite integral.
@@ -63,7 +63,7 @@ Four moves worth naming, because each is a separate mark:
 = lim(a→−∞) ∫ₐ⁰ (2x² − x + 3)dx + lim(b→∞) ∫₀ᵇ (2x² − x + 3)dx
 = lim(a→−∞) [2x³/3 − x²/2 + 3x]|ₐ⁰ + lim(b→∞) [2x³/3 − x²/2 + 3x]|₀ᵇ = **∞**
 
-"Therefore, ∫₋∞^∞(2x² − x + 3)dx **diverges**."
+Therefore, ∫₋∞^∞(2x² − x + 3)dx **diverges**.
 
 What to copy from this example:
 - **She splits at 0** and gives the two moving limits **two different letters**, a → −∞ and b → ∞. They are independent; you may not tie them together as a single t.
@@ -85,14 +85,14 @@ Read the bracket shapes: **the square bracket is the good end, the round bracket
 
 **Determine whether ∫₋₁² (1/x⁴) dx is convergent or divergent.**
 
-"The function is undefined at **x = 0**. Therefore, we could define this integral as"
+The function is undefined at **x = 0**. Therefore, we could define this integral as
 
 ∫₋₁²(1/x⁴)dx = ∫₋₁⁰(1/x⁴)dx + ∫₀²(1/x⁴)dx
 
 ∫₋₁²(1/x⁴)dx = lim(c→0⁻) ∫₋₁ᶜ (1/x⁴)dx + lim(b→0⁺) ∫_b² (1/x⁴)dx
 = lim(c→0⁻) [−1/(3x³)]|₋₁ᶜ + lim(b→0⁺) [−1/(3x³)]|_b²
 
-"Notice that [−1/(3x³)] → −∞ as c → 0⁻ and [−1/(3x³)] → −∞ as b → 0⁺. Therefore, ∫₋₁²(1/x⁴)dx is **divergent**."
+Notice that [−1/(3x³)] → −∞ as c → 0⁻ and [−1/(3x³)] → −∞ as b → 0⁺. Therefore, ∫₋₁²(1/x⁴)dx is **divergent**.
 
 The verdict is right, the split is right, the antiderivative is right — **but the slide's sign on the first limit is wrong, and the second line is easy to misread.** Do the substitutions out in full:
 
@@ -118,11 +118,11 @@ Both pieces run to **+∞**, so the integral is divergent — which is what she 
 
 **Determine whether ∫₂^∞ cos²(x)/x² dx converges or diverges.**
 
-"For all x ≥ 2, it can be seen that since **0 ≤ cos²(x) ≤ 1**, then **cos²(x)/x² ≤ 1/x²**. Let **f(x) = 1/x²** and **g(x) = cos²(x)/x²**. Then **0 ≤ g(x) ≤ f(x)**. Now,"
+For all x ≥ 2, it can be seen that since **0 ≤ cos²(x) ≤ 1**, then **cos²(x)/x² ≤ 1/x²**. Let **f(x) = 1/x²** and **g(x) = cos²(x)/x²**. Then **0 ≤ g(x) ≤ f(x)**. Now,
 
 ∫₂^∞ f(x)dx = ∫₂^∞ (1/x²)dx = lim(t→∞) ∫₂ᵗ (1/x²)dx = (−1/∞ − (−1)/2) = **1/2**
 
-"Since ∫₂^∞ (1/x²)dx is convergent, then by the comparison test, ∫₂^∞ cos²(x)/x² dx is also **convergent**."
+Since ∫₂^∞ (1/x²)dx is convergent, then by the comparison test, ∫₂^∞ cos²(x)/x² dx is also **convergent**.
 
 > **Note 1.** The integral **∫₁^∞ (1/xᵖ)dx converges if p > 1 and diverges if p ≤ 1**.
 
@@ -137,7 +137,7 @@ Three things to take:
 
 **Determine whether ∫₃^∞ 1/√(x² − 1) dx converges or diverges.**
 
-"For all x ≥ 3, it can be seen that **1/√(x² − 1) ≥ 1/x**. By the p-integral test, **∫₃^∞ (1/x)dx diverges** by the above Note 1, since **p = 1**. Therefore, by the comparison test, ∫₃^∞ 1/√(x² − 1) dx is **divergent**."
+For all x ≥ 3, it can be seen that **1/√(x² − 1) ≥ 1/x**. By the p-integral test, **∫₃^∞ (1/x)dx diverges** by the above Note 1, since **p = 1**. Therefore, by the comparison test, ∫₃^∞ 1/√(x² − 1) dx is **divergent**.
 
 Where the inequality comes from, spelled out: x² − 1 < x², so √(x² − 1) < x for x ≥ 3, and taking reciprocals of two positive numbers **reverses** the inequality: 1/√(x² − 1) > 1/x. In her lettering, **g(x) = 1/x** (the small one, whose integral she knows diverges) and **f(x) = 1/√(x² − 1)** (the big one). That is clause 2: ∫g divergent ⟹ ∫f divergent.
 
@@ -149,7 +149,7 @@ Notice the deliberate design: this is the one example where the messy integrand 
 
 **Determine whether ∫₁^∞ 1/√(x³ + 7) dx converges or diverges.**
 
-"For all x ≥ 1, it can be seen that **x³ + 7 ≥ x³**, and **√(x³ + 7) ≥ √(x³)**, implying that **1/√(x³ + 7) ≤ 1/√(x³)**. Let **f(x) = 1/√(x³)** and **g(x) = 1/√(x³ + 7)**. Then **0 ≤ g(x) ≤ f(x)**. Now,"
+For all x ≥ 1, it can be seen that **x³ + 7 ≥ x³**, and **√(x³ + 7) ≥ √(x³)**, implying that **1/√(x³ + 7) ≤ 1/√(x³)**. Let **f(x) = 1/√(x³)** and **g(x) = 1/√(x³ + 7)**. Then **0 ≤ g(x) ≤ f(x)**. Now,
 
 ∫₁^∞ f(x)dx = ∫₁^∞ (1/√(x³))dx = ∫₁^∞ (1/x^(3/2))dx. "By the above Note 1, **p = 3/2 > 1**. Therefore, ∫₁^∞ (1/x^(3/2))dx is **convergent**. By the comparison test, ∫₁^∞ 1/√(x³ + 7) dx is **convergent**."
 

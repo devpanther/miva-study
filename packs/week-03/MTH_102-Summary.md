@@ -57,10 +57,10 @@ This example exists to make one point: **the denominator did not have to be posi
 Solution: "You notice how if we use direct substitution it will result to an indeterminate form. i.e."
 (2² − 4)/(2 − 2) = **0/0**
 
-"Now, let's factor the numerator: (x − 2)(x + 2)"
+Now, let's factor the numerator: (x − 2)(x + 2)
 so that lim x→2 [(x − 2)(x + 2)]/(x − 2)
 
-"Thus, cancel the common factor to get"
+Thus, cancel the common factor to get
 lim x→2 (x + 2)
 = (2 + 2)
 = **4**
@@ -75,7 +75,7 @@ Solution: "This is a complex fraction. We multiply the numerator and denominator
 
 lim x→2 (2 − x)/[2x(x − 2)]
 
-"Then, we factor out **−1**, to get"
+Then, we factor out **−1**, to get
 
 lim x→2 [−1(x − 2)]/[2x(x − 2)] = lim x→2 (−1)/(2x) = (−1)/(2(2)) = **−1/4**
 
@@ -108,7 +108,7 @@ lim x→0 [(√(x+9) − 3)/x] · [(√(x+9) + 3)/(√(x+9) + 3)]
 = lim x→0 [(x + 9) − 9]/[x(√(x+9) + 3)]
 = lim x→0 x/[x(√(x+9) + 3)]
 
-"Since x is common, cancel it out so that we have:"
+Since x is common, cancel it out so that we have:
 = lim x→0 1/(√(x + 9) + 3)
 = 1/(√(0 + 9) + 3) = 1/(√9 + 3)
 = 1/(3 + 3) = **1/6**
@@ -158,7 +158,7 @@ Solution: "Given lim x→0 f(x)/g(x), and applying L'Hôpital's rule, such that"
 f(x) = sin x, g(x) = x
 f′(x) = cos x, g′(x) = 1
 
-"we have lim x→0 f′(x)/g′(x), to be lim x→0 (cos x)/1"
+we have lim x→0 f′(x)/g′(x), to be lim x→0 (cos x)/1
 = cos(0)/1 = 1/1 = **1**
 
 The layout is worth copying exactly: **name f and g, differentiate each on its own line, then form the new quotient.** Writing it this way makes it visually impossible to slip into the quotient rule.
@@ -169,7 +169,7 @@ The layout is worth copying exactly: **name f and g, differentiate each on its o
 
 Solution:
 lim x→∞ 2x/eˣ
-"Since direct substitution results to an indeterminate form, so we differentiate again,"
+Since direct substitution results to an indeterminate form, so we differentiate again,
 lim x→∞ 2/eˣ = 2/e^∞ = 2/∞ = **0**
 
 Read what she actually did. The first line is already **one** application of the rule: x² differentiates to 2x, eˣ to eˣ. She then substitutes, finds ∞/∞ again, and applies it a **second** time to reach 2/eˣ. Now the top is a constant and the bottom grows without bound, so the form is no longer indeterminate and the answer is 0. The rule is applied as many times as the indeterminate form survives, and not once more.
@@ -292,7 +292,7 @@ The answer 5 is correct either way, because both bounds happen to collapse to 5 
 
 Example: Given lim x→6 (1/x²) = 1/[lim x→6 (x²)], prove that the left-hand side is equal to the right-hand side.
 Solution: (1/6²) = 1/(6²) ⟹ 1/36 = 1/36
-"Therefore, the L.H.S = R.H.S"
+Therefore, the L.H.S = R.H.S
 
 It is a verification, not a calculation: she is checking the property on a case where you can compute both sides independently. If a question says "prove L.H.S = R.H.S", evaluate each side separately and put them beside each other.
 

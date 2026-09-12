@@ -143,7 +143,7 @@ Slide 17, verbatim: "Starting at *a* and traveling counterclockwise with the cur
 
 **i.e. I = 8/16 = 0.5 A**
 
-"Since I is positive, our assumed current direction is correct."
+Since I is positive, our assumed current direction is correct.
 
 Term by term, so the signs can be defended rather than remembered:
 

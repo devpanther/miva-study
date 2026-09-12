@@ -159,7 +159,7 @@ A₁ = ∫₀^(π/4)(cos(x) − sin(x))dx = [sin(x) + cos(x)]₀^(π/4)
 A₂ = ∫_(π/4)^(π/2)(sin(x) − cos(x))dx = [−cos(x) − sin(x)]_(π/4)^(π/2)
 = (0 − 1) − (−1/√2 − 1/√2) = **−1 + 2/√2**
 
-"Therefore, the area bounded by y = sin(x) and y = cos(x) for 0 ≤ x ≤ π/2 is given by"
+Therefore, the area bounded by y = sin(x) and y = cos(x) for 0 ≤ x ≤ π/2 is given by
 
 A = A₁ + A₂ = (2/√2 − 1) + (−1 + 2/√2) = **2√2 − 2**
 

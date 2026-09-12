@@ -76,7 +76,7 @@ are **magnitudes**; they are always quoted positive.
 
 **V = V_max sin ωt**, with **ω = 2πf = 2π/T** (slide 7 adds: "f is the frequency of the source, T
 is the period of the source"). Slide 7 closes with the sentence that fixes the sign convention:
-"The voltage is **positive during one half of the cycle and negative during the other half**."
+The voltage is **positive during one half of the cycle and negative during the other half**.
 
 Units, carefully: f in Hz (s⁻¹), T in s, ω in **rad s⁻¹**. The three are one equation read three
 ways — f = 1/T, ω = 2πf, ω = 2π/T. If a question gives you ω and asks for f, divide by 2π; if it

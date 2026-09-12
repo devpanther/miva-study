@@ -1631,6 +1631,16 @@ function mdToHtml(src){
 
   function span(t){
     t = esc(t);
+    /* A formula must not break at its operator. "|x − 3| ≥ 0" was wrapping as "|x −" on
+       one line and "3| ≥ 0" on the next, which is two fragments, not an inequality. The
+       spaces either side of a maths operator become non-breaking, so the expression
+       moves to the next line as one piece. The symbols here are the maths ones (U+2212
+       minus, not a hyphen), so prose is untouched. */
+    t = t.replace(/ ([=+\u2212\u00d7\u00f7\u2264\u2265\u2260\u2192\u27f9\u21d2\u2248\u221d]) /g, '\u00a0$1\u00a0');
+    /* The vertical bar is a "break after" character in Unicode line breaking, so
+       "|x − 3| ≤ 0" could still split after the closing bar even with the spaces made
+       non-breaking. A word joiner after each bar closes that gap. */
+    t = t.replace(/\|/g, '|\u2060');
     t = t.replace(/`([^`]+)`/g, '<code>$1</code>');
     t = t.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
     t = t.replace(/(^|[\s(])\*([^*\n]+)\*/g, '$1<i>$2</i>');
@@ -1701,7 +1711,53 @@ function mdToHtml(src){
     while(i < lines.length && !/^\s*$/.test(lines[i]) && !/^(#{1,6}\s|```|\s*\||\s*>|\s*[-*+]\s|\s*\d+[.)]\s)/.test(lines[i])){
       para.push(lines[i]); i++;
     }
-    if(para.length) out.push('<p>' + span(para.join(" ")) + '</p>');
+    /* A newline inside a paragraph is a line break, not a space.
+
+       Standard markdown folds consecutive lines into one paragraph. Every summary in
+       this repo writes one item per line on purpose: the steps of a derivation, the
+       lines of a calculation, a list of definitions each opening in bold. Folded, the
+       three lines of a range argument became "2 − |x − 3| ≤ 0 + 2 2 − |x − 3| ≤ 2 y ≤ 2",
+       which is not a derivation, it is a string of symbols. Checked across all 84
+       summaries: not one multi-line paragraph is a hard-wrapped sentence, so this loses
+       nothing and restores every working. */
+    if(para.length){
+      /* A paragraph that is all formula lines is a piece of working, and it is set
+         apart so the eye can tell the calculation from the prose around it. A line is
+         a formula line when it carries an operator and fewer than four ordinary
+         words, or is entirely bold (which is how the summaries mark a result). */
+      var working = para.every(function(x){
+        var y = x.trim().replace(/\*\*/g, "");
+        var words = (y.match(/[A-Za-z]{3,}/g) || []).length;
+        return /[=\u2212\u2264\u2265\u2260\u2192\u27f9\u221a\u222b]/.test(y) && words < 4;
+      });
+      var one = para.length === 1 ? para[0].trim() : null;
+
+      /* The scope note. Every rewritten summary opens with a paragraph of editorial
+         ("this rewrite follows the deck slide-for-slide, she does not cover…") that runs
+         to a thousand characters before the first definition. It is worth having and
+         not worth reading first, so it opens closed. */
+      if(one && /^\*\*Scope note:?\*\*/i.test(one)){
+        out.push('<details class="scope"><summary>Scope of this week\u2019s deck</summary><p>'
+          + span(one.replace(/^\*\*Scope note:?\*\*\s*/i, "")) + '</p></details>');
+      }
+      /* A wall of prose is broken at sentence ends into pieces a phone can hold. The
+         same rule as the explanations under a check: nothing under 400 characters is
+         touched, and a piece is never left as a fragment. */
+      else if(one && !working && one.length > 400){
+        var parts = one.split(/(?<=[.!?])\s+(?=["\u201c(]?[A-Z0-9\u2212])/);
+        var chunks = [], buf = "";
+        parts.forEach(function(pt, k){
+          buf = buf ? buf + " " + pt : pt;
+          if(buf.length >= 220 && k < parts.length - 1){ chunks.push(buf); buf = ""; }
+        });
+        if(buf) chunks.push(buf);
+        out.push(chunks.map(function(c, k){
+          return '<p' + (k ? ' class="cont"' : '') + '>' + span(c) + '</p>';
+        }).join("\n"));
+      }
+      else out.push('<p' + (working ? ' class="math"' : '') + '>'
+        + para.map(function(x){ return span(x.trim()); }).join("<br>") + '</p>');
+    }
     else i++;
   }
   return out.join("\n");

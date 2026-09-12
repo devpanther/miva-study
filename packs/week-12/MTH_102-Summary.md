@@ -43,7 +43,7 @@ Line by line: 2(125)/3 = 250/3 = 83.33, plus 3(25) = 75, plus 5, giving 163.33, 
 
 x(t) = ∫(6t² − 6t − 12)dt = **2t³ − 3t² − 12t + C**
 
-"Given that x(0) = −4, we have C = −4, so that"
+Given that x(0) = −4, we have C = −4, so that
 
 **x(t) = 2t³ − 3t² − 12t − 4.**
 
@@ -77,7 +77,7 @@ Solution. "Let h(x) be the height of the dam at a point x and L(x) be the width 
 
 **w = ρg = (1000)(9.8) = 9800 N/m²**
 
-"Using the fluid force formula, we have"
+Using the fluid force formula, we have
 
 F = ∫ₐᵇ w·h(x)·L(x)dx = ∫₀¹⁰⁰ (9800)(x)(300)dx
 
@@ -121,7 +121,7 @@ Solution. "The total revenue function is given by"
 
 TR(Q) = ∫MR(Q)dQ = ∫(100 + 20Q + 3Q²)dQ = **100Q + 10Q² + Q³ + C**
 
-"Given that TR(2) = 260, we have C = 12, so that the total revenue function"
+Given that TR(2) = 260, we have C = 12, so that the total revenue function
 
 **TR(Q) = 100Q + 10Q² + Q³ + 12**
 
@@ -147,11 +147,11 @@ Solution. "The equilibrium point is obtained if D(Q) = S(Q), that is,"
 
 1000 − 25Q = 100 + Q²
 
-"so that Q₀ = 20, the positive solution of the quadratic equation. The market equilibrium price, P₀ = 500."
+so that Q₀ = 20, the positive solution of the quadratic equation. The market equilibrium price, P₀ = 500.
 
 The quadratic in full: Q² + 25Q − 900 = 0, so Q = (−25 ± √(625 + 3600))/2 = (−25 ± 65)/2, giving Q = 20 or Q = −45. **A negative quantity is meaningless, so Q₀ = 20** — that is what "the positive solution" is doing. Then P₀ = D(20) = 1000 − 500 = 500, and the check S(20) = 100 + 400 = 500 agrees.
 
-"The consumer surplus CS is given by"
+The consumer surplus CS is given by
 
 CS = ∫₀^Q₀ [D(Q) − P₀]dQ = ∫₀²⁰ (1000 − 25Q − 500)dQ
 
@@ -181,7 +181,7 @@ The order is not negotiable: **equilibrium first**. Both integrals run from 0 to
 
 C(t) = ∫35e^(0.035t)dt = **1000e^(0.035t) + c**
 
-"The initial consumption C(0) = 0. Therefore, 0 = 1000e^(0.035(0)) + c, implying that c = −1000. Hence, the required model is"
+The initial consumption C(0) = 0. Therefore, 0 = 1000e^(0.035(0)) + c, implying that c = −1000. Hence, the required model is
 
 **C(t) = 1000e^(0.035t) − 1000**
 
@@ -199,7 +199,7 @@ Where 1000 comes from: dividing by the exponent's coefficient, 35 ÷ 0.035 = 100
 
 "so that" t = ln(1.750)/0.0035 = **15.989 ≈ 16**
 
-"Now, 16 years from 2005 is 2005 + 16 = 2021. Therefore, the known world resources of 750 thousand metric tons of copper would be exhausted in 2021."
+Now, 16 years from 2005 is 2005 + 16 = 2021. Therefore, the known world resources of 750 thousand metric tons of copper would be exhausted in 2021.
 
 **Misprint on this slide.** The denominator is printed **0.0035**; it must be **0.035**, the coefficient in the exponent. ln(1.750) = 0.5596, and 0.5596/0.035 = 15.989 — the printed answer 15.989 is correct, so only the denominator is wrong. With the printed 0.0035 you would get 159.89 years and the year 2165. Copy the corrected line.
 
